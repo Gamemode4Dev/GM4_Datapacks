@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"golden_sword",
+      "nbt":"{display:{Name:\"\\\"potion_swords logo\\\"\"}}"
+    },
+    "title":"Instant Regret",
+    "description":{
+      "text":"Wither-ize a skeleton with potion swords.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "witherize_skeleton":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

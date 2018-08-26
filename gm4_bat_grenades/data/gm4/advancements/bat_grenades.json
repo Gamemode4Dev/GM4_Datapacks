@@ -1,0 +1,25 @@
+{
+  "display":{
+    "icon":{
+      "item":"gunpowder",
+      "nbt":"{display:{Name:\"\\\"bat_grenades logo\\\"\"}}"
+    },
+    "title":"Batboozled",
+    "description":{
+      "text":"Get blown up by a Bat Grenade.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "killed_by_bat":{
+      "trigger":"minecraft:entity_killed_player",
+      "conditions":{
+        "entity":{
+          "type":"creeper",
+          "nbt":"{Tags:[\"GM4_batGrenade\"]}"
+        }
+      }
+    }
+  }
+}

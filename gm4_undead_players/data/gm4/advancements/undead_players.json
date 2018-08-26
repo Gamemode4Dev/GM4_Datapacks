@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"zombie_head",
+      "nbt":"{display:{Name:\"\\\"undead_players logo\\\"\"}}"
+    },
+    "title":"Risen",
+    "description":{
+      "text":"Die and raise up an undead zombie in your body's place.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "player_death":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

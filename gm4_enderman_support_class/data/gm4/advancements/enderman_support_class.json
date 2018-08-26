@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"player_head",
+      "nbt":"{SkullOwner:\"MHF_Enderman\",display:{Name:\"\\\"enderman_suppoer_class logo\\\"\"}}"
+    },
+    "title":"Ender Aid",
+    "description":{
+      "text":"Come into contact with a support Enderman.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "contact_enderman":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
