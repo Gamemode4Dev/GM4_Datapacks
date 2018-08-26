@@ -1,12 +1,12 @@
 {
   "display":{
     "icon":{
-      "item":"stone",
-      "nbt":"{display:{Name:\"\\\"MODULE_ID logo\\\"\"}}"
+      "item":"ladder",
+      "nbt":"{display:{Name:\"\\\"vertical_rails logo\\\"\"}}"
     },
-    "title":"Plain Ol' Advancement Title",
+    "title":"Up, up and Away!",
     "description":{
-      "text":"Noones bothered to give me a description yet... They won't... They don't care about me....",
+      "text":"Ride a minecart going up a vertical rail!",
       "color":"gray"
     }
   },
