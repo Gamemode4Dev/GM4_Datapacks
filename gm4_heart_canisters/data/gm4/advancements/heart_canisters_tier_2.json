@@ -1,0 +1,27 @@
+{
+  "display":{
+    "icon":{
+      "item":"player_head",
+      "nbt":"{SkullOwner:{Id:\"25b1ff93-7925-1cd7-53fe-8e6050792daa\",Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE0MjkzNDc5OTc3ODcsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQ1NWQ5YmY4NWFjNTY1YjM1ZTFmYTE5MjQ3Y2E2NTQxZGMyZTMzNGJlYzExNWNiNDQ5ZWZiZThlOWI4MTAyMiJ9fX0=\"}]}},display:{Lore:[\"Tier 2\"],Name:\"Heart Canister\"}}"
+    },
+    "title":"Love is all you need",
+    "description":{
+      "text":"Craft a tier 2 Heart Canister",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:heart_canisters_tier_1",
+  "criteria":{
+    "craft":{
+      "trigger":"minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:player_head",
+            "nbt": "{gm4_heart_canister_tier:2b}"
+          }
+        ]
+      }
+    }
+  }
+}
