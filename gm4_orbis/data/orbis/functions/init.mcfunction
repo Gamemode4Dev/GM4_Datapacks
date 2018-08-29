@@ -9,8 +9,8 @@ scoreboard players set orbis gm4_clockTick 0
 
 scoreboard objectives add gm4_count dummy
 scoreboard objectives add orbis_biome dummy
+# scores to keep track of numbers
 scoreboard players add orbis_generated gm4_count 0
-scoreboard players add orbis_scanned gm4_count 0
 scoreboard players add orbis_towers gm4_count 0
 scoreboard players add orbis_dungeons gm4_count 0
 

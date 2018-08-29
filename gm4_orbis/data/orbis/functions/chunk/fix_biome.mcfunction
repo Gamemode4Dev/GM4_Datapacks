@@ -1,3 +1,8 @@
+# If the chunk is surrounded by 3 other biome types, set its biome type to that instead
+# this fixes most failurs except when the chunk has 2 biome types both with 2 chunks adjacent
+# In that case, set the biome type to default. Not doing any modifications is better than
+# chosing the wrong one
+
 
 execute store result score temp gm4_count if entity @e[tag=orbis_adjacent,scores={orbis_biome=0}]
 execute if score temp gm4_count matches 3.. run scoreboard players set @s orbis_biome 0
