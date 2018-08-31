@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"enchanted_book",
+      "nbt":"{display:{Name:\"\\\"enchantment_extractors_mending logo\\\"\"}}"
+    },
+    "title":"Magical Thief",
+    "description":{
+      "text":"Successfully extract the mending enchantment from a tool with an Enchantment Extractor",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:enchantment_extractors",
+  "criteria":{
+    "impossible":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
