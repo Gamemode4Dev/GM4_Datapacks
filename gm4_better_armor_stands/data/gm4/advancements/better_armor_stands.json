@@ -1,18 +1,18 @@
 {
   "display":{
     "icon":{
-      "item":"minecraft:armor_stand",
+      "item":"armor_stand",
       "nbt":"{display:{Name:\"\\\"better_armor_stands logo\\\"\"}}"
     },
     "title":"Plenty o' Posing",
     "description":{
-      "text":"Make your armor stand strike a pose",
+      "text":"Make your armor stand strike a pose.",
       "color":"gray"
     }
   },
   "parent":"gm4:root",
   "criteria":{
-    "impossible":{
+    "pose_armor_stand":{
       "trigger":"minecraft:impossible"
     }
   }
