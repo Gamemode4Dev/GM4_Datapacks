@@ -1,4 +1,4 @@
-@s = written book ..1 from armor_stand
+# @s = written book ..1 from armor_stand
 execute if entity @s[nbt={Item:{tag:{pages:["default"]}}}] run data merge entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] {NoGravity:0,NoBasePlate:0,ShowArms:0,Small:0,Pose:{Head:[0f,0f,0f],LeftLeg:[0f,0f,0f],RightLeg:[0f,0f,0f],Body:[0f,0f,0f],LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]}}
 execute if entity @s[nbt={Item:{tag:{pages:["default"]}}}] as @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] at @s run tp @s ~ ~ ~ 0 0
 execute if entity @s[nbt={Item:{tag:{pages:["no gravity"]}}}] run data merge entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] {NoGravity:1}
