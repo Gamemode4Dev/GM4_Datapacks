@@ -1,3 +1,4 @@
+@s = player recieving health
 effect give @s minecraft:regeneration 1 3 true
 effect give @s minecraft:poison 1 1 true
 effect give @p[tag=sweatheats_donor,limit=1] absorption 1 0 true
