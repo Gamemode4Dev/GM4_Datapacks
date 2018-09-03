@@ -4,15 +4,15 @@
       "item":"ladder",
       "nbt":"{display:{Name:\"\\\"vertical_rails logo\\\"\"}}"
     },
-    "title":"Up, up and Away!",
+    "title":"Up, Up and Away!",
     "description":{
-      "text":"Ride a minecart going up a vertical rail!",
+      "text":"Ride a minecart going up a vertical rail.",
       "color":"gray"
     }
   },
   "parent":"gm4:root",
   "criteria":{
-    "TRIGGER_NAME":{
+    "ride_vertical_rail":{
       "trigger":"minecraft:impossible"
     }
   }
