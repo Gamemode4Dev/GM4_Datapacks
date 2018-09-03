@@ -1,3 +1,4 @@
+# @s = written book ..1 from armor_stand
 execute if entity @s[nbt={Item:{tag:{pages:["legs standing"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftLeg:[0f,0f,0f],RightLeg:[0f,0f,0f]}}
 execute if entity @s[nbt={Item:{tag:{pages:["legs sitting"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftLeg:[278f,347f,0f],RightLeg:[278f,11f,0f]}}
 execute if entity @s[nbt={Item:{tag:{pages:["legs walking"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftLeg:[39f,0f,0f],RightLeg:[317f,0f,0f]}}
