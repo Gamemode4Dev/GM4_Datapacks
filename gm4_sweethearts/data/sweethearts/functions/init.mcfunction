@@ -8,7 +8,7 @@ scoreboard players set sweethearts gm4_modules 1
 scoreboard players set sweethearts gm4_clockTick 0
 
 scoreboard objectives add gm4_sh_sneak minecraft.custom:minecraft.sneak_time
-scoreboard objectives add gm4_sh_health health
+scoreboard objectives add gm4_health health
 
 #announce success
 tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Sweethearts Installed!"}]
