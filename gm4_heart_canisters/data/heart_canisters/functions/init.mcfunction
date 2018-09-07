@@ -8,7 +8,6 @@ scoreboard players set heart_canisters gm4_modules 1
 scoreboard players set heart_canisters gm4_clockTick 0
 
 scoreboard objectives add gm4_heart_can dummy
-scoreboard objectives add gm4_heart_prev dummy
 
 #announce success
 tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Heart Canisters Installed!"}]
