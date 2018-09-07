@@ -1,5 +1,4 @@
 # check how many heart canisters the player has
-scoreboard players set @a[scores={gm4_heart_can=1..}] gm4_heart_can 0
 execute as @a[gamemode=!spectator,gamemode=!creative,nbt={Inventory:[{tag:{gm4_heart_canister:1b}}]}] run function heart_canisters:check_heart_canister_count
 
 # give the player the health boost effect
