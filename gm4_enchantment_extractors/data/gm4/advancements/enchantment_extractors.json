@@ -6,13 +6,13 @@
     },
     "title":"Clever Enchanting",
     "description":{
-      "text":"Construct an Enchantment Extractor",
+      "text":"Construct an Enchantment Extractor.",
       "color":"gray"
     }
   },
   "parent":"gm4:root",
   "criteria":{
-    "impossible":{
+    "build_extractor":{
       "trigger":"minecraft:impossible"
     }
   }
