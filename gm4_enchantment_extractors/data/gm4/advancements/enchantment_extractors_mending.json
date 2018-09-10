@@ -6,13 +6,13 @@
     },
     "title":"Magical Thief",
     "description":{
-      "text":"Successfully extract the mending enchantment from a tool with an Enchantment Extractor",
+      "text":"Successfully extract the mending enchantment from a tool with an Enchantment Extractor.",
       "color":"gray"
     }
   },
   "parent":"gm4:enchantment_extractors",
   "criteria":{
-    "impossible":{
+    "extract_mending":{
       "trigger":"minecraft:impossible"
     }
   }
