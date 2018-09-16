@@ -8,7 +8,7 @@ execute if entity @s[scores={gm4_orbis_biome=4}] run function orbis:structure/du
 # populate the dungeon with chests and spawners
 execute at @e[tag=orbis_spawner] run function orbis:structure/spawner_default
 execute at @e[tag=orbis_spawner_water] run function orbis:structure/spawner_water
-execute at @e[tag=orbis_chest] run function orbis:structure/chest
+execute at @e[tag=orbis_chest] run function orbis:structure/chest_dungeon
 kill @e[tag=orbis_spawner]
 kill @e[tag=orbis_spawner_water]
 kill @e[tag=orbis_chest]
