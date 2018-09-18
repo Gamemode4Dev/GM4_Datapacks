@@ -1,8 +1,3 @@
-# try to find a cave at certain heights as long as the dungeon hasn't been spawned yet
-execute if entity @s[tag=!orbis_spawned] positioned ~ 20 ~ if block ~ ~ ~ cave_air run function orbis:structure/dungeon/spawn
-execute if entity @s[tag=!orbis_spawned] positioned ~ 30 ~ if block ~ ~ ~ cave_air run function orbis:structure/dungeon/spawn
-execute if entity @s[tag=!orbis_spawned] positioned ~ 40 ~ if block ~ ~ ~ cave_air run function orbis:structure/dungeon/spawn
-execute if entity @s[tag=!orbis_spawned] positioned ~ 50 ~ if block ~ ~ ~ cave_air run function orbis:structure/dungeon/spawn
-execute if entity @s[tag=!orbis_spawned] positioned ~ 25 ~ if block ~ ~ ~ cave_air run function orbis:structure/dungeon/spawn
-execute if entity @s[tag=!orbis_spawned] positioned ~ 35 ~ if block ~ ~ ~ cave_air run function orbis:structure/dungeon/spawn
-execute if entity @s[tag=!orbis_spawned] positioned ~ 45 ~ if block ~ ~ ~ cave_air run function orbis:structure/dungeon/spawn
+scoreboard players add structure_height gm4_count 1
+execute unless block ~ ~ ~ minecraft:cave_air if score structure_height gm4_count matches ..30 positioned ~ ~1 ~ run function orbis:structure/dungeon/check
+execute if block ~ ~ ~ minecraft:cave_air if score structure_height gm4_count matches ..30 run function orbis:structure/dungeon/spawn

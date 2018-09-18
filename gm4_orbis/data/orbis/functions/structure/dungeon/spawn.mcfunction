@@ -13,5 +13,5 @@ kill @e[tag=orbis_spawner]
 kill @e[tag=orbis_spawner_water]
 kill @e[tag=orbis_chest]
 
-# mark the structure marker as spawned
-tag @s add orbis_spawned
+# set scoreboard to prevent another tower to be spawned
+scoreboard players set structure_height gm4_count 50
