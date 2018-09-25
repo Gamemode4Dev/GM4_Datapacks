@@ -21,5 +21,5 @@ execute if entity @s[nbt={Item:{tag:{pages:["turn right"]}}}] run tag @e[limit=1
 execute if entity @s[nbt={Item:{tag:{pages:["no turn"]}}}] run tag @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] remove gm4_turn_clockwise
 execute if entity @s[nbt={Item:{tag:{pages:["no turn"]}}}] run tag @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] remove gm4_turn_anticlockwise
 
-execute if entity @s[tag=gm4_stand_changed] run advancement grant @a[distance=..4] only gm4:better_armor_stands
+execute if entity @s[tag=gm4_stand_changed] run advancement grant @a[distance=..3,gamemode=!spectator] only gm4:better_armor_stands
 tag @s[tag=gm4_stand_changed] remove gm4_stand_changed
