@@ -7,7 +7,7 @@ scoreboard players set updateHappened gm4_upCheck 1
 scoreboard players set enchantment_extractors gm4_modules 1
 scoreboard players set enchantment_extractors gm4_clockTick 0
 
-scoreboard objectives add gm4_random dummy
+scoreboard objectives add gm4_ench_random dummy
 
 #announce success
 tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Enchantment Extractors Installed!"}]
