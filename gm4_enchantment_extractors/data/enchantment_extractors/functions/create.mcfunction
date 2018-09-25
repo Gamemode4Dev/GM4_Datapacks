@@ -1,5 +1,5 @@
 summon armor_stand ~ ~-1.2 ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1,Tags:["gm4_enchantment_extractor","gm4_no_edit"],ArmorItems:[{},{},{},{id:enchanting_table,Count:1}],DisabledSlots:2039583}
 data merge block ~ ~ ~ {CustomName:"\"Enchantment Extractor\"",Items:[]}
-advancement grant @a[distance=..3] only gm4:enchantment_extractors
+advancement grant @a[distance=..3,gamemode=!spectator] only gm4:enchantment_extractors
 playsound entity.experience_orb.pickup master @a[distance=..5] ~ ~ ~ 1 0.7 1
 kill @s
