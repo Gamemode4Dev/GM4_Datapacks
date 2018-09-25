@@ -12,7 +12,7 @@
   },
   "parent":"gm4:root",
   "criteria":{
-    "create_shulker":{
+    "wear_boots_of_ostara":{
       "trigger":"minecraft:impossible"
     }
   }
