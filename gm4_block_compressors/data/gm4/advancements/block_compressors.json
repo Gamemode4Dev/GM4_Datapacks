@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"piston",
+      "nbt":"display:{Name:\"\\\"block_compressors logo\\\"\"}}"
+    },
+    "title":"Clever Crushing",
+    "description":{
+      "text":"Make yourself a Block Compressor",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "create_block_compressor":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
