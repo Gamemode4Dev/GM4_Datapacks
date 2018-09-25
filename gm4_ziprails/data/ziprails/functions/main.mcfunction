@@ -1,4 +1,4 @@
-#module code goes here
+#identify minecart types
 tag @e[type=minecart] add gm4_minecart
 tag @e[type=chest_minecart] add gm4_minecart
 tag @e[type=hopper_minecart] add gm4_minecart
