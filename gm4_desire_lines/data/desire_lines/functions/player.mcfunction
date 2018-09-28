@@ -1,3 +1,6 @@
+#s=@a[gamemode=!spectator,gamemode=!creative]
+#run by main
+
 scoreboard players operation @s gm4_desire_lines += @s gm4_dl_sprint
 scoreboard players set @s gm4_dl_sprint 0
 execute if score @s gm4_desire_lines matches 30.. run scoreboard players set @s gm4_desire_lines 19
