@@ -1,4 +1,6 @@
 # @s = written book ..1 from armor_stand
+#run from main
+
 scoreboard players reset @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] gm4_particle
 data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Invisible:0b}
 execute at @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] run kill @e[type=area_effect_cloud,tag=gm4_particles_pack_cloud,distance=..1,limit=1,sort=nearest]
