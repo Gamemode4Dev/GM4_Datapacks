@@ -7,8 +7,8 @@ scoreboard players set updateHappened gm4_upCheck 1
 scoreboard players set particles_pack gm4_modules 1
 scoreboard players set particles_pack gm4_clockTick 0
 
-
 scoreboard objectives add gm4_particle dummy
+
 #announce success
 tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Particles Pack Installed!"}]
 execute unless entity @p run say GM4: Particles Pack Installed!
