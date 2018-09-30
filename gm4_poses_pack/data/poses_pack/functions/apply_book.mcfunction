@@ -11,5 +11,5 @@ execute if entity @s[nbt={Item:{tag:{pages:["arms raised"]}}}] run data merge en
 execute if entity @s[nbt={Item:{tag:{pages:["head forward"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[0f,0f,0f]}}
 execute if entity @s[nbt={Item:{tag:{pages:["head up"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[325f,0f,0f]}}
 execute if entity @s[nbt={Item:{tag:{pages:["head down"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[32f,0f,0f]}}
-execute if entity @s[nbt={Item:{tag:{pages:["head left"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[0f,-32f,0f]}}
+execute if entity @s[nbt={Item:{tag:{pages:["head left"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[0f,327f,0f]}}
 execute if entity @s[nbt={Item:{tag:{pages:["head right"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[0f,32f,0f]}}
