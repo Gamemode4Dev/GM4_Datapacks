@@ -1,8 +1,8 @@
 Contributing to Gamemode 4
 ==========================
 
-## Adding a GM4 Module that isn't in git yet
-- Create a fork of `GM4_Datapacks` using the Fork button in the top-right of the git. Be sure to name it clearly as the module you plan to work on. You will then have a personal copy of the git ready for your changes.
+## Adding a GM4 Module that isn't in the repo yet
+- Create a fork of `GM4_Datapacks` using the Fork button in the top-right of the repo. Be sure to name it clearly as the module you plan to work on. You will then have a personal copy of the repo ready for your changes.
 - Make a copy of the `GM4_template_pack` folder and rename it to the name of the module you are writing code for.
 - Each module you create should be made under a separate branch so that modules can be submitted, approved and tested individually.
 
@@ -35,5 +35,5 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
 ### Sending us your module code
 To send us your finished module for testing and approval, simply submit a pull request and leave a comment if you have additional notes.
 
-## Updating a module on the git
-If you've spotted a bug in a module or have a performance improvement you wish to make, create a fork of the git similar to the process outlined in the section above and make your changes. Once you have edited the module files, create a pull request and leave a detailed note on why you have made your changes.
+## Updating a module on the repo
+If you've spotted a bug in a module or have a performance improvement you wish to make, create a branch of the repo similar to the process outlined in the section above and make your changes. Once you have edited the module files, create a pull request and leave a detailed note on why you have made your changes.
