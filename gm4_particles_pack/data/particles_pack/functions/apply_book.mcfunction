@@ -1,5 +1,5 @@
 # @s = written book ..1 from armor_stand
-#run from main
+#run by the better armor stand base module
 
 scoreboard players reset @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] gm4_particle
 data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Invisible:0b}
