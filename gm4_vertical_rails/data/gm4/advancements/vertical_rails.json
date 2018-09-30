@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"ladder",
+      "nbt":"{display:{Name:\"\\\"vertical_rails logo\\\"\"}}"
+    },
+    "title":"Up, Up and Away!",
+    "description":{
+      "text":"Ride a minecart going up a vertical rail.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "ride_vertical_rail":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
