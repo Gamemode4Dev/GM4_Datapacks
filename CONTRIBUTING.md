@@ -4,7 +4,7 @@ Contributing to Gamemode 4
 ## Adding a GM4 Module that isn't in git yet
 - Create a fork of `GM4_Datapacks` using the Fork button in the top-right of the git. Be sure to name it clearly as the module you plan to work on. You will then have a personal copy of the git ready for your changes.
 - Make a copy of the `GM4_template_pack` folder and rename it to the name of the module you are writing code for.
-- Each module you create should be made under a separate fork so that modules can be approved and tested individually.
+- Each module you create should be made under a separate branch so that modules can be submitted, approved and tested individually.
 
 Inside the `gm4_template_pack` is code that matches the Gamemode 4 module standard including a copy of the current clocking system. The `pack.mcmeta` file can remain unchanged.
 
