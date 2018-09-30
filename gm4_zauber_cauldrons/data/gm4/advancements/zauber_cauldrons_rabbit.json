@@ -1,0 +1,21 @@
+{
+  "display":{
+    "icon":{
+      "item":"rabbit_foot",
+      "nbt":"{display:{Name:\"\\\"zauber_cauldrons_rabbit logo\\\"\"}}"
+    },
+    "title":"Soup Kitchen Magician",
+    "description":{
+      "text":"Where did my lunch go?",
+      "color":"gray"
+    },
+    "frame":"goal",
+    "hidden":true
+  },
+  "parent":"gm4:zauber_cauldrons_full_armor",
+  "criteria":{
+    "teleport_rabbit":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
