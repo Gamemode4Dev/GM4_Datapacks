@@ -1,0 +1,25 @@
+{
+  "display":{
+    "icon":{
+      "item":"tnt",
+      "nbt":"{display:{Name:\"\\\"tnt_landmines logo\\\"\"}}"
+    },
+    "title":"Didn't see that comming",
+    "description":{
+      "text":"Get killed by a landmine",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "get_blownup":{
+      "trigger":"minecraft:entity_killed_player",
+      "conditions":{
+        "entity":{
+          "type":"minecraft:creeper",
+          "nbt":"{Tags:[\"gm4_tntlandmines\"]}"
+        }
+      }
+    }
+  }
+}
