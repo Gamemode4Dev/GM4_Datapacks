@@ -4,15 +4,15 @@
       "item":"armor_stand",
       "nbt":"{display:{Name:\"\\\"better_armor_stands logo\\\"\"}}"
     },
-    "title":"Plenty o' Posing",
+    "title":"Gettin' Handsy",
     "description":{
-      "text":"Make your armor stand strike a pose.",
+      "text":"Give your armor stand arms.",
       "color":"gray"
     }
   },
   "parent":"gm4:root",
   "criteria":{
-    "pose_armor_stand":{
+    "arm_armor_stand":{
       "trigger":"minecraft:impossible"
     }
   }
