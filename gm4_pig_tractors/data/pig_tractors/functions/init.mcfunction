@@ -1,6 +1,6 @@
 #announce module installation
-tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Installing MODULE_NAME..."}]
-execute unless entity @p run say GM4: Installing MODULE_NAME...
+tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Installing Pig Tractors..."}]
+execute unless entity @p run say GM4: Installing Pig Tractors...
 
 #declare and initialise scoreboards and settings
 scoreboard players set updateHappened gm4_upCheck 1
