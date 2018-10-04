@@ -1,6 +1,9 @@
 # @s = @a[tag=gm4_on_pig,tag=gm4_has_hoe]
 # Called from pulse_check
 
+# Check Crop
+function pig_tractors:check_crop
+
 # Break crop
 execute if block ~ ~ ~ #pig_tractors:crop_age7[age=7] run function pig_tractors:break_crop
 execute if block ~ ~ ~ minecraft:beetroots[age=3] run function pig_tractors:break_crop

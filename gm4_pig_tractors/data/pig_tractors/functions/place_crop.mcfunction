@@ -4,5 +4,3 @@ execute if score @s gm4_sel_crop matches 1 run function pig_tractors:crops/carro
 execute if score @s gm4_sel_crop matches 2 run function pig_tractors:crops/beetroots
 execute if score @s gm4_sel_crop matches 3 run function pig_tractors:crops/wheat
 execute if score @s gm4_sel_crop matches 4 run function pig_tractors:crops/potatoes
-
-function pig_tractors:check_crop

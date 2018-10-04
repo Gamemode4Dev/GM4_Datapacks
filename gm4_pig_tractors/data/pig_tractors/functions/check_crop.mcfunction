@@ -1,5 +1,5 @@
-# Called from check_pig and place_crop
-scoreboard players set @s gm4_sel_crop 0
+# Called from on_tractor
+scoreboard players reset @s gm4_sel_crop
 scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot"}]}] gm4_sel_crop 1
 scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:beetroot_seeds"}]}] gm4_sel_crop 2
 scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:wheat_seeds"}]}] gm4_sel_crop 3
