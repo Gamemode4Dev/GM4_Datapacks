@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"saddle",
+      "nbt":"{display:{Name:\"\\\"pig_tractors logo\\\"\"}}"
+    },
+    "title":"Oink Tractors",
+    "description":{
+      "text":"Ride a pig with an hoe to make it a functional tractor!",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "ride_pig_tractor":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
