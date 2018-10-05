@@ -9,7 +9,6 @@ scoreboard players set blast_furnaces gm4_clockTick 0
 
 # add utility scoreboards
 scoreboard objectives add gm4_bf_placed minecraft.used:minecraft.iron_block
-scoreboard objectives add gm4_bf_placedg minecraft.used:minecraft.glass
 scoreboard objectives add gm4_bf_placedf minecraft.used:minecraft.furnace
 
 #announce success
