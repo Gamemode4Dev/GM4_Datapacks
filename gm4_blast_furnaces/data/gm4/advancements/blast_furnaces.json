@@ -1,0 +1,19 @@
+{
+  "display": {
+	"icon": {
+      "item": "minecraft:furnace",
+      "nbt":"{display:{Name:\"\\\"blast_furnaces logo\\\"\"}}"
+    },
+    "title":"Clever Smelting",
+    "description": {
+      "text": "Create your own Blast Furnace.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria": {
+    "blast_furnaces_trigger": {
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
