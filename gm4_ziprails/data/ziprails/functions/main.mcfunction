@@ -8,4 +8,4 @@ tag @e[type=tnt_minecart] add gm4_minecart
 
 
 #advancement
-execute as @e[tag=gm4_minecart,tag=gm4_linked] at @s run advancement grant @p[distance=..1] only gm4:ziprails
+execute at @e[tag=gm4_minecart,tag=gm4_linked] run advancement grant @p[distance=..1] only gm4:ziprails
