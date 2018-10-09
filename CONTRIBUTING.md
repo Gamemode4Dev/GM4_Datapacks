@@ -30,7 +30,7 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
 - Entities that aren't visible to the player (markers) should have custom names beginning with `gm4_` if this does not interfere with functionality.
 - Names for the above two points should be as clear and relevant as possible to avoid confusion or two modules sharing the same name by mistake.
 - ANY FUNCTION that is run as an entity should have a comment on the first line stating the context of @s so it is clear what runs this file e.g. `#@s = cows with speed limit=..1 of red mushrooms`
-- ALL FUNCTIONS except those included with the template file should list the functions they are called from in a comment on the first or second line of the file e.g. `#Called from main`
+- ALL FUNCTIONS except those included with the template file should list the functions they are called from in a comment on the first or second line of the file e.g. `#run from main`. More complicated modules with subdirectories should specify the more specific file path e.g. `#run from zauber_cauldrons:cauldron/create`
 
 ### Sending us your module code
 To send us your finished module for testing and approval, simply submit a pull request and leave a comment if you have additional notes.
