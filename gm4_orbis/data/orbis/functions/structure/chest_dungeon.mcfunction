@@ -2,4 +2,8 @@
 execute unless block ~ ~ ~ chest run setblock ~ ~ ~ chest
 
 # set the loot table
-data merge block ~ ~ ~ {LootTable:"orbis:chests/dungeon"}
+execute store result score chest_height gm4_count run data get entity @s Pos[1]
+execute if score chest_height gm4_count matches ..29 run data merge block ~ ~ ~ {LootTable:"orbis:chests/dungeon_20"}
+execute if score chest_height gm4_count matches 30..39 run data merge block ~ ~ ~ {LootTable:"orbis:chests/dungeon_30"}
+execute if score chest_height gm4_count matches 40..49 run data merge block ~ ~ ~ {LootTable:"orbis:chests/dungeon_40"}
+execute if score chest_height gm4_count matches 50.. run data merge block ~ ~ ~ {LootTable:"orbis:chests/dungeon_50"}

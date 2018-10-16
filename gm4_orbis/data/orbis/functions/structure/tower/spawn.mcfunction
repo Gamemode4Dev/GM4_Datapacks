@@ -8,8 +8,8 @@ execute if score structure_height gm4_count matches ..130 if entity @s[scores={g
 execute if score structure_height gm4_count matches ..120 if entity @s[scores={gm4_orbis_biome=4}] run function orbis:structure/tower/spawn_mesa
 
 # populate the structure with spawners and chests
-execute at @e[tag=orbis_spawner] run function orbis:structure/spawner_default
-execute at @e[tag=orbis_chest] run function orbis:structure/chest_tower
+execute as @e[tag=orbis_spawner] at @s run function orbis:structure/spawner_default
+execute as @e[tag=orbis_chest] at @s run function orbis:structure/chest_tower
 kill @e[tag=orbis_spawner]
 kill @e[tag=orbis_chest]
 
