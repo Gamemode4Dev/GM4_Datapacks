@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"poppy",
+      "nbt":"{display:{Name:\"\\\"sweethearts logo\\\"\"}}"
+    },
+    "title":"Selfless",
+    "description":{
+      "text":"Give your last heart to another",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "die_from_sweethearts":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
