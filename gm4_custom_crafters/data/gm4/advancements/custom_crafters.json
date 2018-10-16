@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"crafting_table",
+      "nbt":"{display:{Name:\"\\\"custom_crafters logo\\\"\"}}"
+    },
+    "title":"Clever Crafting",
+    "description":{
+      "text":"Construct a Custom Crafter from a Dropper",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "build_crafter":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
