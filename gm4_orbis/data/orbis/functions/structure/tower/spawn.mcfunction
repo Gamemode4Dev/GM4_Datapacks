@@ -1,8 +1,11 @@
 # spawn a tower based on the biome type.
 # structure height is the number of blocks below y=200
 # eg. score=50 means structure at y=150
-# a tower in a snow biome needs to be above y=70 while the other biomes require y=80
+# a tower in a snow biome needs to be above y=70
+# a structure on the water surface needs to be above y=60
+# all the other biomes require y=80
 execute if score structure_height gm4_count matches ..120 if entity @s[scores={gm4_orbis_biome=0}] run function orbis:structure/tower/spawn_default
+execute if score structure_height gm4_count matches ..140 if block ~ ~ ~ water if block ~ 40 ~ kelp_plant if entity @s[scores={gm4_orbis_biome=1}] run function orbis:structure/tower/spawn_ocean
 execute if score structure_height gm4_count matches ..120 if entity @s[scores={gm4_orbis_biome=2}] run function orbis:structure/tower/spawn_desert
 execute if score structure_height gm4_count matches ..130 if entity @s[scores={gm4_orbis_biome=3}] run function orbis:structure/tower/spawn_snow
 execute if score structure_height gm4_count matches ..120 if entity @s[scores={gm4_orbis_biome=4}] run function orbis:structure/tower/spawn_mesa
