@@ -6,12 +6,10 @@ execute if entity @s[scores={gm4_orbis_biome=3}] run function orbis:structure/du
 execute if entity @s[scores={gm4_orbis_biome=4}] run function orbis:structure/dungeon/spawn_mesa
 
 # populate the dungeon with chests and spawners
-execute as @e[tag=orbis_spawner] at @s run function orbis:structure/spawner_default
-execute as @e[tag=orbis_spawner_water] at @s run function orbis:structure/spawner_water
-execute as @e[tag=orbis_chest] at @s run function orbis:structure/chest_dungeon
-kill @e[tag=orbis_spawner]
-kill @e[tag=orbis_spawner_water]
-kill @e[tag=orbis_chest]
+# populate the structure with spawners and chests
+execute as @e[tag=gm4_orbis_population_marker] at @s run function #orbis:structure/populate_init
+execute as @e[tag=gm4_orbis_population,sort=random,limit=1] at @s run function #orbis:structure/populate
+kill @e[tag=gm4_orbis_population_marker]
 
 # set scoreboard to prevent another dungeon to be spawned
 scoreboard players set structure_height gm4_count 50
