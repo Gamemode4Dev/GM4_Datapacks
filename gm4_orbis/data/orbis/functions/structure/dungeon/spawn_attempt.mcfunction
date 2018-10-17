@@ -1,7 +1,6 @@
 # choose a dungeon if possible and spawn it
 tag @s add gm4_dungeon
 function #orbis:structure/spawn_init
-execute as @e[tag=gm4_orbis_spawn_marker] run say marker check
 execute as @e[tag=gm4_orbis_spawn_marker,sort=random,limit=1] at @s run function #orbis:structure/spawn
 kill @e[tag=gm4_orbis_spawn_marker]
 

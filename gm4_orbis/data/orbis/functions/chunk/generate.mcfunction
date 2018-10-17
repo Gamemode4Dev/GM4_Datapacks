@@ -32,10 +32,6 @@ scoreboard players operation @s gm4_orbis_biome = orbis_old_biome gm4_orbis_biom
 scoreboard players add orbis_generated gm4_count 1
 fill ~ 0 ~ ~15 0 ~15 barrier replace bedrock
 tag @s add gm4_generated
-#execute store result score temp_x gm4_count run data get entity @s Pos[0]
-#execute store result score temp_z gm4_count run data get entity @s Pos[2]
-#execute store result score age gm4_count run data get entity @s Age
-#tellraw @a [{"text":"GENERATED!"},{"score":{"objective":"gm4_count","name":"temp_x"}}," ",{"score":{"objective":"gm4_count","name":"temp_z"}}," Age: ",{"score":{"objective":"gm4_count","name":"age"}}]
 
 # clean up the adjacent tags
 tag @e[tag=gm4_chunk,tag=gm4_adjacent] remove gm4_adjacent

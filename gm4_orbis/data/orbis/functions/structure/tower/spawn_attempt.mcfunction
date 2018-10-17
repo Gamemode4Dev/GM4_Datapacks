@@ -1,5 +1,4 @@
 # choose a structure if possible and spawn it
-say tower attempt
 tag @s add gm4_tower
 function #orbis:structure/spawn_init
 execute as @e[tag=gm4_orbis_spawn_marker,sort=random,limit=1] at @s run function #orbis:structure/spawn
