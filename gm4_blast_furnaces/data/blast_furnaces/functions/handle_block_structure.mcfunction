@@ -4,6 +4,7 @@
 
 # Check if furnace still exists. Else remove `has_furnace` tag
 execute if entity @s[tag=gm4_bf_has_furnace] unless block ^ ^ ^1 furnace run tag @s remove gm4_bf_has_furnace
+execute if entity @s[tag=gm4_bf_has_furnace] run function blast_furnaces:check_furnace
 
 # In case it doesn't have a furnce; Try to find one
 execute if entity @s[tag=!gm4_bf_has_furnace] run function blast_furnaces:search_furnace
