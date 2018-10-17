@@ -4,4 +4,4 @@
 
 function blast_furnaces:handle_block_structure
 execute if entity @s[tag=!gm4_bf_has_structure, tag=gm4_bf_has_ore] run function blast_furnaces:ores/remove
-execute if entity @s[tag=gm4_bf_output] unless block ~ ~ ~ hopper[facing=down] run function blast_furnaces:furnace_output_break
+execute unless block ~ ~ ~ hopper[facing=down] run function blast_furnaces:furnace_output_break

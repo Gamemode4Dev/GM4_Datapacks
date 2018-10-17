@@ -1,4 +1,4 @@
-# Called from main.mcfunction
+# Called from recipe_check.mcfunction
 
 # ============== CONTAINS THE CUSTOM CRAFTERS EXTENSION WHERE THE CRAFTING RECIPE IS CHECKED ================
 setblock ~ ~ ~ hopper{CustomName:"{\"text\":\" Blast Furnace Output\"}"}

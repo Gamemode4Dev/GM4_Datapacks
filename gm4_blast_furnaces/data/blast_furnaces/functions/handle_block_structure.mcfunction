@@ -1,8 +1,15 @@
-# Called from main.mcfunction
+# Called from update.mcfunction
 
-# Find furnace
+# @s = @e[tag=gm4_bf_output]
+
+# Check if furnace still exists. Else remove `has_furnace` tag
 execute if entity @s[tag=gm4_bf_has_furnace] unless block ^ ^ ^1 furnace run tag @s remove gm4_bf_has_furnace
+
+# In case it doesn't have a furnce; Try to find one
 execute if entity @s[tag=!gm4_bf_has_furnace] run function blast_furnaces:search_furnace
+
+# If still not found, remove `has_structure` tag
 execute if entity @s[tag=!gm4_bf_has_furnace] run tag @s remove gm4_bf_has_structure
 
+# Check if there is (still) a vald structure around the hopper
 execute if entity @s[tag=gm4_bf_has_furnace] at @s run function blast_furnaces:check_structure
