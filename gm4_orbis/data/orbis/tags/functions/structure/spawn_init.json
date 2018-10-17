@@ -1,0 +1,6 @@
+{
+    "values": [
+        "orbis:structure/dungeon/spawn_init",
+        "orbis:structure/tower/spawn_init"
+    ]
+}

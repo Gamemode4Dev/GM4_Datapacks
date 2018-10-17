@@ -1,5 +1,5 @@
 # if the chunk hasn't been scanned yet, scan it
-execute if entity @s[tag=!gm4_orbis_scanned] run function orbis:gen/scan
+execute if entity @s[tag=gm4_chunk,tag=!gm4_scanned] run function orbis:gen/scan
 # save the determined biome type for later
 scoreboard players operation orbis_old_biome gm4_orbis_biome = @s gm4_orbis_biome
 
@@ -9,8 +9,8 @@ execute positioned ~-16 ~ ~ unless entity @e[tag=gm4_chunk,distance=..1] run sum
 execute positioned ~ ~ ~16 unless entity @e[tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
 execute positioned ~ ~ ~-16 unless entity @e[tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
 
-tag @e[tag=gm4_chunk,distance=1..17] add adjacent
-execute as @e[tag=gm4_chunk,tag=adjacent,tag=!gm4_orbis_scanned] at @s run function orbis:chunk/scan
+tag @e[tag=gm4_chunk,distance=1..17] add gm4_adjacent
+execute as @e[tag=gm4_chunk,tag=gm4_adjacent,tag=!gm4_scanned] at @s run function orbis:chunk/scan
 
 # do various things to improve biome detection
 function orbis:chunk/fix_biome
@@ -32,6 +32,10 @@ scoreboard players operation @s gm4_orbis_biome = orbis_old_biome gm4_orbis_biom
 scoreboard players add orbis_generated gm4_count 1
 fill ~ 0 ~ ~15 0 ~15 barrier replace bedrock
 tag @s add gm4_generated
+#execute store result score temp_x gm4_count run data get entity @s Pos[0]
+#execute store result score temp_z gm4_count run data get entity @s Pos[2]
+#execute store result score age gm4_count run data get entity @s Age
+#tellraw @a [{"text":"GENERATED!"},{"score":{"objective":"gm4_count","name":"temp_x"}}," ",{"score":{"objective":"gm4_count","name":"temp_z"}}," Age: ",{"score":{"objective":"gm4_count","name":"age"}}]
 
 # clean up the adjacent tags
-tag @e[tag=gm4_chunk,tag=adjacent] remove adjacent
+tag @e[tag=gm4_chunk,tag=gm4_adjacent] remove gm4_adjacent
