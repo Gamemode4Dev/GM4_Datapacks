@@ -1,0 +1,13 @@
+#untags saplings to see if it is invalid
+tag @e[tag=gm4_ore_trees_valid_sapling] remove gm4_ore_trees_valid_sapling
+
+#tags valid saplings with a count of 8
+execute as @e[type=item,nbt={Item:{id:"minecraft:oak_sapling",Count:8b}}] at @s if block ~ ~ ~ water if block ~ ~1 ~ #ore_trees:gm4_ore_trees_block if block ~ ~-1 ~ #ore_trees:gm4_ore_trees_block if block ~ ~2 ~ air if block ~ ~3 ~ air if block ~ ~4 ~ air if block ~ ~5 ~ air if block ~ ~6 ~ air if block ~ ~7 ~ air run tag @s add gm4_ore_trees_valid_sapling
+execute as @e[type=item,nbt={Item:{id:"minecraft:spruce_sapling",Count:8b}}] at @s if block ~ ~ ~ water if block ~ ~1 ~ #ore_trees:gm4_ore_trees_block if block ~ ~-1 ~ #ore_trees:gm4_ore_trees_block if block ~ ~2 ~ air if block ~ ~3 ~ air if block ~ ~4 ~ air if block ~ ~5 ~ air if block ~ ~6 ~ air if block ~ ~7 ~ air run tag @s add gm4_ore_trees_valid_sapling
+execute as @e[type=item,nbt={Item:{id:"minecraft:birch_sapling",Count:8b}}] at @s if block ~ ~ ~ water if block ~ ~1 ~ #ore_trees:gm4_ore_trees_block if block ~ ~-1 ~ #ore_trees:gm4_ore_trees_block if block ~ ~2 ~ air if block ~ ~3 ~ air if block ~ ~4 ~ air if block ~ ~5 ~ air if block ~ ~6 ~ air if block ~ ~7 ~ air run tag @s add gm4_ore_trees_valid_sapling
+execute as @e[type=item,nbt={Item:{id:"minecraft:dark_oak_sapling",Count:8b}}] at @s if block ~ ~ ~ water if block ~ ~1 ~ #ore_trees:gm4_ore_trees_block if block ~ ~-1 ~ #ore_trees:gm4_ore_trees_block if block ~ ~2 ~ air if block ~ ~3 ~ air if block ~ ~4 ~ air if block ~ ~5 ~ air if block ~ ~6 ~ air if block ~ ~7 ~ air run tag @s add gm4_ore_trees_valid_sapling
+execute as @e[type=item,nbt={Item:{id:"minecraft:jungle_sapling",Count:8b}}] at @s if block ~ ~ ~ water if block ~ ~1 ~ #ore_trees:gm4_ore_trees_block if block ~ ~-1 ~ #ore_trees:gm4_ore_trees_block if block ~ ~2 ~ air if block ~ ~3 ~ air if block ~ ~4 ~ air if block ~ ~5 ~ air if block ~ ~6 ~ air if block ~ ~7 ~ air run tag @s add gm4_ore_trees_valid_sapling
+execute as @e[type=item,nbt={Item:{id:"minecraft:acacia_sapling",Count:8b}}] at @s if block ~ ~ ~ water if block ~ ~1 ~ #ore_trees:gm4_ore_trees_block if block ~ ~-1 ~ #ore_trees:gm4_ore_trees_block if block ~ ~2 ~ air if block ~ ~3 ~ air if block ~ ~4 ~ air if block ~ ~5 ~ air if block ~ ~6 ~ air if block ~ ~7 ~ air run tag @s add gm4_ore_trees_valid_sapling
+
+#runs off valid saplings
+execute as @e[tag=gm4_ore_trees_valid_sapling] at @s run function ore_trees:run/valid_sapling
