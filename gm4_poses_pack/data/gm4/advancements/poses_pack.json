@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"armor_stand",
+      "nbt":"{display:{Name:\"\\\"poses_pack logo\\\"\"}}"
+    },
+    "title":"Pleanty O' Posing",
+    "description":{
+      "text":"Make your armor stand strike a pose",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "pose_stand":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
