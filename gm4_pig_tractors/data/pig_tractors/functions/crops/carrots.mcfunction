@@ -4,4 +4,3 @@ setblock ~ ~ ~ air destroy
 execute align xyz as @e[type=item,distance=..2] run function pig_tractors:break_crop
 setblock ~ ~ ~ carrots
 clear @s carrot 1
-function pig_tractors:add_damage

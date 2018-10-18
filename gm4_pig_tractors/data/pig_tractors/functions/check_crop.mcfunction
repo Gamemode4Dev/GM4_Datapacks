@@ -1,10 +1,8 @@
-# Called from on_tractor
-scoreboard players reset @s gm4_sel_crop
-scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot"}]}] gm4_sel_crop 1
-scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:beetroot_seeds"}]}] gm4_sel_crop 2
-scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:wheat_seeds"}]}] gm4_sel_crop 3
-scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:potato"}]}] gm4_sel_crop 4
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:carrot"}}] gm4_sel_crop 1
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:beetroot_seeds"}}] gm4_sel_crop 2
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:wheat_seeds"}}] gm4_sel_crop 3
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:potato"}}] gm4_sel_crop 4
+# @s = @a[tag=gm4_on_pig,tag=gm4_has_hoe]
+# Called from pulse_check
+
+# Break/ Replant crop
+execute if block ~ ~ ~ minecraft:beetroots[age=3] run function pig_tractors:crops/beetroots
+execute if block ~ ~ ~ minecraft:carrots[age=7] run function pig_tractors:crops/carrots
+execute if block ~ ~ ~ minecraft:potatoes[age=7] run function pig_tractors:crops/potatoes
+execute if block ~ ~ ~ minecraft:wheat[age=7] run function pig_tractors:crops/wheat
