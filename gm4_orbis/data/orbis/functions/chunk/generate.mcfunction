@@ -4,13 +4,13 @@ execute if entity @s[tag=gm4_chunk,tag=!gm4_scanned] run function orbis:gen/scan
 scoreboard players operation orbis_old_biome gm4_orbis_biome = @s gm4_orbis_biome
 
 # make sure there are 4 scanned chunks adjacent
-execute positioned ~16 ~ ~ unless entity @e[tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
-execute positioned ~-16 ~ ~ unless entity @e[tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
-execute positioned ~ ~ ~16 unless entity @e[tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
-execute positioned ~ ~ ~-16 unless entity @e[tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
+execute positioned ~16 ~ ~ unless entity @e[type=area_effect_cloud,tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
+execute positioned ~-16 ~ ~ unless entity @e[type=area_effect_cloud,tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
+execute positioned ~ ~ ~16 unless entity @e[type=area_effect_cloud,tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
+execute positioned ~ ~ ~-16 unless entity @e[type=area_effect_cloud,tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
 
-tag @e[tag=gm4_chunk,distance=1..17] add gm4_adjacent
-execute as @e[tag=gm4_chunk,tag=gm4_adjacent,tag=!gm4_scanned] at @s run function orbis:chunk/scan
+tag @e[type=area_effect_cloud,tag=gm4_chunk,distance=1..17] add gm4_adjacent
+execute as @e[type=area_effect_cloud,tag=gm4_chunk,tag=gm4_adjacent,tag=!gm4_scanned] at @s run function orbis:chunk/scan
 
 # do various things to improve biome detection
 function orbis:chunk/fix_biome
@@ -34,4 +34,4 @@ fill ~ 0 ~ ~15 0 ~15 barrier replace bedrock
 tag @s add gm4_generated
 
 # clean up the adjacent tags
-tag @e[tag=gm4_chunk,tag=gm4_adjacent] remove gm4_adjacent
+tag @e[type=area_effect_cloud,tag=gm4_chunk,tag=gm4_adjacent] remove gm4_adjacent
