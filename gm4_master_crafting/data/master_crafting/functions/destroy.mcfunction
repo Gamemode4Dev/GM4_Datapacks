@@ -1,0 +1,1 @@
+summon area_effect_cloud ~ ~ ~ {Passengers:[{id:item,Item:{id:"minecraft:cobblestone",Count:2b}},{id:item,Item:{id:"minecraft:piston",Count:3b}},{id:item,Item:{id:"minecraft:comparator",Count:2b}},{id:item,Item:{id:"minecraft:furnace",Count:1b}}]}
