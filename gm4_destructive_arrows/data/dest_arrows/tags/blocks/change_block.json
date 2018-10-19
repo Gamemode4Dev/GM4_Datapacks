@@ -1,0 +1,12 @@
+{
+    "values": [
+        "minecraft:cobblestone",
+        "minecraft:stone",
+        "minecraft:grass_block",
+        "minecraft:podzol",
+        "minecraft:grass_block",
+        "minecraft:dirt",
+        "minecraft:mycelium",
+        "minecraft:stone_bricks"
+    ]
+}
