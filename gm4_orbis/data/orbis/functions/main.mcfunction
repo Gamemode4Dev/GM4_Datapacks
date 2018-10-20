@@ -1,3 +1,6 @@
+
+function #orbis:main
+
 # for every player, generate the nearest chunk
 execute at @a[tag=gm4_orbis_active] positioned ~-8 ~ ~-8 as @e[type=area_effect_cloud,tag=gm4_chunk,tag=!gm4_generated,sort=nearest,limit=1] at @s run function orbis:chunk/generate
 # kill chunk markers that have been generated and have all adjacent chunks generated
