@@ -8,8 +8,8 @@ scoreboard players set blast_furnaces gm4_modules 1
 scoreboard players set blast_furnaces gm4_clockTick 0
 
 # add utility scoreboards
-scoreboard objectives add gm4_bf_placed minecraft.used:minecraft.iron_block
-scoreboard objectives add gm4_bf_placedf minecraft.used:minecraft.furnace
+scoreboard objectives add gm4_bf_placed_iron minecraft.used:minecraft.iron_block
+scoreboard objectives add gm4_bf_placed_furn minecraft.used:minecraft.furnace
 
 #announce success
 tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Blast Furnaces Installed!"}]
