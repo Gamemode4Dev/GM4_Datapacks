@@ -1,5 +1,5 @@
 #@s = 4 blocks above the item spawning the tree
-#rans from ore_trees/run/get_tree
+#runs from ore_trees/run/get_tree
 
 #does the base tree structure
 setblock ~ ~ ~ structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Scommander_",rotation:"NONE",posX:-2,mode:"LOAD",posY:0,sizeX:5,posZ:-2,integrity:1.0f,showair:0b,name:"ore_trees:base_nether_tree_1",sizeY:4,sizeZ:5,showboundingbox:1b}

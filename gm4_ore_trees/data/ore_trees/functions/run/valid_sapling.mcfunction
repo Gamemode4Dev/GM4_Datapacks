@@ -1,5 +1,5 @@
-#@s = valid sapling in water
-#ran from ore_trees:main
+#@s = @e[tag=gm4_ore_trees_valid_sapling] in water
+#runs from ore_trees:main
 
 #stops item from despawning
 data merge entity @s {Age:1s}

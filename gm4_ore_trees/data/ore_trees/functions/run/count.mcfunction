@@ -1,5 +1,5 @@
 #@s = valid ore ready to grow
-#rans from ore_trees:run/valid_sapling
+#runs from ore_trees:run/valid_sapling
 
 #stops ore item from despawning
 data merge entity @s {Age:1s}

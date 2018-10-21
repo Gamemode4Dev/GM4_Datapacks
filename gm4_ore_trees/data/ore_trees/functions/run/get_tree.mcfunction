@@ -1,7 +1,7 @@
 #@s=ore about to spawn a tree
-#ran from ore_trees:run/count
+#runs from ore_trees:run/count
 
-#runs the correct tree spawn for the ore
+#runs the correct tree spawn for the overworld ores
 execute if entity @s[nbt={Item:{id:"minecraft:gold_ore"}}] run tag @s add gm4_ore_trees_world_ore
 execute if entity @s[nbt={Item:{id:"minecraft:iron_ore"}}] run tag @s add gm4_ore_trees_world_ore
 execute if entity @s[nbt={Item:{id:"minecraft:coal_ore"}}] run tag @s add gm4_ore_trees_world_ore
@@ -9,7 +9,7 @@ execute if entity @s[nbt={Item:{id:"minecraft:lapis_ore"}}] run tag @s add gm4_o
 execute if entity @s[nbt={Item:{id:"minecraft:diamond_ore"}}] run tag @s add gm4_ore_trees_world_ore
 execute if entity @s[nbt={Item:{id:"minecraft:redstone_ore"}}] run tag @s add gm4_ore_trees_world_ore
 execute if entity @s[nbt={Item:{id:"minecraft:emerald_ore"}}] run tag @s add gm4_ore_trees_world_ore
-#tests for overworld ore type and displays particle above
+#runs the correct tree spawn for the nether ore
 execute if entity @s[nbt={Item:{id:"minecraft:nether_quartz_ore"}}] run tag @s add gm4_ore_trees_nether_ore
 
 #puts the basic tree in place
