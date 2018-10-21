@@ -6,13 +6,18 @@ execute unless entity @p run say GM4: Installing Orbis...
 scoreboard players set updateHappened gm4_upCheck 1
 scoreboard players set orbis gm4_modules 1
 scoreboard players set orbis gm4_clockTick 0
+scoreboard players set orbis_4 gm4_clockTick 4
+scoreboard players set orbis_8 gm4_clockTick 8
+scoreboard players set orbis_12 gm4_clockTick 12
 
 scoreboard objectives add gm4_count dummy
 scoreboard objectives add gm4_orbis_biome dummy
+scoreboard objectives add gm4_orbis_config dummy
 # scores to keep track of numbers
 scoreboard players add orbis_generated gm4_count 0
 scoreboard players add orbis_towers gm4_count 0
 scoreboard players add orbis_dungeons gm4_count 0
+scoreboard players set speed gm4_orbis_config 1
 
 #announce success
 tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Orbis Installed!"}]
