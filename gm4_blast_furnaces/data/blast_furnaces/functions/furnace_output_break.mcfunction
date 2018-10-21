@@ -1,5 +1,4 @@
 # Called from main.mcfunction
-
 # @s = @e[tag=gm4_bf_output] unless block ~ ~ ~ hopper[facing=down]
 
 # =============== GIVES THE ITEMS IT TOOK TO CRAFT ON BREAK ====================

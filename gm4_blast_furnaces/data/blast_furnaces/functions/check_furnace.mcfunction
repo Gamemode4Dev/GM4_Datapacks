@@ -1,5 +1,4 @@
 # Called from handle_block_structure.mcfunction
-
 # @s = @e[tag=gm4_bf_output, tag=gm4_bf_has_furnace]
 
 execute if entity @s[y_rotation=-90.0] unless block ~1 ~ ~ furnace[facing=east] run tag @s remove gm4_bf_has_furnace

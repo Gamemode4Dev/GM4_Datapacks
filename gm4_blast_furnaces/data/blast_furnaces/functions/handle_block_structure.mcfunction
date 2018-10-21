@@ -1,5 +1,4 @@
 # Called from update.mcfunction
-
 # @s = @e[tag=gm4_bf_output]
 
 # Check if furnace still exists. Else remove `has_furnace` tag

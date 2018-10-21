@@ -1,5 +1,4 @@
 # Called from handle_block_structure.mcfunction
-
 # @s = @e[tag=gm4_bf_output, tag=!gm4_bf_has_furnace]
 
 

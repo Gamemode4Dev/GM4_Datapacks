@@ -1,5 +1,4 @@
 # Called from check_structure.mcfunction
-
 # @s = @e[tag=gm4_bf_output, tag=gm4_bf_has_furnace, tag=gm4_bf_has_structure]
 
 # =========== MARK ADN DISPLAY ORE IFF IRON OR GOLD IS SMELTING ==========
