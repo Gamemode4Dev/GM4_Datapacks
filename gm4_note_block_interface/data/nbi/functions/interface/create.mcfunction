@@ -31,3 +31,6 @@ execute if block ~ ~ ~ note_block[note=21] run summon area_effect_cloud ~ ~ ~ {D
 execute if block ~ ~ ~ note_block[note=22] run summon area_effect_cloud ~ ~ ~ {Duration:60,Tags:["gm4_nbi_display"],CustomNameVisible:1,CustomName:"{\"text\":\"E\"}"}
 execute if block ~ ~ ~ note_block[note=23] run summon area_effect_cloud ~ ~ ~ {Duration:60,Tags:["gm4_nbi_display"],CustomNameVisible:1,CustomName:"{\"text\":\"F\"}"}
 execute if block ~ ~ ~ note_block[note=24] run summon area_effect_cloud ~ ~ ~ {Duration:60,Tags:["gm4_nbi_display"],CustomNameVisible:1,CustomName:"{\"text\":\"F♯\"}"}
+
+#updates note block with block under
+clone ~ ~-1 ~ ~ ~-1 ~ ~ ~-1 ~ replace force
