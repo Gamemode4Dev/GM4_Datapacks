@@ -1,0 +1,19 @@
+{
+    "display": {
+        "icon": {
+            "item": "stone_pressure_plate",
+            "nbt": "{display:{Name:\"\\\"tnt_mines logo\\\"\"}}"
+        },
+        "title": "Uh-oh!",
+        "description": {
+            "text": "Step on a TNT Landmine",
+            "color": "gray"
+        }
+    },
+    "parent": "gm4:tnt_mines_create",
+    "criteria": {
+        "explode_tnt_landmine": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}
