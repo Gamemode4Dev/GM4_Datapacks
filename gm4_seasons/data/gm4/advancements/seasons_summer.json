@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"dead_bush",
+      "nbt":"{display:{Name:\"\\\"seasons_summer logo\\\"\"}}"
+    },
+    "title":"It's getting hot in here...",
+    "description":{
+      "text":"Experience your first Summer",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "TRIGGER_NAME":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

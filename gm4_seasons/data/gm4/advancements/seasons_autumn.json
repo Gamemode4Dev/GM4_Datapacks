@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"pumpkin",
+      "nbt":"{display:{Name:\"\\\"seasons_autumn logo\\\"\"}}"
+    },
+    "title":"Watch the leaves fall!",
+    "description":{
+      "text":"Experience your first Autumn",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "TRIGGER_NAME":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

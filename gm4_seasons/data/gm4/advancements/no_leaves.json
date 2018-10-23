@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"stick",
+      "nbt":"{display:{Name:\"\\\"no_leaves logo\\\"\"}}"
+    },
+    "title":"Where'd the leaves go?",
+    "description":{
+      "text":"Gather sticks from mining leaves",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:seasons_winter",
+  "criteria":{
+    "TRIGGER_NAME":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"oak_leaves",
+      "nbt":"{display:{Name:\"\\\"leaf_pile logo\\\"\"}}"
+    },
+    "title":"Let's make a leafpile!",
+    "description":{
+      "text":"Find fallen leaves",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:seasons_autumn",
+  "criteria":{
+    "TRIGGER_NAME":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

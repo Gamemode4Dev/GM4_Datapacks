@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"ice",
+      "nbt":"{display:{Name:\"\\\"frost_bite logo\\\"\"}}"
+    },
+    "title":"BRRR!",
+    "description":{
+      "text":"Get frost bite",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:seasons_winter",
+  "criteria":{
+    "TRIGGER_NAME":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

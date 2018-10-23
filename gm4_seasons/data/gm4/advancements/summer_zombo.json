@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"sand",
+      "nbt":"{display:{Name:\"\\\"summer_zombo logo\\\"\"}}"
+    },
+    "title":"Summer Zombo?",
+    "description":{
+      "text":"Find a converted Husk during summer",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:seasons_summer",
+  "criteria":{
+    "TRIGGER_NAME":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"red_tulip",
+      "nbt":"{display:{Name:\"\\\"seasons_spring logo\\\"\"}}"
+    },
+    "title":"The season of life!",
+    "description":{
+      "text":"Experience your first Spring",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "TRIGGER_NAME":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
