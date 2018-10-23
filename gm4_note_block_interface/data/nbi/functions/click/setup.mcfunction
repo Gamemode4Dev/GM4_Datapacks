@@ -4,7 +4,7 @@
 #resets click scores
 scoreboard players reset @s gm4_nbi_click
 #sets raycast limit
-scoreboard players set @s gm4_nbi_ray 500
+scoreboard players set @s gm4_nbi_ray 50
 #runs raycast loops
-execute positioned ~ ~1.7 ~ if entity @s[dx=0] at @s anchored eyes positioned ^ ^ ^ anchored feet run function nbi:click/loop
-execute positioned ~ ~1.7 ~ unless entity @s[dx=0] at @s anchored eyes positioned ^ ^ ^ anchored feet run function nbi:click/sneak_loop
+execute unless score @s gm4_nbi_sneak matches 1.. run function nbi:click/loop
+execute if score @s gm4_nbi_sneak matches 1.. run function nbi:click/sneak_loop

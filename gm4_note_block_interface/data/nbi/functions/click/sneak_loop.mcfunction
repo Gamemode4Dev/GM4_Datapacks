@@ -6,4 +6,4 @@ scoreboard players remove @s gm4_nbi_ray 1
 #tests for note_block
 execute if block ~ ~ ~ note_block align xyz positioned ~0.5 ~0.6 ~0.5 run function nbi:interface/change
 #runs the loop again
-execute unless block ~ ~ ~ note_block if score @s gm4_nbi_ray matches 1.. positioned ^ ^ ^0.01 run function nbi:click/sneak_loop
+execute unless block ~ ~ ~ note_block if score @s gm4_nbi_ray matches 1.. positioned ^ ^ ^0.1 run function nbi:click/sneak_loop
