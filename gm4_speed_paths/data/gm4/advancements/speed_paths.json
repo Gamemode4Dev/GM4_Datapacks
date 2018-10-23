@@ -1,7 +1,7 @@
 {
   "display":{
     "icon":{
-      "item":"path_block",
+      "item":"grass_path",
       "nbt":"{display:{Name:\"\\\"speed_paths logo\\\"\"}}"
     },
     "title":"Plain Ol' Advancement Title",

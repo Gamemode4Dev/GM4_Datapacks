@@ -1,19 +1,31 @@
 {
   "display":{
     "icon":{
-      "item":"stone",
-      "nbt":"{display:{Name:\"\\\"MODULE_ID logo\\\"\"}}"
+      "item":"bow",
+      "nbt":"{Enchantments:[{id:\"flame\",lvl:1}],display:{Name:\"\\\"better_fire logo\\\"\"}}"
     },
-    "title":"Plain Ol' Advancement Title",
+    "title":"Flint 'n Stick",
     "description":{
-      "text":"Noones bothered to give me a description yet... They won't... They don't care about me....",
+      "text":"Fire a Flame Bow",
       "color":"gray"
     }
   },
   "parent":"gm4:root",
   "criteria":{
-    "TRIGGER_NAME":{
-      "trigger":"minecraft:impossible"
+    "gm4_better_fire_shoot_fire_arrow":{
+      "trigger":"minecraft:item_durability_changed",
+      "conditions":{
+        "delta":-1,
+        "item":{
+          "enchantments":[{
+            "enchantment":"minecraft:flame",
+            "levels":1
+          }],
+          "item":"minecraft:bow"
+        }
+
+
+      }
     }
   }
 }
