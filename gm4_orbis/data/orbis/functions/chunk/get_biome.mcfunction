@@ -16,15 +16,13 @@ execute positioned ~ 62 ~ run function orbis:chunk/get_water
 execute positioned ~ 55 ~ run function orbis:chunk/get_water
 execute if score orbis_water gm4_count matches 384.. run scoreboard players set @s gm4_orbis_biome 1
 
-# having at least 16x8 blocks of sandstone between layer 58 and 110 makes it a desert
-execute store result score orbis_sand gm4_count run clone ~ 58 ~ ~15 110 ~15 ~ 60 ~ filtered sandstone force
+# having at least 16x8 blocks of sandstone between layer 56 and 110 makes it a desert
+execute store result score orbis_sand gm4_count run clone ~ 56 ~ ~15 110 ~15 ~ 60 ~ filtered sandstone force
 execute if score orbis_sand gm4_count matches 128.. run scoreboard players set @s gm4_orbis_biome 2
 
-# having at least 128 snow layer blocks or 32 ice blocks makes it a snow biome
+# having at least 128 snow layer blocks makes it a snow biome
 execute store result score orbis_snow gm4_count run clone ~ 60 ~ ~15 89 ~15 ~ 60 ~ filtered snow force
 execute if score orbis_snow gm4_count matches 128.. run scoreboard players set @s gm4_orbis_biome 3
-execute store result score orbis_ice gm4_count run clone ~ 60 ~ ~15 89 ~15 ~ 60 ~ filtered ice force
-execute if score orbis_ice gm4_count matches 32.. run scoreboard players set @s gm4_orbis_biome 3
 
 # having at least 64 terracotta or 64 red sand makes it a mesa
 execute store result score orbis_terracotta gm4_count run clone ~ 62 ~ ~15 80 ~15 ~ 62 ~ filtered terracotta force
