@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": {
+            "text": "It is Summer",
+            "color": "red"
+        },
+        "description": {
+            "text": "It is now summer",
+            "color": "light_purple",
+            "italic": true
+        },
+        "icon": {
+            "item": "minecraft:dead_bush"
+        },
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "show_summer": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "seasons:display/display_season"
+}

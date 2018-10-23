@@ -1,0 +1,28 @@
+{
+    "criteria": {
+        "biome": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "biome": "deep_cold_ocean",
+                "position": {
+                    "x": {
+                        "min": -30000000,
+                        "max": 30000000
+                    },
+                    "y": {
+                        "min": -30000000,
+                        "max": 30000000
+                    },
+                    "z": {
+                        "min": -30000000,
+                        "max": 30000000
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "seasons:general/biome_check/tag"
+    }
+	
+}

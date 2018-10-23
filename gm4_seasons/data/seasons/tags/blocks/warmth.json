@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:fire",
+    "minecraft:torch",
+    "minecraft:lava",
+    "minecraft:jack_o_lantern",
+    "minecraft:glowstone",
+    "minecraft:magma_block"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": {
+            "text": "It is Autumn",
+            "color": "gold"
+        },
+        "description": {
+            "text": "It is now Autumn",
+            "color": "light_purple",
+            "italic": true
+        },
+        "icon": {
+            "item": "minecraft:pumpkin"
+        },
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "show_autumn": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "seasons:display/display_season"
+}

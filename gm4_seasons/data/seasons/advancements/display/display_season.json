@@ -1,0 +1,27 @@
+{
+    "display": {
+        "title": {
+            "text": "Seasons",
+            "color": "gold",
+            "bold": true
+        },
+        "description": {
+            "text": "created by BluePsycho Ranger",
+            "color": "light_purple",
+            "italic": true,
+            "bold": false
+        },
+        "icon": {
+            "item": "minecraft:clock"
+        },
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true,
+        "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+    },
+    "criteria": {
+        "season": {
+            "trigger": "minecraft:location"
+        }
+    }
+}

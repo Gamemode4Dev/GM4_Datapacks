@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "init": {
+            "trigger": "minecraft:location"
+        }
+    },
+    "rewards": {
+        "function": "seasons:general/init_player"
+    }
+}
