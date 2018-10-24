@@ -4,9 +4,9 @@
       "item":"stone",
       "nbt":"{display:{Name:\"\\\"auto_breeding logo\\\"\"}}"
     },
-    "title":"Plain Ol' Advancement Title",
+    "title":"Dirty food!",
     "description":{
-      "text":"Noone's bothered to give me a description yet... They won't... They don't care about me....",
+      "text":"Feed an animal by dropping their food item underneath them",
       "color":"gray"
     }
   },
