@@ -14,5 +14,8 @@ execute at @s[nbt={Item:{id:"minecraft:beetroot_seeds"}}] run particle minecraft
 execute at @s[nbt={Item:{id:"minecraft:wheat"}}] run particle minecraft:item minecraft:wheat ~ ~.25 ~ .1 .1 .1 0 20
 playsound minecraft:entity.generic.eat voice @a[distance=..5] ~ ~ ~ 100 .7 1
 
+#check for advancement
+execute if entity @e[tag=gm4_can_breed,sort=nearest,limit=1,nbt={InLove:600}] run advancement grant @a[distance=..3] only gm4:auto_breeding
+
 #kill item
 kill @s
