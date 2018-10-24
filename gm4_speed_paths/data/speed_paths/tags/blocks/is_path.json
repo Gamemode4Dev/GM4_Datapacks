@@ -1,1 +1,7 @@
-
+{
+  "values": [
+    "minecraft:grass_path",
+    "minecraft:gravel",
+    "minecraft:coarse_dirt"
+  ]
+}
