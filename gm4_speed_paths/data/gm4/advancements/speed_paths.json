@@ -4,9 +4,9 @@
       "item":"grass_path",
       "nbt":"{display:{Name:\"\\\"speed_paths logo\\\"\"}}"
     },
-    "title":"Plain Ol' Advancement Title",
+    "title":"Speedy Shoveling",
     "description":{
-      "text":"Noones bothered to give me a description yet... They won't... They don't care about me....",
+      "text":"Run along a grass path and gain speed",
       "color":"gray"
     }
   },
