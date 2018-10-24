@@ -1,7 +1,7 @@
 {
   "display":{
     "icon":{
-      "item":"stone",
+      "item":"wheat_seeds",
       "nbt":"{display:{Name:\"\\\"auto_breeding logo\\\"\"}}"
     },
     "title":"Dirty food!",
