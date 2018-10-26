@@ -17,7 +17,7 @@
       "video_link":"https://www.youtube.com/watch?v=uUoEKtte1GQ&index=1&list=PLpa6LLAKqMWbI2xOCJBkEPkAifH4bfQ5J",
       "wiki_link":"https://wiki.gm4.co/wiki/Bat_Grenades",
       "early_versions":true,
-      versions:[
+      "versions":[
         "1.13":{
           "credits:"{
             "Creator":["Sparks"]
@@ -32,7 +32,7 @@
       "video_link":"shttps://www.youtube.com/watch?v=rVRSXTGQPbg",
       "wiki_link":"https://wiki.gm4.co/wiki/Enderman_Support_Class",
       "early_versions":true,
-      versions:[
+      "versions":[
         "1.13":{
           "credits:"{
             "Creator":["Sparks"]
