@@ -7,7 +7,7 @@
     "Modules have global descriptions and links but these can be overwritten per version if needed.",
     "",
     "early_versions set to true means there are pre 1.13 versions of the module and the page will",
-    "link to the old module page based on the module id.
+    "link to the old module page based on the module id."
   ],
   "modules":[
     {
