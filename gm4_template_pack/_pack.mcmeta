@@ -1,6 +1,21 @@
 {
-    "pack":{
-        "pack_format":0,
-        "description":"A Gamemode 4 Module"
-    }
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  }
+  "module_name":"MODULE_NAME",
+  "module_id":"MODULE_ID",
+  "site_description":"Someone forgot to type a description!",
+  "video_link":"YOUTUBE_VIDEO_URL",
+  "wiki_link":"WIKI_VIDEO_URL",
+  "credits":{
+    "comment":"All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings.",
+    "creators":[
+      ["USERNAME","OPTIONAL_LINK"],
+      ["USERNAME","OPTIONAL_LINK"]
+    ],
+    "artist":[
+      ["USERNAME","OPTIONAL_LINK"]
+    ]
+  }
 }
