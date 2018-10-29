@@ -8,6 +8,10 @@
   "site_description":"Someone forgot to type a description!",
   "video_link":"YOUTUBE_VIDEO_URL",
   "wiki_link":"WIKI_VIDEO_URL",
+  "required_modules":[
+    "module_id of required module",
+    "or leave array empty"
+  ],
   "credits":{
     "comment":"All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings.",
     "creators":[
