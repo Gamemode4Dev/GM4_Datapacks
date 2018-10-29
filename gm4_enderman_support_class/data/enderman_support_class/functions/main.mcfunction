@@ -1,6 +1,6 @@
 #tag all hostile mobs (and shulkers) near an enderman
-execute as @e[type=enderman,tag=!gm4_noESC] at @s run tag @e[distance=..25,nbt={Attributes:[{Name:"generic.attackDamage"}]},tag=!gm4_noESC] add gm4_ESC
-execute as @e[type=enderman,tag=!gm4_noESC] at @s run tag @e[distance=..25,type=shulker,tag=!gm4_noESC] add gm4_ESC
+execute at @e[type=enderman,tag=!gm4_noESC] run tag @e[distance=..25,nbt={Attributes:[{Name:"generic.attackDamage"}]},tag=!gm4_noESC] add gm4_ESC
+execute at @e[type=enderman,tag=!gm4_noESC] run tag @e[distance=..25,type=shulker,tag=!gm4_noESC] add gm4_ESC
 
 #apply buffs to mobs with tag
 execute at @e[type=skeleton,tag=gm4_ESC] run effect give @a[distance=..7] weakness 7 0
