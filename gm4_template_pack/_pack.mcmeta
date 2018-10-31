@@ -2,7 +2,7 @@
   "pack":{
     "pack_format":0,
     "description":"A Gamemode 4 Module"
-  }
+  },
   "module_name":"MODULE_NAME",
   "module_id":"MODULE_ID",
   "site_description":"Someone forgot to type a description!",

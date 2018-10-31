@@ -2,7 +2,7 @@
   "pack":{
     "pack_format":0,
     "description":"A Gamemode 4 Module"
-  }
+  },
   "module_name":"Bat Grenades",
   "module_id":"bat_grenades",
   "site_description":"Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!",
