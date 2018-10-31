@@ -2,7 +2,7 @@
   "pack":{
     "pack_format":0,
     "description":"A Gamemode 4 Module"
-  }
+  },
   "module_name":"Custom Crafters",
   "module_id":"custom_crafters",
   "site_description":"A base module that adds a custom crafting table to the game.",
