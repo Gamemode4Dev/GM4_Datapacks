@@ -1,3 +1,6 @@
+#@s = item entity to have enchantments extracted
+#run from enchantment_extractors:extract
+
 scoreboard players add fail_type gm4_ench_random 27
 execute if score fail_type gm4_ench_random matches 100.. run scoreboard players remove fail_type gm4_ench_random 100
 
