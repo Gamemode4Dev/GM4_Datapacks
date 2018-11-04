@@ -1,3 +1,6 @@
+#@s = item to have enchantments extracted from
+#run from enchantment_extractors:extract
+
 execute if score extract_chance gm4_ench_random matches ..95 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:protection"}]}}}] run replaceitem block ~ ~ ~ container.0 enchanted_book{StoredEnchantments:[{id:"minecraft:protection",lvl:1}]}
 execute if score extract_chance gm4_ench_random matches ..80 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:2s,id:"minecraft:protection"}]}}}] run replaceitem block ~ ~ ~ container.0 enchanted_book{StoredEnchantments:[{id:"minecraft:protection",lvl:2}]}
 execute if score extract_chance gm4_ench_random matches ..65 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:3s,id:"minecraft:protection"}]}}}] run replaceitem block ~ ~ ~ container.0 enchanted_book{StoredEnchantments:[{id:"minecraft:protection",lvl:3}]}

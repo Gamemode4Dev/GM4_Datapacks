@@ -1,3 +1,6 @@
+#@s = item to have enchantments extracted
+#run from enchantment_extractors:process
+
 scoreboard players add extract_chance gm4_ench_random 27
 execute if score extract_chance gm4_ench_random matches 100.. run scoreboard players remove extract_chance gm4_ench_random 100
 function enchantment_extractors:enchantment
