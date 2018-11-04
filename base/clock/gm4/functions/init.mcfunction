@@ -10,4 +10,4 @@ scoreboard objectives add gm4_modules dummy
 
 # =========================== FAKE ENTITIES ===========================
 scoreboard players set gm4 gm4_upCheck 1
-scoreboard players set updateHappened gm4_upCheck 1
+scoreboard players set update_happened gm4_upCheck 1
