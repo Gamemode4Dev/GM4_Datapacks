@@ -5,9 +5,9 @@ tellraw @a ["",{"text":"[GM4]: Welcome to Gamemode 4. Initialising...","color":"
 execute unless entity @p run say [GM4]: Welcome to Gamemode 4. Initialising...
 
 # ============================ SCOREBOARDS ============================
-scoreboard objectives add gm4_clockTick dummy
+scoreboard objectives add gm4_clocktick dummy
 scoreboard objectives add gm4_modules dummy
 
 # =========================== FAKE ENTITIES ===========================
-scoreboard players set gm4 gm4_upCheck 1
-scoreboard players set update_happened gm4_upCheck 1
+scoreboard players set gm4 gm4_up_check 1
+scoreboard players set update_happened gm4_up_check 1
