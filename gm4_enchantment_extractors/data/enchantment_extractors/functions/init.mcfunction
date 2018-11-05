@@ -8,6 +8,10 @@ scoreboard players set enchantment_extractors gm4_modules 1
 scoreboard players set enchantment_extractors gm4_clockTick 0
 
 scoreboard objectives add gm4_ench_random dummy
+execute unless score seed gm4_ench_random matches 0.. run scoreboard players set seed gm4_ench_random 731031
+scoreboard players set mult gm4_ench_random 1664525
+scoreboard players set incr gm4_ench_random 1013904223
+scoreboard players set #100 gm4_ench_random 100
 
 #announce success
 tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Enchantment Extractors Installed!"}]
