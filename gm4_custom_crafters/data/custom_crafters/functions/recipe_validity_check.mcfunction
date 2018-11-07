@@ -1,4 +1,5 @@
 # @s = gm4_custom_crafter unless block ~ ~ ~ dropper{Items:[]}
+#Run from main
 
 #store number of full slots
 execute store result score @s gm4_slot_count run data get block ~ ~ ~ Items
