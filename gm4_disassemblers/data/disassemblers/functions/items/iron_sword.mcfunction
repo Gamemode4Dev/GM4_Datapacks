@@ -1,4 +1,3 @@
-say iron sword
 scoreboard players set max_damage gm4_disassembler 250
 scoreboard players set max_items gm4_disassembler 2
 

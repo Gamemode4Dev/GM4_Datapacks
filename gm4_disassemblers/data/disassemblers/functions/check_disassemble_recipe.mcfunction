@@ -36,6 +36,8 @@ execute if entity @s[nbt={Item:{id:"minecraft:iron_chestplate"}}] run function d
 execute if entity @s[nbt={Item:{id:"minecraft:iron_pickaxe"}}] run function disassemblers:items/iron_pickaxe
 execute if entity @s[nbt={Item:{id:"minecraft:iron_shovel"}}] run function disassemblers:items/iron_shovel
 execute if entity @s[nbt={Item:{id:"minecraft:iron_hoe"}}] run function disassemblers:items/iron_hoe
+execute if entity @s[nbt={Item:{id:"minecraft:shears"}}] run function disassemblers:items/shears
+execute if entity @s[nbt={Item:{id:"minecraft:flint_and_steel"}}] run function disassemblers:items/flint_and_steel
 
 execute if score result_items gm4_disassembler matches 0 run playsound minecraft:block.anvil.place master @a[distance=..5] ~ ~ ~ 3 0
 execute if score result_items gm4_disassembler matches 1.. run playsound minecraft:block.anvil.use master @a[distance=..5] ~ ~ ~ 3 2
