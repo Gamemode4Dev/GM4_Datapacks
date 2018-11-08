@@ -1,6 +1,6 @@
 {
-  "pack": {
-    "pack_format": 2,
-    "description": "GM4 Vertical Rails"
-  }
+    "pack":{
+        "pack_format":0,
+        "description":"A Gamemode 4 Module"
+    }
 }
