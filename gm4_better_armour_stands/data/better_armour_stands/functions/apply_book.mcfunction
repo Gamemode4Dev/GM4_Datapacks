@@ -4,7 +4,7 @@ execute if entity @s[nbt={Item:{tag:{pages:["default"]}}}] as @e[limit=1,distanc
 execute if entity @s[nbt={Item:{tag:{pages:["no gravity"]}}}] run data merge entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] {NoGravity:1}
 execute if entity @s[nbt={Item:{tag:{pages:["gravity"]}}}] run data merge entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] {NoGravity:0}
 execute if entity @s[nbt={Item:{tag:{pages:["arms"]}}}] run data merge entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] {ShowArms:1}
-execute if entity @s[nbt={Item:{tag:{pages:["arms"]}}}] if entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] run advancement grant @a[distance=..3,gamemode=!spectator] only gm4:better_armor_stands
+execute if entity @s[nbt={Item:{tag:{pages:["arms"]}}}] if entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] run advancement grant @a[distance=..3,gamemode=!spectator] only gm4:better_armour_stands
 execute if entity @s[nbt={Item:{tag:{pages:["no arms"]}}}] run data merge entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] {ShowArms:0}
 execute if entity @s[nbt={Item:{tag:{pages:["small"]}}}] run data merge entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] {Small:1}
 execute if entity @s[nbt={Item:{tag:{pages:["tall"]}}}] run data merge entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] {Small:0}
