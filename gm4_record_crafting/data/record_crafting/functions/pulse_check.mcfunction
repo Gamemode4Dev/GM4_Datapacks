@@ -1,2 +1,2 @@
 #compares assigned run tick to current tick and calls main
-execute if score gm4_currentTick gm4_clockTick = record_crafting gm4_clockTick run function record_crafting:main
+execute if score current_tick gm4_clock_tick = record_crafting gm4_clock_tick run function record_crafting:main
