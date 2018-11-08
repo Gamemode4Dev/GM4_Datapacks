@@ -2,17 +2,17 @@
   "display":{
     "icon":{
       "item":"armor_stand",
-      "nbt":"{display:{Name:\"\\\"better_armor_stands logo\\\"\"}}"
+      "nbt":"{display:{Name:\"\\\"better_armour_stands logo\\\"\"}}"
     },
     "title":"Gettin' Handsy",
     "description":{
-      "text":"Give your armor stand arms.",
+      "text":"Give your armour stand arms.",
       "color":"gray"
     }
   },
   "parent":"gm4:root",
   "criteria":{
-    "arm_armor_stand":{
+    "arm_armour_stand":{
       "trigger":"minecraft:impossible"
     }
   }
