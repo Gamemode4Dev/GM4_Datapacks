@@ -1,6 +1,22 @@
 {
-    "pack":{
-        "pack_format":0,
-        "description":"A Gamemode 4 Module"
-    }
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Better Fire",
+  "module_id":"better_fire",
+  "site_description":"Flame arrows set fire when they land and burning creepers explode!",
+  "site_categories":[],
+  "video_link":"https://www.youtube.com/watch?v=J5024LhHuWk",
+  "wiki_link":"http://gamemode4.wikia.com/wiki/Better_Fire",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["Sparks","https://www.twitter.com/accidentalgames"]
+    ],
+    "Updated By":[
+      ["Bluefire610",""]
+    ]
+  }
 }
