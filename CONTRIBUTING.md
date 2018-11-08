@@ -27,6 +27,7 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
 
 - Any name, scoreboard name or tag should be formatted as `lowercase_with_underscores`
 - Scoreboards and tags should begin with the `gm4_` prefix.
+- fake players used to store numbers for scoreboard operations should be named as a "#" followed by that number e.g. `scoreboard players set #100 gm4_some_scoreboard 100`
 - Entities that aren't visible to the player (markers) should have custom names beginning with `gm4_` if this does not interfere with functionality.
 - Names for the above two points should be as clear and relevant as possible to avoid confusion or two modules sharing the same name by mistake.
 - Lore on items should have the first word capitalized and no fullstop at the end of the sentence if there is only one sentence. Other punctuation (?!) can be added.
@@ -37,7 +38,7 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
 To send us your finished module for testing and approval, simply submit a pull request and leave a comment if you have additional notes.
 Make sure to delete files related to the base clocking system. Specifically make sure:
 - Delete the load.json and tick.json files from minecraft/tags/functions/
-- Delete functions and tags from the gm4 namespace. Advancements should be left in there though.
+- Delete functions from the gm4 namespace. Advancements and load/tick tags should be left in there though.
 - Make sure that `#$moduleUpdateList` is on the last line containing text of your module's `init.mcfunction`
 
 ## Updating a module on the repo
