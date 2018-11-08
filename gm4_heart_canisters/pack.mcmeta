@@ -1,6 +1,29 @@
 {
-    "pack":{
-        "pack_format":0,
-        "description":"A Gamemode 4 Module"
-    }
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Heart Canisters",
+  "module_id":"heart_canisters",
+  "site_description":"Pricey canisters that increase your health when carried.",
+  "site_categories":["Custom Crafting"],
+  "video_link":"https://www.youtube.com/watch?v=JEZoynWgSHg",
+  "wiki_link":"https://gamemode4.wikia.com/wiki/Heart_Canisters",
+  "required_modules":[
+    "custom_crafters"
+  ],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["Sparks","https://www.twitter.com/accidentalgames"],
+      ["SpiderRobotMan","https://twitter.com/spiderrobotman"]
+    ],
+    "Updated by":[
+      ["SpecialBuilder32","https://www.twitter.com/specialbuilder32"],
+      ["Misode","https://twitter.com/misoloo"]
+    ],
+    "Textures by":[
+      ["Jonpot",""]
+    ]
+  }
 }
