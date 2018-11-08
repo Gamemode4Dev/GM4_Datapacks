@@ -1,0 +1,26 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Better Armour Stands",
+  "module_id":"better_armour_stands",
+  "site_description":"This module lets you control the size of stands and show their arms. It's also expandable!",
+  "site_categories":["Better Armour Stands"],
+  "video_link":"https://www.youtube.com/watch?v=E7DnQTlpgrw&t=1s",
+  "wiki_link":"http://gamemode4.wikia.com/wiki/Better_Armour_Stands",
+  "required_modules":[],
+  "recommended_modules":[
+    "poses_pack",
+    "particles_pack"
+  ],
+  "credits":{
+    "Creator":[
+      ["Sparks","https://www.twitter.com/accidentalgames"]
+    ],
+    "Updated by":[
+      ["SpecialBuilder32","https://www.twitter.com/specialbuilder32"],
+      ["Misode",""]
+    ]
+  }
+}
