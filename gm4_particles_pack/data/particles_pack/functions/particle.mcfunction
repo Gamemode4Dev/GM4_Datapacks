@@ -1,3 +1,5 @@
+# @s = armorstand with a particle score
+# run from main
 execute if score @s gm4_particle matches 1 run particle heart ~ ~2.0 ~ .2 0 .2 0 1
 execute if score @s gm4_particle matches 2 run particle flame ~ ~.5 ~ 0 0 0 0 1 force
 execute if score @s gm4_particle matches 3 run particle barrier ~ ~.5 ~ 0 0 0 0 1

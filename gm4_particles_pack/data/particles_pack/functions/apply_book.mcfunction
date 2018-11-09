@@ -16,6 +16,6 @@ execute if entity @s[nbt={Item:{tag:{pages:["drip"]}}}] run scoreboard players s
 
 execute at @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit,scores={gm4_particle=5}] run summon area_effect_cloud ~ ~1 ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:cloud,Tags:["gm4_particles_pack_cloud"]}
 execute at @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit,scores={gm4_particle=6}] run summon area_effect_cloud ~ ~1 ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:bubble,Tags:["gm4_particles_pack_cloud"]}
-execute at @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit,scores={gm4_particle=8}] run summon area_effect_cloud ~ ~1 ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:dripping_water,Tags:["gm4_particles_pack_cloud"]}
+execute at @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit,scores={gm4_particle=8}] run summon area_effect_cloud ~ ~1 ~ {Duration:2147483647,Radius:0.3,RadiusOnUse:0,Particle:dripping_water,Tags:["gm4_particles_pack_cloud"]}
 
 data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit,scores={gm4_particle=1..}] {Invisible:1b}
