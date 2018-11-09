@@ -1,6 +1,23 @@
 {
-  "pack": {
-    "pack_format": 2,
-    "description": "GM4 Vertical Rails"
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Vertical Rails",
+  "module_id":"vertical_rails",
+  "site_description":"Use ladders as vertical Minecart tracks. Complete with detector and booster rails!",
+  "site_categories":[],
+  "video_link":"https://www.youtube.com/watch?v=LJoN7CmJL4Q",
+  "wiki_link":"https://gamemode4.wikia.com/wiki/Vertical_Rails",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["Sparks","https://www.twitter.com/accidentalgames"]
+    ],
+    "Updated by":[
+      ["SpecialBuilder32","https://www.twitter.com/specialbuilder32"],
+      ["Kruthers","https://twitter.com/Pandakruthers"]
+    ]
   }
 }
