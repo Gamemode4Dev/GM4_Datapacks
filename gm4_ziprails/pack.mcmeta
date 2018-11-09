@@ -3,7 +3,6 @@
     "pack_format":0,
     "description":"A Gamemode 4 Module"
   },
-  "hidden":false,
   "module_name":"Ziprails",
   "module_id":"ziprails",
   "site_description":"",
