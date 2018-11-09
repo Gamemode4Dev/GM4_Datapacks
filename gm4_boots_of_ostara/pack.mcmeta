@@ -6,7 +6,9 @@
   "module_name":"Boots of Ostara",
   "module_id":"boots_of_ostara",
   "site_description":"Plant crops and more, just by walking! Also negates Desire Lines.",
-  "site_categories":[],
+  "site_categories":[
+    "Custom Crafting"
+  ],
   "video_link":"https://www.youtube.com/watch?v=H4UGM6_wGCE",
   "wiki_link":"http://gamemode4.wikia.com/wiki/Boots_of_Ostara",
   "required_modules":[],
