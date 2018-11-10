@@ -1,4 +1,4 @@
-Contributing to Gamemode 4
+Contributing to Gamemode 4 
 ==========================
 
 ## Adding a GM4 Module that isn't in the repo yet
