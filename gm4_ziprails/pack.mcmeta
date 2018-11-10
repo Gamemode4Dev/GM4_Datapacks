@@ -5,12 +5,12 @@
   },
   "module_name":"Ziprails",
   "module_id":"ziprails",
-  "site_description":"",
+  "site_description":"Automatically latch on to a tripwire to sail through the sky on a suspended line!",
   "site_categories":[],
   "video_link":"",
-  "wiki_link":"",
+  "wiki_link":"https://wiki.gm4.co/wiki/Ziprails",
   "required_modules":[],
-  "recommended_modules":[],
+  "recommended_modules":["vertical_rails"],
   "credits":{
     "Creators":[
       ["Sparks","https://www.twitter.com/accidentalgames"],
