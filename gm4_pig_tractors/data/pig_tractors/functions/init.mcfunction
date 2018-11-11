@@ -6,9 +6,6 @@ execute unless entity @p run say GM4: Installing Pig Tractors...
 scoreboard players set updateHappened gm4_upCheck 1
 scoreboard players set pig_tractors gm4_modules 1
 scoreboard players set pig_tractors gm4_clockTick 0
-scoreboard objectives add gm4_hoe_damage dummy
-scoreboard objectives add gm4_hoe_percent dummy
-scoreboard players set #4 gm4_hoe_damage 4 
 
 #announce success
 tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Pig Tractors Installed!"}]

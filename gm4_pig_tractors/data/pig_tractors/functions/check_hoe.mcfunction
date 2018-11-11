@@ -1,0 +1,6 @@
+tag @s[nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] add gm4_has_hoe
+tag @s[nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] add gm4_has_hoe
+tag @s[nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] add gm4_has_hoe
+tag @s[nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] add gm4_has_hoe
+tag @s[nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] add gm4_has_hoe
+advancement grant @s[tag=gm4_has_hoe] only gm4:pig_tractors
