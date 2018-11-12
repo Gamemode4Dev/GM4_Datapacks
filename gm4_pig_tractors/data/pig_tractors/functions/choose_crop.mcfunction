@@ -1,4 +1,7 @@
-execute if block ~ ~ ~ air if entity @s[nbt={Inventory:[{id:"minecraft:carrot"}]}] run function pig_tractors:place_crops/carrots
-execute if block ~ ~ ~ air if entity @s[nbt={Inventory:[{id:"minecraft:potato"}]}] run function pig_tractors:place_crops/potatoes
-execute if block ~ ~ ~ air if entity @s[nbt={Inventory:[{id:"minecraft:beetroot_seeds"}]}] run function pig_tractors:place_crops/beetroots
-execute if block ~ ~ ~ air if entity @s[nbt={Inventory:[{id:"minecraft:wheat_seeds"}]}] run function pig_tractors:place_crops/wheat
+# Called from on_pig
+
+function pig_tractors:check_mainhand
+
+execute if block ~ ~ ~ air run function pig_tractors:check_offhand
+
+execute if block ~ ~ ~ air run function pig_tractors:check_inv

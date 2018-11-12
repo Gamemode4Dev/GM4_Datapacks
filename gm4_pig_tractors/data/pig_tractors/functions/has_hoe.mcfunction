@@ -1,9 +1,3 @@
-# @s = @a[nbt={RootVehicle:{Entity:{id:"minecraft:pig"}}}]
-# Called from check_pig
-tag @s remove gm4_has_hoe
-tag @s[nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] add gm4_has_hoe
-tag @s[nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] add gm4_has_hoe
-tag @s[nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] add gm4_has_hoe
-tag @s[nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] add gm4_has_hoe
-tag @s[nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] add gm4_has_hoe
-advancement grant @s[tag=gm4_has_hoe] only gm4:pig_tractors
+execute if block ~ ~-0.2 ~ #pig_tractors:crops run function pig_tractors:check_crop
+execute positioned ~ ~-0.5 ~ if block ~ ~ ~ #pig_tractors:tillable run function pig_tractors:till
+execute if block ~ ~-0.5 ~ farmland if block ~ ~ ~ air run function pig_tractors:choose_crop
