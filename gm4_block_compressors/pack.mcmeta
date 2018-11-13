@@ -1,25 +1,25 @@
 {
   "pack":{
-  "pack_format":0,
-  "description":"A Gamemode 4 Module"
-},
-"module_name":"Block Compressors",
-"module_id":"block_compressors",
-"site_description":"Compress stacks of blocks down for compact storage, or decompress them again.",
-"site_categories":[],
-"video_link":"https://www.youtube.com/watch?v=sdrTJYjL8C0",
-"wiki_link":"https://gamemode4.wikia.com/wiki/Block_Compressors",
-"required_modules":[
-  "custom_crafters"
-],
-"recommended_modules":[],
-"credits":{
-  "Creator":[
-    ["Sparks","https://www.twitter.com/accidentalgames"]
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Block Compressors",
+  "module_id":"block_compressors",
+  "site_description":"Compress stacks of blocks down for compact storage, or decompress them again.",
+  "site_categories":[],
+  "video_link":"https://www.youtube.com/watch?v=sdrTJYjL8C0",
+  "wiki_link":"https://gamemode4.wikia.com/wiki/Block_Compressors",
+  "required_modules":[
+    "custom_crafters"
   ],
-  "Updated by":[
-    ["SunderB",""],
-    ["Misode","https://twitter.com/misoloo"]
-  ]
-}
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["Sparks","https://www.twitter.com/accidentalgames"]
+    ],
+    "Updated by":[
+      ["SunderB",""],
+      ["Misode","https://twitter.com/misoloo"]
+    ]
+  }
 }
