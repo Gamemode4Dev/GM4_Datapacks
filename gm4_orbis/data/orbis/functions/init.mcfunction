@@ -3,26 +3,25 @@ tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Installing Orbis..."}]
 execute unless entity @p run say GM4: Installing Orbis...
 
 #declare and initialise scoreboards and settings
-scoreboard players set updateHappened gm4_upCheck 1
+scoreboard players set update_happened gm4_up_check 1
 scoreboard players set orbis gm4_modules 1
-scoreboard players set orbis gm4_clockTick 0
-scoreboard players set orbis_4 gm4_clockTick 4
-scoreboard players set orbis_8 gm4_clockTick 8
-scoreboard players set orbis_12 gm4_clockTick 12
+scoreboard players set orbis gm4_clock_tick 0
+scoreboard players set orbis_4 gm4_clock_tick 4
+scoreboard players set orbis_8 gm4_clock_tick 8
+scoreboard players set orbis_12 gm4_clock_tick 12
 
 scoreboard objectives add gm4_count dummy
 scoreboard objectives add gm4_orbis_biome dummy
 scoreboard objectives add gm4_orbis_config dummy
+scoreboard players set speed gm4_orbis_config 1
 # scores to keep track of numbers
 scoreboard players add orbis_generated gm4_count 0
 scoreboard players add orbis_towers gm4_count 0
 scoreboard players add orbis_dungeons gm4_count 0
-scoreboard players set speed gm4_orbis_config 1
 
 #announce success
 tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Orbis Installed!"}]
 execute unless entity @p run say GM4: Orbis Installed!
 
 #check other modules to make sure they're up to date.
-execute if score bat_grenades gm4_modules matches ..1 run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"\"Bat Grenades\"",Tags:["updateMessage"],Duration:2000}
-execute if score bat_grenades gm4_modules matches ..1 run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"\"Another Module\"",Tags:["updateMessage"],Duration:2000}
+#$moduleUpdateList
