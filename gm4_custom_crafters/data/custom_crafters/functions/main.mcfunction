@@ -6,3 +6,6 @@ execute as @e[type=armor_stand,tag=gm4_custom_crafter] at @s unless block ~ ~ ~ 
 
 #crafter maintenance
 execute as @e[tag=gm4_custom_crafter,type=armor_stand] run data merge entity @s {Fire:2000}
+
+#recipes
+execute as @e[tag=gm4_custom_crafter,type=armor_stand] at @s if block ~ ~ ~ dropper[triggered=false]{Items:[{}]} run function custom_crafters:recipe_validity_check

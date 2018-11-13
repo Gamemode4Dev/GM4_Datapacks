@@ -1,0 +1,21 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Shroomites",
+  "module_id":"shroomites",
+  "site_description":"",
+  "site_categories":[],
+  "video_link":"",
+  "wiki_link":"",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creators":[
+      ["Sparks","https://www.twitter.com/accidentalgames"],
+      ["SpecialBuilder32","https://www.twitter.com/specialbuilder32"],
+      ["Bluefire610","https://twitter.com/Bluefire610"]
+    ]
+  }
+}

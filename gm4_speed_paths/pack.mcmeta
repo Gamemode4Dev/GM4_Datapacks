@@ -1,0 +1,22 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Speed Paths",
+  "module_id":"speed_paths",
+  "site_description":"Gives you a speed effect when you walk on path blocks.",
+  "site_categories":[],
+  "video_link":"https://www.youtube.com/watch?v=99VFSW1ORzU",
+  "wiki_link":"https://gamemode4.wikia.com/wiki/Speed_Paths",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["15Redstones","https://twitter.com/15Redstones"]
+    ],
+    "Updated by":[
+      ["Misode","https://twitter.com/misoloo"]
+    ]
+  }
+}
