@@ -1,2 +1,2 @@
 #compares assigned run tick to current tick and calls main
-execute if score gm4_currentTick gm4_clockTick = sweethearts gm4_clockTick run function sweethearts:main
+execute if score current_tick gm4_clock_tick = sweethearts gm4_clock_tick run function sweethearts:main
