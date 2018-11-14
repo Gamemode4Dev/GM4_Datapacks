@@ -1,4 +1,4 @@
 #compares assigned run tick to current tick and calls main
 execute if score current_tick gm4_clock_tick = blast_furnaces gm4_clock_tick run function blast_furnaces:main
 
-execute as @e[tag=gm4_blast_furnace,tag=gm4_blast_furnace_valid] at @s if block ^ ^ ^1 furnace{CookTime:199s} run function #blast_furnaces:recipe_check
+execute as @e[tag=gm4_blast_furnace,tag=gm4_blast_furnace_valid] at @s if block ^ ^ ^1 furnace[lit=true]{CookTime:199s} run function #blast_furnaces:recipe_check
