@@ -1,0 +1,2 @@
+summon area_effect_cloud ~ ~ ~ {Passengers:[{id:item,Item:{id:dropper,Count:1b}},{id:item,Item:{id:cobblestone,Count:7b}},{id:item,Item:{id:redstone,Count:1b}},{id:item,Item:{id:crafting_table,Count:1b,tag:{display:{Lore:["Slightly damaged workbench"]}}}},{id:item,Item:{id:iron_bars,Count:2b}},{id:item,Item:{id:piston,Count:1b}},{id:item,Item:{id:comparator,Count:2b}},{id:item,Item:{id:redstone_torch,Count:1b}}]}
+kill @s
