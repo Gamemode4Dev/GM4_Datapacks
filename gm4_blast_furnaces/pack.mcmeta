@@ -5,15 +5,21 @@
   },
   "module_name":"Blast Furnaces",
   "module_id":"blast_furnaces",
-  "site_description":"",
+  "site_description":"Double your iron output with this multi-block structure.",
   "site_categories":["Custom Crafting"],
-  "video_link":"",
-  "wiki_link":"",
+  "video_link":"https://www.youtube.com/watch?v=st0C38Mg9U8",
+  "wiki_link":"https://gamemode4.wikia.com/wiki/Blast_Furnaces",
   "required_modules":[
     "custom_crafters"
   ],
   "recommended_modules":[],
   "credits":{
-    
+    "Creator":[
+      ["Sparks","https://www.twitter.com/accidentalgames"]
+    ],
+    "Updated by":[
+      ["Kroppeb","https://twitter.com/kroppeb/"]
+      ["Misode","https://twitter.com/misoloo"]
+    ]
   }
 }
