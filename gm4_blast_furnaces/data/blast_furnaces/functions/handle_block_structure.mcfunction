@@ -11,5 +11,5 @@ execute if entity @s[tag=!gm4_bf_has_furnace] run function blast_furnaces:search
 # If still not found, remove `has_structure` tag
 execute if entity @s[tag=!gm4_bf_has_furnace] run tag @s remove gm4_bf_has_structure
 
-# Check if there is (still) a vald structure around the hopper
+# Check if there is (still) a valid structure around the hopper
 execute if entity @s[tag=gm4_bf_has_furnace] at @s run function blast_furnaces:check_structure
