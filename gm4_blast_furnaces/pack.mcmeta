@@ -1,0 +1,19 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Blast Furnaces",
+  "module_id":"blast_furnaces",
+  "site_description":"",
+  "site_categories":["Custom Crafting"],
+  "video_link":"",
+  "wiki_link":"",
+  "required_modules":[
+    "custom_crafters"
+  ],
+  "recommended_modules":[],
+  "credits":{
+    
+  }
+}
