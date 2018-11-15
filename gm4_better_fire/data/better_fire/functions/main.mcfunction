@@ -1,5 +1,5 @@
 #fire arrows place fire
-execute as @e[nbt=!{Fire:-1s},type=arrow] at @s run setblock ~ ~ ~ fire keep
+execute at @e[nbt=!{Fire:-1s},type=arrow] run setblock ~ ~ ~ fire keep
 
 #make creepers explode when on fire and low on Health
 execute as @e[nbt=!{Fire:-1s},type=creeper] store result score @s gm4_creep_health run data get entity @s Health 1
