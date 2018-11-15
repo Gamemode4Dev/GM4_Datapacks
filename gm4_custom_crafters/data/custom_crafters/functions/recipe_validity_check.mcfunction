@@ -1,4 +1,5 @@
 # @s = gm4_custom_crafter unless block ~ ~ ~ dropper{Items:[]}
+#Run from main
 
 #store number of full slots
 execute store result score @s gm4_slot_count run data get block ~ ~ ~ Items
@@ -31,7 +32,7 @@ execute if score @s gm4_slot_count matches 8.. unless score @s gm4_stack_size = 
 execute if score @s gm4_slot_count matches 9.. store result score @s gm4_stack_size run data get block ~ ~ ~ Items[8].Count
 execute if score @s gm4_slot_count matches 9.. unless score @s gm4_stack_size = first_stack_count gm4_stack_size run scoreboard players set first_stack_count gm4_stack_size 0
 
-execute if score first_stack_count gm4_stack_size matches 1.. run scoreboard players operation @s gm4_stack_size = first_stack_count gm4_stack_size
+scoreboard players operation @s gm4_stack_size = first_stack_count gm4_stack_size
 
 #Tell crafters with valid contents to run recipe checks
 execute if score @s gm4_stack_size matches 1.. run function #custom_crafters:recipe_check
