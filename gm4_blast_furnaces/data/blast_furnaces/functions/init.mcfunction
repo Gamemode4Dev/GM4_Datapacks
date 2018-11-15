@@ -3,7 +3,7 @@ tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Installing Blast Furnaces..."}
 execute unless entity @p run say GM4: Installing Blast Furnaces...
 
 #declare and initialise scoreboards and settings
-scoreboard players set updateHappened gm4_upCheck 1
+scoreboard players set update_appened gm4_upCheck 1
 scoreboard players set blast_furnaces gm4_modules 1
 scoreboard players set blast_furnaces gm4_clockTick 0
 
