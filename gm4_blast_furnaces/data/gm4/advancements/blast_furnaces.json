@@ -12,7 +12,7 @@
   },
   "parent":"gm4:root",
   "criteria": {
-    "blast_furnaces_trigger": {
+    "build_blast_furnace": {
       "trigger":"minecraft:impossible"
     }
   }
