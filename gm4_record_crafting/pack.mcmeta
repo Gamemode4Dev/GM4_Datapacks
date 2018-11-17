@@ -1,6 +1,26 @@
 {
-    "pack":{
-        "pack_format":0,
-        "description":"A Gamemode 4 Module"
-    }
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Record Crafting",
+  "module_id":"record_crafting",
+  "site_description":"A crafting recipe pack that lets you craft all the records.",
+  "site_categories":["Custom Crafting"],
+  "video_link":"https://www.youtube.com/watch?v=ibtS4zAvglQ",
+  "wiki_link":"http://gamemode4.wikia.com/wiki/Record_Crafting_Expansion_Pack",
+  "required_modules":["custom_crafters"],
+  "recommended_modules":[
+    "standard_crafting"
+  ],
+  "credits":{
+    "Creator":[
+      ["Sparks","https://www.twitter.com/accidentalgames"]
+    ],
+    "Updated by":[
+      ["Bluefire610","https://www.twitter.com/bluefire610"],
+      ["Sparks","https://www.twitter.com/accidentalgames"],
+      ["SpecialBuilder32","https://www.twitter.com/specialbuilder32"]
+    ]
+  }
 }

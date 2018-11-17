@@ -6,6 +6,7 @@
     "minecraft:stone",
     "minecraft:farmland",
     "minecraft:grass_path",
-    "minecraft:gravel"
+    "minecraft:gravel",
+    "minecraft:coarse_dirt"
   ]
 }
