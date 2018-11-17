@@ -8,3 +8,8 @@ execute store result block ~ ~ ~ Items[1].Count byte 1 run scoreboard players ge
 #data remove block
 data remove block ~ ~ ~ Items[1].tag.gm4_alchemical_crafters
 data remove block ~ ~ ~ Items[0].tag.gm4_alchemical_crafters
+
+execute store result score tag_size gm4_stack_size run data get block ~ ~ ~ Items[1].tag
+execute if score tag_size gm4_stack_size matches 0 run data remove block ~ ~ ~ Items[1].tag
+execute store result score tag_size gm4_stack_size run data get block ~ ~ ~ Items[0].tag
+execute if score tag_size gm4_stack_size matches 0 run data remove block ~ ~ ~ Items[0].tag
