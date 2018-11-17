@@ -1,0 +1,13 @@
+#@s = alchemical crafters containing a recipe results
+#Run from recipe_validity_check
+
+execute if score @s gm4_charge_level matches 4 run replaceitem block ~ ~ ~ container.7 minecraft:player_head{gm4_alchemical_crafters:{multiplier:1},gm4_transmutation_stone:1b,gm4_transmutation_charge:4b,gm4_transmutation_charged:1b,display:{Lore:["§7Charge: §a100%§r"],Name:"{\"text\":\"Transmutation Stone\",\"italic\":false}"},SkullOwner:{Id:"0d867dc5-c2b3-460f-bbc6-8cbd4ae93a5f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFkY2Q3OWE5YmM3OWE3NjQyYTczZTU3ZGU2NzkzOWQzYzM3OTQyN2MyMWQzODQ2MTZmNDA0MDdmMWYzNDc2MSJ9fX0="}]}}} 1
+
+execute if score @s gm4_charge_level matches 3 run replaceitem block ~ ~ ~ container.7 minecraft:player_head{gm4_alchemical_crafters:{multiplier:1},gm4_transmutation_stone:1b,gm4_transmutation_charge:3b,gm4_transmutation_charged:1b,display:{Lore:["§7Charge: §e75%§r"],Name:"{\"text\":\"Transmutation Stone\",\"italic\":false}"},SkullOwner:{Id:"0d867dc5-c2b3-460f-bbc6-8cbd4ae93a5f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFkY2Q3OWE5YmM3OWE3NjQyYTczZTU3ZGU2NzkzOWQzYzM3OTQyN2MyMWQzODQ2MTZmNDA0MDdmMWYzNDc2MSJ9fX0="}]}}} 1
+
+execute if score @s gm4_charge_level matches 2 run replaceitem block ~ ~ ~ container.7 minecraft:player_head{gm4_alchemical_crafters:{multiplier:1},gm4_transmutation_stone:1b,gm4_transmutation_charge:2b,gm4_transmutation_charged:1b,display:{Lore:["§7Charge: §650%§r"],Name:"{\"text\":\"Transmutation Stone\",\"italic\":false}"},SkullOwner:{Id:"0d867dc5-c2b3-460f-bbc6-8cbd4ae93a5f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFkY2Q3OWE5YmM3OWE3NjQyYTczZTU3ZGU2NzkzOWQzYzM3OTQyN2MyMWQzODQ2MTZmNDA0MDdmMWYzNDc2MSJ9fX0="}]}}} 1
+
+execute if score @s gm4_charge_level matches 1 run replaceitem block ~ ~ ~ container.7 minecraft:player_head{gm4_alchemical_crafters:{multiplier:1},gm4_transmutation_stone:1b,gm4_transmutation_charge:1b,gm4_transmutation_charged:1b,display:{Lore:["§7Charge: §c25%§r"],Name:"{\"text\":\"Transmutation Stone\",\"italic\":false}"},SkullOwner:{Id:"0d867dc5-c2b3-460f-bbc6-8cbd4ae93a5f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFkY2Q3OWE5YmM3OWE3NjQyYTczZTU3ZGU2NzkzOWQzYzM3OTQyN2MyMWQzODQ2MTZmNDA0MDdmMWYzNDc2MSJ9fX0="}]}}} 1
+
+function equivalent_exchange:post_effects/random_events
+function equivalent_exchange:post_effects/apply_multiplier
