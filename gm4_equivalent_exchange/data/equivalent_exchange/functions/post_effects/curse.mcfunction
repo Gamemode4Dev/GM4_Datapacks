@@ -6,7 +6,7 @@ scoreboard players set #gm4_max_rand gm4_rng 51
 function rng:set_rand
 
 
-execute if score #gm4_rand_val gm4_rng matches 0..9 run tag @e[type=creeper,distance=..4,tag=!gm4_removePower,nbt=!{powered:1b}] add gm4_removePower
+execute if score #gm4_rand_val gm4_rng matches 0..9 run tag @e[type=creeper,distance=..10,tag=!gm4_removePower,nbt=!{powered:1b}] add gm4_removePower
 execute if score #gm4_rand_val gm4_rng matches 0..9 run summon lightning_bolt ~ ~ ~
 
 execute if score #gm4_rand_val gm4_rng matches 10..24 run summon area_effect_cloud ~ ~1 ~ {Particle:"smoke",ReapplicationDelay:20,Radius:5f,RadiusPerTick:-.025f,Duration:100,Color:3866695,Potion:"minecraft:mundane",Effects:[{Id:20b,Amplifier:1b,Duration:40,ShowParticles:1b},{Id:15b,Amplifier:1b,Duration:40,ShowParticles:1b}]}
