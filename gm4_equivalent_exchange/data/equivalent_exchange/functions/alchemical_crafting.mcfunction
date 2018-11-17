@@ -7,7 +7,6 @@ execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{g
 #recipes
 function equivalent_exchange:recipes/recharge
 function equivalent_exchange:recipes/ore
-function equivalent_exchange:recipes/reverse_ore
 function equivalent_exchange:recipes/dye
 function equivalent_exchange:recipes/plant
 function equivalent_exchange:recipes/wood
