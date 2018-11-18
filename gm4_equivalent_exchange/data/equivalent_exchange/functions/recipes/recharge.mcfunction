@@ -4,7 +4,7 @@
 #charge 1 level
 execute if score @s gm4_slot_count matches 2 if score @s gm4_stack_size matches ..64 unless score @s gm4_charge_level matches 4.. if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{gm4_transmutation_stone:1b}},{Slot:1b,id:"minecraft:ghast_tear"}]} run function equivalent_exchange:recharge/charge_1
 
-execute if score @s gm4_slot_count matches 2 if score @s gm4_stack_size matches ..64 unless score @s gm4_charge_level matches 4.. if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{gm4_transmutation_stone:1b}},{Slot:1b,id:"minecraft:experience_bottle"}]} run function equivalent_exchange:recharge/charge_1
+execute if score @s gm4_slot_count matches 9 if score @s gm4_stack_size matches ..64 unless score @s gm4_charge_level matches 4.. if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{gm4_transmutation_stone:1b}},{Slot:1b,id:"minecraft:experience_bottle"},{Slot:2b,id:"minecraft:experience_bottle"},{Slot:3b,id:"minecraft:experience_bottle"},{Slot:4b,id:"minecraft:experience_bottle"},{Slot:5b,id:"minecraft:experience_bottle"},{Slot:6b,id:"minecraft:experience_bottle"},{Slot:7b,id:"minecraft:experience_bottle"},{Slot:8b,id:"minecraft:experience_bottle"}]} run function equivalent_exchange:recharge/charge_1
 
 execute if score @s gm4_slot_count matches 3 if score @s gm4_stack_size matches ..64 unless score @s gm4_charge_level matches 4.. if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{gm4_transmutation_stone:1b}},{Slot:1b,id:"minecraft:lapis_block"},{Slot:3b,id:"minecraft:lapis_block"}]} run function equivalent_exchange:recharge/charge_1
 
