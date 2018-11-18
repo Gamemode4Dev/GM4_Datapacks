@@ -8,4 +8,4 @@ execute as @e[type=armor_stand,tag=gm4_liquid_tank] at @s run function liquid_ta
 execute as @e[type=armor_stand,tag=gm4_liquid_tank_display] run data merge entity @s {Fire:20000}
 
 #tank level report
-execute as @a[gamemode=!spectator] at @s run function liquid_tanks:level_report_ray
+execute as @a[gamemode=!spectator] at @s if entity @e[type=armor_stand,tag=gm4_liquid_tank,distance=..4] anchored eyes run function liquid_tanks:level_report_ray
