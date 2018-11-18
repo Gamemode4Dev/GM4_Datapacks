@@ -24,3 +24,6 @@ execute if score @s gm4_slot_count matches 2 if score @s gm4_stack_size matches 
 execute if score @s gm4_slot_count matches 2 if score @s gm4_stack_size matches ..64 unless score @s gm4_charge_level matches 4 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{gm4_transmutation_stone:1b}},{Slot:1b,id:"minecraft:nether_star"}]} run function equivalent_exchange:recharge/charge_4
 
 execute if score @s gm4_slot_count matches 2 if score @s gm4_stack_size matches ..64 unless score @s gm4_charge_level matches 4 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{gm4_transmutation_stone:1b}},{Slot:1b,id:"minecraft:enchanted_golden_apple"}]} run function equivalent_exchange:recharge/charge_4
+
+#supercharge
+execute if score @s gm4_slot_count matches 2 if score @s gm4_stack_size matches ..64 unless score @s gm4_charge_level matches 6 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{gm4_transmutation_charge:4b}},{Slot:1b,id:"minecraft:nether_star"}]} run function equivalent_exchange:recharge/supercharge
