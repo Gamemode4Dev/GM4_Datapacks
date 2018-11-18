@@ -18,7 +18,7 @@ execute if score @s gm4_slot_count matches 5 if score @s gm4_stack_size matches 
 execute if score @s gm4_slot_count matches 2 if score @s gm4_stack_size matches ..64 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{gm4_transmutation_supercharged:1b}},{Slot:1b,id:"minecraft:diamond"}]} run data merge block ~ ~ ~ {Items:[{Slot:8b,id:"minecraft:emerald_block",Count:1b,tag:{gm4_alchemical_crafters:{multiplier:1}}}]}
 
 #reverse ore
-execute if score @s gm4_slot_count matches 5 if score @s gm4_stack_size matches ..64 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{gm4_transmutation_supercharged:1b}},{Slot:1b,id:"minecraft:emerald_block"}]} run data merge block ~ ~ ~ {Items:[{Slot:8b,id:"minecraft:diamond",Count:1b,tag:{gm4_alchemical_crafters:{multiplier:1}}}]}
+execute if score @s gm4_slot_count matches 2 if score @s gm4_stack_size matches ..64 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{gm4_transmutation_supercharged:1b}},{Slot:1b,id:"minecraft:emerald_block"}]} run data merge block ~ ~ ~ {Items:[{Slot:8b,id:"minecraft:diamond",Count:1b,tag:{gm4_alchemical_crafters:{multiplier:1}}}]}
 
 execute if score @s gm4_slot_count matches 3 if score @s gm4_stack_size matches ..5 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{gm4_transmutation_supercharged:1b}},{Slot:1b,id:"minecraft:diamond"},{Slot:3b,id:"minecraft:diamond"}]} run data merge block ~ ~ ~ {Items:[{Slot:8b,id:"minecraft:gold_ingot",Count:1b,tag:{gm4_alchemical_crafters:{multiplier:12}}}]}
 
