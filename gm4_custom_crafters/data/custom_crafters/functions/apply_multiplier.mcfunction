@@ -10,4 +10,3 @@ data remove block ~ ~ ~ Items[0].tag.gm4_custom_crafters
 #remove tag
 execute store result score tag_size gm4_stack_size run data get block ~ ~ ~ Items[0].tag
 execute if score tag_size gm4_stack_size matches 0 run data remove block ~ ~ ~ Items[0].tag
-say hi
