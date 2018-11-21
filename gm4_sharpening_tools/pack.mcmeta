@@ -1,0 +1,22 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Sharpening Tools",
+  "module_id":"sharpening_tools",
+  "site_description":"Repair your tools using quick sharpening tools!",
+  "site_categories":["Custom Crafting"],
+  "video_link":"https://www.youtube.com/gm4official",
+  "wiki_link":"https://wiki.gm4.co/",
+  "required_modules":[
+    "custom_crafters"
+  ],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["BluePsychoRanger","https://www.twitter.com/blupsychoranger"]
+    ],
+    "Updated by":[]
+  }
+}
