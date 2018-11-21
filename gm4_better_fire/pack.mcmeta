@@ -8,7 +8,7 @@
   "site_description":"Flame arrows set fire when they land and burning creepers explode!",
   "site_categories":[],
   "video_link":"https://www.youtube.com/watch?v=J5024LhHuWk",
-  "wiki_link":"http://gamemode4.wikia.com/wiki/Better_Fire",
+  "wiki_link":"https://wiki.gm4.co/wiki/Better_Fire",
   "required_modules":[],
   "recommended_modules":[],
   "credits":{
@@ -16,7 +16,8 @@
       ["Sparks","https://www.twitter.com/accidentalgames"]
     ],
     "Updated By":[
-      ["Bluefire610",""]
+      ["Bluefire610","https://www.twitter.com/bluefire610"],
+      ["SpecialBuilder32","https://www.twitter.com/specialbuilder32"]
     ]
   }
 }
