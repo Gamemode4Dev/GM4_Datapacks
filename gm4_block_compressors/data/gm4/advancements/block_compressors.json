@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"piston",
-      "nbt":"display:{Name:\"\\\"block_compressors logo\\\"\"}}"
+      "nbt":"{display:{Name:\"\\\"block_compressors logo\\\"\"}}"
     },
     "title":"Clever Crushing",
     "description":{
