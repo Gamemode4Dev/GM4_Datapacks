@@ -4,6 +4,7 @@
       "item":"enchanted_book",
       "nbt":"{display:{Name:\"\\\"enchantment_extractors_mending logo\\\"\"}}"
     },
+    "frame":"goal",
     "title":"Magical Thief",
     "description":{
       "text":"Successfully extract the mending enchantment from a tool with an Enchantment Extractor.",
