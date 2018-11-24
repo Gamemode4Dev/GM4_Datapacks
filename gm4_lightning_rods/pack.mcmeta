@@ -8,7 +8,7 @@
   "site_description":"Summon lightning at your command!",
   "site_categories":["Custom Crafting"],
   "video_link":"https://www.youtube.com/watch?v=cx9fVMpHKMI",
-  "wiki_link":"https://gamemode4.wikia.com/wiki/Lightning_Rods",
+  "wiki_link":"https://wiki.gm4.co/wiki/Lightning_Rods",
   "required_modules":[
     "custom_crafters"
   ],
@@ -18,7 +18,7 @@
       ["Eease","https://www.youtube.com/user/EeaseMaps"]
     ],
     "Updated by":[
-      ["SpecialBuilder32","https://www.twitter.com/specialbuilder32"],
+      ["SpecialBuilder32","https://twitter.com/specialbuilder32"],
       ["Misode","https://twitter.com/misoloo"]
     ]
   }
