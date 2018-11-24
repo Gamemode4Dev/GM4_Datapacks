@@ -5,4 +5,4 @@ For Full Release versions of modules, visit https://gm4.co/modules
 
 For information on how to help us, view `CONTRIBUTING.md`
 
-For more information about Gamemode 4, visit https://gamemode4.wikia.com/wiki/Gamemode_4_Wiki
+For more information about Gamemode 4, visit https://www.wiki.gm4.co
