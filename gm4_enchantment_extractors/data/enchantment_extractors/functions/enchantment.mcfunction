@@ -48,9 +48,9 @@ execute if score extract_chance gm4_ench_random matches ..15 if entity @s[nbt={I
 execute if score extract_chance gm4_ench_random matches ..8 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:curse_of_vanishing"}]}}}] run replaceitem block ~ ~ ~ container.2 enchanted_book{StoredEnchantments:[{id:"minecraft:curse_of_vanishing",lvl:1}]}
 
 #slot 3
-execute if score extract_chance gm4_ench_random matches ..5 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:mending"}]}}}] run replaceitem block ~ ~ ~ container.3 enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1}]}
+execute if score extract_chance gm4_ench_random matches 4..5 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:mending"}]}}}] run replaceitem block ~ ~ ~ container.3 enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1}]}
 execute if score extract_chance gm4_ench_random matches ..5 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:mending"}]}}}] run advancement grant @a[distance=..3,gamemode=!spectator] only gm4:enchantment_extractors_mending
-execute if score extract_chance gm4_ench_random matches 3..7 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:mending"}]}}}] run replaceitem block ~ ~ ~ container.3 enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1},{id:"minecraft:curse_of_vanishing",lvl:1}]}
+execute if score extract_chance gm4_ench_random matches ..3 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:mending"}]}}}] run replaceitem block ~ ~ ~ container.3 enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1},{id:"minecraft:curse_of_vanishing",lvl:1}]}
 
 #slot 4
 execute if score extract_chance gm4_ench_random matches ..35 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:respiration"}]}}}] run replaceitem block ~ ~ ~ container.4 enchanted_book{StoredEnchantments:[{id:"minecraft:respiration",lvl:1}]}
