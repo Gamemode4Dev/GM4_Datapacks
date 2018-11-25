@@ -1,0 +1,25 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Phantom Beacons",
+  "module_id":"phantom_beacons",
+  "site_description":"A module that adds Phantom Beacons, a way to prevent Phantom spawns in a local area.",
+  "site_categories":["Phantom Beacons"],
+  "video_link":"",
+  "wiki_link":"https://wiki.gm4.co/wiki/Phantom_Beacons",
+  "required_modules":[
+  	"custom_crafting"
+  ],
+  "recommended_modules":[
+  ],
+  "credits":{
+    "Creator":[
+      ["Chopper2112","https://www.twitter.com/TheChopper2112"]
+    ],
+    "Updated by":[
+      []
+    ]
+  }
+}
