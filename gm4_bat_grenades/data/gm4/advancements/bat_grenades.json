@@ -17,7 +17,7 @@
       "conditions":{
         "entity":{
           "type":"creeper",
-          "nbt":"{Tags:[\"GM4_batGrenade\"]}"
+          "nbt":"{Tags:[\"gm4_bat_grenade\"]}"
         }
       }
     }

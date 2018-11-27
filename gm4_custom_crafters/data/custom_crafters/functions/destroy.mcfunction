@@ -1,4 +1,5 @@
 #@s = @e[type=armor_stand,tag=gm4_custom_crafter] at @s unless block ~ ~ ~ air
+#Run from main
 
 function #custom_crafters:destroy
 
