@@ -1,0 +1,26 @@
+{
+  "values" : [
+    "#minecraft:slabs",
+    "#minecraft:stairs",
+    "minecraft:oak_fence",
+    "minecraft:birch_fence",
+    "minecraft:spruce_fence",
+    "minecraft:jungle_fence",
+    "minecraft:acacia_fence",
+    "minecraft:dark_oak_fence",
+    "#minecraft:trapdoors",
+    "minecraft:chest",
+    "minecraft:trapped_chest",
+    "minecraft:cobblestone_wall",
+    "minecraft:mossy_cobblestone_wall",
+    "minecraft:ender_chest",
+    "minecraft:sign",
+    "minecraft:wall_sign",
+    "minecraft:iron_bars",
+    "minecraft:nether_brick_fence",
+    "#minecraft:underwater_bonemeals",
+    "minecraft:ladder",
+    "minecraft:sea_pickle",
+    "minecraft:kelp"
+  ]
+}
