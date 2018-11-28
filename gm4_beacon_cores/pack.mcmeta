@@ -1,0 +1,25 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Beacon Cores",
+  "module_id":"beacon_cores",
+  "site_description":"A module that adds Beacon Cores, a way to prevent mob spawns in a local area.",
+  "site_categories":["custom_crafters"],
+  "video_link":"",
+  "wiki_link":"https://wiki.gm4.co/wiki/Beacon_Cores",
+  "required_modules":[
+  	"custom_crafting"
+  ],
+  "recommended_modules":[
+  ],
+  "credits":{
+    "Creator":[
+      ["Chopper2112","https://www.twitter.com/TheChopper2112"]
+    ],
+    "Updated by":[
+      []
+    ]
+  }
+}

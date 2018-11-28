@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"beacon",
+      "nbt":"{display:{Name:\"\\\"beacon_cores logo\\\"\"}}"
+    },
+    "title":"Peace in the Sky",
+    "description":{
+      "text":"Create a beacon that kills Phantoms",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "create_beacon_core":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
