@@ -3,9 +3,9 @@ tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Installing Blast Furnaces..."}
 execute unless entity @p run say GM4: Installing Blast Furnaces...
 
 #declare and initialise scoreboards and settings
-scoreboard players set update_appened gm4_upCheck 1
+scoreboard players set update_happened gm4_up_check 1
 scoreboard players set blast_furnaces gm4_modules 1
-scoreboard players set blast_furnaces gm4_clockTick 0
+scoreboard players set blast_furnaces gm4_clock_tick 0
 
 # add utility scoreboards
 scoreboard objectives add gm4_bf_placed_i minecraft.used:minecraft.iron_block
