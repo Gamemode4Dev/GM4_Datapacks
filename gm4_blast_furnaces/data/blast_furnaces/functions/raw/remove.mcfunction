@@ -9,6 +9,6 @@
 
 
 function #blast_furnaces:clear_recipe
-tag @s remove gm4_bf_has_ore
+tag @s remove gm4_bf_has_raw
 
 data merge entity @s {ArmorItems:[{},{},{},{}]}

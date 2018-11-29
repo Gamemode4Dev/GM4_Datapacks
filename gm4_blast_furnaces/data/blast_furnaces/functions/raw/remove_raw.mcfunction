@@ -4,7 +4,7 @@
 # OR
 
 # Called from raw/remove.mcfunction
-# @s = @e[tag=gm4_bf_output, tag=!gm4_bf_has_structure, tag=gm4_bf_has_ore]
+# @s = @e[tag=gm4_bf_output, tag=!gm4_bf_has_structure, tag=gm4_bf_has_raw]
 
 
 
