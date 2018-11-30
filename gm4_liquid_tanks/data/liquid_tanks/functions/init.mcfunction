@@ -3,9 +3,9 @@ tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Installing Liquid Tanks..."}]
 execute unless entity @p run say GM4: Installing Liquid Tanks...
 
 #declare and initialise scoreboards and settings
-scoreboard players set updateHappened gm4_upCheck 1
+scoreboard players set update_happened gm4_upCheck 1
 scoreboard players set liquid_tanks gm4_modules 1
-scoreboard players set liquid_tanks gm4_clockTick 0
+scoreboard players set liquid_tanks gm4_clock_tick 0
 
 scoreboard objectives add gm4_lt_value dummy
 scoreboard objectives add gm4_lt_max dummy
