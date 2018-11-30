@@ -12,8 +12,8 @@ execute if score @s gm4_lt_value matches ..0 at @s run function liquid_tanks:emp
 #calculating teleport distance
 scoreboard players operation last_liquid_height gm4_lt_disp_val = @s gm4_lt_disp_val
 scoreboard players operation liquid_height_calc gm4_lt_disp_val = @s gm4_lt_value
-scoreboard players set 10 gm4_lt_disp_val 10
-scoreboard players operation liquid_height_calc gm4_lt_disp_val *= 10 gm4_lt_disp_val
+scoreboard players set #10 gm4_lt_disp_val 10
+scoreboard players operation liquid_height_calc gm4_lt_disp_val *= #10 gm4_lt_disp_val
 scoreboard players operation liquid_height_calc gm4_lt_disp_val /= @s gm4_lt_max
 scoreboard players operation @s gm4_lt_disp_val = liquid_height_calc gm4_lt_disp_val
 scoreboard players operation liquid_height_calc gm4_lt_disp_val -= last_liquid_height gm4_lt_disp_val

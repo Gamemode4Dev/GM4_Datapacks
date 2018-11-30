@@ -4,16 +4,16 @@
 tag @s add gm4_processing_tank
 
 #milk clearing potion effects
-execute if score @s gm4_lt_value matches 3.. if block ~ ~1 ~ hopper{CustomName:"{\"text\":\"Milk Tank\"}"} as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt={ActiveEffects:[{}]}] run function standard_liquids:util/milk
+execute if score @s[tag=gm4_lt_milk] gm4_lt_value matches 3.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt={ActiveEffects:[{}]}] run function standard_liquids:util/milk
 
 #mushroom soup applying saturation
-execute if score @s gm4_lt_value matches 1.. if block ~ ~1 ~ hopper{CustomName:"{\"text\":\"Mushroom Stew Tank\"}"} as @a[gamemode=!spectator,limit=1,dx=0] unless entity @s[nbt={foodLevel:20}] run function standard_liquids:util/mushroom_stew
+execute if score @s[tag=gm4_lt_mushroom_stew] gm4_lt_value matches 1.. as @a[gamemode=!spectator,limit=1,dx=0] unless entity @s[nbt={foodLevel:20}] run function standard_liquids:util/mushroom_stew
 
 #rabbit stew applying saturation
-execute if score @s gm4_lt_value matches 1.. if block ~ ~1 ~ hopper{CustomName:"{\"text\":\"Rabbit Stew Tank\"}"} as @a[gamemode=!spectator,limit=1,dx=0] unless entity @s[nbt={foodLevel:20}] run function standard_liquids:util/rabbit_stew
+execute if score @s[tag=gm4_lt_rabbit_stew] gm4_lt_value matches 1.. as @a[gamemode=!spectator,limit=1,dx=0] unless entity @s[nbt={foodLevel:20}] run function standard_liquids:util/rabbit_stew
 
 #beetroot soup applying saturation
-execute if score @s gm4_lt_value matches 1.. if block ~ ~1 ~ hopper{CustomName:"{\"text\":\"Beetroot Soup Tank\"}"} as @a[gamemode=!spectator,limit=1,dx=0] unless entity @s[nbt={foodLevel:20}] run function standard_liquids:util/beetroot_soup
+execute if score @s[tag=gm4_lt_beetroot_soup] gm4_lt_value matches 1.. as @a[gamemode=!spectator,limit=1,dx=0] unless entity @s[nbt={foodLevel:20}] run function standard_liquids:util/beetroot_soup
 
 #player withdrawing experience
 execute if score standard_liquids_withdraw_experience gm4_lt_util matches 2 run scoreboard players set standard_liquids_deposit_experience gm4_lt_util 0
