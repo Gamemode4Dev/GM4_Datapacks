@@ -35,7 +35,15 @@ execute if score @s gm4_slot_count matches 9.. unless score @s gm4_stack_size = 
 scoreboard players operation @s gm4_stack_size = first_stack_count gm4_stack_size
 
 #Tell crafters with valid contents to run recipe checks
-execute if score @s gm4_stack_size matches 1.. run function #equivalent_exchange:alchemical_crafting
+execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:player_head",tag:{gm4_transmutation_stone:1b}}]} if score @s gm4_stack_size matches 1.. run function #equivalent_exchange:alchemical_crafting
+
+#check recharge altar
+execute if score @s gm4_slot_count matches 1 if score @s gm4_stack_size matches 1 if block ~ ~ ~ dropper{Items:[{Slot:4b,Count:1b,tag:{gm4_transmutation_stone:1b}}]} if block ~1 ~-1 ~ lapis_block if block ~-1 ~-1 ~ lapis_block if block ~ ~-1 ~1 lapis_block if block ~ ~-1 ~-1 lapis_block if block ~1 ~-1 ~1 lapis_block if block ~1 ~-1 ~-1 lapis_block if block ~-1 ~-1 ~1 lapis_block if block ~-1 ~-1 ~-1 lapis_block if block ~ ~-1 ~ lapis_block if block ~1 ~ ~ quartz_slab if block ~-1 ~ ~ quartz_slab if block ~ ~ ~1 quartz_slab if block ~ ~ ~-1 quartz_slab if block ~2 ~-1 ~ quartz_stairs[facing=west] if block ~-2 ~-1 ~ quartz_stairs[facing=east] if block ~ ~-1 ~2 quartz_stairs[facing=north] if block ~ ~-1 ~-2 quartz_stairs[facing=south] run function equivalent_exchange:block_handling/recharge_altar
+
+#check supercharge
+execute if score @s gm4_slot_count matches 5 if score @s gm4_stack_size matches 1 if block ~ ~ ~ dropper{Items:[{Slot:1b,id:"minecraft:nether_star"},{Slot:3b,id:"minecraft:nether_star"},{Slot:4b,tag:{gm4_transmutation_stone:1b,gm4_transmutation_charge:100s}},{Slot:5b,id:"minecraft:nether_star"},{Slot:7b,id:"minecraft:nether_star"}]} if block ~1 ~-1 ~ lapis_block if block ~-1 ~-1 ~ lapis_block if block ~ ~-1 ~1 lapis_block if block ~ ~-1 ~-1 lapis_block if block ~1 ~-1 ~1 lapis_block if block ~1 ~-1 ~-1 lapis_block if block ~-1 ~-1 ~1 lapis_block if block ~-1 ~-1 ~-1 lapis_block if block ~ ~-1 ~ lapis_block if block ~1 ~ ~ quartz_slab if block ~-1 ~ ~ quartz_slab if block ~ ~ ~1 quartz_slab if block ~ ~ ~-1 quartz_slab if block ~2 ~-1 ~ quartz_stairs[facing=west] if block ~-2 ~-1 ~ quartz_stairs[facing=east] if block ~ ~-1 ~2 quartz_stairs[facing=north] if block ~ ~-1 ~-2 quartz_stairs[facing=south] run function equivalent_exchange:recharge/supercharge
 
 #check if one of the recipes succeeded
-execute if score @s gm4_stack_size matches 1.. if block ~ ~ ~ dropper{Items:[{tag:{gm4_alchemical_crafters:{}}}]} run function equivalent_exchange:post_effects/check_charge
+execute if score @s gm4_stack_size matches 1.. if block ~ ~ ~ dropper{Items:[{tag:{gm4_alchemical_crafters:{}}}]} unless block ~ ~ ~ dropper{Items:[{Slot:4b,tag:{gm4_transmutation_stone:1b}}]} run function equivalent_exchange:post_effects/drain_charge
+
+execute if score @s gm4_stack_size matches 1.. if block ~ ~ ~ dropper{Items:[{tag:{gm4_alchemical_crafters:{}}}]} run function equivalent_exchange:post_effects/apply_multiplier

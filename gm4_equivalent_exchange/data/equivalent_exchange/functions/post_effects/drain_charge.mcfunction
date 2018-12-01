@@ -1,16 +1,14 @@
-#@s = alchemical crafters containing a recipe results - (10% chance)
-#Run from post_effects/random_events
+#@s = alchemical crafters containing a recipe results
+#Run from recipe_validity_check
 
-execute if score @s gm4_charge_level matches 6 run replaceitem block ~ ~ ~ container.7 minecraft:player_head{gm4_alchemical_crafters:{multiplier:1},gm4_transmutation_stone:1b,gm4_transmutation_charge:5b,gm4_transmutation_charged:1b,gm4_transmutation_supercharged:1b,display:{Lore:["§7Charge: §b125%§r"],Name:"{\"text\":\"Transmutation Stone\",\"italic\":false}"},SkullOwner:{Id:"0d867dc5-c2b3-460f-bbc6-8cbd4ae93a5f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFkY2Q3OWE5YmM3OWE3NjQyYTczZTU3ZGU2NzkzOWQzYzM3OTQyN2MyMWQzODQ2MTZmNDA0MDdmMWYzNDc2MSJ9fX0="}]}}} 1
+#drain charge based on drain value
+execute store result score drain_amount gm4_ee_charge run data get block ~ ~ ~ Items[0].tag.gm4_alchemical_crafters.drain_value
+scoreboard players operation @s gm4_ee_charge -= drain_amount gm4_ee_charge
+execute if score @s gm4_ee_charge matches ..-1 run scoreboard players set @s gm4_ee_charge 0
 
-execute if score @s gm4_charge_level matches 5 run replaceitem block ~ ~ ~ container.7 minecraft:player_head{gm4_alchemical_crafters:{multiplier:1},gm4_transmutation_stone:1b,gm4_transmutation_charge:4b,gm4_transmutation_charged:1b,display:{Lore:["§7Charge: §a100%§r"],Name:"{\"text\":\"Transmutation Stone\",\"italic\":false}"},SkullOwner:{Id:"0d867dc5-c2b3-460f-bbc6-8cbd4ae93a5f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFkY2Q3OWE5YmM3OWE3NjQyYTczZTU3ZGU2NzkzOWQzYzM3OTQyN2MyMWQzODQ2MTZmNDA0MDdmMWYzNDc2MSJ9fX0="}]}}} 1
+#place in transmutation stone
+execute if score @s gm4_ee_charge matches 101.. run replaceitem block ~ ~ ~ container.7 minecraft:player_head{gm4_alchemical_crafters:{multiplier:1},gm4_transmutation_stone:1b,gm4_transmutation_charge:101s,display:{Lore:["§o§bSupercharged"],Name:"{\"text\":\"Transmutation Stone\",\"italic\":false}"},SkullOwner:{Id:"0d867dc5-c2b3-460f-bbc6-8cbd4ae93a5f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFkY2Q3OWE5YmM3OWE3NjQyYTczZTU3ZGU2NzkzOWQzYzM3OTQyN2MyMWQzODQ2MTZmNDA0MDdmMWYzNDc2MSJ9fX0="}]}}} 1
+execute if score @s gm4_ee_charge matches ..100 run replaceitem block ~ ~ ~ container.7 minecraft:player_head{gm4_alchemical_crafters:{multiplier:1},gm4_transmutation_stone:1b,gm4_transmutation_charge:0s,display:{Name:"{\"text\":\"Transmutation Stone\",\"italic\":false}"},SkullOwner:{Id:"0d867dc5-c2b3-460f-bbc6-8cbd4ae93a5f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFkY2Q3OWE5YmM3OWE3NjQyYTczZTU3ZGU2NzkzOWQzYzM3OTQyN2MyMWQzODQ2MTZmNDA0MDdmMWYzNDc2MSJ9fX0="}]}}} 1
 
-execute if score @s gm4_charge_level matches 4 run replaceitem block ~ ~ ~ container.7 minecraft:player_head{gm4_alchemical_crafters:{multiplier:1},gm4_transmutation_stone:1b,gm4_transmutation_charge:3b,gm4_transmutation_charged:1b,display:{Lore:["§7Charge: §e75%§r"],Name:"{\"text\":\"Transmutation Stone\",\"italic\":false}"},SkullOwner:{Id:"0d867dc5-c2b3-460f-bbc6-8cbd4ae93a5f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFkY2Q3OWE5YmM3OWE3NjQyYTczZTU3ZGU2NzkzOWQzYzM3OTQyN2MyMWQzODQ2MTZmNDA0MDdmMWYzNDc2MSJ9fX0="}]}}} 1
-
-execute if score @s gm4_charge_level matches 3 run replaceitem block ~ ~ ~ container.7 minecraft:player_head{gm4_alchemical_crafters:{multiplier:1},gm4_transmutation_stone:1b,gm4_transmutation_charge:2b,gm4_transmutation_charged:1b,display:{Lore:["§7Charge: §650%§r"],Name:"{\"text\":\"Transmutation Stone\",\"italic\":false}"},SkullOwner:{Id:"0d867dc5-c2b3-460f-bbc6-8cbd4ae93a5f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFkY2Q3OWE5YmM3OWE3NjQyYTczZTU3ZGU2NzkzOWQzYzM3OTQyN2MyMWQzODQ2MTZmNDA0MDdmMWYzNDc2MSJ9fX0="}]}}} 1
-
-execute if score @s gm4_charge_level matches 2 run replaceitem block ~ ~ ~ container.7 minecraft:player_head{gm4_alchemical_crafters:{multiplier:1},gm4_transmutation_stone:1b,gm4_transmutation_charge:1b,gm4_transmutation_charged:1b,display:{Lore:["§7Charge: §c25%§r"],Name:"{\"text\":\"Transmutation Stone\",\"italic\":false}"},SkullOwner:{Id:"0d867dc5-c2b3-460f-bbc6-8cbd4ae93a5f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFkY2Q3OWE5YmM3OWE3NjQyYTczZTU3ZGU2NzkzOWQzYzM3OTQyN2MyMWQzODQ2MTZmNDA0MDdmMWYzNDc2MSJ9fX0="}]}}} 1
-
-execute if score @s gm4_charge_level matches 1 run replaceitem block ~ ~ ~ container.7 minecraft:player_head{gm4_alchemical_crafters:{multiplier:1},gm4_transmutation_stone:1b,gm4_transmutation_charge:0b,gm4_transmutation_charged:0b,display:{Lore:["§7Charge: §80%§r"],Name:"{\"text\":\"Transmutation Stone\",\"italic\":false}"},SkullOwner:{Id:"0d867dc5-c2b3-460f-bbc6-8cbd4ae93a5f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFkY2Q3OWE5YmM3OWE3NjQyYTczZTU3ZGU2NzkzOWQzYzM3OTQyN2MyMWQzODQ2MTZmNDA0MDdmMWYzNDc2MSJ9fX0="}]}}} 1
-
-playsound minecraft:item.shield.break block @a[distance=..6] ~ ~ ~ 1 2 1
+#apply new charge
+execute store result block ~ ~ ~ Items[0].tag.gm4_transmutation_charge short 1 run scoreboard players get @s gm4_ee_charge

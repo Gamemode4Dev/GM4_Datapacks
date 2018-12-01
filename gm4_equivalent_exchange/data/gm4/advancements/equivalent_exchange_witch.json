@@ -1,0 +1,21 @@
+{
+  "display":{
+    "icon":{
+      "item":"glowstone_dust",
+      "nbt":"{display:{Name:\"\\\"equivalent_exchange_witch logo\\\"\"}}"
+    },
+    "title":"The Wicked Witch is Dead?",
+    "description":{
+      "text":"Definitely a bad witch!",
+      "color":"gray"
+    },
+    "frame":"goal",
+    "hidden":true
+  },
+  "parent":"gm4:equivalent_exchange",
+  "criteria":{
+    "build_crafter":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
