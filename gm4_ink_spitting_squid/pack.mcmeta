@@ -1,6 +1,23 @@
 {
-    "pack":{
-        "pack_format":0,
-        "description":"A Gamemode 4 Module"
-    }
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Ink Spitting Squid",
+  "module_id":"ink_spitting_squid",
+  "site_description":"*splort*",
+  "site_categories":[],
+  "video_link":"https://www.youtube.com/watch?v=68LMYEhueZ0",
+  "wiki_link":"https://wiki.gm4.co/wiki/Ink_Spitting_Squid",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["Energyxxer","https://www.youtube.com/user/Energyxxer"]
+    ],
+    "Updated by":[
+      ["Bluefire610","https://www.twitter.com/bluefire610"],
+      ["SpecialBuilder32","https://www.twitter.com/specialbuilder32"]
+    ]
+  }
 }
