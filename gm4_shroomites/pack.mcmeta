@@ -5,10 +5,10 @@
   },
   "module_name":"Shroomites",
   "module_id":"shroomites",
-  "site_description":"",
+  "site_description":"Mooshrooms plant spore-emitting mushrooms that spread mycelium and other mushrooms around them.",
   "site_categories":[],
   "video_link":"",
-  "wiki_link":"",
+  "wiki_link":"https://wiki.gm4.co/wiki/Shroomites",
   "required_modules":[],
   "recommended_modules":[],
   "credits":{
@@ -16,6 +16,9 @@
       ["Sparks","https://www.twitter.com/accidentalgames"],
       ["SpecialBuilder32","https://www.twitter.com/specialbuilder32"],
       ["Bluefire610","https://twitter.com/Bluefire610"]
+    ],
+    "Icon Design":[
+      ["DuckJr","https://twitter.com/DuckJr94"]
     ]
   }
 }
