@@ -8,7 +8,7 @@
   "site_description":"Compress stacks of blocks down for compact storage, or decompress them again.",
   "site_categories":["Custom Crafting"],
   "video_link":"https://www.youtube.com/watch?v=sdrTJYjL8C0",
-  "wiki_link":"https://gamemode4.wikia.com/wiki/Block_Compressors",
+  "wiki_link":"https://wiki.gm4.co/wiki/Block_Compressors",
   "required_modules":[
     "custom_crafters"
   ],
