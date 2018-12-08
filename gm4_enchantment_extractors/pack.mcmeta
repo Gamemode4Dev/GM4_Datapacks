@@ -1,0 +1,23 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Enchantment Extractors",
+  "module_id":"enchantment_extractors",
+  "site_description":"Collects enchantments from tools, armour and weapons.",
+  "site_categories":[],
+  "video_link":"https://www.youtube.com/watch?v=DT4PPHC23iM",
+  "wiki_link":"https://wiki.gm4.co/wiki/Enchantment_Extractor",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["The8BitMonkey","https://www.youtube.com/user/the8bitmonkey"]
+    ],
+    "Updated by":[
+      ["SpecialBuilder32","https://www.twitter.com/specialbuilder32"],
+      ["Misode","https://twitter.com/misoloo"]
+    ]
+  }
+}
