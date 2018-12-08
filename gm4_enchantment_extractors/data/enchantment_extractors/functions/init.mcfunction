@@ -18,4 +18,4 @@ tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Enchantment Extractors Install
 execute unless entity @p run say GM4: Enchantment Extractors Installed!
 
 #check other modules to make sure they're up to date.
-#moduleUpdateList
+#$moduleUpdateList
