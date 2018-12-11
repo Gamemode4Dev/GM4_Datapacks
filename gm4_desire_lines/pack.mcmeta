@@ -1,0 +1,26 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Desire Lines",
+  "module_id":"desire_lines",
+  "site_description":"Creates natural looking paths through high traffic areas.",
+  "site_categories":[],
+  "video_link":"https://www.youtube.com/watch?v=wmGaatfekfs",
+  "wiki_link":"https://wiki.gm4.co/wiki/Desire_Lines",
+  "required_modules":[],
+  "recommended_modules":["boots_of_ostara"],
+  "credits":{
+    "Creator":[
+      ["Sparks","https://www.twitter.com/accidentalgames"]
+    ],
+    "Updated by":[
+      ["SpecialBuilder32","https://www.twitter.com/specialbuilder32"],
+      ["Misode","https://twitter.com/misoloo"]
+    ],
+    "Icon Design":[
+      ["JonPot",""]
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"cauldron",
+      "nbt":"{display:{Name:\"\\\"zauber_cauldrons logo\\\"\"}}"
+    },
+    "title":"Potion Chef",
+    "description":{
+      "text":"Create a Zauber Cauldron",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "create_zauber_cauldron":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "display":{
+    "icon":{
+      "item":"command_block",
+      "nbt":"{display:{Name:\"\\\"GM4 Logo\\\"\"}}"
+    },
+    "title":"Gamemode 4",
+    "description":{
+      "text":"Semi-funny blurb about gm4",
+      "color":"gray"
+    },
+    "background":"textures/block/light_blue_concrete_powder.png",
+    "announce_to_chat": false
+  },
+  "criteria":{
+    "automatic":{
+      "trigger":"minecraft:tick"
+    }
+  }
+}
