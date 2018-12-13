@@ -5,4 +5,5 @@ summon area_effect_cloud ~ ~ ~ {Tags:[gm4_orbis_gen_pos]}
 execute as @e[type=area_effect_cloud,tag=gm4_orbis_gen_pos,limit=1] run function orbis:set_gen_pos
 
 gamemode spectator @s
-tag @s add gm4_orbis_active
+tag @a add gm4_orbis_disabled
+tag @s remove gm4_orbis_disabled

@@ -29,7 +29,7 @@ execute if entity @s[scores={gm4_orbis_biome=4}] run function #orbis:biome/mesa
 scoreboard players operation @s gm4_orbis_biome = orbis_old_biome gm4_orbis_biome
 
 # mark the chunk as generated
-scoreboard players add orbis_generated gm4_count 1
+scoreboard players add chunk_count gm4_orbis_config 1
 fill ~ 0 ~ ~15 0 ~15 barrier replace bedrock
 tag @s add gm4_generated
 

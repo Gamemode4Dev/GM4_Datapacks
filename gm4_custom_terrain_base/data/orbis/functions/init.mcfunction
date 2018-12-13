@@ -13,8 +13,10 @@ scoreboard players set custom_terrain_base_12 gm4_clock_tick 12
 scoreboard objectives add gm4_count dummy
 scoreboard objectives add gm4_orbis_biome dummy
 scoreboard objectives add gm4_orbis_config dummy
+
 scoreboard players set speed gm4_orbis_config 1
-scoreboard players add orbis_generated gm4_count 0
+scoreboard players add chunk_count gm4_orbis_config 0
+scoreboard players add structure_count gm4_orbis_config 0
 
 #announce success
 tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Custom Terrain Base Installed!"}]
