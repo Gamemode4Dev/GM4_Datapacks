@@ -3,18 +3,18 @@
     "pack_format":0,
     "description":"A Gamemode 4 Module"
   },
-  "module_name":"Cooler Caves",
-  "module_id":"cooler_caves",
-  "site_description":"A custom terrain expansion pack that makes biome specific caves and mineshafts",
+  "module_name":"Towers Structures",
+  "module_id":"tower_structures",
+  "site_description":"A custom terrain expansion pack that adds four new tower structures to the world.",
   "site_categories":["Custom Terrain"],
-  "video_link":"https://www.youtube.com/watch?v=cAsXiwLWHFo",
-  "wiki_link":"https://gamemode4.wikia.com/wiki/Custom_Terrain",
+  "video_link":"",
+  "wiki_link":"",
   "required_modules":[
     "orbis"
   ],
   "recommended_modules":[
     "dangerous_dungeons",
-    "tower_structures"
+    "cooler_caves"
   ],
   "credits":{
     "Creator":[

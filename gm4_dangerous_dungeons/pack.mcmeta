@@ -10,10 +10,10 @@
   "video_link":"",
   "wiki_link":"",
   "required_modules":[
-    "custom_terrain_base"
+    "orbis"
   ],
   "recommended_modules":[
-    "tall_towers",
+    "tower_structures",
     "cooler_caves"
   ],
   "credits":{

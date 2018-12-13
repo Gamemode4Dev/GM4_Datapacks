@@ -3,18 +3,17 @@
     "pack_format":0,
     "description":"A Gamemode 4 Module"
   },
-  "module_name":"Tall Towers",
-  "module_id":"tall_towers",
-  "site_description":"A custom terrain expansion pack that adds four new tower structures to the world.",
+  "module_name":"Orbis",
+  "module_id":"orbis",
+  "site_description":"A seed-specific chunk scanner that modifies your world as you explore.",
   "site_categories":["Custom Terrain"],
-  "video_link":"",
-  "wiki_link":"",
-  "required_modules":[
-    "custom_terrain_base"
-  ],
+  "video_link":"https://www.youtube.com/watch?v=cAsXiwLWHFo",
+  "wiki_link":"https://gamemode4.wikia.com/wiki/Custom_Terrain",
+  "required_modules":[],
   "recommended_modules":[
+    "cooler_caves",
     "dangerous_dungeons",
-    "cooler_caves"
+    "tower_structures"
   ],
   "credits":{
     "Creator":[
