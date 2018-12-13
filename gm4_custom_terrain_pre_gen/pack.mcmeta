@@ -1,0 +1,25 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Custom Terrain Pre-gen",
+  "module_id":"orbis_pre_gen",
+  "site_description":"An extension to custom terrain base which allows a world to be pre-generated.",
+  "site_categories":["Custom Terrain"],
+  "video_link":"",
+  "wiki_link":"",
+  "required_modules":[
+    "custom_terrain_base"
+  ],
+  "recommended_modules":[
+    "cooler_caves",
+    "dangerous_dungeons",
+    "tall_towers"
+  ],
+  "credits":{
+    "Creator":[
+      ["Misode","https://twitter.com/misoloo"]
+    ]
+  }
+}
