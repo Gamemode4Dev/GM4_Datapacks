@@ -20,9 +20,9 @@ execute if score orbis_water gm4_count matches 384.. run scoreboard players set 
 execute store result score orbis_sand gm4_count run clone ~ 56 ~ ~15 110 ~15 ~ 56 ~ filtered sandstone force
 execute if score orbis_sand gm4_count matches 128.. run scoreboard players set @s gm4_orbis_biome 2
 
-# having at least 128 snow layer blocks makes it a snow biome
+# having at least 64 snow layer blocks makes it a snow biome
 execute store result score orbis_snow gm4_count run clone ~ 60 ~ ~15 89 ~15 ~ 60 ~ filtered snow force
-execute if score orbis_snow gm4_count matches 128.. run scoreboard players set @s gm4_orbis_biome 3
+execute if score orbis_snow gm4_count matches 32.. run scoreboard players set @s gm4_orbis_biome 3
 
 # having at least 64 terracotta or 64 red sand makes it a mesa
 execute store result score orbis_terracotta gm4_count run clone ~ 62 ~ ~15 80 ~15 ~ 62 ~ filtered terracotta force

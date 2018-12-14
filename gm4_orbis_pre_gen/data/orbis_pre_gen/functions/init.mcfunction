@@ -8,7 +8,7 @@ scoreboard players set orbis_pre_gen gm4_modules 1
 scoreboard players set orbis_pre_gen gm4_clock_tick 0
 
 scoreboard objectives add gm4_orbis_config dummy "Orbis Config"
-scoreboard players set speed gm4_orbis_config 2
+scoreboard players set pre_gen_running gm4_orbis_config 0
 scoreboard players set x1 gm4_orbis_config -1024
 scoreboard players set z1 gm4_orbis_config -1024
 scoreboard players set x2 gm4_orbis_config 1024

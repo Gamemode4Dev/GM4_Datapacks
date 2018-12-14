@@ -14,7 +14,7 @@ scoreboard objectives add gm4_count dummy
 scoreboard objectives add gm4_orbis_biome dummy
 scoreboard objectives add gm4_orbis_config dummy
 
-scoreboard players set speed gm4_orbis_config 1
+scoreboard players set speed gm4_orbis_config 3
 scoreboard players add chunk_count gm4_orbis_config 0
 scoreboard players add structure_count gm4_orbis_config 0
 
