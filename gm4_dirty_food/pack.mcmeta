@@ -1,0 +1,20 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "Dirty Food":"Dirty Food",
+  "dirty_food":"dirty_food",
+  "site_description":"Let breedable mobs eat those bits you forgot to pick up",
+  "site_categories":[],
+  "video_link":"",
+  "wiki_link":"",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["Andante","https://www.twitter.com/Andantweets"]
+    ],
+    "Updated By":[]
+  }
+}
