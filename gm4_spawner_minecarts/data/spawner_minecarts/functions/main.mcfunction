@@ -25,6 +25,9 @@ execute if score active_clock gm4_spawner_fuel matches 1 as @e[type=spawner_mine
 execute as @e[type=area_effect_cloud,tag=gm4_spawner_minecart_decorative_particle] at @s if entity @e[type=spawner_minecart,distance=..1] run kill @s
 execute as @e[type=spawner_minecart,tag=gm4_spawner_minecart,scores={gm4_spawner_fuel=1..}] run function spawner_minecarts:spawning/spawn_detection
 
+#fix broken spawner minecarts, caused by MC-96131
+execute as @e[type=spawner_minecart,tag=gm4_spawner_minecart] unless score @s gm4_spawner_fuel matches 0.. run scoreboard players set @s gm4_spawner_fuel 30
+
 #play decorative particles
 execute as @e[type=area_effect_cloud,tag=gm4_spawner_minecart_decorative_particle] at @s run teleport ^ ^ ^0.4
 execute as @e[type=area_effect_cloud,tag=gm4_spawner_minecart_decorative_particle] at @s run particle dragon_breath ~ ~ ~ 0 0 0 .005 3
