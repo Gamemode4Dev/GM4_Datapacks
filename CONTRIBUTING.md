@@ -6,7 +6,7 @@ Contributing to Gamemode 4
 - Make a copy of the `GM4_template_pack` folder and rename it to the name of the module you are writing code for.
 - Each module you create should be made under a separate branch so that modules can be submitted, approved and tested individually.
 
-Inside the `gm4_template_pack` folder is code that matches the Gamemode 4 module standard including a copy of the current clocking system. Rename the `_pack.mcmeta` file to `pack.mcmeta`. The contents of the file can remain unchanged.
+Inside the `gm4_template_pack` folder is code that matches the Gamemode 4 module standard including a copy of the current clocking system. Rename the `_pack.mcmeta` file to `pack.mcmeta`. The appropriate fields inside the file should be changed.
 
 There are several placeholder values in both file names and the files themselves.
 - `MODULE_ID` within this folder should be replaced with the module name in an underscored format such as `bat_grenades` or `enderman_support_class`. This should contain only lowercase characters and underscores and should match the module name on the website if the module already exists.
