@@ -7,7 +7,7 @@ scoreboard players set cancel_recipe gm4_zc_data 0
 #set expected fullness for these recipes
 scoreboard players operation expected_item_amount gm4_zc_fullness = required_flowers gm4_zc_flowers
 #add two to expected items (grass and enchanted_prismarine_shard)
-scoreboard players operation expected_item_amount gm4_zc_fullness += modulo gm4_zc_flowers
+scoreboard players add expected_item_amount gm4_zc_fullness 2
 
 #poisonous flowers set flag to abort recipe checks
 execute if score red_tulip gm4_zc_flowers matches 1 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:red_tulip"}}] run scoreboard players set cancel_recipe gm4_zc_data 1
