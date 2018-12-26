@@ -1,0 +1,24 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "empty",
+                    "weight": 9
+                },
+                {
+                    "type": "item",
+                    "name": "shulker_shell",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{display:{Name:\"{\\\"text\\\":\\\"Charred Shell\\\",\\\"italic\\\":false}\",Lore:[\"Nice and toasty\"]}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
