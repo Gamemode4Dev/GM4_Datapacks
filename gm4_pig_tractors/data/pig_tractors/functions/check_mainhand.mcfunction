@@ -1,3 +1,5 @@
+# @s = pig tractor above farmland with air above
+# at @s
 # Called from choose_crop
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot"}}] run function pig_tractors:place_crops/carrots
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:potato"}}] run function pig_tractors:place_crops/potatoes
