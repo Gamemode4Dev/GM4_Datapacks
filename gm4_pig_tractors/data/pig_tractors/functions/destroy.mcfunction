@@ -1,3 +1,5 @@
+# @s = valid pig tractor replacing crops
+# at @s
 # Called from repl_crops folder
 setblock ~ ~ ~ air destroy
 tag @s add gm4_harvested
