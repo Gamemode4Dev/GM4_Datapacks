@@ -1,3 +1,5 @@
+# @s = player on pig
+# at @s
 # Called from on_pig
 tag @s[nbt={Inventory:[{id:"minecraft:diamond_hoe"}]}] add gm4_has_hoe
 tag @s[nbt={Inventory:[{id:"minecraft:golden_hoe"}]}] add gm4_has_hoe
