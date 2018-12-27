@@ -31,7 +31,3 @@ execute as @e[type=spawner_minecart,tag=gm4_spawner_minecart] unless score @s gm
 #play decorative particles
 execute as @e[type=area_effect_cloud,tag=gm4_spawner_minecart_decorative_particle] at @s run teleport ^ ^ ^0.4
 execute as @e[type=area_effect_cloud,tag=gm4_spawner_minecart_decorative_particle] at @s run particle dragon_breath ~ ~ ~ 0 0 0 .005 3
-
-#reset health_detector health
-execute as @e[type=pig,tag=gm4_spawner_minecart_health_detector] at @s unless entity @e[type=spawner_minecart,tag=gm4_spawner_minecart,distance=..0.4] run data merge entity @s {Health:0.0f,DeathTime:19s}
-execute at @e[type=spawner_minecart,tag=gm4_spawner_minecart] as @e[type=pig,tag=gm4_spawner_minecart_health_detector,distance=..0.4] run data merge entity @s {Health:10.0f,Age:-2147483647,ActiveEffects:[{Id:14b,Duration:2147483647,Amplifier:1b,ShowParticles:0b}]}
