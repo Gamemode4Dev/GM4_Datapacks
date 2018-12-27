@@ -1,4 +1,6 @@
-# Called from on_pig
+# @s = player on pig with hoe in #pig_tractors:crops block
+# at @s 
+# Called from has_hoe
 execute if block ~ ~ ~ minecraft:wheat[age=7] run function pig_tractors:replace_crops/wheat
 execute if block ~ ~ ~ minecraft:potatoes[age=7] run function pig_tractors:replace_crops/potatoes
 execute if block ~ ~ ~ minecraft:carrots[age=7] run function pig_tractors:replace_crops/carrots
