@@ -1,5 +1,6 @@
 # Called from destroy
 # @s = item near the pig tractor that just harvested
+# at pig tractor that called this function
 execute if entity @s[nbt={Item:{id:"minecraft:beetroot"}}] run data merge entity @s {PickupDelay:0s,Tags:["gm4_crop_tp"]}
 execute if entity @s[nbt={Item:{id:"minecraft:beetroot_seeds"}}] run data merge entity @s {PickupDelay:0s,Tags:["gm4_crop_tp"]}
 execute if entity @s[nbt={Item:{id:"minecraft:potato"}}] run data merge entity @s {PickupDelay:0s,Tags:["gm4_crop_tp"]}
