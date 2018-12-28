@@ -11,3 +11,4 @@ execute if block ~ ~ ~ #desire_lines:breakable run setblock ~ ~ ~ air destroy
 execute if block ~ ~-1 ~ coarse_dirt run scoreboard players add @s gm4_dl_affcoarse 1
 execute if score @s gm4_dl_affcoarse matches 1000.. run advancement grant @s only gm4:desire_lines_1000
 execute if score @s gm4_dl_affcoarse matches 10000.. run advancement grant @s only gm4:desire_lines_10000
+execute if score @s gm4_dl_affcoarse matches 100000.. run advancement grant @s only gm4:desire_lines_100000

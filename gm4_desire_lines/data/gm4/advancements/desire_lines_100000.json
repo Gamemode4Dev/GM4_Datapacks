@@ -1,12 +1,12 @@
 {
   "display":{
     "icon":{
-      "item":"coarse_dirt",
+      "item":"bone",
       "nbt":"{display:{Name:\"\\\"desire_lines logo\\\"\"}}"
     },
-    "title":"That's a Lot of Damage",
+    "title":"Extinction",
     "description":{
-      "text":"Ruin 10000 blocks to coarse dirt, how about a little more?",
+      "text":"Ruin 100000 blocks to coarse dirt, just like the dinosaurs",
       "color":"gray"
     }
   },
