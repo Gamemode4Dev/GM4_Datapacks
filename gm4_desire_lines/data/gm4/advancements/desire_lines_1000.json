@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"dirt",
+      "nbt":"{display:{Name:\"\\\"desire_lines logo\\\"\"}}"
+    },
+    "title":"Itchy Feet",
+    "description":{
+      "text":"Ruin 1000 blocks to coarse dirt",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "ruin_blocks":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
