@@ -12,7 +12,7 @@
     "frame": "challenge",
     "hidden": true
   },
-  "parent":"gm4:desire_lines_1000",
+  "parent":"gm4:desire_lines_10000",
   "criteria":{
     "ruin_blocks":{
       "trigger":"minecraft:impossible"
