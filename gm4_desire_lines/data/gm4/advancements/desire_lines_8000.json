@@ -1,16 +1,16 @@
 {
   "display":{
     "icon":{
-      "item":"coarse_dirt",
+      "item":"oak_planks",
       "nbt":"{display:{Name:\"\\\"desire_lines logo\\\"\"}}"
     },
-    "title":"That's a Lot of Damage",
+    "title":"And I Would Walk 500 Chunks...",
     "description":{
-      "text":"Ruin 10000 blocks to coarse dirt; how about a little more?",
+      "text":"Ruin 8000 blocks to coarse dirt; you'll find those oak planks",
       "color":"gray"
     }
   },
-  "parent":"gm4:desire_lines_8000",
+  "parent":"gm4:desire_lines_1000",
   "criteria":{
     "ruin_blocks":{
       "trigger":"minecraft:impossible"

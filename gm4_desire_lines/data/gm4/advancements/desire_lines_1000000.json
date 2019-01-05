@@ -1,0 +1,21 @@
+{
+  "display":{
+    "icon":{
+      "item":"gold_ingot",
+      "nbt":"{display:{Name:\"\\\"desire_lines logo\\\"\"}}"
+    },
+    "title":"Who Wants to be a Millionaire?",
+    "description":{
+      "text":"Ruin 1000000 blocks to coarse dirt; Jeremy Clarkson would be proud",
+      "color":"gray"
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "parent":"gm4:desire_lines_1000",
+  "criteria":{
+    "ruin_blocks":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
