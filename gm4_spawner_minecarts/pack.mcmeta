@@ -1,6 +1,24 @@
 {
-    "pack":{
-        "pack_format":0,
-        "description":"A Gamemode 4 Module"
-    }
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Spawner Minecarts",
+  "module_id":"spawner_minecarts",
+  "site_description":"",
+  "site_categories":[],
+  "video_link":"https://www.youtube.com/watch?v=4jv9KWYssyg",
+  "wiki_link":"https://wiki.gm4.co/wiki/Spawner_Minecarts",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creator": [
+      ["Eease","https://www.youtube.com/eeasemaps"]
+    ],
+    "Updated By":[
+      ["Sparks","https://www.twitter.com/accidentalgames"],
+      ["SpecialBuilder32","https://www.twitter.com/specialbuilder"],
+      ["Bluefire610","https://twitter.com/Bluefire610"]
+    ]
+  }
 }
