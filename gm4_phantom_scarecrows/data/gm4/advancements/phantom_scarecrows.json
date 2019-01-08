@@ -1,0 +1,20 @@
+{
+  "display":{
+    "icon":{
+      "item":"minecraft:firework_rocket",
+      "nbt":"{display:{Name:\"\\\"phantom_scarecrows logo\\\"\"}}"
+    },
+    "title":"Not so smart defenses",
+    "description":{
+      "text":"Get hit by a Phantom Scarecrow",
+      "color":"gray"
+    },
+    "hidden":true
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "phantom_scarecrows_hurt":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
