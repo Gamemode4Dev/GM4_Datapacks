@@ -1,0 +1,103 @@
+{
+  "display":{
+    "icon":{
+      "item":"glass_bottle",
+      "nbt":"{display:{Name:\"sunken_treasure logo\"}}"
+    },
+    "title":"All My Audreys",
+    "description":{
+      "text":"Find all Dearest Audrey messages in a bottle.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "all_my_audreys":{
+      "trigger":"minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:1b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:2b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:3b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:4b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:5b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:6b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:7b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:8b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:9b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:10b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:11b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:12b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:13b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:14b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:15b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:16b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:17b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:18b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:19b}"
+          },
+          {
+            "item": "minecraft:glass_bottle",
+            "nbt": "{gm4_audrey:20b}"
+          }
+        ]
+      }
+    }
+  }
+}
