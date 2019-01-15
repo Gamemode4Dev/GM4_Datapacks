@@ -1,0 +1,18 @@
+{
+  "values" : [
+    "minecraft:air",
+    "minecraft:redstone_torch",
+    "minecraft:lever",
+    "minecraft:stone_pressure_plate",
+    "#minecraft:wooden_pressure_plates",
+    "minecraft:light_weighted_pressure_plate",
+    "minecraft:heavy_weighted_pressure_plate",
+    "#minecraft:buttons",
+    "minecraft:ladder",
+    "minecraft:sign",
+    "minecraft:wall_sign",
+    "minecraft:tripwire",
+    "minecraft:tripwire_hook",
+    "#minecraft:banners"
+  ]
+}
