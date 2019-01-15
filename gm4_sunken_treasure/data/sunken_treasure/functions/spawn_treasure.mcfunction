@@ -38,4 +38,5 @@ execute if score treasureItem gm4_st_random matches 176..180 run data merge enti
 execute if score treasureItem gm4_st_random matches 181..185 run data merge entity @s {Item:{id:"minecraft:gold_ingot"}}
 execute if score treasureItem gm4_st_random matches 186..190 run summon guardian ~ ~ ~
 execute if score treasureItem gm4_st_random matches 191..195 run data merge entity @s {Item:{id:"minecraft:leather_boots"}}
-execute if score treasureItem gm4_st_random matches 196..199 run data merge entity @s {Item:{id:"minecraft:chest",Count:1b,tag:{display:{Name:"{\"text\":\"Treasure Chest\",\"italic\":\"false\"}"},BlockEntityTag:{LootTable:"sunken_treasure:treasure_chest",CustomName:"{\"text\":\"Treasure Chest\",\"italic\":\"false\"}"}}}}
+execute if score treasureItem gm4_st_random matches 196..198 run data merge entity @s {Item:{id:"minecraft:sponge"}}
+execute if score treasureItem gm4_st_random matches 199 run data merge entity @s {Item:{id:"minecraft:chest",Count:1b,tag:{display:{Name:"{\"text\":\"Treasure Chest\",\"italic\":\"false\"}"},BlockEntityTag:{LootTable:"sunken_treasure:treasure_chest",CustomName:"{\"text\":\"Treasure Chest\",\"italic\":\"false\"}"}}}}
