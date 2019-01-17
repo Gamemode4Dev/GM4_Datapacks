@@ -121,7 +121,7 @@
           }
         ]
       }
-    },,
+    },
     "my_audrey_11":{
       "trigger":"minecraft:inventory_changed",
       "conditions": {
@@ -132,7 +132,7 @@
           }
         ]
       }
-    },,
+    },
     "my_audrey_12":{
       "trigger":"minecraft:inventory_changed",
       "conditions": {
@@ -143,7 +143,7 @@
           }
         ]
       }
-    },,
+    },
     "my_audrey_13":{
       "trigger":"minecraft:inventory_changed",
       "conditions": {
@@ -154,7 +154,7 @@
           }
         ]
       }
-    },,
+    },
     "my_audrey_14":{
       "trigger":"minecraft:inventory_changed",
       "conditions": {
@@ -165,7 +165,7 @@
           }
         ]
       }
-    },,
+    },
     "my_audrey_15":{
       "trigger":"minecraft:inventory_changed",
       "conditions": {
@@ -176,7 +176,7 @@
           }
         ]
       }
-    },,
+    },
     "my_audrey_16":{
       "trigger":"minecraft:inventory_changed",
       "conditions": {
@@ -187,7 +187,7 @@
           }
         ]
       }
-    },,
+    },
     "my_audrey_17":{
       "trigger":"minecraft:inventory_changed",
       "conditions": {
@@ -198,7 +198,7 @@
           }
         ]
       }
-    },,
+    },
     "my_audrey_18":{
       "trigger":"minecraft:inventory_changed",
       "conditions": {
@@ -209,7 +209,7 @@
           }
         ]
       }
-    },,
+    },
     "my_audrey_19":{
       "trigger":"minecraft:inventory_changed",
       "conditions": {
@@ -220,7 +220,7 @@
           }
         ]
       }
-    },,
+    },
     "my_audrey_20":{
       "trigger":"minecraft:inventory_changed",
       "conditions": {
