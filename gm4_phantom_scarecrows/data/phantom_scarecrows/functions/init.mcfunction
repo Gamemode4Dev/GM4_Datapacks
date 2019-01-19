@@ -14,4 +14,4 @@ tellraw @a ["",{"text":"[GM4]: Phantom Scarecrows Installed!"}]
 execute unless entity @p run say GM4: Phantom Scarecrows Installed!
 
 #check other modules to make sure they're up to date.
-#$updateStuff
+#$moduleUpdateList
