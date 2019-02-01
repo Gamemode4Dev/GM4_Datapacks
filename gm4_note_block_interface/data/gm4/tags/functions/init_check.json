@@ -1,6 +1,5 @@
 {
     "values":[
-        "nbi:init_check"
+        "note_block_interface:init_check"
     ]
-
 }

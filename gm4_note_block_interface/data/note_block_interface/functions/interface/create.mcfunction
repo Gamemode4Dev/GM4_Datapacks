@@ -1,7 +1,7 @@
 #@s = player who has punched / clicked a note block at position of note block
-#runs from nbi:punch/loop
-#runs from nbi:click/loop
-#runs from nbi:interface/change
+#runs from note_block_interface:punch/loop
+#runs from note_block_interface:click/loop
+#runs from note_block_interface:interface/change
 
 #kills old AEC
 kill @e[distance=..0.5,type=area_effect_cloud,tag=gm4_nbi_display]
