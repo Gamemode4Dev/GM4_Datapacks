@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"birch_stairs",
+      "nbt":"{display:{Name:\"\\\"chairs logo\\\"\"}}"
+    },
+    "title":"Chairs",
+    "description":{
+      "text":"Throw a saddle on stairs to make a chair!",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "TRIGGER_NAME":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

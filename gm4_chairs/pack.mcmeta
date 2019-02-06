@@ -1,0 +1,20 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Chairs",
+  "module_id":"chairs",
+  "site_description":"Place a saddle on a stair to have a chair to sit on!",
+  "site_categories":[],
+  "video_link":"",
+  "wiki_link":"",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["Denniss"]
+    ]    
+  }
+}
+
