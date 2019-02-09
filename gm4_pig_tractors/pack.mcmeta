@@ -1,0 +1,25 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Pig Tractors",
+  "module_id":"pig_tractors",
+  "site_description":"Ride pigs through fields to quickly harvest and plant crops",
+  "site_categories":[],
+  "video_link":"https://www.youtube.com/watch?v=7i0WFHUfBXs",
+  "wiki_link":"https://wiki.gm4.co/wiki/Pig_Tractors",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["Bluefire610","https://www.twitter.com/Bluefire610"]
+    ],
+    "Updated by":[
+      ["Federick90"]
+    ],
+    "Icon Design":[
+      ["DuckJr","https://twitter.com/DuckJr94"]
+    ]
+  }
+}
