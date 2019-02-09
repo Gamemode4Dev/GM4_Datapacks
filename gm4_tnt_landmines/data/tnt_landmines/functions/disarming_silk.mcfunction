@@ -1,4 +1,4 @@
-#@s = valid pair of shers close enought to a tnt landmine
+#@s = valid pair of shears close enought to a tnt landmine
 execute positioned ~ ~1 ~ run particle minecraft:explosion
 summon item ~ ~1 ~ {Motion:[0.0,0.4,0.0],Item:{id:"minecraft:tnt",Count:1b}}
 kill @e[type=armor_stand,tag=gm4_tnt_mine,distance=..0.1]

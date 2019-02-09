@@ -4,7 +4,7 @@
       "item":"tnt",
       "nbt":"{display:{Name:\"\\\"tnt_landmines logo\\\"\"}}"
     },
-    "title":"Didn't see that comming",
+    "title":"Didn't see that coming",
     "description":{
       "text":"Get killed by a landmine",
       "color":"gray"
@@ -17,7 +17,7 @@
       "conditions":{
         "entity":{
           "type":"minecraft:creeper",
-          "nbt":"{Tags:[\"gm4_tntlandmines\"]}"
+          "nbt":"{Tags:[\"gm4_tntlandmine\"]}"
         }
       }
     }
