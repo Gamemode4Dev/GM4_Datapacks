@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"poisonous_potato",
+      "nbt":"{display:{Name:\"\\\"chairs logo\\\"\"}}"
+    },
+    "title":"Couch Potato",
+    "description":{
+      "text":"Sit for over an hour!",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:chairs_creation",
+  "criteria":{
+    "TRIGGER_NAME":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
