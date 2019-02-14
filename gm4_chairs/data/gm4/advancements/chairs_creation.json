@@ -4,9 +4,9 @@
       "item":"birch_stairs",
       "nbt":"{display:{Name:\"\\\"chairs logo\\\"\"}}"
     },
-    "title":"Hot Seat",
+    "title":"A throne, fit for a king!",
     "description":{
-      "text":"Throw a saddle on stairs to make a chair!",
+      "text":"Throw a saddle on stairs to make a chair",
       "color":"gray"
     }
   },
