@@ -8,6 +8,7 @@ scoreboard players set chairs gm4_modules 1
 scoreboard players set chairs gm4_clock_tick 0
 team add gm4_chairs
 team modify gm4_chairs collisionRule never
+scoreboard objectives add gm4_chairs_sit dummy
 
 #announce success
 tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Chairs Installed!"}]
