@@ -8,5 +8,5 @@ execute as @e[tag=gm4_chairs] at @s unless block ~ ~1 ~ #minecraft:stairs run fu
 execute as @e[tag=gm4_chairs] at @s align xyz if entity @p[dx=0,dz=0,dy=2] unless entity @p[nbt={RootVehicle:{Entity:{id:"minecraft:pig"}}}] positioned ~ ~1 ~ run function chairs:correction
 
 #advancement
-scoreboard players add @a[nbt={RootVehicle:{Entity:{Tags:["gm4_chairs"]}}}] gm4_chairs_sit 1
+execute as @a[nbt={RootVehicle:{Entity:{Tags:["gm4_chairs"]}}}] unless score @s gm4_chairs_sit matches 4501.. run scoreboard players add @s gm4_chairs_sit 1
 advancement grant @a[scores={gm4_chairs_sit=4500}] only gm4:chairs_sit
