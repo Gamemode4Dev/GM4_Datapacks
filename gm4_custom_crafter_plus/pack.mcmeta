@@ -1,0 +1,30 @@
+{
+  "pack":{
+    "pack_format":4,
+    "description":"Custom Crafting +"
+  },
+  "module_name":"Custom Crafting +",
+  "module_id":"custom_crafters_plus",
+  "site_description":"Adds a vanilla crafting table like custom crafter.",
+  "site_categories":[],
+  "video_link":"YOUTUBE_VIDEO_URL",
+  "wiki_link":"WIKI_URL",
+  "required_modules":[
+    "module_id of required module",
+    "or leave array empty"
+  ],
+  "recommended_modules":[
+    "module_id of recommended module",
+    "or leave array empty"
+  ],
+  "credits":{
+    "comment":"All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings.",
+    "Creator":[
+      ["TheRedCommander","OPTIONAL_LINK"]
+    ],
+    "Updated By":[
+      ["USERNAME","OPTIONAL_LINK"],
+      ["USERNAME","OPTIONAL_LINK"]
+    ]
+  }
+}
