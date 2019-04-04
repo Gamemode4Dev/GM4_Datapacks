@@ -20,7 +20,5 @@ execute as @e[tag=gm4_spawner_flower_checker] at @s run function spawner_minecar
 
 #re-enable spawning
 execute if score @s gm4_spawner_fuel matches 1.. run data merge entity @s {RequiredPlayerRange:16s}
-#BAM WHATTTT
-
 
 tag @s remove gm4_processing_spawner
