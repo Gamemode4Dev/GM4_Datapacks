@@ -1,5 +1,5 @@
 #saddle item on a stair block -> spawn pig
-execute as @e[type=minecraft:item,nbt={Item:{id:"minecraft:saddle"}}] at @s if block ~ ~ ~ #minecraft:stairs[half=bottom] positioned ~ ~-1 ~ align xyz unless entity @e[tag=chairs,dx=0,dz=0,dy=0] at @s run function chairs:saddle
+execute as @e[type=minecraft:item,nbt={Item:{id:"minecraft:saddle"}}] at @s if block ~ ~ ~ #minecraft:stairs[half=bottom] positioned ~ ~-.1 ~ align xyz unless entity @e[tag=chairs,dx=0,dz=0,dy=0] at @s run function chairs:saddle
 
 #kill pig/saddle if stair block broken 
 execute as @e[tag=gm4_chairs] at @s unless block ~ ~1 ~ #minecraft:stairs run function chairs:kill
