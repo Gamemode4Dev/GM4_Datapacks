@@ -3,28 +3,17 @@
     "pack_format":0,
     "description":"A Gamemode 4 Module"
   },
-  "module_name":"MODULE_NAME",
-  "module_id":"MODULE_ID",
-  "site_description":"Someone forgot to type a description!",
+  "module_name":"Noteblock Interface",
+  "module_id":"noteblock_interface",
+  "site_description":"Adds a neat interface to improve your musical skills!",
   "site_categories":[],
-  "video_link":"YOUTUBE_VIDEO_URL",
-  "wiki_link":"WIKI_URL",
-  "required_modules":[
-    "module_id of required module",
-    "or leave array empty"
-  ],
-  "recommended_modules":[
-    "module_id of recommended module",
-    "or leave array empty"
-  ],
+  "video_link":"",
+  "wiki_link":"https://wiki.gm4.co/wiki/Noteblock_Interface",
+  "required_modules":[],
+  "recommended_modules":[],
   "credits":{
-    "comment":"All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings.",
     "Creator":[
-      ["USERNAME","OPTIONAL_LINK"]
-    ],
-    "Updated By":[
-      ["USERNAME","OPTIONAL_LINK"],
-      ["USERNAME","OPTIONAL_LINK"]
+      ["SCommander","https://github.com/Scommander"]
     ]
   }
 }
