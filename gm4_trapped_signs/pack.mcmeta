@@ -1,26 +1,6 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description":"A Gamemode 4 Module"
-  },
-  "module_name":"Trapped Signs",
-  "module_id":"trapped_signs",
-  "site_description":"Craft trapped signs which, when right-clicked, give off a redstone signal.",
-  "site_categories":[
-    "Custom Crafting"
-  ],
-  "video_link":"https://www.youtube.com/watch?v=IeHYiy5GTeQ",
-  "wiki_link":"https://gamemode4.wikia.com/wiki/Trapped_Signs",
-  "required_modules":[
-    "custom_crafters"
-  ],
-  "recommended_modules":[],
-  "credits":{
-    "Creator":[
-      ["Fyid","https://twitter.com/FyidRants"]
-    ],
-    "Updated by":[
-      ["Misode","https://twitter.com/misoloo"]
-    ]
-  }
+    "pack":{
+        "pack_format":0,
+        "description":"A Gamemode 4 Module"
+    }
 }

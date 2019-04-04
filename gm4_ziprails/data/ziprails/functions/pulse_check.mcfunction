@@ -1,5 +1,5 @@
 #compares assigned run tick to current tick and calls main
-execute if score current_tick gm4_clock_tick = ziprails gm4_clock_tick run function ziprails:main
+execute if score gm4_currentTick gm4_clockTick = ziprails gm4_clockTick run function ziprails:main
 
 #run 20hz if needed
 execute as @e[tag=gm4_minecart] at @s if block ~ ~1 ~ #ziprails:cable[attached=true] run function ziprails:zipping

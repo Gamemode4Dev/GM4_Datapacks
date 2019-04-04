@@ -9,9 +9,7 @@
   "site_categories":["Custom Crafting"],
   "video_link":"https://www.youtube.com/watch?v=ibtS4zAvglQ",
   "wiki_link":"http://gamemode4.wikia.com/wiki/Standard_Crafting_Expansion_Pack",
-  "required_modules":[
-    "custom_crafters"
-  ],
+  "required_modules":["custom_crafters"],
   "recommended_modules":[
     "master_crafting"
   ],
