@@ -3,7 +3,8 @@
         "minecraft:potatoes",
         "minecraft:carrots",
         "minecraft:wheat",
-        "minecraft:beetroots"
+        "minecraft:beetroots",
+        "minecraft:nether_wart"
     ]
 
 }
