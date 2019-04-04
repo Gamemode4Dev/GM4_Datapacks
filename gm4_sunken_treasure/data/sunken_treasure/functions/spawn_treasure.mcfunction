@@ -8,7 +8,7 @@ scoreboard players operation treasureItem gm4_st_random %= 200 gm4_st_random
 
 #spawn treasure
 execute if score treasureItem gm4_st_random matches 0..39 run data merge entity @s {Item:{id:"minecraft:bone"}}
-execute if score treasureItem gm4_st_random matches 40..79 run data merge entity @s {Item:{id:"minecraft:tall_grass",tag:{display:{Name:"{\"text\":\"Seaweed\",\"italic\":false}"}}}}
+execute if score treasureItem gm4_st_random matches 40..79 run data merge entity @s {Item:{id:"minecraft:seagrass"}}
 execute if score treasureItem gm4_st_random matches 80..109 run summon squid ~ ~ ~
 execute if score treasureItem gm4_st_random matches 110 run data merge entity @s {Item:{id:"minecraft:glass_bottle",tag:{gm4_audrey:1b,display:{Name:"{\"text\":\"Message in a Bottle\",\"italic\":false}",Lore:["Dearest Audrey, I drank all my beer"]}}}}
 execute if score treasureItem gm4_st_random matches 111 run data merge entity @s {Item:{id:"minecraft:glass_bottle",tag:{gm4_audrey:2b,display:{Name:"{\"text\":\"Message in a Bottle\",\"italic\":false}",Lore:["Dearest Audrey, My boat was","sunk by a lily-pad and now I'm","stuck on this island."]}}}}
