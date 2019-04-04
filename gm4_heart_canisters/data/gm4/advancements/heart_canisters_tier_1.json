@@ -10,7 +10,7 @@
       "color":"gray"
     }
   },
-  "parent":"gm4:root",
+  "parent":"gm4:custom_crafters",
   "criteria":{
     "craft_tier_1":{
       "trigger":"minecraft:inventory_changed",
