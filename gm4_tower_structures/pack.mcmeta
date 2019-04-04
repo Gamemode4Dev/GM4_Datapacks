@@ -1,0 +1,27 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Towers Structures",
+  "module_id":"tower_structures",
+  "site_description":"A custom terrain expansion pack that adds four new tower structures to the world.",
+  "site_categories":["Custom Terrain"],
+  "video_link":"",
+  "wiki_link":"",
+  "required_modules":[
+    "orbis"
+  ],
+  "recommended_modules":[
+    "dangerous_dungeons",
+    "cooler_caves"
+  ],
+  "credits":{
+    "Creator":[
+      ["Sparks","https://www.twitter.com/accidentalgames"]
+    ],
+    "Updated by":[
+      ["Misode","https://twitter.com/misoloo"]
+    ]
+  }
+}
