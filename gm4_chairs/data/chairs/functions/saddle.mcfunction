@@ -7,7 +7,7 @@ execute run team join gm4_chairs @e[tag=gm4_chairs,distance=..2]
 playsound minecraft:block.wool.place block @a[distance=..5] ~ ~ ~ 1 2
 
 #advancement
-advancement grant @a[distance=..5,gamemode=!spectator] only gm4:chairs
+advancement grant @a[distance=..5,gamemode=!spectator] only gm4:chairs_creation
 
 #kill the saddle item
 kill @s
