@@ -8,7 +8,6 @@ scoreboard players set sunken_treasure gm4_modules 1
 scoreboard players set sunken_treasure gm4_clock_tick 0
 
 scoreboard objectives add gm4_st_sand minecraft.mined:minecraft.sand
-scoreboard objectives add gm4_st_fortune dummy
 scoreboard objectives add gm4_st_random dummy
 
 #announce success
