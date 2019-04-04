@@ -13,4 +13,4 @@ execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:fortun
 execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:fortune",lvl:3s}]}}}] if score spawnTreasure gm4_st_random matches 0..24 as @e[tag=gm4_st_sand_item] at @s run function sunken_treasure:spawn_treasure
 
 #reset values
-tag @e[tag=gm4_st_sand_item] remove gm4_st_sand_item
+tag @e[type=item,tag=gm4_st_sand_item] remove gm4_st_sand_item
