@@ -3,8 +3,8 @@
 
 #check fortune level
 execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:fortune",lvl:1s}]}}}] run scoreboard players set @s gm4_st_fortune 1
-execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:fortune",lvl:2s}]}}}] run scoreboard players set @s gm4_st_fortune 2
-execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:fortune",lvl:3s}]}}}] run scoreboard players set @s gm4_st_fortune 3
+execute unless score @s gm4_st_fortune matches 1.. if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:fortune",lvl:2s}]}}}] run scoreboard players set @s gm4_st_fortune 2
+execute unless score @s gm4_st_fortune matches 1.. if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:fortune",lvl:3s}]}}}] run scoreboard players set @s gm4_st_fortune 3
 
 #random chance based on fortune level
 execute at @s anchored eyes positioned ^ ^ ^2 run tag @e[limit=1,distance=..3,type=item,nbt={Item:{id:"minecraft:sand"},Age:0s}] add gm4_st_sand_item
