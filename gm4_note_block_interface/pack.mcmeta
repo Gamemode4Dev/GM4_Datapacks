@@ -3,7 +3,7 @@
     "pack_format":0,
     "description":"A Gamemode 4 Module"
   },
-  "module_name":"Noteblock Interface",
+  "module_name":"Note Block Interface",
   "module_id":"note_block_interface",
   "site_description":"Adds a neat interface to improve your musical skills!",
   "site_categories":[],
