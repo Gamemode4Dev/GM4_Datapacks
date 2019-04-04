@@ -13,7 +13,7 @@ There are several placeholder values in both file names and the files themselves
 - `MODULE_NAME` should be replaced with a display name for the module as this is visible to players such as `Bat Grenades` or `Enderman Support Class`. This should match the name on the website if the module already exists.
 
 ### Folders
-Within the `data` folder there are two folders for the different namespaces this module will use. If the module is an extension, you will need an additional module for the base module. Because we merge modules with a copy of the base clock certain folders and files should not be included once the module is submitted but are included in the template so you can test your module.
+Within the `data` folder there are two folders for the different namespaces this module will use. If the module is an extension, you will need an additional module for the base module. Because we merge modules with a copy of the base clock certain folders and files are not included in the template.
 #### /gm4/
 This folder contains two function tags that are called by the Gamemode 4 clocking system. Small changes need to be made (see placeholder values above).
 If the module does not contain advancements then the folder `gm4/advancements` should be deleted. Otherwise the advancement details should be updated. The `root.json` file should not be deleted or changed.
