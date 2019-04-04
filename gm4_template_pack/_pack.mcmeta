@@ -19,11 +19,11 @@
   ],
   "credits":{
     "comment":"All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings.",
-    "creators":[
-      ["USERNAME","OPTIONAL_LINK"],
+    "Creator":[
       ["USERNAME","OPTIONAL_LINK"]
     ],
-    "artist":[
+    "Updated By":[
+      ["USERNAME","OPTIONAL_LINK"],
       ["USERNAME","OPTIONAL_LINK"]
     ]
   }
