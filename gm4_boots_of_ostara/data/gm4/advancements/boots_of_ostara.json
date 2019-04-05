@@ -10,7 +10,7 @@
       "color":"gray"
     }
   },
-  "parent":"gm4:root",
+  "parent":"gm4:custom_crafters",
   "criteria":{
     "wear_boots_of_ostara":{
       "trigger":"minecraft:impossible"
