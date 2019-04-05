@@ -1,6 +1,28 @@
 {
-    "pack":{
-        "pack_format":0,
-        "description":"A Gamemode 4 Module"
-    }
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Liquid Tanks",
+  "module_id":"liquid_tanks",
+  "site_description":"Store liquids compactly in special tanks and interact with them!",
+  "site_categories":[],
+  "video_link":"https://www.youtube.com/watch?v=qa9lcbii1BE",
+  "wiki_link":"https://wiki.gm4.co/wiki/Liquid_Tanks",
+  "required_modules":[],
+  "recommended_modules":["potion_liquids"],
+  "credits":{
+    "Creator":[
+      ["SpecialBuilder32","https://twitter.com/SpecialBuilder"]
+    ],
+    "Updated by":[
+      ["SpecialBuilder32","https://twitter.com/SpecialBuilder"]
+    ],
+    "Icon Design":[
+      ["DuckJr","https://twitter.com/DuckJr94"]
+    ],
+    "Textures by":[
+      ["Vilder50",""]
+    ]
+  }
 }
