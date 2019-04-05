@@ -10,7 +10,9 @@
   "video_link":"https://www.youtube.com/watch?v=VV7ZIyIzKV0",
   "wiki_link":"https://wiki.gm4.co/wiki/Sunken_Treasure",
   "required_modules":[],
-  "recommended_modules":[scuba_gear],
+  "recommended_modules":[
+    "scuba_gear"
+   ],
   "credits":{
     "Creator":[
       ["Wumpacraft","https://www.twitter.com/wumpacraft"],
