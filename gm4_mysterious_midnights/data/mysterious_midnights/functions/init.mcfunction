@@ -15,6 +15,10 @@ scoreboard players set send_night_end_pulse gm4_nights_data 0
 
 scoreboard objectives add gm4_tipped_type dummy
 
+scoreboard objectives add gm4_rezombify dummy
+scoreboard objectives add gm4_reskelify dummy
+scoreboard objectives add gm4_harvest_moon dummy
+
 #announce success
 tellraw @a ["",{"text":"[GM4]: Mysterious Midnights Installed!"}]
 execute unless entity @p run say GM4: Mysterious Midnights Installed!

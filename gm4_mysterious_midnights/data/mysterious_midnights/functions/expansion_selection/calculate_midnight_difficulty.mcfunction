@@ -8,7 +8,7 @@ execute store result score random gm4_nights_data run data get entity @e[limit=1
 scoreboard players operation random gm4_nights_data %= 16 gm4_nights_data
 
 #DEBUG
-#scoreboard players set random gm4_nights_data 13
+scoreboard players set random gm4_nights_data 15
 
 #manipulate moon_phase to cancel 53% of mysterious_midnights
 execute if score random gm4_nights_data matches 0..8 run scoreboard players set moon_phase gm4_nights_data 1
