@@ -1,10 +1,6 @@
 {
     "values":[
       "harvest_moons:dawn_active_check",
-      "buried_treasure:dawn_active_check",
-      "falling_stars:dawn_active_check",
-      "nightmare_nights:dawn_active_check",
-      "slime_fests:dawn_active_check"
+      "nightmare_nights:dawn_active_check"
     ]
-
 }

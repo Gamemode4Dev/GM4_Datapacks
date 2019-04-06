@@ -10,6 +10,7 @@ scoreboard players set mysterious_midnights gm4_clock_tick 0
 scoreboard objectives add gm4_nights_data dummy
 scoreboard players set 8 gm4_nights_data 8
 scoreboard players set 16 gm4_nights_data 16
+scoreboard players set 17 gm4_nights_data 17
 scoreboard players set moon_phase gm4_nights_data -1
 scoreboard players set send_night_end_pulse gm4_nights_data 0
 

@@ -1,5 +1,6 @@
 {
     "values":[
+      "tipped_skeletons:setup",
       "resurrecting_skeletons:setup",
       "resurrecting_zombies:setup"
     ]

@@ -1,7 +1,6 @@
 #@s = none
 #at world spawn
 #run from main, only during day, only once per day.
-say mysterious_midnights.send_night_end_pulse
 
 #remember that night end pulse was sent
 scoreboard players set send_night_end_pulse gm4_nights_data 0
@@ -13,4 +12,4 @@ scoreboard players set moon_phase gm4_nights_data -1
 execute if score random gm4_nights_data matches 9.. run function #mysterious_midnights:dawn_event
 
 #end expansion activity
-kill @e[type=area_effect_cloud,tag=gm4_mysterious_midnight_expansion,tag=gm4_mysterious_midnight_active]
+kill @e[type=area_effect_cloud,tag=gm4_mysterious_midnights_expansion,tag=gm4_mysterious_midnights_active]

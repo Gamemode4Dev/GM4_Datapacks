@@ -1,9 +1,6 @@
 {
     "values":[
-      "harvest_moons:setup",
-      "buried_treasure:setup",
       "falling_stars:setup",
       "nightmare_nights:setup"
     ]
-
 }

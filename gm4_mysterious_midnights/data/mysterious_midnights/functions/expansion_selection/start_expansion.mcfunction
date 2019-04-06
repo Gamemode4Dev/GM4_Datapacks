@@ -13,5 +13,5 @@ execute if score random gm4_nights_data matches 13..14 run function #mysterious_
 execute if score random gm4_nights_data matches 15.. run function #mysterious_midnights:rare_expansion
 
 #chose one expansion
-tag @e[type=area_effect_cloud,tag=gm4_mysterious_midnight_expansion,limit=1,sort=random] add gm4_mysterious_midnight_active
-kill @e[type=area_effect_cloud,tag=gm4_mysterious_midnight_expansion,tag=!gm4_mysterious_midnight_active]
+tag @e[type=area_effect_cloud,tag=gm4_mysterious_midnights_expansion,limit=1,sort=random] add gm4_mysterious_midnights_active
+kill @e[type=area_effect_cloud,tag=gm4_mysterious_midnights_expansion,tag=!gm4_mysterious_midnights_active]

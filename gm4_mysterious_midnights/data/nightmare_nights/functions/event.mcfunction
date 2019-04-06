@@ -1,7 +1,6 @@
 #@s = none
 #at world spawn
 #called by mysterious midnights base if this expansion was selected. pulsed every 0.8 seconds throughout the night.
-#say nightmare_nights.event
 
 #kick players out of beds
 effect give @a[nbt={Sleeping:1b}] minecraft:instant_damage 1 0

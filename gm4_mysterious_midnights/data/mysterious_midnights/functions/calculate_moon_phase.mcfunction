@@ -1,7 +1,6 @@
 #@s = none
 #at world spawn
 #run from main, only during night, only once per night.
-#say mysterious_midnights.calculate_moon_phase
 
 #query day
 execute store result score moon_phase gm4_nights_data run time query day
