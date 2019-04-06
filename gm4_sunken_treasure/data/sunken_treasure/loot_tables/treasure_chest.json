@@ -315,7 +315,7 @@
         {
           "type": "item",
           "name": "minecraft:sand",
-          "weight": 10,
+          "weight": 20,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -329,13 +329,27 @@
         {
           "type": "item",
           "name": "minecraft:gravel",
-          "weight": 15,
+          "weight": 25,
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
                 "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:clay_ball",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
               }
             }
           ]
