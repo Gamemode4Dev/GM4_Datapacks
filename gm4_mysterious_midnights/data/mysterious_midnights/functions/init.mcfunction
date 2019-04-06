@@ -17,7 +17,6 @@ scoreboard objectives add gm4_tipped_type dummy
 
 scoreboard objectives add gm4_rezombify dummy
 scoreboard objectives add gm4_reskelify dummy
-scoreboard objectives add gm4_harvest_moon dummy
 
 #announce success
 tellraw @a ["",{"text":"[GM4]: Mysterious Midnights Installed!"}]

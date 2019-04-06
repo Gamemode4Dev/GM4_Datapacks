@@ -2,6 +2,9 @@
 #at world spawn
 #run from expansion_selection/calculate_midnight_difficulty, only during full moon nights where there is a mysterious midnight. Only ran once.
 
+#play wolf sound
+playsound entity.wolf.howl weather @a ~ ~10000 ~ 0 1 1
+
 #common
 execute if score random gm4_nights_data matches 9..12 run function #mysterious_midnights:common_expansion
 #uncommon
