@@ -12,7 +12,9 @@
   "required_modules":[
     "custom_crafters"
   ],
-  "recommended_modules":[],
+  "recommended_modules":[
+    "sunken_treasure"
+  ],
   "credits":{
     "Creator":[
       ["BluePsychoRanger","https://www.twitter.com/blupsychoranger"]
