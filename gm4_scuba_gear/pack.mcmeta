@@ -3,7 +3,7 @@
     "pack_format":0,
     "description":"A Gamemode 4 Module"
   },
-  "module_name":"SCUBA Gear",
+  "module_name":"Scuba Gear",
   "module_id":"scuba_gear",
   "site_description":"Ease ocean exploration with craftable scuba gear!",
   "site_categories":["Custom Crafting"],
