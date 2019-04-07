@@ -9,7 +9,7 @@ scoreboard players set send_night_end_pulse gm4_nights_data 0
 scoreboard players set moon_phase gm4_nights_data -1
 
 #send night end pulse to expansions
-execute if score random gm4_nights_data matches 9.. run function #mysterious_midnights:dawn_event
+execute if score random gm4_nights_data matches 6.. run function #mysterious_midnights:dawn_event
 
 #end expansion activity
 kill @e[type=area_effect_cloud,tag=gm4_mysterious_midnights_expansion,tag=gm4_mysterious_midnights_active]
