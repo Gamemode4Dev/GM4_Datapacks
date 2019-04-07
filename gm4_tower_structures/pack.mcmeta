@@ -8,7 +8,7 @@
   "site_description":"A custom terrain expansion pack that adds four new tower structures to the world.",
   "site_categories":["Custom Terrain"],
   "video_link":"",
-  "wiki_link":"",
+  "wiki_link":"https://wiki.gm4.co/wiki/Orbis/Tower_Structures",
   "required_modules":[
     "orbis"
   ],
