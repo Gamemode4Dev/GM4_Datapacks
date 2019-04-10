@@ -1,19 +1,4 @@
 #@s = liquid tank with item in first slot
 #run from liquid_tanks:item_process
 
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:black_concrete_powder"}]} run function cement_mixers:item_fill/black_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:blue_concrete_powder"}]} run function cement_mixers:item_fill/blue_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:brown_concrete_powder"}]} run function cement_mixers:item_fill/brown_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:cyan_concrete_powder"}]} run function cement_mixers:item_fill/cyan_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:gray_concrete_powder"}]} run function cement_mixers:item_fill/gray_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:green_concrete_powder"}]} run function cement_mixers:item_fill/green_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:light_blue_concrete_powder"}]} run function cement_mixers:item_fill/light_blue_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:light_gray_concrete_powder"}]} run function cement_mixers:item_fill/light_gray_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:lime_concrete_powder"}]} run function cement_mixers:item_fill/lime_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:magenta_concrete_powder"}]} run function cement_mixers:item_fill/magenta_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:orange_concrete_powder"}]} run function cement_mixers:item_fill/orange_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:pink_concrete_powder"}]} run function cement_mixers:item_fill/pink_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:purple_concrete_powder"}]} run function cement_mixers:item_fill/purple_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:red_concrete_powder"}]} run function cement_mixers:item_fill/red_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:white_concrete_powder"}]} run function cement_mixers:item_fill/white_concrete
-execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{CustomName:"{\"text\":\"Water Tank\"}",Items:[{Slot:0b,id:"minecraft:yellow_concrete_powder"}]} run function cement_mixers:item_fill/yellow_concrete
+execute if score @s[tag=gm4_lt_water] gm4_lt_value matches 1.. run function cement_mixers:water_concrete
