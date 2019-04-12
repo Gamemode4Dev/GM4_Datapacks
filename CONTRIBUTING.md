@@ -16,7 +16,7 @@ There are several placeholder values in both file names and the files themselves
 Within the `data` folder there are two folders for the different namespaces this module will use. If the module is an extension, you will need an additional module for the base module. Because we merge modules with a copy of the base clock certain folders and files are not included in the template.
 #### /gm4/
 This folder contains two function tags that are called by the Gamemode 4 clocking system. Small changes need to be made (see placeholder values above).
-If the module does not contain advancements then the folder `gm4/advancements` should be deleted. Otherwise the advancement details should be updated. The `root.json` file should not be deleted or changed.
+If the module does not contain advancements then the folder `gm4/advancements` should be deleted. Otherwise the advancement details should be updated.
 #### /template/
 This folder should be renamed to `MODULE_ID`. All your module code should be within this folder or within sub-folders. Place your main commands in the `main.mcfunction` file and any commands that should run every tick (avoid this if possible) into `pulse_check.mcfunction`.
 Additionally place `#$moduleUpdateList` at the end of `init.mcfunction`.
