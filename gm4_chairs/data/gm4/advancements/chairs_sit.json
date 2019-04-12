@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"poisonous_potato",
-      "nbt":"{display:{Name:\"\\\"chairs logo\\\"\"}}"
+      "nbt":"{display:{Name:'{\"text\":\"chairs logo\"}'}}"
     },
     "title":"Couch Potato",
     "description":{
