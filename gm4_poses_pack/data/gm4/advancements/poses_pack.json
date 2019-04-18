@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"armor_stand",
-      "nbt":"{display:{Name:\"\\\"poses_pack logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"poses_pack logo\"'}}"
     },
     "title":"Plenty O' Posing",
     "description":{

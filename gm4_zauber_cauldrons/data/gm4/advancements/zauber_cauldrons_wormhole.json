@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"chorus_fruit",
-      "nbt":"{display:{Name:\"\\\"zauber_cauldrons logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"zauber_cauldrons logo\"'}}"
     },
     "title":"Questionable Ingredients",
     "description":{

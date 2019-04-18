@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"rabbit_foot",
-      "nbt":"{display:{Name:\"\\\"zauber_cauldrons_rabbit logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"zauber_cauldrons_rabbit logo\"'}}"
     },
     "title":"Soup Kitchen Magician",
     "description":{

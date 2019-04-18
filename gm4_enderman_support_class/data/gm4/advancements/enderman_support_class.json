@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"player_head",
-      "nbt":"{SkullOwner:\"MHF_Enderman\",display:{Name:\"\\\"enderman_suppoer_class logo\\\"\"}}"
+      "nbt":"{SkullOwner:\"MHF_Enderman\",display:{Name:'\"enderman_support_class logo\"'}}"
     },
     "title":"Ender Aid",
     "description":{

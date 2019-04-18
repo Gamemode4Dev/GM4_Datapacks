@@ -30,6 +30,6 @@ playsound entity.turtle.egg_break block @a[distance=..8] ~ ~ ~ 0.5 1.3
 particle block seagrass ~ ~.2 ~ 0 0 0 0 7
 
 #summon pretty entity line
-summon area_effect_cloud ~ ~ ~ {Tags:["gm4_spawner_minecart_decorative_particle","gm4_unrotated_particle_cloud"],Duration:200,Particle:"block air",CustomName:"\"Spawner Minecart Decorative Particle\""}
+summon area_effect_cloud ~ ~ ~ {Tags:["gm4_spawner_minecart_decorative_particle","gm4_unrotated_particle_cloud"],Duration:200,Particle:"block air",CustomName:'"Spawner Minecart Decorative Particle"'}
 teleport @e[type=area_effect_cloud,tag=gm4_unrotated_particle_cloud,limit=1] ~ ~ ~ facing entity @e[type=spawner_minecart,tag=gm4_processing_spawner,limit=1] eyes
 tag @e[type=area_effect_cloud,tag=gm4_unrotated_particle_cloud] remove gm4_unrotated_particle_cloud

@@ -27,7 +27,7 @@
           "functions":[
             {
               "function":"set_nbt",
-              "tag":"{display:{Name:'{\"text\":\"Bat Leather\",\"italic\":false}',Lore:['{\"text\":\"Would make for a very strange,\"}','{\"text\":\"very tiny jacket\"}']}}"
+              "tag":"{display:{Name:'{\"text\":\"Bat Leather\",\"italic\":false}',Lore:['\"Would make for a very strange,\"','\"very tiny jacket\"']}}"
             }
           ],
           "weight":1
@@ -52,7 +52,7 @@
           "functions":[
             {
               "function":"set_nbt",
-              "tag":"{display:{Name:'{\"text\":\"Bat Droppings\",\"italic\":false}',Lore:['{\"text\":\"A bat dropped this\"}']}}"
+              "tag":"{display:{Name:'{\"text\":\"Bat Droppings\",\"italic\":false}',Lore:['\"A bat dropped this\"']}}"
             }
           ],
           "weight":1
