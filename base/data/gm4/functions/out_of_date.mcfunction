@@ -1,0 +1,3 @@
+tellraw @a ["",{"text":"[GM4]: ","color":"aqua"},{"text":"Some of your modules are outdated: ","color":"white"},{"selector":"@e[type=area_effect_cloud,tag=gm4_update_message]","color":"gold","insertion":"/tellraw @p %s"}]
+tellraw @a ["",{"text":"[GM4]: ","color":"aqua"},{"text":"Click to visit our site with the latest versions.","color":"white","underlined":true,"clickEvent":{"action":"open_url","value":"https://www.gm4.co/modules/"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to visit gm4.co/modules/","color":"aqua"}]}}}]
+kill @e[type=area_effect_cloud,tag=gm4_update_message]
