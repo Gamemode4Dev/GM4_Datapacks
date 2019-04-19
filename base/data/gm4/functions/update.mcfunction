@@ -1,7 +1,7 @@
 #This function runs every time a world/server is restarted or /reload is run.
 #It checks for new modules, tells them to initialise and informs the player.
 
-tellraw @a ["",{"text":"[GM4]: Checking for updates...","color":"aqua"}]
+tellraw @a {"text":"[GM4]: Checking for updates...","color":"aqua"}
 execute unless entity @p run say [GM4]: Checking for updates...
 
 #set update_happened to false until proven otherwise
@@ -16,7 +16,7 @@ scoreboard players set installed_modules gm4_up_check 0
 function #gm4:init_check
 
 #announce success of update if one happened.
-execute if score update_happened gm4_up_check matches 0 run tellraw @a ["",{"text":"[GM4]: No updates found.","color":"aqua"}]
+execute if score update_happened gm4_up_check matches 0 run tellraw @a {"text":"[GM4]: No updates found.","color":"aqua"}
 execute unless entity @p run execute if score update_happened gm4_up_check matches 0 run say [GM4]: No updates found.
-execute if score update_happened gm4_up_check matches 1 run tellraw @a ["",{"text":"[GM4]: Updates completed.","color":"aqua"}]
+execute if score update_happened gm4_up_check matches 1 run tellraw @a {"text":"[GM4]: Updates completed.","color":"aqua"}
 execute unless entity @p run execute if score update_happened gm4_up_check matches 1 run say [GM4]: Updates completed.
