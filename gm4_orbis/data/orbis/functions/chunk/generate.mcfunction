@@ -1,14 +1,14 @@
 # get the biome type
+scoreboard players reset * gm4_orbis_biome
 execute positioned ~8 1000 ~8 run function orbis:chunk/scan
+# find the real biome if a river has been detected
+execute if score river gm4_orbis_biome matches 1 run function orbis:chunk/river
 
-# run general and biome specific function tags
-# other modules can have functions in these tags as expansion to orbis
+# try to spawn a structure before any chunk modifications have been done
+function orbis:structure/chunk
+
+# other modules can have functions in this tag as expansion to orbis
 function #orbis:chunk/generate
-execute if score @s gm4_orbis_biome matches 0 run function #orbis:biome/default
-execute if score @s gm4_orbis_biome matches 1 run function #orbis:biome/ocean
-execute if score @s gm4_orbis_biome matches 2 run function #orbis:biome/desert
-execute if score @s gm4_orbis_biome matches 3 run function #orbis:biome/snow
-execute if score @s gm4_orbis_biome matches 4 run function #orbis:biome/mesa
 
 # mark the chunk as generated
 scoreboard players add chunk_count gm4_orbis_config 1

@@ -4,17 +4,12 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:alternatives",
-          "children": [
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
             {
-              "type": "item",
-              "name": "stick",
-              "functions": [
-                {
-                  "function": "set_nbt",
-                  "tag": "{gm4_orbis:{biome:1}}"
-                }
-              ],
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{ocean:1b}}",
               "conditions": [
                 {
                   "condition": "minecraft:alternative",
@@ -58,12 +53,6 @@
                     {
                       "condition": "minecraft:location_check",
                       "predicate": {
-                        "biome": "minecraft:deep_warm_ocean"
-                      }
-                    },
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
                         "biome": "minecraft:deep_cold_ocean"
                       }
                     },
@@ -90,14 +79,8 @@
               ]
             },
             {
-              "type": "item",
-              "name": "stick",
-              "functions": [
-                {
-                  "function": "set_nbt",
-                  "tag": "{gm4_orbis:{biome:2}}"
-                }
-              ],
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{desert:1b}}",
               "conditions": [
                 {
                   "condition": "minecraft:alternative",
@@ -125,73 +108,8 @@
               ]
             },
             {
-              "type": "item",
-              "name": "stick",
-              "functions": [
-                {
-                  "function": "set_nbt",
-                  "tag": "{gm4_orbis:{biome:3}}"
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:alternative",
-                  "terms": [
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
-                        "biome": "minecraft:snowy_beach"
-                      }
-                    },
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
-                        "biome": "minecraft:snowy_taiga"
-                      }
-                    },
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
-                        "biome": "minecraft:snowy_tundra"
-                      }
-                    },
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
-                        "biome": "minecraft:snowy_mountains"
-                      }
-                    },
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
-                        "biome": "minecraft:snowy_taiga_hills"
-                      }
-                    },
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
-                        "biome": "minecraft:snowy_taiga_mountains"
-                      }
-                    },
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
-                        "biome": "minecraft:frozen_river"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "item",
-              "name": "stick",
-              "functions": [
-                {
-                  "function": "set_nbt",
-                  "tag": "{gm4_orbis:{biome:4}}"
-                }
-              ],
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{badlands:1b}}",
               "conditions": [
                 {
                   "condition": "minecraft:alternative",
@@ -237,12 +155,208 @@
               ]
             },
             {
-              "type": "item",
-              "name": "stick",
-              "functions": [
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{snowy:1b}}",
+              "conditions": [
                 {
-                  "function": "set_nbt",
-                  "tag": "{gm4_orbis:{biome:0}}"
+                  "condition": "minecraft:alternative",
+                  "terms": [
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_taiga"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_beach"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_tundra"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_mountains"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_taiga_hills"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_taiga_mountains"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:frozen_river"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{forest:1b}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:alternative",
+                  "terms": [
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:forest"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:dark_forest"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:dark_forest_hills"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:birch_forest"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:birch_forest_hills"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:flower_forest"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:tall_birch_forest"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:taiga"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:taiga_hills"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:taiga_mountains"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_taiga"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_taiga_hills"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_taiga_mountains"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:giant_tree_taiga"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:giant_spruce_taiga"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:giant_tree_taiga_hills"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:giant_spruce_taiga_hills"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{plains:1b}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:alternative",
+                  "terms": [
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:plains"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_tundra"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{river:1b}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:alternative",
+                  "terms": [
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:river"
+                      }
+                    }
+                  ]
                 }
               ]
             }
