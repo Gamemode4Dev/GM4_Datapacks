@@ -1,0 +1,254 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "item",
+              "name": "stick",
+              "functions": [
+                {
+                  "function": "set_nbt",
+                  "tag": "{gm4_orbis:{biome:1}}"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:alternative",
+                  "terms": [
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:ocean"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:cold_ocean"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:deep_ocean"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:warm_ocean"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:frozen_ocean"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:lukewarm_ocean"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:deep_warm_ocean"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:deep_cold_ocean"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:deep_warm_ocean"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:deep_frozen_ocean"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:deep_lukewarm_ocean"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "item",
+              "name": "stick",
+              "functions": [
+                {
+                  "function": "set_nbt",
+                  "tag": "{gm4_orbis:{biome:2}}"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:alternative",
+                  "terms": [
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:desert"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:desert_hills"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:desert_lakes"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "item",
+              "name": "stick",
+              "functions": [
+                {
+                  "function": "set_nbt",
+                  "tag": "{gm4_orbis:{biome:3}}"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:alternative",
+                  "terms": [
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_beach"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_taiga"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_tundra"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_mountains"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_taiga_hills"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_taiga_mountains"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:frozen_river"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "item",
+              "name": "stick",
+              "functions": [
+                {
+                  "function": "set_nbt",
+                  "tag": "{gm4_orbis:{biome:4}}"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:alternative",
+                  "terms": [
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:badlands"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:badlands_plateau"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:eroded_badlands"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:wooded_badlands_plateau"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:modified_badlands_plateau"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:modified_wooded_badlands_plateau"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "item",
+              "name": "stick",
+              "functions": [
+                {
+                  "function": "set_nbt",
+                  "tag": "{gm4_orbis:{biome:0}}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

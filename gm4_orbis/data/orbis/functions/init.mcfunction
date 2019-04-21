@@ -1,5 +1,5 @@
 #announce module installation
-tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Installing Orbis..."}]
+tellraw @a[gamemode=creative] {"text":"[GM4]: Installing Orbis..."}
 execute unless entity @p run say GM4: Installing Orbis...
 
 #declare and initialise scoreboards and settings
@@ -19,7 +19,7 @@ scoreboard players add chunk_count gm4_orbis_config 0
 scoreboard players add structure_count gm4_orbis_config 0
 
 #announce success
-tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Orbis Installed!"}]
+tellraw @a[gamemode=creative] {"text":"[GM4]: Orbis Installed!"}
 execute unless entity @p run say GM4: Orbis Installed!
 
 #check other modules to make sure they're up to date.
