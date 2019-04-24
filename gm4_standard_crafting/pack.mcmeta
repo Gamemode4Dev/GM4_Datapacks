@@ -4,7 +4,7 @@
     "description":"A Gamemode 4 Module"
   },
   "module_name":"Standard Crafting",
-  "module_id":"standard_crafting",
+  "module_id":"",
   "site_description":"A crafting recipe pack that adds some nifty new recipes to the game.",
   "site_categories":["Custom Crafting"],
   "video_link":"https://www.youtube.com/watch?v=ibtS4zAvglQ",
