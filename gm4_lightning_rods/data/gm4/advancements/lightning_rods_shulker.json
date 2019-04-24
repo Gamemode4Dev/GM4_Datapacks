@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"blaze_rod",
-      "nbt":"{Enchantments:[{id:mending,lvl:1}],display:{Name:\"\\\"lightning_rods_shulker logo\\\"\"}}"
+      "nbt":"{Enchantments:[{id:mending,lvl:1}],display:{Name:\"\\\"lightning_rods_shulker logo\"'}}"
     },
     "title":"Dr. Frankenstein",
     "description":{

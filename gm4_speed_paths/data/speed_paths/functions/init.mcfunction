@@ -13,5 +13,5 @@ tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Speed Paths Installed!"}]
 execute unless entity @p run say GM4: Speed Paths Installed!
 
 #check other modules to make sure they're up to date.
-execute if score bat_grenades gm4_modules matches ..1 run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"\"Bat Grenades\"",Tags:["updateMessage"],Duration:2000}
-execute if score bat_grenades gm4_modules matches ..1 run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"\"Another Module\"",Tags:["updateMessage"],Duration:2000}
+execute if score bat_grenades gm4_modules matches ..1 run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'"Bat Grenades"',Tags:["updateMessage"],Duration:2000}
+execute if score bat_grenades gm4_modules matches ..1 run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'"Another Module"',Tags:["updateMessage"],Duration:2000}

@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"enchanting_table",
-      "nbt":"{display:{Name:\"\\\"enchantment_extractors logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"enchantment_extractors logo\"'}}"
     },
     "title":"Clever Enchanting",
     "description":{
