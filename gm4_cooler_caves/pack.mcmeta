@@ -4,7 +4,6 @@
     "description":"A Gamemode 4 Module"
   },
   "module_name":"Cooler Caves",
-  "module_id":"cooler_caves",
   "site_description":"A custom terrain expansion pack that makes biome specific caves and mineshafts",
   "site_categories":["Custom Terrain"],
   "video_link":"https://www.youtube.com/watch?v=cAsXiwLWHFo",
