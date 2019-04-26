@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"gunpowder",
-      "nbt":"{display:{Name:\"\\\"bat_grenades logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"bat_grenades logo\"'}}"
     },
     "title":"Batboozled",
     "description":{

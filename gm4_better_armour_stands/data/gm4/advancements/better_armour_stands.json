@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"armor_stand",
-      "nbt":"{display:{Name:\"\\\"better_armour_stands logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"better_armour_stands logo\"'}}"
     },
     "title":"Gettin' Handsy",
     "description":{

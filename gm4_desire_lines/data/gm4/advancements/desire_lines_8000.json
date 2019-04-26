@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"oak_planks",
-      "nbt":"{display:{Name:\"\\\"desire_lines logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"desire_lines logo\"'}}"
     },
     "title":"And I Would Walk 500 Chunks...",
     "description":{

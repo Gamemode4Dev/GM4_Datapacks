@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"crafting_table",
-      "nbt":"{display:{Name:\"\\\"custom_crafters logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"custom_crafters logo\"'}}"
     },
     "title":"Clever Crafting",
     "description":{

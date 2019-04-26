@@ -4,7 +4,6 @@
     "description":"A Gamemode 4 Module"
   },
   "module_name":"Trapped Signs",
-  "module_id":"trapped_signs",
   "site_description":"Craft trapped signs which, when right-clicked, give off a redstone signal.",
   "site_categories":[
     "Custom Crafting"

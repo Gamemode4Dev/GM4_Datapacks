@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"minecraft:ink_sac",
-      "nbt":"{display:{Name:\"\\\"ink_spitting_squid logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"ink_spitting_squid logo\"'}}"
     },
     "title":"Natural Defenses",
     "description":{

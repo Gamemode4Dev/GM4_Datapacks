@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"cauldron",
-      "nbt":"{display:{Name:\"\\\"zauber_cauldrons logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"zauber_cauldrons logo\"'}}"
     },
     "title":"Potion Chef",
     "description":{
