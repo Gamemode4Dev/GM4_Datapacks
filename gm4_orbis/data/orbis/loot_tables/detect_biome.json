@@ -345,7 +345,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_orbis:{river:1b}}",
+              "tag": "{gm4_orbis:{border:1b}}",
               "conditions": [
                 {
                   "condition": "minecraft:alternative",
@@ -354,6 +354,18 @@
                       "condition": "minecraft:location_check",
                       "predicate": {
                         "biome": "minecraft:river"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:beach"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:snowy_beach"
                       }
                     }
                   ]

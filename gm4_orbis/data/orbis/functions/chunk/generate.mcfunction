@@ -2,7 +2,7 @@
 scoreboard players reset * gm4_orbis_biome
 execute positioned ~8 1000 ~8 run function orbis:chunk/scan
 # find the real biome if a river has been detected
-execute if score river gm4_orbis_biome matches 1 run function orbis:chunk/river
+execute if score border gm4_orbis_biome matches 1 run function orbis:chunk/border
 
 # try to spawn a structure before any chunk modifications have been done
 function orbis:structure/chunk
