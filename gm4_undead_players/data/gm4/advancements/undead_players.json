@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"zombie_head",
-      "nbt":"{display:{Name:\"\\\"undead_players logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"undead_players logo\"'}}"
     },
     "title":"Risen",
     "description":{

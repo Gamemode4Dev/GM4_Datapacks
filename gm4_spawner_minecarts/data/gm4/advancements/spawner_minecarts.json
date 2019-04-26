@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"spawner",
-      "nbt":"{display:{Name:\"\\\"spawner_minecarts logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"spawner_minecarts logo\"'}}"
     },
     "title":"Don't go breaking my Cart",
     "description":{

@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"golden_chestplate",
-      "nbt":"{display:{Name:\"\\\"zauber_cauldrons_armor logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"zauber_cauldrons_armor logo\"'}}"
     },
     "title":"Underated Materials",
     "description":{
