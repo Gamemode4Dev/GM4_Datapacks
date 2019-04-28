@@ -1,10 +1,9 @@
 {
-    "values":[
-        "minecraft:potatoes",
-        "minecraft:carrots",
-        "minecraft:wheat",
-        "minecraft:beetroots",
-        "minecraft:nether_wart"
-    ]
-
+  "values":[
+    "minecraft:potatoes",
+    "minecraft:carrots",
+    "minecraft:wheat",
+    "minecraft:beetroots",
+    "minecraft:nether_wart"
+  ]
 }

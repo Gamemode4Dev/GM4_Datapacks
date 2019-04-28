@@ -4,6 +4,6 @@
 
 function pig_tractors:check_mainhand
 
-execute if block ~ ~ ~ air run function pig_tractors:check_offhand
+execute if block ~ ~ ~ #pig_tractors:air run function pig_tractors:check_offhand
 
-execute if block ~ ~ ~ air run function pig_tractors:check_inventory
+execute if block ~ ~ ~ #pig_tractors:air run function pig_tractors:check_inventory
