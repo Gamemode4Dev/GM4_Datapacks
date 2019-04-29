@@ -5,6 +5,14 @@ tag @s add gm4_disassembled
 scoreboard players set result_items gm4_disassembler -1
 execute store result score damage gm4_disassembler run data get entity @s Item.tag.Damage
 
+execute if entity @s[nbt={Item:{id:"minecraft:diamond_chestplate"}}] run function disassemblers:items/diamond_chestplate
+execute if entity @s[nbt={Item:{id:"minecraft:diamond_sword"}}] run function disassemblers:items/diamond_sword
+execute if entity @s[nbt={Item:{id:"minecraft:diamond_pickaxe"}}] run function disassemblers:items/diamond_pickaxe
+execute if entity @s[nbt={Item:{id:"minecraft:diamond_shovel"}}] run function disassemblers:items/diamond_shovel
+execute if entity @s[nbt={Item:{id:"minecraft:diamond_axe"}}] run function disassemblers:items/diamond_axe
+execute if entity @s[nbt={Item:{id:"minecraft:diamond_leggings"}}] run function disassemblers:items/diamond_leggings
+execute if entity @s[nbt={Item:{id:"minecraft:diamond_boots"}}] run function disassemblers:items/diamond_boots
+execute if entity @s[nbt={Item:{id:"minecraft:diamond_helmet"}}] run function disassemblers:items/diamond_helmet
 execute if entity @s[nbt={Item:{id:"minecraft:leather_helmet"}}] run function disassemblers:items/leather_helmet
 execute if entity @s[nbt={Item:{id:"minecraft:leather_chestplate"}}] run function disassemblers:items/leather_chestplate
 execute if entity @s[nbt={Item:{id:"minecraft:leather_leggings"}}] run function disassemblers:items/leather_leggings
@@ -12,6 +20,7 @@ execute if entity @s[nbt={Item:{id:"minecraft:leather_boots"}}] run function dis
 execute if entity @s[nbt={Item:{id:"minecraft:iron_axe"}}] run function disassemblers:items/iron_axe
 execute if entity @s[nbt={Item:{id:"minecraft:golden_sword"}}] run function disassemblers:items/golden_sword
 execute if entity @s[nbt={Item:{id:"minecraft:golden_hoe"}}] run function disassemblers:items/golden_hoe
+execute if entity @s[nbt={Item:{id:"minecraft:diamond_hoe"}}] run function disassemblers:items/diamond_hoe
 execute if entity @s[nbt={Item:{id:"minecraft:iron_sword"}}] run function disassemblers:items/iron_sword
 execute if entity @s[nbt={Item:{id:"minecraft:golden_pickaxe"}}] run function disassemblers:items/golden_pickaxe
 execute if entity @s[nbt={Item:{id:"minecraft:golden_shovel"}}] run function disassemblers:items/golden_shovel
