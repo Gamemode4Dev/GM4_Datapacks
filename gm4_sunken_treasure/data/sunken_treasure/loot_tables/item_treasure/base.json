@@ -1,9 +1,9 @@
 {
-	"type": "minecraft:generic",
-	"pools": [
-		{
-			"rolls": 1,
-			"entries": [
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:golden_boots",
@@ -36,7 +36,7 @@
             }
           ]
         }
-			]
-		}
-	]
+      ]
+    }
+  ]
 }
