@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"minecraft:stone",
-      "nbt":"{display:{Name:\"\\\"mysterious_midnights logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"mysterious_midnights logo\"'}}"
     },
     "title":"Mysterious Midnights Advancement",
     "description":{

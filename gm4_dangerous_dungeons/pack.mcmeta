@@ -4,7 +4,6 @@
     "description":"A Gamemode 4 Module"
   },
   "module_name":"Dangerous Dungeons",
-  "module_id":"dangerous_dungeons",
   "site_description":"A custom terrain expansion pack that adds new types of dungeons underground.",
   "site_categories":["Custom Terrain"],
   "video_link":"",
@@ -18,7 +17,7 @@
   ],
   "credits":{
     "Creator":[
-      ["Sparks","https://www.twitter.com/accidentalgames"]
+      ["Sparks","https://www.twitter.com/SparksTheGamer"]
     ],
     "Updated by":[
       ["Misode","https://twitter.com/misoloo"]

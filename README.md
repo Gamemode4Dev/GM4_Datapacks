@@ -3,6 +3,6 @@ Welcome to the Git for Gamemode 4 modules. This space allows us to work together
 
 For Full Release versions of modules, visit https://gm4.co/modules
 
-For information on how to help us, view `CONTRIBUTING.md`
+For information on how to help us, view [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
 For more information about Gamemode 4, visit https://www.wiki.gm4.co

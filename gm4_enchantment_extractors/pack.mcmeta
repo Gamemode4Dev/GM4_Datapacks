@@ -4,7 +4,6 @@
     "description":"A Gamemode 4 Module"
   },
   "module_name":"Enchantment Extractors",
-  "module_id":"enchantment_extractors",
   "site_description":"Collects enchantments from tools, armour and weapons.",
   "site_categories":[],
   "video_link":"https://www.youtube.com/watch?v=DT4PPHC23iM",

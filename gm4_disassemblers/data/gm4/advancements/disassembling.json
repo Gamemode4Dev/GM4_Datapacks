@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"diamond_chestplate",
-      "nbt":"{display:{Name:\"\\\"Disassemblers logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"Disassemblers logo\"'}}"
     },
     "title":"Disassembling Matters",
     "description":{
