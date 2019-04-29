@@ -14,7 +14,7 @@ effect give @a[gamemode=!spectator,tag=gm4_zc_luck] minecraft:luck 8 0 true
 
 #apply crystal effects
 scoreboard players add slow_clock gm4_zc_data 1
-execute if score slow_clock gm4_zc_data matches 3.. as @a[gamemode=!spectator,tag=gm4_zc_luck,nbt={Inventory:[{Slot:-106b,id:"minecraft:player_head",tag:{gm4_zauber_cauldrons:{item:"crystal"}}}]}] run function zauber_cauldrons:recipes/crystals/apply_effects
+execute if score slow_clock gm4_zc_data matches 3.. as @a[gamemode=!spectator,nbt={ActiveEffects:[{Id:26b}],Inventory:[{Slot:-106b,id:"minecraft:player_head",tag:{gm4_zauber_cauldrons:{item:"crystal"}}}]}] run function zauber_cauldrons:recipes/crystals/apply_effects
 #grant full zauber armor advancement
 execute if score slow_clock gm4_zc_data matches 3.. run advancement grant @a[gamemode=!spectator,nbt={Inventory:[{Slot:100b,tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}},{Slot:101b,tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}},{Slot:102b,tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}},{Slot:103b,tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}}]}] only gm4:zauber_cauldrons_full_armor
 
