@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"diamond",
+      "nbt":"{CustomModelData:4911315144,display:{Name:'\"Storage Upgrade: Diamond\"'}}"
+    },
+    "title":"Remember to check for lava",
+    "description":{
+      "text":"Make a Diamond upgrade for your drawer.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:storage_drawers_create_upgrade_gold",
+  "criteria":{
+    "create_upgrade_diamond":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

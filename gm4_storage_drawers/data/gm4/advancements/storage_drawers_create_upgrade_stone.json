@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"stone_button",
+      "nbt":"{CustomModelData:1920155,display:{Name:'\"Storage Upgrade: Stone\"'}}"
+    },
+    "title":"Getting an Upgrade: Storage Ed.",
+    "description":{
+      "text":"Make a Stone upgrade for your drawer.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:storage_drawers_create_drawer",
+  "criteria":{
+    "create_upgrade_stone":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

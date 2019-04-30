@@ -1,0 +1,1 @@
+function storage_drawers:all/detection_master_main

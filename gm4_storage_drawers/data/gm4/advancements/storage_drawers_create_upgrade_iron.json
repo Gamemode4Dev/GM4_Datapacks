@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"iron_ingot",
+      "nbt":"{CustomModelData:9181514,display:{Name:'\"Storage Upgrade: Iron\"'}}"
+    },
+    "title":"Acquire Storage",
+    "description":{
+      "text":"Make a Iron upgrade for your drawer.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:storage_drawers_create_upgrade_stone",
+  "criteria":{
+    "create_upgrade_iron":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

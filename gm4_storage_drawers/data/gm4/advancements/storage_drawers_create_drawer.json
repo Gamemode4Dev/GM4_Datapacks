@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"stripped_oak_wood",
+      "nbt":"{CustomModelData:418123518,display:{Name:'\"Drawer\"'}}"
+    },
+    "title":"I have too much cobblestone",
+    "description":{
+      "text":"Make a Storage Drawer.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:storage_drawers_create_key",
+  "criteria":{
+    "create_drawer":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"gold_nugget",
+      "nbt":"{CustomModelData:11525,display:{Name:'\"Key\"'}}"
+    },
+    "title":"Unlock the secrets of storage!",
+    "description":{
+      "text":"Make a key from Storage Drawers.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "create_key":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

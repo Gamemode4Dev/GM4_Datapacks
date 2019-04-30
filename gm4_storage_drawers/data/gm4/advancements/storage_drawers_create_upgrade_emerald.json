@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"emerald",
+      "nbt":"{CustomModelData:5135181124,display:{Name:'\"Storage Upgrade: Emerald\"'}}"
+    },
+    "title":"I see why they like these now",
+    "description":{
+      "text":"Make a Emerald upgrade for your drawer.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:storage_drawers_create_upgrade_diamond",
+  "criteria":{
+    "create_upgrade_emerald":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
