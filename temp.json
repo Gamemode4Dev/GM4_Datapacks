@@ -1,0 +1,23 @@
+[
+  {
+    "translate": "%1$s",
+    "with": [
+      "[GM4]: ",
+      {
+        "translate": "text.gm4.prefix"
+      }
+    ]
+  },
+  {
+    "translate": "%1$s",
+    "with": [
+      "Installing Bat Grenades...",
+      {
+        "translate": "text.gm4.modules.installing",
+        "with": [
+          "Bat Grenades"
+        ]
+      }
+    ]
+  }
+]

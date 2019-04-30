@@ -1,6 +1,6 @@
 #announce module installation
 tellraw @a ["",{"text":"[GM4]: Installing Mysterious Midnights..."}]
-execute unless entity @p run say GM4: Installing Mysterious Midnights...
+execute unless entity @a[limit=1] run say GM4: Installing Mysterious Midnights...
 
 #declare and initialise scoreboards and settings
 scoreboard players set update_happened gm4_up_check 1
@@ -21,7 +21,7 @@ scoreboard objectives add gm4_reskelify dummy
 
 #announce success
 tellraw @a ["",{"text":"[GM4]: Mysterious Midnights Installed!"}]
-execute unless entity @p run say GM4: Mysterious Midnights Installed!
+execute unless entity @a[limit=1] run say GM4: Mysterious Midnights Installed!
 
 #check other modules to make sure they're up to date.
 #$moduleUpdateList
