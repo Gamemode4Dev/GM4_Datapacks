@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"player_head",
-      "nbt":"{SkullOwner:{Id:\"25b1ff93-7926-1cd7-53fe-8e6050792daa\",Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE0MjkzNDc5MDU4NzMsInByb2ZpbGVJZCI6IjYzY2JkZjhkNDg4OTQ3NWY5NDQxMjk3ZTRhM2Q1NjczIiwicHJvZmlsZU5hbWUiOiJWZWxlVCIsImlzUHVibGljIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTNjZjA2ZDViNDdiNzQ2ZDE2ZWU2MzExODdjYjg1N2Q4YzE2YmZjZDU3MGE0MGYyODZiMmMzODg2N2NmZGEifX19\"}]}},display:{Name:\"heart_canisters logo 1\"}}"
+  "display": {
+    "icon": {
+      "item": "player_head",
+      "nbt": "{SkullOwner:{Id:\"25b1ff93-7926-1cd7-53fe-8e6050792daa\",Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE0MjkzNDc5MDU4NzMsInByb2ZpbGVJZCI6IjYzY2JkZjhkNDg4OTQ3NWY5NDQxMjk3ZTRhM2Q1NjczIiwicHJvZmlsZU5hbWUiOiJWZWxlVCIsImlzUHVibGljIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTNjZjA2ZDViNDdiNzQ2ZDE2ZWU2MzExODdjYjg1N2Q4YzE2YmZjZDU3MGE0MGYyODZiMmMzODg2N2NmZGEifX19\"}]}},CustomModelData:1}"
     },
-    "title":"Can't buy me love",
-    "description":{
-      "text":"Craft a tier 1 Heart Canister.",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Can't buy me love",
+        {"translate": "advancement.gm4.heart_canisters.tier_1.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Craft a tier 1 Heart Canister",
+        {"translate": "advancement.gm4.heart_canisters.tier_1.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:custom_crafters",
-  "criteria":{
-    "craft_tier_1":{
-      "trigger":"minecraft:inventory_changed",
+  "parent": "gm4:custom_crafters",
+  "criteria": {
+    "craft_tier_1": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {

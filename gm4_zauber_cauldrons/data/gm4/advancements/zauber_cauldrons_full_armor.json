@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"golden_chestplate",
-      "nbt":"{display:{Name:'\"zauber_cauldrons_armor logo\"'}}"
+  "display": {
+    "icon": {
+      "item": "golden_chestplate",
+      "nbt": "{display:{Name:'\"zauber_cauldrons_armor logo\"'}}"
     },
-    "title":"Underated Materials",
-    "description":{
-      "text":"Suit up with a full suit of Zauber Armor.",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Underated Materials",
+        {"translate": "advancement.gm4.zauber_cauldrons.full_armour.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Suit up with a full suit of Zauber Armor",
+        {"translate": "advancement.gm4.zauber_cauldrons.full_armour.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:zauber_cauldrons_create",
-  "criteria":{
-    "wear_full_zauber_armor":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:zauber_cauldrons_create",
+  "criteria": {
+    "wear_full_zauber_armor": {
+      "trigger": "minecraft:impossible"
     }
   }
 }
