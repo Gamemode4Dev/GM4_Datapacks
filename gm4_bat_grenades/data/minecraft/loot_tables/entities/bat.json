@@ -37,31 +37,6 @@
           "weight":5
         }
       ]
-    },
-    {
-      "conditions":[
-        {
-          "condition":"killed_by_player"
-        }
-      ],
-      "rolls":1,
-      "entries":[
-        {
-          "type":"item",
-          "name":"minecraft:phantom_membrane",
-          "functions":[
-            {
-              "function":"set_nbt",
-              "tag":"{display:{Name:'{\"text\":\"Bat Droppings\",\"italic\":false}',Lore:['\"A bat dropped this\"']}}"
-            }
-          ],
-          "weight":1
-        },
-        {
-          "type":"empty",
-          "weight":7
-        }
-      ]
     }
   ]
 }
