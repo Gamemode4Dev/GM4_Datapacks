@@ -12,7 +12,7 @@
   },
   "parent":"gm4:root",
   "criteria":{
-    "TRIGGER_NAME":{
+    "create_chair":{
       "trigger":"minecraft:impossible"
     }
   }
