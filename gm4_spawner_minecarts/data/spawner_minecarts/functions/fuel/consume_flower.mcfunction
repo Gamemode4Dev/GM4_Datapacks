@@ -21,6 +21,10 @@ execute if block ~ ~ ~ azure_bluet if score azure_bluet gm4_sm_flowers matches 1
 execute if block ~ ~ ~ azure_bluet if score azure_bluet gm4_sm_flowers matches 0 run function spawner_minecarts:fuel/consume_normal_flower
 execute if block ~ ~ ~ poppy if score poppy gm4_sm_flowers matches 1 run function spawner_minecarts:fuel/consume_poisonous_flower
 execute if block ~ ~ ~ poppy if score poppy gm4_sm_flowers matches 0 run function spawner_minecarts:fuel/consume_normal_flower
+execute if block ~ ~ ~ cornflower if score cornflower gm4_sm_flowers matches 1 run function spawner_minecarts:fuel/consume_poisonous_flower
+execute if block ~ ~ ~ cornflower if score cornflower gm4_sm_flowers matches 0 run function spawner_minecarts:fuel/consume_normal_flower
+execute if block ~ ~ ~ lily_of_the_valley if score lily_of_the_valley gm4_sm_flowers matches 1 run function spawner_minecarts:fuel/consume_poisonous_flower
+execute if block ~ ~ ~ lily_of_the_valley if score lily_of_the_valley gm4_sm_flowers matches 0 run function spawner_minecarts:fuel/consume_normal_flower
 
 #destroy the flower
 setblock ~ ~ ~ air replace
