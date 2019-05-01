@@ -15,6 +15,8 @@ execute if score blue_orchid gm4_zc_flowers matches 0 if entity @e[type=item,dx=
 execute if score allium gm4_zc_flowers matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:allium"}},limit=1,sort=arbitrary] run scoreboard players add normal_flowers_amount gm4_zc_fullness 1
 execute if score azure_bluet gm4_zc_flowers matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:azure_bluet"}},limit=1,sort=arbitrary] run scoreboard players add normal_flowers_amount gm4_zc_fullness 1
 execute if score poppy gm4_zc_flowers matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:poppy"}},limit=1,sort=arbitrary] run scoreboard players add normal_flowers_amount gm4_zc_fullness 1
+execute if score cornflower gm4_zc_flowers matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:cornflower"}},limit=1,sort=arbitrary] run scoreboard players add normal_flowers_amount gm4_zc_fullness 1
+execute if score lily_of_the_valley gm4_zc_flowers matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:lily_of_the_valley"}},limit=1,sort=arbitrary] run scoreboard players add normal_flowers_amount gm4_zc_fullness 1
 
 #compare amount of normal flowers in cauldron to expected amount
 execute if score normal_flowers_amount gm4_zc_fullness = required_flowers gm4_zc_flowers at @s run function zauber_cauldrons:recipes/flowers/luck
