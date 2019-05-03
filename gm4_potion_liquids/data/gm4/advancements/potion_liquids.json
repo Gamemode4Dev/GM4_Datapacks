@@ -1,0 +1,24 @@
+{
+  "display":{
+    "icon":{
+      "item":"potion",
+      "nbt":"{display:{Name:\"\\\"standard_liquids logo\\\"\"},CustomPotionColor:13631487}"
+    },
+    "title":"Fizzy Lifting Drink",
+    "description":{
+      "text":"Come on in, the air's fine",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:liquid_tanks_create",
+  "criteria":{
+    "consume_floating_potion":{
+      "trigger":"minecraft:consume_item",
+      "conditions":{
+        "item":{
+          "nbt":"{Potion:\"potion_liquids:floating\"}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"hopper",
+      "nbt":"{display:{Name:\"\\\"liquid_tanks logo\\\"\"}}"
+    },
+    "title":"Oh, That Kind of Tank",
+    "description":{
+      "text":"Find out that a liquid tank is not an epic submarine",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "create_liquid_tank":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
