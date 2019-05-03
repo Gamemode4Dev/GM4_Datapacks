@@ -1,5 +1,5 @@
 #checks stonecutter damage tick
-#@s - @e[type=!#damaging_stonecutters:no_target]
+#@s - @e[type=!#damaging_stonecutters:stonecutter_immune]
 #called by damaging_stonecutters:check_block
 
 #add tick

@@ -1,5 +1,5 @@
 #checks stonecutter block
-#@s - @e[type=!#damaging_stonecutters:no_target]
+#@s - @e[type=!#damaging_stonecutters:stonecutter_immune]
 #called by damaging_stonecutters:pulse_check
 
 #if stonecutter, tick damage

@@ -1,5 +1,5 @@
 #stonecutter damage audiovisuals
-#@s - @e[type=!#damaging_stonecutters:no_target]
+#@s - @e[type=!#damaging_stonecutters:stonecutter_immune]
 #called by damaging_stonecutters:check_damage / damaging_stonecutters:damage
 
 #audiovisuals
