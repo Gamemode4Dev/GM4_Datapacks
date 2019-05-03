@@ -1,0 +1,19 @@
+{
+    "pack": {
+        "pack_format": 0,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Damaging Stonecutters",
+    "module_id": "damaging_stonecutters",
+    "site_description": "Shouldn't those stonecutters be razor sharp?",
+    "site_categories": [],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Damaging_Stonecutters",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            ["Andante","https://twitter.com/Andantweets"]
+        ]
+    }
+}
