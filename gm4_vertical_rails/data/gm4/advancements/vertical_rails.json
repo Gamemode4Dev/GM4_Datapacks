@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"ladder",
-      "nbt":"{display:{Name:\"\\\"vertical_rails logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"vertical_rails logo\"'}}"
     },
     "title":"Up, Up and Away!",
     "description":{

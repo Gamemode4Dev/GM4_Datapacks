@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"saddle",
-      "nbt":"{display:{Name:\"\\\"pig_tractors logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"pig_tractors logo\"'}}"
     },
     "title":"Oink Tractors",
     "description":{

@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"horn_coral",
+      "nbt":"{display:{Name:'\"scuba_gear logo\"'}}"
+    },
+    "title":"Things are going swimmingly!",
+    "description":{
+      "text":"Suit up with a full set of SCUBA gear.",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:custom_crafters",
+  "criteria":{
+    "scuba_gear":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

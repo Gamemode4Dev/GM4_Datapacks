@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"piston",
-      "nbt":"{display:{Name:\"\\\"block_compressors logo\\\"\"}}"
+      "nbt":"{display:{Name:'\"block_compressors logo\"'}}"
     },
     "title":"Clever Crushing",
     "description":{
@@ -10,7 +10,7 @@
       "color":"gray"
     }
   },
-  "parent":"gm4:root",
+  "parent":"gm4:custom_crafters",
   "criteria":{
     "create_block_compressor":{
       "trigger":"minecraft:impossible"

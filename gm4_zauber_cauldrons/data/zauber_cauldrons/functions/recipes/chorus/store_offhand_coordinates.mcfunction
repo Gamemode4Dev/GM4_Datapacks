@@ -2,4 +2,4 @@
 # at world spawn
 
 #NOT SUPPORTED TIL 1.14
-title @s actionbar ["",{"text":"offhand not supported in versions below 1.14!","color":"red"}]
+title @s actionbar ["",{"text":"offhand not supported right now!","color":"red"}]

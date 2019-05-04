@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"coarse_dirt",
+      "nbt":"{display:{Name:'\"desire_lines logo\"'}}"
+    },
+    "title":"That's a Lot of Damage",
+    "description":{
+      "text":"Ruin 10000 blocks to coarse dirt; how about a little more?",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:desire_lines_8000",
+  "criteria":{
+    "ruin_blocks":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
