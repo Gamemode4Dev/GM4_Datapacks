@@ -1,5 +1,5 @@
 #set campfire block
-#@s - @e[nbt=!{Fire:-1s},type=arrow]
+#@s - @e[type=minecraft:arrow,nbt=!{Fire:-1s}]
 #called by better_fire:checks
 
 execute if block ~ ~ ~ minecraft:campfire[signal_fire=false,facing=north] run setblock ~ ~ ~ minecraft:campfire[lit=true,signal_fire=false,facing=north]
