@@ -1,5 +1,5 @@
 #fire arrows place fire
-execute as @e[type=minecraft:arrow,nbt=!{Fire:-1s}] at @s run function better_fire:checks
+execute as @e[type=minecraft:arrow,nbt=!{Fire:-1s},nbt={inBlockState:{}}] at @s run function better_fire:in_block
 
 #make creepers explode when on fire and low on Health
 execute as @e[type=minecraft:creeper,nbt=!{Fire:-1s}] store result score @s gm4_creep_health run data get entity @s Health 1

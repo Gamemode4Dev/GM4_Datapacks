@@ -1,7 +1,11 @@
 #set campfire block
 #@s - @e[type=minecraft:arrow,nbt=!{Fire:-1s}]
-#called by better_fire:checks
+#called by better_fire:in_block
 
+#audiovisuals
+playsound minecraft:block.fire.extinguish block @a[distance=..20] ~ ~ ~ 100 2
+
+#set block
 execute if block ~ ~ ~ minecraft:campfire[signal_fire=false,facing=north] run setblock ~ ~ ~ minecraft:campfire[lit=true,signal_fire=false,facing=north]
 execute if block ~ ~ ~ minecraft:campfire[signal_fire=false,facing=east] run setblock ~ ~ ~ minecraft:campfire[lit=true,signal_fire=false,facing=east]
 execute if block ~ ~ ~ minecraft:campfire[signal_fire=false,facing=south] run setblock ~ ~ ~ minecraft:campfire[lit=true,signal_fire=false,facing=south]
