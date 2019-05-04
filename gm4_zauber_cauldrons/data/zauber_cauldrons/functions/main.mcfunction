@@ -1,6 +1,5 @@
 #main
 
-
 #check creation
 execute as @a[gamemode=!spectator] at @s if entity @s[nbt={SelectedItem:{id:"minecraft:enchanted_book"},OnGround:1b}] unless entity @e[type=area_effect_cloud,tag=gm4_zauber_cauldron,distance=..2] anchored eyes positioned ^ ^ ^1.448 align xyz positioned ~.5 ~.5 ~.5 if block ~ ~ ~ cauldron unless block ~ ~ ~ cauldron[level=0] if block ~ ~-1 ~ fire run function zauber_cauldrons:cauldron/create
 
@@ -22,9 +21,10 @@ execute if score slow_clock gm4_zc_data matches 3.. run advancement grant @a[gam
 execute if score slow_clock gm4_zc_data matches 3.. as @e[type=item,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}}] at @s run function zauber_cauldrons:cauldron/extra_items/release_from_bottle
 execute if score slow_clock gm4_zc_data matches 3.. run scoreboard players set slow_clock gm4_zc_data 0
 
-#wormhole in a bottle consumption
-execute as @a[gamemode=!spectator,nbt={SelectedItem:{id:"minecraft:potion",tag:{gm4_zauber_cauldrons:{item:"wormhole_bottle"}}}}] run function zauber_cauldrons:recipes/chorus/store_mainhand_coordinates
-execute as @a[gamemode=!spectator,nbt={Inventory:[{Slot:-106b,id:"minecraft:potion",tag:{gm4_zauber_cauldrons:{item:"wormhole_bottle"}}}]},nbt=!{SelectedItem:{id:"minecraft:potion",tag:{gm4_zauber_cauldrons:{item:"wormhole_bottle"}}}}] run function zauber_cauldrons:recipes/chorus/store_offhand_coordinates
+#store the coordinates of every player's Wormhole Bottles, if applicable
+execute as @a[gamemode=!spectator] run function zauber_cauldrons:recipes/chorus/store_coordinates
+execute if score wormhole_data gm4_zc_data matches 1 run kill @e[type=item,y=-512,dy=0,tag=gm4_zc_wormhole_data,limit=1]
+scoreboard players reset wormhole_data gm4_zc_data
 
 #restore broken crystals
 data merge entity @e[type=item,limit=1,nbt={Item:{tag:{SkullOwner:{Id:"d15e515a-2058-459a-bfe9-ab419a0d2e7c",Properties:{textures:[{Value:"eyJ0aW1lc3RhbXAiOjE0NzY4ODc4ODY4MjcsInByb2ZpbGVJZCI6ImQxNWU1MTVhMjA1ODQ1OWFiZmU5ZmY1NzlhMGQyZTdjIiwicHJvZmlsZU5hbWUiOiJCbHVlZmlyZTYxMCIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS83MmRkMTkxZDgxYzg4NDUzYzVlM2JjMWJlMjFkYjVhMTkyZDUyNmI3MTg2YjJmNjk0ZjI4Y2JkZmNjYzYyYzNhIn19fQ=="}]}}}}}] {Item:{tag:{gm4_zauber_cauldrons:{item:"crystal",type:"resistance"},HideFlags:1,display:{Name:'"§eCrystal of Resistance§r"'}}}}
