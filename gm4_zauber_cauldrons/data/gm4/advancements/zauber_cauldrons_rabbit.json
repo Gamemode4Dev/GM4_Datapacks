@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "rabbit_foot",
-      "nbt": "{display:{Name:'\"zauber_cauldrons_rabbit logo\"'}}"
+      "nbt": "{CustomModelData:1}"
     },
     "title": {
       "translate": "%1$s",

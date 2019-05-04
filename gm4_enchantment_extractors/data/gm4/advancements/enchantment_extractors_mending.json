@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "enchanted_book",
-      "nbt": "{display:{Name:'\"enchantment_extractors_mending logo\"'}}"
+      "nbt": "{CustomModelData:1}"
     },
     "frame": "goal",
     "title": {

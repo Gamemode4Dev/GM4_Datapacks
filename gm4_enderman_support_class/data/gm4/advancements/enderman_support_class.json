@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "player_head",
-      "nbt": "{SkullOwner:\"MHF_Enderman\",display:{Name:'\"enderman_support_class logo\"'}}"
+      "nbt": "{CustomModelData:3,SkullOwner:\"MHF_Enderman\"}"
     },
     "title": {
       "translate": "%1$s",

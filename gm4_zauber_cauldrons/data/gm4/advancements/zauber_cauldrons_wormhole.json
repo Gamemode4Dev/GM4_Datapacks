@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "chorus_fruit",
-      "nbt": "{display:{Name:'\"zauber_cauldrons logo\"'}}"
+      "nbt": "{CustomModelData:1}"
     },
     "title": {
       "translate": "%1$s",
