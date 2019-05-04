@@ -18,11 +18,13 @@
         {"translate": "advancement.gm4.chairs.sit.description"}
       ],
       "color": "gray"
-    }
+    },
+    "frame":"goal",
+    "hidden":true
   },
   "parent": "gm4:chairs_creation",
   "criteria": {
-    "TRIGGER_NAME": {
+    "hour_in_chair": {
       "trigger": "minecraft:impossible"
     }
   }
