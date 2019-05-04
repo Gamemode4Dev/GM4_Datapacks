@@ -1,0 +1,64 @@
+{
+  "criteria": {
+    "place_oak_sign": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:oak_sign",
+        "item": {
+          "nbt": "{gm4_trapped_sign:1b}"
+        }
+      }
+    },
+    "place_spruce_sign": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:spruce_sign",
+        "item": {
+          "nbt": "{gm4_trapped_sign:1b}"
+        }
+      }
+    },
+    "place_birch_sign": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:birch_sign",
+        "item": {
+          "nbt": "{gm4_trapped_sign:1b}"
+        }
+      }
+    },
+    "place_jungle_sign": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:jungle_sign",
+        "item": {
+          "nbt": "{gm4_trapped_sign:1b}"
+        }
+      }
+    },
+    "place_acacia_sign": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:acacia_sign",
+        "item": {
+          "nbt": "{gm4_trapped_sign:1b}"
+        }
+      }
+    },
+    "place_dark_oak_sign": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:dark_oak_sign",
+        "item": {
+          "nbt": "{gm4_trapped_sign:1b}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    ["place_oak_sign", "place_spruce_sign", "place_birch_sign", "place_jungle_sign", "place_acacia_sign", "place_dark_oak_sign"]
+  ],
+  "rewards": {
+    "function": "trapped_signs:place_trapped_sign"
+  }
+}

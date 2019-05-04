@@ -1,3 +1,4 @@
+advancement revoke @s only trapped_signs:place_trapped_sign
 summon area_effect_cloud ~ ~ ~ {Tags:["trapped_signs_ray"],}
 tp @e[tag=trapped_signs_ray] ~ ~1.7 ~ ~ ~
 scoreboard players set ray_counter gm4_count 0
