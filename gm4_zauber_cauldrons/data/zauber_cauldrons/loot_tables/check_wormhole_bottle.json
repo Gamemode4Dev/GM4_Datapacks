@@ -1,5 +1,5 @@
 {
-  "_comment": "return 0 if the item is a wormhole, 1 otherwise",
+  "_comment": "return 1 if the item is a wormhole, 0 otherwise",
   "type": "fishing",
   "pools": [
     {
