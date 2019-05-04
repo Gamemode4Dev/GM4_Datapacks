@@ -27,7 +27,7 @@
             },
             {
               "function": "minecraft:set_lore",
-              "name": [
+              "lore": [
                 {
                   "translate": "%1$s",
                   "with": [
