@@ -21,7 +21,7 @@ execute if score slow_clock gm4_zc_data matches 3.. run advancement grant @a[gam
 execute if score slow_clock gm4_zc_data matches 3.. as @e[type=item,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}}] at @s run function zauber_cauldrons:cauldron/extra_items/release_from_bottle
 execute if score slow_clock gm4_zc_data matches 3.. run scoreboard players set slow_clock gm4_zc_data 0
 
-#store the coordinates of every player's Wormhole Bottles, if applicable
+#store the coordinates of every player's wormhole bottles, if applicable
 execute as @a[gamemode=!spectator] run function zauber_cauldrons:recipes/chorus/store_coordinates
 execute if score wormhole_data gm4_zc_data matches 1 run kill @e[type=item,y=-512,dy=0,tag=gm4_zc_wormhole_data,limit=1]
 scoreboard players reset wormhole_data gm4_zc_data
