@@ -1,4 +1,4 @@
-#run from detection_master_pulse in same folder
+#run from main and drawer_add_item
 #@s = drawer with player in distance=..3 that is sneaking
 
 execute if entity @s[scores={gm4_sd_upgrade=0}] run title @p actionbar ["Item: ", {"nbt":"Item.id","entity":"@s"}, " | Amount: ", {"score":{"name":"@s", "objective":"gm4_sd_amount"}}, " / ", {"score":{"name":"@s", "objective":"gm4_sd_max"}}]
