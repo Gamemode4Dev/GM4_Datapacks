@@ -66,7 +66,18 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:\"{\\\"text\\\":\\\"Treasure Chest\\\",\\\"italic\\\":false}\"},BlockEntityTag:{CustomName:\"{\\\"text\\\":\\\"Treasure Chest\\\",\\\"italic\\\":false}\",LootTable:\"sunken_treasure:treasure_chest\"}}"
+              "tag": "{CustomModelData:1,BlockEntityTag:{LootTable:\"sunken_treasure:treasure_chest\"}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Treasure Chest",
+                  {"translate":"block.gm4.treasure_chest"}
+                ],
+                "italic": false
+              }
             }
           ]
         },
@@ -76,14 +87,31 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, I drank all my beer"
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:1b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:1b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, I drank all my beer",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.1"}]
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -93,16 +121,45 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, My boat was",
-                "sunk by a lily-pad and now I'm",
-                "stuck on this island."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:2b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:2b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, My Boat was",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.2.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "sunk by a lily-pad and now I'm",
+                    {"translate":"text.gm4.dearest_audrey.2.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "stuck on this island.",
+                    {"translate":"text.gm4.dearest_audrey.2.3"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -112,21 +169,80 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, I don't know how to spell",
-                "your name, nor do I know you, but I",
-                "do know that I love you, I feel like I",
-                "have a mutual connection. After",
-                "you ordered the pizza with cheezy",
-                "crust and pinapple I just lost it. Oh",
-                "no Clair you got shot... I mean Audrey.",
-                "I don't mind that you're chunky"
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:3b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:3b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, I don't know how to spell",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.3.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "your name, nor do I know you, but I",
+                    {"translate":"text.gm4.dearest_audrey.3.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "do know that I love you, I feel like I",
+                    {"translate":"text.gm4.dearest_audrey.3.3"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "have a mutual connection. After",
+                    {"translate":"text.gm4.dearest_audrey.3.4"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "you ordered the pizza with cheezy",
+                    {"translate":"text.gm4.dearest_audrey.3.5"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "crust and pinapple I just lost it. Oh",
+                    {"translate":"text.gm4.dearest_audrey.3.6"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "no Clair you got shot... I mean Audrey.",
+                    {"translate":"text.gm4.dearest_audrey.3.7"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "I don't mind that you're chunky",
+                    {"translate":"text.gm4.dearest_audrey.3.8"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -136,18 +252,59 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, when I listen",
-                "to the ocean, all I hear is your",
-                "snoring and I can't sleep. Please",
-                "silence your snoring... please, I",
-                "need sleep."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:4b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:4b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, when I listen",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.4.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "to the ocean, all I hear is your",
+                    {"translate":"text.gm4.dearest_audrey.4.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "snoring and I can't sleep. Please",
+                    {"translate":"text.gm4.dearest_audrey.4.3"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "silence your snoring... please, I",
+                    {"translate":"text.gm4.dearest_audrey.4.4"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "need sleep.",
+                    {"translate":"text.gm4.dearest_audrey.4.5"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -157,17 +314,52 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, How's your",
-                "day going? I'm good, BUT I'VE",
-                "BEEN STRANDED FOR 20 YEARS!",
-                "Thanks for your response."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:5b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:5b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, How's your",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.5.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "day going? I'm good, BUT I'VE",
+                    {"translate":"text.gm4.dearest_audrey.5.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "BEEN STRANDED FOR 20 YEARS!",
+                    {"translate":"text.gm4.dearest_audrey.5.3"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Thanks for your response.",
+                    {"translate":"text.gm4.dearest_audrey.5.4"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -177,17 +369,52 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, I'm stranded",
-                "in the middle of nowhere,",
-                "surrounded by things that",
-                "aren't cubic."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:6b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:6b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, I'm stranded",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.6.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "in the middle of nowhere,",
+                    {"translate":"text.gm4.dearest_audrey.6.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "surrounded by things that",
+                    {"translate":"text.gm4.dearest_audrey.6.3"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "aren't cubic.",
+                    {"translate":"text.gm4.dearest_audrey.6.4"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -197,16 +424,45 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, I mean Hannah...",
-                "wait, no... is it Denise? ...Anyway,",
-                "I love you."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:7b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:7b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, I mean Hannah...",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.7.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "wait, no... is it Denise? ...Anyway,",
+                    {"translate":"text.gm4.dearest_audrey.7.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "I love you.",
+                    {"translate":"text.gm4.dearest_audrey.7.3"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -216,17 +472,52 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, I seem to have",
-                "run out of clean water, if you could",
-                "return this bottle with something to",
-                "drink that would be wonderful."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:8b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:8b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, I seem to have",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.8.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "run out of clean water, if you could",
+                    {"translate":"text.gm4.dearest_audrey.8.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "return this bottle with something to",
+                    {"translate":"text.gm4.dearest_audrey.8.3"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "drink that would be wonderful.",
+                    {"translate":"text.gm4.dearest_audrey.8.4"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -236,16 +527,45 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, I have no",
-                "internet so I am sending you",
-                "a bottle."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:9b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:9b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, I have no",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.9.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "internet so I am sending you",
+                    {"translate":"text.gm4.dearest_audrey.9.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "a bottle.",
+                    {"translate":"text.gm4.dearest_audrey.9.3"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -255,16 +575,45 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, What's your",
-                "phone number; bottled messages",
-                "are hard to make!"
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:10b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:10b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, What's your",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.10.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "phone number; bottled messages",
+                    {"translate":"text.gm4.dearest_audrey.10.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "are hard to make!",
+                    {"translate":"text.gm4.dearest_audrey.10.3"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -274,17 +623,52 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, I find myself stranded",
-                "on a barren island.",
-                "An enderdragon took me here,",
-                "please rescue me."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:11b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:11b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, I find myself stranded",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.11.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "on a barren island.",
+                    {"translate":"text.gm4.dearest_audrey.11.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "An enderdragon took me here,",
+                    {"translate":"text.gm4.dearest_audrey.11.3"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "please rescue me.",
+                    {"translate":"text.gm4.dearest_audrey.11.4"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -294,14 +678,31 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, Put the money in the bag."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:12b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:12b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, Put the money in the bag.",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.12"}]
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -311,17 +712,52 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, The compass you sent me",
-                "seems to only point in the direction of our love,",
-                "but that seems to have vanished long ago.",
-                "Please, get help, even if it's the last thing you do."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:13b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:13b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, The compass you sent me",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.13.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "seems to only point in the direction of our love,",
+                    {"translate":"text.gm4.dearest_audrey.13.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "but that seems to have vanished long ago.",
+                    {"translate":"text.gm4.dearest_audrey.13.3"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Please, get help, even if it's the last thing you do.",
+                    {"translate":"text.gm4.dearest_audrey.13.4"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -331,14 +767,52 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, I fear this may","be my last attempt at finding help.","I just want you to know... I always... loved...","your sister."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:14b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:14b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, I fear this may",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.14.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "be my last attempt at finding help.",
+                    {"translate":"text.gm4.dearest_audrey.14.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "I just want you to know... I always... loved...",
+                    {"translate":"text.gm4.dearest_audrey.14.3"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "your sister.",
+                    {"translate":"text.gm4.dearest_audrey.14.4"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -348,14 +822,59 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, I've been here for 3 months","and after several attempts to find food,","shelter, or even enough water... I'm giving up.","Tell my family I love them, but most importantly,","Audrey, I love you."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:15b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:15b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, I've been here for 3 months",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.15.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "and after several attempts to find food,",
+                    {"translate":"text.gm4.dearest_audrey.15.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "shelter, or even enough water... I'm giving up.",
+                    {"translate":"text.gm4.dearest_audrey.15.3"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Tell my family I love them, but most importantly,",
+                    {"translate":"text.gm4.dearest_audrey.15.4"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Audrey, I love you.",
+                    {"translate":"text.gm4.dearest_audrey.15.5"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -365,14 +884,66 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, I know exactly who"," you are - play along. I don't have any","money. I burned it all trying to make a","fire. But I can tell you I've developed","a very particular set of skills. Skills","that'll make Bear Grylls quake in his boots."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:16b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:16b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, I know exactly who",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.16.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "you are - play along. I don't have any",
+                    {"translate":"text.gm4.dearest_audrey.16.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "money. I burned it all trying to make a",
+                    {"translate":"text.gm4.dearest_audrey.16.3"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "fire. But I can tell you I've developed",
+                    {"translate":"text.gm4.dearest_audrey.16.4"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "a very particular set of skills. Skills",
+                    {"translate":"text.gm4.dearest_audrey.16.5"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "that'll make Bear Grylls quake in his boots.",
+                    {"translate":"text.gm4.dearest_audrey.16.6"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -382,14 +953,45 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, I'm in the sink sand.","If you find my head, hang it on the","wall of fame."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:17b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:17b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, I'm in the sink sand.",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.17.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "If you find my head, hang it on the",
+                    {"translate":"text.gm4.dearest_audrey.17.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "wall of fame.",
+                    {"translate":"text.gm4.dearest_audrey.17.3"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -399,14 +1001,52 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, Each day that passes","is immensely terrible, painful and sad.","Getting away from you just didn't","improve anything."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:18b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:18b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, Each day that passes",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.18.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "is immensely terrible, painful and sad.",
+                    {"translate":"text.gm4.dearest_audrey.18.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Getting away from you just didn't",
+                    {"translate":"text.gm4.dearest_audrey.18.3"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "improve anything.",
+                    {"translate":"text.gm4.dearest_audrey.18.4"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -416,14 +1056,59 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, I write this on paper","made from native plants and ink","from a squid I wrangled. I like it here.","I found a dungeon. I'm setting up a mob","grinder and never coming home."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:19b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:19b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, I write this on paper",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.19.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "made from native plants and ink",
+                    {"translate":"text.gm4.dearest_audrey.19.2"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "from a squid I wrangled. I like it here.",
+                    {"translate":"text.gm4.dearest_audrey.19.3"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "I found a dungeon. I'm setting up a mob",
+                    {"translate":"text.gm4.dearest_audrey.19.4"}
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "grinder and never coming home.",
+                    {"translate":"text.gm4.dearest_audrey.19.5"}
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -433,14 +1118,38 @@
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_lore",
-              "lore": [
-                "Dearest Audrey, punching wood","for logs doesn't work in real life."
-              ]
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_audrey:20b}"
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_audrey:20b,display:{Name:\"{\\\"text\\\":\\\"Message in a Bottle\\\",\\\"italic\\\":false}\"}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Message in a Bottle",
+                  {"translate":"item.gm4.message_in_a_bottle"}
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Dearest Audrey, punching wood",
+                    ["",{"translate":"text.gm4.dearest_audrey.prefix"},{"translate":"text.gm4.dearest_audrey.20.1"}]
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "for logs doesn't work in real life.",
+                    {"translate":"text.gm4.dearest_audrey.20.2"}
+                  ]
+                }
+              ]
             }
           ]
         }

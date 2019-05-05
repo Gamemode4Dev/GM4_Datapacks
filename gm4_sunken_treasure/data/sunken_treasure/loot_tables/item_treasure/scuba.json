@@ -11,7 +11,18 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:\"{\\\"text\\\":\\\"Waders\\\",\\\"italic\\\":false}\"},Enchantments:[{id:\"minecraft:depth_strider\",lvl:1s}]}"
+              "tag": "{CustomModelData:1,Enchantments:[{id:\"minecraft:depth_strider\",lvl:1s}]}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Waders",
+                  {"translate":"item.gm4.waders"}
+                ],
+                "italic": false
+              }
             },
             {
               "function": "minecraft:set_damage",
@@ -48,7 +59,18 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_scuba_gear:{item:\"flippers\"},color:11009871,display:{Name:\"{\\\"text\\\":\\\"Flippers\\\",\\\"italic\\\":false}\"}}"
+              "tag": "{CustomModelData:2,gm4_scuba_gear:{item:\"flippers\"},color:11009871}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Flippers",
+                  {"translate":"item.gm4.flippers"}
+                ],
+                "italic": false
+              }
             },
             {
               "function": "minecraft:set_damage",
@@ -87,7 +109,18 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_scuba_gear:{item:\"tank\"},display:{Name:\"{\\\"text\\\":\\\"SCUBA Tank\\\",\\\"italic\\\":false}\"}}"
+              "tag": "{CustomModelData:1,gm4_scuba_gear:{item:\"tank\"}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "SCUBA Tank",
+                  {"translate":"item.gm4.scuba_tank"}
+                ],
+                "italic": false
+              }
             },
             {
               "function": "minecraft:set_damage",

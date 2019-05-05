@@ -11,7 +11,18 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:\"{\\\"text\\\":\\\"Waders\\\",\\\"italic\\\":false}\"},Enchantments:[{id:\"minecraft:depth_strider\",lvl:1s}]}"
+              "tag": "{CustomModelData:1,Enchantments:[{id:\"minecraft:depth_strider\",lvl:1s}]}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Waders",
+                  {"translate":"item.gm4.waders"}
+                ],
+                "italic": false
+              }
             },
             {
               "function": "minecraft:set_damage",

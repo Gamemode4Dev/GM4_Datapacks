@@ -1,5 +1,5 @@
 #announce module installation
-tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Installing Sunken Treasure..."}]
+tellraw @a[gamemode=creative] {"translate":"%1$s","with":["[GM4]: Installing Sunken Treasure...",["",{"translate":"text.gm4.prefix"},{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.sunken_treasure"}]}]]}
 execute unless entity @p run say GM4: Installing Sunken Treasure...
 
 #declare and initialise scoreboards and settings
@@ -11,7 +11,7 @@ scoreboard objectives add gm4_st_sand minecraft.mined:minecraft.sand
 scoreboard objectives add gm4_st_random dummy
 
 #announce success
-tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Sunken Treasure Installed!"}]
+tellraw @a[gamemode=creative] {"translate":"%1$s","with":["[GM4]: Sunken Treasure Intalled!",["",{"translate":"text.gm4.prefix"},{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.sunken_treasure"}]}]]}
 execute unless entity @p run say GM4: Sunken Treasure Installed!
 
 #check other modules to make sure they're up to date.
