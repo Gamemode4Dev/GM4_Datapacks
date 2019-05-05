@@ -1,0 +1,22 @@
+{
+    "pack": {
+        "pack_format": 0,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Rituals",
+    "module_id": "rituals",
+    "site_description": "May the Gods have mercy on your soul",
+    "site_categories": [],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Rituals",
+    "required_modules": [],
+    "recommended_modules": [
+        "lightning_rods",
+        "potion_swords"
+    ],
+    "credits": {
+        "Creator": [
+            ["Andante","https://twitter.com/Andantweets"]
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "flint_and_steel",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Please the Gods",
+        {"translate": "advancement.gm4.rituals.sacrifice.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Sacrifice a mob to the Altar",
+        {"translate": "advancement.gm4.rituals.sacrifice.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:rituals_altar_creation",
+  "criteria": {
+    "sacrifice_entity": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

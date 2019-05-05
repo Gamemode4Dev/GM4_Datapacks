@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "redstone_block",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "God Have Mercy on Your Soul",
+        {"translate": "advancement.gm4.rituals.create_altar.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Create an Altar for rituals",
+        {"translate": "advancement.gm4.rituals.create_altar.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "create_altar": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

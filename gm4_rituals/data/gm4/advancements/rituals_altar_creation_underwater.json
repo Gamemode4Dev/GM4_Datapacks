@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "trident",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Underwater Prayers",
+        {"translate": "advancement.gm4.rituals.create_altar.underwater.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Create a Water Altar",
+        {"translate": "advancement.gm4.rituals.create_altar.underwater.description"}
+      ],
+      "color": "gray"
+    },
+    "hidden": true
+  },
+  "parent": "gm4:rituals_altar_creation",
+  "criteria": {
+    "create_altar_underwater": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

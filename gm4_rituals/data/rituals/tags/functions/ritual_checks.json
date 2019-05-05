@@ -1,0 +1,7 @@
+{
+    "values": [
+        "rituals:altar/ritual/clear_weather/checks",
+        "rituals:altar/ritual/rain/checks",
+        "rituals:altar/ritual/thunder/checks"
+    ]
+}

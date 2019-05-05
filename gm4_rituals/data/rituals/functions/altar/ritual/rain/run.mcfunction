@@ -1,0 +1,32 @@
+#runs rain ritual
+#@s - @e[type=minecraft:area_effect_cloud,tag=gm4_altar]
+#called by rituals:altar/ritual/rain/checks
+
+#audiovisuals
+playsound minecraft:ambient.underwater.enter player @a[distance=..20] ~ ~ ~ 100 2 1
+playsound minecraft:ambient.underwater.enter player @a[distance=..20] ~ ~ ~ 100 1 1
+playsound minecraft:ambient.underwater.enter player @a[distance=..20] ~ ~ ~ 100 0 1
+
+particle minecraft:dripping_water ~ ~4 ~ 1 0 1 0 500 normal @a
+
+summon minecraft:trident ~1 ~3 ~1 {life:1198s,pickup:0b,SoundEvent:"minecraft:item.trident.thunder",Invulnerable:1b}
+summon minecraft:trident ~1 ~3 ~-1 {life:1198s,pickup:0b,SoundEvent:"minecraft:item.trident.thunder",Invulnerable:1b}
+summon minecraft:trident ~-1 ~3 ~1 {life:1198s,pickup:0b,SoundEvent:"minecraft:item.trident.thunder",Invulnerable:1b}
+summon minecraft:trident ~-1 ~3 ~-1 {life:1198s,pickup:0b,SoundEvent:"minecraft:item.trident.thunder",Invulnerable:1b}
+
+summon minecraft:lightning_bolt ~ ~-.5 ~
+summon minecraft:lightning_bolt ~1 ~4 ~
+summon minecraft:lightning_bolt ~-1 ~4 ~
+summon minecraft:lightning_bolt ~ ~4 ~1
+summon minecraft:lightning_bolt ~ ~4 ~-1
+
+#functionality
+## rain - 3 minutes
+weather rain 3600
+
+#remove guardian
+execute positioned ~ ~1 ~ run data merge entity @e[type=minecraft:guardian,tag=gm4_altar.ritual.guardian,sort=nearest,limit=1] {Health:0.0f,DeathTime:19s}
+
+#reset scores/tags
+scoreboard players reset @s gm4_rit_r_rain
+tag @s remove gm4_altar.ritual.rain
