@@ -3,7 +3,7 @@
 #called by dispenser_fireworks:direction/check_block
 
 #set motion
-data merge entity @s {Motion:[0.0d,-0.5299999999999999d,0.0d]}
+data merge entity @s {Motion:[0.0d,-0.5299999999999999d,0.0d],ShotAtAngle:1b}
 
-#global processes
-function dispenser_fireworks:direction/global
+#add to modification count
+scoreboard players add @s gm4_df_mod_count 1
