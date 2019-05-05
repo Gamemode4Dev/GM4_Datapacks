@@ -8,6 +8,7 @@ scoreboard players set trapped_signs gm4_modules 1
 scoreboard players set trapped_signs gm4_clock_tick 0
 
 scoreboard objectives add gm4_count dummy
+scoreboard objectives add gm4_trapped_sign dummy
 scoreboard objectives add gm4_place_sign minecraft.used:minecraft.sign
 
 #announce success
