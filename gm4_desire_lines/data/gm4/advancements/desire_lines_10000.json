@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"coarse_dirt",
-      "nbt":"{display:{Name:'\"desire_lines logo\"'}}"
+      "nbt":"{display:{Name:\"\\\"desire_lines logo\\\"\"}}"
     },
     "title":"That's a Lot of Damage",
     "description":{

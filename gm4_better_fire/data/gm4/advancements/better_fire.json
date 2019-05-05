@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"bow",
-      "nbt":"{Enchantments:[{id:\"flame\",lvl:1}],display:{Name:'\"better_fire logo\"'}}"
+      "nbt":"{Enchantments:[{id:\"flame\",lvl:1}],display:{Name:\"\\\"better_fire logo\\\"\"}}"
     },
     "title":"Flint 'n Stick",
     "description":{

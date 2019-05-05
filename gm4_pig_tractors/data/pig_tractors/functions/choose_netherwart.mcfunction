@@ -3,5 +3,5 @@
 # Called from has_hoe
 
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:nether_wart"}}] run function pig_tractors:place_crops/nether_wart
-execute if block ~ ~ ~ air if entity @s[nbt={Inventory:[{id:"minecraft:nether_wart",Slot:-106b}]}] run function pig_tractors:place_crops/nether_wart
-execute if block ~ ~ ~ air if entity @s[nbt={Inventory:[{id:"minecraft:nether_wart"}]}] run function pig_tractors:place_crops/nether_wart
+execute if block ~ ~ ~ #pig_tractors:air if entity @s[nbt={Inventory:[{id:"minecraft:nether_wart",Slot:-106b}]}] run function pig_tractors:place_crops/nether_wart
+execute if block ~ ~ ~ #pig_tractors:air if entity @s[nbt={Inventory:[{id:"minecraft:nether_wart"}]}] run function pig_tractors:place_crops/nether_wart

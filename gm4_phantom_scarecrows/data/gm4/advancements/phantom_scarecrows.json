@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"minecraft:firework_rocket",
-      "nbt":"{display:{Name:'\"phantom_scarecrows logo\"'}}"
+      "nbt":"{display:{Name:\"\\\"phantom_scarecrows logo\\\"\"}}"
     },
     "title":"Not so smart defenses",
     "description":{

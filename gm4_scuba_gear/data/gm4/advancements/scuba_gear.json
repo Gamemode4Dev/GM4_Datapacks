@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"horn_coral",
-      "nbt":"{display:{Name:'\"scuba_gear logo\"'}}"
+      "nbt":"{display:{Name:\"\\\"scuba_gear logo\\\"\"}}"
     },
     "title":"Things are going swimmingly!",
     "description":{

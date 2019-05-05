@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"tnt",
-      "nbt":"{display:{Name:'\"Disassemblers logo\"'}}"
+      "nbt":"{display:{Name:\"\\\"Disassemblers logo\\\"\"}}"
     },
     "title":"Clever Decrafting",
     "description":{

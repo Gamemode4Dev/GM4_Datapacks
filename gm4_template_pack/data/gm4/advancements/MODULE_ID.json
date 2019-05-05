@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"stone",
-      "nbt":"{display:{Name:'\"MODULE_ID logo\"'}}"
+      "nbt":"{display:{Name:\"\\\"MODULE_ID logo\\\"\"}}"
     },
     "title":"Plain Ol' Advancement Title",
     "description":{

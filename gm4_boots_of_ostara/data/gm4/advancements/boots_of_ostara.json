@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"leather_boots",
-      "nbt":"{display:{Name:'\"boots_of_ostara logo\"',color:3705899}}"
+      "nbt":"{display:{Name:\"\\\"boots_of_ostara logo\\\"\",color:3705899}}"
     },
     "title":"Green Feet",
     "description":{

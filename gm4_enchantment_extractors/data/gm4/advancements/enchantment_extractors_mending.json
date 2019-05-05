@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"enchanted_book",
-      "nbt":"{display:{Name:'\"enchantment_extractors_mending logo\"'}}"
+      "nbt":"{display:{Name:\"\\\"enchantment_extractors_mending logo\\\"\"}}"
     },
     "frame":"goal",
     "title":"Magical Thief",
