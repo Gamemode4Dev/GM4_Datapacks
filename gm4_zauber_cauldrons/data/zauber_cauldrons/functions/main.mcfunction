@@ -1,6 +1,5 @@
 #main
 
-
 #check creation
 execute as @a[gamemode=!spectator] at @s if entity @s[nbt={SelectedItem:{id:"minecraft:enchanted_book"},OnGround:1b}] unless entity @e[type=area_effect_cloud,tag=gm4_zauber_cauldron,distance=..2] anchored eyes positioned ^ ^ ^1.448 align xyz positioned ~.5 ~.5 ~.5 if block ~ ~ ~ cauldron unless block ~ ~ ~ cauldron[level=0] if block ~ ~-1 ~ fire run function zauber_cauldrons:cauldron/create
 

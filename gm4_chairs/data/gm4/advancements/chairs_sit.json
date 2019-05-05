@@ -5,14 +5,16 @@
       "nbt":"{display:{Name:'\"chairs logo\"'}}"
     },
     "title":"Couch Potato",
+    "frame":"goal",
     "description":{
       "text":"Sit for over an hour!",
       "color":"gray"
-    }
+    },
+    "hidden":true
   },
   "parent":"gm4:chairs_creation",
   "criteria":{
-    "TRIGGER_NAME":{
+    "hour_in_chair":{
       "trigger":"minecraft:impossible"
     }
   }
