@@ -1,4 +1,4 @@
-#run from check_storable in same folder
+#run from key
 #@s = as and at item frame in distance=..2 of key that has stripped oak wood below it and is not empty
 
 data modify entity @s Invulnerable set value 1
