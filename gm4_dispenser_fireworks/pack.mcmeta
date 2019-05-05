@@ -1,0 +1,21 @@
+{
+    "pack": {
+        "pack_format": 0,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Dispenser Fireworks",
+    "module_id": "dispenser_fireworks",
+    "site_description": "Makes dispensers shoot fireworks the right way",
+    "site_categories": [],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Dispenser_Fireworks",
+    "required_modules": [],
+    "recommended_modules": [
+        "better_fire"
+    ],
+    "credits": {
+        "Creator": [
+            ["Andante","https://twitter.com/Andantweets"]
+        ]
+    }
+}
