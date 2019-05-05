@@ -7,12 +7,12 @@ execute if block ^ ^ ^-1 #storage_drawers:unbreakable run scoreboard players set
 #Special Items (Items added by datapacks)
 #execute if entity @s[nbt=<insert item data>] run scoreboard players set @s gm4_sd_storable 1
 
-execute if entity @s[nbt={Item: {id: "minecraft:gold_nugget", Count:1b, tag: {CustomModelData:11525, display: {Name: '{"text":"Key"}'}, Enchantments: [{id: ""}]}}}] run scoreboard players set @s gm4_sd_storable 1
-execute if entity @s[nbt={Item: {id: "minecraft:stone_button", Count:1b, tag: {CustomModelData:1920155, display: {Name: '{"text":"Storage Upgrade: Stone"}'}, Enchantments: [{id: ""}]}}}] run scoreboard players set @s gm4_sd_storable 1
-execute if entity @s[nbt={Item: {id: "minecraft:iron_ingot", Count:1b, tag: {CustomModelData:9181514, display: {Name: '{"text":"Storage Upgrade: Iron"}'}, Enchantments: [{id: ""}]}}}] run scoreboard players set @s gm4_sd_storable 1
-execute if entity @s[nbt={Item: {id: "minecraft:gold_ingot", Count:1b, tag: {CustomModelData:715124, display: {Name: '{"text":"Storage Upgrade: Gold"}'}, Enchantments: [{id: ""}]}}}] run scoreboard players set @s gm4_sd_storable 1
-execute if entity @s[nbt={Item: {id: "minecraft:diamond", Count:1b, tag: {CustomModelData:4911315144, display: {Name: '{"text":"Storage Upgrade: Diamond"}'}, Enchantments: [{id: ""}]}}}] run scoreboard players set @s gm4_sd_storable 1
-execute if entity @s[nbt={Item: {id: "minecraft:emerald", Count:1b, tag: {CustomModelData:5135181124, display: {Name: '{"text":"Storage Upgrade: Emerald"}'}, Enchantments: [{id: ""}]}}}] run scoreboard players set @s gm4_sd_storable 1
+execute if entity @s[nbt={Item: {id: "minecraft:gold_nugget", Count:1b, tag: {display: {Name: '{"text":"Key"}'}, Enchantments: [{id: ""}]}}}] run scoreboard players set @s gm4_sd_storable 1
+execute if entity @s[nbt={Item: {id: "minecraft:stone_button", Count:1b, tag: {display: {Name: '{"text":"Storage Upgrade: Stone"}'}, Enchantments: [{id: ""}]}}}] run scoreboard players set @s gm4_sd_storable 1
+execute if entity @s[nbt={Item: {id: "minecraft:iron_ingot", Count:1b, tag: {display: {Name: '{"text":"Storage Upgrade: Iron"}'}, Enchantments: [{id: ""}]}}}] run scoreboard players set @s gm4_sd_storable 1
+execute if entity @s[nbt={Item: {id: "minecraft:gold_ingot", Count:1b, tag: {display: {Name: '{"text":"Storage Upgrade: Gold"}'}, Enchantments: [{id: ""}]}}}] run scoreboard players set @s gm4_sd_storable 1
+execute if entity @s[nbt={Item: {id: "minecraft:diamond", Count:1b, tag: {display: {Name: '{"text":"Storage Upgrade: Diamond"}'}, Enchantments: [{id: ""}]}}}] run scoreboard players set @s gm4_sd_storable 1
+execute if entity @s[nbt={Item: {id: "minecraft:emerald", Count:1b, tag: {display: {Name: '{"text":"Storage Upgrade: Emerald"}'}, Enchantments: [{id: ""}]}}}] run scoreboard players set @s gm4_sd_storable 1
 
 execute if entity @s[nbt={Item:{id:"minecraft:shulker_box", Count:1b}}] run scoreboard players set @s gm4_sd_storable 1
 execute if entity @s[nbt={Item:{id:"minecraft:white_shulker_box", Count:1b}}] run scoreboard players set @s gm4_sd_storable 1
@@ -107,3 +107,7 @@ execute if entity @s[nbt={Item:{id:"minecraft:crossbow", Count:1b}}] run scorebo
 execute if entity @s[nbt={Item:{id:"minecraft:potion", Count:1b}}] run scoreboard players set @s gm4_sd_storable 1
 execute if entity @s[nbt={Item:{id:"minecraft:splash_potion", Count:1b}}] run scoreboard players set @s gm4_sd_storable 1
 execute if entity @s[nbt={Item:{id:"minecraft:lingering_potion", Count:1b}}] run scoreboard players set @s gm4_sd_storable 1
+execute if entity @s[nbt={Item:{id:"minecraft:beetroot_soup", Count:1b}}] run scoreboard players set @s gm4_sd_storable 1
+execute if entity @s[nbt={Item:{id:"minecraft:mushroon_stew", Count:1b}}] run scoreboard players set @s gm4_sd_storable 1
+execute if entity @s[nbt={Item:{id:"minecraft:rabbit_stew", Count:1b}}] run scoreboard players set @s gm4_sd_storable 1
+execute if entity @s[nbt={Item:{id:"minecraft:suspicious_stew", Count:1b}}] run scoreboard players set @s gm4_sd_storable 1
