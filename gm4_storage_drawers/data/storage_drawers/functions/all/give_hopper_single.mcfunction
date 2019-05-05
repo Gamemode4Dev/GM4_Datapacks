@@ -1,4 +1,4 @@
-#run from detection_master_main in same folder
+#run from main
 #@s = as drawer at hopper below
 
 summon minecraft:item ^ ^0.4 ^0.2 {PickupDelay:32767, Item:{id: "minecraft:stone", Count:1b}}
