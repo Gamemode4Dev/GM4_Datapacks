@@ -8,14 +8,14 @@
       "translate": "%1$s",
       "with": [
         "Plain Ol' Advancement Title",
-        {"translate": "advancement.gm4.template_pack.title"}
+        {"translate": "advancement.gm4.MODULE_ID.title"}
       ]
     },
     "description": {
       "translate": "%1$s",
       "with": [
         "Noone's bothered to give me a description yet... They won't... They don't care about me....",
-        {"translate": "advancement.gm4.template_pack.description"}
+        {"translate": "advancement.gm4.MODULE_ID.description"}
       ],
       "color": "gray"
     }

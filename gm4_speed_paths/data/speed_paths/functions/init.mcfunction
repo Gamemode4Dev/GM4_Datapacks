@@ -1,5 +1,5 @@
 #announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Installing Speed Paths...",{"translate":"text.gm4.modules.update.installing","with":["Speed Paths"]}]}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Installing Speed Paths...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.speed_paths"}]}]}]
 execute unless entity @a[limit=1] run say GM4: Installing Speed Paths...
 
 #declare and initialise scoreboards and settings
@@ -9,9 +9,8 @@ scoreboard players set speed_paths gm4_clock_tick 0
 scoreboard players set speed_paths_2 gm4_clock_tick 8
 
 #announce success
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Speed Paths Installed!",{"translate":"text.gm4.modules.update.installed","with":["Speed Paths"]}]}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Speed Paths Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.speed_paths"}]}]}]
 execute unless entity @a[limit=1] run say GM4: Speed Paths Installed!
 
 #check other modules to make sure they're up to date.
-execute if score bat_grenades gm4_modules matches ..1 run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'"Bat Grenades"',Tags:["updateMessage"],Duration:2000}
-execute if score bat_grenades gm4_modules matches ..1 run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'"Another Module"',Tags:["updateMessage"],Duration:2000}
+#$moduleUpdateList

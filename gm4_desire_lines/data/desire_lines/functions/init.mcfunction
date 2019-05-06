@@ -1,5 +1,5 @@
 #announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Installing Desire Lines...",{"translate":"text.gm4.modules.update.installing","with":["Desire Lines"]}]}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Installing Desire Lines...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.desire_lines"}]}]}]
 execute unless entity @a[limit=1] run say GM4: Installing Desire Lines...
 
 #declare and initialise scoreboards and settings
@@ -13,7 +13,7 @@ scoreboard objectives add gm4_dl_sprint minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add gm4_dl_affcoarse dummy
 
 #announce success
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Desire Lines Installed!",{"translate":"text.gm4.modules.update.installed","with":["Desire Lines"]}]}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Desire Lines Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.desire_lines"}]}]}]
 execute unless entity @a[limit=1] run say GM4: Desire Lines Installed!
 
 #check other modules to make sure they're up to date.

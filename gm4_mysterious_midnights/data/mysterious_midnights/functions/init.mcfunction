@@ -1,5 +1,5 @@
 #announce module installation
-tellraw @a ["",{"text":"[GM4]: Installing Mysterious Midnights..."}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Installing Mysterious Midnights...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.mysterious_midnights"}]}]}]
 execute unless entity @a[limit=1] run say GM4: Installing Mysterious Midnights...
 
 #declare and initialise scoreboards and settings
@@ -20,7 +20,7 @@ scoreboard objectives add gm4_rezombify dummy
 scoreboard objectives add gm4_reskelify dummy
 
 #announce success
-tellraw @a ["",{"text":"[GM4]: Mysterious Midnights Installed!"}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Mysterious Midnights Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.mysterious_midnights"}]}]}]
 execute unless entity @a[limit=1] run say GM4: Mysterious Midnights Installed!
 
 #check other modules to make sure they're up to date.

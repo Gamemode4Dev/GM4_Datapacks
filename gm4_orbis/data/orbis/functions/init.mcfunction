@@ -1,5 +1,5 @@
 #announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Installing Orbis...",{"translate":"text.gm4.modules.update.installing","with":["Orbis"]}]}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Installing Orbis...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.orbis"}]}]}]
 execute unless entity @a[limit=1] run say GM4: Installing Orbis...
 
 #declare and initialise scoreboards and settings
@@ -19,7 +19,7 @@ scoreboard players add chunk_count gm4_orbis_config 0
 scoreboard players add structure_count gm4_orbis_config 0
 
 #announce success
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Orbis Installed!",{"translate":"text.gm4.modules.update.installed","with":["Orbis"]}]}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Orbis Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.orbis"}]}]}]
 execute unless entity @a[limit=1] run say GM4: Orbis Installed!
 
 #check other modules to make sure they're up to date.
