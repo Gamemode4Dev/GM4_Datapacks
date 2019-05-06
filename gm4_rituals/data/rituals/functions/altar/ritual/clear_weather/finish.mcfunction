@@ -1,5 +1,5 @@
 #runs rain ritual
-#@s - @e[type=minecraft:area_effect_cloud,tag=gm4_altar]
+#@s - @e[type=minecraft:area_effect_cloud,tag=gm4_rituals_altar]
 #called by rituals:altar/ritual/thunder/checks
 
 #audiovisuals
@@ -13,12 +13,9 @@ particle minecraft:poof ~ ~4 ~ 1 0 1 0 500 normal @a
 summon minecraft:lightning_bolt ~ ~-.5 ~
 
 #functionality
-## clear weather - unspecified time
-weather clear
-
-#remove guardian
-execute positioned ~ ~1 ~ run data merge entity @e[type=minecraft:guardian,tag=gm4_altar.ritual.guardian,sort=nearest,limit=1] {Health:0.0f,DeathTime:19s}
+## clear - 3 minutes
+weather clear 3600
 
 #reset scores/tags
-scoreboard players reset @s gm4_rit_r_clwe
-tag @s remove gm4_altar.ritual.clear_weather
+scoreboard players reset @s gm4_rit_clear
+tag @s remove gm4_rituals_ritual_clear_weather

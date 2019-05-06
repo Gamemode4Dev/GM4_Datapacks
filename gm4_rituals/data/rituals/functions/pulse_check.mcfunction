@@ -1,10 +1,3 @@
-#if negative, reset stock scores
-execute unless score $sheep gm4_rit_stock matches 0.. run scoreboard players reset $sheep gm4_rit_stock
-execute unless score $pig gm4_rit_stock matches 0.. run scoreboard players reset $pig gm4_rit_stock
-execute unless score $zombie gm4_rit_stock matches 0.. run scoreboard players reset $zombie gm4_rit_stock
-execute unless score $drowned gm4_rit_stock matches 0.. run scoreboard players reset $drowned gm4_rit_stock
-execute unless score $item_trident gm4_rit_stock matches 0.. run scoreboard players reset $item_trident gm4_rit_stock
-
 #tick stock removal
 execute if score $removal_tick gm4_rit_stock matches 600.. run scoreboard players set $removal_tick gm4_rit_stock 600
 scoreboard players remove $removal_tick gm4_rit_stock 1

@@ -1,5 +1,5 @@
 #creates altar
-#@s - console if spawn checks passed
+#@s - @a[gamemode=!spectator,scores={gm4_rit_sneak=1..}] if spawn checks passed
 #called by rituals:altar/check_spawn
 
 #audiovisuals
@@ -23,7 +23,7 @@ summon minecraft:lightning_bolt ~ ~ ~
 
 #advancement
 advancement grant @s only gm4:rituals_altar_creation
-execute if block ~1 ~-1 ~ minecraft:red_sandstone_stairs[waterlogged=true] if block ~-1 ~-1 ~ minecraft:red_sandstone_stairs[waterlogged=true] if block ~ ~-1 ~1 minecraft:red_sandstone_stairs[waterlogged=true] if block ~ ~-1 ~-1 minecraft:red_sandstone_stairs[waterlogged=true] run advancement grant @s only gm4:rituals_altar_creation_underwater
+execute if block ~1 ~-1 ~ minecraft:red_sandstone_stairs[waterlogged=true] if block ~-1 ~-1 ~ minecraft:red_sandstone_stairs[waterlogged=true] if block ~ ~-1 ~1 minecraft:red_sandstone_stairs[waterlogged=true] if block ~ ~-1 ~-1 minecraft:red_sandstone_stairs[waterlogged=true] run advancement grant @s only gm4:rituals_altar_creation_water
 
 #summon entity
-summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["gm4_altar"],CustomName:'"gm4_altar"'}
+summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["gm4_rituals_altar"],CustomName:'"gm4_rituals_altar"'}

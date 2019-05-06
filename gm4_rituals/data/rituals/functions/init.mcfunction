@@ -1,5 +1,5 @@
 #announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Installing Rituals...",{"translate":"text.gm4.modules.update.installing","with":["Rituals"]}]}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Installing Rituals...",{"translate":"text.gm4.modules.update.installing","with":["Rituals",{"translate":"module.gm4.rituals"}]}]}]
 execute unless entity @a[limit=1] run say GM4: Installing Rituals...
 
 #declare and initialise scoreboards and settings
@@ -14,15 +14,15 @@ scoreboard objectives add gm4_rit_sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add gm4_rit_stock dummy
 scoreboard objectives add gm4_rit_tick dummy
 
-scoreboard objectives add gm4_rit_r_clwe dummy
-scoreboard objectives add gm4_rit_r_rain dummy
-scoreboard objectives add gm4_rit_r_thun dummy
+scoreboard objectives add gm4_rit_clear dummy
+scoreboard objectives add gm4_rit_rain dummy
+scoreboard objectives add gm4_rit_thunder dummy
 
 team add gm4_rit_no_coll
 team modify gm4_rit_no_coll collisionRule never
 
 #announce success
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Rituals Installed!",{"translate":"text.gm4.modules.update.installed","with":["Rituals"]}]}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Rituals Installed!",{"translate":"text.gm4.modules.update.installed","with":["Rituals",{"translate":"module.gm4.rituals"}]}]}]
 execute unless entity @a[limit=1] run say GM4: Rituals Installed!
 
 #check other modules to make sure they're up to date.

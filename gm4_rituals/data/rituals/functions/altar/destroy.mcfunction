@@ -1,5 +1,5 @@
 #destroys altar
-#@s - @e[type=minecraft:area_effect_cloud,tag=gm4_altar] if a block of the altar has been destroyed
+#@s - @e[type=minecraft:area_effect_cloud,tag=gm4_rituals_altar] if a block of the altar has been destroyed
 #called by rituals:altar/checks
 
 #audiovisuals
