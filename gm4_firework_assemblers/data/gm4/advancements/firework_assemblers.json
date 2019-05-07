@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "firework_rocket",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Clever Exploding",
+        {"translate": "advancement.gm4.firework_assemblers.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Construct a Firework Assembler",
+        {"translate": "advancement.gm4.firework_assemblers.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:custom_crafters",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

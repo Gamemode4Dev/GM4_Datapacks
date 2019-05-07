@@ -1,0 +1,23 @@
+{
+    "pack": {
+        "pack_format": 0,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Firework Assemblers",
+    "module_id": "firework_assemblers",
+    "site_description": "Fancy Firework Factories",
+    "site_categories": [
+        "Custom Crafting"
+    ],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Firework_Assemblers",
+    "required_modules": [],
+    "recommended_modules": [
+        "custom_crafters"
+    ],
+    "credits": {
+        "Creator": [
+            ["Andante","https://twitter.com/Andantweets"]
+        ]
+    }
+}
