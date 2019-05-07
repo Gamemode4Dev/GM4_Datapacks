@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"sugar",
+      "nbt":"{display:{Name:\"\\\"pulverizers logo\\\"\"}}"
+    },
+    "title":"I don't feel so good...",
+    "description":{
+      "text":"Make yourself a Pulverizer to crush things to dust",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:custom_crafters",
+  "criteria":{
+    "create_pulverizer":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
