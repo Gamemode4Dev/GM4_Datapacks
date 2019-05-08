@@ -1,0 +1,2 @@
+# run from #master_crafting:recipe_check
+execute if score @s gm4_slot_count matches 9 if score @s gm4_stack_size matches 1 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:iron_block"},{Slot:1b,id:"minecraft:iron_pickaxe"},{Slot:2b,id:"minecraft:iron_block"},{Slot:3b,id:"minecraft:piston"},{Slot:4b,id:"minecraft:redstone_block"},{Slot:5b,id:"minecraft:piston"},{Slot:6b,id:"minecraft:iron_block"},{Slot:7b,id:"minecraft:coal_block"},{Slot:8b,id:"minecraft:iron_block"}]} run function pulverizers:create
