@@ -11,11 +11,11 @@ scoreboard objectives add gm4_slot_count dummy
 scoreboard objectives add gm4_stack_size dummy
 scoreboard objectives add gm4_string dummy
 
-scoreboard objectives add gm4_pv_chance dummy
-execute unless score seed gm4_pv_chance matches 0.. run scoreboard players set seed gm4_pv_chance 731031
-scoreboard players set mult gm4_pv_chance 1664525
-scoreboard players set incr gm4_pv_chance 1013904223
-scoreboard players set #100 gm4_pv_chance 100
+scoreboard objectives add gm4_pv_bonus dummy
+execute unless score seed gm4_pv_bonus matches 0.. run scoreboard players set seed gm4_pv_bonus 731031
+scoreboard players set mult gm4_pv_bonus 1664525
+scoreboard players set incr gm4_pv_bonus 1013904223
+scoreboard players set #100 gm4_pv_bonus 100
 
 #announce success
 tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Pulverizers Installed!"}]
