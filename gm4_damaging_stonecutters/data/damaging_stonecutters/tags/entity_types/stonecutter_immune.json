@@ -27,6 +27,7 @@
         "minecraft:eye_of_ender",
         "minecraft:falling_block",
         "minecraft:firework_rocket",
+        "minecraft:fishing_bobber",
         "minecraft:item_frame",
         "minecraft:leash_knot",
         "minecraft:lightning_bolt",
@@ -36,6 +37,7 @@
         "minecraft:shulker_bullet",
         "minecraft:small_fireball",
         "minecraft:tnt",
-        "minecraft:wither_skull"
+        "minecraft:wither_skull",
+        "minecraft:vex"
     ]
 }
