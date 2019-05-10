@@ -13,6 +13,9 @@ scoreboard objectives add gm4_fa_d_math_fd dummy
 scoreboard objectives add gm4_fa_d_math_fc dummy
 scoreboard objectives add gm4_fa_d_math_gc dummy
 
+scoreboard objectives add gm4_fa_slot_0 dummy
+scoreboard objectives add gm4_fa_slot_1 dummy
+
 #announce success
 tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Firework Assemblers Installed!",{"translate":"text.gm4.modules.update.installed","with":["Firework Assemblers"]}]}]
 execute unless entity @a[limit=1] run say GM4: Firework Assemblers Installed!
