@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"leather_boots",
-      "nbt":"{display:{Name:'\"boots_of_ostara logo\"',color:3705899}}"
+  "display": {
+    "icon": {
+      "item": "leather_boots",
+      "nbt": "{display:{color:3705899},CustomModelData:1}"
     },
-    "title":"Green Feet",
-    "description":{
-      "text":"Wear the Boots of Ostara.",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Green Feet",
+        {"translate": "advancement.gm4.boots_of_ostara.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Wear the Boots of Ostara",
+        {"translate": "advancement.gm4.boots_of_ostara.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:custom_crafters",
-  "criteria":{
-    "wear_boots_of_ostara":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:custom_crafters",
+  "criteria": {
+    "wear_boots_of_ostara": {
+      "trigger": "minecraft:impossible"
     }
   }
 }
