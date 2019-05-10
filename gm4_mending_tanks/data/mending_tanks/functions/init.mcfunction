@@ -1,5 +1,4 @@
 #announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Installing Mending Tanks...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.mending.tanks"}]}]}]
 tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: Installing Mending Tanks...",[{"translate":"text.gm4.prefix"},{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.mending.tanks"}]}]]}]
 execute unless entity @a[limit=1] run say GM4: Installing Mending Tanks...
 
