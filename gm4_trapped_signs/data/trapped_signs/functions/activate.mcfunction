@@ -1,3 +1,6 @@
+# @s = trapped sign
+# run from process
+
 execute if block ~ ~ ~ #minecraft:standing_signs run fill ~1 ~-1 ~ ~-1 ~ ~ redstone_wire[power=1] replace redstone_wire[power=0]
 execute if block ~ ~ ~ #minecraft:standing_signs run fill ~ ~-2 ~ ~ ~-2 ~ redstone_wire[power=1] replace redstone_wire[power=0]
 execute if block ~ ~ ~ #minecraft:standing_signs run fill ~ ~-1 ~1 ~ ~ ~-1 redstone_wire[power=1] replace redstone_wire[power=0]
