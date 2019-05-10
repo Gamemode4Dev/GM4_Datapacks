@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"golden_sword",
-      "nbt":"{display:{Name:\"\\\"potion_swords logo\\\"\"}}"
+  "display": {
+    "icon": {
+      "item": "golden_sword",
+      "nbt": "{display:{Name:'\"potion_swords logo\"'}}"
     },
-    "title":"Instant Regret",
-    "description":{
-      "text":"Wither-ize a skeleton with potion swords.",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Instant Regret",
+        {"translate": "advancement.gm4.potion_swords.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Wither-ize a skeleton with potion swords",
+        {"translate": "advancement.gm4.potion_swords.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "witherize_skeleton":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:root",
+  "criteria": {
+    "witherize_skeleton": {
+      "trigger": "minecraft:impossible"
     }
   }
 }

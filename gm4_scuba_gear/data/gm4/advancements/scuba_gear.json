@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "horn_coral",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Things are going swimmingly!",
+        {"translate": "advancement.gm4.scuba_gear.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Suit up with a full set of SCUBA gear",
+        {"translate": "advancement.gm4.scuba_gear.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:custom_crafters",
+  "criteria": {
+    "scuba_gear": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

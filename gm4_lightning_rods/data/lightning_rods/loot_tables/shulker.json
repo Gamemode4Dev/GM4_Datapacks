@@ -1,24 +1,52 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls": 1,
-            "entries": [
+          "type": "empty",
+          "weight": 9
+        },
+        {
+          "type": "item",
+          "name": "shulker_shell",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{CustomModelData:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Charred Shell",
+                  {
+                    "translate": "item.gm4.charred_shell"
+                  }
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
                 {
-                    "type": "empty",
-                    "weight": 9
-                },
-                {
-                    "type": "item",
-                    "name": "shulker_shell",
-                    "weight": 1,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{display:{Name:\"{\\\"text\\\":\\\"Charred Shell\\\",\\\"italic\\\":false}\",Lore:[\"Nice and toasty\"]}}"
-                        }
-                    ]
+                  "translate": "%1$s",
+                  "with": [
+                    "Nice and toasty",
+                    {
+                      "translate": "item.gm4.charred_shell.lore"
+                    }
+                  ],
+                  "italic": false
                 }
-            ]
+              ]
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

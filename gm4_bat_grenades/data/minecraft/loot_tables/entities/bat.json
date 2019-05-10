@@ -1,17 +1,18 @@
 {
-  "pools":[
+  "type": "minecraft:entity",
+  "pools": [
     {
-      "rolls":1,
-      "entries":[
+      "rolls": 1,
+      "entries": [
         {
-          "type":"item",
-          "name":"minecraft:gunpowder",
-          "functions":[
+          "type": "item",
+          "name": "minecraft:gunpowder",
+          "functions": [
             {
-              "function":"set_count",
-              "count":{
-                "min":1,
-                "max":3
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
               }
             }
           ]
@@ -19,47 +20,58 @@
       ]
     },
     {
-      "rolls":1,
-      "entries":[
+      "rolls": 1,
+      "entries": [
         {
-          "type":"item",
-          "name":"minecraft:rabbit_hide",
-          "functions":[
+          "type": "item",
+          "name": "minecraft:rabbit_hide",
+          "functions": [
             {
-              "function":"set_nbt",
-              "tag":"{display:{Name:\"{\\\"text\\\":\\\"Bat Leather\\\",\\\"italic\\\":false}\",Lore:[\"Would make for a very strange,\",\"very tiny jacket\"]}}"
+              "function": "set_nbt",
+              "tag": "{CustomModelData:1}"
+            },
+            {
+              "function": "set_name",
+              "name": {
+                "translate": "%1$s",
+                "with": [
+                  "Bat Leather",
+                  {
+                    "translate": "item.gm4.bat_leather"
+                  }
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "Would make for a very strange,",
+                    {
+                      "translate": "text.gm4.bat_leather.1"
+                    }
+                  ]
+                },
+                {
+                  "translate": "%1$s",
+                  "with": [
+                    "very tiny jacket",
+                    {
+                      "translate": "text.gm4.bat_leather.2"
+                    }
+                  ]
+                }
+              ]
             }
           ],
-          "weight":1
+          "weight": 1
         },
         {
-          "type":"empty",
-          "weight":5
-        }
-      ]
-    },
-    {
-      "conditions":[
-        {
-          "condition":"killed_by_player"
-        }
-      ],
-      "rolls":1,
-      "entries":[
-        {
-          "type":"item",
-          "name":"minecraft:phantom_membrane",
-          "functions":[
-            {
-              "function":"set_nbt",
-              "tag":"{display:{Name:\"{\\\"text\\\":\\\"Bat Droppings\\\",\\\"italic\\\":false}\",Lore:[\"A bat dropped this\"]}}"
-            }
-          ],
-          "weight":1
-        },
-        {
-          "type":"empty",
-          "weight":7
+          "type": "empty",
+          "weight": 5
         }
       ]
     }
