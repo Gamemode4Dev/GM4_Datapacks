@@ -33,6 +33,20 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
 - ANY FUNCTION that is run as an entity should have a comment on the first line stating the context of @s so it is clear what runs this file e.g. `#@s = cows with speed limit=..1 of red mushrooms`
 - ALL FUNCTIONS except those included with the template file should list the functions they are called from in a comment on the first or second line of the file e.g. `#run from main`. More complicated modules with subdirectories should specify the more specific file path e.g. `#run from zauber_cauldrons:cauldron/create`
 
+### Compatibility with GM4 Resources
+- All visible text (names, lore, actionbar, advancements) should use translation keys:
+```json
+{
+  "translate": "%1$s",
+  "with": [
+    "Clever Crushing",
+    {"translate": "advancement.gm4.block_compressors.title"}
+  ]
+}
+```
+- Only when your module is about to be approved and merged, you should add `CustomModelData` id's.
+- Contact the collaborators of [GM4 Resources](https://github.com/Gamemode4Dev/GM4_Resources) to make sure the correct id's are allocated. Create an issue or pull request there so the correct translation keys are added.
+
 ### Testing and submitting your module
 While testing your module, you need to make sure that the `base` datapack, which you can find in this repository, is included in your world's `datapacks` folder.
 
