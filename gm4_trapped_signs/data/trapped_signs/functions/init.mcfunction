@@ -8,7 +8,6 @@ scoreboard players set trapped_signs gm4_modules 1
 scoreboard players set trapped_signs gm4_clock_tick 0
 
 scoreboard objectives add gm4_count dummy
-scoreboard objectives add gm4_place_sign minecraft.used:minecraft.sign
 
 #announce success
 tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Trapped Signs Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.trapped_signs"}]}]}]
