@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "glass_bottle",
-      "nbt": "{display:{Name:\"sunken_treasure logo\"}}"
+      "nbt": "{CustomModelData:2}"
     },
     "title": {
       "translate": "%1$s",
