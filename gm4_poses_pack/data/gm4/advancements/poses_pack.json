@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"armor_stand",
-      "nbt":"{display:{Name:'\"poses_pack logo\"'}}"
+  "display": {
+    "icon": {
+      "item": "armor_stand",
+      "nbt": "{CustomModelData:2}"
     },
-    "title":"Plenty O' Posing",
-    "description":{
-      "text":"Make your armor stand strike a pose",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Plenty O' Posing",
+        {"translate": "advancement.gm4.poses_pack.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Make your armour stand strike a pose",
+        {"translate": "advancement.gm4.poses_pack.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "pose_stand":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:better_armour_stands",
+  "criteria": {
+    "pose_stand": {
+      "trigger": "minecraft:impossible"
     }
   }
 }
