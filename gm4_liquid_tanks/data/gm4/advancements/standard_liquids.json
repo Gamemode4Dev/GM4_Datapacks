@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"experience_bottle",
+      "nbt":"{display:{Name:\"\\\"standard_liquids logo\\\"\"}}"
+    },
+    "title":"Experience Quicksave",
+    "description":{
+      "text":"Bottle your own experience from a liquid tank",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:liquid_tanks_create",
+  "criteria":{
+    "bottle_experience":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
