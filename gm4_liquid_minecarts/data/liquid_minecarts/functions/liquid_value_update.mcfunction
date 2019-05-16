@@ -1,9 +1,9 @@
-#run from load_liquid, unload_liquid and create
 #@s = liquid minecart
+#run from load_liquid, unload_liquid and create
 
 #calculate tank fullness percentage
 scoreboard players operation @s gm4_lm_data = @s gm4_lt_value
-scoreboard players operation @s gm4_lm_data *= 100 gm4_lm_data
+scoreboard players operation @s gm4_lm_data *= #100 gm4_lm_data
 scoreboard players operation @s gm4_lm_data /= @s gm4_lt_max
 
 #1%-50%

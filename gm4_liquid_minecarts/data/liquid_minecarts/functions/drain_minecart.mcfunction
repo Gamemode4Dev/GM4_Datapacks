@@ -1,5 +1,6 @@
-#run from command_block_minecart (liquid minecart)
 #@s = liquid minecart going over active activator rail
+#run from command_block_minecart (liquid minecart)
+
 scoreboard players set @s gm4_lt_value 0
 data merge entity @s {Tags:["gm4_liquid_minecart","gm4_liquid_minecart_empty"]}
 function liquid_minecarts:liquid_value_update

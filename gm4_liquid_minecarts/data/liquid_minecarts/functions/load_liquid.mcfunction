@@ -1,5 +1,5 @@
-#run from compare_load_liquid and init_liquid
 #@s liquid minecart that can accept the current tank's liquid
+#run from compare_load_liquid and init_liquid
 
 #take all the liquid in the tank (or as much as the minecart can hold) (amount of liquid to take stored in gm4_lm_data)
 #get remaining space in minecart

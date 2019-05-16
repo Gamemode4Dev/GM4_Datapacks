@@ -1,5 +1,5 @@
-#run from main
 #@s = liquid minecart
+#run from main
 
 #load
 execute if block ~1 ~ ~ hopper[facing=west] positioned ~1 ~ ~ run function liquid_minecarts:try_to_load

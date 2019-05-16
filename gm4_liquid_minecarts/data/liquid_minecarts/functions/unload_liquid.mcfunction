@@ -1,5 +1,5 @@
-#run from compare_unload_liquid and
 #@s liquid minecart above a liquid tank that can accept the liquid
+#run from compare_unload_liquid and
 
 #take all the liquid in the tank (or as much as the minecart can hold) (amount of liquid to take stored in gm4_lm_data)
 #get remaining space in minecart
