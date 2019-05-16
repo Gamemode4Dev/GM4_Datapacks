@@ -1,7 +1,7 @@
 #@s = liquid tank
 #run from liquid_tanks:process
 
-#set values
+#apply buffer
 scoreboard players operation @s gm4_lt_value += @s gm4_lt_buffer
 scoreboard players set @s gm4_lt_buffer 0
 scoreboard players operation @s gm4_lt_value < @s gm4_lt_max

@@ -9,4 +9,6 @@ execute store success score lava_fueling gm4_lt_util if block ~ ~ ~ furnace[lit=
 execute if score lava_fueling gm4_lt_util matches 1.. run scoreboard players remove @s gm4_lt_buffer 1
 scoreboard players reset lava_fueling gm4_lt_util
 
+tag @s remove gm4_lt_furnace_start
+
 execute unless score @s gm4_lt_buffer matches 0 run function liquid_tanks:liquid_value_update

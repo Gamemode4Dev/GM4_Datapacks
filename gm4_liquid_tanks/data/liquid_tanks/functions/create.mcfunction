@@ -1,5 +1,6 @@
 #@s = glass item inside correct hopper at armor stand location
 #run from main
+
 data merge block ~ ~ ~ {CustomName:"\"Empty Tank\"",Items:[]}
 summon armor_stand ~ ~ ~ {CustomName:"\"gm4_liquid_tank\"",Tags:["gm4_no_edit","gm4_liquid_tank","gm4_lt_idle"],NoGravity:1,Marker:1,Invisible:1,Invulnerable:1,Small:1,DisabledSlots:2039552,ArmorItems:[{},{},{},{id:"glass",Count:1}]}
 scoreboard players set @e[tag=gm4_liquid_tank,limit=1,distance=..0.1] gm4_lt_value 0

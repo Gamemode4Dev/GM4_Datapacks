@@ -19,5 +19,4 @@ tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Liquid Tanks Installed!"}]
 execute unless entity @p run say GM4: Liquid Tanks Installed!
 
 #check other modules to make sure they're up to date.
-execute if score some_module gm4_modules matches ..1 run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"\"Some Module\"",Tags:["updateMessage"],Duration:2000}
-execute if score some_other_module gm4_modules matches ..1 run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"\"Another Module\"",Tags:["updateMessage"],Duration:2000}
+#$moduleUpdateList
