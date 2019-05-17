@@ -18,7 +18,7 @@ scoreboard players operation illusioner_required_value gm4_menace = daytime gm4_
 scoreboard players operation illusioner_required_value gm4_menace %= 17 gm4_nights_data
 
 #compare values, if big enough, summon illusioner
-execute if score illusioner_random_value gm4_menace >= illusioner_required_value gm4_menace run function illusioner_nights:set_pos
+execute if score illusioner_random_value gm4_menace >= illusioner_required_value gm4_menace if entity @p run function illusioner_nights:set_pos
 
 #kill spawn points
 kill @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point]
