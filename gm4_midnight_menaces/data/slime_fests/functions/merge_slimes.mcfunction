@@ -2,7 +2,7 @@
 #at @s
 #called by event
 
-execute as @e[type=slime,nbt={Size:1},scores={gm4_menace=..8},limit=1,sort=random] at @s run data merge entity @e[type=slime,distance=0.1..2,sort=nearest,limit=1,nbt={Size:3},tag=!gm4_just_grew] {Size:7,Tags:[gm4_just_grew],DeathLootTable:"chests/woodland_mansion"}
+execute as @e[type=slime,nbt={Size:1},scores={gm4_menace=..8},limit=1,sort=random] at @s run data merge entity @e[type=slime,distance=0.1..2,sort=nearest,limit=1,nbt={Size:3},tag=!gm4_just_grew] {Size:7,Tags:[gm4_just_grew],DeathLootTable:"slime_fests:giant_slime"}
 execute as @e[type=slime,nbt={Size:1},scores={gm4_menace=..8},limit=1,sort=random] at @s run data merge entity @e[type=slime,distance=0.1..2,sort=nearest,limit=1,nbt={Size:1},tag=!gm4_just_grew] {Size:3,Tags:[gm4_just_grew]}
 execute as @e[type=slime,nbt={Size:0},scores={gm4_menace=..8},limit=1,sort=random] at @s run data merge entity @e[type=slime,distance=0.1..2,sort=nearest,limit=1,nbt={Size:0},tag=!gm4_just_grew] {Size:1,Tags:[gm4_just_grew]}
 

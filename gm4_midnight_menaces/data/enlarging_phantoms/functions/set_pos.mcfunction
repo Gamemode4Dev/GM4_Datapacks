@@ -16,7 +16,7 @@ scoreboard players operation phantom_altitude gm4_menace += phantom_altitude_bas
 execute as @e[type=area_effect_cloud,tag=gm4_phantom_spawn_point] store result entity @s Pos.[1] double 1 run scoreboard players get phantom_altitude gm4_menace
 
 
-execute as @e[type=area_effect_cloud,tag=gm4_phantom_spawn_point] at @s run summon phantom ~ ~ ~ {Tags:[gm4_set_phantom]}
+execute as @e[type=area_effect_cloud,tag=gm4_phantom_spawn_point] at @s run summon phantom ~ ~ ~ {Tags:["gm4_set_phantom"]}
 
 execute as @e[tag=gm4_set_phantom] run function enlarging_phantoms:set_size
 
