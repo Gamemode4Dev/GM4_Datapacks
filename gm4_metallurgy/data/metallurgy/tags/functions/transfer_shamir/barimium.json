@@ -1,0 +1,6 @@
+{
+  "values":[
+    "musical_shamir:transfer_shamir/initiate_transfer",
+    "gemini_shamir:transfer_shamir/initiate_transfer"
+  ]
+}
