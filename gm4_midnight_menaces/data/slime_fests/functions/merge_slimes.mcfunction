@@ -2,9 +2,9 @@
 #at @s
 #called by event
 
-execute as @e[type=slime,nbt={Size:1},scores={gm4_menace=..8},limit=1,sort=random] at @s run data merge entity @e[type=slime,distance=0.1..2,sort=nearest,limit=1,nbt={Size:3},tag=!gm4_just_grew] {Size:7,Tags:[gm4_just_grew],DeathLootTable:"slime_fests:giant_slime"}
-execute as @e[type=slime,nbt={Size:1},scores={gm4_menace=..8},limit=1,sort=random] at @s run data merge entity @e[type=slime,distance=0.1..2,sort=nearest,limit=1,nbt={Size:1},tag=!gm4_just_grew] {Size:3,Tags:[gm4_just_grew]}
-execute as @e[type=slime,nbt={Size:0},scores={gm4_menace=..8},limit=1,sort=random] at @s run data merge entity @e[type=slime,distance=0.1..2,sort=nearest,limit=1,nbt={Size:0},tag=!gm4_just_grew] {Size:1,Tags:[gm4_just_grew]}
+execute as @e[type=slime,nbt={Size:1},scores={gm4_menace=..8},limit=1,sort=random] at @s run data merge entity @e[type=slime,distance=0.1..2,sort=nearest,limit=1,nbt={Size:3},tag=!gm4_just_grew] {Size:7,Tags:[gm4_just_grew],DeathLootTable:"slime_fests:giant_slime",Attributes:[{Base:64.0d,Name:"generic.maxHealth"}],Health:64.0f}
+execute as @e[type=slime,nbt={Size:1},scores={gm4_menace=..8},limit=1,sort=random] at @s run data merge entity @e[type=slime,distance=0.1..2,sort=nearest,limit=1,nbt={Size:1},tag=!gm4_just_grew] {Size:3,Tags:[gm4_just_grew],Attributes:[{Base:16.0d,Name:"generic.maxHealth"}],Health:16.0f}
+execute as @e[type=slime,nbt={Size:0},scores={gm4_menace=..8},limit=1,sort=random] at @s run data merge entity @e[type=slime,distance=0.1..2,sort=nearest,limit=1,nbt={Size:0},tag=!gm4_just_grew] {Size:1,Tags:[gm4_just_grew],Attributes:[{Base:4.0d,Name:"generic.maxHealth"}],Health:4.0f}
 
 execute as @e[type=slime,tag=gm4_just_grew,scores={gm4_menace=..8},nbt={Size:1}] at @s run teleport @e[type=slime,distance=0.1..3,sort=nearest,limit=1,nbt={Size:0}] @s
 execute as @e[type=slime,tag=gm4_just_grew,scores={gm4_menace=..8},nbt={Size:3}] at @s run teleport @e[type=slime,distance=0.1..3,sort=nearest,limit=1,nbt={Size:1}] @s
