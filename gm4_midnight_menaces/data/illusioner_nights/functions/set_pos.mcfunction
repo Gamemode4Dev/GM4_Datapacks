@@ -15,4 +15,4 @@ execute as @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point] at @s run f
 execute at @a run kill @e[tag=gm4_illusioner_spawn_point,distance=..24]
 execute as @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point] at @s unless block ~ ~ ~ air unless block ~ ~ ~ cave_air run kill @s
 
-execute as @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point] at @s run summon illusioner ~ ~ ~ {DeathLootTable:"illusioner_nights:illusioner"}
+execute as @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point] at @s run summon illusioner ~ ~ ~ {DeathLootTable:"illusioner_nights:illusioner",HandItems:[{id:"minecraft:bow",Count:1b},{}]}
