@@ -6,7 +6,7 @@
 execute at @r[gamemode=!spectator] run spreadplayers ~ ~ 0 24 false @e[type=area_effect_cloud,tag=gm4_phantom_spawn_point]
 
 #set Y position
-execute store result score phantom_altitude gm4_menace run data get entity @s UUIDMost 0.00000000023283064365386962890625
+execute store result score phantom_altitude gm4_menace run data get entity @e[type=area_effect_cloud,tag=gm4_phantom_spawn_point,limit=1] UUIDMost 0.00000000023283064365386962890625
 scoreboard players operation phantom_altitude gm4_menace %= 41 gm4_menace
 scoreboard players add phantom_altitude gm4_menace 40
 execute as @e[type=area_effect_cloud,tag=gm4_phantom_spawn_point] at @s store result score phantom_altitude_base gm4_menace run data get entity @p Pos[1]
