@@ -12,6 +12,7 @@ execute at @e[type=item,nbt={Item:{id:"minecraft:obsidian",Count:1b},Motion:[0.0
 
 #manage moulds
 execute as @e[type=vex,tag=gm4_sand_ring] at @s run function metallurgy:casting/sustain_mould
+execute as @e[type=item,tag=gm4_ml_in_animation,nbt=!{PickupDelay:30s}] run data remove entity @s Item.tag.gm4_metallurgy.ore_in_animation
 
 #check for shamir on anvil
 scoreboard players reset found_item_on_anvil gm4_ml_data

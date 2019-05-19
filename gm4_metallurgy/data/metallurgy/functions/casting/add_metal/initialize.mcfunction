@@ -8,5 +8,4 @@ execute if entity @e[type=item,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{ore_type
 execute if entity @e[type=item,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{ore_type:"aluminium"}}},OnGround:1b},tag=gm4_ml_in_animation,dx=0,dz=0] run function metallurgy:casting/add_metal/add_aluminium
 
 #make all ores on top jump
-execute as @e[type=item,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{}}},OnGround:1b},tag=!gm4_ml_in_animation,dx=0,dz=0] run data merge entity @s {Motion:[0.0,0.35,0.0],PickupDelay:30,Tags:["gm4_ml_in_animation"]}
-#,Item:{tag:{gm4_metallurgy:{ore_in_animation:1b}}}
+execute as @e[type=item,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{}}},OnGround:1b},tag=!gm4_ml_in_animation,dx=0,dz=0] run data merge entity @s {Motion:[0.0,0.35,0.0],PickupDelay:30,Tags:["gm4_ml_in_animation"],Item:{tag:{gm4_metallurgy:{ore_in_animation:1b}}}}
