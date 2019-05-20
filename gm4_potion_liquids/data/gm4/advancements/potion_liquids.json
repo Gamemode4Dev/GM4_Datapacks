@@ -2,11 +2,21 @@
   "display":{
     "icon":{
       "item":"potion",
-      "nbt":"{display:{Name:\"\\\"standard_liquids logo\\\"\"},CustomPotionColor:13631487}"
+      "nbt":"{CustomModelData:NUMBER,CustomPotionColor:13631487}"
     },
-    "title":"Fizzy Lifting Drink",
+    "title":{
+      "translate":"%1$s",
+      "with":[
+        "Fizzy Lifting Drink",
+        {"translate": "advancement.gm4.potion_liquids.title"}
+      ]
+    },
     "description":{
-      "text":"Come on in, the air's fine",
+      "translate":"%1$s",
+      "with":[
+        "Come on in, the air's fine",
+        {"translate":"advancement.gm4.potion_liquids.description"}
+      ],
       "color":"gray"
     }
   },

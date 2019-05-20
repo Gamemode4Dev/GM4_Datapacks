@@ -2,11 +2,21 @@
   "display":{
     "icon":{
       "item":"hopper",
-      "nbt":"{display:{Name:\"\\\"liquid_tanks logo\\\"\"}}"
+      "nbt":"{CustomModelData:NUMBER}"
     },
-    "title":"Oh, That Kind of Tank",
+    "title":{
+      "translate": "%1$s",
+      "with":[
+        "Oh, That Kind of Tank",
+        {"translate": "advancement.gm4.liquid_tanks.title"}
+        ]
+      },
     "description":{
-      "text":"Find out that a liquid tank is not an epic submarine",
+      "translate": "%1$s",
+      "with":[
+        "Find out that a liquid tank is not an epic submarine",
+        {"translate": "advancement.gm4.liquid_tanks.description"}
+      ],
       "color":"gray"
     }
   },

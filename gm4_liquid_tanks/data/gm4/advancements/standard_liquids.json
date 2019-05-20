@@ -2,11 +2,21 @@
   "display":{
     "icon":{
       "item":"experience_bottle",
-      "nbt":"{display:{Name:\"\\\"standard_liquids logo\\\"\"}}"
+      "nbt":"{CustomModelData:NUMBER}"
     },
-    "title":"Experience Quicksave",
+    "title":{
+      "translate": "%1$s",
+      "with": [
+        "Experience Quicksave",
+        {"translate": "advancement.gm4.standard_liquids.title"}
+      ]
+    },
     "description":{
-      "text":"Bottle your own experience from a liquid tank",
+      "translate": "%1$s",
+      "with": [
+        "Bottle your own experience from a liquid tank",
+        {"translate": "advancement.gm4.standard_liquids.description"}
+      ],
       "color":"gray"
     }
   },
