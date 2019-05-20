@@ -1,0 +1,20 @@
+{
+  "display":{
+    "icon":{
+      "item":"minecraft:lava_bucket",
+      "nbt":"{display:{Name:\"\\\"MODULE_ID logo\\\"\"}}"
+    },
+    "title":"Blame Me for the Mess",
+    "description":{
+      "text":"Destroy a mold containing molten metal",
+      "color":"gray"
+    },
+    "hidden":true
+  },
+  "parent":"gm4:metallurgy_cast",
+  "criteria":{
+    "metallurgy_overheat_cast":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
