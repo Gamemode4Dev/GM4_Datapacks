@@ -8,3 +8,4 @@ fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function sensus_shamir:block_s
 fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function sensus_shamir:block_search/mark_redstone_ore"} replace redstone_ore
 fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function sensus_shamir:block_search/mark_emerald_ore"} replace emerald_ore
 fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function sensus_shamir:block_search/mark_diamond_ore"} replace diamond_ore
+fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function sensus_shamir:block_search/mark_nether_quartz_ore"} replace nether_quartz_ore
