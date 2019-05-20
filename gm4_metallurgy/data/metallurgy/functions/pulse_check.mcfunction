@@ -12,7 +12,8 @@ execute if score found_item_on_anvil gm4_ml_data matches 1 as @e[type=item,tag=g
 execute if entity @e[tag=gm4_in_spiraculum] as @a[tag=gm4_has_spiraculum] at @s run function spiraculum_shamir:spiral
 
 #arborenda
-execute if score arborenda_active gm4_ml_data matches 1 run function arborenda_shamir:main
+execute if score arborenda_active gm4_ml_data matches 1 as @a[tag=gm4_has_arborenda] at @s run function arborenda_shamir:main
+execute as @e[type=area_effect_cloud,tag=gm4_arborenda_trunk] at @s run function arborenda_shamir:destroy_trunk
 
 #hypexperia
 execute if score hypexperia_active gm4_ml_data matches 1 run function hypexperia_shamir:find_orbs
@@ -21,7 +22,7 @@ execute if score hypexperia_active gm4_ml_data matches 1 run function hypexperia
 execute if score forterra_active gm4_ml_data matches 1 run function forterra_shamir:find_stone
 
 #ender_bolt
-execute as @a[gamemode=!spectator,scores={gm4_bolt_damage=1..},nbt={SelectedItem:{tag:{gm4_metallurgy:{active_shamir:"ender_bolt"}}}}] at @s positioned ^ ^ ^2 as @e[distance=..2,nbt={DeathTime:0s},type=!player,type=!armor_stand,nbt=!{SelectedItem:{tag:{gm4_metallurgy:{active_shamir:"ender_bolt"}}}}] run scoreboard players set @s gm4_bolt_time 20
+execute as @a[gamemode=!spectator,scores={gm4_bolt_damage=1..},nbt={SelectedItem:{tag:{gm4_metallurgy:{active_shamir:"ender_bolt"}}}}] at @s positioned ^ ^ ^2 as @e[distance=..2,nbt={DeathTime:0s},type=!player,type=!armor_stand] run scoreboard players set @s gm4_bolt_time 20
 
 #levity
 execute if score levity_active gm4_ml_data matches 1 run function levity_shamir:find_floating_players

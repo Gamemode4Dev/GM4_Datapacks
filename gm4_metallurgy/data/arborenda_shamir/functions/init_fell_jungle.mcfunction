@@ -1,5 +1,6 @@
 #run from chop
 #@s = freshly chopped log item
+tag @s remove gm4_looking_for_log
 execute if block ~1 ~ ~1 jungle_log run setblock ~1 ~ ~1 air destroy
 execute if block ~1 ~ ~-1 jungle_log run setblock ~1 ~ ~-1 air destroy
 execute if block ~-1 ~ ~1 jungle_log run setblock ~-1 ~ ~1 air destroy

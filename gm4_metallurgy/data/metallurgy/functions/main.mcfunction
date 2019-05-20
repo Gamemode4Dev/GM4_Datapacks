@@ -12,6 +12,7 @@ execute at @e[type=item,nbt={Item:{id:"minecraft:obsidian",Count:1b},Motion:[0.0
 
 #manage moulds
 execute as @e[type=vex,tag=gm4_sand_ring] at @s run function metallurgy:casting/sustain_mould
+execute as @e[type=item,tag=gm4_ml_in_animation,nbt=!{PickupDelay:30s}] run data remove entity @s Item.tag.gm4_metallurgy.ore_in_animation
 
 #check for shamir on anvil
 scoreboard players reset found_item_on_anvil gm4_ml_data
@@ -21,7 +22,7 @@ execute as @e[type=item,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{has_shamir:1b}}
 #             (for shamirs that are included with the base module)
 
 #----------------------------------- DEFUSE ------------------------------------
-execute if entity @a[gamemode=!spectator,nbt={Inventory:[{tag:{gm4_metallurgy:{active_shamir:"defuse"}}}]}] run function defuse_shamir:main
+execute as @a[gamemode=!spectator,nbt={Inventory:[{tag:{gm4_metallurgy:{active_shamir:"defuse"}}}]}] at @s run function defuse_shamir:main
 
 #--------------------------------- SPIRACULUM ----------------------------------
 tag @a remove gm4_has_spiraculum
@@ -52,8 +53,8 @@ execute as @a[gamemode=!spectator,nbt={SelectedItem:{tag:{gm4_metallurgy:{active
 
 #-------------------------------- ENDER BOLT -----------------------------------
 execute as @e[scores={gm4_bolt_time=1..}] at @s run function ender_bolt_shamir:main
-scoreboard players reset @a gm4_bolt_damage
-execute as @e[type=trident,nbt={inGround:1b}] at @s run function ender_bolt_shamir:main
+scoreboard players reset * gm4_bolt_damage
+execute as @e[type=trident,nbt={inGround:1b,Trident:{tag:{gm4_metallurgy:{active_shamir:"ender_bolt"}}}}] at @s run function ender_bolt_shamir:main
 
 #---------------------------------- MUSICAL ------------------------------------
 tag @a remove gm4_has_musical

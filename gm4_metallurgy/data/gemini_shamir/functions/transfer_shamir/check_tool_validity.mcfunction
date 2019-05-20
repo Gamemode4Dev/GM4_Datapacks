@@ -1,6 +1,6 @@
 #@s = tool band is trying to apply to
 #run from add_band
-execute unless score valid_tool gm4_ml_data matches 1 store success score valid_tool gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:diamond_hoe"}}]
+execute store success score valid_tool gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:diamond_hoe"}}]
 execute unless score valid_tool gm4_ml_data matches 1 store success score valid_tool gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:iron_hoe"}}]
 execute unless score valid_tool gm4_ml_data matches 1 store success score valid_tool gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:golden_hoe"}}]
 execute unless score valid_tool gm4_ml_data matches 1 store success score valid_tool gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:stone_hoe"}}]

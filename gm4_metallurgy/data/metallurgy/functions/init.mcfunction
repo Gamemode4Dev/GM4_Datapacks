@@ -5,7 +5,7 @@ execute unless entity @p run say GM4: Installing Metallurgy...
 #declare and initialise scoreboards and settings
 scoreboard players set update_happened gm4_up_check 1
 scoreboard players set metallurgy gm4_modules 1
-scoreboard players set metallurgy gm4_clock_tick 0
+scoreboard players set metallurgy gm4_clock_tick 10
 
 scoreboard objectives add gm4_ml_data dummy
 scoreboard players set found_primed_tnt gm4_ml_data 0
@@ -22,6 +22,7 @@ scoreboard objectives add gm4_use_axe_gol minecraft.used:minecraft.golden_axe
 scoreboard objectives add gm4_use_axe_iro minecraft.used:minecraft.iron_axe
 scoreboard objectives add gm4_use_axe_sto minecraft.used:minecraft.stone_axe
 scoreboard objectives add gm4_use_axe_woo minecraft.used:minecraft.wooden_axe
+scoreboard objectives add gm4_arb_stat dummy
 
 #conduction
 scoreboard objectives add gm4_volt_time dummy

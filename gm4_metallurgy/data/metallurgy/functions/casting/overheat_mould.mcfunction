@@ -6,3 +6,4 @@ summon item ~ ~1.2 ~ {Item:{id:"minecraft:magma_block",Count:1b,tag:{display:{Lo
 particle large_smoke ~ ~ ~ 0.2 0.2 0.2 0.05 20
 playsound block.fire.extinguish block @a ~ ~ ~ .25 .9
 fill ~1 ~1 ~1 ~-1 ~-1 ~-1 fire replace air
+advancement grant @a[distance=..5,gamemode=!spectator] only gm4:metallurgy_overheat_cast
