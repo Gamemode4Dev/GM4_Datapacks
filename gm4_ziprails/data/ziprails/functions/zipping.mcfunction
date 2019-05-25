@@ -1,6 +1,6 @@
 #this function runs on all minecarts that pulse_check.mcfunction determines are under a hook or string.
 
-#@s = @e[type=#ziprails:minecarts] at @s if block ~ ~1 ~ #ziprails:cable[attached=true]
+#@s = @e[type=#gm4:minecarts] at @s if block ~ ~1 ~ #ziprails:cable[attached=true]
 
 #link minecarts that are on a hook
 execute if entity @s[tag=!gm4_linked] if block ~ ~1 ~ tripwire_hook[attached=true] run function ziprails:link
