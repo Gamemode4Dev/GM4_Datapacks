@@ -1,4 +1,6 @@
-#@s = firework assemblers with duration recipe
+#firework assembler recipe
+#@s - firework assembler with valid recipe
+#called by firework_assemblers:recipe_check
 
 #store item data
 execute store result score @s gm4_fa_d_math_fd run data get block ~ ~ ~ Items[{Slot:0b}].tag.Fireworks.Flight

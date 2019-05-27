@@ -1,4 +1,6 @@
-#@s = firework assemblers with duration recipe
+#firework assembler recipe
+#@s - firework assembler with valid recipe
+#called by firework_assemblers:recipes/duration/add
 
 #remove gunpowder/add remainder
 execute store result block ~ ~ ~ Items[{Slot:1b}].Count byte 1 run scoreboard players get @s gm4_fa_d_math_r

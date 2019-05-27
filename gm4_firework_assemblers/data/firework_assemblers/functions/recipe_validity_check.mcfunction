@@ -1,5 +1,6 @@
-# @s = gm4_firework_assembler unless block ~ ~ ~ minecraft:dropper{Items:[]}
-#Run from main
+#firework assembler recipe validity check
+#@s - firework assembler if block ~ ~ ~ minecraft:dropper[triggered=false]{Items:[{}]}
+#called by firework_assemblers:checks
 
 #audiovisuals
 particle minecraft:smoke ~ ~1.2 ~ 0 .1 0 0 10 normal @a

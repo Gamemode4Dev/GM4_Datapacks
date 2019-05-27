@@ -1,4 +1,6 @@
-#@s = firework assemblers with firework rocket recipe and passed checks
+#firework assembler recipe
+#@s - firework assembler with valid recipe
+#called by firework_assemblers:recipes/firework_rocket/checks
 
 #craft firework rocket(s)
 data modify block ~ ~ ~ Items[{Slot:0b}].id set value "minecraft:firework_rocket"

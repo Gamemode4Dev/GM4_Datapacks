@@ -1,4 +1,6 @@
-#@s = firework assemblers after recipe has run
+#firework assembler recipe effects
+#@s - firework assembler after recipe
+#called by all firework assembler recipes
 
 #summon firework
 summon minecraft:firework_rocket ~ ~1 ~ {LifeTime:7}

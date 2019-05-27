@@ -1,4 +1,6 @@
-#@s = firework assemblers with valid recipe format inside
+#firework assembler recipe checks
+#@s - firework assemblers with valid recipe format inside
+#called by firework_assemblers:checks
 
 #duration
 execute if score @s gm4_fa_slot_cnt matches 2 if block ~ ~ ~ minecraft:dropper{Items:[{id:"minecraft:firework_rocket",Slot:0b},{id:"minecraft:gunpowder",Slot:1b}]} unless block ~ ~ ~ minecraft:dropper{Items:[{tag:{Fireworks:{Flight:5b}}}]} run function firework_assemblers:recipes/duration/checks/addition

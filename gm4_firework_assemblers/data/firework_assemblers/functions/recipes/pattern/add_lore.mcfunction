@@ -1,4 +1,6 @@
-#@s = firework assemblers with pattern recipe
+#firework assembler recipe
+#@s - firework assembler with valid recipe
+#called by firework_assemblers:recipes/pattern/to_pattern/
 
 #NOT CURRENTLY DONE - needs a solution
 

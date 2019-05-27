@@ -1,4 +1,6 @@
-#@s = firework assemblers with firework rocket recipe
+#firework assembler recipe
+#@s - firework assembler with valid recipe
+#called by firework_assemblers:recipe_check
 
 #check item counts are the same
 execute store result score @s gm4_fa_slot_0 run data get block ~ ~ ~ Items[{Slot:0b}].Count
