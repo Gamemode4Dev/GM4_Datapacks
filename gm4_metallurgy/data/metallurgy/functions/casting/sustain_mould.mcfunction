@@ -11,7 +11,7 @@ execute unless score @s gm4_ml_heat matches 1..89 run function metallurgy:castin
 
 #add metals if player desires to do so
 
-execute if score @s gm4_ml_heat matches 50..89 align xyz positioned ~ ~1 ~ if entity @e[type=item,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{}}},OnGround:1b},dx=0,dy=0,dz=0] run function metallurgy:casting/add_metal/initialize
+execute if score @s gm4_ml_heat matches 50..89 align xyz positioned ~ ~1 ~ if entity @e[type=item,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{item:"ore"}}},OnGround:1b},dx=0,dy=0,dz=0] run function metallurgy:casting/add_metal/initialize
 
 #hot ring without metal
 execute if score @s[tag=!gm4_contains_metal] gm4_ml_heat matches 50..51 run data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1,tag:{SkullOwner:{Id:"085b275e-bb5a-4344-b437-720437904580",Properties:{textures:[{Value:"eyJ0aW1lc3RhbXAiOjE0ODE0MTE3MjM4MDYsInByb2ZpbGVJZCI6Ijk4NWIyNzVlYmI1YTQzNDRiNDM3Njg5NTI4NjNhNjNmIiwicHJvZmlsZU5hbWUiOiJTcGFya3MiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTc0NTVkNjg3MjJkOTU3ZmI1ZGVjZGNjY2NjMWI2MWU4NzlhOTY3ZjFiZGM3YzJhMmZkMTlhYTI3OWU4ODUifSwiQ0FQRSI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVjM2NhN2VlMmE0OThmMWI1ZDI1OGQ1ZmE5MjdlNjNlNDMzMTQzYWRkNTUzOGNmNjNiNmE5Yjc4YWU3MzUifX19"}]}}}}]}

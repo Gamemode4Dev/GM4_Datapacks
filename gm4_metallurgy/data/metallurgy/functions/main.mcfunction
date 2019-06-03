@@ -8,7 +8,7 @@ effect give @a[nbt={Inventory:[{id:"minecraft:player_head",tag:{gm4_metallurgy:{
 execute as @e[type=tnt] run scoreboard players set found_primed_tnt gm4_ml_data 1
 
 #check for moulds waiting to be created
-execute at @e[type=item,nbt={Item:{id:"minecraft:obsidian",Count:1b},Motion:[0.0,0.0,0.0]},limit=1] if block ~ ~-1 ~ #minecraft:sand align xyz unless entity @e[type=vex,tag=gm4_sand_ring,dx=0,dy=-1,dz=0] if entity @e[type=item,nbt={Item:{id:"minecraft:clay_ball",Count:1b},Motion:[0.0,0.0,0.0]},dx=0,dy=0,dz=0] run function metallurgy:casting/create_mould
+execute as @e[type=item,nbt={Item:{id:"minecraft:obsidian",Count:1b},OnGround:1b}] at @s if block ~ ~-0.1 ~ #minecraft:sand run function metallurgy:casting/check_mould_creation
 
 #manage moulds
 execute as @e[type=vex,tag=gm4_sand_ring] at @s run function metallurgy:casting/sustain_mould
