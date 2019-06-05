@@ -5,7 +5,7 @@
         "minecraft:furnace_minecart",
         "minecraft:hopper_minecart",
         "minecraft:minecart",
-        "minecraft:spanwer_minecart",
+        "minecraft:spawner_minecart",
         "minecraft:tnt_minecart"
     ]
 }
