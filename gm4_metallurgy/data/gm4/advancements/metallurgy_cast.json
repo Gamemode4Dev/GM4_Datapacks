@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"minecraft:iron_ingot",
+      "nbt":"{display:{Name:\"\\\"MODULE_ID logo\\\"\"}}"
+    },
+    "title":"Firebender",
+    "description":{
+      "text":"Create a mold and add some metal",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:metallurgy_blast_ore",
+  "criteria":{
+    "metallurgy_cast":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

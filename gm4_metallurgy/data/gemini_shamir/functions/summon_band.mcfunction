@@ -1,0 +1,4 @@
+# @s = a mould with matching metal inside
+#run from metallurgy:casting/summon_band/barimium via #metallurgy:summon_band/barimium
+
+execute if entity @e[type=area_effect_cloud,tag=gm4_ml_gemini_marker,distance=..0.5] run summon item ~ ~ ~ {Tags:[],PickupDelay:30,Item:{Count:1,id:"player_head",tag:{gm4_metallurgy:{has_shamir:1b,stored_shamir:"gemini",ore_type:"barimium"},SkullOwner:{Id: "ebb11c53-5ae5-d38f-0303-7eea8bdd1684",Properties:{textures:[{Value: "eyJ0aW1lc3RhbXAiOjE0ODg0Njc2MDc5ODMsInByb2ZpbGVJZCI6IjkxYTBlZmEyM2QxODQ5Y2ZiM2JkMGExNzdjZjM3Nzg4IiwicHJvZmlsZU5hbWUiOiJEdWNrSnIiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTg1M2IxMWFiYmYxN2UzOGVhZTRiMjFmNGZlYzRmZmE3ZTczZDBmZTRlMjcxOTZjOWJkNTdkMzdiZGUyOTZkYyJ9fX0="}]}},display:{Name:"{\"text\":\"Obsidian Cast\",\"italic\":False}",Lore:["§dBarimium Band","§bShamir:","§7Gemini"]}}}}

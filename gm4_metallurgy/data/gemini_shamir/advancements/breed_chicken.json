@@ -1,0 +1,13 @@
+{
+  "criteria":{
+    "breed_cows":{
+      "trigger":"minecraft:bred_animals",
+      "conditions":{
+        "type":"chicken"
+      }
+    }
+  },
+  "rewards":{
+    "function":"gemini_shamir:breed/check_chicken"
+  }
+}

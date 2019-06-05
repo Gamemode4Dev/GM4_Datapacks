@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"iron_ore",
+      "nbt":"{display:{Name:\"\\\"metallurgy logo\\\"\"}}"
+    },
+    "title":"How Ad-ore-able",
+    "description":{
+      "text":"Blast open some rock and find the metal within",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "metallurgy_blast_ore":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
