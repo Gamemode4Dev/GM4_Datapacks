@@ -1,5 +1,5 @@
 #restore placed and broken custom skulls
-#execute as @e[type=item,nbt={Item:{id:"minecraft:player_head"}}] run function metallurgy:repair_skulls
+execute as @e[type=item,nbt={Item:{id:"minecraft:player_head"}}] run function metallurgy:repair_skulls
 
 #give radiation poisoning
 effect give @a[nbt={Inventory:[{id:"minecraft:player_head",tag:{gm4_metallurgy:{ore_type:"thorium",item:"ore"}}}]}] minecraft:mining_fatigue 2 1

@@ -4,7 +4,7 @@
 #check for metal values in mold, drop corresponding items
 
 #mould contains no metal
-execute if score @s gm4_ml_heat matches ..89 if entity @s[scores={gm4_ml_ore_cu=0,gm4_ml_ore_al=0,gm4_ml_ore_ba=0,gm4_ml_ore_th=0}] run summon item ~ ~ ~ {Item:{id:"minecraft:obsidian",Count:1b,tag:{display:{Lore:["slightly damaged obsidian"]}}}}
+execute if score @s gm4_ml_heat matches ..89 if entity @s[scores={gm4_ml_ore_cu=0,gm4_ml_ore_al=0,gm4_ml_ore_ba=0,gm4_ml_ore_th=0}] run summon item ~ ~ ~ {Item:{id:"minecraft:obsidian",Count:1b,tag:{display:{Lore:['"slightly damaged obsidian"']}}}}
 
 
 #set mould with metal in it
