@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "sunken_treasure:item_treasure/shared",
+          "weight": 189
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "sunken_treasure:item_treasure/base",
+          "weight": 11
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 #announce module installation
-tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Installing Desire Lines..."}]
-execute unless entity @p run say GM4: Installing Desire Lines...
+tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Installing Desire Lines...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.desire_lines"}]}]}]
+execute unless entity @a[limit=1] run say GM4: Installing Desire Lines...
 
 #declare and initialise scoreboards and settings
 scoreboard players set update_happened gm4_up_check 1
@@ -13,8 +13,8 @@ scoreboard objectives add gm4_dl_sprint minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add gm4_dl_affcoarse dummy
 
 #announce success
-tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Desire Lines Installed!"}]
-execute unless entity @p run say GM4: Desire Lines Installed!
+tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Desire Lines Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.desire_lines"}]}]}]
+execute unless entity @a[limit=1] run say GM4: Desire Lines Installed!
 
 #check other modules to make sure they're up to date.
 #$moduleUpdateList

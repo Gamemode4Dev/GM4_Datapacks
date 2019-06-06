@@ -1,20 +1,30 @@
 {
-  "display":{
-    "icon":{
-      "item":"minecraft:firework_rocket",
-      "nbt":"{display:{Name:'\"phantom_scarecrows logo\"'}}"
+  "display": {
+    "icon": {
+      "item": "minecraft:firework_rocket",
+      "nbt": "{CustomModelData:1}"
     },
-    "title":"Not so smart defenses",
-    "description":{
-      "text":"Get hit by a Phantom Scarecrow",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Not so smart defenses",
+        {"translate": "advancement.gm4.phantom_scarecrows.title"}
+      ]
     },
-    "hidden":true
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Get hit by a Phantom Scarecrow",
+        {"translate": "advancement.gm4.phantom_scarecrows.description"}
+      ],
+      "color": "gray"
+    },
+    "hidden": true
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "phantom_scarecrows_hurt":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:root",
+  "criteria": {
+    "phantom_scarecrows_hurt": {
+      "trigger": "minecraft:impossible"
     }
   }
 }

@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"minecart",
-      "nbt":"{display:{Name:'\"ziprails logo\"'}}"
+  "display": {
+    "icon": {
+      "item": "minecart",
+      "nbt": "{CustomModelData:1}"
     },
-    "title":"Wheeeeeeeee",
-    "description":{
-      "text":"Fly through the sky on a ziprail.",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Wheeeeeeeee",
+        {"translate": "advancement.gm4.ziprails.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Fly through the sky on a ziprail.",
+        {"translate": "advancement.gm4.ziprails.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "ride_ziprail":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:root",
+  "criteria": {
+    "ride_ziprail": {
+      "trigger": "minecraft:impossible"
     }
   }
 }

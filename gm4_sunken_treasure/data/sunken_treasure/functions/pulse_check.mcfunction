@@ -1,2 +1,3 @@
-execute as @a if score @s gm4_st_sand matches 1.. if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:fortune"}]}}}] at @s if block ~ ~ ~ water if block ~ ~1 ~ water if block ~ ~2 ~ water if block ~ ~3 ~ water if block ~ ~4 ~ water run function sunken_treasure:check_treasure
-execute as @a if score @s gm4_st_sand matches 1.. run scoreboard players reset @s gm4_st_sand
+execute as @a[scores={gm4_st_sand=1..}] at @s if block ~ ~ ~ minecraft:water if block ~ ~1 ~ minecraft:water if block ~ ~2 ~ minecraft:water if block ~ ~3 ~ minecraft:water if block ~ ~4 ~ minecraft:water anchored eyes positioned ^ ^ ^2 at @e[type=minecraft:item,limit=1,distance=..3,nbt={Item:{id:"minecraft:sand"},Age:0s}] run function sunken_treasure:spawn_treasure
+
+scoreboard players reset @a gm4_st_sand
