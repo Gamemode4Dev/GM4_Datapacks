@@ -1,6 +1,0 @@
-{
-  "values":[
-    "sensus_shamir:transfer_shamir/initiate_transfer",
-    "arborenda_shamir:transfer_shamir/initiate_transfer"
-  ]
-}

@@ -1,6 +1,0 @@
-{
-  "values":[
-    "spiraculum_shamir:transfer_shamir/initiate_transfer",
-    "tinker_shamir:transfer_shamir/initiate_transfer"
-  ]
-}

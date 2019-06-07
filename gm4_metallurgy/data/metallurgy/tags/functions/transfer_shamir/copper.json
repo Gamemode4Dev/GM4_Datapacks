@@ -1,6 +1,0 @@
-{
-  "values":[
-    "forterra_shamir:transfer_shamir/initiate_transfer",
-    "hypexperia_shamir:transfer_shamir/initiate_transfer"
-  ]
-}

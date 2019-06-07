@@ -1,7 +1,0 @@
-{
-  "values":[
-    "defuse_shamir:transfer_shamir/initiate_transfer",
-    "helios_shamir:transfer_shamir/initiate_transfer",
-    "levity_shamir:transfer_shamir/initiate_transfer"
-  ]
-}
