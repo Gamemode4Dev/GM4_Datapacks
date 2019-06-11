@@ -11,13 +11,10 @@ execute if block ~ ~ ~ hopper{Items:[{Slot:0b,Count:1b}]} run function liquid_ta
 execute unless block ~ ~ ~ hopper{Items:[{Slot:0b}]} run tag @s remove gm4_lt_drain
 execute unless block ~ ~ ~ hopper{Items:[{Slot:0b}]} run tag @s remove gm4_lt_fill
 
-#apply buffer and display level update
-execute unless score @s gm4_lt_buffer matches 0 run function liquid_tanks:liquid_value_update
-
 
 #entity processing
 execute align xyz positioned ~ ~1 ~ if entity @e[type=!armor_stand,dx=0] run function #liquid_tanks:util_above
 execute align xyz positioned ~ ~-1 ~ if entity @e[type=!armor_stand,dx=0] run function #liquid_tanks:util_below
 
-#apply buffer and display level update
-execute unless score @s gm4_lt_buffer matches 0 run function liquid_tanks:liquid_value_update
+# if value changed update display level
+execute unless score @s gm4_lt_old_value = @s gm4_lt_value run function liquid_tanks:liquid_value_update
