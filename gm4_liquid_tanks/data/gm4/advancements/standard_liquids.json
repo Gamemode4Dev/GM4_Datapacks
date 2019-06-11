@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"experience_bottle",
-      "nbt":"{CustomModelData:NUMBER}"
+      "nbt":"{CustomModelData:1}"
     },
     "title":{
       "translate": "%1$s",

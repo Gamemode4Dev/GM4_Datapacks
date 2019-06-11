@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"potion",
-      "nbt":"{CustomModelData:NUMBER,CustomPotionColor:13631487}"
+      "nbt":"{CustomModelData:2,CustomPotionColor:13631487}"
     },
     "title":{
       "translate":"%1$s",
