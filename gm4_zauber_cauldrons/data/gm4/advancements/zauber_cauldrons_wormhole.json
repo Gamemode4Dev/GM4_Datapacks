@@ -5,14 +5,14 @@
       "nbt": "{CustomModelData:1}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Questionable Ingredients",
         {"translate": "advancement.gm4.zauber_cauldrons.wormhole.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Just like the rabbits!",
         {"translate": "advancement.gm4.zauber_cauldrons.wormhole.description"}

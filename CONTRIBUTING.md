@@ -37,7 +37,7 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
 - All visible text (names, lore, actionbar, advancements) should use translation keys:
 ```json
 {
-  "translate": "%1$s",
+  "translate": "%1$s%3427655$s",
   "with": [
     "Clever Crushing",
     {"translate": "advancement.gm4.block_compressors.title"}

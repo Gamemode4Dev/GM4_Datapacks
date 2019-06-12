@@ -33,7 +33,7 @@
             {
               "function": "set_name",
               "name": {
-                "translate": "%1$s",
+                "translate": "%1$s%3427655$s",
                 "with": [
                   "Bat Leather",
                   {
@@ -47,7 +47,7 @@
               "function": "set_lore",
               "lore": [
                 {
-                  "translate": "%1$s",
+                  "translate": "%1$s%3427655$s",
                   "with": [
                     "Would make for a very strange,",
                     {
@@ -56,7 +56,7 @@
                   ]
                 },
                 {
-                  "translate": "%1$s",
+                  "translate": "%1$s%3427655$s",
                   "with": [
                     "very tiny jacket",
                     {
