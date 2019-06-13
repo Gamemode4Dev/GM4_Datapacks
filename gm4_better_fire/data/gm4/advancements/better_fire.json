@@ -1,30 +1,40 @@
 {
-  "display":{
-    "icon":{
-      "item":"bow",
-      "nbt":"{Enchantments:[{id:\"flame\",lvl:1}],display:{Name:'\"better_fire logo\"'}}"
+  "display": {
+    "icon": {
+      "item": "bow",
+      "nbt": "{Enchantments:[{id:\"flame\",lvl:1}],CustomModelData:1}"
     },
-    "title":"Flint 'n Stick",
-    "description":{
-      "text":"Fire a Flame Bow",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Flint 'n Stick",
+        {"translate": "advancement.gm4.better_fire.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Fire a Flame Bow",
+        {"translate": "advancement.gm4.better_fire.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "gm4_better_fire_shoot_fire_arrow":{
-      "trigger":"minecraft:item_durability_changed",
-      "conditions":{
-        "delta":-1,
-        "item":{
-          "enchantments":[{
-            "enchantment":"minecraft:flame",
-            "levels":1
-          }],
-          "item":"minecraft:bow"
+  "parent": "gm4:root",
+  "criteria": {
+    "gm4_better_fire_shoot_fire_arrow": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "delta": -1,
+        "item": {
+          "enchantments":[
+            {
+              "enchantment": "minecraft:flame",
+              "levels": 1
+              }
+            ],
+          "item": "minecraft:bow"
         }
-
-
       }
     }
   }

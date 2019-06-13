@@ -1,19 +1,31 @@
 {
-  "display":{
-    "icon":{
-      "item":"poisonous_potato",
-      "nbt":"{display:{Name:'\"chairs logo\"'}}"
+  "display": {
+    "icon": {
+      "item": "poisonous_potato",
+      "nbt": "{CustomModelData:1}"
     },
-    "title":"Couch Potato",
-    "description":{
-      "text":"Sit for over an hour!",
-      "color":"gray"
-    }
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Couch Potato",
+        {"translate": "advancement.gm4.chairs.sit.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Sit for over an hour!",
+        {"translate": "advancement.gm4.chairs.sit.description"}
+      ],
+      "color": "gray"
+    },
+    "frame":"goal",
+    "hidden":true
   },
-  "parent":"gm4:chairs_creation",
-  "criteria":{
-    "TRIGGER_NAME":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:chairs_creation",
+  "criteria": {
+    "hour_in_chair": {
+      "trigger": "minecraft:impossible"
     }
   }
 }

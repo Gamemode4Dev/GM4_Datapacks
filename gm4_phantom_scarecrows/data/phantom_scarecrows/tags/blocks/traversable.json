@@ -9,8 +9,7 @@
     "minecraft:heavy_weighted_pressure_plate",
     "#minecraft:buttons",
     "minecraft:ladder",
-    "minecraft:sign",
-    "minecraft:wall_sign",
+    "#minecraft:signs",
     "minecraft:tripwire",
     "minecraft:tripwire_hook",
     "#minecraft:banners"
