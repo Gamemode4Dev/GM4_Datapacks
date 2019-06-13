@@ -22,7 +22,9 @@ data = {
 
     "river": ["river", "frozen_river"],
 
-    "beach": ["stone_shore", "beach", "snowy_beach"]
+    "beach": ["stone_shore", "beach", "snowy_beach"],
+
+    "border": ["river"],
 }
 
 out = {"pools": [
