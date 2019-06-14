@@ -1,8 +1,8 @@
 #run from liquid_tanks:pulse_check
 
 #experience deposit
-execute if score standard_liquids_deposit_experience gm4_lt_util matches 1.. as @a[gamemode=!spectator,level=1..] at @s if block ~ ~-0.4 ~ hopper{CustomName:"{\"text\":\"Empty Tank\"}"} positioned ~ ~-0.4 ~ align xyz positioned ~0.5 ~ ~0.5 as @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,distance=..0.5,tag=gm4_lt_empty] run function standard_liquids:liquid_init/experience
-execute if score standard_liquids_deposit_experience gm4_lt_util matches 1.. as @a[gamemode=!spectator] at @s if block ~ ~-0.4 ~ hopper{CustomName:"{\"text\":\"Experience Tank\"}"} positioned ~ ~-0.4 ~ align xyz positioned ~0.5 ~ ~0.5 if score @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,distance=..0.5,tag=gm4_lt_experience] gm4_lt_value matches ..1394 run function standard_liquids:util/deposit_experience
+execute if score standard_liquids_deposit_experience gm4_lt_util matches 1.. as @a[gamemode=!spectator,level=1..] at @s if block ~ ~-0.4 ~ hopper positioned ~ ~-0.4 ~ align xyz positioned ~0.5 ~ ~0.5 as @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,distance=..0.5,tag=gm4_lt_empty] run function standard_liquids:liquid_init/experience
+execute if score standard_liquids_deposit_experience gm4_lt_util matches 1.. as @a[gamemode=!spectator] at @s if block ~ ~-0.4 ~ hopper positioned ~ ~-0.4 ~ align xyz positioned ~0.5 ~ ~0.5 if score @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,distance=..0.5,tag=gm4_lt_experience] gm4_lt_value matches ..1394 run function standard_liquids:util/deposit_experience
 
 execute if score standard_liquids_deposit_experience gm4_lt_util matches 1 run scoreboard players set standard_liquids_deposit_experience gm4_lt_util 2
 
