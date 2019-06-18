@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "name_tag",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s",
+      "with": [
+        "Holo-riffic!",
+        {"translate": "advancement.gm4.holographic_tags.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s",
+      "with": [
+        "Create a Hologram",
+        {"translate": "advancement.gm4.holographic_tags.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "create_hologram": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
