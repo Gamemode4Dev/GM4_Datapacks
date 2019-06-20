@@ -8,6 +8,7 @@ scoreboard players set weighted_armour gm4_modules 1
 scoreboard players set weighted_armour gm4_clock_tick 0
 
 scoreboard objectives add gm4_armor armor
+scoreboard objectives add gm4_armor_weight dummy
 
 #announce success
 tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Weighted Armour Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.weighted_armour"}]}]}]
