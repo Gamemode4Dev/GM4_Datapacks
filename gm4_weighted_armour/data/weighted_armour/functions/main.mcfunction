@@ -7,6 +7,7 @@ scoreboard players set @s[scores={gm4_armor=16..19}] gm4_armor_weight 2
 scoreboard players set @s[scores={gm4_armor=20..}] gm4_armor_weight 3
 
 function #weighted_armour:weight_modifiers
-effect give @s[scores={gm4_armor_weight=1}] slowness 1 0 true
-effect give @s[scores={gm4_armor_weight=2}] slowness 1 1 true
-effect give @s[scores={gm4_armor_weight=3}] slowness 1 2 true
+function #weighted_armour:apply_weight_effects
+effect give @s[scores={gm4_armor_weight=1}] slowness 2 0 true
+effect give @s[scores={gm4_armor_weight=2}] slowness 2 1 true
+effect give @s[scores={gm4_armor_weight=3}] slowness 2 2 true
