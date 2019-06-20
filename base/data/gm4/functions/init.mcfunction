@@ -1,8 +1,8 @@
 #This function runs if gamemode 4 has never been used before.
 #It adds global scoreboards and other gamemode 4 base code.
 
-tellraw @a [{"translate": "%1$s","with":["[GM4]: ",{"translate": "text.gm4.prefix"}],"color":"green"},{"translate": "%1$s","with":["Welcome to Gamemode 4. Initialising...",{"translate": "text.gm4.modules.init"}],"color":"green"}]
-execute unless entity @p run say [GM4]: Welcome to Gamemode 4. Initialising...
+tellraw @a [{"translate": "%1$s%3427655$s","with":["[GM4]: ",{"translate": "text.gm4.prefix"}],"color":"green"},{"translate": "%1$s%3427655$s","with":["Welcome to Gamemode 4. Initialising...",{"translate": "text.gm4.modules.init"}],"color":"green"}]
+execute unless entity @a[limit=1] run say [GM4]: Welcome to Gamemode 4. Initialising...
 
 #declare and initialise scoreboards and settings
 scoreboard objectives add gm4_clock_tick dummy

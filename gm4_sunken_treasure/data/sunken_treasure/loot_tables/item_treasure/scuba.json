@@ -16,7 +16,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s",
+                "translate": "%1$s%3427655$s",
                 "with": [
                   "Waders",
                   {"translate":"item.gm4.waders"}
@@ -64,7 +64,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s",
+                "translate": "%1$s%3427655$s",
                 "with": [
                   "Flippers",
                   {"translate":"item.gm4.flippers"}
@@ -114,7 +114,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s",
+                "translate": "%1$s%3427655$s",
                 "with": [
                   "SCUBA Tank",
                   {"translate":"item.gm4.scuba_tank"}

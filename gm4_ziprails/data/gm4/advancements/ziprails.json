@@ -5,14 +5,14 @@
       "nbt": "{CustomModelData:1}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Wheeeeeeeee",
         {"translate": "advancement.gm4.ziprails.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Fly through the sky on a ziprail.",
         {"translate": "advancement.gm4.ziprails.description"}

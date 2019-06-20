@@ -5,14 +5,14 @@
       "nbt": "{CustomModelData:3,SkullOwner:\"MHF_Enderman\"}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Ender Aid",
         {"translate": "advancement.gm4.enderman_support_class.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Come into contact with a support Enderman",
         {"translate": "advancement.gm4.enderman_support_class.description"}

@@ -5,14 +5,14 @@
       "nbt": "{CustomModelData:1}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Potion Chef",
         {"translate": "advancement.gm4.zauber_cauldrons.creation.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Create a Zauber Cauldron",
         {"translate": "advancement.gm4.zauber_cauldrons.creation.description"}
