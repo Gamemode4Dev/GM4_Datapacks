@@ -1,7 +1,7 @@
 # @s = item frame with renamed name tag if on a wool block
 # run from create_hologram
 
-execute if block ^ ^ ^-.75 white_wool run team join gm4_holo_white
+execute if block ^ ^ ^-.75 white_wool run team join gm4_ht_white
 execute if block ^ ^ ^-.75 orange_wool run team join gm4_ht_orange
 execute if block ^ ^ ^-.75 magenta_wool run team join gm4_ht_magenta
 execute if block ^ ^ ^-.75 light_blue_wool run team join gm4_ht_lightblue
