@@ -1,5 +1,5 @@
 #announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Installing Zauber Cauldrons...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.zauber_armour"}]}]}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Installing Zauber Cauldrons...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.zauber_armour"}]}]}]
 execute unless entity @a[limit=1] run say GM4: Installing Zauber Cauldrons...
 
 #declare and initialise scoreboards and settings
@@ -22,7 +22,7 @@ function zauber_cauldrons:recipes/chorus/initiate_chorus_amounts
 scoreboard players set modulo gm4_zc_fullness 3
 
 #announce success
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s","with":["Zauber Cauldrons Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.zauber_armour"}]}]}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Zauber Cauldrons Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.zauber_armour"}]}]}]
 execute unless entity @a[limit=1] run say GM4: Zauber Cauldrons Installed!
 
 #check other modules to make sure they're up to date.

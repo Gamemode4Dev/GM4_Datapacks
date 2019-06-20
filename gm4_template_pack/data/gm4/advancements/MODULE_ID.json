@@ -5,14 +5,14 @@
       "nbt": "{CustomModelData:1}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Plain Ol' Advancement Title",
         {"translate": "advancement.gm4.MODULE_ID.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Noone's bothered to give me a description yet... They won't... They don't care about me....",
         {"translate": "advancement.gm4.MODULE_ID.description"}
