@@ -1,9 +1,9 @@
-itemsitems{
+{
   "criteria":{
     "consume_infused_carrot":{
       "trigger":"minecraft:consume_item",
       "conditions":{
-        "item":{items
+        "item":{
           "nbt":"{gm4_potion_infusers:{item:\"night_vision_carrot\"}}"
         }
       }
