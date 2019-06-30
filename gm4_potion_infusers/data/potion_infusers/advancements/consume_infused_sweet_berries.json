@@ -1,0 +1,15 @@
+items{
+  "criteria":{
+    "consume_infused_sweet_berries":{
+      "trigger":"minecraft:consume_item",
+      "conditions":{
+        "item":{
+          "nbt":"{gm4_potion_infusers:{item:\"strength_sweet_berries\"}}"
+        }
+      }
+    }
+  },
+ "rewards":{
+   "function":"potion_infusers:items/strength_sweet_berries"
+ }
+}

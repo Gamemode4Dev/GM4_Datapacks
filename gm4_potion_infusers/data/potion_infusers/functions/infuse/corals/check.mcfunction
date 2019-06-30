@@ -1,0 +1,33 @@
+#@s = infusing AEC with Age:80
+#run from infusion
+
+execute if entity @s[tag=gm4_infuse_tube_coral] run function potion_infusers:infuse/corals/tube_coral
+execute if entity @s[tag=gm4_infuse_brain_coral] run function potion_infusers:infuse/corals/brain_coral
+execute if entity @s[tag=gm4_infuse_bubble_coral] run function potion_infusers:infuse/corals/bubble_coral
+execute if entity @s[tag=gm4_infuse_fire_coral] run function potion_infusers:infuse/corals/fire_coral
+execute if entity @s[tag=gm4_infuse_horn_coral] run function potion_infusers:infuse/corals/horn_coral
+execute if entity @s[tag=gm4_infuse_tube_coral_block] run function potion_infusers:infuse/corals/tube_coral_block
+execute if entity @s[tag=gm4_infuse_brain_coral_block] run function potion_infusers:infuse/corals/brain_coral_block
+execute if entity @s[tag=gm4_infuse_bubble_coral_block] run function potion_infusers:infuse/corals/bubble_coral_block
+execute if entity @s[tag=gm4_infuse_fire_coral_block] run function potion_infusers:infuse/corals/fire_coral_block
+execute if entity @s[tag=gm4_infuse_horn_coral_block] run function potion_infusers:infuse/corals/horn_coral_block
+execute if entity @s[tag=gm4_infuse_live_tube_coral] run function potion_infusers:infuse/corals/live_tube_coral
+execute if entity @s[tag=gm4_infuse_live_brain_coral] run function potion_infusers:infuse/corals/live_brain_coral
+execute if entity @s[tag=gm4_infuse_live_bubble_coral] run function potion_infusers:infuse/corals/live_bubble_coral
+execute if entity @s[tag=gm4_infuse_live_fire_coral] run function potion_infusers:infuse/corals/live_fire_coral
+execute if entity @s[tag=gm4_infuse_live_horn_coral] run function potion_infusers:infuse/corals/live_horn_coral
+execute if entity @s[tag=gm4_infuse_live_tube_coral_fan] run function potion_infusers:infuse/corals/live_tube_coral_fan
+execute if entity @s[tag=gm4_infuse_live_brain_coral_fan] run function potion_infusers:infuse/corals/live_brain_coral_fan
+execute if entity @s[tag=gm4_infuse_live_bubble_coral_fan] run function potion_infusers:infuse/corals/live_bubble_coral_fan
+execute if entity @s[tag=gm4_infuse_live_fire_coral_fan] run function potion_infusers:infuse/corals/live_fire_coral_fan
+execute if entity @s[tag=gm4_infuse_live_horn_coral_fan] run function potion_infusers:infuse/corals/live_horn_coral_fan
+execute if entity @s[tag=gm4_infuse_live_tube_coral_wall_fan] run function potion_infusers:infuse/corals/live_tube_coral_wall_fan
+execute if entity @s[tag=gm4_infuse_live_brain_coral_wall_fan] run function potion_infusers:infuse/corals/live_brain_coral_wall_fan
+execute if entity @s[tag=gm4_infuse_live_bubble_coral_wall_fan] run function potion_infusers:infuse/corals/live_bubble_coral_wall_fan
+execute if entity @s[tag=gm4_infuse_live_fire_coral_wall_fan] run function potion_infusers:infuse/corals/live_fire_coral_wall_fan
+execute if entity @s[tag=gm4_infuse_live_horn_coral_wall_fan] run function potion_infusers:infuse/corals/live_horn_coral_wall_fan
+execute if entity @s[tag=gm4_infuse_live_tube_coral_block] run function potion_infusers:infuse/corals/live_tube_coral_block
+execute if entity @s[tag=gm4_infuse_live_brain_coral_block] run function potion_infusers:infuse/corals/live_brain_coral_block
+execute if entity @s[tag=gm4_infuse_live_bubble_coral_block] run function potion_infusers:infuse/corals/live_bubble_coral_block
+execute if entity @s[tag=gm4_infuse_live_fire_coral_block] run function potion_infusers:infuse/corals/live_fire_coral_block
+execute if entity @s[tag=gm4_infuse_live_horn_coral_block] run function potion_infusers:infuse/corals/live_horn_coral_block

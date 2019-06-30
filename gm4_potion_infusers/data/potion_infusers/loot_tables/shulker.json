@@ -1,0 +1,52 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "shulker_shell",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{CustomModelData:2}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  "Lightweight Shell",
+                  {
+                    "translate": "item.gm4.lightweight_shell"
+                  }
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Floaty!",
+                    {
+                      "translate": "item.gm4.lightweight_shell.lore"
+                    }
+                  ],
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

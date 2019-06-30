@@ -1,0 +1,22 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Potion Infusers",
+  "module_id":"potion_infusers",
+  "site_description":"Adds the ability for liquid tanks to infuse potions into blocks",
+  "site_categories":["Liquid Tanks"],
+  "video_link":"",
+  "wiki_link":"https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Infusers",
+  "required_modules":[
+    "liquid_tanks",
+    "potion_liquids"
+  ],
+  "recommended_modules":["liquid_minecarts"],
+  "credits":{
+    "Creator":[
+      ["BluePsychoRanger","https://twitter.com/BluPsychoRanger"]
+    ]
+  }
+}
