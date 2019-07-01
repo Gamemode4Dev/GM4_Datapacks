@@ -1,3 +1,4 @@
-setblock ~ ~ ~ structure_block{ignoreEntities:0b,posX:-3,mode:"LOAD",posY:-1,posZ:-3,showair:0b,name:"tower_structures:default",showboundingbox:0b}
-setblock ~ ~1 ~ redstone_block
-function orbis:structure/finish
+execute unless block ~ 4 ~ bedrock unless block ~ 3 ~ bedrock run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Default Tower","structure":{"name":"tower_structures:default",posX:-3,posY:-1,posZ:-3}}}}}
+execute unless block ~ 4 ~ bedrock if block ~ 3 ~ bedrock run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Large Default Tower","structure":{"name":"tower_structures:default",posX:-4,posY:-1,posZ:-4}}}}}
+execute if block ~ 4 ~ bedrock unless block ~ 3 ~ bedrock run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Dark Oak Tower","structure":{"name":"tower_structures:default3",posX:-2,posY:-1,posZ:-2}}}}}
+execute if block ~ 4 ~ bedrock if block ~ 3 ~ bedrock run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Stone Tower","structure":{"name":"tower_structures:default4",posX:-4,posY:-1,posZ:-4}}}}}
