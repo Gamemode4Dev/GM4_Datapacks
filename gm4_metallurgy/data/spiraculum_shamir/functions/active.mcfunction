@@ -1,5 +1,6 @@
-#run from metallurgy:main
-#@s = players holding a spiraculum bucket in one or the other hand
+# @s = player holding a spiraculum bucket in one or the other hand
+# run from metallurgy:main
+
 tag @s add gm4_has_spiraculum
 execute as @e[tag=gm4_no_spiraculum] at @s unless entity @a[tag=gm4_has_spiraculum,distance=..10] run tag @s remove gm4_no_spiraculum
 execute positioned ~-5 ~-1 ~-5 run tag @e[type=!player,dx=10,dy=2,dz=10,nbt={DeathTime:0s}] add gm4_in_spiraculum

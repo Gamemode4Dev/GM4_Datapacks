@@ -1,3 +1,6 @@
+# @s = player with the conduction shamir in their hands
+# run from metallurgy:has_shamir
+
 tag @s add gm4_has_conduction
 
 #initiate volt_time

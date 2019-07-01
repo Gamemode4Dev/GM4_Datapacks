@@ -41,8 +41,7 @@ scoreboard objectives add gm4_note_collect totalKillCount
 scoreboard objectives add gm4_note_time dummy
 
 #sensus
-scoreboard objectives add gm4_sensus_layer dummy
-scoreboard players set current_sensus_layer gm4_sensus_layer 0
+scoreboard players set current_sensus_layer gm4_ml_data 0
 
 #levity
 scoreboard objectives add gm4_levity_sneak minecraft.custom:minecraft.sneak_time

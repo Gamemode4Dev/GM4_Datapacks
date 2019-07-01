@@ -1,5 +1,5 @@
 #@s = players wearing levity boots at @s
-#run from metallurgy:main
+#run from metallurgy:has_shamir
 
 scoreboard players set levity_active gm4_ml_data 1
 tag @s add gm4_has_levity
