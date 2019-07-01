@@ -1,5 +1,3 @@
-execute unless block ~ 4 ~ bedrock run setblock ~ ~ ~ structure_block{ignoreEntities:0b,posX:-3,mode:"LOAD",posY:-1,posZ:-3,showair:0b,name:"tower_structures:desert",showboundingbox:0b}
-execute if block ~ 4 ~ bedrock unless block ~ 3 ~ bedrock run setblock ~ ~ ~ structure_block{ignoreEntities:0b,posX:-4,mode:"LOAD",posY:-1,posZ:-4,showair:0b,name:"tower_structures:desert2",showboundingbox:0b}
-execute if block ~ 4 ~ bedrock if block ~ 3 ~ bedrock run setblock ~ ~ ~ structure_block{ignoreEntities:0b,posX:-2,mode:"LOAD",posY:-1,posZ:-2,showair:0b,name:"tower_structures:spruce_scaffold",showboundingbox:0b}
-setblock ~ ~1 ~ redstone_block
-function orbis:structure/finish
+execute unless block ~ 4 ~ bedrock run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Desert Tower","structure":{"name":"tower_structures:desert",posX:-3,posY:-1,posZ:-3}}}}}
+execute if block ~ 4 ~ bedrock unless block ~ 3 ~ bedrock run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Large Desert Tower","structure":{"name":"tower_structures:desert2",posX:-4,posY:-1,posZ:-4}}}}}
+execute if block ~ 4 ~ bedrock if block ~ 3 ~ bedrock run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Spruce Scaffold Tower","structure":{"name":"tower_structures:spruce_scaffold",posX:-2,posY:-1,posZ:-2}}}}}
