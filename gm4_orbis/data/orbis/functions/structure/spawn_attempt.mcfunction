@@ -1,7 +1,7 @@
 # choose a structure if possible and spawn it
 function #orbis:structure/spawn
 execute as @e[type=item,tag=gm4_orbis_structure,sort=random,limit=1] at @s run function orbis:structure/spawn
-kill @e[type=area_effect_cloud,tag=gm4_orbis_structure]
+kill @e[type=item,tag=gm4_orbis_structure]
 
 # populate the structure with chests and spawners
 execute as @e[type=area_effect_cloud,tag=gm4_orbis_populate] at @s run function #orbis:structure/populate_init
@@ -10,4 +10,4 @@ execute as @e[type=area_effect_cloud,tag=gm4_orbis_populate_marker,sort=random] 
 kill @e[type=area_effect_cloud,tag=gm4_orbis_populate_marker]
 
 # set scoreboard to prevent another structure to be spawned
-scoreboard players set structure_height gm4_count 60
+scoreboard players set structure_height gm4_count -1

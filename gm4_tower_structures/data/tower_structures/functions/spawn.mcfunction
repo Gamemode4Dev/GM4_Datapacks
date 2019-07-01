@@ -4,4 +4,4 @@ execute if score structure_height gm4_count matches 80.. if score desert gm4_orb
 execute if score structure_height gm4_count matches 80.. if score badlands gm4_orbis_biome matches 1 run function tower_structures:spawn/badlands
 execute if score structure_height gm4_count matches 80.. if score snowy gm4_orbis_biome matches 1 run function tower_structures:spawn/snowy
 
-execute if score structure_height gm4_count matches ..50 unless score ocean gm4_orbis_biome matches 1 unless score desert gm4_orbis_biome matches 1 unless score badlands gm4_orbis_biome matches 1 unless score snowy gm4_orbis_biome matches 1 run function tower_structures:spawn/default
+execute if score structure_height gm4_count matches 80.. unless score ocean gm4_orbis_biome matches 1 unless score desert gm4_orbis_biome matches 1 unless score badlands gm4_orbis_biome matches 1 unless score snowy gm4_orbis_biome matches 1 run function tower_structures:spawn/default
