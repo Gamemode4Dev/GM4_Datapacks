@@ -7,7 +7,7 @@
   "module_id":"tnt_landmines",
   "site_description":"Craft 'em up, throw 'em down, blow 'em up!",
   "site_categories":["Custom Crafting"],
-  "video_link":"YOUTUBE_VIDEO_URL",
+  "video_link":"",
   "wiki_link":"https://wiki.gm4.co/wiki/TNT_Landmines",
   "required_modules":[
     "custom_crafters"
@@ -15,7 +15,7 @@
   "recommended_modules":[],
   "credits":{
     "Creator":[
-      ["Sparks","https://www.twitter.com/SparksTheGamer""]
+      ["Sparks","https://www.twitter.com/SparksTheGamer"]
     ],
     "Updated By":[
       ["kruthers","https://twitter.com/Pandakruthers"]
