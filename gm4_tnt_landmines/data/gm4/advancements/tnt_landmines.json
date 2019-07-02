@@ -1,25 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"tnt",
-      "nbt":"{display:{Name:\"\\\"tnt_landmines logo\\\"\"}}"
+  "display": {
+    "icon": {
+      "item": "tnt",
+      "nbt": "{CustomModelData:1}"
     },
-    "title":"Didn't see that coming",
-    "description":{
-      "text":"Get killed by a landmine",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Didn't see that coming",
+        {"translate": "advancement.gm4.tnt_landmines.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Get killed by a landmine",
+        {"translate": "advancement.gm4.tnt_landmines.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "get_blownup":{
-      "trigger":"minecraft:entity_killed_player",
-      "conditions":{
-        "entity":{
-          "type":"minecraft:creeper",
-          "nbt":"{Tags:[\"gm4_tntlandmine\"]}"
-        }
-      }
+  "parent": "gm4:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
     }
   }
 }
