@@ -7,7 +7,7 @@
   "module_id":"custom_crafters",
   "site_description":"A base module that adds a custom crafting table to the game.",
   "site_categories":["Custom Crafting"],
-  "video_link":"https://www.youtube.com/watch?v=ibtS4zAvglQ",
+  "video_link":"https://www.youtube.com/watch?v=_GekIoefncg",
   "wiki_link":"https://wiki.gm4.co/wiki/Custom_Crafters",
   "required_modules":[],
   "recommended_modules":[
@@ -19,10 +19,10 @@
   ],
   "credits":{
     "Creator":[
-      ["Sparks","https://www.twitter.com/accidentalgames"]
+      ["Sparks","https://www.twitter.com/SparksTheGamer"]
     ],
     "Updated by":[
-      ["Bluefire610","https://www.twitter.com/bluefire610"],
+      ["Bloo","https://www.twitter.com/bluefire610"],
       ["Sparks","https://www.twitter.com/accidentalgames"],
       ["SpecialBuilder32","https://www.twitter.com/SpecialBuilder"]
     ]

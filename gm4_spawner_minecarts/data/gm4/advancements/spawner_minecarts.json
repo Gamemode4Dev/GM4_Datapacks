@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"spawner",
-      "nbt":"{display:{Name:\"\\\"spawner_minecarts logo\\\"\"}}"
+  "display": {
+    "icon": {
+      "item": "spawner",
+      "nbt": "{display:{Name:'\"spawner_minecarts logo\"'}}"
     },
-    "title":"Don't go breaking my Cart",
-    "description":{
-      "text":"Capture a Monster Spawner",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Don't go breaking my Cart",
+        {"translate": "advancement.gm4.spawner_minecarts.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Capture a Monster Spawner",
+        {"translate": "advancement.gm4.spawner_minecarts.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "capture_spawner_cart":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:root",
+  "criteria": {
+    "capture_spawner_cart": {
+      "trigger": "minecraft:impossible"
     }
   }
 }

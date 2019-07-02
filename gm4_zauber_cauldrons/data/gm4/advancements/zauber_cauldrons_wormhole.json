@@ -1,22 +1,32 @@
 {
-  "display":{
-    "icon":{
-      "item":"chorus_fruit",
-      "nbt":"{display:{Name:\"\\\"zauber_cauldrons logo\\\"\"}}"
+  "display": {
+    "icon": {
+      "item": "chorus_fruit",
+      "nbt": "{CustomModelData:1}"
     },
-    "title":"Questionable Ingredients",
-    "description":{
-      "text":"Just like the rabbits!",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Questionable Ingredients",
+        {"translate": "advancement.gm4.zauber_cauldrons.wormhole.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Just like the rabbits!",
+        {"translate": "advancement.gm4.zauber_cauldrons.wormhole.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:zauber_cauldrons_create",
-  "criteria":{
-    "use_wormhole_bottle":{
-      "trigger":"minecraft:consume_item",
-      "conditions":{
-        "item":{
-          "nbt":"{gm4_zauber_cauldrons:{item:\"wormhole_bottle\"}}"
+  "parent": "gm4:zauber_cauldrons_create",
+  "criteria": {
+    "use_wormhole_bottle": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "nbt": "{gm4_zauber_cauldrons:{item:\"wormhole_bottle\"}}"
         }
       }
     }

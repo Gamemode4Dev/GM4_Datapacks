@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"ladder",
-      "nbt":"{display:{Name:\"\\\"vertical_rails logo\\\"\"}}"
+  "display": {
+    "icon": {
+      "item": "ladder",
+      "nbt": "{CustomModelData:1}"
     },
-    "title":"Up, Up and Away!",
-    "description":{
-      "text":"Ride a minecart going up a vertical rail.",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Up, Up and Away!",
+        {"translate": "advancement.gm4.vertical_rails.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Ride a minecart going up a vertical rail",
+        {"translate": "advancement.gm4.vertical_rails.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "ride_vertical_rail":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:root",
+  "criteria": {
+    "ride_vertical_rail": {
+      "trigger": "minecraft:impossible"
     }
   }
 }

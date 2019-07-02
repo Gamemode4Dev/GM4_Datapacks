@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "birch_stairs",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "A throne, fit for a king!",
+        {"translate": "advancement.gm4.chairs.creation.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Throw a saddle on stairs to make a chair",
+        {"translate": "advancement.gm4.chairs.creation.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "create chair": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

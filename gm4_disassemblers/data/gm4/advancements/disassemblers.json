@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "tnt",
+      "nbt": "{CustomModelData:2}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Clever Decrafting",
+        {"translate": "advancement.gm4.disassemblers.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Craft a Disassembler",
+        {"translate": "advancement.gm4.disassemblers.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:custom_crafters",
+  "criteria": {
+    "craft_disassembler": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

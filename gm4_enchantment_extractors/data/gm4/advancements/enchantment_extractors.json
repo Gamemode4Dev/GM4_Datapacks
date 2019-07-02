@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"enchanting_table",
-      "nbt":"{display:{Name:\"\\\"enchantment_extractors logo\\\"\"}}"
+  "display": {
+    "icon": {
+      "item": "enchanting_table",
+      "nbt": "{CustomModelData:2}"
     },
-    "title":"Clever Enchanting",
-    "description":{
-      "text":"Construct an Enchantment Extractor.",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Clever Enchanting",
+        {"translate": "advancement.gm4.enchantment_extractors.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Construct an Enchantment Extractor",
+        {"translate": "advancement.gm4.enchantment_extractors.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "build_extractor":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:root",
+  "criteria": {
+    "build_extractor": {
+      "trigger": "minecraft:impossible"
     }
   }
 }

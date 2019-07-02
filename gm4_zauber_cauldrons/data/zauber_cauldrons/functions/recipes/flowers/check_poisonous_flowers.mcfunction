@@ -20,6 +20,8 @@ execute if score blue_orchid gm4_zc_flowers matches 1 if entity @e[type=item,dx=
 execute if score allium gm4_zc_flowers matches 1 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:allium"}}] run scoreboard players set cancel_recipe gm4_zc_data 1
 execute if score azure_bluet gm4_zc_flowers matches 1 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:azure_bluet"}}] run scoreboard players set cancel_recipe gm4_zc_data 1
 execute if score poppy gm4_zc_flowers matches 1 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:poppy"}}] run scoreboard players set cancel_recipe gm4_zc_data 1
+execute if score cornflower gm4_zc_flowers matches 1 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:cornflower"}}] run scoreboard players set cancel_recipe gm4_zc_data 1
+execute if score lily_of_the_valley gm4_zc_flowers matches 1 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:lily_of_the_valley"}}] run scoreboard players set cancel_recipe gm4_zc_data 1
 
 #recipe
 execute if score cancel_recipe gm4_zc_data matches 0 run function zauber_cauldrons:recipes/flowers/check_normal_flowers

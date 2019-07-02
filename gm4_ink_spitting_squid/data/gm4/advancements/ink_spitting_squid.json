@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"minecraft:ink_sac",
-      "nbt":"{display:{Name:\"\\\"ink_spitting_squid logo\\\"\"}}"
+  "display": {
+    "icon": {
+      "item": "minecraft:ink_sac",
+      "nbt": "{display:{Name:'\"ink_spitting_squid logo\"'}}"
     },
-    "title":"Natural Defenses",
-    "description":{
-      "text":"Get blinded by an underwater squid.",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Natural Defenses",
+        {"translate": "advancement.gm4.ink_spitting_squid.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Get blinded by an underwater squid",
+        {"translate": "advancement.gm4.ink_spitting_squid.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "ink_squirt_hit":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:root",
+  "criteria": {
+    "ink_squirt_hit": {
+      "trigger": "minecraft:impossible"
     }
   }
 }

@@ -1,20 +1,30 @@
 {
-  "display":{
-    "icon":{
-      "item":"command_block",
-      "nbt":"{display:{Name:\"\\\"GM4 Logo\\\"\"}}"
+  "display": {
+    "icon": {
+      "item": "command_block",
+      "nbt": "{CustomModelData:1}"
     },
-    "title":"Gamemode 4",
-    "description":{
-      "text":"Semi-funny blurb about gm4",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Gamemode 4",
+        {"translate": "advancement.gm4.root.title"}
+      ]
     },
-    "background":"textures/block/light_blue_concrete_powder.png",
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Semi-funny blurb about GM4",
+        {"translate": "advancement.gm4.root.description"}
+      ],
+      "color": "gray"
+    },
+    "background": "textures/block/light_blue_concrete_powder.png",
     "announce_to_chat": false
   },
-  "criteria":{
-    "automatic":{
-      "trigger":"minecraft:tick"
+  "criteria": {
+    "automatic": {
+      "trigger": "minecraft:tick"
     }
   }
 }

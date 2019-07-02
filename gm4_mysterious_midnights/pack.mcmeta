@@ -1,0 +1,18 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Mysterious Midnights",
+  "module_id":"mysterious_midnights",
+  "site_description":"Adds spooky full moon nights!",
+  "site_categories":[],
+  "wiki_link":"https://wiki.gm4.co/wiki/Mysterious_Midnights",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["Bloo","https://www.twitter.com/bluefire610"]
+    ]
+  }
+}

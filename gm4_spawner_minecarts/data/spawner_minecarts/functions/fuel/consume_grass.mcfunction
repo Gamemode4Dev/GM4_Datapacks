@@ -1,7 +1,7 @@
 #@s = flower_checker area_effect_cloud inside a consumable block
 #run from check_for_flower
 
-scoreboard players add @e[type=spawner_minecart,tag=gm4_processing_spawner] gm4_spawner_fuel 1
+scoreboard players add @e[type=spawner_minecart,tag=gm4_processing_spawner] gm4_spawner_fuel 2
 
 #destroy the flower
 setblock ~ ~-1 ~ dirt replace

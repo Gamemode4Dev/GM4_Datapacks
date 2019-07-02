@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"blaze_rod",
-      "nbt":"{Enchantments:[{id:mending,lvl:1}],display:{Name:\"\\\"lightning_rods_shulker logo\\\"\"}}"
+  "display": {
+    "icon": {
+      "item": "blaze_rod",
+      "nbt": "{Enchantments:[{id:mending,lvl:1}],CustomModelData:1}"
     },
-    "title":"Dr. Frankenstein",
-    "description":{
-      "text":"It's alive! Create a Shulker",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Dr. Frankenstein",
+        {"translate": "advancement.gm4.lightning_rods.shulker.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "It's alive! Create a Shulker",
+        {"translate": "advancement.gm4.lightning_rods.shulker.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "create_shulker":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:custom_crafters",
+  "criteria": {
+    "create_shulker": {
+      "trigger": "minecraft:impossible"
     }
   }
 }
