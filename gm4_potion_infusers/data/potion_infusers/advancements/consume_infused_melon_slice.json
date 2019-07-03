@@ -1,4 +1,4 @@
-items{
+{
   "criteria":{
     "consume_infused_melon_slice":{
       "trigger":"minecraft:consume_item",
