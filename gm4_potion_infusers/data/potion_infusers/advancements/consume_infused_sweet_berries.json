@@ -1,4 +1,4 @@
-items{
+{
   "criteria":{
     "consume_infused_sweet_berries":{
       "trigger":"minecraft:consume_item",
