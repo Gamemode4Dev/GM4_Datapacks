@@ -1,0 +1,22 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Noisy Blocks",
+  "module_id":"noisy_blocks",
+  "site_description":"Spruce up your game with a little extra sound!",
+  "site_categories":[],
+  "video_link":"YOUTUBE_VIDEO_URL",
+  "wiki_link":"WIKI_URL",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creators":[
+      ["Mighty Burger"]
+    ],
+    "Icon Design":[
+      ["TO BE DETERMINED"]
+    ]
+  }
+}
