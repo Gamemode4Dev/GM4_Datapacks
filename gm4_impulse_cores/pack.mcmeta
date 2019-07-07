@@ -1,0 +1,23 @@
+{
+    "pack": {
+        "pack_format": 0,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Impulse Cores",
+    "module_id": "impulse_cores",
+    "site_description": "You feel a tingling sensation... It's just your cat",
+    "site_categories": [
+        "Custom Crafting"
+    ],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Impulse_Cores",
+    "required_modules": [],
+    "recommended_modules": [
+        "custom_crafters"
+    ],
+    "credits": {
+        "Creator": [
+            ["Andante","https://twitter.com/Andantweets"]
+        ]
+    }
+}
