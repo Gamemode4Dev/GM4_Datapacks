@@ -6,7 +6,7 @@
 execute at @r[gamemode=!spectator] run spreadplayers ~ ~ 0 48 false @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point]
 
 #set Y position
-execute as @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point] at @s store result entity @s Pos.[1] double 1 run data get entity @p Pos[1]
+execute as @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point] at @s store result entity @s Pos[1] double 1 run data get entity @p Pos[1]
 
 execute as @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point] at @s run tp ~ ~-6 ~
 execute as @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point] at @s run function illusioner_nights:scan_altitude
