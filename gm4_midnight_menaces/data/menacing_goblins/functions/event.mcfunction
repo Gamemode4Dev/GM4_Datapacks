@@ -18,7 +18,7 @@ scoreboard players operation goblin_required_value gm4_menace = daytime gm4_nigh
 scoreboard players operation goblin_required_value gm4_menace %= 17 gm4_nights_data
 
 #compare values, if big enough, summon goblin
-execute if score goblin_random_value gm4_menace >= goblin_required_value gm4_menace if entity @p run function menacing_goblins:set_pos
+execute if score goblin_random_value gm4_menace >= goblin_required_value gm4_menace if entity @a[limit=1] run function menacing_goblins:set_pos
 
 #kill spawn points
 kill @e[type=area_effect_cloud,tag=gm4_goblin_spawn_point]
