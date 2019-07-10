@@ -1,0 +1,31 @@
+{
+  "pack": {
+    "pack_format": 0,
+    "description": "A Gamemode 4 Module"
+  },
+  "module_name": "Magical Musical Jukeboxes",
+  "module_id": "magical_musical_jukeboxes",
+  "site_description": "Gain effects while listening to your favorite music discs!",
+  "site_categories": [
+    "Metallurgy"
+  ],
+  "video_link": "",
+  "wiki_link": "wiki.gm4.co/wiki/Magical_Musical_Jukeboxes",
+  "required_modules": [
+    "metallurgy"
+  ],
+  "recommended_modules": [
+    "record_crafting"
+],
+  "credits": {
+    "Creator": [
+      ["BluePsychoRanger","https://twitter.com/BluPsychoRanger"]
+    ],
+    "Icon Design":[
+      ["DuckJr","https://twitter.com/DuckJr94"]
+    ],
+    "Idea by": [
+      ["Tesset"]
+    ]
+  }
+}

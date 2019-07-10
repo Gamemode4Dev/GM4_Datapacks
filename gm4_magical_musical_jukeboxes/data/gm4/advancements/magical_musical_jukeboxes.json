@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "jukebox",
+      "nbt": "{display:{Name:'\"magical_musical_jukeboxes logo\"'}}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Time to boogie!",
+        {"translate": "advancement.gm4.magical_musical_jukeboxes.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Create a magical musical jukebox",
+        {"translate": "advancement.gm4.magical_musical_jukeboxes.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:metallurgy_cast",
+  "criteria": {
+    "magical_musical_jukeboxes": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
