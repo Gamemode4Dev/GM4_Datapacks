@@ -5,14 +5,14 @@
       "nbt": "{Enchantments:[{id:mending,lvl:1}],CustomModelData:1}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Dr. Frankenstein",
         {"translate": "advancement.gm4.lightning_rods.shulker.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "It's alive! Create a Shulker",
         {"translate": "advancement.gm4.lightning_rods.shulker.description"}

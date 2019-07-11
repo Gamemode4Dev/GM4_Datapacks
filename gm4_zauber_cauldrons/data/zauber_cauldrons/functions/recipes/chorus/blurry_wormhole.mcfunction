@@ -18,7 +18,7 @@ scoreboard players operation y gm4_zc_data += dy gm4_zc_data
 scoreboard players operation z gm4_zc_data += dz gm4_zc_data
 
 #summon resulting item marked with no kill tag
-execute at @s run summon item ~ ~.2 ~ {Tags:["gm4_zc_new_wormhole_bottle"],Item:{id:potion,Count:1b,tag:{CustomModelData:1,gm4_zauber_cauldrons:{item:"wormhole_bottle"},Potion:"minecraft:thick",CustomPotionColor:6358357,Enchantments:[{id:"minecraft:protection",lvl:0s}],HideFlags:33,display:{Name:'{"translate":"%1$s","with":["Wormhole in a Bottle",{"translate":"item.gm4.wormhole_in_a_bottle"}]}'}}}}
+execute at @s run summon item ~ ~.2 ~ {Tags:["gm4_zc_new_wormhole_bottle"],Item:{id:potion,Count:1b,tag:{CustomModelData:1,gm4_zauber_cauldrons:{item:"wormhole_bottle"},Potion:"minecraft:thick",CustomPotionColor:6358357,Enchantments:[{id:"minecraft:protection",lvl:0s}],HideFlags:33,display:{Name:'{"translate":"%1$s%3427655$s","with":["Wormhole in a Bottle",{"translate":"item.gm4.wormhole_in_a_bottle"}]}'}}}}
 
 #copy target coordinates to new item
 execute store result entity @e[type=item,dx=0,dy=0,dz=0,tag=gm4_zc_new_wormhole_bottle,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"wormhole_bottle"}}}},limit=1] Item.tag.gm4_zauber_cauldrons.cauldron_pos.x int 1 run scoreboard players get x gm4_zc_data
