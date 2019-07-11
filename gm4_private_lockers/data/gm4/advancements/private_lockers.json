@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "chest",
+      "nbt": "{CustomModelData:2}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Secured Storage",
+        {"translate": "advancement.gm4.private_lockers.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Lock a container from thieves!",
+        {"translate": "advancement.gm4.private_lockers.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:custom_crafters",
+  "criteria": {
+    "lock_container": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

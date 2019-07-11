@@ -1,0 +1,26 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Private Lockers",
+  "module_id":"private_lockers",
+  "site_description":"Craft locks to prevent thieves from checking your chests",
+  "site_categories":[
+    "Custom Crafters"
+  ],
+  "video_link":"",
+  "wiki_link":"https://wiki.gm4.co/wiki/Private_Lockers",
+  "required_modules":[
+    "custom_crafters"
+  ],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["BluePsychoRanger","https://www.twitter.com/BluPsychoRanger"]
+    ],
+    "Icon Design":[
+      ["DuckJr","https://www.twitter.com/DuckJr94"]
+    ]
+  }
+}
