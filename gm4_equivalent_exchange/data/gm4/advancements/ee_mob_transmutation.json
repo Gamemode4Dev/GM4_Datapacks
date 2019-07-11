@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "leather_chestplate",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Transmutation Quick Change",
+        {"translate": "advancement.gm4.ee_mob_transmutation.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Change the look of a mob with the transmutation stone",
+        {"translate": "advancement.gm4.ee_mob_transmutation.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:equivalent_exchange",
+  "criteria": {
+    "convert_mob": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

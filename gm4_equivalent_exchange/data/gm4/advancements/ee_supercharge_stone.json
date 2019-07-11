@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "nether_star",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Charging...",
+        {"translate": "advancement.gm4.ee_supercharge_stone.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Supercharge a transmutation stone",
+        {"translate": "advancement.gm4.ee_supercharge_stone.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:equivalent_exchange",
+  "criteria": {
+    "supercharge_stone": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

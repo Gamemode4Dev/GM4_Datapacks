@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "glowstone_dust",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "The Wicked Witch is Dead?",
+        {"translate": "advancement.gm4.ee_convert_witch.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Definitely a bad witch!",
+        {"translate": "advancement.gm4.ee_convert_witch.description"}
+      ],
+      "color": "gray"
+    },
+    "frame":"goal",
+    "hidden":true
+  },
+  "parent": "gm4:ee_mob_transmutation",
+  "criteria": {
+    "convert_witch": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
