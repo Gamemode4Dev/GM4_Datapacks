@@ -1,0 +1,25 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Metallurgy Moneo",
+  "module_id":"metallurgy_moneo",
+  "site_description":"Adds Moneo to Metallurgy - the shamir which stops you from breaking your tools.",
+  "site_categories":[
+  ],
+  "video_link":"",
+  "wiki_link":"",
+  "required_modules":[
+    "metallurgy"
+  ],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["SirSheepe","https://www.twitter.com/SirSheepe"]
+    ],
+    "Idea By": [
+      ["InternetAlien", ""]
+    ]
+  }
+}
