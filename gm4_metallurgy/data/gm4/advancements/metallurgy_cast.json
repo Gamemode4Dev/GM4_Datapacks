@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"minecraft:iron_ingot",
-      "nbt":"{display:{Name:\"\\\"MODULE_ID logo\\\"\"}}"
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_ingot",
+      "nbt": "{CustomModelData:1}"
     },
-    "title":"Firebender",
-    "description":{
-      "text":"Create a mold and add some metal",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Firebender",
+        {"translate": "advancement.gm4.metallurgy.cast.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Create a mold and add some metal.",
+        {"translate": "advancement.gm4.metallurgy.cast.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:metallurgy_blast_ore",
-  "criteria":{
-    "metallurgy_cast":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:metallurgy_blast_ore",
+  "criteria": {
+    "metallurgy_cast": {
+      "trigger": "minecraft:impossible"
     }
   }
 }

@@ -1,6 +1,6 @@
 #announce module installation
-tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Installing Metallurgy..."}]
-execute unless entity @p run say GM4: Installing Metallurgy...
+tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Installing Metallurgy...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.metallurgy"}]}]}]
+execute unless entity @a[limit=1] run say GM4: Installing Metallurgy...
 
 #declare and initialise scoreboards and settings
 scoreboard players set update_happened gm4_up_check 1
@@ -47,8 +47,8 @@ scoreboard players set current_sensus_layer gm4_ml_data 0
 scoreboard objectives add gm4_levity_sneak minecraft.custom:minecraft.sneak_time
 
 #announce success
-tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Metallurgy Installed!"}]
-execute unless entity @p run say GM4: Metallurgy Installed!
+tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Metallurgy Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.metallurgy"}]}]}]
+execute unless entity @a[limit=1] run say GM4: Metallurgy Installed!
 
 #check other modules to make sure they're up to date.
 #$moduleUpdateList
