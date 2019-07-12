@@ -25,7 +25,6 @@ execute if score extract_chance gm4_ench_random matches ..15 if entity @s[nbt={I
 execute if score extract_chance gm4_ench_random matches ..70 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:riptide"}]}}}] run replaceitem block ~ ~ ~ container.0 enchanted_book{StoredEnchantments:[{id:"minecraft:riptide",lvl:1}]}
 execute if score extract_chance gm4_ench_random matches ..50 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:2s,id:"minecraft:riptide"}]}}}] run replaceitem block ~ ~ ~ container.0 enchanted_book{StoredEnchantments:[{id:"minecraft:riptide",lvl:2}]}
 execute if score extract_chance gm4_ench_random matches ..30 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:3s,id:"minecraft:riptide"}]}}}] run replaceitem block ~ ~ ~ container.0 enchanted_book{StoredEnchantments:[{id:"minecraft:riptide",lvl:3}]}
-execute if score extract_chance gm4_ench_random matches ..70 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:multishot"}]}}}] run replaceitem block ~ ~ ~ container.0 enchanted_book{StoredEnchantments:[{id:"minecraft:multishot",lvl:1}]}
 
 #slot 1
 execute if score extract_chance gm4_ench_random matches ..70 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:thorns"}]}}}] run replaceitem block ~ ~ ~ container.1 enchanted_book{StoredEnchantments:[{id:"minecraft:thorns",lvl:1}]}
@@ -69,6 +68,7 @@ execute if score extract_chance gm4_ench_random matches ..90 if entity @s[nbt={I
 execute if score extract_chance gm4_ench_random matches ..70 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:2s,id:"minecraft:piercing"}]}}}] run replaceitem block ~ ~ ~ container.4 enchanted_book{StoredEnchantments:[{id:"minecraft:piercing",lvl:2}]}
 execute if score extract_chance gm4_ench_random matches ..50 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:3s,id:"minecraft:piercing"}]}}}] run replaceitem block ~ ~ ~ container.4 enchanted_book{StoredEnchantments:[{id:"minecraft:piercing",lvl:3}]}
 execute if score extract_chance gm4_ench_random matches ..30 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:4s,id:"minecraft:piercing"}]}}}] run replaceitem block ~ ~ ~ container.4 enchanted_book{StoredEnchantments:[{id:"minecraft:piercing",lvl:4}]}
+execute if score extract_chance gm4_ench_random matches ..70 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:multishot"}]}}}] run replaceitem block ~ ~ ~ container.4 enchanted_book{StoredEnchantments:[{id:"minecraft:multishot",lvl:1}]}
 
 #slot 5
 execute if score extract_chance gm4_ench_random matches ..90 if entity @s[nbt={Item:{tag:{Enchantments:[{lvl:1s,id:"minecraft:feather_falling"}]}}}] run replaceitem block ~ ~ ~ container.5 enchanted_book{StoredEnchantments:[{id:"minecraft:feather_falling",lvl:1}]}
