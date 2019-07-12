@@ -3,9 +3,9 @@
     "pack_format":0,
     "description":"A Gamemode 4 Module"
   },
-  "module_name":"Metallurgy Moneo",
-  "module_id":"metallurgy_moneo",
-  "site_description":"Adds Moneo to Metallurgy - the shamir which stops you from breaking your tools.",
+  "module_name":"Moneo Shamir",
+  "module_id":"moneo_shamir",
+  "site_description":"Adds the shamir 'Moneo' to metallurgy. It stops you from breaking the tool it's applied to.",
   "site_categories":[
   ],
   "video_link":"",
