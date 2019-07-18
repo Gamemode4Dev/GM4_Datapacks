@@ -1,7 +1,7 @@
 #This function docks minecarts under hooks to assign them a zipline movement direction.
-#Handels initial docking.
+#Handles initial docking.
 
-#@s = @e[tag=gm4_minecart] at @s if block ~ ~1 ~ tripwire_hook[attached=true]
+#@s = @e[type=#gm4:minecarts] at @s if block ~ ~1 ~ tripwire_hook[attached=true]
 
 tag @s add gm4_linked
 #execute align y run teleport @s ~ ~0.36250001192093 ~

@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"zombie_head",
-      "nbt":"{display:{Name:'\"undead_players logo\"'}}"
+  "display": {
+    "icon": {
+      "item": "zombie_head",
+      "nbt": "{CustomModelData:1}"
     },
-    "title":"Risen",
-    "description":{
-      "text":"Die and raise up an undead zombie in your body's place.",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Risen",
+        {"translate": "advancement.gm4.undead_players.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Die and raise up an undead zombie in your body's place",
+        {"translate": "advancement.gm4.undead_players.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "player_death":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:root",
+  "criteria": {
+    "player_death": {
+      "trigger": "minecraft:impossible"
     }
   }
 }

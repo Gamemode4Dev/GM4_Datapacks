@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"glass_bottle",
-      "nbt":"{display:{Name:\"sunken_treasure logo\"}}"
+  "display": {
+    "icon": {
+      "item": "glass_bottle",
+      "nbt": "{CustomModelData:2}"
     },
-    "title":"All My Audreys",
-    "description":{
-      "text":"Find all Dearest Audrey messages in a bottle.",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "All My Audreys",
+        {"translate": "advancement.gm4.sunken_treasure.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Find all Dearest Audrey messages in a bottle",
+        {"translate": "advancement.gm4.sunken_treasure.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "my_audrey_1":{
-      "trigger":"minecraft:inventory_changed",
+  "parent": "gm4:root",
+  "criteria": {
+    "my_audrey_1": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -23,8 +33,8 @@
         ]
       }
     },
-    "my_audrey_2":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_2": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -34,8 +44,8 @@
         ]
       }
     },
-    "my_audrey_3":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_3": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -45,8 +55,8 @@
         ]
       }
     },
-    "my_audrey_4":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_4": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -56,8 +66,8 @@
         ]
       }
     },
-    "my_audrey_5":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_5": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -67,8 +77,8 @@
         ]
       }
     },
-    "my_audrey_6":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_6": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -78,8 +88,8 @@
         ]
       }
     },
-    "my_audrey_7":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_7": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -89,8 +99,8 @@
         ]
       }
     },
-    "my_audrey_8":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_8": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -100,8 +110,8 @@
         ]
       }
     },
-    "my_audrey_9":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_9": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -111,8 +121,8 @@
         ]
       }
     },
-    "my_audrey_10":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_10": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -122,8 +132,8 @@
         ]
       }
     },
-    "my_audrey_11":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_11": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -133,8 +143,8 @@
         ]
       }
     },
-    "my_audrey_12":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_12": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -144,8 +154,8 @@
         ]
       }
     },
-    "my_audrey_13":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_13": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -155,8 +165,8 @@
         ]
       }
     },
-    "my_audrey_14":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_14": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -166,8 +176,8 @@
         ]
       }
     },
-    "my_audrey_15":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_15": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -177,8 +187,8 @@
         ]
       }
     },
-    "my_audrey_16":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_16": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -188,8 +198,8 @@
         ]
       }
     },
-    "my_audrey_17":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_17": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -199,8 +209,8 @@
         ]
       }
     },
-    "my_audrey_18":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_18": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -210,8 +220,8 @@
         ]
       }
     },
-    "my_audrey_19":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_19": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -221,8 +231,8 @@
         ]
       }
     },
-    "my_audrey_20":{
-      "trigger":"minecraft:inventory_changed",
+    "my_audrey_20": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {

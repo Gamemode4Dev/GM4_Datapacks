@@ -1,23 +1,33 @@
 {
-  "display":{
-    "icon":{
-      "item":"gunpowder",
-      "nbt":"{display:{Name:'\"bat_grenades logo\"'}}"
+  "display": {
+    "icon": {
+      "item": "gunpowder",
+      "nbt": "{CustomModelData:1}"
     },
-    "title":"Batboozled",
-    "description":{
-      "text":"Get blown up by a Bat Grenade.",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Batboozled",
+        {"translate": "advancement.gm4.bat_grenades.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Get blown up by a Bat Grenade",
+        {"translate": "advancement.gm4.bat_grenades.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "killed_by_bat":{
-      "trigger":"minecraft:entity_killed_player",
-      "conditions":{
-        "entity":{
-          "type":"creeper",
-          "nbt":"{Tags:[\"gm4_bat_grenade\"]}"
+  "parent": "gm4:root",
+  "criteria": {
+    "killed_by_bat": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "creeper",
+          "nbt": "{Tags:[\"gm4_bat_grenade\"]}"
         }
       }
     }

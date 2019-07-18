@@ -14,7 +14,7 @@ scoreboard players operation falling_star_velocity_required gm4_nights_data = da
 scoreboard players operation falling_star_velocity_required gm4_nights_data %= 17 gm4_nights_data
 
 #compare velocities, if big enough, summon falling stars
-execute if score falling_star_velocity gm4_nights_data >= falling_star_velocity_required gm4_nights_data run function falling_stars:find_location
+execute if score falling_star_velocity gm4_nights_data >= falling_star_velocity_required gm4_nights_data if entity @p run function falling_stars:find_location
 
 #kill impact points
 kill @e[type=area_effect_cloud,tag=gm4_star_impact_point]
