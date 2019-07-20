@@ -4,7 +4,7 @@ execute unless entity @a[limit=1] run say GM4: Installing Zauber Cauldrons...
 
 #declare and initialise scoreboards and settings
 scoreboard players set update_happened gm4_up_check 1
-scoreboard players set zauber_cauldrons gm4_modules 1
+scoreboard players set zauber_cauldrons gm4_modules 2
 scoreboard players set zauber_cauldrons gm4_clock_tick 0
 
 #create needed scoreboards
