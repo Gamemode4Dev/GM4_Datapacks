@@ -28,6 +28,7 @@ data modify entity @e[tag=gm4_rl_set_item_data,limit=1,sort=nearest,distance=..0
 data merge block ~ ~0.2 ~ {Items:[]}
 
 execute if entity @e[tag=gm4_rl_set_item_data,distance=..0.1] run setblock ~ ~0.2 ~ air
+execute if entity @e[tag=gm4_rl_set_item_data,distance=..0.1] if entity @s[tag=gm4_liquid_tank] run kill @e[tag=gm4_liquid_tank_display,limit=1,distance=..1,sort=nearest]
 execute if entity @e[tag=gm4_rl_set_item_data,distance=..0.1] run kill @s
 execute as @e[tag=gm4_rl_set_item_data,distance=..0.1] at @s run tp ~ ~1 ~
 execute positioned ~ ~1 ~ run tag @e[tag=gm4_rl_set_item_data,distance=..0.1] remove gm4_rl_set_item_data
