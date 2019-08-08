@@ -8,6 +8,8 @@ execute store result score count gm4_rezombify run data get entity @s Item.Count
 scoreboard players remove count gm4_rezombify 1
 #store back into nbt
 execute store result entity @s Item.Count byte 1 run scoreboard players get count gm4_rezombify
+#Spigot fix
+kill @s[scores={gm4_rezombify=0}]
 
 #reset timer to 0
 scoreboard players set @s gm4_rezombify 0
