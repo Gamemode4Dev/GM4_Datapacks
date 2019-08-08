@@ -7,7 +7,6 @@ execute store result score @s gm4_mob_con_data run data get entity @s Item.Count
 scoreboard players remove @s gm4_mob_con_data 1
 # store back into nbt
 execute store result entity @s Item.Count byte 1 run scoreboard players get @s gm4_mob_con_data
-# if count == 0 kill item (for spigot)
-kill @s[scores={gm4_mob_con_data=0}]
 
-tag @s remove gm4_gapple
+#Spigot fix
+kill @s[scores={gm4_mob_con_data=0}]
