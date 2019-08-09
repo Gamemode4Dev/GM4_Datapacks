@@ -1,27 +1,19 @@
 #run from main
 #@s = players holding a moneo tool
 
+tag @s add gm4_has_moneo
+
 scoreboard players set tool_current_damage gm4_ml_data 0
 execute store result score tool_current_damage gm4_ml_data run data get entity @s SelectedItem.tag.Damage
 
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:wooden_shovel"}}] run function moneo_shamir:tools/materials/wood
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:wooden_pickaxe"}}] run function moneo_shamir:tools/materials/wood
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] run function moneo_shamir:tools/materials/wood
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:wooden_axe"}}] run function moneo_shamir:tools/materials/wood
+execute unless score @s gm4_moneo_max matches 0.. run function moneo_shamir:store_maximum
 
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:stone_shovel"}}] run function moneo_shamir:tools/materials/stone
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:stone_pickaxe"}}] run function moneo_shamir:tools/materials/stone
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] run function moneo_shamir:tools/materials/stone
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:stone_axe"}}] run function moneo_shamir:tools/materials/stone
+scoreboard players operation tool_max_damage gm4_ml_data = @s gm4_moneo_max
+scoreboard players operation tool_max_damage gm4_ml_data -= tool_current_damage gm4_ml_data
 
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:iron_shovel"}}] run function moneo_shamir:tools/materials/iron
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:iron_pickaxe"}}] run function moneo_shamir:tools/materials/iron
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] run function moneo_shamir:tools/materials/iron
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:iron_axe"}}] run function moneo_shamir:tools/materials/iron
-
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_shovel"}}] run function moneo_shamir:tools/materials/diamond
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe"}}] run function moneo_shamir:tools/materials/diamond
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] run function moneo_shamir:tools/materials/diamond
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] run function moneo_shamir:tools/materials/diamond
-
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:shears"}}] run function moneo_shamir:tools/shears
+execute if score @s gm4_moneo_max matches 59 run function moneo_shamir:tools/materials/wood
+execute if score @s gm4_moneo_max matches 131 run function moneo_shamir:tools/materials/stone
+execute if score @s gm4_moneo_max matches 250 run function moneo_shamir:tools/materials/iron
+execute if score @s gm4_moneo_max matches 1561 run function moneo_shamir:tools/materials/diamond
+execute if score @s gm4_moneo_max matches 33 run function moneo_shamir:tools/materials/gold
+execute if score @s gm4_moneo_max matches 237 run function moneo_shamir:tools/shears
