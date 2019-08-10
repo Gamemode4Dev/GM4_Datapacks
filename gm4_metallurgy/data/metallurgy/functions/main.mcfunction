@@ -36,6 +36,7 @@ tag @a remove gm4_has_hypexperia
 tag @a remove gm4_has_musical
 tag @a remove gm4_has_sensus
 tag @a remove gm4_has_levity
+tag @a remove gm4_has_forterra
 
 execute as @a[gamemode=!spectator] if data entity @s Inventory[].tag.gm4_metallurgy.active_shamir at @s run function metallurgy:has_shamir
 
