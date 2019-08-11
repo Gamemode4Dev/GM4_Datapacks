@@ -19,7 +19,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s",
+                "translate": "%1$s%3427655$s",
                 "with": [
                   "Charred Shell",
                   {
@@ -33,7 +33,7 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
-                  "translate": "%1$s",
+                  "translate": "%1$s%3427655$s",
                   "with": [
                     "Nice and toasty",
                     {

@@ -5,14 +5,14 @@
       "nbt": "{CustomModelData:2}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "All My Audreys",
         {"translate": "advancement.gm4.sunken_treasure.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Find all Dearest Audrey messages in a bottle",
         {"translate": "advancement.gm4.sunken_treasure.description"}

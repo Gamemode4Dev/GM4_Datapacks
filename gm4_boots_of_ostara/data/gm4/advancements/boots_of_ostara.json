@@ -5,14 +5,14 @@
       "nbt": "{display:{color:3705899},CustomModelData:1}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Green Feet",
         {"translate": "advancement.gm4.boots_of_ostara.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Wear the Boots of Ostara",
         {"translate": "advancement.gm4.boots_of_ostara.description"}

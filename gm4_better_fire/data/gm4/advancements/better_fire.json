@@ -5,14 +5,14 @@
       "nbt": "{Enchantments:[{id:\"flame\",lvl:1}],CustomModelData:1}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Flint 'n Stick",
         {"translate": "advancement.gm4.better_fire.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Fire a Flame Bow",
         {"translate": "advancement.gm4.better_fire.description"}

@@ -5,14 +5,14 @@
       "nbt": "{CustomModelData:5,SkullOwner:{Id:\"25b1ff93-7925-1cd7-53fe-8e6050792daa\",Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE0MjkzNDc5OTc3ODcsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQ1NWQ5YmY4NWFjNTY1YjM1ZTFmYTE5MjQ3Y2E2NTQxZGMyZTMzNGJlYzExNWNiNDQ5ZWZiZThlOWI4MTAyMiJ9fX0=\"}]}}}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Love is all you need",
         {"translate": "advancement.gm4.heart_canisters.tier_2.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Craft a tier 2 Heart Canister",
         {"translate": "advancement.gm4.heart_canisters.tier_2.description"}

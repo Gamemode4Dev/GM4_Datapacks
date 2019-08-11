@@ -5,14 +5,14 @@
       "nbt": "{CustomModelData:1}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Gettin' Handsy",
         {"translate": "advancement.gm4.better_armour_stands.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Give your armour stand arms",
         {"translate": "advancement.gm4.better_armour_stands.description"}

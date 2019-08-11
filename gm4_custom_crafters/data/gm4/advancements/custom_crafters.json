@@ -5,14 +5,14 @@
       "nbt": "{CustomModelData:3}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Clever Crafting",
         {"translate": "advancement.gm4.custom_crafters.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Construct a Custom Crafter from a Dropper",
         {"translate": "advancement.gm4.custom_crafters.description"}
