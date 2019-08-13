@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:carpets"
+    }
+  ],
+  "result": {
+    "item": "minecraft:string",
+    "count": 2
+  }
+}
