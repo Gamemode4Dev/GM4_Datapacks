@@ -1,4 +1,4 @@
-#@s refers to a player who has a roped arrow in their inventory
+#@s refers to a player who is holding a spooled crossbow
 #run from pulse_check
 
 #store amount of string
