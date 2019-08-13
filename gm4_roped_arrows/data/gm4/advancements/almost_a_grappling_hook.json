@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "arrow",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Almost a Grappling Hook",
+        {"translate": "advancement.gm4.MODULE_ID.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Shoot a roped arrow.",
+        {"translate": "advancement.gm4.MODULE_ID.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

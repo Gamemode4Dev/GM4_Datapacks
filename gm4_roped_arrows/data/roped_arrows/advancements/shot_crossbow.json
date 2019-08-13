@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "shot_crossbow": {
+      "trigger": "minecraft:shot_crossbow",
+      "conditions": {
+        "item": {
+          "item": "minecraft:crossbow",
+          "nbt": "{gm4_spooled_crossbow:1b}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "roped_arrows:shoot_arrow"
+  }
+}
