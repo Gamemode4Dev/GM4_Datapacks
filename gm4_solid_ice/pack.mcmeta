@@ -1,0 +1,24 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Solid Ice",
+  "module_id":"solid_ice",
+  "site_description":"Use this module to have (normal) ice not melt!",
+  "site_categories":[],
+  "video_link":"YOUTUBE_VIDEO_URL",
+  "wiki_link":"WIKI_URL",
+  "required_modules":[
+    "gm4_custom_crafters",
+    "gm4_master_crafting"
+  ],
+  "recommended_modules":[
+  ],
+  "credits":{
+    "comment":"All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings.",
+    "Creator":[
+      ["Bunnygamers","https://twitter.com/BunnygamersMC"]
+    ]
+  }
+}

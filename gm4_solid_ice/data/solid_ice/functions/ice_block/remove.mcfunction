@@ -1,0 +1,5 @@
+#@s = solid ice ready to be removed
+
+#give back icooling element (I don't know if it's more balanced if you don't get it back) and remove areaeffectcloud
+execute at @s run summon item ~ ~.5 ~ {Item: {id: "player_head",Count:1,tag: {display:{Name:"{\"text\":\"Cooling Element\",\"color\":\"aqua\",\"italic\":false}",Lore:["{\"text\":\"I'm so cold\",\"color\":\"gray\",\"italic\":\"false\"}"]},gm4_solid_ice:1,SkullOwner:{Id:"907b3257-ca9a-44d3-9987-003bc32be262",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjA1NWQyZWYyZGYzZTg2YjM3MWQ0YjE5YzEwMzA4ZTA3OTM3OThmOWY1Mzk5ZWJhNTYyNmFkMjcxNDNhOWEwMCJ9fX0="}]}}}},Motion:[0.0,0.2,0.0]}
+kill @s
