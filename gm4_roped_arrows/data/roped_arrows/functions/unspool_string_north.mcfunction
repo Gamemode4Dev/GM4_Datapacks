@@ -10,7 +10,7 @@ execute if score string_placed gm4_string_count matches 40 run setblock ~ ~ ~ mi
 particle dust 1 1 1 1 ~ ~ ~ 0 0 0 1 5 normal
 
 #remove a string from the player
-clear @s minecraft:string 1
+clear @s[gamemode=!creative] minecraft:string 1
 
 #adjust scoreboards
 scoreboard players remove @s gm4_string_count 1

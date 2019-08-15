@@ -7,20 +7,20 @@
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Almost a grappling hook",
+        "Efficient Track Laying",
         {"translate": "advancement.gm4.roped_arrows.title"}
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Shoot a spooled crossbow.",
+        "Use a spooled crossbow to place some ziprail track.",
         {"translate": "advancement.gm4.roped_arrows.description"}
       ],
       "color": "gray"
     }
   },
-  "parent": "gm4:root",
+  "parent": "gm4:ziprails",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

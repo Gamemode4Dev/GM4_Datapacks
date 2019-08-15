@@ -5,7 +5,7 @@
   },
   "module_name":"Roped Arrows",
   "module_id":"roped_arrows",
-  "site_description":"Shoot specially adapted arrows across the sky leaving a trail of string behind!",
+  "site_description":"Use a specially modified crossbow to lay down zipline track efficiently.",
   "site_categories":[],
   "video_link":"YOUTUBE_VIDEO_URL",
   "wiki_link":"WIKI_URL",
@@ -16,7 +16,7 @@
     "ziprails"
   ],
   "credits":{
-    "comment":"Idk who came up with this but they should be credited here.",
+    "comment":"Credit to Compsogbrickus for the idea.",
     "Creator":[
       ["Nik3141","https://www.youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"]
     ],
