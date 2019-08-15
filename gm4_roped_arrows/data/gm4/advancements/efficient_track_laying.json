@@ -8,14 +8,14 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Efficient Track Laying",
-        {"translate": "advancement.gm4.roped_arrows.title"}
+        {"translate": "advancement.gm4.efficient_track_laying.title"}
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Use a spooled crossbow to place some ziprail track.",
-        {"translate": "advancement.gm4.roped_arrows.description"}
+        {"translate": "advancement.gm4.efficient_track_laying.description"}
       ],
       "color": "gray"
     }

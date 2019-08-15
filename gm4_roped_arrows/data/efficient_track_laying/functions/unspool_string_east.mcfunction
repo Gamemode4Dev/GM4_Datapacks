@@ -17,4 +17,4 @@ scoreboard players remove @s gm4_string_count 1
 scoreboard players add string_placed gm4_string_count 1
 
 #recursion
-execute positioned ~1 ~ ~ if block ~ ~ ~ #roped_arrows:airtype if score @s gm4_string_count matches 1.. if score string_placed gm4_string_count matches ..39 run function roped_arrows:unspool_string_east
+execute positioned ~1 ~ ~ if block ~ ~ ~ #efficient_track_laying:airtype if score @s gm4_string_count matches 1.. if score string_placed gm4_string_count matches ..39 run function efficient_track_laying:unspool_string_east

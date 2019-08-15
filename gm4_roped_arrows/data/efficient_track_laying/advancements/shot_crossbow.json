@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "roped_arrows:shoot_arrow"
+    "function": "efficient_track_laying:shoot_arrow"
   }
 }
