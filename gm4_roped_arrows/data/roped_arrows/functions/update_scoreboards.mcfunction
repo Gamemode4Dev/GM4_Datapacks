@@ -2,7 +2,8 @@
 #run from pulse_check
 
 #store amount of string
-execute store result score @s gm4_string_count run clear @s minecraft:string 0
+execute store result score @s[gamemode=survival] gm4_string_count run clear @s minecraft:string 0
+scoreboard players set @s[gamemode=creative] gm4_string_count 40
 
 #store vertical rotation
 #up   (-)
