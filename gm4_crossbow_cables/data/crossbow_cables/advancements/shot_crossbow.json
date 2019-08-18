@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "efficient_track_laying:shoot_arrow"
+    "function": "crossbow_cables:shoot_arrow"
   }
 }

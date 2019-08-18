@@ -3,8 +3,8 @@
     "pack_format":0,
     "description":"A Gamemode 4 Module"
   },
-  "module_name":"Efficient Track Laying",
-  "module_id":"efficient_track_laying",
+  "module_name":"Crossbow Cables",
+  "module_id":"crossbow_cables",
   "site_description":"Use a specially modified crossbow to lay down zipline track efficiently.",
   "site_categories":[],
   "video_link":"YOUTUBE_VIDEO_URL",
