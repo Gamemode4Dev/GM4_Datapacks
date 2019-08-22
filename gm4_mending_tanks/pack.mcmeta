@@ -1,0 +1,16 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Mending Tanks",
+  "module_id":"mending_tanks",
+  "site_description":"Your Liquid XP Tank can now repair your armor and tools!",
+  "site_categories":["Liquid Tanks"],
+  "required_modules":["liquid_tanks"],
+  "credits":{
+    "Creator":[
+      ["Kroppeb"]
+    ]
+  }
+}
