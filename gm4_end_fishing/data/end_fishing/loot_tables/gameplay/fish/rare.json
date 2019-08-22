@@ -1,0 +1,172 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "name": "minecraft:shulker_shell"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "minecraft:dragon_head"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{CustomModelData:26,gm4_enderpuff:1b,display:{Name:\"{\\\"translate\\\":\\\"%1$s%3427655$s\\\",\\\"with\\\":[\\\"Enderpuff\\\",{\\\"translate\\\":\\\"item.gm4.enderpuff\\\"}],\\\"italic\\\":false}\"},SkullOwner:{Id:\"77be3116-c31a-4124-83a0-62714e692f2d\",Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NjQ5NDE3MTgzMjYsInByb2ZpbGVJZCI6IjkxZjA0ZmU5MGYzNjQzYjU4ZjIwZTMzNzVmODZkMzllIiwicHJvZmlsZU5hbWUiOiJTdG9ybVN0b3JteSIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjcxYzdlYjcxMjAwZGQ5ZGU1YTI3OWRmMTg2YjNjYjdiMmI0NTk4YjFiNzQ0MzI0YmQyNTQzMTZhZjYxZTE0MiJ9fX0=\"}]}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:alternative",
+              "terms": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:the_end"
+                  }
+                }
+              ]
+            }
+          ],
+          "weight": 40,
+          "name": "minecraft:end_crystal"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:alternative",
+              "terms": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:end_midlands"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:end_highlands"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:small_end_islands"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:end_barrens"
+                  }
+                }
+              ]
+            }
+          ],
+          "weight": 6,
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{CustomModelData:26,gm4_enderpuff:1b,display:{Name:\"{\\\"translate\\\":\\\"%1$s%3427655$s\\\",\\\"with\\\":[\\\"Enderpuff\\\",{\\\"translate\\\":\\\"item.gm4.enderpuff\\\"}],\\\"italic\\\":false}\"},SkullOwner:{Id:\"77be3116-c31a-4124-83a0-62714e692f2d\",Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NjQ5NDE3MTgzMjYsInByb2ZpbGVJZCI6IjkxZjA0ZmU5MGYzNjQzYjU4ZjIwZTMzNzVmODZkMzllIiwicHJvZmlsZU5hbWUiOiJTdG9ybVN0b3JteSIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjcxYzdlYjcxMjAwZGQ5ZGU1YTI3OWRmMTg2YjNjYjdiMmI0NTk4YjFiNzQ0MzI0YmQyNTQzMTZhZjYxZTE0MiJ9fX0=\"}]}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:alternative",
+              "terms": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:end_midlands"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:end_highlands"
+                  }
+                }
+              ]
+            }
+          ],
+          "weight": 75,
+          "name": "minecraft:dragon_head"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:alternative",
+              "terms": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:end_midlands"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:end_highlands"
+                  }
+                }
+              ]
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "min": 0.0,
+                "max": 0.005
+              }
+            }
+          ],
+          "weight": 1,
+          "name": "minecraft:elytra"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:alternative",
+              "terms": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:end_midlands"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:end_highlands"
+                  }
+                }
+              ]
+            }
+          ],
+          "weight": 90,
+          "name": "minecraft:shulker_shell"
+        }
+      ]
+    }
+  ]
+}
