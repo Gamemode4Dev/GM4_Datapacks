@@ -6,19 +6,19 @@
                 {
                     "type": "loot_table",
                     "name": "end_fishing:gameplay/fish/common",
-                    "weight": 74,
+                    "weight": 60,
                     "quality": -1
                 },
                 {
                     "type": "loot_table",
                     "name": "end_fishing:gameplay/fish/uncommon",
-                    "weight": 24,
+                    "weight": 33,
                     "quality": 1
                 },
                 {
                     "type": "loot_table",
                     "name": "end_fishing:gameplay/fish/rare",
-                    "weight": 2,
+                    "weight": 7,
                     "quality": 5
                 }
             ]

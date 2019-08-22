@@ -76,7 +76,7 @@
               ]
             }
           ],
-          "weight": 6,
+          "weight": 11,
           "name": "minecraft:player_head",
           "functions": [
             {
@@ -163,7 +163,7 @@
               ]
             }
           ],
-          "weight": 90,
+          "weight": 110,
           "name": "minecraft:shulker_shell"
         }
       ]
