@@ -9,7 +9,9 @@
   "site_categories":[],
   "video_link":"",
   "wiki_link":"",
-  "required_modules":[],
+  "required_modules":[
+    "custom_crafters"
+  ],
   "recommended_modules":[],
   "credits":{
 	"Creator":[
