@@ -5,14 +5,16 @@
   },
   "module_name":"Area Markers",
   "module_id":"area_markers",
-  "site_description":"Set up floating messages with a simple name tag!",
+  "site_description":"Mark an area with its name",
   "site_categories":[],
   "video_link":"",
   "wiki_link":"",
   "required_modules":[
     "custom_crafters"
   ],
-  "recommended_modules":[],
+  "recommended_modules":[
+    "holographic_tags"
+  ],
   "credits":{
 	"Creator":[
 	  ["Bunnygamers","https://twitter.com/BunnygamersMC"]
