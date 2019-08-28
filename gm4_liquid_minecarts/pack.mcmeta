@@ -8,7 +8,7 @@
   "site_description":"Allows Minecarts to move fluids between Liquid Tanks",
   "site_categories":["Liquid Tanks"],
   "video_link":"",
-  "wiki_link":"https://wiki.gm4.co/wiki/Liquid_Minecarts",
+  "wiki_link":"https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts",
   "required_modules":[
     "liquid_tanks"
   ],
