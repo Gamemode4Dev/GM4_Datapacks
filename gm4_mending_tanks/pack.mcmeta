@@ -7,6 +7,7 @@
   "module_id":"mending_tanks",
   "site_description":"Your Liquid XP Tank can now repair your armor and tools!",
   "site_categories":["Liquid Tanks"],
+  "wiki_link":"https://wiki.gm4.co/wiki/Liquid_Tanks/Mending_Tanks",
   "required_modules":["liquid_tanks"],
   "credits":{
     "Creator":[
