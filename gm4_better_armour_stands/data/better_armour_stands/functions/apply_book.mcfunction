@@ -10,8 +10,8 @@ execute if entity @s[nbt={Item:{tag:{pages:["small"]}}}] run data merge entity @
 execute if entity @s[nbt={Item:{tag:{pages:["tall"]}}}] run data merge entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] {Small:0}
 execute if entity @s[nbt={Item:{tag:{pages:["no base"]}}}] run data merge entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] {NoBasePlate:1}
 execute if entity @s[nbt={Item:{tag:{pages:["base"]}}}] run data merge entity @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] {NoBasePlate:0}
-execute if entity @s[nbt={Item:{tag:{pages:["invisible"]}}}] align xz positioned as @e[dx=0,type=armor_stand,tag=!gm4_no_edit] run data merge entity @s {Invisible:1b}
-execute if entity @s[nbt={Item:{tag:{pages:["visible"]}}}] align xz positioned as @e[dx=0,type=armor_stand,tag=!gm4_no_edit] run data merge entity @s {Invisible:0}
+execute if entity @s[nbt={Item:{tag:{pages:["invisible"]}}}] align xz as @e[dx=0,type=armor_stand,tag=!gm4_no_edit] run data merge entity @s {Invisible:1b}
+execute if entity @s[nbt={Item:{tag:{pages:["visible"]}}}] align xz as @e[dx=0,type=armor_stand,tag=!gm4_no_edit] run data merge entity @s {Invisible:0}
 
 execute if entity @s[nbt={Item:{tag:{pages:["turn left"]}}}] run tag @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] add gm4_turn_clockwise
 execute if entity @s[nbt={Item:{tag:{pages:["turn left"]}}}] run tag @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit] remove gm4_turn_anticlockwise
