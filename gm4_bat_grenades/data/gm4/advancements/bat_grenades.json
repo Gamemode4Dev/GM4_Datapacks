@@ -5,14 +5,14 @@
       "nbt": "{CustomModelData:1}"
     },
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Batboozled",
         {"translate": "advancement.gm4.bat_grenades.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Get blown up by a Bat Grenade",
         {"translate": "advancement.gm4.bat_grenades.description"}

@@ -6,14 +6,14 @@
     },
     "frame": "goal",
     "title": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "All My Loving",
         {"translate": "advancement.gm4.heart_canisters.max.title"}
       ]
     },
     "description": {
-      "translate": "%1$s",
+      "translate": "%1$s%3427655$s",
       "with": [
         "Max out your Heart Canister health",
         {"translate": "advancement.gm4.heart_canisters.max.description"}
