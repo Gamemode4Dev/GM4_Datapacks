@@ -5,22 +5,22 @@
       "nbt":"{CustomModelData:1}"
     },
     "title":{
-      "translate":"%1$s",
+      "translate":"%1$s%3427655$s",
       "with":[
         "Winter's Coming!",
-        {"translate": "advancement.gm4.potion_infusers.title"}
+        {"translate": "advancement.gm4.potion_infusers_crops.title"}
       ]
     },
     "description":{
-      "translate":"%1$s",
+      "translate":"%1$s%3427655$s",
       "with":[
         "Stock up on infused crops",
-        {"translate":"advancement.gm4.potion_infusers.description"}
+        {"translate":"advancement.gm4.potion_infusers_crops.description"}
       ],
       "color":"gray"
     }
   },
-  "parent":"gm4:liquid_tanks_create",
+  "parent":"gm4:potion_infusers_create",
   "criteria":{
     "have_all_infused_food": {
       "trigger": "minecraft:inventory_changed",

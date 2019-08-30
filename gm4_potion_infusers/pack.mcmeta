@@ -5,7 +5,7 @@
   },
   "module_name":"Potion Infusers",
   "module_id":"potion_infusers",
-  "site_description":"Adds the ability for liquid tanks to infuse potions into blocks",
+  "site_description":"Convert blocks with the help of potion tanks!",
   "site_categories":["Liquid Tanks"],
   "video_link":"",
   "wiki_link":"https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Infusers",
