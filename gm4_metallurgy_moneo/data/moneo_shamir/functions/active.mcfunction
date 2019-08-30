@@ -11,11 +11,9 @@ execute store result score tool_max_damage gm4_ml_data run data get entity @s Se
 
 execute if score tool_max_damage gm4_ml_data matches 0 run function moneo_shamir:store_maximum
 
-scoreboard players operation tool_max_damage gm4_ml_data -= tool_current_damage gm4_ml_data
-
-execute if score @s gm4_moneo_max matches 59 run function moneo_shamir:tools/materials/wood
-execute if score @s gm4_moneo_max matches 131 run function moneo_shamir:tools/materials/stone
-execute if score @s gm4_moneo_max matches 250 run function moneo_shamir:tools/materials/iron
-execute if score @s gm4_moneo_max matches 1561 run function moneo_shamir:tools/materials/diamond
-execute if score @s gm4_moneo_max matches 33 run function moneo_shamir:tools/materials/gold
-execute if score @s gm4_moneo_max matches 237 run function moneo_shamir:tools/shears
+execute if score tool_max_damage gm4_ml_data matches 59 run function moneo_shamir:tools/materials/wood
+execute if score tool_max_damage gm4_ml_data matches 131 run function moneo_shamir:tools/materials/stone
+execute if score tool_max_damage gm4_ml_data matches 250 run function moneo_shamir:tools/materials/iron
+execute if score tool_max_damage gm4_ml_data matches 1561 run function moneo_shamir:tools/materials/diamond
+execute if score tool_max_damage gm4_ml_data matches 33 run function moneo_shamir:tools/materials/gold
+execute if score tool_max_damage gm4_ml_data matches 237 run function moneo_shamir:tools/shears
