@@ -1,5 +1,5 @@
 #announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: Installing Mending Tanks...",[{"translate":"text.gm4.prefix"},{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.mending.tanks"}]}]]}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: Installing Mending Tanks...",[{"translate":"text.gm4.prefix"},{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.mending.tanks"}]}]]}]
 execute unless entity @a[limit=1] run say GM4: Installing Mending Tanks...
 
 
@@ -14,7 +14,7 @@ scoreboard players set #mt_repair_per_xp gm4_lt_util 2
 scoreboard players set #mt_max_repair gm4_lt_util 32
 
 #announce success
-tellraw @a[gamemode=creative] [{"translate":"%1$s","with":["[GM4]: Mending Tanks Installed!",[{"translate":"text.gm4.prefix"},{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.mending.tanks"}]}]]}]
+tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: Mending Tanks Installed!",[{"translate":"text.gm4.prefix"},{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.mending.tanks"}]}]]}]
 execute unless entity @a[limit=1] run say GM4: Mending Tanks Installed!
 
 
