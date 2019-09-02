@@ -10,5 +10,5 @@ execute unless block ^ ^ ^1 furnace run function blast_furnaces:find_furnace
 
 execute if entity @s[tag=gm4_bf_has_furnace] if block ^ ^ ^1 furnace[lit=true] run function blast_furnaces:verify_furnace
 
-# test particle make this only run with valid structure later
+# particle
 execute if block ^ ^ ^1 furnace[lit=true] run particle large_smoke ^ ^.4 ^1 0 0 0 0 5 normal @a

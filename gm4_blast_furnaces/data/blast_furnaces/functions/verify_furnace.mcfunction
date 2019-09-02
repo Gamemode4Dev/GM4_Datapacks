@@ -1,4 +1,6 @@
 # check furnace and store cooktime
+# ran by processes
+
 scoreboard players set @s gm4_bf_data -1
 execute if entity @s[y_rotation=0] if block ~ ~ ~1 furnace[facing=south] store result score @s gm4_bf_data run data get block ~ ~ ~1 CookTime
 execute if entity @s[y_rotation=90] if block ~-1 ~ ~ furnace[facing=west] store result score @s gm4_bf_data run data get block ~-1 ~ ~ CookTime

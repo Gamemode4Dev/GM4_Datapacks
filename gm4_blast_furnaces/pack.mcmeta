@@ -5,8 +5,10 @@
     },
     "Blast Furnaces": "Blast Furnaces",
     "blast_furnaces": "blast_furnaces",
-    "site_description": "IF I DON'T SET THIS AT SOME POINT I'M A MORON",
-    "site_categories": ["Custom Crafting"],
+    "site_description": "Double your ore output with this multi-block structure.",
+    "site_categories": [
+        "Custom Crafting"
+    ],
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Blast_Furnaces",
     "required_modules": [
@@ -14,11 +16,10 @@
     ],
     "recommended_modules": [],
     "credits": {
-        "comment": "All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings.",
         "Creator": [
             [
-                "USERNAME",
-                "OPTIONAL_LINK"
+                "Bloo",
+                "https://twitter.com/bluefire610"
             ]
         ],
         "Updated By": [
@@ -28,7 +29,7 @@
             ],
             [
                 "Kroppeb",
-                ""
+                "https://twitter.com/kroppeb"
             ]
         ]
     }
