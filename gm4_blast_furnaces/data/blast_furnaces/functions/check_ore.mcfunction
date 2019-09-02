@@ -1,5 +1,5 @@
 # @s = blast furnace that is looking at a lit furnace
-# run from processes
+# called by process
 
 data modify entity @s HandItems[0] set from block ^ ^ ^1 Items[{Slot:0b}]
 replaceitem entity @s armor.head air

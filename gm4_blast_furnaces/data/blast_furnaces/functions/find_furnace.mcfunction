@@ -1,6 +1,6 @@
 # blast furnace processes
 # @s - blast furnace that isn't pointing to a furnace
-# called by processes
+# called by process
 
 tag @s remove gm4_bf_has_furnace
 execute if block ~1 ~ ~ furnace run tp @s ~ ~ ~ -90 0

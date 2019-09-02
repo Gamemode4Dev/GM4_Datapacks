@@ -24,7 +24,7 @@
             "color": "gray"
         }
     },
-    "parent": "gm4:root",
+    "parent": "gm4:custom_crafters",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

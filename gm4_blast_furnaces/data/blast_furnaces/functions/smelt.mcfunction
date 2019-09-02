@@ -1,5 +1,5 @@
 # @s - @e[type=armor_stand,tag=gm4_bf_valid_structure,tag=gm4_bf_could_smelt] if found cooked furnace
-# ran from pulse_check
+# called by pulse_check
 
 data modify entity @s HandItems[0] set from entity @s ArmorItems[3]
 loot spawn ~ ~1 ~ fish blast_furnaces:smelt ~ ~ ~ mainhand
