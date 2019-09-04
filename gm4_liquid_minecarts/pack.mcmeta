@@ -1,0 +1,24 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Liquid Minecarts",
+  "module_id":"liquid_minecarts",
+  "site_description":"Allows Minecarts to move fluids between Liquid Tanks",
+  "site_categories":["Liquid Tanks"],
+  "video_link":"",
+  "wiki_link":"https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts",
+  "required_modules":[
+    "liquid_tanks"
+  ],
+  "recommended_modules":["potion_liquids"],
+  "credits":{
+    "Creator":[
+      ["Sparks","https://twitter.com/SparksTheGamer"]
+    ],
+    "Icon Design":[
+      ["DuckJr","https://twitter.com/DuckJr94"]
+    ]
+  }
+}

@@ -45,6 +45,15 @@
           "name": "minecraft:iron_trapdoor"
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:glass"
+        }
+      ]
     }
   ]
 }

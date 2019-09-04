@@ -1,0 +1,10 @@
+{
+  "criteria":{
+    "join_world":{
+      "trigger":"location"
+    }
+  },
+  "rewards":{
+    "function":"end_fishing:set_id"
+  }
+}

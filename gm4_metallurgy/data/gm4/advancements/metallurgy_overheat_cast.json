@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:lava_bucket",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Blame Me for the Mess",
+        {"translate": "advancement.gm4.metallurgy.overheat_cast.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Destroy a mold containing molten metal.",
+        {"translate": "advancement.gm4.metallurgy.overheat_cast.description"}
+      ],
+      "color": "gray"
+    },
+    "hidden": true
+  },
+  "parent": "gm4:metallurgy_cast",
+  "criteria": {
+    "metallurgy_overheat_cast": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
