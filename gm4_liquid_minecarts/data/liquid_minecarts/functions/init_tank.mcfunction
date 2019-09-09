@@ -2,7 +2,7 @@
 #run from try_to_unload
 
 data modify block ~ ~ ~ CustomName set from entity @s CustomName
-summon armor_stand ~ ~-.45 ~ {CustomName:"\"gm4_liquid_tank_display\"",Tags:["gm4_no_edit","gm4_liquid_tank_display","gm4_lm_needs_texture"],NoGravity:1,Marker:1,Invisible:1,Invulnerable:1,Small:1,DisabledSlots:2039583,Fire:20000}
+summon armor_stand ~ ~-.45 ~ {CustomName:"\"gm4_liquid_tank_display\"",Tags:["gm4_no_edit","gm4_liquid_tank_display","gm4_lm_needs_texture"],NoGravity:1,Marker:1,Invisible:1,Invulnerable:1,Small:1,DisabledSlots:4144959,Fire:20000}
 data modify entity @e[type=armor_stand,tag=gm4_lm_needs_texture,limit=1,sort=nearest] ArmorItems[3] set from entity @e[type=armor_stand,tag=gm4_liquid_minecart_display,limit=1,sort=nearest] HandItems[0]
 tag @e[type=armor_stand] remove gm4_lm_needs_texture
 scoreboard players operation @s gm4_lm_data = @s gm4_lt_max
