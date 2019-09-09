@@ -9,4 +9,4 @@ execute as @s[tag=!gm4_no_bowls] run function ambrosia:hive/fill_bowl
 execute as @s[tag=gm4_no_bowls] run loot insert ~ ~ ~ loot ambrosia:hive_loot
 
 # spawn display bee
-execute if entity @p[distance=..32] run function ambrosia:beehavior/spawn_roaming_bee
+execute if entity @a[distance=..32,limit=1] run function ambrosia:beehavior/spawn_roaming_bee

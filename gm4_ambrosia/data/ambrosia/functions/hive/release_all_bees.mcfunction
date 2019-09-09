@@ -7,7 +7,7 @@
 # spawn bee
 function ambrosia:beehavior/spawn_angry_bee
 
-# remove one from bee score
+# reduce bee score
 scoreboard players remove @s gm4_bees 5
 
 # loop

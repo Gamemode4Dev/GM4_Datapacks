@@ -6,7 +6,7 @@
 kill @s
 
 # revert barrel
-data merge block ~ ~ ~ {CustomName:'{"translate":"%1$s","with":["Abandoned Beehive","translation.string.FORMISODE"]}'}
+data merge block ~ ~ ~ {CustomName:'{"translate":"%1$s","with":["Abandoned Beehive","block.gm4.abandoned_beehive"]}'}
 
 # particle
 particle minecraft:block barrel ~ ~-2 ~ 0.3 0.3 0.3 0.5 13

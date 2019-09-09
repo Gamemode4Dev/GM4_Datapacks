@@ -2,7 +2,7 @@
 # at @s
 # run from pulse_check
 
-# tag target item to avoid double selectors
+# tag target item to avoid expensive selectors
 tag @e[type=item,tag=!gm4_wax_on_anvil,dx=0,limit=1,nbt={Item:{tag:{Enchantments:[{}]}}}] add gm4_waxed
 
 # get repair cost into scoreboard

@@ -2,7 +2,7 @@
 #run from larvea/validate_larvae
 
 # create beehive
-data merge block ~ ~-1 ~ {CustomName:'{"translate":"%1$s","with":["Beehive","translation.string.FORMISODE"]}'}
+data merge block ~ ~-1 ~ {CustomName:'{"translate":"%1$s","with":["Beehive","block.gm4.beehive"]}'}
 execute unless entity @e[type=area_effect_cloud,distance=..1,tag=gm4_beehive] align xyz positioned ~.5 ~ ~.5 run summon area_effect_cloud ~ ~-.5 ~ {CustomName:'{"text":"gm4_beehive"}',Tags:["gm4_beehive"],Duration:2147483647}
 scoreboard players set @e[type=area_effect_cloud,distance=..1,tag=gm4_beehive] gm4_bees 1
 kill @s
