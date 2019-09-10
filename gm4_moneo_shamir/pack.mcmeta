@@ -7,6 +7,7 @@
   "module_id":"moneo_shamir",
   "site_description":"Adds the shamir 'Moneo' to metallurgy. It stops you from breaking the tool it's applied to.",
   "site_categories":[
+    "metallurgy"
   ],
   "video_link":"",
   "wiki_link":"",
