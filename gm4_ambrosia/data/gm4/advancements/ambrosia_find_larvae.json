@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"white_dye",
+      "nbt":"{display:{Name:\"\\\"ambrosia logo\\\"\"}}"
+    },
+    "title":"Bugs, bugs, bugs everywhere!",
+    "description":{
+      "text":"Make an invertebrate friend",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "ambrosia_find_larvae":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
