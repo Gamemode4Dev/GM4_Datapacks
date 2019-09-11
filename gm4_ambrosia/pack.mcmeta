@@ -7,6 +7,7 @@
   "module_id":"ambrosia",
   "site_description":"To bee or not to bee - time to add some invertebrate friends to your world!",
   "site_categories":["Bees"],
+  "video_link":"https://www.youtube.com/watch?v=B-3BZLAt7CI",
   "wiki_link":"https://wiki.gm4.co/wiki/Ambrosia",
   "required_modules":[
       "liquid_tanks"
