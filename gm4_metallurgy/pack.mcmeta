@@ -9,7 +9,7 @@
   "site_categories":["Metallurgy"],
   "wiki_link":"https://wiki.gm4.co/wiki/Metallurgy",
   "required_modules":[],
-  "recommended_modules":[],
+  "recommended_modules":["moneo_shamir"],
   "credits":{
     "Creator":[
       ["Sparks","https://www.twitter.com/SparksTheGamer"],
