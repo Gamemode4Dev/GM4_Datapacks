@@ -15,8 +15,8 @@ scoreboard players operation flower_ratio gm4_bee_data /= air_count gm4_bee_data
 # take to inverse if "> 1" space
 scoreboard players set #score_inverted gm4_bee_data 0
 execute store success score #score_inverted gm4_bee_data if score flower_ratio gm4_bee_data < #100 gm4_bee_data run scoreboard players operation inverse gm4_bee_data /= flower_ratio gm4_bee_data
-# scale back to integer if > 100
-execute if score flower_ratio gm4_bee_data > #100 gm4_bee_data run scoreboard players operation flower_ratio gm4_bee_data /= #100 gm4_bee_data
+# scale back to integer if >= 100
+execute if score flower_ratio gm4_bee_data >= #100 gm4_bee_data run scoreboard players operation flower_ratio gm4_bee_data /= #100 gm4_bee_data
 
 # put ratio back into flower_ratio if inverted
 execute if score #score_inverted gm4_bee_data matches 1.. run scoreboard players operation flower_ratio gm4_bee_data = inverse gm4_bee_data
