@@ -1,5 +1,5 @@
 # moneo main
-# run from #metallurgy_expansion:main
+# run from expansion/pulse_check
 
 tag @a remove gm4_has_moneo
 
