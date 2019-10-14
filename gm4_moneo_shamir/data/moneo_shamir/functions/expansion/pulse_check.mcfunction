@@ -4,5 +4,3 @@ execute if score current_tick gm4_clock_tick = metallurgy gm4_clock_tick run fun
 
 # checks for moneo tools and provides maximum durability
 execute as @e[type=item,tag=!gm4_moneo_checked] run function moneo_shamir:item_check
-
-

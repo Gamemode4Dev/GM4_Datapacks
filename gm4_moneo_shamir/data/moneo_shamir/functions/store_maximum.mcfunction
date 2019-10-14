@@ -27,3 +27,4 @@ execute if entity @s[nbt={Item:{id:"minecraft:golden_hoe"}}] run data modify ent
 execute if entity @s[nbt={Item:{id:"minecraft:golden_axe"}}] run data modify entity @s Item.tag.MaxDurability set value 33
 
 execute if entity @s[nbt={Item:{id:"minecraft:shears"}}] run data modify entity @s Item.tag.MaxDurability set value 237
+

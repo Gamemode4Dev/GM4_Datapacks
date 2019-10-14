@@ -12,7 +12,7 @@
   "required_modules":[
     "liquid_tanks"
   ],
-  "recommended_modules":["liquid_minecarts"],
+  "recommended_modules":[],
   "credits":{
     "Creator":[
       ["SpecialBuilder32","https://twitter.com/SpecialBuilder"]

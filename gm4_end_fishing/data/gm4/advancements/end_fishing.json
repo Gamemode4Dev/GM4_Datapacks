@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "fishing_rod",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "I wonder what's down there?",
+        {"translate": "advancement.gm4.end_fishing.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Catch some loot from the end void",
+        {"translate": "advancement.gm4.end_fishing.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "fish_in_end": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
