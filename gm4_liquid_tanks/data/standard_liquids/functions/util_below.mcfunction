@@ -16,7 +16,7 @@ execute if score @s[tag=gm4_lt_rabbit_stew] gm4_lt_value matches 1.. as @a[gamem
 execute if score @s[tag=gm4_lt_beetroot_soup] gm4_lt_value matches 1.. as @a[gamemode=!spectator,limit=1,dx=0] unless entity @s[nbt={foodLevel:20}] run function standard_liquids:util/beetroot_soup
 
 #player withdrawing experience
-execute if score standard_liquids_withdraw_experience gm4_lt_util matches 2 run scoreboard players set standard_liquids_deposit_experience gm4_lt_util 0
+execute if score standard_liquids_withdraw_experience gm4_lt_util matches 2 run scoreboard players set standard_liquids_withdraw_experience gm4_lt_util 0
 execute positioned ~0.5 ~-1 ~0.5 if entity @a[distance=..0.5,gamemode=!spectator] run scoreboard players set standard_liquids_withdraw_experience gm4_lt_util 1
 
 tag @s remove gm4_processing_tank
