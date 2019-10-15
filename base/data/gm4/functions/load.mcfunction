@@ -1,4 +1,4 @@
-data merge storage gm4:log {queue:[]}
+execute unless data storage gm4:log queue run data merge storage gm4:log {queue:[]}
 data modify storage gm4:log queue append value {type:"text",message:'{"text":"[GM4]: Checking for updates...","color":"aqua"}'}
 
 scoreboard players set gm4 load 1
