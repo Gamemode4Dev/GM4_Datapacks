@@ -1,12 +1,3 @@
-#announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Installing End Fishing...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.end_fishing"}]}]}]
-execute unless entity @a[limit=1] run say GM4: Installing End Fishing...
-
-#declare and initialise scoreboards and settings
-scoreboard players set update_happened gm4_up_check 1
-scoreboard players set end_fishing gm4_modules 1
-scoreboard players set end_fishing gm4_clock_tick 0
-
 scoreboard objectives add gm4_cast_rod minecraft.used:minecraft.fishing_rod
 scoreboard objectives add gm4_ef_timer dummy
 scoreboard objectives add gm4_ef_id dummy
@@ -21,9 +12,11 @@ scoreboard players set #0 gm4_ef_data 0
 scoreboard players set #57 gm4_ef_data 57
 scoreboard players set #4 gm4_ef_data 4
 
-#announce success
-tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["End Fishing Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.end_fishing"}]}]}]
-execute unless entity @a[limit=1] run say GM4: End Fishing Installed!
+scoreboard players set end_fishing gm4_modules 1
 
-#check other modules to make sure they're up to date.
+execute unless score end_fishing gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"End Fishing"}
+
+schedule function end_fishing:main 1t
+schedule function end_fishing:tick 1t
+
 #$moduleUpdateList
