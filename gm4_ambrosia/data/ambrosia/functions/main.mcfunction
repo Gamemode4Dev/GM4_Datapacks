@@ -13,3 +13,5 @@ execute as @e[type=item,nbt={Item:{tag:{gm4_ambrosia:{item:"beeswax"}}}}] at @s 
 
 # repair broken skulls
 function ambrosia:hive/repair_skulls
+
+schedule function ambrosia:main 16t

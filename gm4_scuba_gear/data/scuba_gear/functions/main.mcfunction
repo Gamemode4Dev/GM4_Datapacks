@@ -10,3 +10,5 @@ execute as @a[tag=gm4_in_water] run function scuba_gear:check_gear
 
 #reward advancement
 advancement grant @a[gamemode=!spectator,nbt={Inventory:[{Slot:103b,tag:{gm4_scuba_gear:{item:"helmet"}}},{Slot:102b,tag:{gm4_scuba_gear:{item:"tank"}}},{Slot:100b,tag:{gm4_scuba_gear:{item:"flippers"}}}]}] only gm4:scuba_gear
+
+schedule function scuba_gear:main 16t

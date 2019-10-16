@@ -1,7 +1,6 @@
 {
     "values": [
         "#custom_crafters:load",
-        "#desire_lines:load",
         "#boots_of_ostara:load"
     ]
 }

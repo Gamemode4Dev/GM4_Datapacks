@@ -15,3 +15,5 @@ effect give @e[type=zombie,tag=gm4_ESC] speed 4 1
 advancement grant @a[tag=gm4_ESC] only gm4:enderman_support_class
 
 tag @e remove gm4_ESC
+
+schedule function enderman_support_class:main 16t
