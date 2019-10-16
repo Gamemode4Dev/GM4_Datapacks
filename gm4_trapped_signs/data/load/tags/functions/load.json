@@ -1,5 +1,6 @@
 {
     "values": [
-        "trapped_signs:load"
+        "#custom_crafters:load",
+        "#trapped_signs:load"
     ]
 }

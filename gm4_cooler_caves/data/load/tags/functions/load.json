@@ -1,5 +1,6 @@
 {
     "values": [
-        "cooler_caves:load"
+        "#obris:load",
+        "#cooler_caves:load"
     ]
 }

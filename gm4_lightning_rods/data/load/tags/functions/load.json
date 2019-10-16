@@ -1,5 +1,6 @@
 {
     "values": [
-        "lightning_rods:load"
+        "#custom_crafters:load",
+        "#lightning_rods:load"
     ]
 }

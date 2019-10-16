@@ -1,5 +1,6 @@
 {
     "values": [
-        "ambrosia:load"
+        "#liquid_tanks:load",
+        "#ambrosia:load"
     ]
 }

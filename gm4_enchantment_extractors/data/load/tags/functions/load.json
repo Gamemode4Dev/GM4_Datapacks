@@ -1,5 +1,5 @@
 {
     "values": [
-        "enchantment_extractors:load"
+        "#enchantment_extractors:load"
     ]
 }

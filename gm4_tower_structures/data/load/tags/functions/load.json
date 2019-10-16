@@ -1,5 +1,6 @@
 {
     "values": [
-        "tower_structures:load"
+        "#orbis:load",
+        "#tower_structures:load"
     ]
 }

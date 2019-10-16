@@ -1,5 +1,6 @@
 {
     "values": [
-        "block_compressors:load"
+        "#custom_crafters:load",
+        "#block_compressors:load"
     ]
 }

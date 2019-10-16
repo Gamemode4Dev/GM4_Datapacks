@@ -1,5 +1,6 @@
 {
     "values": [
-        "dangerous_dungeons:load"
+        "#orbis:load",
+        "#dangerous_dungeons:load"
     ]
 }

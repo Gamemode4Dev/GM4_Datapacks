@@ -1,5 +1,5 @@
 {
     "values": [
-        "spawner_minecarts:load"
+        "#spawner_minecarts:load"
     ]
 }

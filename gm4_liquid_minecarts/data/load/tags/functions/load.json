@@ -1,5 +1,6 @@
 {
     "values": [
-        "liquid_minecarts:load"
+        "#liquid_tanks:load",
+        "#liquid_minecarts:load"
     ]
 }

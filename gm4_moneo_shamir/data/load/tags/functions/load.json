@@ -1,5 +1,6 @@
 {
     "values": [
-        "moneo_shamir:load"
+        "#metallurgy:load",
+        "#moneo_shamir:load"
     ]
 }

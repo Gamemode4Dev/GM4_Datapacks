@@ -1,5 +1,6 @@
 {
     "values": [
-        "heart_canisters:load"
+        "#custom_crafters:load",
+        "#heart_canisters:load"
     ]
 }

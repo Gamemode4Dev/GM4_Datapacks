@@ -1,5 +1,6 @@
 {
     "values": [
-        "potion_liquids:load"
+        "#liquid_tanks:load",
+        "#potion_liquids:load"
     ]
 }

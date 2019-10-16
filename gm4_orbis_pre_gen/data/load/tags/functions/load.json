@@ -1,5 +1,6 @@
 {
     "values": [
-        "orbis_pre_gen:load"
+        "#orbis:load",
+        "#orbis_pre_gen:load"
     ]
 }

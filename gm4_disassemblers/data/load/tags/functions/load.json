@@ -1,5 +1,6 @@
 {
     "values": [
-        "disassemblers:load"
+        "#custom_crafters:load",
+        "#disassemblers:load"
     ]
 }

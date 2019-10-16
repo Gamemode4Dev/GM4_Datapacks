@@ -1,5 +1,5 @@
 {
     "values": [
-        "undead_players:load"
+        "#undead_players:load"
     ]
 }

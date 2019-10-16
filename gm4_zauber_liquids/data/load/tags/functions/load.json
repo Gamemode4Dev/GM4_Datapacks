@@ -1,5 +1,6 @@
 {
     "values": [
-        "zauber_liquids:load"
+        "#liquid_tanks:load",
+        "#zauber_liquids:load"
     ]
 }

@@ -1,5 +1,5 @@
 {
     "values": [
-        "liquid_tanks:load"
+        "#liquid_tanks:load"
     ]
 }

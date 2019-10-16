@@ -1,5 +1,5 @@
 {
     "values": [
-        "MODULE_ID:load"
+        "#MODULE_ID:load"
     ]
 }

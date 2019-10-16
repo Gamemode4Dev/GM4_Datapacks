@@ -1,5 +1,6 @@
 {
     "values": [
-        "record_crafting:load"
+        "#custom_crafters:load",
+        "#record_crafting:load"
     ]
 }

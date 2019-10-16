@@ -1,5 +1,6 @@
 {
     "values": [
-        "poses_pack:load"
+        "#better_armour_stands:load",
+        "#poses_pack:load"
     ]
 }

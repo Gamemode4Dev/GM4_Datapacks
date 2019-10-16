@@ -1,5 +1,6 @@
 {
     "values": [
-        "cement_mixers:load"
+        "#liquid_tanks:load",
+        "#cement_mixers:load"
     ]
 }
