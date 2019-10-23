@@ -1,0 +1,2 @@
+#check for arrow that places a torch or crop
+execute as @e[type=minecraft:arrow,tag=gm4_cb_proj,nbt={inGround:1b}] at @s if block ~ ~ ~ #crossbow_cartridges:replaceable run function crossbow_cartridges:arrow_in_ground
