@@ -1,2 +1,14 @@
-data merge entity @s {Item:{Count:1b,tag:{gm4_compressed:{value:16},display:{Lore:['"Compressed *16"']},HideFlags:1,Enchantments:[{id:"minecraft:protection",lvl:0}]}}}
+#@s = item entity to be compressed
+#run from block_compressors:item
+
+#copy existing data for restoration at decompression
+data modify entity @s Item.tag.gm4_precompression_tag set from entity @s Item.tag
+
+#if no tag data to save, make a note
+execute unless data entity @s Item.tag run data modify entity @s Item.tag.gm4_precompression_tag set value "no_tag_data_to_preserve"
+
+#add new data to indicate store compression state
+data merge entity @s {Item:{Count:1b,tag:{CustomModelData:16,gm4_compressed:{value:16},HideFlags:1,Enchantments:[{id:"minecraft:protection",lvl:0}]}}}
+data modify entity @s Item.tag.display.Lore append value '{"translate":"%1$s%3427655$s","with":["Compressed *16",{"translate":"text.gm4.block_compressors.compressed","with":["16"]}]}'
+
 playsound block.piston.extend block @a

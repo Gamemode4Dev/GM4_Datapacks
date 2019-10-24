@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"potion",
+      "nbt":"{display:{Name:\"\\\"ambrosia logo\\\"\"},CustomPotionColor:16754944}"
+    },
+    "title":"A sweet upgrade",
+    "description":{
+      "text":"Bottle some honey",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:ambrosia_create_beehive",
+  "criteria":{
+    "ambrosia_bottled_honey":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "criteria":{
+    "consume_honey_level_3":{
+      "trigger":"minecraft:consume_item",
+      "conditions":{
+        "item":{
+          "nbt":"{gm4_ambrosia:{item:\"honey_bottle\",honey_level:3}}"
+        }
+      }
+    }
+  },
+ "rewards":{
+   "function":"ambrosia:honey_bottle/consumption_checks/level_3"
+ }
+}

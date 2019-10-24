@@ -1,0 +1,29 @@
+{
+  "display":{
+    "icon":{
+      "item":"hopper",
+      "nbt":"{CustomModelData:1}"
+    },
+    "title":{
+      "translate": "%1$s%3427655$s",
+      "with":[
+        "Oh, That Kind of Tank",
+        {"translate": "advancement.gm4.liquid_tanks.title"}
+        ]
+      },
+    "description":{
+      "translate": "%1$s%3427655$s",
+      "with":[
+        "Find out that a liquid tank is not an epic submarine",
+        {"translate": "advancement.gm4.liquid_tanks.description"}
+      ],
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "create_liquid_tank":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"barrel",
+      "nbt":"{display:{Name:\"\\\"ambrosia logo\\\"\"}}"
+    },
+    "title":"Plan B",
+    "description":{
+      "text":"First a Beehive, then the world",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:ambrosia_find_larvae",
+  "criteria":{
+    "ambrosia_create_beehive":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}

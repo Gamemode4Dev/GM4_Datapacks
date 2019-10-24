@@ -1,19 +1,29 @@
 {
-  "display":{
-    "icon":{
-      "item":"player_head",
-      "nbt":"{SkullOwner:\"MHF_Enderman\",display:{Name:'\"enderman_support_class logo\"'}}"
+  "display": {
+    "icon": {
+      "item": "player_head",
+      "nbt": "{CustomModelData:3,SkullOwner:\"MHF_Enderman\"}"
     },
-    "title":"Ender Aid",
-    "description":{
-      "text":"Come into contact with a support Enderman.",
-      "color":"gray"
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Ender Aid",
+        {"translate": "advancement.gm4.enderman_support_class.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Come into contact with a support Enderman",
+        {"translate": "advancement.gm4.enderman_support_class.description"}
+      ],
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "contact_enderman":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:root",
+  "criteria": {
+    "contact_enderman": {
+      "trigger": "minecraft:impossible"
     }
   }
 }
