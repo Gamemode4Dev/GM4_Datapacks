@@ -5,7 +5,7 @@ summon minecraft:tropical_fish ~ ~1.2 ~ {FromBucket:1,Tags:["gm4_cb_proj"],Activ
 data modify entity @e[type=minecraft:tropical_fish,tag=gm4_cb_proj,distance=..2,limit=1] Variant set from entity @s Inventory[{Slot:-106b}].tag.BucketVariantTag
 
 #replace bucket of tropical fish in player's offhand with water bucket
-execute unless entity @s[gamemode=creative] run replaceitem entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:tropical_fish_bucket"}]}] weapon.offhand minecraft:water_bucket
+execute unless entity @s[gamemode=creative] run replaceitem entity @s weapon.offhand minecraft:water_bucket
 
 #move motion of arrow to potion
 function crossbow_cartridges:shoot/arrow_motion
