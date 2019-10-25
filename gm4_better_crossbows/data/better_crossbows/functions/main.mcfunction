@@ -1,2 +1,0 @@
-#check for arrow that places a torch or crop
-execute as @e[type=minecraft:arrow,tag=gm4_cb_proj,nbt={inGround:1b}] at @s if block ~ ~ ~ #better_crossbows:replaceable run function better_crossbows:arrow_in_ground
