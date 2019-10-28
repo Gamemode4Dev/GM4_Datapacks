@@ -1,6 +1,6 @@
 {
     "values": [
-        "#custom_crafters:load",
-        "#boots_of_ostara:load"
+        "#load:gm4_custom_crafters",
+        "#load:gm4_boots_of_ostara"
     ]
 }

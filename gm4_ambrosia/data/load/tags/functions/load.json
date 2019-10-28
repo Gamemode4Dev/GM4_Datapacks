@@ -1,6 +1,6 @@
 {
     "values": [
-        "#liquid_tanks:load",
-        "#ambrosia:load"
+        "#load:gm4_liquid_tanks",
+        "#load:gm4_ambrosia"
     ]
 }

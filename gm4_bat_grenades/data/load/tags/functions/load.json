@@ -1,5 +1,5 @@
 {
     "values": [
-        "bat_grenades:load"
+        "#load:gm4_bat_grenades"
     ]
 }

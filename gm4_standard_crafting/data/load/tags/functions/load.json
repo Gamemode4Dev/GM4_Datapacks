@@ -1,6 +1,6 @@
 {
     "values": [
-        "#custom_crafters:load",
-        "#standard_crafting:load"
+        "#load:gm4_custom_crafters",
+        "#load:gm4_standard_crafting"
     ]
 }

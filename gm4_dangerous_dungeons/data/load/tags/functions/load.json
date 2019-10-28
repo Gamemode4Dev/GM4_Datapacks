@@ -1,6 +1,6 @@
 {
     "values": [
-        "#orbis:load",
-        "#dangerous_dungeons:load"
+        "#load:gm4_orbis",
+        "#load:gm4_dangerous_dungeons"
     ]
 }

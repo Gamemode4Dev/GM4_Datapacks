@@ -1,6 +1,6 @@
 {
     "values": [
-        "#liquid_tanks:load",
-        "#cement_mixers:load"
+        "#load:gm4_liquid_tanks",
+        "#load:gm4_cement_mixers"
     ]
 }

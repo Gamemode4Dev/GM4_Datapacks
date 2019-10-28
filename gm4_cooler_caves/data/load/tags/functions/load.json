@@ -1,6 +1,6 @@
 {
     "values": [
-        "#orbis:load",
-        "#cooler_caves:load"
+        "#load:gm4_orbis",
+        "#load:gm4_cooler_caves"
     ]
 }

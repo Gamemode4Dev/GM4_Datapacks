@@ -1,5 +1,5 @@
 {
     "values": [
-        "#enchantment_extractors:load"
+        "#load:gm4_enchantment_extractors"
     ]
 }

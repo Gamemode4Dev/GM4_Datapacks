@@ -1,6 +1,6 @@
 {
     "values": [
-        "#liquid_tanks:load",
-        "#mending_tanks:load"
+        "#load:gm4_liquid_tanks",
+        "#load:gm4_mending_tanks"
     ]
 }

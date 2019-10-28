@@ -1,6 +1,6 @@
 {
     "values": [
-        "#orbis:load",
-        "#tower_structures:load"
+        "#load:gm4_orbis",
+        "#load:gm4_tower_structures"
     ]
 }

@@ -1,6 +1,6 @@
 {
     "values": [
-        "#custom_crafters:load",
-        "#heart_canisters:load"
+        "#load:gm4_custom_crafters",
+        "#load:gm4_heart_canisters"
     ]
 }
