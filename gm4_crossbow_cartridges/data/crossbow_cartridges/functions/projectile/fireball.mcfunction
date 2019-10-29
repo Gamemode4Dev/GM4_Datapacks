@@ -13,3 +13,6 @@ execute unless entity @s[gamemode=creative] run clear @s minecraft:fire_charge 1
 
 #move motion of arrow to potion
 function crossbow_cartridges:projectile/arrow_motion
+
+#firecharge sound
+playsound minecraft:item.firecharge.use player @a[distance=..15]

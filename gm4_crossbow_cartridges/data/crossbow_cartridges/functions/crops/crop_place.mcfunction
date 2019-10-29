@@ -12,3 +12,6 @@ execute if entity @s[tag=gm4_cb_wheat] run setblock ~ ~.5 ~ minecraft:wheat
 execute if entity @s[tag=gm4_cb_beet] run setblock ~ ~.5 ~ minecraft:beetroots
 execute if entity @s[tag=gm4_cb_pumpkin] run setblock ~ ~.5 ~ minecraft:pumpkin_stem
 execute if entity @s[tag=gm4_cb_melon] run setblock ~ ~.5 ~ minecraft:melon_stem
+
+#sound to nearby players
+playsound minecraft:item.hoe.till block @a[distance=..15]
