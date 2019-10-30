@@ -1,6 +1,6 @@
 ---
-name: Bug report
-about: Report bugs to help improve Gamemode 4
+name: Bug Report
+about: Report a unexpected or broken behavior.
 title: ''
 labels: bug, needs investigation
 assignees: ''
