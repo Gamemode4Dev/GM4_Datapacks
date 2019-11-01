@@ -1,6 +1,11 @@
-# @s = an iron ingot item stack 
-# run from mode/compress
+# @s = an iron ingot item stack on a tinkering compressor
+# at @tinkering compressor positioned ~ ~0.9 ~
+# run from tinkering_compressors:mode/decompress
 
+# set fake player flag
+scoreboard players set ran_compressor gm4_tc_data 1
+
+# tinker operation
 execute store result score #item_count gm4_tc_data run data get entity @s Item.Count 1
 
 scoreboard players operation #items gm4_tc_data = #item_count gm4_tc_data
