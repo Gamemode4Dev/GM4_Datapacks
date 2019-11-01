@@ -33,4 +33,6 @@ execute if score @s gm4_slot_count matches 9 if score @s gm4_stack_size matches 
 #double stone stone slab
 execute if score @s gm4_slot_count matches 4 if score @s gm4_stack_size matches ..32 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:smooth_stone_slab"},{Slot:1b,id:"minecraft:smooth_stone_slab"},{Slot:3b,id:"minecraft:smooth_stone_slab"},{Slot:4b,id:"minecraft:smooth_stone_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"smooth_stone",Count:1b,tag:{gm4_custom_crafters:{multiplier:2}}}]}
 #stairs
-execute if score @s gm4_slot_count matches 4 if score @s gm4_stack_size matches ..10 run function standard_crafting:stairs_recipes
+execute if score @s gm4_slot_count matches 4 if score @s gm4_stack_size matches ..16 run function standard_crafting:stairs_recipes
+#string
+execute if score @s gm4_slot_count matches 1 if score @s gm4_stack_size matches ..21 run function standard_crafting:string_recipes
