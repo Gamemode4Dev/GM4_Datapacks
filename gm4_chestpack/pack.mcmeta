@@ -5,7 +5,7 @@
   },
   "module_name":"Chestpacks",
   "module_id":"chestpack",
-  "site_description":"Adds an item that can turn a placed chest into a backpack",
+  "site_description":"Shulker boxes can now take the items in a chest when dropped on one",
   "site_categories":[],
   "video_link":"YOUTUBE_VIDEO_URL",
   "wiki_link":"WIKI_URL",
