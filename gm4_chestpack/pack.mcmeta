@@ -1,0 +1,25 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Chestpacks",
+  "module_id":"chestpack",
+  "site_description":"Adds an item that can turn a placed chest into a backpack",
+  "site_categories":[],
+  "video_link":"YOUTUBE_VIDEO_URL",
+  "wiki_link":"WIKI_URL",
+  "required_modules":[
+    "Custom Crafting"
+  ],
+  "recommended_modules":[
+  ],
+  "credits":{
+    "comment":"All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings.",
+    "Creator":[
+      ["suppergerrie2","https://www.suppergerrie2.com"]
+    ],
+    "Updated By":[
+    ]
+  }
+}
