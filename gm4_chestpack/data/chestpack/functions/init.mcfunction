@@ -7,6 +7,7 @@ scoreboard players set update_happened gm4_up_check 1
 scoreboard players set chestpack gm4_modules 1
 scoreboard players set chestpack gm4_clock_tick 0
 
+#needed to make sure there are no items in the shulker box
 scoreboard objectives add gm4_chestpack dummy
 
 #announce success
