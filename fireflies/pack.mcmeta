@@ -1,0 +1,21 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"FireFlies",
+  "module_id":"fireflies",
+  "site_description":"Want to spice up your builds? Craft a bottle of FireFlies and watch them roam in the night!",
+  "site_categories":[
+  ],
+  "video_link":"https://www.youtube.com/",
+  "wiki_link":"https://wiki.gm4.co/wiki/FireFlies",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "Creators":[
+      ["DuckJr","https://www.twitter.com/Duckjr94"],
+      ["Kroppeb","https://www.twitter.com/Kroppeb"]
+    ]
+  }
+}
