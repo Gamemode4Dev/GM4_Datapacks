@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "boots_of_ostara": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:leather_boots",
+            "nbt": "{gm4_boots_of_ostara:1b}"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "boots_of_ostara:enable_boots"
+  }
+}
