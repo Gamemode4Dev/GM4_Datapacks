@@ -1,0 +1,15 @@
+{
+  "criteria":{
+    "place_relocated_block":{
+      "trigger":"minecraft:placed_block",
+      "conditions":{
+        "item":{
+          "nbt":"{gm4_relocation:{}}"
+        }
+      }
+    }
+  },
+ "rewards":{
+   "function":"relocators:placed_machine_block"
+ }
+}
