@@ -12,7 +12,7 @@
   "video_link":"https://www.youtube.com/watch?v=H4UGM6_wGCE",
   "wiki_link":"https://wiki.gm4.co/wiki/Boots_of_Ostara",
   "required_modules":[],
-  "recommended_modules":["desire_lines"],
+  "recommended_modules":["desire_lines","better_armour_stands"],
   "credits":{
     "Creator":[
       ["The8BitMonkey","https://www.youtube.com/the8bitmonkey"]
