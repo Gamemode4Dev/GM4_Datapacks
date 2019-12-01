@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"tropical_fish_bucket",
+      "nbt":"{display:{Name:\"\\\"better_crossbows logo\\\"\"}}"
+    },
+    "title":"Fish Launcher!",
+    "description":{
+      "text":"Launch a fish using a crossbow",
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:root",
+  "criteria":{
+    "TRIGGER_NAME":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
