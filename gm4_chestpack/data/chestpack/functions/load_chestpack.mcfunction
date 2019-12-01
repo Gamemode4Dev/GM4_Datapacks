@@ -1,5 +1,5 @@
 #ran by main
-#@s is entity with gm4_chestpack as 1b on a valid chest block
+#@s is entity with gm4_chestpack score 0, gm4_shulkerbox tag and not the gm4_chestpack_processed tag  and on a valid chest block
 #at @s
 #save the chests items into the item and destroy the block
 data modify entity @s Item.tag.BlockEntityTag.Items set from block ~ ~ ~ Items
