@@ -20,15 +20,3 @@ execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:torch"}]}] run fu
 
 #fireball
 execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:fire_charge"}]}] run function crossbow_cartridges:projectile/fireball
-
-#optional: remove # in front of `execute` to enable
-#crops
-#execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot"}]}] run function crossbow_cartridges:projectile/crops/carrot
-#execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:potato"}]}] run function crossbow_cartridges:projectile/crops/potato
-#execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:wheat_seeds"}]}] run function crossbow_cartridges:projectile/crops/wheat
-#execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:beetroot_seeds"}]}] run function crossbow_cartridges:projectile/crops/beet
-#execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:pumpkin_seeds"}]}] run function crossbow_cartridges:projectile/crops/pumpkin
-#execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:melon_seeds"}]}] run function crossbow_cartridges:projectile/crops/melon
-
-#anvil
-#execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:anvil"}]}] run function crossbow_cartridges:projectile/anvil

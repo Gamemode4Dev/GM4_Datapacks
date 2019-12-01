@@ -11,8 +11,5 @@ execute if block ~ ~ ~ #crossbow_cartridges:replaceable run function crossbow_ca
 #summon torch item if placing torch failed
 execute unless block ~ ~ ~ #crossbow_cartridges:torch run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:torch",Count:1b}}
 
-#block
-playsound minecraft:block.wood.place block @a[distance=..15]
-
 #kill arrow
 kill @s

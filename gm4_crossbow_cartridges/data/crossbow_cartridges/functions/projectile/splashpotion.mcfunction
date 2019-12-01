@@ -10,6 +10,3 @@ execute unless entity @s[gamemode=creative] run replaceitem entity @s[nbt={Inven
 
 #move motion of arrow to potion
 function crossbow_cartridges:projectile/arrow_motion
-
-#potion throw sound
-playsound minecraft:entity.splash_potion.throw player @a[distance=..15] ~ ~ ~ .5 0
