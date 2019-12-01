@@ -1,5 +1,5 @@
 # @s = machine block armor stand
-# run from found_machine
+# run from check_block_items
 
 loot spawn ~ ~ ~ mine ~ ~0.2 ~ minecraft:diamond_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1}]}
 
@@ -8,7 +8,6 @@ data merge entity @e[type=item,limit=1,distance=..0.1,sort=nearest] {Tags:[gm4_r
 data modify entity @e[tag=gm4_rl_set_item_data,limit=1,sort=nearest,distance=..0.1] Item.tag.display.Name set from block ~ ~.2 ~ CustomName
 
 scoreboard players set sub_location gm4_rl_data 0
-execute store result score location gm4_rl_data run data get block ~ ~.2 ~ y 100
 execute store result score sub_location gm4_rl_data run data get entity @s Pos[1] 100
 scoreboard players operation sub_location gm4_rl_data -= location gm4_rl_data
 execute store result entity @e[tag=gm4_rl_set_item_data,limit=1,sort=nearest,distance=..0.1] Item.tag.gm4_relocation.loc double 0.01 run scoreboard players get sub_location gm4_rl_data

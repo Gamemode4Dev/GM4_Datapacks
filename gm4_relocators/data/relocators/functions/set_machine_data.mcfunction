@@ -8,7 +8,6 @@ data modify entity @e[type=armor_stand,tag=gm4_rl_set_stand_data,limit=1,distanc
 data modify entity @e[type=armor_stand,tag=gm4_rl_set_stand_data,limit=1,distance=..0.01] Invulnerable set from entity @s SelectedItem.tag.gm4_relocation.data.Invulnerable
 data modify entity @e[type=armor_stand,tag=gm4_rl_set_stand_data,limit=1,distance=..0.01] Pose set from entity @s SelectedItem.tag.gm4_relocation.data.Pose
 data modify block ~ ~ ~ CustomName set from entity @s SelectedItem.tag.gm4_relocation.data.BlockName
-#data modify block ~ ~ ~ Items set from entity @s SelectedItem.tag.gm4_relocation.data.Items
 data modify block ~ ~ ~ Lock set from entity @s SelectedItem.tag.gm4_relocation.data.Lock
 
 execute store result score location gm4_rl_data run data get entity @e[type=armor_stand,tag=gm4_rl_set_stand_data,limit=1,distance=..0.01] Pos[1] 100
