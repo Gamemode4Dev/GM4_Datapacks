@@ -11,7 +11,7 @@
     "Metallurgy"
   ],
   "video_link": "",
-  "wiki_link": "",
+  "wiki_link": "https://wiki.gm4.co/wiki/Tinkering_Compressors",
   "required_modules": [
     "custom_crafters",
     "block_compressors",
