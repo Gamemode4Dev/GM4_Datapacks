@@ -7,7 +7,7 @@
   "module_id":"relocators",
   "site_description":"Craft relocators to move your custom crafters, liquid tanks, and other machines",
   "site_categories":[
-    "Custom Crafters"
+    "Custom Crafting"
   ],
   "video_link":"",
   "wiki_link":"https://wiki.gm4.co/wiki/Relocators",
@@ -22,9 +22,6 @@
   "credits":{
     "Creator":[
       ["BluePsychoRanger","https://www.twitter.com/BluPsychoRanger"]
-    ],
-    "Icon Design":[
-      ["DuckJr","https://www.twitter.com/DuckJr94"]
     ]
   }
 }
