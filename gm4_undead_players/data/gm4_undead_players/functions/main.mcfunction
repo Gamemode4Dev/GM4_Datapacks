@@ -1,3 +1,3 @@
-execute as @a[scores={gm4_undead=1..}] at @s run function gm4_undead_players:main
+execute as @a[scores={gm4_undead=1..}] at @s run function gm4_undead_players:died
 
 schedule function gm4_undead_players:main 16t
