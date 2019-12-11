@@ -2,4 +2,4 @@ execute if score gm4 load matches 1 run scoreboard players set gm4_weighted_armo
 execute unless score gm4 load matches 1 run data modify storage gm4:log queue append value {type:"missing",module:"Weighted Armour",require:"Gamemode 4"}
 
 execute if score gm4_weighted_armour load matches 1 run function gm4_weighted_armour:init
-execute unless score gm4_weighted_armour load matches 1 run schedule clear weighted_armour:main
+execute unless score gm4_weighted_armour load matches 1 run schedule clear gm4_weighted_armour:main
