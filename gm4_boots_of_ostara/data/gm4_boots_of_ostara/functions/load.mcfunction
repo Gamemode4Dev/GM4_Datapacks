@@ -3,4 +3,4 @@ execute unless score gm4 load matches 1 run data modify storage gm4:log queue ap
 execute unless score gm4_liquid_tanks load matches 1 run data modify storage gm4:log queue append value {type:"missing",module:"Boots Of Ostara",require:"Custom Crafters"}
 
 execute if score gm4_boots_of_ostara load matches 1 run function gm4_boots_of_ostara:init
-execute unless score gm4_boots_of_ostara load matches 1 run schedule clear boots_of_ostara:main
+execute unless score gm4_boots_of_ostara load matches 1 run schedule clear gm4_boots_of_ostara:main

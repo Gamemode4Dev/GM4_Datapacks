@@ -3,4 +3,4 @@ execute unless score gm4 load matches 1 run data modify storage gm4:log queue ap
 execute unless score gm4_better_armour_stands load matches 1 run data modify storage gm4:log queue append value {type:"missing",module:"Particles Pack",require:"Better Armour Stands"}
 
 execute if score gm4_particles_pack load matches 1 run function gm4_particles_pack:init
-execute unless score gm4_particles_pack load matches 1 run schedule clear particles_pack:main
+execute unless score gm4_particles_pack load matches 1 run schedule clear gm4_particles_pack:main

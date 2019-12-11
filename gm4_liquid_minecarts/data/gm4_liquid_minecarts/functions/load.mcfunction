@@ -3,4 +3,4 @@ execute unless score gm4 load matches 1 run data modify storage gm4:log queue ap
 execute unless score gm4_liquid_tanks load matches 1 run data modify storage gm4:log queue append value {type:"missing",module:"Liquid Minecarts",require:"Liquid Tanks"}
 
 execute if score gm4_liquid_minecarts load matches 1 run function gm4_liquid_minecarts:init
-execute unless score gm4_liquid_minecarts load matches 1 run schedule clear liquid_minecarts:main
+execute unless score gm4_liquid_minecarts load matches 1 run schedule clear gm4_liquid_minecarts:main
