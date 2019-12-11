@@ -12,9 +12,8 @@ scoreboard players set #0 gm4_ef_data 0
 scoreboard players set #57 gm4_ef_data 57
 scoreboard players set #4 gm4_ef_data 4
 
-scoreboard players set end_fishing gm4_modules 1
-
 execute unless score end_fishing gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"End Fishing"}
+scoreboard players set end_fishing gm4_modules 1
 
 schedule function end_fishing:main 1t
 schedule function end_fishing:tick 1t

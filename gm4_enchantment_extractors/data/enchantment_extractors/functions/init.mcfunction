@@ -4,9 +4,8 @@ scoreboard players set mult gm4_ench_random 1664525
 scoreboard players set incr gm4_ench_random 1013904223
 scoreboard players set #100 gm4_ench_random 100
 
-scoreboard players set enchantment_extractors gm4_modules 1
-
 execute unless score enchantment_extractors gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Enchantment Extractors"}
+scoreboard players set enchantment_extractors gm4_modules 1
 
 schedule function enchantment_extractors:main 1t
 

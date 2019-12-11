@@ -12,9 +12,8 @@ scoreboard players set #10000 gm4_bee_data 10000
 # set naturalRegeneration to false
 gamerule naturalRegeneration false
 
-scoreboard players set ambrosia gm4_modules 1
-
 execute unless score ambrosia gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Ambrosia"}
+scoreboard players set ambrosia gm4_modules 1
 
 schedule function ambrosia:main 1t
 schedule function ambrosia:tick 1t
