@@ -9,3 +9,5 @@ execute as @e[tag=gm4_custom_crafter,type=armor_stand] run data merge entity @s 
 
 #recipes
 execute as @e[tag=gm4_custom_crafter,type=armor_stand] at @s if block ~ ~ ~ dropper[triggered=false]{Items:[{}]} run function custom_crafters:recipe_validity_check
+
+schedule function custom_crafters:main 16t

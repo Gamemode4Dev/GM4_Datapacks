@@ -1,12 +1,3 @@
-#announce module installation
-tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Installing Custom Terrain Pre-gen..."}]
-execute unless entity @a[limit=1] run say GM4: Installing Custom Terrain Pre-gen...
-
-#declare and initialise scoreboards and settings
-scoreboard players set update_happened gm4_up_check 1
-scoreboard players set orbis_pre_gen gm4_modules 1
-scoreboard players set orbis_pre_gen_tick gm4_clock_tick 0
-
 scoreboard objectives add gm4_orbis_config dummy
 scoreboard players set pre_gen_running gm4_orbis_config 0
 scoreboard players set #100 gm4_orbis_config 100
@@ -15,9 +6,9 @@ scoreboard players set z1 gm4_orbis_config -1024
 scoreboard players set x2 gm4_orbis_config 1024
 scoreboard players set z2 gm4_orbis_config 1024
 
-#announce success
-tellraw @a[gamemode=creative] ["",{"text":"[GM4]: Custom Terrain Pre-gen Installed!"}]
-execute unless entity @a[limit=1] run say GM4: Custom Terrain Pre-gen Installed!
+execute unless score orbis_pre_gen gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Orbis Pre Gen"}
+scoreboard players set orbis_pre_gen gm4_modules 1
 
-#check other modules to make sure they're up to date.
+schedule function orbis_pre_gen:tick 1t
+
 #$moduleUpdateList

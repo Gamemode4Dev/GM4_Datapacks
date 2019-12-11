@@ -9,3 +9,5 @@ execute as @e[type=command_block_minecart,tag=gm4_liquid_minecart] at @s run fun
 
 #minecart level report
 execute as @a[gamemode=!spectator] at @s run function liquid_minecarts:level_report_ray
+
+schedule function liquid_minecarts:main 16t

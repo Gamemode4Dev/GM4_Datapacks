@@ -1,15 +1,7 @@
-#announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Installing Vertical Rails...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.vertical_rails"}]}]}]
-execute unless entity @a[limit=1] run say GM4: Installing Vertical Rails...
-
-#declare and initialise scoreboards and settings
-scoreboard players set update_happened gm4_up_check 1
+execute unless score vertical_rails gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Vertical Rails"}
 scoreboard players set vertical_rails gm4_modules 1
-scoreboard players set vertical_rails gm4_clock_tick 0
 
-#announce success
-tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Vertical Rails Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.vertical_rails"}]}]}]
-execute unless entity @a[limit=1] run say GM4: Vertical Rails Installed!
+schedule function vertical_rails:main 1t
+schedule function vertical_rails:tick 1t
 
-#check other modules to make sure they're up to date.
 #$moduleUpdateList

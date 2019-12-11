@@ -22,3 +22,5 @@ execute if score gm4_shroom_countdown gm4_shroom_time matches 4500.. run functio
 
 #advancement needs condition
 #execute as @e[tag=gm4_minecart,tag=gm4_linked] at @s run advancement grant @p[distance=..1] only gm4:shroomites
+
+schedule function shroomites:main 16t

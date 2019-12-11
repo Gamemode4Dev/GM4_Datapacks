@@ -1,14 +1,4 @@
-#announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Installing Poses Pack...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.poses_pack"}]}]}]
-execute unless entity @a[limit=1] run say GM4: Installing Poses Pack...
-
-#declare and initialise scoreboards and settings
-scoreboard players set update_happened gm4_up_check 1
+execute unless score poses_pack gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Poses Pack"}
 scoreboard players set poses_pack gm4_modules 1
 
-#announce success
-tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Poses Pack Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.poses_pack"}]}]}]
-execute unless entity @a[limit=1] run say GM4: Poses Pack Installed!
-
-#check other modules to make sure they're up to date.
 #$moduleUpdateList

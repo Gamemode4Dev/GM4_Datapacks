@@ -47,3 +47,5 @@ execute as @a[tag=!gm4_has_musical] run function musical_shamir:songs/reset_play
 execute as @e[scores={gm4_bolt_time=1..}] at @s run function ender_bolt_shamir:main
 scoreboard players reset * gm4_bolt_damage
 execute as @e[type=trident,nbt={inGround:1b,Trident:{tag:{gm4_metallurgy:{active_shamir:"ender_bolt"}}}}] at @s run function ender_bolt_shamir:main
+
+schedule function metallurgy:main 16t

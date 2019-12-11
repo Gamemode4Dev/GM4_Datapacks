@@ -12,3 +12,5 @@ execute if score moon_phase gm4_nights_data matches -1 if score daytime gm4_nigh
 #=====EXPANSIONS=====
 #in non-included expansions this would go in their main.mcfunction
 execute if score moon_phase gm4_nights_data matches 0 if score daytime gm4_nights_data matches 12907..23080 run function mysterious_midnights:expansion_selection/included_expansions
+
+schedule function mysterious_midnights:main 16t

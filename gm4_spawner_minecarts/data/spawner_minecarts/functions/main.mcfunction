@@ -31,3 +31,5 @@ execute as @e[type=spawner_minecart,tag=gm4_spawner_minecart] unless score @s gm
 #play decorative particles
 execute as @e[type=area_effect_cloud,tag=gm4_spawner_minecart_decorative_particle] at @s run teleport ^ ^ ^0.4
 execute as @e[type=area_effect_cloud,tag=gm4_spawner_minecart_decorative_particle] at @s run particle dragon_breath ~ ~ ~ 0 0 0 .005 3
+
+schedule function spawner_minecarts:main 16t

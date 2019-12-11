@@ -9,3 +9,5 @@ execute as @e[type=armor_stand,tag=gm4_liquid_tank_display] run data merge entit
 
 #tank level report
 execute as @a[gamemode=!spectator] at @s run function liquid_tanks:level_report_ray
+
+schedule function liquid_tanks:main 16t

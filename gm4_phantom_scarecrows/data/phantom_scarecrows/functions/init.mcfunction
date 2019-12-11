@@ -1,17 +1,10 @@
-#announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Installing Phantom Scarecrows...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.phantom_scarecrows"}]}]}]
-execute unless entity @a[limit=1] run say GM4: Installing Phantom Scarecrows...
-
-#declare and initialise scoreboards and settings
-scoreboard players set update_happened gm4_up_check 1
-scoreboard players set phantom_scarecrows gm4_modules 1
-scoreboard players set phantom_scarecrows gm4_clock_tick 0
 scoreboard objectives add gm4_ps_time dummy
 scoreboard players set modulo gm4_ps_time 3
 
-#announce success
-tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Phantom Scarecrows Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.phantom_scarecrows"}]}]}]
-execute unless entity @a[limit=1] run say GM4: Phantom Scarecrows Installed!
+execute unless score phantom_scarecrows gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Phantom Scarecrows"}
+scoreboard players set phantom_scarecrows gm4_modules 1
 
-#check other modules to make sure they're up to date.
+schedule function phantom_scarecrows:main 1t
+schedule function phantom_scarecrows:tick 1t
+
 #$moduleUpdateList

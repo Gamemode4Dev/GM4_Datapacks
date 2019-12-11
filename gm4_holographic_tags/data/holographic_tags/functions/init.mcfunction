@@ -1,12 +1,3 @@
-#announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Installing Holographic Tags...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.holographic_tags"}]}]}]
-execute unless entity @a[limit=1] run say GM4: Installing Holographic Tags...
-
-#declare and initialise scoreboards and settings
-scoreboard players set update_happened gm4_up_check 1
-scoreboard players set holographic_tags gm4_modules 1
-scoreboard players set holographic_tags gm4_clock_tick 0
-
 team add gm4_ht_white
 team add gm4_ht_orange
 team add gm4_ht_magenta
@@ -41,9 +32,9 @@ team modify gm4_ht_green color dark_green
 team modify gm4_ht_red color dark_red
 team modify gm4_ht_black color black
 
-#announce success
-tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Holographic Tags Installed!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.holographic_tags"}]}]}]
-execute unless entity @a[limit=1] run say GM4: Holographic Tags Installed!
+execute unless score holographic_tags gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Holographic Tags"}
+scoreboard players set holographic_tags gm4_modules 1
 
-#check other modules to make sure they're up to date.
+schedule function holographic_tags:main 1t
+
 #$moduleUpdateList
