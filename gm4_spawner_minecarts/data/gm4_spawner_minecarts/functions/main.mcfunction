@@ -1,5 +1,5 @@
 #Check for minecarts under spawners
-execute as @e[type=minecart] at @s if block ~ ~1 ~ spawner if block ~ ~2 ~ #spawner_minecarts:piston[facing=down] if block ~ ~3 ~ redstone_block run function gm4_spawner_minecarts:capture_spawner/enter_minecart
+execute as @e[type=minecart] at @s if block ~ ~1 ~ spawner if block ~ ~2 ~ #gm4_spawner_minecarts:piston[facing=down] if block ~ ~3 ~ redstone_block run function gm4_spawner_minecarts:capture_spawner/enter_minecart
 
 #slow clock for passive regeneration
 scoreboard players add passive_clock gm4_spawner_fuel 1

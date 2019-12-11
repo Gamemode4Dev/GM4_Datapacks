@@ -33,4 +33,4 @@ execute if block ~ ~ ~ note_block[note=23] run summon area_effect_cloud ~ ~ ~ {D
 execute if block ~ ~ ~ note_block[note=24] run summon area_effect_cloud ~ ~ ~ {Duration:20,Tags:["gm4_nbi_display"],CustomNameVisible:1,CustomName:"{\"text\":\"F♯\"}"}
 
 #updates note block with block under
-execute unless block ~ ~-1 ~ #note_block_interface:skulls run clone ~ ~-1 ~ ~ ~-1 ~ ~ ~-1 ~ replace force
+execute unless block ~ ~-1 ~ #gm4_note_block_interface:skulls run clone ~ ~-1 ~ ~ ~-1 ~ ~ ~-1 ~ replace force

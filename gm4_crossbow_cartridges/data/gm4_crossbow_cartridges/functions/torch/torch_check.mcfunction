@@ -3,13 +3,13 @@
 # at @s
 
 #summon torch item if torch already exists at this block
-execute if block ~ ~ ~ #crossbow_cartridges:torch run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:torch",Count:1b}}
+execute if block ~ ~ ~ #gm4_crossbow_cartridges:torch run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:torch",Count:1b}}
 
 #place torch if possible
-execute if block ~ ~ ~ #crossbow_cartridges:replaceable run function gm4_crossbow_cartridges:torch/torch_place
+execute if block ~ ~ ~ #gm4_crossbow_cartridges:replaceable run function gm4_crossbow_cartridges:torch/torch_place
 
 #summon torch item if placing torch failed
-execute unless block ~ ~ ~ #crossbow_cartridges:torch run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:torch",Count:1b}}
+execute unless block ~ ~ ~ #gm4_crossbow_cartridges:torch run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:torch",Count:1b}}
 
 #place block sound
 playsound minecraft:block.wood.place block @a[distance=..15]

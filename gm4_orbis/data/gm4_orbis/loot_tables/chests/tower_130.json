@@ -327,19 +327,19 @@
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "orbis:tower_loot_common",
+          "name": "gm4_orbis:tower_loot_common",
           "expand": true,
           "weight": 3
         },
         {
           "type": "minecraft:tag",
-          "name": "orbis:tower_loot_uncommon",
+          "name": "gm4_orbis:tower_loot_uncommon",
           "expand": true,
           "weight": 2
         },
         {
           "type": "minecraft:tag",
-          "name": "orbis:tower_loot_rare",
+          "name": "gm4_orbis:tower_loot_rare",
           "expand": true,
           "weight": 1
         }

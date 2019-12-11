@@ -1,5 +1,5 @@
 {
   "values": [
-    "disassemblers:check_disassemble_recipe"
+    "gm4_disassemblers:check_disassemble_recipe"
   ]
 }

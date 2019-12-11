@@ -1,4 +1,4 @@
-# @s = valid pig tractor above #pig_tractors:tillable block
+# @s = valid pig tractor above #gm4_pig_tractors:tillable block
 # at @s positioned ~ ~-.5~
 # Called from has_hoe
 setblock ~ ~ ~ farmland

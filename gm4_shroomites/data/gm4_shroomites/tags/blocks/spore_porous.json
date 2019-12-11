@@ -1,7 +1,7 @@
 {
   "values" : [
-    "#shroomites:shroom_rootable",
-    "#shroomites:spore_catcher",
+    "#gm4_shroomites:shroom_rootable",
+    "#gm4_shroomites:spore_catcher",
     "minecraft:red_mushroom",
     "minecraft:brown_mushroom",
     "#minecraft:rails",

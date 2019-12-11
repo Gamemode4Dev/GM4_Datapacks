@@ -1,4 +1,4 @@
-# run from #master_crafting:recipe_check
+# run from #gm4_master_crafting:recipe_check
 execute if score @s gm4_slot_count matches 9 if score @s gm4_stack_size matches ..4 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:stone"},{Slot:1b,id:"minecraft:stone"},{Slot:2b,id:"minecraft:stone"},{Slot:3b,id:"minecraft:stone"},{Slot:4b,id:"minecraft:clay_ball"},{Slot:5b,id:"minecraft:stone"},{Slot:6b,id:"minecraft:stone"},{Slot:7b,id:"minecraft:stone"},{Slot:8b,id:"minecraft:stone"}]} run data merge block ~ ~ ~ {Items:[{Slot:8b,id:"minecraft:stone_bricks",Count:1b,tag:{gm4_custom_crafters:{multiplier:16}}}]}
 
 execute if score @s gm4_slot_count matches 9 if score @s gm4_stack_size matches ..64 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:oak_log"},{Slot:1b,id:"minecraft:oak_log"},{Slot:2b,id:"minecraft:oak_log"},{Slot:3b,id:"minecraft:oak_log"},{Slot:4b,id:"minecraft:oak_log"},{Slot:5b,id:"minecraft:oak_log"},{Slot:6b,id:"minecraft:oak_log"},{Slot:7b,id:"minecraft:oak_log"},{Slot:8b,id:"minecraft:oak_log"}]} run data merge block ~ ~ ~ {Items:[{Slot:8b,id:"minecraft:coal_block",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}

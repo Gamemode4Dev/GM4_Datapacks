@@ -1,6 +1,6 @@
 {
     "values":[
-      "resurrecting_skeletons:setup",
-      "resurrecting_zombies:setup"
+      "gm4_resurrecting_skeletons:setup",
+      "gm4_resurrecting_zombies:setup"
     ]
 }

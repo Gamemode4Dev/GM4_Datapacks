@@ -21,5 +21,5 @@ execute at @s if score randomZ gm4_spawner_fuel matches 1.. run tp @s ~ ~ ~1
 execute if score randomZ gm4_spawner_fuel matches 1.. run scoreboard players remove randomZ gm4_spawner_fuel 1
 
 #check if location has a valid fuel source
-execute at @s unless block ~ ~ ~ #spawner_minecarts:consumable_block if block ~ ~-1 ~ grass_block run function gm4_spawner_minecarts:fuel/consume_grass
-execute at @s if block ~ ~ ~ #spawner_minecarts:consumable_block run function gm4_spawner_minecarts:fuel/consume_flower
+execute at @s unless block ~ ~ ~ #gm4_spawner_minecarts:consumable_block if block ~ ~-1 ~ grass_block run function gm4_spawner_minecarts:fuel/consume_grass
+execute at @s if block ~ ~ ~ #gm4_spawner_minecarts:consumable_block run function gm4_spawner_minecarts:fuel/consume_flower

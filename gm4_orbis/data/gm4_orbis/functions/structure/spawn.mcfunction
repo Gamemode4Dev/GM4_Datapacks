@@ -1,7 +1,7 @@
 setblock ~ ~ ~ structure_block{ignoreEntities:0b,posX:0,mode:"LOAD",posY:0,posZ:0,showair:0b,showboundingbox:0b}
 data modify block ~ ~ ~ {} merge from entity @s Item.tag.gm4_orbis.structure
 setblock ~ ~1 ~ redstone_block
-function #orbis:structure/post_spawn
+function #gm4_orbis:structure/post_spawn
 
 scoreboard players add structure_count gm4_orbis_config 1
 

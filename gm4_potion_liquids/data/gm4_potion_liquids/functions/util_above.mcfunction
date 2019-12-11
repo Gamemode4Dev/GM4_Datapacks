@@ -1,5 +1,5 @@
 #@s = tank with entity above it positioned ~ ~1 ~
-#run from liquid_tanks:process via #liquid_tanks:util_above
+#run from liquid_tanks:process via #gm4_liquid_tanks:util_above
 
 tag @s add gm4_processing_tank
 

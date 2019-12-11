@@ -60,7 +60,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "custom_crafters:destroy_custom_crafter"
+          "name": "gm4_custom_crafters:destroy_custom_crafter"
         }
       ]
     }

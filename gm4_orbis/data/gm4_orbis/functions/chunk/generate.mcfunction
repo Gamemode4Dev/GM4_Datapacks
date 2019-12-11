@@ -8,7 +8,7 @@ execute if score border gm4_orbis_biome matches 1 run function gm4_orbis:chunk/b
 function gm4_orbis:structure/chunk
 
 # other modules can have functions in this tag as expansion to orbis
-function #orbis:chunk/generate
+function #gm4_orbis:chunk/generate
 
 # mark the chunk as generated
 scoreboard players add chunk_count gm4_orbis_config 1

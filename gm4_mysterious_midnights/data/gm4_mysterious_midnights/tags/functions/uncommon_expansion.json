@@ -1,6 +1,6 @@
 {
     "values":[
-      "harvest_moons:setup",
-      "tipped_skeletons:setup"
+      "gm4_harvest_moons:setup",
+      "gm4_tipped_skeletons:setup"
     ]
 }

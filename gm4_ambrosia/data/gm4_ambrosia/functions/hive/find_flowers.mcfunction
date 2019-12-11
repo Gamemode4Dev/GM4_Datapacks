@@ -3,8 +3,8 @@
 # run from check_hive_health
 scoreboard players set inverse gm4_bee_data 100
 #find the numbers of flowers and air blocks around the hive
-execute store result score flower_count gm4_bee_data run clone ~3 ~1 ~3 ~-3 ~-1 ~-3 ~-3 ~-1 ~-3 filtered #ambrosia:flowers force
-execute store result score air_count gm4_bee_data run clone ~3 ~1 ~3 ~-3 ~-1 ~-3 ~-3 ~-1 ~-3 filtered #ambrosia:air force
+execute store result score flower_count gm4_bee_data run clone ~3 ~1 ~3 ~-3 ~-1 ~-3 ~-3 ~-1 ~-3 filtered #gm4_ambrosia:flowers force
+execute store result score air_count gm4_bee_data run clone ~3 ~1 ~3 ~-3 ~-1 ~-3 ~-3 ~-1 ~-3 filtered #gm4_ambrosia:air force
 
 # get flower to air ratio (100 being 1:1)
 scoreboard players operation flower_ratio gm4_bee_data = flower_count gm4_bee_data

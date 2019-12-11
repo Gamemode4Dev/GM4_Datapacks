@@ -35,7 +35,7 @@ execute if score @s gm4_slot_count matches 9.. unless score @s gm4_stack_size = 
 scoreboard players operation @s gm4_stack_size = first_stack_count gm4_stack_size
 
 #Tell crafters with valid contents to run recipe checks
-execute if score @s gm4_stack_size matches 1.. run function #custom_crafters:recipe_check
+execute if score @s gm4_stack_size matches 1.. run function #gm4_custom_crafters:recipe_check
 
 #check if one of the recipes succeeded
 execute if score @s gm4_stack_size matches 1.. if block ~ ~ ~ dropper{Items:[{tag:{gm4_custom_crafters:{}}}]} run function gm4_custom_crafters:apply_multiplier

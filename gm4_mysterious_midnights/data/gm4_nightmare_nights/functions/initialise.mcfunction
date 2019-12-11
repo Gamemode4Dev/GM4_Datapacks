@@ -6,7 +6,7 @@
 worldborder warning distance 300000000
 
 #activate all nightmare night expansions
-function #nightmare_nights:nightmare_night_expansion
+function #gm4_nightmare_nights:nightmare_night_expansion
 
 #tag all to be active
 tag @e[type=area_effect_cloud,tag=gm4_mysterious_midnights_expansion,tag=!gm4_mysterious_midnights_active] add gm4_mysterious_midnights_active

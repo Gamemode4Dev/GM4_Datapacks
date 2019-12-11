@@ -6,11 +6,11 @@
 playsound entity.wolf.howl weather @a ~ ~10000 ~ 0 1 1
 
 #common
-execute if score random gm4_nights_data matches 6..10 run function #mysterious_midnights:common_expansion
+execute if score random gm4_nights_data matches 6..10 run function #gm4_mysterious_midnights:common_expansion
 #uncommon
-execute if score random gm4_nights_data matches 11..13 run function #mysterious_midnights:uncommon_expansion
+execute if score random gm4_nights_data matches 11..13 run function #gm4_mysterious_midnights:uncommon_expansion
 #rare
-execute if score random gm4_nights_data matches 14.. run function #mysterious_midnights:rare_expansion
+execute if score random gm4_nights_data matches 14.. run function #gm4_mysterious_midnights:rare_expansion
 
 #chose one expansion
 tag @e[type=area_effect_cloud,tag=gm4_mysterious_midnights_expansion,limit=1,sort=random] add gm4_mysterious_midnights_active

@@ -16,8 +16,8 @@ execute unless score @s gm4_lt_buffer matches 0 run function gm4_liquid_tanks:li
 
 
 #entity processing
-execute align xyz positioned ~ ~1 ~ if entity @e[type=!armor_stand,dx=0] run function #liquid_tanks:util_above
-execute align xyz positioned ~ ~-1 ~ if entity @e[type=!armor_stand,dx=0] run function #liquid_tanks:util_below
+execute align xyz positioned ~ ~1 ~ if entity @e[type=!armor_stand,dx=0] run function #gm4_liquid_tanks:util_above
+execute align xyz positioned ~ ~-1 ~ if entity @e[type=!armor_stand,dx=0] run function #gm4_liquid_tanks:util_below
 
 #apply buffer and display level update
 execute unless score @s gm4_lt_buffer matches 0 run function gm4_liquid_tanks:liquid_value_update
