@@ -7,7 +7,7 @@
       }
     }
   },
-  "reward"{
+  "rewards": {
     "function":"gm4_gemini_shamir:breed/check_sheep"
   }
 }
