@@ -10,7 +10,7 @@
       }
     }
   },
- "rewards":{
-   "function":"relocators:check_machine_block_wall"
+ "reward"{
+   "function":"gm4_relocators:check_machine_block_wall"
  }
 }

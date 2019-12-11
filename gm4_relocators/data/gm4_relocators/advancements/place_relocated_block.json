@@ -9,7 +9,7 @@
       }
     }
   },
- "rewards":{
-   "function":"relocators:placed_machine_block"
+ "reward"{
+   "function":"gm4_relocators:placed_machine_block"
  }
 }

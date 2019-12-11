@@ -9,7 +9,7 @@
       }
     }
   },
- "rewards":{
-   "function":"ambrosia:honey_beetroot/eat_beetroot"
+ "reward"{
+   "function":"gm4_ambrosia:honey_beetroot/eat_beetroot"
  }
 }

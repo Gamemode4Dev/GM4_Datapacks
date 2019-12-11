@@ -9,7 +9,7 @@
       }
     }
   },
- "rewards":{
-   "function":"ambrosia:honey_bottle/consumption_checks/level_4"
+ "reward"{
+   "function":"gm4_ambrosia:honey_bottle/consumption_checks/level_4"
  }
 }

@@ -9,7 +9,7 @@
       }
     }
   },
- "rewards":{
-   "function":"zauber_cauldrons:cauldron/wormhole_targeting/choose_dimension"
+ "reward"{
+   "function":"gm4_zauber_cauldrons:cauldron/wormhole_targeting/choose_dimension"
  }
 }

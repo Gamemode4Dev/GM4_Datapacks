@@ -112,7 +112,7 @@
   "requirements": [
     ["place_oak_wall_sign", "place_spruce_wall_sign", "place_birch_wall_sign", "place_jungle_wall_sign", "place_acacia_wall_sign", "place_dark_oak_wall_sign", "place_oak_standing_sign", "place_spruce_standing_sign", "place_birch_standing_sign", "place_jungle_standing_sign", "place_acacia_standing_sign", "place_dark_oak_standing_sign"]
   ],
-  "rewards": {
-    "function": "trapped_signs:place_trapped_sign"
+  "reward" {
+    "function": "gm4_trapped_signs:place_trapped_sign"
   }
 }

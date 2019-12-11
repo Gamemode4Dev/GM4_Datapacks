@@ -9,7 +9,7 @@
             }
         }
     },
-    "rewards": {
-        "function": "crossbow_cartridges:check_projectile"
+    "reward" {
+        "function": "gm4_crossbow_cartridges:check_projectile"
     }
 }

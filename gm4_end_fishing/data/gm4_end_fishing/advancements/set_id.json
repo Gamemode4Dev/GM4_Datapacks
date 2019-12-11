@@ -4,7 +4,7 @@
       "trigger":"location"
     }
   },
-  "rewards":{
-    "function":"end_fishing:set_id"
+  "reward"{
+    "function":"gm4_end_fishing:set_id"
   }
 }
