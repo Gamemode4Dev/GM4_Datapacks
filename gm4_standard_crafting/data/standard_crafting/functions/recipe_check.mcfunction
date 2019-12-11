@@ -30,9 +30,11 @@ execute if score @s gm4_slot_count matches 6 if score @s gm4_stack_size matches 
 execute if score @s gm4_slot_count matches 6 if score @s gm4_stack_size matches ..1 if block ~ ~ ~ dropper{Items:[{Slot:2b,id:"minecraft:diamond"},{Slot:3b,id:"minecraft:diamond"},{Slot:4b,id:"minecraft:leather"},{Slot:5b,id:"minecraft:diamond"},{Slot:6b,id:"minecraft:diamond"},{Slot:8b,id:"minecraft:diamond"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"diamond_horse_armor",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
 #notch apple
 execute if score @s gm4_slot_count matches 9 if score @s gm4_stack_size matches ..64 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:gold_block"},{Slot:1b,id:"minecraft:gold_block"},{Slot:2b,id:"minecraft:gold_block"},{Slot:3b,id:"minecraft:gold_block"},{Slot:4b,id:"minecraft:apple"},{Slot:5b,id:"minecraft:gold_block"},{Slot:6b,id:"minecraft:gold_block"},{Slot:7b,id:"minecraft:gold_block"},{Slot:8b,id:"minecraft:gold_block"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"enchanted_golden_apple",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
+#quartz block nether quartz
+execute if score @s gm4_slot_count matches 1 if score @s gm4_stack_size matches ..16 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:quartz_block"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"nether_quartz",Count:1b,tag:{gm4_custom_crafters:{multiplier:4}}}]}
 #double stone stone slab
 execute if score @s gm4_slot_count matches 4 if score @s gm4_stack_size matches ..32 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:smooth_stone_slab"},{Slot:1b,id:"minecraft:smooth_stone_slab"},{Slot:3b,id:"minecraft:smooth_stone_slab"},{Slot:4b,id:"minecraft:smooth_stone_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"smooth_stone",Count:1b,tag:{gm4_custom_crafters:{multiplier:2}}}]}
 #stairs
-execute if score @s gm4_slot_count matches 4 if score @s gm4_stack_size matches ..10 run function standard_crafting:stairs_recipes
+execute if score @s gm4_slot_count matches 4 if score @s gm4_stack_size matches ..16 run function standard_crafting:stairs_recipes
 #string
 execute if score @s gm4_slot_count matches 1 if score @s gm4_stack_size matches ..21 run function standard_crafting:string_recipes

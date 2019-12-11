@@ -9,8 +9,6 @@ execute store result score tool_current_damage gm4_ml_data run data get entity @
 scoreboard players set tool_max_damage gm4_ml_data 0
 execute store result score tool_max_damage gm4_ml_data run data get entity @s SelectedItem.tag.MaxDurability
 
-execute if score tool_max_damage gm4_ml_data matches 0 run function moneo_shamir:store_maximum
-
 execute if score tool_max_damage gm4_ml_data matches 59 run function moneo_shamir:tools/materials/wood
 execute if score tool_max_damage gm4_ml_data matches 131 run function moneo_shamir:tools/materials/stone
 execute if score tool_max_damage gm4_ml_data matches 250 run function moneo_shamir:tools/materials/iron

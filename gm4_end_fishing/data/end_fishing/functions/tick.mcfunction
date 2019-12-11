@@ -1,5 +1,5 @@
 #catch fishing bobber in the end
-execute in minecraft:the_end as @e[type=minecraft:fishing_bobber,tag=!gm4_ef_casted,x_rotation=-90..-89,distance=0..] at @s unless entity @e[type=minecraft:armor_stand,tag=gm4_fishing_bait,distance=..3] run function end_fishing:cast_rod/summon_bait
+execute in minecraft:the_end as @e[type=minecraft:fishing_bobber,tag=!gm4_ef_casted,x_rotation=-90..-85,distance=0..] at @s positioned ~ ~-5 ~ run function end_fishing:cast_rod/summon_bait
 
 #store bobber data
 execute in minecraft:the_end as @e[type=minecraft:fishing_bobber,tag=!gm4_ef_set,distance=0..] at @s run function end_fishing:cast_rod/store_data

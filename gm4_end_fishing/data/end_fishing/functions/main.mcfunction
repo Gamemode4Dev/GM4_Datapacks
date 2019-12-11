@@ -2,7 +2,7 @@ execute as @e[type=minecraft:armor_stand,tag=gm4_fishing_bait] at @s run functio
 
 #enderpuff mechanics
 tag @a remove gm4_hold_enderpuff
-execute as @a[gamemode=!spectator] if data entity @s Inventory[].tag.gm4_enderpuff run function end_fishing:enderpuff
+execute as @a[gamemode=!spectator] if data entity @s Inventory[].tag.gm4_enderpuff run function end_fishing:enderpuff/track_inventory
 execute as @a[nbt={ActiveEffects:[{Id:25b,Amplifier:1b}]}] unless data entity @s Inventory[].tag.gm4_enderpuff run effect clear @s levitation
 
 #fix enderpuff head
