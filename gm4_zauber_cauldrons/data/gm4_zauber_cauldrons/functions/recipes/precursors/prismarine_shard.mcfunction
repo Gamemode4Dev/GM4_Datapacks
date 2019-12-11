@@ -12,8 +12,8 @@ playsound block.portal.travel block @a[distance=..16] ~ ~ ~ .2 1.2
 particle enchanted_hit ~ ~.4 ~ .1 .1 .1 .15 10
 
 #use water and play sound once a recipe ran
-execute if score @s gm4_zc_fullness > expected_item_amount gm4_zc_fullness run function zauber_cauldrons:cauldron/use_extra_items
-function zauber_cauldrons:cauldron/use_water
+execute if score @s gm4_zc_fullness > expected_item_amount gm4_zc_fullness run function gm4_zauber_cauldrons:cauldron/use_extra_items
+function gm4_zauber_cauldrons:cauldron/use_water
 
 #reset fake players
 scoreboard players reset expected_item_amount gm4_zc_fullness

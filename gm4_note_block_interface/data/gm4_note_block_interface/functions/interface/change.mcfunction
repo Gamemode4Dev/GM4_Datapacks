@@ -32,4 +32,4 @@ execute unless score @s gm4_nbi_change matches 1.. store success score @s gm4_nb
 scoreboard players reset @s gm4_nbi_change
 
 #runs function to display the note
-function note_block_interface:interface/create
+function gm4_note_block_interface:interface/create

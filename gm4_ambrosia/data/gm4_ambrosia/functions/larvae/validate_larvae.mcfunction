@@ -10,5 +10,5 @@ execute store result score harvest_time gm4_bee_data run data get entity @s Item
 
 scoreboard players operation gametime gm4_bee_data -= harvest_time gm4_bee_data
 
-execute if score gametime gm4_bee_data matches ..192000 run function ambrosia:hive/create_hive
+execute if score gametime gm4_bee_data matches ..192000 run function gm4_ambrosia:hive/create_hive
 execute if score gametime gm4_bee_data matches 192001.. run data merge entity @s {Item:{tag:{display:{Name:'"Dead larvae"'}}}}

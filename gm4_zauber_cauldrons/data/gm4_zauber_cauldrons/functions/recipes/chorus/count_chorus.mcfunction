@@ -23,14 +23,14 @@ execute unless score cancel_recipe gm4_zc_data matches 2 run scoreboard players 
 #start incomplete recipe
 execute unless score cancel_recipe gm4_zc_data matches 2 if score raw_chorus_fullness gm4_zc_chorus matches ..-1 run scoreboard players set cancel_recipe gm4_zc_data 1
 execute unless score cancel_recipe gm4_zc_data matches 2 if score popped_chorus_fullness gm4_zc_chorus matches ..-1 run scoreboard players set cancel_recipe gm4_zc_data 1
-execute if score cancel_recipe gm4_zc_data matches 1 run function zauber_cauldrons:recipes/chorus/blurry_wormhole
+execute if score cancel_recipe gm4_zc_data matches 1 run function gm4_zauber_cauldrons:recipes/chorus/blurry_wormhole
 
 #start complete recipe
-execute if score cancel_recipe gm4_zc_data matches 0 run function zauber_cauldrons:recipes/chorus/precise_wormhole
+execute if score cancel_recipe gm4_zc_data matches 0 run function gm4_zauber_cauldrons:recipes/chorus/precise_wormhole
 
 #use water and play sound once a recipe ran
-execute if score recipe_success gm4_zc_data matches 1 at @s if score @s gm4_zc_fullness > expected_item_amount gm4_zc_fullness run function zauber_cauldrons:cauldron/use_extra_items
-execute if score recipe_success gm4_zc_data matches 1 at @s run function zauber_cauldrons:cauldron/use_water
+execute if score recipe_success gm4_zc_data matches 1 at @s if score @s gm4_zc_fullness > expected_item_amount gm4_zc_fullness run function gm4_zauber_cauldrons:cauldron/use_extra_items
+execute if score recipe_success gm4_zc_data matches 1 at @s run function gm4_zauber_cauldrons:cauldron/use_water
 
 #reset fake players
 scoreboard players reset cancel_recipe gm4_zc_data

@@ -3,7 +3,7 @@
 # ran from conduction_shamir:main
 
 #self strike
-function conduction_shamir:self_strike/prepare_lightning_self
+function gm4_conduction_shamir:self_strike/prepare_lightning_self
 
 #reset scores and put tool into "regular" mode
 scoreboard players reset @s gm4_volt_damage

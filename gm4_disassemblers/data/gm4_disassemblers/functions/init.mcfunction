@@ -5,6 +5,6 @@ scoreboard players set #2 gm4_disassembler 2
 execute unless score disassemblers gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Disassemblers"}
 scoreboard players set disassemblers gm4_modules 1
 
-schedule function disassemblers:main 1t
+schedule function gm4_disassemblers:main 1t
 
 #$moduleUpdateList

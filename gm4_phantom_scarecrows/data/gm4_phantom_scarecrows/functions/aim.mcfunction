@@ -4,4 +4,4 @@
 
 #homing
 execute anchored eyes facing entity @e[type=minecraft:phantom,limit=1,sort=nearest] eyes run tp ~ ~ ~
-execute at @s run function phantom_scarecrows:propulsion
+execute at @s run function gm4_phantom_scarecrows:propulsion

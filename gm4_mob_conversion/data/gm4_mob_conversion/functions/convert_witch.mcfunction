@@ -8,11 +8,11 @@ playsound minecraft:entity.zombie_villager.converted neutral @a[distance=..8]
 tag @e[type=item,limit=1,nbt={Item:{id:"minecraft:golden_apple"}},distance=..3,sort=nearest] add gm4_gapple
 
 # Randomise the number of emeralds each potion costs
-execute as @e[type=villager,tag=gm4_mob_conversion_needs_init,limit=1,distance=..1] run function mob_conversion:initialise_brewer
+execute as @e[type=villager,tag=gm4_mob_conversion_needs_init,limit=1,distance=..1] run function gm4_mob_conversion:initialise_brewer
 
 
 
-execute as @e[type=item,limit=1,tag=gm4_gapple,distance=..3] run function mob_conversion:consume_item
+execute as @e[type=item,limit=1,tag=gm4_gapple,distance=..3] run function gm4_mob_conversion:consume_item
 
 
 

@@ -7,7 +7,7 @@ scoreboard players operation @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_fi
 
 scoreboard players operation @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_fishing_bait_set] gm4_ef_lure = @s gm4_ef_lure
 
-execute as @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_fishing_bait_set] run function end_fishing:cast_rod/randomize_timer
+execute as @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_fishing_bait_set] run function gm4_end_fishing:cast_rod/randomize_timer
 
 tag @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_fishing_bait_set] add gm4_fishing_bait
 tag @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_fishing_bait_set,tag=gm4_fishing_bait] remove gm4_fishing_bait_set

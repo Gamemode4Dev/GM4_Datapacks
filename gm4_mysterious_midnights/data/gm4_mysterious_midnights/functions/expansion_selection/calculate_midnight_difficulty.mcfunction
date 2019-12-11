@@ -13,4 +13,4 @@ execute if score random gm4_nights_data matches 0..5 run scoreboard players set 
 scoreboard players set send_night_end_pulse gm4_nights_data 1
 
 #select expansion depending on rarity, in case a mysterious midnight occured
-execute if score random gm4_nights_data matches 6.. run function mysterious_midnights:expansion_selection/start_expansion
+execute if score random gm4_nights_data matches 6.. run function gm4_mysterious_midnights:expansion_selection/start_expansion

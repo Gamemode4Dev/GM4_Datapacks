@@ -16,4 +16,4 @@ scoreboard players operation @s gm4_lt_max /= #5 gm4_lm_data
 scoreboard players operation @s gm4_lt_max *= #2 gm4_lm_data
 
 #fill the tank
-function liquid_minecarts:load_liquid
+function gm4_liquid_minecarts:load_liquid

@@ -3,4 +3,4 @@
 
 
 #experience tank
-execute if score @s[tag=gm4_lt_experience] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,tag:{Enchantments:[{id:"minecraft:mending"}]}}]} run function mending_tanks:check_item
+execute if score @s[tag=gm4_lt_experience] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,tag:{Enchantments:[{id:"minecraft:mending"}]}}]} run function gm4_mending_tanks:check_item

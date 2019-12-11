@@ -5,12 +5,12 @@
 scoreboard players set band_applied gm4_ml_data 0
 
 #check metal values
-execute if entity @s[scores={gm4_ml_ore_cu=23,gm4_ml_ore_al=0,gm4_ml_ore_ba=0,gm4_ml_ore_th=0}] run function metallurgy:casting/summon_band/copper
-execute if entity @s[scores={gm4_ml_ore_cu=0,gm4_ml_ore_al=23,gm4_ml_ore_ba=0,gm4_ml_ore_th=0}] run function metallurgy:casting/summon_band/aluminium
-execute if entity @s[scores={gm4_ml_ore_cu=0,gm4_ml_ore_al=0,gm4_ml_ore_ba=23,gm4_ml_ore_th=0}] run function metallurgy:casting/summon_band/barium
-execute if entity @s[scores={gm4_ml_ore_cu=0,gm4_ml_ore_al=0,gm4_ml_ore_ba=0,gm4_ml_ore_th=23}] run function metallurgy:casting/summon_band/thorium
-execute if entity @s[scores={gm4_ml_ore_cu=0,gm4_ml_ore_al=17,gm4_ml_ore_ba=6,gm4_ml_ore_th=0}] run function metallurgy:casting/summon_band/barimium
-execute if entity @s[scores={gm4_ml_ore_cu=6,gm4_ml_ore_al=0,gm4_ml_ore_ba=0,gm4_ml_ore_th=17}] run function metallurgy:casting/summon_band/thorium_brass
+execute if entity @s[scores={gm4_ml_ore_cu=23,gm4_ml_ore_al=0,gm4_ml_ore_ba=0,gm4_ml_ore_th=0}] run function gm4_metallurgy:casting/summon_band/copper
+execute if entity @s[scores={gm4_ml_ore_cu=0,gm4_ml_ore_al=23,gm4_ml_ore_ba=0,gm4_ml_ore_th=0}] run function gm4_metallurgy:casting/summon_band/aluminium
+execute if entity @s[scores={gm4_ml_ore_cu=0,gm4_ml_ore_al=0,gm4_ml_ore_ba=23,gm4_ml_ore_th=0}] run function gm4_metallurgy:casting/summon_band/barium
+execute if entity @s[scores={gm4_ml_ore_cu=0,gm4_ml_ore_al=0,gm4_ml_ore_ba=0,gm4_ml_ore_th=23}] run function gm4_metallurgy:casting/summon_band/thorium
+execute if entity @s[scores={gm4_ml_ore_cu=0,gm4_ml_ore_al=17,gm4_ml_ore_ba=6,gm4_ml_ore_th=0}] run function gm4_metallurgy:casting/summon_band/barimium
+execute if entity @s[scores={gm4_ml_ore_cu=6,gm4_ml_ore_al=0,gm4_ml_ore_ba=0,gm4_ml_ore_th=17}] run function gm4_metallurgy:casting/summon_band/thorium_brass
 
 
 

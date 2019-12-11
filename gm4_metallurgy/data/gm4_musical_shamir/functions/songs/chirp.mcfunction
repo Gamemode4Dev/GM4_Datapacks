@@ -13,4 +13,4 @@ execute if score @s gm4_note_time matches 60 run effect give @s strength 91 2
 particle note ~ ~1 ~ 1.4 1.4 1.4 .5 6 normal @a[distance=..8]
 
 #end song
-execute if score @s gm4_note_time matches 174.. run function musical_shamir:songs/reset_player
+execute if score @s gm4_note_time matches 174.. run function gm4_musical_shamir:songs/reset_player

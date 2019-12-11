@@ -1,2 +1,2 @@
 
-schedule function MODULE_ID:main 16t
+schedule function gm4_MODULE_ID:main 16t

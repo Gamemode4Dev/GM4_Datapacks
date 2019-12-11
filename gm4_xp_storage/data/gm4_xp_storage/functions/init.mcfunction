@@ -5,7 +5,7 @@ scoreboard objectives add gm4_xp_calc dummy
 execute unless score xp_storage gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"XP Storage"}
 scoreboard players set xp_storage gm4_modules 1
 
-schedule function xp_storage:main 1t
-schedule function xp_storage:tick 1t
+schedule function gm4_xp_storage:main 1t
+schedule function gm4_xp_storage:tick 1t
 
 #$moduleUpdateList

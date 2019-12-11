@@ -1,4 +1,4 @@
-execute as @e[type=mooshroom] at @s unless entity @s[tag=gm4_shroomite_barren] if block ~ ~ ~ #shroomites:shroom_rootable unless entity @e[tag=gm4_shroomite_shroom,type=area_effect_cloud,distance=..5] run function shroomites:shroom_shed
+execute as @e[type=mooshroom] at @s unless entity @s[tag=gm4_shroomite_barren] if block ~ ~ ~ #shroomites:shroom_rootable unless entity @e[tag=gm4_shroomite_shroom,type=area_effect_cloud,distance=..5] run function gm4_shroomites:shroom_shed
 
 #resets after the funtion ran
 tag @e[type=mooshroom] remove gm4_shroomite_barren

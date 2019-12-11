@@ -15,9 +15,9 @@ execute store result score wax_amount gm4_bee_data run data get entity @s Item.C
 execute if score repair_cost gm4_bee_data matches 65.. if score wax_amount gm4_bee_data matches 64 run scoreboard players set repair_cost gm4_bee_data 64
 
 # check whether enough wax was supplied, if so, try to execute crafting
-execute if score repair_cost gm4_bee_data matches 1..63 if score repair_cost gm4_bee_data < wax_amount gm4_bee_data run function ambrosia:beeswax/consume_partial_stack
+execute if score repair_cost gm4_bee_data matches 1..63 if score repair_cost gm4_bee_data < wax_amount gm4_bee_data run function gm4_ambrosia:beeswax/consume_partial_stack
 
-execute if score repair_cost gm4_bee_data matches 1..64 if score repair_cost gm4_bee_data = wax_amount gm4_bee_data run function ambrosia:beeswax/consume_full_stack
+execute if score repair_cost gm4_bee_data matches 1..64 if score repair_cost gm4_bee_data = wax_amount gm4_bee_data run function gm4_ambrosia:beeswax/consume_full_stack
 
 # reset fake players and tags
 tag @e[type=item,dx=0] remove gm4_waxed

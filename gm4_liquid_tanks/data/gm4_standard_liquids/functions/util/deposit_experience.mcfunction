@@ -12,4 +12,4 @@ execute if score @s gm4_lt_util matches 5.. if score @e[type=armor_stand,tag=gm4
 execute if score @s gm4_lt_util matches 1.. run experience add @s -1 points
 execute if score @s gm4_lt_util matches 1.. run scoreboard players add @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,distance=..0.5] gm4_lt_buffer 1
 
-execute as @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,distance=..0.5] unless score @s gm4_lt_buffer matches 0 run function liquid_tanks:liquid_value_update
+execute as @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,distance=..0.5] unless score @s gm4_lt_buffer matches 0 run function gm4_liquid_tanks:liquid_value_update

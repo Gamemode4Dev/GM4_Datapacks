@@ -24,14 +24,14 @@ execute if score cornflower gm4_zc_flowers matches 1 if entity @e[type=item,dx=0
 execute if score lily_of_the_valley gm4_zc_flowers matches 1 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:lily_of_the_valley"}}] run scoreboard players set cancel_recipe gm4_zc_data 1
 
 #recipe
-execute if score cancel_recipe gm4_zc_data matches 0 run function zauber_cauldrons:recipes/flowers/check_normal_flowers
+execute if score cancel_recipe gm4_zc_data matches 0 run function gm4_zauber_cauldrons:recipes/flowers/check_normal_flowers
 
 #effect with poison if poisonous flower in cauldron
-execute if score cancel_recipe gm4_zc_data matches 1 at @s run function zauber_cauldrons:recipes/flowers/poison
+execute if score cancel_recipe gm4_zc_data matches 1 at @s run function gm4_zauber_cauldrons:recipes/flowers/poison
 
 #use water and play sound once a recipe ran
-execute if score recipe_success gm4_zc_data matches 1 at @s if score @s gm4_zc_fullness > expected_item_amount gm4_zc_fullness run function zauber_cauldrons:cauldron/use_extra_items
-execute if score recipe_success gm4_zc_data matches 1 at @s run function zauber_cauldrons:cauldron/use_water
+execute if score recipe_success gm4_zc_data matches 1 at @s if score @s gm4_zc_fullness > expected_item_amount gm4_zc_fullness run function gm4_zauber_cauldrons:cauldron/use_extra_items
+execute if score recipe_success gm4_zc_data matches 1 at @s run function gm4_zauber_cauldrons:cauldron/use_water
 
 #reset fake players
 scoreboard players reset cancel_recipe gm4_zc_data

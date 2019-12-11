@@ -1,3 +1,3 @@
 function #liquid_tanks:tick
 
-schedule function liquid_tanks:tick 1t
+schedule function gm4_liquid_tanks:tick 1t

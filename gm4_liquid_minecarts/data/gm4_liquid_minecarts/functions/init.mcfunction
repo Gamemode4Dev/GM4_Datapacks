@@ -6,6 +6,6 @@ scoreboard players set #100 gm4_lm_data 100
 execute unless score liquid_minecarts gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Liquid Minecarts"}
 scoreboard players set liquid_minecarts gm4_modules 1
 
-schedule function liquid_minecarts:main 1t
+schedule function gm4_liquid_minecarts:main 1t
 
 #$moduleUpdateList

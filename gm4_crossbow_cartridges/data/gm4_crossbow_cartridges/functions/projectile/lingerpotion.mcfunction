@@ -9,7 +9,7 @@ data modify entity @e[type=minecraft:potion,tag=gm4_cb_proj,distance=..2,limit=1
 execute unless entity @s[gamemode=creative] run replaceitem entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:lingering_potion"}]}] weapon.offhand minecraft:air
 
 #move motion of arrow to potion
-function crossbow_cartridges:projectile/arrow_motion
+function gm4_crossbow_cartridges:projectile/arrow_motion
 
 #potion throw sound
 playsound minecraft:entity.lingering_potion.throw player @a[distance=..15] ~ ~ ~ .5 0

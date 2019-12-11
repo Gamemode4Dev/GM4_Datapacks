@@ -43,5 +43,5 @@ execute if score @s gm4_xp_calc matches 1.. run scoreboard players remove @s gm4
 #scoreboard players add @s gm4_stored_xp 1
 
 
-execute unless score @s gm4_xp_calc matches 0 unless score loop_counter gm4_xp_calc matches 100.. run function xp_storage:xp_deposit_loop
+execute unless score @s gm4_xp_calc matches 0 unless score loop_counter gm4_xp_calc matches 100.. run function gm4_xp_storage:xp_deposit_loop
 scoreboard players add loop_counter gm4_xp_calc 1

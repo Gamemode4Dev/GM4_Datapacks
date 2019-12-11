@@ -2,8 +2,8 @@
 # at @s
 # Called from has_hoe
 
-function pig_tractors:check_mainhand
+function gm4_pig_tractors:check_mainhand
 
-execute if block ~ ~ ~ air run function pig_tractors:check_offhand
+execute if block ~ ~ ~ air run function gm4_pig_tractors:check_offhand
 
-execute if block ~ ~ ~ air run function pig_tractors:check_inventory
+execute if block ~ ~ ~ air run function gm4_pig_tractors:check_inventory

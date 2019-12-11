@@ -8,7 +8,7 @@ summon minecraft:salmon ~ ~1.2 ~ {FromBucket:1,Tags:["gm4_cb_proj"],ActiveEffect
 replaceitem entity @s[gamemode=!creative] weapon.offhand minecraft:water_bucket
 
 #move motion of arrow to potion
-function crossbow_cartridges:projectile/arrow_motion
+function gm4_crossbow_cartridges:projectile/arrow_motion
 
 #fish flop sound
 playsound minecraft:entity.salmon.flop player @a[distance=..15] ~ ~ ~ 2 .5

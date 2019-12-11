@@ -40,7 +40,7 @@ scoreboard objectives add gm4_levity_sneak minecraft.custom:minecraft.sneak_time
 execute unless score metallurgy gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Metallurgy"}
 scoreboard players set metallurgy gm4_modules 1
 
-schedule function metallurgy:main 1t
-schedule function metallurgy:tick 1t
+schedule function gm4_metallurgy:main 1t
+schedule function gm4_metallurgy:tick 1t
 
 #$moduleUpdateList

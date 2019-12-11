@@ -13,7 +13,7 @@ scoreboard players operation @s gm4_lt_value -= @s gm4_lm_data
 #give liquid to tank
 scoreboard players operation @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_liquid_tank] gm4_lt_buffer += @s gm4_lm_data
 #update display
-function liquid_minecarts:liquid_value_update
+function gm4_liquid_minecarts:liquid_value_update
 playsound minecraft:block.brewing_stand.brew block @a ~ ~ ~ 1.0 1.5
 #clear liquid tags
 execute if score @s gm4_lt_value matches 0 run data merge entity @s {Tags:["gm4_liquid_minecart","gm4_liquid_minecart_empty"]}

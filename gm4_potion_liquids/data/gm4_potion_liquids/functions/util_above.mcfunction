@@ -4,9 +4,9 @@
 tag @s add gm4_processing_tank
 
 #shulker
-execute as @e[dx=0,type=shulker] run function potion_liquids:util/shulker
+execute as @e[dx=0,type=shulker] run function gm4_potion_liquids:util/shulker
 
 #witch
-execute as @e[dx=0,type=witch] run function potion_liquids:util/witch
+execute as @e[dx=0,type=witch] run function gm4_potion_liquids:util/witch
 
 tag @s remove gm4_processing_tank

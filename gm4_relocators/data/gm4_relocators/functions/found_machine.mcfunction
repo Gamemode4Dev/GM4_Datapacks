@@ -6,7 +6,7 @@ execute align xyz positioned ~ ~ ~ unless entity @e[type=armor_stand,tag=gm4_no_
 execute align xyz positioned ~ ~ ~ if entity @e[type=armor_stand,tag=gm4_no_edit,tag=!gm4_liquid_tank_display,nbt={Invisible:1b,Marker:1b,NoGravity:1b},dx=0,dz=0,dy=-1] run advancement grant @s only gm4:relocators
 
 tag @s add gm4_relocating_player
-execute align xyz positioned ~ ~ ~ as @e[type=armor_stand,tag=gm4_no_edit,tag=!gm4_liquid_tank_display,nbt={Invisible:1b,Marker:1b,NoGravity:1b},limit=1,sort=nearest,dx=0,dz=0,dy=-1] run function relocators:check_block_items
+execute align xyz positioned ~ ~ ~ as @e[type=armor_stand,tag=gm4_no_edit,tag=!gm4_liquid_tank_display,nbt={Invisible:1b,Marker:1b,NoGravity:1b},limit=1,sort=nearest,dx=0,dz=0,dy=-1] run function gm4_relocators:check_block_items
 tag @s remove gm4_relocating_player
 
 fill ~3 ~3 ~3 ~-3 ~-3 ~-3 air replace player_head{Owner:{Id:"2c0fa9da-b8e7-4dfe-81eb-7885c62d6a92"}}

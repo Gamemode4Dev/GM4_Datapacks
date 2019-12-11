@@ -8,7 +8,7 @@ summon minecraft:pufferfish ~ ~1.2 ~ {FromBucket:1,Tags:["gm4_cb_proj"],ActiveEf
 replaceitem entity @s[gamemode=!creative] weapon.offhand minecraft:water_bucket
 
 #move motion of arrow to potion
-function crossbow_cartridges:projectile/arrow_motion
+function gm4_crossbow_cartridges:projectile/arrow_motion
 
 #fish flop sound
 playsound minecraft:entity.puffer_fish.flop player @a[distance=..15] ~ ~ ~ 2 .5

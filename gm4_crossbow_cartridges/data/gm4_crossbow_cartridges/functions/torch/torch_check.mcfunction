@@ -6,7 +6,7 @@
 execute if block ~ ~ ~ #crossbow_cartridges:torch run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:torch",Count:1b}}
 
 #place torch if possible
-execute if block ~ ~ ~ #crossbow_cartridges:replaceable run function crossbow_cartridges:torch/torch_place
+execute if block ~ ~ ~ #crossbow_cartridges:replaceable run function gm4_crossbow_cartridges:torch/torch_place
 
 #summon torch item if placing torch failed
 execute unless block ~ ~ ~ #crossbow_cartridges:torch run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:torch",Count:1b}}

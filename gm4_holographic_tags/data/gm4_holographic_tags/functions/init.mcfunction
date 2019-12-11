@@ -35,6 +35,6 @@ team modify gm4_ht_black color black
 execute unless score holographic_tags gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Holographic Tags"}
 scoreboard players set holographic_tags gm4_modules 1
 
-schedule function holographic_tags:main 1t
+schedule function gm4_holographic_tags:main 1t
 
 #$moduleUpdateList

@@ -6,4 +6,4 @@
 execute at @r[gamemode=!spectator] run spreadplayers ~ ~ 0 160 false @e[type=area_effect_cloud,tag=gm4_star_impact_point]
 
 #spawn star
-execute at @e[type=area_effect_cloud,tag=gm4_star_impact_point] run function falling_stars:spawn_falling_star
+execute at @e[type=area_effect_cloud,tag=gm4_star_impact_point] run function gm4_falling_stars:spawn_falling_star

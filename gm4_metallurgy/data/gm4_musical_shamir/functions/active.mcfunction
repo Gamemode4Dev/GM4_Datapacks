@@ -9,4 +9,4 @@ execute if score @s gm4_note_collect matches 2 run particle note ~ ~1 ~ 1 1 1 .5
 execute if score @s gm4_note_collect matches 3 run particle note ~ ~1 ~ 1.2 1.2 1.2 .5 8 normal @a[distance=..8]
 
 #activate song effects
-execute if score @s gm4_note_collect matches 4.. run function musical_shamir:songs/mellohi
+execute if score @s gm4_note_collect matches 4.. run function gm4_musical_shamir:songs/mellohi

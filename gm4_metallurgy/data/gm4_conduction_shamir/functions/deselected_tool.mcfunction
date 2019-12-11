@@ -3,7 +3,7 @@
 # ran from metallurgy:main
 
 #self strike unless the tool was equipped for a short time
-execute if score @s gm4_volt_time matches 0..198 run function conduction_shamir:self_strike/prepare_lightning_self
+execute if score @s gm4_volt_time matches 0..198 run function gm4_conduction_shamir:self_strike/prepare_lightning_self
 
 #reset effects
 effect clear @s haste

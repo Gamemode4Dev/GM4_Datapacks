@@ -14,4 +14,4 @@ execute if entity @s[nbt={Item:{tag:{pages:["head down"]}}}] run data merge enti
 execute if entity @s[nbt={Item:{tag:{pages:["head left"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[0f,327f,0f]},Tags:[gm4_pose_changed]}
 execute if entity @s[nbt={Item:{tag:{pages:["head right"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[0f,32f,0f]},Tags:[gm4_pose_changed]}
 
-execute as @e[type=armor_stand,tag=!gm4_no_edit,tag=gm4_pose_changed] run function poses_pack:pose_changed
+execute as @e[type=armor_stand,tag=!gm4_no_edit,tag=gm4_pose_changed] run function gm4_poses_pack:pose_changed

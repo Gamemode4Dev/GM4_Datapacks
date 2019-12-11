@@ -8,9 +8,9 @@ summon area_effect_cloud ~ ~ ~ {CustomName:"\"gm4_pl_random_witch_init\"",Tags:[
 
 kill @e[type=area_effect_cloud,limit=3,distance=..1,tag=gm4_pl_random_witch_init,sort=random]
 
-execute if entity @e[type=area_effect_cloud,tag=gm4_pl_random_witch_init,tag=gm4_lt_random_regeneration] run function potion_liquids:liquid_init/regeneration
-execute if entity @e[type=area_effect_cloud,tag=gm4_pl_random_witch_init,tag=gm4_lt_random_swiftness] run function potion_liquids:liquid_init/swiftness
-execute if entity @e[type=area_effect_cloud,tag=gm4_pl_random_witch_init,tag=gm4_lt_random_fire_resistance] run function potion_liquids:liquid_init/fire_resistance
-execute if entity @e[type=area_effect_cloud,tag=gm4_pl_random_witch_init,tag=gm4_lt_random_harming] run function potion_liquids:liquid_init/harming
+execute if entity @e[type=area_effect_cloud,tag=gm4_pl_random_witch_init,tag=gm4_lt_random_regeneration] run function gm4_potion_liquids:liquid_init/regeneration
+execute if entity @e[type=area_effect_cloud,tag=gm4_pl_random_witch_init,tag=gm4_lt_random_swiftness] run function gm4_potion_liquids:liquid_init/swiftness
+execute if entity @e[type=area_effect_cloud,tag=gm4_pl_random_witch_init,tag=gm4_lt_random_fire_resistance] run function gm4_potion_liquids:liquid_init/fire_resistance
+execute if entity @e[type=area_effect_cloud,tag=gm4_pl_random_witch_init,tag=gm4_lt_random_harming] run function gm4_potion_liquids:liquid_init/harming
 
 kill @e[type=area_effect_cloud,tag=gm4_pl_random_witch_init]

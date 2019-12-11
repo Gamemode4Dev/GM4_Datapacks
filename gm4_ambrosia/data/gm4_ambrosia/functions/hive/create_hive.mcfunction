@@ -12,7 +12,7 @@ particle minecraft:block yellow_concrete_powder ~ ~ ~ 0.3 0 0.3 0.5 13
 playsound minecraft:block.barrel.close block @a ~ ~ ~ 1 1.5
 
 # summon a single ambient bee as feedback
-function ambrosia:beehavior/spawn_roaming_bee
+function gm4_ambrosia:beehavior/spawn_roaming_bee
 
 # grant advancement
 advancement grant @a[distance=..6] only gm4:ambrosia_create_beehive

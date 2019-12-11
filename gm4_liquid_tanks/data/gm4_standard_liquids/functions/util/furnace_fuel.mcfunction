@@ -11,4 +11,4 @@ scoreboard players reset lava_fueling gm4_lt_util
 
 tag @s remove gm4_lt_furnace_start
 
-execute unless score @s gm4_lt_buffer matches 0 run function liquid_tanks:liquid_value_update
+execute unless score @s gm4_lt_buffer matches 0 run function gm4_liquid_tanks:liquid_value_update

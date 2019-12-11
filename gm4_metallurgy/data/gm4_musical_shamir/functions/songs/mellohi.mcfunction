@@ -16,4 +16,4 @@ execute if score @s gm4_note_time matches 1 run effect give @s strength 48 0
 particle note ~ ~1 ~ 1.4 1.4 1.4 .5 12 normal @a[distance=..8]
 
 #song end
-execute if score @s gm4_note_time matches 60.. run function musical_shamir:songs/mellohi_end
+execute if score @s gm4_note_time matches 60.. run function gm4_musical_shamir:songs/mellohi_end

@@ -7,6 +7,6 @@ scoreboard objectives add gm4_nbi_change dummy
 execute unless score note_block_interface gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Note Block Interface"}
 scoreboard players set note_block_interface gm4_modules 1
 
-schedule function note_block_interface:tick 1t
+schedule function gm4_note_block_interface:tick 1t
 
 #$moduleUpdateList

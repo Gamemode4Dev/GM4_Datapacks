@@ -8,5 +8,5 @@ execute if score @s gm4_zc_data matches 2.. store result score @s gm4_zc_fullnes
 #release the vexes
 execute if score @s gm4_zc_data matches 2.. run particle minecraft:block glass ~ ~ ~ 0.12 0.12 0.12 0 15
 execute if score @s gm4_zc_data matches 2.. run playsound minecraft:block.glass.break block @a[distance=..8] ~ ~ ~ 1 1.3
-execute if score @s gm4_zc_data matches 2.. run function zauber_cauldrons:cauldron/extra_items/create_possessed_items
+execute if score @s gm4_zc_data matches 2.. run function gm4_zauber_cauldrons:cauldron/extra_items/create_possessed_items
 execute if score @s gm4_zc_data matches 2.. run kill @s

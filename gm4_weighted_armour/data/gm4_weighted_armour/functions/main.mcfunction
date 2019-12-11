@@ -1,3 +1,3 @@
-execute as @a run function weighted_armour:player
+execute as @a run function gm4_weighted_armour:player
 
-schedule function weighted_armour:main 16t
+schedule function gm4_weighted_armour:main 16t

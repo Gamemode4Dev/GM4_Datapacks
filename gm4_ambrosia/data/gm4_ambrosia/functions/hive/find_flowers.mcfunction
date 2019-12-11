@@ -26,7 +26,7 @@ scoreboard players operation flower_count gm4_bee_data /= flower_ratio gm4_bee_d
 scoreboard players operation flower_count gm4_bee_data /= #16 gm4_bee_data
 
 # spawn hive loot and add new bees to hive
-execute if score flower_count gm4_bee_data matches 1.. run function ambrosia:hive/spawn_hive_loot
+execute if score flower_count gm4_bee_data matches 1.. run function gm4_ambrosia:hive/spawn_hive_loot
 execute unless score @s gm4_bees matches 50.. run scoreboard players operation @s gm4_bees += flower_count gm4_bee_data
 
 # debug bee display. Enable this for easy debugging.  For more debug displays view ambrosia:hive/fprocess_hive

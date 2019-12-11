@@ -2,4 +2,4 @@ execute if score gm4 load matches 1 if score gm4_liquid_tanks load matches 1 run
 execute unless score gm4 load matches 1 run data modify storage gm4:log queue append value {type:"missing",module:"Zauber Liquids",require:"Gamemode 4"}
 execute unless score gm4_liquid_tanks load matches 1 run data modify storage gm4:log queue append value {type:"missing",module:"Zauber Liquids",require:"Liquid Tanks"}
 
-execute if score gm4_zauber_liquids load matches 1 run function zauber_liquids:init
+execute if score gm4_zauber_liquids load matches 1 run function gm4_zauber_liquids:init

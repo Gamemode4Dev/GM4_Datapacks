@@ -3,7 +3,7 @@
 # ran from conduction_shamir:raycast_strike/lightning_raycast
 
 #initiate self_strike
-function conduction_shamir:self_strike/prepare_lightning_self
+function gm4_conduction_shamir:self_strike/prepare_lightning_self
 
 #kill raycast_strike area_effect_cloud
 kill @s

@@ -10,4 +10,4 @@ execute if score @s gm4_lt_value matches 1.. run scoreboard players remove @s gm
 
 execute if score @s gm4_lt_value matches 1.. run summon experience_orb ~ ~1.8 ~ {Age:5995,Value:0}
 
-execute unless score @s gm4_lt_buffer matches 0 run function liquid_tanks:liquid_value_update
+execute unless score @s gm4_lt_buffer matches 0 run function gm4_liquid_tanks:liquid_value_update

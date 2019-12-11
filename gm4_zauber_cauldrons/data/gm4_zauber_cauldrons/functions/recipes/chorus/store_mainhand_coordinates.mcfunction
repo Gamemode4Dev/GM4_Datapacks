@@ -12,7 +12,7 @@ execute unless score wormhole_data gm4_zc_data matches 1 store success score wor
 data modify entity @e[type=item,y=-512,dy=0,tag=gm4_zc_wormhole_data,limit=1] Item.tag set from entity @s SelectedItem.tag.gm4_zauber_cauldrons.cauldron_pos
 
 #extract the x, y, z, and dimension into fake players to minimize use of @e[type=item]
-execute as @e[type=item,y=-512,dy=0,tag=gm4_zc_wormhole_data,limit=1] run function zauber_cauldrons:recipes/chorus/extract_item_coordinates
+execute as @e[type=item,y=-512,dy=0,tag=gm4_zc_wormhole_data,limit=1] run function gm4_zauber_cauldrons:recipes/chorus/extract_item_coordinates
 
 #copy the x, y, z, and dimension into the player's relevant scores
 scoreboard players operation @s gm4_zc_warp_mx = wormhole_x gm4_zc_data

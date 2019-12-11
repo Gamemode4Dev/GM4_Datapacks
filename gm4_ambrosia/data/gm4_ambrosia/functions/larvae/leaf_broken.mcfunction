@@ -3,4 +3,4 @@
 
 scoreboard players reset @s gm4_leaf_broken
 
-execute as @e[type=item,distance=..5,nbt={Age:0s,PickupDelay:10s,Item:{id:"minecraft:stick"}}] at @s run function ambrosia:larvae/create_larvae
+execute as @e[type=item,distance=..5,nbt={Age:0s,PickupDelay:10s,Item:{id:"minecraft:stick"}}] at @s run function gm4_ambrosia:larvae/create_larvae

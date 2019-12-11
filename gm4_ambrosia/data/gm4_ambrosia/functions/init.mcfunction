@@ -15,7 +15,7 @@ gamerule naturalRegeneration false
 execute unless score ambrosia gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Ambrosia"}
 scoreboard players set ambrosia gm4_modules 1
 
-schedule function ambrosia:main 1t
-schedule function ambrosia:tick 1t
+schedule function gm4_ambrosia:main 1t
+schedule function gm4_ambrosia:tick 1t
 
 #$moduleUpdateList

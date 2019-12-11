@@ -3,6 +3,6 @@
 # ran from main
 
 #check for curses
-execute if entity @s[nbt={ArmorItems:[{},{},{tag:{Enchantments:[{id:"minecraft:binding_curse"}]}},{}]}] run function phantom_scarecrows:create
+execute if entity @s[nbt={ArmorItems:[{},{},{tag:{Enchantments:[{id:"minecraft:binding_curse"}]}},{}]}] run function gm4_phantom_scarecrows:create
 #check for second curse (tag check included to exclude any armor stands that already succeeded the first curse check)
-execute if entity @s[tag=!gm4_phantom_scarecrow,nbt={ArmorItems:[{},{},{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}},{}]}] run function phantom_scarecrows:create
+execute if entity @s[tag=!gm4_phantom_scarecrow,nbt={ArmorItems:[{},{},{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}},{}]}] run function gm4_phantom_scarecrows:create
