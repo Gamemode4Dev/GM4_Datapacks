@@ -1,6 +1,5 @@
 {
     "values": [
-        "#load:gm4_custom_crafters",
         "#load:gm4_disassemblers"
     ]
 }

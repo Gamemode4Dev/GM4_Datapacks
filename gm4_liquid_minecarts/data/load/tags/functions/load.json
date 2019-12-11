@@ -1,6 +1,5 @@
 {
     "values": [
-        "#load:gm4_liquid_tanks",
         "#load:gm4_liquid_minecarts"
     ]
 }
