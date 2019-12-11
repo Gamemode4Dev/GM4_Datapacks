@@ -10,6 +10,6 @@
         }
     },
     "rewards": {
-        "function": "crossbow_cartridges:check_projectile"
+        "function": "gm4_crossbow_cartridges:check_projectile"
     }
 }

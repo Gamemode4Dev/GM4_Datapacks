@@ -1,0 +1,17 @@
+{
+  "values": [
+    "gm4_arborenda_shamir:check_item_validity",
+    "gm4_conduction_shamir:check_item_validity",
+    "gm4_defuse_shamir:check_item_validity",
+    "gm4_ender_bolt_shamir:check_item_validity",
+    "gm4_forterra_shamir:check_item_validity",
+    "gm4_gemini_shamir:check_item_validity",
+    "gm4_helios_shamir:check_item_validity",
+    "gm4_hypexperia_shamir:check_item_validity",
+    "gm4_levity_shamir:check_item_validity",
+    "gm4_musical_shamir:check_item_validity",
+    "gm4_sensus_shamir:check_item_validity",
+    "gm4_spiraculum_shamir:check_item_validity",
+    "gm4_tinker_shamir:check_item_validity"
+  ]
+}

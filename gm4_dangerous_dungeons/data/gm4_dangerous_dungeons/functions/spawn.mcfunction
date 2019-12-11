@@ -1,0 +1,7 @@
+# spawn a dungeon based on the biome type.
+execute if score structure_height gm4_count matches ..50 unless block ~ 3 ~ bedrock if score ocean gm4_orbis_biome matches 1 run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Ocean Dungeon","structure":{"name":"dangerous_dungeons:ocean",posX:-8,posY:-7,posZ:-8}}}}}
+execute if score structure_height gm4_count matches ..50 if score desert gm4_orbis_biome matches 1 run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Desert Dungeon","structure":{"name":"dangerous_dungeons:desert",posX:-8,posY:-7,posZ:-8}}}}}
+execute if score structure_height gm4_count matches ..50 if score badlands gm4_orbis_biome matches 1 run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Badlands Dungeon","structure":{"name":"dangerous_dungeons:badlands",posX:-8,posY:-7,posZ:-8}}}}}
+execute if score structure_height gm4_count matches ..50 if score snowy gm4_orbis_biome matches 1 run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Snowy Dungeon","structure":{"name":"dangerous_dungeons:snowy",posX:-8,posY:-7,posZ:-8}}}}}
+
+execute if score structure_height gm4_count matches ..50 unless score ocean gm4_orbis_biome matches 1 unless score desert gm4_orbis_biome matches 1 unless score badlands gm4_orbis_biome matches 1 unless score snowy gm4_orbis_biome matches 1 run function gm4_dangerous_dungeons:spawn/default

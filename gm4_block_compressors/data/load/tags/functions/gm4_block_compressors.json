@@ -1,5 +1,5 @@
 {
     "values": [
-        "block_compressors:load"
+        "gm4_block_compressors:load"
     ]
 }
