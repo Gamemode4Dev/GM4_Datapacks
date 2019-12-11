@@ -12,7 +12,7 @@
       }
     }
   },
-  "reward" {
+  "rewards": {
     "function": "gm4_boots_of_ostara:enable_boots"
   }
 }

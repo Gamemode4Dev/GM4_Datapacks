@@ -13,7 +13,7 @@
             }
         }
     },
-    "reward" {
+    "rewards": {
         "function": "gm4_end_fishing:reel_in/reel_rod"
     }
 }
