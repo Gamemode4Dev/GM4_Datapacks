@@ -1,7 +1,7 @@
 #@s = player who reeled in the armor stand
 #run from advancement "reel_loot"
 
-advancement revoke @s only end_fishing:reel_loot
+advancement revoke @s only gm4_end_fishing:reel_loot
 advancement grant @s only gm4:end_fishing
 tag @s add gm4_ef_reel_loot
 tag @s add gm4_ef_looted

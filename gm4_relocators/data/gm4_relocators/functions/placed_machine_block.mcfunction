@@ -1,7 +1,7 @@
 # @s = player who placed a relocated block
 # run from advancement "place_relocated_block"
 
-advancement revoke @s only relocators:place_relocated_block
+advancement revoke @s only gm4_relocators:place_relocated_block
 
 summon armor_stand ~ ~ ~ {Silent:1,Small:1,Invisible:1,Marker:1,NoGravity:1,Tags:["gm4_relocated_ray"],HandItems:[{},{id:"minecraft:stone_button",Count:1b}]}
 data modify entity @e[type=armor_stand,tag=gm4_relocated_ray,distance=..1,limit=1,sort=nearest] HandItems[1].id set from entity @s SelectedItem.id

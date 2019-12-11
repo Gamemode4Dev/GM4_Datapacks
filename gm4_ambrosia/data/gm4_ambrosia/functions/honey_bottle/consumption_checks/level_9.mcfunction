@@ -9,4 +9,4 @@ tag @s add gm4_drank_honey
 scoreboard players set player_consumed_honey gm4_bee_data 1
 
 # revoke advancement
-advancement revoke @s only ambrosia:take_sip/level_9
+advancement revoke @s only gm4_ambrosia:take_sip/level_9

@@ -5,4 +5,4 @@
 effect give @s minecraft:regeneration 3 0
 
 # revoke advancement
-advancement revoke @s only ambrosia:eat_beet
+advancement revoke @s only gm4_ambrosia:eat_beet
