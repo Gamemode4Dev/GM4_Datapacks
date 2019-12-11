@@ -6,12 +6,12 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "sunken_treasure:item_treasure/shared",
+          "name": "gm4_sunken_treasure:item_treasure/shared",
           "weight": 189
         },
         {
           "type": "minecraft:loot_table",
-          "name": "sunken_treasure:item_treasure/scuba",
+          "name": "gm4_sunken_treasure:item_treasure/scuba",
           "weight": 11
         }
       ]
