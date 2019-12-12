@@ -1,4 +1,4 @@
-scoreboard players set orbis_pre_gen_tick gm4_clock_tick 0
+scoreboard players set $orbis_pre_gen_tick gm4_count 0
 
 summon area_effect_cloud ~ ~ ~ {Tags:[gm4_orbis_gen_pos]}
 execute as @e[type=area_effect_cloud,tag=gm4_orbis_gen_pos,limit=1] run function gm4_orbis_pre_gen:generate
