@@ -1,7 +1,7 @@
 # @s = player who placed a relocator player head
 # run from advancement "place_relocator_wall"
 
-advancement revoke @s only relocators:place_relocator_wall
+advancement revoke @s only gm4_relocators:place_relocator_wall
 
 summon area_effect_cloud ~ ~ ~ {Tags:["gm4_relocating_ray"]}
 execute anchored eyes positioned ^ ^ ^ anchored feet run tp @e[tag=gm4_relocating_ray] ^ ^ ^ ~ ~
