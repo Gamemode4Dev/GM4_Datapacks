@@ -1,2 +1,2 @@
-execute unless block ~ 4 ~ bedrock run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Default Dungeon","structure":{"name":"dangerous_dungeons:default",posX:-8,posY:-7,posZ:-8}}}}}
-execute if block ~ 4 ~ bedrock run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Library Dungeon","structure":{"name":"dangerous_dungeons:default2",posX:-8,posY:-7,posZ:-5}}}}}
+execute unless block ~ 4 ~ bedrock run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Default Dungeon","structure":{"name":"gm4_dangerous_dungeons:default",posX:-8,posY:-7,posZ:-8}}}}}
+execute if block ~ 4 ~ bedrock run summon item ~ ~ ~ {Tags:["gm4_orbis_structure"],Item:{id:"minecraft:stick",Count:1b,tag:{gm4_orbis:{name:"Library Dungeon","structure":{"name":"gm4_dangerous_dungeons:default2",posX:-8,posY:-7,posZ:-5}}}}}
