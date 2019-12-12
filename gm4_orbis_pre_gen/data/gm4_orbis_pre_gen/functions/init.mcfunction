@@ -5,6 +5,7 @@ scoreboard players set x1 gm4_orbis_config -1024
 scoreboard players set z1 gm4_orbis_config -1024
 scoreboard players set x2 gm4_orbis_config 1024
 scoreboard players set z2 gm4_orbis_config 1024
+scoreboard players set structure_debug gm4_orbis_config 1
 
 execute unless score orbis_pre_gen gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Orbis Pre Gen"}
 scoreboard players set orbis_pre_gen gm4_modules 1
