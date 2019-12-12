@@ -1,20 +1,12 @@
-#announce module installation
-tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Installing Tinkering Compressors...",{"translate":"text.gm4.modules.update.installing","with":[{"translate":"module.gm4.tinkering_compressors"}]}]}]
-execute unless entity @a[limit=1] run say GM4: Installing Tinkering Compressors...
-
-#declare and initialise scoreboards and settings
-scoreboard players set update_happened gm4_up_check 1
-scoreboard players set tinkering_compressors gm4_modules 1
-scoreboard players set tinkering_compressors gm4_clock_tick 0
-
 scoreboard objectives add gm4_tc_data dummy
 scoreboard players set #9stack gm4_tc_data 9
 scoreboard players set #4stack gm4_tc_data 4
 scoreboard players set #64stack gm4_tc_data 64
 
-#announce success
-tellraw @a[gamemode=creative] [{"translate":"%1$s%3427655$s","with":["[GM4]: ",{"translate":"text.gm4.prefix"}]},{"translate":"%1$s%3427655$s","with":["Block Tinkering Compressors!",{"translate":"text.gm4.modules.update.installed","with":[{"translate":"module.gm4.tinkering_compressors"}]}]}]
-execute unless entity @a[limit=1] run say GM4: Tinkering Compressors Installed!
+execute unless score tinkering_compressors gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Tinkering Compressors"}
+scoreboard players set tinkering_compressors gm4_modules 1
 
-#check other modules to make sure they're up to date.
+schedule function gm4_tinkering_compressors:main 1t
+schedule function gm4_tinkering_compressors:tick 1t
+
 #$moduleUpdateList

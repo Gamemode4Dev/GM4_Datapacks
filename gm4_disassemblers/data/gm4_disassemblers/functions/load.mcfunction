@@ -3,4 +3,4 @@ execute unless score gm4 load matches 1 run data modify storage gm4:log queue ap
 execute unless score gm4_liquid_tanks load matches 1 run data modify storage gm4:log queue append value {type:"missing",module:"Disassemblers",require:"Custom Crafters"}
 
 execute if score gm4_disassemblers load matches 1 run function gm4_disassemblers:init
-execute unless score gm4_disassemblers load matches 1 run schedule clear disassemblers:main
+execute unless score gm4_disassemblers load matches 1 run schedule clear gm4_disassemblers:main
