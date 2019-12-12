@@ -1,6 +1,6 @@
 # get the biome type
 scoreboard players reset * gm4_orbis_biome
-execute positioned ~8 -1000 ~8 run function gm4_orbis:chunk/scan
+execute positioned ~8 0 ~8 run function gm4_orbis:chunk/scan
 # scan other parts of the chunk if a river has been detected
 execute if score border gm4_orbis_biome matches 1 run function gm4_orbis:chunk/border
 
