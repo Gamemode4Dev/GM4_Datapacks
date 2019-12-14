@@ -1,0 +1,15 @@
+{
+  "criteria":{
+    "eat_honey_beetroot":{
+      "trigger":"minecraft:consume_item",
+      "conditions":{
+        "item":{
+          "nbt":"{gm4_ambrosia:{item:\"honey_beetroot\"}}"
+        }
+      }
+    }
+  },
+ "rewards": {
+   "function":"gm4_ambrosia:honey_beetroot/eat_beetroot"
+ }
+}
