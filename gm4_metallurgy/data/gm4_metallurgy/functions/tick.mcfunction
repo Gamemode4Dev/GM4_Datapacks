@@ -1,7 +1,3 @@
-# handle ore dropping
-execute if score found_ore_radius gm4_ml_data matches 1 as @e[type=area_effect_cloud,tag=gm4_ore_radius] at @s run function gm4_metallurgy:blasting/drop_ores
-execute if score found_primed_tnt gm4_ml_data matches 1 as @e[type=tnt,nbt={Fuse:1s}] at @s run function gm4_metallurgy:blasting/tnt
-
 # prepare for item smooshing
 execute if score found_item_on_anvil gm4_ml_data matches 1 as @e[type=item,tag=gm4_ml_on_anvil] at @s if block ~ ~ ~ minecraft:moving_piston align xyz if entity @e[type=item,dx=0,nbt=!{Item:{tag:{gm4_metallurgy:{has_shamir:1b}}}}] run function gm4_metallurgy:smooshing/prepare_transfer
 
