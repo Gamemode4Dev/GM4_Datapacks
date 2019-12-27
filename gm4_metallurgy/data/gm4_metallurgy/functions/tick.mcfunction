@@ -16,7 +16,7 @@ execute if score hypexperia_active gm4_ml_data matches 1 run function gm4_hypexp
 execute if score forterra_active gm4_ml_data matches 1 run function gm4_forterra_shamir:find_stone
 
 # ender_bolt
-execute as @a[gamemode=!spectator,scores={gm4_bolt_damage=1..},nbt={SelectedItem:{tag:{gm4_metallurgy:{active_shamir:"ender_bolt"}}}}] at @s positioned ^ ^ ^2 as @e[distance=..2,nbt={DeathTime:0s},type=!player,type=!armor_stand] run scoreboard players set @s gm4_bolt_time 20
+execute as @a[gamemode=!spectator,scores={gm4_bolt_damage=1..},predicate=gm4_metallurgy:ender_bolt_active] at @s positioned ^ ^ ^2 as @e[distance=..2,team=!gm4_invalid,type=!player,type=!armor_stand] run scoreboard players set @s gm4_bolt_time 20
 
 # levity
 execute if score levity_active gm4_ml_data matches 1 run function gm4_levity_shamir:find_floating_players

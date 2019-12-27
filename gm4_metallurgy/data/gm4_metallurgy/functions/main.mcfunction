@@ -38,7 +38,8 @@ tag @a remove gm4_has_sensus
 tag @a remove gm4_has_levity
 tag @a remove gm4_has_forterra
 
-execute as @a[gamemode=!spectator] if data entity @s Inventory[].tag.gm4_metallurgy.active_shamir at @s run function gm4_metallurgy:has_shamir
+execute as @a[gamemode=!spectator,predicate=gm4_metallurgy:shamir_in_hand] at @s run function gm4_metallurgy:shamir_in_hand
+execute as @a[gamemode=!spectator,predicate=gm4_metallurgy:shamir_equipped] at @s run function gm4_metallurgy:shamir_equipped
 
 execute as @a[gamemode=!spectator,scores={gm4_volt_time=-1..},tag=!gm4_has_conduction] at @s run function gm4_conduction_shamir:deselected_tool
 
