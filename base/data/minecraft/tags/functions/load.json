@@ -1,5 +1,5 @@
 {
-    "values":[
-        "gm4:load"
+    "values": [
+        "#load:__init"
     ]
 }

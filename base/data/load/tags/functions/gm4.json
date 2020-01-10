@@ -1,0 +1,6 @@
+{
+    "values": [
+        "#load:gm4/enumerate",
+        "#load:gm4/resolve_load"
+    ]
+}

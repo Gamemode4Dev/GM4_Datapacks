@@ -1,0 +1,27 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gm4_end_fishing:gameplay/fish/common",
+                    "weight": 60,
+                    "quality": -1
+                },
+                {
+                    "type": "loot_table",
+                    "name": "gm4_end_fishing:gameplay/fish/uncommon",
+                    "weight": 33,
+                    "quality": 1
+                },
+                {
+                    "type": "loot_table",
+                    "name": "gm4_end_fishing:gameplay/fish/rare",
+                    "weight": 7,
+                    "quality": 5
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "custom_test_name": {
+            "trigger": "minecraft:shot_crossbow",
+            "conditions": {
+                "item": {
+                    "nbt": "{ChargedProjectiles:[{id:\"minecraft:arrow\"}]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_crossbow_cartridges:check_projectile"
+    }
+}

@@ -22,8 +22,16 @@
   },
   "parent": "gm4:custom_crafters",
   "criteria": {
-    "wear_boots_of_ostara": {
-      "trigger": "minecraft:impossible"
+    "boots_of_ostara": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:leather_boots",
+            "nbt": "{gm4_boots_of_ostara:1b}"
+          }
+        ]
+      }
     }
   }
 }
