@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "tnt",
-      "nbt": "{CustomModelData:3}"
+      "nbt": "{CustomModelData:1}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
