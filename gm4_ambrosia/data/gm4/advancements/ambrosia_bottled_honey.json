@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "potion",
-            "nbt": "{display:{Name:\"\\\"ambrosia logo\\\"\"},CustomPotionColor:16754944,CustomModelData:3}"
+            "nbt": "{CustomPotionColor:16754944,CustomModelData:3}"
         },
         "title": {
             "translate": "%1$s%3427655$s",

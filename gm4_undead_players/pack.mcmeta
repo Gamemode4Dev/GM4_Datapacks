@@ -1,7 +1,13 @@
 {
   "pack":{
     "pack_format":0,
-    "description":{"translate":"pack.gm4.description"}
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "A Gamemode 4 Module",
+        {"translate": "pack.gm4.description"}
+      ]
+    }
   },
   "module_name":"Undead Players",
   "module_id":"undead_players",
