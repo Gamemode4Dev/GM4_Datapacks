@@ -1,7 +1,7 @@
 {
   "pack":{
     "pack_format":0,
-    "description":"A Gamemode 4 Module"
+    "description":{"translate":"pack.gm4.description"}
   },
   "module_name":"Orbis Pre-gen",
   "module_id":"orbis_pre_gen",

@@ -2,7 +2,7 @@
 
   "pack":{
     "pack_format":0,
-    "description":"A Gamemode 4 Module"
+    "description":{"translate":"pack.gm4.description"}
   },
   "module_name":"Ink Spitting Squid",
   "module_id":"ink_spitting_squid",

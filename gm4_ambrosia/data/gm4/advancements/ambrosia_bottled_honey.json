@@ -1,19 +1,33 @@
 {
-  "display":{
-    "icon":{
-      "item":"potion",
-      "nbt":"{display:{Name:\"\\\"ambrosia logo\\\"\"},CustomPotionColor:16754944}"
+    "display": {
+        "icon": {
+            "item": "potion",
+            "nbt": "{display:{Name:\"\\\"ambrosia logo\\\"\"},CustomPotionColor:16754944,CustomModelData:3}"
+        },
+        "title": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "A Sweet Upgrade",
+                {
+                    "translate": "advancement.gm4.ambrosia_bottled_honey.title"
+                }
+            ]
+        },
+        "description": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Bottle some honey",
+                {
+                    "translate": "advancement.gm4.ambrosia_bottled_honey.description"
+                }
+            ],
+            "color": "gray"
+        }
     },
-    "title":"A sweet upgrade",
-    "description":{
-      "text":"Bottle some honey",
-      "color":"gray"
+    "parent": "gm4:ambrosia_create_beehive",
+    "criteria": {
+        "external_trigger": {
+            "trigger": "minecraft:impossible"
+        }
     }
-  },
-  "parent":"gm4:ambrosia_create_beehive",
-  "criteria":{
-    "ambrosia_bottled_honey":{
-      "trigger":"minecraft:impossible"
-    }
-  }
 }
