@@ -1,40 +1,52 @@
 Contributing to Gamemode 4 
 ==========================
 
-## Adding a GM4 Module that isn't in the repo yet
+## Adding a new GM4 Module
 - Create a fork of `GM4_Datapacks` using the Fork button in the top-right of the repo. You will then have a personal copy of the repo ready for your changes.
-- Make a copy of the `GM4_template_pack` folder and rename it to the name of the module you are writing code for.
 - Each module you create should be made under a separate branch so that modules can be submitted, approved and tested individually.
 
-Inside the `gm4_template_pack` folder is code that matches the Gamemode 4 module standard. Rename the `_pack.mcmeta` file to `pack.mcmeta`. The appropriate fields inside the file should be changed.
+### Getting the template
+- Go to [https://gm4.co/modules/generator](https://gm4.co/modules/generator) to generate your module template. Be sure to **not** package the base.
+- All the functionality of your module should be inside the `gm4_module_id` namespace. The exception to this is visible advancements, which go in `gm4`. If your module does not have advancements you can delete this namespace.
 
-There are several placeholder values in both file names and the files themselves.
-- `MODULE_ID` within this folder should be replaced with the module name in an underscored format such as `bat_grenades` or `enderman_support_class`. This should contain only lowercase characters and underscores and should match the module name on the website if the module already exists.
-- `MODULE_NAME` should be replaced with a display name for the module as this is visible to players such as `Bat Grenades` or `Enderman Support Class`. This should match the name on the website if the module already exists.
+### Load
+Gamemode 4 uses [LanternMC Load](https://github.com/LanternMC/Load) so modules work nicely with other data packs. This allows modules to check which version of the gm4 base is loaded and prevents conflicts. It also allows checking whether reliant modules are installed.
 
-### Folders
-Within the `data` folder there are two folders for the different namespaces this module will use. If the module is an extension, you will need an additional module for the base module. Because we merge modules with a copy of the base clock certain folders and files are not included in the template.
-#### /gm4/
-This folder contains two function tags that are called by the Gamemode 4 clocking system. Small changes need to be made (see placeholder values above).
-If the module does not contain advancements then the folder `gm4/advancements` should be deleted. Otherwise the advancement details should be updated. The `root.json` file should not be deleted or changed.
-#### /template/
-This folder should be renamed to `MODULE_ID`. All your module code should be within this folder or within sub-folders. Place your main commands in the `main.mcfunction` file and any commands that should run every tick (avoid this if possible) into `pulse_check.mcfunction`.
-Additionally place `#$moduleUpdateList` at the end of `init.mcfunction`.
+If your module requires another module, you need to list it explicitly in a few places:
+- `data/load/tags/functions/gm4_module_id.json`: Prepend the values list with a value for each direct dependency. The order is important!
+- Create an empty function tag in `load` for each dependency. For example `#load:gm4_custom_crafters`.
+- `data/gm4_module_id/functions/load.mcfunction`: The first line checks scores to see if all dependencies are loaded. The following lines provide additional logging so the user can see which packs are incompatible or missing. This is discussed in the next section.
+
+Initialization goes above all other commands in `init.mcfunction`. This is mostly for adding scoreboards.
+
+#### Logging
+Messages can be logged during the load process. This can be done by appending to the `queue` tag in the `gm4:log` storage. Here are a few examples:
+```mcfunction
+data modify storage gm4:log queue append value {type:"install",module:"XP Storage"}
+data modify storage gm4:log queue append value {type:"missing",module:"Relocators",require:"Custom Crafters"}
+```
+
+### Ticking
+Gamemode 4 modules use `/schedule` to run functions every few ticks. There are 2 standard clock speeds. Both functions schedule itself. You are free to add a different clock speed, however these are the standards:
+- `tick.mcfunction` runs every tick.
+- `main.mcfunction` runs every 16 ticks.
 
 ### Naming and formatting standards
 Please be sure to match the formatting for Gamemode 4 modules to ensure readability and consistency.
 
+- Names should be as clear and relevant as possible to avoid confusion or two modules sharing the same name by mistake.
 - Any name, scoreboard name or tag should be formatted as `lowercase_with_underscores`
 - Scoreboards and tags should begin with the `gm4_` prefix.
 - fake players used to store numbers for scoreboard operations should be named as a "#" followed by that number e.g. `scoreboard players set #100 gm4_some_scoreboard 100`
 - Entities that aren't visible to the player (markers) should have custom names beginning with `gm4_` if this does not interfere with functionality.
-- Names for the above two points should be as clear and relevant as possible to avoid confusion or two modules sharing the same name by mistake.
 - Lore on items should have the first word capitalized and no fullstop at the end of the sentence if there is only one sentence. Other punctuation (?!) can be added.
-- ANY FUNCTION that is run as an entity should have a comment on the first line stating the context of @s so it is clear what runs this file e.g. `#@s = cows with speed limit=..1 of red mushrooms`
-- ALL FUNCTIONS except those included with the template file should list the functions they are called from in a comment on the first or second line of the file e.g. `#run from main`. More complicated modules with subdirectories should specify the more specific file path e.g. `#run from zauber_cauldrons:cauldron/create`
+
+#### Comments
+- Any function that is run as an entity should have a comment on the first line stating the context of @s so it is clear what runs this file e.g. `#@s = cows with speed limit=..1 of red mushrooms`
+- All except those included with the template file should list the functions they are called from in a comment on the first or second line of the file e.g. `#run from main`. More complicated modules with subdirectories should specify the more specific file path e.g. `#run from zauber_cauldrons:cauldron/create`
 
 ### Compatibility with GM4 Resources
-- All visible text (names, lore, actionbar, advancements) should use translation keys:
+- All text visible to survival players (names, lore, actionbar, advancements) should use translation keys like this:
 ```json
 {
   "translate": "%1$s%3427655$s",
