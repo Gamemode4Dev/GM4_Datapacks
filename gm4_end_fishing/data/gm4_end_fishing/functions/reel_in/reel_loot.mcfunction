@@ -14,8 +14,8 @@ execute as @e[type=area_effect_cloud,tag=gm4_ef_loot] at @s run tp @s ~ ~ ~ faci
 execute as @e[type=area_effect_cloud,tag=gm4_ef_loot] at @s run function gm4_end_fishing:reel_in/move_aec
 execute as @e[type=area_effect_cloud,tag=gm4_ef_loot] at @s if entity @a[distance=..2,tag=gm4_ef_reel_loot] if block ^ ^ ^0.5 #gm4_end_fishing:traversable run tp @s ^ ^ ^0.5
 execute as @e[type=area_effect_cloud,tag=gm4_ef_loot] at @s if entity @a[distance=..2,tag=gm4_ef_reel_loot] if block ^ ^ ^0.5 #gm4_end_fishing:traversable run tp @s ^ ^ ^0.5
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:fishing_rod"}}] at @e[type=area_effect_cloud,tag=gm4_ef_loot] run loot spawn ^ ^ ^1 fish end_fishing:gameplay/fishing ~ ~ ~ mainhand
-execute if entity @s[nbt=!{SelectedItem:{id:"minecraft:fishing_rod"}},nbt={Inventory:[{Slot:-106b,id:"minecraft:fishing_rod"}]}] at @e[type=area_effect_cloud,tag=gm4_ef_loot] run loot spawn ^ ^ ^1 fish end_fishing:gameplay/fishing ~ ~ ~ offhand
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:fishing_rod"}}] at @e[type=area_effect_cloud,tag=gm4_ef_loot] run loot spawn ^ ^ ^1 fish gm4_end_fishing:gameplay/fishing ~ ~ ~ mainhand
+execute if entity @s[nbt=!{SelectedItem:{id:"minecraft:fishing_rod"}},nbt={Inventory:[{Slot:-106b,id:"minecraft:fishing_rod"}]}] at @e[type=area_effect_cloud,tag=gm4_ef_loot] run loot spawn ^ ^ ^1 fish gm4_end_fishing:gameplay/fishing ~ ~ ~ offhand
 execute as @e[type=item,nbt={Item:{tag:{gm4_ef_entity:{}}}}] run function gm4_end_fishing:reel_in/summon_entity
 execute as @e[type=item,nbt={Item:{tag:{gm4_ef_lore:{}}}}] run function gm4_end_fishing:reel_in/set_lore
 
