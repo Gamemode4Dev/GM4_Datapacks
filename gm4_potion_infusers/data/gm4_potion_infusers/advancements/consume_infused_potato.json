@@ -1,0 +1,15 @@
+{
+  "criteria":{
+    "consume_infused_potato":{
+      "trigger":"minecraft:consume_item",
+      "conditions":{
+        "item":{
+          "nbt":"{gm4_potion_infusers:{item:\"fire_resistance_potato\"}}"
+        }
+      }
+    }
+  },
+ "rewards":{
+   "function":"gm4_potion_infusers:items/fire_resistance_potato"
+ }
+}

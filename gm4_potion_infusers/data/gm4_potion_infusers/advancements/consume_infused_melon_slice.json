@@ -1,0 +1,15 @@
+{
+  "criteria":{
+    "consume_infused_melon_slice":{
+      "trigger":"minecraft:consume_item",
+      "conditions":{
+        "item":{
+          "nbt":"{gm4_potion_infusers:{item:\"healing_melon_slice\"}}"
+        }
+      }
+    }
+  },
+ "rewards":{
+   "function":"gm4_potion_infusers:items/healing_melon_slice"
+ }
+}

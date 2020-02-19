@@ -1,0 +1,15 @@
+{
+  "criteria":{
+    "consume_infused_beetroot":{
+      "trigger":"minecraft:consume_item",
+      "conditions":{
+        "item":{
+          "nbt":"{gm4_potion_infusers:{item:\"swiftness_beetroot\"}}"
+        }
+      }
+    }
+  },
+ "rewards":{
+   "function":"gm4_potion_infusers:items/swiftness_beetroot"
+ }
+}

@@ -1,0 +1,59 @@
+{
+  "display":{
+    "icon":{
+      "item":"barrel",
+      "nbt":"{CustomModelData:1}"
+    },
+    "title":{
+      "translate":"%1$s%3427655$s",
+      "with":[
+        "Winter's Coming!",
+        {"translate": "advancement.gm4.potion_infusers_crops.title"}
+      ]
+    },
+    "description":{
+      "translate":"%1$s%3427655$s",
+      "with":[
+        "Stock up on infused crops",
+        {"translate":"advancement.gm4.potion_infusers_crops.description"}
+      ],
+      "color":"gray"
+    },
+    "hidden": false
+  },
+  "parent":"gm4:potion_infusers_create",
+  "criteria":{
+    "have_all_infused_food": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:carrot",
+            "count": 64,
+            "nbt": "{gm4_potion_infusers:{item:\"infused_carrot\"}}"
+          },
+          {
+            "item": "minecraft:potato",
+            "count": 64,
+            "nbt": "{gm4_potion_infusers:{item:\"infused_potato\"}}"
+          },
+          {
+            "item": "minecraft:beetroot",
+            "count": 64,
+            "nbt": "{gm4_potion_infusers:{item:\"infused_beetroot\"}}"
+          },
+          {
+            "item": "minecraft:melon_slice",
+            "count": 64,
+            "nbt": "{gm4_potion_infusers:{item:\"infused_melon_slice\"}}"
+          },
+          {
+            "item": "minecraft:sweet_berries",
+            "count": 64,
+            "nbt": "{gm4_potion_infusers:{item:\"infused_sweet_berries\"}}"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "values": [
+        "#load:gm4_potion_liquids",
+        "#load:gm4_custom_crafters",
+        "gm4_potion_infusers:load"
+    ]
+}

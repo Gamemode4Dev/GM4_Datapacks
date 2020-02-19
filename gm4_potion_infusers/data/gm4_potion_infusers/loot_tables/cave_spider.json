@@ -1,0 +1,84 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:string",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        },
+                        {
+                            "function": "looting_enchant",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "condition": "killed_by_player"
+                },
+                {
+                    "condition": "random_chance_with_looting",
+                    "chance": 0.02,
+                    "looting_multiplier": 0.01
+                }
+            ],
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:spider_eye",
+                    "weight": 1,
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{CustomModelData:1,Enchantments:[{}],gm4_potion_infusers:{item:\"spider_fang\"}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  "Spider Fang",
+                  {
+                    "translate": "item.gm4.spider_fang"
+                  }
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Careful, it's poisonous!",
+                    {
+                      "translate": "item.gm4.spider_fang.lore"
+                    }
+                  ],
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

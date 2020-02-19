@@ -1,0 +1,29 @@
+{
+  "display":{
+    "icon":{
+      "item":"emerald_block",
+      "nbt":"{CustomModelData:1}"
+    },
+    "title":{
+      "translate":"%1$s%3427655$s",
+      "with":[
+        "Fill 'em up with potions!",
+        {"translate": "advancement.gm4.potion_infusers.title"}
+      ]
+    },
+    "description":{
+      "translate":"%1$s%3427655$s",
+      "with":[
+        "Create a Potion Infuser",
+        {"translate":"advancement.gm4.potion_infusers.description"}
+      ],
+      "color":"gray"
+    }
+  },
+  "parent":"gm4:liquid_tanks_create",
+  "criteria":{
+    "create_infuser": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

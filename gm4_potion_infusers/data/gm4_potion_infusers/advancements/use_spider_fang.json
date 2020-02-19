@@ -1,0 +1,18 @@
+{
+  "criteria":{
+    "use_spider_fang":{
+      "trigger":"minecraft:player_hurt_entity",
+      "conditions":{
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:player",
+            "nbt": "{SelectedItem:{tag:{gm4_potion_infusers:{item:\"spider_fang\"}}}}"
+            }
+          }
+      }
+    }
+  },
+ "rewards":{
+   "function":"gm4_potion_infusers:items/spider_fang"
+ }
+}

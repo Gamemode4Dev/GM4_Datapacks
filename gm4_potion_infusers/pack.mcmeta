@@ -1,0 +1,26 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Potion Infusers",
+  "module_id":"potion_infusers",
+  "site_description":"Convert blocks with the help of potion tanks!",
+  "site_categories":[
+    "Liquid Tanks",
+    "Custom Crafting"
+  ],
+  "video_link":"",
+  "wiki_link":"https://wiki.gm4.co/wiki/Potion_Infusers",
+  "required_modules":[
+    "custom_crafters",
+    "liquid_tanks",
+    "potion_liquids"
+  ],
+  "recommended_modules":["liquid_minecarts"],
+  "credits":{
+    "Creator":[
+      ["BluePsychoRanger","https://twitter.com/BluPsychoRanger"]
+    ]
+  }
+}
