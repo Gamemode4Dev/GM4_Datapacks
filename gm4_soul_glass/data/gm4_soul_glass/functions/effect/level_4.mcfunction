@@ -10,4 +10,4 @@ execute if score @s gm4_sg_secondary matches 1 run effect give @a[dx=100,dy=356,
 execute if score @s gm4_sg_secondary matches 3 run effect give @a[dx=100,dy=356,dz=100] minecraft:mining_fatigue 17 1
 execute if score @s gm4_sg_secondary matches 5 run effect give @a[dx=100,dy=356,dz=100] minecraft:weakness 17 1
 execute if score @s gm4_sg_secondary matches 8 run effect give @a[dx=100,dy=356,dz=100] minecraft:slow_falling 17 1
-execute if score @s gm4_sg_secondary matches 10 run effect give @a[dx=100,dy=356,dz=100] minecraft:hunger 17 0
+execute if score @s gm4_sg_secondary matches 10 run effect give @a[dx=100,dy=356,dz=100] minecraft:poison 17 0
