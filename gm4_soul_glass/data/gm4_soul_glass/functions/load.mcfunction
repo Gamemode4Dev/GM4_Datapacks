@@ -3,5 +3,4 @@ execute unless score gm4 load matches 1 run data modify storage gm4:log queue ap
 
 execute if score gm4_soul_glass load matches 1 run function gm4_soul_glass:init
 execute unless score gm4_soul_glass load matches 1 run schedule clear gm4_soul_glass:main
-execute unless score gm4_soul_glass load matches 1 run schedule clear gm4_soul_glass:tick
 execute unless score gm4_soul_glass load matches 1 run schedule clear gm4_soul_glass:beacon_clock
