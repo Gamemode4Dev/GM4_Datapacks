@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "item": "minecraft:grass_block"
+      },
+      "feet": {
+        "nbt": "{gm4_boots_of_ostara:1b}"
+      }
+    }
+  }
+}
