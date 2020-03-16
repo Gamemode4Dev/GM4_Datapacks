@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "place_furnace": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:brown_stained_glass",
+	"item": {
+          "nbt": "{gm4_soul_glass:1b}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_soul_glass:place_soul_glass"
+  }
+}
