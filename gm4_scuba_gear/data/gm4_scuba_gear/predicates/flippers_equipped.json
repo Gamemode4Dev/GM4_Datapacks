@@ -1,0 +1,12 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "feet": {
+        "item": "minecraft:leather_boots",
+        "nbt": "{gm4_scuba_gear:{item:\"flippers\"}}"
+      }
+    }
+  }
+}
