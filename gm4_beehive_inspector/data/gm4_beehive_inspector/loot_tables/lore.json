@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [{"text":"Bees: ","color":"gold","italic":false},{"score":{"objective":"gm4_beehive_insp","name":"#bees"},"color":"yellow"}],
+                [{"text":"Honey: ","color":"gold","italic":false},{"nbt":"Item.tag.BlockStateTag.honey_level","entity":"@s","color":"yellow"}]
+              ],
+              "entity": "this",
+              "replace": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
