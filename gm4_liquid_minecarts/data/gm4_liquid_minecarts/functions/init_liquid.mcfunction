@@ -1,14 +1,8 @@
-#@s = empty liquid minecart next to a liquid tank pointed at it containing liquid
-#run from liquid_minecarts:try_to_unload
+#@s = empty liquid minecart next to a liquid tank pointed at it containing liquid, at tank location
+#run from liquid_minecarts:try_to_load
 
-data modify entity @s CustomName set from block ~ ~ ~ CustomName
-data modify entity @e[type=armor_stand,tag=gm4_liquid_minecart_display,limit=1,sort=nearest] HandItems[0] set from entity @e[type=armor_stand,tag=gm4_liquid_tank_display,limit=1,sort=nearest] ArmorItems[3]
-data modify entity @s Tags set from entity @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,sort=nearest] Tags
-tag @s remove gm4_lt_idle
-tag @s remove gm4_lt_drain
-tag @s remove gm4_lt_fill
-tag @s remove gm4_liquid_tank
-tag @s add gm4_liquid_minecart
+execute anchored eyes facing entity @s feet positioned ^ ^ ^1 as @e[type=armor_stand,limit=1,sort=nearest,distance=..1,tag=gm4_liquid_minecart_display] positioned ^ ^ ^-1 run function gm4_liquid_minecarts:copy_tank_data
+tag @s remove gm4_liquid_minecart_empty
 
 #set tank max based on 40% of hopper max
 scoreboard players operation @s gm4_lt_max = @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,sort=nearest] gm4_lt_max
