@@ -66,7 +66,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1,BlockEntityTag:{LootTable:\"sunken_treasure:treasure_chest\"}}"
+              "tag": "{CustomModelData:1,BlockEntityTag:{LootTable:\"gm4_sunken_treasure:treasure_chest\"}}"
             },
             {
               "function": "minecraft:set_name",
