@@ -1,0 +1,6 @@
+{
+    "values": [
+        "#load:gm4_custom_crafters",
+        "gm4_blast_furnaces:load"
+    ]
+}

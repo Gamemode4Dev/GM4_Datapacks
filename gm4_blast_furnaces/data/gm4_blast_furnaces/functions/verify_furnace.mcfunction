@@ -8,4 +8,4 @@ execute if entity @s[y_rotation=180] if block ~ ~ ~-1 furnace[facing=north] stor
 execute if entity @s[y_rotation=-90] if block ~1 ~ ~ furnace[facing=east] store result score @s gm4_bf_data run data get block ~1 ~ ~ CookTime
 
 # display ore
-execute if score @s gm4_bf_data matches 0.. run function blast_furnaces:check_ore
+execute if score @s gm4_bf_data matches 0.. run function gm4_blast_furnaces:check_ore
