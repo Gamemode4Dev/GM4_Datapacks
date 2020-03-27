@@ -1,4 +1,4 @@
-# @s - blast furnace if structure correct
+# @s - smeltery if structure correct
 # called by check_ore
 
 execute store result score @s gm4_bf_data run data get block ^ ^ ^1 CookTime

@@ -9,16 +9,16 @@
             "with": [
                 "Serious Smelter",
                 {
-                    "translate": "advancement.gm4.blast_furnaces.title"
+                    "translate": "advancement.gm4.smelteries.title"
                 }
             ]
         },
         "description": {
             "translate": "%1$s%3427655$s",
             "with": [
-                "Construct a Blast Furnace",
+                "Construct a Smeltery",
                 {
-                    "translate": "advancement.gm4.blast_furnaces.description"
+                    "translate": "advancement.gm4.smelteries.description"
                 }
             ],
             "color": "gray"

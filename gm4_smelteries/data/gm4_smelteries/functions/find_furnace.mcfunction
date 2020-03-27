@@ -1,5 +1,5 @@
-# blast furnace processes
-# @s - blast furnace that isn't pointing to a furnace
+# smeltery processes
+# @s - smeltery that isn't pointing to a furnace
 # called by process
 
 tag @s remove gm4_bf_has_furnace
