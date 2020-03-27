@@ -3,8 +3,8 @@
         "pack_format": 0,
         "description": "A Gamemode 4 Module"
     },
-    "Smelteries": "Smelteries",
-    "smelteries": "smelteries",
+    "module_name": "Smelteries",
+    "module_id": "smelteries",
     "site_description": "Double your ore output with this multi-block structure.",
     "site_categories": [
         "Custom Crafting"
