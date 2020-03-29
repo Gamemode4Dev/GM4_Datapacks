@@ -1,5 +1,5 @@
-# function loops on a 1-minute (1200t or 0.01666Hz) cycle
-schedule function gm4_podzol_rooting_soil:main 300t
+# function loops on a 30-second (600t or 0.5Hz) cycle
+schedule function gm4_podzol_rooting_soil:main 600t
 
 # query random tick speed
 execute store result score random_tick_speed gm4_podzol_data run gamerule randomTickSpeed
