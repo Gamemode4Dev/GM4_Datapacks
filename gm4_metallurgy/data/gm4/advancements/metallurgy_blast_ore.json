@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{item:\"ore\"}"
+            "nbt": "{gm4_metallurgy:{item:\"ore\"}}"
           }
         ]
       }
