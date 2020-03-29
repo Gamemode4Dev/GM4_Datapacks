@@ -1,6 +1,6 @@
 # @s = sapling item
 # at @s
-# called from gm4_podzol_rooting_soil:randomizer_uuid
+# called from gm4_podzol_rooting_soil:randomizer_loop
 
 # plant sapling
 execute if entity @s[tag=gm4_oak_sapling] run setblock ~ ~ ~ minecraft:oak_sapling destroy
