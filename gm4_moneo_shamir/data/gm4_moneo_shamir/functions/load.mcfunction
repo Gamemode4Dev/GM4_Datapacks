@@ -3,3 +3,4 @@ execute unless score gm4 load matches 1 run data modify storage gm4:log queue ap
 execute unless score gm4_metallurgy load matches 1 run data modify storage gm4:log queue append value {type:"missing",module:"Moneo Shamir",require:"Metallurgy"}
 
 execute if score gm4_moneo_shamir load matches 1 run function gm4_moneo_shamir:init
+execute unless score gm4_moneo_shamir load matches 1 run schedule clear gm4_moneo_shamir:main

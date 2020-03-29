@@ -1,8 +1,6 @@
 #run from main
 #@s = players holding a moneo tool
 
-tag @s add gm4_has_moneo
-
 scoreboard players set tool_current_damage gm4_ml_data 0
 execute store result score tool_current_damage gm4_ml_data run data get entity @s SelectedItem.tag.Damage
 
