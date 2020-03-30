@@ -1,6 +1,6 @@
 # @s = sapling item on podzol and within air-like block that has passed the randomizer
 # at @s
-# called from gm4_podzol_rooting_soil:randomizer_loop
+# called from gm4_podzol_rooting_soil:randomizer and gm4_podzol_rooting_soil:plant/normal
 
 # plant sapling
 execute if entity @s[tag=gm4_oak_sapling] run setblock ~ ~ ~ minecraft:oak_sapling destroy
