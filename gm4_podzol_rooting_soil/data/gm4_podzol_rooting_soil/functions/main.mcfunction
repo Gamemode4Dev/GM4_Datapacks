@@ -1,4 +1,4 @@
-# function loops on a 30-second (600t or 0.5Hz) cycle
+# function loops on a 30-second (600t or 0.0333Hz) cycle
 schedule function gm4_podzol_rooting_soil:main 600t
 
 # query random tick speed

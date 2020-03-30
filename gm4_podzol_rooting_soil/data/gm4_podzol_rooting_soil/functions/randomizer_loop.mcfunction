@@ -13,9 +13,8 @@ scoreboard players operation compared_value gm4_podzol_data *= random_tick_speed
 # compare
 execute if score compared_value gm4_podzol_data >= last_uuid gm4_podzol_data if entity @s[nbt={Item:{Count:1b}}] at @s if block ~ ~-1 ~ minecraft:podzol if block ~ ~ ~ #gm4_podzol_rooting_soil:air run function gm4_podzol_rooting_soil:plant
 
-#force plant if about to despawn
-execute store result score age gm4_podzol_data run data get entity @s Age
-execute if score age gm4_podzol_data matches 5399.. if entity @s[nbt={Item:{Count:1b}}] at @s if block ~ ~-1 ~ minecraft:podzol if block ~ ~ ~ #gm4_podzol_rooting_soil:air run function gm4_podzol_rooting_soil:plant
+# force plant if about to despawn and if the previous randomizer test failed
+execute unless score compared_value gm4_podzol_data >= last_uuid gm4_podzol_data run function gm4_podzol_rooting_soil:force_plant
 
 # clean up
 scoreboard players operation last_uuid gm4_podzol_data += current_uuid gm4_podzol_data
