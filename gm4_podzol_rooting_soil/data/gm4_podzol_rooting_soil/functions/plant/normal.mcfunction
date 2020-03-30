@@ -15,4 +15,9 @@ execute align xyz positioned ~.5 ~.5 ~.5 run particle minecraft:happy_villager ~
 playsound minecraft:block.chorus_flower.grow block @a[distance=..6] ~ ~ ~ 0.2 0.8
 
 # kill item entity
-kill @s
+execute store result score count gm4_podzol_data run data get entity @s Item.Count
+execute if score count gm4_podzol_data matches 1 run kill @s
+execute if score count gm4_podzol_data matches 2.. store result entity @s Item.Count byte 1 run scoreboard players remove count gm4_podzol_data 1
+
+# reset fake players
+scoreboard players reset count gm4_podzol_data
