@@ -11,3 +11,6 @@ effect give @s[type=spider] jump_boost 4 1
 effect give @s[type=zombie] speed 4 1
 execute at @s[type=skeleton] run effect give @a[gamemode=!spectator,distance=..7] weakness 7 0
 execute at @s[type=shulker] run effect give @a[gamemode=!spectator,distance=..7] blindness 3 9
+
+# display particle effect
+execute at @s[type=#gm4_enderman_support_class:affected,type=!player] run particle portal ~ ~.5 ~ 0.2 .5 0.2 .5 10
