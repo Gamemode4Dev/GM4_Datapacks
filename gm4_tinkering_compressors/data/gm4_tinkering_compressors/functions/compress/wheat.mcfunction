@@ -16,7 +16,7 @@ scoreboard players operation #remainder gm4_tc_data %= #9stack gm4_tc_data
 
 execute if score #stack gm4_tc_data matches 1.. at @s run summon item ~ ~ ~ {Item:{id:"minecraft:hay_block",Count:1b},Tags:["gm4_tc_stack","gm4_tc_locked"]}
 execute if score #stack gm4_tc_data matches 1.. store result entity @e[type=item,tag=gm4_tc_stack,limit=1] Item.Count byte 1 run scoreboard players get #stack gm4_tc_data
-execute if score #stack gm4_tc_data matches 1.. run playsound minecraft:block.piston.contract block @a[distance=..5] ~ ~ ~
+execute if score #stack gm4_tc_data matches 1.. run playsound block.piston.contract block @a[distance=..5] ~ ~ ~
 tag @e[type=item,tag=gm4_tc_stack] remove gm4_tc_stack
 
 execute if score #remainder gm4_tc_data matches 1.. store result entity @s Item.Count byte 1 run scoreboard players get #remainder gm4_tc_data

@@ -7,5 +7,5 @@ execute store result block ~ ~-1 ~ Secondary int 1 run scoreboard players get @s
 scoreboard players reset @s gm4_sg_primary
 scoreboard players reset @s gm4_sg_secondary
 
-playsound minecraft:block.beacon.power_select block @a[distance=..10]
-particle minecraft:totem_of_undying ~ ~-1 ~ 0.5 0.5 0.5 .1 40 force
+playsound block.beacon.power_select block @a[distance=..10]
+particle totem_of_undying ~ ~-1 ~ 0.5 0.5 0.5 .1 40 force

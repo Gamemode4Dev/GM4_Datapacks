@@ -32,5 +32,5 @@ execute if entity @e[tag=gm4_rl_set_item_data,distance=..0.1] run kill @s
 execute as @e[tag=gm4_rl_set_item_data,distance=..0.1] at @s run tp ~ ~1 ~
 execute positioned ~ ~1 ~ run tag @e[tag=gm4_rl_set_item_data,distance=..0.1] remove gm4_rl_set_item_data
 
-playsound minecraft:block.beacon.power_select block @a[distance=..6] ~ ~ ~ 1 1.8
-execute align xyz run particle minecraft:explosion ~.5 ~.5 ~.5 0 0 0 0 0
+playsound block.beacon.power_select block @a[distance=..6] ~ ~ ~ 1 1.8
+execute align xyz run particle explosion ~.5 ~.5 ~.5 0 0 0 0 0

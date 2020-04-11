@@ -18,4 +18,4 @@ execute as @e[type=armor_stand,tag=gm4_rl_set_stand_data,distance=..1] at @s run
 
 data modify entity @e[type=armor_stand,tag=gm4_rl_set_stand_data,limit=1,distance=..1.2,sort=nearest] Tags set from entity @s SelectedItem.tag.gm4_relocation.data.Tags
 
-playsound minecraft:block.beacon.activate block @a[distance=..6] ~ ~ ~ 1 2
+playsound block.beacon.activate block @a[distance=..6] ~ ~ ~ 1 2

@@ -12,4 +12,4 @@ execute unless entity @s[gamemode=creative] run replaceitem entity @s[nbt={Inven
 function gm4_crossbow_cartridges:projectile/arrow_motion
 
 #potion throw sound
-playsound minecraft:entity.lingering_potion.throw player @a[distance=..15] ~ ~ ~ .5 0
+playsound entity.lingering_potion.throw player @a[distance=..15] ~ ~ ~ .5 0

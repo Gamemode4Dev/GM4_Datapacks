@@ -9,5 +9,5 @@ data merge entity @s {Motion:[0.0,0.0,0.0],PushX:0.0,PushZ:0.0}
 scoreboard players set @s gm4_bore_data -1
 
 # sound effect and particle effect
-playsound minecraft:block.redstone_torch.burnout neutral @a[distance=..8] ~ ~ ~ 0.5 0.01 0
-particle minecraft:poof ~ ~.3 ~ 0.1 0.2 0.1 0.01 12
+playsound block.redstone_torch.burnout neutral @a[distance=..8] ~ ~ ~ 0.5 0.01 0
+particle poof ~ ~.3 ~ 0.1 0.2 0.1 0.01 12

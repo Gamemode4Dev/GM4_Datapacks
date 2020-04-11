@@ -12,7 +12,7 @@ execute if block ~ ~ ~ #gm4_crossbow_cartridges:replaceable run function gm4_cro
 execute unless block ~ ~ ~ #gm4_crossbow_cartridges:torch run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:torch",Count:1b}}
 
 #place block sound
-playsound minecraft:block.wood.place block @a[distance=..15]
+playsound block.wood.place block @a[distance=..15]
 
 #kill arrow
 kill @s

@@ -15,4 +15,4 @@ execute unless entity @s[gamemode=creative] run clear @s minecraft:fire_charge 1
 function gm4_crossbow_cartridges:projectile/arrow_motion
 
 #firecharge sound
-playsound minecraft:item.firecharge.use player @a[distance=..15]
+playsound item.firecharge.use player @a[distance=..15]

@@ -17,8 +17,8 @@ kill @e[type=item,tag=!gm4_zc_new_wormhole_bottle,dx=0,dy=0,dz=0]
 tag @e[type=item,dx=0,dy=0,dz=0,tag=gm4_zc_new_wormhole_bottle,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"wormhole_bottle"}}}},limit=1] remove gm4_zc_new_wormhole_bottle
 
 #cosmetics
-execute at @s run particle minecraft:witch ~ ~.3 ~ .1 .1 .1 1 17
-execute at @s run playsound minecraft:entity.ender_eye.death master @a[distance=..8] ~ ~ ~ 1 .2
+execute at @s run particle witch ~ ~.3 ~ .1 .1 .1 1 17
+execute at @s run playsound entity.ender_eye.death master @a[distance=..8] ~ ~ ~ 1 .2
 
 #add oversized stacks to cauldron fullness to summon vexes
 scoreboard players operation @s gm4_zc_fullness += raw_chorus_fullness gm4_zc_chorus

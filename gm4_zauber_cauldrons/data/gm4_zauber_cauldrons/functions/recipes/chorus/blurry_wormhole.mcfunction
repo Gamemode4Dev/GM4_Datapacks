@@ -36,8 +36,8 @@ execute if score raw_chorus_fullness gm4_zc_chorus matches 1.. run scoreboard pl
 execute if score popped_chorus_fullness gm4_zc_chorus matches 1.. run scoreboard players operation @s gm4_zc_fullness += popped_chorus_fullness gm4_zc_chorus
 
 #cosmetics
-execute at @s run particle minecraft:witch ~ ~.3 ~ .1 .1 .1 1 7
-execute at @s run playsound minecraft:entity.ender_eye.death master @a[distance=..8] ~ ~ ~ 1 .6
+execute at @s run particle witch ~ ~.3 ~ .1 .1 .1 1 7
+execute at @s run playsound entity.ender_eye.death master @a[distance=..8] ~ ~ ~ 1 .6
 
 scoreboard players set recipe_success gm4_zc_data 1
 

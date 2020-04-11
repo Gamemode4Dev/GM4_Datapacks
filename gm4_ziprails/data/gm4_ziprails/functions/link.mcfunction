@@ -19,4 +19,4 @@ execute if block ~ ~1 ~ tripwire_hook[facing=east] run tag @s add gm4_zipping_ea
 execute if block ~ ~1 ~ tripwire_hook[facing=west] run tag @s add gm4_zipping_west
 
 #sound effect
-playsound minecraft:entity.item_frame.place neutral @p[distance=..1,limit=1]
+playsound entity.item_frame.place neutral @p[distance=..1,limit=1]

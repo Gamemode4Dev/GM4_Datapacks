@@ -12,7 +12,7 @@ replaceitem entity @s[gamemode=!creative] weapon.offhand minecraft:water_bucket
 function gm4_crossbow_cartridges:projectile/arrow_motion
 
 #fish flop sound
-playsound minecraft:entity.tropical_fish.flop player @a[distance=..15] ~ ~ ~ 2 .5
+playsound entity.tropical_fish.flop player @a[distance=..15] ~ ~ ~ 2 .5
 
 #give player advancement for shooting a fish
 advancement grant @s only gm4:crossbow_cartridges_fish

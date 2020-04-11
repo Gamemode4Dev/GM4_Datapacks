@@ -2,7 +2,7 @@
 # run from advancement eat_beet
 
 # effect with regen
-effect give @s minecraft:regeneration 3 0
+effect give @s regeneration 3 0
 
 # revoke advancement
 advancement revoke @s only gm4_ambrosia:eat_beet

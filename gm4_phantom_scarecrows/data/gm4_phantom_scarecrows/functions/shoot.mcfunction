@@ -3,5 +3,5 @@
 # ran from main
 
 summon area_effect_cloud ~ ~ ~ {Tags:["gm4_phantom_scarecrow_rocket"],Duration:50}
-playsound minecraft:entity.firework_rocket.launch block @a ~ ~ ~ 2 1
+playsound entity.firework_rocket.launch block @a ~ ~ ~ 2 1
 scoreboard players set @s gm4_ps_time 0

@@ -14,4 +14,4 @@ scoreboard players operation @s gm4_lt_value += @s gm4_lm_data
 scoreboard players operation @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_liquid_tank] gm4_lt_buffer -= @s gm4_lm_data
 #update display
 function gm4_liquid_minecarts:liquid_value_update
-playsound minecraft:block.brewing_stand.brew block @a
+playsound block.brewing_stand.brew block @a

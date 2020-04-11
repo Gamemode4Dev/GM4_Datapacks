@@ -3,7 +3,7 @@
 #run from musical_shamir:songs/mellohi_end
 
 #start song
-execute if score @s gm4_note_time matches 60 run playsound minecraft:music_disc.chirp player @s ~ 10000 ~ 300000000 2
+execute if score @s gm4_note_time matches 60 run playsound music_disc.chirp player @s ~ 10000 ~ 300000000 2
 
 #effects
 execute if score @s gm4_note_time matches 60 run effect give @s speed 91 2

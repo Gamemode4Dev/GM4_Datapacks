@@ -8,7 +8,7 @@ execute if score @s gm4_ef_timer matches ..0 unless entity @s[tag=gm4_ef_has_fis
 execute if score @s gm4_ef_timer matches ..0 unless entity @s[tag=gm4_ef_has_fish] run tag @s add gm4_ef_has_fish
 
 #particle
-execute positioned ~ ~ ~ at @e[type=minecraft:fishing_bobber,limit=1,sort=nearest,distance=..0.0001] run particle minecraft:end_rod ~ ~ ~ 0 0 0 .02 1 force
+execute positioned ~ ~ ~ at @e[type=minecraft:fishing_bobber,limit=1,sort=nearest,distance=..0.0001] run particle end_rod ~ ~ ~ 0 0 0 .02 1 force
 
 scoreboard players add @s gm4_ef_up_bait 1
 execute if score @s gm4_ef_up_bait matches 2.. run function gm4_end_fishing:cast_rod/update_bait

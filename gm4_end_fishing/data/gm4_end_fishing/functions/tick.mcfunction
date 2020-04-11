@@ -14,7 +14,7 @@ execute as @e[type=armor_stand,tag=gm4_ef_has_fish] at @s unless score @s gm4_ef
 execute if score durability gm4_ef_data matches 1 as @a[tag=gm4_ef_durability] run function gm4_end_fishing:durability/check
 
 #particle
-execute as @e[type=area_effect_cloud,tag=gm4_ef_particle] at @s run particle minecraft:dragon_breath ~ ~ ~ 0 0 0 0.02 1
+execute as @e[type=area_effect_cloud,tag=gm4_ef_particle] at @s run particle dragon_breath ~ ~ ~ 0 0 0 0.02 1
 execute as @e[type=area_effect_cloud,tag=gm4_ef_particle] at @s run tp @s ^ ^ ^0.1
 
 schedule function gm4_end_fishing:tick 1t

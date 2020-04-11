@@ -6,7 +6,7 @@
 scoreboard players add @s gm4_note_time 1
 
 #start song
-execute if score @s gm4_note_time matches 1 run playsound minecraft:music_disc.mellohi player @s ~ 10000 ~ 300000000 2
+execute if score @s gm4_note_time matches 1 run playsound music_disc.mellohi player @s ~ 10000 ~ 300000000 2
 
 #effects
 execute if score @s gm4_note_time matches 1 run effect give @s slowness 48 0

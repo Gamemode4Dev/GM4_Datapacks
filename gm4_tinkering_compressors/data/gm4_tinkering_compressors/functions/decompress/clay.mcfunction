@@ -26,6 +26,6 @@ execute if score #remainder gm4_tc_data matches 1.. run summon item ~ ~ ~ {Item:
 execute if score #remainder gm4_tc_data matches 1.. store result entity @e[type=item,tag=gm4_tc_remainder,limit=1] Item.Count byte 1 run scoreboard players get #remainder gm4_tc_data
 tag @e[type=item,tag=gm4_tc_remainder] remove gm4_tc_remainder
 
-execute if score #items gm4_tc_data matches 1.. run playsound minecraft:block.piston.extend block @a[distance=..5] ~ ~ ~
+execute if score #items gm4_tc_data matches 1.. run playsound block.piston.extend block @a[distance=..5] ~ ~ ~
 
 kill @s

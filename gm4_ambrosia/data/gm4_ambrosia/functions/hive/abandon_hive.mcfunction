@@ -9,7 +9,7 @@ kill @s
 data merge block ~ ~ ~ {CustomName:'{"translate":"%1$s","with":["Abandoned Beehive","block.gm4.abandoned_beehive"]}'}
 
 # particle
-particle minecraft:block barrel ~ ~-2 ~ 0.3 0.3 0.3 0.5 13
+particle block barrel ~ ~-2 ~ 0.3 0.3 0.3 0.5 13
 
 # sound
-playsound minecraft:block.wood.break block @a[distance=..16] ~ ~ ~ 0.5 0.4 0
+playsound block.wood.break block @a[distance=..16] ~ ~ ~ 0.5 0.4 0

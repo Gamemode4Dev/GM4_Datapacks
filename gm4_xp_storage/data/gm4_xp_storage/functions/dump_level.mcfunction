@@ -9,4 +9,4 @@ execute if score @s gm4_xp_calc matches 1.. run function gm4_xp_storage:xp_depos
 scoreboard players reset loop_counter gm4_xp_calc
 
 title @s actionbar [{"translate":"%1$s%3427655$s","with":["Stored Experience: ",{"translate":"text.gm4.xp_storage.stored_experience"}],"color":"green"},{"translate":"%1$s%3427655$s","with":[[{"score":{"name":"@s","objective":"gm4_stored_xp"}}," Points"],{"translate":"text.gm4.xp_storage.stored_experience.points","with":[{"score":{"name":"@s","objective":"gm4_stored_xp"}}]}],"color":"dark_green"}]
-playsound minecraft:entity.experience_orb.pickup block @s
+playsound entity.experience_orb.pickup block @s

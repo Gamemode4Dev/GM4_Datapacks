@@ -30,6 +30,6 @@ execute if entity @s[nbt={Item:{id:"minecraft:iron_hoe"}}] run function gm4_disa
 execute if entity @s[nbt={Item:{id:"minecraft:shears"}}] run function gm4_disassemblers:items/shears
 execute if entity @s[nbt={Item:{id:"minecraft:flint_and_steel"}}] run function gm4_disassemblers:items/flint_and_steel
 
-execute if score result_items gm4_disassembler matches 0 run playsound minecraft:block.anvil.place master @a[distance=..5] ~ ~ ~ 3 0
-execute if score result_items gm4_disassembler matches 1.. run playsound minecraft:block.anvil.use master @a[distance=..5] ~ ~ ~ 3 2
+execute if score result_items gm4_disassembler matches 0 run playsound block.anvil.place master @a[distance=..5] ~ ~ ~ 3 0
+execute if score result_items gm4_disassembler matches 1.. run playsound block.anvil.use master @a[distance=..5] ~ ~ ~ 3 2
 execute if score result_items gm4_disassembler matches 0.. run kill @s

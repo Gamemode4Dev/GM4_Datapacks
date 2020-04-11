@@ -8,8 +8,8 @@ scoreboard players set @e[type=area_effect_cloud,distance=..1,tag=gm4_beehive] g
 kill @s
 
 # particle and sound
-particle minecraft:block yellow_concrete_powder ~ ~ ~ 0.3 0 0.3 0.5 13
-playsound minecraft:block.barrel.close block @a ~ ~ ~ 1 1.5
+particle block yellow_concrete_powder ~ ~ ~ 0.3 0 0.3 0.5 13
+playsound block.barrel.close block @a ~ ~ ~ 1 1.5
 
 # summon a single ambient bee as feedback
 function gm4_ambrosia:beehavior/spawn_roaming_bee

@@ -17,6 +17,6 @@ tag @s remove gm4_liquid_minecart
 tag @s add gm4_lm_to_lt
 data modify entity @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,sort=nearest,distance=..0.5] Tags set from entity @s Tags
 data merge entity @s {Tags:["gm4_liquid_minecart","gm4_liquid_minecart_empty"]}
-playsound minecraft:block.brewing_stand.brew block @a ~ ~ ~ 1.0 1.5
+playsound block.brewing_stand.brew block @a ~ ~ ~ 1.0 1.5
 execute as @e[type=armor_stand,tag=gm4_lm_to_lt,limit=1,sort=nearest,distance=..0.5] run function gm4_liquid_minecarts:minecart_to_tank_init
 function gm4_liquid_minecarts:liquid_value_update

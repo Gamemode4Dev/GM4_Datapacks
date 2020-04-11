@@ -6,4 +6,4 @@ execute unless block ~ ~ ~ brown_stained_glass unless block ~ ~ ~ moving_piston 
 execute if score @s gm4_sg_primary matches 1.. unless block ~ ~ ~ brown_stained_glass if block ~ ~-1 ~ beacon run function gm4_soul_glass:effect/revert_effects
 execute if block ~ ~ ~ brown_stained_glass unless block ~ ~-1 ~ beacon run function gm4_soul_glass:destroy
 
-particle minecraft:smoke ~ ~ ~ 0.3 0.3 0.3 0 15 normal
+particle smoke ~ ~ ~ 0.3 0.3 0.3 0 15 normal

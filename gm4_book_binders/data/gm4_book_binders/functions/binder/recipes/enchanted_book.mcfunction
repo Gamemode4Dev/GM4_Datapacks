@@ -9,5 +9,5 @@ function gm4_book_binders:binder/recipes/debinding
 data remove entity @s HandItems[0]
 
 # sounds and visuals
-playsound minecraft:block.beehive.shear master @a ~ ~ ~ 0.4 0.1
+playsound block.beehive.shear master @a ~ ~ ~ 0.4 0.1
 particle item enchanted_book ^-.15 ^1.05 ^.05 .1 .1 .1 .07 6

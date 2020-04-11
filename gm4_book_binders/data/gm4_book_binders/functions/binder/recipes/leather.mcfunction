@@ -16,5 +16,5 @@ tag @s remove gm4_book_binder_with_page
 tag @e[type=item,distance=..0.3] remove gm4_empty_enchanted_book
 
 # sounds and visuals
-playsound minecraft:item.armor.equip_leather block @a ~ ~ ~ 0.4 1.5
+playsound item.armor.equip_leather block @a ~ ~ ~ 0.4 1.5
 particle crit ^-.15 ^1.05 ^.05 .1 0 .1 .1 8

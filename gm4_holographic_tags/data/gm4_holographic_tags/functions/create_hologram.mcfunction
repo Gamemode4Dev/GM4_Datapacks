@@ -6,7 +6,7 @@ data modify entity @e[type=area_effect_cloud,tag=gm4_hologram,limit=1,sort=neare
 data modify entity @e[type=area_effect_cloud,tag=gm4_hologram,limit=1,sort=nearest,distance=..0.1] Rotation set from entity @s Rotation
 execute if block ^ ^ ^-0.75 #minecraft:wool as @e[type=area_effect_cloud,tag=gm4_hologram,limit=1,sort=nearest,distance=..0.1] run function gm4_holographic_tags:set_color
 advancement grant @a[distance=..4,gamemode=!spectator] only gm4:holographic_tags
-playsound minecraft:entity.item_frame.remove_item block @a
-particle minecraft:block stripped_acacia_log ~ ~ ~ .2 .2 .2 .1 10
+playsound entity.item_frame.remove_item block @a
+particle block stripped_acacia_log ~ ~ ~ .2 .2 .2 .1 10
 summon item ~ ~ ~ {Item:{id:"minecraft:item_frame",Count:1b},PickupDelay:10s,Motion:[0.0,0.25,0.0]}
 kill @s

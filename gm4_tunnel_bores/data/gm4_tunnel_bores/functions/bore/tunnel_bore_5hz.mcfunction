@@ -12,7 +12,7 @@ execute if score slow_clock gm4_bore_data matches 0 if score main_clock gm4_bore
 function gm4_tunnel_bores:bore/direction/update_direction
 
 # DEBUG PARTICLE. ENABLE TO DEBUG CART FACING.
-#execute unless score @s gm4_bore_data matches -1 at @s run particle minecraft:flame ^ ^ ^1 0 0 0 0 1 force
+#execute unless score @s gm4_bore_data matches -1 at @s run particle flame ^ ^ ^1 0 0 0 0 1 force
 
 # reassign rotation if cart is ontop of rail (heading =|= -1)
 execute unless score @s gm4_bore_data matches -1 at @s run function gm4_tunnel_bores:bore/check_cart_environment
