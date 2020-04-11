@@ -8,7 +8,7 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Tearing Up!",
-        {"translate": "advancement.gm4.book_binders.debind"}
+        {"translate": "advancement.gm4.book_binders_debind.title"}
       ]
     },
     "description": {
