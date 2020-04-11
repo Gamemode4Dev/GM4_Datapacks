@@ -4,7 +4,7 @@
 #summon display stand
 summon armor_stand ~ ~-.45 ~ {CustomName:"\"gm4_liquid_tank_display\"",Tags:["gm4_no_edit","gm4_liquid_tank_display","gm4_lm_needs_texture"],NoGravity:1,Marker:1,Invisible:1,Invulnerable:1,Small:1,DisabledSlots:2039583,Fire:20000}
 data modify entity @e[type=armor_stand,tag=gm4_lm_needs_texture,limit=1,sort=nearest] ArmorItems[3] set from entity @s Passengers[0].ArmorItems[0].tag.gm4_liquid_minecarts.tank.texture
-data modify entity @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,sort=nearest] ArmorItems[3].tag.gm4_liquid_tanks.liquid_tag set from entity @s Passengers[0].ArmorItems[0].tag.gm4_liquid_minecarts.liquid_tag
+data modify entity @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,sort=nearest,distance=..0.5] ArmorItems[3].tag.gm4_liquid_tanks.liquid_tag set from entity @s Passengers[0].ArmorItems[0].tag.gm4_liquid_minecarts.liquid_tag
 tag @e[type=armor_stand] remove gm4_lm_needs_texture
 
 #setup tank data
@@ -20,7 +20,7 @@ tag @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,sort=nearest,distance=..0.5]
 
 #load all cart liquid into tank
 scoreboard players operation @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,sort=nearest,distance=..0.5] gm4_lt_value = @s gm4_lt_value
-execute as @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_liquid_tank] run function gm4_liquid_tanks:liquid_value_update
+execute as @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_liquid_tank,distance=..0.5] run function gm4_liquid_tanks:liquid_value_update
 scoreboard players set @s gm4_lt_value 0
 tag @s add gm4_liquid_minecart_empty
 execute as @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_liquid_minecart_display] run function gm4_liquid_minecarts:set_empty_data
