@@ -6,7 +6,7 @@
 
 scoreboard players remove @s gm4_ml_heat 1
 execute if block ~ ~1 ~ lava run scoreboard players add @s gm4_ml_heat 3
-execute unless block ~ ~ ~ #minecraft:sand run function gm4_metallurgy:casting/destroy_mould
+execute unless block ~ ~ ~ #sand run function gm4_metallurgy:casting/destroy_mould
 execute unless score @s gm4_ml_heat matches 1..89 run function gm4_metallurgy:casting/destroy_mould
 
 #add metals if player desires to do so

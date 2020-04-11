@@ -4,7 +4,7 @@
 
 # mine tunnel use fill to circumvent MC-163286
 execute positioned ^1 ^ ^1 unless block ~ ~ ~ #gm4_tunnel_bores:unbreakable run fill ~ ~ ~ ~ ~ ~ air destroy
-execute positioned ^ ^ ^1 unless block ~ ~ ~ #minecraft:rails unless block ~ ~ ~ #gm4_tunnel_bores:unbreakable run fill ~ ~ ~ ~ ~ ~ air destroy
+execute positioned ^ ^ ^1 unless block ~ ~ ~ #rails unless block ~ ~ ~ #gm4_tunnel_bores:unbreakable run fill ~ ~ ~ ~ ~ ~ air destroy
 execute positioned ^-1 ^ ^1 unless block ~ ~ ~ #gm4_tunnel_bores:unbreakable run fill ~ ~ ~ ~ ~ ~ air destroy
 execute positioned ^1 ^1 ^1 unless block ~ ~ ~ #gm4_tunnel_bores:unbreakable run fill ~ ~ ~ ~ ~ ~ air destroy
 execute positioned ^ ^1 ^1 unless block ~ ~ ~ #gm4_tunnel_bores:unbreakable run fill ~ ~ ~ ~ ~ ~ air destroy

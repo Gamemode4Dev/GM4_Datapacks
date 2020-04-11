@@ -6,9 +6,9 @@
 execute if entity @s[tag=!gm4_linked] if block ~ ~1 ~ tripwire_hook[attached=true] run function gm4_ziprails:link
 
 #teleport carts to rail-trigger height
-execute if entity @s[tag=!gm4_taut_link,tag=gm4_linked] unless block ~ ~ ~ #minecraft:rails align y run teleport @s ~ ~.36250001192093 ~
-execute if entity @s[tag=gm4_linked] unless block ~ ~ ~ #minecraft:rails run tag @s add gm4_taut_link
-execute if block ~ ~ ~ #minecraft:rails run tag @s remove gm4_taut_link
+execute if entity @s[tag=!gm4_taut_link,tag=gm4_linked] unless block ~ ~ ~ #rails align y run teleport @s ~ ~.36250001192093 ~
+execute if entity @s[tag=gm4_linked] unless block ~ ~ ~ #rails run tag @s add gm4_taut_link
+execute if block ~ ~ ~ #rails run tag @s remove gm4_taut_link
 
 execute if entity @s[tag=!gm4_taut_link] if block ~ ~1 ~ tripwire_hook[attached=true] run function gm4_ziprails:link
 

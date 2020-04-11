@@ -9,7 +9,7 @@ execute as @e[type=vex,tag=gm4_roaming_bee] run function gm4_ambrosia:beehavior/
 
 # wax smooshing
 scoreboard players reset found_item_on_anvil gm4_bee_data
-execute as @e[type=item,nbt={Item:{tag:{gm4_ambrosia:{item:"beeswax"}}}}] at @s if block ~ ~-1 ~ #minecraft:anvil run function gm4_ambrosia:beeswax/item_on_anvil
+execute as @e[type=item,nbt={Item:{tag:{gm4_ambrosia:{item:"beeswax"}}}}] at @s if block ~ ~-1 ~ #anvil run function gm4_ambrosia:beeswax/item_on_anvil
 
 # repair broken skulls
 function gm4_ambrosia:hive/repair_skulls

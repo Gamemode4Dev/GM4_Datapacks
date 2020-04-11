@@ -9,8 +9,8 @@ scoreboard players operation previous_direction gm4_bore_data = @s gm4_bore_data
 scoreboard players set @s gm4_bore_data -1
 
 # check rail facing to determine orientation
-execute at @s if block ~ ~ ~ #minecraft:rails[shape=east_west] run function gm4_tunnel_bores:bore/direction/store_push_east_west
-execute at @s if block ~ ~ ~ #minecraft:rails[shape=north_south] run function gm4_tunnel_bores:bore/direction/store_push_north_south
+execute at @s if block ~ ~ ~ #rails[shape=east_west] run function gm4_tunnel_bores:bore/direction/store_push_east_west
+execute at @s if block ~ ~ ~ #rails[shape=north_south] run function gm4_tunnel_bores:bore/direction/store_push_north_south
 
 
 # update rotation vector

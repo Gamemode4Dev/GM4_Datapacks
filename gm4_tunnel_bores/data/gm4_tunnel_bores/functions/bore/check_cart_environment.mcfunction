@@ -1,4 +1,4 @@
-# @s = tunnel bores on top of #minecraft:rails
+# @s = tunnel bores on top of #rails
 # at @s
 # called by gm4_tunnel_bores:bore/tunnel_bore_5hz
 
