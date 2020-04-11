@@ -1,3 +1,3 @@
-execute if entity @s[tag=!gm4_in_water,gamemode=!spectator,nbt={Inventory:[{Slot:103b,tag:{gm4_scuba_gear:{item:"helmet"}}},{Slot:102b,tag:{gm4_scuba_gear:{item:"tank"}}}]}] at @s if block ~ ~1 ~ water run function gm4_scuba_gear:breathe
-execute if entity @s[tag=!gm4_in_water,gamemode=!spectator,nbt={Inventory:[{Slot:103b,tag:{gm4_scuba_gear:{item:"helmet"}}},{Slot:102b,tag:{gm4_scuba_gear:{item:"tank"}}}]}] at @s if block ~ ~1 ~ #gm4_scuba_gear:water_loggable[waterlogged=true] run function gm4_scuba_gear:breathe
-effect give @s[scores={gm4_sg_swim=1..},gamemode=!spectator,nbt={Inventory:[{Slot:100b,tag:{gm4_scuba_gear:{item:"flippers"}}}]}] dolphins_grace 3 0 true
+execute if entity @s[tag=!gm4_in_water,predicate=gm4_scuba_gear:tank_equipped] at @s if block ~ ~1 ~ water run function gm4_scuba_gear:breathe
+execute if entity @s[tag=!gm4_in_water,predicate=gm4_scuba_gear:tank_equipped] at @s if block ~ ~1 ~ #gm4_scuba_gear:water_loggable[waterlogged=true] run function gm4_scuba_gear:breathe
+effect give @s[scores={gm4_sg_swim=1..},predicate=gm4_scuba_gear:flippers_equipped] dolphins_grace 3 0 true

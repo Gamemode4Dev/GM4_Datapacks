@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "piston",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Isn't it \"Groundbreaking\"?",
+        {"translate": "advancement.gm4.tunnel_bores.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Obtain a Minecart with Piston",
+        {"translate": "advancement.gm4.tunnel_bores.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

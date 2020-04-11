@@ -7,7 +7,7 @@
 #treasureType = 1 -> item treasure
 #treasureType = 2 -> squid entity
 #treasureType = 3 -> guardian entity
-execute store result score treasureType gm4_st_random run loot spawn ~ -1024 ~ fish sunken_treasure:function/treasure_type ~ 0 ~ mainhand
+execute store result score treasureType gm4_st_random run loot spawn ~ -1024 ~ fish gm4_sunken_treasure:function/treasure_type ~ 0 ~ mainhand
 
 #spawn treasure based on treasureType
 execute if score treasureType gm4_st_random matches 1 unless score scuba_gear gm4_modules matches 1.. run loot spawn ~ ~ ~ loot gm4_sunken_treasure:item_treasure

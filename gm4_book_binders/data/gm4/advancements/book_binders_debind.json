@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "paper",
+      "nbt": "{CustomModelData:1,Enchantments:[{id:\"minecraft:mending\",lvl:1}]}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Tearing Up!",
+        {"translate": "advancement.gm4.book_binders.debind"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Get your first enchanted page",
+        {"translate": "advancement.gm4.book_binders_debind.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:book_binders",
+  "criteria": {
+    "gm4_book_binders_debind": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
