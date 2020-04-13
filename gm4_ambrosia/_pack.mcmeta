@@ -1,35 +1,45 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "A Gamemode 4 Module",
-        {"translate": "pack.gm4.description"}
-      ]
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Ambrosia",
+    "module_id": "ambrosia",
+    "site_description": "To bee or not to bee - time to add some invertebrate friends to your world!",
+    "site_categories": [
+        "Bees"
+    ],
+    "video_link": "https://www.youtube.com/watch?v=B-3BZLAt7CI",
+    "wiki_link": "https://wiki.gm4.co/wiki/Ambrosia",
+    "required_modules": [
+        "liquid_tanks"
+    ],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
+            ],
+            [
+                "SpecialBuilder32",
+                "https://www.twitter.com/SpecialBuilder"
+            ],
+            [
+                "Bloo",
+                "https://twitter.com/Bloo_dev"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "DuckJr",
+                "https://twitter.com/DuckJr94"
+            ]
+        ],
+        "Textures by": [
+            [
+                "Kyrkis"
+            ]
+        ]
     }
-  },
-  "module_name":"Ambrosia",
-  "module_id":"ambrosia",
-  "site_description":"To bee or not to bee - time to add some invertebrate friends to your world!",
-  "site_categories":["Bees"],
-  "video_link":"https://www.youtube.com/watch?v=B-3BZLAt7CI",
-  "wiki_link":"https://wiki.gm4.co/wiki/Ambrosia",
-  "required_modules":[
-      "liquid_tanks"
-  ],
-  "recommended_modules":[],
-  "credits":{
-    "Creator":[
-      ["Sparks","https://www.twitter.com/SparksTheGamer"],
-      ["SpecialBuilder32","https://www.twitter.com/SpecialBuilder"],
-      ["Bloo","https://twitter.com/Bloo_dev"]
-    ],
-    "Icon Design":[
-      ["DuckJr","https://twitter.com/DuckJr94"]
-    ],
-    "Textures by":[
-      ["Kyrkis"]
-    ]
-  }
 }

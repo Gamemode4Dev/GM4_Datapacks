@@ -1,32 +1,34 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "A Gamemode 4 Module",
-        {"translate": "pack.gm4.description"}
-      ]
-    }
-  },
-  "module_name":"Master Crafting",
-  "module_id":"master_crafting",
-  "site_description":"A crafting recipe pack at adds some efficient recipes to the game.",
-  "site_categories":["Custom Crafting"],
-  "video_link":"https://www.youtube.com/watch?v=ibtS4zAvglQ",
-  "wiki_link":"https://wiki.gm4.co/wiki/Master_Crafting",
-  "required_modules":[
-    "custom_crafters"
-  ],
-  "recommended_modules":[
-    "standard_crafting"
-  ],
-  "credits":{
-    "Creator":[
-      ["Sparks","https://www.twitter.com/SparksTheGamer"]
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Master Crafting",
+    "module_id": "master_crafting",
+    "site_description": "A crafting recipe pack at adds some efficient recipes to the game.",
+    "site_categories": [
+        "Custom Crafting"
     ],
-    "Updated by":[
-      ["Misode","https://twitter.com/misoloo"]
-    ]
-  }
+    "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
+    "wiki_link": "https://wiki.gm4.co/wiki/Master_Crafting",
+    "required_modules": [
+        "custom_crafters"
+    ],
+    "recommended_modules": [
+        "standard_crafting"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
+            ]
+        ],
+        "Updated by": [
+            [
+                "Misode",
+                "https://twitter.com/misoloo"
+            ]
+        ]
+    }
 }

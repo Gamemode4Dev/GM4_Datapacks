@@ -1,32 +1,34 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "A Gamemode 4 Module",
-        {"translate": "pack.gm4.description"}
-      ]
-    }
-  },
-  "module_name":"Standard Crafting",
-  "module_id":"standard_crafting",
-  "site_description":"A crafting recipe pack that adds some nifty new recipes to the game.",
-  "site_categories":["Custom Crafting"],
-  "video_link":"https://www.youtube.com/watch?v=_GekIoefncg",
-  "wiki_link":"https://wiki.gm4.co/wiki/Standard_Crafting",
-  "required_modules":[
-    "custom_crafters"
-  ],
-  "recommended_modules":[
-    "master_crafting"
-  ],
-  "credits":{
-    "Creator":[
-      ["Sparks","https://www.twitter.com/SparksTheGamer"]
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Standard Crafting",
+    "module_id": "standard_crafting",
+    "site_description": "A crafting recipe pack that adds some nifty new recipes to the game.",
+    "site_categories": [
+        "Custom Crafting"
     ],
-    "Updated by":[
-      ["Bloo","https://www.twitter.com/Bloo_dev"]
-    ]
-  }
+    "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
+    "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
+    "required_modules": [
+        "custom_crafters"
+    ],
+    "recommended_modules": [
+        "master_crafting"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
+            ]
+        ],
+        "Updated by": [
+            [
+                "Bloo",
+                "https://www.twitter.com/Bloo_dev"
+            ]
+        ]
+    }
 }

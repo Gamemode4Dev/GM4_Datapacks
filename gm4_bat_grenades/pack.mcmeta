@@ -1,26 +1,22 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "A Gamemode 4 Module",
-        {"translate": "pack.gm4.description"}
-      ]
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Bat Grenades",
+    "module_id": "bat_grenades",
+    "site_description": "Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!",
+    "site_categories": [],
+    "video_link": "https://www.youtube.com/watch?v=uUoEKtte1GQ",
+    "wiki_link": "https://wiki.gm4.co/wiki/Bat_Grenades",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
+            ]
+        ]
     }
-  },
-  "module_name":"Bat Grenades",
-  "module_id":"bat_grenades",
-  "site_description":"Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!",
-  "site_categories":[
-  ],
-  "video_link":"https://www.youtube.com/watch?v=uUoEKtte1GQ",
-  "wiki_link":"https://wiki.gm4.co/wiki/Bat_Grenades",
-  "required_modules":[],
-  "recommended_modules":[],
-  "credits":{
-    "Creator":[
-      ["Sparks","https://www.twitter.com/SparksTheGamer"]
-    ]
-  }
 }

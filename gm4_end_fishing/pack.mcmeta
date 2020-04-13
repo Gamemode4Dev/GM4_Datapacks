@@ -1,28 +1,28 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "A Gamemode 4 Module",
-        {"translate": "pack.gm4.description"}
-      ]
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "End Fishing",
+    "module_id": "end_fishing",
+    "site_description": "Catch rare loot by fishing in the end void!",
+    "site_categories": [],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/End_Fishing",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "BluePsychoRanger",
+                "https://www.twitter.com/BluPsychoRanger"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "DuckJr",
+                "https://www.twitter.com/DuckJr94"
+            ]
+        ]
     }
-  },
-  "module_name":"End Fishing",
-  "module_id":"end_fishing",
-  "site_description":"Catch rare loot by fishing in the end void!",
-  "site_categories":[],
-  "video_link":"",
-  "wiki_link":"https://wiki.gm4.co/wiki/End_Fishing",
-  "required_modules":[],
-  "recommended_modules":[],
-  "credits":{
-    "Creator":[
-      ["BluePsychoRanger","https://www.twitter.com/BluPsychoRanger"]
-    ],
-    "Icon Design":[
-      ["DuckJr","https://www.twitter.com/DuckJr94"]
-    ]
-  }
 }

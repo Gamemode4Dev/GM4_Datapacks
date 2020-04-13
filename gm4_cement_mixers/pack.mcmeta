@@ -1,38 +1,32 @@
 {
-  "pack": {
-    "pack_format": 0,
-    "description":  {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "A Gamemode 4 Module",
-        {"translate": "pack.gm4.description"}
-      ]
-    }
-  },
-  "module_name": "Cement Mixers",
-  "module_id": "cement_mixers",
-  "site_description": "Adds the ability to turn powder into concrete in Liquid Tanks",
-  "site_categories": [
-    "Liquid Tanks"
-  ],
-  "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
-  "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Cement_Mixers",
-  "required_modules": [
-    "liquid_tanks"
-  ],
-  "recommended_modules": [],
-  "credits": {
-    "Creator": [
-      [
-        "Sparks",
-        "https://twitter.com/SparksTheGamer"
-      ]
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Cement Mixers",
+    "module_id": "cement_mixers",
+    "site_description": "Adds the ability to turn powder into concrete in Liquid Tanks",
+    "site_categories": [
+        "Liquid Tanks"
     ],
-    "Icon Design": [
-      [
-        "DuckJr",
-        "https://twitter.com/DuckJr94"
-      ]
-    ]
-  }
+    "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
+    "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Cement_Mixers",
+    "required_modules": [
+        "liquid_tanks"
+    ],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Sparks",
+                "https://twitter.com/SparksTheGamer"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "DuckJr",
+                "https://twitter.com/DuckJr94"
+            ]
+        ]
+    }
 }

@@ -1,25 +1,22 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "A Gamemode 4 Module",
-        {"translate": "pack.gm4.description"}
-      ]
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Weighted Armour",
+    "module_id": "weighted_armour",
+    "site_description": "Perfect for UHCs, this module forces you to balance protection with speed.",
+    "site_categories": [],
+    "video_link": "https://www.youtube.com/watch?v=rVRSXTGQPbg",
+    "wiki_link": "https://wiki.gm4.co/wiki/Weighted_Armour",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
+            ]
+        ]
     }
-  },
-  "module_name":"Weighted Armour",
-  "module_id":"weighted_armour",
-  "site_description":"Perfect for UHCs, this module forces you to balance protection with speed.",
-  "site_categories":[],
-  "video_link":"https://www.youtube.com/watch?v=rVRSXTGQPbg",
-  "wiki_link":"https://wiki.gm4.co/wiki/Weighted_Armour",
-  "required_modules":[],
-  "recommended_modules":[],
-  "credits":{
-    "Creator":[
-      ["Sparks","https://www.twitter.com/SparksTheGamer"]
-    ]
-  }
 }

@@ -1,31 +1,30 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "A Gamemode 4 Module",
-        {"translate": "pack.gm4.description"}
-      ]
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Orbis Pre-gen",
+    "module_id": "orbis_pre_gen",
+    "site_description": "An extension to Orbis which allows a world to be pre-generated.",
+    "site_categories": [
+        "Custom Terrain"
+    ],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Pre_Gen",
+    "required_modules": [
+        "orbis"
+    ],
+    "recommended_modules": [
+        "cooler_caves",
+        "dangerous_dungeons",
+        "tower_structures"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "Misode",
+                "https://twitter.com/misoloo"
+            ]
+        ]
     }
-  },
-  "module_name":"Orbis Pre-gen",
-  "module_id":"orbis_pre_gen",
-  "site_description":"An extension to Orbis which allows a world to be pre-generated.",
-  "site_categories":["Custom Terrain"],
-  "video_link":"",
-  "wiki_link":"https://wiki.gm4.co/wiki/Orbis/Pre_Gen",
-  "required_modules":[
-    "orbis"
-  ],
-  "recommended_modules":[
-    "cooler_caves",
-    "dangerous_dungeons",
-    "tower_structures"
-  ],
-  "credits":{
-    "Creator":[
-      ["Misode","https://twitter.com/misoloo"]
-    ]
-  }
 }
