@@ -30,3 +30,9 @@ execute if score @s[tag=gm4_lt_experience] gm4_lt_value matches ..1386 if block 
 
 #enchanted book
 execute if score @s[tag=gm4_lt_experience] gm4_lt_value matches ..1391 if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:enchanted_book"}]} run function gm4_standard_liquids:item_drain/enchanted_book
+
+#honey bottle
+execute if score @s[tag=gm4_lt_honey] gm4_lt_value matches ..399 if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:honey_bottle"}]} run function gm4_standard_liquids:item_drain/bottle
+
+#honey block
+execute if score @s[tag=gm4_lt_honey] gm4_lt_value matches ..396 if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:honey_block"}]} run function gm4_standard_liquids:item_drain/honey_block

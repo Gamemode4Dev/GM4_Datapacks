@@ -4,6 +4,8 @@
 #get xp orb's value
 execute store result score experience_value gm4_lt_util run data get entity @s Value
 
-scoreboard players operation @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank] gm4_lt_buffer += experience_value gm4_lt_util
+#try to add to tank
+execute store success score deposit_success gm4_lt_util run scoreboard players operation @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank,limit=1,scores={gm4_lt_value=..1394}] gm4_lt_value += experience_value gm4_lt_util
 
-kill @s
+#if added, kill self
+execute if score deposit_success gm4_lt_util matches 1 run kill @s
