@@ -1,19 +1,33 @@
 {
-  "display":{
-    "icon":{
-      "item":"tropical_fish_bucket",
-      "nbt":"{display:{Name:\"\\\"better_crossbows logo\\\"\"}}"
+    "display": {
+        "icon": {
+            "item": "tropical_fish_bucket",
+            "nbt": "{display:{Name:\"\\\"crossbow_cartridges logo\\\"\"},CustomModelData:1}"
+        },
+        "title": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Fish Launcher!",
+                {
+                    "translate": "advancement.gm4.crossbow_cartridges_fish.title"
+                }
+            ]
+        },
+        "description": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Launch a fish using a crossbow",
+                {
+                    "translate": "advancement.gm4.crossbow_cartridges_fish.description"
+                }
+            ],
+            "color": "gray"
+        }
     },
-    "title":"Fish Launcher!",
-    "description":{
-      "text":"Launch a fish using a crossbow",
-      "color":"gray"
+    "parent": "gm4:root",
+    "criteria": {
+        "exterior_trigger": {
+            "trigger": "minecraft:impossible"
+        }
     }
-  },
-  "parent":"gm4:root",
-  "criteria":{
-    "TRIGGER_NAME":{
-      "trigger":"minecraft:impossible"
-    }
-  }
 }

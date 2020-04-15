@@ -1,22 +1,28 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description":"A Gamemode 4 Module"
-  },
-  "module_name":"Holographic Tags",
-  "module_id":"holographic_tags",
-  "site_description":"Set up floating messages with a simple name tag!",
-  "site_categories":[],
-  "video_link":"",
-  "wiki_link":"https://wiki.gm4.co/wiki/Holographic_Tags",
-  "required_modules":[],
-  "recommended_modules":[],
-  "credits":{
-    "Creator":[
-      ["BluePsychoRanger","https://www.twitter.com/BluPsychoRanger"]
-    ],
-    "Inspired by":[
-      ["SethBling","https://www.youtube.com/user/SethBling"]
-    ]
-  }
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Holographic Tags",
+    "module_id": "holographic_tags",
+    "site_description": "Set up floating messages with a simple name tag!",
+    "site_categories": [],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Holographic_Tags",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "BluePsychoRanger",
+                "https://www.twitter.com/BluPsychoRanger"
+            ]
+        ],
+        "Inspired by": [
+            [
+                "SethBling",
+                "https://www.youtube.com/user/SethBling"
+            ]
+        ]
+    }
 }

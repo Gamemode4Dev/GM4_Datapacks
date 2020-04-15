@@ -8,7 +8,7 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Ain't Got Rhythm",
-        {"translate": "advancement.gm4.book_binders.place"}
+        {"translate": "advancement.gm4.book_binders.title"}
       ]
     },
     "description": {

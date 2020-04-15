@@ -12,7 +12,7 @@ execute store result score sub_location gm4_rl_data run data get entity @s Pos[1
 scoreboard players operation sub_location gm4_rl_data -= location gm4_rl_data
 execute store result entity @e[tag=gm4_rl_set_item_data,limit=1,sort=nearest,distance=..0.1] Item.tag.gm4_relocation.loc double 0.01 run scoreboard players get sub_location gm4_rl_data
 
-data modify entity @e[tag=gm4_rl_set_item_data,limit=1,sort=nearest,distance=..0.1] Item.tag.display.Lore prepend value '{"text":"Relocator","italic":true,"color":"yellow"}'
+data modify entity @e[tag=gm4_rl_set_item_data,limit=1,sort=nearest,distance=..0.1] Item.tag.display.Lore prepend value '{"translate":"%1$s%3427655$s","with":["Relocator",{"translate":"item.gm4.relocator"}],"italic":true,"color":"yellow"}'
 
 data modify entity @e[tag=gm4_rl_set_item_data,limit=1,sort=nearest,distance=..0.1] Item.tag.gm4_relocation.data.BlockName set from block ~ ~.2 ~ CustomName
 data modify entity @e[tag=gm4_rl_set_item_data,limit=1,sort=nearest,distance=..0.1] Item.tag.gm4_relocation.data.Small set from entity @s Small

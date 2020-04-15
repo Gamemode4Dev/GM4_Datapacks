@@ -1,29 +1,46 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description":"A Gamemode 4 Module"
-  },
-  "module_name":"Heart Canisters",
-  "module_id":"heart_canisters",
-  "site_description":"Pricey canisters that increase your health when carried.",
-  "site_categories":["Custom Crafting"],
-  "video_link":"https://www.youtube.com/watch?v=zjmL6rjoq0g",
-  "wiki_link":"https://wiki.gm4.co/wiki/Heart_Canisters",
-  "required_modules":[
-    "custom_crafters"
-  ],
-  "recommended_modules":[],
-  "credits":{
-    "Creator":[
-      ["Sparks","https://www.twitter.com/SparksTheGamer"],
-      ["SpiderRobotMan","https://twitter.com/spiderrobotman"]
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Heart Canisters",
+    "module_id": "heart_canisters",
+    "site_description": "Pricey canisters that increase your health when carried.",
+    "site_categories": [
+        "Custom Crafting"
     ],
-    "Updated by":[
-      ["SpecialBuilder32","https://www.twitter.com/SpecialBuilder"],
-      ["Misode","https://twitter.com/misoloo"]
+    "video_link": "https://www.youtube.com/watch?v=zjmL6rjoq0g",
+    "wiki_link": "https://wiki.gm4.co/wiki/Heart_Canisters",
+    "required_modules": [
+        "custom_crafters"
     ],
-    "Textures by":[
-      ["Jonpot",""]
-    ]
-  }
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
+            ],
+            [
+                "SpiderRobotMan",
+                "https://twitter.com/spiderrobotman"
+            ]
+        ],
+        "Updated by": [
+            [
+                "SpecialBuilder32",
+                "https://www.twitter.com/SpecialBuilder"
+            ],
+            [
+                "Misode",
+                "https://twitter.com/misoloo"
+            ]
+        ],
+        "Textures by": [
+            [
+                "Jonpot",
+                ""
+            ]
+        ]
+    }
 }

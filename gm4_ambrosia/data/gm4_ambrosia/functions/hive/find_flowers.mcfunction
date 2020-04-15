@@ -30,4 +30,4 @@ execute if score flower_count gm4_bee_data matches 1.. run function gm4_ambrosia
 execute unless score @s gm4_bees matches 50.. run scoreboard players operation @s gm4_bees += flower_count gm4_bee_data
 
 # debug bee display. Enable this for easy debugging.  For more debug displays view ambrosia:hive/fprocess_hive
-#execute unless score @s gm4_bees matches ..-1 run title @a[distance=..4] actionbar ["",{"text":"Added: "},{"score":{"name":"flower_count","objective":"gm4_bee_data"}}]
+#execute unless score @s gm4_bees matches ..-1 run title @a[distance=..4] actionbar [{"text":"Added: "},{"score":{"name":"flower_count","objective":"gm4_bee_data"}}]
