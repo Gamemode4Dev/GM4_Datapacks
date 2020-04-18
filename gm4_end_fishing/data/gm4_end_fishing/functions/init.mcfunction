@@ -3,6 +3,7 @@ scoreboard objectives add gm4_ef_timer dummy
 scoreboard objectives add gm4_ef_id dummy
 scoreboard objectives add gm4_ef_lure dummy
 scoreboard objectives add gm4_ef_data dummy
+scoreboard objectives add gm4_ef_up_bait dummy
 execute unless score seed gm4_ef_data matches 0.. run scoreboard players set seed gm4_ef_data 731031
 scoreboard players set mult gm4_ef_data 1664525
 scoreboard players set incr gm4_ef_data 1013904223

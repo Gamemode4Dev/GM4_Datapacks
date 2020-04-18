@@ -1,0 +1,226 @@
+{
+  "display": {
+    "icon": {
+      "item": "diamond_sword",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Master of the Swords",
+        {"translate": "advancement.gm4.end_fishing_swords.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Retrieve all of the lost swords from the void",
+        {"translate": "advancement.gm4.end_fishing_swords.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:end_fishing",
+  "criteria": {
+    "end_sword_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:1b}"
+          }
+        ]
+      }
+    },
+    "end_sword_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:2b}"
+          }
+        ]
+      }
+    },
+    "end_sword_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:3b}"
+          }
+        ]
+      }
+    },
+    "end_sword_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:4b}"
+          }
+        ]
+      }
+    },
+    "end_sword_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:5b}"
+          }
+        ]
+      }
+    },
+    "end_sword_6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:6b}"
+          }
+        ]
+      }
+    },
+    "end_sword_7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:7b}"
+          }
+        ]
+      }
+    },
+    "end_sword_8": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:8b}"
+          }
+        ]
+      }
+    },
+    "end_sword_9": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:9b}"
+          }
+        ]
+      }
+    },
+    "end_sword_10": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:10b}"
+          }
+        ]
+      }
+    },
+    "end_sword_11": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:11b}"
+          }
+        ]
+      }
+    },
+    "end_sword_12": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:12b}"
+          }
+        ]
+      }
+    },
+    "end_sword_13": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:13b}"
+          }
+        ]
+      }
+    },
+    "end_sword_14": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:14b}"
+          }
+        ]
+      }
+    },
+    "end_sword_15": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:15b}"
+          }
+        ]
+      }
+    },
+    "end_sword_16": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:16b}"
+          }
+        ]
+      }
+    },
+    "end_sword_17": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:17b}"
+          }
+        ]
+      }
+    },
+    "end_sword_18": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:18b}"
+          }
+        ]
+      }
+    },
+    "end_sword_19": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:19b}"
+          }
+        ]
+      }
+    },
+    "end_sword_20": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_ef_sword:20b}"
+          }
+        ]
+      }
+    }
+  }
+}

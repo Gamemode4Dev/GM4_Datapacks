@@ -14,7 +14,7 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Fish up a phantom from the end void",
+        "Perhaps it's a manta ray",
         {"translate": "advancement.gm4.end_fishing_phantom.description"}
       ],
       "color": "gray"
