@@ -1,4 +1,5 @@
 # @s=player able to create a cauldron
+# at cauldron position
 # ran from main
 
 # position checks
