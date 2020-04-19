@@ -1,6 +1,6 @@
-#@s=golden_leggings in cauldron
-#at align xyz
-#run from recipe/armor/leggings/apply_modifier.mcfunction
+# @s=golden_leggings in cauldron
+# at align xyz
+# run from recipe/armor/leggings/apply_modifier.mcfunction
 
 data merge entity @s {CustomModelData:2,PickupDelay:0,Item:{tag:{gm4_zauber_cauldrons:{item:"zauber_armor"},display:{Lore:['{"translate":"%1$s%3427655$s","with":["+25% Magic",{"translate":"item.gm4.zauber_armour.magic","with":["25"]}],"color":"blue"}']},AttributeModifiers:[{Slot:legs,AttributeName:generic.attackDamage,Name:generic.attackDamage,Amount:0.35,Operation:2,UUIDMost:55086,UUIDLeast:130856},{Slot:legs,AttributeName:generic.armor,Name:generic.armor,Amount:5,Operation:0,UUIDMost:55086,UUIDLeast:130856},{Slot:legs,AttributeName:generic.armorToughness,Name:generic.armorToughness,Amount:3,Operation:0,UUIDMost:55086,UUIDLeast:130856}]}}}
 kill @e[type=item,dx=0,dy=0,dz=0,nbt=!{Item:{tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}}}]

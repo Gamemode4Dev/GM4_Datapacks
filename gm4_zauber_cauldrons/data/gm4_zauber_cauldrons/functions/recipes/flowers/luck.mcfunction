@@ -1,6 +1,6 @@
-#@s=boiling zauber cauldron with grass and enchanted_prismarine_shard and poisonous flowers inside.
-#at @s
-#run from recipes/flowers/check_normal_flowers
+# @s=boiling zauber cauldron with grass and enchanted_prismarine_shard and poisonous flowers inside.
+# at @s
+# run from recipes/flowers/check_normal_flowers
 
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 execute align y positioned ~ ~.75 ~ run tag @a[distance=..1.8,gamemode=!spectator] add gm4_zc_luck

@@ -1,6 +1,6 @@
-#@s=boiling zauber cauldron with recipe inside
-#at @s
-#run from zauber_potions
+# @s=boiling zauber cauldron with recipe inside
+# at @s
+# run from zauber_potions
 
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 summon item ~ ~.2 ~ {Item:{id:potion,Count:1b,tag:{gm4_zauber_cauldrons:{item:"potion",type:"jump_boost"},display:{Lore:['[{"translate":"effect.minecraft.jump_boost","color":"blue","italic":false}," ",{"translate":"potion.potency.3","color":"blue","italic":false},{"text":" (1:30)","color":"blue","italic":false}]']},HideFlags:32,Potion:leaping,CustomPotionEffects:[{Id:8,Amplifier:3,Duration:1800}]}}}
