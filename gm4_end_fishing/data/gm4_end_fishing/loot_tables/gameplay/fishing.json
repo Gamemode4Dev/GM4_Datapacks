@@ -13,7 +13,7 @@
                     "type": "loot_table",
                     "name": "gm4_end_fishing:gameplay/fish/uncommon",
                     "weight": 33,
-                    "quality": 1
+                    "quality": 3
                 },
                 {
                     "type": "loot_table",
