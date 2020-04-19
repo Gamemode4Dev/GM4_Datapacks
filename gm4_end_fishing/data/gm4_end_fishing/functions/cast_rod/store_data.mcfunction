@@ -1,5 +1,5 @@
-#@s = fishing bobber
-#run from pulse_check
+#@s = fishing bobber in the end
+#run from tick
 
 tag @s add gm4_ef_set
 

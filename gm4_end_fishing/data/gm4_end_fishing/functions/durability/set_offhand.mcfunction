@@ -1,5 +1,5 @@
 #@s = player who reeled in the armor stand w/ unbreaking fishing rod in offhand
-#run from pulse_check
+#run from durability/check
 
 scoreboard players operation damage gm4_ef_data = @s gm4_ef_data
 execute store result score unbreaking gm4_ef_data run data get entity @s Inventory[{Slot:-106b}].tag.Enchantments[{id:"minecraft:unbreaking"}].lvl

@@ -1,4 +1,4 @@
-#@s = fishing bait armor stand
+#@s = fishing bait armor stand that is nearly ready to be reeled in
 #run from process
 
 scoreboard players operation seed gm4_ef_data *= mult gm4_ef_data

@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_ore\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_ore\"}}}"
             }
           ],
           "name": "minecraft:diamond"
@@ -21,7 +21,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_ore\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_ore\"}}}"
             }
           ],
           "name": "minecraft:iron_ingot"
@@ -32,7 +32,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_ore\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_ore\"}}}"
             }
           ],
           "name": "minecraft:gold_ingot"
@@ -43,7 +43,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_ore\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_ore\"}}}"
             }
           ],
           "name": "minecraft:emerald"
@@ -63,7 +63,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_horse_armor\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_horse_armor\"}}}"
             }
           ],
           "name": "minecraft:iron_horse_armor"
@@ -73,7 +73,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_horse_armor\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_horse_armor\"}}}"
             }
           ],
           "name": "minecraft:golden_horse_armor"
@@ -83,7 +83,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_horse_armor\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_horse_armor\"}}}"
             }
           ],
           "name": "minecraft:diamond_horse_armor"
@@ -110,7 +110,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_sword\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_sword\"}}}"
             }
           ],
           "name": "minecraft:diamond_sword"
@@ -137,7 +137,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_armor\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_armor\"}}}"
             }
           ],
           "name": "minecraft:diamond_boots"
@@ -164,7 +164,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_armor\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_armor\"}}}"
             }
           ],
           "name": "minecraft:diamond_chestplate"
@@ -191,7 +191,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_armor\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_armor\"}}}"
             }
           ],
           "name": "minecraft:diamond_leggings"
@@ -218,7 +218,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_armor\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_armor\"}}}"
             }
           ],
           "name": "minecraft:diamond_helmet"
@@ -245,7 +245,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_tool\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_tool\"}}}"
             }
           ],
           "name": "minecraft:diamond_pickaxe"
@@ -272,7 +272,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_tool\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_tool\"}}}"
             }
           ],
           "name": "minecraft:diamond_shovel"
@@ -299,7 +299,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_sword\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_sword\"}}}"
             }
           ],
           "name": "minecraft:iron_sword"
@@ -326,7 +326,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_armor\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_armor\"}}}"
             }
           ],
           "name": "minecraft:iron_boots"
@@ -353,7 +353,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_armor\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_armor\"}}}"
             }
           ],
           "name": "minecraft:iron_chestplate"
@@ -380,7 +380,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_armor\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_armor\"}}}"
             }
           ],
           "name": "minecraft:iron_leggings"
@@ -400,7 +400,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_armor\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_armor\"}}}"
             }
           ],
           "name": "minecraft:iron_helmet"
@@ -427,7 +427,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_tool\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_tool\"}}}"
             }
           ],
           "name": "minecraft:iron_pickaxe"
@@ -454,7 +454,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_lore:{id:\"end_city_tool\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_city_tool\"}}}"
             }
           ],
           "name": "minecraft:iron_shovel"
