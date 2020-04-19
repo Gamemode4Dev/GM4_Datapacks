@@ -21,8 +21,6 @@ execute if score slow_clock gm4_zc_data matches 3.. run scoreboard players set s
 
 #store the coordinates of every player's wormhole bottles, if applicable
 execute as @a[gamemode=!spectator] run function gm4_zauber_cauldrons:recipes/chorus/store_coordinates
-execute if score wormhole_data gm4_zc_data matches 1 run kill @e[type=item,y=-512,dy=0,tag=gm4_zc_wormhole_data,limit=1]
-scoreboard players reset wormhole_data gm4_zc_data
 
 #restore broken crystals
 data merge entity @e[type=item,limit=1,nbt={Item:{tag:{SkullOwner:{Id:"d15e515a-2058-459a-bfe9-ab419a0d2e7c",Properties:{textures:[{Value:"eyJ0aW1lc3RhbXAiOjE0NzY4ODc4ODY4MjcsInByb2ZpbGVJZCI6ImQxNWU1MTVhMjA1ODQ1OWFiZmU5ZmY1NzlhMGQyZTdjIiwicHJvZmlsZU5hbWUiOiJCbHVlZmlyZTYxMCIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS83MmRkMTkxZDgxYzg4NDUzYzVlM2JjMWJlMjFkYjVhMTkyZDUyNmI3MTg2YjJmNjk0ZjI4Y2JkZmNjYzYyYzNhIn19fQ=="}]}}}}}] {Item:{tag:{gm4_zauber_cauldrons:{item:"crystal",type:"resistance"},HideFlags:1,display:{Name:"{\"text\":\"Crystal of Resistance\",\"italic\":false,\"color:\":\"yellow\"}"}}}}

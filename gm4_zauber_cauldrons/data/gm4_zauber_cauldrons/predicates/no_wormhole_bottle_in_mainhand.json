@@ -1,0 +1,15 @@
+{
+  "condition": "minecraft:inverted",
+  "term": {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "mainhand": {
+          "item": "potion",
+          "nbt": "{gm4_zauber_cauldrons:{item:\"wormhole_bottle\"}}"
+        }
+      }
+    }
+  }
+}
