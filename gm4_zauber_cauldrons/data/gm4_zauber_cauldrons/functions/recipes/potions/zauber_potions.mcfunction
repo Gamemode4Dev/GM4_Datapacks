@@ -5,10 +5,6 @@
 # set expected fullness for these recipes
 scoreboard players set expected_item_amount gm4_zc_fullness 3
 
-# prepare items with common tags
-data modify storage gm4_zauber_cauldrons:temp/item/potion/common Item set value {tag:{gm4_zauber_cauldrons:{item:"potion"},HideFlags:32}}
-execute if score has_blue_fire gm4_zc_data matches 1 run data modify storage gm4_zauber_cauldrons:temp/item/potion/common Item.tag.gm4_zauber_cauldrons.sips set value 9b
-
 # recipes
 execute if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_harming"}}}] at @s run function gm4_zauber_cauldrons:recipes/potions/instant_damage
 execute if score recipe_success gm4_zc_data matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_healing"}}}] at @s run function gm4_zauber_cauldrons:recipes/potions/instant_health

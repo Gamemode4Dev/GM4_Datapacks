@@ -8,7 +8,7 @@ execute unless block ~ ~ ~ cauldron run kill @s
 execute if block ~ ~ ~ cauldron[level=0] run scoreboard players set @s gm4_zc_data 0
 # check for fire
 execute if score @s gm4_zc_data matches 1 unless block ~ ~-1 ~ fire run scoreboard players set @s gm4_zc_data 0
-execute if score @s gm4_zc_data matches 1 if block ~-2 ~ ~ soul_sand run scoreboard players set has_blue_fire gm4_zc_data 1
+execute if score @s gm4_zc_data matches 1 if block ~ ~-2 ~ soul_sand run scoreboard players set has_blue_fire gm4_zc_data 1
 # UPDATE COMMENT: CHANGE L10 to #fire and L11 to ~ ~-1 ~ blue_fire once 1.16 is out.
 
 # rabbit teleportation

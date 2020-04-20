@@ -1,5 +1,5 @@
 # @s= player with crystal in off-hand
-# run from main
+# run from player/slow_clock
 
 effect give @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:player_head",tag:{gm4_zauber_cauldrons:{item:"crystal",type:"resistance"}}}]}] resistance 14 1
 effect give @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:player_head",tag:{gm4_zauber_cauldrons:{item:"crystal",type:"speed"}}}]}] speed 14 1

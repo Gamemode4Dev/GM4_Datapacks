@@ -1,9 +1,9 @@
 # @s = player consuming wormhole_bottle
 # at @s
-# run from advancement zauber_cauldrons:consume_wormhole_bottle
+# run from advancement zauber_cauldrons:use/wormhole/any
 
 # revoke advancement for next teleport
-advancement revoke @s only gm4_zauber_cauldrons:consume_wormhole_bottle
+advancement revoke @s only gm4_zauber_cauldrons:use/wormhole/any
 
 # survival/adventure: check whether wormhole in offhand was consumed
 scoreboard players set offhand_warp gm4_zc_data 0

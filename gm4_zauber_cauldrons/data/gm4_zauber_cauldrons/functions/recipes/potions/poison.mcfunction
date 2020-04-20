@@ -2,8 +2,14 @@
 # at @s
 # run from zauber_potions
 
+# remove ingredients
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
-data merge storage gm4_zauber_cauldrons:temp/item/potion/common {Item:{tag:{gm4_zauber_cauldrons:{type:"poison"},display:{Lore:['[{"translate":"effect.minecraft.poison","color":"red","italic":false}," ",{"translate":"potion.potency.3","color":"red","italic":false},{"text":" (0:32)","color":"red","italic":false}]']},Potion:poison,CustomPotionEffects:[{Id:19,Amplifier:3,Duration:640}]}}}
+
+# summon item (depending on red/blue fire)
+execute unless score has_blue_fire gm4_zc_data matches 1 run summon item ~ ~.2 ~ {Item:{id:"minecraft:potion",Count:1b,tag:{gm4_zauber_cauldrons:{item:"potion",type:"poison",bottle:{multi_use:0}},display:{Lore:['[{"translate":"effect.minecraft.poison","color":"red","italic":false}," ",{"translate":"potion.potency.3","color":"red","italic":false},{"text":" (0:32)","color":"red","italic":false}]']},HideFlags:32,Potion:poison,CustomPotionEffects:[{Id:19,Amplifier:3,Duration:640}]}}}
+execute if score has_blue_fire gm4_zc_data matches 1 run summon item ~ ~.2 ~ {Item:{id:"minecraft:potion",Count:1b,tag:{gm4_zauber_cauldrons:{item:"potion",type:"poison",bottle:{sips:3b,multi_use:1}},display:{Lore:['[{"text":"3/3 ","color":"gray","italic":false},{"translate":"%1$s%3427655$s","with":[{"text":"Sips"},{"translate":"item.gm4.zauber_cauldrons.multi_use_bottle.lore.sips"}],"color":"gray","italic":false}]','[{"translate":"effect.minecraft.poison","color":"red","italic":false}," ",{"translate":"potion.potency.3","color":"red","italic":false},{"text":" (0:32)","color":"red","italic":false}]'],Name:'{"translate":"%1$s","with":["Brimful Potion of Poison",[{"translate":"item.gm4.zauber_cauldrons.multi_use_bottle.level.brimful"},{"translate":"item.minecraft.potion.effect.poison"}]],"italic":"false"}'},HideFlags:32,Potion:poison,CustomPotionEffects:[{Id:19,Amplifier:3,Duration:640}]}}}
+
+# visuals
 summon cave_spider ~ ~.95 ~.1
 summon cave_spider ~ ~.95 ~.1
 summon cave_spider ~ ~.95 ~.1
