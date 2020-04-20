@@ -4,6 +4,7 @@
 
 # set expected fullness for these recipes
 scoreboard players set expected_item_amount gm4_zc_fullness 3
+
 # recipes
 execute as @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:golden_chestplate"}},nbt=!{Item:{tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}}},limit=1] run function gm4_zauber_cauldrons:recipes/armor/chestplate/apply_modifier
 execute if score recipe_success gm4_zc_data matches 0 as @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:golden_helmet"}},nbt=!{Item:{tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}}},limit=1] run function gm4_zauber_cauldrons:recipes/armor/helmet/apply_modifier
