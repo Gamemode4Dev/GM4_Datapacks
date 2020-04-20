@@ -20,13 +20,17 @@ execute if score popped_chorus_fullness gm4_zc_chorus matches 0 run scoreboard p
 execute unless score cancel_recipe gm4_zc_data matches 2 run scoreboard players operation raw_chorus_fullness gm4_zc_chorus -= required_chorus_fruit gm4_zc_chorus
 execute unless score cancel_recipe gm4_zc_data matches 2 run scoreboard players operation popped_chorus_fullness gm4_zc_chorus -= required_popped_chorus_fruit gm4_zc_chorus
 
+# prepare wormhole
+execute unless score cancel_recipe gm4_zc_data matches 2 run data modify storage gm4_zauber_cauldrons:temp/item/wormhole/common Item set value {tag:{CustomModelData:1,gm4_zauber_cauldrons:{item:"wormhole_bottle"},Potion:"minecraft:thick",CustomPotionColor:8587123,Enchantments:[{id:"minecraft:protection",lvl:0s}],HideFlags:33,display:{Name:'{"translate":"%1$s%3427655$s","with":["Wormhole in a Bottle",{"translate":"item.gm4.wormhole_in_a_bottle"}],"italic":"false"}'}}}
+execute unless score cancel_recipe gm4_zc_data matches 2 if score has_blue_fire gm4_zc_data matches 1 run data modify storage gm4_zauber_cauldrons:temp/item/wormhole/common Item.tag.gm4_zauber_cauldrons.sips set value 9b
+
 # start incomplete recipe
 execute unless score cancel_recipe gm4_zc_data matches 2 if score raw_chorus_fullness gm4_zc_chorus matches ..-1 run scoreboard players set cancel_recipe gm4_zc_data 1
 execute unless score cancel_recipe gm4_zc_data matches 2 if score popped_chorus_fullness gm4_zc_chorus matches ..-1 run scoreboard players set cancel_recipe gm4_zc_data 1
-execute if score cancel_recipe gm4_zc_data matches 1 run function gm4_zauber_cauldrons:recipes/chorus/blurry_wormhole
+execute if score cancel_recipe gm4_zc_data matches 1 run function gm4_zauber_cauldrons:recipes/chorus/blurry_wormhole/prepare
 
 # start complete recipe
-execute if score cancel_recipe gm4_zc_data matches 0 run function gm4_zauber_cauldrons:recipes/chorus/precise_wormhole
+execute if score cancel_recipe gm4_zc_data matches 0 run function gm4_zauber_cauldrons:recipes/chorus/precise_wormhole/prepare
 
 # use water and play sound once a recipe ran
 execute if score recipe_success gm4_zc_data matches 1 at @s if score @s gm4_zc_fullness > expected_item_amount gm4_zc_fullness run function gm4_zauber_cauldrons:cauldron/use_extra_items
