@@ -1,0 +1,33 @@
+{
+    "display": {
+        "icon": {
+            "item": "hopper",
+            "nbt": "{CustomModelData:2}"
+        },
+        "title": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Into Dust",
+                {
+                    "translate": "advancement.gm4.pulverizers.title"
+                }
+            ]
+        },
+        "description": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Construct a Pulverizer",
+                {
+                    "translate": "advancement.gm4.pulverizers.description"
+                }
+            ],
+            "color": "gray"
+        }
+    },
+    "parent": "gm4:custom_crafters",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}
