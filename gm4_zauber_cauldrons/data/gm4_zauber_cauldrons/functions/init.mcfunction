@@ -11,6 +11,7 @@ scoreboard objectives add gm4_zc_warp_ox dummy "gm4_zauber_cauldrons_warp_ox"
 scoreboard objectives add gm4_zc_warp_oy dummy "gm4_zauber_cauldrons_warp_oy"
 scoreboard objectives add gm4_zc_warp_oz dummy "gm4_zauber_cauldrons_warp_oz"
 scoreboard objectives add gm4_zc_warp_od dummy "gm4_zauber_cauldrons_warp_od"
+scoreboard objectives add gm4_zc_id dummy "gm4_zauber_cauldrons_sips"
 function gm4_zauber_cauldrons:recipes/flowers/initiate_flower_types
 function gm4_zauber_cauldrons:recipes/chorus/initiate_chorus_amounts
 scoreboard players set modulo gm4_zc_fullness 3

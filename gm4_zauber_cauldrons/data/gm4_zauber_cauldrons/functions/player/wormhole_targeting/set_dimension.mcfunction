@@ -1,6 +1,6 @@
 # @s = marker area effect cloud
 # at location stored in wormhole
-# run from cauldron/wormhole_targeting/set_position
+# run from player/wormhole_targeting/set_position
 
 # forcibly load the chunk
 execute store success score forceloaded gm4_zc_data run forceload query ~ ~

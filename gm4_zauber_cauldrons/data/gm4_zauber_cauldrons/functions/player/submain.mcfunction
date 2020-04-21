@@ -9,6 +9,3 @@ execute if predicate gm4_zauber_cauldrons:player/equipment/enchanted_book/in_mai
 tag @s[scores={gm4_zc_deaths=1..}] remove gm4_zc_luck
 scoreboard players reset @s gm4_zc_deaths
 effect give @s[tag=gm4_zc_luck] minecraft:luck 8 0 true
-
-# store the coordinates of every player's wormhole bottles, if applicable
-function gm4_zauber_cauldrons:recipes/chorus/store_coordinates
