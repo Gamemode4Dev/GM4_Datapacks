@@ -1,7 +1,0 @@
-{
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "nbt": "{ActiveEffects:[{Id:25b,Amplifier:1b}]}"
-  }
-}
