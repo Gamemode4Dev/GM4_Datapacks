@@ -21,8 +21,8 @@ data modify storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.Slot se
 data modify block -32 2 -32 Items append from storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item
 
 # return modified items to player inventory, depending on offhand or mainhand use
-execute if entity @s[tag=gm4_zc_used_mainhand] run loot replace entity @s weapon.mainhand 1 mine -32 2 -32 minecraft:air{drop_contents: 1b}
-execute if entity @s[tag=gm4_zc_used_offhand] run loot replace entity @s weapon.offhand 1 mine -32 2 -32 minecraft:air{drop_contents: 1b}
+execute if entity @s[tag=gm4_zc_used_mainhand] if predicate gm4_zauber_cauldrons:player/equipment/glass_bottle/in_mainhand run loot replace entity @s weapon.mainhand 1 mine -32 2 -32 minecraft:air{drop_contents: 1b}
+execute if entity @s[tag=gm4_zc_used_offhand] if predicate gm4_zauber_cauldrons:player/equipment/glass_bottle/in_offhand run loot replace entity @s weapon.offhand 1 mine -32 2 -32 minecraft:air{drop_contents: 1b}
 
 # revoke advancement
 advancement revoke @s only gm4_zauber_cauldrons:use/multi_use_bottle
