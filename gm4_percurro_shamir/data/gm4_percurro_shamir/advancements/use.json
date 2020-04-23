@@ -8,7 +8,7 @@
       "conditions": {
         "damage": {
           "source_entity": {
-            "nbt": "{SelectedItem:{tag:{gm4_metallurgy:{shamir:\"percurro\"}}}}"
+            "nbt": "{SelectedItem:{tag:{gm4_metallurgy:{active_shamir:\"percurro\"}}}}"
           }
         }
       }
