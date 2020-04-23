@@ -6,34 +6,17 @@
     "module_name": "Percurro Shamir",
     "module_id": "percurro_shamir",
   "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-    "site_description": "Someone forgot to type a description!",
+    "site_description": "Swoosh! A shamir that allows you to swoosh past your enemies!",
     "site_categories": [],
-    "video_link": "YOUTUBE_VIDEO_URL",
-    "wiki_link": "WIKI_URL",
     "required_modules": [
-        "module_id of required module",
-        "or leave array empty"
+        "metallurgy"
     ],
-    "recommended_modules": [
-        "module_id of recommended module",
-        "or leave array empty"
-    ],
+    "recommended_modules": [],
     "credits": {
-        "comment": "All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings. -- REMOVE THIS COMMENT",
         "Creator": [
             [
-                "USERNAME",
-                "OPTIONAL_LINK"
-            ]
-        ],
-        "Updated By": [
-            [
-                "USERNAME",
-                "OPTIONAL_LINK"
-            ],
-            [
-                "USERNAME",
-                "OPTIONAL_LINK"
+                "Bloo",
+                "https://twitter.com/Bloo_dev"
             ]
         ]
     }
