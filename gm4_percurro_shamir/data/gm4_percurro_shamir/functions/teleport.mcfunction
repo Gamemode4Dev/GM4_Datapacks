@@ -13,4 +13,4 @@ kill @e[type=area_effect_cloud,tag=gm4_percurro_depart]
 
 # visuals and sounds
 particle minecraft:campfire_cosy_smoke ~ ~ ~ .1 1 .1 0.03 3
-playsound minecraft:entity.illusioner.cast_spell master @a ~ ~ ~ 1 1.6
+playsound minecraft:entity.illusioner.cast_spell master @a ~ ~ ~ 1 1.2
