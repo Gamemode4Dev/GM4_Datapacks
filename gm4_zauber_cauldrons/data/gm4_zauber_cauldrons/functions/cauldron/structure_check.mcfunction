@@ -12,7 +12,7 @@ execute if score @s gm4_zc_data matches 1 if block ~ ~-3 ~ soul_sand run scorebo
 # UPDATE COMMENT: CHANGE L10 to #fire and L11 to ~ ~-1 ~ soul_fire once 1.16 is out.
 
 # rabbit teleportation
-execute if score @s gm4_zc_data matches 0 if block ~ ~ ~ cauldron[level=0] align xyz if entity @e[type=rabbit,dx=0,dy=0,dz=0] if entity @a[gamemode=!spectator,nbt={Inventory:[{Slot:100b,tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}},{Slot:101b,tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}},{Slot:102b,tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}},{Slot:103b,tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}}]},distance=..2] run function gm4_zauber_cauldrons:cauldron/rabbit_teleportation
+execute if score @s gm4_zc_data matches 0 if block ~ ~ ~ cauldron[level=0] align xyz if entity @e[type=rabbit,dx=0,dy=0,dz=0] if entity @a[gamemode=!spectator,predicate=gm4_zauber_cauldrons:player/equipment/armor/full,distance=..2] run function gm4_zauber_cauldrons:cauldron/rabbit_teleportation
 
 # run final inits on valid structures
 execute if score @s gm4_zc_data matches 1 run function gm4_zauber_cauldrons:cauldron/valid_structure
