@@ -27,3 +27,5 @@ execute unless score valid_item gm4_ml_data matches 1 store success score valid_
 execute unless score valid_item gm4_ml_data matches 1 store success score valid_item gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:wooden_axe"}}]
 
 execute unless score valid_item gm4_ml_data matches 1 store success score valid_item gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:shears"}}]
+
+execute unless score valid_item gm4_ml_data matches 1 store success score valid_item gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:elytra"}}]

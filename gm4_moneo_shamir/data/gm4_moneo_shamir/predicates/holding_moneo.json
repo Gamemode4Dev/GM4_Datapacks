@@ -7,6 +7,7 @@
       "predicate": {
         "equipment": {
           "mainhand": {
+            "tag": "gm4_moneo_shamir:tools",
             "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'moneo'}}"
           }
         }
@@ -18,6 +19,7 @@
       "predicate": {
         "equipment": {
           "offhand": {
+            "tag": "gm4_moneo_shamir:tools",
             "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'moneo'}}"
           }
         }
