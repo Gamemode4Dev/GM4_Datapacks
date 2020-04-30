@@ -9,7 +9,7 @@ execute unless block ~ ~ ~ barrel run function gm4_ambrosia:hive/destroy_hive
 scoreboard players operation @s gm4_hive_timer += @s gm4_bees
 
 # debug bee display. Enable this for easy debugging. For more debug displays view ambrosia:hive/find_flowers
-#title @a[distance=..4] actionbar ["",{"text":"Bees: "},{"score":{"name":"@s","objective":"gm4_bees"}}]
+#title @a[distance=..4] actionbar [{"text":"Bees: "},{"score":{"name":"@s","objective":"gm4_bees"}}]
 
 # run actions at beehive once timer reaches max
 execute if score @s gm4_hive_timer matches 1000.. run function gm4_ambrosia:hive/check_hive_health

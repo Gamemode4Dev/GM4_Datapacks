@@ -1,19 +1,33 @@
 {
-  "display":{
-    "icon":{
-      "item":"barrel",
-      "nbt":"{display:{Name:\"\\\"ambrosia logo\\\"\"}}"
+    "display": {
+        "icon": {
+            "item": "barrel",
+            "nbt": "{CustomModelData:1}"
+        },
+        "title": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Plan B",
+                {
+                    "translate": "advancement.gm4.ambrosia_create_beehive.title"
+                }
+            ]
+        },
+        "description": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "First a Beehive, then the world",
+                {
+                    "translate": "advancement.gm4.ambrosia_create_beehive.description"
+                }
+            ],
+            "color": "gray"
+        }
     },
-    "title":"Plan B",
-    "description":{
-      "text":"First a Beehive, then the world",
-      "color":"gray"
+    "parent": "gm4:ambrosia_find_larvae",
+    "criteria": {
+        "external_trigger": {
+            "trigger": "minecraft:impossible"
+        }
     }
-  },
-  "parent":"gm4:ambrosia_find_larvae",
-  "criteria":{
-    "ambrosia_create_beehive":{
-      "trigger":"minecraft:impossible"
-    }
-  }
 }

@@ -1,25 +1,38 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description":"A Gamemode 4 Module"
-  },
-  "module_name":"Mob Conversion",
-  "module_id":"mob_conversion",
-  "site_description":"Convert cows, pigmen and witches into other mobs.",
-  "site_categories":[
-  ],
-  "video_link":"",
-  "wiki_link":"https://wiki.gm4.co/wiki/Mob_Conversion",
-  "required_modules":[],
-  "recommended_modules":["shroomites"],
-  "credits":{
-    "Creator":[
-      ["torbray","https://www.twitter.com/torbray00"]
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Mob Conversion",
+    "module_id": "mob_conversion",
+    "site_description": "Convert cows, pigmen and witches into other mobs.",
+    "site_categories": [],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Mob_Conversion",
+    "required_modules": [],
+    "recommended_modules": [
+        "shroomites"
     ],
-    "Updated By":[
-      ["Sparks","https://www.twitter.com/SparksTheGamer"],
-      ["Bloo","https://www.twitter.com/Bloo_dev"],
-      ["SpecialBuilder32","https://www.twitter.com/Specialbuilder"]
-    ]
-  }
+    "credits": {
+        "Creator": [
+            [
+                "torbray",
+                "https://www.twitter.com/torbray00"
+            ]
+        ],
+        "Updated By": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
+            ],
+            [
+                "Bloo",
+                "https://www.twitter.com/Bloo_dev"
+            ],
+            [
+                "SpecialBuilder32",
+                "https://www.twitter.com/Specialbuilder"
+            ]
+        ]
+    }
 }

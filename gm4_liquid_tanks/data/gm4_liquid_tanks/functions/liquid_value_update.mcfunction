@@ -1,10 +1,11 @@
 #@s = liquid tank
 #run from liquid_tanks:process
 
-#apply buffer
-scoreboard players operation @s gm4_lt_value += @s gm4_lt_buffer
-scoreboard players set @s gm4_lt_buffer 0
+#normalize incase of overflow
 scoreboard players operation @s gm4_lt_value < @s gm4_lt_max
+
+#store new value of prior_value
+scoreboard players operation @s gm4_lt_prior_val = @s gm4_lt_value
 
 #if value of 0, set to empty
 execute if score @s gm4_lt_value matches ..0 at @s run function gm4_liquid_tanks:empty

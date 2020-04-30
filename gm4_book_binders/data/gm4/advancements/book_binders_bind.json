@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "enchanted_book",
+      "nbt": "{CustomModelData:1,Enchantments:[{id:\"minecraft:mending\",lvl:1}]}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Curse of Binding",
+        {"translate": "advancement.gm4.book_binders_bind.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Publish your first Enchanted Book",
+        {"translate": "advancement.gm4.book_binders_bind.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:book_binders",
+  "criteria": {
+    "gm4_book_binders_bind": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

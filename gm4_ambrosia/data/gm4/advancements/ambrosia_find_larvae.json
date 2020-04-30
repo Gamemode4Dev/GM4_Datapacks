@@ -1,19 +1,33 @@
 {
-  "display":{
-    "icon":{
-      "item":"white_dye",
-      "nbt":"{display:{Name:\"\\\"ambrosia logo\\\"\"}}"
+    "display": {
+        "icon": {
+            "item": "white_dye",
+            "nbt": "{CustomModelData:2}"
+        },
+        "title": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Bugs, bugs, bugs everywhere!",
+                {
+                    "translate": "advancement.gm4.ambrosia_find_larvae.title"
+                }
+            ]
+        },
+        "description": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Make an invertebrate friend",
+                {
+                    "translate": "advancement.gm4.ambrosia_find_larvae.description"
+                }
+            ],
+            "color": "gray"
+        }
     },
-    "title":"Bugs, bugs, bugs everywhere!",
-    "description":{
-      "text":"Make an invertebrate friend",
-      "color":"gray"
+    "parent": "gm4:root",
+    "criteria": {
+        "external_trigger": {
+            "trigger": "minecraft:impossible"
+        }
     }
-  },
-  "parent":"gm4:root",
-  "criteria":{
-    "ambrosia_find_larvae":{
-      "trigger":"minecraft:impossible"
-    }
-  }
 }

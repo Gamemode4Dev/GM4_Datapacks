@@ -27,3 +27,8 @@ execute if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:beetroot"}]} run fun
 execute if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:experience_bottle"}]} run function gm4_standard_liquids:liquid_init/experience
 
 execute if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:enchanted_book"}]} run function gm4_standard_liquids:liquid_init/experience
+
+#honey
+execute if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:honey_bottle"}]} run function gm4_standard_liquids:liquid_init/honey
+
+execute if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:honey_block"}]} run function gm4_standard_liquids:liquid_init/honey

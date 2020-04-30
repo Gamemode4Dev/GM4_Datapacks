@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "brown_stained_glass",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Corruption at its finest",
+        {"translate": "advancement.gm4.soul_glass.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Corrupt the effects of a beacon",
+        {"translate": "advancement.gm4.soul_glass.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

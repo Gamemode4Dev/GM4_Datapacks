@@ -24,3 +24,6 @@ execute if score @s[tag=gm4_lt_beetroot_soup] gm4_lt_value matches 1.. if block 
 
 #experience bottle
 execute if score @s[tag=gm4_lt_experience] gm4_lt_value matches 8.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_standard_liquids:item_fill/experience_bottle
+
+#honey bottle
+execute if score @s[tag=gm4_lt_honey] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_standard_liquids:item_fill/honey_bottle

@@ -1,0 +1,41 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "head": {
+            "item": "minecraft:player_head",
+              "nbt": "{gm4_scuba_gear:{item:\"helmet\"}}"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "chest": {
+            "item": "minecraft:golden_chestplate",
+              "nbt": "{gm4_scuba_gear:{item:\"tank\"}}"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "feet": {
+            "item": "minecraft:leather_boots",
+              "nbt": "{gm4_scuba_gear:{item:\"flippers\"}}"
+          }
+        }
+      }
+    }
+  ]
+}
