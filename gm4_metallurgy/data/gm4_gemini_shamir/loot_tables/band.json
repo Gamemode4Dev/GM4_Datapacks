@@ -1,0 +1,36 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_metallurgy:barimium_band",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{gm4_metallurgy:{stored_shamir:\"gemini\",custom_model_data:109}}"
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "replace": false,
+                            "lore": [
+                                {
+                                    "translate": "%1$s%3427655$s",
+                                    "with": [
+                                        "Gemini",
+                                        {
+                                            "translate": "item.gm4.shamir.gemini"
+                                        }
+                                    ],
+                                    "italic": false,
+                                    "color": "gray"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
