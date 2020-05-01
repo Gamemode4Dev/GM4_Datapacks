@@ -34,9 +34,6 @@ execute if score @s gm4_slot_count matches 9 if score @s gm4_stack_size matches 
 #quartz block nether quartz
 execute if score @s gm4_slot_count matches 1 if score @s gm4_stack_size matches ..16 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:quartz_block"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"quartz",Count:1b,tag:{gm4_custom_crafters:{multiplier:4}}}]}
 
-#nether wart block to nether wart
-execute if score @s gm4_slot_count matches 1 if score @s gm4_stack_size matches ..7 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:nether_wart_block"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"nether_wart",Count:1b,tag:{gm4_custom_crafters:{multiplier:9}}}]}
-
 #stairs
 execute if score @s gm4_slot_count matches 4 if score @s gm4_stack_size matches ..16 run function gm4_standard_crafting:stairs_recipes
 #slabs
