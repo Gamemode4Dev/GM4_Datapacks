@@ -106,6 +106,18 @@
             }
           }
         }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetY": -1,
+        "predicate": {
+          "block": {
+            "block": "minecraft:bell",
+            "state": {
+              "attachment": "floor"
+            }
+          }
+        }
       }
     ]
   }
