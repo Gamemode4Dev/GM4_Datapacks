@@ -1,0 +1,56 @@
+{
+	"condition": "minecraft:inverted",
+	"term": {
+		"condition": "minecraft:alternative",
+		"terms": [
+			{
+				"condition": "minecraft:inverted",
+				"term": {
+					"condition": "minecraft:alternative",
+					"terms": [
+						{
+							"condition": "minecraft:location_check",
+							"predicate": {
+								"light": {
+									"light": {
+										"min": 0,
+										"max": 5
+									}
+								},
+								"block": {
+									"tag": "gm4_lumos_shamir:air"
+								}
+							}
+						},
+						{
+							"condition": "minecraft:location_check",
+							"predicate": {
+								"light": {
+									"light": {
+										"min": 0,
+										"max": 5
+									}
+								},
+								"block": {
+									"block": "minecraft:snow",
+									"state": {
+										"layers": "1"
+									}
+								}
+							}
+						}
+					]
+				}
+			},
+			{
+				"condition": "minecraft:location_check",
+				"offsetY": -1,
+				"predicate": {
+					"block": {
+						"tag": "gm4_lumos_shamir:torch_unplaceable"
+					}
+				}
+			}
+		]
+	}
+}
