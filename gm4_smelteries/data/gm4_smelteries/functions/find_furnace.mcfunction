@@ -8,3 +8,4 @@ execute if block ~-1 ~ ~ furnace run tp @s ~ ~ ~ 90 0
 execute if block ~ ~ ~1 furnace run tp @s ~ ~ ~ 0 0
 execute if block ~ ~ ~-1 furnace run tp @s ~ ~ ~ 180 0
 execute at @s if block ^ ^ ^1 furnace run tag @s add gm4_bf_has_furnace
+execute at @s unless block ^ ^ ^1 furnace run tp @s ~ ~ ~ 45 0
