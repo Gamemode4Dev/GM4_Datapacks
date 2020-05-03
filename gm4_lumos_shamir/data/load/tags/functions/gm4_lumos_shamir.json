@@ -1,6 +1,6 @@
 {
-    "values": [
-        "#load:gm4_metallurgy",
-        "gm4_lumos_shamir:load"
-    ]
+	"values": [
+		"#load:gm4_metallurgy",
+		"gm4_lumos_shamir:load"
+	]
 }

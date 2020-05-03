@@ -1,123 +1,123 @@
 {
-    "condition": "minecraft:alternative",
-    "terms": [
-      {
-        "condition": "minecraft:location_check",
-        "offsetY": -1,
-        "predicate": {
-          "block": {
-            "tag": "minecraft:trapdoors",
-            "state": {
-              "half": "top",
-              "open": "false"
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "offsetY": -1,
-        "predicate": {
-          "block": {
-            "tag": "gm4_lumos_shamir:torch_placeable"
-          }
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "offsetY": -1,
-        "predicate": {
-          "block": {
-            "block": "minecraft:grindstone",
-            "state": {
-              "face": "floor"
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "offsetY": -1,
-        "predicate": {
-          "block": {
-            "block": "minecraft:piston_head",
-            "state": {
-              "facing": "up"
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "offsetY": -1,
-        "predicate": {
-          "block": {
-            "tag": "gm4_lumos_shamir:fence_gates",
-            "state": {
-              "open": "false"
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "offsetY": -1,
-        "predicate": {
-          "block": {
-            "tag": "minecraft:slabs",
-            "state": {
-              "type": "top"
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "offsetY": -1,
-        "predicate": {
-          "block": {
-            "tag": "minecraft:slabs",
-            "state": {
-              "type": "double"
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "offsetY": -1,
-        "predicate": {
-          "block": {
-            "tag": "minecraft:stairs",
-            "state": {
-              "half": "top"
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "offsetY": -1,
-        "predicate": {
-          "block": {
-            "block": "minecraft:end_portal_frame",
-            "state": {
-              "eye": "true"
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "offsetY": -1,
-        "predicate": {
-          "block": {
-            "block": "minecraft:bell",
-            "state": {
-              "attachment": "floor"
-            }
-          }
-        }
-      }
-    ]
-  }
+	"condition": "minecraft:alternative",
+	"terms": [
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"tag": "minecraft:trapdoors",
+					"state": {
+						"half": "top",
+						"open": "false"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"tag": "gm4_lumos_shamir:torch_placeable"
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"block": "minecraft:grindstone",
+					"state": {
+						"face": "floor"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"block": "minecraft:piston_head",
+					"state": {
+						"facing": "up"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"tag": "gm4_lumos_shamir:fence_gates",
+					"state": {
+						"open": "false"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"tag": "minecraft:slabs",
+					"state": {
+						"type": "top"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"tag": "minecraft:slabs",
+					"state": {
+						"type": "double"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"tag": "minecraft:stairs",
+					"state": {
+						"half": "top"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"block": "minecraft:end_portal_frame",
+					"state": {
+						"eye": "true"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"block": "minecraft:bell",
+					"state": {
+						"attachment": "floor"
+					}
+				}
+			}
+		}
+	]
+}
