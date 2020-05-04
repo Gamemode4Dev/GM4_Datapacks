@@ -2,5 +2,5 @@
 # run from process or main
 
 particle explosion ~ ~0.5 ~
-loot spawn ~ ~ ~ loot gm4_ender_hoppers:destroy
+loot spawn ~ ~0.6 ~ loot gm4_ender_hoppers:destroy_ender_hopper
 kill @s
