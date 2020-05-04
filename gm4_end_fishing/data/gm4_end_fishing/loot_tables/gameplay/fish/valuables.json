@@ -50,7 +50,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_entity:{id:\"end_phantom\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"entity\",id:\"end_phantom\"}}}"
             }
           ]
         },
@@ -140,7 +140,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_entity:{id:\"end_phantom\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"entity\",id:\"end_phantom\"}}}"
             }
           ]
         }

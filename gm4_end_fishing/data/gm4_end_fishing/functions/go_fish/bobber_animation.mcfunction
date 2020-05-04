@@ -1,5 +1,5 @@
 #@s = fishing bait armor stand with fish
-#run from pulse_check
+#run from tick
 
 scoreboard players add @s gm4_ef_data 1
 execute if score @s gm4_ef_data matches 1 at @s run playsound minecraft:entity.ender_dragon.flap neutral @a[distance=..50] ~ ~ ~ 4 0.7

@@ -1,5 +1,5 @@
-#@s = fishing bobber positioned ^ ^ ^-4.5
-#run from pulse_check
+#@s = fishing bobber positioned ~ ~-5 ~
+#run from tick
 
 summon minecraft:armor_stand ~ ~ ~ {DisabledSlots:2039552,Small:1,Invisible:1,NoGravity:1b,Tags:["gm4_no_edit","gm4_fishing_bait_set"]}
 

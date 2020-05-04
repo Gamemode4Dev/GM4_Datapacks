@@ -114,7 +114,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_entity:{id:\"endermite\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"entity\",id:\"endermite\"}}}"
             }
           ]
         },
@@ -144,7 +144,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_ef_entity:{id:\"endermite\"}}"
+              "tag": "{gm4_end_fishing:{set_data:{type:\"entity\",id:\"endermite\"}}}"
             }
           ]
         }
