@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:ink_sac",
-      "nbt": "{display:{Name:'\"ink_spitting_squid logo\"'}}"
+      "nbt": "{CustomModelData:1}"
     },
     "title": {
       "translate": "%1$s%3427655$s",

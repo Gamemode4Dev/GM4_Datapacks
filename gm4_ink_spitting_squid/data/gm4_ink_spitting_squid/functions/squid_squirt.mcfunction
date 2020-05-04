@@ -1,5 +1,8 @@
 #@s = a player near a squid in water
-effect give @s nausea 5 0
-effect give @s blindness 5 0
-playsound minecraft:entity.squid.hurt master @a[distance=..2.2] ~ ~ ~ 1 2
+#run from main
+
+effect give @s nausea 5
+effect give @s blindness 5
+playsound minecraft:entity.squid.hurt hostile @a[distance=..5] ~ ~ ~ 1 2
+particle minecraft:squid_ink ^ ^ ^.5 .1 0 .1 0.05 10 normal @s
 advancement grant @s only gm4:ink_spitting_squid
