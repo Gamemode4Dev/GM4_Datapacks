@@ -2,7 +2,9 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "nbt": "{ActiveEffects:[{Id:26b}]}",
+    "effects":{
+      "luck":{}
+    },
     "equipment": {
       "offhand": {
         "item": "minecraft:player_head",
