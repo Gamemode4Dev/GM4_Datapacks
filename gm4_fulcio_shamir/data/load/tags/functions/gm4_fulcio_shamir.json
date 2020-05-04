@@ -1,0 +1,6 @@
+{
+    "values": [
+        "#load:gm4_metallurgy",
+        "gm4_fulcio_shamir:load"
+    ]
+}
