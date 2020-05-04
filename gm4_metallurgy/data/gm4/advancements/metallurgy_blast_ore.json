@@ -22,8 +22,15 @@
   },
   "parent": "gm4:root",
   "criteria": {
-    "metallurgy_blast_ore": {
-      "trigger": "minecraft:impossible"
+    "pickup_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{item:\"ore\"}}"
+          }
+        ]
+      }
     }
   }
 }

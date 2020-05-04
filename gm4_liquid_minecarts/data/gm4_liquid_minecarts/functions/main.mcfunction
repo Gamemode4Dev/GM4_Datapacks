@@ -10,4 +10,5 @@ execute as @e[type=command_block_minecart,tag=gm4_liquid_minecart] at @s run fun
 #minecart level report
 execute as @a[gamemode=!spectator] at @s run function gm4_liquid_minecarts:level_report_ray
 
+#self-perpetuating clock
 schedule function gm4_liquid_minecarts:main 16t

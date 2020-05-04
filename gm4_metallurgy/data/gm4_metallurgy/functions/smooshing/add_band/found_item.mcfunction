@@ -4,3 +4,4 @@ data modify entity @s Item.tag.gm4_metallurgy.ore_type set from entity @e[type=i
 data modify entity @s Item.tag.display.Lore set from entity @e[type=item,tag=gm4_ml_source,dx=0,limit=1] Item.tag.display.Lore
 data modify entity @s Item.tag.gm4_metallurgy.custom_model_data set from entity @e[type=item,tag=gm4_ml_source,dx=0,limit=1] Item.tag.gm4_metallurgy.custom_model_data
 execute unless data entity @s Item.tag.CustomModelData run data modify entity @s Item.tag.CustomModelData set from entity @s Item.tag.gm4_metallurgy.custom_model_data
+function #gm4_metallurgy:apply_band

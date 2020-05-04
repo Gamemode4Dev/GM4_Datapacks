@@ -1,24 +1,33 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description":"A Gamemode 4 Module"
-  },
-  "module_name":"Boots of Ostara",
-  "module_id":"boots_of_ostara",
-  "site_description":"Plant crops and more, just by walking! Also negates Desire Lines.",
-  "site_categories":[
-    "Custom Crafting"
-  ],
-  "video_link":"https://www.youtube.com/watch?v=H4UGM6_wGCE",
-  "wiki_link":"https://wiki.gm4.co/wiki/Boots_of_Ostara",
-  "required_modules":[],
-  "recommended_modules":["desire_lines","better_armour_stands"],
-  "credits":{
-    "Creator":[
-      ["The8BitMonkey","https://www.youtube.com/the8bitmonkey"]
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Boots of Ostara",
+    "module_id": "boots_of_ostara",
+    "site_description": "Plant crops and more, just by walking! Also negates Desire Lines.",
+    "site_categories": [
+        "Custom Crafting"
     ],
-    "Updated by":[
-      ["Misode","https://twitter.com/misoloo"]
-    ]
-  }
+    "video_link": "https://www.youtube.com/watch?v=H4UGM6_wGCE",
+    "wiki_link": "https://wiki.gm4.co/wiki/Boots_of_Ostara",
+    "required_modules": [],
+    "recommended_modules": [
+        "desire_lines",
+        "better_armour_stands"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "The8BitMonkey",
+                "https://www.youtube.com/the8bitmonkey"
+            ]
+        ],
+        "Updated by": [
+            [
+                "Misode",
+                "https://twitter.com/misoloo"
+            ]
+        ]
+    }
 }

@@ -8,7 +8,7 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Curse of Binding",
-        {"translate": "advancement.gm4.book_binders.bind"}
+        {"translate": "advancement.gm4.book_binders_bind.title"}
       ]
     },
     "description": {

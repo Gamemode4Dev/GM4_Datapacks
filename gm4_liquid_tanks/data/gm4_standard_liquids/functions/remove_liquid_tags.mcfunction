@@ -8,3 +8,4 @@ tag @s remove gm4_lt_milk
 tag @s remove gm4_lt_mushroom_stew
 tag @s remove gm4_lt_rabbit_stew
 tag @s remove gm4_lt_water
+tag @s remove gm4_lt_honey
