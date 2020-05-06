@@ -16,7 +16,16 @@ execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:splash_potion"}]}
 execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:lingering_potion"}]}] run function gm4_crossbow_cartridges:projectile/lingerpotion
 
 #torch
-execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:torch"}]}] run function gm4_crossbow_cartridges:projectile/torch
+execute if entity @s[gamemode=!adventure,nbt={Inventory:[{Slot:-106b,id:"minecraft:torch"}]}] run function gm4_crossbow_cartridges:projectile/torch
 
 #fireball
-execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:fire_charge"}]}] run function gm4_crossbow_cartridges:projectile/fireball
+execute if entity @s[gamemode=!adventure,nbt={Inventory:[{Slot:-106b,id:"minecraft:fire_charge"}]}] run function gm4_crossbow_cartridges:projectile/fireball
+
+#string
+execute if entity @s[gamemode=!adventure,nbt={Inventory:[{Slot:-106b,id:"minecraft:string"}]}] run function gm4_crossbow_cartridges:cables/shoot_arrow
+
+#bloo
+#execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:player_head"}]}] run function gm4_crossbow_cartridges:projectile/bloo
+
+#player head
+execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:player_head"}]}] run function gm4_crossbow_cartridges:projectile/playerhead
