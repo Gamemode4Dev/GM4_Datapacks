@@ -23,9 +23,3 @@ execute if entity @s[gamemode=!adventure,nbt={Inventory:[{Slot:-106b,id:"minecra
 
 #string
 execute if entity @s[gamemode=!adventure,nbt={Inventory:[{Slot:-106b,id:"minecraft:string"}]}] run function gm4_crossbow_cartridges:cables/shoot_arrow
-
-#bloo
-#execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:player_head"}]}] run function gm4_crossbow_cartridges:projectile/bloo
-
-#player head
-execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:player_head"}]}] run function gm4_crossbow_cartridges:projectile/playerhead

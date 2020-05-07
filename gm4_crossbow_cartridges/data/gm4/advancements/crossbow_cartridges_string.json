@@ -1,0 +1,33 @@
+{
+    "display": {
+        "icon": {
+            "item": "string",
+            "nbt": "{display:{Name:\"\\\"crossbow_cartridges logo\\\"\"},CustomModelData:1}"
+        },
+        "title": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Almost a Grappling Hook",
+                {
+                    "translate": "advancement.gm4.crossbow_cartridges_string.title"
+                }
+            ]
+        },
+        "description": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Create a 40-block long string line",
+                {
+                    "translate": "advancement.gm4.crossbow_cartridges_string.description"
+                }
+            ],
+            "color": "gray"
+        }
+    },
+    "parent": "gm4:root",
+    "criteria": {
+        "exterior_trigger": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

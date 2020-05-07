@@ -1,11 +1,15 @@
-#@s refers to player shooting the arrow
-#run from advancement shot_spooled_crossbow
+#run from check_projectile
+#@s = player using the crossbow
 
-#give advancement
-#advancement grant @s only gm4:almost_a_grappling_hook
+#kill arrow
+kill @e[type=minecraft:arrow,distance=..2,limit=1,sort=nearest]
 
-execute as @a run function gm4_crossbow_cartridges:cables/update_scoreboards
+#store amount of string on the player
+execute store result score @s gm4_cb_strcount run clear @s minecraft:string 0
 
-#gm4_rot_y -20..20 means looking relatively near to horizon
-execute at @s if score @s gm4_rot_x matches -15..15 if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:string"}]}] if block ~ ~1 ~ minecraft:tripwire_hook run function gm4_crossbow_cartridges:cables/determine_direction
-#execute at @s if score @s gm4_rot_x matches -15..15 if entity @s[gamemode=creative] run function gm4_crossbow_cartridges:cables/determine_direction
+#reset scoreboard to 0
+scoreboard players set @s gm4_cb_strplace 0
+
+#check direction if player is looking at horizon, with a tripwire hook at their feet or eye level
+execute at @s[x_rotation=-15..15] if block ~ ~1.5 ~ minecraft:tripwire_hook positioned ~ ~1 ~ run function gm4_crossbow_cartridges:cables/determine_direction
+execute at @s[x_rotation=-15..15] unless block ~ ~1.5 ~ minecraft:tripwire_hook if block ~ ~0.5 ~ minecraft:tripwire_hook run function gm4_crossbow_cartridges:cables/determine_direction

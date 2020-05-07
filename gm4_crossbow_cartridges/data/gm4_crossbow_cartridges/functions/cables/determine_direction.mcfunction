@@ -1,22 +1,19 @@
-#@s refers to a player who has just shot a crossbow
-#run from shoot_arrow in order to reduce the amount of identical checks performed (EnCaPSulAtIoN)
+#run from cables/shoot_arrow
+#@s = player using the crossbow
 
-#reset scoreboard to 0
-scoreboard players set string_placed gm4_string_count 0
-
-#south
-execute positioned ~ ~1.62 ~1 if block ~ ~ ~ #gm4_crossbow_cartridges:airtype if score @s gm4_rot_y matches -20..20 run function gm4_crossbow_cartridges:cables/unspool_string_south
-execute positioned ~ ~1.62 ~1 if block ~ ~ ~ #gm4_crossbow_cartridges:airtype if score @s gm4_rot_y matches -360..-340 run function gm4_crossbow_cartridges:cables/unspool_string_south
-execute positioned ~ ~1.62 ~1 if block ~ ~ ~ #gm4_crossbow_cartridges:airtype if score @s gm4_rot_y matches 340..360 run function gm4_crossbow_cartridges:cables/unspool_string_south
+#south - extra check because -360, 0, and 360 are all the same angle
+execute positioned ~ ~ ~1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=-10..10] run function gm4_crossbow_cartridges:cables/unspool_string_south
+execute positioned ~ ~ ~1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=-360..-350] run function gm4_crossbow_cartridges:cables/unspool_string_south
+execute positioned ~ ~ ~1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=350..360] run function gm4_crossbow_cartridges:cables/unspool_string_south
 
 #west
-execute positioned ~-1 ~1.62 ~ if block ~ ~ ~ #gm4_crossbow_cartridges:airtype if score @s gm4_rot_y matches 70..110 run function gm4_crossbow_cartridges:cables/unspool_string_west
-execute positioned ~-1 ~1.62 ~ if block ~ ~ ~ #gm4_crossbow_cartridges:airtype if score @s gm4_rot_y matches -290..-250 run function gm4_crossbow_cartridges:cables/unspool_string_west
+execute positioned ~-1 ~ ~ if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=80..100] run function gm4_crossbow_cartridges:cables/unspool_string_west
+execute positioned ~-1 ~ ~ if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=-280..-260] run function gm4_crossbow_cartridges:cables/unspool_string_west
 
 #north
-execute positioned ~ ~1.62 ~-1 if block ~ ~ ~ #gm4_crossbow_cartridges:airtype if score @s gm4_rot_y matches 160..200 run function gm4_crossbow_cartridges:cables/unspool_string_north
-execute positioned ~ ~1.62 ~-1 if block ~ ~ ~ #gm4_crossbow_cartridges:airtype if score @s gm4_rot_y matches -200..-160 run function gm4_crossbow_cartridges:cables/unspool_string_north
+execute positioned ~ ~ ~-1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=170..190] run function gm4_crossbow_cartridges:cables/unspool_string_north
+execute positioned ~ ~ ~-1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=-190..-170] run function gm4_crossbow_cartridges:cables/unspool_string_north
 
 #east
-execute positioned ~1 ~1.62 ~ if block ~ ~ ~ #gm4_crossbow_cartridges:airtype if score @s gm4_rot_y matches 250..290 run function gm4_crossbow_cartridges:cables/unspool_string_east
-execute positioned ~1 ~1.62 ~ if block ~ ~ ~ #gm4_crossbow_cartridges:airtype if score @s gm4_rot_y matches -110..-70 run function gm4_crossbow_cartridges:cables/unspool_string_east
+execute positioned ~1 ~ ~ if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=260..280] run function gm4_crossbow_cartridges:cables/unspool_string_east
+execute positioned ~1 ~ ~ if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=-100..-80] run function gm4_crossbow_cartridges:cables/unspool_string_east
