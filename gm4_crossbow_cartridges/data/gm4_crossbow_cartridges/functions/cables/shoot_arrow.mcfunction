@@ -1,9 +1,6 @@
 #run from check_projectile
 #@s = player using the crossbow
 
-#kill arrow
-kill @e[type=minecraft:arrow,distance=..2,limit=1,sort=nearest]
-
 #store amount of string on the player
 execute store result score @s gm4_cb_strcount run clear @s minecraft:string 0
 
