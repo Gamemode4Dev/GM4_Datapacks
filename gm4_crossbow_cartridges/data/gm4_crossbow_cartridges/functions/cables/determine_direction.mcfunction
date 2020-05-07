@@ -1,9 +1,6 @@
 #run from cables/shoot_arrow
 #@s = player using the crossbow
 
-#kill arrow
-kill @e[type=minecraft:arrow,distance=..2,limit=1,sort=nearest]
-
 #south - extra check because -360, 0, and 360 are all the same angle
 execute positioned ~ ~ ~1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=-10..10] run function gm4_crossbow_cartridges:cables/unspool_string_south
 execute positioned ~ ~ ~1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=-360..-350] run function gm4_crossbow_cartridges:cables/unspool_string_south
