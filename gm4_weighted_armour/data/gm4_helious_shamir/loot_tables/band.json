@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_metallurgy:{stored_shamir:\"helios\",custom_model_data:103}}"
+                            "tag": "{gm4_metallurgy:{stored_shamir:\"helious\",custom_model_data:103}}"
                         },
                         {
                             "function": "minecraft:set_lore",
@@ -18,9 +18,9 @@
                                 {
                                     "translate": "%1$s%3427655$s",
                                     "with": [
-                                        "Helios",
+                                        "helious",
                                         {
-                                            "translate": "item.gm4.shamir.helios"
+                                            "translate": "item.gm4.shamir.helious"
                                         }
                                     ],
                                     "italic": false,
