@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "string",
-            "nbt": "{display:{Name:\"\\\"crossbow_cartridges logo\\\"\"},CustomModelData:1}"
+            "nbt": "{CustomModelData:1}"
         },
         "title": {
             "translate": "%1$s%3427655$s",
@@ -16,7 +16,7 @@
         "description": {
             "translate": "%1$s%3427655$s",
             "with": [
-                "Create a 40-block long string line",
+                "Create a 40-block long string line using a crossbow",
                 {
                     "translate": "advancement.gm4.crossbow_cartridges_string.description"
                 }
@@ -24,9 +24,9 @@
             "color": "gray"
         }
     },
-    "parent": "gm4:root",
+    "parent": "gm4:crossbow_cartridges_fish",
     "criteria": {
-        "exterior_trigger": {
+        "shoot_fish": {
             "trigger": "minecraft:impossible"
         }
     }

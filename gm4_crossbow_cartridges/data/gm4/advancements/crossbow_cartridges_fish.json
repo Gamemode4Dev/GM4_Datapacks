@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "tropical_fish_bucket",
-            "nbt": "{display:{Name:\"\\\"crossbow_cartridges logo\\\"\"},CustomModelData:1}"
+            "nbt": "{CustomModelData:1}"
         },
         "title": {
             "translate": "%1$s%3427655$s",
