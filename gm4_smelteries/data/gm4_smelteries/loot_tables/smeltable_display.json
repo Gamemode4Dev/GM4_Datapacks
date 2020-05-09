@@ -138,12 +138,8 @@
                                     }
                                 }
                             ]
-                        },
-                        {
-                            "type": "minecraft:item",
-                            "name": "minecraft:gray_stained_glass"
                         }
-                    ]
+										]
                 }
             ]
         }
