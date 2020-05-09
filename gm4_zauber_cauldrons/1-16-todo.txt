@@ -1,0 +1,6 @@
+forceloaded chunk:
+- gm4_zauber_cauldrons:player/multi_use_bottle/take_sip line 6
+- gm4_zauber_cauldrons:player/multi_use_bottle/modify_bottle lines 21, 24, 25
+
+soul fire:
+- gm4_zauber_cauldrons:cauldron/structure/check lines 10, 11, 12
