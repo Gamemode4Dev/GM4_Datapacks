@@ -1,6 +1,6 @@
 # @s=boiling cauldron with valid structure
 # at @s
-# run from structure_check
+# run from cauldron/structure/check
 
 particle poof ~ ~ ~ .005 .2 .005 .0005 4
 

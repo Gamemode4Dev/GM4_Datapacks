@@ -1,6 +1,6 @@
 # @s boiling zauber cauldron with valid structure and item(s) inside.
 # at @s
-# ran from valid_structure
+# ran from cauldron/structure/valid
 
 # branches off into different module components
 

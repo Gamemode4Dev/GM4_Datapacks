@@ -15,7 +15,7 @@ execute if score @s gm4_zc_data matches 1 if block ~ ~-3 ~ soul_sand run scorebo
 execute if score @s gm4_zc_data matches 0 if block ~ ~ ~ cauldron[level=0] align xyz if entity @e[type=rabbit,dx=0,dy=0,dz=0] if entity @a[gamemode=!spectator,predicate=gm4_zauber_cauldrons:player/equipment/armor/full,distance=..2] run function gm4_zauber_cauldrons:cauldron/rabbit_teleportation
 
 # run final inits on valid structures
-execute if score @s gm4_zc_data matches 1 run function gm4_zauber_cauldrons:cauldron/valid_structure
+execute if score @s gm4_zc_data matches 1 run function gm4_zauber_cauldrons:cauldron/structure/valid
 
 # reset fake players
 scoreboard players reset has_blue_fire gm4_zc_data
