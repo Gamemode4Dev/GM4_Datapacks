@@ -8,4 +8,5 @@ execute if entity @s[tag=gm4_looking_for_log] as @e[type=item,limit=1,distance=.
 execute if entity @s[tag=gm4_looking_for_log] as @e[type=item,limit=1,distance=..5,sort=nearest,nbt={Age:0s,Item:{id:"minecraft:birch_log"}}] at @s run function gm4_arborenda_shamir:init_fell_birch
 execute if entity @s[tag=gm4_looking_for_log] as @e[type=item,limit=1,distance=..5,sort=nearest,nbt={Age:0s,Item:{id:"minecraft:jungle_log"}}] at @s run function gm4_arborenda_shamir:init_fell_jungle
 execute if entity @s[tag=gm4_looking_for_log] as @e[type=item,limit=1,distance=..5,sort=nearest,nbt={Age:0s,Item:{id:"minecraft:dark_oak_log"}}] at @s run function gm4_arborenda_shamir:init_fell_dark_oak
+execute if entity @s[tag=gm4_looking_for_log] as @e[type=item,limit=1,distance=..5,sort=nearest,nbt={Age:0s,Item:{id:"minecraft:mushroom_stem"}}] at @s run function gm4_arborenda_shamir:init_fell_mushroom
 tag @s remove gm4_looking_for_log

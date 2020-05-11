@@ -22,4 +22,12 @@ execute if score @s[tag=gm4_oak_feller] gm4_arb_stat matches 1.. run function gm
 execute store result score @s[tag=gm4_spruce_feller] gm4_arb_stat run fill ~1 ~1 ~1 ~-1 ~1 ~-1 air replace spruce_log
 execute if score @s[tag=gm4_spruce_feller] gm4_arb_stat matches 1.. run function gm4_arborenda_shamir:fell_spruce
 
+execute store result score @s[tag=gm4_mushroom_stem_feller] gm4_arb_stat run fill ~3 ~1 ~3 ~-3 ~1 ~-3 air replace mushroom_stem
+execute store result score @s[tag=gm4_red_mushroom_feller] gm4_arb_stat run fill ~3 ~1 ~3 ~-3 ~0 ~-3 air replace red_mushroom_block
+execute store result score @s[tag=gm4_brown_mushroom_feller] gm4_arb_stat run fill ~3 ~1 ~3 ~-3 ~1 ~-3 air replace brown_mushroom_block
+execute if score @s[tag=gm4_mushroom_stem_feller] gm4_arb_stat matches 1.. run function gm4_arborenda_shamir:fell_mushroom
+execute if score @s[tag=gm4_red_mushroom_feller] gm4_arb_stat matches 1.. run function gm4_arborenda_shamir:fell_mushroom
+execute if score @s[tag=gm4_brown_mushroom_feller] gm4_arb_stat matches 1.. run function gm4_arborenda_shamir:fell_mushroom
+
+
 tp @s ~ ~1 ~

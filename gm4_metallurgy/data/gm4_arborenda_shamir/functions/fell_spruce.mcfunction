@@ -1,4 +1,4 @@
-#run from destroy_tree
+#run from destroy_trunk
 #@s = spruce logging aec
 particle block spruce_log ~ ~1 ~ 0.3 0.2 0.3 0.3 10
 playsound block.wood.break master @a
