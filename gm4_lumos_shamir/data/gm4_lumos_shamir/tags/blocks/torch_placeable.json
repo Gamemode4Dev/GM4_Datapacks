@@ -226,6 +226,12 @@
 		"minecraft:purpur_block",
 		"minecraft:purpur_pillar",
 		"minecraft:barrier",
-		"minecraft:bedrock"
+		"minecraft:bedrock",
+		"minecraft:spawner",
+		"minecraft:structure_block",
+		"minecraft:jigsaw",
+		"minecraft:command_block",
+		"minecraft:chain_command_block",
+		"minecraft:repeating_command_block"
 	]
 }
