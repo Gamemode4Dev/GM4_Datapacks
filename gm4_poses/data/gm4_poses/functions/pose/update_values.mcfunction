@@ -6,3 +6,6 @@ execute store result score @s gm4_pose_rotA run data get entity @s Rotation[0]
 
 #rotation offset
 scoreboard players operation @s gm4_pose_rotPy -= @s gm4_pose_rotA
+
+playsound minecraft:block.wooden_button.click_on player @a[distance=..5]
+tag @s add gm4_pose_changed

@@ -7,3 +7,6 @@ data modify entity @s Pose.RightLeg set from entity @s Pose.LeftLeg
 data modify entity @s Pose.LeftLeg set from entity @e[tag=gm4_pose_temp,distance=..1,limit=1] Pose.RightLeg
 
 kill @e[tag=gm4_pose_temp,distance=..1]
+
+playsound minecraft:block.wooden_button.click_on player @a[distance=..5]
+tag @s add gm4_pose_changed

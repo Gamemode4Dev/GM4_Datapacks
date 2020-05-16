@@ -10,5 +10,5 @@ data merge entity @s {Item:{tag:{HideFlags:1,Enchantments:[{id:"minecraft:protec
 
 #copy confirm
 particle item armor_stand ~ ~ ~ .2 1 .2 0 20
-playsound minecraft:block.wood.break player @a ~ ~ ~ 2 .2
+playsound minecraft:block.wood.break player @a[distance=..5] ~ ~ ~ 1 .2
 tag @s add gm4_pose_copied
