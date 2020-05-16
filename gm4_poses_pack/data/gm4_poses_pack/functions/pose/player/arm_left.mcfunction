@@ -1,6 +1,6 @@
 # @s = armor_stand ..1 from written book
 
-function gm4_poses:pose/update_values
+function gm4_poses_pack:pose/update_values
 data merge entity @s {Pose:{LeftArm:[0f,0f,0f]}}
 
 data modify entity @s Pose.LeftArm[2] set value 0f
