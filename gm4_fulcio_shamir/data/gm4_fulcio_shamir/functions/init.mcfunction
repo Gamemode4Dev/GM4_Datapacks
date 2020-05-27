@@ -4,5 +4,6 @@ execute unless score fulcio_shamir gm4_modules matches 1 run data modify storage
 scoreboard players set fulcio_shamir gm4_modules 1
 
 schedule function gm4_fulcio_shamir:main 1t
+schedule function gm4_fulcio_shamir:4_tick 1t
 
 #$moduleUpdateList
