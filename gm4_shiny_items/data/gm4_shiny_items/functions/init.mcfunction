@@ -8,6 +8,5 @@ execute unless score shiny_items gm4_modules matches 1 run data modify storage g
 scoreboard players set shiny_items gm4_modules 1
 
 schedule function gm4_shiny_items:main 10t
-schedule function gm4_shiny_items:tick 10t
 
 #$moduleUpdateList

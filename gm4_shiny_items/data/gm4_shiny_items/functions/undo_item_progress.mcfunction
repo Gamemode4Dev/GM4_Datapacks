@@ -3,7 +3,7 @@
 
 playsound minecraft:entity.puffer_fish.blow_out ambient @a[distance=..15] ~ ~ ~ .3 .8
  
-data remove entity @s Item.tag.HideFlags
+data remove entity @s Item.tag.unstackable
 
 # Refund XP
 summon minecraft:experience_orb ~ ~ ~ {Value:0,Tags:["gm4_refund_xp","gm4_shiny_blacklist"]}

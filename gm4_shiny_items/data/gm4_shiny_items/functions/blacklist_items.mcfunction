@@ -5,16 +5,12 @@
 execute if entity @s[tag=!gm4_shiny_blacklist] unless entity @s[nbt={Item:{Count:1b}}] run tag @s add gm4_shiny_blacklist
 
 ### ITEMS THAT COULD CAUSE PROBLEMS ###
-# Could cause player to get item with tag "HideTags:44"
+# Could cause player to get item with tag "unstackable:1b"
 execute if entity @s[tag=!gm4_shiny_blacklist] if block ~ ~-.6 ~ hopper run tag @s add gm4_shiny_blacklist
 
 ### ITEMS THAT ALREADY HAVE ENCHANTMENT GLOW ###
 # Enchanted Items
-execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{tag:{Enchantments:[{lvl:1s}]}}}] run tag @s add gm4_shiny_blacklist
-execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{tag:{Enchantments:[{lvl:2s}]}}}] run tag @s add gm4_shiny_blacklist
-execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{tag:{Enchantments:[{lvl:3s}]}}}] run tag @s add gm4_shiny_blacklist
-execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{tag:{Enchantments:[{lvl:4s}]}}}] run tag @s add gm4_shiny_blacklist
-execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{tag:{Enchantments:[{lvl:5s}]}}}] run tag @s add gm4_shiny_blacklist
+execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{tag:{Enchantments:[{}]}}}] run tag @s add gm4_shiny_blacklist
 # Misc (1)
 execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:enchanted_book"}}] run tag @s add gm4_shiny_blacklist
 # Bottles (4)
@@ -33,6 +29,7 @@ execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:crossbow"
 execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:trident"}}] run tag @s add gm4_shiny_blacklist
 execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:shield"}}] run tag @s add gm4_shiny_blacklist
 execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}] run tag @s add gm4_shiny_blacklist
+execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:golden_apple"}}] run tag @s add gm4_shiny_blacklist
 # Swords (5)
 execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:wooden_sword"}}] run tag @s add gm4_shiny_blacklist
 execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:stone_sword"}}] run tag @s add gm4_shiny_blacklist
@@ -71,6 +68,7 @@ execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:iron_helm
 execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:diamond_helmet"}}] run tag @s add gm4_shiny_blacklist
 execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:golden_helmet"}}] run tag @s add gm4_shiny_blacklist
 # Chestplates (5)
+execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:elytra"}}] run tag @s add gm4_shiny_blacklist
 execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:leather_chestplate"}}] run tag @s add gm4_shiny_blacklist
 execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:golden_chestplate"}}] run tag @s add gm4_shiny_blacklist
 execute if entity @s[tag=!gm4_shiny_blacklist,nbt={Item:{id:"minecraft:chainmail_chestplate"}}] run tag @s add gm4_shiny_blacklist
