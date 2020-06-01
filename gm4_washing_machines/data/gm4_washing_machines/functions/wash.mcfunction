@@ -1,4 +1,4 @@
-#@s = water tank with item in first slot 
+#@s = water tank with item in first slot
 #run from item_fill
 
 #glass
