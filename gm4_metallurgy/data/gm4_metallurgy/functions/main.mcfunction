@@ -18,7 +18,7 @@ scoreboard players set levity_active gm4_ml_data 0
 scoreboard players add current_sensus_layer gm4_ml_data 1
 execute if score current_sensus_layer gm4_ml_data matches 6.. run scoreboard players set current_sensus_layer gm4_ml_data 0
 
-execute as @a[gamemode=!spectator] run function gm4_metallurgy:player
+execute as @a run function gm4_metallurgy:player
 
 execute as @e[scores={gm4_bolt_time=1..}] at @s run function gm4_ender_bolt_shamir:main
 scoreboard players reset * gm4_bolt_damage
