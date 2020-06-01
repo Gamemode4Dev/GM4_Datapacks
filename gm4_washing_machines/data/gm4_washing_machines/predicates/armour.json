@@ -1,0 +1,37 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:leather_helmet\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:leather_chestplate\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:leather_leggings\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:leather_boots\", Slot: 0b}]}"
+        }
+      }
+    }
+  ]
+}

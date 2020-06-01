@@ -1,0 +1,125 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:orange_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:magenta_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:light_blue_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:yellow_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:lime_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:pink_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:gray_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:light_gray_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:cyan_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:purple_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:blue_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:brown_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:green_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:red_wool\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:black_wool\", Slot: 0b}]}"
+        }
+      }
+    }
+  ]
+}

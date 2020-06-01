@@ -1,0 +1,133 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:white_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:orange_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:magenta_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:light_blue_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:yellow_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:lime_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:pink_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:gray_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:light_gray_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:cyan_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:purple_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:blue_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:brown_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:green_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:red_terracotta\", Slot: 0b}]}"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "nbt": "{Items: [{id: \"minecraft:black_terracotta\", Slot: 0b}]}"
+        }
+      }
+    }
+  ]
+}
