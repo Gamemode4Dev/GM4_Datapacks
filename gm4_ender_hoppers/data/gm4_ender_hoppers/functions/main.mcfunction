@@ -1,5 +1,10 @@
-execute as @e[type=item,nbt={Item:{id:"minecraft:ender_eye",Count:1b},OnGround:1b}] at @s if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:ender_pearl",Count:2b},{Slot:1b,id:"minecraft:iron_block",Count:2b},{Slot:2b,id:"minecraft:diamond_block",Count:1b},{Slot:3b,id:"minecraft:iron_block",Count:2b},{Slot:4b,id:"minecraft:ender_pearl",Count:2b}]} align xyz unless entity @e[type=armor_stand,tag=gm4_ender_hopper,limit=1,dx=0,dy=0,dz=0] positioned ~0.5 ~0.5 ~0.5 run function gm4_ender_hoppers:create
+# kill display armor stands when the ender hopper minecart was removed
+execute as @e[tag=gm4_ender_hoppers_display] at @s positioned ~ ~-0.1 ~ unless entity @e[type=hopper_minecart,tag=gm4_ender_hopper,distance=..0.01] run function gm4_ender_hoppers:destroy
 
-execute as @e[type=armor_stand,tag=gm4_ender_hopper] at @s run function gm4_ender_hoppers:update
+#tank creation from ender_eye item
+execute as @e[type=item,tag=!gm4_ender_hoppers_checked,nbt={Item:{id:"minecraft:ender_eye",Count:1b},OnGround:1b}] at @s run function gm4_ender_hoppers:ender_eye
+
+execute as @e[type=#gm4_ender_hoppers:ender_hopper,tag=gm4_ender_hopper] at @s run function gm4_ender_hoppers:process
+
 
 schedule function gm4_ender_hoppers:main 16t
