@@ -10,7 +10,7 @@
           "functions":[
             {
               "function": "set_nbt",
-              "tag":  "{display:{Name:\"{\\\"translate\\\":\\\"%1$s\\\",\\\"with\\\":[\\\"Honey Comb\\\",\\\"item.gm4.honey_comb\\\"],\\\"italic\\\":\\\"false\\\",\\\"color\\\":\\\"white\\\"}\"},gm4_ambrosia:{item:\"honey_comb\"},SkullOwner: {Id: \"d24e344a-2458-459a-bfe9-ff579a0b2e7c\", Properties: {textures: [{Value: \"eyJ0aW1lc3RhbXAiOjE1NjczMzMxNjY5NjAsInByb2ZpbGVJZCI6ImQxNWU1MTVhMjA1ODQ1OWFiZmU5ZmY1NzlhMGQyZTdjIiwicHJvZmlsZU5hbWUiOiJCbHVlZmlyZTYxMCIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8zZDViYTRhYWYwNWY4OWFhZWZhZWNiM2UzYThjZjNkZjYwOGE3YTc1ZjBkZWEyYjFlZmRjYzhmNGM0ZGQyZmU5In19fQ==\"}]}}}"
+              "tag":  "{display:{Name:\"{\\\"translate\\\":\\\"%1$s\\\",\\\"with\\\":[\\\"Honey Comb\\\",\\\"item.gm4.honey_comb\\\"],\\\"italic\\\":\\\"false\\\",\\\"color\\\":\\\"white\\\"}\"},gm4_ambrosia:{item:\"honey_comb\"},SkullOwner: {Id: [I;-766626742,609764762,-1075183785,-1710543236], Properties: {textures: [{Value: \"eyJ0aW1lc3RhbXAiOjE1NjczMzMxNjY5NjAsInByb2ZpbGVJZCI6ImQxNWU1MTVhMjA1ODQ1OWFiZmU5ZmY1NzlhMGQyZTdjIiwicHJvZmlsZU5hbWUiOiJCbHVlZmlyZTYxMCIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8zZDViYTRhYWYwNWY4OWFhZWZhZWNiM2UzYThjZjNkZjYwOGE3YTc1ZjBkZWEyYjFlZmRjYzhmNGM0ZGQyZmU5In19fQ==\"}]}}}"
             }
           ]
         }
