@@ -3,9 +3,9 @@
 #run from count_chorus
 
 #generate random coordinate offset from UUID of items in cauldron
-execute store result score dx gm4_zc_data run data get entity @e[type=item,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}},limit=1] UUIDMost -.000000000000000001
-execute store result score dy gm4_zc_data run data get entity @e[type=item,nbt={Item:{id:"minecraft:chorus_fruit"}},limit=1] UUIDMost -.000000000000000001
-execute store result score dz gm4_zc_data run data get entity @e[type=item,nbt={Item:{id:"minecraft:popped_chorus_fruit"}},limit=1] UUIDMost -.000000000000000001
+execute store result score dx gm4_zc_data run data get entity @e[type=item,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}},limit=1] UUID[0]
+execute store result score dy gm4_zc_data run data get entity @e[type=item,nbt={Item:{id:"minecraft:chorus_fruit"}},limit=1] UUID[0]
+execute store result score dz gm4_zc_data run data get entity @e[type=item,nbt={Item:{id:"minecraft:popped_chorus_fruit"}},limit=1] UUID[0]
 
 #get bottled_vex cauldron pos
 execute store result score x gm4_zc_data run data get entity @e[type=item,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}},limit=1] Item.tag.gm4_zauber_cauldrons.cauldron_pos.x
@@ -18,7 +18,7 @@ scoreboard players operation y gm4_zc_data += dy gm4_zc_data
 scoreboard players operation z gm4_zc_data += dz gm4_zc_data
 
 #summon resulting item marked with no kill tag
-execute at @s run summon item ~ ~.2 ~ {Tags:["gm4_zc_new_wormhole_bottle"],Item:{id:potion,Count:1b,tag:{CustomModelData:1,gm4_zauber_cauldrons:{item:"wormhole_bottle"},Potion:"minecraft:thick",CustomPotionColor:6358357,Enchantments:[{id:"minecraft:protection",lvl:0s}],HideFlags:33,display:{Name:'{"translate":"%1$s%3427655$s","with":["Wormhole in a Bottle",{"translate":"item.gm4.wormhole_in_a_bottle"}],"italic":"false"}'}}}}
+execute at @s run summon item ~ ~.2 ~ {Tags:["gm4_zc_new_wormhole_bottle"],Item:{id:"potion",Count:1b,tag:{CustomModelData:1,gm4_zauber_cauldrons:{item:"wormhole_bottle"},Potion:"minecraft:thick",CustomPotionColor:6358357,Enchantments:[{id:"minecraft:protection",lvl:0s}],HideFlags:33,display:{Name:'{"translate":"%1$s%3427655$s","with":["Wormhole in a Bottle",{"translate":"item.gm4.wormhole_in_a_bottle"}],"italic":false}'}}}}
 
 #copy target coordinates to new item
 execute store result entity @e[type=item,dx=0,dy=0,dz=0,tag=gm4_zc_new_wormhole_bottle,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"wormhole_bottle"}}}},limit=1] Item.tag.gm4_zauber_cauldrons.cauldron_pos.x int 1 run scoreboard players get x gm4_zc_data

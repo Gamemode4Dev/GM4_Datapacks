@@ -3,7 +3,7 @@
 # ran from propulsion
 
 #generate random color
-execute store result score color gm4_ps_time run data get entity @s UUIDMost 0.000000000000000001
+execute store result score color gm4_ps_time run data get entity @s UUID[0]
 scoreboard players operation color gm4_ps_time %= modulo gm4_ps_time
 
 #explosion
