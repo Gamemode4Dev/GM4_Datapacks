@@ -1,4 +1,4 @@
-#@s=@a[gamemode=!creative,gamemode=!spectator]
+#@s=@a[gamemode=!eative,gamemode=!spectator]
 #run by player.mcfunction
 
 #check blocks

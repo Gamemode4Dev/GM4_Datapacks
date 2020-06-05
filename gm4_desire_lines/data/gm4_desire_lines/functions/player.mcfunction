@@ -1,4 +1,4 @@
-#@s=@a[gamemode=!spectator,gamemode=!creative]
+#@s=@a[gamemode=!spectator,gamemode=!eative]
 #run by main
 
 scoreboard players operation @s gm4_desire_lines += @s gm4_dl_sprint

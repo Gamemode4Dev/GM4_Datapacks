@@ -6,6 +6,6 @@ scoreboard objectives add gm4_dl_affcoarse dummy
 execute unless score desire_lines gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Desire Lines"}
 scoreboard players set desire_lines gm4_modules 1
 
-schedule function gm4_desire_lines:tick 1t
+schedule function gm4_desire_lines:main 1t
 
 #$moduleUpdateList
