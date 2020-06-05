@@ -47,5 +47,4 @@ execute store result entity @s Offers.Recipes[7].buy.Count byte 1 run scoreboard
 
 # set curer
 execute if data entity @e[type=minecraft:item,limit=1,distance=..3,tag=gm4_gapple] Thrower run function gm4_mob_conversion:set_curer
-data remove entity @s HandItems[1]
 tag @s remove gm4_mob_conversions_needs_init
