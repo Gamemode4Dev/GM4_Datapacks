@@ -8,4 +8,4 @@ execute if predicate gm4_zauber_cauldrons:player/equipment/enchanted_book/in_mai
 # effect players with luck when they crafted it using flowers and remove tag after death
 tag @s[scores={gm4_zc_deaths=1..}] remove gm4_zc_luck
 scoreboard players reset @s gm4_zc_deaths
-effect give @s[tag=gm4_zc_luck] minecraft:luck 8 0 true
+effect give @s[tag=gm4_zc_luck] minecraft:luck 12 0 true
