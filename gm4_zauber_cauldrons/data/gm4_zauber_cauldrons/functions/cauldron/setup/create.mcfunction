@@ -1,6 +1,6 @@
 # @s=player able to create a cauldron
 # at cauldron position
-# ran from playe/submain
+# ran from player/submain
 
 # summon marker AEC
 summon area_effect_cloud ~ ~ ~ {Radius:0,Age:-2147483648,CustomName:'"gm4_zauber_cauldron"',Tags:["gm4_zauber_cauldron"],Particle:"block air"}
