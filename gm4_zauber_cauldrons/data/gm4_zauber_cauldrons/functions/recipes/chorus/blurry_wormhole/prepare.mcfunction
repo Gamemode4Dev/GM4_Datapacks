@@ -3,9 +3,9 @@
 # run from count_chorus
 
 # generate random coordinate offset from UUID of items in cauldron
-execute store result score dx gm4_zc_data run data get entity @e[type=item,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}},limit=1] UUIDMost -.000000000000000001
-execute store result score dy gm4_zc_data run data get entity @e[type=item,nbt={Item:{id:"minecraft:chorus_fruit"}},limit=1] UUIDMost -.000000000000000001
-execute store result score dz gm4_zc_data run data get entity @e[type=item,nbt={Item:{id:"minecraft:popped_chorus_fruit"}},limit=1] UUIDMost -.000000000000000001
+execute store result score dx gm4_zc_data run data get entity @e[type=item,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}},limit=1] UUID[3] 0.000000005
+execute store result score dy gm4_zc_data run data get entity @e[type=item,nbt={Item:{id:"minecraft:chorus_fruit"}},limit=1] UUID[3] 0.000000005
+execute store result score dz gm4_zc_data run data get entity @e[type=item,nbt={Item:{id:"minecraft:popped_chorus_fruit"}},limit=1] UUID[3] 0.000000005
 
 # get bottled_vex cauldron pos
 execute as @e[type=item,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}},limit=1] run function gm4_zauber_cauldrons:recipes/chorus/blurry_wormhole/pull_coordinates
