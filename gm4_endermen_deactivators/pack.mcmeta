@@ -1,7 +1,22 @@
 {
-	"pack": {
-  	"pack_format": 5,
-  	"description": "I Really Hate Endermen"
-	}
+    "pack": {
+        "pack_format": 5,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Endermen Deactivators",
+    "module_id": "endermen_deactivators",
+    "site_description": "Renders Endermen in an area unable to pick up blocks.",
+    "site_categories": [
+        "Endermen Deactivators"
+    ],
+    "wiki_link": "WIKI-URL",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Hozz"
+            ]
+        ]
+    }
 }
-
