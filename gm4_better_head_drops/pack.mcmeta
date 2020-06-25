@@ -1,0 +1,25 @@
+{
+    "pack": {
+        "pack_format": 5,
+        "description": "Gamemode 4 Better Head Drops"
+    },
+    "module_name": "Better Head Drops",
+    "module_id": "better_head_drops",
+    "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+    "site_description": "Recieve player heads when killed by charged creepers and addition skull drops from default mobs",
+    "site_categories": [],
+    "video_link": "YOUTUBE_VIDEO_URL",
+    "wiki_link": "WIKI_URL",
+    "required_modules": [],
+    "recommended_modules": [
+        "undead_players"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "mcpeachpies",
+                "https://youtube.com/mcpeachpies"
+            ]
+        ]
+    }
+}

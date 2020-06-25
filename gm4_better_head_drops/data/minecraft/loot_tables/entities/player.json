@@ -1,0 +1,60 @@
+{
+	"type": "minecraft:entity",
+	"pools": [
+	  {
+		"rolls": 1,
+		"entries": [
+		  {
+			"type": "minecraft:item",
+			"name": "minecraft:player_head",
+			"functions": [
+			  {
+				"function": "minecraft:fill_player_head",
+				"entity": "this"
+			  },
+			  {
+				"function": "minecraft:set_count",
+				"count": 1
+			  }
+			],
+			"conditions": [
+			  {
+				"condition": "minecraft:entity_properties",
+				"entity": "killer",
+				"predicate": {
+				  "type": "minecraft:creeper",
+				  "nbt": "{powered:1b}"
+				}
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+		"rolls": 1,
+		"entries": [
+		  {
+			"type": "minecraft:item",
+			"name": "minecraft:player_head",
+			"functions": [
+			  {
+				"function": "minecraft:fill_player_head",
+				"entity": "this"
+			  }
+			],
+			"conditions": [
+			  {
+				"condition": "minecraft:killed_by_player",
+				"inverse": false
+			  },
+			  {
+				"condition": "minecraft:random_chance_with_looting",
+				"chance": 0.025,
+				"looting_multiplier": 0.01
+			  }
+			]
+		  }
+		]
+	  }
+	]
+  }

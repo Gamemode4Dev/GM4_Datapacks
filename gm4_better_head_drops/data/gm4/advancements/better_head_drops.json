@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:player_head"
+	},
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Decapitation",
+        {"translate": "advancement.gm4.player_head_drops.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Explode a charged Creeper and drop a player head",
+        {"translate": "advancement.gm4.player_head_drops.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+        "c1": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:creeper",
+                    "nbt": "{powered:1b}"
+                }
+            }
+        }
+    }
+}
