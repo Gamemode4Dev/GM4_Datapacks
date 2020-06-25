@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "light_blue_bed",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Well Rested",
+        {"translate": "advancement.gm4.multiplayer_sleeping.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Get a good night's sleep",
+        {"translate": "advancement.gm4.multiplayer_sleeping.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

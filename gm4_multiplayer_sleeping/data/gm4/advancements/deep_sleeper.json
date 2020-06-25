@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "blue_bed",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Deep Sleeper",
+        {"translate": "advancement.gm4.multiplayer_sleeping.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "You've slept for been asleep for a while, time to wake up don't you think?",
+        {"translate": "advancement.gm4.multiplayer_sleeping.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:well_rested",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "pack": {
+        "pack_format": 5,
+        "description": "Gamemode 4 Multiplayer Sleeping for MC1.16"
+    },
+    "module_name": "Multiplayer Sleeping",
+    "module_id": "multiplayer_sleeping",
+    "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+    "site_description": "All for players to sleep on a server without requiring everyone to be in a bed",
+    "site_categories": [
+    	"Server Utilities"
+    ],
+    "video_link": "YOUTUBE_VIDEO_URL",
+    "wiki_link": "WIKI_URL",
+    "required_modules": [],
+    "recommended_modules": [
+    	"afk_detector"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "mcpeachpies",
+                "https://youtube.com/mcpeachpies"
+            ]
+        ]
+    }
+}
