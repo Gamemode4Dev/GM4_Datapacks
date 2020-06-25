@@ -1,0 +1,25 @@
+{
+    "pack": {
+        "pack_format": 5,
+        "description": "AFK Detector"
+    },
+    "module_name": "AFK Detector",
+    "module_id": "afk_detector",
+    "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+    "site_description": "Detect and label players away from their keyboards",
+    "site_categories": [],
+    "video_link": "YOUTUBE_VIDEO_URL",
+    "wiki_link": "WIKI_URL",
+    "required_modules": [],
+    "recommended_modules": [
+        "multiplayer_sleeping"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "mcpeachpies",
+                "https://youtube.com/mcpeachpies"
+            ]
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "bell",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Get back to work!",
+        {"translate": "advancement.gm4.afk_detector.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "You've been away from your keyboard for 24 hours",
+        {"translate": "advancement.gm4.afk_detector.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:you_still_there",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
