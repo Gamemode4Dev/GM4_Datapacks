@@ -1,0 +1,23 @@
+{
+    "pack": {
+        "pack_format": 5,
+        "description": "Gamemode 4 Increased Shulker Shells"
+    },
+    "module_name": "Increased Shulker Shells",
+    "module_id": "increased_shulker_shells",
+  "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+    "site_description": "Receive 1 Shulker shell from every Shulker with a chance to drop 2 shells with Looting!",
+    "site_categories": [],
+    "video_link": "YOUTUBE_VIDEO_URL",
+    "wiki_link": "WIKI_URL",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "mcpeachpies",
+                "https://youtube.com/mcpeachpies"
+            ]
+        ]
+    }
+}
