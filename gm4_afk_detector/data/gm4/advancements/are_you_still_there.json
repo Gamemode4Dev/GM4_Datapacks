@@ -7,7 +7,7 @@
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "You still there?",
+        "Are you still there?",
         {"translate": "advancement.gm4.afk_detector.title"}
       ]
     },

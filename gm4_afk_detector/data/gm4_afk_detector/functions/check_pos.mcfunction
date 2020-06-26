@@ -19,7 +19,7 @@ scoreboard players add @s[scores={gm4_afk_still=3},tag=!gm4_afk] gm4_afk_count 1
 scoreboard players set @s[scores={gm4_afk_still=..2}] gm4_afk_count 0
 scoreboard players add @s[tag=gm4_afk] gm4_afk_total 1
 
-advancement grant @s[scores={gm4_afk_total=1}] only gm4:you_still_there
+advancement grant @s[scores={gm4_afk_total=1}] only gm4:are_you_still_there
 advancement grant @s[scores={gm4_afk_total=86400}] only gm4:get_back_to_work
 
 execute as @s[scores={gm4_afk_count=900..},tag=!gm4_afk] run function gm4_afk_detector:afk_away
