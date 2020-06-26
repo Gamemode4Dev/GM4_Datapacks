@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "dead_bush",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "You still there?",
+        {"translate": "advancement.gm4.afk_detector.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Go away from your keyboard for the first time",
+        {"translate": "advancement.gm4.afk_detector.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
