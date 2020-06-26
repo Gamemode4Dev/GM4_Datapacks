@@ -20,7 +20,7 @@
       "color": "gray"
     }
   },
-  "parent": "gm4:you_still_there",
+  "parent": "gm4:are_you_still_there",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"
