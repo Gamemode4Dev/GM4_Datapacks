@@ -1,0 +1,22 @@
+{
+  "rewards": {
+    "function": "gm4_cozy_campfires:campfire/placement/any"
+  },
+  "criteria": {
+    "place_campfire": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "campfire"
+      }
+    },
+    "place_soul_campfire": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "soul_campfire"
+      }
+    }
+  },
+  "requirements":[
+    ["place_campfire","place_soul_campfire"]
+  ]
+}
