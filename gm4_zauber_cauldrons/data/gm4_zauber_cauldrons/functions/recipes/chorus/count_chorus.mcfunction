@@ -1,6 +1,6 @@
 # @s=boiling zauber cauldron with bottled vex and enchanted_prismarine_shard inside.
 # at align xyz
-# run from cauldron/recipe_checks NOWHERE RN
+# run from cauldron/recipe_checks
 
 # initialise fake players
 scoreboard players set cancel_recipe gm4_zc_data 0

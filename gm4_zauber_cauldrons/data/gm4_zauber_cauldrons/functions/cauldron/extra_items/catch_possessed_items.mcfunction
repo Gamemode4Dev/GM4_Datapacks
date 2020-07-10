@@ -13,6 +13,7 @@ execute store result entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{tag:{gm4_zaub
 execute store result entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}},limit=1] Item.tag.gm4_zauber_cauldrons.cauldron_pos.y int 1 run data get entity @s Pos.[1]
 execute store result entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}},limit=1] Item.tag.gm4_zauber_cauldrons.cauldron_pos.z int 1 run data get entity @s Pos.[2]
 # store dimension in nbt
+# WARNING: THE DIMENSION TAG IS NOT PRESENT ON ALL ENTITIES ANYMORE AS OF 1.16. THE STORED DIMENSION IS WRONG / DEFAULTS TO 0. THIS MUST BE REPLACED WITH A NEW CHECK.
 execute store result entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}},limit=1] Item.tag.gm4_zauber_cauldrons.cauldron_pos.dimension int 1 run data get entity @s Dimension
 
 scoreboard players set bottled_possessed_items gm4_zc_data 1
