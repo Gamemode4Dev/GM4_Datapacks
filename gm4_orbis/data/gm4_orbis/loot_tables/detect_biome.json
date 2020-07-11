@@ -404,7 +404,25 @@
                     {
                       "condition": "minecraft:location_check",
                       "predicate": {
-                        "biome": "minecraft:nether"
+                        "biome": "minecraft:nether_wastes"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:soul_sand_valley"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:crimson_forest"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "biome": "minecraft:warped_forest"
                       }
                     }
                   ]
