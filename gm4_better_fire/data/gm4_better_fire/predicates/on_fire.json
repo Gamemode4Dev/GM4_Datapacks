@@ -1,0 +1,10 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "type": "#gm4_better_fire:entity",
+    "flags": {
+      "is_on_fire": true
+    }
+  }
+}
