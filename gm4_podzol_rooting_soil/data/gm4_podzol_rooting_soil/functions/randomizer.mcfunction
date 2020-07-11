@@ -3,7 +3,7 @@
 # called from gm4_podzol_rooting_soil:process_saplings
 
 # get own uuid into scoreboard and scale into range
-execute store result score current_uuid gm4_podzol_data run data get entity @s UUIDMost 0.00000000023283064365386962890625
+execute store result score current_uuid gm4_podzol_data run data get entity @s UUID[0]
 scoreboard players operation current_uuid gm4_podzol_data %= #100 gm4_podzol_data
 
 # copy into target and shift by random_tick_speed
