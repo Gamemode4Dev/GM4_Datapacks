@@ -1,7 +1,0 @@
-{
-    "values": [
-        "#load:gm4_metallurgy",
-        "#load:gm4_block_compressors",
-        "gm4_tinkering_compressors:load"
-    ]
-}

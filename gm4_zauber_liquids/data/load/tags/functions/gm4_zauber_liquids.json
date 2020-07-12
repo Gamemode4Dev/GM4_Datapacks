@@ -1,7 +1,0 @@
-{
-    "values": [
-        "#load:gm4_liquid_tanks",
-        "#load:gm4_zauber_cauldrons",
-        "gm4_zauber_liquids:load"
-    ]
-}

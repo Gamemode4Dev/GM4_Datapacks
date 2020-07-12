@@ -1,3 +1,0 @@
-replaceitem block ~ ~ ~ container.0 potion{gm4_zauber_cauldrons:{item:"potion",type:"strength"},display:{Lore:['[{"translate":"effect.minecraft.strength","color":"blue","italic":false}," ",{"translate":"potion.potency.3","color":"blue","italic":false},{"text":" (1:30)","color":"blue","italic":false}]','{"text":""}','{"translate":"potion.whenDrank","color":"dark_purple","italic":false}','{"translate":"attribute.modifier.plus.0","with":["12",{"translate":"attribute.name.generic.attack_damage"}],"color":"blue","italic":false}']},HideFlags:32,Potion:strength,CustomPotionEffects:[{Id:5,Amplifier:3,Duration:1800}]} 1
-scoreboard players remove @s gm4_lt_value 1
-tag @s add gm4_lt_fill

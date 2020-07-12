@@ -1,6 +1,0 @@
-# @s = tinkering_compressor not in a dropper block
-# at @s
-# run from tinkering_compressors:process
-
-summon area_effect_cloud ~ ~ ~ {Passengers:[{id:item,Item:{id:"cobblestone",Count:7b}},{id:item,Item:{id:"redstone",Count:1b}},{id:item,Item:{id:"crafting_table",Count:1,tag:{display:{Lore:['"slightly damaged workbench"']}}}},{id:item,Item:{id:"iron_ingot",Count:4b}},{id:item,Item:{id:"obsidian",Count:2b}},{id:item,Item:{id:"piston",Count:2b}},{id:item,Item:{id:"purpur_block",Count:1b}},{id:item,Item:{Count:1,id:"player_head",tag:{gm4_metallurgy:{has_shamir:1b,stored_shamir:"tinker",ore_type:"thorium_brass"},SkullOwner:{Id:[I;-1331314679,659659762,2101919484,662148976],Properties:{textures:[{Value:"eyJ0aW1lc3RhbXAiOjE0ODg0NjY1NTQzODUsInByb2ZpbGVJZCI6IjkxYTBlZmEyM2QxODQ5Y2ZiM2JkMGExNzdjZjM3Nzg4IiwicHJvZmlsZU5hbWUiOiJEdWNrSnIiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDk2ZWJmMzMxZmQ1MzM3MjM0ZmU0OTM2ZWMyOTU2NTI4ZDQ3N2FiYTU4NzU5YmM2ZWIyODRiMmU5MmQxNDI4In19fQ=="}]}},display:{Name:"{\"text\":\"Obsidian Cast\",\"italic\":False}",Lore:["{\"text\":\"Thorium Brass Band\",\"italic\":\"false\",\"color\":\"dark_green\"}","{\"text\":\"Shamir:\",\"italic\":\"false\",\"color\":\"aqua\"}","{\"text\":\"Tinker\",\"italic\":\"false\",\"color\":\"gray\"}"]}}}}]}
-kill @s
