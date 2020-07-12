@@ -1,0 +1,80 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+
+			"entries": [
+				{
+					"type": "loot_table",
+					"name": "gm4_arborenda_shamir:band",
+					"weight": 1
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_conduction_shamir:band",
+					"weight": 2
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_defuse_shamir:band",
+					"weight": 2
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_ender_bolt_shamir:band",
+					"weight": 3
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_forterra_shamir:band",
+					"weight": 2
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_gemini_shamir:band",
+					"weight": 1
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_hypexperia_shamir:band",
+					"weight": 1
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_levity_shamir:band",
+					"weight": 1
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_musical_shamir:band",
+					"weight": 2
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_sensus_shamir:band",
+					"weight": 2
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_spiraculum_shamir:band",
+					"weight": 1
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_tinker_shamir:band",
+					"weight": 1
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_helious_shamir:band",
+					"weight": 1
+				},
+        {
+					"type": "loot_table",
+					"name": "gm4_percurro_shamir:band",
+					"weight": 2
+				}
+			]
+		}
+	]
+}

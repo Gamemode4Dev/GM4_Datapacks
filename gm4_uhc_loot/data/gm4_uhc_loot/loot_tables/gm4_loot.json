@@ -1,0 +1,20 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+
+			"entries": [
+				{
+					"type": "loot_table",
+					"name": "gm4_uhc_loot:gm4_metallurgy",
+					"weight": 3
+				},
+        {
+          "type": "loot_table",
+          "name": "gm4_uhc_loot:gm4_heart_canisters",
+          "weight": 1
+        }
+			]
+		}
+	]
+}

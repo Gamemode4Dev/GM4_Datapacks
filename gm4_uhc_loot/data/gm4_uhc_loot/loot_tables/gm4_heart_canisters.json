@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:7,gm4_heart_canister:1b,gm4_heart_canister_tier:1b,display:{Lore:['{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Tier 1\",{\"translate\":\"item.gm4.heart_canister.lore.tier\",\"with\":[\"1\"]}],\"italic\":false}'],Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Heart Canister\",{\"translate\":\"item.gm4.heart_canister\"}],\"italic\":false}'},SkullOwner:{Id:[I;632422291,2032540887,1409191520,1350118826],Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE0MjkzNDc5MDU4NzMsInByb2ZpbGVJZCI6IjYzY2JkZjhkNDg4OTQ3NWY5NDQxMjk3ZTRhM2Q1NjczIiwicHJvZmlsZU5hbWUiOiJWZWxlVCIsImlzUHVibGljIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTNjZjA2ZDViNDdiNzQ2ZDE2ZWU2MzExODdjYjg1N2Q4YzE2YmZjZDU3MGE0MGYyODZiMmMzODg2N2NmZGEifX19\"}]}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:8,gm4_heart_canister:1b,gm4_heart_canister_tier:2b,display:{Lore:['{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Tier 2\",{\"translate\":\"item.gm4.heart_canister.lore.tier\",\"with\":[\"2\"]}],\"italic\":false}'],Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Heart Canister\",{\"translate\":\"item.gm4.heart_canister\"}],\"italic\":false}'},SkullOwner:{Id:[I;632422291,2032475351,1409191520,1350118826],Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE0MjkzNDc5OTc3ODcsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQ1NWQ5YmY4NWFjNTY1YjM1ZTFmYTE5MjQ3Y2E2NTQxZGMyZTMzNGJlYzExNWNiNDQ5ZWZiZThlOWI4MTAyMiJ9fX0=\"}]}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
