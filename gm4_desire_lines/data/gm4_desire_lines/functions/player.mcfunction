@@ -8,4 +8,4 @@ execute if score @s gm4_desire_lines matches 1.. run scoreboard players remove @
 
 function #gm4_desire_lines:expansion
 execute if predicate gm4_desire_lines:has_slow_falling run scoreboard players set @s gm4_desire_lines 0
-execute if score desire_lines gm4_dl_random matches ..2 if score @s gm4_desire_lines matches 1.. positioned ~ ~ ~ run function gm4_desire_lines:path
+execute if score desire_lines gm4_dl_random matches ..30 if score @s gm4_desire_lines matches 1.. positioned ~ ~ ~ run function gm4_desire_lines:path
