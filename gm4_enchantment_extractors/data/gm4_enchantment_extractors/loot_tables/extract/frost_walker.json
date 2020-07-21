@@ -1,0 +1,69 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:enchanted_book",
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{StoredEnchantments:[{lvl:2s,id:\"minecraft:frost_walker\"}]}"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:frost_walker",
+                        "levels": 2
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.1
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:enchanted_book",
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{StoredEnchantments:[{lvl:1s,id:\"minecraft:frost_walker\"}]}"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:frost_walker",
+                        "levels": 1
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

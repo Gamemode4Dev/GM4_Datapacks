@@ -1,0 +1,69 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:enchanted_book",
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{StoredEnchantments:[{lvl:1s,id:\"minecraft:mending\"},{lvl:1s,id:\"minecraft:vanishing_curse\"}]}"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:mending",
+                        "levels": 1
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.03
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:enchanted_book",
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{StoredEnchantments:[{lvl:1s,id:\"minecraft:mending\"}]}"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:mending",
+                        "levels": 1
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.020000000000000004
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
