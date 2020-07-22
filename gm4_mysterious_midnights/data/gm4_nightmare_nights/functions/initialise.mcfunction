@@ -3,7 +3,8 @@
 #called by event. Only runs once per nightmare night.
 
 #red screen tint
-worldborder warning distance 300000000
+#worldborder warning distance 300000000
+#disabled in UHC pack
 
 #activate all nightmare night expansions
 function #gm4_nightmare_nights:nightmare_night_expansion
