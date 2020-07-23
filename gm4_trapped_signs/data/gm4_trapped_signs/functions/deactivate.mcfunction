@@ -20,3 +20,4 @@ execute if block ~ ~ ~ #minecraft:wall_signs[facing=east] run fill ~-1 ~-2 ~ ~-1
 execute if block ~ ~ ~ #minecraft:wall_signs[facing=east] run fill ~-2 ~ ~ ~-2 ~ ~ redstone_wire[power=0] replace redstone_wire[power=1]
 execute if block ~ ~ ~ #minecraft:wall_signs[facing=east] run fill ~-1 ~ ~1 ~-1 ~ ~-1 redstone_wire[power=0] replace redstone_wire[power=1]
 tag @s remove gm4_trapped_signs_pulsed
+scoreboard players reset @s gm4_ts_delay
