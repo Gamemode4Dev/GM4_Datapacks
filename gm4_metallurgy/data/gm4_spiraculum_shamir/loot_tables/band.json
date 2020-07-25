@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_metallurgy:{stored_shamir:\"spiraculum\",custom_model_data:100}}"
+                            "tag": "{CustomModelData:100,gm4_metallurgy:{stored_shamir:\"spiraculum\",custom_model_data:100}}"
                         },
                         {
                             "function": "minecraft:set_lore",
