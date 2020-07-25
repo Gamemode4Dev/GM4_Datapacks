@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_metallurgy:{stored_shamir:\"defuse\",custom_model_data:106}}"
+                            "tag": "{CustomModelData:106,gm4_metallurgy:{stored_shamir:\"defuse\",custom_model_data:106}}"
                         },
                         {
                             "function": "minecraft:set_lore",
