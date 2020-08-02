@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:102,gm4_metallurgy:{stored_shamir:\"levity\",custom_model_data:102}}"
+                            "tag": "{CustomModelData:102,gm4_metallurgy:{stored_shamir:\"levity\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",
