@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:104,gm4_metallurgy:{stored_shamir:\"conduction\",custom_model_data:104}}"
+                            "tag": "{CustomModelData:104,gm4_metallurgy:{stored_shamir:\"conduction\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",
