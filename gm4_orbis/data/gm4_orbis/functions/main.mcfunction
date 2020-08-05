@@ -5,4 +5,4 @@ execute at @a[tag=!gm4_orbis_disabled] positioned ~-8 ~ ~-8 as @e[type=area_effe
 # kill chunk markers that have been generated and have all adjacent chunks generated
 execute as @e[type=area_effect_cloud,tag=gm4_chunk,tag=gm4_generated] at @s run function gm4_orbis:chunk/kill
 # if the chunk where the player is in hasn't been generated, spawn a new chunk marker
-execute as @a[tag=!gm4_orbis_disabled,nbt={Dimension:0}] at @s unless block ~ 0 ~ barrier run function gm4_orbis:chunk/init
+execute as @a[tag=!gm4_orbis_disabled,nbt={Dimension:"minecraft:overworld"}] at @s unless block ~ 0 ~ barrier run function gm4_orbis:chunk/init

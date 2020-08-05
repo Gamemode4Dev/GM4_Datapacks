@@ -5,7 +5,7 @@ tag @s add gm4_processing_spawner
 summon area_effect_cloud ~-4 ~ ~-4 {Duration:10,CustomName:'"gm4_spawner_flower_checker"',Tags:["gm4_spawner_flower_checker"]}
 
 #calculate random position
-execute store result score randomX gm4_spawner_fuel run data get entity @e[tag=gm4_spawner_flower_checker,limit=1] UUIDMost 0.00000000023283064365386962890625
+execute store result score randomX gm4_spawner_fuel run data get entity @e[tag=gm4_spawner_flower_checker,limit=1] UUID[0]
 scoreboard players operation randomZ gm4_spawner_fuel = randomX gm4_spawner_fuel
 
 scoreboard players set 10 gm4_spawner_fuel 10
