@@ -8,6 +8,7 @@
 		"#minecraft:sand",
 		"#minecraft:stone_bricks",
 		"#minecraft:wool",
+		"#minecraft:shulker_boxes",
 		"minecraft:andesite",
 		"minecraft:barrel",
 		"minecraft:beacon",
@@ -201,6 +202,7 @@
 		"minecraft:yellow_concrete_powder",
 		"minecraft:yellow_glazed_terracotta",
 		"minecraft:yellow_shulker_box",
-		"minecraft:yellow_terracotta"
+		"minecraft:yellow_terracotta",
+		"minecraft:bell"
 	]
 }
