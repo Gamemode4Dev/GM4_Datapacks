@@ -1,0 +1,8 @@
+# @s = player who placed a relocated block player head
+# run from #gm4_relocators:place_down
+
+fill ~-6 ~-5 ~-6 ~6 ~7 ~6 command_block[facing=east]{auto:1,Command:"execute as @e[type=area_effect_cloud,tag=gm4_rl_relocation_data,limit=1,sort=nearest,distance=..10] run function gm4_relocators:place_down/place_block"} replace player_wall_head[facing=west]{Owner:{Id:"3a2dec64-b98a-4940-b21e-c0a0140ece81"}}
+fill ~-6 ~-5 ~-6 ~6 ~7 ~6 command_block[facing=west]{auto:1,Command:"execute as @e[type=area_effect_cloud,tag=gm4_rl_relocation_data,limit=1,sort=nearest,distance=..10] run function gm4_relocators:place_down/place_block"} replace player_wall_head[facing=east]{Owner:{Id:"3a2dec64-b98a-4940-b21e-c0a0140ece81"}}
+fill ~-6 ~-5 ~-6 ~6 ~7 ~6 command_block[facing=south]{auto:1,Command:"execute as @e[type=area_effect_cloud,tag=gm4_rl_relocation_data,limit=1,sort=nearest,distance=..10] run function gm4_relocators:place_down/place_block"} replace player_wall_head[facing=north]{Owner:{Id:"3a2dec64-b98a-4940-b21e-c0a0140ece81"}}
+fill ~-6 ~-5 ~-6 ~6 ~7 ~6 command_block[facing=north]{auto:1,Command:"execute as @e[type=area_effect_cloud,tag=gm4_rl_relocation_data,limit=1,sort=nearest,distance=..10] run function gm4_relocators:place_down/place_block"} replace player_wall_head[facing=south]{Owner:{Id:"3a2dec64-b98a-4940-b21e-c0a0140ece81"}}
+fill ~-6 ~-5 ~-6 ~6 ~7 ~6 command_block[facing=down]{auto:1,Command:"execute as @e[type=area_effect_cloud,tag=gm4_rl_relocation_data,limit=1,sort=nearest,distance=..10] run function gm4_relocators:place_down/place_block"} replace player_head{Owner:{Id:"3a2dec64-b98a-4940-b21e-c0a0140ece81"}}

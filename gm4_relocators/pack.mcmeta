@@ -15,12 +15,17 @@
         "custom_crafters"
     ],
     "recommended_modules": [
-        "custom_crafters",
+        "block_compressors",
+        "master_crafting",
+        "disassemblers",
+        "enchantment_extractors",
+        "ender_hoppers",
         "liquid_tanks",
-        "block_compressors"
+        "smelteries",
+        "tinkering_compressors"
     ],
     "credits": {
-        "Creator": [
+        "Creator and Textures": [
             [
                 "BluePsychoRanger",
                 "https://www.twitter.com/BluPsychoRanger"

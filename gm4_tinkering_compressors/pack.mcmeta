@@ -17,7 +17,9 @@
         "block_compressors",
         "metallurgy"
     ],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "relocators"
+    ],
     "credits": {
         "Creator": [
             [

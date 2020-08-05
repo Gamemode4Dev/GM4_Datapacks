@@ -1,0 +1,50 @@
+{
+  "type":"block",
+  "pools":[
+    {
+      "rolls":1,
+      "entries":[
+        {
+          "type":"item",
+          "name":"minecraft:player_head",
+          "functions":[
+            {
+              "function":"set_nbt",
+              "tag":"{CustomModelData:29,gm4_relocation_data:{Command:\"function gm4_master_crafting:relocate/place_down\"},SkullOwner:{Id:\"44a1cb97-c676-408f-afd3-854052fbddb2\",Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTU5NjU3NDQ2NDk5MSwKICAicHJvZmlsZUlkIiA6ICI4YzUzN2M3YWEzYjI0NWFmOGQ0ODY2YmIxZjhjMGU5YSIsCiAgInByb2ZpbGVOYW1lIiA6ICJCb0F0TmVlR2EiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjczZGFmOWVjNzJhYTIyNzcwYTU0MjgwMTI3NjI4NjYxZGY1NzVmMWY3ZDY5NzY4Y2Q4Mjc1ZDE0OWIxYTQzNCIKICAgIH0KICB9Cn0=\"}]}}}"},
+            {
+              "function":"set_name",
+              "name":[
+                {
+                  "translate":"%1$s%3427655$s",
+                  "with": [
+                    "Mastercraftman\'s Bench",
+                    {
+                      "translate": "block.gm4.master_crafter"
+                    }
+                  ],
+                  "color":"aqua",
+                  "italic":false
+                }
+              ]
+            },
+            {
+              "function":"set_lore",
+              "lore":[
+                {
+                  "translate":"%1$s%3427655$s",
+                  "with": [
+                    "Relocator",
+                    {
+                      "translate": "item.gm4.relocator"
+                    }
+                  ],
+                  "color":"yellow"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
