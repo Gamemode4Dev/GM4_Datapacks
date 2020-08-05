@@ -10,7 +10,9 @@
     "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
     "wiki_link": "https://wiki.gm4.co/wiki/Enchantment_Extractors",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "relocators"
+    ],
     "credits": {
         "Creator": [
             [

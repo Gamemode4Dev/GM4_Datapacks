@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 0,
+        "pack_format": 5,
         "description": "A Gamemode 4 Module"
     },
     "module_name": "Smelteries",
@@ -14,7 +14,9 @@
     "required_modules": [
         "custom_crafters"
     ],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "relocators"
+    ],
     "credits": {
         "Creator": [
             [
