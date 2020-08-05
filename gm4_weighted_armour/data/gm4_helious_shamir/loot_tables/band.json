@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_metallurgy:{stored_shamir:\"helious\",custom_model_data:103}}"
+                            "tag": "{CustomModelData:103,gm4_metallurgy:{stored_shamir:\"helious\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",
