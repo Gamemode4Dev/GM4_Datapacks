@@ -1,17 +1,13 @@
 # @s = written book ..1 from armor_stand
-execute if entity @s[nbt={Item:{tag:{pages:["legs standing"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftLeg:[0f,0f,0f],RightLeg:[0f,0f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["legs sitting"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftLeg:[278f,347f,0f],RightLeg:[278f,11f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["legs walking"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftLeg:[39f,0f,0f],RightLeg:[317f,0f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["legs flying"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftLeg:[108f,0f,0f],RightLeg:[90f,0f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["arms reaching"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftArm:[254f,0f,0f],RightArm:[254f,0f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["arms default"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["arms swinging"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftArm:[304f,0f,0f],RightArm:[40f,0f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["arms resting"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftArm:[263f,340f,188f],RightArm:[263f,25f,188f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["arms raised"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftArm:[179f,0f,24f],RightArm:[179f,0f,344f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["head forward"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[0f,0f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["head up"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[325f,0f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["head down"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[32f,0f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["head left"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[0f,327f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["head right"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[0f,32f,0f]},Tags:[gm4_pose_changed]}
+#copy player rotation to armor_stand part
+execute if entity @s[tag=!gm4_pose_changed,nbt={Item:{tag:{pages:["rotate"]}}}] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run data modify entity @s Rotation set from entity @p[distance=..1] Rotation
+execute if entity @s[tag=!gm4_pose_changed,nbt={Item:{tag:{pages:["head"]}}}] run function gm4_poses_pack:pose/head
+execute if entity @s[tag=!gm4_pose_changed,nbt={Item:{tag:{pages:["body"]}}}] run function gm4_poses_pack:pose/body
+execute if entity @s[tag=!gm4_pose_changed,nbt={Item:{tag:{pages:["arms"]}}}] run function gm4_poses_pack:pose/arms
+execute if entity @s[tag=!gm4_pose_changed,nbt={Item:{tag:{pages:["legs"]}}}] run function gm4_poses_pack:pose/legs
+tag @s add gm4_pose_changed
+
+#copy pose to armor_stand item
+execute if entity @s[nbt={Item:{tag:{pages:["copy"]}}}] as @e[type=minecraft:item,distance=..1,limit=1,nbt={Item:{id:"minecraft:armor_stand"}},tag=!gm4_pose_copied] run function gm4_poses_pack:copy
 
 execute as @e[type=armor_stand,tag=!gm4_no_edit,tag=gm4_pose_changed] run function gm4_poses_pack:pose_changed
