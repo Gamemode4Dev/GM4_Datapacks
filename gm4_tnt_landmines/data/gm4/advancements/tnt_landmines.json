@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "tnt",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Didn't see that coming",
+        {"translate": "advancement.gm4.tnt_landmines.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Get killed by a landmine",
+        {"translate": "advancement.gm4.tnt_landmines.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
