@@ -1,4 +1,4 @@
-#run from all files in projectile/ except for torch and crops/ 
+#run from check_projectile
 # @s = player using the crossbow
 
 #copy motion of arrow to projectile and kill arrow

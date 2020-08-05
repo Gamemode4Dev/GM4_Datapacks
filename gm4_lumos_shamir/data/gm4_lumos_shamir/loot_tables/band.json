@@ -9,7 +9,7 @@
 					"functions": [
 						{
 							"function": "minecraft:set_nbt",
-							"tag": "{gm4_metallurgy:{stored_shamir:\"lumos\",custom_model_data:114}}"
+							"tag": "{CustomModelData:114,gm4_metallurgy:{stored_shamir:\"lumos\"}}"
 						},
 						{
 							"function": "minecraft:set_lore",

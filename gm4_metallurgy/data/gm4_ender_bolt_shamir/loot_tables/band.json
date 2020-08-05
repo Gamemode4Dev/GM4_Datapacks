@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_metallurgy:{stored_shamir:\"ender_bolt\",custom_model_data:105}}"
+                            "tag": "{CustomModelData:105,gm4_metallurgy:{stored_shamir:\"ender_bolt\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",
