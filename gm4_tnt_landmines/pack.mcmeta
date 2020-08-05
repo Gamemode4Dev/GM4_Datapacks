@@ -7,16 +7,15 @@
   "module_id":"tnt_landmines",
   "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
   "site_description":"Craft 'em up, throw 'em down, blow 'em up!",
-  "site_categories":[],
-  "video_link":"YOUTUBE_VIDEO_URL",
-  "wiki_link":"WIKI_URL",
+  "site_categories":["Custom Crafting"],
+  "video_link":"",
+  "wiki_link":"https://wiki.gm4.co/wiki/TNT_Landmines",
   "required_modules":[
     "custom_crafters"
   ],
   "recommended_modules":[
   ],
   "credits":{
-    "comment":"All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings.",
     "Creator":[
       ["Sparks","https://www.twitter.com/SparksTheGamer"]
     ],
