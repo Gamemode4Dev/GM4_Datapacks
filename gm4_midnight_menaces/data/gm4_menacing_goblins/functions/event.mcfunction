@@ -8,7 +8,7 @@ summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'"gm4_goblin_spawn_point"',
 #randomizer, kill some spawn points
 execute store result score goblin_random_value gm4_menace run data get entity @e[type=area_effect_cloud,tag=gm4_goblin_spawn_point,limit=1] UUIDMost 0.00000000002273064325381162890625
 scoreboard players operation goblin_random_value gm4_menace %= 100 gm4_menace
-execute if score goblin_random_value gm4_menace matches ..95 run kill @e[type=area_effect_cloud,tag=gm4_goblin_spawn_point,limit=1]
+execute if score goblin_random_value gm4_menace matches ..65 run kill @e[type=area_effect_cloud,tag=gm4_goblin_spawn_point,limit=1]
 
 execute store result score goblin_random_value gm4_menace run data get entity @e[type=area_effect_cloud,tag=gm4_goblin_spawn_point,limit=1] UUIDMost 0.00000000002273064325381162890625
 scoreboard players operation goblin_random_value gm4_menace %= 17 gm4_menace

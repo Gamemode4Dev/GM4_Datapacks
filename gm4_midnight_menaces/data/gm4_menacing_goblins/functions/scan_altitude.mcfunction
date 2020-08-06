@@ -4,4 +4,4 @@
 
 tp ~ ~1 ~
 scoreboard players add @s gm4_menace 1
-execute unless block ~ ~ ~ #midnight_menaces:air unless score @s gm4_menace matches 11.. at @s run function gm4_menacing_goblins:scan_altitude
+execute unless block ~ ~ ~ #gm4_midnight_menaces:air unless score @s gm4_menace matches 11.. at @s run function gm4_menacing_goblins:scan_altitude

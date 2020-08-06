@@ -8,7 +8,7 @@ summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'"gm4_illusioner_spawn_poin
 #randomizer, kill some spawn points
 execute store result score illusioner_random_value gm4_menace run data get entity @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point,limit=1] UUIDMost 0.00000000002273064325381162890625
 scoreboard players operation illusioner_random_value gm4_menace %= 100 gm4_menace
-execute if score illusioner_random_value gm4_menace matches ..96 run kill @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point,limit=1]
+execute if score illusioner_random_value gm4_menace matches ..85 run kill @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point,limit=1]
 
 execute store result score illusioner_random_value gm4_menace run data get entity @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point,limit=1] UUIDMost 0.00000000002273064325381162890625
 scoreboard players operation illusioner_random_value gm4_menace %= 17 gm4_menace

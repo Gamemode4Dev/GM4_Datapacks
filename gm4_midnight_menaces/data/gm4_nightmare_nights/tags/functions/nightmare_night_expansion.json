@@ -1,7 +1,7 @@
 {
     "values":[
-      "enlarging_phantoms:setup",
-      "menacing_goblins:setup",
-      "illusioner_nights:setup"
+      "gm4_enlarging_phantoms:setup",
+      "gm4_menacing_goblins:setup",
+      "gm4_illusioner_nights:setup"
     ]
 }
