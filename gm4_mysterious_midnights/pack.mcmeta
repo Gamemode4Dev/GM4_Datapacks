@@ -6,10 +6,14 @@
     "module_name": "Mysterious Midnights",
     "module_id": "mysterious_midnights",
     "site_description": "Adds spooky full moon nights!",
-    "site_categories": [],
+    "site_categories": [
+        "Mysterious Midnights"
+    ],
     "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "midnight_menaces"
+    ],
     "credits": {
         "Creator": [
             [
