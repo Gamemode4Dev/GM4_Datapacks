@@ -10,8 +10,8 @@
     "site_categories": [
 	    "Liquid Tanks"
     ],
-    "video_link": "YOUTUBE_VIDEO_URL",
-    "wiki_link": "WIKI_URL",
+    "video_link": "",
+    "wiki_link": "wiki.gm4.co/wiki/Liquid_Tanks/Washing_Machines",
     "required_modules": [
         "liquid_tanks"
     ],
