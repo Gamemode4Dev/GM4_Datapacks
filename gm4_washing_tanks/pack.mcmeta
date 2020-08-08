@@ -11,7 +11,7 @@
 	    "Liquid Tanks"
     ],
     "video_link": "",
-    "wiki_link": "wiki.gm4.co/wiki/Liquid_Tanks/Washing_Machines",
+    "wiki_link": "wiki.gm4.co/wiki/Liquid_Tanks/Washing_Tanks",
     "required_modules": [
         "liquid_tanks"
     ],
@@ -21,6 +21,12 @@
                 "Bunnygamers",
                 "https://twitter.com/BunnygamersMC"
             ]
-        ]
+        ],
+	"With help from": [
+	    [
+	        "Misode",
+		"https://twitter.com/misoloo"
+	    ]
+	]
     }
 }
