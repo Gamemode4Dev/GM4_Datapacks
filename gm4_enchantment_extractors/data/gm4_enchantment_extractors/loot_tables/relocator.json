@@ -17,9 +17,9 @@
                 {
                   "translate":"%1$s%3427655$s",
                   "with": [
-                    "Block Compressor",
+                    "Enchantment Extractor",
                     {
-                      "translate": "block.gm4.block_compressor"
+                      "translate": "block.gm4.enchantment_extractor"
                     }
                   ],
                   "color":"aqua",
