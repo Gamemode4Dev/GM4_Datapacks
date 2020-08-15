@@ -1,0 +1,7 @@
+{
+    "values": [
+        "#load:gm4_metallurgy",
+        "#load:gm4_custom_crafters",
+        "gm4_orb_of_ankou:load"
+    ]
+}

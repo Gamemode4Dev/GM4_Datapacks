@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:black_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Aggressive",
+                     {"translate":"text.gm4.pneuma_aggressive"}
+                  ],
+                  "italic": false,
+                  "color": "blue"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  "Soul Essence",
+                  {"translate":"item.gm4.soul_essence"}
+                ],
+                "italic": false,
+                "color": "white"
+              }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:200,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"aggressive\"},stored_color:[10682368]},Enchantments:[{}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
