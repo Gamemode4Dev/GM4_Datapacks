@@ -21,7 +21,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:dropper",
+          "name": "minecraft:magma_block",
           "functions":[
             {
               "function": "minecraft:set_count",
