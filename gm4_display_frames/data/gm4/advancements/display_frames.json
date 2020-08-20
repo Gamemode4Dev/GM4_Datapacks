@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:splash_potion",
-      "nbt": "{Potion:'minecraft:invisibility'}"
+      "nbt": "{Potion:'minecraft:invisibility',CustomModelData:1}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
