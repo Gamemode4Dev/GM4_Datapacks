@@ -5,7 +5,7 @@
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "nbt": "{Item:{tag:{Potion:\"minecraft:invisibility\"}}}"
+        "nbt": "{Item:{tag:{Potion:'minecraft:invisibility'}}}"
       }
     },
     {
