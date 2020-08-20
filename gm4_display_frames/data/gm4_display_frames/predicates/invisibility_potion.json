@@ -12,7 +12,7 @@
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "nbt": "{Item:{tag:{Potion:\"minecraft:long_invisibility\"}}}"
+        "nbt": "{Item:{tag:{Potion:'minecraft:long_invisibility'}}}"
       }
     },
     {
