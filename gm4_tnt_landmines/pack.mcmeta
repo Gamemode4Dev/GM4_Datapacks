@@ -1,6 +1,6 @@
 {
   "pack":{
-    "pack_format":0,
+    "pack_format":6,
     "description":"A Gamemode 4 Module"
   },
   "module_name":"TNT Landmines",
@@ -20,7 +20,8 @@
       ["Sparks","https://www.twitter.com/SparksTheGamer"]
     ],
     "Updated By":[
-      ["kruthers","https://www.twitter.com/Pandakruthers"]
+      ["kruthers","https://www.twitter.com/Pandakruthers"],
+      ["BluePsychoRanger","https://www.twitter.com/BluPsychoRanger"]
     ]
   }
 }

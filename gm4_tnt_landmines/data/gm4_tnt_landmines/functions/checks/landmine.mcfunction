@@ -1,13 +1,14 @@
-#ran at all landmines
-#@s = landmine
-#keep them lit
-data merge entity @s {Fire:2000}
+# @s = tnt landmine
+# run from main
 
-#arming (if they are not armed)
-execute as @s[tag=!gm4_armed] unless entity @e[type=area_effect_cloud,tag=gm4_mine_disarmed,distance=..0.2] run tag @s add gm4_armed
+# keep lit
+data merge entity @s {Fire:2000s}
 
-#upgrading
-execute as @s[tag=!gm4_no_damage] as @e[type=item,distance=..1.2,limit=1,nbt={OnGround:1b,Item:{id:"minecraft:gunpowder",Count:1b,tag:{gm4_tnt_landmines:{item:2}}}}] run function gm4_tnt_landmines:items/upgrade
+#arming
+execute as @s[tag=!gm4_tnt_armed] unless entity @e[type=area_effect_cloud,tag=gm4_mine_disarmed,distance=..0.2] run tag @s add gm4_tnt_armed
+
+#upgrading to terrain-safe
+execute if entity @s[tag=!gm4_no_damage] as @e[type=item,distance=..1.2,limit=1,nbt={OnGround:1b,Item:{id:"minecraft:gunpowder",Count:1b,tag:{gm4_tnt_landmines:{item:"upgrade"}}}}] run function gm4_tnt_landmines:items/upgrade
 
 #disarming
 execute as @e[type=item,distance=..1.2,sort=nearest,limit=1,nbt={OnGround:1b,Item:{id:"minecraft:shears"}}] run function gm4_tnt_landmines:items/disarming
