@@ -6,6 +6,8 @@ execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:birch_slab"},{Slot:
 execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:jungle_slab"},{Slot:3b,id:"minecraft:jungle_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"jungle_planks",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
 execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:acacia_slab"},{Slot:3b,id:"minecraft:acacia_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"acacia_planks",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
 execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:dark_oak_slab"},{Slot:3b,id:"minecraft:dark_oak_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"dark_oak_planks",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
+execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:crimson_slab"},{Slot:3b,id:"minecraft:crimson_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"crimson_planks",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
+execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:warped_slab"},{Slot:3b,id:"minecraft:warped_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"warped_planks",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
 
 #stones
 execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:cobblestone_slab"},{Slot:3b,id:"minecraft:cobblestone_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"cobblestone",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
@@ -38,6 +40,11 @@ execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:cut_red_sandstone_s
 #quartz
 execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:quartz_slab"},{Slot:3b,id:"minecraft:quartz_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"quartz_block",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
 execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:smooth_quartz_slab"},{Slot:3b,id:"minecraft:smooth_quartz_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"smooth_quartz",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
+
+#blackstone
+execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:blackstone_slab"},{Slot:3b,id:"minecraft:blackstone_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"blackstone",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
+execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:polished_blackstone_slab"},{Slot:3b,id:"minecraft:polished_blackstone_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"polished_blackstone",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
+execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:polished_blackstone_brick_slab"},{Slot:3b,id:"minecraft:polished_blackstone_brick_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"polished_blackstone_bricks",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
 
 #prismarine
 execute if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:prismarine_slab"},{Slot:3b,id:"minecraft:prismarine_slab"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"prismarine",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
