@@ -1,16 +1,8 @@
 {
   "values":[
-    "minecraft:air",
-    "minecraft:cave_air",
-    "minecraft:void_air",
-    "minecraft:grass",
+    "#gm4:replaceable",
     "#minecraft:flowers",
-    "minecraft:fern",
     "minecraft:brown_mushroom",
-    "minecraft:red_mushroom",
-    "minecraft:dead_bush",
-    "minecraft:large_fern",
-    "minecraft:tall_grass",
-    "minecraft:vine"
+    "minecraft:red_mushroom"
   ]
 }

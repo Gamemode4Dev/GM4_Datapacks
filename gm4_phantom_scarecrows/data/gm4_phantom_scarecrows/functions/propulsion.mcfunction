@@ -5,5 +5,5 @@
 #move rocket forwards
 tp ^ ^ ^.8
 particle firework ~ ~ ~ 0 0 0 0 1 force
-execute at @s unless block ~ ~ ~ #gm4_phantom_scarecrows:traversable run function gm4_phantom_scarecrows:explode
+execute at @s unless block ~ ~ ~ #gm4:no_collision run function gm4_phantom_scarecrows:explode
 execute at @s if entity @e[type=phantom,distance=..0.5] run function gm4_phantom_scarecrows:explode
