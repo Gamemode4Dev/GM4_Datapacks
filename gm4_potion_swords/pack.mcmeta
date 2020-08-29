@@ -1,0 +1,39 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Potion Swords",
+    "module_id": "potion_swords",
+    "hidden":true,
+    "site_description": "As if getting stabbed isn't enough... support your friends, terrify your enemies, make gold great again!",
+    "site_categories": [],
+    "video_link": "https://www.youtube.com/watch?v=9xI3CQ1z5cg",
+    "wiki_link": "https://wiki.gm4.co/wiki/Potion_Swords",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Bloo",
+                "https://twitter.com/Bloo_dev"
+            ]
+        ],
+        "Updated by": [
+            [
+                "Bloo",
+                "https://www.twitter.com/Bloo_dev"
+            ],
+            [
+                "SpecialBuilder32",
+                "https://www.twitter.com/SpecialBuilder"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "DuckJr",
+                "https://twitter.com/DuckJr94"
+            ]
+        ]
+    }
+}

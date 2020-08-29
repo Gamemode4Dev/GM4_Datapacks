@@ -1,0 +1,39 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Zauber Cauldrons",
+    "module_id": "zauber_cauldrons",
+    "hidden":true,
+    "site_description": "Brew potions, special armour and attribute crystals in any cauldron!",
+    "site_categories": [],
+    "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
+    "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Bloo",
+                "https://www.twitter.com/Bloo_dev"
+            ]
+        ],
+        "Updated by": [
+            [
+                "Bloo",
+                "https://www.twitter.com/Bloo_dev"
+            ],
+            [
+                "Alluet",
+                "https://github.com/alluet"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "DuckJr",
+                "https://twitter.com/DuckJr94"
+            ]
+        ]
+    }
+}

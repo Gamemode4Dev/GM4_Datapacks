@@ -1,0 +1,39 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Sunken Treasure",
+    "module_id": "sunken_treasure",
+    "hidden":true,
+    "site_description": "Digging sand underwater with a fortune tool can uncover buried surprises",
+    "site_categories": [],
+    "video_link": "https://www.youtube.com/watch?v=VV7ZIyIzKV0",
+    "wiki_link": "https://wiki.gm4.co/wiki/Sunken_Treasure",
+    "required_modules": [],
+    "recommended_modules": [
+        "scuba_gear"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "Wumpacraft",
+                "https://www.twitter.com/wumpacraft"
+            ],
+            [
+                "Sparks",
+                "https://twitter.com/SparksTheGamer"
+            ]
+        ],
+        "Updated by": [
+            [
+                "BluePsychoRanger",
+                "https://twitter.com/BluPsychoRanger"
+            ],
+            [
+                "Alluet",
+                "https://github.com/alluet"
+            ]
+        ]
+    }
+}
