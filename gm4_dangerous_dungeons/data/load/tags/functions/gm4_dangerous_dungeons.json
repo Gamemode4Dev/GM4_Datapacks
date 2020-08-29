@@ -1,6 +1,6 @@
 {
     "values": [
-        "#load:gm4_orbis",
+        {"id": "#load:gm4_orbis", "required": false},
         "gm4_dangerous_dungeons:load"
     ]
 }

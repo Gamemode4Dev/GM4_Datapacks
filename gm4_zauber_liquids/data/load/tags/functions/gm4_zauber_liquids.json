@@ -1,7 +1,7 @@
 {
     "values": [
-        "#load:gm4_liquid_tanks",
-        "#load:gm4_zauber_cauldrons",
+		{"id": "#load:gm4_liquid_tanks", "required": false},
+		{"id": "#load:gm4_zauber_cauldrons", "required": false},
         "gm4_zauber_liquids:load"
     ]
 }
