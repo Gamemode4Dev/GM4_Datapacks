@@ -5,7 +5,7 @@
     },
     "module_name": "Better Fire",
     "module_id": "better_fire",
-    "hidden":true,
+    "hidden":false,
     "site_description": "Flame arrows set fire when they land and burning creepers explode!",
     "site_categories": [],
     "video_link": "https://www.youtube.com/watch?v=J5024LhHuWk",

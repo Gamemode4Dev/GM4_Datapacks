@@ -1,4 +1,4 @@
-Contributing to Gamemode 4 
+Contributing to Gamemode 4
 ==========================
 
 ## Adding a new GM4 Module
@@ -61,6 +61,8 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
 
 ### Testing and submitting your module
 While testing your module, you need to make sure that the `base` datapack, which you can find in this repository, is included in your world's `datapacks` folder.
+
+If your module requires a forceloaded chunk, be sure to include `gm4_forceload` as a library in your module's pack.mcmeta so that the website packages the appropriate files. An example of the libraries syntax can be see in the 1.16 Zauber Cauldrons pack.mcmeta.
 
 To send us your finished module for testing and approval, simply submit a pull request and leave a comment if you have additional notes.
 

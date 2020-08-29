@@ -19,6 +19,18 @@
                                 }
                             ]
                         },
+												{
+                            "type": "minecraft:item",
+                            "name": "minecraft:nether_gold_ore",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:match_tool",
+                                    "predicate": {
+                                        "item": "minecraft:nether_gold_ore"
+                                    }
+                                }
+                            ]
+                        },
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:iron_ore",

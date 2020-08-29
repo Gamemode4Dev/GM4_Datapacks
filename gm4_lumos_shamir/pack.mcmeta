@@ -5,7 +5,7 @@
 	},
 	"module_name": "Lumos Shamir",
 	"module_id": "lumos_shamir",
-	"hidden":true,
+	"hidden":false,
 	"site_description": "Adds the shamir 'Lumos' to metallurgy. It places torches when it is dark.",
 	"site_categories": [
 		"Metallurgy"
