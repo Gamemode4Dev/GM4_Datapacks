@@ -5,7 +5,7 @@
     },
     "module_name": "Ziprails",
     "module_id": "ziprails",
-    "hidden":true,
+    "hidden":false,
     "site_description": "Automatically latch on to a tripwire to sail through the sky on a suspended line!",
     "site_categories": [],
     "video_link": "https://www.youtube.com/watch?v=QA7a5q2kVcg",

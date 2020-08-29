@@ -5,7 +5,7 @@
     },
     "module_name": "Spawner Minecarts",
     "module_id": "spawner_minecarts",
-    "hidden":true,
+    "hidden":false,
     "site_description": "Pick up Spawners and move them with Minecarts.",
     "site_categories": [],
     "video_link": "",
