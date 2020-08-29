@@ -7,7 +7,7 @@
     "module_id": "zauber_cauldrons",
     "hidden":true,
     "libraries":[
-      "forceload"
+      "lib_forceload"
     ],
     "site_description": "Brew potions, special armour and attribute crystals in any cauldron!",
     "site_categories": [],
