@@ -1,31 +1,17 @@
 {
   "values" : [
     "#gm4:no_collision",
+    "#minecraft:fence_gates",
+    "#minecraft:fences",
     "#minecraft:leaves",
     "#minecraft:trapdoors",
-    "minecraft:acacia_fence_gate",
-    "minecraft:acacia_fence",
-    "minecraft:birch_fence_gate",
-    "minecraft:birch_fence",
+    "#minecraft:walls",
     "minecraft:brewing_stand",
-    "minecraft:cobblestone_wall",
     "minecraft:cobweb",
     "minecraft:comparator",
-    "minecraft:dark_oak_fence_gate",
-    "minecraft:dark_oak_fence",
     "minecraft:end_rod",
     "minecraft:iron_bars",
-    "minecraft:jungle_fence_gate",
-    "minecraft:jungle_fence",
-    "minecraft:lava",
-    "minecraft:mossy_cobblestone_wall",
-    "minecraft:nether_brick_fence",
-    "minecraft:oak_fence_gate",
-    "minecraft:oak_fence",
     "minecraft:repeater",
-    "minecraft:snow",
-    "minecraft:spruce_fence_gate",
-    "minecraft:spruce_fence",
-    "minecraft:water"
+    "minecraft:snow"
   ]
 }
