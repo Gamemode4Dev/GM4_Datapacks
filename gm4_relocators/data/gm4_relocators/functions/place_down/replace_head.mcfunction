@@ -1,9 +1,7 @@
-# @s = player who placed a relocated block player head
-# run from advancement "place_relocated_block"
+# @s = fill replacing AEC
+# run from self and place_down/summon_aec
 
-advancement revoke @s only gm4_relocators:place_relocated_block
-
-tag @s add gm4_rl_placed_relocated_block
-
-# check for relocated block heads
 function #gm4_relocators:place_down
+tp @s ~ ~1 ~
+scoreboard players add fill_counter gm4_rl_data 1
+execute if score fill_success gm4_rl_data matches 0 unless score fill_counter gm4_rl_data matches 8.. at @s run function gm4_relocators:place_down/replace_head

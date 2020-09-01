@@ -1,8 +1,8 @@
-# @s = player who placed a relocated block player head
+# @s = fill replacing AEC
 # run from #gm4_relocators:place_down
 
-execute positioned ~ ~-5 ~ run kill @e[type=area_effect_cloud,tag=gm4_relocator_fill,dy=13]
-summon area_effect_cloud ~ ~-5 ~ {CustomName:'"gm4_relocator_fill"',Tags:["gm4_relocator_fill"],Particle:"block air"}
-scoreboard players set fill_success gm4_rl_data 0
-scoreboard players set fill_counter gm4_rl_data -5
-execute positioned ~ ~-5 ~ as @e[type=area_effect_cloud,tag=gm4_relocator_fill,limit=1,sort=nearest,distance=..0.01] at @s run function gm4_custom_crafters:relocate/replace_head
+execute if score fill_success gm4_rl_data matches 0 store success score fill_success gm4_rl_data run fill ~-6 ~ ~-6 ~6 ~ ~6 command_block[facing=east]{auto:1,Command:"function gm4_custom_crafters:relocate/place_down/west"} replace player_wall_head[facing=west]{SkullOwner:{Id:[I;-698910882,1355432644,-1608425408,-1046601502]}}
+execute if score fill_success gm4_rl_data matches 0 store success score fill_success gm4_rl_data run fill ~-6 ~ ~-6 ~6 ~ ~6 command_block[facing=west]{auto:1,Command:"function gm4_custom_crafters:relocate/place_down/east"} replace player_wall_head[facing=east]{SkullOwner:{Id:[I;-698910882,1355432644,-1608425408,-1046601502]}}
+execute if score fill_success gm4_rl_data matches 0 store success score fill_success gm4_rl_data run fill ~-6 ~ ~-6 ~6 ~ ~6 command_block[facing=south]{auto:1,Command:"function gm4_custom_crafters:relocate/place_down/north"} replace player_wall_head[facing=north]{SkullOwner:{Id:[I;-698910882,1355432644,-1608425408,-1046601502]}}
+execute if score fill_success gm4_rl_data matches 0 store success score fill_success gm4_rl_data run fill ~-6 ~ ~-6 ~6 ~ ~6 command_block[facing=north]{auto:1,Command:"function gm4_custom_crafters:relocate/place_down/south"} replace player_wall_head[facing=south]{SkullOwner:{Id:[I;-698910882,1355432644,-1608425408,-1046601502]}}
+execute if score fill_success gm4_rl_data matches 0 store success score fill_success gm4_rl_data run fill ~-6 ~ ~-6 ~6 ~ ~6 command_block[facing=down]{auto:1,Command:"function gm4_custom_crafters:relocate/place_down/floor"} replace player_head{SkullOwner:{Id:[I;-698910882,1355432644,-1608425408,-1046601502]}}
