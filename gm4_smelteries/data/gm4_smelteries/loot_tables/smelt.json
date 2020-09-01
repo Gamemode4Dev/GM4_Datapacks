@@ -12,10 +12,21 @@
                             "name": "minecraft:gold_ingot",
                             "conditions": [
                                 {
-                                    "condition": "minecraft:match_tool",
-                                    "predicate": {
-                                        "item": "minecraft:gold_ore"
-                                    }
+                                    "condition": "minecraft:alternative",
+                                    "terms": [
+                                        {
+                                            "condition": "minecraft:match_tool",
+                                            "predicate": {
+                                                "item": "minecraft:gold_ore"
+                                            }
+                                        },
+                                        {
+                                            "condition": "minecraft:match_tool",
+                                            "predicate": {
+                                                "item": "minecraft:nether_gold_ore"
+                                            }
+                                        }
+                                    ]
                                 }
                             ]
                         },

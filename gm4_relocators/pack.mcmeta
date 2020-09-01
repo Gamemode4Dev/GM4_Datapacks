@@ -1,10 +1,11 @@
 {
     "pack": {
-        "pack_format": 5,
+        "pack_format": 6,
         "description": "A Gamemode 4 Module"
     },
     "module_name": "Relocators",
     "module_id": "relocators",
+    "hidden":false,
     "site_description": "Craft relocators to move your custom crafters, liquid tanks, and other machines",
     "site_categories": [
         "Custom Crafting"
@@ -25,7 +26,7 @@
         "tinkering_compressors"
     ],
     "credits": {
-        "Creator and Textures": [
+        "Creator": [
             [
                 "BluePsychoRanger",
                 "https://www.twitter.com/BluPsychoRanger"

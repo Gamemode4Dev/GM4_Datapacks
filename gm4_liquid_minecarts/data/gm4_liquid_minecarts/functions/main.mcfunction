@@ -1,5 +1,5 @@
 #create liquid minecarts from hopper minecart
-execute as @e[type=hopper_minecart,tag=!gm4_liquid_minecart,nbt={Items:[{id:"minecraft:hopper",Count:1b},{id:"minecraft:iron_trapdoor",Count:1b},{id:"minecraft:comparator",Count:1b},{id:"minecraft:dispenser",Count:1b},{id:"minecraft:bucket",Count:1b}]}] at @s run function gm4_liquid_minecarts:create
+execute as @e[type=item,tag=!gm4_liquid_minecarts_checked,nbt={Item:{id:"minecraft:glass",Count:1b},OnGround:1b}] at @s run function gm4_liquid_minecarts:glass_block
 
 #detect destroyed liquid minecarts
 execute as @e[type=armor_stand,tag=gm4_liquid_minecart_display] at @s unless entity @e[type=command_block_minecart,tag=gm4_liquid_minecart,distance=..0.5] run function gm4_liquid_minecarts:destroy

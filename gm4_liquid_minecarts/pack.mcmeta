@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 5,
+        "pack_format": 6,
         "description": "A Gamemode 4 Module"
     },
     "module_name": "Liquid Minecarts",
