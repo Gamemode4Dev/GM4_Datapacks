@@ -11,6 +11,12 @@ execute as @e[type=item,tag=gm4_zc_nbt_storage,limit=1] if score @s gm4_zc_id = 
 # modify data
 execute store result score remaining_sips gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.tag.gm4_zauber_cauldrons.bottle.sips
 scoreboard players remove remaining_sips gm4_zc_data 1
+execute if score remaining_sips gm4_zc_data matches 8 run function gm4_zauber_cauldrons:player/multi_use_bottle/update_data/level_8
+execute if score remaining_sips gm4_zc_data matches 7 run function gm4_zauber_cauldrons:player/multi_use_bottle/update_data/level_7
+execute if score remaining_sips gm4_zc_data matches 6 run function gm4_zauber_cauldrons:player/multi_use_bottle/update_data/level_6
+execute if score remaining_sips gm4_zc_data matches 5 run function gm4_zauber_cauldrons:player/multi_use_bottle/update_data/level_5
+execute if score remaining_sips gm4_zc_data matches 4 run function gm4_zauber_cauldrons:player/multi_use_bottle/update_data/level_4
+execute if score remaining_sips gm4_zc_data matches 3 run function gm4_zauber_cauldrons:player/multi_use_bottle/update_data/level_3
 execute if score remaining_sips gm4_zc_data matches 2 run function gm4_zauber_cauldrons:player/multi_use_bottle/update_data/level_2
 execute if score remaining_sips gm4_zc_data matches 1 run function gm4_zauber_cauldrons:player/multi_use_bottle/update_data/level_1
 

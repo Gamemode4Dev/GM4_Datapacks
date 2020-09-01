@@ -14,7 +14,7 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Take the third sip out of a single bottle",
+        "Take the ninth sip out of a single bottle",
         {"translate": "advancement.gm4.zauber_cauldrons.drink_multi_use_bottle.description"}
       ],
       "color": "gray"
