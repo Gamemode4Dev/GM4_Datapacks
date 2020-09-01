@@ -14,10 +14,18 @@ execute store result storage gm4_zauber_cauldrons:temp/item/bottled_vex Item.tag
 execute store result storage gm4_zauber_cauldrons:temp/item/bottled_vex Item.tag.gm4_zauber_cauldrons.cauldron_pos.z int 1 run data get entity @s Pos.[2]
 
 # read dimension
-# WARNING: THE DIMENSION TAG IS NOT PRESENT ON ALL ENTITIES ANYMORE AS OF 1.16. THE STORED DIMENSION IS WRONG / DEFAULTS TO 0. THIS MUST BE REPLACED WITH A NEW CHECK.
-execute store result storage gm4_zauber_cauldrons:temp/item/bottled_vex Item.tag.gm4_zauber_cauldrons.cauldron_pos.dimension int 1 run data get entity @s Dimension
+# due to a bug (MC-133579), "execute in minecraft:the_end if entity @s[distance=0..]" always returns true when @s is used :/.
+tag @s add gm4_zc_current_cauldron
+execute in minecraft:the_end if entity @e[type=area_effect_cloud,tag=gm4_zc_current_cauldron,distance=0..] run data modify storage gm4_zauber_cauldrons:temp/item/bottled_vex Item.tag.gm4_zauber_cauldrons.cauldron_pos.dimension set value 1
+execute in minecraft:overworld if entity @e[type=area_effect_cloud,tag=gm4_zc_current_cauldron,distance=0..] run data modify storage gm4_zauber_cauldrons:temp/item/bottled_vex Item.tag.gm4_zauber_cauldrons.cauldron_pos.dimension set value 0
+execute in minecraft:the_nether if entity @e[type=area_effect_cloud,tag=gm4_zc_current_cauldron,distance=0..] run data modify storage gm4_zauber_cauldrons:temp/item/bottled_vex Item.tag.gm4_zauber_cauldrons.cauldron_pos.dimension set value -1
+tag @s remove gm4_zc_current_cauldron
 
 # store nbt onto item
 data modify entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}},limit=1] {} merge from storage gm4_zauber_cauldrons:temp/item/bottled_vex {}
 
+# reset storage
+data remove storage gm4_zauber_cauldrons:temp/item/bottled_vex Item
+
+# store success
 scoreboard players set bottled_possessed_items gm4_zc_data 1
