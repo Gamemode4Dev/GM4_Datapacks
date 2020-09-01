@@ -1,4 +1,4 @@
-# @s = command block placed by gm4_block_compressors:relocate/place_down_check
+# @s = command block placed by gm4_block_compressors:relocate/replace_head
 
 function gm4_relocators:place_down/place_block
 

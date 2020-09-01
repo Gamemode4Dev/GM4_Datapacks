@@ -1,8 +1,8 @@
 # @s = player who placed a relocated block player head
 # run from #gm4_relocators:place_down
 
-fill ~-6 ~-5 ~-6 ~6 ~7 ~6 command_block[facing=east]{auto:1,Command:"function gm4_enchantment_extractors:relocate/place_down/west"} replace player_wall_head[facing=west]{SkullOwner:{Id:[I;-983517977,466373274,-1879558378,861584362]}}
-fill ~-6 ~-5 ~-6 ~6 ~7 ~6 command_block[facing=west]{auto:1,Command:"function gm4_enchantment_extractors:relocate/place_down/east"} replace player_wall_head[facing=east]{SkullOwner:{Id:[I;-983517977,466373274,-1879558378,861584362]}}
-fill ~-6 ~-5 ~-6 ~6 ~7 ~6 command_block[facing=south]{auto:1,Command:"function gm4_enchantment_extractors:relocate/place_down/north"} replace player_wall_head[facing=north]{SkullOwner:{Id:[I;-983517977,466373274,-1879558378,861584362]}}
-fill ~-6 ~-5 ~-6 ~6 ~7 ~6 command_block[facing=north]{auto:1,Command:"function gm4_enchantment_extractors:relocate/place_down/south"} replace player_wall_head[facing=south]{SkullOwner:{Id:[I;-983517977,466373274,-1879558378,861584362]}}
-fill ~-6 ~-5 ~-6 ~6 ~7 ~6 command_block[facing=down]{auto:1,Command:"function gm4_enchantment_extractors:relocate/place_down/floor"} replace player_head{SkullOwner:{Id:[I;-983517977,466373274,-1879558378,861584362]}}
+execute positioned ~ ~-5 ~ run kill @e[type=area_effect_cloud,tag=gm4_relocator_fill,dy=13]
+summon area_effect_cloud ~ ~-5 ~ {CustomName:'"gm4_relocator_fill"',Tags:["gm4_relocator_fill"],Particle:"block air"}
+scoreboard players set fill_success gm4_rl_data 0
+scoreboard players set fill_counter gm4_rl_data -5
+execute positioned ~ ~-5 ~ as @e[type=area_effect_cloud,tag=gm4_relocator_fill,limit=1,sort=nearest,distance=..0.01] at @s run function gm4_enchantment_extractors:relocate/replace_head

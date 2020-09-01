@@ -1,4 +1,4 @@
-# @s = command block placed by gm4_relocators:place_down/place_block
+# @s = command block placed by gm4_master_crafting:relocate/replace_head
 
 function gm4_relocators:place_down/place_block
 

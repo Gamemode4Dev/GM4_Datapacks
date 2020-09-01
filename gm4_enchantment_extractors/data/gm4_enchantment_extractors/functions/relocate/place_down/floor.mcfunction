@@ -1,4 +1,4 @@
-# @s = command block placed by gm4_enchantment_extractors:relocate/place_down_check
+# @s = command block placed by gm4_enchantment_extractors:relocate/replace_head
 
 function gm4_relocators:place_down/place_block
 
