@@ -3,7 +3,7 @@
   "entity": "this",
   "predicate": {
     "equipment": {
-      "mainhand": {
+      "offhand": {
         "item": "minecraft:glass_bottle"
       }
     }
