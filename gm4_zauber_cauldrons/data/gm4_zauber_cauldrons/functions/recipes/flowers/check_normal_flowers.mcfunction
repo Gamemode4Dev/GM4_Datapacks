@@ -1,10 +1,10 @@
-#@s=boiling zauber cauldron with grass and enchanted_prismarine_shard and NO poisonous flowers inside.
-#at align xyz
-#run from recipes/flowers/check_poisonous_flowers
+# @s=boiling zauber cauldron with grass and enchanted_prismarine_shard and NO poisonous flowers inside.
+# at align xyz
+# run from recipes/flowers/check_poisonous_flowers
 
-#initialise fake player (required if all flowers are poisonous/gm4_zc_flowers=1)
+# initialise fake player (required if all flowers are poisonous/gm4_zc_flowers=1)
 scoreboard players set normal_flowers_amount gm4_zc_fullness 0
-#count normal flowers
+# count normal flowers
 execute if score red_tulip gm4_zc_flowers matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:red_tulip"}},limit=1,sort=arbitrary] run scoreboard players add normal_flowers_amount gm4_zc_fullness 1
 execute if score orange_tulip gm4_zc_flowers matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:orange_tulip"}},limit=1,sort=arbitrary] run scoreboard players add normal_flowers_amount gm4_zc_fullness 1
 execute if score white_tulip gm4_zc_flowers matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:white_tulip"}},limit=1,sort=arbitrary] run scoreboard players add normal_flowers_amount gm4_zc_fullness 1
@@ -18,8 +18,8 @@ execute if score poppy gm4_zc_flowers matches 0 if entity @e[type=item,dx=0,dy=0
 execute if score cornflower gm4_zc_flowers matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:cornflower"}},limit=1,sort=arbitrary] run scoreboard players add normal_flowers_amount gm4_zc_fullness 1
 execute if score lily_of_the_valley gm4_zc_flowers matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:lily_of_the_valley"}},limit=1,sort=arbitrary] run scoreboard players add normal_flowers_amount gm4_zc_fullness 1
 
-#compare amount of normal flowers in cauldron to expected amount
+# compare amount of normal flowers in cauldron to expected amount
 execute if score normal_flowers_amount gm4_zc_fullness = required_flowers gm4_zc_flowers at @s run function gm4_zauber_cauldrons:recipes/flowers/luck
 
-#reset fake players
+# reset fake players
 scoreboard players reset normal_flowers_amount gm4_zc_fullness
