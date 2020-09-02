@@ -1,0 +1,74 @@
+{
+  "rewards": {
+    "function": "gm4_zauber_cauldrons:player/multi_use_bottle/check_gamemode"
+  },
+  "criteria": {
+    "use_level_9": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "nbt": "{gm4_zauber_cauldrons:{bottle:{sips:9b,multi_use:1b}}}"
+        }
+      }
+    },
+    "use_level_8": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "nbt": "{gm4_zauber_cauldrons:{bottle:{sips:8b,multi_use:1b}}}"
+        }
+      }
+    },
+    "use_level_7": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "nbt": "{gm4_zauber_cauldrons:{bottle:{sips:7b,multi_use:1b}}}"
+        }
+      }
+    },
+    "use_level_6": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "nbt": "{gm4_zauber_cauldrons:{bottle:{sips:6b,multi_use:1b}}}"
+        }
+      }
+    },
+    "use_level_5": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "nbt": "{gm4_zauber_cauldrons:{bottle:{sips:5b,multi_use:1b}}}"
+        }
+      }
+    },
+    "use_level_4": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "nbt": "{gm4_zauber_cauldrons:{bottle:{sips:4b,multi_use:1b}}}"
+        }
+      }
+    },
+    "use_level_3": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "nbt": "{gm4_zauber_cauldrons:{bottle:{sips:3b,multi_use:1b}}}"
+        }
+      }
+    },
+    "use_level_2": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "nbt": "{gm4_zauber_cauldrons:{bottle:{sips:2b,multi_use:1b}}}"
+        }
+      }
+    }
+  },
+  "requirements":[
+    ["use_level_2","use_level_3","use_level_4","use_level_5","use_level_6","use_level_7","use_level_8","use_level_9"]
+  ]
+}
