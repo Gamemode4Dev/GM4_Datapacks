@@ -5,7 +5,7 @@
     },
     "module_name": "Zauber Cauldrons",
     "module_id": "zauber_cauldrons",
-    "hidden":"false",
+    "hidden":false,
     "libraries": [
         "lib_forceload"
     ],
