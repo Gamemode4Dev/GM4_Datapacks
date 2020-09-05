@@ -1,0 +1,7 @@
+data merge block ~ ~ ~ {CustomName: "\"Wormhole Tank\""}
+summon armor_stand ~ ~-.45 ~ {CustomName: "\"gm4_liquid_tank_display\"", Tags: ["gm4_no_edit", "gm4_liquid_tank_display"], NoGravity: 1, Marker: 1, Invisible: 1, Invulnerable: 1, Small: 1, DisabledSlots: 2039552, Fire: 20000, ArmorItems: [{}, {}, {}, {id: "player_head", Count: 1b, tag: {SkullOwner: {Id: [I; 1091458999, 658391520, -1160634382, -146167175], Properties: {textures: [{Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjgxOGM5MGIzZTAxZTk4NTcyOTljYjIwNGU4OGUyZTJhMmI2YWI5ODhlZjRhN2ExMjIyOTI1MDkzODg1ZTlhOSJ9fX0="}]}}}}]}
+data modify entity @s ArmorItems[3].tag.gm4_liquid_tanks.liquid_tag set value "gm4_lt_zauber_wormhole_potion"
+scoreboard players set @s gm4_lt_max 300
+tag @s add gm4_lt_zauber_wormhole_potion
+tag @s add gm4_volatile_liquid
+tag @s remove gm4_lt_empty

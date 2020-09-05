@@ -5,8 +5,8 @@
     },
     "module_name": "Zauber Liquids",
     "module_id": "zauber_liquids",
-    "hidden":true,
-    "site_description": "From cauldron-made potions to potion-filled tanks! Store your tier IV potions in Liquid Tanks!",
+    "hidden": true,
+    "site_description": "From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!",
     "site_categories": [
         "Liquid Tanks"
     ],
@@ -37,6 +37,9 @@
         "Textures by": [
             [
                 "Vilder50"
+            ],
+            [
+                "Hozz"
             ]
         ]
     }
