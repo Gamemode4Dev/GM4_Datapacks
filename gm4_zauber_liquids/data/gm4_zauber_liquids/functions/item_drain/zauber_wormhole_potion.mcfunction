@@ -1,24 +1,28 @@
 # math for averages: x,y,z: (oldcoord + ((newcoord-oldcoord)/(newfullness)))| dimension: olddim
-execute store result score @s gm4_zc_warp_mx run data get block ~ ~ ~ Items[{Slot: 0b}].tag.gm4_zauber_cauldrons.cauldron_pos.x
-execute store result score @s gm4_zc_warp_my run data get block ~ ~ ~ Items[{Slot: 0b}].tag.gm4_zauber_cauldrons.cauldron_pos.y
-execute store result score @s gm4_zc_warp_mz run data get block ~ ~ ~ Items[{Slot: 0b}].tag.gm4_zauber_cauldrons.cauldron_pos.z
-execute store result score @s gm4_zc_warp_md run data get block ~ ~ ~ Items[{Slot: 0b}].tag.gm4_zauber_cauldrons.cauldron_pos.dimension
-scoreboard players add @s gm4_lt_value 1
+execute store result score math gm4_zl_warp_cx run data get block ~ ~ ~ Items[{Slot: 0b}].tag.gm4_zauber_cauldrons.cauldron_pos.x
+execute store result score math gm4_zl_warp_cy run data get block ~ ~ ~ Items[{Slot: 0b}].tag.gm4_zauber_cauldrons.cauldron_pos.y
+execute store result score math gm4_zl_warp_cz run data get block ~ ~ ~ Items[{Slot: 0b}].tag.gm4_zauber_cauldrons.cauldron_pos.z
+execute store result score math gm4_zl_warp_cd run data get block ~ ~ ~ Items[{Slot: 0b}].tag.gm4_zauber_cauldrons.cauldron_pos.dimension
+
+execute if score @s gm4_lt_value matches 1 run scoreboard players operation math gm4_zl_warp_cx += math gm4_zl_warp_cx
+execute if score @s gm4_lt_value matches 1 run scoreboard players operation math gm4_zl_warp_cy += math gm4_zl_warp_cy
+execute if score @s gm4_lt_value matches 1 run scoreboard players operation math gm4_zl_warp_cz += math gm4_zl_warp_cz
+
 
 # x math
-scoreboard players operation @s gm4_zc_warp_mx -= @s gm4_zc_warp_ox
-scoreboard players operation @s gm4_zc_warp_mx /= @s gm4_lt_value
-scoreboard players operation @s gm4_zc_warp_ox += @s gm4_zc_warp_mx
-# y math
-scoreboard players operation @s gm4_zc_warp_my -= @s gm4_zc_warp_oy
-scoreboard players operation @s gm4_zc_warp_my /= @s gm4_lt_value
-scoreboard players operation @s gm4_zc_warp_oy += @s gm4_zc_warp_my
-# z math
-scoreboard players operation @s gm4_zc_warp_mz -= @s gm4_zc_warp_oz
-scoreboard players operation @s gm4_zc_warp_mz /= @s gm4_lt_value
-scoreboard players operation @s gm4_zc_warp_oz += @s gm4_zc_warp_mz
+scoreboard players operation @s gm4_zl_warp_cx += math gm4_zl_warp_cx
+scoreboard players operation @s gm4_zl_warp_cx /= divisor gm4_zl_warp_cx
+
+# # y math
+scoreboard players operation @s gm4_zl_warp_cy += math gm4_zl_warp_cy
+scoreboard players operation @s gm4_zl_warp_cy /= divisor gm4_zl_warp_cx
+
+# # z math
+scoreboard players operation @s gm4_zl_warp_cz += math gm4_zl_warp_cz
+scoreboard players operation @s gm4_zl_warp_cz /= divisor gm4_zl_warp_cx
+
 # set dimension if first wormhole
-execute if score @s gm4_lt_value matches 1 run scoreboard players operation @s gm4_zc_warp_od = @s gm4_zc_warp_md
+execute if score @s gm4_lt_value matches 1 run scoreboard players operation @s gm4_zl_warp_cd = math gm4_zl_warp_cd
 
 execute if data block ~ ~ ~ Items[{Slot: 0b}].tag.gm4_zauber_cauldrons.bottle.multi_use run function gm4_zauber_liquids:item_drain/update_sips
 execute unless data block ~ ~ ~ Items[{Slot: 0b}].tag.gm4_zauber_cauldrons.bottle.multi_use run replaceitem block ~ ~ ~ container.0 glass_bottle 1

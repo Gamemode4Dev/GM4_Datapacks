@@ -4,10 +4,10 @@
 # To work with non-player mobs, both versions require a change to @e from @a on line 14 of wormhole_targeting/set_dimension.mcfunction
 
 # Set coords
-scoreboard players operation wormhole_x gm4_zc_data = @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank] gm4_zc_warp_ox
-scoreboard players operation wormhole_y gm4_zc_data = @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank] gm4_zc_warp_oy
-scoreboard players operation wormhole_z gm4_zc_data = @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank] gm4_zc_warp_oz
-scoreboard players operation wormhole_d gm4_zc_data = @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank] gm4_zc_warp_od
+scoreboard players operation wormhole_x gm4_zc_data = @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank] gm4_zl_warp_cx
+scoreboard players operation wormhole_y gm4_zc_data = @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank] gm4_zl_warp_cy
+scoreboard players operation wormhole_z gm4_zc_data = @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank] gm4_zl_warp_cz
+scoreboard players operation wormhole_d gm4_zc_data = @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank] gm4_zl_warp_cd
 scoreboard players set read_coordinates gm4_zc_data 1
 function gm4_zauber_cauldrons:player/wormhole_targeting/prepare_teleport
 

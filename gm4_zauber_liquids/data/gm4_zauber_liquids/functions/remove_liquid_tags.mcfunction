@@ -9,11 +9,7 @@ tag @s remove gm4_lt_zauber_regeneration_potion
 tag @s remove gm4_lt_zauber_swiftness_potion
 tag @s remove gm4_lt_zauber_strength_potion
 tag @s remove gm4_lt_zauber_wormhole_potion
-scoreboard players reset @s gm4_zc_warp_ox
-scoreboard players reset @s gm4_zc_warp_mx
-scoreboard players reset @s gm4_zc_warp_oy
-scoreboard players reset @s gm4_zc_warp_my
-scoreboard players reset @s gm4_zc_warp_oz
-scoreboard players reset @s gm4_zc_warp_mz
-scoreboard players reset @s gm4_zc_warp_od
-scoreboard players reset @s gm4_zc_warp_md
+scoreboard players reset @s gm4_zl_warp_cx
+scoreboard players reset @s gm4_zl_warp_cy
+scoreboard players reset @s gm4_zl_warp_cz
+scoreboard players reset @s gm4_zl_warp_cd
