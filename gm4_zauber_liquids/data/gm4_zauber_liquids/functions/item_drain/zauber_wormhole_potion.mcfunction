@@ -1,5 +1,5 @@
 # Non-Weighted Averages: (oldcoord+newcoord)/2
-data modify storage gm4_zauber_liquids:temp/item/drain/zauber_wormhole Item.tag.gm4_zauber_cauldrons.cauldron_pos set from block ~ ~ ~ Items[{Slot: 0b}].tag.gm4_zauber_cauldrons.cauldron_pos
+data modify storage gm4_zauber_liquids:temp/item/drain/zauber_wormhole Item.tag.gm4_zauber_cauldrons.cauldron_pos set from block ~ ~ ~ Items[{Slot:0b}].tag.gm4_zauber_cauldrons.cauldron_pos
 execute store result score math gm4_zl_warp_cx run data get storage gm4_zauber_liquids:temp/item/drain/zauber_wormhole Item.tag.gm4_zauber_cauldrons.cauldron_pos.x
 execute store result score math gm4_zl_warp_cy run data get storage gm4_zauber_liquids:temp/item/drain/zauber_wormhole Item.tag.gm4_zauber_cauldrons.cauldron_pos.y
 execute store result score math gm4_zl_warp_cz run data get storage gm4_zauber_liquids:temp/item/drain/zauber_wormhole Item.tag.gm4_zauber_cauldrons.cauldron_pos.z

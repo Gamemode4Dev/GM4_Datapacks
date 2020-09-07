@@ -10,19 +10,19 @@ execute if score @s[tag=gm4_lt_zauber_harming_potion] gm4_lt_value matches 1.. a
 execute if score @s[tag=gm4_lt_zauber_healing_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] run function gm4_zauber_liquids:util/healing
 
 #leaping
-execute if score @s[tag=gm4_lt_zauber_leaping_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{ActiveEffects: [{Id: 8b}]}] run function gm4_zauber_liquids:util/leaping
+execute if score @s[tag=gm4_lt_zauber_leaping_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{ActiveEffects:[{Id:8b}]}] run function gm4_zauber_liquids:util/leaping
 
 #poison
-execute if score @s[tag=gm4_lt_zauber_poison_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{ActiveEffects: [{Id: 19b}]}] run function gm4_zauber_liquids:util/poison
+execute if score @s[tag=gm4_lt_zauber_poison_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{ActiveEffects:[{Id:19b}]}] run function gm4_zauber_liquids:util/poison
 
 #regeneration
-execute if score @s[tag=gm4_lt_zauber_regeneration_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{ActiveEffects: [{Id: 10b}]}] run function gm4_zauber_liquids:util/regeneration
+execute if score @s[tag=gm4_lt_zauber_regeneration_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{ActiveEffects:[{Id:10b}]}] run function gm4_zauber_liquids:util/regeneration
 
 #speed
-execute if score @s[tag=gm4_lt_zauber_swiftness_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{ActiveEffects: [{Id: 1b}]}] run function gm4_zauber_liquids:util/swiftness
+execute if score @s[tag=gm4_lt_zauber_swiftness_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{ActiveEffects:[{Id:1b}]}] run function gm4_zauber_liquids:util/swiftness
 
 #strength
-execute if score @s[tag=gm4_lt_zauber_strength_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{ActiveEffects: [{Id: 5b}]}] run function gm4_zauber_liquids:util/strength
+execute if score @s[tag=gm4_lt_zauber_strength_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{ActiveEffects:[{Id:5b}]}] run function gm4_zauber_liquids:util/strength
 
 #wormhole
 execute if score @s[tag=gm4_lt_zauber_wormhole_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] run function gm4_zauber_liquids:util/wormhole

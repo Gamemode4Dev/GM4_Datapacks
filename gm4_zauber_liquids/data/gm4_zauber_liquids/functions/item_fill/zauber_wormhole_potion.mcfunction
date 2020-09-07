@@ -4,7 +4,7 @@ execute store result storage gm4_zauber_liquids:temp/item/fill/zauber_wormhole I
 execute store result storage gm4_zauber_liquids:temp/item/fill/zauber_wormhole Item.tag.gm4_zauber_cauldrons.cauldron_pos.y int 1 run scoreboard players get @s gm4_zl_warp_cy
 execute store result storage gm4_zauber_liquids:temp/item/fill/zauber_wormhole Item.tag.gm4_zauber_cauldrons.cauldron_pos.z int 1 run scoreboard players get @s gm4_zl_warp_cz
 execute store result storage gm4_zauber_liquids:temp/item/fill/zauber_wormhole Item.tag.gm4_zauber_cauldrons.cauldron_pos.dimension int 1 run scoreboard players get @s gm4_zl_warp_cd
-data modify block ~ ~ ~ Items[{Slot: 0b}].tag.gm4_zauber_cauldrons merge from storage gm4_zauber_liquids:temp/item/fill/zauber_wormhole Item.tag.gm4_zauber_cauldrons
+data modify block ~ ~ ~ Items[{Slot:0b}].tag.gm4_zauber_cauldrons merge from storage gm4_zauber_liquids:temp/item/fill/zauber_wormhole Item.tag.gm4_zauber_cauldrons
 data remove storage gm4_zauber_liquids:temp/item/fill/zauber_wormhole Item
 
 scoreboard players remove @s gm4_lt_value 1

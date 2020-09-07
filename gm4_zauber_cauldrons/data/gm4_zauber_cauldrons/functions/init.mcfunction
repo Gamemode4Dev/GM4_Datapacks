@@ -10,7 +10,7 @@ scoreboard players set modulo gm4_zc_fullness 3
 
 # This module includes the gm4 forceload library. If you didn't get this pack from our website, make sure you have the gm4 forceload library installed!
 
-execute unless score zauber_cauldrons gm4_modules matches 1 run data modify storage gm4:log queue append value {type: "install", module: "Zauber Cauldrons"}
+execute unless score zauber_cauldrons gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Zauber Cauldrons"}
 scoreboard players set zauber_cauldrons gm4_modules 1
 
 schedule function gm4_zauber_cauldrons:main 1t
