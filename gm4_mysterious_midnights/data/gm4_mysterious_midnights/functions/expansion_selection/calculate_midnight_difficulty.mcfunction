@@ -3,7 +3,7 @@
 #run from calculate_moon_phase, only during full moon nights, only once per full moon night
 
 #generate random number from 0 to 15
-execute store result score random gm4_nights_data run data get entity @e[limit=1,sort=random] UUIDMost 0.00000000002273064325381162890625
+execute store result score random gm4_nights_data run data get entity @e[limit=1,sort=random] UUID[0]
 scoreboard players operation random gm4_nights_data %= 16 gm4_nights_data
 
 #manipulate moon_phase to cancel 53% of mysterious_midnights
