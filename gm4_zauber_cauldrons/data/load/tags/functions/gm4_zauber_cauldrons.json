@@ -1,6 +1,6 @@
 {
     "values": [
-		{"id": "#load:gm4_forceload", "required": false},
+        "#load:gm4_forceload",
         "gm4_zauber_cauldrons:load"
     ]
 }
