@@ -13,6 +13,14 @@ execute unless score @s gm4_ml_heat matches 1..89 run function gm4_metallurgy:ca
 
 execute if score @s gm4_ml_heat matches 50..89 align xyz positioned ~ ~1 ~ if entity @e[type=item,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{item:"ore"}}},OnGround:1b},dx=0,dy=0,dz=0] run function gm4_metallurgy:casting/add_metal/initialize
 
+#process heads for recycling
+execute if score @s gm4_ml_heat matches 50..89 if block ~ ~1 ~ minecraft:player_head run function gm4_metallurgy:casting/recycle_band/initialize
+execute unless block ~ ~1 ~ minecraft:player_head run scoreboard players reset @s gm4_ml_rcyc
+execute unless score @s gm4_ml_heat matches 50..89 run scoreboard players reset @s gm4_ml_rcyc
+
+#kill gm4_burnt_head when the fire is extinguished
+execute as @e[type=minecraft:armor_stand,tag=gm4_burnt_head] at @s unless block ~ ~1 ~ minecraft:fire run function gm4_metallurgy:casting/recycle_band/kill_burnt_head
+
 #hot ring without metal
 execute if score @s[tag=!gm4_contains_metal] gm4_ml_heat matches 50..51 run data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1,tag:{CustomModelData:24,SkullOwner:{Id:[I;140191582,-1151712444,-1271434748,932201856],Properties:{textures:[{Value:"eyJ0aW1lc3RhbXAiOjE0ODE0MTE3MjM4MDYsInByb2ZpbGVJZCI6Ijk4NWIyNzVlYmI1YTQzNDRiNDM3Njg5NTI4NjNhNjNmIiwicHJvZmlsZU5hbWUiOiJTcGFya3MiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTc0NTVkNjg3MjJkOTU3ZmI1ZGVjZGNjY2NjMWI2MWU4NzlhOTY3ZjFiZGM3YzJhMmZkMTlhYTI3OWU4ODUifSwiQ0FQRSI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVjM2NhN2VlMmE0OThmMWI1ZDI1OGQ1ZmE5MjdlNjNlNDMzMTQzYWRkNTUzOGNmNjNiNmE5Yjc4YWU3MzUifX19"}]}}}}]}
 
