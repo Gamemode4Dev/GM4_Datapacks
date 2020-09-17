@@ -1,6 +1,5 @@
 scoreboard objectives add gm4_ml_data dummy
 scoreboard objectives add gm4_ml_heat dummy
-scoreboard objectives add gm4_ml_rcyc dummy
 
 scoreboard objectives add gm4_ml_ore_ba dummy
 scoreboard objectives add gm4_ml_ore_al dummy
