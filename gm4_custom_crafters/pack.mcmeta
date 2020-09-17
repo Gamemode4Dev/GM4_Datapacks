@@ -17,7 +17,8 @@
         "record_crafting",
         "master_crafting",
         "disassemblers",
-        "block_compressors"
+        "block_compressors",
+        "relocators"
     ],
     "credits": {
         "Creator": [
