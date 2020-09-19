@@ -1,5 +1,5 @@
 # @s = armor_stand tag=gm4_rl_set_stand_data
-# run from placed_machine_block
+# run from backwards_compatibility/placed_machine_block
 
 data modify entity @e[type=armor_stand,tag=gm4_rl_set_stand_data,limit=1,distance=..0.01] Small set from entity @s SelectedItem.tag.gm4_relocation.data.Small
 data modify entity @e[type=armor_stand,tag=gm4_rl_set_stand_data,limit=1,distance=..0.01] CustomName set from entity @s SelectedItem.tag.gm4_relocation.data.CustomName
