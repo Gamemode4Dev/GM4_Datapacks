@@ -7,7 +7,7 @@ advancement revoke @s only gm4_relocators:place_relocated_block
 execute positioned ~ ~-5 ~ run kill @e[type=armor_stand,tag=gm4_relocator_fill,dy=13]
 summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,NoGravity:1b,Small:1b,CustomName:'"gm4_relocator_fill"',Tags:["gm4_relocator_fill"]}
 tp @e[type=armor_stand,limit=1,tag=gm4_relocator_fill,distance=..0.001] ~ ~ ~ ~ 0
-execute align xyz run tp @e[type=armor_stand,limit=1,tag=gm4_relocator_fill,distance=..0.001] ~ ~ ~
+execute align y run tp @e[type=armor_stand,limit=1,tag=gm4_relocator_fill,distance=..0.001] ~ ~ ~
 data modify entity @e[type=armor_stand,limit=1,tag=gm4_relocator_fill,distance=..0.001] ArmorItems[0] set from entity @s SelectedItem
 
 # check for relocated block heads
