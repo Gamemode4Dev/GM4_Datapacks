@@ -1,3 +1,4 @@
+execute if entity @s[nbt={Inventory:[{id:"minecraft:netherite_ingot",Count:64b}]}] run function gm4_tinker_shamir:compact/netherite_ingot
 execute if entity @s[nbt={Inventory:[{id:"minecraft:emerald",Count:64b}]}] run function gm4_tinker_shamir:compact/emerald
 execute if entity @s[nbt={Inventory:[{id:"minecraft:diamond",Count:64b}]}] run function gm4_tinker_shamir:compact/diamond
 execute if entity @s[nbt={Inventory:[{id:"minecraft:redstone",Count:64b}]}] run function gm4_tinker_shamir:compact/redstone
@@ -7,4 +8,3 @@ execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_ingot",Count:64b}]}] ru
 execute if entity @s[nbt={Inventory:[{id:"minecraft:gold_ingot",Count:64b}]}] run function gm4_tinker_shamir:compact/gold_ingot
 execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_nugget",Count:64b}]}] run function gm4_tinker_shamir:compact/iron_nugget
 execute if entity @s[nbt={Inventory:[{id:"minecraft:gold_nugget",Count:64b}]}] run function gm4_tinker_shamir:compact/gold_nugget
-
