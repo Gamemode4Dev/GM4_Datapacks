@@ -1,4 +1,4 @@
-# @s = a redstone block item stack on a tinkering compressor
+# @s = an iron ingot item stack on a tinkering compressor
 # at @tinkering compressor positioned ~ ~0.9 ~
 # run from tinkering_compressors:mode/decompress
 
