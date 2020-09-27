@@ -6,5 +6,5 @@ execute if entity @s[nbt={Inventory:[{id:"minecraft:lapis_lazuli",Count:64b}]}] 
 execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_ingot",Count:64b}]}] run function gm4_tinker_shamir:compact/iron_ingot
 execute if entity @s[nbt={Inventory:[{id:"minecraft:gold_ingot",Count:64b}]}] run function gm4_tinker_shamir:compact/gold_ingot
 execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_nugget",Count:64b}]}] run function gm4_tinker_shamir:compact/iron_nugget
-execute if entity @s[nbt={Inventory:[{id:"minecraft:gold_ingot",Count:64b}]}] run function gm4_tinker_shamir:compact/gold_ingot
+execute if entity @s[nbt={Inventory:[{id:"minecraft:gold_nugget",Count:64b}]}] run function gm4_tinker_shamir:compact/gold_nugget
 
