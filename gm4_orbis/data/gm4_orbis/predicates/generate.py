@@ -1,6 +1,6 @@
 import json
 
-data = {
+categories = {
 
     "snowy": ["snowy_taiga", "snowy_beach", "snowy_tundra", "snowy_mountains", "snowy_taiga_hills", "snowy_taiga_mountains", "frozen_river", "ice_spikes"],
 
@@ -27,30 +27,21 @@ data = {
     "border": ["river"],
 }
 
-out = {"pools": [
-    {"rolls": 1,
-    "entries": [
-        {"type": "minecraft:item",
-        "name": "minecraft:stick",
-        "functions": []}
-    ]}
-]}
+for category, biomes in categories.items():
 
-for key, biomes in data.items():
-    function = {"function": "minecraft:set_nbt",
-                "tag": "{gm4_orbis:{"+key+":1b}}",
-                "conditions": [
-                    {"condition": "minecraft:alternative",
-                    "terms": []}
-                ]}
+    predicate = {
+        "condition": "minecraft:alternative",
+        "terms": []
+    }
     for biome in biomes:
-        term = {"condition": "minecraft:location_check",
-                "predicate": {
-                    "biome": "minecraft:"+biome
-                }}
-        function["conditions"][0]["terms"].append(term)
-    out["pools"][0]["entries"][0]["functions"].append(function)
+        term = {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "biome": f"minecraft:{biome}"
+            }
+        }
+        predicate["terms"].append(term)
 
-with open('detect_biome.json', 'w') as f:
-    json.dump(out, f, indent=2)
-    f.write("\n")
+    with open(f"biome/{category}.json", 'w') as f:
+        json.dump(predicate, f, indent=2)
+        f.write("\n")
