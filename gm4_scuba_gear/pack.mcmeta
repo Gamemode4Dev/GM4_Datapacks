@@ -5,7 +5,6 @@
     },
     "module_name": "Scuba Gear",
     "module_id": "scuba_gear",
-    "hidden":true,
     "site_description": "Ease ocean exploration with craftable scuba gear!",
     "site_categories": [
         "Custom Crafting"
