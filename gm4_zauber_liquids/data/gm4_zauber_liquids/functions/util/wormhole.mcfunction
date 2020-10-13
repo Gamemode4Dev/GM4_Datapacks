@@ -9,7 +9,7 @@ scoreboard players operation wormhole_y gm4_zc_data = @e[type=armor_stand,tag=gm
 scoreboard players operation wormhole_z gm4_zc_data = @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank] gm4_zl_warp_cz
 scoreboard players operation wormhole_d gm4_zc_data = @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank] gm4_zl_warp_cd
 scoreboard players set read_coordinates gm4_zc_data 1
-function gm4_zauber_cauldrons:player/wormhole_targeting/prepare_teleport
+execute at @s run function gm4_zauber_cauldrons:player/wormhole_targeting/prepare_teleport
 
 scoreboard players remove @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank] gm4_lt_value 1
 playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
