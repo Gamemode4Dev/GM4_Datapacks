@@ -1,6 +1,6 @@
 {
     "values": [
-		{"id": "#load:gm4_liquid_tanks", "required": false},
+        "#load:gm4_liquid_tanks",
         "gm4_potion_liquids:load"
     ]
 }

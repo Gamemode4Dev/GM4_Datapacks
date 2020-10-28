@@ -1,0 +1,11 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "player": {
+      "advancements": {
+        "gm4_zauber_cauldrons:use/multi_use_bottle": true
+      }
+    }
+  }
+}

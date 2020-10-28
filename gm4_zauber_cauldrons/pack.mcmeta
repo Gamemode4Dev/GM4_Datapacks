@@ -5,9 +5,8 @@
     },
     "module_name": "Zauber Cauldrons",
     "module_id": "zauber_cauldrons",
-    "hidden":true,
-    "libraries":[
-      "lib_forceload"
+    "libraries": [
+        "lib_forceload"
     ],
     "site_description": "Brew potions, special armour and attribute crystals in any cauldron!",
     "site_categories": [],
@@ -30,6 +29,10 @@
             [
                 "Alluet",
                 "https://github.com/alluet"
+            ],
+            [
+                "BluePsychoRanger",
+                "https://www.twitter.com/blupsychoranger"
             ]
         ],
         "Icon Design": [

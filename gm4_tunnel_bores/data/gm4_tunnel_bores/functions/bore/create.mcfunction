@@ -1,5 +1,5 @@
 # @s = furnace minecart to be turned into a tnnel bore
-# at world spawn
+# at cart location
 # called by gm4_tunnel_bores:main
 
 # kill existing cart and summon new cart

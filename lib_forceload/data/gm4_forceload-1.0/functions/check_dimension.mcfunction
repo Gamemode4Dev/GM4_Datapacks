@@ -1,5 +1,5 @@
 # @s = player who changed dimensions
-# run from load and advancement "dimension_marking"
+# run from load_wait and advancement "dimension_marking"
 
 advancement revoke @s only gm4_forceload-1.0:dimension_marking
 

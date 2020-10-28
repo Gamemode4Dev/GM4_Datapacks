@@ -5,7 +5,7 @@
     },
     "module_name": "Percurro Shamir",
     "module_id": "percurro_shamir",
-    "hidden":true,
+    "hidden":false,
   "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
     "site_description": "Swoosh! A shamir that allows you to swoosh past your enemies!",
     "site_categories": [],

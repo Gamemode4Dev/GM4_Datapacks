@@ -1,6 +1,6 @@
 {
     "values": [
-        {"id": "#load:gm4_metallurgy", "required": false},
+        "#load:gm4_metallurgy",
         "gm4_fulcio_shamir:load"
     ]
 }
