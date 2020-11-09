@@ -6,6 +6,7 @@ execute store result storage gm4_zauber_liquids:temp/item/fill/zauber_wormhole I
 execute store result storage gm4_zauber_liquids:temp/item/fill/zauber_wormhole Item.tag.gm4_zauber_cauldrons.cauldron_pos.dimension int 1 run scoreboard players get @s gm4_zl_warp_cd
 data modify block ~ ~ ~ Items[{Slot:0b}].tag.gm4_zauber_cauldrons merge from storage gm4_zauber_liquids:temp/item/fill/zauber_wormhole Item.tag.gm4_zauber_cauldrons
 data remove storage gm4_zauber_liquids:temp/item/fill/zauber_wormhole Item
+execute if block ~ ~-1 ~ soul_fire run data modify block ~ ~ ~ Items[{Slot:0b}].tag merge value {gm4_zauber_cauldrons:{bottle:{sips:9b,multi_use:1b}},display:{Lore:['[{"text":"9/9 ","color":"gray","italic":false},{"translate":"%1$s%3427655$s","with":[{"text":"Sips"},{"translate":"item.gm4.zauber_cauldrons.multi_use_bottle.lore.sips"}],"color":"gray","italic":false}]'],Name:'{"translate":"%1$s%3427655$s","with":["Wormhole in a Bottle Soulution",[{"translate":"item.gm4.zauber_cauldrons.multi_use_bottle.level.brimful"},{"translate":"item.gm4.wormhole_in_a_bottle"}]],"italic":"false"}'}}
 
 scoreboard players remove @s gm4_lt_value 1
 tag @s add gm4_lt_fill
