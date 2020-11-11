@@ -2,12 +2,19 @@
   "values": [
     "#minecraft:flowers",
     "minecraft:brown_mushroom",
+    "minecraft:crimson_fungus",
+    "minecraft:crimson_roots",
     "minecraft:dead_bush",
     "minecraft:fern",
     "minecraft:grass",
     "minecraft:large_fern",
+    "minecraft:nether_sprouts",
     "minecraft:red_mushroom",
     "minecraft:tall_grass",
-    "minecraft:vine"
+    "minecraft:twisting_vines",
+    "minecraft:vine",
+    "minecraft:warped_fungus",
+    "minecraft:warped_roots",
+    "minecraft:weeping_vines"
   ]
 }
