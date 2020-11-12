@@ -1,0 +1,45 @@
+{
+    "pack": {
+      "pack_format": 6,
+      "description": {
+        "translate": "%1$s%3427655$s",
+        "with": [
+          [
+            "Teleportation Anchors",
+            "\n",
+            {
+              "text": "Gamemode 4 for 1.16",
+              "color": "aqua"
+            }
+          ],
+          {
+            "translate": "pack.gm4.description",
+            "with": [
+              {
+                "translate": "module.gm4.teleportation_anchors"
+              },
+              "1.16"
+            ]
+          }
+        ]
+      }
+    },
+    "module_name": "Teleportation Anchors",
+    "module_id": "teleportation_anchors",
+    "site_description": "Suppress and control chorus-based teleportation!",
+    "site_categories": [],
+    "wiki_link": "https://wiki.gm4.co/wiki/Teleportation_Anchors",
+    "required_modules": [
+      "custom_crafters"
+    ],
+    "recommended_modules": [
+      "orb_of_ankou",
+      "relocators",
+      "zauber_cauldrons"
+    ],
+    "credits": {
+        "Creator": [
+            ["BluePsychoRanger", "https://www.twitter.com/BluPsychoRanger"]
+        ]
+    }
+}
