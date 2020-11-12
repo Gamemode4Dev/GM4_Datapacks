@@ -2,6 +2,7 @@ scoreboard objectives add gm4_ta_data dummy
 scoreboard objectives add gm4_ta_id dummy
 scoreboard objectives add gm4_ta_fuel dummy
 scoreboard objectives add gm4_ta_jam_time dummy
+scoreboard objectives add gm4_ta_ignore dummy
 scoreboard objectives add gm4_ta_jam_id dummy
 scoreboard objectives add gm4_ta_pos_x dummy
 scoreboard objectives add gm4_ta_pos_y dummy
