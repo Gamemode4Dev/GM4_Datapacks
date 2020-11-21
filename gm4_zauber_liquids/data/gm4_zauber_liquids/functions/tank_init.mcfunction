@@ -21,3 +21,6 @@ execute if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:potion",tag:{gm4_zau
 
 #zauber strength
 execute if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:potion",tag:{gm4_zauber_cauldrons:{item:"potion",type:"strength"}}}]} run function gm4_zauber_liquids:liquid_init/strength
+
+#zauber wormhole
+execute if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:potion",tag:{gm4_zauber_cauldrons:{item:"wormhole_bottle"}}}]} run function gm4_zauber_liquids:liquid_init/wormhole
