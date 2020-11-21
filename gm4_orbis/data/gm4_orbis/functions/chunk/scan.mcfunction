@@ -1,2 +1,12 @@
-loot spawn ~ ~ ~ loot gm4_orbis:detect_biome
-execute as @e[type=item,distance=..1,limit=1] run function gm4_orbis:chunk/get_biomes
+execute if predicate gm4_orbis:biome/snowy run scoreboard players set snowy gm4_orbis_biome 1
+execute if predicate gm4_orbis:biome/cold run scoreboard players set cold gm4_orbis_biome 1
+execute if predicate gm4_orbis:biome/lush run scoreboard players set lush gm4_orbis_biome 1
+execute if predicate gm4_orbis:biome/warm run scoreboard players set warm gm4_orbis_biome 1
+execute if predicate gm4_orbis:biome/ocean run scoreboard players set ocean gm4_orbis_biome 1
+execute if predicate gm4_orbis:biome/desert run scoreboard players set desert gm4_orbis_biome 1
+execute if predicate gm4_orbis:biome/badlands run scoreboard players set badlands gm4_orbis_biome 1
+execute if predicate gm4_orbis:biome/forest run scoreboard players set forest gm4_orbis_biome 1
+execute if predicate gm4_orbis:biome/plains run scoreboard players set plains gm4_orbis_biome 1
+execute if predicate gm4_orbis:biome/river run scoreboard players set river gm4_orbis_biome 1
+execute if predicate gm4_orbis:biome/beach run scoreboard players set beach gm4_orbis_biome 1
+execute if predicate gm4_orbis:biome/border run scoreboard players set border gm4_orbis_biome 1
