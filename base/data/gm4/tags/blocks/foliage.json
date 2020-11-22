@@ -13,9 +13,11 @@
     "minecraft:sweet_berry_bush",
     "minecraft:tall_grass",
     "minecraft:twisting_vines",
+    "minecraft:twisting_vines_plant",
     "minecraft:vine",
     "minecraft:warped_fungus",
     "minecraft:warped_roots",
-    "minecraft:weeping_vines"
+    "minecraft:weeping_vines",
+    "minecraft:weeping_vines_plant"
   ]
 }
