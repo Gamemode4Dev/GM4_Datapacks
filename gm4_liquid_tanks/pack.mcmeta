@@ -15,7 +15,8 @@
     "recommended_modules": [
         "potion_liquids",
         "liquid_minecarts",
-        "concrete_mixers"
+        "concrete_mixers",
+        "relocators"
     ],
     "credits": {
         "Creator": [
