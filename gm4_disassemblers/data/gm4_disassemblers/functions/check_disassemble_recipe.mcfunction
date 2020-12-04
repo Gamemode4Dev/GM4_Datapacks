@@ -32,6 +32,6 @@ execute if entity @s[nbt={Item:{id:"minecraft:flint_and_steel"}}] run function g
 
 execute if score result_items gm4_disassembler matches 0 run playsound minecraft:entity.dragon_fireball.explode master @a[distance=..5] ~ ~ ~ .33 1.5
 execute if score result_items gm4_disassembler matches 1.. run playsound minecraft:entity.firework_rocket.large_blast master @a[distance=..5] ~ ~ ~ 1.5 1.1
-execute as @e[type=minecraft:armor_stand,sort=nearest,limit=1] at @s run particle minecraft:firework ~ ~.75 ~ .1 0 .1 .15 6 force
+particle minecraft:firework ~ ~.75 ~ .1 0 .1 .15 6 force
 
 execute if score result_items gm4_disassembler matches 0.. run kill @s
