@@ -45,6 +45,18 @@
                         },
                         {
                             "type": "minecraft:item",
+                            "name": "minecraft:ancient_debris",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:match_tool",
+                                    "predicate": {
+                                        "item": "minecraft:ancient_debris"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:item",
                             "name": "minecraft:sand",
                             "conditions": [
                                 {
