@@ -1,7 +1,13 @@
-#@s = obsidian cast with a shamir on it
-#called from smooshing/prepare_transfer
+# @s = obsidian cast with a shamir on it
+# called from smooshing/prepare_transfer
 
-#check whether the other item is valid
+# prepare shamir if NBT needs to be updated from old version
+data modify storage gm4_metallurgy:temp/item/band gm4_metallurgy set from entity @s Item.tag.gm4_metallurgy
+execute if data storage gm4_metallurgy:temp/item/band gm4_metallurgy.ore_type run function gm4_metallurgy:smooshing/add_band/update_band_nbt_version
+data modify entity @s Item.tag.gm4_metallurgy set from storage gm4_metallurgy:temp/item/band gm4_metallurgy
+data remove storage gm4_metallurgy:temp/item/band gm4_metallurgy
+
+# check whether the other item is valid
 scoreboard players set valid_item gm4_ml_data 0
 execute as @e[type=item,dx=0,limit=1,nbt={Item:{Count:1b}},nbt=!{Item:{tag:{gm4_metallurgy:{has_shamir:1b}}}}] run function gm4_metallurgy:smooshing/add_band/check_item
 
