@@ -1,0 +1,27 @@
+{
+    "values": [
+        "minecraft:bee",
+        "minecraft:cat",
+        "minecraft:chicken",
+        "minecraft:cow",
+        "minecraft:donkey",
+        "minecraft:fox",
+        "minecraft:hoglin",
+        "minecraft:horse",
+        "minecraft:llama",
+        "minecraft:mooshroom",
+        "minecraft:mule",
+        "minecraft:ocelot",
+        "minecraft:panda",
+        "minecraft:pig",
+        "minecraft:polar_bear",
+        "minecraft:rabbit",
+        "minecraft:sheep",
+        "minecraft:strider",
+        "minecraft:trader_llama",
+        "minecraft:turtle",
+        "minecraft:villager",
+        "minecraft:wolf",
+        "#gm4_everstone:aging_mob"
+    ]
+}
