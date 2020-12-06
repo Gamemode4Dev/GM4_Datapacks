@@ -2,8 +2,8 @@
 #runs from sustain_mould
 
 # determine ore type and primary metal amount
-data modify storage gm4_metallurgy:temp/item/ore gm4_metallurgy set from entity @e[type=item,tag=gm4_ml_in_animation,dx=0,dz=0,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{}}},OnGround:1b},limit=1] Item.tag.gm4_metallurgy
-execute store result score ore_amount gm4_ml_data run data get storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal.amount[0]
+data modify storage gm4_metallurgy:temp/item/ore gm4_metallurgy set from entity @e[type=item,tag=gm4_ml_in_animation,dx=0,dz=0,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{metal:{castable:1b}}}},OnGround:1b},limit=1] Item.tag.gm4_metallurgy
+execute store result score metal_amount gm4_ml_data run data get storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal.amount[0]
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy{item:"obsidian_cast"} run scoreboard players set is_obsidian_cast gm4_ml_data 1
 
 # absorb ore item
