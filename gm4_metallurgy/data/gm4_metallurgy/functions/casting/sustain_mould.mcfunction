@@ -10,7 +10,7 @@ execute if score @s gm4_ml_heat matches 1..89 unless block ~ ~ ~ #minecraft:sand
 execute unless score @s gm4_ml_heat matches 1..89 run function gm4_metallurgy:casting/destroy_mould
 
 # update old casts (pre PR#487: https://github.com/Gamemode4Dev/GM4_Datapacks/pull/487)
-# TODO
+execute if score @s gm4_ml_heat matches 50..89 align xyz positioned ~ ~1 ~ as @e[type=item,dx=0,dy=0,dz=0,tag=!gm4_ml_has_latest_nbt] run function gm4_metallurgy:update_nbt_version/load_band
 
 #add metals if player desires to do so
 execute if score @s gm4_ml_heat matches 50..89 align xyz positioned ~ ~1 ~ if entity @e[type=item,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{metal:{castable:1b}}}},OnGround:1b},dx=0,dy=0,dz=0] run function gm4_metallurgy:casting/add_metal/initialize
