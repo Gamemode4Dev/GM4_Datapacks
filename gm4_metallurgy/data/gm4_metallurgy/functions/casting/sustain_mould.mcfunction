@@ -9,8 +9,11 @@ execute if block ~ ~1 ~ lava run scoreboard players add @s gm4_ml_heat 3
 execute if score @s gm4_ml_heat matches 1..89 unless block ~ ~ ~ #minecraft:sand run function gm4_metallurgy:casting/destroy_mould
 execute unless score @s gm4_ml_heat matches 1..89 run function gm4_metallurgy:casting/destroy_mould
 
+# update old casts (pre PR#487: https://github.com/Gamemode4Dev/GM4_Datapacks/pull/487)
+# TODO
+
 #add metals if player desires to do so
-execute if score @s gm4_ml_heat matches 50..89 align xyz positioned ~ ~1 ~ if entity @e[type=item,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{ore:{castable:1b}}}},OnGround:1b},dx=0,dy=0,dz=0] run function gm4_metallurgy:casting/add_metal/initialize
+execute if score @s gm4_ml_heat matches 50..89 align xyz positioned ~ ~1 ~ if entity @e[type=item,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{metal:{castable:1b}}}},OnGround:1b},dx=0,dy=0,dz=0] run function gm4_metallurgy:casting/add_metal/initialize
 
 #hot ring without metal
 execute if score @s[tag=!gm4_contains_metal] gm4_ml_heat matches 50..51 run data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1,tag:{CustomModelData:24,SkullOwner:{Id:[I;140191582,-1151712444,-1271434748,932201856],Properties:{textures:[{Value:"eyJ0aW1lc3RhbXAiOjE0ODE0MTE3MjM4MDYsInByb2ZpbGVJZCI6Ijk4NWIyNzVlYmI1YTQzNDRiNDM3Njg5NTI4NjNhNjNmIiwicHJvZmlsZU5hbWUiOiJTcGFya3MiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTc0NTVkNjg3MjJkOTU3ZmI1ZGVjZGNjY2NjMWI2MWU4NzlhOTY3ZjFiZGM3YzJhMmZkMTlhYTI3OWU4ODUifSwiQ0FQRSI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVjM2NhN2VlMmE0OThmMWI1ZDI1OGQ1ZmE5MjdlNjNlNDMzMTQzYWRkNTUzOGNmNjNiNmE5Yjc4YWU3MzUifX19"}]}}}}]}
