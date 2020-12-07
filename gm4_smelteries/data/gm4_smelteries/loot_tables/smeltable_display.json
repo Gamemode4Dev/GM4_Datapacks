@@ -10,6 +10,12 @@
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:gold_ore",
+							"functions": [
+								{
+									"function": "minecraft:set_nbt",
+									"tag": "{CustomModelData:1}"
+								}
+							],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
@@ -22,6 +28,12 @@
 												{
                             "type": "minecraft:item",
                             "name": "minecraft:nether_gold_ore",
+							"functions": [
+								{
+									"function": "minecraft:set_nbt",
+									"tag": "{CustomModelData:1}"
+								}
+							],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
@@ -34,6 +46,12 @@
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:iron_ore",
+							"functions": [
+								{
+									"function": "minecraft:set_nbt",
+									"tag": "{CustomModelData:2}"
+								}
+							],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
@@ -46,6 +64,12 @@
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:sand",
+							"functions": [
+								{
+									"function": "minecraft:set_nbt",
+									"tag": "{CustomModelData:1}"
+								}
+							],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
@@ -58,6 +82,12 @@
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:red_sand",
+							"functions": [
+								{
+									"function": "minecraft:set_nbt",
+									"tag": "{CustomModelData:1}"
+								}
+							],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
@@ -70,6 +100,12 @@
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:chorus_flower",
+							"functions": [
+								{
+									"function": "minecraft:set_nbt",
+									"tag": "{CustomModelData:1}"
+								}
+							],	
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
@@ -79,7 +115,7 @@
                                 }
                             ]
                         }
-										]
+					]
                 }
             ]
         }
