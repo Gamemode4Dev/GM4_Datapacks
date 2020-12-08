@@ -7,7 +7,7 @@
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Things are going swimmingly!",
+        "Things Are Going Swimmingly!",
         {"translate": "advancement.gm4.scuba_gear.title"}
       ]
     },

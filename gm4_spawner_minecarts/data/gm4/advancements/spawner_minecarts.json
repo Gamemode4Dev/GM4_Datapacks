@@ -7,7 +7,7 @@
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Don't go breaking my Cart",
+        "Don't Go Breaking My Cart",
         {"translate": "advancement.gm4.spawner_minecarts.title"}
       ]
     },

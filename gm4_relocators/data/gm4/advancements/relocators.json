@@ -7,7 +7,7 @@
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "It's moving day!",
+        "It's Moving Day!",
         {"translate": "advancement.gm4.relocators.title"}
       ]
     },
