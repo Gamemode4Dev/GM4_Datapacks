@@ -7,6 +7,7 @@ scoreboard objectives add gm4_ml_ore_cu dummy
 scoreboard objectives add gm4_ml_ore_th dummy
 
 #arborenda
+scoreboard objectives add gm4_use_axe_net minecraft.used:minecraft.netherite_axe
 scoreboard objectives add gm4_use_axe_dia minecraft.used:minecraft.diamond_axe
 scoreboard objectives add gm4_use_axe_gol minecraft.used:minecraft.golden_axe
 scoreboard objectives add gm4_use_axe_iro minecraft.used:minecraft.iron_axe

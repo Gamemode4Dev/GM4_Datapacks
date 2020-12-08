@@ -5,7 +5,7 @@
     },
     "module_name": "Relocators",
     "module_id": "relocators",
-    "hidden":true,
+    "hidden":false,
     "site_description": "Craft relocators to move your custom crafters, liquid tanks, and other machines",
     "site_categories": [
         "Custom Crafting"
@@ -16,9 +16,14 @@
         "custom_crafters"
     ],
     "recommended_modules": [
-        "custom_crafters",
+        "block_compressors",
+        "master_crafting",
+        "disassemblers",
+        "enchantment_extractors",
+        "ender_hoppers",
         "liquid_tanks",
-        "block_compressors"
+        "smelteries",
+        "tinkering_compressors"
     ],
     "credits": {
         "Creator": [

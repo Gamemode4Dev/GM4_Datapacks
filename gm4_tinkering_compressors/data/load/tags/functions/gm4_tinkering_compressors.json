@@ -1,7 +1,7 @@
 {
     "values": [
-		{"id": "#load:gm4_metallurgy", "required": false},
-		{"id": "#load:gm4_block_compressors", "required": false},
+        "#load:gm4_metallurgy",
+        "#load:gm4_block_compressors",
         "gm4_tinkering_compressors:load"
     ]
 }

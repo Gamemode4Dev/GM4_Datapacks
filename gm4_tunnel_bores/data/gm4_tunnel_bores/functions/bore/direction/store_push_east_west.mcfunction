@@ -4,7 +4,7 @@
 
 # get force values
 execute store result score PushX gm4_bore_data run data get entity @s PushX 10
-tellraw @p {"nbt":"PushX","entity":"@s"}
+
 # check force direction (+/-) and store to scoreboard
 execute if score PushX gm4_bore_data matches 9.. run scoreboard players set @s gm4_bore_data -90
 execute if score PushX gm4_bore_data matches ..-9 run scoreboard players set @s gm4_bore_data 90

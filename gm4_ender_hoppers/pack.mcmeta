@@ -10,7 +10,9 @@
     "video_link": "https://www.youtube.com/watch?v=wrwg4BDgEGU",
     "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "relocators"
+    ],
     "credits": {
         "Creator": [
             [

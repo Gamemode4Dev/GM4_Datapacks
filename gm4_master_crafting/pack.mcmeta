@@ -15,7 +15,8 @@
         "custom_crafters"
     ],
     "recommended_modules": [
-        "standard_crafting"
+        "standard_crafting",
+        "relocators"
     ],
     "credits": {
         "Creator": [

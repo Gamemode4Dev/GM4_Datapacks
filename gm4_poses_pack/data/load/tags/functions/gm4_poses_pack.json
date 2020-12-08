@@ -1,6 +1,6 @@
 {
     "values": [
-		{"id": "#load:gm4_better_armour_stands", "required": false},
+        "#load:gm4_better_armour_stands",
         "gm4_poses_pack:load"
     ]
 }
