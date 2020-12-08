@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "leather_boots",
-      "nbt": "{display:{color:3705899},CustomModelData:1}"
+      "nbt": "{display:{color:3705899},CustomModelData:3}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
