@@ -1,9 +1,30 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                [
+                    "SCUBA Gear",
+                    "\n",
+                    {
+                    "text": "Gamemode 4 for 1.16",
+                    "color": "aqua"
+                    }
+                ],
+                {
+                    "translate": "pack.gm4.description",
+                    "with": [
+                        {
+                            "translate": "module.gm4.scuba_gear"
+                        },
+                        "1.16"
+                    ]
+                }
+            ]
+        }
     },
-    "module_name": "Scuba Gear",
+    "module_name": "SCUBA Gear",
     "module_id": "scuba_gear",
     "site_description": "Ease ocean exploration with craftable scuba gear!",
     "site_categories": [
