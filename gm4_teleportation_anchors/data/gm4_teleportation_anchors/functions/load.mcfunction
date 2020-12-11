@@ -4,4 +4,3 @@ execute unless score gm4_custom_crafters load matches 1 run data modify storage 
 
 execute if score gm4_teleportation_anchors load matches 1 run function gm4_teleportation_anchors:init
 execute unless score gm4_teleportation_anchors load matches 1 run schedule clear gm4_teleportation_anchors:main
-execute unless score gm4_teleportation_anchors load matches 1 run schedule clear gm4_teleportation_anchors:tick

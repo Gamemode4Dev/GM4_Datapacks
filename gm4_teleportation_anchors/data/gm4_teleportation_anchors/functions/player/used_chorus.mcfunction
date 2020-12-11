@@ -3,4 +3,4 @@
 
 advancement revoke @s only gm4_teleportation_anchors:consume_chorus
 
-execute if entity @s[tag=gm4_ta_jammed] run function gm4_teleportation_anchors:player/jam_player
+execute if entity @s[tag=gm4_ta_jammed,tag=!gm4_ta_teleported] run function gm4_teleportation_anchors:player/jam_player

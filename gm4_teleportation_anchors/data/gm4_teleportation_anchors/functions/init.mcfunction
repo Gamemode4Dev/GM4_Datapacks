@@ -2,7 +2,6 @@ scoreboard objectives add gm4_ta_data dummy
 scoreboard objectives add gm4_ta_id dummy
 scoreboard objectives add gm4_ta_fuel dummy
 scoreboard objectives add gm4_ta_jam_time dummy
-scoreboard objectives add gm4_ta_jam_pl dummy
 scoreboard objectives add gm4_ta_cooldown dummy
 scoreboard objectives add gm4_ta_ignore dummy
 scoreboard objectives add gm4_ta_jam_id dummy
@@ -14,6 +13,5 @@ execute unless score gm4_teleportation_anchors gm4_modules matches 1 run data mo
 scoreboard players set gm4_teleportation_anchors gm4_modules 1
 
 schedule function gm4_teleportation_anchors:main 1t
-schedule function gm4_teleportation_anchors:tick 1t
 
 #$moduleUpdateList
