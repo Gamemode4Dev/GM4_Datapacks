@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "golden_sword",
-      "nbt": "{CustomModelData:1,display:{Name:'\"potion_swords logo\"'}}"
+      "nbt": "{CustomModelData:1}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
