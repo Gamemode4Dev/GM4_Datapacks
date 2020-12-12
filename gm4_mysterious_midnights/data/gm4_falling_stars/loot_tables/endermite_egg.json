@@ -21,6 +21,20 @@
                             }
                         },
                         {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                {
+                                    "translate": "%1$s%3427655$s",
+                                    "with": [
+                                        "Oh, it didn't hatch",
+                                        {
+                                            "translate": "item.gm4.endermite_egg.lore"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
                             "function": "minecraft:set_nbt",
                             "tag": "{CustomModelData:1,gm4_endermite_egg:1b}"
                         }

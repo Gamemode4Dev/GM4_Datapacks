@@ -7,7 +7,7 @@ execute store result score difficulty gm4_mm_data run data get entity @e[limit=1
 scoreboard players set 16 gm4_mm_data 16
 scoreboard players operation difficulty gm4_mm_data %= 16 gm4_mm_data
 scoreboard players set difficulty gm4_mm_data 15
-# spawn AEC for random selection
+# spawn AEC for random selection (1/3 of nights are not a mysterious midnight)
 execute if score difficulty gm4_mm_data matches 6..10 run function #gm4_mysterious_midnights:setup_common_expansion
 execute if score difficulty gm4_mm_data matches 11..13 run function #gm4_mysterious_midnights:setup_uncommon_expansion
 execute if score difficulty gm4_mm_data matches 14.. run function #gm4_mysterious_midnights:setup_rare_expansion

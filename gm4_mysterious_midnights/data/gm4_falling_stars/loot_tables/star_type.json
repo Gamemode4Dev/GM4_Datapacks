@@ -30,7 +30,7 @@
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "weight": 3,
+                    "weight": 2,
                     "name": "gm4_falling_stars:endermite_egg"
                 }
             ]
