@@ -1,6 +1,6 @@
 # @s = none
 # at world spawn
-# run from gm4_mysterious_midnights:restore_global_context
+# run from main
 
 # set "night-active" flag
 scoreboard players set night_active gm4_mm_data 1

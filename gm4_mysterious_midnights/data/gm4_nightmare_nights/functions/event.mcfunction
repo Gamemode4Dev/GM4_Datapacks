@@ -6,4 +6,4 @@
 effect give @a[nbt={Sleeping:1b}] minecraft:instant_damage 1 0
 
 #initialise nightmare night
-execute unless score started_nightmare_night gm4_nights_data matches 1 run function gm4_nightmare_nights:initialise
+execute unless score started_nightmare_night gm4_mm_data matches 1 run function gm4_nightmare_nights:initialise

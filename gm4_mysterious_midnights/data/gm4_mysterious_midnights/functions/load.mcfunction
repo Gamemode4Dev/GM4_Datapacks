@@ -3,3 +3,4 @@ execute unless score gm4 load matches 1 run data modify storage gm4:log queue ap
 execute unless score gm4_forceload load matches 1 run data modify storage gm4:log queue append value {type:"missing",module:"Mysterious Midnights",require:"lib-forceload"}
 
 execute if score gm4_mysterious_midnights load matches 1 run function gm4_mysterious_midnights:init
+execute unless score gm4_mysterious_midnights load matches 1 run schedule clear gm4_mysterious_midnights:main

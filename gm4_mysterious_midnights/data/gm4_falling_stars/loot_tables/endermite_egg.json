@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:end_stone",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Endermite Egg",
+                                    {
+                                        "translate": "item.gm4.endermite_egg"
+                                    }
+                                ],
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:1,gm4_endermite_egg:1b}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
