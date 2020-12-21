@@ -1,8 +1,8 @@
-# generates the 4th layer of this apple tree
+# choses second branched layer of this apple tree
 # @s = sapling marker area_effect_cloud
-# at @s align xyz
-# run from tree/layer/generate
+# positioned ~ ~n ~ above the AEC rotated as @s
+# run from gm4_apple_trees:tree/layer/generate
 
-# place dummy block (DEBUG)
-fill ~ ~ ~-2 ~ ~ ~-2 oak_log[axis=y] replace #gm4_apple_trees:tree_replaceable
-fill ~ ~ ~1 ~ ~ ~1 oak_log[axis=y] replace #gm4_apple_trees:tree_replaceable
+# chose branch style
+execute if score bit4 gm4_tree_seed matches 0 run function gm4_apple_trees:tree/layer/place/branch_1a
+execute if score bit4 gm4_tree_seed matches 1 run function gm4_apple_trees:tree/layer/place/branch_1b

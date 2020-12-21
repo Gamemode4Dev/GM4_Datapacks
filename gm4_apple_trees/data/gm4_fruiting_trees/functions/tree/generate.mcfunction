@@ -10,4 +10,4 @@ function #gm4_fruiting_trees:tree/layer/generate
 scoreboard players add $current_layer gm4_tree_layer 1
 
 # place next layer unless expansion forceably stopped generation or max height was reached
-execute unless score $current_layer gm4_tree_layer > $max_layer gm4_tree_layer unless score $cancel_generation gm4_tree_layer matches 1.. positioned ~ ~1 ~ run function gm4_fruiting_trees:tree/generate
+execute unless score $current_layer gm4_tree_layer > $max_layer gm4_tree_layer unless score $cancel_generation gm4_tree_layer matches 1.. positioned ~ ~1 ~ rotated as @s run function gm4_fruiting_trees:tree/generate
