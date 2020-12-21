@@ -1,4 +1,4 @@
-# checks whether @s is a apple leaf, and if so allows further evaluation of the age
+# checks whether @s is an apple leaf, and if so allows further evaluation of the age
 # @s any gm4_fruiting_leaf
 # at world spawn
 # run from #gm4_fruiting_trees:tree/leaf/fruiting/age
