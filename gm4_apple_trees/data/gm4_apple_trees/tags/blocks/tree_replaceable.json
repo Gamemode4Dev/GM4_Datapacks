@@ -18,6 +18,9 @@
         "minecraft:warped_fungus",
         "minecraft:warped_roots",
         "minecraft:weeping_vines",
-        "minecraft:weeping_vines_plant"
+        "minecraft:weeping_vines_plant",
+        "minecraft:air",
+        "minecraft:cave_air",
+        "minecraft:void_air"
     ]
 }
