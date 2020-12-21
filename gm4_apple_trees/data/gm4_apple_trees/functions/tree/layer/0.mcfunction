@@ -4,4 +4,4 @@
 # run from fruiting_trees:generate via #fruiting_trees:layer/generate
 
 # place dummy block (DEBUG)
-setblock ~ ~ ~ red_wool
+fill ~ ~ ~ ~ ~ ~ red_wool replace #gm4_apple_trees:foliage

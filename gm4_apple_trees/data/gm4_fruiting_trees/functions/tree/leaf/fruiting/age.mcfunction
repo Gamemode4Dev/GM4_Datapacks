@@ -4,4 +4,4 @@
 
 # increases age
 scoreboard players add @s gm4_fruit_age 1
-execute if score @s gm4_fruit_age >= @s gm4_fruit_stage run function #gm4_fruiting_trees:tree/leaf/fruiting/age
+execute if score @s gm4_fruit_age >= @s gm4_fruit_stage at @s align xyz run function #gm4_fruiting_trees:tree/leaf/fruiting/age
