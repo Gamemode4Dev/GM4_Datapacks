@@ -1,7 +1,13 @@
 # splits the seed the tree was initialized with into bits used for tree generation
 # @s = sapling marker area_effect_cloud
 # at @s align xyz
-# run from gm4_apple_trees:tree/layer/generate
+# run from gm4_fruiting_trees:tree/initialize
+
+# generate a random seed, unless override is active
+execute unless score $seed gm4_tree_seed matches 0.. store result score $seed gm4_tree_seed run data get entity @s UUID[0]
+# modulo 65536 (force 16-bit number 0-65535)
+scoreboard players operation $seed gm4_tree_seed %= #65536 gm4_tree_seed
+
 
 # extract bits
 # bit 0
@@ -85,4 +91,9 @@ scoreboard players operation $bit15 gm4_tree_seed %= #2 gm4_tree_seed
 scoreboard players operation $seed gm4_tree_seed /= #2 gm4_tree_seed
 
 # start generating a tree
+setblock ~ ~ ~ air
 function gm4_fruiting_trees:tree/generate
+
+# kill marker after generation, reset seed
+kill @s
+scoreboard players reset $seed gm4_tree_seed

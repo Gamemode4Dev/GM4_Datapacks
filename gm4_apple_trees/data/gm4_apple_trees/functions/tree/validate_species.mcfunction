@@ -3,4 +3,4 @@
 # at @s align xyz
 # run from #gm4_fruiting_trees:tree/initialize
 
-execute if entity @s[tag=gm4_apple_sapling] run function gm4_apple_trees:tree/initialize
+execute if entity @s[tag=gm4_apple_tree_sapling] run function gm4_apple_trees:tree/initialize

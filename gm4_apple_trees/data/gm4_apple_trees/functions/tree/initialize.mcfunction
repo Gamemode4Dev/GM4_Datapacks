@@ -1,7 +1,7 @@
-# initializes the apple tree's scores
-# @s = sapling marker area_effect_cloud
+# initializes the apple tree's marker AEC
+# @s = raycast area_effect_cloud
 # at @s align xyz
-# run from gm4_fruiting_trees:generate via #gm4_fruiting_trees:initialize
+# run from gm4_fruiting_trees:sapling/place_sapling via #gm4_fruiting_trees:sapling/initialize
 
 # determine available height
 scoreboard players set $max_layer gm4_tree_layer -1

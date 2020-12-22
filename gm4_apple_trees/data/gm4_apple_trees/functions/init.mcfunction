@@ -13,7 +13,7 @@ scoreboard players set #stage_1_start gm4_apple_data 10
 scoreboard players set #stage_2_start gm4_apple_data 20
 scoreboard players set #stage_0_start gm4_apple_data 30
 
-scoreboard players set #max_failed_apple_attempts gm4_apple_data 3
+scoreboard players set #max_failed_apple_attempts gm4_apple_data 6
 scoreboard players set #max_apple_attempts gm4_apple_data 12
 
 schedule function gm4_apple_trees:main 10t
