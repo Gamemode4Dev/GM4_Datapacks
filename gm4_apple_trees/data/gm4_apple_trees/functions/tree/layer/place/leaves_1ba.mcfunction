@@ -14,8 +14,8 @@ fill ^ ^1 ^-2 ^ ^1 ^3 minecraft:oak_leaves replace #gm4_apple_trees:tree_replace
 fill ^-1 ^1 ^-1 ^1 ^1 ^-1 minecraft:oak_leaves replace #gm4_apple_trees:tree_replaceable
 fill ^-1 ^1 ^2 ^1 ^1 ^2 minecraft:oak_leaves replace #gm4_apple_trees:tree_replaceable
 fill ^-1 ^1 ^1 ^-1 ^1 ^1 minecraft:oak_leaves replace #gm4_apple_trees:tree_replaceable
-execute if score bit6 gm4_tree_seed matches 1 run fill ^-1 ^1 ^3 ^-1 ^1 ^3 minecraft:oak_leaves replace #gm4_apple_trees:tree_replaceable
-execute if score bit7 gm4_tree_seed matches 1 run fill ^1 ^1 ^-2 ^1 ^1 ^-2 minecraft:oak_leaves replace #gm4_apple_trees:tree_replaceable
+execute if score $bit6 gm4_tree_seed matches 1 run fill ^-1 ^1 ^3 ^-1 ^1 ^3 minecraft:oak_leaves replace #gm4_apple_trees:tree_replaceable
+execute if score $bit7 gm4_tree_seed matches 1 run fill ^1 ^1 ^-2 ^1 ^1 ^-2 minecraft:oak_leaves replace #gm4_apple_trees:tree_replaceable
 
 # layer 2
 fill ^ ^2 ^-1 ^ ^2 ^-1 minecraft:oak_leaves replace #gm4_apple_trees:tree_replaceable

@@ -3,5 +3,5 @@
 # at @s align xyz
 # run from gm4_apple_trees:main
 
-execute if entity @s[tag=!gm4_ripe_apple] unless block ~ ~1 ~ minecraft:oak_leaves run kill @s
-execute if entity @s[tag=gm4_ripe_apple] unless block ~ ~2 ~ minecraft:oak_leaves run function gm4_apple_trees:tree/leaf/fruiting/destroy
+execute if entity @s[tag=!gm4_ripe_apple] positioned ~ ~1 ~ unless block ~ ~ ~ minecraft:oak_leaves run function gm4_apple_trees:tree/leaf/fruiting/destroy
+execute if entity @s[tag=gm4_ripe_apple] positioned ~ ~2 ~ unless block ~ ~ ~ minecraft:oak_leaves run function gm4_apple_trees:tree/leaf/fruiting/destroy
