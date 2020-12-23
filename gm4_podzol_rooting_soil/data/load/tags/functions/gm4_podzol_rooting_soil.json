@@ -1,5 +1,6 @@
 {
     "values": [
+        "#load:gm4_forceload",
         "gm4_podzol_rooting_soil:load"
     ]
 }
