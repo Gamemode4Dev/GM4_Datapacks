@@ -6,6 +6,7 @@
 # set fake players
 scoreboard players set $cancel_generation gm4_tree_layer 1
 scoreboard players set $current_layer gm4_tree_layer 0
+scoreboard players set $max_layer gm4_tree_layer -1
 
 # obtain tree stats and store into scoreboard
 function #gm4_fruiting_trees:tree/initialize

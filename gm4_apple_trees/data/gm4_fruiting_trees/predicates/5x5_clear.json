@@ -7,24 +7,11 @@
                     "condition": "minecraft:inverted",
                     "term": {
                         "condition": "minecraft:location_check",
-                        "offsetX": 1,
-                        "offsetZ": 0,
-                        "predicate": {
-                            "block": {
-                                "tag": "gm4_apple_trees:tree_part"
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "minecraft:inverted",
-                    "term": {
-                        "condition": "minecraft:location_check",
                         "offsetX": 0,
                         "offsetZ": 0,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -37,7 +24,7 @@
                         "offsetZ": 0,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -50,7 +37,7 @@
                         "offsetZ": 0,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -63,7 +50,7 @@
                         "offsetZ": 1,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -76,7 +63,7 @@
                         "offsetZ": -1,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -89,7 +76,7 @@
                         "offsetZ": 1,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -102,7 +89,7 @@
                         "offsetZ": -1,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -115,7 +102,7 @@
                         "offsetZ": 1,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -128,7 +115,7 @@
                         "offsetZ": -1,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -141,7 +128,7 @@
                         "offsetZ": 0,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -154,7 +141,7 @@
                         "offsetZ": 0,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -167,7 +154,7 @@
                         "offsetZ": 2,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -180,7 +167,7 @@
                         "offsetZ": -2,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -193,7 +180,7 @@
                         "offsetZ": 1,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -206,7 +193,7 @@
                         "offsetZ": 1,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -219,7 +206,7 @@
                         "offsetZ": 2,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -232,7 +219,7 @@
                         "offsetZ": -2,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -245,7 +232,7 @@
                         "offsetZ": -1,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -258,7 +245,7 @@
                         "offsetZ": -1,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -271,7 +258,7 @@
                         "offsetZ": 2,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -284,7 +271,7 @@
                         "offsetZ": -2,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -297,7 +284,7 @@
                         "offsetZ": 2,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -310,7 +297,7 @@
                         "offsetZ": -2,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -323,7 +310,7 @@
                         "offsetZ": 2,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }
@@ -336,7 +323,7 @@
                         "offsetZ": -2,
                         "predicate": {
                             "block": {
-                                "tag": "gm4_apple_trees:tree_part"
+                                "tag": "gm4_fruiting_trees:tree_part"
                             }
                         }
                     }

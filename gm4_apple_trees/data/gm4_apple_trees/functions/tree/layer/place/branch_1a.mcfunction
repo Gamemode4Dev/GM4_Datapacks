@@ -4,7 +4,7 @@
 # run from gm4_apple_trees:tree/layer/generate
 
 # branches
-fill ^ ^ ^ ^ ^ ^ oak_log[axis=y] replace #gm4_apple_trees:tree_replaceable
+fill ^ ^ ^ ^ ^ ^ oak_log[axis=y] replace #gm4_fruiting_trees:tree_replaceable
 
 # leaves
 execute if score $bit5 gm4_tree_seed matches 0 run function gm4_apple_trees:tree/layer/place/leaves_1aa
