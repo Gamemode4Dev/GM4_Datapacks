@@ -11,7 +11,7 @@ execute if entity @s[tag=gm4_jungle_sapling] run setblock ~ ~ ~ minecraft:jungle
 execute if entity @s[tag=gm4_acacia_sapling] run setblock ~ ~ ~ minecraft:acacia_sapling destroy
 
 # plant custom sapling
-execute if data entity @s Item.tag.gm4_podzol_rooting_soil.PlantCommand run function gm4_podzol_rooting_soil:plant/custom/store_command
+execute if data entity @s Item.tag.gm4_podzol_rooting_soil run function #gm4_podzol_rooting_soil:plant_custom_sapling
 
 # sounds and visuals
 execute align xyz positioned ~.5 ~.5 ~.5 run particle minecraft:happy_villager ~ ~ ~ .3 .3 .3 1 10 normal
@@ -19,8 +19,8 @@ playsound minecraft:block.chorus_flower.grow block @a[distance=..6] ~ ~ ~ 0.2 0.
 
 # kill item entity
 execute store result score count gm4_podzol_data run data get entity @s Item.Count
-execute if score count gm4_podzol_data matches 1 run kill @s[tag=!gm4_custom_rooted_sapling]
-execute if score count gm4_podzol_data matches 2.. store result entity @s[tag=!gm4_custom_rooted_sapling] Item.Count byte 1 run scoreboard players remove count gm4_podzol_data 1
+execute if score count gm4_podzol_data matches 1 run kill @s
+execute if score count gm4_podzol_data matches 2.. store result entity @s Item.Count byte 1 run scoreboard players remove count gm4_podzol_data 1
 
 # reset fake players
 scoreboard players reset count gm4_podzol_data
