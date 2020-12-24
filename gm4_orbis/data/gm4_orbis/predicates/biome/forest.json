@@ -16,6 +16,12 @@
     {
       "condition": "minecraft:location_check",
       "predicate": {
+        "biome": "minecraft:wooded_hills"
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
         "biome": "minecraft:dark_forest_hills"
       }
     },
