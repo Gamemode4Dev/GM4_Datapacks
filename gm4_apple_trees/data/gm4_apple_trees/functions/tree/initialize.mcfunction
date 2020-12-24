@@ -1,7 +1,7 @@
-# initializes the apple tree's marker AEC
-# @s = raycast area_effect_cloud
+# checks the maximum height of the tree
+# @s any gm4_apple_tree_sapling
 # at @s align xyz
-# run from gm4_fruiting_trees:sapling/place_sapling via #gm4_fruiting_trees:sapling/initialize
+# run from gm4_apple_trees:tree/validate_species
 
 # determine available height
 function gm4_apple_trees:tree/layer/check_clear_space
