@@ -16,7 +16,7 @@ categories = {
 
     "badlands": ["badlands", "badlands_plateau", "eroded_badlands", "wooded_badlands_plateau", "modified_badlands_plateau", "modified_wooded_badlands_plateau"],
 
-    "forest": ["forest", "dark_forest", "dark_forest_hills", "birch_forest", "birch_forest_hills", "flower_forest", "tall_birch_forest", "taiga", "taiga_hills", "taiga_mountains", "snowy_taiga", "snowy_taiga_hills", "snowy_taiga_mountains", "giant_tree_taiga", "giant_spruce_taiga", "giant_tree_taiga_hills", "giant_spruce_taiga_hills"],
+    "forest": ["forest", "dark_forest", "wooded_hills", "dark_forest_hills", "birch_forest", "birch_forest_hills", "flower_forest", "tall_birch_forest", "taiga", "taiga_hills", "taiga_mountains", "snowy_taiga", "snowy_taiga_hills", "snowy_taiga_mountains", "giant_tree_taiga", "giant_spruce_taiga", "giant_tree_taiga_hills", "giant_spruce_taiga_hills"],
 
     "plains": ["plains", "snowy_tundra"],
 
