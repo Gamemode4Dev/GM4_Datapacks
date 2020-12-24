@@ -5,9 +5,6 @@
   },
   "module_name":"Podzol Rooting Soil",
   "module_id":"podzol_rooting_soil",
-  "libraries": [
-      "lib_forceload"
-  ],
   "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
   "site_description":"Saplings self-plant on Podzol",
   "site_categories":[],
