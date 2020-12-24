@@ -11,4 +11,4 @@ scoreboard players remove structure_height gm4_count 1
 execute if block ~ ~-1 ~ minecraft:grass_block positioned ~ ~2 ~ if predicate gm4_fruiting_trees:5x5_clear positioned ~ ~-2 ~ run function gm4_apple_trees:chunk/spawn_tree
 
 # next height
-execute if block ~ ~-1 ~ minecraft:air if score structure_height gm4_count matches 64.. positioned ~ ~-1 ~ run function gm4_apple_trees:chunk/scan_column
+execute if block ~ ~-1 ~ #gm4_fruiting_trees:tree_replaceable if score structure_height gm4_count matches 64.. positioned ~ ~-1 ~ run function gm4_apple_trees:chunk/scan_column
