@@ -125,6 +125,10 @@
                 "min": 0.0,
                 "max": 0.005
               }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_end_fishing:{set_data:{type:\"lore\",id:\"end_ship_elytra\"}}}"
             }
           ],
           "weight": 1,

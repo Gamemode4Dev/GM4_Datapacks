@@ -9,4 +9,5 @@ execute if entity @s[nbt={Item:{tag:{gm4_end_fishing:{set_data:{id:"end_city_swo
 execute if entity @s[nbt={Item:{tag:{gm4_end_fishing:{set_data:{id:"end_city_armor"}}}}}] run function gm4_end_fishing:reel_in/lore/armor
 execute if entity @s[nbt={Item:{tag:{gm4_end_fishing:{set_data:{id:"end_city_horse_armor"}}}}}] run function gm4_end_fishing:reel_in/lore/horse_armor
 execute if entity @s[nbt={Item:{tag:{gm4_end_fishing:{set_data:{id:"end_city_ore"}}}}}] run function gm4_end_fishing:reel_in/lore/ore
+execute if entity @s[nbt={Item:{tag:{gm4_end_fishing:{set_data:{id:"end_ship_elytra"}}}}}] run function gm4_end_fishing:reel_in/lore/elytra
 data remove entity @s Item.tag.gm4_end_fishing.set_data
