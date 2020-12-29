@@ -38,6 +38,19 @@
           "type": "minecraft:item",
           "functions": [
             {
+				"function": "minecraft:set_nbt",
+				"tag": "{CustomModelData:11}"
+            },
+            {
+				"function": "set_name",
+				"name": [
+					{
+					"text": "Raptured Wings",
+					"italic": false
+                    }
+                ]
+            },
+			{
               "function": "minecraft:set_damage",
               "damage": 0
             }
