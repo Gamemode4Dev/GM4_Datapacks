@@ -42,13 +42,17 @@
 				"tag": "{CustomModelData:11}"
             },
             {
-				"function": "set_name",
-				"name": [
-					{
-					"text": "Raptured Wings",
-					"italic": false
-                    }
-                ]
+				"function": "minecraft:set_name",
+                        "name": {
+                          "translate": "%1$s%3427655$s",
+                          "with": [
+                            "Raptured Wings",
+                            {
+                              "translate": "item.gm4.end_fishing.raptured_wings"
+                            }
+                          ],
+                          "italic": false,
+                        }
             },
 			{
               "function": "minecraft:set_damage",
