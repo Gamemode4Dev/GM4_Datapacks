@@ -7,7 +7,7 @@
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "That's not a fish!",
+        "That's Not a Fish!",
         {"translate": "advancement.gm4.end_fishing_phantom.title"}
       ]
     },
