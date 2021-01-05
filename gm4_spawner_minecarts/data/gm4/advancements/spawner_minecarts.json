@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "spawner",
-      "nbt": "{CustomModelData1,display:{Name:'\"spawner_minecarts logo\"'}}"
+      "nbt": "{CustomModelData:1}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
