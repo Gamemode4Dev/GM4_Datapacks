@@ -1,4 +1,3 @@
-scoreboard objectives add gm4_sh_sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add gm4_health health
 scoreboard objectives add gm4_sh_data dummy
 
