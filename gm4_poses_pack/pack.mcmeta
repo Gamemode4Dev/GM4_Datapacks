@@ -1,28 +1,14 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": {
-            "translate": "%1$s%3427655$s",
-            "with": [
-                [
-                    "Poses Pack",
-                    "\n",
-                    {
-                    "text": "Gamemode 4 for 1.16",
-                    "color": "aqua"
-                    }
-                ],
-                {
-                    "translate": "pack.gm4.description",
-                    "with": [
-                        {
-                            "translate": "module.gm4.poses_pack"
-                        },
-                        "1.16"
-                    ]
-                }
-            ]
-        }
+        "description": [
+            "Poses Pack",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     },
     "module_name": "Poses Pack",
     "module_id": "poses_pack",

@@ -1,28 +1,14 @@
 {
   "pack": {
     "pack_format": 6,
-    "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        [
-          "Beehive Inspector",
-          "\n",
-          {
-            "text": "Gamemode 4 for 1.16",
-            "color": "aqua"
-          }
-        ],
-        {
-          "translate": "pack.gm4.description",
-          "with": [
+    "description": [
+            "Beehive Inspector",
+            "\n",
             {
-              "translate": "module.gm4.beehive_inspector"
-            },
-            "1.16"
-          ]
-        }
-      ]
-    }
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
   },
   "module_name": "Beehive Inspector",
   "module_id": "beehive_inspector",

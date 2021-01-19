@@ -1,28 +1,14 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": {
-            "translate": "%1$s%3427655$s",
-            "with": [
-                [
-                    "Liquid Tanks",
-                    "\n",
-                    {
-                    "text": "Gamemode 4 for 1.16",
-                    "color": "aqua"
-                    }
-                ],
-                {
-                    "translate": "pack.gm4.description",
-                    "with": [
-                        {
-                            "translate": "module.gm4.liquid_tanks"
-                        },
-                        "1.16"
-                    ]
-                }
-            ]
-        }
+        "description": [
+            "Liquid Tanks",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     },
     "module_name": "Liquid Tanks",
     "module_id": "liquid_tanks",

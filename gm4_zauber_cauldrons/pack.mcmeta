@@ -1,28 +1,14 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": {
-            "translate": "%1$s%3427655$s",
-            "with": [
-                [
-                    "Zauber Cauldrons",
-                    "\n",
-                    {
-                    "text": "Gamemode 4 for 1.16",
-                    "color": "aqua"
-                    }
-                ],
-                {
-                    "translate": "pack.gm4.description",
-                    "with": [
-                        {
-                            "translate": "module.gm4.zauber_cauldrons"
-                        },
-                        "1.16"
-                    ]
-                }
-            ]
-        }
+        "description": [
+            "Zauber Cauldrons",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     },
     "module_name": "Zauber Cauldrons",
     "module_id": "zauber_cauldrons",

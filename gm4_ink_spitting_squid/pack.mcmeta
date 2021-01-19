@@ -1,28 +1,14 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": {
-            "translate": "%1$s%3427655$s",
-            "with": [
-                [
-                    "Ink Spitting Squid",
-                    "\n",
-                    {
-                    "text": "Gamemode 4 for 1.16",
-                    "color": "aqua"
-                    }
-                ],
-                {
-                    "translate": "pack.gm4.description",
-                    "with": [
-                        {
-                            "translate": "module.gm4.ink_spitting_squid"
-                        },
-                        "1.16"
-                    ]
-                }
-            ]
-        }
+        "description": [
+            "Ink Spitting Squid",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     },
     "module_name": "Ink Spitting Squid",
     "module_id": "ink_spitting_squid",

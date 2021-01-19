@@ -1,27 +1,13 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": {
-            "translate": "%1$s%3427655$s",
-            "with": [
-                [
-                    "Forceloaded Chunk Library",
-                    "\n",
-                    {
-                    "text": "Gamemode 4 for 1.16",
-                    "color": "aqua"
-                    }
-                ],
-                {
-                    "translate": "pack.gm4.description",
-                    "with": [
-                        {
-                            "translate": "module.gm4.lib_forceload"
-                        },
-                        "1.16"
-                    ]
-                }
-            ]
-        }
+        "description": [
+            "Forceloaded Chunk Library",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     }
 }

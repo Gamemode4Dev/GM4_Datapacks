@@ -1,28 +1,14 @@
 {
   "pack":{
     "pack_format":6,
-    "description": {
-        "translate": "%1$s%3427655$s",
-        "with": [
-            [
-                "Podzol Rooting Soil",
-                "\n",
-                {
+    "description": [
+            "Podzol Rooting Soil",
+            "\n",
+            {
                 "text": "Gamemode 4 for 1.16",
                 "color": "aqua"
-                }
-            ],
-            {
-                "translate": "pack.gm4.description",
-                "with": [
-                    {
-                        "translate": "module.gm4.podzol_rooting_soil"
-                    },
-                    "1.16"
-                ]
             }
         ]
-    }
   },
   "module_name":"Podzol Rooting Soil",
   "module_id":"podzol_rooting_soil",
