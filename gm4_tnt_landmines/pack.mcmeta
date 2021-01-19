@@ -1,7 +1,14 @@
 {
   "pack":{
-    "pack_format":0,
-    "description":"A Gamemode 4 Module"
+    "pack_format": 6,
+    "description": [
+            "TNT Landmines",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
   },
   "module_name":"TNT Landmines",
   "module_id":"tnt_landmines",
