@@ -27,6 +27,8 @@ execute if score @s[tag=!gm4_contains_metal] gm4_ml_heat matches 48..49 run data
 #cool ring with metal
 execute if score @s[tag=gm4_contains_metal] gm4_ml_heat matches 48..49 run data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1,tag:{CustomModelData:25,SkullOwner:{Id:[I;140191582,-1151712444,-1271443335,826741136],Properties:{textures:[{Value:"eyJ0aW1lc3RhbXAiOjE0ODE0MTE1NjYwMjQsInByb2ZpbGVJZCI6Ijk4NWIyNzVlYmI1YTQzNDRiNDM3Njg5NTI4NjNhNjNmIiwicHJvZmlsZU5hbWUiOiJTcGFya3MiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjM3ZjE2Zjc2MTk1ZWM3OWI4MzFmMzc5ZjkzYjYwYzg2MWZkNGNhYmYyZTI5ZDNmZTlkYTJmODU4OTJkY2EifSwiQ0FQRSI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVjM2NhN2VlMmE0OThmMWI1ZDI1OGQ1ZmE5MjdlNjNlNDMzMTQzYWRkNTUzOGNmNjNiNmE5Yjc4YWU3MzUifX19"}]}}}}]}
 
+#update display armor stand
+execute if score @s gm4_ml_heat matches 48..51 as @e[type=armor_stand,tag=gm4_sand_ring_display,limit=1,sort=nearest,distance=..1.2] run data modify entity @s HandItems[0].tag.CustomModelData set from entity @e[type=vex,tag=gm4_sand_ring,limit=1,distance=..1.2] ArmorItems[3].tag.CustomModelData
 
 execute if score @s gm4_ml_heat matches 56.. run particle lava ~ ~1 ~ 0 0 0 0.005 1
 execute if score @s gm4_ml_heat matches 80.. run particle large_smoke ~ ~1 ~ 0 0 0 0.05 6

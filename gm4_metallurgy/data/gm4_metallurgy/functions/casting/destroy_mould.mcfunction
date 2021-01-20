@@ -19,5 +19,6 @@ execute if score @s gm4_ml_heat matches 50..89 unless entity @s[scores={gm4_ml_o
 execute if score @s gm4_ml_heat matches 90.. run function gm4_metallurgy:casting/overheat_mould
 
 #kill mould
+kill @e[type=armor_stand,tag=gm4_sand_ring_display,limit=1,sort=nearest,distance=..1.2]
 playsound item.hoe.till block @a ~ ~ ~ .25 .9
 data merge entity @s {Health:0.0f,DeathTime:19s}
