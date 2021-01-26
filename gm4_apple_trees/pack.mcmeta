@@ -1,0 +1,36 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Apple Trees",
+    "module_id": "fruiting_trees",
+    "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+    "site_description": "Simple Apple Trees",
+    "site_categories": [
+        "Orbis"
+    ],
+    "wiki_link": "https://wiki.gm4.co/wiki/Fruiting_Trees",
+    "required_modules": [
+        "orbis"
+    ],
+    "recommended_modules": [
+        "podzol_rooting_soil"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "Bloo",
+                "https://twitter.com/Bloo_dev"
+            ],
+            [
+                "BluePsychoRanger",
+                "https://twitter.com/BluPsychoRanger"
+            ],
+            [
+                "SpecialBuilder",
+                "https://twitter.com/SpecialBuilder"
+            ]
+        ]
+    }
+}

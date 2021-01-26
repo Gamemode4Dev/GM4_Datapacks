@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:oak_sapling",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Apple Tree Sapling",
+                                    {"translate":"item.gm4.apple_tree_sapling"}
+                                ],
+                                "italic": false,
+                                "color": "white"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:4,gm4_fruiting_trees:{item:{id:\"sapling\",type:\"apple\"}},gm4_podzol_rooting_soil:{id:\"apple_tree_sapling\"}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
