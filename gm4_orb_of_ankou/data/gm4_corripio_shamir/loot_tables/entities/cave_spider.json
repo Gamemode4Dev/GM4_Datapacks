@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_orb_of_ankou:soul_essence/scaling"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:table_bonus",
+          "enchantment": "minecraft:looting",
+          "chances": [
+            0.000027,
+            0.000108,
+            0.000675,
+            0.002214
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_orb_of_ankou:soul_essence/venomous"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:table_bonus",
+          "enchantment": "minecraft:looting",
+          "chances": [
+            0.000023,
+            0.000092,
+            0.000575,
+            0.001886
+          ]
+        }
+      ]
+    }
+  ]
+}
