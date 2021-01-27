@@ -21,7 +21,7 @@
     "required_modules": [],
     "recommended_modules": [
         "potion_liquids",
-        "zauber_liquids"
+        "zauber_liquids",
         "liquid_minecarts",
         "concrete_mixers",
         "relocators"
