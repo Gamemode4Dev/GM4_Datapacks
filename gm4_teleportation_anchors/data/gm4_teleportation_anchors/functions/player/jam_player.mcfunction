@@ -1,9 +1,12 @@
 # @s = jammed player who just ate chorus fruit
 # run from player/used_chorus
 
-tag @s add gm4_ta_teleported
+tag @s add gm4_ta_teleported_player
 tag @s add gm4_ta_store_pos
 summon area_effect_cloud ~ ~ ~ {CustomName:'"gm4_ta_player_pos"',Tags:["gm4_ta_player_pos","gm4_ta_new_player_pos"],Radius:0f,Duration:2147483647,Particle:"block air"}
+
+execute if entity @s[type=!player] store result score @s gm4_ta_id run data get entity @s UUID[3]
+
 scoreboard players operation @e[type=area_effect_cloud,distance=..0.01,tag=gm4_ta_new_player_pos,limit=1] gm4_ta_jam_id = @s gm4_ta_jam_id
 scoreboard players operation @e[type=area_effect_cloud,distance=..0.01,tag=gm4_ta_new_player_pos,limit=1] gm4_ta_id = @s gm4_ta_id
 
