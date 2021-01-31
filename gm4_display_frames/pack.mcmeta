@@ -1,28 +1,14 @@
 {
     "pack": {
-      "pack_format": 6,
-      "description": {
-        "translate": "%1$s%3427655$s",
-        "with": [
-          [
+        "pack_format": 6,
+        "description": [
             "Display Frames",
             "\n",
             {
               "text": "Gamemode 4 for 1.16",
               "color": "aqua"
             }
-          ],
-          {
-            "translate": "pack.gm4.description",
-            "with": [
-              {
-                "translate": "module.gm4.display_frames"
-              },
-              "1.16"
-            ]
-          }
         ]
-      }
     },
     "module_name": "Display Frames",
     "module_id": "display_frames",
