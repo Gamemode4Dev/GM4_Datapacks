@@ -12,7 +12,6 @@
     },
     "module_name": "Orbis",
     "module_id": "orbis",
-    "hidden":true,
     "site_description": "A seed-specific chunk scanner that modifies your world as you explore.",
     "site_categories": [
         "Custom Terrain"

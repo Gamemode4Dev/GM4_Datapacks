@@ -12,7 +12,6 @@
     },
     "module_name": "Tower Structures",
     "module_id": "tower_structures",
-    "hidden":true,
     "site_description": "A custom terrain expansion pack that adds four new tower structures to the world.",
     "site_categories": [
         "Custom Terrain"

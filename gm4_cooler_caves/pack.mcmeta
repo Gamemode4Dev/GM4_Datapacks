@@ -12,7 +12,6 @@
     },
     "module_name": "Cooler Caves",
     "module_id": "cooler_caves",
-    "hidden":true,
     "site_description": "A custom terrain expansion pack that makes biome specific caves and mineshafts",
     "site_categories": [
         "Custom Terrain"

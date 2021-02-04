@@ -12,7 +12,6 @@
     },
     "module_name": "Dangerous Dungeons",
     "module_id": "dangerous_dungeons",
-    "hidden":true,
     "site_description": "A custom terrain expansion pack that adds new types of dungeons underground.",
     "site_categories": [
         "Custom Terrain"
