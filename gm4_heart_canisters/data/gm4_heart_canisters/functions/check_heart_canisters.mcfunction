@@ -1,6 +1,5 @@
 # gets called for every player with at least 1 heart canister tier 1 item
 
-
 scoreboard players set @s[nbt={Inventory:[{Count:1b,tag:{gm4_heart_canister_tier:1b}}]}] gm4_heart_can 1
 scoreboard players set @s[nbt={Inventory:[{Count:2b,tag:{gm4_heart_canister_tier:1b}}]}] gm4_heart_can 2
 scoreboard players set @s[nbt={Inventory:[{Count:3b,tag:{gm4_heart_canister_tier:1b}}]}] gm4_heart_can 3
