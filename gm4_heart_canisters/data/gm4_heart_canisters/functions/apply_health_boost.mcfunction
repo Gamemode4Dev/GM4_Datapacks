@@ -1,6 +1,6 @@
 # @s = player where the heart canister count changed
 # run from check_heart_canisters
-execute unless score @s gm4_heart_can = $heart_can_last gm4_heart_can run attribute @s minecraft:generic.max_health modifier remove 38a576e7-341b-46ed-a9e3-7b7291beae72
+attribute @s minecraft:generic.max_health modifier remove 38a576e7-341b-46ed-a9e3-7b7291beae72
 
 attribute @s[scores={gm4_heart_can=1}] minecraft:generic.max_health modifier add 38a576e7-341b-46ed-a9e3-7b7291beae72 gm4_hc_health_boost 4 add
 attribute @s[scores={gm4_heart_can=2}] minecraft:generic.max_health modifier add 38a576e7-341b-46ed-a9e3-7b7291beae72 gm4_hc_health_boost 8 add
@@ -12,3 +12,6 @@ attribute @s[scores={gm4_heart_can=7}] minecraft:generic.max_health modifier add
 attribute @s[scores={gm4_heart_can=8}] minecraft:generic.max_health modifier add 38a576e7-341b-46ed-a9e3-7b7291beae72 gm4_hc_health_boost 32 add
 attribute @s[scores={gm4_heart_can=9}] minecraft:generic.max_health modifier add 38a576e7-341b-46ed-a9e3-7b7291beae72 gm4_hc_health_boost 36 add
 attribute @s[scores={gm4_heart_can=10}] minecraft:generic.max_health modifier add 38a576e7-341b-46ed-a9e3-7b7291beae72 gm4_hc_health_boost 40 add
+
+effect give @s health_boost 1 1
+effect clear @s health_boost
