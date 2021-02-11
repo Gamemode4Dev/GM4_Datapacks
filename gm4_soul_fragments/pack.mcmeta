@@ -1,0 +1,28 @@
+{
+    "pack": {
+        "pack_format": 6,
+"description": [
+            "Soul Fragments",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
+
+    },
+    "module_name": "Soul Fragments",
+    "module_id": "gm4_soul_fragments",
+    "site_description": "Lose more than just your things upon death!",
+    "site_categories": [],
+    "wiki_link": "https://wiki.gm4.co/wiki/Soul_fragments",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Hozz"
+            ]
+        ]
+    }
+}

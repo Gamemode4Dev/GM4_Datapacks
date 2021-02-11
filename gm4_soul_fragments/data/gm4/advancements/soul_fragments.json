@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "bone",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Living on a Prayer",
+        {"translate": "advancement.gm4.soul_fragments.two_hearts.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Be on your last two Heart Containers",
+        {"translate": "advancement.gm4.soul_fragments.two_hearts.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "two hearts": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
