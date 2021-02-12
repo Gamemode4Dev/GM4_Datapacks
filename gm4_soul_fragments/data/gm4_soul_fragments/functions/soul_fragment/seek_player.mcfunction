@@ -2,7 +2,7 @@
 # from soul_fragment/sustain
 
 # move towards linked player
-tp @s ^ ^.13 ^0.5 facing entity @p[tag=gm4_sf_target,distance=..16] feet
+tp @s ^ ^.14 ^0.5 facing entity @p[tag=gm4_sf_target,distance=..16] feet
 
 # emit particles near linked player
 particle minecraft:soul ~ ~ ~ .05 0 .05 .015 1 force
