@@ -1,7 +1,5 @@
-#gm4_sf_died resets right after dying, while gm4_sf_rspwn resets after respawning
-
 scoreboard objectives add gm4_sf_died minecraft.custom:minecraft.deaths
-scoreboard objectives add gm4_sf_rspwn minecraft.custom:minecraft.deaths
+scoreboard objectives add gm4_sf_rspwn dummy
 scoreboard objectives add gm4_sf_id dummy
 scoreboard objectives add gm4_sf_fragments dummy
 scoreboard objectives add gm4_sf_age dummy

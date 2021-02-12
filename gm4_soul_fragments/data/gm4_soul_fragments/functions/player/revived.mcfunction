@@ -1,5 +1,6 @@
-#@s = player who's just respawned (@e[type=player,scores={gm4_sf_rspwn=1..}] at @s)
-#from main
+# @s = player who's just respawned
+# at respawn location
+# from main
 
 attribute @s[scores={gm4_sf_fragments=1}] minecraft:generic.max_health modifier add c93b8492-66c8-40bf-ad0e-cd8405099aa8 gm4_st_health_boost -4 add
 attribute @s[scores={gm4_sf_fragments=2}] minecraft:generic.max_health modifier add c93b8492-66c8-40bf-ad0e-cd8405099aa8 gm4_st_health_boost -8 add
@@ -13,5 +14,6 @@ tag @s remove gm4_sf_has_effect
 
 advancement grant @s[scores={gm4_sf_fragments=4}] only gm4:soul_fragments
 
+scoreboard players reset @s gm4_sf_died
 scoreboard players reset @s gm4_sf_regen
 scoreboard players reset @s gm4_sf_rspwn
