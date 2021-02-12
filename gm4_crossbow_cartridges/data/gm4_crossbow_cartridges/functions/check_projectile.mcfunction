@@ -17,8 +17,6 @@ execute if entity @s[predicate=gm4_crossbow_cartridges:lingering_potion] run fun
 
 #torch
 execute if entity @s[gamemode=!adventure,predicate=gm4_crossbow_cartridges:torch] run function gm4_crossbow_cartridges:projectile/torch
-execute if entity @s[gamemode=!adventure,predicate=gm4_crossbow_cartridges:redstone_torch] run function gm4_crossbow_cartridges:projectile/redstone_torch
-execute if entity @s[gamemode=!adventure,predicate=gm4_crossbow_cartridges:soul_torch] run function gm4_crossbow_cartridges:projectile/soul_torch
 
 #fireball
 execute if entity @s[gamemode=!adventure,predicate=gm4_crossbow_cartridges:fire_charge] run function gm4_crossbow_cartridges:projectile/fireball

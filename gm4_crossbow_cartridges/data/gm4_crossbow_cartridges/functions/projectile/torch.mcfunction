@@ -11,4 +11,4 @@ data merge entity @e[type=minecraft:arrow,distance=..2,limit=1,sort=nearest] {Fi
 clear @s[gamemode=!creative] torch 1
 
 #start loop to check if arrow is in ground
-function gm4_crossbow_cartridges:torch/loop
+function gm4_crossbow_cartridges:torch/torch_loop
