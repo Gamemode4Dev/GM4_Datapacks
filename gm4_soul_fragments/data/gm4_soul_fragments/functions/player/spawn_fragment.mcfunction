@@ -2,8 +2,6 @@
 # at @s
 # from player/died
 
-scoreboard players add @s gm4_sf_fragments 1
-
 particle minecraft:soul ~ ~1.2 ~ .17 0 .17 .03 3 normal
 playsound minecraft:block.chorus_flower.death player @a[distance=..5] ~ ~ ~ .9 2
 

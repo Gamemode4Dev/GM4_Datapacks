@@ -1,8 +1,11 @@
-# @s = player who's just died
+# @s = player who's just died from damage
 # at death location
-# from main
+# from player/check_death
 
-execute if score @s gm4_sf_fragments matches 0..3 if entity @s[gamemode=!creative,gamemode=!spectator] run function gm4_soul_fragments:player/spawn_fragment
+tag @s remove gm4_sf_target
+
+scoreboard players add @s gm4_sf_fragments 1
+execute if score @s gm4_sf_fragments matches 0..8 run function gm4_soul_fragments:player/spawn_fragment
 
 scoreboard players set @s gm4_sf_rspwn 1
 scoreboard players reset @s gm4_sf_regen

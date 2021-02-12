@@ -14,7 +14,7 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Be on your last two Heart Containers",
+        "Be on your last Heart Container",
         {"translate": "advancement.gm4.soul_fragments.two_hearts.description"}
       ],
       "color": "gray"
