@@ -1,20 +1,20 @@
 {
   "display": {
     "icon": {
-      "item": "tnt",
+      "item": "shears",
       "nbt": "{CustomModelData:1}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Didn't See That Coming",
+        "Bomb Defused",
         {"translate": "advancement.gm4.tnt_landmines.title"}
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Get killed by a landmine",
+        "Disarm a landmine",
         {"translate": "advancement.gm4.tnt_landmines.description"}
       ],
       "color": "gray"
