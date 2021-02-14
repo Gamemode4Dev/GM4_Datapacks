@@ -5,6 +5,6 @@
     }
   },
   "rewards": {
-    "function":"gm4_soul_fragments:player/set_id"
+    "function":"gm4_soul_fragments:set_id"
   }
 }

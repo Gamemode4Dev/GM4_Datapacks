@@ -13,6 +13,6 @@
         }
     },
   "rewards": {
-    "function": "gm4_soul_fragments:player/check_death"
+    "function": "gm4_soul_fragments:player/damage_check"
   }
 }
