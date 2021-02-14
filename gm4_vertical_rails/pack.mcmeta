@@ -1,7 +1,14 @@
 {
     "pack": {
-        "pack_format": 5,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 6,
+        "description": [
+            "Vertical Rails",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     },
     "module_name": "Vertical Rails",
     "module_id": "vertical_rails",

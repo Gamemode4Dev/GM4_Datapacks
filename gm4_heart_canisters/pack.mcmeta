@@ -1,7 +1,14 @@
 {
     "pack": {
-        "pack_format": 5,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 6,
+        "description": [
+            "Heart Canisters",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     },
     "module_name": "Heart Canisters",
     "module_id": "heart_canisters",
@@ -33,7 +40,10 @@
             ],
             [
                 "Misode",
-                "https://twitter.com/misoloo"
+                "https://twitter.com/misode_"
+            ],
+            [
+                "TheEpyonProject"
             ]
         ],
         "Textures by": [

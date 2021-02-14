@@ -1,4 +1,5 @@
 {
+  "type": "minecraft:generic",
   "pools": [
     {
       "rolls": 1,
@@ -202,6 +203,27 @@
                 "enchantments": [
                   {
                     "enchantment": "minecraft:frost_walker"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_enchantment_extractors:extract/soul_speed",
+          "conditions": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:soul_speed"
                   }
                 ]
               }

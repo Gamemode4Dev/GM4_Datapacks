@@ -1,0 +1,41 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [
+            "Pig Tractors",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
+    },
+    "module_name": "Pig Tractors",
+    "module_id": "pig_tractors",
+    "hidden":false,
+    "site_description": "Ride pigs through fields to quickly harvest and plant crops",
+    "site_categories": [],
+    "video_link": "https://www.youtube.com/watch?v=7i0WFHUfBXs",
+    "wiki_link": "https://wiki.gm4.co/wiki/Pig_Tractors",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Bloo",
+                "https://www.twitter.com/Bloo_dev"
+            ]
+        ],
+        "Updated by": [
+            [
+                "Federick90"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "DuckJr",
+                "https://twitter.com/DuckJr94"
+            ]
+        ]
+    }
+}

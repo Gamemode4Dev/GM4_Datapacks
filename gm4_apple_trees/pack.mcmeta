@@ -1,0 +1,43 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [
+            "Apple Trees",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
+    },
+    "module_name": "Apple Trees",
+    "module_id": "apple_trees",
+    "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+    "site_description": "Simply Apple Trees!",
+    "site_categories": [
+        "Custom Terrain"
+    ],
+    "wiki_link": "https://wiki.gm4.co/wiki/Apple_Trees",
+    "required_modules": [
+        "orbis"
+    ],
+    "recommended_modules": [
+        "podzol_rooting_soil"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "Bloo",
+                "https://twitter.com/Bloo_dev"
+            ],
+            [
+                "BluePsychoRanger",
+                "https://twitter.com/BluPsychoRanger"
+            ],
+            [
+                "SpecialBuilder",
+                "https://twitter.com/SpecialBuilder"
+            ]
+        ]
+    }
+}

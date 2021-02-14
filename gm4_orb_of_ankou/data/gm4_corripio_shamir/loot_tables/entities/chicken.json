@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_orb_of_ankou:soul_essence/feathery"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:table_bonus",
+          "enchantment": "minecraft:looting",
+          "chances": [
+            0.00009,
+            0.00036,
+            0.00225,
+            0.00738
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_orb_of_ankou:soul_essence/retreating"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:table_bonus",
+          "enchantment": "minecraft:looting",
+          "chances": [
+            0.0002,
+            0.0008,
+            0.005,
+            0.0164
+          ]
+        }
+      ]
+    }
+  ]
+}

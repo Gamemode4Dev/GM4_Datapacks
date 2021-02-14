@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "flint",
+      "nbt": "{CustomModelData:1,Enchantments:[{}]}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Was it Worth the Sacrifice?",
+        {"translate": "advancement.gm4.obtain_soul_shard.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Forge a soul shard",
+        {"translate": "advancement.gm4.obtain_soul_shard.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:create_soul_forge",
+  "criteria": {
+    "soul_shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:flint",
+            "nbt": "{gm4_orb_of_ankou:{item:\"soul_shard\"}}"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [
+            "Crossbow Cartridges",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
+    },
+    "module_name": "Crossbow Cartridges",
+    "module_id": "crossbow_cartridges",
+    "site_description": "Shoot more than just arrows!",
+    "site_categories": [],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Denniss"
+            ],
+            [
+                "Nik3141",
+				"https://www.youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"
+            ]
+        ]
+    }
+}

@@ -33,13 +33,16 @@
     "minecraft:conduit",
     "minecraft:enchanting_table",
     "#minecraft:banners",
-    "minecraft:campfire",
+    "#minecraft:campfires",
     "minecraft:blast_furnace",
     "minecraft:smoker",
     "minecraft:spawner",
     "minecraft:fire",
     "#minecraft:signs",
     "minecraft:piston_head",
-    "minecraft:nether_portal"
+    "minecraft:nether_portal",
+    "minecraft:crying_obsidian",
+    "minecraft:respawn_anchor",
+    "minecraft:lodestone"
   ]
 }

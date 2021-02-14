@@ -1,10 +1,18 @@
 {
     "pack": {
-        "pack_format": 5,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 6,
+        "description": [
+            "Bat Grenades",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     },
     "module_name": "Bat Grenades",
     "module_id": "bat_grenades",
+    "hidden":false,
     "site_description": "Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!",
     "site_categories": [],
     "video_link": "https://www.youtube.com/watch?v=uUoEKtte1GQ",

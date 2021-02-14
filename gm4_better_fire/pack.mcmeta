@@ -1,0 +1,40 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [
+            "Better Fire",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
+    },
+    "module_name": "Better Fire",
+    "module_id": "better_fire",
+    "hidden":false,
+    "site_description": "Flame arrows set fire when they land and burning creepers explode!",
+    "site_categories": [],
+    "video_link": "https://www.youtube.com/watch?v=J5024LhHuWk",
+    "wiki_link": "https://wiki.gm4.co/wiki/Better_Fire",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
+            ]
+        ],
+        "Updated By": [
+            [
+                "Bloo",
+                "https://www.twitter.com/Bloo_dev"
+            ],
+            [
+                "SpecialBuilder32",
+                "https://www.twitter.com/SpecialBuilder"
+            ]
+        ]
+    }
+}

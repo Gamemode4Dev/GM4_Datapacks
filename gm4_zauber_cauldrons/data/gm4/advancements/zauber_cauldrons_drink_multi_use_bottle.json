@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "glass_bottle",
+      "nbt": "{CustomModelData:4}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Clean Plate Club",
+        {"translate": "advancement.gm4.zauber_cauldrons.drink_multi_use_bottle.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Take the ninth sip out of a single bottle",
+        {"translate": "advancement.gm4.zauber_cauldrons.drink_multi_use_bottle.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:zauber_cauldrons_create",
+  "criteria":{
+    "consume_multi_use_bottle":{
+      "trigger":"minecraft:consume_item",
+      "conditions":{
+        "item":{
+          "nbt":"{gm4_zauber_cauldrons:{bottle:{multi_use:1b,sips:1b}}}"
+        }
+      }
+    }
+  }
+}

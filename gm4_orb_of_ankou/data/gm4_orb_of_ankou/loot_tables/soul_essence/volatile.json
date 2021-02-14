@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:black_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Volatile",
+                     {"translate":"text.gm4.pneuma_volatile"}
+                  ],
+                  "italic": false,
+                  "color": "blue"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  "Soul Essence",
+                  {"translate":"item.gm4.soul_essence"}
+                ],
+                "italic": false,
+                "color": "white"
+              }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:230,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"volatile\"},stored_color:[2474538]},Enchantments:[{}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [
+            "Poses Pack",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
+    },
+    "module_name": "Poses Pack",
+    "module_id": "poses_pack",
+    "site_description": "Allows you to set Armourstands to pose in various ways using the Better Armour Stands base module.",
+    "site_categories": [
+        "Better Armour Stands"
+    ],
+    "video_link": "https://www.youtube.com/watch?v=E7DnQTlpgrw",
+    "wiki_link": "https://wiki.gm4.co/wiki/Poses_Pack",
+    "required_modules": [
+        "better_armour_stands"
+    ],
+    "recommended_modules": [
+        "particles_pack"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
+            ],
+            [
+                "Denniss",
+                ""
+            ]
+        ],
+        "Updated by": [
+            [
+                "Misode",
+                "https://twitter.com/misode_"
+            ]
+        ]
+    }
+}

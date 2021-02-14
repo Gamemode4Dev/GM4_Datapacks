@@ -21,6 +21,11 @@ execute if entity @s[nbt={Item:{id:"minecraft:diamond_pickaxe"}}] run data modif
 execute if entity @s[nbt={Item:{id:"minecraft:diamond_hoe"}}] run data modify entity @s Item.tag.MaxDurability set value 1561
 execute if entity @s[nbt={Item:{id:"minecraft:diamond_axe"}}] run data modify entity @s Item.tag.MaxDurability set value 1561
 
+execute if entity @s[nbt={Item:{id:"minecraft:netherite_shovel"}}] run data modify entity @s Item.tag.MaxDurability set value 2031
+execute if entity @s[nbt={Item:{id:"minecraft:netherite_pickaxe"}}] run data modify entity @s Item.tag.MaxDurability set value 2031
+execute if entity @s[nbt={Item:{id:"minecraft:netherite_hoe"}}] run data modify entity @s Item.tag.MaxDurability set value 2031
+execute if entity @s[nbt={Item:{id:"minecraft:netherite_axe"}}] run data modify entity @s Item.tag.MaxDurability set value 2031
+
 execute if entity @s[nbt={Item:{id:"minecraft:golden_shovel"}}] run data modify entity @s Item.tag.MaxDurability set value 33
 execute if entity @s[nbt={Item:{id:"minecraft:golden_pickaxe"}}] run data modify entity @s Item.tag.MaxDurability set value 33
 execute if entity @s[nbt={Item:{id:"minecraft:golden_hoe"}}] run data modify entity @s Item.tag.MaxDurability set value 33

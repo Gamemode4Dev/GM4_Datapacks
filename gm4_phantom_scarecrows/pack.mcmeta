@@ -1,0 +1,35 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [
+            "Phantom Scarecrows",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
+    },
+    "module_name": "Phantom Scarecrows",
+    "module_id": "phantom_scarecrows",
+    "hidden":false,
+    "site_description": "Undead Scarecrow defenses!",
+    "site_categories": [],
+    "wiki_link": "https://wiki.gm4.co/wiki/Phantom_Scarecrows",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "Bloo",
+                "https://www.twitter.com/Bloo_dev"
+            ]
+        ],
+        "Inspired by": [
+            [
+                "Chopper2112",
+                "https://www.twitter.com/TheChopper2112"
+            ]
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "item": "minecraft:potion",
+        "nbt":"{gm4_zauber_cauldrons:{bottle:{multi_use:1b}}}"
+      }
+    }
+  }
+}

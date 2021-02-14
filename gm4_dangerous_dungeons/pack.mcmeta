@@ -1,0 +1,42 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [
+            "Dangerous Dungeons",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
+    },
+    "module_name": "Dangerous Dungeons",
+    "module_id": "dangerous_dungeons",
+    "site_description": "A custom terrain expansion pack that adds new types of dungeons underground.",
+    "site_categories": [
+        "Custom Terrain"
+    ],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Dangerous_Dungeons",
+    "required_modules": [
+        "orbis"
+    ],
+    "recommended_modules": [
+        "tower_structures",
+        "cooler_caves"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
+            ]
+        ],
+        "Updated by": [
+            [
+                "Misode",
+                "https://twitter.com/misode_"
+            ]
+        ]
+    }
+}

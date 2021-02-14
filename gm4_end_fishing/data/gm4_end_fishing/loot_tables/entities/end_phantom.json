@@ -38,6 +38,23 @@
           "type": "minecraft:item",
           "functions": [
             {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:11}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  "Raptured Wings",
+                  {
+                    "translate": "item.gm4.end_fishing.raptured_wings"
+                  }
+                ],
+                "italic": false
+              }
+            },
+            {
               "function": "minecraft:set_damage",
               "damage": 0
             }

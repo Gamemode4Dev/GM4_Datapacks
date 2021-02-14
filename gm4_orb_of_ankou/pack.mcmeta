@@ -1,0 +1,29 @@
+{
+  "pack": {
+    "pack_format": 6,
+    "description": [
+      "Orb of Ankou",
+      "\n",
+      {
+        "text": "Gamemode 4 for 1.16",
+        "color": "aqua"
+      }
+    ]
+  },
+  "module_name":"Orb of Ankou",
+  "module_id":"orb_of_ankou",
+  "site_description":"Capture mob abilities and use them as your own!",
+  "site_categories":["Metallurgy","Custom Crafters"],
+  "video_link":"",
+  "wiki_link":"https://wiki.gm4.co/wiki/Orb_of_Ankou",
+  "required_modules":[
+    "metallurgy",
+    "custom_crafters"
+  ],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["BluePsychoRanger","https://www.twitter.com/blupsychoranger"]
+    ]
+  }
+}

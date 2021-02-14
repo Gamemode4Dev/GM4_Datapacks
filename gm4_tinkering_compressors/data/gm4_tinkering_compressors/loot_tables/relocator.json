@@ -1,0 +1,50 @@
+{
+  "type":"block",
+  "pools":[
+    {
+      "rolls":1,
+      "entries":[
+        {
+          "type":"item",
+          "name":"minecraft:player_head",
+          "functions":[
+            {
+              "function":"set_nbt",
+              "tag":"{CustomModelData:36,gm4_relocation_data:{Command:\"function gm4_tinkering_compressors:relocate/place_down\"},SkullOwner:{Id:[I;-376274969,744704688,-1218290593,1434816296],Properties:{textures:[{Signature:\"gm4_relocated_block\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTU5NjU3NTUxMzc1MCwKICAicHJvZmlsZUlkIiA6ICJjZGM5MzQ0NDAzODM0ZDdkYmRmOWUyMmVjZmM5MzBiZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJSYXdMb2JzdGVycyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kNzU3ZjVhMjBlMDFhYjFlOTUxNTljZTg2YzJhMDIxMWQ1ZmY4ZjIwMTU3ZmE5MzkwNWFlY2ExMDM2YTYyZDZhIgogICAgfQogIH0KfQ==\"}]}}}"},
+            {
+              "function":"set_name",
+              "name":[
+                {
+                  "translate":"%1$s%3427655$s",
+                  "with": [
+                    "Tinkering Compressor",
+                    {
+                      "translate": "block.gm4.tinkering_compressor"
+                    }
+                  ],
+                  "color":"aqua",
+                  "italic":false
+                }
+              ]
+            },
+            {
+              "function":"set_lore",
+              "lore":[
+                {
+                  "translate":"%1$s%3427655$s",
+                  "with": [
+                    "Relocator",
+                    {
+                      "translate": "item.gm4.relocator"
+                    }
+                  ],
+                  "color":"yellow"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
