@@ -5,7 +5,7 @@ execute as @e[type=player,scores={gm4_sf_rspwn=1..}] at @s run function gm4_soul
 execute as @a[gamemode=!spectator] run function gm4_soul_fragments:player/submain
 
 # manage abandoned soul fragments
-execute as @e[type=minecraft:area_effect_cloud,tag=gm4_soul_fragment,tag=!gm4_new_soul_fragment] at @s run function gm4_soul_fragments:soul_fragment/process_check
+execute as @e[type=minecraft:area_effect_cloud,tag=gm4_soul_fragment] at @s run function gm4_soul_fragments:soul_fragment/process_check
 
 # angry soul fragment stuff
 execute as @e[type=minecraft:vex,tag=gm4_angry_soul_fragment] at @s run function gm4_soul_fragments:soul_fragment/angry_fragment

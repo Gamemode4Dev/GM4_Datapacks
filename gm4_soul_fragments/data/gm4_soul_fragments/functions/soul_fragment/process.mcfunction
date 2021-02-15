@@ -11,21 +11,21 @@ execute if score @p[gamemode=!creative,gamemode=!spectator,distance=..22,scores=
 
 # visuals
 
+# check if there are soul revealing blocks nearby
+execute store result score @s gm4_sf_reveal run clone ~-3 ~-2 ~-3 ~3 ~2 ~3 ~-3 ~-2 ~-3 filtered #gm4_soul_fragments:soul_revealing force	
+
 # emit particles and hum if revealed
 execute as @s[scores={gm4_sf_reveal=1..}] run function gm4_soul_fragments:soul_fragment/appear
-
-# check if there are soul revealing blocks nearby
-execute store result score @s gm4_sf_reveal run clone ~-3 ~-2 ~-3 ~3 ~2 ~3 ~-3 ~-2 ~-3 filtered #gm4_soul_fragments:soul_revealing force
 
 # targetting 
 
 # target linked players and totems of undying for seeking, prioritizing the player
-execute as @e[type=player,gamemode=!creative,gamemode=!spectator,scores={gm4_sf_fragments=1..},distance=..16] if score @s gm4_sf_id = #current gm4_sf_id unless score @s gm4_sf_rspwn matches 1 run tag @s add gm4_sf_target
+execute as @a[gamemode=!creative,gamemode=!spectator,scores={gm4_sf_fragments=1..},distance=..16,limit=1] if score @s gm4_sf_id = #current gm4_sf_id unless score @s gm4_sf_rspwn matches 1 run tag @s add gm4_sf_target
 execute unless entity @e[type=#gm4_soul_fragments:soul_target,tag=gm4_sf_target,distance=..17] run tag @e[type=item,nbt=!{Item:{tag:{gm4_soul_fragments:{}}}},nbt={Item:{id:"minecraft:totem_of_undying",Count:1b},OnGround:1b},limit=1,sort=nearest,distance=..5] add gm4_sf_target
 
 # move towards target
-execute if entity @e[type=#gm4_soul_fragments:soul_target,tag=gm4_sf_target,distance=..16,sort=nearest,limit=1] run function gm4_soul_fragments:soul_fragment/seek_target
+execute if entity @e[type=#gm4_soul_fragments:soul_target,tag=gm4_sf_target,distance=..16,limit=1] run function gm4_soul_fragments:soul_fragment/seek_target
 
 # remove target tags
-execute as @e[type=player,tag=gm4_sf_target,distance=..16] if score @s gm4_sf_id = #current gm4_sf_id run tag @s remove gm4_sf_target
+execute as @a[tag=gm4_sf_target,distance=..16,limit=1] if score @s gm4_sf_id = #current gm4_sf_id run tag @s remove gm4_sf_target
 tag @e[type=item,tag=gm4_sf_target,distance=..5] remove gm4_sf_target

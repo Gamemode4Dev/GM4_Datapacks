@@ -11,10 +11,6 @@ execute store result score @e[type=area_effect_cloud,tag=gm4_sf_soul_tracker,dis
 particle minecraft:soul ~ ~1.2 ~ .2 0 .2 .03 5 normal
 execute if entity @s[type=player] run playsound minecraft:block.chorus_flower.death player @a[distance=..5] ~ ~ ~ .9 2
 
-# change soul in totem for regular totem (1.16)
+# change soul in totem for regular totem
 execute if predicate gm4_soul_fragments:totem/in_mainhand run replaceitem entity @s weapon.mainhand minecraft:totem_of_undying
 execute if predicate gm4_soul_fragments:totem/in_offhand run replaceitem entity @s weapon.offhand minecraft:totem_of_undying
-
-# change soul in totem for regular totem (1.17)
-#execute if predicate gm4_soul_fragments:totem/in_mainhand run item entity @s weapon.mainhand replace minecraft:totem_of_undying
-#execute if predicate gm4_soul_fragments:totem/in_offhand run item entity @s weapon.offhand replace minecraft:totem_of_undying
