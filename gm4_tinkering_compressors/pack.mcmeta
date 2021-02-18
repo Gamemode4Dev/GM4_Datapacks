@@ -1,7 +1,14 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": [
+            "Tinkering Compressors",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     },
     "module_name": "Tinkering Compressors",
     "module_id": "tinkering_compressors",
@@ -18,7 +25,9 @@
         "block_compressors",
         "metallurgy"
     ],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "relocators"
+    ],
     "credits": {
         "Creator": [
             [

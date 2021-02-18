@@ -1,7 +1,14 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": [
+            "Liquid Tanks",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     },
     "module_name": "Liquid Tanks",
     "module_id": "liquid_tanks",
@@ -14,8 +21,10 @@
     "required_modules": [],
     "recommended_modules": [
         "potion_liquids",
+        "zauber_liquids",
         "liquid_minecarts",
-        "concrete_mixers"
+        "concrete_mixers",
+        "relocators"
     ],
     "credits": {
         "Creator": [

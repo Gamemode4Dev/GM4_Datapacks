@@ -1,0 +1,27 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [
+            "Cozy Campfires",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
+    },
+    "module_name": "Cozy Campfires",
+    "module_id": "cozy_campfires",
+    "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+    "site_description": "Heartwarming campfire evenings!",
+    "site_categories": [],
+    "wiki_link": "https://wiki.gm4.co/wiki/Cozy_Campfires",
+    "credits": {
+        "Creator": [
+            [
+                "Bloo",
+                "https://twitter.com/Bloo_dev"
+            ]
+        ]
+    }
+}

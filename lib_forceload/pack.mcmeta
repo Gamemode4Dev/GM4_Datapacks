@@ -1,6 +1,13 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "The Gamemode 4 forceloaded chunk library"
+        "description": [
+            "Forceloaded Chunk Library",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     }
 }

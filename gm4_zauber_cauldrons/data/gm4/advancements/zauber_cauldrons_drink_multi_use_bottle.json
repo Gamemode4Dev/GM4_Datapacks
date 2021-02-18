@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "glass_bottle",
-      "nbt": "{CustomModelData:1}"
+      "nbt": "{CustomModelData:4}"
     },
     "title": {
       "translate": "%1$s%3427655$s",

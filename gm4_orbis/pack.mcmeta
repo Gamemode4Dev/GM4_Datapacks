@@ -1,11 +1,17 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": [
+            "Orbis",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     },
     "module_name": "Orbis",
     "module_id": "orbis",
-    "hidden":true,
     "site_description": "A seed-specific chunk scanner that modifies your world as you explore.",
     "site_categories": [
         "Custom Terrain"

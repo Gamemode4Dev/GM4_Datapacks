@@ -1,7 +1,14 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": [
+            "Custom Crafters",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "aqua"
+            }
+        ]
     },
     "module_name": "Custom Crafters",
     "module_id": "custom_crafters",
@@ -17,7 +24,8 @@
         "record_crafting",
         "master_crafting",
         "disassemblers",
-        "block_compressors"
+        "block_compressors",
+        "relocators"
     ],
     "credits": {
         "Creator": [
