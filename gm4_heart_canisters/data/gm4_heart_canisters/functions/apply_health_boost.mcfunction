@@ -13,5 +13,7 @@ attribute @s[scores={gm4_heart_can=8}] minecraft:generic.max_health modifier add
 attribute @s[scores={gm4_heart_can=9}] minecraft:generic.max_health modifier add 38a576e7-341b-46ed-a9e3-7b7291beae72 gm4_hc_health_boost 36 add
 attribute @s[scores={gm4_heart_can=10}] minecraft:generic.max_health modifier add 38a576e7-341b-46ed-a9e3-7b7291beae72 gm4_hc_health_boost 40 add
 
-effect give @s health_boost 1 1
-effect clear @s health_boost
+tag @s[predicate=gm4_heart_canisters:has_health_boost] add gm4_hc_has_effect
+effect give @s[tag=!gm4_hc_has_effect] health_boost 1
+effect clear @s[tag=!gm4_hc_has_effect] health_boost
+tag @s remove gm4_hc_has_effect
