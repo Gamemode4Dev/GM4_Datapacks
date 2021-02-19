@@ -1,10 +1,13 @@
-# @s = player or totem approached by a soul fragment or regenerating health
+# @s = player or lantern approached by their soul fragment or regenerating health
 # from soul_fragment/seek_target or player/manage_regen
 
 tag @s remove gm4_sf_target
 
-execute if entity @s[type=player] run function gm4_soul_fragments:player/regen_health
-execute if entity @s[type=item,nbt={OnGround:1b}] run function gm4_soul_fragments:totem/capture_fragment
+execute if entity @s[type=player,tag=gm4_sf_linked] run function gm4_soul_fragments:player/regen_health
+execute if entity @s[type=player,tag=!gm4_sf_linked] run function gm4_soul_fragments:player/capture_fragment
+execute if entity @s[type=item,nbt={OnGround:1b}] run function gm4_soul_fragments:soul_lantern/capture_fragment
+
+tag @s remove gm4_sf_linked
 
 # visuals
 

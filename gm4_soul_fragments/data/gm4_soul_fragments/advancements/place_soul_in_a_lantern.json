@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "place_soul": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:soul_lantern",
+        "item": {
+            "item": "minecraft:soul_lantern",
+            "nbt": "{CustomModelData:1,gm4_soul_fragments:{}}"
+        }
+	  }
+    }
+  },
+  "rewards": {
+    "function": "gm4_soul_fragments:player/place_soul_in_a_lantern"
+  }
+}
