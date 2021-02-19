@@ -1,6 +1,6 @@
 # @s = player holding a soul in a lantern in offhand
 # at @s
-# from player/items/process_offhand_soul
+# from player/items/check_held_id
 
 # store currently held soul lantern ID into temp player score
 execute store result score #current gm4_sf_o_id run data get entity @s Inventory[{Slot:-106b}].tag.gm4_soul_fragments.id

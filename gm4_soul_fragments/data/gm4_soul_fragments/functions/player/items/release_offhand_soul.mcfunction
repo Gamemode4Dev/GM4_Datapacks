@@ -9,6 +9,9 @@ tag @e[type=area_effect_cloud,tag=gm4_new_soul_fragment] remove gm4_new_soul_fra
 
 scoreboard players reset @s gm4_sf_o_timer
 
+playsound minecraft:block.chorus_flower.grow player @a[distance=..16] ~ ~ ~ .9 1.5
+particle minecraft:soul ~ ~1.5 ~ .2 0 .2 .03 5 normal
+
 execute if predicate gm4_soul_fragments:count_one/in_offhand run replaceitem entity @s weapon.offhand minecraft:soul_lantern
 #execute if predicate gm4_soul_fragments:count_one/in_offhand run item entity @s weapon.offhand replace minecraft:soul_lantern
 execute unless predicate gm4_soul_fragments:count_one/in_offhand run function gm4_soul_fragments:player/items/process_offhand_stack

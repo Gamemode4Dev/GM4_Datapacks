@@ -1,6 +1,6 @@
 # @s = player holding a soul in a lantern in mainhand
 # at @s
-# from player/items/process_mainhand_soul
+# from player/items/check_held_id
 
 # store currently held soul lantern ID into temp player score
 execute store result score #current gm4_sf_m_id run data get entity @s SelectedItem.tag.gm4_soul_fragments.id
