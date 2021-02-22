@@ -1,6 +1,6 @@
 # Adds trades from this expansion to the fruiting trees trade pool. The base randomly will select one trade from the trade pool to be added to a wandering trader.
 # @s = a wandering trader without the gm4_fruiting_trader tag (aka without the new trades)
-# at world spawn
+# at @s
 # run from gm4_fruiting_trees:wandering_trader/add_trade
 
 # summon armor stands with trade items from loot table

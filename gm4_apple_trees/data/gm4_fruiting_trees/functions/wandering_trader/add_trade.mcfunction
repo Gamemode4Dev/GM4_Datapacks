@@ -1,6 +1,6 @@
 # adds trades from storage into wandering traders
 # @s = a wandering trader without the gm4_fruiting_trader tag (aka without the new trades)
-# at world spawn
+# at @s
 # run from gm4_fruiting_trees:main
 
 # generate trades
