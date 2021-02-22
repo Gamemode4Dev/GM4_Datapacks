@@ -18,10 +18,9 @@
         "Custom Terrain"
     ],
     "wiki_link": "https://wiki.gm4.co/wiki/Apple_Trees",
-    "required_modules": [
-        "orbis"
-    ],
+    "required_modules": [],
     "recommended_modules": [
+        "orbis",
         "podzol_rooting_soil"
     ],
     "credits": {
