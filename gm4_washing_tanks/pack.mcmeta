@@ -6,7 +6,7 @@
     "module_name": "Washing Tanks",
     "module_id": "washing_tanks",
     "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-    "site_description": "Dye! Die!",
+    "site_description": "Die! Dye!",
     "site_categories": [
 	    "Liquid Tanks"
     ],
@@ -16,17 +16,15 @@
         "liquid_tanks"
     ],
     "credits": {
-        "Creator": [
-            [
-                "Bunnygamers",
-                "https://twitter.com/BunnygamersMC"
-            ]
-        ],
-	"With help from": [
-	    [
-	        "Misode",
-		"https://twitter.com/misoloo"
-	    ]
-	]
+      "Creator": [
+      [
+        "Bunnygamers",
+        "https://twitter.com/BunnygamersMC"
+      ],
+			[
+				"Misode",
+				"https://twitter.com/misode_"
+			]
+		]
     }
 }
