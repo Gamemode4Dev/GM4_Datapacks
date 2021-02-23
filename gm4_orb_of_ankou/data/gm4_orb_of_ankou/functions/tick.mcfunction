@@ -11,7 +11,7 @@ execute if score loaded_forge gm4_oa_forge matches 1.. at @e[type=armor_stand,ta
 ## PNEUMA STUFF ##
 
 # agile
-execute if score agile_player gm4_pneuma_data matches 1.. as @a[tag=gm4_pneuma_agile] at @s if block ~ ~-0.1 ~ #gm4_orb_of_ankou:traversable if block ~ ~-1.3 ~ #gm4_orb_of_ankou:traversable if block ~ ~-2.3 ~ #gm4_orb_of_ankou:traversable if block ~ ~-3.3 ~ #gm4_orb_of_ankou:traversable run function gm4_orb_of_ankou:pneumas/agile
+execute if score agile_player gm4_pneuma_data matches 1.. as @a[tag=gm4_pneuma_agile] at @s if block ~ ~-0.1 ~ #gm4:no_collision if block ~ ~-1.3 ~ #gm4:no_collision if block ~ ~-2.3 ~ #gm4:no_collision if block ~ ~-3.3 ~ #gm4:no_collision run function gm4_orb_of_ankou:pneumas/agile
 
 # striding
 execute at @e[type=area_effect_cloud,tag=gm4_oa_striding_block,nbt={Age:4}] if block ~ ~ ~ magma_block run setblock ~ ~ ~ lava

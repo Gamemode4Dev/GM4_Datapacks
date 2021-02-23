@@ -16,7 +16,7 @@ execute as @e[type=armor_stand,tag=gm4_soul_forge] at @s if predicate gm4_orb_of
 ## PNEUMA STUFF ##
 
 # bubbly
-execute as @a[tag=gm4_pneuma_bubbly] at @s anchored eyes unless block ^ ^ ^ water unless block ^ ^ ^ #gm4_orb_of_ankou:water_loggable[waterlogged=true] unless block ^ ^ ^ #gm4_orb_of_ankou:seagrass run effect give @s water_breathing 121 0
+execute as @a[tag=gm4_pneuma_bubbly] at @s anchored eyes unless block ^ ^ ^ #gm4:water unless block ^ ^ ^ #gm4:waterloggable[waterlogged=true] run effect give @s water_breathing 121 0
 
 # gliding
 effect give @a[tag=gm4_pneuma_gliding,scores={gm4_oa_swim=1..}] dolphins_grace 3 1 true
