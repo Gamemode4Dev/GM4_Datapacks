@@ -1,6 +1,6 @@
 # @s = player who's just respawned
 # at respawn location
-# from player/revived
+# from player/revived or player/regen_health
 
 attribute @s[scores={gm4_sf_fragments=1}] minecraft:generic.max_health modifier add c93b8492-66c8-40bf-ad0e-cd8405099aa8 gm4_st_health_boost -2 add
 attribute @s[scores={gm4_sf_fragments=2}] minecraft:generic.max_health modifier add c93b8492-66c8-40bf-ad0e-cd8405099aa8 gm4_st_health_boost -4 add

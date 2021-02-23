@@ -13,6 +13,9 @@
     },
     "module_name": "Soul Fragments",
     "module_id": "gm4_soul_fragments",
+	"libraries": [
+    "lib_forceload"
+    ],
     "site_description": "Lose more than just your things upon death!",
     "site_categories": [],
     "wiki_link": "https://wiki.gm4.co/wiki/Soul_fragments",

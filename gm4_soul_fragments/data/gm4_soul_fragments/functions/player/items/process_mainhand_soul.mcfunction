@@ -11,7 +11,7 @@ execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8,scores={gm4_sf
 # if so, add to timer if still holding soul in a lantern
 execute if entity @a[tag=gm4_sf_linked,distance=..8] if score #current gm4_sf_m_id = @s gm4_sf_m_id run scoreboard players add @s gm4_sf_m_timer 1
 execute as @a[tag=gm4_sf_linked,distance=..8] run tag @s remove gm4_sf_linked
-execute if score @s gm4_sf_m_timer matches 1..3 run playsound minecraft:block.note_block.cow_bell player @a[distance=..10] ~ ~ ~ .6 .4 .6
+execute if score @s gm4_sf_m_timer matches 1..3 run playsound minecraft:block.note_block.cow_bell player @s ~ ~ ~ .6 .4 .6
 execute if score @s gm4_sf_m_timer matches 4 run function gm4_soul_fragments:player/items/spawn_fragment_mainhand
 execute unless score #current gm4_sf_m_id = @s gm4_sf_m_id run scoreboard players reset @s gm4_sf_m_timer
 
