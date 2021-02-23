@@ -21,5 +21,5 @@ execute if entity @a[tag=gm4_sf_target,distance=..16,limit=1] run function gm4_s
 execute as @s[scores={gm4_sf_fire=1..}] run function gm4_soul_fragments:soul_fragment/appear
 
 # remove target tags
-execute as @a[tag=gm4_sf_linked,distance=..16] run tag @s remove gm4_sf_linked
-execute as @a[tag=gm4_sf_target,distance=..16] run tag @s remove gm4_sf_target
+tag @a remove gm4_sf_linked
+tag @a remove gm4_sf_target
