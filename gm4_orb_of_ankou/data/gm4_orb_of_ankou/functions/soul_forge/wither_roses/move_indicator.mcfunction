@@ -21,7 +21,7 @@ execute at @s if score random_z gm4_oa_roses matches 1.. run tp @s ~ ~ ~1
 execute if score random_z gm4_oa_roses matches 1.. run scoreboard players remove random_z gm4_oa_roses 1
 
 #kill if not in air or on unsupported block
-execute at @s if block ~ ~ ~ #gm4_orb_of_ankou:traversable unless block ~ ~-1 ~ #gm4_orb_of_ankou:traversable run tag @s add gm4_oa_rose_indicator_valid
+execute at @s if block ~ ~ ~ #gm4:no_collision unless block ~ ~-1 ~ #gm4:no_collision run tag @s add gm4_oa_rose_indicator_valid
 
 kill @s[tag=!gm4_oa_rose_indicator_valid]
 
