@@ -1,13 +1,6 @@
 {
-	"values": [		
-		"minecraft:tripwire",
-		"minecraft:grass",
-		"minecraft:fern",
-		"minecraft:dead_bush",		
-		"minecraft:tall_grass",
-		"minecraft:large_fern",
-		"minecraft:vine",
-		"minecraft:air",
-		"minecraft:cave_air"
+	"values": [
+		"#gm4:replaceable",
+		"minecraft:tripwire"
 	]
 }
