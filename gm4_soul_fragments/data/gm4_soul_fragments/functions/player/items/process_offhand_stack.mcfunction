@@ -1,4 +1,4 @@
-# @s = player taking damage while holding souls in lanterns in offhand or player capturing a soul fragment while holding soul lanters in offhand
+# @s = player capturing a soul fragment while holding soul lanters in offhand / player releasing a held soul in a lantern
 # from player/spawn_fragment_offhand or player/items/capture_in_offhand
 
 # copy the item to a storage, take one, store it the first slot of the The Yellow Shulker Box™, and put it back in the player's hand

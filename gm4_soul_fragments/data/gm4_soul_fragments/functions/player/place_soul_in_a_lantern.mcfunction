@@ -2,8 +2,7 @@
 # at player's location
 # from advancement place_soul_in_a_lantern
 
-
-# set score m_ID to lantern's (mainhand first, offhand if failed)
+# set score m ID to lantern's (mainhand first, offhand if failed)
 execute store result score @s gm4_sf_m_id run data get entity @s SelectedItem.tag.gm4_soul_fragments.id
 execute if entity @s[scores={gm4_sf_m_id=0}] store result score @s gm4_sf_m_id run data get entity @s Inventory[{Slot:-106b}].tag.gm4_soul_fragments.id
 

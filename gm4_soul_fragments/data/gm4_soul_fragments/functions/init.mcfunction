@@ -1,5 +1,4 @@
 scoreboard objectives add gm4_sf_died minecraft.custom:minecraft.deaths
-scoreboard objectives add gm4_sf_die_totem minecraft.used:minecraft.totem_of_undying
 scoreboard objectives add gm4_sf_rspwn dummy
 scoreboard objectives add gm4_sf_id dummy
 scoreboard objectives add gm4_sf_m_id dummy

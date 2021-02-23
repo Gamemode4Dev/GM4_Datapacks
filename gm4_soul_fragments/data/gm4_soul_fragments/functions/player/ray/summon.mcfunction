@@ -4,11 +4,8 @@
 # move
 tp @s ^ ^-.2 ^-.65
 
-# set scoreboard ID
-scoreboard players operation #current gm4_sf_id = @s gm4_sf_id
-
-# summon angry soul if placed away from linked player
-execute unless score @p[gamemode=!spectator,distance=..16] gm4_sf_id = #current gm4_sf_id run function gm4_soul_fragments:release_angry_soul
-
-# summon fragment if placed near linked player
-execute if score @p[gamemode=!spectator,distance=..16] gm4_sf_id = #current gm4_sf_id run function gm4_soul_fragments:spawn_fragment
+# summon soul fragment, apply score ID and die
+function gm4_soul_fragments:player/spawn_fragment
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=gm4_new_soul_fragment,limit=1,sort=nearest,distance=...3] gm4_sf_id = @s gm4_sf_id
+tag @e[type=area_effect_cloud,tag=gm4_new_soul_fragment] remove gm4_new_soul_fragment
+execute if entity @s[type=area_effect_cloud] run kill @s

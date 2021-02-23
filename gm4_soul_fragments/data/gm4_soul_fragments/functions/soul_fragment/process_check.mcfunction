@@ -3,7 +3,7 @@
 # from main
 
 # check if there are items or players nearby before further processing
-execute if entity @e[type=#gm4_soul_fragments:interact,distance=..17] run function gm4_soul_fragments:soul_fragment/process
+execute if entity @a[distance=..17] run function gm4_soul_fragments:soul_fragment/process
 
 # check if there is soul fire (of any kind) nearby
 execute store result score @s gm4_sf_fire run clone ~-2 ~-1 ~-2 ~2 ~2 ~2 ~-2 ~-1 ~-2 filtered #gm4_soul_fragments:sf_fire force

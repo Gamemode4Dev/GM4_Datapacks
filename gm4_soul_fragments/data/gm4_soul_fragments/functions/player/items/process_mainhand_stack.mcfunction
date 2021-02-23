@@ -1,4 +1,4 @@
-# @s = player taking damage while holding souls in lanterns in mainhand / player capturing a soul fragment while holding soul lanters in mainhand / player releasing a held soul in a lantern
+# @s = player capturing a soul fragment while holding soul lanters in mainhand / player releasing a held soul in a lantern
 # from player/spawn_fragment_mainhand or player/items/capture_in_mainhand
 
 # copy the item to a storage, take one, store it the first slot of the The Yellow Shulker Box™, and put it back in the player's hand
@@ -13,5 +13,5 @@ execute in overworld run data modify block 29999998 1 7134 Items append from sto
 
 loot replace entity @s weapon.mainhand 1 mine 29999998 1 7134 minecraft:air{drop_contents: 1b}
 
-# if not capturing (taking damage), give a soul lantern
+# if not capturing, give a soul lantern
 give @s[tag=!gm4_sf_capturing] soul_lantern 1

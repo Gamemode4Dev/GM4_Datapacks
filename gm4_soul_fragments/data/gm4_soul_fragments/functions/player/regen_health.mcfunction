@@ -1,5 +1,5 @@
-# @s = player who's picked up a soul fragment or regenerated it over a long time
-# from intake_fragment or submain
+# @s = player who's picked up a soul fragment
+# from intake_fragment
 
 scoreboard players remove @s gm4_sf_fragments 1
 
