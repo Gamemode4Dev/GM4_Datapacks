@@ -1,6 +1,6 @@
 {
   "values" : [
-    "minecraft:water",
+    "#gm4:water",
     "minecraft:lava",
     "minecraft:cobweb",
     "minecraft:snow"

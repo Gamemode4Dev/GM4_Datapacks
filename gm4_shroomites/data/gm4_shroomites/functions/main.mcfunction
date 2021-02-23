@@ -3,7 +3,7 @@
 execute as @e[tag=gm4_shroomite_shroom,type=area_effect_cloud] at @s unless block ~ ~ ~ red_mushroom run kill @s
 #kill spores that are inside non-porous blocks or caught by a spore catcher block
 execute as @e[tag=gm4_shroomite_spore,type=area_effect_cloud] at @s if block ~ ~ ~ #gm4_shroomites:spore_catcher run kill @s
-execute as @e[tag=gm4_shroomite_spore,type=area_effect_cloud] at @s unless block ~ ~ ~ #gm4_shroomites:spore_porous run kill @s
+execute as @e[tag=gm4_shroomite_spore,type=area_effect_cloud] at @s if block ~ ~ ~ #gm4:full_collision run kill @s
 
 #spore spawn timer. Spawns a spore with a lifetime of 8 steps (8x16 seconds + 1 tick (1361 ticks) ) every 58.4 seconds (shroom_time=73..)
 scoreboard players add @e[tag=gm4_shroomite,type=area_effect_cloud] gm4_shroom_time 1
