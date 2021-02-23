@@ -13,6 +13,6 @@ execute as @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point] at @s run f
 
 # kill locations that are too close to the player or not in air
 execute at @a run kill @e[tag=gm4_illusioner_spawn_point,distance=..16]
-execute as @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point] at @s unless block ~ ~ ~ #gm4_midnight_menaces:air run kill @s
+execute as @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point] at @s unless block ~ ~ ~ #gm4:air run kill @s
 
 execute as @e[type=area_effect_cloud,tag=gm4_illusioner_spawn_point] at @s run summon illusioner ~ ~ ~ {DeathLootTable:"gm4_illusioner_nights:illusioner",HandItems:[{id:"minecraft:bow",Count:1b},{}]}
