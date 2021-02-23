@@ -36,6 +36,7 @@ scoreboard players set current_sensus_layer gm4_ml_data 0
 
 #levity
 scoreboard objectives add gm4_levity_sneak minecraft.custom:minecraft.sneak_time
+scoreboard objectives add gm4_levity_buf dummy
 
 execute unless score metallurgy gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Metallurgy"}
 scoreboard players set metallurgy gm4_modules 1

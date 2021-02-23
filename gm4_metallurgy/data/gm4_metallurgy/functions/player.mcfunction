@@ -17,3 +17,4 @@ execute if predicate gm4_metallurgy:shamir_equipped at @s[gamemode=!spectator] r
 execute if entity @s[scores={gm4_volt_time=-1..},tag=!gm4_has_conduction] at @s run function gm4_conduction_shamir:deselected_tool
 
 execute if entity @s[tag=!gm4_has_musical] run function gm4_musical_shamir:songs/reset_player
+execute if entity @s[tag=!gm4_has_levity,tag=gm4_levity_is_floating] run function gm4_levity_shamir:stop/cancel_levitation

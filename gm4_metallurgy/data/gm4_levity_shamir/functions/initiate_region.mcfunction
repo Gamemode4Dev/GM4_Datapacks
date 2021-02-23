@@ -8,7 +8,7 @@ execute as @e[type=area_effect_cloud,tag=gm4_levity_epicenter,distance=..16] pos
 summon area_effect_cloud ~ ~ ~ {Duration:9600,CustomName:"\"gm4_levity_epicenter\"",Tags:["gm4_levity_epicenter"]}
 
 #tag to mark they started floating
-tag @s add gm4_levity_started_floating
+tag @s add gm4_levity_is_floating
 
 #apply levitation
 effect give @s levitation 480 255
