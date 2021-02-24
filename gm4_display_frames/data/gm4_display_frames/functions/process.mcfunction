@@ -1,10 +1,6 @@
 # @s = display frame within 16 blocks of a player
 # run from main
 
-data merge entity @s[tag=!gm4_df_invisible,nbt={Item:{}}] {Invisible:1b,Glowing:0b,Tags:["gm4_df_invis_frame","gm4_df_invisible","gm4_df_processed"]}
-data merge entity @s[tag=!gm4_df_processed,tag=gm4_df_invisible,nbt=!{Item:{}}] {Invisible:0b,Glowing:1b,Tags:["gm4_df_invis_frame","gm4_df_processed","gm4_df_glowing"]}
-
-data merge entity @s[tag=!gm4_df_processed,tag=!gm4_df_invisible,tag=!gm4_df_glowing,distance=..8] {Glowing:1b,Tags:["gm4_df_invis_frame","gm4_df_processed","gm4_df_glowing"]}
-data merge entity @s[tag=!gm4_df_processed,tag=!gm4_df_invisible,tag=gm4_df_glowing,distance=8..] {Glowing:0b,Tags:["gm4_df_invis_frame","gm4_df_processed"]}
-
-tag @s remove gm4_df_processed
+execute if entity @s[tag=gm4_df_invisible,nbt=!{Item:{}}] run function gm4_display_frames:clear_invis
+execute if entity @s[tag=!gm4_df_invisible,nbt={Item:{}}] run function gm4_display_frames:apply_invis
+execute if entity @s[tag=!gm4_df_invisible,nbt=!{Item:{}}] at @s run particle entity_effect ^ ^ ^.2 0.8 0.8 0.8 0.6 0
