@@ -15,24 +15,18 @@ execute as @e[type=armor_stand,tag=gm4_soul_forge] at @s if predicate gm4_orb_of
 
 ## PNEUMA STUFF ##
 
-# bubbly
-execute as @a[gamemode=!spectator,tag=gm4_pneuma_bubbly] at @s anchored eyes unless block ^ ^ ^ #gm4:water unless block ^ ^ ^ #gm4:waterloggable[waterlogged=true] run effect give @s water_breathing 121 0
-
 # gliding
 effect give @a[gamemode=!spectator,tag=gm4_pneuma_gliding,scores={gm4_oa_swim=1..}] dolphins_grace 3 1 true
 scoreboard players reset @a gm4_oa_swim
 
-# synergetic
-execute at @a[gamemode=!spectator,tag=gm4_pneuma_synergetic] run function gm4_orb_of_ankou:pneumas/synergetic/apply
-
 # soaring
-tag @a[nbt={OnGround:1b}] remove gm4_oa_soaring_off_ground
+tag @a[tag=gm4_oa_soaring_off_ground,nbt={OnGround:1b}] remove gm4_oa_soaring_off_ground
 effect give @a[gamemode=!spectator,tag=gm4_oa_soaring_off_ground] jump_boost 2 255 true
-execute as @a[gamemode=!spectator,tag=gm4_oa_soaring_active] at @s run function gm4_orb_of_ankou:pneumas/soaring/apply
+
+# run player commands
+execute as @a[gamemode=!spectator,tag=gm4_has_pneuma] run function gm4_orb_of_ankou:player
 
 # sneaking stuff
-execute as @a[gamemode=!spectator,scores={gm4_oa_sneak=0},tag=gm4_oa_sneaking] run function gm4_orb_of_ankou:pneumas/sneak/stopped
-execute as @a[gamemode=!spectator,scores={gm4_oa_sneak=1..},tag=gm4_has_pneuma] run function gm4_orb_of_ankou:pneumas/sneak/check
 scoreboard players set @a gm4_oa_sneak 0
 
 # revert invulnerable item
