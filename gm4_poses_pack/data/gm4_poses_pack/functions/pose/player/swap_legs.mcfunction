@@ -1,12 +1,10 @@
-# @s = armor_stand ..1 from written book
+# @s = armor_stand ..1 from writable_book
 
-summon minecraft:armor_stand ~ ~ ~ {Tags:["gm4_pose_temp"],Invisible:1b}
-data modify entity @e[tag=gm4_pose_temp,distance=..1,limit=1] Pose.RightLeg set from entity @s Pose.RightLeg
+# Swap the arms in temporary storage.
+data modify storage gm4_better_armour_stands:temp Pose.LeftArm set from entity @s Pose.RightArm
+data modify storage gm4_better_armour_stands:temp Pose.RightArm set from entity @s Pose.LeftArm
 
-data modify entity @s Pose.RightLeg set from entity @s Pose.LeftLeg
-data modify entity @s Pose.LeftLeg set from entity @e[tag=gm4_pose_temp,distance=..1,limit=1] Pose.RightLeg
-
-kill @e[tag=gm4_pose_temp,distance=..1]
-
-playsound minecraft:block.wooden_button.click_on player @a[distance=..5]
+# Apply the new pose to the armor stand.
+data modify entity @s Pose merge from storage gm4_better_armour_stands:temp Pose
+data remove storage gm4_better_armour_stands:temp Pose
 tag @s add gm4_pose_changed

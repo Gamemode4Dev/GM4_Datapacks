@@ -1,11 +1,17 @@
-# @s = written book ..1 from armor_stand
+# run from apply_pose
+# @s = armor_stand ..1 from writable_book
 
-#if page 2 does not exist, set head from player rotation
-execute unless data entity @s Item.tag.pages[1] if entity @p[distance=..1,gamemode=!spectator] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run function gm4_poses_pack:pose/player/head
+# If a predefined pose is selected, add it to storage.
+execute if data storage gm4_better_armour_stands:temp {pages:["forward"]} run data modify storage gm4_better_armour_stands:temp Pose set value {Head:[.1f,0f,0f]}
+execute if data storage gm4_better_armour_stands:temp {pages:["up"]} run data modify storage gm4_better_armour_stands:temp Pose set value {Head:[325f,0f,0f]}
+execute if data storage gm4_better_armour_stands:temp {pages:["down"]} run data modify storage gm4_better_armour_stands:temp Pose set value {Head:[32f,0f,0f]}
+execute if data storage gm4_better_armour_stands:temp {pages:["left"]} run data modify storage gm4_better_armour_stands:temp Pose set value {Head:[0f,327f,0f]}
+execute if data storage gm4_better_armour_stands:temp {pages:["right"]} run data modify storage gm4_better_armour_stands:temp Pose set value {Head:[0f,32f,0f]}
 
-#predefined poses
-execute if entity @s[nbt={Item:{tag:{pages:["forward"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[.01f,0f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["up"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[325f,0f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["down"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[32f,0f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["left"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[0f,327f,0f]},Tags:[gm4_pose_changed]}
-execute if entity @s[nbt={Item:{tag:{pages:["right"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{Head:[0f,32f,0f]},Tags:[gm4_pose_changed]}
+# If a predefined pose was added to storage, apply it now.
+execute if data storage gm4_better_armour_stands:temp Pose run data modify entity @s Pose merge from storage gm4_better_armour_stands:temp Pose
+execute if data storage gm4_better_armour_stands:temp Pose run tag @s add gm4_pose_changed
+data remove storage gm4_better_armour_stands:temp Pose
+
+# If page 2 does not exist, set head from player rotation.
+execute unless data storage gm4_better_armour_stands:temp pages[1] if entity @a[distance=..1,gamemode=!spectator,limit=1] run function gm4_poses_pack:pose/player/head
