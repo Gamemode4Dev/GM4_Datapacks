@@ -18,7 +18,7 @@
   "wiki_link":"https://wiki.gm4.co/wiki/Orb_of_Ankou",
   "required_modules":[
     "metallurgy",
-    "custom_crafters"
+    "custom_crafting"
   ],
   "recommended_modules":[],
   "credits":{
