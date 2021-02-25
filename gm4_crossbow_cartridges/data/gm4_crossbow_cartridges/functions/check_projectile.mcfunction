@@ -23,3 +23,6 @@ execute if entity @s[gamemode=!adventure,predicate=gm4_crossbow_cartridges:fire_
 
 #string
 execute if entity @s[gamemode=!adventure,predicate=gm4_crossbow_cartridges:string] run function gm4_crossbow_cartridges:cables/shoot_arrow
+
+#tnt
+execute if entity @s[gamemode=!adventure,predicate=gm4_crossbow_cartridges:tnt] run function gm4_crossbow_cartridges:projectile/tnt
