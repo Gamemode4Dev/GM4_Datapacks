@@ -5,7 +5,7 @@
 tag @e[type=minecraft:arrow,distance=..2,limit=1,sort=nearest] add gm4_cb_tnt
 
 #add fire to arrow
-data merge entity @e[type=minecraft:arrow,distance=..2,limit=1,sort=nearest] {Fire:2000s}
+data merge entity @e[type=minecraft:arrow,tag=gm4_cb_tnt,distance=..2,limit=1,sort=nearest] {Fire:2000s}
 
 #take item from player
 clear @s[gamemode=!creative,gamemode=!spectator] tnt 1
