@@ -4,7 +4,7 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "item": "minecraft:written_book"
+                "tag": "gm4_tinker_shamir:tinker_hoe"
             }
         }
     }
