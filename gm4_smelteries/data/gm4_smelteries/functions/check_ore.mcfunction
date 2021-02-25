@@ -1,5 +1,5 @@
 # @s = smeltery that is looking at a lit furnace
-# called by process
+# called by verify_furnace
 
 #check if item is doubable by setting the head item of the stand
 data modify entity @s HandItems[0] set from block ^ ^ ^1 Items[{Slot:0b}]
