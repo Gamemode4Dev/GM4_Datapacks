@@ -1,4 +1,4 @@
-# @s = display frame within 16 blocks of a player
+# @s = display frame within 8 blocks of a player
 # run from main
 
 execute if entity @s[tag=gm4_df_invisible,nbt=!{Item:{}}] run function gm4_display_frames:clear_invis
