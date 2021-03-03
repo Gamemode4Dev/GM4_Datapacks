@@ -1,5 +1,6 @@
 {
     "values": [
+        "#load:gm4_forceload",
         "#load:gm4_metallurgy",
         "gm4_moneo_shamir:load"
     ]
