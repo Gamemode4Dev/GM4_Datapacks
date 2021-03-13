@@ -29,3 +29,9 @@ jobs:
             gm4_poses_pack:pose/body
             gm4_poses_pack:pose/head
             gm4_poses_pack:pose/legs
+            gm4_relocators:pick_up/replace_head
+            gm4_relocators:place_down/replace_head
+            gm4_soul_glass:effect/check
+            gm4_tunnel_bores:bore/direction/store_push_north_south
+            gm4_tunnel_bores:bore/mine/stop_cart
+            gm4_tunnel_bores:mc_51053

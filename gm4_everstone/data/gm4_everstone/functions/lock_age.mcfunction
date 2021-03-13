@@ -2,7 +2,6 @@
 # @s = mob that will be affected by everstone, at @s
 
 data modify entity @s[type=!#gm4_everstone:aging_mob] Age set value -2147483647
-data modify entity @s[type=!#gm4_everstone:aging_mob] AgeLocked set value 1
 tag @s add gm4_everstone_locked
 
 kill @e[type=item,tag=gm4_everstone_used,distance=..1,sort=nearest,limit=1]
