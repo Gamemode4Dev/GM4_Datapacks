@@ -14,4 +14,16 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Test
-        uses: ChenCMD/datapack-linter@v1
+        uses: ChenCMD/datapack-linter@v1.3.0
+        with:
+          notOutputSuccess: true
+          ignoreLintPathPattern: |
+            **/gm4_better_armour_stands/functions/apply_book.mcfunction
+            **/gm4_beehive_inspector/functions/inspect.mcfunction
+            **/gm4_end_fishing/loot_tables/entities/end_phantom.json
+            **/gm4_particles_pack/functions/apply_book.mcfunction
+            **/gm4_poses_pack/functions/apply_book.mcfunction
+            **/gm4_poses_pack/functions/pose/arms.mcfunction
+            **/gm4_poses_pack/functions/pose/body.mcfunction
+            **/gm4_poses_pack/functions/pose/head.mcfunction
+            **/gm4_poses_pack/functions/pose/legs.mcfunction
