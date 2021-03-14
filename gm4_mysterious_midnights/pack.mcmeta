@@ -12,7 +12,6 @@
     },
     "module_name": "Mysterious Midnights",
     "module_id": "mysterious_midnights",
-    "hidden":true,
     "libraries": [
         "lib_forceload"
     ],
