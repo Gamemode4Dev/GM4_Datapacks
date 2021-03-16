@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "blaze_rod",
-      "nbt": "{Enchantments:[{id:mending,lvl:1}],CustomModelData:2}"
+      "nbt": "{Enchantments:[{id:'minecraft:mending',lvl:1}],CustomModelData:2}"
     },
     "title": {
       "translate": "%1$s%3427655$s",

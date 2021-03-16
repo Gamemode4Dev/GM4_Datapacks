@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{Potion:strong_harming}"
+                            "tag": "{Potion:'minecraft:strong_harming'}"
                         },
                         {
                             "function": "minecraft:set_count",
@@ -28,7 +28,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{Potion:long_poison}"
+                            "tag": "{Potion:'minecraft:long_poison'}"
                         },
                         {
                             "function": "minecraft:set_count",
@@ -46,7 +46,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{Potion:long_weakness}"
+                            "tag": "{Potion:'minecraft:long_weakness'}"
                         },
                         {
                             "function": "minecraft:set_count",
@@ -64,7 +64,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{Potion:long_slowness}"
+                            "tag": "{Potion:'minecraft:long_slowness'}"
                         },
                         {
                             "function": "minecraft:set_count",

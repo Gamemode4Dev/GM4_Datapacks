@@ -7,7 +7,7 @@ data modify storage gm4_moneo_shamir:data Item.tag.MaxDurability set value 2031
 
 # move tool into shulker box
 data modify storage gm4_moneo_shamir:data Item.Slot set value 0b
-data remove block 29999998 1 7134
+data remove block 29999998 1 7134 Items[]
 data modify block 29999998 1 7134 Items append from storage gm4_moneo_shamir:data Item
 
 # replace mainhand with the proper tool

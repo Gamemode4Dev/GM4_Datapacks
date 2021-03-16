@@ -2,7 +2,7 @@
 # @s = player using the crossbow
 
 #summon fireball at player's location
-summon minecraft:small_fireball ~ ~1 ~ {Tags:["gm4_cb_proj"],power:[0.0,0.0,0.0],direction:[0.0,0.0,0.0],Motion:[0.0,0.0,0.0]}
+summon minecraft:small_fireball ~ ~1 ~ {Tags:["gm4_cb_proj"],power:[0.0,0.0,0.0],Motion:[0.0,0.0,0.0]}
 
 #copy motion of arrow to fireball
 #data modify entity @e[tag=gm4_cb_proj,distance=..2,limit=1] Motion set from entity @e[type=minecraft:arrow,limit=1,distance=..2] Motion

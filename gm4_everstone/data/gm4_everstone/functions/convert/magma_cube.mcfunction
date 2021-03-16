@@ -11,7 +11,7 @@ data modify entity @e[type=magma_cube,tag=gm4_es_new_mob,limit=1] Health set fro
 data modify entity @e[type=magma_cube,tag=gm4_es_new_mob,limit=1] Size set from entity @s Size
 
 
-playsound minecraft:entity.magma_cube.ambient hostile @a[distance=..16] ~ ~ ~ 0.5
+playsound entity.magma_cube.squish hostile @a[distance=..16] ~ ~ ~ 0.5
 playsound block.redstone_torch.burnout hostile @a[distance=..16] ~ ~ ~ 0.5 .1
 data merge entity @s {DeathTime:19s,Health:0,DeathLootTable:"minecraft:empty"}
 tp @s ~ -150 ~

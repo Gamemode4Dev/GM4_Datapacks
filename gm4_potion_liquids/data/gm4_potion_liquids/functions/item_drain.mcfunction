@@ -1,8 +1,6 @@
 #@s = liquid tank with item in first slot
 #run from liquid_tanks:item_process
 
-particle end_rod ~ ~ ~ 0 0 0 .1
-
 #night_vision
 execute if score @s[tag=gm4_lt_night_vision] gm4_lt_value matches ..299 if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:potion",tag:{Potion:"minecraft:night_vision"}}]} run function gm4_potion_liquids:item_drain/potion
 

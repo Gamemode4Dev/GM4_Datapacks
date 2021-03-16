@@ -27,5 +27,5 @@ scoreboard players operation result gm4_ef_data %= #6 gm4_ef_data
 scoreboard players add result gm4_ef_data 2
 execute store result entity @e[type=experience_orb,tag=gm4_ef_set_orb,distance=..1,limit=1,sort=nearest] Value int 1 run scoreboard players get result gm4_ef_data
 
-tag @e[type=experience_orb,tag=gm4_ef_set_orb,nbt=!{Value:0}] remove gm4_ef_set_orb
+tag @e[type=experience_orb,tag=gm4_ef_set_orb,nbt=!{Value:0s}] remove gm4_ef_set_orb
 tag @s remove gm4_ef_reel_loot
