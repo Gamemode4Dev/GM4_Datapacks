@@ -1,4 +1,4 @@
-#run from torch/torch_check
+#run from torch/check
 # @s = @e[type=minecraft:arrow,tag=gm4_cb_torch,nbt={inGround:1b}]
 # at @s
 
