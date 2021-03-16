@@ -19,3 +19,8 @@ execute if entity @s[nbt={Item:{tag:{pages:["turn right"]}}}] run tag @e[limit=1
 execute if entity @s[nbt={Item:{tag:{pages:["turn right"]}}}] run tag @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit,sort=nearest] remove gm4_turn_clockwise
 execute if entity @s[nbt={Item:{tag:{pages:["no turn"]}}}] run tag @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit,sort=nearest] remove gm4_turn_clockwise
 execute if entity @s[nbt={Item:{tag:{pages:["no turn"]}}}] run tag @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit,sort=nearest] remove gm4_turn_anticlockwise
+
+tag @s add gm4_as_book
+execute if entity @s[nbt={Item:{tag:{pages:["equip head"]}}}] as @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit,sort=nearest] at @s unless data entity @s ArmorItems[3].Count run function gm4_better_armour_stands:equip/head
+execute if entity @s[nbt={Item:{tag:{pages:["equip hand"]}}}] as @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit,sort=nearest] at @s unless data entity @s HandItems[0].Count run function gm4_better_armour_stands:equip/hand
+execute if entity @s[nbt={Item:{tag:{pages:["equip offhand"]}}}] as @e[limit=1,distance=..1,type=armor_stand,tag=!gm4_no_edit,sort=nearest] at @s unless data entity @s HandItems[1].Count run function gm4_better_armour_stands:equip/offhand
