@@ -15,7 +15,6 @@ execute if predicate gm4_washing_tanks:map run function gm4_washing_tanks:washin
 execute if predicate gm4_washing_tanks:armour if data block ~ ~ ~ Items[0].tag.display.color run function gm4_washing_tanks:washing_recipes/armour
 execute if predicate gm4_washing_tanks:book run function gm4_washing_tanks:washing_recipes/book
 execute if predicate gm4_washing_tanks:shulker_box run function gm4_washing_tanks:washing_recipes/shulker_box
-execute if predicate gm4_washing_tanks:glazed_terracotta run function gm4_washing_tanks:washing_recipes/glazed_terracotta
 
 # Clear armor stand offhand
 data modify entity @s HandItems[1] set value {}
