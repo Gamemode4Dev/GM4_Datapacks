@@ -23,7 +23,25 @@
   "parent": "gm4:root",
   "criteria": {
     "ride_vertical_rail": {
-      "trigger": "minecraft:impossible"
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "block": "minecraft:ladder"
+                }
+              },
+              "vehicle": {
+                "type": "minecraft:minecart"
+              }
+            }
+          }
+        ]
+      }
     }
   }
 }
