@@ -16,7 +16,7 @@ execute if score color gm4_ps_time matches 2 run summon minecraft:firework_rocke
 #advancement
 advancement grant @a[distance=..3,gamemode=!spectator] only gm4:phantom_scarecrows
 
-kill @e[type=phantom,distance=..0.5,limit=1,sort=nearest]
+effect give @e[type=phantom,distance=..0.5,limit=1,sort=nearest] minecraft:instant_health 1 2
 #kill other rockets within explosion radius
 kill @e[type=area_effect_cloud,tag=gm4_phantom_scarecrow_rocket,distance=..3]
 kill @s
