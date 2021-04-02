@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:alternative",
+            "terms": [
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "gm4_intro_walked": {
+                    "min": 1,
+                    "max": 9999
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "player": {
+                    "gamemode": "creative"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_intro_song:init_song"
+  }
+}
