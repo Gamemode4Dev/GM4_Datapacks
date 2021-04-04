@@ -1,4 +1,4 @@
-# @s = armor_stand ..1 from writable_book
+# @s = armor_stand to be modified
 
 # Restore armor stand state to default.
 execute if data storage gm4_better_armour_stands:temp {pages:["default"]} run function gm4_better_armour_stands:default
