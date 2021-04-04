@@ -6,11 +6,11 @@
 # select random trade
 data modify storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data set from entity @e[type=armor_stand,tag=gm4_pooled_trade_option,limit=1,sort=random] {}
 
-# interpret trade data (ArmorItems[0]: metadata; HandItems[0]: buy; HandItems[1]: buyB; ArmorItems[3]: sell)
+# interpret trade data (ArmorItems[0]: metadata; HandItems[0]: sell; HandItems[1]: buy; ArmorItems[3]: buyB)
 data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data.ArmorItems[0].tag.gm4_trades.options
-data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade.buy set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data.HandItems[0]
-data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade.buyB set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data.HandItems[1]
-data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade.sell set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data.ArmorItems[3]
+data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade.sell set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data.HandItems[0]
+data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade.buy set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data.HandItems[1]
+data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade.buyB set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data.ArmorItems[3]
 kill @e[type=armor_stand,tag=gm4_pooled_trade_option]
 data remove storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data
 
