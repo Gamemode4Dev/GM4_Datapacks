@@ -1,4 +1,4 @@
-# @s = written book ..1 from armor_stand
+# @s = armor_stand to be modified
 #run by the better armor stand base module
 
 scoreboard players reset @s gm4_particle
