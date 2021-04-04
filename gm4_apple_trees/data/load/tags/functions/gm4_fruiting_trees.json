@@ -1,6 +1,7 @@
 {
     "values": [
         "#load:gm4_orbis",
+        "#load:gm4_trades",
         "gm4_fruiting_trees:load"
     ]
 }
