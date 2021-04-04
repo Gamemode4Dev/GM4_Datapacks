@@ -22,6 +22,7 @@ jobs:
             gm4_beehive_inspector:inspect
             gm4_block_compressors:compress/16
             gm4_block_compressors:compress/64
+            gm4_enchantment_extractors:process
             gm4_end_fishing:entities/end_phantom
             gm4_orb_of_ankou:triggers/poison_effect
             gm4_orb_of_ankou:triggers/wither_effect
