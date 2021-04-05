@@ -4,15 +4,17 @@
 # run from gm4_trades-1.0:wandering_trader/create_pool
 
 # select random trade
-data modify storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data set from entity @e[type=armor_stand,tag=gm4_pooled_trade_option,limit=1,sort=random] {}
+data modify storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data llama_data set from entity @e[type=trader_llama,tag=gm4_pooled_trade_option,limit=1,sort=random] {}
 
-# interpret trade data (ArmorItems[0]: metadata; HandItems[0]: sell; HandItems[1]: buy; ArmorItems[3]: buyB)
-data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data.ArmorItems[0].tag.gm4_trades.options
-data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade.sell set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data.HandItems[0]
-data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade.buy set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data.HandItems[1]
-data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade.buyB set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data.ArmorItems[3]
-kill @e[type=armor_stand,tag=gm4_pooled_trade_option]
-data remove storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data armor_stand_data
+# interpret trade data (DecorItem.tag: metadata; Items[{Slot:2b}]: sell; Items[{Slot:3b}]: buy; Items[{Slot:4b}]: buyB)
+data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data llama_data.DecorItem.tag.gm4_trades.options
+data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade.sell set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data llama_data.Items[{Slot:2b}]
+data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade.buy set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data llama_data.Items[{Slot:3b}]
+data modify storage gm4_trades-1.0:temp/wandering_trader/next_trade trade.buyB set from storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data llama_data.Items[{Slot:4b}]
+
+# kill llama without drops and clean up loot table
+execute as @e[type=trader_llama,tag=gm4_pooled_trade_option] run data merge entity @s {Health:0,DeathTime:19}
+data remove storage gm4_trades-1.0:temp/wandering_trader/unprocessed_trade_data llama_data
 
 # add trade
 data modify entity @s Offers.Recipes append from storage gm4_trades-1.0:temp/wandering_trader/next_trade trade
@@ -20,4 +22,4 @@ data remove storage gm4_trades-1.0:temp/wandering_trader/next_trade trade
 
 # try to create another pool if more trade options exists
 scoreboard players reset $pools_differ gm4_trades_data
-execute if entity @e[type=armor_stand,tag=gm4_trade_option,limit=1] run function gm4_trades-1.0:wandering_trader/create_pool
+execute if entity @e[type=trader_llama,tag=gm4_trade_option,limit=1] run function gm4_trades-1.0:wandering_trader/create_pool

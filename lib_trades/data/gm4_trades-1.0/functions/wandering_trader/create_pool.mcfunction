@@ -4,7 +4,7 @@
 # run from gm4_trades-1.0:wandering_trader/modify
 
 # start pooling at an unpooled option
-execute as @e[type=armor_stand,tag=gm4_trade_option,limit=1,sort=arbitrary] run function gm4_trades-1.0:wandering_trader/pool/initialize
+execute as @e[type=trader_llama,tag=gm4_trade_option,limit=1,sort=arbitrary] run function gm4_trades-1.0:wandering_trader/pool/initialize
 
 # add pooled trades to trader
 function gm4_trades-1.0:wandering_trader/append_trade
