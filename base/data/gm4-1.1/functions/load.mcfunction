@@ -18,7 +18,6 @@ execute unless score $global_cooldown gm4_creative matches 0.. run scoreboard pl
 scoreboard objectives add gm4_intro_song dummy
 scoreboard objectives add gm4_intro_song_t dummy
 
-scoreboard objectives add gm4_intro_played dummy
 scoreboard objectives add gm4_intro_walked minecraft.custom:walk_one_cm
 
 
