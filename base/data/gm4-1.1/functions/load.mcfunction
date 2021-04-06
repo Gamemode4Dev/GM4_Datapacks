@@ -14,5 +14,12 @@ execute unless score $cooldown gm4_creative matches 0.. run scoreboard players s
 # Setting this to 0 will always show logs to all players
 execute unless score $global_cooldown gm4_creative matches 0.. run scoreboard players set $global_cooldown gm4_creative 10
 
+# Intro song
+scoreboard objectives add gm4_intro_song dummy
+scoreboard objectives add gm4_intro_song_t dummy
+
+scoreboard objectives add gm4_intro_walked minecraft.custom:walk_one_cm
+
+
 execute unless score gm4 gm4_modules matches 1.. run data modify storage gm4:log queue append value {type:"text",message:'{"text":"[GM4]: Welcome to Gamemode 4. Initialising...","color":"green"}'}
 execute unless score gm4 gm4_modules matches 1.. run scoreboard players set gm4 gm4_modules 1
