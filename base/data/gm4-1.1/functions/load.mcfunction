@@ -1,5 +1,5 @@
 data merge storage gm4:log {queue:[]}
-data modify storage gm4:log queue append value {type:"text",message:'{"text":"[GM4]: Checking for updates...","color":"aqua"}'}
+data modify storage gm4:log queue append value {type:"text",message:'{"text":"[GM4]: Checking for updates...","color":"#4AA0C7"}'}
 
 scoreboard objectives add gm4_modules dummy
 scoreboard objectives add gm4_data dummy
