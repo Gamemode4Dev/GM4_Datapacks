@@ -1,6 +1,7 @@
 {
     "values": [
         "#load:gm4_custom_crafters",
+        "#load:gm4_player_heads",
         "gm4_heart_canisters:load"
     ]
 }

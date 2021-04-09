@@ -1,5 +1,6 @@
 {
     "values": [
+        "#load:gm4_player_heads",
         "gm4_end_fishing:load"
     ]
 }
