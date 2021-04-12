@@ -12,6 +12,9 @@
     },
     "module_name": "Apple Trees",
     "module_id": "apple_trees",
+    "libraries": [
+        "lib_trades"
+    ],
     "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
     "site_description": "Simply Apple Trees!",
     "site_categories": [
