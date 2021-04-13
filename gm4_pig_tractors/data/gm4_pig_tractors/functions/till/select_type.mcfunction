@@ -6,14 +6,14 @@
 # destroy top block (this is a replaceable block, by function call)
 setblock ~ ~1 ~ air destroy
 
-# coarse dirt
-execute if block ~ ~ ~ coarse_dirt run function gm4_pig_tractors:till/blocks/coarse_dirt
-
 # dirt
-execute if block ~ ~ ~ dirt run function gm4_pig_tractors:till/blocks/dirt
+execute if block ~ ~ ~ dirt run function gm4_pig_tractors:till/block/dirt
 
 # grass
-execute if block ~ ~ ~ grass_block run function gm4_pig_tractors:till/blocks/grass_block
+execute if block ~ ~ ~ grass_block run function gm4_pig_tractors:till/block/grass_block
+
+# coarse dirt
+execute if block ~ ~ ~ coarse_dirt run function gm4_pig_tractors:till/block/coarse_dirt
 
 # award advancement
 advancement grant @s only gm4:pig_tractors

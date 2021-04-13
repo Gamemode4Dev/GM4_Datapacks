@@ -1,0 +1,29 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "weight": 100,
+                    "name": "minecraft:bone"
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 100,
+                    "name": "minecraft:red_mushroom"
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 200,
+                    "name": "minecraft:brown_mushroom"
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 3000,
+                    "name": "minecraft:air"
+                }
+            ]
+        }
+    ]
+}
