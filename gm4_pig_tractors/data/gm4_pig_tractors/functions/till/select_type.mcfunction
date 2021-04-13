@@ -14,3 +14,6 @@ execute if block ~ ~ ~ dirt run function gm4_pig_tractors:till/blocks/dirt
 
 # grass
 execute if block ~ ~ ~ grass_block run function gm4_pig_tractors:till/blocks/grass_block
+
+# award advancement
+advancement grant @s only gm4:pig_tractors
