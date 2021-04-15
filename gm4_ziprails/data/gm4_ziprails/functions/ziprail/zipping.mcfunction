@@ -13,7 +13,7 @@ execute if block ~ ~ ~ #minecraft:rails run tag @s remove gm4_taut_link
 execute if entity @s[tag=!gm4_taut_link] if block ~ ~1 ~ tripwire_hook[attached=true] run function gm4_ziprails:ziprail/link
 
 #move docked minecarts along their string
-data merge entity @s[tag=gm4_taut_link,tag=gm4_zipping_north] {Motion:[0.0,0.04,-0.3]}
-data merge entity @s[tag=gm4_taut_link,tag=gm4_zipping_south] {Motion:[0.0,0.04,0.3]}
-data merge entity @s[tag=gm4_taut_link,tag=gm4_zipping_east] {Motion:[0.3,0.04,0.0]}
-data merge entity @s[tag=gm4_taut_link,tag=gm4_zipping_west] {Motion:[-0.3,0.04,0.0]}
+data merge entity @s[tag=gm4_taut_link,tag=gm4_zipping_north] {Motion:[0.0,0.06,-0.4]}
+data merge entity @s[tag=gm4_taut_link,tag=gm4_zipping_south] {Motion:[0.0,0.06,0.4]}
+data merge entity @s[tag=gm4_taut_link,tag=gm4_zipping_east] {Motion:[0.4,0.06,0.0]}
+data merge entity @s[tag=gm4_taut_link,tag=gm4_zipping_west] {Motion:[-0.4,0.06,0.0]}

@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecart",
+      "item": "minecraft:minecart",
       "nbt": "{CustomModelData:1}"
     },
     "title": {
@@ -29,21 +29,18 @@
     "ride_ziprail": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [{
-          "condition": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "vehicle": {
-              "type": "minecraft:minecart",
-              "nbt": "{Tags:[\"gm4_linked\"]}"
-            },
-            "player": {
-              "advancements": {
-                "gm4:ziprails": false
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "vehicle": {
+                "type": "minecraft:minecart",
+                "nbt": "{Tags:[\"gm4_linked\"]}"
               }
             }
           }
-        }]
+        ]
       }
     }
   }
