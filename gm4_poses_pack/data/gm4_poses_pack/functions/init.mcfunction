@@ -1,4 +1,5 @@
 scoreboard objectives add gm4_pose_rotA dummy
+scoreboard objectives add gm4_pose_rotB dummy
 scoreboard objectives add gm4_pose_rotPx dummy
 scoreboard objectives add gm4_pose_rotPy dummy
 
