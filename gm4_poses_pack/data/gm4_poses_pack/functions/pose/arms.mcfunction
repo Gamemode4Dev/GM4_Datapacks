@@ -8,12 +8,12 @@ execute if entity @s[nbt={Item:{tag:{pages:["resting"]}}}] run data merge entity
 execute if entity @s[nbt={Item:{tag:{pages:["raised"]}}}] run data merge entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest,tag=!gm4_no_edit] {Pose:{LeftArm:[179f,0f,24f],RightArm:[179f,0f,344f]},Tags:[gm4_pose_changed]}
 
 #if page 2 does not exist, set both arms from player rotation
-execute unless data entity @s Item.tag.pages[1] if entity @p[distance=..1] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run function gm4_poses_pack:pose/player/arm_left
-execute unless data entity @s Item.tag.pages[1] if entity @p[distance=..1] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run function gm4_poses_pack:pose/player/arm_right
+execute unless data entity @s Item.tag.pages[1] if entity @p[distance=..1,gamemode=!spectator] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run function gm4_poses_pack:pose/player/arm_left
+execute unless data entity @s Item.tag.pages[1] if entity @p[distance=..1,gamemode=!spectator] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run function gm4_poses_pack:pose/player/arm_right
 
 #if book contains a page with "left" or "right", set this arm from player rotation
-execute if entity @s[nbt={Item:{tag:{pages:["left"]}}}] if entity @p[distance=..1] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run function gm4_poses_pack:pose/player/arm_left
-execute if entity @s[nbt={Item:{tag:{pages:["right"]}}}] if entity @p[distance=..1] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run function gm4_poses_pack:pose/player/arm_right
+execute if entity @s[nbt={Item:{tag:{pages:["left"]}}}] if entity @p[distance=..1,gamemode=!spectator] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run function gm4_poses_pack:pose/player/arm_left
+execute if entity @s[nbt={Item:{tag:{pages:["right"]}}}] if entity @p[distance=..1,gamemode=!spectator] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run function gm4_poses_pack:pose/player/arm_right
 
 #if book contains a page with "mirror", mirror this pose to the other arm
 execute if entity @s[nbt={Item:{tag:{pages:["mirror","left"]}}}] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run function gm4_poses_pack:pose/player/mirror_arm_left

@@ -1,7 +1,7 @@
 # @s = written book ..1 from armor_stand
 #copy player rotation to armor_stand part
-execute if entity @s[tag=!gm4_pose_changed,nbt={Item:{tag:{pages:["rotate"]}}}] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run data modify entity @s Rotation set from entity @p[distance=..1] Rotation
-execute if entity @s[tag=!gm4_pose_changed,nbt={Item:{tag:{pages:["move"]}}}] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] at @p[distance=..1] run tp @s ~ ~ ~
+execute if entity @s[tag=!gm4_pose_changed,nbt={Item:{tag:{pages:["rotate"]}}}] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] run data modify entity @s Rotation set from entity @p[distance=..1,gamemode=!spectator] Rotation
+execute if entity @s[tag=!gm4_pose_changed,nbt={Item:{tag:{pages:["move"]}}}] as @e[distance=..1,type=armor_stand,sort=nearest,tag=!gm4_no_edit] at @p[distance=..1,gamemode=!spectator] run tp @s ~ ~ ~
 execute if entity @s[tag=!gm4_pose_changed,nbt={Item:{tag:{pages:["head"]}}}] run function gm4_poses_pack:pose/head
 execute if entity @s[tag=!gm4_pose_changed,nbt={Item:{tag:{pages:["body"]}}}] run function gm4_poses_pack:pose/body
 execute if entity @s[tag=!gm4_pose_changed,nbt={Item:{tag:{pages:["arms"]}}}] run function gm4_poses_pack:pose/arms
