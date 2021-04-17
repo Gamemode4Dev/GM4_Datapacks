@@ -17,4 +17,4 @@ function gm4_crossbow_cartridges:tnt/tnt_loop
 playsound minecraft:entity.tnt.primed player @a[distance=..15]
 
 #plays explosion effect when fired
-particle explosion
+
