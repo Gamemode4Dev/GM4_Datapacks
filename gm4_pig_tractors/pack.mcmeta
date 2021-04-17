@@ -1,7 +1,14 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": [
+            "Pig Tractors",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Pig Tractors",
     "module_id": "pig_tractors",

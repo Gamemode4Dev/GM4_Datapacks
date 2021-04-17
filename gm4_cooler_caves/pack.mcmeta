@@ -1,11 +1,17 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": [
+            "Cooler Caves",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Cooler Caves",
     "module_id": "cooler_caves",
-    "hidden":true,
     "site_description": "A custom terrain expansion pack that makes biome specific caves and mineshafts",
     "site_categories": [
         "Custom Terrain"

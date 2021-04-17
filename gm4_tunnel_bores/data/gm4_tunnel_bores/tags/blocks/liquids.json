@@ -1,7 +1,6 @@
 {
   "values":[
-    "minecraft:water",
-    "minecraft:lava",
-    "minecraft:bubble_column"
+    "#gm4:water",
+    "minecraft:lava"
   ]
 }

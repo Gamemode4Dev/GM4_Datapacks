@@ -52,7 +52,7 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"tag": "gm4_lumos_shamir:fence_gates",
+					"tag": "minecraft:fence_gates",
 					"state": {
 						"open": "false"
 					}

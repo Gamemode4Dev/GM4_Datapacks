@@ -3,4 +3,4 @@
 #called by mysterious midnights base upon the break of dawn. Only runs once.
 
 gamerule randomTickSpeed 3
-scoreboard players reset started_harvest_moon gm4_nights_data
+scoreboard players reset started_harvest_moon gm4_mm_data

@@ -1,0 +1,43 @@
+name: Test data packs
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Test
+        uses: ChenCMD/datapack-linter@v1.3.0
+        with:
+          notOutputSuccess: true
+          ignoreLintPathPattern: |
+            gm4_better_armour_stands:apply_book
+            gm4_beehive_inspector:inspect
+            gm4_block_compressors:compress/16
+            gm4_block_compressors:compress/64
+            gm4_enchantment_extractors:process
+            gm4_end_fishing:entities/end_phantom
+            gm4_orb_of_ankou:triggers/poison_effect
+            gm4_orb_of_ankou:triggers/wither_effect
+            gm4_particles_pack:apply_book
+            gm4_poses_pack:apply_book
+            gm4_poses_pack:copy
+            gm4_poses_pack:pose/arms
+            gm4_poses_pack:pose/body
+            gm4_poses_pack:pose/head
+            gm4_poses_pack:pose/legs
+            gm4_relocators:pick_up/replace_head
+            gm4_relocators:place_down/replace_head
+            gm4_soul_glass:effect/check
+            gm4_tunnel_bores:bore/direction/store_push_north_south
+            gm4_tunnel_bores:bore/mine/stop_cart
+            gm4_tunnel_bores:mc_51053
+            gm4_zauber_cauldrons:cauldron/extra_items/catch_possessed_items
+            gm4_zauber_liquids:item_fill/zauber_wormhole_potion

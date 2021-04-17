@@ -1,0 +1,26 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [
+            "Display Frames",
+            "\n",
+            {
+              "text": "Gamemode 4 for 1.16",
+              "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Display Frames",
+    "module_id": "display_frames",
+    "site_description": "Splash item frames with invisibilty!",
+    "site_categories": [],
+    "wiki_link": "https://wiki.gm4.co/wiki/Display_Frames",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            ["BluePsychoRanger", "https://www.twitter.com/BluPsychoRanger"],
+            ["TheEpyonProject"]
+        ]
+    }
+}

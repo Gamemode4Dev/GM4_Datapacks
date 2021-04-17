@@ -1,0 +1,34 @@
+{
+  "type":"block",
+  "pools":[
+    {
+      "rolls":1,
+      "entries":[
+        {
+          "type":"item",
+          "name":"minecraft:player_head",
+          "functions":[
+            {
+              "function":"set_nbt",
+              "tag":"{CustomModelData:27,gm4_relocator:1b,SkullOwner:{Id:[I;739224026,-1192800770,-2115274619,-970102126],Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NjM4MTY4ODE5NTcsInByb2ZpbGVJZCI6IjdkYTJhYjNhOTNjYTQ4ZWU4MzA0OGFmYzNiODBlNjhlIiwicHJvZmlsZU5hbWUiOiJHb2xkYXBmZWwiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzMwM2Q3YTkyNTIxZDZmZTU1M2ZiNGYyNzIxOTI2Yzk4YTVlMDdlMDhmZjdiNzg4OTg1OTc3MGM0Yjg0NmJlZDYifX19\"}]}}}"},
+            {
+              "function":"set_name",
+              "name":[
+                {
+                  "translate":"%1$s%3427655$s",
+                  "with": [
+                    "Relocator",
+                    {
+                      "translate": "item.gm4.relocator"
+                    }
+                  ],
+                  "italic":false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

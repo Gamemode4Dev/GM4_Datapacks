@@ -1,0 +1,22 @@
+{
+  "pack":{
+    "pack_format":6,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Midnight Menaces",
+  "module_id":"midnight_menaces",
+  "site_description":"Adds spooky menaces to Mysterious Midnights!",
+  "site_categories":[
+    "Mysterious Midnights"
+  ],
+  "wiki_link":"https://wiki.gm4.co/wiki/Mysterious_Midnights/Midnight_Menaces",
+  "required_modules":[
+    "mysterious_midnights"
+  ],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["BluePsychoRanger","https://www.twitter.com/blupsychoranger"]
+    ]
+  }
+}

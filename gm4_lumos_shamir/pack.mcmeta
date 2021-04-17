@@ -1,7 +1,14 @@
 {
 	"pack": {
 		"pack_format": 6,
-		"description": "A Gamemode 4 Module"
+        "description": [
+            "Lumos Shamir",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
 	},
 	"module_name": "Lumos Shamir",
 	"module_id": "lumos_shamir",
@@ -11,7 +18,7 @@
 		"Metallurgy"
 	],
 	"video_link": "",
-	"wiki_link": "",
+	"wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Lumos_Shamir",
 	"required_modules": [
 		"metallurgy"
 	],

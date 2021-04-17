@@ -1,14 +1,24 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": [
+            "Percurro Shamir",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Percurro Shamir",
     "module_id": "percurro_shamir",
     "hidden":false,
   "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
     "site_description": "Swoosh! A shamir that allows you to swoosh past your enemies!",
-    "site_categories": [],
+    "site_categories": [
+        "Metallurgy"
+    ],
+    "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Percurro_Shamir",
     "required_modules": [
         "metallurgy"
     ],

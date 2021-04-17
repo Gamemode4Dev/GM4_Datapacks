@@ -11,7 +11,7 @@
 					}
 				},
 				"block": {
-					"tag": "gm4_lumos_shamir:air"
+					"tag": "gm4:replaceable"
 				}
 			}
 		},

@@ -1,7 +1,14 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": [
+            "Enchantment Extractors",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Enchantment Extractors",
     "module_id": "enchantment_extractors",
@@ -11,7 +18,9 @@
     "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
     "wiki_link": "https://wiki.gm4.co/wiki/Enchantment_Extractors",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "relocators"
+    ],
     "credits": {
         "Creator": [
             [

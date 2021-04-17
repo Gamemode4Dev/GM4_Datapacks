@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:splash_potion",
+            "nbt": "{Potion:'minecraft:invisibility',CustomModelData:1}"
+        },
+        "title": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Where Did It Go?",
+                { "translate": "advancement.gm4.display_frames.title" }
+            ]
+        },
+        "description": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Make an item frame invisible with a splash potion of invisibility",
+                { "translate": "advancement.gm4.display_frames.description" }
+            ],
+            "color": "gray"
+        }
+    },
+    "parent": "gm4:root",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

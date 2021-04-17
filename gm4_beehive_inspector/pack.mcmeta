@@ -1,14 +1,21 @@
 {
   "pack": {
     "pack_format": 6,
-    "description": "A Gamemode 4 Module"
+    "description": [
+            "Beehive Inspector",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
   },
   "module_name": "Beehive Inspector",
   "module_id": "beehive_inspector",
   "site_description": "Inspect the number of bees in a beehive",
   "site_categories": [],
   "video_link": "",
-  "wiki_link": "",
+  "wiki_link": "https://wiki.gm4.co/wiki/Beehive_Inspector",
   "required_modules": [],
   "recommended_modules": [],
   "credits": {

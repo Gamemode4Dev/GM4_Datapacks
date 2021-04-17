@@ -11,7 +11,7 @@ scoreboard players operation compared_value gm4_podzol_data = current_uuid gm4_p
 scoreboard players operation compared_value gm4_podzol_data *= random_tick_speed gm4_podzol_data
 
 # compare
-execute if score compared_value gm4_podzol_data >= last_uuid gm4_podzol_data at @s if block ~ ~-1 ~ minecraft:podzol if block ~ ~ ~ #gm4_podzol_rooting_soil:air run function gm4_podzol_rooting_soil:plant/normal
+execute if score compared_value gm4_podzol_data >= last_uuid gm4_podzol_data at @s if block ~ ~-1 ~ minecraft:podzol if block ~ ~ ~ #gm4:foliage run function gm4_podzol_rooting_soil:plant/normal
 
 # force plant if about to despawn and if the previous randomizer test failed
 execute unless score compared_value gm4_podzol_data >= last_uuid gm4_podzol_data run function gm4_podzol_rooting_soil:plant/force

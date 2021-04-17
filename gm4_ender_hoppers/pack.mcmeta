@@ -1,7 +1,14 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": [
+            "Ender Hoppers",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Ender Hoppers",
     "module_id": "ender_hoppers",
@@ -10,7 +17,9 @@
     "video_link": "https://www.youtube.com/watch?v=wrwg4BDgEGU",
     "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "relocators"
+    ],
     "credits": {
         "Creator": [
             [

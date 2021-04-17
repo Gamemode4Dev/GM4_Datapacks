@@ -1,11 +1,17 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": [
+            "Particles Pack",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Particles Pack",
     "module_id": "particles_pack",
-    "hidden":true,
     "site_description": "Fireflies to flames, add some pezazz to your projects!",
     "site_categories": [
         "Better Armour Stands"

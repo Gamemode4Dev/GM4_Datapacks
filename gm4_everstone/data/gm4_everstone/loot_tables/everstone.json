@@ -1,0 +1,32 @@
+{
+  "pools": [
+      {
+          "rolls": 1,
+          "entries": [
+              {
+                  "type": "item",
+                  "name": "minecraft:firework_star",
+                  "functions": [
+                      {
+                          "function": "set_count",
+                          "count": 1
+                      },
+                      {
+                          "function": "set_nbt",
+                          "tag": "{CustomModelData:2,gm4_everstone:1b,Enchantments:[{}]}"
+                      },
+                      {
+                          "function": "set_name",
+                          "name": [
+                              {
+                                  "text": "Everstone",
+                                  "italic": false
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
+}

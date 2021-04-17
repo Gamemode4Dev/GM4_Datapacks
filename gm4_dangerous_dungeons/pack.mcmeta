@@ -1,11 +1,17 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": [
+            "Dangerous Dungeons",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Dangerous Dungeons",
     "module_id": "dangerous_dungeons",
-    "hidden":true,
     "site_description": "A custom terrain expansion pack that adds new types of dungeons underground.",
     "site_categories": [
         "Custom Terrain"

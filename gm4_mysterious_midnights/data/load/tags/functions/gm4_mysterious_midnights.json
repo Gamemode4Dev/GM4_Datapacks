@@ -1,5 +1,6 @@
 {
     "values": [
+        "#load:gm4_forceload",
         "gm4_mysterious_midnights:load"
     ]
 }

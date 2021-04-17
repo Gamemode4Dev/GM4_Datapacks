@@ -1,7 +1,14 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "description": [
+            "Boots of Ostara",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Boots of Ostara",
     "module_id": "boots_of_ostara",
@@ -11,7 +18,9 @@
     ],
     "video_link": "https://www.youtube.com/watch?v=H4UGM6_wGCE",
     "wiki_link": "https://wiki.gm4.co/wiki/Boots_of_Ostara",
-    "required_modules": [],
+    "required_modules": [
+        "custom_crafters"
+    ],
     "recommended_modules": [
         "desire_lines",
         "better_armour_stands"

@@ -6,7 +6,7 @@
 execute if block ~ ~ ~ #gm4_crossbow_cartridges:torch run loot spawn ~ ~ ~ loot gm4_crossbow_cartridges:drop_torch
 
 #place torch if possible
-execute if block ~ ~ ~ #gm4_crossbow_cartridges:replaceable run function gm4_crossbow_cartridges:torch/torch_place
+execute if block ~ ~ ~ #gm4:replaceable run function gm4_crossbow_cartridges:torch/torch_place
 
 #summon torch item if placing torch failed
 execute unless block ~ ~ ~ #gm4_crossbow_cartridges:torch run loot spawn ~ ~ ~ loot gm4_crossbow_cartridges:drop_torch

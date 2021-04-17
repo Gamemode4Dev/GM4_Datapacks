@@ -1,4 +1,4 @@
-#@s = rotten_flesh item on the ground
+#@s = bone item on the ground
 #at world spawn
 #called by event
 
