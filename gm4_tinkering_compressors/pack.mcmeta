@@ -12,7 +12,6 @@
     },
     "module_name": "Tinkering Compressors",
     "module_id": "tinkering_compressors",
-    "hidden":true,
     "site_description": "Compress stacks of items into their block form with a tinker shamir, and back.",
     "site_categories": [
         "Custom Crafting",
