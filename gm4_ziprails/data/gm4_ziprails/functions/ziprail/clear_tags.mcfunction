@@ -1,3 +1,4 @@
+# run from check_cable
 
 tag @s remove gm4_linked
 
