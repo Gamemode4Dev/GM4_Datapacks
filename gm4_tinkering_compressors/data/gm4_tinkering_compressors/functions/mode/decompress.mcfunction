@@ -29,5 +29,9 @@ execute unless score ran_compressor gm4_tc_data matches 1.. if entity @s[nbt={It
 
 execute unless score ran_compressor gm4_tc_data matches 1.. if entity @s[nbt={Item:{id:"minecraft:hay_block"}}] run function gm4_tinkering_compressors:decompress/hay_block
 
+execute unless score ran_compressor gm4_tc_data matches 1.. if entity @s[nbt={Item:{id:"minecraft:netherite_block"}}] run function gm4_tinkering_compressors:decompress/netherite_block
+
+execute unless score ran_compressor gm4_tc_data matches 1.. if entity @s[nbt={Item:{id:"minecraft:slime_block"}}] run function gm4_tinkering_compressors:decompress/slime_block
+
 # reset fake player
 scoreboard players reset ran_compressor gm4_tc_data
