@@ -19,9 +19,8 @@
                     "name": "minecraft:brown_mushroom"
                 },
                 {
-                    "type": "minecraft:item",
-                    "weight": 3000,
-                    "name": "minecraft:air"
+                    "type": "minecraft:empty",
+                    "weight": 3000
                 }
             ]
         }
