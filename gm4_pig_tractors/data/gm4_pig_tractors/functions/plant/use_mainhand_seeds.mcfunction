@@ -8,3 +8,6 @@ execute if predicate gm4_pig_tractors:player/equipment/mainhand/beetroot_seeds r
 execute if predicate gm4_pig_tractors:player/equipment/mainhand/carrot run function gm4_pig_tractors:plant/item/carrot
 execute if predicate gm4_pig_tractors:player/equipment/mainhand/potato run function gm4_pig_tractors:plant/item/potato
 execute if predicate gm4_pig_tractors:player/equipment/mainhand/wheat_seeds run function gm4_pig_tractors:plant/item/wheat_seeds
+
+# set fake player
+scoreboard players set $pulled_seeds gm4_pig_tractors 1
