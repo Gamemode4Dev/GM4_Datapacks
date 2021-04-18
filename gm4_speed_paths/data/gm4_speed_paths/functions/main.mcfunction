@@ -1,3 +1,4 @@
-execute as @a at @s if block ~ ~-0.9 ~ grass_path unless entity @s[nbt={ActiveEffects:[{Id:1b,ShowParticles:1b}]}] run effect give @s speed 2 0 true
+execute as @a[tag=!gm4_on_path] at @s if block ~ ~-0.9 ~ minecraft:grass_path run function gm4_speed_paths:apply_effects/add_speed
+execute as @a[tag=gm4_on_path] at @s run function gm4_speed_paths:apply_effects/check_path
 
 schedule function gm4_speed_paths:main 8t
