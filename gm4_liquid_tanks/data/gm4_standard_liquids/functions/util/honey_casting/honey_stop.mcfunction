@@ -1,7 +1,7 @@
 #@s = gm4_lt_honey_display
 #run from standard_liquids:util/honey_casting/honey_rise
 
-summon item ~ ~1 ~ {Item:{id:"honey_block",Count:1}}
+execute at @s run summon item ~ ~1 ~ {Item:{id:"honey_block",Count:1}}
 playsound block.honey_block.place block @a[distance=..10]
 kill @s
 
