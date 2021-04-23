@@ -1,0 +1,14 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "vehicle": {
+            "type": "minecraft:pig",
+            "location": {
+                "block": {
+                    "tag": "gm4_pig_tractors:replaceable"
+                }
+            }
+        }
+    }
+}

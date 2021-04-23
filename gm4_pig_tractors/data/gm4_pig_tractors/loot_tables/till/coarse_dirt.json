@@ -1,0 +1,28 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "weight": 50,
+                    "name": "minecraft:bone"
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 200,
+                    "name": "minecraft:clay_ball"
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 300,
+                    "name": "minecraft:gravel"
+                },
+                {
+                    "type": "minecraft:empty",
+                    "weight": 3000
+                }
+            ]
+        }
+    ]
+}

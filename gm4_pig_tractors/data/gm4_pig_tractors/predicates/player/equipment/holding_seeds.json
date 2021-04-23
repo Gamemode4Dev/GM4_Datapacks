@@ -1,0 +1,13 @@
+{
+    "condition": "minecraft:alternative",
+    "terms": [
+        {
+            "condition": "minecraft:reference",
+            "name": "gm4_pig_tractors:player/equipment/mainhand/seeds"
+        },
+        {
+            "condition": "minecraft:reference",
+            "name": "gm4_pig_tractors:player/equipment/offhand/seeds"
+        }
+    ]
+}

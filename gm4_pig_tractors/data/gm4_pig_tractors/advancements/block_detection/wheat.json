@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "gm4_pig_tractors:player/vehicle/pig/in_farmland"
+                    }
+                ],
+                "block": "minecraft:wheat",
+                "state": {
+                    "age": "7"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_pig_tractors:harvest/wheat"
+    }
+}
