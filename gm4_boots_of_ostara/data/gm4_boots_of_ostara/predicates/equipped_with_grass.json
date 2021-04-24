@@ -3,8 +3,11 @@
   "entity": "this",
   "predicate": {
     "equipment": {
+      "feet": {
+        "nbt": "{gm4_boots_of_ostara:1b}"
+      },
       "offhand": {
-        "item": "minecraft:carrot"
+        "item": "minecraft:grass_block"
       }
     }
   }
