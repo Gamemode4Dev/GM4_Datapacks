@@ -11,9 +11,7 @@ execute if predicate gm4_washing_tanks:terracotta run function gm4_washing_tanks
 execute if predicate gm4_washing_tanks:wool run function gm4_washing_tanks:washing_recipes/wool
 execute if predicate gm4_washing_tanks:bed run function gm4_washing_tanks:washing_recipes/bed
 execute if predicate gm4_washing_tanks:carpet run function gm4_washing_tanks:washing_recipes/carpet
-execute if predicate gm4_washing_tanks:map run function gm4_washing_tanks:washing_recipes/map
 execute if predicate gm4_washing_tanks:armour if data block ~ ~ ~ Items[0].tag.display.color run function gm4_washing_tanks:washing_recipes/armour
-execute if predicate gm4_washing_tanks:book run function gm4_washing_tanks:washing_recipes/book
 execute if predicate gm4_washing_tanks:shulker_box run function gm4_washing_tanks:washing_recipes/shulker_box
 
 # Clear armor stand offhand
