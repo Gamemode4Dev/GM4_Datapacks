@@ -1,0 +1,36 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_metallurgy:aluminium_band",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:103,gm4_metallurgy:{stored_shamir:\"celaro\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "replace": false,
+                            "lore": [
+                                {
+                                    "translate": "%1$s%3427655$s",
+                                    "with": [
+                                        "Celaro",
+                                        {
+                                            "translate": "item.gm4.shamir.celaro"
+                                        }
+                                    ],
+                                    "italic": false,
+                                    "color": "gray"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

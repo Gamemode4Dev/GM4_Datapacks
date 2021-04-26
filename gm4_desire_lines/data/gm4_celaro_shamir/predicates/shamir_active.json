@@ -1,0 +1,11 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "feet": {
+        "nbt": "{gm4_metallurgy:{active_shamir:\"celaro\"}}"
+      }
+    }
+  }
+}
