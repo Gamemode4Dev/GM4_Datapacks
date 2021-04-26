@@ -16,3 +16,6 @@ execute as @e[type=item,distance=0,limit=1] run function gm4_metallurgy:smooshin
 scoreboard players set valid_obsidian gm4_ml_data 1
 
 kill @s[type=item]
+
+# use anvil durability
+function gm4_metallurgy:smooshing/anvil/use
