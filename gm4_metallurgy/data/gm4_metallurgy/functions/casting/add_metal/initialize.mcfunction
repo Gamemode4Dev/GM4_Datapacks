@@ -15,7 +15,7 @@ execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"barimium"} run function gm4_metallurgy:casting/add_metal/add_barimium
 
 # reset storage and scoreboard values
-scoreboard players reset ore_amount gm4_ml_data
+scoreboard players reset metal_amount gm4_ml_data
 scoreboard players reset is_obsidian_cast gm4_ml_data
 data remove storage gm4_metallurgy:temp/item/ore gm4_metallurgy
 
