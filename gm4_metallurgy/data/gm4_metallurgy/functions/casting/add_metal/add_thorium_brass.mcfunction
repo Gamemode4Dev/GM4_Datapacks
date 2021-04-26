@@ -9,7 +9,7 @@ data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1,t
 scoreboard players operation @s gm4_ml_ore_th += metal_amount gm4_ml_data
 
 # add secondary metal
-execute store result score ore_amount gm4_ml_data run data get storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal.amount[1]
+execute store result score metal_amount gm4_ml_data run data get storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal.amount[1]
 scoreboard players operation @s gm4_ml_ore_cu += metal_amount gm4_ml_data
 execute if score is_obsidian_cast gm4_ml_data matches 1.. run summon item ~.45 ~0.1 ~.65 {Item:{id:"minecraft:obsidian",Count:1b,tag:{display:{Lore:['{"translate":"%1$s%3427655$s","with":["Slightly Damaged Obsidian",{"translate":"item.gm4.slightly_damaged_obsidian"}],"italic":false}']}}}}
 
