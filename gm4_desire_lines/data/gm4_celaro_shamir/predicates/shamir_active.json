@@ -4,6 +4,7 @@
   "predicate": {
     "equipment": {
       "feet": {
+        "tag": "gm4:boots",
         "nbt": "{gm4_metallurgy:{active_shamir:\"celaro\"}}"
       }
     }
