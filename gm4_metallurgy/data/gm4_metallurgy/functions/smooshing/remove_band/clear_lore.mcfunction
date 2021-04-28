@@ -1,14 +1,14 @@
 # Sets item_lore_line from the first line of storage item_lore
 data modify storage gm4_metallurgy:temp item_lore_line set from storage gm4_metallurgy:temp item_lore[0]
 
-# Removes previous line (band type) from new_lore if current lore line is "Shamir"
+# Removes previous line (band type) from new_lore if current item_lore_line is "Shamir"
 execute if data storage gm4_metallurgy:temp {item_lore_line:'{"italic":false,"color":"aqua","translate":"%1$s%3427655$s","with":["Shamir",{"translate":"item.gm4.metallurgy.shamir"}]}'} run data remove storage gm4_metallurgy:temp new_lore[-1]
-# Removes next line (the shamir type) or storage item_lore if current lore line is "Shamir"
+# Removes next line (the shamir type) from storage item_lore if current line is "Shamir"
 execute if data storage gm4_metallurgy:temp {item_lore_line:'{"italic":false,"color":"aqua","translate":"%1$s%3427655$s","with":["Shamir",{"translate":"item.gm4.metallurgy.shamir"}]}'} run data remove storage gm4_metallurgy:temp item_lore[1]
-# Adds line of lore to new_lore if it isn't "Shamir"
+# Adds current line to new_lore if it isn't "Shamir"
 execute unless data storage gm4_metallurgy:temp {item_lore_line:'{"italic":false,"color":"aqua","translate":"%1$s%3427655$s","with":["Shamir",{"translate":"item.gm4.metallurgy.shamir"}]}'} run data modify storage gm4_metallurgy:temp new_lore append from storage gm4_metallurgy:temp item_lore_line
 
-# Remove first line of lore in storage
+# Remove current line from storage
 data remove storage gm4_metallurgy:temp item_lore[0]
 
 # If there's still lore in storage, run again
