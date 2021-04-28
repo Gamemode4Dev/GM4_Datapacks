@@ -4,6 +4,7 @@
   "predicate": {
     "equipment": {
       "feet": {
+        "item": "minecraft:leather_boots",
         "nbt": "{gm4_boots_of_ostara:1b}"
       }
     }
