@@ -2,6 +2,5 @@ execute unless score ziprails gm4_modules matches 1 run data modify storage gm4:
 scoreboard players set ziprails gm4_modules 1
 
 schedule function gm4_ziprails:main 1t
-schedule function gm4_ziprails:tick 1t
 
 #$moduleUpdateList
