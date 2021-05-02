@@ -1,0 +1,6 @@
+{
+    "values": [
+	    "#load:gm4_liquid_tanks",
+        "gm4_washing_tanks:load"
+    ]
+}

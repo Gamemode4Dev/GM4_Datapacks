@@ -1,0 +1,37 @@
+{
+	"pack":{
+		"pack_format":6,
+		"description":[
+			"Washing Tanks", 
+			"\n",
+			{
+				"text": "Gamemode 4 for 1.16",
+				"color": "#4AA0C7"
+			}
+		]
+	},
+	"module_name":"Washing Tanks",
+	"module_id":"washing_tanks",
+	"creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+	"site_description":"Die! Dye!",
+	"site_categories":[
+		"Liquid Tanks"
+	],
+	"video_link":"",
+	"wiki_link":"wiki.gm4.co/wiki/Liquid_Tanks/Washing_Tanks",
+	"required_modules":[
+		"liquid_tanks"
+	],
+	"credits":{
+		"Creator":[
+			[
+				"Bunnygamers",
+				"https://twitter.com/BunnygamersMC"
+			],
+			[
+				"Misode",
+				"https://twitter.com/misode_"
+			]
+		]
+	}
+}
