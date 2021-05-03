@@ -25,9 +25,9 @@ execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:splash_po
 execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:lingering_potion] run function gm4_crossbow_cartridges:projectile/lingerpotion
 
 #fireball
-execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:fire_charge] run function gm4_crossbow_cartridges:projectile/fireball
+execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:fire_charge] run function gm4_crossbow_cartridges:projectile/fireball
 
 #tnt
-execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:tnt] run function gm4_crossbow_cartridges:projectile/tnt
+execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:tnt] run function gm4_crossbow_cartridges:projectile/tnt
 
 tag @s remove gm4_cb_use
