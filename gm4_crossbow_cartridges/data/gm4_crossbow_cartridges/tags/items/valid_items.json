@@ -1,0 +1,16 @@
+{
+	"values": [	
+		"minecraft:string",
+		"minecraft:torch",
+		"minecraft:soul_torch",
+		"minecraft:redstone_torch",
+		"minecraft:cod_bucket",
+		"minecraft:salmon_bucket",
+		"minecraft:pufferfish_bucket",
+		"minecraft:tropical_fish_bucket",
+		"minecraft:splash_potion",
+		"minecraft:lingering_potion",
+		"minecraft:fire_charge",
+		"minecraft:tnt"
+	]
+}
