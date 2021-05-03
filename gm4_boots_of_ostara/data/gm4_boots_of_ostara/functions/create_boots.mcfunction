@@ -9,12 +9,12 @@ data modify storage gm4_boots_of_ostara:temp Item set value {tag:{CustomModelDat
 # Merge item data into the temporary storage. If the item has custom name, CustomModelData, or similar
 # properties that the user might not want to lose, they will override the normal Boots of Ostara tags,
 # although the functionality of the boots will remain as that relies on the gm4_boots_of_ostara tag.
-data modify storage gm4_boots_of_ostara:temp Item merge from block ~ ~ ~ Items[2]
+data modify storage gm4_boots_of_ostara:temp Item merge from storage gm4_custom_crafters:temp/crafter Items[2]
 
 # In case the item has a shamir or other existing lore, the Boots of Ostara lore is placed before
 # existing lines of lore instead of completely replacing the lore tag.
 data modify storage gm4_boots_of_ostara:temp Item.tag.display.Lore prepend value '{"translate":"%1$s%3427655$s","with":["Brings Abundance Beneath You!",{"translate":"item.gm4.boots_of_ostara.lore"}]}'
 
 # Clear the custom crafter of recipe ingredients and place the newly crafted Boots of Ostara inside.
-data remove block ~ ~ ~ Items
-data modify block ~ ~ ~ Items append from storage gm4_boots_of_ostara:temp Item
+data remove storage gm4_custom_crafters:temp/crafter Items
+data modify storage gm4_custom_crafters:temp/crafter Items append from storage gm4_boots_of_ostara:temp Item

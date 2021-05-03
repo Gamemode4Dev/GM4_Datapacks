@@ -1,5 +1,5 @@
 #@s = player with sensus at location of layer to scan
-#run from sensus_shamir:main
+#run from sensus_shamir:active
 
 fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function gm4_sensus_shamir:block_search/mark_overworld/coal_ore"} replace coal_ore
 fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function gm4_sensus_shamir:block_search/mark_overworld/iron_ore"} replace iron_ore

@@ -1,10 +1,12 @@
-# @s = armor_stand item ..1 from armor_stand
-#paste pose to armor_stand
-data modify entity @e[distance=..1,type=minecraft:armor_stand,limit=1,sort=nearest] Pose set from entity @s Item.tag.EntityTag.Pose
-data modify entity @e[distance=..1,type=minecraft:armor_stand,limit=1,sort=nearest] ShowArms set from entity @s Item.tag.EntityTag.ShowArms
-data modify entity @e[distance=..1,type=minecraft:armor_stand,limit=1,sort=nearest] NoBasePlate set from entity @s Item.tag.EntityTag.NoBasePlate
-data modify entity @e[distance=..1,type=minecraft:armor_stand,limit=1,sort=nearest] Small set from entity @s Item.tag.EntityTag.Small
+# run from apply_pose
+# @s = armor_stand whose pose is being pasted
 
-#place confirm
-playsound minecraft:block.stone.place player @a[distance=..5] ~ ~ ~ 1 .2
-tag @s add gm4_pose_copied
+# Select item entity to paste armor stand pose from.
+execute as @e[type=item,sort=nearest,tag=!gm4_pose_copied,nbt={Item:{id:"minecraft:armor_stand",tag:{EntityTag:{}}}},distance=..1,limit=1] run function gm4_better_armour_stands:paste_item
+
+# Copy tags from item entity to armor stand.
+data modify entity @s Pose set from storage gm4_better_armour_stands:temp EntityTag.Pose
+data modify entity @s ShowArms set from storage gm4_better_armour_stands:temp EntityTag.ShowArms
+data modify entity @s NoBasePlate set from storage gm4_better_armour_stands:temp EntityTag.NoBasePlate
+data modify entity @s Small set from storage gm4_better_armour_stands:temp EntityTag.Small
+data remove storage gm4_better_armour_stands:temp EntityTag

@@ -1,5 +1,5 @@
 # check furnace and store cooktime
-# called by processes
+# called by process
 
 scoreboard players set @s gm4_bf_data -1
 execute store result score @s gm4_bf_data run data get block ^ ^ ^1 CookTime
