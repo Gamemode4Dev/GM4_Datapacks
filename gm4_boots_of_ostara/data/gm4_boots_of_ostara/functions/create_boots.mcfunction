@@ -13,7 +13,7 @@ data modify storage gm4_boots_of_ostara:temp Item merge from block ~ ~ ~ Items[2
 
 # In case the item has a shamir or other existing lore, the Boots of Ostara lore is placed before
 # existing lines of lore instead of completely replacing the lore tag.
-data modify storage gm4_boots_of_ostara:temp Item.tag.display.Lore prepend value '{"translate":"%1$s%3427655$s","with":["Brings Abundance Beneath You!",{"translate":"item.gm4.boots_of_ostara.lore"}]}'
+data modify storage gm4_boots_of_ostara:temp Item.tag.display.Lore prepend value '{"translate":"%1$s%3427655$s","with":["Brings Abundance Beneath You!",{"translate":"text.gm4.boots_of_ostara.lore"}]}'
 
 # Clear the custom crafter of recipe ingredients and place the newly crafted Boots of Ostara inside.
 data remove block ~ ~ ~ Items
