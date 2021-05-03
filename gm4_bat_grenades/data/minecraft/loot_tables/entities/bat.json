@@ -51,7 +51,7 @@
                   "with": [
                     "Would make for a very strange,",
                     {
-                      "translate": "text.gm4.bat_leather.lore.1"
+                      "translate": "text.gm4.bat_leather.1"
                     }
                   ]
                 },
@@ -60,7 +60,7 @@
                   "with": [
                     "very tiny jacket",
                     {
-                      "translate": "text.gm4.bat_leather.lore.2"
+                      "translate": "text.gm4.bat_leather.2"
                     }
                   ]
                 }
