@@ -17,12 +17,16 @@
                       },
                       {
                           "function": "set_name",
-                          "name": [
-                              {
-                                  "text": "Everstone",
-                                  "italic": false
-                              }
-                          ]
+                          "name": {
+							"translate": "%1$s%3427655$s",
+							"with": [
+							"Everstone",
+							{
+								"translate": "item.gm4.everstone"
+							}
+							],
+							"italic": false
+						}
                       }
                   ]
               }
