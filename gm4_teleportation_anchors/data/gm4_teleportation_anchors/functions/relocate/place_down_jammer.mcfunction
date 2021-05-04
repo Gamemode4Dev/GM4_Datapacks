@@ -8,7 +8,7 @@ execute if block ~ ~ ~ command_block[facing=north] run setblock ~ ~ ~ dropper[fa
 execute if block ~ ~ ~ command_block[facing=down] run setblock ~ ~ ~ dropper[facing=up]
 
 data merge block ~ ~ ~ {CustomName:'{"color":"dark_purple","translate":"%1$s%3427655$s","with":["Teleportation Jammer",{"translate":"block.gm4.teleportation_jammer"}]}'}
-summon armor_stand ~ ~-.4 ~ {Small:1,NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,DisabledSlots:2039552,Tags:["gm4_no_edit","gm4_new_teleportation_jammer","gm4_teleportation_jammer"],Fire:200000,CustomName:'"gm4_teleportation_jammer"',ArmorItems:[{},{},{},{id:purpur_pillar,Count:1b,tag:{CustomModelData:1}}]}
+summon armor_stand ~ ~-.4 ~ {Small:1,NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,DisabledSlots:2039552,Tags:["gm4_no_edit","gm4_new_teleportation_jammer","gm4_teleportation_jammer"],Fire:200000,CustomName:'"gm4_teleportation_jammer"',ArmorItems:[{},{},{},{id:"purpur_pillar",Count:1b,tag:{CustomModelData:1}}]}
 playsound minecraft:block.chorus_flower.death block @a[distance=..8] ~ ~ ~ 100 1.3
 playsound minecraft:block.beacon.power_select block @a[distance=..8] ~ ~ ~ 0.3 0.3
 
