@@ -1,5 +1,5 @@
 # moves additional lines from Source to TempSource
-# run from gm4_lore:remove and gm4_lore:search
+# run from gm4_lore:<function>
 
 data modify storage gm4_lore:temp TempSource append from storage gm4_lore:temp Source[0]
 data remove storage gm4_lore:temp Source[0]

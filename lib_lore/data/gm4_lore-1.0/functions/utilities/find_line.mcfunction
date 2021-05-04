@@ -1,5 +1,5 @@
 # finds the target line of lore
-# run from gm4_lore:remove
+# run from gm4_lore:<function>
 
 # store original lines to a temp source
 data modify storage gm4_lore:temp TempSource append from storage gm4_lore:temp Source[0]

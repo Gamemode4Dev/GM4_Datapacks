@@ -1,5 +1,5 @@
 # moves lines from TempSource back to Source
-# run from gm4_lore:remove
+# run from gm4_lore:insert and gm4_lore:remove
 
 data modify storage gm4_lore:temp Source prepend from storage gm4_lore:temp TempSource[-1]
 data remove storage gm4_lore:temp TempSource[-1]
