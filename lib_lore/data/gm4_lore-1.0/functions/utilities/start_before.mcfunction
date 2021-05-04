@@ -5,5 +5,6 @@ data modify storage gm4_lore:temp Source prepend from storage gm4_lore:temp Temp
 data remove storage gm4_lore:temp TempSource[-1]
 
 # loop until all of the lines are moved over
+execute unless score $index gm4_lore matches 0 run scoreboard players remove $index gm4_lore 1
 scoreboard players add $start gm4_lore 1
-execute unless score $start gm4_lore matches 0 run function gm4_lore-1.0:utilities/remove/start_before
+execute unless score $start gm4_lore matches 0 run function gm4_lore-1.0:utilities/start_before

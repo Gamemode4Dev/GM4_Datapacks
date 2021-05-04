@@ -11,5 +11,6 @@ execute if score $incorrect_line gm4_lore matches 1 run data remove storage gm4_
 execute if score $incorrect_line gm4_lore matches 0 run data remove storage gm4_lore:temp TempSource[-1]
 
 # loop until the line is found
-scoreboard players remove $line_count gm4_lore 1
-execute if score $line_count gm4_lore matches 1.. if score $incorrect_line gm4_lore matches 1 run function gm4_lore-1.0:utilities/find_line
+execute if score $incorrect_line gm4_lore matches 1 run scoreboard players add $index gm4_lore 1
+execute if score $index gm4_lore < $line_count gm4_lore if score $incorrect_line gm4_lore matches 1 run function gm4_lore-1.0:utilities/find_line
+execute if score $index gm4_lore >= $line_count gm4_lore run scoreboard players set $index gm4_lore -1
