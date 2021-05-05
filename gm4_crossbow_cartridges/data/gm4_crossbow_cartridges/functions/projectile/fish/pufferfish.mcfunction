@@ -7,7 +7,7 @@ summon minecraft:pufferfish ~ ~1.2 ~ {FromBucket:1,Tags:["gm4_cb_proj"],ActiveEf
 #replace bucket of pufferfish in player's offhand with water bucket
 replaceitem entity @s[gamemode=!creative] weapon.offhand minecraft:water_bucket
 
-#move motion of arrow to potion
+#copy motion of arrow to fish
 function gm4_crossbow_cartridges:projectile/arrow_motion
 
 #fish flop sound

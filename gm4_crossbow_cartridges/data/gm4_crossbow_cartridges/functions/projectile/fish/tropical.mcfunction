@@ -8,7 +8,7 @@ data modify entity @e[type=minecraft:tropical_fish,tag=gm4_cb_proj,distance=..2,
 #replace bucket of tropical fish in player's offhand with water bucket
 replaceitem entity @s[gamemode=!creative] weapon.offhand minecraft:water_bucket
 
-#move motion of arrow to potion
+#copy motion of arrow to fish
 function gm4_crossbow_cartridges:projectile/arrow_motion
 
 #fish flop sound
