@@ -1,8 +1,8 @@
-#run from crossbow_cartridges_use [advancement]
+#run from gm4_crossbow_cartridges:shoot [advancement]
 # @s = player using the crossbow
 
 #reset crossbow advancement
-advancement revoke @s only gm4:crossbow_cartridges_use
+advancement revoke @s only gm4_crossbow_cartridges:shoot
 
 tag @e[type=minecraft:arrow,nbt={inGround:0b},distance=..2,sort=nearest,limit=1] add gm4_cb_arrow
 
