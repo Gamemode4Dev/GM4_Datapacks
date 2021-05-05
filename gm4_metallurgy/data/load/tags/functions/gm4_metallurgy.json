@@ -1,6 +1,6 @@
 {
     "values": [
-        "gm4_metallurgy:load",
-        "#load:gm4_lore"
+        "#load:gm4_lore",
+        "gm4_metallurgy:load"
     ]
 }

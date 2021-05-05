@@ -6,7 +6,7 @@
 data modify storage gm4_lore:temp Source set from entity @e[type=item,tag=gm4_ml_source,dx=0,limit=1] Item.tag.display.Lore
 data modify storage gm4_lore:temp Target set from entity @s Item.tag.display.Lore[1]
 scoreboard players set $start gm4_lore 1
-function gm4_lore:remove
+function #gm4_lore:remove
 ## add the Shamir name to the band lore
 data modify entity @s Item.tag.display.Lore append from storage gm4_lore:temp Dump[]
 
