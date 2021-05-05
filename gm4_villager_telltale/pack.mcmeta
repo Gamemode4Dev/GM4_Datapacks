@@ -13,10 +13,9 @@
     "module_name": "villager telltale",
     "module_id": "villager_telltale",
   "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-    "site_description": "Someone forgot to type a description!",
+    "site_description": "Find a villagers workstation without the suffering!",
     "site_categories": [],
-    "video_link": "YOUTUBE_VIDEO_URL",
-    "wiki_link": "WIKI_URL",
+    "wiki_link": "https://wiki.gm4.co/wiki/Villager_Telltale",
     "required_modules": [
         "module_id of required module",
         "or leave array empty"
@@ -29,18 +28,13 @@
         "comment": "All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings. -- REMOVE THIS COMMENT",
         "Creator": [
             [
-                "USERNAME",
+                "MichaelMiner137",
                 "OPTIONAL_LINK"
             ]
         ],
-        "Updated By": [
+        "Idea By": [
             [
-                "USERNAME",
-                "OPTIONAL_LINK"
-            ],
-            [
-                "USERNAME",
-                "OPTIONAL_LINK"
+                "Kroppeb"
             ]
         ]
     }
