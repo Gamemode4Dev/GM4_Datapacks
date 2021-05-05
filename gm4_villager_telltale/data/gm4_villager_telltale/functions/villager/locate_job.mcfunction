@@ -13,5 +13,3 @@ execute if data storage gm4_villager_telltale:temp/villager Look[2] run function
 # look at target
 execute if data storage gm4_villager_telltale:temp/villager Look[2] run function gm4_villager_telltale:villager/begin_looking
 
-# advancement
-advancement grant @a[distance=..4] only gm4:vt_find_workstation

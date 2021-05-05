@@ -5,3 +5,6 @@ execute as @e[type=minecraft:area_effect_cloud,sort=nearest,limit=1,tag=gm4_vt_t
 
 # particles
 execute at @s run particle happy_villager ~ ~.1 ~ .3 0 .3 .1 5
+
+# advancement
+advancement grant @a[distance=..4] only gm4:vt_find_workstation
