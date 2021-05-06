@@ -1,0 +1,31 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [
+            "rational villagers",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "rational villagers",
+    "module_id": "rational_villagers",
+  "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+    "site_description": "\"I can't be tricked that easily!\" -Villager",
+    "site_categories": [],
+    "wiki_link": "https://wiki.gm4.co/wiki/Rational_Villagers",
+    "required_modules": [
+    ],
+    "recommended_modules": [
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "MichaelMiner137",
+                "https://twitter.com/MichaelMiner137"
+            ]
+        ]
+    }
+}
