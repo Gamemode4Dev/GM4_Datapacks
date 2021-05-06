@@ -6,6 +6,9 @@ data modify storage gm4_metallurgy:temp/item/ore gm4_metallurgy set from entity 
 execute store result score metal_amount gm4_ml_data run data get storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal.amount[0]
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy{item:"obsidian_cast"} run scoreboard players set is_obsidian_cast gm4_ml_data 1
 
+# store CMD of item in scoreboard if its a recycled band
+execute unless score @s gm4_ml_sh_id matches 1.. run execute store result score @s gm4_ml_sh_id run data get entity @e[type=item,tag=gm4_ml_in_animation,dx=0,dz=0,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{metal:{castable:1b},item:"obsidian_cast"}}},OnGround:1b},limit=1] Item.tag.CustomModelData
+
 # absorb ore item
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"copper"} run function gm4_metallurgy:casting/add_metal/add_copper
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"barium"} run function gm4_metallurgy:casting/add_metal/add_barium
