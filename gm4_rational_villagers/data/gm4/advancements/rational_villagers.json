@@ -1,20 +1,20 @@
 {
   "display": {
     "icon": {
-      "item": "stone",
+      "item": "emerald",
       "nbt": "{CustomModelData:1}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Plain Ol' Advancement Title",
+        "Patched",
         {"translate": "advancement.gm4.rational_villagers.title"}
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Noone's bothered to give me a description yet... They won't... They don't care about me....",
+        "Try to scam a villager",
         {"translate": "advancement.gm4.rational_villagers.description"}
       ],
       "color": "gray"
@@ -23,7 +23,7 @@
   "parent": "gm4:root",
   "criteria": {
     "impossible": {
-      "trigger": "minecraft:impossible"
+      "trigger": "minecraft:cured_zombie_villager"
     }
   }
 }
