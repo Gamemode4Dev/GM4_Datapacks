@@ -1,6 +1,7 @@
 {
     "values": [
-        {"id": "#load:gm4_custom_crafters", "required": false},
+        "#load:gm4_custom_crafters",
+        "#load:gm4_player_heads",
         "gm4_tnt_landmines:load"
     ]
 }
