@@ -39,7 +39,7 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
 - Scoreboards and tags should begin with the `gm4_` prefix.
 - fake players used to store numbers for scoreboard operations should be named as a "#" followed by that number e.g. `scoreboard players set #100 gm4_some_scoreboard 100`
 - Entities that aren't visible to the player (markers) should have custom names beginning with `gm4_` if this does not interfere with functionality.
-- Lore on items should have the first word capitalized and no fullstop at the end of the sentence if there is only one sentence. Other punctuation (?!) can be added. Descriptions should be `"color":"gray","italic":false` whilst flavor text should be `"color":"dark_gray","italic":true`.
+- Lore on items should have the first word capitalized and no fullstop at the end of the sentence if there is only one sentence. Other punctuation (?!) can be added. Descriptions should be `"color":"gray","italic":false` whilst flavor text or commands (such as "Throw to use") should be `"color":"dark_gray","italic":true`.
 - Names on items should follow Minecraft's rarity colorscheme and should be `"italic":false`.
 
 #### Comments
