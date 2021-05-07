@@ -142,7 +142,8 @@
 								"translate": "text.gm4.end_ship_elytra.10.1"
 							}
 						],
-						"italic": false
+						"italic": false,
+						"color": "dark_gray"
 					},
 					{
 						"translate": "%1$s%3427655$s",
@@ -152,7 +153,8 @@
 							"translate": "text.gm4.end_ship_elytra.10.2"
 							}
 						],
-						"italic": false
+						"italic": false,
+						"color": "dark_gray"
 					}
 				]
             }			
