@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "oak_boat",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "2nd Place",
+        {"translate": "advancement.gm4.boat_chests.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Push a chest minecart into a boat",
+        {"translate": "advancement.gm4.boat_chests.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
