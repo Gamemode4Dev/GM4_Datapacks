@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "oak_sign",
+      "nbt": "{CustomModelData:0}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Speedy Fingers",
+        {"translate": "advancement.gm4.sign_inscriber.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Place an Inscribed Sign",
+        {"translate": "advancement.gm4.sign_inscriber.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

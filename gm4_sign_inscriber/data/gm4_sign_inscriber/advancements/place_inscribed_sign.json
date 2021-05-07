@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "item": {
+          "tag": "minecraft:signs",
+          "nbt": "{gm4_sign_inscriber:{Inscribed:1b}}"
+        }
+      }
+    }
+  },
+  "rewards": {
+      "function": "gm4_sign_inscriber:place/sign"
+  }
+}
