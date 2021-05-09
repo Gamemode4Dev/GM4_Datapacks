@@ -8,7 +8,4 @@ execute if score slow_clock gm4_zc_data matches 3.. run function gm4_zauber_caul
 # player checks
 execute as @a[gamemode=!spectator] run function gm4_zauber_cauldrons:player/submain
 
-# restore broken crystals
-execute as @e[type=item,tag=!gm4_zc_restored_player_head,nbt={Item:{id:"minecraft:player_head"}}] run function gm4_zauber_cauldrons:recipes/crystals/restore
-
 schedule function gm4_zauber_cauldrons:main 16t

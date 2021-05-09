@@ -12,6 +12,9 @@
   },
   "module_name":"TNT Landmines",
   "module_id":"tnt_landmines",
+  "libraries": [
+    "lib_player_heads"
+  ],
   "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
   "site_description":"Craft 'em up, throw 'em down, blow 'em up!",
   "site_categories":["Custom Crafting"],

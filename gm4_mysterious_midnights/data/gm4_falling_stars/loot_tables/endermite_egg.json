@@ -30,7 +30,9 @@
                                         {
                                             "translate": "item.gm4.endermite_egg.lore"
                                         }
-                                    ]
+                                    ],
+                                    "color": "dark_gray",
+                                    "italic": true
                                 }
                             ]
                         },

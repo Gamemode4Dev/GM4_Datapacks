@@ -10,8 +10,8 @@
             {
               "function": "minecraft:set_lore",
               "lore": [
-                [{"translate":"%1$s%3427655$s","with":["Bees",{"translate":"text.gm4.beehive_inspector.bees"}],"color":"gold","italic":false},": ",{"score":{"objective":"gm4_beehive_insp","name":"#bees"},"color":"yellow"}],
-                [{"translate":"%1$s%3427655$s","with":["Honey",{"translate":"text.gm4.beehive_inspector.honey"}],"color":"gold","italic":false},": ",{"nbt":"Item.tag.BlockStateTag.honey_level","entity":"@s","color":"yellow"}]
+                [{"translate":"%1$s%3427655$s","with":["Bees",{"translate":"text.gm4.beehive_inspector.bees"}],"color":"gray","italic":false},": ",{"score":{"objective":"gm4_beehive_insp","name":"#bees"},"color":"gray"}],
+                [{"translate":"%1$s%3427655$s","with":["Honey",{"translate":"text.gm4.beehive_inspector.honey"}],"color":"gray","italic":false},": ",{"nbt":"Item.tag.BlockStateTag.honey_level","entity":"@s","color":"gray"}]
               ],
               "entity": "this",
               "replace": true

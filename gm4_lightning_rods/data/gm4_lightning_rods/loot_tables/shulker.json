@@ -40,7 +40,8 @@
                       "translate": "item.gm4.charred_shell.lore"
                     }
                   ],
-                  "italic": false
+                  "italic": true,
+                  "color":"dark_gray"
                 }
               ]
             }
