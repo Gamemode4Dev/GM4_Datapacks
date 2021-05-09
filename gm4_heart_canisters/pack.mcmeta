@@ -12,6 +12,9 @@
     },
     "module_name": "Heart Canisters",
     "module_id": "heart_canisters",
+    "libraries": [
+        "lib_player_heads"
+    ],
     "site_description": "Pricey canisters that increase your health when carried.",
     "site_categories": [
         "Custom Crafting"
