@@ -1,9 +1,6 @@
 # @s = an item entity
 # run from main
 
-#restore placed and broken custom skulls
-execute if entity @s[nbt={Item:{id:"minecraft:player_head"}}] run function gm4_metallurgy:repair_skulls
-
 #check for moulds waiting to be created
 execute if entity @s[nbt={Item:{id:"minecraft:obsidian",Count:1b},OnGround:1b}] at @s if block ~ ~-0.1 ~ #minecraft:sand run function gm4_metallurgy:casting/check_mould_creation
 
