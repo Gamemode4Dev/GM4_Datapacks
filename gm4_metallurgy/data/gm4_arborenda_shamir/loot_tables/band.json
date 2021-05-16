@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:112,gm4_metallurgy:{stored_shamir:\"arborenda\"}}"
+                            "tag": "{CustomModelData:112,SkullOwner:{Name:\"[Drop to Fix Item] gm4_arborenda_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"arborenda\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",
