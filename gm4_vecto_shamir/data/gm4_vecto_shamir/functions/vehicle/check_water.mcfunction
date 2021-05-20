@@ -11,5 +11,3 @@ execute as @e[tag=gm4_ml_vecto_wtr,distance=..1,sort=nearest,limit=1] at @s run 
 
 # check valid spawn area
 execute at @e[tag=gm4_ml_vecto_wtr,distance=..1,sort=nearest,limit=1] if block ^ ^ ^1 #gm4:water if block ^.7 ^ ^ #gm4:water if block ^.7 ^ ^1 #gm4:water if block ^-.7 ^ ^ #gm4:water if block ^-.7 ^ ^1 #gm4:water run function gm4_vecto_shamir:vehicle/spawn_boat
-
-
