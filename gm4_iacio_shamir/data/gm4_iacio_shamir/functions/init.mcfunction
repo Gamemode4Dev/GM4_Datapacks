@@ -1,3 +1,5 @@
+scoreboard objectives add gm4_ml_iacio_tri minecraft.used:minecraft.trident
+scoreboard objectives add gm4_ml_iacio_itm minecraft.custom:minecraft.drop
 scoreboard objectives add gm4_ml_iacio_prl minecraft.used:minecraft.ender_pearl
 scoreboard objectives add gm4_ml_iacio_snw minecraft.used:minecraft.snowball
 scoreboard objectives add gm4_ml_iacio_egg minecraft.used:minecraft.egg
