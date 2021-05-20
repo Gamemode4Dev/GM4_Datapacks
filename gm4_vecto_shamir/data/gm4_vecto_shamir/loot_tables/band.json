@@ -1,0 +1,36 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"name": "gm4_metallurgy:copper_band",
+					"functions": [
+						{
+							"function": "minecraft:set_nbt",
+							"tag": "{CustomModelData:0,gm4_metallurgy:{stored_shamir:\"vecto\"}}"
+						},
+						{
+							"function": "minecraft:set_lore",
+							"replace": false,
+							"lore": [
+								{
+									"translate": "%1$s%3427655$s",
+									"with": [
+										"Vecto",
+										{
+											"translate": "item.gm4.shamir.vecto"
+										}
+									],
+									"italic": false,
+									"color": "gray"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

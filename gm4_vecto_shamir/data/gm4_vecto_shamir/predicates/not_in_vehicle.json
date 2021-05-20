@@ -1,0 +1,10 @@
+{
+  "condition": "minecraft:inverted",
+  "term": {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "nbt": "{RootVehicle:{Entity:{Tags:[\"gm4_ml_vehicle\"]}}}"
+    }
+  }
+}
