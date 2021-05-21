@@ -1,5 +1,5 @@
 #run from vehicle/check
-#@s = temporary minecart with no player
+#@s = temporary vehicle with no player
 #at @p[tag=gm4_ml_invehicle] not in vehicle
 
 tag @a[distance=..1] remove gm4_ml_invehicle
