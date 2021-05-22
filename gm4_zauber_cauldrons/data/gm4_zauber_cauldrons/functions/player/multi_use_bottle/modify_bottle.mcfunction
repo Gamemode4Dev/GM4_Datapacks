@@ -6,7 +6,7 @@
 scoreboard players operation requested_id gm4_zc_id = @s gm4_zc_id
 
 # move matching item data from stored entity into storage
-execute as @e[type=item,tag=gm4_zc_nbt_storage,limit=1] if score @s gm4_zc_id = requested_id gm4_zc_id run data modify storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item set from entity @s Item
+execute as @e[type=item,tag=gm4_zc_nbt_storage] if score @s gm4_zc_id = requested_id gm4_zc_id run data modify storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item set from entity @s Item
 
 # modify data
 execute store result score remaining_sips gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.tag.gm4_zauber_cauldrons.bottle.sips
