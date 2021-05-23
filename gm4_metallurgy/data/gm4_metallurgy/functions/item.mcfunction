@@ -1,9 +1,6 @@
 # @s = an item entity
 # run from main
 
-#change bands that were placed with an outdated format into mundane bands
-execute if entity @s[tag=!gm4_ml_skull_item,nbt={Item:{id:"minecraft:player_head"}},nbt=!{Item:{tag:{gm4_metallurgy:{}}}}] unless data entity @s Item.tag.SkullOwner.Name run function gm4_metallurgy:repair_skulls
-
 #check for moulds waiting to be created
 execute if entity @s[nbt={Item:{id:"minecraft:obsidian",Count:1b},OnGround:1b}] at @s if block ~ ~-0.1 ~ #minecraft:sand run function gm4_metallurgy:casting/check_mould_creation
 
