@@ -1,7 +1,6 @@
 scoreboard objectives add gm4_lt_value dummy
 scoreboard objectives add gm4_lt_max dummy
 scoreboard objectives add gm4_lt_prior_val dummy
-#scoreboard objectives add gm4_lt_disp_max
 scoreboard objectives add gm4_lt_disp_val dummy
 scoreboard objectives add gm4_lt_util dummy
 

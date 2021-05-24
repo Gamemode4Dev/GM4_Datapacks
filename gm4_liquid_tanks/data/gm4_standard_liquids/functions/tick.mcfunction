@@ -1,4 +1,5 @@
 #run from liquid_tanks:pulse_check
+#TODO this comment?
 
 #experience deposit
 execute if score standard_liquids_deposit_experience gm4_lt_util matches 1.. as @a[gamemode=!spectator,level=1..] at @s if block ~ ~-0.4 ~ hopper positioned ~ ~-0.4 ~ align xyz positioned ~0.5 ~ ~0.5 as @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,distance=..0.5,tag=gm4_lt_empty] run function gm4_standard_liquids:liquid_init/experience
