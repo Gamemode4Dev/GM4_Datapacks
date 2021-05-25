@@ -1,7 +1,7 @@
 #run from active
 #@s = player with shamir equipped, sneaking on rails
 
-tag @s add gm4_ml_invehicle
+tag @s add gm4_ml_vecto_active
 
 # spawn minecart
 summon minecraft:minecart ^ ^.1 ^ {Invulnerable:1b,Tags:["gm4_ml_vehicle"]}

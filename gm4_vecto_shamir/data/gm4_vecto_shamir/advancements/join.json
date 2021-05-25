@@ -1,7 +1,7 @@
 {
     "criteria": {
       "join": {
-        "trigger": "minecraft:tick"
+        "trigger": "minecraft:location"
       }
     },
     "rewards": {
