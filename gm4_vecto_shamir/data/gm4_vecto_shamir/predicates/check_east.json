@@ -1,7 +1,7 @@
 [
   {
     "condition": "minecraft:reference",
-    "name": "gm4_vecto_shamir:area_no_collision_boat"
+    "name": "gm4_vecto_shamir:area_no_collision"
   },
   {
     "condition": "minecraft:location_check",
@@ -21,7 +21,7 @@
     "offsetZ": -1,
     "predicate": {
       "block": {
-        "tag": "gm4:no_collision"
+        "tag": "gm4_vecto_shamir:no_collision_boat"
       }
     }
   },
@@ -32,7 +32,7 @@
     "offsetZ": -1,
     "predicate": {
       "block": {
-        "tag": "gm4:no_collision"
+        "tag": "gm4_vecto_shamir:no_collision_boat"
       }
     }
   },
@@ -43,7 +43,7 @@
     "offsetZ": -1,
     "predicate": {
       "block": {
-        "tag": "gm4:no_collision"
+        "tag": "gm4_vecto_shamir:no_collision_boat"
       }
     }
   },
@@ -54,7 +54,7 @@
     "offsetZ": 0,
     "predicate": {
       "block": {
-        "tag": "gm4:no_collision"
+        "tag": "gm4_vecto_shamir:no_collision_boat"
       }
     }
   },
@@ -65,7 +65,7 @@
     "offsetZ": 1,
     "predicate": {
       "block": {
-        "tag": "gm4:no_collision"
+        "tag": "gm4_vecto_shamir:no_collision_boat"
       }
     }
   }
