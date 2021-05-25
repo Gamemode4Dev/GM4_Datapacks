@@ -1,4 +1,5 @@
 scoreboard players set @a[gamemode=creative] gm4_creative 0
+execute as @a[gamemode=!creative] unless score @s gm4_creative matches 0.. run scoreboard players operation @s gm4_creative = $cooldown gm4_creative
 scoreboard players add @a[gamemode=!creative] gm4_creative 1
 
 execute if entity @a[gamemode=creative] run scoreboard players set $global gm4_creative 0
