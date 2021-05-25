@@ -6,4 +6,4 @@ execute if data storage gm4:log log{type:"outdated"} run tellraw @a[tag=gm4_show
 
 data remove storage gm4:log queue[0]
 execute store result score #log_size gm4_data run data get storage gm4:log queue
-execute if score #log_size gm4_data matches 1.. run function gm4-1.1:log
+execute if score #log_size gm4_data matches 1.. run function gm4-1.2:log

@@ -8,4 +8,4 @@ execute unless entity @a[gamemode=creative] run scoreboard players add $global g
 tag @a remove gm4_show_log
 execute as @a if score @s gm4_creative < $cooldown gm4_creative run tag @s add gm4_show_log
 execute if score $global gm4_creative >= $global_cooldown gm4_creative run tag @a add gm4_show_log
-function gm4-1.1:log
+function gm4-1.2:log
