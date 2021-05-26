@@ -6,12 +6,9 @@ execute unless block ~ ~ ~ hopper run function gm4_liquid_tanks:destroy
 
 #item processing
 data modify storage gm4_liquid_tanks:temp/tank input_slot merge from block ~ ~ ~ Items[{Slot:0b}]
-execute store result score $stack_size gm4_lt_value run data get storage gm4_liquid_tanks:temp/tank input_slot.Count 1.0
-function gm4_liquid_tanks:item_process
-data remove storage gm4_liquid_tanks:temp/tank input_slot
-data remove storage gm4_liquid_tanks:temp/tank output
+execute if data storage gm4_liquid_tanks:temp/tank input_slot run function gm4_liquid_tanks:item_process
 
-#last item action resetting
+#last item action resetting (requires updated tank data, so no refrence to storage)
 execute unless block ~ ~ ~ hopper{Items:[{Slot:0b}]} run tag @s remove gm4_lt_drain
 execute unless block ~ ~ ~ hopper{Items:[{Slot:0b}]} run tag @s remove gm4_lt_fill
 

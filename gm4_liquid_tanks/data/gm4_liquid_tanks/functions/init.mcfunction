@@ -8,6 +8,5 @@ execute unless score liquid_tanks gm4_modules matches 1 run data modify storage 
 scoreboard players set liquid_tanks gm4_modules 1
 
 schedule function gm4_liquid_tanks:main 1t
-schedule function gm4_liquid_tanks:tick 1t
 
 #$moduleUpdateList
