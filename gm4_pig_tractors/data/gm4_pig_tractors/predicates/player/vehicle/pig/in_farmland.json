@@ -6,7 +6,7 @@
             "type": "minecraft:pig",
             "location": {
                 "block": {
-                    "block": "minecraft:farmland"
+                    "blocks": ["minecraft:farmland"]
                 }
             }
         }

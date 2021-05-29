@@ -28,12 +28,12 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:player_head",
+            "items": ["minecraft:player_head"],
             "count": 5,
             "nbt": "{gm4_heart_canister_tier:1b}"
           },
           {
-            "item": "minecraft:player_head",
+            "items": ["minecraft:player_head"],
             "count": 5,
             "nbt": "{gm4_heart_canister_tier:2b}"
           }
