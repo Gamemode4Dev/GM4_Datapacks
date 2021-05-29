@@ -31,4 +31,4 @@ execute if score @s gm4_bc_data matches 0 unless data storage gm4_block_compress
 
 
 data remove storage gm4_block_compressors:temp/compressor Items
-# data remove storage gm4_block_compressors:temp/item_stack Items
+data remove storage gm4_block_compressors:temp/item_stack Items
