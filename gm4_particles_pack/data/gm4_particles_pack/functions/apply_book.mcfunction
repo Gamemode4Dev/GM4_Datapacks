@@ -17,6 +17,5 @@ execute if data storage gm4_better_armour_stands:temp {pages:["snow"]} run score
 
 execute if score @s gm4_particle matches 5 run summon area_effect_cloud ~ ~1 ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:cloud,Tags:["gm4_particles_pack_cloud"]}
 execute if score @s gm4_particle matches 6 run summon area_effect_cloud ~ ~1 ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:bubble,Tags:["gm4_particles_pack_cloud"]}
-execute if score @s gm4_particle matches 8 run summon area_effect_cloud ~ ~1 ~ {Duration:2147483647,Radius:0.3f,RadiusOnUse:0,Particle:dripping_water,Tags:["gm4_particles_pack_cloud"]}
 
 data merge entity @s[scores={gm4_particle=1..}] {Invisible:1b}
