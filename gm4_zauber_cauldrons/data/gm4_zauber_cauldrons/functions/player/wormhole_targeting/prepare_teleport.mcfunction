@@ -21,4 +21,8 @@ summon area_effect_cloud ~ ~ ~ {Tags:["gm4_zc_wormhole_target","gm4_zc_new_wormh
 # teleport the player to the wormhole's destination using the marker
 tag @s add gm4_zc_wormhole_consumer
 execute as @e[type=area_effect_cloud,tag=gm4_zc_new_wormhole_target,limit=1] run function gm4_zauber_cauldrons:player/wormhole_targeting/set_position
+
+# gm4_zc_wormhole_consumer tag used to be removed here, however, this wasn't reliable for tag removal for non-player entities.
+# The tag removal is now done in the function teleport_user, making this redundant. This is just a failsafe to
+# ensure players aren't left with the tag in case the dimension selection fails.
 tag @s remove gm4_zc_wormhole_consumer
