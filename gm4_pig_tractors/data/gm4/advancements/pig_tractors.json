@@ -14,7 +14,7 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Ride a pig with an hoe to make it a functional tractor!",
+        "Till some ground by holding a hoe on a Pig Tractor!",
         {"translate": "advancement.gm4.pig_tractors.description"}
       ],
       "color": "gray"
