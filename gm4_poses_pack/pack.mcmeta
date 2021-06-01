@@ -25,7 +25,7 @@
         "particles_pack"
     ],
     "credits": {
-        "Creator": [
+        "Creators": [
             [
                 "Sparks",
                 "https://www.twitter.com/SparksTheGamer"
@@ -39,6 +39,12 @@
             [
                 "Misode",
                 "https://twitter.com/misode_"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "DuckJr",
+                "https://twitter.com/DuckJr94"
             ]
         ]
     }

@@ -2,13 +2,13 @@
   "pack": {
     "pack_format": 6,
     "description": [
-            "Beehive Inspector",
-            "\n",
-            {
-                "text": "Gamemode 4 for 1.16",
-                "color": "#4AA0C7"
-            }
-        ]
+      "Beehive Inspector",
+      "\n",
+      {
+        "text": "Gamemode 4 for 1.16",
+        "color": "#4AA0C7"
+      }
+    ]
   },
   "module_name": "Beehive Inspector",
   "module_id": "beehive_inspector",
@@ -23,6 +23,12 @@
       [
         "Misode",
         "https://twitter.com/misode_"
+      ]
+    ],
+    "Icon Design": [
+      [
+        "BluePsychoRanger",
+        "https://twitter.com/BluPsychoRanger"
       ]
     ]
   }
