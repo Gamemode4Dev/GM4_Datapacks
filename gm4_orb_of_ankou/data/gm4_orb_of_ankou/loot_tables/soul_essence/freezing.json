@@ -36,7 +36,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:233,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"freezing\"},stored_color:[5559779]},Enchantments:[{}]}"
+              "tag": "{CustomModelData:233,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"freezing\"},stored_color:[5559779]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
             }
           ]
         }
