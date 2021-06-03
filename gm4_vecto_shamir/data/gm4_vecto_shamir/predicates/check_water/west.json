@@ -1,0 +1,59 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "gm4_vecto_shamir:boat_spawnable"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:slabs",
+          "state": {
+            "type": "bottom"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:fence_gates",
+          "state": {
+            "open": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:trapdoors",
+          "state": {
+            "open": "false",
+            "half": "bottom"
+          }
+        }
+      }
+    }
+  ]
+}

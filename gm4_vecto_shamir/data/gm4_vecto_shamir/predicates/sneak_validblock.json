@@ -19,9 +19,6 @@
     "terms": [
       {
         "condition": "minecraft:location_check",
-        "offsetX": 0,
-        "offsetY": 0,
-        "offsetZ": 0,
         "predicate": {
           "block": {
             "tag": "minecraft:rails"
@@ -35,10 +32,32 @@
         "offsetZ": 0,
         "predicate": {
           "block": {
-            "tag": "gm4_vecto_shamir:boat"
+            "tag": "minecraft:ice"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 0,
+        "offsetY": -1,
+        "offsetZ": 0,
+        "predicate": {
+          "fluid": {
+            "tag": "minecraft:water"
           }
         }
       }
     ]
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "fluid": {
+          "tag": "minecraft:water"
+        }
+      }
+    }
   }
 ]

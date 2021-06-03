@@ -1,0 +1,99 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "gm4_vecto_shamir:solid_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": 0,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "block": "minecraft:lily_pad"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:slabs",
+          "state": {
+            "half": "top"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:stairs",
+          "state": {
+            "half": "top"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:stairs",
+          "state": {
+            "facing": "east"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:trapdoors",
+          "state": {
+            "half": "top",            
+            "open": "false"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "minecraft:trapdoors",
+          "state": {
+            "facing":"west",            
+            "open": "true"
+          }
+        }
+      }
+    }
+  ]
+}

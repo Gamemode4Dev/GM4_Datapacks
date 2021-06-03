@@ -1,0 +1,12 @@
+{
+  "values": [
+    "#gm4:full_collision",
+    "#minecraft:anvil",
+    "minecraft:cauldron",
+    "minecraft:composter",
+    "minecraft:hopper",
+    "minecraft:grindstone",
+    "minecraft:piston",
+    "minecraft:sticky_piston"
+  ]
+}

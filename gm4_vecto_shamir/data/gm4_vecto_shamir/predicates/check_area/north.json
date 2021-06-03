@@ -1,0 +1,30 @@
+[
+  {
+    "condition": "minecraft:reference",
+    "name": "gm4_vecto_shamir:check_solid/south"
+  },
+  {
+    "condition": "minecraft:reference",
+    "name": "gm4_vecto_shamir:check_water/west"
+  },
+  {
+    "condition": "minecraft:reference",
+    "name": "gm4_vecto_shamir:check_water/east"
+  },
+  {
+    "condition": "minecraft:reference",
+    "name": "gm4_vecto_shamir:check_water/northwest"
+  },
+  {
+    "condition": "minecraft:reference",
+    "name": "gm4_vecto_shamir:check_water/north"
+  },
+  {
+    "condition": "minecraft:reference",
+    "name": "gm4_vecto_shamir:check_water/northeast"
+  },
+  {
+    "condition": "minecraft:reference",
+    "name": "gm4_vecto_shamir:check_area/no_collision"
+  }
+]

@@ -1,56 +1,19 @@
 [
   {
-    "condition": "minecraft:reference",
-    "name": "gm4_vecto_shamir:area_no_collision"
+    "condition": "minecraft:location_check",
+    "offsetX": -1,
+    "offsetY": 0,
+    "offsetZ": -1,
+    "predicate": {
+      "block": {
+        "tag": "gm4_vecto_shamir:no_collision_boat"
+      }
+    }
   },
   {
     "condition": "minecraft:location_check",
     "offsetX": -1,
-    "offsetY": -1,
-    "offsetZ": 0,
-    "predicate": {
-      "block": {
-        "tag": "gm4:full_collision"
-      }
-    }
-  },
-  {
-    "condition": "minecraft:location_check",
-    "offsetX": 0,
-    "offsetY": -1,
-    "offsetZ": -1,
-    "predicate": {
-      "block": {
-        "tag": "gm4_vecto_shamir:no_collision_boat"
-      }
-    }
-  },
-  {
-    "condition": "minecraft:location_check",
-    "offsetX": 0,
-    "offsetY": -1,
-    "offsetZ": -1,
-    "predicate": {
-      "block": {
-        "tag": "gm4_vecto_shamir:no_collision_boat"
-      }
-    }
-  },
-  {
-    "condition": "minecraft:location_check",
-    "offsetX": 1,
-    "offsetY": -1,
-    "offsetZ": -1,
-    "predicate": {
-      "block": {
-        "tag": "gm4_vecto_shamir:no_collision_boat"
-      }
-    }
-  },
-  {
-    "condition": "minecraft:location_check",
-    "offsetX": 1,
-    "offsetY": -1,
+    "offsetY": 0,
     "offsetZ": 0,
     "predicate": {
       "block": {
@@ -60,8 +23,74 @@
   },
   {
     "condition": "minecraft:location_check",
+    "offsetX": -1,
+    "offsetY": 0,
+    "offsetZ": 1,
+    "predicate": {
+      "block": {
+        "tag": "gm4_vecto_shamir:no_collision_boat"
+      }
+    }
+  },
+  {
+    "condition": "minecraft:location_check",
+    "offsetX": 0,
+    "offsetY": 0,
+    "offsetZ": -1,
+    "predicate": {
+      "block": {
+        "tag": "gm4_vecto_shamir:no_collision_boat"
+      }
+    }
+  },
+  {
+    "condition": "minecraft:location_check",
+    "offsetX": 0,
+    "offsetY": 0,
+    "offsetZ": 0,
+    "predicate": {
+      "block": {
+        "tag": "gm4_vecto_shamir:no_collision_boat"
+      }
+    }
+  },
+  {
+    "condition": "minecraft:location_check",
+    "offsetX": 0,
+    "offsetY": 0,
+    "offsetZ": 1,
+    "predicate": {
+      "block": {
+        "tag": "gm4_vecto_shamir:no_collision_boat"
+      }
+    }
+  },
+  {
+    "condition": "minecraft:location_check",
     "offsetX": 1,
-    "offsetY": -1,
+    "offsetY": 0,
+    "offsetZ": -1,
+    "predicate": {
+      "block": {
+        "tag": "gm4_vecto_shamir:no_collision_boat"
+      }
+    }
+  },
+  {
+    "condition": "minecraft:location_check",
+    "offsetX": 1,
+    "offsetY": 0,
+    "offsetZ": 0,
+    "predicate": {
+      "block": {
+        "tag": "gm4_vecto_shamir:no_collision_boat"
+      }
+    }
+  },
+  {
+    "condition": "minecraft:location_check",
+    "offsetX": 1,
+    "offsetY": 0,
     "offsetZ": 1,
     "predicate": {
       "block": {
