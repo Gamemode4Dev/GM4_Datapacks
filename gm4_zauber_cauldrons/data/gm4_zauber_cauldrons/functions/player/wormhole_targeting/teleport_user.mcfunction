@@ -7,8 +7,8 @@
 # Keep testing whether this is still necessary in future versions.
 # Note that this would not be an issue in vanilla zauber, however, zauber liquids allows the teleportation of non-player entities.
 
-# teleport
-tp @s ~.5 ~.7 ~.5
-
 # remove tag
 tag @s remove gm4_zc_wormhole_consumer
+
+# teleport
+tp @s ~.5 ~.7 ~.5
