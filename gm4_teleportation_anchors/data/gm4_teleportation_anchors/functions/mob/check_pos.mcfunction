@@ -1,7 +1,7 @@
 # @s = endermen and shulkers near a teleporation jammer
 # run from mob/check_movement_type
 
-execute unless score @s gm4_ta_pos_x matches -2147483648.. run function gm4_teleportation_anchors:mob/track_movement/initialize_pos
+execute unless score @s gm4_ta_pos_x = @s gm4_ta_pos_x run function gm4_teleportation_anchors:mob/track_movement/initialize_pos
 
 function gm4_teleportation_anchors:mob/track_movement/check_dx
 execute unless entity @s[tag=gm4_ta_teleported] run function gm4_teleportation_anchors:mob/track_movement/check_dz
