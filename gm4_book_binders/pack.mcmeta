@@ -19,7 +19,7 @@
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
-        "Creator": [
+        "Creators": [
             [
                 "Bloo",
                 "https://twitter.com/Bloo_dev"
@@ -27,6 +27,12 @@
             [
                 "Sparks",
                 "https://twitter.com/SparksTheGamer"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
             ]
         ]
     }

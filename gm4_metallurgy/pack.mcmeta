@@ -13,7 +13,8 @@
     "module_name": "Metallurgy",
     "module_id": "metallurgy",
     "libraries": [
-        "lib_player_heads"
+        "lib_player_heads",
+        "lib_lore"
     ],
     "hidden":false,
     "site_description": "Custom ores and custom enchants for your tools and armour!",
@@ -29,7 +30,7 @@
         "fulcio_shamir"
     ],
     "credits": {
-        "Creator": [
+        "Creators": [
             [
                 "Sparks",
                 "https://www.twitter.com/SparksTheGamer"

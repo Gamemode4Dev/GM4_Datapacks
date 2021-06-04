@@ -22,7 +22,7 @@
         "scuba_gear"
     ],
     "credits": {
-        "Creator": [
+        "Creators": [
             [
                 "Wumpacraft",
                 "https://www.twitter.com/wumpacraft"
@@ -40,6 +40,11 @@
             [
                 "Alluet",
                 "https://github.com/alluet"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "Hozz"
             ]
         ]
     }

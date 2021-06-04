@@ -20,7 +20,7 @@
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
-        "Creator": [
+        "Creators": [
             [
                 "Sparks",
                 "https://www.twitter.com/SparksTheGamer"
@@ -32,6 +32,12 @@
             [
                 "SpecialBuilder32",
                 "https://www.twitter.com/specialbuilder"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
             ]
         ]
     }
