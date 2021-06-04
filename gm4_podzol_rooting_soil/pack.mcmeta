@@ -1,28 +1,35 @@
 {
-  "pack":{
-    "pack_format":6,
+  "pack": {
+    "pack_format": 6,
     "description": [
-            "Podzol Rooting Soil",
-            "\n",
-            {
-                "text": "Gamemode 4 for 1.16",
-                "color": "#4AA0C7"
-            }
-        ]
+      "Podzol Rooting Soil",
+      "\n",
+      {
+        "text": "Gamemode 4 for 1.16",
+        "color": "#4AA0C7"
+      }
+    ]
   },
-  "module_name":"Podzol Rooting Soil",
-  "module_id":"podzol_rooting_soil",
-  "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-  "site_description":"Saplings self-plant on Podzol",
-  "site_categories":[],
-  "wiki_link":"https://wiki.gm4.co/wiki/Podzol_Rooting_Soil",
-  "required_modules":[
-  ],
-  "recommended_modules":[
-  ],
-  "credits":{
-    "Creator":[
-      ["Bloo","https://twitter.com/Bloo_dev"]
+  "module_name": "Podzol Rooting Soil",
+  "module_id": "podzol_rooting_soil",
+  "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+  "site_description": "Saplings self-plant on Podzol",
+  "site_categories": [],
+  "wiki_link": "https://wiki.gm4.co/wiki/Podzol_Rooting_Soil",
+  "required_modules": [],
+  "recommended_modules": [],
+  "credits": {
+    "Creator": [
+      [
+        "Bloo",
+        "https://twitter.com/Bloo_dev"
+      ]
+    ],
+    "Icon Design": [
+      [
+        "BluePsychoRanger",
+        "https://www.twitter.com/blupsychoranger"
+      ]
     ]
   }
 }

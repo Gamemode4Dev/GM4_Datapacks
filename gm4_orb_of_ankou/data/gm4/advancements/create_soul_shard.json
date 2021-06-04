@@ -8,14 +8,14 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Was it Worth the Sacrifice?",
-        {"translate": "advancement.gm4.obtain_soul_shard.title"}
+        {"translate": "advancement.gm4.orb_of_ankou.obtain_soul_shard.title"}
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Forge a soul shard",
-        {"translate": "advancement.gm4.obtain_soul_shard.description"}
+        "Forge a Soul Shard",
+        {"translate": "advancement.gm4.orb_of_ankou.obtain_soul_shard.description"}
       ],
       "color": "gray"
     }

@@ -18,7 +18,7 @@
 		"Liquid Tanks"
 	],
 	"video_link":"",
-	"wiki_link":"wiki.gm4.co/wiki/Liquid_Tanks/Washing_Tanks",
+	"wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Washing_Tanks",
 	"required_modules":[
 		"liquid_tanks"
 	],
@@ -32,6 +32,12 @@
 				"Misode",
 				"https://twitter.com/misode_"
 			]
-		]
+		],
+        "Icon Design": [
+            [
+                "BluePsychoRanger",
+                "https://twitter.com/BluPsychoRanger"
+            ]
+        ]
 	}
 }

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="lumos_shamir" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#DBECF4;}
+	.st2{fill:#4AA0C7;}
+	.st3{fill:#A1CEE2;}
+	.st4{fill:#3D83A3;}
+	.st5{fill:#7FBCD7;}
+</style>
+<rect x="0" y="0" class="st0" width="512" height="512"/>
+<g id="Icon">
+	<path id="Light" class="st1" d="M258,154.52c72.1,0,130.54,44.06,130.54,98.42c0,54.35-58.44,98.41-130.54,98.41
+		s-130.54-44.06-130.54-98.41C127.46,198.58,185.9,154.52,258,154.52z"/>
+	<g id="Pickaxe">
+		<g>
+			<polygon class="st2" points="338.95,276.9 353.26,262.59 372.77,282.1 358.45,296.41 			"/>
+			<polygon class="st2" points="257.86,225.1 300.83,182.12 372.48,253.76 329.5,296.74 			"/>
+			<polygon class="st2" points="143.24,253.75 214.88,182.1 257.86,225.08 186.22,296.73 			"/>
+			
+				<rect x="217.32" y="184.58" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -83.656 248.2625)" class="st2" width="81.07" height="81.07"/>
+			
+				<rect x="146.73" y="270.56" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -151.8314 194.8113)" class="st2" width="25.03" height="20.24"/>
+			<polygon class="st2" points="229.17,282.45 257.83,253.79 286.49,282.45 257.83,311.12 			"/>
+			<polygon class="st2" points="229.17,311.08 257.83,282.43 286.5,311.08 257.83,339.75 			"/>
+			<polygon class="st2" points="229.17,339.75 257.83,311.08 286.5,339.75 257.83,368.41 			"/>
+			<polygon class="st2" points="229.17,368.39 257.83,339.73 286.5,368.39 257.83,397.05 			"/>
+			<polygon class="st2" points="229.16,397.08 257.82,368.42 286.49,397.08 257.82,425.74 			"/>
+			<polygon class="st2" points="229,425.77 257.67,397.1 286.33,425.77 257.67,454.43 			"/>
+			<polygon class="st2" points="228.9,454.67 257.56,426 286.23,454.67 257.56,483.34 			"/>
+		</g>
+		<rect x="228.88" y="253.75" class="st2" width="57.88" height="28.71"/>
+		<rect x="228.88" y="260.08" class="st3" width="57.88" height="16.47"/>
+	</g>
+	<g id="Flame_Particles">
+		<g id="Flame">
+			<rect x="356.41" y="191.29" class="st3" width="5.92" height="11.83"/>
+			<rect x="362.33" y="173.49" class="st3" width="5.91" height="35.59"/>
+			<rect x="362.33" y="185.37" class="st3" width="11.83" height="23.71"/>
+			<rect x="356.41" y="197.25" class="st3" width="23.72" height="5.92"/>
+			<rect x="356.41" y="185.37" class="st2" width="5.92" height="5.92"/>
+			<rect x="356.41" y="203.17" class="st2" width="5.92" height="5.91"/>
+			<rect x="374.21" y="203.17" class="st2" width="5.92" height="5.91"/>
+			<rect x="374.21" y="191.29" class="st2" width="5.92" height="5.91"/>
+			<rect x="368.25" y="173.49" class="st2" width="5.91" height="11.83"/>
+			<rect x="362.33" y="167.58" class="st2" width="5.91" height="5.92"/>
+			<rect x="362.33" y="191.29" class="st0" width="5.91" height="11.83"/>
+			<rect x="362.33" y="197.25" class="st0" width="11.83" height="5.92"/>
+			<rect x="368.25" y="167.58" class="st4" width="5.91" height="5.92"/>
+			<rect x="362.33" y="161.66" class="st4" width="5.91" height="5.92"/>
+		</g>
+		<g id="Flame_1_">
+			<rect x="145.56" y="190.93" class="st3" width="5.05" height="10.09"/>
+			<rect x="150.61" y="175.84" class="st3" width="5.05" height="30.19"/>
+			<rect x="150.61" y="185.88" class="st3" width="10.09" height="20.14"/>
+			<rect x="145.56" y="195.93" class="st3" width="20.14" height="5.05"/>
+			<rect x="145.56" y="185.88" class="st2" width="5.05" height="5.05"/>
+			<rect x="145.56" y="200.97" class="st2" width="5.05" height="5.05"/>
+			<rect x="160.65" y="200.97" class="st2" width="5.05" height="5.05"/>
+			<rect x="160.65" y="190.93" class="st2" width="5.05" height="5.05"/>
+			<rect x="155.61" y="175.84" class="st2" width="5.05" height="10.1"/>
+			<rect x="150.61" y="170.79" class="st2" width="5.05" height="5.05"/>
+			<rect x="150.61" y="190.93" class="st0" width="5.05" height="10.09"/>
+			<rect x="150.61" y="195.93" class="st0" width="10.09" height="5.05"/>
+			<rect x="155.61" y="170.79" class="st4" width="5.05" height="5.05"/>
+			<rect x="150.61" y="165.74" class="st4" width="5.05" height="5.05"/>
+		</g>
+		<g id="Flame_3_">
+			<rect x="194.77" y="338.2" class="st3" width="5.2" height="10.45"/>
+			<rect x="199.97" y="322.55" class="st3" width="5.2" height="31.35"/>
+			<rect x="199.97" y="333" class="st3" width="10.45" height="20.9"/>
+			<rect x="194.77" y="343.45" class="st3" width="20.91" height="5.21"/>
+			<rect x="194.77" y="333" class="st2" width="5.2" height="5.21"/>
+			<rect x="194.77" y="348.7" class="st2" width="5.2" height="5.2"/>
+			<rect x="210.47" y="348.7" class="st2" width="5.2" height="5.2"/>
+			<rect x="210.47" y="338.2" class="st2" width="5.2" height="5.2"/>
+			<rect x="205.22" y="322.55" class="st2" width="5.2" height="10.45"/>
+			<rect x="199.97" y="317.28" class="st2" width="5.2" height="5.21"/>
+			<rect x="199.97" y="338.2" class="st0" width="5.2" height="10.45"/>
+			<rect x="199.97" y="343.45" class="st0" width="10.45" height="5.21"/>
+			<rect x="205.22" y="317.28" class="st4" width="5.2" height="5.21"/>
+			<rect x="199.97" y="312.09" class="st4" width="5.2" height="5.19"/>
+		</g>
+	</g>
+</g>
+<g id="Shamir">
+	<rect id="Cast" x="224.14" y="53.15" class="st4" width="67.78" height="67.79"/>
+	<rect id="Band" x="217.61" y="74.21" class="st5" width="80.18" height="22.19"/>
+</g>
+<g id="Shamir_Particles">
+	<g>
+		<polygon class="st5" points="311.95,139.74 313.49,133.07 320.16,134.62 318.63,141.27 		"/>
+		<polygon class="st5" points="318.02,143.95 318.65,141.27 321.33,141.88 320.7,144.56 		"/>
+		<polygon class="st5" points="320.26,134.67 320.86,131.99 323.54,132.61 322.94,135.3 		"/>
+		<polygon class="st5" points="310.91,132.54 311.54,129.86 314.22,130.48 313.59,133.16 		"/>
+		<polygon class="st5" points="308.73,141.8 309.36,139.11 312.04,139.74 311.41,142.42 		"/>
+	</g>
+	<g>
+		<polygon class="st5" points="193.53,131.59 196.38,120.99 206.97,123.82 204.13,134.42 		"/>
+		<polygon class="st5" points="202.96,138.63 204.09,134.39 208.33,135.53 207.19,139.77 		"/>
+		<polygon class="st5" points="206.91,123.85 208.03,119.61 212.28,120.75 211.14,124.98 		"/>
+		<polygon class="st5" points="192.06,119.81 193.2,115.57 197.43,116.71 196.3,120.94 		"/>
+		<polygon class="st5" points="188.1,134.68 189.25,130.44 193.48,131.58 192.35,135.81 		"/>
+	</g>
+	<g>
+		<polygon class="st5" points="181.37,55.54 185.03,49.76 190.8,53.43 187.14,59.2 		"/>
+		<polygon class="st5" points="185.72,61.52 187.19,59.19 189.51,60.67 188.04,63 		"/>
+		<polygon class="st5" points="190.83,53.45 192.3,51.13 194.63,52.6 193.14,54.93 		"/>
+		<polygon class="st5" points="182.73,48.31 184.21,45.98 186.54,47.46 185.06,49.78 		"/>
+		<polygon class="st5" points="177.57,56.37 179.04,54.04 181.36,55.52 179.89,57.84 		"/>
+	</g>
+	<g>
+		<polygon class="st5" points="262.38,30.14 263.28,27.47 265.95,28.34 265.04,31.01 		"/>
+		
+			<rect x="260.97" y="24.3" transform="matrix(0.3086 -0.9512 0.9512 0.3086 156.9512 267.3423)" class="st5" width="2.8" height="2.81"/>
+		<polygon class="st5" points="265.95,28.26 266.81,25.6 269.49,26.47 268.59,29.14 		"/>
+		<polygon class="st5" points="258.83,31.88 259.68,29.21 262.35,30.08 261.49,32.75 		"/>
+		
+			<rect x="264.53" y="31.36" transform="matrix(0.3083 -0.9513 0.9513 0.3083 152.7752 275.6348)" class="st5" width="2.8" height="2.81"/>
+	</g>
+	<g>
+		<polygon class="st5" points="325.22,70.01 332.07,69.93 332.12,76.77 325.31,76.84 		"/>
+		<polygon class="st5" points="332.12,76.78 334.9,76.74 334.92,79.5 332.15,79.53 		"/>
+		<polygon class="st5" points="332.04,67.19 334.78,67.16 334.81,69.91 332.07,69.94 		"/>
+		<polygon class="st5" points="322.5,67.34 325.23,67.31 325.26,70.07 322.52,70.09 		"/>
+		<polygon class="st5" points="322.61,76.88 325.35,76.85 325.37,79.6 322.64,79.64 		"/>
+	</g>
+</g>
+</svg>
