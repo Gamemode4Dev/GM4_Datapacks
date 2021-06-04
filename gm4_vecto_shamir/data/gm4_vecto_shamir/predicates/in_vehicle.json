@@ -3,7 +3,7 @@
   "entity": "this",
   "predicate": {
     "vehicle": {
-      "nbt": "{Tags:[\"gm4_ml_vecto_vehicle\"]}"
+      "nbt": "{Tags:[\"gm4_vecto_vehicle\"]}"
     }
   }
 }

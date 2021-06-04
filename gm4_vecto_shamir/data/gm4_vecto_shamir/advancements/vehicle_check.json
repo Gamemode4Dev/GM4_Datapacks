@@ -8,7 +8,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_ml_vecto_active\"]}"
+              "nbt": "{Tags:[\"gm4_vecto_active\"]}"
             }
           },
           {
