@@ -4,8 +4,8 @@
 # new smart interface handles the logic for whether there is enough liquid to fill the bottle and interrupts if not enough
 
 #all potions have the same liquid-amount rules, so we'll process here 
- execute unless block ~ ~-1 ~ soul_fire run scoreboard players set $item_value gm4_lt_value -1
- execute if block ~ ~-1 ~ soul_fire run scoreboard players set $item_value gm4_lt_value -9
+execute unless block ~ ~-1 ~ soul_fire run scoreboard players set $item_value gm4_lt_value -1
+execute if block ~ ~-1 ~ soul_fire run scoreboard players set $item_value gm4_lt_value -9
 
 #harming
 execute if entity @s[tag=gm4_lt_zauber_harming_potion] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_zauber_liquids:item_fill/zauber_harming_potion
@@ -30,5 +30,3 @@ execute if entity @s[tag=gm4_lt_zauber_strength_potion] if score $stack_size gm4
 
 #wormhole
 execute if entity @s[tag=gm4_lt_zauber_wormhole_potion] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_zauber_liquids:item_fill/zauber_wormhole_potion
-
-# execute if block ~ ~-1 ~ soul_fire if score past_value gm4_lt_value = @s gm4_lt_value run scoreboard players add @s gm4_lt_value 8

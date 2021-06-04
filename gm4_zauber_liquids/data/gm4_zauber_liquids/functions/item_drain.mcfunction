@@ -1,11 +1,5 @@
 # Called by Liquid Tank's item_drain.json function tag
 
-# fill tank depending on type
-# execute store result score remaining_sips gm4_zl_data run data get block ~ ~ ~ Items[{Slot:0b}].tag.gm4_zauber_cauldrons.bottle.sips 1
-# execute if entity remaining_sips gm4_zl_data matches 0 run scoreboard players set remaining_sips gm4_zl_data 1
-# scoreboard players set max_capacity_to_fit_potion gm4_zl_data 300
-# scoreboard players operation max_capacity_to_fit_potion gm4_zl_data -= remaining_sips gm4_zl_data
-
 # new smart interface handles the logic for whether there is enough space in the tank interrupts if not enough
 
 execute if entity @s[tag=gm4_lt_zauber_harming_potion] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",tag:{gm4_zauber_cauldrons:{item:"potion",type:"instant_damage"}}}} run function gm4_zauber_liquids:item_drain/zauber_potion
