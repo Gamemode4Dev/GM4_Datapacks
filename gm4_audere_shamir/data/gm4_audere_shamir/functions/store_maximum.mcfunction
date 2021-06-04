@@ -1,5 +1,5 @@
+# @s = Audere tool item
 # run from #gm4_metallurgy:apply_band
-#@s = Audere tool item
 
 execute if entity @s[nbt={Item:{id:"minecraft:wooden_shovel"}}] run data modify entity @s Item.tag.Item.tag.gm4_audere_shamir.max_durability set value 59
 execute if entity @s[nbt={Item:{id:"minecraft:wooden_pickaxe"}}] run data modify entity @s Item.tag.Item.tag.gm4_audere_shamir.max_durability set value 59

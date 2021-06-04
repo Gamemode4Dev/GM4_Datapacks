@@ -1,5 +1,6 @@
-#run from main
-#@s = players holding an Audere tool
+# @s = players holding an Audere tool
+# at @s
+# run from main
 
 scoreboard players set $tool_current_damage gm4_ml_data 0
 scoreboard players set $tool_max_damage gm4_ml_data 0
