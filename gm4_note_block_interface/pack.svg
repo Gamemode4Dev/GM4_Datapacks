@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="note_block_interface" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#4AA0C7;}
+	.st2{enable-background:new    ;}
+	.st3{fill:#A1CEE2;}
+</style>
+<rect x="0" y="0" class="st0" width="512" height="512"/>
+<g id="Icon">
+	<g id="Note_Blocks">
+		<g id="block">
+			<path id="rect4153" class="st1" d="M329.53,275.73l72.89-40.53l72.86,40.53v86.15l-72.86,40.52l-72.89-40.52L329.53,275.73
+				L329.53,275.73z"/>
+		</g>
+		<g id="block_1_">
+			<path id="rect4153_1_" class="st1" d="M38.05,275.77l72.88-40.51l72.88,40.51v86.15l-72.88,40.53l-72.88-40.53
+				C38.05,361.92,38.05,275.77,38.05,275.77z"/>
+		</g>
+		<g id="block_2_">
+			<path id="rect4153_2_" class="st1" d="M184.02,179.02l72.88-40.51l72.9,40.51v86.15l-72.9,40.53l-72.88-40.53L184.02,179.02
+				L184.02,179.02z"/>
+		</g>
+	</g>
+	<g id="Notes">
+		<g class="st2">
+			<path class="st3" d="M260.74,125.61V97.9h5.55v27.71H260.74L260.74,125.61z M266.3,92.35h22.18v5.55H266.3V92.35z M266.3,125.61
+				h16.63v5.55H266.3V125.61z M282.93,125.61v-16.63h-5.55v-5.54h11.11v22.17C288.48,125.61,282.93,125.61,282.93,125.61z"/>
+		</g>
+		<g class="st2">
+			<path class="st3" d="M431.16,206.85h-16.63v16.63h16.63v5.55h-22.18v-38.81h22.18v5.54h-16.63v5.55h16.63V206.85z M431.16,201.31
+				v-5.55h5.55v5.55H431.16z M436.72,206.85v16.63h-5.55v-16.63H436.72z"/>
+		</g>
+		<g class="st2">
+			<path class="st3" d="M134.07,195.99v33.25h-5.54v-22.16H111.9v22.16h-5.54v-33.25h5.54v5.54h16.63v-5.54H134.07z M111.9,190.45
+				h16.63v5.54H111.9C111.9,195.99,111.9,190.45,111.9,190.45z"/>
+		</g>
+		<g id="note_2_">
+			<rect x="227.06" y="119.62" class="st3" width="17.75" height="11.45"/>
+			<rect x="238.52" y="85.85" class="st3" width="6.3" height="41.22"/>
+			<rect x="241.38" y="85.85" class="st3" width="9.17" height="10.88"/>
+			<rect x="249.97" y="91.57" class="st3" width="5.15" height="10.88"/>
+		</g>
+		<g id="note_1_">
+			<rect x="373.05" y="218.1" class="st3" width="17.73" height="11.43"/>
+			<rect x="384.49" y="184.31" class="st3" width="6.3" height="41.23"/>
+			<rect x="387.37" y="184.31" class="st3" width="9.15" height="10.88"/>
+			<rect x="395.96" y="190.04" class="st3" width="5.14" height="10.87"/>
+		</g>
+		<g id="note">
+			<rect x="71.93" y="218.66" class="st3" width="17.75" height="11.45"/>
+			<rect x="83.38" y="184.88" class="st3" width="6.3" height="41.22"/>
+			<rect x="86.25" y="184.88" class="st3" width="9.16" height="10.87"/>
+			<rect x="94.83" y="190.61" class="st3" width="5.15" height="10.88"/>
+		</g>
+	</g>
+</g>
+</svg>

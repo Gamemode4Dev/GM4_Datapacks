@@ -24,7 +24,7 @@
 	],
 	"recommended_modules": [],
 	"credits": {
-		"Creator": [
+		"Creators": [
 			[
 				"InternetAlien",
 				""
@@ -39,6 +39,12 @@
 				"misode",
 				""
 			]
-		]
+		],
+        "Icon Design": [
+            [
+                "BluePsychoRanger",
+                "https://www.twitter.com/BluPsychoRanger"
+            ]
+        ]
 	}
 }

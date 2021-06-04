@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="apple_trees" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#DBECF4;}
+	.st2{fill:#3D83A3;}
+	.st3{fill:#4AA0C7;}
+	.st4{fill:none;}
+</style>
+<rect class="st0" width="512" height="512"/>
+<g id="Icon">
+	<rect id="Ground" y="306.36" class="st1" width="512" height="205.64"/>
+	<g id="Apples">
+		<g id="Apple">
+			<rect x="378.48" y="239.52" class="st2" width="34.38" height="14.33"/>
+			<rect x="381.35" y="236.65" class="st2" width="28.65" height="22.92"/>
+			<rect x="395.67" y="228.06" class="st2" width="5.73" height="2.87"/>
+			<rect x="387.08" y="233.79" class="st2" width="17.19" height="31.51"/>
+			<rect x="384.21" y="236.65" class="st2" width="22.92" height="25.79"/>
+			<rect x="395.67" y="228.06" class="st2" width="2.87" height="8.59"/>
+			<rect x="398.53" y="225.19" class="st2" width="2.86" height="5.73"/>
+		</g>
+		<g id="Apple_1_">
+			<rect x="118.44" y="239.52" class="st2" width="34.37" height="14.33"/>
+			<rect x="121.3" y="236.65" class="st2" width="28.64" height="22.92"/>
+			<rect x="135.62" y="228.06" class="st2" width="5.73" height="2.87"/>
+			<rect x="127.03" y="233.79" class="st2" width="17.19" height="31.51"/>
+			<rect x="124.17" y="236.65" class="st2" width="22.92" height="25.79"/>
+			<rect x="135.63" y="228.06" class="st2" width="2.86" height="8.59"/>
+			<rect x="138.49" y="225.19" class="st2" width="2.86" height="5.73"/>
+		</g>
+		<g id="Apple_2_">
+			
+				<rect x="355.15" y="367.35" transform="matrix(0.954 -0.2999 0.2999 0.954 -95.6794 130.9378)" class="st2" width="47.15" height="19.65"/>
+			
+				<rect x="359.7" y="363.29" transform="matrix(0.954 -0.2999 0.2999 0.954 -96.1998 131.2072)" class="st2" width="39.29" height="31.43"/>
+			
+				<rect x="363.98" y="353.89" transform="matrix(0.954 -0.2999 0.2999 0.954 -89.7832 126.713)" class="st2" width="7.86" height="3.93"/>
+			
+				<rect x="368.09" y="359.37" transform="matrix(0.954 -0.2999 0.2999 0.954 -96.7673 131.4594)" class="st2" width="23.58" height="43.22"/>
+			
+				<rect x="364.17" y="363.27" transform="matrix(0.954 -0.2999 0.2999 0.954 -96.7597 131.4597)" class="st2" width="31.43" height="35.37"/>
+			
+				<rect x="368.95" y="352.99" transform="matrix(0.9538 -0.3003 0.3003 0.9538 -90.6552 127.9562)" class="st2" width="3.93" height="11.78"/>
+			
+				<rect x="363.44" y="350.69" transform="matrix(0.9539 -0.3001 0.3001 0.9539 -89.5791 126.0034)" class="st2" width="3.93" height="7.86"/>
+		</g>
+		<g id="Apple_3_">
+			
+				<rect x="194.97" y="399.88" transform="matrix(0.1361 -0.9907 0.9907 0.1361 -245.7886 575.1788)" class="st2" width="23.86" height="57.28"/>
+			
+				<rect x="187.52" y="407" transform="matrix(0.1361 -0.9907 0.9907 0.1361 -248.3652 576.9268)" class="st2" width="38.19" height="47.74"/>
+			
+				<rect x="213.16" y="396.01" transform="matrix(0.1363 -0.9907 0.9907 0.1363 -210.8789 559.6992)" class="st2" width="4.78" height="9.55"/>
+			
+				<rect x="180.02" y="418.92" transform="matrix(0.1361 -0.9907 0.9907 0.1361 -251.0052 578.6373)" class="st2" width="52.51" height="28.64"/>
+			
+				<rect x="184.79" y="414.16" transform="matrix(0.1361 -0.9907 0.9907 0.1361 -251.0263 578.6331)" class="st2" width="42.96" height="38.19"/>
+			
+				<rect x="205.32" y="402.86" transform="matrix(0.1365 -0.9906 0.9906 0.1365 -217.9777 560.411)" class="st2" width="14.31" height="4.77"/>
+			
+				<rect x="213.44" y="396.35" transform="matrix(0.1363 -0.9907 0.9907 0.1363 -206.5492 560.575)" class="st2" width="9.55" height="4.78"/>
+		</g>
+	</g>
+	<g id="Apple_Tree">
+		<rect x="229.01" y="62.86" class="st2" width="50.93" height="305.57"/>
+		<rect x="229.65" y="174.26" class="st2" width="101.85" height="101.85"/>
+		<rect x="77.5" y="174.26" class="st3" width="356.5" height="50.93"/>
+		<rect x="127.15" y="123.34" class="st3" width="254.64" height="101.86"/>
+		<rect x="178.72" y="62.86" class="st3" width="203.08" height="101.85"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st4" d="M95.12,456.31h321.75c21.59,0,39.08-17.5,39.08-39.08V95.49c0-21.58-17.5-39.08-39.08-39.08H95.12
+			c-21.58,0-39.08,17.5-39.08,39.08v321.75C56.04,438.82,73.54,456.31,95.12,456.31z"/>
+	</g>
+</g>
+</svg>

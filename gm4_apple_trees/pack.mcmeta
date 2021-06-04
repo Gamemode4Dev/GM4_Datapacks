@@ -27,7 +27,7 @@
         "podzol_rooting_soil"
     ],
     "credits": {
-        "Creator": [
+        "Creators": [
             [
                 "Bloo",
                 "https://twitter.com/Bloo_dev"
@@ -39,6 +39,12 @@
             [
                 "SpecialBuilder",
                 "https://twitter.com/SpecialBuilder"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "BluePsychoRanger",
+                "https://twitter.com/BluPsychoRanger"
             ]
         ]
     }
