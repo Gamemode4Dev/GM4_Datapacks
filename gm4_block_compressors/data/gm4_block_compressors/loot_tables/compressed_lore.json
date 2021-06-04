@@ -17,7 +17,7 @@
                   [
                     "Compressed x",
                     {
-                      "nbt": "Item.tag.gm4_compressed.value",
+                      "nbt": "Item.tag.gm4_block_compressors.compression_level",
                       "storage": "gm4_block_compressors:temp/item_stack"
                     }
                   ],
@@ -27,7 +27,7 @@
                       [
                         " x",
                         {
-                          "nbt": "Item.tag.gm4_compressed.value",
+                          "nbt": "Item.tag.gm4_block_compressors.compression_level",
                           "storage": "gm4_block_compressors:temp/item_stack",
                           "interpret": true
                         }

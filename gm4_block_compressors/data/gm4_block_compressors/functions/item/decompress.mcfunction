@@ -1,17 +1,21 @@
-#@s = item entity to be decompressed
-#run from block_compressors:item
+# @s = item entity to be decompressed
+# at location of dropper (compressor)
+# run from block_compressors:item
+# decompresses item by setting count and restoring old item tag
 
-#set item count
-data modify entity @s Item.Count set from storage gm4_block_compressors:temp/item_stack Item.tag.gm4_compressed.value
+# code automatically handles archaic items, this newer old items
+data modify storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.compression_level set from storage gm4_block_compressors:temp/item_stack Item.tag.gm4_compressed.value
+data modify storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.old_tag set from storage gm4_block_compressors:temp/item_stack Item.tag.gm4_precompression_tag
 
-#grandfather previously compressed items in older formats without gm4_precompression_tag
-execute unless data entity @s Item.tag.gm4_precompression_tag run data remove entity @s Item.tag
+# set item count
+data modify storage gm4_block_compressors:temp/item_stack Item.Count set from storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.compression_level
 
-#if original had no data, remove tag entirely
-execute if entity @s[nbt={Item:{tag:{gm4_precompression_tag:"no_tag_data_to_preserve"}}}] run data remove entity @s Item.tag
+# remove tag if it does not have gm4_block_compressors.old_tag
+execute unless data storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.old_tag run data remove storage gm4_block_compressors:temp/item_stack Item.tag
 
-#restore original item tag, overwriting tags from compression
-data modify entity @s Item.tag set from entity @s Item.tag.gm4_precompression_tag
+# restore original item tag, overwriting tags from compression
+data modify storage gm4_block_compressors:temp/item_stack Item.tag set from storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.old_tag
+data modify entity @s Item set from storage gm4_block_compressors:temp/item_stack Item
 data merge entity @s {PickupDelay:4}
 
 playsound entity.firework_rocket.blast block @a ~ ~ ~ 1 .1
