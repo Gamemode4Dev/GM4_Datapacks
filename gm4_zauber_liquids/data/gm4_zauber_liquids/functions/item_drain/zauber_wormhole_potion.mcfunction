@@ -14,15 +14,15 @@ execute if score @s gm4_lt_value matches 0 run scoreboard players operation $mat
 
 # x math
 scoreboard players operation @s gm4_zl_warp_cx += $math gm4_zl_warp_cx
-scoreboard players operation @s gm4_zl_warp_cx /= #2 gm4_zl_data
+scoreboard players operation @s gm4_zl_warp_cx /= #2 gm4_lt_value
 
 # # y math
 scoreboard players operation @s gm4_zl_warp_cy += $math gm4_zl_warp_cy
-scoreboard players operation @s gm4_zl_warp_cy /= #2 gm4_zl_data
+scoreboard players operation @s gm4_zl_warp_cy /= #2 gm4_lt_value
 
 # # z math
 scoreboard players operation @s gm4_zl_warp_cz += $math gm4_zl_warp_cz
-scoreboard players operation @s gm4_zl_warp_cz /= #2 gm4_zl_data
+scoreboard players operation @s gm4_zl_warp_cz /= #2 gm4_lt_value
 
 # set dimension if first wormhole
 execute if score @s gm4_lt_value matches 0 run scoreboard players operation @s gm4_zl_warp_cd = $math gm4_zl_warp_cd
