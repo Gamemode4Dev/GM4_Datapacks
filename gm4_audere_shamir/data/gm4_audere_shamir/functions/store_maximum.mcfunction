@@ -1,8 +1,8 @@
 # @s = Audere tool item
 # run from #gm4_metallurgy:apply_band
 
-execute unless score $success gm4_ml_data matches 1.. store success score $success gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:netherite_pickaxe"}}] run data modify entity @s Item.tag.gm4_audere_shamir.max_durability set value 2031
 execute store success score $success gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:netherite_shovel"}}] run data modify entity @s Item.tag.gm4_audere_shamir.max_durability set value 2031
+execute unless score $success gm4_ml_data matches 1.. store success score $success gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:netherite_pickaxe"}}] run data modify entity @s Item.tag.gm4_audere_shamir.max_durability set value 2031
 execute unless score $success gm4_ml_data matches 1.. store success score $success gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:netherite_hoe"}}] run data modify entity @s Item.tag.gm4_audere_shamir.max_durability set value 2031
 execute unless score $success gm4_ml_data matches 1.. store success score $success gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:netherite_axe"}}] run data modify entity @s Item.tag.gm4_audere_shamir.max_durability set value 2031
 
