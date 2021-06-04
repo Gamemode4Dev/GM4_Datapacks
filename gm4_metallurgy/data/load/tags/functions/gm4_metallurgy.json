@@ -1,5 +1,6 @@
 {
     "values": [
+        "#load:gm4_player_heads",
         "#load:gm4_lore",
         "gm4_metallurgy:load"
     ]

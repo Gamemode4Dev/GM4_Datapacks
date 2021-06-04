@@ -13,6 +13,7 @@
     "module_name": "Metallurgy",
     "module_id": "metallurgy",
     "libraries": [
+        "lib_player_heads",
         "lib_lore"
     ],
     "hidden":false,
