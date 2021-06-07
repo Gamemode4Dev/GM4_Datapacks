@@ -2,6 +2,5 @@ execute unless score vertical_rails gm4_modules matches 1 run data modify storag
 scoreboard players set vertical_rails gm4_modules 1
 
 schedule function gm4_vertical_rails:main 1t
-schedule function gm4_vertical_rails:tick 1t
 
 #$moduleUpdateList

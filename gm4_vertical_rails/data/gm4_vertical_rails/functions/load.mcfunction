@@ -3,4 +3,3 @@ execute unless score gm4 load matches 1 run data modify storage gm4:log queue ap
 
 execute if score gm4_vertical_rails load matches 1 run function gm4_vertical_rails:init
 execute unless score gm4_vertical_rails load matches 1 run schedule clear gm4_vertical_rails:main
-execute unless score gm4_vertical_rails load matches 1 run schedule clear gm4_vertical_rails:tick
