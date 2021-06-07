@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:119,gm4_metallurgy:{stored_shamir:\"vigere\"}}"
+                            "tag": "{CustomModelData:119,SkullOwner:{Name:\"[Drop to Fix Item] gm4_vigere_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"vigere\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",
