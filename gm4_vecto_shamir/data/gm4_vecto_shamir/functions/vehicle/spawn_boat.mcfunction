@@ -21,3 +21,7 @@ execute if predicate gm4_vecto_shamir:biome/spruce run data merge entity @e[type
 
 # remove new tag
 tag @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] remove gm4_vecto_new_vehicle
+
+# effects
+execute if block ~ ~-1 ~ #minecraft:ice run playsound minecraft:entity.boat.paddle_land player @a ~ ~ ~ 2 1
+execute unless block ~ ~-1 ~ #minecraft:ice run playsound minecraft:entity.boat.paddle_water player @a ~ ~ ~ 2 1
