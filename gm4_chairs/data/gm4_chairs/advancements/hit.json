@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:pig",
-              "nbt": "{Tags:[\"gm4_chairs\"]}"
+              "team": "gm4_chairs"
             }
           }
         ]
