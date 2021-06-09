@@ -6,7 +6,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:saddle"
+          "name": "minecraft:saddle",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Tags:[\"gm4_chairs_ignore\"]}"
+            }
+          ]
         }
       ]
     }

@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "punch": {
+      "trigger": "minecraft:player_hurt_entity"
+    }
+  },
+  "rewards": {
+    "function": "gm4_chairs:hit"
+  }
+}
