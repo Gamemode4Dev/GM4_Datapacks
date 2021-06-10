@@ -12,7 +12,7 @@
     },
     "module_name": "Moneo Shamir",
     "module_id": "moneo_shamir",
-    "hidden":false,
+    "hidden": false,
     "libraries": [
         "lib_forceload"
     ],

@@ -12,7 +12,7 @@
     },
     "module_name": "Standard Crafting",
     "module_id": "standard_crafting",
-    "hidden":false,
+    "hidden": false,
     "site_description": "A crafting recipe pack that adds some nifty new recipes to the game.",
     "site_categories": [
         "Custom Crafting"
