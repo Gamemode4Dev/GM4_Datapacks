@@ -9,4 +9,3 @@ execute if score @s gm4_lt_util matches 4.. run scoreboard players remove @s gm4
 function gm4_liquid_tanks:liquid_value_update
 
 schedule function gm4_standard_liquids:util/honey_casting/scheduled_honey_rise 4t
-schedule function gm4_standard_liquids:util/honey_casting/honey_stop 64t
