@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="cooler_caves" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+	 style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#A1CEE2;}
+	.st2{fill:#7FBCD7;}
+	.st3{fill:#3D83A3;}
+	.st4{fill:#4AA0C7;}
+	.st5{fill:none;}
+</style>
+<rect class="st0" width="512" height="512"/>
+<g id="Icon">
+	<g id="Tree">
+		<polygon class="st1" points="354.4,125.4 354.4,163 273.5,163 273.5,312.3 235.9,312.3 235.9,163 156.1,163 156.1,125.4 
+			194.9,125.4 194.9,83.3 235.9,83.3 235.9,46.8 273.5,46.8 273.5,83.3 315.7,83.3 315.7,125.4 		"/>
+	</g>
+	<g id="Hill_Back">
+		<polygon class="st1" points="194.5,203.6 194.5,340.3 0,340.3 0,127.1 87.6,127.1 87.6,164.1 116.4,164.1 116.4,203.6 		"/>
+	</g>
+	<polygon class="st2" points="398,242.6 398,282.4 78.9,282.4 78.9,318.4 0,318.4 0,512 512,512 512,347.4 512,337.1 512,318.4 
+		512,282.4 512,242.6 	"/>
+	<g id="Hill_Front">
+		<polygon class="st3" points="235.2,437.1 235.2,512 196.5,512 196.5,512 108.6,512 108.6,512 0,512 0,359.6 116.9,359.6 
+			116.9,396.4 196.5,396.4 196.5,437.1 		"/>
+	</g>
+	<g id="Cave">
+		<rect x="174.1" y="281.8" class="st1" width="41.6" height="76.5"/>
+		<rect x="157.1" y="300.8" class="st1" width="78.1" height="19.9"/>
+		<rect x="195.2" y="320.2" class="st1" width="60.7" height="57.5"/>
+		<rect x="235.6" y="339.7" class="st1" width="142.3" height="76.5"/>
+		<rect x="257.2" y="396.6" class="st1" width="159.8" height="38.5"/>
+		<rect x="296.5" y="424.6" class="st1" width="60.6" height="47.1"/>
+		<rect x="372.7" y="357.7" class="st1" width="24.1" height="20.9"/>
+		<rect x="336.9" y="320.5" class="st1" width="20.9" height="23"/>
+		<rect x="274.5" y="320.1" class="st1" width="43.9" height="23.7"/>
+	</g>
+	<g id="Mineshaft">
+		<rect x="215.9" y="376.9" class="st3" width="201.6" height="19.5"/>
+		<rect x="274.6" y="390.8" class="st3" width="20.9" height="63.7"/>
+		<rect x="357.1" y="389.4" class="st3" width="20.9" height="62.8"/>
+		<rect x="278.4" y="434.7" class="st3" width="117.9" height="19.8"/>
+	</g>
+	<g id="Minecart_Chest">
+		<rect x="320.5" y="433" class="st4" width="3.1" height="2.1"/>
+		<rect x="332.8" y="433" class="st4" width="3.1" height="2.2"/>
+		<rect x="317.6" y="420.7" class="st3" width="22.4" height="12.4"/>
+		<rect x="320.6" y="415.7" class="st4" width="16.2" height="5.2"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st5" d="M61.1,500.6h390c26.2,0,47.4-21.2,47.4-47.4v-390c0-26.2-21.2-47.4-47.4-47.4h-390
+			c-26.2,0-47.4,21.2-47.4,47.4v390C13.8,479.4,35,500.6,61.1,500.6z"/>
+	</g>
+</g>
+</svg>

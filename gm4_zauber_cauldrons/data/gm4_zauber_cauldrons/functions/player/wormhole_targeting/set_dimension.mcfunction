@@ -11,7 +11,7 @@ execute if score forceloaded gm4_zc_data matches 0 run forceload remove ~ ~
 tp @s ~ ~ ~
 
 # teleport player to correct dimension
-tp @e[tag=gm4_zc_wormhole_consumer,limit=1] ~.5 ~.7 ~.5
+execute as @e[tag=gm4_zc_wormhole_consumer,limit=1] run function gm4_zauber_cauldrons:player/wormhole_targeting/teleport_user
 
 # play arrival animation
 particle minecraft:portal ~.5 ~1.3 ~.5 .25 .25 .25 0 100 force @a[distance=..32]

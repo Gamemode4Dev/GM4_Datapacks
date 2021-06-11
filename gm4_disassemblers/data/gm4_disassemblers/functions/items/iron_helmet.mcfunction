@@ -3,8 +3,8 @@ scoreboard players set max_items gm4_disassembler 5
 
 function gm4_disassemblers:calculate_percent
 
-execute if score result_items gm4_disassembler matches 1.. run replaceitem block ~ ~ ~ container.0 minecraft:iron_ingot
-execute if score result_items gm4_disassembler matches 2.. run replaceitem block ~ ~ ~ container.1 minecraft:iron_ingot
-execute if score result_items gm4_disassembler matches 3.. run replaceitem block ~ ~ ~ container.2 minecraft:iron_ingot
-execute if score result_items gm4_disassembler matches 4.. run replaceitem block ~ ~ ~ container.3 minecraft:iron_ingot
-execute if score result_items gm4_disassembler matches 5.. run replaceitem block ~ ~ ~ container.5 minecraft:iron_ingot
+execute if score result_items gm4_disassembler matches 1.. run item replace block ~ ~ ~ container.0 with minecraft:iron_ingot
+execute if score result_items gm4_disassembler matches 2.. run item replace block ~ ~ ~ container.1 with minecraft:iron_ingot
+execute if score result_items gm4_disassembler matches 3.. run item replace block ~ ~ ~ container.2 with minecraft:iron_ingot
+execute if score result_items gm4_disassembler matches 4.. run item replace block ~ ~ ~ container.3 with minecraft:iron_ingot
+execute if score result_items gm4_disassembler matches 5.. run item replace block ~ ~ ~ container.5 with minecraft:iron_ingot

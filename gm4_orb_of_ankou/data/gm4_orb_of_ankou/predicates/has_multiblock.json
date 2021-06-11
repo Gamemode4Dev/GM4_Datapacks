@@ -12,7 +12,7 @@
           "offsetZ": 0,
           "predicate": {
             "block": {
-              "block": "minecraft:obsidian"
+              "blocks": ["minecraft:obsidian"]
             }
           }
         }
@@ -26,7 +26,7 @@
           "offsetZ": 0,
           "predicate": {
             "block": {
-              "block": "minecraft:obsidian"
+              "blocks": ["minecraft:obsidian"]
             }
           }
         }
@@ -40,7 +40,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "block": "minecraft:obsidian"
+              "blocks": ["minecraft:obsidian"]
             }
           }
         }
@@ -54,7 +54,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "block": "minecraft:obsidian"
+              "blocks": ["minecraft:obsidian"]
             }
           }
         }
@@ -68,7 +68,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "block": "minecraft:obsidian"
+              "blocks": ["minecraft:obsidian"]
             }
           }
         }
@@ -82,7 +82,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "block": "minecraft:obsidian"
+              "blocks": ["minecraft:obsidian"]
             }
           }
         }
@@ -96,7 +96,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "block": "minecraft:obsidian"
+              "blocks": ["minecraft:obsidian"]
             }
           }
         }
@@ -110,7 +110,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "block": "minecraft:obsidian"
+              "blocks": ["minecraft:obsidian"]
             }
           }
         }

@@ -1,17 +1,21 @@
 {
     "pack": {
-        "pack_format": 6,
+        "pack_format": 7,
         "description": [
             "Metallurgy",
             "\n",
             {
-                "text": "Gamemode 4 for 1.16",
+                "text": "Gamemode 4 for 1.17",
                 "color": "#4AA0C7"
             }
         ]
     },
     "module_name": "Metallurgy",
     "module_id": "metallurgy",
+    "libraries": [
+        "lib_player_heads",
+        "lib_lore"
+    ],
     "hidden":false,
     "site_description": "Custom ores and custom enchants for your tools and armour!",
     "site_categories": [
@@ -26,7 +30,7 @@
         "fulcio_shamir"
     ],
     "credits": {
-        "Creator": [
+        "Creators": [
             [
                 "Sparks",
                 "https://www.twitter.com/SparksTheGamer"

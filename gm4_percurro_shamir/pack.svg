@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="percurro_shamir" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#4AA0C7;}
+	.st2{fill:#A1CEE2;}
+	.st3{fill:#7FBCD7;}
+	.st4{fill:#3D83A3;}
+</style>
+<rect class="st0" width="512" height="512"/>
+<g>
+	<g id="Player">
+		<g id="Player_1_" transform="matrix(1.9426492,0,0,1.9426492,-883.35386,-570.75799)">
+			<g id="g4575_1_" transform="matrix(0.68370278,0,0,0.68370278,13.705064,214.28782)">
+				<path id="path4213_1_" class="st1" d="M742.73,418.62l-3.27-14.55l-8.73,6.55l9.46,27.63l-8.54,8.02L718,443.72l-15.27-40.73
+					l18.91-14.55l-0.51-39.07l-9.68,17.99l-22.91-2.17l-3.95-8.33l5.04-19.69l13.09,5.09l12.27-21.28v-18.77l26.41-13.78
+					l26.74,14.11l0.16,33.06l-6.14,2.66l12.45,5.3l0.48,29.27l-13.82,9.45l1.45,20.37l15.84-0.72l9.62,5.08v18.19l-30.91,4
+					L742.73,418.62z"/>
+			</g>
+		</g>
+		<g id="Sword">
+			<polygon class="st1" points="61.59,337.78 71.72,323.26 86.22,333.39 76.09,347.91 			"/>
+			
+				<rect id="rect4152" x="47" y="219.97" transform="matrix(0.5729 -0.8196 0.8196 0.5729 -163.6351 143.0245)" class="st1" width="16.85" height="17.12"/>
+			
+				<rect id="rect4154" x="47.57" y="229.25" transform="matrix(0.5728 -0.8197 0.8197 0.5728 -170.892 147.721)" class="st1" width="17.41" height="17.12"/>
+			<polygon id="rect4156" class="st1" points="45.67,247.96 55.64,233.69 70.14,243.82 60.17,258.11 			"/>
+			<polygon id="rect4158" class="st1" points="48.48,256.88 58.28,242.86 72.32,252.66 62.51,266.71 			"/>
+			
+				<rect id="rect4160" x="52.87" y="255.53" transform="matrix(0.5727 -0.8198 0.8198 0.5727 -190.4326 163.1573)" class="st1" width="16.84" height="17.42"/>
+			<polygon id="rect4160-9" class="st1" points="50.78,274.54 60.43,260.73 75.4,271.19 65.75,285 			"/>
+			<polygon id="rect4160-4" class="st1" points="52.32,284.35 62.63,269.61 76.9,279.58 66.6,294.33 			"/>
+			<polygon id="rect4160-5" class="st1" points="50.5,298.35 64.08,278.91 83.73,292.66 70.16,312.07 			"/>
+			<polygon id="rect4160-4-9" class="st1" points="31.9,301.07 38.6,291.48 48.19,298.19 41.49,307.76 			"/>
+			<polygon id="rect4160-4-9-7" class="st1" points="40.79,300.34 47.49,290.73 61.99,300.87 55.29,310.47 			"/>
+			<polygon id="rect4160-4-9-2" class="st1" points="85.66,291.97 92.35,282.39 101.94,289.08 95.25,298.68 			"/>
+			<polygon id="rect4160-4-9-7-3" class="st1" points="72.58,299.18 83.21,283.97 92.8,290.69 82.17,305.9 			"/>
+			<polygon class="st1" points="77.97,311.25 79.6,320.47 73.19,330.1 63.55,323.03 61.94,314.02 65.52,308.82 68.42,304.56 
+				73.08,307.86 			"/>
+			
+				<rect id="rect4150_1_" x="44.31" y="210.38" transform="matrix(0.5727 -0.8197 0.8197 0.5727 -156.8846 137.1851)" class="st1" width="17.69" height="17.41"/>
+			<polygon class="st1" points="62.22,315.39 78.22,312.54 79.34,318.9 63.34,321.71 			"/>
+		</g>
+	</g>
+	<g id="Smoke_Particles">
+		<g id="Smoke_Particle_2_">
+			<rect x="429.62" y="354.79" class="st2" width="3.98" height="15.91"/>
+			<rect x="433.6" y="370.7" class="st2" width="31.86" height="3.98"/>
+			<rect x="429.62" y="354.79" class="st2" width="47.78" height="11.94"/>
+			<rect x="437.59" y="346.84" class="st2" width="39.81" height="23.86"/>
+			<rect x="433.6" y="350.82" class="st2" width="43.79" height="15.91"/>
+			<rect x="437.59" y="342.85" class="st2" width="7.96" height="35.82"/>
+			<rect x="445.55" y="378.67" class="st2" width="3.98" height="3.98"/>
+			<rect x="437.59" y="346.84" class="st2" width="27.87" height="27.85"/>
+			<rect x="449.53" y="374.68" class="st2" width="19.91" height="3.98"/>
+			<rect x="469.44" y="338.87" class="st2" width="3.98" height="35.81"/>
+			<rect x="449.53" y="370.7" class="st2" width="15.92" height="7.97"/>
+			<rect x="441.57" y="338.87" class="st2" width="31.85" height="31.84"/>
+			<rect x="449.53" y="334.89" class="st2" width="15.92" height="35.81"/>
+			<rect x="429.62" y="354.79" class="st3" width="3.98" height="15.91"/>
+			<rect x="429.62" y="362.76" class="st3" width="7.96" height="3.97"/>
+			<rect x="433.6" y="370.7" class="st3" width="31.86" height="3.98"/>
+			<rect x="437.59" y="366.73" class="st3" width="3.98" height="11.94"/>
+			<rect x="441.57" y="362.76" class="st3" width="3.98" height="3.97"/>
+			<rect x="445.55" y="366.94" class="st3" width="3.98" height="7.74"/>
+			<rect x="437.59" y="370.7" class="st3" width="7.96" height="7.97"/>
+			<rect x="445.55" y="378.67" class="st3" width="3.98" height="3.98"/>
+			<rect x="453.51" y="334.89" class="st2" width="3.97" height="47.76"/>
+			<rect x="449.53" y="370.7" class="st3" width="15.92" height="7.97"/>
+			<rect x="453.52" y="370.7" class="st3" width="3.97" height="11.95"/>
+			<rect x="449.53" y="374.68" class="st3" width="19.91" height="3.98"/>
+			<rect x="469.44" y="362.76" class="st3" width="3.98" height="11.93"/>
+			<rect x="461.27" y="362.76" class="st3" width="16.13" height="7.95"/>
+			<rect x="457.49" y="366.73" class="st3" width="7.96" height="7.95"/>
+			<rect x="465.46" y="358.77" class="st3" width="3.98" height="11.93"/>
+			<rect x="473.42" y="358.77" class="st3" width="3.97" height="11.93"/>
+			<rect x="469.44" y="354.79" class="st3" width="3.98" height="3.98"/>
+		</g>
+		<g id="Smoke_Particle_1_">
+			<rect x="389.95" y="335.39" class="st2" width="3.52" height="14.08"/>
+			<rect x="393.47" y="349.47" class="st2" width="28.13" height="3.52"/>
+			<rect x="389.95" y="335.39" class="st2" width="42.21" height="10.56"/>
+			<rect x="396.97" y="328.35" class="st2" width="35.18" height="21.12"/>
+			<rect x="393.47" y="331.87" class="st2" width="38.69" height="14.08"/>
+			<rect x="396.97" y="324.85" class="st2" width="7.03" height="31.66"/>
+			<rect x="404.01" y="356.51" class="st2" width="3.52" height="3.52"/>
+			<rect x="396.97" y="328.35" class="st2" width="24.63" height="24.64"/>
+			<rect x="407.52" y="352.99" class="st2" width="17.59" height="3.52"/>
+			<rect x="425.12" y="321.33" class="st2" width="3.51" height="31.66"/>
+			<rect x="407.52" y="349.47" class="st2" width="14.08" height="7.04"/>
+			<rect x="400.49" y="321.33" class="st2" width="28.14" height="28.14"/>
+			<rect x="407.52" y="317.82" class="st2" width="14.08" height="31.65"/>
+			<rect x="389.95" y="335.39" class="st3" width="3.52" height="14.08"/>
+			<rect x="389.95" y="342.43" class="st3" width="7.02" height="3.52"/>
+			<rect x="393.47" y="349.47" class="st3" width="28.13" height="3.52"/>
+			<rect x="396.97" y="345.95" class="st3" width="3.51" height="10.56"/>
+			<rect x="400.49" y="342.43" class="st3" width="3.52" height="3.52"/>
+			<rect x="404.01" y="346.12" class="st3" width="3.52" height="6.87"/>
+			<rect x="396.97" y="349.47" class="st3" width="7.03" height="7.04"/>
+			<rect x="404.01" y="356.51" class="st3" width="3.52" height="3.52"/>
+			<rect x="411.05" y="317.82" class="st2" width="3.52" height="42.2"/>
+			<rect x="407.52" y="349.47" class="st3" width="14.08" height="7.04"/>
+			<rect x="411.04" y="349.47" class="st3" width="3.52" height="10.56"/>
+			<rect x="407.52" y="352.99" class="st3" width="17.59" height="3.52"/>
+			<rect x="425.12" y="342.43" class="st3" width="3.51" height="10.56"/>
+			<rect x="417.91" y="342.43" class="st3" width="14.24" height="7.04"/>
+			<rect x="414.57" y="345.95" class="st3" width="7.04" height="7.04"/>
+			<rect x="421.6" y="338.91" class="st3" width="3.52" height="10.56"/>
+			<rect x="428.63" y="338.91" class="st3" width="3.52" height="10.56"/>
+			<rect x="425.12" y="335.39" class="st3" width="3.51" height="3.52"/>
+		</g>
+		<g id="Smoke_Particle_3_">
+			<rect x="431.74" y="376.89" class="st2" width="4.28" height="17.11"/>
+			<rect x="397.51" y="394" class="st2" width="34.23" height="4.28"/>
+			<rect x="384.66" y="376.89" class="st2" width="51.36" height="12.83"/>
+			<rect x="384.66" y="368.33" class="st2" width="42.8" height="25.67"/>
+			<rect x="384.66" y="372.62" class="st2" width="47.08" height="17.1"/>
+			<rect x="418.89" y="364.05" class="st2" width="8.57" height="38.52"/>
+			<rect x="414.61" y="402.57" class="st2" width="4.28" height="4.28"/>
+			<rect x="397.51" y="368.34" class="st2" width="29.95" height="29.95"/>
+			<rect x="393.22" y="398.28" class="st2" width="21.39" height="4.28"/>
+			<rect x="388.94" y="359.77" class="st2" width="4.29" height="38.52"/>
+			<rect x="397.5" y="394" class="st2" width="17.1" height="8.57"/>
+			<rect x="388.94" y="359.77" class="st2" width="34.23" height="34.23"/>
+			<rect x="397.5" y="355.49" class="st2" width="17.1" height="38.51"/>
+			<rect x="431.74" y="376.89" class="st3" width="4.28" height="17.11"/>
+			<rect x="427.46" y="385.43" class="st3" width="8.57" height="4.28"/>
+			<rect x="397.51" y="394" class="st3" width="34.23" height="4.28"/>
+			<rect x="423.17" y="389.72" class="st3" width="4.28" height="12.86"/>
+			<rect x="418.89" y="385.43" class="st3" width="4.28" height="4.28"/>
+			<rect x="414.61" y="389.95" class="st3" width="4.28" height="8.34"/>
+			<rect x="418.89" y="394" class="st3" width="8.57" height="8.57"/>
+			<rect x="414.61" y="402.57" class="st3" width="4.28" height="4.28"/>
+			<rect x="406.06" y="355.48" class="st2" width="4.28" height="51.37"/>
+			<rect x="397.5" y="394" class="st3" width="17.1" height="8.57"/>
+			<rect x="406.06" y="394" class="st3" width="4.28" height="12.85"/>
+			<rect x="393.22" y="398.28" class="st3" width="21.39" height="4.28"/>
+			<rect x="388.94" y="385.43" class="st3" width="4.29" height="12.85"/>
+			<rect x="384.66" y="385.43" class="st3" width="17.34" height="8.57"/>
+			<rect x="397.5" y="389.72" class="st3" width="8.55" height="8.57"/>
+			<rect x="393.22" y="381.17" class="st3" width="4.28" height="12.83"/>
+			<rect x="384.66" y="381.17" class="st3" width="4.29" height="12.83"/>
+			<rect x="388.94" y="376.89" class="st3" width="4.29" height="4.28"/>
+		</g>
+		<g id="Smoke_Particle_5_">
+			<rect x="355.04" y="301.27" class="st2" width="5.11" height="20.44"/>
+			<rect x="360.16" y="321.71" class="st2" width="40.9" height="5.1"/>
+			<rect x="355.04" y="301.27" class="st2" width="61.36" height="15.34"/>
+			<rect x="365.27" y="291.03" class="st2" width="51.12" height="30.68"/>
+			<rect x="360.16" y="296.16" class="st2" width="56.24" height="20.45"/>
+			<rect x="365.27" y="285.93" class="st2" width="10.21" height="46.02"/>
+			<rect x="375.48" y="331.95" class="st2" width="5.13" height="5.1"/>
+			<rect x="365.27" y="291.03" class="st2" width="35.78" height="35.78"/>
+			<rect x="380.61" y="326.82" class="st2" width="25.55" height="5.13"/>
+			<rect x="406.16" y="280.83" class="st2" width="5.12" height="45.99"/>
+			<rect x="380.61" y="321.71" class="st2" width="20.44" height="10.24"/>
+			<rect x="370.37" y="280.83" class="st2" width="40.91" height="40.88"/>
+			<rect x="380.61" y="275.69" class="st2" width="20.44" height="46.02"/>
+			<rect x="355.04" y="301.27" class="st3" width="5.11" height="20.44"/>
+			<rect x="355.04" y="311.48" class="st3" width="10.24" height="5.13"/>
+			<rect x="360.16" y="321.71" class="st3" width="40.9" height="5.1"/>
+			<rect x="365.27" y="316.61" class="st3" width="5.1" height="15.34"/>
+			<rect x="370.37" y="311.48" class="st3" width="5.1" height="5.13"/>
+			<rect x="375.48" y="316.86" class="st3" width="5.13" height="9.97"/>
+			<rect x="365.27" y="321.71" class="st3" width="10.21" height="10.24"/>
+			<rect x="375.48" y="331.95" class="st3" width="5.13" height="5.1"/>
+			<rect x="385.72" y="275.7" class="st2" width="5.1" height="61.36"/>
+			<rect x="380.61" y="321.71" class="st3" width="20.44" height="10.24"/>
+			<rect x="385.71" y="321.71" class="st3" width="5.1" height="15.34"/>
+			<rect x="380.61" y="326.82" class="st3" width="25.55" height="5.13"/>
+			<rect x="406.16" y="311.48" class="st3" width="5.12" height="15.34"/>
+			<rect x="395.69" y="311.48" class="st3" width="20.71" height="10.24"/>
+			<rect x="390.82" y="316.61" class="st3" width="10.24" height="10.21"/>
+			<rect x="401.06" y="306.37" class="st3" width="5.1" height="15.34"/>
+			<rect x="411.28" y="306.37" class="st3" width="5.11" height="15.34"/>
+			<rect x="406.16" y="301.27" class="st3" width="5.12" height="5.1"/>
+		</g>
+		<g id="Smoke_Particle_6_">
+			<rect x="472.24" y="310.77" class="st2" width="4.17" height="16.66"/>
+			<rect x="438.86" y="327.42" class="st2" width="33.38" height="4.2"/>
+			<rect x="426.36" y="310.76" class="st2" width="50.05" height="12.5"/>
+			<rect x="426.36" y="302.4" class="st2" width="41.71" height="25.03"/>
+			<rect x="426.36" y="306.57" class="st2" width="45.89" height="16.68"/>
+			<rect x="459.72" y="298.23" class="st2" width="8.35" height="37.56"/>
+			<rect x="455.55" y="335.79" class="st2" width="4.17" height="4.17"/>
+			<rect x="438.86" y="302.4" class="st2" width="29.21" height="29.23"/>
+			<rect x="434.69" y="331.62" class="st2" width="20.86" height="4.17"/>
+			<rect x="430.52" y="294.07" class="st2" width="4.17" height="37.56"/>
+			<rect x="438.86" y="327.43" class="st2" width="16.69" height="8.36"/>
+			<rect x="430.53" y="294.07" class="st2" width="33.37" height="33.35"/>
+			<rect x="438.86" y="289.9" class="st2" width="16.69" height="37.52"/>
+			<rect x="472.24" y="310.77" class="st3" width="4.17" height="16.66"/>
+			<rect x="468.07" y="319.1" class="st3" width="8.34" height="4.17"/>
+			<rect x="438.86" y="327.42" class="st3" width="33.38" height="4.2"/>
+			<rect x="463.89" y="323.26" class="st3" width="4.18" height="12.53"/>
+			<rect x="459.72" y="319.1" class="st3" width="4.18" height="4.17"/>
+			<rect x="455.55" y="323.48" class="st3" width="4.17" height="8.14"/>
+			<rect x="459.72" y="327.43" class="st3" width="8.35" height="8.36"/>
+			<rect x="455.55" y="335.79" class="st3" width="4.17" height="4.17"/>
+			<rect x="447.21" y="289.91" class="st2" width="4.18" height="50.05"/>
+			<rect x="438.86" y="327.43" class="st3" width="16.69" height="8.36"/>
+			<rect x="447.21" y="327.42" class="st3" width="4.18" height="12.53"/>
+			<rect x="434.69" y="331.62" class="st3" width="20.86" height="4.17"/>
+			<rect x="430.52" y="319.1" class="st3" width="4.17" height="12.53"/>
+			<rect x="426.36" y="319.1" class="st3" width="16.89" height="8.33"/>
+			<rect x="438.86" y="323.26" class="st3" width="8.35" height="8.36"/>
+			<rect x="434.69" y="314.93" class="st3" width="4.17" height="12.5"/>
+			<rect x="426.36" y="314.93" class="st3" width="4.17" height="12.5"/>
+			<rect x="430.52" y="310.76" class="st3" width="4.17" height="4.17"/>
+		</g>
+		<g id="Smoke_Particle_7_">
+			<rect x="358.9" y="344.69" class="st2" width="3.84" height="15.37"/>
+			<rect x="362.74" y="360.06" class="st2" width="30.77" height="3.84"/>
+			<rect x="358.9" y="344.69" class="st2" width="46.14" height="11.53"/>
+			<rect x="366.59" y="337.01" class="st2" width="38.45" height="23.06"/>
+			<rect x="362.74" y="340.85" class="st2" width="42.3" height="15.37"/>
+			<rect x="366.58" y="333.16" class="st2" width="7.71" height="34.58"/>
+			<rect x="374.29" y="367.75" class="st2" width="3.84" height="3.84"/>
+			<rect x="366.59" y="337.01" class="st2" width="26.92" height="26.9"/>
+			<rect x="378.13" y="363.91" class="st2" width="19.22" height="3.84"/>
+			<rect x="397.36" y="329.31" class="st2" width="3.84" height="34.59"/>
+			<rect x="378.13" y="360.06" class="st2" width="15.38" height="7.68"/>
+			<rect x="370.44" y="329.31" class="st2" width="30.75" height="30.75"/>
+			<rect x="378.13" y="325.47" class="st2" width="15.38" height="34.6"/>
+			<rect x="358.9" y="344.69" class="st3" width="3.84" height="15.37"/>
+			<rect x="358.9" y="352.38" class="st3" width="7.69" height="3.84"/>
+			<rect x="362.74" y="360.06" class="st3" width="30.77" height="3.84"/>
+			<rect x="366.59" y="356.22" class="st3" width="3.86" height="11.53"/>
+			<rect x="370.44" y="352.38" class="st3" width="3.84" height="3.84"/>
+			<rect x="374.29" y="356.4" class="st3" width="3.84" height="7.5"/>
+			<rect x="366.59" y="360.06" class="st3" width="7.7" height="7.68"/>
+			<rect x="374.29" y="367.75" class="st3" width="3.84" height="3.84"/>
+			<rect x="381.98" y="325.47" class="st2" width="3.85" height="46.12"/>
+			<rect x="378.13" y="360.06" class="st3" width="15.38" height="7.68"/>
+			<rect x="381.98" y="360.06" class="st3" width="3.85" height="11.53"/>
+			<rect x="378.13" y="363.91" class="st3" width="19.22" height="3.84"/>
+			<rect x="397.36" y="352.38" class="st3" width="3.84" height="11.53"/>
+			<rect x="389.47" y="352.38" class="st3" width="15.57" height="7.69"/>
+			<rect x="385.83" y="356.22" class="st3" width="7.69" height="7.69"/>
+			<rect x="393.51" y="348.54" class="st3" width="3.84" height="11.53"/>
+			<rect x="401.2" y="348.54" class="st3" width="3.85" height="11.53"/>
+			<rect x="397.36" y="344.69" class="st3" width="3.84" height="3.84"/>
+		</g>
+		<g id="Smoke_Particle_8_">
+			<rect x="370.75" y="261.13" class="st2" width="5.82" height="23.32"/>
+			<rect x="376.58" y="284.45" class="st2" width="46.64" height="5.83"/>
+			<rect x="370.75" y="261.13" class="st2" width="69.96" height="17.49"/>
+			<rect x="382.41" y="249.48" class="st2" width="58.3" height="34.97"/>
+			<rect x="376.58" y="255.31" class="st2" width="64.13" height="23.31"/>
+			<rect x="382.41" y="243.65" class="st2" width="11.65" height="52.47"/>
+			<rect x="394.08" y="296.12" class="st2" width="5.83" height="5.83"/>
+			<rect x="382.41" y="249.48" class="st2" width="40.8" height="40.8"/>
+			<rect x="399.91" y="290.28" class="st2" width="29.14" height="5.83"/>
+			<rect x="429.04" y="237.82" class="st2" width="5.83" height="52.47"/>
+			<rect x="399.91" y="284.45" class="st2" width="23.31" height="11.66"/>
+			<rect x="388.25" y="237.82" class="st2" width="46.63" height="46.64"/>
+			<rect x="399.91" y="231.99" class="st2" width="23.31" height="52.47"/>
+			<rect x="370.75" y="261.13" class="st3" width="5.82" height="23.32"/>
+			<rect x="370.75" y="272.79" class="st3" width="11.66" height="5.83"/>
+			<rect x="376.58" y="284.45" class="st3" width="46.64" height="5.83"/>
+			<rect x="382.41" y="278.62" class="st3" width="5.83" height="17.49"/>
+			<rect x="388.25" y="272.79" class="st3" width="5.82" height="5.83"/>
+			<rect x="394.08" y="278.92" class="st3" width="5.83" height="11.37"/>
+			<rect x="382.41" y="284.45" class="st3" width="11.66" height="11.66"/>
+			<rect x="394.08" y="296.12" class="st3" width="5.83" height="5.83"/>
+			<rect x="405.73" y="231.99" class="st2" width="5.83" height="69.96"/>
+			<rect x="399.91" y="284.45" class="st3" width="23.31" height="11.66"/>
+			<rect x="405.74" y="284.45" class="st3" width="5.82" height="17.49"/>
+			<rect x="399.91" y="290.28" class="st3" width="29.14" height="5.83"/>
+			<rect x="429.04" y="272.79" class="st3" width="5.83" height="17.49"/>
+			<rect x="417.11" y="272.79" class="st3" width="23.61" height="11.66"/>
+			<rect x="411.56" y="278.62" class="st3" width="11.66" height="11.66"/>
+			<rect x="423.22" y="266.96" class="st3" width="5.83" height="17.49"/>
+			<rect x="434.88" y="266.96" class="st3" width="5.84" height="17.49"/>
+			<rect x="429.04" y="261.13" class="st3" width="5.83" height="5.83"/>
+		</g>
+		<g id="Smoke_Particle_4_">
+			<rect x="400.73" y="323.88" class="st2" width="3.52" height="14.08"/>
+			<rect x="404.25" y="337.96" class="st2" width="28.13" height="3.52"/>
+			<rect x="400.73" y="323.88" class="st2" width="42.2" height="10.56"/>
+			<rect x="407.77" y="316.84" class="st2" width="35.17" height="21.12"/>
+			<rect x="404.25" y="320.36" class="st2" width="38.69" height="14.08"/>
+			<rect x="407.77" y="313.34" class="st2" width="7.03" height="31.66"/>
+			<rect x="414.8" y="345" class="st2" width="3.5" height="3.52"/>
+			<rect x="407.77" y="316.84" class="st2" width="24.61" height="24.64"/>
+			<rect x="418.3" y="341.48" class="st2" width="17.6" height="3.52"/>
+			<rect x="435.9" y="309.83" class="st2" width="3.52" height="31.65"/>
+			<rect x="418.3" y="337.96" class="st2" width="14.08" height="7.04"/>
+			<rect x="411.28" y="309.83" class="st2" width="28.14" height="28.13"/>
+			<rect x="418.3" y="306.31" class="st2" width="14.08" height="31.65"/>
+			<rect x="400.73" y="323.88" class="st3" width="3.52" height="14.08"/>
+			<rect x="400.73" y="330.92" class="st3" width="7.04" height="3.52"/>
+			<rect x="404.25" y="337.96" class="st3" width="28.13" height="3.52"/>
+			<rect x="407.77" y="334.44" class="st3" width="3.51" height="10.56"/>
+			<rect x="411.28" y="330.92" class="st3" width="3.52" height="3.52"/>
+			<rect x="414.8" y="334.61" class="st3" width="3.5" height="6.87"/>
+			<rect x="407.77" y="337.96" class="st3" width="7.03" height="7.04"/>
+			<rect x="414.8" y="345" class="st3" width="3.5" height="3.52"/>
+			<rect x="421.82" y="306.31" class="st2" width="3.52" height="42.21"/>
+			<rect x="418.3" y="337.96" class="st3" width="14.08" height="7.04"/>
+			<rect x="421.82" y="337.96" class="st3" width="3.52" height="10.55"/>
+			<rect x="418.3" y="341.48" class="st3" width="17.6" height="3.52"/>
+			<rect x="435.9" y="330.92" class="st3" width="3.52" height="10.56"/>
+			<rect x="428.69" y="330.92" class="st3" width="14.25" height="7.04"/>
+			<rect x="425.34" y="334.44" class="st3" width="7.04" height="7.04"/>
+			<rect x="432.38" y="327.4" class="st3" width="3.52" height="10.56"/>
+			<rect x="439.42" y="327.4" class="st3" width="3.52" height="10.56"/>
+			<rect x="435.9" y="323.88" class="st3" width="3.52" height="3.52"/>
+		</g>
+		<g id="Smoke_Particle_9_">
+			<rect x="470.22" y="287.01" class="st2" width="4.18" height="16.69"/>
+			<rect x="436.84" y="303.7" class="st2" width="33.38" height="4.17"/>
+			<rect x="424.34" y="287.01" class="st2" width="50.06" height="12.5"/>
+			<rect x="424.34" y="278.68" class="st2" width="41.71" height="25.03"/>
+			<rect x="424.33" y="282.84" class="st2" width="45.89" height="16.67"/>
+			<rect x="457.7" y="274.47" class="st2" width="8.35" height="37.56"/>
+			<rect x="453.54" y="312.03" class="st2" width="4.17" height="4.17"/>
+			<rect x="436.84" y="278.67" class="st2" width="29.21" height="29.19"/>
+			<rect x="432.68" y="307.87" class="st2" width="20.86" height="4.17"/>
+			<rect x="428.51" y="270.31" class="st2" width="4.17" height="37.56"/>
+			<rect x="436.84" y="303.7" class="st2" width="16.69" height="8.33"/>
+			<rect x="428.51" y="270.31" class="st2" width="33.36" height="33.39"/>
+			<rect x="436.84" y="266.15" class="st2" width="16.69" height="37.55"/>
+			<rect x="470.22" y="287.01" class="st3" width="4.18" height="16.69"/>
+			<rect x="466.05" y="295.34" class="st3" width="8.34" height="4.19"/>
+			<rect x="436.84" y="303.7" class="st3" width="33.38" height="4.17"/>
+			<rect x="461.87" y="299.5" class="st3" width="4.18" height="12.53"/>
+			<rect x="457.7" y="295.34" class="st3" width="4.17" height="4.19"/>
+			<rect x="453.54" y="299.73" class="st3" width="4.17" height="8.13"/>
+			<rect x="457.7" y="303.7" class="st3" width="8.35" height="8.33"/>
+			<rect x="453.54" y="312.03" class="st3" width="4.17" height="4.17"/>
+			<rect x="445.19" y="266.15" class="st2" width="4.18" height="50.05"/>
+			<rect x="436.84" y="303.7" class="st3" width="16.69" height="8.33"/>
+			<rect x="445.19" y="303.7" class="st3" width="4.18" height="12.5"/>
+			<rect x="432.68" y="307.87" class="st3" width="20.86" height="4.17"/>
+			<rect x="428.51" y="295.34" class="st3" width="4.17" height="12.54"/>
+			<rect x="424.34" y="295.34" class="st3" width="16.9" height="8.36"/>
+			<rect x="436.84" y="299.5" class="st3" width="8.35" height="8.36"/>
+			<rect x="432.68" y="291.17" class="st3" width="4.17" height="12.53"/>
+			<rect x="424.33" y="291.17" class="st3" width="4.18" height="12.53"/>
+			<rect x="428.51" y="287.01" class="st3" width="4.17" height="4.17"/>
+		</g>
+		<g id="Smoke_Particle_10_">
+			<rect x="355.76" y="356.55" class="st2" width="4.17" height="16.7"/>
+			<rect x="322.38" y="373.24" class="st2" width="33.38" height="4.17"/>
+			<rect x="309.88" y="356.55" class="st2" width="50.05" height="12.53"/>
+			<rect x="309.88" y="348.21" class="st2" width="41.72" height="25.03"/>
+			<rect x="309.88" y="352.38" class="st2" width="45.89" height="16.69"/>
+			<rect x="343.24" y="344.04" class="st2" width="8.36" height="37.53"/>
+			<rect x="339.07" y="381.57" class="st2" width="4.17" height="4.17"/>
+			<rect x="322.38" y="348.21" class="st2" width="29.22" height="29.2"/>
+			<rect x="318.21" y="377.41" class="st2" width="20.86" height="4.16"/>
+			<rect x="314.04" y="339.85" class="st2" width="4.17" height="37.56"/>
+			<rect x="322.38" y="373.24" class="st2" width="16.7" height="8.33"/>
+			<rect x="314.05" y="339.85" class="st2" width="33.36" height="33.39"/>
+			<rect x="322.38" y="335.69" class="st2" width="16.7" height="37.56"/>
+			<rect x="355.76" y="356.55" class="st3" width="4.17" height="16.7"/>
+			<rect x="351.6" y="364.88" class="st3" width="8.33" height="4.2"/>
+			<rect x="322.38" y="373.24" class="st3" width="33.38" height="4.17"/>
+			<rect x="347.41" y="369.07" class="st3" width="4.19" height="12.5"/>
+			<rect x="343.24" y="364.88" class="st3" width="4.17" height="4.2"/>
+			<rect x="339.07" y="369.28" class="st3" width="4.17" height="8.14"/>
+			<rect x="343.24" y="373.24" class="st3" width="8.36" height="8.33"/>
+			<rect x="339.07" y="381.57" class="st3" width="4.17" height="4.17"/>
+			<rect x="330.74" y="335.69" class="st2" width="4.17" height="50.05"/>
+			<rect x="322.38" y="373.24" class="st3" width="16.7" height="8.33"/>
+			<rect x="330.73" y="373.24" class="st3" width="4.17" height="12.5"/>
+			<rect x="318.21" y="377.41" class="st3" width="20.86" height="4.16"/>
+			<rect x="314.04" y="364.88" class="st3" width="4.17" height="12.53"/>
+			<rect x="309.88" y="364.88" class="st3" width="16.89" height="8.36"/>
+			<rect x="322.38" y="369.08" class="st3" width="8.36" height="8.33"/>
+			<rect x="318.21" y="360.71" class="st3" width="4.17" height="12.53"/>
+			<rect x="309.88" y="360.71" class="st3" width="4.17" height="12.53"/>
+			<rect x="314.04" y="356.55" class="st3" width="4.17" height="4.17"/>
+		</g>
+		<g id="Smoke_Particle_11_">
+			<rect x="251.89" y="276.85" class="st2" width="4.18" height="16.66"/>
+			<rect x="218.53" y="293.51" class="st2" width="33.37" height="4.2"/>
+			<rect x="206.01" y="276.85" class="st2" width="50.07" height="12.5"/>
+			<rect x="206.01" y="268.49" class="st2" width="41.72" height="25.03"/>
+			<rect x="206.01" y="272.69" class="st2" width="45.89" height="16.67"/>
+			<rect x="239.38" y="264.32" class="st2" width="8.35" height="37.56"/>
+			<rect x="235.21" y="301.88" class="st2" width="4.17" height="4.17"/>
+			<rect x="218.53" y="268.49" class="st2" width="29.21" height="29.22"/>
+			<rect x="214.36" y="297.71" class="st2" width="20.86" height="4.17"/>
+			<rect x="210.19" y="260.16" class="st2" width="4.17" height="37.56"/>
+			<rect x="218.53" y="293.52" class="st2" width="16.7" height="8.36"/>
+			<rect x="210.19" y="260.16" class="st2" width="33.37" height="33.35"/>
+			<rect x="218.53" y="255.99" class="st2" width="16.7" height="37.52"/>
+			<rect x="251.89" y="276.85" class="st3" width="4.18" height="16.66"/>
+			<rect x="247.73" y="285.18" class="st3" width="8.35" height="4.17"/>
+			<rect x="218.53" y="293.51" class="st3" width="33.37" height="4.2"/>
+			<rect x="243.55" y="289.35" class="st3" width="4.18" height="12.53"/>
+			<rect x="239.38" y="285.18" class="st3" width="4.17" height="4.17"/>
+			<rect x="235.21" y="289.58" class="st3" width="4.17" height="8.13"/>
+			<rect x="239.38" y="293.52" class="st3" width="8.34" height="8.36"/>
+			<rect x="235.21" y="301.88" class="st3" width="4.17" height="4.17"/>
+			<rect x="226.87" y="255.99" class="st2" width="4.17" height="50.05"/>
+			<rect x="218.53" y="293.52" class="st3" width="16.7" height="8.36"/>
+			<rect x="226.87" y="293.51" class="st3" width="4.17" height="12.53"/>
+			<rect x="214.36" y="297.71" class="st3" width="20.86" height="4.17"/>
+			<rect x="210.19" y="285.18" class="st3" width="4.17" height="12.53"/>
+			<rect x="206.01" y="285.18" class="st3" width="16.89" height="8.33"/>
+			<rect x="218.53" y="289.35" class="st3" width="8.35" height="8.36"/>
+			<rect x="214.36" y="281.02" class="st3" width="4.17" height="12.5"/>
+			<rect x="206.01" y="281.02" class="st3" width="4.18" height="12.5"/>
+			<rect x="210.19" y="276.85" class="st3" width="4.17" height="4.17"/>
+		</g>
+		<g id="Smoke_Particle_12_">
+			<rect x="237.89" y="346.88" class="st2" width="4.17" height="16.7"/>
+			<rect x="204.53" y="363.58" class="st2" width="33.37" height="4.17"/>
+			<rect x="192.01" y="346.88" class="st2" width="50.05" height="12.53"/>
+			<rect x="192.01" y="338.55" class="st2" width="41.7" height="25.02"/>
+			<rect x="192.01" y="342.72" class="st2" width="45.89" height="16.7"/>
+			<rect x="225.38" y="334.39" class="st2" width="8.33" height="37.52"/>
+			<rect x="221.2" y="371.91" class="st2" width="4.18" height="4.17"/>
+			<rect x="204.52" y="338.55" class="st2" width="29.19" height="29.19"/>
+			<rect x="200.34" y="367.75" class="st2" width="20.86" height="4.17"/>
+			<rect x="196.18" y="330.19" class="st2" width="4.17" height="37.56"/>
+			<rect x="204.53" y="363.58" class="st2" width="16.68" height="8.33"/>
+			<rect x="196.18" y="330.19" class="st2" width="33.37" height="33.39"/>
+			<rect x="204.53" y="326.02" class="st2" width="16.68" height="37.56"/>
+			<rect x="237.89" y="346.88" class="st3" width="4.17" height="16.7"/>
+			<rect x="233.72" y="355.22" class="st3" width="8.35" height="4.19"/>
+			<rect x="204.53" y="363.58" class="st3" width="33.37" height="4.17"/>
+			<rect x="229.55" y="359.41" class="st3" width="4.17" height="12.5"/>
+			<rect x="225.38" y="355.22" class="st3" width="4.17" height="4.19"/>
+			<rect x="221.2" y="359.61" class="st3" width="4.18" height="8.14"/>
+			<rect x="225.38" y="363.58" class="st3" width="8.33" height="8.33"/>
+			<rect x="221.2" y="371.91" class="st3" width="4.18" height="4.17"/>
+			<rect x="212.86" y="326.02" class="st2" width="4.18" height="50.05"/>
+			<rect x="204.53" y="363.58" class="st3" width="16.68" height="8.33"/>
+			<rect x="212.86" y="363.58" class="st3" width="4.18" height="12.5"/>
+			<rect x="200.34" y="367.75" class="st3" width="20.86" height="4.17"/>
+			<rect x="196.18" y="355.22" class="st3" width="4.17" height="12.52"/>
+			<rect x="192.01" y="355.24" class="st3" width="16.89" height="8.34"/>
+			<rect x="204.52" y="359.42" class="st3" width="8.34" height="8.33"/>
+			<rect x="200.35" y="351.05" class="st3" width="4.18" height="12.53"/>
+			<rect x="192.01" y="351.05" class="st3" width="4.17" height="12.53"/>
+			<rect x="196.18" y="346.88" class="st3" width="4.17" height="4.17"/>
+		</g>
+		<g id="Smoke_Particle_13_">
+			<rect x="193.93" y="296.66" class="st2" width="4.17" height="16.68"/>
+			<rect x="160.56" y="313.33" class="st2" width="33.37" height="4.19"/>
+			<rect x="148.05" y="296.65" class="st2" width="50.05" height="12.5"/>
+			<rect x="148.05" y="288.29" class="st2" width="41.71" height="25.03"/>
+			<rect x="148.05" y="292.49" class="st2" width="45.89" height="16.67"/>
+			<rect x="181.42" y="284.13" class="st2" width="8.33" height="37.56"/>
+			<rect x="177.24" y="321.68" class="st2" width="4.18" height="4.17"/>
+			<rect x="160.56" y="288.29" class="st2" width="29.2" height="29.23"/>
+			<rect x="156.39" y="317.52" class="st2" width="20.86" height="4.17"/>
+			<rect x="152.21" y="279.96" class="st2" width="4.18" height="37.56"/>
+			<rect x="160.56" y="313.34" class="st2" width="16.68" height="8.34"/>
+			<rect x="152.22" y="279.96" class="st2" width="33.37" height="33.36"/>
+			<rect x="160.56" y="275.8" class="st2" width="16.68" height="37.54"/>
+			<rect x="193.93" y="296.66" class="st3" width="4.17" height="16.68"/>
+			<rect x="189.76" y="304.99" class="st3" width="8.34" height="4.17"/>
+			<rect x="160.56" y="313.33" class="st3" width="33.37" height="4.19"/>
+			<rect x="185.58" y="309.15" class="st3" width="4.18" height="12.53"/>
+			<rect x="181.42" y="304.99" class="st3" width="4.17" height="4.17"/>
+			<rect x="177.24" y="309.38" class="st3" width="4.18" height="8.14"/>
+			<rect x="181.42" y="313.34" class="st3" width="8.34" height="8.34"/>
+			<rect x="177.24" y="321.68" class="st3" width="4.18" height="4.17"/>
+			<rect x="168.91" y="275.8" class="st2" width="4.17" height="50.05"/>
+			<rect x="160.56" y="313.34" class="st3" width="16.68" height="8.34"/>
+			<rect x="168.9" y="313.33" class="st3" width="4.18" height="12.52"/>
+			<rect x="156.39" y="317.52" class="st3" width="20.86" height="4.17"/>
+			<rect x="152.21" y="304.99" class="st3" width="4.18" height="12.53"/>
+			<rect x="148.05" y="304.99" class="st3" width="16.89" height="8.34"/>
+			<rect x="160.56" y="309.15" class="st3" width="8.34" height="8.36"/>
+			<rect x="156.39" y="300.82" class="st3" width="4.18" height="12.52"/>
+			<rect x="148.05" y="300.82" class="st3" width="4.17" height="12.52"/>
+			<rect x="152.21" y="296.65" class="st3" width="4.18" height="4.17"/>
+		</g>
+		<g id="Smoke_Particle_14_">
+			<rect x="311.31" y="320.32" class="st2" width="4.17" height="16.7"/>
+			<rect x="277.95" y="337.01" class="st2" width="33.36" height="4.17"/>
+			<rect x="265.42" y="320.32" class="st2" width="50.05" height="12.53"/>
+			<rect x="265.42" y="311.99" class="st2" width="41.72" height="25.02"/>
+			<rect x="265.42" y="316.15" class="st2" width="45.89" height="16.7"/>
+			<rect x="298.81" y="307.79" class="st2" width="8.33" height="37.56"/>
+			<rect x="294.63" y="345.34" class="st2" width="4.18" height="4.17"/>
+			<rect x="277.95" y="311.99" class="st2" width="29.19" height="29.19"/>
+			<rect x="273.78" y="341.18" class="st2" width="20.85" height="4.17"/>
+			<rect x="269.59" y="303.62" class="st2" width="4.2" height="37.56"/>
+			<rect x="277.95" y="337.01" class="st2" width="16.69" height="8.33"/>
+			<rect x="269.59" y="303.62" class="st2" width="33.39" height="33.39"/>
+			<rect x="277.95" y="299.46" class="st2" width="16.69" height="37.56"/>
+			<rect x="311.31" y="320.32" class="st3" width="4.17" height="16.7"/>
+			<rect x="307.14" y="328.65" class="st3" width="8.33" height="4.2"/>
+			<rect x="277.95" y="337.01" class="st3" width="33.36" height="4.17"/>
+			<rect x="302.97" y="332.85" class="st3" width="4.17" height="12.5"/>
+			<rect x="298.81" y="328.65" class="st3" width="4.17" height="4.2"/>
+			<rect x="294.63" y="333.05" class="st3" width="4.18" height="8.13"/>
+			<rect x="298.81" y="337.01" class="st3" width="8.33" height="8.33"/>
+			<rect x="294.63" y="345.34" class="st3" width="4.18" height="4.17"/>
+			<rect x="286.28" y="299.46" class="st2" width="4.17" height="50.05"/>
+			<rect x="277.95" y="337.01" class="st3" width="16.69" height="8.33"/>
+			<rect x="286.28" y="337.01" class="st3" width="4.17" height="12.5"/>
+			<rect x="273.78" y="341.18" class="st3" width="20.85" height="4.17"/>
+			<rect x="269.59" y="328.65" class="st3" width="4.2" height="12.53"/>
+			<rect x="265.42" y="328.65" class="st3" width="16.89" height="8.36"/>
+			<rect x="277.95" y="332.85" class="st3" width="8.33" height="8.33"/>
+			<rect x="273.78" y="324.48" class="st3" width="4.17" height="12.53"/>
+			<rect x="265.42" y="324.48" class="st3" width="4.17" height="12.53"/>
+			<rect x="269.59" y="320.32" class="st3" width="4.2" height="4.17"/>
+		</g>
+	</g>
+	<g id="Zombie">
+		<path id="Body" class="st4" d="M244.14,420.97l0.89-90.89l-18.32-6.41l0.23-24.71l16.54-7.06l-8.16-3.53l0.22-43.9l35.52-18.77
+			l35.08,18.32v24.92l40.59,24.71l-0.22,22.96l-18.32,9.25l-30.23-19.19l-0.44,7.95l5.96,1.99l-0.86,23.38l-5.51-0.44l-0.24,74.37
+			l-33.76,16.98L244.14,420.97z"/>
+		<g id="Eyes">
+			<path id="rect4547" class="st0" d="M301.89,273.65l-9.52,5.24v-5.94l9.52-4.35V273.65z"/>
+			<path id="rect4547-1" class="st0" d="M284,282.72l-9.52,5.24v-6.79l9.52-4.38V282.72z"/>
+		</g>
+	</g>
+</g>
+<g id="Shamir_1_">
+	<rect id="Cast_1_" x="222.23" y="88.56" class="st4" width="67.78" height="67.79"/>
+	<rect id="Band_1_" x="215.69" y="109.62" class="st3" width="80.18" height="22.19"/>
+</g>
+<g id="Shamir_Particles_1_">
+	<g>
+		<polygon class="st3" points="310.04,175.15 311.58,168.49 318.25,170.03 316.72,176.69 		"/>
+		<polygon class="st3" points="316.1,179.36 316.73,176.68 319.42,177.29 318.79,179.98 		"/>
+		<polygon class="st3" points="318.35,170.08 318.94,167.4 321.63,168.02 321.03,170.71 		"/>
+		<polygon class="st3" points="308.99,167.95 309.63,165.27 312.31,165.89 311.68,168.57 		"/>
+		<polygon class="st3" points="306.81,177.21 307.45,174.53 310.13,175.15 309.5,177.83 		"/>
+	</g>
+	<g>
+		<polygon class="st3" points="191.62,167 194.46,156.4 205.06,159.24 202.22,169.83 		"/>
+		<polygon class="st3" points="201.05,174.04 202.18,169.8 206.42,170.95 205.28,175.18 		"/>
+		<polygon class="st3" points="204.99,159.26 206.12,155.02 210.37,156.16 209.22,160.39 		"/>
+		<polygon class="st3" points="190.15,155.22 191.29,150.98 195.52,152.12 194.39,156.35 		"/>
+		<polygon class="st3" points="186.19,170.09 187.33,165.85 191.56,166.99 190.44,171.22 		"/>
+	</g>
+	<g>
+		<polygon class="st3" points="179.45,90.95 183.12,85.18 188.88,88.84 185.23,94.61 		"/>
+		<polygon class="st3" points="183.8,96.93 185.28,94.6 187.6,96.08 186.12,98.41 		"/>
+		<polygon class="st3" points="188.92,88.86 190.38,86.54 192.71,88.01 191.23,90.34 		"/>
+		<polygon class="st3" points="180.82,83.72 182.3,81.39 184.63,82.87 183.15,85.19 		"/>
+		<polygon class="st3" points="175.65,91.78 177.13,89.45 179.45,90.93 177.98,93.25 		"/>
+	</g>
+	<g>
+		<polygon class="st3" points="260.46,65.55 261.36,62.88 264.03,63.76 263.13,66.42 		"/>
+		
+			<rect x="259.06" y="59.71" transform="matrix(0.3086 -0.9512 0.9512 0.3086 121.9496 290.0001)" class="st3" width="2.8" height="2.81"/>
+		<polygon class="st3" points="264.04,63.67 264.9,61.01 267.57,61.88 266.67,64.55 		"/>
+		<polygon class="st3" points="256.92,67.29 257.77,64.63 260.44,65.49 259.58,68.16 		"/>
+		
+			<rect x="262.61" y="66.76" transform="matrix(0.3083 -0.9513 0.9513 0.3083 117.77 298.3038)" class="st3" width="2.8" height="2.81"/>
+	</g>
+	<g>
+		<polygon class="st3" points="323.31,105.42 330.16,105.34 330.21,112.18 323.4,112.25 		"/>
+		<polygon class="st3" points="330.21,112.19 332.99,112.15 333.01,114.91 330.23,114.94 		"/>
+		<polygon class="st3" points="330.13,102.6 332.87,102.57 332.89,105.32 330.15,105.35 		"/>
+		
+			<rect x="320.6" y="102.74" transform="matrix(1 -8.599048e-03 8.599048e-03 1 -0.8834 2.7725)" class="st3" width="2.74" height="2.75"/>
+		<polygon class="st3" points="320.7,112.29 323.44,112.26 323.46,115.01 320.72,115.05 		"/>
+	</g>
+</g>
+</svg>

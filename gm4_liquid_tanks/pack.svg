@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="liquid_tanks" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+	 style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#4AA0C7;}
+	.st2{fill:#428FB3;}
+	.st3{fill:none;}
+</style>
+<rect x="0" y="0" class="st0" width="512" height="512"/>
+<g id="Icon" inkscape:groupmode="layer" inkscape:label="Layer 1">
+	<path id="rect4147" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccccccccccc" class="st1" d="M289.01,433.33
+		l-66.62-0.16l-1.46-37.45l-40.59,0.02l-4.61-58.12l-108.95-0.99L51.23,202.75l65.33-93.89h278.86l65.35,94.44l-15.58,133.32
+		l-108.93,0.99l-4.27,58.47l-41.13-0.2L289.01,433.33z"/>
+	<path id="rect4150" inkscape:connector-curvature="0" sodipodi:nodetypes="cccc" class="st2" d="M146.29,121.36l5.28,66.66h-41.55
+		L146.29,121.36z"/>
+	<path id="rect4153" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccc" class="st2" d="M148.41,116.82h215.37
+		l-4.69,70.51H153.11L148.41,116.82z"/>
+	<path id="rect4150-0" inkscape:connector-curvature="0" sodipodi:nodetypes="cccc" class="st2" d="M366.17,120.22l-5.28,66.65
+		h41.55L366.17,120.22z"/>
+	<path id="rect4185" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccc" class="st0" d="M189.68,126.45h127.19
+		l17.1,32.01v27.31H177.24v-25.14L189.68,126.45z"/>
+	<path id="rect4171" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccc" class="st1" d="
+		M174.48,123.86l11.69-35.16h4.29l133.33,0.21l0.09,1.13l12.3,34.35l-4.1,2.47l-9.73-27.24l-0.67-1.36l-1.53,32.6l-3.49-5.25
+		l1.36-32.47l-127.31-0.25l1.02,34.18l-3.66,3.22l-0.43-33.71l-7.82,27.24l156.78,0.04v3.06v61.63l-159.74,0.02l0.06-5.55
+		l154.69-0.41l-0.78-54.7l-151.39,0.78l0.02,23.77l9.33-28.16l127.22,0.09l4.72,1.06l12.29,29.28l0.23,14.1l-16.18-40.44
+		l-125.17,0.27l-12.44,36.6l0.02,22.75h-5L174.48,123.86L174.48,123.86L174.48,123.86z"/>
+</g>
+<g>
+	<g>
+		<path class="st3" d="M50.52,511.74h410.96c27.56,0,49.9-22.35,49.9-49.9V50.89c0-27.56-22.35-49.91-49.9-49.91H50.52
+			c-27.56,0-49.91,22.35-49.91,49.91v410.95C0.61,489.39,22.96,511.74,50.52,511.74z"/>
+	</g>
+</g>
+<polyline class="st0" points="179.47,178.16 179.48,187.22 331.64,187.22 331.29,169.63 304.07,172.08 "/>
+</svg>

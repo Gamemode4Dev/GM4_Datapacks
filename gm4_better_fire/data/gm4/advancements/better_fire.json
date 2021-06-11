@@ -33,7 +33,7 @@
               "levels": 1
               }
             ],
-          "item": "minecraft:bow"
+          "items": ["minecraft:bow"]
         }
       }
     }

@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:116,gm4_metallurgy:{stored_shamir:\"corripio\"}}"
+                            "tag": "{CustomModelData:116,SkullOwner:{Name:\"[Drop to Fix Item] gm4_corripio_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"corripio\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",

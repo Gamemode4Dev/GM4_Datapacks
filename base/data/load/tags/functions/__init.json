@@ -1,8 +1,0 @@
-{
-    "values": [
-        "load:__init",
-        "#load:standard",
-        "#load:load",
-        "#load:post_load"
-    ]
-}
