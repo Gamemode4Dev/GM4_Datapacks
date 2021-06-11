@@ -3,7 +3,7 @@
 
 data modify entity @s HandItems[0] set from entity @s ArmorItems[3]
 loot spawn ~ ~1 ~ fish gm4_smelteries:smelt ~ ~ ~ mainhand
-replaceitem entity @s weapon air
+item replace entity @s weapon with air
 
 particle large_smoke ^ ^.9 ^0.2 0.1 0 0.1 0.05 5 normal @a
 playsound block.redstone_torch.burnout block @a[distance=..8] ~ ~ ~ 0.8 2

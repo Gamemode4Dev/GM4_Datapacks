@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:player_head",
+            "items": ["minecraft:player_head"],
             "nbt": "{gm4_heart_canister_tier:2b}"
           }
         ]

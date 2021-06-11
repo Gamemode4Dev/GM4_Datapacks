@@ -1,11 +1,11 @@
 {
     "pack": {
-        "pack_format": 6,
+        "pack_format": 7,
         "description": [
             "XP Storage",
             "\n",
             {
-                "text": "Gamemode 4 for 1.16",
+                "text": "Gamemode 4 for 1.17",
                 "color": "#4AA0C7"
             }
         ]
@@ -32,11 +32,17 @@
             ],
             [
                 "Sparks",
-                "https://www.twitter.com/accidentalgames"
+                "https://www.twitter.com/SparksTheGamer"
             ],
             [
                 "SpecialBuilder32",
                 "https://www.twitter.com/SpecialBuilder"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
             ]
         ]
     }

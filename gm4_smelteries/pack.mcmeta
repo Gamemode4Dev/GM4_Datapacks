@@ -1,11 +1,11 @@
 {
     "pack": {
-        "pack_format": 6,
+        "pack_format": 7,
         "description": [
             "Smelteries",
             "\n",
             {
-                "text": "Gamemode 4 for 1.16",
+                "text": "Gamemode 4 for 1.17",
                 "color": "#4AA0C7"
             }
         ]
@@ -28,7 +28,7 @@
         "Creator": [
             [
                 "Bloo",
-                "https://twitter.com/bluefire610"
+                "https://twitter.com/Bloo_dev"
             ]
         ],
         "Updated By": [
@@ -47,6 +47,11 @@
             [
                 "SpecialBuilder32",
                 "https://twitter.com/SpecialBuilder"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "Hozz"
             ]
         ]
     }

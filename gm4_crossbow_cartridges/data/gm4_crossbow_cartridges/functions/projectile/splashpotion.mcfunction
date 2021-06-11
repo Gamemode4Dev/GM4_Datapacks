@@ -6,7 +6,7 @@ summon minecraft:potion ~ ~1.2 ~ {Tags:["gm4_cb_proj"],Item:{id:"minecraft:splas
 data modify entity @e[type=minecraft:potion,tag=gm4_cb_proj,distance=..2,limit=1] Item.tag.Potion set from entity @s Inventory[{Slot:-106b}].tag.Potion
 
 #remove potion from player's offhand
-execute unless entity @s[gamemode=creative] run replaceitem entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:splash_potion"}]}] weapon.offhand minecraft:air
+execute unless entity @s[gamemode=creative] run item replace entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:splash_potion"}]}] weapon.offhand with minecraft:air
 
 #move motion of arrow to potion
 function gm4_crossbow_cartridges:projectile/arrow_motion

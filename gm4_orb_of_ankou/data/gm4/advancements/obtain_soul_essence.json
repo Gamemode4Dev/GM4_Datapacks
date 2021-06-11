@@ -8,14 +8,14 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "A Small Price to Pay...",
-        {"translate": "advancement.gm4.obtain_soul_essence.title"}
+        {"translate": "advancement.gm4.orb_of_ankou.obtain_soul_essence.title"}
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Obtain a piece of a mob's soul",
-        {"translate": "advancement.gm4.obtain_soul_essence.description"}
+        {"translate": "advancement.gm4.orb_of_ankou.obtain_soul_essence.description"}
       ],
       "color": "gray"
     }
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:black_dye",
+            "items": ["minecraft:black_dye"],
             "nbt": "{gm4_orb_of_ankou:{item:\"soul_essence\"}}"
           }
         ]

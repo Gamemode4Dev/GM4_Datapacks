@@ -7,7 +7,7 @@
       "predicate": {
         "equipment": {
           "head": {
-            "item": "minecraft:player_head",
+            "items": ["minecraft:player_head"],
               "nbt": "{gm4_scuba_gear:{item:\"helmet\"}}"
           }
         }
@@ -19,7 +19,7 @@
       "predicate": {
         "equipment": {
           "chest": {
-            "item": "minecraft:golden_chestplate",
+            "items": ["minecraft:golden_chestplate"],
               "nbt": "{gm4_scuba_gear:{item:\"tank\"}}"
           }
         }
@@ -31,7 +31,7 @@
       "predicate": {
         "equipment": {
           "feet": {
-            "item": "minecraft:leather_boots",
+            "items": ["minecraft:leather_boots"],
               "nbt": "{gm4_scuba_gear:{item:\"flippers\"}}"
           }
         }

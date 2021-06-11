@@ -1,7 +1,7 @@
 {
     "values": [
-        "#load:gm4_forceload",
-        "#load:gm4_player_heads",
+		{ "id": "#load:gm4_forceload", "required": false },
+		{ "id": "#load:gm4_player_heads", "required": false },
         "gm4_zauber_cauldrons:load"
     ]
 }

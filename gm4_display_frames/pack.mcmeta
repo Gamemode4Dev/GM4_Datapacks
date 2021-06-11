@@ -1,12 +1,12 @@
 {
     "pack": {
-        "pack_format": 6,
+        "pack_format": 7,
         "description": [
             "Display Frames",
             "\n",
             {
-              "text": "Gamemode 4 for 1.16",
-              "color": "#4AA0C7"
+                "text": "Gamemode 4 for 1.17",
+                "color": "#4AA0C7"
             }
         ]
     },
@@ -18,9 +18,20 @@
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
-        "Creator": [
-            ["BluePsychoRanger", "https://www.twitter.com/BluPsychoRanger"],
-            ["TheEpyonProject"]
+        "Creators": [
+            [
+                "BluePsychoRanger",
+                "https://www.twitter.com/BluPsychoRanger"
+            ],
+            [
+                "TheEpyonProject"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "BluePsychoRanger",
+                "https://www.twitter.com/BluPsychoRanger"
+            ]
         ]
     }
 }

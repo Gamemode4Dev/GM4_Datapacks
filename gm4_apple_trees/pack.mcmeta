@@ -1,11 +1,11 @@
 {
     "pack": {
-        "pack_format": 6,
+        "pack_format": 7,
         "description": [
             "Apple Trees",
             "\n",
             {
-                "text": "Gamemode 4 for 1.16",
+                "text": "Gamemode 4 for 1.17",
                 "color": "#4AA0C7"
             }
         ]
@@ -27,7 +27,7 @@
         "podzol_rooting_soil"
     ],
     "credits": {
-        "Creator": [
+        "Creators": [
             [
                 "Bloo",
                 "https://twitter.com/Bloo_dev"
@@ -39,6 +39,12 @@
             [
                 "SpecialBuilder",
                 "https://twitter.com/SpecialBuilder"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "BluePsychoRanger",
+                "https://twitter.com/BluPsychoRanger"
             ]
         ]
     }
