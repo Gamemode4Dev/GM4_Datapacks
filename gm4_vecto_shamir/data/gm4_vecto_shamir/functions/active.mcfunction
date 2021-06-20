@@ -5,5 +5,5 @@
 execute if block ~ ~ ~ #minecraft:rails run function gm4_vecto_shamir:vehicle/spawn_minecart
 
 # boat
-execute if predicate gm4_vecto_shamir:check_water/below run function gm4_vecto_shamir:vehicle/check_water
-execute if block ~ ~-1 ~ #minecraft:ice if predicate gm4_vecto_shamir:check_area/no_collision run function gm4_vecto_shamir:vehicle/spawn_boat
+execute if predicate gm4_vecto_shamir:water run function gm4_vecto_shamir:vehicle/position_check
+execute if block ~ ~-1 ~ #minecraft:ice if block ~ ~ ~ #gm4:no_collision if block ~.7 ~ ~ #gm4:no_collision if block ~-.7 ~ ~ #gm4:no_collision if block ~ ~ ~.7 #gm4:no_collision if block ~ ~ ~-7 #gm4:no_collision if block ~.7 ~ ~.7 #gm4:no_collision if block ~.7 ~ ~-.7 #gm4:no_collision if block ~-.7 ~ ~.7 #gm4:no_collision if block ~-.7 ~ ~-.7 #gm4:no_collision run function gm4_vecto_shamir:vehicle/spawn_boat
