@@ -12,7 +12,7 @@ function gm4_zauber_cauldrons:cauldron/structure/analyze/liquid
 execute if score $has_liquid gm4_zc_data matches 1 run function gm4_zauber_cauldrons:cauldron/structure/validate/heatsource
 
 # if no liquid was found, check for existence of empty cauldron
-execute if score $has_liquid gm4_zc_data matches 0 run function gm4_zauber_cauldrons:cauldron/structure/validate/cauldron
+execute unless score $has_liquid gm4_zc_data matches 1 run function gm4_zauber_cauldrons:cauldron/structure/validate/cauldron
 
 # reset fake players
 scoreboard players reset $has_liquid gm4_zc_data
