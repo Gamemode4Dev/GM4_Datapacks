@@ -1,4 +1,4 @@
-# @s=boiling zauber cauldron with grass and enchanted_prismarine_shard and NO poisonous flowers inside.
+# @s = boiling zauber cauldron with grass and enchanted_prismarine_shard and NO poisonous flowers inside.
 # at align xyz
 # run from recipes/flowers/check_poisonous_flowers
 

@@ -1,4 +1,4 @@
-# @s= player with crystal in off-hand
+# @s =  player with crystal in off-hand
 # run from player/slow_clock
 
 # move to storage

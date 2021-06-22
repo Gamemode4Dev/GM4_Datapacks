@@ -1,4 +1,4 @@
-# @s=zauber cauldron with overflow items
+# @s = zauber cauldron with overflow items
 # run from recipes
 # at @s
 

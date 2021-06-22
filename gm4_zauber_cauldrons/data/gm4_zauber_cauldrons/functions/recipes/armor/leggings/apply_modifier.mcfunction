@@ -1,4 +1,4 @@
-# @s=golden_leggings in cauldron
+# @s = golden_leggings in cauldron
 # at align xyz
 # run from recipe/armor/zauber_armor.mcfunction
 

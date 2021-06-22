@@ -1,4 +1,4 @@
-# @s=boiling cauldron with valid structure
+# @s = boiling cauldron with valid structure
 # at @s
 # run from cauldron/structure/validate/heatsource
 

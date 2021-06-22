@@ -1,4 +1,4 @@
-# @s=golden_helmet in cauldron
+# @s = golden_helmet in cauldron
 # at align xyz
 # run from recipe/armor/helmet/apply_modifier.mcfunction
 

@@ -1,4 +1,4 @@
-# @s=boiling zauber cauldron with crystal recipe inside
+# @s = boiling zauber cauldron with crystal recipe inside
 # at @s
 # run from zauber_crystals
 

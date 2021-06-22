@@ -1,4 +1,4 @@
-# @s=boiling zauber cauldron with a precursor inside.
+# @s = boiling zauber cauldron with a precursor inside.
 # at @s
 # run from cauldron/recipe_checks
 

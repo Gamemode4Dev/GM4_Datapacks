@@ -1,4 +1,4 @@
-# @s=boiling zauber cauldron with enchanted prismarine shard inside.
+# @s = boiling zauber cauldron with enchanted prismarine shard inside.
 # at align xyz
 # run from cauldron/recipe_checks
 

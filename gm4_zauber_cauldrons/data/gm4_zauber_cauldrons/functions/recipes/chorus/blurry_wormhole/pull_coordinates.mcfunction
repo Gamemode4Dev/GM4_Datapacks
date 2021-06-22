@@ -1,4 +1,4 @@
-# @s=bottled_vex item in zauber cauldron
+# @s = bottled_vex item in zauber cauldron
 # at @s align xyz of cauldron
 # run from blurry_wormhole/prepare
 

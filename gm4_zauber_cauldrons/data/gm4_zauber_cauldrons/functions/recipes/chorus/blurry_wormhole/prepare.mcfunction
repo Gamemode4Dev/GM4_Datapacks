@@ -1,4 +1,4 @@
-# @s=boiling zauber cauldron with recipe inside
+# @s = boiling zauber cauldron with recipe inside
 # at @s align xyz
 # run from count_chorus
 

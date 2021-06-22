@@ -1,4 +1,4 @@
-# @s=golden_boots in cauldron
+# @s = golden_boots in cauldron
 # at align xyz
 # run from recipe/armor/boots/apply_modifier.mcfunction
 

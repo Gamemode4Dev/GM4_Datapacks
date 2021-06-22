@@ -1,4 +1,4 @@
-# @s=zauber cauldron with overflow items and bottle(s) inside
+# @s = zauber cauldron with overflow items and bottle(s) inside
 # run from prepare_bottle
 # at allign xyz
 

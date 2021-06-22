@@ -1,4 +1,4 @@
-# @s=golden_chestplate in cauldron
+# @s = golden_chestplate in cauldron
 # at align xyz
 # run from recipe/armor/zauber_armor.mcfunction
 

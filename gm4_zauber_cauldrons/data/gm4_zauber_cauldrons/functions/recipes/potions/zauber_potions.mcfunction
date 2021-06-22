@@ -1,4 +1,4 @@
-# @s=boiling zauber cauldron with prismarine crystals inside.
+# @s = boiling zauber cauldron with prismarine crystals inside.
 # at align xyz
 # run from cauldron/recipe_checks
 

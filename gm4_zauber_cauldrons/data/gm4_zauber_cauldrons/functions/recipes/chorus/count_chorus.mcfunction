@@ -1,4 +1,4 @@
-# @s=boiling zauber cauldron with bottled vex and enchanted_prismarine_shard inside.
+# @s = boiling zauber cauldron with bottled vex and enchanted_prismarine_shard inside.
 # at align xyz
 # run from cauldron/recipe_checks
 

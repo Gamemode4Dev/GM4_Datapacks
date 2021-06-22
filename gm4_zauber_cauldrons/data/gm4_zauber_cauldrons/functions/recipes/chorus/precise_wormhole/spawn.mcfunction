@@ -1,4 +1,4 @@
-# @s=newly created wormhole item
+# @s = newly created wormhole item
 # at @s align xyz of cauldron
 # run from precise_wormhole/prepare and blurry_wormhole/prepare
 

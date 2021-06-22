@@ -1,4 +1,4 @@
-# @s=bottled vex item
+# @s = bottled vex item
 # run from main
 # at @s
 

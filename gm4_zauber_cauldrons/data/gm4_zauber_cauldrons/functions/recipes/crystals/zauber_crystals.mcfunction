@@ -1,4 +1,4 @@
-# @s=boiling zauber cauldron with sea lantern and nether star inside.
+# @s = boiling zauber cauldron with sea lantern and nether star inside.
 # at align xyz
 # run from cauldron/recipe_checks
 
