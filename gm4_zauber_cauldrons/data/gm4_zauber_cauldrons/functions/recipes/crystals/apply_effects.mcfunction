@@ -1,7 +1,13 @@
 # @s= player with crystal in off-hand
 # run from player/slow_clock
 
-effect give @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:player_head",tag:{gm4_zauber_cauldrons:{item:"crystal",type:"resistance"}}}]}] resistance 14 1
-effect give @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:player_head",tag:{gm4_zauber_cauldrons:{item:"crystal",type:"speed"}}}]}] speed 14 1
-effect give @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:player_head",tag:{gm4_zauber_cauldrons:{item:"crystal",type:"regeneration"}}}]}] regeneration 14 1
-effect give @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:player_head",tag:{gm4_zauber_cauldrons:{item:"crystal",type:"fire_resistance"}}}]}] fire_resistance 14 1
+# move to storage
+data modify storage gm4_zauber_cauldrons:temp/player/equipment/offhand tag.gm4_zauber_cauldrons set from entity @s Inventory[{Slot:-106b}].tag.gm4_zauber_cauldrons
+
+execute if data storage gm4_zauber_cauldrons:temp/player/equipment/offhand {tag:{gm4_zauber_cauldrons:{type:"resistance"}}} run effect give @s resistance 14 1
+execute if data storage gm4_zauber_cauldrons:temp/player/equipment/offhand {tag:{gm4_zauber_cauldrons:{type:"speed"}}} run effect give @s speed 14 1
+execute if data storage gm4_zauber_cauldrons:temp/player/equipment/offhand {tag:{gm4_zauber_cauldrons:{type:"regeneration"}}} run effect give @s regeneration 14 1
+execute if data storage gm4_zauber_cauldrons:temp/player/equipment/offhand {tag:{gm4_zauber_cauldrons:{type:"fire_resistance"}}} run effect give @s fire_resistance 14 1
+
+# clear storage
+data remove storage gm4_zauber_cauldrons:temp/player/equipment/offhand tag
