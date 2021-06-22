@@ -24,4 +24,4 @@ execute if block ~-1 ~1 ~ air run summon cave_spider ~-1 ~1 ~
 fill ~-1 ~ ~-1 ~-1 ~1 ~ cobweb keep
 execute if block ~-1 ~1 ~ air run summon cave_spider ~-1 ~1 ~
 fill ~1 ~1 ~1 ~1 ~1 ~1 cobweb keep
-scoreboard players set recipe_success gm4_zc_data 1
+scoreboard players set $recipe_success gm4_zc_data 1

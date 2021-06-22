@@ -12,4 +12,4 @@ execute if score has_soul_fire gm4_zc_data matches 1 run summon item ~ ~.2 ~ {It
 # visuals
 particle block red_nether_bricks ~ ~.2 ~ .1 .1 .1 10 30
 summon area_effect_cloud ~ ~.75 ~ {Radius:1.25f,Duration:2147483647,RadiusOnUse:-0.09f,RadiusPerTick:0.0f,ReapplicationDelay:20,Effects:[{Duration:1,Id:6b,Amplifier:2b}]}
-scoreboard players set recipe_success gm4_zc_data 1
+scoreboard players set $recipe_success gm4_zc_data 1

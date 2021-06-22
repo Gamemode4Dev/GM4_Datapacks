@@ -3,9 +3,9 @@
 # run from player/wormhole_targeting/set_position
 
 # forcibly load the chunk
-execute store success score forceloaded gm4_zc_data run forceload query ~ ~
-execute if score forceloaded gm4_zc_data matches 0 run forceload add ~ ~
-execute if score forceloaded gm4_zc_data matches 0 run forceload remove ~ ~
+execute store success score $forceloaded gm4_zc_data run forceload query ~ ~
+execute if score $forceloaded gm4_zc_data matches 0 run forceload add ~ ~
+execute if score $forceloaded gm4_zc_data matches 0 run forceload remove ~ ~
 
 # teleport marker to correct dimension
 tp @s ~ ~ ~

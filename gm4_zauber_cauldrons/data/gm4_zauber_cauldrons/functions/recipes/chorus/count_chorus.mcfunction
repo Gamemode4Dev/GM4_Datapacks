@@ -6,7 +6,7 @@
 scoreboard players set cancel_recipe gm4_zc_data 0
 
 # set expected fullness for these recipes (stack chorus+stack popped chorus+enchanted_prismarine_shard+bottled vex)
-scoreboard players set expected_item_amount gm4_zc_fullness 4
+scoreboard players set $expected_item_amount gm4_zc_fullness 4
 
 # read count from chorus fruit stacks
 execute store result score raw_chorus_fullness gm4_zc_chorus run data get entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:chorus_fruit"}},limit=1] Item.Count 1
@@ -33,8 +33,8 @@ execute if score cancel_recipe gm4_zc_data matches 1 run function gm4_zauber_cau
 execute if score cancel_recipe gm4_zc_data matches 0 run function gm4_zauber_cauldrons:recipes/chorus/precise_wormhole/prepare
 
 # use water and play sound once a recipe ran
-execute if score recipe_success gm4_zc_data matches 1 at @s if score @s gm4_zc_fullness > expected_item_amount gm4_zc_fullness run function gm4_zauber_cauldrons:cauldron/structure/use_extra_items
-execute if score recipe_success gm4_zc_data matches 1 at @s run function gm4_zauber_cauldrons:cauldron/structure/use_water
+execute if score $recipe_success gm4_zc_data matches 1 at @s if score @s gm4_zc_fullness > $expected_item_amount gm4_zc_fullness run function gm4_zauber_cauldrons:cauldron/structure/use_extra_items
+execute if score $recipe_success gm4_zc_data matches 1 at @s run function gm4_zauber_cauldrons:cauldron/structure/use_water
 
 # reset fake players
 scoreboard players reset cancel_recipe gm4_zc_data

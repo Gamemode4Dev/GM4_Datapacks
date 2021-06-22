@@ -7,4 +7,4 @@ execute unless data entity @s Item.tag.CustomModelData run data modify entity @s
 data modify entity @s Item.tag.display.Lore append value '{"translate":"%1$s%3427655$s","with":["+25% Magic",{"translate":"item.gm4.zauber_armour.magic","with":["25"]}],"color":"blue","italic":"false"}'
 
 kill @e[type=item,dx=0,dy=0,dz=0,nbt=!{Item:{tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}}}]
-scoreboard players set recipe_success gm4_zc_data 1
+scoreboard players set $recipe_success gm4_zc_data 1

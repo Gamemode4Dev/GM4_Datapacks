@@ -20,4 +20,4 @@ execute at @s run playsound minecraft:entity.ender_eye.death master @a[distance=
 scoreboard players operation @s gm4_zc_fullness += raw_chorus_fullness gm4_zc_chorus
 scoreboard players operation @s gm4_zc_fullness += popped_chorus_fullness gm4_zc_chorus
 
-scoreboard players set recipe_success gm4_zc_data 1
+scoreboard players set $recipe_success gm4_zc_data 1

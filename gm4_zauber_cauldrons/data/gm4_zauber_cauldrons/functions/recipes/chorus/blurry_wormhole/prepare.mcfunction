@@ -35,7 +35,7 @@ execute if score popped_chorus_fullness gm4_zc_chorus matches 1.. run scoreboard
 execute at @s run particle minecraft:witch ~ ~.3 ~ .1 .1 .1 1 7
 execute at @s run playsound minecraft:entity.ender_eye.death master @a[distance=..8] ~ ~ ~ 1 .6
 
-scoreboard players set recipe_success gm4_zc_data 1
+scoreboard players set $recipe_success gm4_zc_data 1
 
 # reset fake players
 scoreboard players reset dx gm4_zc_data

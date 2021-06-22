@@ -11,4 +11,4 @@ execute if score has_soul_fire gm4_zc_data matches 1 run summon item ~ ~.2 ~ {It
 
 # visuals
 summon area_effect_cloud ~ ~.75 ~ {CustomName:'"their own incompetence"',Radius:2.1f,Duration:2147483647,RadiusOnUse:-0.75f,RadiusPerTick:-0.0005f,ReapplicationDelay:0,Effects:[{Duration:40,Id:7b,Amplifier:8b,ShowParticles:1b}]}
-scoreboard players set recipe_success gm4_zc_data 1
+scoreboard players set $recipe_success gm4_zc_data 1

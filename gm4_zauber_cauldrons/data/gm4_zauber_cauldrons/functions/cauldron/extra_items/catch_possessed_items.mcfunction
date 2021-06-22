@@ -23,4 +23,4 @@ data modify entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{tag:{gm4_zauber_cauldr
 data remove storage gm4_zauber_cauldrons:temp/item/bottled_vex Item
 
 # store success
-scoreboard players set bottled_possessed_items gm4_zc_data 1
+scoreboard players set $bottled_possessed_items gm4_zc_data 1
