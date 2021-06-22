@@ -1,9 +1,10 @@
-scoreboard objectives add gm4_zc_data dummy "gm4_zauber_cauldrons_data"
-scoreboard objectives add gm4_zc_flowers dummy "gm4_zauber_cauldrons_flowers"
-scoreboard objectives add gm4_zc_chorus dummy "gm4_zauber_cauldrons_chorus"
-scoreboard objectives add gm4_zc_fullness dummy "gm4_zauber_cauldrons_fullness"
-scoreboard objectives add gm4_zc_deaths deathCount "gm4_zauber_cauldrons_deaths"
-scoreboard objectives add gm4_zc_id dummy "gm4_zauber_cauldrons_sips"
+scoreboard objectives add gm4_zc_chorus dummy
+scoreboard objectives add gm4_zc_data dummy
+scoreboard objectives add gm4_zc_deaths deathCount
+scoreboard objectives add gm4_zc_flowers dummy
+scoreboard objectives add gm4_zc_fullness dummy
+scoreboard objectives add gm4_zc_id dummy
+scoreboard objectives add gm4_zc_rabtarget dummy
 function gm4_zauber_cauldrons:recipes/flowers/initiate_flower_types
 function gm4_zauber_cauldrons:recipes/chorus/initiate_chorus_amounts
 scoreboard players set modulo gm4_zc_fullness 3

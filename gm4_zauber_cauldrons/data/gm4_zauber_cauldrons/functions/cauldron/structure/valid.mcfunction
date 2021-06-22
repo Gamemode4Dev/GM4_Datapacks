@@ -1,8 +1,9 @@
 # @s=boiling cauldron with valid structure
 # at @s
-# run from cauldron/structure/check
+# run from cauldron/structure/validate/heatsource
 
-particle poof ~ ~ ~ .005 .2 .005 .0005 4
+execute if score $has_water gm4_zc_data matches 1 run particle minecraft:poof ~ ~ ~ .005 .2 .005 .0005 4
+execute if score $has_powder_snow gm4_zc_data matches 1 run particle minecraft:dripping_water ~ ~0.38 ~ 0.14 0 0.14 1 1
 
 # count items in Cauldrons
 scoreboard players set @s gm4_zc_fullness 0
