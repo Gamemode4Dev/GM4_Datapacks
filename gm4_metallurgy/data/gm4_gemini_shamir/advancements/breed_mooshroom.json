@@ -1,6 +1,6 @@
 {
   "criteria":{
-    "breed_cows":{
+    "breed_mooshrooms":{
       "trigger":"minecraft:bred_animals",
       "conditions":{
         "type":"mooshroom"

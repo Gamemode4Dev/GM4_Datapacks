@@ -1,6 +1,6 @@
 {
   "criteria":{
-    "breed_cows":{
+    "breed_rabbits":{
       "trigger":"minecraft:bred_animals",
       "conditions":{
         "type":"rabbit"

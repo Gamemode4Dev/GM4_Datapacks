@@ -1,13 +1,13 @@
 {
   "criteria":{
-    "breed_sheep":{
+    "breed_striders":{
       "trigger":"minecraft:bred_animals",
       "conditions":{
-        "type":"sheep"
+        "type":"strider"
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_sheep"
+    "function":"gm4_gemini_shamir:breed/check_strider"
   }
 }

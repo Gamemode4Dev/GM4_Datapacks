@@ -1,6 +1,6 @@
 {
   "criteria":{
-    "breed_cows":{
+    "breed_bees":{
       "trigger":"minecraft:bred_animals",
       "conditions":{
         "type":"bee"

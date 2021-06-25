@@ -1,6 +1,6 @@
 {
   "criteria":{
-    "breed_cows":{
+    "breed_chickens":{
       "trigger":"minecraft:bred_animals",
       "conditions":{
         "type":"chicken"

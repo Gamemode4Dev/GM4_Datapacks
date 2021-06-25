@@ -9,18 +9,6 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_forterra:stone",
-              "conditions": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'forterra'}}"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "minecraft:loot_table",
               "name": "gm4_metallurgy:malachite_lump",
               "conditions": [
                 {
@@ -51,6 +39,31 @@
                         }
                       }
                     ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_forterra_shamir:stone",
+              "conditions": [
+                {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                      "enchantments": [
+                        {
+                          "enchantment": "minecraft:silk_touch"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'forterra'}}"
                   }
                 }
               ]
