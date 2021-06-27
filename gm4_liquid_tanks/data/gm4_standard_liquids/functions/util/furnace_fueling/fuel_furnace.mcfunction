@@ -2,7 +2,7 @@
 #scheduled run from standard_liquids:util/furnace_fueling/furnace_start
 
 #remove hoe if not furnace not started
-execute if block ~ ~ ~ #gm4_standard_liquids:furnace[lit=false]{Items:[{Slot:1b,tag:{tankhoe:1b}}]} run replaceitem block ~ ~ ~ container.1 air
+execute if block ~ ~ ~ #gm4_standard_liquids:furnace[lit=false]{Items:[{Slot:1b,tag:{tankhoe:1b}}]} run item replace block ~ ~ ~ container.1 with air
 
 #adjust burntime and remove lava
 scoreboard players operation @s gm4_lt_prior_val = @s gm4_lt_value

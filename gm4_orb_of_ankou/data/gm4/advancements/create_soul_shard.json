@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:flint",
+            "items": ["minecraft:flint"],
             "nbt": "{gm4_orb_of_ankou:{item:\"soul_shard\"}}"
           }
         ]
