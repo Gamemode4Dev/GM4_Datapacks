@@ -1,11 +1,11 @@
 {
     "pack": {
-        "pack_format": 6,
+        "pack_format": 7,
         "description": [
             "Crossbow Cartridges",
             "\n",
             {
-                "text": "Gamemode 4 for 1.16",
+                "text": "Gamemode 4 for 1.17",
                 "color": "#4AA0C7"
             }
         ]
@@ -19,13 +19,19 @@
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
-        "Creator": [
+        "Creators": [
             [
                 "Denniss"
             ],
             [
                 "Nik3141",
 				"https://www.youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
             ]
         ]
     }

@@ -10,8 +10,8 @@
 execute store result score treasureType gm4_st_random run loot spawn ~ -1024 ~ fish gm4_sunken_treasure:function/treasure_type ~ 0 ~ mainhand
 
 #spawn treasure based on treasureType
-execute if score treasureType gm4_st_random matches 1 unless score gm4_scuba_gear load matches 1.. run loot spawn ~ ~ ~ loot gm4_sunken_treasure:item_treasure
-execute if score treasureType gm4_st_random matches 1 if score gm4_scuba_gear load matches 1.. run loot spawn ~ ~ ~ loot gm4_sunken_treasure:item_treasure_scuba
+execute if score treasureType gm4_st_random matches 1 unless score gm4_scuba_gear load.status matches 1.. run loot spawn ~ ~ ~ loot gm4_sunken_treasure:item_treasure
+execute if score treasureType gm4_st_random matches 1 if score gm4_scuba_gear load.status matches 1.. run loot spawn ~ ~ ~ loot gm4_sunken_treasure:item_treasure_scuba
 execute if score treasureType gm4_st_random matches 2 run summon minecraft:squid ~ ~ ~
 execute if score treasureType gm4_st_random matches 3 run summon minecraft:guardian ~ ~ ~
 

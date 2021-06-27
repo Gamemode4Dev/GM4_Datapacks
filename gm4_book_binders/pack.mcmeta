@@ -1,11 +1,11 @@
 {
     "pack": {
-        "pack_format": 6,
+        "pack_format": 7,
         "description": [
             "Book Binders",
             "\n",
             {
-                "text": "Gamemode 4 for 1.16",
+                "text": "Gamemode 4 for 1.17",
                 "color": "#4AA0C7"
             }
         ]
@@ -19,7 +19,7 @@
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
-        "Creator": [
+        "Creators": [
             [
                 "Bloo",
                 "https://twitter.com/Bloo_dev"
@@ -27,6 +27,12 @@
             [
                 "Sparks",
                 "https://twitter.com/SparksTheGamer"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
             ]
         ]
     }

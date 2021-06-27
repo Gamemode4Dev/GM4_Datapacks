@@ -4,19 +4,19 @@
   "predicate": {
     "equipment": {
       "head": {
-        "item": "golden_helmet",
+        "items": ["golden_helmet"],
         "nbt": "{gm4_zauber_cauldrons:{item:\"zauber_armor\"}}"
       },
       "chest": {
-        "item": "golden_chestplate",
+        "items": ["golden_chestplate"],
         "nbt": "{gm4_zauber_cauldrons:{item:\"zauber_armor\"}}"
       },
       "legs": {
-        "item": "golden_leggings",
+        "items": ["golden_leggings"],
         "nbt": "{gm4_zauber_cauldrons:{item:\"zauber_armor\"}}"
       },
       "feet": {
-        "item": "golden_boots",
+        "items": ["golden_boots"],
         "nbt": "{gm4_zauber_cauldrons:{item:\"zauber_armor\"}}"
       }
     }

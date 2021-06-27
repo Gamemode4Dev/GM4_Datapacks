@@ -1,11 +1,11 @@
 {
     "pack": {
-        "pack_format": 6,
+        "pack_format": 7,
         "description": [
             "Spawner Minecarts",
             "\n",
             {
-                "text": "Gamemode 4 for 1.16",
+                "text": "Gamemode 4 for 1.17",
                 "color": "#4AA0C7"
             }
         ]
@@ -20,7 +20,7 @@
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
-        "Creator": [
+        "Creators": [
             [
                 "Sparks",
                 "https://www.twitter.com/SparksTheGamer"
@@ -32,6 +32,12 @@
             [
                 "SpecialBuilder32",
                 "https://www.twitter.com/specialbuilder"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "Sparks",
+                "https://www.twitter.com/SparksTheGamer"
             ]
         ]
     }

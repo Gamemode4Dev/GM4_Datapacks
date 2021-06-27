@@ -5,17 +5,17 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "weight": 100,
+                    "weight": 110,
                     "name": "minecraft:bone"
                 },
                 {
                     "type": "minecraft:item",
-                    "weight": 100,
+                    "weight": 110,
                     "name": "minecraft:red_mushroom"
                 },
                 {
                     "type": "minecraft:item",
-                    "weight": 200,
+                    "weight": 180,
                     "name": "minecraft:brown_mushroom"
                 },
                 {
