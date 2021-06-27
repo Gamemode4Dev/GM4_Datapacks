@@ -17,11 +17,13 @@
         "minecraft:polar_bear",
         "minecraft:rabbit",
         "minecraft:sheep",
+        "minecraft:skeleton_horse",
         "minecraft:strider",
         "minecraft:trader_llama",
         "minecraft:turtle",
         "minecraft:villager",
         "minecraft:wolf",
+        "minecraft:zombie_horse",
         "#gm4_everstone:aging_mob"
     ]
 }

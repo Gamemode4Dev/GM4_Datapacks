@@ -1,7 +1,7 @@
 {
 	"datapack.env.cmdVersion": "1.17",
 	"datapack.env.jsonVersion": "1.17",
-	"datapack.env.dataVersion": "1.17-rc2",
+	"datapack.env.dataVersion": "1.17",
 	"datapack.lint.stringQuote": ["hint", true],
 	"datapack.lint.nbtStringQuoteType": ["hint", "prefer double"]
 }
