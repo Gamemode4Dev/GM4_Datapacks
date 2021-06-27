@@ -5,27 +5,32 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "weight": 2,
+                    "weight": 4,
                     "name": "minecraft:golden_apple"
                 },
                 {
                     "type": "minecraft:item",
-                    "weight": 3,
+                    "weight": 8,
                     "name": "minecraft:golden_carrot"
                 },
                 {
                     "type": "minecraft:item",
-                    "weight": 5,
+                    "weight": 12,
+                    "name": "minecraft:beetroot"
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 12,
                     "name": "minecraft:carrot"
                 },
                 {
                     "type": "minecraft:item",
-                    "weight": 5,
+                    "weight": 12,
                     "name": "minecraft:poisonous_potato"
                 },
                 {
                     "type": "minecraft:item",
-                    "weight": 5,
+                    "weight": 12,
                     "name": "minecraft:potato"
                 },
                 {
@@ -40,7 +45,7 @@
                 },
                 {
                     "type": "minecraft:item",
-                    "weight": 300,
+                    "weight": 260,
                     "name": "minecraft:brown_mushroom"
                 },
                 {
