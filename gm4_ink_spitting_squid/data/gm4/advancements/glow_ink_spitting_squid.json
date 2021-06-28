@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:glow_ink_sac",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "The Light, It Burns!",
+        {"translate": "advancement.gm4.glow_ink_spitting_squid.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Glow due to an underwater glow squid",
+        {"translate": "advancement.gm4.glow_ink_spitting_squid.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "glow_ink_squirt_hit": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
