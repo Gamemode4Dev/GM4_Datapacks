@@ -12,7 +12,7 @@
 	},
 	"module_name": "Iacio Shamir",
 	"module_id": "iacio_shamir",
-	"hidden":false,
+	"hidden":true,
 	"site_description": "Adds the Iacio shamir that lets you throw further",
 	"site_categories": [
 		"Metallurgy"

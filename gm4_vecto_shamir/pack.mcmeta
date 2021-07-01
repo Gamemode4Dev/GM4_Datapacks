@@ -12,7 +12,7 @@
 	},
 	"module_name": "Vecto Shamir",
 	"module_id": "vecto_shamir",
-	"hidden":false,
+	"hidden":true,
 	"site_description": "Adds the Vecto shamir to summon a boat or minecart when in need",
 	"site_categories": [
 		"Metallurgy"
