@@ -3,7 +3,7 @@
 # called by slow_clock
 
 # spread spawn point around a random player, in a 24 block radius
-execute at @r[gamemode=!spectator] run spreadplayers ~ ~ 0 24 false @e[type=area_effect_cloud,tag=gm4_phantom_spawn_point]
+execute at @r[x=0,gamemode=!spectator] run spreadplayers ~ ~ 0 24 false @e[type=area_effect_cloud,tag=gm4_phantom_spawn_point]
 
 # set Y position relative to player (20-40 blocks above the nearest player)
 execute at @e[type=area_effect_cloud,tag=gm4_phantom_spawn_point] store result score phantom_altitude_base gm4_menace_data run data get entity @p Pos[1]
