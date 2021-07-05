@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:black_dye",
+            "items": ["minecraft:black_dye"],
             "nbt": "{gm4_orb_of_ankou:{item:\"soul_essence\"}}"
           }
         ]

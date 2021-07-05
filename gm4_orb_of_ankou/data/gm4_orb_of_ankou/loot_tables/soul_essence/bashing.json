@@ -36,7 +36,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:204,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"bashing\"},stored_attributes:[{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-.4,Operation:1,UUID:[I;0,399214,0,360169],Slot:\"offhand\"},{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:.7,Operation:1,UUID:[I;0,787852,0,423204],Slot:\"offhand\"}],stored_color:[13181000]},Enchantments:[{}]}"
+              "tag": "{CustomModelData:204,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"bashing\"},stored_attributes:[{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-.4,Operation:1,UUID:[I;0,399214,0,360169],Slot:\"offhand\"},{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:.7,Operation:1,UUID:[I;0,787852,0,423204],Slot:\"offhand\"}],stored_color:[13181000]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
             }
           ]
         }

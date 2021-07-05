@@ -1,7 +1,7 @@
 {
     "values": [
-        "#load:gm4_orbis",
-        "#load:gm4_trades",
+        { "id": "#load:gm4_orbis", "required": false },
+        { "id": "#load:gm4_trades", "required": false },
         "gm4_fruiting_trees:load"
     ]
 }

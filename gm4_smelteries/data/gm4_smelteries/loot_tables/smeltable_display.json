@@ -20,7 +20,7 @@
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "item": "minecraft:gold_ore"
+                                        "items": ["minecraft:gold_ore"]
                                     }
                                 }
                             ]
@@ -38,7 +38,7 @@
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "item": "minecraft:nether_gold_ore"
+                                        "items": ["minecraft:nether_gold_ore"]
                                     }
                                 }
                             ]
@@ -56,7 +56,7 @@
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "item": "minecraft:iron_ore"
+                                        "items": ["minecraft:iron_ore"]
                                     }
                                 }
                             ]
@@ -74,7 +74,7 @@
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "item": "minecraft:sand"
+                                        "items": ["minecraft:sand"]
                                     }
                                 }
                             ]
@@ -92,7 +92,7 @@
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "item": "minecraft:red_sand"
+                                        "items": ["minecraft:red_sand"]
                                     }
                                 }
                             ]
@@ -110,7 +110,7 @@
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "item": "minecraft:chorus_fruit"
+                                        "items": ["minecraft:chorus_fruit"]
                                     }
                                 }
                             ]

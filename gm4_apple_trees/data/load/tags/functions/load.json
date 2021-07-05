@@ -1,6 +1,5 @@
 {
     "values": [
-        "#load:gm4_fruiting_trees",
         "#load:gm4_apple_trees"
     ]
 }

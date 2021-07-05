@@ -71,7 +71,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"block": "minecraft:piston_head",
+					"blocks": ["minecraft:piston_head"],
 					"state": {
 						"facing": "west"
 					}

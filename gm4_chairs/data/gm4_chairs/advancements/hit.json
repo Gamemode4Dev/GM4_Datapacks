@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "punch": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:pig",
+              "team": "gm4_chairs"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_chairs:hit"
+  }
+}
