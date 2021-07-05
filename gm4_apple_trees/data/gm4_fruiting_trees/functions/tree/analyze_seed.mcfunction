@@ -94,6 +94,7 @@ scoreboard players operation $generated_seed gm4_tree_seed /= #2 gm4_tree_seed
 
 # start generating a tree
 setblock ~ ~ ~ air
+execute if block ~ ~-1 ~ #gm4_fruiting_trees:dirt_replaceable run setblock ~ ~-1 ~ dirt
 function gm4_fruiting_trees:tree/generate
 
 # kill marker after generation, reset seed
