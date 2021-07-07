@@ -6,7 +6,7 @@
 function gm4_zauber_cauldrons:cauldron/structure/analyze/heatsource
 
 # enable cauldron for crafting
-execute if score $has_heatsource gm4_zc_data matches 1 unless score $has_lava gm4_zc_data matches 1 run function gm4_zauber_cauldrons:cauldron/structure/valid
+execute if score $has_heatsource gm4_zc_data matches 1 unless score $has_lava gm4_zc_data matches 1 align xyz run function gm4_zauber_cauldrons:cauldron/structure/valid
 # TODO ensure correct liquid is in cauldron for recipes
 
 # reset fake players

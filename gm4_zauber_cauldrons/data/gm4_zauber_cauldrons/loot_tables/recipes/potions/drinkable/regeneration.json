@@ -1,0 +1,129 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:potion",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"regeneration\",bottle:{multi_use:0b}},HideFlags:32,Potion:\"regeneration\",CustomPotionEffects:[{Id:10,Amplifier:3,Duration:440},{Id:1,Amplifier:2,Duration:320}]}"
+                        },
+                        {
+                            "function": "minecraft:copy_nbt",
+                            "source": {
+                                "type": "minecraft:storage",
+                                "source": "gm4_zauber_cauldrons:items/templates/multi_sip"
+                            },
+                            "ops": [
+                                {
+                                    "source": "bottle",
+                                    "target": "gm4_zauber_cauldrons.bottle",
+                                    "op": "replace"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$has_soul_fire_heatsource"
+                                        },
+                                        "score": "gm4_zc_data"
+                                    },
+                                    "range": 1
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                [
+                                    {
+                                        "text": "9/9 ",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "translate": "%1$s%3427655$s",
+                                        "with": [
+                                            {
+                                                "text": "Sips"
+                                            },
+                                            {
+                                                "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lore.sips"
+                                            }
+                                        ],
+                                        "color": "gray",
+                                        "italic": false
+                                    }
+                                ]
+                            ],
+                            "replace": false,
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$has_soul_fire_heatsource"
+                                        },
+                                        "score": "gm4_zc_data"
+                                    },
+                                    "range": 1
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                [
+                                    {
+                                        "translate": "effect.minecraft.regeneration",
+                                        "color": "blue",
+                                        "italic": false
+                                    },
+                                    " ",
+                                    {
+                                        "translate": "potion.potency.3",
+                                        "color": "blue",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": " (0:22)",
+                                        "color": "blue",
+                                        "italic": false
+                                    }
+                                ],
+                                [
+                                    {
+                                        "translate": "effect.minecraft.speed",
+                                        "color": "blue",
+                                        "italic": false
+                                    },
+                                    " ",
+                                    {
+                                        "translate": "potion.potency.2",
+                                        "color": "blue",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": " (0:16)",
+                                        "color": "blue",
+                                        "italic": false
+                                    }
+                                ]
+                            ],
+                            "replace": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

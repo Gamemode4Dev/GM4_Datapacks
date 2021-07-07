@@ -1,0 +1,159 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:potion",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"speed\",bottle:{multi_use:0}},HideFlags:32,Potion:\"swiftness\",CustomPotionEffects:[{Id:1,Amplifier:3,Duration:4000},{Id:18,Amplifier:3,Duration:7200}]}"
+                        },
+                        {
+                            "function": "minecraft:copy_nbt",
+                            "source": {
+                                "type": "minecraft:storage",
+                                "source": "gm4_zauber_cauldrons:items/templates/multi_sip"
+                            },
+                            "ops": [
+                                {
+                                    "source": "bottle",
+                                    "target": "gm4_zauber_cauldrons.bottle",
+                                    "op": "replace"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$has_soul_fire_heatsource"
+                                        },
+                                        "score": "gm4_zc_data"
+                                    },
+                                    "range": 1
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                [
+                                    {
+                                        "text": "9/9 ",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "translate": "%1$s%3427655$s",
+                                        "with": [
+                                            {
+                                                "text": "Sips"
+                                            },
+                                            {
+                                                "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lore.sips"
+                                            }
+                                        ],
+                                        "color": "gray",
+                                        "italic": false
+                                    }
+                                ]
+                            ],
+                            "replace": false,
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$has_soul_fire_heatsource"
+                                        },
+                                        "score": "gm4_zc_data"
+                                    },
+                                    "range": 1
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                [
+                                    {
+                                        "translate": "effect.minecraft.speed",
+                                        "color": "blue",
+                                        "italic": false
+                                    },
+                                    " ",
+                                    {
+                                        "translate": "potion.potency.3",
+                                        "color": "blue",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": " (3:20)",
+                                        "color": "blue",
+                                        "italic": false
+                                    }
+                                ],
+                                [
+                                    {
+                                        "translate": "effect.minecraft.weakness",
+                                        "color": "red",
+                                        "italic": false
+                                    },
+                                    " ",
+                                    {
+                                        "translate": "potion.potency.3",
+                                        "color": "red",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": " (6:00)",
+                                        "color": "red",
+                                        "italic": false
+                                    }
+                                ],
+                                {
+                                    "text": ""
+                                },
+                                {
+                                    "translate": "potion.whenDrank",
+                                    "color": "dark_purple",
+                                    "italic": false
+                                },
+                                {
+                                    "translate": "attribute.modifier.plus.1",
+                                    "with": [
+                                        "80",
+                                        {
+                                            "translate": "attribute.name.generic.movement_speed"
+                                        }
+                                    ],
+                                    "color": "blue",
+                                    "italic": false
+                                },
+                                {
+                                    "translate": "attribute.modifier.take.1",
+                                    "with": [
+                                        "16",
+                                        {
+                                            "translate": "attribute.name.generic.attack_damage"
+                                        }
+                                    ],
+                                    "color": "blue",
+                                    "italic": false
+                                }
+                            ],
+                            "replace": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
