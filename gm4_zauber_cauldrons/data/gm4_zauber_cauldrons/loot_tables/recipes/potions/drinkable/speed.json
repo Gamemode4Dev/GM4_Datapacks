@@ -41,10 +41,17 @@
                         },
                         {
                             "function": "minecraft:set_lore",
+                            "entity": "this",
                             "lore": [
                                 [
                                     {
-                                        "text": "9/9 ",
+                                        "nbt": "bottle.sips",
+                                        "storage": "gm4_zauber_cauldrons:items/templates/multi_sip",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": "/9 ",
                                         "color": "gray",
                                         "italic": false
                                     },

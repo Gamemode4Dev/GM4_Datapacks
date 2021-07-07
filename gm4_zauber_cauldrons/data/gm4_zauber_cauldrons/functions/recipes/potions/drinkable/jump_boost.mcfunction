@@ -1,6 +1,6 @@
 # @s = boiling zauber cauldron with recipe inside
 # at center of block
-# run from recipes/potions/drinkable
+# run from recipes/potions/drinkable/check_type
 
 # remove ingredients
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]

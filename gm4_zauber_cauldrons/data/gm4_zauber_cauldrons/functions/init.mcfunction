@@ -19,7 +19,7 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_zauber_caul
 execute unless data storage gm4_player_heads:register heads[{id:"gm4_zauber_cauldrons:crystal/regeneration/v0"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_zauber_cauldrons:crystal/regeneration/v0",value:'eyJ0aW1lc3RhbXAiOjE0NzY4ODYzMDA0MTcsInByb2ZpbGVJZCI6ImQxNWU1MTVhMjA1ODQ1OWFiZmU5ZmY1NzlhMGQyZTdjIiwicHJvZmlsZU5hbWUiOiJCbHVlZmlyZTYxMCIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9lNzZmNDQ5MTI2MjQxOTM2ZDE3ODZhNDAyZGY2ZjQ2NWU1ZTdiMjhlZWQzNWFiNzY3MWYwZDI2YjJjZTZlMyJ9fX0=',item:{CustomModelData:13,gm4_zauber_cauldrons:{item:"crystal",type:"regeneration"},HideFlags:1,display:{Name:'{"translate":"%1$s%3427655$s","with":["Crystal of Regeneration",{"translate":"item.gm4.zauber_crystal.regeneration"}],"italic":false}'}}}
 
 # register item nbt
-data modify storage gm4_zauber_cauldrons:items/templates/multi_sip bottle set value {sips:9b,multi_use:1b}
+data modify storage gm4_zauber_cauldrons:items/templates/multi_sip bottle set value {sips:9,multi_use:1b}
 
 execute unless score zauber_cauldrons gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Zauber Cauldrons"}
 scoreboard players set zauber_cauldrons gm4_modules 1

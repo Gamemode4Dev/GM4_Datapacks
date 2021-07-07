@@ -1,0 +1,61 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:splash_potion",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{gm4_zauber_cauldrons:{item:\"splash_potion\",type:\"regeneration\",bottle:{multi_use:0b}},HideFlags:32,Potion:\"regeneration\",CustomPotionEffects:[{Id:10,Amplifier:3,Duration:440},{Id:1,Amplifier:2,Duration:320}]}"
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                [
+                                    {
+                                        "translate": "effect.minecraft.regeneration",
+                                        "color": "blue",
+                                        "italic": false
+                                    },
+                                    " ",
+                                    {
+                                        "translate": "potion.potency.3",
+                                        "color": "blue",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": " (0:22)",
+                                        "color": "blue",
+                                        "italic": false
+                                    }
+                                ],
+                                [
+                                    {
+                                        "translate": "effect.minecraft.speed",
+                                        "color": "blue",
+                                        "italic": false
+                                    },
+                                    " ",
+                                    {
+                                        "translate": "potion.potency.2",
+                                        "color": "blue",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": " (0:16)",
+                                        "color": "blue",
+                                        "italic": false
+                                    }
+                                ]
+                            ],
+                            "replace": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

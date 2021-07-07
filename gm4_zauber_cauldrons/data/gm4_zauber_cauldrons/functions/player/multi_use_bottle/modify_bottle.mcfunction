@@ -20,7 +20,7 @@ execute if score remaining_sips gm4_zc_data matches 3 run function gm4_zauber_ca
 execute if score remaining_sips gm4_zc_data matches 2 run function gm4_zauber_cauldrons:player/multi_use_bottle/update_data/level_2
 execute if score remaining_sips gm4_zc_data matches 1 run function gm4_zauber_cauldrons:player/multi_use_bottle/update_data/level_1
 
-execute store result storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.tag.gm4_zauber_cauldrons.bottle.sips byte 1 run scoreboard players get remaining_sips gm4_zc_data
+execute store result storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.tag.gm4_zauber_cauldrons.bottle.sips int 1 run scoreboard players get remaining_sips gm4_zc_data
 data modify storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.Slot set value 0b
 
 # move data into shulker box at 29999998 1 7134 (gm4 standard)

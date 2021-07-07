@@ -1,0 +1,38 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:lingering_potion",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{gm4_zauber_cauldrons:{item:\"lingering_potion\",type:\"instant_damage\",bottle:{multi_use:0b}},HideFlags:32,Potion:\"harming\",CustomPotionEffects:[{Id:7,Amplifier:3,Duration:1}]}"
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                [
+                                    {
+                                        "translate": "effect.minecraft.instant_damage",
+                                        "color": "red",
+                                        "italic": false
+                                    },
+                                    " ",
+                                    {
+                                        "translate": "potion.potency.3",
+                                        "color": "red",
+                                        "italic": false
+                                    }
+                                ]
+                            ],
+                            "replace": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
