@@ -8,19 +8,24 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "The Light, It Burns!",
-        {"translate": "advancement.gm4.glow_ink_spitting_squid.title"}
+        {
+          "translate": "advancement.gm4.glow_ink_spitting_squid.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Glow due to an underwater glow squid",
-        {"translate": "advancement.gm4.glow_ink_spitting_squid.description"}
+        {
+          "translate": "advancement.gm4.glow_ink_spitting_squid.description"
+        }
       ],
       "color": "gray"
-    }
+    },
+    "frame": "goal"
   },
-  "parent": "gm4:root",
+  "parent": "gm4:ink_spitting_squid",
   "criteria": {
     "glow_ink_squirt_hit": {
       "trigger": "minecraft:impossible"
