@@ -1,4 +1,4 @@
-# @s = armor_stand to be modified
+# @s = armor_stand ..1 from writable_book
 #run by the better armor stand base module
 
 scoreboard players reset @s gm4_particle
@@ -9,13 +9,10 @@ execute if data storage gm4_better_armour_stands:temp {pages:["heart"]} run scor
 execute if data storage gm4_better_armour_stands:temp {pages:["flame"]} run scoreboard players set @s gm4_particle 2
 execute if data storage gm4_better_armour_stands:temp {pages:["barrier"]} run scoreboard players set @s gm4_particle 3
 execute if data storage gm4_better_armour_stands:temp {pages:["fireflies"]} run scoreboard players set @s gm4_particle 4
-execute if data storage gm4_better_armour_stands:temp {pages:["cloud"]} run scoreboard players set @s gm4_particle 5
-execute if data storage gm4_better_armour_stands:temp {pages:["bubbles"]} run scoreboard players set @s gm4_particle 6
 execute if data storage gm4_better_armour_stands:temp {pages:["growing"]} run scoreboard players set @s gm4_particle 7
 execute if data storage gm4_better_armour_stands:temp {pages:["drip"]} run scoreboard players set @s gm4_particle 8
 execute if data storage gm4_better_armour_stands:temp {pages:["snow"]} run scoreboard players set @s gm4_particle 9
 
-execute if score @s gm4_particle matches 5 run summon area_effect_cloud ~ ~1 ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:cloud,Tags:["gm4_particles_pack_cloud"]}
-execute if score @s gm4_particle matches 6 run summon area_effect_cloud ~ ~1 ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:bubble,Tags:["gm4_particles_pack_cloud"]}
+execute if data storage gm4_better_armour_stands:temp {pages:["particle"]} run function gm4_particles_pack:particle_cloud
 
 data merge entity @s[scores={gm4_particle=1..}] {Invisible:1b}
