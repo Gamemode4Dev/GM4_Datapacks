@@ -1,6 +1,6 @@
 # @s = zauber cauldron with overflow items
-# run from recipes
-# at @s
+# run in recipe functions
+# at center of block
 
 # calculate how many excess items are in the recipe
 scoreboard players operation @s gm4_zc_fullness -= $expected_item_amount gm4_zc_fullness
