@@ -10,7 +10,7 @@ execute store result entity @s Pos[2] double 1 run scoreboard players get $wormh
 # teleport marker and player to correct dimension
 # target dimension based on marker id provided by forceload library
 execute as @e[type=area_effect_cloud,tag=gm4_dimension] if score @s gm4_dimension = $wormhole_d gm4_zc_data run tag @s add gm4_zc_targeted_dimension
-execute at @e[type=area_effect_cloud,tag=gm4_zc_targeted_dimension,limit=1] positioned as @s run function gm4_zauber_cauldrons:player/wormhole_targeting/set_dimension
+execute at @e[type=area_effect_cloud,tag=gm4_zc_targeted_dimension,limit=1] positioned as @s run function gm4_zauber_cauldrons:player/wormhole_targeting/apply_coordinates/dimension
 tag @e[type=area_effect_cloud,tag=gm4_dimension] remove gm4_zc_targeted_dimension
 
 # remove "new" tag from marker

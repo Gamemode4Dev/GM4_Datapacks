@@ -1,6 +1,6 @@
 # @s = player holding a wormhole_bottle in the offhand
-# at world spawn
-# run from player/wormhole_targeting/read_target_coordinates
+# at @s
+# run from player/wormhole_targeting/prepare_teleport
 
 # copy mainhand wormhole x, y, z, and dimension to the temporary data storage
 data modify storage gm4_zauber_cauldrons:temp/item/wormhole/destination tag set from entity @s Inventory[-1].tag

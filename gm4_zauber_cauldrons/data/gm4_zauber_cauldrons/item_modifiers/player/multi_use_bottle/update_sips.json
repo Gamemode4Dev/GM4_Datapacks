@@ -39,13 +39,22 @@
                     "color": "gray",
                     "italic": false
                 }
-            ],
-            {
-                "nbt": "Item.tag.display.Lore[1]",
-                "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
-                "interpret": true
-            }
+            ]
         ],
         "replace": true
+    },
+    {
+        "function": "minecraft:copy_nbt",
+        "source": {
+            "type": "minecraft:storage",
+            "source": "gm4_zauber_cauldrons:temp/item/multi_use_bottle"
+        },
+        "ops": [
+            {
+                "source": "Item.tag.display.Lore[1]",
+                "target": "display.Lore",
+                "op": "append"
+            }
+        ]
     }
 ]
