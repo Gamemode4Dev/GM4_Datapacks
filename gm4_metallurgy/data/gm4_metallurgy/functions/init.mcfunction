@@ -49,9 +49,6 @@ scoreboard objectives add gm4_volt_time dummy
 scoreboard objectives add gm4_volt_damage minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add gm4_volt_dist dummy
 
-#forterra
-scoreboard objectives add gm4_forterra_use minecraft.mined:minecraft.stone
-
 #ender_bolt
 scoreboard objectives add gm4_bolt_damage minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add gm4_bolt_time dummy
