@@ -5,8 +5,8 @@
 # set expected fullness for these recipes
 scoreboard players set $expected_item_amount gm4_zc_fullness 3
 
-# set sip level returned when crafting multi-sips
-execute if score $has_soul_fire_heatsource gm4_zc_data matches 1.. run data modify storage gm4_zauber_cauldrons:items/templates/multi_sip bottle set value {sips:9,multi_use:1b}
+# set sip level returned when crafting multi-sips, in case another module messed with these presets
+execute if score $has_soul_fire_heatsource gm4_zc_data matches 1.. run data modify storage gm4_zauber_cauldrons:blueprint/item/multi_sip bottle set value {sips:9,multi_use:1b}
 
 # recipes
 

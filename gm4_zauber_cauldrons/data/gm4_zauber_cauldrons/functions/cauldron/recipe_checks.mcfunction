@@ -17,10 +17,10 @@ scoreboard players set $recipe_success gm4_zc_data 0
 execute if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:prismarine_crystals"}}}] if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:golden_apple"}}}] run function gm4_zauber_cauldrons:recipes/potions/zauber_potions
 
 # zauber armor
-execute if score $recipe_success gm4_zc_data matches 0 if score $has_water gm4_zc_data matches 1 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"enchanted_prismarine_shard"}},Count:1b}},limit=1] run function gm4_zauber_cauldrons:recipes/armor/zauber_armor
+execute if score $recipe_success gm4_zc_data matches 0 if score $has_water gm4_zc_data matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"enchanted_prismarine_shard"}}}] run function gm4_zauber_cauldrons:recipes/armor/zauber_armor
 
 # zauber crystals
-execute if score $recipe_success gm4_zc_data matches 0 if score $has_water gm4_zc_data matches 1 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:sea_lantern",Count:1b}},limit=1] if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:nether_star",Count:1b}},limit=1] run function gm4_zauber_cauldrons:recipes/crystals/zauber_crystals
+execute if score $recipe_success gm4_zc_data matches 0 if score $has_water gm4_zc_data matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:sea_lantern"}}}] if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:nether_star"}}}] run function gm4_zauber_cauldrons:recipes/crystals/zauber_crystals
 
 # enchanted prismarine shard
 execute if score $recipe_success gm4_zc_data matches 0 if score $has_water gm4_zc_data matches 1 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:prismarine_shard",Count:1b}},nbt=!{Item:{tag:{gm4_zauber_cauldrons:{item:"enchanted_prismarine_shard"}}}},limit=1] at @s if entity @a[level=30..,distance=..2,limit=1,sort=nearest,gamemode=!spectator] run function gm4_zauber_cauldrons:recipes/precursors/prismarine_shard

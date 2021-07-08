@@ -1,20 +1,18 @@
-# @s = boiling zauber cauldron with sea lantern and nether star inside.
-# at align xyz
+# @s = boiling zauber cauldron with sea lantern and nether star inside
+# at @s align xyz
 # run from cauldron/recipe_checks
 
 # set expected fullness for these recipes
 scoreboard players set $expected_item_amount gm4_zc_fullness 3
+
 # recipes
-execute if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:enchanted_book",Count:1b,tag:{StoredEnchantments:[{id:"minecraft:protection",lvl:4s}]}}}] at @s run function gm4_zauber_cauldrons:recipes/crystals/protection
-execute if score $recipe_success gm4_zc_data matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:enchanted_book",Count:1b,tag:{StoredEnchantments:[{id:"minecraft:blast_protection",lvl:4s}]}}}] at @s run function gm4_zauber_cauldrons:recipes/crystals/blast_protection
-execute if score $recipe_success gm4_zc_data matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:enchanted_book",Count:1b,tag:{StoredEnchantments:[{id:"minecraft:fire_protection",lvl:4s}]}}}] at @s run function gm4_zauber_cauldrons:recipes/crystals/fire_protection
-execute if score $recipe_success gm4_zc_data matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:enchanted_book",Count:1b,tag:{StoredEnchantments:[{id:"minecraft:projectile_protection",lvl:4s}]}}}] at @s run function gm4_zauber_cauldrons:recipes/crystals/projectile_protection
+execute if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{StoredEnchantments:[{id:"minecraft:fire_protection",lvl:4s}],gm4_zauber_cauldrons:{item:"minecraft:enchanted_book"}}}] positioned ~.5 ~.5 ~.5 run function gm4_zauber_cauldrons:recipes/crystals/effects/fire_resistance
+execute if score $recipe_success gm4_zc_data matches 0 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{StoredEnchantments:[{id:"minecraft:protection",lvl:4s}],gm4_zauber_cauldrons:{item:"minecraft:enchanted_book"}}}] positioned ~.5 ~.5 ~.5 run function gm4_zauber_cauldrons:recipes/crystals/effects/regeneration
+execute if score $recipe_success gm4_zc_data matches 0 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{StoredEnchantments:[{id:"minecraft:blast_protection",lvl:4s}],gm4_zauber_cauldrons:{item:"minecraft:enchanted_book"}}}] positioned ~.5 ~.5 ~.5 run function gm4_zauber_cauldrons:recipes/crystals/effects/resistance
+execute if score $recipe_success gm4_zc_data matches 0 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{StoredEnchantments:[{id:"minecraft:projectile_protection",lvl:4s}],gm4_zauber_cauldrons:{item:"minecraft:enchanted_book"}}}] positioned ~.5 ~.5 ~.5 run function gm4_zauber_cauldrons:recipes/crystals/effects/speed
 
 # use water and play sound once a recipe ran
-execute if score $recipe_success gm4_zc_data matches 1 at @s if score @s gm4_zc_fullness > $expected_item_amount gm4_zc_fullness run function gm4_zauber_cauldrons:cauldron/structure/use_extra_items
-execute if score $recipe_success gm4_zc_data matches 1 at @s run particle entity_effect ~ ~.4 ~ .1 .1 .1 1 10
-execute if score $recipe_success gm4_zc_data matches 1 at @s run playsound entity.player.levelup block @a[distance=..16] ~ ~ ~ 1 1.5
-execute if score $recipe_success gm4_zc_data matches 1 at @s run function gm4_zauber_cauldrons:cauldron/structure/use_water
+execute if score $recipe_success gm4_zc_data matches 1 at @s run function gm4_zauber_cauldrons:recipes/crystals/use_cauldron
 
 # reset fake players
 scoreboard players reset $expected_item_amount gm4_zc_fullness
