@@ -1,5 +1,5 @@
 # @s = boiling zauber cauldron with crystal recipe inside
-# at @s
+# at center of block
 # run from zauber_crystals
 
 # remove ingredients
