@@ -1,19 +1,26 @@
 # @s = boiling zauber cauldron with a precursor inside.
-# at @s
+# at center of block
 # run from cauldron/recipe_checks
 
 # set expected fullness for these recipes
 scoreboard players set $expected_item_amount gm4_zc_fullness 1
-# recipe
+
+# remove ingredients
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
-summon item ~ ~.2 ~ {Item:{id:"minecraft:prismarine_shard",Count:1b,tag:{CustomModelData:1,Enchantments:[{lvl:1s,id:"minecraft:unbreaking"}],gm4_zauber_cauldrons:{item:"enchanted_prismarine_shard"},HideFlags:1,display:{Name:'{"translate":"%1$s%3427655$s","with":["Enchanted Prismarine Shard",{"translate":"item.gm4.enchanted_prismarine_shard"}],"color":"aqua","italic":false}'}}}}
+
+# recipe
+loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:recipes/precursors/enchanted_prismarine_shard
 experience add @a[level=30..,distance=..2,limit=1,sort=nearest] -30 levels
+
+# sounds and visuals
 playsound block.portal.travel block @a[distance=..16] ~ ~ ~ .2 1.2
 particle enchanted_hit ~ ~.4 ~ .1 .1 .1 .15 10
 
 # use water and play sound once a recipe ran
+function gm4_zauber_cauldrons:cauldron/structure/modify/use_water
+
+# check for leftover items
 execute if score @s gm4_zc_fullness > $expected_item_amount gm4_zc_fullness run function gm4_zauber_cauldrons:cauldron/structure/use_extra_items
-function gm4_zauber_cauldrons:cauldron/structure/use_water
 
 # reset fake players
 scoreboard players reset $expected_item_amount gm4_zc_fullness
