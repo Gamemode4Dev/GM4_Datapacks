@@ -13,3 +13,6 @@ execute if score $recipe_success gm4_zc_data matches 0 if data storage gm4_zaube
 
 # use water and play sound once a recipe ran
 execute if score $recipe_success gm4_zc_data matches 1 at @s run function gm4_zauber_cauldrons:recipes/armor/use_cauldron
+
+# reset fake players
+scoreboard players reset $expected_item_amount gm4_zc_fullness
