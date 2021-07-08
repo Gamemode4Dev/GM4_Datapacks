@@ -9,4 +9,4 @@ data modify entity @e[type=item,tag=gm4_zc_new_nbt_storage,limit=1] Item set fro
 tag @s add gm4_zc_used_mainhand
 
 # set flag
-scoreboard players set read_data gm4_zc_data 1
+scoreboard players set $read_data gm4_zc_data 1

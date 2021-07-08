@@ -20,7 +20,7 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_zauber_caul
 
 # register item nbt
 # TODO: potentially move these to their recipe checks and run before recipes to be temper-safe
-data modify storage gm4_zauber_cauldrons:blueprint/item/multi_sip gm4_zauber_cauldrons.bottle set value {sips:9,multi_use:1b}
+data modify storage gm4_zauber_cauldrons:blueprint/item/multi_sip gm4_zauber_cauldrons.bottle set value {sips:9,size:9,multi_use:1b}
 data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/boots gm4_zauber_cauldrons set value {item:"zauber_armor",type:"boots"}
 data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/chestplate gm4_zauber_cauldrons set value {item:"zauber_armor",type:"chestplate"}
 data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/helmet gm4_zauber_cauldrons set value {item:"zauber_armor",type:"helmet"}

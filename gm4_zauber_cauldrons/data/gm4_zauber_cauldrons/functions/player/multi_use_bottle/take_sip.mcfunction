@@ -1,9 +1,8 @@
 # @s = player consuming any multi_use_bottle
 # at @s
 # run from player/multi_use_bottle/check_gamemode
-
+say take_sip.mcfunction
 # save coordinates into entity
-# 1.16 Reminder Note : Setup forceloaded chunk
 execute in overworld run summon item 29999998 1 7134 {Item:{id:"minecraft:potion",Count:1b},Tags:["gm4_zc_new_nbt_storage","gm4_zc_nbt_storage"],Age:5400,PickupDelay:32767}
 scoreboard players operation @e[type=item,tag=gm4_zc_new_nbt_storage,limit=1] gm4_zc_id = @s gm4_zc_id
 function gm4_zauber_cauldrons:player/multi_use_bottle/read_data
