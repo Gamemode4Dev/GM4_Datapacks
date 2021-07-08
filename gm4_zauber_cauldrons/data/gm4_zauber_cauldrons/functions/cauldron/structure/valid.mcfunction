@@ -18,6 +18,4 @@ execute as @e[type=item,dx=0,dy=0,dz=0] run function gm4_zauber_cauldrons:cauldr
 execute if score @s gm4_zc_fullness matches 1.. run function gm4_zauber_cauldrons:cauldron/recipe_checks
 
 # reset
-#data remove storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items
-#scoreboard players reset @s gm4_zc_fullness
 tag @s remove gm4_current_zauber_cauldron

@@ -12,6 +12,36 @@
                             "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"poison\",bottle:{multi_use:0b}},HideFlags:32,Potion:\"poison\",CustomPotionEffects:[{Id:19,Amplifier:3,Duration:640}]}"
                         },
                         {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Soulution of Poison",
+                                    [
+                                        {
+                                            "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.potion.poison"
+                                        }
+                                    ]
+                                ],
+                                "italic": false
+                            },
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$has_soul_fire_heatsource"
+                                        },
+                                        "score": "gm4_zc_data"
+                                    },
+                                    "range": 1
+                                }
+                            ]
+                        },
+                        {
                             "function": "minecraft:copy_nbt",
                             "source": {
                                 "type": "minecraft:storage",

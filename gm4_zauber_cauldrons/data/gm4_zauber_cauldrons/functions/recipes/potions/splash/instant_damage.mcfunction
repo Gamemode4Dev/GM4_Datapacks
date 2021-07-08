@@ -5,7 +5,7 @@
 # remove ingredients
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 
-# summon item (depending on red/blue fire)
+# summon item
 loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:recipes/potions/splash/instant_damage
 
 # visuals
