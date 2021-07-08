@@ -75,7 +75,7 @@
                             "lore": [
                                 [
                                     {
-                                        "nbt": "bottle.sips",
+                                        "nbt": "gm4_zauber_cauldrons.bottle.sips",
                                         "storage": "gm4_zauber_cauldrons:blueprint/item/multi_sip",
                                         "color": "gray",
                                         "italic": false
@@ -86,7 +86,7 @@
                                         "italic": false
                                     },
                                     {
-                                        "nbt": "bottle.size",
+                                        "nbt": "gm4_zauber_cauldrons.bottle.size",
                                         "storage": "gm4_zauber_cauldrons:blueprint/item/multi_sip",
                                         "color": "gray",
                                         "italic": false
