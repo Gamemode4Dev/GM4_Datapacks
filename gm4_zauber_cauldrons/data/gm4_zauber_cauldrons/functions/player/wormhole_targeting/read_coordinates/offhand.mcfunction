@@ -10,3 +10,6 @@ execute store result score $wormhole_x gm4_zc_data run data get storage gm4_zaub
 execute store result score $wormhole_y gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/item/wormhole/destination tag.gm4_zauber_cauldrons.cauldron_pos.y
 execute store result score $wormhole_z gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/item/wormhole/destination tag.gm4_zauber_cauldrons.cauldron_pos.z
 execute store result score $wormhole_d gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/item/wormhole/destination tag.gm4_zauber_cauldrons.cauldron_pos.dimension
+
+# reset storage
+data remove storage gm4_zauber_cauldrons:temp/item/wormhole/destination tag
