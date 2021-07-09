@@ -1,23 +1,26 @@
-# @s=boiling zauber cauldron with prismarine crystals inside.
-# at align xyz
+# @s = boiling zauber cauldron with prismarine crystals and golden apple inside
+# at center of block
 # run from cauldron/recipe_checks
 
 # set expected fullness for these recipes
-scoreboard players set expected_item_amount gm4_zc_fullness 3
+scoreboard players set $expected_item_amount gm4_zc_fullness 3
+
+# set sip level returned when crafting multi-sips, in case another module messed with these presets
+execute if score $has_soul_fire_heatsource gm4_zc_data matches 1.. run data modify storage gm4_zauber_cauldrons:blueprint/item/multi_sip gm4_zauber_cauldrons.bottle set value {sips:9,size:9,multi_use:1b}
 
 # recipes
-execute if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_harming"}}}] at @s run function gm4_zauber_cauldrons:recipes/potions/instant_damage
-execute if score recipe_success gm4_zc_data matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_healing"}}}] at @s run function gm4_zauber_cauldrons:recipes/potions/instant_health
-execute if score recipe_success gm4_zc_data matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_leaping"}}}] at @s run function gm4_zauber_cauldrons:recipes/potions/jump_boost
-execute if score recipe_success gm4_zc_data matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_poison"}}}] at @s run function gm4_zauber_cauldrons:recipes/potions/poison
-execute if score recipe_success gm4_zc_data matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_regeneration"}}}] at @s run function gm4_zauber_cauldrons:recipes/potions/regeneration
-execute if score recipe_success gm4_zc_data matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_swiftness"}}}] at @s run function gm4_zauber_cauldrons:recipes/potions/speed
-execute if score recipe_success gm4_zc_data matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_strength"}}}] at @s run function gm4_zauber_cauldrons:recipes/potions/strength
-execute if score recipe_success gm4_zc_data matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:splash_potion",Count:1b}}] at @s run function gm4_zauber_cauldrons:recipes/potions/invalid_potion_type
-execute if score recipe_success gm4_zc_data matches 0 if entity @e[type=item,dx=0,dy=0,dz=0,nbt={Item:{id:"minecraft:lingering_potion",Count:1b}}] at @s run function gm4_zauber_cauldrons:recipes/potions/invalid_potion_type
+
+# drinkable potions
+execute if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:potion"}}}] run function gm4_zauber_cauldrons:recipes/potions/drinkable/check_type
+
+# splash potions
+execute if score $recipe_success gm4_zc_data matches 0 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:splash_potion"}}}] run function gm4_zauber_cauldrons:recipes/potions/splash/check_liquid
+
+# lingering potions
+execute if score $recipe_success gm4_zc_data matches 0 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:lingering_potion"}}}] run function gm4_zauber_cauldrons:recipes/potions/lingering/check_liquid
 
 # use water and play sound once a recipe ran
-execute if score recipe_success gm4_zc_data matches 1 at @s run function gm4_zauber_cauldrons:recipes/potions/craft
+execute if score $recipe_success gm4_zc_data matches 1 at @s run function gm4_zauber_cauldrons:recipes/potions/use_cauldron
 
 # reset fake players
-scoreboard players reset expected_item_amount gm4_zc_fullness
+scoreboard players reset $expected_item_amount gm4_zc_fullness

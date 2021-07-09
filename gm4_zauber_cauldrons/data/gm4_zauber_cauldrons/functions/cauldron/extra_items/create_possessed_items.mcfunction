@@ -1,4 +1,4 @@
-# @s=zauber cauldron with overflow items OR bottled_vex item on ground
+# @s = zauber cauldron with overflow items OR bottled_vex item on ground
 # run from use_extra_items AND release_from_bottle
 # at @s
 
