@@ -1,5 +1,5 @@
 # @s = boiling zauber cauldron with recipe inside
-# at @s
+# at center of block
 # run from recipes/armor/zauber_armor
 
 # calculate amount of vexes to spawn

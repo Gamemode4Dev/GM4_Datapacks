@@ -1,5 +1,5 @@
 # @s = boiling zauber cauldron with grass and enchanted_prismarine_shard and NO poisonous flowers inside.
-# at align xyz
+# at center of block
 # run from recipes/flowers/check_poisonous_flowers
 
 # initialise fake player (required if all flowers are poisonous/gm4_zc_flowers=1)
@@ -17,9 +17,9 @@ execute if score $azure_bluet gm4_zc_flowers matches 0 if data storage gm4_zaube
 execute if score $poppy gm4_zc_flowers matches 0 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:poppy"}}}] run scoreboard players add $normal_flowers_amount gm4_zc_fullness 1
 execute if score $cornflower gm4_zc_flowers matches 0 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:cornflower"}}}] run scoreboard players add $normal_flowers_amount gm4_zc_fullness 1
 execute if score $lily_of_the_valley gm4_zc_flowers matches 0 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:lily_of_the_valley"}}}] run scoreboard players add $normal_flowers_amount gm4_zc_fullness 1
-title @a actionbar ["",{"text":"[DEBUG] $normal_flowers_amount=","color":"gray"},{"score":{"name":"$normal_flowers_amount","objective":"gm4_zc_fullness"}}]
+
 # compare amount of normal flowers in cauldron to expected amount
-execute if score $normal_flowers_amount gm4_zc_fullness = $required_flowers gm4_zc_flowers at @s run function gm4_zauber_cauldrons:recipes/flowers/luck
+execute if score $normal_flowers_amount gm4_zc_fullness = $required_flowers gm4_zc_flowers run function gm4_zauber_cauldrons:recipes/flowers/luck
 
 # reset fake players
 scoreboard players reset $normal_flowers_amount gm4_zc_fullness

@@ -1,5 +1,5 @@
 # @s = boiling zauber cauldron with grass and enchanted_prismarine_shard inside.
-# at align xyz
+# at center of block
 # run from cauldron/recipe_checks
 
 # initialise fake players
