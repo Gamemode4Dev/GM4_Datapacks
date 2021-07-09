@@ -1,8 +1,6 @@
 # determine type
 # run from gm4_gemini_shamir:baby/find_baby
 
-execute if entity @s[tag=gm4_gemini_horse] as @e[type=horse,distance=..10] run tellraw @a {"nbt":"Age","entity":"@s"}
-
 execute if entity @s[tag=gm4_gemini_axolotl] as @e[type=axolotl,distance=..10,nbt={Age:-24000},limit=1,sort=nearest] at @s run function gm4_gemini_shamir:baby/spawn_axolotl
 execute if entity @s[tag=gm4_gemini_cat] as @e[type=cat,distance=..10,nbt={Age:-24000},limit=1,sort=nearest] at @s run function gm4_gemini_shamir:baby/spawn_cat
 execute if entity @s[tag=gm4_gemini_donkey] as @e[type=donkey,distance=..10,nbt={Age:-24000},limit=1,sort=nearest] at @s run function gm4_gemini_shamir:baby/spawn_donkey
