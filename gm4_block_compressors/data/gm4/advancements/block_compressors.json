@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Clever Crushing",
-        {"translate": "advancement.gm4.block_compressors.title"}
+        {
+          "translate": "advancement.gm4.block_compressors.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Make yourself a Block Compressor",
-        {"translate": "advancement.gm4.block_compressors.description"}
+        {
+          "translate": "advancement.gm4.block_compressors.description"
+        }
       ],
       "color": "gray"
     }
