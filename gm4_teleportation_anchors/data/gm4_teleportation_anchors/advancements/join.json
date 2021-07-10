@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "consume chorus": {
+            "trigger": "minecraft:location"
+        }
+    },
+    "rewards": {
+        "function": "gm4_teleportation_anchors:player/set_id"
+    }
+}

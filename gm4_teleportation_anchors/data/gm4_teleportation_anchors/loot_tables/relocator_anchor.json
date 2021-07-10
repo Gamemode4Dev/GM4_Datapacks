@@ -1,0 +1,50 @@
+{
+  "type":"block",
+  "pools":[
+    {
+      "rolls":1,
+      "entries":[
+        {
+          "type":"item",
+          "name":"minecraft:player_head",
+          "functions":[
+            {
+              "function":"set_nbt",
+              "tag":"{CustomModelData:38,gm4_relocation_data:{Command:\"function gm4_teleportation_anchors:relocate/place_down_anchor\"},SkullOwner:{Id:[I;1398052436,19481423,-1401796665,1394629575],Properties:{textures:[{Signature:\"gm4_relocated_block\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYwNTA3MDU5NDc3OSwKICAicHJvZmlsZUlkIiA6ICIyM2YxYTU5ZjQ2OWI0M2RkYmRiNTM3YmZlYzEwNDcxZiIsCiAgInByb2ZpbGVOYW1lIiA6ICIyODA3IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2JmODZhNzJlODFiMDkyNzk4NDIwMzZhMDg5MTJlMTdiMWFhOGQ2M2MwZDE2ZWZiYzM4ZjU2ZGNjZDc0OTZkYWQiCiAgICB9CiAgfQp9\"}]}}}"},
+            {
+              "function":"set_name",
+              "name":[
+                {
+                  "translate":"%1$s%3427655$s",
+                  "with": [
+                    "Teleportation Anchor",
+                    {
+                      "translate": "block.gm4.teleportation_anchor"
+                    }
+                  ],
+                  "color":"aqua",
+                  "italic":false
+                }
+              ]
+            },
+            {
+              "function":"set_lore",
+              "lore":[
+                {
+                  "translate":"%1$s%3427655$s",
+                  "with": [
+                    "Relocator",
+                    {
+                      "translate": "item.gm4.relocator"
+                    }
+                  ],
+                  "color":"yellow"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

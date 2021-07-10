@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "entered_end_gateway": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:end_gateway"
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_teleportation_anchors:player/enter_end_gateway"
+    }
+}

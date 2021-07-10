@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "consume chorus": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "item": "minecraft:chorus_fruit"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_teleportation_anchors:player/used_chorus"
+    }
+}
