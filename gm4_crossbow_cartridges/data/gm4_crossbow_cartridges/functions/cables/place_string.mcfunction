@@ -13,4 +13,4 @@ scoreboard players add @s gm4_cb_strplace 1
 execute if score @s gm4_cb_strplace matches 40 run advancement grant @s only gm4:crossbow_cartridges_string
 
 #kill arrow
-execute if score @s gm4_cb_strplace matches 1 run kill @e[type=minecraft:arrow,distance=..2,limit=1,sort=nearest]
+execute if score @s gm4_cb_strplace matches 1 run kill @e[type=minecraft:arrow,tag=gm4_cb_arrow,distance=..2,limit=1,sort=nearest]

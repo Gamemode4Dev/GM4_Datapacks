@@ -5,7 +5,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "gm4_crossbow_cartridges:torch_placeable"
+					"tag": "gm4:full_collision"
 				}
 			}
 		},
@@ -26,7 +26,7 @@
 				"block": {
 					"tag": "minecraft:stairs",
 					"state": {
-						"facing": "west"
+						"facing": "south"
 					}
 				}
 			}
@@ -37,7 +37,7 @@
 				"block": {
 					"tag": "minecraft:stairs",
 					"state": {
-						"facing": "south",
+						"facing": "east",
 						"shape": "inner_right"
 					}
 				}
@@ -49,7 +49,7 @@
 				"block": {
 					"tag": "minecraft:stairs",
 					"state": {
-						"facing": "north",
+						"facing": "west",
 						"shape": "inner_left"
 					}
 				}
@@ -61,7 +61,7 @@
 				"block": {
 					"tag": "minecraft:trapdoors",
 					"state": {
-						"facing": "east",
+						"facing": "north",
 						"open": "true"
 					}
 				}
@@ -73,7 +73,7 @@
 				"block": {
 					"blocks": ["minecraft:piston_head"],
 					"state": {
-						"facing": "west"
+						"facing": "south"
 					}
 				}
 			}

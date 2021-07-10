@@ -1,6 +1,8 @@
 #run from check_projectile
 #@s = player using the crossbow
 
+tag @s add gm4_cb_use
+
 #store amount of string on the player, with max value of 40
 execute store result score @s gm4_cb_strcount run clear @s minecraft:string 0
 execute if score @s gm4_cb_strcount matches 40.. run scoreboard players set @s gm4_cb_strcount 40
