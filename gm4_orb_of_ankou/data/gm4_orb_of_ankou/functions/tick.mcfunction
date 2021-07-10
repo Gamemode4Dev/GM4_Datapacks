@@ -17,6 +17,9 @@ execute if score agile_player gm4_pneuma_data matches 1.. as @a[tag=gm4_pneuma_a
 execute at @e[type=area_effect_cloud,tag=gm4_oa_striding_block,nbt={Age:4}] if block ~ ~ ~ magma_block run setblock ~ ~ ~ lava
 execute if score striding_player gm4_pneuma_data matches 1.. as @a[tag=gm4_pneuma_striding] at @s if block ~ ~-1 ~ lava[level=0] run function gm4_orb_of_ankou:pneumas/striding
 
+# feathery
+execute as @a[tag=gm4_pneuma_feathery,scores={gm4_oa_sneak=1..}] run effect give @s slow_falling 1 0 true
+
 # evoker fangs
 execute if score conjuring_fang gm4_pneuma_data matches 1.. as @e[type=armor_stand,tag=gm4_oa_fang_thrower,scores={gm4_pneuma_data=1..}] at @s run function gm4_orb_of_ankou:pneumas/conjuring/throw
 
