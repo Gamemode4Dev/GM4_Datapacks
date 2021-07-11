@@ -1,13 +1,15 @@
 {
-  "criteria":{
-    "breed_foxes":{
-      "trigger":"minecraft:bred_animals",
-      "conditions":{
-        "type":"fox"
+  "criteria": {
+    "breed_foxes": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "fox"
+        }
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_fox"
+    "function": "gm4_gemini_shamir:breed/check_fox"
   }
 }

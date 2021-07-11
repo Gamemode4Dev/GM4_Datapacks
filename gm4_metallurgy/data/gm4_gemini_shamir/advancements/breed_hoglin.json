@@ -1,13 +1,15 @@
 {
-  "criteria":{
-    "breed_hoglins":{
-      "trigger":"minecraft:bred_animals",
-      "conditions":{
-        "type":"hoglin"
+  "criteria": {
+    "breed_hoglins": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "hoglin"
+        }
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_hoglin"
+    "function": "gm4_gemini_shamir:breed/check_hoglin"
   }
 }

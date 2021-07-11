@@ -1,13 +1,15 @@
 {
-  "criteria":{
-    "breed_pandas":{
-      "trigger":"minecraft:bred_animals",
-      "conditions":{
-        "type":"panda"
+  "criteria": {
+    "breed_pandas": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "panda"
+        }
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_panda"
+    "function": "gm4_gemini_shamir:breed/check_panda"
   }
 }

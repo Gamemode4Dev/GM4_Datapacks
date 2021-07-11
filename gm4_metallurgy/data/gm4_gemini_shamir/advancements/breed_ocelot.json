@@ -1,13 +1,15 @@
 {
-  "criteria":{
-    "breed_ocelots":{
-      "trigger":"minecraft:bred_animals",
-      "conditions":{
-        "type":"ocelot"
+  "criteria": {
+    "breed_ocelots": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "ocelot"
+        }
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_ocelot"
+    "function": "gm4_gemini_shamir:breed/check_ocelot"
   }
 }

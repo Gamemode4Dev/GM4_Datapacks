@@ -1,13 +1,15 @@
 {
-  "criteria":{
-    "breed_chickens":{
-      "trigger":"minecraft:bred_animals",
-      "conditions":{
-        "type":"chicken"
+  "criteria": {
+    "breed_chickens": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "chicken"
+        }
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_chicken"
+    "function": "gm4_gemini_shamir:breed/check_chicken"
   }
 }

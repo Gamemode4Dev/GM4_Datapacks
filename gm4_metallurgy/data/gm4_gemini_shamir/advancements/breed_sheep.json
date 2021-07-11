@@ -1,13 +1,15 @@
 {
-  "criteria":{
-    "breed_sheep":{
-      "trigger":"minecraft:bred_animals",
-      "conditions":{
-        "type":"sheep"
+  "criteria": {
+    "breed_sheep": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "sheep"
+        }
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_sheep"
+    "function": "gm4_gemini_shamir:breed/check_sheep"
   }
 }

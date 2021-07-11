@@ -1,13 +1,15 @@
 {
-  "criteria":{
-    "breed_pigs":{
-      "trigger":"minecraft:bred_animals",
-      "conditions":{
-        "type":"pig"
+  "criteria": {
+    "breed_pigs": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "pig"
+        }
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_pig"
+    "function": "gm4_gemini_shamir:breed/check_pig"
   }
 }

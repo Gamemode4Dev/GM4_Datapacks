@@ -1,13 +1,15 @@
 {
-  "criteria":{
-    "breed_axolotls":{
-      "trigger":"minecraft:bred_animals",
-      "conditions":{
-        "type":"axolotl"
+  "criteria": {
+    "breed_axolotls": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "axolotl"
+        }
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_axolotl"
+    "function": "gm4_gemini_shamir:breed/check_axolotl"
   }
 }

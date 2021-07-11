@@ -1,13 +1,15 @@
 {
-  "criteria":{
-    "breed_mooshrooms":{
-      "trigger":"minecraft:bred_animals",
-      "conditions":{
-        "type":"mooshroom"
+  "criteria": {
+    "breed_mooshrooms": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "mooshroom"
+        }
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_mooshroom"
+    "function": "gm4_gemini_shamir:breed/check_mooshroom"
   }
 }

@@ -1,13 +1,15 @@
 {
-  "criteria":{
-    "breed_striders":{
-      "trigger":"minecraft:bred_animals",
-      "conditions":{
-        "type":"strider"
+  "criteria": {
+    "breed_striders": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "strider"
+        }
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_strider"
+    "function": "gm4_gemini_shamir:breed/check_strider"
   }
 }
