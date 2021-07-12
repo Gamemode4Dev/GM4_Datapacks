@@ -1,0 +1,36 @@
+{
+    "pack": {
+        "pack_format": 7,
+        "description": [
+            "Garden Variety",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "garden variety",
+    "module_id": "garden_variety",
+    "site_description": "Adds a variety of new trees with unique generation.",
+    "site_categories": [],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Garden_Variety",
+    "required_modules": [
+        "fruiting_trees",
+        "custom_crafters",
+        "lib_lore"
+    ],
+    "recommended_modules": [
+        "orbis",
+        "podzol_rooting_soil"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "MichaelMiner137",
+                "https://twitter.com/MichaelMiner137"
+            ]
+        ]
+    }
+}

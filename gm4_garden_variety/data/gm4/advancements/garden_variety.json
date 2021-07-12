@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "oak_sapling",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "A Green New World!",
+        {"translate": "advancement.gm4.garden_variety.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Witness The Beauty of Nature",
+        {"translate": "advancement.gm4.garden_variety.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
