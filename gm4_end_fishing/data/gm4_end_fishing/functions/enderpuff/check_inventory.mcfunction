@@ -1,5 +1,5 @@
-#@s = any player who has changed their inventory
-#run from advancement "check_inventory"
+# @s = any player who has changed their inventory
+# run from advancement "check_inventory"
 
 advancement revoke @s only gm4_end_fishing:check_inventory
 

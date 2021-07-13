@@ -16,7 +16,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/enderpuff",
+          "name": "gm4_end_fishing:items/enderpuff",
           "weight": 1
         },
         {
@@ -71,7 +71,7 @@
             }
           ],
           "weight": 11,
-          "name": "gm4_end_fishing:gameplay/fish/enderpuff"
+          "name": "gm4_end_fishing:items/enderpuff"
         },
         {
           "type": "minecraft:item",

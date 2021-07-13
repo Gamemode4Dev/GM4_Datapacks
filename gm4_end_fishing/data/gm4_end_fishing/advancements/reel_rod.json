@@ -5,7 +5,7 @@
             "conditions": {
                 "entity": {
                     "type": "minecraft:armor_stand",
-                    "nbt": "{Tags:[\"gm4_no_edit\",\"gm4_fishing_bait\"]}",
+                    "nbt": "{Tags:[\"gm4_no_edit\",\"gm4_end_fishing_bait\"]}",
                     "location": {
                         "dimension": "the_end"
                     }
