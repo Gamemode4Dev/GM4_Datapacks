@@ -25,10 +25,10 @@ execute if data storage gm4_better_armour_stands:temp {pages:["invisible"]} alig
 execute if data storage gm4_better_armour_stands:temp {pages:["visible"]} align xz as @s run data merge entity @s {Invisible:0b}
 
 # Rotate the armor stand by predefined intervals.
-execute if data storage gm4_better_armour_stands:temp {pages:["turn left"]} run tag @s add gm4_turn_clockwise
-execute if data storage gm4_better_armour_stands:temp {pages:["turn left"]} run tag @s remove gm4_turn_anticlockwise
-execute if data storage gm4_better_armour_stands:temp {pages:["turn right"]} run tag @s add gm4_turn_anticlockwise
-execute if data storage gm4_better_armour_stands:temp {pages:["turn right"]} run tag @s remove gm4_turn_clockwise
+execute if data storage gm4_better_armour_stands:temp {pages:["turn left"]} run tag @s add gm4_turn_anticlockwise
+execute if data storage gm4_better_armour_stands:temp {pages:["turn left"]} run tag @s remove gm4_turn_clockwise
+execute if data storage gm4_better_armour_stands:temp {pages:["turn right"]} run tag @s add gm4_turn_clockwise
+execute if data storage gm4_better_armour_stands:temp {pages:["turn right"]} run tag @s remove gm4_turn_anticlockwise
 execute if data storage gm4_better_armour_stands:temp {pages:["no turn"]} run tag @s remove gm4_turn_clockwise
 execute if data storage gm4_better_armour_stands:temp {pages:["no turn"]} run tag @s remove gm4_turn_anticlockwise
 
