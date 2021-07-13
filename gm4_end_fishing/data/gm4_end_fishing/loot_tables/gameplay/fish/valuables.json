@@ -7,7 +7,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 10,
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure"
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/base"
         },
         {
           "type": "minecraft:item",
@@ -112,7 +112,7 @@
             }
           ],
           "weight": 20,
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure"
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/base"
         },
         {
           "type": "minecraft:item",
