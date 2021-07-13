@@ -20,4 +20,5 @@ execute if score @s gm4_ml_heat matches 90.. run function gm4_metallurgy:casting
 
 #kill mould
 playsound item.hoe.till block @a ~ ~ ~ .25 .9
+tp ~ -2050 ~
 data merge entity @s {Health:0.0f,DeathTime:19s}

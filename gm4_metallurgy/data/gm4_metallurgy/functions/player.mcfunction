@@ -9,7 +9,6 @@ tag @s remove gm4_has_hypexperia
 tag @s remove gm4_has_musical
 tag @s remove gm4_has_sensus
 tag @s remove gm4_has_levity
-tag @s remove gm4_has_forterra
 
 execute if predicate gm4_metallurgy:shamir_in_hand at @s[gamemode=!spectator] run function gm4_metallurgy:shamir_in_hand
 execute if predicate gm4_metallurgy:shamir_equipped at @s[gamemode=!spectator] run function gm4_metallurgy:shamir_equipped

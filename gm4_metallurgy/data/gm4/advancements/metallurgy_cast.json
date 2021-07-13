@@ -14,7 +14,7 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Create a mold and add some metal.",
+        "Create a mould and add some metal.",
         {"translate": "advancement.gm4.metallurgy.cast.description"}
       ],
       "color": "gray"

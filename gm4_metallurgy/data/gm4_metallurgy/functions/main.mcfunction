@@ -13,7 +13,6 @@ execute as @e[type=item] run function gm4_metallurgy:item
 
 scoreboard players set arborenda_active gm4_ml_data 0
 scoreboard players set hypexperia_active gm4_ml_data 0
-scoreboard players set forterra_active gm4_ml_data 0
 scoreboard players set levity_active gm4_ml_data 0
 scoreboard players add current_sensus_layer gm4_ml_data 1
 execute if score current_sensus_layer gm4_ml_data matches 6.. run scoreboard players set current_sensus_layer gm4_ml_data 0

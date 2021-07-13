@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "breed_mules": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "mule"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_gemini_shamir:breed/check_mule"
+  }
+}
