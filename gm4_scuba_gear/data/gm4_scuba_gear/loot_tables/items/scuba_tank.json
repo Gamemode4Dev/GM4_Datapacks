@@ -1,0 +1,32 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_chestplate",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,gm4_scuba_gear:{item:\"tank\"},AttributeModifiers:[{AttributeName:\"generic.movement_speed\",Name:\"generic.movement_speed\",Amount:-.01,Operation:0,UUID:[I;0,911382,0,189444],Slot:\"chest\"},{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:4,Operation:0,UUID:[I;0,847530,0,778609],Slot:\"chest\"}]}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  "SCUBA Tank",
+                  {
+                    "translate": "item.gm4.scuba_tank"
+                  }
+                ],
+                "italic": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
