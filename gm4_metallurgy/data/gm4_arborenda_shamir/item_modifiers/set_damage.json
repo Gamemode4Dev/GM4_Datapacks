@@ -1,0 +1,14 @@
+{
+  "function": "minecraft:copy_nbt",
+  "source": {
+    "type": "minecraft:storage",
+    "source": "gm4_metallurgy:temp"
+  },
+  "ops": [
+    {
+      "source": "Damage",
+      "target": "Damage",
+      "op": "replace"
+    }
+  ]
+}
