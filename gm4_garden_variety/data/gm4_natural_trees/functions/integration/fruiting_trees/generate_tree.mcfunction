@@ -3,5 +3,6 @@
 # at @s align xyz
 # run from #gm4_fruiting_trees:tree/initialize
 
-execute if entity @s[tag=gm4_king_palm_sapling] run function gm4_natural_trees:generate/king_palm/generation/initialize
+scoreboard players set seed_mode_sapling gm4_gv_gen_data 1
 
+execute if entity @s[tag=gm4_king_palm_sapling] run function gm4_natural_trees:generate/king_palm/initialize

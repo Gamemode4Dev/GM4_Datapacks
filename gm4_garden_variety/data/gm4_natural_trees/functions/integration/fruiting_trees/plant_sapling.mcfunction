@@ -8,4 +8,3 @@ data modify storage gm4_garden_variety:data/garden_variety_nbt sapling set from 
 
 # plant sapling
 execute if data storage gm4_fruiting_trees:data Sapling{type:"king_palm"} run function gm4_natural_trees:generate/king_palm/integration/fruiting_trees/spawn_sapling_marker
-
