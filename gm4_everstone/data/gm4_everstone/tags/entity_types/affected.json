@@ -1,11 +1,13 @@
 {
     "values": [
+        "minecraft:axolotl",
         "minecraft:bee",
         "minecraft:cat",
         "minecraft:chicken",
         "minecraft:cow",
         "minecraft:donkey",
         "minecraft:fox",
+        "minecraft:goat",
         "minecraft:hoglin",
         "minecraft:horse",
         "minecraft:llama",
