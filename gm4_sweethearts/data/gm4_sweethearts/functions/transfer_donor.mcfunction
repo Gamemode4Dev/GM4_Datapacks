@@ -44,4 +44,5 @@ execute if score donor_lost_health gm4_sh_data = @s gm4_sh_data run advancement 
 tag @s add gm4_sh_transfered
 
 # visuals
-particle damage_indicator ~ ~2 ~ 0 0 0 .255 10
+particle damage_indicator ~ ~2 ~ 0 0 0 .255 5
+playsound minecraft:entity.player.hurt player @a[distance=..8] ~ ~ ~ 1 1
