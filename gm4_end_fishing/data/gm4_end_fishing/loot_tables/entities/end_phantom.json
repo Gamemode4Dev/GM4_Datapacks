@@ -46,9 +46,9 @@
               "name": {
                 "translate": "%1$s%3427655$s",
                 "with": [
-                  "Raptured Wings",
+                  "Ravaged Wings",
                   {
-                    "translate": "item.gm4.end_fishing.raptured_wings"
+                    "translate": "item.gm4.end_fishing.ravaged_wings"
                   }
                 ],
                 "italic": false
