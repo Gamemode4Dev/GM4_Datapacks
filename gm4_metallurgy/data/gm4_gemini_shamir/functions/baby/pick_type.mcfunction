@@ -13,6 +13,7 @@ execute if entity @s[tag=gm4_gemini_ocelot] as @e[type=ocelot,distance=..10,nbt=
 execute if entity @s[tag=gm4_gemini_panda] as @e[type=panda,distance=..10,nbt={Age:-24000},limit=1,sort=nearest] at @s run function gm4_gemini_shamir:baby/spawn_panda
 execute if entity @s[tag=gm4_gemini_rabbit] as @e[type=rabbit,distance=..10,nbt={Age:-24000},limit=1,sort=nearest] at @s run function gm4_gemini_shamir:baby/spawn_rabbit
 execute if entity @s[tag=gm4_gemini_sheep] as @e[type=sheep,distance=..10,nbt={Age:-24000},limit=1,sort=nearest] at @s run function gm4_gemini_shamir:baby/spawn_sheep
+execute if entity @s[tag=gm4_gemini_trader_llama] as @e[type=trader_llama,distance=..10,nbt={Age:-24000},limit=1,sort=nearest] at @s run function gm4_gemini_shamir:baby/spawn_trader_llama
 execute if entity @s[tag=gm4_gemini_wolf] as @e[type=wolf,distance=..10,nbt={Age:-24000},limit=1,sort=nearest] at @s run function gm4_gemini_shamir:baby/spawn_wolf
 
 kill @s
