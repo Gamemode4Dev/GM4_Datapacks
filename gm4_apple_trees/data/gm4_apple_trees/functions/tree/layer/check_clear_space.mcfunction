@@ -1,5 +1,5 @@
 # recursively checks how much clear space there is above a sapling
-# @s = sapling marker area_effect_cloud
+# @s = sapling marker
 # at positioned ~ ~n ~ where n is the current iteration of the recursion
 # run from gm4_apple_trees:tree/initialize
 

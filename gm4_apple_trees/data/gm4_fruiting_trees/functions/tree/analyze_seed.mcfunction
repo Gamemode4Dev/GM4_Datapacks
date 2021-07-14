@@ -1,5 +1,5 @@
 # splits the seed the tree was initialized with into bits used for tree generation
-# @s = sapling marker area_effect_cloud
+# @s = sapling marker
 # at @s align xyz
 # run from gm4_fruiting_trees:tree/initialize
 

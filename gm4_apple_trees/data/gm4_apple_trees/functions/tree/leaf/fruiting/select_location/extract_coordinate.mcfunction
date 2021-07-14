@@ -1,6 +1,6 @@
 # marks leaves as fruiting leaves
-# @s = sapling marker area_effect_cloud
-# positioned ~ ~n ~ above the AEC rotated as @s
+# @s = sapling marker
+# positioned ~ ~n ~ above the marker rotated as @s
 # run from gm4_apple_trees:tree/layer/generate
 
 # interpret bit 08 as radius and bits 09, 10, 11 as angles 0 to 7

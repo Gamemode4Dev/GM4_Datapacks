@@ -3,12 +3,15 @@
 
 advancement revoke @s only gm4_fruiting_trees:sapling/place_fruiting_sapling
 
-summon area_effect_cloud ~ ~ ~ {Tags:["gm4_tree_ray"]}
-execute anchored eyes positioned ^ ^ ^ anchored feet run tp @e[tag=gm4_tree_ray] ^ ^ ^ ~ ~
+summon marker ~ ~ ~ {Tags:["gm4_tree_ray"]}
+execute anchored eyes positioned ^ ^ ^ anchored feet run tp @e[type=marker,tag=gm4_tree_ray,limit=1] ^ ^ ^ ~ ~
 scoreboard players set gm4_ray_counter gm4_count 0
-execute as @e[tag=gm4_tree_ray] at @s run function gm4_fruiting_trees:sapling/ray
+execute as @e[type=marker,tag=gm4_tree_ray,limit=1] at @s run function gm4_fruiting_trees:sapling/ray
 
 data modify storage gm4_fruiting_trees:data Sapling.type set from entity @s SelectedItem.tag.gm4_fruiting_trees.item.type
-execute at @e[tag=gm4_tree_ray] align xyz unless entity @e[type=area_effect_cloud,dx=0,dy=0,dz=0,tag=gm4_fruiting_sapling] run function #gm4_fruiting_trees:sapling/initialize
+execute at @e[type=marker,tag=gm4_fruiting_sap_location,limit=1] run function #gm4_fruiting_trees:sapling/initialize
 
-kill @e[tag=gm4_tree_ray]
+kill @e[type=marker,tag=gm4_tree_ray]
+kill @e[type=marker,tag=gm4_fruiting_sap_location]
+scoreboard players reset gm4_ray_count gm4_count
+scoreboard players reset $found gm4_count

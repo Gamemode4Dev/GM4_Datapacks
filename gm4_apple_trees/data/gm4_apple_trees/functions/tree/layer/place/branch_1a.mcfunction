@@ -1,6 +1,6 @@
 # generates second branched layer of this apple tree as style a
-# @s = sapling marker area_effect_cloud
-# positioned ~ ~n ~ above the AEC rotated as @s
+# @s = sapling marker
+# positioned ~ ~n ~ above the marker rotated as @s
 # run from gm4_apple_trees:tree/layer/generate
 
 # branches

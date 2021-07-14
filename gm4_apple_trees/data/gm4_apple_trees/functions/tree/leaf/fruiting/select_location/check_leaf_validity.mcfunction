@@ -1,5 +1,5 @@
 # positions the apple leaf
-# @s = sapling marker area_effect_cloud
+# @s = sapling marker
 # at selected coordinate for leaf
 # run from gm4_apple_trees:tree/leaf/fruiting/select_location/set_coordinates
 

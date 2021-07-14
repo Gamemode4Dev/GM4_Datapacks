@@ -1,5 +1,5 @@
 # processes the sapling every tick for stage change or broken block
-# @s = sapling marker area_effect_cloud
+# @s = sapling marker
 # at @s align xyz
 # run from gm4_fruiting_trees:tick
 
