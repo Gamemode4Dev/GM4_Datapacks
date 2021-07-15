@@ -28,12 +28,10 @@ execute if score current_leaf_layer gm4_gv_gen_data matches 1 run scoreboard pla
 execute if score current_leaf_layer gm4_gv_gen_data matches 2 run scoreboard players set palm_layers_minimum gm4_gv_gen_data 6
 execute if score current_leaf_layer gm4_gv_gen_data matches 2 run scoreboard players set palm_layers_range gm4_gv_gen_data 2
 
-
-
 ########## FINALIZE ##########
 
 # apply trait override variables
 #TODO# function gm4_natural_trees:generate/king_palm/generation/trees/variables/palm_trait_override
 
 # convert input variables to generation variables
-function gm4_garden_variety:generation/interpret_variables/palm
+function gm4_garden_variety:generation/interpret_variables/initial/palm
