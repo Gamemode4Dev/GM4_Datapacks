@@ -4,4 +4,4 @@
 # run from gm4_apple_trees:sapling/validate_species
 
 summon marker ~ ~ ~ {CustomName:'"Apple Tree Sapling"',Tags:["gm4_fruiting_sapling","gm4_apple_tree_sapling"]}
-scoreboard players set @e[type=marker,tag=gm4_apple_tree_sapling,dx=0] gm4_sap_growth 2
+scoreboard players set @e[type=marker,tag=gm4_apple_tree_sapling,distance=..0.1] gm4_sap_growth 2
