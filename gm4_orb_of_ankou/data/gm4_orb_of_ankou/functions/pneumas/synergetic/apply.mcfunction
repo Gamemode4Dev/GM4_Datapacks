@@ -7,4 +7,4 @@ effect give @e[type=wolf,distance=..4,scores={gm4_pneuma_data=0}] strength 5 0
 scoreboard players reset @e[type=wolf,distance=..4] gm4_pneuma_data
 
 # apply strength to other synergetic players
-effect give @a[distance=0.1..8,tag=gm4_pneuma_synergetic] strength 5 0
+effect give @a[gamemode=!spectator,distance=0.1..8,tag=gm4_pneuma_synergetic] strength 5 0

@@ -1,5 +1,5 @@
 #@s = sneaking player with pneuma that stopped sneaking
-#run from main
+#run from player
 
 execute if score @s gm4_oa_snk_num matches 3.. as @s[tag=gm4_pneuma_bounding] run function gm4_orb_of_ankou:pneumas/bounding
 execute if score @s gm4_oa_snk_num matches 3.. as @s[tag=gm4_pneuma_rushing] run function gm4_orb_of_ankou:pneumas/rushing

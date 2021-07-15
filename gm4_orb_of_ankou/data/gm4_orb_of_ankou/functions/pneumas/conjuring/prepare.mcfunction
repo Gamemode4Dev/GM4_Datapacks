@@ -10,3 +10,5 @@ scoreboard players set @s[scores={gm4_oa_snk_num=9..13}] gm4_pneuma_data 12
 scoreboard players set @s[scores={gm4_oa_snk_num=14..}] gm4_pneuma_data 15
 scoreboard players operation @e[type=armor_stand,tag=gm4_oa_new_fang,distance=..0.001,limit=1] gm4_pneuma_data = @s gm4_pneuma_data
 tag @e[type=armor_stand,tag=gm4_oa_new_fang,distance=..0.001,limit=1] remove gm4_oa_new_fang
+
+schedule function gm4_orb_of_ankou:pneumas/conjuring/temp_tick 1t

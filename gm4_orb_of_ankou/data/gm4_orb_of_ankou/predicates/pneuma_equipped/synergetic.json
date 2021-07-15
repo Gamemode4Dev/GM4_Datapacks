@@ -1,0 +1,11 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "offhand": {
+        "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:'synergetic'}]}}"
+      }
+    }
+  }
+}

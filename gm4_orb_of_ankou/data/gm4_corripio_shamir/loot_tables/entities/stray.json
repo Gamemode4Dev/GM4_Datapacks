@@ -14,10 +14,10 @@
           "condition": "minecraft:table_bonus",
           "enchantment": "minecraft:looting",
           "chances": [
-            0.00016,
-            0.00064,
-            0.004,
-            0.01312
+            0.0007,
+            0.0028,
+            0.0175,
+            0.0574
           ]
         }
       ]
@@ -35,10 +35,10 @@
           "condition": "minecraft:table_bonus",
           "enchantment": "minecraft:looting",
           "chances": [
-            0.00009,
-            0.00036,
-            0.00225,
-            0.00738
+            0.0002,
+            0.0008,
+            0.005,
+            0.0164
           ]
         }
       ]
@@ -56,10 +56,10 @@
           "condition": "minecraft:table_bonus",
           "enchantment": "minecraft:looting",
           "chances": [
-            0.00006,
-            0.00024,
-            0.0015,
-            0.00492
+            0.00012,
+            0.00048,
+            0.003,
+            0.00984
           ]
         }
       ]

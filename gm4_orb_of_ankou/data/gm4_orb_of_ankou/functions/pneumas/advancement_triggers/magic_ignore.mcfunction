@@ -4,4 +4,4 @@
 advancement revoke @s only gm4_orb_of_ankou:triggers/magic_evoker_fang
 tag @s add gm4_oa_magic_ignore
 tag @s add gm4_oa_magic_damaged
-scoreboard players set magic_damaged gm4_pneuma_data 1
+schedule function gm4_orb_of_ankou:pneumas/temp_tick/magic_damaged 1t
