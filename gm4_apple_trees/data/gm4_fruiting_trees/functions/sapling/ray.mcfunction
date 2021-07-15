@@ -3,13 +3,13 @@
 
 # check blocks around the marker ray
 scoreboard players set $found gm4_count 0
-execute store success score $found gm4_count align xyz positioned ~ ~ ~ if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,dx=0,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_fruiting_sap_location"]}
-execute if score $found gm4_count matches 0 store success score $found gm4_count align xyz positioned ~ ~1 ~ if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,dx=0,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_fruiting_sap_location"]}
-execute if score $found gm4_count matches 0 store success score $found gm4_count align xyz positioned ~ ~-1 ~ if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,dx=0,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_fruiting_sap_location"]}
-execute if score $found gm4_count matches 0 store success score $found gm4_count align xyz positioned ~1 ~ ~ if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,dx=0,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_fruiting_sap_location"]}
-execute if score $found gm4_count matches 0 store success score $found gm4_count align xyz positioned ~-1 ~ ~ if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,dx=0,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_fruiting_sap_location"]}
-execute if score $found gm4_count matches 0 store success score $found gm4_count align xyz positioned ~ ~ ~1 if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,dx=0,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_fruiting_sap_location"]}
-execute if score $found gm4_count matches 0 store success score $found gm4_count align xyz positioned ~ ~ ~-1 if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,dx=0,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_fruiting_sap_location"]}
+execute store success score $found gm4_count align xyz positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,distance=..0.1,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_ray_loc"]}
+execute if score $found gm4_count matches 0 store success score $found gm4_count align xyz positioned ~0.5 ~1.5 ~0.5 if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,distance=..0.1,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_ray_loc"]}
+execute if score $found gm4_count matches 0 store success score $found gm4_count align xyz positioned ~0.5 ~-0.5 ~0.5 if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,distance=..0.1,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_ray_loc"]}
+execute if score $found gm4_count matches 0 store success score $found gm4_count align xyz positioned ~1.5 ~0.5 ~0.5 if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,distance=..0.1,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_ray_loc"]}
+execute if score $found gm4_count matches 0 store success score $found gm4_count align xyz positioned ~-0.5 ~0.5 ~0.5 if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,distance=..0.1,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_ray_loc"]}
+execute if score $found gm4_count matches 0 store success score $found gm4_count align xyz positioned ~0.5 ~0.5 ~1.5 if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,distance=..0.1,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_ray_loc"]}
+execute if score $found gm4_count matches 0 store success score $found gm4_count align xyz positioned ~0.5 ~0.5 ~-0.5 if block ~ ~ ~ #minecraft:saplings unless entity @e[type=marker,distance=..0.1,tag=gm4_fruiting_sapling,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_ray_loc"]}
 
 # move forward
 scoreboard players add gm4_ray_counter gm4_count 1
