@@ -1,5 +1,5 @@
-#@s = fang_thrower armor stand
-#run from pneumas/conjuring/throw
+# @s = fang_thrower armor stand
+# run from pneumas/conjuring/throw
 
 summon evoker_fangs ~ ~ ~ {Tags:[gm4_oa_fang]}
 data modify entity @e[type=evoker_fangs,tag=gm4_oa_fang,limit=1,distance=..0.1] Owner set from entity @s ArmorItems[0].tag.gm4_oa_conjuring

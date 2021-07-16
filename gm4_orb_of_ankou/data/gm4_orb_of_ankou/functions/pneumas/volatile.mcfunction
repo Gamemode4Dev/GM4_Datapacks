@@ -1,5 +1,5 @@
-#@s = player with volatile pneuma who has been damaged
-#run from advancement_triggers/player_damaged
+# @s = player with volatile pneuma who has been damaged
+# run from advancement_triggers/player_damaged
 
 execute store result score @s gm4_pneuma_data run data get entity @s Health
 tag @e[type=item,distance=..5,nbt=!{Invulnerable:1b}] add gm4_oa_invulnerable

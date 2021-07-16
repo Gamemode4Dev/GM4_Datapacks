@@ -1,5 +1,5 @@
-#@s = sneaking player with pneuma
-#run from player
+# @s = sneaking player with pneuma
+# run from player
 
 tag @s add gm4_oa_sneaking
 scoreboard players add @s gm4_oa_snk_num 1

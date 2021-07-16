@@ -1,5 +1,5 @@
-#@s = player with feigning pneuma who has been damaged and has less than 8 health
-#run from advancement_triggers/player_damaged
+# @s = player with feigning pneuma who has been damaged and has less than 8 health
+# run from advancement_triggers/player_damaged
 
 effect give @s invisibility 10 255 true
 effect give @s slowness 10 255 true

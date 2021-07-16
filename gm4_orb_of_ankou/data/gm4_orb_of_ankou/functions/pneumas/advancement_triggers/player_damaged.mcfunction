@@ -1,5 +1,5 @@
-#@s = any player who has been damaged
-#run from advancement "triggers/damaged"
+# @s = any player who has been damaged
+# run from advancement "triggers/damaged"
 
 advancement revoke @s only gm4_orb_of_ankou:triggers/damaged
 

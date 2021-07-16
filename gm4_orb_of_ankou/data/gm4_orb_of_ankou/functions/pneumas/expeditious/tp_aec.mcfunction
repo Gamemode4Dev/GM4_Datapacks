@@ -1,5 +1,5 @@
-#@s = expeditious tp AEC
-#run from pneumas/expeditious/randomize
+# @s = expeditious tp AEC
+# run from pneumas/expeditious/randomize
 
 execute at @s if score randomX gm4_pneuma_data matches 32.. run tp @s ~32 ~ ~
 execute if score randomX gm4_pneuma_data matches 32.. run scoreboard players remove randomX gm4_pneuma_data 32

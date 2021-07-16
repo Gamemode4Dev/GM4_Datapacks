@@ -1,5 +1,5 @@
-#@s = soul forge with an orb and shard
-#run from soul_forge/wither_roses/steps
+# @s = soul forge with an orb and shard
+# run from soul_forge/wither_roses/steps
 
 summon area_effect_cloud ~-6 ~1 ~-6 {Duration:129,CustomName:'"gm4_oa_wither_rose_catcher"',Tags:["gm4_oa_wither_rose_catcher","gm4_oa_unset"],Radius:0,Particle:"block air"}
 

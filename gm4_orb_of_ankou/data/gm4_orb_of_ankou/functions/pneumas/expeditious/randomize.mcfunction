@@ -1,5 +1,5 @@
-#@s = player with expeditious pneuma who stopped sneaking
-#run from pneumas/expeditious/attempt
+# @s = player with expeditious pneuma who stopped sneaking
+# run from pneumas/expeditious/attempt
 
 scoreboard players operation randomZ gm4_pneuma_data = randomX gm4_pneuma_data
 scoreboard players set #10 gm4_pneuma_data 10

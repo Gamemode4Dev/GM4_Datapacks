@@ -1,5 +1,5 @@
-#@s = any player who has a soul shard or orb of ankou in their offhand
-#run from update_tags/check_offhand
+# @s = any player who has a soul shard or orb of ankou in their offhand
+# run from update_tags/check_offhand
 
 tag @s add gm4_has_pneuma
 

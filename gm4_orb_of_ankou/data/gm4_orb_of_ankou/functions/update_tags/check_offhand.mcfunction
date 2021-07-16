@@ -1,5 +1,5 @@
-#@s = any player who has changed their inventory
-#run from advancement "check_player/check_inventory"
+# @s = any player who has changed their inventory
+# run from advancement "check_player/check_inventory"
 
 advancement revoke @s only gm4_orb_of_ankou:check_player/check_inventory
 

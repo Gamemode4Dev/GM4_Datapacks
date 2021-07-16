@@ -1,5 +1,5 @@
-#@s = player with expeditious pneuma who stopped sneaking
-#run from pneumas/expeditious/attempt
+# @s = player with expeditious pneuma who stopped sneaking
+# run from pneumas/expeditious/attempt
 
 particle minecraft:explosion ~ ~.3 ~ .3 .4 .3 2 0
 tp @s @e[type=area_effect_cloud,tag=gm4_oa_expeditious,limit=1]

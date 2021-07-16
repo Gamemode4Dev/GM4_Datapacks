@@ -1,5 +1,5 @@
-#@s = players with synergetic pneuma
-#run from main
+# @s = players with synergetic pneuma
+# run from main
 
 # check if nearby wolves are owned by the player
 execute as @e[type=wolf,distance=..4] if data entity @s Owner run function gm4_orb_of_ankou:pneumas/synergetic/check_wolf

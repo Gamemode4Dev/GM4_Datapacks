@@ -1,5 +1,5 @@
-#@s = player with expeditious pneuma who stopped sneaking
-#run from pneumas/sneak/stopped
+# @s = player with expeditious pneuma who stopped sneaking
+# run from pneumas/sneak/stopped
 
 summon area_effect_cloud ~ ~ ~ {CustomName:'"Expeditious TP"',Tags:["gm4_oa_expeditious"],Duration:1}
 tp @e[type=area_effect_cloud,tag=gm4_oa_expeditious,distance=..0.001,limit=1] @s

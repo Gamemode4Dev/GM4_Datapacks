@@ -1,5 +1,5 @@
-#@s = any player who has changed their inventory and has a pneuma tag
-#run from update_tags/check_offhand
+# @s = any player who has changed their inventory and has a pneuma tag
+# run from update_tags/check_offhand
 
 tag @s remove gm4_pneuma_aggressive
 tag @s remove gm4_pneuma_agile

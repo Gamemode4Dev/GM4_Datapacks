@@ -1,5 +1,5 @@
-#@s = player who shot a crossbow with blasting pneuma and blaze powder
-#run from advancement_triggers/shoot_crossbow
+# @s = player who shot a crossbow with blasting pneuma and blaze powder
+# run from advancement_triggers/shoot_crossbow
 
 # summon fireball at player's location
 summon minecraft:small_fireball ~ ~1 ~ {Tags:["gm4_oa_fireball"],power:[0.0,0.0,0.0],Motion:[0.0,0.0,0.0]}
