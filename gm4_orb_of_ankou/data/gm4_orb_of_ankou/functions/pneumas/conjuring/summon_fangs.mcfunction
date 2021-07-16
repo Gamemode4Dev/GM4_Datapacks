@@ -7,4 +7,4 @@ tag @e[type=evoker_fangs] remove gm4_oa_fang
 
 tag @a[distance=..1,gamemode=!creative,gamemode=!spectator] add gm4_oa_magic_ignore
 tag @a[distance=..1,gamemode=!creative,gamemode=!spectator] add gm4_oa_magic_damaged
-execute if entity @a[distance=..1,gamemode=!creative,gamemode=!spectator] run scoreboard players set magic_damaged gm4_pneuma_data 1
+schedule function gm4_orb_of_ankou:pneumas/temp_tick/magic_damaged 1t
