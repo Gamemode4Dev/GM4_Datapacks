@@ -26,9 +26,6 @@ effect give @a[gamemode=!spectator,tag=gm4_oa_soaring_off_ground] jump_boost 2 2
 # run player commands
 execute as @a[gamemode=!spectator,tag=gm4_has_pneuma] run function gm4_orb_of_ankou:player
 
-# sneaking stuff
-scoreboard players set @a gm4_oa_sneak 0
-
 # revert invulnerable item
 scoreboard players add @e[type=item,tag=gm4_oa_invulnerable] gm4_pneuma_data 1
 execute as @e[type=item,tag=gm4_oa_invulnerable,scores={gm4_pneuma_data=2..}] run function gm4_orb_of_ankou:pneumas/revert_invulnerable_item

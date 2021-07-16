@@ -10,6 +10,3 @@ execute at @s[tag=gm4_pneuma_synergetic] run function gm4_orb_of_ankou:pneumas/s
 # soaring
 execute at @s[tag=gm4_oa_soaring_active] run function gm4_orb_of_ankou:pneumas/soaring/apply
 
-# sneaking stuff
-execute if entity @s[scores={gm4_oa_sneak=0},tag=gm4_oa_sneaking] run function gm4_orb_of_ankou:pneumas/sneak/stopped
-execute if entity @s[scores={gm4_oa_sneak=1..},tag=gm4_has_pneuma] run function gm4_orb_of_ankou:pneumas/sneak/check

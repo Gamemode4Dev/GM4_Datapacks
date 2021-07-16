@@ -25,7 +25,7 @@ team add gm4_oa_feigning
 
 # check if players are in the nether and tag them if they are
 tag @a remove gm4_oa_in_nether
-execute in minecraft:the_nether run tag @a[distance=0..] add gm4_oa_in_nether
+execute in minecraft:the_nether run tag @a[x=0] add gm4_oa_in_nether
 
 # register shamir with lib_player_heads
 execute unless data storage gm4_player_heads:register heads[{id:"gm4_corripio_shamir:band/v0"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_corripio_shamir:band/v0",name:"[Drop to Fix Item] gm4_corripio_shamir:band/v0",item:{gm4_metallurgy:{has_shamir:1b,stored_shamir:"corripio",metal:{type:"copper",amount:[12s],castable:1b},item:"obsidian_cast"},CustomModelData:116,display:{Name:'{"italic":false,"translate":"%1$s%3427655$s","with":["Obsidian Cast",{"translate":"item.gm4.metallurgy.obsidian_cast"}]}',Lore:['{"italic":false,"color":"gold","translate":"%1$s%3427655$s","with":["Copper Band",{"translate":"item.gm4.metallurgy.band","with":[{"translate":"item.gm4.metallurgy.copper"}]}]}','{"italic":false,"color":"aqua","translate":"%1$s%3427655$s","with":["Shamir",{"translate":"item.gm4.metallurgy.shamir"}]}','{"italic":false,"color":"gray","translate":"%1$s%3427655$s","with":["Corripio",{"translate":"item.gm4.shamir.corripio"}]}']}}}

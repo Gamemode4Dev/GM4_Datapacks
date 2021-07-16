@@ -10,6 +10,11 @@ execute if score loaded_forge gm4_oa_forge matches 1.. at @e[type=armor_stand,ta
 
 ## PNEUMA STUFF ##
 
+# sneaking stuff
+execute as @a[gamemode=!spectator,tag=gm4_has_pneuma,scores={gm4_oa_sneak=0},tag=gm4_oa_sneaking] run function gm4_orb_of_ankou:pneumas/sneak/stopped
+execute as @a[gamemode=!spectator,tag=gm4_has_pneuma,scores={gm4_oa_sneak=1..}] run function gm4_orb_of_ankou:pneumas/sneak/check
+scoreboard players set @a gm4_oa_sneak 0
+
 # use bow
 scoreboard players reset @a gm4_oa_bow
 
