@@ -14,6 +14,7 @@ tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/conjuring] add gm4_pneuma_conj
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/draining] add gm4_pneuma_draining
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/expeditious] add gm4_pneuma_expeditious
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/feathery] add gm4_pneuma_feathery
+tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/feigning] add gm4_pneuma_feigning
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/gazing] add gm4_pneuma_gazing
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/gliding] add gm4_pneuma_gliding
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/hawkeye] add gm4_pneuma_hawkeye

@@ -2,12 +2,14 @@
 
 # soul forge scoreboard stuff
 scoreboard objectives add gm4_count dummy
+scoreboard objectives add gm4_health health
 scoreboard objectives add gm4_oa_forge dummy
 scoreboard objectives add gm4_oa_powder dummy
 scoreboard objectives add gm4_oa_glowstone dummy
 scoreboard objectives add gm4_oa_tears dummy
 scoreboard objectives add gm4_oa_roses dummy
 scoreboard objectives add gm4_oa_essence dummy
+scoreboard objectives add gm4_oa_fns minecraft.used:minecraft.flint_and_steel
 
 function gm4_orb_of_ankou:soul_forge/recipes/initiate_recipe_amounts
 
@@ -17,7 +19,9 @@ scoreboard objectives add gm4_oa_snk_num dummy
 scoreboard objectives add gm4_oa_sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add gm4_oa_swim minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add gm4_oa_bow minecraft.used:minecraft.bow
-scoreboard objectives add gm4_oa_fns minecraft.used:minecraft.flint_and_steel
+scoreboard objectives add gm4_oa_feign_t dummy
+
+team add gm4_oa_feigning
 
 # check if players are in the nether and tag them if they are
 tag @a remove gm4_oa_in_nether

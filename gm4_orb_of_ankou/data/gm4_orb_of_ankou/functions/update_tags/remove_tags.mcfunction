@@ -12,6 +12,7 @@ tag @s remove gm4_pneuma_conjuring
 tag @s remove gm4_pneuma_draining
 tag @s remove gm4_pneuma_expeditious
 tag @s remove gm4_pneuma_feathery
+tag @s remove gm4_pneuma_feigning
 tag @s remove gm4_pneuma_gazing
 tag @s remove gm4_pneuma_gliding
 tag @s remove gm4_pneuma_hawkeye
