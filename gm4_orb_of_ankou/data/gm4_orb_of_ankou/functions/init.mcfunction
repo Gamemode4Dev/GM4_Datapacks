@@ -2,7 +2,6 @@
 
 # soul forge scoreboard stuff
 scoreboard objectives add gm4_count dummy
-scoreboard objectives add gm4_health health
 scoreboard objectives add gm4_oa_forge dummy
 scoreboard objectives add gm4_oa_powder dummy
 scoreboard objectives add gm4_oa_glowstone dummy
@@ -16,10 +15,12 @@ function gm4_orb_of_ankou:soul_forge/recipes/initiate_recipe_amounts
 # pneuma scoreboard stuff
 scoreboard objectives add gm4_pneuma_data dummy
 scoreboard objectives add gm4_oa_snk_num dummy
+scoreboard objectives add gm4_oa_marker dummy
+scoreboard objectives add gm4_oa_feign_t dummy
+scoreboard objectives add gm4_health health
 scoreboard objectives add gm4_oa_sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add gm4_oa_swim minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add gm4_oa_bow minecraft.used:minecraft.bow
-scoreboard objectives add gm4_oa_feign_t dummy
 
 team add gm4_oa_feigning
 

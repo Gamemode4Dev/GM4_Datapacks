@@ -1,4 +1,4 @@
-# @s = wither_rose_catcher area_effect_cloud at @s
+# @s = wither_rose_catcher marker at @s
 # run from soul_forge/wither_roses/summon_indicator
 
 #move the AEC to the chosen x and z
