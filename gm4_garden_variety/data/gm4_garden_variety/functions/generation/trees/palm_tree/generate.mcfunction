@@ -24,7 +24,7 @@ scoreboard players set current_leaf_layer gm4_gv_gen_data 1
 
 # summon nametag
 execute if score nametag gm4_gv_nbt_data matches 1 run summon item ~ ~ ~ {Tags:["gm4_gv_add_trait_lore"],Item:{id:"minecraft:name_tag",Count:1b}}
-#TODO# execute if score nametag gm4_gv_nbt_data matches 1 as @e[type=item,distance=..1,limit=1,sort=nearest,tag=gm4_gv_add_trait_lore] run function gm4_garden_variety:data/modify/item/add_trait_lore
+execute if score nametag gm4_gv_nbt_data matches 1 as @e[type=item,distance=..1,limit=1,sort=nearest,tag=gm4_gv_add_trait_lore] run function gm4_garden_variety:data/add/trait_lore/standalone
 
 # remove tagged nbt
 execute if score nametag gm4_gv_nbt_data matches 1 run data modify storage gm4_garden_variety:data/garden_variety_nbt tree.nametag set value 0b 

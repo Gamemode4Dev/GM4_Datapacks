@@ -1,0 +1,35 @@
+# generates the tree's leaf layers
+# @s = TREE_TYPE leaf AEC marker
+# run from gm4_garden_variety:analyzer/recipes/RECIPE_TYPE/complete
+
+# reset storage
+data remove storage gm4_garden_variety:data/item_lore traits
+
+# TAG: height
+execute if score height gm4_gv_nbt_data matches -3 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Height: ","color":"#E3CAFB","italic":false},{"text":"Shortest","color":"gray","italic":false}]'
+execute if score height gm4_gv_nbt_data matches -2 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Height: ","color":"#E3CAFB","italic":false},{"text":"Shorter","color":"gray","italic":false}]'
+execute if score height gm4_gv_nbt_data matches -1 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Height: ","color":"#E3CAFB","italic":false},{"text":"Short","color":"gray","italic":false}]'
+execute if score height gm4_gv_nbt_data matches 1 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Height: ","color":"#E3CAFB","italic":false},{"text":"Tall","color":"gray","italic":false}]'
+execute if score height gm4_gv_nbt_data matches 2 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Height: ","color":"#E3CAFB","italic":false},{"text":"Taller","color":"gray","italic":false}]'
+execute if score height gm4_gv_nbt_data matches 3 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Height: ","color":"#E3CAFB","italic":false},{"text":"Tallest","color":"gray","italic":false}]'
+# TAG: flexibility
+execute if score flexibility gm4_gv_nbt_data matches -3 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Flexibility: ","color":"#E3CAFB","italic":false},{"text":"Lowest","color":"gray","italic":false}]'
+execute if score flexibility gm4_gv_nbt_data matches -2 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Flexibility: ","color":"#E3CAFB","italic":false},{"text":"Lower","color":"gray","italic":false}]'
+execute if score flexibility gm4_gv_nbt_data matches -1 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Flexibility: ","color":"#E3CAFB","italic":false},{"text":"Low","color":"gray","italic":false}]'
+execute if score flexibility gm4_gv_nbt_data matches 1 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Flexibility: ","color":"#E3CAFB","italic":false},{"text":"High","color":"gray","italic":false}]'
+execute if score flexibility gm4_gv_nbt_data matches 2 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Flexibility: ","color":"#E3CAFB","italic":false},{"text":"Higher","color":"gray","italic":false}]'
+execute if score flexibility gm4_gv_nbt_data matches 3 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Flexibility: ","color":"#E3CAFB","italic":false},{"text":"Highest","color":"gray","italic":false}]'
+# TAG: foliage
+execute if score foliage gm4_gv_nbt_data matches -3 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Foliage: ","color":"#E3CAFB","italic":false},{"text":"Smallest","color":"gray","italic":false}]'
+execute if score foliage gm4_gv_nbt_data matches -2 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Foliage: ","color":"#E3CAFB","italic":false},{"text":"Smaller","color":"gray","italic":false}]'
+execute if score foliage gm4_gv_nbt_data matches -1 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Foliage: ","color":"#E3CAFB","italic":false},{"text":"Small","color":"gray","italic":false}]'
+execute if score foliage gm4_gv_nbt_data matches 1 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Foliage: ","color":"#E3CAFB","italic":false},{"text":"Large","color":"gray","italic":false}]'
+execute if score foliage gm4_gv_nbt_data matches 2 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Foliage: ","color":"#E3CAFB","italic":false},{"text":"Larger","color":"gray","italic":false}]'
+execute if score foliage gm4_gv_nbt_data matches 3 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Foliage: ","color":"#E3CAFB","italic":false},{"text":"Largest","color":"gray","italic":false}]'
+# TAG: fertility
+execute if score fertility gm4_gv_nbt_data matches -3 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Fertility: ","color":"#E3CAFB","italic":false},{"text":"Lowest","color":"gray","italic":false}]'
+execute if score fertility gm4_gv_nbt_data matches -2 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Fertility: ","color":"#E3CAFB","italic":false},{"text":"Lower","color":"gray","italic":false}]'
+execute if score fertility gm4_gv_nbt_data matches -1 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Fertility: ","color":"#E3CAFB","italic":false},{"text":"Low","color":"gray","italic":false}]'
+execute if score fertility gm4_gv_nbt_data matches 1 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Fertility: ","color":"#E3CAFB","italic":false},{"text":"High","color":"gray","italic":false}]'
+execute if score fertility gm4_gv_nbt_data matches 2 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Fertility: ","color":"#E3CAFB","italic":false},{"text":"Higher","color":"gray","italic":false}]'
+execute if score fertility gm4_gv_nbt_data matches 3 run data modify storage gm4_garden_variety:data/item_lore traits append value '[{"text":"Fertility: ","color":"#E3CAFB","italic":false},{"text":"Highest","color":"gray","italic":false}]'

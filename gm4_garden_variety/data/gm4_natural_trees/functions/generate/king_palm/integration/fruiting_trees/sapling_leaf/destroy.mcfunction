@@ -6,10 +6,9 @@
 # spawn items
 loot spawn ~0.5 ~ ~0.5 loot gm4_natural_trees:blocks/sapling_leaf/king_palm
 
-# decode and store score in item nbt
-#TODO# function gm4_garden_variety:data/convert/gv_string_to_scores
-#execute positioned ~.5 ~ ~.5 as @e[type=item,distance=..1,sort=nearest,nbt={Age:0s}] run function gm4_garden_variety:data/convert/gv_scores_to_nbt
-
+# store nbt
+data modify storage gm4_garden_variety:data/garden_variety_nbt tree set from entity @s data.gm4_garden_variety
+execute as @e[type=item,distance=..1,sort=nearest,nbt={Age:0s}] run data modify entity @s Item.tag.gm4_garden_variety set from storage gm4_garden_variety:data/garden_variety_nbt tree
 
 # kill
 kill @s
