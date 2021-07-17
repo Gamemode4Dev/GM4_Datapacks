@@ -10,12 +10,11 @@ scoreboard players set @s[type=enderman] gm4_ta_jam_time 3
 # teleportation anchors
 tag @s add gm4_ta_new_tp
 execute at @s as @e[type=armor_stand,tag=gm4_ta_wired,distance=..65] if score @s gm4_ta_jam_id = @e[limit=1,tag=gm4_ta_new_tp] gm4_ta_jam_id at @s run function gm4_teleportation_anchors:blocks/anchor/search
-execute at @s as @e[type=area_effect_cloud,tag=gm4_ta_found_anchor] if score @s gm4_ta_jam_id = @e[limit=1,tag=gm4_ta_new_tp] gm4_ta_jam_id run tag @s add gm4_ta_anchor_loc
+execute at @s as @e[type=marker,tag=gm4_ta_found_anchor] if score @s gm4_ta_jam_id = @e[limit=1,tag=gm4_ta_new_tp] gm4_ta_jam_id run tag @s add gm4_ta_anchor_loc
 
-execute at @e[type=area_effect_cloud,tag=gm4_ta_anchor_loc,limit=1] positioned ~ ~1 ~ run function gm4_teleportation_anchors:mob/anchor_tp
+execute at @e[type=marker,tag=gm4_ta_anchor_loc,limit=1] positioned ~ ~1 ~ run function gm4_teleportation_anchors:mob/anchor_tp
 
-tag @e[type=area_effect_cloud,tag=gm4_ta_found_anchor] remove gm4_ta_anchor_loc
-tag @e[type=area_effect_cloud] remove gm4_found_anchor
+kill @e[type=marker,tag=gm4_ta_anchor_loc]
 tag @s remove gm4_ta_new_tp
 
 # visuals

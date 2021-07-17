@@ -1,4 +1,4 @@
-# @s = AEC to find a teleportation anchor that hit a junction
+# @s = marker to find a teleportation anchor that hit a junction
 # run from blocks/anchor/scan
 
 execute if block ~ ~ ~ purpur_pillar[axis=y] if block ~ ~1 ~ purpur_pillar run data merge entity @s {Rotation:[0f,-90f]}

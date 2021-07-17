@@ -1,4 +1,4 @@
-# @s = Anchor Finder AEC that has found an anchor
+# @s = Anchor Finder marker that has found an anchor
 # run from blocks/anchor/scan
 
 tp @s ^ ^ ^-1

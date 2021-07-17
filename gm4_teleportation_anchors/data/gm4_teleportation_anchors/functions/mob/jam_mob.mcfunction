@@ -1,4 +1,4 @@
-# @s = endermen and shulkers that are jammed
+# @s = none
 # run from main
 
 scoreboard players remove @e[type=#gm4_teleportation_anchors:teleporters,scores={gm4_ta_ignore=1..}] gm4_ta_ignore 1

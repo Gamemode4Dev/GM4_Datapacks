@@ -1,4 +1,4 @@
-# @s = AEC to find a teleportation anchor
+# @s = marker to find a teleportation anchor
 # run from find_anchor
 
 tp @s ^ ^ ^1
