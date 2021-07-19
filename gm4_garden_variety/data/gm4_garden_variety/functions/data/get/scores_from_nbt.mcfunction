@@ -5,8 +5,8 @@
 
 
 # tagged
-execute if data storage gm4_garden_variety:data/garden_variety_nbt tree{nametag:0b} run scoreboard players set nametag gm4_gv_nbt_data 0
-execute if data storage gm4_garden_variety:data/garden_variety_nbt tree{nametag:1b} run scoreboard players set nametag gm4_gv_nbt_data 1
+execute if data storage gm4_garden_variety:data/garden_variety_nbt tree{name_tag:0b} run scoreboard players set name_tag gm4_gv_nbt_data 0
+execute if data storage gm4_garden_variety:data/garden_variety_nbt tree{name_tag:1b} run scoreboard players set name_tag gm4_gv_nbt_data 1
 
 # tagged
 execute if data storage gm4_garden_variety:data/garden_variety_nbt tree.generation{soil_conversion:0b} run scoreboard players set soil_conversion gm4_gv_nbt_data 0

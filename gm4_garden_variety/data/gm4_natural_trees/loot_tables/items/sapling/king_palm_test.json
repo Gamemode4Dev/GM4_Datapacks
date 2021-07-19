@@ -26,7 +26,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_garden_variety:{name_tag:true,generation:{soil_conversion:false,},traits:{height:\"taller\",flexibility:\"average\",foliage:\"average\",fertility:\"average\",abnormality:\"none\"}}}"
+                            "tag": "{gm4_garden_variety:{name_tag:true,generation:{soil_conversion:true,},traits:{height:\"tall\",flexibility:\"higher\",foliage:\"smaller\",fertility:\"shortest\"}}}"
                         },
                         {
                             "function": "minecraft:set_lore",
