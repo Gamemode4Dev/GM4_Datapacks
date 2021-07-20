@@ -44,8 +44,20 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
 - Names on items should follow Minecraft's rarity colorscheme and should be `"italic":false`.
 
 #### Comments
-- Any function that is run as an entity should have a comment on the first line stating the context of @s so it is clear what runs this file e.g. `#@s = cows with speed limit=..1 of red mushrooms`
-- All except those included with the template file should list the functions they are called from in a comment on the first or second line of the file e.g. `#run from main`. More complicated modules with subdirectories should specify the more specific file path e.g. `#run from zauber_cauldrons:cauldron/create`
+- Any function except those included with the template file should start with a header comment that consists of:
+```mcfunction
+# @s = player holding enchanted book
+# at @s align xyz
+# run from zauber_cauldrons:cauldron/create
+# Plays a particle animation upon Zauber Cauldron creation
+```
+- Executor information may be written in mcfunction format (e.g. `# @s = @e[type=mooshroom,limit=1,dx=0]`) or in human-readable format (e.g. `# @s = Mooshroom within same  blockspace, limit=1`). Complicated selectors should be written in a human-readable format.
+- Location information should include the full location -- including any `align` or `positioned` arguments -- or be written in human-readable format if the location is   especially complicated.
+- Call information can refrence
+  - a single function, if the function us run by `/function ...`: `# run from zauber_cauldrons:cauldron/create`.
+  - a folder, if multiple functions call this function using `/function`: `# run from functions in gm4_pig_tractors:till/blocks/`.
+  - a function from where it was scheduled: `# scheduled by zauber_cauldrons:cauldron/create`.
+  - a combination of these, in which multiple lines would be used.
 
 ### Compatibility with GM4 Resources
 - All text visible to survival players (names, lore, actionbar, advancements) should use translation keys like this:
