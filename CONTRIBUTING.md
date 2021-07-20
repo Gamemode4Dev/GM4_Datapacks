@@ -53,7 +53,7 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
 ```
 - Executor information may be written in mcfunction format (e.g. `# @s = @e[type=mooshroom,limit=1,dx=0]`) or in human-readable format (e.g. `# @s = Mooshroom within same  blockspace, limit=1`). Complicated selectors should be written in a human-readable format.
 - Location information should include the full location -- including any `align` or `positioned` arguments -- or be written in human-readable format if the location is   especially complicated.
-- Call information can refrence
+- Call information can reference
   - a single function, if the function us run by `/function ...`: `# run from zauber_cauldrons:cauldron/create`.
   - a folder, if multiple functions call this function using `/function`: `# run from functions in gm4_pig_tractors:till/blocks/`.
   - a function from where it was scheduled: `# scheduled by zauber_cauldrons:cauldron/create`.
