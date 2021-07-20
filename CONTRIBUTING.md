@@ -60,6 +60,13 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
   - a function from where it was scheduled: `# scheduled by zauber_cauldrons:cauldron/create`.
   - a combination of these, in which multiple lines would be used.
 
+- Inline comments should be placed to partition code into logical sections and `#` should be followed by a space, e.g.
+```mcfunction
+# spawns items and kills player
+summon Item ~ ~ ~ {Item:{id:"minecraft:bone",Count:1b}}
+kill @s
+```
+
 ### Compatibility with GM4 Resources
 - All text visible to survival players (names, lore, actionbar, advancements) should use translation keys like this:
 ```json
