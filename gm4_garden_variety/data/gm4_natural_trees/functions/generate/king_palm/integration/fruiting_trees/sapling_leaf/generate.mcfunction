@@ -2,7 +2,7 @@
 # run from TODO
 
 # place leaf marker
-execute align xyz run summon marker ~0.5 ~ ~0.5 {CustomName:'"King Palm Sapling Leaf"',Tags:["gm4_fruiting_leaf_new"],NoGravity:1,Age:-2147483648,Duration:2147483647}
+execute align xyz run summon marker ~0.5 ~ ~0.5 {CustomName:'"King Palm Sapling Leaf"',Tags:["gm4_fruiting_leaf_new"]}
 
 # store nbt
 data modify entity @e[type=marker,distance=..1,limit=1,tag=gm4_fruiting_leaf_new] data.gm4_garden_variety set from storage gm4_garden_variety:data/garden_variety_nbt tree
