@@ -58,7 +58,7 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
   - a folder, if multiple functions call this function using `/function`: `# run from functions in gm4_pig_tractors:till/blocks/`.
   - a function from where it was scheduled: `# scheduled by zauber_cauldrons:cauldron/create`.
   - a combination of these, in which multiple lines would be used.
-- (optional) A human-readable description of the function, e.g. `Plays a particle animation upon Zauber Cauldron creation`.
+- (Optional) A human-readable description of the function, e.g. `# Plays a particle animation upon Zauber Cauldron creation`.
 
 ### Compatibility with GM4 Resources
 - All text visible to survival players (names, lore, actionbar, advancements) should use translation keys like this:
