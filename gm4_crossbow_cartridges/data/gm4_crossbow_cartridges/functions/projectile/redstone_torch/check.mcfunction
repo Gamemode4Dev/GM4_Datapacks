@@ -1,17 +1,19 @@
-#run from projectile/redstone_torch/loop
-# @s = @e[type=minecraft:arrow,tag=gm4_cb_rtorch,nbt={inGround:1b}]
+# Check blocks, to place or drop redstone torch
+# @s = arrow with tag gm4_cb_rtorch, in a block
+# at @s
+# run from projectile/redstone_torch/loop
 
-#summon torch item if torch already exists at this block
+# summon torch item if torch already exists at this block
 execute if block ~ ~ ~ #gm4_crossbow_cartridges:torch run loot spawn ~ ~ ~ loot gm4_crossbow_cartridges:redstone_torch
 
-#place torch if possible
+# place torch if possible
 execute if block ~ ~ ~ #gm4:replaceable run function gm4_crossbow_cartridges:projectile/redstone_torch/place
 
-#summon torch item if placing torch failed
+# summon torch item if placing torch failed
 execute unless block ~ ~ ~ #gm4_crossbow_cartridges:torch run loot spawn ~ ~ ~ loot gm4_crossbow_cartridges:redstone_torch
 
-#place block sound
+# place block sound
 playsound minecraft:block.wood.place block @a[distance=..15]
 
-#kill arrow
+# kill arrow
 kill @s
