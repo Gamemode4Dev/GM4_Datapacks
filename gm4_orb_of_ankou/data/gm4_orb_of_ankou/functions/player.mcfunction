@@ -2,7 +2,7 @@
 # run from main
 
 # bubbly
-execute at @s[tag=gm4_pneuma_bubbly] anchored eyes unless block ^ ^ ^ #gm4:water unless block ^ ^ ^ #gm4:waterloggable[waterlogged=true] run effect give @s water_breathing 121 0
+execute at @s[tag=gm4_pneuma_bubbly] anchored eyes positioned ^ ^ ^ unless predicate gm4_orb_of_ankou:in_water run effect give @s water_breathing 121 0
 
 # synergetic
 execute at @s[tag=gm4_pneuma_synergetic] run function gm4_orb_of_ankou:pneumas/synergetic/apply
