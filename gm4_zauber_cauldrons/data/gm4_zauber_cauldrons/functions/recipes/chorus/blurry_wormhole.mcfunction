@@ -28,7 +28,7 @@ data modify storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{tag:{g
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 
 # summon wormhole
-loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:recipes/chorus/wormhole
+loot spawn ~ ~.1 ~ loot gm4_zauber_cauldrons:recipes/chorus/wormhole
 
 # if one, popped or raw chorus, was more than required, turn those into vexes
 execute if score $raw_chorus_fullness gm4_zc_chorus matches 1.. run scoreboard players operation @s gm4_zc_fullness += $raw_chorus_fullness gm4_zc_chorus

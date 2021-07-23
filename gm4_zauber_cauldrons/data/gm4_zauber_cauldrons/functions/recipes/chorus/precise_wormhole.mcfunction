@@ -6,7 +6,7 @@
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 
 # summon wormhole
-loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:recipes/chorus/wormhole
+loot spawn ~ ~.1 ~ loot gm4_zauber_cauldrons:recipes/chorus/wormhole
 
 # cosmetics
 execute at @s run particle minecraft:witch ~ ~.3 ~ .1 .1 .1 1 17
