@@ -171,7 +171,26 @@
                                         "color": "blue",
                                         "italic": false
                                     }
-                                ]
+                                ],
+                                {
+                                    "text": ""
+                                },
+                                {
+                                    "translate": "potion.whenDrank",
+                                    "color": "dark_purple",
+                                    "italic": false
+                                },
+                                {
+                                    "translate": "attribute.modifier.plus.1",
+                                    "with": [
+                                        "60",
+                                        {
+                                            "translate": "attribute.name.generic.movement_speed"
+                                        }
+                                    ],
+                                    "color": "blue",
+                                    "italic": false
+                                }
                             ],
                             "replace": false
                         }
