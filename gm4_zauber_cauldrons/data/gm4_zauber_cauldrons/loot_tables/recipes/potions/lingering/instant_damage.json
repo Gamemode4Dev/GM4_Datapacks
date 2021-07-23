@@ -16,13 +16,15 @@
                             "lore": [
                                 [
                                     {
-                                        "translate": "effect.minecraft.instant_damage",
-                                        "color": "red",
-                                        "italic": false
-                                    },
-                                    " ",
-                                    {
-                                        "translate": "potion.potency.3",
+                                        "translate": "potion.withAmplifier",
+                                        "with": [
+                                            {
+                                                "translate": "effect.minecraft.instant_damage"
+                                            },
+                                            {
+                                                "translate": "potion.potency.3"
+                                            }
+                                        ],
                                         "color": "red",
                                         "italic": false
                                     }

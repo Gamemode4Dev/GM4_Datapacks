@@ -132,18 +132,21 @@
                             "lore": [
                                 [
                                     {
-                                        "translate": "effect.minecraft.strength",
-                                        "color": "blue",
-                                        "italic": false
-                                    },
-                                    " ",
-                                    {
-                                        "translate": "potion.potency.3",
-                                        "color": "blue",
-                                        "italic": false
-                                    },
-                                    {
-                                        "text": " (1:30)",
+                                        "translate": "potion.withDuration",
+                                        "with": [
+                                            {
+                                                "translate": "potion.withAmplifier",
+                                                "with": [
+                                                    {
+                                                        "translate": "effect.minecraft.strength"
+                                                    },
+                                                    {
+                                                        "translate": "potion.potency.3"
+                                                    }
+                                                ]
+                                            },
+                                            "1:30"
+                                        ],
                                         "color": "blue",
                                         "italic": false
                                     }

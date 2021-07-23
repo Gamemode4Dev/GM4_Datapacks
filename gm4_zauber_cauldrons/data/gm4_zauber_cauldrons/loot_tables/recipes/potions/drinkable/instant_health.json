@@ -132,25 +132,28 @@
                             "lore": [
                                 [
                                     {
-                                        "translate": "effect.minecraft.instant_health",
-                                        "color": "blue",
-                                        "italic": false
-                                    },
-                                    " ",
-                                    {
-                                        "translate": "potion.potency.3",
+                                        "translate": "potion.withAmplifier",
+                                        "with": [
+                                            {
+                                                "translate": "effect.minecraft.instant_health"
+                                            },
+                                            {
+                                                "translate": "potion.potency.3"
+                                            }
+                                        ],
                                         "color": "blue",
                                         "italic": false
                                     }
                                 ],
                                 [
                                     {
-                                        "translate": "effect.minecraft.nausea",
-                                        "color": "red",
-                                        "italic": false
-                                    },
-                                    {
-                                        "text": " (0:08)",
+                                        "translate": "potion.withDuration",
+                                        "with": [
+                                            {
+                                                "translate": "effect.minecraft.nausea"
+                                            },
+                                            "0:08"
+                                        ],
                                         "color": "red",
                                         "italic": false
                                     }

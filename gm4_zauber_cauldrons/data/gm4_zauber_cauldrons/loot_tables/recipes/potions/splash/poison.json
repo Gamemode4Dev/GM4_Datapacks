@@ -16,18 +16,21 @@
                             "lore": [
                                 [
                                     {
-                                        "translate": "effect.minecraft.poison",
-                                        "color": "red",
-                                        "italic": false
-                                    },
-                                    " ",
-                                    {
-                                        "translate": "potion.potency.3",
-                                        "color": "red",
-                                        "italic": false
-                                    },
-                                    {
-                                        "text": " (0:32)",
+                                        "translate": "potion.withDuration",
+                                        "with": [
+                                            {
+                                                "translate": "potion.withAmplifier",
+                                                "with": [
+                                                    {
+                                                        "translate": "effect.minecraft.poison"
+                                                    },
+                                                    {
+                                                        "translate": "potion.potency.3"
+                                                    }
+                                                ]
+                                            },
+                                            "0:32"
+                                        ],
                                         "color": "red",
                                         "italic": false
                                     }
