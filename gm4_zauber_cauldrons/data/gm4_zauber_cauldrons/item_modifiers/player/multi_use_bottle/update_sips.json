@@ -51,7 +51,7 @@
         },
         "ops": [
             {
-                "source": "Item.tag.display.Lore[1]",
+                "source": "Item.tag.display.Lore[]",
                 "target": "display.Lore",
                 "op": "append"
             }
