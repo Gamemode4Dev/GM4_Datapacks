@@ -9,7 +9,14 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"jump_boost\",bottle:{multi_use:0b}},HideFlags:32,Potion:\"leaping\",CustomPotionEffects:[{Id:8,Amplifier:3,Duration:1800}]}"
+                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"jump_boost\",bottle:{multi_use:0b}},HideFlags:32,CustomPotionColor:2293580,CustomPotionEffects:[{Id:8,Amplifier:3,Duration:1800}]}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.minecraft.potion.effect.leaping",
+                                "italic": false
+                            }
                         },
                         {
                             "function": "minecraft:set_name",

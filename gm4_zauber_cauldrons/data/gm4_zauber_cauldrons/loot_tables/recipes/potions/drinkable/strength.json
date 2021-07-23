@@ -9,7 +9,14 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"strength\",bottle:{multi_use:0}},HideFlags:32,Potion:\"strength\",CustomPotionEffects:[{Id:5,Amplifier:3,Duration:1800}]}"
+                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"strength\",bottle:{multi_use:0}},HideFlags:32,CustomPotionColor:9643043,CustomPotionEffects:[{Id:5,Amplifier:3,Duration:1800}]}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.minecraft.potion.effect.strength",
+                                "italic": false
+                            }
                         },
                         {
                             "function": "minecraft:set_name",

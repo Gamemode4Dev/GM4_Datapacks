@@ -9,7 +9,14 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"speed\",bottle:{multi_use:0}},HideFlags:32,Potion:\"swiftness\",CustomPotionEffects:[{Id:1,Amplifier:3,Duration:4000},{Id:18,Amplifier:3,Duration:7200}]}"
+                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"speed\",bottle:{multi_use:0}},HideFlags:32,CustomPotionColor:8171462,CustomPotionEffects:[{Id:1,Amplifier:3,Duration:4000},{Id:18,Amplifier:3,Duration:7200}]}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.minecraft.potion.effect.swiftness",
+                                "italic": false
+                            }
                         },
                         {
                             "function": "minecraft:set_name",

@@ -9,7 +9,14 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"instant_health\",bottle:{multi_use:0b}},HideFlags:32,Potion:\"healing\",CustomPotionEffects:[{Id:6,Amplifier:3,Duration:1},{Id:9,Amplifier:0,Duration:160}]}"
+                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"instant_health\",bottle:{multi_use:0b}},HideFlags:32,CustomPotionColor:16262179,CustomPotionEffects:[{Id:6,Amplifier:3,Duration:1},{Id:9,Amplifier:0,Duration:160}]}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.minecraft.potion.effect.healing",
+                                "italic": false
+                            }
                         },
                         {
                             "function": "minecraft:set_name",

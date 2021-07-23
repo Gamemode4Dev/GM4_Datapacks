@@ -9,7 +9,14 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"instant_damage\",bottle:{multi_use:0b}},HideFlags:32,Potion:\"harming\",CustomPotionEffects:[{Id:7,Amplifier:3,Duration:1}]}"
+                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"instant_damage\",bottle:{multi_use:0b}},HideFlags:32,CustomPotionColor:4393481,CustomPotionEffects:[{Id:7,Amplifier:3,Duration:1}]}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.minecraft.potion.effect.harming",
+                                "italic": false
+                            }
                         },
                         {
                             "function": "minecraft:set_name",
