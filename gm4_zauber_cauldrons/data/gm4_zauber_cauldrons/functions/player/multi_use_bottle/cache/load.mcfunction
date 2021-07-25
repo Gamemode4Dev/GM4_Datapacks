@@ -15,6 +15,9 @@ execute if score $remaining_sips gm4_zc_data matches 2.. run function gm4_zauber
 # revoke advancement
 advancement revoke @s only gm4_zauber_cauldrons:use/multi_use_bottle
 
+# reset storage
+data remove storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item
+
 # reset tags
 tag @s remove gm4_zc_used_mainhand
 tag @s remove gm4_zc_used_offhand
