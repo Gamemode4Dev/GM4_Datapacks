@@ -17,7 +17,7 @@ execute if block ~ 0 ~ barrier run scoreboard players add loaded_chunks gm4_orbi
 tag @s add gm4_generated
 
 # spred outwards
-execute positioned ~16 ~ ~ unless entity @e[type=area_effect_cloud,tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
-execute positioned ~-16 ~ ~ unless entity @e[type=area_effect_cloud,tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
-execute positioned ~ ~ ~16 unless entity @e[type=area_effect_cloud,tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
-execute positioned ~ ~ ~-16 unless entity @e[type=area_effect_cloud,tag=gm4_chunk,distance=..1] run summon area_effect_cloud ~ ~ ~ {Tags:[gm4_chunk],Duration:2000000000}
+execute positioned ~16 ~ ~ unless entity @e[type=marker,tag=gm4_chunk,distance=..1] run summon marker ~ ~ ~ {Tags:["gm4_chunk_init"],CustomName:'"gm4_chunk"'}
+execute positioned ~-16 ~ ~ unless entity @e[type=marker,tag=gm4_chunk,distance=..1] run summon marker ~ ~ ~ {Tags:["gm4_chunk_init"],CustomName:'"gm4_chunk"'}
+execute positioned ~ ~ ~16 unless entity @e[type=marker,tag=gm4_chunk,distance=..1] run summon marker ~ ~ ~ {Tags:["gm4_chunk_init"],CustomName:'"gm4_chunk"'}
+execute positioned ~ ~ ~-16 unless entity @e[type=marker,tag=gm4_chunk,distance=..1] run summon marker ~ ~ ~ {Tags:["gm4_chunk_init"],CustomName:'"gm4_chunk"'}
