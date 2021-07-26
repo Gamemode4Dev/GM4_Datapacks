@@ -36,3 +36,6 @@ execute if entity @s[tag=gm4_lt_honey] if data storage gm4_liquid_tanks:temp/tan
 
 #honey block
 execute if entity @s[tag=gm4_lt_honey] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:honey_block"}} run function gm4_standard_liquids:item_drain/honey_block
+
+#powder snow
+execute if entity @s[tag=gm4_lt_powder_snow] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:powder_snow_bucket"}} run function gm4_standard_liquids:item_drain/bucket

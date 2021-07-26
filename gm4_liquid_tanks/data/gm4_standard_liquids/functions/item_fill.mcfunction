@@ -27,3 +27,6 @@ execute if entity @s[tag=gm4_lt_experience] if data storage gm4_liquid_tanks:tem
 
 #honey bottle
 execute if entity @s[tag=gm4_lt_honey] if score $stack_size gm4_lt_value matches ..16 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_standard_liquids:item_fill/honey_bottle
+
+#powder snow bucket
+execute if entity @s[tag=gm4_lt_powder_snow] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:bucket"}} run function gm4_standard_liquids:item_fill/powder_snow_bucket

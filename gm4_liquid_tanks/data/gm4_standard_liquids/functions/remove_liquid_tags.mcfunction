@@ -9,3 +9,4 @@ tag @s remove gm4_lt_mushroom_stew
 tag @s remove gm4_lt_rabbit_stew
 tag @s remove gm4_lt_water
 tag @s remove gm4_lt_honey
+tag @s remove gm4_lt_powder_snow

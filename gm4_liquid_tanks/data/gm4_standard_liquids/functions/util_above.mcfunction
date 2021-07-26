@@ -9,6 +9,9 @@ execute as @e[dx=0,type=cow] run function gm4_standard_liquids:util/cow
 #mooshroom
 execute as @e[dx=0,type=mooshroom] run function gm4_standard_liquids:util/mooshroom
 
+#snow golem
+execute as @e[dx=0,type=snow_golem] run function gm4_standard_liquids:util/snow_golem
+
 #experience orb
 execute positioned ~0.5 ~ ~0.5 if entity @e[distance=..0.5,type=experience_orb] if score @s[tag=gm4_lt_empty] gm4_lt_value matches 0 at @s run function gm4_standard_liquids:liquid_init/experience
 execute positioned ~0.5 ~ ~0.5 if score @s[tag=gm4_lt_experience] gm4_lt_value matches ..1394 as @e[distance=..0.5,type=experience_orb] run function gm4_standard_liquids:util/experience_orb

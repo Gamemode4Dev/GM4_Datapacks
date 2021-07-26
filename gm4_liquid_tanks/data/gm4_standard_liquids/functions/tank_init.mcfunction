@@ -28,3 +28,6 @@ execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:en
 #honey
 execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:honey_bottle"}} run function gm4_standard_liquids:liquid_init/honey
 execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:honey_block"}} run function gm4_standard_liquids:liquid_init/honey
+
+#powder snow
+execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:powder_snow_bucket"}} run function gm4_standard_liquids:liquid_init/powder_snow
