@@ -20,10 +20,13 @@ execute positioned ~0.5 ~ ~0.5 if score @s[tag=gm4_lt_experience] gm4_lt_value m
 schedule clear gm4_standard_liquids:util/scheduled_deposit_exp
 execute positioned ~0.5 ~ ~0.5 if entity @a[distance=..0.5,gamemode=!spectator] run schedule function gm4_standard_liquids:util/scheduled_deposit_exp 1t
 
+#dripstone cauldron
+execute if entity @e[dx=0,type=area_effect_cloud,tag=gm4_ltu_dripstone_cauldron] run function gm4_standard_liquids:util/drain_cauldron
+
 #cauldrons
-execute if entity @s[tag=gm4_lt_water] run function gm4_standard_liquids:util/cauldrons
-execute if entity @s[tag=gm4_lt_lava] run function gm4_standard_liquids:util/cauldrons
-execute if entity @s[tag=gm4_lt_powder_snow] run function gm4_standard_liquids:util/cauldrons
+execute if entity @s[tag=gm4_lt_water] run function gm4_standard_liquids:util/fill_cauldrons
+execute if entity @s[tag=gm4_lt_lava] run function gm4_standard_liquids:util/fill_cauldrons
+execute if entity @s[tag=gm4_lt_powder_snow] run function gm4_standard_liquids:util/fill_cauldrons
 
 #honey cauldron
 execute if entity @s[tag=gm4_lt_honey] run function gm4_standard_liquids:util/honey_casting/honey_tank
