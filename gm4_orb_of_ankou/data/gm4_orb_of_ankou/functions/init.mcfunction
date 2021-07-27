@@ -22,8 +22,6 @@ scoreboard objectives add gm4_oa_sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add gm4_oa_swim minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add gm4_oa_bow minecraft.used:minecraft.bow
 
-team add gm4_oa_feigning
-
 # check if players are in the nether and tag them if they are
 tag @a remove gm4_oa_in_nether
 execute in minecraft:the_nether run tag @a[x=0] add gm4_oa_in_nether
