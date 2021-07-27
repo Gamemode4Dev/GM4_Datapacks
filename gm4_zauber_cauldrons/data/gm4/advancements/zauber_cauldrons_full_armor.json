@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "golden_chestplate",
-      "nbt": "{CustomModelData:6}"
+      "nbt": "{CustomModelData:3420006}"
     },
     "title": {
       "translate": "%1$s%3427655$s",

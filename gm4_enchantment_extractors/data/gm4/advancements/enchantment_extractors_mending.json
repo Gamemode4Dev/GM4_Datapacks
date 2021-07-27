@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "enchanted_book",
-      "nbt": "{CustomModelData:1}"
+      "nbt": "{CustomModelData:3420001}"
     },
     "frame": "goal",
     "title": {

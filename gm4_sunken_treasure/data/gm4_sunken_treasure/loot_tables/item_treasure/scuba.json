@@ -11,7 +11,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1,Enchantments:[{id:\"minecraft:depth_strider\",lvl:1s}]}"
+              "tag": "{CustomModelData:3420001,Enchantments:[{id:\"minecraft:depth_strider\",lvl:1s}]}"
             },
             {
               "function": "minecraft:set_name",
@@ -59,7 +59,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:2,gm4_scuba_gear:{item:\"flippers\"},color:11009871}"
+              "tag": "{CustomModelData:3420002,gm4_scuba_gear:{item:\"flippers\"},color:11009871}"
             },
             {
               "function": "minecraft:set_name",
@@ -109,7 +109,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1,gm4_scuba_gear:{item:\"tank\"}}"
+              "tag": "{CustomModelData:3420001,gm4_scuba_gear:{item:\"tank\"}}"
             },
             {
               "function": "minecraft:set_name",

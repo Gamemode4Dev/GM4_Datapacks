@@ -14,7 +14,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:1}"
+              "tag": "{CustomModelData:3420001}"
             },
             {
               "function": "minecraft:set_name",

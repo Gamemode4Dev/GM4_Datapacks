@@ -10,7 +10,7 @@
           "functions":[
             {
               "function":"set_nbt",
-              "tag":"{CustomModelData:31,gm4_relocation_data:{Command:\"function gm4_ender_hoppers:relocate/place_down\"},SkullOwner:{Id:[I;-227409694,1209617203,-1656024256,-236766880],Properties:{textures:[{Signature:\"gm4_relocated_block\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTU5NjU3NDg2MDk0MCwKICAicHJvZmlsZUlkIiA6ICJmNWQwYjFhZTQxNmU0YTE5ODEyMTRmZGQzMWU3MzA1YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJDYXRjaFRoZVdhdmUxMCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80YTE3MTBmNDRjZTQ3MWJkNmJhZmIxMWVkMTRmZTI2MzNiZTljYWI0Y2UxOTgwODhhMjU2YmY4ZGQ4OTg0YjUiCiAgICB9CiAgfQp9\"}]}}}"},
+              "tag":"{CustomModelData:3420031,gm4_relocation_data:{Command:\"function gm4_ender_hoppers:relocate/place_down\"},SkullOwner:{Id:[I;-227409694,1209617203,-1656024256,-236766880],Properties:{textures:[{Signature:\"gm4_relocated_block\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTU5NjU3NDg2MDk0MCwKICAicHJvZmlsZUlkIiA6ICJmNWQwYjFhZTQxNmU0YTE5ODEyMTRmZGQzMWU3MzA1YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJDYXRjaFRoZVdhdmUxMCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80YTE3MTBmNDRjZTQ3MWJkNmJhZmIxMWVkMTRmZTI2MzNiZTljYWI0Y2UxOTgwODhhMjU2YmY4ZGQ4OTg0YjUiCiAgICB9CiAgfQp9\"}]}}}"},
             {
               "function":"set_name",
               "name":[

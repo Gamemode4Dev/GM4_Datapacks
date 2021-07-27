@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:102,SkullOwner:{Name:\"[Drop to Fix Item] gm4_levity_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"levity\"}}"
+                            "tag": "{CustomModelData:3420102,SkullOwner:{Name:\"[Drop to Fix Item] gm4_levity_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"levity\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",

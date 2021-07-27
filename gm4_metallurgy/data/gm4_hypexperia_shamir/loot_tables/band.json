@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:110,SkullOwner:{Name:\"[Drop to Fix Item] gm4_hypexperia_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"hypexperia\"}}"
+                            "tag": "{CustomModelData:3420110,SkullOwner:{Name:\"[Drop to Fix Item] gm4_hypexperia_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"hypexperia\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",

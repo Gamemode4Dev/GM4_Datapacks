@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "player_head",
-      "nbt": "{CustomModelData:3,SkullOwner:\"MHF_Enderman\"}"
+      "nbt": "{CustomModelData:3420003,SkullOwner:\"MHF_Enderman\"}"
     },
     "title": {
       "translate": "%1$s%3427655$s",

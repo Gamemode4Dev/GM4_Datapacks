@@ -11,7 +11,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1,Enchantments:[{id:\"minecraft:depth_strider\",lvl:1s}]}"
+              "tag": "{CustomModelData:3420001,Enchantments:[{id:\"minecraft:depth_strider\",lvl:1s}]}"
             },
             {
               "function": "minecraft:set_name",
