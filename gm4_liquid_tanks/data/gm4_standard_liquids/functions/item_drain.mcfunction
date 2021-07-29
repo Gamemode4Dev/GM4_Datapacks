@@ -24,6 +24,7 @@ execute if entity @s[tag=gm4_lt_beetroot_soup] if data storage gm4_liquid_tanks:
 #experience
 execute if entity @s[tag=gm4_lt_experience] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:experience_bottle"}} run function gm4_standard_liquids:item_drain/experience_bottle
 execute if entity @s[tag=gm4_lt_experience] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:enchanted_book"}} run function gm4_standard_liquids:item_drain/enchanted_book
+execute if entity @s[tag=gm4_lt_experience] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:paper",tag:{gm4_book_binders:{item:"enchanted_page"}}}} run function gm4_standard_liquids:item_drain/enchanted_page
 
 #honey
 execute if entity @s[tag=gm4_lt_honey] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:honey_bottle"}} run function gm4_standard_liquids:item_drain/bottle
