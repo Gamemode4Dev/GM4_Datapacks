@@ -21,7 +21,8 @@ execute positioned ~0.5 ~ ~0.5 if entity @e[distance=..0.5,type=experience_orb] 
 execute positioned ~0.5 ~ ~0.5 if score @s[tag=gm4_lt_experience] gm4_lt_value matches ..1394 as @e[distance=..0.5,type=experience_orb] run function gm4_standard_liquids:util/experience_orb
 
 #player depositing experience
-schedule clear gm4_standard_liquids:util/scheduled_deposit_exp
+execute if score $schedule_deposit_exp gm4_lt_util matches 2.. run schedule clear gm4_standard_liquids:util/scheduled_deposit_exp
+execute positioned ~0.5 ~ ~0.5 if entity @a[distance=..0.5,gamemode=!spectator] run scoreboard players set $schedule_deposit_exp gm4_lt_util 1
 execute positioned ~0.5 ~ ~0.5 if entity @a[distance=..0.5,gamemode=!spectator] run schedule function gm4_standard_liquids:util/scheduled_deposit_exp 1t
 
 #dripstone cauldron
