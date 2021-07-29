@@ -1,86 +1,9 @@
 {
-  "type": "minecraft:generic",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:bone",
-          "weight": 30
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:seagrass",
-          "weight": 30
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:mossy_cobblestone",
-          "weight": 20
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:kelp",
-          "weight": 15
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:prismarine_crystals",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:prismarine_shard",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:sea_pickle",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:scute",
-          "weight": 5
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:experience_bottle",
-          "weight": 5
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:gold_ingot",
-          "weight": 5
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:wet_sponge",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:chest",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1,BlockEntityTag:{LootTable:\"gm4_sunken_treasure:treasure_chest\"}}"
-            },
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Treasure Chest",
-                  {"translate":"block.gm4.treasure_chest"}
-                ],
-                "italic": false
-              }
-            }
-          ]
-        },
+    "type": "minecraft:generic",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:glass_bottle",
