@@ -5,6 +5,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_chairs:lightning/locate"
+    "function": "gm4_chairs:lightning/tag"
   }
 }
