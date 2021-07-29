@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"regeneration\",bottle:{multi_use:0b}},HideFlags:32,CustomPotionColor:13458603,CustomPotionEffects:[{Id:10,Amplifier:3,Duration:440},{Id:1,Amplifier:2,Duration:320}]}"
+                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"regeneration\",bottle:{multi_use:0b}},HideFlags:32,CustomPotionColor:13458603,CustomPotionEffects:[{Id:10,Amplifier:3,Duration:440},{Id:1,Amplifier:1,Duration:320}]}"
                         },
                         {
                             "function": "minecraft:set_name",
@@ -169,7 +169,7 @@
                                                         "translate": "effect.minecraft.speed"
                                                     },
                                                     {
-                                                        "translate": "potion.potency.2"
+                                                        "translate": "potion.potency.1"
                                                     }
                                                 ]
                                             },
@@ -190,7 +190,7 @@
                                 {
                                     "translate": "attribute.modifier.plus.1",
                                     "with": [
-                                        "60",
+                                        "40",
                                         {
                                             "translate": "attribute.name.generic.movement_speed"
                                         }

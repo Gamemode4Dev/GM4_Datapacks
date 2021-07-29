@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_zauber_cauldrons:{item:\"lingering_potion\",type:\"speed\",bottle:{multi_use:0}},HideFlags:32,CustomPotionColor:8171462,CustomPotionEffects:[{Id:1,Amplifier:3,Duration:1000},{Id:18,Amplifier:3,Duration:1800}]}"
+                            "tag": "{gm4_zauber_cauldrons:{item:\"lingering_potion\",type:\"speed\",bottle:{multi_use:0}},HideFlags:32,CustomPotionColor:8171462,CustomPotionEffects:[{Id:1,Amplifier:3,Duration:1000},{Id:18,Amplifier:2,Duration:1000}]}"
                         },
                         {
                             "function": "minecraft:set_name",
@@ -111,13 +111,13 @@
                                                         "translate": "effect.minecraft.weakness"
                                                     },
                                                     {
-                                                        "translate": "potion.potency.3"
+                                                        "translate": "potion.potency.2"
                                                     }
                                                 ]
                                             },
-                                            "1:30"
+                                            "0:50"
                                         ],
-                                        "color": "blue",
+                                        "color": "red",
                                         "italic": false
                                     }
                                 ],
@@ -143,7 +143,7 @@
                                 {
                                     "translate": "attribute.modifier.take.0",
                                     "with": [
-                                        "16",
+                                        "12",
                                         {
                                             "translate": "attribute.name.generic.attack_damage"
                                         }

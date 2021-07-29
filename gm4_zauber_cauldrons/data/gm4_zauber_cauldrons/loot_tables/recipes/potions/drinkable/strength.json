@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"strength\",bottle:{multi_use:0}},HideFlags:32,CustomPotionColor:9643043,CustomPotionEffects:[{Id:5,Amplifier:3,Duration:1800}]}"
+                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"strength\",bottle:{multi_use:0}},HideFlags:32,CustomPotionColor:9643043,CustomPotionEffects:[{Id:5,Amplifier:3,Duration:1800},{Id:12,Amplifier:0,Duration:320}]}"
                         },
                         {
                             "function": "minecraft:set_name",
@@ -153,6 +153,27 @@
                                                 ]
                                             },
                                             "1:30"
+                                        ],
+                                        "color": "blue",
+                                        "italic": false
+                                    }
+                                ],
+                                [
+                                    {
+                                        "translate": "potion.withDuration",
+                                        "with": [
+                                            {
+                                                "translate": "potion.withAmplifier",
+                                                "with": [
+                                                    {
+                                                        "translate": "effect.minecraft.fire_resistance"
+                                                    },
+                                                    {
+                                                        "translate": "potion.potency.0"
+                                                    }
+                                                ]
+                                            },
+                                            "0:16"
                                         ],
                                         "color": "blue",
                                         "italic": false
