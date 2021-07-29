@@ -31,3 +31,12 @@ execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:ho
 
 #powder snow
 execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:powder_snow_bucket"}} run function gm4_standard_liquids:liquid_init/powder_snow
+
+#ink
+execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:ink_sac"}} run function gm4_standard_liquids:liquid_init/ink
+execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",tag:{Potion:"standard_liquids:blindness"}}} run function gm4_standard_liquids:liquid_init/ink
+
+
+#glow ink
+execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glow_ink_sac"}} run function gm4_standard_liquids:liquid_init/glow_ink
+execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",tag:{Potion:"standard_liquids:glowing"}}} run function gm4_standard_liquids:liquid_init/glow_ink
