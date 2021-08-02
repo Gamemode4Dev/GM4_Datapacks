@@ -3,6 +3,7 @@
 
 # Copy the zombie's NBT to storage, then kill the zombie instantly and without drops.
 data modify storage gm4_undead_players:temp zombie_data set from entity @s
+teleport @s ~ -10000 ~
 data merge entity @s {Health:0f,DeathTime:19s}
 
 # Summon the drowned and initialize it based on the contents of storage. 
