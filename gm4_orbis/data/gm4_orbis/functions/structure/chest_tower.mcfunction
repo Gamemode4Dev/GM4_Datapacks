@@ -22,8 +22,3 @@ scoreboard players operation $loot_table_seed gm4_orbis_config *= $y gm4_orbis_c
 scoreboard players operation $loot_table_seed gm4_orbis_config *= $z gm4_orbis_config
 
 execute store result block ~ ~ ~ LootTableSeed long 1 run scoreboard players get $loot_table_seed gm4_orbis_config
-
-scoreboard players reset $x gm4_orbis_config
-scoreboard players reset $y gm4_orbis_config
-scoreboard players reset $z gm4_orbis_config
-scoreboard players reset $loot_table_seed gm4_orbis_config
