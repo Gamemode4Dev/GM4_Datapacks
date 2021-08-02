@@ -22,7 +22,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1}"
+              "tag": "{CustomModelData:2}"
             },
             {
               "function": "minecraft:set_lore",
@@ -33,7 +33,7 @@
                   "with": [
                     "Charred arrowhead",
                     {
-                      "translate": "item.gm4.better_fire.flint"
+                      "translate": "item.gm4.better_fire.flint.lore"
                     }
                   ],
                   "color": "dark_gray",
