@@ -19,4 +19,4 @@ data modify entity @s {} merge from storage gm4_undead_players:temp drowned_data
 data remove storage gm4_undead_players:temp drowned_data
 
 # Remove the temporary "new" tag from the drowned.
-tag @s remove gm4_undead_players_new
+tag @s remove gm4_undead_player_new

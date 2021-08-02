@@ -1,5 +1,8 @@
-#run from gm4_undead_players:check_drowning
+#run from gm4_undead_players:main
 #@s = undead player who is undergoing drowned conversion
+
+# Store DrownedConversionTime in a temporary scoreboard to use in calculations.
+execute store result score #conversion_time gm4_undead_drown run data get entity @s DrownedConversionTime
 
 # Initialize drowning score to (15s * 20t/s) if the zombie just started drowning.
 execute unless score @s gm4_undead_drown = @s gm4_undead_drown run scoreboard players set @s gm4_undead_drown 300
