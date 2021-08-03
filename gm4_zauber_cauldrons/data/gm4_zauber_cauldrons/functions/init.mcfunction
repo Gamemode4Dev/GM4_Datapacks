@@ -30,9 +30,9 @@ data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/boots gm4_z
 data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/chestplate gm4_zauber_cauldrons set value {item:"zauber_armor",type:"chestplate"}
 data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/helmet gm4_zauber_cauldrons set value {item:"zauber_armor",type:"helmet"}
 data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/leggings gm4_zauber_cauldrons set value {item:"zauber_armor",type:"leggings"}
+data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/attribute/armor_boost CustomModelData set value 5
 data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/attribute/attack_boost CustomModelData set value 3
 data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/attribute/health_boost CustomModelData set value 2
-data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/attribute/knockback_resistance CustomModelData set value 5
 data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/attribute/speed_boost CustomModelData set value 4
 
 execute unless score zauber_cauldrons gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Zauber Cauldrons"}
