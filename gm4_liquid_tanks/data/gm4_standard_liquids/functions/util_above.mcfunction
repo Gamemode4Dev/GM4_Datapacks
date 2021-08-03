@@ -10,7 +10,7 @@ execute as @e[dx=0,type=cow] run function gm4_standard_liquids:util/mobs/cow
 execute as @e[dx=0,type=mooshroom] run function gm4_standard_liquids:util/mobs/mooshroom
 
 #snow golem
-execute as @e[dx=0,type=snow_golem] run function gm4_standard_liquids:util/mobs/snow_golem
+execute as @e[dx=0,type=snow_golem,predicate=gm4_standard_liquids:suspended_snow_golem] run function gm4_standard_liquids:util/mobs/snow_golem
 
 #squids
 execute as @e[dx=0,type=squid] run function gm4_standard_liquids:util/mobs/squid
