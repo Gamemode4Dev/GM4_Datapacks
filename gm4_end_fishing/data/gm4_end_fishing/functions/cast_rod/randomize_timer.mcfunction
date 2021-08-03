@@ -3,7 +3,7 @@
 
 summon marker ~ ~ ~ {Tags:["gm4_ef_rand"]}
 # randomizes between 19-76
-execute store result score $rand gm4_ef_data run data get entity @e[type=marker,tag=gm4_ef_rand,limit=1]
+execute store result score $rand gm4_ef_data run data get entity @e[type=marker,tag=gm4_ef_rand,limit=1] UUID[0]
 scoreboard players operation $rand gm4_ef_data %= #57 gm4_ef_data
 scoreboard players add $rand gm4_ef_data 19
 
