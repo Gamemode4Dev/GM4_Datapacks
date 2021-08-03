@@ -6,7 +6,7 @@
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 
 # summon item
-loot spawn ~ ~.1 ~ loot gm4_zauber_cauldrons:recipes/armor/leggings/knockback_resistance
+loot spawn ~ ~.1 ~ loot gm4_zauber_cauldrons:recipes/armor/leggings/armor_boost
 
 # set flag
 scoreboard players set $recipe_success gm4_zc_data 1

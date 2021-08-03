@@ -73,9 +73,9 @@
                             "function": "minecraft:set_attributes",
                             "modifiers": [
                                 {
-                                    "attribute": "minecraft:generic.knockback_resistance",
-                                    "name": "generic.knockback_resistance",
-                                    "amount": 0.25,
+                                    "attribute": "minecraft:generic.armor",
+                                    "name": "gm4_zauber_cauldrons.armor.armor_boost",
+                                    "amount": 1,
                                     "operation": "addition",
                                     "slot": "legs"
                                 }

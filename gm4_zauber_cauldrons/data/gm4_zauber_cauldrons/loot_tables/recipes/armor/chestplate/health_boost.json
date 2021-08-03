@@ -74,8 +74,8 @@
                             "modifiers": [
                                 {
                                     "attribute": "minecraft:generic.max_health",
-                                    "name": "generic.max_health",
-                                    "amount": 6,
+                                    "name": "gm4_zauber_cauldrons.armor.health_boost",
+                                    "amount": 4,
                                     "operation": "addition",
                                     "slot": "chest"
                                 }

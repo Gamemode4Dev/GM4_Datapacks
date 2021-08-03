@@ -74,9 +74,9 @@
                             "modifiers": [
                                 {
                                     "attribute": "minecraft:generic.movement_speed",
-                                    "name": "generic.movement_speed",
+                                    "name": "gm4_zauber_cauldrons.armor.speed_boost",
                                     "amount": 0.12,
-                                    "operation": "multiply_total",
+                                    "operation": "multiply_base",
                                     "slot": "chest"
                                 }
                             ]

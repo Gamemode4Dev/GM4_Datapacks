@@ -35,7 +35,7 @@
                                 {
                                     "attribute": "minecraft:generic.armor",
                                     "name": "generic.armor",
-                                    "amount": 2,
+                                    "amount": 3,
                                     "operation": "addition",
                                     "slot": "head"
                                 }
