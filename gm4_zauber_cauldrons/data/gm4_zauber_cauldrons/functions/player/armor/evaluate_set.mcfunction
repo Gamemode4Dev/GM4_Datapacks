@@ -2,7 +2,7 @@
 # @s = player who's inventory changed and now has full armor
 # at @s
 # run from advancement equipment/has_full_armor
-say evaluate_set
+
 # advancement is not revoked as it is used as a flag for revoke set bonus in
 # advancement equipment/unequipped_armor
 

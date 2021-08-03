@@ -12,5 +12,3 @@ attribute @s minecraft:generic.armor modifier remove b29259d8-1ac4-4791-9552-b94
 attribute @s minecraft:generic.attack_damage modifier remove 81b8020f-c7f4-41d9-b99b-7a8d6b2d5a90
 attribute @s minecraft:generic.max_health modifier remove 591ea7a8-12f8-413f-80c9-9f80702c961b
 attribute @s minecraft:generic.movement_speed modifier remove 7a7ff3d6-8e01-4051-99fa-94c40b12fb9a
-
-say revoke_set_bonus
