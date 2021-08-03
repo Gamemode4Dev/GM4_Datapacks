@@ -1,4 +1,4 @@
-# @s = player holding tinker shovel
+# @s = player holding tinker hoe
 # at @s
 # run from gm4_tinker_shamir:active
 
