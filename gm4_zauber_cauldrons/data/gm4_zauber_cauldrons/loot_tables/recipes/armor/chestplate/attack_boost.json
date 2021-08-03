@@ -75,7 +75,7 @@
                                 {
                                     "attribute": "minecraft:generic.attack_damage",
                                     "name": "gm4_zauber_cauldrons.armor.attack_boost",
-                                    "amount": 2,
+                                    "amount": 1,
                                     "operation": "addition",
                                     "slot": "chest"
                                 }
