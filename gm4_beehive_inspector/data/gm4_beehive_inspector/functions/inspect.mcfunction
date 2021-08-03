@@ -1,6 +1,6 @@
 # @s = beehive item, Age:0
 # at @s
-# run from break_beehive
+# run from find_item
 
 # store bee count in scoreboard
 execute store result score $bees gm4_beehive_insp run data get entity @s Item.tag.BlockEntityTag.Bees

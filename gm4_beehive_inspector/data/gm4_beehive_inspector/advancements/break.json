@@ -1,13 +1,10 @@
 {
   "criteria": {
-    "break_beehive": {
-      "trigger": "minecraft:bee_nest_destroyed",
-      "conditions": {
-        "block": "minecraft:beehive"
-      }
+    "break": {
+      "trigger": "minecraft:bee_nest_destroyed"
     }
   },
   "rewards": {
-    "function": "gm4_beehive_inspector:break_beehive"
+    "function": "gm4_beehive_inspector:find_item"
   }
 }
