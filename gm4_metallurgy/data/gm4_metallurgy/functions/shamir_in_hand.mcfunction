@@ -1,5 +1,5 @@
 # @s = player with an active shamir in their hands
-# run from main
+# run from player
 
 execute if predicate gm4_metallurgy:arborenda_active run function gm4_arborenda_shamir:active
 execute if predicate gm4_metallurgy:conduction_active run function gm4_conduction_shamir:active

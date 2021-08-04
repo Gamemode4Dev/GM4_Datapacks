@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"name": "gm4_metallurgy:copper_band",
+					"name": "gm4_metallurgy:bismuth_band",
 					"functions": [
 						{
 							"function": "minecraft:set_nbt",
