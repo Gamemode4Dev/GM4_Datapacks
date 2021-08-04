@@ -36,7 +36,7 @@ execute if score $comparison gm4_zc_data = $speed_boost gm4_zc_data run attribut
 
 # reset storage and fake players
 data remove storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons
-#scoreboard players reset $armor_boost gm4_zc_data
-#scoreboard players reset $attack_boost gm4_zc_data
-#scoreboard players reset $health_boost gm4_zc_data
-#scoreboard players reset $speed_boost gm4_zc_data
+scoreboard players reset $armor_boost gm4_zc_data
+scoreboard players reset $attack_boost gm4_zc_data
+scoreboard players reset $health_boost gm4_zc_data
+scoreboard players reset $speed_boost gm4_zc_data
