@@ -11,10 +11,10 @@ execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"barimium"} run function gm4_metallurgy:casting/add_metal/add_barimium
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"barium"} run function gm4_metallurgy:casting/add_metal/add_barium
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"bismuth"} run function gm4_metallurgy:casting/add_metal/add_bismuth
-execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"copper"} run function gm4_metallurgy:casting/add_metal/add_bismuth
+execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"copper"} run function gm4_metallurgy:casting/add_metal/add_copper
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"thorium"} run function gm4_metallurgy:casting/add_metal/add_thorium
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"curies_bismium"} run function gm4_metallurgy:casting/add_metal/add_curies_bismium
-execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"thorium_brass"} run function gm4_metallurgy:casting/add_metal/add_curies_bismium
+execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"thorium_brass"} run function gm4_metallurgy:casting/add_metal/add_thorium_brass
 
 # reset storage and scoreboard values
 scoreboard players reset $metal_amount gm4_ml_data

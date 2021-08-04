@@ -18,3 +18,5 @@ data modify storage gm4_metallurgy:temp/shamir skull_owner set from entity @e[ty
 execute unless data storage gm4_metallurgy:temp/shamir skull_owner run data modify storage gm4_metallurgy:temp/shamir name set from entity @s Item.tag.gm4_metallurgy.stored_shamir
 execute unless data storage gm4_metallurgy:temp/shamir skull_owner run function #gm4_metallurgy:update_skull_owner
 data modify entity @s Item.tag.SkullOwner.Name set from storage gm4_metallurgy:temp/shamir skull_owner
+
+tag @s add gm4_ml_smooshed

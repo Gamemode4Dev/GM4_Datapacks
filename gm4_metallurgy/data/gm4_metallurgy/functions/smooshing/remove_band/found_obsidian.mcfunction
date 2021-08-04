@@ -13,7 +13,7 @@ execute if entity @s[nbt={Item:{tag:{gm4_metallurgy:{metal:{type:"curies_bismium
 execute if entity @s[nbt={Item:{tag:{gm4_metallurgy:{metal:{type:"thorium_brass"}}}}}] run loot spawn ~ ~ ~ loot gm4_metallurgy:curies_bismium_band
 execute if entity @s[nbt={Item:{tag:{gm4_metallurgy:{metal:{type:"thorium"}}}}}] run loot spawn ~ ~ ~ loot gm4_metallurgy:thorium_band
 
-execute as @e[type=item,distance=0,limit=1] run function gm4_metallurgy:smooshing/remove_band/finish_item
+execute as @e[type=item,tag=!gm4_ml_smooshed,distance=0,limit=1] run function gm4_metallurgy:smooshing/remove_band/finish_item
 
 scoreboard players set valid_obsidian gm4_ml_data 1
 
