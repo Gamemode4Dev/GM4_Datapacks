@@ -35,9 +35,13 @@ data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/attribute/a
 data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/attribute/health_boost CustomModelData set value 2
 data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/attribute/speed_boost CustomModelData set value 4
 
-execute unless score zauber_cauldrons gm4_modules matches 1.. run data modify storage gm4:log queue append value {type:"install",module:"Zauber Cauldrons"}
-execute if score zauber_cauldrons gm4_modules matches 1 run function gm4_zauber_cauldrons:cauldron/structure/update/search_for_outdated_markers
-scoreboard players set zauber_cauldrons gm4_modules 2
+# module data version
+execute unless score $data_version gm4_zc_data matches 1.. run function gm4_zauber_cauldrons:cauldron/structure/update/search_for_outdated_markers
+scoreboard players set $data_version gm4_zc_data 1
+
+# website maintained module version
+execute unless score zauber_cauldrons gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Zauber Cauldrons"}
+scoreboard players set zauber_cauldrons gm4_modules 1
 
 # start core functionality
 schedule function gm4_zauber_cauldrons:main 1t
