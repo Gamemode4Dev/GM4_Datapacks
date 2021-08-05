@@ -6,9 +6,6 @@
 # remove lore
 function gm4_garden_variety:data/lore/traits/remove
 
-# copy item nbt into storage
-data modify storage gm4_garden_variety:data/modify Item set from entity @s Item
-
 # get traits in lore form
 function gm4_garden_variety:data/lore/traits/get_traits
 execute store result storage gm4_garden_variety:data/modify Item.tag.gm4_garden_variety.lore.trait_amount int 1 run scoreboard players get trait_amount gm4_gv_nbt_data
@@ -18,9 +15,6 @@ data modify storage gm4_garden_variety:data/modify Item.tag.display.Lore append 
 
 # add tag
 data modify storage gm4_garden_variety:data/modify Item.tag.gm4_garden_variety.lore.show_traits set value 1b
-
-# copy storage into item nbt
-data modify entity @s Item set from storage gm4_garden_variety:data/modify Item
 
 # remove tag
 tag @s remove gm4_gv_add_trait_lore

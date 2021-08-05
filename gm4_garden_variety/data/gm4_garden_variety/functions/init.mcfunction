@@ -19,5 +19,6 @@ scoreboard players set garden_variety gm4_modules 1
 
 schedule function gm4_garden_variety:clock/1t 10t
 schedule function gm4_garden_variety:clock/16t 11t
+schedule function gm4_garden_variety:clock/1s 12t
 
 #$moduleUpdateList
