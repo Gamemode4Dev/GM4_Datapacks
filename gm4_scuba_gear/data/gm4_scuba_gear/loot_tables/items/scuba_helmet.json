@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:9,gm4_scuba_gear:{item:\"helmet\"},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:2,Operation:0,UUID:[I;0,190244,0,554768],Slot:\"head\"},{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-.5,Operation:0,UUID:[I;0,193195,0,454101],Slot:\"head\"}],SkullOwner:{Name:\"[Drop to Fix Item] gm4_scuba_gear:scuba_helmet/v0\",Id:[I;505437377,1176259381,-1878264711,-101560156],Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NDMxNjc2MjM1NzMsInByb2ZpbGVJZCI6IjVjN2ZiNzhhMmQxMzQ5NTZhNWE1M2EyNGQ5NWY1YjRmIiwicHJvZmlsZU5hbWUiOiJQZWFyc29uSW5tYW4iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzc1OWY1NmU3MDc4NDkzYzEzMDZlZWI2YmQxM2UwYmQ1NTZlYjAxOGUzZGRjMDAzMGE1NzFhYjg4YzRjZGNlNGUifX19\"}]}}}"
+              "tag": "{CustomModelData:9,gm4_scuba_gear:{item:\"helmet\"},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:2,Operation:0,UUID:[I;0,190244,0,554768],Slot:\"head\"},{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-.5,Operation:0,UUID:[I;0,193195,0,454101],Slot:\"head\"}],SkullOwner:{Name:\"[Drop to Fix Item] gm4_scuba_gear:scuba_helmet/v1\",Id:[I;505437377,1176259381,-1878264711,-101560156],Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NDMxNjc2MjM1NzMsInByb2ZpbGVJZCI6IjVjN2ZiNzhhMmQxMzQ5NTZhNWE1M2EyNGQ5NWY1YjRmIiwicHJvZmlsZU5hbWUiOiJQZWFyc29uSW5tYW4iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzc1OWY1NmU3MDc4NDkzYzEzMDZlZWI2YmQxM2UwYmQ1NTZlYjAxOGUzZGRjMDAzMGE1NzFhYjg4YzRjZGNlNGUifX19\"}]}}}"
             },
             {
               "function": "minecraft:set_name",
@@ -21,7 +21,8 @@
                     "translate": "item.gm4.scuba_helmet"
                   }
                 ],
-                "italic": false
+                "italic": false,
+                "color": "white"
               }
             }
           ]
