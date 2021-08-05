@@ -67,6 +67,7 @@ scoreboard objectives add gm4_arb_stat dummy
 #vibro
 scoreboard objectives add gm4_vibro_fall minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add gm4_vibro_hurt minecraft.custom:minecraft.damage_taken
+scoreboard objectives add gm4_vibro_absorb minecraft.custom:minecraft.damage_absorbed
 scoreboard objectives add gm4_vibro_shock dummy
 scoreboard objectives add gm4_vibro_sneak dummy
 scoreboard players set #shock_multiplier gm4_vibro_shock 20

@@ -23,5 +23,6 @@ execute as @a[gamemode=!spectator,tag=gm4_has_vibro,predicate=gm4_vibro_shamir:s
 scoreboard players reset @a[gamemode=!spectator,tag=gm4_has_vibro,predicate=!gm4_vibro_shamir:sneak_on_ground] gm4_vibro_sneak
 scoreboard players reset @a gm4_vibro_fall
 scoreboard players reset @a gm4_vibro_hurt
+scoreboard players reset @a gm4_vibro_absorb
 
 schedule function gm4_metallurgy:tick 1t

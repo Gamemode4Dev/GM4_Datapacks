@@ -1,5 +1,5 @@
 # @s = ray casting marker
-# run from shock/calculate
+# run from shock/ray_execute
 
 scoreboard players add $ray gm4_vibro_shock 1
 execute if block ~ ~ ~ #gm4:full_collision run scoreboard players add $ray gm4_vibro_shock 2
