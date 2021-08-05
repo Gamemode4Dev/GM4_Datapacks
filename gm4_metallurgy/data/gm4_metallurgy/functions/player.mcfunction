@@ -16,3 +16,5 @@ execute if predicate gm4_metallurgy:shamir_in_hand at @s[gamemode=!spectator] ru
 execute if predicate gm4_metallurgy:shamir_equipped at @s[gamemode=!spectator] run function gm4_metallurgy:shamir_equipped
 
 execute if entity @s[tag=!gm4_has_musical] run function gm4_musical_shamir:songs/reset_player
+
+scoreboard players reset @s[tag=!gm4_has_vibro] gm4_vibro_sneak
