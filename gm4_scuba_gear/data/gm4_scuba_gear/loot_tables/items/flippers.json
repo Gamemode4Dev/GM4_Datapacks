@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:2,gm4_scuba_gear:{item:\"flippers\"},display:{color:11009871},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:1,Operation:0,UUID:[I;0,881952,0,167143],Slot:\"feet\"},{AttributeName:\"generic.movement_speed\",Name:\"generic.movement_speed\",Amount:-.04,Operation:0,UUID:[I;0,579389,0,942428],Slot:\"feet\"}]}"
+              "tag": "{HideFlags:64,CustomModelData:2,gm4_scuba_gear:{item:\"flippers\"},display:{color:11009871},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:1,Operation:0,UUID:[I;0,881952,0,167143],Slot:\"feet\"},{AttributeName:\"generic.movement_speed\",Name:\"generic.movement_speed\",Amount:-.04,Operation:0,UUID:[I;0,579389,0,942428],Slot:\"feet\"}]}"
             },
             {
               "function": "minecraft:set_name",
