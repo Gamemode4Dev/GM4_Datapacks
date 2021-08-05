@@ -19,7 +19,7 @@ execute as @a[gamemode=!spectator,scores={gm4_bolt_damage=1..},predicate=gm4_met
 # execute if score levity_active gm4_ml_data matches 1 run function gm4_levity_shamir:find_floating_players
 
 # vibro
-effect give @a[tag=gm4_vibro_active,predicate=gm4_vibro_shamir:sneak_on_ground] jump_boost 1 9 false
+effect give @a[tag=gm4_vibro_active,predicate=gm4_vibro_shamir:sneak_on_ground] jump_boost 1 10 false
 scoreboard players reset @a gm4_vibro_fall
 scoreboard players reset @a gm4_vibro_hurt
 
