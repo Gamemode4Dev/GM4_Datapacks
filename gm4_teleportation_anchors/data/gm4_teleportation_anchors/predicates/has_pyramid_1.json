@@ -138,7 +138,9 @@
           "offsetZ": 0,
           "predicate": {
             "block": {
-              "block": "minecraft:end_rod",
+              "blocks": [
+                "minecraft:end_rod"
+              ],
               "state": {
                 "facing": "up"
               }
