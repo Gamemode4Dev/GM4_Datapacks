@@ -17,6 +17,6 @@ execute as @e[type=armor_stand,tag=gm4_block_compressor_processing,limit=1] run 
 
 # clone data to original item entity
 data modify entity @s Item set from storage gm4_block_compressors:temp/item_stack Item
-data merge entity @s {PickupDelay:4}
+data modify entity @s PickupDelay set value 4
 
 playsound block.piston.extend block @a

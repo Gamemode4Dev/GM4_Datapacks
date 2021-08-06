@@ -16,6 +16,6 @@ execute unless data storage gm4_block_compressors:temp/item_stack Item.tag.gm4_b
 # restore original item tag, overwriting tags from compression
 data modify storage gm4_block_compressors:temp/item_stack Item.tag set from storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.old_tag
 data modify entity @s Item set from storage gm4_block_compressors:temp/item_stack Item
-data merge entity @s {PickupDelay:4}
+data modify entity @s PickupDelay set value 4
 
 playsound entity.firework_rocket.blast block @a ~ ~ ~ 1 .1
