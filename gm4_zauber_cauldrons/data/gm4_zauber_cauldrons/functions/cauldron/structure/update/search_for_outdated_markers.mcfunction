@@ -7,4 +7,4 @@
 execute as @e[type=area_effect_cloud,tag=gm4_zauber_cauldron] at @s run function gm4_zauber_cauldrons:cauldron/structure/update/replace_marker
 
 # self-schedule
-#schedule function gm4_zauber_cauldrons:cauldron/structure/update/search_for_outdated_markers 512t
+schedule function gm4_zauber_cauldrons:cauldron/structure/update/search_for_outdated_markers 512t
