@@ -9,4 +9,4 @@ execute unless data storage gm4_garden_variety:data/analyzer Items[{Slot:1b}].ta
 execute if data storage gm4_garden_variety:data/analyzer Items[{Slot:2b}] run scoreboard players set $recipe_check gm4_gv_analyze 0
 
 # complete
-execute if score $recipe_check gm4_gv_analyze matches 1 run function gm4_garden_variety:arborist/analyzer/recipes/paper_report/analyzing
+execute if score $recipe_check gm4_gv_analyze matches 1 run function gm4_garden_variety:arborist/analyzer/recipes/book_report/analyzing

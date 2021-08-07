@@ -52,9 +52,9 @@ execute if score snowy gm4_gv_nbt_data matches 1 run data modify storage gm4_gar
 
 
 # get lore amount
-execute store result score trait_amount gm4_gv_nbt_data run data get storage gm4_garden_variety:data/item trait_lore
-scoreboard players remove trait_amount gm4_gv_nbt_data 1
+execute store result score $trait_amount gm4_gv_nbt_data run data get storage gm4_garden_variety:data/item trait_lore
+scoreboard players remove $trait_amount gm4_gv_nbt_data 1
 
 # if no traits
-execute unless score trait_amount gm4_gv_nbt_data matches 1.. run data modify storage gm4_garden_variety:data/item trait_lore append value '[{"text":"None","color":"gray","italic":false}]'
-execute unless score trait_amount gm4_gv_nbt_data matches 1.. run scoreboard players set trait_amount gm4_gv_nbt_data 1
+execute unless score $trait_amount gm4_gv_nbt_data matches 1.. run data modify storage gm4_garden_variety:data/item trait_lore append value '[{"text":"> ","color":"#BD6FFD","italic":false},{"text":"None","color":"gray","italic":false}]'
+execute unless score $trait_amount gm4_gv_nbt_data matches 1.. run scoreboard players set $trait_amount gm4_gv_nbt_data 1

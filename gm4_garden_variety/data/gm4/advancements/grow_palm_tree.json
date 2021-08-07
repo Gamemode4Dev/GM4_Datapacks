@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "birch_sapling",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Getting Tropical",
+        {"translate": "advancement.gm4.garden_variety.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Grow a Palm Tree",
+        {"translate": "advancement.gm4.garden_variety.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:encounter_tree",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

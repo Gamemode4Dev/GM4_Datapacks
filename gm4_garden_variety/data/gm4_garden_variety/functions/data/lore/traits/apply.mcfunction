@@ -8,7 +8,7 @@ function gm4_garden_variety:data/lore/traits/remove
 
 # get traits in lore form
 function gm4_garden_variety:data/lore/traits/get_traits
-execute store result storage gm4_garden_variety:data/modify Item.tag.gm4_garden_variety.lore.trait_amount int 1 run scoreboard players get trait_amount gm4_gv_nbt_data
+execute store result storage gm4_garden_variety:data/modify Item.tag.gm4_garden_variety.lore.trait_amount int 1 run scoreboard players get $trait_amount gm4_gv_nbt_data
 
 # add traits
 data modify storage gm4_garden_variety:data/modify Item.tag.display.Lore append from storage gm4_garden_variety:data/item trait_lore[]
