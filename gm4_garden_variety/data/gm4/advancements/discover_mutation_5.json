@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "book",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Darwinism",
+        {"translate": "advancement.gm4.garden_variety.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Analyze a sapling with 5 Mutations",
+        {"translate": "advancement.gm4.garden_variety.description"}
+      ],
+      "color": "gray"
+    },
+    "frame": "goal"
+  },
+  "parent": "gm4:discover_mutation",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

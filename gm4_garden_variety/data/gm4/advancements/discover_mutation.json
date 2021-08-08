@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "paper",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Natural Selection",
+        {"translate": "advancement.gm4.garden_variety.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Analyze a sapling with a Mutation",
+        {"translate": "advancement.gm4.garden_variety.description"}
+      ],
+      "color": "gray"
+    },
+    "frame": "goal"
+  },
+  "parent": "gm4:use_analyzer",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

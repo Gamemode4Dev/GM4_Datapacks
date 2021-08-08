@@ -2,12 +2,6 @@
 # run from gm4_garden_variety:custom_crafters/check_items
 
 
-##### INITIALIZE #####
-
-# finalize
-function gm4_garden_variety:arborist/analyzer/recipes/complete
-
-
 
 ##### SLOT MODIFICATIONS #####
 
@@ -15,9 +9,13 @@ function gm4_garden_variety:arborist/analyzer/recipes/complete
 data modify block ~ ~ ~ Items[{Slot:0b}].Slot set value 2b
 
 # [S2] append trait lore (paper)
-data remove storage gm4_garden_variety:data/garden_variety nbt
-data modify storage gm4_garden_variety:data/garden_variety nbt set from block ~ ~ ~ Items[{Slot:1b}].tag.gm4_garden_variety
+data modify storage gm4_garden_variety:data/garden_variety_nbt convert set from block ~ ~ ~ Items[{Slot:1b}].tag.gm4_garden_variety
 function gm4_garden_variety:data/lore/traits/apply/to_analyzer_output
 
 # [S2] change item name
 data modify block ~ ~ ~ Items[{Slot:2b}].tag.display.Name set value '{"text":"Paper Report","italic":false}'
+
+
+
+# finalize
+function gm4_garden_variety:arborist/analyzer/recipes/complete

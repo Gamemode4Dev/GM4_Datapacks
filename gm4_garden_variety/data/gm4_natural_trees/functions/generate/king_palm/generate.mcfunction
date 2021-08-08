@@ -17,9 +17,12 @@ fill ~ ~ ~ ~ ~ ~ air replace #minecraft:saplings
 # advancement
 advancement grant @a[distance=..15] only gm4:grow_king_palm_tree
 
-# get trait data
-data modify storage gm4_garden_variety:data/garden_variety nbt set from entity @s data.gm4_garden_variety
+# convert nbt to scores
+data modify storage gm4_garden_variety:data/garden_variety_nbt convert set from entity @s data.gm4_garden_variety
 function gm4_garden_variety:data/get/scores_from_nbt
+
+# store nbt in storage (for reference during generation)
+data modify storage gm4_garden_variety:data/garden_variety_nbt tree_generation set from entity @s data.gm4_garden_variety
 
 # convert soil
 execute if score enable_soil_conversion gm4_gv_gen_data matches 1 if score soil_conversion gm4_gv_nbt_data matches 1 unless score generation_mode_orbis gm4_gv_gen_data matches 1 run function gm4_garden_variety:generation/soil_conversion/initialize

@@ -2,9 +2,8 @@
 # @s = Item
 # run from TODO
 
-# get traits
-data remove storage gm4_garden_variety:data/garden_variety nbt
-data modify storage gm4_garden_variety:data/garden_variety nbt set from entity @s Item.tag.gm4_garden_variety
+# convert nbt to scores
+data modify storage gm4_garden_variety:data/garden_variety_nbt convert set from entity @s Item.tag.gm4_garden_variety
 function gm4_garden_variety:data/get/scores_from_nbt
 
 # copy item nbt into storage

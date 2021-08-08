@@ -23,12 +23,13 @@ scoreboard players set current_leaf_layer gm4_gv_gen_data 1
 ########## PRE GENERATION ##########
 
 # summon name tag
-execute if score name_tag gm4_gv_nbt_data matches 1 run summon item ~ ~ ~ {Tags:["gm4_gv_add_trait_lore"],Item:{id:"minecraft:name_tag",Count:1b}}
-execute if score name_tag gm4_gv_nbt_data matches 1 as @e[type=item,distance=..1,limit=1,sort=nearest,tag=gm4_gv_add_trait_lore] run function gm4_garden_variety:data/lore/traits/apply/to_item_from_marker
+execute if score $name_tag gm4_gv_nbt_data matches 1 run summon item ~ ~ ~ {Tags:["gm4_gv_add_trait_lore"],Item:{id:"minecraft:name_tag",Count:1b}}
+execute if score $name_tag gm4_gv_nbt_data matches 1 run data modify storage gm4_garden_variety:data/garden_variety_nbt convert set from storage gm4_garden_variety:data/garden_variety_nbt tree_generation
+execute if score $name_tag gm4_gv_nbt_data matches 1 as @e[type=item,distance=..1,limit=1,sort=nearest,tag=gm4_gv_add_trait_lore] run function gm4_garden_variety:data/lore/traits/apply/to_item_from_marker
 
-# remove tagged nbt
-execute if score name_tag gm4_gv_nbt_data matches 1 run data remove storage gm4_garden_variety:data/garden_variety nbt.name_tag
-scoreboard players set name_tag gm4_gv_nbt_data 0
+# remove name tag nbt
+execute if score $name_tag gm4_gv_nbt_data matches 1 run data remove storage gm4_garden_variety:data/garden_variety_nbt tree_generation.name_tag
+scoreboard players reset $name_tag gm4_gv_nbt_data
 
 
 
