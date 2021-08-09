@@ -10,6 +10,9 @@ particle minecraft:happy_villager ~ ~1 ~ .3 .5 .3 .1 10
 # add tag
 tag @s add gm4_gv_arborist
 
+# scorboards
+scoreboard players set @s gm4_gv_prev_xp 0
+
 # set nbt data
 data modify entity @s VillagerData.profession set value "minecraft:nitwit"
 data modify entity @s Offers.Recipes set value []

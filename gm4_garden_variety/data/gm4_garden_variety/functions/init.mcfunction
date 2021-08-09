@@ -8,6 +8,7 @@ scoreboard objectives add gm4_gv_nbt_data dummy
 scoreboard objectives add gm4_gv_arborist dummy
 scoreboard objectives add gm4_gv_trades dummy
 scoreboard objectives add gm4_gv_job_id dummy
+scoreboard objectives add gm4_gv_prev_xp dummy
 # analyzer
 scoreboard objectives add gm4_gv_analyze dummy
 scoreboard objectives add gm4_gv_analyze_p dummy
