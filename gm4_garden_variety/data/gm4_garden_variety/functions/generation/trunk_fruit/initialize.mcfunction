@@ -4,12 +4,12 @@
 
 
 # check if block is randomly picked
-function gm4_garden_variety:data/get/next_seed_value
+function gm4_garden_variety:data/generate/next_seed_value
 scoreboard players operation trunk_fruit_success gm4_gv_gen_data = $current_seed gm4_gv_gen_data
 scoreboard players operation trunk_fruit_success gm4_gv_gen_data %= trunk_fruit_block_chance gm4_gv_gen_data
 
 # check direction the fruit spawns in
-function gm4_garden_variety:data/get/next_seed_value
+function gm4_garden_variety:data/generate/next_seed_value
 scoreboard players operation trunk_fruit_side gm4_gv_gen_data = $current_seed gm4_gv_gen_data
 scoreboard players operation trunk_fruit_side gm4_gv_gen_data %= #4 gm4_gv_math_num
 scoreboard players add trunk_fruit_side gm4_gv_gen_data 1

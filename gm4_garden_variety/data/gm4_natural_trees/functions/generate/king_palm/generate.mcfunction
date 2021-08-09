@@ -19,7 +19,7 @@ advancement grant @a[distance=..15] only gm4:grow_king_palm_tree
 
 # convert nbt to scores
 data modify storage gm4_garden_variety:data/garden_variety_nbt convert set from entity @s data.gm4_garden_variety
-function gm4_garden_variety:data/get/scores_from_nbt
+function gm4_garden_variety:data/convert/nbt_to_scores
 
 # store nbt in storage (for reference during generation)
 data modify storage gm4_garden_variety:data/garden_variety_nbt tree_generation set from entity @s data.gm4_garden_variety
