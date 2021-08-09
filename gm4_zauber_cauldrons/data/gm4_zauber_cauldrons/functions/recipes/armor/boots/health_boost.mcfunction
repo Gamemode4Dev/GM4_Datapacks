@@ -5,6 +5,9 @@
 # remove ingredients
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 
+# set blueprint
+data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/attribute/health_boost CustomModelData set value 2
+
 # summon item
 loot spawn ~ ~.1 ~ loot gm4_zauber_cauldrons:recipes/armor/boots/health_boost
 
