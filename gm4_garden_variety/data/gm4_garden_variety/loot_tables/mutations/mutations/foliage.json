@@ -1,0 +1,75 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{foliage:\"smallest\"}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{foliage:\"smaller\"}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{foliage:\"small\"}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{foliage:\"large\"}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{foliage:\"larger\"}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{foliage:\"largest\"}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

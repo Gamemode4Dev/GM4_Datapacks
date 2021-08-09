@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 4,
+          "name": "gm4_garden_variety:mutations/mutations/rooting"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 3,
+          "name": "gm4_garden_variety:mutations/mutations/corrosion"
+        }
+      ]
+    }
+  ]
+}

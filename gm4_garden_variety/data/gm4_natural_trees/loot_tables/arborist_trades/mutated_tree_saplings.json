@@ -1,0 +1,13 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_natural_trees:arborist_trades/natural_tree_saplings"
+        }
+      ]
+    }
+  ]
+}

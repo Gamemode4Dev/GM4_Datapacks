@@ -1,0 +1,42 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{rooting:\"none\"}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{rooting:\"decreased\"}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{rooting:\"increased\"}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

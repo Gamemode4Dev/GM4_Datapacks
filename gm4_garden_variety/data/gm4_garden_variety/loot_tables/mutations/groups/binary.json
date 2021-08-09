@@ -1,0 +1,97 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{poisonous:1b}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{hardened:1b}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{sterile:1b}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{fruiting:1b}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{necrotic:1b}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{flowering:1b}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{snowy:1b}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{radiating:1b}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

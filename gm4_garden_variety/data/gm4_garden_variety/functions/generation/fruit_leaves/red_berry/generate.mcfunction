@@ -3,7 +3,7 @@
 
 # randomly set the armor stands rotation
 function gm4_garden_variety:data/get/next_seed_value
-scoreboard players operation fruit_direction gm4_gv_gen_data = current_seed gm4_gv_gen_data
+scoreboard players operation fruit_direction gm4_gv_gen_data = $current_seed gm4_gv_gen_data
 scoreboard players operation fruit_direction gm4_gv_gen_data %= #4 gm4_gv_math_num
 
 # place fruit marker based on direction

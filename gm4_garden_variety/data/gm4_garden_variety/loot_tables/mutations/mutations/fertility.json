@@ -1,0 +1,75 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{fertility:\"lowest\"}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{fertility:\"lower\"}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{fertility:\"low\"}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{fertility:\"high\"}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{fertility:\"higher\"}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:kelp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_garden_variety:{random_mutation:{fertility:\"highest\"}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

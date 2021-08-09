@@ -11,7 +11,7 @@ scoreboard players operation leaf_layer_rot_alternate_mod gm4_gv_gen_data = palm
 scoreboard players operation leaf_layer_rot_alternate_mod gm4_gv_gen_data /= #2 gm4_gv_math_num
 scoreboard players operation leaf_layer_rot_alternate_mod gm4_gv_gen_data *= leaf_layer_eoc2 gm4_gv_gen_data
 function gm4_garden_variety:data/get/next_seed_value
-scoreboard players operation leaf_layer_rot_random_mod gm4_gv_gen_data = current_seed gm4_gv_gen_data
+scoreboard players operation leaf_layer_rot_random_mod gm4_gv_gen_data = $current_seed gm4_gv_gen_data
 scoreboard players operation leaf_layer_rot_random_mod gm4_gv_gen_data %= #360 gm4_gv_math_num
 
 # get x rotation offset for each palm based on mode

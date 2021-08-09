@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 30,
+          "name": "gm4_garden_variety:mutations/groups/primary_range"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 15,
+          "name": "gm4_garden_variety:mutations/groups/secondary_range"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 5,
+          "name": "gm4_garden_variety:mutations/groups/binary"
+        }
+      ]
+    }
+  ]
+}

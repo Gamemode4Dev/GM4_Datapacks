@@ -6,9 +6,9 @@
 scoreboard players add seed_used gm4_gv_gen_data 1
 
 # cycle to next current seed
-scoreboard players operation current_seed gm4_gv_gen_data = seed gm4_gv_gen_data
-scoreboard players operation current_seed gm4_gv_gen_data *= seed_used gm4_gv_gen_data
-scoreboard players operation current_seed gm4_gv_gen_data += seed gm4_gv_gen_data
-scoreboard players operation current_seed gm4_gv_gen_data += seed_used gm4_gv_gen_data
+scoreboard players operation $current_seed gm4_gv_gen_data = seed gm4_gv_gen_data
+scoreboard players operation $current_seed gm4_gv_gen_data *= seed_used gm4_gv_gen_data
+scoreboard players operation $current_seed gm4_gv_gen_data += seed gm4_gv_gen_data
+scoreboard players operation $current_seed gm4_gv_gen_data += seed_used gm4_gv_gen_data
 
 

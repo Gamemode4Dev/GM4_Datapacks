@@ -1,0 +1,29 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 4,
+          "name": "gm4_garden_variety:mutations/mutations/height"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 3,
+          "name": "gm4_garden_variety:mutations/mutations/flexibility"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "name": "gm4_garden_variety:mutations/mutations/foliage"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "gm4_garden_variety:mutations/mutations/fertility"
+        }
+      ]
+    }
+  ]
+}

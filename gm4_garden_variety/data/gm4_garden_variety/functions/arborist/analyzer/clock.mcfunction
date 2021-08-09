@@ -28,9 +28,9 @@ execute if data storage gm4_garden_variety:data/analyzer Items[{Slot:0b,id:"mine
 
 # enable / disable job site
 tag @s remove gm4_gv_disable_job_site
-execute if entity @s[tag=!gm4_gv_disable_job_site] at @s if block ~ ~-1 ~ minecraft:redstone_lamp[lit=true] run tag @s add gm4_gv_disable_job_site
-execute if entity @s[tag=!gm4_gv_disable_job_site] at @s if block ~ ~1 ~ minecraft:redstone_lamp[lit=true] run tag @s add gm4_gv_disable_job_site
+execute if entity @s[tag=!gm4_gv_disable_job_site] at @s if block ~ ~-1 ~ minecraft:redstone_lamp[lit=false] run tag @s add gm4_gv_disable_job_site
+execute if entity @s[tag=!gm4_gv_disable_job_site] at @s if block ~ ~1 ~ minecraft:redstone_lamp[lit=false] run tag @s add gm4_gv_disable_job_site
 
 # force villager check
-#execute if entity @s[tag=!gm4_gv_disable_job_site,tag=!gm4_gv_workbench_disable_check] if data storage gm4_garden_variety:data/analyzer Items[{Slot:0b,id:"minecraft:emerald"}] run function gm4_garden_variety:arborist/workbencharborist/force_update
-#tag @s remove gm4_gv_workbench_disable_check
+execute if entity @s[tag=!gm4_gv_disable_job_site,tag=!gm4_gv_analyzer_disable_check] if data storage gm4_garden_variety:data/analyzer Items[{Slot:0b,id:"minecraft:emerald"}] run function gm4_garden_variety:arborist/villager/job_site/force_update
+tag @s remove gm4_gv_analyzer_disable_check

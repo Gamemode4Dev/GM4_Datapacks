@@ -1,0 +1,108 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 20,
+          "name": "minecraft:oak_sapling",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"\",\"color\":\"white\"},{\"text\":\"Arborist \",\"color\":\"#8DC742\"},{\"text\":\"Autumn\",\"color\":\"#A1D1AB\"}]'}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 20,
+          "name": "minecraft:oak_sapling",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"\",\"color\":\"white\"},{\"text\":\"Arborist \",\"color\":\"#8DC742\"},{\"text\":\"Flora\",\"color\":\"#A1D1AB\"}]'}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 20,
+          "name": "minecraft:oak_sapling",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"\",\"color\":\"white\"},{\"text\":\"Arborist \",\"color\":\"#8DC742\"},{\"text\":\"Maple\",\"color\":\"#A1D1AB\"}]'}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 20,
+          "name": "minecraft:oak_sapling",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"\",\"color\":\"white\"},{\"text\":\"Arborist \",\"color\":\"#8DC742\"},{\"text\":\"Terra\",\"color\":\"#A1D1AB\"}]'}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 20,
+          "name": "minecraft:oak_sapling",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"\",\"color\":\"white\"},{\"text\":\"Arborist \",\"color\":\"#8DC742\"},{\"text\":\"Forrest\",\"color\":\"#A1D1AB\"}]'}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 20,
+          "name": "minecraft:oak_sapling",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"\",\"color\":\"white\"},{\"text\":\"Arborist \",\"color\":\"#8DC742\"},{\"text\":\"Reed\",\"color\":\"#A1D1AB\"}]'}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "name": "minecraft:oak_sapling",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"\",\"color\":\"white\"},{\"text\":\"Arborist \",\"color\":\"#8DC742\"},{\"text\":\"Lorax\",\"color\":\"#E27B1E\"}]'}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "minecraft:oak_sapling",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"\",\"color\":\"white\"},{\"text\":\"Arborist \",\"color\":\"#8DC742\"},{\"text\":\"Gaia\",\"color\":\"green\"}]'}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:oak_sapling",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"\",\"color\":\"white\"},{\"text\":\"Arborist \",\"color\":\"#8DC742\"},{\"text\":\"Rhea\",\"color\":\"#DBA2C0\"}]'}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
