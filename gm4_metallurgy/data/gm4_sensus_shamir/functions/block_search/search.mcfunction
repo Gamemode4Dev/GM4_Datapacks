@@ -1,5 +1,5 @@
-#@s = player with sensus at location of layer to scan
-#run from sensus_shamir:active
+# @s = player with sensus at location of layer to scan
+# run from sensus_shamir:active
 
 fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function gm4_sensus_shamir:block_search/mark_overworld/coal_ore"} replace coal_ore
 fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function gm4_sensus_shamir:block_search/mark_overworld/copper_ore"} replace copper_ore
@@ -19,7 +19,7 @@ fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function gm4_sensus_shamir:blo
 fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function gm4_sensus_shamir:block_search/mark_overworld/deepslate_emerald_ore"} replace deepslate_emerald_ore
 fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function gm4_sensus_shamir:block_search/mark_overworld/deepslate_diamond_ore"} replace deepslate_diamond_ore
 
-#nether
+# nether
 fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function gm4_sensus_shamir:block_search/mark_nether/nether_quartz_ore"} replace nether_quartz_ore
 fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function gm4_sensus_shamir:block_search/mark_nether/nether_gold_ore"} replace nether_gold_ore
 fill ~ ~ ~ ~6 ~ ~6 command_block{auto:1b,Command:"function gm4_sensus_shamir:block_search/mark_nether/ancient_debris"} replace ancient_debris

@@ -1,4 +1,4 @@
-#@s = sand ring that needs to accept a metal
+# @s = sand ring that needs to accept a metal
 # run from initialize
 
 # add score to sand ring

@@ -1,4 +1,4 @@
-#@s = moulds that need to explode in fire and Death
+# @s = moulds that need to explode in fire and Death
 # run from destroy_mould
 
 setblock ~ ~ ~ lava[level=1]

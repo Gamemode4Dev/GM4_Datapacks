@@ -1,4 +1,4 @@
-#@s = none, run by command blocks placed during block_search/search.mcfunction on copper_ore
+# @s = none, run by command blocks placed during block_search/search.mcfunction on copper_ore
 #at command_block location
 
 #locate ores and play sound

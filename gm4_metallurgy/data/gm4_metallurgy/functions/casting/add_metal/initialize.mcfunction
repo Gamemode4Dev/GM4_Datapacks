@@ -1,5 +1,5 @@
-#@s = vex mould entity
-#runs from sustain_mould
+# @s = vex mould entity
+# runs from sustain_mould
 
 # determine ore type and primary metal amount
 data modify storage gm4_metallurgy:temp/item/ore gm4_metallurgy set from entity @e[type=item,tag=gm4_ml_in_animation,dx=0,dz=0,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{metal:{castable:1b}}}},OnGround:1b},limit=1] Item.tag.gm4_metallurgy

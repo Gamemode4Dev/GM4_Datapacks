@@ -9,9 +9,6 @@ tag @s remove gm4_has_spiraculum
 tag @s remove gm4_has_tinker
 tag @s remove gm4_has_vibro
 
-# legacy remove
-tag @s remove gm4_has_levity
-
 execute if predicate gm4_metallurgy:shamir_in_hand at @s[gamemode=!spectator] run function gm4_metallurgy:shamir_in_hand
 execute if predicate gm4_metallurgy:shamir_equipped at @s[gamemode=!spectator] run function gm4_metallurgy:shamir_equipped
 

@@ -1,5 +1,5 @@
 # run from #gm4_metallurgy:apply_band
-#@s = moneo tool item
+# @s = moneo tool item
 
 execute if entity @s[nbt={Item:{id:"minecraft:wooden_shovel"}}] run data modify entity @s Item.tag.MaxDurability set value 59
 execute if entity @s[nbt={Item:{id:"minecraft:wooden_pickaxe"}}] run data modify entity @s Item.tag.MaxDurability set value 59

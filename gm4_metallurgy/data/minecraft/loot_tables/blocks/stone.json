@@ -9,7 +9,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_metallurgy:malachite_lump",
+              "name": "gm4_metallurgy:bismutite_lump",
               "conditions": [
                 {
                   "condition": "minecraft:entity_properties",
