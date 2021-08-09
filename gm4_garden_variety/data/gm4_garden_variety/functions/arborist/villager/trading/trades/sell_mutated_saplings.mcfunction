@@ -11,6 +11,9 @@ function #gm4_garden_variety:arborist/register_trades/mutated_tree_sapling
 # select random trade
 data modify storage gm4_garden_variety:data/arborist random_trade set from entity @e[type=trader_llama,tag=gm4_gv_mutated_trade_option,limit=1,sort=random] {}
 
+# kill trade markers
+kill @e[tag=gm4_gv_mutated_trade_option]
+
 # interpret trade data (DecorItem: trade_data, Items[0]: sell, Items[1]: buy, Items[2]: buyB)
 data modify storage gm4_garden_variety:data/arborist next_trade set from storage gm4_garden_variety:data/arborist random_trade.DecorItem.tag.gm4_garden_variety.trade_data
 data modify storage gm4_garden_variety:data/arborist next_trade.sell set from storage gm4_garden_variety:data/arborist random_trade.Items[0]

@@ -11,8 +11,5 @@ tag @s add gm4_gv_level_5
 scoreboard players set $trade_amount gm4_gv_trades 1
 execute if score $trade_amount gm4_gv_trades matches 1.. run function gm4_garden_variety:arborist/villager/trading/trades/sell_mutated_saplings
 
-# kill trade markers
-kill @e[tag=gm4_gv_mutation_trade_option]
-
 # clear left over nbt
 data modify entity @s ArmorItems set value []

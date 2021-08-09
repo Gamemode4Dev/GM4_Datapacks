@@ -14,7 +14,3 @@ execute if score $trade_amount gm4_gv_trades matches 1.. run function gm4_garden
 # [Trade] sell_natural_saplings
 scoreboard players set $trade_amount gm4_gv_trades 1
 execute if score $trade_amount gm4_gv_trades matches 1.. run function gm4_garden_variety:arborist/villager/trading/trades/sell_natural_saplings
-
-# kill trade markers
-kill @e[tag=gm4_gv_natural_trade_option]
-kill @e[tag=gm4_gv_decorative_trade_option]
