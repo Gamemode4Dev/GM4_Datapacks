@@ -14,4 +14,4 @@ data modify storage gm4_garden_variety:data/garden_variety_nbt convert set from 
 function gm4_garden_variety:data/get/scores_from_nbt
 
 # modify item lore
-execute if score $name_tag gm4_gv_nbt_data matches 1 as @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Age:0s}] run function gm4_garden_variety:data/lore/traits/apply/to_item
+execute if score $name_tag gm4_gv_nbt_data matches 1 as @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Age:0s}] run function gm4_garden_variety:data/lore/mutations/apply/to_item

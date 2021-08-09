@@ -11,7 +11,7 @@ data modify storage gm4_garden_variety:data/modify Item set from block ~ ~ ~ Ite
 
 # apply lore
 execute store result score $extra gm4_lore run data get block ~ ~ ~ Items[{Slot:2b}].tag.gm4_garden_variety.lore.extra_lore
-function gm4_garden_variety:data/lore/traits/apply
+function gm4_garden_variety:data/lore/mutations/apply
 
 # copy storage into item nbt
 data modify block ~ ~ ~ Items[{Slot:2b}] set from storage gm4_garden_variety:data/modify Item

@@ -92,8 +92,8 @@ scoreboard players set soil_conversion_max gm4_gv_gen_data 7
 
 ########## FINALIZE ##########
 
-# apply trait override variables
-#TODO# function gm4_natural_trees:generate/king_palm/generation/trees/variables/tree_trait_override
+# apply mutation override variables
+#TODO# function gm4_natural_trees:generate/king_palm/generation/trees/variables/tree_mutation_override
 
 # convert input variables to generation variables
 function gm4_garden_variety:generation/interpret_variables/initial/tree

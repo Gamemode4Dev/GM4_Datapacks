@@ -30,8 +30,8 @@ execute if score current_leaf_layer gm4_gv_gen_data matches 2 run scoreboard pla
 
 ########## FINALIZE ##########
 
-# apply trait override variables
-#TODO# function gm4_natural_trees:generate/king_palm/generation/trees/variables/palm_trait_override
+# apply mutation override variables
+#TODO# function gm4_natural_trees:generate/king_palm/generation/trees/variables/palm_mutation_override
 
 # convert input variables to generation variables
 function gm4_garden_variety:generation/interpret_variables/initial/palm

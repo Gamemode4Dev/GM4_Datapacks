@@ -19,9 +19,9 @@ execute store result block ~ ~ ~ Items[{Slot:0b}].Count byte 1 run scoreboard pl
 # [S1,S2] move items from slot 1 to slot 2 (sapling)
 data modify block ~ ~ ~ Items[{Slot:1b}].Slot set value 2b
 
-# [S2] append trait lore (sapling)
+# [S2] append mutation lore (sapling)
 data modify storage gm4_garden_variety:data/garden_variety_nbt convert set from block ~ ~ ~ Items[{Slot:2b}].tag.gm4_garden_variety
-function gm4_garden_variety:data/lore/traits/apply/to_analyzer_output
+function gm4_garden_variety:data/lore/mutations/apply/to_analyzer_output
 
 # [S2] add name_tag tag (sapling)
 data modify block ~ ~ ~ Items[{Slot:2b}].tag.gm4_garden_variety.name_tag set value 1b

@@ -3,7 +3,7 @@
 
 # set analyzer speed
 scoreboard players set $analyzing_time_required gm4_gv_analyze 15
-execute if data storage gm4_garden_variety:data/analyzer Items[{Slot:0b}].tag.gm4_garden_variety.lore{show_traits:1b} run scoreboard players add $analyzing_time_required gm4_gv_analyze 3
+execute if data storage gm4_garden_variety:data/analyzer Items[{Slot:0b}].tag.gm4_garden_variety.lore{show_mutations:1b} run scoreboard players add $analyzing_time_required gm4_gv_analyze 3
 
 # analyze
 function gm4_garden_variety:arborist/analyzer/recipes/analyzing

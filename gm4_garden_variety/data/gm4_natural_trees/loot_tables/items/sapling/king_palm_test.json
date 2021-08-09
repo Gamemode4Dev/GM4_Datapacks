@@ -26,7 +26,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_garden_variety:{traits:{height:\"tall\",flexibility:\"higher\",foliage:\"smaller\",fertility:\"lowest\",rooting:\"weak\",corrosion:\"increased\",poisonous:1b,hardened:1b,sterile:1b,fruiting:1b,necrotic:1b,flowering:1b,snowy:1b,radiating:1b}}}"
+                            "tag": "{gm4_garden_variety:{mutations:{height:\"tall\",flexibility:\"higher\",foliage:\"smaller\",fertility:\"lowest\",rooting:\"weak\",corrosion:\"increased\",poisonous:1b,hardened:1b,sterile:1b,fruiting:1b,necrotic:1b,flowering:1b,snowy:1b,radiating:1b}}}"
                         },
                         {
                             "function": "minecraft:set_lore",
