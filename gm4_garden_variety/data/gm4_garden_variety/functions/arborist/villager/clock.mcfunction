@@ -17,8 +17,8 @@ execute if entity @s as @e[tag=gm4_gv_analyzer,tag=!gm4_gv_disable_job_site,dist
 execute if score $verify_job_site gm4_gv_job_id matches 0 run function gm4_garden_variety:arborist/villager/job/missing_job_site
 
 # working time
-execute if score current_time gm4_gv_arborist matches 1750..2000 run scoreboard players set @s gm4_gv_trades 2 
-execute if score current_time gm4_gv_arborist matches 2000..6000 run function gm4_garden_variety:arborist/working
+execute if score $current_time gm4_gv_arborist matches 1750..2000 run scoreboard players set @s gm4_gv_trades 2 
+execute if score $current_time gm4_gv_arborist matches 2000..6000 run function gm4_garden_variety:arborist/working
 
 # level up villager
 execute if entity @s[tag=gm4_gv_level_1] if score $xp_value gm4_gv_arborist matches 10.. run particle dust 0.529 0.871 0.384 1 ~ ~1 ~ .3 .4 .3 .1 10
