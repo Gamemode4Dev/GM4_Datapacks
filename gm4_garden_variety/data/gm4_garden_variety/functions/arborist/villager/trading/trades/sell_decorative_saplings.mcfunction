@@ -24,7 +24,7 @@ data modify storage gm4_garden_variety:data/arborist next_trade.buyB set from st
 data modify storage gm4_garden_variety:data/arborist next_trade.sell.tag.display.Lore[0] set value '{"italic":true,"color":"gray","text":"A decorative sapling bought from the arborist"}'
 
 # store trades into nbt
-data modify entity @s Offers.Recipes insert 7 from storage gm4_garden_variety:data/arborist next_trade
+data modify entity @s Offers.Recipes append from storage gm4_garden_variety:data/arborist next_trade
 
 # update debug storage
 data modify storage gm4_garden_variety:debug/arborist trades.sell_decorative_saplings append from storage gm4_garden_variety:data/arborist next_trade.sell.id

@@ -27,7 +27,7 @@ data modify storage gm4_garden_variety:data/arborist next_trade.buy set from ent
 # set other trade data
 data modify storage gm4_garden_variety:data/arborist next_trade.xp set value 5
 data modify storage gm4_garden_variety:data/arborist next_trade.maxUses set value 8
-data modify storage gm4_garden_variety:data/arborist next_trade.priceMultiplier set value 0f
+data modify storage gm4_garden_variety:data/arborist next_trade.priceMultiplier set value 0.1f
 execute if data storage gm4_garden_variety:data/arborist next_trade.sell{id:"minecraft:bee_nest"} run data modify storage gm4_garden_variety:data/arborist next_trade.maxUses set value 1
 
 # store trades into nbt

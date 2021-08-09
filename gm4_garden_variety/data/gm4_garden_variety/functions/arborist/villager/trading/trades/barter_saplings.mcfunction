@@ -45,7 +45,7 @@ kill @e[tag=gm4_arborist_trade]
 # set other trade data
 data modify storage gm4_garden_variety:data/arborist next_trade.xp set value 1
 data modify storage gm4_garden_variety:data/arborist next_trade.maxUses set value 8
-data modify storage gm4_garden_variety:data/arborist next_trade.priceMultiplier set value 0ff
+data modify storage gm4_garden_variety:data/arborist next_trade.priceMultiplier set value 0.1f
 
 # store trades into nbt
 data modify entity @s Offers.Recipes append from storage gm4_garden_variety:data/arborist next_trade

@@ -45,8 +45,7 @@
                 "count": {
                   "min": 1,
                   "max": 2
-                },
-                "add": true
+                }
               }
         ]
       },
@@ -63,7 +62,8 @@
                           "type": "minecraft:binomial",
                           "n": 4,
                           "p": 0.7
-                        }
+                        },
+                        "add": true
                       }
                   ]
               }
