@@ -60,7 +60,11 @@ jobs:
             gm4_orb_of_ankou:soul_essence/withering
             gm4_standard_liquids:item_drain/experience_bottle_16x
             gm4_standard_liquids:item_drain/experience_bottle_64x
+            gm4_standard_liquids:util/signs/glow_ink_sign
+            gm4_standard_liquids:util/signs/ink_sign
             gm4_soul_glass:destroy
             gm4_soul_glass:furnace/modify_output
             gm4_zauber_cauldrons:cauldron/extra_items/catch_possessed_items
+            gm4_zauber_cauldrons:extra_items/bottled_vex
+            gm4_zauber_cauldrons:recipes/chorus/wormhole
             gm4_zauber_liquids:item_fill/zauber_wormhole_potion
