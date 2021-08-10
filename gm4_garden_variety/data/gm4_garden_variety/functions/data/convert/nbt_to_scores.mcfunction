@@ -5,21 +5,8 @@
 # reset scores
 scoreboard players reset * gm4_gv_nbt_data
 
-
-
 # clearance checker
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.generation{clearance_checker:0b} run scoreboard players set $clearance_checker gm4_gv_nbt_data 0
-execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.generation{clearance_checker:1b} run scoreboard players set $clearance_checker gm4_gv_nbt_data 1
-
-# soil converstion
-execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.generation{soil_conversion:0b} run scoreboard players set $soil_conversion gm4_gv_nbt_data 0
-execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.generation{soil_conversion:1b} run scoreboard players set $soil_conversion gm4_gv_nbt_data 1
-
-# rooting
-execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.generation{rooting:0b} run scoreboard players set $rooting gm4_gv_nbt_data 0
-execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.generation{rooting:1b} run scoreboard players set $rooting gm4_gv_nbt_data 1
-
-
 
 # name tag
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert{name_tag:1b} run scoreboard players set $name_tag gm4_gv_nbt_data 1

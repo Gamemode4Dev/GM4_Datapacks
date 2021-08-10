@@ -4,7 +4,7 @@
 
 # debug
 data modify storage gm4_garden_variety:debug/generation path append value "[SC] "
-execute if score debug_generation gm4_gv_gen_data matches 1 run particle happy_villager ~ ~1 ~
+execute if score $debug_generation gm4_gv_gen_data matches 1 run particle happy_villager ~ ~1 ~
 
 # summon marker and begin conversion
 scoreboard players set soil_conversion_spin_loop gm4_gv_gen_data 12

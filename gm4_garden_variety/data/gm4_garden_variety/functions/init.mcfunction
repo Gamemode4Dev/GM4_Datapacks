@@ -15,7 +15,7 @@ scoreboard objectives add gm4_gv_analyze_p dummy
 
 function gm4_garden_variety:init/static_variables
 function gm4_garden_variety:init/fruiting_data
-execute store result score world_seed gm4_gv_gen_data run seed
+execute store result score $world_seed gm4_gv_gen_data run seed
 
 execute unless score garden_variety gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"garden_variety"}
 scoreboard players set garden_variety gm4_modules 1

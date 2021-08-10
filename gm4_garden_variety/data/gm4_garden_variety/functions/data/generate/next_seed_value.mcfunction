@@ -2,13 +2,17 @@
 # @s = any equation that needs another seed value
 # run from #gm4_garden_variety:
 
-# reset seed use
-scoreboard players add seed_used gm4_gv_gen_data 1
+# count seed use
+scoreboard players add $seed_used gm4_gv_gen_data 1
+scoreboard players add $seed_used_eo2 gm4_gv_gen_data 1
+
+# detect every other seed use
+execute if score $seed_used_eo2 gm4_gv_gen_data matches 2 run scoreboard players set $seed_used_eo2 gm4_gv_gen_data 0
 
 # cycle to next current seed
-scoreboard players operation $current_seed gm4_gv_gen_data = seed gm4_gv_gen_data
-scoreboard players operation $current_seed gm4_gv_gen_data *= seed_used gm4_gv_gen_data
-scoreboard players operation $current_seed gm4_gv_gen_data += seed gm4_gv_gen_data
-scoreboard players operation $current_seed gm4_gv_gen_data += seed_used gm4_gv_gen_data
-
-
+scoreboard players operation $current_seed gm4_gv_gen_data = $seed gm4_gv_gen_data
+scoreboard players operation $current_seed gm4_gv_gen_data *= $seed_used gm4_gv_gen_data
+scoreboard players operation $current_seed gm4_gv_gen_data *= $seed gm4_gv_gen_data
+scoreboard players operation $current_seed gm4_gv_gen_data += $seed gm4_gv_gen_data
+scoreboard players operation $current_seed gm4_gv_gen_data += $seed_used gm4_gv_gen_data
+execute if score $seed_used_eo2 gm4_gv_gen_data matches 1 run scoreboard players operation $current_seed gm4_gv_gen_data += $seed gm4_gv_gen_data
