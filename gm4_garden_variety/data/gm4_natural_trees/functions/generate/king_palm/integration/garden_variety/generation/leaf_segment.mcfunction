@@ -1,6 +1,6 @@
 # generate the tree's leaf segments (about 1 block)
 # @s = TREE_TYPE leaf AEC marker
-# run from gm4_garden_variety:generation/trees/palm_tree/leaf_segment
+# run from gm4_garden_variety:generation/tree_generation/palm_tree/leaf_segment
 
 # move forward
 execute at @s run tp @s ~ ~.5 ~

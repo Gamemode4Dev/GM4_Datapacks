@@ -1,5 +1,5 @@
 # generates variables for each palm based on the current seed
-# run from gm4_garden_variety:generation/trees/variables/per_palm
+# run from gm4_garden_variety:generation/tree_generation/variables/per_palm
 
 
 ### PALM ###

@@ -37,7 +37,7 @@ scoreboard players reset $name_tag gm4_gv_nbt_data
 ### GENERATE ###
 
 # begin generation 
-function gm4_garden_variety:generation/trees/palm_tree/trunk
+function gm4_garden_variety:generation/tree_generation/palm_tree/trunk
 
 # reset generation mode
 scoreboard players set $generation_mode_orbis gm4_gv_gen_data 0

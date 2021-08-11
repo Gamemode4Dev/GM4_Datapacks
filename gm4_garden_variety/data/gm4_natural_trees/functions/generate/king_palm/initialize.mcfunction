@@ -19,7 +19,7 @@ fill ~ ~ ~ ~ ~ ~ air replace #minecraft:saplings
 
 # align and begin generation
 execute as @s align xyz positioned ~.5 ~ ~.5 run tp @s ~ ~ ~
-execute as @s at @s run function gm4_garden_variety:generation/trees/palm_tree/generate
+execute as @s at @s run function gm4_garden_variety:generation/tree_generation/palm_tree/generate
 
 # kill
 kill @s

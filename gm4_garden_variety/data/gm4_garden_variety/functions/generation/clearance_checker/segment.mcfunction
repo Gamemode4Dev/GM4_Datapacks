@@ -1,6 +1,6 @@
 # generate the tree's palm segments (about 1 block)
 # @s = TREE_TYPE palm AEC marker
-# run from gm4_garden_variety:generation/trees/palm_tree/palm_segment
+# run from gm4_garden_variety:generation/tree_generation/palm_tree/palm_segment
 
 # debug
 execute if score $debug_generation gm4_gv_gen_data matches 1 at @s run particle happy_villager

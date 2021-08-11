@@ -1,6 +1,6 @@
 # generates the tree's palm layers
 # @s = caranday palm palm AEC marker
-# run from gm4_garden_variety:generation/trees/palm_tree/palm
+# run from gm4_garden_variety:generation/tree_generation/palm_tree/palm
 
 
 

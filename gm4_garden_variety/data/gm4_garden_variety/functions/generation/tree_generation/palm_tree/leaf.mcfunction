@@ -1,6 +1,6 @@
 # generates the tree's leaf layers
 # @s = TREE_TYPE leaf AEC marker
-# run from gm4_garden_variety:generation/trees/palm_tree/trunk
+# run from gm4_garden_variety:generation/tree_generation/palm_tree/trunk
 
 
 # [Initialize] set initial position and get initial rotation
@@ -17,23 +17,23 @@ function gm4_garden_variety:generation/interpret_variables/layer/leaf
 # [Generation] summon palm spreader marker and begin generation
 scoreboard players operation $palm_spreader_loop gm4_gv_gen_data = $adjusted_palm_amount gm4_gv_gen_data
 execute at @s run summon marker ~ ~ ~ {Tags:["gm4_tree_palm_spreader_marker"]}
-execute as @e[type=marker,tag=gm4_tree_palm_spreader_marker,limit=1,sort=nearest] at @s run function gm4_garden_variety:generation/trees/palm_tree/palm_spreader
+execute as @e[type=marker,tag=gm4_tree_palm_spreader_marker,limit=1,sort=nearest] at @s run function gm4_garden_variety:generation/tree_generation/palm_tree/palm_spreader
 
 # [Generation] generate leaf layer and move forward (first half)
 scoreboard players operation $leaf_segment_loop gm4_gv_gen_data = $leaf_segments_split gm4_gv_gen_data
-execute at @s run function #gm4_garden_variety:generation/trees/palm_tree/leaf_segment
+execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_tree/leaf_segment
 
 # [Generation] generate additional features on current layer
-execute at @s run function #gm4_garden_variety:generation/trees/palm_tree/leaf_layer
+execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_tree/leaf_layer
 
 # [Generation] generate leaf layer and move forward (second half)
 scoreboard players operation $leaf_segment_loop gm4_gv_gen_data = $leaf_segments_split gm4_gv_gen_data
-execute at @s run function #gm4_garden_variety:generation/trees/palm_tree/leaf_segment
+execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_tree/leaf_segment
 scoreboard players add $current_leaf_layer gm4_gv_gen_data 1
 
 # [Loop]
 scoreboard players remove $leaf_layer_loop gm4_gv_gen_data 1
 execute if score $leaf_layer_loop gm4_gv_gen_data matches 0 run kill @s
-execute if score $leaf_layer_loop gm4_gv_gen_data matches 1.. run function gm4_garden_variety:generation/trees/palm_tree/leaf
+execute if score $leaf_layer_loop gm4_gv_gen_data matches 1.. run function gm4_garden_variety:generation/tree_generation/palm_tree/leaf
 
 
