@@ -4,13 +4,13 @@
 # run from projectile/soul_torch/loop
 
 # summon torch item if torch already exists at this block
-execute if block ~ ~ ~ #gm4_crossbow_cartridges:torch run loot spawn ~ ~ ~ loot gm4_crossbow_cartridges:soul_torch
+execute if block ~ ~ ~ #gm4_crossbow_cartridges:torch run loot spawn ~ ~ ~ loot minecraft:blocks/soul_torch
 
 # place torch if possible
 execute if block ~ ~ ~ #gm4:replaceable run function gm4_crossbow_cartridges:projectile/soul_torch/place
 
 # summon torch item if placing torch failed
-execute unless block ~ ~ ~ #gm4_crossbow_cartridges:torch run loot spawn ~ ~ ~ loot gm4_crossbow_cartridges:soul_torch
+execute unless block ~ ~ ~ #gm4_crossbow_cartridges:torch run loot spawn ~ ~ ~ loot minecraft:blocks/soul_torch
 
 # place block sound
 playsound minecraft:block.wood.place block @a[distance=..15]
