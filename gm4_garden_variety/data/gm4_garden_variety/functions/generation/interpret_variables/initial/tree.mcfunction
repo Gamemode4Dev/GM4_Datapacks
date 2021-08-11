@@ -7,16 +7,16 @@
 
 # initial x rotation for the tree
 function gm4_garden_variety:data/generate/next_seed_value
-scoreboard players operation $tree_x_rot gm4_gv_gen_data = $current_seed gm4_gv_gen_data
-scoreboard players operation $tree_x_rot gm4_gv_gen_data %= tree_x_rot_range gm4_gv_gen_data
-scoreboard players operation $tree_x_rot gm4_gv_gen_data += tree_x_rot_minimum gm4_gv_gen_data
+scoreboard players operation $tree_x_rotation gm4_gv_gen_data = $current_seed gm4_gv_gen_data
+scoreboard players operation $tree_x_rotation gm4_gv_gen_data %= $tree_x_rot_range gm4_gv_gen_data
+scoreboard players operation $tree_x_rotation gm4_gv_gen_data += $tree_x_rot_minimum gm4_gv_gen_data
 
 # initial y rotation for the tree
 function gm4_garden_variety:data/generate/next_seed_value
-scoreboard players operation $tree_y_rot gm4_gv_gen_data = $current_seed gm4_gv_gen_data
-scoreboard players operation $tree_y_rot gm4_gv_gen_data %= tree_y_rot_range gm4_gv_gen_data
-scoreboard players operation $tree_y_rot gm4_gv_gen_data += $tree_y_rot_minimum gm4_gv_gen_data
-execute if score $tree_y_rot gm4_gv_gen_data matches 1.. run scoreboard players operation $tree_y_rot gm4_gv_gen_data *= #-1 gm4_gv_math_num
+scoreboard players operation $tree_y_rotation gm4_gv_gen_data = $current_seed gm4_gv_gen_data
+scoreboard players operation $tree_y_rotation gm4_gv_gen_data %= $tree_y_rot_range gm4_gv_gen_data
+scoreboard players operation $tree_y_rotation gm4_gv_gen_data += $tree_y_rot_minimum gm4_gv_gen_data
+execute if score $tree_y_rotation gm4_gv_gen_data matches 1.. run scoreboard players operation $tree_y_rotation gm4_gv_gen_data *= #-1 gm4_gv_math_num
 
 # amount of trunk layers for the tree
 function gm4_garden_variety:data/generate/next_seed_value
@@ -54,10 +54,10 @@ execute if score $leaf_layer_start_side gm4_gv_gen_data matches 0 run scoreboard
 
 # amount of palms for the tree 
 function gm4_garden_variety:data/generate/next_seed_value
-scoreboard players operation palm_amount gm4_gv_gen_data = $current_seed gm4_gv_gen_data
-scoreboard players operation palm_amount gm4_gv_gen_data %= $palm_amount_range gm4_gv_gen_data
-scoreboard players operation palm_amount gm4_gv_gen_data += $palm_amount_minimum gm4_gv_gen_data
-execute if score palm_amount gm4_gv_gen_data = matches 1000.. run scoreboard players set palm_amount gm4_gv_gen_data 0
+scoreboard players operation $palm_amount gm4_gv_gen_data = $current_seed gm4_gv_gen_data
+scoreboard players operation $palm_amount gm4_gv_gen_data %= $palm_amount_range gm4_gv_gen_data
+scoreboard players operation $palm_amount gm4_gv_gen_data += $palm_amount_minimum gm4_gv_gen_data
+execute if score $palm_amount gm4_gv_gen_data matches 1000.. run scoreboard players set $palm_amount gm4_gv_gen_data 0
 
 
 
@@ -65,19 +65,19 @@ execute if score palm_amount gm4_gv_gen_data = matches 1000.. run scoreboard pla
 
 # amount of leaves that contain a sapling
 function gm4_garden_variety:data/generate/next_seed_value
-scoreboard players operation sapling_leaves gm4_gv_gen_data = $current_seed gm4_gv_gen_data
-scoreboard players operation sapling_leaves gm4_gv_gen_data %= $sapling_leaves_range gm4_gv_gen_data
-scoreboard players operation sapling_leaves gm4_gv_gen_data += $sapling_leaves_minimum gm4_gv_gen_data
+scoreboard players operation $sapling_leaves gm4_gv_gen_data = $current_seed gm4_gv_gen_data
+scoreboard players operation $sapling_leaves gm4_gv_gen_data %= $sapling_leaves_range gm4_gv_gen_data
+scoreboard players operation $sapling_leaves gm4_gv_gen_data += $sapling_leaves_minimum gm4_gv_gen_data
 
 # amount of leaves that may contain fruit
 function gm4_garden_variety:data/generate/next_seed_value
-scoreboard players operation fruit_leaves_success gm4_gv_gen_data = $current_seed gm4_gv_gen_data
-scoreboard players operation fruit_leaves_success gm4_gv_gen_data %= $fruit_leaves_chance gm4_gv_gen_data
+scoreboard players operation $fruit_leaves_success gm4_gv_gen_data = $current_seed gm4_gv_gen_data
+scoreboard players operation $fruit_leaves_success gm4_gv_gen_data %= $fruit_leaves_chance gm4_gv_gen_data
 function gm4_garden_variety:data/generate/next_seed_value
-scoreboard players operation fruit_leaves gm4_gv_gen_data = $current_seed gm4_gv_gen_data
-scoreboard players operation fruit_leaves gm4_gv_gen_data %= $fruit_leaves_range gm4_gv_gen_data
-scoreboard players operation fruit_leaves gm4_gv_gen_data += $fruit_leaves_minimum gm4_gv_gen_data
-execute unless score fruit_leaves_success gm4_gv_gen_data matches 0 run scoreboard players set fruit_leaves gm4_gv_gen_data 0
+scoreboard players operation $fruit_leaves gm4_gv_gen_data = $current_seed gm4_gv_gen_data
+scoreboard players operation $fruit_leaves gm4_gv_gen_data %= $fruit_leaves_range gm4_gv_gen_data
+scoreboard players operation $fruit_leaves gm4_gv_gen_data += $fruit_leaves_minimum gm4_gv_gen_data
+execute unless score $fruit_leaves_success gm4_gv_gen_data matches 0 run scoreboard players set $fruit_leaves gm4_gv_gen_data 0
 
 
 

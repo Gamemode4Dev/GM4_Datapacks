@@ -6,12 +6,12 @@
 ### TRUNK ###
 
 # initial x rotation for the tree (1-360)
-scoreboard players set tree_x_rot_minimum gm4_gv_gen_data 1
-scoreboard players set tree_x_rot_range gm4_gv_gen_data 360
+scoreboard players set $tree_x_rot_minimum gm4_gv_gen_data 1
+scoreboard players set $tree_x_rot_range gm4_gv_gen_data 360
 
 # initial y rotation for the tree (81-90)
 scoreboard players set $tree_y_rot_minimum gm4_gv_gen_data 81
-scoreboard players set tree_y_rot_range gm4_gv_gen_data 10
+scoreboard players set $tree_y_rot_range gm4_gv_gen_data 10
 
 # amount of trunk layers for the tree (9-11)
 scoreboard players set $trunk_layers_minimum gm4_gv_gen_data 9

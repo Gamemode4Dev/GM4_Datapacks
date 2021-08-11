@@ -19,7 +19,7 @@ scoreboard players set $current_leaf_layer gm4_gv_gen_data 1
 ### PRE GENERATE ###
 
 # soil conversion
-#TD# execute if score $enable_soil_conversion gm4_gv_gen_data matches 1 unless score $corrosion gm4_gv_nbt_data matches 0 unless score $generation_mode_orbis gm4_gv_gen_data matches 1 run function gm4_garden_variety:generation/soil_conversion/initialize
+execute if score $enable_soil_conversion gm4_gv_gen_data matches 1 unless score $corrosion gm4_gv_nbt_data matches 0 unless score $generation_mode_orbis gm4_gv_gen_data matches 1 run function gm4_garden_variety:generation/soil_conversion/initialize
 
 # rooting
 #TD# execute if score $enable_rooting gm4_gv_gen_data matches 1 unless score $rooting gm4_gv_nbt_data matches 0 unless score $generation_mode_orbis gm4_gv_gen_data matches 1 run function gm4_garden_variety:generation/soil_conversion/initialize

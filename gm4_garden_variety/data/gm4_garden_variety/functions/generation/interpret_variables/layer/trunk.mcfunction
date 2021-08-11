@@ -2,6 +2,12 @@
 # @s = TREE_TYPE trunk AEC marker
 # run from gm4_garden_variety:generation/trees/palm_tree/trunk
 
+
+
+# identify every other layer by a factor of 2
+scoreboard players operation $trunk_layer_eo2 gm4_gv_gen_data = $trunk_layer_loop gm4_gv_gen_data
+scoreboard players operation $trunk_layer_eo2 gm4_gv_gen_data %= #2 gm4_gv_math_num
+
 # find the trunk arc factor
 scoreboard players operation $trunk_layer_eo_tar gm4_gv_gen_data = $current_trunk_layer gm4_gv_gen_data
 scoreboard players operation $trunk_layer_eo_tar gm4_gv_gen_data %= $trunk_arc_rate gm4_gv_gen_data
@@ -18,15 +24,3 @@ scoreboard players operation $trunk_arc_addition_factor gm4_gv_gen_data *= $trun
 # combine arc_factor and arc_addition_factor
 scoreboard players operation $trunk_arc_modifier gm4_gv_gen_data = $trunk_arc_factor gm4_gv_gen_data
 scoreboard players operation $trunk_arc_modifier gm4_gv_gen_data += $trunk_arc_addition_factor gm4_gv_gen_data
-
-# identify every other layer by a factor of 2
-scoreboard players operation $trunk_layer_eo2 gm4_gv_gen_data = $trunk_layer_loop gm4_gv_gen_data
-scoreboard players operation $trunk_layer_eo2 gm4_gv_gen_data %= #2 gm4_gv_math_num
-
-# get 1/2 of the trees layers
-scoreboard players operation $trunk_layers_half gm4_gv_gen_data = $trunk_layers gm4_gv_gen_data
-scoreboard players operation $trunk_layers_half gm4_gv_gen_data /= #2 gm4_gv_math_num
-
-
-
-

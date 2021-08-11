@@ -15,5 +15,5 @@ execute at @s run tp @s ~ ~ ~ ~90 ~
 
 # loop
 scoreboard players remove trunk_fruit_layer_loop gm4_gv_gen_data 1
-execute if score trunk_fruit_layer_loop gm4_gv_gen_data matches 1.. if score fruit_leaves gm4_gv_gen_data matches 1.. at @s run function gm4_garden_variety:generation/trunk_fruit/layer
+execute if score trunk_fruit_layer_loop gm4_gv_gen_data matches 1.. if score $fruit_leaves gm4_gv_gen_data matches 1.. at @s run function gm4_garden_variety:generation/trunk_fruit/layer
 execute if score trunk_fruit_layer_loop gm4_gv_gen_data matches 0 run kill @s

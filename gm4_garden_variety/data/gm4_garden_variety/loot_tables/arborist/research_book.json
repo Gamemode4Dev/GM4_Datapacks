@@ -1,0 +1,51 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:33,CustomModelData:1,gm4_garden_variety:{research_book:{pages:[\"research_book\",\"the_machine\"]}},Enchantments:[{id:\"minecraft:protection\",lvl:1s}],title:\"Arborist Research Book\",author:\"\",generation:3,resolved:1b}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{pages:['{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}','{\"text\":\"     Undiscovered\",\"color\":\"gray\",\"italic\":true}']}"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_garden_variety:data/research"
+              },
+              "ops": [
+                {
+                  "source": "research_book",
+                  "target": "pages[0]",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_garden_variety:data/research"
+              },
+              "ops": [
+                {
+                  "source": "the_machine",
+                  "target": "pages[1]",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

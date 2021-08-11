@@ -1,0 +1,7 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "nbt": "{Inventory:[{id:\"minecraft:copper_ingot\"},{id:\"minecraft:spyglass\"}]}"
+  }
+}
