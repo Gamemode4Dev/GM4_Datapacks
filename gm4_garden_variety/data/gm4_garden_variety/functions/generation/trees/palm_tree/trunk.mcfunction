@@ -41,5 +41,3 @@ execute store result entity @s Rotation[1] float 1 run scoreboard players get $c
 scoreboard players remove $trunk_layer_loop gm4_gv_gen_data 1
 execute if score $trunk_layer_loop gm4_gv_gen_data matches 0 run kill @s[type=!player]
 execute if score $trunk_layer_loop gm4_gv_gen_data matches 1.. run function gm4_garden_variety:generation/trees/palm_tree/trunk
-
-

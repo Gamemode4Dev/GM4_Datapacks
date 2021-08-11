@@ -8,14 +8,14 @@
 # initial x rotation for the tree
 function gm4_garden_variety:data/generate/next_seed_value
 scoreboard players operation $tree_x_rotation gm4_gv_gen_data = $current_seed gm4_gv_gen_data
-scoreboard players operation $tree_x_rotation gm4_gv_gen_data %= $tree_x_rot_range gm4_gv_gen_data
-scoreboard players operation $tree_x_rotation gm4_gv_gen_data += $tree_x_rot_minimum gm4_gv_gen_data
+scoreboard players operation $tree_x_rotation gm4_gv_gen_data %= $tree_x_rotation_range gm4_gv_gen_data
+scoreboard players operation $tree_x_rotation gm4_gv_gen_data += $tree_x_rotation_minimum gm4_gv_gen_data
 
 # initial y rotation for the tree
 function gm4_garden_variety:data/generate/next_seed_value
 scoreboard players operation $tree_y_rotation gm4_gv_gen_data = $current_seed gm4_gv_gen_data
-scoreboard players operation $tree_y_rotation gm4_gv_gen_data %= $tree_y_rot_range gm4_gv_gen_data
-scoreboard players operation $tree_y_rotation gm4_gv_gen_data += $tree_y_rot_minimum gm4_gv_gen_data
+scoreboard players operation $tree_y_rotation gm4_gv_gen_data %= $tree_y_rotation_range gm4_gv_gen_data
+scoreboard players operation $tree_y_rotation gm4_gv_gen_data += $tree_y_rotation_minimum gm4_gv_gen_data
 execute if score $tree_y_rotation gm4_gv_gen_data matches 1.. run scoreboard players operation $tree_y_rotation gm4_gv_gen_data *= #-1 gm4_gv_math_num
 
 # amount of trunk layers for the tree

@@ -14,7 +14,7 @@ function gm4_garden_variety:generation/interpret_variables/layer/palm_spreader
 function #gm4_garden_variety:generation/trees/palm_tree/palm_variables
 
 # [Generation] set rotation from variables
-execute store result entity @s Rotation[0] float 1 run scoreboard players get $palm_rot_modifier gm4_gv_gen_data
+execute store result entity @s Rotation[0] float 1 run scoreboard players get $palm_rotation_modifier gm4_gv_gen_data
 
 # [Generation] set scores for the next part of generation
 scoreboard players operation $palm_layer_loop gm4_gv_gen_data = $palm_layers gm4_gv_gen_data
