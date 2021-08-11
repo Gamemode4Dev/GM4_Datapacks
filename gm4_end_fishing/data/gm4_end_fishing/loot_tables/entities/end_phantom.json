@@ -35,31 +35,8 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:11}"
-            },
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Ravaged Wings",
-                  {
-                    "translate": "item.gm4.end_fishing.ravaged_wings"
-                  }
-                ],
-                "italic": false
-              }
-            },
-            {
-              "function": "minecraft:set_damage",
-              "damage": 0
-            }
-          ],
-          "name": "minecraft:elytra"
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:items/ravaged_wings"
         }
       ],
       "conditions": [
