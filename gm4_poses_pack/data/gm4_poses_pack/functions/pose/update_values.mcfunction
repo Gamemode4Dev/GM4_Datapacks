@@ -1,4 +1,6 @@
-# @s = armor_stand ..1 from writable_book
+# @s = armor_stand to be modified
+# at @s
+# run from some functions in pose/player/
 
 # Store player and armor stand rotation in scoreboard so rotation offset can be applied.
 execute store result score pose_x gm4_pose_rot run data get entity @p[distance=..1,gamemode=!spectator] Rotation[1]

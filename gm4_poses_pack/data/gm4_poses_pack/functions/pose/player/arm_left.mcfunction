@@ -1,4 +1,6 @@
-# @s = armor_stand ..1 from writable_book
+# @s = armor_stand to be modified
+# at @s
+# run from pose/arms
 
 # Initialize scoreboard and storage with pose data.
 function gm4_poses_pack:pose/update_values

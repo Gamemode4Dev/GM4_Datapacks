@@ -1,4 +1,6 @@
-# @s = armor_stand ..1 from writable_book
+# @s = armor_stand to be modified
+# at @s
+# run from pose/arms
 
 # Initialize storage with mirrored pose data.
 data modify storage gm4_better_armour_stands:temp Pose set value {LeftArm:[0f,0f,0f]}

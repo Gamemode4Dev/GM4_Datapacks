@@ -1,0 +1,20 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1b}"
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "gm4_better_armour_stands:temp"
+    },
+    "ops": [
+      {
+        "source": "EntityTag",
+        "target": "EntityTag",
+        "op": "merge"
+      }
+    ]
+  }
+]

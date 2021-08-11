@@ -1,4 +1,6 @@
-# @s = armor_stand ..1 from writable_book
+# @s = armor_stand to be modified
+# at @s
+# run from pose/arms
 
 # Take left arm and make it into a right arm.
 data modify storage gm4_better_armour_stands:temp Pose.RightArm set from entity @s Pose.LeftArm
