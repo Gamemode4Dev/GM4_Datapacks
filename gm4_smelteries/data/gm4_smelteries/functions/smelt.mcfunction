@@ -2,7 +2,7 @@
 # called by limited_tick
 
 data modify entity @s HandItems[0] set from entity @s ArmorItems[3]
-loot spawn ~ ~1 ~ fish gm4_smelteries:smelt ~ ~ ~ mainhand
+loot spawn ~ ~1 ~ fish gm4_smelteries:technical/smelt ~ ~ ~ mainhand
 item replace entity @s weapon with air
 
 particle large_smoke ^ ^.9 ^0.2 0.1 0 0.1 0.05 5 normal @a

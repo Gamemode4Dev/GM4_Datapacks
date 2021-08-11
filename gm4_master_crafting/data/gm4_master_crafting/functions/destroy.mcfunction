@@ -1,1 +1,1 @@
-execute if entity @s[name=gm4_master_crafter] run summon area_effect_cloud ~ ~ ~ {Passengers:[{id:"minecraft:item",Item:{id:"minecraft:cobblestone",Count:2b}},{id:"minecraft:item",Item:{id:"minecraft:piston",Count:3b}},{id:"minecraft:item",Item:{id:"minecraft:comparator",Count:2b}},{id:"minecraft:item",Item:{id:"minecraft:furnace",Count:1b}}]}
+execute if entity @s[name=gm4_master_crafter] run loot spawn ~ ~ ~ loot gm4_master_crafting:blocks/master_crafter

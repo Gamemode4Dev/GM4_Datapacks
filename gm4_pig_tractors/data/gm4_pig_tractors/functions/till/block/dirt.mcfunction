@@ -7,7 +7,7 @@
 setblock ~ ~ ~ farmland[moisture=7] replace
 
 # chance to spawn additional loot
-loot spawn ~ ~1 ~ loot gm4_pig_tractors:till/dirt
+loot spawn ~ ~1 ~ loot gm4_pig_tractors:blocks/till/dirt
 
 # item magnet
 function gm4_pig_tractors:utility/item_magnet

@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:brown_stained_glass",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Soul Glass",
+                                    {
+                                        "translate": "item.gm4.soul_glass"
+                                    }
+                                ],
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:2,gm4_soul_glass:1b,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

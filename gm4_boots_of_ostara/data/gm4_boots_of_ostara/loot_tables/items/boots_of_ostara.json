@@ -1,0 +1,48 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:leather_boots",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Boots of Ostara",
+                                    {
+                                        "translate": "item.gm4.boots_of_ostara"
+                                    }
+                                ],
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                {
+                                    "translate": "%1$s%3427655$s",
+                                    "with": [
+                                        "Brings abundance beneath you!",
+                                        {
+                                            "translate": "item.gm4.boots_of_ostara.lore"
+                                        }
+                                    ],
+                                    "color": "dark_gray",
+                                    "italic": true
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:1,gm4_boots_of_ostara:1b,HideFlags:64,display:{color:3705899}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_orb_of_ankou:soul_essence/gazing"
+          "name": "gm4_orb_of_ankou:items/soul_essence/gazing"
         }
       ],
       "conditions": [
@@ -27,7 +27,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_orb_of_ankou:soul_essence/soaring"
+          "name": "gm4_orb_of_ankou:items/soul_essence/soaring"
         }
       ],
       "conditions": [

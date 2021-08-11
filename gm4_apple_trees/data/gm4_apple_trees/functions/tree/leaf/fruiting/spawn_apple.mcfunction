@@ -7,4 +7,4 @@
 playsound minecraft:entity.item_frame.remove_item block @a[distance=..8] ~ ~ ~ 0.3 0.6
 
 # visuals
-loot spawn ~ ~ ~ loot gm4_apple_trees:tree/leaf/fruiting/apple
+loot spawn ~ ~ ~ loot gm4_apple_trees:blocks/ripe_apple_leaf

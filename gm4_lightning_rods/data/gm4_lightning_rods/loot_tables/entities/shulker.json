@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 9
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_lightning_rods:items/charred_shell"
+        }
+      ]
+    }
+  ]
+}

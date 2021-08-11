@@ -1,0 +1,37 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:spruce_sign",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Trapped Spruce Sign",
+                                    {
+                                        "translate": "item.gm4.trapped_sign",
+                                        "with": [
+                                            {
+                                                "translate": "block.minecraft.spruce_sign"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:1,gm4_trapped_sign:1b,HideFlags:1,Enchantments:[{id:\"minecraft:protection\",lvl:0s}]}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
