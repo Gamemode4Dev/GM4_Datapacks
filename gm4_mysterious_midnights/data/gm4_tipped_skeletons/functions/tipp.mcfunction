@@ -4,4 +4,4 @@
 
 tag @s add gm4_tipped_skeleton
 data modify entity @s HandDropChances[1] set value 0.75f
-loot replace entity @s weapon.offhand loot gm4_tipped_skeletons:tipped_type
+loot replace entity @s weapon.offhand loot gm4_tipped_skeletons:technical/tipped_type

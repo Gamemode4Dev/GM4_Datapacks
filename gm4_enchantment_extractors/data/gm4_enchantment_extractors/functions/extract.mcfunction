@@ -9,7 +9,7 @@ execute if entity @e[tag=gm4_enchantment_extractor,limit=1,sort=nearest,distance
 execute if entity @e[tag=gm4_enchantment_extractor,limit=1,sort=nearest,distance=..0.01,predicate=gm4_enchantment_extractors:binding_curse] run function gm4_enchantment_extractors:extract_binding
 
 # extract
-execute unless entity @s[tag=gm4_ench_extracted] as @e[tag=gm4_enchantment_extractor,limit=1,sort=nearest,distance=..0.01] run loot insert ~ ~1 ~ fish gm4_enchantment_extractors:extract/check ~ ~ ~ mainhand
+execute unless entity @s[tag=gm4_ench_extracted] as @e[tag=gm4_enchantment_extractor,limit=1,sort=nearest,distance=..0.01] run loot insert ~ ~1 ~ fish gm4_enchantment_extractors:technical/extract_enchantments ~ ~ ~ mainhand
 
 # visuals
 playsound block.enchantment_table.use block @a[distance=..5] ~ ~1 ~ 1 0.8 .5

@@ -1,0 +1,66 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "italic": false,
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Landmine",
+                                    {
+                                        "translate": "item.gm4.tnt_landmine"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                [
+                                    {
+                                        "translate": "%1$s%3427655$s",
+                                        "with": [
+                                            "Disguised as ",
+                                            {
+                                                "translate": "item.gm4.tnt_landmine.disguised"
+                                            }
+                                        ],
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "translate": "block.minecraft.grass_block",
+                                        "color": "gray",
+                                        "italic": false
+                                    }
+                                ],
+                                {
+                                    "translate": "%1$s%3427655$s",
+                                    "with": [
+                                        "Drop to use",
+                                        {
+                                            "translate": "item.gm4.tnt_landmine.use"
+                                        }
+                                    ],
+                                    "color": "dark_gray",
+                                    "italic": true
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:41,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:grass_block\"},SkullOwner:{Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NTQ0NzQwMDkwMDUsInByb2ZpbGVJZCI6IjNmYzdmZGY5Mzk2MzRjNDE5MTE5OWJhM2Y3Y2MzZmVkIiwicHJvZmlsZU5hbWUiOiJZZWxlaGEiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzZiMzBmZTgxYWZlNTI2NjkxZGM1MDlhYzEwN2EzYjNjYTk1NTdjNDExZmYwZGMyZmNiNWE4YTlkNzc1ZTk0ODMifX19\"}]},Id:[I;940595468,1686389043,-1269390340,931805603]}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

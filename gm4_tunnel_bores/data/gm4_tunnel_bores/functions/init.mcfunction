@@ -14,6 +14,6 @@ scoreboard objectives add gm4_bore_rail dummy
 execute unless score tunnel_bores gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Tunnel Bores"}
 scoreboard players set tunnel_bores gm4_modules 1
 
-schedule function gm4_tunnel_bores:pulse_check 10t
+schedule function gm4_tunnel_bores:tick 10t
 
 #$moduleUpdateList

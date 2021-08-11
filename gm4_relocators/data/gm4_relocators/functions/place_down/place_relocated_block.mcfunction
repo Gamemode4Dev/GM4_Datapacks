@@ -14,5 +14,5 @@ data modify entity @e[type=armor_stand,limit=1,tag=gm4_relocator_fill,distance=.
 execute as @e[type=armor_stand,tag=gm4_relocator_fill,limit=1,sort=nearest,distance=..0.001] at @s run function gm4_relocators:place_down/find_head
 
 # return relocator
-loot spawn ~ ~.3 ~ loot gm4_relocators:relocator
+loot spawn ~ ~.3 ~ loot gm4_relocators:items/relocator
 data merge entity @e[type=item,distance=..1,nbt={Age:0s,Item:{tag:{gm4_relocator:1b}}},limit=1] {PickupDelay:0}
