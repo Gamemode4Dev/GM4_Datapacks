@@ -3,10 +3,10 @@
 # run from some functions in pose/player/
 
 # Store player and armor stand rotation in scoreboard so rotation offset can be applied.
-execute store result score pose_x gm4_pose_rot run data get entity @p[distance=..1,gamemode=!spectator] Rotation[1]
-execute store result score pose_y gm4_pose_rot run data get entity @p[distance=..1,gamemode=!spectator] Rotation[0]
-execute store result score entity_y gm4_pose_rot run data get entity @s Rotation[0]
+execute store result score $player_rot_x gm4_poses_data run data get entity @p[tag=gm4_bas_active] Rotation[1] 1000
+execute store result score $player_rot_y gm4_poses_data run data get entity @p[tag=gm4_bas_active] Rotation[0] 1000
+execute store result score $as_rot_y gm4_poses_data run data get entity @s Rotation[0] 1000
 
 # Apply rotation offset so that poses are relative to armor stand rotation.
-scoreboard players operation pose_y gm4_pose_rot -= entity_y gm4_pose_rot 
+scoreboard players operation $player_rot_y gm4_poses_data -= $as_rot_y gm4_poses_data 
 tag @s add gm4_pose_changed

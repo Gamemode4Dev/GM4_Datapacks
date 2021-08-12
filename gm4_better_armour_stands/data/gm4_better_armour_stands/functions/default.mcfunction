@@ -6,5 +6,4 @@ data merge entity @s {NoGravity:0,NoBasePlate:0,ShowArms:1,Small:0,Invisible:0b,
 tag @s remove gm4_turn_clockwise
 tag @s remove gm4_turn_anticlockwise
 
-playsound minecraft:entity.armor_stand.break block @a[distance=..5]
-particle block oak_planks ~ ~ ~ .2 1 .2 0 10
+playsound minecraft:entity.armor_stand.fall block @a[distance=..5] ~ ~ ~ 0.5 1

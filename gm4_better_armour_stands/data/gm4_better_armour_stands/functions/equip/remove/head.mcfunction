@@ -1,4 +1,4 @@
-# @s = armor_stand
+# @s = armor_stand to be modified
 # at @s
 # run from functions in equip/
 

@@ -6,7 +6,7 @@
 execute if data storage gm4_better_armour_stands:temp {pages:["default"]} run function gm4_better_armour_stands:default
 
 # Toggle armor stand arms.
-execute if data storage gm4_better_armour_stands:temp {pages:["no arms"]} run function gm4_better_armour_stands:toggle/arms
+execute if data storage gm4_better_armour_stands:temp {pages:["no arms"]} run function gm4_better_armour_stands:toggle/no_arms
 
 # Toggle armor stand gravity.
 execute if data storage gm4_better_armour_stands:temp {pages:["gravity"]} run function gm4_better_armour_stands:toggle/gravity
@@ -28,6 +28,7 @@ execute if data storage gm4_better_armour_stands:temp {pages:["turn right"]} run
 execute if data storage gm4_better_armour_stands:temp {pages:["no turn"]} run tag @s remove gm4_turn_clockwise
 execute if data storage gm4_better_armour_stands:temp {pages:["no turn"]} run tag @s remove gm4_turn_anticlockwise
 
-# Equip dropped item into specified slot even if this is normally impossible.
+# Equip item into specified slot even if this is normally impossible.
 execute if data storage gm4_better_armour_stands:temp {pages:["equip head"]} run function gm4_better_armour_stands:equip/head
+execute if data storage gm4_better_armour_stands:temp {pages:["equip hand"]} run function gm4_better_armour_stands:equip/hand
 execute if data storage gm4_better_armour_stands:temp {pages:["equip offhand"]} run function gm4_better_armour_stands:equip/offhand

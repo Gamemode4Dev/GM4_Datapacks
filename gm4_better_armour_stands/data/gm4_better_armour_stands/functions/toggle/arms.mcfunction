@@ -1,15 +1,9 @@
-# @s = armor_stand
+# @s = armor_stand to be modified
 # at @s
-# run from apply_book
+# run from holding_book
 
-execute store result score @s gm4_bas_data run data get entity @s Small
-data merge entity @s {ShowArms:0b}
-playsound minecraft:entity.armor_stand.break block @a[distance=..5] ~ ~ ~ 0.5 1
+data modify entity @s ShowArms set value 1
 
-# normal size
-execute if score @s gm4_bas_data matches 0 positioned ~ ~1.4 ~ run particle block oak_planks ^.35 ^ ^ 0 0 0 0 4
-execute if score @s gm4_bas_data matches 0 positioned ~ ~1.4 ~ run particle block oak_planks ^-.35 ^ ^ 0 0 0 0 4
+playsound minecraft:entity.armor_stand.fall block @a[distance=..5] ~ ~ ~ 0.5 1
 
-# small size
-execute if score @s gm4_bas_data matches 1 positioned ~ ~.7 ~ run particle block oak_planks ^.2 ^ ^ 0 0 0 0 4
-execute if score @s gm4_bas_data matches 1 positioned ~ ~.7 ~ run particle block oak_planks ^-.2 ^ ^ 0 0 0 0 4
+advancement grant @p[tag=gm4_bas_active] only gm4:better_armour_stands
