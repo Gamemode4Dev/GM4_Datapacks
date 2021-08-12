@@ -69,7 +69,7 @@ scoreboard players set $palm_reduction_amount gm4_gv_gen_data 0
 scoreboard players set $sapling_leaves_start_layer gm4_gv_gen_data 1
 scoreboard players set $sapling_leaves_minimum gm4_gv_gen_data 1
 scoreboard players set $sapling_leaves_range gm4_gv_gen_data 1
-scoreboard players set $sapling_leaves_block_chance gm4_gv_gen_data 10
+scoreboard players set $sapling_leaves_layer_chance gm4_gv_gen_data 10
 
 # amount of leaves that may contain fruit (1, 25%)
 scoreboard players set $fruit_leaves_chance gm4_gv_gen_data 4
