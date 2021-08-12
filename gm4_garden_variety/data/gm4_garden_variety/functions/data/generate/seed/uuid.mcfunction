@@ -20,3 +20,4 @@ scoreboard players operation $current_seed gm4_gv_gen_data = $seed gm4_gv_gen_da
 
 # reset seed use
 scoreboard players set $seed_used gm4_gv_gen_data 0
+scoreboard players set $last_seed gm4_gv_gen_data 0

@@ -81,10 +81,9 @@ scoreboard players set $trunk_fruit_per_layer gm4_gv_gen_data 2
 
 # soil conversion
 scoreboard players set $enable_soil_conversion gm4_gv_gen_data 1
-scoreboard players set $soil_conversion_radius gm4_gv_gen_data 2
-scoreboard players set $soil_conversion_block_chance gm4_gv_gen_data 5
-scoreboard players set $soil_conversion_max gm4_gv_gen_data 7
-
+scoreboard players set $soil_conversion_radius gm4_gv_gen_data 3
+scoreboard players set $soil_conversion_block_chance gm4_gv_gen_data 40
+scoreboard players set $soil_conversion_max gm4_gv_gen_data 10
 # rooting
 scoreboard players set $enable_rooting gm4_gv_gen_data 1
 
