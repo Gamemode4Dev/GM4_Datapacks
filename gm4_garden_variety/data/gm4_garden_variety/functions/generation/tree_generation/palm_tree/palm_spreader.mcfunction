@@ -11,7 +11,7 @@ data modify storage gm4_garden_variety:debug/generation path append value "P"
 function gm4_garden_variety:generation/interpret_variables/layer/palm_spreader
 
 # [Generation] get input palm variables 
-function #gm4_garden_variety:generation/tree_generation/palm_tree/palm_variables
+function #gm4_garden_variety:generation/tree_generation/palm_variables
 
 # [Generation] set rotation from variables
 execute store result entity @s Rotation[0] float 1 run scoreboard players get $palm_rotation_modifier gm4_gv_gen_data

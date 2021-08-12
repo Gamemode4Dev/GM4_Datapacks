@@ -21,14 +21,14 @@ execute as @e[type=marker,tag=gm4_tree_palm_spreader_marker,limit=1,sort=nearest
 
 # [Generation] generate leaf layer and move forward (first half)
 scoreboard players operation $leaf_segment_loop gm4_gv_gen_data = $leaf_segments_split gm4_gv_gen_data
-execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_tree/leaf_segment
+execute at @s run function #gm4_garden_variety:generation/tree_generation/leaf_segment
 
 # [Generation] generate additional features on current layer
-execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_tree/leaf_layer
+execute at @s run function #gm4_garden_variety:generation/tree_generation/leaf_layer
 
 # [Generation] generate leaf layer and move forward (second half)
 scoreboard players operation $leaf_segment_loop gm4_gv_gen_data = $leaf_segments_split gm4_gv_gen_data
-execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_tree/leaf_segment
+execute at @s run function #gm4_garden_variety:generation/tree_generation/leaf_segment
 scoreboard players add $current_leaf_layer gm4_gv_gen_data 1
 
 # [Loop]

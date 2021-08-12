@@ -1,6 +1,6 @@
 # generates the tree's trunk layers 
 # @s = TREE_TYPE trunk AEC marker
-# run from #gm4_garden_variety:generation/tree_generation/palm_tree/initialize
+# run from #gm4_garden_variety:generation/tree_generation/initialize
 
 
 # [Initialize] set initial rotation from variables
@@ -22,14 +22,14 @@ execute if score $leaf_start_layer gm4_gv_gen_data = $current_trunk_layer gm4_gv
 
 # [Generation] generate trunk layer and move forward (first half)
 scoreboard players operation $trunk_segment_loop gm4_gv_gen_data = $trunk_segments_split gm4_gv_gen_data
-execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_tree/trunk_segment
+execute at @s run function #gm4_garden_variety:generation/tree_generation/trunk_segment
 
 # [Generation] generate additional features on current layer
-execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_tree/trunk_layer
+execute at @s run function #gm4_garden_variety:generation/tree_generation/trunk_layer
 
 # [Generation] generate trunk layer and move forward (second half)
 scoreboard players operation $trunk_segment_loop gm4_gv_gen_data = $trunk_segments_split gm4_gv_gen_data
-execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_tree/trunk_segment
+execute at @s run function #gm4_garden_variety:generation/tree_generation/trunk_segment
 scoreboard players add $current_trunk_layer gm4_gv_gen_data 1
 
 # [Generation] caluclate y rotation, check for minimum, modify y roation

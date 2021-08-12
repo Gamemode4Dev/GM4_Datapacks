@@ -15,14 +15,14 @@ function gm4_garden_variety:generation/interpret_variables/layer/palm
 
 # [Generation] generate palm segment and move forward (first half)
 scoreboard players operation $palm_segment_loop gm4_gv_gen_data = $palm_segments_split gm4_gv_gen_data
-execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_tree/palm_segment
+execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_segment
 
 # [Generation] generate additional features on current layer
-execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_tree/palm_layer
+execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_layer
 
 # [Generation] generate palm segment and move forward (second half)
 scoreboard players operation $palm_segment_loop gm4_gv_gen_data = $palm_segments_split gm4_gv_gen_data
-execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_tree/palm_segment
+execute at @s run function #gm4_garden_variety:generation/tree_generation/palm_segment
 scoreboard players add $current_palm_layer gm4_gv_gen_data 1
 
 # [Generation] modify y rotation

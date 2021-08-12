@@ -1,6 +1,6 @@
 # generates the tree's trunk layers 
 # @s = TREE_TYPE trunk AEC marker
-# run from #gm4_garden_variety:generation/tree_generation/palm_tree/initialize
+# run from #gm4_garden_variety:generation/tree_generation/initialize
 
 
 ### INITIALIZE ###
