@@ -2,76 +2,68 @@
 # run from gm4_natural_trees:generate/palm_tree/TREE_TYPE/generate
 
 
-
-### TRUNK ###
-
-# initial x rotation for the tree (1-360)
+# [Trunk] initial x rotation for the tree
 scoreboard players set $tree_x_rotation_minimum gm4_gv_gen_data 1
 scoreboard players set $tree_x_rotation_range gm4_gv_gen_data 360
 
-# initial y rotation for the tree (81-90)
+# [Trunk] initial y rotation for the tree
 scoreboard players set $tree_y_rotation_minimum gm4_gv_gen_data 81
 scoreboard players set $tree_y_rotation_range gm4_gv_gen_data 10
 
-# amount of trunk layers for the tree (9-11)
+# [Trunk] amount of trunk layers for the tree
 scoreboard players set $trunk_layers_minimum gm4_gv_gen_data 9
 scoreboard players set $trunk_layers_range gm4_gv_gen_data 3
 
-# amount of segments in a trunk layer for the tree (10)
+# [Trunk] amount of segments in a trunk layer for the tree
 scoreboard players set $trunk_segments gm4_gv_gen_data 10
 
-# arc rate for the trunk layers (1,0,0)
+# [Trunk] arc rate for the trunk layers
 scoreboard players set $minimum_trunk_arc gm4_gv_gen_data -40
 scoreboard players set $trunk_arc_rate gm4_gv_gen_data 1
 scoreboard players set $trunk_arc_amount gm4_gv_gen_data 1
 scoreboard players set $trunk_arc_addition_rate gm4_gv_gen_data 0
 scoreboard players set $trunk_arc_addition_amount gm4_gv_gen_data 0
 
-
-### LEAF ###
-
-# amount of leaf layers for the tree (2)
+# [Leaf] amount of leaf layers for the tree
 scoreboard players set $leaf_layers_minimum gm4_gv_gen_data 2
 scoreboard players set $leaf_layers_range gm4_gv_gen_data 1
 
-# layer at which leafs start to generate on the trunk (1-2,1)
+# [Leaf] layer at which leafs start to generate on the trunk
 scoreboard players set $leaf_layer_start_minimum gm4_gv_gen_data 1
 scoreboard players set $leaf_layer_start_range gm4_gv_gen_data 2
 scoreboard players set $leaf_layer_start_side gm4_gv_gen_data 1
 
-# amount of segments in a leaf layer for the tree (2)
+# [Leaf] amount of segments in a leaf layer for the tree
 scoreboard players set $leaf_segments gm4_gv_gen_data 2
 
-# leaf layer progression mode (1) (0 = Spiral, 1 = Alternating, 2 = Random)
+# [Leaf] leaf layer progression mode (0 = Spiral, 1 = Alternating, 2 = Random)
 scoreboard players set $leaf_layer_rotation_mode gm4_gv_gen_data 1
 
-
-### PALM ###
-
-# amount of palms for the tree (5-7)
+# [Palm] amount of palms for the tree
 scoreboard players set $palm_amount_minimum gm4_gv_gen_data 5
 scoreboard players set $palm_amount_range gm4_gv_gen_data 3
 
-# minimum palm amount for the tree (3)
+# [Palm] minimum palm amount for the tree
 scoreboard players set $minimum_palm_amount gm4_gv_gen_data 3
 
-# amount of segments in a palm layer for the tree (10)
+# [Palm] amount of segments in a palm layer for the tree
 scoreboard players set $palm_segments gm4_gv_gen_data 10
 
-# rate at which palm amount is reduced (1,0)
+# [Palm] rate at which palm amount is reduced
 scoreboard players set $palm_reduction_rate gm4_gv_gen_data 1
 scoreboard players set $palm_reduction_amount gm4_gv_gen_data 0
 
+# [Palm] x rotation offset for each palm (different for each palm)
+scoreboard players set $palm_offet_minimum gm4_gv_gen_data 1
+scoreboard players set $palm_offet_range gm4_gv_gen_data 10
 
-### OTHER ###
-
-# amount of leaves that contain a sapling (1, 20)
+# [Sapling Leaves] amount of leaves that contain a sapling
 scoreboard players set $sapling_leaves_start_layer gm4_gv_gen_data 1
 scoreboard players set $sapling_leaves_minimum gm4_gv_gen_data 1
 scoreboard players set $sapling_leaves_range gm4_gv_gen_data 1
 scoreboard players set $sapling_leaves_layer_chance gm4_gv_gen_data 10
 
-# amount of leaves that may contain fruit (1, 25%)
+# [Fruit Leaves] amount of leaves that may contain fruit
 scoreboard players set $fruit_leaves_chance gm4_gv_gen_data 4
 scoreboard players set $fruit_leaves_minimum gm4_gv_gen_data 1
 scoreboard players set $fruit_leaves_range gm4_gv_gen_data 2
@@ -92,7 +84,7 @@ scoreboard players set $enable_soil_rooting gm4_gv_gen_data 1
 scoreboard players set $soil_rooting_amount_minimum gm4_gv_gen_data 2
 scoreboard players set $soil_rooting_amount_range gm4_gv_gen_data 2
 
-# [Soil Rooting] the length at which each root can be set (different for each sapling)
+# [Soil Rooting] the length at which each root can be set (different for each root)
 scoreboard players set $soil_rooting_root_length_minimum gm4_gv_gen_data 2
 scoreboard players set $soil_rooting_root_length_range gm4_gv_gen_data 3
 
@@ -100,7 +92,7 @@ scoreboard players set $soil_rooting_root_length_range gm4_gv_gen_data 3
 scoreboard players set $soil_rooting_x_rotation_minimum gm4_gv_gen_data 1
 scoreboard players set $soil_rooting_x_rotation_range gm4_gv_gen_data 360
 
-# [Soil Rooting] the y rotation at which each root can be set (different for each sapling)
+# [Soil Rooting] the y rotation at which each root can be set (different for each root)
 scoreboard players set $soil_rooting_y_rotation_minimum gm4_gv_gen_data 55
 scoreboard players set $soil_rooting_y_rotation_range gm4_gv_gen_data 15
 
@@ -108,11 +100,8 @@ scoreboard players set $soil_rooting_y_rotation_range gm4_gv_gen_data 15
 scoreboard players set $soil_rooting_x_rotation_offset_minimum gm4_gv_gen_data 1
 scoreboard players set $soil_rooting_x_rotation_offset_range gm4_gv_gen_data 10
 
+# [Mutations] apply mutation modifications
+function gm4_natural_trees:generate/king_palm/variables/tree_mutations
 
-### FINALIZE ###
-
-# apply mutation override variables
-#TODO# function gm4_natural_trees:generate/king_palm/generation/trees/variables/tree_mutation_override
-
-# convert input variables to generation variables
+# [Interpret] convert input variables to generation variables
 function gm4_garden_variety:generation/interpret_variables/initial/tree

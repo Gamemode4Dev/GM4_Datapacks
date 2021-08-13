@@ -3,8 +3,6 @@
 # run from #gm4_garden_variety:generation/tree_generation/initialize
 
 
-### INITIALIZE ###
-
 # [Initialize] set initial rotation from variables
 execute if score $clearance_check_loop gm4_gv_gen_data = $trunk_layers gm4_gv_gen_data store result entity @s Rotation[0] float 1 run scoreboard players get $tree_x_rotation gm4_gv_gen_data
 execute if score $clearance_check_loop gm4_gv_gen_data = $trunk_layers gm4_gv_gen_data store result entity @s Rotation[1] float 1 run scoreboard players get $tree_y_rotation gm4_gv_gen_data 
