@@ -10,7 +10,5 @@ function gm4_garden_variety:data/generate/next_seed_value
 scoreboard players operation $soil_conversion_success gm4_gv_gen_data = $current_seed gm4_gv_gen_data
 scoreboard players operation $soil_conversion_success gm4_gv_gen_data %= $soil_conversion_block_chance gm4_gv_gen_data
 
-tellraw @p ["",{"score":{"name":"$soil_conversion_success","objective":"gm4_gv_gen_data"}}," - ",{"score":{"name":"$current_seed","objective":"gm4_gv_gen_data"}}," - ",{"score":{"name":"$soil_conversion_amount","objective":"gm4_gv_gen_data"}}]
-
 # replace block
 execute if score $soil_conversion_success gm4_gv_gen_data matches 0..9 run function #gm4_garden_variety:generation/soil_conversion/convert

@@ -79,13 +79,34 @@ scoreboard players set $trunk_fruit_start_height gm4_gv_gen_data 3
 scoreboard players set $trunk_fruit_block_chance gm4_gv_gen_data 2
 scoreboard players set $trunk_fruit_per_layer gm4_gv_gen_data 2
 
-# soil conversion
+# [Soil Conversion] general settings (certain combinations can result in repetetive patterns)
 scoreboard players set $enable_soil_conversion gm4_gv_gen_data 1
 scoreboard players set $soil_conversion_radius gm4_gv_gen_data 3
 scoreboard players set $soil_conversion_block_chance gm4_gv_gen_data 40
 scoreboard players set $soil_conversion_max gm4_gv_gen_data 10
-# rooting
-scoreboard players set $enable_rooting gm4_gv_gen_data 1
+
+# [Soil Rooting] enable soil rooting
+scoreboard players set $enable_soil_rooting gm4_gv_gen_data 1
+
+# [Soil Rooting] the amount of individual roots generated
+scoreboard players set $soil_rooting_amount_minimum gm4_gv_gen_data 2
+scoreboard players set $soil_rooting_amount_range gm4_gv_gen_data 2
+
+# [Soil Rooting] the length at which each root can be set (different for each sapling)
+scoreboard players set $soil_rooting_root_length_minimum gm4_gv_gen_data 2
+scoreboard players set $soil_rooting_root_length_range gm4_gv_gen_data 3
+
+# [Soil Rooting] the x rotation at which the soil rooting spreader will start
+scoreboard players set $soil_rooting_x_rotation_minimum gm4_gv_gen_data 1
+scoreboard players set $soil_rooting_x_rotation_range gm4_gv_gen_data 360
+
+# [Soil Rooting] the y rotation at which each root can be set (different for each sapling)
+scoreboard players set $soil_rooting_y_rotation_minimum gm4_gv_gen_data 55
+scoreboard players set $soil_rooting_y_rotation_range gm4_gv_gen_data 15
+
+# [Soil Rooting] give a random offset for each root
+scoreboard players set $soil_rooting_x_rotation_offset_minimum gm4_gv_gen_data 1
+scoreboard players set $soil_rooting_x_rotation_offset_range gm4_gv_gen_data 10
 
 
 ### FINALIZE ###
