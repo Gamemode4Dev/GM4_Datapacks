@@ -4,6 +4,7 @@
 # at positioned ~7 248-n ~7, where n is the current recursion depth
 # run from gm4_natural_trees:chunk/generate
 
+
 scoreboard players remove structure_height gm4_count 1
 
 # succeed if sand below
