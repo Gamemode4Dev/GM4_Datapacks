@@ -27,7 +27,7 @@ execute if score $leaf_layer_rotation_mode gm4_gv_gen_data matches 1 run scorebo
 execute if score $leaf_layer_rotation_mode gm4_gv_gen_data matches 2 run scoreboard players operation $palm_rotation_alt_modifier gm4_gv_gen_data = $leaf_layer_rotation_random_mod gm4_gv_gen_data
 
 # [Palm Spreader] get initial x rotation offset for each palm
-scoreboard players operation $palm_rotation_modifier gm4_gv_gen_data = $palm_separation gm4_gv_gen_data
-scoreboard players operation $palm_rotation_modifier gm4_gv_gen_data *= $palm_spreader_loop gm4_gv_gen_data
-scoreboard players operation $palm_rotation_modifier gm4_gv_gen_data += $palm_offet gm4_gv_gen_data
-scoreboard players operation $palm_rotation_modifier gm4_gv_gen_data += $palm_rotation_alt_modifier gm4_gv_gen_data
+scoreboard players operation $palm_rotation_modified gm4_gv_gen_data = $palm_separation gm4_gv_gen_data
+scoreboard players operation $palm_rotation_modified gm4_gv_gen_data *= $palm_spreader_loop gm4_gv_gen_data
+scoreboard players operation $palm_rotation_modified gm4_gv_gen_data += $palm_offet gm4_gv_gen_data
+scoreboard players operation $palm_rotation_modified gm4_gv_gen_data += $palm_rotation_alt_modifier gm4_gv_gen_data
