@@ -1,0 +1,46 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:jungle_sapling",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Sakura Sapling",
+                                    {"translate":"item.gm4.sakura_sapling"}
+                                ],
+                                "italic": false,
+                                "color": "#e79cd3"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:1,gm4_fruiting_trees:{item:{id:\"sapling\",type:\"sakura\"}},gm4_podzol_rooting_soil:{id:\"sakura_sapling\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{gm4_garden_variety:{}}"
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                {
+                                  "text": "A decorative sapling bought from the arborist",
+                                  "color": "gray",
+                                  "italic": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

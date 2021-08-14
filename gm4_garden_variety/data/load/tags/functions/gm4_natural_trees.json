@@ -1,6 +1,0 @@
-{
-    "values": [
-        { "id": "#load:gm4_garden_variety", "required": true },
-        "gm4_natural_trees:load"
-    ]
-}

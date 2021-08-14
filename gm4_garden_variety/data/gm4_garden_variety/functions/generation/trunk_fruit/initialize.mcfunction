@@ -1,5 +1,5 @@
 # attempts to place fruit leaf on the side of the trunk
-# run from gm4_natural_trees:generate/king_palm/generation/trunk
+# run from gm4_garden_variety_trees:generate/king_palm/generation/trunk
 
 
 # [Initialize] check if block is randomly picked

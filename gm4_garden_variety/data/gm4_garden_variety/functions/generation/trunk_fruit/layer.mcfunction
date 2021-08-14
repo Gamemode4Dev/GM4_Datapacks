@@ -1,5 +1,5 @@
 # places fruit leaf
-# run from gm4_natural_trees:generate/king_palm/generation/decoration/fruit_leaf/attempt
+# run from gm4_garden_variety_trees:generate/king_palm/generation/decoration/fruit_leaf/attempt
 
 
 # [Initialize] set fruit direction

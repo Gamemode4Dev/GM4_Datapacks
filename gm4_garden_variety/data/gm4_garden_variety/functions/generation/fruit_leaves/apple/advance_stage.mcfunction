@@ -1,7 +1,7 @@
 # advances the stage of the fruit
 # @s = TREE_TYPE_fruit_leaf
 # at @s align xyz
-# run from gm4_natural_trees:fruiting/tree/leaf/fruiting/validate_species
+# run from gm4_garden_variety_trees:fruiting/tree/leaf/fruiting/validate_species
 
 # set the visual stage of the fruit depending the score
 

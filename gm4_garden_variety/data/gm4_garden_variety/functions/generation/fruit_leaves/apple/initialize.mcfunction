@@ -1,6 +1,6 @@
 # initializes a TREE_TYPE leaf
 # @s = a freshly generated TREE_TYPE sapling leaf
-# run from gm4_natural_trees:trees/TREE_TYPE/fruiting/leaf/fruit/generate
+# run from gm4_garden_variety_trees:trees/TREE_TYPE/fruiting/leaf/fruit/generate
 
 # set first stage change timer
 scoreboard players operation @s gm4_fruit_stage = #apple_fruit_stage_0_start gm4_gv_math_num
