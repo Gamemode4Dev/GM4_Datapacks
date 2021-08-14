@@ -4,8 +4,8 @@
 
 
 # [Debug]
-execute if score $palm_spreader_loop gm4_gv_gen_data = $adjusted_palm_amount gm4_gv_gen_data run data modify storage gm4_garden_variety:debug/generation path append value "PS>"
-data modify storage gm4_garden_variety:debug/generation path append value "P"
+execute if score $palm_spreader_loop gm4_gv_gen_data = $adjusted_palm_amount gm4_gv_gen_data run data modify storage gm4_garden_variety:debug/generation path append value ""
+data modify storage gm4_garden_variety:debug/generation path append value P
 
 # [Generation] update variables for layer
 function gm4_garden_variety:generation/interpret_variables/layer/palm_spreader

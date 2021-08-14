@@ -2,9 +2,6 @@
 # @s = TREE_TYPE trunk AEC marker
 # run from gm4_MODULE_ID:generate/TREE_TYPE/initialize
 
-# [Debug]
-data modify storage gm4_garden_variety:debug/generation path append value "."
-
 # [Generation] summon marker and begin conversion
 scoreboard players set $soil_converter_distance gm4_gv_gen_data 1
 scoreboard players operation $soil_converter_loop gm4_gv_gen_data = $soil_conversion_radius gm4_gv_gen_data

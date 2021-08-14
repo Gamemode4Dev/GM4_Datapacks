@@ -9,7 +9,7 @@ execute if score $trunk_layer_loop gm4_gv_gen_data = $trunk_layers gm4_gv_gen_da
 execute if score $trunk_layer_loop gm4_gv_gen_data = $trunk_layers gm4_gv_gen_data run scoreboard players operation $current_trunk_y_rotation gm4_gv_gen_data = $tree_y_rotation gm4_gv_gen_data
 
 # [Debug]
-data modify storage gm4_garden_variety:debug/generation path append value T
+data modify storage gm4_garden_variety:debug/generation path append value "T"
 execute if score $debug_generation gm4_gv_gen_data matches 1 at @s positioned ^ ^ ^.5 run particle barrier ~ ~ ~-8
 
 # [Generation] update variables for layer
