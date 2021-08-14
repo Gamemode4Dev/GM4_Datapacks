@@ -9,7 +9,7 @@
             "functions": [
               {
                 "function": "minecraft:set_nbt",
-                "tag": "{display:{Name:'{\"text\":\"Red Berries\",\"color\":\"#ff543d\",\"italic\":false}'}}"
+                "tag": "{display:{Name:'{\"text\":\"Red Berries\",\"italic\":false}'}}"
               }
             ]
           }

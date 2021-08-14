@@ -4,5 +4,5 @@
 
 
 # place fruit
-setblock ~ ~ ~ birch_leaves keep
-execute positioned ~ ~-1 ~ run function gm4_garden_variety:generation/fruit_leaves/red_berry/generate
+setblock ~ ~ ~ birch_leaves[persistent=true] keep
+execute positioned ~ ~-1 ~ run function gm4_garden_variety:generation/fruit_leaves/apple/generate
