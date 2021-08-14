@@ -15,6 +15,9 @@ function gm4_garden_variety:data/convert/nbt_to_scores
 # [Initialize] store nbt in storage (for reference during generation)
 data modify storage gm4_garden_variety:data/garden_variety_nbt tree_generation set from entity @s data.gm4_garden_variety
 
+# [Initialize] modify based on generation mode
+execute if score $generation_mode_orbis gm4_gv_gen_data matches 1 if predicate gm4_garden_variety:biome/snowy run scoreboard players set $snowy gm4_gv_nbt_data 1
+
 # [Checker/Generation] generate if clearance passes check
 scoreboard players set $clearance_check gm4_gv_gen_data 1
 scoreboard players operation $clearance_check_loop gm4_gv_gen_data = $trunk_layers gm4_gv_gen_data
