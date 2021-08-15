@@ -9,7 +9,7 @@ data modify storage gm4_better_armour_stands:temp EntityTag.NoBasePlate set from
 data modify storage gm4_better_armour_stands:temp EntityTag.Small set from entity @s Small
 
 # Copy tags from armor stand to item entity.
-item modify entity @p[tag=gm4_bas_active] weapon.offhand gm4_poses_pack:copy
+item modify entity @p[tag=gm4_bas_active] weapon.offhand gm4_better_armour_stands:copy
 
 # Display particles and play a sound to confirm that the pose was copied.
 particle item armor_stand ~ ~ ~ .2 1 .2 0 20

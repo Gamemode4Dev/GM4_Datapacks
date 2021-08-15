@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from interact and ray 
+# run from use_book and ray 
 
 # Continue searching if no armor_stand in this block
 execute unless entity @e[type=minecraft:armor_stand,predicate=gm4_better_armour_stands:holding_book_and_quill,dx=0,limit=1] if entity @s[distance=..5] positioned ^ ^ ^.1 run function gm4_better_armour_stands:ray

@@ -1,4 +1,9 @@
 scoreboard objectives add gm4_bas_data dummy
+scoreboard objectives add gm4_bas_mode dummy
+scoreboard players set #rounding gm4_bas_data 1800
+
+team add gm4_bas
+team modify gm4_bas collisionRule never
 
 execute unless score better_armour_stands gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Better Armour Stands"}
 scoreboard players set better_armour_stands gm4_modules 1

@@ -13,7 +13,7 @@ item replace entity @p[tag=gm4_bas_active] weapon.mainhand with minecraft:writab
 item modify entity @p[tag=gm4_bas_active] weapon.mainhand gm4_better_armour_stands:book
 
 # Check valid codes and apply to armor_stand
-function #gm4_better_armour_stands:apply_book
+execute unless entity @s[tag=gm4_bas_track] run function #gm4_better_armour_stands:apply_book
 
 # Reset storage
 data remove storage gm4_better_armour_stands:temp pages

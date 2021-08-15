@@ -5,30 +5,40 @@
 # Restore armor stand state to default.
 execute if data storage gm4_better_armour_stands:temp {pages:["default"]} run function gm4_better_armour_stands:default
 
-# Toggle armor stand arms.
+# Remove armor stand arms.
 execute if data storage gm4_better_armour_stands:temp {pages:["no arms"]} run function gm4_better_armour_stands:toggle/no_arms
-
-# Toggle armor stand gravity.
-execute if data storage gm4_better_armour_stands:temp {pages:["gravity"]} run function gm4_better_armour_stands:toggle/gravity
-
-# Toggle armor stand height.
-execute if data storage gm4_better_armour_stands:temp {pages:["size"]} run function gm4_better_armour_stands:toggle/size
 
 # Toggle armor stand base.
 execute if data storage gm4_better_armour_stands:temp {pages:["base"]} run function gm4_better_armour_stands:toggle/base
 
+# Toggle armor stand height.
+execute if data storage gm4_better_armour_stands:temp {pages:["size"]} run function gm4_better_armour_stands:toggle/size
+
 # Toggle armor stand visibility.
 execute if data storage gm4_better_armour_stands:temp {pages:["visible"]} run function gm4_better_armour_stands:toggle/visible
 
-# Rotate the armor stand by predefined intervals.
-execute if data storage gm4_better_armour_stands:temp {pages:["turn left"]} run tag @s add gm4_turn_anticlockwise
-execute if data storage gm4_better_armour_stands:temp {pages:["turn left"]} run tag @s remove gm4_turn_clockwise
-execute if data storage gm4_better_armour_stands:temp {pages:["turn right"]} run tag @s add gm4_turn_clockwise
-execute if data storage gm4_better_armour_stands:temp {pages:["turn right"]} run tag @s remove gm4_turn_anticlockwise
-execute if data storage gm4_better_armour_stands:temp {pages:["no turn"]} run tag @s remove gm4_turn_clockwise
-execute if data storage gm4_better_armour_stands:temp {pages:["no turn"]} run tag @s remove gm4_turn_anticlockwise
+# Toggle armor stand gravity.
+execute if data storage gm4_better_armour_stands:temp {pages:["gravity"]} run function gm4_better_armour_stands:toggle/gravity
 
-# Equip item into specified slot even if this is normally impossible.
+# Rotate the armor stand by predefined intervals.
+execute if data storage gm4_better_armour_stands:temp {pages:["turn"]} run function gm4_better_armour_stands:toggle/turn
+
+# Move or rotate armor stand according to player position.
+execute if data storage gm4_better_armour_stands:temp {pages:["rotate"]} rotated as @p[tag=gm4_bas_active] run tp @s ~ ~ ~ ~ ~
+execute if data storage gm4_better_armour_stands:temp {pages:["move"]} run function gm4_better_armour_stands:move/move
+
+# Copy and paste from armor stand item.
+execute if data storage gm4_better_armour_stands:temp {pages:["copy"]} if entity @p[tag=gm4_bas_active,nbt={Inventory:[{Slot:-106b,id:"minecraft:armor_stand"}]}] run function gm4_better_armour_stands:copy
+execute if data storage gm4_better_armour_stands:temp {pages:["paste"]} if data entity @p[tag=gm4_bas_active] Inventory[-1].tag.EntityTag run function gm4_better_armour_stands:paste
+
+# Equip item into specified slot.
 execute if data storage gm4_better_armour_stands:temp {pages:["equip head"]} run function gm4_better_armour_stands:equip/head
 execute if data storage gm4_better_armour_stands:temp {pages:["equip hand"]} run function gm4_better_armour_stands:equip/hand
 execute if data storage gm4_better_armour_stands:temp {pages:["equip offhand"]} run function gm4_better_armour_stands:equip/offhand
+
+# Change armor stand poses.
+scoreboard players reset @s gm4_bas_mode
+execute if data storage gm4_better_armour_stands:temp {pages:["head"]} run function gm4_better_armour_stands:pose/select/head
+execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["body"]} run function gm4_better_armour_stands:pose/select/body
+execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["arm"]} run function gm4_better_armour_stands:pose/select/arms
+execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["leg"]} run function gm4_better_armour_stands:pose/select/legs
