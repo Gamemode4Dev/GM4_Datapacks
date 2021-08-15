@@ -119,7 +119,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_metallurgy:{metal:{type:\"bismuth\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:17,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/bismuth/v0\",Id:[I;140254582,-1151718614,-1277548307,1366135037],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyODAxMzg2NDQ1NCwKICAicHJvZmlsZUlkIiA6ICIwNjNhMTc2Y2RkMTU0ODRiYjU1MjRhNjQyMGM1YjdhNCIsCiAgInByb2ZpbGVOYW1lIiA6ICJkYXZpcGF0dXJ5IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Q1MTM1MWI4MDQzZmIwYTJjMjY5NmNmOGEzMzdkYzRjY2Y4YTUyZjY4MzIwMzAxYzJjZmVjYTBlNWY2OGNlNjQiCiAgICB9CiAgfQp9\"}]}}}"
+              "tag": "{gm4_metallurgy:{metal:{type:\"bismuth\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:17,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/bismuth\",Id:[I;140254582,-1151718614,-1277548307,1366135037],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyODAxMzg2NDQ1NCwKICAicHJvZmlsZUlkIiA6ICIwNjNhMTc2Y2RkMTU0ODRiYjU1MjRhNjQyMGM1YjdhNCIsCiAgInByb2ZpbGVOYW1lIiA6ICJkYXZpcGF0dXJ5IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Q1MTM1MWI4MDQzZmIwYTJjMjY5NmNmOGEzMzdkYzRjY2Y4YTUyZjY4MzIwMzAxYzJjZmVjYTBlNWY2OGNlNjQiCiAgICB9CiAgfQp9\"}]}}}"
             }
           ]
         }
