@@ -1,0 +1,13 @@
+[
+  {
+    "function": "minecraft:set_count",
+    "count": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "$count"
+      },
+      "score": "gm4_guide"
+    }
+  }
+]

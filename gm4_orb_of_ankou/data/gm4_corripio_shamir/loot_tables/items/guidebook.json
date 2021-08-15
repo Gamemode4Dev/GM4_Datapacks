@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3421077,gm4_guidebook:{id:\"corripio_shamir\",stored_pages:[]},pages:['[\"\",{\"text\":\"\u25c0 \",\"color\":\"blue\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/trigger gm4_guide set -1\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table_of_contents\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"blue\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/trigger gm4_guide set -1\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table_of_contents\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\\\n\\\\nThis book is not yet written\"}]'],title:\"Corripio Shamir\",author:Audrey,generation:3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
