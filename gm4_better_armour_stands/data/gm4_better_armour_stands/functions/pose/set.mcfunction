@@ -8,7 +8,6 @@ tp @e[type=villager,tag=gm4_bas_detect,distance=..2,sort=nearest,limit=1] ~ -100
 
 tag @s remove gm4_bas_active
 tag @s remove gm4_bas_track
-tag @s remove gm4_bas_move
 
 kill @e[type=marker,tag=gm4_bas_tracker,sort=nearest,limit=1]
 execute at @e[type=armor_stand,tag=gm4_bas_track,sort=nearest,limit=1] run kill @e[type=marker,tag=gm4_bas_joint,sort=nearest,limit=1]

@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from apply_pose
+# run from pose/select
 
 scoreboard players set @s gm4_bas_mode 2
 
@@ -13,4 +13,5 @@ execute positioned ~ ~-1000 ~ run tp @e[type=villager,tag=gm4_bas_detect,distanc
 
 # spawn markers
 execute at @p[tag=gm4_bas_active] positioned ~ ~1.6 ~ run summon marker ^ ^ ^2 {Tags:["gm4_bas_tracker"]}
-summon marker ~ ~1.5 ~ {Tags:["gm4_bas_joint","gm4_bas_body"]}
+execute if score @s gm4_bas_data matches 0 run summon marker ~ ~1.5 ~ {Tags:["gm4_bas_joint","gm4_bas_body"]}
+execute if score @s gm4_bas_data matches 1 run summon marker ~ ~.7 ~ {Tags:["gm4_bas_joint","gm4_bas_body"]}

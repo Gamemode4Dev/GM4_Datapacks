@@ -37,8 +37,4 @@ execute if data storage gm4_better_armour_stands:temp {pages:["equip hand"]} run
 execute if data storage gm4_better_armour_stands:temp {pages:["equip offhand"]} run function gm4_better_armour_stands:equip/offhand
 
 # Change armor stand poses.
-scoreboard players reset @s gm4_bas_mode
-execute if data storage gm4_better_armour_stands:temp {pages:["head"]} run function gm4_better_armour_stands:pose/select/head
-execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["body"]} run function gm4_better_armour_stands:pose/select/body
-execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["arm"]} run function gm4_better_armour_stands:pose/select/arms
-execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["leg"]} run function gm4_better_armour_stands:pose/select/legs
+execute if data storage gm4_better_armour_stands:temp {pages:["pose"]} run function gm4_better_armour_stands:pose/select

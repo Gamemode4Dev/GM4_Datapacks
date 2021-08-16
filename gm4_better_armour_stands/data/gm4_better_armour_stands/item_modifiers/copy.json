@@ -1,7 +1,7 @@
 [
   {
     "function": "minecraft:set_nbt",
-    "tag": "{Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+    "tag": "{Enchantments:[{id:\"minecraft:protection\",lvl:0}],HideFlags:1}"
   },
   {
     "function": "minecraft:copy_nbt",
