@@ -1,6 +1,8 @@
 scoreboard objectives add gm4_bas_data dummy
 scoreboard objectives add gm4_bas_mode dummy
-scoreboard players set #rounding gm4_bas_data 1800
+scoreboard objectives add gm4_bas_id dummy
+
+scoreboard players set #rounding gm4_bas_data 1500
 
 team add gm4_bas
 team modify gm4_bas collisionRule never

@@ -4,14 +4,13 @@
 
 advancement revoke @s only gm4_better_armour_stands:confirm_pose
 
-tp @e[type=villager,tag=gm4_bas_detect,distance=..2,sort=nearest,limit=1] ~ -1000 ~
+execute as @e[type=armor_stand,tag=gm4_bas_track] if score @s gm4_bas_id = @p[tag=gm4_bas_track] gm4_bas_id at @s run function gm4_better_armour_stands:pose/clear_tracking
+execute as @e[type=marker,tag=gm4_bas_marker] if score @s gm4_bas_id = @p[tag=gm4_bas_track] gm4_bas_id at @s run kill @s
+#execute positioned ^ ^ ^2 run kill @e[type=marker,tag=gm4_bas_player_offset,sort=nearest,limit=1]
 
 tag @s remove gm4_bas_active
 tag @s remove gm4_bas_track
 
-kill @e[type=marker,tag=gm4_bas_tracker,sort=nearest,limit=1]
-execute at @e[type=armor_stand,tag=gm4_bas_track,sort=nearest,limit=1] run kill @e[type=marker,tag=gm4_bas_joint,sort=nearest,limit=1]
-execute as @e[type=armor_stand,tag=gm4_bas_track,sort=nearest,limit=1] run tag @s remove gm4_bas_mirror
-execute as @e[type=armor_stand,tag=gm4_bas_track,sort=nearest,limit=1] run tag @s remove gm4_bas_track
+tp @e[type=villager,tag=gm4_bas_detect,distance=..2,sort=nearest,limit=1] ~ -1000 ~
 
-execute as @e[type=armor_stand,tag=gm4_bas_move,sort=nearest,limit=1] run tag @s remove gm4_bas_move
+playsound minecraft:entity.armor_stand.fall block @a[distance=..5] ~ ~ ~ 0.5 1

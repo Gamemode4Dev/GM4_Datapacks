@@ -32,9 +32,7 @@ execute if data storage gm4_better_armour_stands:temp {pages:["copy"]} if entity
 execute if data storage gm4_better_armour_stands:temp {pages:["paste"]} if data entity @p[tag=gm4_bas_active] Inventory[-1].tag.EntityTag run function gm4_better_armour_stands:paste
 
 # Equip item into specified slot.
-execute if data storage gm4_better_armour_stands:temp {pages:["equip head"]} run function gm4_better_armour_stands:equip/head
-execute if data storage gm4_better_armour_stands:temp {pages:["equip hand"]} run function gm4_better_armour_stands:equip/hand
-execute if data storage gm4_better_armour_stands:temp {pages:["equip offhand"]} run function gm4_better_armour_stands:equip/offhand
+execute if data storage gm4_better_armour_stands:temp {pages:["equip"]} run function gm4_better_armour_stands:equip/select
 
 # Change armor stand poses.
 execute if data storage gm4_better_armour_stands:temp {pages:["pose"]} run function gm4_better_armour_stands:pose/select

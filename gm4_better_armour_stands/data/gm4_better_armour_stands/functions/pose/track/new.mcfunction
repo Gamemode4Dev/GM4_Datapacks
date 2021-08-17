@@ -3,11 +3,10 @@
 # run from tick
 
 # move markers
-tp @e[type=marker,tag=gm4_bas_tracker,sort=nearest,limit=1] ^ ^ ^2
-execute at @s positioned ~ ~1 ~ as @e[type=marker,tag=gm4_bas_joint,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ facing entity @e[type=marker,tag=gm4_bas_tracker,sort=nearest,limit=1]
+execute as @e[type=marker,tag=gm4_bas_player_offset] if score @s gm4_bas_id = @p[tag=gm4_bas_track] gm4_bas_id positioned ^ ^ ^2 run function gm4_better_armour_stands:pose/track/update_markers
 
 # get new scores for rotations
-execute at @s run function gm4_better_armour_stands:pose/track/update_scores
+execute at @e[type=marker,tag=gm4_bas_joint] if score @s gm4_bas_id = @e[type=marker,tag=gm4_bas_joint,distance=..1,sort=nearest,limit=1] gm4_bas_id run function gm4_better_armour_stands:pose/track/update_scores
 
 # snap rotations
 execute as @p[tag=gm4_bas_track] if predicate gm4_better_armour_stands:sneaking run function gm4_better_armour_stands:pose/snap
