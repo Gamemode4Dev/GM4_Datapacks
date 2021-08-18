@@ -8,12 +8,34 @@
               "minecraft:writable_book"
             ]
           },
+          "player": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{Tags:[\"gm4_bas_track\"]}"
+                }
+              }
+            }
+          ],
           "entity": [
             {
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
                 "type": "minecraft:armor_stand"
+              }
+            },
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{Tags:[\"gm4_bas_track\"]}"
+                }
               }
             }
           ]

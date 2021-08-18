@@ -2,11 +2,7 @@
 # at @s
 # run from apply_book
 
-execute if data storage gm4_better_armour_stands:temp {pages:["left"]} run tag @s add gm4_turn_anticlockwise
-execute if data storage gm4_better_armour_stands:temp {pages:["left"]} run tag @s remove gm4_turn_clockwise
-
-execute if data storage gm4_better_armour_stands:temp {pages:["right"]} run tag @s add gm4_turn_clockwise
-execute if data storage gm4_better_armour_stands:temp {pages:["right"]} run tag @s remove gm4_turn_anticlockwise
-
-execute if data storage gm4_better_armour_stands:temp {pages:["stop"]} run tag @s remove gm4_turn_clockwise
-execute if data storage gm4_better_armour_stands:temp {pages:["stop"]} run tag @s remove gm4_turn_anticlockwise
+scoreboard players add @s gm4_bas_turn 1
+execute unless score @s gm4_bas_turn matches 0..2 run scoreboard players set @s gm4_bas_turn 0
+execute if score @s gm4_bas_turn matches 1 run tag @s add gm4_bas_turn
+execute if score @s gm4_bas_turn matches 0 run tag @s remove gm4_bas_turn

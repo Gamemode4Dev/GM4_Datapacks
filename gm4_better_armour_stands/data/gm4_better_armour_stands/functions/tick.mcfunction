@@ -1,8 +1,7 @@
-execute as @e[type=armor_stand,tag=gm4_turn_clockwise] at @s run tp @s ~ ~ ~ ~1 ~0
-execute as @e[type=armor_stand,tag=gm4_turn_anticlockwise] at @s run tp @s ~ ~ ~ ~-1 ~0
+# actions on tracked armor_stand, for pose/move/rotate
+execute at @a[tag=gm4_bas_track] as @e[type=armor_stand,tag=gm4_bas_track] if score @s gm4_bas_id = @p[tag=gm4_bas_track] gm4_bas_id positioned ~ ~1.6 ~ run function gm4_better_armour_stands:pose/track/update
 
-execute as @e[type=armor_stand,tag=gm4_bas_track] at @s at @p[tag=gm4_bas_track,distance=..4] positioned ~ ~1.6 ~ run function gm4_better_armour_stands:pose/track/new
-execute at @a[tag=gm4_bas_track] run tp @e[type=villager,tag=gm4_bas_detect,sort=nearest,limit=1] ^ ^ ^.3
-execute as @a[tag=gm4_bas_move] at @s positioned ~ ~1 ~ run function gm4_better_armour_stands:move/moving
+# turn armor_stand
+execute as @e[type=armor_stand,tag=gm4_bas_turn] at @s run function gm4_better_armour_stands:turn
 
 schedule function gm4_better_armour_stands:tick 1t

@@ -13,7 +13,122 @@
       {
         "source": "EntityTag",
         "target": "EntityTag",
-        "op": "merge"
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "text": "Copied by: ",
+          "color": "gray",
+          "italic": false,
+          "extra": [
+            {
+              "selector": "@p[tag=gm4_bas_active]"
+            }
+          ]
+        }
+      ]
+    ],
+    "replace": true
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "●  Custom pose",
+        "color": "gray",
+        "italic": false
+      }
+    ],
+    "replace": false
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "●  Small",
+        "color": "gray",
+        "italic": false
+      }
+    ],
+    "replace": false,
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Small:1b}"
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "●  No base plate",
+        "color": "gray",
+        "italic": false
+      }
+    ],
+    "replace": false,
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{NoBasePlate:1b}"
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "●  No gravity",
+        "color": "gray",
+        "italic": false
+      }
+    ],
+    "replace": false,
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{NoGravity:1b}"
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "●  Invisible",
+        "color": "gray",
+        "italic": false
+      }
+    ],
+    "replace": false,
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Invisible:1b}"
+        }
       }
     ]
   }
