@@ -1,4 +1,4 @@
-# @s = armor_stand to be modified
+# @s = player right clicking armor_stand with writable_book
 # at @s
 # run from use_book and ray 
 

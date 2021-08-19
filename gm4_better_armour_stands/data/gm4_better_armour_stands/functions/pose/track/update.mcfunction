@@ -27,11 +27,7 @@ execute if score @s gm4_bas_mode matches 5 run function gm4_better_armour_stands
 execute if score @s gm4_bas_mode matches 6 run function gm4_better_armour_stands:pose/track/leg_right
 
 execute if score @s gm4_bas_mode matches 7 run function gm4_better_armour_stands:pose/track/move
-execute if score @s gm4_bas_mode matches 8 at @s run tp @s ~ ~ ~ facing entity @e[type=marker,tag=gm4_bas_player_offset,sort=nearest,limit=1]
-
-# snap position/rotation
-execute if score @s gm4_bas_mode matches 7 if entity @p[tag=gm4_bas_track,predicate=gm4_better_armour_stands:sneaking] run function gm4_better_armour_stands:pose/snap/position
-execute if score @s gm4_bas_mode matches 8 if entity @p[tag=gm4_bas_track,predicate=gm4_better_armour_stands:sneaking] run function gm4_better_armour_stands:pose/snap/rotation
+execute if score @s gm4_bas_mode matches 8 run function gm4_better_armour_stands:pose/track/rotate
 
 # copy pose data from storage to entity.
 data modify entity @s Pose merge from storage gm4_better_armour_stands:temp Pose
