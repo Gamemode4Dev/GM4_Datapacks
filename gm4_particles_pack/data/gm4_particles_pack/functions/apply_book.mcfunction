@@ -1,9 +1,9 @@
 # @s = armor_stand to be modified
 #run by the better armor stand base module
 
-scoreboard players reset @s gm4_particle
-data merge entity @s[scores={gm4_particle=1..}] {Invisible:0b}
+execute if score @s gm4_particle matches 1.. run data modify entity @s Invisible set value 0
 kill @e[type=area_effect_cloud,tag=gm4_particles_pack_cloud,distance=..1,limit=1,sort=nearest]
+scoreboard players reset @s gm4_particle
 
 execute if data storage gm4_better_armour_stands:temp {pages:["heart"]} run scoreboard players set @s gm4_particle 1
 execute if data storage gm4_better_armour_stands:temp {pages:["flame"]} run scoreboard players set @s gm4_particle 2
