@@ -3,7 +3,7 @@
 # run from gm4_better_armour_stands/store_book_pages
 
 # reset armor_stand and particle cloud
-execute if score @s gm4_particle matches 1.. run data modify entity @s Invisible set value 0
+data modify entity @s[scores={gm4_particle=1..}] Invisible set value 0
 kill @e[type=area_effect_cloud,tag=gm4_particles_pack_cloud,distance=..1,limit=1,sort=nearest]
 scoreboard players reset @s gm4_particle
 
@@ -20,4 +20,4 @@ execute if data storage gm4_better_armour_stands:temp {pages:["snow"]} run score
 execute if data storage gm4_better_armour_stands:temp {pages:["particle"]} run function gm4_particles_pack:particle_cloud
 
 # turn armor_stand invisible
-execute if score @s gm4_particle matches 1.. run data modify entity @s Invisible set value 1
+data modify entity @s[scores={gm4_particle=1..}] Invisible set value 1
