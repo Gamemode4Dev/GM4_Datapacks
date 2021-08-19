@@ -1,7 +1,8 @@
-#@s = custom crafters with valid recipe format inside
+# @s = custom crafters with valid recipe format inside
+# run from
 
-#recipes
-#sandstones to sand
+# recipes
+# sandstones to sand
 execute if score @s gm4_slot_count matches 1 if score @s gm4_stack_size matches ..16 if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:sandstone"}]} run data merge storage gm4_custom_crafters:temp/crafter {Items:[{Slot:8,id:"sand",Count:1b,tag:{gm4_custom_crafters:{multiplier:4}}}]}
 execute if score @s gm4_slot_count matches 1 if score @s gm4_stack_size matches ..16 if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:chiseled_sandstone"}]} run data merge storage gm4_custom_crafters:temp/crafter {Items:[{Slot:8,id:"sand",Count:1b,tag:{gm4_custom_crafters:{multiplier:4}}}]}
 execute if score @s gm4_slot_count matches 1 if score @s gm4_stack_size matches ..16 if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:cut_sandstone"}]} run data merge storage gm4_custom_crafters:temp/crafter {Items:[{Slot:8,id:"sand",Count:1b,tag:{gm4_custom_crafters:{multiplier:4}}}]}
@@ -33,6 +34,12 @@ execute if score @s gm4_slot_count matches 9 if score @s gm4_stack_size matches 
 
 #quartz block nether quartz
 execute if score @s gm4_slot_count matches 1 if score @s gm4_stack_size matches ..16 if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:quartz_block"}]} run data merge storage gm4_custom_crafters:temp/crafter {Items:[{Slot:8,id:"quartz",Count:1b,tag:{gm4_custom_crafters:{multiplier:4}}}]}
+
+#amethyst block amethyst shards
+execute if score @s gm4_slot_count matches 1 if score @s gm4_stack_size matches ..16 if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:amethyst_block"}]} run data merge storage gm4_custom_crafters:temp/crafter {Items:[{Slot:8,id:"amethyst_shard",Count:1b,tag:{gm4_custom_crafters:{multiplier:4}}}]}
+
+#dripstone block pointed dripstone
+execute if score @s gm4_slot_count matches 1 if score @s gm4_stack_size matches ..16 if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:dripstone_block"}]} run data merge storage gm4_custom_crafters:temp/crafter {Items:[{Slot:8,id:"pointed_dripstone",Count:1b,tag:{gm4_custom_crafters:{multiplier:4}}}]}
 
 #stairs
 execute if score @s gm4_slot_count matches 4 if score @s gm4_stack_size matches ..16 run function gm4_standard_crafting:stairs_recipes
