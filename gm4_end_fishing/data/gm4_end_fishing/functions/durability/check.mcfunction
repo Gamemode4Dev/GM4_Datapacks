@@ -1,5 +1,5 @@
-#@s = player who reeled in the armor stand w/ fishing rod
-#run from tick
+# @s = none
+# run from durability/prep_mainhand and durability/prep_offhand
 
-execute as @s[tag=gm4_ef_durability_main] run function gm4_end_fishing:durability/set_mainhand
-execute as @s[tag=gm4_ef_durability_off] run function gm4_end_fishing:durability/set_offhand
+execute as @a[gamemode=!creative,tag=gm4_ef_durability_main] run function gm4_end_fishing:durability/set_mainhand
+execute as @a[gamemode=!creative,tag=gm4_ef_durability_off] run function gm4_end_fishing:durability/set_offhand
