@@ -17,12 +17,11 @@ execute if data storage gm4_better_armour_stands:temp {pages:["winter"]} run sco
 execute if data storage gm4_better_armour_stands:temp {pages:["blossom"]} run scoreboard players set @s gm4_particle 10
 execute if data storage gm4_better_armour_stands:temp {pages:["autumn"]} run scoreboard players set @s gm4_particle 11
 execute if data storage gm4_better_armour_stands:temp {pages:["spring"]} run scoreboard players set @s gm4_particle 12
-execute if data storage gm4_better_armour_stands:temp {pages:["winter"]} run scoreboard players set @s gm4_particle 13
-execute if data storage gm4_better_armour_stands:temp {pages:["ash"]} run scoreboard players set @s gm4_particle 14
-execute if data storage gm4_better_armour_stands:temp {pages:["lava"]} run scoreboard players set @s gm4_particle 15
-execute if data storage gm4_better_armour_stands:temp {pages:["fiesta"]} run scoreboard players set @s gm4_particle 16
-execute if data storage gm4_better_armour_stands:temp {pages:["ender"]} run scoreboard players set @s gm4_particle 17
-execute if data storage gm4_better_armour_stands:temp {pages:["enchant"]} run scoreboard players set @s gm4_particle 18
+execute if data storage gm4_better_armour_stands:temp {pages:["ash"]} run scoreboard players set @s gm4_particle 13
+execute if data storage gm4_better_armour_stands:temp {pages:["lava"]} run scoreboard players set @s gm4_particle 14
+execute if data storage gm4_better_armour_stands:temp {pages:["fiesta"]} run scoreboard players set @s gm4_particle 15
+execute if data storage gm4_better_armour_stands:temp {pages:["ender"]} run scoreboard players set @s gm4_particle 16
+execute if data storage gm4_better_armour_stands:temp {pages:["enchant"]} run scoreboard players set @s gm4_particle 17
 
 execute if score @s gm4_particle matches 5 run summon area_effect_cloud ~ ~1 ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:cloud,Tags:["gm4_particles_pack_cloud"]}
 execute if score @s gm4_particle matches 6 run summon area_effect_cloud ~ ~1 ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:bubble,Tags:["gm4_particles_pack_cloud"]}
