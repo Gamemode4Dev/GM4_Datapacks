@@ -5,7 +5,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "gm4_crossbow_cartridges:torch_placeable"
+					"tag": "gm4:full_collision"
 				}
 			}
 		},
