@@ -1,6 +1,6 @@
 {
 	"values": [
-		"#gm4_crossbow_cartridges:torch_placeable",
+		"#gm4:full_collision",
 		"#minecraft:anvil",
 		"minecraft:scaffolding",
 		"minecraft:glass_pane",

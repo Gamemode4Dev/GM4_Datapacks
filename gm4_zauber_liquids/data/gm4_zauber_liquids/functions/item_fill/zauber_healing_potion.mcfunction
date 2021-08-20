@@ -1,4 +1,10 @@
-execute unless block ~ ~-1 ~ soul_fire run item replace block ~ ~ ~ container.0 with potion{gm4_zauber_cauldrons:{item:"potion",type:"instant_health",bottle:{multi_use:0}},display:{Lore:['[{"translate":"effect.minecraft.instant_health","color":"blue","italic":false}," ",{"translate":"potion.potency.3","color":"blue","italic":false}]','[{"translate":"effect.minecraft.nausea","color":"red","italic":false},{"text":" (0:08)","color":"red","italic":false}]']},HideFlags:32,Potion:"healing",CustomPotionEffects:[{Id:6,Amplifier:3,Duration:1},{Id:9,Amplifier:0,Duration:160}]}
-execute if block ~ ~-1 ~ soul_fire run item replace block ~ ~ ~ container.0 with potion{gm4_zauber_cauldrons:{item:"potion",type:"instant_health",bottle:{sips:9b,multi_use:1b}},display:{Lore:['[{"text":"9/9 ","color":"gray","italic":false},{"translate":"%1$s%3427655$s","with":[{"text":"Sips"},{"translate":"item.gm4.zauber_cauldrons.multi_use_bottle.lore.sips"}],"color":"gray","italic":false}]','[{"translate":"effect.minecraft.instant_health","color":"blue","italic":false}," ",{"translate":"potion.potency.3","color":"blue","italic":false}]','[{"translate":"effect.minecraft.nausea","color":"red","italic":false},{"text":" (0:08)","color":"red","italic":false}]'],Name:'{"translate":"%1$s","with":["Soulution of Healing",[{"translate":"item.gm4.zauber_cauldrons.multi_use_bottle"},{"translate":"item.minecraft.potion.effect.healing"}]],"italic":false}'},HideFlags:32,Potion:"healing",CustomPotionEffects:[{Id:6,Amplifier:3,Duration:1},{Id:9,Amplifier:0,Duration:160}]}
-scoreboard players remove @s gm4_lt_value 1
+# run from gm4_zauber_liquids:item_fill
+# @s = tank being processed
+
+# $item_value set in item_fill function for efficiency
+
+loot replace entity @s weapon.mainhand loot gm4_zauber_cauldrons:recipes/potions/drinkable/instant_health
+data modify storage gm4_liquid_tanks:temp/tank output set from entity @s HandItems[0]
+item replace entity @s weapon.mainhand with air
+function gm4_liquid_tanks:smart_item_fill
 tag @s add gm4_lt_fill

@@ -66,7 +66,7 @@ scoreboard objectives add gm4_use_axe_gol minecraft.used:minecraft.golden_axe
 scoreboard objectives add gm4_use_axe_iro minecraft.used:minecraft.iron_axe
 scoreboard objectives add gm4_use_axe_sto minecraft.used:minecraft.stone_axe
 scoreboard objectives add gm4_use_axe_woo minecraft.used:minecraft.wooden_axe
-scoreboard objectives add gm4_arb_stat dummy
+scoreboard objectives add gm4_arb_depth dummy
 
 #ender_bolt
 scoreboard objectives add gm4_bolt_damage minecraft.custom:minecraft.damage_dealt
