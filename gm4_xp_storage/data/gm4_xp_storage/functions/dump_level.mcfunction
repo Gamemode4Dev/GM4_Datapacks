@@ -1,6 +1,7 @@
-#dumps one level from player into e-chest
-#@s = players not sneaking on an ender chest
-#run from deposit_mode_check and dump_all
+# Deposit 1 level
+# @s = players on top of ender chest
+# at @s
+# run from deposit_mode_check and dump_all
 
 execute store result score @s gm4_xp_calc run xp query @s points
 execute unless entity @s[level=0] run scoreboard players add @s gm4_xp_calc 1

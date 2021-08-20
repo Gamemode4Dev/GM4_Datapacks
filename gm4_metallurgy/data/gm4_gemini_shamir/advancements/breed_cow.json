@@ -1,13 +1,15 @@
 {
-  "criteria":{
-    "breed_cows":{
-      "trigger":"minecraft:bred_animals",
-      "conditions":{
-        "type":"cow"
+  "criteria": {
+    "breed_cows": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "cow"
+        }
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_cow"
+    "function": "gm4_gemini_shamir:breed/check_cow"
   }
 }

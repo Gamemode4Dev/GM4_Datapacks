@@ -1,10 +1,9 @@
-# Inspect beehive item
-# @s = beehive item
+# @s = beehive item, Age:0
 # at @s
-# run from main
+# run from find_item
 
 # store bee count in scoreboard
-execute store result score #bees gm4_beehive_insp run data get entity @s Item.tag.BlockEntityTag.Bees
+execute store result score $bees gm4_beehive_insp run data get entity @s Item.tag.BlockEntityTag.Bees
 
 # set nbt if broken without silk touch
 execute unless data entity @s Item.tag run data modify entity @s Item.tag set value {BlockEntityTag:{Bees:[]},BlockStateTag:{honey_level:"0"}}

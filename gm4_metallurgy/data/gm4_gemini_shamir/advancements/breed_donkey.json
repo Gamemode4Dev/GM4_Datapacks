@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "breed_donkeys": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "donkey"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_gemini_shamir:breed/check_donkey"
+  }
+}

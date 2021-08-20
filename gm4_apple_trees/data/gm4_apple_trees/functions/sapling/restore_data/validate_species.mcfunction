@@ -1,5 +1,5 @@
 # checks whether the sapling is an apple sapling, and if so allows further execution
-# @s apple tree sapling AEC
+# @s apple tree sapling marker
 # at @s align xyz
 # run from #gm4_fruiting_trees:sapling/restore_data
 

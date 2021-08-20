@@ -1,0 +1,36 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_metallurgy:thorium_band",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:123,SkullOwner:{Name:\"[Drop to Fix Item] gm4_vibro_shamir:band\"},gm4_metallurgy:{stored_shamir:\"vibro\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "replace": false,
+                            "lore": [
+                                {
+                                    "translate": "%1$s%3427655$s",
+                                    "with": [
+                                        "Vibro",
+                                        {
+                                            "translate": "item.gm4.shamir.vibro"
+                                        }
+                                    ],
+                                    "italic": false,
+                                    "color": "gray"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

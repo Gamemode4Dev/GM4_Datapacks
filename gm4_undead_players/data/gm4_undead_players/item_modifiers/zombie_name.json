@@ -1,0 +1,27 @@
+{
+  "function": "minecraft:set_name",
+  "entity": "this",
+  "name": {
+    "translate": "%1$s%3427655$s",
+    "with": [
+      {
+        "text": "Undead ",
+        "extra": [
+          {
+            "storage": "gm4_undead_players:temp",
+            "nbt": "name_attribute.Name"
+          }
+        ]
+      },
+      {
+        "translate": "entity.gm4.undead_player_name",
+        "with": [
+          {
+            "storage": "gm4_undead_players:temp",
+            "nbt": "name_attribute.Name"
+          }
+        ]
+      }
+    ]
+  }
+}

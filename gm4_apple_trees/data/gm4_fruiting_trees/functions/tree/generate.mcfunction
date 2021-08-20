@@ -1,5 +1,5 @@
 # starts generating a tree layer by layer
-# @s = sapling marker area_effect_cloud
+# @s = sapling marker
 # at @s align xyz
 # run from gm4_fruiting_trees:tree/initialize
 

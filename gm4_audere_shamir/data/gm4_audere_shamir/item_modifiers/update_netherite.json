@@ -1,0 +1,4 @@
+{
+  "function": "minecraft:set_nbt",
+  "tag": "{gm4_audere_shamir:{max_durability:2031}}"
+}

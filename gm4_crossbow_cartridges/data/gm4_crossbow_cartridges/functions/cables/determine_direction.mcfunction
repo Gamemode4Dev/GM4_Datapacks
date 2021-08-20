@@ -1,8 +1,10 @@
-#run from cables/shoot_arrow
-#@s = player using the crossbow
+# Determine direction of tripwire
+# @s = player using the crossbow
+# at @s align xyz positioned ~0.5 ~ ~0.5, in tripwire hook
+# run from cables/shoot_arrow
 
-#check if player is facing roughly in one of the cardinal directions, unspool string if this is true
-execute positioned ~ ~ ~-1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=170..190] run function gm4_crossbow_cartridges:cables/unspool_string_north
-execute positioned ~1 ~ ~ if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=-100..-80] run function gm4_crossbow_cartridges:cables/unspool_string_east
-execute positioned ~ ~ ~1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=-10..10] run function gm4_crossbow_cartridges:cables/unspool_string_south
-execute positioned ~-1 ~ ~ if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable if entity @s[y_rotation=80..100] run function gm4_crossbow_cartridges:cables/unspool_string_west
+# check if player is facing roughly in one of the cardinal directions, unspool string if this is true
+execute if entity @s[y_rotation=170..190] rotated 180 0 positioned ^ ^ ^1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable run function gm4_crossbow_cartridges:cables/unspool_string
+execute if entity @s[y_rotation=-100..-80] rotated -90 0 positioned ^ ^ ^1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable run function gm4_crossbow_cartridges:cables/unspool_string
+execute if entity @s[y_rotation=-10..10] rotated 0 0 positioned ^ ^ ^1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable run function gm4_crossbow_cartridges:cables/unspool_string
+execute if entity @s[y_rotation=80..100] rotated 90 0 positioned ^ ^ ^1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable run function gm4_crossbow_cartridges:cables/unspool_string
