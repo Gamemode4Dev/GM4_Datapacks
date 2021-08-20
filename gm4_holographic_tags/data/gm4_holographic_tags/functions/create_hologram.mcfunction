@@ -8,5 +8,8 @@ execute if block ^ ^ ^-0.75 #minecraft:wool as @e[type=area_effect_cloud,tag=gm4
 advancement grant @a[distance=..4,gamemode=!spectator] only gm4:holographic_tags
 playsound minecraft:entity.item_frame.remove_item block @a
 particle minecraft:block stripped_acacia_log ~ ~ ~ .2 .2 .2 .1 10
-summon item ~ ~ ~ {Item:{id:"minecraft:item_frame",Count:1b},PickupDelay:10s,Motion:[0.0,0.25,0.0]}
+
+execute if entity @s[type=item_frame] run summon item ~ ~ ~ {Item:{id:"minecraft:item_frame",Count:1b},PickupDelay:10s,Motion:[0.0,0.25,0.0]}
+execute if entity @s[type=glow_item_frame] run summon item ~ ~ ~ {Item:{id:"minecraft:glow_item_frame",Count:1b},PickupDelay:10s,Motion:[0.0,0.25,0.0]}
+
 kill @s
