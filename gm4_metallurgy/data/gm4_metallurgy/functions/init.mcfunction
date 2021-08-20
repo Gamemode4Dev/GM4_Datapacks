@@ -69,7 +69,6 @@ scoreboard objectives add gm4_use_axe_woo minecraft.used:minecraft.wooden_axe
 scoreboard objectives add gm4_arb_depth dummy
 
 #ender_bolt
-scoreboard objectives add gm4_bolt_damage minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add gm4_bolt_time dummy
 
 #musical

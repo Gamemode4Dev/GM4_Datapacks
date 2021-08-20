@@ -11,9 +11,6 @@ function gm4_arborenda_shamir:main
 # hypexperia
 execute if score $hypexperia_active gm4_ml_data matches 1 run function gm4_hypexperia_shamir:find_orbs
 
-# ender_bolt
-execute as @a[gamemode=!spectator,scores={gm4_bolt_damage=1..},predicate=gm4_metallurgy:ender_bolt_active] at @s positioned ^ ^ ^2 as @e[distance=..2,team=!gm4_invalid,type=!player,type=!armor_stand] run scoreboard players set @s gm4_bolt_time 20
-
 # vibro
 execute as @a[gamemode=!spectator,tag=gm4_has_vibro,predicate=gm4_vibro_shamir:sneak_on_ground] at @s run function gm4_vibro_shamir:jump
 scoreboard players reset @a[gamemode=!spectator,tag=gm4_has_vibro,predicate=!gm4_vibro_shamir:sneak_on_ground] gm4_vibro_sneak
