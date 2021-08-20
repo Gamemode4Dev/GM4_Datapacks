@@ -1,4 +1,4 @@
-# @s = player holding tinker shovel
+# @s = player holding tinker pickaxe
 # at @s
 # run from gm4_tinker_shamir:active
 
@@ -16,6 +16,10 @@ execute unless score $success gm4_ml_data matches 1.. if data storage gm4_tinker
 execute unless score $success gm4_ml_data matches 1.. if data storage gm4_tinker_shamir:temp/player/inventory Inventory[{id:"minecraft:gold_ingot",Count:64b}] run function gm4_tinker_shamir:compact/gold_ingot
 execute unless score $success gm4_ml_data matches 1.. if data storage gm4_tinker_shamir:temp/player/inventory Inventory[{id:"minecraft:iron_nugget",Count:64b}] run function gm4_tinker_shamir:compact/iron_nugget
 execute unless score $success gm4_ml_data matches 1.. if data storage gm4_tinker_shamir:temp/player/inventory Inventory[{id:"minecraft:gold_nugget",Count:64b}] run function gm4_tinker_shamir:compact/gold_nugget
+execute unless score $success gm4_ml_data matches 1.. if data storage gm4_tinker_shamir:temp/player/inventory Inventory[{id:"minecraft:copper_ingot",Count:64b}] run function gm4_tinker_shamir:compact/copper_ingot
+execute unless score $success gm4_ml_data matches 1.. if data storage gm4_tinker_shamir:temp/player/inventory Inventory[{id:"minecraft:raw_iron",Count:64b}] run function gm4_tinker_shamir:compact/raw_iron
+execute unless score $success gm4_ml_data matches 1.. if data storage gm4_tinker_shamir:temp/player/inventory Inventory[{id:"minecraft:raw_gold",Count:64b}] run function gm4_tinker_shamir:compact/raw_gold
+execute unless score $success gm4_ml_data matches 1.. if data storage gm4_tinker_shamir:temp/player/inventory Inventory[{id:"minecraft:raw_copper",Count:64b}] run function gm4_tinker_shamir:compact/raw_copper
 
 # clear storage
 data remove storage gm4_tinker_shamir:temp/player/inventory Inventory
