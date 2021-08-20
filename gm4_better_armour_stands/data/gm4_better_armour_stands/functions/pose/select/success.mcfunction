@@ -22,6 +22,9 @@ execute if score @s gm4_bas_mode matches 1.. run scoreboard players operation @e
 tag @e[type=marker,tag=gm4_bas_new,distance=..5] remove gm4_bas_new
 
 # optional checks
+execute if score $pose_options gm4_bas_mode matches 2..5 unless score $pose_options gm4_bas_mode matches 3 run tag @s add gm4_bas_mirror
+execute if score $pose_options gm4_bas_mode matches 3..5 run tag @s add gm4_bas_invert
 execute if data storage gm4_better_armour_stands:temp {pages:["mirror"]} run tag @s add gm4_bas_mirror
 execute if data storage gm4_better_armour_stands:temp {pages:["invert"]} run tag @s add gm4_bas_invert
+
 execute if entity @p[tag=gm4_bas_active,predicate=gm4_better_armour_stands:sneaking] run tag @s add gm4_bas_alt

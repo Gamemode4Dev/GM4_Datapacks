@@ -15,7 +15,6 @@ execute positioned ~ ~-1000 ~ as @e[tag=gm4_bas_detect_part,distance=..2] at @s 
 tp @s ~ ~1000 ~
 
 # detect what player is looking at
-scoreboard players reset @s gm4_bas_mode
 execute if entity @p[tag=gm4_bas_active,predicate=gm4_better_armour_stands:select/head] run function gm4_better_armour_stands:pose/select/head
 execute unless score @s gm4_bas_mode matches 1.. if entity @p[tag=gm4_bas_active,predicate=gm4_better_armour_stands:select/body] run function gm4_better_armour_stands:pose/select/body
 execute unless score @s gm4_bas_mode matches 1.. if entity @p[tag=gm4_bas_active,predicate=gm4_better_armour_stands:select/left_arm] run function gm4_better_armour_stands:pose/select/arm_left
@@ -33,3 +32,6 @@ tp @s ~ ~ ~
 
 # kill spawn detectors
 execute positioned ~ ~.5 ~ run tp @e[tag=gm4_bas_detect_part,distance=..3] ~ -1000 ~
+
+# reset options
+scoreboard players reset $pose_options gm4_bas_mode

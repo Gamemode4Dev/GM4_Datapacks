@@ -3,6 +3,8 @@
 # run from pose/set
 
 scoreboard players reset @s gm4_bas_id
+scoreboard players reset @s gm4_bas_mode
+
 tag @s remove gm4_bas_mirror
 tag @s remove gm4_bas_invert
 tag @s remove gm4_bas_alt

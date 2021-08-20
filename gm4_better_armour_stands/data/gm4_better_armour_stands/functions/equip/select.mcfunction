@@ -21,4 +21,4 @@ execute if entity @p[tag=gm4_bas_active,predicate=gm4_better_armour_stands:selec
 tp @s ~ ~ ~
 
 # kill spawn detectors
-execute positioned ~ ~1 ~ run tp @e[tag=gm4_bas_detect_part,distance=..1] ~ -1000 ~
+execute positioned ~ ~.5 ~ run tp @e[tag=gm4_bas_detect_part,distance=..1] ~ -1000 ~
