@@ -8,7 +8,7 @@ tag @s add gm4_bas_track
 tag @p[tag=gm4_bas_active] add gm4_bas_track
 
 # right click detection
-summon minecraft:villager ~ ~-1000 ~ {Tags:["gm4_bas_detect","gm4_bas_new"],Team:"gm4_bas",Silent:1b,NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:10000000,ShowParticles:0b}]}
+summon minecraft:villager ~ ~-1000 ~ {CustomName:'"gm4_bas_detect_rightclick"',Tags:["gm4_bas_detect","gm4_bas_new"],Team:"gm4_bas",Silent:1b,NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:10000000,ShowParticles:0b}]}
 execute positioned ~ ~-1000 ~ run tp @e[type=villager,tag=gm4_bas_detect,distance=..1,sort=nearest,limit=1] @p[tag=gm4_bas_active] 
 
 # player offset marker
@@ -24,7 +24,5 @@ tag @e[type=marker,tag=gm4_bas_new,distance=..5] remove gm4_bas_new
 # optional checks
 execute if score $pose_options gm4_bas_mode matches 2..5 unless score $pose_options gm4_bas_mode matches 3 run tag @s add gm4_bas_mirror
 execute if score $pose_options gm4_bas_mode matches 3..5 run tag @s add gm4_bas_invert
-execute if data storage gm4_better_armour_stands:temp {pages:["mirror"]} run tag @s add gm4_bas_mirror
-execute if data storage gm4_better_armour_stands:temp {pages:["invert"]} run tag @s add gm4_bas_invert
 
 execute if entity @p[tag=gm4_bas_active,predicate=gm4_better_armour_stands:sneaking] run tag @s add gm4_bas_alt
