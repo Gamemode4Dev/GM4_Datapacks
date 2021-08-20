@@ -2,79 +2,79 @@
 #run from liquid_tanks:item_process
 
 #night_vision
-execute if score @s[tag=gm4_lt_night_vision] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/night_vision_potion
+execute if entity @s[tag=gm4_lt_night_vision] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/night_vision_potion
 
 #invisibility
-execute if score @s[tag=gm4_lt_invisibility] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/invisibility_potion
+execute if entity @s[tag=gm4_lt_invisibility] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/invisibility_potion
 
 #leaping
-execute if score @s[tag=gm4_lt_leaping] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/leaping_potion
+execute if entity @s[tag=gm4_lt_leaping] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/leaping_potion
 
 #strong leaping
-execute if score @s[tag=gm4_lt_strong_leaping] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/strong_leaping_potion
+execute if entity @s[tag=gm4_lt_strong_leaping] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/strong_leaping_potion
 
 #fire resistance
-execute if score @s[tag=gm4_lt_fire_resistance] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/fire_resistance_potion
+execute if entity @s[tag=gm4_lt_fire_resistance] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/fire_resistance_potion
 
 #swiftness
-execute if score @s[tag=gm4_lt_swiftness] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/swiftness_potion
+execute if entity @s[tag=gm4_lt_swiftness] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/swiftness_potion
 
 #strong swiftness
-execute if score @s[tag=gm4_lt_strong_swiftness] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/strong_swiftness_potion
+execute if entity @s[tag=gm4_lt_strong_swiftness] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/strong_swiftness_potion
 
 #slowness
-execute if score @s[tag=gm4_lt_slowness] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/slowness_potion
+execute if entity @s[tag=gm4_lt_slowness] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/slowness_potion
 
 #strong slowness
-execute if score @s[tag=gm4_lt_strong_slowness] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/strong_slowness_potion
+execute if entity @s[tag=gm4_lt_strong_slowness] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/strong_slowness_potion
 
 #turtle master
-execute if score @s[tag=gm4_lt_turtle_master] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/turtle_master_potion
+execute if entity @s[tag=gm4_lt_turtle_master] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/turtle_master_potion
 
 #strong turtle master
-execute if score @s[tag=gm4_lt_strong_turtle_master] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/strong_turtle_master_potion
+execute if entity @s[tag=gm4_lt_strong_turtle_master] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/strong_turtle_master_potion
 
 #water breathing
-execute if score @s[tag=gm4_lt_water_breathing] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/water_breathing_potion
+execute if entity @s[tag=gm4_lt_water_breathing] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/water_breathing_potion
 
 #healing
-execute if score @s[tag=gm4_lt_healing] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/healing_potion
+execute if entity @s[tag=gm4_lt_healing] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/healing_potion
 
 #strong healing
-execute if score @s[tag=gm4_lt_strong_healing] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/strong_healing_potion
+execute if entity @s[tag=gm4_lt_strong_healing] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/strong_healing_potion
 
 #harming
-execute if score @s[tag=gm4_lt_harming] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/harming_potion
+execute if entity @s[tag=gm4_lt_harming] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/harming_potion
 
 #strong harming
-execute if score @s[tag=gm4_lt_strong_harming] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/strong_harming_potion
+execute if entity @s[tag=gm4_lt_strong_harming] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/strong_harming_potion
 
 #poison
-execute if score @s[tag=gm4_lt_poison] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/poison_potion
+execute if entity @s[tag=gm4_lt_poison] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/poison_potion
 
 #strong poison
-execute if score @s[tag=gm4_lt_strong_poison] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/strong_poison_potion
+execute if entity @s[tag=gm4_lt_strong_poison] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/strong_poison_potion
 
 #regeneration
-execute if score @s[tag=gm4_lt_regeneration] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/regeneration_potion
+execute if entity @s[tag=gm4_lt_regeneration] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/regeneration_potion
 
 #strong regeneration
-execute if score @s[tag=gm4_lt_strong_regeneration] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/strong_regeneration_potion
+execute if entity @s[tag=gm4_lt_strong_regeneration] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/strong_regeneration_potion
 
 #strength
-execute if score @s[tag=gm4_lt_strength] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/strength_potion
+execute if entity @s[tag=gm4_lt_strength] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/strength_potion
 
 #strong strength
-execute if score @s[tag=gm4_lt_strong_strength] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/strong_strength_potion
+execute if entity @s[tag=gm4_lt_strong_strength] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/strong_strength_potion
 
 #weakness
-execute if score @s[tag=gm4_lt_weakness] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/weakness_potion
+execute if entity @s[tag=gm4_lt_weakness] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/weakness_potion
 
 #luck
-execute if score @s[tag=gm4_lt_luck] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/luck_potion
+execute if entity @s[tag=gm4_lt_luck] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/luck_potion
 
 #slow falling
-execute if score @s[tag=gm4_lt_slow_falling] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/slow_falling_potion
+execute if entity @s[tag=gm4_lt_slow_falling] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/slow_falling_potion
 
 #floating
-execute if score @s[tag=gm4_lt_floating] gm4_lt_value matches 1.. if block ~ ~ ~ hopper{Items:[{Slot:0b,id:"minecraft:glass_bottle"}]} run function gm4_potion_liquids:item_fill/floating_potion
+execute if entity @s[tag=gm4_lt_floating] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glass_bottle"}} run function gm4_potion_liquids:item_fill/floating_potion
