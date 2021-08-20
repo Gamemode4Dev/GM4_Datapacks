@@ -1,6 +1,6 @@
 # creates refrence frame for apple placement and recurses fr future apple placement
-# @s = sapling marker area_effect_cloud
-# positioned ~ ~n ~ above the AEC rotated as @s
+# @s = sapling marker
+# positioned ~ ~n ~ above the marker rotated as @s
 # run from gm4_apple_trees:tree/leaf/fruiting/select_location/set_coordinate
 
 # set starting angle angle (binary search tree)
