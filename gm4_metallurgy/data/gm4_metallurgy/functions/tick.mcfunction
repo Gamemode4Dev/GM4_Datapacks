@@ -6,8 +6,7 @@ execute if score found_item_on_anvil gm4_ml_data matches 1 as @e[type=item,tag=g
 execute if entity @e[tag=gm4_in_spiraculum] as @a[tag=gm4_has_spiraculum] at @s run function gm4_spiraculum_shamir:spiral
 
 # arborenda
-execute if score arborenda_active gm4_ml_data matches 1 as @a[tag=gm4_has_arborenda] at @s run function gm4_arborenda_shamir:main
-execute as @e[type=area_effect_cloud,tag=gm4_arborenda_trunk] at @s run function gm4_arborenda_shamir:destroy_trunk
+function gm4_arborenda_shamir:main
 
 # hypexperia
 execute if score hypexperia_active gm4_ml_data matches 1 run function gm4_hypexperia_shamir:find_orbs
