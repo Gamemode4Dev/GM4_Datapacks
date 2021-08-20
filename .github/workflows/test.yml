@@ -64,6 +64,7 @@ jobs:
             gm4_standard_liquids:util/signs/ink_sign
             gm4_soul_glass:destroy
             gm4_soul_glass:furnace/modify_output
+            gm4_vibro_shamir:shock/user
             gm4_zauber_cauldrons:cauldron/extra_items/catch_possessed_items
             gm4_zauber_cauldrons:extra_items/bottled_vex
             gm4_zauber_cauldrons:recipes/chorus/wormhole
