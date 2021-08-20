@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "breed_horses": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "horse"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_gemini_shamir:breed/check_horse"
+  }
+}

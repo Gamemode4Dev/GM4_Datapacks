@@ -1,13 +1,15 @@
 {
-  "criteria":{
-    "breed_llamas":{
-      "trigger":"minecraft:bred_animals",
-      "conditions":{
-        "type":"llama"
+  "criteria": {
+    "breed_llamas": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "llama"
+        }
       }
     }
   },
   "rewards": {
-    "function":"gm4_gemini_shamir:breed/check_llama"
+    "function": "gm4_gemini_shamir:breed/check_llama"
   }
 }
