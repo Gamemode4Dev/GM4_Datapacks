@@ -20,7 +20,7 @@ execute if data storage gm4_better_armour_stands:temp {pages:["head down"]} run 
 execute if data storage gm4_better_armour_stands:temp {pages:["head left"]} run data merge entity @s {Pose:{Head:[0f,325f,0f]},Tags:[gm4_pose_changed]}
 execute if data storage gm4_better_armour_stands:temp {pages:["head right"]} run data merge entity @s {Pose:{Head:[0f,35f,0f]},Tags:[gm4_pose_changed]}
 
-execute if data storage gm4_better_armour_stands:temp {pages:["body default"]} run data merge entity @s {Pose:{Head:[0.01f,0f,0f]},Tags:[gm4_pose_changed]}
+execute if data storage gm4_better_armour_stands:temp {pages:["body default"]} run data merge entity @s {Pose:{Body:[0.01f,0f,0f]},Tags:[gm4_pose_changed]}
 
 # Grant advancement if any poses were changed.
 execute if entity @s[tag=gm4_pose_changed] run function gm4_poses_pack:pose_changed
