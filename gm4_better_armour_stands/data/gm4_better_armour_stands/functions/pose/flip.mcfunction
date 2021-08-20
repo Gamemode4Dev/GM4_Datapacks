@@ -29,3 +29,5 @@ execute store result storage gm4_better_armour_stands:temp Pose.Body[1] float -1
 data modify entity @s Pose merge from storage gm4_better_armour_stands:temp Pose
 
 data remove storage gm4_better_armour_stands:temp CurrentPose
+
+advancement grant @p[tag=gm4_bas_active] only gm4:better_armour_stands
