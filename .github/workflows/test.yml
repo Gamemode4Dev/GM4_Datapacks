@@ -18,6 +18,8 @@ jobs:
         with:
           notOutputSuccess: true
           ignoreLintPathPattern: |
+            gm4_better_armour_stands:copy
+            gm4_better_armour_stands:holding_book_arms
             gm4_block_compressors:compress/16
             gm4_block_compressors:compress/64
             gm4_everstone:everstone
