@@ -12,7 +12,10 @@
     },
     "module_name": "Guidebook",
     "module_id": "guidebook",
-    "site_description": "Adds an interactive guidebook to discover the mechanics of Gamemode 4!",
+    "libraries": [
+        "lib_forceload"
+    ],
+    "site_description": "Adds a dynamic guidebook to discover the mechanics of Gamemode 4!",
     "site_categories": [],
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",

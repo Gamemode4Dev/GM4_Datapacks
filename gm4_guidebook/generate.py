@@ -301,8 +301,8 @@ def generate_add_pages(module):
 for module in module_data:
     [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count] = module
     if not undefined(base_module):
-        #generate_init(module)
-        #generate_function_tag(module)
-        #generate_unlock_tellraw(module)
-        #generate_verify(module)
+        generate_init(module)
+        generate_function_tag(module)
+        generate_unlock_tellraw(module)
+        generate_verify(module)
         generate_add_pages(module)
