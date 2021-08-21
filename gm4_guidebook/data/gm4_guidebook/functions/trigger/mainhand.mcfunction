@@ -16,11 +16,11 @@ loot replace entity @s weapon.mainhand kill @e[type=vex,tag=gm4_guidebook_storag
 item modify entity @s weapon.mainhand gm4_guidebook:restore_count
 
 # add pages
-execute if score @s gm4_guide matches -1 run function gm4_guidebook:table_of_contents/populate_mainhand
+execute if score @s gm4_guide matches -1 run function gm4_guidebook:analyze_storage/populate_mainhand
 execute unless score @s gm4_guide matches -1 run item modify entity @s weapon.mainhand gm4_guidebook:page_library/mainhand
 playsound minecraft:item.armor.equip_leather block @s ~ ~ ~ 1 1.4
 
 # clean up
 kill @e[type=vex,tag=gm4_guidebook_storage,limit=1]
 data remove storage gm4_guidebook:temp LootTable
-data remove storage gm4_guidebook:temp modules
+data remove storage gm4_guidebook:temp_analyze modules

@@ -3,4 +3,7 @@ scoreboard players set bat_grenades gm4_modules 1
 
 schedule function gm4_bat_grenades:main 1t
 
+# guidebook
+summon marker ~ 425.13672765259 ~ {CustomName:'"gm4_bat_grenades_guide"',Tags:["gm4_guide"],data:{type:"module",id:"bat_grenades",page_count:2,line_count:1,module_name:"Bat Grenades"}}
+
 #$moduleUpdateList

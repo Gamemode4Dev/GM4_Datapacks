@@ -9,4 +9,7 @@ scoreboard players set tinkering_compressors gm4_modules 1
 schedule function gm4_tinkering_compressors:main 1t
 schedule function gm4_tinkering_compressors:tick 1t
 
+# guidebook
+summon marker ~ 4190.524297100331 ~ {CustomName:'"gm4_tinkering_compressors_guide"',Tags:["gm4_guide"],data:{type:"module",id:"tinkering_compressors",page_count:1,line_count:2,module_name:"Tinkering Compressors"}}
+
 #$moduleUpdateList

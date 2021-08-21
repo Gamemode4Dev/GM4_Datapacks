@@ -6,4 +6,7 @@ scoreboard players set enchantment_extractors gm4_modules 1
 
 schedule function gm4_enchantment_extractors:main 1t
 
+# guidebook
+summon marker ~ 1137.145595892059 ~ {CustomName:'"gm4_enchantment_extractors_guide"',Tags:["gm4_guide"],data:{type:"module",id:"enchantment_extractors",page_count:1,line_count:2,module_name:"Enchantment Extractors"}}
+
 #$moduleUpdateList

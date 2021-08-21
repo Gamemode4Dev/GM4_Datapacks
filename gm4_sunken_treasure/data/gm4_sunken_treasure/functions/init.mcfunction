@@ -6,4 +6,7 @@ scoreboard players set sunken_treasure gm4_modules 1
 
 schedule function gm4_sunken_treasure:tick 1t
 
+# guidebook
+summon marker ~ 4076.140283352973 ~ {CustomName:'"gm4_sunken_treasure_guide"',Tags:["gm4_guide"],data:{type:"module",id:"sunken_treasure",page_count:1,line_count:1,module_name:"Sunken Treasure"}}
+
 #$moduleUpdateList

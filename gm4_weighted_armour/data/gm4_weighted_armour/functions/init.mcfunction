@@ -9,4 +9,8 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_helious_sha
 
 schedule function gm4_weighted_armour:main 1t
 
+# guidebook
+summon marker ~ 4776.242502981829 ~ {CustomName:'"gm4_weighted_armour_guide"',Tags:["gm4_guide"],data:{type:"module",id:"weighted_armour",page_count:1,line_count:1,module_name:"Weighted Armour"}}
+summon marker ~ 1688.746464910336 ~ {CustomName:'"gm4_helious_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"helious_shamir",page_count:1,line_count:1,module_name:"Helious Shamir"}}
+
 #$moduleUpdateList

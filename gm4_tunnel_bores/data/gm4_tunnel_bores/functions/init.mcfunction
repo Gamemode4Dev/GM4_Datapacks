@@ -16,4 +16,7 @@ scoreboard players set tunnel_bores gm4_modules 1
 
 schedule function gm4_tunnel_bores:pulse_check 10t
 
+# guidebook
+summon marker ~ 4282.062758194015 ~ {CustomName:'"gm4_tunnel_bores_guide"',Tags:["gm4_guide"],data:{type:"module",id:"tunnel_bores",page_count:1,line_count:1,module_name:"Tunnel Bores"}}
+
 #$moduleUpdateList

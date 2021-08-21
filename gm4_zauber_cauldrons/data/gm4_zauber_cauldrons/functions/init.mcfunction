@@ -22,4 +22,7 @@ scoreboard players set zauber_cauldrons gm4_modules 1
 
 schedule function gm4_zauber_cauldrons:main 1t
 
+# guidebook
+summon marker ~ 5366.749169930782 ~ {CustomName:'"gm4_zauber_cauldrons_guide"',Tags:["gm4_guide"],data:{type:"module",id:"zauber_cauldrons",page_count:1,line_count:1,module_name:"Zauber Cauldrons"}}
+
 #$moduleUpdateList

@@ -8,4 +8,7 @@ scoreboard players set divisor gm4_zl_data 2
 execute unless score zauber_liquids gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Zauber Liquids"}
 scoreboard players set zauber_liquids gm4_modules 1
 
+# guidebook
+summon marker ~ 5366.749174868547 ~ {CustomName:'"gm4_zauber_liquids_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"liquid_tanks",id:"zauber_liquids",page_count:1,line_count:1,module_name:"Zauber Liquids"}}
+
 #$moduleUpdateList

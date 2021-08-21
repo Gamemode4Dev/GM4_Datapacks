@@ -7,7 +7,7 @@
         "items": [
           "minecraft:written_book"
         ],
-        "nbt": "{gm4_guidebook:{}}"
+        "nbt": "{gm4_guidebook:1b}"
       }
     }
   }
