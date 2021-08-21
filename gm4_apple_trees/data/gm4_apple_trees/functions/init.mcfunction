@@ -22,6 +22,6 @@ scoreboard players set #max_apple_attempts gm4_apple_data 12
 schedule function gm4_apple_trees:main 10t
 
 # guidebook
-summon marker ~ 332.547322425669 ~ {CustomName:'"gm4_apple_trees_guide"',Tags:["gm4_guide"],data:{type:"module",id:"apple_trees",page_count:1,line_count:1,module_name:"Apple Trees"}}
+summon marker ~ 332.547322425669 ~ {CustomName:'"gm4_apple_trees_guide"',Tags:["gm4_guide"],data:{type:"module",id:"apple_trees",page_count:3,line_count:1,module_name:"Apple Trees"}}
 
 #$moduleUpdateList

@@ -102,13 +102,13 @@ for module, modifier in data.groupby("Module"):
         return id
 
     for _, row in modifier.iterrows():
-        [module_name, wiki_base, load_id, base_module, initial_json, initial_pages, unlockable_pages, line_count] = row
+        [module_name, wiki_base, load_id, base_module, initial_json, initial_pages, unlockable_pages, line_count, done] = row
         module_id = module_name.lower().replace(" ","_")
 
         if undefined (wiki_base):
-            wiki = module
+            wiki = module_name.replace(" ", "_")
         else:
-            wiki = wiki_base + "/" + module
+            wiki = wiki_base + "/" + module_name.replace(" ", "_")
         wiki_link = WIKI_LINK + wiki
 
         if undefined(load_id):
@@ -129,7 +129,7 @@ for module, modifier in data.groupby("Module"):
 
         page_count = len(unlockable_pages)
 
-        module_data.append([module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, int(line_count)])
+        module_data.append([module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, int(line_count), done])
 """
 for hand in HANDS:
     item_modifiers = []
@@ -167,12 +167,12 @@ with open(FILE_NAMESPACE + "installed_modules.txt", "w") as file:
             load_id = module[4]
             line_count = str(module_name.count('\\n') + 1)
             
-            line = 'execute if score gm4_' + load_id + ' load.status matches 1.. run data modify storage gm4_guidebook:register ' + source + ' append value {id:"' + module_id + '",num_id:' + index + ',LootTable:"gm4_' + module_id +':items/guidebook",line_count:'+ line_count + ',line:[\'{"text":"• ' + module_name + '","color":"#4AA0C7","clickEvent":{"action":"run_command","value":"/trigger gm4_guide set ' + index + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Select Guidebook"},{"translate":"text.gm4.guidebook.select"}],"italic":true,"color":"gold"}]}}\',\'{"text":" "}\',\'{"text":"☶","bold":true,"color":"dark_purple","clickEvent":{"action":"open_url","value":"'+ wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}}\',\'{"text":" "}\',\'{"text":"◆","bold":true,"color":"blue","clickEvent":{"action":"open_url","value":"'+ website_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Download Module"},{"translate":"text.gm4.guidebook.download"}],"italic":true,"color":"gold"}]}}\']}'
+            line = 'execute if score gm4_' + load_id + ' load.status matches 1.. run data modify storage gm4_guidebook:register ' + source + ' append value {id:"' + module_id + '",num_id:' + index + ',LootTable:"gm4_' + module_id +':items/guidebook",line_count:'+ line_count + ',line:[\'{"text":"• ' + module_name + '","color":"#4AA0C7","clickEvent":{"action":"run_command","value":"/trigger gm4_guide set ' + index + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Select Guidebook"},{"translate":"text.gm4.guidebook.select"}],"italic":true,"color":"gold"}]}}\',\'{"text":" "}\',\'{"text":"☶","bold":true,"color":"dark_purple","clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}}\',\'{"text":" "}\',\'{"text":"◆","bold":true,"color":"blue","clickEvent":{"action":"open_url","value":"'+ website_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Download Module"},{"translate":"text.gm4.guidebook.download"}],"italic":true,"color":"gold"}]}}\']}'
             file.write(line + "\n")
 """
 generated_init = []
 def generate_init(module):
-    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count] = module
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done] = module
     file = "gm4_" + load_id + "/data/gm4_" + load_id + "/functions/init.mcfunction"
 
     if load_id not in generated_init:
@@ -219,7 +219,7 @@ def generate_init(module):
     f.close()
 
 def generate_function_tag(module):
-    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count] = module
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done] = module
     path = "gm4_" + load_id + "/data/gm4_guidebook/tags/functions/add_pages"
 
     json = {"values": []}
@@ -227,7 +227,7 @@ def generate_function_tag(module):
     write_json(path, json)
 
 def generate_unlock_tellraw(module):
-    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count] = module
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done] = module
     
     with open(f"gm4_{load_id}/pack.mcmeta", 'r') as file:
         data = file.read()
@@ -244,7 +244,7 @@ def generate_unlock_tellraw(module):
 
 generated_verify = []
 def generate_verify(module):
-    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count] = module
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done] = module
 
     filename = "gm4_" + load_id + "/data/gm4_" + load_id + "/functions/guidebook/verify_module.mcfunction"
     header = '# checks if this is the next module to generate pages\n# @s = player who\'s updating their guidebook\n# located at @s\n# run from #gm4_guidebook:add_pages\n\n'
@@ -269,7 +269,7 @@ def generate_verify(module):
 
 
 def generate_add_pages(module):
-    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count] = module
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done] = module
 
     if undefined(initial_json):
         initial_json = ""
@@ -282,9 +282,9 @@ def generate_add_pages(module):
         initial_pages = f",{initial_pages}"
 
     if module_type == "expansion":
-        pages = '[\'["",{"text":"◀ ","color":"#4AA0C7","clickEvent":{"action":"change_page","value":"3"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Back"},{"translate":"text.gm4.guidebook.back"}],"color":"#4AA0C7","clickEvent":{"action":"change_page","value":"3"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n"},{"text":"☶ ","color":"purple","clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Wiki"},{"translate":"text.gm4.guidebook.wiki"}],"color":"#4AA0C7","clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n\\\\n"},{"text":"' + module_name + '","underlined":true},{"text":"\\\\n"}' + initial_json + ']\'' + initial_pages + ']'
+        pages = '[\'["",{"text":"◀ ","color":"#4AA0C7","clickEvent":{"action":"change_page","value":"3"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Back"},{"translate":"text.gm4.guidebook.back"}],"color":"#4AA0C7","clickEvent":{"action":"change_page","value":"3"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n"},{"text":"☶ ","color":"#864BC7","bold":true,"clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Wiki"},{"translate":"text.gm4.guidebook.wiki"}],"color":"#864BC7","clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n\\\\n"},{"text":"' + module_name + '","underlined":true},{"text":"\\\\n"}' + initial_json + ']\'' + initial_pages + ']'
     else:
-        pages = '[\'\',\'["",{"text":"◀ ","color":"#4AA0C7","clickEvent":{"action":"change_page","value":"3"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Back"},{"translate":"text.gm4.guidebook.back"}],"color":"#4AA0C7","clickEvent":{"action":"change_page","value":"3"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n"},{"text":"☶ ","color":"purple","clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Wiki"},{"translate":"text.gm4.guidebook.wiki"}],"color":"#4AA0C7","clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n\\\\n"},{"text":"' + module_name + '","underlined":true},{"text":"\\\\n"}' + initial_json + ']\'' + initial_pages + ']'
+        pages = '[\'\',\'["",{"text":"◀ ","color":"#4AA0C7","clickEvent":{"action":"change_page","value":"3"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Back"},{"translate":"text.gm4.guidebook.back"}],"color":"#4AA0C7","clickEvent":{"action":"change_page","value":"3"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n"},{"text":"☶ ","color":"#864BC7","bold":true,"clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Wiki"},{"translate":"text.gm4.guidebook.wiki"}],"color":"#864BC7","clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n\\\\n"},{"text":"' + module_name + '","underlined":true},{"text":"\\\\n"}' + initial_json + ']\'' + initial_pages + ']'
     
     filename = "gm4_" + load_id + "/data/gm4_" + module_id + "/functions/guidebook/add_pages.mcfunction"
 
@@ -299,10 +299,10 @@ def generate_add_pages(module):
     
 
 for module in module_data:
-    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count] = module
-    if not undefined(base_module):
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done] = module
+    if not undefined(base_module) and not done:
         generate_init(module)
-        generate_function_tag(module)
-        generate_unlock_tellraw(module)
-        generate_verify(module)
+        #generate_function_tag(module)
+        #generate_unlock_tellraw(module)
+        #generate_verify(module)
         generate_add_pages(module)
