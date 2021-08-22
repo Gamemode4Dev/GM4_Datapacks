@@ -281,6 +281,16 @@ def generate_add_pages(module):
     else:
         initial_pages = f",{initial_pages}"
 
+    initial_page_count = initial_pages.count("\'[\"\",")
+    if module_type == "expansion":
+        initial_page_count += 2
+    else:
+        initial_page_count += 1
+
+    for i, page in enumerate(unlockable_pages):
+        if len(page) > 3:
+            initial_pages = initial_pages + ',\'["",{"text":"???","hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Undiscovered"},{"translate":"text.gm4.guidebook.undiscovered"}],"italic":true,"color":"red"}]}}]\''
+
     if module_type == "expansion":
         pages = '[\'["",{"text":"◀ ","color":"#4AA0C7","clickEvent":{"action":"change_page","value":"3"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Back"},{"translate":"text.gm4.guidebook.back"}],"color":"#4AA0C7","clickEvent":{"action":"change_page","value":"3"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n"},{"text":"☶ ","color":"#864BC7","bold":true,"clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Wiki"},{"translate":"text.gm4.guidebook.wiki"}],"color":"#864BC7","clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n\\\\n"},{"text":"' + module_name + '","underlined":true},{"text":"\\\\n"}' + initial_json + ']\'' + initial_pages + ']'
     else:
@@ -294,8 +304,8 @@ def generate_add_pages(module):
         file.write(contents + "\n")
         for i, page in enumerate(unlockable_pages):
             if len(page) > 3:
-                contents = 'execute if entity @s[advancements={gm4_' + module_id + ':guidebook/page_' + str(i) + '=true}] run data modify storage gm4_guidebook:temp insert append value ' + str(page) + '\nexecute if entity @s[advancements={gm4_' + module_id + ':guidebook/page_' + str(i) + '=false}] run data modify storage gm4_guidebook:temp insert append value \'["",{"text":"???","hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Undiscovered"},{"translate":"text.gm4.guidebook.undiscovered"}],"italic":true,"color":"red"}]}}]\''
-                file.write(contents + "\n\n")
+                contents = 'execute if entity @s[advancements={gm4_' + module_id + ':guidebook/page_' + str(i) + '=true}] run data modify storage gm4_guidebook:temp insert[' + str(i + initial_page_count) + '] set value ' + str(page)
+                file.write(contents + "\n")
     
 
 for module in module_data:
