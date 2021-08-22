@@ -1,5 +1,5 @@
 #@s = spawner minecarts
-#run from rail_checks
+#run from process
 
 tag @s add gm4_processing_spawner
 summon area_effect_cloud ~-4 ~ ~-4 {Duration:10,CustomName:'"gm4_spawner_flower_checker"',Tags:["gm4_spawner_flower_checker"]}
@@ -16,9 +16,8 @@ scoreboard players operation randomX gm4_spawner_fuel %= 9 gm4_spawner_fuel
 scoreboard players operation randomZ gm4_spawner_fuel %= 9 gm4_spawner_fuel
 
 #move the entity
-execute as @e[tag=gm4_spawner_flower_checker] at @s run function gm4_spawner_minecarts:fuel/check_for_flower
+execute as @e[tag=gm4_spawner_flower_checker] at @s run function gm4_spawner_minecarts:fuel/check_for_consumable_block
 
-#re-enable spawning
-execute if score @s gm4_spawner_fuel matches 1.. run data merge entity @s {RequiredPlayerRange:16s}
+tag @s[scores={gm4_spawner_fuel=2000..}] add gm4_spawner_minecart_full
 
 tag @s remove gm4_processing_spawner
