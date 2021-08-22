@@ -17,4 +17,5 @@ execute if score @s gm4_bas_data matches 1 run particle minecraft:reverse_portal
 
 playsound minecraft:entity.fox.teleport block @a[distance=..5] ~ ~ ~ .5 1.5
 
+tag @s add gm4_bas_modified
 advancement grant @p[tag=gm4_bas_active] only gm4:better_armour_stands

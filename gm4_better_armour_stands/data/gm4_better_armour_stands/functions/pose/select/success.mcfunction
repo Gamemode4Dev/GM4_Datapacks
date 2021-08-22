@@ -4,6 +4,7 @@
 
 playsound minecraft:entity.armor_stand.fall block @a[distance=..5] ~ ~ ~ 0.5 1
 
+tag @s add gm4_bas_modified
 tag @s add gm4_bas_track
 tag @p[tag=gm4_bas_active] add gm4_bas_track
 
@@ -24,5 +25,4 @@ tag @e[type=marker,tag=gm4_bas_new,distance=..5] remove gm4_bas_new
 # optional checks
 execute if score $pose_options gm4_bas_mode matches 2..5 unless score $pose_options gm4_bas_mode matches 3 run tag @s add gm4_bas_mirror
 execute if score $pose_options gm4_bas_mode matches 3..5 run tag @s add gm4_bas_invert
-
 execute if entity @p[tag=gm4_bas_active,predicate=gm4_better_armour_stands:sneaking] run tag @s add gm4_bas_alt
