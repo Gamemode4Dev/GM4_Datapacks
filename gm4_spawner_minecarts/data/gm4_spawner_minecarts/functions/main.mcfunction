@@ -16,13 +16,6 @@ execute if score passive_clock gm4_spawner_fuel matches 0 run scoreboard players
 execute as @e[type=spawner_minecart,tag=gm4_spawner_minecart] at @s run function gm4_spawner_minecarts:process
 
 #check for successfull spawns
-execute as @e[type=area_effect_cloud,tag=gm4_spawner_minecart_decorative_particle] at @s if entity @e[type=spawner_minecart,distance=..1] run kill @s
-
-#fix broken spawner minecarts, caused by MC-96131
-execute as @e[type=spawner_minecart,tag=gm4_spawner_minecart] unless score @s gm4_spawner_fuel matches 0.. run scoreboard players add @s gm4_spawner_fuel 0
-
-#play decorative particles
-execute as @e[type=area_effect_cloud,tag=gm4_spawner_minecart_decorative_particle] at @s run teleport ^ ^ ^0.4
-execute as @e[type=area_effect_cloud,tag=gm4_spawner_minecart_decorative_particle] at @s run particle minecraft:flame ~ ~ ~ 0.05 0.05 0.05 0.01 1
+execute as @e[type=area_effect_cloud,tag=gm4_spawner_minecart_decorative_particle] at @s run function gm4_spawner_minecarts:fuel/decorative_particle
 
 schedule function gm4_spawner_minecarts:main 16t

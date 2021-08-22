@@ -1,6 +1,9 @@
 # @s = spawner minecarts
 # run from main
 
+# fix broken spawner minecarts, caused by MC-96131 (probably no longer required)
+scoreboard players add @s gm4_spawner_fuel 0
+
 # check if the spawner minecart is on powered activator rails
 # which enables refueling, otherwise it enables spawning
 scoreboard players set can_spawn gm4_spawner_data 0
