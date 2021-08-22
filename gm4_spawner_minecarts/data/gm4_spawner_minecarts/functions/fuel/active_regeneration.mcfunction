@@ -16,7 +16,7 @@ scoreboard players operation randomX gm4_spawner_fuel %= 9 gm4_spawner_fuel
 scoreboard players operation randomZ gm4_spawner_fuel %= 9 gm4_spawner_fuel
 
 #move the entity
-execute as @e[tag=gm4_spawner_flower_checker] at @s run function gm4_spawner_minecarts:fuel/check_for_flower
+execute as @e[tag=gm4_spawner_flower_checker] at @s run function gm4_spawner_minecarts:fuel/check_for_consumable_block
 
 tag @s[scores={gm4_spawner_fuel=2000..}] add gm4_spawner_minecart_full
 
