@@ -8,7 +8,7 @@ tag @s add gm4_bas_track
 tag @p[tag=gm4_bas_active] add gm4_bas_track
 
 # right click detection
-summon minecraft:wandering_trader ~ ~-1000 ~ {CustomName:'"gm4_bas_detect_rightclick"',Tags:["gm4_bas_detect","gm4_bas_new"],Team:"gm4_bas",Silent:1b,NoAI:1b,Offers:{},ActiveEffects:[{Id:14b,Amplifier:0b,Duration:10000000,ShowParticles:0b},{Id:11b,Amplifier:10b,Duration:10000000,ShowParticles:0b}]}
+summon minecraft:wandering_trader ~ ~-1000 ~ {CustomName:'"gm4_bas_detect_rightclick"',Tags:["gm4_trader","gm4_bas_detect","gm4_bas_new"],Team:"gm4_bas",Silent:1b,NoAI:1b,Offers:{},ActiveEffects:[{Id:14b,Amplifier:0b,Duration:10000000,ShowParticles:0b},{Id:11b,Amplifier:10b,Duration:10000000,ShowParticles:0b}]}
 execute positioned ~ ~-1000 ~ run tp @e[type=wandering_trader,tag=gm4_bas_detect,distance=..1,sort=nearest,limit=1] @p[tag=gm4_bas_active] 
 
 # player offset marker
