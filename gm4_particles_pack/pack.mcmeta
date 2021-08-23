@@ -12,7 +12,7 @@
     },
     "module_name": "Particles Pack",
     "module_id": "particles_pack",
-    "hidden": true,
+    "hidden": false,
     "site_description": "Fireflies to flames, add some pezazz to your projects!",
     "site_categories": [
         "Better Armour Stands"
