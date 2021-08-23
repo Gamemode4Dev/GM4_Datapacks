@@ -12,7 +12,7 @@
     },
     "module_name": "Better Armour Stands",
     "module_id": "better_armour_stands",
-    "hidden": true,
+    "hidden": false,
     "site_description": "This module lets you control the size of stands and show their arms. It's also expandable!",
     "site_categories": [
         "Better Armour Stands"
