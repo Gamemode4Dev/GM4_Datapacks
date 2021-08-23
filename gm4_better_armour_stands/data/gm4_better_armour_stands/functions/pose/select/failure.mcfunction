@@ -2,11 +2,11 @@
 # at @s
 # run from pose/select
 
-title @p actionbar {"text":"Look at the joint of a part to start editing","color":"gray"}
+title @p[tag=gm4_bas_active] actionbar {"text":"Right click the joint of a part to start editing","color":"gray"}
 
 scoreboard players reset @s gm4_bas_id
 
-playsound minecraft:entity.villager.no block @a ~ ~ ~ .5 2
+playsound minecraft:entity.villager.no block @p[tag=gm4_bas_active] ~ ~ ~ .5 2
 
 particle composter ~ ~.1 ~ 0 0 0 0 1
 
