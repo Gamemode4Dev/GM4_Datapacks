@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:100,SkullOwner:{Name:\"[Drop to Fix Item] gm4_spiraculum_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"spiraculum\"}}"
+                            "tag": "{CustomModelData:3420100,SkullOwner:{Name:\"[Drop to Fix Item] gm4_spiraculum_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"spiraculum\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",

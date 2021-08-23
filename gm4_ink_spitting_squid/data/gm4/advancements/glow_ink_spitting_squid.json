@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:glow_ink_sac",
-      "nbt": "{CustomModelData:1}"
+      "nbt": "{CustomModelData:3420001}"
     },
     "title": {
       "translate": "%1$s%3427655$s",

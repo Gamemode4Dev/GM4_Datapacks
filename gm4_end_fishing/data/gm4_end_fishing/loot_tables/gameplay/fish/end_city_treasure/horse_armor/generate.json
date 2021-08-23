@@ -26,7 +26,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:10}"
+              "tag": "{CustomModelData:3420010}"
             }
           ]
         },
@@ -64,7 +64,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:11}"
+              "tag": "{CustomModelData:3420011}"
             }
           ]
         },
@@ -102,7 +102,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:12}"
+              "tag": "{CustomModelData:3420012}"
             }
           ]
         },
@@ -129,7 +129,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:13}"
+              "tag": "{CustomModelData:3420013}"
             }
           ]
         },
@@ -156,7 +156,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:14}"
+              "tag": "{CustomModelData:3420014}"
             }
           ]
         }

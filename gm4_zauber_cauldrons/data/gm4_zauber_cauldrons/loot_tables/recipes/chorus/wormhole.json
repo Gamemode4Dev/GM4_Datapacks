@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:1,gm4_zauber_cauldrons:{item:\"wormhole_bottle\",bottle:{multi_use:0b}},Potion:\"minecraft:thick\",CustomPotionColor:8587123,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:33}"
+                            "tag": "{CustomModelData:3420001,gm4_zauber_cauldrons:{item:\"wormhole_bottle\",bottle:{multi_use:0b}},Potion:\"minecraft:thick\",CustomPotionColor:8587123,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:33}"
                         },
                         {
                             "function": "minecraft:set_name",
