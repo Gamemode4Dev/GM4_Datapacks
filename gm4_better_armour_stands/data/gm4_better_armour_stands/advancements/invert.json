@@ -1,7 +1,7 @@
 {
   "criteria": {
-    "stop_track": {
-      "trigger": "minecraft:player_interacted_with_entity",
+    "invert": {
+      "trigger": "minecraft:player_hurt_entity",
       "conditions": {
         "player": [
           {
@@ -26,6 +26,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_better_armour_stands:pose/set"
+    "function": "gm4_better_armour_stands:pose/invert"
   }
 }

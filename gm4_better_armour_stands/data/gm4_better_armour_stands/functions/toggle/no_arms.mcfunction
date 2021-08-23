@@ -16,5 +16,5 @@ execute if score @s gm4_bas_data matches 1 positioned ~ ~.7 ~ run particle block
 
 playsound minecraft:entity.armor_stand.break block @a[distance=..5] ~ ~ ~ 0.5 1
 
-tag @s add gm4_bas_modified
+tag @s add gm4_bas_valid_code
 advancement grant @p[tag=gm4_bas_active] only gm4:better_armour_stands

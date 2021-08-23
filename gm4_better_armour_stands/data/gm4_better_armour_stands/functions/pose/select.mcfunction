@@ -2,6 +2,7 @@
 # at @s
 # run from apply_pose
 
+tag @s add gm4_bas_valid_code
 scoreboard players operation @s gm4_bas_id = @p[tag=gm4_bas_active] gm4_bas_id
 
 execute store result score @s gm4_bas_data run data get entity @s Small
@@ -25,7 +26,7 @@ execute unless score @s gm4_bas_mode matches 1.. if entity @p[tag=gm4_bas_active
 execute unless score @s gm4_bas_mode matches 1.. if entity @p[tag=gm4_bas_active,predicate=gm4_better_armour_stands:select/base,predicate=gm4_better_armour_stands:sneaking] run scoreboard players set @s gm4_bas_mode 8
 
 execute if score @s gm4_bas_mode matches 1.. run function gm4_better_armour_stands:pose/select/success
-execute unless score @s gm4_bas_mode matches 1.. run scoreboard players reset @s gm4_bas_id
+execute unless score @s gm4_bas_mode matches 1.. positioned ^ ^ ^.1 run function gm4_better_armour_stands:pose/select/failure
 
 # teleport armor_stand back to original position
 tp @s ~ ~ ~

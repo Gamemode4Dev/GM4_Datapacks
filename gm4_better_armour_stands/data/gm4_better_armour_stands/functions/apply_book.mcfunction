@@ -34,9 +34,5 @@ execute if data storage gm4_better_armour_stands:temp {pages:["copy"]} if entity
 execute if data storage gm4_better_armour_stands:temp {pages:["paste"]} if data entity @p[tag=gm4_bas_active] Inventory[-1].tag.EntityTag run function gm4_better_armour_stands:paste
 
 # Change armor stand poses.
-execute if data storage gm4_better_armour_stands:temp {pages:["pose"]} run scoreboard players set $pose_options gm4_bas_mode 1
-execute if data storage gm4_better_armour_stands:temp {pages:["pose mirror"]} run scoreboard players set $pose_options gm4_bas_mode 2
-execute if data storage gm4_better_armour_stands:temp {pages:["pose invert"]} run scoreboard players set $pose_options gm4_bas_mode 3
-execute if data storage gm4_better_armour_stands:temp {pages:["pose mirror invert"]} run scoreboard players set $pose_options gm4_bas_mode 4
-execute if data storage gm4_better_armour_stands:temp {pages:["pose invert mirror"]} run scoreboard players set $pose_options gm4_bas_mode 5
-execute if score $pose_options gm4_bas_mode matches 1.. run function gm4_better_armour_stands:pose/select
+execute if data storage gm4_better_armour_stands:temp {pages:["pose"]} run function gm4_better_armour_stands:pose/select
+execute unless entity @s[tag=gm4_bas_valid_code] if data storage gm4_better_armour_stands:temp {pages:["pose mirror"]} run function gm4_better_armour_stands:pose/select

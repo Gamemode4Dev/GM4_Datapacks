@@ -30,5 +30,5 @@ data modify entity @s Pose merge from storage gm4_better_armour_stands:temp Pose
 
 data remove storage gm4_better_armour_stands:temp CurrentPose
 
-tag @s add gm4_bas_modified
+tag @s add gm4_bas_valid_code
 advancement grant @p[tag=gm4_bas_active] only gm4:better_armour_stands

@@ -14,8 +14,8 @@ item modify entity @p[tag=gm4_bas_active] weapon.mainhand gm4_better_armour_stan
 
 # Check valid codes and apply to armor_stand
 execute unless entity @s[tag=gm4_bas_track] run function #gm4_better_armour_stands:apply_book
-execute unless entity @s[tag=gm4_bas_modified] run function gm4_better_armour_stands:invalid
-tag @s remove gm4_bas_modified
+execute unless entity @s[tag=gm4_bas_valid_code] run function gm4_better_armour_stands:invalid
+tag @s remove gm4_bas_valid_code
 
 # Reset storage
 data remove storage gm4_better_armour_stands:temp pages

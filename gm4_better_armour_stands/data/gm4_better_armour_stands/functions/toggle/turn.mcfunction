@@ -7,5 +7,5 @@ execute unless score @s gm4_bas_turn matches 0..2 run scoreboard players set @s 
 execute if score @s gm4_bas_turn matches 1 run tag @s add gm4_bas_turn
 execute if score @s gm4_bas_turn matches 0 run tag @s remove gm4_bas_turn
 
-tag @s add gm4_bas_modified
+tag @s add gm4_bas_valid_code
 advancement grant @p[tag=gm4_bas_active] only gm4:better_armour_stands
