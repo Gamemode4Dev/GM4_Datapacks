@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:armor_stand"
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_better_armour_stands:place"
+  }
+}

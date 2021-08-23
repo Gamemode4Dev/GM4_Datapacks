@@ -14,7 +14,7 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Give your armour stand arms",
+        "Customize an armour stand",
         {"translate": "advancement.gm4.better_armour_stands.description"}
       ],
       "color": "gray"
