@@ -7,8 +7,8 @@ data modify storage gm4_better_armour_stands:temp book set from entity @s HandIt
 data modify storage gm4_better_armour_stands:temp pages set from storage gm4_better_armour_stands:temp book.pages
 
 # Restore item held by armor_stand and book from player, with fix for creative mode
-execute if entity @p[tag=gm4_bas_active,gamemode=creative,predicate=gm4_better_armour_stands:holding_book_and_quill] run item replace entity @s weapon.mainhand with air
-execute unless entity @p[tag=gm4_bas_active,gamemode=creative,predicate=gm4_better_armour_stands:holding_book_and_quill] run item replace entity @s weapon.mainhand from entity @p[tag=gm4_bas_active] weapon.mainhand
+execute if entity @p[tag=gm4_bas_active,gamemode=creative,predicate=gm4_better_armour_stands:holding/mainhand/book_and_quill] run item replace entity @s weapon.mainhand with air
+execute unless entity @p[tag=gm4_bas_active,gamemode=creative,predicate=gm4_better_armour_stands:holding/mainhand/book_and_quill] run item replace entity @s weapon.mainhand from entity @p[tag=gm4_bas_active] weapon.mainhand
 item replace entity @p[tag=gm4_bas_active] weapon.mainhand with minecraft:writable_book
 item modify entity @p[tag=gm4_bas_active] weapon.mainhand gm4_better_armour_stands:book
 

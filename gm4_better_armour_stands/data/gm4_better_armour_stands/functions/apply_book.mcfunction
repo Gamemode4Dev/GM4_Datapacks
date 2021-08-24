@@ -24,13 +24,13 @@ execute if data storage gm4_better_armour_stands:temp {pages:["gravity"]} run fu
 execute if data storage gm4_better_armour_stands:temp {pages:["turn"]} run function gm4_better_armour_stands:toggle/turn
 
 # Equip item into specified slot.
-# execute if data storage gm4_better_armour_stands:temp {pages:["equip"]} run function gm4_better_armour_stands:equip/select
+execute if data storage gm4_better_armour_stands:temp {pages:["equip"]} run function gm4_better_armour_stands:equip/select
 
 # Change armor stand poses.
 execute if data storage gm4_better_armour_stands:temp {pages:["flip"]} run function gm4_better_armour_stands:pose/flip
 
 # Copy and paste from armor stand item.
-execute if data storage gm4_better_armour_stands:temp {pages:["copy"]} if entity @p[tag=gm4_bas_active,nbt={Inventory:[{Slot:-106b,id:"minecraft:armor_stand"}]}] run function gm4_better_armour_stands:copy
+execute if data storage gm4_better_armour_stands:temp {pages:["copy"]} if entity @p[tag=gm4_bas_active,predicate=gm4_better_armour_stands:holding/offhand/armor_stand] run function gm4_better_armour_stands:copy
 execute if data storage gm4_better_armour_stands:temp {pages:["paste"]} if data entity @p[tag=gm4_bas_active] Inventory[-1].tag.EntityTag run function gm4_better_armour_stands:paste
 
 # Change armor stand poses.
