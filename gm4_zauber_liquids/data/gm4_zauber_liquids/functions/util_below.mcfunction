@@ -25,6 +25,6 @@ execute if score @s[tag=gm4_lt_zauber_swiftness_potion] gm4_lt_value matches 1..
 execute if score @s[tag=gm4_lt_zauber_strength_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{ActiveEffects:[{Id:5b}]}] run function gm4_zauber_liquids:util/strength
 
 #wormhole
-execute if score @s[tag=gm4_lt_zauber_wormhole_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] run function gm4_zauber_liquids:util/wormhole
+execute if score @s[tag=gm4_lt_zauber_wormhole_potion] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[tag=!gm4_zl_wormhole_ignore] run function gm4_zauber_liquids:util/wormhole
 
 tag @s remove gm4_processing_tank
