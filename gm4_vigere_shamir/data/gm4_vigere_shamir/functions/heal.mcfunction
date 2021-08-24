@@ -41,3 +41,6 @@ playsound minecraft:block.brewing_stand.brew player @s ~ ~ ~ 0.3 0.8
 
 # debuff
 effect give @s minecraft:mining_fatigue 3 5 true
+execute store success score $in_mainhand gm4_ml_data if predicate gm4_vigere_shamir:vigere_in_mainhand run item modify entity @s weapon.mainhand gm4_vigere_shamir:use_durability_mainhand
+execute unless score $in_mainhand gm4_ml_data matches 1.. run item modify entity @s weapon.offhand gm4_vigere_shamir:use_durability_offhand
+scoreboard players reset $in_mainhand gm4_ml_data

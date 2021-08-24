@@ -2,15 +2,8 @@
   "condition": "minecraft:alternative",
   "terms": [
     {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "equipment": {
-          "mainhand": {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'vigere'}}"
-          }
-        }
-      }
+      "condition": "minecraft:reference",
+      "name": "gm4_vigere_shamir:vigere_in_mainhand"
     },
     {
       "condition": "minecraft:entity_properties",
@@ -18,6 +11,9 @@
       "predicate": {
         "equipment": {
           "offhand": {
+            "items": [
+              "minecraft:shield"
+            ],
             "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'vigere'}}"
           }
         }
