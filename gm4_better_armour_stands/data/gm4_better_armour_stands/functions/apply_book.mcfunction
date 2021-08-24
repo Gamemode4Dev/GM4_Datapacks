@@ -24,7 +24,7 @@ execute if data storage gm4_better_armour_stands:temp {pages:["gravity"]} run fu
 execute if data storage gm4_better_armour_stands:temp {pages:["turn"]} run function gm4_better_armour_stands:toggle/turn
 
 # Equip item into specified slot.
-execute if data storage gm4_better_armour_stands:temp {pages:["equip"]} run function gm4_better_armour_stands:equip/select
+# execute if data storage gm4_better_armour_stands:temp {pages:["equip"]} run function gm4_better_armour_stands:equip/select
 
 # Change armor stand poses.
 execute if data storage gm4_better_armour_stands:temp {pages:["flip"]} run function gm4_better_armour_stands:pose/flip
