@@ -7,4 +7,7 @@ execute as @e[type=armor_stand,tag=gm4_bas_no_arm] at @s unless entity @p[distan
 # detect broken armor_stand
 execute as @a[tag=gm4_bas_track] at @s unless entity @e[type=armor_stand,tag=gm4_bas_track,distance=..6] run function gm4_better_armour_stands:pose/set
 
+# remove leftover temporary entities
+execute as @e[tag=gm4_bas_temp,sort=random,limit=1] at @s unless entity @p[tag=gm4_bas_track,distance=..10] run tp @s ~ -1000 ~
+
 schedule function gm4_better_armour_stands:main 16t
