@@ -12,6 +12,9 @@
     },
     "module_name": "Potion Liquids",
     "module_id": "potion_liquids",
+    "libraries": [
+        "lib_brewing"
+    ],
     "site_description": "Adds the ability to store potions in Liquid Tanks",
     "site_categories": [
         "Liquid Tanks"

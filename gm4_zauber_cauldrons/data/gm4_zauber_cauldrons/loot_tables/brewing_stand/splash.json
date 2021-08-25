@@ -1,0 +1,111 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:alternatives",
+                    "children": [
+                        {
+                            "type": "minecraft:loot_table",
+                            "name": "gm4_zauber_cauldrons:recipes/potions/splash/instant_damage",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "nbt": "{data:{Insert:{tag:{gm4_zauber_cauldrons:{item:\"potion\",type:\"instant_damage\"}}}}}"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "name": "gm4_zauber_cauldrons:recipes/potions/splash/instant_health",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "nbt": "{data:{Insert:{tag:{gm4_zauber_cauldrons:{item:\"potion\",type:\"instant_health\"}}}}}"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "name": "gm4_zauber_cauldrons:recipes/potions/splash/jump_boost",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "nbt": "{data:{Insert:{tag:{gm4_zauber_cauldrons:{item:\"potion\",type:\"jump_boost\"}}}}}"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "name": "gm4_zauber_cauldrons:recipes/potions/splash/poison",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "nbt": "{data:{Insert:{tag:{gm4_zauber_cauldrons:{item:\"potion\",type:\"poison\"}}}}}"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "name": "gm4_zauber_cauldrons:recipes/potions/splash/regeneration",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "nbt": "{data:{Insert:{tag:{gm4_zauber_cauldrons:{item:\"potion\",type:\"regeneration\"}}}}}"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "name": "gm4_zauber_cauldrons:recipes/potions/splash/speed",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "nbt": "{data:{Insert:{tag:{gm4_zauber_cauldrons:{item:\"potion\",type:\"speed\"}}}}}"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "name": "gm4_zauber_cauldrons:recipes/potions/splash/strength",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "nbt": "{data:{Insert:{tag:{gm4_zauber_cauldrons:{item:\"potion\",type:\"strength\"}}}}}"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_nbt",
+                    "tag": "{gm4_custom_potion:1b}"
+                }
+            ]
+        }
+    ]
+}
