@@ -1,4 +1,4 @@
-schedule function gm4_garden_variety:clock/10s 10s
+schedule function gm4_garden_variety:clock/process_arborist 10s
 
 # get current time
 execute store result score $current_time gm4_gv_arborist run time query daytime

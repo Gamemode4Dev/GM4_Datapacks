@@ -6,4 +6,7 @@ execute unless score gm4_custom_crafters load.status matches 1 run data modify s
 
 
 execute if score gm4_garden_variety load.status matches 1 run function gm4_garden_variety:init
-execute unless score gm4_garden_variety load.status matches 1 run schedule clear gm4_garden_variety:main
+execute unless score gm4_garden_variety load.status matches 1 run schedule clear gm4_garden_variety:clock/tick
+execute unless score gm4_garden_variety load.status matches 1 run schedule clear gm4_garden_variety:clock/process_leaves
+execute unless score gm4_garden_variety load.status matches 1 run schedule clear gm4_garden_variety:clock/process_analyzer
+execute unless score gm4_garden_variety load.status matches 1 run schedule clear gm4_garden_variety:clock/process_arborist
