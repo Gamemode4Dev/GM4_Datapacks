@@ -4,7 +4,7 @@
 # run from TODO
 
 # drop saplings
-execute if entity @s[tag=gm4_king_palm_sapling] run function gm4_garden_variety_trees:generate/king_palm/integration/fruiting_trees/drop_sapling
+execute if entity @s[tag=gm4_king_palm_sapling] run function #gm4_garden_variety:mechanics/custom_sapling/destroy
 
 # store nbt
 execute positioned ~.5 ~ ~.5 run data modify entity @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Age:0s}] Item.tag.gm4_garden_variety set from entity @s data.gm4_garden_variety
