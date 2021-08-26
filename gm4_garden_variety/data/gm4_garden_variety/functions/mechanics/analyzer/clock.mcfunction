@@ -32,5 +32,5 @@ execute if entity @s[tag=!gm4_gv_disable_job_site] at @s if block ~ ~-1 ~ minecr
 execute if entity @s[tag=!gm4_gv_disable_job_site] at @s if block ~ ~1 ~ minecraft:redstone_lamp[lit=false] run tag @s add gm4_gv_disable_job_site
 
 # force villager check
-execute if entity @s[tag=!gm4_gv_disable_job_site,tag=!gm4_gv_analyzer_disable_check] if data storage gm4_garden_variety:data/analyzer Items[{Slot:0b,id:"minecraft:emerald"}] run function gm4_garden_variety:mechanics/arborist/job_site/force_update
+execute if entity @s[tag=!gm4_gv_disable_job_site,tag=!gm4_gv_analyzer_disable_check] if data storage gm4_garden_variety:data/analyzer Items[{Slot:0b,id:"minecraft:emerald"}] run function gm4_garden_variety:mechanics/arborist_villager/job_site/force_update
 tag @s remove gm4_gv_analyzer_disable_check

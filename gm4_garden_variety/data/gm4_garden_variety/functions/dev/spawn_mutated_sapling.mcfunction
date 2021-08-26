@@ -2,7 +2,7 @@
 
 
 # register trades
-function #gm4_garden_variety:mechanics/arborist/register_trades/mutated_tree_sapling
+function #gm4_garden_variety:mechanics/arborist_villager/register_trades/mutated_tree_sapling
 
 # select random trade
 data modify storage gm4_garden_variety:test Item set from entity @e[type=trader_llama,tag=gm4_gv_mutated_trade_option,limit=1,sort=random] Items[0]
