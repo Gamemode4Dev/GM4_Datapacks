@@ -33,6 +33,3 @@ tp @s ~ ~ ~
 
 # kill spawn detectors
 tp @e[tag=gm4_bas_detect_part,distance=..3] ~ -1000 ~
-
-# reset options
-scoreboard players reset $pose_options gm4_bas_mode
