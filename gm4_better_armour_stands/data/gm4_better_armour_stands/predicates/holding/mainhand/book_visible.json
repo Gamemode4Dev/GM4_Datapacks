@@ -7,7 +7,7 @@
         "items": [
           "minecraft:writable_book"
         ],
-        "nbt": "{pages:[\"reveal\"]}"
+        "nbt": "{pages:[\"visible\"]}"
       }
     }
   }

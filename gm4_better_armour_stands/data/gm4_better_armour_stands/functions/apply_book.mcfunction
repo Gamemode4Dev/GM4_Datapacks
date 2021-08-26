@@ -16,7 +16,6 @@ execute if data storage gm4_better_armour_stands:temp {pages:["size"]} run funct
 
 # Toggle armor stand visibility.
 execute if data storage gm4_better_armour_stands:temp {pages:["visible"]} run function gm4_better_armour_stands:toggle/visible
-execute if data storage gm4_better_armour_stands:temp {pages:["visible hide"]} run function gm4_better_armour_stands:toggle/visible
 
 # Toggle armor stand gravity.
 execute if data storage gm4_better_armour_stands:temp {pages:["gravity"]} run function gm4_better_armour_stands:toggle/gravity
