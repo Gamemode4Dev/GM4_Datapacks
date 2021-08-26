@@ -1,5 +1,5 @@
 # generates variables for each palm based on the current seed
-# run from gm4_garden_variety:generation/tree_generation/variables/per_palm
+# run from gm4_garden_variety:mechanics/tree_generation/variables/per_palm
 
 
 # [Palm] arc rate for each palm (layer based)
@@ -26,4 +26,4 @@ execute if score $current_leaf_layer gm4_gv_gen_data matches 2 run scoreboard pl
 function gm4_garden_variety_trees:generate/king_palm/generation/variables/palm_mutations
 
 # [Interpret] convert input variables to generation variables
-function gm4_garden_variety:generation/interpret_variables/initial/palm
+function gm4_garden_variety:mechanics/interpret_variables/initial/palm
