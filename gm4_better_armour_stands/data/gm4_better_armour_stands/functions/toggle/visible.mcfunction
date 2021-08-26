@@ -6,6 +6,8 @@
 execute store result score @s gm4_bas_data run data get entity @s Invisible
 scoreboard players add @s gm4_bas_data 1
 execute unless score @s gm4_bas_data matches 0..1 run scoreboard players set @s gm4_bas_data 0
+execute if score @s gm4_bas_data matches 0 run tag @s remove gm4_bas_hide
+execute if score @s gm4_bas_data matches 1 if data storage gm4_better_armour_stands:temp {pages:["visible hide"]} run tag @s add gm4_bas_hide
 
 # set visibile
 execute if score @s gm4_bas_data matches 0 run data modify entity @s Invisible set value 0
