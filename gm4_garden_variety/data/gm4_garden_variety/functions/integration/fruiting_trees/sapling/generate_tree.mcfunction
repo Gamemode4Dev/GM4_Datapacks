@@ -5,4 +5,4 @@
 
 scoreboard players set seed_mode_sapling gm4_gv_gen_data 1
 
-execute if entity @s[tag=gm4_king_palm_sapling] run function #gm4_garden_variety:mechanics/custom_sapling/grow
+function #gm4_garden_variety:mechanics/custom_sapling/grow
