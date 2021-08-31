@@ -12,6 +12,7 @@
     },
     "module_name": "Poses Pack",
     "module_id": "poses_pack",
+    "hidden": false,
     "site_description": "Allows you to set Armourstands to pose in various ways using the Better Armour Stands base module.",
     "site_categories": [
         "Better Armour Stands"
@@ -29,16 +30,16 @@
             [
                 "Sparks",
                 "https://www.twitter.com/SparksTheGamer"
-            ],
-            [
-                "Denniss",
-                ""
             ]
         ],
         "Updated by": [
             [
                 "Misode",
                 "https://twitter.com/misode_"
+            ],
+            [
+                "Denniss",
+                "https://twitter.com/Dennis2p_"
             ]
         ],
         "Icon Design": [

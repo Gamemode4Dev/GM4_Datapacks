@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "armor_stand",
-      "nbt": "{CustomModelData:2}"
+      "nbt": "{CustomModelData:3420002}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
@@ -14,7 +14,7 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Make your armour stand strike a pose",
+        "Apply a preset pose to your armour stand",
         {"translate": "advancement.gm4.poses_pack.description"}
       ],
       "color": "gray"

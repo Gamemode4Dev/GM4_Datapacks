@@ -1,0 +1,129 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  "Bismutite Lump",
+                  {
+                    "translate": "item.gm4.metallurgy.bismutite_lump"
+                  }
+                ],
+                "italic": false,
+                "color": "white"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      {
+                        "text": "Contains "
+                      }
+                    ],
+                    "italic": false,
+                    "color": "gray"
+                  },
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "B",
+                      {
+                        "translate": "item.gm4.metallurgy.bismuth.red"
+                      }
+                    ],
+                    "italic": false,
+                    "color": "#F47989"
+                  },
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "i",
+                      {
+                        "translate": "item.gm4.metallurgy.bismuth.orange"
+                      }
+                    ],
+                    "italic": false,
+                    "color": "#F5B478"
+                  },
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "s",
+                      {
+                        "translate": "item.gm4.metallurgy.bismuth.yellow"
+                      }
+                    ],
+                    "italic": false,
+                    "color": "#F5DD79"
+                  },
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "m",
+                      {
+                        "translate": "item.gm4.metallurgy.bismuth.green"
+                      }
+                    ],
+                    "italic": false,
+                    "color": "#78F4AE"
+                  },
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "u",
+                      {
+                        "translate": "item.gm4.metallurgy.bismuth.blue"
+                      }
+                    ],
+                    "italic": false,
+                    "color": "#79D6F5"
+                  },
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "t",
+                      {
+                        "translate": "item.gm4.metallurgy.bismuth.purple"
+                      }
+                    ],
+                    "italic": false,
+                    "color": "#8378F5"
+                  },
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "h",
+                      {
+                        "translate": "item.gm4.metallurgy.bismuth.magenta"
+                      }
+                    ],
+                    "italic": false,
+                    "color": "#D579F5"
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_metallurgy:{metal:{type:\"bismuth\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420017,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/bismuth\",Id:[I;140254582,-1151718614,-1277548307,1366135037],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyOTY4NDM0MzA2MCwKICAicHJvZmlsZUlkIiA6ICI0OWIzODUyNDdhMWY0NTM3YjBmN2MwZTFmMTVjMTc2NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJiY2QyMDMzYzYzZWM0YmY4IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2EwODFiMmY2Nzk3ZDk2YzcxMGYyMjk1YmQ2MGJmYjc3NTE5ZDU4Yzk3NGEwYjM0YjViZDcyZmNkNzc3OTYyMWIiCiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzIzNDBjMGUwM2RkMjRhMTFiMTVhOGIzM2MyYTdlOWUzMmFiYjIwNTFiMjQ4MWQwYmE3ZGVmZDYzNWNhN2E5MzMiCiAgICB9CiAgfQp9\"}]}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:3420057,gm4_zauber_cauldrons:{item:\"crystal\",type:\"poison\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/poison/v0\",Id:[I;-306913246,403513617,416233013,-700067452],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyNzU4NzgyMjA2MSwKICAicHJvZmlsZUlkIiA6ICIxYWZhZjc2NWI1ZGY0NjA3YmY3ZjY1ZGYzYWIwODhhOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJMb3lfQmxvb2RBbmdlbCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kZjU0ZTJlMTBlMGQ5MTZlNzMxMTU3ODlmNjBmZmM4Yzk0NzkwN2Q3ZTUxNTIyMGYxMDM5ZWI3Y2QxYTM3M2VmIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=\"}]}},HideFlags:1}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Crystal of Poison",
+                                    {
+                                        "translate": "item.gm4.zauber_cauldrons.crystal.poison"
+                                    }
+                                ],
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                [
+                                    {
+                                        "translate": "potion.withAmplifier",
+                                        "with": [
+                                            {
+                                                "translate": "effect.minecraft.poison"
+                                            },
+                                            {
+                                                "translate": "potion.potency.1"
+                                            }
+                                        ],
+                                        "color": "red",
+                                        "italic": false
+                                    }
+                                ]
+                            ],
+                            "replace": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

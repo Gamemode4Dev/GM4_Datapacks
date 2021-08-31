@@ -1,6 +1,6 @@
 # generates a layer of the tree
-# @s = sapling marker area_effect_cloud
-# positioned ~ ~n ~ above the AEC rotated as @s
+# @s = sapling marker
+# positioned ~ ~n ~ above the marker rotated as @s
 # run from gm4_fruiting_trees:generate via #gm4_fruiting_trees:layer/generate
 
 # set target height and rotation from seed and environment

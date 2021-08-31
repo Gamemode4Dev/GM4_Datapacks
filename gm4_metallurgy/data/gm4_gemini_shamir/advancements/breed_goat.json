@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "breed_goats": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "goat"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_gemini_shamir:breed/check_goat"
+  }
+}

@@ -1,6 +1,6 @@
 # generates leaves ontop of apple trees with branching style 1a
-# @s = sapling marker area_effect_cloud
-# positioned ~ ~n ~ above the AEC rotated as @s
+# @s = sapling marker
+# positioned ~ ~n ~ above the marker rotated as @s
 # run from gm4_apple_trees:tree/layer/place/branch_1a
 
 # place leaves

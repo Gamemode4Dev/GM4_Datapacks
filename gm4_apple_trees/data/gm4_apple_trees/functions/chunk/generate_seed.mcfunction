@@ -1,5 +1,5 @@
 # Generates tree seed based on world seed and location.
-# @s = @e[type=minecraft:area_effect_cloud,tag=gm4_apple_tree_new,limit=1]
+# @s = @e[type=minecraft:marker,tag=gm4_apple_tree_new,limit=1]
 # at tree spawn position
 # run from gm4_apple_trees:chunk/spawn_tree
 
@@ -29,5 +29,5 @@ scoreboard players operation $generated_seed gm4_tree_seed *= $loc_z_bits gm4_ap
 # spawn tree
 function gm4_fruiting_trees:tree/initialize
 
-# remove new tree marker (used for targeting of initialize onto freshly spawned AECs that should be grown instantly, e.g. in gm4_apple_trees:chunk/spawn_tree)
+# remove new tree marker (used for targeting of initialize onto freshly spawned markers that should be grown instantly, e.g. in gm4_apple_trees:chunk/spawn_tree)
 tag @s remove gm4_apple_tree_new

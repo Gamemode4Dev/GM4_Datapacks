@@ -1,5 +1,5 @@
 # checks whether the placed sapling is an apple sapling, and if so allows further execution
-# @s raycast AEC
+# @s raycast marker
 # at @s align xyz
 # run from #gm4_fruiting_trees:sapling/initialize
 

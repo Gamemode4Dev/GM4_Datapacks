@@ -1,5 +1,5 @@
 # gets tree constants from the expansion
-# @s = sapling marker area_effect_cloud
+# @s = sapling marker
 # at @s align xyz
 # run from gm4_fruiting_trees:sapling/advance_stage
 

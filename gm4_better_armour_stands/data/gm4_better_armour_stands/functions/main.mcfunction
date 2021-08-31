@@ -1,4 +1,10 @@
-execute as @e[type=item,nbt={Item:{id:"minecraft:writable_book"},OnGround:1b}] at @s if entity @e[type=armor_stand,tag=!gm4_no_edit,distance=..1,limit=1] run function gm4_better_armour_stands:store_book_pages
-execute at @a[gamemode=!spectator,predicate=gm4_better_armour_stands:holding_book_and_quill] run effect give @e[type=armor_stand,tag=!gm4_no_edit,distance=..8,nbt={Invisible:1b}] glowing 2 0
+# player holding book and quill
+execute as @a[gamemode=!spectator,predicate=gm4_better_armour_stands:holding/mainhand/book_and_quill] at @s run function gm4_better_armour_stands:holding_book
+
+# remove right click detection on armor_stand with no arms if player is too far away
+execute as @e[type=armor_stand,tag=gm4_bas_no_arm] at @s unless entity @p[distance=..4] run function gm4_better_armour_stands:toggle/arms_detect_remove
+
+# detect broken armor_stand
+execute as @a[tag=gm4_bas_track] at @s unless entity @e[type=armor_stand,tag=gm4_bas_track,distance=..6] run function gm4_better_armour_stands:pose/set
 
 schedule function gm4_better_armour_stands:main 16t

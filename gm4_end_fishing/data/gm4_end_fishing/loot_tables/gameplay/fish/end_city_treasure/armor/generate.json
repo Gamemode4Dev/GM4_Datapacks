@@ -1,0 +1,312 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Lost on End City moving day",
+                    {
+                      "translate": "text.gm4.end_city_armor.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420010}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Forged by Seppo Ilmarinen",
+                    {
+                      "translate": "text.gm4.end_city_armor.2"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420011}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Belongs to Achilles",
+                    {
+                      "translate": "text.gm4.end_city_armor.3"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420012}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Made by Wayland the Smith",
+                    {
+                      "translate": "text.gm4.end_city_armor.4"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420013}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Worn during the battle of Ender Ender",
+                    {
+                      "translate": "text.gm4.end_city_armor.5"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420014}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "This thing's been rotting in",
+                    {
+                      "translate": "text.gm4.end_city_armor.6.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "the void for at least a century.",
+                    {
+                      "translate": "text.gm4.end_city_armor.6.2"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420015}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Passed down over many generations",
+                    {
+                      "translate": "text.gm4.end_city_armor.7"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420016}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Wear this to become invisible to nobody!",
+                    {
+                      "translate": "text.gm4.end_city_armor.8"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420017}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "I promise you can fly while wearing this.",
+                    {
+                      "translate": "text.gm4.end_city_armor.9.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Trust me, just jump into the void.",
+                    {
+                      "translate": "text.gm4.end_city_armor.9.2"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420018}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "With this you shall be immortal!",
+                    {
+                      "translate": "text.gm4.end_city_armor.10.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Or is it immoral? I can't remember.",
+                    {
+                      "translate": "text.gm4.end_city_armor.10.2"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420019}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

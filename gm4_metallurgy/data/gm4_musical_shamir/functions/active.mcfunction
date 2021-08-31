@@ -1,6 +1,6 @@
 #@s = players holding musical with gm4_note_collect=1..
 #at @s
-#run from metallurgy:main
+#run from metallurgy:shamir_in_hand
 
 tag @s add gm4_has_musical
 #particle indicators

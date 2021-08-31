@@ -1,9 +1,12 @@
 #@s = water tank with one leather armour in the first slot
 #run from wash
 
-data remove block ~ ~ ~ Items[0].tag.display.color
-execute store result score @s gm4_wt_tag_size run data get block ~ ~ ~ Items[0].tag
-execute if score @s gm4_wt_tag_size matches 0 run data remove block ~ ~ ~ Items[0].tag
-scoreboard players reset @s gm4_wt_tag_size
-scoreboard players remove @s gm4_lt_value 1
+scoreboard players set $item_value gm4_lt_value -1
+
+data modify storage gm4_liquid_tanks:temp/tank output set from storage gm4_liquid_tanks:temp/tank input_slot
+
+data remove storage gm4_liquid_tanks:temp/tank output.tag.display.color
+# does not requre clearing of display compound because armor cannot stack anyway
+
+function gm4_liquid_tanks:smart_item_fill
 tag @s add gm4_lt_fill
