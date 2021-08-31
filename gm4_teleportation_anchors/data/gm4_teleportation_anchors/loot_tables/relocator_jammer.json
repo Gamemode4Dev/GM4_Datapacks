@@ -10,7 +10,7 @@
           "functions":[
             {
               "function":"set_nbt",
-              "tag":"{CustomModelData:37,gm4_relocation_data:{Command:\"function gm4_teleportation_anchors:relocate/place_down_jammer\"},SkullOwner:{Id:[I;-1269076244,1379420473,-2097727894,1410642679],Properties:{textures:[{Signature:\"gm4_relocated_block\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYwNTA3MDgzMDA5OSwKICAicHJvZmlsZUlkIiA6ICJhYTZhNDA5NjU4YTk0MDIwYmU3OGQwN2JkMzVlNTg5MyIsCiAgInByb2ZpbGVOYW1lIiA6ICJiejE0IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Q4MTk5MmY3Mzg0MTUzMGEyZWMxMjA1ZjUzZDM2NGE1YTdkZmRiYjA0Y2U3YTM2ZjczYWRmODk3NmY0YWVhYjQiCiAgICB9CiAgfQp9\"}]}}}"},
+              "tag":"{CustomModelData:3420038,gm4_relocation_data:{Command:\"function gm4_teleportation_anchors:relocate/place_down_jammer\"},SkullOwner:{Id:[I;-1269076244,1379420473,-2097727894,1410642679],Properties:{textures:[{Signature:\"gm4_relocated_block\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYwNTA3MDgzMDA5OSwKICAicHJvZmlsZUlkIiA6ICJhYTZhNDA5NjU4YTk0MDIwYmU3OGQwN2JkMzVlNTg5MyIsCiAgInByb2ZpbGVOYW1lIiA6ICJiejE0IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Q4MTk5MmY3Mzg0MTUzMGEyZWMxMjA1ZjUzZDM2NGE1YTdkZmRiYjA0Y2U3YTM2ZjczYWRmODk3NmY0YWVhYjQiCiAgICB9CiAgfQp9\"}]}}}"},
             {
               "function":"set_name",
               "name":[
