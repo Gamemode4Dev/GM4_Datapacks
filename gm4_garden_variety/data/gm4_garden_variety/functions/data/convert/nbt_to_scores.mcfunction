@@ -66,6 +66,5 @@ execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutat
 # special
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations{golden_fruit:1b} run scoreboard players set $golden_fruit gm4_gv_nbt_data 1
 
-
 # reset storage
 data remove storage gm4_garden_variety:data/garden_variety_nbt convert

@@ -2,6 +2,7 @@
 # @s = Item
 # run from TODO
 
+
 # remove lore
 data remove storage gm4_lore:temp Source
 data modify storage gm4_lore:temp Source set from storage gm4_garden_variety:data/modify Item.tag.display.Lore

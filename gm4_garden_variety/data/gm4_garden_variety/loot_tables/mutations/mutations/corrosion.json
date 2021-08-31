@@ -21,7 +21,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{corrosion:\"weak\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{corrosion:\"decreased\"}}}"
             }
           ]
         },
@@ -32,7 +32,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{corrosion:\"strong\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{corrosion:\"increased\"}}}"
             }
           ]
         }

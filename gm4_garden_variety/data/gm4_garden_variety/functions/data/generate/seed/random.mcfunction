@@ -3,7 +3,7 @@
 # run from TODO
 
 # get current time
-execute store result score $current_time gm4_gv_arborist run time query daytime
+execute store result score $current_time gm4_gv_arborist run time query gametime
 
 # uuid
 execute store result score $seed gm4_gv_gen_data run data get entity @s UUID[2]

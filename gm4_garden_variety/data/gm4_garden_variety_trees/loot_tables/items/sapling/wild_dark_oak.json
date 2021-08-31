@@ -22,11 +22,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:1,gm4_fruiting_trees:{item:{id:\"sapling\",type:\"wild_dark_oak\"}},gm4_podzol_rooting_soil:{id:\"wild_dark_oak_sapling\"}}"
-                        },
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{gm4_garden_variety:{origin:\"garden_variety\"}}"
+                            "tag": "{CustomModelData:1,gm4_fruiting_trees:{item:{id:\"sapling\",type:\"wild_dark_oak\",origin:\"garden_variety\"}},gm4_podzol_rooting_soil:{id:\"wild_dark_oak_sapling\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",
