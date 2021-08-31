@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1,Enchantments:[{lvl:1s,id:\"minecraft:unbreaking\"}],gm4_zauber_cauldrons:{item:\"enchanted_prismarine_shard\"},HideFlags:1}"
+              "tag": "{CustomModelData:3420001,Enchantments:[{lvl:1s,id:\"minecraft:unbreaking\"}],gm4_zauber_cauldrons:{item:\"enchanted_prismarine_shard\"},HideFlags:1}"
             },
             {
               "function": "minecraft:set_name",

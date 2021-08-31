@@ -2,7 +2,7 @@
 #run from standard_liquids:util_above
 
 execute if score @s gm4_lt_util matches 4.. run scoreboard players remove @s gm4_lt_value 4
-execute if score @s gm4_lt_util matches 4.. run summon armor_stand ~0.5 ~ ~0.5 {Marker:1,Invisible:1,Invulnerable:1,NoGravity:1,Fire:4000s,Tags:["gm4_lt_honey_display","gm4_no_edit"],CustomName:'"gm4_lt_honey_display"',Pose:{Head:[180.0f,0.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:honey_block",Count:1,tag:{CustomModelData:1}}],DisabledSlots:2039552}
+execute if score @s gm4_lt_util matches 4.. run summon armor_stand ~0.5 ~ ~0.5 {Marker:1,Invisible:1,Invulnerable:1,NoGravity:1,Fire:4000s,Tags:["gm4_lt_honey_display","gm4_no_edit"],CustomName:'"gm4_lt_honey_display"',Pose:{Head:[180.0f,0.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:honey_block",Count:1,tag:{CustomModelData:3420001}}],DisabledSlots:2039552}
 execute if score @s gm4_lt_util matches 4.. run playsound block.honey_block.slide block @a[distance=..10] ~ ~ ~ 1 0.5
 execute if score @s gm4_lt_util matches 4.. run scoreboard players remove @s gm4_lt_util 4
 

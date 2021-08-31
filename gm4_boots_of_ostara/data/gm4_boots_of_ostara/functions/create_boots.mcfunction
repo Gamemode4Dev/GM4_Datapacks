@@ -4,7 +4,7 @@
 # Set most of the Boots of Ostara's defining tags. These can mostly be overriden by the merge operation
 # below, but gm4_custom_crafters is internal to how CCs work and gm4_boots_of_ostara is already guaranteed
 # to be unset as a condition for the recipe to be processed.
-data modify storage gm4_boots_of_ostara:temp Item set value {tag:{CustomModelData:1,gm4_custom_crafters:{multiplier:1},gm4_boots_of_ostara:1b,HideFlags:64,display:{Name:'{"translate":"%1$s%3427655$s","with":["Boots of Ostara",{"translate":"item.gm4.boots_of_ostara"}],"italic":false}',color:3705899}}}
+data modify storage gm4_boots_of_ostara:temp Item set value {tag:{CustomModelData:3420001,gm4_custom_crafters:{multiplier:1},gm4_boots_of_ostara:1b,HideFlags:64,display:{Name:'{"translate":"%1$s%3427655$s","with":["Boots of Ostara",{"translate":"item.gm4.boots_of_ostara"}],"italic":false}',color:3705899}}}
 
 # Merge item data into the temporary storage. If the item has custom name, CustomModelData, or similar
 # properties that the user might not want to lose, they will override the normal Boots of Ostara tags,

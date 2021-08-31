@@ -22,7 +22,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:4,gm4_fruiting_trees:{item:{id:\"sapling\",type:\"apple\"}},gm4_podzol_rooting_soil:{id:\"apple_tree_sapling\"}}"
+                            "tag": "{CustomModelData:3420004,gm4_fruiting_trees:{item:{id:\"sapling\",type:\"apple\"}},gm4_podzol_rooting_soil:{id:\"apple_tree_sapling\"}}"
                         }
                     ]
                 }
