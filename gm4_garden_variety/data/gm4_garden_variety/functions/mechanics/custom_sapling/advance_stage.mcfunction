@@ -13,4 +13,4 @@ execute if block ~ ~ ~ minecraft:dark_oak_sapling run setblock ~ ~ ~ minecraft:d
 
 # advance stage of custom sapling, if stage is large enough, grow the tree
 scoreboard players add @s gm4_sap_stage 1
-execute if score @s gm4_sap_stage >= @s gm4_sap_growth run function gm4_garden_variety:mechanics/custom_sapling/grow
+execute if score @s gm4_sap_stage >= @s gm4_sap_growth run function gm4_garden_variety:mechanics/custom_sapling/generate_tree

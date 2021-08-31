@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "place_sapling": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "item": {
+                    "nbt": "{gm4_garden_variety:{item:{id:\"sapling\"}}}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_garden_variety:mechanics/custom_sapling/place"
+    }
+}

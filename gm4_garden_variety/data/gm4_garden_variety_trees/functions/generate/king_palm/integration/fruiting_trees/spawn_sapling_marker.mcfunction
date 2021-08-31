@@ -5,5 +5,5 @@
 
 
 # summon marker and set scoreboard
-summon marker ~0.5 ~ ~0.5 {CustomName:'"King Palm Sapling"',Tags:["gm4_fruiting_sapling","gm4_king_palm_sapling"]}
+summon marker ~ ~ ~ {CustomName:'"King Palm Sapling"',Tags:["gm4_gv_sapling","gm4_king_palm_sapling"]}
 scoreboard players set @e[type=marker,tag=gm4_king_palm_sapling,sort=nearest,limit=1] gm4_sap_growth 2

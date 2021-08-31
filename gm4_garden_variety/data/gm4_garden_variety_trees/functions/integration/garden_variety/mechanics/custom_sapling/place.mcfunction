@@ -4,4 +4,4 @@
 # run from TODO
 
 # plant sapling
-execute if data storage gm4_fruiting_trees:data Sapling{type:"king_palm"} run function gm4_garden_variety_trees:generate/king_palm/integration/fruiting_trees/spawn_sapling_marker
+execute if data storage gm4_garden_variety:data Sapling{type:"king_palm"} run function gm4_garden_variety_trees:generate/king_palm/integration/fruiting_trees/spawn_sapling_marker
