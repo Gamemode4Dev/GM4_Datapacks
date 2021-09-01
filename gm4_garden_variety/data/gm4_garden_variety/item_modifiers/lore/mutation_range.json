@@ -1,0 +1,33 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "text": "> ",
+          "color": "#BD6FFD",
+          "italic": false
+          },
+        {
+          "nbt": "mutations[0].mutation",
+          "storage": "gm4_garden_variety:interpret",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": ": ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "nbt": "mutations[0].value",
+          "storage": "gm4_garden_variety:interpret",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    ],
+    "replace": true
+  }
+]

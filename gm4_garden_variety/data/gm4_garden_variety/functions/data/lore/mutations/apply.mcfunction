@@ -3,19 +3,50 @@
 # run from TODO
 
 
+# SET VALUES
+# gm4_garden_variety:modify/item target
+# gm4_garden_variety:modify/item modifier
+
 # remove lore
 function gm4_garden_variety:data/lore/mutations/remove
 
-# get mutations in lore form
-function gm4_garden_variety:data/lore/mutations/get_mutations
+
+### INIT ###
+
+# reset storage
+data remove storage gm4_garden_variety:temp mutation_lore
+
+# convert nbt to scores
+execute store result score $extra_lore gm4_gv_nbt_data run data get storage gm4_garden_variety:modify/item modifier.tag.gm4_garden_variety.mutations
+execute store result score $mutations gm4_gv_nbt_data run data get storage gm4_garden_variety:modify/item modifier.tag.gm4_garden_variety.mutations
+
+# summon llama
+summon trader_llama ~ 0 ~ {Silent:1b,NoGravity:1b,Invulnerable:1b,ChestedHorse:1b,Variant:0,Strength:1,DespawnDelay:1,Tags:["gm4_gv_get_mutations"],Items:[{Slot:2b,id:"minecraft:stone",Count:1b}]}
+
+# isolate mutations
+data modify storage gm4_garden_variety:interpret mutations set from storage gm4_garden_variety:modify/item modifier.tag.gm4_garden_variety.mutations
+
+
+### APPLY LORE ###
+
+# header
+data modify storage gm4_garden_variety:temp mutation_lore append value '[{"text":"Sapling Mutations","color":"#BD6FFD","italic":false}]'
+
+# if no mutations
+execute unless score $extra_lore gm4_gv_nbt_data matches 1.. run data modify storage gm4_garden_variety:temp mutation_lore append value '[{"text":"> ","color":"#BD6FFD","italic":false},{"text":"None","color":"gray","italic":false}]'
+execute unless score $extra_lore gm4_gv_nbt_data matches 1.. run scoreboard players set $extra_lore gm4_gv_nbt_data 1
+
+# get mutations
+scoreboard players operation $mutation_lore_loop gm4_gv_nbt_data = $mutations gm4_gv_nbt_data
+execute if score $mutation_lore_loop gm4_gv_nbt_data matches 1.. run function gm4_garden_variety:data/lore/mutations/get_mutations
 
 # add mutations
-data modify storage gm4_garden_variety:data/modify Item.tag.display.Lore append from storage gm4_garden_variety:data/item mutation_lore[]
+data modify storage gm4_garden_variety:modify/item target.tag.display.Lore append from storage gm4_garden_variety:temp mutation_lore[]
 
 # add lore nbt
-data modify storage gm4_garden_variety:data/modify Item.tag.gm4_garden_variety.lore.show_mutations set value 1b
-execute store result storage gm4_garden_variety:data/modify Item.tag.gm4_garden_variety.lore.extra_lore int 1 run scoreboard players get $extra_lore gm4_gv_nbt_data
-execute store result storage gm4_garden_variety:data/modify Item.tag.gm4_garden_variety.lore.mutations int 1 run scoreboard players get $mutations gm4_gv_nbt_data
+data modify storage gm4_garden_variety:modify/item target.tag.gm4_garden_variety.lore.show_mutations set value 1b
+execute store result storage gm4_garden_variety:modify/item target.tag.gm4_garden_variety.lore.extra_lore int 1 run scoreboard players get $extra_lore gm4_gv_nbt_data
+execute store result storage gm4_garden_variety:modify/item target.tag.gm4_garden_variety.lore.mutations int 1 run scoreboard players get $mutations gm4_gv_nbt_data
 
-# remove tag
-tag @s remove gm4_gv_add_mutation_lore
+# kill llama
+kill @e[tag=gm4_gv_get_mutations]

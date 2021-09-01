@@ -1,0 +1,42 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:birch_sapling",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "King Palm Sapling",
+                                    {"translate":"item.gm4.king_palm_sapling"}
+                                ],
+                                "italic": false,
+                                "color": "#8dc742"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:1,gm4_garden_variety:{mutations:[{\"mutation\": \"height\", \"value\": \"tall\"},{\"mutation\": \"sterile\", \"value\": 1b}],item:{id:\"sapling\",type:\"king_palm\",origin:\"garden_variety\"}},gm4_podzol_rooting_soil:{id:\"king_palm_sapling\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                {
+                                  "text": "A wild sapling found in nature",
+                                  "color": "gray",
+                                  "italic": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

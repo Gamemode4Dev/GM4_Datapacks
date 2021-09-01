@@ -9,8 +9,10 @@
 data modify block ~ ~ ~ Items[{Slot:0b}].Slot set value 2b
 
 # [S2] append mutation lore (book)
-data modify storage gm4_garden_variety:data/garden_variety_nbt convert set from block ~ ~ ~ Items[{Slot:1b}].tag.gm4_garden_variety
-function gm4_garden_variety:data/lore/mutations/apply/to_analyzer_output
+data modify storage gm4_garden_variety:modify/item target set from block ~ ~ ~ Items[{Slot:2b}]
+data modify storage gm4_garden_variety:modify/item modifier set from block ~ ~ ~ Items[{Slot:1b}]
+function gm4_garden_variety:data/lore/mutations/apply
+data modify block ~ ~ ~ Items[{Slot:2b}] set from storage gm4_garden_variety:modify/item target
 
 # [S2] change item name
 data modify block ~ ~ ~ Items[{Slot:2b}].tag.display.Name set value '{"text":"Book Report","italic":false}'
