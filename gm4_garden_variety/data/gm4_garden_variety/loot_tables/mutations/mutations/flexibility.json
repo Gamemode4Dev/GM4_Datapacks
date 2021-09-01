@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{flexibility:\"lowest\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Flexibility\",value:\"Lowest\"}}}"
             }
           ]
         },
@@ -21,7 +21,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{flexibility:\"lower\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Flexibility\",value:\"Lower\"}}}"
             }
           ]
         },
@@ -32,7 +32,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{flexibility:\"low\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Flexibility\",value:\"Low\"}}}"
             }
           ]
         },
@@ -43,7 +43,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{flexibility:\"high\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Flexibility\",value:\"High\"}}}"
             }
           ]
         },
@@ -54,7 +54,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{flexibility:\"higher\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Flexibility\",value:\"Higher\"}}}"
             }
           ]
         },
@@ -65,7 +65,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{flexibility:\"highest\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Flexibility\",value:\"Highest\"}}}"
             }
           ]
         }

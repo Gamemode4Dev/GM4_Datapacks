@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{fertility:\"lowest\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Fertility\",value:\"Lowest\"}}}"
             }
           ]
         },
@@ -21,7 +21,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{fertility:\"lower\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Fertility\",value:\"Lower\"}}}"
             }
           ]
         },
@@ -32,7 +32,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{fertility:\"low\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Fertility\",value:\"Low\"}}}"
             }
           ]
         },
@@ -43,7 +43,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{fertility:\"high\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Fertility\",value:\"High\"}}}"
             }
           ]
         },
@@ -54,7 +54,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{fertility:\"higher\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Fertility\",value:\"Higher\"}}}"
             }
           ]
         },
@@ -65,7 +65,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{fertility:\"highest\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Fertility\",value:\"Highest\"}}}"
             }
           ]
         }

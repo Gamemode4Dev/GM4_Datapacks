@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{corrosion:\"none\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Corrosion\",value:\"None\"}}}"
             }
           ]
         },
@@ -21,7 +21,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{corrosion:\"decreased\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Corrosion\",value:\"Decreased\"}}}"
             }
           ]
         },
@@ -32,7 +32,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{corrosion:\"increased\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Corrosion\",value:\"Increased\"}}}"
             }
           ]
         }

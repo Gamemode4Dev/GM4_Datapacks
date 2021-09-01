@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{height:\"shortest\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Height\",value:\"Shortest\"}}}"
             }
           ]
         },
@@ -21,7 +21,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{height:\"shorter\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Height\",value:\"Shorter\"}}}"
             }
           ]
         },
@@ -32,7 +32,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{height:\"short\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Height\",value:\"Short\"}}}"
             }
           ]
         },
@@ -43,7 +43,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{height:\"tall\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Height\",value:\"Tall\"}}}"
             }
           ]
         },
@@ -54,7 +54,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{height:\"taller\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Height\",value:\"Taller\"}}}"
             }
           ]
         },
@@ -65,7 +65,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{height:\"tallest\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Height\",value:\"Tallest\"}}}"
             }
           ]
         }

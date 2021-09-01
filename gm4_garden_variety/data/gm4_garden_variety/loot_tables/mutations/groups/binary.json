@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{poisonous:1b}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Poisonous\"}}}"
             }
           ]
         },
@@ -21,7 +21,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{hardened:1b}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Hardened\"}}}"
             }
           ]
         },
@@ -32,7 +32,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{sterile:1b}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Sterile\"}}}"
             }
           ]
         },
@@ -43,7 +43,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{fruiting:1b}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Fruiting\"}}}"
             }
           ]
         },
@@ -54,7 +54,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{necrotic:1b}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Necrotic\"}}}"
             }
           ]
         },
@@ -65,7 +65,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{flowering:1b}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Flowering\"}}}"
             }
           ]
         },
@@ -76,7 +76,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{snowy:1b}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Snowy\"}}}"
             }
           ]
         },
@@ -87,7 +87,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{radiating:1b}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Radiating\"}}}"
             }
           ]
         }

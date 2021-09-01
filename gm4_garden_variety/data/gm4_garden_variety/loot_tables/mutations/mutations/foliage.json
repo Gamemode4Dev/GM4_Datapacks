@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{foliage:\"smallest\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Foliage\",value:\"Smallest\"}}}"
             }
           ]
         },
@@ -21,7 +21,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{foliage:\"smaller\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Foliage\",value:\"Smaller\"}}}"
             }
           ]
         },
@@ -32,7 +32,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{foliage:\"small\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Foliage\",value:\"Small\"}}}"
             }
           ]
         },
@@ -43,7 +43,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{foliage:\"large\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Foliage\",value:\"Large\"}}}"
             }
           ]
         },
@@ -54,7 +54,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{foliage:\"larger\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Foliage\",value:\"Larger\"}}}"
             }
           ]
         },
@@ -65,7 +65,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{foliage:\"largest\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Foliage\",value:\"Largest\"}}}"
             }
           ]
         }
