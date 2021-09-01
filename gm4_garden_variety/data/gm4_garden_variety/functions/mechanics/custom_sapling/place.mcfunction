@@ -31,7 +31,7 @@ data modify storage gm4_garden_variety:data Sapling.type set from storage gm4_ga
 execute at @e[type=marker,tag=gm4_ray_loc,limit=1] if block ~ ~ ~ #minecraft:saplings run function #gm4_garden_variety:mechanics/custom_sapling/place
 
 # store nbt
-execute positioned ~0.5 ~ ~0.5 run data modify entity @e[type=marker,distance=..1,limit=1,tag=gm4_gv_sapling,sort=nearest] data.gm4_garden_variety set from storage gm4_garden_variety:data/garden_variety_nbt place_sapling
+execute at @e[type=marker,tag=gm4_ray_loc,limit=1] run data modify entity @e[type=marker,distance=..1,limit=1,tag=gm4_gv_sapling,sort=nearest] data.gm4_garden_variety set from storage gm4_garden_variety:data/garden_variety_nbt place_sapling
 
 # reset
 kill @e[type=marker,tag=gm4_tree_ray]
