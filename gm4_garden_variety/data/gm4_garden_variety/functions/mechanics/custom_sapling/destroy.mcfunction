@@ -6,6 +6,9 @@
 # drop saplings
 function #gm4_garden_variety:mechanics/custom_sapling/destroy
 
+# remove random muations
+data remove entity @s data.gm4_garden_variety.random_mutations
+
 # store nbt
 execute positioned ~.5 ~.5 ~.5 run data modify entity @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Age:0s}] Item.tag.gm4_garden_variety set from entity @s data.gm4_garden_variety
 

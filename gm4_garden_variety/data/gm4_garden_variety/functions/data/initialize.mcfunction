@@ -19,6 +19,8 @@ scoreboard objectives add gm4_gv_analyze dummy
 scoreboard objectives add gm4_gv_analyze_p dummy
 # research book
 scoreboard objectives add gm4_gv_research dummy
+# mutations
+scoreboard objectives add gm4_gv_mutations dummy
 
 
 

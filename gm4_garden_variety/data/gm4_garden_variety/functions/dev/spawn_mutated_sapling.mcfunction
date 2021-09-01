@@ -12,19 +12,11 @@ kill @e[tag=gm4_gv_mutated_trade_option]
 
 # add random mutation
 function gm4_garden_variety:data/generate/random_mutation
-data modify storage gm4_garden_variety:test Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:data/mutation random_mutation
+data modify storage gm4_garden_variety:test Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:data/mutation random_mutation[0]
 function gm4_garden_variety:data/generate/random_mutation
-data modify storage gm4_garden_variety:test Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:data/mutation random_mutation
+data modify storage gm4_garden_variety:test Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:data/mutation random_mutation[0]
 function gm4_garden_variety:data/generate/random_mutation
-data modify storage gm4_garden_variety:test Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:data/mutation random_mutation
-function gm4_garden_variety:data/generate/random_mutation
-data modify storage gm4_garden_variety:test Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:data/mutation random_mutation
-function gm4_garden_variety:data/generate/random_mutation
-data modify storage gm4_garden_variety:test Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:data/mutation random_mutation
-function gm4_garden_variety:data/generate/random_mutation
-data modify storage gm4_garden_variety:test Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:data/mutation random_mutation
-function gm4_garden_variety:data/generate/random_mutation
-data modify storage gm4_garden_variety:test Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:data/mutation random_mutation
+data modify storage gm4_garden_variety:test Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:data/mutation random_mutation[0]
 
 # summon item
 summon item ~ ~ ~ {PickupDelay:1,Tags:["gm4_gv_test_item"],Item:{id:"minecraft:oak_sapling",Count:1b}}
