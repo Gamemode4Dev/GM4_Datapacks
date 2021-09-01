@@ -10,18 +10,18 @@
           "italic": false
           },
         {
-          "nbt": "mutations[0].mutation",
+          "nbt": "mutations[0].value",
           "storage": "gm4_garden_variety:interpret",
           "color": "gray",
           "italic": false
         },
         {
-          "text": ": ",
+          "text": " ",
           "color": "gray",
           "italic": false
         },
         {
-          "nbt": "mutations[0].value",
+          "nbt": "mutations[0].mutation",
           "storage": "gm4_garden_variety:interpret",
           "color": "gray",
           "italic": false
