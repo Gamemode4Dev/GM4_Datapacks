@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Corrosion\",value:\"None\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Corrosion\",value:\"No\"}}}"
             }
           ]
         },

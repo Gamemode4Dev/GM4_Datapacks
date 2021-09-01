@@ -37,19 +37,19 @@ execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutat
 
 # tree fertility
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Fertility",value:"Lowest"}] run scoreboard players set $fertility gm4_gv_nbt_data -3
-execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Fertility",value:"lower"}] run scoreboard players set $fertility gm4_gv_nbt_data -2
+execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Fertility",value:"Lower"}] run scoreboard players set $fertility gm4_gv_nbt_data -2
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Fertility",value:"Low"}] run scoreboard players set $fertility gm4_gv_nbt_data -1
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Fertility",value:"High"}] run scoreboard players set $fertility gm4_gv_nbt_data 1
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Fertility",value:"Higher"}] run scoreboard players set $fertility gm4_gv_nbt_data 2
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Fertility",value:"Highest"}] run scoreboard players set $fertility gm4_gv_nbt_data 3
 
-# rooting
-execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Rooting",value:"None"}] run scoreboard players set $rooting gm4_gv_nbt_data 0
-execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Rooting",value:"Weak"}] run scoreboard players set $rooting gm4_gv_nbt_data 1
-execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Rooting",value:"Strong"}] run scoreboard players set $rooting gm4_gv_nbt_data 2
+# roots
+execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Roots",value:"No"}] run scoreboard players set $roots gm4_gv_nbt_data 0
+execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Roots",value:"Weak"}] run scoreboard players set $roots gm4_gv_nbt_data 1
+execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Roots",value:"Strong"}] run scoreboard players set $roots gm4_gv_nbt_data 2
 
 # corrosion
-execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Corrosion",value:"None"}] run scoreboard players set $corrosion gm4_gv_nbt_data 0
+execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Corrosion",value:"No"}] run scoreboard players set $corrosion gm4_gv_nbt_data 0
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Corrosion",value:"Decreased"}] run scoreboard players set $corrosion gm4_gv_nbt_data -1
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Corrosion",value:"Increased"}] run scoreboard players set $corrosion gm4_gv_nbt_data 1
 
@@ -57,7 +57,7 @@ execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutat
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Poisonous"}] run scoreboard players set $poisonous gm4_gv_nbt_data 1
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Hardened"}] run scoreboard players set $hardened gm4_gv_nbt_data 1
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Sterile"}] run scoreboard players set $sterile gm4_gv_nbt_data 1
-execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Fruiting"}] run scoreboard players set $fruiting gm4_gv_nbt_data 1
+execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Fruity"}] run scoreboard players set $fruity gm4_gv_nbt_data 1
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Necrotic"}] run scoreboard players set $necrotic gm4_gv_nbt_data 1
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Flowering"}] run scoreboard players set $flowering gm4_gv_nbt_data 1
 execute if data storage gm4_garden_variety:data/garden_variety_nbt convert.mutations[{mutation:"Snowy"}] run scoreboard players set $snowy gm4_gv_nbt_data 1

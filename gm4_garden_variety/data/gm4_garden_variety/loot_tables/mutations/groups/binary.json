@@ -43,7 +43,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Fruiting\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Fruity\"}}}"
             }
           ]
         },

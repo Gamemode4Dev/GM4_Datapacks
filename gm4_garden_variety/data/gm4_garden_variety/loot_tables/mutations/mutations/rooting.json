@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Rooting\",value:\"None\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Roots\",value:\"No\"}}}"
             }
           ]
         },
@@ -21,7 +21,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Rooting\",value:\"Weak\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Roots\",value:\"Weak\"}}}"
             }
           ]
         },
@@ -32,7 +32,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Rooting\",value:\"Strong\"}}}"
+              "tag": "{gm4_garden_variety:{random_mutation:{mutation:\"Roots\",value:\"Strong\"}}}"
             }
           ]
         }
