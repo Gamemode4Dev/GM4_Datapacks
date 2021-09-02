@@ -18,4 +18,4 @@ data modify storage gm4_garden_variety:merge/mutation output[{mutation:"Radiatin
 # [loop]
 data remove storage gm4_garden_variety:merge/mutation modifier[0]
 scoreboard players remove $merge_mutations_loop gm4_gv_mutations 1
-execute if score $merge_mutations_loop gm4_gv_mutations matches 1.. run function gm4_garden_variety:mechanics/custom_sapling/mutations/merge_mutations
+execute if score $merge_mutations_loop gm4_gv_mutations matches 1.. run function gm4_garden_variety:mechanics/mutations/merge_mutations

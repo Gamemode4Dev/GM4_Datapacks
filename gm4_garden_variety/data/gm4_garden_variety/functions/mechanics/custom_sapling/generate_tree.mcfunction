@@ -6,13 +6,8 @@
 # set seed mode
 scoreboard players set $seed_mode_sapling gm4_gv_gen_data 1
 
-# merge random mutations
-data modify storage gm4_garden_variety:merge/mutation input set from entity @s data.gm4_garden_variety.mutations
-data modify storage gm4_garden_variety:merge/mutation output set from storage gm4_garden_variety:merge/mutation input
-data modify storage gm4_garden_variety:merge/mutation modifier set from entity @s data.gm4_garden_variety.random_mutations
-execute store result score $merge_mutations_loop gm4_gv_mutations run data get storage gm4_garden_variety:merge/mutation modifier
-function gm4_garden_variety:mechanics/custom_sapling/mutations/merge_mutations
-data remove entity @s data.gm4_garden_variety.random_mutations
+# attempt random mutation
+function gm4_garden_variety:mechanics/mutations/random_mutations/attempt
 
 # store nbt for use
 data modify storage gm4_garden_variety:transfer/gv_nbt tree_offspring set from entity @s data.gm4_garden_variety

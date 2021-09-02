@@ -1,0 +1,22 @@
+
+
+# set random chance
+scoreboard players set $mutation_chance_pool gm4_gv_mutations 100
+scoreboard players set $mutation_chance_condition gm4_gv_mutations 3
+
+# select random mutaton
+summon marker ~ ~ ~ {CustomName:'"GM4 GV Random Num"',Tags:["gm4_gv_random_num"]}
+execute store result score $mutation_chance_roll gm4_gv_mutations run data get entity @e[type=marker,tag=gm4_gv_random_num,limit=1] UUID[0]
+scoreboard players operation $mutation_chance_roll gm4_gv_mutations %= $mutation_chance_pool gm4_gv_mutations
+kill @e[type=marker,tag=gm4_gv_random_num]
+
+# gain mutation
+execute if score $mutation_chance_roll gm4_gv_mutations <= $mutation_chance_condition gm4_gv_mutations run function gm4_garden_variety:mechanics/mutations/random_mutations/gain_mutation
+
+# merge random mutations
+data modify storage gm4_garden_variety:merge/mutation input set from entity @s data.gm4_garden_variety.mutations
+data modify storage gm4_garden_variety:merge/mutation output set from storage gm4_garden_variety:merge/mutation input
+data modify storage gm4_garden_variety:merge/mutation modifier set from entity @s data.gm4_garden_variety.random_mutations
+execute store result score $merge_mutations_loop gm4_gv_mutations run data get storage gm4_garden_variety:merge/mutation modifier
+function gm4_garden_variety:mechanics/mutations/merge_mutations
+data remove entity @s data.gm4_garden_variety.random_mutations

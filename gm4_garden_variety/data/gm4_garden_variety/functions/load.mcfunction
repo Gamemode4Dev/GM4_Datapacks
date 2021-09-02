@@ -10,4 +10,3 @@ execute unless score gm4_garden_variety load.status matches 1 run schedule clear
 execute unless score gm4_garden_variety load.status matches 1 run schedule clear gm4_garden_variety:clock/process_leaves
 execute unless score gm4_garden_variety load.status matches 1 run schedule clear gm4_garden_variety:clock/process_analyzer
 execute unless score gm4_garden_variety load.status matches 1 run schedule clear gm4_garden_variety:clock/process_arborist
-execute unless score gm4_garden_variety load.status matches 1 run schedule clear gm4_garden_variety:clock/process_saplings
