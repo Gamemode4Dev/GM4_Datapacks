@@ -2,7 +2,7 @@
 
 
 # get mutation amount + 2
-execute store result score $mutation_amount gm4_gv_nbt_data run data get storage gm4_garden_variety:interpret/mutations input
+execute store result score $mutation_amount gm4_gv_nbt_data run data get storage gm4_garden_variety:choose/mutation input
 scoreboard players add $mutation_amount gm4_gv_nbt_data 3
 
 # select random mutaton

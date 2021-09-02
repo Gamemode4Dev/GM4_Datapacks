@@ -1,9 +1,6 @@
 # run from TODO
 
 
-# reset debug storage
-data remove storage gm4_garden_variety:debug/arborist trades
-
 # display particles
 particle minecraft:happy_villager ~ ~1 ~ .3 .5 .3 .1 10
 

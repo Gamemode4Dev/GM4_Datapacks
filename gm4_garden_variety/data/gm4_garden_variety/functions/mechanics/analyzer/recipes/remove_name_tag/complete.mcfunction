@@ -19,7 +19,6 @@ execute store result block ~ ~ ~ Items[{Slot:0b}].tag.Damage int 1 run scoreboar
 data modify storage gm4_garden_variety:modify/item target set from block ~ ~ ~ Items[{Slot:1b}]
 function gm4_garden_variety:data/lore/mutations/remove
 data modify block ~ ~ ~ Items[{Slot:1b}] set from storage gm4_garden_variety:modify/item target
-data modify storage gm4_garden_variety:modify/item test set from storage gm4_garden_variety:modify/item target
 
 # [S1] remove name_tag tag (sapling)
 data remove block ~ ~ ~ Items[{Slot:1b}].tag.gm4_garden_variety.name_tag

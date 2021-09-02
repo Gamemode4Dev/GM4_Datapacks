@@ -11,7 +11,7 @@
           },
         {
           "nbt": "mutations[0].value",
-          "storage": "gm4_garden_variety:interpret",
+          "storage": "gm4_garden_variety:interpret/array",
           "color": "gray",
           "italic": false
         },
@@ -22,7 +22,7 @@
         },
         {
           "nbt": "mutations[0].mutation",
-          "storage": "gm4_garden_variety:interpret",
+          "storage": "gm4_garden_variety:interpret/array",
           "color": "gray",
           "italic": false
         }

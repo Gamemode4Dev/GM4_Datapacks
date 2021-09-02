@@ -9,11 +9,11 @@ function gm4_garden_variety:data/generate/seed/based_on_mode
 function gm4_garden_variety_trees:generate/king_palm/variables/tree_default
 
 # [Initialize] convert nbt to scores
-data modify storage gm4_garden_variety:data/garden_variety_nbt convert set from entity @s data.gm4_garden_variety
+data modify storage gm4_garden_variety:convert/to_scores input set from entity @s data.gm4_garden_variety
 function gm4_garden_variety:data/convert/nbt_to_scores
 
 # [Initialize] store nbt in storage (for reference during generation)
-data modify storage gm4_garden_variety:data/garden_variety_nbt tree_generation set from entity @s data.gm4_garden_variety
+data modify storage gm4_garden_variety:transfer/gv_nbt tree_generation set from entity @s data.gm4_garden_variety
 
 # [Initialize] modify based on generation mode
 execute if score $generation_mode_orbis gm4_gv_gen_data matches 1 if predicate gm4_garden_variety:biome/snowy run scoreboard players set $snowy gm4_gv_nbt_data 1

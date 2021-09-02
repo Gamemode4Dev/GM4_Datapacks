@@ -4,12 +4,12 @@
 
 # coordinate
 scoreboard players set $seed gm4_gv_gen_data 1
-data modify storage gm4_garden_variety:data/position Pos set from entity @s Pos
-execute store result score seed_pos_x gm4_gv_gen_data run data get storage gm4_garden_variety:data/position Pos[0]
+data modify storage gm4_garden_variety:temp/seed Pos set from entity @s Pos
+execute store result score seed_pos_x gm4_gv_gen_data run data get storage gm4_garden_variety:temp/seed Pos[0]
 scoreboard players operation $seed gm4_gv_gen_data = seed_pos_x gm4_gv_gen_data
-execute store result score seed_pos_y gm4_gv_gen_data run data get storage gm4_garden_variety:data/position Pos[1]
+execute store result score seed_pos_y gm4_gv_gen_data run data get storage gm4_garden_variety:temp/seed Pos[1]
 scoreboard players operation $seed gm4_gv_gen_data *= seed_pos_y gm4_gv_gen_data
-execute store result score seed_pos_z gm4_gv_gen_data run data get storage gm4_garden_variety:data/position Pos[2]
+execute store result score seed_pos_z gm4_gv_gen_data run data get storage gm4_garden_variety:temp/seed Pos[2]
 scoreboard players operation $seed gm4_gv_gen_data += seed_pos_z gm4_gv_gen_data
 
 # world seed
