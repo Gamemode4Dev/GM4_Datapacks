@@ -26,7 +26,7 @@ data remove block ~ ~ ~ Items[{Slot:2b}].tag.gm4_garden_variety.mutations
 
 # [S2] set random mutation (sapling)
 data modify block ~ ~ ~ Items[{Slot:2b}].tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:choose/mutation output
-execute if score $mutation_roll gm4_gv_nbt_data matches ..2 run data modify block ~ ~ ~ Items[{Slot:2b}].Count set value 0b
+execute if score $mutation_roll gm4_gv_mutations matches ..2 run data modify block ~ ~ ~ Items[{Slot:2b}].Count set value 0b
 
 
 # finalize
