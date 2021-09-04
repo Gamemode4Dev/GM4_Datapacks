@@ -11,7 +11,7 @@ data modify block ~ ~ ~ Items[{Slot:0b}].Slot set value 2b
 # [S2] append mutation lore (book)
 data modify storage gm4_garden_variety:modify/item input set from block ~ ~ ~ Items[{Slot:2b}]
 data modify storage gm4_garden_variety:modify/item modifier set from block ~ ~ ~ Items[{Slot:1b}]
-function gm4_garden_variety:data/lore/mutations/apply
+function gm4_garden_variety:data/mutations/lore/apply
 data modify block ~ ~ ~ Items[{Slot:2b}] set from storage gm4_garden_variety:modify/item output
 
 # [S2] change item name

@@ -7,7 +7,7 @@
 scoreboard players set $seed_mode_sapling gm4_gv_gen_data 1
 
 # attempt random mutation
-function gm4_garden_variety:mechanics/mutations/random_mutations/attempt
+function gm4_garden_variety:data/mutations/random_mutations/attempt
 
 # store nbt for use
 data modify storage gm4_garden_variety:transfer/gv_nbt tree_offspring set from entity @s data.gm4_garden_variety

@@ -10,7 +10,7 @@ scoreboard players add $slot_0_durability gm4_gv_analyze 5
 
 # choose random mutation
 data modify storage gm4_garden_variety:choose/mutation input set from block ~ ~ ~ Items[{Slot:1b}].tag.gm4_garden_variety.mutations
-function gm4_garden_variety:data/choose/random_mutation/check
+function gm4_garden_variety:data/mutations/choose_mutations/check
 
 
 ##### SLOT MODIFICATIONS #####

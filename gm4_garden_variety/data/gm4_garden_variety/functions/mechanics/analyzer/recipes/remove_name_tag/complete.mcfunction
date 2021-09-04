@@ -17,7 +17,7 @@ execute store result block ~ ~ ~ Items[{Slot:0b}].tag.Damage int 1 run scoreboar
 
 # [S1] remove lore (sapling)
 data modify storage gm4_garden_variety:modify/item input set from block ~ ~ ~ Items[{Slot:1b}]
-function gm4_garden_variety:data/lore/mutations/remove
+function gm4_garden_variety:data/mutations/lore/remove
 data modify block ~ ~ ~ Items[{Slot:1b}] set from storage gm4_garden_variety:modify/item output
 
 # [S1] remove name_tag tag (sapling)
@@ -32,7 +32,7 @@ execute store result block ~ ~ ~ Items[{Slot:2b}].Count int 1 run scoreboard pla
 # [S2] append mutation lore (name tag)
 data modify storage gm4_garden_variety:modify/item input set from block ~ ~ ~ Items[{Slot:2b}]
 data modify storage gm4_garden_variety:modify/item modifier set from block ~ ~ ~ Items[{Slot:1b}]
-function gm4_garden_variety:data/lore/mutations/apply
+function gm4_garden_variety:data/mutations/lore/apply
 data modify block ~ ~ ~ Items[{Slot:2b}] set from storage gm4_garden_variety:modify/item output
 
 

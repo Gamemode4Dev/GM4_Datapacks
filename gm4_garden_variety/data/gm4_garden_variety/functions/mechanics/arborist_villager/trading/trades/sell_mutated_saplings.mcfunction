@@ -12,7 +12,7 @@ function #gm4_garden_variety:mechanics/arborist_villager/register_trades/mutated
 data modify storage gm4_garden_variety:arborist random_trade set from entity @e[type=trader_llama,tag=gm4_gv_mutated_trade_option,limit=1,sort=random] {}
 
 # kill trade markers
-kill @e[tag=gm4_gv_mutated_trade_option]
+execute as @e[type=trader_llama,tag=gm4_gv_mutated_trade_option] run data merge entity @s {Health:0,DeathTime:19}
 
 # interpret trade data (DecorItem: trade_data, Items[0]: sell, Items[1]: buy, Items[2]: buyB)
 data modify storage gm4_garden_variety:arborist next_trade set from storage gm4_garden_variety:arborist random_trade.DecorItem.tag.gm4_garden_variety.trade_data

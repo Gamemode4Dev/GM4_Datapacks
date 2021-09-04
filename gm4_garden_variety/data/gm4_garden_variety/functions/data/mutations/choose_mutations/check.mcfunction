@@ -12,4 +12,4 @@ scoreboard players operation $mutation_roll gm4_gv_nbt_data %= $mutation_amount 
 kill @e[type=marker,tag=gm4_gv_random_num]
 
 # choose random mutation
-execute if score $mutation_roll gm4_gv_nbt_data matches 3.. run function gm4_garden_variety:data/choose/random_mutation/success
+execute if score $mutation_roll gm4_gv_nbt_data matches 3.. run function gm4_garden_variety:data/mutations/choose_mutations/success

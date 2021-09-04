@@ -10,4 +10,4 @@ data modify storage gm4_garden_variety:add/lore lines append from entity @e[type
 # [Loop]
 data remove storage gm4_garden_variety:interpret/array mutations[0]
 scoreboard players remove $mutation_lore_loop gm4_gv_nbt_data 1
-execute if score $mutation_lore_loop gm4_gv_nbt_data matches 1.. run function gm4_garden_variety:data/mutations/lore/get_mutations
+execute if score $mutation_lore_loop gm4_gv_nbt_data matches 1.. run function gm4_garden_variety:data/lore/mutations/get_mutations

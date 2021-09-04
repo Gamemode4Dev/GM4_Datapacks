@@ -11,12 +11,12 @@ scoreboard players operation $mutation_chance_roll gm4_gv_mutations %= $mutation
 kill @e[type=marker,tag=gm4_gv_random_num]
 
 # gain mutation
-execute if score $mutation_chance_roll gm4_gv_mutations <= $mutation_chance_condition gm4_gv_mutations run function gm4_garden_variety:mechanics/mutations/random_mutations/gain_mutation
+execute if score $mutation_chance_roll gm4_gv_mutations <= $mutation_chance_condition gm4_gv_mutations run function gm4_garden_variety:data/mutations/random_mutations/gain_mutation
 
 # merge random mutations
 data modify storage gm4_garden_variety:merge/mutation input set from entity @s data.gm4_garden_variety.mutations
 data modify storage gm4_garden_variety:merge/mutation output set from storage gm4_garden_variety:merge/mutation input
 data modify storage gm4_garden_variety:merge/mutation merge set from entity @s data.gm4_garden_variety.random_mutations
 execute store result score $merge_mutations_loop gm4_gv_mutations run data get storage gm4_garden_variety:merge/mutation merge
-function gm4_garden_variety:mechanics/mutations/merge_mutations
+function gm4_garden_variety:data/mutations/merge_mutations
 data remove entity @s data.gm4_garden_variety.random_mutations

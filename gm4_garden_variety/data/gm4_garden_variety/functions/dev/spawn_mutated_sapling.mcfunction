@@ -8,7 +8,7 @@ function #gm4_garden_variety:mechanics/arborist_villager/register_trades/mutated
 data modify storage gm4_garden_variety:dev Item set from entity @e[type=trader_llama,tag=gm4_gv_mutated_trade_option,limit=1,sort=random] Items[0]
 
 # kill trade markers
-kill @e[tag=gm4_gv_mutated_trade_option]
+execute as @e[type=trader_llama,tag=gm4_gv_mutated_trade_option] run data merge entity @s {Health:0,DeathTime:19}
 
 # add random mutation
 function gm4_garden_variety:data/generate/random_mutation
