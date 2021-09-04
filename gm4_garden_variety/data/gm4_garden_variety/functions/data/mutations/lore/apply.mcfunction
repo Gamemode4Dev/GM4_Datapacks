@@ -27,7 +27,7 @@ data modify storage gm4_garden_variety:interpret/array mutations set from storag
 ### APPLY LORE ###
 
 # remove lore
-function gm4_garden_variety:data/lore/mutations/remove
+function gm4_garden_variety:data/mutations/lore/remove
 
 # header
 data modify storage gm4_garden_variety:add/lore lines append value '[{"text":"Sapling Mutations","color":"#BD6FFD","italic":false}]'
@@ -38,7 +38,7 @@ execute unless score $extra_lore gm4_gv_nbt_data matches 1.. run scoreboard play
 
 # get mutations
 scoreboard players operation $mutation_lore_loop gm4_gv_nbt_data = $mutations gm4_gv_nbt_data
-execute if score $mutation_lore_loop gm4_gv_nbt_data matches 1.. run function gm4_garden_variety:data/lore/mutations/get_mutations
+execute if score $mutation_lore_loop gm4_gv_nbt_data matches 1.. run function gm4_garden_variety:data/mutations/lore/get_mutations
 
 # add mutations
 data modify storage gm4_garden_variety:modify/item output.tag.display.Lore append from storage gm4_garden_variety:add/lore lines[]
