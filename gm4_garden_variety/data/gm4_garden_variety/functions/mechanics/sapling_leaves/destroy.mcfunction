@@ -4,6 +4,9 @@
 # run from gm4_garden_variety:markers/sapling_leaf/clock
 
 
+# destroy leaves
+execute unless block ~ ~ ~ #minecraft:leaves run function #gm4_garden_variety:mechanics/sapling_leaves/destroy
+
 # store nbt from passed on mutations
 data modify storage gm4_garden_variety:transfer/gv_nbt sapling_leaf set from entity @s data.gm4_garden_variety
 data remove storage gm4_garden_variety:transfer/gv_nbt sapling_leaf.lore
