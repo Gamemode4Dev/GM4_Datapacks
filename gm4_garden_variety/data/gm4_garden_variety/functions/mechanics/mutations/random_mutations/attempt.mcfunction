@@ -16,7 +16,7 @@ execute if score $mutation_chance_roll gm4_gv_mutations <= $mutation_chance_cond
 # merge random mutations
 data modify storage gm4_garden_variety:merge/mutation input set from entity @s data.gm4_garden_variety.mutations
 data modify storage gm4_garden_variety:merge/mutation output set from storage gm4_garden_variety:merge/mutation input
-data modify storage gm4_garden_variety:merge/mutation modifier set from entity @s data.gm4_garden_variety.random_mutations
-execute store result score $merge_mutations_loop gm4_gv_mutations run data get storage gm4_garden_variety:merge/mutation modifier
+data modify storage gm4_garden_variety:merge/mutation merge set from entity @s data.gm4_garden_variety.random_mutations
+execute store result score $merge_mutations_loop gm4_gv_mutations run data get storage gm4_garden_variety:merge/mutation merge
 function gm4_garden_variety:mechanics/mutations/merge_mutations
 data remove entity @s data.gm4_garden_variety.random_mutations

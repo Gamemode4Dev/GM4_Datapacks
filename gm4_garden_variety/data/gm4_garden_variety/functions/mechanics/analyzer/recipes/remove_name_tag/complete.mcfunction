@@ -16,9 +16,9 @@ scoreboard players operation $slot_0_durability gm4_gv_analyze += $slot_1_amount
 execute store result block ~ ~ ~ Items[{Slot:0b}].tag.Damage int 1 run scoreboard players get $slot_0_durability gm4_gv_analyze
 
 # [S1] remove lore (sapling)
-data modify storage gm4_garden_variety:modify/item target set from block ~ ~ ~ Items[{Slot:1b}]
+data modify storage gm4_garden_variety:modify/item input set from block ~ ~ ~ Items[{Slot:1b}]
 function gm4_garden_variety:data/lore/mutations/remove
-data modify block ~ ~ ~ Items[{Slot:1b}] set from storage gm4_garden_variety:modify/item target
+data modify block ~ ~ ~ Items[{Slot:1b}] set from storage gm4_garden_variety:modify/item output
 
 # [S1] remove name_tag tag (sapling)
 data remove block ~ ~ ~ Items[{Slot:1b}].tag.gm4_garden_variety.name_tag
@@ -30,10 +30,10 @@ item replace block ~ ~ ~ container.2 with minecraft:name_tag
 execute store result block ~ ~ ~ Items[{Slot:2b}].Count int 1 run scoreboard players get $slot_1_amount gm4_gv_analyze
 
 # [S2] append mutation lore (name tag)
-data modify storage gm4_garden_variety:modify/item target set from block ~ ~ ~ Items[{Slot:2b}]
+data modify storage gm4_garden_variety:modify/item input set from block ~ ~ ~ Items[{Slot:2b}]
 data modify storage gm4_garden_variety:modify/item modifier set from block ~ ~ ~ Items[{Slot:1b}]
 function gm4_garden_variety:data/lore/mutations/apply
-data modify block ~ ~ ~ Items[{Slot:2b}] set from storage gm4_garden_variety:modify/item target
+data modify block ~ ~ ~ Items[{Slot:2b}] set from storage gm4_garden_variety:modify/item output
 
 
 

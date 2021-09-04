@@ -20,10 +20,10 @@ execute store result block ~ ~ ~ Items[{Slot:0b}].Count byte 1 run scoreboard pl
 data modify block ~ ~ ~ Items[{Slot:1b}].Slot set value 2b
 
 # [S2] append mutation lore (sapling)
-data modify storage gm4_garden_variety:modify/item target set from block ~ ~ ~ Items[{Slot:2b}]
+data modify storage gm4_garden_variety:modify/item input set from block ~ ~ ~ Items[{Slot:2b}]
 data modify storage gm4_garden_variety:modify/item modifier set from block ~ ~ ~ Items[{Slot:2b}]
 function gm4_garden_variety:data/lore/mutations/apply
-data modify block ~ ~ ~ Items[{Slot:2b}] set from storage gm4_garden_variety:modify/item target
+data modify block ~ ~ ~ Items[{Slot:2b}] set from storage gm4_garden_variety:modify/item output
 
 # [S2] add name_tag tag (sapling)
 data modify block ~ ~ ~ Items[{Slot:2b}].tag.gm4_garden_variety.name_tag set value 1b
