@@ -51,7 +51,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:writable_book",
+          "name": "minecraft:dropper",
           "functions": [
             {
               "function": "minecraft:set_count",
