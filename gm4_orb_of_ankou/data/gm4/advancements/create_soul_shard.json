@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "flint",
-      "nbt": "{CustomModelData:1,Enchantments:[{}]}"
+      "nbt": "{CustomModelData:3420001,Enchantments:[{}]}"
     },
     "title": {
       "translate": "%1$s%3427655$s",

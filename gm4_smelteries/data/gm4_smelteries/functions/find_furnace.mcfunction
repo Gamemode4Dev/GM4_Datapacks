@@ -22,8 +22,8 @@ execute if entity @s[tag=gm4_bf_has_furnace] run scoreboard players add furnace_
 scoreboard players operation furnace_state_final gm4_bf_data -= furnace_state_initial gm4_bf_data
 
 # apply texture changes
-execute if score furnace_state_final gm4_bf_data matches 1 run data merge entity @s {HandItems:[{},{id:"minecraft:stone_button",Count:1b,tag:{CustomModelData:4}}],Pose:{Head:[0f, 0f, 0f],LeftArm:[0f, 0f, 0f]}}
-execute if score furnace_state_final gm4_bf_data matches -1 run data merge entity @s {HandItems:[{},{id:"minecraft:stone_button",Count:1b,tag:{CustomModelData:5}}],Pose:{Head:[0f, 0f, 0f],LeftArm:[0f, 0f, 0f]}}
+execute if score furnace_state_final gm4_bf_data matches 1 run data merge entity @s {HandItems:[{},{id:"minecraft:stone_button",Count:1b,tag:{CustomModelData:3420004}}],Pose:{Head:[0f, 0f, 0f],LeftArm:[0f, 0f, 0f]}}
+execute if score furnace_state_final gm4_bf_data matches -1 run data merge entity @s {HandItems:[{},{id:"minecraft:stone_button",Count:1b,tag:{CustomModelData:3420005}}],Pose:{Head:[0f, 0f, 0f],LeftArm:[0f, 0f, 0f]}}
 scoreboard players reset furnace_state_initial gm4_bf_data
 scoreboard players reset furnace_state_final gm4_bf_data
 

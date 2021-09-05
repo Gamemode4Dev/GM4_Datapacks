@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "string",
-            "nbt": "{CustomModelData:1}"
+            "nbt": "{CustomModelData:3420001}"
         },
         "title": {
             "translate": "%1$s%3427655$s",
@@ -16,7 +16,7 @@
         "description": {
             "translate": "%1$s%3427655$s",
             "with": [
-                "Create a 40-block long string line using a crossbow",
+                "Create a 40-block long tripwire line using a crossbow",
                 {
                     "translate": "advancement.gm4.crossbow_cartridges_string.description"
                 }

@@ -36,7 +36,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:203,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"bargaining\"},stored_color:[1090333]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+              "tag": "{CustomModelData:3420203,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"bargaining\"},stored_color:[1090333]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
             }
           ]
         }

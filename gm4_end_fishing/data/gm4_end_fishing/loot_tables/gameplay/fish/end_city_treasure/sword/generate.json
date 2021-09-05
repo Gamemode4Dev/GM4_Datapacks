@@ -1,0 +1,604 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Forged in a dragon's breath",
+                    {
+                      "translate": "text.gm4.end_city_sword.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420010,gm4_end_fishing:{end_city_sword:1b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Life kills life all the time, so the Goddess",
+                    {
+                      "translate": "text.gm4.end_city_sword.2.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "sacrifices herself for her own animal.",
+                    {
+                      "translate": "text.gm4.end_city_sword.2.2"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420011,gm4_end_fishing:{end_city_sword:2b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Blessed with Hylia's power",
+                    {
+                      "translate": "text.gm4.end_city_sword.3"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420012,gm4_end_fishing:{end_city_sword:3b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Forged by Muramasa",
+                    {
+                      "translate": "text.gm4.end_city_sword.4"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420013,gm4_end_fishing:{end_city_sword:4b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Powered by the living crystal within",
+                    {
+                      "translate": "text.gm4.end_city_sword.5"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420014,gm4_end_fishing:{end_city_sword:5b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Used to decapitate the Gorgon, Medusa",
+                    {
+                      "translate": "text.gm4.end_city_sword.6"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420015,gm4_end_fishing:{end_city_sword:6b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "This is believed to be one of the",
+                    {
+                      "translate": "text.gm4.end_city_sword.7.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "finest Japanese swords ever made.",
+                    {
+                      "translate": "text.gm4.end_city_sword.7.2"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420016,gm4_end_fishing:{end_city_sword:7b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Used at the Battle of the Trench",
+                    {
+                      "translate": "text.gm4.end_city_sword.8"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420017,gm4_end_fishing:{end_city_sword:8b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Removed from the Garden of Eden",
+                    {
+                      "translate": "text.gm4.end_city_sword.9"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420018,gm4_end_fishing:{end_city_sword:9b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Used to kill the dragon Fafnir",
+                    {
+                      "translate": "text.gm4.end_city_sword.10"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420019,gm4_end_fishing:{end_city_sword:1-b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Snicker-snack!",
+                    {
+                      "translate": "text.gm4.end_city_sword.11"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420020,gm4_end_fishing:{end_city_sword:11b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Created by husband and wife magicians",
+                    {
+                      "translate": "text.gm4.end_city_sword.12.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "of the ancient Bön tradition",
+                    {
+                      "translate": "text.gm4.end_city_sword.12.2"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420021,gm4_end_fishing:{end_city_sword:12b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Belongs to Roland",
+                    {
+                      "translate": "text.gm4.end_city_sword.13"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420022,gm4_end_fishing:{end_city_sword:13b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "If found, please return",
+                    {
+                      "translate": "text.gm4.end_city_sword.14.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "to William Wallace.",
+                    {
+                      "translate": "text.gm4.end_city_sword.14.2"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420023,gm4_end_fishing:{end_city_sword:14b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Reforged from the shards of Narsil",
+                    {
+                      "translate": "text.gm4.end_city_sword.15"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420024,gm4_end_fishing:{end_city_sword:15b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Forged by the Iron Sisters",
+                    {
+                      "translate": "text.gm4.end_city_sword.16"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420025,gm4_end_fishing:{end_city_sword:16b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Used to lead the revolutionary",
+                    {
+                      "translate": "text.gm4.end_city_sword.17.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "army against the Telmarines",
+                    {
+                      "translate": "text.gm4.end_city_sword.17.2"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420026,gm4_end_fishing:{end_city_sword:17b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Can only be wielded by a true Gryffindor",
+                    {
+                      "translate": "text.gm4.end_city_sword.18"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420027,gm4_end_fishing:{end_city_sword:18b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Sought by Thrax",
+                    {
+                      "translate": "text.gm4.end_city_sword.19"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420028,gm4_end_fishing:{end_city_sword:19b}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Wielded by Lion-O",
+                    {
+                      "translate": "text.gm4.end_city_sword.20"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420029,gm4_end_fishing:{end_city_sword:20b}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

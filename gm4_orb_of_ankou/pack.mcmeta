@@ -12,6 +12,7 @@
   },
   "module_name": "Orb of Ankou",
   "module_id": "orb_of_ankou",
+  "hidden": true,
   "site_description": "Capture mob abilities and use them as your own!",
   "site_categories": [
     "Metallurgy",

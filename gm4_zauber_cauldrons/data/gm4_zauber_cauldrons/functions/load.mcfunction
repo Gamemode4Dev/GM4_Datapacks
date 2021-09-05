@@ -5,3 +5,4 @@ execute unless score gm4_player_heads load.status matches 1 run data modify stor
 
 execute if score gm4_zauber_cauldrons load.status matches 1 run function gm4_zauber_cauldrons:init
 execute unless score gm4_zauber_cauldrons load.status matches 1 run schedule clear gm4_zauber_cauldrons:main
+execute unless score gm4_zauber_cauldrons load.status matches 1 run schedule clear gm4_zauber_cauldrons:cauldron/extra_items/crack_bottle

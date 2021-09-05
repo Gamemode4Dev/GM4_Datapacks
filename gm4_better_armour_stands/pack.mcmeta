@@ -12,6 +12,7 @@
     },
     "module_name": "Better Armour Stands",
     "module_id": "better_armour_stands",
+    "hidden": false,
     "site_description": "This module lets you control the size of stands and show their arms. It's also expandable!",
     "site_categories": [
         "Better Armour Stands"
@@ -38,6 +39,10 @@
             [
                 "Misode",
                 "https://twitter.com/misode_"
+            ],
+            [
+                "Denniss",
+                "https://twitter.com/Dennis2p_"
             ]
         ],
         "Icon Design": [

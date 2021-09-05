@@ -47,14 +47,14 @@
                                 }
                               ],
                               "italic": false,
-                              "color": "dark_gray"
+                              "color": "#767676"
                             }
                           ]
                         ]
                       },
                       {
                         "function": "minecraft:set_nbt",
-                        "tag": "{gm4_metallurgy:{metal:{type:\"thorium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:20,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/thorium/v0\",Id:[I;140191582,-1151712444,-1271454064,-1822255261],Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE0ODE0MTExMzQwMDQsInByb2ZpbGVJZCI6Ijk4NWIyNzVlYmI1YTQzNDRiNDM3Njg5NTI4NjNhNjNmIiwicHJvZmlsZU5hbWUiOiJTcGFya3MiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWRkZjMzZDViYmMxZmJjYTA0MDIzZjNkNWJjNjhkMWFkODRjN2RjYmUxZTJkYTk3YzIxOGVjOWNiZDQ0YTUifSwiQ0FQRSI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVjM2NhN2VlMmE0OThmMWI1ZDI1OGQ1ZmE5MjdlNjNlNDMzMTQzYWRkNTUzOGNmNjNiNmE5Yjc4YWU3MzUifX19\"}]}}}"
+                        "tag": "{gm4_metallurgy:{metal:{type:\"thorium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420020,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/thorium/v0\",Id:[I;140191582,-1151712444,-1271454064,-1822255261],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyOTY4NDM2MzM0MywKICAicHJvZmlsZUlkIiA6ICI3NzI3ZDM1NjY5Zjk0MTUxODAyM2Q2MmM2ODE3NTkxOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJsaWJyYXJ5ZnJlYWsiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcxYWQ1MTBhMTBjNWMxYzZkMGY3NzVjYWRkNWVmMTliZWRkODY2NTQwNmE5ZWY1NTI0ZGJmOGZiNjQ2MmViIgogICAgfQogIH0KfQ==\"}]}}}"
                       }
                     ]
                 }

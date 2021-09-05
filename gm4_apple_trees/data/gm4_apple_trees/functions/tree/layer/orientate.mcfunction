@@ -1,6 +1,6 @@
 # generates the 1st layer of this apple tree
-# @s = sapling marker area_effect_cloud
-# positioned ~ ~n ~ above the AEC
+# @s = sapling marker
+# positioned ~ ~n ~ above the marker
 # run from fruiting_trees:generate via #fruiting_trees:layer/generate
 
 # rotate tree depending on seed

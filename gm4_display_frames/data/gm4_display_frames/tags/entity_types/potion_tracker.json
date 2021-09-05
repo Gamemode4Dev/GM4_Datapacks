@@ -1,6 +1,6 @@
 {
     "values": [
-        "minecraft:area_effect_cloud",
+        "minecraft:marker",
         "minecraft:potion"
     ]
 }

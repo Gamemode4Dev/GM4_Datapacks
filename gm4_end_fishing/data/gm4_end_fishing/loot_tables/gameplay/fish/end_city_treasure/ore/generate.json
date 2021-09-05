@@ -1,0 +1,171 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "The riches of the vast void",
+                    {
+                      "translate": "text.gm4.end_city_ore.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420010}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Dropped from a nearby End City",
+                    {
+                      "translate": "text.gm4.end_city_ore.2"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420011}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "There's so much treasure down there!",
+                    {
+                      "translate": "text.gm4.end_city_ore.3"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420012}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Cursed by the ancient Goddess",
+                    {
+                      "translate": "text.gm4.end_city_ore.4"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420013}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "This isn't real. It's fake treasure.",
+                    {
+                      "translate": "text.gm4.end_city_ore.5"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420014}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Cha-Ching! We're going to be rich!",
+                    {
+                      "translate": "text.gm4.end_city_ore.6"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420015}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
