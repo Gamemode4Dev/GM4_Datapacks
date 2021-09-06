@@ -35,4 +35,8 @@ execute if data storage gm4_better_armour_stands:temp {pages:["paste"]} if data 
 
 # Change armor stand poses.
 execute if data storage gm4_better_armour_stands:temp {pages:["pose"]} run function gm4_better_armour_stands:pose/select
-execute unless entity @s[tag=gm4_bas_valid_code] if data storage gm4_better_armour_stands:temp {pages:["pose mirror"]} run function gm4_better_armour_stands:pose/select
+execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["pose mirror"]} run function gm4_better_armour_stands:pose/select
+
+# Move/Rotate
+execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["move"]} run function gm4_better_armour_stands:move
+execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["rotate"]} run function gm4_better_armour_stands:rotate
