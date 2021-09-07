@@ -20,7 +20,7 @@ execute store result score $slot_1_amount gm4_gv_analyze run data get storage gm
 execute store result score $slot_2_amount gm4_gv_analyze run data get storage gm4_garden_variety:analyzer Items[{Slot:2b}].Count
 
 # analyze if recipe matches
-execute if data storage gm4_garden_variety:analyzer Items[{Slot:0b,id:"minecraft:paper"}] run function gm4_garden_variety:mechanics/analyzer/recipes/paper_report/check
+execute if data storage gm4_garden_variety:analyzer Items[{Slot:0b,id:"minecraft:paper",Count:1b}] run function gm4_garden_variety:mechanics/analyzer/recipes/paper_report/check
 execute if data storage gm4_garden_variety:analyzer Items[{Slot:0b,id:"minecraft:book",Count:1b}] run function gm4_garden_variety:mechanics/analyzer/recipes/book_report/check
 execute if data storage gm4_garden_variety:analyzer Items[{Slot:0b,id:"minecraft:name_tag"}] run function gm4_garden_variety:mechanics/analyzer/recipes/name_tag_sapling/check
 execute if data storage gm4_garden_variety:analyzer Items[{Slot:0b,id:"minecraft:shears"}] run function gm4_garden_variety:mechanics/analyzer/recipes/remove_name_tag/check

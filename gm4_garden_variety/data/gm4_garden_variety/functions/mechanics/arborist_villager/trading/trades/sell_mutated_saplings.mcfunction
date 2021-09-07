@@ -22,7 +22,7 @@ data modify storage gm4_garden_variety:arborist next_trade.buyB set from storage
 
 # add random mutation
 function gm4_garden_variety:data/mutations/random_mutations/generate
-data modify storage gm4_garden_variety:arborist next_trade.sell.tag.gm4_garden_variety.mutations merge from storage gm4_garden_variety:generate/mutation output
+data modify storage gm4_garden_variety:arborist next_trade.sell.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:generate/mutation output
 
 # modify lore
 data modify storage gm4_garden_variety:arborist next_trade.sell.tag.display.Lore[0] set value '{"italic":true,"color":"gray","text":"A mutated sapling bought from the Arborist"}'
