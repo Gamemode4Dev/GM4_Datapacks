@@ -6,6 +6,10 @@
 # set seed mode
 scoreboard players set $seed_mode_sapling gm4_gv_gen_data 1
 
+# convert nbt to scores
+data modify storage gm4_garden_variety:convert/to_scores input set from entity @s data.gm4_garden_variety
+function gm4_garden_variety:data/convert/nbt_to_scores
+
 # attempt random mutation
 function gm4_garden_variety:data/mutations/random_mutations/attempt
 

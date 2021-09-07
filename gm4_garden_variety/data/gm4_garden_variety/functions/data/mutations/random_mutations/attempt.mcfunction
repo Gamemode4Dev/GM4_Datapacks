@@ -3,6 +3,10 @@
 # set random chance
 scoreboard players set $mutation_chance_pool gm4_gv_mutations 100
 scoreboard players set $mutation_chance_condition gm4_gv_mutations 3
+execute if score $fertility gm4_gv_nbt_data matches 1 run scoreboard players add $mutation_chance_condition gm4_gv_mutations 1
+execute if score $fertility gm4_gv_nbt_data matches 2 run scoreboard players add $mutation_chance_condition gm4_gv_mutations 2
+execute if score $fertility gm4_gv_nbt_data matches 3 run scoreboard players add $mutation_chance_condition gm4_gv_mutations 3
+execute if score $radiating gm4_gv_nbt_data matches 1 run scoreboard players add $mutation_chance_condition gm4_gv_mutations 5
 
 # select random mutaton
 summon marker ~ ~ ~ {CustomName:'"GM4 GV Random Num"',Tags:["gm4_gv_random_num"]}
