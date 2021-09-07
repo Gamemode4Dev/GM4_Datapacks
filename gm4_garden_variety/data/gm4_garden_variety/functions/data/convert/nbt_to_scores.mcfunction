@@ -63,5 +63,8 @@ execute if data storage gm4_garden_variety:convert/to_scores input.mutations[{mu
 execute if data storage gm4_garden_variety:convert/to_scores input.mutations[{mutation:"Snowy"}] run scoreboard players set $snowy gm4_gv_nbt_data 1
 execute if data storage gm4_garden_variety:convert/to_scores input.mutations[{mutation:"Radiating"}] run scoreboard players set $radiating gm4_gv_nbt_data 1
 
+# expansion mutations
+function #gm4_garden_variety:data/convert/nbt_to_scores
+
 # reset storage
 data remove storage gm4_garden_variety:convert/to_scores input
