@@ -8,7 +8,7 @@ execute if score $leaf_layer_loop gm4_gv_gen_data = $leaf_layers gm4_gv_gen_data
 execute if score $leaf_layer_loop gm4_gv_gen_data = $leaf_layers gm4_gv_gen_data at @s run data get entity @s Rotation[1]
 
 # [Generation] update variables for layer
-function gm4_garden_variety:mechanics/interpret_variables/layer/leaf
+function gm4_garden_variety:mechanics/tree_generation/interpret_variables/layer/leaf
 
 # [Debug]
 data modify storage gm4_garden_variety:debug/generation path append value " (L:"

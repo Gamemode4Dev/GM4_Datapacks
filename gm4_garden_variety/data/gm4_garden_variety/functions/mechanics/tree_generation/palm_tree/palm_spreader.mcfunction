@@ -8,7 +8,7 @@ execute if score $palm_spreader_loop gm4_gv_gen_data = $adjusted_palm_amount gm4
 data modify storage gm4_garden_variety:debug/generation path append value P
 
 # [Generation] update variables for layer
-function gm4_garden_variety:mechanics/interpret_variables/layer/palm_spreader
+function gm4_garden_variety:mechanics/tree_generation/interpret_variables/layer/palm_spreader
 
 # [Generation] get input palm variables 
 function #gm4_garden_variety:mechanics/tree_generation/variables/palm

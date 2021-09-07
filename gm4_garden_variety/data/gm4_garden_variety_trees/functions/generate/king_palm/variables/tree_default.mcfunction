@@ -106,4 +106,4 @@ scoreboard players set $soil_rooting_x_rotation_offset_range gm4_gv_gen_data 10
 function gm4_garden_variety_trees:generate/king_palm/variables/tree_mutations
 
 # [Interpret] convert input variables to generation variables
-function gm4_garden_variety:mechanics/interpret_variables/initial/tree
+function gm4_garden_variety:mechanics/tree_generation/interpret_variables/initial/tree
