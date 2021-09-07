@@ -26,6 +26,7 @@ execute if data storage gm4_garden_variety:analyzer Items[{Slot:0b,id:"minecraft
 execute if data storage gm4_garden_variety:analyzer Items[{Slot:0b,id:"minecraft:shears"}] run function gm4_garden_variety:mechanics/analyzer/recipes/remove_name_tag/check
 execute if data storage gm4_garden_variety:analyzer Items[{Slot:0b,id:"minecraft:bone_meal"}] run function gm4_garden_variety:mechanics/analyzer/recipes/convert_sapling/check
 execute if data storage gm4_garden_variety:analyzer Items[{Slot:0b,id:"minecraft:shears"}] run function gm4_garden_variety:mechanics/analyzer/recipes/clip_leaves/check
+function #gm4_garden_variety:mechanics/analyzer/process
 
 # enable / disable job site
 tag @s remove gm4_gv_disable_job_site
