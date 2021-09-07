@@ -15,6 +15,6 @@ execute at @s run tp @s ^ ^ ^.1
 
 # loop function until segment_loop hits 0
 scoreboard players remove $trunk_segment_loop gm4_gv_gen_data 1
-execute if score $trunk_segment_loop gm4_gv_gen_data matches 1.. run function gm4_garden_variety_trees:generate/king_palm/integration/garden_variety/generation/tree_generation/trunk_segment
+execute if score $trunk_segment_loop gm4_gv_gen_data matches 1.. run function gm4_garden_variety_trees:generate/king_palm/integration/garden_variety/mechanics/tree_generation/trunk_segment
 
 
