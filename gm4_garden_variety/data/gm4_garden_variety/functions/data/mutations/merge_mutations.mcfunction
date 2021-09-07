@@ -14,6 +14,7 @@ data modify storage gm4_garden_variety:merge/mutation output[{mutation:"Necrotic
 data modify storage gm4_garden_variety:merge/mutation output[{mutation:"Flowering"}].mutation set from storage gm4_garden_variety:merge/mutation merge[{mutation:"Flowering"}].mutation
 data modify storage gm4_garden_variety:merge/mutation output[{mutation:"Snowy"}].mutation set from storage gm4_garden_variety:merge/mutation merge[{mutation:"Snowy"}].mutation
 data modify storage gm4_garden_variety:merge/mutation output[{mutation:"Radiating"}].mutation set from storage gm4_garden_variety:merge/mutation merge[{mutation:"Radiating"}].mutation
+function #gm4_garden_variety:data/mutations/merge_mutations
 
 # [loop]
 data remove storage gm4_garden_variety:merge/mutation merge[0]
