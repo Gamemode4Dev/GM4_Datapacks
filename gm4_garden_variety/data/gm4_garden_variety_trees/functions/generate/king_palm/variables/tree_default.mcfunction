@@ -69,9 +69,9 @@ scoreboard players set $fruit_leaves_minimum gm4_gv_gen_data 1
 scoreboard players set $fruit_leaves_range gm4_gv_gen_data 2
 
 # [Trunk Fruit] general settings
-scoreboard players set $trunk_fruit_start_height gm4_gv_gen_data 4
-scoreboard players set $trunk_fruit_block_chance gm4_gv_gen_data 2
-scoreboard players set $trunk_fruit_per_layer gm4_gv_gen_data 2
+scoreboard players set $trunk_decor_start_height gm4_gv_gen_data 4
+scoreboard players set $trunk_decor_block_chance gm4_gv_gen_data 2
+scoreboard players set $trunk_decor_per_layer gm4_gv_gen_data 2
 
 # [Soil Conversion] general settings (certain combinations can result in repetetive patterns)
 scoreboard players set $enable_soil_conversion gm4_gv_gen_data 1
