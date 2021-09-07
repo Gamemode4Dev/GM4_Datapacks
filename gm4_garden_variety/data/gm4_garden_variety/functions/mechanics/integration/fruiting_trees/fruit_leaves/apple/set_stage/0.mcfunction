@@ -10,6 +10,6 @@ scoreboard players operation @s gm4_fruit_stage = #apple_fruit_stage_1_start gm4
 scoreboard players reset @s gm4_fruit_age
 
 # visuals
-execute if data entity @s HandItems[0].id positioned ~0.5 ~1.5 ~0.5 run function gm4_garden_variety:mechanics/fruit_leaves/apple/spawn_fruit
+execute if data entity @s HandItems[0].id positioned ~0.5 ~1.5 ~0.5 run function gm4_garden_variety:mechanics/integration/fruiting_trees/fruit_leaves/apple/spawn_fruit
 data merge entity @s {Marker:1b,HandItems:[],Small:1b,DisabledSlots:65854,Tags:["gm4_fruiting_leaf","gm4_apple_fruit_leaf"]}
 tp @s ~0.5 ~1.05 ~0.5

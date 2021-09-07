@@ -4,7 +4,7 @@
 # run from gm4_garden_variety_trees:trees/TREE_TYPE/fruiting/leaf/fruit/process
 
 # spawn apple
-execute if data entity @s[tag=gm4_ripe_red_berry_fruit] HandItems[0].id positioned ~0.5 ~1.5 ~0.5 run function gm4_garden_variety:mechanics/fruit_leaves/red_berry/spawn_fruit
+execute if data entity @s[tag=gm4_ripe_red_berry_fruit] HandItems[0].id positioned ~0.5 ~1.5 ~0.5 run function gm4_garden_variety:mechanics/integration/fruiting_trees/fruit_leaves/red_berry/spawn_fruit
 
 # kill
 kill @s
