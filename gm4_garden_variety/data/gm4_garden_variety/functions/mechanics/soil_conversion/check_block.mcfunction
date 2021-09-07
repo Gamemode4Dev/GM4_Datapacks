@@ -11,4 +11,4 @@ scoreboard players operation $soil_conversion_success gm4_gv_gen_data = $current
 scoreboard players operation $soil_conversion_success gm4_gv_gen_data %= $soil_conversion_block_chance gm4_gv_gen_data
 
 # [Generation] replace block
-execute if score $soil_conversion_success gm4_gv_gen_data matches 0..9 run function #gm4_garden_variety:mechanics/soil_conversion/convert
+execute if score $soil_conversion_success gm4_gv_gen_data matches 0..9 run function #gm4_garden_variety:mechanics/soil_conversion/convert_block
