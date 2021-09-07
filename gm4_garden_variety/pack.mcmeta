@@ -10,20 +10,20 @@
             }
         ]
     },
-    "module_name": "garden variety",
+    "module_name": "Garden Variety",
     "module_id": "garden_variety",
     "site_description": "Adds a variety of new trees with unique generation.",
     "site_categories": [],
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Garden_Variety",
     "required_modules": [
-        "fruiting_trees",
         "custom_crafters",
         "lib_lore"
     ],
     "recommended_modules": [
         "orbis",
-        "podzol_rooting_soil"
+        "podzol_rooting_soil",
+        "fruiting_trees"
     ],
     "credits": {
         "Creator": [

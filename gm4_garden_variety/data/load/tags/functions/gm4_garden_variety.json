@@ -1,7 +1,6 @@
 {
     "values": [
         { "id": "#load:gm4_lore", "required": true },
-        { "id": "#load:gm4_fruiting_trees", "required": true },
         { "id": "#load:gm4_custom_crafters", "required": true },
         "gm4_garden_variety:load"
     ]
