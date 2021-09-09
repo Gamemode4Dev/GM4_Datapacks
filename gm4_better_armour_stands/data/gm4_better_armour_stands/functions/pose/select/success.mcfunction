@@ -10,7 +10,7 @@ tag @p[tag=gm4_bas_active] add gm4_bas_track
 data modify entity @s[nbt={Invisible:1b}] Glowing set value 1
 
 # right click detection
-summon minecraft:wandering_trader ~ ~-1000 ~ {CustomName:'"gm4_bas_detect_rightclick"',Tags:["gm4_bas_detect","gm4_bas_new","gm4_bas_temp"],Team:"gm4_bas",NoAI:1b,Silent:1b,Health:1f,Offers:{},ActiveEffects:[{Id:14b,Amplifier:0b,Duration:10000000,ShowParticles:0b},{Id:11b,Amplifier:10b,Duration:10000000,ShowParticles:0b}]}
+summon minecraft:wandering_trader ~ ~-1000 ~ {CustomName:'"gm4_bas_detect_rightclick"',Tags:["gm4_trader","gm4_bas_detect","gm4_bas_new","gm4_bas_temp"],Team:"gm4_bas",NoAI:1b,Silent:1b,Health:1f,Offers:{},ActiveEffects:[{Id:14b,Amplifier:0b,Duration:10000000,ShowParticles:0b},{Id:11b,Amplifier:10b,Duration:10000000,ShowParticles:0b}]}
 execute positioned ~ ~-1000 ~ run tp @e[type=wandering_trader,tag=gm4_bas_detect,distance=..1,sort=nearest,limit=1] @p[tag=gm4_bas_active] 
 
 # player offset marker
