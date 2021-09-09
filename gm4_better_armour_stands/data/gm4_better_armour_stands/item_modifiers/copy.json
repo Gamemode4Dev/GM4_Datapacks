@@ -41,7 +41,7 @@
     "entity": "this",
     "lore": [
       {
-        "text": "●  Custom pose",
+        "text": "● Custom pose",
         "color": "gray",
         "italic": false
       }
@@ -53,7 +53,7 @@
     "entity": "this",
     "lore": [
       {
-        "text": "●  Small",
+        "text": "● Small",
         "color": "gray",
         "italic": false
       }
@@ -74,7 +74,7 @@
     "entity": "this",
     "lore": [
       {
-        "text": "●  No base plate",
+        "text": "● No base plate",
         "color": "gray",
         "italic": false
       }
@@ -95,7 +95,7 @@
     "entity": "this",
     "lore": [
       {
-        "text": "●  No gravity",
+        "text": "● No gravity",
         "color": "gray",
         "italic": false
       }
@@ -116,7 +116,7 @@
     "entity": "this",
     "lore": [
       {
-        "text": "●  Invisible",
+        "text": "● Invisible",
         "color": "gray",
         "italic": false
       }
