@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "elytra",
-      "nbt": "{CustomModelData:3420001,Enchantments:[{}]}"
+      "nbt": "{CustomModelData:3420002,Enchantments:[{}]}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
