@@ -79,6 +79,8 @@ scoreboard players set #15 gm4_gv_math_num 15
 scoreboard players set #16 gm4_gv_math_num 16
 scoreboard players set #20 gm4_gv_math_num 20
 scoreboard players set #32 gm4_gv_math_num 32
+scoreboard players set #50 gm4_gv_math_num 50
+scoreboard players set #60 gm4_gv_math_num 60
 scoreboard players set #64 gm4_gv_math_num 64
 scoreboard players set #65 gm4_gv_math_num 65
 scoreboard players set #70 gm4_gv_math_num 70

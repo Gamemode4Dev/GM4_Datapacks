@@ -3,8 +3,8 @@
 # run from gm4_garden_variety:mechanics/tree_generation/palm_tree/trunk_segment
 
 # place wood to construct the trunk
-execute if score $trunk_layer_eo2 gm4_gv_gen_data matches 0 at @s run fill ~ ~ ~ ~ ~ ~ stripped_oak_wood replace #gm4_fruiting_trees:tree_part
-execute if score $trunk_layer_eo2 gm4_gv_gen_data matches 1 at @s run fill ~ ~ ~ ~ ~ ~ stripped_birch_wood replace #gm4_fruiting_trees:tree_part
+execute if score $trunk_layer_eo2 gm4_gv_gen_data matches 0 at @s run fill ~ ~ ~ ~ ~ ~ stripped_oak_wood replace #gm4_garden_variety:tree_part
+execute if score $trunk_layer_eo2 gm4_gv_gen_data matches 1 at @s run fill ~ ~ ~ ~ ~ ~ stripped_birch_wood replace #gm4_garden_variety:tree_part
 execute at @s if block ~ ~-1 ~ stripped_oak_wood run setblock ~ ~-1 ~ stripped_oak_log
 execute at @s if block ~ ~-1 ~ stripped_birch_wood run setblock ~ ~-1 ~ stripped_birch_log
 execute at @s unless block ~ ~-2 ~ #minecraft:logs run fill ~ ~-1 ~ ~ ~-1 ~ stripped_oak_wood replace stripped_oak_log

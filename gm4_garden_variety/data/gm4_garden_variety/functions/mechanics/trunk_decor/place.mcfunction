@@ -3,7 +3,7 @@
 
 
 # [Debug]
-data modify storage gm4_garden_variety:debug/generation path append value "f"
+data modify storage gm4_garden_variety:debug/generation path append value "d"
 
 # [Generation] place fruit
 scoreboard players remove $fruit_leaves gm4_gv_gen_data 1
