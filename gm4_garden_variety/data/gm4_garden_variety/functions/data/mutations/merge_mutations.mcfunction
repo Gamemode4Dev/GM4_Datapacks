@@ -1,5 +1,6 @@
 
 # update mutation
+data remove storage gm4_garden_variety:merge/mutation output
 data modify storage gm4_garden_variety:merge/mutation output[{mutation:"Height"}].value set from storage gm4_garden_variety:merge/mutation merge[{mutation:"Height"}].value
 data modify storage gm4_garden_variety:merge/mutation output[{mutation:"Flexibility"}].value set from storage gm4_garden_variety:merge/mutation merge[{mutation:"Flexibility"}].value
 data modify storage gm4_garden_variety:merge/mutation output[{mutation:"Foliage"}].value set from storage gm4_garden_variety:merge/mutation merge[{mutation:"Foliage"}].value

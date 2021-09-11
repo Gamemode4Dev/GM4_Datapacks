@@ -7,6 +7,7 @@
 scoreboard players set $seed_mode_sapling gm4_gv_tree_gen 1
 
 # convert nbt to scores
+data remove storage gm4_garden_variety:convert/to_scores input
 data modify storage gm4_garden_variety:convert/to_scores input set from entity @s data.gm4_garden_variety
 function gm4_garden_variety:data/convert/gv_nbt_to_scores
 
@@ -14,6 +15,7 @@ function gm4_garden_variety:data/convert/gv_nbt_to_scores
 function gm4_garden_variety:data/mutations/random_mutations/attempt
 
 # store nbt for use
+data remove storage gm4_garden_variety:transfer/gv_nbt tree_offspring
 data modify storage gm4_garden_variety:transfer/gv_nbt tree_offspring set from entity @s data.gm4_garden_variety
 data modify storage gm4_garden_variety:transfer/gv_nbt tree_offspring.mutations set from storage gm4_garden_variety:merge/mutation output
 

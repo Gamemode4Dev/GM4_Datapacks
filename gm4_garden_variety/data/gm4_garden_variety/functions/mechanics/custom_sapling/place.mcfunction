@@ -16,6 +16,7 @@ execute unless score $found gm4_gv_tree_gen matches 1 anchored eyes positioned ^
 execute unless score $found gm4_gv_tree_gen matches 1 as @e[type=marker,tag=gm4_tree_ray,limit=1] at @s run function gm4_garden_variety:mechanics/custom_sapling/ray_backup
 
 # get nbt from held sapling
+data remove storage gm4_garden_variety:transfer/gv_nbt placed_sapling
 data modify storage gm4_garden_variety:transfer/gv_nbt placed_sapling set from entity @s SelectedItem.tag.gm4_garden_variety
 
 # plant sapling

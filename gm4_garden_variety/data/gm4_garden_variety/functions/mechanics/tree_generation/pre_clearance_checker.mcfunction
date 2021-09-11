@@ -7,9 +7,11 @@
 function gm4_garden_variety:data/generate/seed/based_on_mode
 
 # store nbt in storage (for reference during generation)
+data remove storage gm4_garden_variety:transfer/gv_nbt tree_generation
 data modify storage gm4_garden_variety:transfer/gv_nbt tree_generation set from entity @s data.gm4_garden_variety
 
 # convert nbt to scores
+data remove storage gm4_garden_variety:convert/to_scores input
 data modify storage gm4_garden_variety:convert/to_scores input set from storage gm4_garden_variety:transfer/gv_nbt tree_generation
 function gm4_garden_variety:data/convert/gv_nbt_to_scores
 
