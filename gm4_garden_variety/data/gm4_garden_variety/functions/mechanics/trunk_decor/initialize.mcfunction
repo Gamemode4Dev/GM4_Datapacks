@@ -3,12 +3,12 @@
 
 
 # [Initialize] check if block is randomly picked
-function gm4_garden_variety:utility/generate/next_seed_value
+function gm4_garden_variety:utility/get/seed/next_value
 scoreboard players operation $trunk_decor_success gm4_gv_tree_gen = $current_seed gm4_gv_tree_gen
 scoreboard players operation $trunk_decor_success gm4_gv_tree_gen %= $trunk_decor_block_chance gm4_gv_tree_gen
 
 # [Initialize] check direction the fruit spawns in
-function gm4_garden_variety:utility/generate/next_seed_value
+function gm4_garden_variety:utility/get/seed/next_value
 scoreboard players operation $trunk_decor_side gm4_gv_tree_gen = $current_seed gm4_gv_tree_gen
 scoreboard players operation $trunk_decor_side gm4_gv_tree_gen %= #4 gm4_gv_math_num
 scoreboard players add $trunk_decor_side gm4_gv_tree_gen 1

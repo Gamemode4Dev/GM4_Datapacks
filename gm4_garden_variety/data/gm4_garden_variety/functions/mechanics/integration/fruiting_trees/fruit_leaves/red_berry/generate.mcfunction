@@ -2,7 +2,7 @@
 # run from TODO
 
 # randomly set the armor stands rotation
-function gm4_garden_variety:utility/generate/next_seed_value
+function gm4_garden_variety:utility/get/seed/next_value
 scoreboard players operation fruit_direction gm4_gv_tree_gen = $current_seed gm4_gv_tree_gen
 scoreboard players operation fruit_direction gm4_gv_tree_gen %= #4 gm4_gv_math_num
 

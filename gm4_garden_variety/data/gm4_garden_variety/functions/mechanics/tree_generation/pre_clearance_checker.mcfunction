@@ -4,7 +4,7 @@
 
 
 # generate seed
-function gm4_garden_variety:utility/generate/seed/based_on_mode
+function gm4_garden_variety:utility/get/seed/based_on_mode
 
 # store nbt in storage (for reference during generation)
 data remove storage gm4_garden_variety:transfer/gv_nbt tree_generation
