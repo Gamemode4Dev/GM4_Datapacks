@@ -14,13 +14,13 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Use an Analyzer",
+        "Construct an analyzer",
         {"translate": "advancement.gm4.garden_variety.description"}
       ],
       "color": "gray"
     }
   },
-  "parent": "gm4:encounter_tree",
+  "parent": "gm4:encounter_gv_tree",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

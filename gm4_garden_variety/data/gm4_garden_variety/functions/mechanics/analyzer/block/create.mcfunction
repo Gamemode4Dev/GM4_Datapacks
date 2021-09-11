@@ -13,6 +13,7 @@ execute store result score @s gm4_gv_job_id run data get entity @s UUID[0]
 
 # Visuals
 playsound minecraft:block.beehive.enter block @a[distance=..10]
+advancement grant @a[distance=..10] only gm4:construct_gv_analyzer
 
 # Change Tag
 tag @s add gm4_gv_analyzer

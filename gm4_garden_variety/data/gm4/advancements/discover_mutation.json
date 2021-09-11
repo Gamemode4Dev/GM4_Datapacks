@@ -21,7 +21,7 @@
     },
     "frame": "goal"
   },
-  "parent": "gm4:use_analyzer",
+  "parent": "gm4:construct_gv_analyzer",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

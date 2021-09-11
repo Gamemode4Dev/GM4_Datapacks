@@ -20,7 +20,7 @@
       "color": "gray"
     }
   },
-  "parent": "gm4:encounter_tree",
+  "parent": "gm4:encounter_gv_tree",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

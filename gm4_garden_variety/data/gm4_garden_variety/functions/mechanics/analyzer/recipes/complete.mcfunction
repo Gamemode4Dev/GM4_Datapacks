@@ -3,7 +3,6 @@
 
 # visuals
 playsound minecraft:entity.villager.work_librarian block @a[distance=..20]
-advancement grant @a[distance=..10] only gm4:use_analyzer
 data modify block ~ ~ ~ CookTime set value 0s
 
 # reset scorboards and tags
@@ -13,4 +12,4 @@ tag @s remove gm4_gv_analyzing
 # advancements
 execute if score $mutations gm4_gv_nbt_data matches 1.. run advancement grant @a[distance=..5] only gm4:discover_mutation
 execute if score $mutations gm4_gv_nbt_data matches 5.. run advancement grant @a[distance=..5] only gm4:discover_mutation_5
-execute if score $mutations gm4_gv_nbt_data matches 14.. run advancement grant @a[distance=..5] only gm4:discover_mutation_10
+execute if score $mutations gm4_gv_nbt_data matches 14.. run advancement grant @a[distance=..5] only gm4:discover_mutation_all

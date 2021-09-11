@@ -5,7 +5,7 @@
 
 
 # advancement
-advancement grant @a[distance=..20] only gm4:encounter_tree
+advancement grant @a[distance=..20] only gm4:encounter_gv_tree
 
 # execute as all sapling leaves
 function #gm4_garden_variety:mechanics/sapling_leaves/clock
