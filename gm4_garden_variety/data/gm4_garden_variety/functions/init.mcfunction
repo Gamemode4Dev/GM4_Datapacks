@@ -1,5 +1,5 @@
 # add scoreboards and set initial values
-function gm4_garden_variety:utility/initialize
+function gm4_garden_variety:initialize
 
 # clocks
 schedule function gm4_garden_variety:clock/tick 10t
