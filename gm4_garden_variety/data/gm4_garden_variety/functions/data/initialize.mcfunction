@@ -3,41 +3,43 @@
 
 
 ##### SCOREBOARDS ##### (add scoreboards)
+scoreboard objectives add gm4_gv_data dummy
 # generation
 scoreboard objectives add gm4_gv_math_num dummy
-scoreboard objectives add gm4_gv_gen_data dummy
+scoreboard objectives add gm4_gv_tree_gen dummy
 scoreboard objectives add gm4_gv_tree_type dummy
 # mutations
 scoreboard objectives add gm4_gv_nbt_data dummy
+scoreboard objectives add gm4_gv_mutations dummy
 # arborist
 scoreboard objectives add gm4_gv_arborist dummy
 scoreboard objectives add gm4_gv_trades dummy
 scoreboard objectives add gm4_gv_job_id dummy
 scoreboard objectives add gm4_gv_prev_xp dummy
 # analyzer
-scoreboard objectives add gm4_gv_analyze dummy
+scoreboard objectives add gm4_gv_analyzer dummy
 scoreboard objectives add gm4_gv_analyze_p dummy
 # research book
 scoreboard objectives add gm4_gv_research dummy
-# mutations
-scoreboard objectives add gm4_gv_mutations dummy
+# fruiting leavers
+scoreboard objectives add gm4_gv_fruit dummy
 
 
 
 ##### MISC #####
-execute store result score $world_seed gm4_gv_gen_data run seed
+execute store result score $world_seed gm4_gv_tree_gen run seed
 
 
 
 ##### FRUIT ##### (set fruit variables)
 # red berry
-scoreboard players set #red_berry_fruit_stage_1_start gm4_gv_math_num 5
-scoreboard players set #red_berry_fruit_stage_1_start gm4_gv_math_num 10
-scoreboard players set #red_berry_fruit_stage_1_start gm4_gv_math_num 15
+scoreboard players set #red_berry_fruit_stage_1_start gm4_gv_fruit 5
+scoreboard players set #red_berry_fruit_stage_1_start gm4_gv_fruit 10
+scoreboard players set #red_berry_fruit_stage_1_start gm4_gv_fruit 15
 # apple
-scoreboard players set #apple_fruit_stage_1_start gm4_gv_math_num 5
-scoreboard players set #apple_fruit_stage_1_start gm4_gv_math_num 10
-scoreboard players set #apple_fruit_stage_1_start gm4_gv_math_num 15
+scoreboard players set #apple_fruit_stage_1_start gm4_gv_fruit 5
+scoreboard players set #apple_fruit_stage_1_start gm4_gv_fruit 10
+scoreboard players set #apple_fruit_stage_1_start gm4_gv_fruit 15
 
 
 

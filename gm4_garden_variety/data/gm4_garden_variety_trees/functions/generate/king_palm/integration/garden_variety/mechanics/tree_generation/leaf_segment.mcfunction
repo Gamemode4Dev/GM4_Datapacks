@@ -6,7 +6,7 @@
 execute at @s run tp @s ~ ~.5 ~
 
 # loop function until segment_loop hits 0
-scoreboard players remove $leaf_segment_loop gm4_gv_gen_data 1
-execute if score $leaf_segment_loop gm4_gv_gen_data matches 1.. run function gm4_garden_variety_trees:generate/king_palm/integration/garden_variety/mechanics/tree_generation/leaf_segment
+scoreboard players remove $leaf_segment_loop gm4_gv_tree_gen 1
+execute if score $leaf_segment_loop gm4_gv_tree_gen matches 1.. run function gm4_garden_variety_trees:generate/king_palm/integration/garden_variety/mechanics/tree_generation/leaf_segment
 
 

@@ -10,14 +10,14 @@ data merge entity @s {Fire:2000}
 execute unless block ~ ~ ~ smoker run function gm4_garden_variety:mechanics/analyzer/block/destroy
 
 # prepare item check
-execute if entity @s[tag=!gm4_gv_analyzing] run scoreboard players set @s gm4_gv_analyze 0
+execute if entity @s[tag=!gm4_gv_analyzing] run scoreboard players set @s gm4_gv_analyzer 0
 tag @s remove gm4_gv_analyzing
 data modify storage gm4_garden_variety:analyzer Items set from block ~ ~ ~ Items
 
 # get slot amounts
-execute store result score $slot_0_amount gm4_gv_analyze run data get storage gm4_garden_variety:analyzer Items[{Slot:0b}].Count
-execute store result score $slot_1_amount gm4_gv_analyze run data get storage gm4_garden_variety:analyzer Items[{Slot:1b}].Count
-execute store result score $slot_2_amount gm4_gv_analyze run data get storage gm4_garden_variety:analyzer Items[{Slot:2b}].Count
+execute store result score $slot_0_amount gm4_gv_analyzer run data get storage gm4_garden_variety:analyzer Items[{Slot:0b}].Count
+execute store result score $slot_1_amount gm4_gv_analyzer run data get storage gm4_garden_variety:analyzer Items[{Slot:1b}].Count
+execute store result score $slot_2_amount gm4_gv_analyzer run data get storage gm4_garden_variety:analyzer Items[{Slot:2b}].Count
 
 # analyze if recipe matches
 execute if data storage gm4_garden_variety:analyzer Items[{Slot:0b,id:"minecraft:paper",Count:1b}] run function gm4_garden_variety:mechanics/analyzer/recipes/paper_report/check

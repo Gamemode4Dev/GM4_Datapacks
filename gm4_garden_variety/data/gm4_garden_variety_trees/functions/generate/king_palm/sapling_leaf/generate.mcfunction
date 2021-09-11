@@ -8,7 +8,7 @@ data modify storage gm4_garden_variety:debug/generation path append value "s"
 setblock ~ ~ ~ birch_leaves[persistent=true] replace 
 
 # track how many leaves have generated
-scoreboard players remove $sapling_leaves gm4_gv_gen_data 1
+scoreboard players remove $sapling_leaves gm4_gv_tree_gen 1
 
 # place leaf marker
 execute align xyz run summon marker ~0.5 ~0.5 ~0.5 {CustomName:'"King Palm Sapling Leaf"',Tags:["gm4_gv_new_sapling_leaf"]}

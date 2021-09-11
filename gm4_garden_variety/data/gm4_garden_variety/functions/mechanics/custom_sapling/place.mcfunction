@@ -6,14 +6,14 @@ advancement revoke @s only gm4_garden_variety:place_fruiting_sapling
 # summon ray
 summon marker ~ ~ ~ {Tags:["gm4_tree_ray"]}
 execute anchored eyes positioned ^ ^ ^ anchored feet run tp @e[type=marker,tag=gm4_tree_ray,limit=1] ^ ^ ^ ~ ~
-scoreboard players set $ray gm4_gv_gen_data 0
+scoreboard players set $ray gm4_gv_tree_gen 0
 
 # check 5 blocks
 execute as @e[type=marker,tag=gm4_tree_ray,limit=1] at @s run function gm4_garden_variety:mechanics/custom_sapling/ray
 
 # recheck 5 blocks (wide range)
-execute unless score $found gm4_gv_gen_data matches 1 anchored eyes positioned ^ ^ ^ anchored feet run tp @e[type=marker,tag=gm4_tree_ray,limit=1] ^ ^ ^ ~ ~
-execute unless score $found gm4_gv_gen_data matches 1 as @e[type=marker,tag=gm4_tree_ray,limit=1] at @s run function gm4_garden_variety:mechanics/custom_sapling/ray_backup
+execute unless score $found gm4_gv_tree_gen matches 1 anchored eyes positioned ^ ^ ^ anchored feet run tp @e[type=marker,tag=gm4_tree_ray,limit=1] ^ ^ ^ ~ ~
+execute unless score $found gm4_gv_tree_gen matches 1 as @e[type=marker,tag=gm4_tree_ray,limit=1] at @s run function gm4_garden_variety:mechanics/custom_sapling/ray_backup
 
 # get nbt from held sapling
 data modify storage gm4_garden_variety:transfer/gv_nbt placed_sapling set from entity @s SelectedItem.tag.gm4_garden_variety
@@ -27,5 +27,5 @@ execute at @e[type=marker,tag=gm4_ray_loc,limit=1] run data modify entity @e[typ
 # reset
 kill @e[type=marker,tag=gm4_tree_ray]
 kill @e[type=marker,tag=gm4_ray_loc]
-scoreboard players reset $ray gm4_gv_gen_data
-scoreboard players reset $found gm4_gv_gen_data
+scoreboard players reset $ray gm4_gv_tree_gen
+scoreboard players reset $found gm4_gv_tree_gen

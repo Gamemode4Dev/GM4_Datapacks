@@ -5,6 +5,6 @@
 
 # set the visual stage of the fruit depending the score
 
-execute if score @s gm4_fruit_age = #apple_fruit_stage_1_start gm4_gv_math_num run function gm4_garden_variety:mechanics/integration/fruiting_trees/fruit_leaves/apple/set_stage/1
-execute if score @s gm4_fruit_age = #apple_fruit_stage_2_start gm4_gv_math_num run function gm4_garden_variety:mechanics/integration/fruiting_trees/fruit_leaves/apple/set_stage/2
-execute if score @s gm4_fruit_age = #apple_fruit_stage_0_start gm4_gv_math_num run function gm4_garden_variety:mechanics/integration/fruiting_trees/fruit_leaves/apple/set_stage/0
+execute if score @s gm4_fruit_age = #apple_fruit_stage_1_start gm4_gv_fruit run function gm4_garden_variety:mechanics/integration/fruiting_trees/fruit_leaves/apple/set_stage/1
+execute if score @s gm4_fruit_age = #apple_fruit_stage_2_start gm4_gv_fruit run function gm4_garden_variety:mechanics/integration/fruiting_trees/fruit_leaves/apple/set_stage/2
+execute if score @s gm4_fruit_age = #apple_fruit_stage_0_start gm4_gv_fruit run function gm4_garden_variety:mechanics/integration/fruiting_trees/fruit_leaves/apple/set_stage/0

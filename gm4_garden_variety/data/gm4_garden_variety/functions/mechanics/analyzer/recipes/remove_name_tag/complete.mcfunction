@@ -5,8 +5,8 @@
 ##### INITIALIZE #####
 
 # get durability of first slot + slot 1 amount
-execute store result score $slot_0_durability gm4_gv_analyze run data get block ~ ~ ~ Items[{Slot:0b}].tag.Damage
-scoreboard players operation $slot_0_durability gm4_gv_analyze += $slot_1_amount gm4_gv_analyze
+execute store result score $slot_0_durability gm4_gv_analyzer run data get block ~ ~ ~ Items[{Slot:0b}].tag.Damage
+scoreboard players operation $slot_0_durability gm4_gv_analyzer += $slot_1_amount gm4_gv_analyze
 
 
 

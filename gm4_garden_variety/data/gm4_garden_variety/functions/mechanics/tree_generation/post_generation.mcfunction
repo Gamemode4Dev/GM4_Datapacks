@@ -11,9 +11,9 @@ data remove storage gm4_garden_variety:debug/generation backlog[25]
 data remove storage gm4_garden_variety:debug/generation path
 
 # reset generation mode
-scoreboard players set $generation_mode_orbis gm4_gv_gen_data 0
-scoreboard players set $generation_mode_sapling gm4_gv_gen_data 0
-scoreboard players set $generation_mode_command gm4_gv_gen_data 0
+scoreboard players set $generation_mode_orbis gm4_gv_tree_gen 0
+scoreboard players set $generation_mode_sapling gm4_gv_tree_gen 0
+scoreboard players set $generation_mode_command gm4_gv_tree_gen 0
 
 # reset tree type
 scoreboard players reset * gm4_tree_type

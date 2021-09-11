@@ -11,4 +11,4 @@ function gm4_garden_variety_trees:generate/king_palm/variables/tree_default
 
 # generate if clearance passes check
 function gm4_garden_variety:mechanics/clearance_checker/initialize
-execute if score $clearance_check gm4_gv_gen_data matches 1 run function gm4_garden_variety_trees:generate/king_palm/initialize
+execute if score $clearance_check gm4_gv_tree_gen matches 1 run function gm4_garden_variety_trees:generate/king_palm/initialize

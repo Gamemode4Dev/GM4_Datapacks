@@ -2,7 +2,7 @@
 
 # restock randomizer
 function gm4_garden_variety:data/generate/seed/random
-scoreboard players operation $restock_check gm4_gv_arborist = $current_seed gm4_gv_gen_data
+scoreboard players operation $restock_check gm4_gv_arborist = $current_seed gm4_gv_tree_gen
 scoreboard players operation $restock_check gm4_gv_arborist %= #10 gm4_gv_math_num 
 
 # restock

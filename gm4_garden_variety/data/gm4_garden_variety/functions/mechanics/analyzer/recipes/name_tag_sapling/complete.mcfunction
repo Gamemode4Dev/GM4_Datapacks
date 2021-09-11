@@ -5,8 +5,8 @@
 ##### INITIALIZE #####
 
 # get the amount of name tags not used
-scoreboard players operation $slot_0_amount_unused gm4_gv_analyze = $slot_0_amount gm4_gv_analyze
-scoreboard players operation $slot_0_amount_unused gm4_gv_analyze -= $slot_1_amount gm4_gv_analyze
+scoreboard players operation $slot_0_amount_unused gm4_gv_analyzer = $slot_0_amount gm4_gv_analyze
+scoreboard players operation $slot_0_amount_unused gm4_gv_analyzer -= $slot_1_amount gm4_gv_analyze
 
 
 

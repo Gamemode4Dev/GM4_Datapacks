@@ -5,8 +5,8 @@
 ##### INITIALIZE #####
 
 # get durability of first slot + slot 1 amount
-execute store result score $slot_0_durability gm4_gv_analyze run data get block ~ ~ ~ Items[{Slot:0b}].tag.Damage
-scoreboard players add $slot_0_durability gm4_gv_analyze 5
+execute store result score $slot_0_durability gm4_gv_analyzer run data get block ~ ~ ~ Items[{Slot:0b}].tag.Damage
+scoreboard players add $slot_0_durability gm4_gv_analyzer 5
 
 # choose random mutation
 data modify storage gm4_garden_variety:choose/mutation input set from block ~ ~ ~ Items[{Slot:1b}].tag.gm4_garden_variety.mutations

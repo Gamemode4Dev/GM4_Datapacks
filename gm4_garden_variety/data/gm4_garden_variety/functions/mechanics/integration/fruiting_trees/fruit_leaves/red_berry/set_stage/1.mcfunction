@@ -4,7 +4,7 @@
 # run from gm4_garden_variety_trees:trees/TREE_TYPE/fruiting/leaf/fruit/advance_stage
 
 # set leaf's next stage change age
-scoreboard players operation @s gm4_fruit_stage = #red_berry_fruit_stage_2_start gm4_gv_math_num
+scoreboard players operation @s gm4_fruit_stage = #red_berry_fruit_stage_2_start gm4_gv_fruit
 
 # visuals
 playsound minecraft:block.beehive.drip block @a[distance=..8] ~ ~ ~ 0.3 1.4

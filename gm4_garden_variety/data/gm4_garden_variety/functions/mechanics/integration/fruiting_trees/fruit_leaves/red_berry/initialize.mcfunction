@@ -3,10 +3,10 @@
 # run from gm4_garden_variety_trees:trees/TREE_TYPE/fruiting/leaf/fruit/generate
 
 # set first stage change timer
-scoreboard players operation @s gm4_fruit_stage = #red_berry_fruit_stage_0_start gm4_gv_math_num
+scoreboard players operation @s gm4_fruit_stage = #red_berry_fruit_stage_0_start gm4_gv_fruit
 
 # set age
-scoreboard players operation @s gm4_fruit_age = #red_berry_fruit_stage_2_start gm4_gv_math_num
+scoreboard players operation @s gm4_fruit_age = #red_berry_fruit_stage_2_start gm4_gv_fruit
 
 # finalize armor stand data
 data merge entity @s {Tags:["gm4_fruiting_leaf","gm4_red_berry_fruit_leaf","gm4_ripe_red_berry_fruit"]}

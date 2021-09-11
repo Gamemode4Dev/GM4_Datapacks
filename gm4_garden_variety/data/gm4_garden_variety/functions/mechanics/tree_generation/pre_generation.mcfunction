@@ -6,10 +6,10 @@
 fill ~ ~ ~ ~ ~ ~ air replace #minecraft:saplings
 
 # soil conversion
-execute if score $enable_soil_conversion gm4_gv_gen_data matches 1 unless score $corrosion gm4_gv_nbt_data matches 0 unless score $generation_mode_orbis gm4_gv_gen_data matches 1 run function gm4_garden_variety:mechanics/soil_conversion/initialize
+execute if score $enable_soil_conversion gm4_gv_tree_gen matches 1 unless score $corrosion gm4_gv_nbt_data matches 0 unless score $generation_mode_orbis gm4_gv_tree_gen matches 1 run function gm4_garden_variety:mechanics/soil_conversion/initialize
 
 # root generation
-execute if score $enable_soil_rooting gm4_gv_gen_data matches 1 unless score $roots gm4_gv_nbt_data matches 0 unless score $generation_mode_orbis gm4_gv_gen_data matches 1 run function gm4_garden_variety:mechanics/soil_rooting/initialize
+execute if score $enable_soil_rooting gm4_gv_tree_gen matches 1 unless score $roots gm4_gv_nbt_data matches 0 unless score $generation_mode_orbis gm4_gv_tree_gen matches 1 run function gm4_garden_variety:mechanics/soil_rooting/initialize
 
 # summon name tag
 execute if score $name_tag gm4_gv_nbt_data matches 1 run summon item ~ ~ ~ {Tags:["gm4_gv_add_mutation_lore"],Item:{id:"minecraft:name_tag",Count:1b}}

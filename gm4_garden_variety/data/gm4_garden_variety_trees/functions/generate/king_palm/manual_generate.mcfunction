@@ -3,8 +3,8 @@
 # run from gm4_garden_variety_trees:generate/palm_tree/TREE_TYPE/fruiting/tree/generate & gm4_garden_variety_trees:orbis/chunk/generate
 
 # set seed and generation mode
-scoreboard players set $seed_mode_command gm4_gv_gen_data 1
-scoreboard players set $generation_mode_command gm4_gv_gen_data 1
+scoreboard players set $seed_mode_command gm4_gv_tree_gen 1
+scoreboard players set $generation_mode_command gm4_gv_tree_gen 1
 
 # summon trunk marker and begin generation
 kill @s[type=!player]
