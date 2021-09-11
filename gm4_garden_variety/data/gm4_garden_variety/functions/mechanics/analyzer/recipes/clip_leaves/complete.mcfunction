@@ -11,7 +11,13 @@ scoreboard players add $slot_0_durability gm4_gv_analyzer 5
 # choose random mutation
 data remove storage gm4_garden_variety:choose/mutation input
 data modify storage gm4_garden_variety:choose/mutation input set from block ~ ~ ~ Items[{Slot:1b}].tag.gm4_garden_variety.mutations
-function gm4_garden_variety:utility/mutations/choose_mutations/check
+
+# get random roll (used to decide if recipe fails)
+scoreboard players set $random_pool gm4_gv_math_num 0
+execute store result score $random_pool gm4_gv_math_num run data get storage gm4_garden_variety:choose/mutation input
+scoreboard players add $random_pool gm4_gv_math_num 1
+function gm4_garden_variety:utility/get/random/roll
+
 
 
 ##### SLOT MODIFICATIONS #####
@@ -26,8 +32,9 @@ data modify block ~ ~ ~ Items[{Slot:1b}].Slot set value 2b
 data remove block ~ ~ ~ Items[{Slot:2b}].tag.gm4_garden_variety.mutations
 
 # [S2] set random mutation (sapling)
-data modify block ~ ~ ~ Items[{Slot:2b}].tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:choose/mutation output
-execute if score $chosen_mutation_roll gm4_gv_mutations matches ..1 run data modify block ~ ~ ~ Items[{Slot:2b}].Count set value 0b
+execute if score $random_roll gm4_gv_math_num matches 2.. run function gm4_garden_variety:utility/mutations/choose_mutation
+execute if score $random_roll gm4_gv_math_num matches 2.. run data modify block ~ ~ ~ Items[{Slot:2b}].tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:choose/mutation output
+execute if score $random_roll gm4_gv_math_num matches ..1 run data modify block ~ ~ ~ Items[{Slot:2b}].Count set value 0b
 
 
 # finalize
