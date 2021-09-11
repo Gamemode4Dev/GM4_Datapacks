@@ -64,7 +64,7 @@ scoreboard players set $sapling_leaves_range gm4_gv_gen_data 1
 scoreboard players set $sapling_leaves_layer_chance gm4_gv_gen_data 10
 
 # [Fruit Leaves] amount of leaves that may contain fruit
-scoreboard players set $fruit_leaves_chance gm4_gv_gen_data 4
+scoreboard players set $fruit_leaves_chance gm4_gv_gen_data 5
 scoreboard players set $fruit_leaves_minimum gm4_gv_gen_data 1
 scoreboard players set $fruit_leaves_range gm4_gv_gen_data 2
 

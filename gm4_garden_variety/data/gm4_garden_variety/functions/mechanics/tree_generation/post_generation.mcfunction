@@ -9,7 +9,6 @@ tellraw @a[tag=gm4_gv_debug_generation,distance=..15] {"nbt":"path","storage":"g
 data modify storage gm4_garden_variety:debug/generation backlog prepend from storage gm4_garden_variety:debug/generation path
 data remove storage gm4_garden_variety:debug/generation backlog[25]
 data remove storage gm4_garden_variety:debug/generation path
-#tellraw @p {"nbt":"backlog","storage":"gm4_garden_variety:debug/generation","interpret":true}
 
 # reset generation mode
 scoreboard players set $generation_mode_orbis gm4_gv_gen_data 0
