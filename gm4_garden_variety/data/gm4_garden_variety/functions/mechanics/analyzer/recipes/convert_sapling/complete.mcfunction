@@ -5,8 +5,8 @@
 ##### INITIALIZE #####
 
 # get the amount of bone meal not used
-scoreboard players operation $slot_0_amount_unused gm4_gv_analyzer = $slot_0_amount gm4_gv_analyze
-scoreboard players operation $slot_0_amount_unused gm4_gv_analyzer -= $slot_1_amount gm4_gv_analyze
+scoreboard players operation $slot_0_amount_unused gm4_gv_analyzer = $slot_0_amount gm4_gv_analyzer
+scoreboard players operation $slot_0_amount_unused gm4_gv_analyzer -= $slot_1_amount gm4_gv_analyzer
 
 
 
@@ -14,7 +14,7 @@ scoreboard players operation $slot_0_amount_unused gm4_gv_analyzer -= $slot_1_am
 
 
 # [S0] delete items that are used (name tag)
-execute store result block ~ ~ ~ Items[{Slot:0b}].Count byte 1 run scoreboard players get $slot_0_amount_unused gm4_gv_analyze
+execute store result block ~ ~ ~ Items[{Slot:0b}].Count byte 1 run scoreboard players get $slot_0_amount_unused gm4_gv_analyzer
 
 # [S1] convert sapling to wild version
 execute if data block ~ ~ ~ Items[{Slot:1b,id:"minecraft:oak_sapling"}] run loot replace block ~ ~ ~ container.1 loot gm4_garden_variety_trees:items/sapling/wild_oak
@@ -28,7 +28,7 @@ execute if data block ~ ~ ~ Items[{Slot:1b,id:"minecraft:acacia_sapling"}] run l
 data modify block ~ ~ ~ Items[{Slot:1b}].Slot set value 2b
 
 # [S2] set the correct amount
-execute store result block ~ ~ ~ Items[{Slot:2b}].Count byte 1 run scoreboard players get $slot_1_amount gm4_gv_analyze
+execute store result block ~ ~ ~ Items[{Slot:2b}].Count byte 1 run scoreboard players get $slot_1_amount gm4_gv_analyzer
 
 
 

@@ -6,7 +6,7 @@
 execute if score $debug_generation gm4_gv_tree_gen matches 1 run particle happy_villager ~ ~1 ~
 
 # [Generation] check if block is randomly picked
-function gm4_garden_variety:data/generate/next_seed_value
+function gm4_garden_variety:utility/generate/next_seed_value
 scoreboard players operation $soil_conversion_success gm4_gv_tree_gen = $current_seed gm4_gv_tree_gen
 scoreboard players operation $soil_conversion_success gm4_gv_tree_gen %= $soil_conversion_block_chance gm4_gv_tree_gen
 

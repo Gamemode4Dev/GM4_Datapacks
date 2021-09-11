@@ -1,7 +1,7 @@
 # run from TODO
 
 # register mutations
-function #gm4_garden_variety:data/mutations/random_mutations/register
+function #gm4_garden_variety:utility/mutations/random_mutations/register
 
 # store mutation in storage
 data remove storage gm4_garden_variety:generate/mutation output 

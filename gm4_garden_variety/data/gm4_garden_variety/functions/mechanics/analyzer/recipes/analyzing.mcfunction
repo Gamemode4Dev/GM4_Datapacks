@@ -11,10 +11,10 @@ scoreboard players add @s gm4_gv_analyzer 1
 playsound minecraft:entity.villager.work_cartographer block @a[distance=..20]
 
 # get analyzing percentage
-scoreboard players set $analyzing_time_percentage gm4_gv_analyzer 200
-scoreboard players operation $analyzing_time_percentage gm4_gv_analyzer /= $analyzing_time_required gm4_gv_analyze
+scoreboard players set $analyzing_time_percentage gm4_gv_analyze_p 200
+scoreboard players operation $analyzing_time_percentage gm4_gv_analyze_p /= $analyzing_time_required gm4_gv_analyzer
 
 # get burn time amount
-scoreboard players operation @s gm4_gv_analyze_p = @s gm4_gv_analyze
-scoreboard players operation @s gm4_gv_analyze_p *= $analyzing_time_percentage gm4_gv_analyze
+scoreboard players operation @s gm4_gv_analyze_p = @s gm4_gv_analyzer
+scoreboard players operation @s gm4_gv_analyze_p *= $analyzing_time_percentage gm4_gv_analyze_p
 

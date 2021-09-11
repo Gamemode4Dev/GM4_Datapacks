@@ -11,7 +11,7 @@ scoreboard players operation $analyzing_time_addition gm4_gv_analyzer *= $slot_1
 scoreboard players remove $analyzing_time_addition gm4_gv_analyzer 2
 
 # add increase to time required (with cap of 180s)
-scoreboard players operation $analyzing_time_required gm4_gv_analyzer += $analyzing_time_addition gm4_gv_analyze
+scoreboard players operation $analyzing_time_required gm4_gv_analyzer += $analyzing_time_addition gm4_gv_analyzer
 execute if score $analyzing_time_required gm4_gv_analyzer matches 181.. run scoreboard players set $analyzing_time_required gm4_gv_analyzer 180
 
 # analyze

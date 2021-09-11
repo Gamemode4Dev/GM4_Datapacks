@@ -11,11 +11,11 @@ data modify storage gm4_garden_variety:dev Item set from entity @e[type=trader_l
 execute as @e[type=trader_llama,tag=gm4_gv_mutated_trade_option] run data merge entity @s {Health:0,DeathTime:19}
 
 # add random mutation
-function gm4_garden_variety:data/mutations/random_mutations/generate
+function gm4_garden_variety:utility/mutations/random_mutations/generate
 data modify storage gm4_garden_variety:dev Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:generate/mutation output
-function gm4_garden_variety:data/mutations/random_mutations/generate
+function gm4_garden_variety:utility/mutations/random_mutations/generate
 data modify storage gm4_garden_variety:dev Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:generate/mutation output
-function gm4_garden_variety:data/mutations/random_mutations/generate
+function gm4_garden_variety:utility/mutations/random_mutations/generate
 data modify storage gm4_garden_variety:dev Item.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:generate/mutation output
 
 # summon item

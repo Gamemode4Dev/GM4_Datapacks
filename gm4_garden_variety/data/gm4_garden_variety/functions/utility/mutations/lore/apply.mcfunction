@@ -24,7 +24,7 @@ data modify storage gm4_garden_variety:interpret/array mutations set from storag
 ### APPLY LORE ###
 
 # remove lore
-function gm4_garden_variety:data/mutations/lore/remove
+function gm4_garden_variety:utility/mutations/lore/remove
 
 # header
 data modify storage gm4_garden_variety:add/lore lines append value '[{"text":"Sapling Mutations","color":"#BD6FFD","italic":false}]'
@@ -36,7 +36,7 @@ execute unless score $extra_lore gm4_gv_nbt_data matches 1.. run scoreboard play
 # get mutations
 scoreboard players operation $mutation_lore_loop gm4_gv_mutations = $mutations gm4_gv_nbt_data
 summon trader_llama ~ 0 ~ {Silent:1b,NoGravity:1b,Invulnerable:1b,ChestedHorse:1b,Variant:0,Strength:1,DespawnDelay:1,Tags:["gm4_gv_get_mutations"],Items:[{Slot:2b,id:"minecraft:stone",Count:1b}]}
-execute if score $mutation_lore_loop gm4_gv_mutations matches 1.. run function gm4_garden_variety:data/mutations/lore/get_mutations
+execute if score $mutation_lore_loop gm4_gv_mutations matches 1.. run function gm4_garden_variety:utility/mutations/lore/get_mutations
 execute as @e[type=trader_llama,tag=gm4_gv_get_mutations] run data merge entity @s {Health:0,DeathTime:19}
 
 # add mutations

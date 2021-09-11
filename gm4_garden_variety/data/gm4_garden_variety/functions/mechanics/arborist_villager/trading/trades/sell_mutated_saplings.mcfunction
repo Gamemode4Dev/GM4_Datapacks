@@ -21,7 +21,7 @@ data modify storage gm4_garden_variety:arborist next_trade.buy set from storage 
 data modify storage gm4_garden_variety:arborist next_trade.buyB set from storage gm4_garden_variety:arborist random_trade.Items[2]
 
 # add random mutation
-function gm4_garden_variety:data/mutations/random_mutations/generate
+function gm4_garden_variety:utility/mutations/random_mutations/generate
 data modify storage gm4_garden_variety:arborist next_trade.sell.tag.gm4_garden_variety.mutations append from storage gm4_garden_variety:generate/mutation output
 
 # modify lore

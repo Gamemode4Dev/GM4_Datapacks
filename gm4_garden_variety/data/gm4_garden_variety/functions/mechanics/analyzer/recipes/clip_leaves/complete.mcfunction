@@ -10,13 +10,13 @@ scoreboard players add $slot_0_durability gm4_gv_analyzer 5
 
 # choose random mutation
 data modify storage gm4_garden_variety:choose/mutation input set from block ~ ~ ~ Items[{Slot:1b}].tag.gm4_garden_variety.mutations
-function gm4_garden_variety:data/mutations/choose_mutations/check
+function gm4_garden_variety:utility/mutations/choose_mutations/check
 
 
 ##### SLOT MODIFICATIONS #####
 
 # [S0] remove durability base on item count in slot 1 (shears)
-execute store result block ~ ~ ~ Items[{Slot:0b}].tag.Damage int 1 run scoreboard players get $slot_0_durability gm4_gv_analyze
+execute store result block ~ ~ ~ Items[{Slot:0b}].tag.Damage int 1 run scoreboard players get $slot_0_durability gm4_gv_analyzer
 
 # [S1,S2] move items from slot 1 to slot 2 (sapling)
 data modify block ~ ~ ~ Items[{Slot:1b}].Slot set value 2b
