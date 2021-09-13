@@ -1,6 +1,8 @@
-# initializes a TREE_TYPE leaf
-# @s = a freshly generated TREE_TYPE sapling leaf
-# run from gm4_garden_variety_trees:trees/TREE_TYPE/fruiting/leaf/fruit/generate
+# generates the red berry leaf
+# @s = @e[type=armor_stand,tag=gm4_fruiting_leaf_new]
+# at @s
+# run from gm4_garden_variety:mechanics/integration/fruiting_trees/fruit_leaves/red_berry/generate
+
 
 # set first stage change timer
 scoreboard players operation @s gm4_fruit_stage = #red_berry_fruit_stage_0_start gm4_gv_fruit

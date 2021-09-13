@@ -1,7 +1,9 @@
-# spawns an apple
+# spawns the fruit
 # @s = gm4_TREE_TYPE_fruit_leaf switching to stage 0
 # at loot spawn location (in head of armor stand)
-# run from gm4_garden_variety_trees:trees/TREE_TYPE/fruiting/leaf/fruit/set_stage/0
+# run from gm4_garden_variety:mechanics/integration/fruiting_trees/fruit_leaves/red_berry/set_stage/0
+# run from gm4_garden_variety:mechanics/integration/fruiting_trees/fruit_leaves/red_berry/destroy
+
 
 # spawn apple item
 playsound minecraft:entity.item_frame.remove_item block @a[distance=..8] ~ ~ ~ 0.3 0.6

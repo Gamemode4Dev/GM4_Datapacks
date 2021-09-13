@@ -1,5 +1,5 @@
-# @s = player that just placed a fruiting tree sapling
-# run from advancement gm4_fruiting_trees:sapling/place_fruiting_sapling
+# activates when player places a garden variety sapling
+# run from advancement, gm4_garden_variety:place_fruiting_sapling
 
 advancement revoke @s only gm4_garden_variety:place_fruiting_sapling
 

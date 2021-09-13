@@ -2,6 +2,7 @@
 # @s = any equation that needs another seed value
 # run from #gm4_garden_variety:
 
+
 # count seed use
 scoreboard players add $seed_used gm4_gv_tree_gen 1
 scoreboard players add $seed_used_eo4 gm4_gv_tree_gen 1

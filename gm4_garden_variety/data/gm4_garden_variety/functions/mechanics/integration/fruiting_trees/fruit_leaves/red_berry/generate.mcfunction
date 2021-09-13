@@ -1,5 +1,8 @@
-# places a TREE_TYPE fruit marker
-# run from TODO
+# generates the red berry leaf
+# @s = @e[type=marker,tag=gm4_trunk_decor_marker]
+# at @s
+# run from gm4_garden_variety_trees:generate\TREE_TYPE\integration\garden_variety\mechanics\trunk_decor\place_block
+
 
 # randomly set the armor stands rotation
 function gm4_garden_variety:utility/get/seed/next_value

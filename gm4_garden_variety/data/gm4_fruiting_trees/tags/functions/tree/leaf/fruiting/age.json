@@ -1,6 +1,5 @@
 {
     "values":[
-        "gm4_garden_variety:integration/fruiting_trees/update_leaves",
-        "gm4_garden_variety_trees:integration/fruiting_trees/update_leaves"
+        "gm4_garden_variety:integration/fruiting_trees/update_leaves"
     ]
 }

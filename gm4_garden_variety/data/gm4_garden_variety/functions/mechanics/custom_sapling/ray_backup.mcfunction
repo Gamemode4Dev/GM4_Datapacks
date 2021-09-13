@@ -1,5 +1,8 @@
-# @s = marker ray used to detect the sapling
-# run from gm4_fruiting_trees:sapling/place_sapling
+# raycast 5 blocks (wide range)
+# @s = @e[type=marker,tag=gm4_tree_ray]
+# at @s
+# run from gm4_garden_variety:mechanics/custom_sapling/place
+
 
 # check blocks around the marker ray
 scoreboard players set $found gm4_gv_tree_gen 0

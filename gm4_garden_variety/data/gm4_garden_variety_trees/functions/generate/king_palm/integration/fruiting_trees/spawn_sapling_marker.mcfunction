@@ -1,7 +1,7 @@
-# initializes the TREE_TYPE tree's AEC marker
-# @s = raycast AEC
-# at @s align xyz
-# run from TODO
+# places the custom sapling
+# @s = @e[type=marker,tag=gm4_ray_loc]
+# at @s
+# run from gm4_garden_variety_trees:integration/garden_variety/mechanics/custom_sapling/place
 
 
 # summon marker and set scoreboard
