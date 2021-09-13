@@ -1,5 +1,8 @@
-# @s = gm4_gv_analyzer that has been broken
-# run from gm4_garden_variety:custom_crafters/update
+# processes the analyzer that has been broken
+# @s = @s[tag=gm4_gv_analyzer]
+# at @s
+# run from gm4_garden_variety:mechanics/analyzer/process
+
 
 # give back items
 loot spawn ~ ~.6 ~ loot gm4_garden_variety:blocks/analyzer

@@ -1,5 +1,7 @@
-# @s = gm4_gv_analyzer that has been broken
-# run from gm4_garden_variety:custom_crafters/check_items
+# completes the recipe
+# @s = @s[tag=gm4_gv_analyzer]
+# at @s
+# run from gm4_garden_variety:mechanics/analyzer/recipes/remove_name_tag/analyzing
 
 
 ##### INITIALIZE #####
@@ -7,7 +9,6 @@
 # get durability of first slot + slot 1 amount
 execute store result score $slot_0_durability gm4_gv_analyzer run data get block ~ ~ ~ Items[{Slot:0b}].tag.Damage
 scoreboard players operation $slot_0_durability gm4_gv_analyzer += $slot_1_amount gm4_gv_analyzer
-
 
 
 ##### SLOT MODIFICATIONS #####
@@ -34,7 +35,6 @@ data modify storage gm4_garden_variety:modify/item input set from block ~ ~ ~ It
 data modify storage gm4_garden_variety:modify/item modifier set from block ~ ~ ~ Items[{Slot:1b}]
 function gm4_garden_variety:utility/mutations/lore/apply
 data modify block ~ ~ ~ Items[{Slot:2b}] set from storage gm4_garden_variety:modify/item output
-
 
 
 # finalize

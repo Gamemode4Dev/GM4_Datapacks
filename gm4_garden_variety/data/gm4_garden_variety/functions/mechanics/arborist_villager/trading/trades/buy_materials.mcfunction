@@ -1,5 +1,7 @@
-# run from TODO
-
+# gives the villager the buy_materials trade
+# @s = @s[tag=gm4_gv_arborist]
+# at @s
+# run from gm4_garden_variety:mechanics/arborist_villager/levels/level_NUMBER
 
 
 ### initialize ###

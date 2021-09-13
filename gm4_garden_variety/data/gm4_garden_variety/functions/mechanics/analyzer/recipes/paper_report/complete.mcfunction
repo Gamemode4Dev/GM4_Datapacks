@@ -1,6 +1,7 @@
-# @s = gm4_gv_analyzer that has been broken
-# run from gm4_garden_variety:custom_crafters/check_items
-
+# completes the recipe
+# @s = @s[tag=gm4_gv_analyzer]
+# at @s
+# run from gm4_garden_variety:mechanics/analyzer/recipes/paper_report/analyzing
 
 
 ##### SLOT MODIFICATIONS #####
@@ -16,7 +17,6 @@ data modify block ~ ~ ~ Items[{Slot:2b}] set from storage gm4_garden_variety:mod
 
 # [S2] change item name
 data modify block ~ ~ ~ Items[{Slot:2b}].tag.display.Name set value '{"text":"Paper Report","italic":false}'
-
 
 
 # finalize

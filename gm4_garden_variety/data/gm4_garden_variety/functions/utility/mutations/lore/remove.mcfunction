@@ -1,10 +1,9 @@
-# generates the tree's leaf layers
-# @s = Item
-# run from TODO
+# removes the muation lore
+# @s = @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Age:0s}]
+# at @s
+# run from gm4_garden_variety:utility/mutations/lore/apply
+# run from gm4_garden_variety:mechanics/analyzer/recipes/remove_name_tag/complete
 
-
-# SET VALUES
-# gm4_garden_variety:modify/item input
 
 # copy storage
 data modify storage gm4_garden_variety:modify/item output set from storage gm4_garden_variety:modify/item input

@@ -1,4 +1,7 @@
-# run from TODO
+# generates a random mutation
+# run from gm4_garden_variety:mechanics/custom_sapling/apply_random_mutation
+# run from gm4_garden_variety:mechanics/arborist_villager/trading/trades/sell_mutated_saplings
+
 
 # register mutations
 function #gm4_garden_variety:utility/mutations/random_mutation/register

@@ -1,4 +1,7 @@
-# run from TODO
+# cnverts the villager to an arborist
+# @s = @s[tag=!gm4_gv_arborist]
+# at @s
+# run from gm4_garden_variety:mechanics/arborist_villager/job_site/link_villager
 
 
 # display particles

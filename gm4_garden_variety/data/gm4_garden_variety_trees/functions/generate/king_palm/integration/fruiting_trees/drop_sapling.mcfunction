@@ -1,7 +1,7 @@
-# restores the data of the sapling when breaking the block
-# @s TREE_TYPE sapling AEC
+# processes the sapling that has been broken
+# @s = @e[type=marker,tag=gm4_gv_sapling]
 # at @s align xyz
-# run from TODO
+# run from gm4_garden_variety_trees:integration/garden_variety/mechanics/custom_sapling/destroy
 
 
 # kill sapling item and spawn correct sapling

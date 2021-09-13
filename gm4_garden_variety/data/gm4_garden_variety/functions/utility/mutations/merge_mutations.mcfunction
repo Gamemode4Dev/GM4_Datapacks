@@ -1,3 +1,6 @@
+# merges the 2 given sets of mutations into 1
+# run from gm4_garden_variety:mechanics/custom_sapling/apply_random_mutation
+
 
 # update mutation
 data modify storage gm4_garden_variety:merge/mutation output[{mutation:"Height"}].value set from storage gm4_garden_variety:merge/mutation merge[{mutation:"Height"}].value

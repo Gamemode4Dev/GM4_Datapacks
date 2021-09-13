@@ -1,7 +1,7 @@
-# checks whether @s is a custom sapling, and if so allows further execution
-# @s any gm4_fruiting_sapling
+# processes the sapling that is ready to generate a trees
+# @s = @e[type=marker,tag=gm4_gv_sapling]
 # at @s align xyz
-# run from #gm4_fruiting_trees:tree/initialize
+# run from gm4_garden_variety:mechanics/custom_sapling/advance_stage
 
 # set seed mode
 scoreboard players set $seed_mode_sapling gm4_gv_tree_gen 1

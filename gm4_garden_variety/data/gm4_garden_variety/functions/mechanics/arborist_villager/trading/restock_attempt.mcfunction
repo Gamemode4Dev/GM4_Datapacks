@@ -1,4 +1,8 @@
-# run from TODO
+# attempts to restock the villager
+# @s = @s[tag=gm4_gv_arborist]
+# at @s
+# run from gm4_garden_variety:mechanics/arborist_villager/working
+
 
 # restock randomizer
 function gm4_garden_variety:utility/get/seed/random

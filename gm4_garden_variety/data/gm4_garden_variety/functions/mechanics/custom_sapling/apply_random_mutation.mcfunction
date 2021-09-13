@@ -1,4 +1,7 @@
-
+# applies a random mutation to the sapling
+# @s = @e[type=marker,tag=gm4_gv_sapling]
+# at @s align xyz
+# run from gm4_garden_variety:mechanics/custom_sapling/attempt_mutation
 
 
 # generate mutation

@@ -1,4 +1,8 @@
-# run from TODO
+# makes the arborist look at their workstation
+# @s = @e[tag=gm4_gv_arborist]
+# at @s
+# run from gm4_garden_variety:mechanics/arborist_villager/process
+
 
 tag @s add gm4_gv_looking_at_job_site
 data modify entity @s NoAI set value 1

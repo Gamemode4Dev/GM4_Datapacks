@@ -1,7 +1,7 @@
-# reverts the sapling to stage=0
-# @s = sapling marker
+# processes the sapling that has advanced stage
+# @s = @e[type=marker,tag=gm4_gv_sapling]
 # at @s align xyz
-# run from gm4_fruiting_trees:sapling/process
+# run from gm4_garden_variety:mechanics\custom_sapling\process
 
 # prevent normal tree from spawning
 execute if block ~ ~ ~ minecraft:oak_sapling run setblock ~ ~ ~ minecraft:oak_sapling[stage=0]

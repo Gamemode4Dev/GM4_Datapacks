@@ -1,7 +1,8 @@
 # processes the sapling every tick for stage change or broken block
-# @s = sapling marker
+# @s = @e[type=marker,tag=gm4_gv_sapling]
 # at @s align xyz
-# run from gm4_fruiting_trees:tick
+# run from gm4_garden_variety:clock/tick
+
 
 # destroy if not in a sapling
 execute unless block ~ ~ ~ #minecraft:saplings run function gm4_garden_variety:mechanics/custom_sapling/destroy

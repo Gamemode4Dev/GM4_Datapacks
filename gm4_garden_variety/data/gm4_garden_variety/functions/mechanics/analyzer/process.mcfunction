@@ -1,6 +1,7 @@
-# @s = gm4_gv_analyzer
-# run from main
-
+# processes analyzers in a random order
+# @s = @e[type=armor_stand,tag=gm4_gv_analyzer,tag=!gm4_gv_disable_updates,sort=random]
+# at @s
+# run from gm4_garden_variety:clock/1s
 
 
 # keep armorstand lit up

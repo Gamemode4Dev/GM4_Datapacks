@@ -1,5 +1,7 @@
-# @s = gm4_gv_analyzer that has been broken
-# run from gm4_garden_variety:custom_crafters/update
+# checks the recipe
+# @s = @s[tag=gm4_gv_analyzer]
+# at @s
+# run from gm4_garden_variety:mechanics/analyzer/process
 
 # reset recipe check
 scoreboard players set $recipe_check gm4_gv_analyzer 1

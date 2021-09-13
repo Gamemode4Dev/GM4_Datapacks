@@ -1,7 +1,7 @@
-# Drops a sapling
-# @s = @e[type=marker,tag=gm4_TREE_NAME_sapling_leaf]
+# processes the sapling that has been broken
+# @s = @e[type=marker,tag=gm4_gv_sapling]
 # at @s align xyz
-# run from gm4_garden_variety_trees:integration/garden_variety/markers/sapling_leaf/destroy
+# run from gm4_garden_variety_trees:integration/garden_variety/mechanics/sapling_leaves/destroy
 
 
 # spawn items

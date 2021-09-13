@@ -1,5 +1,7 @@
-# run from TODO
-
+# processes the arborist
+# @s = @e[type=villager,tag=gm4_gv_arborist,tag=!gm4_gv_disable_updates,sort=random]
+# at @s
+# run from gm4_garden_variety:clock/1s
 
 
 # get villagers xp
@@ -31,8 +33,7 @@ execute if entity @s[tag=gm4_gv_level_4] if score $xp_value gm4_gv_arborist matc
 execute if entity @s[tag=gm4_gv_level_4] if score $xp_value gm4_gv_arborist matches 250.. run function gm4_garden_variety:mechanics/arborist_villager/levels/level_5
 
 # look at work site (telltale villagers)
-execute if score $look_at_job_site gm4_gv_arborist matches 0 if entity @s[tag=gm4_gv_looking_at_job_site] run tag @s remove gm4_gv_looking_at_job_site
 execute store success score $look_at_job_site gm4_gv_arborist if entity @a[distance=..2,nbt={SelectedItem:{id:"minecraft:smoker"}}] 
 execute if score $look_at_job_site gm4_gv_arborist matches 1 if entity @s[tag=!gm4_gv_looking_at_job_site] run function gm4_garden_variety:mechanics/arborist_villager/job/look_at_job_site
 execute if score $look_at_job_site gm4_gv_arborist matches 0 if entity @s[tag=gm4_gv_looking_at_job_site] run data modify entity @s NoAI set value 0
-
+execute if score $look_at_job_site gm4_gv_arborist matches 0 if entity @s[tag=gm4_gv_looking_at_job_site] run tag @s remove gm4_gv_looking_at_job_site

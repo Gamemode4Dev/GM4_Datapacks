@@ -1,5 +1,7 @@
-# @s = gm4_gv_analyzer that has been broken
-# run from gm4_garden_variety:custom_crafters/check_items
+# completes the recipe
+# @s = @s[tag=gm4_gv_analyzer]
+# at @s
+# run from gm4_garden_variety:mechanics/analyzer/recipes/clip_leaves/analyzing
 
 
 ##### INITIALIZE #####
@@ -17,7 +19,6 @@ scoreboard players set $random_pool gm4_gv_math_num 0
 execute store result score $random_pool gm4_gv_math_num run data get storage gm4_garden_variety:choose/mutation input
 scoreboard players add $random_pool gm4_gv_math_num 1
 function gm4_garden_variety:utility/get/random/roll
-
 
 
 ##### SLOT MODIFICATIONS #####

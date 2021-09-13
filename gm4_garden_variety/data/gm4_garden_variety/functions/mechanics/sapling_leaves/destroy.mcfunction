@@ -1,7 +1,7 @@
-# Modifies the saplings dropped from sapling leaves
+# processes the leaf that has been broken
 # @s = @e[type=marker,tag=gm4_gv_sapling_leaf]
 # at @s align xyz
-# run from gm4_garden_variety:markers/sapling_leaf/clock
+# run from gm4_garden_variety:mechanics/sapling_leaves/clock
 
 
 # destroy leaves

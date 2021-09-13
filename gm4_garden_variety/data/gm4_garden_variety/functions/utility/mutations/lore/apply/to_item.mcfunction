@@ -1,6 +1,7 @@
-# generates the tree's leaf layers
-# @s = Item
-# run from TODO
+# applies mutation lore to the item
+# @s = @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Age:0s}]
+# at @s
+# run from gm4_garden_variety:mechanics/custom_sapling/destroy
 
 # apply lore
 data modify storage gm4_garden_variety:modify/item input set from entity @s Item

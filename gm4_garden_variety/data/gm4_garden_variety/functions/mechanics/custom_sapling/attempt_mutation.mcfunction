@@ -1,3 +1,5 @@
+# attempts to mutate a fully grown sapling
+# run from gm4_garden_variety:mechanics/custom_sapling/generate_tree
 
 
 # set random chance

@@ -1,7 +1,11 @@
-# run from TODO
+# processes an arborist that has been unlinked
+# @s = @s[tag=gm4_gv_arborist]
+# at @s
+# run from gm4_garden_variety:mechanics/arborist_villager/process
+
 
 # remove arborist job if not locked
-execute unless entity @s[tag=gm4_gv_locked_job] run function gm4_garden_variety:mechanics/arborist_villager/job/remove
+execute if entity @s[tag=!gm4_gv_locked_job] run function gm4_garden_variety:mechanics/arborist_villager/job/remove
 
 # remove job site
 execute if entity @s[tag=gm4_gv_has_job_site] run scoreboard players reset @s gm4_gv_job_id

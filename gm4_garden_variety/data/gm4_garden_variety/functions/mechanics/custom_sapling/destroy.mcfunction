@@ -1,7 +1,8 @@
-# checks whether the sapling is a custom sapling, and if so allows further execution
-# @s apple tree sapling AEC
+# processes the sapling that has been broken
+# @s = @e[type=marker,tag=gm4_gv_sapling]
 # at @s align xyz
-# run from TODO
+# run from gm4_garden_variety:mechanics\custom_sapling\process
+
 
 # drop saplings
 function #gm4_garden_variety:mechanics/custom_sapling/destroy

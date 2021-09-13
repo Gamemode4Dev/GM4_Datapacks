@@ -1,7 +1,8 @@
-# checks whether @s is a custom sapling, and if so allows further execution
-# @s any gm4_fruiting_sapling
+# generates the tree from a fully grown sapling
+# @s = @e[type=marker,tag=gm4_gv_sapling]
 # at @s align xyz
-# run from #gm4_fruiting_trees:tree/initialize
+# run from #gm4_garden_variety:mechanics/custom_sapling/generate_tree
+
 
 # grow sapling
 execute if entity @s[tag=gm4_king_palm_sapling] run function gm4_garden_variety_trees:generate/king_palm/generate

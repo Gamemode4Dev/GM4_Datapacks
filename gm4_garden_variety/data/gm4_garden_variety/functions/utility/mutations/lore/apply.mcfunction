@@ -1,11 +1,10 @@
-# generates the tree's leaf layers
-# @s = Item
-# run from TODO
+# generates the muation lore
+# run from gm4_garden_variety:utility/mutations/lore/apply/to_item
+# run from gm4_garden_variety:mechanics/analyzer/recipes/paper_report/complete
+# run from gm4_garden_variety:mechanics/analyzer/recipes/book_report/complete
+# run from gm4_garden_variety:mechanics/analyzer/recipes/name_tag_sapling/complete
+# run from gm4_garden_variety:mechanics/analyzer/recipes/remove_name_tag/complete
 
-
-# SET VALUES
-# gm4_garden_variety:modify/item input
-# gm4_garden_variety:modify/item modifier
 
 ### INIT ###
 
@@ -36,7 +35,7 @@ execute unless score $extra_lore gm4_gv_nbt_data matches 1.. run scoreboard play
 # get mutations
 scoreboard players operation $mutation_lore_loop gm4_gv_mutations = $mutations gm4_gv_nbt_data
 summon trader_llama ~ 0 ~ {Silent:1b,NoGravity:1b,Invulnerable:1b,ChestedHorse:1b,Variant:0,Strength:1,DespawnDelay:1,Tags:["gm4_gv_get_mutations"],Items:[{Slot:2b,id:"minecraft:stone",Count:1b}]}
-execute if score $mutation_lore_loop gm4_gv_mutations matches 1.. run function gm4_garden_variety:utility/mutations/lore/get_mutations
+execute if score $mutation_lore_loop gm4_gv_mutations matches 1.. run function gm4_garden_variety:utility/mutations/lore/generate
 execute as @e[type=trader_llama,tag=gm4_gv_get_mutations] run data merge entity @s {Health:0,DeathTime:19}
 
 # add mutations

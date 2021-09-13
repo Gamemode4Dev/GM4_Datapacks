@@ -1,3 +1,6 @@
+# uses the given values to randomly generate a number
+# run from gm4_garden_variety:mechanics/custom_sapling/attempt_mutation
+# run from gm4_garden_variety:mechanics/analyzer/recipes/clip_leaves/complete
 
 
 # select random roll

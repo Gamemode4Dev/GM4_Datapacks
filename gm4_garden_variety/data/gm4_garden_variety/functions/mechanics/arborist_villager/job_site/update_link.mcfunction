@@ -1,4 +1,9 @@
-# run from TODO
+# links the nearest villager with no job to the analyzer
+# @s = @s[tag=gm4_gv_analyzer]
+# at @s
+# run from gm4_garden_variety:clock/10s
+# run from gm4_garden_variety:mechanics/arborist_villager/job_site/force_update
+
 
 # set current id to the analyzers id
 scoreboard players operation $current_id gm4_gv_job_id = @s gm4_gv_job_id

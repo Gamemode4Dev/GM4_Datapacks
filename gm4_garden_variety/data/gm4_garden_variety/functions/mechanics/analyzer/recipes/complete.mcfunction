@@ -1,5 +1,8 @@
-# @s = gm4_gv_analyzer that has been broken
-# run from gm4_garden_variety:custom_crafters/check_items
+# completes the recipe
+# @s = @s[tag=gm4_gv_analyzer]
+# at @s
+# run from gm4_garden_variety:mechanics/analyzer/recipes/RECIPE/complete
+
 
 # visuals
 playsound minecraft:entity.villager.work_librarian block @a[distance=..20]

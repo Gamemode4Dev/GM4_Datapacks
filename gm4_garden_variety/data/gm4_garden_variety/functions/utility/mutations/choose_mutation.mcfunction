@@ -1,8 +1,6 @@
+# chooses a random mutation from the given array
+# run from gm4_garden_variety:mechanics/analyzer/recipes/clip_leaves/complete
 
-
-
-# SET BEFORE FUNCTION
-# "gm4_garden_variety:interpret mutations"
 
 # reset
 data remove storage gm4_garden_variety:choose/mutation output

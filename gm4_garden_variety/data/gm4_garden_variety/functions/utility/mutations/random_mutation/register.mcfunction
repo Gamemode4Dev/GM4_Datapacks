@@ -1,4 +1,6 @@
-# run from TODO
+# generates trader llamas containing random mutations
+# run from #gm4_garden_variety:utility/mutations/random_mutation/register
+
 
 # random mutation (#1)
 summon trader_llama ~ 0 ~ {Silent:1b,NoGravity:1b,Invulnerable:1b,ChestedHorse:1b,Variant:0,Strength:1,DespawnDelay:1,Tags:["gm4_gv_random_mutation","gm4_gv_new_mutation_option"],Items:[{},{},{}]}

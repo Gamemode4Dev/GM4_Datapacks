@@ -1,4 +1,8 @@
-# run from TODO
+# compares the id of all nearby villagers
+# @s = @e[type=villager,tag=gm4_gv_arborist,distance=..10]
+# at @s
+# run from gm4_garden_variety:mechanics/arborist_villager/job_site/update_link
+
 
 # check if id is matching
 execute if score @s gm4_gv_job_id = $current_id gm4_gv_job_id run scoreboard players add $id_checks gm4_gv_job_id 1

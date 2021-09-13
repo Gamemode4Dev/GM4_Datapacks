@@ -1,4 +1,8 @@
-# run from TODO
+# gives the villager level 1 trades
+# @s = @s[tag=gm4_gv_arborist]
+# at @s
+# run from gm4_garden_variety:mechanics/arborist_villager/job/apply
+
 
 # change level
 data modify entity @s VillagerData.level set value 1

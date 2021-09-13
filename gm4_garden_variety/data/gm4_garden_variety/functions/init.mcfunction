@@ -3,9 +3,9 @@ function gm4_garden_variety:initialize
 
 # clocks
 schedule function gm4_garden_variety:clock/tick 10t
-schedule function gm4_garden_variety:clock/process_leaves 11t
-schedule function gm4_garden_variety:clock/process_analyzer 12t
-schedule function gm4_garden_variety:clock/process_arborist 13t
+schedule function gm4_garden_variety:clock/16t 11t
+schedule function gm4_garden_variety:clock/1s 12t
+schedule function gm4_garden_variety:clock/10s 13t
 
 # check if modules are installed
 scoreboard players set $fruiting_trees_installed gm4_gv_data 0

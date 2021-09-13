@@ -1,5 +1,7 @@
-# @s = gm4_gv_analyzer that has been broken
-# run from gm4_garden_variety:custom_crafters/update
+# analyzes the recipe
+# @s = @s[tag=gm4_gv_analyzer]
+# at @s
+# run from gm4_garden_variety:mechanics/analyzer/recipes/convert_sapling/check
 
 # set analyzer speed
 scoreboard players set $analyzing_time_required gm4_gv_analyzer 5

@@ -1,6 +1,7 @@
-# generates the tree's leaf layers
-# @s = TREE_TYPE leaf AEC marker
-# run from TODO
+# converts nbt values into scoreboard values
+# run from gm4_garden_variety:mechanics/custom_sapling/destroy
+# run from gm4_garden_variety:mechanics/custom_sapling/generate_tree
+
 
 # reset scores
 scoreboard players reset * gm4_gv_nbt_data

@@ -1,5 +1,7 @@
-# @s = gm4_gv_analyzer that has been broken
-# run from gm4_garden_variety:custom_crafters/check_items
+# completes the recipe
+# @s = @s[tag=gm4_gv_analyzer]
+# at @s
+# run from gm4_garden_variety:mechanics/analyzer/recipes/convert_sapling/analyzing
 
 
 ##### INITIALIZE #####
@@ -9,9 +11,7 @@ scoreboard players operation $slot_0_amount_unused gm4_gv_analyzer = $slot_0_amo
 scoreboard players operation $slot_0_amount_unused gm4_gv_analyzer -= $slot_1_amount gm4_gv_analyzer
 
 
-
 ##### SLOT MODIFICATIONS #####
-
 
 # [S0] delete items that are used (name tag)
 execute store result block ~ ~ ~ Items[{Slot:0b}].Count byte 1 run scoreboard players get $slot_0_amount_unused gm4_gv_analyzer
@@ -29,7 +29,6 @@ data modify block ~ ~ ~ Items[{Slot:1b}].Slot set value 2b
 
 # [S2] set the correct amount
 execute store result block ~ ~ ~ Items[{Slot:2b}].Count byte 1 run scoreboard players get $slot_1_amount gm4_gv_analyzer
-
 
 
 # finalize
