@@ -22,7 +22,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:1,gm4_fruiting_trees:{item:{id:\"sapling\",type:\"wild_birch\",origin:\"garden_variety\"}},gm4_podzol_rooting_soil:{id:\"wild_birch_sapling\"}}"
+                            "tag": "{CustomModelData:1,gm4_fruiting_trees:{item:{id:\"sapling\",type:\"wild_birch\",source:\"garden_variety\"}},gm4_podzol_rooting_soil:{id:\"wild_birch_sapling\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",
