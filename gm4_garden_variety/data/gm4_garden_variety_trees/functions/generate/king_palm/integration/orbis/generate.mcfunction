@@ -1,7 +1,7 @@
 # Generates tree seed based on world seed and location.
-# @s = @e[type=minecraft:area_effect_cloud,tag=gm4_apple_tree_new,limit=1]
+# @s = @e[type=minecraft:area_effect_cloud,tag=gm4_TREE_TYPE_tree_new,limit=1]
 # at tree spawn position
-# run from gm4_garden_variety_trees:generate/palm_tree/TREE_TYPE/orbis/scan_column
+# run from gm4_garden_variety_trees:generate/TREE_TYPE/integration/orbis/scan_column
 
 
 # store tree coordinates + debug text

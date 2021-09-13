@@ -1,7 +1,5 @@
-# initializes the TREE_TYPE tree's AEC marker
-# @s = raycast AEC
-# at @s align xyz
-# run from TODO
+# places the sapling
+# run from gm4_garden_variety_trees:integration/podzol_rooting/plant_sapling
 
 
 # summon marker and set scoreboard

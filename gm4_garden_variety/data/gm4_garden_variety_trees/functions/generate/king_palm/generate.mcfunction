@@ -2,6 +2,7 @@
 # @s = @e[type=marker,tag=gm4_gv_sapling,tag=gm4_TREE_TYPE_sapling]
 # at @s align xyz
 # run from gm4_garden_variety_trees:integration/garden_variety/mechanics/custom_sapling/generate_tree
+# run from gm4_garden_variety_trees:generate/king_palm/integration/orbis/generate
 
 
 # initialize

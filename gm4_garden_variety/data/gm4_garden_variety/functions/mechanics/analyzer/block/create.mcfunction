@@ -1,4 +1,5 @@
-# Called from recipe_check
+# constructs the analyzer
+# run from gm4_garden_variety:integration/custom_crafters/recipe_check
 
 # convert block
 data merge storage gm4_custom_crafters:temp/crafter {CustomName:'{"translate":"%1$s%3427655$s","with":["Arborist Analyzer",{"translate":"block.gm4.gv_arborist_analyzer"}]}'}
