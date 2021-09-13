@@ -1,5 +1,8 @@
-# places a TREE_TYPE sapling leaf marker
-# run from TODO
+# generates the sapling leaf
+# @s = @e[type=marker,tag=gm4_tree_palm_marker]
+# at @s
+# run from gm4_garden_variety_trees:generate/TREE_TYPE/sapling_leaf/attempt
+
 
 # debug
 data modify storage gm4_garden_variety:debug/generation path append value "s"

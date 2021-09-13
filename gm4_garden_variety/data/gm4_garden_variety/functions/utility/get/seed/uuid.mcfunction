@@ -1,6 +1,6 @@
-# generates a new seed using the tree's uuid
-# @s = custom tree marker
-# run from TODO
+# generates the seed based on uuid
+# run from gm4_garden_variety:utility/get/seed/based_on_mode
+
 
 # uuid
 execute store result score uuid_0 gm4_gv_tree_gen run data get entity @s UUID[0]

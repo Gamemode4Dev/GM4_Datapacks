@@ -1,6 +1,7 @@
-# generates the tree's trunk layers 
-# @s = TREE_TYPE trunk AEC marker
-# run from gm4_MODULE_ID:generate/TREE_TYPE/initialize
+# finalizes anything needed after tree generation
+# @s = @e[type=marker,tag=gm4_gv_sapling,tag=gm4_TREE_TYPE_sapling]
+# at @s
+# run from gm4_garden_variety:mechanics/tree_generation/TREE_TYPE/generate
 
 
 # [Debug]

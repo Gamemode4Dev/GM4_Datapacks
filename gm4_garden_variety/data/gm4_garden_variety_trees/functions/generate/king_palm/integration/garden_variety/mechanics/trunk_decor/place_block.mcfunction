@@ -1,6 +1,7 @@
-# initializes the TREE_TYPE tree's AEC marker
-# @s = TREE_TYPE generation AEC marker
-# run from gm4_garden_variety_trees:generate/king_palm/generation
+# places the trunk decor
+# @s = @e[type=marker,tag=gm4_trunk_decor_marker]
+# at @s
+# run from gm4_garden_variety_trees:integration/garden_variety/mechanics/trunk_decor/place_block
 
 
 # place fruit

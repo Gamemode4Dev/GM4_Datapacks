@@ -1,6 +1,7 @@
-# spawns the tree's palm markers
-# @s = TREE_TYPE palm spreader AEC marker
-# run from gm4_garden_variety:mechanics/tree_generation/palm_tree/leaf
+# spreads the palms for generation
+# @s = @e[type=marker,tag=gm4_tree_palm_spreader_marker]
+# at @s
+# run from gm4_garden_variety:mechanics/tree_generation/TREE_TYPE/leaf
 
 
 # [Debug]
@@ -21,9 +22,9 @@ scoreboard players operation $palm_layer_loop gm4_gv_tree_gen = $palm_layers gm4
 scoreboard players set $current_palm_layer gm4_gv_tree_gen 1
 
 # summon palm marker and begin generation
-execute at @s run summon marker ~ ~ ~ {Tags:["gm4_tree_palm"]}
-execute at @s run tp @e[type=marker,tag=gm4_tree_palm,limit=1,sort=nearest] @s
-execute as @e[type=marker,tag=gm4_tree_palm,limit=1,sort=nearest] at @s run function gm4_garden_variety:mechanics/tree_generation/palm_tree/palm
+execute at @s run summon marker ~ ~ ~ {Tags:["gm4_tree_palm_marker"]}
+execute at @s run tp @e[type=marker,tag=gm4_tree_palm_marker,limit=1,sort=nearest] @s
+execute as @e[type=marker,tag=gm4_tree_palm_marker,limit=1,sort=nearest] at @s run function gm4_garden_variety:mechanics/tree_generation/palm_tree/palm
 
 # [Loop]
 scoreboard players remove $palm_spreader_loop gm4_gv_tree_gen 1

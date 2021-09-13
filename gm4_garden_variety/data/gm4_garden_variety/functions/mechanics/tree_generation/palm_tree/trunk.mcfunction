@@ -1,6 +1,7 @@
-# generates the tree's trunk layers 
-# @s = TREE_TYPE trunk AEC marker
-# run from #gm4_garden_variety:mechanics/tree_generation/initialize
+# generates the trunk
+# @s = @e[type=marker,tag=gm4_tree_trunk_marker]
+# at @s
+# run from gm4_garden_variety:mechanics/tree_generation/TREE_TYPE/generate
 
 
 # [Debug]

@@ -1,5 +1,6 @@
 # generates the muation lore
 # run from gm4_garden_variety:utility/mutations/lore/apply/to_item
+# run from gm4_garden_variety:utility/mutations/lore/apply/to_item_custom
 # run from gm4_garden_variety:mechanics/analyzer/recipes/paper_report/complete
 # run from gm4_garden_variety:mechanics/analyzer/recipes/book_report/complete
 # run from gm4_garden_variety:mechanics/analyzer/recipes/name_tag_sapling/complete

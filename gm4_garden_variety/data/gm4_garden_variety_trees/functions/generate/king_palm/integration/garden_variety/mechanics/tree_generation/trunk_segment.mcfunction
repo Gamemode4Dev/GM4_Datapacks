@@ -1,6 +1,8 @@
-# generate the tree's trunk segments (about 1 block)
-# @s = TREE_TYPE trunk AEC marker
-# run from gm4_garden_variety:mechanics/tree_generation/palm_tree/trunk_segment
+# generates the trunk segment
+# @s = @e[type=marker,tag=gm4_tree_trunk_marker]
+# at @s
+# run from gm4_garden_variety_trees:integration/garden_variety/mechanics/tree_generation/trunk_segment
+
 
 # place wood to construct the trunk
 execute if score $trunk_layer_eo2 gm4_gv_tree_gen matches 0 at @s run fill ~ ~ ~ ~ ~ ~ stripped_oak_wood replace #gm4_garden_variety:tree_part
@@ -16,5 +18,3 @@ execute at @s run tp @s ^ ^ ^.1
 # loop function until segment_loop hits 0
 scoreboard players remove $trunk_segment_loop gm4_gv_tree_gen 1
 execute if score $trunk_segment_loop gm4_gv_tree_gen matches 1.. run function gm4_garden_variety_trees:generate/king_palm/integration/garden_variety/mechanics/tree_generation/trunk_segment
-
-

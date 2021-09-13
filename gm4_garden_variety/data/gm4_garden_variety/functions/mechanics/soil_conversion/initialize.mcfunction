@@ -1,11 +1,13 @@
-# generates the tree's trunk layers 
-# @s = TREE_TYPE trunk AEC marker
-# run from gm4_MODULE_ID:generate/TREE_TYPE/initialize
+# initilizes the soil converter
+# @s = @e[type=marker,tag=gm4_tree_trunk_marker]
+# at @s align xyz positioned ~.5 ~ ~.5
+# run from gm4_garden_variety:mechanics/tree_generation/pre_generation
+
 
 # [Debug]
 data modify storage gm4_garden_variety:debug/generation path append value "[SC] "
 
-# [Generation] summon marker and begin conversion
+# summon marker and begin conversion
 execute if score $soil_conversion_radius gm4_gv_tree_gen matches 1..2 run scoreboard players set $soil_converter_spreader_loop gm4_gv_tree_gen 8
 execute if score $soil_conversion_radius gm4_gv_tree_gen matches 3..4 run scoreboard players set $soil_converter_spreader_loop gm4_gv_tree_gen 12
 execute if score $soil_conversion_radius gm4_gv_tree_gen matches 5.. run scoreboard players set $soil_converter_spreader_loop gm4_gv_tree_gen 16

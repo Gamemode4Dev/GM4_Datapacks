@@ -1,6 +1,7 @@
-# generates the tree's trunk layers 
-# @s = TREE_TYPE trunk AEC marker
-# run from gm4_MODULE_ID:generate/TREE_TYPE/initialize
+# interprets the root variables
+# @s = @e[type=marker,tag=gm4_gv_soil_rooting_spreader_marker]
+# at @s
+# run from gm4_garden_variety:mechanics/soil_rooting/rooting_spreader
 
 
 # [Soil Rooting] get y rotation for the root

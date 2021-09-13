@@ -1,6 +1,7 @@
-# generates the tree's trunk layers 
-# @s = TREE_TYPE trunk AEC marker
-# run from gm4_MODULE_ID:generate/TREE_TYPE/initialize
+# starts generating the tree
+# @s = @e[type=marker,tag=gm4_tree_trunk_marker]
+# at @s
+# run from gm4_garden_variety_trees:generate/TREE_TYPE/initialize
 
 
 # [Pre-Generation]
@@ -25,7 +26,7 @@ data modify storage gm4_garden_variety:debug/generation path append value ") "
 
 # [Leaves] begin leaf generation (marker spawned in trunk)
 data modify storage gm4_garden_variety:debug/generation path append value "LL:("
-execute as @e[type=marker,tag=gm4_tree_leaf_marker,limit=1] at @s run function gm4_garden_variety:mechanics/tree_generation/palm_tree/leaf
+execute as @e[type=marker,tag=gm4_tree_leaf_marker] at @s run function gm4_garden_variety:mechanics/tree_generation/palm_tree/leaf
 data modify storage gm4_garden_variety:debug/generation path append value ")"
 
 # [Post-Generation]

@@ -1,6 +1,7 @@
 # converts nbt values into scoreboard values
 # run from gm4_garden_variety:mechanics/custom_sapling/destroy
 # run from gm4_garden_variety:mechanics/custom_sapling/generate_tree
+# run from gm4_garden_variety:mechanics/tree_generation/pre_clearance_checker
 
 
 # reset scores

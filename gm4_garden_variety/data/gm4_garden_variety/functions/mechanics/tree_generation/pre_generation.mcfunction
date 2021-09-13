@@ -1,6 +1,8 @@
-# generates the tree's trunk layers 
-# @s = TREE_TYPE trunk AEC marker
-# run from gm4_MODULE_ID:generate/TREE_TYPE/initialize
+# initilizes anything needed before tree generation
+# @s = @e[type=marker,tag=gm4_tree_trunk_marker]
+# at @s
+# run from gm4_garden_variety:mechanics/tree_generation/TREE_TYPE/generate
+
 
 # delete sapling
 fill ~ ~ ~ ~ ~ ~ air replace #minecraft:saplings

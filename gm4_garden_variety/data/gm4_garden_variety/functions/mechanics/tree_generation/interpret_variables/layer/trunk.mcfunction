@@ -1,6 +1,7 @@
-# generates the tree's trunk layers 
-# @s = TREE_TYPE trunk AEC marker
-# run from gm4_garden_variety:mechanics/tree_generation/palm_tree/trunk
+# interprets the trunk variables
+# @s = @e[type=marker,tag=gm4_tree_trunk_marker]
+# at @s
+# run from gm4_garden_variety:mechanics/tree_generation/TREE_TYPE/trunk
 
 
 # [Trunk] identify every other layer by a factor of 2

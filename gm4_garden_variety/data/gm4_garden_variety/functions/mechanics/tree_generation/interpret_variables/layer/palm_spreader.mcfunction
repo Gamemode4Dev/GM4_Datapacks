@@ -1,5 +1,6 @@
-# spawns the tree's palm markers
-# @s = TREE_TYPE palm spreader AEC marker
+# interprets the palm spreader variables 
+# @s = @e[type=marker,tag=gm4_tree_palm_spreader_marker]
+# at @s
 # run from gm4_garden_variety:mechanics/tree_generation/palm_tree/palm_spreader
 
 

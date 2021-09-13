@@ -1,6 +1,7 @@
-# generates the tree's leaf layers
-# @s = TREE_TYPE leaf AEC marker
-# run from gm4_garden_variety:mechanics/tree_generation/palm_tree/leaf
+# interprets the leaf variables
+# @s = @e[type=marker,tag=gm4_tree_leaf_marker]
+# at @s
+# run from gm4_garden_variety:mechanics/tree_generation/TREE_TYPE/leaf
 
 
 # [Leaf] count every other layer by a factor of 2

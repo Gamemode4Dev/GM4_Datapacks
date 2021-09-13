@@ -1,5 +1,7 @@
-# generates variables for the tree based on the current seed
-# run from gm4_garden_variety_trees:generate/palm_tree/TREE_TYPE/generate
+# interpets the given variables into their final value
+# @s = @e[type=marker,tag=gm4_gv_sapling,tag=gm4_TREE_TYPE_sapling]
+# at @s align xyz
+# run from gm4_garden_variety_trees:generate/TREE_TYPE/variables/tree_default
 
 
 

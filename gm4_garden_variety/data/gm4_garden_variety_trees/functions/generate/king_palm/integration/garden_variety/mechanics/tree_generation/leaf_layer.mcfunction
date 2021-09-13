@@ -1,4 +1,4 @@
-# generate the tree's trunk layers (about 1 block)
-# @s = TREE_TYPE trunk AEC marker
-# run from TODO
-
+# generates the leaf_segment layer
+# @s = @e[type=marker,tag=gm4_tree_leaf_marker]
+# at @s
+# run from #gm4_garden_variety:mechanics/tree_generation/leaf_layer

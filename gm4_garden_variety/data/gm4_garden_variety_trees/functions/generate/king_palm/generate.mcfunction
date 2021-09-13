@@ -1,6 +1,7 @@
-# initializes the TREE_TYPE tree's AEC marker
-# @s = TREE_TYPE generation AEC marker
-# run from gm4_garden_variety_trees:generate/king_palm/generation
+# generates the tree with the current marker
+# @s = @e[type=marker,tag=gm4_gv_sapling,tag=gm4_TREE_TYPE_sapling]
+# at @s align xyz
+# run from gm4_garden_variety_trees:integration/garden_variety/mechanics/custom_sapling/generate_tree
 
 
 # initialize

@@ -1,5 +1,6 @@
-# generates the tree's palm layers
-# @s = caranday palm palm AEC marker
+# interprets the palm variables
+# @s = @e[type=marker,tag=gm4_tree_palm_marker]
+# at @s
 # run from gm4_garden_variety:mechanics/tree_generation/palm_tree/palm
 
 

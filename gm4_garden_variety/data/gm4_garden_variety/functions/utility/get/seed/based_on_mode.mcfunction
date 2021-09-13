@@ -1,6 +1,7 @@
-# generates a new seed using the tree's uuid
-# @s = custom tree marker
-# run from TODO
+# generates the seed based on the mode
+# @s = @s
+# run from gm4_garden_variety:mechanics/tree_generation/pre_clearance_checker
+
 
 # generate seed
 execute if score $seed_mode_orbis gm4_gv_tree_gen matches 1 as @s run function gm4_garden_variety:utility/get/seed/location

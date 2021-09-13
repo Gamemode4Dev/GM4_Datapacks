@@ -1,6 +1,7 @@
-# generates variables for each palm based on the current seed
-# run from TODO
-
+# interprets the palm variables 
+# @s = @e[type=marker,tag=gm4_tree_palm_spreader_marker]
+# at @s
+# run from gm4_garden_variety_trees:generate/TREE_TYPE/integration/garden_variety/mechanics/tree_generation/variables/palm_default
 
 
 # arc rate for each palm
@@ -25,5 +26,3 @@ scoreboard players operation $palm_layers gm4_gv_tree_gen = $current_seed gm4_gv
 scoreboard players operation $palm_layers gm4_gv_tree_gen %= $palm_layers_range gm4_gv_tree_gen
 scoreboard players operation $palm_layers gm4_gv_tree_gen += $palm_layers_minimum gm4_gv_tree_gen
 execute if score $palm_layers gm4_gv_tree_gen = matches 1000.. run scoreboard players set $palm_layers gm4_gv_tree_gen 0
-
-

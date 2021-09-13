@@ -1,6 +1,6 @@
-# generates a new seed using the tree's position
-# @s = custom tree marker
-# run from #gm4_garden_variety:utility/generate/position_seed
+# generates the seed based on location
+# run from gm4_garden_variety:utility/get/seed/based_on_mode
+
 
 # coordinate
 scoreboard players set $seed gm4_gv_tree_gen 1
@@ -14,9 +14,6 @@ scoreboard players operation $seed gm4_gv_tree_gen += seed_pos_z gm4_gv_tree_gen
 
 # world seed
 scoreboard players operation $seed gm4_gv_tree_gen += $world_seed gm4_gv_tree_gen
-
-# convert seed to 16 bit
-scoreboard players operation $seed gm4_gv_tree_gen %= #65536 gm4_gv_math_num
 
 # copy seed to current seed
 scoreboard players operation $current_seed gm4_gv_tree_gen = $seed gm4_gv_tree_gen

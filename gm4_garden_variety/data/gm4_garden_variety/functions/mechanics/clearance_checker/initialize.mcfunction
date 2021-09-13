@@ -1,6 +1,7 @@
-# generates the tree's trunk layers 
-# @s = TREE_TYPE trunk AEC marker
-# run from #gm4_garden_variety:mechanics/tree_generation/initialize
+# initializes the clearance checker
+# @s = @e[type=marker,tag=gm4_gv_sapling,tag=gm4_TREE_TYPE_sapling]
+# at @s align xyz
+# run from gm4_garden_variety_trees:generate/TREE_TYPE/generate
 
 
 # [Checker/Generation] check for clearance

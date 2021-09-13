@@ -1,6 +1,8 @@
-# generates the tree's trunk layers 
-# @s = TREE_TYPE trunk AEC marker
-# run from TODO
+# places the trunk decor
+# @s = @e[type=marker,tag=gm4_trunk_decor_marker]
+# at @s
+# run from #gm4_garden_variety:mechanics/trunk_decor/place_block
+
 
 execute if score king_palm gm4_tree_type matches 1 run function gm4_garden_variety_trees:generate/king_palm/integration/garden_variety/mechanics/trunk_decor/place_block
 
