@@ -33,6 +33,16 @@
                                   "italic": true
                                 }
                             ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                {
+                                  "text": "GM4: Garden Variety",
+                                  "color": "blue",
+                                  "italic": false
+                                }
+                            ]
                         }
                     ]
                 }
