@@ -2,7 +2,7 @@
 # @s = @e[type=marker,tag=gm4_gv_sapling]
 # at @s align xyz
 # run from gm4_garden_variety:mechanics/custom_sapling/mutation/attempt_mutation
-
+say hi
 
 # generate mutation
 function gm4_garden_variety:utility/mutations/random_mutation/generate
