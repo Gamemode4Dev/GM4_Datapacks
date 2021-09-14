@@ -2,9 +2,6 @@
 # at @s
 # run from store_book_pages
 
-# Print list of codes to chat
-execute if data storage gm4_better_armour_stands:temp {pages:["help"]} run function gm4_better_armour_stands:help
-
 # Restore armor stand state to default.
 execute if data storage gm4_better_armour_stands:temp {pages:["default"]} run function gm4_better_armour_stands:default/select
 
