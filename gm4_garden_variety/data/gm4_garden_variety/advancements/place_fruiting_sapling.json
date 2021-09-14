@@ -10,6 +10,6 @@
         }
     },
     "rewards": {
-        "function": "gm4_garden_variety:mechanics/custom_sapling/place"
+        "function": "gm4_garden_variety:mechanics/custom_sapling/placement/place"
     }
 }

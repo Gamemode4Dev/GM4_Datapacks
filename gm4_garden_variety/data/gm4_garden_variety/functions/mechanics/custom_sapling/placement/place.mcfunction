@@ -9,11 +9,11 @@ execute anchored eyes positioned ^ ^ ^ anchored feet run tp @e[type=marker,tag=g
 scoreboard players set $ray gm4_gv_tree_gen 0
 
 # check 5 blocks
-execute as @e[type=marker,tag=gm4_tree_ray,limit=1] at @s run function gm4_garden_variety:mechanics/custom_sapling/ray
+execute as @e[type=marker,tag=gm4_tree_ray,limit=1] at @s run function gm4_garden_variety:mechanics/custom_sapling/placement/ray
 
 # recheck 5 blocks (wide range)
 execute unless score $found gm4_gv_tree_gen matches 1 anchored eyes positioned ^ ^ ^ anchored feet run tp @e[type=marker,tag=gm4_tree_ray,limit=1] ^ ^ ^ ~ ~
-execute unless score $found gm4_gv_tree_gen matches 1 as @e[type=marker,tag=gm4_tree_ray,limit=1] at @s run function gm4_garden_variety:mechanics/custom_sapling/ray_backup
+execute unless score $found gm4_gv_tree_gen matches 1 as @e[type=marker,tag=gm4_tree_ray,limit=1] at @s run function gm4_garden_variety:mechanics/custom_sapling/placement/ray_backup
 
 # get nbt from held sapling
 data remove storage gm4_garden_variety:transfer/gv_nbt placed_sapling
