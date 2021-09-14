@@ -1,0 +1,26 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [
+            "Chest Boats",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.16",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Chest Boats",
+    "module_id": "chest_boats",
+    "site_description": "A chest inside of a boat!",
+    "site_categories": [],
+    "wiki_link": "https://wiki.gm4.co/wiki/Chest_Boats",
+    "credits": {
+        "Creator": [
+            [
+                "MichaelMiner137",
+                "https://twitter.com/MichaelMiner137"
+            ]
+        ]
+    }
+}
