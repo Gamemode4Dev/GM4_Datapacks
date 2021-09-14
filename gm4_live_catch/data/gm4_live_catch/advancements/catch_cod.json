@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "fishing_hook": {
+                "in_open_water": true
+              }
+            }
+          }
+        ],
+        "item": {
+          "items": [
+            "minecraft:cod"
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_live_catch:fish/cod/catch"
+  }
+}
