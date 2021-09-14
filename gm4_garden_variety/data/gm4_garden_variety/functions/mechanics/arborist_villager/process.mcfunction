@@ -1,5 +1,5 @@
 # processes the arborist
-# @s = @e[type=villager,tag=gm4_gv_arborist,tag=!gm4_gv_disable_updates,sort=random]
+# @s = @e[type=villager,tag=gm4_gv_arborist,sort=random]
 # at @s
 # run from gm4_garden_variety:clock/1s
 

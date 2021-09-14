@@ -1,5 +1,5 @@
 # processes analyzers in a random order
-# @s = @e[type=armor_stand,tag=gm4_gv_analyzer,tag=!gm4_gv_disable_updates,sort=random]
+# @s = @e[type=armor_stand,tag=gm4_gv_analyzer,sort=random]
 # at @s
 # run from gm4_garden_variety:clock/1s
 
