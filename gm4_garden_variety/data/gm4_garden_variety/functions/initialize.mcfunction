@@ -21,8 +21,9 @@ scoreboard objectives add gm4_gv_analyzer dummy
 scoreboard objectives add gm4_gv_analyze_p dummy
 # research book
 scoreboard objectives add gm4_gv_research dummy
-# fruiting leavers
-scoreboard objectives add gm4_gv_fruit dummy
+# sapling
+scoreboard objectives add gm4_gv_sap_age dummy
+scoreboard objectives add gm4_gv_sap_grow dummy
 
 
 
