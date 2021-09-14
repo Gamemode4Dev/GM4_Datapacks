@@ -12,4 +12,4 @@ execute if block ~ ~-1 ~ minecraft:sand run summon minecraft:area_effect_cloud ~
 execute if block ~ ~-1 ~ minecraft:sand as @e[type=minecraft:area_effect_cloud,tag=gm4_king_palm_tree_new,limit=1] at @s align xyz run function gm4_garden_variety_trees:generate/king_palm/integration/orbis/generate
 
 # next height
-execute if block ~ ~-1 ~ #gm4_fruiting_trees:tree_replaceable if score structure_height gm4_count matches 64.. positioned ~ ~-1 ~ run function gm4_garden_variety_trees:generate/king_palm/integration/orbis/scan_column
+execute if block ~ ~-1 ~ #gm4_garden_variety:tree_replaceable if score structure_height gm4_count matches 64.. positioned ~ ~-1 ~ run function gm4_garden_variety_trees:generate/king_palm/integration/orbis/scan_column

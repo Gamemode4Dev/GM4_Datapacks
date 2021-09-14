@@ -22,7 +22,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:1,gm4_fruiting_trees:{item:{id:\"sapling\",type:\"sakura\",source:\"garden_variety\"}},gm4_podzol_rooting_soil:{id:\"sakura_sapling\"}}"
+                            "tag": "{CustomModelData:1,gm4_garden_variety:{item:{id:\"sapling\",type:\"sakura\",source:\"garden_variety\"}},gm4_podzol_rooting_soil:{id:\"sakura_sapling\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",
