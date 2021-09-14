@@ -1,5 +1,5 @@
 # generates a random mutation
-# run from gm4_garden_variety:mechanics/custom_sapling/apply_random_mutation
+# run from gm4_garden_variety:mechanics/custom_sapling/mutation/apply_random_mutation
 # run from gm4_garden_variety:mechanics/arborist_villager/trading/trades/sell_mutated_saplings
 
 

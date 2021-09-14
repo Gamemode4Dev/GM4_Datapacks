@@ -1,7 +1,7 @@
 # processes the sapling that is ready to generate a trees
 # @s = @e[type=marker,tag=gm4_gv_sapling]
 # at @s align xyz
-# run from gm4_garden_variety:mechanics/custom_sapling/growth/advance_stage
+# run from gm4_garden_variety:mechanics/custom_sapling/advance_stage
 
 # set seed mode
 scoreboard players set $seed_mode_sapling gm4_gv_tree_gen 1
@@ -16,7 +16,7 @@ data remove storage gm4_garden_variety:transfer/gv_nbt tree_offspring
 data modify storage gm4_garden_variety:transfer/gv_nbt tree_offspring set from entity @s data.gm4_garden_variety
 
 # attempt random mutation
-function gm4_garden_variety:mechanics/custom_sapling/growth/attempt_mutation
+function gm4_garden_variety:mechanics/custom_sapling/mutation/attempt_mutation
 
 # generate tree
 function #gm4_garden_variety:mechanics/custom_sapling/generate_tree

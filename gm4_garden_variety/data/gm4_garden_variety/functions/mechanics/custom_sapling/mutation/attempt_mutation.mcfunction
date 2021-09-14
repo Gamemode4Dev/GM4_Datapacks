@@ -1,5 +1,5 @@
 # attempts to mutate a fully grown sapling
-# run from gm4_garden_variety:mechanics/custom_sapling/growth/generate_tree
+# run from gm4_garden_variety:mechanics/custom_sapling/generate_tree
 
 
 # set random chance
@@ -18,4 +18,4 @@ scoreboard players operation $random_mutation_chance_roll gm4_gv_mutations = $ra
 
 # generate mutation
 execute unless score $always_mutate gm4_gv_nbt_data matches 1 if score $random_mutation_chance_roll gm4_gv_mutations <= $random_mutation_chance_condition gm4_gv_mutations run function gm4_garden_variety:mechanics/custom_sapling/apply_random_mutation
-execute if score $always_mutate gm4_gv_nbt_data matches 1 run function gm4_garden_variety:mechanics/custom_sapling/growth/apply_random_mutation
+execute if score $always_mutate gm4_gv_nbt_data matches 1 run function gm4_garden_variety:mechanics/custom_sapling/mutation/apply_random_mutation

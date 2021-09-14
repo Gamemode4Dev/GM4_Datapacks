@@ -1,7 +1,7 @@
 # raycast 5 blocks (wide range)
 # @s = @e[type=marker,tag=gm4_tree_ray]
 # at @s
-# run from gm4_garden_variety:mechanics/custom_sapling/placement/place
+# run from gm4_garden_variety:mechanics/custom_sapling/place
 
 
 # check blocks around the marker ray
@@ -17,4 +17,4 @@ execute if score $found gm4_gv_tree_gen matches 0 store success score $found gm4
 # move forward
 scoreboard players remove $ray gm4_gv_tree_gen 1
 tp @s ^ ^ ^0.01
-execute if score $ray gm4_gv_tree_gen matches 0..500 at @s unless score $found gm4_gv_tree_gen matches 1 run function gm4_garden_variety:mechanics/custom_sapling/placement/ray_backup
+execute if score $ray gm4_gv_tree_gen matches 0..500 at @s unless score $found gm4_gv_tree_gen matches 1 run function gm4_garden_variety:mechanics/custom_sapling/raycast/ray_backup

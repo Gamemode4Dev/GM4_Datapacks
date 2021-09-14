@@ -9,4 +9,4 @@ execute unless block ~ ~ ~ #minecraft:saplings run function gm4_garden_variety:m
 
 # prevents normal trees from growing by preventing the sapling from reaching stage 2
 # also allows saplings to run their own stage growth checks
-execute if block ~ ~ ~ #minecraft:saplings[stage=1] run function gm4_garden_variety:mechanics/custom_sapling/growth/advance_stage
+execute if block ~ ~ ~ #minecraft:saplings[stage=1] run function gm4_garden_variety:mechanics/custom_sapling/advance_stage
