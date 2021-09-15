@@ -57,7 +57,7 @@ scoreboard players operation $lily_of_the_valley gm4_zc_flowers %= #modulo_4 gm4
 execute if score $lily_of_the_valley gm4_zc_flowers matches 1..2 run scoreboard players set $lily_of_the_valley gm4_zc_flowers 1
 execute if score $lily_of_the_valley gm4_zc_flowers matches 3 run scoreboard players set $lily_of_the_valley gm4_zc_flowers 0
 
-# store amount of non poisonous flowers as 10-<sum of flower scores>
+# store amount of non poisonous flowers as 12-<sum of flower scores>
 scoreboard players set $required_flowers gm4_zc_flowers 12
 scoreboard players operation $required_flowers gm4_zc_flowers -= $red_tulip gm4_zc_flowers
 scoreboard players operation $required_flowers gm4_zc_flowers -= $orange_tulip gm4_zc_flowers
