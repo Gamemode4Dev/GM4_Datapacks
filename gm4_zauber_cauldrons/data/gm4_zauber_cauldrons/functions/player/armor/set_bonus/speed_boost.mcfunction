@@ -16,4 +16,4 @@ particle minecraft:entity_effect ^ ^1.2 ^0.1 0.486 0.686 0.776 1 0
 particle minecraft:entity_effect ^ ^1.2 ^-0.1 0.486 0.686 0.776 1 0
 particle minecraft:entity_effect ^0.1 ^1.2 ^ 0.486 0.686 0.776 1 0
 particle minecraft:entity_effect ^-0.1 ^1.2 ^ 0.486 0.686 0.776 1 0
-playsound minecraft:block.beacon.power_select player @a[distance=..4] ~ ~ ~ 0.2 1.6
+playsound minecraft:block.beacon.power_select player @a[distance=..4] ~ ~ ~ 0.2 1.7
