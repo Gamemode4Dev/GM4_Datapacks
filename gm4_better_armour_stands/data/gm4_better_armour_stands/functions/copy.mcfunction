@@ -11,6 +11,7 @@ data modify storage gm4_better_armour_stands:temp EntityTag.NoBasePlate set from
 data modify storage gm4_better_armour_stands:temp EntityTag.Small set from entity @s Small
 data modify storage gm4_better_armour_stands:temp EntityTag.NoGravity set from entity @s NoGravity
 data modify storage gm4_better_armour_stands:temp EntityTag.Invisible set from entity @s Invisible
+data modify storage gm4_better_armour_stands:temp EntityTag.Tags set value ["gm4_bas_placed"]
 
 # Copy tags from armor stand to item entity.
 item modify entity @p[tag=gm4_bas_active] weapon.offhand gm4_better_armour_stands:copy

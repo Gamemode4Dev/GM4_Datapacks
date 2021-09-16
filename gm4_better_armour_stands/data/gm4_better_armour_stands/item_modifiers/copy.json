@@ -23,7 +23,13 @@
     "lore": [
       [
         {
-          "text": "Copied by: ",
+          "translate": "%1$s%3427655$s",
+          "with": [
+            "Copied by: ",
+            {
+              "translate": "item.gm4.better_armour_stands.copied_armor_stand.author"
+            }
+          ],
           "color": "gray",
           "italic": false,
           "extra": [
@@ -40,11 +46,24 @@
     "function": "minecraft:set_lore",
     "entity": "this",
     "lore": [
-      {
-        "text": "●  Custom pose",
-        "color": "gray",
-        "italic": false
-      }
+      [
+        {
+          "text": "● ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "translate": "%1$s%3427655$s",
+          "with": [
+            "Custom pose",
+            {
+              "translate": "item.gm4.better_armour_stands.copied_armor_stand.property.custom_pose"
+            }
+          ],
+          "color": "gray",
+          "italic": false
+        }
+      ]
     ],
     "replace": false
   },
@@ -52,11 +71,24 @@
     "function": "minecraft:set_lore",
     "entity": "this",
     "lore": [
-      {
-        "text": "●  Small",
-        "color": "gray",
-        "italic": false
-      }
+      [
+        {
+          "text": "● ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "translate": "%1$s%3427655$s",
+          "with": [
+            "Small",
+            {
+              "translate": "item.gm4.better_armour_stands.copied_armor_stand.property.small"
+            }
+          ],
+          "color": "gray",
+          "italic": false
+        }
+      ]
     ],
     "replace": false,
     "conditions": [
@@ -73,11 +105,24 @@
     "function": "minecraft:set_lore",
     "entity": "this",
     "lore": [
-      {
-        "text": "●  No base plate",
-        "color": "gray",
-        "italic": false
-      }
+      [
+        {
+          "text": "● ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "translate": "%1$s%3427655$s",
+          "with": [
+            "No base plate",
+            {
+              "translate": "item.gm4.better_armour_stands.copied_armor_stand.property.no_base"
+            }
+          ],
+          "color": "gray",
+          "italic": false
+        }
+      ]
     ],
     "replace": false,
     "conditions": [
@@ -94,11 +139,24 @@
     "function": "minecraft:set_lore",
     "entity": "this",
     "lore": [
-      {
-        "text": "●  No gravity",
-        "color": "gray",
-        "italic": false
-      }
+      [
+        {
+          "text": "● ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "translate": "%1$s%3427655$s",
+          "with": [
+            "No gravity",
+            {
+              "translate": "item.gm4.better_armour_stands.copied_armor_stand.property.no_gravity"
+            }
+          ],
+          "color": "gray",
+          "italic": false
+        }
+      ]
     ],
     "replace": false,
     "conditions": [
@@ -115,11 +173,24 @@
     "function": "minecraft:set_lore",
     "entity": "this",
     "lore": [
-      {
-        "text": "●  Invisible",
-        "color": "gray",
-        "italic": false
-      }
+      [
+        {
+          "text": "● ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "translate": "%1$s%3427655$s",
+          "with": [
+            "Invisible",
+            {
+              "translate": "item.gm4.better_armour_stands.copied_armor_stand.property.invisible"
+            }
+          ],
+          "color": "gray",
+          "italic": false
+        }
+      ]
     ],
     "replace": false,
     "conditions": [
