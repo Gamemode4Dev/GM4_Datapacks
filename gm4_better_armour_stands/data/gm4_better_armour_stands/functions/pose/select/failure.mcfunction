@@ -2,7 +2,7 @@
 # at @s
 # run from pose/select
 
-title @p[tag=gm4_bas_active] actionbar {"text":"Right click the joint of a part to start editing","color":"gray"}
+title @p[tag=gm4_bas_active] actionbar {"translate": "%1$s%3427655$s","with": ["Right click the joint of a part to start editing",{"translate": "tooltip.gm4.better_armour_stands.invalid_right_click_location"}]}
 
 scoreboard players reset @s gm4_bas_id
 
