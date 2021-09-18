@@ -1,17 +1,23 @@
+# Summons the fish at the fish item
+# @s = item that was fished
+# at @s
 # run from gm4_live_catch:fish/FISH_TYPE/target
 
 
-# store nbt
-data modify storage gm4_live_catch:temp target set from entity @s
-
 # summon fish
-summon cod ~ ~1 ~ {Air:60,Health:1f,Tags:["gm4_lc_fish_new"]}
+summon cod ~ ~1 ~ {Health:1f,Tags:["gm4_lc_cod_new"]}
+
+# copy motion into storage
+data modify storage gm4_live_catch:temp/input target set from entity @s
+execute store result storage gm4_live_catch:temp/output target.Motion[0] double 0.0001 run data get storage gm4_live_catch:temp/input target.Motion[0] 13000
+execute store result storage gm4_live_catch:temp/output target.Motion[1] double 0.0001 run data get storage gm4_live_catch:temp/input target.Motion[1] 13000
+execute store result storage gm4_live_catch:temp/output target.Motion[2] double 0.0001 run data get storage gm4_live_catch:temp/input target.Motion[2] 15000
 
 # copy motion from item into fish
-data modify entity @e[type=cod,limit=1,sort=nearest,tag=gm4_lc_fish_new] Motion set from storage gm4_live_catch:temp target.Motion
+data modify entity @e[type=cod,limit=1,tag=gm4_lc_cod_new] {} merge from storage gm4_live_catch:temp/output target
 
 # remove 
-tag @e[type=cod,tag=gm4_lc_fish_new] remove gm4_lc_fish_new
+tag @e[type=cod] remove gm4_lc_cod_new
 
 # kill item
 kill @s

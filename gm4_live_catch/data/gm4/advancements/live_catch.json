@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "pufferfish",
-      "nbt": "{CustomModelData:1}"
+      "nbt": "{CustomModelData:3420001}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
@@ -14,7 +14,7 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Catch a pufferfish and have it fly into your face.",
+        "Catch a pufferfish to the face.",
         {"translate": "advancement.gm4.live_catch.description"}
       ],
       "color": "gray"
