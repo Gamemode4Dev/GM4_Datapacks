@@ -13,3 +13,6 @@ tag @s add gm4_animi_user
 
 # sound
 playsound minecraft:particle.soul_escape player @a[distance=..8] ~ ~ ~ 1 0.7
+
+# wait for respawn
+function gm4_animi_shamir:player/wait_for_respawn
