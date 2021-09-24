@@ -1,7 +1,7 @@
 # runs once a player has respawned
 # @s a player that died and has now respawned
 # at @s
-# run from gm4_animi_shamir:tick
+# run from gm4_animi_shamir:player/wait_for_respawn
 
 # reset score and advancement
 advancement revoke @s only gm4_animi_shamir:death
