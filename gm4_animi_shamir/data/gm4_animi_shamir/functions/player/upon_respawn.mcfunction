@@ -8,4 +8,4 @@ advancement revoke @s only gm4_animi_shamir:death
 scoreboard players reset @s gm4_animi_deaths
 
 # return animi item(s) if this player had at least one animi item
-execute if entity @s[tag=gm4_animi_user] run function gm4_animi_shamir:player/respawn_inventory
+execute if entity @s[tag=gm4_animi_user,gamemode=!spectator] run function gm4_animi_shamir:player/respawn_inventory
