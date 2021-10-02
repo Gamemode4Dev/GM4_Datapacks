@@ -13,7 +13,7 @@
 	"module_name": "Animi Shamir",
 	"module_id": "animi_shamir",
 	"hidden": false,
-	"site_description": "Adds the Animi Shamir to Metallurgy. Items with Animi will respawn with you after you died!",
+	"site_description": "Adds the Animi Shamir to Metallurgy. Items with Animi will respawn with you when you die!",
 	"site_categories": [
 		"Metallurgy"
 	],
