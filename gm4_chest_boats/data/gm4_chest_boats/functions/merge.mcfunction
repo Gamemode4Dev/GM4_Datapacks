@@ -23,3 +23,4 @@ tag @e[type=chest_minecart] remove gm4_cb_new_chest
 # Kill old chest
 data merge entity @e[type=chest_minecart,tag=gm4_cb_old_chest,limit=1] {Items:[]}
 kill @e[type=chest_minecart,tag=gm4_cb_old_chest,limit=1]
+tag @e[type=chest_minecart] remove gm4_cb_old_chest
