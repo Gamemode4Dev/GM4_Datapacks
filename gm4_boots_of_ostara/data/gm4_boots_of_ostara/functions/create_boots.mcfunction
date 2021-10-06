@@ -11,6 +11,8 @@ data modify storage gm4_boots_of_ostara:temp Item set value {tag:{CustomModelDat
 # although the functionality of the boots will remain as that relies on the gm4_boots_of_ostara tag.
 data modify storage gm4_boots_of_ostara:temp Item merge from storage gm4_custom_crafters:temp/crafter Items[2]
 
+execute if data storage gm4_boots_of_ostara:temp Item.tag.display{Name:'{"translate":"%1$s%3427655$s","with":["Flippers",{"translate":"item.gm4.flippers"}],"italic":false}'} run function gm4_boots_of_ostara:flippers_merge
+
 # In case the item has a shamir or other existing lore, the Boots of Ostara lore is placed before
 # existing lines of lore instead of completely replacing the lore tag.
 data modify storage gm4_boots_of_ostara:temp Item.tag.display.Lore prepend value '{"translate":"%1$s%3427655$s","with":["Brings abundance beneath you!",{"translate":"item.gm4.boots_of_ostara.lore"}],"color":"dark_gray","italic":true}'
@@ -18,3 +20,5 @@ data modify storage gm4_boots_of_ostara:temp Item.tag.display.Lore prepend value
 # Clear the custom crafter of recipe ingredients and place the newly crafted Boots of Ostara inside.
 data remove storage gm4_custom_crafters:temp/crafter Items
 data modify storage gm4_custom_crafters:temp/crafter Items append from storage gm4_boots_of_ostara:temp Item
+
+data modify storage gm4_custom_crafters:temp/crafter Items append value {Slot:7b,id:"minecraft:bucket",Count:1b}
