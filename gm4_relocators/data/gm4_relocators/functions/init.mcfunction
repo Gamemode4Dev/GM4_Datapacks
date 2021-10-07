@@ -4,6 +4,6 @@ execute unless score relocators gm4_modules matches 1 run data modify storage gm
 scoreboard players set relocators gm4_modules 1
 
 # guidebook
-summon marker ~ 3747.715612412508 ~ {CustomName:'"gm4_relocators_guide"',Tags:["gm4_guide"],data:{type:"module",id:"relocators",page_count:1,line_count:1,module_name:"Relocators"}}
+execute if score gm4_guidebook load.status matches 1.. run summon marker ~ 3747.715612412508 ~ {CustomName:'"gm4_relocators_guide"',Tags:["gm4_guide"],data:{type:"module",id:"relocators",page_count:1,line_count:1,module_name:"Relocators"}}
 
 #$moduleUpdateList

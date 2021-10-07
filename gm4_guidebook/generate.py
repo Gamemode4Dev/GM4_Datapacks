@@ -202,11 +202,11 @@ def generate_init(module):
         f.close()
 
     if module_type == "expansion":
-        summon = '# guidebook\nsummon marker ~ ' + str(num_id) + ' ~ {CustomName:\'"gm4_' + module_id + '_guide"\',Tags:["gm4_guide"],data:{type:"_expansion",base:"' + base_module + '",id:"' + module_id + '",page_count:' + str(page_count) + ',line_count:' + str(line_count) + ',module_name:"' + module_name + '"}}'
+        summon = '# guidebook\nexecute if score gm4_guidebook load.status matches 1.. run summon marker ~ ' + str(num_id) + ' ~ {CustomName:\'"gm4_' + module_id + '_guide"\',Tags:["gm4_guide"],data:{type:"_expansion",base:"' + base_module + '",id:"' + module_id + '",page_count:' + str(page_count) + ',line_count:' + str(line_count) + ',module_name:"' + module_name + '"}}'
     elif module_type == "base":
-        summon = '# guidebook\nsummon marker ~ ' + str(num_id) + ' ~ {CustomName:\'"gm4_' + module_id + '_guide"\',Tags:["gm4_guide"],data:{type:"' + module_type + '",expansions:[],id:"' + module_id + '",page_count:' + str(page_count) + ',line_count:' + str(line_count) + ',module_name:"' + module_name + '"}}'
+        summon = '# guidebook\nexecute if score gm4_guidebook load.status matches 1.. run summon marker ~ ' + str(num_id) + ' ~ {CustomName:\'"gm4_' + module_id + '_guide"\',Tags:["gm4_guide"],data:{type:"' + module_type + '",expansions:[],id:"' + module_id + '",page_count:' + str(page_count) + ',line_count:' + str(line_count) + ',module_name:"' + module_name + '"}}'
     else:
-        summon = '# guidebook\nsummon marker ~ ' + str(num_id) + ' ~ {CustomName:\'"gm4_' + module_id + '_guide"\',Tags:["gm4_guide"],data:{type:"' + module_type + '",id:"' + module_id + '",page_count:' + str(page_count) + ',line_count:' + str(line_count) + ',module_name:"' + module_name + '"}}'
+        summon = '# guidebook\nexecute if score gm4_guidebook load.status matches 1.. run summon marker ~ ' + str(num_id) + ' ~ {CustomName:\'"gm4_' + module_id + '_guide"\',Tags:["gm4_guide"],data:{type:"' + module_type + '",id:"' + module_id + '",page_count:' + str(page_count) + ',line_count:' + str(line_count) + ',module_name:"' + module_name + '"}}'
 
     f = open(file,'r')
     filedata = f.read()
@@ -315,4 +315,4 @@ for module in module_data:
         #generate_function_tag(module)
         #generate_unlock_tellraw(module)
         #generate_verify(module)
-        generate_add_pages(module)
+        #generate_add_pages(module)

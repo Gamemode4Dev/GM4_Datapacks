@@ -10,6 +10,6 @@ execute unless score zauber_liquids gm4_modules matches 1 run data modify storag
 scoreboard players set zauber_liquids gm4_modules 1
 
 # guidebook
-summon marker ~ 5366.749174868547 ~ {CustomName:'"gm4_zauber_liquids_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"liquid_tanks",id:"zauber_liquids",page_count:1,line_count:1,module_name:"Zauber Liquids"}}
+execute if score gm4_guidebook load.status matches 1.. run summon marker ~ 5366.749174868547 ~ {CustomName:'"gm4_zauber_liquids_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"liquid_tanks",id:"zauber_liquids",page_count:1,line_count:1,module_name:"Zauber Liquids"}}
 
 #$moduleUpdateList

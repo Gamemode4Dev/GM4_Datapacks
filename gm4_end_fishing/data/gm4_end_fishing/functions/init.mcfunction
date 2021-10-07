@@ -28,6 +28,6 @@ schedule function gm4_end_fishing:main 1t
 schedule function gm4_end_fishing:tick 1t
 
 # guidebook
-summon marker ~ 1137.410269380909 ~ {CustomName:'"gm4_end_fishing_guide"',Tags:["gm4_guide"],data:{type:"module",id:"end_fishing",page_count:1,line_count:1,module_name:"End Fishing"}}
+execute if score gm4_guidebook load.status matches 1.. run summon marker ~ 1137.410269380909 ~ {CustomName:'"gm4_end_fishing_guide"',Tags:["gm4_guide"],data:{type:"module",id:"end_fishing",page_count:1,line_count:1,module_name:"End Fishing"}}
 
 #$moduleUpdateList

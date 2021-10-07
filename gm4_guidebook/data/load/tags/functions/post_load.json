@@ -1,5 +1,5 @@
 {
     "values": [
-        "#load:gm4_guidebook"
+        "#load:gm4_guidebook/post_load"
     ]
 }

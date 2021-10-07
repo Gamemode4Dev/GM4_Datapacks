@@ -38,6 +38,6 @@ scoreboard players set holographic_tags gm4_modules 1
 schedule function gm4_holographic_tags:main 1t
 
 # guidebook
-summon marker ~ 1765.06204984401 ~ {CustomName:'"gm4_holographic_tags_guide"',Tags:["gm4_guide"],data:{type:"module",id:"holographic_tags",page_count:1,line_count:1,module_name:"Holographic Tags"}}
+execute if score gm4_guidebook load.status matches 1.. run summon marker ~ 1765.06204984401 ~ {CustomName:'"gm4_holographic_tags_guide"',Tags:["gm4_guide"],data:{type:"module",id:"holographic_tags",page_count:1,line_count:1,module_name:"Holographic Tags"}}
 
 #$moduleUpdateList
