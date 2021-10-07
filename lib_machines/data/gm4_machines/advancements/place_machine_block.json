@@ -1,0 +1,15 @@
+{
+  "criteria":{
+    "placed_machine_block":{
+      "trigger":"minecraft:placed_block",
+      "conditions":{
+        "item":{
+          "nbt":"{gm4_machine:{}}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function":"gm4_machines:resolve_load/place_machine_block"
+  }
+}
