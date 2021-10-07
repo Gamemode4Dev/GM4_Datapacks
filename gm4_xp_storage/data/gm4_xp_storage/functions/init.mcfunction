@@ -7,4 +7,7 @@ scoreboard players set xp_storage gm4_modules 1
 schedule function gm4_xp_storage:main 1t
 schedule function gm4_xp_storage:tick 1t
 
+# guidebook
+summon marker ~ 5068.978168549095 ~ {CustomName:'"gm4_xp_storage_guide"',Tags:["gm4_guide"],data:{type:"module",id:"xp_storage",page_count:1,line_count:1,module_name:"XP Storage"}}
+
 #$moduleUpdateList

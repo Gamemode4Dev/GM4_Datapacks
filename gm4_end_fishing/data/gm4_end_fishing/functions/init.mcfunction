@@ -27,4 +27,7 @@ scoreboard players set end_fishing gm4_modules 1
 schedule function gm4_end_fishing:main 1t
 schedule function gm4_end_fishing:tick 1t
 
-# $moduleUpdateList
+# guidebook
+summon marker ~ 1137.410269380909 ~ {CustomName:'"gm4_end_fishing_guide"',Tags:["gm4_guide"],data:{type:"module",id:"end_fishing",page_count:1,line_count:1,module_name:"End Fishing"}}
+
+#$moduleUpdateList

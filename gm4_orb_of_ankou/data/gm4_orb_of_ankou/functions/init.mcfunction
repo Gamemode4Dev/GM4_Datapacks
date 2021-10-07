@@ -38,4 +38,8 @@ scoreboard players set orb_of_ankou gm4_modules 1
 schedule function gm4_orb_of_ankou:main 1t
 schedule function gm4_orb_of_ankou:tick 1t
 
+# guidebook
+summon marker ~ 3226.351847060538 ~ {CustomName:'"gm4_orb_of_ankou_guide"',Tags:["gm4_guide"],data:{type:"module",id:"orb_of_ankou",page_count:1,line_count:1,module_name:"Orb of Ankou"}}
+summon marker ~ 737.333098032259 ~ {CustomName:'"gm4_corripio_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"corripio_shamir",page_count:1,line_count:1,module_name:"Corripio Shamir"}}
+
 #$moduleUpdateList

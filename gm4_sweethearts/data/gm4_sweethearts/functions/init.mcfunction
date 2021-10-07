@@ -6,4 +6,7 @@ scoreboard players set sweethearts gm4_modules 1
 
 schedule function gm4_sweethearts:main 1t
 
+# guidebook
+summon marker ~ 4088.792567293057 ~ {CustomName:'"gm4_sweethearts_guide"',Tags:["gm4_guide"],data:{type:"module",id:"sweethearts",page_count:1,line_count:1,module_name:"Sweethearts"}}
+
 #$moduleUpdateList

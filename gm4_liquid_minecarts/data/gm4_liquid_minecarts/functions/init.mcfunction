@@ -10,4 +10,7 @@ scoreboard players set liquid_minecarts gm4_modules 1
 
 schedule function gm4_liquid_minecarts:main 1t
 
+# guidebook
+summon marker ~ 2544.348483314364 ~ {CustomName:'"gm4_liquid_minecarts_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"liquid_tanks",id:"liquid_minecarts",page_count:1,line_count:1,module_name:"Liquid Minecarts"}}
+
 #$moduleUpdateList

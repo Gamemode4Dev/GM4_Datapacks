@@ -6,4 +6,7 @@ scoreboard players set gm4_display_frames gm4_modules 1
 schedule function gm4_display_frames:main 1t
 schedule function gm4_display_frames:tick 1t
 
+# guidebook
+summon marker ~ 897.733109399926 ~ {CustomName:'"gm4_display_frames_guide"',Tags:["gm4_guide"],data:{type:"module",id:"display_frames",page_count:1,line_count:1,module_name:"Display Frames"}}
+
 #$moduleUpdateList

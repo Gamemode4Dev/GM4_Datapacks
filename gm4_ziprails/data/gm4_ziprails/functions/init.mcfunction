@@ -3,4 +3,7 @@ scoreboard players set ziprails gm4_modules 1
 
 schedule function gm4_ziprails:main 1t
 
+# guidebook
+summon marker ~ 5426.507494079028 ~ {CustomName:'"gm4_ziprails_guide"',Tags:["gm4_guide"],data:{type:"module",id:"ziprails",page_count:1,line_count:1,module_name:"Ziprails"}}
+
 #$moduleUpdateList

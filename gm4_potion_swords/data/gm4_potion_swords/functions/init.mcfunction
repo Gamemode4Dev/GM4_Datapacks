@@ -5,4 +5,7 @@ scoreboard players set potion_swords gm4_modules 1
 
 schedule function gm4_potion_swords:tick 1t
 
+# guidebook
+summon marker ~ 3414.390832451182 ~ {CustomName:'"gm4_potion_swords_guide"',Tags:["gm4_guide"],data:{type:"module",id:"potion_swords",page_count:1,line_count:1,module_name:"Potion Swords"}}
+
 #$moduleUpdateList

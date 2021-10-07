@@ -9,4 +9,7 @@ scoreboard players set spawner_minecarts gm4_modules 1
 
 schedule function gm4_spawner_minecarts:main 1t
 
+# guidebook
+summon marker ~ 4034.469592678415 ~ {CustomName:'"gm4_spawner_minecarts_guide"',Tags:["gm4_guide"],data:{type:"module",id:"spawner_minecarts",page_count:1,line_count:1,module_name:"Spawner Minecarts"}}
+
 #$moduleUpdateList

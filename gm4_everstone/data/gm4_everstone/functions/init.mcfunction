@@ -9,4 +9,7 @@ schedule function gm4_everstone:main 1t
 schedule function gm4_everstone:tick 1t
 schedule function gm4_everstone:aging 1t
 
+# guidebook
+summon marker ~ 1198.826895401271 ~ {CustomName:'"gm4_everstone_guide"',Tags:["gm4_guide"],data:{type:"module",id:"everstone",page_count:1,line_count:1,module_name:"Everstone"}}
+
 #$moduleUpdateList

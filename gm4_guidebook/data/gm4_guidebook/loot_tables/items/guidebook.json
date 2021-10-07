@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420001,gm4_guidebook:1b,pages:['[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Introduction\"},{\"translate\":\"text.gm4.guidebook.introduction\"}],\"underlined\":true},{\"text\":\"\n\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Hello fellow traveler! I see you have found my guidebook to this world. This world seems to be unlike the rest; mechanics of the world are very different.\"},{\"translate\":\"text.gm4.guidebook.letter.1\"}]}]','[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"I have outlined my findings here so if another traveler stumbles upon this world, there will be some guidance towards success. Best of luck!\"},{\"translate\":\"text.gm4.guidebook.letter.2\"}]},{\"text\":\"\n\n\n\n             -Audrey\"}]'],title:\"Gamemode 4 Guidebook\",author:Audrey,generation:3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

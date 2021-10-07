@@ -13,4 +13,7 @@ scoreboard players set heart_canisters gm4_modules 1
 
 schedule function gm4_heart_canisters:main 1t
 
+# guidebook
+summon marker ~ 1685.73555234686 ~ {CustomName:'"gm4_heart_canisters_guide"',Tags:["gm4_guide"],data:{type:"module",id:"heart_canisters",page_count:1,line_count:1,module_name:"Heart Canisters"}}
+
 #$moduleUpdateList
