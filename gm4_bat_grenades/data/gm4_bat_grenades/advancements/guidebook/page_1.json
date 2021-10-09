@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:gunpowder",
-      "nbt": "{CustomModelData:3}"
+      "nbt": "{CustomModelData:3420003}"
     },
     "title": {
       "text": "Check your guidebook!",

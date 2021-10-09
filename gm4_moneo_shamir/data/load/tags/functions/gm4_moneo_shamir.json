@@ -1,0 +1,7 @@
+{
+    "values": [
+		{ "id": "#load:gm4_forceload", "required": false },
+		{ "id": "#load:gm4_metallurgy", "required": false },
+        "gm4_moneo_shamir:load"
+    ]
+}

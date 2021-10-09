@@ -1,0 +1,3 @@
+
+function gm4_guidebook:table_of_contents/interpret_pages
+data remove storage gm4_guidebook:temp_toc modules

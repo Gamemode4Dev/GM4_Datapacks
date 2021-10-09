@@ -102,7 +102,7 @@ for module, modifier in data.groupby("Module"):
         return id
 
     for _, row in modifier.iterrows():
-        [module_name, wiki_base, load_id, base_module, initial_json, initial_pages, unlockable_pages, line_count, done] = row
+        [module_name, wiki_base, load_id, base_module, initial_json, initial_pages, unlockable_pages, line_count, done, initial_lock] = row
         module_id = module_name.lower().replace(" ","_")
 
         if undefined (wiki_base):
@@ -127,9 +127,12 @@ for module, modifier in data.groupby("Module"):
             unlockable_pages = '""'
         unlockable_pages = list(unlockable_pages.split(" , "))
 
-        page_count = len(unlockable_pages)
+        if undefined(initial_pages):
+            initial_pages = ""
 
-        module_data.append([module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, int(line_count), done])
+        page_count = len(unlockable_pages) + initial_pages.count("[\"\",")
+
+        module_data.append([module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, int(line_count), done, initial_lock])
 """
 for hand in HANDS:
     item_modifiers = []
@@ -172,7 +175,7 @@ with open(FILE_NAMESPACE + "installed_modules.txt", "w") as file:
 """
 generated_init = []
 def generate_init(module):
-    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done] = module
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done, initial_lock] = module
     file = "gm4_" + load_id + "/data/gm4_" + load_id + "/functions/init.mcfunction"
 
     if load_id not in generated_init:
@@ -219,7 +222,7 @@ def generate_init(module):
     f.close()
 
 def generate_function_tag(module):
-    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done] = module
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done, initial_lock] = module
     path = "gm4_" + load_id + "/data/gm4_guidebook/tags/functions/add_pages"
 
     json = {"values": []}
@@ -227,7 +230,7 @@ def generate_function_tag(module):
     write_json(path, json)
 
 def generate_unlock_tellraw(module):
-    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done] = module
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done, initial_lock] = module
     
     with open(f"gm4_{load_id}/pack.mcmeta", 'r') as file:
         data = file.read()
@@ -244,7 +247,7 @@ def generate_unlock_tellraw(module):
 
 generated_verify = []
 def generate_verify(module):
-    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done] = module
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done, initial_lock] = module
 
     filename = "gm4_" + load_id + "/data/gm4_" + load_id + "/functions/guidebook/verify_module.mcfunction"
     header = '# checks if this is the next module to generate pages\n# @s = player who\'s updating their guidebook\n# located at @s\n# run from #gm4_guidebook:add_pages\n\n'
@@ -269,17 +272,15 @@ def generate_verify(module):
 
 
 def generate_add_pages(module):
-    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done] = module
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done, initial_lock] = module
 
     if undefined(initial_json):
         initial_json = ""
     else:
         initial_json = f",{initial_json}"
 
-    if undefined(initial_pages):
-        initial_pages = ""
-    else:
-        initial_pages = f",{initial_pages}"
+    if initial_pages != "":
+        initial_pages = f",\'{initial_pages}"
 
     initial_page_count = initial_pages.count("\'[\"\",")
     if module_type == "expansion":
@@ -300,7 +301,13 @@ def generate_add_pages(module):
 
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, "w") as file:
-        contents = '# adds pages to the guidebook\n# @s = player who\'s updating their guidebook\n# located at @s\n# run from gm4_' + module_id + ':guidebook/verify_module\n\ndata modify storage gm4_guidebook:temp insert set value ' + pages + '\n\n# unlockable pages'
+        if not initial_lock:
+            contents = '# adds pages to the guidebook\n# @s = player who\'s updating their guidebook\n# located at @s\n# run from gm4_' + module_id + ':guidebook/verify_module\n\ndata modify storage gm4_guidebook:temp insert set value ' + pages + '\n\n# unlockable pages'
+        else:
+            advancement = 'gm4_' + module_id + ':guidebook/page_0=true'
+            locked_json = '{"text":"???","hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Undiscovered"},{"translate":"text.gm4.guidebook.undiscovered"}],"italic":true,"color":"red"}]}}'
+            locked_page = '[\'\',\'["",{"text":"◀ ","color":"#4AA0C7","clickEvent":{"action":"change_page","value":"3"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Back"},{"translate":"text.gm4.guidebook.back"}],"color":"#4AA0C7","clickEvent":{"action":"change_page","value":"3"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n"},{"text":"☶ ","color":"#864BC7","bold":true,"clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Wiki"},{"translate":"text.gm4.guidebook.wiki"}],"color":"#864BC7","clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n\\\\n"},{"text":"' + module_name + '","underlined":true},{"text":"\\\\n"},' + locked_json + ']\']'
+            contents = '# adds pages to the guidebook\n# @s = player who\'s updating their guidebook\n# located at @s\n# run from gm4_' + module_id + ':guidebook/verify_module\n\nexecute unless entity @s[advancements={' + advancement + '}] run data modify storage gm4_guidebook:temp insert set value ' + locked_page + '\nexecute if entity @s[advancements={' + advancement + '}] run data modify storage gm4_guidebook:temp insert set value ' + pages + '\n\n# unlockable pages'
         file.write(contents + "\n")
         for i, page in enumerate(unlockable_pages):
             if len(page) > 3:
@@ -309,10 +316,10 @@ def generate_add_pages(module):
     
 
 for module in module_data:
-    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done] = module
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done, initial_lock] = module
     if not undefined(base_module) and not done:
         generate_init(module)
         #generate_function_tag(module)
         #generate_unlock_tellraw(module)
         #generate_verify(module)
-        #generate_add_pages(module)
+        generate_add_pages(module)

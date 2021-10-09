@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:apple",
-      "nbt": "{CustomModelData:2}"
+      "nbt": "{CustomModelData:3420002}"
     },
     "title": {
       "text": "Check your guidebook!",

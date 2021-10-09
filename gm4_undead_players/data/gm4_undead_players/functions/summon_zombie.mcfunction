@@ -12,3 +12,6 @@ execute as @e[type=zombie,tag=gm4_undead_player_new,dy=1,limit=1] run function g
 
 # Grant the "Risen" advancement to the player.
 advancement grant @s only gm4:undead_players
+
+# guidebook unlock page 0
+execute if score gm4_guidebook load.status matches 1 run advancement grant @s only gm4_undead_players:guidebook/page_0
