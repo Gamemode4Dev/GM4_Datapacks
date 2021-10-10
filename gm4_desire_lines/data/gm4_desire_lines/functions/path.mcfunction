@@ -11,3 +11,6 @@ execute if block ~ ~ ~ #gm4:foliage run setblock ~ ~ ~ air destroy
 execute if block ~ ~-1 ~ coarse_dirt run scoreboard players add @s gm4_dl_affcoarse 1
 advancement grant @s[scores={gm4_dl_affcoarse=8000}] only gm4:desire_lines_8000
 advancement grant @s[scores={gm4_dl_affcoarse=10000}] only gm4:desire_lines_10000
+
+# guidebook unlock page 0
+execute if score gm4_guidebook load.status matches 1 run advancement grant @s only gm4_desire_lines:guidebook/page_0

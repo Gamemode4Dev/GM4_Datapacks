@@ -34,3 +34,6 @@ execute if block ~ ~ ~ note_block[note=24] run summon area_effect_cloud ~ ~ ~ {D
 
 #updates note block with block under
 execute unless block ~ ~-1 ~ #gm4_note_block_interface:skulls run clone ~ ~-1 ~ ~ ~-1 ~ ~ ~-1 ~ replace force
+
+# guidebook unlock page 0
+execute if score gm4_guidebook load.status matches 1 run advancement grant @s only gm4_note_block_interface:guidebook/page_0

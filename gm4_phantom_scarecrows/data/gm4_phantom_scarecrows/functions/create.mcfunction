@@ -11,3 +11,6 @@ scoreboard players add @s[tag=gm4_phantom_scarecrow] gm4_ps_time 0
 tag @s[tag=gm4_phantom_scarecrow] add gm4_no_edit
 #lock slots
 data merge entity @s[tag=gm4_phantom_scarecrow] {Invisible:0b,Invulnerable:0b,DisabledSlots:2039583,ShowArms:1b,Pose:{LeftArm:[346f,0f,274f],RightArm:[350f,0f,85f]}}
+
+# guidebook unlock page 1
+execute if score gm4_guidebook load.status matches 1 if entity @s[tag=gm4_phantom_scarecrow] at @s run advancement grant @a[gamemode=!spectator,distance=..4] only gm4_phantom_scarecrows:guidebook/page_1

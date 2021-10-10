@@ -20,10 +20,26 @@
     "requirement": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
-        "entity": {
-          "type": "creeper",
-          "nbt": "{Tags:[\"gm4_bat_grenade\"]}"
-        }
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:creeper",
+            "nbt": "{Tags:[\"gm4_bat_grenade\"]}"
+          }
+        },
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     }
   },

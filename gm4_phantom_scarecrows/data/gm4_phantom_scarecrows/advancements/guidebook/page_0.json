@@ -1,0 +1,52 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:skeleton_skull",
+      "nbt": "{CustomModelData:3420001}"
+    },
+    "title": {
+      "text": "Check your guidebook!",
+      "color": "#4AA0C7",
+      "italic": true
+    },
+    "description": "Phantom Scarecrows",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "parent": "gm4_guidebook:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:skeleton_skull",
+              "minecraft:zombie_head",
+              "minecraft:wither_skeleton_skull"
+            ]
+          }
+        ],
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_phantom_scarecrows:guidebook/unlock_page"
+  }
+}

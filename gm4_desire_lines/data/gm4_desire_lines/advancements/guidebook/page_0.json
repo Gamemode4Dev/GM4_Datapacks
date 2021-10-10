@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:coarse_dirt",
+      "nbt": "{CustomModelData:3420002}"
+    },
+    "title": {
+      "text": "Check your guidebook!",
+      "color": "#4AA0C7",
+      "italic": true
+    },
+    "description": "Desire Lines",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "parent": "gm4_guidebook:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "function": "gm4_desire_lines:guidebook/unlock_page"
+  }
+}

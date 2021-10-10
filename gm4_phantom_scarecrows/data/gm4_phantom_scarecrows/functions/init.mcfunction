@@ -8,6 +8,6 @@ schedule function gm4_phantom_scarecrows:main 1t
 schedule function gm4_phantom_scarecrows:tick 1t
 
 # guidebook
-execute if score gm4_guidebook load.status matches 1.. run summon marker ~ 3355.69973880393 ~ {CustomName:'"gm4_phantom_scarecrows_guide"',Tags:["gm4_guide"],data:{type:"module",id:"phantom_scarecrows",page_count:1,line_count:1,module_name:"Phantom Scarecrows"}}
+execute if score gm4_guidebook load.status matches 1.. run summon marker ~ 3355.69973880393 ~ {CustomName:'"gm4_phantom_scarecrows_guide"',Tags:["gm4_guide"],data:{type:"module",id:"phantom_scarecrows",page_count:2,line_count:1,module_name:"Phantom Scarecrows"}}
 
 #$moduleUpdateList
