@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:name_tag",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:3420002}"
     },
     "title": {
       "text": "Check your guidebook!",
@@ -18,7 +18,34 @@
   "parent": "gm4_guidebook:root",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:impossible"
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "advancements": {
+                  "gm4:holographic_tags": true
+                }
+              }
+            }
+          }
+        ]
+      }
     }
   },
   "rewards": {

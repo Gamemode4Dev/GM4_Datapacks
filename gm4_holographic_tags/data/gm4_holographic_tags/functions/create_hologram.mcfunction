@@ -13,6 +13,3 @@ execute if entity @s[type=item_frame] run summon item ~ ~ ~ {Item:{id:"minecraft
 execute if entity @s[type=glow_item_frame] run summon item ~ ~ ~ {Item:{id:"minecraft:glow_item_frame",Count:1b},PickupDelay:10s,Motion:[0.0,0.25,0.0]}
 
 kill @s
-
-# guidebook unlock page 1
-execute if score gm4_guidebook load.status matches 1.. run advancement grant @a[gamemode=!spectator,distance=..4] only gm4_holographic_tags:guidebook/page_1

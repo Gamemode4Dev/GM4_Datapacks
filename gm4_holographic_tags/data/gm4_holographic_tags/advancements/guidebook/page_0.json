@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:name_tag",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:3420002}"
     },
     "title": {
       "text": "Check your guidebook!",

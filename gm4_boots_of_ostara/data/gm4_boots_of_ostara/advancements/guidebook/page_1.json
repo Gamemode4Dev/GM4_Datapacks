@@ -22,7 +22,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:leather_boots"]
+            "items": [
+              "minecraft:leather_boots"
+            ]
           }
         ],
         "player": [
@@ -46,7 +48,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:grass_block"]
+            "items": [
+              "minecraft:grass_block"
+            ]
           }
         ],
         "player": [

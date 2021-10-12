@@ -22,7 +22,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:leather_boots"],
+            "items": [
+              "minecraft:leather_boots"
+            ],
             "nbt": "{gm4_boots_of_ostara:1b}"
           }
         ],

@@ -37,6 +37,6 @@ schedule function gm4_zauber_cauldrons:main 1t
 schedule function gm4_zauber_cauldrons:cauldron/extra_items/crack_bottle 2t
 
 # guidebook
-execute if score gm4_guidebook load.status matches 1.. run summon marker ~ 5366.749169930782 ~ {CustomName:'"gm4_zauber_cauldrons_guide"',Tags:["gm4_guide"],data:{type:"module",id:"zauber_cauldrons",page_count:1,line_count:1,module_name:"Zauber Cauldrons"}}
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 5366.749169930782 ~ {CustomName:'"gm4_zauber_cauldrons_guide"',Tags:["gm4_guide"],data:{type:"module",id:"zauber_cauldrons",page_count:1,line_count:1,module_name:"Zauber Cauldrons"}}
 
 #$moduleUpdateList
