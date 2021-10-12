@@ -1,0 +1,26 @@
+{
+    "pack": {
+        "pack_format": 7,
+        "description": [
+            "Live Catch",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.17",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Live Catch",
+    "module_id": "live_catch",
+    "site_description": "Catch live fish when fishing!",
+    "site_categories": [],
+    "wiki_link": "https://wiki.gm4.co/wiki/Live_Catch",
+    "credits": {
+        "Creator": [
+            [
+                "MichaelMiner137",
+                "https://twitter.com/MichaelMiner137"
+            ]
+        ]
+    }
+}
