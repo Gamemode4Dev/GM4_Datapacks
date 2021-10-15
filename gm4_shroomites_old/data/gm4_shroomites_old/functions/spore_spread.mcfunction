@@ -12,9 +12,9 @@ execute if entity @s[nbt={Age:2560},scores={gm4_sporeprint=6..}] if block ~ ~-1 
 execute if block ~ ~-1 ~ #gm4_shroomites:spore_spreadable run setblock ~ ~-1 ~ mycelium
 
 #move spore sideways, then up or down if needed
-teleport @s @e[sort=random,limit=1,distance=..1.1,tag=gm4_shroomite_spore_check,type=area_effect_cloud]
-execute at @s if block ~ ~ ~ #gm4:full_collision run tp @s ~ ~1 ~
-execute at @s unless block ~ ~-1 ~ #gm4:full_collision run tp @s ~ ~-1 ~
+#--teleport @s @e[sort=random,limit=1,distance=..1.1,tag=gm4_shroomite_spore_check,type=area_effect_cloud]
+#--execute at @s if block ~ ~ ~ #gm4:full_collision run tp @s ~ ~1 ~
+#--execute at @s unless block ~ ~-1 ~ #gm4:full_collision run tp @s ~ ~-1 ~
 
 #increase gm4_sporeprint if reached tile beneath is already mycelium
 execute at @s if block ~ ~-1 ~ mycelium run scoreboard players add @s gm4_sporeprint 1
