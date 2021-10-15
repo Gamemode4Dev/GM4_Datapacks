@@ -3,7 +3,7 @@
   "entity": "this",
   "predicate": {
     "equipment": {
-      "mainhand": {
+      "offhand": {
         "items": [
           "minecraft:grass_block"
         ]
