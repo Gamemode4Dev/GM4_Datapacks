@@ -18,7 +18,7 @@
   "parent": "gm4_guidebook:root",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "minecraft:tick",
       "conditions": {
         "player": [
           {
@@ -29,7 +29,7 @@
               "score": "gm4_armor"
             },
             "range": {
-              "min": 1
+              "min": 8
             }
           },
           {
