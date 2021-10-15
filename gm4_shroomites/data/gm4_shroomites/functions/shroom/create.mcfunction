@@ -1,7 +1,7 @@
 # places a new sporing shroom at the location this function is run at
-# @s = unspecified
-# at unspecified
-# run from gm4_shroomites:spore/die
+# @s = either a spore at the end of its life or a mooshroom
+# at @s
+# run from gm4_shroomites:spore/die and gm4_shroomites:mooshroom/process
 
 # place shroom
 execute unless block ~ ~ ~ red_mushroom run setblock ~ ~ ~ red_mushroom destroy
