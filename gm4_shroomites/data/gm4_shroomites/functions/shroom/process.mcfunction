@@ -1,7 +1,7 @@
 # runs actions on and as sporing shrooms
 # @s = @e[type=marker,tag=gm4_shroomite_shroom]
 # at @s
-# run from gm4_shroomites:sporing_shroom/check_structure
+# run from gm4_shroomites:shroom/check_structure
 
 # count total shrooms
 scoreboard players add $global_shroom_count gm4_shroom_data 1

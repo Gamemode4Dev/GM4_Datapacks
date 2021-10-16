@@ -3,13 +3,13 @@
 # at @s
 # run from gm4_shroomites:spore/die and gm4_shroomites:mooshroom/process
 
-# place shroom
-execute unless block ~ ~ ~ red_mushroom run setblock ~ ~ ~ red_mushroom destroy
-execute if score $global_shroom_count gm4_shroom_data < #global_shroom_cap gm4_shroom_data align xyz run summon marker ~.5 ~.5 ~.5 {Tags:["gm4_shroomite_shroom"],CustomName:'"gm4_shroomite_shroom"'}
+# place shroom depending on which mooshroom or spore flavor placed this shroom, default to red
+execute if entity @s[tag=gm4_brown_shroomite] run function gm4_shroomites:shroom/place/brown
+execute unless score $success gm4_shroom_data matches 1.. run function gm4_shroomites:shroom/place/red
+scoreboard players reset $success gm4_shroom_data
 
 # add cooldown in case this was planted by a mooshroom
 scoreboard players operation @s gm4_shroom_data += #shroom_placement_cooldown gm4_shroom_data
 
-# particles and sounds
-particle minecraft:block red_mushroom ~ ~ ~ 0.1 0.1 0.1 1 10
+# sounds
 playsound minecraft:block.chorus_flower.grow hostile @a[distance=..8] ~ ~ ~ 0.2 0.8

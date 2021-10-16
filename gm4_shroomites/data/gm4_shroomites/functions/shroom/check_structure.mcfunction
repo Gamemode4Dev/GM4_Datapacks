@@ -4,6 +4,9 @@
 # run from gm4_shroomites:slow_clock
 
 # check that this is still inside a red_mushroom
-execute unless block ~ ~ ~ red_mushroom run kill @s
-execute if block ~ ~ ~ red_mushroom run function gm4_shroomites:shroom/process
+execute if entity @s[tag=gm4_brown_shroomite] unless block ~ ~ ~ brown_mushroom run kill @s
+execute if entity @s[tag=gm4_red_shroomite] unless block ~ ~ ~ red_mushroom run kill @s
+
+# process this shroom
+execute if block ~ ~ ~ #gm4_shroomites:mushrooms run function gm4_shroomites:shroom/process
 

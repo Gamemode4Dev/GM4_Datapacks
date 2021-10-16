@@ -5,6 +5,7 @@
 
 # place mycelium
 setblock ~ ~-1 ~ mycelium replace
+execute if block ~ ~ ~ #gm4:foliage run setblock ~ ~ ~ air destroy
 
 # add to age
 scoreboard players operation @s gm4_shroom_data += #fertilization_cost gm4_shroom_data

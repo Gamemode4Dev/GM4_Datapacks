@@ -5,5 +5,8 @@ execute as @e[type=marker,tag=gm4_shroomite_shroom] at @s run function gm4_shroo
 # handle mooshrooms placing shrooms
 execute as @e[type=mooshroom] at @s run function gm4_shroomites:mooshroom/process
 
+# grant advancement if shroomite cap has been reached
+execute if score $global_spore_count gm4_shroom_data >= #global_spore_cap gm4_shroom_data run advancement grant @a only gm4:shroomites
+
 # reschedule
-schedule function gm4_shroomites:slow_clock 64t
+schedule function gm4_shroomites:slow_clock 4t

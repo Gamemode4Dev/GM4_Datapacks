@@ -1,10 +1,10 @@
 # spawns a spore at the location this function is run at
-# @s = sporing_shroom
+# @s = shroomite_shroom ready to spawn a spore
 # at @s
-# run from gm4_shroomites:sporing_shroom/process
+# run from gm4_shroomites:shroom/process
 
 # spawn spore unless the global spore cap has been reached
-execute if score $global_spore_count gm4_shroom_data < #global_spore_cap gm4_shroom_data run summon marker ~ ~ ~ {Tags:["gm4_shroomite_spore"],CustomName:'"gm4_shroomite_spore"'}
+execute if score $global_spore_count gm4_shroom_data < #global_spore_cap gm4_shroom_data run function gm4_shroomites:spore/initialize
 
 # set this shroom on cooldown
 scoreboard players operation @s gm4_shroom_data += #spore_placement_cooldown gm4_shroom_data

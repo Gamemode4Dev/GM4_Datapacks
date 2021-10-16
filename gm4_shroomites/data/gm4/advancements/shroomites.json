@@ -1,0 +1,19 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:red_mushroom",
+            "nbt": "{CMD:3240001}"
+        },
+        "title": "Things are grim indeed...",
+        "description": "Reach the Shroomite limit",
+        "frame": "challenge",
+        "hidden": true
+    },
+    "parent": "gm4:root",
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:impossible",
+            "conditions": {}
+        }
+    }
+}
