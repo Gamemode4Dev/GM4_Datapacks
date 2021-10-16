@@ -9,4 +9,4 @@ execute as @e[type=mooshroom] at @s run function gm4_shroomites:mooshroom/proces
 execute if score $global_shroom_count gm4_shroom_data >= #global_shroom_cap gm4_shroom_data run advancement grant @a only gm4:shroomites
 
 # reschedule
-schedule function gm4_shroomites:slow_clock 64t
+schedule function gm4_shroomites:slow_clock 128t
