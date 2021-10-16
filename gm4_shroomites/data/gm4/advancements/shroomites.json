@@ -5,7 +5,7 @@
             "nbt": "{CMD:3240001}"
         },
         "title": "Things are grim indeed...",
-        "description": "Reach the Shroomite limit",
+        "description": "Oh no, did I forget about those mushrooms?",
         "frame": "challenge",
         "hidden": true
     },
