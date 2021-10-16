@@ -7,5 +7,6 @@
 execute unless block ~ ~-1 ~ mycelium if block ~ ~-1 ~ #gm4_shroomites:spore_convertable run function gm4_shroomites:spore/fertilize
 
 # subtract from age and convert neraby cows to mooshrooms
-execute as @e[type=cow,distance=..1,nbt=!{NoAI:1b}] at @s run function gm4_shroomites:mooshroom/convert
+execute if entity @s[tag=gm4_brown_shroomite] as @e[type=cow,distance=..1,nbt=!{NoAI:1b}] at @s run function gm4_shroomites:mooshroom/convert/brown
+execute if entity @s[tag=gm4_red_shroomite] as @e[type=cow,distance=..1,nbt=!{NoAI:1b}] at @s run function gm4_shroomites:mooshroom/convert/red
 
