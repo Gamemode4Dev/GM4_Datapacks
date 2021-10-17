@@ -80,6 +80,18 @@
               "score": "load.status"
             },
             "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_block_compressors"
+              },
+              "score": "load.status"
+            },
+            "range": 1
           }
         ],
         "items": [

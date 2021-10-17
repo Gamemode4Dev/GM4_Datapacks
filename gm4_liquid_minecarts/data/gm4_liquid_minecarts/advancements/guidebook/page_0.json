@@ -41,6 +41,18 @@
             "range": 1
           },
           {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_liquid_minecarts"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {

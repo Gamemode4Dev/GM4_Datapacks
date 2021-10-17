@@ -18,7 +18,51 @@
   "parent": "gm4_guidebook:root",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:impossible"
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "flags": {
+                "is_sneaking": false
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_note_block_interface"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:note_block"
+            ]
+          }
+        }
+      }
     }
   },
   "rewards": {

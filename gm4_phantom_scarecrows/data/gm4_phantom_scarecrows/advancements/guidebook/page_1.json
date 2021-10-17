@@ -18,7 +18,47 @@
   "parent": "gm4_guidebook:root",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:impossible"
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "looking_at": {
+                  "type": "minecraft:armor_stand",
+                  "nbt": "{Tags:[\"gm4_phantom_scarecrow\"]}"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_phantom_scarecrows"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
+      }
     }
   },
   "rewards": {

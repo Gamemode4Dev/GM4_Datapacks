@@ -18,9 +18,20 @@
   "parent": "gm4_guidebook:root",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:impossible",
+      "trigger": "minecraft:tick",
       "conditions": {
         "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "advancements": {
+                  "gm4:undead_players": true
+                }
+              }
+            }
+          },
           {
             "condition": "minecraft:value_check",
             "value": {
@@ -28,6 +39,18 @@
               "target": {
                 "type": "minecraft:fixed",
                 "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_undead_players"
               },
               "score": "load.status"
             },

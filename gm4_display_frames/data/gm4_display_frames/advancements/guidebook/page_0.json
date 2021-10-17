@@ -42,6 +42,18 @@
               "score": "load.status"
             },
             "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_display_frames"
+              },
+              "score": "load.status"
+            },
+            "range": 1
           }
         ]
       }

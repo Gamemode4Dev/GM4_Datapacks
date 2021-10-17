@@ -1,15 +1,15 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:music_disc_11",
-      "nbt": "{CustomModelData:3420001}"
+      "item": "minecraft:furnace",
+      "nbt": "{CustomModelData:3420002}"
     },
     "title": {
       "text": "Check your guidebook!",
       "color": "#4AA0C7",
       "italic": true
     },
-    "description": "Record Crafting",
+    "description": "Master Crafting",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": false,
@@ -18,20 +18,9 @@
   "parent": "gm4_guidebook:root",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "player": {
-                "advancements": {
-                  "gm4:custom_crafters": true
-                }
-              }
-            }
-          },
           {
             "condition": "minecraft:value_check",
             "value": {
@@ -50,24 +39,25 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_record_crafting"
+                "name": "gm4_master_crafting"
               },
               "score": "load.status"
             },
             "range": 1
           }
         ],
-        "items": [
-          {
-            "items": [
-              "minecraft:flint"
-            ]
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:dropper"
+            ],
+            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Mastercraftsman\\'s Bench\",{\"translate\":\"block.gm4.master_crafter\"}]}'}"
           }
-        ]
+        }
       }
     }
   },
   "rewards": {
-    "function": "gm4_record_crafting:guidebook/unlock_page"
+    "function": "gm4_master_crafting:guidebook/unlock_page"
   }
 }

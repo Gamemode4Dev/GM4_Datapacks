@@ -18,7 +18,46 @@
   "parent": "gm4_guidebook:root",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:impossible"
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "gm4_dl_affcoarse"
+            },
+            "range": {
+              "min": 1
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_desire_lines"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
+      }
     }
   },
   "rewards": {

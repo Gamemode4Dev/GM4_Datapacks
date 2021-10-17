@@ -1,15 +1,15 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:music_disc_11",
-      "nbt": "{CustomModelData:3420001}"
+      "item": "minecraft:furnace",
+      "nbt": "{CustomModelData:3420002}"
     },
     "title": {
       "text": "Check your guidebook!",
       "color": "#4AA0C7",
       "italic": true
     },
-    "description": "Record Crafting",
+    "description": "Master Crafting",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": false,
@@ -17,7 +17,7 @@
   },
   "parent": "gm4_guidebook:root",
   "criteria": {
-    "requirement": {
+    "requirement_1": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "player": [
@@ -27,7 +27,44 @@
             "predicate": {
               "player": {
                 "advancements": {
-                  "gm4:custom_crafters": true
+                  "gm4_master_crafting:guidebook/page_0": true
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "items": [
+          {
+            "items": [
+              "minecraft:furnace"
+            ]
+          }
+        ]
+      }
+    },
+    "requirement_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "advancements": {
+                  "gm4_master_crafting:guidebook/page_0": true
                 }
               }
             }
@@ -50,7 +87,7 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_record_crafting"
+                "name": "gm4_master_crafting"
               },
               "score": "load.status"
             },
@@ -60,7 +97,7 @@
         "items": [
           {
             "items": [
-              "minecraft:flint"
+              "minecraft:piston"
             ]
           }
         ]
@@ -68,6 +105,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_record_crafting:guidebook/unlock_page"
+    "function": "gm4_master_crafting:guidebook/unlock_page"
   }
 }

@@ -18,7 +18,40 @@
   "parent": "gm4_guidebook:root",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:impossible"
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": {
+          "block": {
+            "tag": "minecraft:campfires"
+          }
+        },
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cozy_campfires"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
+      }
     }
   },
   "rewards": {
