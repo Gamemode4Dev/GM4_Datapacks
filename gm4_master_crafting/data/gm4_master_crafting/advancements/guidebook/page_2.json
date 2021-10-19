@@ -17,10 +17,58 @@
   },
   "parent": "gm4_guidebook:root",
   "criteria": {
-    "requirement": {
-      "trigger": "minecraft:item_used_on_block",
+    "requirement_1": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "advancements": {
+                  "gm4_master_crafting:guidebook/page_0": true
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "items": [
+          {
+            "items": [
+              "minecraft:furnace"
+            ]
+          }
+        ]
+      }
+    },
+    "requirement_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "advancements": {
+                  "gm4_master_crafting:guidebook/page_0": true
+                }
+              }
+            }
+          },
           {
             "condition": "minecraft:value_check",
             "value": {
@@ -46,14 +94,13 @@
             "range": 1
           }
         ],
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:dropper"
-            ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Mastercraftsman\\'s Bench\",{\"translate\":\"block.gm4.master_crafter\"}]}'}"
+        "items": [
+          {
+            "items": [
+              "minecraft:piston"
+            ]
           }
-        }
+        ]
       }
     }
   },

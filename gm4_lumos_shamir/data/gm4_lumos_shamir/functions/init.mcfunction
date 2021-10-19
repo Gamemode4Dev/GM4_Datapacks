@@ -10,6 +10,6 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_lumos_shami
 schedule function gm4_lumos_shamir:main 4t
 
 # guidebook
-execute if score gm4_guidebook load.status matches 1 run summon marker ~ 2634.667259492286 ~ {CustomName:'"gm4_lumos_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"lumos_shamir",page_count:1,line_count:1,module_name:"Lumos Shamir"}}
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 2634.667259492286 ~ {CustomName:'"gm4_lumos_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"lumos_shamir",page_count:2,line_count:1,module_name:"Lumos Shamir"}}
 
 #$moduleUpdateList

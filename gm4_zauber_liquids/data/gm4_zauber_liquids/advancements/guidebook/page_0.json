@@ -22,10 +22,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:potion"
-            ],
-            "nbt": "{gm4_zauber_cauldrons:{}}"
+            "nbt": "{gm4_zauber_cauldrons:{bottle:{}}}"
           }
         ],
         "player": [

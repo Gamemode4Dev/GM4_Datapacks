@@ -1,15 +1,15 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:furnace",
-      "nbt": "{CustomModelData:3420002}"
+      "item": "minecraft:shulker_box",
+      "nbt": "{CustomModelData:3420001}"
     },
     "title": {
       "text": "Check your guidebook!",
       "color": "#4AA0C7",
       "italic": true
     },
-    "description": "Master Crafting",
+    "description": "Relocators",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": false,
@@ -27,7 +27,7 @@
             "predicate": {
               "player": {
                 "advancements": {
-                  "gm4_master_crafting:guidebook/page_0": true
+                  "gm4_relocators:guidebook/page_0": true
                 }
               }
             }
@@ -43,12 +43,24 @@
               "score": "load.status"
             },
             "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_relocators"
+              },
+              "score": "load.status"
+            },
+            "range": 1
           }
         ],
         "items": [
           {
             "items": [
-              "minecraft:furnace"
+              "minecraft:popped_chorus_fruit"
             ]
           }
         ]
@@ -64,7 +76,7 @@
             "predicate": {
               "player": {
                 "advancements": {
-                  "gm4_master_crafting:guidebook/page_0": true
+                  "gm4_relocators:guidebook/page_0": true
                 }
               }
             }
@@ -87,7 +99,7 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_master_crafting"
+                "name": "gm4_relocators"
               },
               "score": "load.status"
             },
@@ -97,14 +109,15 @@
         "items": [
           {
             "items": [
-              "minecraft:piston"
-            ]
+              "minecraft:enchanted_book"
+            ],
+            "nbt" : "{StoredEnchantments:[{id:\"minecraft:silk_touch\"}]}"
           }
         ]
       }
     }
   },
   "rewards": {
-    "function": "gm4_master_crafting:guidebook/unlock_page"
+    "function": "gm4_relocators:guidebook/unlock_page"
   }
 }

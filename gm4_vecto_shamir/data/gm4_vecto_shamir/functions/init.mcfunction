@@ -14,6 +14,6 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_vecto_shami
 schedule function gm4_vecto_shamir:main 4t
 
 # guidebook
-execute if score gm4_guidebook load.status matches 1 run summon marker ~ 4568.795477398233 ~ {CustomName:'"gm4_vecto_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"vecto_shamir",page_count:1,line_count:1,module_name:"Vecto Shamir"}}
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 4568.795477398233 ~ {CustomName:'"gm4_vecto_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"vecto_shamir",page_count:2,line_count:1,module_name:"Vecto Shamir"}}
 
 #$moduleUpdateList
