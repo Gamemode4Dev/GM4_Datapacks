@@ -242,7 +242,7 @@ def generate_unlock_tellraw(module):
 
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, "w") as file:
-        contents = '# tells the player that they discovered a page from this section\n# @s = player who unlocked a guidebook page\n# located at @s\n# run from advancement gm4_' + module_id + ':guidebook/page_<number>\n\ntellraw @a ["",{"selector":"@s"},{"text":" "},{"translate":"%1$s%3427655$s","with":[{"text":"has discovered a guidebook page from"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.discovered"}]}]},{"text":" "},{"text":"[' + module_name + ']","color":"#4AA0C7","hoverEvent":{"action":"show_text","contents":[{"text":"' + module_name + '","color":"#4AA0C7"},{"text":"\\\\n"},{"text":"' + desc + '","italic":true,"color":"gray"}]}}]'
+        contents = '# tells the player that they discovered a page from this section\n# @s = player who unlocked a guidebook page\n# located at @s\n# run from advancement gm4_' + module_id + ':guidebook/page_<number>\n\ntellraw @a ["",{"selector":"@s"},{"text":" "},{"translate":"%1$s%3427655$s","with":[{"text":"has discovered a guidebook page from"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.discovered"}]}]},{"text":" "},{"text":"[' + module_name + ']","color":"#4AA0C7","hoverEvent":{"action":"show_text","contents":[{"text":"' + module_name + '","color":"#4AA0C7"},{"text":"\\n"},{"text":"' + desc + '","italic":true,"color":"gray"}]}}]'
         file.write(contents + "\n")
 
 generated_verify = []
