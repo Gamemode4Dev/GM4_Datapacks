@@ -4,7 +4,7 @@
 # run from gm4_guidebook:tick
 
 # if the player is holding the guidebook, update it
-execute if predicate gm4_guidebook:holding_book run function gm4_guidebook:update_book/get_pages
+execute if score @s gm4_guide matches 1 if predicate gm4_guidebook:holding_book run function gm4_guidebook:update_book/get_pages
 
 # reset the trigger
 scoreboard players reset @s gm4_guide
