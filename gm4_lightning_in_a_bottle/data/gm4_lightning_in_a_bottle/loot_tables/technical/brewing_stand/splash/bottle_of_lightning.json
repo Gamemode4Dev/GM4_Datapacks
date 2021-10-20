@@ -8,7 +8,7 @@
                   "children": [
                       {
                           "type": "minecraft:loot_table",
-                          "name": "gm4_lightning_in_a_bottle:potions/splash/bottle_of_lightning",
+                          "name": "gm4_lightning_in_a_bottle:items/splash_bottle_of_lightning",
                           "conditions": [
                               {
                                   "condition": "minecraft:entity_properties",

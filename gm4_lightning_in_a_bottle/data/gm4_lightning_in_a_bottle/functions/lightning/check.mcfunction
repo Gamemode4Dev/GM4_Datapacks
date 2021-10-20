@@ -16,7 +16,7 @@ execute align xyz positioned ~-3 ~-2 ~-3 as @e[type=pillager,dx=6,dy=11,dz=6] at
 execute align xyz positioned ~-3 ~-2 ~-3 as @e[type=guardian,dx=6,dy=11,dz=6] at @s run function gm4_lightning_in_a_bottle:entity/elder_guardian
 
 # Creeper Spawners struck by the lightning will become Charged Creepers Spawners
-execute if block ~ ~-1 ~ spawner{SpawnData:{id:"minecraft:creeper"}} run data merge block ~ ~-1 ~ {MaxSpawnDelay:801s,SpawnData:{id:"minecraft:creeper",powered:true},SpawnPotentials:[{Entity:{id:"minecraft:creeper",powered:true},Weight:1}]}
+execute if block ~ ~-1 ~ spawner{SpawnData:{id:"minecraft:creeper"}} run data merge block ~ ~-1 ~ {MaxSpawnDelay:801s,SpawnData:{id:"minecraft:creeper",powered:1b,DeathLootTable:"gm4_lightning_in_a_bottle:entities/charged_creeper"},SpawnPotentials:[{Entity:{id:"minecraft:creeper",powered:1b},Weight:1}]}
 
 # Converts a Shulker from a Purpur Block
 execute if block ~ ~-1 ~ purpur_block run function gm4_lightning_in_a_bottle:entity/shulker
@@ -24,4 +24,4 @@ execute if block ~ ~-1 ~ purpur_block run function gm4_lightning_in_a_bottle:ent
 execute if block ~ ~-1 ~ prismarine_bricks run function gm4_lightning_in_a_bottle:entity/guardian
 
 
-function #gm4_lightning_in_a_bottle:expansion
+function #gm4_lightning_in_a_bottle:lightning_strike

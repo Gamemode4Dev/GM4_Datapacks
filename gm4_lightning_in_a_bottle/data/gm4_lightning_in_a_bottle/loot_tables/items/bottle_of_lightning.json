@@ -37,6 +37,9 @@
                       ],
                       "color": "red",
                       "italic": false
+                    },
+                    {
+                      "translate": "potion.potency.0"
                     }
                   ]
                 }

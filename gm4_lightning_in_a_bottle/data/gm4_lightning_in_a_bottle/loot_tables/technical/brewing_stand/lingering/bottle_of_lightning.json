@@ -8,13 +8,13 @@
                   "children": [
                       {
                           "type": "minecraft:loot_table",
-                          "name": "gm4_lightning_in_a_bottle:potions/lingering/bottle_of_lightning",
+                          "name": "gm4_lightning_in_a_bottle:items/lingering_bottle_of_lightning",
                           "conditions": [
                               {
                                   "condition": "minecraft:entity_properties",
                                   "entity": "this",
                                   "predicate": {
-                                      "nbt": "{data:{Insert:{tag:{Potion:\"gm4:splash_lightning\",gm4_lightning_in_a_bottle:1b}}}}"
+                                      "nbt": "{data:{Insert:{tag:{Potion:\"gm4:lightning\",gm4_lightning_in_a_bottle:1b}}}}"
                                   }
                               }
                           ]

@@ -37,6 +37,9 @@
                       ],
                       "color": "red",
                       "italic": false
+                    },
+                    {
+                      "translate": "potion.potency.0"
                     }
                   ]
                 }
@@ -44,7 +47,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"gm4:lingering_lightning\",gm4_lightning_in_a_bottle:1b,HideFlags:33,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],CustomPotionEffects:[{Id:16,Amplifier:12b,Duration:1}],CustomPotionColor:11985402,Particle:\"electric_spark\",RadiusOnUse:0f}"
+              "tag": "{Potion:\"gm4:lightning\",gm4_lightning_in_a_bottle:1b,HideFlags:33,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],CustomPotionEffects:[{Id:16,Amplifier:12b,Duration:1}],CustomPotionColor:11985402,Particle:\"electric_spark\",RadiusOnUse:0f}"
             }
           ]
         }
