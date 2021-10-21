@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:potion",
-      "nbt": "{CustomModelData:3420004,CustomPotionColor:8587123}"
+      "nbt": "{CustomModelData:3420006,CustomPotionColor:8587123}"
     },
     "title": {
       "text": "Check your guidebook!",

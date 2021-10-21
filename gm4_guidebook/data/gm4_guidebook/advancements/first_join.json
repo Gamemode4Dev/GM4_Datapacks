@@ -1,11 +1,10 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:tick"
-      }
-    },
-    "rewards": {
-        "function": "gm4_guidebook:first_join"
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick"
     }
+  },
+  "rewards": {
+    "function": "gm4_guidebook:first_join"
   }
-  
+}
