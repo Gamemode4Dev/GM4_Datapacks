@@ -25,7 +25,7 @@ DOC_URL = f"https://docs.google.com/spreadsheets/d/{DOC_ID}/gviz/tq?tqx=out:csv&
 
 def create_tree(min, max, folder, path,):
     def create_function(value, file):
-        json = '\'{"storage": "gm4_guidebook:register", "nbt": "modules[{page_number:' + str(value) + '}].module_name","color":"#4AA0C7","clickEvent":{"action":"change_page","value":"' + str(value) + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Jump to Section"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.jump_to_page"}]}],"color":"gold"}]}}\''
+        json = '\'{"storage": "gm4_guidebook:register", "nbt": "modules[{page_number:' + str(value) + '}].module_name","color":"#4AA0C7","clickEvent":{"action":"change_page","value":"' + str(value) + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Jump to Section"},{"translate":"text.gm4.guidebook.jump_to_page"}],"color":"gold"}]}}\''
         file.write(f"execute if score $page gm4_guide matches {value} run data modify block 29999998 1 7133 Text1 set value {json}\n")
         """
         file.write(f"execute if score $page gm4_guide matches {value} run function {path}/add_line_{value}\n")
