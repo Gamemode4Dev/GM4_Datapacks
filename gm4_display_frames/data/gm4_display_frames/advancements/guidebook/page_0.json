@@ -32,6 +32,18 @@
         ],
         "player": [
           {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "player": {
+                  "gamemode": "spectator"
+                }
+              }
+            }
+          },
+          {
             "condition": "minecraft:value_check",
             "value": {
               "type": "minecraft:score",

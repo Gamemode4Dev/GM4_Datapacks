@@ -1,0 +1,123 @@
+{
+  "criteria": {
+    "armorer": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_armorer"
+      }
+    },
+    "butcher": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_butcher"
+      }
+    },
+    "cartographer": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_cartographer"
+      }
+    },
+    "desert_house": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_desert_house"
+      }
+    },
+    "fisher": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_fisher"
+      }
+    },
+    "fletcher": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_fletcher"
+      }
+    },
+    "mason": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_mason"
+      }
+    },
+    "plains_house": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_plains_house"
+      }
+    },
+    "savanna_house": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_savanna_house"
+      }
+    },
+    "shepherd": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_shepherd"
+      }
+    },
+    "snowy_house": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_snowy_house"
+      }
+    },
+    "taiga_house": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_taiga_house"
+      }
+    },
+    "tannery": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_tannery"
+      }
+    },
+    "temple": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_temple"
+      }
+    },
+    "toolsmith": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_toolsmith"
+      }
+    },
+    "weaponsmith": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/village/village_weaponsmith"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "armorer",
+      "butcher",
+      "cartographer",
+      "desert_house",
+      "fisher",
+      "fletcher",
+      "mason",
+      "plains_house",
+      "savanna_house",
+      "shepherd",
+      "snowy_house",
+      "taiga_house",
+      "tannery",
+      "temple",
+      "toolsmith",
+      "weaponsmith"
+    ]
+  ],
+  "rewards": {
+    "function": "gm4_guidebook:update_book/chest/looted"
+  }
+}

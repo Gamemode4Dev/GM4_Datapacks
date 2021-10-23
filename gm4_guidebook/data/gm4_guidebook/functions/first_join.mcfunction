@@ -1,1 +1,1 @@
-scoreboard players enable @s gm4_guide
+#scoreboard players enable @s gm4_guide

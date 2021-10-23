@@ -33,6 +33,18 @@
             }
           },
           {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "player": {
+                  "gamemode": "spectator"
+                }
+              }
+            }
+          },
+          {
             "condition": "minecraft:value_check",
             "value": {
               "type": "minecraft:score",
@@ -77,6 +89,18 @@
               "player": {
                 "advancements": {
                   "gm4_relocators:guidebook/page_0": true
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "player": {
+                  "gamemode": "spectator"
                 }
               }
             }
