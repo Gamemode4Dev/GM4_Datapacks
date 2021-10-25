@@ -1,4 +1,4 @@
-# adds the module to the table of contents array
+# adds the base module to the table of contents array, with its expansion packs following
 # @s = none
 # located at world spawn
 # run from gm4_guidebook:analyze_storage/loop_line
