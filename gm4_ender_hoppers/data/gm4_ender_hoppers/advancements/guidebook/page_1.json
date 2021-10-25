@@ -104,8 +104,69 @@
           }
         ]
       }
+    },
+    "container_requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "player": {
+                  "gamemode": "spectator"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_ender_hoppers"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:hopper"
+            ],
+            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Ender Hopper\",{\"translate\":\"block.gm4.ender_hopper\"}]}'}"
+          }
+        }
+      }
     }
   },
+  "requirements": [
+    [
+      "requirement_1",
+      "container_requirement"
+    ],
+    [
+      "requirement_2",
+      "container_requirement"
+    ]
+  ],
   "rewards": {
     "function": "gm4_ender_hoppers:guidebook/unlock_page"
   }

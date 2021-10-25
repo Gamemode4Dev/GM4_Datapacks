@@ -104,8 +104,72 @@
           }
         ]
       }
+    },
+    "page_requirement": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "player": {
+                  "gamemode": "spectator"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_boots_of_ostara"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "advancements": {
+                  "gm4_boots_of_ostara:guidebook/page_2": true
+                }
+              }
+            }
+          }
+        ]
+      }
     }
   },
+  "requirements": [
+    [
+      "requirement_1",
+      "page_requirement"
+    ],
+    [
+      "requirement_2",
+      "page_requirement"
+    ]
+  ],
   "rewards": {
     "function": "gm4_boots_of_ostara:guidebook/unlock_page"
   }
