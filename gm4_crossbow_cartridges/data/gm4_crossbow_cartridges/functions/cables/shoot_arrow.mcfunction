@@ -9,7 +9,10 @@ tag @s add gm4_cb_use
 execute store result score @s gm4_cb_strcount run clear @s minecraft:string 0
 execute if score @s gm4_cb_strcount matches 40.. run scoreboard players set @s gm4_cb_strcount 40
 
-# reset scoreboard to 0
+# check for tripwire hook on the player
+execute store success score @s gm4_cb_hookcount run clear @s minecraft:tripwire_hook 0
+
+# reset score for string placed 
 scoreboard players set @s gm4_cb_strplace 0
 
 # check direction if player is looking at horizon, with a tripwire hook at their feet or eye level

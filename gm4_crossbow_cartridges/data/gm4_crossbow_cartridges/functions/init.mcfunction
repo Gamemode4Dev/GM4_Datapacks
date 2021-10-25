@@ -1,3 +1,4 @@
+scoreboard objectives add gm4_cb_hookcount dummy
 scoreboard objectives add gm4_cb_strcount dummy
 scoreboard objectives add gm4_cb_strplace dummy
 
