@@ -1,7 +1,7 @@
 # checks the LootTableSeed of the chest, and inserts for 45% of them
 # @s = player that just looted the chest
 # located at the chest
-# run from gm4_guidebook:update_book/chest
+# run from gm4_guidebook:update_book/chest/looted
 
 # modulo the loot table seed to 0-99
 execute store result score $loot_table_seed gm4_guide run data get block ~ ~ ~ LootTableSeed 0.0000000001

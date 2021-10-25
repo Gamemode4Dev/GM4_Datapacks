@@ -6,18 +6,12 @@ FILE_NAMESPACE = "gm4_guidebook/"
 WIKI_LINK = "https://wiki.gm4.co/wiki/"
 WEBSITE_LINK = "https://gm4.co/modules/"
 
-TABLE_FOLDER = f"{FILE_NAMESPACE}/data/{FILE_NAMESPACE}/functions/table_of_contents/find_page_number"
-TABLE_PATH = f"gm4_guidebook:table_of_contents/find_page_number"
-PAGE_COUNT = 2000
+TABLE_FOLDER = f"{FILE_NAMESPACE}/data/{FILE_NAMESPACE}/functions/analyze_storage/table_of_contents/find_page_number"
+TABLE_PATH = f"gm4_guidebook:analyze_storage/table_of_contents/find_page_number"
+PAGE_COUNT = 750  
+# change this ^^, delete the "find_page_number" folder (path above in line 10), then uncomment line 259 in this file and 
+# update line 11 in "gm4_guidebook:analyze_storage/table_of_contents/add_line" to update the max page number
 
-#HANDS = ("mainhand", "offhand")
-#PAGE_COUNT = 50
-"""
-INV = {
-	"mainhand": "SelectedItem",
-	"offhand": "Inventory[{Slot:-106b}]"
-}
-"""
 
 DOC_ID = "1ToBBaGTEinkEVff60-zvP6Zbf8-9mJULhjQWriuiU0c"
 DOC_SHEET = "Data"
@@ -27,17 +21,7 @@ def create_tree(min, max, folder, path,):
     def create_function(value, file):
         json = '\'{"storage": "gm4_guidebook:register", "nbt": "modules[{page_number:' + str(value) + '}].module_name","color":"#4AA0C7","clickEvent":{"action":"change_page","value":"' + str(value) + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Jump to Section"},{"translate":"text.gm4.guidebook.jump_to_page"}],"color":"gold"}]}}\''
         file.write(f"execute if score $page gm4_guide matches {value} run data modify block 29999998 1 7133 Text1 set value {json}\n")
-        """
-        file.write(f"execute if score $page gm4_guide matches {value} run function {path}/add_line_{value}\n")
-        filename = f"{folder}/add_line_{value}.mcfunction"
-        os.makedirs(os.path.dirname(filename), exist_ok=True)
-        with open(filename, "w") as file:
-            value = str(value)
-            json = '[\'{\"text\":\"● \",\"color\":\"#4AA0C7\"}\',\'{\"nbt\":\"gm4_guidebook:register\",\"storage\":\"modules[{page_number:' + value + '}].module_name\",\"interpret\":false,\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"' + value + '\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Jump to Section\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"translate\":\"text.gm4.guidebook.jump_to_page\"}]}],\"color\":\"gold\"}]}}\',\'{\"text\":\"\\\\n\"}\']'
-            file.write('execute unless score $expansion gm4_guide matches 1 run data modify storage gm4_guidebook:temp_toc contents set value ' + json + '\n')
-            json = '[\'{\"text\":\"  ● \",\"color\":\"#4AA0C7\"}\',\'{\"nbt\":\"gm4_guidebook:register\",\"storage\":\"modules[{page_number:' + value + '}].module_name\",\"interpret\":false,\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"' + value + '\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Jump to Section\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"translate\":\"text.gm4.guidebook.jump_to_page\"}]}],\"color\":\"gold\"}]}}\',\'{\"text\":\"\\\\n\"}\']'
-            file.write('execute if score $expansion gm4_guide matches 1 run data modify storage gm4_guidebook:temp_toc contents set value ' + json + '\n')
-        """
+
     def branch(min, max, folder, path, file):
         half = (max - min + 1) // 2 + min
 
@@ -73,8 +57,6 @@ def create_tree(min, max, folder, path,):
             low, high = half, max
             branch(low, high, folder, path, file)
 
-
-#create_tree(0, PAGE_COUNT - 1, f"{TABLE_FOLDER}", f"{TABLE_PATH}/0_{PAGE_COUNT - 1}")
 
 def write_json(path, content):
     filename = f"{path}.json"
@@ -133,46 +115,7 @@ for module, modifier in data.groupby("Module"):
         page_count = len(unlockable_pages) + initial_pages.count("[\"\",")
 
         module_data.append([module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, int(line_count), done, initial_lock])
-"""
-for hand in HANDS:
-    item_modifiers = []
-    slot = INV[hand]
 
-    def populate_terms(i, terms):
-        for module in module_data:
-            if not undefined(module[5]):
-                module_id = module[0]
-                nbt = "{gm4_guidebook:{id:\"" + module_id + "\"}}"
-                term = {"condition": "minecraft:entity_properties","entity": "this","predicate": {"equipment": {f"{hand}": {"items": ["minecraft:written_book"],"nbt": f"{nbt}"}},"player": {"advancements": {f"gm4_{module_id}:guidebook/page_{i}": True}}}}
-                terms.append(term)
-
-    i = 1
-    while (i < PAGE_COUNT + 1):
-        terms = []
-        populate_terms(i, terms)
-        modifier = {"function": "minecraft:copy_nbt","source": "this","ops": [{"source": f"{slot}.tag.gm4_guidebook.stored_pages[{i}]","target": f"pages[{i}]","op": "replace" }], "conditions": [{"condition":"minecraft:alternative", "terms":terms}]}
-        item_modifiers.append(modifier)
-        i += 1
-        
-    write_json(FILE_NAMESPACE + "data/gm4_guidebook/item_modifiers/page_library/" + hand, item_modifiers)
-
-module_data.reverse()
-
-with open(FILE_NAMESPACE + "installed_modules.txt", "w") as file:
-    for module in module_data:
-        source = module[5]
-        if not undefined(source):
-            module_id = module[0]
-            module_name = module[1]
-            index = str(int(module[2]))
-            wiki_link = module[3]
-            website_link = WEBSITE_LINK + module[4].replace("_", "-")
-            load_id = module[4]
-            line_count = str(module_name.count('\\n') + 1)
-            
-            line = 'execute if score gm4_' + load_id + ' load.status matches 1.. run data modify storage gm4_guidebook:register ' + source + ' append value {id:"' + module_id + '",num_id:' + index + ',LootTable:"gm4_' + module_id +':items/guidebook",line_count:'+ line_count + ',line:[\'{"text":"• ' + module_name + '","color":"#4AA0C7","clickEvent":{"action":"run_command","value":"/trigger gm4_guide set ' + index + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Select Guidebook"},{"translate":"text.gm4.guidebook.select"}],"italic":true,"color":"gold"}]}}\',\'{"text":" "}\',\'{"text":"☶","bold":true,"color":"dark_purple","clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}}\',\'{"text":" "}\',\'{"text":"◆","bold":true,"color":"blue","clickEvent":{"action":"open_url","value":"'+ website_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Download Module"},{"translate":"text.gm4.guidebook.download"}],"italic":true,"color":"gold"}]}}\']}'
-            file.write(line + "\n")
-"""
 generated_init = []
 def generate_init(module):
     [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done, initial_lock] = module
@@ -315,6 +258,7 @@ def generate_add_pages(module):
                 contents = 'execute if entity @s[advancements={gm4_' + module_id + ':guidebook/page_' + str(i) + '=true}] run data modify storage gm4_guidebook:temp insert[' + str(i + initial_page_count) + '] set value ' + str(page)
                 file.write(contents + "\n")
     
+#create_tree(0, PAGE_COUNT - 1, f"{TABLE_FOLDER}", f"{TABLE_PATH}/0_{PAGE_COUNT - 1}")
 
 for module in module_data:
     [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done, initial_lock] = module

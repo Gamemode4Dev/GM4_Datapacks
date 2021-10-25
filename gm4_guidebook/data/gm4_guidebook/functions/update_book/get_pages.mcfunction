@@ -1,7 +1,7 @@
 # updates the player's guidebook
 # @s = player that triggered gm4_guide while holding a guidebook
 # located at world spawn
-# run from gm4_guidebook:update_book/triggered
+# run from gm4_guidebook:tick
 
 # reset the player's book
 loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:items/guidebook

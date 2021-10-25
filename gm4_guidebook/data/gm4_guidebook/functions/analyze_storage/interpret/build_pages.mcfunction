@@ -1,3 +1,8 @@
+# adds each module to the table of contents
+# @s = none
+# located at world spawn
+# run from gm4_guidebook:analyze_storage/interpret/schedule
+
 # prepare iteration of storage
 scoreboard players set $page_count gm4_guide 0
 scoreboard players set $toc_pages gm4_guide 0

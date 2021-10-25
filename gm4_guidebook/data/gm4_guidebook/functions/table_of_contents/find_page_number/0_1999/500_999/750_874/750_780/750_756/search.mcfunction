@@ -1,4 +1,0 @@
-execute if score $page gm4_guide matches 750 run data modify block 29999998 1 7133 Text1 set value '{"storage": "gm4_guidebook:register", "nbt": "modules[{page_number:750}].module_name","color":"#4AA0C7","clickEvent":{"action":"change_page","value":"750"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Jump to Section"},{"translate":"text.gm4.guidebook.jump_to_page"}],"color":"gold"}]}}'
-execute if score $page gm4_guide matches 751..752 run function gm4_guidebook:table_of_contents/find_page_number/0_1999/500_999/750_874/750_780/750_756/751_752/search
-execute if score $page gm4_guide matches 753..754 run function gm4_guidebook:table_of_contents/find_page_number/0_1999/500_999/750_874/750_780/750_756/753_754/search
-execute if score $page gm4_guide matches 755..756 run function gm4_guidebook:table_of_contents/find_page_number/0_1999/500_999/750_874/750_780/750_756/755_756/search

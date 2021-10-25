@@ -1,4 +1,4 @@
-# find expansions matching the base module
+# finds expansions matching the base module
 # @s = none
 # located at world spawn
 # run from gm4_guidebook:analyze_storage/add_base

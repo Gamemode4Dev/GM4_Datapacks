@@ -1,7 +1,7 @@
 # updates the starting page number of each module
 # @s = none
 # located at world spawn
-# run from gm4_guidebook:analyze_storage/interpret
+# run from gm4_guidebook:analyze_storage/interpret/update_page_numbers
 
 # add initial page count (intro + table of contents) to the page number
 data modify storage gm4_guidebook:temp module set from storage gm4_guidebook:temp modules[-1]
