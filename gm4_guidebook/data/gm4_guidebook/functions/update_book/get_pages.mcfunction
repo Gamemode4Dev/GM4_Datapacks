@@ -3,6 +3,10 @@
 # located at world spawn
 # run from gm4_guidebook:tick
 
+# get number of books the player is holding
+execute if predicate gm4_guidebook:book_in_mainhand store result score $count gm4_guide run data get entity @s SelectedItem.Count
+execute if predicate gm4_guidebook:book_in_offhand store result score $count gm4_guide run data get entity @s Inventory[{Slot:-106b}].Count
+
 # reset the player's book
 loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:items/guidebook
 loot replace entity @s[predicate=gm4_guidebook:book_in_offhand] weapon.offhand loot gm4_guidebook:items/guidebook
