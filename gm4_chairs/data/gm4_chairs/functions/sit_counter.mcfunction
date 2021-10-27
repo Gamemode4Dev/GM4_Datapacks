@@ -1,5 +1,7 @@
-#run from advancement sitting_in_chair
+# Increase score for time sitting in a chair
 # @s = player sitting on the chair
+# at @s
+# run from advancement sitting_in_chair
 
 advancement revoke @s only gm4_chairs:sitting_in_chair
 
