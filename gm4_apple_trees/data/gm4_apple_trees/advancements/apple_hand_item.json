@@ -23,7 +23,7 @@
       }
     },
     "rewards": {
-      "function": "gm4_apple_trees:apple/take"
+      "function": "gm4_apple_trees:apple/interact"
     }
   }
   
