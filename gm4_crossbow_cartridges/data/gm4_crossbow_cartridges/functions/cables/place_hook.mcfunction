@@ -12,5 +12,8 @@ execute if block ~ ~ ~-1 minecraft:tripwire[north=true,attached=false] if block 
 playsound minecraft:block.stone.place block @a[distance=..15]
 clear @s[gamemode=!creative] minecraft:tripwire_hook 1
 
+# reset string count
+scoreboard players set @s gm4_cb_strcount 0
+
 # 40 block long tripwire advancement
 execute if score @s gm4_cb_strplace matches 40 run advancement grant @s only gm4:crossbow_cartridges_string
