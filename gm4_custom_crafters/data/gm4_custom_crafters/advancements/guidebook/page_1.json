@@ -67,7 +67,7 @@
         ]
       }
     },
-    "container_requirement": {
+    "open_custom_crafter": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "player": [
@@ -122,7 +122,7 @@
   "requirements": [
     [
       "requirement",
-      "container_requirement"
+      "open_custom_crafter"
     ]
   ],
   "rewards": {

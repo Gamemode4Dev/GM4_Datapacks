@@ -193,7 +193,7 @@
         ]
       }
     },
-    "container_requirement": {
+    "open_empty_tank": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "player": [
@@ -248,19 +248,19 @@
   "requirements": [
     [
       "requirement_1",
-      "container_requirement"
+      "open_empty_tank"
     ],
     [
       "requirement_2",
-      "container_requirement"
+      "open_empty_tank"
     ],
     [
       "requirement_3",
-      "container_requirement"
+      "open_empty_tank"
     ],
     [
       "requirement_4",
-      "container_requirement"
+      "open_empty_tank"
     ]
   ],
   "rewards": {

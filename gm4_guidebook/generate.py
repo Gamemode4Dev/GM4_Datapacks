@@ -8,8 +8,8 @@ WEBSITE_LINK = "https://gm4.co/modules/"
 
 TABLE_FOLDER = f"{FILE_NAMESPACE}/data/{FILE_NAMESPACE}/functions/analyze_storage/table_of_contents/find_page_number"
 TABLE_PATH = f"gm4_guidebook:analyze_storage/table_of_contents/find_page_number"
-PAGE_COUNT = 750  
-# change this ^^, delete the "find_page_number" folder (path above in line 10), then uncomment line 259 in this file and 
+PAGE_COUNT = 750
+# change this ^^, delete the "find_page_number" folder (path above in line 10), then run this, then
 # update line 11 in "gm4_guidebook:analyze_storage/table_of_contents/add_line" to update the max page number
 
 
@@ -258,14 +258,14 @@ def generate_add_pages(module):
                 contents = 'execute if entity @s[advancements={gm4_' + module_id + ':guidebook/page_' + str(i) + '=true}] run data modify storage gm4_guidebook:temp insert[' + str(i + initial_page_count) + '] set value ' + str(page)
                 file.write(contents + "\n")
     
-#create_tree(0, PAGE_COUNT - 1, f"{TABLE_FOLDER}", f"{TABLE_PATH}/0_{PAGE_COUNT - 1}")
+create_tree(0, PAGE_COUNT - 1, f"{TABLE_FOLDER}", f"{TABLE_PATH}/0_{PAGE_COUNT - 1}")
 
 for module in module_data:
     [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done, initial_lock] = module
     if not undefined(base_module):
         generate_init(module)
-        #generate_function_tag(module)
-        #generate_unlock_tellraw(module)
-        #generate_verify(module)
+        generate_function_tag(module)
+        generate_unlock_tellraw(module)
+        generate_verify(module)
         if not done:
             generate_add_pages(module)

@@ -105,7 +105,7 @@
         ]
       }
     },
-    "container_requirement": {
+    "open_ender_hopper": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "player": [
@@ -160,11 +160,11 @@
   "requirements": [
     [
       "requirement_1",
-      "container_requirement"
+      "open_ender_hopper"
     ],
     [
       "requirement_2",
-      "container_requirement"
+      "open_ender_hopper"
     ]
   ],
   "rewards": {

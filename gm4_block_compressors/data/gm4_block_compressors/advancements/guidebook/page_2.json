@@ -71,7 +71,7 @@
         ]
       }
     },
-    "container_requirement": {
+    "open_block_compressor": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "player": [
@@ -126,7 +126,7 @@
   "requirements": [
     [
       "requirement",
-      "container_requirement"
+      "open_block_compressor"
     ]
   ],
   "rewards": {

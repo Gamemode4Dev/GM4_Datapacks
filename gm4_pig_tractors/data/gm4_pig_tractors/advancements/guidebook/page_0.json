@@ -69,7 +69,7 @@
         ]
       }
     },
-    "page_requirement": {
+    "unlocked_future_page": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -127,7 +127,7 @@
   "requirements": [
     [
       "requirement",
-      "page_requirement"
+      "unlocked_future_page"
     ]
   ],
   "rewards": {
