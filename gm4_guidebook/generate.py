@@ -172,6 +172,13 @@ def generate_function_tag(module):
     json["values"].append(f"gm4_{load_id}:guidebook/verify_module")
     write_json(path, json)
 
+def generate_root_advancement(module):
+    [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done, initial_lock] = module
+    path = "gm4_" + load_id + "/data/gm4_guidebook/advancements/root"
+
+    json = {"criteria": {"requirement": {"trigger": "minecraft:impossible"}}}
+    write_json(path, json)
+
 def generate_unlock_tellraw(module):
     [module_id, module_name, wiki_link, load_id, module_type, base_module, initial_json, initial_pages, unlockable_pages, page_count, num_id, line_count, done, initial_lock] = module
     
@@ -265,6 +272,7 @@ for module in module_data:
     if not undefined(base_module):
         generate_init(module)
         generate_function_tag(module)
+        generate_root_advancement(module)
         generate_unlock_tellraw(module)
         generate_verify(module)
         if not done:
