@@ -2,14 +2,14 @@
   "display": {
     "icon": {
       "item": "minecraft:spawner",
-      "nbt": "{CustomModelData:3420002}"
+      "nbt": "{CustomModelData:3420003}"
     },
     "title": {
       "text": "Check your guidebook!",
       "color": "#4AA0C7",
       "italic": true
     },
-    "description": "Dangerous Dungeons",
+    "description": "Spawner Minecarts",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": false,
@@ -18,8 +18,15 @@
   "parent": "gm4_guidebook:root",
   "criteria": {
     "requirement_1": {
-      "trigger": "minecraft:player_generates_container_loot",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:piston"
+            ]
+          }
+        ],
         "player": [
           {
             "condition": "minecraft:inverted",
@@ -51,19 +58,25 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_dangerous_dungeons"
+                "name": "gm4_spawner_minecarts"
               },
               "score": "load.status"
             },
-            "range": 1
+            "range": 2
           }
-        ],
-        "loot_table": "gm4_orbis:chests/dungeon_20"
+        ]
       }
     },
     "requirement_2": {
-      "trigger": "minecraft:player_generates_container_loot",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:minecart"
+            ]
+          }
+        ],
         "player": [
           {
             "condition": "minecraft:inverted",
@@ -95,18 +108,17 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_dangerous_dungeons"
+                "name": "gm4_spawner_minecarts"
               },
               "score": "load.status"
             },
-            "range": 1
+            "range": 2
           }
-        ],
-        "loot_table": "gm4_orbis:chests/dungeon_30"
+        ]
       }
     },
-    "requirement_3": {
-      "trigger": "minecraft:player_generates_container_loot",
+    "unlocked_future_page": {
+      "trigger": "minecraft:tick",
       "conditions": {
         "player": [
           {
@@ -139,25 +151,38 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_dangerous_dungeons"
+                "name": "gm4_spawner_minecarts"
               },
               "score": "load.status"
             },
-            "range": 1
+            "range": 2
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "advancements": {
+                  "gm4_spawner_minecarts:guidebook/page_1": true
+                }
+              }
+            }
           }
-        ],
-        "loot_table": "gm4_orbis:chests/dungeon_40"
+        ]
       }
     }
   },
   "requirements": [
     [
       "requirement_1",
+      "unlocked_future_page"
+    ],
+    [
       "requirement_2",
-      "requirement_3"
+      "unlocked_future_page"
     ]
   ],
   "rewards": {
-    "function": "gm4_dangerous_dungeons:guidebook/unlock_page"
+    "function": "gm4_spawner_minecarts:guidebook/unlock_page"
   }
 }

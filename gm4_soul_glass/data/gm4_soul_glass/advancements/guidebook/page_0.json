@@ -1,15 +1,15 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:spawner",
-      "nbt": "{CustomModelData:3420002}"
+      "item": "minecraft:brown_stained_glass",
+      "nbt": "{CustomModelData:3420002,Enchantments:[{id:\"minecraft:protection\",lvl:0s}]}"
     },
     "title": {
       "text": "Check your guidebook!",
       "color": "#4AA0C7",
       "italic": true
     },
-    "description": "Dangerous Dungeons",
+    "description": "Soul Glass",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": false,
@@ -17,8 +17,8 @@
   },
   "parent": "gm4_guidebook:root",
   "criteria": {
-    "requirement_1": {
-      "trigger": "minecraft:player_generates_container_loot",
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "player": [
           {
@@ -51,18 +51,24 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_dangerous_dungeons"
+                "name": "gm4_soul_glass"
               },
               "score": "load.status"
             },
             "range": 1
           }
         ],
-        "loot_table": "gm4_orbis:chests/dungeon_20"
+        "items": [
+          {
+            "items": [
+              "minecraft:soul_sand"
+            ]
+          }
+        ]
       }
     },
-    "requirement_2": {
-      "trigger": "minecraft:player_generates_container_loot",
+    "unlocked_future_page": {
+      "trigger": "minecraft:tick",
       "conditions": {
         "player": [
           {
@@ -95,69 +101,34 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_dangerous_dungeons"
+                "name": "gm4_soul_glass"
               },
               "score": "load.status"
             },
             "range": 1
-          }
-        ],
-        "loot_table": "gm4_orbis:chests/dungeon_30"
-      }
-    },
-    "requirement_3": {
-      "trigger": "minecraft:player_generates_container_loot",
-      "conditions": {
-        "player": [
+          },
           {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "player": {
-                  "gamemode": "spectator"
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "advancements": {
+                  "gm4_soul_glass:guidebook/page_1": true
                 }
               }
             }
-          },
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "gm4_guidebook"
-              },
-              "score": "load.status"
-            },
-            "range": 1
-          },
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "gm4_dangerous_dungeons"
-              },
-              "score": "load.status"
-            },
-            "range": 1
           }
-        ],
-        "loot_table": "gm4_orbis:chests/dungeon_40"
+        ]
       }
     }
   },
   "requirements": [
     [
-      "requirement_1",
-      "requirement_2",
-      "requirement_3"
+      "requirement",
+      "unlocked_future_page"
     ]
   ],
   "rewards": {
-    "function": "gm4_dangerous_dungeons:guidebook/unlock_page"
+    "function": "gm4_soul_glass:guidebook/unlock_page"
   }
 }
