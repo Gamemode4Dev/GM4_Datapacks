@@ -1,6 +1,9 @@
 # @s = soul forge without fire
 # run from main
 
+# store armor items into storage
+data modify storage gm4_orb_of_ankou:temp ArmorItems set from entity @s ArmorItems
+
 # create a soul shard if valid ingredient count
 execute if score @s gm4_oa_essence matches 13.. if score @s gm4_oa_powder >= required gm4_oa_powder if score @s gm4_oa_glowstone >= required gm4_oa_glowstone run function gm4_orb_of_ankou:soul_forge/outputs/create_shard
 
@@ -24,4 +27,5 @@ execute if entity @s[tag=gm4_oa_has_shard] run function gm4_orb_of_ankou:soul_fo
 playsound minecraft:block.fire.extinguish block @a[distance=..12] ~ ~ ~ .5 .3
 particle minecraft:cloud ~ ~0.5 ~ 0.3 0.3 0.3 0 20
 
+data remove storage gm4_orb_of_ankou:temp ArmorItems
 kill @s

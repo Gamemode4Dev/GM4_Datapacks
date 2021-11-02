@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "enchanted_book",
-      "nbt": "{CustomModelData:1,Enchantments:[{id:\"minecraft:mending\",lvl:1}]}"
+      "nbt": "{CustomModelData:3420001,Enchantments:[{id:\"minecraft:mending\",lvl:1}]}"
     },
     "title": {
       "translate": "%1$s%3427655$s",

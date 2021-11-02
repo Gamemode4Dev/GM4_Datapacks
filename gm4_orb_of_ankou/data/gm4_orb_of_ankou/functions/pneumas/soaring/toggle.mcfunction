@@ -1,5 +1,5 @@
-#@s = player with soaring pneuma that sneaked
-#run from pneumas/sneak/check
+# @s = player with soaring pneuma that sneaked
+# run from pneumas/sneak/check
 
 tag @s[tag=gm4_oa_soaring_active] add gm4_oa_no_soaring
 tag @s remove gm4_oa_soaring_active

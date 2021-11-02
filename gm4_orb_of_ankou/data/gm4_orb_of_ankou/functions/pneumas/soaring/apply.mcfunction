@@ -1,5 +1,5 @@
-#@s = player with soaring pneuma
-#run from main
+# @s = player with soaring pneuma
+# run from main
 
 execute if entity @s[x_rotation=-79.99..79.99] run function gm4_orb_of_ankou:pneumas/soaring/idle
 

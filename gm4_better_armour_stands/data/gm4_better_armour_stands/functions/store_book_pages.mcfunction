@@ -20,3 +20,6 @@ tag @s remove gm4_bas_valid_code
 # Reset storage
 data remove storage gm4_better_armour_stands:temp pages
 data remove storage gm4_better_armour_stands:temp book
+
+# Show invisible armour stand
+effect give @s[nbt={Invisible:1b}] glowing 2 0

@@ -32,7 +32,4 @@ execute unless score @s gm4_bas_mode matches 1.. positioned ^ ^ ^.1 run function
 tp @s ~ ~ ~
 
 # kill spawn detectors
-execute positioned ~ ~.5 ~ run tp @e[tag=gm4_bas_detect_part,distance=..3] ~ -1000 ~
-
-# reset options
-scoreboard players reset $pose_options gm4_bas_mode
+tp @e[tag=gm4_bas_detect_part,distance=..3] ~ -1000 ~

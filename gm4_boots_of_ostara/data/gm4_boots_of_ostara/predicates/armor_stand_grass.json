@@ -4,11 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "items": ["minecraft:grass_block"]
-      },
-      "feet": {
-        "items": ["minecraft:leather_boots"],
-        "nbt": "{gm4_boots_of_ostara:1b}"
+        "items": [
+          "minecraft:grass_block"
+        ]
       }
     }
   }
