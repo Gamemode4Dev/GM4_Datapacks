@@ -1,15 +1,15 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:cauldron",
-      "nbt": "{CustomModelData:3420002}"
+      "item": "minecraft:piston",
+      "nbt": "{CustomModelData:3420004}"
     },
     "title": {
       "text": "Check your guidebook!",
       "color": "#4AA0C7",
       "italic": true
     },
-    "description": "Zauber Cauldrons",
+    "description": "Tunnel Bores",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": false,
@@ -20,13 +20,6 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:prismarine_shard"
-            ]
-          }
-        ],
         "player": [
           {
             "condition": "minecraft:inverted",
@@ -58,28 +51,25 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_zauber_cauldrons"
+                "name": "gm4_tunnel_bores"
               },
               "score": "load.status"
             },
             "range": 1
-          },
+          }
+        ],
+        "items": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "player": {
-                "advancements": {
-                  "gm4_zauber_cauldrons:guidebook/page_2": true
-                }
-              }
-            }
+            "items": [
+              "minecraft:furnace_minecart"
+            ],
+            "nbt": "{display:{Name:'{\"translate\":\"%1$s\",\"with\":[\"Minecart with Piston\",{\"translate\":\"item.gm4.minecart.bore\"}],\"italic\":false,\"color\":\"white\"}'}}"
           }
         ]
       }
     }
   },
   "rewards": {
-    "function": "gm4_zauber_cauldrons:guidebook/unlock_page"
+    "function": "gm4_tunnel_bores:guidebook/unlock_page"
   }
 }

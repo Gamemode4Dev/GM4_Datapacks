@@ -51,6 +51,18 @@
               "score": "load.status"
             },
             "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_chest_boats"
+              },
+              "score": "load.status"
+            },
+            "range": 1
           }
         ]
       }
@@ -94,7 +106,7 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_boots_of_ostara"
+                "name": "gm4_chest_boats"
               },
               "score": "load.status"
             },

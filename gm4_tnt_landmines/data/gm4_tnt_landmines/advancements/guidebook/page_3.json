@@ -1,15 +1,15 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:crafting_table",
-      "nbt": "{CustomModelData:3420005}"
+      "item": "minecraft:tnt",
+      "nbt": "{CustomModelData:3420004}"
     },
     "title": {
       "text": "Check your guidebook!",
       "color": "#4AA0C7",
       "italic": true
     },
-    "description": "Standard Crafting",
+    "description": "TNT Landmines",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": false,
@@ -20,18 +20,15 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": [
+        "items": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "player": {
-                "advancements": {
-                  "gm4_standard_crafting:guidebook/page_0": true
-                }
-              }
-            }
-          },
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_tnt_landmines:{item:\"landmine\"}}"
+          }
+        ],
+        "player": [
           {
             "condition": "minecraft:inverted",
             "term": {
@@ -62,26 +59,17 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_standard_crafting"
+                "name": "gm4_tnt_landmines"
               },
               "score": "load.status"
             },
             "range": 1
-          }
-        ],
-        "items": [
-          {
-            "items": [
-              "minecraft:amethyst_block",
-              "minecraft:dripstone_block",
-              "minecraft:quartz_block"
-            ]
           }
         ]
       }
     }
   },
   "rewards": {
-    "function": "gm4_standard_crafting:guidebook/unlock_page"
+    "function": "gm4_tnt_landmines:guidebook/unlock_page"
   }
 }

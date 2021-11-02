@@ -20,6 +20,6 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_tnt_landmin
 
 
 # guidebook
-execute if score gm4_guidebook load.status matches 1 run summon marker ~ 4230.355712344628 ~ {CustomName:'"gm4_tnt_landmines_guide"',Tags:["gm4_guide"],data:{type:"module",id:"tnt_landmines",page_count:1,line_count:1,module_name:"TNT Landmines"}}
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 4230.355712344628 ~ {CustomName:'"gm4_tnt_landmines_guide"',Tags:["gm4_guide"],data:{type:"module",id:"tnt_landmines",page_count:4,line_count:1,module_name:"TNT Landmines"}}
 
 #$moduleUpdateList

@@ -1,15 +1,15 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:cauldron",
-      "nbt": "{CustomModelData:3420002}"
+      "item": "minecraft:piston",
+      "nbt": "{CustomModelData:3420004}"
     },
     "title": {
       "text": "Check your guidebook!",
       "color": "#4AA0C7",
       "italic": true
     },
-    "description": "Zauber Cauldrons",
+    "description": "Tunnel Bores",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": false,
@@ -20,11 +20,6 @@
     "requirement_1": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
-          {
-            "nbt": "{gm4_zauber_cauldrons:{bottle:{}}}"
-          }
-        ],
         "player": [
           {
             "condition": "minecraft:inverted",
@@ -56,11 +51,18 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_zauber_cauldrons"
+                "name": "gm4_tunnel_bores"
               },
               "score": "load.status"
             },
             "range": 1
+          }
+        ],
+        "items": [
+          {
+            "items": [
+              "minecraft:minecart"
+            ]
           }
         ]
       }
@@ -68,13 +70,6 @@
     "requirement_2": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:nether_star"
-            ]
-          }
-        ],
         "player": [
           {
             "condition": "minecraft:inverted",
@@ -106,11 +101,18 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_zauber_cauldrons"
+                "name": "gm4_tunnel_bores"
               },
               "score": "load.status"
             },
             "range": 1
+          }
+        ],
+        "items": [
+          {
+            "items": [
+              "minecraft:piston"
+            ]
           }
         ]
       }
@@ -149,7 +151,7 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_zauber_cauldrons"
+                "name": "gm4_master_crafting"
               },
               "score": "load.status"
             },
@@ -161,7 +163,7 @@
             "predicate": {
               "player": {
                 "advancements": {
-                  "gm4_zauber_cauldrons:guidebook/page_8": true
+                  "gm4_tunnel_bores:guidebook/page_2": true
                 }
               }
             }
@@ -181,6 +183,6 @@
     ]
   ],
   "rewards": {
-    "function": "gm4_zauber_cauldrons:guidebook/unlock_page"
+    "function": "gm4_tunnel_bores:guidebook/unlock_page"
   }
 }

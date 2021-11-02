@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:firework_star",
+      "item": "minecraft:flint_and_steel",
       "nbt": "{CustomModelData:3420004}"
     },
     "title": {
@@ -9,7 +9,7 @@
       "color": "#4AA0C7",
       "italic": true
     },
-    "description": "Everstone",
+    "description": "Orb of Ankou",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": false,
@@ -23,24 +23,12 @@
         "items": [
           {
             "items": [
-              "minecraft:firework_star"
+              "minecraft:flint"
             ],
-            "nbt": "{gm4_everstone:1b}"
+            "nbt": "{gm4_orb_of_ankou:{item:\"soul_shard\"}}"
           }
         ],
         "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "player": {
-                  "gamemode": "spectator"
-                }
-              }
-            }
-          },
           {
             "condition": "minecraft:inverted",
             "term": {
@@ -71,7 +59,7 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_everstone"
+                "name": "gm4_orb_of_ankou"
               },
               "score": "load.status"
             },
@@ -79,9 +67,69 @@
           }
         ]
       }
+    },
+    "unlocked_future_page": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "player": {
+                  "gamemode": "spectator"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_orb_of_ankou"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "advancements": {
+                  "gm4_orb_of_ankou:guidebook/page_5": true
+                }
+              }
+            }
+          }
+        ]
+      }
     }
   },
+  "requirements": [
+    [
+      "requirement",
+      "unlocked_future_page"
+    ]
+  ],
   "rewards": {
-    "function": "gm4_everstone:guidebook/unlock_page"
+    "function": "gm4_orb_of_ankou:guidebook/unlock_page"
   }
 }
