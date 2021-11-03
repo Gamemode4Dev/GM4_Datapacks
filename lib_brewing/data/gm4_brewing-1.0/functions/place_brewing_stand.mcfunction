@@ -2,7 +2,7 @@
 # run from advancement place_brewing_stand
 
 # revoke advancement
-advancement revoke @s only gm4_brewing:place_brewing_stand
+advancement revoke @s only gm4_brewing-1.0:place_brewing_stand
 
 # raycast
 summon marker ~ ~ ~ {Tags:["gm4_brewing_ray"]}

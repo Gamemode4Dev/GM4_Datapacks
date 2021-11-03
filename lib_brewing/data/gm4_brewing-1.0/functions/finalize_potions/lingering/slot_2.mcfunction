@@ -5,6 +5,7 @@ data modify entity @s data.Insert set from storage gm4_brewing:temp Items[{Slot:
 
 # use loot table to create new item
 function #gm4_brewing:insert/lingering
+execute if score $insert gm4_brewing_data matches -1 run data remove block ~ ~ ~ Items[{Slot:2b}]
 execute store success score $insert gm4_brewing_data run data modify storage gm4_brewing:temp Insert set from entity @e[type=item,nbt={Item:{tag:{gm4_custom_potion:1b}}},limit=1] Item
 
 # insert item

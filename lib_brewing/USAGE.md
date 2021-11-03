@@ -40,6 +40,8 @@ Next to allow the module to utilize the library, two functions tags, two functio
 # run from #gm4_brewing:insert/splash
 
 loot spawn ~ ~ ~ loot MODULE_ID:technical/brewing_stand/splash
+# uncomment this line to completely clear the potion VV
+# execute if <...> run scoreboard players set $insert gm4_brewing_data -1
 
 
 - create the function file </data/MODULE_ID/functions/brewing_stand/lingering.mcfunction>
@@ -47,7 +49,8 @@ loot spawn ~ ~ ~ loot MODULE_ID:technical/brewing_stand/splash
 # run from #gm4_brewing:insert/lingering
 
 loot spawn ~ ~ ~ loot MODULE_ID:brewing_stand/lingering
-
+# uncomment this line to completely clear the potion VV
+# execute if <...> run scoreboard players set $insert gm4_brewing_data -1
 
 - create the loot table file </data/MODULE_ID/loot_tables/technical/brewing_stand/splash.json>
 {

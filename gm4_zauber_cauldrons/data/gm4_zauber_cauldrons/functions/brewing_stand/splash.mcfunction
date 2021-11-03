@@ -1,4 +1,5 @@
 # @s = brewing stand marker with a custom potion to be converted to a splash potion
 # run from #gm4_brewing:insert/splash
 
-loot spawn ~ ~ ~ loot gm4_zauber_cauldrons:brewing_stand/splash
+execute if data entity @s data.Insert.tag.gm4_zauber_cauldrons{item:"potion"} run scoreboard players set $insert gm4_brewing_data -1
+execute if score $insert gm4_brewing_data matches -1 run summon tnt
