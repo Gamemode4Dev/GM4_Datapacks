@@ -3,5 +3,8 @@
 # positioned 1 block above Prismarine Bricks
 # run from lightning/check
 
-setblock ~ ~-1 ~ air
-summon guardian ~ ~-1 ~ {ActiveEffects:[{Id:10b,Duration:20,Amplifier:10b,ShowParticles:0b}]}
+setblock ~ ~ ~ air
+summon guardian ~ ~ ~ {ActiveEffects:[{Id:10b,Duration:20,Amplifier:10b,ShowParticles:0b}]}
+
+# set fake player flag
+scoreboard players set $found_block gm4_liab_data 1
