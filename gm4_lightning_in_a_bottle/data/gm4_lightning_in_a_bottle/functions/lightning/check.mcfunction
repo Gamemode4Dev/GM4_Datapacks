@@ -22,7 +22,7 @@ execute if block ~ ~-1 ~ spawner{SpawnData:{id:"minecraft:creeper"}} run data me
 # inside strike location
 execute if block ~ ~ ~ purpur_block run function gm4_lightning_in_a_bottle:entity/shulker
 execute unless score $found_block gm4_liab_data matches 1.. if block ~ ~ ~ prismarine_bricks run function gm4_lightning_in_a_bottle:entity/guardian
-# blow strike location
+# below strike location
 execute unless score $found_block gm4_liab_data matches 1.. positioned ~ ~-1 ~ if block ~ ~ ~ purpur_block run function gm4_lightning_in_a_bottle:entity/shulker
 execute unless score $found_block gm4_liab_data matches 1.. positioned ~ ~-1 ~ if block ~ ~ ~ prismarine_bricks run function gm4_lightning_in_a_bottle:entity/shulker
 
