@@ -1,9 +1,6 @@
 # @s =  player with crystal in off-hand
 # run from player/crystal/process
 
-# mark player as has crystal
-tag @s add gm4_zc_has_active_crystal
-
 # move to storage
 data modify storage gm4_zauber_cauldrons:temp/player/equipment/offhand gm4_zauber_cauldrons set from entity @s Inventory[{Slot:-106b}].tag.gm4_zauber_cauldrons
 
