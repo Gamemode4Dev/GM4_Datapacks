@@ -6,4 +6,4 @@
 advancement revoke @s only gm4_lightning_in_a_bottle:lightning_strike
 
 # Check every lightning bolt
-execute at @e[type=lightning_bolt] run function gm4_lightning_in_a_bottle:lightning/check
+execute as @e[type=lightning_bolt,tag=!gm4_liab_processed] at @s run function gm4_lightning_in_a_bottle:lightning/check

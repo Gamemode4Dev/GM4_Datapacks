@@ -3,6 +3,9 @@
 # at @s
 # run from lightning/locate
 
+# tag processed lightning
+tag @s add gm4_liab_processed
+
 # create Bottles of Lightning from Thick Potions in Brewing Stands under (or above) Lightning Rods
 execute if block ~ ~-1 ~ lightning_rod[facing=up] if block ~ ~-2 ~ brewing_stand positioned ~ ~-2 ~ run function gm4_lightning_in_a_bottle:brewing_stand/check_fuel
 execute if block ~ ~-1 ~ lightning_rod[facing=down] if block ~ ~ ~ brewing_stand run function gm4_lightning_in_a_bottle:brewing_stand/check_fuel
@@ -26,7 +29,8 @@ execute unless score $found_block gm4_liab_data matches 1.. if block ~ ~ ~ prism
 execute unless score $found_block gm4_liab_data matches 1.. positioned ~ ~-1 ~ if block ~ ~ ~ purpur_block run function gm4_lightning_in_a_bottle:entity/shulker
 execute unless score $found_block gm4_liab_data matches 1.. positioned ~ ~-1 ~ if block ~ ~ ~ prismarine_bricks run function gm4_lightning_in_a_bottle:entity/guardian
 
+# other lightning-based expansions can happen after
+function #gm4_lightning_in_a_bottle:lightning_strike
+
 # reset fake players
 scoreboard players reset $found_block gm4_liab_data
-
-function #gm4_lightning_in_a_bottle:lightning_strike
