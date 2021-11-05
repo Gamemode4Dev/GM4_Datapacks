@@ -7,30 +7,54 @@ execute store result score damage gm4_disassembler run data get entity @s Item.t
 
 data modify storage gm4_disassemblers:temp/item Item set from entity @s Item
 
-execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_sword"} run function gm4_disassemblers:items/golden_sword
-execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_hoe"} run function gm4_disassemblers:items/golden_hoe
-execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_pickaxe"} run function gm4_disassemblers:items/golden_pickaxe
-execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_shovel"} run function gm4_disassemblers:items/golden_shovel
+# gold
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_axe"} run function gm4_disassemblers:items/golden_axe
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_hoe"} run function gm4_disassemblers:items/golden_hoe
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_shovel"} run function gm4_disassemblers:items/golden_shovel
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_sword"} run function gm4_disassemblers:items/golden_sword
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_pickaxe"} run function gm4_disassemblers:items/golden_pickaxe
+
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_chestplate"} run function gm4_disassemblers:items/golden_chestplate
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_leggings"} run function gm4_disassemblers:items/golden_leggings
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_boots"} run function gm4_disassemblers:items/golden_boots
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:golden_helmet"} run function gm4_disassemblers:items/golden_helmet
+
+# iron
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_axe"} run function gm4_disassemblers:items/iron_axe
-execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_sword"} run function gm4_disassemblers:items/iron_sword
-execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_helmet"} run function gm4_disassemblers:items/iron_helmet
-execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_leggings"} run function gm4_disassemblers:items/iron_leggings
-execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_boots"} run function gm4_disassemblers:items/iron_boots
-execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_chestplate"} run function gm4_disassemblers:items/iron_chestplate
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_hoe"} run function gm4_disassemblers:items/iron_hoe
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_pickaxe"} run function gm4_disassemblers:items/iron_pickaxe
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_shovel"} run function gm4_disassemblers:items/iron_shovel
-execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_hoe"} run function gm4_disassemblers:items/iron_hoe
-execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:shears"} run function gm4_disassemblers:items/shears
-execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:flint_and_steel"} run function gm4_disassemblers:items/flint_and_steel
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_sword"} run function gm4_disassemblers:items/iron_sword
+
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_helmet"} run function gm4_disassemblers:items/iron_helmet
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_chestplate"} run function gm4_disassemblers:items/iron_chestplate
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_leggings"} run function gm4_disassemblers:items/iron_leggings
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:iron_boots"} run function gm4_disassemblers:items/iron_boots
+
+# leather
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:leather_helmet"} run function gm4_disassemblers:items/leather_helmet
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:leather_chestplate"} run function gm4_disassemblers:items/leather_chestplate
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:leather_leggings"} run function gm4_disassemblers:items/leather_leggings
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:leather_boots"} run function gm4_disassemblers:items/leather_boots
+
+# stone
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:stone_axe"} run function gm4_disassemblers:items/stone_axe
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:stone_hoe"} run function gm4_disassemblers:items/stone_hoe
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:stone_shovel"} run function gm4_disassemblers:items/stone_shovel
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:stone_sword"} run function gm4_disassemblers:items/stone_sword
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:stone_pickaxe"} run function gm4_disassemblers:items/stone_pickaxe
+
+# wood
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:wooden_axe"} run function gm4_disassemblers:items/wooden_axe
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:wooden_hoe"} run function gm4_disassemblers:items/wooden_hoe
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:wooden_shovel"} run function gm4_disassemblers:items/wooden_shovel
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:wooden_sword"} run function gm4_disassemblers:items/wooden_sword
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:wooden_pickaxe"} run function gm4_disassemblers:items/wooden_pickaxe
+
+# misc
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:shears"} run function gm4_disassemblers:items/shears
+execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:flint_and_steel"} run function gm4_disassemblers:items/flint_and_steel
+
 
 data remove storage gm4_disassemblers:temp/item Item
 
