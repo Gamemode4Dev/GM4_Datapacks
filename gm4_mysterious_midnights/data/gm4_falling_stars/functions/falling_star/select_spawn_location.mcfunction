@@ -6,7 +6,7 @@
 # spawn impact points
 function gm4_falling_stars:falling_star/accumulate_impact_points
 scoreboard players reset $loop_count gm4_mm_data
-execute as @e[type=marker,tag=gm4_falling_stars_impact_point] at @s run particle composter ~ ~ ~ 0 0 0 0 1 force
+
 # spread impact points
 execute store success score $spread_successful gm4_mm_data run spreadplayers ~ ~ 1 64 false @e[type=marker,tag=gm4_falling_stars_impact_point,distance=..4]
 
