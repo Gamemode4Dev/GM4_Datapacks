@@ -3,4 +3,4 @@
 # located at @s
 # run from advancement gm4_smelteries:guidebook/page_<number>
 
-tellraw @a ["",{"selector":"@s"},{"text":" "},{"translate":"%1$s%3427655$s","with":[{"text":"has discovered a guidebook page from"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.discovered"}]}]},{"text":" "},{"text":"[Smelteries]","color":"#4AA0C7","hoverEvent":{"action":"show_text","contents":[{"text":"Smelteries","color":"#4AA0C7"},{"text":"\n"},{"text":"Double your ore output with this multi-block structure.","italic":true,"color":"gray"}]}}]
+tellraw @s ["",{"selector":"@s"},{"text":" "},{"translate":"%1$s%3427655$s","with":[{"text":"has discovered a guidebook page from"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.discovered"}]}]},{"text":" "},{"text":"[Smelteries]","color":"#4AA0C7","hoverEvent":{"action":"show_text","contents":[{"text":"Smelteries","color":"#4AA0C7"},{"text":"\n"},{"text":"Double your ore output with this multi-block structure.","italic":true,"color":"gray"}]}}]

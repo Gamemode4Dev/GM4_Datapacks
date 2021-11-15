@@ -3,4 +3,4 @@
 # located at @s
 # run from advancement gm4_vibro_shamir:guidebook/page_<number>
 
-tellraw @a ["",{"selector":"@s"},{"text":" "},{"translate":"%1$s%3427655$s","with":[{"text":"has discovered a guidebook page from"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.discovered"}]}]},{"text":" "},{"text":"[Vibro Shamir]","color":"#4AA0C7","hoverEvent":{"action":"show_text","contents":[{"text":"Vibro Shamir","color":"#4AA0C7"},{"text":"\n"},{"text":"Custom ores and custom enchants for your tools and armour!","italic":true,"color":"gray"}]}}]
+tellraw @s ["",{"selector":"@s"},{"text":" "},{"translate":"%1$s%3427655$s","with":[{"text":"has discovered a guidebook page from"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.discovered"}]}]},{"text":" "},{"text":"[Vibro Shamir]","color":"#4AA0C7","hoverEvent":{"action":"show_text","contents":[{"text":"Vibro Shamir","color":"#4AA0C7"},{"text":"\n"},{"text":"Custom ores and custom enchants for your tools and armour!","italic":true,"color":"gray"}]}}]

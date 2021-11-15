@@ -3,4 +3,4 @@
 # located at @s
 # run from advancement gm4_enchantment_extractors:guidebook/page_<number>
 
-tellraw @a ["",{"selector":"@s"},{"text":" "},{"translate":"%1$s%3427655$s","with":[{"text":"has discovered a guidebook page from"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.discovered"}]}]},{"text":" "},{"text":"[Enchantment Extractors]","color":"#4AA0C7","hoverEvent":{"action":"show_text","contents":[{"text":"Enchantment Extractors","color":"#4AA0C7"},{"text":"\n"},{"text":"Collects enchantments from tools, armour and weapons.","italic":true,"color":"gray"}]}}]
+tellraw @s ["",{"selector":"@s"},{"text":" "},{"translate":"%1$s%3427655$s","with":[{"text":"has discovered a guidebook page from"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.discovered"}]}]},{"text":" "},{"text":"[Enchantment Extractors]","color":"#4AA0C7","hoverEvent":{"action":"show_text","contents":[{"text":"Enchantment Extractors","color":"#4AA0C7"},{"text":"\n"},{"text":"Collects enchantments from tools, armour and weapons.","italic":true,"color":"gray"}]}}]

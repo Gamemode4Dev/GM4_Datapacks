@@ -3,4 +3,4 @@
 # located at @s
 # run from advancement gm4_block_compressors:guidebook/page_<number>
 
-tellraw @a ["",{"selector":"@s"},{"text":" "},{"translate":"%1$s%3427655$s","with":[{"text":"has discovered a guidebook page from"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.discovered"}]}]},{"text":" "},{"text":"[Block Compressors]","color":"#4AA0C7","hoverEvent":{"action":"show_text","contents":[{"text":"Block Compressors","color":"#4AA0C7"},{"text":"\n"},{"text":"Compress stacks of blocks down for compact storage, or decompress them again.","italic":true,"color":"gray"}]}}]
+tellraw @s ["",{"selector":"@s"},{"text":" "},{"translate":"%1$s%3427655$s","with":[{"text":"has discovered a guidebook page from"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.discovered"}]}]},{"text":" "},{"text":"[Block Compressors]","color":"#4AA0C7","hoverEvent":{"action":"show_text","contents":[{"text":"Block Compressors","color":"#4AA0C7"},{"text":"\n"},{"text":"Compress stacks of blocks down for compact storage, or decompress them again.","italic":true,"color":"gray"}]}}]
