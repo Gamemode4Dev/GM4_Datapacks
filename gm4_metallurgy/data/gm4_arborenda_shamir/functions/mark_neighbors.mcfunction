@@ -15,5 +15,7 @@ execute positioned ~-1 ~ ~-1 if block ~ ~ ~ #gm4_arborenda_shamir:logs unless bl
 
 execute positioned ~ ~1 ~ unless block ~ ~ ~ #gm4_arborenda_shamir:logs run function gm4_arborenda_shamir:mark_neighbors_top
 
+execute if block ~ ~ ~ #gm4_arborenda_shamir:huge_fungus positioned ~ ~-1 ~ run function gm4_arborenda_shamir:mark_neighbors_bottom
+
 scoreboard players add chop_count gm4_ml_data 1
 tag @s remove gm4_arborenda_init
