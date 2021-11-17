@@ -5,4 +5,4 @@
 
 advancement revoke @s only gm4_chairs:lightning
 
-execute as @e[type=zombified_piglin,nbt={NoAI:1b}] unless data entity @s Tags at @s run function gm4_chairs:lightning/revive_chair
+execute as @e[type=zombified_piglin,nbt={NoAI:1b}] unless data entity @s Tags at @s if block ~ ~1 ~ #minecraft:stairs run function gm4_chairs:lightning/revive_chair
