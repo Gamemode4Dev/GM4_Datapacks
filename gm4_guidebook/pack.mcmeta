@@ -12,6 +12,7 @@
     },
     "module_name": "Guidebook",
     "module_id": "guidebook",
+    "hidden": true,
     "libraries": [
         "lib_forceload"
     ],
