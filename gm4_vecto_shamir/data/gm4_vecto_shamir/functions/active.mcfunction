@@ -1,5 +1,6 @@
-#run from main
-#@s = player with shamir equipped, sneaking
+# @s = player with shamir equipped, sneaking
+# at @s
+# run from main
 
 # minecart
 execute if block ~ ~ ~ #minecraft:rails run function gm4_vecto_shamir:vehicle/spawn_minecart
