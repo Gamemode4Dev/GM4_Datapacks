@@ -76,6 +76,19 @@
                 "type": "minecraft:horse"
               }
             }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "vehicle": {
+                  "type": "minecraft:horse",
+                  "nbt": "{NoAI:1b}"
+                }
+              }
+            }
           }
         ]
       }
