@@ -1,0 +1,29 @@
+{
+    "criteria": {
+      "apple": {
+        "trigger": "minecraft:player_interacted_with_entity",
+        "conditions": {
+          "item": {
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          },
+          "entity": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "minecraft:armor_stand",
+                "nbt": "{Tags:[\"gm4_ripe_apple\"]}"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "gm4_apple_trees:apple/interact"
+    }
+  }
+  
