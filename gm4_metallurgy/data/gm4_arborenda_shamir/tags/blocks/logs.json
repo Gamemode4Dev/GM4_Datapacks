@@ -1,5 +1,6 @@
 {
-	"values": [	
+	"values": [
+		"#gm4_arborenda_shamir:huge_fungus",
 		"minecraft:oak_log",
 		"minecraft:oak_wood",
 		"minecraft:birch_log",
@@ -15,8 +16,6 @@
 		"minecraft:crimson_stem",
 		"minecraft:crimson_hyphae",
 		"minecraft:warped_stem",
-		"minecraft:warped_hyphae",
-		"#minecraft:wart_blocks",
-		"minecraft:shroomlight"
+		"minecraft:warped_hyphae"
 	]
 }
