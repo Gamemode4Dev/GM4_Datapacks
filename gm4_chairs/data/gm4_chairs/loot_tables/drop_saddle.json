@@ -1,12 +1,24 @@
 {
-  "type": "minecraft:generic",
   "pools": [
     {
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:saddle"
+          "name": "minecraft:saddle",
+          "functions": [
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "this",
+              "ops": [
+                {
+                  "source": "HandItems[0].tag",
+                  "target": "{}",
+                  "op": "merge"
+                }
+              ]
+            }
+          ]
         }
       ]
     }

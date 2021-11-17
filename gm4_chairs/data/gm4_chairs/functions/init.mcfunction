@@ -6,5 +6,6 @@ execute unless score chairs gm4_modules matches 1 run data modify storage gm4:lo
 scoreboard players set chairs gm4_modules 1
 
 schedule function gm4_chairs:main 1t
+schedule function gm4_chairs:sit/check 1t
 
 #$moduleUpdateList
