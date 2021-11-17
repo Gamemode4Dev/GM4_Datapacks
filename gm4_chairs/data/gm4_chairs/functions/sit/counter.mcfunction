@@ -4,7 +4,7 @@
 # run from function sit/check
 
 # increase time sitting in chair
-scoreboard players add @s gm4_chairs_sit 1
+scoreboard players add @s gm4_chairs_sit 10
 
 # sit in a chair for 1 hour
-execute if score @s gm4_chairs_sit matches 360.. run advancement grant @s only gm4:chairs_sit
+advancement grant @s[scores={gm4_chairs_sit=3600..3609}] only gm4:chairs_sit
