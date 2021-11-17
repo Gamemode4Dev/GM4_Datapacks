@@ -9,4 +9,7 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_percurro_sh
 
 schedule function gm4_percurro_shamir:main 10t
 
+# guidebook
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 3337.509617641432 ~ {CustomName:'"gm4_percurro_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"percurro_shamir",page_count:2,line_count:1,module_name:"Percurro Shamir"}}
+
 #$moduleUpdateList

@@ -11,4 +11,7 @@ scoreboard players set orbis gm4_modules 1
 
 schedule function gm4_orbis:tick 1t
 
+# guidebook
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 3226.294099390581 ~ {CustomName:'"gm4_orbis_guide"',Tags:["gm4_guide"],data:{type:"base",expansions:[],id:"orbis",page_count:1,line_count:1,module_name:"Orbis"}}
+
 #$moduleUpdateList

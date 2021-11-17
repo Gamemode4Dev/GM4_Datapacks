@@ -8,4 +8,7 @@ scoreboard players set custom_crafters gm4_modules 1
 
 schedule function gm4_custom_crafters:main 1t
 
+# guidebook
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 783.392311518527 ~ {CustomName:'"gm4_custom_crafters_guide"',Tags:["gm4_guide"],data:{type:"base",expansions:[],id:"custom_crafters",page_count:2,line_count:1,module_name:"Custom Crafters"}}
+
 #$moduleUpdateList

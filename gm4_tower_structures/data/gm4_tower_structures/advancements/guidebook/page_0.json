@@ -1,0 +1,253 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:ladder",
+      "nbt": "{CustomModelData:3420003}"
+    },
+    "title": {
+      "text": "Check your guidebook!",
+      "color": "#4AA0C7",
+      "italic": true
+    },
+    "description": "Tower Structures",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "parent": "gm4_guidebook:root",
+  "criteria": {
+    "requirement_1": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "player": {
+                  "gamemode": "spectator"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_tower_structures"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "loot_table": "gm4_orbis:chests/tower_70"
+      }
+    },
+    "requirement_2": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "player": {
+                  "gamemode": "spectator"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_tower_structures"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "loot_table": "gm4_orbis:chests/tower_90"
+      }
+    },
+    "requirement_3": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "player": {
+                  "gamemode": "spectator"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_tower_structures"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "loot_table": "gm4_orbis:chests/tower_110"
+      }
+    },
+    "requirement_4": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "player": {
+                  "gamemode": "spectator"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_tower_structures"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "loot_table": "gm4_orbis:chests/tower_130"
+      }
+    },
+    "requirement_5": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "player": {
+                  "gamemode": "spectator"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_tower_structures"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "loot_table": "gm4_orbis:chests/tower_150"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement_1",
+      "requirement_2",
+      "requirement_3",
+      "requirement_4",
+      "requirement_5"
+    ]
+  ],
+  "rewards": {
+    "function": "gm4_tower_structures:guidebook/unlock_page"
+  }
+}

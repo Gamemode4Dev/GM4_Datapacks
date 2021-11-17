@@ -9,4 +9,7 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_vigere_sham
 
 schedule function gm4_vigere_shamir:main 1t
 
+# guidebook
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 4600.271647537812 ~ {CustomName:'"gm4_vigere_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"vigere_shamir",page_count:2,line_count:1,module_name:"Vigere Shamir"}}
+
 #$moduleUpdateList

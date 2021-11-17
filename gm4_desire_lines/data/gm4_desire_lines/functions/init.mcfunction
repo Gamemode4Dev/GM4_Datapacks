@@ -13,4 +13,8 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_celaro_sham
 
 schedule function gm4_desire_lines:tick 1t
 
+# guidebook
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 867.159872053633 ~ {CustomName:'"gm4_desire_lines_guide"',Tags:["gm4_guide"],data:{type:"module",id:"desire_lines",page_count:2,line_count:1,module_name:"Desire Lines"}}
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 659.208197558196 ~ {CustomName:'"gm4_celaro_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"celaro_shamir",page_count:2,line_count:1,module_name:"Celaro Shamir"}}
+
 #$moduleUpdateList

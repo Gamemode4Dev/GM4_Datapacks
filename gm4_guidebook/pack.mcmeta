@@ -1,0 +1,33 @@
+{
+    "pack": {
+        "pack_format": 7,
+        "description": [
+            "Guidebook",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.17",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Guidebook",
+    "module_id": "guidebook",
+    "hidden": true,
+    "libraries": [
+        "lib_forceload"
+    ],
+    "site_description": "Adds a dynamic guidebook to discover the mechanics of Gamemode 4!",
+    "site_categories": [],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            [
+                "BluePsychoRanger",
+                "https://www.twitter.com/BluPsychoRanger"
+            ]
+        ]
+    }
+}
