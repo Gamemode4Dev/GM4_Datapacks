@@ -13,7 +13,9 @@
   "module_name": "Lightning in a Bottle",
   "module_id": "lightning_in_a_bottle",
   "libraries": [
-    "lib_brewing"
+    "lib_brewing",
+    "lib_forceload",
+    "lib_potion_tracking"
   ],
   "site_description": "Bottle and harness the power of lightning!",
   "site_categories": [],
@@ -27,6 +29,10 @@
   ],
   "credits": {
     "Creator": [
+      [
+        "BluePsychoRanger",
+        "https://www.twitter.com/BluPsychoRanger"
+      ],
       [
         "Epyon",
         ""

@@ -1,6 +1,7 @@
 {
   "values": [
       { "id": "#load:gm4_brewing", "required": false },
+      { "id": "#load:gm4_potion_tracking", "required": false },
       "gm4_lightning_in_a_bottle:load"
   ]
 }

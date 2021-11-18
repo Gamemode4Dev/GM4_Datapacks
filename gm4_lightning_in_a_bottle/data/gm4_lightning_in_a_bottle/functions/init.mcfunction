@@ -4,5 +4,4 @@ execute unless score lightning_in_a_bottle gm4_modules matches 1 run data modify
 scoreboard players set lightning_in_a_bottle gm4_modules 1
 
 
-schedule function gm4_lightning_in_a_bottle:tick 1t
 schedule function gm4_lightning_in_a_bottle:main 2t
