@@ -1,4 +1,5 @@
 scoreboard objectives add gm4_dimension dummy
+gamerule commandBlockOutput false
 
 execute store success score $initialized gm4_dimension if block 29999998 1 7133 birch_wall_sign
 execute if score $initialized gm4_dimension matches 0 run summon marker ~ 0 ~ {CustomName:'"minecraft:overworld"',Tags:["gm4_dimension","gm4_new_dimension"]}
