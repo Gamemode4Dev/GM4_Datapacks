@@ -24,7 +24,7 @@
       "color": "gray"
     }
   },
-  "parent": "gm4:lightning_in_a_bottle",
+  "parent": "gm4:lightning_in_a_bottle_drink",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:impossible"
