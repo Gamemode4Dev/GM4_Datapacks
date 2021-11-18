@@ -9,4 +9,4 @@ summon lightning_bolt ~ ~ ~
 
 effect give @s speed 2 3
 
-advancement grant @s only gm4:lightning_in_a_bottle
+advancement grant @s only gm4:lightning_in_a_bottle_drink
