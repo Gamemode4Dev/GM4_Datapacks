@@ -1,0 +1,26 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "nbt": "{data:{gm4_potion:{Item:{tag:{Potion:'minecraft:invisibility'}}}}}"
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "nbt": "{data:{gm4_potion:{Item:{tag:{Potion:'minecraft:long_invisibility'}}}}}"
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "nbt": "{data:{gm4_potion:{Item:{tag:{CustomPotionEffects:[{Id:14b}]}}}}}"
+      }
+    }
+  ]
+}
