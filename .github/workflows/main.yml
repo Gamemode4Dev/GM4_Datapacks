@@ -1,0 +1,24 @@
+name: Build modules
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install beet
+
+      - name: Build modules
+        run: beet build
