@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,3 +22,25 @@ jobs:
 
       - name: Build modules
         run: beet build
+
+      - name: Prepare release
+      - uses: actions/checkout@v2
+        with:
+          ref: release
+          fetch-depth: 0
+          path: '../release'
+
+      - name: Commit release
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          mv -r out ../release
+          cd ../release
+          git add .
+          git commit -m "Update modules"
+
+      - name: Push release
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: release
