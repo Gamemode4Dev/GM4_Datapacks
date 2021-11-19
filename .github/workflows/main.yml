@@ -32,10 +32,9 @@ jobs:
 
       - name: Commit release
         run: |
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-          rm -r release/*.zip
-          mv out release
+          git config --global user.email "actions@github.com"
+          git config --global user.name "actions-user"
+          mv -f out/* release
           cd release
           git add .
           git commit -m "Update modules"
