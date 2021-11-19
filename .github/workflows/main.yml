@@ -28,14 +28,14 @@ jobs:
         with:
           ref: release
           fetch-depth: 0
-          path: '../release'
+          path: release
 
       - name: Commit release
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          mv -r out ../release
-          cd ../release
+          mv -r out release/out
+          cd release
           git add .
           git commit -m "Update modules"
 
