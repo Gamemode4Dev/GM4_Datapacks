@@ -18,7 +18,7 @@ jobs:
           cache: pip
 
       - name: Install dependencies
-        run: pip install beet
+        run: pip install -r requirements.txt
 
       - name: Build modules
         run: beet build
