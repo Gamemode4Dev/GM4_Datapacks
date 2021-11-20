@@ -12,10 +12,12 @@ jobs:
       - uses: actions/checkout@v2
       - uses: mcbeet/check-commands@v1
         with:
-          source: base gm4_* lib_*
+          minecraft: '1.17'
+          source: base gm4_* lib_* !gm4_template_pack
           version: '0.13.3'
 
   release:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
