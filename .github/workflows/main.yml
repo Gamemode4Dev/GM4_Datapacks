@@ -13,7 +13,7 @@ jobs:
       - uses: mcbeet/check-commands@v1
         with:
           minecraft: '1.17'
-          source: base gm4_* lib_* !gm4_template_pack
+          source: base gm4_!(template_pack) lib_*
           version: '0.13.3'
 
   release:
