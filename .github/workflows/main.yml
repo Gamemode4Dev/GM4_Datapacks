@@ -2,7 +2,7 @@ name: Check and build modules
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, ver/1.16, ver/1.15, ver/1.14, ver/1.13 ]
   workflow_dispatch:
 
 jobs:
@@ -40,7 +40,7 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "actions-user"
-          mv -f out/* release
+          mv -f out/* release/$GITHUB_REF_NAME
           cd release
           git add .
           git commit -m "Update modules"
