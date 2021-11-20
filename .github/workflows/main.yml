@@ -40,7 +40,7 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "actions-user"
-          mkdir release/$GITHUB_REF_NAME
+          mkdir -p release/$GITHUB_REF_NAME
           mv -f out/* release/$GITHUB_REF_NAME
           cd release
           git add .
