@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: mcbeet/check-commands@v1
         with:
-          source: path/to/my_data_pack
+          source: gm4_*
 
   release:
     needs: test
