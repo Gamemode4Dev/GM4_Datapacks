@@ -1,58 +1,67 @@
-In order to add lib_brewing, first add the library to pack.mcmeta and load. 
-- add the following line to the `"libraries"` array in <pack.mcmeta>. If the `"libraries"` array does not exist, create one below `"module_id"`
-    - `"lib_brewing"`
+# lib_brewing
+lib_brewing is a mcfunction library that allows other datapacks to replace custom potions with splash and lingering potions when brewed in a brewing stand. This is used to prevent the `Uncraftable Splash Potion` and `Uncraftable Lingering Potion` items from being obtainable.
 
-
-- add the following line to the `"values"` array in </data/load/tags/functions/load:MODULE_ID.json>. This line should go above the load function that initializes the module
-    - `{ "id": "#load:gm4_brewing", "required": false }`
-
-
-- in </data/MODULE_ID/functions/load.mcfunction>, add the following code to the line 1. This text should be right before the words `run scoreboard players set MODULE_ID load.status 1`
-    - `if score gm4_brewing load.status matches 1 `
-
-
-- add the following line to </data/MODULE_ID/functions/load.mcfunction>. This line should go below the other missing log functions
-    - `execute unless score gm4_brewing load.status matches 1 run data modify storage gm4:log queue append value {type:"missing",module:"MODULE_NAME",require:"lib_brewing"}`
-
-
-
-
-
+## How to Use
 Next to allow the module to utilize the library, two functions tags, two functions, and two loot tables should be created.
-- create the function tag file </data/gm4_brewing/tags/functions/insert/splash.json>
+- create the function tag file 
+
+    `/data/gm4_brewing/tags/functions/insert/splash.json`
+
+    with the following code:
+```json
 {
     "values": [
         "MODULE_ID:brewing_stand/splash"
     ]
 }
+```
 
+- create the function tag file 
 
-- create the function tag file </data/gm4_brewing/tags/functions/insert/lingering.json>
+    `/data/gm4_brewing/tags/functions/insert/splash.json`
+
+    with the following code:
+```json
 {
     "values": [
         "MODULE_ID:brewing_stand/lingering"
     ]
 }
+```
 
+- create the function file 
 
-- create the function file </data/MODULE_ID/functions/brewing_stand/splash.mcfunction>
+    `/data/MODULE_ID/functions/brewing_stand/splash.mcfunction`
+
+    with the following code:
+```mcfunction
 # @s = brewing stand marker with a custom potion to be converted to a splash potion
 # run from #gm4_brewing:insert/splash
 
 loot spawn ~ ~ ~ loot MODULE_ID:technical/brewing_stand/splash
 # uncomment this line to completely clear the potion VV
 # execute if <...> run scoreboard players set $insert gm4_brewing_data -1
+```
 
+- create the function file 
 
-- create the function file </data/MODULE_ID/functions/brewing_stand/lingering.mcfunction>
+    `/data/MODULE_ID/functions/brewing_stand/lingering.mcfunction`
+
+    with the following code:
+```mcfunction
 # @s = brewing stand marker with a custom splash potion to be converted to a lingering potion
 # run from #gm4_brewing:insert/lingering
 
 loot spawn ~ ~ ~ loot MODULE_ID:brewing_stand/lingering
 # uncomment this line to completely clear the potion VV
 # execute if <...> run scoreboard players set $insert gm4_brewing_data -1
+```
 
-- create the loot table file </data/MODULE_ID/loot_tables/technical/brewing_stand/splash.json>
+- create the loot table file 
+    `/data/MODULE_ID/loot_tables/technical/brewing_stand/splash.json>`
+
+    with the following code:
+```json
 {
     "pools": [
         {
@@ -69,7 +78,7 @@ loot spawn ~ ~ ~ loot MODULE_ID:brewing_stand/lingering
                                     "condition": "minecraft:entity_properties",
                                     "entity": "this",
                                     "predicate": {
-                                        "nbt": "{data:{Insert:{tag:{INDICATION NBT FOR POTION 1}}}}"
+                                        "nbt": "{data:{gm4_brewing:{insert:{tag:{INDICATION NBT FOR POTION 1}}}}"
                                     }
                                 }
                             ]
@@ -82,7 +91,7 @@ loot spawn ~ ~ ~ loot MODULE_ID:brewing_stand/lingering
                                     "condition": "minecraft:entity_properties",
                                     "entity": "this",
                                     "predicate": {
-                                        "nbt": "{data:{Insert:{tag:{INDICATION NBT FOR POTION 2}}}}"
+                                        "nbt": "{data:{gm4_brewing:{insert:{tag:{INDICATION NBT FOR POTION 2}}}}"
                                     }
                                 }
                             ]
@@ -99,9 +108,14 @@ loot spawn ~ ~ ~ loot MODULE_ID:brewing_stand/lingering
         }
     ]
 }
+```
 
+- create the loot table file 
 
-- create the loot table file </data/MODULE_ID/loot_tables/technical/brewing_stand/lingering.json>
+    `/data/MODULE_ID/loot_tables/technical/brewing_stand/lingering.json`
+
+    with the following code:
+```json
 {
     "pools": [
         {
@@ -118,7 +132,7 @@ loot spawn ~ ~ ~ loot MODULE_ID:brewing_stand/lingering
                                     "condition": "minecraft:entity_properties",
                                     "entity": "this",
                                     "predicate": {
-                                        "nbt": "{data:{Insert:{tag:{INDICATION NBT FOR SPLASH POTION 1}}}}"
+                                        "nbt": "{data:{gm4_brewing:{insert:{tag:{INDICATION NBT FOR SPLASH POTION 1}}}}"
                                     }
                                 }
                             ]
@@ -131,7 +145,7 @@ loot spawn ~ ~ ~ loot MODULE_ID:brewing_stand/lingering
                                     "condition": "minecraft:entity_properties",
                                     "entity": "this",
                                     "predicate": {
-                                        "nbt": "{data:{Insert:{tag:{INDICATION NBT FOR SPLASH POTION 2}}}}"
+                                        "nbt": "{data:{gm4_brewing:{insert:{tag:{INDICATION NBT FOR SPLASH POTION 2}}}}"
                                     }
                                 }
                             ]
@@ -148,14 +162,25 @@ loot spawn ~ ~ ~ loot MODULE_ID:brewing_stand/lingering
         }
     ]
 }
+```
 
+## Additional Functionality
+- the contents of the brewing stand the tick before it finishes brewing can be found by the entity nbt of the marker under the following namespace:
+```mcfunction
+execute if data entity @s data.gm4_brewing.insert.tag.<ITEM_NBT>
+```
 
+- in the two created function files (`/brewing_stand/splash.mcfunction` and `/brewing_stand/lingering.mcfunction`) additonal commands can be run before the `/loot` command to change the outcome of the loot tables. 
 
+- Using the following command will clear the custom potion from the brewing stand:
+```mcfunction
+scoreboard players set $insert gm4_brewing_data -1
+```
 
-Additional functionality is available:
-- in the two created function files (<brewing_stand/splash.mcfunction> and <brewing_stand/lingering.mcfunction>) additonal commands can be run before the `/loot` command, in order to change the outcome of the loot tables
-
-- the function tag </data/gm4_brewing/tags/functions/finish_brew.json> runs AFTER default interactions of creating splash and lingering potions
+- the function tag 
+    `/data/gm4_brewing/tags/functions/finish_brew.json`
+    
+    runs AFTER default interactions of creating splash and lingering potions
     - to test for items in the brewing stand, use the entity data from the marker:
         - `execute if entity @s[nbt={data:{BLOCK_DATA}}]`
         - e.g. this is the code that checks if a splash potion should be created: 
