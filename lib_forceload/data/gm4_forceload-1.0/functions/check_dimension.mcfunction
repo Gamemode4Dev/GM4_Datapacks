@@ -10,4 +10,4 @@ execute if score $initialized gm4_dimension matches 0 run function gm4_forceload
 
 # remove during 1.19 update: updates chunk to include command block
 execute if score $initialized gm4_dimension matches 1 unless block 29999998 1 7131 minecraft:repeating_command_block run fill 29999998 0 7130 29999998 2 7130 minecraft:bedrock
-execute if score $initialized gm4_dimension matches 1 unless block 29999998 1 7131 minecraft:repeating_command_block run setblock 29999998 1 7131 minecraft:repeating_command_block{auto:1b,Command:"function #gm4:command_block_tick"}
+execute if score $initialized gm4_dimension matches 1 unless block 29999998 1 7131 minecraft:repeating_command_block run setblock 29999998 1 7131 minecraft:repeating_command_block{auto:1b,Command:"function #gm4_forceload:command_block_tick"}

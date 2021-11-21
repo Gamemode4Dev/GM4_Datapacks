@@ -17,4 +17,4 @@ A function tag under the namespace `#gm4_potion_tracking:potion_landed` can be u
 
 When the potion lands, data storage under the namespace `gm4_potion_tracking:temp entity_data` is set to the original potion's entity nbt (set from the marker's entity NBT `{data:{gm4_potion:{<This data is copied over>}}}`). 
 
-The storage should be used to verify if the potion matches the module's custom potion. The marker's entity nbt _can_ be used, but storage look up is more efficient. The marker's nbt should really only be used for predicate checks (i.e. multiple checks).
+The storage should be used to verify if the potion matches the module's custom potion. The marker's entity nbt is available (This is `@s` in the context of the function tag), but storage look up is more efficient in almost all cases.

@@ -1,6 +1,6 @@
 {
     "values": [
-        { "id": "#load:gm4_forceload", "required": false},
+        "#load:gm4_potion_tracking/dependencies",
         "#load:gm4_potion_tracking/enumerate",
         "#load:gm4_potion_tracking/resolve_load"
     ]
