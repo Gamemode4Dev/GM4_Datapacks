@@ -1,7 +1,7 @@
 # runs commands for all custom potions
 # @s = custom gm4 potion (tag=gm4_potion)
 # located at @s
-# run from gm4_potion_tracking-1.0:tick
+# run from gm4_potion_tracking-1.0:potion
 
 # initialize potions
 execute unless score @s gm4_potion_id = @s gm4_potion_id run function gm4_potion_tracking-1.0:track/initialize_potion

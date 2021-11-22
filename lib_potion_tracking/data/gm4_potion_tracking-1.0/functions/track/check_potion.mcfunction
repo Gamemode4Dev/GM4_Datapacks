@@ -1,7 +1,7 @@
 # checks if potions should be tracked
 # @s = all potions that haven't yet been checked
 # located at world spawn
-# run from gm4_potion_tracking-1.0:tick
+# run from gm4_potion_tracking-1.0:potion
 
 
 # set storage to be used when the function tag below is called
