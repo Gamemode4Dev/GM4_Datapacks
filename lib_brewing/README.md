@@ -182,6 +182,6 @@ scoreboard players set $insert gm4_brewing_data -1
     
     runs AFTER default interactions of creating splash and lingering potions
     - to test for items in the brewing stand, use the entity data from the marker:
-        - `execute if entity @s[nbt={data:{BLOCK_DATA}}]`
+        - `execute if entity @s[nbt={data:{gm4_brewing:{previous_items:[BLOCK_DATA]}}}]`
         - e.g. this is the code that checks if a splash potion should be created: 
-            - `execute if entity @s[nbt={data:{Items:[{Slot:3b,id:"minecraft:gunpowder"}]}}]`
+            - `execute if entity @s[nbt={data:{gm4_brewing:{previous_items:[{Slot:3b,id:"minecraft:gunpowder"}]}}}]`

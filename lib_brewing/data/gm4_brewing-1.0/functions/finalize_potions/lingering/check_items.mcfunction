@@ -2,7 +2,7 @@
 # run from finalize_potions/get_brewing_stand
 
 # store data into storage
-data modify storage gm4_brewing:temp Items set from entity @s data.Items
+data modify storage gm4_brewing:temp Items set from entity @s data.gm4_brewing.previous_items
 
 # check contents of block for splash potions
 execute if data storage gm4_brewing:temp Items[{Slot:0b,id:"minecraft:splash_potion"}] run function gm4_brewing-1.0:finalize_potions/lingering/slot_0
