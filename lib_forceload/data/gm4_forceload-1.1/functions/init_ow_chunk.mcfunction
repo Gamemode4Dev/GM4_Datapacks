@@ -1,7 +1,7 @@
 # @s = marker entity to forceload overworld
 # run from load
 
-function gm4_forceload-1.0:init_chunk
+function gm4_forceload-1.1:init_chunk
 setblock 29999998 1 7131 minecraft:repeating_command_block{auto:1b,Command:"function #gm4_forceload:command_block_tick"}
 
 scoreboard players add #max gm4_dimension 1
