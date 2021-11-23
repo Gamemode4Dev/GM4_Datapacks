@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:potion"
+          ],
+          "nbt": "{gm4_lightning_in_a_bottle:1b}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_lightning_in_a_bottle:lightning/strike_self"
+  }
+}

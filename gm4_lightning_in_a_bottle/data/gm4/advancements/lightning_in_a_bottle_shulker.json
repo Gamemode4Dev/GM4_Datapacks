@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:purpur_block",
+      "nbt": "{CustomModelData:3420001}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "It's Alive!",
+        {
+          "translate": "advancement.gm4.lightning_in_a_bottle.lightning_shulker.title"
+        }
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Strike a Purpur Block with lightning to create a Shulker",
+        {
+          "translate": "advancement.gm4.lightning_in_a_bottle.lightning_shulker.description"
+        }
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:lightning_in_a_bottle",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
