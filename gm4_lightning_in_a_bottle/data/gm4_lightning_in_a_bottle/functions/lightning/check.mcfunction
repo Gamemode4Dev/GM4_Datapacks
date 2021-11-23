@@ -19,7 +19,7 @@ execute align xyz positioned ~-3 ~-2 ~-3 as @e[type=pillager,dx=6,dy=11,dz=6] at
 execute align xyz positioned ~-3 ~-2 ~-3 as @e[type=guardian,dx=6,dy=11,dz=6] at @s run function gm4_lightning_in_a_bottle:entity/elder_guardian
 
 # Creeper Spawners struck by the lightning will become Charged Creepers Spawners
-execute if block ~ ~-1 ~ spawner{SpawnData:{id:"minecraft:creeper"}} run data merge block ~ ~-1 ~ {MaxSpawnDelay:801s,SpawnData:{id:"minecraft:creeper",powered:1b,DeathLootTable:"gm4_lightning_in_a_bottle:entities/charged_creeper"},SpawnPotentials:[{Entity:{id:"minecraft:creeper",powered:1b},Weight:1}]}
+execute if block ~ ~-1 ~ spawner{SpawnData:{id:"minecraft:creeper"}} run data merge block ~ ~-1 ~ {MaxSpawnDelay:801s,SpawnData:{id:"minecraft:creeper",powered:1b,},SpawnPotentials:[{Entity:{id:"minecraft:creeper",powered:1b,DeathLootTable:"gm4_lightning_in_a_bottle:entities/charged_creeper"},Weight:1}]}
 
 # Lightning-based block -> entity transformation
 # inside strike location
