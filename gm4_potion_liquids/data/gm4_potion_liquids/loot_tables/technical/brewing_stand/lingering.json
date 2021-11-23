@@ -1,0 +1,33 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:alternatives",
+                    "children": [
+                        {
+                            "type": "minecraft:loot_table",
+                            "name": "gm4_potion_liquids:lingering_floating_potion",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "nbt": "{data:{gm4_brewing:{insert:{tag:{Potion:\"potion_liquids:floating\"}}}}}"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_nbt",
+                    "tag": "{gm4_custom_potion:1b}"
+                }
+            ]
+        }
+    ]
+}
