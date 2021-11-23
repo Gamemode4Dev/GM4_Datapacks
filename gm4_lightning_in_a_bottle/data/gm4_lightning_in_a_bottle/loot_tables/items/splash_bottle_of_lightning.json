@@ -47,7 +47,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"gm4:lightning\",gm4_lightning_in_a_bottle:1b,HideFlags:33,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],CustomPotionColor:11985402}"
+              "tag": "{Potion:\"gm4:lightning\",gm4_lightning_in_a_bottle:1b,CustomModelData:3420004,HideFlags:33,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],CustomPotionColor:11985402}"
             }
           ]
         }
