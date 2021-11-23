@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:lightning_strike",
+      "conditions": {
+        "lightning": {
+          "distance": {
+            "absolute": {
+              "min": 0,
+              "max": 64
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_lightning_in_a_bottle:lightning/locate"
+  }
+}

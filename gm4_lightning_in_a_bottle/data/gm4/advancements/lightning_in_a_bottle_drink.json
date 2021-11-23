@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:potion",
+      "nbt": "{CustomModelData:3420003,CustomPotionColor:11985402,Enchantments:[{id:\"protection\",lvl:0}]}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Shocking!",
+        {
+          "translate": "advancement.gm4.lightning_in_a_bottle.lightning_drink.title"
+        }
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Drink a Bottle of Lightning",
+        {
+          "translate": "advancement.gm4.lightning_in_a_bottle.lightning_drink.description"
+        }
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
