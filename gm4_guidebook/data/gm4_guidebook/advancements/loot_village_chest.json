@@ -3,97 +3,321 @@
     "armorer": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_armorer"
+        "loot_table": "minecraft:chests/village/village_armorer",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "butcher": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_butcher"
+        "loot_table": "minecraft:chests/village/village_butcher",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "cartographer": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_cartographer"
+        "loot_table": "minecraft:chests/village/village_cartographer",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "desert_house": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_desert_house"
+        "loot_table": "minecraft:chests/village/village_desert_house",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "fisher": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_fisher"
+        "loot_table": "minecraft:chests/village/village_fisher",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "fletcher": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_fletcher"
+        "loot_table": "minecraft:chests/village/village_fletcher",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "mason": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_mason"
+        "loot_table": "minecraft:chests/village/village_mason",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "plains_house": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_plains_house"
+        "loot_table": "minecraft:chests/village/village_plains_house",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "savanna_house": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_savanna_house"
+        "loot_table": "minecraft:chests/village/village_savanna_house",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "shepherd": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_shepherd"
+        "loot_table": "minecraft:chests/village/village_shepherd",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "snowy_house": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_snowy_house"
+        "loot_table": "minecraft:chests/village/village_snowy_house",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "taiga_house": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_taiga_house"
+        "loot_table": "minecraft:chests/village/village_taiga_house",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "tannery": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_tannery"
+        "loot_table": "minecraft:chests/village/village_tannery",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "temple": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_temple"
+        "loot_table": "minecraft:chests/village/village_temple",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "toolsmith": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_toolsmith"
+        "loot_table": "minecraft:chests/village/village_toolsmith",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     },
     "weaponsmith": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_weaponsmith"
+        "loot_table": "minecraft:chests/village/village_weaponsmith",
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
       }
     }
   },
