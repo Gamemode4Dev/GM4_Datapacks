@@ -14,7 +14,7 @@
                                   "condition": "minecraft:entity_properties",
                                   "entity": "this",
                                   "predicate": {
-                                      "nbt": "{data:{Insert:{id:\"minecraft:potion\",tag:{Potion:\"gm4:lightning\",gm4_lightning_in_a_bottle:1b}}}}"
+                                      "nbt": "{data:{gm4_brewing:{insert:{tag:{Potion:\"gm4:lightning\",gm4_lightning_in_a_bottle:1b}}}}}"
                                   }
                               }
                           ]
