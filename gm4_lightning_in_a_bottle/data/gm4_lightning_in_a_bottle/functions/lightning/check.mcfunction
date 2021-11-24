@@ -8,7 +8,7 @@ tag @s add gm4_liab_processed
 
 # create Bottles of Lightning from Thick Potions in Brewing Stands under (or above) Lightning Rods
 execute if block ~ ~-.01 ~ lightning_rod[facing=up] if block ~ ~-1.01 ~ brewing_stand positioned ~ ~-1.01 ~ run function gm4_lightning_in_a_bottle:brewing_stand/check_fuel
-execute if block ~ ~-.01 ~ lightning_rod[facing=down] if block ~ ~.99 ~ brewing_stand run function gm4_lightning_in_a_bottle:brewing_stand/check_fuel
+execute if block ~ ~-.01 ~ lightning_rod[facing=down] if block ~ ~.99 ~ brewing_stand positioned ~ ~.99 ~ run function gm4_lightning_in_a_bottle:brewing_stand/check_fuel
 
 # Lightning-based mob transformation
 # Evokers -> Illusioners
