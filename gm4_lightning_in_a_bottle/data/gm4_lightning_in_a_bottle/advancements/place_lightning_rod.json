@@ -1,0 +1,24 @@
+{
+    "criteria": {
+        "place_lightning_rod": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "item": {
+                    "items": [
+                        "minecraft:lightning_rod"
+                    ]
+                },
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "minecraft:brewing_stand"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_lightning_in_a_bottle:brewing_stand/texture_connector/force_update"
+    }
+}

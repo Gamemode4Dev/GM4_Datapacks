@@ -6,3 +6,4 @@ execute unless score gm4 load.status matches 1 run data modify storage gm4:log q
 
 execute if score gm4_lightning_in_a_bottle load.status matches 1 run function gm4_lightning_in_a_bottle:init
 execute unless score gm4_lightning_in_a_bottle load.status matches 1 run schedule clear gm4_lightning_in_a_bottle:main
+execute unless score gm4_lightning_in_a_bottle load.status matches 1 run schedule clear gm4_lightning_in_a_bottle:brewing_stand/texture_connector/process

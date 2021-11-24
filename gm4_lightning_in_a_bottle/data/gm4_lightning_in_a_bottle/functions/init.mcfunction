@@ -6,3 +6,4 @@ scoreboard players set lightning_in_a_bottle gm4_modules 1
 
 
 schedule function gm4_lightning_in_a_bottle:main 2t
+schedule function gm4_lightning_in_a_bottle:brewing_stand/texture_connector/process 8t
