@@ -1,6 +1,7 @@
 from beet.toolchain.helpers import subproject
 from beet import Context
 import json
+import os
 
 BASE = "base"
 OUTPUT = "out"
@@ -10,11 +11,15 @@ def build_modules(ctx: Context):
 	modules = [{"id": p.name} for p in ctx.directory.glob("gm4_*")]
 	print(f"[GM4] Found {len(modules)} modules")
 
+	branch = os.getenv("BRANCH")
+	if branch is None:
+		print('BRANCH not set, defaulting to "master"')
+		branch = "master"
 	try:
-		with open(f"{RELEASE}/modules.json", "r") as f:
+		with open(f"{RELEASE}/{branch}/modules.json", "r") as f:
 			released_modules = json.load(f)
 	except:
-		released_modules = [{"id": "gm4_bat_grenades", "patch": 3}]
+		released_modules = []
 
 	for module in modules:
 		id = module["id"]
