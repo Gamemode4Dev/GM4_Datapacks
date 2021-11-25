@@ -14,7 +14,6 @@ jobs:
         with:
           minecraft: '1.17'
           source: base gm4_!(template_pack) lib_*
-          version: '0.13.3'
 
   release:
     runs-on: ubuntu-latest
