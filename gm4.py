@@ -13,8 +13,10 @@ def build_modules(ctx: Context):
 
 	branch = os.getenv("BRANCH")
 	if branch is None:
-		print('BRANCH not set, defaulting to "master"')
+		print("BRANCH not set, defaulting to 'master'")
 		branch = "master"
+	else:
+		print(f"Reading modules.json from {branch}")
 	try:
 		with open(f"{RELEASE}/{branch}/modules.json", "r") as f:
 			released_modules = json.load(f)
