@@ -17,7 +17,6 @@ jobs:
           version: '0.13.3'
 
   release:
-    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
