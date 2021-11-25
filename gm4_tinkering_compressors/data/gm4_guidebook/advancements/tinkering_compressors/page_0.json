@@ -15,7 +15,7 @@
     "announce_to_chat": false,
     "hidden": true
   },
-  "parent": "gm4_guidebook:block_compressors/page_2",
+  "parent": "gm4_guidebook:root",
   "criteria": {
     "requirement_1": {
       "trigger": "minecraft:inventory_changed",
@@ -67,48 +67,48 @@
           }
         ]
       }
-    }
-  },
-  "requirement_2": {
-    "trigger": "minecraft:tick",
-    "conditions": {
-      "player": [
-        {
-          "condition": "minecraft:value_check",
-          "value": {
-            "type": "minecraft:score",
-            "target": {
-              "type": "minecraft:fixed",
-              "name": "gm4_guidebook"
+    },
+    "requirement_2": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
             },
-            "score": "load.status"
+            "range": 1
           },
-          "range": 1
-        },
-        {
-          "condition": "minecraft:value_check",
-          "value": {
-            "type": "minecraft:score",
-            "target": {
-              "type": "minecraft:fixed",
-              "name": "gm4_tinkering_compressors"
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_tinkering_compressors"
+              },
+              "score": "load.status"
             },
-            "score": "load.status"
+            "range": 1
           },
-          "range": 1
-        },
-        {
-          "condition": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "player": {
-              "advancements": {
-                "gm4:block_compressors": true
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "advancements": {
+                  "gm4:block_compressors": true
+                }
               }
             }
           }
-        }
-      ]
+        ]
+      }
     },
     "unlocked_future_page": {
       "trigger": "minecraft:tick",
