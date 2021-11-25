@@ -34,8 +34,6 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build modules
         run: beet build
-        env:
-          BRANCH: $GITHUB_REF_NAME
       - name: Commit release
         run: |
           git config --global user.email "actions@github.com"

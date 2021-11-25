@@ -11,12 +11,7 @@ def build_modules(ctx: Context):
 	modules = [{"id": p.name} for p in ctx.directory.glob("gm4_*")]
 	print(f"[GM4] Found {len(modules)} modules")
 
-	branch = os.getenv("BRANCH")
-	if branch is None:
-		print("BRANCH not set, defaulting to 'master'")
-		branch = "master"
-	else:
-		print(f"Reading modules.json from {branch}")
+	branch = os.getenv("GITHUB_REF_NAME")
 	try:
 		with open(f"{RELEASE}/{branch}/modules.json", "r") as f:
 			released_modules = json.load(f)
