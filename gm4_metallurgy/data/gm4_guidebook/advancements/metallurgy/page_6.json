@@ -15,7 +15,7 @@
     "announce_to_chat": false,
     "hidden": true
   },
-  "parent": "gm4_guidebook:metallurgy/page_6",
+  "parent": "gm4_guidebook:metallurgy/page_2",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",

@@ -15,7 +15,7 @@
     "announce_to_chat": false,
     "hidden": true
   },
-  "parent": "gm4_guidebook:custom_crafter/page_1",
+  "parent": "gm4_guidebook:custom_crafters/page_1",
   "criteria": {
     "requirement_1": {
       "trigger": "minecraft:inventory_changed",
