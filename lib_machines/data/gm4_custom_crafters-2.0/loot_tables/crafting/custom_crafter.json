@@ -2,7 +2,7 @@
   "type": "minecraft:generic",
   "pools": [
     {
-      "rolls": 7,
+      "rolls": 8,
       "entries": [
         {
           "type": "minecraft:item",
@@ -20,21 +20,6 @@
             {
               "function": "minecraft:set_nbt",
               "tag": "{gm4_custom_crafters:{multiplier:1}}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:loot_table",
-          "name": "gm4_arborenda_shamir:band",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_custom_crafters:{multiplier:2}}"
             }
           ]
         }
