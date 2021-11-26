@@ -12,9 +12,7 @@ scoreboard players set $ray gm4_machine_data 0
 execute as @e[type=marker,tag=gm4_machine_ray,limit=1] at @s run function gm4_machines-1.0:place_down/ray
 
 # place machine block at location of player head
-data modify storage gm4_machines:temp machine_data set from entity @s SelectedItem.tag.gm4_machine
-scoreboard players set $placed_block gm4_machine_data 0
-execute at @e[type=marker,tag=gm4_new_machine_marker,limit=1] run function #gm4_machines:place_down
+execute at @e[type=marker,tag=gm4_new_machine_marker,limit=1] run function gm4_machines-1.0:place_down/prep_place
 
 # clean up
 kill @e[type=marker,tag=gm4_machine_ray]
