@@ -4,12 +4,12 @@
 # run from gm4_custom_crafters-2.0:machine/craft_in_place/player_used_item
 
 # get rotation of original dropper
-execute if block ~ ~ ~ dropper[facing=up] run scoreboard players set $rotation gm4_machine_data 1
-execute if block ~ ~ ~ dropper[facing=down] run scoreboard players set $rotation gm4_machine_data 2
-execute if block ~ ~ ~ dropper[facing=north] run scoreboard players set $rotation gm4_machine_data 3
-execute if block ~ ~ ~ dropper[facing=east] run scoreboard players set $rotation gm4_machine_data 4
-execute if block ~ ~ ~ dropper[facing=south] run scoreboard players set $rotation gm4_machine_data 5
-execute if block ~ ~ ~ dropper[facing=west] run scoreboard players set $rotation gm4_machine_data 6
+execute if block ~ ~ ~ dropper[facing=down] run scoreboard players set $rotation gm4_machine_data 1
+execute if block ~ ~ ~ dropper[facing=up] run scoreboard players set $rotation gm4_machine_data 2
+execute if block ~ ~ ~ dropper[facing=south] run scoreboard players set $rotation gm4_machine_data 3
+execute if block ~ ~ ~ dropper[facing=west] run scoreboard players set $rotation gm4_machine_data 4
+execute if block ~ ~ ~ dropper[facing=north] run scoreboard players set $rotation gm4_machine_data 5
+execute if block ~ ~ ~ dropper[facing=east] run scoreboard players set $rotation gm4_machine_data 6
 
 # replace original dropper to clear inv and force-close GUI
 setblock ~ ~ ~ air
