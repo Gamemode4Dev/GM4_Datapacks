@@ -1,12 +1,23 @@
-# @s = crafters containing a recipe results
-# run from recipe_validity_check
+# multiplies items by their specific multiplier
+# @s = crafters containing a recipe result
+# located at @s
+# run from gm4_custom_crafters-2.0:finish_crafting
 
-execute store result score stack_multiplier gm4_stack_size run data get storage gm4_custom_crafters:temp/crafter Items[0].tag.gm4_custom_crafters.multiplier
-scoreboard players operation @s gm4_stack_size *= stack_multiplier gm4_stack_size
-execute store result storage gm4_custom_crafters:temp/crafter Items[0].Count byte 1 run scoreboard players get @s gm4_stack_size
-# data remove block
-data remove storage gm4_custom_crafters:temp/crafter Items[0].tag.gm4_custom_crafters
+# multiply items by their multiplier data
+execute store result score stack_multiplier gm4_stack_size run data get storage gm4_custom_crafters:temp/output Items[-1].tag.gm4_custom_crafters.multiplier
+scoreboard players operation new_stack_size gm4_stack_size = @s gm4_stack_size
+scoreboard players operation new_stack_size gm4_stack_size *= stack_multiplier gm4_stack_size
+execute store result storage gm4_custom_crafters:temp/output Items[-1].Count byte 1 run scoreboard players get new_stack_size gm4_stack_size
+# remove custom crafters tag from item
+data remove storage gm4_custom_crafters:temp/output Items[-1].tag.gm4_custom_crafters
 
-# remove tag
-execute store result score tag_size gm4_stack_size run data get storage gm4_custom_crafters:temp/crafter Items[0].tag
-execute if score tag_size gm4_stack_size matches 0 run data remove storage gm4_custom_crafters:temp/crafter Items[0].tag
+# remove tag if it's empty
+execute store result score tag_size gm4_stack_size run data get storage gm4_custom_crafters:temp/output Items[-1].tag
+execute if score tag_size gm4_stack_size matches 0 run data remove storage gm4_custom_crafters:temp/output Items[-1].tag
+
+# move modified item into new storage
+data modify storage gm4_custom_crafters:temp/output NewItems append from storage gm4_custom_crafters:temp/output Items[-1]
+
+# loop for all items in the storage
+data remove storage gm4_custom_crafters:temp/output Items[-1]
+execute if data storage gm4_custom_crafters:temp/output Items[-1] run function gm4_custom_crafters-2.0:apply_multiplier

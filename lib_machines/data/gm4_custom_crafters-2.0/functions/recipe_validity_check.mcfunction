@@ -1,10 +1,12 @@
+# checks for recipes in a custom crafter
 # @s = gm4_custom_crafter unless block ~ ~ ~ dropper{Items:[]}
-# Run from crafter
+# located at @s
+# run from gm4_custom_crafters-2.0:process
 
-# store
-data modify storage gm4_custom_crafters:temp/crafter {} merge from block ~ ~ ~ {}
+# store all block data into storage
+data modify storage gm4_custom_crafters:temp/crafter Items set from block ~ ~ ~ Items
 
-# store number of full slots
+# get number of full slots
 execute store result score @s gm4_slot_count run data get storage gm4_custom_crafters:temp/crafter Items
 
 # get number of items from first array element
@@ -37,14 +39,9 @@ execute if score @s gm4_slot_count matches 9.. unless score @s gm4_stack_size = 
 
 scoreboard players operation @s gm4_stack_size = first_stack_count gm4_stack_size
 
-# tell crafters with valid contents to run recipe checks
-execute if score @s gm4_stack_size matches 1.. run function #gm4_custom_crafters:recipe_check
-
-# check if one of the recipes succeeded
-execute if score @s gm4_stack_size matches 1.. if data storage gm4_custom_crafters:temp/crafter Items[0].tag.gm4_custom_crafters run function gm4_custom_crafters-2.0:apply_multiplier
-
-# apply recipe and multiplier
-data modify block ~ ~ ~ {} merge from storage gm4_custom_crafters:temp/crafter {}
+# attempt to craft items in crafters with valid contents
+execute if score @s gm4_stack_size matches 1.. run function gm4_custom_crafters-2.0:attempt_craft
 
 # storage cleanup
-data remove storage gm4_custom_crafters:temp/crafter {}
+data remove storage gm4_custom_crafters:temp/crafter Items
+data remove storage gm4_custom_crafters:temp/output Items

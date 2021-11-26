@@ -1,12 +1,7 @@
-# @s = armor stand in custom crafter
-# called from main
-
-# crafter destruction
-#execute unless block ~ ~ ~ dropper run function gm4_custom_crafters-2.0:destroy
-
-# crafter maintenance
-# 1.18 NOTE; This 16->17 backward compatibility may be removed.
-#data merge entity @s {HasVisualFire:1}
+# processes custom crafters
+# @s = custom crafter marker
+# located at @s
+# run from gm4_custom_crafters-2.0:main
 
 # recipes
 execute if block ~ ~ ~ dropper[triggered=false]{Items:[{}]} run function gm4_custom_crafters-2.0:recipe_validity_check
