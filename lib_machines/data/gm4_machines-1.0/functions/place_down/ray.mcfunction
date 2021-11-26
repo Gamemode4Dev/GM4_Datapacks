@@ -1,6 +1,6 @@
 # raycast to find the player head
 # @s = marker ray
-# located ^ ^ ^0.X, X = number of iterations
+# located ^ ^ ^0.0X, X = number of iterations
 # run from gm4_machines-1.0:place_down/place_machine_block
 
 # check blocks around the marker ray
@@ -15,4 +15,4 @@ execute if score $found gm4_machine_data matches 0 store success score $found gm
 
 # move forward
 scoreboard players add $ray gm4_machine_data 1
-execute if score $ray gm4_machine_data matches 0..50 unless score $found gm4_machine_data matches 1 positioned ^ ^ ^0.1 run function gm4_machines-1.0:place_down/ray
+execute if score $ray gm4_machine_data matches 0..500 unless score $found gm4_machine_data matches 1 positioned ^ ^ ^0.01 run function gm4_machines-1.0:place_down/ray
