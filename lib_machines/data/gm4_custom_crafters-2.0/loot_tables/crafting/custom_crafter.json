@@ -18,8 +18,8 @@
           "name": "gm4_custom_crafters-2.0:items/custom_crafter",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_custom_crafters:{multiplier:1}}"
+              "function": "minecraft:set_count",
+              "count": 1
             }
           ]
         }

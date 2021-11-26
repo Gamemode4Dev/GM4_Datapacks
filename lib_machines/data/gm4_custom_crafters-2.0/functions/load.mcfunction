@@ -1,5 +1,4 @@
-scoreboard objectives add gm4_slot_count dummy
-scoreboard objectives add gm4_stack_size dummy
+scoreboard objectives add gm4_crafting dummy
 scoreboard objectives add gm4_count dummy
 
 schedule function gm4_custom_crafters-2.0:main 1t
