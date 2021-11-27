@@ -11,9 +11,9 @@ execute if score $rotation gm4_machine_data matches 4 run setblock ~ ~ ~ dropper
 execute if score $rotation gm4_machine_data matches 5 run setblock ~ ~ ~ dropper[facing=north]{CustomName:'{"translate":"%1$s%3427655$s","with":["Custom Crafter",{"translate":"block.gm4.custom_crafter"}]}'}
 execute if score $rotation gm4_machine_data matches 6 run setblock ~ ~ ~ dropper[facing=east]{CustomName:'{"translate":"%1$s%3427655$s","with":["Custom Crafter",{"translate":"block.gm4.custom_crafter"}]}'}
 
-# summon display armor stand
+# summon display armor stand and marker entity
 summon armor_stand ~ ~-0.4 ~ {Small:1,NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,DisabledSlots:2039552,Tags:["gm4_no_edit","gm4_custom_crafter_stand","gm4_machine_stand","smithed.block"],HasVisualFire:1,CustomName:'"gm4_custom_crafter_stand"',ArmorItems:[{},{},{},{id:"crafting_table",Count:1,tag:{CustomModelData:3420001}}]}
+summon marker ~ ~ ~ {Tags:["gm4_custom_crafter","gm4_machine_marker","smithed.block"],CustomName:'"gm4_custom_crafter"'}
 
-# set marker data
-data merge entity @e[type=marker,tag=gm4_new_machine_marker,limit=1] {Tags:["gm4_custom_crafter","gm4_machine_marker","smithed.block"],CustomName:'"gm4_custom_crafter"'}
+# mark block as placed
 scoreboard players set $placed_block gm4_machine_data 1

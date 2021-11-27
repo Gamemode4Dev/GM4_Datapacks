@@ -5,16 +5,26 @@
 
 advancement revoke @s only gm4_machines-1.0:place_machine_block
 
-# raycast to find player head
-summon marker ~ ~ ~ {Tags:["gm4_machine_ray"]}
-execute anchored eyes positioned ^ ^ ^ anchored feet run tp @e[type=marker,tag=gm4_machine_ray,limit=1] ^ ^ ^ ~ ~
-scoreboard players set $ray gm4_machine_data 0
-execute as @e[type=marker,tag=gm4_machine_ray,limit=1] at @s run function gm4_machines-1.0:place_down/ray
+# get rotation of player
+# key: direction of player
+# 3: north, 4: east, 5: south, 6: west
+execute store result score $y_rotation gm4_machine_data run data get entity @s Rotation[0]
+scoreboard players set $rotation gm4_machine_data 0
 
-# place machine block at location of player head
-execute at @e[type=marker,tag=gm4_new_machine_marker,limit=1] run function gm4_machines-1.0:place_down/prep_place
+execute if score $y_rotation gm4_machine_data matches 45..135 run scoreboard players set $rotation gm4_machine_data 6
+execute if score $rotation gm4_machine_data matches 0 if score $y_rotation gm4_machine_data matches -45..45 run scoreboard players set $rotation gm4_machine_data 5
+execute if score $rotation gm4_machine_data matches 0 if score $y_rotation gm4_machine_data matches -135..-45 run scoreboard players set $rotation gm4_machine_data 4
+execute if score $rotation gm4_machine_data matches 0 run scoreboard players set $rotation gm4_machine_data 3
 
-# clean up
-kill @e[type=marker,tag=gm4_machine_ray]
-tag @e[type=marker,tag=gm4_machine_marker] remove gm4_new_machine_marker
-data remove storage gm4_machines:temp machine_data
+# find player heads in the specific region
+execute if score $rotation gm4_machine_data matches 3 store result score $player_head_count gm4_machine_data run clone ~-4 ~-4 ~-4 ~4 ~6 ~1 ~-4 ~-4 ~-4 filtered #gm4_machines-1.0:player_heads{SkullOwner:{Properties:{textures:[{Signature:"gm4_machine"}]}}} force
+execute if score $rotation gm4_machine_data matches 4 store result score $player_head_count gm4_machine_data run clone ~-1 ~-4 ~-4 ~4 ~6 ~4 ~-1 ~-4 ~-4 filtered #gm4_machines-1.0:player_heads{SkullOwner:{Properties:{textures:[{Signature:"gm4_machine"}]}}} force
+execute if score $rotation gm4_machine_data matches 5 store result score $player_head_count gm4_machine_data run clone ~-4 ~-4 ~-1 ~4 ~6 ~4 ~-4 ~-4 ~-1 filtered #gm4_machines-1.0:player_heads{SkullOwner:{Properties:{textures:[{Signature:"gm4_machine"}]}}} force
+execute if score $rotation gm4_machine_data matches 6 store result score $player_head_count gm4_machine_data run clone ~-4 ~-4 ~-4 ~1 ~6 ~4 ~-4 ~-4 ~-4 filtered #gm4_machines-1.0:player_heads{SkullOwner:{Properties:{textures:[{Signature:"gm4_machine"}]}}} force
+
+# replace player heads with the corresponding block
+scoreboard players set $layer_count gm4_machine_data 0
+execute if score $rotation gm4_machine_data matches 3 align xyz positioned ~0.5 ~0.5 ~0.5 rotated 180 0 positioned ^-4 ^-4 ^-1 run function gm4_machines-1.0:place_down/check_layer
+execute if score $rotation gm4_machine_data matches 4 align xyz positioned ~0.5 ~0.5 ~0.5 rotated -90 0 positioned ^-4 ^-4 ^-1 run function gm4_machines-1.0:place_down/check_layer
+execute if score $rotation gm4_machine_data matches 5 align xyz positioned ~0.5 ~0.5 ~0.5 rotated 0 0 positioned ^-4 ^-4 ^-1 run function gm4_machines-1.0:place_down/check_layer
+execute if score $rotation gm4_machine_data matches 6 align xyz positioned ~0.5 ~0.5 ~0.5 rotated 90 0 positioned ^-4 ^-4 ^-1 run function gm4_machines-1.0:place_down/check_layer

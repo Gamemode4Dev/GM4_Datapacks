@@ -33,7 +33,7 @@
           "items": [
             "minecraft:player_head"
           ],
-          "nbt": "{gm4_machines:{}}"
+          "nbt": "{SkullOwner:{Properties:{textures:[{Signature:\"gm4_machine\"}]}}}"
         }
       }
     }
