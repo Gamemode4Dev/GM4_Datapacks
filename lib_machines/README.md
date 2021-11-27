@@ -14,20 +14,20 @@ There are 2 function tags to be used: one for placing machines (`#gm4_machines:p
 Machine blocks must be player heads with the following NBT data:
 
 ```
-{gm4_machines:{"id":"BLOCK_IDENTIFIER"},SkullOwner:{Name:"gm4_machine"}}
+{SkullOwner:{Name:"BLOCK_IDENTIFIER",Properties:{textures:[{Signature:"gm4_machine"}]}}}
 ```
 
 When placing down a player head with this NBT, the function tag `#gm4_machines:place_down` will run. This will run `as` the player who placed the block and `at` the center of the block that was placed. The following command should be used to verify the specific machine placed:
 
 ```mcfunction
-execute if score $placed_block gm4_machine_data matches 0 if data storage gm4_machines:temp machine_data{id:"BLOCK_INDENTIFIER"} run function MODULE_NAMESPACE:machine/create
+execute if score $placed_block gm4_machine_data matches 0 if data storage gm4_machines:temp {id:"BLOCK_INDENTIFIER"} run function MODULE_NAMESPACE:machine/create
 ```
 
 The function `MODULE_NAMESPACE:machine/create` should have the following commands: 
 ```mcfunction
 scoreboard players set $placed_block gm4_machine_data 1
 
-data merge entity @e[type=marker,tag=gm4_new_machine_marker,limit=1] {Tags:["gm4_machine_marker","smithed.block","IDENTIFIER","ADD ANY EXTRA TAGS"],CustomName:'"PLEASE NAME YOUR MACHINE MARKERS"',<...>}
+summon marker ~ ~ ~ {Tags:["gm4_machine_marker","smithed.block","IDENTIFIER","ADD ANY EXTRA TAGS"],CustomName:'"PLEASE NAME YOUR MACHINE MARKERS"',<...>}
 ```
 
 Each machine block has a marker entity located at the center of the block (`align xyz positioned ~0.5 ~0.5 ~0.5`) with the tag `gm4_machine_marker`.
