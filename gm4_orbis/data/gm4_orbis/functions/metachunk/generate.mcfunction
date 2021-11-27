@@ -1,5 +1,5 @@
 # @s = metachunk
-# run from gm4_orbis:main
+# run from metachunk/generate_attempt
 
 # generate one of the 9 subchunks, in a predefined order
 scoreboard players add @s gm4_orbis_stage 1

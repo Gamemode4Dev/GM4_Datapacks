@@ -1,5 +1,5 @@
 # @s = new metachunk that needs aligning, with the gm4_metachunk_init tag
-# run from main
+# run from metachunk/init_attempt
 
 scoreboard players set @s gm4_orbis_stage 0
 
