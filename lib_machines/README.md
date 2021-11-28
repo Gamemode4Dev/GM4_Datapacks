@@ -43,8 +43,32 @@ The score `$rotation gm4_machine_data` stores the direction the player is facing
 6: west
 ```
 
-This can be used to rotate blocks according to facing direction. Note that normally most rotated blocks (droppers, barrels, furnaces, etc.) are placed with a facing direction opposite of the player's facing direction while normally hoppers are placed with a facing direction equal to the player's facing direction.
+This can be used to rotate blocks according to facing direction. Note that normally most rotated blocks (droppers, barrels, pistons, etc.) are placed with a facing direction opposite of the player's facing direction. E.g. if the player faces downwards, a placed dropper faces upwards.
 
+The score `$single_rotation gm4_machine_data` stores the cardinal direction the player is facing and can be used in the `create` function:
+
+```
+1: north
+2: east
+3: south
+4: west
+```
+
+This can be used to rotate blocks according to facing direction if the block doesn't have a vertical direction, such as furnaces.
+
+
+The score `$face_placement gm4_machine_data` stores the face that the block was placed on and can be used in the `create` function:
+
+```
+1: north
+2: east
+3: south
+4: west
+```
+
+This can be used to rotate blocks according to what face of the block it was placed on. Note that normally hoppers are placed with a facing direction opposite to the face that it was placed on. E.g. if a player places a hopper onto the south face of a block, it will point north, into the block it was placed on.
+
+The scores `$x_rotation` and `$y_rotation` store the exact rotations of the player and can be used for more precise block placement than the three options outlined above.
 ### Breaking Machines
 Every tick, machine markers will check if it is in one of the following blocks:
 ```

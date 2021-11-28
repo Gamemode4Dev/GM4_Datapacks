@@ -12,13 +12,13 @@
     },
     "module_name": "Tunnel Bores",
     "module_id": "tunnel_bores",
+    "libraries": [
+        "lib_machines"
+    ],
     "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
     "site_description": "Ever wondered how mineshafts came to be? This is it!",
     "site_categories": [],
     "wiki_link": "https://wiki.gm4.co/wiki/Tunnel_Bores",
-    "required_modules": [
-        "custom_crafters"
-    ],
     "recommended_modules": [
         "ziprails",
         "vertical_rails"

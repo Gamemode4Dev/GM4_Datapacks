@@ -16,6 +16,10 @@ execute if score $rotation gm4_machine_data matches 0 if score $y_rotation gm4_m
 execute if score $rotation gm4_machine_data matches 0 if score $y_rotation gm4_machine_data matches -135..-45 run scoreboard players set $rotation gm4_machine_data 4
 execute if score $rotation gm4_machine_data matches 0 run scoreboard players set $rotation gm4_machine_data 3
 
+# store cardinal y_rotation
+scoreboard players operation $single_rotation gm4_machine_data = $y_rotation gm4_machine_data
+scoreboard players remove $single_rotation gm4_machine_data 2
+
 # find player heads in the specific region
 execute if score $rotation gm4_machine_data matches 3 store result score $player_head_count gm4_machine_data run clone ~-4 ~-4 ~-4 ~4 ~6 ~1 ~-4 ~-4 ~-4 filtered #gm4_machines-1.0:player_heads{SkullOwner:{Properties:{textures:[{Signature:"gm4_machine"}]}}} force
 execute if score $rotation gm4_machine_data matches 4 store result score $player_head_count gm4_machine_data run clone ~-1 ~-4 ~-4 ~4 ~6 ~4 ~-1 ~-4 ~-4 filtered #gm4_machines-1.0:player_heads{SkullOwner:{Properties:{textures:[{Signature:"gm4_machine"}]}}} force

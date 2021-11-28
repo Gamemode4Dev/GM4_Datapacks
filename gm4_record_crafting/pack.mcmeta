@@ -12,15 +12,15 @@
     },
     "module_name": "Record Crafting",
     "module_id": "record_crafting",
+    "libraries": [
+        "lib_machines"
+    ],
     "site_description": "A crafting recipe pack that lets you craft all the records.",
     "site_categories": [
         "Custom Crafting"
     ],
     "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
     "wiki_link": "https://wiki.gm4.co/wiki/Record_Crafting",
-    "required_modules": [
-        "custom_crafters"
-    ],
     "recommended_modules": [
         "standard_crafting"
     ],

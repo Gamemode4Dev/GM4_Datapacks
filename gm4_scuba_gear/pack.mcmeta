@@ -13,7 +13,8 @@
     "module_name": "SCUBA Gear",
     "module_id": "scuba_gear",
     "libraries": [
-        "lib_player_heads"
+        "lib_player_heads",
+        "lib_machines"
     ],
     "site_description": "Ease ocean exploration with craftable scuba gear!",
     "site_categories": [
@@ -21,9 +22,6 @@
     ],
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/SCUBA_Gear",
-    "required_modules": [
-        "custom_crafters"
-    ],
     "recommended_modules": [
         "sunken_treasure"
     ],

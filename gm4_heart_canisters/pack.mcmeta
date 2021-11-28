@@ -13,7 +13,8 @@
     "module_name": "Heart Canisters",
     "module_id": "heart_canisters",
     "libraries": [
-        "lib_player_heads"
+        "lib_player_heads",
+        "lib_machines"
     ],
     "site_description": "Pricey canisters that increase your health when carried.",
     "site_categories": [
@@ -21,9 +22,6 @@
     ],
     "video_link": "https://www.youtube.com/watch?v=zjmL6rjoq0g",
     "wiki_link": "https://wiki.gm4.co/wiki/Heart_Canisters",
-    "required_modules": [
-        "custom_crafters"
-    ],
     "recommended_modules": [],
     "credits": {
         "Creators": [

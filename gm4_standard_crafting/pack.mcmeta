@@ -12,6 +12,9 @@
     },
     "module_name": "Standard Crafting",
     "module_id": "standard_crafting",
+    "libraries": [
+        "lib_machines"
+    ],
     "hidden":false,
     "site_description": "A crafting recipe pack that adds some nifty new recipes to the game.",
     "site_categories": [
@@ -19,9 +22,6 @@
     ],
     "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
     "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
-    "required_modules": [
-        "custom_crafters"
-    ],
     "recommended_modules": [
         "master_crafting"
     ],

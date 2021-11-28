@@ -117,7 +117,7 @@
             "blocks": [
               "minecraft:dropper"
             ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Compressor\",{\"translate\":\"block.gm4.block_compressor\"}]}'}"
+            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Compress Items\",{\"translate\":\"container.gm4.block_compressor\"}]}'}"
           }
         }
       }

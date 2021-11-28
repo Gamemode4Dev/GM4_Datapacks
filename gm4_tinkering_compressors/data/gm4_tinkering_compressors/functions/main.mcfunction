@@ -1,5 +1,7 @@
-
-execute as @e[type=armor_stand,tag=gm4_tinkering_compressor] at @s run function gm4_tinkering_compressors:process
+# NOTE remove during 1.20 update: updates old machines to include a marker entity
+execute as @e[type=armor_stand,tag=gm4_tinkering_compressor] at @s run function gm4_tinkering_compressors:upgrade_machine_stand
+# process machine
+execute as @e[type=marker,tag=gm4_tinkering_compressor] at @s run function gm4_tinkering_compressors:process
 
 # Check for Tinker Shamir on a Compressor
 scoreboard players reset item_on_compressor gm4_tc_data

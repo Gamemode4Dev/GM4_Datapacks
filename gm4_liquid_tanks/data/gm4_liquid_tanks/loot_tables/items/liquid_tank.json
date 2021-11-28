@@ -1,0 +1,36 @@
+{
+  "type": "block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{CustomModelData:3420132,gm4_machines:{id:\"liquid_tank\"},SkullOwner:{Name:\"gm4_liquid_tank\",Id:[I;870435466,-1787213241,-1355212297,-1164569835],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTU5NjU3NTAyNzExOCwKICAicHJvZmlsZUlkIiA6ICI3NTE0NDQ4MTkxZTY0NTQ2OGM5NzM5YTZlMzk1N2JlYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJUaGFua3NNb2phbmciLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmY4N2U5MzQwMzFmMDdkYjhkNWZlZjRmODRiZGZkODU4YTdhMTliYjEzYzU1MzU1ZDE2MjQ5ZDdkOTA4N2VhIgogICAgfQogIH0KfQ==\"}]}}}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Liquid Tank",
+                    {
+                      "translate": "container.gm4.liquid_tank"
+                    }
+                  ],
+                  "color": "white",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

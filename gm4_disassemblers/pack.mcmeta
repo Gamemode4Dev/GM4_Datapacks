@@ -12,15 +12,15 @@
     },
     "module_name": "Disassemblers",
     "module_id": "disassemblers",
+    "libraries": [
+        "lib_machines"
+    ],
     "site_description": "Break apart diamond, gold and iron tools and weapons for materials",
     "site_categories": [
         "Custom Crafting"
     ],
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Disassemblers",
-    "required_modules": [
-        "custom_crafters"
-    ],
     "recommended_modules": [
         "relocators"
     ],
