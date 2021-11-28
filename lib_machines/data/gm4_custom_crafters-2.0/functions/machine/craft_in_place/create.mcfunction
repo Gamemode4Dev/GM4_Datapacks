@@ -19,4 +19,4 @@ clear @s[gamemode=!creative,gamemode=!spectator] crafting_table 1
 
 # create custom crafter
 function gm4_custom_crafters-2.0:machine/create
-advancement grant @s only gm4:custom_crafters-2.0
+advancement grant @s only gm4:custom_crafters
