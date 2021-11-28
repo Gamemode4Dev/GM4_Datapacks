@@ -263,7 +263,7 @@
             "blocks": [
               "minecraft:hopper"
             ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Empty Tank\",{\"translate\":\"block.gm4.liquid_tank.empty\"}]}'}"
+            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Empty Tank\",{\"translate\":\"container.gm4.liquid_tank.empty\"}]}'}"
           }
         }
       }

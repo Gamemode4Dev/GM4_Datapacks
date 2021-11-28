@@ -19,7 +19,7 @@
                   "with": [
                     "Empty Tank",
                     {
-                      "translate": "block.gm4.liquid_tank.empty"
+                      "translate": "container.gm4.liquid_tank.empty"
                     }
                   ],
                   "color":"aqua",

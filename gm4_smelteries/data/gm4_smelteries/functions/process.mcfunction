@@ -2,9 +2,6 @@
 # @s - smeltery
 # called by main
 
-# removal
-execute unless block ~ ~ ~ hopper run function gm4_smelteries:destroy
-
 # verify furnace location
 execute unless block ^ ^ ^1 furnace run function gm4_smelteries:find_furnace
 

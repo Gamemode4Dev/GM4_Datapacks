@@ -12,6 +12,9 @@
     },
     "module_name": "Liquid Tanks",
     "module_id": "liquid_tanks",
+    "libraries": [
+        "lib_machines"
+    ],
     "site_description": "Store liquids compactly in special tanks and interact with them!",
     "site_categories": [
         "Liquid Tanks"

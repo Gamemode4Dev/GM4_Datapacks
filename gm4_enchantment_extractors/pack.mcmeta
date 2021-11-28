@@ -12,6 +12,9 @@
     },
     "module_name": "Enchantment Extractors",
     "module_id": "enchantment_extractors",
+    "libraries": [
+        "lib_machines"
+    ],
     "hidden":false,
     "site_description": "Collects enchantments from tools, armour and weapons.",
     "site_categories": [],

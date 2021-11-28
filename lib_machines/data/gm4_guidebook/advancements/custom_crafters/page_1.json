@@ -113,7 +113,7 @@
             "blocks": [
               "minecraft:dropper"
             ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"block.gm4.custom_crafter\"}]}'}"
+            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafting\",{\"translate\":\"container.gm4.custom_crafter\"}]}'}"
           }
         }
       }
