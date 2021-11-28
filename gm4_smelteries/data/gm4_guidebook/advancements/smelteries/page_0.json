@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:furnace",
-      "nbt": "{CustomModelData:3420002}"
+      "nbt": "{CustomModelData:3420003}"
     },
     "title": {
       "text": "Check your guidebook!",

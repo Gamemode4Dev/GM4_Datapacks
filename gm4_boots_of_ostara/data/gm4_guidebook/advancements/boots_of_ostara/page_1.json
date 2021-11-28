@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:leather_boots",
-      "nbt": "{display:{color:3705899},CustomModelData:3420003}"
+      "nbt": "{display:{color:3705899},CustomModelData:3420005}"
     },
     "title": {
       "text": "Check your guidebook!",
