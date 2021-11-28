@@ -1,0 +1,7 @@
+{
+  "condition": "minecraft:location_check",
+  "offsetY": 64,
+  "predicate": {
+    "biome": "minecraft:desert"
+  }
+}
