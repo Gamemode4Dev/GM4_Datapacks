@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:dark_prismarine",
+      "item": "minecraft:red_terracotta",
       "nbt": "{CustomModelData:3420001}"
     },
     "title": {
