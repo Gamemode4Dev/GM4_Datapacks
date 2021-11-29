@@ -1,0 +1,52 @@
+{
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Forming Press",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Forming Press",
+    "module_id": "forming_press",
+    "libraries": [
+        "lib_machines"
+    ],
+    "site_description": "A machine capable of performing more efficient smelting and crafting recipes!",
+    "site_categories": [
+        "Custom Crafting"
+    ],
+    "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
+    "wiki_link": "https://wiki.gm4.co/wiki/Forming_Press",
+    "recommended_modules": [
+        "standard_crafting",
+        "relocators"
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "Bloo",
+                "https://www.twitter.com/Bloo_dev"
+            ]
+        ],
+        "Updated by": [
+            [
+                "Misode",
+                "https://twitter.com/misode_"
+            ],
+            [
+                "BluePsychoRanger",
+                "https://www.twitter.com/BluPsychoRanger"
+            ]
+        ],
+        "Icon Design": [
+            [
+                "BluePsychoRanger",
+                "https://www.twitter.com/BluPsychoRanger"
+            ]
+        ]
+    }
+}

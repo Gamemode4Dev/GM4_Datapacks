@@ -25,7 +25,7 @@
     "recommended_modules": [
         "block_compressors",
         "book_binders",
-        "master_crafting",
+        "forming_press",
         "disassemblers",
         "enchantment_extractors",
         "ender_hoppers",

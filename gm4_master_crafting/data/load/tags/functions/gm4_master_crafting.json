@@ -1,6 +1,0 @@
-{
-    "values": [
-		{ "id": "#load:gm4_custom_crafters", "required": false },
-        "gm4_master_crafting:load"
-    ]
-}
