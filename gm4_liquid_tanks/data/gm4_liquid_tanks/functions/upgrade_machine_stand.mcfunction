@@ -1,5 +1,5 @@
 # updates old machine armor stands
-# @s = master_crafter armor stand
+# @s = forming_press armor stand
 # located at @s
 # run from gm4_liquid_tanks:main
 
