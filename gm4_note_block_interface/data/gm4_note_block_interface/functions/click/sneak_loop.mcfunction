@@ -1,9 +1,13 @@
-#@s = player who played a note block while sneaking
-#runs from note_block_interface:click/setup
+# ray cast to find note block
+# @s = player who played a note block while sneaking
+# at @s anchored eyes positioned ^ ^ ^
+# run from gm4_note_block_interface:click/setup
 
-#removes 1 from raycast
+# removes 1 from raycast
 scoreboard players remove @s gm4_nbi_ray 1
-#tests for note_block
+
+# tests for note_block
 execute if block ~ ~ ~ note_block align xyz positioned ~0.5 ~0.6 ~0.5 run function gm4_note_block_interface:interface/change
-#runs the loop again
+
+# runs the loop again
 execute unless block ~ ~ ~ note_block if score @s gm4_nbi_ray matches 1.. positioned ^ ^ ^0.1 run function gm4_note_block_interface:click/sneak_loop

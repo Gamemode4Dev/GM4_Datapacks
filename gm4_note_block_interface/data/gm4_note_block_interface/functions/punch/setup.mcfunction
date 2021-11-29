@@ -1,9 +1,13 @@
-#@s = player who has punched a note block
-#runs from note_block_interface:pulse_check
+# start ray to find note block
+# @s = player who hit a note block
+# at @s anchored eyes positioned ^ ^ ^
+# run from gm4_note_block_interface:tick
 
-#resets click scores
+# resets play score
 scoreboard players reset @s gm4_nbi_punch
-#sets raycast limit
+
+# sets raycast limit
 scoreboard players set @s gm4_nbi_ray 50
-#runs raycast loop
+
+# runs raycast loop
 function gm4_note_block_interface:punch/loop
