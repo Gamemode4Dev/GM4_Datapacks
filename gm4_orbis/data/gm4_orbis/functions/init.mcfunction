@@ -2,6 +2,8 @@ scoreboard objectives add gm4_count dummy
 scoreboard objectives add gm4_orbis_config dummy
 scoreboard objectives add gm4_orbis_stage dummy
 
+scoreboard players set #-1 gm4_count -1
+scoreboard players set #2 gm4_count 2
 scoreboard players set #48 gm4_count 48
 execute unless score speed gm4_orbis_config matches 1.. run scoreboard players set speed gm4_orbis_config 2
 execute unless score speed chunk_count matches 1.. run scoreboard players add chunk_count gm4_orbis_config 0
