@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from place
+# run from book/process
 
 particle minecraft:block_marker minecraft:barrier ~ ~1 ~ 0 0 0 0 1
 playsound minecraft:entity.villager.no block @p[tag=gm4_bas_active] ~ ~ ~ .5 2

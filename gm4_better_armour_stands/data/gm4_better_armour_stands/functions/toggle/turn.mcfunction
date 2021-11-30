@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from apply_book
+# run from book/apply
 
 scoreboard players add @s gm4_bas_turn 1
 execute unless score @s gm4_bas_turn matches 0..2 run scoreboard players set @s gm4_bas_turn 0

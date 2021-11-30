@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from apply_book
+# run from book/apply
 
 data modify entity @s ShowArms set value 0
 

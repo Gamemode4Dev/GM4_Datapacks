@@ -1,6 +1,6 @@
 # @s = armor_stand to be copied
 # at @s
-# run from apply_pose
+# run from book/apply
 
 tag @s add gm4_bas_valid_code
 

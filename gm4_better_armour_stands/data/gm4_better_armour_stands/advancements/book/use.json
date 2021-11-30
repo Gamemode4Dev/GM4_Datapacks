@@ -43,7 +43,7 @@
       }
     },
     "rewards": {
-      "function": "gm4_better_armour_stands:use_book"
+      "function": "gm4_better_armour_stands:book/use"
     }
   }
  

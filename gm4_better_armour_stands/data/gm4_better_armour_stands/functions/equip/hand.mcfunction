@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from apply_book
+# run from book/apply
 
 # check for item in hand slot
 data modify storage gm4_better_armour_stands:temp Item set from entity @s HandItems[0]

@@ -22,6 +22,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_better_armour_stands:use_book_arms"
+    "function": "gm4_better_armour_stands:book/use_arms"
   }
 }

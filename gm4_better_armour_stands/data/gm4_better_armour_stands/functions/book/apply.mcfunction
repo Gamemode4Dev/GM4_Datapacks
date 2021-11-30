@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from store_book_pages
+# run from book/process
 
 # Restore armor stand state to default.
 execute if data storage gm4_better_armour_stands:temp {pages:["default"]} run function gm4_better_armour_stands:default/select
@@ -30,13 +30,13 @@ execute if data storage gm4_better_armour_stands:temp {pages:["equip"]} run func
 execute if data storage gm4_better_armour_stands:temp {pages:["flip"]} run function gm4_better_armour_stands:pose/flip
 
 # Copy and paste from armor stand item.
-execute if data storage gm4_better_armour_stands:temp {pages:["copy"]} if entity @p[tag=gm4_bas_active,predicate=gm4_better_armour_stands:holding/offhand/armor_stand] run function gm4_better_armour_stands:copy
-execute if data storage gm4_better_armour_stands:temp {pages:["paste"]} if data entity @p[tag=gm4_bas_active] Inventory[-1].tag.EntityTag run function gm4_better_armour_stands:paste
+execute if data storage gm4_better_armour_stands:temp {pages:["copy"]} if entity @p[tag=gm4_bas_active,predicate=gm4_better_armour_stands:holding/offhand/armor_stand] run function gm4_better_armour_stands:pose/copy
+execute if data storage gm4_better_armour_stands:temp {pages:["paste"]} if data entity @p[tag=gm4_bas_active] Inventory[-1].tag.EntityTag run function gm4_better_armour_stands:pose/paste
 
 # Change armor stand poses.
 execute if data storage gm4_better_armour_stands:temp {pages:["pose"]} run function gm4_better_armour_stands:pose/select
 execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["pose mirror"]} run function gm4_better_armour_stands:pose/select
 
 # Move/Rotate
-execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["move"]} run function gm4_better_armour_stands:move
-execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["rotate"]} run function gm4_better_armour_stands:rotate
+execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["move"]} run function gm4_better_armour_stands:pose/move
+execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["rotate"]} run function gm4_better_armour_stands:pose/rotate

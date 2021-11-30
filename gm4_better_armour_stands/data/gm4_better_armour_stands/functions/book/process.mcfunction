@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from ray
+# run from book/ray
 
 # Get book contents
 data modify storage gm4_better_armour_stands:temp book set from entity @s HandItems[0].tag
@@ -14,7 +14,7 @@ item modify entity @p[tag=gm4_bas_active] weapon.mainhand gm4_better_armour_stan
 
 # Check valid codes and apply to armor_stand
 execute unless entity @s[tag=gm4_bas_track] run function #gm4_better_armour_stands:apply_book
-execute unless entity @s[tag=gm4_bas_valid_code] run function gm4_better_armour_stands:invalid
+execute unless entity @s[tag=gm4_bas_valid_code] run function gm4_better_armour_stands:book/invalid
 tag @s remove gm4_bas_valid_code
 
 # Reset storage

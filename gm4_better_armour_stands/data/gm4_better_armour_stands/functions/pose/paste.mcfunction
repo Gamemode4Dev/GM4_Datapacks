@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from apply_pose
+# run from book/apply
 
 # Copy item data to armor stand.
 data modify entity @s {} merge from entity @p[tag=gm4_bas_active] Inventory[-1].tag.EntityTag

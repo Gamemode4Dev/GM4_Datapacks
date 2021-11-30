@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from apply_pose
+# run from book/apply
 
 tag @s add gm4_bas_valid_code
 scoreboard players operation @s gm4_bas_id = @p[tag=gm4_bas_active] gm4_bas_id

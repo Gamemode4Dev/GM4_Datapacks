@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from apply_pose
+# run from book/apply
 
 tag @s add gm4_bas_valid_code
 execute store result score @s gm4_bas_data run data get entity @s Small

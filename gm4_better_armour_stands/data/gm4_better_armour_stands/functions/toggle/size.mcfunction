@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from apply_book
+# run from book/apply
 
 # toggle value
 execute store result score @s gm4_bas_data run data get entity @s Small

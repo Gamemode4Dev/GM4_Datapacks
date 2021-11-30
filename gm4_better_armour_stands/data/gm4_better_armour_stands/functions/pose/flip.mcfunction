@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from apply_book
+# run from book/apply
 
 # store current pose
 data modify storage gm4_better_armour_stands:temp CurrentPose set from entity @s Pose
