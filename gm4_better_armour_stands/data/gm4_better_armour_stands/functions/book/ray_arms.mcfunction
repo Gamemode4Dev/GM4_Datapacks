@@ -2,8 +2,11 @@
 # at @s
 # run from book/use_arms and book/ray_arms
 
-# Continue searching if no armor_stand in this block
-execute unless entity @e[type=minecraft:armor_stand,tag=gm4_bas_no_arms,dx=0,limit=1] if entity @s[distance=..5] positioned ^ ^ ^.1 run function gm4_better_armour_stands:book/ray_arms
+# select armor_stand without arms
+execute positioned ~-.2 ~-.2 ~-.2 as @e[type=minecraft:armor_stand,tag=gm4_bas_no_arms,dx=0,limit=1] positioned ~-.6 ~-.6 ~-.6 run tag @s[dx=0] add gm4_bas_selected
 
-# Found armor_stand holding writable_book
-execute as @e[type=minecraft:armor_stand,tag=gm4_bas_no_arms,dx=0,sort=nearest,limit=1] at @s run function gm4_better_armour_stands:toggle/arms_detect_remove
+# continue searching if not inside armor_stand
+execute unless entity @e[type=minecraft:armor_stand,tag=gm4_bas_no_arms,tag=gm4_bas_selected,limit=1] unless entity @s[distance=6..] positioned ^ ^ ^.5 run function gm4_better_armour_stands:book/ray_arms
+
+# found armor_stand holding writable_book
+execute as @e[type=minecraft:armor_stand,tag=gm4_bas_no_arms,tag=gm4_bas_selected,limit=1] at @s run function gm4_better_armour_stands:toggle/arms_select

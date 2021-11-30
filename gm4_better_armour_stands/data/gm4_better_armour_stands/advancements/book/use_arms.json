@@ -13,7 +13,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:villager",
+              "type": "minecraft:wandering_trader",
               "nbt": "{Tags:[\"gm4_bas_arms_detect\"]}"
             }
           }

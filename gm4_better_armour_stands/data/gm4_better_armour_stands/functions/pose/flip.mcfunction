@@ -31,4 +31,4 @@ data remove storage gm4_better_armour_stands:temp CurrentPose
 data remove storage gm4_better_armour_stands:temp Pose
 
 tag @s add gm4_bas_valid_code
-advancement grant @p[tag=gm4_bas_active] only gm4:better_armour_stands
+advancement grant @a[tag=gm4_bas_active,limit=1] only gm4:better_armour_stands

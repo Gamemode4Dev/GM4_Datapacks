@@ -6,7 +6,8 @@
       "mainhand": {
         "items": [
           "minecraft:writable_book"
-        ]
+        ],
+        "nbt": "{pages:[]}"
       }
     }
   }

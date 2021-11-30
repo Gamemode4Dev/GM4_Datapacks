@@ -5,7 +5,13 @@
     "equipment": {
       "mainhand": {
         "items": [
-          "minecraft:writable_book"
+          "minecraft:armor_stand"
+        ],
+        "enchantments": [
+          {
+            "enchantment": "minecraft:protection",
+            "levels": 0
+          }
         ]
       }
     }

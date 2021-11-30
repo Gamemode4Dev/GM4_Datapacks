@@ -1,9 +1,12 @@
-# @s = player holding book and quill
+# @s = player holding writable_book
 # at @s
 # run from main
 
-# Reveal invisible armor_stand
-execute if predicate gm4_better_armour_stands:holding/mainhand/book_visible run effect give @e[type=armor_stand,tag=!gm4_no_edit,distance=..8,nbt={Invisible:1b}] glowing 2 0
+# reveal invisible armor_stand
+execute if predicate gm4_better_armour_stands:holding/mainhand/book_visible run effect give @e[type=armor_stand,tag=!gm4_no_edit,distance=..6,nbt={Invisible:1b}] glowing 2 0
 
-# Give arms to nearby armor_stand if holding book with "arms"
-execute if predicate gm4_better_armour_stands:holding/mainhand/book_arms as @e[type=armor_stand,tag=!gm4_bas_no_arms,tag=!gm4_no_edit,distance=..4,nbt={ShowArms:0b}] at @s run function gm4_better_armour_stands:toggle/arms_detection
+# enable right click detection for nearby armor_stand
+execute if predicate gm4_better_armour_stands:holding/mainhand/book_arms positioned ^ ^ ^2.5 as @e[type=armor_stand,tag=!gm4_bas_no_arms,tag=!gm4_no_edit,distance=..2.5,nbt={ShowArms:0b}] at @s run function gm4_better_armour_stands:toggle/arms_detection
+
+# remove ignore tag from writable_book
+item modify entity @s[predicate=gm4_better_armour_stands:holding/mainhand/book_ignore] weapon.mainhand gm4_better_armour_stands:remove_ignore

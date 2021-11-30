@@ -2,8 +2,8 @@
 # at @s
 # run from book/apply
 
-# Copy item data to armor stand.
-data modify entity @s {} merge from entity @p[tag=gm4_bas_active] Inventory[-1].tag.EntityTag
+# Copy item data to armor_stand.
+data modify entity @s {} merge from entity @a[tag=gm4_bas_active,limit=1] Inventory[-1].tag.EntityTag
 
 tag @s add gm4_bas_valid_code
 

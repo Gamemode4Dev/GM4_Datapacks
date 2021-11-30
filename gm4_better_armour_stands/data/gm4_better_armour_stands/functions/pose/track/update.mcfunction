@@ -2,11 +2,14 @@
 # at @p[tag=gm4_bas_track] positioned ~ ~1.6 ~
 # run from tick
 
+# get current id
+scoreboard players operation $current gm4_bas_id = @s gm4_bas_id
+
 # move markers
-execute as @e[type=marker,tag=gm4_bas_player_offset] if score @s gm4_bas_id = @p[tag=gm4_bas_track] gm4_bas_id positioned ^ ^ ^2 run function gm4_better_armour_stands:pose/track/update_markers
+execute as @e[type=marker,tag=gm4_bas_player_offset] if score @s gm4_bas_id = $current gm4_bas_id positioned ^ ^ ^2 run function gm4_better_armour_stands:pose/track/update_markers
 
 # move wandering_trader detection
-execute as @e[type=wandering_trader,tag=gm4_bas_detect] if score @s gm4_bas_id = @p[tag=gm4_bas_track] gm4_bas_id positioned ~ ~-1 ~ run tp @s ^ ^ ^.5
+execute as @e[type=wandering_trader,tag=gm4_bas_detect] if score @s gm4_bas_id = $current gm4_bas_id positioned ~ ~-1 ~ run tp @s ^ ^ ^.5
 
 # get new scores for rotations
 execute at @e[type=marker,tag=gm4_bas_joint] if score @s gm4_bas_id = @e[type=marker,tag=gm4_bas_joint,distance=..1,sort=nearest,limit=1] gm4_bas_id run function gm4_better_armour_stands:pose/track/update_scores

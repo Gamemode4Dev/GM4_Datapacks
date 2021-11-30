@@ -1,6 +1,6 @@
 # @s = armor_stand being moved
 # at @s
-# run from move/moving
+# run from pose/track/move
 
 # round to nearest 1/16th of a block
 execute store result score $as_pos_x gm4_bas_data run data get entity @s Pos[0] 16
