@@ -25,11 +25,12 @@ execute unless score @s gm4_bas_mode matches 1.. if entity @a[tag=gm4_bas_active
 execute unless score @s gm4_bas_mode matches 1.. if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:select/base,predicate=!gm4_better_armour_stands:sneaking] positioned ~ ~-1.6 ~ run function gm4_better_armour_stands:pose/select/move
 execute unless score @s gm4_bas_mode matches 1.. if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:select/base,predicate=gm4_better_armour_stands:sneaking] run scoreboard players set @s gm4_bas_mode 8
 
-execute if score @s gm4_bas_mode matches 1.. run function gm4_better_armour_stands:pose/select/success
-execute unless score @s gm4_bas_mode matches 1.. positioned ^ ^ ^.1 run function gm4_better_armour_stands:pose/select/failure
-
 # teleport armor_stand back to original position
 tp @s ~ ~ ~
+
+# start editing if success, otherwise feedback
+execute if score @s gm4_bas_mode matches 1.. run function gm4_better_armour_stands:pose/select/success
+execute unless score @s gm4_bas_mode matches 1.. positioned ^ ^ ^.1 run function gm4_better_armour_stands:pose/select/failure
 
 # kill spawn detectors
 tp @e[tag=gm4_bas_detect_part,distance=..3] ~ -10000 ~
