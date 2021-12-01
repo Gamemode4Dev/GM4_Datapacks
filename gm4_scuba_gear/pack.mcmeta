@@ -14,7 +14,8 @@
     "module_id": "scuba_gear",
     "libraries": [
         "lib_player_heads",
-        "lib_machines"
+        "lib_machines",
+        "lib_forceload"
     ],
     "site_description": "Ease ocean exploration with craftable scuba gear!",
     "site_categories": [

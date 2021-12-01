@@ -13,7 +13,8 @@
     "module_name": "Block Compressors",
     "module_id": "block_compressors",
     "libraries": [
-        "lib_machines"
+        "lib_machines",
+        "lib_forceload"
     ],
     "site_description": "Compress stacks of blocks down for compact storage, or decompress them again.",
     "site_categories": [

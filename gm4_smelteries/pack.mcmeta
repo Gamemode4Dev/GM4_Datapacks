@@ -13,7 +13,8 @@
     "module_name": "Smelteries",
     "module_id": "smelteries",
     "libraries": [
-        "lib_machines"
+        "lib_machines",
+        "lib_forceload"
     ],
     "site_description": "Double your ore output with this multi-block structure.",
     "site_categories": [

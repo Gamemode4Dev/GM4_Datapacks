@@ -13,7 +13,8 @@
     "module_name": "Boots of Ostara",
     "module_id": "boots_of_ostara",
     "libraries": [
-        "lib_machines"
+        "lib_machines",
+        "lib_forceload"
     ],
     "site_description": "Plant crops and more, just by walking! Also negates Desire Lines.",
     "site_categories": [

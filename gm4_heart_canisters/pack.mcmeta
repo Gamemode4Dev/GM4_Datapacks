@@ -14,7 +14,8 @@
     "module_id": "heart_canisters",
     "libraries": [
         "lib_player_heads",
-        "lib_machines"
+        "lib_machines",
+        "lib_forceload"
     ],
     "site_description": "Pricey canisters that increase your health when carried.",
     "site_categories": [

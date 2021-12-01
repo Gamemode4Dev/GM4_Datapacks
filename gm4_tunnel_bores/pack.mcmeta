@@ -13,7 +13,8 @@
     "module_name": "Tunnel Bores",
     "module_id": "tunnel_bores",
     "libraries": [
-        "lib_machines"
+        "lib_machines",
+        "lib_forceload"
     ],
     "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
     "site_description": "Ever wondered how mineshafts came to be? This is it!",

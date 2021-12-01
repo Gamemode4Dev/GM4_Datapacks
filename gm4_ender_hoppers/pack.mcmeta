@@ -13,7 +13,8 @@
     "module_name": "Ender Hoppers",
     "module_id": "ender_hoppers",
     "libraries": [
-        "lib_machines"
+        "lib_machines",
+        "lib_forceload"
     ],
     "site_description": "Create special hoppers that teleport nearby items to them.",
     "site_categories": [],

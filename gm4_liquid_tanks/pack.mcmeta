@@ -13,7 +13,8 @@
     "module_name": "Liquid Tanks",
     "module_id": "liquid_tanks",
     "libraries": [
-        "lib_machines"
+        "lib_machines",
+        "lib_forceload"
     ],
     "site_description": "Store liquids compactly in special tanks and interact with them!",
     "site_categories": [
