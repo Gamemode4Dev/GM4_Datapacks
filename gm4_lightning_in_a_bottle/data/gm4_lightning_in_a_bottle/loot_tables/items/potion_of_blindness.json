@@ -6,11 +6,11 @@
       "entries": [
         {
           "type": "item",
-          "name": "minecraft:lingering_potion",
+          "name": "minecraft:potion",
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{HideFlags:32,Potion:\"gm4:blindness\",CustomPotionEffects:[{Duration:400,Id:15b,Amplifier:0b}],CustomPotionColor:2039587}"
+              "tag": "{HideFlags:32,Potion:\"gm4:blindness\",CustomPotionEffects:[{Duration:1600,Id:15b,Amplifier:0b}],CustomPotionColor:2039587}"
             },
             {
               "function": "set_name",
@@ -18,9 +18,9 @@
                 {
                   "translate": "%1$s%3427655$s",
                   "with": [
-                    "Lingering Potion of Blindness",
+                    "Potion of Blindness",
                     {
-                      "translate": "item.gm4.lingering_potion.effect.blindness"
+                      "translate": "item.gm4.potion.effect.blindness"
                     }
                   ],
                   "italic": false
@@ -36,7 +36,7 @@
                     {
                       "translate": "effect.minecraft.blindness"
                     },
-                    "0:20"
+                    "1:20"
                   ],
                   "color": "red",
                   "italic": false

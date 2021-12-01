@@ -91,3 +91,6 @@ execute if entity @s[tag=gm4_lt_slow_falling] if data storage gm4_liquid_tanks:t
 
 #floating - added by module
 execute if entity @s[tag=gm4_lt_floating] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",tag:{Potion:"potion_liquids:floating"}}} run function gm4_potion_liquids:item_drain/potion
+
+# expansion check
+function #gm4_potion_liquids:expansion_item_drain
