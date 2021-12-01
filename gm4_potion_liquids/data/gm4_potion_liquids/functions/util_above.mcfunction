@@ -9,7 +9,4 @@ execute as @e[dx=0,type=shulker] run function gm4_potion_liquids:util/shulker
 # witch
 execute as @e[dx=0,type=witch] run function gm4_potion_liquids:util/witch
 
-# expansion check
-function #gm4_potion_liquids:expansion_util_above
-
 tag @s remove gm4_processing_tank
