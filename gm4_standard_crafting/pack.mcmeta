@@ -13,7 +13,8 @@
     "module_name": "Standard Crafting",
     "module_id": "standard_crafting",
     "libraries": [
-        "lib_machines"
+        "lib_machines",
+        "lib_forceload"
     ],
     "hidden":false,
     "site_description": "A crafting recipe pack that adds some nifty new recipes to the game.",

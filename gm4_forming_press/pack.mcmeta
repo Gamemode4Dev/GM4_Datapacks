@@ -13,7 +13,8 @@
     "module_name": "Forming Press",
     "module_id": "forming_press",
     "libraries": [
-        "lib_machines"
+        "lib_machines",
+        "lib_forceload"
     ],
     "site_description": "A machine capable of performing more efficient smelting and crafting recipes!",
     "site_categories": [

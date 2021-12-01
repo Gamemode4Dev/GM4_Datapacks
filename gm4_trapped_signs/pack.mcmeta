@@ -13,7 +13,8 @@
     "module_name": "Trapped Signs",
     "module_id": "trapped_signs",
     "libraries": [
-        "lib_machines"
+        "lib_machines",
+        "lib_forceload"
     ],
     "site_description": "Craft trapped signs which, when right-clicked, give off a redstone signal.",
     "site_categories": [
