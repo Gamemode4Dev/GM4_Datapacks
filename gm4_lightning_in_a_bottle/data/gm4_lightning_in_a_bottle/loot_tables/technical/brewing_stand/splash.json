@@ -18,19 +18,6 @@
                   }
                 }
               ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "name": "gm4_lightning_in_a_bottle:items/splash_potion_of_blindness",
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{data:{gm4_brewing:{insert:{tag:{Potion:\"gm4:blindness\"}}}}}"
-                  }
-                }
-              ]
             }
           ]
         }
