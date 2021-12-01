@@ -46,12 +46,6 @@
     {
       "condition": "minecraft:location_check",
       "predicate": {
-        "biome": "minecraft:deep_warm_ocean"
-      }
-    },
-    {
-      "condition": "minecraft:location_check",
-      "predicate": {
         "biome": "minecraft:deep_frozen_ocean"
       }
     },

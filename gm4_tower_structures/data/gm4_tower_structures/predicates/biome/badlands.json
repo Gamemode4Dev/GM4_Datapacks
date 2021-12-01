@@ -4,13 +4,19 @@
     {
       "condition": "minecraft:location_check",
       "predicate": {
-        "biome": "minecraft:river"
+        "biome": "minecraft:badlands"
       }
     },
     {
       "condition": "minecraft:location_check",
       "predicate": {
-        "biome": "minecraft:frozen_river"
+        "biome": "minecraft:eroded_badlands"
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "biome": "minecraft:wooded_badlands"
       }
     }
   ]

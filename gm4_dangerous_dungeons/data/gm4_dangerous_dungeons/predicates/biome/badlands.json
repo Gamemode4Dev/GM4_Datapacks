@@ -4,19 +4,19 @@
     {
       "condition": "minecraft:location_check",
       "predicate": {
-        "biome": "minecraft:desert"
+        "biome": "minecraft:badlands"
       }
     },
     {
       "condition": "minecraft:location_check",
       "predicate": {
-        "biome": "minecraft:desert_hills"
+        "biome": "minecraft:eroded_badlands"
       }
     },
     {
       "condition": "minecraft:location_check",
       "predicate": {
-        "biome": "minecraft:desert_lakes"
+        "biome": "minecraft:wooded_badlands"
       }
     }
   ]
