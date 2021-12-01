@@ -3,4 +3,4 @@
 #run from main
 
 particle portal ~ ~0.5 ~ 0 0 0 .5 1
-execute if block ~ ~ ~ dropper{Items:[]} positioned ~ ~0.7 ~ as @e[type=item,distance=..0.7,nbt={Item:{Count:1b,tag:{Enchantments:[{}]}}}] if data entity @s Item.tag.Enchantments[0].id positioned ~ ~-2 ~ run function gm4_enchantment_extractors:extract
+execute if block ~ ~ ~ dropper{Items:[{tag:{Enchantments:[{}]}}]} unless data block ~ ~ ~ Items[8] positioned ~ ~-1.2 ~ as @e[type=armor_stand,tag=gm4_enchantment_extractor_stand,limit=1,distance=..0.01] run function gm4_enchantment_extractors:extract
