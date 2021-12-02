@@ -3,8 +3,10 @@
 # at @s
 # run from gm4_mob_curing:convert_witch
 
+# trade stuff
 function gm4_mob_curing:potion_cleric/register_trades
-
 function gm4_trades-1.0:wandering_trader/create_pool
 
+# discount the curer
+execute if data entity @e[type=minecraft:item,limit=1,distance=..3,tag=gm4_gapple] Thrower run function gm4_mob_curing:potion_cleric/discount_curer
 tag @s remove gm4_mob_curing_needs_init

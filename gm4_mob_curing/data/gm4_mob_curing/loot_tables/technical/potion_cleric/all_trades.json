@@ -74,7 +74,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "gm4_mob_curing:technical/potion_cleric/upgraded/lingering",
+          "name": "gm4_mob_curing:technical/potion_cleric/zauber/lingering",
           "conditions": [
             {
               "condition": "minecraft:value_check",
