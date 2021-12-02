@@ -14,7 +14,10 @@ execute store result storage gm4_zauber_cauldrons:temp/item/bottled_vex gm4_zaub
 execute store result storage gm4_zauber_cauldrons:temp/item/bottled_vex gm4_zauber_cauldrons.cauldron_pos.dimension int 1 run scoreboard players get @e[type=marker,tag=gm4_dimension,distance=0..,limit=1] gm4_dimension
 
 # spawn item
-loot spawn ~ ~.1 ~ loot gm4_zauber_cauldrons:extra_items/bottled_vex
+loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:extra_items/bottled_vex
+
+# make items in cauldron pickup-able instantly
+execute align xyz as @e[type=item,dx=0,dy=0,dz=0] run data modify entity @s PickupDelay set value 0s
 
 # reset storage
 data remove storage gm4_zauber_cauldrons:temp/item/bottled_vex gm4_zauber_cauldrons
