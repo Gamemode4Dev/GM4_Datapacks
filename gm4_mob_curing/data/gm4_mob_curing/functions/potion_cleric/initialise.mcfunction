@@ -1,7 +1,7 @@
 # Creates Potion Cleric's trades based on lib_trades
 # @s = Potion Cleric
 # at @s
-# run from gm4_mob_curing:convert_witch
+# run from gm4_mob_curing:cure/witch
 
 # trade stuff
 function gm4_mob_curing:potion_cleric/register_trades
