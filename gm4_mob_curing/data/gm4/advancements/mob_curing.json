@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:potion",
+      "nbt": "{CustomModelData:3420007,CustomPotionColor:16262179,Enchantments:[{id:\"protection\",lvl:0}]}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Witch Doctor",
+        {
+          "translate": "advancement.gm4.mob_curing.title"
+        }
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Cure a Witch into a Potion Cleric",
+        {
+          "translate": "advancement.gm4.mob_curing.description"
+        }
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
