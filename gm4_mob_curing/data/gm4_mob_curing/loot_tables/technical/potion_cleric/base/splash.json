@@ -5,6 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -15,6 +16,7 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -25,6 +27,7 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -35,6 +38,7 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -45,6 +49,7 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -55,6 +60,18 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:luck"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -65,6 +82,7 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -75,6 +93,7 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -85,6 +104,7 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -95,6 +115,7 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -105,6 +126,7 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -115,6 +137,7 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -125,6 +148,7 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
           "name": "minecraft:splash_potion",
           "functions": [
             {
@@ -134,12 +158,40 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:splash_potion",
-          "functions": [
+          "type": "minecraft:loot_table",
+          "weight": 3,
+          "name": "gm4_lightning_in_a_bottle:items/splash_bottle_of_lightning",
+          "conditions": [
             {
-              "function": "minecraft:set_potion",
-              "id": "minecraft:water_breathing"
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "gm4_lightning_in_a_bottle"
+                },
+                "score": "load.status"
+              },
+              "range": 1
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 3,
+          "name": "gm4_potion_liquids:splash_floating_potion",
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "gm4_potion_liquids"
+                },
+                "score": "load.status"
+              },
+              "range": 1
             }
           ]
         }
