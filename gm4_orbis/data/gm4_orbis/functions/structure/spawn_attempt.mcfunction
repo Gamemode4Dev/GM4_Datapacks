@@ -11,4 +11,4 @@ execute as @e[type=marker,tag=gm4_orbis_populate_marker,sort=random] at @s run f
 kill @e[type=marker,tag=gm4_orbis_populate_marker]
 
 # set scoreboard to prevent another structure to be spawned
-scoreboard players set structure_height gm4_count -1
+scoreboard players set structure_height gm4_count -100
