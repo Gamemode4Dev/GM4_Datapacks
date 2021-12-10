@@ -42,6 +42,86 @@
               "tag": "{gm4_orbis:{name:'Stone Tower',structure:{name:'gm4_tower_structures:default4',posX:-4,posY:-1,posZ:-4}}}"
             }
           ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Granite Tower',structure:{name:'gm4_tower_structures:granite1',posX:-3,posY:-1,posZ:-3}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Small Diorite Tower',structure:{name:'gm4_tower_structures:diorite1',posX:-4,posY:-1,posZ:-4}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Sandstone Tower',structure:{name:'gm4_tower_structures:sandstone1',posX:-4,posY:-1,posZ:-4}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Large Mixed Tower',structure:{name:'gm4_tower_structures:cobblestone1',posX:-5,posY:-1,posZ:-5}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Acacia Tower',structure:{name:'gm4_tower_structures:acacia1',posX:-5,posY:-1,posZ:-5}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Large Diorite Tower',structure:{name:'gm4_tower_structures:diorite2',posX:-5,posY:-1,posZ:-5}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Large Cobblestone Tower',structure:{name:'gm4_tower_structures:cobblestone2',posX:-5,posY:-1,posZ:-5}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Small Spruce Tower',structure:{name:'gm4_tower_structures:spruce1',posX:-4,posY:-1,posZ:-4}}}"
+            }
+          ]
         }
       ]
     }
