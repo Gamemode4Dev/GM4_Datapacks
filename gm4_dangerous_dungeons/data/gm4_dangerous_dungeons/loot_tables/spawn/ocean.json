@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.2
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Ocean Dungeon',structure:{name:'gm4_dangerous_dungeons:ocean',posX:-8,posY:-7,posZ:-8}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

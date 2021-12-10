@@ -1,0 +1,49 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Tall Default Tower',structure:{name:'gm4_tower_structures:default',posX:-3,posY:-1,posZ:-3}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Large Default Tower',structure:{name:'gm4_tower_structures:default2',posX:-4,posY:-1,posZ:-4}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Dark Oak Tower',structure:{name:'gm4_tower_structures:default3',posX:-2,posY:-1,posZ:-2}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Stone Tower',structure:{name:'gm4_tower_structures:default4',posX:-4,posY:-1,posZ:-4}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
