@@ -5,7 +5,7 @@
       "conditions": [
         {
           "condition": "minecraft:random_chance",
-          "chance": 0.12
+          "chance": 0.25
         }
       ],
       "entries": [
@@ -70,9 +70,6 @@
                         "min": 0,
                         "max": 50
                       }
-                    },
-                    "fluid": {
-                      "tag": "minecraft:water"
                     }
                   }
                 }

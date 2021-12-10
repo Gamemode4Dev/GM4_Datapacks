@@ -4,8 +4,17 @@
       "rolls": 1,
       "conditions": [
         {
+          "condition": "minecraft:location_check",
+          "offsetY": 1,
+          "predicate": {
+            "fluid": {
+              "tag": "minecraft:water"
+            }
+          }
+        },
+        {
           "condition": "minecraft:random_chance",
-          "chance": 0.2
+          "chance": 0.4
         }
       ],
       "entries": [
@@ -15,7 +24,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_orbis:{name:'Ocean Dungeon',structure:{name:'gm4_dangerous_dungeons:ocean',posX:-8,posY:-7,posZ:-8}}}"
+              "tag": "{gm4_orbis:{name:'Ocean Dungeon',structure:{name:'gm4_dangerous_dungeons:ocean',posX:-8,posY:-5,posZ:-8}}}"
             }
           ]
         }
