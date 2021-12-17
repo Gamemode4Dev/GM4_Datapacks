@@ -12,3 +12,7 @@ data remove storage gm4_guidebook:temp_toc module
 
 # if the module goes in this page, add it to the storage and continue the loop
 execute if score $toc_page gm4_guide = $current_page gm4_guide run function gm4_guidebook:analyze_storage/table_of_contents/add_line
+
+# add pages until all the modules are listed
+execute unless score $toc_page gm4_guide = $current_page gm4_guide if data storage gm4_guidebook:temp_toc modules[-1] run schedule function gm4_guidebook:analyze_storage/table_of_contents/loop_page 1t
+execute unless data storage gm4_guidebook:temp_toc modules[-1] run schedule function gm4_guidebook:analyze_storage/interpret/finalize_table_of_contents 1t

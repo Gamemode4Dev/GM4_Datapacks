@@ -17,4 +17,4 @@ data remove storage gm4_guidebook:temp_toc contents
 data remove storage gm4_guidebook:temp_toc modules[-1]
 
 # check the next module
-function gm4_guidebook:analyze_storage/table_of_contents/loop_line
+schedule function gm4_guidebook:analyze_storage/table_of_contents/loop_line 1t

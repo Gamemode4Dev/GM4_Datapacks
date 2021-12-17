@@ -12,8 +12,9 @@ scoreboard players reset $module_count gm4_guide
 # update the contents of the table of contents
 data merge storage gm4_guidebook:pre_analyze {modules:[]}
 data merge storage gm4_guidebook:front_matter {table_of_contents:[],pages:[]}
+scoreboard players set $reloading gm4_guide 1
 execute positioned ~ 0 ~ run function gm4_guidebook:analyze_storage/get_modules
-schedule function gm4_guidebook:analyze_storage/interpret/schedule 1t
+schedule function gm4_guidebook:analyze_storage/interpret/initial_values 1t
 
 
 # start up module

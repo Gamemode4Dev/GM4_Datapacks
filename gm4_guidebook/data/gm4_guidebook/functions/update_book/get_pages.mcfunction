@@ -1,7 +1,7 @@
 # updates the player's guidebook
 # @s = player that triggered gm4_guide while holding a guidebook
 # located at world spawn
-# run from gm4_guidebook:tick
+# run from gm4_guidebook:update_book/check_reloading
 
 # get number of books the player is holding
 execute if predicate gm4_guidebook:book_in_mainhand store result score $count gm4_guide run data get entity @s SelectedItem.Count
