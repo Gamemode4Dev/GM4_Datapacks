@@ -1,7 +1,7 @@
 # change note to decrease instead of increase
-# @s = player who has cliked a noteblock while sneaking
+# @s = player tuning note block while sneaking
 # at note block
-# run from gm4_note_block_interface:click/sneak_loop
+# run from gm4_note_block_interface:tune/sneak_loop
 
 # lowers the note of the note block
 execute unless score @s gm4_nbi_change matches 1.. store success score @s gm4_nbi_change if block ~ ~ ~ note_block[note=0] run setblock ~ ~ ~ note_block[note=23]

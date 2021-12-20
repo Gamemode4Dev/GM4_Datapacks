@@ -14,6 +14,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_note_block_interface:click"
+    "function": "gm4_note_block_interface:tune"
   }
 }

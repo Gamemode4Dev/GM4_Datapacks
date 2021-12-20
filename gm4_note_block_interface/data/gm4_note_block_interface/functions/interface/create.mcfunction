@@ -1,8 +1,8 @@
 # check note and show as floating text
-# @s = player who has punched / clicked a note block
+# @s = player punching/tuning note block
 # at note block
-# run from gm4_note_block_interface:punch/loop
-# run from gm4_note_block_interface:click/loop
+# run from gm4_note_block_interface:play/loop
+# run from gm4_note_block_interface:tune/loop
 # run from gm4_note_block_interface:interface/change
 
 # kills old AEC
