@@ -1,6 +1,7 @@
 {
 	"values": [	
 		"#gm4_crossbow_cartridges:bucket",
+		"minecraft:potion",
 		"minecraft:string",
 		"minecraft:torch",
 		"minecraft:soul_torch",

@@ -17,12 +17,12 @@
           }
         ],
         "item": {
-          "nbt": "{ChargedProjectiles:[{id:\"minecraft:arrow\"}]}"
+          "nbt": "{ChargedProjectiles:[{id:\"minecraft:spectral_arrow\"}]}"
         }
       }
     }
   },
   "rewards": {
-    "function": "gm4_crossbow_cartridges:check_projectile"
+    "function": "gm4_crossbow_cartridges:shoot/spectral"
   }
 }

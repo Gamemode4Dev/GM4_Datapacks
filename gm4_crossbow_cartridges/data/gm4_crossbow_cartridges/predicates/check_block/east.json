@@ -70,6 +70,35 @@
 		{
 			"condition": "minecraft:location_check",
 			"predicate": {
+			  "block": {
+				"blocks": [
+				  "minecraft:piston",
+				  "minecraft:sticky_piston"
+				],
+				"state": {
+				  "extended": false
+				}
+			  }
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"blocks": [
+					  "minecraft:piston",
+					  "minecraft:sticky_piston"
+					],
+					"state": {
+						"extended": true,
+						"facing": "east"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
 				"block": {
 					"blocks": ["minecraft:piston_head"],
 					"state": {

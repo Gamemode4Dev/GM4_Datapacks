@@ -6,7 +6,7 @@
 # place tripwire
 setblock ~ ~ ~ minecraft:tripwire destroy
 particle dust 1 1 1 1 ~ ~ ~ 0 0 0 1 5 normal
-clear @s[gamemode=!creative] minecraft:string 1
+item modify entity @s[gamemode=!creative] weapon.offhand gm4_crossbow_cartridges:remove_item
 
 # adjust scoreboards
 scoreboard players remove @s gm4_cb_strcount 1
@@ -16,7 +16,7 @@ scoreboard players add @s gm4_cb_strplace 1
 execute if score @s gm4_cb_strplace matches 1 run kill @e[type=minecraft:arrow,tag=gm4_cb_arrow,distance=..2,limit=1,sort=nearest]
 
 # place hook if possible
-execute if score @s gm4_cb_hookcount matches 1 if block ^ ^ ^2 #gm4:full_collision positioned ^ ^ ^1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable run function gm4_crossbow_cartridges:cables/place_hook
+execute if score @s gm4_cb_hookcount matches 1 unless block ^ ^ ^2 #gm4_crossbow_cartridges:string_replaceable positioned ^ ^ ^1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable run function gm4_crossbow_cartridges:cables/place_hook
 
 # recursion
 execute unless score @s gm4_cb_strcount matches 0 positioned ^ ^ ^1 if block ~ ~ ~ #gm4_crossbow_cartridges:string_replaceable run function gm4_crossbow_cartridges:cables/unspool_string
