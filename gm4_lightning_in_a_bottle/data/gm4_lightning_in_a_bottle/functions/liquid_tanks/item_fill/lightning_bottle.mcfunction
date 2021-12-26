@@ -1,4 +1,4 @@
-# run from #gm4_potion_liquids:expansion_item_fill
+# run from #liquid_tanks:item_fill
 # @s = tank being processed
 
 scoreboard players set $item_value gm4_lt_value -1

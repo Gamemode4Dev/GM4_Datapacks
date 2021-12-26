@@ -91,6 +91,3 @@ execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:po
 
 #floating - added by module
 execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",tag:{Potion:"potion_liquids:floating"}}} run function gm4_potion_liquids:liquid_init/floating
-
-# expansion check
-function #gm4_potion_liquids:expansion_tank_init

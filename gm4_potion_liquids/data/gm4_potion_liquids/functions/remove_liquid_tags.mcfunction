@@ -27,6 +27,3 @@ tag @s remove gm4_lt_weakness
 tag @s remove gm4_lt_luck
 tag @s remove gm4_lt_slow_falling
 tag @s remove gm4_lt_floating
-
-# expansion check
-function #gm4_potion_liquids:expansion_remove_liquid_tags
