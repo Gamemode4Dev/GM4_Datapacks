@@ -9,8 +9,8 @@ OUTPUT = "out"
 RELEASE = "release"
 
 
-def run(cmd: str) -> str:
-	return subprocess.run(cmd, capture_output=True, encoding="utf8").stdout.rstrip()
+def run(cmd: list[str]) -> str:
+	return subprocess.run(cmd, capture_output=True, encoding="utf8").stdout.strip()
 
 
 def build_modules(ctx: Context):
@@ -28,19 +28,21 @@ def build_modules(ctx: Context):
 	except:
 		print(f"Meta file doesn't exist")
 		released_modules = []
-		last_commit = False
+		last_commit = run(["git", "rev-list", "--max-parents=0", "HEAD"])
 
 	for module in modules:
 		id = module["id"]
-		if last_commit:
-			module["diff"] = run(f"git diff \"{last_commit}\" --shortstat -- {BASE} {id}")
-		else:
-			module["diff"] = True
+		module["diff"] = run(["git", "diff", last_commit, "--shortstat", "--", "{BASE}", id])
 
 	for module in modules:
 		id = module["id"]
 		if not module["diff"]:
 			print(f"Skipping {id}, diff was empty")
+			if id not in released_modules:
+				print(f"This should never happen, there were no changes in {id}, but it doesn't exist in the release meta")
+				module["id"] = None
+			else:
+				module.update(released_modules[id])
 			continue
 
 		try:
@@ -69,7 +71,8 @@ def build_modules(ctx: Context):
 		module["patch"] = patch + 1
 		print(id)
 
-	head = run("git rev-parse HEAD")
+	head = run(["git", "rev-parse", "HEAD"])
+	print(head)
 	with open(f"{OUTPUT}/meta.json", "w") as f:
 		out = {
 			"last_commit": head,
