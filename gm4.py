@@ -10,6 +10,7 @@ RELEASE = "release"
 
 
 def run(cmd: list[str]) -> str:
+	print("Run", cmd)
 	return subprocess.run(cmd, capture_output=True, encoding="utf8").stdout.strip()
 
 
@@ -36,6 +37,7 @@ def build_modules(ctx: Context):
 		id = module["id"]
 		if last_commit:
 			module["diff"] = run(["git", "diff", last_commit, "--shortstat", "--", "{BASE}", id])
+			print(f"Gotten the diff: {module['diff']}")
 		else:
 			module["diff"] = True
 		print(f"Module {id}: {module['diff']}")
