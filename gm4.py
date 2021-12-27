@@ -16,6 +16,7 @@ def run(cmd: list[str]) -> str:
 def build_modules(ctx: Context):
 	modules = [{"id": p.name} for p in ctx.directory.glob("gm4_*")]
 	print(f"[GM4] Found {len(modules)} modules")
+	print(modules)
 
 	branch = os.getenv("GITHUB_REF_NAME")
 	released_meta = f"{RELEASE}/{branch}/meta.json" if branch else "out/meta.json"
@@ -37,10 +38,10 @@ def build_modules(ctx: Context):
 			module["diff"] = run(["git", "diff", last_commit, "--shortstat", "--", "{BASE}", id])
 		else:
 			module["diff"] = True
+		print(f"Module {id}: {module['diff']}")
 
 	for module in modules:
 		id = module["id"]
-		print(f"Module {id}: {module['diff']}")
 		if not module["diff"]:
 			print(f"Keeping {id}, no changes")
 			released_module = next((m for m in released_modules if m["id"] == id), None)
@@ -48,7 +49,7 @@ def build_modules(ctx: Context):
 				module.update(released_module)
 			else:
 				module["id"] = None
-				continue
+			continue
 
 		try:
 			with open(f"{id}/pack.mcmeta", "r") as f:
