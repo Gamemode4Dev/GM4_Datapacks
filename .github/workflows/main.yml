@@ -53,7 +53,7 @@ jobs:
           mv -f out/* release/$VERSION
           cd release
           git add .
-          git commit -m "Update modules"
+          git commit -m "🚀 ${{ github.event.ref }} ${{ github.event.head_commit.message }}"
       - name: Push release
         uses: ad-m/github-push-action@v0.6.0
         with:
