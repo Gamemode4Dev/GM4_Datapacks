@@ -10,5 +10,9 @@ tag @e[type=minecraft:item,distance=..1,limit=1,sort=nearest] add gm4_chairs_ign
 # dismount if sitting on chair
 execute align xyz positioned ~.5 ~ ~.5 as @a[predicate=gm4_chairs:sitting_in_chair,distance=..0.5] at @s align y run tp @s ~ ~1 ~
 
+# increase health to avoid visible death cloud
+attribute @s minecraft:generic.max_health base set 5
+data modify entity @s Health set value 5
+
 # remove chair
 tp @s ~ -10000 ~

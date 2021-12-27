@@ -4,7 +4,7 @@ scoreboard objectives add gm4_guide trigger
 scoreboard objectives add gm4_guide_config dummy
 execute unless score $sendCommandFeedback gm4_guide_config = $sendCommandFeedback gm4_guide_config store result score $sendCommandFeedback gm4_guide_config run gamerule sendCommandFeedback
 execute unless score $forceCommandFeedback gm4_guide_config = $forceCommandFeedback gm4_guide_config run scoreboard players set $forceCommandFeedback gm4_guide_config 0
-execute unless score $giveNewPlayers gm4_guide_config = $giveNewPlayers gm4_guide_config run scoreboard players set $giveNewPlayers gm4_guide_config 0
+execute unless score $giveNewPlayers gm4_guide_config = $giveNewPlayers gm4_guide_config run scoreboard players set $giveNewPlayers gm4_guide_config 1
 scoreboard players set #100 gm4_guide 100
 scoreboard players set #intro_pages gm4_guide 1
 scoreboard players reset $module_count gm4_guide

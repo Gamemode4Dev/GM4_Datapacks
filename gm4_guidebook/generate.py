@@ -192,7 +192,7 @@ def generate_unlock_tellraw(module):
 
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, "w") as file:
-        contents = '# tells the player that they discovered a page from this section\n# @s = player who unlocked a guidebook page\n# located at @s\n# run from advancement gm4_' + module_id + ':guidebook/page_<number>\n\ntellraw @s ["",{"selector":"@s"},{"text":" "},{"translate":"%1$s%3427655$s","with":[{"text":"has discovered a guidebook page from"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.discovered"}]}]},{"text":" "},{"text":"[' + module_name + ']","color":"#4AA0C7","hoverEvent":{"action":"show_text","contents":[{"text":"' + module_name + '","color":"#4AA0C7"},{"text":"\\n"},{"text":"' + desc + '","italic":true,"color":"gray"}]}}]'
+        contents = '# tells the player that they discovered a page from this section\n# @s = player who unlocked a guidebook page\n# located at @s\n# run from advancement gm4_guidebook:' + module_id + '/page_<number>\n\ntellraw @s ["",{"selector":"@s"},{"text":" "},{"translate":"%1$s%3427655$s","with":[{"text":"has discovered a guidebook page from"},{"translate":"%1$s%3427655$s","with":[{"translate":"text.gm4.guidebook.discovered"}]}]},{"text":" "},{"text":"[' + module_name + ']","color":"#4AA0C7","hoverEvent":{"action":"show_text","contents":[{"text":"' + module_name + '","color":"#4AA0C7"},{"text":"\\n"},{"text":"' + desc + '","italic":true,"color":"gray"}]}}]'
         file.write(contents + "\n")
 
 generated_verify = []
@@ -252,7 +252,7 @@ def generate_add_pages(module):
         if not initial_lock:
             contents = '# adds pages to the guidebook\n# @s = player who\'s updating their guidebook\n# located at @s\n# run from gm4_' + module_id + ':guidebook/verify_module\n\ndata modify storage gm4_guidebook:temp insert set value ' + pages + '\n\n# unlockable pages'
         else:
-            advancement = 'gm4_' + module_id + ':guidebook/page_0=true'
+            advancement = 'gm4_guidebook:' + module_id + '/page_0=true'
             locked_json = '{"text":"???","hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Undiscovered"},{"translate":"text.gm4.guidebook.undiscovered"}],"italic":true,"color":"red"}]}}'
             if module_type == "expansion":
                 locked_page = '[\'["",{"text":"◀ ","color":"#4AA0C7","clickEvent":{"action":"change_page","value":"2"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Back"},{"translate":"text.gm4.guidebook.back"}],"color":"#4AA0C7","clickEvent":{"action":"change_page","value":"2"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Return to Table of Contents"},{"translate":"text.gm4.guidebook.return_to_table"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n"},{"text":"☶ ","color":"#864BC7","bold":true,"clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"translate":"%1$s%3427655$s","with":[{"text":"Wiki"},{"translate":"text.gm4.guidebook.wiki"}],"color":"#864BC7","clickEvent":{"action":"open_url","value":"' + wiki_link + '"},"hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Open External Wiki"},{"translate":"text.gm4.guidebook.open_wiki"}],"italic":true,"color":"gold"}]}},{"text":"\\\\n\\\\n"},{"text":"' + module_name + '","underlined":true},{"text":"\\\\n"},' + locked_json + ']\'' + initial_pages + ']'
@@ -262,7 +262,7 @@ def generate_add_pages(module):
         file.write(contents + "\n")
         for i, page in enumerate(unlockable_pages):
             if len(page) > 3:
-                contents = 'execute if entity @s[advancements={gm4_' + module_id + ':guidebook/page_' + str(i) + '=true}] run data modify storage gm4_guidebook:temp insert[' + str(i + initial_page_count) + '] set value ' + str(page)
+                contents = 'execute if entity @s[advancements={gm4_guidebook:' + module_id + '/page_' + str(i) + '=true}] run data modify storage gm4_guidebook:temp insert[' + str(i + initial_page_count) + '] set value ' + str(page)
                 file.write(contents + "\n")
     
 create_tree(0, PAGE_COUNT - 1, f"{TABLE_FOLDER}", f"{TABLE_PATH}/0_{PAGE_COUNT - 1}")

@@ -7,8 +7,8 @@ fill ~ 0 ~ ~15 127 ~15 packed_ice replace granite
 fill ~ 0 ~ ~15 127 ~15 blue_ice replace diorite
 fill ~ 0 ~ ~15 127 ~15 ice replace andesite
 fill ~ 0 ~ ~15 127 ~15 white_concrete_powder replace sand
-fill ~ 0 ~ ~15 127 ~15 water replace lava
-fill ~ 0 ~ ~15 127 ~15 water replace obsidian
+fill ~ 0 ~ ~15 127 ~15 powder_snow replace gravel
+fill ~ 0 ~ ~15 127 ~15 obsidian replace lava
 
 fill ~ 128 ~ ~15 255 ~15 snow[layers=2] replace grass
 fill ~ 128 ~ ~15 255 ~15 snow[layers=3] replace #minecraft:small_flowers
@@ -18,6 +18,6 @@ fill ~ 128 ~ ~15 255 ~15 packed_ice replace dirt
 fill ~ 128 ~ ~15 255 ~15 packed_ice replace granite
 fill ~ 128 ~ ~15 255 ~15 blue_ice replace diorite
 fill ~ 128 ~ ~15 255 ~15 ice replace andesite
-fill ~ 0 ~ ~15 127 ~15 white_concrete_powder replace sand
-fill ~ 128 ~ ~15 255 ~15 water replace lava
-fill ~ 128 ~ ~15 255 ~15 water replace obsidian
+fill ~ 128 ~ ~15 255 ~15 white_concrete_powder replace sand
+fill ~ 128 ~ ~15 255 ~15 powder_snow replace gravel
+fill ~ 128 ~ ~15 255 ~15 obsidian replace lava

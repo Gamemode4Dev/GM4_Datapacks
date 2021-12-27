@@ -1,0 +1,57 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  "Splash Bottle of Lightning",
+                  {
+                    "translate": "item.gm4.lightning_in_a_bottle.splash_bottle_of_lightning"
+                  }
+                ],
+                "color": "white",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "potion.withAmplifier",
+                  "with": [
+                    {
+                      "translate": "%1$s%3427655$s",
+                      "with": [
+                        "Lightning",
+                        {
+                          "translate": "effect.gm4.lightning_in_a_bottle.lightning"
+                        }
+                      ],
+                      "color": "red",
+                      "italic": false
+                    },
+                    {
+                      "translate": "potion.potency.0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Potion:\"gm4:lightning\",gm4_lightning_in_a_bottle:1b,CustomModelData:3420004,HideFlags:33,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],CustomPotionColor:11985402}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
