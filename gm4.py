@@ -40,21 +40,20 @@ def build_modules(ctx: Context):
 
 	for module in modules:
 		id = module["id"]
+		print(f"Module {id}: {module['diff']}")
 		if not module["diff"]:
 			print(f"Keeping {id}, no changes")
 			released_module = next((m for m in released_modules if m["id"] == id), None)
 			if released_module:
 				module.update(released_module)
 			else:
-				print(f"This should never happen, there were no changes in {id}, but it doesn't exist in the release meta")
 				module["id"] = None
-			continue
+				continue
 
 		try:
 			with open(f"{id}/pack.mcmeta", "r") as f:
 				meta = json.load(f)
 		except:
-			print(f"Removing {id}, pack.mcmeta doesn't exist")
 			module["id"] = None
 			continue
 
