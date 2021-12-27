@@ -32,6 +32,8 @@ def build_modules(ctx: Context):
 		released_modules = []
 		last_commit = None
 
+	print(run(["git", "diff", last_commit]))
+
 	print(f"Last update: {last_commit}")
 	for module in modules:
 		id = module["id"]
