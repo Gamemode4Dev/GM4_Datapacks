@@ -18,18 +18,21 @@ def build_modules(ctx: Context):
 	print(f"[GM4] Found {len(modules)} modules")
 
 	branch = os.getenv("GITHUB_REF_NAME")
+	released_meta = f"{RELEASE}/{branch}/meta.json" if branch else "out/meta.json"
+	print(f"On branch {branch}")
 	try:
-		with open(f"{RELEASE}/{branch}/meta.json", "r") as f:
+		with open(released_meta, "r") as f:
 			meta = json.load(f)
 			released_modules = meta["modules"]
 			last_commit = meta["last_commit"]
 	except:
+		print(f"Meta file doesn't exist")
 		released_modules = []
 		last_commit = run("git rev-list --max-parents=0 HEAD") # initial commit
 
 	for module in modules:
 		id = module["id"]
-		module["diff"] = run(f"git diff \"{last_commit}\" -- {BASE} {id}")
+		module["diff"] = run(f"git diff \"{last_commit}\" --shortstat -- {BASE} {id}")
 
 	for module in modules:
 		id = module["id"]
