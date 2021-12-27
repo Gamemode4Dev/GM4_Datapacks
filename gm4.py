@@ -28,12 +28,15 @@ def build_modules(ctx: Context):
 			last_commit = meta["last_commit"]
 	except:
 		released_modules = []
-		last_commit = run(["git", "rev-list", "--max-parents=0", "HEAD"])
+		last_commit = None
 
 	print(f"Last update: {last_commit}")
 	for module in modules:
 		id = module["id"]
-		module["diff"] = run(["git", "diff", last_commit, "--shortstat", "--", "{BASE}", id])
+		if last_commit:
+			module["diff"] = run(["git", "diff", last_commit, "--shortstat", "--", "{BASE}", id])
+		else:
+			module["diff"] = True
 
 	for module in modules:
 		id = module["id"]
@@ -72,6 +75,7 @@ def build_modules(ctx: Context):
 		module["patch"] = patch + 1
 		print(f"Updated {id}")
 
+	os.makedirs(OUTPUT, exist_ok=True)
 	with open(f"{OUTPUT}/meta.json", "w") as f:
 		out = {
 			"last_commit": head,
