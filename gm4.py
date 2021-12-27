@@ -2,10 +2,16 @@ from beet.toolchain.helpers import subproject
 from beet import Context
 import json
 import os
+import subprocess
 
 BASE = "base"
 OUTPUT = "out"
 RELEASE = "release"
+
+
+def run(cmd: str) -> str:
+	return subprocess.run(cmd, capture_output=True, encoding="utf8").stdout.rstrip()
+
 
 def build_modules(ctx: Context):
 	modules = [{"id": p.name} for p in ctx.directory.glob("gm4_*")]
@@ -13,17 +19,29 @@ def build_modules(ctx: Context):
 
 	branch = os.getenv("GITHUB_REF_NAME")
 	try:
-		with open(f"{RELEASE}/{branch}/modules.json", "r") as f:
-			released_modules = json.load(f)
+		with open(f"{RELEASE}/{branch}/meta.json", "r") as f:
+			meta = json.load(f)
+			released_modules = meta["modules"]
+			last_commit = meta["last_commit"]
 	except:
 		released_modules = []
+		last_commit = run("git rev-list --max-parents=0 HEAD") # initial commit
 
 	for module in modules:
 		id = module["id"]
+		module["diff"] = run(f"git diff \"{last_commit}\" -- {BASE} {id}")
+
+	for module in modules:
+		id = module["id"]
+		if not module["diff"]:
+			print(f"Skipping {id}, diff was empty")
+			continue
+
 		try:
 			with open(f"{id}/pack.mcmeta", "r") as f:
 				meta = json.load(f)
 		except:
+			print(f"Skipping {id}, pack.mcmeta doesn't exist")
 			module["id"] = None
 			continue
 
@@ -45,6 +63,11 @@ def build_modules(ctx: Context):
 		module["patch"] = patch + 1
 		print(id)
 
-	with open(f"{OUTPUT}/modules.json", "w") as f:
-		json.dump([m for m in modules if m.get("id") is not None], f, indent=2)
+	head = run("git rev-parse HEAD")
+	with open(f"{OUTPUT}/meta.json", "w") as f:
+		out = {
+			"last_commit": head,
+			"modules": [m for m in modules if m.get("id") is not None],
+		}
+		json.dump(out, f, indent=2)
 		f.write('\n')
