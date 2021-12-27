@@ -19,17 +19,18 @@ def build_modules(ctx: Context):
 
 	branch = os.getenv("GITHUB_REF_NAME")
 	released_meta = f"{RELEASE}/{branch}/meta.json" if branch else "out/meta.json"
-	print(f"On branch {branch}")
+	head = run(["git", "rev-parse", "HEAD"])
+	print(f"On branch {branch}, HEAD={head}")
 	try:
 		with open(released_meta, "r") as f:
 			meta = json.load(f)
 			released_modules = meta["modules"]
 			last_commit = meta["last_commit"]
 	except:
-		print(f"Meta file doesn't exist")
 		released_modules = []
 		last_commit = run(["git", "rev-list", "--max-parents=0", "HEAD"])
 
+	print(f"Last update: {last_commit}")
 	for module in modules:
 		id = module["id"]
 		module["diff"] = run(["git", "diff", last_commit, "--shortstat", "--", "{BASE}", id])
@@ -37,7 +38,7 @@ def build_modules(ctx: Context):
 	for module in modules:
 		id = module["id"]
 		if not module["diff"]:
-			print(f"Skipping {id}, diff was empty")
+			print(f"Keeping {id}, no changes")
 			if id not in released_modules:
 				print(f"This should never happen, there were no changes in {id}, but it doesn't exist in the release meta")
 				module["id"] = None
@@ -49,7 +50,7 @@ def build_modules(ctx: Context):
 			with open(f"{id}/pack.mcmeta", "r") as f:
 				meta = json.load(f)
 		except:
-			print(f"Skipping {id}, pack.mcmeta doesn't exist")
+			print(f"Removing {id}, pack.mcmeta doesn't exist")
 			module["id"] = None
 			continue
 
@@ -69,10 +70,8 @@ def build_modules(ctx: Context):
 		module["categories"] = meta.get("site_categories", [])
 		module["hidden"] = meta.get("hidden", False)
 		module["patch"] = patch + 1
-		print(id)
+		print(f"Updated {id}")
 
-	head = run(["git", "rev-parse", "HEAD"])
-	print(head)
 	with open(f"{OUTPUT}/meta.json", "w") as f:
 		out = {
 			"last_commit": head,
