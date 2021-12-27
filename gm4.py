@@ -35,18 +35,6 @@ def build_modules(ctx: Context):
 	print(f"version={version} HEAD={head} last={last_commit}")
 	for module in modules:
 		id = module["id"]
-		if last_commit:
-			module["diff"] = run(["git", "diff", f"{last_commit}..HEAD", "--shortstat", "--", BASE, id])
-		else:
-			module["diff"] = True
-
-		released: dict | None = next((m for m in released_modules if m["id"] == id), None)
-		if not module["diff"] and released:
-			module.update(released)
-			print(f"Keeping {id}, no changes")
-			continue
-
-		module["patch"] = released["patch"] + 1 if released else prefix
 
 		try:
 			with open(f"{id}/pack.mcmeta", "r") as f:
@@ -54,34 +42,24 @@ def build_modules(ctx: Context):
 				module["name"] = meta.get("module_name", id)
 				module["description"] = meta.get("site_description", "")
 				module["categories"] = meta.get("site_categories", [])
+				module["libraries"] = meta.get("libraries", [])
 				module["hidden"] = meta.get("hidden", False)
-				print(f"Updating {id}: {module['patch']}")
 		except:
 			module["id"] = None
+			continue
+
+		diff = run(["git", "diff", last_commit, "--shortstat", "--", BASE, *module["libraries"], id]) if last_commit else True
+
+		released: dict | None = next((m for m in released_modules if m["id"] == id), None)
+
+		if not diff and released:
+			module["patch"] = released["patch"]
+		else:
+			new_patch = released["patch"] + 1 if released else prefix
+			module["patch"] = new_patch
+			print(f"Updating {id} {released['patch'] if released else 0} -> {new_patch}")
 
 	module_updates = [{k: m[k] for k in ["id", "name", "patch"]} for m in modules if m["id"]]
-
-	for module in modules:
-		id = module["id"]
-		if not id:
-			continue
-		ctx.require(subproject({
-			"id": id,
-			"data_pack": {
-				"name": id,
-				"load": [BASE, id],
-				"zipped": True,
-			},
-			"output": OUTPUT,
-			"pipeline": [
-				"gm4.module_updates"
-			],
-			"meta": {
-				"id": id,
-				"module_updates": module_updates
-			}
-		}))
-		print(f"Generated {id}")
 
 	os.makedirs(OUTPUT, exist_ok=True)
 	with open(f"{OUTPUT}/meta.json", "w") as f:
@@ -92,11 +70,32 @@ def build_modules(ctx: Context):
 		json.dump(out, f, indent=2)
 		f.write('\n')
 
+	for module in modules:
+		id = module["id"]
+		if not id:
+			continue
+		ctx.require(subproject({
+			"id": id,
+			"data_pack": {
+				"name": f"{id}_{version}",
+				"load": [BASE, *module["libraries"], id],
+				"zipped": True,
+			},
+			"output": OUTPUT,
+			"pipeline": [
+				"gm4.module_updates"
+			],
+			"meta": {
+				"module_updates": module_updates
+			}
+		}))
+		print(f"Generated {id}")
+
 
 def module_updates(ctx: Context):
-	init = ctx.data.functions[f"{ctx.meta['id']}:init"]
+	init = ctx.data.functions[f"{ctx.project_id}:init"]
 	init.lines.remove("#$moduleUpdateList")
 	init.lines.append('# Module update list')
 	init.lines.append('data remove storage gm4:log queue[{type:"outdated"}]')
 	for m in ctx.meta["module_updates"]:
-		init.lines.append(f'execute if score {m["id"]} gm4_modules matches ..{m["patch"]} run data modify storage gm4:log queue append value {{type:"outdated",module:"{m["name"]}"}}')
+		init.lines.append(f'execute if score {m["id"]} gm4_modules matches ..{m["patch"] - 1} run data modify storage gm4:log queue append value {{type:"outdated",module:"{m["name"]}"}}')
