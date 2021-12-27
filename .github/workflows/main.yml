@@ -35,12 +35,22 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build modules
         run: beet build
+      - name: Get version metadata
+        id: meta
+        run: |
+          content=`cat ./meta.json`
+          content="${content//'%'/'%25'}"
+          content="${content//$'\n'/'%0A'}"
+          content="${content//$'\r'/'%0D'}"
+          echo "::set-output name=meta::$content"
       - name: Commit release
+        env:
+          VERSION: ${{ fromJson(steps.meta.outputs.meta).version }}
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "actions-user"
-          mkdir -p release/$GITHUB_REF_NAME
-          mv -f out/* release/$GITHUB_REF_NAME
+          mkdir -p release/$VERSION
+          mv -f out/* release/$VERSION
           cd release
           git add .
           git commit -m "Update modules"

@@ -15,16 +15,17 @@ def run(cmd: list[str]) -> str:
 
 
 def build_modules(ctx: Context):
+	with open("meta.json", "r") as f:
+		version_meta = json.load(f)
+		prefix = version_meta["patch_prefix"]
+		version = version_meta["version"]
+
 	modules = [{"id": p.name} for p in ctx.directory.glob("gm4_*")]
 	print(f"[GM4] Found {len(modules)} modules")
-	print(modules)
 
-	branch = os.getenv("GITHUB_REF_NAME")
-	released_meta = f"{RELEASE}/{branch}/meta.json" if branch else "out/meta.json"
 	head = run(["git", "rev-parse", "HEAD"])
-	print(f"On branch {branch}, HEAD={head}")
 	try:
-		with open(released_meta, "r") as f:
+		with open(f"{RELEASE}/{version}/meta.json", "r") as f:
 			meta = json.load(f)
 			released_modules = meta["modules"]
 			last_commit = meta["last_commit"]
@@ -32,9 +33,7 @@ def build_modules(ctx: Context):
 		released_modules = []
 		last_commit = None
 
-	print(run(["git", "diff", last_commit]))
-
-	print(f"Last update: {last_commit}")
+	print(f"version={version}, HEAD={head}, last={last_commit}")
 	for module in modules:
 		id = module["id"]
 		if last_commit:
@@ -46,18 +45,10 @@ def build_modules(ctx: Context):
 
 	for module in modules:
 		id = module["id"]
-		if not module["diff"]:
-			print(f"Keeping {id}, no changes")
-			released_module = next((m for m in released_modules if m["id"] == id), None)
-			if released_module:
-				module.update(released_module)
-			else:
-				module["id"] = None
-			continue
 
 		try:
 			with open(f"{id}/pack.mcmeta", "r") as f:
-				meta = json.load(f)
+				meta: dict = json.load(f)
 		except:
 			module["id"] = None
 			continue
@@ -72,7 +63,13 @@ def build_modules(ctx: Context):
 			"output": OUTPUT
 		}))
 
-		patch = next((m["patch"] for m in released_modules if m["id"] == id), 0)
+		released: dict | None = next((m for m in released_modules if m["id"] == id), None)
+		if not module["diff"] and released:
+			print(f"Keeping {id}, no changes")
+			module.update(released)
+			continue
+
+		patch = released["patch"] if released else prefix
 		module["name"] = meta.get("module_name", id)
 		module["description"] = meta.get("site_description", "")
 		module["categories"] = meta.get("site_categories", [])
