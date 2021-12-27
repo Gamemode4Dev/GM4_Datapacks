@@ -42,11 +42,12 @@ def build_modules(ctx: Context):
 		id = module["id"]
 		if not module["diff"]:
 			print(f"Keeping {id}, no changes")
-			if id not in released_modules:
+			released_module = next((m for m in released_modules if m["id"] == id), None)
+			if released_module:
+				module.update(released_module)
+			else:
 				print(f"This should never happen, there were no changes in {id}, but it doesn't exist in the release meta")
 				module["id"] = None
-			else:
-				module.update(released_modules[id])
 			continue
 
 		try:
