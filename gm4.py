@@ -36,7 +36,7 @@ def build_modules(ctx: Context):
 	for module in modules:
 		id = module["id"]
 		if last_commit:
-			module["diff"] = run(["git", "diff", last_commit, "--shortstat", "--", "{BASE}", id])
+			module["diff"] = run(["git", "diff", last_commit, "--shortstat", "--", BASE, id])
 			print(f"Gotten the diff: {module['diff']}")
 		else:
 			module["diff"] = True
