@@ -28,11 +28,14 @@ def build_modules(ctx: Context):
 	except:
 		print(f"Meta file doesn't exist")
 		released_modules = []
-		last_commit = run("git rev-list --max-parents=0 HEAD") # initial commit
+		last_commit = False
 
 	for module in modules:
 		id = module["id"]
-		module["diff"] = run(f"git diff \"{last_commit}\" --shortstat -- {BASE} {id}")
+		if last_commit:
+			module["diff"] = run(f"git diff \"{last_commit}\" --shortstat -- {BASE} {id}")
+		else:
+			module["diff"] = True
 
 	for module in modules:
 		id = module["id"]
