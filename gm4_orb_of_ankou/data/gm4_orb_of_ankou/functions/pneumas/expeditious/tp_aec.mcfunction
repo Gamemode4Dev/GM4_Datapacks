@@ -27,7 +27,7 @@ execute if score randomZ gm4_pneuma_data matches 2.. run scoreboard players remo
 execute at @s if score randomZ gm4_pneuma_data matches 1.. run tp @s ~ ~ ~1
 execute if score randomZ gm4_pneuma_data matches 1.. run scoreboard players remove randomZ gm4_pneuma_data 1
 
-execute store result entity @s Pos[1] double 1 run scoreboard players get y_pos gm4_pneuma_data
+execute store result entity @s Pos.[1] double 1 run scoreboard players get y_pos gm4_pneuma_data
 execute at @s run tp @s ~ ~5 ~
 scoreboard players set set_y gm4_pneuma_data 0
 execute at @s run function gm4_orb_of_ankou:pneumas/expeditious/set_ypos
