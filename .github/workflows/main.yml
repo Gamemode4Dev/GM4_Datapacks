@@ -19,11 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Checkout release branch
         uses: actions/checkout@v2
         with:
           ref: release
-          fetch-depth: 0
           path: release
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
