@@ -99,4 +99,4 @@ def module_updates(ctx: Context):
 	init.lines.append('# Module update list')
 	init.lines.append('data remove storage gm4:log queue[{type:"outdated"}]')
 	for m in ctx.meta["module_updates"]:
-		init.lines.append(f'execute if score {m["id"]} gm4_modules matches ..18000 run data modify storage gm4:log queue append value {{type:"outdated",module:"{m["name"]}"}}')
+		init.lines.append(f'execute if score {m["id"]} gm4_modules matches ..{m["patch"]} run data modify storage gm4:log queue append value {{type:"outdated",module:"{m["name"]}"}}')
