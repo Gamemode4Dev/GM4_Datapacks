@@ -2,7 +2,7 @@ name: Check and build modules
 
 on:
   push:
-    branches: [ master, ver/1.16, ver/1.15, ver/1.14, ver/1.13 ]
+    branches: [ master, ver/1.17, ver/1.16, ver/1.15, ver/1.14, ver/1.13 ]
   workflow_dispatch:
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: mcbeet/check-commands@v1
         with:
-          minecraft: '1.17'
+          minecraft: '1.18'
           source: base gm4_!(template_pack) lib_*
 
   release:

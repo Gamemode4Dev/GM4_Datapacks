@@ -94,7 +94,8 @@ def build_modules(ctx: Context):
 
 def module_updates(ctx: Context):
 	init = ctx.data.functions[f"{ctx.project_id}:init"]
-	init.lines.remove("#$moduleUpdateList")
+	if "#$moduleUpdateList" in init.lines:
+		init.lines.remove("#$moduleUpdateList")
 	init.lines.append('# Module update list')
 	init.lines.append('data remove storage gm4:log queue[{type:"outdated"}]')
 	for m in ctx.meta["module_updates"]:
