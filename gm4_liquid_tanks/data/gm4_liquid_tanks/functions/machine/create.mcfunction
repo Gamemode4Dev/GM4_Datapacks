@@ -1,7 +1,7 @@
 # places the liquid_tank down
 # @s = player who placed the liquid_tank
 # located at the center of the placed block
-# run from gm4_liquid_tanks:machine/verify_placement
+# run from gm4_liquid_tanks:machine/verify_place_down
 
 # place hopper
 execute if score $face_placement gm4_machine_data matches 1..2 run setblock ~ ~ ~ hopper[facing=down]{CustomName:'{"translate":"%1$s%3427655$s","with":[{"translate":"%1$s%3427656$s","with":[{"text":"Empty Tank","font":"minecraft:default","color":"#373737"},[{"translate":"gui.gm4.liquid_tank","font":"gm4:container_gui","color":"white"},{"text":"Empty Tank","font":"minecraft:default","color":"#373737"}]]},{"translate":"%1$s%3427656$s","with":[{"translate":"container.gm4.liquid_tank.empty","font":"minecraft:default","color":"#373737"},[{"translate":"gui.gm4.liquid_tank","font":"gm4:container_gui","color":"white"},{"translate":"container.gm4.liquid_tank.empty","font":"minecraft:default","color":"#373737"}]]}]}'}

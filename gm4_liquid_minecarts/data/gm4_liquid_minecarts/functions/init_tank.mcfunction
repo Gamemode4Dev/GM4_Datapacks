@@ -23,7 +23,7 @@ scoreboard players operation @e[type=marker,tag=gm4_liquid_tank,limit=1,sort=nea
 execute as @e[type=marker,limit=1,sort=nearest,tag=gm4_liquid_tank,distance=..0.1] run function gm4_liquid_tanks:liquid_value_update
 scoreboard players set @s gm4_lt_value 0
 tag @s add gm4_liquid_minecart_empty
-execute as @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_liquid_minecart_display] run function gm4_liquid_minecarts:set_empty_data
+execute as @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_liquid_minecart_stand] run function gm4_liquid_minecarts:set_empty_data
 
 playsound minecraft:block.brewing_stand.brew block @a ~ ~ ~ 1.0 1.5
 function gm4_liquid_minecarts:liquid_value_update

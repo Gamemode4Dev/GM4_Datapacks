@@ -1,7 +1,7 @@
 # places the disassembler down
 # @s = player who placed the disassembler
 # located at the center of the placed block
-# run from gm4_disassemblers:machine/verify_placement
+# run from gm4_disassemblers:machine/verify_place_down
 
 # place dropper
 execute if score $rotation gm4_machine_data matches 1 run setblock ~ ~ ~ dropper[facing=down]{CustomName:'{"translate":"%1$s%3427655$s","with":[{"translate":"%1$s%3427656$s","with":[{"text":"Disassembler","font":"minecraft:default","color":"#373737"},[{"text":"Disassembler","font":"gm4:half_scale"},{"text":"Disassembler","font":"gm4:inverted"},{"text":"Disassembler","font":"gm4:inverted_spacing"},{"text":"Disassembler","font":"gm4:offscreen"},{"translate":"gui.gm4.disassembler","font":"gm4:container_gui","color":"white"},{"text":"Disassembler","font":"gm4:half_scale"},{"text":"Disassembler","font":"gm4:inverted"},{"text":"Disassembler","font":"gm4:inverted_spacing"},{"text":"Disassembler","font":"minecraft:default","color":"#373737"}]]},{"translate":"%1$s%3427656$s","with":[{"translate":"container.gm4.disassembler","font":"minecraft:default","color":"#373737"},[{"translate":"container.gm4.disassembler","font":"gm4:half_scale"},{"translate":"container.gm4.disassembler","font":"gm4:inverted"},{"translate":"container.gm4.disassembler","font":"gm4:inverted_spacing"},{"translate":"container.gm4.disassembler","font":"gm4:offscreen"},{"translate":"gui.gm4.disassembler","font":"gm4:container_gui","color":"white"},{"translate":"container.gm4.disassembler","font":"gm4:half_scale"},{"translate":"container.gm4.disassembler","font":"gm4:inverted"},{"translate":"container.gm4.disassembler","font":"gm4:inverted_spacing"},{"translate":"container.gm4.disassembler","font":"minecraft:default","color":"#373737"}]]}]}'}

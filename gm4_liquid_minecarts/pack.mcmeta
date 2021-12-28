@@ -12,6 +12,10 @@
     },
     "module_name": "Liquid Minecarts",
     "module_id": "liquid_minecarts",
+    "libraries": [
+        "lib_machines",
+        "lib_forceload"
+    ],
     "site_description": "Allows Minecarts to move fluids between Liquid Tanks",
     "site_categories": [
         "Liquid Tanks"

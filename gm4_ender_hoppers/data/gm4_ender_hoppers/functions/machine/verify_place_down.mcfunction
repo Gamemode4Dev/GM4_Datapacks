@@ -3,4 +3,4 @@
 # located at the machine block marker (at the center of the placed down block)
 # run from #gm4_machines:place_down
 
-execute if score $placed_block gm4_machine_data matches 0 if data storage gm4_machines:temp {id:"gm4_enchantment_extractor"} run function gm4_enchantment_extractors:machine/create
+execute if score $placed_block gm4_machine_data matches 0 if data storage gm4_machines:temp {id:"gm4_ender_hopper"} run function gm4_ender_hoppers:machine/create
