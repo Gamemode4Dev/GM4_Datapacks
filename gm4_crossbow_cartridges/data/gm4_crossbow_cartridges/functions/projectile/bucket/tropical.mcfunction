@@ -1,6 +1,6 @@
 # Summon tropical fish
 # @s = player using the crossbow
-# at @s
+# at arrow
 # run from projectile/bucket
 
 # replace arrow with tropical fish and copy data

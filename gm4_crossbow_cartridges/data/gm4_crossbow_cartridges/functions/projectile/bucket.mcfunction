@@ -1,6 +1,6 @@
 # Check fish/axolotl and shoot
 # @s = player using the crossbow
-# at @s
+# at arrow
 # run from check_projectile
 
 tag @s add gm4_cb_use

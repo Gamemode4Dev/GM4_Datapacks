@@ -1,7 +1,7 @@
 # Check item in offhand to shoot
 # @s = player using the crossbow
-# at @s
-# run from advancement shoot
+# at arrow
+# run from functions in shoot/
 
 # tripwire
 execute if entity @s[gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/string,x_rotation=-15..15] run function gm4_crossbow_cartridges:cables/shoot_arrow
@@ -16,7 +16,6 @@ execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_
 
 # potions
 execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:items/potions] run function gm4_crossbow_cartridges:projectile/potions
-execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:items/potion] unless data storage gm4_crossbow_cartridges:temp projectile run function gm4_crossbow_cartridges:projectile/potion
 
 # fireball
 execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/fire_charge] run function gm4_crossbow_cartridges:projectile/fireball
