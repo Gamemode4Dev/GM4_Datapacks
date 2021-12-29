@@ -3,6 +3,7 @@ name: Check and build modules
 on:
   push:
     branches: [ master, ver/1.17, ver/1.16, ver/1.15, ver/1.14, ver/1.13 ]
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -17,6 +18,7 @@ jobs:
 
   release:
     needs: test
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
