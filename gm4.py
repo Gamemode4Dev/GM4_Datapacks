@@ -13,10 +13,8 @@ def run(cmd: list[str]) -> str:
 
 
 def build_modules(ctx: Context):
-	with open("meta.json", "r") as f:
-		version_meta = json.load(f)
-		prefix = version_meta["patch_prefix"]
-		version = version_meta["version"]
+	version = os.getenv("VERSION", "1.18")
+	prefix = os.getenv("PATCH_PREFIX", 0)
 
 	modules = [{"id": p.name} for p in sorted(ctx.directory.glob("gm4_*"))]
 	print(f"[GM4] Found {len(modules)} modules")
