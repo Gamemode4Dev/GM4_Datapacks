@@ -4,6 +4,8 @@
 
 scoreboard players reset @s gm4_bas_id
 scoreboard players reset @s gm4_bas_mode
+scoreboard players reset @s gm4_bas_move
+scoreboard players reset @s gm4_bas_move_y
 
 tag @s remove gm4_bas_track
 tag @s remove gm4_bas_mirror

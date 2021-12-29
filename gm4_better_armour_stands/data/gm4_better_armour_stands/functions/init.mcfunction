@@ -2,8 +2,10 @@ scoreboard objectives add gm4_bas_id dummy
 scoreboard objectives add gm4_bas_data dummy
 scoreboard objectives add gm4_bas_mode dummy
 scoreboard objectives add gm4_bas_move dummy
+scoreboard objectives add gm4_bas_move_y dummy
 scoreboard objectives add gm4_bas_turn dummy
 scoreboard objectives add gm4_bas_invert dummy
+scoreboard objectives add gm4_bas_disabledslots dummy
 
 scoreboard players set #1500 gm4_bas_data 1500
 

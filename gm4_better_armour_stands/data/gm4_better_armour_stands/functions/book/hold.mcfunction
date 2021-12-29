@@ -10,3 +10,6 @@ execute if predicate gm4_better_armour_stands:holding/mainhand/book_arms positio
 
 # remove ignore tag from writable_book
 item modify entity @s[predicate=gm4_better_armour_stands:holding/mainhand/book_ignore] weapon.mainhand gm4_better_armour_stands:remove_ignore
+
+# enable temporary interaction for locked armor_stand
+execute if predicate gm4_better_armour_stands:holding/mainhand/book_lock positioned ^ ^ ^2.5 as @e[type=armor_stand,tag=gm4_bas_locked,tag=!gm4_bas_temp_unlock,tag=!gm4_no_edit,distance=..2.5] at @s run function gm4_better_armour_stands:toggle/unlock_detection
