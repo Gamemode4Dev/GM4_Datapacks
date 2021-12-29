@@ -1,5 +1,4 @@
-from beet.toolchain.helpers import subproject
-from beet import Context
+from beet import Context, subproject
 import json
 import os
 import subprocess
@@ -55,9 +54,9 @@ def build_modules(ctx: Context):
 		if not diff and released:
 			module["patch"] = released["patch"]
 		else:
-			new_patch = released["patch"] + 1 if released else prefix
-			module["patch"] = new_patch
-			print(f"Updating {id} {released['patch'] if released else 0} -> {new_patch}")
+			released_patch = released["patch"] if released else prefix
+			module["patch"] = released_patch + 1
+			print(f"Updating {id} -> {released_patch + 1}")
 
 	module_updates = [{k: m[k] for k in ["id", "name", "patch"]} for m in modules if m["id"]]
 
@@ -77,7 +76,7 @@ def build_modules(ctx: Context):
 		ctx.require(subproject({
 			"id": id,
 			"data_pack": {
-				"name": f"{id}_{version}",
+				"name": f"{id}_{version.replace('.', '_')}",
 				"load": [BASE, *module["libraries"], id],
 				"zipped": True,
 			},
@@ -94,9 +93,18 @@ def build_modules(ctx: Context):
 
 def module_updates(ctx: Context):
 	init = ctx.data.functions[f"{ctx.project_id}:init"]
+	updates = ctx.meta["module_updates"]
+
+	score = f"{ctx.project_id.removeprefix('gm4_')} gm4_modules"
+	patch = next(m for m in updates if m["id"] == ctx.project_id)["patch"]
+
+	for i, line in enumerate(init.lines):
+		if "gm4_modules" in line:
+			init.lines[i] = line.replace(f"{score} 1", f"{score} {patch}").replace(f"{score} matches 1", f"{score} matches {patch}")
+
 	if "#$moduleUpdateList" in init.lines:
 		init.lines.remove("#$moduleUpdateList")
 	init.lines.append('# Module update list')
 	init.lines.append('data remove storage gm4:log queue[{type:"outdated"}]')
-	for m in ctx.meta["module_updates"]:
-		init.lines.append(f'execute if score {m["id"]} gm4_modules matches ..{m["patch"] - 1} run data modify storage gm4:log queue append value {{type:"outdated",module:"{m["name"]}"}}')
+	for m in updates:
+		init.lines.append(f'execute if score {m["id"].removeprefix("gm4_")} gm4_modules matches ..{m["patch"] - 1} run data modify storage gm4:log queue append value {{type:"outdated",module:"{m["name"]}"}}')
