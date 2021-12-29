@@ -54,9 +54,9 @@ def build_modules(ctx: Context):
 		if not diff and released:
 			module["patch"] = released["patch"]
 		else:
-			released_patch = released["patch"] if released else prefix
-			module["patch"] = released_patch + 1
-			print(f"Updating {id} -> {released_patch + 1}")
+			new_patch = released["patch"] + 1 if released else prefix
+			module["patch"] = new_patch
+			print(f"Updating {id} -> {new_patch}")
 
 	module_updates = [{k: m[k] for k in ["id", "name", "patch"]} for m in modules if m["id"]]
 
