@@ -7,4 +7,5 @@
 execute unless score @s gm4_ender_bolt_own_id matches -2147483648..2147483647 if entity @s[type=#gm4_ender_bolt_shamir:pets] if data entity @s Owner run function gm4_ender_bolt_shamir:id/assign_pet
 
 # start infection
-execute unless score @s gm4_ender_bolt_own_id = $source gm4_ender_bolt_foreign_id run function gm4_ender_bolt_shamir:infection/infect
+execute if score $enable_pvp gm4_ender_bolt_foreign_id matches 0 unless score @s gm4_ender_bolt_own_id matches -2147483648..2147483647 run function gm4_ender_bolt_shamir:infection/infect
+execute if score $enable_pvp gm4_ender_bolt_foreign_id matches 1 unless score @s gm4_ender_bolt_own_id = $source gm4_ender_bolt_foreign_id run function gm4_ender_bolt_shamir:infection/infect
