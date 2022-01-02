@@ -70,6 +70,8 @@ scoreboard objectives add gm4_arb_depth dummy
 
 #ender_bolt
 scoreboard objectives add gm4_bolt_time dummy
+scoreboard objectives add gm4_ender_bolt_own_id dummy
+scoreboard objectives add gm4_ender_bolt_foreign_id dummy
 
 #musical
 scoreboard objectives add gm4_note_collect totalKillCount
