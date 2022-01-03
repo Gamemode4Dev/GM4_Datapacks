@@ -14,7 +14,7 @@ def run(cmd: list[str]) -> str:
 
 def build_modules(ctx: Context):
 	version = os.getenv("VERSION", "1.18")
-	prefix = os.getenv("PATCH_PREFIX", 0)
+	prefix = int(os.getenv("PATCH_PREFIX", 0))
 
 	modules = [{"id": p.name} for p in sorted(ctx.directory.glob("gm4_*"))]
 	print(f"[GM4] Found {len(modules)} modules")
