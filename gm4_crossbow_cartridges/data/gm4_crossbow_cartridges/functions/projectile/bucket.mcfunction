@@ -14,5 +14,5 @@ execute if predicate gm4_crossbow_cartridges:items/axolotl run function gm4_cros
 # replace filled bucket in player's offhand with water bucket
 item replace entity @s[gamemode=!creative] weapon.offhand with minecraft:water_bucket
 
-# give player advancement for shooting a fish
-execute unless predicate gm4_crossbow_cartridges:items/axolotl run advancement grant @s only gm4:crossbow_cartridges_fish
+# give advancement for launching mob in a bucket
+advancement grant @s only gm4:crossbow_cartridges_bucket
