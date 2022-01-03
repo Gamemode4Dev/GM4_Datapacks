@@ -16,4 +16,4 @@ execute if score @s gm4_bas_data matches 1 run tag @s remove gm4_bas_temp_unlock
 particle minecraft:enchanted_hit ~ ~.5 ~ .15 .5 .15 0 5
 playsound minecraft:block.chest.locked block @a[distance=..6] ~ ~ ~ 1 2
 
-tag @s add gm4_bas_valid_code
+scoreboard players set $valid_code gm4_bas_data 1

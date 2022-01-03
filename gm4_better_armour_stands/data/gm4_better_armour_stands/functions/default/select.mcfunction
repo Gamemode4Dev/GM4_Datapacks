@@ -2,7 +2,7 @@
 # at @s
 # run from pose/apply
 
-tag @s add gm4_bas_valid_code
+scoreboard players set $valid_code gm4_bas_data 1
 execute store result score @s gm4_bas_data run data get entity @s Small
 
 # spawn detectors

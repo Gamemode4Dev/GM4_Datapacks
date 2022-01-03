@@ -2,7 +2,7 @@
 # at @s
 # run from book/apply
 
-tag @s add gm4_bas_valid_code
+scoreboard players set $valid_code gm4_bas_data 1
 
 # Prepare to copy armor_stand tags to item entity.
 data modify storage gm4_better_armour_stands:temp EntityTag.Pose set from entity @s Pose

@@ -29,6 +29,6 @@ execute if data storage gm4_better_armour_stands:temp {pages:["bubbles"]} run sc
 execute if score @s gm4_particle matches 100 run summon area_effect_cloud ~ ~ ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:cloud,Tags:["gm4_particles_pack_cloud"]}
 execute if score @s gm4_particle matches 101 run summon area_effect_cloud ~ ~ ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:bubble,Tags:["gm4_particles_pack_cloud"]}
 
-tag @s[scores={gm4_particle=1..}] add gm4_bas_valid_code
+execute if score @s gm4_particle matches 1.. run scoreboard players set $valid_code gm4_bas_data 1
 data merge entity @s[scores={gm4_particle=1..}] {Invisible:1b,NoGravity:1b}
 execute unless score @s gm4_particle matches 1.. run scoreboard players operation @s gm4_particle = $current gm4_particle

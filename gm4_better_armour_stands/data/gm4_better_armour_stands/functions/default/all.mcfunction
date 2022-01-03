@@ -9,7 +9,7 @@ effect clear @s glowing
 scoreboard players reset @s gm4_particle
 scoreboard players reset @s gm4_bas_turn
 
-tag @s add gm4_bas_valid_code
+scoreboard players set $valid_code gm4_bas_data 1
 advancement grant @a[tag=gm4_bas_active,limit=1] only gm4:better_armour_stands
 
 playsound minecraft:entity.armor_stand.fall block @a[distance=..5] ~ ~ ~ 0.5 1

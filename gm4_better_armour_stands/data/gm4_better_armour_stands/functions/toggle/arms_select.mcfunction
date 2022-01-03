@@ -9,5 +9,5 @@ data modify storage gm4_better_armour_stands:temp pages set from entity @a[tag=g
 function #gm4_better_armour_stands:apply_book
 
 function gm4_better_armour_stands:toggle/arms_detect_remove
-tag @s remove gm4_bas_valid_code
+scoreboard players reset $valid_code gm4_bas_data
 tag @s remove gm4_bas_selected

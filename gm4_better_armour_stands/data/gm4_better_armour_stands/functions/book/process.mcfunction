@@ -13,9 +13,9 @@ item replace entity @a[tag=gm4_bas_active,limit=1] weapon.mainhand with minecraf
 item modify entity @a[tag=gm4_bas_active,limit=1] weapon.mainhand gm4_better_armour_stands:book
 
 # check valid codes and apply to armor_stand
-execute unless entity @s[tag=gm4_bas_track] run function #gm4_better_armour_stands:apply_book
-execute unless entity @s[tag=gm4_bas_valid_code] run function gm4_better_armour_stands:book/invalid
-tag @s remove gm4_bas_valid_code
+function #gm4_better_armour_stands:apply_book
+execute unless score $valid_code gm4_bas_data matches 1 run function gm4_better_armour_stands:book/invalid
+scoreboard players reset $valid_code gm4_bas_data
 
 # show invisible armour stand
 effect give @s[nbt={Invisible:1b}] glowing 2 0
