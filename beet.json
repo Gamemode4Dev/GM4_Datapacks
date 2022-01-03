@@ -1,0 +1,5 @@
+{
+  "pipeline": [
+    "gm4.build_modules"
+  ]
+}
