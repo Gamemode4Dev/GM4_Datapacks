@@ -10,5 +10,5 @@ setblock ~ ~ ~ furnace[facing=north]{CustomName:'{"translate":"%1$s%3427655$s","
 summon armor_stand ~ ~-1.5 ~1 {NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,DisabledSlots:2039552,Tags:["gm4_no_edit","gm4_smeltery_cauldron","gm4_machine_display","smithed.block"],HasVisualFire:1,CustomName:'"gm4_smeltery_cauldron"',ArmorItems:[{},{},{},{}],Rotation:[180.0f,0.0f]}
 
 # summon display armor stand and marker entity
-summon armor_stand ~ ~-0.3 ~ {Small:1,NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,DisabledSlots:2039552,Tags:["gm4_no_edit","gm4_smeltery_stand","gm4_machine_stand","smithed.block"],HasVisualFire:1,CustomName:'"gm4_smeltery_stand"',ArmorItems:[{},{},{},{id:"minecraft:iron_block",Count:1b,tag:{CustomModelData:3420001}}],Rotation:[180.0f,0.0f]}
-summon marker ~ ~ ~ {Tags:["gm4_smeltery","gm4_machine_marker","smithed.block"],CustomName:'"gm4_smeltery"',Rotation:[180.0f,0.0f]}
+summon armor_stand ~ ~-0.3 ~ {Small:1,NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,DisabledSlots:2039552,Tags:["gm4_no_edit","gm4_smeltery_stand","gm4_machine_stand","smithed.block","gm4_new_machine"],HasVisualFire:1,CustomName:'"gm4_smeltery_stand"',ArmorItems:[{},{},{},{id:"minecraft:iron_block",Count:1b,tag:{CustomModelData:3420001}}],Rotation:[180.0f,0.0f]}
+summon marker ~ ~ ~ {Tags:["gm4_smeltery","gm4_machine_marker","smithed.block","gm4_new_machine"],CustomName:'"gm4_smeltery"',Rotation:[180.0f,0.0f]}
