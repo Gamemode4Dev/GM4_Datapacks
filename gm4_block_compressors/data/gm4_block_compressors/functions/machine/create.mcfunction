@@ -3,13 +3,12 @@
 # located at the center of the placed block
 # run from gm4_block_compressors:machine/verify_place_down
 
-# place block depending on rotation
-execute if score $rotation gm4_machine_data matches 1 run function gm4_block_compressors:machine/rotate/down
-execute if score $rotation gm4_machine_data matches 2 run function gm4_block_compressors:machine/rotate/up
-execute if score $rotation gm4_machine_data matches 3 run function gm4_block_compressors:machine/rotate/south
-execute if score $rotation gm4_machine_data matches 4 run function gm4_block_compressors:machine/rotate/west
-execute if score $rotation gm4_machine_data matches 5 run function gm4_block_compressors:machine/rotate/north
-execute if score $rotation gm4_machine_data matches 6 run function gm4_block_compressors:machine/rotate/east
+# place dropper
+setblock ~ ~ ~ dropper[facing=down]{CustomName:'{"translate":"%1$s%3427655$s","with":[{"translate":"%1$s%3427656$s","with":[{"text":"Compression Amount","font":"minecraft:default","color":"#373737"},[{"text":"Compression Amount","font":"gm4:half_scale"},{"text":"Compression Amount","font":"gm4:inverted"},{"text":"Compression Amount","font":"gm4:inverted_spacing"},{"text":"Compression Amount","font":"gm4:offscreen"},{"translate":"gui.gm4.block_compressor","font":"gm4:container_gui","color":"white"},{"text":"Compression Amount","font":"gm4:half_scale"},{"text":"Compression Amount","font":"gm4:inverted"},{"text":"Compression Amount","font":"gm4:inverted_spacing"},{"text":"Compression Amount","font":"minecraft:default","color":"#373737"}]]},{"translate":"%1$s%3427656$s","with":[{"translate":"container.gm4.block_compressor","font":"minecraft:default","color":"#373737"},[{"translate":"container.gm4.block_compressor","font":"gm4:half_scale"},{"translate":"container.gm4.block_compressor","font":"gm4:inverted"},{"translate":"container.gm4.block_compressor","font":"gm4:inverted_spacing"},{"translate":"container.gm4.block_compressor","font":"gm4:offscreen"},{"translate":"gui.gm4.block_compressor","font":"gm4:container_gui","color":"white"},{"translate":"container.gm4.block_compressor","font":"gm4:half_scale"},{"translate":"container.gm4.block_compressor","font":"gm4:inverted"},{"translate":"container.gm4.block_compressor","font":"gm4:inverted_spacing"},{"translate":"container.gm4.block_compressor","font":"minecraft:default","color":"#373737"}]]}]}'}
+
+# summon display armor stand and marker entity
+summon armor_stand ~ ~-0.965 ~ {NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,DisabledSlots:2039552,Tags:["gm4_no_edit","gm4_block_compressor_stand","gm4_machine_stand","smithed.block","gm4_new_machine"],HasVisualFire:1,CustomName:'"gm4_block_compressor_stand"',ArmorItems:[{},{},{},{id:"minecraft:purpur_block",Count:1b,tag:{CustomModelData:3420002}}],Pose:{Head:[180f,0f,0f]},Rotation:[0.0f,0.0f]}
+summon marker ~ ~ ~ {Tags:["gm4_block_compressor","gm4_machine_marker","smithed.block","gm4_new_machine"],CustomName:'"gm4_block_compressor"',Rotation:[0.0f,0.0f]}
 
 # mark block as placed
 playsound minecraft:block.piston.contract block @a[distance=..5]
