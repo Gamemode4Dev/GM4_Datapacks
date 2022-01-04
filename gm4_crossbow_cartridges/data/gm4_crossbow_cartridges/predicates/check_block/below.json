@@ -93,6 +93,17 @@
 					"tag": "minecraft:fences"
 				}
 			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"blocks": ["minecraft:piston_head"],
+					"state": {
+						"facing": "up"
+					}
+				}
+			}
 		}
 	]
 }

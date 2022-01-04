@@ -1,7 +1,7 @@
 # Shoot soul torch
 # @s = player using the crossbow
 # at arrow
-# run from check_projectile
+# run from check_projectile and projectile/soul_torch
 
 tag @s add gm4_cb_use
 

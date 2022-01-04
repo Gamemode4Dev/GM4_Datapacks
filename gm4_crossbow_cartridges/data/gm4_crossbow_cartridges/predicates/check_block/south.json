@@ -70,15 +70,15 @@
 		{
 			"condition": "minecraft:location_check",
 			"predicate": {
-			  "block": {
-				"blocks": [
-				  "minecraft:piston",
-				  "minecraft:sticky_piston"
-				],
-				"state": {
-				  "extended": false
+				"block": {
+					"blocks": [
+						"minecraft:piston",
+						"minecraft:sticky_piston"
+					],
+					"state": {
+						"extended": false
+					}
 				}
-			  }
 			}
 		},
 		{
@@ -86,8 +86,8 @@
 			"predicate": {
 				"block": {
 					"blocks": [
-					  "minecraft:piston",
-					  "minecraft:sticky_piston"
+						"minecraft:piston",
+						"minecraft:sticky_piston"
 					],
 					"state": {
 						"extended": true,
@@ -106,6 +106,6 @@
 					}
 				}
 			}
-		}	
+		}
 	]
 }
