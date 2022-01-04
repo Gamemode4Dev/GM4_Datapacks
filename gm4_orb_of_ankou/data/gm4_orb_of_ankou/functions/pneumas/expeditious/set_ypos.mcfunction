@@ -1,5 +1,5 @@
-#@s = expeditious tp AEC
-#run from pneumas/expeditious/tp_aec
+# @s = expeditious tp AEC
+# run from pneumas/expeditious/tp_aec
 
 execute at @s run tp @s ~ ~-1 ~
 scoreboard players add set_y gm4_pneuma_data 1

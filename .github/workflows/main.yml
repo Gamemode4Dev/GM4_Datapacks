@@ -1,0 +1,59 @@
+name: Check and build modules
+
+on:
+  push:
+    branches: [ master, ver/1.17, ver/1.16, ver/1.15, ver/1.14, ver/1.13 ]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  VERSION: '1.18'
+  PATCH_PREFIX: 18000
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: mcbeet/check-commands@v1
+        with:
+          minecraft: ${{ env.VERSION }}
+          source: base gm4_!(template_pack) lib_*
+
+  release:
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Checkout release branch
+        uses: actions/checkout@v2
+        with:
+          ref: release
+          path: release
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Build modules
+        run: beet build
+      - name: Commit release
+        run: |
+          git config --global user.email "${{ github.event.head_commit.author.email }}"
+          git config --global user.name "${{ github.event.head_commit.author.username }}"
+          mkdir -p release/$VERSION
+          mv -f out/* release/$VERSION
+          cd release
+          git add .
+          git commit -m "🚀 ${{ github.event.after }} ${{ github.event.head_commit.message }}"
+      - name: Push release
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: release
+          branch: release

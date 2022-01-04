@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "firework_star",
-      "nbt": "{Enchantments:[{}],Explosion:{Colors:[I;13092807]},CustomModelData:1}"
+      "nbt": "{Enchantments:[{}],Explosion:{Colors:[I;13092807]},CustomModelData:3420001}"
     },
     "title": {
       "translate": "%1$s%3427655$s",

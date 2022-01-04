@@ -1,0 +1,40 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:location_check",
+      "offsetY": 64,
+      "predicate": {
+        "biome": "minecraft:snowy_plains"
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetY": 64,
+      "predicate": {
+        "biome": "minecraft:snowy_taiga"
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetY": 64,
+      "predicate": {
+        "biome": "minecraft:snowy_beach"
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetY": 64,
+      "predicate": {
+        "biome": "minecraft:frozen_river"
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetY": 64,
+      "predicate": {
+        "biome": "minecraft:ice_spikes"
+      }
+    }
+  ]
+}

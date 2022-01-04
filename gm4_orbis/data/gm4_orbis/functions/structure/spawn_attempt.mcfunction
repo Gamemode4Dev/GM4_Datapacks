@@ -1,4 +1,5 @@
 # choose a structure if possible and spawn it
+
 function #gm4_orbis:structure/spawn
 execute as @e[type=item,tag=gm4_orbis_structure,sort=random,limit=1] at @s run function gm4_orbis:structure/spawn
 kill @e[type=item,tag=gm4_orbis_structure]

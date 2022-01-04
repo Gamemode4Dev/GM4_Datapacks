@@ -1,11 +1,11 @@
 {
     "pack": {
-        "pack_format": 7,
+        "pack_format": 8,
         "description": [
             "Zauber Cauldrons",
             "\n",
             {
-                "text": "Gamemode 4 for 1.17",
+                "text": "Gamemode 4 for 1.18",
                 "color": "#4AA0C7"
             }
         ]
@@ -14,7 +14,8 @@
     "module_id": "zauber_cauldrons",
     "libraries": [
         "lib_forceload",
-        "lib_player_heads"
+        "lib_player_heads",
+        "lib_brewing"
     ],
     "site_description": "Brew potions, special armour and attribute crystals in any cauldron!",
     "site_categories": [],

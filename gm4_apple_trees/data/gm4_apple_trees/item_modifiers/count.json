@@ -1,0 +1,12 @@
+{
+  "function": "minecraft:set_count",
+  "count": {
+    "type": "minecraft:score",
+    "target": {
+      "type": "minecraft:fixed",
+      "name": "$item_count"
+    },
+    "score": "gm4_apple_data"
+  },
+  "add": true
+}

@@ -2,7 +2,7 @@
 # run from soul_forge/destroy
 
 # summon endermite
-data modify entity @s ArmorItems[0].tag set from entity @s ArmorItems[1].tag
+data modify storage gm4_orb_of_ankou:temp ArmorItems[0].tag set from storage gm4_orb_of_ankou:temp ArmorItems[1].tag
 function gm4_orb_of_ankou:soul_forge/entities/severed_soul
 
 # loop

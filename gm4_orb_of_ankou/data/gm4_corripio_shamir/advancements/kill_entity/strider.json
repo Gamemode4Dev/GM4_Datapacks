@@ -1,21 +1,40 @@
 {
-  "criteria":{
-    "kill_strider":{
-      "trigger":"minecraft:player_killed_entity",
-      "conditions":{
-        "killing_blow":{
-          "source_entity":{
-             "equipment":{
-               "mainhand":{
-                 "nbt":"{gm4_metallurgy:{has_shamir:1b,active_shamir:'corripio'}}"
-               }
-             }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:strider"
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"gm4_oa_ignore\"]}"
+              }
+            }
           }
-        },
-        "entity":{
-          "type":"minecraft:strider"
+        ],
+        "killing_blow": {
+          "source_entity": {
+            "equipment": {
+              "mainhand": {
+                "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'corripio'}}"
+              }
+            }
+          }
         }
       }
     }
+  },
+  "rewards": {
+    "function": "gm4_corripio_shamir:kill_entity/strider"
   }
 }

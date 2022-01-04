@@ -54,7 +54,7 @@
                       },
                       {
                         "function": "minecraft:set_nbt",
-                        "tag": "{gm4_metallurgy:{metal:{type:\"barium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:19,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/barium/v0\",Id:[I;140191582,-1151712444,-1271442552,1879524245],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyOTY4NDI1Njk5MSwKICAicHJvZmlsZUlkIiA6ICJiMGQ0YjI4YmMxZDc0ODg5YWYwZTg2NjFjZWU5NmFhYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNaW5lU2tpbl9vcmciLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjg5ZjJlZjhmZTJlMzhlM2I1YzliMzU0N2M3ZTFmODUzYTlhNDQ4MjFiZDllZTI1YmQ2ODhiYTY0MzcwZTk2MyIKICAgIH0KICB9Cn0=\"}]}}}"
+                        "tag": "{gm4_metallurgy:{metal:{type:\"barium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420019,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/barium/v0\",Id:[I;140191582,-1151712444,-1271442552,1879524245],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyOTY4NDI1Njk5MSwKICAicHJvZmlsZUlkIiA6ICJiMGQ0YjI4YmMxZDc0ODg5YWYwZTg2NjFjZWU5NmFhYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNaW5lU2tpbl9vcmciLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjg5ZjJlZjhmZTJlMzhlM2I1YzliMzU0N2M3ZTFmODUzYTlhNDQ4MjFiZDllZTI1YmQ2ODhiYTY0MzcwZTk2MyIKICAgIH0KICB9Cn0=\"}]}}}"
                       }
                     ]
                 }

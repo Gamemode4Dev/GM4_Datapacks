@@ -36,7 +36,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:202,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"anchoring\"},stored_attributes:[{AttributeName:\"generic.knockback_resistance\",Name:\"generic.knockback_resistance\",Amount:.9,Operation:0,UUID:[I;0,959327,0,859402],Slot:\"offhand\"}],stored_color:[1648550]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+              "tag": "{CustomModelData:3420202,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"anchoring\"},stored_attributes:[{AttributeName:\"generic.knockback_resistance\",Name:\"generic.knockback_resistance\",Amount:.9,Operation:0,UUID:[I;0,959327,0,859402],Slot:\"offhand\"}],stored_color:[1648550]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
             }
           ]
         }

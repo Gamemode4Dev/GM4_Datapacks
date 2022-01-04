@@ -7,6 +7,7 @@
           "source_entity":{
             "equipment":{
               "offhand":{
+                "tag": "gm4_orb_of_ankou:pneuma_container",
                 "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"depriving\"}]}}"
               }
             }

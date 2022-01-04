@@ -36,7 +36,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:219,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"lifeless\"},stored_color:[12761127]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+              "tag": "{CustomModelData:3420219,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"lifeless\"},stored_color:[12761127]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
             }
           ]
         }

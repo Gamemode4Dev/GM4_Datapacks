@@ -1,11 +1,11 @@
 {
     "pack": {
-        "pack_format": 7,
+        "pack_format": 8,
         "description": [
             "Better Armour Stands",
             "\n",
             {
-                "text": "Gamemode 4 for 1.17",
+                "text": "Gamemode 4 for 1.18",
                 "color": "#4AA0C7"
             }
         ]
@@ -13,11 +13,11 @@
     "module_name": "Better Armour Stands",
     "module_id": "better_armour_stands",
     "hidden": false,
-    "site_description": "This module lets you control the size of stands and show their arms. It's also expandable!",
+    "site_description": "This module gives you full control over the Armour Stand's pose, size, base plate, visibility, gravity, and more.. It's also expandable!",
     "site_categories": [
         "Better Armour Stands"
     ],
-    "video_link": "https://www.youtube.com/watch?v=E7DnQTlpgrw&t=1s",
+    "video_link": "https://www.youtube.com/watch?v=E7DnQTlpgrw",
     "wiki_link": "https://wiki.gm4.co/wiki/Better_Armour_Stands",
     "required_modules": [],
     "recommended_modules": [

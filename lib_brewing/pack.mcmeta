@@ -1,0 +1,21 @@
+{
+  "pack": {
+    "pack_format": 8,
+    "description": [
+      "Custom Brewing Library",
+      "\n",
+      {
+        "text": "Gamemode 4 for 1.18",
+        "color": "#4AA0C7"
+      }
+    ]
+  },
+  "credits": {
+    "Creator": [
+      [
+        "BluePsychoRanger",
+        "https://www.twitter.com/BluPsychoRanger"
+      ]
+    ]
+  }
+}

@@ -1,5 +1,6 @@
-#run from active
-#@s = player with shamir equipped, sneaking on rails
+# @s = player with shamir equipped, sneaking on rails
+# at @s
+# run from active
 
 tag @s add gm4_vecto_active
 

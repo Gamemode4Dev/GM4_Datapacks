@@ -1,18 +1,18 @@
 {
     "pack": {
-        "pack_format": 7,
+        "pack_format": 8,
         "description": [
             "Shroomites",
             "\n",
             {
-                "text": "Gamemode 4 for 1.17",
+                "text": "Gamemode 4 for 1.18",
                 "color": "#4AA0C7"
             }
         ]
     },
     "module_name": "Shroomites",
     "module_id": "shroomites",
-    "hidden":true,
+    "hidden":false,
     "site_description": "Mooshrooms plant spore-emitting mushrooms that spread mycelium and other mushrooms around them.",
     "site_categories": [],
     "video_link": "",

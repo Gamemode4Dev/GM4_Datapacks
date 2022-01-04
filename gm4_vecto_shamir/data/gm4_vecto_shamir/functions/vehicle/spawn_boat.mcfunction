@@ -1,5 +1,6 @@
-#run from vehicle/check_water and active
-#@s = player with shamir equipped, sneaking above water OR ice
+# @s = player with shamir equipped, sneaking above water OR ice
+# at @s
+# run from active and vehicle/check_boat_collision
 
 tag @s add gm4_vecto_active
 
