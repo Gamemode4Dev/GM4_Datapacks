@@ -21,7 +21,7 @@ execute unless score @s gm4_bas_mode matches 1.. if entity @a[tag=gm4_bas_active
 execute unless score @s gm4_bas_mode matches 1.. if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:select/right_arm] run function gm4_better_armour_stands:pose/select/arm_right
 execute unless score @s gm4_bas_mode matches 1.. if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:select/left_leg] run function gm4_better_armour_stands:pose/select/leg_left
 execute unless score @s gm4_bas_mode matches 1.. if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:select/right_leg] run function gm4_better_armour_stands:pose/select/leg_right
-execute unless score @s gm4_bas_mode matches 1.. if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:select/base,predicate=!gm4_better_armour_stands:sneaking] run function gm4_better_armour_stands:pose/select/move
+execute unless score @s gm4_bas_mode matches 1.. if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:select/base,predicate=!gm4_better_armour_stands:sneaking] run function gm4_better_armour_stands:pose/select/move/move
 execute unless score @s gm4_bas_mode matches 1.. if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:select/base,predicate=gm4_better_armour_stands:sneaking] run scoreboard players set @s gm4_bas_mode 8
 
 # teleport armor_stand back to original position
