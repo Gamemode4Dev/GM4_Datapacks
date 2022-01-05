@@ -4,7 +4,7 @@
 # run from functions in shoot/
 
 # tripwire
-execute if entity @s[gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/string,x_rotation=-15..15] run function gm4_crossbow_cartridges:cables/shoot_arrow
+execute if entity @s[gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/string,x_rotation=-15..15] align xyz positioned ~0.5 ~ ~0.5 run function gm4_crossbow_cartridges:cables/shoot_arrow
 
 # bucket with fish/axolotl
 execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:items/bucket] run function gm4_crossbow_cartridges:projectile/bucket

@@ -1,6 +1,6 @@
 # Place tripwire hook at end of tripwire
 # @s = player using the crossbow
-# at @s align xyz positioned ~0.5 ~ ~0.5, up to 40 blocks in one of the cardinal directions
+# at end of tripwire line, align xyz positioned ~0.5 ~ ~0.5
 # run from cables/unspool_string
 
 # check direction and place tripwire hook
