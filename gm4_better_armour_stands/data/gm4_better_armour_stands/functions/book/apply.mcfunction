@@ -42,4 +42,5 @@ execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armo
 execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["rotate"]} run function gm4_better_armour_stands:pose/rotate
 
 # disable armor_stand interaction
-execute if data storage gm4_better_armour_stands:temp {pages:["lock"]} run function gm4_better_armour_stands:toggle/lock
+execute if data storage gm4_better_armour_stands:temp {pages:["lock"]} unless entity @s[tag=gm4_bas_locked] run function gm4_better_armour_stands:toggle/lock
+execute if data storage gm4_better_armour_stands:temp {pages:["unlock"]} if entity @s[tag=gm4_bas_locked] run function gm4_better_armour_stands:toggle/unlock

@@ -2,5 +2,5 @@
 # at @s
 # run from main
 
-data modify entity @s Marker set value 1
+data merge entity @s {Marker:1b,Glowing:0b}
 tag @s remove gm4_bas_temp_unlock
