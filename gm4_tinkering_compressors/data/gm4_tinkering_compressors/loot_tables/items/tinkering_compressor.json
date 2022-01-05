@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420136,gm4_machines:{id:\"tinkering_compressor\"},SkullOwner:{Name:\"gm4_tinkering_compressor\",Id:[I;-376274969,744704688,-1218290593,1434816296],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTU5NjU3NTUxMzc1MCwKICAicHJvZmlsZUlkIiA6ICJjZGM5MzQ0NDAzODM0ZDdkYmRmOWUyMmVjZmM5MzBiZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJSYXdMb2JzdGVycyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kNzU3ZjVhMjBlMDFhYjFlOTUxNTljZTg2YzJhMDIxMWQ1ZmY4ZjIwMTU3ZmE5MzkwNWFlY2ExMDM2YTYyZDZhIgogICAgfQogIH0KfQ==\"}]}}}"
+              "tag": "{CustomModelData:3420136,gm4_machines:{id:\"tinkering_compressor\"},gm4_metallurgy:{has_shamir:1b},SkullOwner:{Name:\"gm4_tinkering_compressor\",Id:[I;-376274969,744704688,-1218290593,1434816296],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTU5NjU3NTUxMzc1MCwKICAicHJvZmlsZUlkIiA6ICJjZGM5MzQ0NDAzODM0ZDdkYmRmOWUyMmVjZmM5MzBiZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJSYXdMb2JzdGVycyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kNzU3ZjVhMjBlMDFhYjFlOTUxNTljZTg2YzJhMDIxMWQ1ZmY4ZjIwMTU3ZmE5MzkwNWFlY2ExMDM2YTYyZDZhIgogICAgfQogIH0KfQ==\"}]}}}"
             },
             {
               "function": "set_name",
