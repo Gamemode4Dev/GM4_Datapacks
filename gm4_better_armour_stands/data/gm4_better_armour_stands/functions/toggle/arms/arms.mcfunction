@@ -5,7 +5,7 @@
 data modify entity @s[tag=!gm4_bas_no_arms] ShowArms set value 0
 data modify entity @s[tag=gm4_bas_no_arms] ShowArms set value 1
 
-execute if entity @s[tag=!gm4_bas_no_arms] run function gm4_better_armour_stands:toggle/arms_detection
+execute if entity @s[tag=!gm4_bas_no_arms] run function gm4_better_armour_stands:toggle/arms/detect_interaction
 
 execute store result score @s gm4_bas_data run data get entity @s Small
 

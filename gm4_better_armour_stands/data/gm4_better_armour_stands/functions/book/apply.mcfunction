@@ -6,7 +6,7 @@
 execute if data storage gm4_better_armour_stands:temp {pages:["default"]} run function gm4_better_armour_stands:default/select
 
 # remove armor_stand arms
-execute if data storage gm4_better_armour_stands:temp {pages:["arms"]} run function gm4_better_armour_stands:toggle/arms
+execute if data storage gm4_better_armour_stands:temp {pages:["arms"]} run function gm4_better_armour_stands:toggle/arms/arms
 
 # toggle armor_stand base
 execute if data storage gm4_better_armour_stands:temp {pages:["base"]} run function gm4_better_armour_stands:toggle/base
@@ -42,5 +42,5 @@ execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armo
 execute unless score @s gm4_bas_mode matches 1.. if data storage gm4_better_armour_stands:temp {pages:["rotate"]} run function gm4_better_armour_stands:pose/rotate
 
 # disable armor_stand interaction
-execute if data storage gm4_better_armour_stands:temp {pages:["lock"]} unless entity @s[tag=gm4_bas_locked] run function gm4_better_armour_stands:toggle/lock
-execute if data storage gm4_better_armour_stands:temp {pages:["unlock"]} if entity @s[tag=gm4_bas_locked] run function gm4_better_armour_stands:toggle/unlock
+execute if data storage gm4_better_armour_stands:temp {pages:["lock"]} unless entity @s[tag=gm4_bas_locked] run function gm4_better_armour_stands:toggle/lock/lock
+execute if data storage gm4_better_armour_stands:temp {pages:["unlock"]} if entity @s[tag=gm4_bas_locked] run function gm4_better_armour_stands:toggle/lock/unlock

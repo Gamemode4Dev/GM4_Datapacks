@@ -9,4 +9,4 @@ execute positioned ~-.2 ~-.2 ~-.2 as @e[type=minecraft:armor_stand,tag=gm4_bas_n
 execute unless entity @e[type=minecraft:armor_stand,tag=gm4_bas_no_arms,tag=gm4_bas_selected,limit=1] unless entity @s[distance=6..] positioned ^ ^ ^.5 run function gm4_better_armour_stands:book/ray_arms
 
 # found armor_stand holding writable_book
-execute as @e[type=minecraft:armor_stand,tag=gm4_bas_no_arms,tag=gm4_bas_selected,limit=1] at @s run function gm4_better_armour_stands:toggle/arms_select
+execute as @e[type=minecraft:armor_stand,tag=gm4_bas_no_arms,tag=gm4_bas_selected,limit=1] at @s run function gm4_better_armour_stands:toggle/arms/select
