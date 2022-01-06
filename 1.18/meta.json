@@ -1,5 +1,5 @@
 {
-  "last_commit": "4da441a3b9a0237e5acff6731b88dbe623e2c9e7",
+  "last_commit": "cff2adfa278fe21f2a91c39293f4a44e5adbd287",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -811,7 +811,7 @@
         "lib_brewing"
       ],
       "hidden": false,
-      "patch": 18000
+      "patch": 18001
     },
     {
       "id": "gm4_zauber_liquids",
