@@ -12,4 +12,4 @@ scoreboard players reset @s gm4_bas_turn
 scoreboard players set $valid_code gm4_bas_data 1
 advancement grant @a[tag=gm4_bas_active,limit=1] only gm4:better_armour_stands
 
-playsound minecraft:entity.armor_stand.fall block @a[distance=..5] ~ ~ ~ 0.5 1
+playsound minecraft:entity.armor_stand.fall block @a[distance=..6] ~ ~ ~ 0.5 1

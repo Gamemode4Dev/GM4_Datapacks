@@ -18,7 +18,7 @@ item modify entity @a[tag=gm4_bas_active,limit=1] weapon.offhand gm4_better_armo
 
 # Display particles and play a sound to confirm that the pose was copied.
 particle item armor_stand ~ ~ ~ .2 1 .2 0 20
-playsound minecraft:block.wood.break player @a[distance=..5] ~ ~ ~ 0.5 1
+playsound minecraft:block.wood.break player @a[distance=..6] ~ ~ ~ 0.5 1
 
 # Reset storage
 data remove storage gm4_better_armour_stands:temp EntityTag

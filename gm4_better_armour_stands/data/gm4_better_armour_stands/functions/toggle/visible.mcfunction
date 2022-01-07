@@ -13,7 +13,7 @@ execute if score @s gm4_bas_data matches 1 run effect clear @s glowing
 execute unless score @s gm4_bas_data matches 1 run data modify entity @s Invisible set value 1
 execute unless score @s gm4_bas_data matches 1 run effect give @s glowing 2 0
 
-playsound minecraft:entity.player.attack.nodamage neutral @a[distance=..5] ~ ~ ~ .5 .6
+playsound minecraft:entity.player.attack.nodamage neutral @a[distance=..6] ~ ~ ~ .5 .6
 
 scoreboard players set $valid_code gm4_bas_data 1
 advancement grant @a[tag=gm4_bas_active,limit=1] only gm4:better_armour_stands

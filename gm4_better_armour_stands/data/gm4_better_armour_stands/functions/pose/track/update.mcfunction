@@ -36,4 +36,4 @@ data modify entity @s Pose merge from storage gm4_better_armour_stands:temp Pose
 data remove storage gm4_better_armour_stands:temp Pose
 
 # out of range
-execute unless entity @s[distance=..5] as @p[tag=gm4_bas_track] run function gm4_better_armour_stands:pose/set
+execute unless entity @s[distance=..6] as @p[tag=gm4_bas_track] run function gm4_better_armour_stands:pose/set

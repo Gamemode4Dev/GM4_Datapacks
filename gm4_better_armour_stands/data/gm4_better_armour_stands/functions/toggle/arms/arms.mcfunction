@@ -17,7 +17,7 @@ execute if score @s gm4_bas_data matches 0 positioned ~ ~1.4 ~ run particle bloc
 execute if score @s gm4_bas_data matches 1 positioned ~ ~.7 ~ run particle block oak_planks ^.2 ^ ^ 0 0 0 0 4
 execute if score @s gm4_bas_data matches 1 positioned ~ ~.7 ~ run particle block oak_planks ^-.2 ^ ^ 0 0 0 0 4
 
-playsound minecraft:entity.armor_stand.place block @a[distance=..5] ~ ~ ~ 0.5 1
+playsound minecraft:entity.armor_stand.place block @a[distance=..6] ~ ~ ~ 0.5 1
 
 scoreboard players set $valid_code gm4_bas_data 1
 advancement grant @a[tag=gm4_bas_active,limit=1] only gm4:better_armour_stands

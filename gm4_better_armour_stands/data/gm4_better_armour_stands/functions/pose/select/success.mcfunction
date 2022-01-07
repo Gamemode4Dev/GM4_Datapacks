@@ -2,7 +2,7 @@
 # at @s
 # run from pose/select
 
-playsound minecraft:entity.armor_stand.fall block @a[distance=..5] ~ ~ ~ 0.5 1
+playsound minecraft:entity.armor_stand.fall block @a[distance=..6] ~ ~ ~ 0.5 1
 
 tag @s add gm4_bas_track
 tag @a[tag=gm4_bas_active,limit=1] add gm4_bas_track
@@ -18,16 +18,16 @@ execute positioned ~ ~-10000 ~ run tp @e[type=wandering_trader,tag=gm4_bas_detec
 execute at @a[tag=gm4_bas_active,limit=1] positioned ~ ~1.6 ~ run summon marker ^ ^ ^2 {CustomName:'"gm4_bas_player_offset"',Tags:["gm4_bas_player_offset","gm4_bas_marker","gm4_bas_new","gm4_bas_temp"]}
 
 # store pose, position, or rotation data
-execute if score @s gm4_bas_mode matches 1..6 run data modify entity @e[type=minecraft:marker,tag=gm4_bas_player_offset,tag=gm4_bas_new,distance=..5,limit=1] data.Pose set from entity @s Pose
-execute if score @s gm4_bas_mode matches 7 run data modify entity @e[type=minecraft:marker,tag=gm4_bas_player_offset,tag=gm4_bas_new,distance=..5,limit=1] data.Pos set from entity @s Pos
-execute if score @s gm4_bas_mode matches 8 run data modify entity @e[type=minecraft:marker,tag=gm4_bas_player_offset,tag=gm4_bas_new,distance=..5,limit=1] data.Rotation set from entity @s Rotation
+execute if score @s gm4_bas_mode matches 1..6 run data modify entity @e[type=minecraft:marker,tag=gm4_bas_player_offset,tag=gm4_bas_new,distance=..6,limit=1] data.Pose set from entity @s Pose
+execute if score @s gm4_bas_mode matches 7 run data modify entity @e[type=minecraft:marker,tag=gm4_bas_player_offset,tag=gm4_bas_new,distance=..6,limit=1] data.Pos set from entity @s Pos
+execute if score @s gm4_bas_mode matches 8 run data modify entity @e[type=minecraft:marker,tag=gm4_bas_player_offset,tag=gm4_bas_new,distance=..6,limit=1] data.Rotation set from entity @s Rotation
 
 # copy player id to entities
-execute if score @s gm4_bas_mode matches 1.. run scoreboard players operation @e[type=wandering_trader,tag=gm4_bas_new,distance=..5] gm4_bas_id = @s gm4_bas_id
-tag @e[type=wandering_trader,tag=gm4_bas_new,distance=..5] remove gm4_bas_new
+execute if score @s gm4_bas_mode matches 1.. run scoreboard players operation @e[type=wandering_trader,tag=gm4_bas_new,distance=..6] gm4_bas_id = @s gm4_bas_id
+tag @e[type=wandering_trader,tag=gm4_bas_new,distance=..6] remove gm4_bas_new
 
-execute if score @s gm4_bas_mode matches 1.. run scoreboard players operation @e[type=marker,tag=gm4_bas_new,distance=..5] gm4_bas_id = @s gm4_bas_id
-tag @e[type=marker,tag=gm4_bas_new,distance=..5] remove gm4_bas_new
+execute if score @s gm4_bas_mode matches 1.. run scoreboard players operation @e[type=marker,tag=gm4_bas_new,distance=..6] gm4_bas_id = @s gm4_bas_id
+tag @e[type=marker,tag=gm4_bas_new,distance=..6] remove gm4_bas_new
 
 # optional checks
 execute if data storage gm4_better_armour_stands:temp {pages:["pose mirror"]} run tag @s add gm4_bas_mirror
