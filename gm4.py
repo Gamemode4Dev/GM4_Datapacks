@@ -1,4 +1,5 @@
 from beet import Context, subproject
+from beet.contrib.load import load
 import json
 import os
 import subprocess
@@ -16,6 +17,7 @@ def build_modules(ctx: Context):
 	version = os.getenv("VERSION", "1.18")
 	prefix = int(os.getenv("PATCH_PREFIX", 0))
 
+	dev: list[str] = [f"gm4_{id}" for id in ctx.meta.get("dev", "").split("+") if id]
 	modules = [{"id": p.name} for p in sorted(ctx.directory.glob("gm4_*"))]
 	print(f"[GM4] Found {len(modules)} modules")
 
@@ -29,7 +31,6 @@ def build_modules(ctx: Context):
 		released_modules = []
 		last_commit = None
 
-	print(f"version={version} HEAD={head} last={last_commit}")
 	for module in modules:
 		id = module["id"]
 
@@ -40,9 +41,13 @@ def build_modules(ctx: Context):
 				module["description"] = meta.get("site_description", "")
 				module["categories"] = meta.get("site_categories", [])
 				module["libraries"] = meta.get("libraries", [])
+				module["requires"] = [f"gm4_{id}" for id in meta.get("required_modules", [])]
 				module["hidden"] = meta.get("hidden", False)
 		except:
 			module["id"] = None
+			continue
+
+		if dev:
 			continue
 
 		diff = run(["git", "diff", last_commit, "--shortstat", "--", BASE, *module["libraries"], id]) if last_commit else True
@@ -56,37 +61,58 @@ def build_modules(ctx: Context):
 			module["patch"] = new_patch
 			print(f"Updating {id} -> {new_patch}")
 
-	module_updates = [{k: m[k] for k in ["id", "name", "patch"]} for m in modules if m["id"]]
+	if dev:
+		libs = set()
+		packs = set()
+		for d in dev:
+			packs.add(d)
+			module = next((m for m in modules if m["id"] == d), None)
+			if module is None:
+				raise ValueError(f"Module '{d}' not found")
+			for r in module["requires"]:
+				packs.add(r)
+				required = next(m for m in modules if m["id"] == r)
+				for l in required["libraries"]:
+					libs.add(l)
 
-	os.makedirs(OUTPUT, exist_ok=True)
-	with open(f"{OUTPUT}/meta.json", "w") as f:
-		out = {
-			"last_commit": head,
-			"modules": [m for m in modules if m.get("id") is not None],
-		}
-		json.dump(out, f, indent=2)
-		f.write('\n')
+		ctx.require(load(
+			data_pack=[BASE, *libs, *packs]
+		))
 
-	for module in modules:
-		id = module["id"]
-		if not id:
-			continue
-		ctx.require(subproject({
-			"id": id,
-			"data_pack": {
-				"name": f"{id}_{version.replace('.', '_')}",
-				"load": [BASE, *module["libraries"], id],
-				"zipped": True,
-			},
-			"output": OUTPUT,
-			"pipeline": [
-				"gm4.module_updates"
-			],
-			"meta": {
-				"module_updates": module_updates
+		print(f"[GM4] Generated development pack: [{' '.join([*list(packs), *list(libs)])}]")
+
+	else:
+		module_updates = [{k: m[k] for k in ["id", "name", "patch"]} for m in modules if m["id"]]
+
+		os.makedirs(OUTPUT, exist_ok=True)
+		with open(f"{OUTPUT}/meta.json", "w") as f:
+			out = {
+				"last_commit": head,
+				"modules": [m for m in modules if m.get("id") is not None],
 			}
-		}))
-		print(f"Generated {id}")
+			json.dump(out, f, indent=2)
+			f.write('\n')
+
+		for module in modules:
+			id = module["id"]
+			if not id:
+				continue
+			ctx.require(subproject({
+				"id": id,
+				"data_pack": {
+					"name": f"{id}_{version.replace('.', '_')}",
+					"load": [BASE, *module["libraries"], id],
+					"zipped": True,
+				},
+				"output": OUTPUT,
+				"pipeline": [
+					"gm4.module_updates"
+				],
+				"meta": {
+					"module_updates": module_updates
+				}
+			}))
+			print(f"Generated {id}")
 
 
 def module_updates(ctx: Context):
