@@ -295,11 +295,46 @@
         {
           "type": "minecraft:item",
           "weight": 40,
+          "name": "minecraft:glow_ink_sac",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_sunken_treasure:{spawn:{id:\"minecraft:glow_squid\"}}}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "position": {
+                  "y": {
+                    "max": 30
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 40,
           "name": "minecraft:ink_sac",
           "functions": [
             {
               "function": "minecraft:set_nbt",
               "tag": "{gm4_sunken_treasure:{spawn:{id:\"minecraft:squid\"}}}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "position": {
+                  "y": {
+                    "min": 31
+                  }
+                }
+              }
             }
           ]
         },

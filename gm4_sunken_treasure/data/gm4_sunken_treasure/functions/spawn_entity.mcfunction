@@ -5,6 +5,7 @@
 
 data modify storage gm4_sunken_treasure:temp spawn set from entity @s Item.tag.gm4_sunken_treasure.spawn
 
+execute if data storage gm4_sunken_treasure:temp spawn{id:"minecraft:glow_squid"} run summon glow_squid
 execute if data storage gm4_sunken_treasure:temp spawn{id:"minecraft:squid"} run summon squid
 execute if data storage gm4_sunken_treasure:temp spawn{id:"minecraft:guardian"} run summon guardian
 execute if data storage gm4_sunken_treasure:temp spawn{id:"minecraft:tropical_fish"} run summon tropical_fish
