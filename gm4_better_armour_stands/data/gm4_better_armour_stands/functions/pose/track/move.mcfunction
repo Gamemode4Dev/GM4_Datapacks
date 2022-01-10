@@ -20,10 +20,14 @@ execute store result score $as_pos_x gm4_bas_data run data get entity @s Pos[0] 
 execute store result score $as_pos_y gm4_bas_data run data get entity @s Pos[1] 1000
 execute store result score $as_pos_z gm4_bas_data run data get entity @s Pos[2] 1000
 
-# add difference to position and update
-execute store result entity @s Pos[0] double .001 run scoreboard players operation $as_pos_x gm4_bas_data += @s gm4_bas_dx
-execute store result entity @s Pos[1] double .001 run scoreboard players operation $as_pos_y gm4_bas_data += @s gm4_bas_dy
-execute store result entity @s Pos[2] double .001 run scoreboard players operation $as_pos_z gm4_bas_data += @s gm4_bas_dz
+# add difference to position
+data modify storage gm4_better_armour_stands:temp Pos set value [0.0d,0.0d,0.0d]
+execute store result storage gm4_better_armour_stands:temp Pos[0] double .001 run scoreboard players operation $as_pos_x gm4_bas_data += @s gm4_bas_dx
+execute store result storage gm4_better_armour_stands:temp Pos[1] double .001 run scoreboard players operation $as_pos_y gm4_bas_data += @s gm4_bas_dy
+execute store result storage gm4_better_armour_stands:temp Pos[2] double .001 run scoreboard players operation $as_pos_z gm4_bas_data += @s gm4_bas_dz
 
 # round up position to multiples of 1/16th of a block
 execute if entity @p[tag=gm4_bas_track,predicate=gm4_better_armour_stands:sneaking] run function gm4_better_armour_stands:pose/snap/position
+
+# set new position
+data modify entity @s Pos set from storage gm4_better_armour_stands:temp Pos

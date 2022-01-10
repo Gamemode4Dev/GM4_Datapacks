@@ -20,4 +20,4 @@ scoreboard players operation @s gm4_bas_dx -= @e[type=marker,tag=gm4_bas_temp_of
 scoreboard players operation @s gm4_bas_dy -= @e[type=marker,tag=gm4_bas_temp_offset,limit=1] gm4_bas_dy
 scoreboard players operation @s gm4_bas_dz -= @e[type=marker,tag=gm4_bas_temp_offset,limit=1] gm4_bas_dz
 
-kill @e[type=marker,tag=gm4_bas_temp_offset,limit=1]
+kill @e[type=marker,tag=gm4_bas_temp_offset,distance=..1]

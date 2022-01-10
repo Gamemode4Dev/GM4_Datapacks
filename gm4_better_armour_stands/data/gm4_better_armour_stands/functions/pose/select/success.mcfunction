@@ -7,7 +7,7 @@ playsound minecraft:entity.armor_stand.fall block @a[distance=..6] ~ ~ ~ 0.5 1
 tag @s add gm4_bas_track
 tag @a[tag=gm4_bas_active,limit=1] add gm4_bas_track
 
-data modify entity @s DisabledSlots set value 63
+data modify entity @s DisabledSlots set value 4144959
 data modify entity @s[nbt={Invisible:1b}] Glowing set value 1
 
 # right click detection

@@ -6,9 +6,8 @@ scoreboard players set $valid_code gm4_bas_data 1
 execute store result score @s gm4_bas_data run data get entity @s Small
 
 # spawn detectors
-execute if score @s gm4_bas_data matches 0 positioned ~ ~-10000 ~ run function gm4_better_armour_stands:equip/select/tall
-execute if score @s gm4_bas_data matches 1 positioned ~ ~-10000 ~ run function gm4_better_armour_stands:equip/select/small
-execute as @e[tag=gm4_bas_detect_part] at @s run tp @s ~ ~10000 ~
+execute if score @s gm4_bas_data matches 0 run function gm4_better_armour_stands:equip/select/tall
+execute if score @s gm4_bas_data matches 1 run function gm4_better_armour_stands:equip/select/small
 
 # teleport armor_stand so player is not looking at it
 tp @s ~ ~1000 ~
@@ -20,6 +19,3 @@ execute if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stan
 
 # teleport armor_stand back to original position
 tp @s ~ ~ ~
-
-# kill spawn detectors
-tp @e[tag=gm4_bas_detect_part,distance=..2] ~ -10000 ~

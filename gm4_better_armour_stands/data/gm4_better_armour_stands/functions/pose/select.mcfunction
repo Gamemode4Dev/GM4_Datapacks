@@ -30,6 +30,3 @@ tp @s ~ ~ ~
 # start editing if success, otherwise feedback
 execute if score @s gm4_bas_mode matches 1.. run function gm4_better_armour_stands:pose/select/success
 execute unless score @s gm4_bas_mode matches 1.. positioned ^ ^ ^.1 run function gm4_better_armour_stands:pose/select/failure
-
-# kill spawn detectors
-tp @e[tag=gm4_bas_detect_part,distance=..3] ~ -10000 ~
