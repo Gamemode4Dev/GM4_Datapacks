@@ -30,4 +30,4 @@ execute store result storage gm4_better_armour_stands:temp Pos[2] double .001 ru
 execute if entity @p[tag=gm4_bas_track,predicate=gm4_better_armour_stands:sneaking] run function gm4_better_armour_stands:pose/snap/position
 
 # set new position
-data modify entity @s Pos set from storage gm4_better_armour_stands:temp Pos
+data modify entity @s[predicate=gm4_better_armour_stands:coord_check] Pos set from storage gm4_better_armour_stands:temp Pos
