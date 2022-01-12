@@ -13,21 +13,16 @@ execute if score @s gm4_bas_dist matches 35 run tp @s ^ ^ ^3.5
 execute if score @s gm4_bas_dist matches 40 run tp @s ^ ^ ^4
 execute if score @s gm4_bas_dist matches 45 run tp @s ^ ^ ^4.5
 execute if score @s gm4_bas_dist matches 50 run tp @s ^ ^ ^5
-execute if score @s gm4_bas_dist matches 55 run tp @s ^ ^ ^5.5
 
 # armour stand position
-execute store result score $as_pos_x gm4_bas_data run data get entity @s Pos[0] 1000
+execute store result score $as_pos_x gm4_bas_data run data get entity @s[tag=!gm4_bas_move_alt] Pos[0] 1000
+execute store result score $as_pos_z gm4_bas_data run data get entity @s[tag=!gm4_bas_move_alt] Pos[2] 1000
 execute store result score $as_pos_y gm4_bas_data run data get entity @s Pos[1] 1000
-execute store result score $as_pos_z gm4_bas_data run data get entity @s Pos[2] 1000
 
 # add difference to position
-data modify storage gm4_better_armour_stands:temp Pos set value [0.0d,0.0d,0.0d]
-execute store result storage gm4_better_armour_stands:temp Pos[0] double .001 run scoreboard players operation $as_pos_x gm4_bas_data += @s gm4_bas_dx
-execute store result storage gm4_better_armour_stands:temp Pos[1] double .001 run scoreboard players operation $as_pos_y gm4_bas_data += @s gm4_bas_dy
-execute store result storage gm4_better_armour_stands:temp Pos[2] double .001 run scoreboard players operation $as_pos_z gm4_bas_data += @s gm4_bas_dz
+execute store result entity @s[tag=!gm4_bas_move_alt] Pos[0] double .001 run scoreboard players operation $as_pos_x gm4_bas_data += @s gm4_bas_dx
+execute store result entity @s[tag=!gm4_bas_move_alt] Pos[2] double .001 run scoreboard players operation $as_pos_z gm4_bas_data += @s gm4_bas_dz
+execute store result entity @s Pos[1] double .001 run scoreboard players operation $as_pos_y gm4_bas_data += @s gm4_bas_dy
 
-# round up position to multiples of 1/16th of a block
+# round up position to multiples of 1/8th of a block
 execute if entity @p[tag=gm4_bas_track,predicate=gm4_better_armour_stands:sneaking] run function gm4_better_armour_stands:pose/snap/position
-
-# set new position
-data modify entity @s[predicate=gm4_better_armour_stands:coord_check] Pos set from storage gm4_better_armour_stands:temp Pos

@@ -8,7 +8,6 @@ scoreboard objectives add gm4_bas_dx dummy
 scoreboard objectives add gm4_bas_dy dummy
 scoreboard objectives add gm4_bas_dz dummy
 
-scoreboard players set #125 gm4_bas_data 125
 scoreboard players set #1500 gm4_bas_data 1500
 
 team add gm4_bas

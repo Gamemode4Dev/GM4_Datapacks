@@ -5,11 +5,14 @@
 scoreboard players set @s gm4_bas_mode 7
 tp @s ~ ~ ~
 
-# reset previous scores
+# reset previous data
 scoreboard players reset @s gm4_bas_dist
 scoreboard players reset @s gm4_bas_dx
 scoreboard players reset @s gm4_bas_dy
 scoreboard players reset @s gm4_bas_dz
+
+tag @s remove gm4_bas_move_alt
+tag @s[predicate=!gm4_better_armour_stands:coord_check] add gm4_bas_move_alt
 
 # calculate distance/offset 
 execute at @a[tag=gm4_bas_active,limit=1] positioned ~ ~1.6 ~ positioned ^ ^ ^.5 run function gm4_better_armour_stands:pose/select/move/ray
