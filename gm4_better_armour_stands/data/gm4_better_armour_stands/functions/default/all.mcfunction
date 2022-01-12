@@ -3,10 +3,9 @@
 # run from book/apply
 
 data modify entity @s Pose set from storage gm4_better_armour_stands:default Pose
-data merge entity @s {NoGravity:0,NoBasePlate:0,ShowArms:1,Small:0,Invisible:0b}
+data merge entity @s {NoGravity:0,NoBasePlate:0,ShowArms:1,Small:0,Invisible:0}
 effect clear @s glowing
 
-scoreboard players reset @s gm4_particle
 scoreboard players reset @s gm4_bas_turn
 
 scoreboard players set $valid_code gm4_bas_data 1

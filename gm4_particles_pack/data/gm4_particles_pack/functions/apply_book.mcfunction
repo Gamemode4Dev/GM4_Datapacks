@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from gm4_better_armour_stands:book/apply
+# run from gm4_better_armour_stands:book/process
 
 scoreboard players operation $current gm4_particle = @s gm4_particle
 scoreboard players reset @s gm4_particle

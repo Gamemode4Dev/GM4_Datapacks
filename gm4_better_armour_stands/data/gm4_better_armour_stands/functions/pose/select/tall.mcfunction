@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from pose/select
+# run from pose/select, equip/select, default/part
 
 # base
 summon minecraft:area_effect_cloud ~ ~-.4 ~ {Radius:.375f,Tags:["gm4_bas_base"]}

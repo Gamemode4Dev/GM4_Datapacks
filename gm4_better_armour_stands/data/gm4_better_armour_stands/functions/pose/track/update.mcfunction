@@ -14,6 +14,3 @@ execute if score @s gm4_bas_mode matches 1..6 run function gm4_better_armour_sta
 # update for move/rotate
 execute if score @s gm4_bas_mode matches 7 run function gm4_better_armour_stands:pose/track/move
 execute if score @s gm4_bas_mode matches 8 run function gm4_better_armour_stands:pose/track/rotate
-
-# out of range
-#execute unless entity @s[distance=..6] as @a[tag=gm4_bas_track] if score @s gm4_bas_id = $current gm4_bas_id run function gm4_better_armour_stands:pose/set

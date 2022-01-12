@@ -3,7 +3,7 @@
 # run from book/process
 
 # restore armor_stand state to default
-execute if data storage gm4_better_armour_stands:temp {pages:["default"]} run function gm4_better_armour_stands:default/select
+execute if data storage gm4_better_armour_stands:temp {pages:["default"]} run function gm4_better_armour_stands:default/check
 
 # remove armor_stand arms
 execute if data storage gm4_better_armour_stands:temp {pages:["arms"]} run function gm4_better_armour_stands:toggle/arms/arms

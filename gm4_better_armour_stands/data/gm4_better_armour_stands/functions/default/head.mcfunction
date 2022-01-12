@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from book/apply
+# run from default/part
 
 data modify entity @s Pose.Head set from storage gm4_better_armour_stands:default Pose.Head
 playsound minecraft:entity.armor_stand.fall block @a[distance=..6] ~ ~ ~ 0.5 1

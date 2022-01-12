@@ -1,8 +1,7 @@
 # @s = armor_stand to be modified
 # at @s
-# run from pose/apply
+# run from default/check
 
-scoreboard players set $valid_code gm4_bas_data 1
 execute store result score @s gm4_bas_data run data get entity @s Small
 
 # spawn detectors
@@ -19,7 +18,6 @@ execute if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stan
 execute if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:select/right_arm] run function gm4_better_armour_stands:default/right_arm
 execute if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:select/left_leg] run function gm4_better_armour_stands:default/left_leg
 execute if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:select/right_leg] run function gm4_better_armour_stands:default/right_leg
-execute if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:sneaking] run function gm4_better_armour_stands:default/all
 
 # teleport armor_stand back to original position
 tp @s ~ ~ ~
