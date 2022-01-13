@@ -1,7 +1,7 @@
 # check for doublable ores
 # @s = smeltery cauldron linked to a furnace that's smelting items
 # located at the smeltery block (furnace)
-# run from verify_furnace
+# run from smelt/check_cook_time
 
 # check if item is doubable by setting the head item of the stand
 data modify entity @s HandItems[0] set from block ~ ~ ~ Items[{Slot:0b}]
@@ -10,4 +10,5 @@ execute store result score $double gm4_smelt_data run loot replace entity @s arm
 item replace entity @s weapon with air
 
 # check if the furnace is close to finish smelting
-execute if score $double gm4_smelt_data matches 1.. if score $cook_time gm4_smelt_data matches 184..199 run function gm4_smelteries:limited_tick
+execute if score $double gm4_smelt_data matches 1.. if score $cook_time gm4_smelt_data matches 184..199 run function gm4_smelteries:smelt/prep_finish_smelt
+execute unless score $double gm4_smelt_data matches 1.. run tag @e[type=marker,tag=gm4_smeltery_processing,limit=1,distance=..2] remove gm4_smeltery_smelting

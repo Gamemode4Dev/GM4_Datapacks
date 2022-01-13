@@ -9,6 +9,10 @@ execute if score $single_rotation gm4_machine_data matches 2 run function gm4_sm
 execute if score $single_rotation gm4_machine_data matches 3 run function gm4_smelteries:machine/rotate/north
 execute if score $single_rotation gm4_machine_data matches 4 run function gm4_smelteries:machine/rotate/east
 
+# link cauldron stand to smeltery marker
+execute store result score $new gm4_smelt_id run data get entity @e[type=marker,distance=0,tag=gm4_smeltery,limit=1] UUID[3]
+scoreboard players operation @e[distance=..2,tag=gm4_new_machine] gm4_smelt_id = $new gm4_smelt_id
+
 # mark block as placed
 playsound block.anvil.use block @a[distance=..4] ~ ~ ~ 1 0.8
 scoreboard players set $placed_block gm4_machine_data 1

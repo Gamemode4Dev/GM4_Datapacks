@@ -3,8 +3,14 @@
 # located at @s
 # run from gm4_smelteries:main
 
-execute align xyz run summon marker ~0.5 ~0.5 ~0.5 {Tags:["gm4_smeltery","gm4_machine_marker","smithed.block"],CustomName:'"gm4_smeltery"'}
-data merge entity @s {Tags:["gm4_no_edit","gm4_smeltery_stand","gm4_machine_stand","smithed.block"],HasVisualFire:1,CustomName:'"gm4_smeltery_stand"'}
-data merge block ~ ~ ~ {CustomName:'{"translate":"%1$s%3427655$s","with":[{"translate":"%1$s%3427656$s","with":[{"text":"Smeltery","font":"minecraft:default","color":"#373737"},[{"text":"Smeltery","font":"gm4:half_scale"},{"text":"Smeltery","font":"gm4:inverted"},{"text":"Smeltery","font":"gm4:inverted_spacing"},{"text":"Smeltery","font":"gm4:offscreen"},{"translate":"gui.gm4.smeltery","font":"gm4:container_gui","color":"white"},{"text":"Smeltery","font":"gm4:half_scale"},{"text":"Smeltery","font":"gm4:inverted"},{"text":"Smeltery","font":"gm4:inverted_spacing"},{"text":"Smeltery","font":"minecraft:default","color":"#373737"}]]},{"translate":"%1$s%3427656$s","with":[{"translate":"container.gm4.smeltery","font":"minecraft:default","color":"#373737"},[{"translate":"container.gm4.smeltery","font":"gm4:half_scale"},{"translate":"container.gm4.smeltery","font":"gm4:inverted"},{"translate":"container.gm4.smeltery","font":"gm4:inverted_spacing"},{"translate":"container.gm4.smeltery","font":"gm4:offscreen"},{"translate":"gui.gm4.smeltery","font":"gm4:container_gui","color":"white"},{"translate":"container.gm4.smeltery","font":"gm4:half_scale"},{"translate":"container.gm4.smeltery","font":"gm4:inverted"},{"translate":"container.gm4.smeltery","font":"gm4:inverted_spacing"},{"translate":"container.gm4.smeltery","font":"minecraft:default","color":"#373737"}]]}]}'}
-scoreboard players set @s gm4_entity_version 1
-execute align xyz positioned ~0.5 ~0.5 ~0.5 run scoreboard players set @e[type=marker,tag=gm4_machine_marker,distance=..0.1,limit=1] gm4_entity_version 1
+# update blocks
+scoreboard players set $smeltery_placed gm4_machine_data 0
+execute store success score $smeltery_placed gm4_machine_data if block ~1 ~ ~ furnace[facing=east] run function gm4_smelteries:upgrade_machine_stand/east
+execute if score $smeltery_placed gm4_machine_data matches 0 store success score $smeltery_placed gm4_machine_data if block ~-1 ~ ~ furnace[facing=west] run function gm4_smelteries:upgrade_machine_stand/west
+execute if score $smeltery_placed gm4_machine_data matches 0 store success score $smeltery_placed gm4_machine_data if block ~ ~ ~1 furnace[facing=south] run function gm4_smelteries:upgrade_machine_stand/south
+execute if score $smeltery_placed gm4_machine_data matches 0 store success score $smeltery_placed gm4_machine_data if block ~ ~ ~-1 furnace[facing=north] run function gm4_smelteries:upgrade_machine_stand/north
+execute if score $smeltery_placed gm4_machine_data matches 0 align xyz positioned ~0.5 ~0.5 ~0.5 run function gm4_smelteries:upgrade_machine_stand/default
+
+# drop items from the original hopper
+execute if data storage gm4_smelteries:temp Items[-1] align xyz positioned ~0.5 ~0.7 ~0.5 run function gm4_smelteries:upgrade_machine_stand/drop_items
+data remove storage gm4_smelteries:temp Items
