@@ -35,3 +35,4 @@ execute if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stan
 
 # start tracking clock
 schedule function gm4_better_armour_stands:pose/track/tick 1t
+schedule function gm4_better_armour_stands:pose/check_no_player 16t

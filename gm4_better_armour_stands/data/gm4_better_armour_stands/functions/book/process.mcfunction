@@ -23,3 +23,8 @@ effect give @s[nbt={Invisible:1b}] glowing 2 0
 # reset storage
 data remove storage gm4_better_armour_stands:temp pages
 data remove storage gm4_better_armour_stands:temp book
+
+# schedule checks in case it stopped early (e.g. player logging out)
+execute if entity @e[type=armor_stand,tag=gm4_bas_no_arms] run schedule function gm4_better_armour_stands:toggle/arms/check 16t
+execute if entity @e[type=armor_stand,tag=gm4_bas_temp_unlock] run schedule function gm4_better_armour_stands:toggle/lock/check 16t
+execute if entity @e[type=armor_stand,tag=gm4_bas_track] run schedule function gm4_better_armour_stands:pose/check_no_player 16t
