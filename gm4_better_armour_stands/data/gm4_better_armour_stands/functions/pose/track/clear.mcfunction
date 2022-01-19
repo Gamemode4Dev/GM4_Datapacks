@@ -8,6 +8,7 @@ scoreboard players reset @s gm4_bas_mode
 tag @s remove gm4_bas_track
 tag @s remove gm4_bas_mirror
 tag @s remove gm4_bas_alt
+tag @s remove gm4_bas_invert
 
 data remove entity @s DisabledSlots
 data remove entity @s Glowing

@@ -2,7 +2,6 @@ scoreboard objectives add gm4_bas_id dummy
 scoreboard objectives add gm4_bas_data dummy
 scoreboard objectives add gm4_bas_mode dummy
 scoreboard objectives add gm4_bas_turn dummy
-scoreboard objectives add gm4_bas_invert dummy
 scoreboard objectives add gm4_bas_dist dummy
 scoreboard objectives add gm4_bas_dx dummy
 scoreboard objectives add gm4_bas_dy dummy

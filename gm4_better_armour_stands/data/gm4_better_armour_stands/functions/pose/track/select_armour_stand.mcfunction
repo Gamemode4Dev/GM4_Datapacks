@@ -11,4 +11,4 @@ execute store success score $success gm4_bas_data as @e[type=armor_stand,tag=gm4
 execute unless score $success gm4_bas_data matches 1 run function gm4_better_armour_stands:pose/set
 
 # undo changes if player not holding writable_book
-execute unless predicate gm4_better_armour_stands:holding/mainhand/book_and_quill run function gm4_better_armour_stands:pose/track/undo
+execute unless predicate gm4_better_armour_stands:holding/mainhand/book_and_quill run function gm4_better_armour_stands:pose/undo
