@@ -10,3 +10,4 @@ execute as @e[type=area_effect_cloud,tag=gm4_bore_storage] at @s unless entity @
 
 # turn crafted carts into tunnel bores. VERY EXPERIMENTAL DETECTION OF CARTS.
 execute as @e[type=furnace_minecart,tag=!gm4_tunnel_bore,nbt={CustomName:'{"italic":false,"color":"white","translate":"%1$s","with":["Minecart with Piston",{"translate":"item.gm4.minecart.bore"}]}'}] at @s run function gm4_tunnel_bores:bore/create
+execute as @e[type=furnace_minecart,tag=!gm4_tunnel_bore,nbt={CustomName:'{"italic":false,"color":"white","translate":"%1$s%3427655$s","with":["Minecart with Piston",{"translate":"item.gm4.minecart.bore"}]}'}] at @s run function gm4_tunnel_bores:bore/create
