@@ -6,6 +6,7 @@ advancement revoke @s only gm4_better_armour_stands:book/use
 advancement revoke @s only gm4_better_armour_stands:pose/set
 advancement revoke @s only gm4_better_armour_stands:book/tracking
 
+# advancement for customizing armor_stand
 advancement grant @s only gm4:better_armour_stands
 
 # get current player id

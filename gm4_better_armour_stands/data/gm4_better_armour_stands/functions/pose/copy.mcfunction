@@ -4,7 +4,7 @@
 
 scoreboard players set $valid_code gm4_bas_data 1
 
-# Prepare to copy armor_stand tags to item entity.
+# prepare to copy armor_stand tags to item entity
 data modify storage gm4_better_armour_stands:temp EntityTag.Pose set from entity @s Pose
 data modify storage gm4_better_armour_stands:temp EntityTag.ShowArms set from entity @s ShowArms
 data modify storage gm4_better_armour_stands:temp EntityTag.NoBasePlate set from entity @s NoBasePlate
@@ -13,12 +13,12 @@ data modify storage gm4_better_armour_stands:temp EntityTag.NoGravity set from e
 data modify storage gm4_better_armour_stands:temp EntityTag.Invisible set from entity @s Invisible
 data modify storage gm4_better_armour_stands:temp EntityTag.Tags set value ["gm4_bas_placed","gm4_bas_copy"]
 
-# Copy tags from armor_stand to item entity.
+# copy tags from armor_stand to item entity
 item modify entity @a[tag=gm4_bas_active,limit=1] weapon.offhand gm4_better_armour_stands:copy
 
-# Display particles and play a sound to confirm that the pose was copied.
+# display particles and play a sound to confirm
 particle item armor_stand ~ ~ ~ .2 1 .2 0 20
 playsound minecraft:block.wood.break player @a[distance=..6] ~ ~ ~ 0.5 1
 
-# Reset storage
+# reset storage
 data remove storage gm4_better_armour_stands:temp EntityTag

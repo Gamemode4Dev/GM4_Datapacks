@@ -6,7 +6,7 @@ title @a[tag=gm4_bas_active,limit=1] actionbar {"translate": "%1$s%3427655$s","w
 
 scoreboard players reset @s gm4_bas_id
 
-playsound minecraft:entity.villager.no block @a[tag=gm4_bas_active,limit=1] ~ ~ ~ .5 2
+playsound minecraft:entity.villager.no block @a[tag=gm4_bas_active,limit=1] ~ ~ ~ 0.5 2
 
 particle bubble_pop ~ ~.1 ~ 0 0 0 0 1
 

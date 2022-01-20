@@ -7,3 +7,4 @@ execute as @e[type=marker,tag=gm4_bas_player_offset] if score @s gm4_bas_id = $c
 
 # stop tracking
 function gm4_better_armour_stands:pose/set
+playsound minecraft:entity.armor_stand.hit block @s ~ ~ ~ 0.5 1

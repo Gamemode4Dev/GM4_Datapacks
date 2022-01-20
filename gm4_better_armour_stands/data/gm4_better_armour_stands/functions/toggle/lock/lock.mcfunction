@@ -2,10 +2,11 @@
 # at @s
 # run from book/apply
 
-data merge entity @s {Marker:1b,NoGravity:1b}
-tag @s add gm4_bas_locked
-
-particle minecraft:enchanted_hit ~ ~.5 ~ .15 .5 .15 0 5
-playsound minecraft:block.chest.locked block @a[distance=..6] ~ ~ ~ 1 2
-
 scoreboard players set $valid_code gm4_bas_data 1
+
+# lock armor_stand
+data merge entity @s {Marker:1b,NoGravity:1b}
+playsound minecraft:block.wooden_trapdoor.close block @a[distance=..6] ~ ~ ~ 0.5 2
+particle minecraft:enchant ~ ~.5 ~ .15 .5 .15 .3 10
+
+tag @s add gm4_bas_locked
