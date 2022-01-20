@@ -8,22 +8,22 @@ scoreboard players reset @s gm4_bas_id
 
 playsound minecraft:entity.villager.no block @a[tag=gm4_bas_active,limit=1] ~ ~ ~ 0.5 2
 
-particle bubble_pop ~ ~.1 ~ 0 0 0 0 1
+particle electric_spark ~ ~.1 ~ 0 0 0 0 1
 
-execute if score @s gm4_bas_data matches 0 run particle bubble_pop ~ ~1.6 ~ 0 0 0 0 1
-execute if score @s gm4_bas_data matches 1 run particle bubble_pop ~ ~0.9 ~ 0 0 0 0 1
+execute if score $size gm4_bas_data matches 0 run particle electric_spark ~ ~1.6 ~ 0 0 0 0 1
+execute if score $size gm4_bas_data matches 1 run particle electric_spark ~ ~0.9 ~ 0 0 0 0 1
 
-execute if score @s gm4_bas_data matches 0 run particle bubble_pop ~ ~1.3 ~ 0 0 0 0 1
-execute if score @s gm4_bas_data matches 1 run particle bubble_pop ~ ~0.7 ~ 0 0 0 0 1
+execute if score $size gm4_bas_data matches 0 run particle electric_spark ~ ~1.3 ~ 0 0 0 0 1
+execute if score $size gm4_bas_data matches 1 run particle electric_spark ~ ~0.7 ~ 0 0 0 0 1
 
-execute if score @s gm4_bas_data matches 0 positioned ~ ~1.4 ~ run particle bubble_pop ^.3 ^ ^ 0 0 0 0 1
-execute if score @s gm4_bas_data matches 1 positioned ~ ~0.7 ~ run particle bubble_pop ^.15 ^ ^ 0 0 0 0 1
+execute if score $size gm4_bas_data matches 0 positioned ~ ~1.4 ~ run particle electric_spark ^.3 ^ ^ 0 0 0 0 1
+execute if score $size gm4_bas_data matches 1 positioned ~ ~0.7 ~ run particle electric_spark ^.15 ^ ^ 0 0 0 0 1
 
-execute if score @s gm4_bas_data matches 0 positioned ~ ~1.4 ~ run particle bubble_pop ^-.3 ^ ^ 0 0 0 0 1
-execute if score @s gm4_bas_data matches 1 positioned ~ ~0.7 ~ run particle bubble_pop ^-.15 ^ ^ 0 0 0 0 1
+execute if score $size gm4_bas_data matches 0 positioned ~ ~1.4 ~ run particle electric_spark ^-.3 ^ ^ 0 0 0 0 1
+execute if score $size gm4_bas_data matches 1 positioned ~ ~0.7 ~ run particle electric_spark ^-.15 ^ ^ 0 0 0 0 1
 
-execute if score @s gm4_bas_data matches 0 positioned ~ ~0.8 ~ run particle bubble_pop ^.15 ^ ^ 0 0 0 0 1
-execute if score @s gm4_bas_data matches 1 positioned ~ ~0.4 ~ run particle bubble_pop ^.05 ^ ^ 0 0 0 0 1
+execute if score $size gm4_bas_data matches 0 positioned ~ ~0.8 ~ run particle electric_spark ^.15 ^ ^ 0 0 0 0 1
+execute if score $size gm4_bas_data matches 1 positioned ~ ~0.4 ~ run particle electric_spark ^.05 ^ ^ 0 0 0 0 1
 
-execute if score @s gm4_bas_data matches 0 positioned ~ ~0.8 ~ run particle bubble_pop ^-.15 ^ ^ 0 0 0 0 1
-execute if score @s gm4_bas_data matches 1 positioned ~ ~0.4 ~ run particle bubble_pop ^-.05 ^ ^ 0 0 0 0 1
+execute if score $size gm4_bas_data matches 0 positioned ~ ~0.8 ~ run particle electric_spark ^-.15 ^ ^ 0 0 0 0 1
+execute if score $size gm4_bas_data matches 1 positioned ~ ~0.4 ~ run particle electric_spark ^-.05 ^ ^ 0 0 0 0 1
