@@ -15,7 +15,7 @@ summon armor_stand ~ ~-0.3 ~ {Silent:1,Small:1,NoGravity:1,Marker:1,Invulnerable
 summon marker ~ ~ ~ {Tags:["gm4_smeltery","gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:'"gm4_smeltery"',Rotation:[180.0f,0.0f]}
 
 # link cauldron armor stand to smeltery marker
-execute store result score $new gm4_smelt_id run data get entity @e[type=marker,distance=0,tag=gm4_smeltery,limit=1] UUID[3]
+execute store result score $new gm4_smelt_id run data get entity @e[type=marker,distance=..2,tag=gm4_smeltery,tag=gm4_new_machine,limit=1] UUID[3]
 scoreboard players operation @e[distance=..2,tag=gm4_new_machine] gm4_smelt_id = $new gm4_smelt_id
 
 # set entity version

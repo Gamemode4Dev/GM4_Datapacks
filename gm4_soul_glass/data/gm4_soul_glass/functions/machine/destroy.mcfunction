@@ -4,7 +4,7 @@
 # run from gm4_smelteries:machine/verify_destroy
 
 # kill entities related to machine block
-execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..1,nbt={Item:{id:"minecraft:brown_stained_glass"}},nbt=!{Item:{tag:{}}},limit=1,sort=nearest]
+execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..1,nbt={Age:0s,Item:{id:"minecraft:brown_stained_glass",Count:1b}},nbt=!{Item:{tag:{}}},limit=1,sort=nearest]
 kill @s
 
 # drop item (unless broken in creative mode)

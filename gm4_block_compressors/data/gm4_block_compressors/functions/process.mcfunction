@@ -3,6 +3,7 @@
 # run from main
 
 tag @s add gm4_block_compressor_processing
+execute positioned ~ ~-0.98 ~ run tag @e[type=armor_stand,tag=gm4_block_compressor_stand,limit=1,distance=..0.1] add gm4_block_compressor_processing
 execute positioned ~-0.5 ~0.5 ~-0.5 as @e[type=item,dx=0] positioned ~0.5 ~-0.9 ~0.5 run function gm4_block_compressors:item
 particle portal ~ ~0.7 ~ 0 0 0 0.1 20
 
@@ -14,3 +15,4 @@ execute if entity @s[tag=gm4_compressor_sound] run playsound block.stone_pressur
 # clean up
 tag @s remove gm4_compressor_sound
 tag @s remove gm4_block_compressor_processing
+tag @e[type=armor_stand,distance=..2] remove gm4_block_compressor_processing
