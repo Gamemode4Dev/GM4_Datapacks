@@ -14,7 +14,7 @@ execute store result storage gm4_block_compressors:temp/item_stack Item.tag.gm4_
 data merge storage gm4_block_compressors:temp/item_stack {Item:{Count:1b,tag:{HideFlags:1,Enchantments:[{id:"minecraft:protection",lvl:0s}]}}}
 execute as @e[type=armor_stand,tag=gm4_block_compressor_processing,limit=1] run loot replace entity @s weapon.offhand loot gm4_block_compressors:technical/compressed_lore
 execute as @e[type=armor_stand,tag=gm4_block_compressor_processing,limit=1] run data modify storage gm4_block_compressors:temp/item_stack Item.tag.display.Lore append from entity @s HandItems[1].tag.display.Name
-data remove entity @e[type=armor_stand,tag=gm4_block_compressor_processing,limit=1] HandItems
+data merge entity @e[type=armor_stand,tag=gm4_block_compressor_processing,limit=1] {HandItems:[{},{}]}
 
 # clone data to original item entity
 data modify entity @s Item set from storage gm4_block_compressors:temp/item_stack Item
