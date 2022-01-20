@@ -11,11 +11,11 @@ data modify entity @s DisabledSlots set value 4144959
 data modify entity @s[nbt={Invisible:1b}] Glowing set value 1
 
 # right click detection
-summon minecraft:wandering_trader ~ ~-10000 ~ {CustomName:'"gm4_bas_detect_click"',Tags:["gm4_trader","gm4_bas_detect","gm4_bas_new","gm4_bas_temp"],Team:"gm4_bas",NoAI:1b,Silent:1b,Health:1f,Offers:{},ActiveEffects:[{Id:14b,Amplifier:0b,Duration:10000000,ShowParticles:0b},{Id:11b,Amplifier:10b,Duration:10000000,ShowParticles:0b}]}
+summon minecraft:wandering_trader ~ ~-10000 ~ {CustomName:'"gm4_bas_detect_click"',Tags:["smithed.entity","smithed.strict","gm4_trader","gm4_bas_detect","gm4_bas_new","gm4_bas_temp"],Team:"gm4_bas",NoAI:1b,Silent:1b,Health:1f,Offers:{},ActiveEffects:[{Id:14b,Amplifier:0b,Duration:10000000,ShowParticles:0b},{Id:11b,Amplifier:10b,Duration:10000000,ShowParticles:0b}]}
 tp @e[type=wandering_trader,tag=gm4_bas_new,limit=1] ~ ~ ~ 
 
 # spawn marker for player offset and current armour stand data
-summon marker ~ ~ ~ {CustomName:'"gm4_bas_player_offset"',Tags:["gm4_bas_player_offset","gm4_bas_marker","gm4_bas_new","gm4_bas_temp"]}
+summon marker ~ ~ ~ {CustomName:'"gm4_bas_player_offset"',Tags:["smithed.entity","smithed.strict","gm4_bas_player_offset","gm4_bas_marker","gm4_bas_new","gm4_bas_temp"]}
 data modify entity @e[type=minecraft:marker,tag=gm4_bas_player_offset,tag=gm4_bas_new,distance=..1,limit=1] data set from storage gm4_better_armour_stands:temp Data
 data remove storage gm4_better_armour_stands:temp Data
 
