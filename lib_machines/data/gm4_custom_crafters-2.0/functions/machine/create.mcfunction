@@ -4,12 +4,12 @@
 # run from gm4_custom_crafters-2.0:machine/verify_place_down
 
 # place block depending on rotation
-execute if score $rotation gm4_machine_data matches 1 run function gm4_block_compressors:machine/rotate/down
-execute if score $rotation gm4_machine_data matches 2 run function gm4_block_compressors:machine/rotate/up
-execute if score $rotation gm4_machine_data matches 3 run function gm4_block_compressors:machine/rotate/south
-execute if score $rotation gm4_machine_data matches 4 run function gm4_block_compressors:machine/rotate/west
-execute if score $rotation gm4_machine_data matches 5 run function gm4_block_compressors:machine/rotate/north
-execute if score $rotation gm4_machine_data matches 6 run function gm4_block_compressors:machine/rotate/east
+execute if score $rotation gm4_machine_data matches 1 run function gm4_custom_crafters-2.0:machine/rotate/down
+execute if score $rotation gm4_machine_data matches 2 run function gm4_custom_crafters-2.0:machine/rotate/up
+execute if score $rotation gm4_machine_data matches 3 run function gm4_custom_crafters-2.0:machine/rotate/south
+execute if score $rotation gm4_machine_data matches 4 run function gm4_custom_crafters-2.0:machine/rotate/west
+execute if score $rotation gm4_machine_data matches 5 run function gm4_custom_crafters-2.0:machine/rotate/north
+execute if score $rotation gm4_machine_data matches 6 run function gm4_custom_crafters-2.0:machine/rotate/east
 
 # mark block as placed
 scoreboard players set $placed_block gm4_machine_data 1
