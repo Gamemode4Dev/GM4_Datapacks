@@ -6,7 +6,7 @@ function gm4_metallurgy:update_nbt_version/load_band
 
 # check whether the other item is a compressor
 scoreboard players set valid_item gm4_ml_data 0
-execute if entity @e[type=item,dx=0,limit=1,nbt={Item:{Count:1b,tag:{gm4_machines:{id:"block_compressor"}}}}] run function gm4_tinkering_compressors:smooshing/add_band/convert_to_tinkering_compressor
+execute as @e[type=item,dx=0,limit=1,nbt={Item:{Count:1b,tag:{gm4_machines:{id:"block_compressor"}}}}] run function gm4_tinkering_compressors:smooshing/add_band/convert_to_tinkering_compressor
 
 execute if score valid_item gm4_ml_data matches 1 run data merge entity @s {Item:{id:"minecraft:obsidian",tag:{CustomModelData:3420001,display:{Lore:['{"translate":"%1$s%3427655$s","with":["Slightly Damaged Obsidian",{"translate":"item.gm4.slightly_damaged_obsidian"}],"color":"dark_gray"}']}}},Tags:["gm4_ml_smooshed"]}
 execute if score valid_item gm4_ml_data matches 1 run data remove entity @s Item.tag.display.Name
