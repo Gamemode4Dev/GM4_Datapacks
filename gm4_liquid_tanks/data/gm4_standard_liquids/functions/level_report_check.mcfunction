@@ -1,4 +1,4 @@
-#@s = player looking at tank positioned at tank stand
+#@s = player looking at tank positioned at tank marker
 #run from #gm4_liquid_tanks:level_report_check in liquid_tanks:level_report_ray
 
 #actual max of 100

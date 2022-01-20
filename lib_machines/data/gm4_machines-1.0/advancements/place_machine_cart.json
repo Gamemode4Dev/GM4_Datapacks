@@ -42,6 +42,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_machines-1.0:place_down/place_machine_minecart"
+    "function": "gm4_machines-1.0:place_down/place_machine_cart"
   }
 }

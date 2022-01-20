@@ -2,7 +2,7 @@
 #run from standard_liquids:level_report_check
 
 #getting value of tank being looked at
-scoreboard players operation gm4_lt_report_calc gm4_lt_value = @e[type=marker,tag=gm4_liquid_tank,distance=..0.1] gm4_lt_value
+scoreboard players operation gm4_lt_report_calc gm4_lt_value = @e[type=marker,tag=gm4_liquid_tank,distance=..0.1,limit=1] gm4_lt_value
 
 #values hardcoded
 execute if score gm4_lt_report_calc gm4_lt_value matches 0..6 run title @s actionbar [{"text":"0 / 30  ","color":"dark_green"},{"translate":"%1$s%3427655$s","with":["Levels",{"translate":"text.gm4.liquid_tanks.level_report.levels"}],"color":"dark_green"}]

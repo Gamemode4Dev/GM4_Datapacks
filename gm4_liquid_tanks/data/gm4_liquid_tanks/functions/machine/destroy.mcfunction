@@ -5,7 +5,7 @@
 
 # kill entities related to machine block
 execute positioned ~ ~-0.5 ~ run kill @e[type=armor_stand,tag=gm4_liquid_tank_stand,limit=1,distance=..0.01]
-execute positioned ~ ~-0.25 ~ run kill @e[type=armor_stand,tag=gm4_liquid_tank_display,distance=..0.3]
+execute positioned ~ ~-0.75 ~ run kill @e[type=armor_stand,tag=gm4_liquid_tank_display,distance=..0.3,limit=1]
 execute positioned ~ ~0.5 ~ run kill @e[type=area_effect_cloud,distance=..0.5,tag=gm4_lt_util_block]
 execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..1,nbt={Age:0s,Item:{id:"minecraft:hopper",Count:1b,tag:{display:{}}}},limit=1,sort=nearest]
 kill @s
