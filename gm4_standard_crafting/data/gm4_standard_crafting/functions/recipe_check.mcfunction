@@ -40,8 +40,8 @@ execute if score $crafted gm4_crafting matches 0 store success score $crafted gm
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if score $slot_count gm4_crafting matches 1 if score $stack_size gm4_crafting matches ..16 if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:dripstone_block"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/pointed_dripstone
 
 # stairs
-execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if score $slot_count gm4_crafting matches 4 if score $stack_size gm4_crafting matches ..16 run function gm4_standard_crafting:stairs_recipes
+execute if score $crafted gm4_crafting matches 0 if score $slot_count gm4_crafting matches 4 if score $stack_size gm4_crafting matches ..16 run function gm4_standard_crafting:stairs_recipes
 # slabs
-execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if score $slot_count gm4_crafting matches 2 if score $stack_size gm4_crafting matches ..64 run function gm4_standard_crafting:slabs_recipes
+execute if score $crafted gm4_crafting matches 0 if score $slot_count gm4_crafting matches 2 if score $stack_size gm4_crafting matches ..64 run function gm4_standard_crafting:slabs_recipes
 # string
-execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if score $slot_count gm4_crafting matches 1 if score $stack_size gm4_crafting matches ..21 run function gm4_standard_crafting:string_recipes
+execute if score $crafted gm4_crafting matches 0 if score $slot_count gm4_crafting matches 1 if score $stack_size gm4_crafting matches ..21 run function gm4_standard_crafting:string_recipes
