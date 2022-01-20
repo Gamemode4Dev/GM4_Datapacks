@@ -13,7 +13,8 @@ execute if score $x_rotation gm4_machine_data matches 45..90 run scoreboard play
 # store face placed on
 # key: block face
 # 1: up, 2: down, 3: north, 4: east, 5: south, 6: west
-execute if block ~ ~ ~ player_head run scoreboard players operation $face_placement gm4_machine_data = $x_rotation gm4_machine_data
+scoreboard players set $face_placement gm4_machine_data 1
+execute if block ~ ~ ~ player_head if score $x_rotation gm4_machine_data matches -90..0 run scoreboard players set $face_placement gm4_machine_data 2
 execute if block ~ ~ ~ player_wall_head[facing=north] run scoreboard players set $face_placement gm4_machine_data 3
 execute if block ~ ~ ~ player_wall_head[facing=east] run scoreboard players set $face_placement gm4_machine_data 4
 execute if block ~ ~ ~ player_wall_head[facing=south] run scoreboard players set $face_placement gm4_machine_data 5

@@ -3,4 +3,4 @@
 # located at @s
 # run from #gm4_machines:destroy
 
-execute if entity @s[tag=gm4_enchantment_extractor] run function gm4_enchantment_extractors:machine/destroy
+execute if entity @s[tag=gm4_liquid_tank] run function gm4_liquid_tanks:machine/destroy

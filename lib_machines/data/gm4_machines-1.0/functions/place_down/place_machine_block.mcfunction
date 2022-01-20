@@ -17,7 +17,7 @@ execute if score $rotation gm4_machine_data matches 0 if score $y_rotation gm4_m
 execute if score $rotation gm4_machine_data matches 0 run scoreboard players set $rotation gm4_machine_data 3
 
 # store cardinal y_rotation
-scoreboard players operation $single_rotation gm4_machine_data = $y_rotation gm4_machine_data
+scoreboard players operation $single_rotation gm4_machine_data = $rotation gm4_machine_data
 scoreboard players remove $single_rotation gm4_machine_data 2
 
 # find player heads in the specific region
