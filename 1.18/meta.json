@@ -1,5 +1,5 @@
 {
-  "last_commit": "420de1f045e1fcf46a1f4d55d434abce65a0b579",
+  "last_commit": "c73250e6525bedc24352683f73d13233570b56bc",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -457,7 +457,7 @@
       "categories": [],
       "libraries": [],
       "hidden": false,
-      "patch": 18000
+      "patch": 18001
     },
     {
       "id": "gm4_orb_of_ankou",
