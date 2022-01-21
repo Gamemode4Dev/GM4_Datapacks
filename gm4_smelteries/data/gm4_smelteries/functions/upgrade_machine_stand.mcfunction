@@ -12,5 +12,6 @@ execute if score $smeltery_placed gm4_machine_data matches 0 store success score
 execute if score $smeltery_placed gm4_machine_data matches 0 align xyz positioned ~0.5 ~0.5 ~0.5 run function gm4_smelteries:upgrade_machine_stand/default
 
 # drop items from the original hopper
-execute if data storage gm4_smelteries:temp Items[-1] align xyz positioned ~0.5 ~0.7 ~0.5 run function gm4_smelteries:upgrade_machine_stand/drop_items
+execute if score $smeltery_placed gm4_machine_data matches 0 if data storage gm4_smelteries:temp Items[-1] align xyz positioned ~0.5 ~1.1 ~0.5 run function gm4_smelteries:upgrade_machine_stand/drop_items
+execute unless score $smeltery_placed gm4_machine_data matches 0 if data storage gm4_smelteries:temp Items[-1] align xyz positioned ~0.5 ~0.2 ~0.5 run function gm4_smelteries:upgrade_machine_stand/drop_items
 data remove storage gm4_smelteries:temp Items
