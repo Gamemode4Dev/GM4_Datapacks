@@ -6,8 +6,8 @@ scoreboard players set $valid_code gm4_bas_data 1
 
 # check size, spawn part detectors
 execute store result score $size gm4_bas_data run data get entity @s Small
-execute if score $size gm4_bas_data matches 0 run function gm4_better_armour_stands:equip/select/tall
-execute if score $size gm4_bas_data matches 1 run function gm4_better_armour_stands:equip/select/small
+execute if score $size gm4_bas_data matches 0 positioned ~ ~1 ~ run function gm4_better_armour_stands:equip/select/tall
+execute if score $size gm4_bas_data matches 1 positioned ~ ~.3 ~ run function gm4_better_armour_stands:equip/select/small
 
 # detect part player is looking at
 tp @s ~ ~100 ~
