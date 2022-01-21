@@ -22,8 +22,16 @@
   },
   "parent":"gm4:liquid_tanks_create",
   "criteria":{
-    "create_liquid_minecart":{
-      "trigger":"minecraft:impossible"
+    "obtain_tunnel_bore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:hopper_minecart"],
+            "nbt": "{gm4_machines:{id:\"liquid_minecart\"}}"
+          }
+        ]
+      }
     }
   }
 }

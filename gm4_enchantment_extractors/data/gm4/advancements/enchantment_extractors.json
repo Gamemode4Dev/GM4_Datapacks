@@ -20,10 +20,18 @@
       "color": "gray"
     }
   },
-  "parent": "gm4:root",
+  "parent": "gm4:custom_crafters",
   "criteria": {
-    "build_extractor": {
-      "trigger": "minecraft:impossible"
+    "obtain_enchantment_extractor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:player_head"],
+            "nbt": "{gm4_machines:{id:\"enchantment_extractor\"}}"
+          }
+        ]
+      }
     }
   }
 }

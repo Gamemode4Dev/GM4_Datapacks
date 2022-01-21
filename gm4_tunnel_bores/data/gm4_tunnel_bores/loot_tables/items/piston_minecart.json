@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420001}"
+                            "tag": "{CustomModelData:3420001,gm4_machines:{id:\"tunnel_bore\"}}"
                         },
                         {
                             "function": "minecraft:set_name",
