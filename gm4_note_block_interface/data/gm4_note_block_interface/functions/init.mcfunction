@@ -1,6 +1,5 @@
-scoreboard objectives add gm4_nbi_punch minecraft.custom:minecraft.play_noteblock
-scoreboard objectives add gm4_nbi_click minecraft.custom:minecraft.tune_noteblock
-scoreboard objectives add gm4_nbi_sneak minecraft.custom:minecraft.sneak_time
+scoreboard objectives add gm4_nbi_play minecraft.custom:minecraft.play_noteblock
+scoreboard objectives add gm4_nbi_tune minecraft.custom:minecraft.tune_noteblock
 scoreboard objectives add gm4_nbi_ray dummy
 scoreboard objectives add gm4_nbi_change dummy
 
