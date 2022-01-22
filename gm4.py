@@ -69,6 +69,8 @@ def build_modules(ctx: Context):
 			module = next((m for m in modules if m["id"] == d), None)
 			if module is None:
 				raise ValueError(f"Module '{d}' not found")
+			for l in module["libraries"]:
+					libs.add(l)
 			for r in module["requires"]:
 				packs.add(r)
 				required = next(m for m in modules if m["id"] == r)
