@@ -12,6 +12,7 @@ execute if score $rotation gm4_machine_data matches 5 run function gm4_custom_cr
 execute if score $rotation gm4_machine_data matches 6 run function gm4_custom_crafters-2.0:machine/rotate/east
 
 # mark block as placed
+playsound minecraft:block.barrel.close block @a[distance=..6] ~ ~ ~ 1 1.6
 scoreboard players set $placed_block gm4_machine_data 1
 scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 1
 tag @e[distance=..2] remove gm4_new_machine
