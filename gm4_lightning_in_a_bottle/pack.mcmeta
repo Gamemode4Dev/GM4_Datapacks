@@ -24,6 +24,7 @@
   "required_modules": [],
   "recommended_modules": [
     "liquid_tanks",
+    "potion_liquids",
     "spawner_minecarts"
   ],
   "credits": {
