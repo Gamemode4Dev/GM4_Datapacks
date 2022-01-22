@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420135,gm4_machines:{id:\"disassembler\"},SkullOwner:{Name:\"gm4_disassembler\",Id:[I;976088164,-1182119616,-1306607456,336514689],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTU5NjU3NTM5MTMzNiwKICAicHJvZmlsZUlkIiA6ICJkODAwZDI4MDlmNTE0ZjkxODk4YTU4MWYzODE0Yzc5OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJ0aGVCTFJ4eCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85NWQwYTMyOWMzMzM1YTU3ZmIzYmFhMzQwM2M2MDE0MmYzYjY5NDRkOGQzZTc0Y2ExNzIxMzE0MzdmODk4NDdlIgogICAgfQogIH0KfQ==\"}]}}}"
+              "tag": "{CustomModelData:3420135,gm4_machines:{id:\"disassembler\"},SkullOwner:{Name:\"gm4_disassembler\",Id:[I;-1561282646,-258324274,-1153094374,-693854673],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTY0Mjg1NDAzMTQ2MywKICAicHJvZmlsZUlkIiA6ICJjNDM5NDI3Y2U1NGQ0NDMwYTYzOGU5OTdlYzc2YTBhOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJUaGVNYXN0ZXJHb2xkZW4iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODFjNzQ2NzEwZjQ3ODZiYzgxZTI1ZWVmOTM5ODI3ZjNiNDMzMjFhODQ1ZmYyNmU4N2E3MjVmZDBkMzU2Y2Y5MCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9\"}]}}}"
             },
             {
               "function": "set_name",

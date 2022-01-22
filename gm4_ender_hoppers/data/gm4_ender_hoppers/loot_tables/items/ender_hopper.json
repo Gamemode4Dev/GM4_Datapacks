@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420131,gm4_machines:{id:\"ender_hopper\"},SkullOwner:{Name:\"gm4_ender_hopper\",Id:[I;-227409694,1209617203,-1656024256,-236766880],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTU5NjU3NDg2MDk0MCwKICAicHJvZmlsZUlkIiA6ICJmNWQwYjFhZTQxNmU0YTE5ODEyMTRmZGQzMWU3MzA1YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJDYXRjaFRoZVdhdmUxMCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80YTE3MTBmNDRjZTQ3MWJkNmJhZmIxMWVkMTRmZTI2MzNiZTljYWI0Y2UxOTgwODhhMjU2YmY4ZGQ4OTg0YjUiCiAgICB9CiAgfQp9\"}]}}}"
+              "tag": "{CustomModelData:3420131,gm4_machines:{id:\"ender_hopper\"},SkullOwner:{Name:\"gm4_ender_hopper\",Id:[I;-1632954124,-1362935607,-1917291957,-1538084593],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTY0Mjg1NDE2NjYyOSwKICAicHJvZmlsZUlkIiA6ICJlZDUzZGQ4MTRmOWQ0YTNjYjRlYjY1MWRjYmE3N2U2NiIsCiAgInByb2ZpbGVOYW1lIiA6ICI0MTQxNDE0MWgiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjRlNTE0YzZjYjIwNTNmMGIzMDYxZmI1ZjI4Njg3MTczNWMwYWVjMjYwYmJjNjJlYzlkMTFlMzFhM2VhZjMwMSIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9\"}]}}}"
             },
             {
               "function": "set_name",
