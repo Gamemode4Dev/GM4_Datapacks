@@ -1,6 +1,6 @@
 # @s = player modifying armor_stand
 # at @s
-# run from advancement pose/set, pose/undo, pose/track/select_armour_stand
+# run from advancement pose/set, pose/undo
 
 advancement revoke @s only gm4_better_armour_stands:book/use
 advancement revoke @s only gm4_better_armour_stands:pose/set
