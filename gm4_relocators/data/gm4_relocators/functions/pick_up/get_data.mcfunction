@@ -46,4 +46,4 @@ loot spawn ~ ~ ~ loot gm4_relocators:items/relocator_full
 
 # clean up
 data remove storage gm4_relocators:temp gm4_relocation
-data remove storage gm4_relocators:temp entity_data
+data remove storage gm4_relocators:temp merge_data
