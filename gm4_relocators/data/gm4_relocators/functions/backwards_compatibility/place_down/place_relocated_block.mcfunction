@@ -11,7 +11,7 @@ execute align y run tp @e[type=armor_stand,limit=1,tag=gm4_relocator_fill,distan
 data modify entity @e[type=armor_stand,limit=1,tag=gm4_relocator_fill,distance=..0.001] ArmorItems[0] set from entity @s SelectedItem
 
 # check for relocated block heads
-execute as @e[type=armor_stand,tag=gm4_relocator_fill,limit=1,sort=nearest,distance=..0.001] at @s run function gm4_relocators:place_down/find_head
+execute as @e[type=armor_stand,tag=gm4_relocator_fill,limit=1,sort=nearest,distance=..0.001] at @s run function gm4_relocators:backwards_compatibility/place_down/find_head
 
 # return relocator
 loot spawn ~ ~.3 ~ loot gm4_relocators:items/relocator

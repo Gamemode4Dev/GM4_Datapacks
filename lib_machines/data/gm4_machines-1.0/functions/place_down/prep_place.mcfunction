@@ -26,4 +26,4 @@ scoreboard players set $placed_block gm4_machine_data 0
 scoreboard players remove $player_head_count gm4_machine_data 1
 
 function #gm4_machines:place_down
-data remove storage gm4_machines:temp id
+#data remove storage gm4_machines:temp id

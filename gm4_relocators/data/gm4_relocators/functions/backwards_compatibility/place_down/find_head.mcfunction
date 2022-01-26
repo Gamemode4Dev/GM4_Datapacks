@@ -5,12 +5,12 @@
 scoreboard players set fill_success gm4_rl_data 0
 scoreboard players set fill_counter gm4_rl_data -5
 tp @s ~ ~-5 ~
-execute at @s run function gm4_relocators:place_down/replace_head
+execute at @s run function gm4_relocators:backwards_compatibility/place_down/replace_head
 
 # find the command block with raycasting
 scoreboard players set fill_counter gm4_rl_data 0
 execute at @s run tp @s ~ ~-1 ~
-execute at @s run function gm4_relocators:place_down/find_command_block
+execute at @s run function gm4_relocators:backwards_compatibility/place_down/find_command_block
 
 # set command block command to the head's command
 execute at @s run data merge block ~ ~ ~ {CustomName:'{"text":"Marked Relocated Block"}'}

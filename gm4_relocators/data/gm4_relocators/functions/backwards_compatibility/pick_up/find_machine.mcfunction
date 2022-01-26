@@ -5,8 +5,8 @@
 scoreboard players set valid_machine gm4_rl_data 0
 execute align xyz run function #gm4_relocators:pick_up_check
 
-execute unless score valid_machine gm4_rl_data matches 0 as @e[tag=gm4_rl_selected,distance=..3,limit=1] align xyz positioned ~.5 ~.5 ~.5 run function gm4_relocators:pick_up/success
-execute if score valid_machine gm4_rl_data matches 0 run function gm4_relocators:pick_up/failed
+execute unless score valid_machine gm4_rl_data matches 0 as @e[tag=gm4_rl_selected,distance=..3,limit=1] align xyz positioned ~.5 ~.5 ~.5 run function gm4_relocators:backwards_compatibility/pick_up/success
+execute if score valid_machine gm4_rl_data matches 0 run function gm4_relocators:backwards_compatibility/pick_up/failed
 
 #remove command block
 fill ~-1 ~ ~ ~-1 ~ ~ air replace command_block[facing=east]{CustomName:'{"text":"Relocator"}'}

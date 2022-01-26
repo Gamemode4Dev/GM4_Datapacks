@@ -1,4 +1,4 @@
-# @s = command block placed by "gm4_relocators:place_down/replace_head"
+# @s = command block placed by "gm4_relocators:backwards_compatibility/place_down/replace_head"
 # located at the command block (where the player head was)
 
 execute if block ~ ~ ~ command_block[facing=east] run setblock ~ ~ ~ dropper[facing=west]

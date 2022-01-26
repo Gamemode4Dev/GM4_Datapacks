@@ -20,7 +20,7 @@ Machine blocks must be player heads with the following NBT data:
 When placing down a player head with this NBT, the function tag `#gm4_machines:place_down` will run. This will run `as` the player who placed the block and `at` the center of the block that was placed. The following command should be used to verify the specific machine placed:
 
 ```mcfunction
-execute if score $placed_block gm4_machine_data matches 0 if data storage gm4_machines:temp {id:"BLOCK_INDENTIFIER"} run function MODULE_NAMESPACE:machine/create
+execute if score $placed_block gm4_machine_data matches 0 store success score $placed_block gm4_machine_data if data storage gm4_machines:temp {id:"BLOCK_INDENTIFIER"} run function MODULE_NAMESPACE:machine/create
 ```
 
 The function `MODULE_NAMESPACE:machine/create` should have the following commands: 

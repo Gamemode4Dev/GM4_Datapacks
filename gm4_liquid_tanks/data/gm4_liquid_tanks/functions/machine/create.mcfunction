@@ -5,7 +5,6 @@
 
 # place block depending on face_placement
 execute if score $face_placement gm4_machine_data matches 1..2 run function gm4_liquid_tanks:machine/rotate/down
-execute if score $face_placement gm4_machine_data matches 2 run function gm4_liquid_tanks:machine/rotate/up
 execute if score $face_placement gm4_machine_data matches 3 run function gm4_liquid_tanks:machine/rotate/south
 execute if score $face_placement gm4_machine_data matches 4 run function gm4_liquid_tanks:machine/rotate/west
 execute if score $face_placement gm4_machine_data matches 5 run function gm4_liquid_tanks:machine/rotate/north
