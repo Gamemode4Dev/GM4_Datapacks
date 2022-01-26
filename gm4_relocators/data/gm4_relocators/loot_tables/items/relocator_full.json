@@ -49,7 +49,7 @@
               },
               "ops": [
                 {
-                  "source": "gm4_relocation.block_state.lore",
+                  "source": "lore",
                   "target": "display.Lore",
                   "op": "append"
                 }
