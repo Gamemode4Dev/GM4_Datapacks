@@ -25,10 +25,6 @@ execute if score $placed_block gm4_machine_data matches 0 store success score $p
 
 The function `MODULE_NAMESPACE:machine/create` should have the following commands: 
 ```mcfunction
-scoreboard players set $placed_block gm4_machine_data 1
-scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 1
-tag @e[distance=..2] remove gm4_new_machine
-
 summon marker ~ ~ ~ {Tags:["gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","IDENTIFIER","ADD ANY EXTRA TAGS"],CustomName:'"PLEASE NAME YOUR MACHINE MARKERS"',<...>}
 ```
 
