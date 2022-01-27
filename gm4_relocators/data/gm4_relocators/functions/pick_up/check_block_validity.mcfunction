@@ -21,3 +21,6 @@ execute if score $found_marker gm4_rl_data matches 0 if entity @e[tag=gm4_reloca
 execute if score $valid_block gm4_rl_data matches 1 run function gm4_relocators:pick_up/get_data
 # else return the empty relocator
 execute if score $valid_block gm4_rl_data matches 0 run function gm4_relocators:pick_up/failed
+
+# clean up
+tag @e[distance=..1] remove gm4_relocating_block
