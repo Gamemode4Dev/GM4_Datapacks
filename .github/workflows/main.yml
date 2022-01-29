@@ -18,7 +18,7 @@ jobs:
       - uses: mcbeet/check-commands@v1
         with:
           minecraft: ${{ env.VERSION }}
-          source: base gm4_!(template_pack) lib_*
+          source: base gm4_!(template_pack)
           version: '0.35.1'
 
   release:
