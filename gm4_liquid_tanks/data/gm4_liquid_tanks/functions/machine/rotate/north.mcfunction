@@ -8,4 +8,4 @@ setblock ~ ~ ~ hopper[facing=north]{CustomName:'{"translate":"%1$s%3427655$s","w
 
 # summon display armor stand and marker entity
 summon armor_stand ~ ~-0.5 ~ {Small:1,NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],HasVisualFire:1,CustomName:'"gm4_liquid_tank_stand"',ArmorItems:[{},{},{},{id:"glass",Count:1,tag:{CustomModelData:3420003}}],Rotation:[180.0f,0.0f]}
-summon marker ~ ~ ~ {Tags:["gm4_liquid_tank","gm4_new_liquid_tank","gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:'"gm4_liquid_tank"',Rotation:[180.0f,0.0f]}
+summon marker ~ ~ ~ {Tags:["gm4_liquid_tank","gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:'"gm4_liquid_tank"',Rotation:[180.0f,0.0f]}

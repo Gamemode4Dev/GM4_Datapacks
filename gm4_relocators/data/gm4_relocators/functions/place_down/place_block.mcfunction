@@ -44,9 +44,12 @@ execute if block ~ ~ ~ air if data storage gm4_relocators:temp gm4_relocation.bl
 # copy data into block
 data modify block ~ ~ ~ {} merge from storage gm4_relocators:temp gm4_relocation.data
 scoreboard players set $placed_block gm4_rl_data 0
-execute if data storage gm4_relocators:temp gm4_relocation.custom_block run function #gm4_relocators:place_down/entity_check
+execute if data storage gm4_relocators:temp gm4_relocation.custom_block run function #gm4_relocators:place_down_check
+execute if score $placed_block gm4_rl_data matches 0 if data storage gm4_relocators:temp gm4_relocation.custom_block run setblock ~ ~ ~ air
 
 # return relocator
-playsound minecraft:block.beacon.activate block @a[distance=..8] ~ ~ ~ 1 2
-execute at @s[gamemode=!creative,gamemode=!spectator] run loot spawn ~ ~.3 ~ loot gm4_relocators:items/relocator_empty
-data merge entity @e[type=item,distance=..7,nbt={Age:0s,Item:{id:"minecraft:player_head",Count:1b,tag:{gm4_machines:{id:"relocator_empty"}}}},limit=1] {PickupDelay:0}
+execute if block ~ ~ ~ air run function gm4_relocators:place_down/failed
+execute unless block ~ ~ ~ air run function gm4_relocators:place_down/success
+
+# clean up
+data remove storage gm4_relocators:temp gm4_relocation

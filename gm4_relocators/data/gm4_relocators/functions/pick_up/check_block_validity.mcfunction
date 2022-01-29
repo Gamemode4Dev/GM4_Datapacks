@@ -12,7 +12,7 @@ execute if score $valid_block gm4_rl_data matches 1 align xyz run tag @e[dx=0,ta
 execute if score $valid_block gm4_rl_data matches 1 run tag @e[distance=..0.5,tag=smithed.block] add gm4_relocating_block
 
 scoreboard players set $found_marker gm4_rl_data 0
-execute as @e[tag=gm4_relocating_block,distance=..1] run function #gm4_relocators:pick_up/entity_check
+execute as @e[tag=gm4_relocating_block,distance=..1] run function #gm4_relocators:pick_up_check
 
 # check if the custom block is allowed to be relocated
 execute if score $found_marker gm4_rl_data matches 0 if entity @e[tag=gm4_relocating_block,distance=..1,limit=1] run scoreboard players set $valid_block gm4_rl_data 0

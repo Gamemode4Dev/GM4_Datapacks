@@ -10,7 +10,7 @@ execute if data storage gm4_enchantment_extractors:temp current_item.tag.Enchant
 execute if data storage gm4_enchantment_extractors:temp current_item.tag.Enchantments[{id:"minecraft:binding_curse"}] run function gm4_enchantment_extractors:extract_binding
 
 # extract
-execute unless score $curse_extracted gm4_ench_data matches 1 store result score $added_books gm4_ench_data run loot insert ~ ~ ~ fish gm4_enchantment_extractors:extract/check ~ ~ ~ mainhand
+execute unless score $curse_extracted gm4_ench_data matches 1 store result score $added_books gm4_ench_data run loot insert ~ ~ ~ fish gm4_enchantment_extractors:technical/extract/check ~ ~ ~ mainhand
 
 # visuals
 playsound block.enchantment_table.use block @a[distance=..5] ~ ~ ~ 1 0.8

@@ -20,7 +20,7 @@
                   "with": [
                     "Liquid Tank",
                     {
-                      "translate": "container.gm4.liquid_tank"
+                      "translate": "block.gm4.liquid_tank"
                     }
                   ],
                   "color": "white",
