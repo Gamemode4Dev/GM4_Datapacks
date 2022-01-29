@@ -1,5 +1,5 @@
 {
-  "last_commit": "d36c9da7dd309e2323280ee6974255ed0f67e3f1",
+  "last_commit": "27d65080706580c94ed97b0b14e189a93a9bf2a3",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -381,7 +381,7 @@
       ],
       "libraries": [],
       "hidden": false,
-      "patch": 18000
+      "patch": 18001
     },
     {
       "id": "gm4_master_crafting",
