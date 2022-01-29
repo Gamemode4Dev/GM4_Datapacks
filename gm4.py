@@ -90,7 +90,8 @@ def build_modules(ctx: Context):
 
 
 def module_updates(ctx: Context):
-	init = ctx.data.functions[f"{ctx.project_id}:init"]
+	init = ctx.data.functions[f"{ctx.project_id.removeprefix('gm4_')}:init"]
+	init_check = ctx.data.functions[f"{ctx.project_id.removeprefix('gm4_')}:init_check"]
 	updates = ctx.meta["module_updates"]
 
 	score = f"{ctx.project_id.removeprefix('gm4_')} gm4_modules"
@@ -98,11 +99,15 @@ def module_updates(ctx: Context):
 
 	for i, line in enumerate(init.lines):
 		if "gm4_modules" in line:
-			init.lines[i] = line.replace(f"{score} 1", f"{score} {patch}").replace(f"{score} matches 1", f"{score} matches {patch}")
+			init.lines[i] = line.replace(f"{score} 1", f"{score} {patch}")
+
+	for i, line in enumerate(init_check.lines):
+		if "gm4_modules" in line:
+			init_check.lines[i] = line.replace(f"{score} matches 1", f"{score} matches {patch}")
 
 	if "#$moduleUpdateList" in init.lines:
 		init.lines.remove("#$moduleUpdateList")
 	init.lines.append('# Module update list')
-	init.lines.append('data remove storage gm4:log queue[{type:"outdated"}]')
+	init.lines.append('kill @e[tag=gm4_update_message]')
 	for m in updates:
-		init.lines.append(f'execute if score {m["id"].removeprefix("gm4_")} gm4_modules matches ..{m["patch"] - 1} run data modify storage gm4:log queue append value {{type:"outdated",module:"{m["name"]}"}}')
+		init.lines.append(f'execute if score {m["id"].removeprefix("gm4_")} gm4_modules matches ..{m["patch"] - 1} run summon minecraft:area_effect_cloud ~ ~ ~ {{CustomName:"\"{m["name"]}\"",Tags:["gm4_update_message"],Duration:2000}}')
