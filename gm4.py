@@ -118,8 +118,10 @@ def build_modules(ctx: Context):
 
 
 def module_updates(ctx: Context):
-	init = ctx.data.functions[f"{ctx.project_id.removeprefix('gm4_')}:init"]
-	init_check = ctx.data.functions[f"{ctx.project_id.removeprefix('gm4_')}:init_check"]
+	init = ctx.data.functions.get(f"{ctx.project_id.removeprefix('gm4_')}:init")
+	init_check = ctx.data.functions.get(f"{ctx.project_id.removeprefix('gm4_')}:init_check")
+	if init is None or init_check is None:
+		return
 	updates = ctx.meta["module_updates"]
 
 	score = f"{ctx.project_id.removeprefix('gm4_')} gm4_modules"
