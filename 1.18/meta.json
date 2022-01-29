@@ -1,5 +1,5 @@
 {
-  "last_commit": "79353bb4950ecd4bbd9da7821db8e049797b8f53",
+  "last_commit": "d36c9da7dd309e2323280ee6974255ed0f67e3f1",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -664,7 +664,7 @@
       "categories": [],
       "libraries": [],
       "hidden": true,
-      "patch": 18001
+      "patch": 18002
     },
     {
       "id": "gm4_sweethearts",
