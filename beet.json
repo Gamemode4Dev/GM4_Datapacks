@@ -1,4 +1,8 @@
 {
+  "output": "out",
+  "data_pack": {
+    "name": "{{ dev }}_dev"
+  },
   "pipeline": [
     "gm4.build_modules"
   ]
