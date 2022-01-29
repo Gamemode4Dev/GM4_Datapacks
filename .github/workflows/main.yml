@@ -3,7 +3,6 @@ name: Check and build modules
 on:
   push:
     branches: [ master, ver/1.17, ver/1.16, ver/1.15, ver/1.14, ver/1.13 ]
-  pull_request:
   workflow_dispatch:
 
 env:
@@ -11,19 +10,7 @@ env:
   PATCH_PREFIX: 15000
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: mcbeet/check-commands@v1
-        with:
-          minecraft: ${{ env.VERSION }}
-          source: base gm4_!(template_pack)
-          version: '0.35.1'
-
   release:
-    needs: test
-    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
