@@ -1,0 +1,756 @@
+{
+  "last_commit": "4ac9d879823e44b1df935040287722c189d69533",
+  "modules": [
+    {
+      "id": "gm4_apple_trees",
+      "name": "Apple Trees",
+      "description": "Simply Apple Trees!",
+      "categories": [
+        "Custom Terrain"
+      ],
+      "libraries": [
+        "lib_trades"
+      ],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_bat_grenades",
+      "name": "Bat Grenades",
+      "description": "Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_beehive_inspector",
+      "name": "Beehive Inspector",
+      "description": "Inspect the number of bees in a beehive",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_better_armour_stands",
+      "name": "Better Armour Stands",
+      "description": "This module lets you control the size of stands and show their arms. It's also expandable!",
+      "categories": [
+        "Better Armour Stands"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_better_fire",
+      "name": "Better Fire",
+      "description": "Flame arrows set fire when they land and burning creepers explode!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_block_compressors",
+      "name": "Block Compressors",
+      "description": "Compress stacks of blocks down for compact storage, or decompress them again.",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_book_binders",
+      "name": "Book Binders",
+      "description": "Start printing your own Enchanted Books",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_boots_of_ostara",
+      "name": "Boots of Ostara",
+      "description": "Plant crops and more, just by walking! Also negates Desire Lines.",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_cement_mixers",
+      "name": "Cement Mixers",
+      "description": "Adds the ability to turn powder into concrete in Liquid Tanks",
+      "categories": [
+        "Liquid Tanks"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_chairs",
+      "name": "Chairs",
+      "description": "Place a saddle on a stair to have a chair to sit on!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_cooler_caves",
+      "name": "Cooler Caves",
+      "description": "A custom terrain expansion pack that makes biome specific caves and mineshafts",
+      "categories": [
+        "Custom Terrain"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_cozy_campfires",
+      "name": "Cozy Campfires",
+      "description": "Heartwarming campfire evenings!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_crossbow_cartridges",
+      "name": "Crossbow Cartridges",
+      "description": "Shoot more than just arrows!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_custom_crafters",
+      "name": "Custom Crafters",
+      "description": "A base module that adds a custom crafting table to the game.",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_dangerous_dungeons",
+      "name": "Dangerous Dungeons",
+      "description": "A custom terrain expansion pack that adds new types of dungeons underground.",
+      "categories": [
+        "Custom Terrain"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_desire_lines",
+      "name": "Desire Lines",
+      "description": "Creates natural looking paths through high traffic areas.",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_disassemblers",
+      "name": "Disassemblers",
+      "description": "Break apart diamond, gold and iron tools and weapons for materials",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_display_frames",
+      "name": "Display Frames",
+      "description": "Splash item frames with invisibilty!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_enchantment_extractors",
+      "name": "Enchantment Extractors",
+      "description": "Collects enchantments from tools, armour and weapons.",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_end_fishing",
+      "name": "End Fishing",
+      "description": "Catch rare loot by fishing in the end void!",
+      "categories": [],
+      "libraries": [
+        "lib_player_heads"
+      ],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_ender_hoppers",
+      "name": "Ender Hoppers",
+      "description": "Create special hoppers that teleport nearby items to them.",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_enderman_support_class",
+      "name": "Enderman Support Class",
+      "description": "This module allows Endermen to aid nearby hostiles in their fight against the player!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_everstone",
+      "name": "Everstone",
+      "description": "Keep your baby mobs cute! But watch out for new mobs aging too",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_fulcio_shamir",
+      "name": "Fulcio Shamir",
+      "description": "Adds the shamir 'Fulcio' to metallurgy. It allows you to place blocks in mid-air!",
+      "categories": [
+        "Metallurgy"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_heart_canisters",
+      "name": "Heart Canisters",
+      "description": "Pricey canisters that increase your health when carried.",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [
+        "lib_player_heads"
+      ],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_holographic_tags",
+      "name": "Holographic Tags",
+      "description": "Set up floating messages with a simple name tag!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_ink_spitting_squid",
+      "name": "Ink Spitting Squid",
+      "description": "*splort*",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_lightning_rods",
+      "name": "Lightning Rods",
+      "description": "Summon lightning at your command!",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_liquid_minecarts",
+      "name": "Liquid Minecarts",
+      "description": "Allows Minecarts to move fluids between Liquid Tanks",
+      "categories": [
+        "Liquid Tanks"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_liquid_tanks",
+      "name": "Liquid Tanks",
+      "description": "Store liquids compactly in special tanks and interact with them!",
+      "categories": [
+        "Liquid Tanks"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_lumos_shamir",
+      "name": "Lumos Shamir",
+      "description": "Adds the shamir 'Lumos' to metallurgy. It places torches when it is dark.",
+      "categories": [
+        "Metallurgy"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_master_crafting",
+      "name": "Master Crafting",
+      "description": "A crafting recipe pack at adds some efficient recipes to the game.",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_mending_tanks",
+      "name": "Mending Tanks",
+      "description": "Your Liquid XP Tank can now repair your armor and tools!",
+      "categories": [
+        "Liquid Tanks"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_metallurgy",
+      "name": "Metallurgy",
+      "description": "Custom ores and custom enchants for your tools and armour!",
+      "categories": [
+        "Metallurgy"
+      ],
+      "libraries": [
+        "lib_player_heads",
+        "lib_lore"
+      ],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_midnight_menaces",
+      "name": "Midnight Menaces",
+      "description": "Adds spooky menaces to Mysterious Midnights!",
+      "categories": [
+        "Mysterious Midnights"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_mob_conversion",
+      "name": "Mob Conversion",
+      "description": "Convert cows, pigmen and witches into other mobs.",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_moneo_shamir",
+      "name": "Moneo Shamir",
+      "description": "Adds the shamir 'Moneo' to metallurgy. It stops you from breaking the tool it's applied to.",
+      "categories": [
+        "Metallurgy"
+      ],
+      "libraries": [
+        "lib_forceload"
+      ],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_mysterious_midnights",
+      "name": "Mysterious Midnights",
+      "description": "Adds spooky full moon nights!",
+      "categories": [],
+      "libraries": [
+        "lib_forceload"
+      ],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_note_block_interface",
+      "name": "Note Block Interface",
+      "description": "Adds a neat interface to improve your musical skills!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_orb_of_ankou",
+      "name": "Orb of Ankou",
+      "description": "Capture mob abilities and use them as your own!",
+      "categories": [
+        "Metallurgy",
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_orbis",
+      "name": "Orbis",
+      "description": "A seed-specific chunk scanner that modifies your world as you explore.",
+      "categories": [
+        "Custom Terrain"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_particles_pack",
+      "name": "Particles Pack",
+      "description": "Fireflies to flames, add some pezazz to your projects!",
+      "categories": [
+        "Better Armour Stands"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_percurro_shamir",
+      "name": "Percurro Shamir",
+      "description": "Swoosh! A shamir that allows you to swoosh past your enemies!",
+      "categories": [
+        "Metallurgy"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_phantom_scarecrows",
+      "name": "Phantom Scarecrows",
+      "description": "Undead Scarecrow defenses!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_pig_tractors",
+      "name": "Pig Tractors",
+      "description": "Ride pigs through fields to quickly harvest and plant crops",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_podzol_rooting_soil",
+      "name": "Podzol Rooting Soil",
+      "description": "Saplings self-plant on Podzol",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_poses_pack",
+      "name": "Poses Pack",
+      "description": "Allows you to set Armourstands to pose in various ways using the Better Armour Stands base module.",
+      "categories": [
+        "Better Armour Stands"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_potion_liquids",
+      "name": "Potion Liquids",
+      "description": "Adds the ability to store potions in Liquid Tanks",
+      "categories": [
+        "Liquid Tanks"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_potion_swords",
+      "name": "Potion Swords",
+      "description": "As if getting stabbed isn't enough... support your friends, terrify your enemies, make gold great again!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_record_crafting",
+      "name": "Record Crafting",
+      "description": "A crafting recipe pack that lets you craft all the records.",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_relocators",
+      "name": "Relocators",
+      "description": "Craft relocators to move your custom crafters, liquid tanks, and other machines",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_scuba_gear",
+      "name": "SCUBA Gear",
+      "description": "Ease ocean exploration with craftable scuba gear!",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_shroomites",
+      "name": "Shroomites",
+      "description": "Mooshrooms plant spore-emitting mushrooms that spread mycelium and other mushrooms around them.",
+      "categories": [],
+      "libraries": [],
+      "hidden": true,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_smelteries",
+      "name": "Smelteries",
+      "description": "Double your ore output with this multi-block structure.",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_soul_glass",
+      "name": "Soul Glass",
+      "description": "Reverse the effects of beacons with corrupting glass!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_spawner_minecarts",
+      "name": "Spawner Minecarts",
+      "description": "Pick up Spawners and move them with Minecarts.",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_speed_paths",
+      "name": "Speed Paths",
+      "description": "Gives you a speed effect when you walk on path blocks.",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_standard_crafting",
+      "name": "Standard Crafting",
+      "description": "A crafting recipe pack that adds some nifty new recipes to the game.",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_sunken_treasure",
+      "name": "Sunken Treasure",
+      "description": "Digging sand underwater with a fortune tool can uncover buried surprises",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_sweethearts",
+      "name": "Sweethearts",
+      "description": "Transfer your health to another player using flowers.",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_tinkering_compressors",
+      "name": "Tinkering Compressors",
+      "description": "Compress stacks of items into their block form with a tinker shamir, and back.",
+      "categories": [
+        "Custom Crafting",
+        "Metallurgy"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_tnt_landmines",
+      "name": "TNT Landmines",
+      "description": "Craft 'em up, throw 'em down, blow 'em up!",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [
+        "lib_player_heads"
+      ],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_tower_structures",
+      "name": "Tower Structures",
+      "description": "A custom terrain expansion pack that adds four new tower structures to the world.",
+      "categories": [
+        "Custom Terrain"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_trapped_signs",
+      "name": "Trapped Signs",
+      "description": "Craft trapped signs which, when right-clicked, give off a redstone signal.",
+      "categories": [
+        "Custom Crafting"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_tunnel_bores",
+      "name": "Tunnel Bores",
+      "description": "Ever wondered how mineshafts came to be? This is it!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_undead_players",
+      "name": "Undead Players",
+      "description": "You'll find your death point faster, but you'll have to fight your corpse for your stuff back!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_vertical_rails",
+      "name": "Vertical Rails",
+      "description": "Use ladders as vertical Minecart tracks.",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_washing_tanks",
+      "name": "Washing Tanks",
+      "description": "Die! Dye!",
+      "categories": [
+        "Liquid Tanks"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_weighted_armour",
+      "name": "Weighted Armour",
+      "description": "Perfect for UHCs, this module forces you to balance protection with speed.",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_xp_storage",
+      "name": "XP Storage",
+      "description": "Stand on top of an Ender Chest to store XP, stand below to retrieve it!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_zauber_cauldrons",
+      "name": "Zauber Cauldrons",
+      "description": "Brew potions, special armour and attribute crystals in any cauldron!",
+      "categories": [],
+      "libraries": [
+        "lib_forceload",
+        "lib_player_heads"
+      ],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_zauber_liquids",
+      "name": "Zauber Liquids",
+      "description": "From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!",
+      "categories": [
+        "Liquid Tanks"
+      ],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    },
+    {
+      "id": "gm4_ziprails",
+      "name": "Ziprails",
+      "description": "Automatically latch on to a tripwire to sail through the sky on a suspended line!",
+      "categories": [],
+      "libraries": [],
+      "hidden": false,
+      "patch": 16000
+    }
+  ]
+}
