@@ -1,5 +1,5 @@
 {
-  "last_commit": "c80439f0601826bed5fc2fb36bc9a2128ef2e16a",
+  "last_commit": "96ad6a70c9d4c53e209e5f7966ccfc3e3b4b8004",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -339,7 +339,7 @@
         "lib_potion_tracking"
       ],
       "hidden": false,
-      "patch": 18000
+      "patch": 18001
     },
     {
       "id": "gm4_liquid_minecarts",
@@ -553,7 +553,7 @@
         "lib_brewing"
       ],
       "hidden": false,
-      "patch": 18000
+      "patch": 18001
     },
     {
       "id": "gm4_potion_swords",
