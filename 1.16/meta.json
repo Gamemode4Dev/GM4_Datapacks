@@ -1,5 +1,5 @@
 {
-  "last_commit": "4ac9d879823e44b1df935040287722c189d69533",
+  "last_commit": "5a588b8343741488e3c4c242dd7a05ff6a3e2264",
   "modules": [
     {
       "id": "gm4_apple_trees",
@@ -11,6 +11,7 @@
       "libraries": [
         "lib_trades"
       ],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -20,6 +21,7 @@
       "description": "Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -29,6 +31,7 @@
       "description": "Inspect the number of bees in a beehive",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -40,6 +43,7 @@
         "Better Armour Stands"
       ],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -49,6 +53,7 @@
       "description": "Flame arrows set fire when they land and burning creepers explode!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -60,6 +65,9 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -69,6 +77,7 @@
       "description": "Start printing your own Enchanted Books",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -80,6 +89,9 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -91,6 +103,9 @@
         "Liquid Tanks"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_liquid_tanks"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -100,6 +115,7 @@
       "description": "Place a saddle on a stair to have a chair to sit on!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -111,6 +127,9 @@
         "Custom Terrain"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_orbis"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -120,6 +139,7 @@
       "description": "Heartwarming campfire evenings!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -129,6 +149,7 @@
       "description": "Shoot more than just arrows!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -140,6 +161,7 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -151,6 +173,9 @@
         "Custom Terrain"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_orbis"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -160,6 +185,7 @@
       "description": "Creates natural looking paths through high traffic areas.",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -171,6 +197,9 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -180,6 +209,7 @@
       "description": "Splash item frames with invisibilty!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -189,6 +219,7 @@
       "description": "Collects enchantments from tools, armour and weapons.",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -200,6 +231,7 @@
       "libraries": [
         "lib_player_heads"
       ],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -209,6 +241,7 @@
       "description": "Create special hoppers that teleport nearby items to them.",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -218,6 +251,7 @@
       "description": "This module allows Endermen to aid nearby hostiles in their fight against the player!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -227,6 +261,7 @@
       "description": "Keep your baby mobs cute! But watch out for new mobs aging too",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -238,6 +273,9 @@
         "Metallurgy"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_metallurgy"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -251,6 +289,9 @@
       "libraries": [
         "lib_player_heads"
       ],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -260,6 +301,7 @@
       "description": "Set up floating messages with a simple name tag!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -269,6 +311,7 @@
       "description": "*splort*",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -280,6 +323,9 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -291,6 +337,9 @@
         "Liquid Tanks"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_liquid_tanks"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -302,6 +351,7 @@
         "Liquid Tanks"
       ],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -313,6 +363,9 @@
         "Metallurgy"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_metallurgy"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -324,6 +377,9 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -335,6 +391,9 @@
         "Liquid Tanks"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_liquid_tanks"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -349,6 +408,7 @@
         "lib_player_heads",
         "lib_lore"
       ],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -360,6 +420,9 @@
         "Mysterious Midnights"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_mysterious_midnights"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -369,6 +432,7 @@
       "description": "Convert cows, pigmen and witches into other mobs.",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -382,6 +446,9 @@
       "libraries": [
         "lib_forceload"
       ],
+      "requires": [
+        "gm4_metallurgy"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -393,6 +460,7 @@
       "libraries": [
         "lib_forceload"
       ],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -402,6 +470,7 @@
       "description": "Adds a neat interface to improve your musical skills!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -414,6 +483,10 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_metallurgy",
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -425,6 +498,7 @@
         "Custom Terrain"
       ],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -436,6 +510,9 @@
         "Better Armour Stands"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_better_armour_stands"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -447,6 +524,9 @@
         "Metallurgy"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_metallurgy"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -456,6 +536,7 @@
       "description": "Undead Scarecrow defenses!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -465,6 +546,7 @@
       "description": "Ride pigs through fields to quickly harvest and plant crops",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -474,6 +556,7 @@
       "description": "Saplings self-plant on Podzol",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -485,6 +568,9 @@
         "Better Armour Stands"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_better_armour_stands"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -496,6 +582,9 @@
         "Liquid Tanks"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_liquid_tanks"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -505,6 +594,7 @@
       "description": "As if getting stabbed isn't enough... support your friends, terrify your enemies, make gold great again!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -516,6 +606,9 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -527,6 +620,9 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -538,6 +634,9 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -547,6 +646,7 @@
       "description": "Mooshrooms plant spore-emitting mushrooms that spread mycelium and other mushrooms around them.",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": true,
       "patch": 16000
     },
@@ -558,6 +658,9 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -567,6 +670,7 @@
       "description": "Reverse the effects of beacons with corrupting glass!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -576,6 +680,7 @@
       "description": "Pick up Spawners and move them with Minecarts.",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -585,6 +690,7 @@
       "description": "Gives you a speed effect when you walk on path blocks.",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -596,6 +702,9 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -605,6 +714,7 @@
       "description": "Digging sand underwater with a fortune tool can uncover buried surprises",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -614,6 +724,7 @@
       "description": "Transfer your health to another player using flowers.",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -626,6 +737,11 @@
         "Metallurgy"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters",
+        "gm4_block_compressors",
+        "gm4_metallurgy"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -639,6 +755,9 @@
       "libraries": [
         "lib_player_heads"
       ],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -650,6 +769,9 @@
         "Custom Terrain"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_orbis"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -661,6 +783,9 @@
         "Custom Crafting"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -670,6 +795,9 @@
       "description": "Ever wondered how mineshafts came to be? This is it!",
       "categories": [],
       "libraries": [],
+      "requires": [
+        "gm4_custom_crafters"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -679,6 +807,7 @@
       "description": "You'll find your death point faster, but you'll have to fight your corpse for your stuff back!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -688,6 +817,7 @@
       "description": "Use ladders as vertical Minecart tracks.",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -699,6 +829,9 @@
         "Liquid Tanks"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_liquid_tanks"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -708,6 +841,7 @@
       "description": "Perfect for UHCs, this module forces you to balance protection with speed.",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -717,6 +851,7 @@
       "description": "Stand on top of an Ender Chest to store XP, stand below to retrieve it!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -729,6 +864,7 @@
         "lib_forceload",
         "lib_player_heads"
       ],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     },
@@ -740,6 +876,10 @@
         "Liquid Tanks"
       ],
       "libraries": [],
+      "requires": [
+        "gm4_liquid_tanks",
+        "gm4_zauber_cauldrons"
+      ],
       "hidden": false,
       "patch": 16000
     },
@@ -749,6 +889,7 @@
       "description": "Automatically latch on to a tripwire to sail through the sky on a suspended line!",
       "categories": [],
       "libraries": [],
+      "requires": [],
       "hidden": false,
       "patch": 16000
     }
