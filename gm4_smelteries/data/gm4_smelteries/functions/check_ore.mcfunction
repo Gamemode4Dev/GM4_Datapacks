@@ -5,7 +5,7 @@
 data modify entity @s HandItems[0] set from block ^ ^ ^1 Items[{Slot:0b}]
 item replace entity @s armor.head with air
 execute store result score can_smelt gm4_bf_data run loot replace entity @s armor.head fish gm4_smelteries:smeltable_display ~ ~ ~ mainhand
-item replace entity @s weapon with air
+item replace entity @s weapon.mainhand with air
 execute if score can_smelt gm4_bf_data matches 0 run item replace entity @s armor.head with gray_stained_glass{CustomModelData:3420001}
 
 #check if the furnace is close to finish smelting, and then the structure
