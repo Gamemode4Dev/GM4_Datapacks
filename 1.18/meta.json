@@ -1,5 +1,5 @@
 {
-  "last_commit": "bfecad7913e744827b59a5b2bfe2b875a3b608ea",
+  "last_commit": "c80439f0601826bed5fc2fb36bc9a2128ef2e16a",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -192,7 +192,7 @@
       "categories": [],
       "libraries": [],
       "hidden": false,
-      "patch": 18000
+      "patch": 18001
     },
     {
       "id": "gm4_disassemblers",
