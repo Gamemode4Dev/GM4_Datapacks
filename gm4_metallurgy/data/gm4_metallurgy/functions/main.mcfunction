@@ -22,6 +22,5 @@ execute as @a run function gm4_metallurgy:player
 
 execute as @e[scores={gm4_bolt_time=-40..}] at @s run function gm4_ender_bolt_shamir:infection/active
 execute as @e[type=trident,nbt={inGround:1b,Trident:{tag:{gm4_metallurgy:{active_shamir:"ender_bolt"}}}}] at @s run function gm4_ender_bolt_shamir:infection/active
-scoreboard players reset @a gm4_bolt_damage
 
 schedule function gm4_metallurgy:main 16t
