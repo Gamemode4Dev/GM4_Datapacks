@@ -19,7 +19,7 @@ jobs:
         with:
           minecraft: ${{ env.VERSION }}
           source: base gm4_!(template_pack) lib_*
-          version: '0.35.0'
+          version: '0.35.1'
 
   release:
     needs: test
