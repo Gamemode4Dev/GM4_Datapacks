@@ -1,5 +1,5 @@
 {
-  "last_commit": "aeaea8ad94e3811fcfb23cb896f415da48fc0c65",
+  "last_commit": "4e3a5c1de0c0b4f665600410a4ad2aa3260a1751",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -549,7 +549,7 @@
         "gm4_custom_crafters"
       ],
       "hidden": false,
-      "patch": 18000
+      "patch": 18001
     },
     {
       "id": "gm4_orbis",
@@ -864,7 +864,7 @@
         "gm4_custom_crafters"
       ],
       "hidden": false,
-      "patch": 18000
+      "patch": 18001
     },
     {
       "id": "gm4_undead_players",
