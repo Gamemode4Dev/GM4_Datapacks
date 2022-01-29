@@ -9,6 +9,7 @@ summon marker ~ ~ ~ {Tags:["gm4_liquid_tank","gm4_machine_marker","smithed.block
 execute as @e[type=marker,tag=gm4_new_machine,limit=1,distance=..0.1] run function gm4_liquid_tanks:relocate/restore_liquid
 
 execute as @e[tag=gm4_new_machine,distance=..2] run data modify entity @s Rotation set from storage gm4_relocators:temp gm4_relocation.entity_data.Rotation
+execute as @e[tag=gm4_new_machine,distance=..2] at @s rotated as @e[type=marker,tag=gm4_new_machine,distance=..2,limit=1] run tp ~ ~ ~
 execute as @e[type=armor_stand,tag=gm4_new_machine,distance=..2] run data modify entity @s {} merge from storage gm4_relocators:temp gm4_relocation.entity_data.stand
 scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 1
 tag @e[distance=..2] remove gm4_new_machine

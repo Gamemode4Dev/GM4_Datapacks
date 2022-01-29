@@ -13,6 +13,7 @@ data modify storage gm4_relocators:temp merge_data.entity_data.stand.ArmorItems 
 data modify storage gm4_relocators:temp merge_data.entity_data.stand.Tags set from entity @e[type=armor_stand,tag=gm4_liquid_tank_stand,distance=..0.5,limit=1] Tags
 
 execute positioned ~ ~-0.75 ~ run data modify storage gm4_relocators:temp merge_data.entity_data.display set from entity @e[type=armor_stand,tag=gm4_liquid_tank_display,distance=..0.3,limit=1] {}
+data remove storage gm4_relocators:temp merge_data.entity_data.display.Pos
 
 execute store result storage gm4_relocators:temp merge_data.entity_data.lt_value int 1 run scoreboard players get @s gm4_lt_value
 execute store result storage gm4_relocators:temp merge_data.entity_data.lt_max int 1 run scoreboard players get @s gm4_lt_max
