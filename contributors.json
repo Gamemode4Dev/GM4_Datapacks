@@ -1,14 +1,11 @@
-[
-    {
-        "name":"Bloo",
-        "links":["https://www.twitter.com/Bloo_dev"]
+{
+    "Bloo": {
+        "links": ["https://www.twitter.com/Bloo_dev"]
     },
-    {
-        "name": "Lue",
-        "links":[]
+    "Lue": {
+        "links": []
     },
-    {
-        "name": "Misode",
+    "Misode": {
         "links": ["https://www.twitter.com/misode_"]
     }
-]
+}

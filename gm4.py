@@ -15,18 +15,6 @@ def run(cmd: list[str]) -> str:
 	return subprocess.run(cmd, capture_output=True, encoding="utf8").stdout.strip()
 
 
-def parseContributorJSON(path: str) -> dict[str, dict[str, list[str]]]:
-	with open(f"contributors.json", "r") as c:
-		contributor_list_json: list[dict] = json.load(c)
-		contributor_map: dict[str, list[str]] = {}
-		for contributor in contributor_list_json:
-			name = contributor.get(CONTRIBUTOR_KEY_NAME, None)
-			if (not name):
-				continue
-			contributor_map[name] = contributor
-	return contributor_map
-
-
 def build_modules(ctx: Context):
 	version = os.getenv("VERSION", "1.18")
 	prefix = int(os.getenv("PATCH_PREFIX", 0))
@@ -45,13 +33,15 @@ def build_modules(ctx: Context):
 		released_modules = []
 		last_commit = None
 
+	with open("contributors.json", "r") as f:
+		contributors: dict[str, dict] = json.load(f)
+
 	for module in modules:
 		id = module["id"]
 
 		try:
-			with open(f"{id}/pack.mcmeta", "r+") as f, open(f"contributors.json", "r") as c:
+			with open(f"{id}/pack.mcmeta", "r+") as f:
 				meta: dict = json.load(f)
-				contributor_list_json: dict[str, dict[str, list[str]]] = parseContributorJSON("contributors.json")
 
 				module["name"] = meta.get("module_name", id)
 				module["description"] = meta.get("site_description", "")
@@ -60,33 +50,14 @@ def build_modules(ctx: Context):
 				module["requires"] = [f"gm4_{id}" for id in meta.get("required_modules", [])]
 				module["hidden"] = meta.get("hidden", False)
 
-				# update credits in pack.mcmeta with credits from contributors.json
-				updated_credits: bool = False
-				for credits_category, category_contributors in meta.get("credits", []).items():
-					for i, contributor_mcmeta in enumerate(category_contributors):
-
-						# update credits from old credit format
-						if isinstance(contributor_mcmeta, list):
-							new_contributor_mcmeta = list(contributor_mcmeta)
-							contributor_mcmeta = {CONTRIBUTOR_KEY_NAME: new_contributor_mcmeta.pop(
-								0), CONTRIBUTOR_KEY_LINKS: new_contributor_mcmeta}
-
-						name_mcmeta = contributor_mcmeta.get(CONTRIBUTOR_KEY_NAME, None)
-						if not name_mcmeta:
-							continue
-						# check for entries in contributors.json
-						contributor_json = contributor_list_json.get(name_mcmeta, None)
-						if not contributor_json or contributor_mcmeta == contributor_json:
-							continue
-
-						category_contributors[i] = contributor_json
-						updated_credits = True
-
-				if updated_credits:
-					f.seek(0)
-					json.dump(meta, f, indent=4)  # save updated credits
-					f.truncate()
-					f.write('\n')
+				credits = meta.get("credits", {})
+				module["credits"] = {
+					title: [
+						dict(name=p[0], **contributors.get(p[0], {}))
+						for p in credits[title]
+					]
+					for title in credits
+				}
 
 		except:
 			module["id"] = None
@@ -153,10 +124,12 @@ def build_modules(ctx: Context):
 				},
 				"output": OUTPUT,
 				"pipeline": [
-					"gm4.module_updates"
+					"gm4.module_updates",
+					"gm4.populate_credits"
 				],
 				"meta": {
-					"module_updates": module_updates
+					"module_updates": module_updates,
+					"credits": module["credits"]
 				}
 			}))
 			print(f"Generated {id}")
@@ -179,3 +152,7 @@ def module_updates(ctx: Context):
 	init.lines.append('data remove storage gm4:log queue[{type:"outdated"}]')
 	for m in updates:
 		init.lines.append(f'execute if score {m["id"].removeprefix("gm4_")} gm4_modules matches ..{m["patch"] - 1} run data modify storage gm4:log queue append value {{type:"outdated",module:"{m["name"]}"}}')
+
+
+def populate_credits(ctx: Context):
+	ctx.data.mcmeta.data["credits"] = ctx.meta["credits"]
