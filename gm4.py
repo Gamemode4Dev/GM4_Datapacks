@@ -47,15 +47,19 @@ def build_modules(ctx: Context):
 				module["hidden"] = meta.get("hidden", False)
 
 				# update credits in pack.mcmeta with credits from contributers.json
+				updated_credits: bool = False
 				for ctb_list in meta.get("credits", []).values():
 					for ctb_info in ctb_list:
 						if isinstance(ctb_info, list) and ctb_info:
-							contact: list[str] = contacts.get(ctb_info[0], [])
-							if contact and not (contact == ctb_info) and not len(contact) < len(ctb_info):
-								ctb_list[ctb_list.index(ctb_info)] = contacts[ctb_info[0]]
-				f.seek(0)
-				json.dump(meta, f, indent=4) # save updated credits
-				f.truncate()
+							cnt_info: list[str] = [ctb_info[0], *contacts.get(ctb_info[0], [])]
+							if len(cnt_info) > 1 and not (cnt_info == ctb_info) and not len(cnt_info) < len(ctb_info):
+								ctb_list[ctb_list.index(ctb_info)] = cnt_info
+								updated_credits = True
+				if updated_credits:
+					f.seek(0)
+					json.dump(meta, f, indent=4) # save updated credits
+					f.truncate()
+					f.write('\n')
 		except:
 			module["id"] = None
 			continue
