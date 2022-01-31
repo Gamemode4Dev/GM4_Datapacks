@@ -1,8 +1,14 @@
-{
-    "Bloo": [
-        "https://www.twitter.com/Bloo_dev"
-    ],
-    "Misode": [
-        "https://www.twitter.com/misode_"
-    ]
-}
+[
+    {
+        "name":"Bloo",
+        "links":["https://www.twitter.com/Bloo_dev"]
+    },
+    {
+        "name": "Lue",
+        "links":[]
+    },
+    {
+        "name": "Misode",
+        "links": ["https://www.twitter.com/misode_"]
+    }
+]

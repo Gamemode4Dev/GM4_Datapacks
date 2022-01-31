@@ -8,9 +8,23 @@ BASE = "base"
 OUTPUT = "out"
 RELEASE = "release"
 
+CONTRIBUTOR_KEY_NAME = "name"
+CONTRIBUTOR_KEY_LINKS = "links"
 
 def run(cmd: list[str]) -> str:
 	return subprocess.run(cmd, capture_output=True, encoding="utf8").stdout.strip()
+
+
+def parseContributorJSON(path: str) -> dict[str, dict[str, list[str]]]:
+	with open(f"contributors.json", "r") as c:
+		contributor_list_json: list[dict] = json.load(c)
+		contributor_map: dict[str, list[str]] = {}
+		for contributor in contributor_list_json:
+			name = contributor.get(CONTRIBUTOR_KEY_NAME, None)
+			if (not name):
+				continue
+			contributor_map[name] = contributor
+	return contributor_map
 
 
 def build_modules(ctx: Context):
@@ -37,7 +51,7 @@ def build_modules(ctx: Context):
 		try:
 			with open(f"{id}/pack.mcmeta", "r+") as f, open(f"contributors.json", "r") as c:
 				meta: dict = json.load(f)
-				contributor_json: dict = json.load(c)
+				contributor_list_json: dict[str, dict[str, list[str]]] = parseContributorJSON("contributors.json")
 
 				module["name"] = meta.get("module_name", id)
 				module["description"] = meta.get("site_description", "")
@@ -49,18 +63,23 @@ def build_modules(ctx: Context):
 				# update credits in pack.mcmeta with credits from contributors.json
 				updated_credits: bool = False
 				for credits_category, category_contributors in meta.get("credits", []).items():
+					for i, contributor_mcmeta in enumerate(category_contributors):
 
-					# convert old format mcmetas to new format
-					if isinstance(category_contributors, list):
-						category_contributors = {name_and_links.pop(0): name_and_links for name_and_links in category_contributors}
-						meta["credits"][credits_category] = category_contributors
+						# update credits from old credit format
+						if isinstance(contributor_mcmeta, list):
+							new_contributor_mcmeta = list(contributor_mcmeta)
+							contributor_mcmeta = {CONTRIBUTOR_KEY_NAME: new_contributor_mcmeta.pop(
+								0), CONTRIBUTOR_KEY_LINKS: new_contributor_mcmeta}
 
-					for contributor_name_mcmeta, contributor_links_mcmeta in category_contributors.items():
-						# check if credits require udpating from contributors.json
-						contributor_links_json = contributor_json.get(contributor_name_mcmeta, None)
-						if contributor_links_json == None or contributor_links_mcmeta == contributor_links_json:
+						name_mcmeta = contributor_mcmeta.get(CONTRIBUTOR_KEY_NAME, None)
+						if not name_mcmeta:
 							continue
-						meta["credits"][credits_category][contributor_name_mcmeta] = contributor_links_json
+						# check for entries in contributors.json
+						contributor_json = contributor_list_json.get(name_mcmeta, None)
+						if not contributor_json or contributor_mcmeta == contributor_json:
+							continue
+
+						category_contributors[i] = contributor_json
 						updated_credits = True
 
 				if updated_credits:
