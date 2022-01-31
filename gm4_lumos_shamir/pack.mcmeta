@@ -1,6 +1,6 @@
 {
-	"pack": {
-		"pack_format": 8,
+    "pack": {
+        "pack_format": 8,
         "description": [
             "Lumos Shamir",
             "\n",
@@ -9,42 +9,30 @@
                 "color": "#4AA0C7"
             }
         ]
-	},
-	"module_name": "Lumos Shamir",
-	"module_id": "lumos_shamir",
-	"hidden":false,
-	"site_description": "Adds the shamir 'Lumos' to metallurgy. It places torches when it is dark.",
-	"site_categories": [
-		"Metallurgy"
-	],
-	"video_link": "",
-	"wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Lumos_Shamir",
-	"required_modules": [
-		"metallurgy"
-	],
-	"recommended_modules": [],
-	"credits": {
-		"Creators": [
-			[
-				"InternetAlien",
-				""
-			],
-			[
-				"SirSheepe",
-				"https://www.twitter.com/SirSheepe"
-			]
-		],
-		"Idea By": [
-			[
-				"misode",
-				""
-			]
-		],
+    },
+    "module_name": "Lumos Shamir",
+    "module_id": "lumos_shamir",
+    "hidden": false,
+    "site_description": "Adds the shamir 'Lumos' to metallurgy. It places torches when it is dark.",
+    "site_categories": [
+        "Metallurgy"
+    ],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Lumos_Shamir",
+    "required_modules": [
+        "metallurgy"
+    ],
+    "recommended_modules": [],
+    "credits": {
+        "Creators": [
+            "InternetAlien",
+            "SirSheepe"
+        ],
+        "Idea By": [
+            "misode"
+        ],
         "Icon Design": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ]
+            "BluePsychoRanger"
         ]
-	}
+    }
 }

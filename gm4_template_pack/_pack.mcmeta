@@ -25,28 +25,15 @@
         "or leave array empty"
     ],
     "credits": {
-        "comment": "All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings. -- REMOVE THIS COMMENT",
         "Creator": [
-            [
-                "USERNAME",
-                "OPTIONAL_LINK"
-            ]
+            "USERNAME"
         ],
         "Updated By": [
-            [
-                "USERNAME",
-                "OPTIONAL_LINK"
-            ],
-            [
-                "USERNAME",
-                "OPTIONAL_LINK"
-            ]
+            "USERNAME",
+            "USERNAME"
         ],
         "Icon Design": [
-            [
-                "USERNAME",
-                "OPTIONAL_LINK"
-            ]
+            "USERNAME"
         ]
     }
 }

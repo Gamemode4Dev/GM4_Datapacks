@@ -1,38 +1,32 @@
 {
-  "pack": {
-    "pack_format": 8,
-    "description": [
-      "Midnight Menaces",
-      "\n",
-      {
-        "text": "Gamemode 4 for 1.18",
-        "color": "#4AA0C7"
-      }
-    ]
-  },
-  "module_name": "Midnight Menaces",
-  "module_id": "midnight_menaces",
-  "site_description": "Adds spooky menaces to Mysterious Midnights!",
-  "site_categories": [
-    "Mysterious Midnights"
-  ],
-  "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights/Midnight_Menaces",
-  "required_modules": [
-    "mysterious_midnights"
-  ],
-  "recommended_modules": [],
-  "credits": {
-    "Creator": [
-      [
-        "BluePsychoRanger",
-        "https://www.twitter.com/blupsychoranger"
-      ]
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Midnight Menaces",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Midnight Menaces",
+    "module_id": "midnight_menaces",
+    "site_description": "Adds spooky menaces to Mysterious Midnights!",
+    "site_categories": [
+        "Mysterious Midnights"
     ],
-    "Icon Design": [
-      [
-        "BluePsychoRanger",
-        "https://www.twitter.com/BluPsychoRanger"
-      ]
-    ]
-  }
+    "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights/Midnight_Menaces",
+    "required_modules": [
+        "mysterious_midnights"
+    ],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "BluePsychoRanger"
+        ],
+        "Icon Design": [
+            "BluePsychoRanger"
+        ]
+    }
 }

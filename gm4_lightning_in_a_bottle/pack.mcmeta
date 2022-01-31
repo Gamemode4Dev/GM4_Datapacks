@@ -1,52 +1,40 @@
 {
-  "pack": {
-    "pack_format": 8,
-    "description": [
-      "Lightning in a Bottle",
-      "\n",
-      {
-        "text": "Gamemode 4 for 1.18",
-        "color": "#4AA0C7"
-      }
-    ]
-  },
-  "module_name": "Lightning in a Bottle",
-  "module_id": "lightning_in_a_bottle",
-  "libraries": [
-    "lib_brewing",
-    "lib_forceload",
-    "lib_potion_tracking"
-  ],
-  "site_description": "Bottle and harness the power of lightning!",
-  "site_categories": [],
-  "video_link": "",
-  "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
-  "required_modules": [],
-  "recommended_modules": [
-    "liquid_tanks",
-    "potion_liquids",
-    "spawner_minecarts"
-  ],
-  "credits": {
-    "Creator": [
-      [
-        "Bloo",
-        "https://www.twitter.com/Bloo_dev"
-      ],
-      [
-        "BluePsychoRanger",
-        "https://www.twitter.com/BluPsychoRanger"
-      ],
-      [
-        "Epyon",
-        ""
-      ]
-    ],
-    "Icon Design": [
-        [
-          "BluePsychoRanger",
-          "https://www.twitter.com/BluPsychoRanger"
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Lightning in a Bottle",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
         ]
-    ]
-  }
+    },
+    "module_name": "Lightning in a Bottle",
+    "module_id": "lightning_in_a_bottle",
+    "libraries": [
+        "lib_brewing",
+        "lib_forceload",
+        "lib_potion_tracking"
+    ],
+    "site_description": "Bottle and harness the power of lightning!",
+    "site_categories": [],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
+    "required_modules": [],
+    "recommended_modules": [
+        "liquid_tanks",
+        "potion_liquids",
+        "spawner_minecarts"
+    ],
+    "credits": {
+        "Creator": [
+            "Bloo",
+            "BluePsychoRanger",
+            "Epyon"
+        ],
+        "Icon Design": [
+            "BluePsychoRanger"
+        ]
+    }
 }

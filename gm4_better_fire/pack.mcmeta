@@ -12,7 +12,7 @@
     },
     "module_name": "Better Fire",
     "module_id": "better_fire",
-    "hidden":false,
+    "hidden": false,
     "site_description": "Flame arrows set fire when they land and burning creepers explode!",
     "site_categories": [],
     "video_link": "https://www.youtube.com/watch?v=J5024LhHuWk",
@@ -21,26 +21,14 @@
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ],
         "Updated By": [
-            [
-                "Bloo",
-                "https://www.twitter.com/Bloo_dev"
-            ],
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ]
+            "Bloo",
+            "SpecialBuilder32"
         ],
         "Icon Design": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ]
     }
 }

@@ -12,7 +12,7 @@
     },
     "module_name": "Phantom Scarecrows",
     "module_id": "phantom_scarecrows",
-    "hidden":false,
+    "hidden": false,
     "site_description": "Undead Scarecrow defenses!",
     "site_categories": [],
     "wiki_link": "https://wiki.gm4.co/wiki/Phantom_Scarecrows",
@@ -20,22 +20,13 @@
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Bloo",
-                "https://www.twitter.com/Bloo_dev"
-            ]
+            "Bloo"
         ],
         "Inspired by": [
-            [
-                "Chopper2112",
-                "https://www.twitter.com/TheChopper2112"
-            ]
+            "Chopper2112"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

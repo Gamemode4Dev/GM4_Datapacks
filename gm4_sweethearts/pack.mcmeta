@@ -1,41 +1,32 @@
 {
-  "pack": {
-    "pack_format": 8,
-    "description": [
-      "Sweethearts",
-      "\n",
-      {
-        "text": "Gamemode 4 for 1.18",
-        "color": "#4AA0C7"
-      }
-    ]
-  },
-  "module_name": "Sweethearts",
-  "module_id": "sweethearts",
-  "site_description": "Transfer your health to another player using flowers.",
-  "site_categories": [],
-  "video_link": "https://www.youtube.com/watch?v=BE5eHyQKnKc",
-  "wiki_link": "https://wiki.gm4.co/wiki/Sweethearts",
-  "required_modules": [],
-  "recommended_modules": [],
-  "credits": {
-    "Creator": [
-      [
-        "The8BitMonkey",
-        "https://youtube.com/The8BitMonkey"
-      ]
-    ],
-    "Updated by": [
-      [
-        "BluePsychoRanger",
-        "https://www.twitter.com/BluPsychoRanger"
-      ]
-    ],
-    "Icon Design": [
-      [
-        "DuckJr",
-        "https://twitter.com/DuckJr94"
-      ]
-    ]
-  }
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Sweethearts",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Sweethearts",
+    "module_id": "sweethearts",
+    "site_description": "Transfer your health to another player using flowers.",
+    "site_categories": [],
+    "video_link": "https://www.youtube.com/watch?v=BE5eHyQKnKc",
+    "wiki_link": "https://wiki.gm4.co/wiki/Sweethearts",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "The8BitMonkey"
+        ],
+        "Updated by": [
+            "BluePsychoRanger"
+        ],
+        "Icon Design": [
+            "DuckJr"
+        ]
+    }
 }
