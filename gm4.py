@@ -1,4 +1,4 @@
-from beet import Context, subproject
+from beet import Context, TextFile, subproject
 from beet.contrib.load import load
 import json
 import os
@@ -7,9 +7,6 @@ import subprocess
 BASE = "base"
 OUTPUT = "out"
 RELEASE = "release"
-
-CONTRIBUTOR_KEY_NAME = "name"
-CONTRIBUTOR_KEY_LINKS = "links"
 
 def run(cmd: list[str]) -> str:
 	return subprocess.run(cmd, capture_output=True, encoding="utf8").stdout.strip()
@@ -55,10 +52,7 @@ def build_modules(ctx: Context):
 
 				credits = meta.get("credits", {})
 				module["credits"] = {
-					title: [
-						dict(name=p[0], **contributors.get(p[0], {}))
-						for p in credits[title]
-					]
+					title: [p[0] for p in credits[title]]
 					for title in credits
 					if isinstance(credits[title], list)
 				}
@@ -111,6 +105,7 @@ def build_modules(ctx: Context):
 			out = {
 				"last_commit": head,
 				"modules": [m for m in modules if m.get("id") is not None],
+				"contributors": contributors,
 			}
 			json.dump(out, f, indent=2)
 			f.write('\n')
@@ -133,7 +128,7 @@ def build_modules(ctx: Context):
 				],
 				"meta": {
 					"module_updates": module_updates,
-					"credits": module["credits"]
+					"contributors": contributors,
 				}
 			}))
 			print(f"Generated {id}")
@@ -159,4 +154,13 @@ def module_updates(ctx: Context):
 
 
 def populate_credits(ctx: Context):
-	ctx.data.mcmeta.data["credits"] = ctx.meta["credits"]
+	contributors = ctx.meta["contributors"]
+	credits = ctx.data.mcmeta.data["credits"]
+	ctx.data.mcmeta.data["credits"] = {
+		title: [
+			dict(name=p[0], **contributors.get(p[0], {}))
+			for p in credits[title]
+		]
+		for title in credits
+		if isinstance(credits[title], list)
+	}
