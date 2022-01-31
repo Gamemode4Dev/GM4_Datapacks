@@ -35,7 +35,7 @@ def build_modules(ctx: Context):
 		id = module["id"]
 
 		try:
-			with open(f"{id}/pack.mcmeta", "r+") as f, open(f"contributers.json", "r") as c:
+			with open(f"{id}/pack.mcmeta", "r+") as f, open(f"contributors.json", "r") as c:
 				meta: dict = json.load(f)
 				contacts: dict = json.load(c)
 
@@ -46,7 +46,7 @@ def build_modules(ctx: Context):
 				module["requires"] = [f"gm4_{id}" for id in meta.get("required_modules", [])]
 				module["hidden"] = meta.get("hidden", False)
 
-				# update credits in pack.mcmeta with credits from contributers.json
+				# update credits in pack.mcmeta with credits from contributors.json
 				updated_credits: bool = False
 				for ctb_list in meta.get("credits", []).values():
 					for ctb_info in ctb_list:
