@@ -37,7 +37,7 @@ def build_modules(ctx: Context):
 		try:
 			with open(f"{id}/pack.mcmeta", "r+") as f, open(f"contributors.json", "r") as c:
 				meta: dict = json.load(f)
-				contacts: dict = json.load(c)
+				contributor_json: dict = json.load(c)
 
 				module["name"] = meta.get("module_name", id)
 				module["description"] = meta.get("site_description", "")
@@ -48,18 +48,27 @@ def build_modules(ctx: Context):
 
 				# update credits in pack.mcmeta with credits from contributors.json
 				updated_credits: bool = False
-				for ctb_list in meta.get("credits", []).values():
-					for ctb_info in ctb_list:
-						if isinstance(ctb_info, list) and ctb_info:
-							cnt_info: list[str] = [ctb_info[0], *contacts.get(ctb_info[0], [])]
-							if len(cnt_info) > 1 and not (cnt_info == ctb_info) and not len(cnt_info) < len(ctb_info):
-								ctb_list[ctb_list.index(ctb_info)] = cnt_info
-								updated_credits = True
+				for credits_category, category_contributors in meta.get("credits", []).items():
+
+					# convert old format mcmetas to new format
+					if isinstance(category_contributors, list):
+						category_contributors = {name_and_links.pop(0): name_and_links for name_and_links in category_contributors}
+						meta["credits"][credits_category] = category_contributors
+
+					for contributor_name_mcmeta, contributor_links_mcmeta in category_contributors.items():
+						# check if credits require udpating from contributors.json
+						contributor_links_json = contributor_json.get(contributor_name_mcmeta, None)
+						if contributor_links_json == None or contributor_links_mcmeta == contributor_links_json:
+							continue
+						meta["credits"][credits_category][contributor_name_mcmeta] = contributor_links_json
+						updated_credits = True
+
 				if updated_credits:
 					f.seek(0)
-					json.dump(meta, f, indent=4) # save updated credits
+					json.dump(meta, f, indent=4)  # save updated credits
 					f.truncate()
 					f.write('\n')
+
 		except:
 			module["id"] = None
 			continue
