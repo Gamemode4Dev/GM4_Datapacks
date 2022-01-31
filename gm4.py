@@ -48,6 +48,9 @@ def build_modules(ctx: Context):
 				module["categories"] = meta.get("site_categories", [])
 				module["libraries"] = meta.get("libraries", [])
 				module["requires"] = [f"gm4_{id}" for id in meta.get("required_modules", [])]
+				module["recommends"] = [f"gm4_{id}" for id in meta.get("recommended_modules", [])]
+				module["wiki_link"] = meta.get("wiki_link", "")
+				module["video_link"] = meta.get("video_link", "")
 				module["hidden"] = meta.get("hidden", False)
 
 				credits = meta.get("credits", {})
@@ -57,6 +60,7 @@ def build_modules(ctx: Context):
 						for p in credits[title]
 					]
 					for title in credits
+					if isinstance(credits[title], list)
 				}
 
 		except:
