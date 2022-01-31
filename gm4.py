@@ -35,14 +35,27 @@ def build_modules(ctx: Context):
 		id = module["id"]
 
 		try:
-			with open(f"{id}/pack.mcmeta", "r") as f:
+			with open(f"{id}/pack.mcmeta", "r+") as f, open(f"contributers.json", "r") as c:
 				meta: dict = json.load(f)
+				contacts: dict = json.load(c)
+
 				module["name"] = meta.get("module_name", id)
 				module["description"] = meta.get("site_description", "")
 				module["categories"] = meta.get("site_categories", [])
 				module["libraries"] = meta.get("libraries", [])
 				module["requires"] = [f"gm4_{id}" for id in meta.get("required_modules", [])]
 				module["hidden"] = meta.get("hidden", False)
+
+				# update credits in pack.mcmeta with credits from contributers.json
+				for ctb_list in meta.get("credits", []).values():
+					for ctb_info in ctb_list:
+						if isinstance(ctb_info, list) and ctb_info:
+							contact: list[str] = contacts.get(ctb_info[0], [])
+							if contact and not (contact == ctb_info) and not len(contact) < len(ctb_info):
+								ctb_list[ctb_list.index(ctb_info)] = contacts[ctb_info[0]]
+				f.seek(0)
+				json.dump(meta, f, indent=4) # save updated credits
+				f.truncate()
 		except:
 			module["id"] = None
 			continue
