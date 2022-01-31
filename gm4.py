@@ -48,14 +48,8 @@ def build_modules(ctx: Context):
 				module["recommends"] = [f"gm4_{id}" for id in meta.get("recommended_modules", [])]
 				module["wiki_link"] = meta.get("wiki_link", "")
 				module["video_link"] = meta.get("video_link", "")
+				module["credits"] = meta.get("credits", {})
 				module["hidden"] = meta.get("hidden", False)
-
-				credits = meta.get("credits", {})
-				module["credits"] = {
-					title: [p[0] for p in credits[title]]
-					for title in credits
-					if isinstance(credits[title], list)
-				}
 
 		except:
 			module["id"] = None
@@ -154,11 +148,10 @@ def module_updates(ctx: Context):
 
 
 def populate_credits(ctx: Context):
-	contributors = ctx.meta["contributors"]
 	credits = ctx.data.mcmeta.data["credits"]
 	ctx.data.mcmeta.data["credits"] = {
 		title: [
-			dict(name=p[0], **contributors.get(p[0], {}))
+			dict(name=p, **ctx.meta["contributors"].get(p, {}))
 			for p in credits[title]
 		]
 		for title in credits

@@ -1,11 +1,83 @@
 {
+    "15Redstones": {
+        "links": ["https://twitter.com/15Redstones"]
+    },
+    "Andante": {
+        "links": ["https://twitter.com/Andantweets"]
+    },
     "Bloo": {
-        "links": ["https://www.twitter.com/Bloo_dev"]
+        "links": ["https://twitter.com/Bloo_dev"]
+    },
+    "BluePsychoRanger": {
+        "links": ["https://twitter.com/BluPsychoRanger"]
+    },
+    "Bunnygamers": {
+        "links": ["https://twitter.com/BunnygamersMC"]
+    },
+    "Chopper2112": {
+        "links": ["https://twitter.com/TheChopper2112"]
+    },
+    "Denniss": {
+        "links": ["https://twitter.com/Dennis2p_"]
+    },
+    "DuckJr": {
+        "links": ["https://twitter.com/DuckJr94"]
+    },
+    "Energyxxer": {
+        "links": ["https://youtube.com/user/Energyxxer"]
+    },
+    "Fyid": {
+        "links": ["https://twitter.com/FyidRants"]
+    },
+    "Kroppeb": {
+        "links": ["https://twitter.com/kroppeb"]
+    },
+    "Kruthers": {
+        "links": ["https://twitter.com/Pandakruthers"]
     },
     "Lue": {
         "links": ["https://github.com/Luexa"]
     },
+    "MichaelMiner137": {
+        "links": ["https://twitter.com/MichaelMiner137"]
+    },
     "Misode": {
-        "links": ["https://www.twitter.com/misode_"]
+        "links": ["https://twitter.com/misode_"]
+    },
+    "Memo": {
+        "links": ["https://linktr.ee/miraku_memo"]
+    },
+    "Nik3141": {
+        "links": ["https://youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"]
+    },
+    "Scommander": {
+        "links": ["https://github.com/Scommander"]
+    },
+    "SethBling": {
+        "links": ["https://youtube.com/user/SethBling"]
+    },
+    "SiberianHat": {
+        "links": ["https://twitter.com/SiberianHat"]
+    },
+    "SirSheepe": {
+        "links": ["https://twitter.com/SirSheepe"]
+    },
+    "Sparks": {
+        "links": ["https://twitter.com/SparksTheGamer"]
+    },
+    "SpecialBuilder": {
+        "links": ["https://twitter.com/SpecialBuilder"]
+    },
+    "Thanathor": {
+        "links": ["https://twitter.com/The_Thanathor"]
+    },
+    "The8BitMonkey": {
+        "links": ["https://youtube.com/the8bitmonkey"]
+    },
+    "torbray": {
+        "links": ["https://twitter.com/torbray00"]
+    },
+    "Wumpacraft": {
+        "links": ["https://twitter.com/wumpacraft"]
     }
 }
