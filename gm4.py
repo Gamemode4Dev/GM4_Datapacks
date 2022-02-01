@@ -31,7 +31,7 @@ def build_modules(ctx: Context):
 		last_commit = None
 
 	with open("contributors.json", "r") as f:
-		contributors: dict[str, dict] = json.load(f)
+		contributors: dict[str, dict] = {entry["name"]: entry for entry in json.load(f)}
 
 	for module in modules:
 		id = module["id"]
@@ -151,7 +151,7 @@ def populate_credits(ctx: Context):
 	credits = ctx.data.mcmeta.data["credits"]
 	ctx.data.mcmeta.data["credits"] = {
 		title: [
-			dict(name=p, **ctx.meta["contributors"].get(p, {}))
+			dict(**ctx.meta["contributors"].get(p, {'name': p}))
 			for p in credits[title]
 		]
 		for title in credits
