@@ -1,4 +1,4 @@
-from beet import Context, TextFile, subproject
+from beet import Context, subproject
 from beet.contrib.load import load
 import json
 import os
