@@ -22,7 +22,7 @@ jobs:
           source: base gm4_!(template_pack) lib_*
           version: '0.35.1'
 
-  release:
+  build:
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -72,7 +72,8 @@ jobs:
           directory: release
           branch: release
 
-      - uses: actions/upload-artifact@v2
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
         with:
           name: 'Modules for pull request #${{github.event.number}}'
           path: out
