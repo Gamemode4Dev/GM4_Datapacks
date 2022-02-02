@@ -1,20 +1,19 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description":"A Gamemode 4 Module"
-  },
-  "module_name":"Crossbow Cartridges",
-  "module_id":"crossbow_cartridges",
-  "site_description":"Shoot more than just arrows!",
-  "site_categories":[],
-  "video_link":"",
-  "wiki_link":"https://wiki.gm4.co/wiki/Crossbow_Cartridges",
-  "required_modules":[],
-  "recommended_modules":[],
-  "credits":{
-    "Creator":[
-      ["Denniss"]
-    ]    
-  }
+    "pack": {
+        "pack_format": 0,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Crossbow Cartridges",
+    "module_id": "crossbow_cartridges",
+    "site_description": "Shoot more than just arrows!",
+    "site_categories": [],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "Denniss"
+        ]
+    }
 }
-

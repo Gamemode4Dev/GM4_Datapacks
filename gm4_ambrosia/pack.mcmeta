@@ -1,29 +1,31 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description":"A Gamemode 4 Module"
-  },
-  "module_name":"Ambrosia",
-  "module_id":"ambrosia",
-  "site_description":"To bee or not to bee - time to add some invertebrate friends to your world!",
-  "site_categories":["Bees"],
-  "video_link":"https://www.youtube.com/watch?v=B-3BZLAt7CI",
-  "wiki_link":"https://wiki.gm4.co/wiki/Ambrosia",
-  "required_modules":[
-      "liquid_tanks"
-  ],
-  "recommended_modules":[],
-  "credits":{
-    "Creator":[
-      ["Sparks","https://www.twitter.com/SparksTheGamer"],
-      ["SpecialBuilder32","https://www.twitter.com/SpecialBuilder"],
-      ["Bloo","https://twitter.com/Bloo_dev"]
+    "pack": {
+        "pack_format": 0,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Ambrosia",
+    "module_id": "ambrosia",
+    "site_description": "To bee or not to bee - time to add some invertebrate friends to your world!",
+    "site_categories": [
+        "Bees"
     ],
-    "Icon Design":[
-      ["DuckJr","https://twitter.com/DuckJr94"]
+    "video_link": "https://www.youtube.com/watch?v=B-3BZLAt7CI",
+    "wiki_link": "https://wiki.gm4.co/wiki/Ambrosia",
+    "required_modules": [
+        "liquid_tanks"
     ],
-    "Textures by":[
-      ["Kyrkis"]
-    ]
-  }
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "Sparks",
+            "SpecialBuilder32",
+            "Bloo"
+        ],
+        "Icon Design": [
+            "DuckJr"
+        ],
+        "Textures by": [
+            "Kyrkis"
+        ]
+    }
 }

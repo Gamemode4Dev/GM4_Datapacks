@@ -1,29 +1,31 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description":"A Gamemode 4 Module"
-  },
-  "module_name":"Zauber Liquids",
-  "module_id":"zauber_liquids",
-  "site_description":"From cauldron-made potions to potion-filled tanks! Store your tier IV potions in Liquid Tanks!",
-  "site_categories":["Liquid Tanks"],
-  "video_link":"https://www.youtube.com/watch?v=qa9lcbii1BE",
-  "wiki_link":"https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids",
-  "required_modules":[
-    "liquid_tanks",
-    "zauber_cauldrons"
-  ],
-  "recommended_modules":[],
-  "credits":{
-    "Creator":[
-      ["SpecialBuilder32","https://twitter.com/SpecialBuilder"],
-      ["Bluefire610","https://twitter.com/Bloo_dev"]
+    "pack": {
+        "pack_format": 0,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Zauber Liquids",
+    "module_id": "zauber_liquids",
+    "site_description": "From cauldron-made potions to potion-filled tanks! Store your tier IV potions in Liquid Tanks!",
+    "site_categories": [
+        "Liquid Tanks"
     ],
-    "Icon Design":[
-      ["DuckJr","https://twitter.com/DuckJr94"]
+    "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
+    "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids",
+    "required_modules": [
+        "liquid_tanks",
+        "zauber_cauldrons"
     ],
-    "Textures by":[
-      ["Vilder50"]
-    ]
-  }
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "SpecialBuilder32",
+            "Bluefire610"
+        ],
+        "Icon Design": [
+            "DuckJr"
+        ],
+        "Textures by": [
+            "Vilder50"
+        ]
+    }
 }
