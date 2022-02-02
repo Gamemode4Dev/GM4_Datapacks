@@ -13,14 +13,8 @@
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ],
-            [
-                "Sparks",
-                "https://twitter.com/SparksTheGamer"
-            ]
+            "Bloo",
+            "Sparks"
         ]
     }
 }

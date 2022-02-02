@@ -15,24 +15,12 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "Wumpacraft",
-                "https://www.twitter.com/wumpacraft"
-            ],
-            [
-                "Sparks",
-                "https://twitter.com/SparksTheGamer"
-            ]
+            "Wumpacraft",
+            "Sparks"
         ],
         "Updated by": [
-            [
-                "BluePsychoRanger",
-                "https://twitter.com/BluPsychoRanger"
-            ],
-            [
-                "Alluet",
-                "https://github.com/alluet"
-            ]
+            "BluePsychoRanger",
+            "Lue"
         ]
     }
 }

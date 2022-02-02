@@ -21,24 +21,12 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ],
         "Updated by": [
-            [
-                "Bloo",
-                "https://www.twitter.com/Bloo_dev"
-            ],
-            [
-                "Sparks",
-                "https://www.twitter.com/accidentalgames"
-            ],
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ]
+            "Bloo",
+            "Sparks",
+            "SpecialBuilder32"
         ]
     }
 }

@@ -13,24 +13,12 @@
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "The8BitMonkey",
-                "https://www.youtube.com/user/the8bitmonkey"
-            ]
+            "The8BitMonkey"
         ],
         "Updated by": [
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ],
-            [
-                "Misode",
-                "https://twitter.com/misode_"
-            ],
-            [
-                "BluePsychoRanger",
-                "https://twitter.com/BluPsychoRanger"
-            ]
+            "SpecialBuilder32",
+            "Misode",
+            "BluePsychoRanger"
         ]
     }
 }

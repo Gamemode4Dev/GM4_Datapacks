@@ -15,30 +15,15 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ],
         "Updated by": [
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ],
-            [
-                "Misode",
-                "https://twitter.com/misoloo"
-            ],
-            [
-                "Andante",
-                "https://twitter.com/Andantweets"
-            ]
+            "SpecialBuilder32",
+            "Misode",
+            "Andante"
         ],
         "Icon Design": [
-            [
-                "JonPot",
-                ""
-            ]
+            "JonPot"
         ]
     }
 }

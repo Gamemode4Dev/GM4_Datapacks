@@ -18,25 +18,14 @@
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "SpecialBuilder32",
-                "https://twitter.com/SpecialBuilder"
-            ],
-            [
-                "Bluefire610",
-                "https://twitter.com/Bloo_dev"
-            ]
+            "SpecialBuilder32",
+            "Bluefire610"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ],
         "Textures by": [
-            [
-                "Vilder50"
-            ]
+            "Vilder50"
         ]
     }
 }

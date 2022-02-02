@@ -17,30 +17,15 @@
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ],
-            [
-                "SpiderRobotMan",
-                "https://twitter.com/spiderrobotman"
-            ]
+            "Sparks",
+            "SpiderRobotMan"
         ],
         "Updated by": [
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ],
-            [
-                "Misode",
-                "https://twitter.com/misoloo"
-            ]
+            "SpecialBuilder32",
+            "Misode"
         ],
         "Textures by": [
-            [
-                "Jonpot",
-                ""
-            ]
+            "Jonpot"
         ]
     }
 }

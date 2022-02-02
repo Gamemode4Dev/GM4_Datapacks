@@ -13,24 +13,12 @@
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ],
-            [
-                "SiberianHat",
-                "https://twitter.com/SiberianHat"
-            ]
+            "Sparks",
+            "SiberianHat"
         ],
         "Updated by": [
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ],
-            [
-                "Kruthers",
-                "https://twitter.com/Pandakruthers"
-            ]
+            "SpecialBuilder32",
+            "Kruthers"
         ]
     }
 }
