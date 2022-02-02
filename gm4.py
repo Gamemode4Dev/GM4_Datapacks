@@ -8,6 +8,7 @@ BASE = "base"
 OUTPUT = "out"
 RELEASE = "release"
 
+
 def run(cmd: list[str]) -> str:
 	return subprocess.run(cmd, capture_output=True, encoding="utf8").stdout.strip()
 
@@ -32,6 +33,8 @@ def build_modules(ctx: Context):
 
 	with open("contributors.json", "r") as f:
 		contributors: dict[str, dict] = {entry["name"]: entry for entry in json.load(f)}
+
+	changed_modules = set()
 
 	for module in modules:
 		id = module["id"]
@@ -60,14 +63,20 @@ def build_modules(ctx: Context):
 
 		diff = run(["git", "diff", last_commit, "--shortstat", "--", BASE, *module["libraries"], id]) if last_commit else True
 
+		if diff:
+			print('Diff', last_commit, id, diff)
+			changed_modules.add(id)
+
 		released: dict | None = next((m for m in released_modules if m["id"] == id), None)
 
 		if not diff and released:
 			module["patch"] = released["patch"]
 		else:
-			new_patch = released["patch"] + 1 if released else prefix
-			module["patch"] = new_patch
-			print(f"Updating {id} -> {new_patch}")
+			patch = released["patch"] if released else prefix
+			if ctx.meta.get("patch"):
+				patch += 1
+				print(f"Updating {id} -> {patch}")
+			module["patch"] = patch
 
 	if dev:
 		libs = set()
@@ -108,6 +117,10 @@ def build_modules(ctx: Context):
 			id = module["id"]
 			if not id:
 				continue
+
+			if not (ctx.meta.get("patch", False) or id in changed_modules):
+				continue
+
 			ctx.require(subproject({
 				"id": id,
 				"data_pack": {
