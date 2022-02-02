@@ -26,33 +26,18 @@
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "SpecialBuilder32",
-                "https://twitter.com/SpecialBuilder"
-            ],
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ]
+            "SpecialBuilder32",
+            "Bloo"
         ],
         "Updated by": [
-            [
-                "JP_12"
-            ]
+            "JP_12"
         ],
         "Textures by": [
-            [
-                "Vilder50"
-            ],
-            [
-                "Hozz"
-            ]
+            "Vilder50",
+            "Hozz"
         ],
         "Icon Design": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ]
     }
 }

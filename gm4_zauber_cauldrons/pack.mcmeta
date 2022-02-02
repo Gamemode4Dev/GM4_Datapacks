@@ -25,36 +25,18 @@
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Bloo",
-                "https://www.twitter.com/Bloo_dev"
-            ]
+            "Bloo"
         ],
         "Updated by": [
-            [
-                "Bloo",
-                "https://www.twitter.com/Bloo_dev"
-            ],
-            [
-                "Lue",
-                "https://github.com/luewd"
-            ],
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/blupsychoranger"
-            ]
+            "Bloo",
+            "Lue",
+            "BluePsychoRanger"
         ],
         "Pixel Art": [
-            [
-                "Memo",
-                "https://linktr.ee/miraku_memo"
-            ]
+            "Memo"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

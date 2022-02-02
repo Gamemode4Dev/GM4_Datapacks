@@ -20,16 +20,10 @@
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Scommander",
-                "https://github.com/Scommander"
-            ]
+            "Scommander"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

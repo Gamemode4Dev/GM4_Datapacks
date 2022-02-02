@@ -12,7 +12,7 @@
     },
     "module_name": "Vigere Shamir",
     "module_id": "vigere_shamir",
-    "hidden":false,
+    "hidden": false,
     "libraries": [],
     "site_description": "Adds the shamir 'Vigere' to metallurgy. It heals you when you block with a shield.",
     "site_categories": [
@@ -26,20 +26,11 @@
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Thanathor",
-                "https://twitter.com/The_Thanathor"
-            ],
-            [
-                "TheEpyonProject",
-                ""
-            ]
+            "Thanathor",
+            "TheEpyonProject"
         ],
         "Icon Design": [
-            [
-                "BluePsychoRanger",
-                "https://twitter.com/BluPsychoRanger"
-            ]
+            "BluePsychoRanger"
         ]
     }
 }

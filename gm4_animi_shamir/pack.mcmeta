@@ -1,34 +1,31 @@
 {
-	"pack": {
-		"pack_format": 7,
-		"description": [
-			"Animi Shamir",
-			"\n",
-			{
-				"text": "Gamemode 4 for 1.17",
-				"color": "#4AA0C7"
-			}
-		]
-	},
-	"module_name": "Animi Shamir",
-	"module_id": "animi_shamir",
-	"hidden": false,
-	"site_description": "Adds the Animi Shamir to Metallurgy. Items with Animi will respawn with you when you die!",
-	"site_categories": [
-		"Metallurgy"
-	],
-	"video_link": "",
-	"wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Animi_Shamir",
-	"required_modules": [
-		"metallurgy"
-	],
-	"recommended_modules": [],
-	"credits": {
-		"Creator": [
-			[
-				"Bloo",
-				"https://www.twitter.com/Bloo_dev"
-			]
-		]
-	}
+    "pack": {
+        "pack_format": 7,
+        "description": [
+            "Animi Shamir",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.17",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Animi Shamir",
+    "module_id": "animi_shamir",
+    "hidden": false,
+    "site_description": "Adds the Animi Shamir to Metallurgy. Items with Animi will respawn with you when you die!",
+    "site_categories": [
+        "Metallurgy"
+    ],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Animi_Shamir",
+    "required_modules": [
+        "metallurgy"
+    ],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "Bloo"
+        ]
+    }
 }

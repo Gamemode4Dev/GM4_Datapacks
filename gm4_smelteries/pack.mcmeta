@@ -26,33 +26,16 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ]
+            "Bloo"
         ],
         "Updated By": [
-            [
-                "Andante",
-                "https://twitter.com/Andantweets"
-            ],
-            [
-                "Kroppeb",
-                "https://twitter.com/kroppeb"
-            ],
-            [
-                "Misode",
-                "https://twitter.com/misode_"
-            ],
-            [
-                "SpecialBuilder32",
-                "https://twitter.com/SpecialBuilder"
-            ]
+            "Andante",
+            "Kroppeb",
+            "Misode",
+            "SpecialBuilder32"
         ],
         "Icon Design": [
-            [
-                "Hozz"
-            ]
+            "Hozz"
         ]
     }
 }
