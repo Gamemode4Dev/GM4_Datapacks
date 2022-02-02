@@ -47,7 +47,7 @@ jobs:
 
       - name: Build all modules
         if: github.event_name != 'pull_request'
-        run: beet build --set 'meta.patch=true'
+        run: beet --set 'meta.patch=true' build
 
       - name: Build modules from pull request
         if: github.event_name == 'pull_request'
