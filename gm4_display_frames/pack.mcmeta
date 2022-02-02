@@ -19,19 +19,11 @@
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ],
-            [
-                "TheEpyonProject"
-            ]
+            "BluePsychoRanger",
+            "TheEpyonProject"
         ],
         "Icon Design": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ]
+            "BluePsychoRanger"
         ]
     }
 }

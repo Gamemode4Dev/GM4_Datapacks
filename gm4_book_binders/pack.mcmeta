@@ -20,20 +20,11 @@
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ],
-            [
-                "Sparks",
-                "https://twitter.com/SparksTheGamer"
-            ]
+            "Bloo",
+            "Sparks"
         ],
         "Icon Design": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ]
     }
 }

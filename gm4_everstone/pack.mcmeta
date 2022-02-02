@@ -20,19 +20,11 @@
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "Denniss"
-            ],
-            [
-                "BluePsychoRanger",
-                "https://twitter.com/BluPsychoRanger"
-            ]
+            "Denniss",
+            "BluePsychoRanger"
         ],
         "Icon Design": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ]
+            "BluePsychoRanger"
         ]
     }
 }

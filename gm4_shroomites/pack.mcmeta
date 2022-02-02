@@ -21,24 +21,12 @@
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ],
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ],
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ]
+            "Sparks",
+            "SpecialBuilder32",
+            "Bloo"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

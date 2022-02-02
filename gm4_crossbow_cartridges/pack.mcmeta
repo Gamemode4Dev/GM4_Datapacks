@@ -20,19 +20,11 @@
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "Denniss"
-            ],
-            [
-                "Nik3141",
-				"https://www.youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"
-            ]
+            "Denniss",
+            "Nik3141"
         ],
         "Icon Design": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ]
     }
 }
