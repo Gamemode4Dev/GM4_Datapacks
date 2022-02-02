@@ -53,6 +53,13 @@ jobs:
         if: github.event_name == 'pull_request'
         run: beet build
 
+      - name: Upload artifact
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v2
+        with:
+          name: 'Modules for pull request #${{github.event.number}}'
+          path: ${{ github.workspace }}/out/
+
       - name: Commit release
         if: github.event_name != 'pull_request'
         run: |
@@ -71,9 +78,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           directory: release
           branch: release
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: 'Modules for pull request #${{github.event.number}}'
-          path: out
