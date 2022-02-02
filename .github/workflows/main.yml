@@ -37,6 +37,10 @@ jobs:
           ref: release
           path: release
 
+      - name: Fetch pull request base
+        if: github.event_name == 'pull_request'
+        run: git fetch origin ${{ github.base_ref }}
+
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
         with:
