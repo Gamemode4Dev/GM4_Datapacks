@@ -31,6 +31,9 @@ def build_modules(ctx: Context):
 		released_modules = []
 		last_commit = None
 
+	with open("contributors.json", "r") as f:
+		contributors: dict[str, dict] = {entry["name"]: entry for entry in json.load(f)}
+
 	for module in modules:
 		id = module["id"]
 
@@ -42,6 +45,10 @@ def build_modules(ctx: Context):
 				module["categories"] = meta.get("site_categories", [])
 				module["libraries"] = meta.get("libraries", [])
 				module["requires"] = [f"gm4_{id}" for id in meta.get("required_modules", [])]
+				module["recommends"] = [f"gm4_{id}" for id in meta.get("recommended_modules", [])]
+				module["wiki_link"] = meta.get("wiki_link", "")
+				module["video_link"] = meta.get("video_link", "")
+				module["credits"] = meta.get("credits", {})
 				module["hidden"] = meta.get("hidden", False)
 		except:
 			module["id"] = None
@@ -91,6 +98,7 @@ def build_modules(ctx: Context):
 			out = {
 				"last_commit": head,
 				"modules": [m for m in modules if m.get("id") is not None],
+				"contributors": contributors,
 			}
 			json.dump(out, f, indent=2)
 			f.write('\n')
@@ -108,10 +116,12 @@ def build_modules(ctx: Context):
 				},
 				"output": OUTPUT,
 				"pipeline": [
-					"gm4.module_updates"
+					"gm4.module_updates",
+					"gm4.populate_credits",
 				],
 				"meta": {
-					"module_updates": module_updates
+					"module_updates": module_updates,
+					"contributors": contributors,
 				}
 			}))
 			print(f"Generated {id}")
@@ -141,3 +151,15 @@ def module_updates(ctx: Context):
 	init.lines.append('kill @e[tag=gm4_update_message]')
 	for m in updates:
 		init.lines.append(f'execute if score {m["id"].removeprefix("gm4_")} gm4_modules matches ..{m["patch"] - 1} run summon minecraft:area_effect_cloud ~ ~ ~ {{CustomName:"\"{m["name"]}\"",Tags:["gm4_update_message"],Duration:2000}}')
+
+
+def populate_credits(ctx: Context):
+	credits = ctx.data.mcmeta.data["credits"]
+	ctx.data.mcmeta.data["credits"] = {
+		title: [
+			dict(**ctx.meta["contributors"].get(p, {'name': p}))
+			for p in credits[title]
+		]
+		for title in credits
+		if isinstance(credits[title], list)
+	}
