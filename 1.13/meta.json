@@ -1,5 +1,5 @@
 {
-  "last_commit": "3efd0f1cbe4183c03cb6f4511c6b7801e23138c8",
+  "last_commit": "5745d05caf5cccbbc14ded29c09939e33e5e69df",
   "modules": [
     {
       "id": "gm4_bat_grenades",
@@ -8,8 +8,16 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Bat_Grenades",
+      "video_link": "https://www.youtube.com/watch?v=uUoEKtte1GQ",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_better_armour_stands",
@@ -20,8 +28,23 @@
       ],
       "libraries": [],
       "requires": [],
+      "recommends": [
+        "gm4_poses_pack",
+        "gm4_particles_pack"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Better_Armour_Stands",
+      "video_link": "https://www.youtube.com/watch?v=E7DnQTlpgrw&t=1s",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "SpecialBuilder32",
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_better_fire",
@@ -30,8 +53,20 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Better_Fire",
+      "video_link": "https://www.youtube.com/watch?v=J5024LhHuWk",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated By": [
+          "Bloo",
+          "SpecialBuilder32"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_block_compressors",
@@ -44,8 +79,20 @@
       "requires": [
         "gm4_custom_crafters"
       ],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Block_Compressors",
+      "video_link": "https://www.youtube.com/watch?v=sdrTJYjL8C0",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "SunderB",
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_boots_of_ostara",
@@ -56,8 +103,21 @@
       ],
       "libraries": [],
       "requires": [],
+      "recommends": [
+        "gm4_desire_lines"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Boots_of_Ostara",
+      "video_link": "https://www.youtube.com/watch?v=H4UGM6_wGCE",
+      "credits": {
+        "Creator": [
+          "The8BitMonkey"
+        ],
+        "Updated by": [
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_cement_mixers",
@@ -70,8 +130,19 @@
       "requires": [
         "gm4_liquid_tanks"
       ],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Cement_Mixers",
+      "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_chairs",
@@ -80,8 +151,16 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Chairs",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "Denniss"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_cooler_caves",
@@ -94,8 +173,22 @@
       "requires": [
         "gm4_orbis"
       ],
+      "recommends": [
+        "gm4_dangerous_dungeons",
+        "gm4_tower_structures"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Cooler_Caves",
+      "video_link": "https://www.youtube.com/watch?v=cAsXiwLWHFo",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_custom_crafters",
@@ -106,8 +199,27 @@
       ],
       "libraries": [],
       "requires": [],
+      "recommends": [
+        "gm4_standard_crafting",
+        "gm4_record_crafting",
+        "gm4_master_crafting",
+        "gm4_disassemblers",
+        "gm4_block_compressors"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters",
+      "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Bloo",
+          "Sparks",
+          "SpecialBuilder32"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_dangerous_dungeons",
@@ -120,8 +232,22 @@
       "requires": [
         "gm4_orbis"
       ],
+      "recommends": [
+        "gm4_tower_structures",
+        "gm4_cooler_caves"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Dangerous_Dungeons",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_desire_lines",
@@ -130,8 +256,26 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [
+        "gm4_boots_of_ostara"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Desire_Lines",
+      "video_link": "https://www.youtube.com/watch?v=wmGaatfekfs",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "SpecialBuilder32",
+          "Misode",
+          "Andante"
+        ],
+        "Icon Design": [
+          "JonPot"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_disassemblers",
@@ -144,8 +288,19 @@
       "requires": [
         "gm4_custom_crafters"
       ],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Disassemblers",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Federick90"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_enchantment_extractors",
@@ -154,8 +309,20 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Enchantment_Extractor",
+      "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
+      "credits": {
+        "Creator": [
+          "The8BitMonkey"
+        ],
+        "Updated by": [
+          "SpecialBuilder32",
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_ender_hoppers",
@@ -164,8 +331,22 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
+      "video_link": "https://www.youtube.com/watch?v=wrwg4BDgEGU",
+      "credits": {
+        "Creator": [
+          "Elemend"
+        ],
+        "Updated by": [
+          "Misode"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_enderman_support_class",
@@ -174,8 +355,16 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Enderman_Support_Class",
+      "video_link": "https://www.youtube.com/watch?v=2hWZ4OKUaqI",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_heart_canisters",
@@ -188,8 +377,24 @@
       "requires": [
         "gm4_custom_crafters"
       ],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Heart_Canisters",
+      "video_link": "https://www.youtube.com/watch?v=JEZoynWgSHg",
+      "credits": {
+        "Creator": [
+          "Sparks",
+          "SpiderRobotMan"
+        ],
+        "Updated by": [
+          "SpecialBuilder32",
+          "Misode"
+        ],
+        "Textures by": [
+          "Jonpot"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_ink_spitting_squid",
@@ -198,8 +403,20 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Ink_Spitting_Squid",
+      "video_link": "https://www.youtube.com/watch?v=68LMYEhueZ0",
+      "credits": {
+        "Creator": [
+          "Energyxxer"
+        ],
+        "Updated by": [
+          "Bloo",
+          "SpecialBuilder32"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_lightning_rods",
@@ -212,8 +429,20 @@
       "requires": [
         "gm4_custom_crafters"
       ],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Lightning_Rods",
+      "video_link": "https://www.youtube.com/watch?v=cx9fVMpHKMI",
+      "credits": {
+        "Creator": [
+          "Eease"
+        ],
+        "Updated by": [
+          "SpecialBuilder32",
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_liquid_tanks",
@@ -224,8 +453,27 @@
       ],
       "libraries": [],
       "requires": [],
+      "recommends": [
+        "gm4_potion_liquids"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
+      "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
+      "credits": {
+        "Creator": [
+          "SpecialBuilder32"
+        ],
+        "Updated by": [
+          "SpecialBuilder32"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ],
+        "Textures by": [
+          "Vilder50"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_master_crafting",
@@ -238,8 +486,21 @@
       "requires": [
         "gm4_custom_crafters"
       ],
+      "recommends": [
+        "gm4_standard_crafting"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Master_Crafting",
+      "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_metallurgy",
@@ -250,8 +511,21 @@
       ],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "Sparks",
+          "SpecialBuilder32",
+          "Bloo"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_mob_conversion",
@@ -260,8 +534,23 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [
+        "gm4_shroomites"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Mob_Conversion",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "torbray"
+        ],
+        "Updated By": [
+          "Sparks",
+          "Bloo",
+          "SpecialBuilder32"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_mysterious_midnights",
@@ -270,8 +559,16 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_note_block_interface",
@@ -280,8 +577,16 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Note_Block_Interface",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "Scommander"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_orbis",
@@ -292,8 +597,23 @@
       ],
       "libraries": [],
       "requires": [],
+      "recommends": [
+        "gm4_cooler_caves",
+        "gm4_dangerous_dungeons",
+        "gm4_tower_structures"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Orbis",
+      "video_link": "https://www.youtube.com/watch?v=cAsXiwLWHFo",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_orbis_pre_gen",
@@ -306,8 +626,20 @@
       "requires": [
         "gm4_orbis"
       ],
+      "recommends": [
+        "gm4_cooler_caves",
+        "gm4_dangerous_dungeons",
+        "gm4_tower_structures"
+      ],
+      "wiki_link": "",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_particles_pack",
@@ -320,8 +652,24 @@
       "requires": [
         "gm4_better_armour_stands"
       ],
+      "recommends": [
+        "gm4_poses_pack"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Particles_Pack",
+      "video_link": "https://youtu.be/GpkWIKMP6aY",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Misode"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_phantom_scarecrows",
@@ -330,8 +678,19 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Phantom_Scarecrows",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Inspired by": [
+          "Chopper2112"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_pig_tractors",
@@ -340,8 +699,22 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Pig_Tractors",
+      "video_link": "https://www.youtube.com/watch?v=7i0WFHUfBXs",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Updated by": [
+          "Federick90"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_poses_pack",
@@ -354,8 +727,21 @@
       "requires": [
         "gm4_better_armour_stands"
       ],
+      "recommends": [
+        "gm4_particles_pack"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Poses_Pack",
+      "video_link": "https://www.youtube.com/watch?v=E7DnQTlpgrw",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_potion_liquids",
@@ -368,8 +754,25 @@
       "requires": [
         "gm4_liquid_tanks"
       ],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids",
+      "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
+      "credits": {
+        "Creator": [
+          "SpecialBuilder32"
+        ],
+        "Updated by": [
+          "SpecialBuilder32"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ],
+        "Textures by": [
+          "Vilder50"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_potion_swords",
@@ -378,8 +781,23 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Potion_Swords",
+      "video_link": "https://www.youtube.com/watch?v=9xI3CQ1z5cg",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Updated by": [
+          "Bloo",
+          "SpecialBuilder32"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_record_crafting",
@@ -392,8 +810,21 @@
       "requires": [
         "gm4_custom_crafters"
       ],
+      "recommends": [
+        "gm4_standard_crafting"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Record_Crafting",
+      "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Bloo"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_scuba_gear",
@@ -406,8 +837,21 @@
       "requires": [
         "gm4_custom_crafters"
       ],
+      "recommends": [
+        "gm4_sunken_treasure"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/SCUBA_Gear",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "BluePsychoRanger"
+        ],
+        "Textures by": [
+          "BluePsychoRanger"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_shroomites",
@@ -416,8 +860,21 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Shroomites",
+      "video_link": "",
+      "credits": {
+        "Creators": [
+          "Sparks",
+          "SpecialBuilder32",
+          "Bloo"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_spawner_minecarts",
@@ -426,8 +883,18 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Spawner_Minecarts",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "Sparks",
+          "Bloo",
+          "SpecialBuilder32"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_speed_paths",
@@ -436,8 +903,19 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Speed_Paths",
+      "video_link": "https://www.youtube.com/watch?v=99VFSW1ORzU",
+      "credits": {
+        "Creator": [
+          "15Redstones"
+        ],
+        "Updated by": [
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_standard_crafting",
@@ -450,8 +928,21 @@
       "requires": [
         "gm4_custom_crafters"
       ],
+      "recommends": [
+        "gm4_master_crafting"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
+      "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Bloo"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_sunken_treasure",
@@ -460,8 +951,22 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [
+        "gm4_scuba_gear"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Sunken_Treasure",
+      "video_link": "https://www.youtube.com/watch?v=VV7ZIyIzKV0",
+      "credits": {
+        "Creator": [
+          "Wumpacraft",
+          "Sparks"
+        ],
+        "Updated by": [
+          "BluePsychoRanger"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_sweethearts",
@@ -470,8 +975,20 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Sweethearts",
+      "video_link": "https://www.youtube.com/watch?v=BE5eHyQKnKc",
+      "credits": {
+        "Creator": [
+          "The8BitMonkey"
+        ],
+        "Updated by": [
+          "SpecialBuilder32",
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_tower_structures",
@@ -484,8 +1001,22 @@
       "requires": [
         "gm4_orbis"
       ],
+      "recommends": [
+        "gm4_dangerous_dungeons",
+        "gm4_cooler_caves"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Tower_Structures",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_trapped_signs",
@@ -498,8 +1029,19 @@
       "requires": [
         "gm4_custom_crafters"
       ],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Trapped_Signs",
+      "video_link": "https://www.youtube.com/watch?v=IeHYiy5GTeQ",
+      "credits": {
+        "Creator": [
+          "Fyid"
+        ],
+        "Updated by": [
+          "Misode"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_undead_players",
@@ -508,8 +1050,19 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Undead_Players",
+      "video_link": "https://www.youtube.com/watch?v=dD8nChP8t9A",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "SunderB"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_vertical_rails",
@@ -518,8 +1071,21 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Vertical_Rails",
+      "video_link": "https://www.youtube.com/watch?v=LJoN7CmJL4Q",
+      "credits": {
+        "Creators": [
+          "Sparks",
+          "SiberianHat"
+        ],
+        "Updated by": [
+          "SpecialBuilder32",
+          "Kruthers"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_weighted_armour",
@@ -528,8 +1094,16 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Weighted_Armour",
+      "video_link": "https://www.youtube.com/watch?v=rVRSXTGQPbg",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_xp_storage",
@@ -538,8 +1112,21 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/XP_Storage",
+      "video_link": "https://www.youtube.com/watch?v=hgq-5waSpVU&index=11&list=PLpa6LLAKqMWbXt5VvxCc6H4mwI-qacdGA",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Bloo",
+          "Sparks",
+          "SpecialBuilder32"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_zauber_cauldrons",
@@ -548,8 +1135,22 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
+      "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Updated by": [
+          "Bloo"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     },
     {
       "id": "gm4_ziprails",
@@ -558,8 +1159,187 @@
       "categories": [],
       "libraries": [],
       "requires": [],
+      "recommends": [
+        "gm4_vertical_rails"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Ziprails",
+      "video_link": "",
+      "credits": {
+        "Creators": [
+          "Sparks",
+          "SpecialBuilder32",
+          "Bloo"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
       "hidden": false,
-      "patch": 0
+      "patch": 1
     }
-  ]
+  ],
+  "contributors": {
+    "15Redstones": {
+      "name": "15Redstones",
+      "links": [
+        "https://twitter.com/15Redstones"
+      ]
+    },
+    "Andante": {
+      "name": "Andante",
+      "links": [
+        "https://twitter.com/Andantweets"
+      ]
+    },
+    "Bloo": {
+      "name": "Bloo",
+      "links": [
+        "https://twitter.com/Bloo_dev"
+      ]
+    },
+    "BluePsychoRanger": {
+      "name": "BluePsychoRanger",
+      "links": [
+        "https://twitter.com/BluPsychoRanger"
+      ]
+    },
+    "Bunnygamers": {
+      "name": "Bunnygamers",
+      "links": [
+        "https://twitter.com/BunnygamersMC"
+      ]
+    },
+    "Chopper2112": {
+      "name": "Chopper2112",
+      "links": [
+        "https://twitter.com/TheChopper2112"
+      ]
+    },
+    "Denniss": {
+      "name": "Denniss",
+      "links": [
+        "https://twitter.com/Dennis2p_"
+      ]
+    },
+    "DuckJr": {
+      "name": "DuckJr",
+      "links": [
+        "https://twitter.com/DuckJr94"
+      ]
+    },
+    "Energyxxer": {
+      "name": "Energyxxer",
+      "links": [
+        "https://youtube.com/user/Energyxxer"
+      ]
+    },
+    "Fyid": {
+      "name": "Fyid",
+      "links": [
+        "https://twitter.com/FyidRants"
+      ]
+    },
+    "Kroppeb": {
+      "name": "Kroppeb",
+      "links": [
+        "https://twitter.com/kroppeb"
+      ]
+    },
+    "Kruthers": {
+      "name": "Kruthers",
+      "links": [
+        "https://twitter.com/Pandakruthers"
+      ]
+    },
+    "Lue": {
+      "name": "Lue",
+      "links": [
+        "https://github.com/Luexa"
+      ]
+    },
+    "MichaelMiner137": {
+      "name": "MichaelMiner137",
+      "links": [
+        "https://twitter.com/MichaelMiner137"
+      ]
+    },
+    "Misode": {
+      "name": "Misode",
+      "links": [
+        "https://twitter.com/misode_"
+      ]
+    },
+    "Memo": {
+      "name": "Memo",
+      "links": [
+        "https://linktr.ee/miraku_memo"
+      ]
+    },
+    "Nik3141": {
+      "name": "Nik3141",
+      "links": [
+        "https://youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"
+      ]
+    },
+    "Scommander": {
+      "name": "Scommander",
+      "links": [
+        "https://github.com/Scommander"
+      ]
+    },
+    "SethBling": {
+      "name": "SethBling",
+      "links": [
+        "https://youtube.com/user/SethBling"
+      ]
+    },
+    "SiberianHat": {
+      "name": "SiberianHat",
+      "links": [
+        "https://twitter.com/SiberianHat"
+      ]
+    },
+    "SirSheepe": {
+      "name": "SirSheepe",
+      "links": [
+        "https://twitter.com/SirSheepe"
+      ]
+    },
+    "Sparks": {
+      "name": "Sparks",
+      "links": [
+        "https://twitter.com/SparksTheGamer"
+      ]
+    },
+    "SpecialBuilder32": {
+      "name": "SpecialBuilder32",
+      "links": [
+        "https://twitter.com/SpecialBuilder"
+      ]
+    },
+    "Thanathor": {
+      "name": "Thanathor",
+      "links": [
+        "https://twitter.com/The_Thanathor"
+      ]
+    },
+    "The8BitMonkey": {
+      "name": "The8BitMonkey",
+      "links": [
+        "https://youtube.com/the8bitmonkey"
+      ]
+    },
+    "torbray": {
+      "name": "torbray",
+      "links": [
+        "https://twitter.com/torbray00"
+      ]
+    },
+    "Wumpacraft": {
+      "name": "Wumpacraft",
+      "links": [
+        "https://twitter.com/wumpacraft"
+      ]
+    }
+  }
 }
