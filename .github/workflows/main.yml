@@ -31,6 +31,7 @@ jobs:
           fetch-depth: 0
 
       - name: Checkout release branch
+        if: github.event_name != 'pull_request'
         uses: actions/checkout@v2
         with:
           ref: release
@@ -47,17 +48,17 @@ jobs:
 
       - name: Build all modules
         if: github.event_name != 'pull_request'
-        run: beet --set 'meta.patch=true' build
+        run: beet build
 
       - name: Build modules from pull request
         if: github.event_name == 'pull_request'
-        run: beet build
+        run: beet --set 'meta.pull_request_base=${{ github.base_ref }}' build
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v2
         with:
-          name: 'Modules for pull request #${{github.event.number}}'
+          name: 'Modules for pull request #${{ github.event.number }}'
           path: ${{ github.workspace }}/out/
 
       - name: Commit release

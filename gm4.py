@@ -30,6 +30,9 @@ def build_modules(ctx: Context):
 	except:
 		released_modules = []
 		last_commit = None
+	
+	if 'pull_request_base' in ctx.meta:
+		last_commit = ctx.meta.get('pull_request_base')
 
 	with open("contributors.json", "r") as f:
 		contributors: dict[str, dict] = {entry["name"]: entry for entry in json.load(f)}
@@ -73,7 +76,7 @@ def build_modules(ctx: Context):
 			module["patch"] = released["patch"]
 		else:
 			patch = released["patch"] if released else prefix
-			if ctx.meta.get("patch"):
+			if not ctx.meta.get("pull_request_base"):
 				patch += 1
 				print(f"Updating {id} -> {patch}")
 			module["patch"] = patch
@@ -118,7 +121,7 @@ def build_modules(ctx: Context):
 			if not id:
 				continue
 
-			if not (ctx.meta.get("patch", False) or id in changed_modules):
+			if ctx.meta.get("pull_request_base") and id not in changed_modules:
 				continue
 
 			ctx.require(subproject({
