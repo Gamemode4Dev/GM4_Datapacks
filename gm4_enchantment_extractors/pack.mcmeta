@@ -12,7 +12,7 @@
     },
     "module_name": "Enchantment Extractors",
     "module_id": "enchantment_extractors",
-    "hidden":false,
+    "hidden": false,
     "site_description": "Collects enchantments from tools, armour and weapons.",
     "site_categories": [],
     "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
@@ -23,30 +23,15 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "The8BitMonkey",
-                "https://www.youtube.com/user/the8bitmonkey"
-            ]
+            "The8BitMonkey"
         ],
         "Updated by": [
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ],
-            [
-                "Misode",
-                "https://twitter.com/misode_"
-            ],
-            [
-                "BluePsychoRanger",
-                "https://twitter.com/BluPsychoRanger"
-            ]
+            "SpecialBuilder32",
+            "Misode",
+            "BluePsychoRanger"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

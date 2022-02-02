@@ -28,24 +28,12 @@
     ],
     "credits": {
         "Creators": [
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ],
-            [
-                "BluePsychoRanger",
-                "https://twitter.com/BluPsychoRanger"
-            ],
-            [
-                "SpecialBuilder",
-                "https://twitter.com/SpecialBuilder"
-            ]
+            "Bloo",
+            "BluePsychoRanger",
+            "SpecialBuilder32"
         ],
         "Icon Design": [
-            [
-                "BluePsychoRanger",
-                "https://twitter.com/BluPsychoRanger"
-            ]
+            "BluePsychoRanger"
         ]
     }
 }
