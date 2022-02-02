@@ -1,23 +1,25 @@
 {
-  "pack":{
-    "pack_format":0,
-    "description":"A Gamemode 4 Module"
-  },
-  "module_name":"Metallurgy",
-  "module_id":"metallurgy",
-  "site_description":"Custom ores and custom enchants for you tools and armour!",
-  "site_categories":["Metallurgy"],
-  "wiki_link":"https://wiki.gm4.co/wiki/Metallurgy",
-  "required_modules":[],
-  "recommended_modules":[],
-  "credits":{
-    "Creator":[
-      ["Sparks","https://www.twitter.com/SparksTheGamer"],
-      ["SpecialBuilder32","https://www.twitter.com/SpecialBuilder"],
-      ["Bloo","https://twitter.com/Bloo_dev"]
+    "pack": {
+        "pack_format": 0,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "Metallurgy",
+    "module_id": "metallurgy",
+    "site_description": "Custom ores and custom enchants for you tools and armour!",
+    "site_categories": [
+        "Metallurgy"
     ],
-    "Icon Design":[
-      ["DuckJr","https://twitter.com/DuckJr94"]
-    ]
-  }
+    "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "Sparks",
+            "SpecialBuilder32",
+            "Bloo"
+        ],
+        "Icon Design": [
+            "DuckJr"
+        ]
+    }
 }
