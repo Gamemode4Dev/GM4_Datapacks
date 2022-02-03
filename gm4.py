@@ -50,6 +50,7 @@ def build_modules(ctx: Context):
 				module["video_link"] = meta.get("video_link", "")
 				module["credits"] = meta.get("credits", {})
 				module["hidden"] = meta.get("hidden", False)
+				module["important_note"] = meta.get("important_note", False)
 
 		except:
 			module["id"] = None
