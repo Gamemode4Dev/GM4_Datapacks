@@ -25,17 +25,11 @@
         "vertical_rails"
     ],
     "credits": {
-        "comment": "All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings.",
         "Creator": [
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ]
+            "Bloo"
         ],
         "Icon Design": [
-            [
-                "Hozz"
-            ]
+            "Hozz"
         ]
     }
 }

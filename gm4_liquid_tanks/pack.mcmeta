@@ -32,31 +32,17 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "SpecialBuilder32",
-                "https://twitter.com/SpecialBuilder"
-            ]
+            "SpecialBuilder32"
         ],
         "Updated by": [
-            [
-                "SpecialBuilder32",
-                "https://twitter.com/SpecialBuilder"
-            ]
+            "SpecialBuilder32"
         ],
         "Textures by": [
-            [
-                "Vilder50"
-            ],
-            [
-                "kyrkis",
-                "http://discordapp.com/users/287287322360414218"
-            ]
+            "Vilder50",
+            "kyrkis"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

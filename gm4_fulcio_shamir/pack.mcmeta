@@ -24,20 +24,11 @@
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ],
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ]
+            "BluePsychoRanger",
+            "Bloo"
         ],
         "Icon Design": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ]
+            "BluePsychoRanger"
         ]
     }
 }

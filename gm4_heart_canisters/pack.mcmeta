@@ -26,38 +26,19 @@
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ],
-            [
-                "SpiderRobotMan",
-                "https://twitter.com/spiderrobotman"
-            ]
+            "Sparks",
+            "SpiderRobotMan"
         ],
         "Updated by": [
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ],
-            [
-                "Misode",
-                "https://twitter.com/misode_"
-            ],
-            [
-                "TheEpyonProject"
-            ]
+            "SpecialBuilder32",
+            "Misode",
+            "TheEpyonProject"
         ],
         "Textures by": [
-            [
-                "Jonpot",
-                ""
-            ]
+            "Jonpot"
         ],
         "Icon Design": [
-            [
-                "Hozz"
-            ]
+            "Hozz"
         ]
     }
 }

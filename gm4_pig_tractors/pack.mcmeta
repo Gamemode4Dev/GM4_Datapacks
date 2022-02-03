@@ -12,7 +12,7 @@
     },
     "module_name": "Pig Tractors",
     "module_id": "pig_tractors",
-    "hidden":false,
+    "hidden": false,
     "site_description": "Ride pigs through fields to quickly harvest and plant crops",
     "site_categories": [],
     "video_link": "https://www.youtube.com/watch?v=7i0WFHUfBXs",
@@ -21,15 +21,10 @@
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Bloo",
-                "https://www.twitter.com/Bloo_dev"
-            ]
+            "Bloo"
         ],
         "Icon Design": [
-            [
-                "Hozz"
-            ]
+            "Hozz"
         ]
     }
 }

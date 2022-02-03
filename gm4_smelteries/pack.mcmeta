@@ -27,43 +27,20 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ]
+            "Bloo"
         ],
         "Updated By": [
-            [
-                "Andante",
-                "https://twitter.com/Andantweets"
-            ],
-            [
-                "Kroppeb",
-                "https://twitter.com/kroppeb"
-            ],
-            [
-                "Misode",
-                "https://twitter.com/misode_"
-            ],
-            [
-                "SpecialBuilder32",
-                "https://twitter.com/SpecialBuilder"
-            ],
-            [
-                "BluePsychoRanger",
-                "https://twitter.com/BluPsychoRanger"
-            ]
+            "Andante",
+            "Kroppeb",
+            "Misode",
+            "SpecialBuilder32",
+            "BluePsychoRanger"
         ],
-        "Textures by": [
-            [
-                "kyrkis",
-                "http://discordapp.com/users/287287322360414218"
-            ]
+        "Textures By": [
+            "kyrkis"
         ],
         "Icon Design": [
-            [
-                "Hozz"
-            ]
+            "Hozz"
         ]
     }
 }

@@ -13,8 +13,8 @@
   "module_name": "Orb of Ankou",
   "module_id": "orb_of_ankou",
   "libraries": [
-      "lib_machines",
-      "lib_forceload"
+    "lib_machines",
+    "lib_forceload"
   ],
   "hidden": false,
   "site_description": "Capture mob abilities and use them as your own!",
@@ -35,11 +35,20 @@
         "https://www.twitter.com/blupsychoranger"
       ]
     ],
-    "Icon Design": [
-      [
-        "BluePsychoRanger",
-        "https://www.twitter.com/blupsychoranger"
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
+    "required_modules": [
+      "metallurgy",
+      "custom_crafters"
+    ],
+    "recommended_modules": [],
+    "credits": {
+      "Creator": [
+        "BluePsychoRanger"
+      ],
+      "Icon Design": [
+        "BluePsychoRanger"
       ]
-    ]
+    }
   }
 }
