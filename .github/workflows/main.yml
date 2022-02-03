@@ -56,7 +56,7 @@ jobs:
 
       - name: Build modules from pull request
         if: github.event_name == 'pull_request'
-        run: beet --set 'meta.pull_request_base=${{ github.base_ref }}' build
+        run: beet --set 'meta.pull_request_base=origin/${{ github.base_ref }}' build
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'
