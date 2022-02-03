@@ -17,6 +17,7 @@
     "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters",
     "required_modules": [],
     "recommended_modules": [
+        "resources",
         "standard_crafting",
         "record_crafting",
         "master_crafting",

@@ -16,7 +16,9 @@
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Everstone",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "resources"
+    ],
     "credits": {
         "Creators": [
             "Denniss",

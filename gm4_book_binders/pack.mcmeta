@@ -16,7 +16,9 @@
     "site_description": "Start printing your own Enchanted Books",
     "wiki_link": "https://wiki.gm4.co/wiki/Book_Binders",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "resources"
+    ],
     "credits": {
         "Creators": [
             "Bloo",

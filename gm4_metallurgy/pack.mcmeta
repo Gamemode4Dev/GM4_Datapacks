@@ -21,6 +21,7 @@
     "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
     "required_modules": [],
     "recommended_modules": [
+        "resources",
         "audere_shamir",
         "fulcio_shamir",
         "iacio_shamir",

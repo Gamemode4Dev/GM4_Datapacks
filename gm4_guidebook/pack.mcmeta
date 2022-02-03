@@ -21,7 +21,9 @@
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "resources"
+    ],
     "credits": {
         "Creator": [
             "BluePsychoRanger"

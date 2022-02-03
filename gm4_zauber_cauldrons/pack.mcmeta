@@ -22,7 +22,9 @@
     "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
     "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "resources"
+    ],
     "credits": {
         "Creator": [
             "Bloo"
