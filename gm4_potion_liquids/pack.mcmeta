@@ -16,9 +16,6 @@
         "lib_brewing"
     ],
     "site_description": "Adds the ability to store potions in Liquid Tanks",
-    "site_categories": [
-        "Liquid Tanks"
-    ],
     "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
     "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids",
     "required_modules": [

@@ -14,9 +14,6 @@
     "module_id": "iacio_shamir",
     "hidden": false,
     "site_description": "Adds the Iacio shamir that lets you throw further.",
-    "site_categories": [
-        "Metallurgy"
-    ],
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Iacio_Shamir",
     "required_modules": [

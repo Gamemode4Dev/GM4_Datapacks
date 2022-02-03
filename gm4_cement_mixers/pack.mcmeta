@@ -13,9 +13,6 @@
     "module_name": "Cement Mixers",
     "module_id": "cement_mixers",
     "site_description": "Adds the ability to turn powder into concrete in Liquid Tanks",
-    "site_categories": [
-        "Liquid Tanks"
-    ],
     "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
     "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Cement_Mixers",
     "required_modules": [

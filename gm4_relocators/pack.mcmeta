@@ -14,9 +14,6 @@
     "module_id": "relocators",
     "hidden": false,
     "site_description": "Craft relocators to move your custom crafters, liquid tanks, and other machines",
-    "site_categories": [
-        "Custom Crafting"
-    ],
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Relocators",
     "required_modules": [

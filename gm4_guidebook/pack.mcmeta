@@ -17,7 +17,6 @@
         "lib_forceload"
     ],
     "site_description": "Adds a dynamic guidebook to discover the mechanics of Gamemode 4!",
-    "site_categories": [],
     "important_note": "This module is still considered experimental! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",
