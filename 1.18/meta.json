@@ -1,5 +1,5 @@
 {
-  "last_commit": "8934e6a889a83d68c11efe6186ca3f3da1e5a361",
+  "last_commit": "47d4c4021b30fff9d243bd7f14a7ac498f1ed3e6",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1885,7 +1885,7 @@
     {
       "id": "gm4_tunnel_bores",
       "name": "Tunnel Bores",
-      "description": "Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3\u2a093 tunnel, and even lay rails behind themselves.",
+      "description": "Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3\u2a093 tunnels, and even lay rails behind themselves.",
       "categories": [],
       "libraries": [],
       "requires": [
@@ -1907,7 +1907,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_undead_players",
@@ -2087,7 +2087,7 @@
     {
       "id": "gm4_zauber_cauldrons",
       "name": "Zauber Cauldrons",
-      "description": "Brew higher level potions, make armour that boost your attributes, hold crystals that act like portable Beacons or create teleportation devices! Zauber Cauldrons adds an entire magic branch to the game.",
+      "description": "Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game.",
       "categories": [],
       "libraries": [
         "lib_forceload",
@@ -2119,7 +2119,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_zauber_liquids",
