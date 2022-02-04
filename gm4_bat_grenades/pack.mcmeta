@@ -14,6 +14,7 @@
     "module_id": "bat_grenades",
     "hidden": false,
     "site_description": "Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!",
+    "important_note": "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
     "video_link": "https://www.youtube.com/watch?v=uUoEKtte1GQ",
     "wiki_link": "https://wiki.gm4.co/wiki/Bat_Grenades",
     "required_modules": [],

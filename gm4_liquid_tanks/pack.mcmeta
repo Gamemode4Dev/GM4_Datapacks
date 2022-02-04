@@ -12,7 +12,7 @@
     },
     "module_name": "Liquid Tanks",
     "module_id": "liquid_tanks",
-    "site_description": "Store liquids compactly in special tanks and interact with them!",
+    "site_description": "Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!",
     "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
     "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
     "required_modules": [],

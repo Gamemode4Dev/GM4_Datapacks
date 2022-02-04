@@ -14,6 +14,7 @@
     "module_id": "animi_shamir",
     "hidden": false,
     "site_description": "Adds the Animi Shamir to Metallurgy. Items with Animi will respawn with you when you die!",
+    "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Animi_Shamir",
     "required_modules": [

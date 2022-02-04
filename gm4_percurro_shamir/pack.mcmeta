@@ -14,7 +14,7 @@
     "module_id": "percurro_shamir",
     "hidden": false,
     "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-    "site_description": "Swoosh! A shamir that allows you to swoosh past your enemies!",
+    "site_description": "Adds the 'Percurro' Shamir to Metallurgy! Weapons with Percurro let you teleport past your enemies in the blink of an eye!",
     "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Percurro_Shamir",
     "required_modules": [
         "metallurgy"
