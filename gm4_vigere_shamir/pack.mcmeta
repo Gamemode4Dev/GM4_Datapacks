@@ -14,10 +14,7 @@
     "module_id": "vigere_shamir",
     "hidden": false,
     "libraries": [],
-    "site_description": "Adds the shamir 'Vigere' to metallurgy. It heals you when you block with a shield.",
-    "site_categories": [
-        "Metallurgy"
-    ],
+    "site_description": "Adds the shamir 'Vigere' to Metallurgy. It heals you when you block with a shield.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vigere_Shamir",
     "required_modules": [

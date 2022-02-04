@@ -15,10 +15,7 @@
     "libraries": [
         "lib_player_heads"
     ],
-    "site_description": "Pricey canisters that increase your health when carried.",
-    "site_categories": [
-        "Custom Crafting"
-    ],
+    "site_description": "Introduces two tiers of pricey canisters that increase your health when carried.",
     "video_link": "https://www.youtube.com/watch?v=zjmL6rjoq0g",
     "wiki_link": "https://wiki.gm4.co/wiki/Heart_Canisters",
     "required_modules": [

@@ -13,10 +13,7 @@
     "module_name": "Washing Tanks",
     "module_id": "washing_tanks",
     "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-    "site_description": "Die! Dye!",
-    "site_categories": [
-        "Liquid Tanks"
-    ],
+    "site_description": "Die! Dye! Remove die from items in a Liquid Tank filled with Water, at the cost of ⅓ of a bucket.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Washing_Tanks",
     "required_modules": [

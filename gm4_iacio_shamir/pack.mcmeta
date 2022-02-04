@@ -13,10 +13,7 @@
     "module_name": "Iacio Shamir",
     "module_id": "iacio_shamir",
     "hidden": false,
-    "site_description": "Adds the Iacio shamir that lets you throw further.",
-    "site_categories": [
-        "Metallurgy"
-    ],
+    "site_description": "Adds the 'Iacio' shamir to Metallurgy. It lets you throw things further! Launch an Ender Pearl into orbit or simply throw your Trident exceptionally far.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Iacio_Shamir",
     "required_modules": [

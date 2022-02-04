@@ -14,9 +14,6 @@
     "module_id": "zauber_liquids",
     "hidden": false,
     "site_description": "From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!",
-    "site_categories": [
-        "Liquid Tanks"
-    ],
     "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
     "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids",
     "required_modules": [

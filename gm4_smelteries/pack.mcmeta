@@ -12,10 +12,7 @@
     },
     "module_name": "Smelteries",
     "module_id": "smelteries",
-    "site_description": "Double your ore output with this multi-block structure.",
-    "site_categories": [
-        "Custom Crafting"
-    ],
+    "site_description": "Build a Smeltery and double your ore output with this multi-block structure.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/smelteries",
     "required_modules": [
