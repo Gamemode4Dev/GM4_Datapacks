@@ -1,5 +1,5 @@
 {
-  "last_commit": "19aeb248dbc320bf9760918b39e6eb5c1c1047a7",
+  "last_commit": "eaca2a61231fcaf8dc0c41045397d793f1f893ae",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -25,7 +25,7 @@
     {
       "id": "gm4_apple_trees",
       "name": "Apple Trees",
-      "description": "Introduces fruit-breaing apple trees! Trade for apple saplings with wandering traders or commenly find these lifesavers in forests if you have Orbis installed.",
+      "description": "Introduces fruit-bearing apple trees! Trade for apple saplings with wandering traders or commenly find these lifesavers in forests if you have Orbis installed.",
       "categories": [],
       "libraries": [
         "lib_trades"
@@ -50,7 +50,7 @@
       },
       "hidden": false,
       "important_note": "Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.",
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_audere_shamir",
