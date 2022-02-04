@@ -18,12 +18,13 @@
         "lib_brewing",
         "lib_trades"
     ],
-    "site_description": "Brew potions, special armour and attribute crystals in any cauldron!",
-    "site_categories": [],
+    "site_description": "Brew higher level potions, make armour that boost your attributes, hold crystals that act like portable Beacons or create teleportation devices! Zauber Cauldrons adds an entire magic branch to the game.",
     "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
     "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "resources"
+    ],
     "credits": {
         "Creator": [
             "Bloo"

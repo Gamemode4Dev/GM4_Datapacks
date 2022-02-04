@@ -13,7 +13,6 @@
     "module_name": "MODULE_NAME",
     "module_id": "MODULE_ID",
     "site_description": "Someone forgot to type a description!",
-    "site_categories": [],
     "video_link": "YOUTUBE_VIDEO_URL",
     "wiki_link": "WIKI_URL",
     "required_modules": [

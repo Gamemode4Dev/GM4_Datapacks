@@ -13,12 +13,12 @@
     "module_name": "Sunken Treasure",
     "module_id": "sunken_treasure",
     "hidden": true,
-    "site_description": "Digging sand underwater with a fortune tool can uncover buried surprises",
-    "site_categories": [],
+    "site_description": "Digging sand underwater with a fortune tool can uncover buried treasures, or a nasty surprise! Who knows, maybe you'll even find some old love letters.",
     "video_link": "https://www.youtube.com/watch?v=VV7ZIyIzKV0",
     "wiki_link": "https://wiki.gm4.co/wiki/Sunken_Treasure",
     "required_modules": [],
     "recommended_modules": [
+        "resources",
         "scuba_gear"
     ],
     "credits": {

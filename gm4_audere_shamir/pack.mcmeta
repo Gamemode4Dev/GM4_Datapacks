@@ -13,10 +13,7 @@
     "module_name": "Audere Shamir",
     "module_id": "audere_shamir",
     "hidden": false,
-    "site_description": "Adds the shamir 'Audere' to metallurgy. Gain Haste with low durability tools.",
-    "site_categories": [
-        "Metallurgy"
-    ],
+    "site_description": "Adds the shamir 'Audere' to Metallurgy. Gain Haste with low durability tools.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Audere_Shamir",
     "required_modules": [

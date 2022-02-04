@@ -16,10 +16,7 @@
         "lib_machines",
         "lib_forceload"
     ],
-    "site_description": "A machine capable of performing more efficient smelting and crafting recipes!",
-    "site_categories": [
-        "Custom Crafting"
-    ],
+    "site_description": "Create a Forming Press to unlock more efficient recipes for all types of brick and Charcoal.",
     "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
     "wiki_link": "https://wiki.gm4.co/wiki/Forming_Press",
     "recommended_modules": [

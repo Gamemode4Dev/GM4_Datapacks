@@ -13,12 +13,12 @@
     "module_name": "Mob Conversion",
     "module_id": "mob_conversion",
     "hidden": false,
-    "site_description": "Convert cows, pigmen and witches into other mobs.",
-    "site_categories": [],
+    "site_description": "Convert cows, pigmen and witches into other mobs!",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Mob_Conversion",
     "required_modules": [],
     "recommended_modules": [
+        "resources",
         "shroomites"
     ],
     "credits": {

@@ -18,43 +18,20 @@
     "lib_forceload"
   ],
   "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-  "site_description": "Craft 'em up, throw 'em down, blow 'em up!",
-  "site_categories": [
-    "Custom Crafting"
-  ],
+  "site_description": "Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!",
   "video_link": "",
   "wiki_link": "https://wiki.gm4.co/wiki/TNT_Landmines",
-  "required_modules": [],
   "recommended_modules": [],
   "credits": {
     "Creator": [
-      [
-        "Sparks",
-        "https://www.twitter.com/SparksTheGamer"
-      ]
+      "Sparks"
     ],
-    "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-    "site_description": "Craft 'em up, throw 'em down, blow 'em up!",
-    "site_categories": [
-      "Custom Crafting"
+    "Updated By": [
+      "kruthers",
+      "BluePsychoRanger"
     ],
-    "video_link": "",
-    "wiki_link": "https://wiki.gm4.co/wiki/TNT_Landmines",
-    "required_modules": [
-      "custom_crafters"
-    ],
-    "recommended_modules": [],
-    "credits": {
-      "Creator": [
-        "Sparks"
-      ],
-      "Updated By": [
-        "kruthers",
-        "BluePsychoRanger"
-      ],
-      "Icon Design": [
-        "Hozz"
-      ]
-    }
+    "Icon Design": [
+      "Hozz"
+    ]
   }
 }

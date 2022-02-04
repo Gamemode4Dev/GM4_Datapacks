@@ -17,11 +17,7 @@
     "lib_forceload"
   ],
   "hidden": false,
-  "site_description": "Capture mob abilities and use them as your own!",
-  "site_categories": [
-    "Metallurgy",
-    "Custom Crafting"
-  ],
+  "site_description": "Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man.",
   "video_link": "",
   "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
   "required_modules": [
@@ -30,25 +26,10 @@
   "recommended_modules": [],
   "credits": {
     "Creator": [
-      [
-        "BluePsychoRanger",
-        "https://www.twitter.com/blupsychoranger"
-      ]
+      "BluePsychoRanger"
     ],
-    "video_link": "",
-    "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
-    "required_modules": [
-      "metallurgy",
-      "custom_crafters"
-    ],
-    "recommended_modules": [],
-    "credits": {
-      "Creator": [
-        "BluePsychoRanger"
-      ],
-      "Icon Design": [
-        "BluePsychoRanger"
-      ]
-    }
+    "Icon Design": [
+      "BluePsychoRanger"
+    ]
   }
 }
