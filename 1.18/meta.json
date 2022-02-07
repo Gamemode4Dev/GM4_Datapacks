@@ -1,5 +1,5 @@
 {
-  "last_commit": "e506ba869a157df4168028ddb8d955d3b9ed9ef0",
+  "last_commit": "fdc4d62bef96e4ae3dea88faba449412ec765211",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -32,7 +32,7 @@
       ],
       "requires": [],
       "recommends": [
-        "gm4_resources",
+        "gm4_resource-pack",
         "gm4_orbis",
         "gm4_podzol_rooting_soil"
       ],
@@ -50,7 +50,7 @@
       },
       "hidden": false,
       "important_note": "Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.",
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_audere_shamir",
@@ -215,7 +215,7 @@
       "libraries": [],
       "requires": [],
       "recommends": [
-        "gm4_resources"
+        "gm4_resource-pack"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Book_Binders",
       "video_link": "",
@@ -230,7 +230,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_boots_of_ostara",
@@ -413,7 +413,7 @@
       "libraries": [],
       "requires": [],
       "recommends": [
-        "gm4_resources",
+        "gm4_resource-pack",
         "gm4_standard_crafting",
         "gm4_record_crafting",
         "gm4_master_crafting",
@@ -438,7 +438,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_dangerous_dungeons",
@@ -593,7 +593,7 @@
       ],
       "requires": [],
       "recommends": [
-        "gm4_resources"
+        "gm4_resource-pack"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/End_Fishing",
       "video_link": "",
@@ -607,7 +607,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_ender_hoppers",
@@ -617,7 +617,7 @@
       "libraries": [],
       "requires": [],
       "recommends": [
-        "gm4_resources",
+        "gm4_resource-pack",
         "gm4_relocators"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
@@ -635,7 +635,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_enderman_support_class",
@@ -667,7 +667,7 @@
       "libraries": [],
       "requires": [],
       "recommends": [
-        "gm4_resources"
+        "gm4_resource-pack"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Everstone",
       "video_link": "",
@@ -682,7 +682,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_fulcio_shamir",
@@ -719,7 +719,7 @@
       ],
       "requires": [],
       "recommends": [
-        "gm4_resources"
+        "gm4_resource-pack"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",
       "video_link": "",
@@ -730,7 +730,7 @@
       },
       "hidden": true,
       "important_note": "Experimental Module! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.",
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_heart_canisters",
@@ -853,7 +853,7 @@
       ],
       "requires": [],
       "recommends": [
-        "gm4_resources",
+        "gm4_resource-pack",
         "gm4_liquid_tanks",
         "gm4_potion_liquids",
         "gm4_spawner_minecarts"
@@ -872,7 +872,7 @@
       },
       "hidden": false,
       "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_liquid_minecarts",
@@ -908,7 +908,7 @@
       "libraries": [],
       "requires": [],
       "recommends": [
-        "gm4_resources",
+        "gm4_resource-pack",
         "gm4_potion_liquids",
         "gm4_zauber_liquids",
         "gm4_liquid_minecarts",
@@ -933,7 +933,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_live_catch",
@@ -1047,7 +1047,7 @@
       ],
       "requires": [],
       "recommends": [
-        "gm4_resources",
+        "gm4_resource-pack",
         "gm4_audere_shamir",
         "gm4_fulcio_shamir",
         "gm4_iacio_shamir",
@@ -1081,7 +1081,7 @@
       },
       "hidden": false,
       "important_note": "Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_midnight_menaces",
@@ -1115,7 +1115,7 @@
       "libraries": [],
       "requires": [],
       "recommends": [
-        "gm4_resources",
+        "gm4_resource-pack",
         "gm4_shroomites"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Mob_Conversion",
@@ -1135,7 +1135,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_mysterious_midnights",
@@ -1717,7 +1717,7 @@
       "libraries": [],
       "requires": [],
       "recommends": [
-        "gm4_resources",
+        "gm4_resource-pack",
         "gm4_scuba_gear"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Sunken_Treasure",
@@ -1737,7 +1737,7 @@
       },
       "hidden": true,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_sweethearts",
@@ -2097,7 +2097,7 @@
       ],
       "requires": [],
       "recommends": [
-        "gm4_resources"
+        "gm4_resource-pack"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
       "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
@@ -2119,7 +2119,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18007
+      "patch": 18008
     },
     {
       "id": "gm4_zauber_liquids",
