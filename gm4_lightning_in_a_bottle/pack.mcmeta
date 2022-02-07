@@ -23,7 +23,7 @@
     "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
     "required_modules": [],
     "recommended_modules": [
-        "resource-pack",
+        "resource_pack",
         "liquid_tanks",
         "potion_liquids",
         "spawner_minecarts"

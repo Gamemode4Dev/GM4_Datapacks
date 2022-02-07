@@ -20,7 +20,7 @@
     "wiki_link": "https://wiki.gm4.co/wiki/End_Fishing",
     "required_modules": [],
     "recommended_modules": [
-        "resource-pack"
+        "resource_pack"
     ],
     "credits": {
         "Creator": [

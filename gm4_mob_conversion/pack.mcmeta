@@ -18,7 +18,7 @@
     "wiki_link": "https://wiki.gm4.co/wiki/Mob_Conversion",
     "required_modules": [],
     "recommended_modules": [
-        "resource-pack",
+        "resource_pack",
         "shroomites"
     ],
     "credits": {
