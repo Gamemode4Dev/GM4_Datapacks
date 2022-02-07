@@ -1,0 +1,53 @@
+{
+    "parent": "minecraft:block/enchanting_table",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:block/enchantment_extractors/enchantment_extractor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:gui/advancements/icon/enchantment_extractors/enchantment_extractors"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/enchantment_extractors"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "minecraft:item/enchanting_table"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:block/enchantment_extractors/enchantment_extractor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:gui/advancements/icon/enchantment_extractors/enchantment_extractors"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/enchantment_extractors"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "minecraft:item/enchanting_table"
+        }
+    ]
+}

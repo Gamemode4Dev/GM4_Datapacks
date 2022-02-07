@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:item/template_shulker_box",
+    "textures": {
+        "particle": "minecraft:block/shulker_box"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/relocators"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/shulker_box"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/relocators"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/shulker_box"
+        }
+    ]
+}

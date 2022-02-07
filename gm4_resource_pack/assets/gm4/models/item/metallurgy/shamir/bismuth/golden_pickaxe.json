@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/golden_pickaxe",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/bismuth/pickaxe"
+    }
+}

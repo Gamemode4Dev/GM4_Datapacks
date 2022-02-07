@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "gm4:item/lightning_in_a_bottle/splash_lightning_in_a_bottle",
+        "layer1": "gm4:item/lightning_in_a_bottle/splash_lightning_in_a_bottle_overlay"
+    }
+}

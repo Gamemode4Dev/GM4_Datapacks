@@ -1,0 +1,29 @@
+{
+    "parent": "minecraft:block/stone_bricks",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 44
+            },
+            "model": "gm4:entity/tnt_landmines/tnt_landmine_stone_bricks"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 45
+            },
+            "model": "minecraft:item/stone_bricks"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420044
+            },
+            "model": "gm4:entity/tnt_landmines/tnt_landmine_stone_bricks"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420045
+            },
+            "model": "minecraft:item/stone_bricks"
+        }
+    ]
+}

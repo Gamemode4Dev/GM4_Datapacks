@@ -1,0 +1,140 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/chainmail_boots"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 104
+            },
+            "model": "minecraft:item/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 107
+            },
+            "model": "minecraft:item/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 118
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 119
+            },
+            "model": "minecraft:item/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 121
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 122
+            },
+            "model": "minecraft:item/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 123
+            },
+            "model": "gm4:item/metallurgy/shamir/thorium/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420104
+            },
+            "model": "minecraft:item/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420107
+            },
+            "model": "minecraft:item/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420118
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420119
+            },
+            "model": "minecraft:item/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420121
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420122
+            },
+            "model": "minecraft:item/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420123
+            },
+            "model": "gm4:item/metallurgy/shamir/thorium/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/chainmail_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/chainmail_boots"
+        }
+    ]
+}

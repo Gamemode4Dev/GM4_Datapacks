@@ -1,0 +1,29 @@
+{
+    "parent": "minecraft:block/netherrack",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 46
+            },
+            "model": "gm4:entity/tnt_landmines/tnt_landmine_netherrack"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 47
+            },
+            "model": "minecraft:item/netherrack"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420046
+            },
+            "model": "gm4:entity/tnt_landmines/tnt_landmine_netherrack"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420047
+            },
+            "model": "minecraft:item/netherrack"
+        }
+    ]
+}

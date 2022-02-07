@@ -1,0 +1,80 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/diamond_horse_armor"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 10
+            },
+            "model": "gm4:item/end_fishing/horse_armor/diamond_horse_armor_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 11
+            },
+            "model": "gm4:item/end_fishing/horse_armor/diamond_horse_armor_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 12
+            },
+            "model": "gm4:item/end_fishing/horse_armor/diamond_horse_armor_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 13
+            },
+            "model": "gm4:item/end_fishing/horse_armor/diamond_horse_armor_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 14
+            },
+            "model": "gm4:item/end_fishing/horse_armor/diamond_horse_armor_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 15
+            },
+            "model": "minecraft:item/diamond_horse_armor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420010
+            },
+            "model": "gm4:item/end_fishing/horse_armor/diamond_horse_armor_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420011
+            },
+            "model": "gm4:item/end_fishing/horse_armor/diamond_horse_armor_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420012
+            },
+            "model": "gm4:item/end_fishing/horse_armor/diamond_horse_armor_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420013
+            },
+            "model": "gm4:item/end_fishing/horse_armor/diamond_horse_armor_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420014
+            },
+            "model": "gm4:item/end_fishing/horse_armor/diamond_horse_armor_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420015
+            },
+            "model": "minecraft:item/diamond_horse_armor"
+        }
+    ]
+}

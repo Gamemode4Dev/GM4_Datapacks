@@ -1,0 +1,29 @@
+{
+    "parent": "minecraft:block/light_blue_stained_glass",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:gui/advancements/icon/sky_dimension/sky_dimension_use_sky_lens"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "minecraft:item/light_blue_stained_glass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:gui/advancements/icon/sky_dimension/sky_dimension_use_sky_lens"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "minecraft:item/light_blue_stained_glass"
+        }
+    ]
+}

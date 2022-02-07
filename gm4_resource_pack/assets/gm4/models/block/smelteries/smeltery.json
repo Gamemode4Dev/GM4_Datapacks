@@ -1,0 +1,27 @@
+{
+	"textures": {
+		"side": "gm4:block/smeltery_side",
+		"bottom": "gm4:block/master_crafter_bottom"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 10, 16],
+			"faces": {
+				"north": {"uv": [0, 6, 16, 16], "texture": "#side"},
+				"east": {"uv": [0, 6, 16, 16], "texture": "#side"},
+				"south": {"uv": [0, 6, 16, 16], "texture": "#side"},
+				"west": {"uv": [0, 6, 16, 16], "texture": "#side"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#bottom"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#bottom"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [90, 0, 0],
+			"translation": [-6, -2, 0.775],
+			"scale": [2.001, 2.001, 2.001]
+		}
+	}
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/netherite_helmet",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/aluminium/helmet_netherite"
+    }
+}

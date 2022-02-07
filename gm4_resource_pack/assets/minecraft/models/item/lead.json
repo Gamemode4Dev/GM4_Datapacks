@@ -1,0 +1,51 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/lead"
+    },
+    "display": {
+        "head": {
+            "rotation": [
+                0,
+                0,
+                0
+            ],
+            "translation": [
+                2.75,
+                -2.75,
+                -6.5
+            ],
+            "scale": [
+                0.8,
+                0.8,
+                0.8
+            ]
+        }
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:gui/advancements/icon/sky_dimension/sky_dimension_beeloons"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/lead"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:gui/advancements/icon/sky_dimension/sky_dimension_beeloons"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/lead"
+        }
+    ]
+}

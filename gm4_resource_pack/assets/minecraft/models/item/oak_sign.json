@@ -1,0 +1,56 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/oak_sign"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:item/trapped_signs/trapped_oak_sign"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:item/trapped_signs/secret_trapped_oak_sign"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/trapped_signs"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "minecraft:item/oak_sign"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:item/trapped_signs/trapped_oak_sign"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:item/trapped_signs/secret_trapped_oak_sign"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/trapped_signs"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "minecraft:item/oak_sign"
+        }
+    ]
+}

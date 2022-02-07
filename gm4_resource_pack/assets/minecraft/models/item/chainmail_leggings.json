@@ -1,0 +1,80 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/chainmail_leggings"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/chainmail_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 104
+            },
+            "model": "minecraft:item/chainmail_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/chainmail_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 107
+            },
+            "model": "minecraft:item/chainmail_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/chainmail_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/chainmail_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/chainmail_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420104
+            },
+            "model": "minecraft:item/chainmail_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/chainmail_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420107
+            },
+            "model": "minecraft:item/chainmail_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/chainmail_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/chainmail_leggings"
+        }
+    ]
+}

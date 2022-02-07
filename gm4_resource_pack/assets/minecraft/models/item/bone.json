@@ -1,0 +1,51 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "item/bone"
+    },
+    "display": {
+        "head": {
+            "rotation": [
+                0,
+                0,
+                -45
+            ],
+            "translation": [
+                0,
+                -4.5,
+                -6.5
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/resurrecting_skeletons"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/bone"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/resurrecting_skeletons"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/bone"
+        }
+    ]
+}

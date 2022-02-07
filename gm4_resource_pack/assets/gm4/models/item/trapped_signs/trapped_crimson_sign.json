@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "gm4:item/trapped_signs/trapped_crimson_sign"
+    }
+}

@@ -1,0 +1,53 @@
+{
+	"textureSize": [64, 32],
+	"models": [
+		{
+			"part": "body",
+			"id": "body",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"boxes": [
+				{"coordinates": [2, 7, -3, 0, 3, 6], "textureOffset": [52, 23]},
+				{"coordinates": [-3, 7, -2, 6, 3, 0], "textureOffset": [52, 29]},
+				{"coordinates": [-3, 7, 2, 6, 3, 0], "textureOffset": [52, 26]},
+				{"coordinates": [-3, 1, -3, 6, 6, 6], "textureOffset": [0, 16]}
+			],
+			"submodels": [
+				{
+					"invertAxis": "xy",
+					"mirrorTexture": "u",
+					"boxes": [
+						{"coordinates": [-2, 7, -3, 0, 3, 6], "textureOffset": [52, 20]}
+					]
+				}
+			]
+		},
+		{
+			"part": "right_eye",
+			"id": "right_eye",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"boxes": [
+				{"coordinates": [-3.3, 4, -3.5, 2, 2, 2], "textureOffset": [32, 0]}
+			]
+		},
+		{
+			"part": "left_eye",
+			"id": "left_eye",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"boxes": [
+				{"coordinates": [1.3, 4, -3.5, 2, 2, 2], "textureOffset": [32, 4]}
+			]
+		},
+		{
+			"part": "mouth",
+			"id": "mouth",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"boxes": [
+				{"coordinates": [0, 2, -3.5, 1, 1, 1], "textureOffset": [32, 8]}
+			]
+		}
+	]
+}

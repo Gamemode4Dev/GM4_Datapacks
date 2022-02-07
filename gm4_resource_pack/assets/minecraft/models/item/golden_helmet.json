@@ -1,0 +1,176 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/golden_helmet"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_helmet_health"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_helmet_attack"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_helmet_speed"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_helmet_armor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6
+            },
+            "model": "gm4:entity/orb_of_ankou/golden_helmet_6"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 7
+            },
+            "model": "gm4:item/sky_dimension/golden_helmet_7"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 8
+            },
+            "model": "gm4:gui/advancements/icon/sky_dimension/sky_dimension_stardust_trade"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 9
+            },
+            "model": "minecraft:item/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 104
+            },
+            "model": "minecraft:item/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 107
+            },
+            "model": "minecraft:item/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_helmet_health"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_helmet_attack"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_helmet_speed"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_helmet_armor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006
+            },
+            "model": "gm4:entity/orb_of_ankou/golden_helmet_6"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420007
+            },
+            "model": "gm4:item/sky_dimension/golden_helmet_7"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420008
+            },
+            "model": "gm4:gui/advancements/icon/sky_dimension/sky_dimension_stardust_trade"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420009
+            },
+            "model": "minecraft:item/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420104
+            },
+            "model": "minecraft:item/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420107
+            },
+            "model": "minecraft:item/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/golden_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/golden_helmet"
+        }
+    ]
+}

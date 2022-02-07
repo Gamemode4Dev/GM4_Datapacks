@@ -1,0 +1,92 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/flint_and_steel"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:gui/advancements/icon/orb_of_ankou/orb_of_ankou_soul_forge"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/flint_and_steel"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/better_fire"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/orb_of_ankou"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "minecraft:item/flint_and_steel"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/flint_and_steel"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/flint_and_steel"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:gui/advancements/icon/orb_of_ankou/orb_of_ankou_soul_forge"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/flint_and_steel"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/better_fire"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/orb_of_ankou"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "minecraft:item/flint_and_steel"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/flint_and_steel"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/flint_and_steel"
+        }
+    ]
+}

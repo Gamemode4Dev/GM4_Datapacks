@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/leather_helmet",
+    "textures": {
+        "layer2": "gm4:item/metallurgy/shamir/aluminium/helmet"
+    }
+}

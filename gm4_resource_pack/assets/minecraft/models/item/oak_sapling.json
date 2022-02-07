@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:block/oak_sapling"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "gm4:item/apple_trees/apple_tree_sapling"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "minecraft:item/oak_sapling"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "gm4:item/apple_trees/apple_tree_sapling"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "minecraft:item/oak_sapling"
+        }
+    ]
+}

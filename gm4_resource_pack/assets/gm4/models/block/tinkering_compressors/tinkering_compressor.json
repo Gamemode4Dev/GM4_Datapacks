@@ -1,0 +1,22 @@
+{
+	"parent": "gm4:block/tinkering_compressors/tinkering_compressor_full",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [
+				90,
+				0,
+				0
+			],
+			"translation": [
+				-6,
+				-2,
+				0.775
+			],
+			"scale": [
+				2.002,
+				2.003,
+				2.003
+			]
+		}
+	}
+}

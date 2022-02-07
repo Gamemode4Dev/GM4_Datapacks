@@ -1,0 +1,104 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/shears"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:gui/advancements/icon/tnt_landmines/tnt_landmines"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:item/sky_dimension/shears_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:item/sky_dimension/shears_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "minecraft:item/shears"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 113
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/shears"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 114
+            },
+            "model": "minecraft:item/shears"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/shears"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/shears"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:gui/advancements/icon/tnt_landmines/tnt_landmines"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:item/sky_dimension/shears_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:item/sky_dimension/shears_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "minecraft:item/shears"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420113
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/shears"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420114
+            },
+            "model": "minecraft:item/shears"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/shears"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/shears"
+        }
+    ]
+}

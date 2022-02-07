@@ -1,0 +1,213 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/leather_boots",
+        "layer1": "item/leather_boots_overlay"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:item/boots_of_ostara/boots_of_ostara"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:item/scuba_gear/flippers"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:gui/advancements/icon/boots_of_ostara/boots_of_ostara"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "gm4:item/boots_of_ostara/flippers_of_ostara"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/boots_of_ostara"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6
+            },
+            "model": "minecraft:item/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 104
+            },
+            "model": "minecraft:item/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 107
+            },
+            "model": "minecraft:item/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 118
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 119
+            },
+            "model": "minecraft:item/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 121
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 122
+            },
+            "model": "minecraft:item/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 123
+            },
+            "model": "gm4:item/metallurgy/shamir/thorium/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:item/boots_of_ostara/boots_of_ostara"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:item/scuba_gear/flippers"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:gui/advancements/icon/boots_of_ostara/boots_of_ostara"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "gm4:item/boots_of_ostara/flippers_of_ostara"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/boots_of_ostara"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006
+            },
+            "model": "minecraft:item/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420104
+            },
+            "model": "minecraft:item/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420107
+            },
+            "model": "minecraft:item/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420118
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420119
+            },
+            "model": "minecraft:item/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420121
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420122
+            },
+            "model": "minecraft:item/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420123
+            },
+            "model": "gm4:item/metallurgy/shamir/thorium/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/leather_boots"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/leather_boots"
+        }
+    ]
+}

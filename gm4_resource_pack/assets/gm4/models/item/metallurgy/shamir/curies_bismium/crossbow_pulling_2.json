@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/crossbow_pulling_2",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/curies_bismium/crossbow"
+    }
+}

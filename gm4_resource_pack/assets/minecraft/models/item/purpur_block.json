@@ -1,0 +1,29 @@
+{
+    "parent": "minecraft:block/purpur_block",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:gui/advancements/icon/lightning_in_a_bottle/lightning_in_a_bottle_shulker"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/purpur_block"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:gui/advancements/icon/lightning_in_a_bottle/lightning_in_a_bottle_shulker"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/purpur_block"
+        }
+    ]
+}

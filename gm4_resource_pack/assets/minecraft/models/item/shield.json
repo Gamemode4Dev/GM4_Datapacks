@@ -1,0 +1,318 @@
+{
+    "parent": "builtin/entity",
+    "gui_light": "front",
+    "textures": {
+        "particle": "block/dark_oak_planks"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [
+                0,
+                90,
+                0
+            ],
+            "translation": [
+                10,
+                6,
+                -4
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [
+                0,
+                90,
+                0
+            ],
+            "translation": [
+                10,
+                6,
+                12
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ]
+        },
+        "firstperson_righthand": {
+            "rotation": [
+                0,
+                180,
+                5
+            ],
+            "translation": [
+                -10,
+                2,
+                -10
+            ],
+            "scale": [
+                1.25,
+                1.25,
+                1.25
+            ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [
+                0,
+                180,
+                5
+            ],
+            "translation": [
+                10,
+                0,
+                -10
+            ],
+            "scale": [
+                1.25,
+                1.25,
+                1.25
+            ]
+        },
+        "gui": {
+            "rotation": [
+                15,
+                -25,
+                -5
+            ],
+            "translation": [
+                2,
+                3,
+                0
+            ],
+            "scale": [
+                0.65,
+                0.65,
+                0.65
+            ]
+        },
+        "fixed": {
+            "rotation": [
+                0,
+                180,
+                0
+            ],
+            "translation": [
+                -2,
+                4,
+                -5
+            ],
+            "scale": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "ground": {
+            "rotation": [
+                0,
+                0,
+                0
+            ],
+            "translation": [
+                4,
+                4,
+                2
+            ],
+            "scale": [
+                0.25,
+                0.25,
+                0.25
+            ]
+        }
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "blocking": 1
+            },
+            "model": "item/shield_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:item/sky_dimension/shield_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 1,
+                "blocking": 1
+            },
+            "model": "gm4:item/sky_dimension/shield_1_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:item/sky_dimension/shield_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2,
+                "blocking": 1
+            },
+            "model": "gm4:item/sky_dimension/shield_2_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "minecraft:item/shield"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3,
+                "blocking": 1
+            },
+            "model": "minecraft:item/shield_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 119
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/shield"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 119,
+                "blocking": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/shield_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 120
+            },
+            "model": "minecraft:item/shield"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 120,
+                "blocking": 1
+            },
+            "model": "minecraft:item/shield_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/shield"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "blocking": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/shield_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/shield"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "blocking": 1
+            },
+            "model": "minecraft:item/shield_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:item/sky_dimension/shield_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001,
+                "blocking": 1
+            },
+            "model": "gm4:item/sky_dimension/shield_1_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:item/sky_dimension/shield_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002,
+                "blocking": 1
+            },
+            "model": "gm4:item/sky_dimension/shield_2_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "minecraft:item/shield"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003,
+                "blocking": 1
+            },
+            "model": "minecraft:item/shield_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420119
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/shield"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420119,
+                "blocking": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/shield_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420120
+            },
+            "model": "minecraft:item/shield"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420120,
+                "blocking": 1
+            },
+            "model": "minecraft:item/shield_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/shield"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "blocking": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/shield_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/shield"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "blocking": 1
+            },
+            "model": "minecraft:item/shield_blocking"
+        }
+    ]
+}

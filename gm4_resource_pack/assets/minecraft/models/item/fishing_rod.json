@@ -1,0 +1,156 @@
+{
+    "parent": "item/handheld_rod",
+    "textures": {
+        "layer0": "item/fishing_rod"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "cast": 1
+            },
+            "model": "item/fishing_rod_cast"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/end_fishing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/fishing_rod"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2,
+                "cast": 1
+            },
+            "model": "minecraft:item/fishing_rod_cast"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 110
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/fishing_rod"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 110,
+                "cast": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/fishing_rod_cast"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 111
+            },
+            "model": "minecraft:item/fishing_rod"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 111,
+                "cast": 1
+            },
+            "model": "minecraft:item/fishing_rod_cast"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/fishing_rod"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "cast": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/fishing_rod_cast"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/fishing_rod"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "cast": 1
+            },
+            "model": "minecraft:item/fishing_rod_cast"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/end_fishing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/fishing_rod"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002,
+                "cast": 1
+            },
+            "model": "minecraft:item/fishing_rod_cast"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420110
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/fishing_rod"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420110,
+                "cast": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/fishing_rod_cast"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420111
+            },
+            "model": "minecraft:item/fishing_rod"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420111,
+                "cast": 1
+            },
+            "model": "minecraft:item/fishing_rod_cast"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/fishing_rod"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "cast": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/fishing_rod_cast"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/fishing_rod"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "cast": 1
+            },
+            "model": "minecraft:item/fishing_rod_cast"
+        }
+    ]
+}

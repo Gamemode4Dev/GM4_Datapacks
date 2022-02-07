@@ -1,0 +1,77 @@
+{
+    "parent": "minecraft:block/stone_button_inventory",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:block/block_compressors/block_compressor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:block/tinkering_compressors/tinkering_compressor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:block/ender_hoppers/ender_hopper"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "gm4:block/smelteries/smeltery"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "gm4:block/smelteries/smeltery_45"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6
+            },
+            "model": "minecraft:item/stone_button"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:block/block_compressors/block_compressor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:block/tinkering_compressors/tinkering_compressor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:block/ender_hoppers/ender_hopper"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "gm4:block/smelteries/smeltery"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "gm4:block/smelteries/smeltery_45"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006
+            },
+            "model": "minecraft:item/stone_button"
+        }
+    ]
+}

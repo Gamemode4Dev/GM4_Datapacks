@@ -1,0 +1,77 @@
+{
+    "parent": "minecraft:block/piston_inventory",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:block/master_crafting/master_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:gui/advancements/icon/tunnel_bores/tunnel_bores"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:gui/advancements/icon/block_compressors/block_compressor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/tunnel_bores"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/block_compressors"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6
+            },
+            "model": "minecraft:item/piston"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:block/master_crafting/master_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:gui/advancements/icon/tunnel_bores/tunnel_bores"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:gui/advancements/icon/block_compressors/block_compressor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/tunnel_bores"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/block_compressors"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006
+            },
+            "model": "minecraft:item/piston"
+        }
+    ]
+}

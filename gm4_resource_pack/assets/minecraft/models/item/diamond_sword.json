@@ -1,0 +1,464 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "minecraft:item/diamond_sword"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:gui/advancements/icon/end_fishing/end_fishing_swords"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:item/sky_dimension/diamond_sword_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:item/sky_dimension/diamond_sword_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 10
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 11
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 12
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 13
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 14
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 15
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 16
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_16"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 17
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 18
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 19
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 20
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 21
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 22
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 23
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 24
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 25
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 26
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 27
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 28
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 29
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 30
+            },
+            "model": "gm4:item/sky_dimension/diamond_sword_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 31
+            },
+            "model": "gm4:item/sky_dimension/diamond_sword_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 32
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 105
+            },
+            "model": "gm4:item/metallurgy/shamir/thorium/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 106
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 108
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 109
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 110
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 111
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 117
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 118
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:gui/advancements/icon/end_fishing/end_fishing_swords"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:item/sky_dimension/diamond_sword_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:item/sky_dimension/diamond_sword_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420010
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420011
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420012
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420013
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420014
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420015
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420016
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_16"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420017
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420018
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420019
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420020
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420021
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420022
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420023
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420024
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420025
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420026
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420027
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420028
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420029
+            },
+            "model": "gm4:item/end_fishing/swords/diamond_sword_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420030
+            },
+            "model": "gm4:item/sky_dimension/diamond_sword_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420031
+            },
+            "model": "gm4:item/sky_dimension/diamond_sword_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420032
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420105
+            },
+            "model": "gm4:item/metallurgy/shamir/thorium/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420106
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420108
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420109
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420110
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420111
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420117
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420118
+            },
+            "model": "minecraft:item/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/diamond_sword"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/diamond_sword"
+        }
+    ]
+}

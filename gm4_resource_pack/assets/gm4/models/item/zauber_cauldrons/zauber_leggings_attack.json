@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "gm4:item/zauber_cauldrons/zauber_leggings_attack"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/clock_54",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/curies_bismium/clock"
+    }
+}

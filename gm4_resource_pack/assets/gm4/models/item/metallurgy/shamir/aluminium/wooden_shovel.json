@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/wooden_shovel",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/aluminium/shovel"
+    }
+}

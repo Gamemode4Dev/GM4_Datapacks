@@ -1,0 +1,93 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/potion_overlay",
+        "layer1": "item/potion"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:item/zauber_cauldrons/wormhole_in_a_bottle"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:gui/advancements/icon/potion_liquids/potion_liquids"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:gui/advancements/icon/lightning_in_a_bottle/lightning_in_a_bottle_drink"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "gm4:item/lightning_in_a_bottle/lightning_in_a_bottle"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/potion_liquids"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/zauber_liquids"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 7
+            },
+            "model": "minecraft:item/potion"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:item/zauber_cauldrons/wormhole_in_a_bottle"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:gui/advancements/icon/potion_liquids/potion_liquids"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:gui/advancements/icon/lightning_in_a_bottle/lightning_in_a_bottle_drink"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "gm4:item/lightning_in_a_bottle/lightning_in_a_bottle"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/potion_liquids"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/zauber_liquids"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420007
+            },
+            "model": "minecraft:item/potion"
+        }
+    ]
+}

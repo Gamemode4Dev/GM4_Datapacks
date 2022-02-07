@@ -1,0 +1,52 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"6": "gm4:item/relocators/relocated_teleportation_jammer_eye",
+		"particle": "gm4:item/relocators/relocator_outer",
+		"outer_down": "gm4:item/relocators/relocator_outer",
+		"cube_side": "gm4:item/relocators/relocated_teleportation_jammer_side",
+		"cube_top": "gm4:item/relocators/relocated_teleportation_jammer_top",
+		"cube_bottom": "gm4:item/relocators/relocated_custom_crafter_bottom"
+	},
+	"elements": [
+		{
+			"name": "outer",
+			"from": [2, 2, 2],
+			"to": [14, 14, 14],
+			"faces": {
+				"north": {"uv": [2, 2, 14, 14], "texture": "#outer_down", "cullface": "north"},
+				"east": {"uv": [2, 2, 14, 14], "texture": "#outer_down", "cullface": "east"},
+				"south": {"uv": [2, 2, 14, 14], "texture": "#outer_down", "cullface": "south"},
+				"west": {"uv": [2, 2, 14, 14], "texture": "#outer_down", "cullface": "west"},
+				"up": {"uv": [2, 2, 14, 14], "texture": "#outer_down", "cullface": "up"},
+				"down": {"uv": [2, 2, 14, 14], "texture": "#outer_down", "cullface": "down"}
+			}
+		},
+		{
+			"name": "base",
+			"from": [3, 3, 3],
+			"to": [13, 13, 13],
+			"faces": {
+				"north": {"uv": [3, 3, 13, 13], "texture": "#cube_side", "cullface": "north"},
+				"east": {"uv": [3, 3, 13, 13], "texture": "#cube_side", "cullface": "east"},
+				"south": {"uv": [3, 3, 13, 13], "texture": "#cube_side", "cullface": "south"},
+				"west": {"uv": [3, 3, 13, 13], "texture": "#cube_side", "cullface": "west"},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#cube_top", "cullface": "up"},
+				"down": {"uv": [3, 3, 13, 13], "texture": "#cube_bottom", "cullface": "down"}
+			}
+		},
+		{
+			"name": "eye",
+			"from": [6, 13, 6],
+			"to": [10, 16, 10],
+			"faces": {
+				"north": {"uv": [0, 9, 4, 12], "texture": "#6", "cullface": "north"},
+				"east": {"uv": [0, 6, 4, 9], "texture": "#6", "cullface": "east"},
+				"south": {"uv": [0, 3, 4, 6], "texture": "#6", "cullface": "south"},
+				"west": {"uv": [0, 0, 4, 3], "texture": "#6", "cullface": "west"},
+				"up": {"uv": [12, 0, 16, 4], "texture": "#6", "cullface": "up"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#6"}
+			}
+		}
+	]
+}

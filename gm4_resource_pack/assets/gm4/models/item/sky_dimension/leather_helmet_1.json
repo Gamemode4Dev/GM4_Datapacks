@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "gm4:item/sky_dimension/leather_helmet_1",
+        "layer1": "gm4:item/sky_dimension/leather_helmet_1_overlay"
+    }
+}

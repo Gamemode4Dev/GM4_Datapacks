@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/leather_leggings",
+    "textures": {
+        "layer2": "gm4:item/metallurgy/shamir/curies_bismium/leggings_leather"
+    }
+}

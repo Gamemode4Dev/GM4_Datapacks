@@ -1,0 +1,977 @@
+{
+    "parent": "minecraft:item/template_skull",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:gui/advancements/icon/enderman_support_class/enderman_support_class"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "gm4:gui/advancements/icon/heart_canisters/heart_canisters_tier_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "gm4:gui/advancements/icon/heart_canisters/heart_canisters_tier_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6
+            },
+            "model": "gm4:gui/advancements/icon/heart_canisters/heart_canisters_max"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 7
+            },
+            "model": "gm4:item/heart_canisters/heart_canister_tier_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 8
+            },
+            "model": "gm4:item/heart_canisters/heart_canister_tier_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 9
+            },
+            "model": "gm4:item/scuba_gear/scuba_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 10
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 12
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_speed"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 13
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_regeneration"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 14
+            },
+            "model": "gm4:item/end_fishing/enderpuff"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 15
+            },
+            "model": "gm4:gui/advancements/icon/tinkering_compressors/tinkering_compressor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 16
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 17
+            },
+            "model": "gm4:item/metallurgy/lump/bismutite_lump"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 18
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 19
+            },
+            "model": "gm4:item/metallurgy/lump/baryte_lump"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 20
+            },
+            "model": "gm4:item/metallurgy/lump/thorianite_lump"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 21
+            },
+            "model": "gm4:item/metallurgy/lump/bauxite_lump"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 22
+            },
+            "model": "gm4:item/metallurgy/band/mundane_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 23
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 27
+            },
+            "model": "gm4:item/relocators/relocator_empty"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 28
+            },
+            "model": "gm4:item/relocators/relocator_custom_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 29
+            },
+            "model": "gm4:item/relocators/relocator_master_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 30
+            },
+            "model": "gm4:item/relocators/relocator_block_compressor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 31
+            },
+            "model": "gm4:item/relocators/relocator_ender_hopper"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 32
+            },
+            "model": "gm4:item/relocators/relocator_liquid_tank"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 33
+            },
+            "model": "gm4:item/relocators/relocator_smeltery"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 34
+            },
+            "model": "gm4:item/relocators/relocator_enchantment_extractor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 35
+            },
+            "model": "gm4:item/relocators/relocator_disassembler"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 36
+            },
+            "model": "gm4:item/relocators/relocator_tinkering_compressor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 37
+            },
+            "model": "gm4:gui/advancements/icon/relocators/relocators"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 38
+            },
+            "model": "gm4:item/relocators/relocator_teleportation_jammer"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 39
+            },
+            "model": "gm4:item/relocators/relocator_teleportation_anchor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 40
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 41
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_grass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 42
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_dirt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 43
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_stone"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 44
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_stone_bricks"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 45
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_crafting_table"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 46
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_netherrack"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 47
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_invisible"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 48
+            },
+            "model": "gm4:gui/advancements/icon/scuba_gear/scuba_gear"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 49
+            },
+            "model": "gm4:gui/advancements/icon/metallurgy/metallurgy_blast_ore"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 50
+            },
+            "model": "gm4:gui/advancements/icon/metallurgy/metallurgy_cast"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 51
+            },
+            "model": "gm4:item/sky_dimension/aetherpuff"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 52
+            },
+            "model": "gm4:gui/advancements/icon/sky_dimension/sky_dimension_aetherpuff_gift"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 53
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 54
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_harming"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 55
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_health"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 56
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_leaping"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 57
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_poison"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 58
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_strength"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 59
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/enderman_support_class"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 60
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/heart_canisters"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 61
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 100
+            },
+            "model": "gm4:item/metallurgy/band/spiraculum_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101
+            },
+            "model": "gm4:item/metallurgy/band/sensus_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 103
+            },
+            "model": "gm4:item/metallurgy/band/helious_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 104
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 105
+            },
+            "model": "gm4:item/metallurgy/band/ender_bolt_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 106
+            },
+            "model": "gm4:item/metallurgy/band/defuse_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 107
+            },
+            "model": "gm4:item/metallurgy/band/forterra_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 108
+            },
+            "model": "gm4:item/metallurgy/band/musical_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 109
+            },
+            "model": "gm4:item/metallurgy/band/gemini_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 110
+            },
+            "model": "gm4:item/metallurgy/band/hypexperia_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 111
+            },
+            "model": "gm4:item/metallurgy/band/tinker_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 112
+            },
+            "model": "gm4:item/metallurgy/band/arborenda_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 113
+            },
+            "model": "gm4:item/metallurgy/band/moneo_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 114
+            },
+            "model": "gm4:item/metallurgy/band/lumos_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115
+            },
+            "model": "gm4:item/metallurgy/band/fulcio_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116
+            },
+            "model": "gm4:item/metallurgy/band/corripio_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 117
+            },
+            "model": "gm4:item/metallurgy/band/percurro_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 118
+            },
+            "model": "gm4:item/metallurgy/band/celaro_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 119
+            },
+            "model": "gm4:item/metallurgy/band/vigere_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 120
+            },
+            "model": "gm4:item/metallurgy/band/audere_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 121
+            },
+            "model": "gm4:item/metallurgy/band/vecto_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 122
+            },
+            "model": "gm4:item/metallurgy/band/iacio_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 123
+            },
+            "model": "gm4:item/metallurgy/band/vibro_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/band/animi_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:gui/advancements/icon/enderman_support_class/enderman_support_class"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "gm4:gui/advancements/icon/heart_canisters/heart_canisters_tier_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "gm4:gui/advancements/icon/heart_canisters/heart_canisters_tier_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006
+            },
+            "model": "gm4:gui/advancements/icon/heart_canisters/heart_canisters_max"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420007
+            },
+            "model": "gm4:item/heart_canisters/heart_canister_tier_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420008
+            },
+            "model": "gm4:item/heart_canisters/heart_canister_tier_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420009
+            },
+            "model": "gm4:item/scuba_gear/scuba_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420010
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420012
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_speed"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420013
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_regeneration"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420014
+            },
+            "model": "gm4:item/end_fishing/enderpuff"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420015
+            },
+            "model": "gm4:gui/advancements/icon/tinkering_compressors/tinkering_compressor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420016
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420017
+            },
+            "model": "gm4:item/metallurgy/lump/bismutite_lump"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420018
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420019
+            },
+            "model": "gm4:item/metallurgy/lump/baryte_lump"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420020
+            },
+            "model": "gm4:item/metallurgy/lump/thorianite_lump"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420021
+            },
+            "model": "gm4:item/metallurgy/lump/bauxite_lump"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420022
+            },
+            "model": "gm4:item/metallurgy/band/mundane_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420023
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420027
+            },
+            "model": "gm4:item/relocators/relocator_empty"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420028
+            },
+            "model": "gm4:item/relocators/relocator_custom_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420029
+            },
+            "model": "gm4:item/relocators/relocator_master_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420030
+            },
+            "model": "gm4:item/relocators/relocator_block_compressor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420031
+            },
+            "model": "gm4:item/relocators/relocator_ender_hopper"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420032
+            },
+            "model": "gm4:item/relocators/relocator_liquid_tank"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420033
+            },
+            "model": "gm4:item/relocators/relocator_smeltery"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420034
+            },
+            "model": "gm4:item/relocators/relocator_enchantment_extractor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420035
+            },
+            "model": "gm4:item/relocators/relocator_disassembler"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420036
+            },
+            "model": "gm4:item/relocators/relocator_tinkering_compressor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420037
+            },
+            "model": "gm4:gui/advancements/icon/relocators/relocators"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420038
+            },
+            "model": "gm4:item/relocators/relocator_teleportation_jammer"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420039
+            },
+            "model": "gm4:item/relocators/relocator_teleportation_anchor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420040
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420041
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_grass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420042
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_dirt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420043
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_stone"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420044
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_stone_bricks"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420045
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_crafting_table"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420046
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_netherrack"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420047
+            },
+            "model": "gm4:item/tnt_landmines/tnt_landmine_invisible"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420048
+            },
+            "model": "gm4:gui/advancements/icon/scuba_gear/scuba_gear"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420049
+            },
+            "model": "gm4:gui/advancements/icon/metallurgy/metallurgy_blast_ore"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420050
+            },
+            "model": "gm4:gui/advancements/icon/metallurgy/metallurgy_cast"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420051
+            },
+            "model": "gm4:item/sky_dimension/aetherpuff"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420052
+            },
+            "model": "gm4:gui/advancements/icon/sky_dimension/sky_dimension_aetherpuff_gift"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420053
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420054
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_harming"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420055
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_health"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420056
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_leaping"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420057
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_poison"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420058
+            },
+            "model": "gm4:item/zauber_cauldrons/crystal_of_strength"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420059
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/enderman_support_class"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420060
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/heart_canisters"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420061
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420100
+            },
+            "model": "gm4:item/metallurgy/band/spiraculum_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101
+            },
+            "model": "gm4:item/metallurgy/band/sensus_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420103
+            },
+            "model": "gm4:item/metallurgy/band/helious_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420104
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420105
+            },
+            "model": "gm4:item/metallurgy/band/ender_bolt_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420106
+            },
+            "model": "gm4:item/metallurgy/band/defuse_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420107
+            },
+            "model": "gm4:item/metallurgy/band/forterra_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420108
+            },
+            "model": "gm4:item/metallurgy/band/musical_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420109
+            },
+            "model": "gm4:item/metallurgy/band/gemini_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420110
+            },
+            "model": "gm4:item/metallurgy/band/hypexperia_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420111
+            },
+            "model": "gm4:item/metallurgy/band/tinker_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420112
+            },
+            "model": "gm4:item/metallurgy/band/arborenda_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420113
+            },
+            "model": "gm4:item/metallurgy/band/moneo_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420114
+            },
+            "model": "gm4:item/metallurgy/band/lumos_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115
+            },
+            "model": "gm4:item/metallurgy/band/fulcio_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116
+            },
+            "model": "gm4:item/metallurgy/band/corripio_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420117
+            },
+            "model": "gm4:item/metallurgy/band/percurro_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420118
+            },
+            "model": "gm4:item/metallurgy/band/celaro_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420119
+            },
+            "model": "gm4:item/metallurgy/band/vigere_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420120
+            },
+            "model": "gm4:item/metallurgy/band/audere_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420121
+            },
+            "model": "gm4:item/metallurgy/band/vecto_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420122
+            },
+            "model": "gm4:item/metallurgy/band/iacio_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420123
+            },
+            "model": "gm4:item/metallurgy/band/vibro_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/band/animi_band"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/player_head"
+        }
+    ]
+}

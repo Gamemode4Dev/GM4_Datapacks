@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "gm4:item/orb_of_ankou/orb_of_ankou",
+        "layer1": "gm4:item/orb_of_ankou/orb_of_ankou_overlay"
+    }
+}

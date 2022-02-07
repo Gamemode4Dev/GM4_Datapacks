@@ -1,0 +1,89 @@
+{
+    "parent": "minecraft:block/tnt",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:block/disassemblers/disassembler"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:gui/advancements/icon/disassemblers/disassemblers"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/disassemblers"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/tnt_landmines"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "minecraft:item/tnt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 40
+            },
+            "model": "gm4:entity/tnt_landmines/tnt_landmine"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 41
+            },
+            "model": "minecraft:item/tnt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:block/disassemblers/disassembler"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:gui/advancements/icon/disassemblers/disassemblers"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/disassemblers"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/tnt_landmines"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "minecraft:item/tnt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420040
+            },
+            "model": "gm4:entity/tnt_landmines/tnt_landmine"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420041
+            },
+            "model": "minecraft:item/tnt"
+        }
+    ]
+}

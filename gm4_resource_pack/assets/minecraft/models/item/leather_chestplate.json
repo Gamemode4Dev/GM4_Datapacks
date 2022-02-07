@@ -1,0 +1,105 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/leather_chestplate",
+        "layer1": "item/leather_chestplate_overlay"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 104
+            },
+            "model": "minecraft:item/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 107
+            },
+            "model": "minecraft:item/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 122
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 123
+            },
+            "model": "minecraft:item/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420104
+            },
+            "model": "minecraft:item/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420107
+            },
+            "model": "minecraft:item/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420122
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420123
+            },
+            "model": "minecraft:item/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/leather_chestplate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/leather_chestplate"
+        }
+    ]
+}

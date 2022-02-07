@@ -1,0 +1,188 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "minecraft:item/iron_axe"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:item/sky_dimension/iron_axe_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:item/sky_dimension/iron_axe_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "minecraft:item/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 110
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 111
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 112
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 113
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 114
+            },
+            "model": "minecraft:item/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 117
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 118
+            },
+            "model": "minecraft:item/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 120
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 121
+            },
+            "model": "minecraft:item/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:item/sky_dimension/iron_axe_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:item/sky_dimension/iron_axe_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "minecraft:item/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420110
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420111
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420112
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420113
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420114
+            },
+            "model": "minecraft:item/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116
+            },
+            "model": "gm4:item/metallurgy/shamir/bismuth/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420117
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420118
+            },
+            "model": "minecraft:item/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420120
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420121
+            },
+            "model": "minecraft:item/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/iron_axe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/iron_axe"
+        }
+    ]
+}

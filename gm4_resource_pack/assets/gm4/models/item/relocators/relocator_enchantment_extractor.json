@@ -1,0 +1,29 @@
+{
+        "parent": "gm4:item/relocators/relocator_base",
+        "textures": {
+                "particle": "gm4:item/relocators/relocator_outer",
+                "outer_down": "gm4:item/relocators/relocator_outer",
+                "outer_up": "gm4:item/relocators/relocator_outer",
+                "outer_north": "gm4:item/relocators/relocator_outer",
+                "outer_east": "gm4:item/relocators/relocator_outer",
+                "outer_south": "gm4:item/relocators/relocator_outer",
+                "outer_west": "gm4:item/relocators/relocator_outer",
+                "cube_down": "gm4:item/relocators/relocated_custom_crafter_bottom",
+                "cube_up": "gm4:item/relocators/relocated_enchantment_extractor_top",
+                "cube_north": "gm4:item/relocators/relocated_enchantment_extractor_side",
+                "cube_east": "gm4:item/relocators/relocated_enchantment_extractor_side",
+                "cube_south": "gm4:item/relocators/relocated_enchantment_extractor_side",
+                "cube_west": "gm4:item/relocators/relocated_enchantment_extractor_side",
+                "cube_input_up": "gm4:item/relocators/blank",
+                "cube_input_north": "gm4:item/relocators/blank",
+                "cube_input_east": "gm4:item/relocators/blank",
+                "cube_input_south": "gm4:item/relocators/blank",
+                "cube_input_west": "gm4:item/relocators/blank",
+                "core_down": "gm4:item/relocators/relocator_core",
+                "core_up": "gm4:item/relocators/relocator_core",
+                "core_north": "gm4:item/relocators/relocator_core",
+                "core_east": "gm4:item/relocators/relocator_core",
+                "core_south": "gm4:item/relocators/relocator_core",
+                "core_west": "gm4:item/relocators/relocator_core"
+        }
+}

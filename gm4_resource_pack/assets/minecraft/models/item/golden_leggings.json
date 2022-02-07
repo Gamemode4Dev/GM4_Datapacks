@@ -1,0 +1,164 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/golden_leggings"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_leggings_health"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_leggings_attack"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_leggings_speed"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_leggings_armor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6
+            },
+            "model": "minecraft:item/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 7
+            },
+            "model": "gm4:item/sky_dimension/golden_leggings_7"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 8
+            },
+            "model": "minecraft:item/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 104
+            },
+            "model": "minecraft:item/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 107
+            },
+            "model": "minecraft:item/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_leggings_health"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_leggings_attack"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_leggings_speed"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "gm4:item/zauber_cauldrons/zauber_leggings_armor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006
+            },
+            "model": "minecraft:item/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420007
+            },
+            "model": "gm4:item/sky_dimension/golden_leggings_7"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420008
+            },
+            "model": "minecraft:item/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420104
+            },
+            "model": "minecraft:item/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420107
+            },
+            "model": "minecraft:item/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/golden_leggings"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/golden_leggings"
+        }
+    ]
+}

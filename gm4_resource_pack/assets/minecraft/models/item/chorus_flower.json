@@ -1,0 +1,29 @@
+{
+    "parent": "minecraft:block/chorus_flower",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:block/smelteries/chorus_fruit_display"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/chorus_flower"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:block/smelteries/chorus_fruit_display"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/chorus_flower"
+        }
+    ]
+}

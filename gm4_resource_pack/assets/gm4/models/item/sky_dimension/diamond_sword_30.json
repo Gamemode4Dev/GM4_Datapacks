@@ -1,0 +1,76 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "gm4:item/sky_dimension/diamond_sword_30"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [
+                0,
+                -90,
+                55
+            ],
+            "translation": [
+                0,
+                6.1,
+                0.5
+            ],
+            "scale": [
+                1.0285,
+                1.0285,
+                1.0285
+            ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [
+                0,
+                90,
+                -55
+            ],
+            "translation": [
+                0,
+                6.1,
+                0.5
+            ],
+            "scale": [
+                1.0285,
+                1.0285,
+                1.0285
+            ]
+        },
+        "firstperson_righthand": {
+            "rotation": [
+                0,
+                -90,
+                25
+            ],
+            "translation": [
+                1.13,
+                3.2,
+                1.13
+            ],
+            "scale": [
+                0.8228,
+                0.8228,
+                0.8228
+            ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [
+                0,
+                90,
+                -25
+            ],
+            "translation": [
+                1.13,
+                3.2,
+                1.13
+            ],
+            "scale": [
+                0.8228,
+                0.8228,
+                0.8228
+            ]
+        }
+    }
+}

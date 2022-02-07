@@ -1,0 +1,9 @@
+{
+    "parent": "gm4:block/cube",
+    "textures": {
+        "side": "gm4:block/disassembler_side",
+        "top": "gm4:block/disassembler_top",
+        "front": "gm4:block/disassembler_side",
+        "bottom": "gm4:block/master_crafter_bottom"
+    }
+}

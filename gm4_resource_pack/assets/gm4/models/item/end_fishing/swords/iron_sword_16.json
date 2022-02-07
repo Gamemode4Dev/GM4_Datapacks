@@ -1,0 +1,76 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "gm4:item/end_fishing/swords/iron_sword_16"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [
+                0,
+                -90,
+                55
+            ],
+            "translation": [
+                0,
+                3.1,
+                0.73
+            ],
+            "scale": [
+                0.7395,
+                0.7395,
+                0.7395
+            ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [
+                0,
+                90,
+                -55
+            ],
+            "translation": [
+                0,
+                3.1,
+                0.73
+            ],
+            "scale": [
+                0.7395,
+                0.7395,
+                0.7395
+            ]
+        },
+        "firstperson_righthand": {
+            "rotation": [
+                0,
+                -90,
+                25
+            ],
+            "translation": [
+                1.13,
+                3.2,
+                1.13
+            ],
+            "scale": [
+                0.5916,
+                0.5916,
+                0.5916
+            ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [
+                0,
+                90,
+                -25
+            ],
+            "translation": [
+                1.13,
+                3.2,
+                1.13
+            ],
+            "scale": [
+                0.5916,
+                0.5916,
+                0.5916
+            ]
+        }
+    }
+}

@@ -1,0 +1,476 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/flint"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:gui/advancements/icon/orb_of_ankou/orb_of_ankou_soul_shard"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:item/better_fire/charred_arrowhead"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "minecraft:item/flint"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 200
+            },
+            "model": "gm4:item/orb_of_ankou/shards/aggressive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 201
+            },
+            "model": "gm4:item/orb_of_ankou/shards/agile"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 202
+            },
+            "model": "gm4:item/orb_of_ankou/shards/anchoring"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 203
+            },
+            "model": "gm4:item/orb_of_ankou/shards/bargaining"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 204
+            },
+            "model": "gm4:item/orb_of_ankou/shards/bashing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 205
+            },
+            "model": "gm4:item/orb_of_ankou/shards/blasting"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 206
+            },
+            "model": "gm4:item/orb_of_ankou/shards/blinding"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 207
+            },
+            "model": "gm4:item/orb_of_ankou/shards/bounding"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 208
+            },
+            "model": "gm4:item/orb_of_ankou/shards/bubbly"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 209
+            },
+            "model": "gm4:item/orb_of_ankou/shards/conjuring"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 210
+            },
+            "model": "gm4:item/orb_of_ankou/shards/depriving"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 211
+            },
+            "model": "gm4:item/orb_of_ankou/shards/draining"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 212
+            },
+            "model": "gm4:item/orb_of_ankou/shards/enduring"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 213
+            },
+            "model": "gm4:item/orb_of_ankou/shards/expeditious"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 214
+            },
+            "model": "gm4:item/orb_of_ankou/shards/feathery"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 215
+            },
+            "model": "gm4:item/orb_of_ankou/shards/gazing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 216
+            },
+            "model": "gm4:item/orb_of_ankou/shards/gliding"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 217
+            },
+            "model": "gm4:item/orb_of_ankou/shards/hawkeye"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 218
+            },
+            "model": "gm4:item/orb_of_ankou/shards/incombustible"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 219
+            },
+            "model": "gm4:item/orb_of_ankou/shards/lifeless"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 220
+            },
+            "model": "gm4:item/orb_of_ankou/shards/neutralizing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 221
+            },
+            "model": "gm4:item/orb_of_ankou/shards/phasing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 222
+            },
+            "model": "gm4:item/orb_of_ankou/shards/pricking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 223
+            },
+            "model": "gm4:item/orb_of_ankou/shards/retreating"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 224
+            },
+            "model": "gm4:item/orb_of_ankou/shards/rushing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 225
+            },
+            "model": "gm4:item/orb_of_ankou/shards/scaling"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 226
+            },
+            "model": "gm4:item/orb_of_ankou/shards/soaring"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 227
+            },
+            "model": "gm4:item/orb_of_ankou/shards/synergetic"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 228
+            },
+            "model": "gm4:item/orb_of_ankou/shards/vanishing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 229
+            },
+            "model": "gm4:item/orb_of_ankou/shards/venomous"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 230
+            },
+            "model": "gm4:item/orb_of_ankou/shards/volatile"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 231
+            },
+            "model": "gm4:item/orb_of_ankou/shards/withering"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 232
+            },
+            "model": "gm4:item/orb_of_ankou/shards/striding"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 233
+            },
+            "model": "gm4:item/orb_of_ankou/shards/freezing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 234
+            },
+            "model": "gm4:item/orb_of_ankou/shards/feigning"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 235
+            },
+            "model": "minecraft:item/flint"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:gui/advancements/icon/orb_of_ankou/orb_of_ankou_soul_shard"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:item/better_fire/charred_arrowhead"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "minecraft:item/flint"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420200
+            },
+            "model": "gm4:item/orb_of_ankou/shards/aggressive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420201
+            },
+            "model": "gm4:item/orb_of_ankou/shards/agile"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420202
+            },
+            "model": "gm4:item/orb_of_ankou/shards/anchoring"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420203
+            },
+            "model": "gm4:item/orb_of_ankou/shards/bargaining"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420204
+            },
+            "model": "gm4:item/orb_of_ankou/shards/bashing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420205
+            },
+            "model": "gm4:item/orb_of_ankou/shards/blasting"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420206
+            },
+            "model": "gm4:item/orb_of_ankou/shards/blinding"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420207
+            },
+            "model": "gm4:item/orb_of_ankou/shards/bounding"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420208
+            },
+            "model": "gm4:item/orb_of_ankou/shards/bubbly"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420209
+            },
+            "model": "gm4:item/orb_of_ankou/shards/conjuring"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420210
+            },
+            "model": "gm4:item/orb_of_ankou/shards/depriving"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420211
+            },
+            "model": "gm4:item/orb_of_ankou/shards/draining"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420212
+            },
+            "model": "gm4:item/orb_of_ankou/shards/enduring"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420213
+            },
+            "model": "gm4:item/orb_of_ankou/shards/expeditious"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420214
+            },
+            "model": "gm4:item/orb_of_ankou/shards/feathery"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420215
+            },
+            "model": "gm4:item/orb_of_ankou/shards/gazing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420216
+            },
+            "model": "gm4:item/orb_of_ankou/shards/gliding"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420217
+            },
+            "model": "gm4:item/orb_of_ankou/shards/hawkeye"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420218
+            },
+            "model": "gm4:item/orb_of_ankou/shards/incombustible"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420219
+            },
+            "model": "gm4:item/orb_of_ankou/shards/lifeless"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420220
+            },
+            "model": "gm4:item/orb_of_ankou/shards/neutralizing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420221
+            },
+            "model": "gm4:item/orb_of_ankou/shards/phasing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420222
+            },
+            "model": "gm4:item/orb_of_ankou/shards/pricking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420223
+            },
+            "model": "gm4:item/orb_of_ankou/shards/retreating"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420224
+            },
+            "model": "gm4:item/orb_of_ankou/shards/rushing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420225
+            },
+            "model": "gm4:item/orb_of_ankou/shards/scaling"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420226
+            },
+            "model": "gm4:item/orb_of_ankou/shards/soaring"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420227
+            },
+            "model": "gm4:item/orb_of_ankou/shards/synergetic"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420228
+            },
+            "model": "gm4:item/orb_of_ankou/shards/vanishing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420229
+            },
+            "model": "gm4:item/orb_of_ankou/shards/venomous"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420230
+            },
+            "model": "gm4:item/orb_of_ankou/shards/volatile"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420231
+            },
+            "model": "gm4:item/orb_of_ankou/shards/withering"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420232
+            },
+            "model": "gm4:item/orb_of_ankou/shards/striding"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420233
+            },
+            "model": "gm4:item/orb_of_ankou/shards/freezing"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420234
+            },
+            "model": "gm4:item/orb_of_ankou/shards/feigning"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420235
+            },
+            "model": "minecraft:item/flint"
+        }
+    ]
+}

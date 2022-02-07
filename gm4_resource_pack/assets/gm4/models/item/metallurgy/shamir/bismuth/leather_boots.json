@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/leather_boots",
+    "textures": {
+        "layer2": "gm4:item/metallurgy/shamir/bismuth/boots"
+    }
+}

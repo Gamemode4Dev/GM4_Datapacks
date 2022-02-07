@@ -1,0 +1,29 @@
+{
+    "parent": "minecraft:block/end_portal_frame",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:block/teleportation_anchors/teleportation_anchor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/end_portal_frame"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:block/teleportation_anchors/teleportation_anchor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/end_portal_frame"
+        }
+    ]
+}

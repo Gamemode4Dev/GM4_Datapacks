@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/bucket"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 100
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/bucket"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101
+            },
+            "model": "minecraft:item/bucket"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420100
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/bucket"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101
+            },
+            "model": "minecraft:item/bucket"
+        }
+    ]
+}

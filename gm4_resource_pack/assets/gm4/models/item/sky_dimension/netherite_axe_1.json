@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "gm4:item/sky_dimension/netherite_axe_1"
+    }
+}

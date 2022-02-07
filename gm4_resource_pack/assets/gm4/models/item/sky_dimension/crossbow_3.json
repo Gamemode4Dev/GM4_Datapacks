@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/crossbow",
+    "textures": {
+        "layer0": "gm4:item/sky_dimension/crossbow_standby_3"
+    }
+}

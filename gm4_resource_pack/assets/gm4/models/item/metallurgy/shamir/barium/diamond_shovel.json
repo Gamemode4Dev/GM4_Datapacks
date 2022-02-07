@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/diamond_shovel",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/barium/shovel"
+    }
+}

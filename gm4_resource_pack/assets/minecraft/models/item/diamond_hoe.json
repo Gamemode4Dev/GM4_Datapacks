@@ -1,0 +1,176 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "minecraft:item/diamond_hoe"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:item/sky_dimension/diamond_hoe_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 20
+            },
+            "model": "gm4:item/sky_dimension/diamond_hoe_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 21
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 109
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 110
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 111
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 112
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 113
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 114
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 120
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 121
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:item/sky_dimension/diamond_hoe_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420020
+            },
+            "model": "gm4:item/sky_dimension/diamond_hoe_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420021
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420109
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420110
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420111
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420112
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420113
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420114
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420120
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420121
+            },
+            "model": "minecraft:item/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/diamond_hoe"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/diamond_hoe"
+        }
+    ]
+}

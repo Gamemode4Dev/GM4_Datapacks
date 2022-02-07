@@ -1,0 +1,29 @@
+{
+    "parent": "minecraft:block/gray_stained_glass",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:block/smelteries/smeltery_glass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/gray_stained_glass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:block/smelteries/smeltery_glass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/gray_stained_glass"
+        }
+    ]
+}

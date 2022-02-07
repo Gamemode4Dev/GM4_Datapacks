@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/bow_pulling_0",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/curies_bismium/bow"
+    }
+}

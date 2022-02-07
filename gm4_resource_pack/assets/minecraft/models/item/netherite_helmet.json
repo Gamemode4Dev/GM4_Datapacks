@@ -1,0 +1,224 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/netherite_helmet"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 10
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 11
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 12
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 13
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 14
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 15
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 16
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_16"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 17
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 18
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 19
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 20
+            },
+            "model": "gm4:item/sky_dimension/netherite_helmet_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 21
+            },
+            "model": "minecraft:item/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 104
+            },
+            "model": "minecraft:item/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 107
+            },
+            "model": "minecraft:item/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420010
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420011
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420012
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420013
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420014
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420015
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420016
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_16"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420017
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420018
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420019
+            },
+            "model": "gm4:item/end_fishing/armor/netherite_helmet_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420020
+            },
+            "model": "gm4:item/sky_dimension/netherite_helmet_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420021
+            },
+            "model": "minecraft:item/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420103
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420104
+            },
+            "model": "minecraft:item/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420106
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420107
+            },
+            "model": "minecraft:item/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/netherite_helmet"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/netherite_helmet"
+        }
+    ]
+}

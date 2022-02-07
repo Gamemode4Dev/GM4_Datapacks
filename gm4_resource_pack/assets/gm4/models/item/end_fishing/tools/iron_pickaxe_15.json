@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "gm4:item/end_fishing/tools/iron_pickaxe_15"
+    }
+}

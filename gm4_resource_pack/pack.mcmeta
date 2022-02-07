@@ -1,0 +1,39 @@
+{
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Resource Pack",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "aqua"
+            }
+        ]
+    },
+    "module_name": "Resource Pack",
+    "module_id": "resource_pack",
+    "site_description": "Use our resource pack for the definite Gamemode 4 experience! This resource pack does not touch vanilla textures, but adds textures and models to most Gamemode 4 blocks, items and mobs.",
+    "libraries": [
+        "gm4_translations"
+    ],
+    "credits": {
+        "Textures": [
+            "Memo",
+            "Hozz"
+        ],
+        "Translations": [
+            "ToffeeMax",
+            "SarguCopperpot",
+            "TheRedCommander",
+            "KompetenterKeks"
+        ],
+        "Management": [
+            "Andante",
+            "JP12",
+            "Misode"
+        ],
+        "Font Magic": [
+            "BluePsychoRanger"
+        ]
+    }
+}

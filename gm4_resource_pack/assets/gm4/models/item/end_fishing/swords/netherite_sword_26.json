@@ -1,0 +1,76 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "gm4:item/end_fishing/swords/netherite_sword_26"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [
+                0,
+                -90,
+                55
+            ],
+            "translation": [
+                0,
+                5.3,
+                0.5
+            ],
+            "scale": [
+                0.9265,
+                0.9265,
+                0.9265
+            ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [
+                0,
+                90,
+                -55
+            ],
+            "translation": [
+                0,
+                5.3,
+                0.5
+            ],
+            "scale": [
+                0.9265,
+                0.9265,
+                0.9265
+            ]
+        },
+        "firstperson_righthand": {
+            "rotation": [
+                0,
+                -90,
+                25
+            ],
+            "translation": [
+                1.13,
+                3.2,
+                1.13
+            ],
+            "scale": [
+                0.7412,
+                0.7412,
+                0.7412
+            ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [
+                0,
+                90,
+                -25
+            ],
+            "translation": [
+                1.13,
+                3.2,
+                1.13
+            ],
+            "scale": [
+                0.7412,
+                0.7412,
+                0.7412
+            ]
+        }
+    }
+}

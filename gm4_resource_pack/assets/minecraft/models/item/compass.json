@@ -1,0 +1,2978 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/compass_16"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "angle": 0.0
+            },
+            "model": "item/compass"
+        },
+        {
+            "predicate": {
+                "angle": 0.015625
+            },
+            "model": "item/compass_17"
+        },
+        {
+            "predicate": {
+                "angle": 0.046875
+            },
+            "model": "item/compass_18"
+        },
+        {
+            "predicate": {
+                "angle": 0.078125
+            },
+            "model": "item/compass_19"
+        },
+        {
+            "predicate": {
+                "angle": 0.109375
+            },
+            "model": "item/compass_20"
+        },
+        {
+            "predicate": {
+                "angle": 0.140625
+            },
+            "model": "item/compass_21"
+        },
+        {
+            "predicate": {
+                "angle": 0.171875
+            },
+            "model": "item/compass_22"
+        },
+        {
+            "predicate": {
+                "angle": 0.203125
+            },
+            "model": "item/compass_23"
+        },
+        {
+            "predicate": {
+                "angle": 0.234375
+            },
+            "model": "item/compass_24"
+        },
+        {
+            "predicate": {
+                "angle": 0.265625
+            },
+            "model": "item/compass_25"
+        },
+        {
+            "predicate": {
+                "angle": 0.296875
+            },
+            "model": "item/compass_26"
+        },
+        {
+            "predicate": {
+                "angle": 0.328125
+            },
+            "model": "item/compass_27"
+        },
+        {
+            "predicate": {
+                "angle": 0.359375
+            },
+            "model": "item/compass_28"
+        },
+        {
+            "predicate": {
+                "angle": 0.390625
+            },
+            "model": "item/compass_29"
+        },
+        {
+            "predicate": {
+                "angle": 0.421875
+            },
+            "model": "item/compass_30"
+        },
+        {
+            "predicate": {
+                "angle": 0.453125
+            },
+            "model": "item/compass_31"
+        },
+        {
+            "predicate": {
+                "angle": 0.484375
+            },
+            "model": "item/compass_00"
+        },
+        {
+            "predicate": {
+                "angle": 0.515625
+            },
+            "model": "item/compass_01"
+        },
+        {
+            "predicate": {
+                "angle": 0.546875
+            },
+            "model": "item/compass_02"
+        },
+        {
+            "predicate": {
+                "angle": 0.578125
+            },
+            "model": "item/compass_03"
+        },
+        {
+            "predicate": {
+                "angle": 0.609375
+            },
+            "model": "item/compass_04"
+        },
+        {
+            "predicate": {
+                "angle": 0.640625
+            },
+            "model": "item/compass_05"
+        },
+        {
+            "predicate": {
+                "angle": 0.671875
+            },
+            "model": "item/compass_06"
+        },
+        {
+            "predicate": {
+                "angle": 0.703125
+            },
+            "model": "item/compass_07"
+        },
+        {
+            "predicate": {
+                "angle": 0.734375
+            },
+            "model": "item/compass_08"
+        },
+        {
+            "predicate": {
+                "angle": 0.765625
+            },
+            "model": "item/compass_09"
+        },
+        {
+            "predicate": {
+                "angle": 0.796875
+            },
+            "model": "item/compass_10"
+        },
+        {
+            "predicate": {
+                "angle": 0.828125
+            },
+            "model": "item/compass_11"
+        },
+        {
+            "predicate": {
+                "angle": 0.859375
+            },
+            "model": "item/compass_12"
+        },
+        {
+            "predicate": {
+                "angle": 0.890625
+            },
+            "model": "item/compass_13"
+        },
+        {
+            "predicate": {
+                "angle": 0.921875
+            },
+            "model": "item/compass_14"
+        },
+        {
+            "predicate": {
+                "angle": 0.953125
+            },
+            "model": "item/compass_15"
+        },
+        {
+            "predicate": {
+                "angle": 0.984375
+            },
+            "model": "item/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.0
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.015625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.046875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.078125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.109375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.140625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.171875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.203125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.234375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.265625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.296875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.328125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.359375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.390625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.421875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.453125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.484375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_00"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.515625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_01"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.546875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_02"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.578125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_03"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.609375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_04"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.640625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_05"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.671875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_06"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.703125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_07"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.734375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_08"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.765625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_09"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.796875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.828125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.859375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.890625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.921875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.953125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101,
+                "angle": 0.984375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.0
+            },
+            "model": "minecraft:item/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.015625
+            },
+            "model": "minecraft:item/compass_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.046875
+            },
+            "model": "minecraft:item/compass_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.078125
+            },
+            "model": "minecraft:item/compass_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.109375
+            },
+            "model": "minecraft:item/compass_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.140625
+            },
+            "model": "minecraft:item/compass_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.171875
+            },
+            "model": "minecraft:item/compass_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.203125
+            },
+            "model": "minecraft:item/compass_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.234375
+            },
+            "model": "minecraft:item/compass_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.265625
+            },
+            "model": "minecraft:item/compass_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.296875
+            },
+            "model": "minecraft:item/compass_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.328125
+            },
+            "model": "minecraft:item/compass_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.359375
+            },
+            "model": "minecraft:item/compass_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.390625
+            },
+            "model": "minecraft:item/compass_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.421875
+            },
+            "model": "minecraft:item/compass_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.453125
+            },
+            "model": "minecraft:item/compass_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.484375
+            },
+            "model": "minecraft:item/compass_00"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.515625
+            },
+            "model": "minecraft:item/compass_01"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.546875
+            },
+            "model": "minecraft:item/compass_02"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.578125
+            },
+            "model": "minecraft:item/compass_03"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.609375
+            },
+            "model": "minecraft:item/compass_04"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.640625
+            },
+            "model": "minecraft:item/compass_05"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.671875
+            },
+            "model": "minecraft:item/compass_06"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.703125
+            },
+            "model": "minecraft:item/compass_07"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.734375
+            },
+            "model": "minecraft:item/compass_08"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.765625
+            },
+            "model": "minecraft:item/compass_09"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.796875
+            },
+            "model": "minecraft:item/compass_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.828125
+            },
+            "model": "minecraft:item/compass_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.859375
+            },
+            "model": "minecraft:item/compass_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.890625
+            },
+            "model": "minecraft:item/compass_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.921875
+            },
+            "model": "minecraft:item/compass_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.953125
+            },
+            "model": "minecraft:item/compass_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102,
+                "angle": 0.984375
+            },
+            "model": "minecraft:item/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.0
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.015625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.046875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.078125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.109375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.140625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.171875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.203125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.234375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.265625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.296875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.328125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.359375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.390625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.421875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.453125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.484375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_00"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.515625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_01"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.546875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_02"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.578125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_03"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.609375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_04"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.640625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_05"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.671875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_06"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.703125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_07"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.734375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_08"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.765625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_09"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.796875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.828125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.859375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.890625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.921875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.953125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115,
+                "angle": 0.984375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.0
+            },
+            "model": "minecraft:item/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.015625
+            },
+            "model": "minecraft:item/compass_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.046875
+            },
+            "model": "minecraft:item/compass_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.078125
+            },
+            "model": "minecraft:item/compass_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.109375
+            },
+            "model": "minecraft:item/compass_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.140625
+            },
+            "model": "minecraft:item/compass_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.171875
+            },
+            "model": "minecraft:item/compass_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.203125
+            },
+            "model": "minecraft:item/compass_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.234375
+            },
+            "model": "minecraft:item/compass_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.265625
+            },
+            "model": "minecraft:item/compass_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.296875
+            },
+            "model": "minecraft:item/compass_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.328125
+            },
+            "model": "minecraft:item/compass_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.359375
+            },
+            "model": "minecraft:item/compass_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.390625
+            },
+            "model": "minecraft:item/compass_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.421875
+            },
+            "model": "minecraft:item/compass_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.453125
+            },
+            "model": "minecraft:item/compass_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.484375
+            },
+            "model": "minecraft:item/compass_00"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.515625
+            },
+            "model": "minecraft:item/compass_01"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.546875
+            },
+            "model": "minecraft:item/compass_02"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.578125
+            },
+            "model": "minecraft:item/compass_03"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.609375
+            },
+            "model": "minecraft:item/compass_04"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.640625
+            },
+            "model": "minecraft:item/compass_05"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.671875
+            },
+            "model": "minecraft:item/compass_06"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.703125
+            },
+            "model": "minecraft:item/compass_07"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.734375
+            },
+            "model": "minecraft:item/compass_08"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.765625
+            },
+            "model": "minecraft:item/compass_09"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.796875
+            },
+            "model": "minecraft:item/compass_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.828125
+            },
+            "model": "minecraft:item/compass_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.859375
+            },
+            "model": "minecraft:item/compass_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.890625
+            },
+            "model": "minecraft:item/compass_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.921875
+            },
+            "model": "minecraft:item/compass_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.953125
+            },
+            "model": "minecraft:item/compass_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116,
+                "angle": 0.984375
+            },
+            "model": "minecraft:item/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.0
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.015625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.046875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.078125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.109375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.140625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.171875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.203125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.234375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.265625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.296875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.328125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.359375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.390625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.421875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.453125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.484375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_00"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.515625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_01"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.546875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_02"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.578125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_03"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.609375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_04"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.640625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_05"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.671875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_06"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.703125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_07"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.734375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_08"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.765625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_09"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.796875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.828125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.859375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.890625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.921875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.953125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "angle": 0.984375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.0
+            },
+            "model": "minecraft:item/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.015625
+            },
+            "model": "minecraft:item/compass_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.046875
+            },
+            "model": "minecraft:item/compass_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.078125
+            },
+            "model": "minecraft:item/compass_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.109375
+            },
+            "model": "minecraft:item/compass_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.140625
+            },
+            "model": "minecraft:item/compass_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.171875
+            },
+            "model": "minecraft:item/compass_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.203125
+            },
+            "model": "minecraft:item/compass_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.234375
+            },
+            "model": "minecraft:item/compass_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.265625
+            },
+            "model": "minecraft:item/compass_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.296875
+            },
+            "model": "minecraft:item/compass_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.328125
+            },
+            "model": "minecraft:item/compass_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.359375
+            },
+            "model": "minecraft:item/compass_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.390625
+            },
+            "model": "minecraft:item/compass_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.421875
+            },
+            "model": "minecraft:item/compass_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.453125
+            },
+            "model": "minecraft:item/compass_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.484375
+            },
+            "model": "minecraft:item/compass_00"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.515625
+            },
+            "model": "minecraft:item/compass_01"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.546875
+            },
+            "model": "minecraft:item/compass_02"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.578125
+            },
+            "model": "minecraft:item/compass_03"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.609375
+            },
+            "model": "minecraft:item/compass_04"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.640625
+            },
+            "model": "minecraft:item/compass_05"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.671875
+            },
+            "model": "minecraft:item/compass_06"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.703125
+            },
+            "model": "minecraft:item/compass_07"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.734375
+            },
+            "model": "minecraft:item/compass_08"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.765625
+            },
+            "model": "minecraft:item/compass_09"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.796875
+            },
+            "model": "minecraft:item/compass_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.828125
+            },
+            "model": "minecraft:item/compass_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.859375
+            },
+            "model": "minecraft:item/compass_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.890625
+            },
+            "model": "minecraft:item/compass_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.921875
+            },
+            "model": "minecraft:item/compass_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.953125
+            },
+            "model": "minecraft:item/compass_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "angle": 0.984375
+            },
+            "model": "minecraft:item/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.0
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.015625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.046875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.078125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.109375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.140625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.171875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.203125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.234375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.265625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.296875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.328125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.359375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.390625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.421875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.453125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.484375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_00"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.515625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_01"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.546875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_02"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.578125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_03"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.609375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_04"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.640625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_05"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.671875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_06"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.703125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_07"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.734375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_08"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.765625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_09"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.796875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.828125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.859375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.890625
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.921875
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.953125
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101,
+                "angle": 0.984375
+            },
+            "model": "gm4:item/metallurgy/shamir/barium/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.0
+            },
+            "model": "minecraft:item/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.015625
+            },
+            "model": "minecraft:item/compass_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.046875
+            },
+            "model": "minecraft:item/compass_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.078125
+            },
+            "model": "minecraft:item/compass_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.109375
+            },
+            "model": "minecraft:item/compass_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.140625
+            },
+            "model": "minecraft:item/compass_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.171875
+            },
+            "model": "minecraft:item/compass_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.203125
+            },
+            "model": "minecraft:item/compass_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.234375
+            },
+            "model": "minecraft:item/compass_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.265625
+            },
+            "model": "minecraft:item/compass_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.296875
+            },
+            "model": "minecraft:item/compass_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.328125
+            },
+            "model": "minecraft:item/compass_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.359375
+            },
+            "model": "minecraft:item/compass_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.390625
+            },
+            "model": "minecraft:item/compass_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.421875
+            },
+            "model": "minecraft:item/compass_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.453125
+            },
+            "model": "minecraft:item/compass_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.484375
+            },
+            "model": "minecraft:item/compass_00"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.515625
+            },
+            "model": "minecraft:item/compass_01"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.546875
+            },
+            "model": "minecraft:item/compass_02"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.578125
+            },
+            "model": "minecraft:item/compass_03"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.609375
+            },
+            "model": "minecraft:item/compass_04"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.640625
+            },
+            "model": "minecraft:item/compass_05"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.671875
+            },
+            "model": "minecraft:item/compass_06"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.703125
+            },
+            "model": "minecraft:item/compass_07"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.734375
+            },
+            "model": "minecraft:item/compass_08"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.765625
+            },
+            "model": "minecraft:item/compass_09"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.796875
+            },
+            "model": "minecraft:item/compass_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.828125
+            },
+            "model": "minecraft:item/compass_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.859375
+            },
+            "model": "minecraft:item/compass_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.890625
+            },
+            "model": "minecraft:item/compass_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.921875
+            },
+            "model": "minecraft:item/compass_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.953125
+            },
+            "model": "minecraft:item/compass_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102,
+                "angle": 0.984375
+            },
+            "model": "minecraft:item/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.0
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.015625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.046875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.078125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.109375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.140625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.171875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.203125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.234375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.265625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.296875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.328125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.359375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.390625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.421875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.453125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.484375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_00"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.515625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_01"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.546875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_02"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.578125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_03"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.609375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_04"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.640625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_05"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.671875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_06"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.703125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_07"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.734375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_08"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.765625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_09"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.796875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.828125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.859375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.890625
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.921875
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.953125
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115,
+                "angle": 0.984375
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.0
+            },
+            "model": "minecraft:item/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.015625
+            },
+            "model": "minecraft:item/compass_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.046875
+            },
+            "model": "minecraft:item/compass_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.078125
+            },
+            "model": "minecraft:item/compass_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.109375
+            },
+            "model": "minecraft:item/compass_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.140625
+            },
+            "model": "minecraft:item/compass_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.171875
+            },
+            "model": "minecraft:item/compass_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.203125
+            },
+            "model": "minecraft:item/compass_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.234375
+            },
+            "model": "minecraft:item/compass_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.265625
+            },
+            "model": "minecraft:item/compass_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.296875
+            },
+            "model": "minecraft:item/compass_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.328125
+            },
+            "model": "minecraft:item/compass_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.359375
+            },
+            "model": "minecraft:item/compass_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.390625
+            },
+            "model": "minecraft:item/compass_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.421875
+            },
+            "model": "minecraft:item/compass_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.453125
+            },
+            "model": "minecraft:item/compass_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.484375
+            },
+            "model": "minecraft:item/compass_00"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.515625
+            },
+            "model": "minecraft:item/compass_01"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.546875
+            },
+            "model": "minecraft:item/compass_02"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.578125
+            },
+            "model": "minecraft:item/compass_03"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.609375
+            },
+            "model": "minecraft:item/compass_04"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.640625
+            },
+            "model": "minecraft:item/compass_05"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.671875
+            },
+            "model": "minecraft:item/compass_06"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.703125
+            },
+            "model": "minecraft:item/compass_07"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.734375
+            },
+            "model": "minecraft:item/compass_08"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.765625
+            },
+            "model": "minecraft:item/compass_09"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.796875
+            },
+            "model": "minecraft:item/compass_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.828125
+            },
+            "model": "minecraft:item/compass_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.859375
+            },
+            "model": "minecraft:item/compass_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.890625
+            },
+            "model": "minecraft:item/compass_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.921875
+            },
+            "model": "minecraft:item/compass_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.953125
+            },
+            "model": "minecraft:item/compass_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116,
+                "angle": 0.984375
+            },
+            "model": "minecraft:item/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.0
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.015625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.046875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.078125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.109375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.140625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.171875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.203125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.234375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.265625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.296875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.328125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.359375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.390625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.421875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.453125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.484375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_00"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.515625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_01"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.546875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_02"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.578125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_03"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.609375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_04"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.640625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_05"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.671875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_06"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.703125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_07"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.734375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_08"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.765625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_09"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.796875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.828125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.859375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.890625
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.921875
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.953125
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "angle": 0.984375
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.0
+            },
+            "model": "minecraft:item/compass"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.015625
+            },
+            "model": "minecraft:item/compass_17"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.046875
+            },
+            "model": "minecraft:item/compass_18"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.078125
+            },
+            "model": "minecraft:item/compass_19"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.109375
+            },
+            "model": "minecraft:item/compass_20"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.140625
+            },
+            "model": "minecraft:item/compass_21"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.171875
+            },
+            "model": "minecraft:item/compass_22"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.203125
+            },
+            "model": "minecraft:item/compass_23"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.234375
+            },
+            "model": "minecraft:item/compass_24"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.265625
+            },
+            "model": "minecraft:item/compass_25"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.296875
+            },
+            "model": "minecraft:item/compass_26"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.328125
+            },
+            "model": "minecraft:item/compass_27"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.359375
+            },
+            "model": "minecraft:item/compass_28"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.390625
+            },
+            "model": "minecraft:item/compass_29"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.421875
+            },
+            "model": "minecraft:item/compass_30"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.453125
+            },
+            "model": "minecraft:item/compass_31"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.484375
+            },
+            "model": "minecraft:item/compass_00"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.515625
+            },
+            "model": "minecraft:item/compass_01"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.546875
+            },
+            "model": "minecraft:item/compass_02"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.578125
+            },
+            "model": "minecraft:item/compass_03"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.609375
+            },
+            "model": "minecraft:item/compass_04"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.640625
+            },
+            "model": "minecraft:item/compass_05"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.671875
+            },
+            "model": "minecraft:item/compass_06"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.703125
+            },
+            "model": "minecraft:item/compass_07"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.734375
+            },
+            "model": "minecraft:item/compass_08"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.765625
+            },
+            "model": "minecraft:item/compass_09"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.796875
+            },
+            "model": "minecraft:item/compass_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.828125
+            },
+            "model": "minecraft:item/compass_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.859375
+            },
+            "model": "minecraft:item/compass_12"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.890625
+            },
+            "model": "minecraft:item/compass_13"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.921875
+            },
+            "model": "minecraft:item/compass_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.953125
+            },
+            "model": "minecraft:item/compass_15"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "angle": 0.984375
+            },
+            "model": "minecraft:item/compass"
+        }
+    ]
+}

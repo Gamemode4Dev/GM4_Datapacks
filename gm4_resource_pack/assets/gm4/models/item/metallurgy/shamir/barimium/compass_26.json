@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/compass_26",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/barimium/compass"
+    }
+}

@@ -1,0 +1,739 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/crossbow_standby"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [
+                -90,
+                0,
+                -60
+            ],
+            "translation": [
+                2,
+                0.1,
+                -3
+            ],
+            "scale": [
+                0.9,
+                0.9,
+                0.9
+            ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [
+                -90,
+                0,
+                30
+            ],
+            "translation": [
+                2,
+                0.1,
+                -3
+            ],
+            "scale": [
+                0.9,
+                0.9,
+                0.9
+            ]
+        },
+        "firstperson_righthand": {
+            "rotation": [
+                -90,
+                0,
+                -55
+            ],
+            "translation": [
+                1.13,
+                3.2,
+                1.13
+            ],
+            "scale": [
+                0.68,
+                0.68,
+                0.68
+            ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [
+                -90,
+                0,
+                35
+            ],
+            "translation": [
+                1.13,
+                3.2,
+                1.13
+            ],
+            "scale": [
+                0.68,
+                0.68,
+                0.68
+            ]
+        }
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "pulling": 1
+            },
+            "model": "item/crossbow_pulling_0"
+        },
+        {
+            "predicate": {
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "item/crossbow_pulling_1"
+        },
+        {
+            "predicate": {
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "item/crossbow_pulling_2"
+        },
+        {
+            "predicate": {
+                "charged": 1
+            },
+            "model": "item/crossbow_arrow"
+        },
+        {
+            "predicate": {
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "item/crossbow_firework"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 1,
+                "pulling": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_0_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 1,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_1_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 1,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_2_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 1,
+                "charged": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_arrow_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 1,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_firework_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:item/sky_dimension/crossbow_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2,
+                "pulling": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_0_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_1_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_2_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2,
+                "charged": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_arrow_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_firework_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:item/sky_dimension/crossbow_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3,
+                "pulling": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_0_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_1_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_2_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3,
+                "charged": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_arrow_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_firework_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "gm4:item/sky_dimension/crossbow_4"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4,
+                "pulling": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_0_4"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_1_4"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_2_4"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4,
+                "charged": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_arrow_4"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_firework_4"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/crossbow_cartridges"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6
+            },
+            "model": "minecraft:item/crossbow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6,
+                "pulling": 1
+            },
+            "model": "minecraft:item/crossbow_pulling_0"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "minecraft:item/crossbow_pulling_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "minecraft:item/crossbow_pulling_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6,
+                "charged": 1
+            },
+            "model": "minecraft:item/crossbow_arrow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "minecraft:item/crossbow_firework"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/crossbow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "pulling": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/crossbow_pulling_0"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/crossbow_pulling_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/crossbow_pulling_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "charged": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/crossbow_arrow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/crossbow_firework"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/crossbow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "pulling": 1
+            },
+            "model": "minecraft:item/crossbow_pulling_0"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "minecraft:item/crossbow_pulling_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "minecraft:item/crossbow_pulling_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "charged": 1
+            },
+            "model": "minecraft:item/crossbow_arrow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "minecraft:item/crossbow_firework"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:item/sky_dimension/crossbow_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001,
+                "pulling": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_0_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_1_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_2_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001,
+                "charged": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_arrow_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_firework_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:item/sky_dimension/crossbow_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002,
+                "pulling": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_0_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_1_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_2_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002,
+                "charged": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_arrow_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_firework_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:item/sky_dimension/crossbow_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003,
+                "pulling": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_0_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_1_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_2_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003,
+                "charged": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_arrow_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_firework_3"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "gm4:item/sky_dimension/crossbow_4"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004,
+                "pulling": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_0_4"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_1_4"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "gm4:item/sky_dimension/crossbow_pulling_2_4"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004,
+                "charged": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_arrow_4"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "gm4:item/sky_dimension/crossbow_firework_4"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/crossbow_cartridges"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006
+            },
+            "model": "minecraft:item/crossbow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006,
+                "pulling": 1
+            },
+            "model": "minecraft:item/crossbow_pulling_0"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "minecraft:item/crossbow_pulling_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "minecraft:item/crossbow_pulling_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006,
+                "charged": 1
+            },
+            "model": "minecraft:item/crossbow_arrow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "minecraft:item/crossbow_firework"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/crossbow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "pulling": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/crossbow_pulling_0"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/crossbow_pulling_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/crossbow_pulling_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "charged": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/crossbow_arrow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/crossbow_firework"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/crossbow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "pulling": 1
+            },
+            "model": "minecraft:item/crossbow_pulling_0"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "pulling": 1,
+                "pull": 0.58
+            },
+            "model": "minecraft:item/crossbow_pulling_1"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "minecraft:item/crossbow_pulling_2"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "charged": 1
+            },
+            "model": "minecraft:item/crossbow_arrow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "charged": 1,
+                "firework": 1
+            },
+            "model": "minecraft:item/crossbow_firework"
+        }
+    ]
+}

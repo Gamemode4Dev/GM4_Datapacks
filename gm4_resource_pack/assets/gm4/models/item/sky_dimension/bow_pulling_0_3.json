@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/bow_pulling_0",
+    "textures": {
+        "layer0": "gm4:item/sky_dimension/bow_pulling_0_3"
+    }
+}

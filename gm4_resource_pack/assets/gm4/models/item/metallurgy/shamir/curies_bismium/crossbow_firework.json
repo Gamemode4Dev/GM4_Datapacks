@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/crossbow_firework",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/curies_bismium/crossbow"
+    }
+}

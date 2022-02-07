@@ -1,0 +1,29 @@
+{
+    "parent": "minecraft:block/chiseled_quartz_block",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:gui/advancements/icon/sky_dimension/sky_dimension_find_tower"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/chiseled_quartz_block"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:gui/advancements/icon/sky_dimension/sky_dimension_find_tower"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/chiseled_quartz_block"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "parent": "gm4:block/cube",
+    "textures": {
+        "side": "gm4:block/teleportation_anchor_side",
+        "top": "gm4:block/teleportation_anchor_top",
+        "front": "gm4:block/teleportation_anchor_side",
+        "bottom": "gm4:block/custom_crafter_bottom"
+    }
+}

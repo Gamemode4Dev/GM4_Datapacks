@@ -1,0 +1,341 @@
+{
+    "parent": "minecraft:block/anvil",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/metallurgy"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/anvil"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 100
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/spiraculum_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 101
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/sensus_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 102
+            },
+            "model": "minecraft:item/anvil"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 103
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/helious_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 104
+            },
+            "model": "minecraft:item/anvil"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 105
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/ender_bolt_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 106
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/defuse_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 107
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/forterra_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 108
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/musical_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 109
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/gemini_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 110
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/hypexperia_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 111
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/tinker_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 112
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/arborenda_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 113
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/moneo_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 114
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/lumos_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 115
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/fulcio_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 116
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/corripio_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 117
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/percurro_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 118
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/celaro_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 119
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/vigere_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 120
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/audere_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 121
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/vecto_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 122
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/iacio_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 123
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/vibro_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/animi_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/anvil"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/metallurgy"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/anvil"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420100
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/spiraculum_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420101
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/sensus_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420102
+            },
+            "model": "minecraft:item/anvil"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420103
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/helious_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420104
+            },
+            "model": "minecraft:item/anvil"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420105
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/ender_bolt_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420106
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/defuse_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420107
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/forterra_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420108
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/musical_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420109
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/gemini_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420110
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/hypexperia_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420111
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/tinker_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420112
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/arborenda_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420113
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/moneo_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420114
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/lumos_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420115
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/fulcio_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420116
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/corripio_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420117
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/percurro_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420118
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/celaro_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420119
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/vigere_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420120
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/audere_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420121
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/vecto_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420122
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/iacio_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420123
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/vibro_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/animi_shamir"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/anvil"
+        }
+    ]
+}

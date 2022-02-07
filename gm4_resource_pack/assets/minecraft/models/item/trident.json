@@ -1,0 +1,104 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/trident"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 105
+            },
+            "model": "gm4:item/metallurgy/shamir/thorium/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 106
+            },
+            "model": "minecraft:item/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 108
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 109
+            },
+            "model": "minecraft:item/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 117
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 118
+            },
+            "model": "minecraft:item/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420105
+            },
+            "model": "gm4:item/metallurgy/shamir/thorium/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420106
+            },
+            "model": "minecraft:item/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420108
+            },
+            "model": "gm4:item/metallurgy/shamir/barimium/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420109
+            },
+            "model": "minecraft:item/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420117
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420118
+            },
+            "model": "minecraft:item/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/trident"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/trident"
+        }
+    ]
+}

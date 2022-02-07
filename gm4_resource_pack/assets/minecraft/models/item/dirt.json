@@ -1,0 +1,29 @@
+{
+    "parent": "minecraft:block/dirt",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 42
+            },
+            "model": "gm4:entity/tnt_landmines/tnt_landmine_dirt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 43
+            },
+            "model": "minecraft:item/dirt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420042
+            },
+            "model": "gm4:entity/tnt_landmines/tnt_landmine_dirt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420043
+            },
+            "model": "minecraft:item/dirt"
+        }
+    ]
+}

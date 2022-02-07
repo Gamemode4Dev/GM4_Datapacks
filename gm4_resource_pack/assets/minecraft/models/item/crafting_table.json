@@ -1,0 +1,101 @@
+{
+    "parent": "minecraft:block/crafting_table",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:block/custom_crafters/custom_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:item/custom_crafters/slightly_damaged_workbench"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:gui/advancements/icon/custom_crafters/custom_crafters"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/custom_crafters"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/standard_crafting"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6
+            },
+            "model": "minecraft:item/crafting_table"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 45
+            },
+            "model": "gm4:entity/tnt_landmines/tnt_landmine_crafting_table"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 46
+            },
+            "model": "minecraft:item/crafting_table"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:block/custom_crafters/custom_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:item/custom_crafters/slightly_damaged_workbench"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:gui/advancements/icon/custom_crafters/custom_crafters"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/custom_crafters"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "gm4:gui/advancements/icon/guidebook/standard_crafting"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006
+            },
+            "model": "minecraft:item/crafting_table"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420045
+            },
+            "model": "gm4:entity/tnt_landmines/tnt_landmine_crafting_table"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420046
+            },
+            "model": "minecraft:item/crafting_table"
+        }
+    ]
+}

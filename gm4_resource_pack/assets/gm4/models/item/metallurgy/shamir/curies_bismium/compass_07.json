@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/compass_07",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/curies_bismium/compass"
+    }
+}

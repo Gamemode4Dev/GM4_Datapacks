@@ -1,0 +1,246 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/elytra"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "broken": 1
+            },
+            "model": "item/broken_elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:gui/advancements/icon/end_fishing/end_fishing_phantom"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:gui/advancements/icon/orb_of_ankou/orb_of_ankou_soaring_pneuma"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "minecraft:item/elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3,
+                "broken": 1
+            },
+            "model": "minecraft:item/broken_elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 10
+            },
+            "model": "gm4:item/end_fishing/elytra/elytra_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 10,
+                "broken": 1
+            },
+            "model": "gm4:item/end_fishing/elytra/broken_elytra_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 11
+            },
+            "model": "gm4:item/end_fishing/elytra/elytra_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 11,
+                "broken": 1
+            },
+            "model": "gm4:item/end_fishing/elytra/broken_elytra_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 12
+            },
+            "model": "minecraft:item/elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 12,
+                "broken": 1
+            },
+            "model": "minecraft:item/broken_elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 113
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 113,
+                "broken": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/broken_elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 114
+            },
+            "model": "minecraft:item/elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 114,
+                "broken": 1
+            },
+            "model": "minecraft:item/broken_elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 124,
+                "broken": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/broken_elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125
+            },
+            "model": "minecraft:item/elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 125,
+                "broken": 1
+            },
+            "model": "minecraft:item/broken_elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:gui/advancements/icon/end_fishing/end_fishing_phantom"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:gui/advancements/icon/orb_of_ankou/orb_of_ankou_soaring_pneuma"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "minecraft:item/elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003,
+                "broken": 1
+            },
+            "model": "minecraft:item/broken_elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420010
+            },
+            "model": "gm4:item/end_fishing/elytra/elytra_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420010,
+                "broken": 1
+            },
+            "model": "gm4:item/end_fishing/elytra/broken_elytra_10"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420011
+            },
+            "model": "gm4:item/end_fishing/elytra/elytra_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420011,
+                "broken": 1
+            },
+            "model": "gm4:item/end_fishing/elytra/broken_elytra_11"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420012
+            },
+            "model": "minecraft:item/elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420012,
+                "broken": 1
+            },
+            "model": "minecraft:item/broken_elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420113
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420113,
+                "broken": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/aluminium/broken_elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420114
+            },
+            "model": "minecraft:item/elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420114,
+                "broken": 1
+            },
+            "model": "minecraft:item/broken_elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420124,
+                "broken": 1
+            },
+            "model": "gm4:item/metallurgy/shamir/curies_bismium/broken_elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/elytra"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420125,
+                "broken": 1
+            },
+            "model": "minecraft:item/broken_elytra"
+        }
+    ]
+}

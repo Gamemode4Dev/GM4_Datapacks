@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/iron_hoe",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/barium/hoe"
+    }
+}

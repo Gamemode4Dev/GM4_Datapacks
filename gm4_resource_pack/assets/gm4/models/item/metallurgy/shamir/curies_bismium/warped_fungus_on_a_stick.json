@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/warped_fungus_on_a_stick",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/curies_bismium/warped_fungus_on_a_stick"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/stone_sword",
+    "textures": {
+        "layer1": "gm4:item/metallurgy/shamir/bismuth/sword"
+    }
+}

@@ -1,0 +1,43 @@
+{
+	"textureSize": [64, 32],
+	"models": [
+		{
+			"part": "body1",
+			"id": "body1",
+			"invertAxis": "xy",
+			"translate": [0, -3, 3.5],
+			"boxes": [
+				{"coordinates": [-2, 0, -4.5, 4, 3, 2], "textureOffset": [0, 0]},
+				{"coordinates": [-1.5, 1, -2.5, 3, 5, 3], "textureOffset": [52, 0]}
+			]
+		},
+		{
+			"part": "body2",
+			"id": "body2",
+			"invertAxis": "xy",
+			"translate": [0, -4, 0],
+			"boxes": [
+				{"coordinates": [-3, 0, -2.5, 6, 4, 5], "textureOffset": [0, 5]},
+				{"coordinates": [-2.5, 5, -3.5, 5, 5, 5], "textureOffset": [44, 22]}
+			]
+		},
+		{
+			"part": "body3",
+			"id": "body3",
+			"invertAxis": "xy",
+			"translate": [0, -3, -3],
+			"boxes": [
+				{"coordinates": [-1.5, 0, 2.5, 3, 3, 1], "textureOffset": [0, 14]}
+			]
+		},
+		{
+			"part": "body4",
+			"id": "body4",
+			"invertAxis": "xy",
+			"translate": [0, -2, -4],
+			"boxes": [
+				{"coordinates": [-0.5, 0, 3.5, 1, 2, 1], "textureOffset": [0, 18]}
+			]
+		}
+	]
+}

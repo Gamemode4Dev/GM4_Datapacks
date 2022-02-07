@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "gm4:block/apple_unripe"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "translation" :[ 1 , -0.5, 0],
+            "scale": [ 1.1, 1.1, 1.1]
+        }
+    }
+}
