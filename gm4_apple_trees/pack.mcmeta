@@ -21,7 +21,7 @@
     "wiki_link": "https://wiki.gm4.co/wiki/Apple_Trees",
     "required_modules": [],
     "recommended_modules": [
-        "resources",
+        "resource-pack",
         "orbis",
         "podzol_rooting_soil"
     ],

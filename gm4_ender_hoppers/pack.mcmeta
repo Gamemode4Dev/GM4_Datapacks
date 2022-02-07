@@ -17,7 +17,7 @@
     "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
     "required_modules": [],
     "recommended_modules": [
-        "resources",
+        "resource-pack",
         "relocators"
     ],
     "credits": {

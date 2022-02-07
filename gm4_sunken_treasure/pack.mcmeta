@@ -18,7 +18,7 @@
     "wiki_link": "https://wiki.gm4.co/wiki/Sunken_Treasure",
     "required_modules": [],
     "recommended_modules": [
-        "resources",
+        "resource-pack",
         "scuba_gear"
     ],
     "credits": {

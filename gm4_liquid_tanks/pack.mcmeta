@@ -17,7 +17,7 @@
     "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
     "required_modules": [],
     "recommended_modules": [
-        "resources",
+        "resource-pack",
         "potion_liquids",
         "zauber_liquids",
         "liquid_minecarts",
