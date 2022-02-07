@@ -1,5 +1,5 @@
 {
-  "last_commit": "5cddb5d233e91caba2c5755844e62e64fe63b41b",
+  "last_commit": "4fa7aa029e4989f2f5918e934018e7760dfa1741",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1652,7 +1652,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_speed_paths",
