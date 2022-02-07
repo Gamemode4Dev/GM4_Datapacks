@@ -12,7 +12,7 @@
     },
     "module_name": "Resource Pack",
     "module_id": "resource_pack",
-    "site_description": "Use our resource pack for the definite Gamemode 4 experience! This resource pack does not touch vanilla textures, but adds textures and models to most Gamemode 4 blocks, items and mobs.",
+    "site_description": "Use our resource pack for the definitive Gamemode 4 experience! This resource pack does not touch vanilla textures, but adds textures and models to most Gamemode 4 blocks, items and mobs.",
     "libraries": [
         "gm4_translations"
     ],
