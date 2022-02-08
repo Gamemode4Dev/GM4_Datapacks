@@ -1,18 +1,22 @@
 # Shoot redstone torch
 # @s = player using the crossbow
-# at @s
-# run from check_projectile
+# at arrow
+# run from check_projectile and projectile/redstone_torch
 
 tag @s add gm4_cb_use
 
 # add tag to arrow
-tag @e[type=minecraft:arrow,tag=gm4_cb_arrow,distance=..2,sort=nearest,limit=1] add gm4_cb_rtorch
+tag @e[tag=gm4_cb_arrow,distance=..1,sort=nearest,limit=1] add gm4_cb_rtorch
 
 # add fire to arrow
-data merge entity @e[type=minecraft:arrow,tag=gm4_cb_rtorch,distance=..2,sort=nearest,limit=1] {Fire:2000s}
+data merge entity @e[tag=gm4_cb_arrow,tag=gm4_cb_rtorch,distance=..1,sort=nearest,limit=1] {Fire:2000s}
+tag @e[tag=gm4_cb_arrow,tag=gm4_cb_rtorch,distance=..1,sort=nearest,limit=1] remove gm4_cb_arrow
 
 # clear redstone torch from player
-clear @s[gamemode=!creative] redstone_torch 1
+item modify entity @s[gamemode=!creative] weapon.offhand gm4_crossbow_cartridges:remove_item
+
+# repeat
+execute if entity @e[tag=gm4_cb_arrow,distance=..1,sort=nearest,limit=1] if entity @s[predicate=gm4_crossbow_cartridges:items/redstone_torch] run function gm4_crossbow_cartridges:projectile/redstone_torch
 
 # start loop to check if arrow is in ground
-function gm4_crossbow_cartridges:projectile/redstone_torch/loop
+schedule function gm4_crossbow_cartridges:projectile/redstone_torch/loop 4t
