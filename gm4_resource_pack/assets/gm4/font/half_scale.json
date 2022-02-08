@@ -1,0 +1,20 @@
+{
+    "providers": [
+        {
+            "type": "ttf",
+            "file": "gm4:minecraft.ttf",
+            "shift": [0, -32768],
+            "size": 3.5,
+            "oversample": 1.0
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:font_magic/spacing_square.png",
+            "ascent": -32768,
+            "height": 3,
+            "chars": [
+                "\u00a0"
+            ]
+        }
+    ]
+}
