@@ -70,6 +70,9 @@ scoreboard objectives add gm4_arb_depth dummy
 
 #ender_bolt
 scoreboard objectives add gm4_bolt_time dummy
+scoreboard objectives add gm4_ender_bolt_own_id dummy
+scoreboard objectives add gm4_ender_bolt_foreign_id dummy
+execute unless score $enable_pvp gm4_ender_bolt_foreign_id matches 0..1 run scoreboard players set $enable_pvp gm4_ender_bolt_foreign_id 1 
 
 #musical
 scoreboard objectives add gm4_note_collect totalKillCount

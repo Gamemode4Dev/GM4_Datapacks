@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "join_world": {
+            "trigger": "location"
+        }
+    },
+    "rewards": {
+        "function": "gm4_ender_bolt_shamir:id/assign_player"
+    }
+}

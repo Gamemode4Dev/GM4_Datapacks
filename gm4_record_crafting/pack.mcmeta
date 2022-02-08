@@ -12,10 +12,7 @@
     },
     "module_name": "Record Crafting",
     "module_id": "record_crafting",
-    "site_description": "A crafting recipe pack that lets you craft all the records.",
-    "site_categories": [
-        "Custom Crafting"
-    ],
+    "site_description": "A crafting recipe pack that lets you craft all the records in a Custom Crafter.",
     "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
     "wiki_link": "https://wiki.gm4.co/wiki/Record_Crafting",
     "required_modules": [
@@ -26,22 +23,13 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ],
         "Updated by": [
-            [
-                "Bloo",
-                "https://www.twitter.com/Bloo_dev"
-            ]
+            "Bloo"
         ],
         "Icon Design": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/blupsychoranger"
-            ]
+            "BluePsychoRanger"
         ]
     }
 }

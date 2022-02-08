@@ -15,8 +15,7 @@
     "libraries": [
         "lib_forceload"
     ],
-    "site_description": "Adds spooky full moon nights!",
-    "site_categories": [],
+    "site_description": "Full moons gain a element of surprise with Myserious Midnights! This module adds random events during full moons. You might encounter falling stars, or Skeletons wielding poisonous arrows! So you better listen for that howl...",
     "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights",
     "required_modules": [],
     "recommended_modules": [
@@ -24,26 +23,14 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "Bloo",
-                "https://www.twitter.com/Bloo_dev"
-            ]
+            "Bloo"
         ],
-        "Updated by":[
-            [
-                "Bloo",
-                "https://www.twitter.com/Bloo_dev"
-            ],
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ]
+        "Updated by": [
+            "Bloo",
+            "BluePsychoRanger"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

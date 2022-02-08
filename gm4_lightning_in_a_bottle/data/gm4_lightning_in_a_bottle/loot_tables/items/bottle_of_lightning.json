@@ -14,7 +14,7 @@
                 "with": [
                   "Bottle of Lightning",
                   {
-                    "translate": "item.gm4.lightning_in_a_bottle.bottle_of_lightning"
+                    "translate": "item.gm4.bottle.effect.lightning"
                   }
                 ],
                 "color": "white",

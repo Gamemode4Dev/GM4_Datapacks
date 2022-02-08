@@ -16,26 +16,17 @@
         "lib_forceload",
         "lib_potion_tracking"
     ],
-    "site_description": "Splash item frames with invisibilty!",
-    "site_categories": [],
+    "site_description": "Splash item frames with invisibilty to make invisbible item frames! Great for interior decor!",
     "wiki_link": "https://wiki.gm4.co/wiki/Display_Frames",
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ],
-            [
-                "TheEpyonProject"
-            ]
+            "BluePsychoRanger",
+            "TheEpyonProject"
         ],
         "Icon Design": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ]
+            "BluePsychoRanger"
         ]
     }
 }

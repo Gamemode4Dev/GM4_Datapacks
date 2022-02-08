@@ -9,9 +9,9 @@ execute store result score $target_z gm4_pneuma_data run data get storage gm4_or
 
 # get vector
 data modify storage gm4_orb_of_ankou:temp Pos set from entity @s Pos
-execute store result score $motion_x gm4_pneuma_data run data get storage gm4_orb_of_ankou:temp Pos[0] 
-execute store result score $motion_y gm4_pneuma_data run data get storage gm4_orb_of_ankou:temp Pos[1] 
-execute store result score $motion_z gm4_pneuma_data run data get storage gm4_orb_of_ankou:temp Pos[2] 
+execute store result score $motion_x gm4_pneuma_data run data get storage gm4_orb_of_ankou:temp Pos[0]
+execute store result score $motion_y gm4_pneuma_data run data get storage gm4_orb_of_ankou:temp Pos[1]
+execute store result score $motion_z gm4_pneuma_data run data get storage gm4_orb_of_ankou:temp Pos[2]
 
 scoreboard players operation $motion_x gm4_pneuma_data -= $target_x gm4_pneuma_data
 scoreboard players operation $motion_y gm4_pneuma_data -= $target_y gm4_pneuma_data

@@ -12,43 +12,30 @@
     },
     "module_name": "Liquid Tanks",
     "module_id": "liquid_tanks",
-    "site_description": "Store liquids compactly in special tanks and interact with them!",
-    "site_categories": [
-        "Liquid Tanks"
-    ],
+    "site_description": "Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!",
     "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
     "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
     "required_modules": [],
     "recommended_modules": [
+        "resource_pack",
         "potion_liquids",
         "zauber_liquids",
         "liquid_minecarts",
-        "concrete_mixers",
+        "cement_mixers",
         "relocators"
     ],
     "credits": {
         "Creator": [
-            [
-                "SpecialBuilder32",
-                "https://twitter.com/SpecialBuilder"
-            ]
+            "SpecialBuilder32"
         ],
         "Updated by": [
-            [
-                "SpecialBuilder32",
-                "https://twitter.com/SpecialBuilder"
-            ]
+            "SpecialBuilder32"
         ],
         "Textures by": [
-            [
-                "Vilder50"
-            ]
+            "Vilder50"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

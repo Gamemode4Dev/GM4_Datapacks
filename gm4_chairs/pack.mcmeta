@@ -13,22 +13,16 @@
     "module_name": "Chairs",
     "module_id": "chairs",
     "site_description": "Place a saddle on a stair to have a chair to sit on!",
-    "site_categories": [],
     "video_link": "https://www.youtube.com/watch?v=7KbBw1hEKdY",
     "wiki_link": "https://wiki.gm4.co/wiki/Chairs",
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Denniss"
-            ]
+            "Denniss"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }
