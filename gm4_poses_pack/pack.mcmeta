@@ -13,10 +13,7 @@
     "module_name": "Poses Pack",
     "module_id": "poses_pack",
     "hidden": false,
-    "site_description": "Allows you to apply preset poses to Armour Stands using the Better Armour Stands base module.",
-    "site_categories": [
-        "Better Armour Stands"
-    ],
+    "site_description": "Adds a bunch of preset poses to the Better Armour Stands Module. This can be really hand for applying common poses like 'walking' or raised arms!",
     "video_link": "https://www.youtube.com/watch?v=E7DnQTlpgrw",
     "wiki_link": "https://wiki.gm4.co/wiki/Poses_Pack",
     "required_modules": [
@@ -27,26 +24,14 @@
     ],
     "credits": {
         "Creators": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ],
         "Updated by": [
-            [
-                "Misode",
-                "https://twitter.com/misode_"
-            ],
-            [
-                "Denniss",
-                "https://twitter.com/Dennis2p_"
-            ]
+            "Misode",
+            "Denniss"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

@@ -1,6 +1,7 @@
 {
   "values": [
-    "#minecraft:flowers",
+    "#minecraft:small_flowers",
+    "#minecraft:tall_flowers",
     "minecraft:azalea",
     "minecraft:flowering_azalea",
     "minecraft:big_dripleaf",

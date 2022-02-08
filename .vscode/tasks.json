@@ -1,0 +1,42 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Develop module",
+			"type": "shell",
+			"command": "beet",
+			"args": ["--set", "'meta.dev=${input:module}'", "watch", "--link", "'${input:world}'"],
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			},
+			"isBackground": true,
+			"problemMatcher": {
+				"pattern": {
+					"regexp": "^dewrhfguyrwedjwgfw(.)(.)(.)(.)(.)$"
+				},
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "(\\d+ changes detected|Edited '.*')",
+					"endsPattern": "\\[GM4\\] Generated development pack"
+				}
+			}
+		}
+	],
+	"inputs": [
+		{
+			"id": "world",
+			"type": "promptString",
+			"description": "What world save should it be linked to?",
+		},
+		{
+			"id": "module",
+			"type": "promptString",
+			"description": "Which module should be watched?",
+			"default": "bat_grenades",
+		}
+	]
+}

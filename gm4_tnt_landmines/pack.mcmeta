@@ -1,52 +1,38 @@
 {
-  "pack": {
-    "pack_format": 8,
-    "description": [
-      "TNT Landmines",
-      "\n",
-      {
-        "text": "Gamemode 4 for 1.18",
-        "color": "#4AA0C7"
-      }
-    ]
-  },
-  "module_name": "TNT Landmines",
-  "module_id": "tnt_landmines",
-  "libraries": [
-    "lib_player_heads"
-  ],
-  "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-  "site_description": "Craft 'em up, throw 'em down, blow 'em up!",
-  "site_categories": [
-    "Custom Crafting"
-  ],
-  "video_link": "",
-  "wiki_link": "https://wiki.gm4.co/wiki/TNT_Landmines",
-  "required_modules": [
-    "custom_crafters"
-  ],
-  "recommended_modules": [],
-  "credits": {
-    "Creator": [
-      [
-        "Sparks",
-        "https://www.twitter.com/SparksTheGamer"
-      ]
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "TNT Landmines",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "TNT Landmines",
+    "module_id": "tnt_landmines",
+    "libraries": [
+        "lib_player_heads"
     ],
-    "Updated By": [
-      [
-        "kruthers",
-        "https://www.twitter.com/Pandakruthers"
-      ],
-      [
-        "BluePsychoRanger",
-        "https://www.twitter.com/BluPsychoRanger"
-      ]
+    "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+    "site_description": "Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!",
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/TNT_Landmines",
+    "required_modules": [
+        "custom_crafters"
     ],
-    "Icon Design": [
-      [
-        "Hozz"
-      ]
-    ]
-  }
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "Sparks"
+        ],
+        "Updated By": [
+            "kruthers",
+            "BluePsychoRanger"
+        ],
+        "Icon Design": [
+            "Hozz"
+        ]
+    }
 }

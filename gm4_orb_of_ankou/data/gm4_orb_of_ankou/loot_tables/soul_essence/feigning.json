@@ -15,7 +15,9 @@
                   "translate": "%1$s%3427655$s",
                   "with": [
                     "Feigning",
-                     {"translate":"text.gm4.pneuma_feigning"}
+                    {
+                      "translate": "text.gm4.pneuma_feigning"
+                    }
                   ],
                   "italic": false,
                   "color": "blue"
@@ -28,7 +30,9 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   "Soul Essence",
-                  {"translate":"item.gm4.soul_essence"}
+                  {
+                    "translate": "item.gm4.soul_essence"
+                  }
                 ],
                 "italic": false,
                 "color": "white"
@@ -36,7 +40,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:234,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"feigning\"},stored_color:[16406506]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+              "tag": "{CustomModelData:3420234,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"feigning\"},stored_color:[16406506]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
             }
           ]
         }
