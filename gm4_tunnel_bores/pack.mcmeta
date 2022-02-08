@@ -17,7 +17,7 @@
         "lib_forceload"
     ],
     "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-    "site_description": "Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3⨉3 tunnel, and even lay rails behind themselves.",
+    "site_description": "Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3⨉3 tunnels, and even lay rails behind themselves.",
     "wiki_link": "https://wiki.gm4.co/wiki/Tunnel_Bores",
     "recommended_modules": [
         "ziprails",
