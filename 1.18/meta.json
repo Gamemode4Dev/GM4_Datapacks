@@ -1,5 +1,5 @@
 {
-  "last_commit": "65a8ca3856a5c00a239eaa312ef4f32c181322c5",
+  "last_commit": "514c8cde80723975256baec515cee56fa9087970",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -148,7 +148,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_better_fire",
@@ -403,7 +403,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_custom_crafters",
@@ -1273,7 +1273,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_percurro_shamir",
@@ -1396,7 +1396,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_potion_liquids",
