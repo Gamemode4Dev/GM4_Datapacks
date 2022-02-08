@@ -2,9 +2,9 @@
 # at @s
 # run from apply_pose
 
-advancement grant @a[gamemode=!spectator,distance=..4] only gm4:poses_pack
+advancement grant @a[tag=gm4_bas_active,limit=1] only gm4:poses_pack
 
-playsound minecraft:entity.armor_stand.fall block @a[distance=..5] ~ ~ ~ 0.5 1
+playsound minecraft:entity.armor_stand.fall block @a[distance=..6] ~ ~ ~ 0.5 1
 tag @s remove gm4_pose_changed
 
-tag @s add gm4_bas_valid_code
+scoreboard players set $valid_code gm4_bas_data 1

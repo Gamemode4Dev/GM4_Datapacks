@@ -1,4 +1,4 @@
-# @s = armorstand with a particle score
+# @s = armor_stand with a particle score
 # at @s
 # run from main
 
