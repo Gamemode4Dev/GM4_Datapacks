@@ -14,7 +14,7 @@
                 "with": [
                   "Splash Bottle of Lightning",
                   {
-                    "translate": "item.gm4.lightning_in_a_bottle.splash_bottle_of_lightning"
+                    "translate": "item.gm4.splash_bottle.effect.lightning"
                   }
                 ],
                 "color": "white",

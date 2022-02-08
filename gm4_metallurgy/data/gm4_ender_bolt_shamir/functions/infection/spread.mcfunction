@@ -3,11 +3,8 @@
 # at @s
 # run from infection/start and infection/active
 
-# remember self
-tag @s add gm4_bolt_owner
+# remember infection source id
+scoreboard players operation $source gm4_ender_bolt_foreign_id = @s gm4_ender_bolt_foreign_id
 
 # spread
-execute as @e[distance=..1.6,team=!gm4_invalid,tag=!gm4_bolt_owner,type=!armor_stand] unless score @s gm4_bolt_time matches -40.. run scoreboard players set @s gm4_bolt_time 10
-
-# reset tag
-tag @s remove gm4_bolt_owner
+execute as @e[distance=..1.6,team=!gm4_invalid,type=!armor_stand] unless score @s gm4_bolt_time matches -40.. run function gm4_ender_bolt_shamir:infection/check_ignore_list

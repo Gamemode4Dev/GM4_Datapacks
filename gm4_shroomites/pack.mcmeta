@@ -12,33 +12,20 @@
     },
     "module_name": "Shroomites",
     "module_id": "shroomites",
-    "hidden":false,
-    "site_description": "Mooshrooms plant spore-emitting mushrooms that spread mycelium and other mushrooms around them.",
-    "site_categories": [],
+    "hidden": false,
+    "site_description": "Ever wondered why all the Mooshrooms are locked up on islands? This Module makes Mooshrooms spread mycelium and mushrooms wherever they go.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Shroomites",
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ],
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ],
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ]
+            "Sparks",
+            "SpecialBuilder32",
+            "Bloo"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

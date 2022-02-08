@@ -3,6 +3,7 @@
 		{ "id": "#load:gm4_forceload", "required": false },
 		{ "id": "#load:gm4_player_heads", "required": false },
         { "id": "#load:gm4_brewing", "required": false },
+        { "id": "#load:gm4_trades", "required": false },
         "gm4_zauber_cauldrons:load"
     ]
 }

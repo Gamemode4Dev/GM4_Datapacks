@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:note_block"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_note_block_interface:tune"
+  }
+}

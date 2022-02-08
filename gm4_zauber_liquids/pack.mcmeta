@@ -14,9 +14,6 @@
     "module_id": "zauber_liquids",
     "hidden": false,
     "site_description": "From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!",
-    "site_categories": [
-        "Liquid Tanks"
-    ],
     "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
     "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids",
     "required_modules": [
@@ -26,33 +23,18 @@
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "SpecialBuilder32",
-                "https://twitter.com/SpecialBuilder"
-            ],
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ]
+            "SpecialBuilder32",
+            "Bloo"
         ],
         "Updated by": [
-            [
-                "JP_12"
-            ]
+            "JP12"
         ],
         "Textures by": [
-            [
-                "Vilder50"
-            ],
-            [
-                "Hozz"
-            ]
+            "Vilder50",
+            "Hozz"
         ],
         "Icon Design": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ]
     }
 }

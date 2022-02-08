@@ -1,7 +1,9 @@
-#@s = player who has cliked a noteblock while sneaking at the position of the note block
-#runs from note_block_interface:click/sneak_loop
+# change note to decrease instead of increase
+# @s = player tuning note block while sneaking
+# at note block
+# run from gm4_note_block_interface:tune/sneak_loop
 
-#lowers the note of the note block
+# lowers the note of the note block
 execute unless score @s gm4_nbi_change matches 1.. store success score @s gm4_nbi_change if block ~ ~ ~ note_block[note=0] run setblock ~ ~ ~ note_block[note=23]
 execute unless score @s gm4_nbi_change matches 1.. store success score @s gm4_nbi_change if block ~ ~ ~ note_block[note=1] run setblock ~ ~ ~ note_block[note=24]
 execute unless score @s gm4_nbi_change matches 1.. store success score @s gm4_nbi_change if block ~ ~ ~ note_block[note=2] run setblock ~ ~ ~ note_block[note=0]
@@ -28,8 +30,8 @@ execute unless score @s gm4_nbi_change matches 1.. store success score @s gm4_nb
 execute unless score @s gm4_nbi_change matches 1.. store success score @s gm4_nbi_change if block ~ ~ ~ note_block[note=23] run setblock ~ ~ ~ note_block[note=21]
 execute unless score @s gm4_nbi_change matches 1.. store success score @s gm4_nbi_change if block ~ ~ ~ note_block[note=24] run setblock ~ ~ ~ note_block[note=22]
 
-#resets gm4_nbi_change
+# resets gm4_nbi_change
 scoreboard players reset @s gm4_nbi_change
 
-#runs function to display the note
+# runs function to display the note
 function gm4_note_block_interface:interface/create
