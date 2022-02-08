@@ -18,7 +18,7 @@
                 {
                   "translate": "%1$s%3427655$s",
                   "with": [
-                    "Block Compressor",
+                    "Compressor",
                     {
                       "translate": "block.gm4.block_compressor"
                     }
