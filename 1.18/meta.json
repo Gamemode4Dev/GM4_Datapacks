@@ -1,5 +1,5 @@
 {
-  "last_commit": "4fa7aa029e4989f2f5918e934018e7760dfa1741",
+  "last_commit": "65a8ca3856a5c00a239eaa312ef4f32c181322c5",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -197,7 +197,7 @@
         "Updated by": [
           "SunderB",
           "Misode",
-          "JP_12"
+          "JP12"
         ],
         "Icon Design": [
           "Sparks"
@@ -205,7 +205,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_book_binders",
@@ -2140,7 +2140,7 @@
           "Bloo"
         ],
         "Updated by": [
-          "JP_12"
+          "JP12"
         ],
         "Textures by": [
           "Vilder50",
@@ -2152,7 +2152,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_ziprails",
@@ -2240,6 +2240,12 @@
       "name": "Fyid",
       "links": [
         "https://twitter.com/FyidRants"
+      ]
+    },
+    "JP12": {
+      "name": "JP12",
+      "links": [
+        "https://github.com/jpeterik12"
       ]
     },
     "Kroppeb": {
