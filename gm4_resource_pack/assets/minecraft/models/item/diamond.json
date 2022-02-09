@@ -38,6 +38,12 @@
             "predicate": {
                 "custom_model_data": 15
             },
+            "model": "gm4:item/end_fishing/ores/diamond_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 16
+            },
             "model": "minecraft:item/diamond"
         },
         {
@@ -73,6 +79,12 @@
         {
             "predicate": {
                 "custom_model_data": 3420015
+            },
+            "model": "gm4:item/end_fishing/ores/diamond_14"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420016
             },
             "model": "minecraft:item/diamond"
         }

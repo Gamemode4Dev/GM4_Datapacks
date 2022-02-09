@@ -3,7 +3,7 @@
     "textures": {
         "side": "gm4:block/forming_press_side",
         "top": "gm4:block/forming_press_top",
-        "front": "gm4:block/forming_press_side",
+        "front": "gm4:block/forming_press_side_front",
         "bottom": "gm4:block/forming_press_bottom"
     },
     "display": {

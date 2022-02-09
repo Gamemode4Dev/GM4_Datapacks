@@ -39,6 +39,24 @@
         },
         {
             "predicate": {
+                "custom_model_data": 8
+            },
+            "model": "gm4:block/ender_hoppers/ender_hopper_side"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 9
+            },
+            "model": "gm4:block/ender_hoppers/ender_hopper_minecart"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 10
+            },
+            "model": "minecraft:item/stone_button"
+        },
+        {
+            "predicate": {
                 "custom_model_data": 3420001
             },
             "model": "gm4:block/block_compressors/block_compressor"
@@ -70,6 +88,24 @@
         {
             "predicate": {
                 "custom_model_data": 3420006
+            },
+            "model": "minecraft:item/stone_button"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420008
+            },
+            "model": "gm4:block/ender_hoppers/ender_hopper_side"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420009
+            },
+            "model": "gm4:block/ender_hoppers/ender_hopper_minecart"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420010
             },
             "model": "minecraft:item/stone_button"
         }

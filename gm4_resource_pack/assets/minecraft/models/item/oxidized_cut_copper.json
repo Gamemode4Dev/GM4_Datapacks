@@ -1,0 +1,29 @@
+{
+    "parent": "minecraft:block/oxidized_cut_copper",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:block/tinkering_compressors/tinkering_compressor_plate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/oxidized_cut_copper"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:block/tinkering_compressors/tinkering_compressor_plate"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/oxidized_cut_copper"
+        }
+    ]
+}

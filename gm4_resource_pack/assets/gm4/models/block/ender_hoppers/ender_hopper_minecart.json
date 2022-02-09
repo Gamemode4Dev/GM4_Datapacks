@@ -1,0 +1,28 @@
+{
+	"parent": "gm4:block/cube_nd",
+	"textures": {
+		"side": "gm4:block/ender_hopper_eye_side",
+		"top": "gm4:block/ender_hopper_eye_top",
+		"front": "gm4:block/ender_hopper_eye_front",
+		"bottom": "gm4:block/ender_hopper_eye_bottom"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [
+				-6,
+				-2,
+				5
+			],
+			"scale": [
+				1.001,
+				1.001,
+				1.001
+			],
+			"rotation": [
+				90,
+				0,
+				0
+			]
+		}
+	}
+}

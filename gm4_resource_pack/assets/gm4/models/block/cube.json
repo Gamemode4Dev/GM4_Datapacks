@@ -32,7 +32,7 @@
                     ]
                 },
                 "south": {
-                    "texture": "#front",
+                    "texture": "#side",
                     "uv": [
                         0.0,
                         0.0,
@@ -142,7 +142,7 @@
         "firstperson_righthand": {
             "rotation": [
                 0,
-                45,
+                135,
                 0
             ],
             "translation": [
@@ -159,7 +159,7 @@
         "firstperson_lefthand": {
             "rotation": [
                 0,
-                225,
+                135,
                 0
             ],
             "translation": [

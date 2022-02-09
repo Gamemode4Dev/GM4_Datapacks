@@ -329,6 +329,12 @@
             "predicate": {
                 "custom_model_data": 61
             },
+            "model": "gm4:item/relocators/relocator_full"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 62
+            },
             "model": "minecraft:item/player_head"
         },
         {
@@ -484,6 +490,84 @@
         {
             "predicate": {
                 "custom_model_data": 125
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 128
+            },
+            "model": "gm4:block/custom_crafters/custom_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 129
+            },
+            "model": "gm4:block/forming_press/forming_press"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 130
+            },
+            "model": "gm4:block/block_compressors/block_compressor_full"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 131
+            },
+            "model": "gm4:block/ender_hoppers/ender_hopper_full"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 132
+            },
+            "model": "gm4:block/liquid_tanks/liquid_tank_full"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 133
+            },
+            "model": "gm4:block/smelteries/smeltery_full"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 134
+            },
+            "model": "gm4:block/enchantment_extractors/enchantment_extractor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 135
+            },
+            "model": "gm4:block/disassemblers/disassembler"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 136
+            },
+            "model": "gm4:block/tinkering_compressors/tinkering_compressor_full"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 137
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 138
+            },
+            "model": "gm4:block/teleportation_anchors/teleportation_jammer"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 139
+            },
+            "model": "gm4:block/teleportation_anchors/teleportation_anchor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 140
             },
             "model": "minecraft:item/player_head"
         },
@@ -815,6 +899,12 @@
             "predicate": {
                 "custom_model_data": 3420061
             },
+            "model": "gm4:item/relocators/relocator_full"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420062
+            },
             "model": "minecraft:item/player_head"
         },
         {
@@ -970,6 +1060,84 @@
         {
             "predicate": {
                 "custom_model_data": 3420125
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420128
+            },
+            "model": "gm4:block/custom_crafters/custom_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420129
+            },
+            "model": "gm4:block/forming_press/forming_press"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420130
+            },
+            "model": "gm4:block/block_compressors/block_compressor_full"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420131
+            },
+            "model": "gm4:block/ender_hoppers/ender_hopper_full"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420132
+            },
+            "model": "gm4:block/liquid_tanks/liquid_tank_full"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420133
+            },
+            "model": "gm4:block/smelteries/smeltery_full"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420134
+            },
+            "model": "gm4:block/enchantment_extractors/enchantment_extractor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420135
+            },
+            "model": "gm4:block/disassemblers/disassembler"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420136
+            },
+            "model": "gm4:block/tinkering_compressors/tinkering_compressor_full"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420137
+            },
+            "model": "minecraft:item/player_head"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420138
+            },
+            "model": "gm4:block/teleportation_anchors/teleportation_jammer"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420139
+            },
+            "model": "gm4:block/teleportation_anchors/teleportation_anchor"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420140
             },
             "model": "minecraft:item/player_head"
         }

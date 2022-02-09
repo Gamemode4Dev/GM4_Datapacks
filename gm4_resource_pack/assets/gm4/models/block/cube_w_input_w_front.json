@@ -1,0 +1,142 @@
+{
+	"parent": "gm4:block/cube",
+	"elements": [
+		{
+			"from": [
+				0,
+				0,
+				0
+			],
+			"to": [
+				16,
+				16,
+				16
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						0,
+						0,
+						16,
+						16
+					],
+					"texture": "#front"
+				},
+				"east": {
+					"uv": [
+						0,
+						0,
+						16,
+						16
+					],
+					"texture": "#side"
+				},
+				"south": {
+					"uv": [
+						0,
+						0,
+						16,
+						16
+					],
+					"texture": "#side"
+				},
+				"west": {
+					"uv": [
+						0,
+						0,
+						16,
+						16
+					],
+					"texture": "#side"
+				},
+				"up": {
+					"uv": [
+						0,
+						0,
+						16,
+						16
+					],
+					"rotation": 180,
+					"texture": "#top"
+				},
+				"down": {
+					"uv": [
+						0,
+						0,
+						16,
+						16
+					],
+					"texture": "#bottom"
+				}
+			}
+		},
+		{
+			"from": [
+				4,
+				16,
+				4
+			],
+			"to": [
+				12,
+				21,
+				12
+			],
+			"rotation": {
+				"angle": 0,
+				"axis": "x",
+				"origin": [
+					8,
+					8,
+					19
+				]
+			},
+			"faces": {
+				"north": {
+					"uv": [
+						0,
+						0,
+						16,
+						10
+					],
+					"texture": "#small_side"
+				},
+				"east": {
+					"uv": [
+						0,
+						0,
+						16,
+						10
+					],
+					"texture": "#small_side"
+				},
+				"south": {
+					"uv": [
+						0,
+						0,
+						16,
+						10
+					],
+					"texture": "#small_side"
+				},
+				"west": {
+					"uv": [
+						0,
+						0,
+						16,
+						10
+					],
+					"texture": "#small_side"
+				},
+				"up": {
+					"uv": [
+						0,
+						0,
+						16,
+						16
+					],
+					"texture": "#small_top"
+				}
+			}
+		}
+	]
+}

@@ -1,11 +1,11 @@
 {
-	"parent": "gm4:block/cube_w_input",
+	"parent": "gm4:block/cube_w_plate",
 	"textures": {
 		"particle": "gm4:block/block_compressor_side",
 		"side": "gm4:block/block_compressor_side",
-		"bottom": "gm4:block/master_crafter_bottom",
+		"bottom": "gm4:block/forming_press_bottom",
 		"top": "gm4:block/compressor_top",
-		"small_side": "gm4:block/input_side",
-		"small_top": "gm4:block/input_top"
+		"front": "gm4:block/block_compressor_side",
+		"plate": "gm4:block/block_compressor_plate"
 	}
 }

@@ -4,6 +4,6 @@
         "side": "gm4:block/disassembler_side",
         "top": "gm4:block/disassembler_top",
         "front": "gm4:block/disassembler_side",
-        "bottom": "gm4:block/forming_press_bottom"
+        "bottom": "gm4:block/forming_press_bottom_front"
     }
 }

@@ -35,6 +35,18 @@
             "predicate": {
                 "custom_model_data": 6
             },
+            "model": "gm4:block/custom_crafters/custom_crafter_side"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 7
+            },
+            "model": "gm4:block/custom_crafters/custom_crafter_down"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 8
+            },
             "model": "minecraft:item/crafting_table"
         },
         {
@@ -82,6 +94,18 @@
         {
             "predicate": {
                 "custom_model_data": 3420006
+            },
+            "model": "gm4:block/custom_crafters/custom_crafter_side"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420007
+            },
+            "model": "gm4:block/custom_crafters/custom_crafter_down"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420008
             },
             "model": "minecraft:item/crafting_table"
         },

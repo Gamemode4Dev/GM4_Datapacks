@@ -9,6 +9,12 @@
         },
         {
             "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:block/forming_press/forming_press"
+        },
+        {
+            "predicate": {
                 "custom_model_data": 2
             },
             "model": "gm4:gui/advancements/icon/tunnel_bores/tunnel_bores"
@@ -35,6 +41,18 @@
             "predicate": {
                 "custom_model_data": 6
             },
+            "model": "gm4:block/forming_press/forming_press_side"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 7
+            },
+            "model": "gm4:block/forming_press/forming_press_down"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 8
+            },
             "model": "minecraft:item/piston"
         },
         {
@@ -42,6 +60,12 @@
                 "custom_model_data": 3420001
             },
             "model": "gm4:block/master_crafting/master_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:block/forming_press/forming_press"
         },
         {
             "predicate": {
@@ -70,6 +94,18 @@
         {
             "predicate": {
                 "custom_model_data": 3420006
+            },
+            "model": "gm4:block/forming_press/forming_press_side"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420007
+            },
+            "model": "gm4:block/forming_press/forming_press_down"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420008
             },
             "model": "minecraft:item/piston"
         }

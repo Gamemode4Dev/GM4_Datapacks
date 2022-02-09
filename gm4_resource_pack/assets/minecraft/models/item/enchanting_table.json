@@ -23,6 +23,18 @@
             "predicate": {
                 "custom_model_data": 4
             },
+            "model": "gm4:block/enchantment_extractors/enchantment_extractor_side"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 5
+            },
+            "model": "gm4:block/enchantment_extractors/enchantment_extractor_down"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6
+            },
             "model": "minecraft:item/enchanting_table"
         },
         {
@@ -46,6 +58,18 @@
         {
             "predicate": {
                 "custom_model_data": 3420004
+            },
+            "model": "gm4:block/enchantment_extractors/enchantment_extractor_side"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420005
+            },
+            "model": "gm4:block/enchantment_extractors/enchantment_extractor_down"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006
             },
             "model": "minecraft:item/enchanting_table"
         }

@@ -17,6 +17,12 @@
             "predicate": {
                 "custom_model_data": 3
             },
+            "model": "gm4:block/liquid_tanks/liquid_tank_side"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
             "model": "minecraft:item/glass"
         },
         {
@@ -34,6 +40,12 @@
         {
             "predicate": {
                 "custom_model_data": 3420003
+            },
+            "model": "gm4:block/liquid_tanks/liquid_tank_side"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
             },
             "model": "minecraft:item/glass"
         }

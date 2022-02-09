@@ -1,0 +1,25 @@
+{
+	"parent": "gm4:block/plate",
+	"textures": {
+		"top": "gm4:block/block_compressor_plate"
+	},
+	"display": {
+		"head": {
+			"translation": [
+				0,
+				4.18,
+				0
+			],
+			"scale": [
+				1.605,
+				1.605,
+				1.605
+			],
+			"rotation": [
+				180,
+				0,
+				0
+			]
+		}
+	}
+}

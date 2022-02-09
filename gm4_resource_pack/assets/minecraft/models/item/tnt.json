@@ -29,6 +29,18 @@
             "predicate": {
                 "custom_model_data": 5
             },
+            "model": "gm4:block/disassemblers/disassembler_side"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 6
+            },
+            "model": "gm4:block/disassemblers/disassembler_down"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 7
+            },
             "model": "minecraft:item/tnt"
         },
         {
@@ -70,6 +82,18 @@
         {
             "predicate": {
                 "custom_model_data": 3420005
+            },
+            "model": "gm4:block/disassemblers/disassembler_side"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420006
+            },
+            "model": "gm4:block/disassemblers/disassembler_down"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420007
             },
             "model": "minecraft:item/tnt"
         },
