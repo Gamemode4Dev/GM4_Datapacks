@@ -2,9 +2,9 @@
     "parent": "gm4:block/cube_large",
     "textures": {
         "side": "gm4:block/enchantment_extractor_side",
-        "top": "gm4:block/enchantment_extractor_top",
+        "top": "gm4:block/enchantment_extractor_top_out",
         "front": "gm4:block/enchantment_extractor_side",
-        "bottom": "gm4:block/custom_crafter_bottom"
+        "bottom": "minecraft:block/furnace_top"
     },
     "display": {
         "head": {

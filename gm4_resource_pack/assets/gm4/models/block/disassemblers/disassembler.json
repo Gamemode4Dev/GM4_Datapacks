@@ -2,8 +2,8 @@
     "parent": "gm4:block/cube",
     "textures": {
         "side": "gm4:block/disassembler_side",
-        "top": "gm4:block/disassembler_top",
+        "top": "gm4:block/disassembler_top_out",
         "front": "gm4:block/disassembler_side",
-        "bottom": "gm4:block/forming_press_bottom"
+        "bottom": "gm4:block/smeltery_bottom"
     }
 }

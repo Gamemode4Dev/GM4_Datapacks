@@ -3,8 +3,8 @@
     "textures": {
         "side": "gm4:block/enchantment_extractor_side",
         "top": "gm4:block/enchantment_extractor_top",
-        "front": "gm4:block/enchantment_extractor_side_front",
-        "bottom": "gm4:block/custom_crafter_bottom"
+        "front": "gm4:block/enchantment_extractor_front",
+        "bottom": "minecraft:block/furnace_top"
     },
     "display": {
         "head": {

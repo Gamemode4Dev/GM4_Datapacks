@@ -4,7 +4,7 @@
         "side": "gm4:block/forming_press_side",
         "top": "gm4:block/forming_press_top",
         "front": "gm4:block/forming_press_side",
-        "bottom": "gm4:block/forming_press_bottom_front"
+        "bottom": "gm4:block/forming_press_bottom_out"
     },
     "display": {
         "head": {

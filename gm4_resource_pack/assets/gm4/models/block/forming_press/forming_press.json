@@ -2,7 +2,7 @@
     "parent": "gm4:block/cube_large",
     "textures": {
         "side": "gm4:block/forming_press_side",
-        "top": "gm4:block/forming_press_top",
+        "top": "gm4:block/forming_press_top_out",
         "front": "gm4:block/forming_press_side",
         "bottom": "gm4:block/forming_press_bottom"
     },
