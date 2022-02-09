@@ -19,6 +19,8 @@ execute store result storage gm4_relocators:temp merge_data.entity_data.lt_value
 execute store result storage gm4_relocators:temp merge_data.entity_data.lt_max int 1 run scoreboard players get @s gm4_lt_max
 execute store result storage gm4_relocators:temp merge_data.entity_data.lt_prior_value int 1 run scoreboard players get @s gm4_lt_prior_value
 
+function #gm4_liquid_tanks:relocate/set_data
+
 execute positioned ~ ~-0.5 ~ run kill @e[type=armor_stand,tag=gm4_liquid_tank_stand,limit=1,distance=..0.01]
 execute positioned ~ ~-0.75 ~ run kill @e[type=armor_stand,tag=gm4_liquid_tank_display,distance=..0.3,limit=1]
 execute positioned ~ ~0.5 ~ run kill @e[type=area_effect_cloud,distance=..0.5,tag=gm4_lt_util_block]
