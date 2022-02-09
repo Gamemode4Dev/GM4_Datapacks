@@ -14,6 +14,18 @@
             "predicate": {
                 "custom_model_data": 2
             },
+            "model": "gm4:item/ender_hoppers/ender_hopper_minecart"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "gm4:item/liquid_minecarts/liquid_minecart"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 4
+            },
             "model": "minecraft:item/hopper_minecart"
         },
         {
@@ -25,6 +37,18 @@
         {
             "predicate": {
                 "custom_model_data": 3420002
+            },
+            "model": "gm4:item/ender_hoppers/ender_hopper_minecart"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "gm4:item/liquid_minecarts/liquid_minecart"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420004
             },
             "model": "minecraft:item/hopper_minecart"
         }
