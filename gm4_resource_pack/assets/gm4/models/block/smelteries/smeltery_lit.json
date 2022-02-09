@@ -1,3 +1,23 @@
 {
-  "parent": "minecraft:item/iron_block"
+  "parent": "gm4:block/cube",
+  "textures": {
+    "side": "gm4:block/smeltery_side",
+    "top": "gm4:block/smeltery_top",
+    "front": "gm4:block/smeltery_front_lit",
+    "bottom": "gm4:block/smeltery_bottom"
+  },
+  "display": {
+    "head": {
+      "translation": [
+        0,
+        -21.98,
+        0
+      ],
+      "scale": [
+        2.288,
+        2.288,
+        2.288
+      ]
+    }
+  }
 }

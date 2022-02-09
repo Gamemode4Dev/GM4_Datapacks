@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"side": "gm4:block/smeltery_side",
+		"side": "gm4:block/smeltery_old_side",
 		"bottom": "gm4:block/forming_press_bottom"
 	},
 	"elements": [

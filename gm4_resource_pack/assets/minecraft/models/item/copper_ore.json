@@ -1,0 +1,29 @@
+{
+    "parent": "minecraft:block/copper_ore",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "gm4:block/smelteries/copper_ore_display"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "minecraft:item/copper_ore"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "gm4:block/smelteries/copper_ore_display"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420003
+            },
+            "model": "minecraft:item/copper_ore"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "parent": "minecraft:block/raw_gold_block",
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "gm4:block/smelteries/raw_gold_display"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "minecraft:item/raw_gold_block"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420001
+            },
+            "model": "gm4:block/smelteries/raw_gold_display"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420002
+            },
+            "model": "minecraft:item/raw_gold_block"
+        }
+    ]
+}

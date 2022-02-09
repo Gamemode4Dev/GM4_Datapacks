@@ -1,12 +1,9 @@
 {
-	"parent": "gm4:block/cube_w_input_w_front",
+	"parent": "gm4:block/cube",
 	"textures": {
-		"particle": "block/furnace_top",
-		"side": "minecraft:block/furnace_side",
-		"bottom": "minecraft:block/furnace_top",
-		"top": "minecraft:block/furnace_top",
-		"front": "minecraft:block/furnace_front",
-		"small_top": "minecraft:block/iron_block",
-		"small_side": "minecraft:block/iron_block"
+		"side": "gm4:block/smeltery_side",
+		"top": "gm4:block/smeltery_top",
+		"front": "gm4:block/smeltery_front",
+		"bottom": "gm4:block/smeltery_bottom"
 	}
 }
