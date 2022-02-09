@@ -11,6 +11,6 @@ playsound block.redstone_torch.burnout block @a[distance=..8] ~ ~ ~ 0.8 2
 playsound block.lava.ambient block @a[distance=..8] ~ ~ ~ 0.6 2
 
 # clean up
-tag @s remove gm4_smelteries_smelted
+tag @s remove gm4_smeltery_smelted
 execute as @e[type=hopper_minecart,tag=gm4_smelteries_disabled,distance=..3] run data merge entity @s {Enabled:1b}
 tag @e[type=hopper_minecart,distance=..3] remove gm4_smelteries_disabled
