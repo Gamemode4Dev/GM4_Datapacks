@@ -1,22 +1,12 @@
-#run from main
-#@s = players holding a tinker tool
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:wooden_shovel"}}] run function gm4_tinker_shamir:compact/shovel
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:stone_shovel"}}] run function gm4_tinker_shamir:compact/shovel
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:iron_shovel"}}] run function gm4_tinker_shamir:compact/shovel
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:golden_shovel"}}] run function gm4_tinker_shamir:compact/shovel
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_shovel"}}] run function gm4_tinker_shamir:compact/shovel
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:netherite_shovel"}}] run function gm4_tinker_shamir:compact/shovel
+# @s = players holding a tinker tool
+# at @s
+# run from gm4_metallurgy:shamir_in_hand
 
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:wooden_pickaxe"}}] run function gm4_tinker_shamir:compact/pickaxe
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:stone_pickaxe"}}] run function gm4_tinker_shamir:compact/pickaxe
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:iron_pickaxe"}}] run function gm4_tinker_shamir:compact/pickaxe
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:golden_pickaxe"}}] run function gm4_tinker_shamir:compact/pickaxe
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe"}}] run function gm4_tinker_shamir:compact/pickaxe
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:netherite_pickaxe"}}] run function gm4_tinker_shamir:compact/pickaxe
+scoreboard players set $success gm4_ml_data 0
 
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] run function gm4_tinker_shamir:compact/hoe
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] run function gm4_tinker_shamir:compact/hoe
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] run function gm4_tinker_shamir:compact/hoe
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] run function gm4_tinker_shamir:compact/hoe
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] run function gm4_tinker_shamir:compact/hoe
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:netherite_hoe"}}] run function gm4_tinker_shamir:compact/hoe
+execute if entity @s[predicate=gm4_tinker_shamir:holding_shovel] run function gm4_tinker_shamir:tool/shovel
+execute unless score $success gm4_ml_data matches 1.. if entity @s[predicate=gm4_tinker_shamir:holding_pickaxe] run function gm4_tinker_shamir:tool/pickaxe
+execute unless score $success gm4_ml_data matches 1.. if entity @s[predicate=gm4_tinker_shamir:holding_sword] run function gm4_tinker_shamir:tool/sword
+execute unless score $success gm4_ml_data matches 1.. if entity @s[predicate=gm4_tinker_shamir:holding_hoe] run function gm4_tinker_shamir:tool/hoe
+
+scoreboard players reset $success gm4_ml_data

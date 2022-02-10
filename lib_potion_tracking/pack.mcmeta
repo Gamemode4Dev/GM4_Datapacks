@@ -1,0 +1,18 @@
+{
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Potion Tracking Library",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "credits": {
+        "Creator": [
+            "BluePsychoRanger"
+        ]
+    }
+}

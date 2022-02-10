@@ -1,0 +1,87 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:3420058,gm4_zauber_cauldrons:{item:\"crystal\",type:\"strength\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/strength/v0\",Id:[I;-308545246,403555340,412409013,-705374452],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyNzU4NzkxOTAyNSwKICAicHJvZmlsZUlkIiA6ICJiNzVjZDRmMThkZjg0MmNlYjJhY2MxNTU5MTNiMjA0YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJLcmlzdGlqb25hczEzIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2FjZTJhNWQwM2I0MzczY2RkNjU1YjQ4MzZhZGQxMzdlOGQ4NDNmNTI4MjE4ZTRiNjY2NWViYWZmY2U4YzIxNWQiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==\"}]}},HideFlags:1}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Crystal of Strength",
+                                    {
+                                        "translate": "item.gm4.zauber_cauldrons.crystal.strength"
+                                    }
+                                ],
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                [
+                                    {
+                                        "translate": "potion.withAmplifier",
+                                        "with": [
+                                            {
+                                                "translate": "effect.minecraft.strength"
+                                            },
+                                            {
+                                                "translate": "potion.potency.1"
+                                            }
+                                        ],
+                                        "color": "blue",
+                                        "italic": false
+                                    }
+                                ],
+                                [
+                                    {
+                                        "translate": "potion.withAmplifier",
+                                        "with": [
+                                            {
+                                                "translate": "effect.minecraft.fire_resistance"
+                                            },
+                                            {
+                                                "translate": "potion.potency.0"
+                                            }
+                                        ],
+                                        "color": "blue",
+                                        "italic": false
+                                    }
+                                ],
+                                {
+                                    "text": ""
+                                },
+                                {
+                                    "translate": "potion.whenDrank",
+                                    "color": "dark_purple",
+                                    "italic": false
+                                },
+                                {
+                                    "translate": "attribute.modifier.plus.0",
+                                    "with": [
+                                        "6",
+                                        {
+                                            "translate": "attribute.name.generic.attack_damage"
+                                        }
+                                    ],
+                                    "color": "blue",
+                                    "italic": false
+                                }
+                            ],
+                            "replace": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

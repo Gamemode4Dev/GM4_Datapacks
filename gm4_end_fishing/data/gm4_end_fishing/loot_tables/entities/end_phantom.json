@@ -35,14 +35,8 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_damage",
-              "damage": 0
-            }
-          ],
-          "name": "minecraft:elytra"
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:items/ravaged_wings"
         }
       ],
       "conditions": [

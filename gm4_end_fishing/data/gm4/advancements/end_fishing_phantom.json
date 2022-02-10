@@ -2,12 +2,12 @@
   "display": {
     "icon": {
       "item": "elytra",
-      "nbt": "{CustomModelData:1,Damage:432}"
+      "nbt": "{CustomModelData:3420001,Damage:432}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "That's not a fish!",
+        "That's Not a Fish!",
         {"translate": "advancement.gm4.end_fishing_phantom.title"}
       ]
     },

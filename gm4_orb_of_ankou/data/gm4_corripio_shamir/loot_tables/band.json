@@ -1,0 +1,36 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_metallurgy:bismuth_band",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:3420116,SkullOwner:{Name:\"[Drop to Fix Item] gm4_corripio_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"corripio\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "replace": false,
+                            "lore": [
+                                {
+                                    "translate": "%1$s%3427655$s",
+                                    "with": [
+                                        "Corripio",
+                                        {
+                                            "translate": "item.gm4.shamir.corripio"
+                                        }
+                                    ],
+                                    "italic": false,
+                                    "color": "gray"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

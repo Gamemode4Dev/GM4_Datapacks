@@ -1,0 +1,31 @@
+{
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Audere Shamir",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Audere Shamir",
+    "module_id": "audere_shamir",
+    "hidden": false,
+    "site_description": "Adds the shamir 'Audere' to Metallurgy. Gain Haste with low durability tools.",
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Audere_Shamir",
+    "required_modules": [
+        "metallurgy"
+    ],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "Kattacka"
+        ],
+        "Icon Design": [
+            "BluePsychoRanger"
+        ]
+    }
+}

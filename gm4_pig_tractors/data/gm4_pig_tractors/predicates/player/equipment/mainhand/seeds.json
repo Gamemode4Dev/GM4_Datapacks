@@ -1,0 +1,11 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "mainhand": {
+                "tag": "gm4_pig_tractors:seeds"
+            }
+        }
+    }
+}

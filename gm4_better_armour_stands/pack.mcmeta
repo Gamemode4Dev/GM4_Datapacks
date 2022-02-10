@@ -1,15 +1,20 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Better Armour Stands",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Better Armour Stands",
     "module_id": "better_armour_stands",
-    "site_description": "This module lets you control the size of stands and show their arms. It's also expandable!",
-    "site_categories": [
-        "Better Armour Stands"
-    ],
-    "video_link": "https://www.youtube.com/watch?v=E7DnQTlpgrw&t=1s",
+    "hidden": false,
+    "site_description": "Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands.",
+    "video_link": "https://www.youtube.com/watch?v=E7DnQTlpgrw",
     "wiki_link": "https://wiki.gm4.co/wiki/Better_Armour_Stands",
     "required_modules": [],
     "recommended_modules": [
@@ -18,20 +23,15 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ],
         "Updated by": [
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ],
-            [
-                "Misode",
-                "https://twitter.com/misode_"
-            ]
+            "SpecialBuilder32",
+            "Misode",
+            "Denniss"
+        ],
+        "Icon Design": [
+            "Sparks"
         ]
     }
 }

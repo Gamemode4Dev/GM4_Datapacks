@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "armor_stand",
+      "nbt": "{CustomModelData:3420002}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Plenty O' Posing",
+        {"translate": "advancement.gm4.poses_pack.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Apply a preset pose to your armour stand",
+        {"translate": "advancement.gm4.poses_pack.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:better_armour_stands",
+  "criteria": {
+    "pose_stand": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

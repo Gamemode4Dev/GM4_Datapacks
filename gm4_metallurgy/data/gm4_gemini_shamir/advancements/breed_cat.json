@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "breed_cats": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "cat"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_gemini_shamir:breed/check_cat"
+  }
+}

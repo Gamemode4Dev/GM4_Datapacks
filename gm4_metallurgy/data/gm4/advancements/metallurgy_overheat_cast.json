@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:lava_bucket",
-      "nbt": "{CustomModelData:1}"
+      "nbt": "{CustomModelData:3420001}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
@@ -14,7 +14,7 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Destroy a mold containing molten metal.",
+        "Destroy a mould containing molten metal.",
         {"translate": "advancement.gm4.metallurgy.overheat_cast.description"}
       ],
       "color": "gray"

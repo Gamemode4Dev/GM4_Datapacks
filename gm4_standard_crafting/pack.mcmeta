@@ -1,15 +1,19 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Standard Crafting",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Standard Crafting",
     "module_id": "standard_crafting",
-    "hidden":false,
+    "hidden": false,
     "site_description": "A crafting recipe pack that adds some nifty new recipes to the game.",
-    "site_categories": [
-        "Custom Crafting"
-    ],
     "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
     "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
     "required_modules": [
@@ -20,16 +24,13 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ],
         "Updated by": [
-            [
-                "Bloo",
-                "https://www.twitter.com/Bloo_dev"
-            ]
+            "Bloo"
+        ],
+        "Icon Design": [
+            "Sparks"
         ]
     }
 }

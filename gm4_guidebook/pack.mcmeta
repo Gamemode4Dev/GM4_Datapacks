@@ -1,0 +1,32 @@
+{
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Guidebook",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Guidebook",
+    "module_id": "guidebook",
+    "hidden": true,
+    "libraries": [
+        "lib_forceload"
+    ],
+    "site_description": "Adds a dynamic guidebook to discover the mechanics of Gamemode 4! This provides a wiki-like experience in-game!",
+    "important_note": "Experimental Module! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.",
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",
+    "required_modules": [],
+    "recommended_modules": [
+        "resource_pack"
+    ],
+    "credits": {
+        "Creator": [
+            "BluePsychoRanger"
+        ]
+    }
+}

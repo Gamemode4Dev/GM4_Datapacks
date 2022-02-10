@@ -1,0 +1,36 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"name": "gm4_metallurgy:barium_band",
+					"functions": [
+						{
+							"function": "minecraft:set_nbt",
+							"tag": "{CustomModelData:3420122,SkullOwner:{Name:\"[Drop to Fix Item] gm4_iacio_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"iacio\"}}"
+						},
+						{
+							"function": "minecraft:set_lore",
+							"replace": false,
+							"lore": [
+								{
+									"translate": "%1$s%3427655$s",
+									"with": [
+										"Iacio",
+										{
+											"translate": "item.gm4.shamir.iacio"
+										}
+									],
+									"italic": false,
+									"color": "gray"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

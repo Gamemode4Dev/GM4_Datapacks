@@ -1,28 +1,31 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Ink Spitting Squid",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Ink Spitting Squid",
     "module_id": "ink_spitting_squid",
-    "site_description": "*splort*",
-    "site_categories": [],
+    "site_description": "Improves the vanilla ink effect by adding Blindness. Glow Squid will give Night Vision when disturbed, which might come in handy if you're out of torches!",
     "video_link": "https://www.youtube.com/watch?v=68LMYEhueZ0",
     "wiki_link": "https://wiki.gm4.co/wiki/Ink_Spitting_Squid",
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Energyxxer",
-                "https://www.youtube.com/user/Energyxxer"
-            ]
+            "Energyxxer"
         ],
         "Updated by": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ]
+            "BluePsychoRanger"
+        ],
+        "Icon Design": [
+            "Sparks"
         ]
     }
 }

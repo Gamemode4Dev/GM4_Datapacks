@@ -2,12 +2,12 @@
   "display": {
     "icon": {
       "item": "spawner",
-      "nbt": "{display:{Name:'\"spawner_minecarts logo\"'}}"
+      "nbt": "{CustomModelData:3420001}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Don't go breaking my Cart",
+        "Don't Go Breaking My Cart",
         {"translate": "advancement.gm4.spawner_minecarts.title"}
       ]
     },

@@ -1,23 +1,30 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Bat Grenades",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Bat Grenades",
     "module_id": "bat_grenades",
-    "hidden":false,
+    "hidden": false,
     "site_description": "Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!",
-    "site_categories": [],
+    "important_note": "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
     "video_link": "https://www.youtube.com/watch?v=uUoEKtte1GQ",
     "wiki_link": "https://wiki.gm4.co/wiki/Bat_Grenades",
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
+        ],
+        "Icon Design": [
+            "Sparks"
         ]
     }
 }

@@ -35,12 +35,12 @@
             {
               "function": "minecraft:set_lore",
               "lore": [
-                {"translate":"%1$s%3427655$s","with":["Slightly Damaged Workbench",{"translate":"item.gm4.slightly_damaged_workbench"}]}
+                {"translate":"%1$s%3427655$s","with":["Slightly Damaged Workbench",{"translate":"item.gm4.slightly_damaged_workbench"}],"color":"dark_gray","italic":true}
               ]
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:2}"
+              "tag": "{CustomModelData:3420002}"
             }
           ]
         }

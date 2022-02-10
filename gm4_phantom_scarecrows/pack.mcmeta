@@ -1,28 +1,31 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Phantom Scarecrows",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Phantom Scarecrows",
     "module_id": "phantom_scarecrows",
-    "hidden":false,
-    "site_description": "Undead Scarecrow defenses!",
-    "site_categories": [],
+    "hidden": false,
+    "site_description": "Set up Scarecrows that shoot homing rockets at Phantoms!",
     "wiki_link": "https://wiki.gm4.co/wiki/Phantom_Scarecrows",
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Bloo",
-                "https://www.twitter.com/Bloo_dev"
-            ]
+            "Bloo"
         ],
         "Inspired by": [
-            [
-                "Chopper2112",
-                "https://www.twitter.com/TheChopper2112"
-            ]
+            "Chopper2112"
+        ],
+        "Icon Design": [
+            "DuckJr"
         ]
     }
 }

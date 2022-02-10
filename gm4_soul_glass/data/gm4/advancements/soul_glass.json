@@ -2,12 +2,12 @@
   "display": {
     "icon": {
       "item": "brown_stained_glass",
-      "nbt": "{CustomModelData:1}"
+      "nbt": "{CustomModelData:3420001}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Corruption at its finest",
+        "Corruption at its Finest",
         {"translate": "advancement.gm4.soul_glass.title"}
       ]
     },

@@ -1,4 +1,3 @@
-#advancement
-execute at @e[type=#gm4:minecarts,tag=gm4_linked] run advancement grant @p[distance=..1,gamemode=!spectator] only gm4:ziprails
+execute as @e[type=#gm4:minecarts] at @s run function gm4_ziprails:check_cable
 
-schedule function gm4_ziprails:main 16t
+schedule function gm4_ziprails:main 2t

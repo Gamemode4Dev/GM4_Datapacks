@@ -1,9 +1,15 @@
-# @s=golden_helmet in cauldron
-# at align xyz
-# run from recipe/armor/helmet/apply_modifier.mcfunction
+# @s = boiling zauber cauldron with enchanted prismarine shard, golden helmet and blaze powder inside
+# at center of block
+# run from recipe/armor/helmet/apply_modifier
 
-data merge entity @s {PickupDelay:0,Item:{tag:{CustomModelData:3,gm4_zauber_cauldrons:{item:"zauber_armor"},AttributeModifiers:[{Slot:head,AttributeName:generic.attack_damage,Name:generic.attack_damage,Amount:0.35,Operation:2,UUID:[I;250004993,-600160793,-552771284,784442588]},{Slot:head,AttributeName:generic.armor,Name:generic.armor,Amount:3,Operation:0,UUID:[I;-440081014,-610623343,-606386611,689947835]},{Slot:head,AttributeName:generic.armor_toughness,Name:generic.armor_toughness,Amount:3,Operation:0,UUID:[I;807321613,318238802,-450100784,-475132420]}]}}}
-data modify entity @s Item.tag.display.Lore append value '{"translate":"%1$s%3427655$s","with":["+25% Magic",{"translate":"item.gm4.zauber_armour.magic","with":["25"]}],"color":"blue","italic":"false"}'
+# remove ingredients
+execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 
-kill @e[type=item,dx=0,dy=0,dz=0,nbt=!{Item:{tag:{gm4_zauber_cauldrons:{item:"zauber_armor"}}}}]
-scoreboard players set recipe_success gm4_zc_data 1
+# set blueprint
+data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/attribute/attack_boost CustomModelData set value 3420003
+
+# summon item
+loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:recipes/armor/helmet/attack_boost
+
+# set flag
+scoreboard players set $recipe_success gm4_zc_data 1

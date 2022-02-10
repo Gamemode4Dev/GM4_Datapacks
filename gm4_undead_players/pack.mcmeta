@@ -1,28 +1,32 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Undead Players",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Undead Players",
     "module_id": "undead_players",
     "site_description": "You'll find your death point faster, but you'll have to fight your corpse for your stuff back!",
-    "site_categories": [],
+    "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
     "video_link": "https://www.youtube.com/watch?v=dD8nChP8t9A",
     "wiki_link": "https://wiki.gm4.co/wiki/Undead_Players",
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ],
         "Updated by": [
-            [
-                "SunderB",
-                ""
-            ]
+            "SunderB"
+        ],
+        "Icon Design": [
+            "Hozz"
         ]
     }
 }

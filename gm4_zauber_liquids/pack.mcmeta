@@ -1,15 +1,19 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Zauber Liquids",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Zauber Liquids",
     "module_id": "zauber_liquids",
-    "hidden":true,
-    "site_description": "From cauldron-made potions to potion-filled tanks! Store your tier IV potions in Liquid Tanks!",
-    "site_categories": [
-        "Liquid Tanks"
-    ],
+    "hidden": false,
+    "site_description": "From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!",
     "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
     "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids",
     "required_modules": [
@@ -18,26 +22,19 @@
     ],
     "recommended_modules": [],
     "credits": {
-        "Creator": [
-            [
-                "SpecialBuilder32",
-                "https://twitter.com/SpecialBuilder"
-            ],
-            [
-                "Bluefire610",
-                "https://twitter.com/Bloo_dev"
-            ]
+        "Creators": [
+            "SpecialBuilder32",
+            "Bloo"
         ],
-        "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+        "Updated by": [
+            "JP12"
         ],
         "Textures by": [
-            [
-                "Vilder50"
-            ]
+            "Vilder50",
+            "Hozz"
+        ],
+        "Icon Design": [
+            "Sparks"
         ]
     }
 }

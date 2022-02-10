@@ -1,0 +1,11 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "player": {
+      "looking_at": {
+        "nbt": "{Tags:[\"gm4_bas_head\"]}"
+      }
+    }
+  }
+}

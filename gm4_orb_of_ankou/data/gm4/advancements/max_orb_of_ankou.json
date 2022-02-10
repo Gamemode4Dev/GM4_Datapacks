@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "firework_star",
+      "nbt": "{Enchantments:[{}],Explosion:{Colors:[I;13092807]},CustomModelData:3420001}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "We're Full Here...",
+        {"translate": "advancement.gm4.orb_of_ankou.max_orb_of_ankou.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Max out an Orb of Ankou",
+        {"translate": "advancement.gm4.orb_of_ankou.max_orb_of_ankou.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:create_soul_shard",
+  "criteria": {
+    "max_orb_of_ankou": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

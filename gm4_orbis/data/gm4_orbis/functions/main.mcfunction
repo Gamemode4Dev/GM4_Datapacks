@@ -1,8 +1,16 @@
+# run from tick
+
 # reset the orbis clock score
 scoreboard players set $orbis_tick gm4_count 0
-# for every player, generate the nearest chunk
-execute at @a[tag=!gm4_orbis_disabled] positioned ~-8 ~ ~-8 as @e[type=area_effect_cloud,tag=gm4_chunk,tag=!gm4_generated,sort=nearest,limit=1] at @s if block ~ ~ ~ bedrock run function gm4_orbis:chunk/generate
-# kill chunk markers that have been generated and have all adjacent chunks generated
-execute as @e[type=area_effect_cloud,tag=gm4_chunk,tag=gm4_generated] at @s run function gm4_orbis:chunk/kill
-# if the chunk where the player is in hasn't been generated, spawn a new chunk marker
-execute as @a[tag=!gm4_orbis_disabled,nbt={Dimension:"minecraft:overworld"}] at @s unless block ~ 0 ~ barrier run function gm4_orbis:chunk/init
+
+# find uninitialized metachunks that need aligning
+execute as @e[type=marker,tag=gm4_metachunk_init] at @s run function gm4_orbis:metachunk/init_attempt
+
+# for every player, generate part of the nearest metachunk that's not fully generated
+execute at @a[tag=!gm4_orbis_disabled] as @e[type=marker,tag=gm4_metachunk,scores={gm4_orbis_stage=..8},tag=!gm4_metachunk_init,sort=nearest,limit=1] at @s run function gm4_orbis:metachunk/generate_attempt
+
+# if the chunk where the player is in doesn't have a marker, spawn a new chunk marker
+execute in minecraft:overworld as @a[tag=!gm4_orbis_disabled,x=0] at @s run function gm4_orbis:metachunk/new
+
+# progress pregen if the the metachunk at the active pregen player is fully generated
+execute if score pregen_enabled gm4_orbis_config matches 1 as @a[tag=gm4_orbis_pregen_active,limit=1] at @s positioned ~-24 -1 ~-24 if entity @e[type=marker,tag=gm4_metachunk,scores={gm4_orbis_stage=9},dx=47,dy=1,dz=47] at @s run function gm4_orbis:pregen/progress

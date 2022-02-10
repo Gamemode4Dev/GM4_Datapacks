@@ -1,0 +1,31 @@
+{
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Everstone",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Everstone",
+    "module_id": "everstone",
+    "site_description": "Collect Everstones during full moons and use them on baby mobs to stop them from aging! But watch out, some other mobs might start aging, too!",
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Everstone",
+    "required_modules": [],
+    "recommended_modules": [
+        "resource_pack"
+    ],
+    "credits": {
+        "Creators": [
+            "Denniss",
+            "BluePsychoRanger"
+        ],
+        "Icon Design": [
+            "BluePsychoRanger"
+        ]
+    }
+}

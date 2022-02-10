@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420014,gm4_end_fishing:{enderpuff:1b},display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Enderpuff\",{\"translate\":\"item.gm4.enderpuff\"}],\"italic\":false}'},SkullOwner:{Id:[I;-749248143,1561284060,-1964497486,1336566238],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYxNzM3NjU5NjgxNiwKICAicHJvZmlsZUlkIiA6ICI4NDMwMDNlM2JlNTY0M2Q5OTQxMTBkMzJhMzU2MTk2MCIsCiAgInByb2ZpbGVOYW1lIiA6ICJHYWJvTWNHYW1lciIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9lYjIzNTI3MWNhNTZlOGExYTQzMWViMWU2NWNlODIwYWE3ZTUwMWYwNmMxZjEzNTZhY2ViN2U4NjJmMTRhMjgiCiAgICB9CiAgfQp9\"}]}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

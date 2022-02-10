@@ -1,0 +1,166 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "That's some good barding!",
+                    {
+                      "translate": "text.gm4.end_city_horse_armor.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420010}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "There's a horse somewhere",
+                    {
+                      "translate": "text.gm4.end_city_horse_armor.2.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "that lost this armour.",
+                    {
+                      "translate": "text.gm4.end_city_horse_armor.2.2"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420011}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Floating horses must be",
+                    {
+                      "translate": "text.gm4.end_city_horse_armor.3.1"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "a thing somewhere, right?",
+                    {
+                      "translate": "text.gm4.end_city_horse_armor.3.2"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420012}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Too bad there's no horse weapons.",
+                    {
+                      "translate": "text.gm4.end_city_horse_armor.4"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420013}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "replace": false,
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Made with the finest materials known to man",
+                    {
+                      "translate": "text.gm4.end_city_horse_armor.5"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420014}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "bow",
-      "nbt": "{Enchantments:[{id:\"flame\",lvl:1}],CustomModelData:1}"
+      "nbt": "{Enchantments:[{id:\"flame\",lvl:1}],CustomModelData:3420001}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
@@ -33,7 +33,7 @@
               "levels": 1
               }
             ],
-          "item": "minecraft:bow"
+          "items": ["minecraft:bow"]
         }
       }
     }

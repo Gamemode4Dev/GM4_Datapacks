@@ -1,0 +1,50 @@
+{
+  "type":"block",
+  "pools":[
+    {
+      "rolls":1,
+      "entries":[
+        {
+          "type":"item",
+          "name":"minecraft:player_head",
+          "functions":[
+            {
+              "function":"set_nbt",
+              "tag":"{CustomModelData:3420034,gm4_relocation_data:{Command:\"function gm4_enchantment_extractors:relocate/place_down\"},SkullOwner:{Id:[I;-983517977,466373274,-1879558378,861584362],Properties:{textures:[{Signature:\"gm4_relocated_block\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTU5NjU3NTkyMDA0NywKICAicHJvZmlsZUlkIiA6ICIwNjEzY2I1Y2QxYjg0M2JjYjI4OTk1NWU4N2QzMGEyYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJicmVhZGxvYWZzcyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81Nzg5YTZiODNkYTdhMTRiMTk0YmY4MGYyODYyNGFhNjY5MDdiNjRhZDE3ZTZmNDI5OGQ3OWQ3NjE4MzAwODE0IgogICAgfQogIH0KfQ==\"}]}}}"},
+            {
+              "function":"set_name",
+              "name":[
+                {
+                  "translate":"%1$s%3427655$s",
+                  "with": [
+                    "Enchantment Extractor",
+                    {
+                      "translate": "block.gm4.enchantment_extractor"
+                    }
+                  ],
+                  "color":"aqua",
+                  "italic":false
+                }
+              ]
+            },
+            {
+              "function":"set_lore",
+              "lore":[
+                {
+                  "translate":"%1$s%3427655$s",
+                  "with": [
+                    "Relocator",
+                    {
+                      "translate": "item.gm4.relocator"
+                    }
+                  ],
+                  "color":"yellow"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 # called by gm4_tunnel_bores:main
 
 # drop crafting ingredients and rails
-loot spawn ~ ~ ~ loot gm4_tunnel_bores:bore
+loot spawn ~ ~ ~ loot gm4_tunnel_bores:bore_components
 
 # kill
 kill @s

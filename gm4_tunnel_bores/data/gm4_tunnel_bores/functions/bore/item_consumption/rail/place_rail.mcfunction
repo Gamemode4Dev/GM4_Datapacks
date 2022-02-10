@@ -2,7 +2,8 @@
 # at tunnel bore minecart
 # called by gm4_tunnel_bores:bore/item_consumption/rail/check_solidity
 
-setblock ^ ^ ^1 rail keep
+execute unless block ^ ^ ^1 #gm4:water run setblock ^ ^ ^1 rail destroy
+execute if block ^ ^ ^1 #gm4:water run setblock ^ ^ ^1 rail[waterlogged=true] destroy
 scoreboard players remove @s gm4_bore_rail 1
 
 # playsound

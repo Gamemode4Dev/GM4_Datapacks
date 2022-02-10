@@ -1,31 +1,41 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Relocators",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Relocators",
     "module_id": "relocators",
-    "hidden":true,
-    "site_description": "Craft relocators to move your custom crafters, liquid tanks, and other machines",
-    "site_categories": [
-        "Custom Crafting"
-    ],
+    "hidden": false,
+    "site_description": "Craft Relocators to move your custom crafters, liquid tanks, and other machines.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Relocators",
     "required_modules": [
         "custom_crafters"
     ],
     "recommended_modules": [
-        "custom_crafters",
+        "block_compressors",
+        "book_binders",
+        "master_crafting",
+        "disassemblers",
+        "enchantment_extractors",
+        "ender_hoppers",
         "liquid_tanks",
-        "block_compressors"
+        "smelteries",
+        "tinkering_compressors"
     ],
     "credits": {
         "Creator": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ]
+            "BluePsychoRanger"
+        ],
+        "Icon Design": [
+            "Hozz"
         ]
     }
 }

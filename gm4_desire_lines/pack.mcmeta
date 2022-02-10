@@ -1,12 +1,18 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Desire Lines",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Desire Lines",
     "module_id": "desire_lines",
-    "site_description": "Creates natural looking paths through high traffic areas.",
-    "site_categories": [],
+    "site_description": "Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!",
     "video_link": "https://www.youtube.com/watch?v=wmGaatfekfs",
     "wiki_link": "https://wiki.gm4.co/wiki/Desire_Lines",
     "required_modules": [],
@@ -15,30 +21,15 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ],
         "Updated by": [
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ],
-            [
-                "Misode",
-                "https://twitter.com/misode_"
-            ],
-            [
-                "Andante",
-                "https://twitter.com/Andantweets"
-            ]
+            "SpecialBuilder32",
+            "Misode",
+            "Andante"
         ],
         "Icon Design": [
-            [
-                "JonPot",
-                ""
-            ]
+            "JonPot"
         ]
     }
 }

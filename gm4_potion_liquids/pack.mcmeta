@@ -1,14 +1,21 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Potion Liquids",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Potion Liquids",
     "module_id": "potion_liquids",
-    "site_description": "Adds the ability to store potions in Liquid Tanks",
-    "site_categories": [
-        "Liquid Tanks"
+    "libraries": [
+        "lib_brewing"
     ],
+    "site_description": "Adds the ability to store potions in Liquid Tanks! You can also use a potion by walking beneath a potion-filled Liquid Tank.",
     "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
     "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids",
     "required_modules": [
@@ -17,27 +24,16 @@
     "recommended_modules": [],
     "credits": {
         "Creator": [
-            [
-                "SpecialBuilder32",
-                "https://twitter.com/SpecialBuilder"
-            ]
+            "SpecialBuilder32"
         ],
         "Updated by": [
-            [
-                "SpecialBuilder32",
-                "https://twitter.com/SpecialBuilder"
-            ]
-        ],
-        "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "SpecialBuilder32"
         ],
         "Textures by": [
-            [
-                "Vilder50"
-            ]
+            "Vilder50"
+        ],
+        "Icon Design": [
+            "DuckJr"
         ]
     }
 }

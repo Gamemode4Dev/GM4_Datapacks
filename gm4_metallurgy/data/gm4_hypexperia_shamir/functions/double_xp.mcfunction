@@ -1,5 +1,5 @@
-#run from hypexperia:find_orbs
-#@s = experience orb that hasn't been doubled yet
+# run from hypexperia:find_orbs
+# @s = experience orb that hasn't been doubled yet
 
 execute store result score xp_value gm4_ml_data run data get entity @s Value 1
 execute if score xp_value gm4_ml_data matches 1..12 store result entity @s Value short 2 run scoreboard players get xp_value gm4_ml_data

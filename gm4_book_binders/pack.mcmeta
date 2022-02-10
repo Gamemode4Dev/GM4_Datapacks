@@ -1,26 +1,31 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Book Binders",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Book Binders",
     "module_id": "book_binders",
     "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-    "site_description": "Start printing your own Enchanted Books",
-    "site_categories": [],
+    "site_description": "Start printing your own Enchanted Books with Book Binders. Use lecterns to exract singular pages from Enchanted Books and recombine pages with Leather to create your own Enchanted Books -- free of charge!",
     "wiki_link": "https://wiki.gm4.co/wiki/Book_Binders",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "resource_pack"
+    ],
     "credits": {
-        "Creator": [
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ],
-            [
-                "Sparks",
-                "https://twitter.com/SparksTheGamer"
-            ]
+        "Creators": [
+            "Bloo",
+            "Sparks"
+        ],
+        "Icon Design": [
+            "Sparks"
         ]
     }
 }

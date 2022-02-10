@@ -1,6 +1,13 @@
 # @s = item above block compressor
+# at location of dropper (compressor)
 # run from process
-execute if block ~ ~ ~ dropper{Items:[{Count:64b}]} if entity @s[nbt={Item:{Count:64b}},nbt=!{Item:{tag:{gm4_compressed:{}}}}] run function gm4_block_compressors:compress/64
-execute if block ~ ~ ~ dropper{Items:[{Count:16b}]} if entity @s[nbt={Item:{Count:16b}},nbt=!{Item:{tag:{gm4_compressed:{}}}}] run function gm4_block_compressors:compress/16
-execute if block ~ ~ ~ dropper{Items:[{Count:1b}]} if entity @s[nbt={Item:{Count:1b,tag:{gm4_compressed:{value:64}}}}] run function gm4_block_compressors:decompress/64
-execute if block ~ ~ ~ dropper{Items:[{Count:1b}]} if entity @s[nbt={Item:{Count:1b,tag:{gm4_compressed:{value:16}}}}] run function gm4_block_compressors:decompress/16
+# tries to compress/decompress the current item entity.
+# $decompressing's states are 0:try compresss, 1:try decompress
+
+data modify storage gm4_block_compressors:temp/item_stack Item set from entity @s Item
+
+execute store success score $decompressing gm4_bc_data if data storage gm4_block_compressors:temp/item_stack Item{Count:1b} run function gm4_block_compressors:item/try_decompress
+execute unless score $decompressing gm4_bc_data matches 1 unless data storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors unless data storage gm4_block_compressors:temp/item_stack gm4_compressed run function gm4_block_compressors:item/try_compress
+
+scoreboard players reset $decompressing gm4_bc_data
+data remove storage gm4_block_compressors:temp/item_stack Item

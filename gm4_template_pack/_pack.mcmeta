@@ -1,12 +1,18 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "MODULE_NAME",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "MODULE_NAME",
     "module_id": "MODULE_ID",
     "site_description": "Someone forgot to type a description!",
-    "site_categories": [],
     "video_link": "YOUTUBE_VIDEO_URL",
     "wiki_link": "WIKI_URL",
     "required_modules": [
@@ -18,22 +24,15 @@
         "or leave array empty"
     ],
     "credits": {
-        "comment": "All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings. -- REMOVE THIS COMMENT",
         "Creator": [
-            [
-                "USERNAME",
-                "OPTIONAL_LINK"
-            ]
+            "USERNAME"
         ],
         "Updated By": [
-            [
-                "USERNAME",
-                "OPTIONAL_LINK"
-            ],
-            [
-                "USERNAME",
-                "OPTIONAL_LINK"
-            ]
+            "USERNAME",
+            "USERNAME"
+        ],
+        "Icon Design": [
+            "USERNAME"
         ]
     }
 }

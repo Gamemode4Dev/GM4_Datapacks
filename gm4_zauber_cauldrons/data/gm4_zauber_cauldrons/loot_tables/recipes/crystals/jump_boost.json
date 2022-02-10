@@ -1,0 +1,53 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:3420056,gm4_zauber_cauldrons:{item:\"crystal\",type:\"jump_boost\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/jump_boost/v0\",Id:[I;-306488846,400519617,492543013,-700009782],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyNzU4Nzc5NDAwNSwKICAicHJvZmlsZUlkIiA6ICI1NWFkZmYwYWFlOGY0ODViOGFlMTZjOWY5MWFmMmYyYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJSZWRYU3RvbmUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjk0NTUyNmRmM2RhNTEwZTRhYTZkODk5Njc0MThlYTllZjIyNGM4Mzk2MjI1MmJkNjE1MzYyYTUxZTNjZDUwNCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9\"}]}},HideFlags:1}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Crystal of Leaping",
+                                    {
+                                        "translate": "item.gm4.zauber_cauldrons.crystal.jump_boost"
+                                    }
+                                ],
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                [
+                                    {
+                                        "translate": "potion.withAmplifier",
+                                        "with": [
+                                            {
+                                                "translate": "effect.minecraft.jump_boost"
+                                            },
+                                            {
+                                                "translate": "potion.potency.1"
+                                            }
+                                        ],
+                                        "color": "blue",
+                                        "italic": false
+                                    }
+                                ]
+                            ],
+                            "replace": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

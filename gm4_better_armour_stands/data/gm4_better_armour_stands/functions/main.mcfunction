@@ -1,4 +1,16 @@
-execute as @e[type=item,nbt={Item:{id:"minecraft:writable_book"},OnGround:1b}] at @s if entity @e[type=armor_stand,distance=..1,limit=1,sort=nearest] run function #gm4_better_armour_stands:apply_book
-execute at @a[nbt={SelectedItem:{id:"minecraft:writable_book"}}] run effect give @e[type=armor_stand,nbt={Invisible:1b},tag=!gm4_no_edit,distance=..8] glowing 2 0
+# player holding book and quill
+execute as @a[gamemode=!spectator,predicate=gm4_better_armour_stands:holding/mainhand/book_and_quill] at @s run function gm4_better_armour_stands:holding_book
+
+# remove right click detection on armor_stand with no arms if player is too far away
+execute as @e[type=armor_stand,tag=gm4_bas_no_arms] at @s unless entity @p[distance=..5,predicate=gm4_better_armour_stands:holding/mainhand/book_arms] run function gm4_better_armour_stands:toggle/arms_detect_remove
+
+# detect broken armor_stand
+execute as @a[tag=gm4_bas_track] at @s unless entity @e[type=armor_stand,tag=gm4_bas_track,distance=..10] run function gm4_better_armour_stands:pose/set
+
+# no tracked player within range
+execute as @e[type=armor_stand,tag=gm4_bas_track] at @s unless entity @p[tag=gm4_bas_track,distance=..10] run function gm4_better_armour_stands:pose/set_no_player
+
+# remove leftover temporary entities
+execute as @e[tag=gm4_bas_temp,sort=random,limit=1] at @s unless entity @e[type=armor_stand,tag=gm4_bas_track,distance=..6] run tp @s ~ -1000 ~
 
 schedule function gm4_better_armour_stands:main 16t

@@ -1,3 +1,7 @@
-replaceitem block ~ ~ ~ container.0 beetroot_soup 1
-scoreboard players remove @s gm4_lt_value 1
+# run from gm4_standard_liquids:item_fill
+# @s = tank being processed
+
+scoreboard players set $item_value gm4_lt_value -1
+data merge storage gm4_liquid_tanks:temp/tank {output:{id:"beetroot_soup"}}
+function gm4_liquid_tanks:smart_item_fill
 tag @s add gm4_lt_fill

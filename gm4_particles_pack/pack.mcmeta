@@ -1,14 +1,19 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Particles Pack",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Particles Pack",
     "module_id": "particles_pack",
-    "site_description": "Fireflies to flames, add some pezazz to your projects!",
-    "site_categories": [
-        "Better Armour Stands"
-    ],
+    "hidden": false,
+    "site_description": "Fireflies to flames, add some pezazz to your projects! Allows you to turn Armour Stands into particle sources that you control!",
     "video_link": "https://youtu.be/GpkWIKMP6aY",
     "wiki_link": "https://wiki.gm4.co/wiki/Particles_Pack",
     "required_modules": [
@@ -19,22 +24,13 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ],
         "Updated by": [
-            [
-                "Misode",
-                "https://twitter.com/misode_"
-            ]
+            "Misode"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

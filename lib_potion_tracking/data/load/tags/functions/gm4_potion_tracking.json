@@ -1,0 +1,7 @@
+{
+    "values": [
+        "#load:gm4_potion_tracking/dependencies",
+        "#load:gm4_potion_tracking/enumerate",
+        "#load:gm4_potion_tracking/resolve_load"
+    ]
+}

@@ -1,13 +1,19 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Tunnel Bores",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Tunnel Bores",
     "module_id": "tunnel_bores",
     "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-    "site_description": "Ever wondered how mineshafts came to be? This is it!",
-    "site_categories": [],
+    "site_description": "Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3⨉3 tunnels, and even lay rails behind themselves.",
     "wiki_link": "https://wiki.gm4.co/wiki/Tunnel_Bores",
     "required_modules": [
         "custom_crafters"
@@ -17,12 +23,11 @@
         "vertical_rails"
     ],
     "credits": {
-        "comment": "All credit arrays are optional and more can be created as needed. They will be displayed on the site page under their headings.",
         "Creator": [
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ]
+            "Bloo"
+        ],
+        "Icon Design": [
+            "Hozz"
         ]
     }
 }

@@ -1,0 +1,33 @@
+{
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Vigere Shamir",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Vigere Shamir",
+    "module_id": "vigere_shamir",
+    "hidden": false,
+    "libraries": [],
+    "site_description": "Adds the shamir 'Vigere' to Metallurgy. It heals you when you block with a shield.",
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vigere_Shamir",
+    "required_modules": [
+        "metallurgy"
+    ],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "Thanathor",
+            "TheEpyonProject"
+        ],
+        "Icon Design": [
+            "BluePsychoRanger"
+        ]
+    }
+}

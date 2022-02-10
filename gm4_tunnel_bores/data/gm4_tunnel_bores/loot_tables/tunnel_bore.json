@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:furnace_minecart",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:3420001,display:{Name:'{\"translate\":\"%1$s\",\"with\":[\"Minecart with Piston\",{\"translate\":\"item.gm4.minecart.bore\"}],\"italic\":false,\"color\":\"white\"}'}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

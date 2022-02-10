@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:106,gm4_metallurgy:{stored_shamir:\"defuse\"}}"
+                            "tag": "{CustomModelData:3420106,SkullOwner:{Name:\"[Drop to Fix Item] gm4_defuse_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"defuse\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",

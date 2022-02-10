@@ -9,7 +9,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_metallurgy:malachite_lump",
+              "name": "gm4_metallurgy:bismutite_lump",
               "conditions": [
                 {
                   "condition": "minecraft:entity_properties",
@@ -39,6 +39,18 @@
                         }
                       }
                     ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_forterra_shamir:stone",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'forterra'}}"
                   }
                 }
               ]

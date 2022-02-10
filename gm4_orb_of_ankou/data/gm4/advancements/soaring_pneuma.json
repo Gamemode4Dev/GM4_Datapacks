@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "elytra",
+      "nbt": "{CustomModelData:3420002,Enchantments:[{}]}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "I Believe I Can Fly!",
+        {"translate": "advancement.gm4.orb_of_ankou.soaring.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Fly with the soaring pneuma",
+        {"translate": "advancement.gm4.orb_of_ankou.soaring.description"}
+      ],
+      "color": "gray"
+    },
+    "frame": "goal"
+  },
+  "parent": "gm4:create_soul_shard",
+  "criteria": {
+    "soaring_pneuma": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "gm4_orb_of_ankou:pneuma_container",
+            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"soaring\"}]}}"
+          }
+        ]
+      }
+    }
+  }
+}

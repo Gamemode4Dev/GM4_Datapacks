@@ -1,37 +1,35 @@
 {
-	"pack": {
-		"pack_format": 6,
-		"description": "A Gamemode 4 Module"
-	},
-	"module_name": "Lumos Shamir",
-	"module_id": "lumos_shamir",
-	"hidden":false,
-	"site_description": "Adds the shamir 'Lumos' to metallurgy. It places torches when it is dark.",
-	"site_categories": [
-		"Metallurgy"
-	],
-	"video_link": "",
-	"wiki_link": "",
-	"required_modules": [
-		"metallurgy"
-	],
-	"recommended_modules": [],
-	"credits": {
-		"Creator": [
-			[
-				"InternetAlien",
-				""
-			],
-			[
-				"SirSheepe",
-				"https://www.twitter.com/SirSheepe"
-			]
-		],
-		"Idea By": [
-			[
-				"misode",
-				""
-			]
-		]
-	}
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Lumos Shamir",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Lumos Shamir",
+    "module_id": "lumos_shamir",
+    "hidden": false,
+    "site_description": "Adds the shamir 'Lumos' to Metallurgy. It places torches when it is dark.",
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Lumos_Shamir",
+    "required_modules": [
+        "metallurgy"
+    ],
+    "recommended_modules": [],
+    "credits": {
+        "Creators": [
+            "InternetAlien",
+            "SirSheepe"
+        ],
+        "Idea By": [
+            "Misode"
+        ],
+        "Icon Design": [
+            "BluePsychoRanger"
+        ]
+    }
 }

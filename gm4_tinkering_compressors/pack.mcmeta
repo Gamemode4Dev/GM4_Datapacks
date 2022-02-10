@@ -1,16 +1,18 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Tinkering Compressors",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Tinkering Compressors",
     "module_id": "tinkering_compressors",
-    "hidden":true,
-    "site_description": "Compress stacks of items into their block form with a tinker shamir, and back.",
-    "site_categories": [
-        "Custom Crafting",
-        "Metallurgy"
-    ],
+    "site_description": "Automatically compress stacks of items into their block form with a tinker shamir as a machine block, and back.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Tinkering_Compressors",
     "required_modules": [
@@ -18,13 +20,18 @@
         "block_compressors",
         "metallurgy"
     ],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "relocators"
+    ],
     "credits": {
         "Creator": [
-            [
-                "SirSheepe",
-                "https://twitter.com/SirSheepe"
-            ]
+            "SirSheepe"
+        ],
+        "Updated by": [
+            "MichaelMiner137"
+        ],
+        "Icon Design": [
+            "Sparks"
         ]
     }
 }

@@ -1,0 +1,41 @@
+{
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Lightning in a Bottle",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Lightning in a Bottle",
+    "module_id": "lightning_in_a_bottle",
+    "libraries": [
+        "lib_brewing",
+        "lib_forceload",
+        "lib_potion_tracking"
+    ],
+    "site_description": "Bottle and harness the power of lightning using Brewing Stands! Lightning in a Bottle comes in splash and lingering variants, too.",
+    "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
+    "required_modules": [],
+    "recommended_modules": [
+        "resource_pack",
+        "liquid_tanks",
+        "potion_liquids",
+        "spawner_minecarts"
+    ],
+    "credits": {
+        "Creator": [
+            "Bloo",
+            "BluePsychoRanger",
+            "TheEpyonProject"
+        ],
+        "Icon Design": [
+            "BluePsychoRanger"
+        ]
+    }
+}

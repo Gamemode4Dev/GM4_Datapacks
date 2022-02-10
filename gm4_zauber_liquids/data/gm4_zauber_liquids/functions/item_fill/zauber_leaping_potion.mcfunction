@@ -1,3 +1,10 @@
-replaceitem block ~ ~ ~ container.0 potion{gm4_zauber_cauldrons:{item:"potion",type:"jump_boost"},display:{Lore:['[{"translate":"effect.minecraft.jump_boost","color":"blue","italic":false}," ",{"translate":"potion.potency.3","color":"blue","italic":false},{"text":" (1:30)","color":"blue","italic":false}]']},HideFlags:32,Potion:leaping,CustomPotionEffects:[{Id:8,Amplifier:3,Duration:1800}]} 1
-scoreboard players remove @s gm4_lt_value 1
+# run from gm4_zauber_liquids:item_fill
+# @s = tank being processed
+
+# $item_value set in item_fill function for efficiency
+
+loot replace entity @s weapon.mainhand loot gm4_zauber_cauldrons:recipes/potions/drinkable/jump_boost
+data modify storage gm4_liquid_tanks:temp/tank output set from entity @s HandItems[0]
+item replace entity @s weapon.mainhand with air
+function gm4_liquid_tanks:smart_item_fill
 tag @s add gm4_lt_fill

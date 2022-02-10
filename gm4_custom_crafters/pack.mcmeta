@@ -1,44 +1,41 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Custom Crafters",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Custom Crafters",
     "module_id": "custom_crafters",
-    "site_description": "A base module that adds a custom crafting table to the game.",
-    "site_categories": [
-        "Custom Crafting"
-    ],
+    "site_description": "Custom Crafters adds a special crafting table used by many Gamemode 4 Modules. Your Custom Crafter is your stepping stone into the wonderful world of Gamemode 4!",
     "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
     "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters",
     "required_modules": [],
     "recommended_modules": [
+        "resource_pack",
         "standard_crafting",
         "record_crafting",
         "master_crafting",
         "disassemblers",
-        "block_compressors"
+        "block_compressors",
+        "relocators"
     ],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ],
         "Updated by": [
-            [
-                "Bloo",
-                "https://www.twitter.com/Bloo_dev"
-            ],
-            [
-                "Sparks",
-                "https://www.twitter.com/accidentalgames"
-            ],
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ]
+            "Bloo",
+            "Sparks",
+            "SpecialBuilder32"
+        ],
+        "Icon Design": [
+            "Sparks"
         ]
     }
 }

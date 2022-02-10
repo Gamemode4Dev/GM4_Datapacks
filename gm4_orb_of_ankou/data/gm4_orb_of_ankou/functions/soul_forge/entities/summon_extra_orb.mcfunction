@@ -1,0 +1,14 @@
+# @s = soul forge without fire with extra orb in storage
+# run from soul_forge/destroy
+
+# spawn silverfish
+summon silverfish ~ ~0.2 ~ {CustomName:'{"translate":"%1$s%3427655$s","with":["Living Orb",{"translate":"entity.gm4.living_orb"}]}',CustomNameVisible:0,DeathLootTable:"minecraft:empty",PersistenceRequired:1b,Tags:["gm4_oa_unset","gm4_oa_living_orb","gm4_oa_ignore"],HandDropChances:[2.0f,1.0f],Motion:[0.0,0.6,0.0],ActiveEffects:[{Id:12b,Amplifier:0b,Duration:1000000,ShowParticles:0b}]}
+
+# set loot drop to orb of ankou
+data modify entity @e[type=silverfish,tag=gm4_oa_unset,limit=1] HandItems[0] set from storage gm4_orb_of_ankou:temp ArmorItems[3]
+
+# randomize motion in x and z
+execute as @e[type=silverfish,tag=gm4_oa_unset,limit=1] run function gm4_orb_of_ankou:soul_forge/entities/randomize_motion
+
+# visuals
+playsound minecraft:entity.silverfish.hurt hostile @a[distance=..12] ~ ~ ~ 0.7 1

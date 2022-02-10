@@ -1,30 +1,31 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Soul Glass",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Soul Glass",
     "module_id": "soul_glass",
-    "site_description": "Reverse the effects of beacons with corrupting glass!",
-    "site_categories": [],
+    "site_description": "Reverse the effects of beacons with corrupting glass! But be careful, a poison Beacon may sound great at first, but is incredibly painful in pratice.",
+    "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Soul_Glass",
     "required_modules": [],
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ],
-            [
-                "Denniss",
-                "https://www.twitter.com/Dennis2p_"
-            ],
-            [
-                "Lue",
-                ""
-            ]
+            "BluePsychoRanger",
+            "Denniss",
+            "Lue"
+        ],
+        "Icon Design": [
+            "Sparks"
         ]
     }
 }

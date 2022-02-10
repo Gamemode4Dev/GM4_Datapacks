@@ -1,46 +1,55 @@
 {
     "pack": {
-        "pack_format": 6,
-        "description": "A Gamemode 4 Module"
+        "pack_format": 8,
+        "description": [
+            "Metallurgy",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
     },
     "module_name": "Metallurgy",
     "module_id": "metallurgy",
-    "hidden":true,
-    "site_description": "Custom ores and custom enchants for your tools and armour!",
-    "site_categories": [
-        "Metallurgy"
+    "libraries": [
+        "lib_player_heads",
+        "lib_lore"
     ],
+    "hidden": false,
+    "site_description": "Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!",
+    "important_note": "Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
     "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
     "required_modules": [],
     "recommended_modules": [
-        "moneo_shamir"
+        "resource_pack",
+        "audere_shamir",
+        "fulcio_shamir",
+        "iacio_shamir",
+        "lumos_shamir",
+        "orb_of_ankou",
+        "percurro_shamir",
+        "vecto_shamir"
     ],
     "credits": {
-        "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ],
-            [
-                "SpecialBuilder32",
-                "https://www.twitter.com/SpecialBuilder"
-            ],
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ]
+        "Creators": [
+            "Sparks",
+            "SpecialBuilder32",
+            "Bloo",
+            "BluePsychoRanger",
+            "SirSheepe"
         ],
         "Updated by": [
-            [
-                "Misode",
-                "https://twitter.com/misode_"
-            ]
+            "Denniss",
+            "Misode",
+            "MichaelMiner137",
+            "TheEpyonProject"
+        ],
+        "Textures by": [
+            "Memo"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

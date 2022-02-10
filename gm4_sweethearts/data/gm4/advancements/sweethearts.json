@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "poppy",
+      "nbt": "{CustomModelData:3420001}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Selfless",
+        {"translate": "advancement.gm4.sweethearts.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Give your last heart to another",
+        {"translate": "advancement.gm4.sweethearts.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "sweethearts": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

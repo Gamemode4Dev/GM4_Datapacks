@@ -1,8 +1,8 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:iron_ingot",
-      "nbt": "{CustomModelData:1}"
+      "item": "minecraft:player_head",
+      "nbt": "{CustomModelData:3420050,SkullOwner:{Id:[I;1961294324,1560605478,885901402,915511979],Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE0ODE2NjMyMjQ2MTUsInByb2ZpbGVJZCI6IjkxYTBlZmEyM2QxODQ5Y2ZiM2JkMGExNzdjZjM3Nzg4IiwicHJvZmlsZU5hbWUiOiJEdWNrSnIiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTc5ZWRhYmI2MjU1YzhkMjQyOWE3ZTUzM2U4MzUxOWE4NjVhNTk0ZGJmMTRhMTdjZjVhYzIxMzUzYTM5N2U3In19fQ==\"}]}}}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
@@ -14,7 +14,7 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Create a mold and add some metal.",
+        "Create a mould and add some metal.",
         {"translate": "advancement.gm4.metallurgy.cast.description"}
       ],
       "color": "gray"

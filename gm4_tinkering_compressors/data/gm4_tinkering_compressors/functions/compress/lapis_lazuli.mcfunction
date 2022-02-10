@@ -3,7 +3,7 @@
 # run from tinkering_compressors:mode/compress
 
 # set fake player flag
-scoreboard players set ran_compressor gm4_tc_data 1
+scoreboard players set $ran_compressor gm4_tc_data 1
 
 # tinker operation
 execute store result score #item_count gm4_tc_data run data get entity @s Item.Count 1

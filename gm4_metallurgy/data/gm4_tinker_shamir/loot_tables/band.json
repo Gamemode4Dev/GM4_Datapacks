@@ -5,11 +5,11 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_metallurgy:thorium_brass_band",
+                    "name": "gm4_metallurgy:curies_bismium_band",
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:111,gm4_metallurgy:{stored_shamir:\"tinker\"}}"
+                            "tag": "{CustomModelData:3420111,SkullOwner:{Name:\"[Drop to Fix Item] gm4_tinker_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"tinker\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",

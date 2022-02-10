@@ -1,0 +1,6 @@
+{
+    "values": [
+        "#load:gm4_brewing/enumerate",
+        "#load:gm4_brewing/resolve_load"
+    ]
+}

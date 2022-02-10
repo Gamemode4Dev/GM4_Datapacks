@@ -1,5 +1,5 @@
-#@s = potential item to receive the shamir
-#called from smooshing/add_band/check
+# @s = potential item to receive the shamir
+# called from smooshing/add_band/check
 
 function #gm4_metallurgy:check_item_validity
 

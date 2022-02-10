@@ -2,12 +2,12 @@
   "display": {
     "icon": {
       "item": "fishing_rod",
-      "nbt": "{CustomModelData:1}"
+      "nbt": "{CustomModelData:3420001}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "I wonder what's down there?",
+        "I Wonder What's Down There?",
         {"translate": "advancement.gm4.end_fishing.title"}
       ]
     },

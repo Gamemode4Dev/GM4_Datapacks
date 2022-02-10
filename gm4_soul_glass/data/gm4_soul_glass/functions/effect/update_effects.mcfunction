@@ -2,7 +2,7 @@
 #run from effects/check
 
 execute store result score @s gm4_sg_primary run data get block ~ ~-1 ~ Primary
-execute store result score @s gm4_sg_secondary run data get block ~ ~-1 ~ Secondary
+execute unless block ~ ~-1 ~ beacon{Secondary:-1} store result score @s gm4_sg_secondary run data get block ~ ~-1 ~ Secondary
 
 data modify block ~ ~-1 ~ Primary set value -1
 data modify block ~ ~-1 ~ Secondary set value -1

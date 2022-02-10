@@ -1,0 +1,31 @@
+{
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Vecto Shamir",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Vecto Shamir",
+    "module_id": "vecto_shamir",
+    "hidden": false,
+    "site_description": "Adds the 'Vecto' Shamir to Metallury. Summon a Boat or Minecart out of thin air when in need, no more wasting an inventory slot!",
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vecto_Shamir",
+    "required_modules": [
+        "metallurgy"
+    ],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "Denniss"
+        ],
+        "Icon Design": [
+            "BluePsychoRanger"
+        ]
+    }
+}

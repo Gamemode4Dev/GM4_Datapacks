@@ -28,7 +28,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:1}"
+              "tag": "{CustomModelData:3420001}"
             },
             {
               "function": "set_name",
@@ -53,7 +53,9 @@
                     {
                       "translate": "text.gm4.bat_leather.1"
                     }
-                  ]
+                  ],
+                  "italic": true,
+                  "color": "dark_gray"
                 },
                 {
                   "translate": "%1$s%3427655$s",
@@ -62,7 +64,9 @@
                     {
                       "translate": "text.gm4.bat_leather.2"
                     }
-                  ]
+                  ],
+                  "italic": true,
+                  "color": "dark_gray"
                 }
               ]
             }

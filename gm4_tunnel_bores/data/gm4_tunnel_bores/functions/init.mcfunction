@@ -16,4 +16,7 @@ scoreboard players set tunnel_bores gm4_modules 1
 
 schedule function gm4_tunnel_bores:pulse_check 10t
 
+# guidebook
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 4282.062758194015 ~ {CustomName:'"gm4_tunnel_bores_guide"',Tags:["gm4_guide"],data:{type:"module",id:"tunnel_bores",page_count:4,line_count:1,module_name:"Tunnel Bores"}}
+
 #$moduleUpdateList

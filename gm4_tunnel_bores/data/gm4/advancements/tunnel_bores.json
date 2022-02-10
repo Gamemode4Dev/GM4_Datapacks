@@ -2,12 +2,12 @@
   "display": {
     "icon": {
       "item": "piston",
-      "nbt": "{CustomModelData:2}"
+      "nbt": "{CustomModelData:3420002}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Isn't it \"Groundbreaking\"?",
+        "Isn't It \"Groundbreaking\"?",
         {"translate": "advancement.gm4.tunnel_bores.title"}
       ]
     },
