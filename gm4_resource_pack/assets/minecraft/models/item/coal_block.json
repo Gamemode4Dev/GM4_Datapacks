@@ -5,7 +5,7 @@
             "predicate": {
                 "custom_model_data": 1
             },
-            "model": "gm4:block/forming_press/charcoal_block"
+            "model": "gm4:item/forming_press/charcoal_block"
         },
         {
             "predicate": {
@@ -17,7 +17,7 @@
             "predicate": {
                 "custom_model_data": 3420001
             },
-            "model": "gm4:block/forming_press/charcoal_block"
+            "model": "gm4:item/forming_press/charcoal_block"
         },
         {
             "predicate": {
