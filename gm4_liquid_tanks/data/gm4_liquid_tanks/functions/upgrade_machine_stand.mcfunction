@@ -1,5 +1,5 @@
 # updates old machine armor stands
-# @s = forming_press armor stand
+# @s = liquid_tank armor stand
 # located at @s
 # run from gm4_liquid_tanks:main
 
@@ -30,6 +30,7 @@ tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] remove gm4_n
 tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] add smithed.block
 tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] add smithed.entity
 tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] add smithed.strict
+tag @e[type=marker,tag=gm4_new_machine_marker,tag=!gm4_lt_empty,distance=..1,limit=1] add gm4_upgraded_liquid_tank
 
 # update armor stand nbt
 data merge entity @s {Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict"],HasVisualFire:1,CustomName:'"gm4_liquid_tank_stand"',Rotation:[0.0f,0.0f]}
