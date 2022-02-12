@@ -29,7 +29,7 @@ tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] add smithed.
 tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] add smithed.strict
 
 # update armor stand nbt
-execute if block ~ ~ ~ hopper[facing=down] run data merge entity @s {Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict"],HasVisualFire:1,CustomName:'"gm4_liquid_tank_stand"',Rotation:[0.0f,0.0f]}
+data merge entity @s {Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict"],HasVisualFire:1,CustomName:'"gm4_liquid_tank_stand"',Rotation:[0.0f,0.0f]}
 execute if block ~ ~ ~ hopper[facing=north] run data merge entity @s {Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict"],HasVisualFire:1,CustomName:'"gm4_liquid_tank_stand"',Rotation:[180.0f,0.0f]}
 execute if block ~ ~ ~ hopper[facing=east] run data merge entity @s {Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict"],HasVisualFire:1,CustomName:'"gm4_liquid_tank_stand"',Rotation:[-90.0f,0.0f]}
 execute if block ~ ~ ~ hopper[facing=west] run data merge entity @s {Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict"],HasVisualFire:1,CustomName:'"gm4_liquid_tank_stand"',Rotation:[90.0f,0.0f]}
