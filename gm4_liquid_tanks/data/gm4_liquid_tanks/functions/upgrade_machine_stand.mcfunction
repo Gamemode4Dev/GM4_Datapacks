@@ -21,6 +21,9 @@ scoreboard players operation @e[type=marker,tag=gm4_new_machine_marker,distance=
 
 # copy tags over
 data modify entity @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] Tags set from entity @s Tags
+tag @e[type=marker,tag=gm4_no_edit,distance=..1,limit=1] add gm4_new_machine_marker
+
+tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] add gm4_liquid_tank
 tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] add gm4_machine_marker
 tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] remove gm4_machine
 tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] remove gm4_no_edit
@@ -37,4 +40,4 @@ execute unless block ~ ~ ~ hopper[facing=down] run data modify entity @s ArmorIt
 
 scoreboard players set @s gm4_entity_version 1
 scoreboard players set @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] gm4_entity_version 1
-tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] remove gm4_new_machine_marker
+tag @e[type=marker,distance=..1] remove gm4_new_machine_marker
