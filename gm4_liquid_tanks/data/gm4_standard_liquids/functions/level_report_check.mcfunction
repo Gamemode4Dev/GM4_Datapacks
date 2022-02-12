@@ -15,4 +15,4 @@ execute if score @e[type=marker,tag=gm4_liquid_tank,distance=..0.1,limit=1] gm4_
 
 
 #linking of util tanks to adjacent blocks
-execute as @e[type=marker,tag=gm4_liquid_tank,distance=..0.1,limit=1] run function gm4_standard_liquids:util/link_blocks
+execute as @e[type=marker,tag=gm4_liquid_tank,distance=..0.1,limit=1] positioned ~ ~-0.5 ~ run function gm4_standard_liquids:util/link_blocks

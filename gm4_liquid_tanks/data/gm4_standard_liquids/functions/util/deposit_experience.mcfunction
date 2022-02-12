@@ -13,4 +13,4 @@ execute if score @s gm4_lt_util matches 1.. run scoreboard players add @e[type=m
 
 function #gm4_liquid_tanks:level_report_check
 
-execute as @e[type=armor_stand,tag=gm4_liquid_tank,limit=1,distance=..0.5] unless score @s gm4_lt_prior_val = @s gm4_lt_value run function gm4_liquid_tanks:liquid_value_update
+execute as @e[type=marker,tag=gm4_liquid_tank,limit=1,distance=..0.5] unless score @s gm4_lt_prior_val = @s gm4_lt_value run function gm4_liquid_tanks:liquid_value_update
