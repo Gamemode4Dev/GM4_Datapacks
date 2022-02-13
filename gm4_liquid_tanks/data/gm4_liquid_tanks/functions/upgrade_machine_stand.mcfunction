@@ -31,6 +31,7 @@ tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] add smithed.
 tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] add smithed.entity
 tag @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] add smithed.strict
 tag @e[type=marker,tag=gm4_new_machine_marker,tag=!gm4_lt_empty,distance=..1,limit=1] add gm4_upgraded_liquid_tank
+execute if entity @s[tag=gm4_lt_empty] run data modify block ~ ~ ~ CustomName set value '{"translate":"%1$s%3427655$s","with":[{"translate":"%1$s%3427656$s","with":[{"text":"Empty Tank","font":"minecraft:default","color":"#373737"},[{"translate":"gui.gm4.liquid_tank","font":"gm4:container_gui","color":"white"},{"text":"Empty Tank","font":"minecraft:default","color":"#373737"}]]},{"translate":"%1$s%3427656$s","with":[{"translate":"container.gm4.liquid_tank.empty","font":"minecraft:default","color":"#373737"},[{"translate":"gui.gm4.liquid_tank","font":"gm4:container_gui","color":"white"},{"translate":"container.gm4.liquid_tank.empty","font":"minecraft:default","color":"#373737"}]]}]}'
 
 # update armor stand nbt
 data merge entity @s {Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict"],HasVisualFire:1,CustomName:'"gm4_liquid_tank_stand"',Rotation:[0.0f,0.0f]}
