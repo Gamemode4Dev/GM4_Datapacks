@@ -1,5 +1,5 @@
 {
-  "last_commit": "514c8cde80723975256baec515cee56fa9087970",
+  "last_commit": "577e4da48f71d06ee54cf88ea65b3804f1b8b181",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1748,7 +1748,7 @@
       "requires": [],
       "recommends": [],
       "wiki_link": "https://wiki.gm4.co/wiki/Sweethearts",
-      "video_link": "https://www.youtube.com/watch?v=BE5eHyQKnKc",
+      "video_link": "https://www.youtube.com/watch?v=mcopNZzY2dA",
       "credits": {
         "Creator": [
           "The8BitMonkey"
@@ -1762,7 +1762,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_tinkering_compressors",
