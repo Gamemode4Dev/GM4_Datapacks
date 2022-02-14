@@ -24,7 +24,7 @@
             "color": "gray"
         }
     },
-    "parent": "gm4:crossbow_cartridges_fish",
+    "parent": "gm4:crossbow_cartridges_bucket",
     "criteria": {
         "shoot_fish": {
             "trigger": "minecraft:impossible"

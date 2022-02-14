@@ -1,13 +1,14 @@
-# Set projectile motion
-# @s = player using the crossbow
+# Copy motion, effects, and owner from arrow to projectile
+# @s = projectile shot from crossbow
 # at @s
 # run from functions in projectile/
 
-tag @s add gm4_cb_use
+# copy data from arrow to projectile
+data modify entity @s Motion set from entity @e[tag=gm4_cb_arrow,distance=..0.1,sort=nearest,limit=1] Motion
+data modify entity @s {} merge from storage gm4_crossbow_cartridges:temp projectile
 
-# copy motion of arrow to projectile and kill arrow
-data modify entity @e[tag=gm4_cb_proj,distance=..2,sort=nearest,limit=1] Motion set from entity @e[type=minecraft:arrow,tag=gm4_cb_arrow,distance=..2,sort=nearest,limit=1] Motion
-kill @e[type=minecraft:arrow,tag=gm4_cb_arrow,distance=..2,sort=nearest,limit=1]
+# remove arrow
+kill @e[tag=gm4_cb_arrow,distance=..0.1,sort=nearest,limit=1]
 
 # remove tag
-tag @e[tag=gm4_cb_proj,distance=..2,limit=1,sort=nearest] remove gm4_cb_proj
+tag @s remove gm4_cb_projectile

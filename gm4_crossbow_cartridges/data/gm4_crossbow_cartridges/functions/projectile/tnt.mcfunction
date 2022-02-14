@@ -1,16 +1,19 @@
 # Shoot tnt
 # @s = player using the crossbow
-# at @s
+# at arrow
 # run from check_projectile
 
-# summon tnt at player's location
-summon minecraft:tnt ~ ~1 ~ {Tags:["gm4_cb_proj"],Fuse:80s}
+tag @s add gm4_cb_use
 
-# clear tnt from player
-clear @s[gamemode=!creative] minecraft:tnt 1
+# replace arrow with tnt and copy data
+summon minecraft:tnt ~ ~ ~ {Tags:["gm4_cb_projectile"],Fuse:80s}
+execute as @e[type=minecraft:tnt,tag=gm4_cb_projectile,limit=1,distance=..1] run function gm4_crossbow_cartridges:projectile/arrow_motion
 
-# copy motion of arrow to tnt
-function gm4_crossbow_cartridges:projectile/arrow_motion
+# remove tnt from player
+item modify entity @s[gamemode=!creative] weapon.offhand gm4_crossbow_cartridges:remove_item
 
 # primed tnt sound
-playsound minecraft:entity.tnt.primed block @a[distance=..15]
+playsound minecraft:entity.tnt.primed block @a[distance=..15] ^ ^ ^1
+
+# repeat for multishot
+execute if entity @e[tag=gm4_cb_arrow,limit=1,distance=..1] if predicate gm4_crossbow_cartridges:items/tnt run function gm4_crossbow_cartridges:projectile/tnt
