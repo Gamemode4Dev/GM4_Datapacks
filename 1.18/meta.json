@@ -1,5 +1,5 @@
 {
-  "last_commit": "577e4da48f71d06ee54cf88ea65b3804f1b8b181",
+  "last_commit": "75bcfce917cd1645575c11e2aefc93364345f2cc",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1742,19 +1742,20 @@
     {
       "id": "gm4_sweethearts",
       "name": "Sweethearts",
-      "description": "Transfer your health to another player using flowers. Great for Ultra Hardcore!",
+      "description": "Transfer your health to another player using flowers.",
       "categories": [],
       "libraries": [],
       "requires": [],
       "recommends": [],
       "wiki_link": "https://wiki.gm4.co/wiki/Sweethearts",
-      "video_link": "https://www.youtube.com/watch?v=mcopNZzY2dA",
+      "video_link": "https://www.youtube.com/watch?v=BE5eHyQKnKc",
       "credits": {
         "Creator": [
           "The8BitMonkey"
         ],
         "Updated by": [
-          "BluePsychoRanger"
+          "BluePsychoRanger",
+          "Thanathor"
         ],
         "Icon Design": [
           "DuckJr"
@@ -1762,7 +1763,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_tinkering_compressors",
