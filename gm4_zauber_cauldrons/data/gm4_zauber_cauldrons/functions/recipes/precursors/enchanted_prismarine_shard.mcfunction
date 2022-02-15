@@ -9,8 +9,13 @@ scoreboard players set $expected_item_amount gm4_zc_fullness 1
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 
 # recipe
-loot spawn ~ ~.1 ~ loot gm4_zauber_cauldrons:recipes/precursors/enchanted_prismarine_shard
-experience add @a[level=30..,distance=..2,limit=1,sort=nearest] -30 levels
+loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:recipes/precursors/enchanted_prismarine_shard
+
+# make items in cauldron pickup-able instantly
+execute align xyz as @e[type=item,dx=0,dy=0,dz=0] run data modify entity @s PickupDelay set value 0s
+
+# use xp
+execute as @a[level=30..,distance=..2,limit=1,sort=nearest,gamemode=!spectator] run experience add @s[gamemode=!creative] -30 levels
 
 # sounds and visuals
 playsound block.portal.travel block @a[distance=..16] ~ ~ ~ .2 1.2

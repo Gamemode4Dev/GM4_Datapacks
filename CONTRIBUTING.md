@@ -6,7 +6,7 @@ Contributing to Gamemode 4
 - Each module you create should be made under a separate branch so that modules can be submitted, approved and tested individually.
 
 ### Getting the template
-- Go to [https://gm4.co/modules/generator](https://gm4.co/modules/generator) to generate your module template. Be sure to **not** package the base.
+- Set up a fresh Datapack or Gog to [https://gm4.co/modules/generator](https://gm4.co/modules/generator) to generate your module template if one is available for your version. Be sure to **not** package the base.
 - All the functionality of your module should be inside the `gm4_module_id` namespace. The exception to this is visible advancements, which go in `gm4`. If your module does not have advancements you can delete this namespace.
 
 ### Load
@@ -14,10 +14,10 @@ Gamemode 4 uses [LanternMC Load](https://github.com/LanternMC/Load) so modules w
 
 If your module requires another module, you need to list it explicitly in a few places:
 - `data/load/tags/functions/gm4_module_id.json`: Prepend the values list with a value for each direct dependency. The order is important!
-- Create an empty function tag in `load` for each dependency. For example `#load:gm4_custom_crafters`.
+- Create an empty function tag in `load` for each dependency. For example `#load:gm4_better_armor_stands`.
 - `data/gm4_module_id/functions/load.mcfunction`: The first line checks scores to see if all dependencies are loaded. The following lines provide additional logging so the user can see which packs are incompatible or missing. This is discussed in the next section.
 
-Initialization goes above all other commands in `init.mcfunction`. This is mostly for adding scoreboards.
+Initialization goes above all other commands in `init.mcfunction`. This is mostly for adding scoreboards and initializing fake players.
 
 #### Logging
 Messages can be logged during the load process. This can be done by appending to the `queue` tag in the `gm4:log` storage. Here are a few examples:
@@ -84,7 +84,9 @@ kill @s
 ### Testing and submitting your module
 While testing your module, you need to make sure that the `base` datapack, which you can find in this repository, is included in your world's `datapacks` folder.
 
-If your module requires a forceloaded chunk, be sure to include `gm4_forceload` as a library in your module's pack.mcmeta so that the website packages the appropriate files. An example of the libraries syntax can be see in the 1.16 Zauber Cauldrons pack.mcmeta.
+If your module requires a library, e.g. `gm4_forceload`, be sure to include `gm4_forceload` as a library in your module's pack.mcmeta so that the website packages the appropriate files. An example of the libraries syntax can be see in the 1.18 Zauber Cauldrons pack.mcmeta.
+
+Make sure to credit all relevant people in `pack.mcmeta`. Most modules credit the creator (`Creator`), updaters (`Updated by`) and the icon designer (`Icon Design`), however, you may add credits for any work relevant to the module. Each credits section consists of an array of strings, which hold the names of the contributors. To add a link to your social media site of choice add an entry to `contributors.json`.  
 
 To send us your finished module for testing and approval, simply submit a pull request and leave a comment if you have additional notes.
 

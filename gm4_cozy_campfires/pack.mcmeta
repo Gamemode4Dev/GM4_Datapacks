@@ -12,22 +12,15 @@
     },
     "module_name": "Cozy Campfires",
     "module_id": "cozy_campfires",
-    "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-    "site_description": "Heartwarming campfire evenings!",
-    "site_categories": [],
+    "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+    "site_description": "Allows Campfires to grant you up to 4 extra hearts that last for more than half of a Minecraft day. Perfect for those scary first nights in a Minecraft world.",
     "wiki_link": "https://wiki.gm4.co/wiki/Cozy_Campfires",
     "credits": {
         "Creator": [
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ]
+            "Bloo"
         ],
         "Icon Design": [
-            [
-                "BluePsychoRanger",
-                "https://twitter.com/BluPsychoRanger"
-            ]
+            "BluePsychoRanger"
         ]
     }
 }

@@ -1,6 +1,6 @@
-# @s = armor_stand being moved
+# @s = armor_stand being rotated
 # at @s
-# run from move/moving
+# run from pose/track/rotate
 
 # round to nearest 15 degrees of a block
 execute store result score $as_rot_y gm4_bas_data run data get entity @s Rotation[0] .06667

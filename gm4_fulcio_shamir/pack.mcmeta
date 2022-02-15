@@ -12,10 +12,7 @@
     },
     "module_name": "Fulcio Shamir",
     "module_id": "fulcio_shamir",
-    "site_description": "Adds the shamir 'Fulcio' to metallurgy. It allows you to place blocks in mid-air!",
-    "site_categories": [
-        "Metallurgy"
-    ],
+    "site_description": "Adds the shamir 'Fulcio' to Metallurgy. It allows you to place blocks in mid-air! This also enables you to choose the orientation of blocks like logs without needing a supporting block.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Fulcio_Shamir",
     "required_modules": [
@@ -24,20 +21,11 @@
     "recommended_modules": [],
     "credits": {
         "Creators": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ],
-            [
-                "Bloo",
-                "https://twitter.com/Bloo_dev"
-            ]
+            "BluePsychoRanger",
+            "Bloo"
         ],
         "Icon Design": [
-            [
-                "BluePsychoRanger",
-                "https://www.twitter.com/BluPsychoRanger"
-            ]
+            "BluePsychoRanger"
         ]
     }
 }

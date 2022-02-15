@@ -91,10 +91,16 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   "Waders",
-                  {"translate":"item.gm4.waders"}
+                  {
+                    "translate": "item.gm4.waders"
+                  }
                 ],
                 "italic": false
               }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420001}"
             }
           ]
         },
@@ -210,7 +216,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3,BlockEntityTag:{LootTable:\"minecraft:chests/shipwreck_supply\"}}"
+              "tag": "{CustomModelData:3420004,BlockEntityTag:{LootTable:\"minecraft:chests/shipwreck_supply\"}}"
             },
             {
               "function": "minecraft:set_name",
@@ -218,7 +224,9 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   "Shipwreck Supply Chest",
-                  {"translate":"block.gm4.shipwreck_supply_chest"}
+                  {
+                    "translate": "block.gm4.shipwreck_supply_chest"
+                  }
                 ],
                 "italic": false
               }
@@ -232,7 +240,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:2,BlockEntityTag:{LootTable:\"minecraft:chests/shipwreck_treasure\"}}"
+              "tag": "{CustomModelData:3420003,BlockEntityTag:{LootTable:\"minecraft:chests/shipwreck_treasure\"}}"
             },
             {
               "function": "minecraft:set_name",
@@ -240,7 +248,9 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   "Shipwreck Treasure Chest",
-                  {"translate":"block.gm4.shipwreck_treasure_chest"}
+                  {
+                    "translate": "block.gm4.shipwreck_treasure_chest"
+                  }
                 ],
                 "italic": false
               }
@@ -254,7 +264,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1,BlockEntityTag:{LootTable:\"gm4_sunken_treasure:chests/treasure_chest\"}}"
+              "tag": "{CustomModelData:3420001,BlockEntityTag:{LootTable:\"gm4_sunken_treasure:chests/treasure_chest\"}}"
             },
             {
               "function": "minecraft:set_name",
@@ -262,7 +272,9 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   "Treasure Chest",
-                  {"translate":"block.gm4.treasure_chest"}
+                  {
+                    "translate": "block.gm4.treasure_chest"
+                  }
                 ],
                 "italic": false
               }
@@ -283,11 +295,46 @@
         {
           "type": "minecraft:item",
           "weight": 40,
+          "name": "minecraft:glow_ink_sac",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_sunken_treasure:{spawn:{id:\"minecraft:glow_squid\"}}}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "position": {
+                  "y": {
+                    "max": 30
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 40,
           "name": "minecraft:ink_sac",
           "functions": [
             {
               "function": "minecraft:set_nbt",
               "tag": "{gm4_sunken_treasure:{spawn:{id:\"minecraft:squid\"}}}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "position": {
+                  "y": {
+                    "min": 31
+                  }
+                }
+              }
             }
           ]
         },

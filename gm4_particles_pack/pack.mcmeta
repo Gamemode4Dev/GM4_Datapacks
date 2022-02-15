@@ -13,10 +13,7 @@
     "module_name": "Particles Pack",
     "module_id": "particles_pack",
     "hidden": false,
-    "site_description": "Fireflies to flames, add some pezazz to your projects!",
-    "site_categories": [
-        "Better Armour Stands"
-    ],
+    "site_description": "Fireflies to flames, add some pezazz to your projects! Allows you to turn Armour Stands into particle sources that you control!",
     "video_link": "https://youtu.be/GpkWIKMP6aY",
     "wiki_link": "https://wiki.gm4.co/wiki/Particles_Pack",
     "required_modules": [
@@ -27,22 +24,13 @@
     ],
     "credits": {
         "Creator": [
-            [
-                "Sparks",
-                "https://www.twitter.com/SparksTheGamer"
-            ]
+            "Sparks"
         ],
         "Updated by": [
-            [
-                "Misode",
-                "https://twitter.com/misode_"
-            ]
+            "Misode"
         ],
         "Icon Design": [
-            [
-                "DuckJr",
-                "https://twitter.com/DuckJr94"
-            ]
+            "DuckJr"
         ]
     }
 }

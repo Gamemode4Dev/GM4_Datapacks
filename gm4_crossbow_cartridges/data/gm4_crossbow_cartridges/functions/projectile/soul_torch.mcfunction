@@ -1,18 +1,22 @@
 # Shoot soul torch
 # @s = player using the crossbow
-# at @s
-# run from check_projectile
+# at arrow
+# run from check_projectile and projectile/soul_torch
 
 tag @s add gm4_cb_use
 
 # add tag to arrow
-tag @e[type=minecraft:arrow,tag=gm4_cb_arrow,distance=..2,sort=nearest,limit=1] add gm4_cb_storch
+tag @e[tag=gm4_cb_arrow,distance=..1,sort=nearest,limit=1] add gm4_cb_storch
 
 # add fire to arrow
-data merge entity @e[type=minecraft:arrow,tag=gm4_cb_storch,distance=..2,sort=nearest,limit=1] {Fire:2000s}
+data merge entity @e[tag=gm4_cb_arrow,tag=gm4_cb_storch,distance=..1,sort=nearest,limit=1] {Fire:2000s}
+tag @e[tag=gm4_cb_arrow,tag=gm4_cb_storch,distance=..1,sort=nearest,limit=1] remove gm4_cb_arrow
 
 # clear soul torch from player
-clear @s[gamemode=!creative] soul_torch 1
+item modify entity @s[gamemode=!creative] weapon.offhand gm4_crossbow_cartridges:remove_item
+
+# repeat
+execute if entity @e[tag=gm4_cb_arrow,distance=..1,sort=nearest,limit=1] if entity @s[predicate=gm4_crossbow_cartridges:items/soul_torch] run function gm4_crossbow_cartridges:projectile/soul_torch
 
 # start loop to check if arrow is in ground
-function gm4_crossbow_cartridges:projectile/soul_torch/loop
+schedule function gm4_crossbow_cartridges:projectile/soul_torch/loop 4t

@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "offhand": {
+        "items": [
+          "minecraft:splash_potion",
+          "minecraft:lingering_potion"
+        ]
+      }
+    }
+  }
+}
