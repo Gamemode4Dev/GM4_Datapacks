@@ -27,3 +27,7 @@ scoreboard players remove $player_head_count gm4_machine_data 1
 
 function #gm4_machines:place_down
 data remove storage gm4_machines:temp id
+
+# prevent multi-machines
+execute store result score $entity_count gm4_machine_data if entity @e[type=marker,tag=gm4_machine_marker,distance=..0.1]
+execute if score $entity_count gm4_machine_data matches 2.. run setblock ~ ~ ~ air destroy
