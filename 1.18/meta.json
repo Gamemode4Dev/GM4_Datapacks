@@ -1,5 +1,5 @@
 {
-  "last_commit": "75bcfce917cd1645575c11e2aefc93364345f2cc",
+  "last_commit": "04e6e05c37bceff20580a618747f60574c55fc56",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -468,7 +468,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_desire_lines",
@@ -1244,7 +1244,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_particles_pack",
@@ -1854,7 +1854,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18003
+      "patch": 18004
     },
     {
       "id": "gm4_trapped_signs",
