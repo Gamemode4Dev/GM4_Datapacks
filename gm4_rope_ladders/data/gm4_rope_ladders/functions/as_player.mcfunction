@@ -1,3 +1,7 @@
+# executes as the player
+# @s = player
+# at @s
+# run from gm4_rope_ladders:main
 
 tag @s remove gm4_rol_holding_ladder
 

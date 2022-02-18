@@ -1,3 +1,7 @@
+# scans blocks below the ladder until it finds a valid spot to place next ladder
+# @s = player holding rope ladder (having right clicked on ladder)
+# positon of ladder moving downward
+# run from function gm4_rope_ladders:ladder_placement/scan_column/init
 
 execute if block ~ ~ ~ #gm4_rope_ladders:valid_replace run function gm4_rope_ladders:ladder_placement/place_ladder
 
