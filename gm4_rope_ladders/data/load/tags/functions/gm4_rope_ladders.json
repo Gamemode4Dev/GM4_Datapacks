@@ -1,0 +1,6 @@
+{
+    "values": [
+		{ "id": "#load:gm4_machines", "required": true },
+        "gm4_rope_ladders:load"
+    ]
+}
