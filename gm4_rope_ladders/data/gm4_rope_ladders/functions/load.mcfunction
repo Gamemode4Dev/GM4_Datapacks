@@ -4,3 +4,4 @@ execute unless score gm4 load.status matches 1 run data modify storage gm4:log q
 execute if score gm4_rope_ladders load.status matches 1 run function gm4_rope_ladders:init
 execute unless score gm4_rope_ladders load.status matches 1 run schedule clear gm4_rope_ladders:main
 execute unless score gm4_rope_ladders load.status matches 1 run schedule clear gm4_rope_ladders:10t
+execute unless score gm4_rope_ladders load.status matches 1 run schedule clear gm4_rope_ladders:tick

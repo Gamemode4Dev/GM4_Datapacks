@@ -6,5 +6,6 @@ scoreboard players set rope_ladders gm4_modules 1
 
 schedule function gm4_rope_ladders:main 10t
 schedule function gm4_rope_ladders:10t 11t
+schedule function gm4_rope_ladders:tick 12t
 
 #$moduleUpdateList
