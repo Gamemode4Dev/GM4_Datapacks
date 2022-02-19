@@ -5,6 +5,8 @@
 
 scoreboard players set $ray gm4_rol_data -999
 
+scoreboard players set $ladder_placed gm4_rol_data 1
+
 item modify entity @s weapon.mainhand gm4_rope_ladders:minus_one
 
 advancement grant @s only gm4:rope_ladders
