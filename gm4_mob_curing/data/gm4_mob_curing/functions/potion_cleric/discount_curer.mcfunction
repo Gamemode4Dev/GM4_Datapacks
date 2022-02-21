@@ -9,7 +9,7 @@ data modify storage gm4_mob_curing:temp Gossips[0].Target set from entity @e[typ
 data modify entity @s Gossips set from storage gm4:temp Gossips
 
 execute store result score $curer gm4_mob_curing_data run data get storage gm4_mob_curing:temp Gossips[0].Target[3] 0.001
-execute as @a[distance=..10] store result score @s gm4_mob_curing_data run data get entity @s UUID[3] 0.001
-execute as @a[distance=..10] if score @s gm4_mob_curing_data = $curer gm4_mob_curing_data run advancement grant @s only gm4:mob_curing
+execute as @a[distance=..16] store result score @s gm4_mob_curing_data run data get entity @s UUID[3] 0.001
+execute as @a[distance=..16] if score @s gm4_mob_curing_data = $curer gm4_mob_curing_data run advancement grant @s only gm4:mob_curing
 
 data remove storage gm4_mob_curing:temp {}
