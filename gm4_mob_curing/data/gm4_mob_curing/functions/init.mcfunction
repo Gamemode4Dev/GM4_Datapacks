@@ -1,4 +1,4 @@
-scoreboard objectives add gm4_mob_cu_data dummy
+scoreboard objectives add gm4_mob_curing_data dummy
 
 execute unless score mob_curing gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Mob Curing"}
 scoreboard players set mob_curing gm4_modules 1

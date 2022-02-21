@@ -1,4 +1,4 @@
-# check potion effect of zombiified piglin
+# check potion effect of zombified piglin
 # @s = zombified piglin with golden carrot nearby
 # at @s
 # run from main
