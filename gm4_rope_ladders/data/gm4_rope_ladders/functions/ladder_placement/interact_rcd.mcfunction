@@ -10,4 +10,3 @@ scoreboard players set $ladder_placed gm4_rol_data 0
 function gm4_rope_ladders:ladder_placement/raycast/init
 
 execute if score $ladder_placed gm4_rol_data matches 1 run playsound minecraft:block.ladder.place ambient @a[distance=..15] ~ ~ ~
-execute if score $ladder_placed gm4_rol_data matches 0 run title @s actionbar {"text":"Rope ladder can only be 64 blocks long","color":"red"}
