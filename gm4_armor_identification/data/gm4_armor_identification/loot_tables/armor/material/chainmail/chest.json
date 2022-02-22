@@ -1,0 +1,101 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_chestplate",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "generic.armor",
+                  "name": "generic.armor",
+                  "amount": 5,
+                  "operation": "addition",
+                  "slot": "chest"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ai_data",
+                  "scale": 2
+                },
+                "max": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ai_data",
+                  "scale": 3
+                }
+              },
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                },
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$difficulty"
+                    },
+                    "score": "gm4_ai_data"
+                  },
+                  "range": {
+                    "min": {
+                      "min": 2,
+                      "max": 11
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    {
+                      "text": "Unidentified ",
+                      "italic": false
+                    },
+                    {
+                      "translate": "item.gm4.mob_buff.armor.name.unidentified"
+                    }
+                  ]
+                },
+                {
+                  "translate": "item.minecraft.chainmail_chestplate",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_armor_identification:{unidentified:0,slot:1,name:'{\"italic\":false,\"translate\":\"item.minecraft.chainmail_chestplate\"}'}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

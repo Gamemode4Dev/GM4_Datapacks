@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "damage": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_armor_identification:modified_armor/wearing_vorpal"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_armor_identification:armor/modifiers/type/vorpal/schedule"
+  }
+}

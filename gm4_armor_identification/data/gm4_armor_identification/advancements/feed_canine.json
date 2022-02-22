@@ -1,0 +1,32 @@
+{
+    "criteria": {
+      "feed": {
+        "trigger": "minecraft:player_interacted_with_entity",
+        "conditions": {
+          "item": {
+            "items": [
+              "minecraft:rotten_flesh",
+              "minecraft:cooked_mutton",
+              "minecraft:mutton",
+              "minecraft:cooked_beef",
+              "minecraft:beef",
+              "minecraft:cooked_rabbit",
+              "minecraft:rabbit",
+              "minecraft:cooked_porkchop",
+              "minecraft:porkchop",
+              "minecraft:cooked_chicken",
+              "minecraft:chicken"
+            ]
+          },
+          "entity": {
+            "type": "wolf",
+            "nbt": "{Tags:[\"gm4_ai_wolf\"]}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "gm4_armor_identification:armor/modifiers/type/canine/wolf_fed_check"
+    }
+  }
+  

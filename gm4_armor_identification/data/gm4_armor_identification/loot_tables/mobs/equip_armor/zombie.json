@@ -1,0 +1,255 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/diamond/feet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/diamond"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/iron/feet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/iron"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/golden/feet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/golden"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/chainmail/feet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/chainmail"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/leather/feet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/leather"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/diamond/legs",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/diamond"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/iron/legs",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/iron"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/golden/legs",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/golden"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/chainmail/legs",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/chainmail"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/leather/legs",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/leather"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/diamond/chest",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/diamond"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/iron/chest",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/iron"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/golden/chest",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/golden"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/chainmail/chest",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/chainmail"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/leather/chest",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/leather"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/diamond/head",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/diamond"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/iron/head",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/iron"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/golden/head",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/golden"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/chainmail/head",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/chainmail"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/leather/head",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/leather"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/material/special/turtle_helmet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_armor_identification:technical/material_check/turtle_helmet"
+            },
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

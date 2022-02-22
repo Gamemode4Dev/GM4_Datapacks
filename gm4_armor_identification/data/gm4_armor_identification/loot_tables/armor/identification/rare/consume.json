@@ -1,0 +1,194 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_armor_identification:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "gm4_armor_identification",
+                  "amount": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$constep"
+                    },
+                    "score": "gm4_ai_data",
+                    "scale": 0.01
+                  },
+                  "operation": "addition",
+                  "slot": "chest"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_armor_identification:{modifier:31}}"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_armor_identification:temp"
+              },
+              "ops": [
+                {
+                  "source": "consume",
+                  "target": "gm4_armor_identification.cap",
+                  "op": "replace"
+                },
+                {
+                  "source": "constep",
+                  "target": "gm4_armor_identification.level",
+                  "op": "replace"
+                },
+                {
+                  "source": "constep",
+                  "target": "gm4_armor_identification.step",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_armor_identification:temp"
+              },
+              "ops": [
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_armor_identification\"}].Slot",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "When Killing:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.mob_buff.armor.lore.killing"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "+",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.mob_buff.armor.lore.plus"
+                  }
+                ]
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "0.0",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.mob_buff.armor.lore.percent_prefix"
+                  }
+                ]
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$constep",
+                      "objective": "gm4_ai_data"
+                    },
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.mob_buff.armor.lore.constep"
+                  }
+                ]
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": " Attack Damage",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.mob_buff.armor.lore.attack_damage"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "Consuming ",
+                  "italic": false,
+                  "color": "yellow"
+                },
+                {
+                  "translate": "item.gm4.mob_buff.armor.name.consume"
+                }
+              ]
+            },
+            {
+              "nbt": "tag.gm4_armor_identification.name",
+              "storage": "gm4_armor_identification:temp",
+              "interpret": true,
+              "color": "yellow"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
