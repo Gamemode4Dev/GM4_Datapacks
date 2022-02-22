@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "consume chorus": {
+        "first_join": {
             "trigger": "minecraft:tick"
         }
     },
