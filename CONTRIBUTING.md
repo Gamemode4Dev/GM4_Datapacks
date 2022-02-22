@@ -6,7 +6,7 @@ Contributing to Gamemode 4
 - Each module you create should be made under a separate branch so that modules can be submitted, approved and tested individually.
 
 ### Getting the template
-- Set up a fresh Datapack or Gog to [https://gm4.co/modules/generator](https://gm4.co/modules/generator) to generate your module template if one is available for your version. Be sure to **not** package the base.
+- Set up a fresh Datapack or Go to [https://gm4.co/modules/generator](https://gm4.co/modules/generator) to generate your module template if one is available for your version. Be sure to **not** package the base.
 - All the functionality of your module should be inside the `gm4_module_id` namespace. The exception to this is visible advancements, which go in `gm4`. If your module does not have advancements you can delete this namespace.
 
 ### Load
