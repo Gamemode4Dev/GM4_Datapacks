@@ -2,7 +2,7 @@
 # located 1 block above the teleportation anchor
 # run from move_mob
 
-tp @s ~ ~ ~
+tp @s ~ ~-0.45 ~
 function gm4_teleportation_anchors:mob/track_movement/initialize_pos
 tag @s add gm4_ta_anchor_tp
 

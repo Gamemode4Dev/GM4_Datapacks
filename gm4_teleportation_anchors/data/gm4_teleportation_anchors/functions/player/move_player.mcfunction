@@ -6,7 +6,7 @@ execute if entity @s[type=player] as @e[type=marker,tag=gm4_ta_player_pos] if sc
 execute unless entity @s[type=player] as @e[type=marker,tag=gm4_ta_player_pos] if score @s gm4_ta_id = @e[distance=..0.001,tag=gm4_ta_teleported_player,limit=1] gm4_ta_id run tag @s add gm4_ta_selected_marker
 
 # if the marker is linked to a wired TP Jammer, then move the marker
-execute unless score @s gm4_ta_cooldown matches 1.. at @e[type=marker,tag=gm4_ta_selected_marker,limit=1] as @e[type=armor_stand,tag=gm4_ta_wired,distance=..65] if score @s gm4_ta_jam_id = @e[tag=gm4_ta_selected_marker,limit=1,distance=..0.0001] gm4_ta_jam_id at @s run function gm4_teleportation_anchors:blocks/anchor/search
+execute unless score @s gm4_ta_cooldown matches 1.. at @e[type=marker,tag=gm4_ta_selected_marker,limit=1] as @e[type=marker,tag=gm4_ta_wired,distance=..129] if score @s gm4_ta_jam_id = @e[tag=gm4_ta_selected_marker,limit=1,distance=..0.0001] gm4_ta_jam_id at @s run function gm4_teleportation_anchors:blocks/anchor/search
 execute if score @e[type=marker,tag=gm4_ta_found_anchor,limit=1] gm4_ta_jam_id = @e[type=marker,tag=gm4_ta_selected_marker,limit=1] gm4_ta_jam_id at @e[type=marker,tag=gm4_ta_found_anchor,limit=1] run tp @e[type=marker,tag=gm4_ta_selected_marker,limit=1] ~ ~1 ~
 execute if entity @e[type=marker,tag=gm4_ta_found_anchor,limit=1] run tag @s add gm4_ta_anchor_tp
 scoreboard players set @s[type=player,tag=gm4_ta_anchor_tp] gm4_ta_cooldown 12

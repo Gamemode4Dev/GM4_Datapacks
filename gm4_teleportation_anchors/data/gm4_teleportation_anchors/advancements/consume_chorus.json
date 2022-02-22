@@ -4,7 +4,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "items": ["minecraft:chorus_fruit"]
+                    "items": [
+                        "minecraft:chorus_fruit"
+                    ]
                 }
             }
         }

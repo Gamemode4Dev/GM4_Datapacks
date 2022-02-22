@@ -1,7 +1,7 @@
 {
     "criteria": {
         "consume chorus": {
-            "trigger": "minecraft:location"
+            "trigger": "minecraft:tick"
         }
     },
     "rewards": {
