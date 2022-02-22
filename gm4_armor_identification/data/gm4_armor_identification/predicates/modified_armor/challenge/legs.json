@@ -4,6 +4,7 @@
     "predicate": {
       "equipment": {
         "legs": {
+          "tag": "gm4_armor_identification:armor",
           "nbt": "{gm4_armor_identification:challenge}"
         }
       }
