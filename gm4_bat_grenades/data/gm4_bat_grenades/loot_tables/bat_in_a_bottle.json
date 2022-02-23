@@ -1,0 +1,46 @@
+{
+  "pools": [
+      {
+          "rolls": 1,
+          "entries": [
+              {
+                  "type": "minecraft:item",
+                  "name": "minecraft:glass_bottle",
+                  "functions": [
+                      {
+                          "function": "minecraft:set_nbt",
+                          "tag": "{CustomModelData:0,gm4_bat_grenades:{item:\"bottled_bat\"},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+                      },
+                      {
+                          "function": "minecraft:copy_nbt",
+                          "source": {
+                              "type": "minecraft:storage",
+                              "source": "gm4_bat_grenades:temp"
+                          },
+                          "ops": [
+                              {
+                                  "source": "data",
+                                  "target": "bat_data",
+                                  "op": "merge"
+                              }
+                          ]
+                      },
+                      {
+                          "function": "minecraft:set_name",
+                          "name": {
+                              "translate": "%1$s%3427655$s",
+                              "with": [
+                                  "Bat in a Bottle",
+                                  {
+                                      "translate": "item.gm4.bat_in_a_bottle"
+                                  }
+                              ],
+                              "italic": false
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
+}

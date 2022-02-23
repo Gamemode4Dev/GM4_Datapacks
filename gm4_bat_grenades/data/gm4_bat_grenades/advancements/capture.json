@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:bat"
+        },
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:glass_bottle"
+              ]
+            }
+          }
+        },
+        "damage": {
+          "type": {
+            "is_explosion": false,
+            "is_fire": false,
+            "is_magic": false,
+            "is_projectile": false
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_bat_grenades:bottle/hit"
+  }
+}
