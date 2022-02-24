@@ -478,8 +478,8 @@
         },
         {
             "type": "bitmap",
-            "file": "gm4:gui/container/custom_crafter.png",
-            "ascent": 14,
+            "file": "gm4:gui/container/block_compressor.png",
+            "ascent": 13,
             "height": 166,
             "chars": [
                 "\u9000"
@@ -487,7 +487,7 @@
         },
         {
             "type": "bitmap",
-            "file": "gm4:gui/container/custom_crafter.png",
+            "file": "gm4:gui/container/block_compressor.png",
             "ascent": -32768,
             "height": -83,
             "chars": [
@@ -496,20 +496,164 @@
         },
         {
             "type": "bitmap",
-            "file": "gm4:gui/container/ender_hopper.png",
+            "file": "gm4:gui/container/custom_crafter.png",
             "ascent": 13,
-            "height": 133,
+            "height": 166,
             "chars": [
                 "\u9002"
             ]
         },
         {
             "type": "bitmap",
+            "file": "gm4:gui/container/custom_crafter.png",
+            "ascent": -32768,
+            "height": -83,
+            "chars": [
+                "\u9003"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/disassembler.png",
+            "ascent": 13,
+            "height": 166,
+            "chars": [
+                "\u9004"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/disassembler.png",
+            "ascent": -32768,
+            "height": -83,
+            "chars": [
+                "\u9005"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/enchantment_extractor.png",
+            "ascent": 13,
+            "height": 166,
+            "chars": [
+                "\u9006"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/enchantment_extractor.png",
+            "ascent": -32768,
+            "height": -83,
+            "chars": [
+                "\u9007"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/ender_hopper.png",
+            "ascent": 13,
+            "height": 133,
+            "chars": [
+                "\u9008"
+            ]
+        },
+        {
+            "type": "bitmap",
             "file": "gm4:gui/container/ender_hopper.png",
             "ascent": -32768,
             "height": -133,
             "chars": [
-                "\u9003"
+                "\u9009"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/forming_press.png",
+            "ascent": 13,
+            "height": 166,
+            "chars": [
+                "\u9010"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/forming_press.png",
+            "ascent": -32768,
+            "height": -83,
+            "chars": [
+                "\u9011"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/liquid_tank.png",
+            "ascent": 13,
+            "height": 133,
+            "chars": [
+                "\u9012"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/liquid_tank.png",
+            "ascent": -32768,
+            "height": -133,
+            "chars": [
+                "\u9013"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/smeltery.png",
+            "ascent": 13,
+            "height": 166,
+            "chars": [
+                "\u9014"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/smeltery.png",
+            "ascent": -32768,
+            "height": -83,
+            "chars": [
+                "\u9015"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/teleportation_jammer.png",
+            "ascent": 13,
+            "height": 166,
+            "chars": [
+                "\u9016"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/teleportation_jammer.png",
+            "ascent": -32768,
+            "height": -83,
+            "chars": [
+                "\u9017"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/tinkering_compressor.png",
+            "ascent": 13,
+            "height": 166,
+            "chars": [
+                "\u9018"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "gm4:gui/container/tinkering_compressor.png",
+            "ascent": -32768,
+            "height": -83,
+            "chars": [
+                "\u9019"
             ]
         },
         {
@@ -518,7 +662,7 @@
             "ascent": 13,
             "height": 133,
             "chars": [
-                "\u9004"
+                "\u9100"
             ]
         },
         {
@@ -527,16 +671,16 @@
             "ascent": -32768,
             "height": -133,
             "chars": [
-                "\u9005"
+                "\u9101"
             ]
         },
         {
             "type": "bitmap",
             "file": "gm4:gui/container/empty_dropper.png",
-            "ascent": 14,
+            "ascent": 13,
             "height": 166,
             "chars": [
-                "\u9006"
+                "\u9102"
             ]
         },
         {
@@ -545,7 +689,7 @@
             "ascent": -32768,
             "height": -83,
             "chars": [
-                "\u9007"
+                "\u9103"
             ]
         }
     ]
