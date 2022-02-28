@@ -1,0 +1,14 @@
+# run from mobs/effects/spores/advance
+# @s = spore item
+# at @s
+
+execute if data entity @s Item.tag{gm4_ai_spore:zombie} run summon zombie ~ ~ ~ {Tags:["gm4_ai_extra_mob"]}
+execute if data entity @s Item.tag{gm4_ai_spore:husk} run summon husk ~ ~ ~ {Tags:["gm4_ai_extra_mob"]}
+execute if data entity @s Item.tag{gm4_ai_spore:drowned} run summon drowned ~ ~ ~ {Tags:["gm4_ai_extra_mob"]}
+
+particle block flowering_azalea_leaves ~ ~1 ~ 0.35 1 0.35 0.1 32
+playsound block.grass.break hostile @a ~ ~ ~ 0.6 0.6
+
+kill @s
+
+execute as @e[tag=gm4_ai_extra_mob] at @s run function gm4_armor_identification:mobs/initiate

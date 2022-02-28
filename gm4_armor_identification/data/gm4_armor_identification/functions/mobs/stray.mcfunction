@@ -9,7 +9,7 @@ execute if score $difficulty gm4_ai_data matches 8.. if predicate gm4_armor_iden
 
 # biome specific modifiers for this mob
 execute if predicate gm4_armor_identification:mobs/modifiers/dark run scoreboard players add $mob_speed gm4_ai_data 2
-execute if predicate gm4_armor_identification:mobs/modifiers/snowy run item replace entity @s weapon.offhand with tipped_arrow{tag:{gm4_armor_identification:arrow_stray_snowy},display:{Name:'{"translate":"item.minecraft.tipped_arrow.effect.slowness","color":"white","italic":false}'},CustomPotionEffects:[{Id:2b,Amplifier:2b,Duration:600}],CustomPotionColor:5926017}
+execute if predicate gm4_armor_identification:mobs/modifiers/snowy unless predicate gm4_armor_identification:mobs/modifiers/growth run item replace entity @s weapon.offhand with tipped_arrow{tag:{gm4_armor_identification:arrow_stray_snowy},display:{Name:'{"translate":"item.minecraft.tipped_arrow.effect.slowness","color":"white","italic":false}'},CustomPotionEffects:[{Id:2b,Amplifier:2b,Duration:600}],CustomPotionColor:5926017}
 execute if predicate gm4_armor_identification:mobs/modifiers/toxic run item replace entity @s weapon.offhand with tipped_arrow{tag:{gm4_armor_identification:arrow_stray_toxic},display:{Name:'{"translate":"item.minecraft.tipped_arrow.effect.poison","color":"white","italic":false}'},CustomPotionEffects:[{Id:18b,Amplifier:0b,Duration:100},{Id:19b,Amplifier:1b,Duration:100},{Id:2b,Amplifier:0b,Duration:600}],CustomPotionColor:5149489}
 
 # set armor

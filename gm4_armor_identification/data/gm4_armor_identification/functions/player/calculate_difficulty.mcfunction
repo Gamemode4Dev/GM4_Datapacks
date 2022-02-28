@@ -18,8 +18,16 @@ scoreboard players operation $modifier gm4_ai_difficult > #1 gm4_ai_difficult
 
 execute store result score @s gm4_ai_difficult run scoreboard players operation $weeks_online gm4_ai_difficult /= $modifier gm4_ai_difficult
 
+# scale down depending on world difficulty
+execute store result score $worlddiff gm4_ai_data run difficulty
+execute if score $worlddiff gm4_ai_data matches 1 run scoreboard players remove @s gm4_ai_difficult 3
+execute if score $worlddiff gm4_ai_data matches 2 run scoreboard players remove @s gm4_ai_difficult 1
+
 # add challenge armor, this can exceed the normal cap of 10
 execute if predicate gm4_armor_identification:modified_armor/challenge/head run scoreboard players add @s gm4_ai_difficult 1
 execute if predicate gm4_armor_identification:modified_armor/challenge/chest run scoreboard players add @s gm4_ai_difficult 1
 execute if predicate gm4_armor_identification:modified_armor/challenge/legs run scoreboard players add @s gm4_ai_difficult 1
 execute if predicate gm4_armor_identification:modified_armor/challenge/feet run scoreboard players add @s gm4_ai_difficult 1
+
+# set to at least 0
+scoreboard players operation @s gm4_ai_difficult > #0 gm4_ai_data

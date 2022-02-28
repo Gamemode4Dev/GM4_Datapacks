@@ -21,7 +21,7 @@ execute if predicate gm4_armor_identification:mobs/modifiers/mountainous run sco
 execute if predicate gm4_armor_identification:mobs/modifiers/mountainous run attribute @s generic.attack_knockback modifier add 049693ea-5ae7-4a23-b075-407c65e0b103 "gm4_ai_modifier_mountainous" 2 add
 execute if predicate gm4_armor_identification:mobs/modifiers/mountainous run attribute @s zombie.spawn_reinforcements modifier add 8650cbae-ca74-423f-96c6-eba2c1c8e80e "gm4_ai_modifier_mountainous" -1 multiply
 execute if predicate gm4_armor_identification:mobs/modifiers/flowering run attribute @s generic.max_health modifier add 8650cbae-ca74-423f-96c6-eba2c1c8e80e "gm4_ai_modifier_flowering" -0.25 multiply
-execute if predicate gm4_armor_identification:mobs/modifiers/flowering run tag @s add gm4_ai_flowering_respawn
+execute if predicate gm4_armor_identification:mobs/modifiers/flowering run data modify entity @s ArmorDropChances[3] set value 2F
 execute if predicate gm4_armor_identification:mobs/modifiers/toxic run tag @s add gm4_ai_weakness_attacks
 execute if predicate gm4_armor_identification:mobs/modifiers/deep run scoreboard players add $mob_damage gm4_ai_data 4
 execute if predicate gm4_armor_identification:mobs/modifiers/deep run tag @s add gm4_ai_fatigue_attacks
@@ -33,6 +33,7 @@ execute if predicate gm4_armor_identification:mobs/modifiers/growth if entity @s
 
 # set armor
 loot replace entity @s armor.feet loot gm4_armor_identification:mobs/equip_armor/generic
+execute if predicate gm4_armor_identification:mobs/modifiers/flowering run item replace entity @s armor.head with flowering_azalea_leaves{gm4_ai_spore:drowned}
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_armor_identification:mobs/equip_weapon/zombie
 

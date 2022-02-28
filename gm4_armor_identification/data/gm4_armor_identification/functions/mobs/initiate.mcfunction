@@ -4,12 +4,8 @@
 
 scoreboard players reset $mob_extras gm4_ai_data
 
-# get difficulty score from the nearest player, scale down depending on world difficulty
+# get difficulty score from the nearest player
 scoreboard players operation $difficulty gm4_ai_data = @p[gamemode=!creative,gamemode=!spectator] gm4_ai_difficult
-execute store result score $worlddiff gm4_ai_data run difficulty
-execute if score $worlddiff gm4_ai_data matches 1 run scoreboard players remove $difficulty gm4_ai_data 3
-execute if score $worlddiff gm4_ai_data matches 2 run scoreboard players remove $difficulty gm4_ai_data 1
-scoreboard players operation $difficulty gm4_ai_data > #0 gm4_ai_data
 
 # reset scoreboards
 scoreboard players set $mob_stats gm4_ai_data 0
@@ -20,15 +16,14 @@ scoreboard players set $mob_armor gm4_ai_data 0
 scoreboard players set $mob_toughness gm4_ai_data 0
 
 # initialize different mobs
-execute if entity @s[type=zombie] run function gm4_armor_identification:mobs/zombie
+execute if entity @s[type=#gm4_armor_identification:zombie] run function gm4_armor_identification:mobs/zombie
 execute if entity @s[type=husk] run function gm4_armor_identification:mobs/husk
 execute if entity @s[type=drowned] run function gm4_armor_identification:mobs/drowned
 execute if entity @s[type=skeleton] run function gm4_armor_identification:mobs/skeleton
 execute if entity @s[type=stray] run function gm4_armor_identification:mobs/stray
 execute if entity @s[type=spider] run function gm4_armor_identification:mobs/spider
 execute if entity @s[type=cave_spider] run function gm4_armor_identification:mobs/cave_spider
-execute if entity @s[type=slime] run function gm4_armor_identification:mobs/slime
-execute if entity @s[type=magma_cube] run function gm4_armor_identification:mobs/slime
+execute if entity @s[type=#gm4_armor_identification:cubes] run function gm4_armor_identification:mobs/slime
 execute if entity @s[type=enderman] run function gm4_armor_identification:mobs/enderman
 execute if entity @s[type=phantom] run function gm4_armor_identification:mobs/phantom
 execute if entity @s[type=wither_skeleton] run function gm4_armor_identification:mobs/wither_skeleton

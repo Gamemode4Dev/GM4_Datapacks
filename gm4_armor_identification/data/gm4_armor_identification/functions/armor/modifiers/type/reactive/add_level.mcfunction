@@ -1,8 +1,8 @@
-# run from advancement reactive_damaged
+# run from advancement damaged/armor/reactive
 # @s = player wearing reactive armor being damaged
 # at @s
 
-advancement revoke @s only gm4_armor_identification:reactive_damaged
+advancement revoke @s only gm4_armor_identification:damaged/armor/reactive
 
 # store armor for checking
 item replace block 29999998 1 7134 container.0 from entity @s armor.head

@@ -1,8 +1,8 @@
-# run from advancement stall_damaged
+# run from advancement damaged/armor/stall
 # @s = player wearing stall armor being damaged
 # at @s
 
-advancement revoke @s only gm4_armor_identification:stall_damaged
+advancement revoke @s only gm4_armor_identification:damaged/armor/stall
 
 # store armor for checking
 item replace block 29999998 1 7134 container.0 from entity @s armor.head

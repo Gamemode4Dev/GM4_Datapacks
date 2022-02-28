@@ -1,0 +1,18 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:entity_hurt_player",
+        "conditions": {
+          "damage": {
+            "source_entity": {
+              "nbt": "{Tags:[\"gm4_ai_poison_bite\"]}"
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "gm4_armor_identification:mobs/effects/toxic_bite"
+    }
+  }
+  
