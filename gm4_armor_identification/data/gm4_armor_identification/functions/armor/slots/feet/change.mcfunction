@@ -2,8 +2,7 @@
 # @s = player wearing the armor
 
 # apply modifications and re-equip player
-data modify block 29999998 1 7134 Items[{Slot:3b}].tag set from storage gm4_armor_identification:temp tag
-item replace entity @s armor.feet from block 29999998 1 7134 container.3
+item modify entity @s armor.feet gm4_armor_identification:update_armor
 
 # cleanup
 scoreboard players reset $change gm4_ai_data

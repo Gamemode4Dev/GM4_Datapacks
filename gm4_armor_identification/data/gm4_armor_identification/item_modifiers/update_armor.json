@@ -1,0 +1,17 @@
+[
+    {
+      "function": "minecraft:copy_nbt",
+      "source": {
+        "type": "minecraft:storage",
+        "source": "gm4_armor_identification:temp"
+      },
+      "ops": [
+        {
+          "source": "tag",
+          "target": "{}",
+          "op": "merge"
+        }
+      ]
+    }
+  ]
+  
