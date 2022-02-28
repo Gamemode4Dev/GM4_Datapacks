@@ -15,7 +15,7 @@ execute if score $modifier gm4_ai_data matches 20 run function gm4_armor_identif
 execute if score $modifier gm4_ai_data matches 30 run function gm4_armor_identification:armor/modifiers/type/killing
 execute if score $modifier gm4_ai_data matches 31 if score @s gm4_ai_kill matches 1.. run function gm4_armor_identification:armor/modifiers/type/consume/grow
 execute if score $modifier gm4_ai_data matches 32 if score @s gm4_ai_kill matches 1.. run function gm4_armor_identification:armor/modifiers/type/vamp
-execute if score $modifier gm4_ai_data matches 33 if score @s gm4_ai_kill matches 1.. at @s as @e[type=!player,type=!armor_stand,team=!gm4_ai_team_check,distance=..16] at @s run function gm4_armor_identification:armor/modifiers/type/fear
+execute if score $modifier gm4_ai_data matches 33 if score @s gm4_ai_kill matches 1.. at @s as @e[type=!player,type=!armor_stand,team=!gm4_ai_team_check,distance=..8] at @s run function gm4_armor_identification:armor/modifiers/type/fear
 # when below 50% hp
 execute if score $modifier gm4_ai_data matches 40 run function gm4_armor_identification:armor/modifiers/type/lowhp
 execute if score $modifier gm4_ai_data matches 41 if data storage gm4_armor_identification:temp tag.Enchantments[{id:"minecraft:thorns"}] run function gm4_armor_identification:armor/modifiers/type/thorns/check

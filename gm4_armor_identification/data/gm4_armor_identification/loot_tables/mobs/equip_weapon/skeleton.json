@@ -59,7 +59,7 @@
                     "conditions": [
                       {
                         "condition": "minecraft:reference",
-                        "name": "gm4_armor_identification:mobs/modifiers/mountains"
+                        "name": "gm4_armor_identification:mobs/modifiers/mountainous"
                       }
                     ]
                   },

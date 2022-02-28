@@ -10,6 +10,9 @@ execute if score $difficulty gm4_ai_data matches 11.. run scoreboard players add
 execute if score $difficulty gm4_ai_data matches 11.. run scoreboard players add $mob_armor gm4_ai_data 5
 execute if score $difficulty gm4_ai_data matches 11.. run scoreboard players add $mob_toughness gm4_ai_data 1
 
+# double armor drop rate at diff 11 or above
+execute if score $difficulty gm4_ai_data matches 11.. run data modify entity @s ArmorDropChances set value [0.17F,0.17F,0.17F,0.17F]
+
 # set armor
 loot replace entity @s armor.feet loot gm4_armor_identification:mobs/equip_armor/piglin
 

@@ -5,7 +5,7 @@
 scoreboard players reset $mob_extras gm4_ai_data
 
 # get difficulty score from the nearest player
-scoreboard players operation $difficulty gm4_ai_data = @p[gamemode=!creative,gamemode=!spectator] gm4_ai_difficult
+scoreboard players operation $difficulty gm4_ai_data = @p[gamemode=!spectator] gm4_ai_difficult
 
 # reset scoreboards
 scoreboard players set $mob_stats gm4_ai_data 0
@@ -23,6 +23,7 @@ execute if entity @s[type=skeleton] run function gm4_armor_identification:mobs/s
 execute if entity @s[type=stray] run function gm4_armor_identification:mobs/stray
 execute if entity @s[type=spider] run function gm4_armor_identification:mobs/spider
 execute if entity @s[type=cave_spider] run function gm4_armor_identification:mobs/cave_spider
+execute if entity @s[type=creeper] run function gm4_armor_identification:mobs/creeper
 execute if entity @s[type=#gm4_armor_identification:cubes] run function gm4_armor_identification:mobs/slime
 execute if entity @s[type=enderman] run function gm4_armor_identification:mobs/enderman
 execute if entity @s[type=phantom] run function gm4_armor_identification:mobs/phantom
