@@ -1,0 +1,76 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:alternatives",
+            "children": [
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:bow",
+                "conditions": [
+                  {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ai_data"
+                    },
+                    "range": {
+                      "min": 4
+                    }
+                  },
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.05
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:stone_sword"
+              }
+            ]
+          }
+        ],
+        "functions": [
+          {
+            "function": "minecraft:enchant_with_levels",
+            "levels": {
+              "min": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$difficulty"
+                },
+                "score": "gm4_ai_data",
+                "scale": 1
+              },
+              "max": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$difficulty"
+                },
+                "score": "gm4_ai_data",
+                "scale": 2
+              }
+            },
+            "treasure": false,
+            "conditions": [
+              {
+                "condition": "minecraft:random_chance",
+                "chance": 0.05
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

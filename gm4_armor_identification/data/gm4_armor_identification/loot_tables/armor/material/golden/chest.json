@@ -21,53 +21,6 @@
               ]
             },
             {
-              "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "min": {
-                  "type": "minecraft:score",
-                  "target": {
-                    "type": "minecraft:fixed",
-                    "name": "$difficulty"
-                  },
-                  "score": "gm4_ai_data",
-                  "scale": 2
-                },
-                "max": {
-                  "type": "minecraft:score",
-                  "target": {
-                    "type": "minecraft:fixed",
-                    "name": "$difficulty"
-                  },
-                  "score": "gm4_ai_data",
-                  "scale": 3
-                }
-              },
-              "treasure": false,
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                },
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$difficulty"
-                    },
-                    "score": "gm4_ai_data"
-                  },
-                  "range": {
-                    "min": {
-                      "min": 2,
-                      "max": 11
-                    }
-                  }
-                }
-              ]
-            },
-            {
               "function": "minecraft:set_name",
               "entity": "this",
               "name": [
@@ -92,6 +45,82 @@
             {
               "function": "minecraft:set_nbt",
               "tag": "{gm4_armor_identification:{unidentified:0,slot:1,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_chestplate\"}'}}"
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ai_data",
+                  "scale": 2
+                },
+                "max": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ai_data",
+                  "scale": 3
+                }
+              },
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$difficulty"
+                    },
+                    "score": "gm4_ai_data"
+                  },
+                  "range": {
+                    "min": 2
+                  }
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.33
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:depth_strider"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_armor_identification:mobs/modifiers/reef"
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:projectile_protection"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_armor_identification:mobs/modifiers/growth"
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.8
+                }
+              ]
             }
           ]
         }

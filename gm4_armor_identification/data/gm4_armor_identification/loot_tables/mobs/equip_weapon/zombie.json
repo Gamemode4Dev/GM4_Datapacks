@@ -1,0 +1,449 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:alternatives",
+            "children": [
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:trident",
+                "conditions": [
+                  {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ai_data"
+                    },
+                    "range": {
+                      "min": 4
+                    }
+                  },
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.4
+                  },
+                  {
+                    "condition": "minecraft:reference",
+                    "name": "gm4_armor_identification:mobs/modifiers/reef"
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:alternatives",
+                "children": [
+                  {
+                    "type": "minecraft:item",
+                    "name": "minecraft:wooden_pickaxe",
+                    "conditions": [
+                      {
+                        "condition": "minecraft:random_chance",
+                        "chance": 0.5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "minecraft:item",
+                    "name": "minecraft:stone_pickaxe",
+                    "conditions": [
+                      {
+                        "condition": "minecraft:random_chance",
+                        "chance": 0.8
+                      },
+                      {
+                        "condition": "minecraft:value_check",
+                        "value": {
+                          "type": "minecraft:score",
+                          "target": {
+                            "type": "minecraft:fixed",
+                            "name": "$difficulty"
+                          },
+                          "score": "gm4_ai_data"
+                        },
+                        "range": {
+                          "min": 3
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "minecraft:item",
+                    "name": "minecraft:iron_pickaxe",
+                    "conditions": [
+                      {
+                        "condition": "minecraft:value_check",
+                        "value": {
+                          "type": "minecraft:score",
+                          "target": {
+                            "type": "minecraft:fixed",
+                            "name": "$difficulty"
+                          },
+                          "score": "gm4_ai_data"
+                        },
+                        "range": {
+                          "min": 4
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ai_data"
+                    },
+                    "range": {
+                      "min": 2
+                    }
+                  },
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.15
+                  },
+                  {
+                    "condition": "minecraft:reference",
+                    "name": "gm4_armor_identification:mobs/modifiers/dark"
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:alternatives",
+                "children": [
+                  {
+                    "type": "minecraft:alternatives",
+                    "children": [
+                      {
+                        "type": "minecraft:item",
+                        "name": "minecraft:wooden_shovel",
+                        "conditions": [
+                          {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.5
+                          },
+                          {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                              "type": "minecraft:score",
+                              "target": {
+                                "type": "minecraft:fixed",
+                                "name": "$difficulty"
+                              },
+                              "score": "gm4_ai_data"
+                            },
+                            "range": {
+                              "min": 3
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "minecraft:item",
+                        "name": "minecraft:stone_shovel",
+                        "conditions": [
+                          {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.8
+                          },
+                          {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                              "type": "minecraft:score",
+                              "target": {
+                                "type": "minecraft:fixed",
+                                "name": "$difficulty"
+                              },
+                              "score": "gm4_ai_data"
+                            },
+                            "range": {
+                              "min": 4
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "minecraft:item",
+                        "name": "minecraft:iron_shovel",
+                        "conditions": [
+                          {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                              "type": "minecraft:score",
+                              "target": {
+                                "type": "minecraft:fixed",
+                                "name": "$difficulty"
+                              },
+                              "score": "gm4_ai_data"
+                            },
+                            "range": {
+                              "min": 5
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "condition": "minecraft:random_chance",
+                        "chance": 0.33
+                      }
+                    ]
+                  },
+                  {
+                    "type": "minecraft:alternatives",
+                    "children": [
+                      {
+                        "type": "minecraft:item",
+                        "name": "minecraft:wooden_sword",
+                        "conditions": [
+                          {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.5
+                          },
+                          {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                              "type": "minecraft:score",
+                              "target": {
+                                "type": "minecraft:fixed",
+                                "name": "$difficulty"
+                              },
+                              "score": "gm4_ai_data"
+                            },
+                            "range": {
+                              "min": 4
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "minecraft:item",
+                        "name": "minecraft:stone_sword",
+                        "conditions": [
+                          {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.8
+                          },
+                          {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                              "type": "minecraft:score",
+                              "target": {
+                                "type": "minecraft:fixed",
+                                "name": "$difficulty"
+                              },
+                              "score": "gm4_ai_data"
+                            },
+                            "range": {
+                              "min": 5
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "minecraft:item",
+                        "name": "minecraft:iron_sword",
+                        "conditions": [
+                          {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                              "type": "minecraft:score",
+                              "target": {
+                                "type": "minecraft:fixed",
+                                "name": "$difficulty"
+                              },
+                              "score": "gm4_ai_data"
+                            },
+                            "range": {
+                              "min": 6
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "condition": "minecraft:random_chance",
+                        "chance": 0.66
+                      }
+                    ]
+                  },
+                  {
+                    "type": "minecraft:alternatives",
+                    "children": [
+                      {
+                        "type": "minecraft:item",
+                        "name": "minecraft:wooden_axe",
+                        "conditions": [
+                          {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.5
+                          },
+                          {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                              "type": "minecraft:score",
+                              "target": {
+                                "type": "minecraft:fixed",
+                                "name": "$difficulty"
+                              },
+                              "score": "gm4_ai_data"
+                            },
+                            "range": {
+                              "min": 7
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "minecraft:item",
+                        "name": "minecraft:stone_axe",
+                        "conditions": [
+                          {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.8
+                          },
+                          {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                              "type": "minecraft:score",
+                              "target": {
+                                "type": "minecraft:fixed",
+                                "name": "$difficulty"
+                              },
+                              "score": "gm4_ai_data"
+                            },
+                            "range": {
+                              "min": 9
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "minecraft:item",
+                        "name": "minecraft:iron_axe",
+                        "conditions": [
+                          {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                              "type": "minecraft:score",
+                              "target": {
+                                "type": "minecraft:fixed",
+                                "name": "$difficulty"
+                              },
+                              "score": "gm4_ai_data"
+                            },
+                            "range": {
+                              "min": 9
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ai_data"
+                    },
+                    "range": {
+                      "min": {
+                        "min": 3,
+                        "max": 10
+                      }
+                    }
+                  },
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.15
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "functions": [
+          {
+            "function": "minecraft:enchant_with_levels",
+            "levels": {
+              "min": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$difficulty"
+                },
+                "score": "gm4_ai_data",
+                "scale": 0.5
+              },
+              "max": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$difficulty"
+                },
+                "score": "gm4_ai_data",
+                "scale": 1.5
+              }
+            },
+            "treasure": false,
+            "conditions": [
+              {
+                "condition": "minecraft:random_chance",
+                "chance": 0.15
+              }
+            ]
+          },
+          {
+            "function": "minecraft:enchant_randomly",
+            "enchantments": [
+              "minecraft:knockback"
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:random_chance",
+                "chance": 0.4
+              },
+              {
+                "condition": "minecraft:reference",
+                "name": "gm4_armor_identification:mobs/modifiers/mountains"
+              }
+            ]
+          },
+          {
+            "function": "minecraft:enchant_randomly",
+            "enchantments": [
+              "minecraft:fire_aspect"
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:random_chance",
+                "chance": 0.5
+              },
+              {
+                "condition": "minecraft:reference",
+                "name": "gm4_armor_identification:mobs/modifiers/burned"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
