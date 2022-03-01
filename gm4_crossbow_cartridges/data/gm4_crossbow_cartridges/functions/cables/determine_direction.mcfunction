@@ -1,6 +1,6 @@
 # Determine direction of tripwire
 # @s = player using the crossbow
-# at @s align xyz positioned ~0.5 ~ ~0.5, in tripwire hook
+# at tripwire_hook, align xyz positioned ~0.5 ~ ~0.5
 # run from cables/shoot_arrow
 
 # check if player is facing roughly in one of the cardinal directions, unspool string if this is true

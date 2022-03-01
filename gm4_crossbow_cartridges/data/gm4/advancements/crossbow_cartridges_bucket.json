@@ -1,0 +1,33 @@
+{
+    "display": {
+        "icon": {
+            "item": "tropical_fish_bucket",
+            "nbt": "{CustomModelData:3420001}"
+        },
+        "title": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Sealife Slingshot",
+                {
+                    "translate": "advancement.gm4.crossbow_cartridges_fish.title"
+                }
+            ]
+        },
+        "description": {
+            "translate": "%1$s%3427655$s",
+            "with": [
+                "Launch an aquatic animal using a crossbow",
+                {
+                    "translate": "advancement.gm4.crossbow_cartridges_fish.description"
+                }
+            ],
+            "color": "gray"
+        }
+    },
+    "parent": "gm4:root",
+    "criteria": {
+        "exterior_trigger": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

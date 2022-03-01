@@ -1,0 +1,30 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'GM4 Ship',structure:{name:'gm4_tower_structures:ship',posX:-4,posY:-3,posZ:-11}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Raft',structure:{name:'gm4_tower_structures:raft',posX:-2,posY:0,posZ:-3}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

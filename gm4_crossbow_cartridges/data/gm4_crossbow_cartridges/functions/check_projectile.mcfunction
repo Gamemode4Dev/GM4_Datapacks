@@ -1,17 +1,12 @@
-# Decides which seed to use upon replanting
+# Check item in offhand to shoot
 # @s = player using the crossbow
-# at @s
-# run from advancement shoot
+# at arrow
+# run from functions in shoot/
 
-advancement revoke @s only gm4_crossbow_cartridges:shoot
+# tripwire
+execute if entity @s[gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/string,x_rotation=-15..15] align xyz positioned ~0.5 ~ ~0.5 run function gm4_crossbow_cartridges:cables/shoot_arrow
 
-tag @e[type=minecraft:arrow,nbt={inGround:0b},distance=..2,sort=nearest,limit=1] add gm4_cb_arrow
-
-# check offhand item
-# string
-execute if entity @s[gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/string] run function gm4_crossbow_cartridges:cables/shoot_arrow
-
-# bucket
+# bucket with fish/axolotl
 execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:items/bucket] run function gm4_crossbow_cartridges:projectile/bucket
 
 # torch
@@ -20,8 +15,7 @@ execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_
 execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/soul_torch] run function gm4_crossbow_cartridges:projectile/soul_torch
 
 # potions
-execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:items/splash_potion] run function gm4_crossbow_cartridges:projectile/splashpotion
-execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:items/lingering_potion] run function gm4_crossbow_cartridges:projectile/lingerpotion
+execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:items/potions] run function gm4_crossbow_cartridges:projectile/potions
 
 # fireball
 execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/fire_charge] run function gm4_crossbow_cartridges:projectile/fireball
@@ -30,3 +24,4 @@ execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_
 execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/tnt] run function gm4_crossbow_cartridges:projectile/tnt
 
 tag @s remove gm4_cb_use
+data remove storage gm4_crossbow_cartridges:temp projectile

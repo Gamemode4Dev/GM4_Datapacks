@@ -20,3 +20,12 @@ execute if score @s gm4_orbis_stage matches 9 positioned ~48 ~ ~ unless entity @
 execute if score @s gm4_orbis_stage matches 9 positioned ~-48 ~ ~ unless entity @e[type=marker,tag=gm4_metachunk,distance=..1] run function gm4_orbis:metachunk/new
 execute if score @s gm4_orbis_stage matches 9 positioned ~ ~ ~48 unless entity @e[type=marker,tag=gm4_metachunk,distance=..1] run function gm4_orbis:metachunk/new
 execute if score @s gm4_orbis_stage matches 9 positioned ~ ~ ~-48 unless entity @e[type=marker,tag=gm4_metachunk,distance=..1] run function gm4_orbis:metachunk/new
+
+execute if score @s gm4_orbis_stage matches 9 run tag @s add gm4_orbis_complete
+execute if score @s gm4_orbis_stage matches 9 run scoreboard players reset @s gm4_orbis_stage
+
+# this shouldn't be necessary, but somehow duplicate metachunks can still exist
+tag @s add gm4_chunk_self
+execute if entity @e[type=marker,tag=gm4_metachunk,tag=!gm4_chunk_self,distance=..1] run tellraw @a[tag=gm4_orbis_debug] ["Killed duplicate metachunk at ",{"nbt":"Pos","entity": "@s"}]
+kill @e[type=marker,tag=gm4_metachunk,tag=!gm4_chunk_self,distance=..1]
+tag @s remove gm4_chunk_self

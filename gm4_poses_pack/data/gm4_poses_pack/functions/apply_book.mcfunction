@@ -1,6 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from gm4_better_armour_stands/store_book_pages
+# run from gm4_better_armour_stands:book/process
 
 # Check presets
 execute if data storage gm4_better_armour_stands:temp {pages:["legs down"]} run data merge entity @s {Pose:{LeftLeg:[0.01f,0f,0f],RightLeg:[0.01f,0f,0f]},Tags:[gm4_pose_changed]}
