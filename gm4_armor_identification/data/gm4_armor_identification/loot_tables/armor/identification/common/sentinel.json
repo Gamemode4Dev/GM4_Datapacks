@@ -108,7 +108,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.unsafe"
+                  "translate": "item.gm4.armor_identification.armor.lore.unsafe"
                 }
               ]
             }
@@ -128,7 +128,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.plus"
+                    "translate": "item.gm4.armor_identification.armor.lore.plus"
                   }
                 ]
               },
@@ -144,7 +144,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.plus_armor"
+                    "translate": "item.gm4.armor_identification.armor.lore.plus_armor"
                   }
                 ]
               },
@@ -157,7 +157,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.armor"
+                    "translate": "item.gm4.armor_identification.armor.lore.armor"
                   }
                 ]
               }
@@ -176,7 +176,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.sentinel"
+                  "translate": "item.gm4.armor_identification.armor.name.sentinel"
                 }
               ]
             },

@@ -50,7 +50,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.safe"
+                  "translate": "item.gm4.armor_identification.armor.lore.safe"
                 }
               ]
             }
@@ -169,7 +169,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.shielded"
+                  "translate": "item.gm4.armor_identification.armor.name.shielded"
                 }
               ]
             },

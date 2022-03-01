@@ -1,7 +1,7 @@
 [
   {
     "condition": "minecraft:random_chance",
-    "chance": 0.25
+    "chance": 0.75
   },
   {
     "condition": "minecraft:location_check",

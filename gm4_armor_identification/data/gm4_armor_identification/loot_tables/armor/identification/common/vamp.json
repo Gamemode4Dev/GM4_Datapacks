@@ -50,7 +50,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.killing"
+                  "translate": "item.gm4.armor_identification.armor.lore.killing"
                 }
               ]
             }
@@ -70,7 +70,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.regen"
+                    "translate": "item.gm4.armor_identification.armor.lore.regen"
                   }
                 ]
               }
@@ -89,7 +89,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.vamp"
+                  "translate": "item.gm4.armor_identification.armor.name.vamp"
                 }
               ]
             },

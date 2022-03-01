@@ -35,7 +35,7 @@ execute store result score $consume gm4_ai_data run data get storage gm4_armor_i
 
 # reduce armor- from armor in order to replace the attribute
 # base armor is never lower than 1
-execute store result score $newarmor gm4_ai_data run data get entity @s Item.tag.AttributeModifiers[{Name:"generic.armor"}].Amount
+execute store result score $newarmor gm4_ai_data run data get storage gm4_armor_identification:temp tag.AttributeModifiers[{Name:"generic.armor"}].Amount
 scoreboard players operation $newarmor gm4_ai_data += $armor- gm4_ai_data
 execute store result storage gm4_armor_identification:temp newarmor int 1 run scoreboard players operation $newarmor gm4_ai_data > #1 gm4_ai_data
 

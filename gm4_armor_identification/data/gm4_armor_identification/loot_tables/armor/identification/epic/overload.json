@@ -109,7 +109,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.safe"
+                  "translate": "item.gm4.armor_identification.armor.lore.safe"
                 }
               ]
             }
@@ -144,7 +144,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.duration_1"
+                    "translate": "item.gm4.armor_identification.armor.lore.duration_1"
                   }
                 ]
               }
@@ -164,7 +164,7 @@
                   "color": "light_purple"
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.overload"
+                  "translate": "item.gm4.armor_identification.armor.name.overload"
                 }
               ]
             },

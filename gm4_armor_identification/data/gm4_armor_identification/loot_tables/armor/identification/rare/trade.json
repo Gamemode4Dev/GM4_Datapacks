@@ -36,7 +36,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.equip"
+                  "translate": "item.gm4.armor_identification.armor.lore.equip"
                 }
               ]
             }
@@ -56,7 +56,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.trade"
+                    "translate": "item.gm4.armor_identification.armor.lore.trade"
                   }
                 ]
               }
@@ -76,7 +76,7 @@
                   "color": "yellow"
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.trade"
+                  "translate": "item.gm4.armor_identification.armor.name.trade"
                 }
               ]
             },

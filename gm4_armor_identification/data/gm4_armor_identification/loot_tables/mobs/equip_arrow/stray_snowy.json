@@ -1,0 +1,88 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:tipped_arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomPotionEffects:[{Id:2b,Amplifier:2b,Duration:600}],CustomPotionColor:5926017,HideFlags:32}"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "potion.withAmplifier",
+                  "with": [
+                    {
+                      "translate": "effect.minecraft.slowness"
+                    },
+                    {
+                      "translate": "potion.potency.1"
+                    }
+                  ],
+                  "color": "red",
+                  "italic": false,
+                  "extra": [
+                    {
+                      "translate": "%1$s%3427655$s",
+                      "with": [
+                        {
+                          "text": " (0:30)"
+                        },
+                        {
+                          "text": "item.gm4_armor_identification.armor.lore.duration_30"
+                        }
+                      ],
+                      "color": "red",
+                      "italic": false
+                    }
+                  ]
+                },
+                {
+                  "text": ""
+                },
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    {
+                      "text": "When Applied:"
+                    },
+                    {
+                      "translate": "item.gm4.armor_identification.armor.lore.when_applied"
+                    }
+                  ],
+                  "color": "purple",
+                  "italic": false
+                },
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    {
+                      "text": "-30% Speed"
+                    },
+                    {
+                      "translate": "item.gm4.armor_identification.armor.lore.slowness_2_applied"
+                    }
+                  ],
+                  "color": "red",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.minecraft.tipped_arrow.effect.slowness",
+                "italic": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

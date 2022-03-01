@@ -14,7 +14,7 @@ data remove storage gm4_armor_identification:temp tag.gm4_armor_identification
 
 # use lib_lore to remove lore lines
 data modify storage gm4_lore:temp Source set from storage gm4_armor_identification:temp tag.display.Lore
-data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"gray","text":"When Killing:"},{"translate":"item.gm4.mob_buff.armor.lore.killing"}]}'
+data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"gray","text":"When Killing:"},{"translate":"item.gm4_armor_identification.armor.lore.killing"}]}'
 scoreboard players set $start gm4_lore -1
 scoreboard players set $extra gm4_lore 2
 function #gm4_lore:remove

@@ -94,7 +94,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.killing"
+                  "translate": "item.gm4.armor_identification.armor.lore.killing"
                 }
               ]
             }
@@ -114,7 +114,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.plus"
+                    "translate": "item.gm4.armor_identification.armor.lore.plus"
                   }
                 ]
               },
@@ -127,7 +127,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.percent_prefix"
+                    "translate": "item.gm4.armor_identification.armor.lore.percent_prefix"
                   }
                 ]
               },
@@ -143,7 +143,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.constep"
+                    "translate": "item.gm4.armor_identification.armor.lore.constep"
                   }
                 ]
               },
@@ -156,7 +156,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.attack_damage"
+                    "translate": "item.gm4.armor_identification.armor.lore.attack_damage"
                   }
                 ]
               }
@@ -176,7 +176,7 @@
                   "color": "yellow"
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.consume"
+                  "translate": "item.gm4.armor_identification.armor.name.consume"
                 }
               ]
             },

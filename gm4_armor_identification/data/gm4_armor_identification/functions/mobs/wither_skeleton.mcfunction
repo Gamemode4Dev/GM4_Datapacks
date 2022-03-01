@@ -17,9 +17,9 @@ loot replace entity @s armor.feet loot gm4_armor_identification:mobs/equip_armor
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_armor_identification:mobs/equip_weapon/wither_skeleton
 
-# give arrow if wielding bow and remove drop chance
-execute if data entity @s HandItems[{id:"minecraft:bow"}] run item replace entity @s weapon.offhand with tipped_arrow{CustomPotionEffects:[{Id:20b,Amplifier:0b,Duration:200}],CustomPotionColor:3484199}
-data modify entity @s HandDropChances[1] set value -327.670F
+# withering arrow
+execute if data entity @s HandItems[{id:"minecraft:bow"}] store success score $arrow gm4_ai_data run loot replace entity @s weapon.offhand loot gm4_armor_identification:mobs/equip_arrow/withering
+execute if score $arrow gm4_ai_data matches 1 run data modify entity @s HandDropChances[1] set value 0.25F
 
 # set modifiers
 function gm4_armor_identification:mobs/modifiers/prep

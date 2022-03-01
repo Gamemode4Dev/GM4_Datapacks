@@ -36,7 +36,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.unsafe"
+                  "translate": "item.gm4.armor_identification.armor.lore.unsafe"
                 }
               ]
             }
@@ -56,7 +56,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.witch"
+                    "translate": "item.gm4.armor_identification.armor.lore.witch"
                   }
                 ]
               }
@@ -76,7 +76,7 @@
                   "color": "light_purple"
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.witch"
+                  "translate": "item.gm4.armor_identification.armor.name.witch"
                 }
               ]
             },

@@ -93,7 +93,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.night"
+                  "translate": "item.gm4.armor_identification.armor.lore.night"
                 }
               ]
             }
@@ -113,7 +113,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.plus"
+                    "translate": "item.gm4.armor_identification.armor.lore.plus"
                   }
                 ]
               },
@@ -129,7 +129,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.plus_speed"
+                    "translate": "item.gm4.armor_identification.armor.lore.plus_speed"
                   }
                 ]
               },
@@ -142,7 +142,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.speed"
+                    "translate": "item.gm4.armor_identification.armor.lore.speed"
                   }
                 ]
               }
@@ -163,7 +163,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.plus"
+                    "translate": "item.gm4.armor_identification.armor.lore.plus"
                   }
                 ]
               },
@@ -179,7 +179,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.plus_damage"
+                    "translate": "item.gm4.armor_identification.armor.lore.plus_damage"
                   }
                 ]
               },
@@ -192,7 +192,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.attack_damage"
+                    "translate": "item.gm4.armor_identification.armor.lore.attack_damage"
                   }
                 ]
               }
@@ -211,7 +211,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.nocturnal"
+                  "translate": "item.gm4.armor_identification.armor.name.nocturnal"
                 }
               ]
             },

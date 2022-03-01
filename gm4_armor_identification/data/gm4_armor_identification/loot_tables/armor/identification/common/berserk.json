@@ -81,7 +81,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.low_hp"
+                  "translate": "item.gm4.armor_identification.armor.lore.low_hp"
                 }
               ]
             }
@@ -101,7 +101,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.plus"
+                    "translate": "item.gm4.armor_identification.armor.lore.plus"
                   }
                 ]
               },
@@ -117,7 +117,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.plus_damage"
+                    "translate": "item.gm4.armor_identification.armor.lore.plus_damage"
                   }
                 ]
               },
@@ -130,7 +130,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.attack_damage"
+                    "translate": "item.gm4.armor_identification.armor.lore.attack_damage"
                   }
                 ]
               }
@@ -149,7 +149,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.berserkers"
+                  "translate": "item.gm4.armor_identification.armor.name.berserkers"
                 }
               ]
             },

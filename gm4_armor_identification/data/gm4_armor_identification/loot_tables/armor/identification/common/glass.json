@@ -74,7 +74,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.equip"
+                  "translate": "item.gm4.armor_identification.armor.lore.equip"
                 }
               ]
             }
@@ -94,7 +94,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.glass"
+                    "translate": "item.gm4.armor_identification.armor.lore.glass"
                   }
                 ]
               }
@@ -113,7 +113,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.glass"
+                  "translate": "item.gm4.armor_identification.armor.name.glass"
                 }
               ]
             },

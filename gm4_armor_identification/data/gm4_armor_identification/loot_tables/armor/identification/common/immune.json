@@ -55,7 +55,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.high_hp"
+                  "translate": "item.gm4.armor_identification.armor.lore.high_hp"
                 }
               ]
             }
@@ -80,7 +80,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.immune"
+                    "translate": "item.gm4.armor_identification.armor.lore.immune"
                   }
                 ]
               }
@@ -120,7 +120,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.immune"
+                    "translate": "item.gm4.armor_identification.armor.lore.immune"
                   }
                 ]
               }
@@ -160,7 +160,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.immune"
+                    "translate": "item.gm4.armor_identification.armor.lore.immune"
                   }
                 ]
               }
@@ -200,7 +200,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.immune"
+                    "translate": "item.gm4.armor_identification.armor.lore.immune"
                   }
                 ]
               }
@@ -240,7 +240,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.immune"
+                    "translate": "item.gm4.armor_identification.armor.lore.immune"
                   }
                 ]
               }
@@ -280,7 +280,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.immune"
+                    "translate": "item.gm4.armor_identification.armor.lore.immune"
                   }
                 ]
               }
@@ -320,7 +320,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.immune"
+                    "translate": "item.gm4.armor_identification.armor.lore.immune"
                   }
                 ]
               }
@@ -353,7 +353,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.husk"
+                  "translate": "item.gm4.armor_identification.armor.name.husk"
                 }
               ]
             },

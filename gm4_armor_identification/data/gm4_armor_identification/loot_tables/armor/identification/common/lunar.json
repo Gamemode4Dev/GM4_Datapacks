@@ -83,7 +83,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.night"
+                  "translate": "item.gm4.armor_identification.armor.lore.night"
                 }
               ]
             }
@@ -103,7 +103,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.lunar"
+                    "translate": "item.gm4.armor_identification.armor.lore.lunar"
                   }
                 ]
               }
@@ -122,7 +122,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.lunar"
+                  "translate": "item.gm4.armor_identification.armor.name.lunar"
                 }
               ]
             },

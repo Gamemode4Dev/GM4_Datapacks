@@ -9,7 +9,7 @@ execute if score $difficulty gm4_ai_data matches 11.. run scoreboard players add
 execute if score $difficulty gm4_ai_data matches 11.. run scoreboard players add $mob_speed gm4_ai_data 8
 
 # biome specific modifiers for this mob
-execute if predicate gm4_armor_identification:mobs/modifiers/flowering run function gm4_armor_identification:mobs/biomes/flowering_enderman
+execute if predicate gm4_armor_identification:mobs/modifiers/flowering if predicate gm4_armor_identification:technical/chance_50 run function gm4_armor_identification:mobs/biomes/flowering_enderman
 
 # set modifiers
 function gm4_armor_identification:mobs/modifiers/prep

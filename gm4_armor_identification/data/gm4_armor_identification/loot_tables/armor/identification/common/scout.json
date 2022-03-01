@@ -95,7 +95,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.safe"
+                  "translate": "item.gm4.armor_identification.armor.lore.safe"
                 }
               ]
             }
@@ -115,7 +115,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.plus"
+                    "translate": "item.gm4.armor_identification.armor.lore.plus"
                   }
                 ]
               },
@@ -131,7 +131,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.plus_speed"
+                    "translate": "item.gm4.armor_identification.armor.lore.plus_speed"
                   }
                 ]
               },
@@ -144,7 +144,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.speed"
+                    "translate": "item.gm4.armor_identification.armor.lore.speed"
                   }
                 ]
               }
@@ -163,7 +163,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.scout"
+                  "translate": "item.gm4.armor_identification.armor.name.scout"
                 }
               ]
             },

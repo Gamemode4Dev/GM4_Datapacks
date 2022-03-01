@@ -83,7 +83,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.unsafe"
+                  "translate": "item.gm4.armor_identification.armor.lore.unsafe"
                 }
               ]
             }
@@ -118,7 +118,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.stall"
+                    "translate": "item.gm4.armor_identification.armor.lore.stall"
                   }
                 ]
               },
@@ -131,7 +131,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.duration_3"
+                    "translate": "item.gm4.armor_identification.armor.lore.duration_3"
                   }
                 ]
               }
@@ -181,7 +181,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.stall"
+                    "translate": "item.gm4.armor_identification.armor.lore.stall"
                   }
                 ]
               },
@@ -194,7 +194,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.duration_3"
+                    "translate": "item.gm4.armor_identification.armor.lore.duration_3"
                   }
                 ]
               }
@@ -244,7 +244,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.stall"
+                    "translate": "item.gm4.armor_identification.armor.lore.stall"
                   }
                 ]
               },
@@ -257,7 +257,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.duration_3"
+                    "translate": "item.gm4.armor_identification.armor.lore.duration_3"
                   }
                 ]
               }
@@ -290,7 +290,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.stall"
+                  "translate": "item.gm4.armor_identification.armor.name.stall"
                 }
               ]
             },

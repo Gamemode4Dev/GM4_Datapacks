@@ -119,7 +119,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.equip"
+                  "translate": "item.gm4.armor_identification.armor.lore.equip"
                 }
               ]
             }
@@ -144,7 +144,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.link"
+                    "translate": "item.gm4.armor_identification.armor.lore.link"
                   }
                 ]
               }
@@ -197,7 +197,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.link"
+                    "translate": "item.gm4.armor_identification.armor.lore.link"
                   }
                 ]
               }
@@ -230,7 +230,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.link"
+                  "translate": "item.gm4.armor_identification.armor.name.link"
                 }
               ]
             },

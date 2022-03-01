@@ -50,7 +50,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.low_hp"
+                  "translate": "item.gm4.armor_identification.armor.lore.low_hp"
                 }
               ]
             }
@@ -73,7 +73,7 @@
                         "italic": false
                       },
                       {
-                        "translate": "item.gm4.mob_buff.armor.lore.fear"
+                        "translate": "item.gm4.armor_identification.armor.lore.fear"
                       }
                     ]
                   }
@@ -113,7 +113,7 @@
                         "italic": false
                       },
                       {
-                        "translate": "item.gm4.mob_buff.armor.lore.fear"
+                        "translate": "item.gm4.armor_identification.armor.lore.fear"
                       }
                     ]
                   },
@@ -158,7 +158,7 @@
                         "italic": false
                       },
                       {
-                        "translate": "item.gm4.mob_buff.armor.lore.fear"
+                        "translate": "item.gm4.armor_identification.armor.lore.fear"
                       }
                     ]
                   },
@@ -199,7 +199,7 @@
                   "color": "yellow"
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.soothe"
+                  "translate": "item.gm4.armor_identification.armor.name.soothe"
                 }
               ]
             },

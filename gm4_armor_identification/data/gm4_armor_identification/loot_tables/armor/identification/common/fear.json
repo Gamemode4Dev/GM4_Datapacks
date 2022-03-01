@@ -84,7 +84,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.lore.killing"
+                  "translate": "item.gm4.armor_identification.armor.lore.killing"
                 }
               ]
             }
@@ -104,7 +104,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.fear"
+                    "translate": "item.gm4.armor_identification.armor.lore.fear"
                   }
                 ]
               },
@@ -117,7 +117,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.duration_1"
+                    "translate": "item.gm4.armor_identification.armor.lore.duration_1"
                   }
                 ]
               }
@@ -152,7 +152,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.fear"
+                    "translate": "item.gm4.armor_identification.armor.lore.fear"
                   }
                 ]
               },
@@ -165,7 +165,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.duration_2"
+                    "translate": "item.gm4.armor_identification.armor.lore.duration_2"
                   }
                 ]
               }
@@ -203,7 +203,7 @@
                         "italic": false
                       },
                       {
-                        "translate": "item.gm4.mob_buff.armor.lore.fear"
+                        "translate": "item.gm4.armor_identification.armor.lore.fear"
                       }
                     ]
                   },
@@ -223,7 +223,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.duration_1"
+                    "translate": "item.gm4.armor_identification.armor.lore.duration_1"
                   }
                 ]
               }
@@ -261,7 +261,7 @@
                         "italic": false
                       },
                       {
-                        "translate": "item.gm4.mob_buff.armor.lore.fear"
+                        "translate": "item.gm4.armor_identification.armor.lore.fear"
                       }
                     ]
                   },
@@ -281,7 +281,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.mob_buff.armor.lore.duration_2"
+                    "translate": "item.gm4.armor_identification.armor.lore.duration_2"
                   }
                 ]
               }
@@ -314,7 +314,7 @@
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.mob_buff.armor.name.fear"
+                  "translate": "item.gm4.armor_identification.armor.name.fear"
                 }
               ]
             },
