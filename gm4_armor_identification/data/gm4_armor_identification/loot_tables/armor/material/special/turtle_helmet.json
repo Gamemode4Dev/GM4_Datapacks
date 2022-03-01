@@ -9,13 +9,6 @@
             "name": "minecraft:turtle_helmet",
             "functions": [
               {
-                "function": "minecraft:set_damage",
-                "damage": {
-                  "min": 0.25,
-                  "max": 0.55
-                }
-              },
-              {
                 "function": "minecraft:set_attributes",
                 "modifiers": [
                   {
@@ -24,53 +17,6 @@
                     "amount": 2,
                     "operation": "addition",
                     "slot": "head"
-                  }
-                ]
-              },
-              {
-                "function": "minecraft:enchant_with_levels",
-                "levels": {
-                  "min": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$difficulty"
-                    },
-                    "score": "gm4_ai_data",
-                    "scale": 2
-                  },
-                  "max": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$difficulty"
-                    },
-                    "score": "gm4_ai_data",
-                    "scale": 3
-                  }
-                },
-                "treasure": false,
-                "conditions": [
-                  {
-                    "condition": "minecraft:random_chance",
-                    "chance": 0.5
-                  },
-                  {
-                    "condition": "minecraft:value_check",
-                    "value": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$difficulty"
-                      },
-                      "score": "gm4_ai_data"
-                    },
-                    "range": {
-                      "min": {
-                        "min": 2,
-                        "max": 11
-                      }
-                    }
                   }
                 ]
               },
