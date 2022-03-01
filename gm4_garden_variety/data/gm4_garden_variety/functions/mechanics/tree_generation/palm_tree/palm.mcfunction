@@ -9,7 +9,7 @@ execute if score $palm_layer_loop gm4_gv_tree_gen = $palm_layers gm4_gv_tree_gen
 
 # [Debug]
 data modify storage gm4_garden_variety:debug/generation path append value "."
-execute if score $debug_generation gm4_gv_tree_gen matches 1 at @s positioned ^ ^ ^.5 run particle block_marker light ~ ~ ~-8
+execute if score $debug_generation gm4_gv_tree_gen matches 1 at @s positioned ^ ^ ^.5 run particle block_marker azalea_leaves ~ ~ ~-8
 
 # update variables for layer
 function gm4_garden_variety:mechanics/tree_generation/interpret_variables/layer/palm
