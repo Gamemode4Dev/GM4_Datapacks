@@ -5,4 +5,7 @@ scoreboard players set smelteries gm4_modules 1
 
 schedule function gm4_smelteries:main 1t
 
+# guidebook
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 4012.609778925561 ~ {CustomName:'"gm4_smelteries_guide"',Tags:["gm4_guide"],data:{type:"module",id:"smelteries",page_count:4,line_count:1,module_name:"Smelteries"}}
+
 #$moduleUpdateList

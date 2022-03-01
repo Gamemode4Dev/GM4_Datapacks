@@ -2,7 +2,7 @@
   "display":{
     "icon":{
       "item":"firework_star",
-      "nbt":"{CustomModelData:3}"
+      "nbt":"{CustomModelData:3420003}"
     },
     "title":{
       "translate": "%1$s%3427655$s",

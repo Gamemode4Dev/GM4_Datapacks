@@ -1,0 +1,27 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "gm4_guidebook:temp"
+    },
+    "ops": [
+      {
+        "source": "insert_pages[]",
+        "target": "pages",
+        "op": "append"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_count",
+    "count": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "$count"
+      },
+      "score": "gm4_guide"
+    }
+  }
+]

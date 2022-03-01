@@ -9,4 +9,7 @@ scoreboard players set mob_conversion gm4_modules 1
 schedule function gm4_mob_conversion:main 1t
 schedule function gm4_mob_conversion:tick 1t
 
+# guidebook
+execute if score gm4_guidebook load.status matches 1 run summon marker ~ 2791.570943633607 ~ {CustomName:'"gm4_mob_conversion_guide"',Tags:["gm4_guide"],data:{type:"module",id:"mob_conversion",page_count:3,line_count:1,module_name:"Mob Conversion"}}
+
 #$moduleUpdateList

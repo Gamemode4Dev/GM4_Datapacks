@@ -1,0 +1,33 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "mainhand": {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{gm4_guidebook:1b}"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "offhand": {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{gm4_guidebook:1b}"
+          }
+        }
+      }
+    }
+  ]
+}

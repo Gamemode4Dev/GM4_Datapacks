@@ -14,7 +14,7 @@ playsound minecraft:entity.player.breath block @a[distance=..12] ~ ~ ~ 1 1.3
 particle minecraft:cloud ~ ~0.6 ~ 0 0.8 0 0 5
 
 # summon pretty entity line
-summon area_effect_cloud ~ ~-1 ~ {Tags:["gm4_oa_wither_particle","gm4_unrotated_particle_cloud"],Duration:200,Particle:"block air",CustomName:'"Soul Forge Wither Particle"'}
-teleport @e[type=area_effect_cloud,tag=gm4_unrotated_particle_cloud,limit=1] ~ ~-1 ~ facing entity @s eyes
-teleport @e[type=area_effect_cloud,tag=gm4_unrotated_particle_cloud,limit=1] ~ ~1 ~
-tag @e[type=area_effect_cloud,tag=gm4_unrotated_particle_cloud] remove gm4_unrotated_particle_cloud
+summon marker ~ ~-1 ~ {Tags:["gm4_oa_wither_particle","gm4_unrotated_particle_cloud"],CustomName:'"Soul Forge Wither Particle"'}
+teleport @e[type=marker,tag=gm4_unrotated_particle_cloud,limit=1] ~ ~-1 ~ facing entity @s eyes
+teleport @e[type=marker,tag=gm4_unrotated_particle_cloud,limit=1] ~ ~1 ~
+tag @e[type=marker,tag=gm4_unrotated_particle_cloud] remove gm4_unrotated_particle_cloud

@@ -1,5 +1,5 @@
-#@s = sneaking player with phasing pneuma that has space to phase
-#run from pneumas/phasing/check_traversable
+# @s = sneaking player with phasing pneuma that has space to phase
+# run from pneumas/phasing/check_traversable
 
 scoreboard players reset @s gm4_oa_snk_num
 

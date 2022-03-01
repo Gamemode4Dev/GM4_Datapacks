@@ -1,5 +1,7 @@
-#run from advancement hit
+# Find pig/chair that has just been hit
 # @s = player hitting the chair
+# at @s
+# run from advancement hit
 
 advancement revoke @s only gm4_chairs:hit
 

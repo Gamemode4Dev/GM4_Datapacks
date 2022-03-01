@@ -29,10 +29,10 @@ scoreboard players operation $comparison gm4_zc_data > $health_boost gm4_zc_data
 scoreboard players operation $comparison gm4_zc_data > $speed_boost gm4_zc_data
 
 # give set boosts for the most prevalent flavors
-execute if score $comparison gm4_zc_data = $armor_boost gm4_zc_data run attribute @s minecraft:generic.armor modifier add b29259d8-1ac4-4791-9552-b944910cd435 gm4_zauber_cauldrons.armor.set_bonus.armor_boost 1 add
-execute if score $comparison gm4_zc_data = $attack_boost gm4_zc_data run attribute @s minecraft:generic.attack_damage modifier add 81b8020f-c7f4-41d9-b99b-7a8d6b2d5a90 gm4_zauber_cauldrons.armor.set_bonus.attack_boost 1 add
-execute if score $comparison gm4_zc_data = $health_boost gm4_zc_data run attribute @s minecraft:generic.max_health modifier add 591ea7a8-12f8-413f-80c9-9f80702c961b gm4_zauber_cauldrons.armor.set_bonus.health_boost 4 add
-execute if score $comparison gm4_zc_data = $speed_boost gm4_zc_data run attribute @s minecraft:generic.movement_speed modifier add 7a7ff3d6-8e01-4051-99fa-94c40b12fb9a gm4_zauber_cauldrons.armor.set_bonus.speed_boost 0.12 multiply_base
+execute if score $comparison gm4_zc_data = $armor_boost gm4_zc_data run function gm4_zauber_cauldrons:player/armor/set_bonus/armor_boost
+execute if score $comparison gm4_zc_data = $attack_boost gm4_zc_data run function gm4_zauber_cauldrons:player/armor/set_bonus/attack_boost
+execute if score $comparison gm4_zc_data = $health_boost gm4_zc_data run function gm4_zauber_cauldrons:player/armor/set_bonus/health_boost
+execute if score $comparison gm4_zc_data = $speed_boost gm4_zc_data run function gm4_zauber_cauldrons:player/armor/set_bonus/speed_boost
 
 # reset storage and fake players
 data remove storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons

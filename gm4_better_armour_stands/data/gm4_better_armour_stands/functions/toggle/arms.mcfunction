@@ -1,8 +1,6 @@
 # @s = armor_stand to be modified
 # at @s
-# run from holding_book
-
-function gm4_better_armour_stands:toggle/arms_detect_remove
+# run from toggle/arms_detect_remove
 
 data modify entity @s ShowArms set value 1
 

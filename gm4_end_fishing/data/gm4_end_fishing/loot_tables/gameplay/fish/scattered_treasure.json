@@ -128,7 +128,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:10}"
+              "tag": "{CustomModelData:3420010}"
             },
             {
               "function": "minecraft:set_lore",

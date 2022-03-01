@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3,gm4_zauber_cauldrons:{item:\"bottled_vex\"},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+                            "tag": "{CustomModelData:3420003,gm4_zauber_cauldrons:{item:\"bottled_vex\"},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
                         },
                         {
                             "function": "minecraft:copy_nbt",

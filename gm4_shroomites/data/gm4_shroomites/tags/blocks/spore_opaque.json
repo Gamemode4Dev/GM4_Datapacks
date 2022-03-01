@@ -1,0 +1,10 @@
+{
+    "values": [
+        "#gm4:full_collision",
+        "#gm4:water",
+        "minecraft:cobweb",
+        "minecraft:lava",
+        "minecraft:powder_snow",
+        "minecraft:sunflower"
+    ]
+}

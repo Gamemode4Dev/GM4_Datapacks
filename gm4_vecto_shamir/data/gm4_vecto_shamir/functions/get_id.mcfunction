@@ -1,5 +1,5 @@
-#run from advancement join
-#@s = new player
+# @s = new player
+# at @s
+# run from advancement join
 
-scoreboard players add $next gm4_vecto_id 1
-scoreboard players operation @s gm4_vecto_id = $next gm4_vecto_id
+execute store result score @s gm4_vecto_id run data get entity @s UUID[0]

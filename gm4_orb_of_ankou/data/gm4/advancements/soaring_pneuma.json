@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "elytra",
-      "nbt": "{CustomModelData:1,Enchantments:[{}]}"
+      "nbt": "{CustomModelData:3420002,Enchantments:[{}]}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
@@ -28,6 +28,7 @@
       "conditions": {
         "items": [
           {
+            "tag": "gm4_orb_of_ankou:pneuma_container",
             "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"soaring\"}]}}"
           }
         ]

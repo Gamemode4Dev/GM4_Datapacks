@@ -18,4 +18,4 @@ execute if entity @s[tag=gm4_oa_has_shard] run particle dust 0.271 0.149 0.388 2
 execute if entity @s[tag=gm4_oa_has_orb,tag=gm4_oa_has_shard] run function gm4_orb_of_ankou:soul_forge/wither_roses/steps
 
 # wither rose particle line
-execute as @e[type=area_effect_cloud,tag=gm4_oa_wither_particle] at @s run function gm4_orb_of_ankou:soul_forge/wither_roses/particle
+execute as @e[type=marker,tag=gm4_oa_wither_particle] at @s run function gm4_orb_of_ankou:soul_forge/wither_roses/particle
