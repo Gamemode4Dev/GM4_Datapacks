@@ -3,10 +3,8 @@
 # at @s
 # run from gm4_garden_variety_trees:generate/TREE_TYPE/initialize
 
-
 # [Pre-Generation]
 function gm4_garden_variety:mechanics/tree_generation/pre_generation
-
 
 # [Trunk] prepare variables for tunk generation
 scoreboard players operation $trunk_layer_loop gm4_gv_tree_gen = $trunk_layers gm4_gv_tree_gen

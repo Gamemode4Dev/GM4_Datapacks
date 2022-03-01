@@ -5,7 +5,7 @@
 
 
 # set current tree
-scoreboard players set king_palm gm4_tree_type 1 
+scoreboard players set king_palm gm4_gv_tree_type 1 
 
 # modify tags
 tag @s remove gm4_king_palm_sapling
