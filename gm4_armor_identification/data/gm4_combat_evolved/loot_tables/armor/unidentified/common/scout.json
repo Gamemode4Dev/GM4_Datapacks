@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wooden_hoe",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_evolved:{unidentified:1,mod_id:1}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

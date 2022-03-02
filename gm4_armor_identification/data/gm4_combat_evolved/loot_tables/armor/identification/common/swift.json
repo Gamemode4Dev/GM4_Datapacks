@@ -1,0 +1,130 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "gm4_ce_perm",
+                  "amount": -0.5,
+                  "operation": "multiply_total",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "gm4_ce_perm",
+                  "amount": 1,
+                  "operation": "multiply_total",
+                  "slot": "chest"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_evolved:swift}"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_combat_evolved:temp"
+              },
+              "ops": [
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
+                  "op": "replace"
+                },
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm2\"}].Slot",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "When Equipped:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_evolved.armor.lore.equip"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "Swift Strikes",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.armor.lore.swift"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "Swift ",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_evolved.armor.name.swift"
+                }
+              ]
+            },
+            {
+              "nbt": "tag.gm4_combat_evolved.name",
+              "storage": "gm4_combat_evolved:temp",
+              "interpret": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

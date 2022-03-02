@@ -1,0 +1,139 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.movement_speed",
+                  "name": "gm4_combat_evolved_lunar",
+                  "amount": 0,
+                  "operation": "multiply_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "gm4_combat_evolved_lunar",
+                  "amount": 0,
+                  "operation": "multiply_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "gm4_combat_evolved_lunar",
+                  "amount": 0,
+                  "operation": "multiply_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "gm4_combat_evolved_lunar",
+                  "amount": 0,
+                  "operation": "multiply_base",
+                  "slot": "chest"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_evolved:{modifier:61,active:0,moon:0}}"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_combat_evolved:temp"
+              },
+              "ops": [
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_combat_evolved_lunar\"}].Slot",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "When Night-Time:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_evolved.armor.lore.night"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "Wax & Wane",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.armor.lore.lunar"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "Lunar ",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_evolved.armor.name.lunar"
+                }
+              ]
+            },
+            {
+              "nbt": "tag.gm4_combat_evolved.name",
+              "storage": "gm4_combat_evolved:temp",
+              "interpret": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

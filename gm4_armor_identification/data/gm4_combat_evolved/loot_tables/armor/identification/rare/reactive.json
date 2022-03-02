@@ -1,0 +1,227 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_evolved:{reactive:1}}"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_combat_evolved:temp"
+              },
+              "ops": [
+                {
+                  "source": "armor",
+                  "target": "gm4_combat_evolved.level",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "When Under Attack:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_evolved.armor.lore.unsafe"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "effect.minecraft.absorption",
+                "color": "blue",
+                "italic": false
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": " (0:03)",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.armor.lore.duration_3"
+                  }
+                ]
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 1
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "potion.withAmplifier",
+                "with": [
+                  {
+                    "translate": "effect.minecraft.absorption",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "potion.potency.1",
+                    "color": "blue",
+                    "italic": false
+                  }
+                ]
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": " (0:03)",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.armor.lore.duration_3"
+                  }
+                ]
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 2
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "potion.withAmplifier",
+                "with": [
+                  {
+                    "translate": "effect.minecraft.absorption",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "potion.potency.2",
+                    "color": "blue",
+                    "italic": false
+                  }
+                ]
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": " (0:03)",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.armor.lore.duration_3"
+                  }
+                ]
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 3
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "Reactive ",
+                  "italic": false,
+                  "color": "yellow"
+                },
+                {
+                  "translate": "item.gm4.combat_evolved.armor.name.reactive"
+                }
+              ]
+            },
+            {
+              "nbt": "tag.gm4_combat_evolved.name",
+              "storage": "gm4_combat_evolved:temp",
+              "interpret": true,
+              "color": "yellow"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

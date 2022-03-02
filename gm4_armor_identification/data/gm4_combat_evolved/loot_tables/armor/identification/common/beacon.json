@@ -1,0 +1,92 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_evolved:{modifier:62}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "When Night-Time:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_evolved.armor.lore.night"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "Illuminate",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.armor.lore.beacon"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "Radiant ",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_evolved.armor.name.beacon"
+                }
+              ]
+            },
+            {
+              "nbt": "tag.gm4_combat_evolved.name",
+              "storage": "gm4_combat_evolved:temp",
+              "interpret": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

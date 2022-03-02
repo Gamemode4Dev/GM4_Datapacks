@@ -1,0 +1,86 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:tipped_arrow",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{CustomPotionEffects:[{Id:2b,Amplifier:0b,Duration:600}],Potion:\"minecraft:harming\",HideFlags:32,CustomPotionColor:4393481}"
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "translate": "effect.minecraft.slowness",
+                    "color": "red",
+                    "italic": false,
+                    "extra": [
+                      {
+                        "translate": "%1$s%3427655$s",
+                        "with": [
+                          {
+                            "text": " (0:30)"
+                          },
+                          {
+                            "translate": "item.gm4.combat_evolved.armor.lore.duration_30"
+                          }
+                        ],
+                        "color": "red",
+                        "italic": false
+                      }
+                    ]
+                  },
+                  {
+                    "translate": "effect.minecraft.instant_damage",
+                    "color": "red",
+                    "italic": false
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      {
+                        "text": "When Applied:"
+                      },
+                      {
+                        "translate": "item.gm4.combat_evolved.armor.lore.when_applied"
+                      }
+                    ],
+                    "color": "purple",
+                    "italic": false
+                  },
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      {
+                        "text": "-15% Speed"
+                      },
+                      {
+                        "translate": "item.gm4.combat_evolved.armor.lore.slowness_applied"
+                      }
+                    ],
+                    "color": "red",
+                    "italic": false
+                  }
+                ]
+              },
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "translate": "item.minecraft.tipped_arrow.effect.harming",
+                  "italic": false
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

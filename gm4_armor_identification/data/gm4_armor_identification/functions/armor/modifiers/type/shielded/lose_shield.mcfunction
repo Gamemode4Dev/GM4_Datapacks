@@ -1,8 +1,0 @@
-# run from advancement damaged/armor/shielded
-# @s = player wearing shielded armor being damaged
-# at @s
-
-advancement revoke @s only gm4_armor_identification:damaged/armor/shielded
-scoreboard players set @s gm4_ai_t_shield 5
-
-effect clear @s absorption

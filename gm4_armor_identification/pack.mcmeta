@@ -2,7 +2,7 @@
     "pack": {
         "pack_format": 8,
         "description": [
-            "Armor Identification",
+            "Combat Evolved",
             "\n",
             {
                 "text": "Gamemode 4 for 1.18",
@@ -10,13 +10,13 @@
             }
         ]
     },
-    "module_name": "Armor Identification",
-    "module_id": "armor_identification",
+    "module_name": "Combat Evolved",
+    "module_id": "combat_evolved",
     "libraries": [
         "lib_forceload",
         "lib_lore"
     ],
-    "site_description": "Use special armor to defend against mobs that grow ever stronger.",
+    "site_description": "Use special armor and weapon modifiers to defend against mobs that grow ever stronger.",
     "video_link": "",
     "wiki_link": "",
     "required_modules": [],

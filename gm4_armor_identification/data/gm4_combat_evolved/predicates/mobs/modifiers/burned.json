@@ -1,0 +1,57 @@
+[
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:reference",
+        "name": "gm4_combat_evolved:mobs/modifiers/dark"
+      }
+    },
+    {
+      "condition": "minecraft:alternative",
+      "terms": [
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "biome": "minecraft:desert"
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "biome": "minecraft:savanna"
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "biome": "minecraft:savanna_plateau"
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "biome": "minecraft:windswept_savanna"
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "biome": "minecraft:badlands"
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "biome": "minecraft:wooded_badlands"
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "biome": "minecraft:eroded_badlands"
+          }
+        }
+      ]
+    }
+  ]
+  

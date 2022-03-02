@@ -1,0 +1,13 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "feet": {
+          "tag": "gm4_combat_evolved:armor",
+          "nbt": "{gm4_combat_evolved:challenge}"
+        }
+      }
+    }
+  }
+  

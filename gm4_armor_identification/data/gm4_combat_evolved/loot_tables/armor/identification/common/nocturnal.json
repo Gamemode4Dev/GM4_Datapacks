@@ -1,0 +1,228 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.movement_speed",
+                  "name": "gm4_combat_evolved",
+                  "amount": 0,
+                  "operation": "multiply_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "gm4_combat_evolved_2",
+                  "amount": 0,
+                  "operation": "addition",
+                  "slot": "chest"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_evolved:{modifier:60,active:0}}"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_combat_evolved:temp"
+              },
+              "ops": [
+                {
+                  "source": "speed",
+                  "target": "gm4_combat_evolved.level",
+                  "op": "replace"
+                },
+                {
+                  "source": "damage",
+                  "target": "gm4_combat_evolved.level2",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_combat_evolved:temp"
+              },
+              "ops": [
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_combat_evolved\"}].Slot",
+                  "op": "replace"
+                },
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_combat_evolved_2\"}].Slot",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "When Night-Time:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_evolved.armor.lore.night"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "+",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.armor.lore.plus"
+                  }
+                ]
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$speed",
+                      "objective": "gm4_ce_data"
+                    },
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.armor.lore.plus_speed"
+                  }
+                ]
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "% Speed",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.armor.lore.speed"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "+",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.armor.lore.plus"
+                  }
+                ]
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$damage",
+                      "objective": "gm4_ce_data"
+                    },
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.armor.lore.plus_damage"
+                  }
+                ]
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": " Attack Damage",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.armor.lore.attack_damage"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "Nocturnal ",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_evolved.armor.name.nocturnal"
+                }
+              ]
+            },
+            {
+              "nbt": "tag.gm4_combat_evolved.name",
+              "storage": "gm4_combat_evolved:temp",
+              "interpret": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
