@@ -1,6 +1,5 @@
 {
   "values": [
-    "minecraft:air",
-    "minecraft:cave_air"
+    "#gm4:air"
   ]
 }

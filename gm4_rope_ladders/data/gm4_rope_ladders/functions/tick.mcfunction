@@ -1,4 +1,5 @@
 
 schedule function gm4_rope_ladders:tick 1t
 
-execute as @a if score @s gm4_rol_b_ladder matches 1.. at @s run function gm4_rope_ladders:update_ladders/as_player
+# check if player broke ladder
+execute as @a if score @s gm4_rol_break_ladder matches 1.. at @s run function gm4_rope_ladders:player/broke_ladder

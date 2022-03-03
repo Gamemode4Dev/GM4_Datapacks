@@ -7,14 +7,14 @@
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Hows It Hanging!",
+        "How's It Hanging?",
         {"translate": "advancement.gm4.rope_ladders.title"}
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Place a rope ladder",
+        "Place a Rope Ladder",
         {"translate": "advancement.gm4.rope_ladders.description"}
       ],
       "color": "gray"
