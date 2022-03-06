@@ -1,3 +1,6 @@
+# @s = player
+# at @s
+# run from function: gm4_rope_ladders:main
 
 # tag
 tag @s remove gm4_rol_holding_ladder

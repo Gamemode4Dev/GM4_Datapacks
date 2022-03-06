@@ -1,3 +1,7 @@
+# places a ladder when the scan finds a valid location
+# @s = player that interacts with a "right click detection" villager while holding ladder
+# at location of valid spot for ladder placement
+# run from function: gm4_rope_ladders:mechanics/ladder_placement/scan_column/found
 
 # set scorebaord
 scoreboard players set $ladder_placed gm4_rol_data 1

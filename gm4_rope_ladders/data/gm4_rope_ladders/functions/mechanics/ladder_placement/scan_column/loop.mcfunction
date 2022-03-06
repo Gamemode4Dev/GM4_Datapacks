@@ -1,3 +1,7 @@
+# scans downward until it finds a valid location to place a ladder
+# @s = player that interacts with a "right click detection" villager while holding ladder
+# at location of ladder block, moving downward
+# run from function: gm4_rope_ladders:mechanics/ladder_placement/scan_column/init
 
 # detect if ladder placement is valid
 execute if block ~ ~ ~ #gm4_rope_ladders:valid_replace run function gm4_rope_ladders:mechanics/ladder_placement/scan_column/found

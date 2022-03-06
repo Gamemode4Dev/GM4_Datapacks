@@ -1,7 +1,7 @@
-# scans blocks below the ladder until it runs out of ladders
-# @s = freshly dropped ladder item
-# positon of ladder (moving downward)
-# run from function gm4_rope_ladders:update_ladders/scan_column/init
+# scans downward breaking floating ladders as it goes
+# @s = ladder item that was broken by player
+# align xyz positioned ~.5 ~-1 ~.5, moving downward
+# run from gm4_rope_ladders:mechanics/break_floating_ladders/scan_column/init
 
 # reset scoreboard
 scoreboard players set $ladder_broken gm4_rol_data 0

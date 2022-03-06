@@ -1,5 +1,4 @@
-# executes as the player the broke a ladder
-# @s = player
+# @s = player that broke a ladder
 # at @s
 # run from gm4_rope_ladders:tick
 

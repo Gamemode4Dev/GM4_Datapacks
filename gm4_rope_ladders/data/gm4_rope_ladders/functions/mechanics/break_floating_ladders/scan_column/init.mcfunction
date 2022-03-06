@@ -1,6 +1,6 @@
-# begins scan of vertical column below the ladder item
-# @s = freshly dropped ladder item
-# positon of ladder item, align xyz positioned ~.5 ~-1 ~.5
+# begins a scan downward breaking floating ladders as it goes
+# @s = ladder item that was broken by player
+# align xyz positioned ~.5 ~-1 ~.5
 # run from gm4_rope_ladders:player/broke_ladder
 
 # set ladder drop mode

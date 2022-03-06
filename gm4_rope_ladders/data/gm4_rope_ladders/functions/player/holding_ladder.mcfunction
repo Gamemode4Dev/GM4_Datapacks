@@ -1,3 +1,6 @@
+# @s = player holding ladder
+# at @s
+# run from function: gm4_rope_ladders:player/as
 
 # tag
 tag @s add gm4_rol_holding_ladder

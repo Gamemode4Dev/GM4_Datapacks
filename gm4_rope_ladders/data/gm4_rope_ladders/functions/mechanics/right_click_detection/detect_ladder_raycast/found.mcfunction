@@ -1,3 +1,7 @@
+# executes at the nearest ladder block in front of the player
+# @s = player holding ladder
+# at position of ladder block, align xyz positioned ~.5 ~ ~.5
+# run from function: gm4_rope_ladders:mechanics/right_click_detection/detect_ladder_raycast/ray
 
 # set scoreboard
 scoreboard players set $found_ladder gm4_rol_data 1

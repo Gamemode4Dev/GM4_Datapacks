@@ -1,3 +1,7 @@
+# raycasts from the players head that moves forward until it finds a ladder block
+# @s = player holding ladder
+# at @s anchored eyes, moving forward
+# run from function: gm4_rope_ladders:mechanics/right_click_detection/detect_ladder_raycast/init
 
 # detect if player sees ladder
 execute if block ~ ~ ~ ladder align xyz positioned ~.5 ~ ~.5 if block ~ ~-1 ~ air run function gm4_rope_ladders:mechanics/right_click_detection/detect_ladder_raycast/found

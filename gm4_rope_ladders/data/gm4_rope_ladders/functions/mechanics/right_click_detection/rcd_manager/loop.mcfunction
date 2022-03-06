@@ -1,3 +1,5 @@
+# loops as long as a "right click detection" villager exists
+# run from function: gm4_rope_ladders:mechanics/right_click_detection/rcd_manager/spawn_rcd
 
 # reset scoreboard
 scoreboard players remove $rcd_found gm4_rol_data 1

@@ -1,3 +1,5 @@
+# processes the "right click detection" villager so that it is despawned when unneeded
+# run from function: gm4_rope_ladders:mechanics/right_click_detection/rcd_manager/loop
 
 # kill rcd if uneeded
 execute unless entity @a[tag=gm4_rol_holding_ladder,distance=..5] run tp @s ~ -1000 ~

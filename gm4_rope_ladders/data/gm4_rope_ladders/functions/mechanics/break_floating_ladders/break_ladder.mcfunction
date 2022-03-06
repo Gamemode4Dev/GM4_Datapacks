@@ -1,7 +1,7 @@
-# updates nearby the air around ladder so that it breaks
-# @s = freshly dropped ladder item
-# positon of ladder
-# run from function gm4_rope_ladders:update_ladders/scan_column/init
+# breaks the ladder because it is floating
+# @s = ladder item that was broken by player
+# at location of a ladder
+# run from gm4_rope_ladders:mechanics/break_floating_ladders/scan_column/loop
 
 # set scoreboard
 scoreboard players add $ladder_broken gm4_rol_data 1

@@ -1,8 +1,11 @@
+# @s = player that interacts with a "right click detection" villager while holding ladder
+# at @s
+# run from advancement: gm4_rope_ladders:right_click_detection
 
 # revoke advancement
 advancement revoke @s only gm4_rope_ladders:right_click_detection
 
-# find rcd
+# find ladder block
 function gm4_rope_ladders:mechanics/ladder_placement/detect_ladder_raycast/init
 
 # play audio if ladder placed
