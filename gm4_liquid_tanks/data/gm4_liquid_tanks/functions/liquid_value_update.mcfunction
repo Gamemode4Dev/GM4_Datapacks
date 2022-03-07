@@ -1,6 +1,10 @@
 #@s = liquid tank
 #run from liquid_tanks:process
 
+# say starting vupdate
+# tellraw @a {"nbt":"Pos","entity":"@s"}
+# tellraw @a [{"score":{"name":"@s","objective":"gm4_lt_value"}},{"text":","},{"score":{"name":"@s","objective": "gm4_lt_prior_val"}}]
+
 #normalize incase of overflow
 scoreboard players operation @s gm4_lt_value < @s gm4_lt_max
 
@@ -20,5 +24,8 @@ scoreboard players operation @s gm4_lt_disp_val = liquid_height_calc gm4_lt_disp
 scoreboard players operation liquid_height_calc gm4_lt_disp_val -= last_liquid_height gm4_lt_disp_val
 
 #teleport proper number of times.
-execute if score liquid_height_calc gm4_lt_disp_val matches 1.. positioned ~ ~-.5 ~ run function gm4_liquid_tanks:teleport_display_up
-execute if score liquid_height_calc gm4_lt_disp_val matches ..-1 positioned ~ ~-.5 ~ run function gm4_liquid_tanks:teleport_display_down
+execute if score liquid_height_calc gm4_lt_disp_val matches 1.. at @s positioned ~ ~-.5 ~ run function gm4_liquid_tanks:teleport_display_up
+execute if score liquid_height_calc gm4_lt_disp_val matches ..-1 at @s positioned ~ ~-.5 ~ run function gm4_liquid_tanks:teleport_display_down
+
+# tellraw @a [{"score":{"name":"@s","objective":"gm4_lt_value"}},{"text":","},{"score":{"name":"@s","objective": "gm4_lt_prior_val"}}]
+# say ending vupdate
