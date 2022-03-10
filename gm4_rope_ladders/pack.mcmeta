@@ -2,7 +2,7 @@
     "pack": {
         "pack_format": 8,
         "description": [
-            "MODULE_NAME",
+            "Rope Ladders",
             "\n",
             {
                 "text": "Gamemode 4 for 1.18",
@@ -10,29 +10,17 @@
             }
         ]
     },
-    "module_name": "MODULE_NAME",
-    "module_id": "MODULE_ID",
-    "site_description": "Someone forgot to type a description!",
-    "video_link": "YOUTUBE_VIDEO_URL",
-    "wiki_link": "WIKI_URL",
+    "module_name": "Rope Ladders",
+    "module_id": "rope_ladders",
+    "site_description": "Climbing downward has never been easier!",
+    "wiki_link": "https://wiki.gm4.co/wiki/Rope_Ladders",
     "required_modules": [
-        "module_id of required module",
-        "or leave array empty"
     ],
     "recommended_modules": [
-        "module_id of recommended module",
-        "or leave array empty"
     ],
     "credits": {
         "Creator": [
-            "USERNAME"
-        ],
-        "Updated By": [
-            "USERNAME",
-            "USERNAME"
-        ],
-        "Icon Design": [
-            "USERNAME"
+            "MichaelMiner137"
         ]
     }
 }
