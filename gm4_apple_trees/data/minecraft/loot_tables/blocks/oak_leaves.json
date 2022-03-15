@@ -16,7 +16,9 @@
                     {
                       "condition": "minecraft:match_tool",
                       "predicate": {
-                        "items": ["minecraft:shears"]
+                        "items": [
+                          "minecraft:shears"
+                        ]
                       }
                     },
                     {
@@ -103,7 +105,9 @@
               {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                  "items": ["minecraft:shears"]
+                  "items": [
+                    "minecraft:shears"
+                  ]
                 }
               },
               {
@@ -124,5 +128,20 @@
         }
       ]
     }
-  ]
+  ],
+  "__smithed__": {
+    "rules": [
+      {
+        "type": "smithed:merge",
+        "target": "pools",
+        "source": {
+          "type": "smithed:reference",
+          "path": "pools"
+        }
+      }
+    ],
+    "priority": {
+      "default": 99
+    }
+  }
 }
