@@ -22,9 +22,9 @@ scoreboard players operation $motion_x gm4_vibro_shock -= $target_x gm4_vibro_sh
 scoreboard players operation $motion_z gm4_vibro_shock -= $target_z gm4_vibro_shock
 
 ## set motion
-execute store result entity @s Motion[0] double 0.2 run scoreboard players get $motion_x gm4_vibro_shock
-execute store result entity @s Motion[2] double 0.2 run scoreboard players get $motion_z gm4_vibro_shock
-data modify entity @s Motion[1] set value 0.35d
+execute store result entity @s[tag=!smithed.strict] Motion[0] double 0.2 run scoreboard players get $motion_x gm4_vibro_shock
+execute store result entity @s[tag=!smithed.strict] Motion[2] double 0.2 run scoreboard players get $motion_z gm4_vibro_shock
+data modify entity @s[tag=!smithed.strict] Motion[1] set value 0.35d
 
 ## clean up
 data remove storage gm4_vibro_shamir:temp Pos

@@ -20,6 +20,16 @@
                 "nbt": "{Tags:[\"gm4_oa_ignore\"]}"
               }
             }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"smithed.entity\"]}"
+              }
+            }
           }
         ],
         "killing_blow": {
