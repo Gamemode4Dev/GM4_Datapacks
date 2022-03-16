@@ -4,7 +4,7 @@
 # run from function: gm4_rope_ladders:mechanics/right_click_detection/detect_ladder_raycast/init
 
 # detect if player sees ladder
-execute if block ~ ~ ~ ladder align xyz positioned ~.5 ~ ~.5 if block ~ ~-1 ~ air run function gm4_rope_ladders:mechanics/right_click_detection/detect_ladder_raycast/found
+execute if block ~ ~ ~ ladder align xyz positioned ~.5 ~ ~.5 if block ~ ~-1 ~ #gm4_rope_ladders:valid_replace run function gm4_rope_ladders:mechanics/right_click_detection/detect_ladder_raycast/found
 execute if block ~ ~ ~ ladder align xyz positioned ~.5 ~ ~.5 unless block ~ ~1 ~ ladder run function gm4_rope_ladders:mechanics/right_click_detection/detect_ladder_raycast/found
 
 # loop
