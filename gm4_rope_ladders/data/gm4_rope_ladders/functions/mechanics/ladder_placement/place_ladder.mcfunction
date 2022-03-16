@@ -13,4 +13,5 @@ item modify entity @s weapon.mainhand gm4_rope_ladders:minus_one
 advancement grant @s only gm4:rope_ladders
 
 # place ladder
-clone ~ ~1 ~ ~ ~1 ~ ~ ~ ~
+execute unless block ~ ~ ~ water run clone ~ ~1 ~ ~ ~1 ~ ~ ~ ~
+execute if block ~ ~ ~ water run function gm4_rope_ladders:mechanics/ladder_placement/place_water_ladder

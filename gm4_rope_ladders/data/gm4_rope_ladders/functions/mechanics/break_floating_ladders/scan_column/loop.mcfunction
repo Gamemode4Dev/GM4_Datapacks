@@ -7,10 +7,10 @@
 scoreboard players set $ladder_broken gm4_rol_data 0
 
 # detect if ladder can be broken
-execute if block ~ ~ ~ ladder[facing=east] if block ~-1 ~ ~ air run function gm4_rope_ladders:mechanics/break_floating_ladders/break_ladder
-execute if block ~ ~ ~ ladder[facing=west] if block ~1 ~ ~ air run function gm4_rope_ladders:mechanics/break_floating_ladders/break_ladder
-execute if block ~ ~ ~ ladder[facing=south] if block ~ ~ ~-1 air run function gm4_rope_ladders:mechanics/break_floating_ladders/break_ladder
-execute if block ~ ~ ~ ladder[facing=north] if block ~ ~ ~1 air run function gm4_rope_ladders:mechanics/break_floating_ladders/break_ladder
+execute if block ~ ~ ~ ladder[facing=east] unless block ~-1 ~ ~ #gm4:full_collision run function gm4_rope_ladders:mechanics/break_floating_ladders/break_ladder
+execute if block ~ ~ ~ ladder[facing=west] unless block ~1 ~ ~ #gm4:full_collision run function gm4_rope_ladders:mechanics/break_floating_ladders/break_ladder
+execute if block ~ ~ ~ ladder[facing=south] unless block ~ ~ ~-1 #gm4:full_collision run function gm4_rope_ladders:mechanics/break_floating_ladders/break_ladder
+execute if block ~ ~ ~ ladder[facing=north] unless block ~ ~ ~1 #gm4:full_collision run function gm4_rope_ladders:mechanics/break_floating_ladders/break_ladder
 
 # loop
 scoreboard players add $loop gm4_rol_data 1
