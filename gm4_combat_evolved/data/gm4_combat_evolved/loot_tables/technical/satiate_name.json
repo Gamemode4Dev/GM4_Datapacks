@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone"
+          }
+        ],
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "entity": "this",
+            "name": [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "Satiated ",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.name.satiated"
+                  }
+                ]
+              },
+              {
+                "nbt": "tag.gm4_combat_evolved.name",
+                "storage": "gm4_combat_evolved:temp",
+                "interpret": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

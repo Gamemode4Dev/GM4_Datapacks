@@ -1,0 +1,25 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:loot_table",
+            "weight": 945,
+            "name": "gm4_combat_evolved:weapons/modifiers/common"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "weight": 50,
+            "name": "gm4_combat_evolved:weapons/modifiers/rare"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "weight": 5,
+            "name": "gm4_combat_evolved:weapons/modifiers/epic"
+          }
+        ]
+      }
+    ]
+  }
+  
