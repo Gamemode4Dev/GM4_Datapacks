@@ -15,7 +15,7 @@ execute if score $modifier gm4_ce_data matches 20 run function gm4_combat_evolve
 execute if score $modifier gm4_ce_data matches 30 run function gm4_combat_evolved:armor/modifiers/type/killing
 execute if score $modifier gm4_ce_data matches 31 if score @s gm4_ce_kill matches 1.. run function gm4_combat_evolved:armor/modifiers/type/consume/grow
 execute if score $modifier gm4_ce_data matches 32 if score @s gm4_ce_kill matches 1.. run function gm4_combat_evolved:armor/modifiers/type/vamp
-execute if score $modifier gm4_ce_data matches 33 if score @s gm4_ce_kill matches 1.. at @s as @e[type=!player,type=!armor_stand,team=!gm4_ce_team_check,distance=..8] at @s run function gm4_combat_evolved:armor/modifiers/type/fear
+execute if score $modifier gm4_ce_data matches 33 if score @s gm4_ce_kill matches 1.. at @s as @e[type=!player,type=!armor_stand,team=!gm4_ce_team_check,distance=..8,tag=!smithed.strict] at @s run function gm4_combat_evolved:armor/modifiers/type/fear
 # when below 50% hp
 execute if score $modifier gm4_ce_data matches 40 run function gm4_combat_evolved:armor/modifiers/type/lowhp
 execute if score $modifier gm4_ce_data matches 41 if data storage gm4_combat_evolved:temp tag.Enchantments[{id:"minecraft:thorns"}] run function gm4_combat_evolved:armor/modifiers/type/thorns/check

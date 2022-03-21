@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:4,Unbreakable:1b,Damage:0,RepairCost:1000,gm4_combat_evolved:challenge}"
+              "tag": "{gm4_combat_evolved:challenge}"
             }
           ]
         }

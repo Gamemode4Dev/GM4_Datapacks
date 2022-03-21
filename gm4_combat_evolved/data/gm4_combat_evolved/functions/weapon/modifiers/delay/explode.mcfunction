@@ -15,9 +15,9 @@ tag @s remove gm4_cd_delay_lvl_2
 tag @s remove gm4_cd_delay_lvl_3
 
 # damage entities in the blast zone
-execute if score $level gm4_ce_data matches 1 as @e[distance=..0.8,team=!gm4_invalid,type=!player] run function gm4_combat_evolved:weapon/modifiers/delay/damaged
-execute if score $level gm4_ce_data matches 2 as @e[distance=..1.6,team=!gm4_invalid,type=!player] run function gm4_combat_evolved:weapon/modifiers/delay/damaged
-execute if score $level gm4_ce_data matches 3 as @e[distance=..2.4,team=!gm4_invalid,type=!player] run function gm4_combat_evolved:weapon/modifiers/delay/damaged
+execute if score $level gm4_ce_data matches 1 as @e[distance=..0.8,team=!gm4_invalid,type=!player,tag=!smithed.strict] run function gm4_combat_evolved:weapon/modifiers/delay/damaged
+execute if score $level gm4_ce_data matches 2 as @e[distance=..1.6,team=!gm4_invalid,type=!player,tag=!smithed.strict] run function gm4_combat_evolved:weapon/modifiers/delay/damaged
+execute if score $level gm4_ce_data matches 3 as @e[distance=..2.4,team=!gm4_invalid,type=!player,tag=!smithed.strict] run function gm4_combat_evolved:weapon/modifiers/delay/damaged
 
 # particles and sound
 execute anchored eyes run particle minecraft:sweep_attack ^ ^ ^ 0.3 0.3 0.3 0.1 3
