@@ -1,0 +1,3 @@
+[submodule "lib_forceload"]
+	path = lib_forceload
+	url = https://github.com/Gamemode4Dev/lib_forceload.git
