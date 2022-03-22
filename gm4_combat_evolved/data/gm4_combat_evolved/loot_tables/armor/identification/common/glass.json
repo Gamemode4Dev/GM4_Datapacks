@@ -63,45 +63,6 @@
           ]
         },
         {
-          "function": "minecraft:set_lore",
-          "lore": [
-            {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Equipped:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_evolved.lore.equip"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "Shaped Glass",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_evolved.lore.glass"
-                  }
-                ]
-              }
-            ]
-          ]
-        },
-        {
           "function": "minecraft:set_name",
           "entity": "this",
           "name": [
@@ -109,7 +70,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Glass ",
+                  "text": "Transmutating ",
                   "italic": false
                 },
                 {

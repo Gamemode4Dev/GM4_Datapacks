@@ -51,7 +51,7 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": "Spawn Trader",
+                    "text": "Clientele",
                     "color": "blue",
                     "italic": false
                   },
@@ -71,7 +71,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Traders ",
+                  "text": "Merchants ",
                   "italic": false,
                   "color": "yellow"
                 },

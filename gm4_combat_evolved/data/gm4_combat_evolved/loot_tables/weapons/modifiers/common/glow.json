@@ -87,7 +87,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Spectral Strikes:",
+                  "text": "Phantom Strikes:",
                   "color": "gray",
                   "italic": false
                 },
@@ -132,7 +132,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "First Strike ",
+                  "text": "Haunt ",
                   "color": "blue",
                   "italic": false
                 },
@@ -165,7 +165,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "First Strike ",
+                  "text": "Haunt ",
                   "color": "blue",
                   "italic": false
                 },
@@ -204,7 +204,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "First Strike ",
+                  "text": "Haunt ",
                   "color": "blue",
                   "italic": false
                 },
@@ -503,7 +503,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Phantom ",
+                  "text": "Spectral ",
                   "italic": false
                 },
                 {

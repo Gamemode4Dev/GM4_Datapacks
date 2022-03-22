@@ -51,7 +51,7 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": "Guard Nearby Players",
+                    "text": "Bulwark",
                     "color": "blue",
                     "italic": false
                   },
@@ -71,7 +71,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Guarding ",
+                  "text": "Custodians ",
                   "italic": false,
                   "color": "light_purple"
                 },

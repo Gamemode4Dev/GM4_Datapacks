@@ -91,7 +91,7 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": "Quick Sneak",
+                    "text": "Shadow Sneak",
                     "color": "blue",
                     "italic": false
                   },
@@ -111,7 +111,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Shadowy ",
+                  "text": "Skulking ",
                   "italic": false,
                   "color": "yellow"
                 },

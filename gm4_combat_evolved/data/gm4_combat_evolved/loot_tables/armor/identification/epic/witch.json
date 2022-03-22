@@ -51,7 +51,7 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": "Release Potion",
+                    "text": "Discharge",
                     "color": "blue",
                     "italic": false
                   },
@@ -71,7 +71,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Discharging ",
+                  "text": "Expelling ",
                   "italic": false,
                   "color": "light_purple"
                 },
