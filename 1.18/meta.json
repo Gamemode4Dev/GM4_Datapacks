@@ -1,5 +1,5 @@
 {
-  "last_commit": "15660a51bb2c5a66db619a0b047f45ff0024d0f5",
+  "last_commit": "de52737af0f81d29c9bfb04c18355fda7e43342a",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -552,7 +552,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_enchantment_extractors",
@@ -730,7 +730,7 @@
       },
       "hidden": true,
       "important_note": "Experimental Module! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.",
-      "patch": 18007
+      "patch": 18008
     },
     {
       "id": "gm4_heart_canisters",
@@ -872,7 +872,7 @@
       },
       "hidden": false,
       "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
-      "patch": 18007
+      "patch": 18008
     },
     {
       "id": "gm4_liquid_minecarts",
@@ -1165,7 +1165,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_note_block_interface",
@@ -2120,7 +2120,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18011
+      "patch": 18012
     },
     {
       "id": "gm4_zauber_liquids",
