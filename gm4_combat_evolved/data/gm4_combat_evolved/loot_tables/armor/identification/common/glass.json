@@ -22,7 +22,7 @@
                   "attribute": "minecraft:generic.max_health",
                   "name": "gm4_ce_perm",
                   "amount": -0.5,
-                  "operation": "multiply_total",
+                  "operation": "multiply_base",
                   "slot": "chest"
                 }
               ]

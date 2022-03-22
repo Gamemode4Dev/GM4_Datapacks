@@ -15,14 +15,14 @@
                   "attribute": "minecraft:generic.attack_damage",
                   "name": "gm4_ce_perm",
                   "amount": -0.5,
-                  "operation": "multiply_total",
+                  "operation": "multiply_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
                   "name": "gm4_ce_perm",
                   "amount": 1,
-                  "operation": "multiply_total",
+                  "operation": "multiply_base",
                   "slot": "chest"
                 }
               ]
