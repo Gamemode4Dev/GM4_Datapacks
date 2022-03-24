@@ -9,27 +9,8 @@
           "name": "gm4_combat_evolved:armor/identification/base",
           "functions": [
             {
-              "function": "minecraft:set_attributes",
-              "modifiers": [
-                {
-                  "attribute": "minecraft:generic.attack_damage",
-                  "name": "gm4_ce_perm",
-                  "amount": 1,
-                  "operation": "multiply_base",
-                  "slot": "chest"
-                },
-                {
-                  "attribute": "minecraft:generic.max_health",
-                  "name": "gm4_ce_perm",
-                  "amount": -0.5,
-                  "operation": "multiply_total",
-                  "slot": "chest"
-                }
-              ]
-            },
-            {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_evolved:glass}"
+              "tag": "{gm4_combat_evolved:{modifier:63}}"
             },
             {
               "function": "minecraft:copy_nbt",
@@ -39,13 +20,8 @@
               },
               "ops": [
                 {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm2\"}].Slot",
+                  "source": "newarmor",
+                  "target": "AttributeModifiers[{Name:\"generic.armor\"}].Amount",
                   "op": "replace"
                 }
               ]
@@ -69,12 +45,12 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "When Equipped:",
+                  "text": "When Night-Time:",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.combat_evolved.lore.equip"
+                  "translate": "item.gm4.combat_evolved.lore.night"
                 }
               ]
             }
@@ -86,15 +62,20 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "text": "Shaped Glass",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_evolved.lore.glass"
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      {
+                        "text": "Shadow Veil",
+                        "color": "blue",
+                        "italic": false
+                      },
+                      {
+                        "translate": "item.gm4.combat_evolved.lore.shadow"
+                      }
+                    ]
                   }
                 ]
               }
@@ -109,18 +90,20 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Glass ",
-                  "italic": false
+                  "text": "Umbral ",
+                  "italic": false,
+                  "color": "yellow"
                 },
                 {
-                  "translate": "item.gm4.combat_evolved.name.glass"
+                  "translate": "item.gm4.combat_evolved.name.shadow"
                 }
               ]
             },
             {
               "nbt": "tag.gm4_combat_evolved.name",
               "storage": "gm4_combat_evolved:temp",
-              "interpret": true
+              "interpret": true,
+              "color": "yellow"
             }
           ]
         }

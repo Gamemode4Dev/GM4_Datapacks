@@ -3,7 +3,7 @@ scoreboard players set combat_evolved gm4_modules 1
 
 # scoreboards
 scoreboard objectives add gm4_ce_id dummy
-scoreboard objectives add gm4_ce_difficult dummy
+scoreboard objectives add gm4_ce_difficult dummy {"text":"GM4 Combat Evolved: Difficulty"}
 scoreboard objectives add gm4_ce_playtime minecraft.custom:minecraft.play_time
 scoreboard objectives add gm4_ce_alivetime minecraft.custom:minecraft.time_since_death
 scoreboard objectives add gm4_ce_data dummy
@@ -24,6 +24,7 @@ scoreboard objectives add gm4_ce_absorp dummy
 scoreboard objectives add gm4_ce_healstore dummy
 scoreboard objectives add gm4_ce_damaged minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_ce_absorped minecraft.custom:minecraft.damage_absorbed
+scoreboard objectives add gm4_ce_hunger food
 
 # constants
 scoreboard players set #1 gm4_ce_data 1

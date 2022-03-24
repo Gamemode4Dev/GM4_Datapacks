@@ -13,6 +13,10 @@
           },
           {
             "type": "minecraft:loot_table",
+            "name": "gm4_combat_evolved:armor/unidentified/common/canine"
+          },
+          {
+            "type": "minecraft:loot_table",
             "name": "gm4_combat_evolved:armor/unidentified/common/combo"
           },
           {
@@ -25,7 +29,7 @@
           },
           {
             "type": "minecraft:loot_table",
-            "name": "gm4_combat_evolved:armor/unidentified/common/glass"
+            "name": "gm4_combat_evolved:armor/unidentified/common/gloom"
           },
           {
             "type": "minecraft:loot_table",
@@ -74,10 +78,6 @@
           {
             "type": "minecraft:loot_table",
             "name": "gm4_combat_evolved:armor/unidentified/common/stall"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "name": "gm4_combat_evolved:armor/unidentified/common/swift"
           },
           {
             "type": "minecraft:loot_table",

@@ -28,12 +28,14 @@ execute if score $modifier gm4_ce_data matches 52 run function gm4_combat_evolve
 # when it is night-time
 execute if score $modifier gm4_ce_data matches 60 run function gm4_combat_evolved:armor/modifiers/type/night
 execute if score $modifier gm4_ce_data matches 61 run function gm4_combat_evolved:armor/modifiers/type/lunar/check
-execute if score $modifier gm4_ce_data matches 62 at @s if predicate gm4_combat_evolved:technical/night_time run function gm4_combat_evolved:armor/modifiers/type/beacon/check
-execute if score $modifier gm4_ce_data matches 63 if predicate gm4_combat_evolved:technical/night_time run function gm4_combat_evolved:armor/modifiers/type/canine/check
+execute if score $modifier gm4_ce_data matches 62 run function gm4_combat_evolved:armor/modifiers/type/gloom
+execute if score $modifier gm4_ce_data matches 63 if predicate gm4_combat_evolved:technical/night_time run function gm4_combat_evolved:armor/modifiers/type/shadow
 # when equipped
-execute if score $modifier gm4_ce_data matches 71 at @s run function gm4_combat_evolved:armor/modifiers/type/link
-execute if score $modifier gm4_ce_data matches 72 unless predicate gm4_combat_evolved:technical/night_time run function gm4_combat_evolved:armor/modifiers/type/trade/check
+execute if score $modifier gm4_ce_data matches 71 run function gm4_combat_evolved:armor/modifiers/type/canine/check
+execute if score $modifier gm4_ce_data matches 72 at @s run function gm4_combat_evolved:armor/modifiers/type/link
+execute if score $modifier gm4_ce_data matches 73 at @s run function gm4_combat_evolved:armor/modifiers/type/beacon/check
+execute if score $modifier gm4_ce_data matches 74 unless predicate gm4_combat_evolved:technical/night_time run function gm4_combat_evolved:armor/modifiers/type/trade/check
 # epic armor
-execute if score $modifier gm4_ce_data matches 81 unless score @s gm4_ce_t_hurt matches 1.. run function gm4_combat_evolved:armor/modifiers/type/overload
+execute if score $modifier gm4_ce_data matches 81 unless score @s gm4_ce_t_hurt matches 1.. run function gm4_combat_evolved:armor/modifiers/type/overload/activate
 execute if score $modifier gm4_ce_data matches 82 unless score @s gm4_ce_t_witch matches 1.. run function gm4_combat_evolved:armor/modifiers/type/witch/check
 execute if score $modifier gm4_ce_data matches 83 unless score @s gm4_ce_t_guard matches 1.. run function gm4_combat_evolved:armor/modifiers/type/guardian/process

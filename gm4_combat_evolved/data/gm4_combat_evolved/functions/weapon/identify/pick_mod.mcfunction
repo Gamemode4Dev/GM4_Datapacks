@@ -25,3 +25,6 @@ item modify entity @s weapon.mainhand gm4_combat_evolved:update
 
 # playsound
 execute at @s run playsound block.enchantment_table.use player @s ~ ~ ~ 0.8 1.2
+
+# advancement
+advancement grant @s only gm4:combat_evolved_identify

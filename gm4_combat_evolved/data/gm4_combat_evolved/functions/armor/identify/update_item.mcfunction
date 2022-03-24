@@ -25,3 +25,6 @@ execute if score $namelen gm4_ce_data matches ..75 run data modify entity @s Ite
 
 # playsound
 execute at @s run playsound block.enchantment_table.use player @s ~ ~ ~ 0.8 1.2
+
+# advancement
+advancement grant @s only gm4:combat_evolved_identify

@@ -9,9 +9,9 @@ function gm4_combat_evolved:armor/identify/randomize_stats
 execute store result score $mod_id gm4_ce_data run data get storage gm4_combat_evolved:temp tag.gm4_combat_evolved.mod_id
 
 # check mod
-execute if score $mod_id gm4_ce_data matches 1 run loot replace block 29999998 1 7134 container.4 loot gm4_combat_evolved:armor/identification/common/glass
+execute if score $mod_id gm4_ce_data matches 1 run loot replace block 29999998 1 7134 container.4 loot gm4_combat_evolved:armor/identification/common/canine
 execute if score $mod_id gm4_ce_data matches 2 run loot replace block 29999998 1 7134 container.4 loot gm4_combat_evolved:armor/identification/common/link
-execute if score $mod_id gm4_ce_data matches 3 run loot replace block 29999998 1 7134 container.4 loot gm4_combat_evolved:armor/identification/common/swift
+execute if score $mod_id gm4_ce_data matches 3 run loot replace block 29999998 1 7134 container.4 loot gm4_combat_evolved:armor/identification/common/beacon
 execute if score $mod_id gm4_ce_data matches 4 run loot replace block 29999998 1 7134 container.4 loot gm4_combat_evolved:armor/identification/rare/trade
 execute if score $mod_id gm4_ce_data matches 5 run loot replace block 29999998 1 7134 container.4 loot gm4_combat_evolved:armor/identification/epic/challenge
 

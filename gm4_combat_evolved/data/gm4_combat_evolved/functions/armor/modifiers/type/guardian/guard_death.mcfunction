@@ -1,6 +1,8 @@
 # run from armor/active/guardian/damage_calc
 # @s = player that died while guarding
 
+# advancement
+advancement grant @s only gm4:combat_evolved_guardian
 
 # display custom death message if death messages are on
 execute store result score $death_messages gm4_ce_data run gamerule showDeathMessages

@@ -12,17 +12,18 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_damage",
+                  "attribute": "minecraft:generic.movement_speed",
                   "name": "gm4_ce_perm",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "$damage-"
+                      "name": "$speed-"
                     },
-                    "score": "gm4_ce_data"
+                    "score": "gm4_ce_data",
+                    "scale": 0.01
                   },
-                  "operation": "addition",
+                  "operation": "multiply_base",
                   "slot": "chest"
                 }
               ]
@@ -43,7 +44,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_evolved:{stall:1}}"
+              "tag": "{gm4_combat_evolved:{modifier:62}}"
             },
             {
               "function": "minecraft:copy_nbt",
@@ -78,12 +79,12 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "When Under Attack:",
+                  "text": "When Night-Time:",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.combat_evolved.lore.unsafe"
+                  "translate": "item.gm4.combat_evolved.lore.night"
                 }
               ]
             }
@@ -95,7 +96,7 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.weakness",
+                "translate": "effect.minecraft.slowness",
                 "color": "red",
                 "italic": false
               },
@@ -109,19 +110,6 @@
                   },
                   {
                     "translate": "item.gm4.combat_evolved.lore.aura"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:03)",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_evolved.lore.duration_3"
                   }
                 ]
               }
@@ -151,7 +139,7 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "effect.minecraft.weakness",
+                    "translate": "effect.minecraft.slowness",
                     "color": "red",
                     "italic": false
                   },
@@ -172,19 +160,6 @@
                   },
                   {
                     "translate": "item.gm4.combat_evolved.lore.aura"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:03)",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_evolved.lore.duration_3"
                   }
                 ]
               }
@@ -214,7 +189,7 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "effect.minecraft.weakness",
+                    "translate": "effect.minecraft.slowness",
                     "color": "red",
                     "italic": false
                   },
@@ -235,19 +210,6 @@
                   },
                   {
                     "translate": "item.gm4.combat_evolved.lore.aura"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:03)",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_evolved.lore.duration_3"
                   }
                 ]
               }
@@ -276,11 +238,11 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Stalling ",
+                  "text": "Gloomy ",
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.combat_evolved.name.stall"
+                  "translate": "item.gm4.combat_evolved.name.gloom"
                 }
               ]
             },

@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_evolved:{modifier:62}}"
+              "tag": "{gm4_combat_evolved:{modifier:73}}"
             }
           ]
         }
@@ -31,12 +31,12 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "When Night-Time:",
+                  "text": "When Equipped:",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.combat_evolved.lore.night"
+                  "translate": "item.gm4.combat_evolved.lore.equip"
                 }
               ]
             }

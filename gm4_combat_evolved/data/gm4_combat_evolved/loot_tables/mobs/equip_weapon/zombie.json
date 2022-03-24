@@ -270,6 +270,85 @@
                         }
                       ]
                     }
+                  ],
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.5
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:alternatives",
+                  "children": [
+                    {
+                      "type": "minecraft:loot_table",
+                      "name": "gm4_combat_evolved:weapons/shovel/wood",
+                      "conditions": [
+                        {
+                          "condition": "minecraft:random_chance",
+                          "chance": 0.5
+                        },
+                        {
+                          "condition": "minecraft:value_check",
+                          "value": {
+                            "type": "minecraft:score",
+                            "target": {
+                              "type": "minecraft:fixed",
+                              "name": "$difficulty"
+                            },
+                            "score": "gm4_ce_data"
+                          },
+                          "range": {
+                            "min": 3
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:loot_table",
+                      "name": "gm4_combat_evolved:weapons/shovel/stone",
+                      "conditions": [
+                        {
+                          "condition": "minecraft:random_chance",
+                          "chance": 0.8
+                        },
+                        {
+                          "condition": "minecraft:value_check",
+                          "value": {
+                            "type": "minecraft:score",
+                            "target": {
+                              "type": "minecraft:fixed",
+                              "name": "$difficulty"
+                            },
+                            "score": "gm4_ce_data"
+                          },
+                          "range": {
+                            "min": 4
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:loot_table",
+                      "name": "gm4_combat_evolved:weapons/shovel/iron",
+                      "conditions": [
+                        {
+                          "condition": "minecraft:value_check",
+                          "value": {
+                            "type": "minecraft:score",
+                            "target": {
+                              "type": "minecraft:fixed",
+                              "name": "$difficulty"
+                            },
+                            "score": "gm4_ce_data"
+                          },
+                          "range": {
+                            "min": 5
+                          }
+                        }
+                      ]
+                    }
                   ]
                 }
               ],

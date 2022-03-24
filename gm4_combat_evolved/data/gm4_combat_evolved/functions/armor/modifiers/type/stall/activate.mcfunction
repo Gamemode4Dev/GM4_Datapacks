@@ -29,9 +29,9 @@ scoreboard players operation $level gm4_ce_data > $level_check gm4_ce_data
 scoreboard players reset $level_check gm4_ce_data
 
 # grant effect
-execute if score $level gm4_ce_data matches 1 run effect give @e[distance=..3,tag=!smithed.strict] weakness 3 1
-execute if score $level gm4_ce_data matches 2 run effect give @e[distance=..3,tag=!smithed.strict] weakness 3 2
-execute if score $level gm4_ce_data matches 3 run effect give @e[distance=..3,tag=!smithed.strict] weakness 3 3
+execute if score $level gm4_ce_data matches 1 run effect give @e[distance=..3,tag=!smithed.strict] weakness 3 0
+execute if score $level gm4_ce_data matches 2 run effect give @e[distance=..3,tag=!smithed.strict] weakness 3 1
+execute if score $level gm4_ce_data matches 3 run effect give @e[distance=..3,tag=!smithed.strict] weakness 3 2
 
 # stall particles
 summon marker ~ ~0.6 ~ {Tags:["gm4_ce_stall_aura"]}

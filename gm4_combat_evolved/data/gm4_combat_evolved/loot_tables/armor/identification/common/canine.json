@@ -43,7 +43,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_evolved:{modifier:63}}"
+              "tag": "{gm4_combat_evolved:{modifier:71}}"
             }
           ]
         }
@@ -64,12 +64,12 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "When Night-Time:",
+                  "text": "When Equipped:",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.combat_evolved.lore.night"
+                  "translate": "item.gm4.combat_evolved.lore.equip"
                 }
               ]
             }
@@ -118,8 +118,7 @@
               "with": [
                 {
                   "text": "Canine ",
-                  "italic": false,
-                  "color": "yellow"
+                  "italic": false
                 },
                 {
                   "translate": "item.gm4.combat_evolved.name.canine"
@@ -129,8 +128,7 @@
             {
               "nbt": "tag.gm4_combat_evolved.name",
               "storage": "gm4_combat_evolved:temp",
-              "interpret": true,
-              "color": "yellow"
+              "interpret": true
             }
           ]
         }

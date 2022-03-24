@@ -65,7 +65,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_evolved:{modifier:71}}"
+              "tag": "{gm4_combat_evolved:{modifier:72}}"
             },
             {
               "function": "minecraft:copy_nbt",
@@ -144,7 +144,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.combat_evolved.lore.link"
+                    "translate": "item.gm4.combat_evolved.lore.aura"
                   }
                 ]
               }
@@ -197,7 +197,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.combat_evolved.lore.link"
+                    "translate": "item.gm4.combat_evolved.lore.aura"
                   }
                 ]
               }
