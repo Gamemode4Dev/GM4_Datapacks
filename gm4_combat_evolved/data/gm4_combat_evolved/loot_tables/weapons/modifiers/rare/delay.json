@@ -79,7 +79,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Delayed Strikes:",
+                  "text": "Reverberating Strikes:",
                   "color": "gray",
                   "italic": false
                 },
@@ -99,7 +99,7 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": "Damage Echo",
+                    "text": "Echo",
                     "color": "blue",
                     "italic": false
                   },
@@ -137,7 +137,7 @@
                     "translate": "%1$s%3427655$s",
                     "with": [
                       {
-                        "text": "Damage Echo",
+                        "text": "Echo",
                         "color": "blue",
                         "italic": false
                       },
@@ -184,7 +184,7 @@
                     "translate": "%1$s%3427655$s",
                     "with": [
                       {
-                        "text": "Damage Echo",
+                        "text": "Echo",
                         "color": "blue",
                         "italic": false
                       },
@@ -407,7 +407,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Echoing ",
+                  "text": "Resonating ",
                   "italic": false,
                   "color": "yellow"
                 },

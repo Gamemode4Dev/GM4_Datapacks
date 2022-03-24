@@ -87,7 +87,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Wild Magic Strikes:",
+                  "text": "Discordant Strikes:",
                   "color": "gray",
                   "italic": false
                 },
@@ -107,7 +107,7 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": "Enchant Randomly",
+                    "text": "Wild Magic",
                     "color": "blue",
                     "italic": false
                   },

@@ -25,7 +25,7 @@ execute if score $randomZ gm4_ce_data matches 2.. run scoreboard players remove 
 execute at @s if score $randomZ gm4_ce_data matches 1.. run tp @s ~ ~ ~1
 execute if score $randomZ gm4_ce_data matches 1.. run scoreboard players remove $randomZ gm4_ce_data 1
 
-execute store result entity @s Pos.[1] double 1 run scoreboard players get $y_pos gm4_ce_data
+execute store result entity @s Pos[1] double 1 run scoreboard players get $y_pos gm4_ce_data
 execute at @s run tp @s ~ ~8 ~
 scoreboard players set $set_y gm4_ce_data 0
 execute at @s run function gm4_combat_evolved:armor/modifiers/type/vorpal/set_ypos

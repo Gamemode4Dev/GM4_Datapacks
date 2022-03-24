@@ -87,7 +87,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Crippling Strikes:",
+                  "text": "Debilitating Strikes:",
                   "color": "gray",
                   "italic": false
                 },
@@ -653,7 +653,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Toxic ",
+                  "text": "Sapping ",
                   "italic": false
                 },
                 {
