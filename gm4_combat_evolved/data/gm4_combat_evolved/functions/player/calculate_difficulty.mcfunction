@@ -3,18 +3,18 @@
 
 # difficulty calculations
 # get amount of weeks player has been online (starting at 1, max 10)
-scoreboard players operation #weeks_online gm4_ce_difficult = @s gm4_ce_playtime
-scoreboard players operation #weeks_online gm4_ce_difficult /= #168000 gm4_ce_data
-scoreboard players add #weeks_online gm4_ce_difficult 1
-scoreboard players operation #weeks_online gm4_ce_difficult < #10 gm4_ce_data
+scoreboard players operation #days_total gm4_ce_difficult = @s gm4_ce_playtime
+scoreboard players operation #days_total gm4_ce_difficult /= #24000 gm4_ce_data
+scoreboard players add #days_total gm4_ce_difficult 1
+scoreboard players operation #days_total gm4_ce_difficult < #10 gm4_ce_data
 # get amount of days since last player death (starting at 1, max 10)
 scoreboard players operation #days_alive gm4_ce_difficult = @s gm4_ce_alivetime
 scoreboard players operation #days_alive gm4_ce_difficult /= #24000 gm4_ce_data
 scoreboard players add #days_alive gm4_ce_difficult 1
 scoreboard players operation #days_alive gm4_ce_difficult < #10 gm4_ce_data
-# set player difficulty to weeks*days
+# set player difficulty
 scoreboard players operation @s gm4_ce_difficult = #days_alive gm4_ce_difficult
-scoreboard players operation @s gm4_ce_difficult *= #weeks_online gm4_ce_difficult
+scoreboard players operation @s gm4_ce_difficult *= #days_total gm4_ce_difficult
 # get world difficulty
 execute store result score $worlddiff gm4_ce_data run difficulty
 # modify player difficulty (-0 for hard, -2 for normal, -4 for easy)

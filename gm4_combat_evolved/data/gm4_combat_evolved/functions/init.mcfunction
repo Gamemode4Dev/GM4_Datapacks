@@ -41,7 +41,6 @@ scoreboard players set #35 gm4_ce_data 35
 scoreboard players set #40 gm4_ce_data 40
 scoreboard players set #64 gm4_ce_data 64
 scoreboard players set #24000 gm4_ce_data 24000
-scoreboard players set #168000 gm4_ce_data 168000
 
 schedule function gm4_combat_evolved:tick 1t
 schedule function gm4_combat_evolved:main 1t

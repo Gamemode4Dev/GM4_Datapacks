@@ -28,7 +28,7 @@ execute if score $modifier gm4_ce_data matches 52 run function gm4_combat_evolve
 # when it is night-time
 execute if score $modifier gm4_ce_data matches 60 run function gm4_combat_evolved:armor/modifiers/type/night
 execute if score $modifier gm4_ce_data matches 61 run function gm4_combat_evolved:armor/modifiers/type/lunar/check
-execute if score $modifier gm4_ce_data matches 62 run function gm4_combat_evolved:armor/modifiers/type/gloom
+execute if score $modifier gm4_ce_data matches 62 if predicate gm4_combat_evolved:technical/night_time at @s run function gm4_combat_evolved:armor/modifiers/type/gloom
 execute if score $modifier gm4_ce_data matches 63 if predicate gm4_combat_evolved:technical/night_time run function gm4_combat_evolved:armor/modifiers/type/shadow
 # when equipped
 execute if score $modifier gm4_ce_data matches 71 run function gm4_combat_evolved:armor/modifiers/type/canine/check
