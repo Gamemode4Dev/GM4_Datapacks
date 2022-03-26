@@ -22,7 +22,8 @@
           }
         ]
       },
-      "frame": "challenge"
+      "frame": "challenge",
+      "hidden": true
     },
     "parent": "gm4:combat_evolved_survive",
     "criteria": {

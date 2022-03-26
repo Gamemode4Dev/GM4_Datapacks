@@ -1,4 +1,4 @@
-# run from armor/active/canine/wolf_fed_check
+# run from armor/active/canine/wolf_interact_check
 # @s = wolf that was fed
 
 effect give @s strength 60 0

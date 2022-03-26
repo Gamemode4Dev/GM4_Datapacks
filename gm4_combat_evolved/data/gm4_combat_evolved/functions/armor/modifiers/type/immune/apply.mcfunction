@@ -5,12 +5,15 @@
 execute store result score $level gm4_ce_data run data get storage gm4_combat_evolved:temp tag.gm4_combat_evolved.level
 execute store result score $level2 gm4_ce_data run data get storage gm4_combat_evolved:temp tag.gm4_combat_evolved.level2
 
-# give effects
-execute if score $level gm4_ce_data matches 1 run effect clear @s poison
-execute if score $level gm4_ce_data matches 2 run effect clear @s wither
-execute if score $level gm4_ce_data matches 3 run effect clear @s mining_fatigue
+# clear effects
+execute if score $level gm4_ce_data matches 1 store success score $immune_clear gm4_ce_data run effect clear @s poison
+execute if score $level gm4_ce_data matches 2 store success score $immune_clear gm4_ce_data run effect clear @s wither
+execute if score $level gm4_ce_data matches 3 store success score $immune_clear gm4_ce_data run effect clear @s mining_fatigue
 
-execute if score $level2 gm4_ce_data matches 1 run effect clear @s hunger
-execute if score $level2 gm4_ce_data matches 2 run effect clear @s blindness
-execute if score $level2 gm4_ce_data matches 3 run effect clear @s nausea
-execute if score $level2 gm4_ce_data matches 4 run effect clear @s weakness
+execute if score $level2 gm4_ce_data matches 1 store success score $immune_clear_2 gm4_ce_data run effect clear @s hunger
+execute if score $level2 gm4_ce_data matches 2 store success score $immune_clear_2 gm4_ce_data run effect clear @s blindness
+execute if score $level2 gm4_ce_data matches 3 store success score $immune_clear_2 gm4_ce_data run effect clear @s nausea
+execute if score $level2 gm4_ce_data matches 4 store success score $immune_clear_2 gm4_ce_data run effect clear @s weakness
+
+# sound
+execute unless score $immune_clear gm4_ce_data matches 0 unless score $immune_clear_2 gm4_ce_data matches 0 at @s run playsound minecraft:entity.generic.drink player @s ~ ~ ~ 0.6 1.6

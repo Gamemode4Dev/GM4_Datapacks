@@ -10,4 +10,4 @@ execute if score $modifier gm4_ce_data matches 105 run function gm4_combat_evolv
 execute if score $modifier gm4_ce_data matches 106 if data storage gm4_combat_evolved:temp tag.Enchantments run function gm4_combat_evolved:weapon/modifiers/chaos
 execute if score $modifier gm4_ce_data matches 107 run function gm4_combat_evolved:weapon/modifiers/eat
 execute if score $modifier gm4_ce_data matches 108 run function gm4_combat_evolved:weapon/modifiers/heal
-execute if score $modifier gm4_ce_data matches 109 run function gm4_combat_evolved:weapon/modifiers/wither
+execute if score $modifier gm4_ce_data matches 109 run function gm4_combat_evolved:weapon/modifiers/wither/activate

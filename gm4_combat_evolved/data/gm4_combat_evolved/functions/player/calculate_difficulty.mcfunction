@@ -37,4 +37,4 @@ execute if predicate gm4_combat_evolved:modified_armor/challenge/feet run scoreb
 
 # check advancements
 execute if score #days_alive gm4_ce_difficult matches 10.. run advancement grant @s only gm4:combat_evolved_survive
-execute if score @s gm4_ce_difficult matches 11.. run advancement grant @s only gm4:combat_evolved_challenger
+execute if predicate gm4_combat_evolved:modified_armor/challenge/any run advancement grant @s only gm4:combat_evolved_challenger

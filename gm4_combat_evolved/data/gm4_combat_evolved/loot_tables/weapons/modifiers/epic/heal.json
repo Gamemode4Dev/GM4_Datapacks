@@ -234,12 +234,12 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": "1",
+                    "text": "0.5",
                     "color": "dark_green",
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.combat_evolved.lore.1"
+                    "translate": "item.gm4.combat_evolved.lore.0.5"
                   }
                 ]
               },

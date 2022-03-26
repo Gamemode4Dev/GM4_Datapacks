@@ -16,7 +16,7 @@
       "description": {
         "translate": "%1$s%3427655$s",
         "with": [
-          "Identify a full set of armor and a weapon to go with it",
+          "Wear a full set of identified armor and a weapon to go with it",
           {
             "translate": "advancement.gm4.combat_evolved.full_set.description"
           }

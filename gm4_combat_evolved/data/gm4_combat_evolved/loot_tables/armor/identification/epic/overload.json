@@ -20,7 +20,8 @@
                       "type": "minecraft:fixed",
                       "name": "$damage"
                     },
-                    "score": "gm4_ce_data"
+                    "score": "gm4_ce_data",
+                    "scale": 2
                   },
                   "operation": "addition",
                   "slot": "chest"
@@ -35,7 +36,7 @@
                       "name": "$atkspeed"
                     },
                     "score": "gm4_ce_data",
-                    "scale": 0.01
+                    "scale": 0.02
                   },
                   "operation": "multiply_base",
                   "slot": "chest"
@@ -50,7 +51,7 @@
                       "name": "$speed"
                     },
                     "score": "gm4_ce_data",
-                    "scale": 0.01
+                    "scale": 0.02
                   },
                   "operation": "multiply_base",
                   "slot": "chest"
