@@ -7,7 +7,7 @@
 scoreboard players set $ladder_placed gm4_rol_data 1
 
 # remove 1 ladder from players hand
-item modify entity @s weapon.mainhand gm4_rope_ladders:minus_one
+execute if entity @s[gamemode=!creative] run item modify entity @s weapon.mainhand gm4_rope_ladders:minus_one
 
 # grant advancement
 advancement grant @s only gm4:rope_ladders
