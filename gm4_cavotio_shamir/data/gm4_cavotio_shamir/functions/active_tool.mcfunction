@@ -11,5 +11,3 @@ execute if score @s gm4_use_pick_gol matches 1.. positioned ^ ^ ^3 as @e[type=it
 execute if score @s gm4_use_pick_iro matches 1.. positioned ^ ^ ^3 as @e[type=item,distance=..3.5,nbt={Age:0s}] run kill @s
 execute if score @s gm4_use_pick_sto matches 1.. positioned ^ ^ ^3 as @e[type=item,distance=..3.5,nbt={Age:0s}] run kill @s
 execute if score @s gm4_use_pick_woo matches 1.. positioned ^ ^ ^3 as @e[type=item,distance=..3.5,nbt={Age:0s}] run kill @s
-
-#effect clear @s haste
