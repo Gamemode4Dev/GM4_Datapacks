@@ -10,6 +10,7 @@
               "predicate": {
                 "equipment": {
                   "mainhand": {
+                    "tag": "gm4_combat_evolved:weapon",
                     "nbt": "{gm4_combat_evolved:{strike:1}}"
                   }
                 }

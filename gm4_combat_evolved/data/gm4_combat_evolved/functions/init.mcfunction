@@ -27,6 +27,7 @@ scoreboard objectives add gm4_ce_absorped minecraft.custom:minecraft.damage_abso
 scoreboard objectives add gm4_ce_hunger food
 
 # constants
+scoreboard players set #0 gm4_ce_data 0
 scoreboard players set #1 gm4_ce_data 1
 scoreboard players set #2 gm4_ce_data 2
 scoreboard players set #4 gm4_ce_data 4
@@ -34,6 +35,8 @@ scoreboard players set #5 gm4_ce_data 5
 scoreboard players set #7 gm4_ce_data 7
 scoreboard players set #8 gm4_ce_data 8
 scoreboard players set #10 gm4_ce_data 10
+scoreboard players set #13 gm4_ce_data 13
+scoreboard players set #14 gm4_ce_data 14
 scoreboard players set #17 gm4_ce_data 17
 scoreboard players set #21 gm4_ce_data 21
 scoreboard players set #25 gm4_ce_data 25

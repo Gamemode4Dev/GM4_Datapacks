@@ -14,7 +14,7 @@ data remove storage gm4_combat_evolved:temp tag.gm4_combat_evolved
 
 # use lib_lore to remove lore lines
 data modify storage gm4_lore:temp Source set from storage gm4_combat_evolved:temp tag.display.Lore
-data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"gray","text":"When Killing:"},{"translate":"item.gm4_combat_evolved.armor.lore.killing"}]}'
+data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"gray","text":"When Killing:"},{"translate":"item.gm4.combat_evolved.lore.killing"}]}'
 scoreboard players set $start gm4_lore -1
 scoreboard players set $extra gm4_lore 2
 function #gm4_lore:remove

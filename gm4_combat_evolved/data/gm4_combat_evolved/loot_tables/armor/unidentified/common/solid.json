@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_evolved:{unidentified:5,mod_id:3}}"
+              "tag": "{gm4_combat_evolved:{unidentified:5,mod_id:4}}"
             }
           ]
         }

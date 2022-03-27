@@ -5,17 +5,17 @@
         "entries": [
           {
             "type": "minecraft:loot_table",
-            "weight": 945,
+            "weight": 90,
             "name": "gm4_combat_evolved:weapons/modifiers/common"
           },
           {
             "type": "minecraft:loot_table",
-            "weight": 50,
+            "weight": 8,
             "name": "gm4_combat_evolved:weapons/modifiers/rare"
           },
           {
             "type": "minecraft:loot_table",
-            "weight": 5,
+            "weight": 2,
             "name": "gm4_combat_evolved:weapons/modifiers/epic"
           }
         ]

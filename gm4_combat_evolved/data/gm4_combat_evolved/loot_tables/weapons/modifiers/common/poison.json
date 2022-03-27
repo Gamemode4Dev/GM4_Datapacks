@@ -112,12 +112,12 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": " (0:04)",
+                    "text": " (0:08)",
                     "color": "red",
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.combat_evolved.lore.duration_4"
+                    "translate": "item.gm4.combat_evolved.lore.duration_8"
                   }
                 ]
               }
@@ -164,12 +164,12 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": " (0:04)",
+                    "text": " (0:08)",
                     "color": "red",
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.combat_evolved.lore.duration_4"
+                    "translate": "item.gm4.combat_evolved.lore.duration_8"
                   }
                 ]
               }
@@ -196,19 +196,7 @@
           "lore": [
             [
               {
-                "translate": "potion.withAmplifier",
-                "with": [
-                  {
-                    "translate": "effect.minecraft.poison",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "potion.potency.2",
-                    "color": "red",
-                    "italic": false
-                  }
-                ],
+                "translate": "effect.minecraft.poison",
                 "color": "red",
                 "italic": false
               },
@@ -216,12 +204,12 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": " (0:04)",
+                    "text": " (0:30)",
                     "color": "red",
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.combat_evolved.lore.duration_4"
+                    "translate": "item.gm4.combat_evolved.lore.duration_30"
                   }
                 ]
               }
