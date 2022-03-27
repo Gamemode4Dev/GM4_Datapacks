@@ -1,0 +1,40 @@
+{
+  "pack": {
+    "pack_format": 8,
+    "description": [
+      "Cavotio Shamir",
+      "\n",
+      {
+        "text": "Gamemode 4 for 1.17",
+        "color": "#4AA0C7"
+      }
+    ]
+  },
+  "module_name": "Cavotio Shamir",
+  "module_id": "cavotio_shamir",
+  "hidden": false,
+  "site_description": "Adds the shamir 'Cavotio' to metallurgy. Gain Haste with low durability tools.",
+  "site_categories": [
+    "Metallurgy"
+  ],
+  "video_link": "",
+  "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Cavotio_Shamir",
+  "required_modules": [
+    "metallurgy"
+  ],
+  "recommended_modules": [],
+  "credits": {
+    "Creator": [
+      [
+        "Kattacka",
+        ""
+      ]
+    ],
+    "Icon Design": [
+      [
+        "BluePsychoRanger",
+        "https://twitter.com/BluPsychoRanger"
+      ]
+    ]
+  }
+}

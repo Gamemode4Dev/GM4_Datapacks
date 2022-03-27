@@ -1,0 +1,14 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.attack_speed",
+        "name": "gm4_cavotio",
+        "amount": -0.9,
+        "operation": "multiply_base",
+        "slot": "mainhand"
+      }
+    ]
+  }
+]
