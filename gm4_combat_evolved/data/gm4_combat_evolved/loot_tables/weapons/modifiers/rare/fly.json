@@ -115,12 +115,12 @@
                     "translate": "%1$s%3427655$s",
                     "with": [
                       {
-                        "text": "X",
+                        "text": "VI",
                         "color": "blue",
                         "italic": false
                       },
                       {
-                        "translate": "item.gm4.combat_evolved.lore.pot_level_10"
+                        "translate": "item.gm4.combat_evolved.lore.pot_level_6"
                       }
                     ]
                   }
@@ -175,12 +175,12 @@
                     "translate": "%1$s%3427655$s",
                     "with": [
                       {
-                        "text": "XV",
+                        "text": "VIII",
                         "color": "blue",
                         "italic": false
                       },
                       {
-                        "translate": "item.gm4.combat_evolved.lore.pot_level_15"
+                        "translate": "item.gm4.combat_evolved.lore.pot_level_8"
                       }
                     ]
                   }
@@ -235,12 +235,12 @@
                     "translate": "%1$s%3427655$s",
                     "with": [
                       {
-                        "text": "XX",
+                        "text": "X",
                         "color": "blue",
                         "italic": false
                       },
                       {
-                        "translate": "item.gm4.combat_evolved.lore.pot_level_20"
+                        "translate": "item.gm4.combat_evolved.lore.pot_level_10"
                       }
                     ]
                   }

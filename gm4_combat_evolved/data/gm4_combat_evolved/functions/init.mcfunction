@@ -25,6 +25,7 @@ scoreboard objectives add gm4_ce_healstore dummy
 scoreboard objectives add gm4_ce_damaged minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_ce_absorped minecraft.custom:minecraft.damage_absorbed
 scoreboard objectives add gm4_ce_hunger food
+scoreboard objectives add gm4_ce_shielded_hit minecraft.used:minecraft.shield
 
 # constants
 scoreboard players set #0 gm4_ce_data 0

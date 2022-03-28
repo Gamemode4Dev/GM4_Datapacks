@@ -358,13 +358,11 @@
           "function": "minecraft:set_enchantments",
           "enchantments": {
             "minecraft:fire_aspect": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "$random_value"
-              },
-              "score": "gm4_ce_data",
-              "scale": 3
+              "min": 3,
+              "max": {
+                "min": 3,
+                "max": 5
+              }
             }
           }
         }

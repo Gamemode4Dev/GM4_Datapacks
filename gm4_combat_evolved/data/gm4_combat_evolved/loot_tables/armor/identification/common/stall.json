@@ -95,8 +95,8 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.weakness",
-                "color": "red",
+                "translate": "effect.minecraft.resistance",
+                "color": "blue",
                 "italic": false
               },
               {
@@ -104,7 +104,7 @@
                 "with": [
                   {
                     "text": " Aura",
-                    "color": "red",
+                    "color": "blue",
                     "italic": false
                   },
                   {
@@ -116,12 +116,12 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": " (0:03)",
+                    "text": " (0:02)",
                     "color": "red",
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.combat_evolved.lore.duration_3"
+                    "translate": "item.gm4.combat_evolved.lore.duration_2"
                   }
                 ]
               }
@@ -151,13 +151,13 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "effect.minecraft.weakness",
-                    "color": "red",
+                    "translate": "effect.minecraft.resistance",
+                    "color": "blue",
                     "italic": false
                   },
                   {
                     "translate": "potion.potency.1",
-                    "color": "red",
+                    "color": "blue",
                     "italic": false
                   }
                 ]
@@ -167,7 +167,7 @@
                 "with": [
                   {
                     "text": " Aura",
-                    "color": "red",
+                    "color": "blue",
                     "italic": false
                   },
                   {
@@ -179,12 +179,12 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": " (0:03)",
+                    "text": " (0:02)",
                     "color": "red",
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.combat_evolved.lore.duration_3"
+                    "translate": "item.gm4.combat_evolved.lore.duration_2"
                   }
                 ]
               }
@@ -214,13 +214,13 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "effect.minecraft.weakness",
-                    "color": "red",
+                    "translate": "effect.minecraft.resistance",
+                    "color": "blue",
                     "italic": false
                   },
                   {
                     "translate": "potion.potency.2",
-                    "color": "red",
+                    "color": "blue",
                     "italic": false
                   }
                 ]
@@ -230,7 +230,7 @@
                 "with": [
                   {
                     "text": " Aura",
-                    "color": "red",
+                    "color": "blue",
                     "italic": false
                   },
                   {
@@ -242,12 +242,12 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": " (0:03)",
+                    "text": " (0:02)",
                     "color": "red",
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.combat_evolved.lore.duration_3"
+                    "translate": "item.gm4.combat_evolved.lore.duration_2"
                   }
                 ]
               }
