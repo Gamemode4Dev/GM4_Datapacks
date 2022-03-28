@@ -1,4 +1,4 @@
-# run from armor/active/guardian/damage_context
+# run from player/damage/context
 # @s = player to revert max health
 # code taken from sweethearts
 

@@ -27,7 +27,8 @@
                       "type": "minecraft:fixed",
                       "name": "$damage-"
                     },
-                    "score": "gm4_ce_data"
+                    "score": "gm4_ce_data",
+                    "scale": 0.5
                   },
                   "operation": "addition",
                   "slot": "chest"

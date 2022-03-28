@@ -1,5 +1,5 @@
-# run from armor/active/guardian/damage_calc
-# @s = player that was guarding
+# run from armor/active/guardian/damage_calc and weapon/modifiers/delay/explode_player
+# @s = player that is taking damage
 # code taken from sweethearts
 
 # lower player's max health to their new health
@@ -29,7 +29,4 @@ effect give @s minecraft:instant_health 1 0 true
 
 # prepare reverting
 tag @s add gm4_ce_damaged
-schedule function gm4_combat_evolved:armor/modifiers/type/guardian/damage_context 2t
-
-# sound
-execute at @s run playsound minecraft:item.shield.block player @s ~ ~ ~ 0.4 0
+schedule function gm4_combat_evolved:player/damage/context 2t
