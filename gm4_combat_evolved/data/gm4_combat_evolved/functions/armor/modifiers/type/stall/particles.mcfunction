@@ -3,9 +3,9 @@
 # at @s
 
 scoreboard players add @s gm4_ce_data 1
-particle ambient_entity_effect ^ ^ ^-1 0.600 0.271 0.227 0 0 normal
-particle ambient_entity_effect ^0.1 ^-0.1 ^-1.5 0.600 0.271 0.227 0 0 normal
-particle ambient_entity_effect ^-0.1 ^0.1 ^-2 0.600 0.271 0.227 0 0 normal
+particle ambient_entity_effect ^ ^ ^-1 0.600 0.271 0.227 1 1 normal
+particle ambient_entity_effect ^0.1 ^-0.1 ^-1.5 0.600 0.271 0.227 1 1 normal
+particle ambient_entity_effect ^-0.1 ^0.1 ^-2 0.600 0.271 0.227 1 1 normal
 tp @s ~ ~ ~ ~15 ~
 
 kill @s[scores={gm4_ce_data=24..}]
