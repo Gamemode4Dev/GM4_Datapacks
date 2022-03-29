@@ -14,9 +14,9 @@ summon wandering_trader ~ ~ ~ {ActiveEffects:[{Id:24b,Amplifier:0b,Duration:50}]
 playsound entity.wandering_trader.reappeared neutral @a ~ ~ ~ 1 1
 kill @s
 
-# use lib_lore to darken the 'Clientele' text
+# use lib_lore to darken the 'Trade' text
 data modify storage gm4_lore:temp Source set from storage gm4_combat_evolved:temp tag.display.Lore
-data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"blue","text":"Clientele"},{"translate":"item.gm4.combat_evolved.lore.trade"}]}'
-data modify storage gm4_lore:temp Input set value ['{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"dark_gray","text":"Clientele"},{"translate":"item.gm4.combat_evolved.lore.trade"}]}']
+data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"blue","text":"Trade"},{"translate":"item.gm4.combat_evolved.lore.trade"}]}'
+data modify storage gm4_lore:temp Input set value ['{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"dark_gray","text":"Trade"},{"translate":"item.gm4.combat_evolved.lore.trade"}]}']
 function #gm4_lore:replace
 data modify storage gm4_combat_evolved:temp tag.display.Lore set from storage gm4_lore:temp Source

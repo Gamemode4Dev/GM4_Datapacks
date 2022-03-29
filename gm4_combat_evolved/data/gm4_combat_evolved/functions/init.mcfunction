@@ -18,6 +18,7 @@ scoreboard objectives add gm4_ce_t_kill dummy
 scoreboard objectives add gm4_ce_t_soothe dummy
 scoreboard objectives add gm4_ce_t_witch dummy
 scoreboard objectives add gm4_ce_t_wolf dummy
+scoreboard objectives add gm4_ce_t_sprinting dummy
 scoreboard objectives add gm4_ce_guarded minecraft.custom:minecraft.damage_resisted
 scoreboard objectives add gm4_ce_guard dummy
 scoreboard objectives add gm4_ce_absorp dummy
@@ -26,11 +27,13 @@ scoreboard objectives add gm4_ce_damaged minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_ce_absorped minecraft.custom:minecraft.damage_absorbed
 scoreboard objectives add gm4_ce_hunger food
 scoreboard objectives add gm4_ce_shielded_hit minecraft.used:minecraft.shield
+scoreboard objectives add gm4_ce_sprinting minecraft.custom:minecraft.sprint_one_cm
 
 # constants
 scoreboard players set #0 gm4_ce_data 0
 scoreboard players set #1 gm4_ce_data 1
 scoreboard players set #2 gm4_ce_data 2
+scoreboard players set #3 gm4_ce_data 3
 scoreboard players set #4 gm4_ce_data 4
 scoreboard players set #5 gm4_ce_data 5
 scoreboard players set #7 gm4_ce_data 7

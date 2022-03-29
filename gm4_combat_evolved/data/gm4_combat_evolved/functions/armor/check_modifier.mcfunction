@@ -23,8 +23,8 @@ execute if score $modifier gm4_ce_data matches 42 run function gm4_combat_evolve
 execute if score $modifier gm4_ce_data matches 43 unless score @s gm4_ce_t_soothe matches 1.. at @s run function gm4_combat_evolved:armor/modifiers/type/soothe/check
 # when above 50% hp
 execute if score $modifier gm4_ce_data matches 50 run function gm4_combat_evolved:armor/modifiers/type/highhp
-execute if score $modifier gm4_ce_data matches 51 run function gm4_combat_evolved:armor/modifiers/type/husk/check
-execute if score $modifier gm4_ce_data matches 52 run function gm4_combat_evolved:armor/modifiers/type/immune/check
+execute if score $modifier gm4_ce_data matches 51 run function gm4_combat_evolved:armor/modifiers/type/immune/check
+execute if score $modifier gm4_ce_data matches 52 run function gm4_combat_evolved:armor/modifiers/type/husk/check
 # when it is night-time
 execute if score $modifier gm4_ce_data matches 60 run function gm4_combat_evolved:armor/modifiers/type/night
 execute if score $modifier gm4_ce_data matches 61 run function gm4_combat_evolved:armor/modifiers/type/lunar/check

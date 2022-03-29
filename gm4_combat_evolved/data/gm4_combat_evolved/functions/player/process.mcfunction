@@ -11,8 +11,12 @@ execute if entity @s[tag=gm4_ce_guardian] if score @s gm4_ce_guard matches 10.. 
 execute if score @s gm4_ce_hurt matches 1.. run scoreboard players set @s gm4_ce_t_hurt 5
 execute if score @s gm4_ce_kill matches 1.. run scoreboard players set @s gm4_ce_t_kill 5
 
-# remove beacon tag
-tag @s[tag=gm4_ce_beacon_active] remove gm4_ce_beacon_active
+# remove husk sprint score if player didn't sprint
+execute if score @s gm4_ce_t_sprinting matches 1.. unless score @s gm4_ce_sprinting matches 1.. run scoreboard players reset @s gm4_ce_t_sprinting
+
+# remove tags
+tag @s remove gm4_ce_beacon_active
+execute if entity @s[tag=gm4_ce_immune_active] run function gm4_combat_evolved:armor/modifiers/type/immune/clear_immunities
 
 # process armor
 execute if predicate gm4_combat_evolved:modified_armor/wearing run function gm4_combat_evolved:armor/process_armor
@@ -34,3 +38,4 @@ execute if score @s gm4_ce_t_witch matches 1.. run scoreboard players remove @s 
 # reset scoreboards
 scoreboard players reset @s gm4_ce_hurt
 scoreboard players reset @s gm4_ce_kill
+scoreboard players reset @s gm4_ce_sprinting

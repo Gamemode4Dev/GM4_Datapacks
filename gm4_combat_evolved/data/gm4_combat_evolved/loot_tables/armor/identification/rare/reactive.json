@@ -23,6 +23,11 @@
                   "source": "armor",
                   "target": "gm4_combat_evolved.level",
                   "op": "replace"
+                },
+                {
+                  "source": "newarmor",
+                  "target": "AttributeModifiers[{Name:\"generic.armor\"}].Amount",
+                  "op": "replace"
                 }
               ]
             }

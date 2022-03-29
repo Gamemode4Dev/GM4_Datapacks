@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_evolved:{modifier:52}}"
+              "tag": "{gm4_combat_evolved:{modifier:51}}"
             },
             {
               "function": "minecraft:copy_nbt",
@@ -67,7 +67,7 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.poison",
+                "translate": "effect.minecraft.mining_fatigue",
                 "color": "blue",
                 "italic": false
               },
@@ -107,7 +107,7 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.wither",
+                "translate": "effect.minecraft.poison",
                 "color": "blue",
                 "italic": false
               },
@@ -147,7 +147,7 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.mining_fatigue",
+                "translate": "effect.minecraft.wither",
                 "color": "blue",
                 "italic": false
               },
@@ -350,7 +350,8 @@
               "with": [
                 {
                   "text": "Vigorous ",
-                  "italic": false
+                  "italic": false,
+                  "color": "yellow"
                 },
                 {
                   "translate": "item.gm4.combat_evolved.name.husk"
@@ -360,7 +361,8 @@
             {
               "nbt": "tag.gm4_combat_evolved.name",
               "storage": "gm4_combat_evolved:temp",
-              "interpret": true
+              "interpret": true,
+              "color": "yellow"
             }
           ]
         }

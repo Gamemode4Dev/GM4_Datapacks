@@ -33,7 +33,7 @@
           },
           {
             "type": "minecraft:loot_table",
-            "name": "gm4_combat_evolved:armor/unidentified/common/immune"
+            "name": "gm4_combat_evolved:armor/unidentified/common/husk"
           },
           {
             "type": "minecraft:loot_table",

@@ -5,7 +5,7 @@ execute as @e[predicate=gm4_combat_evolved:mobs/list,tag=] at @s run function gm
 
 # process tagged mobs
 execute as @e[type=creeper,tag=gm4_ce_cloaking_creeper] at @s unless entity @a[gamemode=!spectator,distance=..4] run effect give @s invisibility 1 0
-execute as @e[type=#gm4_combat_evolved:cubes,tag=gm4_ce_growing_slime] run function gm4_combat_evolved:mobs/effects/growing/check
+execute as @e[type=slime,tag=gm4_ce_growing_slime] run function gm4_combat_evolved:mobs/effects/growing/check
 
 # process canine set wolves
 execute as @e[type=wolf,tag=gm4_ce_wolf] run function gm4_combat_evolved:armor/modifiers/type/canine/wolf_process

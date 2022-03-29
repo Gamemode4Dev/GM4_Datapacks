@@ -8,7 +8,18 @@
             "condition": "minecraft:reference",
             "name": "gm4_combat_evolved:modified_armor/wearing_stall"
           }
-        ]
+        ],
+        "damage": {
+          "taken": {
+            "min": 1
+          },
+          "blocked": false,
+          "type": {
+            "bypasses_invulnerability": false,
+            "bypasses_magic": false,
+            "source_entity": {}
+          }
+        }
       }
     }
   },

@@ -17,6 +17,9 @@ data modify storage gm4_combat_evolved:temp tag merge from block 29999998 1 7134
 data remove storage gm4_combat_evolved:temp tag.gm4_combat_evolved.unidentified
 data remove storage gm4_combat_evolved:temp tag.gm4_combat_evolved.mod_id
 
+# mark as identified
+data modify storage gm4_combat_evolved:temp tag.gm4_combat_evolved append value {identified:1}
+
 # half durability damage taken
 execute store result storage gm4_combat_evolved:temp tag.Damage int 0.5 run data get storage gm4_combat_evolved:temp tag.Damage
 

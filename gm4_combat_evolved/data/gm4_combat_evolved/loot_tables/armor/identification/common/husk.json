@@ -12,20 +12,25 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_damage",
+                  "attribute": "minecraft:generic.movement_speed",
                   "name": "gm4_ce_perm",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "$damage-"
+                      "name": "$speed-"
                     },
-                    "score": "gm4_ce_data"
+                    "score": "gm4_ce_data",
+                    "scale": 0.01
                   },
-                  "operation": "addition",
+                  "operation": "multiply_base",
                   "slot": "chest"
                 }
               ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_evolved:{modifier:52}}"
             },
             {
               "function": "minecraft:copy_nbt",
@@ -40,10 +45,6 @@
                   "op": "replace"
                 }
               ]
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_evolved:{modifier:71}}"
             }
           ]
         }
@@ -64,12 +65,12 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "When Equipped:",
+                  "text": "When High on Health:",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.combat_evolved.lore.equip"
+                  "translate": "item.gm4.combat_evolved.lore.high_hp"
                 }
               ]
             }
@@ -84,25 +85,12 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   {
-                    "text": "+",
+                    "text": "Dart",
                     "color": "blue",
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.combat_evolved.lore.plus"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "1 Good Boi",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_evolved.lore.canine"
+                    "translate": "item.gm4.combat_evolved.lore.husk"
                   }
                 ]
               }
@@ -117,11 +105,11 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Canine ",
+                  "text": "Dashing ",
                   "italic": false
                 },
                 {
-                  "translate": "item.gm4.combat_evolved.name.canine"
+                  "translate": "item.gm4.combat_evolved.name.husk"
                 }
               ]
             },

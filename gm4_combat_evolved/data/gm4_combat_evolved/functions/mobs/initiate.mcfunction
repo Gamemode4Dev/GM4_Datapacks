@@ -16,7 +16,8 @@ scoreboard players set $mob_armor gm4_ce_data 0
 scoreboard players set $mob_toughness gm4_ce_data 0
 
 # initialize different mobs
-execute if entity @s[type=#gm4_combat_evolved:zombie] run function gm4_combat_evolved:mobs/zombie
+execute if entity @s[type=zombie] run function gm4_combat_evolved:mobs/zombie
+execute if entity @s[type=zombie_villager] run function gm4_combat_evolved:mobs/zombie
 execute if entity @s[type=husk] run function gm4_combat_evolved:mobs/husk
 execute if entity @s[type=drowned] run function gm4_combat_evolved:mobs/drowned
 execute if entity @s[type=skeleton] run function gm4_combat_evolved:mobs/skeleton
@@ -24,7 +25,8 @@ execute if entity @s[type=stray] run function gm4_combat_evolved:mobs/stray
 execute if entity @s[type=spider] run function gm4_combat_evolved:mobs/spider
 execute if entity @s[type=cave_spider] run function gm4_combat_evolved:mobs/cave_spider
 execute if entity @s[type=creeper] run function gm4_combat_evolved:mobs/creeper
-execute if entity @s[type=#gm4_combat_evolved:cubes] run function gm4_combat_evolved:mobs/slime
+execute if entity @s[type=slime] run function gm4_combat_evolved:mobs/slime
+execute if entity @s[type=magma_cube] run function gm4_combat_evolved:mobs/slime
 execute if entity @s[type=enderman] run function gm4_combat_evolved:mobs/enderman
 execute if entity @s[type=phantom] run function gm4_combat_evolved:mobs/phantom
 execute if entity @s[type=wither_skeleton] run function gm4_combat_evolved:mobs/wither_skeleton

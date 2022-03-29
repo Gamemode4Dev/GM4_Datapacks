@@ -7,9 +7,11 @@ scoreboard players reset @a gm4_ce_shielded_hit
 
 # beacon lights
 execute at @a[gamemode=!spectator,tag=gm4_ce_beacon_active] run function gm4_combat_evolved:armor/modifiers/type/beacon/spawn
+# immune effect clears
+execute as @a[gamemode=!spectator,tag=gm4_ce_immune_active] run function gm4_combat_evolved:armor/modifiers/type/immune/apply
 
 # slime landings
-execute as @e[type=#gm4_combat_evolved:cubes,tag=gm4_ce_poison_landing] at @s run function gm4_combat_evolved:mobs/effects/poison_landing/process
+execute as @e[type=slime,tag=gm4_ce_poison_landing] at @s run function gm4_combat_evolved:mobs/effects/poison_landing/process
 
 # spores
 execute as @e[type=item,tag=!gm4_ce_item_checked] run function gm4_combat_evolved:mobs/effects/spores/check

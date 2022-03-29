@@ -25,7 +25,7 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "$damage_double"
+                      "name": "$damage_demonic"
                     },
                     "score": "gm4_ce_data",
                     "scale": 1
@@ -147,7 +147,7 @@
               },
               {
                 "score": {
-                  "name": "$damage_double",
+                  "name": "$damage_demonic",
                   "objective": "gm4_ce_data"
                 },
                 "color": "dark_green",

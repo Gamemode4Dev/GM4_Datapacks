@@ -47,7 +47,7 @@
               },
               "ops": [
                 {
-                  "source": "speed",
+                  "source": "atkspeed",
                   "target": "gm4_combat_evolved.level",
                   "op": "replace"
                 }
@@ -125,7 +125,7 @@
                 "with": [
                   {
                     "score": {
-                      "name": "$speed",
+                      "name": "$atkspeed",
                       "objective": "gm4_ce_data"
                     },
                     "color": "blue",
