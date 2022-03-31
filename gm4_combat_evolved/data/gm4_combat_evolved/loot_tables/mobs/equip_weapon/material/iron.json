@@ -1,0 +1,58 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:alternatives",
+            "children": [
+              {
+                "type": "minecraft:loot_table",
+                "name": "gm4_combat_evolved:weapons/pickaxe/iron",
+                "conditions": [
+                  {
+                    "condition": "minecraft:reference",
+                    "name": "gm4_combat_evolved:mobs/modifiers/dark"
+                  },
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.15
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:alternatives",
+                "children": [
+                  {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_evolved:weapons/axe/iron",
+                    "conditions": [
+                      {
+                        "condition": "minecraft:random_chance",
+                        "chance": 0.10
+                      }
+                    ]
+                  },
+                  {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_evolved:weapons/shovel/iron",
+                    "conditions": [
+                      {
+                        "condition": "minecraft:random_chance",
+                        "chance": 0.60
+                      }
+                    ]
+                  },
+                  {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_evolved:weapons/sword/iron"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

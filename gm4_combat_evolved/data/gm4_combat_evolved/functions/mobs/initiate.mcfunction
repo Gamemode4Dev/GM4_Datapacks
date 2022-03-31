@@ -34,6 +34,7 @@ execute if entity @s[type=piglin] run function gm4_combat_evolved:mobs/piglin
 execute if entity @s[type=zombified_piglin] run function gm4_combat_evolved:mobs/zombified_piglin
 execute if entity @s[type=ghast] run function gm4_combat_evolved:mobs/ghast
 execute if entity @s[type=blaze] run function gm4_combat_evolved:mobs/blaze
+execute if entity @s[predicate=gm4_combat_evolved:mobs/list_other] run function gm4_combat_evolved:mobs/other
 
 # mark mob as processed
 tag @s add gm4_ce_initiated

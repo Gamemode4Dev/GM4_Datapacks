@@ -13,7 +13,7 @@ execute if score $difficulty gm4_ce_data matches 11.. run scoreboard players add
 execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s ArmorDropChances set value [0.17F,0.17F,0.17F,0.17F]
 
 # set armor
-loot replace entity @s armor.feet loot gm4_combat_evolved:mobs/equip_armor/generic
+loot replace entity @s armor.feet loot gm4_combat_evolved:mobs/equip_armor/wither_skeleton
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_combat_evolved:mobs/equip_weapon/wither_skeleton
 

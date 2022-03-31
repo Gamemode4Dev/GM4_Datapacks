@@ -63,38 +63,6 @@
                   "chance": 0.2
                 }
               ]
-            },
-            {
-              "function": "minecraft:enchant_randomly",
-              "enchantments": [
-                "minecraft:knockback"
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_combat_evolved:mobs/modifiers/mountainous"
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.4
-                }
-              ]
-            },
-            {
-              "function": "minecraft:enchant_randomly",
-              "enchantments": [
-                "minecraft:fire_aspect"
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_combat_evolved:mobs/modifiers/burned"
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
             }
           ]
         }
