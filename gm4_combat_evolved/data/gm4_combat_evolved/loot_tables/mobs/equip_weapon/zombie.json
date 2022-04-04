@@ -11,20 +11,6 @@
               "name": "minecraft:trident",
               "conditions": [
                 {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$difficulty"
-                    },
-                    "score": "gm4_ce_data"
-                  },
-                  "range": {
-                    "min": 4
-                  }
-                },
-                {
                   "condition": "minecraft:random_chance",
                   "chance": 0.4
                 },
@@ -39,22 +25,80 @@
               "children": [
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_evolved:weapons/pickaxe/wood",
+                  "name": "gm4_combat_evolved:mobs/equip_weapon/material/diamond",
                   "conditions": [
                     {
+                      "condition": "minecraft:value_check",
+                      "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                          "type": "minecraft:fixed",
+                          "name": "$difficulty"
+                        },
+                        "score": "gm4_ce_data"
+                      },
+                      "range": {
+                        "min": 9
+                      }
+                    },
+                    {
                       "condition": "minecraft:random_chance",
-                      "chance": 0.5
+                      "chance": 0.01
                     }
                   ]
                 },
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_evolved:weapons/pickaxe/stone",
+                  "name": "gm4_combat_evolved:mobs/equip_weapon/material/gold",
                   "conditions": [
                     {
-                      "condition": "minecraft:random_chance",
-                      "chance": 0.8
+                      "condition": "minecraft:value_check",
+                      "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                          "type": "minecraft:fixed",
+                          "name": "$difficulty"
+                        },
+                        "score": "gm4_ce_data"
+                      },
+                      "range": {
+                        "min": 5
+                      }
                     },
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.09
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:loot_table",
+                  "name": "gm4_combat_evolved:mobs/equip_weapon/material/iron",
+                  "conditions": [
+                    {
+                      "condition": "minecraft:value_check",
+                      "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                          "type": "minecraft:fixed",
+                          "name": "$difficulty"
+                        },
+                        "score": "gm4_ce_data"
+                      },
+                      "range": {
+                        "min": 5
+                      }
+                    },
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.225
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:loot_table",
+                  "name": "gm4_combat_evolved:mobs/equip_weapon/material/stone",
+                  "conditions": [
                     {
                       "condition": "minecraft:value_check",
                       "value": {
@@ -68,313 +112,38 @@
                       "range": {
                         "min": 3
                       }
+                    },
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.45
                     }
                   ]
                 },
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_evolved:weapons/pickaxe/iron",
-                  "conditions": [
-                    {
-                      "condition": "minecraft:value_check",
-                      "value": {
-                        "type": "minecraft:score",
-                        "target": {
-                          "type": "minecraft:fixed",
-                          "name": "$difficulty"
-                        },
-                        "score": "gm4_ce_data"
-                      },
-                      "range": {
-                        "min": 4
-                      }
-                    }
-                  ]
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$difficulty"
-                    },
-                    "score": "gm4_ce_data"
-                  },
-                  "range": {
-                    "min": 2
-                  }
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.15
-                },
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_combat_evolved:mobs/modifiers/dark"
+                  "name": "gm4_combat_evolved:mobs/equip_weapon/material/wood"
                 }
               ]
-            },
+            }
+          ],
+          "conditions": [
             {
-              "type": "minecraft:alternatives",
-              "children": [
-                {
-                  "type": "minecraft:alternatives",
-                  "children": [
-                    {
-                      "type": "minecraft:loot_table",
-                      "name": "gm4_combat_evolved:weapons/sword/wood",
-                      "conditions": [
-                        {
-                          "condition": "minecraft:random_chance",
-                          "chance": 0.5
-                        },
-                        {
-                          "condition": "minecraft:value_check",
-                          "value": {
-                            "type": "minecraft:score",
-                            "target": {
-                              "type": "minecraft:fixed",
-                              "name": "$difficulty"
-                            },
-                            "score": "gm4_ce_data"
-                          },
-                          "range": {
-                            "min": 4
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "minecraft:loot_table",
-                      "name": "gm4_combat_evolved:weapons/sword/stone",
-                      "conditions": [
-                        {
-                          "condition": "minecraft:random_chance",
-                          "chance": 0.8
-                        },
-                        {
-                          "condition": "minecraft:value_check",
-                          "value": {
-                            "type": "minecraft:score",
-                            "target": {
-                              "type": "minecraft:fixed",
-                              "name": "$difficulty"
-                            },
-                            "score": "gm4_ce_data"
-                          },
-                          "range": {
-                            "min": 5
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "minecraft:loot_table",
-                      "name": "gm4_combat_evolved:weapons/sword/iron",
-                      "conditions": [
-                        {
-                          "condition": "minecraft:value_check",
-                          "value": {
-                            "type": "minecraft:score",
-                            "target": {
-                              "type": "minecraft:fixed",
-                              "name": "$difficulty"
-                            },
-                            "score": "gm4_ce_data"
-                          },
-                          "range": {
-                            "min": 6
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  "conditions": [
-                    {
-                      "condition": "minecraft:random_chance",
-                      "chance": 0.66
-                    }
-                  ]
-                },
-                {
-                  "type": "minecraft:alternatives",
-                  "children": [
-                    {
-                      "type": "minecraft:loot_table",
-                      "name": "gm4_combat_evolved:weapons/axe/wood",
-                      "conditions": [
-                        {
-                          "condition": "minecraft:random_chance",
-                          "chance": 0.5
-                        },
-                        {
-                          "condition": "minecraft:value_check",
-                          "value": {
-                            "type": "minecraft:score",
-                            "target": {
-                              "type": "minecraft:fixed",
-                              "name": "$difficulty"
-                            },
-                            "score": "gm4_ce_data"
-                          },
-                          "range": {
-                            "min": 7
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "minecraft:loot_table",
-                      "name": "gm4_combat_evolved:weapons/axe/stone",
-                      "conditions": [
-                        {
-                          "condition": "minecraft:random_chance",
-                          "chance": 0.8
-                        },
-                        {
-                          "condition": "minecraft:value_check",
-                          "value": {
-                            "type": "minecraft:score",
-                            "target": {
-                              "type": "minecraft:fixed",
-                              "name": "$difficulty"
-                            },
-                            "score": "gm4_ce_data"
-                          },
-                          "range": {
-                            "min": 9
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "minecraft:loot_table",
-                      "name": "gm4_combat_evolved:weapons/axe/iron",
-                      "conditions": [
-                        {
-                          "condition": "minecraft:value_check",
-                          "value": {
-                            "type": "minecraft:score",
-                            "target": {
-                              "type": "minecraft:fixed",
-                              "name": "$difficulty"
-                            },
-                            "score": "gm4_ce_data"
-                          },
-                          "range": {
-                            "min": 9
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  "conditions": [
-                    {
-                      "condition": "minecraft:random_chance",
-                      "chance": 0.5
-                    }
-                  ]
-                },
-                {
-                  "type": "minecraft:alternatives",
-                  "children": [
-                    {
-                      "type": "minecraft:loot_table",
-                      "name": "gm4_combat_evolved:weapons/shovel/wood",
-                      "conditions": [
-                        {
-                          "condition": "minecraft:random_chance",
-                          "chance": 0.5
-                        },
-                        {
-                          "condition": "minecraft:value_check",
-                          "value": {
-                            "type": "minecraft:score",
-                            "target": {
-                              "type": "minecraft:fixed",
-                              "name": "$difficulty"
-                            },
-                            "score": "gm4_ce_data"
-                          },
-                          "range": {
-                            "min": 3
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "minecraft:loot_table",
-                      "name": "gm4_combat_evolved:weapons/shovel/stone",
-                      "conditions": [
-                        {
-                          "condition": "minecraft:random_chance",
-                          "chance": 0.8
-                        },
-                        {
-                          "condition": "minecraft:value_check",
-                          "value": {
-                            "type": "minecraft:score",
-                            "target": {
-                              "type": "minecraft:fixed",
-                              "name": "$difficulty"
-                            },
-                            "score": "gm4_ce_data"
-                          },
-                          "range": {
-                            "min": 4
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "minecraft:loot_table",
-                      "name": "gm4_combat_evolved:weapons/shovel/iron",
-                      "conditions": [
-                        {
-                          "condition": "minecraft:value_check",
-                          "value": {
-                            "type": "minecraft:score",
-                            "target": {
-                              "type": "minecraft:fixed",
-                              "name": "$difficulty"
-                            },
-                            "score": "gm4_ce_data"
-                          },
-                          "range": {
-                            "min": 5
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$difficulty"
-                    },
-                    "score": "gm4_ce_data"
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:binomial",
+                "n": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
                   },
-                  "range": {
-                    "min": {
-                      "min": 3,
-                      "max": 10
-                    }
-                  }
+                  "score": "gm4_ce_data"
                 },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.25
-                }
-              ]
+                "p": 0.025
+              },
+              "range": {
+                "min": 1
+              }
             }
           ]
         }

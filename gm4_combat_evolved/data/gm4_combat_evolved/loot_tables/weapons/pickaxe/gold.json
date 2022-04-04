@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:wooden_pickaxe",
+          "name": "minecraft:golden_pickaxe",
           "functions": [
             {
               "function": "minecraft:set_name",
@@ -25,14 +25,14 @@
                   ]
                 },
                 {
-                  "translate": "item.minecraft.wooden_pickaxe",
+                  "translate": "item.minecraft.golden_pickaxe",
                   "italic": false
                 }
               ]
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_evolved:{damage:20,atkspeed:12,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.wooden_pickaxe\"}'}}"
+              "tag": "{gm4_combat_evolved:{damage:20,atkspeed:12,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_pickaxe\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",

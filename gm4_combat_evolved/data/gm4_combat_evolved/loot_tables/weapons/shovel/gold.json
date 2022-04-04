@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:wooden_pickaxe",
+          "name": "minecraft:golden_shovel",
           "functions": [
             {
               "function": "minecraft:set_name",
@@ -25,14 +25,14 @@
                   ]
                 },
                 {
-                  "translate": "item.minecraft.wooden_pickaxe",
+                  "translate": "item.minecraft.golden_shovel",
                   "italic": false
                 }
               ]
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_evolved:{damage:20,atkspeed:12,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.wooden_pickaxe\"}'}}"
+              "tag": "{gm4_combat_evolved:{damage:25,atkspeed:10,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_shovel\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",
@@ -44,7 +44,7 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 1
+                  "scale": 0.5
                 },
                 "max": {
                   "type": "minecraft:score",
@@ -53,14 +53,46 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 2
+                  "scale": 2.5
                 }
               },
               "treasure": false,
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.2
+                  "chance": 0.15
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:knockback"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_evolved:mobs/modifiers/mountainous"
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:fire_aspect"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_evolved:mobs/modifiers/burned"
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
                 }
               ]
             }
