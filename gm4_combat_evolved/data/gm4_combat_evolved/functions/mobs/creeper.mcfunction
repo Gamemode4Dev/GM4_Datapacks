@@ -10,7 +10,9 @@ execute if score $difficulty gm4_ce_data matches 11.. run scoreboard players add
 
 # biome specific modifiers for this mob
 execute if predicate gm4_combat_evolved:mobs/modifiers/burned run data modify entity @s Fuse set value 22
-execute if predicate gm4_combat_evolved:mobs/modifiers/flowering run tag @s add gm4_ce_cloaking_creeper
+execute if predicate gm4_combat_evolved:mobs/modifiers/flowering run tag @s add gm4_ce_cloaked_creeper
+execute if predicate gm4_combat_evolved:mobs/modifiers/flowering run effect give @s invisibility 999999 0
+execute if predicate gm4_combat_evolved:mobs/modifiers/flowering run data modify entity @s Fuse set value 37
 execute if predicate gm4_combat_evolved:mobs/modifiers/toxic run function gm4_combat_evolved:mobs/effects/toxic_creeper
 execute if predicate gm4_combat_evolved:mobs/modifiers/toxic run tag @s add gm4_ce_toxic_creeper
 

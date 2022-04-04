@@ -20,7 +20,7 @@ execute store result storage gm4_combat_evolved:temp tag.Damage int 0.5 run data
 execute if score $namelen gm4_ce_data matches ..75 run data modify storage gm4_combat_evolved:temp tag.display.Name set from storage gm4_combat_evolved:temp stored_name
 
 # mark as identified
-data modify storage gm4_combat_evolved:temp tag.gm4_combat_evolved append value {identified:1}
+data modify storage gm4_combat_evolved:temp tag.gm4_combat_evolved.identified set value 1
 
 # modify item
 data modify storage gm4_combat_evolved:temp tag.gm4_combat_evolved.sharpness set from block 29999998 1 7134 Items[{Slot:0b}].tag.Enchantments[{id:"minecraft:sharpness"}].lvl
