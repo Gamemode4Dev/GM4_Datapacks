@@ -6,7 +6,9 @@
 data modify storage gm4_relocators:temp merge_data set value {custom_block:"gm4_liquid_tank",lore:'{"translate":"%1$s%3427655$s","with":["Liquid Tank",{"translate":"block.gm4.liquid_tank"}],"color":"gray","italic":true}'}
 data modify storage gm4_relocators:temp merge_data.entity_data.Rotation set from entity @s Rotation
 
+tag @s remove gm4_relocating_block
 data modify storage gm4_relocators:temp merge_data.entity_data.marker.Tags set from entity @s Tags
+tag @s add gm4_relocating_block
 data modify storage gm4_relocators:temp merge_data.entity_data.marker.data set from entity @s data
 
 data modify storage gm4_relocators:temp merge_data.entity_data.stand.ArmorItems set from entity @e[type=armor_stand,tag=gm4_liquid_tank_stand,distance=..0.5,limit=1] ArmorItems
