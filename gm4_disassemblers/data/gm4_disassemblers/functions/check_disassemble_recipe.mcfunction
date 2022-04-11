@@ -32,6 +32,16 @@ execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:leather_c
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:leather_leggings"} run function gm4_disassemblers:items/leather_leggings
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:leather_boots"} run function gm4_disassemblers:items/leather_boots
 
+execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp/item Item{id:"minecraft:diamond_axe"} run function gm4_disassemblers:items/diamond_axe
+execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp/item Item{id:"minecraft:diamond_sword"} run function gm4_disassemblers:items/diamond_sword
+execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp/item Item{id:"minecraft:diamond_helmet"} run function gm4_disassemblers:items/diamond_helmet
+execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp/item Item{id:"minecraft:diamond_leggings"} run function gm4_disassemblers:items/diamond_leggings
+execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp/item Item{id:"minecraft:diamond_boots"} run function gm4_disassemblers:items/diamond_boots
+execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp/item Item{id:"minecraft:diamond_chestplate"} run function gm4_disassemblers:items/diamond_chestplate
+execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp/item Item{id:"minecraft:diamond_pickaxe"} run function gm4_disassemblers:items/diamond_pickaxe
+execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp/item Item{id:"minecraft:diamond_shovel"} run function gm4_disassemblers:items/diamond_shovel
+execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp/item Item{id:"minecraft:diamond_hoe"} run function gm4_disassemblers:items/diamond_hoe
+
 data remove storage gm4_disassemblers:temp/item Item
 
 execute if score result_items gm4_disassembler matches 0 run playsound minecraft:entity.dragon_fireball.explode block @a[distance=..5] ~ ~ ~ .33 1.5
