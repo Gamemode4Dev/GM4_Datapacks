@@ -7,29 +7,32 @@ data modify storage gm4_dripleaf_filters:cache itemCompare set from entity @s It
 data modify storage gm4_dripleaf_filters:cache hopperCompare set from block ^ ^-1 ^1 Items
 
 # loop through the slots to see if any IDs match
-# slot 0
-execute store success storage gm4_dripleaf_filters:cache itemsAreDifferent byte 1 run data modify storage gm4_dripleaf_filters:cache hopperCompare[0].id set from storage gm4_dripleaf_filters:cache itemCompare
-execute if data storage gm4_dripleaf_filters:cache {itemsAreDifferent:0b} run tag @s add gm4_dripleaf_filters_match
-execute unless entity @s[tag=gm4_dripleaf_filters_match] run data remove storage gm4_dripleaf_filters:cache hopperCompare[0]
-# slot 1
-execute unless entity @s[tag=gm4_dripleaf_filters_match] if data storage gm4_dripleaf_filters:cache {hopperCompare:[]} run tag @s add gm4_dripleaf_hopper_checked
-execute unless entity @s[tag=gm4_dripleaf_filters_match] unless entity @s[tag=gm4_dripleaf_hopper_checked] store success storage gm4_dripleaf_filters:cache itemsAreDifferent byte 1 run data modify storage gm4_dripleaf_filters:cache hopperCompare[0].id set from storage gm4_dripleaf_filters:cache itemCompare
-execute unless entity @s[tag=gm4_dripleaf_filters_match] unless entity @s[tag=gm4_dripleaf_hopper_checked] if data storage gm4_dripleaf_filters:cache {itemsAreDifferent:0b} run tag @s add gm4_dripleaf_filters_match
-execute unless entity @s[tag=gm4_dripleaf_filters_match] unless entity @s[tag=gm4_dripleaf_hopper_checked] run data remove storage gm4_dripleaf_filters:cache hopperCompare[0]
-# slot 2
-execute unless entity @s[tag=gm4_dripleaf_filters_match] if data storage gm4_dripleaf_filters:cache {hopperCompare:[]} run tag @s add gm4_dripleaf_hopper_checked
-execute unless entity @s[tag=gm4_dripleaf_filters_match] unless entity @s[tag=gm4_dripleaf_hopper_checked] store success storage gm4_dripleaf_filters:cache itemsAreDifferent byte 1 run data modify storage gm4_dripleaf_filters:cache hopperCompare[0].id set from storage gm4_dripleaf_filters:cache itemCompare
-execute unless entity @s[tag=gm4_dripleaf_filters_match] unless entity @s[tag=gm4_dripleaf_hopper_checked] if data storage gm4_dripleaf_filters:cache {itemsAreDifferent:0b} run tag @s add gm4_dripleaf_filters_match
-execute unless entity @s[tag=gm4_dripleaf_filters_match] unless entity @s[tag=gm4_dripleaf_hopper_checked] run data remove storage gm4_dripleaf_filters:cache hopperCompare[0]
-# slot 3
-execute unless entity @s[tag=gm4_dripleaf_filters_match] if data storage gm4_dripleaf_filters:cache {hopperCompare:[]} run tag @s add gm4_dripleaf_hopper_checked
-execute unless entity @s[tag=gm4_dripleaf_filters_match] unless entity @s[tag=gm4_dripleaf_hopper_checked] store success storage gm4_dripleaf_filters:cache itemsAreDifferent byte 1 run data modify storage gm4_dripleaf_filters:cache hopperCompare[0].id set from storage gm4_dripleaf_filters:cache itemCompare
-execute unless entity @s[tag=gm4_dripleaf_filters_match] unless entity @s[tag=gm4_dripleaf_hopper_checked] if data storage gm4_dripleaf_filters:cache {itemsAreDifferent:0b} run tag @s add gm4_dripleaf_filters_match
-execute unless entity @s[tag=gm4_dripleaf_filters_match] unless entity @s[tag=gm4_dripleaf_hopper_checked] run data remove storage gm4_dripleaf_filters:cache hopperCompare[0]
-# slot 4
-execute unless entity @s[tag=gm4_dripleaf_filters_match] if data storage gm4_dripleaf_filters:cache {hopperCompare:[]} run tag @s add gm4_dripleaf_hopper_checked
-execute unless entity @s[tag=gm4_dripleaf_filters_match] unless entity @s[tag=gm4_dripleaf_hopper_checked] store success storage gm4_dripleaf_filters:cache itemsAreDifferent byte 1 run data modify storage gm4_dripleaf_filters:cache hopperCompare[0].id set from storage gm4_dripleaf_filters:cache itemCompare
-execute unless entity @s[tag=gm4_dripleaf_filters_match] unless entity @s[tag=gm4_dripleaf_hopper_checked] if data storage gm4_dripleaf_filters:cache {itemsAreDifferent:0b} run tag @s add gm4_dripleaf_filters_match
-execute unless entity @s[tag=gm4_dripleaf_filters_match] unless entity @s[tag=gm4_dripleaf_hopper_checked] run data remove storage gm4_dripleaf_filters:cache hopperCompare[0]
+scoreboard players set $filters_match gm4_dripleaf_filters 0
+scoreboard players set $hopper_checked gm4_dripleaf_filters 0
 
-execute if entity @s[tag=gm4_dripleaf_filters_match] run function gm4_dripleaf_filters:deposit_item
+# slot 0
+execute store success score $items_are_different gm4_dripleaf_filters run data modify storage gm4_dripleaf_filters:cache hopperCompare[0].id set from storage gm4_dripleaf_filters:cache itemCompare
+execute if score $items_are_different gm4_dripleaf_filters matches 0 run scoreboard players set $filters_match gm4_dripleaf_filters 1
+execute unless score $filters_match gm4_dripleaf_filters matches 1 run data remove storage gm4_dripleaf_filters:cache hopperCompare[0]
+# slot 1
+execute unless score $filters_match gm4_dripleaf_filters matches 1 if data storage gm4_dripleaf_filters:cache {hopperCompare:[]} run scoreboard players set $dripleaf_hopper_checked gm4_dripleaf_filters 1
+execute unless score $filters_match gm4_dripleaf_filters matches 1 unless score $dripleaf_hopper_checked gm4_dripleaf_filters matches 1 store success score $itemsAreDifferent gm4_dripleaf_filters run data modify storage gm4_dripleaf_filters:cache hopperCompare[0].id set from storage gm4_dripleaf_filters:cache itemCompare
+execute unless score $filters_match gm4_dripleaf_filters matches 1 unless score $dripleaf_hopper_checked gm4_dripleaf_filters matches 1 if score $itemsAreDifferent gm4_dripleaf_filters matches 0 run scoreboard players set $filters_match gm4_dripleaf_filters 1
+execute unless score $filters_match gm4_dripleaf_filters matches 1 unless score $dripleaf_hopper_checked gm4_dripleaf_filters matches 1 run data remove storage gm4_dripleaf_filters:cache hopperCompare[0]
+# slot 2
+execute unless score $filters_match gm4_dripleaf_filters matches 1 if data storage gm4_dripleaf_filters:cache {hopperCompare:[]} run scoreboard players set $dripleaf_hopper_checked gm4_dripleaf_filters 1
+execute unless score $filters_match gm4_dripleaf_filters matches 1 unless score $dripleaf_hopper_checked gm4_dripleaf_filters matches 1 store success score $itemsAreDifferent gm4_dripleaf_filters run data modify storage gm4_dripleaf_filters:cache hopperCompare[0].id set from storage gm4_dripleaf_filters:cache itemCompare
+execute unless score $filters_match gm4_dripleaf_filters matches 1 unless score $dripleaf_hopper_checked gm4_dripleaf_filters matches 1 if score $itemsAreDifferent gm4_dripleaf_filters matches 0 run scoreboard players set $filters_match gm4_dripleaf_filters 1
+execute unless score $filters_match gm4_dripleaf_filters matches 1 unless score $dripleaf_hopper_checked gm4_dripleaf_filters matches 1 run data remove storage gm4_dripleaf_filters:cache hopperCompare[0]
+# slot 3
+execute unless score $filters_match gm4_dripleaf_filters matches 1 if data storage gm4_dripleaf_filters:cache {hopperCompare:[]} run scoreboard players set $dripleaf_hopper_checked gm4_dripleaf_filters 1
+execute unless score $filters_match gm4_dripleaf_filters matches 1 unless score $dripleaf_hopper_checked gm4_dripleaf_filters matches 1 store success score $itemsAreDifferent gm4_dripleaf_filters run data modify storage gm4_dripleaf_filters:cache hopperCompare[0].id set from storage gm4_dripleaf_filters:cache itemCompare
+execute unless score $filters_match gm4_dripleaf_filters matches 1 unless score $dripleaf_hopper_checked gm4_dripleaf_filters matches 1 if score $itemsAreDifferent gm4_dripleaf_filters matches 0 run scoreboard players set $filters_match gm4_dripleaf_filters 1
+execute unless score $filters_match gm4_dripleaf_filters matches 1 unless score $dripleaf_hopper_checked gm4_dripleaf_filters matches 1 run data remove storage gm4_dripleaf_filters:cache hopperCompare[0]
+# slot 4
+execute unless score $filters_match gm4_dripleaf_filters matches 1 if data storage gm4_dripleaf_filters:cache {hopperCompare:[]} run scoreboard players set $dripleaf_hopper_checked gm4_dripleaf_filters 1
+execute unless score $filters_match gm4_dripleaf_filters matches 1 unless score $dripleaf_hopper_checked gm4_dripleaf_filters matches 1 store success score $itemsAreDifferent gm4_dripleaf_filters run data modify storage gm4_dripleaf_filters:cache hopperCompare[0].id set from storage gm4_dripleaf_filters:cache itemCompare
+execute unless score $filters_match gm4_dripleaf_filters matches 1 unless score $dripleaf_hopper_checked gm4_dripleaf_filters matches 1 if score $itemsAreDifferent gm4_dripleaf_filters matches 0 run scoreboard players set $filters_match gm4_dripleaf_filters 1
+execute unless score $filters_match gm4_dripleaf_filters matches 1 unless score $dripleaf_hopper_checked gm4_dripleaf_filters matches 1 run data remove storage gm4_dripleaf_filters:cache hopperCompare[0]
+
+execute if score $filters_match gm4_dripleaf_filters matches 1 run function gm4_dripleaf_filters:deposit_item
