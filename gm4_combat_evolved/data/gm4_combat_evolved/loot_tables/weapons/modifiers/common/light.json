@@ -113,7 +113,7 @@
                   "name": "$damage_down_10",
                   "objective": "gm4_ce_data"
                 },
-                "color": "dark_green",
+                "color": "red",
                 "italic": false
               },
               {
@@ -121,7 +121,7 @@
                 "with": [
                   {
                     "text": ".",
-                    "color": "dark_green",
+                    "color": "red",
                     "italic": false
                   },
                   {
@@ -134,7 +134,7 @@
                   "name": "$damage_down_01",
                   "objective": "gm4_ce_data"
                 },
-                "color": "dark_green",
+                "color": "red",
                 "italic": false
               },
               {
@@ -183,7 +183,7 @@
                   "name": "$damage_down_10",
                   "objective": "gm4_ce_data"
                 },
-                "color": "dark_green",
+                "color": "red",
                 "italic": false
               },
               {

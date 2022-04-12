@@ -33,12 +33,6 @@ scoreboard players operation $atkspeed- gm4_ce_data -= #35 gm4_ce_data
 execute store result score $constep gm4_ce_data run data get storage gm4_combat_evolved:temp Items[{Slot:9b}].Count
 execute store result score $consume gm4_ce_data run data get storage gm4_combat_evolved:temp Items[{Slot:10b}].Count 100
 
-# reduce armor- from armor in order to replace the attribute
-# base armor is never lower than 1
-execute store result score $newarmor gm4_ce_data run data get storage gm4_combat_evolved:temp tag.AttributeModifiers[{Name:"generic.armor"}].Amount
-scoreboard players operation $newarmor gm4_ce_data += $armor- gm4_ce_data
-execute store result storage gm4_combat_evolved:temp newarmor int 1 run scoreboard players operation $newarmor gm4_ce_data > #1 gm4_ce_data
-
 # store results in storage for changing attributes
 execute store result storage gm4_combat_evolved:temp armor int 1 run scoreboard players get $armor gm4_ce_data
 execute store result storage gm4_combat_evolved:temp damage int 1 run scoreboard players get $damage gm4_ce_data

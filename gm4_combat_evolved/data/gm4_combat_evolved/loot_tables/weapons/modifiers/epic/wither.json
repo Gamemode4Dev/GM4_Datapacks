@@ -150,7 +150,7 @@
                   "name": "$damage_demonic",
                   "objective": "gm4_ce_data"
                 },
-                "color": "dark_green",
+                "color": "green",
                 "italic": false
               },
               {

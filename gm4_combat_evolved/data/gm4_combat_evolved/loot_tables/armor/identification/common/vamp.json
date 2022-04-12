@@ -9,6 +9,25 @@
           "name": "gm4_combat_evolved:armor/identification/base",
           "functions": [
             {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "gm4_ce_perm",
+                  "amount": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$armor-"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "operation": "addition",
+                  "slot": "chest"
+                }
+              ]
+            },
+            {
               "function": "minecraft:set_nbt",
               "tag": "{gm4_combat_evolved:{modifier:32}}"
             },
@@ -20,8 +39,8 @@
               },
               "ops": [
                 {
-                  "source": "newarmor",
-                  "target": "AttributeModifiers[{Name:\"generic.armor\"}].Amount",
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
                   "op": "replace"
                 }
               ]

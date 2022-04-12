@@ -259,7 +259,7 @@
                 "with": [
                   {
                     "text": "1",
-                    "color": "dark_green",
+                    "color": "red",
                     "italic": false
                   },
                   {
