@@ -1,5 +1,5 @@
 {
-  "last_commit": "e4eebe56793bfbfccf40f4e7fedeccee3493cba5",
+  "last_commit": "7c40576043e5e9946c26a84787625a91d2b1a59a",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -609,7 +609,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_ender_hoppers",
