@@ -3,7 +3,7 @@
 
 # timer and loot
 scoreboard players remove @s[scores={gm4_ef_timer=0..}] gm4_ef_timer 1
-execute if score @s gm4_ef_timer matches 3 run function gm4_end_fishing:go_fish/summon_fish_particle
+execute if score @s gm4_ef_timer matches 2 run function gm4_end_fishing:go_fish/summon_fish_particle
 tag @s[scores={gm4_ef_timer=0}] remove gm4_end_fishing_bait
 tag @s[scores={gm4_ef_timer=0}] add gm4_ef_has_fish
 execute if score @s gm4_ef_timer matches 0 run schedule function gm4_end_fishing:go_fish/bobber_animation_clock 1t
