@@ -26,8 +26,16 @@
   },
   "parent": "gm4:block_compressors",
   "criteria": {
-    "create_tinkering_compressor": {
-      "trigger": "minecraft:impossible"
+    "obtain_tinkering_compressor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:player_head"],
+            "nbt": "{gm4_machines:{id:\"tinkering_compressor\"}}"
+          }
+        ]
+      }
     }
   }
 }

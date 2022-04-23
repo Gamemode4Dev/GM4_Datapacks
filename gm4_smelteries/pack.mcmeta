@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 8,
+        "pack_format": 9,
         "description": [
             "Smelteries",
             "\n",
@@ -12,12 +12,13 @@
     },
     "module_name": "Smelteries",
     "module_id": "smelteries",
+    "libraries": [
+        "lib_machines",
+        "lib_forceload"
+    ],
     "site_description": "Build a Smeltery and double your ore output with this multi-block structure.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/smelteries",
-    "required_modules": [
-        "custom_crafters"
-    ],
     "recommended_modules": [
         "relocators"
     ],
@@ -29,7 +30,11 @@
             "Andante",
             "Kroppeb",
             "Misode",
-            "SpecialBuilder32"
+            "SpecialBuilder32",
+            "BluePsychoRanger"
+        ],
+        "Textures By": [
+            "kyrkis"
         ],
         "Icon Design": [
             "Hozz"

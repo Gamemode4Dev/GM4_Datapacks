@@ -20,5 +20,5 @@ scoreboard players operation @s gm4_lt_disp_val = liquid_height_calc gm4_lt_disp
 scoreboard players operation liquid_height_calc gm4_lt_disp_val -= last_liquid_height gm4_lt_disp_val
 
 #teleport proper number of times.
-execute if score liquid_height_calc gm4_lt_disp_val matches 1.. at @s run function gm4_liquid_tanks:teleport_display_up
-execute if score liquid_height_calc gm4_lt_disp_val matches ..-1 at @s run function gm4_liquid_tanks:teleport_display_down
+execute if score liquid_height_calc gm4_lt_disp_val matches 1.. at @s positioned ~ ~-.5 ~ run function gm4_liquid_tanks:teleport_display_up
+execute if score liquid_height_calc gm4_lt_disp_val matches ..-1 at @s positioned ~ ~-.5 ~ run function gm4_liquid_tanks:teleport_display_down

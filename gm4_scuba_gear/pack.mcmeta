@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 8,
+        "pack_format": 9,
         "description": [
             "SCUBA Gear",
             "\n",
@@ -13,14 +13,13 @@
     "module_name": "SCUBA Gear",
     "module_id": "scuba_gear",
     "libraries": [
-        "lib_player_heads"
+        "lib_player_heads",
+        "lib_machines",
+        "lib_forceload"
     ],
     "site_description": "Ease ocean exploration with craftable scuba gear!",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/SCUBA_Gear",
-    "required_modules": [
-        "custom_crafters"
-    ],
     "recommended_modules": [
         "sunken_treasure"
     ],

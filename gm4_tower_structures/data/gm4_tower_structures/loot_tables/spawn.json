@@ -1,0 +1,132 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.03
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_tower_structures:spawn/badlands",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_tower_structures:biome/badlands"
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 75
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_tower_structures:spawn/desert",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_tower_structures:biome/desert"
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 70
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_tower_structures:spawn/ocean",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                },
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_tower_structures:biome/ocean"
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 60
+                      }
+                    },
+                    "fluid": {
+                      "tag": "minecraft:water"
+                    }
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "offsetY": -10,
+                  "predicate": {
+                    "fluid": {
+                      "tag": "minecraft:water"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_tower_structures:spawn/snowy",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_tower_structures:biome/snowy"
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 75
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_tower_structures:spawn/default",
+              "conditions": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 75
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

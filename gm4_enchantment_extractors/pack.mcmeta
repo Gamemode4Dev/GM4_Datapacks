@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 8,
+        "pack_format": 9,
         "description": [
             "Enchantment Extractors",
             "\n",
@@ -12,6 +12,10 @@
     },
     "module_name": "Enchantment Extractors",
     "module_id": "enchantment_extractors",
+    "libraries": [
+        "lib_machines",
+        "lib_forceload"
+    ],
     "hidden": false,
     "site_description": "Remove enchantments from enchanted tools, armour, and weapons. But be careful, there might be unexpected side-effects.",
     "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
@@ -28,6 +32,9 @@
             "SpecialBuilder32",
             "Misode",
             "BluePsychoRanger"
+        ],
+        "Textures by": [
+            "kyrkis"
         ],
         "Icon Design": [
             "DuckJr"

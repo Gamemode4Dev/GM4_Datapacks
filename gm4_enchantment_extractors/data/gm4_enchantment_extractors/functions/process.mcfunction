@@ -1,10 +1,6 @@
-#@s = enchantment extractor armor stand
-#positioned 1 block above (at the dropper)
-#run from main
+# @s = enchantment extractor marker_entity
+# positioned 1 block above (at the dropper)
+# run from main
 
-execute unless block ~ ~ ~ dropper run function gm4_enchantment_extractors:destroy
-execute align xyz if entity @e[type=armor_stand,tag=gm4_machine,limit=1,dx=0] run function gm4_enchantment_extractors:destroy
-particle portal ~ ~0.8 ~ 0 0 0 .5 1
-execute if block ~ ~ ~ dropper{Items:[]} positioned ~ ~1 ~ as @e[type=item,distance=..0.7,nbt={Item:{Count:1b,tag:{Enchantments:[{}]}}}] if data entity @s Item.tag.Enchantments[0].id positioned ~ ~-2 ~ run function gm4_enchantment_extractors:extract
-# 1.18 NOTE; This 16->17 backward compatibility may be removed.
-data merge entity @s {HasVisualFire:1}
+particle portal ~ ~0.5 ~ 0 0 0 .5 1
+execute if block ~ ~ ~ dropper{Items:[{tag:{Enchantments:[{}]}}]} positioned ~ ~-1.2 ~ as @e[type=armor_stand,tag=gm4_enchantment_extractor_stand,limit=1,distance=..0.01] positioned ~ ~1.2 ~ run function gm4_enchantment_extractors:extract

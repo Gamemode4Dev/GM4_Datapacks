@@ -9,8 +9,8 @@ execute store result storage gm4_zauber_cauldrons:blueprint/item/wormhole gm4_za
 execute store result storage gm4_zauber_cauldrons:blueprint/item/wormhole gm4_zauber_cauldrons.cauldron_pos.dimension int 1 run scoreboard players get @s gm4_zl_warp_cd
 
 # $item_value set in item_fill function for efficiency
-loot replace entity @s weapon.mainhand loot gm4_zauber_cauldrons:recipes/chorus/wormhole
-data modify storage gm4_liquid_tanks:temp/tank output set from entity @s HandItems[0]
-item replace entity @s weapon.mainhand with air
+loot replace entity @e[type=armor_stand,tag=gm4_liquid_tank_stand,limit=1,sort=nearest,distance=..1] weapon.mainhand loot gm4_zauber_cauldrons:recipes/chorus/wormhole
+data modify storage gm4_liquid_tanks:temp/tank output set from entity @e[type=armor_stand,tag=gm4_liquid_tank_stand,limit=1,sort=nearest,distance=..1] HandItems[0]
+item replace entity @e[type=armor_stand,tag=gm4_liquid_tank_stand,limit=1,sort=nearest,distance=..1] weapon.mainhand with air
 function gm4_liquid_tanks:smart_item_fill
 tag @s add gm4_lt_fill

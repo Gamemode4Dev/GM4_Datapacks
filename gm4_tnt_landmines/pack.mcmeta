@@ -1,38 +1,37 @@
 {
-    "pack": {
-        "pack_format": 8,
-        "description": [
-            "TNT Landmines",
-            "\n",
-            {
-                "text": "Gamemode 4 for 1.18",
-                "color": "#4AA0C7"
-            }
-        ]
-    },
-    "module_name": "TNT Landmines",
-    "module_id": "tnt_landmines",
-    "libraries": [
-        "lib_player_heads"
+  "pack": {
+    "pack_format": 9,
+    "description": [
+      "TNT Landmines",
+      "\n",
+      {
+        "text": "Gamemode 4 for 1.18",
+        "color": "#4AA0C7"
+      }
+    ]
+  },
+  "module_name": "TNT Landmines",
+  "module_id": "tnt_landmines",
+  "libraries": [
+    "lib_player_heads",
+    "lib_machines",
+    "lib_forceload"
+  ],
+  "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+  "site_description": "Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!",
+  "video_link": "",
+  "wiki_link": "https://wiki.gm4.co/wiki/TNT_Landmines",
+  "recommended_modules": [],
+  "credits": {
+    "Creator": [
+      "Sparks"
     ],
-    "creation_meta": "Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
-    "site_description": "Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!",
-    "video_link": "",
-    "wiki_link": "https://wiki.gm4.co/wiki/TNT_Landmines",
-    "required_modules": [
-        "custom_crafters"
+    "Updated By": [
+      "kruthers",
+      "BluePsychoRanger"
     ],
-    "recommended_modules": [],
-    "credits": {
-        "Creator": [
-            "Sparks"
-        ],
-        "Updated By": [
-            "kruthers",
-            "BluePsychoRanger"
-        ],
-        "Icon Design": [
-            "Hozz"
-        ]
-    }
+    "Icon Design": [
+      "Hozz"
+    ]
+  }
 }

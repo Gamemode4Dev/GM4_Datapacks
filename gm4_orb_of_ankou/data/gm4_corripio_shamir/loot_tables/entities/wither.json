@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_orb_of_ankou:soul_essence/enduring"
+          "name": "gm4_orb_of_ankou:items/soul_essence/enduring"
         }
       ],
       "conditions": [
@@ -27,7 +27,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_orb_of_ankou:soul_essence/lifeless"
+          "name": "gm4_orb_of_ankou:items/soul_essence/lifeless"
         }
       ],
       "conditions": [
@@ -48,7 +48,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_orb_of_ankou:soul_essence/soaring"
+          "name": "gm4_orb_of_ankou:items/soul_essence/soaring"
         }
       ],
       "conditions": [
@@ -69,7 +69,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_orb_of_ankou:soul_essence/withering"
+          "name": "gm4_orb_of_ankou:items/soul_essence/withering"
         }
       ],
       "conditions": [

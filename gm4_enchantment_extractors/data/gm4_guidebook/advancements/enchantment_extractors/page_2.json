@@ -117,7 +117,7 @@
             "blocks": [
               "minecraft:dropper"
             ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Enchantment Extractor\",{\"translate\":\"block.gm4.enchantment_extractor\"}]}'}"
+            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Enchantment Extractor\",{\"translate\":\"container.gm4.enchantment_extractor\"}]}'}"
           }
         }
       }

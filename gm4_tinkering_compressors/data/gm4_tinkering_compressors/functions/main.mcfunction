@@ -1,8 +1,9 @@
+# NOTE remove during 1.20 update: updates old machines to include a marker entity
+execute as @e[type=armor_stand,tag=gm4_tinkering_compressor] at @s run function gm4_tinkering_compressors:upgrade_machine_stand
+# process machine
+execute as @e[type=marker,tag=gm4_tinkering_compressor] at @s run function gm4_tinkering_compressors:process
 
-execute as @e[type=armor_stand,tag=gm4_tinkering_compressor] at @s run function gm4_tinkering_compressors:process
-
-# Check for Tinker Shamir on a Compressor
-scoreboard players reset item_on_compressor gm4_tc_data
-execute as @e[type=item,nbt={Item:{Count:1b,id:"minecraft:player_head",tag:{gm4_metallurgy:{has_shamir:1b,stored_shamir:"tinker",item:"obsidian_cast"}}}}] at @s align xyz positioned ~0.5 ~-1 ~0.5 if block ~ ~0.5 ~ minecraft:dropper if block ~ ~2.5 ~ minecraft:piston[facing=down] if entity @e[type=armor_stand,tag=gm4_block_compressor,sort=nearest,limit=1,distance=..0.11] run function gm4_tinkering_compressors:create_check
+# copied code for metallurgy smooshing
+execute as @e[type=item,tag=!gm4_ml_smooshed,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{has_shamir:1b}}}}] at @s if block ~ ~-1 ~ #minecraft:anvil run function gm4_tinkering_compressors:smooshing/item_on_anvil
 
 schedule function gm4_tinkering_compressors:main 16t

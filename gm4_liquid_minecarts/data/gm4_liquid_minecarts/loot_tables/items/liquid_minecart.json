@@ -1,0 +1,35 @@
+{
+  "type": "generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:hopper_minecart",
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{CustomModelData:3420003,gm4_machines:{id:\"liquid_minecart\"}}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Minecart with Liquid Tank",
+                    {
+                      "translate": "item.gm4.liquid_minecart"
+                    }
+                  ],
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "type": "block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{CustomModelData:3420133,gm4_machines:{id:\"smeltery\"},SkullOwner:{Name:\"gm4_smeltery\",Id:[I;1784636653,-1150006069,-1125092353,-1658708865],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTY0Mjg1NDMwMDcwMywKICAicHJvZmlsZUlkIiA6ICI3NzI3ZDM1NjY5Zjk0MTUxODAyM2Q2MmM2ODE3NTkxOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJsaWJyYXJ5ZnJlYWsiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWM3MjJlYmQxNzdlNDI3MDUzMmMyNGMyNTFhNGY1NzY4OGNiZDg3YTJmNTlmNGE2NjQ5ZGMxZmFjMGI1YmRlOCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9\"}]}}}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Smeltery",
+                    {
+                      "translate": "block.gm4.smeltery"
+                    }
+                  ],
+                  "color": "white",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

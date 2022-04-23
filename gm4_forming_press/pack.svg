@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="forming_press" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#BEE9FD;}
+	.st1{fill:#4AA0C7;}
+	.st2{fill:#2E627A;}
+	.st3{fill:#3D83A3;}
+	.st4{fill:#387895;}
+</style>
+<g id="grid" transform="matrix(1.1876553,0,0,1.1876553,579.25835,-183.2473)">
+	<g id="g4206" transform="translate(-547.85714,2.6913062e-7)">
+		<g id="rect4204">
+			<rect x="60.12" y="154.29" class="st0" width="431.1" height="431.1"/>
+		</g>
+		<g id="g4197">
+			<g id="rect4150">
+				<rect x="202.18" y="154.29" class="st1" width="5.05" height="431.1"/>
+			</g>
+			<g id="rect4150-5">
+				<rect x="344.23" y="154.29" class="st1" width="5.05" height="431.1"/>
+			</g>
+			<g id="rect4150-5-7">
+				<rect x="60.12" y="439.54" class="st1" width="431.1" height="5.05"/>
+			</g>
+			<g id="rect4150-5-7-7">
+				<rect x="60.12" y="295.89" class="st1" width="431.1" height="5.05"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Clay_Ball">
+	<g>
+		<rect x="196.79" y="250.59" class="st2" width="119.69" height="30"/>
+		<rect x="226.71" y="210.59" class="st2" width="59.84" height="40"/>
+		<rect x="236.68" y="200.59" class="st2" width="39.9" height="110"/>
+		<rect x="216.74" y="220.59" class="st2" width="79.79" height="80"/>
+		<rect x="206.76" y="230.59" class="st2" width="99.74" height="60"/>
+	</g>
+	<g>
+		<rect x="206.76" y="250.59" class="st3" width="99.74" height="30"/>
+		<rect x="226.71" y="220.59" class="st3" width="59.84" height="30"/>
+		<rect x="236.68" y="210.59" class="st3" width="39.9" height="90"/>
+		<rect x="226.71" y="230.59" class="st3" width="59.84" height="60"/>
+		<rect x="216.74" y="230.59" class="st3" width="79.79" height="60"/>
+	</g>
+	<g>
+		<rect x="236.68" y="210.59" class="st1" width="19.95" height="80"/>
+		<rect x="216.74" y="230.59" class="st1" width="59.85" height="20"/>
+		<rect x="226.71" y="220.59" class="st1" width="39.9" height="60"/>
+		<rect x="206.76" y="250.59" class="st1" width="59.84" height="30"/>
+		<rect x="206.76" y="260.59" class="st1" width="69.82" height="10"/>
+		<rect x="226.71" y="230.59" class="st1" width="39.9" height="60"/>
+	</g>
+</g>
+<g id="Blocks">
+	<g id="block">
+		<path id="rect4153" class="st4" d="M370.72,395.96l55.64-31.02l55.69,31.02v66l-55.69,31.03l-55.69-31.03v-66H370.72z"/>
+	</g>
+	<g id="block_1_">
+		<path id="rect4153_1_" class="st4" d="M29.94,395.96l55.69-31.02l55.69,31.02v66l-55.69,31.03l-55.69-31.03L29.94,395.96
+			L29.94,395.96z"/>
+	</g>
+	<g id="block_2_">
+		<path id="rect4153_2_" class="st4" d="M200.4,395.96l55.69-31.02l55.69,31.02v66l-55.69,31.03l-55.69-31.03V395.96L200.4,395.96z"
+			/>
+	</g>
+	<g id="block_3_">
+		<path id="rect4153_3_" class="st4" d="M200.4,47.42l55.69-31.03l55.69,31.03v66l-55.69,31.03l-55.69-31.03V47.42L200.4,47.42z"/>
+	</g>
+	<g id="block_4_">
+		<path id="rect4153_4_" class="st4" d="M29.96,221.52l55.69-31.03l55.64,31.03v66L85.6,318.54l-55.64-31.03V221.52z"/>
+	</g>
+	<g id="block_5_">
+		<path id="rect4153_5_" class="st4" d="M370.72,221.52l55.69-31.03l55.64,31.03v66l-55.69,31.03l-55.69-31.03L370.72,221.52
+			L370.72,221.52z"/>
+	</g>
+	<g id="block_6_">
+		<path id="rect4153_6_" class="st4" d="M29.94,47.42l55.68-31.03l55.69,31.03v66l-55.69,31.02l-55.68-31.03
+			C29.94,113.41,29.94,47.42,29.94,47.42z"/>
+	</g>
+	<g id="block_7_">
+		<path id="rect4153_7_" class="st4" d="M370.67,47.42l55.69-31.03l55.69,31.03v65.99l-55.69,31.03l-55.69-31.03V47.42L370.67,47.42
+			z"/>
+	</g>
+</g>
+</svg>
