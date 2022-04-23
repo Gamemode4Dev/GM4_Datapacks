@@ -1,9 +1,6 @@
 #@s = liquid tanks
 #run from main
 
-#tank destruction
-execute unless block ~ ~ ~ hopper run function gm4_liquid_tanks:destroy
-
 #item processing
 data modify storage gm4_liquid_tanks:temp/tank input_slot merge from block ~ ~ ~ Items[{Slot:0b}]
 execute if data storage gm4_liquid_tanks:temp/tank input_slot run function gm4_liquid_tanks:item_process

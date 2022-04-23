@@ -1,0 +1,68 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:3420043,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:stone\"},SkullOwner:{Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NTQ0NzQxODg2MTMsInByb2ZpbGVJZCI6IjNmYzdmZGY5Mzk2MzRjNDE5MTE5OWJhM2Y3Y2MzZmVkIiwicHJvZmlsZU5hbWUiOiJZZWxlaGEiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzNjNjk4ZTE5MDllMWI4MzMxYmVhOGQ1YzU3N2NkMGM2M2I4YWVjMDFmYjg4ZjY0OWUwMGYwZmU5NjY1NDdjNWIifX19\"}]},Id:[I;-334658666,974668440,-2077434217,-1973492282]}}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "italic": false,
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Landmine",
+                                    {
+                                        "translate": "item.gm4.tnt_landmine"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                [
+                                    {
+                                        "translate": "%1$s%3427655$s",
+                                        "with": [
+                                            "Disguised as ",
+                                            {
+                                                "translate": "item.gm4.tnt_landmine.disguised"
+                                            }
+                                        ],
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "translate": "block.minecraft.stone",
+                                        "color": "gray",
+                                        "italic": false
+                                    }
+                                ],
+                                [
+                                    {
+                                        "translate": "%1$s%3427655$s",
+                                        "with": [
+                                            "Drop to use",
+                                            {
+                                                "translate": "item.gm4.tnt_landmine.use"
+                                            }
+                                        ],
+                                        "color": "dark_gray",
+                                        "italic": true
+                                    }
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

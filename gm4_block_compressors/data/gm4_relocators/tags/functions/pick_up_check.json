@@ -1,6 +1,5 @@
 {
-    "values":[
-      "gm4_block_compressors:relocate/pick_up_check"
+    "values": [
+        "gm4_block_compressors:relocate/pick_up_check"
     ]
-
 }

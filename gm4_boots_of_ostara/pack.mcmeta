@@ -12,12 +12,13 @@
     },
     "module_name": "Boots of Ostara",
     "module_id": "boots_of_ostara",
+    "libraries": [
+        "lib_machines",
+        "lib_forceload"
+    ],
     "site_description": "A pair of boots every gardener would love to have! Boots of Ostara allow you to easily spread Grass and Moss, and they even stop the Desire Lines module from creating that pesky dirt.",
     "video_link": "https://www.youtube.com/watch?v=H4UGM6_wGCE",
     "wiki_link": "https://wiki.gm4.co/wiki/Boots_of_Ostara",
-    "required_modules": [
-        "custom_crafters"
-    ],
     "recommended_modules": [
         "desire_lines",
         "better_armour_stands"

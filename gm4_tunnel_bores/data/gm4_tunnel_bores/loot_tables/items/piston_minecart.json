@@ -1,0 +1,33 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:furnace_minecart",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:3420001,gm4_machines:{id:\"tunnel_bore\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Minecart with Piston",
+                                    {
+                                        "translate": "item.gm4.minecart.bore"
+                                    }
+                                ],
+                                "italic": false,
+                                "color": "white"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

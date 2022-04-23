@@ -12,6 +12,10 @@
     },
     "module_name": "Soul Glass",
     "module_id": "soul_glass",
+    "libraries": [
+        "lib_machines",
+        "lib_forceload"
+    ],
     "site_description": "Reverse the effects of beacons with corrupting glass! But be careful, a poison Beacon may sound great at first, but is incredibly painful in pratice.",
     "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
     "video_link": "",

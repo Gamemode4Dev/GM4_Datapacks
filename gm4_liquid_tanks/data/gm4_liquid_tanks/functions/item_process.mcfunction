@@ -9,6 +9,8 @@ execute if score @s[tag=gm4_lt_empty] gm4_lt_value matches 0 unless entity @s[ta
 
 #item drain
 execute unless entity @s[tag=gm4_lt_fill] run function #gm4_liquid_tanks:item_drain
+# NOTE remove during 1.20 update: tank init for upgraded tanks
+execute if entity @s[tag=gm4_upgraded_liquid_tank,tag=gm4_lt_drain] run function gm4_liquid_tanks:upgrade_gui
 
 #item fill
 execute unless entity @s[tag=gm4_lt_drain] run function #gm4_liquid_tanks:item_fill
