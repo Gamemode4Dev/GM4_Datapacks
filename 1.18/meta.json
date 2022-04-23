@@ -1,5 +1,5 @@
 {
-  "last_commit": "d610a80ec72b4eb63b462ce26eef2deba3efec18",
+  "last_commit": "e4eebe56793bfbfccf40f4e7fedeccee3493cba5",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1128,26 +1128,23 @@
       "patch": 18004
     },
     {
-      "id": "gm4_mob_conversion",
-      "name": "Mob Conversion",
-      "description": "Convert cows, pigmen and witches into other mobs!",
+      "id": "gm4_mob_curing",
+      "name": "Mob Curing",
+      "description": "Revert mooshrooms, pigmen and witches back to their previous forms.",
       "categories": [],
-      "libraries": [],
+      "libraries": [
+        "lib_trades"
+      ],
       "requires": [],
       "recommends": [
-        "gm4_resource_pack",
+        "gm4_lightning_in_a_bottle",
         "gm4_shroomites"
       ],
-      "wiki_link": "https://wiki.gm4.co/wiki/Mob_Conversion",
+      "wiki_link": "https://wiki.gm4.co/wiki/Mob_Curing",
       "video_link": "",
       "credits": {
         "Creator": [
-          "torbray"
-        ],
-        "Updated By": [
-          "Sparks",
-          "Bloo",
-          "SpecialBuilder32"
+          "Epyon"
         ],
         "Icon Design": [
           "Sparks"
@@ -1155,7 +1152,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18001
     },
     {
       "id": "gm4_mysterious_midnights",
