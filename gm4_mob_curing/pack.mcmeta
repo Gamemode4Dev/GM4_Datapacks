@@ -1,0 +1,36 @@
+{
+    "pack": {
+        "pack_format": 8,
+        "description": [
+            "Mob Curing",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.18",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Mob Curing",
+    "module_id": "mob_curing",
+    "libraries": [
+        "lib_trades"
+    ],
+    "hidden":false,
+    "site_description": "Revert mooshrooms, pigmen and witches back to their previous forms.",
+    "site_categories": [],
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Mob_Curing",
+    "required_modules": [],
+    "recommended_modules": [
+        "lightning_in_a_bottle",
+        "shroomites"
+    ],
+    "credits": {
+        "Creator": [
+            "Epyon"
+        ],
+        "Icon Design": [
+            "Sparks"
+        ]
+    }
+}
