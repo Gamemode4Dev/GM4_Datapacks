@@ -1,5 +1,5 @@
 {
-  "last_commit": "7c40576043e5e9946c26a84787625a91d2b1a59a",
+  "last_commit": "036af23389ddf7261ccbc5e6c1d3bfba59eb79b3",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1560,7 +1560,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18001
+      "patch": 18002
     },
     {
       "id": "gm4_scuba_gear",
