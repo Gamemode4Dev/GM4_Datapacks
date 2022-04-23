@@ -1,5 +1,6 @@
 {
     "values": [
+		{ "id": "#load:gm4_machines", "required": false },
         "gm4_ender_hoppers:load"
     ]
 }

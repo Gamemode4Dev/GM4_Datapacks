@@ -12,12 +12,13 @@
     },
     "module_name": "Block Compressors",
     "module_id": "block_compressors",
+    "libraries": [
+        "lib_machines",
+        "lib_forceload"
+    ],
     "site_description": "Chest space won't be an issue with this module! Use a Block Compressor to compress stacks of items, turning a stack of items into a single item for long-term storage. Make sure to uncompress your items before using them again, though!",
     "video_link": "https://www.youtube.com/watch?v=sdrTJYjL8C0",
     "wiki_link": "https://wiki.gm4.co/wiki/Block_Compressors",
-    "required_modules": [
-        "custom_crafters"
-    ],
     "recommended_modules": [
         "relocators"
     ],
@@ -29,6 +30,9 @@
             "SunderB",
             "Misode",
             "JP12"
+        ],
+        "Textures by": [
+            "kyrkis"
         ],
         "Icon Design": [
             "Sparks"

@@ -151,7 +151,7 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_master_crafting"
+                "name": "gm4_tunnel_bores"
               },
               "score": "load.status"
             },

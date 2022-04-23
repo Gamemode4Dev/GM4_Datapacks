@@ -1,5 +1,6 @@
 {
     "values": [
+        { "id": "#load:gm4_machines", "required": false },
         { "id": "#load:gm4_liquid_tanks", "required": false },
         "gm4_liquid_minecarts:load"
     ]

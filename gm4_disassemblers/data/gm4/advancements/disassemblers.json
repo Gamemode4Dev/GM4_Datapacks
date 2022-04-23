@@ -22,8 +22,16 @@
   },
   "parent": "gm4:custom_crafters",
   "criteria": {
-    "craft_disassembler": {
-      "trigger": "minecraft:impossible"
+    "obtain_disassembler": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:player_head"],
+            "nbt": "{gm4_machines:{id:\"disassembler\"}}"
+          }
+        ]
+      }
     }
   }
 }

@@ -1,0 +1,55 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_zauber_cauldrons:recipes/potions/drinkable/instant_damage"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_zauber_cauldrons:recipes/potions/drinkable/instant_health"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_zauber_cauldrons:recipes/potions/drinkable/jump_boost"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_zauber_cauldrons:recipes/potions/drinkable/poison"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_zauber_cauldrons:recipes/potions/drinkable/regeneration"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_zauber_cauldrons:recipes/potions/drinkable/speed"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_zauber_cauldrons:recipes/potions/drinkable/strength"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 9,
+                "max": 11
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
