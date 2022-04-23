@@ -12,7 +12,7 @@ execute if score $face_placement gm4_machine_data matches 6 run function gm4_end
 
 # mark block as placed
 particle large_smoke ~ ~ ~ 0.2 0.2 0.2 0 10
-playsound minecraft:block.portal.trigger block @a[distance=..5] ~ ~ ~ 0.2
+playsound minecraft:block.respawn_anchor.charge block @a[distance=..5] ~ ~ ~ 0.3 0.7
 scoreboard players set $placed_block gm4_machine_data 1
 scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 1
 tag @e[distance=..2] remove gm4_new_machine
