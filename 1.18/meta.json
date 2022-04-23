@@ -1,5 +1,5 @@
 {
-  "last_commit": "15660a51bb2c5a66db619a0b047f45ff0024d0f5",
+  "last_commit": "0202b54a87fe44dd53e5b8e74df7875739f1949b",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -181,10 +181,11 @@
       "name": "Block Compressors",
       "description": "Chest space won't be an issue with this module! Use a Block Compressor to compress stacks of items, turning a stack of items into a single item for long-term storage. Make sure to uncompress your items before using them again, though!",
       "categories": [],
-      "libraries": [],
-      "requires": [
-        "gm4_custom_crafters"
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
       ],
+      "requires": [],
       "recommends": [
         "gm4_relocators"
       ],
@@ -199,13 +200,16 @@
           "Misode",
           "JP12"
         ],
+        "Textures by": [
+          "kyrkis"
+        ],
         "Icon Design": [
           "Sparks"
         ]
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_book_binders",
@@ -237,10 +241,11 @@
       "name": "Boots of Ostara",
       "description": "A pair of boots every gardener would love to have! Boots of Ostara allow you to easily spread Grass and Moss, and they even stop the Desire Lines module from creating that pesky dirt.",
       "categories": [],
-      "libraries": [],
-      "requires": [
-        "gm4_custom_crafters"
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
       ],
+      "requires": [],
       "recommends": [
         "gm4_desire_lines",
         "gm4_better_armour_stands"
@@ -260,7 +265,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_cement_mixers",
@@ -284,7 +289,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_chairs",
@@ -406,41 +411,6 @@
       "patch": 18005
     },
     {
-      "id": "gm4_custom_crafters",
-      "name": "Custom Crafters",
-      "description": "Custom Crafters adds a special crafting table used by many Gamemode 4 Modules. Your Custom Crafter is your stepping stone into the wonderful world of Gamemode 4!",
-      "categories": [],
-      "libraries": [],
-      "requires": [],
-      "recommends": [
-        "gm4_resource_pack",
-        "gm4_standard_crafting",
-        "gm4_record_crafting",
-        "gm4_master_crafting",
-        "gm4_disassemblers",
-        "gm4_block_compressors",
-        "gm4_relocators"
-      ],
-      "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters",
-      "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
-      "credits": {
-        "Creator": [
-          "Sparks"
-        ],
-        "Updated by": [
-          "Bloo",
-          "Sparks",
-          "SpecialBuilder32"
-        ],
-        "Icon Design": [
-          "Sparks"
-        ]
-      },
-      "hidden": false,
-      "important_note": false,
-      "patch": 18006
-    },
-    {
       "id": "gm4_dangerous_dungeons",
       "name": "Dangerous Dungeons",
       "description": "A custom terrain expansion pack that adds new types of dungeons underground.",
@@ -504,10 +474,11 @@
       "name": "Disassemblers",
       "description": "Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!",
       "categories": [],
-      "libraries": [],
-      "requires": [
-        "gm4_custom_crafters"
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
       ],
+      "requires": [],
       "recommends": [
         "gm4_relocators"
       ],
@@ -520,13 +491,16 @@
         "Updated by": [
           "Federick90"
         ],
+        "Textures by": [
+          "kyrkis"
+        ],
         "Icon Design": [
           "Hozz"
         ]
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_display_frames",
@@ -559,7 +533,10 @@
       "name": "Enchantment Extractors",
       "description": "Remove enchantments from enchanted tools, armour, and weapons. But be careful, there might be unexpected side-effects.",
       "categories": [],
-      "libraries": [],
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
+      ],
       "requires": [],
       "recommends": [
         "gm4_relocators"
@@ -575,13 +552,16 @@
           "Misode",
           "BluePsychoRanger"
         ],
+        "Textures by": [
+          "kyrkis"
+        ],
         "Icon Design": [
           "DuckJr"
         ]
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_end_fishing",
@@ -614,7 +594,10 @@
       "name": "Ender Hoppers",
       "description": "Create special hoppers that teleport nearby items to them.",
       "categories": [],
-      "libraries": [],
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
+      ],
       "requires": [],
       "recommends": [
         "gm4_resource_pack",
@@ -629,13 +612,16 @@
         "Updated by": [
           "Misode"
         ],
+        "Textures by": [
+          "kyrkis"
+        ],
         "Icon Design": [
           "Sparks"
         ]
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_enderman_support_class",
@@ -683,6 +669,41 @@
       "hidden": false,
       "important_note": false,
       "patch": 18006
+    },
+    {
+      "id": "gm4_forming_press",
+      "name": "Forming Press",
+      "description": "Create a Forming Press to unlock more efficient recipes for all types of brick and Charcoal.",
+      "categories": [],
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
+      ],
+      "requires": [],
+      "recommends": [
+        "gm4_standard_crafting",
+        "gm4_relocators"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Forming_Press",
+      "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Updated by": [
+          "Misode",
+          "BluePsychoRanger"
+        ],
+        "Textures by": [
+          "kyrkis"
+        ],
+        "Icon Design": [
+          "BluePsychoRanger"
+        ]
+      },
+      "hidden": false,
+      "important_note": false,
+      "patch": 18001
     },
     {
       "id": "gm4_fulcio_shamir",
@@ -738,11 +759,11 @@
       "description": "Introduces two tiers of pricey canisters that increase your health when carried.",
       "categories": [],
       "libraries": [
-        "lib_player_heads"
+        "lib_player_heads",
+        "lib_machines",
+        "lib_forceload"
       ],
-      "requires": [
-        "gm4_custom_crafters"
-      ],
+      "requires": [],
       "recommends": [],
       "wiki_link": "https://wiki.gm4.co/wiki/Heart_Canisters",
       "video_link": "https://www.youtube.com/watch?v=zjmL6rjoq0g",
@@ -765,7 +786,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_holographic_tags",
@@ -872,14 +893,17 @@
       },
       "hidden": false,
       "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
-      "patch": 18008
+      "patch": 18009
     },
     {
       "id": "gm4_liquid_minecarts",
       "name": "Liquid Minecarts",
       "description": "Adds Liquid Tank Minecarts that allow you to move your liquids from one Liquid Tank to another.",
       "categories": [],
-      "libraries": [],
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
+      ],
       "requires": [
         "gm4_liquid_tanks"
       ],
@@ -898,14 +922,17 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_liquid_tanks",
       "name": "Liquid Tanks",
       "description": "Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!",
       "categories": [],
-      "libraries": [],
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
+      ],
       "requires": [],
       "recommends": [
         "gm4_resource_pack",
@@ -925,7 +952,8 @@
           "SpecialBuilder32"
         ],
         "Textures by": [
-          "Vilder50"
+          "Vilder50",
+          "kyrkis"
         ],
         "Icon Design": [
           "DuckJr"
@@ -933,7 +961,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18008
+      "patch": 18009
     },
     {
       "id": "gm4_live_catch",
@@ -983,36 +1011,6 @@
       "patch": 18005
     },
     {
-      "id": "gm4_master_crafting",
-      "name": "Master Crafting",
-      "description": "Upgrade your Custom Crafter to a Master Crafter and unlock more efficient recipes for all types of brick and Charcoal.",
-      "categories": [],
-      "libraries": [],
-      "requires": [
-        "gm4_custom_crafters"
-      ],
-      "recommends": [
-        "gm4_standard_crafting",
-        "gm4_relocators"
-      ],
-      "wiki_link": "https://wiki.gm4.co/wiki/Master_Crafting",
-      "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
-      "credits": {
-        "Creator": [
-          "Bloo"
-        ],
-        "Updated by": [
-          "Misode"
-        ],
-        "Icon Design": [
-          "BluePsychoRanger"
-        ]
-      },
-      "hidden": false,
-      "important_note": false,
-      "patch": 18004
-    },
-    {
       "id": "gm4_mending_tanks",
       "name": "Mending Tanks",
       "description": "Enables Liquid Tanks filled with Experience to repair tools with the mending enchant on them.",
@@ -1034,7 +1032,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_metallurgy",
@@ -1197,10 +1195,12 @@
       "name": "Orb of Ankou",
       "description": "Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man.",
       "categories": [],
-      "libraries": [],
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
+      ],
       "requires": [
-        "gm4_metallurgy",
-        "gm4_custom_crafters"
+        "gm4_metallurgy"
       ],
       "recommends": [],
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
@@ -1215,7 +1215,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_orbis",
@@ -1428,7 +1428,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_potion_swords",
@@ -1461,10 +1461,11 @@
       "name": "Record Crafting",
       "description": "A crafting recipe pack that lets you craft all the records in a Custom Crafter.",
       "categories": [],
-      "libraries": [],
-      "requires": [
-        "gm4_custom_crafters"
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
       ],
+      "requires": [],
       "recommends": [
         "gm4_standard_crafting"
       ],
@@ -1483,21 +1484,22 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_relocators",
       "name": "Relocators",
-      "description": "Craft Relocators to move your custom crafters, liquid tanks, and other machines.",
+      "description": "Craft Relocators to pick up and move containers such as chests and Custom Crafters.",
       "categories": [],
-      "libraries": [],
-      "requires": [
-        "gm4_custom_crafters"
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
       ],
+      "requires": [],
       "recommends": [
         "gm4_block_compressors",
         "gm4_book_binders",
-        "gm4_master_crafting",
+        "gm4_forming_press",
         "gm4_disassemblers",
         "gm4_enchantment_extractors",
         "gm4_ender_hoppers",
@@ -1513,11 +1515,33 @@
         ],
         "Icon Design": [
           "Hozz"
+        ],
+        "Textures By": [
+          "kyrkis"
         ]
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
+    },
+    {
+      "id": "gm4_rope_ladders",
+      "name": "Rope Ladders",
+      "description": "Climbing downward has never been easier!",
+      "categories": [],
+      "libraries": [],
+      "requires": [],
+      "recommends": [],
+      "wiki_link": "https://wiki.gm4.co/wiki/Rope_Ladders",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "MichaelMiner137"
+        ]
+      },
+      "hidden": false,
+      "important_note": false,
+      "patch": 18001
     },
     {
       "id": "gm4_scuba_gear",
@@ -1525,11 +1549,11 @@
       "description": "Ease ocean exploration with craftable scuba gear!",
       "categories": [],
       "libraries": [
-        "lib_player_heads"
+        "lib_player_heads",
+        "lib_machines",
+        "lib_forceload"
       ],
-      "requires": [
-        "gm4_custom_crafters"
-      ],
+      "requires": [],
       "recommends": [
         "gm4_sunken_treasure"
       ],
@@ -1548,7 +1572,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_shroomites",
@@ -1579,10 +1603,11 @@
       "name": "Smelteries",
       "description": "Build a Smeltery and double your ore output with this multi-block structure.",
       "categories": [],
-      "libraries": [],
-      "requires": [
-        "gm4_custom_crafters"
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
       ],
+      "requires": [],
       "recommends": [
         "gm4_relocators"
       ],
@@ -1596,7 +1621,11 @@
           "Andante",
           "Kroppeb",
           "Misode",
-          "SpecialBuilder32"
+          "SpecialBuilder32",
+          "BluePsychoRanger"
+        ],
+        "Textures By": [
+          "kyrkis"
         ],
         "Icon Design": [
           "Hozz"
@@ -1604,14 +1633,17 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_soul_glass",
       "name": "Soul Glass",
       "description": "Reverse the effects of beacons with corrupting glass! But be careful, a poison Beacon may sound great at first, but is incredibly painful in pratice.",
       "categories": [],
-      "libraries": [],
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
+      ],
       "requires": [],
       "recommends": [],
       "wiki_link": "https://wiki.gm4.co/wiki/Soul_Glass",
@@ -1628,7 +1660,7 @@
       },
       "hidden": false,
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_spawner_minecarts",
@@ -1685,13 +1717,12 @@
       "name": "Standard Crafting",
       "description": "A crafting recipe pack that adds some nifty new recipes to the game.",
       "categories": [],
-      "libraries": [],
-      "requires": [
-        "gm4_custom_crafters"
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
       ],
-      "recommends": [
-        "gm4_master_crafting"
-      ],
+      "requires": [],
+      "recommends": [],
       "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "credits": {
@@ -1707,7 +1738,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_sunken_treasure",
@@ -1770,9 +1801,11 @@
       "name": "Tinkering Compressors",
       "description": "Automatically compress stacks of items into their block form with a tinker shamir as a machine block, and back.",
       "categories": [],
-      "libraries": [],
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
+      ],
       "requires": [
-        "gm4_custom_crafters",
         "gm4_block_compressors",
         "gm4_metallurgy"
       ],
@@ -1788,13 +1821,16 @@
         "Updated by": [
           "MichaelMiner137"
         ],
+        "Textures by": [
+          "kyrkis"
+        ],
         "Icon Design": [
           "Sparks"
         ]
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_tnt_landmines",
@@ -1802,11 +1838,11 @@
       "description": "Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!",
       "categories": [],
       "libraries": [
-        "lib_player_heads"
+        "lib_player_heads",
+        "lib_machines",
+        "lib_forceload"
       ],
-      "requires": [
-        "gm4_custom_crafters"
-      ],
+      "requires": [],
       "recommends": [],
       "wiki_link": "https://wiki.gm4.co/wiki/TNT_Landmines",
       "video_link": "",
@@ -1824,7 +1860,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_tower_structures",
@@ -1861,10 +1897,11 @@
       "name": "Trapped Signs",
       "description": "Craft trapped signs in a Custom Crafter which, when right-clicked, give off a redstone signal.",
       "categories": [],
-      "libraries": [],
-      "requires": [
-        "gm4_custom_crafters"
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
       ],
+      "requires": [],
       "recommends": [],
       "wiki_link": "https://wiki.gm4.co/wiki/Trapped_Signs",
       "video_link": "https://www.youtube.com/watch?v=IeHYiy5GTeQ",
@@ -1881,17 +1918,18 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_tunnel_bores",
       "name": "Tunnel Bores",
       "description": "Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3\u2a093 tunnels, and even lay rails behind themselves.",
       "categories": [],
-      "libraries": [],
-      "requires": [
-        "gm4_custom_crafters"
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
       ],
+      "requires": [],
       "recommends": [
         "gm4_ziprails",
         "gm4_vertical_rails"
@@ -1908,7 +1946,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_undead_players",
@@ -2034,7 +2072,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18004
+      "patch": 18005
     },
     {
       "id": "gm4_weighted_armour",
@@ -2153,7 +2191,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_ziprails",
@@ -2261,6 +2299,12 @@
         "https://twitter.com/Pandakruthers"
       ]
     },
+    "kyrkis": {
+      "name": "kyrkis",
+      "links": [
+        "http://discordapp.com/users/287287322360414218"
+      ]
+    },
     "Lue": {
       "name": "Lue",
       "links": [
@@ -2270,7 +2314,7 @@
     "MichaelMiner137": {
       "name": "MichaelMiner137",
       "links": [
-        "https://twitter.com/MichaelMiner137"
+        "https://linktr.ee/MichaelMiner137"
       ]
     },
     "Misode": {
