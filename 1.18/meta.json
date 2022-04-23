@@ -1,5 +1,5 @@
 {
-  "last_commit": "0202b54a87fe44dd53e5b8e74df7875739f1949b",
+  "last_commit": "d796124a2c5ecce21c6f36815335036c5a4ce525",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -527,6 +527,28 @@
       "hidden": false,
       "important_note": false,
       "patch": 18005
+    },
+    {
+      "id": "gm4_dripleaf_filters",
+      "name": "Dripleaf Filters",
+      "description": "Dripleaves will flick items that match a hopper's contents into the hopper for you!",
+      "categories": [],
+      "libraries": [],
+      "requires": [],
+      "recommends": [
+        "gm4_book_binders"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Filters",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Icon Design": []
+      },
+      "hidden": false,
+      "important_note": false,
+      "patch": 18001
     },
     {
       "id": "gm4_enchantment_extractors",
