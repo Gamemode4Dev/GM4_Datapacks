@@ -1,4 +1,4 @@
-# run from gm4_forming_press:recipes/forming_recipe_check
+# run from gm4_forming_press:recipes/forming_check_recipes
 
 # logs to coal block
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if score $stack_size gm4_crafting matches ..32 if data storage gm4_forming_press:temp/crafter {Items:[{Slot:0b,id:"minecraft:oak_log"},{Slot:1b,id:"minecraft:oak_log"},{Slot:2b,id:"minecraft:oak_log"},{Slot:3b,id:"minecraft:oak_log"},{Slot:4b,id:"minecraft:wheat"},{Slot:5b,id:"minecraft:oak_log"},{Slot:6b,id:"minecraft:oak_log"},{Slot:7b,id:"minecraft:oak_log"},{Slot:8b,id:"minecraft:oak_log"}]} run loot replace block ~ ~ ~ container.0 loot gm4_forming_press:crafting/charcoal_block

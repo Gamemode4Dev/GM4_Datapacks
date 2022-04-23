@@ -1,5 +1,5 @@
 # @s = gm4_custom_crafter (with boots of ostara recipe)
-# Run from recipe_check
+# Run from check_recipes
 
 # Merge item data into the temporary storage. If the item has custom name, CustomModelData, or similar
 # properties that the user might not want to lose, they will override the normal Boots of Ostara tags,

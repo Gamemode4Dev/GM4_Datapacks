@@ -1,5 +1,5 @@
 # @s = custom crafter with slot_count 7, stack_size ..64
-# run from recipe_check
+# run from check_recipes
 
 #normal
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:grass_block"},{Slot:1b,id:"minecraft:stone_pressure_plate"},{Slot:2b,id:"minecraft:grass_block"},{Slot:3b,id:"minecraft:dirt"},{Slot:4b,id:"minecraft:tnt"},{Slot:5b,id:"minecraft:dirt"},{Slot:7b,id:"minecraft:redstone"}]} run loot replace block ~ ~ ~ container.0 loot gm4_tnt_landmines:crafting/tnt_landmine

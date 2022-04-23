@@ -5,26 +5,8 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:minecart"
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:piston"
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:tripwire_hook"
+          "type": "minecraft:loot_table",
+          "name": "gm4_tunnel_bores:items/piston_minecart"
         }
       ]
     },

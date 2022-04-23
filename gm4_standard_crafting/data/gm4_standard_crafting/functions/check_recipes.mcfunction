@@ -1,5 +1,5 @@
 # @s = custom crafters with valid recipe format inside
-# run from #gm4_custom_crafters:recipe_check
+# run from #gm4_custom_crafters:check_recipes
 
 # recipes
 # sandstones to sand

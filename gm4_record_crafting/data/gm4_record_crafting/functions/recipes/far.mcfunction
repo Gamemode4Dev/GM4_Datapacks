@@ -1,4 +1,4 @@
-# called from gm4_record_crafting:recipe_check
+# called from gm4_record_crafting:check_recipes
 
 # place disc
 loot replace block ~ ~ ~ container.0 loot gm4_record_crafting:crafting/far

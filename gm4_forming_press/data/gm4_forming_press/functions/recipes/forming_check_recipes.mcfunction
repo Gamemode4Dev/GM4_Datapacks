@@ -1,4 +1,4 @@
-# run from #gm4_forming_press:recipe_check
+# run from #gm4_forming_press:check_recipes
 
 # check for liquid recipes
 execute if score $crafted gm4_crafting matches 0 if data storage gm4_forming_press:temp/crafter {Items:[{Slot:4b,id:"minecraft:bucket"}]} run function gm4_forming_press:recipes/liquid_recipes

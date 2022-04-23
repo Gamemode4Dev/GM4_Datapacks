@@ -92,9 +92,9 @@ Bundled in the machines library is the custom crafting library, as it is assumed
 If you would like to remove functionality of the Gamemode 4 Custom Crafter, remove the appropriate function calls from `#load:gm4_machines/enumerate` and `#load:gm4_machines/resolve_load`.
 
 ## How to Use
-Custom Crafters have a function tag used to check recipes: `#gm4_custom_crafters:recipe_check`. Data packs should use this to set up recipes to be crafted in a custom crafter. Custom Crafters run every 16 ticks automatically checking for recipes and replacing them with their appropriate output.
+Custom Crafters have a function tag used to check recipes: `#gm4_custom_crafters:check_recipes`. Data packs should use this to set up recipes to be crafted in a custom crafter. Custom Crafters run every 16 ticks automatically checking for recipes and replacing them with their appropriate output.
 
-Below is specific details in implementing a `recipe_check` function. Custom Crafters will only run recipe checks if all slots have the same item count.
+Below is specific details in implementing a `check_recipes` function. Custom Crafters will only run recipe checks if all slots have the same item count.
 
 ### Check that no other recipes have been completed
 
