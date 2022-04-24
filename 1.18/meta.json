@@ -1,5 +1,5 @@
 {
-  "last_commit": "036af23389ddf7261ccbc5e6c1d3bfba59eb79b3",
+  "last_commit": "476df1ad4ea04d76bbc9963fc09e8eac3361d2a7",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -198,7 +198,8 @@
         "Updated by": [
           "SunderB",
           "Misode",
-          "JP12"
+          "JP12",
+          "BluePsychoRanger"
         ],
         "Textures by": [
           "kyrkis"
@@ -209,7 +210,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_book_binders",
@@ -265,7 +266,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_cement_mixers",
@@ -489,7 +490,8 @@
           "Sparks"
         ],
         "Updated by": [
-          "Federick90"
+          "Federick90",
+          "BluePsychoRanger"
         ],
         "Textures by": [
           "kyrkis"
@@ -500,7 +502,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_display_frames",
@@ -583,7 +585,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_end_fishing",
@@ -632,7 +634,8 @@
           "Elemend"
         ],
         "Updated by": [
-          "Misode"
+          "Misode",
+          "BluePsychoRanger"
         ],
         "Textures by": [
           "kyrkis"
@@ -643,7 +646,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18007
+      "patch": 18008
     },
     {
       "id": "gm4_enderman_support_class",
@@ -725,7 +728,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18001
+      "patch": 18002
     },
     {
       "id": "gm4_fulcio_shamir",
@@ -808,7 +811,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_holographic_tags",
@@ -938,13 +941,17 @@
         "Creator": [
           "Sparks"
         ],
+        "Updated by": [
+          "SpecialBuilder32",
+          "BluePsychoRanger"
+        ],
         "Icon Design": [
           "Hozz"
         ]
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_liquid_tanks",
@@ -971,7 +978,8 @@
           "SpecialBuilder32"
         ],
         "Updated by": [
-          "SpecialBuilder32"
+          "SpecialBuilder32",
+          "BluePsychoRanger"
         ],
         "Textures by": [
           "Vilder50",
@@ -983,7 +991,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18009
+      "patch": 18010
     },
     {
       "id": "gm4_live_catch",
@@ -1234,7 +1242,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_orbis",
@@ -1503,7 +1511,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_relocators",
@@ -1541,7 +1549,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_rope_ladders",
@@ -1591,7 +1599,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_shroomites",
@@ -1652,7 +1660,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_soul_glass",
@@ -1679,7 +1687,7 @@
       },
       "hidden": false,
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_spawner_minecarts",
@@ -1757,7 +1765,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_sunken_treasure",
@@ -1838,7 +1846,8 @@
           "SirSheepe"
         ],
         "Updated by": [
-          "MichaelMiner137"
+          "MichaelMiner137",
+          "BluePsychoRanger"
         ],
         "Textures by": [
           "kyrkis"
@@ -1849,7 +1858,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_tnt_landmines",
@@ -1879,7 +1888,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_tower_structures",
@@ -1929,7 +1938,8 @@
           "Fyid"
         ],
         "Updated by": [
-          "Misode"
+          "Misode",
+          "BluePsychoRanger"
         ],
         "Icon Design": [
           "Sparks"
@@ -1937,7 +1947,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18005
+      "patch": 18006
     },
     {
       "id": "gm4_tunnel_bores",
@@ -1959,13 +1969,17 @@
         "Creator": [
           "Bloo"
         ],
+        "Updated by": [
+          "Bloo",
+          "BluePsychoRanger"
+        ],
         "Icon Design": [
           "Hozz"
         ]
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18007
+      "patch": 18008
     },
     {
       "id": "gm4_undead_players",
