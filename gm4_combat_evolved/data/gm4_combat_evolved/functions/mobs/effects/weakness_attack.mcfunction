@@ -1,5 +1,6 @@
+# weaken players hit with weakness attack
+# @s = player that was hit
 # run from advancement damaged/mob/weakness
-# @s = player that was hit by a weakness attack
 
 advancement revoke @s only gm4_combat_evolved:damaged/mob/weakness
 

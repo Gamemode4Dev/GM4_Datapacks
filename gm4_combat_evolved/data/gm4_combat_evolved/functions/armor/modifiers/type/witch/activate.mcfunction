@@ -1,6 +1,7 @@
-# run from armor/modifiers/type/witch/check
-# @s = player wearing witch armour
+# drop potion with all of the player's effects at their feet
+# @s = player wearing armour
 # at @s
+# run from armor/modifiers/type/witch/check
 
 # mark for change and store piece cooldown (60sec) in data
 scoreboard players set $change gm4_ce_data 1

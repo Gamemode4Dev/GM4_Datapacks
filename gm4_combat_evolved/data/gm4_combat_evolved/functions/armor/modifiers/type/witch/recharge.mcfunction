@@ -1,5 +1,6 @@
+# recharge witch armor piece when cooldown finishes
+# @s = player wearing armour
 # run from armor/modifiers/type/witch/check
-# @s = player wearing witch armour
 
 # use lib_lore to brighten the 'Discharge' text
 data modify storage gm4_lore:temp Source set from storage gm4_combat_evolved:temp tag.display.Lore

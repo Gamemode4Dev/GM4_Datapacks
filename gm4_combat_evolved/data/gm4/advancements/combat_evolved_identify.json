@@ -1,35 +1,33 @@
 {
-    "display": {
-      "icon": {
-        "item": "minecraft:leather_chestplate",
-        "nbt": "{CustomModelData:3420001}"
-      },
-      "title": {
-        "translate": "%1$s%3427655$s",
-        "with": [
-          "Hidden Power",
-          {
-            "translate": "advancement.gm4.combat_evolved.identify.title"
-          }
-        ]
-      },
-      "description": {
-        "translate": "%1$s%3427655$s",
-        "with": [
-          "Identify a weapon or piece of armor looted from a mob",
-          {
-            "translate": "advancement.gm4.combat_evolved.identify.description"
-          }
-        ],
-        "color": "gray"
-      },
-      "frame": "task"
+  "display": {
+    "icon": {
+      "item": "minecraft:leather_chestplate"
     },
-    "parent": "gm4:root",
-    "criteria": {
-      "identify": {
-        "trigger": "minecraft:impossible"
-      }
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Hidden Power",
+        {
+          "translate": "advancement.gm4.combat_evolved.identify.title"
+        }
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Identify a weapon or piece of armor looted from a mob",
+        {
+          "translate": "advancement.gm4.combat_evolved.identify.description"
+        }
+      ],
+      "color": "gray"
+    },
+    "frame": "task"
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "identify": {
+      "trigger": "minecraft:impossible"
     }
   }
-  
+}

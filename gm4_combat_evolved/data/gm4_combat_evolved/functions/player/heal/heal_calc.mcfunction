@@ -1,6 +1,6 @@
-# run from player/process
-# @s = player to heal
 # code taken from sweethearts
+# @s = player to heal
+# run from player/process
 
 function gm4_combat_evolved:player/calculate_hp
 

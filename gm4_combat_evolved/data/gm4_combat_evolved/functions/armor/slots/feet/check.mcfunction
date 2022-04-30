@@ -1,11 +1,13 @@
-# run from armor/process_armor
-# @s = player with modified boots
+# process the boots
+# @s = player wearing the armor
+# run from armor/process
 
 # store information
-data modify storage gm4_combat_evolved:temp tag set from block 29999998 1 7134 Items[{Slot:3b}].tag
+data modify storage gm4_combat_evolved:temp tag set from storage gm4_combat_evolved:temp Items[{Slot:3b}].tag
 
 # check modifier
-function gm4_combat_evolved:armor/check_modifier
+function gm4_combat_evolved:armor/modifiers/check_modifier
 
 # make changes
-execute if score $change gm4_ce_data matches 1 run function gm4_combat_evolved:armor/slots/feet/change
+execute if score $change gm4_ce_data matches 1 run item modify entity @s armor.feet gm4_combat_evolved:update
+scoreboard players reset $change gm4_ce_data

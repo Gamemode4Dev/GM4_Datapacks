@@ -1,5 +1,6 @@
-# run from armor/check_modifier
+# check if armor should activate
 # @s = player being checked
+# run from armor/check_modifier
 
 function gm4_combat_evolved:player/calculate_hp
 

@@ -1,7 +1,7 @@
-# run from armor/active/vorpal/context
+# code taken from Orb of Ankou - expeditious
 # @s = player wearing vorpal armor being damaged
 # at @s
-# code taken from Orb of Ankou - expeditious
+# run from armor/active/vorpal/context
 
 tag @s remove gm4_ce_vorpal_start
 

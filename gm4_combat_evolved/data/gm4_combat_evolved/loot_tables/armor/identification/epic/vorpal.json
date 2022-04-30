@@ -22,7 +22,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_evolved:vorpal}"
+              "tag": "{gm4_combat_evolved:{vorpal:1}}"
             },
             {
               "function": "minecraft:copy_nbt",

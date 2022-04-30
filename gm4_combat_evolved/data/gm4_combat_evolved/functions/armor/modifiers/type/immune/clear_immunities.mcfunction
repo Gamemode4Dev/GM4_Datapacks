@@ -1,5 +1,6 @@
-# run from player/process
+# remove immunity tags from player
 # @s = player with gm4_ce_immune_active tag
+# run from player/process
 
 tag @s remove gm4_ce_immune_active
 tag @s remove gm4_ce_immune_fatigue

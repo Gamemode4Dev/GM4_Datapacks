@@ -1,5 +1,6 @@
+# check trade armor piece cooldown
+# @s = player wearing armour
 # run from armor/check_modifier
-# @s = player wearing trade armour
 
 # refresh if a day has passed
 execute store result score $day gm4_ce_data run time query day

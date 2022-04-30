@@ -1,5 +1,7 @@
+# calculate the difficulty (https://docs.google.com/spreadsheets/d/1jxvFvZS6KcPjp3G8Qbb9rOcZZ8ukyBdGHxTFlA4fysA/edit?usp=sharing)
+# @s = player not in spectator
 # run from slow_clock
-# @s = every online player
+# run from player/process (if player has just (re)spawned)
 
 # difficulty calculations
 # get amount of weeks player has been online (starting at 1, max 10)

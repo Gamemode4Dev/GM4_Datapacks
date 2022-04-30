@@ -1,13 +1,12 @@
 {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-      "equipment": {
-        "chest": {
-          "tag": "gm4_combat_evolved:armor",
-          "nbt": "{gm4_combat_evolved:challenge}"
-        }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "chest": {
+        "tag": "gm4_combat_evolved:armor",
+        "nbt": "{gm4_combat_evolved:challenge}"
       }
     }
   }
-  
+}

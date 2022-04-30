@@ -1,5 +1,6 @@
-# run from armor/modifiers/type/husk/check
+# grant ramping move speed and hunger to sprinting player
 # @s = player wearing husk armour above 50% health and sprinting
+# run from armor/modifiers/type/husk/check
 
 # advance sprinting timer (can advance by 1 for every husk armor piece)
 scoreboard players add @s gm4_ce_t_sprinting 1

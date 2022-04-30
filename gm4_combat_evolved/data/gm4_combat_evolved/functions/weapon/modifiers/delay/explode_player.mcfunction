@@ -1,6 +1,7 @@
-# run from weapon/modifiers/delay/tick
+# activate delayed damage on players
 # @s = entity delay exploding
 # at @s
+# run from weapon/modifiers/delay/tick
 
 function gm4_combat_evolved:player/calculate_hp
 

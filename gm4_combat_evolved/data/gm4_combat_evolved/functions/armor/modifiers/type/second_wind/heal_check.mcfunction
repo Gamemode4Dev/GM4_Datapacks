@@ -1,5 +1,6 @@
+# check player health and heal if below 50%
+# @s = player wearing armor
 # run from armor/modifiers/type/second_wind/check
-# @s = player wearing second_wind piece
 
 function gm4_combat_evolved:player/calculate_hp
 

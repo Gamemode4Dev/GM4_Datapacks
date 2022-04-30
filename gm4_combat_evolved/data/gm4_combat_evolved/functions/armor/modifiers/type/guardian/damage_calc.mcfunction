@@ -1,5 +1,6 @@
-# run from main
+# calculate the damage guardian will take
 # @s = player that was guarding
+# run from main
 
 function gm4_combat_evolved:player/calculate_hp
 

@@ -1,5 +1,6 @@
+# check if thorns armor should be active
+# @s = player wearing armour
 # run from armor/check_modifier
-# @s = player wearing thorned armour
 
 function gm4_combat_evolved:player/calculate_hp
 

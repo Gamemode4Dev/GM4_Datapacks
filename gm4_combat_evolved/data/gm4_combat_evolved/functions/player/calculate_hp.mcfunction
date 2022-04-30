@@ -1,4 +1,20 @@
-# run from many functions to calculate @s health
+# calculate the red health of player calling this function and store in scoreboard gm4_ce_health
+# $max_health and $half_health in gm4_ce_data temporaraly store max and half of max health
+# @s = player to calculate health from
+# run from armor/identify/check_unid
+# run from armor/modifiers/type/highhp
+# run from armor/modifiers/type/lowhp
+# run from armor/modifiers/type/guardian/damage_calc
+# run from armor/modifiers/type/guardian/process
+# run from armor/modifiers/type/husk/check
+# run from armor/modifiers/type/immune/check
+# run from armor/modifiers/type/overload/activate
+# run from armor/modifiers/type/second_wind/heal_check
+# run from armor/modifiers/type/soothe/heal_check
+# run from armor/modifiers/type/thorns/check
+# run from player/heal
+# run from weapon/modifiers/delay
+# run from weapon/modifiers/wither
 
 # get max health
 execute store result score $max_health gm4_ce_data run attribute @s minecraft:generic.max_health get

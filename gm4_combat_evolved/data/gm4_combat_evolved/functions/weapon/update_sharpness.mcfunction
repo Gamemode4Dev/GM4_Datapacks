@@ -1,6 +1,7 @@
-# run from weapon/process_weapon
+# update the weapon damage tooltip when sharpness level changes
 # @s = player wielding the weapon
 # at @s
+# run from weapon/process
 
 # store actual sharpness level in storage
 execute store result storage gm4_combat_evolved:temp tag.gm4_combat_evolved.sharpness short 1 run scoreboard players get $current_sharpness gm4_ce_data

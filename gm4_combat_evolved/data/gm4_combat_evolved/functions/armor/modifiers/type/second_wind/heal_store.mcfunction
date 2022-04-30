@@ -1,5 +1,6 @@
+# store 1 health in 'healstore' which will be healed at the end of player processing (this tick)
+# @s = player wearing armor
 # run from armor/modifiers/type/second_wind/heal_check
-# @s = player wearing second_wind piece
 
 # store healing for later
 scoreboard players add @s gm4_ce_healstore 1

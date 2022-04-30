@@ -1,0 +1,41 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:weapons/identification/common/fire"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:weapons/identification/common/glow"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:weapons/identification/common/heavy"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:weapons/identification/common/light"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:weapons/identification/common/poison"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:weapons/identification/common/quick"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:weapons/identification/common/slow"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:weapons/identification/common/weakness"
+        }
+      ]
+    }
+  ]
+}

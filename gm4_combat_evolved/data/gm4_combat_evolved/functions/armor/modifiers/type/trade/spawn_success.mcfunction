@@ -1,6 +1,7 @@
-# run from armor/modifiers/type/trade/spawn_attempt
+# summon the wandering trader if a good location is found
 # @s = trader marker
 # at @s
+# run from armor/modifiers/type/trade/spawn_attempt
 
 # mark for change and set to active
 scoreboard players set $change gm4_ce_data 1

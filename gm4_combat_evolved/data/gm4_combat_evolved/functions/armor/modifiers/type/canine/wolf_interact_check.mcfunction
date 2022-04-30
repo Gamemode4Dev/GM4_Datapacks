@@ -1,6 +1,7 @@
-# run from advancement interact_canine
+# check for interactions with canine wolves
 # @s = player that interacted with a canine wolf
 # at @s
+# run from advancement interact_canine
 
 advancement revoke @s only gm4_combat_evolved:interact_canine
 

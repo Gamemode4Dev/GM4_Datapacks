@@ -1,6 +1,7 @@
-# run from tick
+# advance the delayed damage timer, activate after 2 seconds
 # @s = entity with a delayed strike
 # at @s
+# run from tick
 
 # progress
 scoreboard players add @s gm4_ce_t_delay 1

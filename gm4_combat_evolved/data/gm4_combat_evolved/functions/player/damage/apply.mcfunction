@@ -1,6 +1,7 @@
-# run from armor/active/guardian/damage_calc and weapon/modifiers/delay/explode_player
-# @s = player that is taking damage
 # code taken from sweethearts
+# @s = player that is taking damage
+# run from armor/active/guardian/damage_calc 
+# run from weapon/modifiers/delay/explode_player
 
 # lower player's max health to their new health
 execute if score $remove_health gm4_ce_data matches 512.. run attribute @s minecraft:generic.max_health modifier add d5694a36-93b0-4f59-b3a3-1dc2e421ea2b "gm4_ce_remove_512" -512 add

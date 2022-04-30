@@ -1,6 +1,7 @@
-# run from armor/modifiers/type/soothe/check
+# check if heal pulse should activate
 # @s = player wearing soothing armour
 # at @s
+# run from armor/modifiers/type/soothe/check
 
 function gm4_combat_evolved:player/calculate_hp
 

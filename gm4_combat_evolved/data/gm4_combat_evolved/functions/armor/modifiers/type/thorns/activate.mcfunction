@@ -1,3 +1,5 @@
+# activate inactive thorns armor
+# @s = player wearing armour
 # run from armor/modifiers/type/thorns/check
 
 # mark for change and set to active

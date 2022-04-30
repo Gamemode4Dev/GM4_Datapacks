@@ -1,5 +1,6 @@
+# damage undamaged player wearing overload armor
+# @s = player wearing armour
 # run from armor/check_modifier
-# @s = player wearing overload armour
 
 # calculate health
 function gm4_combat_evolved:player/calculate_hp

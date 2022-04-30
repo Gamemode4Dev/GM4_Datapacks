@@ -1,5 +1,6 @@
+# check if second_wind piece is off cooldown
+# @s = player wearing armor
 # run from armor/check_modifier
-# @s = player wearing second_wind piece
 
 # get cooldown of piece
 execute store result score $cooldown gm4_ce_data run data get storage gm4_combat_evolved:temp tag.gm4_combat_evolved.cooldown

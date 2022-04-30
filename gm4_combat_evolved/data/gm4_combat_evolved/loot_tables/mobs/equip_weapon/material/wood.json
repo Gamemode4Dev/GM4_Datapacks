@@ -1,72 +1,71 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:alternatives",
-            "children": [
-              {
-                "type": "minecraft:loot_table",
-                "name": "gm4_combat_evolved:weapons/pickaxe/wood",
-                "conditions": [
-                  {
-                    "condition": "minecraft:reference",
-                    "name": "gm4_combat_evolved:mobs/modifiers/dark"
-                  },
-                  {
-                    "condition": "minecraft:random_chance",
-                    "chance": 0.15
-                  }
-                ]
-              },
-              {
-                "type": "minecraft:alternatives",
-                "children": [
-                  {
-                    "type": "minecraft:loot_table",
-                    "name": "gm4_combat_evolved:weapons/axe/wood",
-                    "conditions": [
-                      {
-                        "condition": "minecraft:value_check",
-                        "value": {
-                          "type": "minecraft:score",
-                          "target": {
-                            "type": "minecraft:fixed",
-                            "name": "$difficulty"
-                          },
-                          "score": "gm4_ce_data"
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_evolved:weapons/pickaxe/wood",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_evolved:mobs/modifiers/dark"
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.15
+                }
+              ]
+            },
+            {
+              "type": "minecraft:alternatives",
+              "children": [
+                {
+                  "type": "minecraft:loot_table",
+                  "name": "gm4_combat_evolved:weapons/axe/wood",
+                  "conditions": [
+                    {
+                      "condition": "minecraft:value_check",
+                      "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                          "type": "minecraft:fixed",
+                          "name": "$difficulty"
                         },
-                        "range": {
-                          "min": 4
-                        }
+                        "score": "gm4_ce_data"
                       },
-                      {
-                        "condition": "minecraft:random_chance",
-                        "chance": 0.10
+                      "range": {
+                        "min": 4
                       }
-                    ]
-                  },
-                  {
-                    "type": "minecraft:loot_table",
-                    "name": "gm4_combat_evolved:weapons/shovel/wood",
-                    "conditions": [
-                      {
-                        "condition": "minecraft:random_chance",
-                        "chance": 0.60
-                      }
-                    ]
-                  },
-                  {
-                    "type": "minecraft:loot_table",
-                    "name": "gm4_combat_evolved:weapons/sword/wood"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+                    },
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.10
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:loot_table",
+                  "name": "gm4_combat_evolved:weapons/shovel/wood",
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.60
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:loot_table",
+                  "name": "gm4_combat_evolved:weapons/sword/wood"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,6 @@
-# run from any armor/modifiers/type/TYPE
+# deactivate the modifiers on the armor piece
+# @s = player wearing the armor
+# run from functions in armor/modifiers/type/ (not the folders)
 
 # mark for change and set to inactive
 scoreboard players set $change gm4_ce_data 1

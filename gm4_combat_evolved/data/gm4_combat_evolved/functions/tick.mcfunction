@@ -13,7 +13,7 @@ execute as @a[gamemode=!spectator,tag=gm4_ce_immune_active] run function gm4_com
 # slime landings
 execute as @e[type=slime,tag=gm4_ce_poison_landing] at @s run function gm4_combat_evolved:mobs/effects/poison_landing/process
 
-# spores
+# check for spores
 execute as @e[type=item,tag=!gm4_ce_item_checked] run function gm4_combat_evolved:mobs/effects/spores/check
 
 # advance delayed strikes

@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:weapons/identification/rare/chaos"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:weapons/identification/rare/delay"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:weapons/identification/rare/eat"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:weapons/identification/rare/fly"
+        }
+      ]
+    }
+  ]
+}

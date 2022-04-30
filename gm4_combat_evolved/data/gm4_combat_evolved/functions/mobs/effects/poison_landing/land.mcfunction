@@ -1,5 +1,7 @@
+# apply poison to nearby entities on slime landing
+# @s = slime that landed
+# at @s
 # run from mobs/effects/poison_landing/process
-# @s = slime/magma cube that landed
 
 execute store result score $cube_size gm4_ce_data run data get entity @s Size
 
@@ -11,8 +13,8 @@ execute if score $cube_size gm4_ce_data matches 2 run particle block slime_block
 execute if score $cube_size gm4_ce_data matches 3 run particle block slime_block ~ ~ ~ 1 0 1 0.1 16
 execute if score $cube_size gm4_ce_data matches 4.. run particle block slime_block ~ ~ ~ 2 0 2 0.1 25
 
-execute if score $cube_size gm4_ce_data matches 0 run effect give @a[gamemode=!creative,gamemode=!spectator,distance=..1] poison 1 0
-execute if score $cube_size gm4_ce_data matches 1 run effect give @a[gamemode=!creative,gamemode=!spectator,distance=..2] poison 2 0
-execute if score $cube_size gm4_ce_data matches 2 run effect give @a[gamemode=!creative,gamemode=!spectator,distance=..2.5] poison 2 1
-execute if score $cube_size gm4_ce_data matches 3 run effect give @a[gamemode=!creative,gamemode=!spectator,distance=..3] poison 2 2
-execute if score $cube_size gm4_ce_data matches 4.. run effect give @a[gamemode=!creative,gamemode=!spectator,distance=..4] poison 2 3
+execute if score $cube_size gm4_ce_data matches 0 run effect give @e[gamemode=!creative,gamemode=!spectator,distance=..1,tag=!smithed.strict] poison 1 0
+execute if score $cube_size gm4_ce_data matches 1 run effect give @e[gamemode=!creative,gamemode=!spectator,distance=..2,tag=!smithed.strict] poison 2 0
+execute if score $cube_size gm4_ce_data matches 2 run effect give @e[gamemode=!creative,gamemode=!spectator,distance=..2.5,tag=!smithed.strict] poison 2 1
+execute if score $cube_size gm4_ce_data matches 3 run effect give @e[gamemode=!creative,gamemode=!spectator,distance=..3,tag=!smithed.strict] poison 2 2
+execute if score $cube_size gm4_ce_data matches 4.. run effect give @e[gamemode=!creative,gamemode=!spectator,distance=..4,tag=!smithed.strict] poison 2 3

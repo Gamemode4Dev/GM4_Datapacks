@@ -1,4 +1,7 @@
-# run from armor/modifiers/type/reactive/add_level & player/process
+# give player absorption effect based on their score in gm4_ce_absorp
+# @s = player to grant shield
+# run from armor/modifiers/type/reactive/add_level
+# run from player/process
 
 # remove one to match absorption level
 scoreboard players remove @s gm4_ce_absorp 1

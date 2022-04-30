@@ -1,7 +1,7 @@
-# run from armor/active/vorpal/attempt
+# code taken from Orb of Ankou - expeditious
 # @s = player wearing vorpal armor being damaged
 # at @s
-# code taken from Orb of Ankou - expeditious
+# run from armor/active/vorpal/attempt
 
 scoreboard players operation $randomZ gm4_ce_data = $randomX gm4_ce_data
 scoreboard players operation $randomZ gm4_ce_data %= #64 gm4_ce_data

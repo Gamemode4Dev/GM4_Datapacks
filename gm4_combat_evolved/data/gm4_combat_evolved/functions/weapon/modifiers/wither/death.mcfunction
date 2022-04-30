@@ -1,6 +1,6 @@
+# custom death message for player that died from wither self-damage
+# @s = player that died 
 # run from weapon/modifiers/wither/activate
-# @s = player that died from wither
-
 
 # display custom death message if death messages are on
 execute store result score $death_messages gm4_ce_data run gamerule showDeathMessages

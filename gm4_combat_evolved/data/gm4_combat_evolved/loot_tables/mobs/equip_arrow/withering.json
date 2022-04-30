@@ -1,60 +1,59 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:tipped_arrow",
-            "functions": [
-              {
-                "function": "minecraft:set_nbt",
-                "tag": "{CustomPotionEffects:[{Id:20b,Amplifier:0b,Duration:200}],CustomPotionColor:3484199,HideFlags:32}"
-              },
-              {
-                "function": "minecraft:set_lore",
-                "lore": [
-                  {
-                    "translate": "effect.minecraft.wither",
-                    "color": "red",
-                    "italic": false,
-                    "extra": [
-                      {
-                        "translate": "%1$s%3427655$s",
-                        "with": [
-                          {
-                            "text": " (0:10)"
-                          },
-                          {
-                            "translate": "item.gm4.combat_evolved.lore.duration_10"
-                          }
-                        ],
-                        "color": "red",
-                        "italic": false
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "function": "minecraft:set_name",
-                "name": {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:tipped_arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomPotionEffects:[{Id:20b,Amplifier:0b,Duration:200}],CustomPotionColor:3484199,HideFlags:32}"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "effect.minecraft.wither",
+                  "color": "red",
+                  "italic": false,
+                  "extra": [
                     {
-                      "text": "Arrow of Wither"
-                    },
-                    {
-                      "translate": "item.gm4.combat_evolved.lore.wither_arrow"
+                      "translate": "%1$s%3427655$s",
+                      "with": [
+                        {
+                          "text": " (0:10)"
+                        },
+                        {
+                          "translate": "item.gm4.combat_evolved.lore.duration_10"
+                        }
+                      ],
+                      "color": "red",
+                      "italic": false
                     }
-                  ],
-                  "italic": false
+                  ]
                 }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "Arrow of Wither"
+                  },
+                  {
+                    "translate": "item.gm4.combat_evolved.lore.wither_arrow"
+                  }
+                ],
+                "italic": false
               }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

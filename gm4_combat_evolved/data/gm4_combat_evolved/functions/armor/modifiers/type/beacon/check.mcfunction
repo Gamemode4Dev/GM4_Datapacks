@@ -1,6 +1,7 @@
-# run from armor/check_modifier
-# @s = player wearing a beacon at night
+# mark players wearing a beacon armor piece, and flash a beacon if crouching
+# @s = player wearing beacon armor
 # at @s
+# run from armor/check_modifier
 
 tag @s add gm4_ce_beacon_active
 

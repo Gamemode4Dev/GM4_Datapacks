@@ -1,6 +1,7 @@
-# run from armor/active/guardian/process
+# start guarding nearby players
 # @s = player guarding
 # at @s
+# run from armor/active/guardian/process
 
 # tag self for easy finding
 tag @s add gm4_ce_guardian

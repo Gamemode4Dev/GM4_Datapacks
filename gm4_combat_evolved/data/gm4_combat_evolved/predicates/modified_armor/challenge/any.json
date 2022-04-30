@@ -1,22 +1,21 @@
 {
-    "condition": "minecraft:alternative",
-    "terms": [
-      {
-        "condition": "minecraft:reference",
-        "name": "gm4_combat_evolved:modified_armor/challenge/head"
-      },
-      {
-        "condition": "minecraft:reference",
-        "name": "gm4_combat_evolved:modified_armor/challenge/chest"
-      },
-      {
-        "condition": "minecraft:reference",
-        "name": "gm4_combat_evolved:modified_armor/challenge/legs"
-      },
-      {
-        "condition": "minecraft:reference",
-        "name": "gm4_combat_evolved:modified_armor/challenge/feet"
-      }
-    ]
-  }
-  
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:reference",
+      "name": "gm4_combat_evolved:modified_armor/challenge/head"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "gm4_combat_evolved:modified_armor/challenge/chest"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "gm4_combat_evolved:modified_armor/challenge/legs"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "gm4_combat_evolved:modified_armor/challenge/feet"
+    }
+  ]
+}

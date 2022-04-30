@@ -1,6 +1,6 @@
-# run from any armor/active/heal/heal_calc
-# @s = player to heal
 # code taken from sweethearts
+# @s = player to heal
+# run from any armor/active/heal/heal_calc
 
 # calculate max health to get player to new health
 scoreboard players operation $remove_health gm4_ce_data = $max_health gm4_ce_data

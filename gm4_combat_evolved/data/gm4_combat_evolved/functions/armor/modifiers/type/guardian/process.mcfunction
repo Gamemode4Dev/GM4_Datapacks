@@ -1,5 +1,6 @@
-# run from armor/check_modifier
+# check if guardian is above 50% health
 # @s = player guarding
+# run from armor/check_modifier
 
 function gm4_combat_evolved:player/calculate_hp
 

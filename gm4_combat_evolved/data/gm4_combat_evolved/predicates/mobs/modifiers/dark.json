@@ -1,20 +1,19 @@
 [
-    {
-      "condition": "minecraft:inverted",
-      "term": {
-        "condition": "minecraft:location_check",
-        "predicate": {
-          "biome": "minecraft:lush_caves"
-        }
-      }
-    },
-    {
+  {
+    "condition": "minecraft:inverted",
+    "term": {
       "condition": "minecraft:location_check",
       "predicate": {
-        "light": {
-          "light": 0
-        }
+        "biome": "minecraft:lush_caves"
       }
     }
-  ]
-  
+  },
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "light": {
+        "light": 0
+      }
+    }
+  }
+]

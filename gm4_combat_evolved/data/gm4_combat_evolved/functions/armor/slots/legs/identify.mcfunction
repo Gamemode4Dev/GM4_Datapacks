@@ -1,11 +1,13 @@
-# run from armor/process_armor
-# @s = player with modified leggings
+# identify the leggings
+# @s = player wearing the armor
+# run from armor/process
 
 # store information
-data modify storage gm4_combat_evolved:temp tag set from block 29999998 1 7134 Items[{Slot:2b}].tag
+data modify storage gm4_combat_evolved:temp tag set from storage gm4_combat_evolved:temp Items[{Slot:2b}].tag
 
 # check unid
 function gm4_combat_evolved:armor/identify/check_unid
 
 # make changes
-execute if score $change gm4_ce_data matches 1 run function gm4_combat_evolved:armor/slots/legs/change
+execute if score $change gm4_ce_data matches 1 run item modify entity @s armor.legs gm4_combat_evolved:update
+scoreboard players reset $change gm4_ce_data

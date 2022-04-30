@@ -1,6 +1,7 @@
-# run from weapon/check_modifier
+# randomly enchant the weapon with level 15-40 enchants
 # @s = player wielding the weapon
 # at @s
+# run from weapon/check_modifier
 
 # get random enchants
 # slots 0 is reserved for the weapon, slot 1 is reserved for the modifier

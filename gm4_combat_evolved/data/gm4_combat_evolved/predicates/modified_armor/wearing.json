@@ -1,54 +1,53 @@
 {
-    "condition": "minecraft:alternative",
-    "terms": [
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "equipment": {
-            "feet": {
-              "tag": "gm4_combat_evolved:armor",
-              "nbt": "{gm4_combat_evolved:{}}"
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "equipment": {
-            "legs": {
-              "tag": "gm4_combat_evolved:armor",
-              "nbt": "{gm4_combat_evolved:{}}"
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "equipment": {
-            "chest": {
-              "tag": "gm4_combat_evolved:armor",
-              "nbt": "{gm4_combat_evolved:{}}"
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "equipment": {
-            "head": {
-              "tag": "gm4_combat_evolved:armor",
-              "nbt": "{gm4_combat_evolved:{}}"
-            }
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "feet": {
+            "tag": "gm4_combat_evolved:armor",
+            "nbt": "{gm4_combat_evolved:{}}"
           }
         }
       }
-    ]
-  }
-  
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "legs": {
+            "tag": "gm4_combat_evolved:armor",
+            "nbt": "{gm4_combat_evolved:{}}"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "chest": {
+            "tag": "gm4_combat_evolved:armor",
+            "nbt": "{gm4_combat_evolved:{}}"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "head": {
+            "tag": "gm4_combat_evolved:armor",
+            "nbt": "{gm4_combat_evolved:{}}"
+          }
+        }
+      }
+    }
+  ]
+}

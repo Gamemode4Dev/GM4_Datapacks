@@ -1,5 +1,6 @@
-# run from armor/slots/SLOT/identify
+# get the unid of worn unidentified armor, and check if the armor should be identified
 # @s = player wearing the armor
+# run from functions in armor/slots/SLOT/identify
 
 # get unid
 # unid is made out of two parts, this gets the first part which signifies the way the armor is identified

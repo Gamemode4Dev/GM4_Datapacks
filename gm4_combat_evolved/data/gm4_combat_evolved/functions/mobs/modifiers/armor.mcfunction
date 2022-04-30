@@ -1,5 +1,6 @@
-# run from mobs/modifiers/prep
+# boost mob stats from the (randomized) scores
 # @s = mobs that can be buffed
+# run from mobs/modifiers/prep
 
 # apply armor boost
 # STEP SIZE = score*1

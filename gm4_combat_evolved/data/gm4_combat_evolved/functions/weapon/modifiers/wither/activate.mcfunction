@@ -1,5 +1,6 @@
-# run from weapon/check_modifier
+# damage wielder when weapon is used
 # @s = player wielding the weapon
+# run from weapon/check_modifier
 
 # calculate health
 function gm4_combat_evolved:player/calculate_hp

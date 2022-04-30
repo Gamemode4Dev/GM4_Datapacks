@@ -1,6 +1,6 @@
-# run from player/damage/context
-# @s = player to revert max health
 # code taken from sweethearts
+# @s = player to revert max health
+# run from player/damage/context
 
 # revert max health
 attribute @s minecraft:generic.max_health modifier remove d5694a36-93b0-4f59-b3a3-1dc2e421ea2b

@@ -1,38 +1,37 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:loot_table",
-            "name": "gm4_combat_evolved:armor/unidentified/rare/consume"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "name": "gm4_combat_evolved:armor/unidentified/rare/immune"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "name": "gm4_combat_evolved:armor/unidentified/rare/reactive"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "name": "gm4_combat_evolved:armor/unidentified/rare/shadow"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "name": "gm4_combat_evolved:armor/unidentified/rare/sneak"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "name": "gm4_combat_evolved:armor/unidentified/rare/soothe"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "name": "gm4_combat_evolved:armor/unidentified/rare/trade"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:armor/unidentified/rare/consume"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:armor/unidentified/rare/immune"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:armor/unidentified/rare/reactive"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:armor/unidentified/rare/shadow"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:armor/unidentified/rare/sneak"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:armor/unidentified/rare/soothe"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_evolved:armor/unidentified/rare/trade"
+        }
+      ]
+    }
+  ]
+}

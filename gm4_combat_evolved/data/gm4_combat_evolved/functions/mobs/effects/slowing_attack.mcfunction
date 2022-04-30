@@ -1,5 +1,6 @@
+# slow players hit with slowing attack
+# @s = player that was hit
 # run from advancement damaged/mob/slowing
-# @s = player that was hit by a slowing attack
 
 advancement revoke @s only gm4_combat_evolved:damaged/mob/slowing
 

@@ -1,5 +1,6 @@
+# check witch armor piece cooldown
+# @s = player wearing armour
 # run from armor/check_modifier
-# @s = player wearing witch armour
 
 # get cooldown on armor
 execute store result score $cooldown gm4_ce_data run data get storage gm4_combat_evolved:temp tag.gm4_combat_evolved.cooldown

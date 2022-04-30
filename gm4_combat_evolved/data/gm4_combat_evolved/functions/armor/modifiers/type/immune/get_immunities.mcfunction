@@ -1,5 +1,6 @@
-# run from armor/modifiers/type/immune/check
+# grant immunity tags to player depending on the armor worn
 # @s = player wearing immune armour above 50% health
+# run from armor/modifiers/type/immune/check
 
 # get levels
 execute store result score $level gm4_ce_data run data get storage gm4_combat_evolved:temp tag.gm4_combat_evolved.level

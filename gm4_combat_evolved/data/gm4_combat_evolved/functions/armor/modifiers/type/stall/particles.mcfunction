@@ -1,6 +1,7 @@
-# run from armor/modifiers/type/stall/activate
+# particles for stall aura activating
 # @s = stall aura marker
 # at @s
+# run from armor/modifiers/type/stall/activate
 
 scoreboard players add @s gm4_ce_data 1
 particle ambient_entity_effect ^ ^ ^-1 0.600 0.271 0.227 1 0 normal

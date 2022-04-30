@@ -1,8 +1,11 @@
-# run from advancement damaged/armor/shielded
+# remove player absorption when hit
 # @s = player wearing shielded armor being damaged
 # at @s
+# run from advancement damaged/armor/shielded
 
 advancement revoke @s only gm4_combat_evolved:damaged/armor/shielded
-scoreboard players set @s gm4_ce_t_shield 5
 
 effect clear @s absorption
+
+# put effect on cooldown
+scoreboard players set @s gm4_ce_t_shield 5

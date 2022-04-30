@@ -1,5 +1,6 @@
-# run from armor/active/canine/check
+# match wolf to armor slot and player id
 # @s = new wolf
+# run from armor/active/canine/wolf_spawn
 
 tag @s remove gm4_ce_new_wolf
 scoreboard players operation @s gm4_ce_id = $curr_id gm4_ce_id

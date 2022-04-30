@@ -1,6 +1,7 @@
-# run from armor/modifiers/type/soothe/activate
+# display a ring of heart particles on heal pulse activation
 # @s = soothe pulse marker
 # at @s
+# run from armor/modifiers/type/soothe/activate
 
 scoreboard players add @s gm4_ce_data 1
 particle heart ^ ^ ^-1 0 0 0 0 1

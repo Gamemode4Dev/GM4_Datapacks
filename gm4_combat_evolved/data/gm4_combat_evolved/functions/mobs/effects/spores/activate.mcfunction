@@ -1,6 +1,7 @@
-# run from mobs/effects/spores/advance
+# summon new zombie/husk/drowned when spore is grown
 # @s = spore item
 # at @s
+# run from mobs/effects/spores/advance
 
 execute if data entity @s Item.tag{gm4_ce_spore:zombie} run summon zombie ~ ~ ~ {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}
 execute if data entity @s Item.tag{gm4_ce_spore:husk} run summon husk ~ ~ ~ {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}

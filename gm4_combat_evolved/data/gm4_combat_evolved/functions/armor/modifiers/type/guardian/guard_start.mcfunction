@@ -1,5 +1,6 @@
-# run from armor/active/guardian/process
+# grant resistance to players being guarded by a guardian
 # @s = player being guarded
+# run from armor/active/guardian/process
 
 effect give @s resistance 1 1 true
 tag @s add gm4_ce_guarded

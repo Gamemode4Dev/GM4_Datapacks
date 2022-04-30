@@ -1,6 +1,7 @@
-# run from armor/modifiers/type/soothe/check
+# recharge the heal pulse armor piece when cooldown is over
 # @s = player wearing soothing armour
 # at @s
+# run from armor/modifiers/type/soothe/check
 
 # mark for change and set to inactive
 scoreboard players set $change gm4_ce_data 1

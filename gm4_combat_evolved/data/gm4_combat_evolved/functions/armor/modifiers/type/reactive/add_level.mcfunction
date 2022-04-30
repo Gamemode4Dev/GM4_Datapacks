@@ -1,6 +1,7 @@
-# run from advancement damaged/armor/reactive
-# @s = player wearing reactive armor being damaged
+# add absorption to player that got hit (red health hits only)
+# @s = player wearing armor
 # at @s
+# run from advancement damaged/armor/reactive
 
 advancement revoke @s only gm4_combat_evolved:damaged/armor/reactive
 

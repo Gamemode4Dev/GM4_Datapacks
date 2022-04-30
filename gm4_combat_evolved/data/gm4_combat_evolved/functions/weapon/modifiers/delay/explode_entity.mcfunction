@@ -1,6 +1,7 @@
-# run from weapon/modifiers/delay/tick
+# activate delayed damage on non-players
 # @s = entity delay exploding
 # at @s
+# run from weapon/modifiers/delay/tick
 
 # get current health
 execute store result score $health gm4_ce_data run data get entity @s Health

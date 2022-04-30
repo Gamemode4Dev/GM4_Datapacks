@@ -1,6 +1,7 @@
-# run from weapon/check_modifier
+# apply levitation to entities hit
 # @s = player wielding the weapon
 # at @s
+# run from weapon/check_modifier
 
 # get item level
 execute store result score $level gm4_ce_data run data get storage gm4_combat_evolved:temp tag.gm4_combat_evolved.level

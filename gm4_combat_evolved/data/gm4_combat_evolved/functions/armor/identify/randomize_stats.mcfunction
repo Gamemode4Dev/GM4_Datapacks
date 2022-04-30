@@ -1,4 +1,6 @@
-# run from any in armor/identify/check_mod/FILE
+# stores random values in scoreboards and storage which can be used for identification
+# @s = player wearing the armor
+# run from functions in armor/identify/check_mod/
 
 # use loot tables to fill shulker box with items
 # slots 0-3 are reserved for armor pieces, slot 4 is reserved for the modifier

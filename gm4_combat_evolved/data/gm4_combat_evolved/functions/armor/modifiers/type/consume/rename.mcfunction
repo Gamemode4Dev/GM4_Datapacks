@@ -1,3 +1,6 @@
+# rename satiated armor unless it was renamed by the player
+# @s = player wearing the armor
+# at @s
 # run from armor/consume/satiated
 
 loot replace block 29999998 1 7134 container.4 loot gm4_combat_evolved:technical/satiate_name

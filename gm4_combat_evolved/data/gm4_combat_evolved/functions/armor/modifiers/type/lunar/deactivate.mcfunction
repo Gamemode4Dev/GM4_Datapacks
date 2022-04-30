@@ -1,5 +1,6 @@
+# remove effects from lunar armor during the day
+# @s = player wearing armour
 # run from armor/modifiers/type/lunar/check
-# @s = player wearing lunar armour at day
 
 # mark for change and set to inactive
 scoreboard players set $change gm4_ce_data 1

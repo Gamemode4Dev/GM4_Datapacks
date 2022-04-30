@@ -1,3 +1,5 @@
+# randomise stats for identification
+# @s = player wielding the weapon
 # run from weapon/identify/pick_mod
 
 # use loot tables to fill shulker box with items

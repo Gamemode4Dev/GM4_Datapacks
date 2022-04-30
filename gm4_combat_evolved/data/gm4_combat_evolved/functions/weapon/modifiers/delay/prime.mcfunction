@@ -1,6 +1,7 @@
-# run from weapon/modifiers/delay/activate
+# prime delayed damage on this entity
 # @s = entity being hit with delay
 # at @s
+# run from weapon/modifiers/delay/activate
 
 # prime bomb timer
 tag @s add gm4_cd_delay_active

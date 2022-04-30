@@ -1,3 +1,5 @@
+# activate the second modifier on the armor piece
+# @s = player wearing the armor
 # run from armor/modifiers/activate_1
 
 # modify attribute

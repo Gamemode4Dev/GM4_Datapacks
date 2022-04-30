@@ -1,7 +1,7 @@
-# run from armor/active/vorpal/attempt
+# code taken from Orb of Ankou - expeditious
 # @s = player wearing vorpal armor being damaged
 # at @s
-# code taken from Orb of Ankou - expeditious
+# run from armor/active/vorpal/attempt
 
 # effects
 execute at @e[type=marker,tag=gm4_ce_vorpal,distance=..16] align xyz run tp @s ~0.5 ~ ~0.5

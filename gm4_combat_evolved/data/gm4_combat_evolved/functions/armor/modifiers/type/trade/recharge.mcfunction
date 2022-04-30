@@ -1,5 +1,6 @@
+# recharge trade armor piece if cooldown is over
+# @s = player wearing armour
 # run from armor/modifiers/type/trade/check
-# @s = player wearing trade armour
 
 # mark for change and set to inactive
 scoreboard players set $change gm4_ce_data 1

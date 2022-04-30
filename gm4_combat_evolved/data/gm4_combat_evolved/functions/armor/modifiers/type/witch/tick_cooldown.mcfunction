@@ -1,5 +1,6 @@
+# reduce cooldown on witch armor piece
+# @s = player wearing armour
 # run from armor/modifiers/type/witch/check
-# @s = player wearing witch armour
 
 # mark for change
 scoreboard players set $change gm4_ce_data 1

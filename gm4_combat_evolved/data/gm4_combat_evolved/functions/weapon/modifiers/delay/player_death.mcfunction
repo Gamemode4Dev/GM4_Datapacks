@@ -1,5 +1,6 @@
+# custom death message from players that die from delayed damage
+# @s = player that died
 # run from weapon/modifiers/delay/explode_player
-# @s = player that died from delay
 
 # display custom death message if death messages are on
 execute store result score $death_messages gm4_ce_data run gamerule showDeathMessages

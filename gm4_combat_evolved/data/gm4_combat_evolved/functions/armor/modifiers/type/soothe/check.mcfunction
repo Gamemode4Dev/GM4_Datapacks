@@ -1,6 +1,7 @@
-# run from armor/check_modifier
+# check if heal pulse is off cooldown
 # @s = player wearing soothing armour
 # at @s
+# run from armor/check_modifier
 
 # refresh if a day has passed
 execute store result score $day gm4_ce_data run time query day

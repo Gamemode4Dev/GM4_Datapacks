@@ -1,7 +1,7 @@
-# run from armor/active/vorpal/randomize
+# code taken from Orb of Ankou - expeditious
 # @s = player wearing vorpal armor being damaged
 # at @s
-# code taken from Orb of Ankou - expeditious
+# run from armor/active/vorpal/randomize
 
 execute at @s if score $randomX gm4_ce_data matches 16.. run tp @s ~16 ~ ~
 execute if score $randomX gm4_ce_data matches 16.. run scoreboard players remove $randomX gm4_ce_data 16

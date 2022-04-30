@@ -1,6 +1,6 @@
-# run from any in armor/identify/check_mod/FILE
-# @s = unidentified armor item
-# at @s
+# make final adjustments to storage for identification
+# @s = player wearing the armor
+# run from functions in armor/identify/check_mod/
 
 # mark for change
 scoreboard players set $change gm4_ce_data 1

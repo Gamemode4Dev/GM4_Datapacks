@@ -1,6 +1,7 @@
-# run from mobs/MOB
+# apply biome-specific modifiers randomize the stats
 # @s = mobs that can be buffed
 # at @s
+# run from functions in mobs/mob_types/
 
 # biome specific modifiers for any mob
 execute if predicate gm4_combat_evolved:mobs/modifiers/dark run scoreboard players add $mob_stats gm4_ce_data 3

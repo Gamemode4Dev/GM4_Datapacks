@@ -1,6 +1,7 @@
-# run from advancement damaged/armor/stall
-# @s = player wearing stall armor being damaged
+# actiavate stall armor on wearer getting hit
+# @s = player wearing armor
 # at @s
+# run from advancement damaged/armor/stall
 
 advancement revoke @s only gm4_combat_evolved:damaged/armor/stall
 

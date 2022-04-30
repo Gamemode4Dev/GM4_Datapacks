@@ -1,5 +1,6 @@
-# run from mobs/modifiers/prep
+# boost mob stats from the (randomized) scores
 # @s = mobs that can be buffed
+# run from mobs/modifiers/prep
 
 # apply speed boost
 # STEP SIZE = score*0.02 (multiply_base)

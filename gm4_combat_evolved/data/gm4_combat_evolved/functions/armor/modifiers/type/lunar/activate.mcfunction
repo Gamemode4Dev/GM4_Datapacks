@@ -1,5 +1,6 @@
+# grant player stats according to moon cycle
+# @s = player wearing armour
 # run from armor/modifiers/type/lunar/check
-# @s = player wearing lunar armour at night
 
 # mark for change and set to active
 scoreboard players set $change gm4_ce_data 1

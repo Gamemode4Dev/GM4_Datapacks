@@ -1,5 +1,6 @@
-# run from armor/identify/check_unid
+# applies the modifier stored in the armor unid to storage, then calls to update that armor on the player
 # @s = player wearing the armor
+# run from armor/identify/check_unid
 
 # randomize
 function gm4_combat_evolved:armor/identify/randomize_stats

@@ -1,3 +1,5 @@
+# @s = vorpal marker
+# at @s
 # run from armor/active/vorpal/33_128
 
 execute if score $y_pos gm4_ce_data matches ..48 run spreadplayers ~ ~ 0 8 under 48 false @e[type=marker,tag=gm4_ce_vorpal]

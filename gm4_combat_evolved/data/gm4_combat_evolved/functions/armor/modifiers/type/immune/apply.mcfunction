@@ -1,5 +1,6 @@
-# run from tick
+# clear effects depending on player tags from armor
 # @s = player wearing immune armour above 50% health
+# run from tick
 
 # clear effects
 effect clear @s[tag=gm4_ce_immune_fatigue] mining_fatigue

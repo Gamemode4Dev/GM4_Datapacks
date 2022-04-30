@@ -1,5 +1,6 @@
-# run from main
+# process player
 # @s = online player
+# run from main
 
 # calculate difficulty for newly (re)spawned players
 execute if score @s gm4_ce_alivetime matches 1..16 run function gm4_combat_evolved:player/calculate_difficulty
@@ -19,7 +20,7 @@ tag @s remove gm4_ce_beacon_active
 execute if entity @s[tag=gm4_ce_immune_active] run function gm4_combat_evolved:armor/modifiers/type/immune/clear_immunities
 
 # process armor
-execute if predicate gm4_combat_evolved:modified_armor/wearing run function gm4_combat_evolved:armor/process_armor
+execute if predicate gm4_combat_evolved:modified_armor/wearing run function gm4_combat_evolved:armor/process
 
 # shield players if they have stored shield
 execute if score @s gm4_ce_absorp matches 1.. run function gm4_combat_evolved:player/shield_player
