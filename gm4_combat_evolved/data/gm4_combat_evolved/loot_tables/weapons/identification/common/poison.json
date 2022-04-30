@@ -52,7 +52,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_evolved:{strike:1,modifier:101}}"
+              "tag": "{gm4_combat_evolved:{strike:1,modifier:101,damage_buffed:-1}}"
             },
             {
               "function": "minecraft:copy_nbt",

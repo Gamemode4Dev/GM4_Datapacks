@@ -6,6 +6,9 @@
 # store actual sharpness level in storage
 execute store result storage gm4_combat_evolved:temp tag.gm4_combat_evolved.sharpness short 1 run scoreboard players get $current_sharpness gm4_ce_data
 
+# check if text should be light green
+execute store result score $damage_buffed gm4_ce_data run data get storage gm4_combat_evolved:temp tag.gm4_combat_evolved.damage_buffed
+
 # get weapon damage and added damage from sharpness (0.5 * level + 0.5)
 execute store result score $damage gm4_ce_data run data get storage gm4_combat_evolved:temp tag.AttributeModifiers[{AttributeName:"minecraft:generic.attack_damage"}].Amount 10
 scoreboard players operation $current_sharpness gm4_ce_data *= #5 gm4_ce_data
