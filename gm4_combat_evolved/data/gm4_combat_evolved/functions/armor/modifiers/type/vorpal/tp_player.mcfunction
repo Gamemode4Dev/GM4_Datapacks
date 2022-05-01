@@ -7,7 +7,8 @@
 execute at @e[type=marker,tag=gm4_ce_vorpal,distance=..16] align xyz run tp @s ~0.5 ~ ~0.5
 kill @e[type=marker,tag=gm4_ce_vorpal]
 
-execute at @s as @a[distance=..16] at @s run playsound entity.enderman.teleport player @s ~ ~ ~ 0.8 0.8
+playsound entity.enderman.teleport player @a ~ ~ ~ 0.8 1.2
+execute at @s run playsound entity.enderman.teleport player @a ~ ~ ~ 0.8 0.8
 execute at @s run particle portal ~ ~0.8 ~ 0.2 0.4 0.2 1 16
 
 # compatibility with teleportation anchors

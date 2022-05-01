@@ -17,5 +17,5 @@ execute at @s run playsound minecraft:item.shield.block player @s ~ ~ ~ 0.4 0
 # damage player if they are alive
 execute if score $remove_health gm4_ce_data < $max_health gm4_ce_data run function gm4_combat_evolved:player/damage/apply
 
-# kill player if health reached 0
-execute if score $remove_health gm4_ce_data >= $max_health gm4_ce_data run function gm4_combat_evolved:armor/modifiers/type/guardian/guard_death
+# kill player if health reached 0 (and player is alive)
+execute if score @s gm4_ce_health matches 1.. if score $remove_health gm4_ce_data >= $max_health gm4_ce_data run function gm4_combat_evolved:armor/modifiers/type/guardian/guard_death
