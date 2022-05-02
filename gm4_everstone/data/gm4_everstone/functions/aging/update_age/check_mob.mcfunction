@@ -13,3 +13,5 @@ execute if entity @s[type=slime] run function gm4_everstone:aging/update_age/sli
 execute if entity @s[type=stray] run function gm4_everstone:aging/update_age/stray
 execute if entity @s[type=vindicator] run function gm4_everstone:aging/update_age/vindicator
 execute if entity @s[type=zombie] run function gm4_everstone:aging/update_age/zombie
+
+tag @e remove gm4_es_new_mob
