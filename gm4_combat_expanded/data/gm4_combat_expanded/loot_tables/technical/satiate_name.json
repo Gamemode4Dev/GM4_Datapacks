@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "Satiated ",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_expanded.name.satiated"
+                }
+              ]
+            },
+            {
+              "nbt": "tag.gm4_combat_expanded.name",
+              "storage": "gm4_combat_expanded:temp",
+              "interpret": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

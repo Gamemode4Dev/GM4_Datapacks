@@ -1,0 +1,21 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "gm4_combat_expanded:temp"
+    },
+    "ops": [
+      {
+        "source": "tag",
+        "target": "{}",
+        "op": "merge"
+      },
+      {
+        "source": "tag.gm4_combat_expanded",
+        "target": "gm4_combat_expanded",
+        "op": "replace"
+      }
+    ]
+  }
+]

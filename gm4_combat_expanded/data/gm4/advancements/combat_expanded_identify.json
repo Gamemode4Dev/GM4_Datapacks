@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:leather_chestplate"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Hidden Power",
+        {
+          "translate": "advancement.gm4.combat_expanded.identify.title"
+        }
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Identify a weapon or piece of armor looted from a mob",
+        {
+          "translate": "advancement.gm4.combat_expanded.identify.description"
+        }
+      ],
+      "color": "gray"
+    },
+    "frame": "task"
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "identify": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
