@@ -9,8 +9,8 @@ execute if score $difficulty gm4_ce_data matches 4.. run scoreboard players add 
 execute if score $difficulty gm4_ce_data matches 11.. run scoreboard players add $mob_speed gm4_ce_data 6
 
 # biome specific modifiers for this mob
-execute if predicate gm4_combat_expanded:mobs/modifiers/mountainous run effect give @s jump_boost 1000000 1 true
-execute if predicate gm4_combat_expanded:mobs/modifiers/burned if predicate gm4_combat_expanded:technical/chance_50 run effect give @s fire_resistance 1000000 0 true
+execute if predicate gm4_combat_expanded:mobs/modifiers/mountainous run effect give @s jump_boost 1000000 1
+execute if predicate gm4_combat_expanded:mobs/modifiers/burned if predicate gm4_combat_expanded:technical/chance_50 run effect give @s fire_resistance 1000000 0
 execute if predicate gm4_combat_expanded:mobs/modifiers/lush_caves if predicate gm4_combat_expanded:technical/chance_50 run function gm4_combat_expanded:mobs/effects/lush_caves_spider
 execute if predicate gm4_combat_expanded:mobs/modifiers/toxic run function gm4_combat_expanded:mobs/effects/toxic_spider
 execute if predicate gm4_combat_expanded:mobs/modifiers/growth if entity @s[tag=!gm4_ce_extra_mob] store success score $mob_extras gm4_ce_data run summon spider ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}

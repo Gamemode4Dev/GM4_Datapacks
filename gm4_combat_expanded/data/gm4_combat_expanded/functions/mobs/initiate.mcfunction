@@ -1,7 +1,7 @@
 # initiate newly spawned mobs (mobs without any tags)
 # @s = mobs that can be buffed
 # at @s
-# run from mobs/check
+# run from mobs/check_mob
 
 # get difficulty score from the nearest player
 scoreboard players operation $difficulty gm4_ce_data = @p[gamemode=!spectator] gm4_ce_difficult
@@ -43,3 +43,6 @@ execute unless predicate gm4_combat_expanded:mobs/list_undead run effect give @s
 # process any spawned mobs
 tag @s remove gm4_ce_extra_mob
 execute if score $mob_extras gm4_ce_data matches 1.. as @e[tag=gm4_ce_extra_mob] at @s run function gm4_combat_expanded:mobs/initiate
+
+# mark mob as initiated
+tag @s add gm4_ce_initiated

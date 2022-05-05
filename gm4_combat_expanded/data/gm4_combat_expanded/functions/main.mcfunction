@@ -1,7 +1,7 @@
 schedule function gm4_combat_expanded:main 16t
 
 # initiate new mobs (mobs that do not have any tags)
-execute as @e[predicate=gm4_combat_expanded:mobs/list_full,tag=] at @s run function gm4_combat_expanded:mobs/check
+execute as @e[predicate=gm4_combat_expanded:mobs/list_full,tag=] at @s run function gm4_combat_expanded:mobs/check_mob
 
 # process cloaked creepers
 execute as @e[type=creeper,tag=gm4_ce_cloaked_creeper] at @s if entity @a[gamemode=!spectator,gamemode=!creative,distance=..3.1] run function gm4_combat_expanded:mobs/effects/cloaked_creeper
