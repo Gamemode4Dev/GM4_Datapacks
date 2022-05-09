@@ -1,5 +1,5 @@
 {
-  "last_commit": "476df1ad4ea04d76bbc9963fc09e8eac3361d2a7",
+  "last_commit": "d979034cd5fc511615f87b73f5f7a43a1d7b83dc",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -693,7 +693,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18007
+      "patch": 18008
     },
     {
       "id": "gm4_forming_press",
