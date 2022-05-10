@@ -4,7 +4,7 @@
 # run from gm4_machines:resolve_load/place_machine_minecart
 # and from gm4_machines:main
 
-advancement revoke @s only gm4_machines-1.0:place_machine_cart
+advancement revoke @s only gm4_machines-1.1:place_machine_cart
 
 # set up
 tag @s add gm4_machines_placer
