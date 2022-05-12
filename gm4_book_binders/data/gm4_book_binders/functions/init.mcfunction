@@ -1,6 +1,7 @@
 # scoreboard init
 scoreboard objectives add gm4_count dummy
 scoreboard objectives add gm4_binder_data dummy
+scoreboard objectives add gm4_entity_version dummy
 
 # base init
 execute unless score book_binders gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Book Binders"}
