@@ -1,5 +1,5 @@
 {
-  "last_commit": "d2912e3665433134cafd802818603bd9d5ca6ac7",
+  "last_commit": "0213a2ca5a8505e8eda198601fff3895f20016d3",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -502,7 +502,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_display_frames",
