@@ -5,5 +5,3 @@ execute if entity @s[tag=!gm4_trapped_signs_completed] at @s unless block ~ ~ ~ 
 
 execute if entity @s[tag=gm4_trapped_signs_pulsed] at @s run function gm4_trapped_signs:deactivate
 execute if entity @s[tag=gm4_trapped_signs_need_pulse] at @s run function gm4_trapped_signs:activate
-
-execute unless block ~ ~ ~ #minecraft:signs run function gm4_trapped_signs:destroy

@@ -1,5 +1,8 @@
-#@s = item with vanishing curse to have enchantments extracted
-#run from enchantment_extractors:extract
+# extracts vanishing_curse from the tool
+# @s = armor stand display (we need the hand)
+# located at the enchantment extractor block
+# run from enchantment_extractors:extract_item
 
-execute as @e[tag=gm4_enchantment_extractor,limit=1,sort=nearest,distance=..0.01] run loot insert ~ ~1 ~ fish gm4_enchantment_extractors:extract/vanishing_curse ~ ~ ~ mainhand
-tag @s add gm4_ench_extracted
+execute store result score $added_curse gm4_ench_data run loot insert ~ ~ ~ fish gm4_enchantment_extractors:technical/extract/vanishing_curse ~ ~ ~ mainhand
+scoreboard players set $extracted_curse gm4_ench_data 1
+execute unless score $added_curse gm4_ench_data matches 0 run scoreboard players add $added_books gm4_ench_data 1

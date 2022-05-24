@@ -12,6 +12,10 @@
     },
     "module_name": "Ender Hoppers",
     "module_id": "ender_hoppers",
+    "libraries": [
+        "lib_machines",
+        "lib_forceload"
+    ],
     "site_description": "Create special hoppers that teleport nearby items to them.",
     "video_link": "https://www.youtube.com/watch?v=wrwg4BDgEGU",
     "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
@@ -25,7 +29,11 @@
             "Elemend"
         ],
         "Updated by": [
-            "Misode"
+            "Misode",
+            "BluePsychoRanger"
+        ],
+        "Textures by": [
+            "kyrkis"
         ],
         "Icon Design": [
             "Sparks"

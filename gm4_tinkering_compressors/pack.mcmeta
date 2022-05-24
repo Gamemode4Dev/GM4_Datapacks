@@ -12,11 +12,14 @@
     },
     "module_name": "Tinkering Compressors",
     "module_id": "tinkering_compressors",
+    "libraries": [
+        "lib_machines",
+        "lib_forceload"
+    ],
     "site_description": "Automatically compress stacks of items into their block form with a tinker shamir as a machine block, and back.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Tinkering_Compressors",
     "required_modules": [
-        "custom_crafters",
         "block_compressors",
         "metallurgy"
     ],
@@ -28,7 +31,11 @@
             "SirSheepe"
         ],
         "Updated by": [
-            "MichaelMiner137"
+            "MichaelMiner137",
+            "BluePsychoRanger"
+        ],
+        "Textures by": [
+            "kyrkis"
         ],
         "Icon Design": [
             "Sparks"

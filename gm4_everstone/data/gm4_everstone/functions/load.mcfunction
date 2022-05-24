@@ -4,4 +4,4 @@ execute unless score gm4 load.status matches 1 run data modify storage gm4:log q
 execute if score gm4_everstone load.status matches 1 run function gm4_everstone:init
 execute unless score gm4_everstone load.status matches 1 run schedule clear gm4_everstone:main
 execute unless score gm4_everstone load.status matches 1 run schedule clear gm4_everstone:tick
-execute unless score gm4_everstone load.status matches 1 run schedule clear gm4_everstone:aging
+execute unless score gm4_everstone load.status matches 1 run schedule clear gm4_everstone:aging_clock

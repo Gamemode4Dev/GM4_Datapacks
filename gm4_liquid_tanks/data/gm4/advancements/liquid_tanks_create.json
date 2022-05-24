@@ -20,10 +20,18 @@
       "color":"gray"
     }
   },
-  "parent":"gm4:root",
+  "parent":"gm4:custom_crafters",
   "criteria":{
-    "create_liquid_tank":{
-      "trigger":"minecraft:impossible"
+    "obtain_liquid_tank": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:player_head"],
+            "nbt": "{gm4_machines:{id:\"liquid_tank\"}}"
+          }
+        ]
+      }
     }
   }
 }

@@ -1,0 +1,63 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420061,gm4_machines:{id:\"relocator_full\"},SkullOwner:{Name:\"gm4_relocator_full\",Id:[I;938288371,-119475667,-177364551,-680664510],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTY0NDM1MTY1ODg2NiwKICAicHJvZmlsZUlkIiA6ICJmZDYwZjM2ZjU4NjE0ZjEyYjNjZDQ3YzJkODU1Mjk5YSIsCiAgInByb2ZpbGVOYW1lIiA6ICJSZWFkIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzE3OTE5NTFiNjQ5ZmZmMDI2OGUyZTBkYWZhMGQxZDQ0YjYzNTU4NTg1YTkzYjMyZWMyYzQxMjRmYzM5NmQyNTYiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==\"}]}}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Relocator",
+                    {
+                      "translate": "item.gm4.relocator"
+                    }
+                  ],
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_relocators:temp"
+              },
+              "ops": [
+                {
+                  "source": "gm4_relocation",
+                  "target": "gm4_relocation",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_relocators:temp"
+              },
+              "ops": [
+                {
+                  "source": "lore",
+                  "target": "display.Lore",
+                  "op": "append"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

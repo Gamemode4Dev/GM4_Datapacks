@@ -1,12 +1,7 @@
-#tank creation
-execute as @e[type=item,nbt={Item:{id:"minecraft:glass",Count:1b},OnGround:1b}] at @s if block ~ ~ ~ hopper{Items:[{id:"minecraft:bucket",Count:1b},{id:"minecraft:hopper",Count:1b},{id:"minecraft:dispenser",Count:1b},{id:"minecraft:iron_trapdoor",Count:1b},{id:"minecraft:comparator",Count:1b}]} align xyz positioned ~.5 ~ ~.5 unless entity @e[type=armor_stand,tag=gm4_machine,distance=..0.5] run function gm4_liquid_tanks:create
-
-#tank process
-execute as @e[type=armor_stand,tag=gm4_liquid_tank] at @s run function gm4_liquid_tanks:process
-
-#tank display maintenance
-# 1.18 NOTE; This 16->17 backward compatibility may be removed.
-execute as @e[type=armor_stand,tag=gm4_liquid_tank_display] run data merge entity @s {HasVisualFire:1}
+# NOTE remove during 1.20 update: updates old machines to include a marker entity
+execute as @e[type=armor_stand,tag=gm4_liquid_tank] at @s run function gm4_liquid_tanks:upgrade_machine_stand
+# process machine
+execute as @e[type=marker,tag=gm4_liquid_tank] at @s run function gm4_liquid_tanks:process
 
 #tank level report
 execute as @a[gamemode=!spectator] at @s run function gm4_liquid_tanks:level_report_ray

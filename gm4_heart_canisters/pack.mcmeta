@@ -13,14 +13,13 @@
     "module_name": "Heart Canisters",
     "module_id": "heart_canisters",
     "libraries": [
-        "lib_player_heads"
+        "lib_player_heads",
+        "lib_machines",
+        "lib_forceload"
     ],
     "site_description": "Introduces two tiers of pricey canisters that increase your health when carried.",
     "video_link": "https://www.youtube.com/watch?v=zjmL6rjoq0g",
     "wiki_link": "https://wiki.gm4.co/wiki/Heart_Canisters",
-    "required_modules": [
-        "custom_crafters"
-    ],
     "recommended_modules": [],
     "credits": {
         "Creators": [
