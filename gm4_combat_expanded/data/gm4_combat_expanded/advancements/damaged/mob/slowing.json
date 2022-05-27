@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_combat_expanded:mobs/effects/slowing_attack"
+    "function": "gm4_combat_expanded:mob/effect/slowing_attack"
   }
 }

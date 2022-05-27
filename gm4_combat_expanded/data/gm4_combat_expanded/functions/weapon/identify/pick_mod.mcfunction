@@ -11,7 +11,7 @@ data modify storage gm4_combat_expanded:temp stored_name set from storage gm4_co
 execute store result score $namelen gm4_ce_data run data get storage gm4_combat_expanded:temp stored_name
 
 # get a random modifier and put in storage
-loot replace block 29999998 1 7134 container.1 loot gm4_combat_expanded:weapons/identification/random
+loot replace block 29999998 1 7134 container.1 loot gm4_combat_expanded:weapon/identification/random
 data modify storage gm4_combat_expanded:temp tag set from block 29999998 1 7134 Items[{Slot:1b}].tag
 
 # half durability damage taken

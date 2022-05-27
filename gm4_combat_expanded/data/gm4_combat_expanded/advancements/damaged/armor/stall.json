@@ -24,6 +24,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_combat_expanded:armor/modifiers/type/stall/activate"
+    "function": "gm4_combat_expanded:armor/modifier/type/stall/activate"
   }
 }

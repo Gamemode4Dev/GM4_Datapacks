@@ -6,7 +6,7 @@
 execute if score @s gm4_ce_alivetime matches 1..16 run function gm4_combat_expanded:player/calculate_difficulty
 
 # calculate damage taken from guarding
-execute if entity @s[tag=gm4_ce_guardian] if score @s gm4_ce_guard matches 10.. run function gm4_combat_expanded:armor/modifiers/type/guardian/damage_calc
+execute if entity @s[tag=gm4_ce_guardian] if score @s gm4_ce_guard matches 10.. run function gm4_combat_expanded:armor/modifier/type/guardian/damage_calc
 
 # translate being hit / killing mobs to timers
 execute if score @s gm4_ce_hurt matches 1.. run scoreboard players set @s gm4_ce_t_hurt 5
@@ -17,7 +17,7 @@ execute if score @s gm4_ce_t_sprinting matches 1.. unless score @s gm4_ce_sprint
 
 # remove tags
 tag @s remove gm4_ce_beacon_active
-execute if entity @s[tag=gm4_ce_immune_active] run function gm4_combat_expanded:armor/modifiers/type/immune/clear_immunities
+execute if entity @s[tag=gm4_ce_immune_active] run function gm4_combat_expanded:armor/modifier/type/immune/clear_immunities
 
 # process armor
 execute if predicate gm4_combat_expanded:modified_armor/wearing run function gm4_combat_expanded:armor/process

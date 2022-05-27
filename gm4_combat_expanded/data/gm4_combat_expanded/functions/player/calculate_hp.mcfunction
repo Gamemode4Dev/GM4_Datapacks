@@ -2,19 +2,19 @@
 # $max_health and $half_health in gm4_ce_data temporaraly store max and half of max health
 # @s = player to calculate health from
 # run from armor/identify/check_unid
-# run from armor/modifiers/type/highhp
-# run from armor/modifiers/type/lowhp
-# run from armor/modifiers/type/guardian/damage_calc
-# run from armor/modifiers/type/guardian/process
-# run from armor/modifiers/type/husk/check
-# run from armor/modifiers/type/immune/check
-# run from armor/modifiers/type/overload/activate
-# run from armor/modifiers/type/second_wind/heal_check
-# run from armor/modifiers/type/soothe/heal_check
-# run from armor/modifiers/type/thorns/check
+# run from armor/modifier/type/highhp
+# run from armor/modifier/type/lowhp
+# run from armor/modifier/type/guardian/damage_calc
+# run from armor/modifier/type/guardian/process
+# run from armor/modifier/type/husk/check
+# run from armor/modifier/type/immune/check
+# run from armor/modifier/type/overload/activate
+# run from armor/modifier/type/second_wind/heal_check
+# run from armor/modifier/type/soothe/heal_check
+# run from armor/modifier/type/thorns/check
 # run from player/heal
-# run from weapon/modifiers/delay
-# run from weapon/modifiers/wither
+# run from weapon/modifier/delay
+# run from weapon/modifier/wither
 
 # get max health
 execute store result score $max_health gm4_ce_data run attribute @s minecraft:generic.max_health get

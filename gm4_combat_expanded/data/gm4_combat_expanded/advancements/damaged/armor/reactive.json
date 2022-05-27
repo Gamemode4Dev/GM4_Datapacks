@@ -49,6 +49,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_combat_expanded:armor/modifiers/type/reactive/add_level"
+    "function": "gm4_combat_expanded:armor/modifier/type/reactive/add_level"
   }
 }

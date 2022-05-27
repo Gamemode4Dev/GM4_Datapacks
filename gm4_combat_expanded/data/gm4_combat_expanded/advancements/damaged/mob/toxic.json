@@ -12,7 +12,7 @@
     }
   },
   "rewards": {
-    "function": "gm4_combat_expanded:mobs/effects/toxic_bite"
+    "function": "gm4_combat_expanded:mob/effect/toxic_bite"
   }
 }
   

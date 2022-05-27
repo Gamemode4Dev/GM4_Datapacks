@@ -12,7 +12,7 @@
     }
   },
   "rewards": {
-    "function": "gm4_combat_expanded:mobs/effects/weakness_attack"
+    "function": "gm4_combat_expanded:mob/effect/weakness_attack"
   }
 }
   
