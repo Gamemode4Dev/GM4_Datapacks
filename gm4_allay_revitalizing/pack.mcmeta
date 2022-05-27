@@ -1,0 +1,27 @@
+{
+    "pack": {
+        "pack_format": 10,
+        "description": [
+            "Allay Revitalizing",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.19",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Allay Revitalizing",
+    "module_id": "allay_revitalizing",
+    "site_description": "Revitalize vexes to turn them into allays! Great for multiplayer servers with limited structures",
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Allay_Revitalizing",
+    "required_modules": [],
+    "recommended_modules": [
+        "record_crafting"
+    ],
+    "credits": {
+        "Creator": [
+            "BluePsychoRanger"
+        ]
+    }
+}
