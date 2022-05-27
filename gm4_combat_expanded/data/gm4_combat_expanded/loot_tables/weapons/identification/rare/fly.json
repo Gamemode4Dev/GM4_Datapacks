@@ -12,6 +12,13 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "gm4_ce_remove_hand_dam",
+                  "amount": -1,
+                  "operation": "addition",
+                  "slot": "mainhand"
+                },
+                {
                   "attribute": "minecraft:generic.attack_speed",
                   "name": "gm4_ce_perm",
                   "amount": -4,
