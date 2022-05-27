@@ -3,7 +3,7 @@
 # at @s
 # run from advancement play_jukebox
 
-advancement revoke @s only gm4_note_block_interface:tune
+advancement revoke @s only gm4_allay_revitalizing:play_jukebox
 
 # sets raycast limit
 scoreboard players set $ray gm4_count 50
