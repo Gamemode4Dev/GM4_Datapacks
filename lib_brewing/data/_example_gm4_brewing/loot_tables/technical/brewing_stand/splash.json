@@ -1,0 +1,46 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:alternatives",
+                    "children": [
+                        {
+                            "type": "minecraft:loot_table",
+                            "name": "_example_gm4_brewing:items/splash_resistance_potion",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "nbt": "{data:{gm4_brewing:{insert:{tag:{id:\"minecraft:potion\",custom_potion:\"resistance\"}}}}}"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "name": "_example_gm4_brewing:items/splash_booze",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "nbt": "{data:{gm4_brewing:{insert:{tag:{id:\"minecraft:potion\",custom_potion:\"booze\"}}}}}"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_nbt",
+                    "tag": "{gm4_custom_potion:1b}"
+                }
+            ]
+        }
+    ]
+}
