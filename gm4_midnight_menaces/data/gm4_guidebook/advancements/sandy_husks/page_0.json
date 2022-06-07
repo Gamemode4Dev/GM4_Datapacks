@@ -25,7 +25,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "looking_at": {
                   "type": "minecraft:husk",
                   "nbt": "{DeathLootTable:\"gm4_sandy_husks:entities/sandy_husk\"}"

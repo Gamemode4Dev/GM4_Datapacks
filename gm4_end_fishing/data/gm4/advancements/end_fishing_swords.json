@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Master of the Swords",
-        {"translate": "advancement.gm4.end_fishing_swords.title"}
+        {
+          "translate": "advancement.gm4.end_fishing_swords.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Retrieve all of the lost swords from the void",
-        {"translate": "advancement.gm4.end_fishing_swords.description"}
+        {
+          "translate": "advancement.gm4.end_fishing_swords.description"
+        }
       ],
       "color": "gray"
     }

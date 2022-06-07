@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 8,
+        "pack_format": 10,
         "description": [
             "Rope Ladders",
             "\n",
@@ -14,10 +14,8 @@
     "module_id": "rope_ladders",
     "site_description": "Climbing downward has never been easier!",
     "wiki_link": "https://wiki.gm4.co/wiki/Rope_Ladders",
-    "required_modules": [
-    ],
-    "recommended_modules": [
-    ],
+    "required_modules": [],
+    "recommended_modules": [],
     "credits": {
         "Creator": [
             "MichaelMiner137"

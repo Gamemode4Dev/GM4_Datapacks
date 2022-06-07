@@ -16,13 +16,13 @@
     "site_description": "Dripleaves will flick items that match a hopper's contents into the hopper for you!",
     "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Filters",
     "required_modules": [],
-    "recommended_modules": ["book_binders"],
+    "recommended_modules": [
+        "book_binders"
+    ],
     "credits": {
         "Creator": [
             "Sparks"
         ],
-        "Icon Design": [
-            
-        ]
+        "Icon Design": []
     }
 }

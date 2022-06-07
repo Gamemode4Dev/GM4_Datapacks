@@ -25,7 +25,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "looking_at": {
                   "type": "minecraft:spawner_minecart",
                   "nbt": "{Tags:['gm4_spawner_minecart']}"

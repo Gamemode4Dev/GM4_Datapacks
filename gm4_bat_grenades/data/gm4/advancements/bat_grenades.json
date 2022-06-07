@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Batboozled",
-        {"translate": "advancement.gm4.bat_grenades.title"}
+        {
+          "translate": "advancement.gm4.bat_grenades.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Get blown up by a Bat Grenade",
-        {"translate": "advancement.gm4.bat_grenades.description"}
+        {
+          "translate": "advancement.gm4.bat_grenades.description"
+        }
       ],
       "color": "gray"
     }

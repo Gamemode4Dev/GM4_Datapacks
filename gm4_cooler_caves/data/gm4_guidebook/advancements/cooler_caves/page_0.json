@@ -56,15 +56,21 @@
               "score": "load.status"
             },
             "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:cave_air"
+                  ]
+                }
+              }
+            }
           }
-        ],
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:cave_air"
-            ]
-          }
-        }
+        ]
       }
     }
   },

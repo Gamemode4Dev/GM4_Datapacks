@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Instant Regret",
-        {"translate": "advancement.gm4.potion_swords.title"}
+        {
+          "translate": "advancement.gm4.potion_swords.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Wither-ize a skeleton with potion swords",
-        {"translate": "advancement.gm4.potion_swords.description"}
+        {
+          "translate": "advancement.gm4.potion_swords.description"
+        }
       ],
       "color": "gray"
     }

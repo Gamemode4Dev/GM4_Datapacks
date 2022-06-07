@@ -1,32 +1,36 @@
 {
-  "display":{
-    "icon":{
-      "item":"potion",
-      "nbt":"{CustomModelData:3420002,CustomPotionColor:13631487}"
+  "display": {
+    "icon": {
+      "item": "potion",
+      "nbt": "{CustomModelData:3420002,CustomPotionColor:13631487}"
     },
-    "title":{
-      "translate":"%1$s%3427655$s",
-      "with":[
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
         "Fizzy Lifting Drink",
-        {"translate": "advancement.gm4.potion_liquids.title"}
+        {
+          "translate": "advancement.gm4.potion_liquids.title"
+        }
       ]
     },
-    "description":{
-      "translate":"%1$s%3427655$s",
-      "with":[
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
         "Come on in, the air's fine",
-        {"translate":"advancement.gm4.potion_liquids.description"}
+        {
+          "translate": "advancement.gm4.potion_liquids.description"
+        }
       ],
-      "color":"gray"
+      "color": "gray"
     }
   },
-  "parent":"gm4:liquid_tanks_create",
-  "criteria":{
-    "consume_floating_potion":{
-      "trigger":"minecraft:consume_item",
-      "conditions":{
-        "item":{
-          "nbt":"{Potion:\"potion_liquids:floating\"}"
+  "parent": "gm4:liquid_tanks_create",
+  "criteria": {
+    "consume_floating_potion": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "nbt": "{Potion:\"potion_liquids:floating\"}"
         }
       }
     }

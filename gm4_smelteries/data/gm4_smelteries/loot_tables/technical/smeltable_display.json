@@ -1,80 +1,88 @@
 {
-	"type": "minecraft:fishing",
-	"pools": [
-		{
-			"rolls": 1,
-			"entries": [
+    "type": "minecraft:fishing",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
                 {
                     "type": "minecraft:alternatives",
                     "children": [
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:gold_ore",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420001}"
-								}
-							],
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420001}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:gold_ore"]
+                                        "items": [
+                                            "minecraft:gold_ore"
+                                        ]
                                     }
                                 }
                             ]
                         },
-						{
+                        {
                             "type": "minecraft:item",
                             "name": "minecraft:nether_gold_ore",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420001}"
-								}
-							],
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420001}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:nether_gold_ore"]
+                                        "items": [
+                                            "minecraft:nether_gold_ore"
+                                        ]
                                     }
                                 }
                             ]
                         },
-						{
+                        {
                             "type": "minecraft:item",
                             "name": "minecraft:deepslate_gold_ore",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420001}"
-								}
-							],
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420001}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:deepslate_gold_ore"]
+                                        "items": [
+                                            "minecraft:deepslate_gold_ore"
+                                        ]
                                     }
                                 }
                             ]
                         },
-						{
+                        {
                             "type": "minecraft:item",
                             "name": "minecraft:raw_gold_block",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420001}"
-								}
-							],
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420001}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:raw_gold"]
+                                        "items": [
+                                            "minecraft:raw_gold"
+                                        ]
                                     }
                                 }
                             ]
@@ -82,53 +90,59 @@
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:iron_ore",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420002}"
-								}
-							],
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420002}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:iron_ore"]
+                                        "items": [
+                                            "minecraft:iron_ore"
+                                        ]
                                     }
                                 }
                             ]
                         },
-						{
+                        {
                             "type": "minecraft:item",
                             "name": "minecraft:deepslate_iron_ore",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420001}"
-								}
-							],
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420001}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:deepslate_iron_ore"]
+                                        "items": [
+                                            "minecraft:deepslate_iron_ore"
+                                        ]
                                     }
                                 }
                             ]
                         },
-						{
+                        {
                             "type": "minecraft:item",
                             "name": "minecraft:raw_iron_block",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420001}"
-								}
-							],
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420001}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:raw_iron"]
+                                        "items": [
+                                            "minecraft:raw_iron"
+                                        ]
                                     }
                                 }
                             ]
@@ -136,53 +150,59 @@
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:copper_ore",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420002}"
-								}
-							],
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420002}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:copper_ore"]
+                                        "items": [
+                                            "minecraft:copper_ore"
+                                        ]
                                     }
                                 }
                             ]
                         },
-						{
+                        {
                             "type": "minecraft:item",
                             "name": "minecraft:deepslate_copper_ore",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420001}"
-								}
-							],
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420001}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:deepslate_copper_ore"]
+                                        "items": [
+                                            "minecraft:deepslate_copper_ore"
+                                        ]
                                     }
                                 }
                             ]
                         },
-						{
+                        {
                             "type": "minecraft:item",
                             "name": "minecraft:raw_copper_block",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420001}"
-								}
-							],
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420001}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:raw_copper"]
+                                        "items": [
+                                            "minecraft:raw_copper"
+                                        ]
                                     }
                                 }
                             ]
@@ -190,17 +210,19 @@
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:sand",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420001}"
-								}
-							],
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420001}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:sand"]
+                                        "items": [
+                                            "minecraft:sand"
+                                        ]
                                     }
                                 }
                             ]
@@ -208,17 +230,19 @@
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:red_sand",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420001}"
-								}
-							],
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420001}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:red_sand"]
+                                        "items": [
+                                            "minecraft:red_sand"
+                                        ]
                                     }
                                 }
                             ]
@@ -226,24 +250,26 @@
                         {
                             "type": "minecraft:item",
                             "name": "minecraft:chorus_flower",
-							"functions": [
-								{
-									"function": "minecraft:set_nbt",
-									"tag": "{CustomModelData:3420001}"
-								}
-							],	
+                            "functions": [
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{CustomModelData:3420001}"
+                                }
+                            ],
                             "conditions": [
                                 {
                                     "condition": "minecraft:match_tool",
                                     "predicate": {
-                                        "items": ["minecraft:chorus_fruit"]
+                                        "items": [
+                                            "minecraft:chorus_fruit"
+                                        ]
                                     }
                                 }
                             ]
                         }
-					]
+                    ]
                 }
             ]
         }
-	]
+    ]
 }

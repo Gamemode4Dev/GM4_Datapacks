@@ -2,7 +2,8 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "player": {
+    "type_specific": {
+      "type": "player",
       "looking_at": {
         "nbt": "{Tags:[\"gm4_bas_left_arm\"]}"
       }

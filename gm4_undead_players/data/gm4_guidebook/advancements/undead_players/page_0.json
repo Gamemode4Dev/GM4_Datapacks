@@ -25,7 +25,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "advancements": {
                   "gm4:undead_players": true
                 }

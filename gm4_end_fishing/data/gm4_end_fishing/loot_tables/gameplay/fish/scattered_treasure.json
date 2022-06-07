@@ -2,7 +2,7 @@
   "type": "minecraft:fishing",
   "pools": [
     {
-      "rolls": 1.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
@@ -122,7 +122,7 @@
             {
               "function": "minecraft:set_damage",
               "damage": {
-                "min": 0.0,
+                "min": 0,
                 "max": 0.005
               }
             },

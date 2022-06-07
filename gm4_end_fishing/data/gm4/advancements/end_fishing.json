@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "I Wonder What's Down There?",
-        {"translate": "advancement.gm4.end_fishing.title"}
+        {
+          "translate": "advancement.gm4.end_fishing.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Catch some loot from the end void",
-        {"translate": "advancement.gm4.end_fishing.description"}
+        {
+          "translate": "advancement.gm4.end_fishing.description"
+        }
       ],
       "color": "gray"
     }

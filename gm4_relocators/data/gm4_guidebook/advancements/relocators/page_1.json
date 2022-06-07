@@ -25,7 +25,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "advancements": {
                   "gm4_guidebook:relocators/page_0": true
                 }
@@ -86,7 +87,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "advancements": {
                   "gm4_guidebook:relocators/page_0": true
                 }
@@ -135,7 +137,7 @@
             "items": [
               "minecraft:enchanted_book"
             ],
-            "nbt" : "{StoredEnchantments:[{id:\"minecraft:silk_touch\"}]}"
+            "nbt": "{StoredEnchantments:[{id:\"minecraft:silk_touch\"}]}"
           }
         ]
       }
@@ -184,7 +186,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "advancements": {
                   "gm4_guidebook:relocators/page_2": true
                 }

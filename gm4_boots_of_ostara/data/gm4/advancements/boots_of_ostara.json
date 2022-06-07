@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Green Feet",
-        {"translate": "advancement.gm4.boots_of_ostara.title"}
+        {
+          "translate": "advancement.gm4.boots_of_ostara.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Wear the Boots of Ostara",
-        {"translate": "advancement.gm4.boots_of_ostara.description"}
+        {
+          "translate": "advancement.gm4.boots_of_ostara.description"
+        }
       ],
       "color": "gray"
     }
@@ -27,7 +31,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:leather_boots"],
+            "items": [
+              "minecraft:leather_boots"
+            ],
             "nbt": "{gm4_boots_of_ostara:1b}"
           }
         ]

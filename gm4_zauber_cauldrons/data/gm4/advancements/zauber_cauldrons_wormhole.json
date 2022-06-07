@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Questionable Ingredients",
-        {"translate": "advancement.gm4.zauber_cauldrons.wormhole.title"}
+        {
+          "translate": "advancement.gm4.zauber_cauldrons.wormhole.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Just like the rabbits!",
-        {"translate": "advancement.gm4.zauber_cauldrons.wormhole.description"}
+        {
+          "translate": "advancement.gm4.zauber_cauldrons.wormhole.description"
+        }
       ],
       "color": "gray"
     }

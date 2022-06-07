@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "That's Not a Fish!",
-        {"translate": "advancement.gm4.end_fishing_phantom.title"}
+        {
+          "translate": "advancement.gm4.end_fishing_phantom.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Perhaps it's a manta ray",
-        {"translate": "advancement.gm4.end_fishing_phantom.description"}
+        {
+          "translate": "advancement.gm4.end_fishing_phantom.description"
+        }
       ],
       "color": "gray"
     }

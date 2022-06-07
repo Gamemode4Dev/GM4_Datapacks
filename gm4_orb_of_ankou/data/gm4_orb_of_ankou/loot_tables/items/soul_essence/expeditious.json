@@ -15,7 +15,9 @@
                   "translate": "%1$s%3427655$s",
                   "with": [
                     "Expeditious",
-                     {"translate":"text.gm4.pneuma_expeditious"}
+                    {
+                      "translate": "text.gm4.pneuma_expeditious"
+                    }
                   ],
                   "italic": false,
                   "color": "blue"
@@ -28,7 +30,9 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   "Soul Essence",
-                  {"translate":"item.gm4.soul_essence"}
+                  {
+                    "translate": "item.gm4.soul_essence"
+                  }
                 ],
                 "italic": false,
                 "color": "white"

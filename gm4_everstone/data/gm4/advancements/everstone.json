@@ -1,29 +1,33 @@
 {
-  "display":{
-    "icon":{
-      "item":"firework_star",
-      "nbt":"{CustomModelData:3420003}"
+  "display": {
+    "icon": {
+      "item": "firework_star",
+      "nbt": "{CustomModelData:3420003}"
     },
-    "title":{
+    "title": {
       "translate": "%1$s%3427655$s",
-      "with":[
+      "with": [
         "Evolution Halt",
-        {"translate": "advancement.gm4.everstone.title"}
-        ]
-      },
-    "description":{
+        {
+          "translate": "advancement.gm4.everstone.title"
+        }
+      ]
+    },
+    "description": {
       "translate": "%1$s%3427655$s",
-      "with":[
+      "with": [
         "Use an everstone to prevent a mob from aging",
-        {"translate": "advancement.gm4.everstone.description"}
+        {
+          "translate": "advancement.gm4.everstone.description"
+        }
       ],
-      "color":"gray"
+      "color": "gray"
     }
   },
-  "parent":"gm4:root",
-  "criteria":{
-    "use_everstone":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:root",
+  "criteria": {
+    "use_everstone": {
+      "trigger": "minecraft:impossible"
     }
   }
 }

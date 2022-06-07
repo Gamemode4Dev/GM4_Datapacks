@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Don't Go Breaking My Cart",
-        {"translate": "advancement.gm4.spawner_minecarts.title"}
+        {
+          "translate": "advancement.gm4.spawner_minecarts.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Capture a Monster Spawner",
-        {"translate": "advancement.gm4.spawner_minecarts.description"}
+        {
+          "translate": "advancement.gm4.spawner_minecarts.description"
+        }
       ],
       "color": "gray"
     }

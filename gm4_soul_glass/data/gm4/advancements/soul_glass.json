@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Corruption at its Finest",
-        {"translate": "advancement.gm4.soul_glass.title"}
+        {
+          "translate": "advancement.gm4.soul_glass.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Corrupt the effects of a beacon",
-        {"translate": "advancement.gm4.soul_glass.description"}
+        {
+          "translate": "advancement.gm4.soul_glass.description"
+        }
       ],
       "color": "gray"
     }
