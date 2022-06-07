@@ -1,5 +1,5 @@
 {
-  "last_commit": "0213a2ca5a8505e8eda198601fff3895f20016d3",
+  "last_commit": "434cb6e942609562a80c910814b64a13d3079208",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -210,7 +210,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18007
+      "patch": 18008
     },
     {
       "id": "gm4_book_binders",
@@ -266,7 +266,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_cement_mixers",
@@ -502,7 +502,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18007
+      "patch": 18008
     },
     {
       "id": "gm4_display_frames",
@@ -585,7 +585,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_end_fishing",
@@ -646,7 +646,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18008
+      "patch": 18009
     },
     {
       "id": "gm4_enderman_support_class",
@@ -728,7 +728,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18002
+      "patch": 18003
     },
     {
       "id": "gm4_fulcio_shamir",
@@ -811,7 +811,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_holographic_tags",
@@ -951,7 +951,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_liquid_tanks",
@@ -991,7 +991,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18010
+      "patch": 18011
     },
     {
       "id": "gm4_live_catch",
@@ -1242,7 +1242,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18007
+      "patch": 18008
     },
     {
       "id": "gm4_orbis",
@@ -1511,7 +1511,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_relocators",
@@ -1549,7 +1549,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_rope_ladders",
@@ -1599,7 +1599,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_shroomites",
@@ -1660,7 +1660,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_soul_glass",
@@ -1687,7 +1687,7 @@
       },
       "hidden": false,
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_spawner_minecarts",
@@ -1765,7 +1765,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_sunken_treasure",
@@ -1858,7 +1858,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_tnt_landmines",
@@ -1888,7 +1888,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_tower_structures",
@@ -1947,7 +1947,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18006
+      "patch": 18007
     },
     {
       "id": "gm4_tunnel_bores",
@@ -1979,7 +1979,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 18009
+      "patch": 18010
     },
     {
       "id": "gm4_undead_players",
