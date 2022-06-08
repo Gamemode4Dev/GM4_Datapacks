@@ -5,7 +5,7 @@
 advancement revoke @s only gm4_crossbow_cartridges:shoot/spectral
 
 # store type of glowing
-execute if predicate gm4_crossbow_cartridges:items/bucket run data modify storage gm4_crossbow_cartridges:temp projectile.ActiveEffects set value [{Id:24b,Amplifier:0b,Duration:200}]
+execute if predicate gm4_crossbow_cartridges:items/bucket run data modify storage gm4_crossbow_cartridges:temp projectile.ActiveEffects set value [{Id:24,Amplifier:0b,Duration:200}]
 execute unless predicate gm4_crossbow_cartridges:items/bucket run data modify storage gm4_crossbow_cartridges:temp projectile.Glowing set value 1
 
 # tag arrow, 3 if multishot
