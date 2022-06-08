@@ -2,6 +2,8 @@
     "values": [
         "#gm4_fruiting_trees:tree_replaceable",
         "#minecraft:logs",
-        "#minecraft:leaves"
+        "#minecraft:leaves",
+        "#minecraft:mangrove_logs_can_grow_through",
+        "#minecraft:mangrove_roots_can_grow_through"
     ]
 }

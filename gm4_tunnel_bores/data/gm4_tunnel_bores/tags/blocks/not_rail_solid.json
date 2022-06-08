@@ -146,6 +146,8 @@
     "minecraft:chain",
     "minecraft:warped_fence",
     "minecraft:crimson_fence_gate",
-    "minecraft:sweet_berry_bush"
+    "minecraft:sweet_berry_bush",
+    "minecraft:sculk_shrieker",
+    "minecraft:mangrove_propagule"
   ]
 }
