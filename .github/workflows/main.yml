@@ -22,6 +22,28 @@ jobs:
           source: base gm4_!(template_pack) lib_*
           version: '0.52.2'
 
+  gametest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: 17
+
+      - name: Build with Gradle
+        run: |
+          cd ./test
+          chmod +x gradlew
+          ./gradlew build
+
+      - name: Run Gametests
+        run: |
+          cd ./test
+          ./gradlew runGametest
+
   build:
     needs: test
     runs-on: ubuntu-latest
