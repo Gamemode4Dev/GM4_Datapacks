@@ -1,15 +1,5 @@
 [
   {
-    "condition": "minecraft:inverted",
-    "term": {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "team": "gm4_invalid"
-      }
-    }
-  },
-  {
     "condition": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {

@@ -10,6 +10,8 @@ execute if score $difficulty gm4_ce_data matches 4.. run scoreboard players remo
 execute if score $difficulty gm4_ce_data matches 11.. run scoreboard players add $mob_armor gm4_ce_data 4
 
 # biome specific modifiers for this mob
+execute if predicate gm4_combat_expanded:mob/modifier/dark store result score $blast_rad gm4_ce_data run data get entity @s ExplosionRadius
+execute if predicate gm4_combat_expanded:mob/modifier/dark store result entity @s ExplosionRadius byte 1 run scoreboard players add $blast_rad gm4_ce_data 1
 execute if predicate gm4_combat_expanded:mob/modifier/burned run data modify entity @s Fuse set value 22
 execute if predicate gm4_combat_expanded:mob/modifier/flowering run tag @s add gm4_ce_cloaked_creeper
 execute if predicate gm4_combat_expanded:mob/modifier/flowering run effect give @s invisibility 35 0

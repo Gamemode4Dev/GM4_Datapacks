@@ -35,6 +35,11 @@
               },
               "ops": [
                 {
+                  "source": "damage",
+                  "target": "gm4_combat_expanded.level",
+                  "op": "replace"
+                },
+                {
                   "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
                   "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
                   "op": "replace"
@@ -84,19 +89,6 @@
                 "translate": "effect.minecraft.invisibility",
                 "color": "blue",
                 "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:01)",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.duration_1"
-                  }
-                ]
               }
             ]
           ]
@@ -107,19 +99,68 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "effect.minecraft.jump_boost",
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "text": "Shadow Sneak",
+                    "translate": "effect.minecraft.jump_boost",
                     "color": "blue",
                     "italic": false
                   },
                   {
-                    "translate": "item.gm4.combat_expanded.lore.sneak"
+                    "translate": "potion.potency.1",
+                    "color": "blue",
+                    "italic": false
                   }
                 ]
               }
             ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": {
+                "min": 3,
+                "max": 4
+              }
+            }
           ]
         },
         {
@@ -130,7 +171,7 @@
               "translate": "%1$s%3427655$s",
               "with": [
                 {
-                  "text": "Skulking ",
+                  "text": "Sly ",
                   "italic": false,
                   "color": "yellow"
                 },

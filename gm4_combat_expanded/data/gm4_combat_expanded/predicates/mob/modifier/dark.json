@@ -10,6 +10,7 @@
   },
   {
     "condition": "minecraft:location_check",
+    "offsetY": 1,
     "predicate": {
       "light": {
         "light": 0

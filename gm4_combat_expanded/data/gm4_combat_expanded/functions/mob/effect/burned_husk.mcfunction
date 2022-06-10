@@ -1,7 +1,7 @@
 # spawn up to 11 extra husks
 # @s = husk
 # at @s
-# run from mob/husk
+# run from mob/mob_type/husk
 
 execute if entity @s[tag=!gm4_ce_extra_mob] if block ~1 ~1 ~ #gm4:no_collision run summon husk ~1 ~ ~ {Tags:["gm4_ce_extra_mob"]}
 execute if entity @s[tag=!gm4_ce_extra_mob] if block ~-1 ~1 ~ #gm4:no_collision run summon husk ~-1 ~ ~ {Tags:["gm4_ce_extra_mob"]}
