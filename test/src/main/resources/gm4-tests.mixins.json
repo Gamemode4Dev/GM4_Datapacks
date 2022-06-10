@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "co.gm4.test.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "PackRepositoryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -7,7 +7,10 @@
   "license": "GPL-3.0",
   "entrypoints": {
     "fabric-gametest" : [
-      "co.gm4.test.Gm4Base"
+      "co.gm4.test.Gm4Tests"
     ]
-  }
+  },
+  "mixins": [
+    "gm4-tests.mixins.json"
+  ]
 }
