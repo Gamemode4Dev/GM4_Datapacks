@@ -16,6 +16,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.io.File;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -27,12 +28,14 @@ public abstract class PackRepositoryMixin {
 
     @Inject(method = "<init>(Lnet/minecraft/server/packs/PackType;[Lnet/minecraft/server/packs/repository/RepositorySource;)V", at = @At("TAIL"))
     private void injectMethod(PackType packType, RepositorySource[] sources, CallbackInfo info) {
-        var externalPath = new File("../../../");
-        var externalPacks = new FolderRepositorySource(externalPath, PackSource.WORLD);
-        this.sources = new ImmutableSet.Builder<RepositorySource>()
-                .addAll(ImmutableSet.copyOf(this.sources))
-                .add(externalPacks)
-                .build();
+        if (packType == PackType.SERVER_DATA) {
+            var externalPath = new File("../../");
+            Gm4Tests.LOGGER.info("Loading packs from " + externalPath.getAbsolutePath());
+            var externalPacks = new FolderRepositorySource(externalPath, PackSource.BUILT_IN);
+            var newSources = new HashSet<>(ImmutableSet.copyOf(this.sources));
+            newSources.add(externalPacks);
+            this.sources = newSources;
+        }
         Gm4Tests.LOGGER.info("Pack sources: " + this.sources.stream().map(Object::toString).collect(Collectors.joining(", ")));
     }
 }

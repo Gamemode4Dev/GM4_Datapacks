@@ -70,7 +70,6 @@ loom {
 			vmArg "-Dfabric-api.gametest"
 			vmArg "-Dfabric-api.gametest.report-file=${project.buildDir}/junit.xml"
 			vmArg "-Dfabric.autoTest"
-			runDir "build/gametest"
 		}
 	}
 }
