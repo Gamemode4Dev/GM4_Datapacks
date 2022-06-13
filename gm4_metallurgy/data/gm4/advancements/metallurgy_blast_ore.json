@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "How Ad-ore-able",
-        {"translate": "advancement.gm4.metallurgy.blast_ore.title"}
+        {
+          "translate": "advancement.gm4.metallurgy.blast_ore.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Blast open some rock and find the metal within.",
-        {"translate": "advancement.gm4.metallurgy.blast_ore.description"}
+        {
+          "translate": "advancement.gm4.metallurgy.blast_ore.description"
+        }
       ],
       "color": "gray"
     }

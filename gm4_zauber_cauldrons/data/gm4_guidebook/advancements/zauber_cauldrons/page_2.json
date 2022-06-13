@@ -61,7 +61,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "advancements": {
                   "gm4:zauber_cauldrons_create": true
                 }
@@ -115,7 +116,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "advancements": {
                   "gm4_guidebook:zauber_cauldrons/page_11": true
                 }

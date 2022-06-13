@@ -9,14 +9,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Magical Thief",
-        {"translate": "advancement.gm4.enchantment_extractors.mending.title"}
+        {
+          "translate": "advancement.gm4.enchantment_extractors.mending.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Successfully extract the mending enchantment from a tool with an Enchantment Extractor",
-        {"translate": "advancement.gm4.enchantment_extractors.mending.description"}
+        {
+          "translate": "advancement.gm4.enchantment_extractors.mending.description"
+        }
       ],
       "color": "gray"
     }

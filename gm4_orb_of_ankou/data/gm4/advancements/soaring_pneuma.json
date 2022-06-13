@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "I Believe I Can Fly!",
-        {"translate": "advancement.gm4.orb_of_ankou.soaring.title"}
+        {
+          "translate": "advancement.gm4.orb_of_ankou.soaring.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Fly with the soaring pneuma",
-        {"translate": "advancement.gm4.orb_of_ankou.soaring.description"}
+        {
+          "translate": "advancement.gm4.orb_of_ankou.soaring.description"
+        }
       ],
       "color": "gray"
     },

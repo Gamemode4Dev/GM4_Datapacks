@@ -8,14 +8,18 @@
             "translate": "%1$s%3427655$s",
             "with": [
                 "Where Did It Go?",
-                { "translate": "advancement.gm4.display_frames.title" }
+                {
+                    "translate": "advancement.gm4.display_frames.title"
+                }
             ]
         },
         "description": {
             "translate": "%1$s%3427655$s",
             "with": [
                 "Make an item frame invisible with a splash potion of invisibility",
-                { "translate": "advancement.gm4.display_frames.description" }
+                {
+                    "translate": "advancement.gm4.display_frames.description"
+                }
             ],
             "color": "gray"
         }

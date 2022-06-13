@@ -1,11 +1,11 @@
 {
     "pack": {
-        "pack_format": 9,
+        "pack_format": 10,
         "description": [
             "Standard Crafting",
             "\n",
             {
-                "text": "Gamemode 4 for 1.18",
+                "text": "Gamemode 4 for 1.19",
                 "color": "#4AA0C7"
             }
         ]
@@ -16,7 +16,7 @@
         "lib_machines",
         "lib_forceload"
     ],
-    "hidden":false,
+    "hidden": false,
     "site_description": "A crafting recipe pack that adds some nifty new recipes to the game.",
     "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
     "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",

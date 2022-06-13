@@ -25,7 +25,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "looking_at": {
                   "type": "minecraft:stray",
                   "nbt": "{DeathLootTable:\"gm4_icy_strays:entities/icy_stray\"}"

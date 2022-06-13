@@ -1,10 +1,10 @@
 {
-    "criteria": {
-      "join": {
-        "trigger": "minecraft:location"
-      }
-    },
-    "rewards": {
-      "function": "gm4_xp_storage:init_xp"
+  "criteria": {
+    "join": {
+      "trigger": "minecraft:location"
     }
+  },
+  "rewards": {
+    "function": "gm4_xp_storage:init_xp"
   }
+}

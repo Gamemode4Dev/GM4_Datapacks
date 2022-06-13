@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Risen",
-        {"translate": "advancement.gm4.undead_players.title"}
+        {
+          "translate": "advancement.gm4.undead_players.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Die and raise up an undead zombie in your body's place",
-        {"translate": "advancement.gm4.undead_players.description"}
+        {
+          "translate": "advancement.gm4.undead_players.description"
+        }
       ],
       "color": "gray"
     }

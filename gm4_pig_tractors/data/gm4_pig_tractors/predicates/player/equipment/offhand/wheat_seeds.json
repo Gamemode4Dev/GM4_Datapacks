@@ -4,7 +4,9 @@
     "predicate": {
         "equipment": {
             "offhand": {
-                "items": ["minecraft:wheat_seeds"]
+                "items": [
+                    "minecraft:wheat_seeds"
+                ]
             }
         }
     }

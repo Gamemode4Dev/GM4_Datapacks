@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "A Throne, Fit for a King!",
-        {"translate": "advancement.gm4.chairs.creation.title"}
+        {
+          "translate": "advancement.gm4.chairs.creation.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Throw a saddle on stairs to make a chair",
-        {"translate": "advancement.gm4.chairs.creation.description"}
+        {
+          "translate": "advancement.gm4.chairs.creation.description"
+        }
       ],
       "color": "gray"
     }

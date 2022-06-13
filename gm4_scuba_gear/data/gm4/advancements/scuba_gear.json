@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Things Are Going Swimmingly!",
-        {"translate": "advancement.gm4.scuba_gear.title"}
+        {
+          "translate": "advancement.gm4.scuba_gear.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Suit up with a full set of SCUBA gear",
-        {"translate": "advancement.gm4.scuba_gear.description"}
+        {
+          "translate": "advancement.gm4.scuba_gear.description"
+        }
       ],
       "color": "gray"
     }

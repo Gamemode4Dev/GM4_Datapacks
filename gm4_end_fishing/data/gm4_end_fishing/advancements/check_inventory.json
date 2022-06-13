@@ -4,7 +4,7 @@
       "trigger": "minecraft:inventory_changed"
     }
   },
- "rewards":{
-   "function":"gm4_end_fishing:enderpuff/check_inventory"
+  "rewards": {
+    "function": "gm4_end_fishing:enderpuff/check_inventory"
   }
 }

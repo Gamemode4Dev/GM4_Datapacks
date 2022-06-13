@@ -20,13 +20,6 @@
     "requirement": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:farmland"
-            ]
-          }
-        },
         "player": [
           {
             "condition": "minecraft:inverted",
@@ -100,6 +93,19 @@
             },
             "range": {
               "min": 6
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:farmland"
+                  ]
+                }
+              }
             }
           }
         ]

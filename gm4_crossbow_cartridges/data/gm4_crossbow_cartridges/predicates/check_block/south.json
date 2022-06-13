@@ -100,7 +100,9 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"blocks": ["minecraft:piston_head"],
+					"blocks": [
+						"minecraft:piston_head"
+					],
 					"state": {
 						"facing": "north"
 					}

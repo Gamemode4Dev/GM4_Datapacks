@@ -2,6 +2,8 @@
 	"values": [
 		"#gm4:full_collision",
 		"#minecraft:anvil",
+		"#minecraft:fences",
+		"#minecraft:walls",
 		"minecraft:azalea",
 		"minecraft:flowering_azalea",
 		"minecraft:end_rod",

@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Swimming Storage",
-        {"translate": "advancement.gm4.chest_boats.title"}
+        {
+          "translate": "advancement.gm4.chest_boats.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Push a chest inside of a boat.",
-        {"translate": "advancement.gm4.chest_boats.description"}
+        {
+          "translate": "advancement.gm4.chest_boats.description"
+        }
       ],
       "color": "gray"
     }

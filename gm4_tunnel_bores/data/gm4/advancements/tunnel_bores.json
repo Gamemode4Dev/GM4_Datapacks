@@ -8,26 +8,32 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Isn't It \"Groundbreaking\"?",
-        {"translate": "advancement.gm4.tunnel_bores.title"}
+        {
+          "translate": "advancement.gm4.tunnel_bores.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Obtain a Minecart with Piston",
-        {"translate": "advancement.gm4.tunnel_bores.description"}
+        {
+          "translate": "advancement.gm4.tunnel_bores.description"
+        }
       ],
       "color": "gray"
     }
   },
-  "parent":"gm4:custom_crafters",
-  "criteria":{
+  "parent": "gm4:custom_crafters",
+  "criteria": {
     "obtain_tunnel_bore": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:furnace_minecart"],
+            "items": [
+              "minecraft:furnace_minecart"
+            ],
             "nbt": "{gm4_machines:{id:\"tunnel_bore\"}}"
           }
         ]

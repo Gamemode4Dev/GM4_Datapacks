@@ -31,7 +31,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:player_head"],
+            "items": [
+              "minecraft:player_head"
+            ],
             "nbt": "{gm4_machines:{id:\"tinkering_compressor\"}}"
           }
         ]

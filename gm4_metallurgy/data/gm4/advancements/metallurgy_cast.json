@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Firebender",
-        {"translate": "advancement.gm4.metallurgy.cast.title"}
+        {
+          "translate": "advancement.gm4.metallurgy.cast.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Create a mould and add some metal.",
-        {"translate": "advancement.gm4.metallurgy.cast.description"}
+        {
+          "translate": "advancement.gm4.metallurgy.cast.description"
+        }
       ],
       "color": "gray"
     }

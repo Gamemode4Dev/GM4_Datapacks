@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "It's Moving Day!",
-        {"translate": "advancement.gm4.relocators.title"}
+        {
+          "translate": "advancement.gm4.relocators.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Pick up a machine with the relocator",
-        {"translate": "advancement.gm4.relocators.description"}
+        {
+          "translate": "advancement.gm4.relocators.description"
+        }
       ],
       "color": "gray"
     }

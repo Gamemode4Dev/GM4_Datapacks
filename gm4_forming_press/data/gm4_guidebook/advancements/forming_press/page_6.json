@@ -25,7 +25,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "advancements": {
                   "gm4_guidebook:forming_press/page_3": true
                 }
@@ -67,11 +68,17 @@
               "score": "load.status"
             },
             "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "dimension": "minecraft:the_end"
+              }
+            }
           }
-        ],
-        "location": {
-          "dimension": "minecraft:the_end"
-        }
+        ]
       }
     }
   },

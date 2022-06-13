@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Potion Chef",
-        {"translate": "advancement.gm4.zauber_cauldrons.creation.title"}
+        {
+          "translate": "advancement.gm4.zauber_cauldrons.creation.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Create a Zauber Cauldron",
-        {"translate": "advancement.gm4.zauber_cauldrons.creation.description"}
+        {
+          "translate": "advancement.gm4.zauber_cauldrons.creation.description"
+        }
       ],
       "color": "gray"
     }

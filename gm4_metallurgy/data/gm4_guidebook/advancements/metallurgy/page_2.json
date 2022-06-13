@@ -113,7 +113,7 @@
             "items": [
               "minecraft:player_head"
             ],
-              "nbt": "{gm4_metallurgy:{item:\"ore\"}}"
+            "nbt": "{gm4_metallurgy:{item:\"ore\"}}"
           }
         ]
       }
@@ -162,7 +162,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "advancements": {
                   "gm4_guidebook:metallurgy/page_6": true
                 }

@@ -9,14 +9,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "All My Loving",
-        {"translate": "advancement.gm4.heart_canisters.max.title"}
+        {
+          "translate": "advancement.gm4.heart_canisters.max.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Max out your Heart Canister health",
-        {"translate": "advancement.gm4.heart_canisters.max.description"}
+        {
+          "translate": "advancement.gm4.heart_canisters.max.description"
+        }
       ],
       "color": "gray"
     }
@@ -28,12 +32,16 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:player_head"],
+            "items": [
+              "minecraft:player_head"
+            ],
             "count": 5,
             "nbt": "{gm4_heart_canister_tier:1b}"
           },
           {
-            "items": ["minecraft:player_head"],
+            "items": [
+              "minecraft:player_head"
+            ],
             "count": 5,
             "nbt": "{gm4_heart_canister_tier:2b}"
           }
