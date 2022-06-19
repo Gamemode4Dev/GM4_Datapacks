@@ -12,7 +12,7 @@
     },
     "module_name": "Sunken Treasure",
     "module_id": "sunken_treasure",
-    "hidden": true,
+    "hidden": false,
     "site_description": "Digging sand underwater with a fortune tool can uncover buried surprises",
     "site_categories": [],
     "video_link": "https://www.youtube.com/watch?v=VV7ZIyIzKV0",
