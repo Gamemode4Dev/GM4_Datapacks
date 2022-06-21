@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:local_modifications/in_overworld",
+      "required": false
+    },
+    "minecraft:iceberg_packed",
+    "minecraft:iceberg_blue",
+    "minecraft:amethyst_geode"
+  ]
+}

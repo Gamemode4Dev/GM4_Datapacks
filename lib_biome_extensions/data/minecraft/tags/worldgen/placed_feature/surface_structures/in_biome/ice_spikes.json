@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:surface_structures/in_overworld",
+      "required": false
+    },
+    "minecraft:ice_spike",
+    "minecraft:ice_patch"
+  ]
+}

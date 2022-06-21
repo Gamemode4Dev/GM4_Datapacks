@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:vegetal_decoration/in_overworld",
+      "required": false
+    },
+    "minecraft:glow_lichen",
+    "minecraft:trees_mangrove",
+    "minecraft:patch_grass_normal",
+    "minecraft:patch_dead_bush",
+    "minecraft:patch_waterlily",
+    "minecraft:seagrass_swamp"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:vegetal_decoration/in_overworld",
+      "required": false
+    },
+    "minecraft:glow_lichen",
+    "minecraft:trees_water",
+    "minecraft:flower_default",
+    "minecraft:patch_grass_badlands",
+    "minecraft:brown_mushroom_normal",
+    "minecraft:red_mushroom_normal",
+    "minecraft:patch_sugar_cane",
+    "minecraft:patch_pumpkin",
+    "minecraft:seagrass_deep_warm",
+    "minecraft:seagrass_simple",
+    "minecraft:kelp_warm"
+  ]
+}
