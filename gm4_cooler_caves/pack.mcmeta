@@ -12,12 +12,13 @@
     },
     "module_name": "Cooler Caves",
     "module_id": "cooler_caves",
+    "libraries": [
+        "lib_biome_extensions"
+    ],
     "site_description": "A custom terrain expansion pack that makes biome specific caves and mineshafts",
     "video_link": "https://www.youtube.com/watch?v=cAsXiwLWHFo",
     "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Cooler_Caves",
-    "required_modules": [
-        "orbis"
-    ],
+    "required_modules": [],
     "recommended_modules": [
         "dangerous_dungeons",
         "tower_structures"

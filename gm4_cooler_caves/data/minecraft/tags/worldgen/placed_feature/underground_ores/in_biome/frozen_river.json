@@ -1,0 +1,12 @@
+{
+  "values": [
+    "gm4_cooler_caves:snowy/ore_ice_upper",
+    "gm4_cooler_caves:snowy/ore_ice_lower",
+    "gm4_cooler_caves:snowy/ore_packed_ice_upper",
+    "gm4_cooler_caves:snowy/ore_packed_ice_lower",
+    "gm4_cooler_caves:snowy/ore_packed_ice_small",
+    "gm4_cooler_caves:snowy/ore_blue_ice_upper",
+    "gm4_cooler_caves:snowy/ore_blue_ice_lower",
+    "gm4_cooler_caves:snowy/ore_powder_snow"
+  ]
+}
