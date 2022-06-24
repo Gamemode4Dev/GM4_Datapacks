@@ -4,6 +4,7 @@
 summon marker ~ ~ ~ {CustomName:'"Expeditious TP"',Tags:["gm4_oa_expeditious"]}
 tp @e[type=marker,tag=gm4_oa_expeditious,limit=1] @s
 
+scoreboard players set @s gm4_pneuma_data 0
 scoreboard players set @s[scores={gm4_oa_snk_num=40..79}] gm4_pneuma_data 9
 scoreboard players set @s[scores={gm4_oa_snk_num=80..159}] gm4_pneuma_data 17
 scoreboard players set @s[scores={gm4_oa_snk_num=160..319}] gm4_pneuma_data 25
