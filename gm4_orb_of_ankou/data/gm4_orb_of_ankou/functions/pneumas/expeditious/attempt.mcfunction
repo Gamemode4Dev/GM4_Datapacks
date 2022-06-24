@@ -5,10 +5,10 @@ summon marker ~ ~ ~ {CustomName:'"Expeditious TP"',Tags:["gm4_oa_expeditious"]}
 tp @e[type=marker,tag=gm4_oa_expeditious,limit=1] @s
 
 scoreboard players set @s gm4_pneuma_data 0
-scoreboard players set @s[scores={gm4_oa_snk_num=40..79}] gm4_pneuma_data 9
-scoreboard players set @s[scores={gm4_oa_snk_num=80..159}] gm4_pneuma_data 17
-scoreboard players set @s[scores={gm4_oa_snk_num=160..319}] gm4_pneuma_data 25
-scoreboard players set @s[scores={gm4_oa_snk_num=320..}] gm4_pneuma_data 33
+scoreboard players set @s[scores={gm4_oa_snk_num=10..19}] gm4_pneuma_data 9
+scoreboard players set @s[scores={gm4_oa_snk_num=20..39}] gm4_pneuma_data 17
+scoreboard players set @s[scores={gm4_oa_snk_num=40..59}] gm4_pneuma_data 25
+scoreboard players set @s[scores={gm4_oa_snk_num=60..}] gm4_pneuma_data 33
 
 execute if score @s gm4_pneuma_data matches 9 run tp @e[type=marker,tag=gm4_oa_expeditious,limit=1] ~-4 ~ ~-4
 execute if score @s gm4_pneuma_data matches 17 run tp @e[type=marker,tag=gm4_oa_expeditious,limit=1] ~-8 ~ ~-8
