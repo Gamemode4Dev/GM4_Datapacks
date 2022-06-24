@@ -25,6 +25,7 @@ tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/phasing] add gm4_pneuma_phasin
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/retreating] add gm4_pneuma_retreating
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/rushing] add gm4_pneuma_rushing
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/scaling] add gm4_pneuma_scaling
+tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/shrieking] add gm4_pneuma_shrieking
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/soaring] add gm4_pneuma_soaring
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/striding] add gm4_pneuma_striding
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/synergetic] add gm4_pneuma_synergetic
@@ -37,6 +38,7 @@ tag @s[tag=gm4_pneuma_rushing] add gm4_sneak_pneuma
 tag @s[tag=gm4_pneuma_conjuring] add gm4_sneak_pneuma
 tag @s[tag=gm4_pneuma_expeditious] add gm4_sneak_pneuma
 tag @s[tag=gm4_pneuma_draining] add gm4_sneak_pneuma
+tag @s[tag=gm4_pneuma_shrieking] add gm4_sneak_pneuma
 
 # run tick functions
 execute if entity @a[gamemode=!spectator,tag=gm4_pneuma_agile,limit=1] run schedule function gm4_orb_of_ankou:pneumas/temp_tick/agile 1t
