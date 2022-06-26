@@ -1,0 +1,19 @@
+{
+  "values": [
+    "gm4_cooler_caves:badlands/ore_coal_upper",
+    "gm4_cooler_caves:badlands/ore_coal_lower",
+    "gm4_cooler_caves:badlands/ore_iron_upper",
+    "gm4_cooler_caves:badlands/ore_iron_middle",
+    "gm4_cooler_caves:badlands/ore_iron_small",
+    "gm4_cooler_caves:badlands/ore_gold",
+    "gm4_cooler_caves:badlands/ore_gold_lower",
+    "gm4_cooler_caves:badlands/ore_redstone",
+    "gm4_cooler_caves:badlands/ore_redstone_lower",
+    "gm4_cooler_caves:badlands/ore_diamond",
+    "gm4_cooler_caves:badlands/ore_diamond_large",
+    "gm4_cooler_caves:badlands/ore_diamond_buried",
+    "gm4_cooler_caves:badlands/ore_lapis",
+    "gm4_cooler_caves:badlands/ore_lapis_buried",
+    "gm4_cooler_caves:badlands/ore_copper"
+  ]
+}
