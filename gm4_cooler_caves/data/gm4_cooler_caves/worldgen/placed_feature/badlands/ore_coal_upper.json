@@ -1,0 +1,33 @@
+{
+  "feature": "gm4_cooler_caves:badlands/ore_coal",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 30
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "below_top": 0
+        },
+        "min_inclusive": {
+          "absolute": 136
+        }
+      }
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "OCEAN_FLOOR_WG",
+      "min_inclusive": -384,
+      "max_inclusive": -5
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
