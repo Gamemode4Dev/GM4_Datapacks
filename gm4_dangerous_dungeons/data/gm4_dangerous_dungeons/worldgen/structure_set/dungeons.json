@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "gm4_dangerous_dungeons:badlands_lower",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_dangerous_dungeons:badlands_upper",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 350397626,
+    "spacing": 6,
+    "separation": 2
+  }
+}
