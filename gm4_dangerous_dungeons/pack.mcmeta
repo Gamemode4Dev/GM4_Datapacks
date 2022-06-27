@@ -12,12 +12,13 @@
     },
     "module_name": "Dangerous Dungeons",
     "module_id": "dangerous_dungeons",
+    "libraries": [
+        "lib_biome_extensions"
+    ],
     "site_description": "A custom terrain expansion pack that adds new types of dungeons underground.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Dangerous_Dungeons",
-    "required_modules": [
-        "orbis"
-    ],
+    "required_modules": [],
     "recommended_modules": [
         "tower_structures",
         "cooler_caves"
