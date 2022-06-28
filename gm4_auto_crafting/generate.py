@@ -5,7 +5,7 @@ from urllib import request
 
 GITHUB_REPO = "misode/mcmeta"   # github repo to extract recipes from
 VERSION = "1.19"              # version to extract recipes from
-SHA = "" # <- sha for 1.19 --- change to empty string if generating for a new version
+SHA = "071befb7fa9569ffa0043f74289d0ef1ec5ffc8b" # <- sha for 1.19 --- change to empty string if generating for a new version
 
 NAME = "gm4_auto_crafting"      # name of the module
 DIR = f"{NAME}/data/{NAME}"
