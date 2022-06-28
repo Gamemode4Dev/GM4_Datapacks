@@ -4,7 +4,7 @@ import os, json, base64, getpass
 from github import Github
 
 VERSION = "1.19"
-LOAD_VER = "2.0"
+LOAD_VER = "2.1"
 DIR = f"lib_machines/data/gm4_custom_crafters-{LOAD_VER}"
 
 

@@ -26,7 +26,7 @@
               },
               "score": "load.status"
             },
-            "range": 0
+            "range": 1
           },
           {
             "condition": "minecraft:entity_properties",
