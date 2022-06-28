@@ -20,10 +20,10 @@ def write_function_file(tags):
     filename = f"{DIR}/functions/check_item_tags.mcfunction"
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, "w") as file:
-        contents = "# checks each slot for item tags\n# @s = crafter armor stand\n# located at the center of the block\n# run from gm4_custom_crafters-2.0:check_item via #gm4_custom_crafter:custom_item_checks\n\ndata modify entity @s HandItems[0] set from storage gm4_custom_crafters:temp/crafter item\n"
+        contents = "# checks each slot for item tags\n# @s = crafter armor stand\n# located at the center of the block\n# run from gm4_custom_crafters-2.1:check_item via #gm4_custom_crafter:custom_item_checks\n\ndata modify entity @s HandItems[0] set from storage gm4_custom_crafters:temp/crafter item\n"
         file.write(contents + "\n")
         for tag in tags:
-            contents = f"execute if predicate gm4_custom_crafters-2.0:vanilla_item_tags/{tag} run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.{tag} set value 1b"
+            contents = f"execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/{tag} run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.{tag} set value 1b"
             file.write(contents + "\n")
         contents = "\ndata remove entity @s HandItems[0]"
         file.write(contents + "\n")

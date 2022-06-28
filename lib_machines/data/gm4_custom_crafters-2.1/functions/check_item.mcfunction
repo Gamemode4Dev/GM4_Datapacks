@@ -1,7 +1,7 @@
 # checks each slot for special item tags
 # @s = crafters containing a potential recipe
 # located at @s
-# run from gm4_custom_crafters-2.0:attempt_craft
+# run from gm4_custom_crafters-2.1:attempt_craft
 
 # update item
 data modify storage gm4_custom_crafters:temp/crafter item set from storage gm4_custom_crafters:temp/crafter Items[-1]
@@ -17,4 +17,4 @@ data remove storage gm4_custom_crafters:temp/crafter Items[-1]
 
 # loop for all items
 scoreboard players remove $loop gm4_crafting 1
-execute if score $loop gm4_crafting matches 1.. run function gm4_custom_crafters-2.0:check_item
+execute if score $loop gm4_crafting matches 1.. run function gm4_custom_crafters-2.1:check_item

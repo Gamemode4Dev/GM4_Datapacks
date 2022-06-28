@@ -1,7 +1,7 @@
 # checks for recipes in a custom crafter
 # @s = gm4_custom_crafter unless block ~ ~ ~ dropper{Items:[]}
 # located at @s
-# run from gm4_custom_crafters-2.0:main
+# run from gm4_custom_crafters-2.1:main
 
 # store all block data into storage
 data modify storage gm4_custom_crafters:temp/crafter Items set from block ~ ~ ~ Items
@@ -40,7 +40,7 @@ execute if score $slot_count gm4_crafting matches 9.. unless score $stack_size g
 scoreboard players operation $stack_size gm4_crafting = $first_stack_size gm4_crafting
 
 # attempt to craft items in crafters with valid contents
-execute if score $stack_size gm4_crafting matches 1.. run function gm4_custom_crafters-2.0:attempt_craft
+execute if score $stack_size gm4_crafting matches 1.. run function gm4_custom_crafters-2.1:attempt_craft
 
 # storage cleanup
 data remove storage gm4_custom_crafters:temp/crafter Items

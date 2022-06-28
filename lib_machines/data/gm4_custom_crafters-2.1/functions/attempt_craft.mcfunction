@@ -1,11 +1,11 @@
 # attempts to craft items
 # @s = crafters containing a potential recipe
 # located at @s
-# run from gm4_custom_crafters-2.0:recipe_validity_check
+# run from gm4_custom_crafters-2.1:recipe_validity_check
 
 # check if any items in the crafter fall under any item tags
 scoreboard players operation $loop gm4_crafting = $slot_count gm4_crafting
-function gm4_custom_crafters-2.0:check_item
+function gm4_custom_crafters-2.1:check_item
 data modify storage gm4_custom_crafters:temp/crafter Items set from storage gm4_custom_crafters:temp/crafter new_items
 data remove storage gm4_custom_crafters:temp/crafter new_items
 
@@ -34,4 +34,4 @@ scoreboard players set $crafted gm4_crafting 0
 function #gm4_custom_crafters:check_recipes
 
 # check if one of the recipes succeeded
-execute unless score $crafted gm4_crafting matches 0 run function gm4_custom_crafters-2.0:finish_crafting
+execute unless score $crafted gm4_crafting matches 0 run function gm4_custom_crafters-2.1:finish_crafting

@@ -1,7 +1,7 @@
 # creates the custom crafter in a dropper
 # @s = player who opened the dropper while holding a crafting table
 # located at the center of the opened dropper
-# run from gm4_custom_crafters-2.0:machine/craft_in_place/player_used_item
+# run from gm4_custom_crafters-2.1:machine/craft_in_place/player_used_item
 
 # get rotation of original dropper
 execute if block ~ ~ ~ dropper[facing=down] run scoreboard players set $rotation gm4_machine_data 1
@@ -18,5 +18,5 @@ setblock ~ ~ ~ air
 clear @s[gamemode=!creative,gamemode=!spectator] crafting_table 1
 
 # create custom crafter
-function gm4_custom_crafters-2.0:machine/create
+function gm4_custom_crafters-2.1:machine/create
 advancement grant @s only gm4:custom_crafters

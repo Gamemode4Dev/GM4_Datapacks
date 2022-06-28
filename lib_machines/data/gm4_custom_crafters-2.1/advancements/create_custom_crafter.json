@@ -55,6 +55,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_custom_crafters-2.0:machine/craft_in_place/player_used_item"
+    "function": "gm4_custom_crafters-2.1:machine/craft_in_place/player_used_item"
   }
 }

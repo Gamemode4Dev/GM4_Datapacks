@@ -1,7 +1,7 @@
 # updates old custom crafters
 # @s = custom crafter armor stand
 # located at @s
-# run from gm4_custom_crafters-2.0:main
+# run from gm4_custom_crafters-2.1:main
 
 execute if block ~ ~ ~ dropper[facing=up] align xyz run summon marker ~0.5 ~0.5 ~0.5 {Tags:["gm4_custom_crafter","gm4_machine_marker","smithed.block","smithed.entity","smithed.strict"],CustomName:'"gm4_custom_crafter"',Rotation:[0.0f,0.0f]}
 execute if block ~ ~ ~ dropper[facing=up] run data merge entity @s {Silent:1,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_custom_crafter_stand","gm4_machine_stand","smithed.entity","smithed.strict"],HasVisualFire:1,CustomName:'"gm4_custom_crafter_stand"',Rotation:[0.0f,0.0f]}
