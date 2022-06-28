@@ -1,0 +1,36 @@
+{
+  "type": "block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{CustomModelData:3420140,gm4_machines:{id:\"auto_crafter\"},SkullOwner:{Name:\"gm4_auto_crafter\",Id:[I;925477182,1548502938,-926454109,-774539107],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTY1NjM4MTc3MTIyMywKICAicHJvZmlsZUlkIiA6ICJjMTNkYzkxZjg1YjA0ZWM4OGU2NDk5YzdjZDc4Zjk3MSIsCiAgInByb2ZpbGVOYW1lIiA6ICJjYXNzdGhlY3J5cHRpZCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jZjI4NWUwYjc1NGNhMDU3NDllODYzMjA0MmZkZmEyZGRkYjIyMjNhYWVmNGU3NjczOTdlNzg5Y2ZjYTYzYjFhIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=\"}]}}}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Auto Crafter",
+                    {
+                      "translate": "block.gm4.auto_crafter"
+                    }
+                  ],
+                  "color": "white",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
