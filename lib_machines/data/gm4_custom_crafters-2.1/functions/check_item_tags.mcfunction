@@ -1,7 +1,9 @@
 # checks each slot for item tags
 # @s = crafter armor stand
 # located at the center of the block
-# run from gm4_custom_crafters-2.1:check_item_tags_verify
+# run from gm4_custom_crafters-2.1:check_item via #gm4_custom_crafter:custom_item_checks
+
+data modify entity @s HandItems[0] set from storage gm4_custom_crafters:temp/crafter item
 
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/acacia_logs run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.acacia_logs set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/anvil run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.anvil set value 1b
@@ -14,13 +16,16 @@ execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/birch_logs run da
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/boats run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.boats set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/buttons run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.buttons set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/candles run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.candles set value 1b
-execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/carpets run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.carpets set value 1b
+execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/chest_boats run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.chest_boats set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/cluster_max_harvestables run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.cluster_max_harvestables set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/coal_ores run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.coal_ores set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/coals run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.coals set value 1b
+execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/compasses run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.compasses set value 1b
+execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/completes_find_tree_tutorial run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.completes_find_tree_tutorial set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/copper_ores run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.copper_ores set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/creeper_drop_music_discs run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.creeper_drop_music_discs set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/crimson_stems run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.crimson_stems set value 1b
+execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/dampens_vibrations run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.dampens_vibrations set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/dark_oak_logs run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.dark_oak_logs set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/diamond_ores run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.diamond_ores set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/dirt run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.dirt set value 1b
@@ -40,10 +45,11 @@ execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/leaves run data m
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/lectern_books run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.lectern_books set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/logs run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.logs set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/logs_that_burn run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.logs_that_burn set value 1b
+execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/mangrove_logs run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.mangrove_logs set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/music_discs run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.music_discs set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/non_flammable_wood run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.non_flammable_wood set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/oak_logs run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.oak_logs set value 1b
-execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/occludes_vibration_signals run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.occludes_vibration_signals set value 1b
+execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/overworld_natural_logs run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.overworld_natural_logs set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/piglin_food run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.piglin_food set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/piglin_loved run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.piglin_loved set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/piglin_repellents run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.piglin_repellents set value 1b
@@ -66,6 +72,7 @@ execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/terracotta run da
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/trapdoors run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.trapdoors set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/walls run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.walls set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/warped_stems run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.warped_stems set value 1b
+execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wart_blocks run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.wart_blocks set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wooden_buttons run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.wooden_buttons set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wooden_doors run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.wooden_doors set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wooden_fences run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.wooden_fences set value 1b
@@ -74,3 +81,6 @@ execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wooden_slabs run 
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wooden_stairs run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.wooden_stairs set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wooden_trapdoors run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.wooden_trapdoors set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wool run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.wool set value 1b
+execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wool_carpets run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.wool_carpets set value 1b
+
+data remove entity @s HandItems[0]
