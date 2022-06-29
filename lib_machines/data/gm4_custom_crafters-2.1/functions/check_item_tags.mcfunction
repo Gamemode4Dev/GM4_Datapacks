@@ -3,8 +3,6 @@
 # located at the center of the block
 # run from gm4_custom_crafters-2.1:check_item via #gm4_custom_crafter:custom_item_checks
 
-data modify entity @s HandItems[0] set from storage gm4_custom_crafters:temp/crafter item
-
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/acacia_logs run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.acacia_logs set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/anvil run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.anvil set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/arrows run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.arrows set value 1b
@@ -82,5 +80,3 @@ execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wooden_stairs run
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wooden_trapdoors run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.wooden_trapdoors set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wool run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.wool set value 1b
 execute if predicate gm4_custom_crafters-2.1:vanilla_item_tags/wool_carpets run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.wool_carpets set value 1b
-
-data remove entity @s HandItems[0]

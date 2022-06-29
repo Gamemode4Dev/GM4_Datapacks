@@ -13,27 +13,13 @@
   {
     "condition": "minecraft:location_check",
     "offsetX": 0,
-    "offsetY": 1,
+    "offsetY": -1,
     "offsetZ": 0,
     "predicate": {
       "block": {
         "blocks": [
           "minecraft:barrel"
         ]
-      }
-    }
-  },
-  {
-    "condition": "minecraft:location_check",
-    "offsetX": 0,
-    "offsetY": -1,
-    "offsetZ": 0,
-    "predicate": {
-      "block": {
-        "tag": "minecraft:wooden_slabs",
-        "state": {
-          "type": "bottom"
-        }
       }
     }
   },
