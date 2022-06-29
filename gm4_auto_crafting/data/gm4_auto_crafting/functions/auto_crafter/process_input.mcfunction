@@ -9,11 +9,12 @@ data modify storage gm4_auto_crafting:temp Item set from storage gm4_auto_crafti
 
 # fill up next available slot
 data modify storage gm4_auto_crafting:temp buffer_item.Count set value 1b
-data remove storage gm4_atuo_crafting:temp buffer_item.Slot
+execute store result storage gm4_auto_crafting:temp buffer_item.Slot byte 1 run scoreboard players add @s gm4_ac_buffer 9
 data modify entity @s data.gm4_auto_crafting.buffer append from storage gm4_auto_crafting:temp buffer_item
 
 # check if the buffer is full
-scoreboard players add @s gm4_ac_buffer 1
+## add 9, remove 8 = add 1
+scoreboard players remove @s gm4_ac_buffer 8
 execute if score @s gm4_ac_buffer >= @s gm4_ac_slot_count run tag @s add gm4_ac_full
 
 # remove item from the input barrel
