@@ -20,11 +20,11 @@ scoreboard players operation $mob_speed gm4_ce_data += $mob_stats gm4_ce_data
 # randomise stats - set values between 0 and current value based on normal distribution
 loot replace block 29999998 1 7134 container.0 loot gm4_combat_expanded:mob/randomize_stats
 data modify storage gm4_combat_expanded:temp random_stats set from block 29999998 1 7134 Items[{Slot:0b}].tag.AttributeModifiers
-execute store result score $mob_health gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{AttributeName:"minecraft:generic.max_health"}].Amount
-execute store result score $mob_damage gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{AttributeName:"minecraft:generic.attack_damage"}].Amount
-execute store result score $mob_speed gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{AttributeName:"minecraft:generic.movement_speed"}].Amount
-execute store result score $mob_armor gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{AttributeName:"minecraft:generic.armor"}].Amount
-execute store result score $mob_toughness gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{AttributeName:"minecraft:generic.armor_toughness"}].Amount
+execute store result score $mob_health gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{Name:"gm4_ce_mob_health"}].Amount
+execute store result score $mob_damage gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{Name:"gm4_ce_mob_damage"}].Amount
+execute store result score $mob_speed gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{Name:"gm4_ce_mob_speed"}].Amount
+execute store result score $mob_armor gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{Name:"gm4_ce_mob_armor"}].Amount
+execute store result score $mob_toughness gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{Name:"gm4_ce_mob_toughness"}].Amount
 
 # add modifiers that have been altered
 execute if score $mob_health gm4_ce_data matches 1.. run function gm4_combat_expanded:mob/modifier/health

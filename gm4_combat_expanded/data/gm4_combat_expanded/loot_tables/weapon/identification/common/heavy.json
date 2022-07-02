@@ -27,7 +27,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_damage",
-                  "name": "generic.attack_damage",
+                  "name": "gm4_ce_base_attack_damage",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -42,7 +42,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
-                  "name": "generic.attack_speed",
+                  "name": "gm4_ce_base_attack_speed",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -104,122 +104,6 @@
                   "translate": "item.gm4.combat_expanded.lore.mainhand"
                 }
               ]
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "text": " "
-              },
-              {
-                "score": {
-                  "name": "$damage_up_10",
-                  "objective": "gm4_ce_data"
-                },
-                "color": "green",
-                "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": ".",
-                    "color": "green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.period"
-                  }
-                ]
-              },
-              {
-                "score": {
-                  "name": "$damage_up_01",
-                  "objective": "gm4_ce_data"
-                },
-                "color": "green",
-                "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:value_check",
-                "value": {
-                  "type": "minecraft:score",
-                  "target": {
-                    "type": "minecraft:fixed",
-                    "name": "$damage_up_01"
-                  },
-                  "score": "gm4_ce_data"
-                },
-                "range": 0
-              }
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "text": " "
-              },
-              {
-                "score": {
-                  "name": "$damage_up_10",
-                  "objective": "gm4_ce_data"
-                },
-                "color": "green",
-                "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$damage_up_01"
-                },
-                "score": "gm4_ce_data"
-              },
-              "range": 0
             }
           ]
         },
@@ -332,6 +216,122 @@
                 "target": {
                   "type": "minecraft:fixed",
                   "name": "$atkspeed_stored_01"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 0
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "text": " "
+              },
+              {
+                "score": {
+                  "name": "$damage_up_10",
+                  "objective": "gm4_ce_data"
+                },
+                "color": "green",
+                "italic": false
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": ".",
+                    "color": "green",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_expanded.lore.period"
+                  }
+                ]
+              },
+              {
+                "score": {
+                  "name": "$damage_up_01",
+                  "objective": "gm4_ce_data"
+                },
+                "color": "green",
+                "italic": false
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": " Attack Damage",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
+                  }
+                ]
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$damage_up_01"
+                  },
+                  "score": "gm4_ce_data"
+                },
+                "range": 0
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "text": " "
+              },
+              {
+                "score": {
+                  "name": "$damage_up_10",
+                  "objective": "gm4_ce_data"
+                },
+                "color": "green",
+                "italic": false
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": " Attack Damage",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
+                  }
+                ]
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage_up_01"
                 },
                 "score": "gm4_ce_data"
               },

@@ -27,7 +27,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_damage",
-                  "name": "generic.attack_damage",
+                  "name": "gm4_ce_base_attack_damage",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -42,7 +42,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
-                  "name": "generic.attack_speed",
+                  "name": "gm4_ce_base_attack_speed",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -142,38 +142,6 @@
                 }
               ]
             }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "text": " "
-              },
-              {
-                "score": {
-                  "name": "$damage_demonic",
-                  "objective": "gm4_ce_data"
-                },
-                "color": "green",
-                "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
-              }
-            ]
           ]
         },
         {
@@ -290,6 +258,38 @@
               },
               "range": 0
             }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "text": " "
+              },
+              {
+                "score": {
+                  "name": "$damage_demonic",
+                  "objective": "gm4_ce_data"
+                },
+                "color": "green",
+                "italic": false
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": " Attack Damage",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
+                  }
+                ]
+              }
+            ]
           ]
         },
         {

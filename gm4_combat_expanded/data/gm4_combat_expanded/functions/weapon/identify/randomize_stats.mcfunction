@@ -32,11 +32,6 @@ execute store result score $random_value gm4_ce_data run data get storage gm4_co
 
 # calculate new damage in order to replace the attribute
 execute store result score $damage_stored gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.damage
-# add sharpness levels to damage
-execute store result score $sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp tag.Enchantments[{id:"minecraft:sharpness"}].lvl
-scoreboard players operation $sharpness gm4_ce_data *= #5 gm4_ce_data
-execute if score $sharpness gm4_ce_data matches 1.. run scoreboard players add $sharpness gm4_ce_data 5
-execute if score $sharpness gm4_ce_data matches 1.. run scoreboard players operation $damage_stored gm4_ce_data += $sharpness gm4_ce_data
 # base damage up
 scoreboard players operation $damage_up gm4_ce_data = $damage_stored gm4_ce_data
 scoreboard players operation $damage_up gm4_ce_data += $damage gm4_ce_data
