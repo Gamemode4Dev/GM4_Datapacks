@@ -31,6 +31,7 @@ data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s
 scoreboard players set $start gm4_lore 2
 function #gm4_lore:remove
 data modify storage gm4_lore:temp Input set from block 29999998 1 7134 Items[{Slot:2b}].tag.display.Lore
+scoreboard players set $start gm4_lore 1
 function #gm4_lore:insert
 data modify storage gm4_combat_expanded:temp tag.display.Lore set from storage gm4_lore:temp Source
 
