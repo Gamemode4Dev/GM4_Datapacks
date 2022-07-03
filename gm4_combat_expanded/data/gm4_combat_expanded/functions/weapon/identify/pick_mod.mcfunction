@@ -24,7 +24,7 @@ execute if score $namelen gm4_ce_data matches ..75 run data modify storage gm4_c
 data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.identified set value 1
 
 # modify item
-data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.sharpness set from block 29999998 1 7134 Items[{Slot:0b}].tag.Enchantments[{id:"minecraft:sharpness"}].lvl
+data modify storage gm4_combat_expanded:temp tag.Enchantments[{id:"minecraft:sharpness"}].lvl set from entity @s SelectedItem.tag.Enchantments[{id:"minecraft:sharpness"}].lvl
 item modify entity @s weapon.mainhand gm4_combat_expanded:update
 
 # playsound
