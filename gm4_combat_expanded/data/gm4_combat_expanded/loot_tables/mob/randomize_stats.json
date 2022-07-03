@@ -14,7 +14,7 @@
           "modifiers": [
             {
               "attribute": "minecraft:generic.max_health",
-              "name": "gm4_ce_mob_health",
+              "name": "",
               "amount": {
                 "type": "minecraft:binomial",
                 "n": {
@@ -32,7 +32,7 @@
             },
             {
               "attribute": "minecraft:generic.attack_damage",
-              "name": "gm4_ce_mob_damage",
+              "name": "",
               "amount": {
                 "type": "minecraft:binomial",
                 "n": {
@@ -50,7 +50,7 @@
             },
             {
               "attribute": "minecraft:generic.movement_speed",
-              "name": "gm4_ce_mob_speed",
+              "name": "",
               "amount": {
                 "type": "minecraft:binomial",
                 "n": {
@@ -68,7 +68,7 @@
             },
             {
               "attribute": "minecraft:generic.armor",
-              "name": "gm4_ce_mob_armor",
+              "name": "",
               "amount": {
                 "type": "minecraft:binomial",
                 "n": {
@@ -86,7 +86,7 @@
             },
             {
               "attribute": "minecraft:generic.armor_toughness",
-              "name": "gm4_ce_mob_toughness",
+              "name": "",
               "amount": {
                 "min": 0,
                 "max": {

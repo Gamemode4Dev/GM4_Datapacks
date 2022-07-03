@@ -10,7 +10,7 @@ execute store result storage gm4_combat_expanded:temp tag.gm4_combat_expanded.sh
 execute store result score $damage_buffed gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.damage_buffed
 
 # get weapon damage and added damage from sharpness (0.5 * level + 0.5)
-execute store result score $damage gm4_ce_data run data get storage gm4_combat_expanded:temp tag.AttributeModifiers[{Name:"gm4_ce_base_attack_damage"}].Amount 10
+execute store result score $damage gm4_ce_data run data get storage gm4_combat_expanded:temp tag.AttributeModifiers[{AttributeName:"minecraft:generic.attack_damage"}].Amount 10
 scoreboard players operation $current_sharpness gm4_ce_data *= #5 gm4_ce_data
 execute if score $current_sharpness gm4_ce_data matches 1.. run scoreboard players add $current_sharpness gm4_ce_data 5
 scoreboard players operation $damage gm4_ce_data += $current_sharpness gm4_ce_data
@@ -28,7 +28,7 @@ loot replace block 29999998 1 7134 container.2 loot gm4_combat_expanded:technica
 # update lore with lib_lore
 data modify storage gm4_lore:temp Source set from storage gm4_combat_expanded:temp tag.display.Lore
 data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"gray","text":"When in Main Hand:"},{"translate":"item.gm4.combat_expanded.lore.mainhand"}]}'
-scoreboard players set $start gm4_lore 2
+scoreboard players set $start gm4_lore 1
 function #gm4_lore:remove
 data modify storage gm4_lore:temp Input set from block 29999998 1 7134 Items[{Slot:2b}].tag.display.Lore
 function #gm4_lore:insert

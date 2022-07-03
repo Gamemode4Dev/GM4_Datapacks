@@ -27,14 +27,14 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_damage",
-                  "name": "gm4_ce_base_attack_damage",
+                  "name": "generic.attack_damage",
                   "amount": 0.5,
                   "operation": "addition",
                   "slot": "mainhand"
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
-                  "name": "gm4_ce_base_attack_speed",
+                  "name": "generic.attack_speed",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -238,6 +238,43 @@
                 "text": " "
               },
               {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "0.5",
+                    "color": "red",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_expanded.lore.0.5"
+                  }
+                ]
+              },
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": " Attack Damage",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "text": " "
+              },
+              {
                 "score": {
                   "name": "$atkspeed_down_10",
                   "objective": "gm4_ce_data"
@@ -343,43 +380,6 @@
               },
               "range": 0
             }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "text": " "
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "0.5",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.0.5"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
-              }
-            ]
           ]
         },
         {
