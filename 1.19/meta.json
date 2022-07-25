@@ -1,5 +1,5 @@
 {
-  "last_commit": "e4acaffe26c3d6c59f90dde2f1f6418bdfc2b80c",
+  "last_commit": "6821f09db55729218985205f6809a8eb106c4414",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -308,28 +308,6 @@
         ],
         "Icon Design": [
           "DuckJr"
-        ]
-      },
-      "hidden": false,
-      "important_note": false,
-      "patch": 19002
-    },
-    {
-      "id": "gm4_chest_boats",
-      "name": "Chest Boats",
-      "description": "A chest inside of a boat!",
-      "categories": [],
-      "libraries": [],
-      "requires": [],
-      "recommends": [],
-      "wiki_link": "https://wiki.gm4.co/wiki/Chest_Boats",
-      "video_link": "",
-      "credits": {
-        "Creator": [
-          "MichaelMiner137"
-        ],
-        "Icon Design": [
-          "BluePsychoRanger"
         ]
       },
       "hidden": false,
