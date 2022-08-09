@@ -4,10 +4,9 @@
     "predicate": {
       "stepping_on": {
         "block": {
-          "tag": "minecraft:grass_block",
-          "state": {
-            "snowy": "true"
-          }
+          "blocks": [
+            "minecraft:stone"
+          ]
         }
       }
     }
