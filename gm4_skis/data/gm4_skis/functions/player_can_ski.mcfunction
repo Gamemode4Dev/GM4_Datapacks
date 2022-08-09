@@ -3,4 +3,4 @@
 # at @s
 # run from main
 
-effect give @s[scores=predicate=gm4_skis:wearing_skis] speed 3 1 true
+effect give @s[predicate=gm4_skis:wearing_skis] speed 3 1 true

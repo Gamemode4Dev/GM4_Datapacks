@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420001,gm4_skis:1b,HideFlags:64}"
+                            "tag": "{CustomModelData:3420001,gm4_skis:{item:\"skis\"},HideFlags:64}"
                         },
                         {
                             "function": "minecraft:set_name",

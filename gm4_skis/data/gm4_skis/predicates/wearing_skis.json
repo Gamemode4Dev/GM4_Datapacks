@@ -7,7 +7,7 @@
           "items": [
             "minecraft:iron_boots"
           ],
-          "nbt": "{gm4_skis:1b}"
+          "nbt": "{gm4_skis:{item:\"skis\"}}"
         }
       }
     }
