@@ -16,7 +16,6 @@
     "video_link": "YOUTUBE_VIDEO_URL",
     "wiki_link": "WIKI_URL",
     "required_modules": [
-        "gm4_custom_crafters"
     ],
     "recommended_modules": [
     ],
