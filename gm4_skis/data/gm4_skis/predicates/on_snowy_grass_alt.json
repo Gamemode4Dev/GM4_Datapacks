@@ -1,0 +1,15 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "stepping_on": {
+        "block": {
+          "tag": "minecraft:grass_block",
+          "state": {
+            "snowy": "true"
+          }
+        }
+      }
+    }
+  }
+  

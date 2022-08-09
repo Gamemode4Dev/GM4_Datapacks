@@ -3,4 +3,4 @@
 # at @s
 # run from main
 
-effect give @s[predicate=gm4_skis:wearing_skis] speed 3 1 true
+execute if block ~ ~-0.9 ~ minecraft:snow run effect give @s[predicate=gm4_skis:wearing_skis] speed 3 1 true
