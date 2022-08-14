@@ -2,7 +2,7 @@
 lib_potion_tracking is a mcfunction library that allows other datapacks to track thrown splash or lingering potions. This can be used to create custom splash/lingering potion events.
 
 ## Installation
-This library requires the Gamemode 4 forceloaded chunk library (`lib_forceload`). If a data pack includes `lib_potion_tracking`, it must also include `lib_forceload`.
+This library requires the Gamemode 4 forceloaded chunk library ([`lib_forceload`](../lib_forceload/README.md)). If a data pack includes `lib_potion_tracking`, it must also include `lib_forceload`.
 
 ## How to Use
 There are 2 function tags to be used: one to initially tag the potion to be tracked, and another which activates when the tracked potion lands.

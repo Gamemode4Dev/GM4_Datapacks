@@ -5,15 +5,16 @@ lib_machines is a mcfunction library that adds logic for placing and breaking cu
 Gamemode 4 primarily uses this library for machine blocks, but any mention of "machine" or "machine blocks" below refers to any custom block.
 
 ## Installation
-This library requires the Gamemode 4 forceloaded chunk library (`lib_forceload`). If a data pack includes `lib_machines`, it must also include `lib_forceload`.
+This library requires the Gamemode 4 forceloaded chunk library ([`lib_forceload`](../lib_forceload/README.md)). If a data pack includes `lib_machines`, it must also include `lib_forceload`.
 
 ## How to Use
-There are 2 function tags to be used: one for placing machines (`#gm4_machines:place_down`) and one for breaking machines (`#gm4_machines:destroy`).
+There are 2 function tags to be used: one for placing machines (`#gm4_machines:place_down`) and one for breaking machines (`#gm4_machines:destroy`).   
+This library also supports the placement and breaking of custom machine minecarts. `#gm4_machines:place_down_cart` and `#gm4_machines:destroy_cart` should be used for minecart handling.
 
-### Placing Down Machines
+### **Placing Down Machines**
 Machine blocks must be player heads with the following NBT data:
 
-```
+```mcfunction
 {SkullOwner:{Name:"BLOCK_IDENTIFIER",Properties:{textures:[{Signature:"gm4_machine"}]}}}
 ```
 
@@ -67,7 +68,31 @@ The score `$face_placement gm4_machine_data` stores the face that the block was 
 This can be used to rotate blocks according to what face of the block it was placed on. Note that normally hoppers are placed with a facing direction opposite to the face that it was placed on. E.g. if a player places a hopper onto the south face of a block, it will point north, into the block it was placed on.
 
 The scores `$x_rotation` and `$y_rotation` store the exact rotations of the player and can be used for more precise block placement than the three options outlined above.
-### Breaking Machines
+
+### **Placing Down Machine Carts**
+Machine Carts must be a minecart item (any type of minecart works) with the following NBT:
+```mcfunction
+{gm4_machines:{id:"CART_IDENTIFIER"},display:{Name:'UNIQUE CUSTOM NAME'}}
+```
+When placing down an item with this NBT, the function tag `#gm4_machines:place_down_cart` will run. This function tag will also run every 16 ticks to update custom carts dispensed from a dispenser. This will run `as` and `at` all minecarts with a custom name (only runs once per minecart), so the name of the custom machine cart should be unique and ideally have a namespace somewhere in the name. The following command should be used to verify the specific machine placed:
+
+```mcfunction
+execute if score $placed_block gm4_machine_data matches 0 store success score $placed_block gm4_machine_data if data entity @s {CustomName:'UNIQUE CUSTOM NAME'} run function MODULE_NAMESPACE:machine/create_cart
+```
+
+The function `MODULE_NAMESPACE:machine/create_cart` should have the following commands (you can replace `hopper_minecart` with any minecart type and `armor_stand` with either a `marker` or `area_effect_cloud`): 
+```mcfunction
+# summon new minecart
+summon hopper_minecart ~ ~ ~ {Tags:["NEW_CART_IDENTIFIER","ADD ANY EXTRA TAGS"],Passengers:[{id:"minecraft:armor_stand",CustomName:'"PLEASE NAME YOUR MACHINE MARKERS"',Tags:["MARKER IDENTIFIER","gm4_machine_cart","smithed.entity","smithed.strict","ADD ANY EXTRA TAGS"],Invisible:1b,<...>}]}
+
+# clean up
+data modify entity @e[type=hopper_minecart,tag=NEW_CART_IDENTIFIER,distance=..0.1,limit=1] {} merge from entity @s {}
+data merge entity @e[type=hopper_minecart,tag=NEW_CART_IDENTIFIER,distance=..0.1,limit=1] {CustomName:'NEW_CART_NAME',Tags:["CART_IDENTIFIER","gm4_machine_cart"]}
+data merge entity @s {Items:[]}
+kill @s
+```
+
+### **Breaking Machines**
 Every tick, machine markers will check if it is in one of the following blocks:
 ```
 air
@@ -84,6 +109,39 @@ The following command should be used to verify the specific machine destroyed:
 
 ```mcfunction
 execute if entity @s[tag=IDENTIFIER] run function MODULE_NAMESPACE:machine/destroy
+```
+
+To catch and replace the item, the following function can be used:
+```mcfunction
+# kill entities related to machine block
+execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..1,nbt={Age:0s,Item:{id:"minecraft:hopper",Count:1b,tag:{display:{Name:'CUSTOM NAME OF BLOCK'}}}},limit=1,sort=nearest]
+kill @s
+
+# drop item (unless broken in creative mode)
+execute if score $dropped_item gm4_machine_data matches 1 run loot spawn ~ ~ ~ loot MODULE_NAMESPACE:entities/ITEM_LOOT_TABLE
+```
+Note that the custom name will only be present for a container block that has nbt. If the base block doesn't have block data, you can simply omit the `tag` check.
+
+### **Breaking Machine Carts**
+Every tick, machine cart markers will check if it is riding an entity (i.e. the custom machine cart). If it is no longer riding an entity, it will activate a destruction function tag `#gm4_machines:destroy_cart`. This runs `as` and `at` the marker entity. This function is run during the command block sub-tick, meaning you can kill/modify items before they can be picked up by hoppers and hopper minecarts.
+
+E.g. if the base entity of the machine cart is a hopper minecart, when the machine marker detects it has been broken, the hopper minecart item can be killed and/or replaced with a custom item (likely the custom item used to place down the machine cart).
+
+The following command should be used to verify the specific machine destroyed:
+
+```mcfunction
+execute if entity @s[tag=CART_MARKER_IDENTIFIER] run function MODULE_NAMESPACE:machine/destroy
+```
+
+To catch and replace the item, the following function can be used:
+
+```mcfunction
+# kill entities related to machine cart
+execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..2,nbt={Age:0s,Item:{id:"minecraft:hopper_minecart",Count:1b,tag:{display:{Name:'CUSTOM NAME OF THE CART'}}}},limit=1,sort=nearest]
+kill @s
+
+# drop item (unless broken in creative mode)
+execute if score $dropped_item gm4_machine_data matches 1 run loot spawn ~ ~ ~ loot MODULE_NAMESPACE:entities/ITEM_LOOT_TABLE
 ```
 
 # Custom Crafters
@@ -116,6 +174,11 @@ This checks the `Items` block data (moved to storage for efficiency), which repr
 
 ### Loot Replace
 `run loot replace block ~ ~ ~ container.0 loot MODULE_NAMESPACE:crafting/RECIPE_NAME`
+
+### **Full Function:**
+```mcfunction
+execute if score $crafted gm4_crafting matches 0 store result score $crafted gm4_crafting if score $slot_count gm4_crafting matches <number> if score $stack_size gm4_crafting matches ..<number> if data storage gm4_custom_crafters:temp/crafter {Items:[<...>]} run loot replace block ~ ~ ~ container.0 loot MODULE_NAMESPACE:crafting/RECIPE_NAME
+```
 
 - afformentioned loot table:
 ```json
@@ -153,11 +216,44 @@ This checks the `Items` block data (moved to storage for efficiency), which repr
 - It is convention to put the recipe output in the last slot, but this loot table can be flexible, as long as it replaces all 9 slots. Loot tables pools are run in order, so multiple items can be outputted (such as emptying a water bucket and replacing it with an empty bucket).
 
 ### Set the Multiplier
-When setting the outputs with the loot table, the count determines how much the item stack will be multiplied by. For example setting the count to 4 will output 4 of that item per recipe (like the log -> planks example from earlier).
+When setting the outputs with the loot table, the count determines how much the item stack will be multiplied by. For example setting the count to 4 will output 4 of that item per recipe (like the log -> planks example below).
 
-## Recipe Check Function Example
+## Recipe Check Example
+### function
 ```mcfunction
 # 1 oak log -> 4 oak planks (shapeless)
 execute if score $crafted gm4_crafting matches 0 store result score $crafted gm4_crafting if score $slot_count gm4_crafting matches 1 if score $stack_size gm4_crafting matches ..16 if data storage gm4_custom_crafters:temp/crafter {Items:[{id:"minecraft:oak_log"}]} run loot replace block ~ ~ ~ container.0 loot gm4_craft:crafting/oak_planks
+```
+### loot table
+```json
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 8,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "oak_planks",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": "4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
 ```
 In the example above, the stack size is 16 because 16 maximum input items * 4 output items per recipe = 64 total output items max.

@@ -17,7 +17,7 @@ data modify storage gm4_lore:temp Source set from <...>
 data modify storage gm4_lore:temp Target set from <...>
 ```
 
-`Input`: This is list of the lore that will be inserted or replaced. This should not be set when simply searching or removing and will be ignored if set while using the search of remove operation.
+`Input`: This is list of the lore that will be inserted or replaced. This should not be set when simply searching or removing and will be ignored if set while using the search or remove operation.
 ```mcfunction
 data modify storage gm4_lore:temp Input set from <...>
 ```
@@ -33,7 +33,7 @@ scoreboard players set $extra gm4_lore <value>
 ```
 
 ### Outputs
-There are three outputs to work to work with after running an operation. Each operation uses the three outputs differently, which can be found under the specific operation description. Below are their terminologies (will be used further in this document), as well as their general uses and the command to get them.
+There are three outputs to work with after running an operation. Each operation uses the three outputs differently, which can be found under the specific operation description. Below are their terminologies (will be used further in this document), as well as their general uses and the command to get them.
 
 `Source`: This is the modified version of the input Source.
 ```mcfunction
@@ -54,11 +54,11 @@ scoreboard players get $index gm4_lore
 ### Operations
 Below are the four operations and how to utilize them. Note that every operation requires `Source` and `Target` to be set.
 
-#### Remove
+#### **Remove**
 Removes a specified line of lore
 
 - `start` determines where the removal will start when it finds the `Target` line; this can be negative to start removing before the line or positive to start removing after the line. Defaults to 0.
-- `extra` determines how many more lines to remove after the first target line is removed. Must be positive. Defaults to 0. If set to -1, every line after the first target line will be removed.
+- `extra` determines how many more lines to remove after the first target line is removed. Must be non-negative or -1. Defaults to 0. If set to -1, every line after the first target line will be removed.
 
 ```mcfunction
 function #gm4_lore:remove
@@ -69,9 +69,9 @@ function #gm4_lore:remove
 - `index` is the location of first line that was removed.
 
 
-#### Search
+#### **Search**
 Finds the index of a specified line of lore
-- `start` determines where the search will start; must be a positive number. Defaults to 0.
+- `start` determines which line the search will start; must be a non-negative number. Defaults to 0. Any line above the start line will be ignored.
 
 ```mcfunction
 function #gm4_lore:search
@@ -82,7 +82,7 @@ function #gm4_lore:search
 - `index` is the location of first line that was found.
 
 
-#### Insert
+#### **Insert**
 Inserts lines of lore after a specified line of lore
 
 - `Input` determines the lines of lore to add after the `Target` line
@@ -97,11 +97,11 @@ function #gm4_lore:insert
 - `index` is the location of first line that was added.
 
 
-#### Replace
+#### **Replace**
 Replaces a specified line of lore with one or more new lines of lore
 
 - `Input ` determines the lines of lore to replace the `Target` line
-- `start` determines where the search for the `Target` line will start; must be a positive number. Defaults to 0.
+- `start` determines where the search for the `Target` line will start; must be a positive number. Defaults to 0. Any line above the start line will be ignored.
 
 ```mcfunction
 function #gm4_lore:replace
@@ -112,5 +112,5 @@ function #gm4_lore:replace
 - `index` is the location of first line that was replaced.
 
 ## Technical Details
-- Technically the item isn't modified directly, this means the `Source` and be added to the lore of the item using the default `data modify` operations.
+- The item isn't modified directly, this means the lore of the item should be replaced with `Source` using the `data modify` operations. If you wish to modify player data, an item modifier is required.
 - These operations are technically not limited to lore, but can also be used for any type of list.

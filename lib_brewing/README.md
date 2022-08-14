@@ -2,7 +2,7 @@
 lib_brewing is a mcfunction library that allows other datapacks to replace custom potions with splash and lingering potions when brewed in a brewing stand. This is used to prevent the `Uncraftable Splash Potion` and `Uncraftable Lingering Potion` items from being obtainable.
 
 ## How to Use
-Next to allow the module to utilize the library, two functions tags, two functions, and two loot tables should be created.
+To allow a data pack to utilize the library, two functions tags, two functions, and two loot tables should be created.
 - create the function tag file 
 
     `/data/gm4_brewing/tags/functions/insert/splash.json`
@@ -18,7 +18,7 @@ Next to allow the module to utilize the library, two functions tags, two functio
 
 - create the function tag file 
 
-    `/data/gm4_brewing/tags/functions/insert/splash.json`
+    `/data/gm4_brewing/tags/functions/insert/lingering.json`
 
     with the following code:
 ```json

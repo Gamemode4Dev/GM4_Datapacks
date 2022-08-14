@@ -2,7 +2,7 @@
 lib_forceload is a mcfunction library that forceloads a specific chunk to be used for location-dependent functions.
 
 ## Installation
-This library assumes that the overworld dimension (`minecraft:overworld`) exists and that every dimension has Y=0-2 is a valid location for blocks to be placed. If there are datapacks installed without these conditions, lib_forceload may not work.
+This library assumes that the overworld dimension (`minecraft:overworld`) exists and that for every dimension, Y=0-2 is a valid location for blocks to be placed. If there are datapacks installed without these conditions, lib_forceload may not work.
 
 ## How to Use
 When a dimension is first loaded by a player, the chunk at position `29999999 7134` is forceloaded. 
