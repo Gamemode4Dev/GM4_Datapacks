@@ -15,17 +15,21 @@
                 {
                   "translate": "%1$s%3427655$s",
                   "with": [
+                    [
+                      "Unidentified ",
+                      {
+                        "translate": "item.minecraft.iron_axe"
+                      }
+                    ],
                     {
-                      "text": "Unidentified ",
-                      "italic": false
-                    },
-                    {
-                      "translate": "item.gm4.combat_expanded.name.unidentified"
+                      "translate": "item.gm4.combat_expanded.name.unidentified",
+                      "with": [
+                        {
+                          "translate": "item.minecraft.iron_axe"
+                        }
+                      ]
                     }
-                  ]
-                },
-                {
-                  "translate": "item.minecraft.iron_axe",
+                  ],
                   "italic": false
                 }
               ]

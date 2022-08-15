@@ -67,22 +67,25 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.mining_fatigue",
-                "color": "blue",
-                "italic": false
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.mining_fatigue"
+                    },
+                    " Immunity"
+                  ],
                   {
-                    "text": " Immunity",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.immune"
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.mining_fatigue"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -107,22 +110,25 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.poison",
-                "color": "blue",
-                "italic": false
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.poison"
+                    },
+                    " Immunity"
+                  ],
                   {
-                    "text": " Immunity",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.immune"
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.poison"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -147,22 +153,25 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.wither",
-                "color": "blue",
-                "italic": false
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.wither"
+                    },
+                    " Immunity"
+                  ],
                   {
-                    "text": " Immunity",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.immune"
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.wither"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -187,22 +196,25 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.hunger",
-                "color": "blue",
-                "italic": false
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.hunger"
+                    },
+                    " Immunity"
+                  ],
                   {
-                    "text": " Immunity",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.immune"
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.hunger"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -227,22 +239,25 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.blindness",
-                "color": "blue",
-                "italic": false
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.blindness"
+                    },
+                    " Immunity"
+                  ],
                   {
-                    "text": " Immunity",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.immune"
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.blindness"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -267,22 +282,25 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.nausea",
-                "color": "blue",
-                "italic": false
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.nausea"
+                    },
+                    " Immunity"
+                  ],
                   {
-                    "text": " Immunity",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.immune"
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.nausea"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -307,22 +325,25 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.weakness",
-                "color": "blue",
-                "italic": false
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.weakness"
+                    },
+                    " Immunity"
+                  ],
                   {
-                    "text": " Immunity",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.immune"
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.weakness"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -348,21 +369,31 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Vigorous ",
+                    "italic": false,
+                    "color": "yellow"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true,
+                    "color": "yellow"
+                  }
+                ],
                 {
-                  "text": "Vigorous ",
-                  "italic": false,
-                  "color": "yellow"
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.husk"
+                  "translate": "item.gm4.combat_expanded.name.immune",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true,
+                      "color": "yellow"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true,
-              "color": "yellow"
             }
           ]
         }

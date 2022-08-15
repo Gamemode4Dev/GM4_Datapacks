@@ -5,6 +5,18 @@
       "conditions": {
         "player": [
           {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_combat_expanded"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
             "condition": "minecraft:reference",
             "name": "gm4_combat_expanded:modified_armor/wearing_reactive"
           },

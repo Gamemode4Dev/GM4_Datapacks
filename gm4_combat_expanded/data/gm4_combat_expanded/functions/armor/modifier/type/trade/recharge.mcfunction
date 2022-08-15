@@ -1,5 +1,6 @@
 # recharge trade armor piece if cooldown is over
 # @s = player wearing armour
+# at world spawn
 # run from armor/modifier/type/trade/check
 
 # mark for change and set to inactive

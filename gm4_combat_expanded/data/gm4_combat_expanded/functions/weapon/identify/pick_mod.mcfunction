@@ -1,5 +1,6 @@
 # pick a random modifier for the current weapon and apply it
 # @s = player wielding the weapon
+# at world spawn
 # run from weapon/process
 
 # randomize stats

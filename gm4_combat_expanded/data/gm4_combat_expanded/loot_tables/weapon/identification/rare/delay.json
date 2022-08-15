@@ -239,17 +239,9 @@
           "entity": "this",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When in Main Hand:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.mainhand"
-                }
-              ]
+              "translate": "item.modifiers.mainhand",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -259,33 +251,14 @@
           "lore": [
             [
               {
-                "text": " "
+                "text": " 1 ",
+                "color": "red",
+                "italic": false
               },
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "1",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.1"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
+                "translate": "attribute.name.generic.attack_damage",
+                "color": "dark_green",
+                "italic": false
               }
             ]
           ]
@@ -298,47 +271,36 @@
               {
                 "text": " "
               },
-              {
-                "score": {
-                  "name": "$atkspeed_stored_10",
-                  "objective": "gm4_ce_data"
+              [
+                {
+                  "score": {
+                    "name": "$atkspeed_stored_10",
+                    "objective": "gm4_ce_data"
+                  },
+                  "color": "dark_green",
+                  "italic": false
                 },
+                {
+                  "text": ".",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "score": {
+                    "name": "$atkspeed_stored_01",
+                    "objective": "gm4_ce_data"
+                  },
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              {
+                "text": " "
+              },
+              {
+                "translate": "attribute.name.generic.attack_speed",
                 "color": "dark_green",
                 "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": ".",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.period"
-                  }
-                ]
-              },
-              {
-                "score": {
-                  "name": "$atkspeed_stored_01",
-                  "objective": "gm4_ce_data"
-                },
-                "color": "dark_green",
-                "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Speed",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_speed"
-                  }
-                ]
               }
             ]
           ],
@@ -377,17 +339,12 @@
                 "italic": false
               },
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Speed",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_speed"
-                  }
-                ]
+                "text": " "
+              },
+              {
+                "translate": "attribute.name.generic.attack_speed",
+                "color": "dark_green",
+                "italic": false
               }
             ]
           ],
@@ -413,21 +370,29 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Resonating ",
+                    "italic": false,
+                    "color": "yellow"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true
+                  }
+                ],
                 {
-                  "text": "Resonating ",
-                  "italic": false,
-                  "color": "yellow"
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.delay"
+                  "translate": "item.gm4.combat_expanded.name.delay",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true,
-              "color": "yellow"
             }
           ]
         }

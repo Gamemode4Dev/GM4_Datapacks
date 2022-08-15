@@ -68,16 +68,19 @@
                     "translate": "%1$s%3427655$s",
                     "with": [
                       {
-                        "text": "Heal Pulse",
-                        "color": "blue",
-                        "italic": false
+                        "text": "Heal Pulse"
                       },
                       {
                         "translate": "item.gm4.combat_expanded.lore.soothe"
                       }
                     ]
+                  },
+                  {
+                    "translate": "potion.potency.0"
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -108,9 +111,7 @@
                     "translate": "%1$s%3427655$s",
                     "with": [
                       {
-                        "text": "Heal Pulse",
-                        "color": "blue",
-                        "italic": false
+                        "text": "Heal Pulse"
                       },
                       {
                         "translate": "item.gm4.combat_expanded.lore.soothe"
@@ -118,11 +119,11 @@
                     ]
                   },
                   {
-                    "translate": "potion.potency.1",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "potion.potency.1"
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -153,9 +154,7 @@
                     "translate": "%1$s%3427655$s",
                     "with": [
                       {
-                        "text": "Heal Pulse",
-                        "color": "blue",
-                        "italic": false
+                        "text": "Heal Pulse"
                       },
                       {
                         "translate": "item.gm4.combat_expanded.lore.soothe"
@@ -163,11 +162,11 @@
                     ]
                   },
                   {
-                    "translate": "potion.potency.2",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "potion.potency.2"
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -193,21 +192,31 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Soothing ",
+                    "italic": false,
+                    "color": "yellow"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true,
+                    "color": "yellow"
+                  }
+                ],
                 {
-                  "text": "Soothing ",
-                  "italic": false,
-                  "color": "yellow"
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.soothe"
+                  "translate": "item.gm4.combat_expanded.name.soothe",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true,
+                      "color": "yellow"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true,
-              "color": "yellow"
             }
           ]
         }

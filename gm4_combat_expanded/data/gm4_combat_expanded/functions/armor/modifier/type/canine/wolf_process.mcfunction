@@ -1,5 +1,6 @@
 # check if wolf has matching armor equipped by player
 # @s = wolf from canine armor
+# at world spawn
 # run from main
 
 # check if matching player is online

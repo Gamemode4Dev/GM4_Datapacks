@@ -1,5 +1,6 @@
 # get the unid of worn unidentified armor, and check if the armor should be identified
 # @s = player wearing the armor
+# at world spawn
 # run from functions in armor/slot/SLOT/identify
 
 # get unid

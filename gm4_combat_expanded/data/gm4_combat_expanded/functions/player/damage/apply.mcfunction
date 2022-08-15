@@ -1,5 +1,6 @@
 # code taken from sweethearts
 # @s = player that is taking damage
+# at world spawn
 # run from armor/active/guardian/damage_calc 
 # run from weapon/modifier/delay/explode_player
 

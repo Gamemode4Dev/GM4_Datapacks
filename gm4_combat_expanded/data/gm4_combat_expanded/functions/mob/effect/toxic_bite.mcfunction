@@ -1,5 +1,6 @@
 # poison and hunger players hit with a toxic bite
 # @s = player that was hit
+# at world spawn
 # run from advancement damaged/mob/toxic
 
 advancement revoke @s only gm4_combat_expanded:damaged/mob/toxic

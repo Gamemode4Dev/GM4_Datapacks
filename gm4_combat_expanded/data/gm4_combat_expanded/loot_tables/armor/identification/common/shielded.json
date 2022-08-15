@@ -62,7 +62,21 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.absorption",
+                "translate": "potion.withDuration",
+                "with": [
+                  {
+                    "translate": "potion.withAmplifier",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.absorption"
+                      },
+                      {
+                        "translate": "potion.potency.0"
+                      }
+                    ]
+                  },
+                  "0:03"
+                ],
                 "color": "blue",
                 "italic": false
               }
@@ -92,16 +106,14 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "effect.minecraft.absorption",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "effect.minecraft.absorption"
                   },
                   {
-                    "translate": "potion.potency.1",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "potion.potency.1"
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -129,16 +141,14 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "effect.minecraft.absorption",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "effect.minecraft.absorption"
                   },
                   {
-                    "translate": "potion.potency.2",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "potion.potency.2"
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -164,19 +174,28 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Shielded ",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true
+                  }
+                ],
                 {
-                  "text": "Shielded ",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.shielded"
+                  "translate": "item.gm4.combat_expanded.name.shielded",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true
             }
           ]
         }

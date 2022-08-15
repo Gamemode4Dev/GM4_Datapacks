@@ -1,6 +1,7 @@
 # check if the current canine armor piece has an existing matching wolf
 # @s = player that has canine armor
-# run from armor/check_modifier
+# at world spawn
+# run from armor/check_modifier/equip
 
 # get armor slot and player id
 execute store result score $slot gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.slot

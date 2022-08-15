@@ -122,32 +122,23 @@
           "lore": [
             [
               {
-                "translate": "potion.withAmplifier",
+                "translate": "potion.withDuration",
                 "with": [
                   {
-                    "translate": "effect.minecraft.wither",
-                    "color": "red",
-                    "italic": false
+                    "translate": "potion.withAmplifier",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.wither"
+                      },
+                      {
+                        "translate": "potion.potency.1"
+                      }
+                    ]
                   },
-                  {
-                    "translate": "potion.potency.1",
-                    "color": "red",
-                    "italic": false
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:01)",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.duration_1"
-                  }
-                ]
+                  "0:01"
+                ],
+                "color": "red",
+                "italic": false
               }
             ]
           ]
@@ -159,21 +150,31 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Overwhelming ",
+                    "italic": false,
+                    "color": "light_purple"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true,
+                    "color": "light_purple"
+                  }
+                ],
                 {
-                  "text": "Overwhelming ",
-                  "italic": false,
-                  "color": "light_purple"
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.overload"
+                  "translate": "item.gm4.combat_expanded.name.overload",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true,
+                      "color": "light_purple"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true,
-              "color": "light_purple"
             }
           ]
         }

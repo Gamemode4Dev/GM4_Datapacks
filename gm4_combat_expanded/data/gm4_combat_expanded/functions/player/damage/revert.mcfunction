@@ -1,5 +1,6 @@
 # code taken from sweethearts
 # @s = player to revert max health
+# at world spawn
 # run from player/damage/context
 
 # revert max health

@@ -1,7 +1,8 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:iron_chestplate"
+      "item": "minecraft:iron_chestplate",
+      "nbt": "{CustomModelData:3420003}"
     },
     "title": {
       "translate": "%1$s%3427655$s",

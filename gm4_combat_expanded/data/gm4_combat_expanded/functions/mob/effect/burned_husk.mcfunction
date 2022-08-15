@@ -1,17 +1,8 @@
-# spawn up to 11 extra husks
+# apply burned husk effects
 # @s = husk
 # at @s
 # run from mob/mob_type/husk
 
-execute if entity @s[tag=!gm4_ce_extra_mob] if block ~1 ~1 ~ #gm4:no_collision run summon husk ~1 ~ ~ {Tags:["gm4_ce_extra_mob"]}
-execute if entity @s[tag=!gm4_ce_extra_mob] if block ~-1 ~1 ~ #gm4:no_collision run summon husk ~-1 ~ ~ {Tags:["gm4_ce_extra_mob"]}
-execute if entity @s[tag=!gm4_ce_extra_mob] if block ~ ~1 ~1 #gm4:no_collision run summon husk ~ ~ ~1 {Tags:["gm4_ce_extra_mob"]}
-execute if entity @s[tag=!gm4_ce_extra_mob] if block ~ ~1 ~-1 #gm4:no_collision run summon husk ~ ~ ~-1 {Tags:["gm4_ce_extra_mob"]}
-execute if entity @s[tag=!gm4_ce_extra_mob] if block ~1 ~1 ~1 #gm4:no_collision run summon husk ~1 ~ ~1 {Tags:["gm4_ce_extra_mob"]}
-execute if entity @s[tag=!gm4_ce_extra_mob] if block ~-1 ~1 ~-1 #gm4:no_collision run summon husk ~-1 ~ ~-1 {Tags:["gm4_ce_extra_mob"]}
-execute if predicate gm4_combat_expanded:technical/chance_50 if block ~1 ~1 ~-1 #gm4:no_collision run summon husk ~1 ~ ~-1 {Tags:["gm4_ce_extra_mob"]}
-execute if predicate gm4_combat_expanded:technical/chance_50 if block ~-1 ~1 ~1 #gm4:no_collision run summon husk ~-1 ~ ~1 {Tags:["gm4_ce_extra_mob"]}
-execute if predicate gm4_combat_expanded:technical/chance_50 if block ~2 ~1 ~-1 #gm4:no_collision run summon husk ~2 ~ ~-1 {Tags:["gm4_ce_extra_mob"]}
-execute if predicate gm4_combat_expanded:technical/chance_50 if block ~-1 ~1 ~2 #gm4:no_collision run summon husk ~-1 ~ ~2 {Tags:["gm4_ce_extra_mob"]}
-execute if predicate gm4_combat_expanded:technical/chance_50 if block ~2 ~1 ~2 #gm4:no_collision run summon husk ~2 ~ ~2 {Tags:["gm4_ce_extra_mob"]}
-scoreboard players set $mob_extras gm4_ce_data 1
+attribute @s generic.max_health modifier add 34931bf4-2d02-4700-bb16-097bc669d313 "gm4_ce_modifier_burned" -0.4 multiply
+attribute @s generic.attack_damage modifier add 96ee68f2-4150-4350-af04-e4230fcd2cec "gm4_ce_modifier_burned" -0.25 multiply
+execute if entity @s[tag=!gm4_ce_extra_mob] run function gm4_combat_expanded:mob/effect/burned_husk_army

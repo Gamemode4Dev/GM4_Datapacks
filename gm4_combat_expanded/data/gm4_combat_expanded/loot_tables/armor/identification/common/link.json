@@ -131,22 +131,25 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.strength",
-                "color": "blue",
-                "italic": false
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.strength"
+                    },
+                    " Aura"
+                  ],
                   {
-                    "text": " Aura",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.aura"
+                    "translate": "attribute.gm4.combat_expanded.aura",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.strength"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -174,32 +177,33 @@
           "lore": [
             [
               {
-                "translate": "potion.withAmplifier",
-                "with": [
-                  {
-                    "translate": "effect.minecraft.strength",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "potion.potency.1",
-                    "color": "blue",
-                    "italic": false
-                  }
-                ]
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "potion.withAmplifier",
+                      "with": [
+                        {
+                          "translate": "effect.minecraft.strength"
+                        },
+                        {
+                          "translate": "potion.potency.1"
+                        }
+                      ]
+                    },
+                    " Aura"
+                  ],
                   {
-                    "text": " Aura",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.aura"
+                    "translate": "attribute.gm4.combat_expanded.lore.aura",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.strength"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -225,19 +229,28 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Bolstering ",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true
+                  }
+                ],
                 {
-                  "text": "Bolstering ",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.link"
+                  "translate": "item.gm4.combat_expanded.name.link",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true
             }
           ]
         }

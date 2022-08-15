@@ -1,5 +1,6 @@
 # let sitting canine wolves lose anger, then stand up
 # @s = wolf that is sitting
+# at world spawn
 # run from armor/active/canine/wolf_interact_check
 
 data remove entity @s AngryAt

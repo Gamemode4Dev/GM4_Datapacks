@@ -6,6 +6,8 @@
 # obtain player UUID
 data modify storage gm4_combat_expanded:temp uuid set from entity @s UUID
 
+# BPR told me to add this ¯\_(ツ)_/¯ "stupid chunk loading stuff"
+kill @e[type=wolf,tag=gm4_ce_new_wolf]
 # spawn wolf
 summon wolf ~ ~ ~ {Invulnerable:1b,CollarColor:15b,Tags:["gm4_ce_wolf","gm4_ce_new_wolf"],Attributes:[{Name:"generic.attack_damage",Base:4}]}
 execute as @e[type=wolf,tag=gm4_ce_new_wolf] run function gm4_combat_expanded:armor/modifier/type/canine/wolf_initiate

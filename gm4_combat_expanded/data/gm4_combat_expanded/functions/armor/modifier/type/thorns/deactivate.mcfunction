@@ -1,5 +1,6 @@
 # deactivate active thorns armor
 # @s = player wearing armour
+# at world spawn
 # run from armor/modifier/type/thorns/check
 
 # mark for change and set to active
@@ -15,10 +16,12 @@ data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.thorns set 
 
 # use lib_lore to remove lore lines and reveal enchantments
 data modify storage gm4_lore:temp Source set from storage gm4_combat_expanded:temp tag.display.Lore
-execute if score $level gm4_ce_data matches 1 run data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"gray","text":"Thorns XIV"},{"translate":"item.gm4.combat_expanded.lore.thorns_lvl1"}]}'
-execute if score $level gm4_ce_data matches 2 run data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"gray","text":"Thorns XV"},{"translate":"item.gm4.combat_expanded.lore.thorns_lvl2"}]}'
-execute if score $level gm4_ce_data matches 3 run data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"gray","text":"Thorns XVI"},{"translate":"item.gm4.combat_expanded.lore.thorns_lvl3"}]}'
-execute if score $level gm4_ce_data matches 4 run data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"gray","text":"Thorns XVII"},{"translate":"item.gm4.combat_expanded.lore.thorns_lvl4"}]}'
+execute if score $level gm4_ce_data matches 1 run data modify storage gm4_lore:temp Target set value '{"italic":false,"color":"gray","translate":"potion.withAmplifier","with":[{"translate":"enchantment.minecraft.thorns"},{"translate":"%1$s%3427655$s","with":["XIV",{"translate":"enchantment.level.14"}]}]}'
+execute if score $level gm4_ce_data matches 2 run data modify storage gm4_lore:temp Target set value '{"italic":false,"color":"gray","translate":"potion.withAmplifier","with":[{"translate":"enchantment.minecraft.thorns"},{"translate":"%1$s%3427655$s","with":["XV",{"translate":"enchantment.level.15"}]}]}'
+execute if score $level gm4_ce_data matches 3 run data modify storage gm4_lore:temp Target set value '{"italic":false,"color":"gray","translate":"potion.withAmplifier","with":[{"translate":"enchantment.minecraft.thorns"},{"translate":"%1$s%3427655$s","with":["XVI",{"translate":"enchantment.level.16"}]}]}'
+execute if score $level gm4_ce_data matches 4 run data modify storage gm4_lore:temp Target set value '{"italic":false,"color":"gray","translate":"potion.withAmplifier","with":[{"translate":"enchantment.minecraft.thorns"},{"translate":"%1$s%3427655$s","with":["XVII",{"translate":"enchantment.level.17"}]}]}'
 function #gm4_lore:remove
 data modify storage gm4_combat_expanded:temp tag.display.Lore set from storage gm4_lore:temp Source
-data modify storage gm4_combat_expanded:temp tag.HideFlags set value 0
+
+execute store result score $flags_changed gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.flags_changed
+execute if score $flags_changed gm4_ce_data matches 1 run function gm4_combat_expanded:armor/modifier/type/thorns/restore_flags

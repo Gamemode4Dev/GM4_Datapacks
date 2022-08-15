@@ -1,6 +1,7 @@
 # check moon phase and time of day
 # @s = player wearing armour
-# run from armor/check_modifier
+# at world spawn
+# run from armor/check_modifier/night
 
 # get moon cycle (0 = full moon)
 execute store result score $moon gm4_ce_data run time query day

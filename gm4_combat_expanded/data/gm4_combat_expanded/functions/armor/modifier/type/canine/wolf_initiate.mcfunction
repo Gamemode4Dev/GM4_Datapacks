@@ -1,5 +1,6 @@
 # match wolf to armor slot and player id
 # @s = new wolf
+# at world spawn
 # run from armor/active/canine/wolf_spawn
 
 tag @s remove gm4_ce_new_wolf

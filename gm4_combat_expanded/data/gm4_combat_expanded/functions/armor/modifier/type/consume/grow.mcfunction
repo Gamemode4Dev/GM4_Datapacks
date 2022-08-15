@@ -1,6 +1,7 @@
 # increase the damage bonus on the consuming armor
 # @s = player to consume power
-# run from armor/check_modifier
+# at world spawn
+# run from armor/check_modifier/killing
 
 # get data
 execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level
@@ -8,8 +9,7 @@ execute store result score $cap gm4_ce_data run data get storage gm4_combat_expa
 execute store result score $step gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.step
 
 # increase level and check to cap
-scoreboard players operation $level gm4_ce_data += $step gm4_ce_data
-execute store result storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level int 1 run scoreboard players get $level gm4_ce_data
+execute store result storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level int 1 run scoreboard players operation $level gm4_ce_data += $step gm4_ce_data
 execute if score $level gm4_ce_data >= $cap gm4_ce_data at @s run function gm4_combat_expanded:armor/modifier/type/consume/satiated
 
 # increase attribute to new level

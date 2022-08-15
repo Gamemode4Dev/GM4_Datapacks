@@ -1,5 +1,6 @@
 # check if armor should activate
 # @s = player being checked
+# at world spawn
 # run from armor/check_modifier
 
 # activate armor if player has taken damage in the last 2.4 seconds

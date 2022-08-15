@@ -34,15 +34,15 @@ execute if entity @s[type=piglin] run function gm4_combat_expanded:mob/mob_type/
 execute if entity @s[type=zombified_piglin] run function gm4_combat_expanded:mob/mob_type/zombified_piglin
 execute if entity @s[type=ghast] run function gm4_combat_expanded:mob/mob_type/ghast
 execute if entity @s[type=blaze] run function gm4_combat_expanded:mob/mob_type/blaze
-execute if entity @s[predicate=gm4_combat_expanded:mob/list_other] run function gm4_combat_expanded:mob/mob_type/other
+execute if entity @s[type=#gm4_combat_expanded:basic_modifiers_only] run function gm4_combat_expanded:mob/mob_type/other
 
 # heal to max health
-execute if predicate gm4_combat_expanded:mob/list_undead run effect give @s instant_damage 1 10 true
-execute unless predicate gm4_combat_expanded:mob/list_undead run effect give @s instant_health 1 10 true
+effect give @s[type=#gm4_combat_expanded:undead] instant_damage 1 10 true
+effect give @s[type=!#gm4_combat_expanded:undead] instant_health 1 10 true
 
 # process any spawned mobs
 tag @s remove gm4_ce_extra_mob
 execute if score $mob_extras gm4_ce_data matches 1.. as @e[tag=gm4_ce_extra_mob] at @s run function gm4_combat_expanded:mob/initiate
 
 # mark mob as initiated
-tag @s add gm4_ce_initiated
+tag @s add gm4_ce_processed

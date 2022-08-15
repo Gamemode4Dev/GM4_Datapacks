@@ -1,5 +1,6 @@
 # stores random values in scoreboards and storage which can be used for identification
 # @s = player wearing the armor
+# at world spawn
 # run from functions in armor/identify/check_mod/
 
 # use loot tables to fill shulker box with items

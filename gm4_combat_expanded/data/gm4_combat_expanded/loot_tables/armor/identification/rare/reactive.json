@@ -86,22 +86,15 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.absorption",
-                "color": "blue",
-                "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
+                "translate": "potion.withDuration",
                 "with": [
                   {
-                    "text": " (0:03)",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "effect.minecraft.absorption"
                   },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.duration_3"
-                  }
-                ]
+                  "0:03"
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -126,32 +119,23 @@
           "lore": [
             [
               {
-                "translate": "potion.withAmplifier",
+                "translate": "potion.withDuration",
                 "with": [
                   {
-                    "translate": "effect.minecraft.absorption",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "potion.withAmplifier",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.absorption"
+                      },
+                      {
+                        "translate": "potion.potency.1"
+                      }
+                    ]
                   },
-                  {
-                    "translate": "potion.potency.1",
-                    "color": "blue",
-                    "italic": false
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:03)",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.duration_3"
-                  }
-                ]
+                  "0:03"
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -176,32 +160,23 @@
           "lore": [
             [
               {
-                "translate": "potion.withAmplifier",
+                "translate": "potion.withDuration",
                 "with": [
                   {
-                    "translate": "effect.minecraft.absorption",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "potion.withAmplifier",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.absorption"
+                      },
+                      {
+                        "translate": "potion.potency.2"
+                      }
+                    ]
                   },
-                  {
-                    "translate": "potion.potency.2",
-                    "color": "blue",
-                    "italic": false
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:03)",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.duration_3"
-                  }
-                ]
+                  "0:03"
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -227,21 +202,31 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Reactive ",
+                    "italic": false,
+                    "color": "yellow"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true,
+                    "color": "yellow"
+                  }
+                ],
                 {
-                  "text": "Reactive ",
-                  "italic": false,
-                  "color": "yellow"
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.reactive"
+                  "translate": "item.gm4.combat_expanded.name.reactive",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true,
+                      "color": "yellow"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true,
-              "color": "yellow"
             }
           ]
         }

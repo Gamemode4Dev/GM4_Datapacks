@@ -5,8 +5,8 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air"
+          "type": "minecraft:loot_table",
+          "name": "minecraft:empty"
         },
         {
           "type": "minecraft:loot_table",
@@ -34,8 +34,8 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air"
+          "type": "minecraft:loot_table",
+          "name": "minecraft:empty"
         },
         {
           "type": "minecraft:loot_table",
@@ -63,8 +63,8 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air"
+          "type": "minecraft:loot_table",
+          "name": "minecraft:empty"
         },
         {
           "type": "minecraft:loot_table",
@@ -92,8 +92,8 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air"
+          "type": "minecraft:loot_table",
+          "name": "minecraft:empty"
         },
         {
           "type": "minecraft:loot_table",

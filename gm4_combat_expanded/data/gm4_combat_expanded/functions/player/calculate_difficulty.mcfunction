@@ -1,5 +1,6 @@
 # calculate the difficulty (https://docs.google.com/spreadsheets/d/1jxvFvZS6KcPjp3G8Qbb9rOcZZ8ukyBdGHxTFlA4fysA/edit?usp=sharing)
 # @s = player not in spectator
+# at world spawn
 # run from slow_clock
 # run from player/process (if player has just (re)spawned)
 

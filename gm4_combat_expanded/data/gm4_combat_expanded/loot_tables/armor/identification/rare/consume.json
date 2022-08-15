@@ -106,59 +106,25 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "attribute.modifier.plus.0",
                 "with": [
-                  {
-                    "text": "+",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.plus"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "0.0",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.percent_prefix"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "score": {
-                      "name": "$constep",
-                      "objective": "gm4_ce_data"
+                  [
+                    {
+                      "text": "0.0"
                     },
-                    "color": "blue",
-                    "italic": false
-                  },
+                    {
+                      "score": {
+                        "name": "$constep",
+                        "objective": "gm4_ce_data"
+                      }
+                    }
+                  ],
                   {
-                    "translate": "item.gm4.combat_expanded.lore.constep"
+                    "translate": "attribute.name.generic.attack_damage"
                   }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ]
@@ -170,21 +136,31 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Devouring ",
+                    "italic": false,
+                    "color": "yellow"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true,
+                    "color": "yellow"
+                  }
+                ],
                 {
-                  "text": "Devouring ",
-                  "italic": false,
-                  "color": "yellow"
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.consume"
+                  "translate": "item.gm4.combat_expanded.name.consume",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true,
+                      "color": "yellow"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true,
-              "color": "yellow"
             }
           ]
         }

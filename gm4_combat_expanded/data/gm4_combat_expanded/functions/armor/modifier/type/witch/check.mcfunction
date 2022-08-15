@@ -1,6 +1,7 @@
 # check witch armor piece cooldown
 # @s = player wearing armour
-# run from armor/check_modifier
+# at world spawn
+# run from armor/check_modifier/epic
 
 # get cooldown on armor
 execute store result score $cooldown gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.cooldown

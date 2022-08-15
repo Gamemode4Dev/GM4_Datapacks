@@ -18,47 +18,36 @@
               {
                 "text": " "
               },
-              {
-                "score": {
-                  "name": "$damage_10",
-                  "objective": "gm4_ce_data"
+              [
+                {
+                  "score": {
+                    "name": "$damage_10",
+                    "objective": "gm4_ce_data"
+                  },
+                  "color": "dark_green",
+                  "italic": false
                 },
+                {
+                  "text": ".",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "score": {
+                    "name": "$damage_01",
+                    "objective": "gm4_ce_data"
+                  },
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              {
+                "text": " "
+              },
+              {
+                "translate": "attribute.name.generic.attack_damage",
                 "color": "dark_green",
                 "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": ".",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.period"
-                  }
-                ]
-              },
-              {
-                "score": {
-                  "name": "$damage_01",
-                  "objective": "gm4_ce_data"
-                },
-                "color": "dark_green",
-                "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
               }
             ]
           ],
@@ -100,47 +89,36 @@
               {
                 "text": " "
               },
-              {
-                "score": {
-                  "name": "$damage_10",
-                  "objective": "gm4_ce_data"
-                },
-                "color": "green",
-                "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": ".",
-                    "color": "green",
-                    "italic": false
+              [
+                {
+                  "score": {
+                    "name": "$damage_10",
+                    "objective": "gm4_ce_data"
                   },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.period"
-                  }
-                ]
-              },
-              {
-                "score": {
-                  "name": "$damage_01",
-                  "objective": "gm4_ce_data"
+                  "color": "green",
+                  "italic": false
                 },
-                "color": "green",
-                "italic": false
+                {
+                  "text": ".",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "score": {
+                    "name": "$damage_01",
+                    "objective": "gm4_ce_data"
+                  },
+                  "color": "green",
+                  "italic": false
+                }
+              ],
+              {
+                "text": " "
               },
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
+                "translate": "attribute.name.generic.attack_damage",
+                "color": "dark_green",
+                "italic": false
               }
             ]
           ],
@@ -182,47 +160,36 @@
               {
                 "text": " "
               },
-              {
-                "score": {
-                  "name": "$damage_10",
-                  "objective": "gm4_ce_data"
-                },
-                "color": "red",
-                "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": ".",
-                    "color": "red",
-                    "italic": false
+              [
+                {
+                  "score": {
+                    "name": "$damage_10",
+                    "objective": "gm4_ce_data"
                   },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.period"
-                  }
-                ]
-              },
-              {
-                "score": {
-                  "name": "$damage_01",
-                  "objective": "gm4_ce_data"
+                  "color": "red",
+                  "italic": false
                 },
-                "color": "red",
-                "italic": false
+                {
+                  "text": ".",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "score": {
+                    "name": "$damage_01",
+                    "objective": "gm4_ce_data"
+                  },
+                  "color": "red",
+                  "italic": false
+                }
+              ],
+              {
+                "text": " "
               },
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
+                "translate": "attribute.name.generic.attack_damage",
+                "color": "dark_green",
+                "italic": false
               }
             ]
           ],
@@ -273,17 +240,12 @@
                 "italic": false
               },
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
+                "text": " "
+              },
+              {
+                "translate": "attribute.name.generic.attack_damage",
+                "color": "dark_green",
+                "italic": false
               }
             ]
           ],
@@ -331,17 +293,12 @@
                 "italic": false
               },
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
+                "text": " "
+              },
+              {
+                "translate": "attribute.name.generic.attack_damage",
+                "color": "dark_green",
+                "italic": false
               }
             ]
           ],
@@ -389,17 +346,12 @@
                 "italic": false
               },
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
+                "text": " "
+              },
+              {
+                "translate": "attribute.name.generic.attack_damage",
+                "color": "dark_green",
+                "italic": false
               }
             ]
           ],

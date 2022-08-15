@@ -96,30 +96,23 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "potion.withDuration",
                 "with": [
                   {
-                    "text": "Flash Freeze",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      {
+                        "text": "Flash Freeze"
+                      },
+                      {
+                        "translate": "item.gm4.combat_expanded.lore.fear"
+                      }
+                    ]
                   },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.fear"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:01)",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.duration_1"
-                  }
-                ]
+                  "0:01"
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -144,30 +137,23 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "potion.withDuration",
                 "with": [
                   {
-                    "text": "Flash Freeze",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      {
+                        "text": "Flash Freeze"
+                      },
+                      {
+                        "translate": "item.gm4.combat_expanded.lore.fear"
+                      }
+                    ]
                   },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.fear"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:02)",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.duration_2"
-                  }
-                ]
+                  "0:02"
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -192,40 +178,31 @@
           "lore": [
             [
               {
-                "translate": "potion.withAmplifier",
+                "translate": "potion.withDuration",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
+                    "translate": "potion.withAmplifier",
                     "with": [
                       {
-                        "text": "Flash Freeze",
-                        "color": "blue",
-                        "italic": false
+                        "translate": "%1$s%3427655$s",
+                        "with": [
+                          {
+                            "text": "Flash Freeze"
+                          },
+                          {
+                            "translate": "item.gm4.combat_expanded.lore.fear"
+                          }
+                        ]
                       },
                       {
-                        "translate": "item.gm4.combat_expanded.lore.fear"
+                        "translate": "potion.potency.1"
                       }
                     ]
                   },
-                  {
-                    "translate": "potion.potency.1",
-                    "color": "blue",
-                    "italic": false
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:01)",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.duration_1"
-                  }
-                ]
+                  "0:01"
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -250,40 +227,31 @@
           "lore": [
             [
               {
-                "translate": "potion.withAmplifier",
+                "translate": "potion.withDuration",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
+                    "translate": "potion.withAmplifier",
                     "with": [
                       {
-                        "text": "Flash Freeze",
-                        "color": "blue",
-                        "italic": false
+                        "translate": "%1$s%3427655$s",
+                        "with": [
+                          {
+                            "text": "Flash Freeze"
+                          },
+                          {
+                            "translate": "item.gm4.combat_expanded.lore.fear"
+                          }
+                        ]
                       },
                       {
-                        "translate": "item.gm4.combat_expanded.lore.fear"
+                        "translate": "potion.potency.1"
                       }
                     ]
                   },
-                  {
-                    "translate": "potion.potency.1",
-                    "color": "blue",
-                    "italic": false
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:02)",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.duration_2"
-                  }
-                ]
+                  "0:02"
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -309,19 +277,28 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Chilling ",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true
+                  }
+                ],
                 {
-                  "text": "Chilling ",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.fear"
+                  "translate": "item.gm4.combat_expanded.name.fear",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true
             }
           ]
         }

@@ -1,5 +1,6 @@
 # gives newly equipped a random unid (stored modifier), this does not identify that armor
 # @s = player wearing the armor
+# at world spawn
 # run from armor/identify/check_unid
 
 # mark for change

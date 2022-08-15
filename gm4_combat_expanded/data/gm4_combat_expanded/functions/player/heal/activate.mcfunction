@@ -1,5 +1,6 @@
 # code taken from sweethearts
 # @s = player to heal
+# at world spawn
 # run from any armor/active/heal/heal_calc
 
 # calculate max health to get player to new health

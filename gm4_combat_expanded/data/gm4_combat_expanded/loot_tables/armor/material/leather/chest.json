@@ -27,17 +27,21 @@
                 {
                   "translate": "%1$s%3427655$s",
                   "with": [
+                    [
+                      "Unidentified ",
+                      {
+                        "translate": "item.minecraft.leather_chestplate"
+                      }
+                    ],
                     {
-                      "text": "Unidentified ",
-                      "italic": false
-                    },
-                    {
-                      "translate": "item.gm4.combat_expanded.name.unidentified"
+                      "translate": "item.gm4.combat_expanded.name.unidentified",
+                      "with": [
+                        {
+                          "translate": "item.minecraft.leather_chestplate"
+                        }
+                      ]
                     }
-                  ]
-                },
-                {
-                  "translate": "item.minecraft.leather_chestplate",
+                  ],
                   "italic": false
                 }
               ]

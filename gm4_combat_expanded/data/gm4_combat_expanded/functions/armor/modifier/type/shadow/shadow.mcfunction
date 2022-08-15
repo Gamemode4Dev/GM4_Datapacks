@@ -1,9 +1,10 @@
 # keep damage shield active while player has food
 # @s = player being checked
-# run from armor/check_modifier
+# at world spawn
+# run from armor/check_modifier/night
 
-# resistance 5 if player has food haunches
-execute if score @s gm4_ce_hunger matches 1.. run effect give @s resistance 1 3
+# resistance 4 if player has food haunches
+execute if score @s gm4_ce_hunger matches 1.. run effect give @s resistance 2 3
 
 # hunger 100 if player took damage, upped to 150 if at full hunger
 execute if score @s gm4_ce_hurt matches 1.. if score @s gm4_ce_hunger matches ..19 run effect give @s hunger 1 99 true

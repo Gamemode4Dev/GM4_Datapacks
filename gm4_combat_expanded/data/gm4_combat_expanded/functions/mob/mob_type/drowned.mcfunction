@@ -19,27 +19,21 @@ execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s 
 
 # biome specific modifiers for this mob
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_toughness gm4_ce_data 1
-execute if predicate gm4_combat_expanded:mob/modifier/dark run attribute @s zombie.spawn_reinforcements modifier add 88708a3a-b8f0-46f8-8dd9-1f8fb0f315d6 "gm4_ce_modifier_dark" 0.25 multiply_base
-execute if predicate gm4_combat_expanded:mob/modifier/snowy run tag @s add gm4_ce_slowing_attacks
-execute if predicate gm4_combat_expanded:mob/modifier/mountainous run scoreboard players add $mob_armor gm4_ce_data 2
-execute if predicate gm4_combat_expanded:mob/modifier/mountainous run attribute @s generic.attack_knockback modifier add 049693ea-5ae7-4a23-b075-407c65e0b103 "gm4_ce_modifier_mountainous" 2 add
-execute if predicate gm4_combat_expanded:mob/modifier/mountainous run attribute @s zombie.spawn_reinforcements modifier add 8650cbae-ca74-423f-96c6-eba2c1c8e80e "gm4_ce_modifier_mountainous" -1 multiply
-execute if predicate gm4_combat_expanded:mob/modifier/flowering run attribute @s generic.max_health modifier add 8650cbae-ca74-423f-96c6-eba2c1c8e80e "gm4_ce_modifier_flowering" -0.25 multiply
-execute if predicate gm4_combat_expanded:mob/modifier/flowering run data modify entity @s[tag=!gm4_ce_spore_mob] ArmorDropChances[3] set value 2F
-execute if predicate gm4_combat_expanded:mob/modifier/toxic run tag @s add gm4_ce_weakness_attacks
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] zombie.spawn_reinforcements modifier add 88708a3a-b8f0-46f8-8dd9-1f8fb0f315d6 "gm4_ce_modifier_dark" 0.25 multiply_base
+tag @s[predicate=gm4_combat_expanded:mob/modifier/snowy] add gm4_ce_slowing_attacks
+execute if predicate gm4_combat_expanded:mob/modifier/mountainous run function gm4_combat_expanded:mob/effect/mountain_zombie
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/flowering] generic.max_health modifier add 8650cbae-ca74-423f-96c6-eba2c1c8e80e "gm4_ce_modifier_flowering" -0.25 multiply
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering,tag=!gm4_ce_spore_mob] ArmorDropChances[3] set value 2F
+tag @s[predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_weakness_attacks
 execute if predicate gm4_combat_expanded:mob/modifier/deep run scoreboard players add $mob_damage gm4_ce_data 4
-execute if predicate gm4_combat_expanded:mob/modifier/deep run tag @s add gm4_ce_fatigue_attacks
-execute if predicate gm4_combat_expanded:mob/modifier/growth run attribute @s generic.max_health modifier add f1f26b22-9f93-4fea-8416-96bae6867d80 "gm4_ce_modifier_growth" -0.25 multiply
-execute if predicate gm4_combat_expanded:mob/modifier/growth run attribute @s generic.attack_damage modifier add f1f26b22-9f93-4fea-8416-96bae6867d80 "gm4_ce_modifier_growth" -0.15 multiply
-execute if predicate gm4_combat_expanded:mob/modifier/growth if entity @s[tag=!gm4_ce_extra_mob] store success score $mob_extras gm4_ce_data run summon drowned ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
-execute if predicate gm4_combat_expanded:mob/modifier/growth if entity @s[tag=!gm4_ce_extra_mob] store success score $mob_extras gm4_ce_data run summon drowned ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
-execute if predicate gm4_combat_expanded:mob/modifier/growth if entity @s[tag=!gm4_ce_extra_mob] store success score $mob_extras gm4_ce_data run summon drowned ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
+tag @s[predicate=gm4_combat_expanded:mob/modifier/deep] add gm4_ce_fatigue_attacks
+execute if predicate gm4_combat_expanded:mob/modifier/growth run function gm4_combat_expanded:mob/effect/growth_drowned
 
 # set armor
 loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic
-execute if predicate gm4_combat_expanded:mob/modifier/flowering run item replace entity @s armor.head with flowering_azalea_leaves{gm4_ce_spore:drowned}
+item replace entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering] armor.head with flowering_azalea_leaves{gm4_ce_spore:drowned}
 # set weapon
-loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/zombie
+loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/generic
 
 # set modifiers
 function gm4_combat_expanded:mob/modifier/prep

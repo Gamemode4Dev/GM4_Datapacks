@@ -108,46 +108,20 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "+",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.plus"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
+                "translate": "attribute.modifier.plus.1",
                 "with": [
                   {
                     "score": {
                       "name": "$atkspeed",
                       "objective": "gm4_ce_data"
-                    },
-                    "color": "blue",
-                    "italic": false
+                    }
                   },
                   {
-                    "translate": "item.gm4.combat_expanded.lore.plus_speed"
+                    "translate": "attribute.name.generic.movement_speed"
                   }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "% Speed",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.speed"
-                  }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ]
@@ -159,19 +133,28 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Scouting ",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true
+                  }
+                ],
                 {
-                  "text": "Scouting ",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.scout"
+                  "translate": "item.gm4.combat_expanded.name.scout",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true
             }
           ]
         }

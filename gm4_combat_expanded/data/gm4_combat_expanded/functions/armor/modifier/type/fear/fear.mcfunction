@@ -1,7 +1,7 @@
 # freeze mob
 # @s = mob to fear
 # at @s
-# run from armor/check_modifier
+# run from armor/check_modifier/killing
 
 # get level of fear
 execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level

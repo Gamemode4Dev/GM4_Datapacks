@@ -1,5 +1,6 @@
 # store armor information in storage and process them
 # @s = player wearing armor with modifiers
+# at world spawn
 # run from player/process
 
 # store armor items to storage

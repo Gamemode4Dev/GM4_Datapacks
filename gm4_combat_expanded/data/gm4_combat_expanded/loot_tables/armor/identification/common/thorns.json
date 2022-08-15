@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:41,active:0,thorns:0}}"
+              "tag": "{gm4_combat_expanded:{modifier:41,active:0,thorns:0,flags_changed:0}}"
             },
             {
               "function": "minecraft:copy_nbt",
@@ -62,17 +62,23 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
+                "translate": "potion.withAmplifier",
+                "with": [ 
                   {
-                    "text": "Thorns XIV",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "enchantment.minecraft.thorns"
                   },
                   {
-                    "translate": "item.gm4.combat_expanded.lore.thorns_lvl1"
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "XIV",
+                      {
+                        "translate": "enchantment.level.14"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -97,17 +103,23 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
+                "translate": "potion.withAmplifier",
+                "with": [ 
                   {
-                    "text": "Thorns XV",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "enchantment.minecraft.thorns"
                   },
                   {
-                    "translate": "item.gm4.combat_expanded.lore.thorns_lvl2"
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "XV",
+                      {
+                        "translate": "enchantment.level.15"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -132,17 +144,23 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
+                "translate": "potion.withAmplifier",
+                "with": [ 
                   {
-                    "text": "Thorns XVI",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "enchantment.minecraft.thorns"
                   },
                   {
-                    "translate": "item.gm4.combat_expanded.lore.thorns_lvl3"
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "XVI",
+                      {
+                        "translate": "enchantment.level.16"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -167,17 +185,23 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
+                "translate": "potion.withAmplifier",
+                "with": [ 
                   {
-                    "text": "Thorns XVII",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "enchantment.minecraft.thorns"
                   },
                   {
-                    "translate": "item.gm4.combat_expanded.lore.thorns_lvl4"
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "XVII",
+                      {
+                        "translate": "enchantment.level.17"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -203,19 +227,28 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Thorny ",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true
+                  }
+                ],
                 {
-                  "text": "Thorny ",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.thorns"
+                  "translate": "item.gm4.combat_expanded.name.thorns",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true
             }
           ]
         },

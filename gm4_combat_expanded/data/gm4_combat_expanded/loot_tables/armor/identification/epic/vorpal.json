@@ -96,21 +96,31 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Vorpal ",
+                    "italic": false,
+                    "color": "light_purple"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true,
+                    "color": "light_purple"
+                  }
+                ],
                 {
-                  "text": "Vorpal ",
-                  "italic": false,
-                  "color": "light_purple"
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.vorpal"
+                  "translate": "item.gm4.combat_expanded.name.vorpal",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true,
+                      "color": "light_purple"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true,
-              "color": "light_purple"
             }
           ]
         }

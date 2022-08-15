@@ -1,6 +1,7 @@
 # damage undamaged player wearing overload armor
 # @s = player wearing armour
-# run from armor/check_modifier
+# at world spawn
+# run from armor/check_modifier/epic
 
 # calculate health
 function gm4_combat_expanded:player/calculate_hp

@@ -95,35 +95,26 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.resistance",
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.resistance"
+                    },
+                    " Aura"
+                  ],
+                  {
+                    "translate": "attribute.gm4.combat_expanded.lore.aura",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.resistance"
+                      }
+                    ]
+                  },
+                  "0:02"
+                ],
                 "color": "blue",
                 "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Aura",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.aura"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:02)",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.duration_2"
-                  }
-                ]
               }
             ]
           ],
@@ -148,45 +139,34 @@
           "lore": [
             [
               {
-                "translate": "potion.withAmplifier",
-                "with": [
-                  {
-                    "translate": "effect.minecraft.resistance",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "potion.potency.1",
-                    "color": "blue",
-                    "italic": false
-                  }
-                ]
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "potion.withAmplifier",
+                      "with": [
+                        {
+                          "translate": "effect.minecraft.resistance"
+                        },
+                        {
+                          "translate": "potion.potency.1"
+                        }
+                      ]
+                    },
+                    " Aura"
+                  ],
                   {
-                    "text": " Aura",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "attribute.gm4.combat_expanded.lore.aura",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.resistance"
+                      }
+                    ]
                   },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.aura"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:02)",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.duration_2"
-                  }
-                ]
+                  "0:02"
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -211,45 +191,34 @@
           "lore": [
             [
               {
-                "translate": "potion.withAmplifier",
-                "with": [
-                  {
-                    "translate": "effect.minecraft.resistance",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "potion.potency.2",
-                    "color": "blue",
-                    "italic": false
-                  }
-                ]
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "potion.withAmplifier",
+                      "with": [
+                        {
+                          "translate": "effect.minecraft.resistance"
+                        },
+                        {
+                          "translate": "potion.potency.2"
+                        }
+                      ]
+                    },
+                    " Aura"
+                  ],
                   {
-                    "text": " Aura",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "attribute.gm4.combat_expanded.lore.aura",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.resistance"
+                      }
+                    ]
                   },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.aura"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " (0:02)",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.duration_2"
-                  }
-                ]
+                  "0:02"
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -275,19 +244,28 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Stalling ",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true
+                  }
+                ],
                 {
-                  "text": "Stalling ",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.stall"
+                  "translate": "item.gm4.combat_expanded.name.stall",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true
             }
           ]
         }

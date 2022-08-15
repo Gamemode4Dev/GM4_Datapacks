@@ -86,7 +86,15 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.invisibility",
+                "translate": "potion.withAmplifier",
+                "with": [
+                  {
+                    "translate": "effect.minecraft.invisibility"
+                  },
+                  {
+                    "translate": "potion.potency.0"
+                  }
+                ],
                 "color": "blue",
                 "italic": false
               }
@@ -99,7 +107,15 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.jump_boost",
+                "translate": "potion.withAmplifier",
+                "with": [
+                  {
+                    "translate": "effect.minecraft.jump_boost"
+                  },
+                  {
+                    "translate": "potion.potency.0"
+                  }
+                ],
                 "color": "blue",
                 "italic": false
               }
@@ -132,16 +148,14 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "effect.minecraft.jump_boost",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "effect.minecraft.jump_boost"
                   },
                   {
-                    "translate": "potion.potency.1",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "potion.potency.1"
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ],
@@ -170,21 +184,31 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Sly ",
+                    "italic": false,
+                    "color": "yellow"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true,
+                    "color": "yellow"
+                  }
+                ],
                 {
-                  "text": "Sly ",
-                  "italic": false,
-                  "color": "yellow"
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.sneak"
+                  "translate": "item.gm4.combat_expanded.name.sneak",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true,
+                      "color": "yellow"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true,
-              "color": "yellow"
             }
           ]
         }

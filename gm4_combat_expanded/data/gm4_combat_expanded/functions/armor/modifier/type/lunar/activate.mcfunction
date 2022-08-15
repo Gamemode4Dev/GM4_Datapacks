@@ -1,5 +1,6 @@
 # grant player stats according to moon cycle
 # @s = player wearing armour
+# at world spawn
 # run from armor/modifier/type/lunar/check
 
 # mark for change and set to active

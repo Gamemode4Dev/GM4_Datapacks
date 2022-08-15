@@ -96,22 +96,25 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.slowness",
-                "color": "red",
-                "italic": false
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.slowness"
+                    },
+                    " Aura"
+                  ],
                   {
-                    "text": " Aura",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.aura"
+                    "translate": "attribute.gm4.combat_expanded.aura",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.slowness"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "red",
+                "italic": false
               }
             ]
           ],
@@ -136,32 +139,33 @@
           "lore": [
             [
               {
-                "translate": "potion.withAmplifier",
-                "with": [
-                  {
-                    "translate": "effect.minecraft.slowness",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "potion.potency.1",
-                    "color": "red",
-                    "italic": false
-                  }
-                ]
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "potion.withAmplifier",
+                      "with": [
+                        {
+                          "translate": "effect.minecraft.slowness"
+                        },
+                        {
+                          "translate": "potion.potency.1"
+                        }
+                      ]
+                    },
+                    " Aura"
+                  ],
                   {
-                    "text": " Aura",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.aura"
+                    "translate": "attribute.gm4.combat_expanded.lore.aura",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.slowness"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "red",
+                "italic": false
               }
             ]
           ],
@@ -186,32 +190,33 @@
           "lore": [
             [
               {
-                "translate": "potion.withAmplifier",
-                "with": [
-                  {
-                    "translate": "effect.minecraft.slowness",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "potion.potency.2",
-                    "color": "red",
-                    "italic": false
-                  }
-                ]
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "potion.withAmplifier",
+                      "with": [
+                        {
+                          "translate": "effect.minecraft.slowness"
+                        },
+                        {
+                          "translate": "potion.potency.2"
+                        }
+                      ]
+                    },
+                    " Aura"
+                  ],
                   {
-                    "text": " Aura",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.aura"
+                    "translate": "attribute.gm4.combat_expanded.lore.aura",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.slowness"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "red",
+                "italic": false
               }
             ]
           ],
@@ -237,19 +242,28 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Gloomy ",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true
+                  }
+                ],
                 {
-                  "text": "Gloomy ",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.gloom"
+                  "translate": "item.gm4.combat_expanded.name.gloom",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true
             }
           ]
         }

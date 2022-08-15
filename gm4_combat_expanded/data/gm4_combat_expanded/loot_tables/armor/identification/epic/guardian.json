@@ -70,21 +70,31 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Custodians ",
+                    "italic": false,
+                    "color": "light_purple"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true,
+                    "color": "light_purple"
+                  }
+                ],
                 {
-                  "text": "Custodians ",
-                  "italic": false,
-                  "color": "light_purple"
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.guardian"
+                  "translate": "item.gm4.combat_expanded.name.guardian",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true,
+                      "color": "light_purple"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true,
-              "color": "light_purple"
             }
           ]
         }

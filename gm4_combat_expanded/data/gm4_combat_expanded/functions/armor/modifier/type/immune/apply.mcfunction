@@ -1,5 +1,6 @@
 # clear effects depending on player tags from armor
 # @s = player wearing immune armour above 50% health
+# at world spawn
 # run from tick
 
 # clear effects

@@ -1,5 +1,6 @@
 # boost mob stats from the (randomized) scores
 # @s = mobs that can be buffed
+# at @s
 # run from mob/modifier/prep
 
 # apply damage boost

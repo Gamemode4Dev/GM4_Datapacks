@@ -125,17 +125,9 @@
           "entity": "this",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When in Main Hand:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.mainhand"
-                }
-              ]
+              "translate": "item.modifiers.mainhand",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -147,47 +139,36 @@
               {
                 "text": " "
               },
-              {
-                "score": {
-                  "name": "$damage_stored_10",
-                  "objective": "gm4_ce_data"
+              [
+                {
+                  "score": {
+                    "name": "$damage_stored_10",
+                    "objective": "gm4_ce_data"
+                  },
+                  "color": "dark_green",
+                  "italic": false
                 },
+                {
+                  "text": ".",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "score": {
+                    "name": "$damage_down_01",
+                    "objective": "gm4_ce_data"
+                  },
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              {
+                "text": " "
+              },
+              {
+                "translate": "attribute.name.generic.attack_damage",
                 "color": "dark_green",
                 "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": ".",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.period"
-                  }
-                ]
-              },
-              {
-                "score": {
-                  "name": "$damage_stored_01",
-                  "objective": "gm4_ce_data"
-                },
-                "color": "dark_green",
-                "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
               }
             ]
           ],
@@ -226,17 +207,12 @@
                 "italic": false
               },
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_damage"
-                  }
-                ]
+                "text": " "
+              },
+              {
+                "translate": "attribute.name.generic.attack_damage",
+                "color": "dark_green",
+                "italic": false
               }
             ]
           ],
@@ -263,47 +239,36 @@
               {
                 "text": " "
               },
-              {
-                "score": {
-                  "name": "$atkspeed_down_10",
-                  "objective": "gm4_ce_data"
-                },
-                "color": "red",
-                "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": ".",
-                    "color": "red",
-                    "italic": false
+              [
+                {
+                  "score": {
+                    "name": "$atkspeed_down_10",
+                    "objective": "gm4_ce_data"
                   },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.period"
-                  }
-                ]
-              },
-              {
-                "score": {
-                  "name": "$atkspeed_down_01",
-                  "objective": "gm4_ce_data"
+                  "color": "red",
+                  "italic": false
                 },
-                "color": "red",
-                "italic": false
+                {
+                  "text": ".",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "score": {
+                    "name": "$atkspeed_down_01",
+                    "objective": "gm4_ce_data"
+                  },
+                  "color": "red",
+                  "italic": false
+                }
+              ],
+              {
+                "text": " "
               },
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Speed",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_speed"
-                  }
-                ]
+                "translate": "attribute.name.generic.attack_speed",
+                "color": "dark_green",
+                "italic": false
               }
             ]
           ],
@@ -342,17 +307,12 @@
                 "italic": false
               },
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Attack Speed",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.attack_speed"
-                  }
-                ]
+                "text": " "
+              },
+              {
+                "translate": "attribute.name.generic.attack_speed",
+                "color": "dark_green",
+                "italic": false
               }
             ]
           ],
@@ -378,21 +338,29 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Choatic ",
+                    "italic": false,
+                    "color": "yellow"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true
+                  }
+                ],
                 {
-                  "text": "Chaotic ",
-                  "color": "yellow",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.chaos"
+                  "translate": "item.gm4.combat_expanded.name.chaos",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true,
-              "color": "yellow"
             }
           ]
         },

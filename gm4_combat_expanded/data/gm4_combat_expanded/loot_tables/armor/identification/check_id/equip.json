@@ -1,0 +1,105 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:alternatives",
+            "children": [
+              {
+                "type": "minecraft:loot_table",
+                "name": "gm4_combat_expanded:armor/identification/common/canine",
+                "conditions": [
+                  {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$mod_id"
+                      },
+                      "score": "gm4_ce_data"
+                    },
+                    "range": 1
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:loot_table",
+                "name": "gm4_combat_expanded:armor/identification/common/link",
+                "conditions": [
+                  {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$mod_id"
+                      },
+                      "score": "gm4_ce_data"
+                    },
+                    "range": 2
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:loot_table",
+                "name": "gm4_combat_expanded:armor/identification/common/beacon",
+                "conditions": [
+                  {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$mod_id"
+                      },
+                      "score": "gm4_ce_data"
+                    },
+                    "range": 3
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:loot_table",
+                "name": "gm4_combat_expanded:armor/identification/rare/trade",
+                "conditions": [
+                  {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$mod_id"
+                      },
+                      "score": "gm4_ce_data"
+                    },
+                    "range": 4
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:loot_table",
+                "name": "gm4_combat_expanded:armor/identification/epic/challenge",
+                "conditions": [
+                  {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$mod_id"
+                      },
+                      "score": "gm4_ce_data"
+                    },
+                    "range": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

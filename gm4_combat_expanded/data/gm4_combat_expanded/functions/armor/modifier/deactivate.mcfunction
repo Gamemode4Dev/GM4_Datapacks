@@ -1,5 +1,6 @@
 # deactivate the modifiers on the armor piece
 # @s = player wearing the armor
+# at world spawn
 # run from functions in armor/modifier/type/ (not the folders)
 
 # mark for change and set to inactive
@@ -8,4 +9,4 @@ data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.active set 
 
 # disable attributes
 data modify storage gm4_combat_expanded:temp tag.AttributeModifiers[{Name:gm4_combat_expanded}].Amount set value 0
-execute if data storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level2 run data modify storage gm4_combat_expanded:temp tag.AttributeModifiers[{Name:gm4_combat_expanded_2}].Amount set value 0
+data modify storage gm4_combat_expanded:temp tag.AttributeModifiers[{Name:gm4_combat_expanded_2}].Amount set value 0

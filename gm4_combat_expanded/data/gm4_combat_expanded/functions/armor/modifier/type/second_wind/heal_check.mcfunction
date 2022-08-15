@@ -1,5 +1,6 @@
 # check player health and heal if below 50%
 # @s = player wearing armor
+# at world spawn
 # run from armor/modifier/type/second_wind/check
 
 function gm4_combat_expanded:player/calculate_hp

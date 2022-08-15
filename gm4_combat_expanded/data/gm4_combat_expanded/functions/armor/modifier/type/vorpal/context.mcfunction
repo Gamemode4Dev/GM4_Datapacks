@@ -1,4 +1,6 @@
 # schedule is needed to let teleport work, because minecraft, that's why
+# @s = unspecified
+# at world spawn
 # run from armor/active/vorpal/schedule
 
 # regain context

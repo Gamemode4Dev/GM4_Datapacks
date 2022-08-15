@@ -1,5 +1,6 @@
 # make final adjustments to storage for identification
 # @s = player wearing the armor
+# at world spawn
 # run from functions in armor/identify/check_mod/
 
 # mark for change

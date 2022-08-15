@@ -1,5 +1,6 @@
 # activate the first modifier on the armor piece
 # @s = player wearing the armor
+# at world spawn
 # run from functions in armor/modifier/type/ (not the folders)
 
 # mark for change and set to active

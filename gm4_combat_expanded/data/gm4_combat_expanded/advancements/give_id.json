@@ -1,7 +1,23 @@
 {
   "criteria": {
     "join": {
-      "trigger": "minecraft:location"
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_combat_expanded"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ]
+      }
     }
   },
   "rewards": {

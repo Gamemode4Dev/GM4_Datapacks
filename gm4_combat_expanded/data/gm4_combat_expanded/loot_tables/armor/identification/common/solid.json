@@ -120,61 +120,33 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "+",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.plus"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
+                "translate": "attribute.modifier.plus.0",
                 "with": [
                   {
                     "score": {
                       "name": "$armor",
                       "objective": "gm4_ce_data"
-                    },
-                    "color": "blue",
-                    "italic": false
+                    }
                   },
                   {
-                    "translate": "item.gm4.combat_expanded.lore.plus_armor"
+                    "translate": "attribute.name.generic.armor"
                   }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Armor",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.armor"
-                  }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ],
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "attribute.modifier.plus.0",
                 "with": [
+                  "1",
                   {
-                    "text": "+1 Kockback Resistance",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.kb_resist"
+                    "translate": "attribute.name.generic.knockback_resistance"
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ]
@@ -186,19 +158,28 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Solid ",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true
+                  }
+                ],
                 {
-                  "text": "Solid ",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.solid"
+                  "translate": "item.gm4.combat_expanded.name.solid",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true
             }
           ]
         }

@@ -1,5 +1,6 @@
 # identify the boots
 # @s = player wearing the armor
+# at world spawn
 # run from armor/process
 
 # store information

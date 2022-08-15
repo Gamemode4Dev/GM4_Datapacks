@@ -1,5 +1,5 @@
-# calculate modifiers for newly spawned entity in the 'other' list
-# @s = mob
+# calculate modifiers for miscelanious entities
+# @s = mob of entity type 'basic_modifiers_only'
 # at @s
 # run from mob/initiate
 

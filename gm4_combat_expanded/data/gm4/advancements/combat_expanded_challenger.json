@@ -2,12 +2,12 @@
   "display": {
     "icon": {
       "item": "minecraft:clock",
-      "nbt": "{Enchantments:[{}]}"
+      "nbt": "{CustomModelData:3420002,Enchantments:[{}]}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Give me More!",
+        "Give Me More!",
         {
           "translate": "advancement.gm4.combat_expanded.challenger.title"
         }

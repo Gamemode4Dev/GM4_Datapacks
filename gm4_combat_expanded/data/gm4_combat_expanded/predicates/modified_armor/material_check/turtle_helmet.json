@@ -6,8 +6,8 @@
   {
     "condition": "minecraft:location_check",
     "predicate": {
-      "block": {
-        "tag": "gm4:water"
+      "fluid": {
+        "tag": "minecraft:water"
       }
     }
   }

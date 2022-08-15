@@ -79,26 +79,19 @@
           "function": "minecraft:set_lore",
           "entity": "this",
           "lore": [
-            [
-              {
-                "translate": "potion.withAmplifier",
-                "with": [
-                  {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Shadow Veil",
-                        "color": "blue",
-                        "italic": false
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.shadow"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "Shadow Veil",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_expanded.lore.shadow"
+                }
+              ]
+            }
           ]
         },
         {
@@ -108,21 +101,31 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Umbral ",
+                    "italic": false,
+                    "color": "yellow"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true,
+                    "color": "yellow"
+                  }
+                ],
                 {
-                  "text": "Umbral ",
-                  "italic": false,
-                  "color": "yellow"
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.shadow"
+                  "translate": "item.gm4.combat_expanded.name.shadow",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true,
+                      "color": "yellow"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true,
-              "color": "yellow"
             }
           ]
         }

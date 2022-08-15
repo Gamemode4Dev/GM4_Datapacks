@@ -120,46 +120,20 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "+",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.plus"
-                  }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
+                "translate": "attribute.modifier.plus.0",
                 "with": [
                   {
                     "score": {
                       "name": "$armor",
                       "objective": "gm4_ce_data"
-                    },
-                    "color": "blue",
-                    "italic": false
+                    }
                   },
                   {
-                    "translate": "item.gm4.combat_expanded.lore.plus_armor"
+                    "translate": "attribute.name.generic.armor"
                   }
-                ]
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": " Armor",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.armor"
-                  }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ]
@@ -171,19 +145,28 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Guarding ",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true
+                  }
+                ],
                 {
-                  "text": "Guarding ",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.sentinel"
+                  "translate": "item.gm4.combat_expanded.name.sentinel",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true
             }
           ]
         }

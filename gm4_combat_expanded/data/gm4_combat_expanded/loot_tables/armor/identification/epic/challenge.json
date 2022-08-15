@@ -70,21 +70,31 @@
             {
               "translate": "%1$s%3427655$s",
               "with": [
+                [
+                  {
+                    "text": "Challengers ",
+                    "italic": false,
+                    "color": "light_purple"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true,
+                    "color": "light_purple"
+                  }
+                ],
                 {
-                  "text": "Challengers ",
-                  "italic": false,
-                  "color": "light_purple"
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.name.challenge"
+                  "translate": "item.gm4.combat_expanded.name.challenge",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true,
+                      "color": "light_purple"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "nbt": "tag.gm4_combat_expanded.name",
-              "storage": "gm4_combat_expanded:temp",
-              "interpret": true,
-              "color": "light_purple"
             }
           ]
         },

@@ -1,6 +1,7 @@
 # check if guardian is above 50% health
 # @s = player guarding
-# run from armor/check_modifier
+# at world spawn
+# run from armor/check_modifier/epic
 
 function gm4_combat_expanded:player/calculate_hp
 
