@@ -86,8 +86,11 @@ The function `MODULE_NAMESPACE:machine/create_cart` should have the following co
 summon hopper_minecart ~ ~ ~ {Tags:["NEW_CART_IDENTIFIER","ADD ANY EXTRA TAGS"],Passengers:[{id:"minecraft:armor_stand",CustomName:'"PLEASE NAME YOUR MACHINE MARKERS"',Tags:["MARKER IDENTIFIER","gm4_machine_cart","smithed.entity","smithed.strict","ADD ANY EXTRA TAGS"],Invisible:1b,<...>}]}
 
 # clean up
+tag @s add NEW_CART_IDENTIFIER_SAVE
 data modify entity @e[type=hopper_minecart,tag=NEW_CART_IDENTIFIER,distance=..0.1,limit=1] {} merge from entity @s {}
-data merge entity @e[type=hopper_minecart,tag=NEW_CART_IDENTIFIER,distance=..0.1,limit=1] {CustomName:'NEW_CART_NAME',Tags:["CART_IDENTIFIER","gm4_machine_cart"]}
+tag @s remove NEW_CART_IDENTIFIER_SAVE
+# new tag is needed in case the first minecart had tags already
+data merge entity @e[type=hopper_minecart,tag=NEW_CART_IDENTIFIER_SAVE,distance=..0.1,limit=1] {CustomName:'NEW_CART_NAME',Tags:["CART_IDENTIFIER","gm4_machine_cart"]}
 data merge entity @s {Items:[]}
 kill @s
 ```

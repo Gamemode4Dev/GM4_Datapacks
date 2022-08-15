@@ -1,0 +1,2 @@
+execute if score $placed_block gm4_machine_data matches 0 store success score $placed_block gm4_machine_data if data storage gm4_machines:temp {id:"custom_machine_1"} run function gm4_machines_example:machine/create_machine_1
+execute if score $placed_block gm4_machine_data matches 0 store success score $placed_block gm4_machine_data if data storage gm4_machines:temp {id:"custom_machine_2"} run function gm4_machines_example:machine/create_machine_2

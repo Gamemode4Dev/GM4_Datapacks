@@ -1,0 +1,1 @@
+execute if score $placed_block gm4_machine_data matches 0 store success score $placed_block gm4_machine_data if data entity @s {CustomName:'{"text":"Custom Machine Cart Item"}'} run function gm4_machines_example:machine/create_cart
