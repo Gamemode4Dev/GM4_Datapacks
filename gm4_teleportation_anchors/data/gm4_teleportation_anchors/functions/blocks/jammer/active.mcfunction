@@ -13,6 +13,8 @@ execute if predicate gm4_teleportation_anchors:has_pyramid_3 run tag @e[team=!gm
 # track which jammed affected which entity and set decay score
 scoreboard players set @e[tag=gm4_ta_new_jammed,distance=..129] gm4_ta_jam_time 3
 tag @e[tag=gm4_ta_new_jammed,distance=..129] add gm4_ta_jammed
+#  ZC compatibility
+execute as @e[tag=gm4_ta_new_jammed,distance=..129] unless score @s gm4_zc_no_explode matches 3.. run scoreboard players set @s gm4_zc_no_explode 3
 tag @e[distance=..129] remove gm4_ta_new_jammed
 
 particle minecraft:reverse_portal ~ ~0.5 ~ 0.01 0.7 0.01 0.01 30 force
