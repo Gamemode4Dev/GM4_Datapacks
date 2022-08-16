@@ -95,22 +95,31 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "potion.withDuration",
                 "with": [
                   [
                     {
-                      "translate": "effect.minecraft.resistance"
-                    },
-                    " Aura"
+                      "translate": "%1$s%3427655$s",
+                      "with": [
+                        [
+                          [
+                            {
+                              "translate": "effect.minecraft.absorption"
+                            }
+                          ],
+                          " Aura"
+                        ],
+                        {
+                          "translate": "attribute.gm4.combat_expanded.lore.aura",
+                          "with": [
+                            {
+                              "translate": "effect.minecraft.absorption"
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   ],
-                  {
-                    "translate": "attribute.gm4.combat_expanded.lore.aura",
-                    "with": [
-                      {
-                        "translate": "effect.minecraft.resistance"
-                      }
-                    ]
-                  },
                   "0:02"
                 ],
                 "color": "blue",
@@ -139,30 +148,47 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "potion.withDuration",
                 "with": [
                   [
                     {
-                      "translate": "potion.withAmplifier",
+                      "translate": "%1$s%3427655$s",
                       "with": [
+                        [
+                          [
+                            {
+                              "translate": "potion.withAmplifier",
+                              "with": [
+                                {
+                                  "translate": "effect.minecraft.absorption"
+                                },
+                                {
+                                  "translate": "potion.potency.2"
+                                }
+                              ]
+                            }
+                          ],
+                          " Aura"
+                        ],
                         {
-                          "translate": "effect.minecraft.resistance"
-                        },
-                        {
-                          "translate": "potion.potency.1"
+                          "translate": "attribute.gm4.combat_expanded.lore.aura",
+                          "with": [
+                            {
+                              "translate": "potion.withAmplifier",
+                              "with": [
+                                {
+                                  "translate": "effect.minecraft.absorption"
+                                },
+                                {
+                                  "translate": "potion.potency.2"
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
-                    },
-                    " Aura"
+                    }
                   ],
-                  {
-                    "translate": "attribute.gm4.combat_expanded.lore.aura",
-                    "with": [
-                      {
-                        "translate": "effect.minecraft.resistance"
-                      }
-                    ]
-                  },
                   "0:02"
                 ],
                 "color": "blue",
@@ -191,30 +217,47 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "potion.withDuration",
                 "with": [
                   [
                     {
-                      "translate": "potion.withAmplifier",
+                      "translate": "%1$s%3427655$s",
                       "with": [
+                        [
+                          [
+                            {
+                              "translate": "potion.withAmplifier",
+                              "with": [
+                                {
+                                  "translate": "effect.minecraft.absorption"
+                                },
+                                {
+                                  "translate": "potion.potency.2"
+                                }
+                              ]
+                            }
+                          ],
+                          " Aura"
+                        ],
                         {
-                          "translate": "effect.minecraft.resistance"
-                        },
-                        {
-                          "translate": "potion.potency.2"
+                          "translate": "attribute.gm4.combat_expanded.lore.aura",
+                          "with": [
+                            {
+                              "translate": "potion.withAmplifier",
+                              "with": [
+                                {
+                                  "translate": "effect.minecraft.absorption"
+                                },
+                                {
+                                  "translate": "potion.potency.2"
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
-                    },
-                    " Aura"
+                    }
                   ],
-                  {
-                    "translate": "attribute.gm4.combat_expanded.lore.aura",
-                    "with": [
-                      {
-                        "translate": "effect.minecraft.resistance"
-                      }
-                    ]
-                  },
                   "0:02"
                 ],
                 "color": "blue",

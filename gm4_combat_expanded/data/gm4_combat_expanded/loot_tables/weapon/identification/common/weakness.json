@@ -274,34 +274,32 @@
               {
                 "text": " "
               },
-              [
-                {
-                  "score": {
-                    "name": "$damage_stored_10",
-                    "objective": "gm4_ce_data"
-                  },
-                  "color": "dark_green",
-                  "italic": false
-                },
-                {
-                  "text": ".",
-                  "color": "dark_green",
-                  "italic": false
-                },
-                {
-                  "score": {
-                    "name": "$damage_down_01",
-                    "objective": "gm4_ce_data"
-                  },
-                  "color": "dark_green",
-                  "italic": false
-                }
-              ],
               {
-                "text": " "
-              },
-              {
-                "translate": "attribute.name.generic.attack_damage",
+                "translate": "attribute.modifier.equals.0",
+                "with": [
+                  [
+                    {
+                      "score": {
+                        "name": "$damage_stored_10",
+                        "objective": "gm4_ce_data"
+                      },
+                      "color": "dark_green",
+                      "italic": false
+                    },
+                    {
+                      "text": "."
+                    },
+                    {
+                      "score": {
+                        "name": "$damage_stored_01",
+                        "objective": "gm4_ce_data"
+                      }
+                    }
+                  ],
+                  {
+                    "translate": "attribute.name.generic.attack_damage"
+                  }
+                ],
                 "color": "dark_green",
                 "italic": false
               }
@@ -334,18 +332,20 @@
                 "text": " "
               },
               {
-                "score": {
-                  "name": "$damage_stored_10",
-                  "objective": "gm4_ce_data"
-                },
-                "color": "dark_green",
-                "italic": false
-              },
-              {
-                "text": " "
-              },
-              {
-                "translate": "attribute.name.generic.attack_damage",
+                "translate": "attribute.modifier.equals.0",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$damage_stored_10",
+                      "objective": "gm4_ce_data"
+                    },
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.name.generic.attack_damage"
+                  }
+                ],
                 "color": "dark_green",
                 "italic": false
               }
@@ -374,34 +374,32 @@
               {
                 "text": " "
               },
-              [
-                {
-                  "score": {
-                    "name": "$atkspeed_down_10",
-                    "objective": "gm4_ce_data"
-                  },
-                  "color": "red",
-                  "italic": false
-                },
-                {
-                  "text": ".",
-                  "color": "red",
-                  "italic": false
-                },
-                {
-                  "score": {
-                    "name": "$atkspeed_down_01",
-                    "objective": "gm4_ce_data"
-                  },
-                  "color": "red",
-                  "italic": false
-                }
-              ],
               {
-                "text": " "
-              },
-              {
-                "translate": "attribute.name.generic.attack_speed",
+                "translate": "attribute.modifier.equals.0",
+                "with": [
+                  [
+                    {
+                      "score": {
+                        "name": "$atkspeed_down_10",
+                        "objective": "gm4_ce_data"
+                      },
+                      "color": "red",
+                      "italic": false
+                    },
+                    {
+                      "text": "."
+                    },
+                    {
+                      "score": {
+                        "name": "$atkspeed_down_10",
+                        "objective": "gm4_ce_data"
+                      }
+                    }
+                  ],
+                  {
+                    "translate": "attribute.name.generic.attack_speed"
+                  }
+                ],
                 "color": "dark_green",
                 "italic": false
               }
@@ -434,18 +432,20 @@
                 "text": " "
               },
               {
-                "score": {
-                  "name": "$atkspeed_down_10",
-                  "objective": "gm4_ce_data"
-                },
-                "color": "red",
-                "italic": false
-              },
-              {
-                "text": " "
-              },
-              {
-                "translate": "attribute.name.generic.attack_speed",
+                "translate": "attribute.modifier.equals.0",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$atkspeed_down_10",
+                      "objective": "gm4_ce_data"
+                    },
+                    "color": "red",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.name.generic.attack_speed"
+                  }
+                ],
                 "color": "dark_green",
                 "italic": false
               }

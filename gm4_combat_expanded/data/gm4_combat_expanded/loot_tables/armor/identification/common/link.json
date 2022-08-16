@@ -197,7 +197,15 @@
                     "translate": "attribute.gm4.combat_expanded.lore.aura",
                     "with": [
                       {
-                        "translate": "effect.minecraft.strength"
+                        "translate": "potion.withAmplifier",
+                        "with": [
+                          {
+                            "translate": "effect.minecraft.strength"
+                          },
+                          {
+                            "translate": "potion.potency.1"
+                          }
+                        ]
                       }
                     ]
                   }

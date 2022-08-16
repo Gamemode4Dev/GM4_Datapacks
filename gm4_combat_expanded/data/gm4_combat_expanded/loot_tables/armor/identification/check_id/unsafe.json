@@ -1,123 +1,122 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:alternatives",
-            "children": [
-              {
-                "type": "minecraft:loot_table",
-                "name": "gm4_combat_expanded:armor/identification/rare/reactive",
-                "conditions": [
-                  {
-                    "condition": "minecraft:value_check",
-                    "value": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$mod_id"
-                      },
-                      "score": "gm4_ce_data"
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/rare/reactive",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
                     },
-                    "range": 1
-                  }
-                ]
-              },
-              {
-                "type": "minecraft:loot_table",
-                "name": "gm4_combat_expanded:armor/identification/common/stall",
-                "conditions": [
-                  {
-                    "condition": "minecraft:value_check",
-                    "value": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$mod_id"
-                      },
-                      "score": "gm4_ce_data"
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 1
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/common/stall",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
                     },
-                    "range": 2
-                  }
-                ]
-              },
-              {
-                "type": "minecraft:loot_table",
-                "name": "gm4_combat_expanded:armor/identification/common/retaliate",
-                "conditions": [
-                  {
-                    "condition": "minecraft:value_check",
-                    "value": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$mod_id"
-                      },
-                      "score": "gm4_ce_data"
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 2
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/common/retaliate",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
                     },
-                    "range": 3
-                  }
-                ]
-              },
-              {
-                "type": "minecraft:loot_table",
-                "name": "gm4_combat_expanded:armor/identification/common/sentinel",
-                "conditions": [
-                  {
-                    "condition": "minecraft:value_check",
-                    "value": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$mod_id"
-                      },
-                      "score": "gm4_ce_data"
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 3
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/common/sentinel",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
                     },
-                    "range": 4
-                  }
-                ]
-              },
-              {
-                "type": "minecraft:loot_table",
-                "name": "gm4_combat_expanded:armor/identification/epic/vorpal",
-                "conditions": [
-                  {
-                    "condition": "minecraft:value_check",
-                    "value": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$mod_id"
-                      },
-                      "score": "gm4_ce_data"
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 4
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/epic/vorpal",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
                     },
-                    "range": 5
-                  }
-                ]
-              },
-              {
-                "type": "minecraft:loot_table",
-                "name": "gm4_combat_expanded:armor/identification/epic/witch",
-                "conditions": [
-                  {
-                    "condition": "minecraft:value_check",
-                    "value": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$mod_id"
-                      },
-                      "score": "gm4_ce_data"
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 5
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/epic/witch",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
                     },
-                    "range": 6
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 6
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

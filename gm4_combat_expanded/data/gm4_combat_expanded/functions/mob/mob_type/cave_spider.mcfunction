@@ -14,7 +14,7 @@ effect give @s[predicate=gm4_combat_expanded:mob/modifier/burned,predicate=gm4_c
 execute if predicate gm4_combat_expanded:mob/modifier/lush_caves run function gm4_combat_expanded:mob/effect/lush_caves_spider
 tag @s[predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_poison_bite
 execute if entity @s[predicate=gm4_combat_expanded:mob/modifier/growth,tag=!gm4_ce_extra_mob] store success score $mob_extras gm4_ce_data run summon cave_spider ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
-execute if entity @s[predicate=gm4_combat_expanded:mob/modifier/growth,tag=!gm4_ce_extra_mob] if predicate gm4_combat_expanded:technical/chance/extra_spider_spawn store success score $mob_extras gm4_ce_data run summon cave_spider ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
+execute if entity @s[predicate=gm4_combat_expanded:mob/modifier/growth,predicate=gm4_combat_expanded:technical/chance/extra_spider_spawn,tag=!gm4_ce_extra_mob] store success score $mob_extras gm4_ce_data run summon cave_spider ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
 
 # set modifiers
 function gm4_combat_expanded:mob/modifier/prep

@@ -63,7 +63,7 @@
             [
               {
                 "translate": "potion.withAmplifier",
-                "with": [ 
+                "with": [
                   {
                     "translate": "enchantment.minecraft.thorns"
                   },
@@ -104,7 +104,7 @@
             [
               {
                 "translate": "potion.withAmplifier",
-                "with": [ 
+                "with": [
                   {
                     "translate": "enchantment.minecraft.thorns"
                   },
@@ -145,7 +145,7 @@
             [
               {
                 "translate": "potion.withAmplifier",
-                "with": [ 
+                "with": [
                   {
                     "translate": "enchantment.minecraft.thorns"
                   },
@@ -186,7 +186,7 @@
             [
               {
                 "translate": "potion.withAmplifier",
-                "with": [ 
+                "with": [
                   {
                     "translate": "enchantment.minecraft.thorns"
                   },
