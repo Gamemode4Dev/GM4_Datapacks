@@ -14,7 +14,7 @@ execute store result score $size gm4_ce_data run data get entity @s Size
 # biome specific modifiers for this mob
 execute if predicate gm4_combat_expanded:mob/modifier/flowering run function gm4_combat_expanded:mob/effect/flowering_slime
 tag @s[type=slime,predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_poison_landing
-execute if score $size gm4_ce_data matches 1.. if entity @s[predicate=gm4_combat_expanded:mob/modifier/growth,tag=!gm4_ce_extra_mob] run function gm4_combat_expanded:mob/effect/growth_slime
+execute if score $size gm4_ce_data matches 1.. if entity @s[tag=!gm4_ce_extra_mob,predicate=gm4_combat_expanded:mob/modifier/growth] run function gm4_combat_expanded:mob/effect/growth_slime
 
 # set modifiers
 function gm4_combat_expanded:mob/modifier/prep

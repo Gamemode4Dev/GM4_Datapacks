@@ -41,8 +41,8 @@ effect give @s[type=#gm4_combat_expanded:undead] instant_damage 1 10 true
 effect give @s[type=!#gm4_combat_expanded:undead] instant_health 1 10 true
 
 # process any spawned mobs
+execute if score $mob_extras gm4_ce_data matches 1.. unless entity @s[tag=gm4_ce_extra_mob] as @e[tag=gm4_ce_extra_mob] at @s run function gm4_combat_expanded:mob/initiate
 tag @s remove gm4_ce_extra_mob
-execute if score $mob_extras gm4_ce_data matches 1.. as @e[tag=gm4_ce_extra_mob] at @s run function gm4_combat_expanded:mob/initiate
 
 # mark mob as initiated
 tag @s add gm4_ce_processed

@@ -7,3 +7,4 @@ execute if score gm4_combat_expanded load.status matches 1 run function gm4_comb
 execute unless score gm4_combat_expanded load.status matches 1 run schedule clear gm4_combat_expanded:tick
 execute unless score gm4_combat_expanded load.status matches 1 run schedule clear gm4_combat_expanded:main
 execute unless score gm4_combat_expanded load.status matches 1 run schedule clear gm4_combat_expanded:slow_clock
+execute unless score gm4_combat_expanded load.status matches 1 run schedule clear gm4_combat_expanded:player/submain

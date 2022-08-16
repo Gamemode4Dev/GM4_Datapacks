@@ -225,7 +225,7 @@
                 "translate": "attribute.modifier.equals.0",
                 "with": [
                   {
-                    "text": "0.5 ",
+                    "text": "0.5",
                     "color": "red",
                     "italic": false
                   },

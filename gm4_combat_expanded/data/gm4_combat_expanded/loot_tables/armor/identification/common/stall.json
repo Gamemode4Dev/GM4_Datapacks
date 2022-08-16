@@ -104,7 +104,7 @@
                         [
                           [
                             {
-                              "translate": "effect.minecraft.absorption"
+                              "translate": "effect.minecraft.resistance"
                             }
                           ],
                           " Aura"
@@ -113,7 +113,7 @@
                           "translate": "attribute.gm4.combat_expanded.lore.aura",
                           "with": [
                             {
-                              "translate": "effect.minecraft.absorption"
+                              "translate": "effect.minecraft.resistance"
                             }
                           ]
                         }
@@ -160,7 +160,7 @@
                               "translate": "potion.withAmplifier",
                               "with": [
                                 {
-                                  "translate": "effect.minecraft.absorption"
+                                  "translate": "effect.minecraft.resistance"
                                 },
                                 {
                                   "translate": "potion.potency.2"
@@ -177,7 +177,7 @@
                               "translate": "potion.withAmplifier",
                               "with": [
                                 {
-                                  "translate": "effect.minecraft.absorption"
+                                  "translate": "effect.minecraft.resistance"
                                 },
                                 {
                                   "translate": "potion.potency.2"
@@ -229,7 +229,7 @@
                               "translate": "potion.withAmplifier",
                               "with": [
                                 {
-                                  "translate": "effect.minecraft.absorption"
+                                  "translate": "effect.minecraft.resistance"
                                 },
                                 {
                                   "translate": "potion.potency.2"
@@ -246,7 +246,7 @@
                               "translate": "potion.withAmplifier",
                               "with": [
                                 {
-                                  "translate": "effect.minecraft.absorption"
+                                  "translate": "effect.minecraft.resistance"
                                 },
                                 {
                                   "translate": "potion.potency.2"

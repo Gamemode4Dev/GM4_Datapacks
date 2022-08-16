@@ -257,7 +257,7 @@
                 "translate": "attribute.modifier.equals.0",
                 "with": [
                   {
-                    "text": "1 ",
+                    "text": "1",
                     "color": "red",
                     "italic": false
                   },
