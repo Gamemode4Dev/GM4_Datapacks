@@ -1,64 +1,64 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:player_head",
-                    "functions": [
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  "Bauxite Lump",
+                  {
+                    "translate": "item.gm4.metallurgy.bauxite_lump"
+                  }
+                ],
+                "italic": false,
+                "color": "white"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "Contains ",
                       {
-                        "function": "minecraft:set_name",
-                        "entity": "this",
-                        "name": {
-                          "translate": "%1$s%3427655$s",
-                          "with": [
-                            "Bauxite Lump",
-                            {
-                              "translate": "item.gm4.metallurgy.bauxite_lump"
-                            }
-                          ],
-                          "italic": false,
-                          "color": "white"
-                        }
-                      },
-                      {
-                        "function": "minecraft:set_lore",
-                        "entity": "this",
-                        "lore": [
-                          [
-                            {
-                              "translate": "%1$s%3427655$s",
-                              "with": [
-                                "Contains ",
-                                {
-                                  "translate": "text.gm4.metallurgy.contains"
-                                }
-                              ],
-                              "italic": false,
-                              "color": "gray"
-                            },
-                            {
-                              "translate": "%1$s%3427655$s",
-                              "with": [
-                                "Aluminium",
-                                {
-                                  "translate": "text.gm4.metallurgy.aluminium"
-                                }
-                              ],
-                              "italic": false,
-                              "color": "#F47989"
-                            }
-                          ]
-                        ]
-                      },
-                      {
-                        "function": "minecraft:set_nbt",
-                        "tag": "{gm4_metallurgy:{metal:{type:\"aluminium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420021,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/aluminium/v0\",Id:[I;140191582,-1151712444,-1271445916,307298631],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyOTY4NDMzNDA1MiwKICAicHJvZmlsZUlkIiA6ICI3ZmIyOGQ1N2FhZmQ0MmQ1YTcwNWNlZjE4YWI1MzEzZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJjaXJjdWl0MTAiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjU1MTdhNjYyYTgzY2FhYWFjMWE3MTMzMmUzODFiYmZmYzkxYjJhNjBhODc1Y2NhZDhmZTM4ZGM3NWRlZDU0OSIKICAgIH0KICB9Cn0=\"}]}}}"
+                        "translate": "text.gm4.metallurgy.contains"
                       }
-                    ]
-                }
-            ]
+                    ],
+                    "italic": false,
+                    "color": "gray"
+                  },
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "Aluminium",
+                      {
+                        "translate": "text.gm4.metallurgy.aluminium"
+                      }
+                    ],
+                    "italic": false,
+                    "color": "#F47989"
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_metallurgy:{metal:{type:\"aluminium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420021,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/aluminium/v0\",Id:[I;140191582,-1151712444,-1271445916,307298631],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyOTY4NDMzNDA1MiwKICAicHJvZmlsZUlkIiA6ICI3ZmIyOGQ1N2FhZmQ0MmQ1YTcwNWNlZjE4YWI1MzEzZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJjaXJjdWl0MTAiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjU1MTdhNjYyYTgzY2FhYWFjMWE3MTMzMmUzODFiYmZmYzkxYjJhNjBhODc1Y2NhZDhmZTM4ZGM3NWRlZDU0OSIKICAgIH0KICB9Cn0=\"}]}}}"
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

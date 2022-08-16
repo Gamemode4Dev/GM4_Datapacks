@@ -3,5 +3,5 @@
 # at @s
 # run from main
 
-execute if entity @s[nbt={ActiveEffects:[{Id:18b}]}] run function gm4_mob_curing:cure/zombified_piglin
-execute if entity @s[nbt={ActiveEffects:[{Id:1b}]}] run function gm4_mob_curing:cure/zombified_pig
+execute if entity @s[nbt={ActiveEffects:[{Id:18}]}] run function gm4_mob_curing:cure/zombified_piglin
+execute if entity @s[nbt={ActiveEffects:[{Id:1}]}] run function gm4_mob_curing:cure/zombified_pig

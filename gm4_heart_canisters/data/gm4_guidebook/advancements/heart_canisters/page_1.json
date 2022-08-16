@@ -34,7 +34,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "gamemode": "spectator"
                 }
               }
@@ -77,7 +78,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "gamemode": "spectator"
                 }
               }
@@ -111,7 +113,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "advancements": {
                   "gm4_guidebook:heart_canisters/page_2": true
                 }

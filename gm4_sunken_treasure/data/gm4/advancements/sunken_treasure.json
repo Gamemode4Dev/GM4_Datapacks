@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "All My Audreys",
-        {"translate": "advancement.gm4.sunken_treasure.title"}
+        {
+          "translate": "advancement.gm4.sunken_treasure.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Find all Dearest Audrey messages in a bottle",
-        {"translate": "advancement.gm4.sunken_treasure.description"}
+        {
+          "translate": "advancement.gm4.sunken_treasure.description"
+        }
       ],
       "color": "gray"
     }
@@ -27,7 +31,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:1b}"
           }
         ]
@@ -38,7 +44,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:2b}"
           }
         ]
@@ -49,7 +57,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:3b}"
           }
         ]
@@ -60,7 +70,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:4b}"
           }
         ]
@@ -71,7 +83,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:5b}"
           }
         ]
@@ -82,7 +96,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:6b}"
           }
         ]
@@ -93,7 +109,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:7b}"
           }
         ]
@@ -104,7 +122,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:8b}"
           }
         ]
@@ -115,7 +135,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:9b}"
           }
         ]
@@ -126,7 +148,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:10b}"
           }
         ]
@@ -137,7 +161,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:11b}"
           }
         ]
@@ -148,7 +174,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:12b}"
           }
         ]
@@ -159,7 +187,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:13b}"
           }
         ]
@@ -170,7 +200,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:14b}"
           }
         ]
@@ -181,7 +213,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:15b}"
           }
         ]
@@ -192,7 +226,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:16b}"
           }
         ]
@@ -203,7 +239,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:17b}"
           }
         ]
@@ -214,7 +252,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:18b}"
           }
         ]
@@ -225,7 +265,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:19b}"
           }
         ]
@@ -236,7 +278,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:glass_bottle"],
+            "items": [
+              "minecraft:glass_bottle"
+            ],
             "nbt": "{gm4_audrey:20b}"
           }
         ]

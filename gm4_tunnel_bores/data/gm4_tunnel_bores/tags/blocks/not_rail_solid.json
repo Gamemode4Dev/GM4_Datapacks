@@ -1,5 +1,5 @@
 {
-  "values":[
+  "values": [
     "#gm4:air",
     "#gm4_tunnel_bores:liquids",
     "#minecraft:small_flowers",
@@ -57,7 +57,7 @@
     "minecraft:green_stained_glass_pane",
     "minecraft:red_stained_glass_pane",
     "minecraft:black_stained_glass_pane",
-    "#minecraft:carpets",
+    "#minecraft:wool_carpets",
     "#minecraft:banners",
     "#minecraft:beds",
     "minecraft:stonecutter",
@@ -146,6 +146,8 @@
     "minecraft:chain",
     "minecraft:warped_fence",
     "minecraft:crimson_fence_gate",
-    "minecraft:sweet_berry_bush"
+    "minecraft:sweet_berry_bush",
+    "minecraft:sculk_shrieker",
+    "minecraft:mangrove_propagule"
   ]
 }

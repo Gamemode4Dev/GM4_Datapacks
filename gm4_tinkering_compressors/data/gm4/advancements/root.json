@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Gamemode 4",
-        {"translate": "advancement.gm4.root.title"}
+        {
+          "translate": "advancement.gm4.root.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Semi-funny blurb about GM4",
-        {"translate": "advancement.gm4.root.description"}
+        {
+          "translate": "advancement.gm4.root.description"
+        }
       ],
       "color": "gray"
     },

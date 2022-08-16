@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Getting Groovy",
-        {"translate": "advancement.gm4.record_crafting.title"}
+        {
+          "translate": "advancement.gm4.record_crafting.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Craft all 12 records yourself",
-        {"translate": "advancement.gm4.record_crafting.description"}
+        {
+          "translate": "advancement.gm4.record_crafting.description"
+        }
       ],
       "color": "gray"
     }

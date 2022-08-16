@@ -53,12 +53,14 @@
 					}
 				}
 			}
-		},		
+		},
 		{
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"blocks": ["minecraft:grindstone"],
+					"blocks": [
+						"minecraft:grindstone"
+					],
 					"state": {
 						"face": "floor"
 					}
@@ -69,7 +71,9 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"blocks": ["minecraft:end_portal_frame"],
+					"blocks": [
+						"minecraft:end_portal_frame"
+					],
 					"state": {
 						"eye": "true"
 					}
@@ -98,7 +102,9 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"blocks": ["minecraft:piston_head"],
+					"blocks": [
+						"minecraft:piston_head"
+					],
 					"state": {
 						"facing": "up"
 					}

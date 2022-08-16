@@ -1,5 +1,5 @@
 {
-  "values" : [
+  "values": [
     "#gm4_tunnel_bores:liquids",
     "minecraft:obsidian",
     "minecraft:air",
@@ -44,6 +44,7 @@
     "minecraft:nether_portal",
     "minecraft:crying_obsidian",
     "minecraft:respawn_anchor",
-    "minecraft:lodestone"
+    "minecraft:lodestone",
+    "minecraft:reinforced_deepslate"
   ]
 }

@@ -25,7 +25,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "advancements": {
                   "gm4_guidebook:disassemblers/page_0": true
                 }
@@ -38,7 +39,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "gamemode": "spectator"
                 }
               }
@@ -88,7 +90,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "gamemode": "spectator"
                 }
               }

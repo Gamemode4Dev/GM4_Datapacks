@@ -15,7 +15,9 @@
                   "translate": "%1$s%3427655$s",
                   "with": [
                     "Bashing",
-                     {"translate":"text.gm4.pneuma_bashing"}
+                    {
+                      "translate": "text.gm4.pneuma_bashing"
+                    }
                   ],
                   "italic": false,
                   "color": "blue"
@@ -28,7 +30,9 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   "Soul Essence",
-                  {"translate":"item.gm4.soul_essence"}
+                  {
+                    "translate": "item.gm4.soul_essence"
+                  }
                 ],
                 "italic": false,
                 "color": "white"

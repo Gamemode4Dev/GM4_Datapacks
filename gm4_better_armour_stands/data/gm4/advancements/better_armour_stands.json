@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Gettin' Handsy",
-        {"translate": "advancement.gm4.better_armour_stands.title"}
+        {
+          "translate": "advancement.gm4.better_armour_stands.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Customize an armour stand",
-        {"translate": "advancement.gm4.better_armour_stands.description"}
+        {
+          "translate": "advancement.gm4.better_armour_stands.description"
+        }
       ],
       "color": "gray"
     }

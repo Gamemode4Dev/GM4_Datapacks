@@ -1,29 +1,33 @@
 {
-  "display":{
-    "icon":{
-      "item":"experience_bottle",
-      "nbt":"{CustomModelData:3420001}"
+  "display": {
+    "icon": {
+      "item": "experience_bottle",
+      "nbt": "{CustomModelData:3420001}"
     },
-    "title":{
+    "title": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Experience Quicksave",
-        {"translate": "advancement.gm4.standard_liquids.title"}
+        {
+          "translate": "advancement.gm4.standard_liquids.title"
+        }
       ]
     },
-    "description":{
+    "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Bottle your own experience from a liquid tank",
-        {"translate": "advancement.gm4.standard_liquids.description"}
+        {
+          "translate": "advancement.gm4.standard_liquids.description"
+        }
       ],
-      "color":"gray"
+      "color": "gray"
     }
   },
-  "parent":"gm4:liquid_tanks_create",
-  "criteria":{
-    "bottle_experience":{
-      "trigger":"minecraft:impossible"
+  "parent": "gm4:liquid_tanks_create",
+  "criteria": {
+    "bottle_experience": {
+      "trigger": "minecraft:impossible"
     }
   }
 }

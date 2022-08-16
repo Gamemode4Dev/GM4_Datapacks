@@ -4,15 +4,21 @@
   "predicate": {
     "equipment": {
       "head": {
-        "items": ["minecraft:player_head"],
+        "items": [
+          "minecraft:player_head"
+        ],
         "nbt": "{gm4_scuba_gear:{item:\"helmet\"}}"
       },
       "chest": {
-        "items": ["minecraft:golden_chestplate"],
+        "items": [
+          "minecraft:golden_chestplate"
+        ],
         "nbt": "{gm4_scuba_gear:{item:\"tank\"}}"
       },
       "feet": {
-        "items": ["minecraft:leather_boots"],
+        "items": [
+          "minecraft:leather_boots"
+        ],
         "nbt": "{gm4_scuba_gear:{item:\"flippers\"}}"
       }
     }

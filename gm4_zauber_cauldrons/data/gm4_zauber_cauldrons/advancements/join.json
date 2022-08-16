@@ -1,10 +1,10 @@
 {
-  "criteria":{
-    "join_world":{
-      "trigger":"location"
+  "criteria": {
+    "join_world": {
+      "trigger": "location"
     }
   },
   "rewards": {
-    "function":"gm4_zauber_cauldrons:player/assign_id"
+    "function": "gm4_zauber_cauldrons:player/assign_id"
   }
 }

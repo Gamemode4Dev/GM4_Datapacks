@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "We're Full Here...",
-        {"translate": "advancement.gm4.orb_of_ankou.max_orb_of_ankou.title"}
+        {
+          "translate": "advancement.gm4.orb_of_ankou.max_orb_of_ankou.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Max out an Orb of Ankou",
-        {"translate": "advancement.gm4.orb_of_ankou.max_orb_of_ankou.description"}
+        {
+          "translate": "advancement.gm4.orb_of_ankou.max_orb_of_ankou.description"
+        }
       ],
       "color": "gray"
     }

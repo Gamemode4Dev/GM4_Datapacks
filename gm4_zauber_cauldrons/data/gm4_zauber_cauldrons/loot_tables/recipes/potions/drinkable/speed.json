@@ -190,13 +190,13 @@
                                 {
                                     "translate": "attribute.modifier.plus.1",
                                     "with": [
-                                         "80",
-                                         {
-                                             "translate": "attribute.name.generic.movement_speed"
-                                         }
-                                     ],
-                                     "color": "blue",
-                                     "italic": false
+                                        "80",
+                                        {
+                                            "translate": "attribute.name.generic.movement_speed"
+                                        }
+                                    ],
+                                    "color": "blue",
+                                    "italic": false
                                 },
                                 {
                                     "translate": "attribute.modifier.take.0",

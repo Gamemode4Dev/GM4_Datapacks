@@ -1,18 +1,18 @@
 {
     "pack": {
-        "pack_format": 9,
+        "pack_format": 10,
         "description": [
             "Sunken Treasure",
             "\n",
             {
-                "text": "Gamemode 4 for 1.18",
+                "text": "Gamemode 4 for 1.19",
                 "color": "#4AA0C7"
             }
         ]
     },
     "module_name": "Sunken Treasure",
     "module_id": "sunken_treasure",
-    "hidden": true,
+    "hidden": false,
     "site_description": "Digging sand underwater with a fortune tool can uncover buried treasures, or a nasty surprise! Who knows, maybe you'll even find some old love letters.",
     "video_link": "https://www.youtube.com/watch?v=VV7ZIyIzKV0",
     "wiki_link": "https://wiki.gm4.co/wiki/Sunken_Treasure",

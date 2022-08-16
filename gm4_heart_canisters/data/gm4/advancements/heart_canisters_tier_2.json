@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Love Is All You Need",
-        {"translate": "advancement.gm4.heart_canisters.tier_2.title"}
+        {
+          "translate": "advancement.gm4.heart_canisters.tier_2.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Craft a tier 2 Heart Canister",
-        {"translate": "advancement.gm4.heart_canisters.tier_2.description"}
+        {
+          "translate": "advancement.gm4.heart_canisters.tier_2.description"
+        }
       ],
       "color": "gray"
     }
@@ -27,7 +31,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:player_head"],
+            "items": [
+              "minecraft:player_head"
+            ],
             "nbt": "{gm4_heart_canister_tier:2b}"
           }
         ]

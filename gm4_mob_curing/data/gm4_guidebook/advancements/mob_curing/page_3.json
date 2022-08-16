@@ -25,7 +25,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "looking_at": {
                   "type": "minecraft:villager",
                   "nbt": "{Tags:[\"gm4_mob_curing_potion_cleric\"]}"
@@ -39,7 +40,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "gamemode": "spectator"
                 }
               }

@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Oink Tractors",
-        {"translate": "advancement.gm4.pig_tractors.title"}
+        {
+          "translate": "advancement.gm4.pig_tractors.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Till some ground by holding a hoe on a Pig Tractor!",
-        {"translate": "advancement.gm4.pig_tractors.description"}
+        {
+          "translate": "advancement.gm4.pig_tractors.description"
+        }
       ],
       "color": "gray"
     }
