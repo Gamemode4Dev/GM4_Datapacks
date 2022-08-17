@@ -1,6 +1,6 @@
 {
   "condition": "minecraft:location_check",
   "predicate": {
-    "biome": "minecraft:dark_forest"
+    "biome": "minecraft:mangrove_swamp"
   }
 }
