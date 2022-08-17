@@ -2,8 +2,8 @@
 # at @s
 # run from advancement zauber_cauldrons:use/wormhole
 
-# compatibility with teleportation anchors
-execute if score gm4_teleportation_anchors load.status matches 1 run function gm4_teleportation_anchors:player/used_chorus
+# compatibility with other modules
+function #gm4_zauber_cauldrons:player/wormhole_targeting/prepare_teleport
 
 # revoke advancement for next teleport
 advancement revoke @s only gm4_zauber_cauldrons:use/wormhole
