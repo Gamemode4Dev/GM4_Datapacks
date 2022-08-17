@@ -1,5 +1,5 @@
 {
-  "last_commit": "508bcb7bc1a6e321fc986d42d5635b462b6cacfc",
+  "last_commit": "413959afe9c445dcf85c7a88b6795eb0fb2b8db7",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -563,7 +563,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19002
+      "patch": 19003
     },
     {
       "id": "gm4_end_fishing",
@@ -624,7 +624,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19002
+      "patch": 19003
     },
     {
       "id": "gm4_enderman_support_class",
@@ -1111,7 +1111,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19002
+      "patch": 19003
     },
     {
       "id": "gm4_mob_curing",
@@ -1138,7 +1138,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19002
+      "patch": 19003
     },
     {
       "id": "gm4_mysterious_midnights",
@@ -1220,7 +1220,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_orbis",
@@ -1983,7 +1983,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19002
+      "patch": 19003
     },
     {
       "id": "gm4_undead_players",
@@ -2195,7 +2195,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_zauber_liquids",
