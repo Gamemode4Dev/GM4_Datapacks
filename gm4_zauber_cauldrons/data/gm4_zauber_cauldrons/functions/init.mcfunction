@@ -6,6 +6,7 @@ scoreboard objectives add gm4_zc_flowers dummy
 scoreboard objectives add gm4_zc_fullness dummy
 scoreboard objectives add gm4_zc_id dummy
 scoreboard objectives add gm4_zc_rabtarget dummy
+scoreboard objectives add gm4_zc_no_explode dummy
 function gm4_zauber_cauldrons:recipes/flowers/initiate_flower_types
 function gm4_zauber_cauldrons:recipes/chorus/initiate_chorus_amounts
 scoreboard players set #modulo gm4_zc_fullness 3
