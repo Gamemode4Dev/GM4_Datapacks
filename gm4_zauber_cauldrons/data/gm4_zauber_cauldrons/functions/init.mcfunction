@@ -10,6 +10,8 @@ scoreboard objectives add gm4_zc_no_explode dummy
 function gm4_zauber_cauldrons:recipes/flowers/initiate_flower_types
 function gm4_zauber_cauldrons:recipes/chorus/initiate_chorus_amounts
 scoreboard players set #modulo gm4_zc_fullness 3
+team add gm4_hide_name
+team modify gm4_hide_name nametagVisibility never
 
 # This module includes the gm4_forceload library. If you didn't get this pack from our website, make sure you have the gm4_forceload library installed!
 # This module includes the gm4_player_heads library. If you didn't get this pack from our website, make sure you have the gm4_player_heads library installed!
