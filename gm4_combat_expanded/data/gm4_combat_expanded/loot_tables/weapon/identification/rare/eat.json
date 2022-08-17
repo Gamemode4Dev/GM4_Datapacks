@@ -132,7 +132,7 @@
                         "translate": "effect.minecraft.hunger"
                       },
                       {
-                        "translate": "potion.potency.9"
+                        "translate": "enchantment.level.10"
                       }
                     ]
                   },
