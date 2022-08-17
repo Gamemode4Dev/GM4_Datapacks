@@ -1,0 +1,49 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Tall Badlands Tower',structure:{name:'gm4_tower_structures:badlands',posX:-3,posY:-1,posZ:-3}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Large Badlands Tower',structure:{name:'gm4_tower_structures:badlands2',posX:-4,posY:-1,posZ:-4}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Acacia Tower',structure:{name:'gm4_tower_structures:badlands3',posX:-4,posY:-1,posZ:-4}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Terracotta Tower',structure:{name:'gm4_tower_structures:badlands4',posX:-4,posY:-1,posZ:-4}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

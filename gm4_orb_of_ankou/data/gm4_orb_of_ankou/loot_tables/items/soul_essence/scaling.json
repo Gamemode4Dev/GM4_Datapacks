@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:black_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    "Scaling",
+                    {
+                      "translate": "text.gm4.pneuma_scaling"
+                    }
+                  ],
+                  "italic": false,
+                  "color": "blue"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  "Soul Essence",
+                  {
+                    "translate": "item.gm4.soul_essence"
+                  }
+                ],
+                "italic": false,
+                "color": "white"
+              }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420225,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"scaling\"},stored_color:[8587519]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

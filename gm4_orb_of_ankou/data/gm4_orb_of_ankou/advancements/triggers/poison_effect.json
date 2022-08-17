@@ -13,7 +13,7 @@
       }
     }
   },
- "rewards":{
-   "function":"gm4_orb_of_ankou:pneumas/advancement_triggers/affected_by_poison"
+  "rewards": {
+    "function": "gm4_orb_of_ankou:pneumas/advancement_triggers/affected_by_poison"
   }
 }

@@ -1,28 +1,29 @@
 {
     "pack": {
-        "pack_format": 8,
+        "pack_format": 10,
         "description": [
             "Relocators",
             "\n",
             {
-                "text": "Gamemode 4 for 1.18",
+                "text": "Gamemode 4 for 1.19",
                 "color": "#4AA0C7"
             }
         ]
     },
     "module_name": "Relocators",
     "module_id": "relocators",
+    "libraries": [
+        "lib_machines",
+        "lib_forceload"
+    ],
     "hidden": false,
-    "site_description": "Craft Relocators to move your custom crafters, liquid tanks, and other machines.",
+    "site_description": "Craft Relocators to pick up and move containers such as chests and Custom Crafters.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Relocators",
-    "required_modules": [
-        "custom_crafters"
-    ],
     "recommended_modules": [
         "block_compressors",
         "book_binders",
-        "master_crafting",
+        "forming_press",
         "disassemblers",
         "enchantment_extractors",
         "ender_hoppers",
@@ -36,6 +37,9 @@
         ],
         "Icon Design": [
             "Hozz"
+        ],
+        "Textures By": [
+            "kyrkis"
         ]
     }
 }

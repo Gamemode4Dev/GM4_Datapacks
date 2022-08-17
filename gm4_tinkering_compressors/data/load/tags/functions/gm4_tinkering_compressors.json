@@ -2,6 +2,7 @@
     "values": [
 		{ "id": "#load:gm4_metallurgy", "required": false },
 		{ "id": "#load:gm4_block_compressors", "required": false },
+		{ "id": "#load:gm4_machines", "required": false },
         "gm4_tinkering_compressors:load"
     ]
 }

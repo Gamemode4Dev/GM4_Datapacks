@@ -1,17 +1,21 @@
 {
     "pack": {
-        "pack_format": 8,
+        "pack_format": 10,
         "description": [
             "Liquid Minecarts",
             "\n",
             {
-                "text": "Gamemode 4 for 1.18",
+                "text": "Gamemode 4 for 1.19",
                 "color": "#4AA0C7"
             }
         ]
     },
     "module_name": "Liquid Minecarts",
     "module_id": "liquid_minecarts",
+    "libraries": [
+        "lib_machines",
+        "lib_forceload"
+    ],
     "site_description": "Adds Liquid Tank Minecarts that allow you to move your liquids from one Liquid Tank to another.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts",
@@ -24,6 +28,10 @@
     "credits": {
         "Creator": [
             "Sparks"
+        ],
+        "Updated by": [
+            "SpecialBuilder32",
+            "BluePsychoRanger"
         ],
         "Icon Design": [
             "Hozz"

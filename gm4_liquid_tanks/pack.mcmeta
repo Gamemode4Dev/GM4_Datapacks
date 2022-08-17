@@ -1,17 +1,21 @@
 {
     "pack": {
-        "pack_format": 8,
+        "pack_format": 10,
         "description": [
             "Liquid Tanks",
             "\n",
             {
-                "text": "Gamemode 4 for 1.18",
+                "text": "Gamemode 4 for 1.19",
                 "color": "#4AA0C7"
             }
         ]
     },
     "module_name": "Liquid Tanks",
     "module_id": "liquid_tanks",
+    "libraries": [
+        "lib_machines",
+        "lib_forceload"
+    ],
     "site_description": "Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!",
     "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
     "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
@@ -29,10 +33,12 @@
             "SpecialBuilder32"
         ],
         "Updated by": [
-            "SpecialBuilder32"
+            "SpecialBuilder32",
+            "BluePsychoRanger"
         ],
         "Textures by": [
-            "Vilder50"
+            "Vilder50",
+            "kyrkis"
         ],
         "Icon Design": [
             "DuckJr"

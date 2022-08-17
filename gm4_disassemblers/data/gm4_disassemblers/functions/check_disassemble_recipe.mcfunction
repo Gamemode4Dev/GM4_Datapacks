@@ -32,6 +32,8 @@ execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:leather_c
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:leather_leggings"} run function gm4_disassemblers:items/leather_leggings
 execute if data storage gm4_disassemblers:temp/item Item{id:"minecraft:leather_boots"} run function gm4_disassemblers:items/leather_boots
 
+execute if score disassemble_diamonds gm4_disassembler matches 1 run function gm4_disassemblers:items/check_diamond_disassemble_recipe
+
 data remove storage gm4_disassemblers:temp/item Item
 
 execute if score result_items gm4_disassembler matches 0 run playsound minecraft:entity.dragon_fireball.explode block @a[distance=..5] ~ ~ ~ .33 1.5

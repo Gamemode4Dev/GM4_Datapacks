@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "crafting_table",
+      "nbt": "{CustomModelData:3420003}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Clever Crafting",
+        {
+          "translate": "advancement.gm4.custom_crafters.title"
+        }
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Construct a Custom Crafter from a Dropper",
+        {
+          "translate": "advancement.gm4.custom_crafters.description"
+        }
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "build_crafter": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

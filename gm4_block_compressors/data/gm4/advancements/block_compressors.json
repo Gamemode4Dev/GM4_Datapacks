@@ -26,8 +26,18 @@
   },
   "parent": "gm4:custom_crafters",
   "criteria": {
-    "create_block_compressor": {
-      "trigger": "minecraft:impossible"
+    "obtain_block_compressor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_machines:{id:\"block_compressor\"}}"
+          }
+        ]
+      }
     }
   }
 }

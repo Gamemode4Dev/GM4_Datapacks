@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Blame Me for the Mess",
-        {"translate": "advancement.gm4.metallurgy.overheat_cast.title"}
+        {
+          "translate": "advancement.gm4.metallurgy.overheat_cast.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Destroy a mould containing molten metal.",
-        {"translate": "advancement.gm4.metallurgy.overheat_cast.description"}
+        {
+          "translate": "advancement.gm4.metallurgy.overheat_cast.description"
+        }
       ],
       "color": "gray"
     },

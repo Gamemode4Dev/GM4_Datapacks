@@ -1,0 +1,39 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Snowy Castle Tower',structure:{name:'gm4_tower_structures:snowy',posX:-5,posY:-1,posZ:-5}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Large Snowy Tower',structure:{name:'gm4_tower_structures:snowy2',posX:-3,posY:-1,posZ:-3}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_orbis:{name:'Spruce Scaffold Tower',structure:{name:'gm4_tower_structures:spruce_scaffold',posX:-2,posY:-1,posZ:-2}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

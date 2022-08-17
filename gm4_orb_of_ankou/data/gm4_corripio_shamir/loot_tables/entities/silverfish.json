@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_orb_of_ankou:soul_essence/phasing"
+          "name": "gm4_orb_of_ankou:items/soul_essence/phasing"
         }
       ],
       "conditions": [
@@ -27,7 +27,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_orb_of_ankou:soul_essence/synergetic"
+          "name": "gm4_orb_of_ankou:items/soul_essence/synergetic"
         }
       ],
       "conditions": [
@@ -48,7 +48,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_orb_of_ankou:soul_essence/vanishing"
+          "name": "gm4_orb_of_ankou:items/soul_essence/vanishing"
         }
       ],
       "conditions": [

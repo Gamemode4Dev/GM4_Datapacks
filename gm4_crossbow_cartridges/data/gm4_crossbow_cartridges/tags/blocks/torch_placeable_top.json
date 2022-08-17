@@ -2,8 +2,16 @@
 	"values": [
 		"#gm4:full_collision",
 		"#minecraft:anvil",
-		"minecraft:scaffolding",
+		"#minecraft:fences",
+		"#minecraft:walls",
+		"minecraft:azalea",
+		"minecraft:flowering_azalea",
+		"minecraft:end_rod",
 		"minecraft:glass_pane",
+		"minecraft:iron_bars",
+		"minecraft:scaffolding",
+		"minecraft:piston",
+		"minecraft:sticky_piston",
 		"minecraft:white_stained_glass_pane",
 		"minecraft:orange_stained_glass_pane",
 		"minecraft:magenta_stained_glass_pane",
@@ -18,8 +26,6 @@
 		"minecraft:blue_stained_glass_pane",
 		"minecraft:brown_stained_glass_pane",
 		"minecraft:red_stained_glass_pane",
-		"minecraft:black_stained_glass_pane",
-		"minecraft:end_rod",
-		"minecraft:iron_bars"
+		"minecraft:black_stained_glass_pane"
 	]
 }

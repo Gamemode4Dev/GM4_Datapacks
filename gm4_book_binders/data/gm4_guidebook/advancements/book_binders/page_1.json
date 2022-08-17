@@ -22,7 +22,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:paper"],
+            "items": [
+              "minecraft:paper"
+            ],
             "nbt": "{gm4_book_binders:{item:\"enchanted_page\"}}"
           }
         ],
@@ -33,7 +35,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "gamemode": "spectator"
                 }
               }

@@ -1,8 +1,9 @@
 {
-  "values" : [
+  "values": [
     "#minecraft:campfires",
     "#minecraft:candles",
     "#minecraft:fences",
+    "#minecraft:leaves",
     "#minecraft:signs",
     "#minecraft:slabs",
     "#minecraft:stairs",
@@ -47,6 +48,7 @@
     "minecraft:light_gray_stained_glass_pane",
     "minecraft:lime_stained_glass_pane",
     "minecraft:magenta_stained_glass_pane",
+    "minecraft:mangrove_roots",
     "minecraft:medium_amethyst_bud",
     "minecraft:orange_stained_glass_pane",
     "minecraft:pink_stained_glass_pane",

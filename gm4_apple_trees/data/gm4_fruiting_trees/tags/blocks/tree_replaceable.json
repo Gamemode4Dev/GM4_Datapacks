@@ -2,6 +2,8 @@
     "values": [
         "#gm4:air",
         "#gm4:foliage",
-        "#minecraft:leaves"
+        "#minecraft:leaves",
+        "minecraft:mangrove_leaves",
+        "minecraft:mangrove_roots"
     ]
 }

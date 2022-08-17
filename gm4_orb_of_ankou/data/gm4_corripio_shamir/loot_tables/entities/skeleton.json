@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_orb_of_ankou:soul_essence/hawkeye"
+          "name": "gm4_orb_of_ankou:items/soul_essence/hawkeye"
         }
       ],
       "conditions": [
@@ -27,7 +27,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_orb_of_ankou:soul_essence/lifeless"
+          "name": "gm4_orb_of_ankou:items/soul_essence/lifeless"
         }
       ],
       "conditions": [

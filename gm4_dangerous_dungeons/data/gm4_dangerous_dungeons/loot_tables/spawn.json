@@ -1,0 +1,120 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.25
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_dangerous_dungeons:spawn/badlands",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_dangerous_dungeons:biome/badlands"
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 0,
+                        "max": 50
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_dangerous_dungeons:spawn/desert",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_dangerous_dungeons:biome/desert"
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 0,
+                        "max": 50
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_dangerous_dungeons:spawn/ocean",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_dangerous_dungeons:biome/ocean"
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 0,
+                        "max": 50
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_dangerous_dungeons:spawn/snowy",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_dangerous_dungeons:biome/snowy"
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 0,
+                        "max": 50
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_dangerous_dungeons:spawn/default",
+              "conditions": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "max": 50
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

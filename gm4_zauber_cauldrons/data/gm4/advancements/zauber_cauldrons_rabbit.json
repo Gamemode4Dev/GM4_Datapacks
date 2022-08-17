@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Soup Kitchen Magician",
-        {"translate": "advancement.gm4.zauber_cauldrons.rabbit.title"}
+        {
+          "translate": "advancement.gm4.zauber_cauldrons.rabbit.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Where did my lunch go?",
-        {"translate": "advancement.gm4.zauber_cauldrons.rabbit.description"}
+        {
+          "translate": "advancement.gm4.zauber_cauldrons.rabbit.description"
+        }
       ],
       "color": "gray"
     },

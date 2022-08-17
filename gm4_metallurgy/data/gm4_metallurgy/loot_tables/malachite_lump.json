@@ -1,64 +1,64 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:player_head",
-                    "functions": [
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  "Malachite Lump",
+                  {
+                    "translate": "item.gm4.metallurgy.malachite_lump"
+                  }
+                ],
+                "italic": false,
+                "color": "white"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "Contains ",
                       {
-                        "function": "minecraft:set_name",
-                        "entity": "this",
-                        "name": {
-                          "translate": "%1$s%3427655$s",
-                          "with": [
-                            "Malachite Lump",
-                            {
-                              "translate": "item.gm4.metallurgy.malachite_lump"
-                            }
-                          ],
-                          "italic": false,
-                          "color": "white"
-                        }
-                      },
-                      {
-                        "function": "minecraft:set_lore",
-                        "entity": "this",
-                        "lore": [
-                          [
-                            {
-                              "translate": "%1$s%3427655$s",
-                              "with": [
-                                "Contains ",
-                                {
-                                  "translate": "text.gm4.metallurgy.contains"
-                                }
-                              ],
-                              "italic": false,
-                              "color": "gray"
-                            },
-                            {
-                              "translate": "%1$s%3427655$s",
-                              "with": [
-                                "Copper",
-                                {
-                                  "translate": "text.gm4.metallurgy.copper"
-                                }
-                              ],
-                              "italic": false,
-                              "color": "gold"
-                            }
-                          ]
-                        ]
-                      },
-                      {
-                        "function": "minecraft:set_nbt",
-                        "tag": "{gm4_metallurgy:{metal:{type:\"copper\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420018,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/copper/v0\",Id:[I;140191582,-1151712444,-1271449307,1366570837],Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE0ODE0MTA4Mjk2OTAsInByb2ZpbGVJZCI6Ijk4NWIyNzVlYmI1YTQzNDRiNDM3Njg5NTI4NjNhNjNmIiwicHJvZmlsZU5hbWUiOiJTcGFya3MiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDNjMWE3ZGEyZWJkZGI0YTk3YzI3NDA0N2RlNzFkN2RjZWJjMTc2YTBlNjE3MzBmZmQzMzIzODUzNTNlIn0sIkNBUEUiOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81YzNjYTdlZTJhNDk4ZjFiNWQyNThkNWZhOTI3ZTYzZTQzMzE0M2FkZDU1MzhjZjYzYjZhOWI3OGFlNzM1In19fQ==\"}]}}}"
+                        "translate": "text.gm4.metallurgy.contains"
                       }
-                    ]
-                }
-            ]
+                    ],
+                    "italic": false,
+                    "color": "gray"
+                  },
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      "Copper",
+                      {
+                        "translate": "text.gm4.metallurgy.copper"
+                      }
+                    ],
+                    "italic": false,
+                    "color": "gold"
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_metallurgy:{metal:{type:\"copper\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420018,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/copper/v0\",Id:[I;140191582,-1151712444,-1271449307,1366570837],Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE0ODE0MTA4Mjk2OTAsInByb2ZpbGVJZCI6Ijk4NWIyNzVlYmI1YTQzNDRiNDM3Njg5NTI4NjNhNjNmIiwicHJvZmlsZU5hbWUiOiJTcGFya3MiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDNjMWE3ZGEyZWJkZGI0YTk3YzI3NDA0N2RlNzFkN2RjZWJjMTc2YTBlNjE3MzBmZmQzMzIzODUzNTNlIn0sIkNBUEUiOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81YzNjYTdlZTJhNDk4ZjFiNWQyNThkNWZhOTI3ZTYzZTQzMzE0M2FkZDU1MzhjZjYzYjZhOWI3OGFlNzM1In19fQ==\"}]}}}"
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

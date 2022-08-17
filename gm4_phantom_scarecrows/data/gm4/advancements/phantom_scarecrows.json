@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Not so smart defenses",
-        {"translate": "advancement.gm4.phantom_scarecrows.title"}
+        {
+          "translate": "advancement.gm4.phantom_scarecrows.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Get hit by a Phantom Scarecrow",
-        {"translate": "advancement.gm4.phantom_scarecrows.description"}
+        {
+          "translate": "advancement.gm4.phantom_scarecrows.description"
+        }
       ],
       "color": "gray"
     },

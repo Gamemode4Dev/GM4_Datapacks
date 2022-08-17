@@ -34,7 +34,7 @@
           "italic": false,
           "extra": [
             {
-              "selector": "@p[tag=gm4_bas_active]"
+              "selector": "@a[tag=gm4_bas_active,limit=1]"
             }
           ]
         }

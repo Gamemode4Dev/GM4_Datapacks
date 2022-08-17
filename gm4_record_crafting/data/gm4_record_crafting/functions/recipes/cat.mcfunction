@@ -1,8 +1,7 @@
-# called from gm4_record_crafting:recipe_check
+# called from gm4_record_crafting:check_recipes
 
 # place disc
-data merge storage gm4_custom_crafters:temp/crafter {Items:[{Slot:8,id:"music_disc_cat",Count:1b,tag:{gm4_custom_crafters:{multiplier:1}}}]}
+loot replace block ~ ~ ~ container.0 loot gm4_record_crafting:crafting/cat
 
 #set flags
 tag @a[distance=..4,gamemode=!spectator] add gm4_crafted_record_cat
-scoreboard players set successful_record_craft gm4_slot_count 1

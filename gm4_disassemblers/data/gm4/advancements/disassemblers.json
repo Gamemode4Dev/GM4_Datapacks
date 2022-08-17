@@ -8,22 +8,36 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Clever Decrafting",
-        {"translate": "advancement.gm4.disassemblers.title"}
+        {
+          "translate": "advancement.gm4.disassemblers.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Craft a Disassembler",
-        {"translate": "advancement.gm4.disassemblers.description"}
+        {
+          "translate": "advancement.gm4.disassemblers.description"
+        }
       ],
       "color": "gray"
     }
   },
   "parent": "gm4:custom_crafters",
   "criteria": {
-    "craft_disassembler": {
-      "trigger": "minecraft:impossible"
+    "obtain_disassembler": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_machines:{id:\"disassembler\"}}"
+          }
+        ]
+      }
     }
   }
 }

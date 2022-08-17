@@ -1,10 +1,10 @@
 {
-    "criteria": {
-      "join": {
-        "trigger": "minecraft:location"
-      }
-    },
-    "rewards": {
-      "function": "gm4_vecto_shamir:get_id"
+  "criteria": {
+    "join": {
+      "trigger": "minecraft:location"
     }
+  },
+  "rewards": {
+    "function": "gm4_vecto_shamir:get_id"
   }
+}

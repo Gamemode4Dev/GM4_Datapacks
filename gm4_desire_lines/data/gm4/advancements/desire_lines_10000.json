@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "That's a Lot of Damage",
-        {"translate": "advancement.gm4.desire_lines.walk_10000.title"}
+        {
+          "translate": "advancement.gm4.desire_lines.walk_10000.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Ruin 10000 blocks to coarse dirt; how about a little more?",
-        {"translate": "advancement.gm4.desire_lines.walk_10000.description"}
+        {
+          "translate": "advancement.gm4.desire_lines.walk_10000.description"
+        }
       ],
       "color": "gray"
     }

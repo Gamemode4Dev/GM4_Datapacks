@@ -1,0 +1,8 @@
+{
+    "values": [
+        "minecraft:air",
+        "minecraft:moving_piston",
+        "minecraft:water",
+        "minecraft:lava"
+    ]
+}

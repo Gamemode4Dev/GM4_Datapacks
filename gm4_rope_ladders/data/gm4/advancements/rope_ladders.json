@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "ladder",
+      "nbt": "{CustomModelData:3420001}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "How's It Hanging?",
+        {
+          "translate": "advancement.gm4.rope_ladders.title"
+        }
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Place a Rope Ladder",
+        {
+          "translate": "advancement.gm4.rope_ladders.description"
+        }
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
