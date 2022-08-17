@@ -1,5 +1,5 @@
 {
-  "last_commit": "d1a0b4566a65b5609599eb0559738df512052696",
+  "last_commit": "b2bb18a08be77ed91bf659000238a2eba6a13fbc",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2032,7 +2032,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19002
+      "patch": 19003
     },
     {
       "id": "gm4_vertical_rails",
