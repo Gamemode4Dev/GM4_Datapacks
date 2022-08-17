@@ -20,11 +20,6 @@
     "requirement": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "fluid": {
-            "tag": "minecraft:water"
-          }
-        },
         "player": [
           {
             "condition": "minecraft:inverted",
@@ -32,7 +27,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "gamemode": "spectator"
                 }
               }
@@ -61,6 +57,17 @@
               "score": "load.status"
             },
             "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "fluid": {
+                  "tag": "minecraft:water"
+                }
+              }
+            }
           }
         ]
       }

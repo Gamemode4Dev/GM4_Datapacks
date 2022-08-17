@@ -1,0 +1,44 @@
+{
+  "criteria": {
+    "placed_machine_block": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_machines"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_machines_minor"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "item": {
+          "items": [
+            "minecraft:player_head"
+          ],
+          "nbt": "{SkullOwner:{Properties:{textures:[{Signature:\"gm4_machine\"}]}}}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_machines-1.1:place_down/place_machine_block"
+  }
+}

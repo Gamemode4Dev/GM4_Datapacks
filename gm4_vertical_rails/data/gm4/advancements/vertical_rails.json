@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Up, Up and Away!",
-        {"translate": "advancement.gm4.vertical_rails.title"}
+        {
+          "translate": "advancement.gm4.vertical_rails.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Ride a minecart going up a vertical rail",
-        {"translate": "advancement.gm4.vertical_rails.description"}
+        {
+          "translate": "advancement.gm4.vertical_rails.description"
+        }
       ],
       "color": "gray"
     }

@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Flint 'n Stick",
-        {"translate": "advancement.gm4.better_fire.title"}
+        {
+          "translate": "advancement.gm4.better_fire.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Fire a Flame Bow",
-        {"translate": "advancement.gm4.better_fire.description"}
+        {
+          "translate": "advancement.gm4.better_fire.description"
+        }
       ],
       "color": "gray"
     }
@@ -27,13 +31,15 @@
       "conditions": {
         "delta": -1,
         "item": {
-          "enchantments":[
+          "enchantments": [
             {
               "enchantment": "minecraft:flame",
               "levels": 1
-              }
-            ],
-          "items": ["minecraft:bow"]
+            }
+          ],
+          "items": [
+            "minecraft:bow"
+          ]
         }
       }
     }

@@ -25,7 +25,9 @@
 					}
 				},
 				"block": {
-					"blocks": ["minecraft:snow"],
+					"blocks": [
+						"minecraft:snow"
+					],
 					"state": {
 						"layers": "1"
 					}

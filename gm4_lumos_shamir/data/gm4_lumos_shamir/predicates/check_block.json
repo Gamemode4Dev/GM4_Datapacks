@@ -28,7 +28,9 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"blocks": ["minecraft:grindstone"],
+					"blocks": [
+						"minecraft:grindstone"
+					],
 					"state": {
 						"face": "floor"
 					}
@@ -40,7 +42,9 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"blocks": ["minecraft:piston_head"],
+					"blocks": [
+						"minecraft:piston_head"
+					],
 					"state": {
 						"facing": "up"
 					}
@@ -100,7 +104,9 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"blocks": ["minecraft:end_portal_frame"],
+					"blocks": [
+						"minecraft:end_portal_frame"
+					],
 					"state": {
 						"eye": "true"
 					}
@@ -112,7 +118,9 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"blocks": ["minecraft:bell"],
+					"blocks": [
+						"minecraft:bell"
+					],
 					"state": {
 						"attachment": "floor"
 					}

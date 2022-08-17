@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Ain't Got Rhythm",
-        {"translate": "advancement.gm4.book_binders.title"}
+        {
+          "translate": "advancement.gm4.book_binders.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Set up a Book Binder",
-        {"translate": "advancement.gm4.book_binders.description"}
+        {
+          "translate": "advancement.gm4.book_binders.description"
+        }
       ],
       "color": "gray"
     }

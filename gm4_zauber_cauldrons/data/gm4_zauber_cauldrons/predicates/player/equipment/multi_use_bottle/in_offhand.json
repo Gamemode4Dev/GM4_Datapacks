@@ -4,8 +4,10 @@
   "predicate": {
     "equipment": {
       "offhand": {
-        "items": ["minecraft:potion"],
-        "nbt":"{gm4_zauber_cauldrons:{bottle:{multi_use:1b}}}"
+        "items": [
+          "minecraft:potion"
+        ],
+        "nbt": "{gm4_zauber_cauldrons:{bottle:{multi_use:1b}}}"
       }
     }
   }

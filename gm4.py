@@ -19,6 +19,8 @@ def build_modules(ctx: Context):
 
 	dev: list[str] = [f"gm4_{id}" for id in ctx.meta.get("dev", "").split("+") if id]
 	modules = [{"id": p.name} for p in sorted(ctx.directory.glob("gm4_*"))]
+	if "gm4_all" in dev:
+		dev = [m["id"] for m in modules if m["id"] != "gm4_template_pack"]
 	print(f"[GM4] Found {len(modules)} modules")
 
 	head = run(["git", "rev-parse", "HEAD"])

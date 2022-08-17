@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Clever Decrafting",
-        {"translate": "advancement.gm4.disassemblers.title"}
+        {
+          "translate": "advancement.gm4.disassemblers.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Craft a Disassembler",
-        {"translate": "advancement.gm4.disassemblers.description"}
+        {
+          "translate": "advancement.gm4.disassemblers.description"
+        }
       ],
       "color": "gray"
     }
@@ -27,7 +31,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:player_head"],
+            "items": [
+              "minecraft:player_head"
+            ],
             "nbt": "{gm4_machines:{id:\"disassembler\"}}"
           }
         ]

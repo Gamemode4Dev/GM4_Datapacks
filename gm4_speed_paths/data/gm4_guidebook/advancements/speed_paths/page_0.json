@@ -20,13 +20,6 @@
     "requirement": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:dirt_path"
-            ]
-          }
-        },
         "player": [
           {
             "condition": "minecraft:inverted",
@@ -34,7 +27,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "gamemode": "spectator"
                 }
               }
@@ -63,6 +57,19 @@
               "score": "load.status"
             },
             "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:dirt_path"
+                  ]
+                }
+              }
+            }
           }
         ]
       }

@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Natural Defenses",
-        {"translate": "advancement.gm4.ink_spitting_squid.title"}
+        {
+          "translate": "advancement.gm4.ink_spitting_squid.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Get blinded by an underwater squid",
-        {"translate": "advancement.gm4.ink_spitting_squid.description"}
+        {
+          "translate": "advancement.gm4.ink_spitting_squid.description"
+        }
       ],
       "color": "gray"
     }

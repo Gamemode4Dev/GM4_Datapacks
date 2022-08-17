@@ -8,19 +8,23 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Couch Potato",
-        {"translate": "advancement.gm4.chairs.sit.title"}
+        {
+          "translate": "advancement.gm4.chairs.sit.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Sit for over an hour!",
-        {"translate": "advancement.gm4.chairs.sit.description"}
+        {
+          "translate": "advancement.gm4.chairs.sit.description"
+        }
       ],
       "color": "gray"
     },
-    "frame":"goal",
-    "hidden":true
+    "frame": "goal",
+    "hidden": true
   },
   "parent": "gm4:chairs_creation",
   "criteria": {

@@ -15,7 +15,9 @@
                   "translate": "%1$s%3427655$s",
                   "with": [
                     "Conjuring",
-                     {"translate":"text.gm4.pneuma_conjuring"}
+                    {
+                      "translate": "text.gm4.pneuma_conjuring"
+                    }
                   ],
                   "italic": false,
                   "color": "blue"
@@ -28,7 +30,9 @@
                 "translate": "%1$s%3427655$s",
                 "with": [
                   "Soul Essence",
-                  {"translate":"item.gm4.soul_essence"}
+                  {
+                    "translate": "item.gm4.soul_essence"
+                  }
                 ],
                 "italic": false,
                 "color": "white"

@@ -8,14 +8,18 @@
       "translate": "%1$s%3427655$s",
       "with": [
         "Holo-riffic!",
-        {"translate": "advancement.gm4.holographic_tags.title"}
+        {
+          "translate": "advancement.gm4.holographic_tags.title"
+        }
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
         "Create a Hologram",
-        {"translate": "advancement.gm4.holographic_tags.description"}
+        {
+          "translate": "advancement.gm4.holographic_tags.description"
+        }
       ],
       "color": "gray"
     }

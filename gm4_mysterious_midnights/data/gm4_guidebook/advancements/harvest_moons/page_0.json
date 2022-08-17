@@ -20,13 +20,6 @@
     "requirement": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:farmland"
-            ]
-          }
-        },
         "player": [
           {
             "condition": "minecraft:inverted",
@@ -34,7 +27,8 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "player": {
+                "type_specific": {
+                  "type": "player",
                   "gamemode": "spectator"
                 }
               }
@@ -100,6 +94,19 @@
             },
             "range": {
               "min": 6
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:farmland"
+                  ]
+                }
+              }
             }
           }
         ]
