@@ -3,7 +3,7 @@
 
 # apply new health
 execute store result score $health gm4_pneuma_data run data get entity @s Health 100
-scoreboard players remove $health gm4_pneuma_data 600
+scoreboard players remove $health gm4_pneuma_data 1200
 execute if score $health gm4_pneuma_data matches 1.. run execute store result entity @s Health float .01 run scoreboard players get $health gm4_pneuma_data
 execute if score $health gm4_pneuma_data matches ..0 run kill @s
 
