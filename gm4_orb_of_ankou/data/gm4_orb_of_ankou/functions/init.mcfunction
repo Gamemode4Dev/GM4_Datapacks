@@ -1,4 +1,6 @@
 # declare and initialise scoreboards and settings
+team add gm4_hide_name
+team modify gm4_hide_name nametagVisibility never
 
 # soul forge scoreboard stuff
 scoreboard objectives add gm4_count dummy

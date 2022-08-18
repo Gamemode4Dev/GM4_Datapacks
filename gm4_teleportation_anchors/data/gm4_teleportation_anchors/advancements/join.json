@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "first_join": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "rewards": {
+        "function": "gm4_teleportation_anchors:player/set_id"
+    }
+}

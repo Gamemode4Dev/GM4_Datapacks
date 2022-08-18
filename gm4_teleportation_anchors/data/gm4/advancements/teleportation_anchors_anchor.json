@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:lodestone",
+      "nbt": "{CustomModelData:3420001}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Pinpoint Location",
+        {"translate": "advancement.gm4.teleportation_anchors_anchor.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Make a teleportation anchor to remove the randomness of chorus",
+        {"translate": "advancement.gm4.teleportation_anchors_anchor.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:teleportation_anchors_jammer",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
