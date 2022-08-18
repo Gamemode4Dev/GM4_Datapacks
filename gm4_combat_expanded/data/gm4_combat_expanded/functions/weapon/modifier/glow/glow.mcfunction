@@ -4,7 +4,7 @@
 # run from weapon/modifier/glow/activate
 
 # if not hit with glow yet activate first strike
-execute unless data entity @s ActiveEffects[{Id:24b}] run function gm4_combat_expanded:weapon/modifier/glow/first_strike
+execute unless data entity @s ActiveEffects[{Id:24}] run function gm4_combat_expanded:weapon/modifier/glow/first_strike
 
 # give glow effect
 effect give @s glowing 30 0 true

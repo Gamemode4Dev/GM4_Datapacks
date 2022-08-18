@@ -7,7 +7,7 @@
 execute store result score $slot gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.slot
 scoreboard players operation $curr_id gm4_ce_id = @s gm4_ce_id
 
-# mark matching wolf as checked
+# mark 1 matching wolf as checked
 scoreboard players set $wolf gm4_ce_data 0
 execute as @e[type=wolf,tag=gm4_ce_wolf] if score @s gm4_ce_id = $curr_id gm4_ce_id if score @s gm4_ce_data = $slot gm4_ce_data run function gm4_combat_expanded:armor/modifier/type/canine/wolf_checked
 

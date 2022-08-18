@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomPotionEffects:[{Id:2b,Amplifier:0b,Duration:600}],Potion:\"minecraft:harming\",HideFlags:32,CustomPotionColor:4393481}"
+              "tag": "{CustomPotionEffects:[{Id:2,Amplifier:0b,Duration:600}],Potion:\"minecraft:harming\",HideFlags:32,CustomPotionColor:4393481}"
             },
             {
               "function": "minecraft:set_lore",

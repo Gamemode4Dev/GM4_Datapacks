@@ -3,5 +3,5 @@
 # at world spawn
 # run from armor/active/canine/check
 
+execute if score $wolf gm4_ce_data matches 0 run scoreboard players set @s gm4_ce_t_wolf 1
 scoreboard players set $wolf gm4_ce_data 1
-scoreboard players set @s gm4_ce_t_wolf 1
