@@ -1,7 +1,7 @@
 # use spreadplayer command if other method fails
 # @s = vorpal marker
 # at @s
-# run from armor/active/vorpal/tp_aec
+# run from armor/type/vorpal/tp_aec
 
 # search for the correct height
 execute store result score $y_pos gm4_ce_data run data get entity @s Pos[1]

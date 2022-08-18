@@ -1,7 +1,7 @@
 # code taken from Orb of Ankou - expeditious
 # @s = player wearing vorpal armor being damaged
 # at @s
-# run from armor/active/vorpal/tp_marker
+# run from armor/type/vorpal/tp_marker
 
 execute at @s run tp @s ~ ~-1 ~
 scoreboard players add $set_y gm4_ce_data 1

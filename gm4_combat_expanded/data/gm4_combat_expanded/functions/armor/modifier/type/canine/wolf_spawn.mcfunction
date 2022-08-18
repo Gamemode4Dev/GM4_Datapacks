@@ -1,7 +1,7 @@
 # spawn wolf if there is none matching equipped armor
 # @s = player to spawn the wolf
 # at @s
-# run from armor/active/canine/check
+# run from armor/type/canine/check
 
 # obtain player UUID
 data modify storage gm4_combat_expanded:temp uuid set from entity @s UUID

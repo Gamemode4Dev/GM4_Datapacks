@@ -1,7 +1,7 @@
 # start guarding nearby players
 # @s = player guarding
 # at @s
-# run from armor/active/guardian/check
+# run from armor/type/guardian/check
 
 # tag self for easy finding
 tag @s add gm4_ce_guardian

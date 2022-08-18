@@ -1,7 +1,7 @@
 # kill the guardian if they took damage exceeding their health
 # @s = player that died while guarding
 # at world spawn
-# run from armor/active/guardian/damage_calc
+# run from armor/type/guardian/damage_calc
 
 # advancement
 advancement grant @s only gm4:combat_expanded_guardian

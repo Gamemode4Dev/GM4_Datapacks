@@ -1,7 +1,7 @@
 # stop growth of armor at the 'cap'
 # @s = player wearing the armor
 # at @s
-# run from armor/active/consume/grow
+# run from armor/type/consume/grow
 
 # set level to cap
 scoreboard players operation $level gm4_ce_data = $cap gm4_ce_data

@@ -1,7 +1,7 @@
 # custom death message from overload death
 # @s = player that died
 # at world spawn
-# run from armor/active/overload/activate
+# run from armor/type/overload/activate
 
 # display custom death message if death messages are on
 execute store result score $death_messages gm4_ce_data run gamerule showDeathMessages

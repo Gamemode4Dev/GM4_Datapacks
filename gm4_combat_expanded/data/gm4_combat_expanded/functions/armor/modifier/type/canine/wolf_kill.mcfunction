@@ -1,7 +1,7 @@
 # despawn wolves without matching armor pieces, if the matching player is online
 # @s = wolf without corresponding armor piece
 # at @s
-# run from armor/active/canine/process
+# run from armor/type/canine/process
 
 # spawn nametag if wolf had a name
 execute if data entity @s CustomName run loot spawn ~ ~0.2 ~ loot gm4_combat_expanded:technical/canine_nametag
