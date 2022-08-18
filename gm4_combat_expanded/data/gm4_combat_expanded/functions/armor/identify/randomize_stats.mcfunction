@@ -20,6 +20,9 @@ data modify storage gm4_combat_expanded:temp Items set from block 29999998 1 713
 execute store result score $armor gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:5b}].Count
 scoreboard players operation $armor- gm4_ce_data = $armor gm4_ce_data
 scoreboard players operation $armor- gm4_ce_data -= #4 gm4_ce_data
+# clamp $armor- to armor of piece
+execute store result score $armor_clamp gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.armor_clamp
+scoreboard players operation $armor- gm4_ce_data > $armor_clamp gm4_ce_data
 # attack damage 1 - 4
 execute store result score $damage gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:6b}].Count
 scoreboard players operation $damage- gm4_ce_data = $damage gm4_ce_data

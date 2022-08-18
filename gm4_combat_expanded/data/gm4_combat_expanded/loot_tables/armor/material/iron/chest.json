@@ -48,7 +48,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{unidentified:0,slot:1,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_chestplate\"}'}}"
+              "tag": "{gm4_combat_expanded:{armor_clamp:-6,unidentified:0,slot:1,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_chestplate\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",

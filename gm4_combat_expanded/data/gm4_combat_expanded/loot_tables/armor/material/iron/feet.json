@@ -48,7 +48,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{unidentified:0,slot:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_boots\"}'}}"
+              "tag": "{gm4_combat_expanded:{armor_clamp:-2,unidentified:0,slot:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_boots\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",
