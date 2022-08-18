@@ -33,5 +33,9 @@ item replace entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering] arm
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/generic
 
+# replace 'Zombie leaders' with minibosses
+execute if data entity @s Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}] run function gm4_combat_expanded:mob/effect/zombie_leader
+execute if entity @s[tag=gm4_ce_miniboss] run function gm4_combat_expanded:mob/effect/zombie_miniboss
+
 # set modifiers
 function gm4_combat_expanded:mob/modifier/prep

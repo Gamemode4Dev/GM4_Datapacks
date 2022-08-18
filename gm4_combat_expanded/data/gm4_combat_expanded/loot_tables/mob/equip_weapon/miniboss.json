@@ -1,0 +1,34 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "gm4_combat_expanded:weapon/axe/diamond"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 4,
+          "name": "gm4_combat_expanded:weapon/sword/diamond"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 20,
+          "name": "gm4_combat_expanded:weapon/axe/iron"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 60,
+          "name": "gm4_combat_expanded:weapon/sword/iron"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 15,
+          "name": "gm4_combat_expanded:weapon/sword/gold"
+        }
+      ]
+    }
+  ]
+}
