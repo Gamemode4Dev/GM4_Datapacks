@@ -15,77 +15,51 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
-                  "translate": "potion.withAmplifier",
+                  "translate": "potion.withDuration",
                   "with": [
                     {
-                      "translate": "effect.minecraft.poison"
+                      "translate": "potion.withAmplifier",
+                      "with": [
+                        {
+                          "translate": "effect.minecraft.poison"
+                        },
+                        {
+                          "translate": "potion.potency.1"
+                        }
+                      ]
                     },
-                    {
-                      "translate": "potion.potency.1"
-                    }
+                    "0:05"
                   ],
                   "color": "red",
-                  "italic": false,
-                  "extra": [
-                    {
-                      "translate": "%1$s%3427655$s",
-                      "with": [
-                        {
-                          "text": " (0:05)"
-                        },
-                        {
-                          "text": "item.gm4_combat_expanded.armor.lore.duration_5"
-                        }
-                      ],
-                      "color": "red",
-                      "italic": false
-                    }
-                  ]
+                  "italic": false
                 },
                 {
-                  "translate": "effect.minecraft.weakness",
-                  "color": "red",
-                  "italic": false,
-                  "extra": [
-                    {
-                      "translate": "%1$s%3427655$s",
-                      "with": [
-                        {
-                          "text": " (0:05)"
-                        },
-                        {
-                          "translate": "item.gm4.combat_expanded.lore.duration_5"
-                        }
-                      ],
-                      "color": "red",
-                      "italic": false
-                    }
-                  ]
-                },
-                {
-                  "text": ""
-                },
-                {
-                  "translate": "%1$s%3427655$s",
+                  "translate": "potion.withDuration",
                   "with": [
                     {
-                      "text": "When Applied:"
+                      "translate": "effect.minecraft.weakness"
                     },
-                    {
-                      "translate": "item.gm4.combat_expanded.lore.when_applied"
-                    }
+                    "0:05"
                   ],
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "translate": "potion.whenDrank",
                   "color": "purple",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
+                  "translate": "attribute.modifier.take.0",
                   "with": [
                     {
-                      "text": "-4 Attack Damage"
+                      "text": "4"
                     },
                     {
-                      "translate": "item.gm4.combat_expanded.lore.weakness_applied"
+                      "translate": "attribute.name.generic.attack_damage"
                     }
                   ],
                   "color": "red",

@@ -15,24 +15,15 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
-                  "translate": "effect.minecraft.wither",
-                  "color": "red",
-                  "italic": false,
-                  "extra": [
+                  "translate": "potion.withDuration",
+                  "with": [
                     {
-                      "translate": "%1$s%3427655$s",
-                      "with": [
-                        {
-                          "text": " (0:10)"
-                        },
-                        {
-                          "translate": "item.gm4.combat_expanded.lore.duration_10"
-                        }
-                      ],
-                      "color": "red",
-                      "italic": false
-                    }
-                  ]
+                      "translate": "effect.minecraft.wither"
+                    },
+                    "0:10"
+                  ],
+                  "color": "red",
+                  "italic": false
                 }
               ]
             },

@@ -15,110 +15,75 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
-                  "translate": "effect.minecraft.slowness",
-                  "color": "red",
-                  "italic": false,
-                  "extra": [
-                    {
-                      "translate": "%1$s%3427655$s",
-                      "with": [
-                        {
-                          "text": " (0:30)"
-                        },
-                        {
-                          "translate": "item.gm4.combat_expanded.lore.duration_30"
-                        }
-                      ],
-                      "color": "red",
-                      "italic": false
-                    }
-                  ]
-                },
-                {
-                  "translate": "potion.withAmplifier",
+                  "translate": "potion.withDuration",
                   "with": [
                     {
-                      "translate": "effect.minecraft.poison"
+                      "translate": "effect.minecraft.slowness"
                     },
-                    {
-                      "translate": "potion.potency.1"
-                    }
+                    "0:30"
                   ],
                   "color": "red",
-                  "italic": false,
-                  "extra": [
-                    {
-                      "translate": "%1$s%3427655$s",
-                      "with": [
-                        {
-                          "text": " (0:05)"
-                        },
-                        {
-                          "text": "item.gm4_combat_expanded.armor.lore.duration_5"
-                        }
-                      ],
-                      "color": "red",
-                      "italic": false
-                    }
-                  ]
+                  "italic": false
                 },
                 {
-                  "translate": "effect.minecraft.weakness",
-                  "color": "red",
-                  "italic": false,
-                  "extra": [
+                  "translate": "potion.withDuration",
+                  "with": [
                     {
-                      "translate": "%1$s%3427655$s",
+                      "translate": "potion.withAmplifier",
                       "with": [
                         {
-                          "text": " (0:05)"
+                          "translate": "effect.minecraft.poison"
                         },
                         {
-                          "translate": "item.gm4.combat_expanded.lore.duration_5"
+                          "translate": "potion.potency.1"
                         }
-                      ],
-                      "color": "red",
-                      "italic": false
-                    }
-                  ]
+                      ]
+                    },
+                    "0:05"
+                  ],
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "translate": "potion.withDuration",
+                  "with": [
+                    {
+                      "translate": "effect.minecraft.weakness"
+                    },
+                    "0:05"
+                  ],
+                  "color": "red",
+                  "italic": false
                 },
                 {
                   "text": ""
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "When Applied:"
-                    },
-                    {
-                      "translate": "item.gm4.combat_expanded.lore.when_applied"
-                    }
-                  ],
+                  "translate": "potion.whenDrank",
                   "color": "purple",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
+                  "translate": "attribute.modifier.take.1",
                   "with": [
                     {
-                      "text": "-4 Attack Damage"
+                      "text": "15"
                     },
                     {
-                      "translate": "item.gm4.combat_expanded.lore.weakness_applied"
+                      "translate": "attribute.name.generic.movement_speed"
                     }
                   ],
                   "color": "red",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
+                  "translate": "attribute.modifier.take.0",
                   "with": [
                     {
-                      "text": "-15% Speed"
+                      "text": "4"
                     },
                     {
-                      "translate": "item.gm4.combat_expanded.lore.slowness_applied"
+                      "translate": "attribute.name.generic.attack_damage"
                     }
                   ],
                   "color": "red",

@@ -15,57 +15,40 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
-                  "translate": "potion.withAmplifier",
+                  "translate": "potion.withDuration",
                   "with": [
                     {
-                      "translate": "effect.minecraft.slowness"
-                    },
-                    {
-                      "translate": "potion.potency.1"
-                    }
-                  ],
-                  "color": "red",
-                  "italic": false,
-                  "extra": [
-                    {
-                      "translate": "%1$s%3427655$s",
+                      "translate": "potion.withAmplifier",
                       "with": [
                         {
-                          "text": " (0:30)"
+                          "translate": "effect.minecraft.slowness"
                         },
                         {
-                          "text": "item.gm4_combat_expanded.armor.lore.duration_30"
+                          "translate": "potion.potency.1"
                         }
-                      ],
-                      "color": "red",
-                      "italic": false
-                    }
-                  ]
+                      ]
+                    },
+                    "0:30"
+                  ],
+                  "color": "red",
+                  "italic": false
                 },
                 {
                   "text": ""
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "When Applied:"
-                    },
-                    {
-                      "translate": "item.gm4.combat_expanded.lore.when_applied"
-                    }
-                  ],
+                  "translate": "potion.whenDrank",
                   "color": "purple",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
+                  "translate": "attribute.modifier.take.1",
                   "with": [
                     {
-                      "text": "-30% Speed"
+                      "text": "30"
                     },
                     {
-                      "translate": "item.gm4.combat_expanded.lore.slowness_2_applied"
+                      "translate": "attribute.name.generic.movement_speed"
                     }
                   ],
                   "color": "red",

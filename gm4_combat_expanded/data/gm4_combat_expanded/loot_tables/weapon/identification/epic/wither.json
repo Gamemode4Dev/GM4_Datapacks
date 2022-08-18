@@ -97,22 +97,27 @@
           "lore": [
             [
               {
-                "translate": "effect.minecraft.wither",
-                "color": "red",
-                "italic": false
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "minecraft.effect.wither"
+                    },
+                    {
+                      "text": " (Self)"
+                    }
+                  ],
                   {
-                    "text": " (Self)",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.self"
+                    "translate": "item.gm4.combat_expanded.lore.self",
+                    "with": [
+                      {
+                        "translate": "minecraft.effect.wither"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "red",
+                "italic": false
               }
             ]
           ]

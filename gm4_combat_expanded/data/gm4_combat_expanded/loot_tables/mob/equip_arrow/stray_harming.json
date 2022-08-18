@@ -15,24 +15,15 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
-                  "translate": "effect.minecraft.slowness",
-                  "color": "red",
-                  "italic": false,
-                  "extra": [
+                  "translate": "potion.withDuration",
+                  "with": [
                     {
-                      "translate": "%1$s%3427655$s",
-                      "with": [
-                        {
-                          "text": " (0:30)"
-                        },
-                        {
-                          "translate": "item.gm4.combat_expanded.lore.duration_30"
-                        }
-                      ],
-                      "color": "red",
-                      "italic": false
-                    }
-                  ]
+                      "translate": "effect.minecraft.slowness"
+                    },
+                    "0:30"
+                  ],
+                  "color": "red",
+                  "italic": false
                 },
                 {
                   "translate": "effect.minecraft.instant_damage",
@@ -43,26 +34,18 @@
                   "text": ""
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "When Applied:"
-                    },
-                    {
-                      "translate": "item.gm4.combat_expanded.lore.when_applied"
-                    }
-                  ],
+                  "translate": "potion.whenDrank",
                   "color": "purple",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
+                  "translate": "attribute.modifier.take.1",
                   "with": [
                     {
-                      "text": "-15% Speed"
+                      "text": "15"
                     },
                     {
-                      "translate": "item.gm4.combat_expanded.lore.slowness_applied"
+                      "translate": "attribute.name.generic.movement_speed"
                     }
                   ],
                   "color": "red",

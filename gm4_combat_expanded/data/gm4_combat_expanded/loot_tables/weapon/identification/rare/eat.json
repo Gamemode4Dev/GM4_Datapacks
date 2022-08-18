@@ -95,26 +95,29 @@
           "function": "minecraft:set_lore",
           "entity": "this",
           "lore": [
-            [
-              {
-                "translate": "effect.minecraft.saturation",
-                "color": "blue",
-                "italic": false
-              },
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                [
                   {
-                    "text": " (Self)",
-                    "color": "blue",
-                    "italic": false
+                    "translate": "minecraft.effect.saturation"
                   },
                   {
-                    "translate": "item.gm4.combat_expanded.lore.self"
+                    "text": " (Self)"
                   }
-                ]
-              }
-            ]
+                ],
+                {
+                  "translate": "item.gm4.combat_expanded.lore.self",
+                  "with": [
+                    {
+                      "translate": "minecraft.effect.saturation"
+                    }
+                  ]
+                }
+              ],
+              "color": "blue",
+              "italic": false
+            }
           ]
         },
         {
@@ -123,36 +126,59 @@
           "lore": [
             [
               {
-                "translate": "potion.withDuration",
-                "with": [
-                  {
-                    "translate": "potion.withAmplifier",
-                    "with": [
-                      {
-                        "translate": "effect.minecraft.hunger"
-                      },
-                      {
-                        "translate": "enchantment.level.10"
-                      }
-                    ]
-                  },
-                  "0:15"
-                ],
-                "color": "red",
-                "italic": false
-              },
-              {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "potion.withDuration",
+                      "with": [
+                        {
+                          "translate": "potion.withAmplifier",
+                          "with": [
+                            {
+                              "translate": "effect.minecraft.hunger"
+                            },
+                            {
+                              "translate": "enchantment.level.10"
+                            }
+                          ]
+                        },
+                        "0:15"
+                      ],
+                      "color": "red",
+                      "italic": false
+                    },
+                    {
+                      "text": " (Self)"
+                    }
+                  ],
                   {
-                    "text": " (Self)",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.self"
+                    "translate": "item.gm4.combat_expanded.lore.self",
+                    "with": [
+                      {
+                        "translate": "potion.withDuration",
+                        "with": [
+                          {
+                            "translate": "potion.withAmplifier",
+                            "with": [
+                              {
+                                "translate": "effect.minecraft.hunger"
+                              },
+                              {
+                                "translate": "enchantment.level.10"
+                              }
+                            ]
+                          },
+                          "0:15"
+                        ],
+                        "color": "red",
+                        "italic": false
+                      }
+                    ]
                   }
-                ]
+                ],
+                "color": "blue",
+                "italic": false
               }
             ]
           ]
