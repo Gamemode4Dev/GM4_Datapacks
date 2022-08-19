@@ -30,7 +30,6 @@ execute if score $remove_health gm4_ce_data matches 1.. run scoreboard players r
 attribute @s minecraft:generic.max_health modifier add 41d5f53b-aaa9-4e50-ad7d-e10361a9950d "gm4_ce_instant_damage_buffer" 3 add
 effect give @s minecraft:instant_health 1 10 true
 effect give @s minecraft:instant_damage 1 0 true
-attribute @s minecraft:generic.max_health modifier remove 41d5f53b-aaa9-4e50-ad7d-e10361a9950d
 
 # prepare reverting
 tag @s add gm4_ce_damaged

@@ -15,4 +15,6 @@ attribute @s minecraft:generic.max_health modifier remove a2620070-9602-4c12-bce
 attribute @s minecraft:generic.max_health modifier remove cfe9d178-ad5a-482f-9462-3a2eb9a66246
 attribute @s minecraft:generic.max_health modifier remove 56ee6b7f-c37a-4cdf-bff5-4a65ab6173fa
 
+attribute @s minecraft:generic.max_health modifier remove 41d5f53b-aaa9-4e50-ad7d-e10361a9950d
+
 tag @s remove gm4_ce_damaged
