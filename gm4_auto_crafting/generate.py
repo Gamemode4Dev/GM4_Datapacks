@@ -497,6 +497,62 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
                 result.append({"name": "minecraft:glass_bottle","count": 1,"rolls": bottle_rolls})
                 bottle_rolls = 0
             last_roll = "air"
+    
+
+    # left align the pattern
+    if pattern[0] == "minecraft:air" and pattern[3] == "minecraft:air" and pattern[6] == "minecraft:air":
+        print(recipe["result"]["item"], "NEEDS LEFT ALIGN")
+        print("OG: ", pattern)
+        pattern[0] = pattern[1]
+        pattern[1] = pattern[2]
+        pattern[2] = "minecraft:air"
+        pattern[3] = pattern[4]
+        pattern[4] = pattern[5]
+        pattern[5] = "minecraft:air"
+        pattern[6] = pattern[7]
+        pattern[7] = pattern[8]
+        pattern[8] = "minecraft:air"
+        print("NEW:", pattern)
+    if pattern[0] == "minecraft:air" and pattern[3] == "minecraft:air" and pattern[6] == "minecraft:air":
+        print(recipe["result"]["item"], "NEEDS LEFT ALIGN")
+        print("OG: ", pattern)
+        pattern[0] = pattern[1]
+        pattern[1] = pattern[2]
+        pattern[2] = "minecraft:air"
+        pattern[3] = pattern[4]
+        pattern[4] = pattern[5]
+        pattern[5] = "minecraft:air"
+        pattern[6] = pattern[7]
+        pattern[7] = pattern[8]
+        pattern[8] = "minecraft:air"
+        print("NEW:", pattern)
+    # top align the pattern
+    if pattern[0] == "minecraft:air" and pattern[1] == "minecraft:air" and pattern[2] == "minecraft:air":
+        print(recipe["result"]["item"], "NEEDS TOP ALIGN")
+        print("OG: ", pattern)
+        pattern[0] = pattern[3]
+        pattern[1] = pattern[4]
+        pattern[2] = pattern[5]
+        pattern[3] = pattern[6]
+        pattern[4] = pattern[7]
+        pattern[5] = pattern[8]
+        pattern[6] = "minecraft:air"
+        pattern[7] = "minecraft:air"
+        pattern[8] = "minecraft:air"
+        print("NEW:", pattern)
+    if pattern[0] == "minecraft:air" and pattern[1] == "minecraft:air" and pattern[2] == "minecraft:air":
+        print(recipe["result"]["item"], "NEEDS TOP ALIGN")
+        print("OG: ", pattern)
+        pattern[0] = pattern[3]
+        pattern[1] = pattern[4]
+        pattern[2] = pattern[5]
+        pattern[3] = pattern[6]
+        pattern[4] = pattern[7]
+        pattern[5] = pattern[8]
+        pattern[6] = "minecraft:air"
+        pattern[7] = "minecraft:air"
+        pattern[8] = "minecraft:air"
+        print("NEW:", pattern)
 
     # insert the final output list item(s)
     if last_roll == "bucket" and bucket_rolls > 0:
