@@ -10,7 +10,7 @@ SHA = "071befb7fa9569ffa0043f74289d0ef1ec5ffc8b" # <- sha for 1.19 --- change to
 NAME = "gm4_auto_crafting"      # name of the module
 DIR = f"{NAME}/data/{NAME}"
 FUNCTION_FOLDER = f"{DIR}/functions"
-LOOT_PATH = "crafting/vanilla"
+LOOT_PATH = "crafting"
 
 BRANCH_PATH = "check_recipes"    # folder where all the search tree stuff will take place
 
