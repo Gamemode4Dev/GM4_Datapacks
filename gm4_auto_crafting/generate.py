@@ -10,6 +10,7 @@ SHA = "071befb7fa9569ffa0043f74289d0ef1ec5ffc8b" # <- sha for 1.19 --- change to
 NAME = "gm4_auto_crafting"      # name of the module
 DIR = f"{NAME}/data/{NAME}"
 FUNCTION_FOLDER = f"{DIR}/functions"
+LOOT_PATH = "crafting/vanilla"
 
 BRANCH_PATH = "check_recipes"    # folder where all the search tree stuff will take place
 
@@ -243,7 +244,7 @@ def main() -> None:
     ## test recipe
     ## recipes_json = [{"name":"not_an_item", "contents": {"type": "minecraft:crafting_shaped","pattern": ["XX","XX","##"],"key": {"#": {"item": "minecraft:stick"},"X": {"tag": "minecraft:stone_tool_materials"}},"result": {"item": "minecraft:random"}}},{"name":"iron_pickaxe", "contents": {"type": "minecraft:crafting_shaped","pattern": ["XXX"," # "," # "],"key": {"#": {"item": "minecraft:stick"},"X": {"item": "minecraft:iron_ingot"}},"result": {"item": "minecraft:iron_pickaxe"}}},{"name":"netherite_pickaxe", "contents": {"type": "minecraft:crafting_shaped","pattern": ["XXX"," # "," # "],"key": {"#": {"item": "minecraft:stick"},"X": {"item": "minecraft:netherite_ingot"}},"result": {"item": "minecraft:netherite_pickaxe"}}},{"name":"stone_pickaxe", "contents": {"type": "minecraft:crafting_shaped","pattern": ["XXX"," # "," # "],"key": {"#": {"item": "minecraft:stick"},"X": {"item": "minecraft:cobblestone"}},"result": {"item": "minecraft:stone_pickaxe"}}},{"name":"wooden_pickaxe", "contents": {"type": "minecraft:crafting_shaped","pattern": ["XXX"," # "," # "],"key": {"#": {"item": "minecraft:stick"},"X": [[{"tag": "gm4:oak_planks"},{"item": "minecraft:chest"}],{"item": "minecraft:jungle_planks"}]},"result": {"item": "minecraft:wooden_pickaxe"}}},{"name":"diamond_pickaxe", "contents": {"type": "minecraft:crafting_shaped","pattern": ["XXX"," # "," # "],"key": {"#": {"item": "minecraft:stick"},"X": {"item": "minecraft:diamond"}},"result": {"item": "minecraft:diamond_pickaxe"}}},{"name":"diamond", "contents": {"type": "minecraft:crafting_shaped","pattern": ["X X","# #"," # "],"key": {"#": {"item": "minecraft:dirt"},"X": {"item": "minecraft:apple"}},"result": {"item": "minecraft:diamond"}}},{"name": "writable_book", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:dragon_breath"},{"item": "minecraft:ink_sac"},{"item": "minecraft:milk_bucket"}],"result": {"item": "minecraft:writable_book"}}},{"name": "cyan_dye", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:blue_dye"},{"item": "minecraft:ink_sac"},{"item": "minecraft:composter"}],"result": {"item": "minecraft:cyan_dye"}}},{"name": "crafting_table", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:blue_dye"},{"item": "minecraft:oak_planks"},{"item": "minecraft:stone"}],"result": {"item": "minecraft:crafting_table"}}},{"name": "flint", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"tag": "minecraft:dirt"},{"item": "minecraft:dirt"},{"item": "minecraft:andesite"}],"result": {"item": "minecraft:flint"}}},{"name": "iron_helmet", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"tag": "minecraft:dirt"},{"tag": "minecraft:dirt"},{"item": "minecraft:andesite"}],"result": {"item": "minecraft:iron_helmet"}}},{"name": "quartz", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:stone"},{"item": "minecraft:furnace"}],"result": {"item": "minecraft:quartz"}}},{"name": "cobblestone", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:tripwire_hook"},{"item": "minecraft:wooden_pickaxe"}],"result": {"item": "minecraft:cobblestone"}}},{"name": "raw_chicken", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:gravel"},{"item": "minecraft:feather"}],"result": {"item": "minecraft:chicken"}}},{"name": "cobblestone", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [[{"item": "minecraft:tripwire_hook"},{"item": "minecraft:wooden_pickaxe"}],{"tag": "minecraft:acacia_logs"}],"result": {"item": "minecraft:cobblestone"}}},{"name": "oak_leaves", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:gravel"}],"result": {"item": "minecraft:oak_leaves"}}},{"name": "netherite_ingot", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:gold_ingot"},{"item": "minecraft:gold_ingot"},{"item": "minecraft:gold_ingot"},{"item": "minecraft:gold_ingot"},{"item": "minecraft:netherite_ingot"},{"item": "minecraft:netherite_ingot"},{"item": "minecraft:netherite_ingot"},{"item": "minecraft:netherite_ingot"}],"result": {"item": "minecraft:netherite_ingot"}}},{"name": "netherite_ingot_1", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:gold_ingot"},{"item": "minecraft:gold_ingot"},{"item": "minecraft:gold_ingot"},{"item": "minecraft:gold_ingot"},{"item": "minecraft:netherite_ingot"},{"item": "minecraft:netherite_ingot"},{"tag": "minecraft:netherite_ingot"},{"item": "minecraft:netherite_ingot"}],"result": {"item": "minecraft:netherite_ingot"}}}]
     # clear old contents
-    shutil.rmtree(f"{DIR}/loot_tables/crafting", True)
+    shutil.rmtree(f"{DIR}/loot_tables/{LOOT_PATH}", True)
     shutil.rmtree(f"{DIR}/tags/items", True)
     shutil.rmtree(f"{DIR}/predicates/custom_item_tags", True)
     for recipe_json in recipes_json:
@@ -497,12 +498,9 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
                 result.append({"name": "minecraft:glass_bottle","count": 1,"rolls": bottle_rolls})
                 bottle_rolls = 0
             last_roll = "air"
-    
 
     # left align the pattern
     if pattern[0] == "minecraft:air" and pattern[3] == "minecraft:air" and pattern[6] == "minecraft:air":
-        print(recipe["result"]["item"], "NEEDS LEFT ALIGN")
-        print("OG: ", pattern)
         pattern[0] = pattern[1]
         pattern[1] = pattern[2]
         pattern[2] = "minecraft:air"
@@ -512,10 +510,7 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
         pattern[6] = pattern[7]
         pattern[7] = pattern[8]
         pattern[8] = "minecraft:air"
-        print("NEW:", pattern)
     if pattern[0] == "minecraft:air" and pattern[3] == "minecraft:air" and pattern[6] == "minecraft:air":
-        print(recipe["result"]["item"], "NEEDS LEFT ALIGN")
-        print("OG: ", pattern)
         pattern[0] = pattern[1]
         pattern[1] = pattern[2]
         pattern[2] = "minecraft:air"
@@ -525,11 +520,8 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
         pattern[6] = pattern[7]
         pattern[7] = pattern[8]
         pattern[8] = "minecraft:air"
-        print("NEW:", pattern)
     # top align the pattern
     if pattern[0] == "minecraft:air" and pattern[1] == "minecraft:air" and pattern[2] == "minecraft:air":
-        print(recipe["result"]["item"], "NEEDS TOP ALIGN")
-        print("OG: ", pattern)
         pattern[0] = pattern[3]
         pattern[1] = pattern[4]
         pattern[2] = pattern[5]
@@ -539,10 +531,7 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
         pattern[6] = "minecraft:air"
         pattern[7] = "minecraft:air"
         pattern[8] = "minecraft:air"
-        print("NEW:", pattern)
     if pattern[0] == "minecraft:air" and pattern[1] == "minecraft:air" and pattern[2] == "minecraft:air":
-        print(recipe["result"]["item"], "NEEDS TOP ALIGN")
-        print("OG: ", pattern)
         pattern[0] = pattern[3]
         pattern[1] = pattern[4]
         pattern[2] = pattern[5]
@@ -552,7 +541,27 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
         pattern[6] = "minecraft:air"
         pattern[7] = "minecraft:air"
         pattern[8] = "minecraft:air"
-        print("NEW:", pattern)
+
+    # mark mirror-able recipes
+    mirror = False
+    if (len(pattern) == 3):
+        if (pattern[2] == "minecraft:air"):
+            if (pattern[0] != pattern[1] != "minecraft:air"):
+                mirror = True
+        elif (pattern[0] != pattern[2]):
+            mirror = True
+    elif (len(pattern) == 6):
+        if (pattern[2] == "minecraft:air" and pattern[5] == "minecraft:air"):
+            if (pattern[0] != pattern[1] != "minecraft:air" or pattern[3] != pattern[4] != "minecraft:air"):
+                mirror = True
+        elif (pattern[0] != pattern[2] or pattern[3] != pattern[5]):
+            mirror = True
+    elif (len(pattern) == 9):
+        if (pattern[2] == "minecraft:air" and pattern[5] == "minecraft:air" and pattern[8] == "minecraft:air"):
+            if (pattern[0] != pattern[1] != "minecraft:air" or pattern[3] != pattern[4] != "minecraft:air" or pattern[6] != pattern[7] != "minecraft:air"):
+                mirror = True
+        elif (pattern[0] != pattern[2] or pattern[3] != pattern[5] or pattern[6] != pattern[8]):
+            mirror = True
 
     # insert the final output list item(s)
     if last_roll == "bucket" and bucket_rolls > 0:
@@ -625,7 +634,7 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
     # set the last slot to the recipe result
     result.append({"name": result_id,"count": result_count,"rolls": 1})
     # return the new formatted ingredients and result, and the items in custom item tags
-    return {"pattern":pattern, "result":result}, needs_tag
+    return {"pattern":pattern, "result":result, "mirror":mirror}, needs_tag
 
 
 
@@ -739,7 +748,7 @@ def generate_crafting_loot_table(result: list[dict], target: str) -> None:
         json["pools"].append(pool)
     
     # write loot table file
-    write_json(f"{DIR}/loot_tables/crafting/{target}", json)
+    write_json(f"{DIR}/loot_tables/{LOOT_PATH}/{target}", json)
 
 
 
@@ -1217,13 +1226,56 @@ def generate_recipe_function(recipes: list[dict], path: str) -> None:
                         s = "{Slot:" + str(i) + "b,id:\"" + item + "\"}"
                         items.append(s)
                     i += 1
+                # if mirrorable
+                if (recipe["mirror"] == True):
+                    # mirror recipe
+                    pattern = recipe["pattern"]
+                    # if 2 columns
+                    if (pattern[2] == "minecraft:air" and (len(pattern) < 6 or pattern[5] == "minecraft:air") and (len(pattern) < 9 or pattern[8] == "minecraft:air")):
+                        # flip columns 1 and 2
+                        if (len(pattern) >= 3):
+                            if (pattern[2] == "minecraft:air"):
+                                temp = pattern[0]
+                                pattern[0] = pattern[1]
+                                pattern[1] = temp
+                            else:
+                                temp = pattern[0]
+                                pattern[0] = pattern[2]
+                                pattern[2] = temp
+                        if (len(pattern) >= 6):
+                            temp = pattern[3]
+                            pattern[3] = pattern[4]
+                            pattern[4] = temp
+                        if (len(pattern) == 9):
+                            temp = pattern[6]
+                            pattern[6] = pattern[7]
+                            pattern[7] = temp
+                    # if 3 columns
+                    else:
+                        # flip columsn 1 and 3
+                        if (len(pattern) >= 3):
+                            temp = pattern[0]
+                            pattern[0] = pattern[2]
+                            pattern[2] = temp
+                        if (len(pattern) >= 6):
+                            temp = pattern[3]
+                            pattern[3] = pattern[5]
+                            pattern[5] = temp
+                        if (len(pattern) == 9):
+                            temp = pattern[6]
+                            pattern[6] = pattern[8]
+                            pattern[8] = temp
+                    # add mirrored recipe
+                    new_recipe = r.copy()
+                    new_recipe["recipe"]["mirror"] = False
+                    recipes.append(new_recipe)
 
             # add final item check (used for shapeless recipes with both duplicate items and non-duplicate items)
             if len(items) != 0:
                 recipe_data += "if data storage gm4_custom_crafters:temp/crafter {Items:[" + ",".join(items) + "]} "
 
             # write final command to check if recipe is valid
-            command = f"execute {checks} {recipe_data}run loot replace block ~ ~ ~ container.0 loot {NAME}:crafting/{name}"    
+            command = f"execute {checks} {recipe_data}run loot replace block ~ ~ ~ container.0 loot {NAME}:{LOOT_PATH}/{name}"    
             file.write(f"{command}\n")
 
 
