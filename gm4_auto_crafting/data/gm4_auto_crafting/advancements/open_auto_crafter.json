@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_auto_crafting"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:dropper"
+            ],
+            "nbt": "{CustomName:'{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"color\":\"#373737\",\"font\":\"minecraft:default\",\"text\":\"Set Recipe Shape\"},{\"font\":\"gm4:half_scale\",\"extra\":[{\"font\":\"gm4:inverted\",\"text\":\"Set Recipe Shape\"},{\"font\":\"gm4:inverted_spacing\",\"text\":\"Set Recipe Shape\"},{\"font\":\"gm4:offscreen\",\"text\":\"Set Recipe Shape\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.auto_crafter\"},{\"font\":\"gm4:half_scale\",\"text\":\"Set Recipe Shape\"},{\"font\":\"gm4:inverted\",\"text\":\"Set Recipe Shape\"},{\"font\":\"gm4:inverted_spacing\",\"text\":\"Set Recipe Shape\"},{\"color\":\"#373737\",\"font\":\"minecraft:default\",\"text\":\"Set Recipe Shape\"}],\"text\":\"Set Recipe Shape\"}]},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"color\":\"#373737\",\"font\":\"minecraft:default\",\"translate\":\"container.gm4.auto_crafter\"},{\"font\":\"gm4:half_scale\",\"extra\":[{\"font\":\"gm4:inverted\",\"translate\":\"container.gm4.auto_crafter\"},{\"font\":\"gm4:inverted_spacing\",\"translate\":\"container.gm4.auto_crafter\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.auto_crafter\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.auto_crafter\"},{\"font\":\"gm4:half_scale\",\"translate\":\"container.gm4.auto_crafter\"},{\"font\":\"gm4:inverted\",\"translate\":\"container.gm4.auto_crafter\"},{\"font\":\"gm4:inverted_spacing\",\"translate\":\"container.gm4.auto_crafter\"},{\"color\":\"#373737\",\"font\":\"minecraft:default\",\"translate\":\"container.gm4.auto_crafter\"}],\"translate\":\"container.gm4.auto_crafter\"}]}]}'}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_auto_crafting:auto_crafter/caching/open_auto_crafter"
+  }
+}
