@@ -1,5 +1,5 @@
 {
-  "last_commit": "cebe6147732b10839afce69f60fec949f52f8a1d",
+  "last_commit": "4856cf09626f3dc211fe82cc09a79806f5b674f9",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -50,7 +50,7 @@
       },
       "hidden": false,
       "important_note": "Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.",
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_audere_shamir",
@@ -96,7 +96,7 @@
       },
       "hidden": false,
       "important_note": "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_beehive_inspector",
@@ -148,7 +148,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_better_fire",
@@ -174,7 +174,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_block_compressors",
@@ -210,7 +210,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_book_binders",
@@ -235,7 +235,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_boots_of_ostara",
@@ -266,7 +266,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_cement_mixers",
@@ -312,7 +312,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_combat_expanded",
@@ -334,7 +334,7 @@
       },
       "hidden": false,
       "important_note": "Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.",
-      "patch": 19001
+      "patch": 19002
     },
     {
       "id": "gm4_cooler_caves",
@@ -502,7 +502,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_display_frames",
@@ -528,7 +528,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_dripleaf_filters",
@@ -585,7 +585,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_end_fishing",
@@ -611,7 +611,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_ender_hoppers",
@@ -646,7 +646,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_enderman_support_class",
@@ -668,7 +668,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_everstone",
@@ -728,7 +728,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_fulcio_shamir",
@@ -776,7 +776,7 @@
       },
       "hidden": true,
       "important_note": "Experimental Module! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.",
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_heart_canisters",
@@ -811,7 +811,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_holographic_tags",
@@ -836,7 +836,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_iacio_shamir",
@@ -885,7 +885,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_lightning_in_a_bottle",
@@ -918,7 +918,7 @@
       },
       "hidden": false,
       "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_liquid_minecarts",
@@ -951,7 +951,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_liquid_tanks",
@@ -991,7 +991,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_live_catch",
@@ -1109,7 +1109,7 @@
       },
       "hidden": false,
       "important_note": "Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_midnight_menaces",
@@ -1133,7 +1133,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_mob_curing",
@@ -1160,7 +1160,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_mysterious_midnights",
@@ -1190,7 +1190,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_note_block_interface",
@@ -1242,7 +1242,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_orbis",
@@ -1349,7 +1349,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_pig_tractors",
@@ -1371,7 +1371,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_podzol_rooting_soil",
@@ -1455,7 +1455,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_potion_swords",
@@ -1481,7 +1481,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_record_crafting",
@@ -1511,7 +1511,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_relocators",
@@ -1549,7 +1549,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_rope_ladders",
@@ -1599,7 +1599,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_shroomites",
@@ -1623,7 +1623,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_smelteries",
@@ -1660,7 +1660,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_soul_glass",
@@ -1687,7 +1687,7 @@
       },
       "hidden": false,
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_spawner_minecarts",
@@ -1711,7 +1711,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_speed_paths",
@@ -1765,7 +1765,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_sunken_treasure",
@@ -1847,7 +1847,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19002
+      "patch": 19003
     },
     {
       "id": "gm4_tinkering_compressors",
@@ -1884,7 +1884,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_tnt_landmines",
@@ -1914,7 +1914,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_tower_structures",
@@ -1973,7 +1973,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_tunnel_bores",
@@ -2005,7 +2005,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_undead_players",
@@ -2081,7 +2081,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_vigere_shamir",
@@ -2217,7 +2217,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_zauber_liquids",
@@ -2250,7 +2250,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_ziprails",
@@ -2276,7 +2276,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     }
   ],
   "contributors": {
