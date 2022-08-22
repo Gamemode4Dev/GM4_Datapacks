@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "item": {
+                    "items": [
+                        "minecraft:emerald"
+                    ]
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_calling_bell:bell/ring"
+    }
+}
