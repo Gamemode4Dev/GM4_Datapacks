@@ -4,17 +4,17 @@
 tag @s add gm4_processing_tank
 
 #cow
-execute as @e[dx=0,type=cow] run function gm4_standard_liquids:util/mobs/cow
+execute as @e[dx=0,type=cow,tag=!smithed.entity] run function gm4_standard_liquids:util/mobs/cow
 
 #mooshroom
-execute as @e[dx=0,type=mooshroom] run function gm4_standard_liquids:util/mobs/mooshroom
+execute as @e[dx=0,type=mooshroom,tag=!smithed.entity] run function gm4_standard_liquids:util/mobs/mooshroom
 
 #snow golem
-execute as @e[dx=0,type=snow_golem,predicate=gm4_standard_liquids:suspended_snow_golem] run function gm4_standard_liquids:util/mobs/snow_golem
+execute as @e[dx=0,type=snow_golem,tag=!smithed.entity,predicate=gm4_standard_liquids:suspended_snow_golem] run function gm4_standard_liquids:util/mobs/snow_golem
 
 #squids
-execute as @e[dx=0,type=squid] run function gm4_standard_liquids:util/mobs/squid
-execute as @e[dx=0,type=glow_squid] run function gm4_standard_liquids:util/mobs/glow_squid
+execute as @e[dx=0,type=squid,tag=!smithed.entity] run function gm4_standard_liquids:util/mobs/squid
+execute as @e[dx=0,type=glow_squid,tag=!smithed.entity] run function gm4_standard_liquids:util/mobs/glow_squid
 
 #experience orb
 execute positioned ~0.5 ~ ~0.5 if entity @e[distance=..0.5,type=experience_orb] if score @s[tag=gm4_lt_empty] gm4_lt_value matches 0 at @s run function gm4_standard_liquids:liquid_init/experience

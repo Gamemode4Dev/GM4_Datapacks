@@ -1,14 +1,28 @@
-{
+[
+  {
     "condition": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-        "vehicle": {
-            "type": "minecraft:pig",
-            "location": {
-                "block": {
-                    "tag": "gm4_pig_tractors:replaceable"
-                }
-            }
+      "vehicle": {
+        "type": "minecraft:pig",
+        "location": {
+          "block": {
+            "tag": "gm4_pig_tractors:replaceable"
+          }
         }
+      }
     }
-}
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "vehicle": {
+          "nbt": "{Tags:[\"smithed.entity\"]}"
+        }
+      }
+    }
+  }
+]
