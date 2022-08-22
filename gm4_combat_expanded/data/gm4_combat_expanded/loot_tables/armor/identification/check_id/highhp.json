@@ -1,0 +1,104 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/rare/immune",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 1
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/common/husk",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 2
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/common/poised",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 3
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/common/solid",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 4
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/epic/guardian",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

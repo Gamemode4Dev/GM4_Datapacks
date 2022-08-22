@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_combat_expanded"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "damage": {
+          "source_entity": {
+            "nbt": "{Tags:[\"gm4_ce_slowing_attacks\"]}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_combat_expanded:mob/effect/slowing_attack"
+  }
+}

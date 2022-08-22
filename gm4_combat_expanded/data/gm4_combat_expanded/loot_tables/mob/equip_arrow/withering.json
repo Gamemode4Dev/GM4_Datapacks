@@ -1,0 +1,50 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:tipped_arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomPotionEffects:[{Id:20,Amplifier:0b,Duration:200}],CustomPotionColor:3484199,HideFlags:32}"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "potion.withDuration",
+                  "with": [
+                    {
+                      "translate": "effect.minecraft.wither"
+                    },
+                    "0:10"
+                  ],
+                  "color": "red",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "Arrow of Wither"
+                  },
+                  {
+                    "translate": "item.gm4.combat_expanded.lore.wither_arrow"
+                  }
+                ],
+                "italic": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
