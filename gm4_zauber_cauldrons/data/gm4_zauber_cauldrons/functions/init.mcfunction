@@ -1,3 +1,4 @@
+scoreboard objectives add gm4_entity_version dummy
 scoreboard objectives add gm4_zc_chorus dummy
 scoreboard objectives add gm4_zc_crystal dummy
 scoreboard objectives add gm4_zc_data dummy

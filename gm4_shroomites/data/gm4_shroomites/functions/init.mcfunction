@@ -1,5 +1,6 @@
 # objectives
 scoreboard objectives add gm4_shroom_data dummy
+scoreboard objectives add gm4_entity_version dummy
 
 # fixed values
 scoreboard players set #spore_max_age gm4_shroom_data 12

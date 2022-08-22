@@ -3,5 +3,5 @@
 # ran from pulse_check
 
 #homing
-execute anchored eyes facing entity @e[type=minecraft:phantom,limit=1,sort=nearest] eyes run tp ~ ~ ~
+execute anchored eyes facing entity @e[type=minecraft:phantom,tag=!smithed.entity,limit=1,sort=nearest] eyes run tp ~ ~ ~
 execute at @s run function gm4_phantom_scarecrows:propulsion

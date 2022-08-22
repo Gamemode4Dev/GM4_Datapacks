@@ -4,6 +4,7 @@ scoreboard players set 100 gm4_menace_data 100
 scoreboard players set 17 gm4_menace_data 17
 scoreboard players set 21 gm4_menace_data 21
 scoreboard players set 2 gm4_menace_data 2
+scoreboard objectives add gm4_entity_version dummy
 team add gm4_hide_name
 team modify gm4_hide_name nametagVisibility never
 

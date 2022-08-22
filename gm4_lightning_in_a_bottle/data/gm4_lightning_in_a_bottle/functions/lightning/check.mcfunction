@@ -12,20 +12,20 @@ execute if block ~ ~-.01 ~ lightning_rod[facing=down] if block ~ ~.99 ~ brewing_
 
 # Lightning-based mob transformation
 # Evokers -> Illusioners
-execute align xyz positioned ~-3 ~-2 ~-3 as @e[type=evoker,dx=6,dy=11,dz=6] at @s run function gm4_lightning_in_a_bottle:entity/illusioner
+execute align xyz positioned ~-3 ~-2 ~-3 as @e[type=evoker,tag=!smithed.entity,dx=6,dy=11,dz=6] at @s run function gm4_lightning_in_a_bottle:entity/illusioner
 # Pillagers -> Evokers
-execute align xyz positioned ~-3 ~-2 ~-3 as @e[type=pillager,dx=6,dy=11,dz=6] at @s run function gm4_lightning_in_a_bottle:entity/evoker
+execute align xyz positioned ~-3 ~-2 ~-3 as @e[type=pillager,tag=!smithed.entity,dx=6,dy=11,dz=6] at @s run function gm4_lightning_in_a_bottle:entity/evoker
 
 # Creeper Spawners struck by the lightning will become Charged Creepers Spawners
-execute if block ~ ~-1 ~ spawner{SpawnData:{entity:{id:"minecraft:creeper"}}} run data merge block ~ ~-1 ~ {MaxSpawnDelay:801s,SpawnData:{entity:{id:"minecraft:creeper",powered:1b}},SpawnPotentials:[{data:{entity:{id:"minecraft:creeper",powered:1b,DeathLootTable:"gm4_lightning_in_a_bottle:entities/charged_creeper"}},weight:1}]}
+execute align xyz positioned ~0.5 ~-0.5 ~0.5 if block ~ ~ ~ spawner{SpawnData:{entity:{id:"minecraft:creeper"}}} unless entity @e[tag=!smithed.block,distance=..0.5] run data merge block ~ ~ ~ {MaxSpawnDelay:801s,SpawnData:{entity:{id:"minecraft:creeper",powered:1b}},SpawnPotentials:[{data:{entity:{id:"minecraft:creeper",powered:1b,DeathLootTable:"gm4_lightning_in_a_bottle:entities/charged_creeper"}},weight:1}]}
 
 # Lightning-based block -> entity transformation
 # inside strike location
-execute if block ~ ~ ~ purpur_block run function gm4_lightning_in_a_bottle:entity/shulker
-execute unless score $found_block gm4_liab_data matches 1.. if block ~ ~ ~ prismarine_bricks run function gm4_lightning_in_a_bottle:entity/guardian
+execute align xyz positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ purpur_block unless entity @e[tag=smithed.block,distance=..0.5] run function gm4_lightning_in_a_bottle:entity/shulker
+execute unless score $found_block gm4_liab_data matches 1.. align xyz positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ prismarine_bricks unless entity @e[tag=smithed.block,distance=..0.5] run function gm4_lightning_in_a_bottle:entity/guardian
 # below strike location
-execute unless score $found_block gm4_liab_data matches 1.. positioned ~ ~-1 ~ if block ~ ~ ~ purpur_block run function gm4_lightning_in_a_bottle:entity/shulker
-execute unless score $found_block gm4_liab_data matches 1.. positioned ~ ~-1 ~ if block ~ ~ ~ prismarine_bricks run function gm4_lightning_in_a_bottle:entity/guardian
+execute unless score $found_block gm4_liab_data matches 1.. align xyz positioned ~0.5 ~-0.5 ~0.5 if block ~ ~ ~ purpur_block unless entity @e[tag=smithed.block,distance=..0.5] run function gm4_lightning_in_a_bottle:entity/shulker
+execute unless score $found_block gm4_liab_data matches 1.. align xyz positioned ~0.5 ~-0.5 ~0.5 if block ~ ~ ~ prismarine_bricks unless entity @e[tag=smithed.block,distance=..0.5] run function gm4_lightning_in_a_bottle:entity/guardian
 
 # other lightning-based expansions can happen after
 function #gm4_lightning_in_a_bottle:lightning_strike

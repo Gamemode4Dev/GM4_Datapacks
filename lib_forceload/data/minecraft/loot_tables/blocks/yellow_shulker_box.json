@@ -2,70 +2,109 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "minecraft:alternatives",
-          "children": [
+          "type": "minecraft:item",
+          "functions": [
             {
-              "type": "minecraft:dynamic",
-              "name": "minecraft:contents",
-              "conditions": [
+              "function": "minecraft:copy_name",
+              "source": "block_entity"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
                 {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "items": [
-                      "minecraft:air"
-                    ],
-                    "nbt": "{drop_contents:1b}"
-                  }
+                  "source": "Lock",
+                  "target": "BlockEntityTag.Lock",
+                  "op": "replace"
+                },
+                {
+                  "source": "LootTable",
+                  "target": "BlockEntityTag.LootTable",
+                  "op": "replace"
+                },
+                {
+                  "source": "LootTableSeed",
+                  "target": "BlockEntityTag.LootTableSeed",
+                  "op": "replace"
                 }
               ]
             },
             {
-              "type": "minecraft:item",
-              "name": "minecraft:yellow_shulker_box",
-              "functions": [
+              "function": "minecraft:set_contents",
+              "type": "minecraft:shulker_box",
+              "entries": [
                 {
-                  "function": "minecraft:copy_name",
-                  "source": "block_entity"
-                },
-                {
-                  "function": "minecraft:copy_nbt",
-                  "source": "block_entity",
-                  "ops": [
-                    {
-                      "source": "Lock",
-                      "target": "BlockEntityTag.Lock",
-                      "op": "replace"
-                    },
-                    {
-                      "source": "LootTable",
-                      "target": "BlockEntityTag.LootTable",
-                      "op": "replace"
-                    },
-                    {
-                      "source": "LootTableSeed",
-                      "target": "BlockEntityTag.LootTableSeed",
-                      "op": "replace"
-                    }
-                  ]
-                },
-                {
-                  "function": "minecraft:set_contents",
-                  "type": "minecraft:shulker_box",
-                  "entries": [
-                    {
-                      "type": "minecraft:dynamic",
-                      "name": "minecraft:contents"
-                    }
-                  ]
+                  "type": "minecraft:dynamic",
+                  "name": "minecraft:contents"
                 }
               ]
+            }
+          ],
+          "name": "minecraft:yellow_shulker_box",
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "items": [
+                    "minecraft:air"
+                  ],
+                  "nbt": "{drop_contents:1b}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:dynamic",
+          "name": "minecraft:contents",
+          "conditions": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "items": [
+                  "minecraft:air"
+                ],
+                "nbt": "{drop_contents:1b}"
+              }
             }
           ]
         }
       ]
     }
-  ]
+  ],
+  "__smithed__": {
+    "rules": [
+      {
+        "type": "smithed:append",
+        "target": "pools[0].conditions",
+        "source": {
+          "type": "smithed:reference",
+          "path": "pools[0].conditions[0]"
+        }
+      },
+      {
+        "type": "smithed:append",
+        "target": "pools",
+        "source": {
+          "type": "smithed:reference",
+          "path": "pools[1]"
+        }
+      }
+    ],
+    "priority": {
+      "default": 0
+    }
+  }
 }
