@@ -1,0 +1,30 @@
+{
+    "pack": {
+        "pack_format": 10,
+        "description": [
+            "Combat Expanded",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.19",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Combat Expanded",
+    "module_id": "combat_expanded",
+    "libraries": [
+        "lib_forceload",
+        "lib_lore"
+    ],
+    "site_description": "Use special armor and weapon modifiers to defend against mobs that grow ever stronger.",
+    "important_note": "Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.",
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Combat_Expanded",
+    "required_modules": [],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "Thanathor"
+        ]
+    }
+}

@@ -1,0 +1,268 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "gm4_ce_perm",
+                  "amount": -3,
+                  "operation": "addition",
+                  "slot": "chest"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$armor"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": {
+                    "min": 1,
+                    "max": 2
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "gm4_ce_perm",
+                  "amount": -6,
+                  "operation": "addition",
+                  "slot": "chest"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$armor"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_expanded:{modifier:72}}"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_combat_expanded:temp"
+              },
+              "ops": [
+                {
+                  "source": "armor",
+                  "target": "gm4_combat_expanded.level",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_combat_expanded:temp"
+              },
+              "ops": [
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "When Equipped:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_expanded.lore.equip"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.strength"
+                    },
+                    " Aura"
+                  ],
+                  {
+                    "translate": "attribute.gm4.combat_expanded.aura",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.strength"
+                      }
+                    ]
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  [
+                    {
+                      "translate": "potion.withAmplifier",
+                      "with": [
+                        {
+                          "translate": "effect.minecraft.strength"
+                        },
+                        {
+                          "translate": "potion.potency.1"
+                        }
+                      ]
+                    },
+                    " Aura"
+                  ],
+                  {
+                    "translate": "attribute.gm4.combat_expanded.lore.aura",
+                    "with": [
+                      {
+                        "translate": "potion.withAmplifier",
+                        "with": [
+                          {
+                            "translate": "effect.minecraft.strength"
+                          },
+                          {
+                            "translate": "potion.potency.1"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 3
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                [
+                  {
+                    "text": "Bolstering ",
+                    "italic": false
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true
+                  }
+                ],
+                {
+                  "translate": "item.gm4.combat_expanded.name.link",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

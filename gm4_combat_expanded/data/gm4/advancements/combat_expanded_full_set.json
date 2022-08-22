@@ -1,0 +1,61 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_chestplate",
+      "nbt": "{CustomModelData:3420003}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Full Potential",
+        {
+          "translate": "advancement.gm4.combat_expanded.full_set.title"
+        }
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Wear a full set of identified armor and a weapon to go with it",
+        {
+          "translate": "advancement.gm4.combat_expanded.full_set.description"
+        }
+      ],
+      "color": "gray"
+    },
+    "frame": "task"
+  },
+  "parent": "gm4:combat_expanded_identify",
+  "criteria": {
+    "full_set": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "nbt": "{gm4_combat_expanded:{identified:1}}"
+                },
+                "head": {
+                  "nbt": "{gm4_combat_expanded:{identified:1}}"
+                },
+                "chest": {
+                  "nbt": "{gm4_combat_expanded:{identified:1}}"
+                },
+                "legs": {
+                  "nbt": "{gm4_combat_expanded:{identified:1}}"
+                },
+                "feet": {
+                  "nbt": "{gm4_combat_expanded:{identified:1}}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
