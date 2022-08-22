@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:shield",
+      "nbt": "{CustomModelData:3420003}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Sentinel",
+        {
+          "translate": "advancement.gm4.combat_expanded.guardian.title"
+        }
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Give your life defending your allies",
+        {
+          "translate": "advancement.gm4.combat_expanded.guardian.description"
+        }
+      ]
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "parent": "gm4:combat_expanded_full_set",
+  "criteria": {
+    "guardian": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

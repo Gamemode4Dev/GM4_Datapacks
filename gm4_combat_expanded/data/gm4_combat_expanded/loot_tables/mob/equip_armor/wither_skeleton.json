@@ -1,0 +1,121 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "minecraft:empty"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/iron/feet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/chainmail/feet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "minecraft:empty"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/iron/legs",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/chainmail/legs",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "minecraft:empty"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/iron/chest",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/chainmail/chest",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "minecraft:empty"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/iron/head",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/chainmail/head",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

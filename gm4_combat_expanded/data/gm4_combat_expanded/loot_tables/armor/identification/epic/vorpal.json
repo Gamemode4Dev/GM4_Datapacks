@@ -1,0 +1,130 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "generic.knockback_resistance",
+                  "name": "gm4_ce_perm",
+                  "amount": 0.1,
+                  "operation": "addition",
+                  "slot": "chest"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_expanded:{vorpal:1}}"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_combat_expanded:temp"
+              },
+              "ops": [
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "When Under Attack:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_expanded.lore.unsafe"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  {
+                    "text": "Warp",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.gm4.combat_expanded.lore.warp"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                [
+                  {
+                    "text": "Vorpal ",
+                    "italic": false,
+                    "color": "light_purple"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true,
+                    "color": "light_purple"
+                  }
+                ],
+                {
+                  "translate": "item.gm4.combat_expanded.name.vorpal",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true,
+                      "color": "light_purple"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

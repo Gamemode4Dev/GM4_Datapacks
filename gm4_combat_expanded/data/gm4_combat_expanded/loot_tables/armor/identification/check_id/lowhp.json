@@ -1,0 +1,86 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/common/thorns",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 1
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/common/berserk",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 2
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/common/second_wind",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 3
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:armor/identification/rare/soothe",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$mod_id"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 4
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
