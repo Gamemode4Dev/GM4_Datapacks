@@ -1,5 +1,5 @@
 {
-  "last_commit": "4856cf09626f3dc211fe82cc09a79806f5b674f9",
+  "last_commit": "0795d7e4e47ad1bda10aeeeb7d16d57456ec86eb",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -75,6 +75,31 @@
       "hidden": false,
       "important_note": false,
       "patch": 19003
+    },
+    {
+      "id": "gm4_auto_crafting",
+      "name": "Auto Crafting",
+      "description": "Create an auto crafter to fully automate crafting! With this module installed, all vanilla crafting recipes are added to the GM4 Custom Crafter.",
+      "categories": [],
+      "libraries": [
+        "lib_machines",
+        "lib_forceload"
+      ],
+      "requires": [],
+      "recommends": [
+        "gm4_standard_crafting",
+        "gm4_record_crafting"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters/Auto_Crafting",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "BluePsychoRanger"
+        ]
+      },
+      "hidden": false,
+      "important_note": false,
+      "patch": 19001
     },
     {
       "id": "gm4_bat_grenades",
@@ -210,7 +235,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_book_binders",
@@ -266,7 +291,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_cement_mixers",
@@ -502,7 +527,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_display_frames",
@@ -585,7 +610,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_end_fishing",
@@ -646,7 +671,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_enderman_support_class",
@@ -728,7 +753,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_fulcio_shamir",
@@ -811,7 +836,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_holographic_tags",
@@ -951,7 +976,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_liquid_tanks",
@@ -991,7 +1016,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_live_catch",
@@ -1242,7 +1267,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_orbis",
@@ -1511,7 +1536,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_relocators",
@@ -1549,7 +1574,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_rope_ladders",
@@ -1599,7 +1624,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_shroomites",
@@ -1660,7 +1685,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_soul_glass",
@@ -1687,7 +1712,7 @@
       },
       "hidden": false,
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_spawner_minecarts",
@@ -1765,7 +1790,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_sunken_treasure",
@@ -1847,7 +1872,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_tinkering_compressors",
@@ -1884,7 +1909,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_tnt_landmines",
@@ -1914,7 +1939,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_tower_structures",
@@ -1973,7 +1998,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_tunnel_bores",
@@ -2005,7 +2030,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_undead_players",
