@@ -1,0 +1,68 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:tipped_arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomPotionEffects:[{Id:2,Amplifier:0b,Duration:600}],Potion:\"minecraft:harming\",HideFlags:32,CustomPotionColor:4393481}"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "potion.withDuration",
+                  "with": [
+                    {
+                      "translate": "effect.minecraft.slowness"
+                    },
+                    "0:30"
+                  ],
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "translate": "effect.minecraft.instant_damage",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": ""
+                },
+                {
+                  "translate": "potion.whenDrank",
+                  "color": "purple",
+                  "italic": false
+                },
+                {
+                  "translate": "attribute.modifier.take.1",
+                  "with": [
+                    {
+                      "text": "15"
+                    },
+                    {
+                      "translate": "attribute.name.generic.movement_speed"
+                    }
+                  ],
+                  "color": "red",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.minecraft.tipped_arrow.effect.harming",
+                "italic": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

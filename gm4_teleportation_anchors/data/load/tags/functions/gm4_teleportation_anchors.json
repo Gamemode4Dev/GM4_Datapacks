@@ -1,0 +1,6 @@
+{
+    "values": [
+        { "id": "#load:gm4_machines", "required": false },
+        "gm4_teleportation_anchors:load"
+    ]
+}
