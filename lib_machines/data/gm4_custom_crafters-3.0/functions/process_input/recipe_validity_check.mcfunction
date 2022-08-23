@@ -1,10 +1,7 @@
 # checks for recipes in a custom crafter
 # @s = gm4_custom_crafter unless block ~ ~ ~ dropper{Items:[]}
 # located at @s
-# run from gm4_custom_crafters-3.0:main
-
-# store all block data into storage
-data modify storage gm4_custom_crafters:temp/crafter Items set from block ~ ~ ~ Items
+# run from gm4_custom_crafters-3.0:process
 
 # get number of full slots
 execute store result score $slot_count gm4_crafting run data get storage gm4_custom_crafters:temp/crafter Items
