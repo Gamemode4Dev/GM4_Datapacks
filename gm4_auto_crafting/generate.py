@@ -1206,9 +1206,6 @@ def generate_recipe_function(recipes: list[dict], path: str) -> None:
                         duplicates.pop(0)
                     # re-add the 'store result score...' to end of the checks
                     checks = f"{checks} store result score $crafted gm4_crafting"
-                if len(recipe["ingredients"]) < 9:
-                    # don't let shapeless recipes run if there are items in the last slot
-                    recipe_data = "unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:8b}] "
 
             # if shaped recipe
             elif valid("pattern", recipe):
