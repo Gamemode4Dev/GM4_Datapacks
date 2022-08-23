@@ -5,8 +5,8 @@
 
 # shift items to be top-left aligned
 data modify storage gm4_custom_crafters:temp/crafter original_items set from storage gm4_custom_crafters:temp/crafter Items
-execute unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:0b}] unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:1b}] unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:2b}] run function gm4_custom_crafters-3.0:shift_up
-execute unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:0b}] unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:3b}] unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:6b}] run function gm4_custom_crafters-3.0:shift_left
+execute unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:0b}] unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:1b}] unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:2b}] run function gm4_custom_crafters-3.0:process_input/shift/shift_up
+execute unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:0b}] unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:3b}] unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:6b}] run function gm4_custom_crafters-3.0:process_input/shift/shift_left
 
 # check if any items in the crafter fall under any item tags
 scoreboard players operation $loop gm4_crafting = $slot_count gm4_crafting
