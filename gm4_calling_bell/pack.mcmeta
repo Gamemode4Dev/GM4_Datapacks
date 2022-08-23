@@ -15,7 +15,7 @@
     "hidden": false,
     "site_description": "Summon a Wandering Trader by using an Emerald on a Bell.",
     "video_link": "",
-    "wiki_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Calling_Bell",
     "required_modules": [
         "lib_trades"
     ],

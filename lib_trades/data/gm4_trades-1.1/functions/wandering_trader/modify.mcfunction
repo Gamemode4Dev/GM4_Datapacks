@@ -1,7 +1,7 @@
 # collects trades added by various datapacks and adds them to the trader. Marks the trader as having received those trades.
 # @s = a wandering trader without the gm4_trader tag (aka without the new trades)
 # at @s
-# scheduled from gm4_trades-1.1:main
+# scheduled from gm4_trades-1.1:main or called by function tag gm4_trades:wandering_trader/setup
 
 # generate trades
 function #gm4_trades:register_trades

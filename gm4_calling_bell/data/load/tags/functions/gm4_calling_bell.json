@@ -1,5 +1,6 @@
 {
     "values": [
+        { "id": "#load:gm4_trades", "required": false },
         "gm4_calling_bell:load"
     ]
 }
