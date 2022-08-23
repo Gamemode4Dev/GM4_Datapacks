@@ -781,7 +781,7 @@ def generate_predicates(predicates: list[str]) -> None:
     creates predicate files for the custom item tag checks
     """
     # initial function header
-    function = "# checks each slot for item tags\n# @s = crafter armor stand\n# located at the center of the block\n# run from gm4_custom_crafters-2.1:check_item_tags via #gm4_custom_crafters:custom_item_checks\n\n"
+    function = "# checks each slot for item tags\n# @s = crafter armor stand\n# located at the center of the block\n# run from gm4_custom_crafters-3.0:process_input/check_item_tags via #gm4_custom_crafters:custom_item_checks\n\n"
     for name in predicates:
         # get prefix and name of tag
         [prefix, tag] = name.split(":")

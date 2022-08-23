@@ -1,7 +1,7 @@
 # attempts to craft items
 # @s = crafters containing a potential recipe
 # located at @s
-# run from gm4_custom_crafters-2.1:recipe_validity_check
+# run from gm4_custom_crafters-3.0:process_input/recipe_validity_check
 
 # check if any items in the crafter fall under any item tags
 scoreboard players operation $loop gm4_crafting = $slot_count gm4_crafting
