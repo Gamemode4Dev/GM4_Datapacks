@@ -41,4 +41,5 @@ execute if score $stack_size gm4_crafting matches 1.. run function gm4_custom_cr
 
 # storage cleanup
 data remove storage gm4_custom_crafters:temp/crafter Items
+data remove storage gm4_custom_crafters:temp/crafter original_items
 data remove storage gm4_custom_crafters:temp/output Items
