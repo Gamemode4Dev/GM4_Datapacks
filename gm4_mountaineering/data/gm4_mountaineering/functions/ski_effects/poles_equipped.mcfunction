@@ -1,0 +1,1 @@
+effect give @s[predicate=gm4_mountaineering:holding_poles] jump_boost 2 0 true

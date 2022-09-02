@@ -7,7 +7,7 @@
 effect give @s[predicate=gm4_mountaineering:ski_requirements] speed 3 0 true
 
 # Give extra speed if descending
-execute at @a if block ~ ~-1.1 ~ minecraft:air run effect give @s[predicate=gm4_mountaineering:descending] speed 2 1 true
+execute at @a if block ~ ~-1.1 ~ minecraft:air run effect give @s speed 2 1 true
 
 # Clear speed effects and apply slowness if standing on a non-snowy block
 execute at @a unless predicate gm4_mountaineering:on_snowy_block run effect clear @s[predicate=gm4_mountaineering:wearing_skis] minecraft:speed
