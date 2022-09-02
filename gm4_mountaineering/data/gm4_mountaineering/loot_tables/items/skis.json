@@ -49,7 +49,7 @@
                             },
                             "ops": [
                                 {
-                                    "source": "Item.tag",
+                                    "source": "ski_item.tag",
                                     "target": "{}",
                                     "op": "merge"
                                 }

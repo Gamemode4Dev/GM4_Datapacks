@@ -40,6 +40,20 @@
                                     "italic": true
                                 }
                             ]
+                        },
+                        {
+                            "function": "minecraft:copy_nbt",
+                            "source": {
+                                "type": "minecraft:storage",
+                                "source": "gm4_mountaineering:temp"
+                            },
+                            "ops": [
+                                {
+                                    "source": "poles_item.tag",
+                                    "target": "{}",
+                                    "op": "merge"
+                                }
+                            ]
                         }
                     ]
                 }
