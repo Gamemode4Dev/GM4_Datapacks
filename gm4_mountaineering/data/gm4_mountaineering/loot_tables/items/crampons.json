@@ -1,0 +1,63 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:chainmail_boots",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:3420001,gm4_mountaineering:{item:\"crampons\"},HideFlags:64}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Crampons",
+                                    {
+                                        "translate": "item.gm4.crampons"
+                                    }
+                                ],
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                {
+                                    "translate": "%1$s%3427655$s",
+                                    "with": [
+                                        "Don't slip!",
+                                        {
+                                            "translate": "item.gm4.crampons.lore"
+                                        }
+                                    ],
+                                    "color": "dark_gray",
+                                    "italic": true
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:copy_nbt",
+                            "source": {
+                                "type": "minecraft:storage",
+                                "source": "gm4_mountaineering:temp"
+                            },
+                            "ops": [
+                                {
+                                    "source": "crampons_item.tag",
+                                    "target": "{}",
+                                    "op": "merge"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
