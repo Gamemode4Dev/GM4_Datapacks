@@ -1,3 +1,0 @@
-# Check for skis recipe, then run new_skis to craft them
-
-execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if score $slot_count gm4_crafting matches 4 if score $stack_size gm4_crafting matches ..1 if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:1b,id:"minecraft:iron_boots",Count:1b},{Slot:3b,id:"minecraft:heavy_weighted_pressure_plate",Count:1b},{Slot:4b,id:"minecraft:heavy_weighted_pressure_plate",Count:1b},{Slot:5b,id:"minecraft:heavy_weighted_pressure_plate",Count:1b}]} unless data storage gm4_custom_crafters:temp/crafter Items[0].tag.gm4_skis run function gm4_skis:new_skis

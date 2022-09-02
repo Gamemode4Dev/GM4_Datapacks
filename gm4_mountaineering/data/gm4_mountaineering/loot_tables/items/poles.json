@@ -1,0 +1,49 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:tripwire_hook",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:3420001,gm4_mountaineering:{item:\"poles\"},HideFlags:64}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "%1$s%3427655$s",
+                                "with": [
+                                    "Poles",
+                                    {
+                                        "translate": "item.gm4.poles"
+                                    }
+                                ],
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                {
+                                    "translate": "%1$s%3427655$s",
+                                    "with": [
+                                        "To stop you losing your grip",
+                                        {
+                                            "translate": "item.gm4.poles.lore"
+                                        }
+                                    ],
+                                    "color": "dark_gray",
+                                    "italic": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

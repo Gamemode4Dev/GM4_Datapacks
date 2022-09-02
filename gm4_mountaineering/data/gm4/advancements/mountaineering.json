@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "iron_boots",
+      "nbt": "{CustomModelData:3420001}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Ski",
+        {
+          "translate": "advancement.gm4.mountaineering.title"
+        }
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Wear Skis",
+        {
+          "translate": "advancement.gm4.mountaineering.description"
+        }
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:custom_crafters",
+  "criteria": {
+    "mountaineering": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_boots"
+            ],
+            "nbt": "{gm4_mountaineering:{item:\"skis\"}}"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+    "pack": {
+        "pack_format": 10,
+        "description": [
+            "Mountaineering",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.19",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Mountaineering",
+    "module_id": "mountaineering",
+    "site_description": "A mezze of mountaineering means!",
+    "video_link": "YOUTUBE_VIDEO_URL",
+    "wiki_link": "WIKI_URL",
+    "required_modules": [
+    ],
+    "recommended_modules": [
+    ],
+    "credits": {
+        "Creator": [
+            "foodiebonus"
+        ],
+        "Updated By": [
+            "nobody"
+        ],
+        "Icon Design": [
+            "nobody"
+        ],
+        "With Infinite Thanks To": [
+            "Authors to Boots of Ostara and SCUBA Gear, which provided the knowledge required to make this."
+        ]
+    }
+}

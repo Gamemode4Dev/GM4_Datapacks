@@ -1,0 +1,6 @@
+execute unless score mountaineering gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Mountaineering"}
+scoreboard players set mountaineering gm4_modules 1
+
+schedule function gm4_mountaineering:main 10t
+
+#$moduleUpdateList
