@@ -2,6 +2,7 @@
 
 execute as @a[gamemode=!spectator,gamemode=!adventure,predicate=gm4_mountaineering:wearing_skis] run function gm4_mountaineering:ski_effects/skis_equipped
 execute as @a[gamemode=!spectator,gamemode=!adventure,predicate=gm4_mountaineering:holding_poles] run function gm4_mountaineering:ski_effects/poles_equipped
+execute as @a[gamemode=!spectator,gamemode=!adventure,predicate=gm4_mountaineering:wearing_crampons] run function gm4_mountaineering:ski_effects/crampons_equipped
 
 
 schedule function gm4_mountaineering:main 16t
