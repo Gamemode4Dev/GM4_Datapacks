@@ -24,36 +24,6 @@
                                 ],
                                 "italic": false
                             }
-                        },
-                        {
-                            "function": "minecraft:set_lore",
-                            "lore": [
-                                {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "To stop you losing your grip",
-                                        {
-                                            "translate": "item.gm4.poles.lore"
-                                        }
-                                    ],
-                                    "color": "dark_gray",
-                                    "italic": true
-                                }
-                            ]
-                        },
-                        {
-                            "function": "minecraft:copy_nbt",
-                            "source": {
-                                "type": "minecraft:storage",
-                                "source": "gm4_mountaineering:temp"
-                            },
-                            "ops": [
-                                {
-                                    "source": "poles_item.tag",
-                                    "target": "{}",
-                                    "op": "merge"
-                                }
-                            ]
                         }
                     ]
                 }

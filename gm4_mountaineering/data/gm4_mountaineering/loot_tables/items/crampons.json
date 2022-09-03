@@ -26,22 +26,6 @@
                             }
                         },
                         {
-                            "function": "minecraft:set_lore",
-                            "lore": [
-                                {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Don't slip!",
-                                        {
-                                            "translate": "item.gm4.crampons.lore"
-                                        }
-                                    ],
-                                    "color": "dark_gray",
-                                    "italic": true
-                                }
-                            ]
-                        },
-                        {
                             "function": "minecraft:copy_nbt",
                             "source": {
                                 "type": "minecraft:storage",

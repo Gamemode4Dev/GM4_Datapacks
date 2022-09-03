@@ -26,22 +26,6 @@
                             }
                         },
                         {
-                            "function": "minecraft:set_lore",
-                            "lore": [
-                                {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "For a quicker descent!",
-                                        {
-                                            "translate": "item.gm4.skis.lore"
-                                        }
-                                    ],
-                                    "color": "dark_gray",
-                                    "italic": true
-                                }
-                            ]
-                        },
-                        {
                             "function": "minecraft:copy_nbt",
                             "source": {
                                 "type": "minecraft:storage",
