@@ -9,3 +9,6 @@ data modify storage gm4_custom_crafters:temp/crafter Items set from block ~ ~ ~ 
 # check if the crafter should run recipe checks
 execute if entity @s[tag=gm4_custom_crafters_crafted] run function gm4_custom_crafters-3.0:process_input/check_cache
 execute unless entity @s[tag=gm4_custom_crafters_crafted] run function gm4_custom_crafters-3.0:process_input/recipe_validity_check
+
+# clean up
+data remove storage gm4_custom_crafters:temp/crafter Items
