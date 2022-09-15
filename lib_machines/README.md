@@ -114,6 +114,8 @@ This checks the `Items` block data (moved to storage for efficiency), which repr
 
 `if data storage gm4_custom_crafters:temp/crafter {Items:[<...>]}`
 
+Note that the Custom Crafter automatically supports recipes placed anywhere in the grid, as long as the storage check assumes the recipe is inputted with alignment to the top-left. So for example, crafting a crafting table from planks will work in any 2x2 corner, but the storage check to check the items needs to check slots 0, 1, 3, and 4. The code will automatically shift the recipe in storage before the recipe checks are performed.
+
 ### Loot Replace
 `run loot replace block ~ ~ ~ container.0 loot MODULE_NAMESPACE:crafting/RECIPE_NAME`
 

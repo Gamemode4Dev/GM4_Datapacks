@@ -1,3 +1,3 @@
 scoreboard players reset * gm4_craft_shapeless
 execute if score $crafted gm4_crafting matches 0 if score $stack_size gm4_crafting matches 1 store result score $minecraft:beetroot gm4_craft_shapeless if data storage gm4_custom_crafters:temp/crafter Items[{id:"minecraft:beetroot"}]
-execute if score $minecraft:beetroot gm4_craft_shapeless matches 6 store result score $crafted gm4_crafting unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:8b}] if data storage gm4_custom_crafters:temp/crafter {Items:[{id:"minecraft:bowl"}]} run loot replace block ~ ~ ~ container.0 loot gm4_auto_crafting:crafting/vanilla/beetroot_soup
+execute if score $minecraft:beetroot gm4_craft_shapeless matches 6 store result score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{id:"minecraft:bowl"}]} run loot replace block ~ ~ ~ container.0 loot gm4_auto_crafting:crafting/vanilla/beetroot_soup

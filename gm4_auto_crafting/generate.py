@@ -781,7 +781,7 @@ def generate_predicates(predicates: list[str]) -> None:
     creates predicate files for the custom item tag checks
     """
     # initial function header
-    function = "# checks each slot for item tags\n# @s = crafter armor stand\n# located at the center of the block\n# run from gm4_custom_crafters-2.1:check_item_tags via #gm4_custom_crafters:custom_item_checks\n\n"
+    function = "# checks each slot for item tags\n# @s = crafter armor stand\n# located at the center of the block\n# run from gm4_custom_crafters-3.0:process_input/check_item_tags via #gm4_custom_crafters:custom_item_checks\n\n"
     for name in predicates:
         # get prefix and name of tag
         [prefix, tag] = name.split(":")
@@ -1206,9 +1206,6 @@ def generate_recipe_function(recipes: list[dict], path: str) -> None:
                         duplicates.pop(0)
                     # re-add the 'store result score...' to end of the checks
                     checks = f"{checks} store result score $crafted gm4_crafting"
-                if len(recipe["ingredients"]) < 9:
-                    # don't let shapeless recipes run if there are items in the last slot
-                    recipe_data = "unless data storage gm4_custom_crafters:temp/crafter Items[{Slot:8b}] "
 
             # if shaped recipe
             elif valid("pattern", recipe):
