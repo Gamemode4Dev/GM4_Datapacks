@@ -1,5 +1,5 @@
 {
-  "last_commit": "28672fd726e4c9e3f2926a73b518be029f48431b",
+  "last_commit": "b2e8d2b4efbca12c147cd53a2fa8f5337caa4722",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -99,7 +99,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19002
+      "patch": 19003
     },
     {
       "id": "gm4_bat_grenades",
@@ -235,7 +235,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_book_binders",
@@ -291,7 +291,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_cement_mixers",
@@ -527,7 +527,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_display_frames",
@@ -610,7 +610,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_end_fishing",
@@ -671,7 +671,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_enderman_support_class",
@@ -753,7 +753,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_fulcio_shamir",
@@ -836,7 +836,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_holographic_tags",
@@ -976,7 +976,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_liquid_tanks",
@@ -1016,7 +1016,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_live_catch",
@@ -1267,7 +1267,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19009
+      "patch": 19010
     },
     {
       "id": "gm4_orbis",
@@ -1536,7 +1536,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_relocators",
@@ -1574,7 +1574,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_rope_ladders",
@@ -1624,7 +1624,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_shroomites",
@@ -1685,7 +1685,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_soul_glass",
@@ -1712,7 +1712,7 @@
       },
       "hidden": false,
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_spawner_minecarts",
@@ -1790,7 +1790,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_sunken_treasure",
@@ -1872,7 +1872,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_tinkering_compressors",
@@ -1909,7 +1909,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_tnt_landmines",
@@ -1939,7 +1939,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_tower_structures",
@@ -1998,7 +1998,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_tunnel_bores",
@@ -2030,7 +2030,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_undead_players",
