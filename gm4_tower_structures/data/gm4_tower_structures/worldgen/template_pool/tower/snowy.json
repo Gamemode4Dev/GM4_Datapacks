@@ -29,7 +29,7 @@
                     "block": "minecraft:ice",
                     "probability": 0.8
                   },
-                  "output_state": { "Name": "minecraft:snow" }
+                  "output_state": { "Name": "minecraft:snow_block" }
                 }
               ]
             }
