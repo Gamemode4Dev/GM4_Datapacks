@@ -1,0 +1,34 @@
+{
+  "structures": [
+    {
+      "structure": "gm4_tower_structures:badlands",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_tower_structures:default",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_tower_structures:desert",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_tower_structures:ship",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_tower_structures:raft",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_tower_structures:snowy",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1948932716,
+    "spacing": 15,
+    "separation": 8
+  }
+}

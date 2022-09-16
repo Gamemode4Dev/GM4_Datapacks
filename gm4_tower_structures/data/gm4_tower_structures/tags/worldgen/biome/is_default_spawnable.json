@@ -1,0 +1,16 @@
+{
+  "values": [
+    "#is_forest",
+    "#is_jungle",
+    "#is_taiga",
+    "windswept_hills",
+    "windswept_gravelly_hills",
+    "plains",
+    "sunflower_plains",
+    "mushroom_fields",
+    "meadow",
+    "stony_peaks",
+    "savanna_plateau",
+    "windswept_savanna"
+  ]
+}
