@@ -1,10 +1,10 @@
 {
   "type": "minecraft:jigsaw",
-  "biomes": "#minecraft:is_badlands",
+  "biomes": "#gm4_dangerous_dungeons:desert",
   "step": "underground_structures",
   "spawn_overrides": {},
   "terrain_adaptation": "none",
-  "start_pool": "gm4_dangerous_dungeons:dungeon/badlands",
+  "start_pool": "gm4_dangerous_dungeons:dungeon/desert",
   "size": 1,
   "start_height": {
     "type": "minecraft:uniform",

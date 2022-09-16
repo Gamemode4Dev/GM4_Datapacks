@@ -7,6 +7,22 @@
     {
       "structure": "gm4_dangerous_dungeons:badlands_upper",
       "weight": 1
+    },
+    {
+      "structure": "gm4_dangerous_dungeons:default",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_dangerous_dungeons:desert",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_dangerous_dungeons:ocean",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_dangerous_dungeons:snowy",
+      "weight": 1
     }
   ],
   "placement": {

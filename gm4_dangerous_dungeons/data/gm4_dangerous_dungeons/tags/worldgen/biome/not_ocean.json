@@ -1,0 +1,19 @@
+{
+  "values": [
+    "#is_forest",
+    "#is_hill",
+    "#is_jungle",
+    "#is_mountain",
+    "#is_river",
+    "#is_savanna",
+    "#is_taiga",
+    "plains",
+    "sunflower_plains",
+    "swamp",
+    "mushroom_fields",
+    "meadow",
+    "deep_dark",
+    "dripstone_caves",
+    "lush_caves"
+  ]
+}

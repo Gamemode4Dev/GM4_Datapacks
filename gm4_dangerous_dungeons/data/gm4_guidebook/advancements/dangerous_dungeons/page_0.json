@@ -27,8 +27,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type_specific": {
-                  "type": "player",
+                "player": {
                   "gamemode": "spectator"
                 }
               }
@@ -72,8 +71,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type_specific": {
-                  "type": "player",
+                "player": {
                   "gamemode": "spectator"
                 }
               }
@@ -117,8 +115,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type_specific": {
-                  "type": "player",
+                "player": {
                   "gamemode": "spectator"
                 }
               }

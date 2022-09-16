@@ -1,6 +1,6 @@
 {
   "type": "minecraft:jigsaw",
-  "biomes": "#gm4_dangerous_dungeons:badlands",
+  "biomes": "#minecraft:is_badlands",
   "step": "underground_structures",
   "spawn_overrides": {},
   "terrain_adaptation": "none",
