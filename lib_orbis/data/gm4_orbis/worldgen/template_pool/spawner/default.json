@@ -80,7 +80,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "processors": "minecraft:empty",
-        "location": "gm4_orbis:spawner/default/zombie_down"
+        "location": "gm4_orbis:spawner/default/zombie_side"
       }
     },
     {
@@ -89,7 +89,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "processors": "minecraft:empty",
-        "location": "gm4_orbis:spawner/default/spider_down"
+        "location": "gm4_orbis:spawner/default/spider_side"
       }
     },
     {
@@ -98,7 +98,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "processors": "minecraft:empty",
-        "location": "gm4_orbis:spawner/default/creeper_down"
+        "location": "gm4_orbis:spawner/default/creeper_side"
       }
     },
     {
@@ -107,7 +107,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "processors": "minecraft:empty",
-        "location": "gm4_orbis:spawner/default/skeleton_down"
+        "location": "gm4_orbis:spawner/default/skeleton_side"
       }
     }
   ]

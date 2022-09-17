@@ -80,7 +80,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "processors": "minecraft:empty",
-        "location": "gm4_orbis:spawner/water/drowned_down"
+        "location": "gm4_orbis:spawner/water/drowned_side"
       }
     },
     {
@@ -89,7 +89,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "processors": "minecraft:empty",
-        "location": "gm4_orbis:spawner/water/glow_squid_down"
+        "location": "gm4_orbis:spawner/water/glow_squid_side"
       }
     },
     {
@@ -98,7 +98,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "processors": "minecraft:empty",
-        "location": "gm4_orbis:spawner/water/guardian_down"
+        "location": "gm4_orbis:spawner/water/guardian_side"
       }
     },
     {
@@ -107,7 +107,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "processors": "minecraft:empty",
-        "location": "gm4_orbis:spawner/water/pufferfish_down"
+        "location": "gm4_orbis:spawner/water/pufferfish_side"
       }
     }
   ]
