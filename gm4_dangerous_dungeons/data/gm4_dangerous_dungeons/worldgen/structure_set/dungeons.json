@@ -13,6 +13,10 @@
       "weight": 1
     },
     {
+      "structure": "gm4_dangerous_dungeons:default_ocean",
+      "weight": 1
+    },
+    {
       "structure": "gm4_dangerous_dungeons:desert",
       "weight": 1
     },
@@ -28,7 +32,7 @@
   "placement": {
     "type": "minecraft:random_spread",
     "salt": 350397626,
-    "spacing": 6,
+    "spacing": 8,
     "separation": 2
   }
 }
