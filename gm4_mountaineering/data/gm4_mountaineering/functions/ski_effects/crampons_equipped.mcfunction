@@ -7,4 +7,4 @@
 effect give @s jump_boost 2 0 true
 
 # Provide jump boost 2 when also holding poles
-effect give @s[predicate=gm4_mountaineering:holding_poles] jump_boost 2 1 true
+execute if predicate gm4_mountaineering:holding_poles run effect give @s jump_boost 2 1 true

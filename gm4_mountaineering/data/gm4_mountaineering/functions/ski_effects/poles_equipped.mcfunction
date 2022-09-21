@@ -3,4 +3,4 @@
 # at @s
 # run from main
 
-execute at @a unless block ~ ~-0.2 ~ minecraft:air run effect give @s jump_boost 1 0 true
+execute unless block ~ ~-0.2 ~ minecraft:air run effect give @s jump_boost 1 0 true
