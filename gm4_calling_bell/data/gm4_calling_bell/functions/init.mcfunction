@@ -5,6 +5,6 @@ execute unless score calling_bell gm4_modules matches 1 run data modify storage 
 scoreboard players set calling_bell gm4_modules 1
 
 schedule function gm4_calling_bell:tick 1t
-schedule function gm4_calling_bell:main 16t
+schedule function gm4_calling_bell:day_clock 10t
 
 #$moduleUpdateList
