@@ -6,7 +6,7 @@ Note Blocks have always been a bit... odd to use. Figuring out what note its set
 - The current pitch of a note block is displayed above it when struck or tuned by the player.
 - Enables tuning back down the scale by sneaking while tuning the note block
 
-![Note Block Interface Example](./images/note_block_interface_example.png)
+![Note Block Interface Example](./images/note_block_interface_example.webp)
 
 ### More Info
 [<img src="../base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=Kqrdy-8-sb8) 
