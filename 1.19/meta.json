@@ -1,5 +1,5 @@
 {
-  "last_commit": "b2e8d2b4efbca12c147cd53a2fa8f5337caa4722",
+  "last_commit": "f2cc7ea279f29171cdef47be56d00cd35accbba9",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -337,7 +337,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_combat_expanded",
