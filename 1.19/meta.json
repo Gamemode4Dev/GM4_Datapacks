@@ -1,5 +1,5 @@
 {
-  "last_commit": "526e43c70decf219cdd06a5324c48ad36ec19829",
+  "last_commit": "7420d2eac86cc103aa2daae42112b7d184705c40",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2301,7 +2301,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     }
   ],
   "contributors": {
