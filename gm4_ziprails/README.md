@@ -7,7 +7,7 @@ Everyone loves building minecart rail systems, but giant mono-rails across your 
 - Minecarts will travel down a ziprail until it reaches the other end, much like a gondola or cable-car
 - Adds a custom advancement for your first ride in the sky
 
-![Ziprails Example](./images/ziprails_example.png)
+![Ziprails Example](./images/ziprails_example.webp)
 
 ### More Info
 [<img src="../base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=QA7a5q2kVcg) 
