@@ -67,6 +67,7 @@ scoreboard objectives add gm4_use_axe_iro minecraft.used:minecraft.iron_axe
 scoreboard objectives add gm4_use_axe_sto minecraft.used:minecraft.stone_axe
 scoreboard objectives add gm4_use_axe_woo minecraft.used:minecraft.wooden_axe
 scoreboard objectives add gm4_arb_depth dummy
+scoreboard objectives add gm4_arb_data dummy
 
 #ender_bolt
 scoreboard objectives add gm4_bolt_time dummy
