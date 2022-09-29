@@ -2,7 +2,7 @@
 # @s = player that just used an axe with arborenda
 # at @s
 # run from gm4_arborenda:player/chop and self
-say next_depth
+
 execute as @e[type=marker,tag=gm4_arborenda_init] at @s run function gm4_arborenda_shamir:trunk/neighbors/mark
 
 # finish the new trunk markers

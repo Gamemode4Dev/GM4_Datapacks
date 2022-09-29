@@ -2,7 +2,7 @@
 # @s = player that just used an axe with arborenda
 # at @s
 # run from gm4_arborenda:player/check_for_axe
-say chop
+
 scoreboard players set $success gm4_ml_data 0
 
 execute as @e[type=item,limit=1,distance=..5,sort=nearest,nbt={Age:0s}] at @s run function gm4_arborenda_shamir:player/check_block_drop
