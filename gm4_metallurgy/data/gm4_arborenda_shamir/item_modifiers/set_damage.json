@@ -2,11 +2,11 @@
   "function": "minecraft:copy_nbt",
   "source": {
     "type": "minecraft:storage",
-    "source": "gm4_metallurgy:temp"
+    "source": "gm4_arborenda_shamir:temp"
   },
   "ops": [
     {
-      "source": "Damage",
+      "source": "damage",
       "target": "Damage",
       "op": "replace"
     }

@@ -68,6 +68,8 @@ scoreboard objectives add gm4_use_axe_sto minecraft.used:minecraft.stone_axe
 scoreboard objectives add gm4_use_axe_woo minecraft.used:minecraft.wooden_axe
 scoreboard objectives add gm4_arb_depth dummy
 scoreboard objectives add gm4_arb_data dummy
+scoreboard players set #1 gm4_arb_data 1
+#declare gm4_arborenda_shamir:temp
 
 #ender_bolt
 scoreboard objectives add gm4_bolt_time dummy
