@@ -1,0 +1,32 @@
+{
+    "pack": {
+        "pack_format": 10,
+        "description": [
+            "Cavaro Shamir",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.19",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Cavaro Shamir",
+    "module_id": "cavaro_shamir",
+    "hidden": false,
+    "site_description": "Adds the shamir 'Cavaro' to Metallurgy. A way to mine quick, but at the loss of materials.",
+    "video_link": "",
+    "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Cavaro_Shamir",
+    "required_modules": [
+        "metallurgy"
+    ],
+    "recommended_modules": [],
+    "credits": {
+        "Creator": [
+            "Kyrkis",
+            "Bloo"
+        ],
+        "Icon Design": [
+            "BluePsychoRanger"
+        ]
+    }
+}
