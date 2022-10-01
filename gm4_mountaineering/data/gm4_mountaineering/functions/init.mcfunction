@@ -4,6 +4,8 @@ scoreboard players set mountaineering gm4_modules 1
 scoreboard objectives add gm4_mountaineering_y1 dummy
 scoreboard objectives add gm4_mountaineering_y2 dummy
 scoreboard objectives add gm4_mountaineering_vy dummy
+scoreboard objectives add gm4_mountaineering_ski_downhill dummy
+scoreboard objectives add gm4_mountainerring_ski_steep_downhill dummy
 
 schedule function gm4_mountaineering:main 10t
 
