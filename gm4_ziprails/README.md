@@ -7,13 +7,13 @@ Everyone loves building minecart rail systems, but giant mono-rails across your 
 - Minecarts will travel down a ziprail until it reaches the other end, much like a gondola or cable-car
 - Adds a custom advancement for your first ride in the sky
 
-![Ziprails Example](./images/ziprails_example.webp)
+![Ziprails Example](https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_ziprails/images/ziprails_example.webp)
 
 ### More Info
-[<img src="../base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=QA7a5q2kVcg) 
+[<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=QA7a5q2kVcg) 
 
-[<img src="../base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Ziprails) 
+[<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Ziprails) 
 
 
-## About Gamemode 4 <img src="../base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>
+## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>
 Gamemode 4 is a series of command-powered creations that are designed to change and enhance the survival experience. All of our modules are designed to work together flawlessly, and are balanced for usage in a survival setting. Pick and choose your favorites from our [website](https://gm4.co).
