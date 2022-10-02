@@ -1,5 +1,5 @@
 {
-  "last_commit": "7420d2eac86cc103aa2daae42112b7d184705c40",
+  "last_commit": "ae4f71bfe785ba725861564583f74f3d145c6900",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -337,7 +337,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_combat_expanded",
@@ -1240,7 +1240,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_orb_of_ankou",
@@ -2301,7 +2301,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     }
   ],
   "contributors": {
