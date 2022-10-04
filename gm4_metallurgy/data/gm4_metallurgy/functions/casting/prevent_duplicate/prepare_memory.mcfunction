@@ -8,7 +8,6 @@ data modify storage gm4_metallurgy:temp/item/cast previous.memorized_shamirs pre
 
 # copy to new field to allow for search optimization via entry deletion
 data modify storage gm4_metallurgy:temp/item/cast previous.excluded_shamirs set from storage gm4_metallurgy:temp/item/cast previous.memorized_shamirs
-tellraw @a ["",{"text":"Memorized Shamirs: ","color":"blue"},{"nbt":"previous.memorized_shamirs","storage":"gm4_metallurgy:temp/item/cast","color":"gray"}]
 
 # remove shamirs that are included in the memorized shamirs from the shamir pool
 execute as @e[type=item,tag=gm4_ml_band] run function gm4_metallurgy:casting/prevent_duplicate/init_comparison
