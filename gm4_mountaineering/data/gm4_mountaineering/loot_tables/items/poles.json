@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:tripwire_hook",
+                    "name": "minecraft:stick",
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
