@@ -11,6 +11,7 @@ function #gm4_lore:remove
 data modify entity @s Item.tag.display.Lore append from storage gm4_lore:temp Dump[]
 
 data modify entity @s Item.tag.gm4_metallurgy.stored_shamir set from entity @e[type=item,tag=gm4_ml_source,dx=0,limit=1] Item.tag.gm4_metallurgy.active_shamir
+data modify entity @s Item.tag.gm4_metallurgy.memorized_shamirs set from entity @e[type=item,tag=gm4_ml_source,dx=0,limit=1] Item.tag.gm4_metallurgy.memorized_shamirs
 data modify entity @s Item.tag.CustomModelData set from entity @e[type=item,tag=gm4_ml_source,dx=0,limit=1] Item.tag.gm4_metallurgy.custom_model_data
 
 data remove storage gm4_metallurgy:temp/shamir skull_owner
