@@ -16,7 +16,11 @@
     "video_link": "https://www.youtube.com/watch?v=7KbBw1hEKdY",
     "wiki_link": "https://wiki.gm4.co/wiki/Chairs",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "display_frames",
+        "better_armour_stands",
+        "holographic_tags"
+    ],
     "credits": {
         "Creator": [
             "Denniss"

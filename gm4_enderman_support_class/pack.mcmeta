@@ -16,7 +16,9 @@
     "video_link": "https://www.youtube.com/watch?v=2hWZ4OKUaqI",
     "wiki_link": "https://wiki.gm4.co/wiki/Enderman_Support_Class",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "bat_grenades"
+    ],
     "credits": {
         "Creator": [
             "Sparks"
