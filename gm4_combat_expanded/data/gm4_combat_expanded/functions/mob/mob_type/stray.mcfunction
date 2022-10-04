@@ -16,6 +16,7 @@ execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard player
 execute if predicate gm4_combat_expanded:mob/modifier/snowy unless predicate gm4_combat_expanded:mob/modifier/growth store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/stray_snowy
 execute if predicate gm4_combat_expanded:mob/modifier/toxic unless predicate gm4_combat_expanded:mob/modifier/growth store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/stray_toxic
 execute if predicate gm4_combat_expanded:mob/modifier/growth run item replace entity @s weapon.mainhand with air
+execute if predicate gm4_combat_expanded:mob/modifier/flowering if predicate gm4_combat_expanded:technical/chance/replace_skeleton run function gm4_combat_expanded:mob/effect/flowering_skeleton
 
 # set armor
 loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic

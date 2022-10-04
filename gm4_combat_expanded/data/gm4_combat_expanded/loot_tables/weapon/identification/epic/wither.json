@@ -101,7 +101,7 @@
                 "with": [
                   [
                     {
-                      "translate": "minecraft.effect.wither"
+                      "translate": "effect.minecraft.wither"
                     },
                     {
                       "text": " (Self)"
@@ -111,7 +111,7 @@
                     "translate": "item.gm4.combat_expanded.lore.self",
                     "with": [
                       {
-                        "translate": "minecraft.effect.wither"
+                        "translate": "effect.minecraft.wither"
                       }
                     ]
                   }
@@ -195,7 +195,7 @@
                     },
                     {
                       "score": {
-                        "name": "$atkspeed_stored_10",
+                        "name": "$atkspeed_stored_01",
                         "objective": "gm4_ce_data"
                       }
                     }

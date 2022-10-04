@@ -15,6 +15,7 @@ execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s 
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_speed gm4_ce_data 2
 execute if predicate gm4_combat_expanded:mob/modifier/toxic unless predicate gm4_combat_expanded:mob/modifier/growth store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/skeleton_toxic
 item replace entity @s[predicate=gm4_combat_expanded:mob/modifier/growth] weapon.mainhand with air
+execute if predicate gm4_combat_expanded:mob/modifier/flowering if predicate gm4_combat_expanded:technical/chance/replace_skeleton run function gm4_combat_expanded:mob/effect/flowering_skeleton
 
 # set armor
 loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic
