@@ -16,6 +16,9 @@ execute as @a[gamemode=!spectator,tag=!gm4_mountaineering_skiing_off_snow] at @s
 execute as @a[gamemode=!spectator,tag=gm4_mountaineering_skiing,tag=!gm4_mountaineering_skiing_downhill,scores={gm4_mountaineering_vy=..-2}] at @s run function gm4_mountaineering:ski_effects/downhill_ski_speed/add_downhill_ski_speed
 execute as @a[gamemode=!spectator,tag=gm4_mountaineering_skiing_downhill] at @s run function gm4_mountaineering:ski_effects/downhill_ski_speed/check_downhill_ski_speed
 
+# Adds greater increased speed effects for skiing on a steep downhill surface
+execute as @a[gamemode=!spectator,tag=gm4_mountaineering_skiing,tag=!gm4_mountaineering_skiing_steep_downhill,scores={gm4_mountaineering_vy=..-6}] at @s run function gm4_mountaineering:ski_effects/steep_downhill_ski_speed/add_steep_downhill_ski_speed
+execute as @a[gamemode=!spectator,tag=gm4_mountaineering_skiing_steep_downhill] at @s run function gm4_mountaineering:ski_effects/steep_downhill_ski_speed/check_steep_downhill_ski_speed
 
 #execute as @a[gamemode=!spectator,predicate=gm4_mountaineering:holding_poles] at @s run function gm4_mountaineering:ski_effects/poles_equipped
 #execute as @a[gamemode=!spectator,predicate=gm4_mountaineering:wearing_crampons] at @s run function gm4_mountaineering:ski_effects/crampons_equipped
