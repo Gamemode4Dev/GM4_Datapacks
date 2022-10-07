@@ -6,7 +6,7 @@
         "equipment": {
           "offhand": {
             "items": [
-              "minecraft:tripwire_hook"
+              "minecraft:stick"
             ],
             "nbt": "{gm4_mountaineering:{item:\"poles\"}}"
           }
@@ -20,7 +20,7 @@
         "equipment": {
           "mainhand": {
             "items": [
-              "minecraft:tripwire_hook"
+              "minecraft:stick"
             ],
             "nbt": "{gm4_mountaineering:{item:\"poles\"}}"
           }

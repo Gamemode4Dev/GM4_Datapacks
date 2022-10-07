@@ -1,5 +1,5 @@
-# Add further increased speed when player is on snowy block, wearing skis, and travelling steep downhill (>=6 blocks descended)
-# @s = player without skiing tag and having fallen >=6 blocks
+# Add further increased speed when player is on snowy block, wearing skis, and travelling steep downhill (>=7 blocks descended, or >=5 blocks with poles)
+# @s = player without skiing tag and having fallen >=7 blocks, or >=5 blocks with poles
 # at @s
 # run from main
 
