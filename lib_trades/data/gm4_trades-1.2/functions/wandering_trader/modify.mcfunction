@@ -7,7 +7,7 @@
 function #gm4_trades:register_trades
 
 # read in trade pools
-function gm4_trades-1.1:wandering_trader/create_pool
+function gm4_trades-1.2:wandering_trader/create_pool
 
 # remember trader was edited
 tag @s add gm4_trader
