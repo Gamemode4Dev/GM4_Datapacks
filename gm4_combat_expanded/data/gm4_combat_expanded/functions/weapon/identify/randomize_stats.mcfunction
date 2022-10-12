@@ -15,8 +15,7 @@ data modify storage gm4_combat_expanded:temp Items set from block 29999998 1 713
 
 # store results in scoreboards for permanent attributes
 # attack damage 0.5 - 2
-execute store result score $damage gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:2b}].Count
-scoreboard players operation $damage gm4_ce_data *= #5 gm4_ce_data
+execute store result score $damage gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:2b}].Count 5
 scoreboard players operation $damage- gm4_ce_data = $damage gm4_ce_data
 scoreboard players operation $damage- gm4_ce_data -= #25 gm4_ce_data
 # movement speed 5 - 20

@@ -10,14 +10,14 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 3
+              "count": 5
             },
             {
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:binomial",
-                "n": 3,
-                "p": 0.5
+                "n": 5,
+                "p": 0.35
               },
               "add": true
             }
