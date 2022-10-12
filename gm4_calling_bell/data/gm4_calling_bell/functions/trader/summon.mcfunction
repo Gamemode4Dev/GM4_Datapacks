@@ -12,6 +12,6 @@ playsound entity.wandering_trader.reappeared neutral @a[distance=..16] ~ ~ ~ 1 1
 item modify entity @s[gamemode=!creative] weapon.mainhand gm4_calling_bell:minus_one
 
 # set up trader
-execute as @e[type=wandering_trader,tag=gm4_calling_bell_trader,tag=!gm4_trader,limit=1,sort=nearest] run function #gm4_trades:wandering_trader/setup_trader
+execute as @e[type=wandering_trader,tag=gm4_calling_bell_trader,tag=!gm4_trader,limit=1,sort=nearest] run function #gm4_trades:setup_trader
 
 advancement grant @s only gm4:calling_bell
