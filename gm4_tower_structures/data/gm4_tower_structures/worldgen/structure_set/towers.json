@@ -6,22 +6,30 @@
     },
     {
       "structure": "gm4_tower_structures:default",
-      "weight": 1
+      "weight": 2
     },
     {
       "structure": "gm4_tower_structures:desert",
       "weight": 1
     },
     {
-      "structure": "gm4_tower_structures:ship",
-      "weight": 1
-    },
-    {
-      "structure": "gm4_tower_structures:raft",
-      "weight": 1
-    },
-    {
       "structure": "gm4_tower_structures:snowy",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_tower_structures:ocean/large_ship",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_tower_structures:ocean/medium_ship",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_tower_structures:ocean/small_ship",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_tower_structures:ocean/raft",
       "weight": 1
     }
   ],
