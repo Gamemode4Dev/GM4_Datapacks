@@ -1,5 +1,5 @@
 {
-  "last_commit": "09ff7c575ab3e211a28f005b62716199aa5e9b1d",
+  "last_commit": "d02b3e7a86881bc3444473ed48b92fd11274750d",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -671,7 +671,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19008
+      "patch": 19009
     },
     {
       "id": "gm4_enderman_support_class",
@@ -976,7 +976,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_liquid_tanks",
@@ -2030,7 +2030,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19008
+      "patch": 19009
     },
     {
       "id": "gm4_undead_players",
