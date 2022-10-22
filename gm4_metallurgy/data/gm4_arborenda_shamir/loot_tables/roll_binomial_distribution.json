@@ -1,0 +1,37 @@
+{
+    "pools": [
+        {
+            "rolls": {
+                "type": "minecraft:binomial",
+                "n": {
+                    "type": "minecraft:score",
+                    "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$chop_count"
+                    },
+                    "score": "gm4_arb_data"
+                },
+                "p": {
+                    "type": "minecraft:score",
+                    "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$damage_chance"
+                    },
+                    "score": "gm4_arb_data"
+                }
+            },
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:stone",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
