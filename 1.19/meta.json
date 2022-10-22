@@ -1,5 +1,5 @@
 {
-  "last_commit": "78232fb20ca254db7f67c5bcdb06185e976201e9",
+  "last_commit": "09ff7c575ab3e211a28f005b62716199aa5e9b1d",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1185,7 +1185,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_mysterious_midnights",
