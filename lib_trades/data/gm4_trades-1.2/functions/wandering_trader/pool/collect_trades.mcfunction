@@ -1,7 +1,7 @@
 # compares all trade options against this pools name and marks matching ones as belonging to this pool
 # @s = the next trade option in line
 # at position of wandering trader
-# run from gm4_trades-1.1:wandering_trader/pool/initialize, loops itself
+# run from gm4_trades-1.2:wandering_trader/pool/initialize, loops itself
 
 # remember this option was processed
 tag @s add gm4_processed_trade_option
@@ -14,4 +14,4 @@ data remove storage gm4_trades:temp/wandering_trader/comparison pool
 
 # if trade pools didnt differ, keep looping until they do.
 execute if score $pools_differ gm4_trades_data matches 0 run tag @s add gm4_pooled_trade_option
-execute as @e[type=trader_llama,tag=gm4_trade_option,tag=!gm4_processed_trade_option,limit=1,sort=arbitrary] run function gm4_trades-1.1:wandering_trader/pool/collect_trades
+execute as @e[type=trader_llama,tag=gm4_trade_option,tag=!gm4_processed_trade_option,limit=1,sort=arbitrary] run function gm4_trades-1.2:wandering_trader/pool/collect_trades
