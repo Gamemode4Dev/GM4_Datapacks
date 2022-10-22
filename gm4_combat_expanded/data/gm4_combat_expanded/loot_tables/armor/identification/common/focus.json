@@ -108,13 +108,75 @@
           "lore": [
             [
               {
+                "text": " "
+              },
+              {
+                "translate": "attribute.modifier.plus.0",
+                "with": [
+                  [
+                    {
+                      "score": {
+                        "name": "$damage_10",
+                        "objective": "gm4_ce_data"
+                      },
+                      "color": "blue",
+                      "italic": false
+                    },
+                    {
+                      "text": "."
+                    },
+                    {
+                      "score": {
+                        "name": "$damage_01",
+                        "objective": "gm4_ce_data"
+                      }
+                    }
+                  ],
+                  {
+                    "translate": "attribute.name.generic.attack_damage"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$damage_01"
+                  },
+                  "score": "gm4_ce_data"
+                },
+                "range": 0
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "text": " "
+              },
+              {
                 "translate": "attribute.modifier.plus.0",
                 "with": [
                   {
                     "score": {
-                      "name": "$damage",
+                      "name": "$damage_10",
                       "objective": "gm4_ce_data"
-                    }
+                    },
+                    "color": "blue",
+                    "italic": false
                   },
                   {
                     "translate": "attribute.name.generic.attack_damage"
@@ -124,6 +186,20 @@
                 "italic": false
               }
             ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage_01"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 0
+            }
           ]
         },
         {

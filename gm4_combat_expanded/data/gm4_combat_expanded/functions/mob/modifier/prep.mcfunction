@@ -26,6 +26,9 @@ execute store result score $mob_speed gm4_ce_data run data get storage gm4_comba
 execute store result score $mob_armor gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{Name:"gm4_ce_mob_armor"}].Amount
 execute store result score $mob_toughness gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{Name:"gm4_ce_mob_toughness"}].Amount
 
+# remove bonus damage if weapon is held
+execute if data entity @s HandItems[{Count:1b}] run scoreboard players set $mob_damage gm4_ce_data 0
+
 # add modifiers that have been altered
 execute if score $mob_health gm4_ce_data matches 1.. run function gm4_combat_expanded:mob/modifier/health
 execute if score $mob_damage gm4_ce_data matches 1.. run function gm4_combat_expanded:mob/modifier/damage

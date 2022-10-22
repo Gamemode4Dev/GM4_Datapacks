@@ -11,7 +11,11 @@ execute store result score $namelen gm4_ce_data run data get storage gm4_combat_
 execute if score $namelen gm4_ce_data matches 75.. run function gm4_combat_expanded:armor/modifier/type/consume/rename
 
 # remove module tag to stop clock running for this armor
-data remove storage gm4_combat_expanded:temp tag.gm4_combat_expanded
+data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.modifier set value -1
+
+# remove curses from armor
+data remove storage gm4_combat_expanded:temp tag.Enchantments[{id:"minecraft:vanishing_curse"}]
+data remove storage gm4_combat_expanded:temp tag.Enchantments[{id:"minecraft:binding_curse"}]
 
 # use lib_lore to remove lore lines
 data modify storage gm4_lore:temp Source set from storage gm4_combat_expanded:temp tag.display.Lore
