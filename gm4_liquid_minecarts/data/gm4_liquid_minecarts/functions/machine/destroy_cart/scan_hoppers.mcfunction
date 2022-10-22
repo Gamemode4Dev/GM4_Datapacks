@@ -36,4 +36,4 @@ execute if score $found_item gm4_machine_data matches 0 positioned ~01 ~-2 ~-1 i
 execute if score $found_item gm4_machine_data matches 0 positioned ~-1 ~-2 ~-1 if block ~ ~ ~ hopper{Items:[{id:"minecraft:minecart",tag:{display:{Name:'{"italic":false,"text":"Liquid Minecart"}'}}}]} run function gm4_liquid_minecarts:machine/destroy_cart/update_hopper
 
 # if no hoppers found, find hopper minecarts with the invalid item
-execute if score $found_item gm4_machine_data matches 0 as @e[type=hopper_minecart,distance=..3,nbt={Items:[{id:"minecraft:minecart",tag:{display:{Name:'{"italic":false,"text":"Liquid Minecart"}'}}}]}] run function gm4_ender_hopper:machine/destroy_cart/update_hopper_minecart
+execute if score $found_item gm4_machine_data matches 0 as @e[type=hopper_minecart,distance=..3,nbt={Items:[{id:"minecraft:minecart",tag:{display:{Name:'{"italic":false,"text":"Liquid Minecart"}'}}}]}] run function gm4_liquid_minecarts:machine/destroy_cart/update_hopper_minecart
