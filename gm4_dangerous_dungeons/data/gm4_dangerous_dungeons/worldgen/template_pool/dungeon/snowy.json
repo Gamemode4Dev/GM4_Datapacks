@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "gm4_dangerous_dungeons:dungeon/snowy",
+        "location": "gm4_dangerous_dungeons:dungeon/snowy/default",
         "processors": {
           "processors": [
             {
