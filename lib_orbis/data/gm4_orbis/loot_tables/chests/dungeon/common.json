@@ -1,0 +1,56 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "name": "minecraft:chests/abandoned_mineshaft",
+          "conditions": [
+            {
+              "condition": "random_chance",
+              "chance": 0.4
+            }
+          ]
+        },
+        {
+          "type": "loot_table",
+          "name": "minecraft:chests/simple_dungeon"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:arrow"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:obsidian"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:ender_pearl"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:spider_eye"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_shovel"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_chestplate"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_boots"
+        }
+      ]
+    }
+  ]
+}
