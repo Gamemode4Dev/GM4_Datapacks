@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:gold_ingot",
+          "functions": [
+            {
+              "function": "set_name",
+              "name": "Uncommon Loot Pool Placeholder"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

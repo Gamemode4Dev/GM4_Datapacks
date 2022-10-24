@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "name": "gm4_orbis:chests/tower/rare",
+          "weight": 15
+        },
+        {
+          "type": "loot_table",
+          "name": "gm4_orbis:chests/tower/uncommon",
+          "weight": 35
+        },
+        {
+          "type": "loot_table",
+          "name": "gm4_orbis:chests/tower/common",
+          "weight": 60
+        }
+      ]
+    }
+  ]
+}
