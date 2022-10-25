@@ -1,0 +1,256 @@
+{
+  "criteria": {
+    "axolotl_bucket": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:axolotl_bucket"
+                  ],
+                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "cod_bucket": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:cod_bucket"
+                  ],
+                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "pufferfish_bucket": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:pufferfish_bucket"
+                  ],
+                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "salmon_bucket": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:salmon_bucket"
+                  ],
+                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "tadpole_bucket": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:tadpole_bucket"
+                  ],
+                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "tropical_fish_bucket": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:tropical_fish_bucket"
+                  ],
+                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "water_bucket": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:water_bucket"
+                  ],
+                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "axolotl_bucket",
+      "cod_bucket",
+      "pufferfish_bucket",
+      "salmon_bucket",
+      "tadpole_bucket",
+      "tropical_fish_bucket",
+      "water_bucket"
+    ]
+  ],
+  "rewards": {
+    "function": "gm4_infinitas_shamir:water/place"
+  }
+}

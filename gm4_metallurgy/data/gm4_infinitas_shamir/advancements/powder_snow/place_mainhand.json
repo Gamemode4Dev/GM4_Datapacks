@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "powder_snow_bucket": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:powder_snow_bucket"
+                  ],
+                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_infinitas_shamir:powder_snow/place"
+  }
+}

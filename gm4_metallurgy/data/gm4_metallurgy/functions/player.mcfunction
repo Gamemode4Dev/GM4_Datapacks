@@ -5,7 +5,6 @@ tag @s remove gm4_has_arborenda
 tag @s remove gm4_has_hypexperia
 tag @s remove gm4_has_musical
 tag @s remove gm4_has_sensus
-tag @s remove gm4_has_spiraculum
 tag @s remove gm4_has_tinker
 tag @s remove gm4_has_vibro
 

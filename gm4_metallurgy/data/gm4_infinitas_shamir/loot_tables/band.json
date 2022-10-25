@@ -1,0 +1,36 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_metallurgy:curies_bismium_band",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:3420125,SkullOwner:{Name:\"[Drop to Fix Item] gm4_infinitas_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"infinitas\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "replace": false,
+                            "lore": [
+                                {
+                                    "translate": "%1$s%3427655$s",
+                                    "with": [
+                                        "Infinitas",
+                                        {
+                                            "translate": "item.gm4.shamir.infinitas"
+                                        }
+                                    ],
+                                    "italic": false,
+                                    "color": "gray"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+  "criteria": {
+    "lava_bucket": {
+      "trigger": "minecraft:filled_bucket",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_empty\"]}"
+            }
+          }
+        ],
+        "item": {
+          "items": [
+            "minecraft:lava_bucket"
+          ]
+        }
+      }
+    },
+    "milk_bucket": {
+      "trigger": "minecraft:filled_bucket",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_empty\"]}"
+            }
+          }
+        ],
+        "item": {
+          "items": [
+            "minecraft:milk_bucket"
+          ]
+        }
+      }
+    },
+    "powder_snow_bucket": {
+      "trigger": "minecraft:filled_bucket",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_empty\"]}"
+            }
+          }
+        ],
+        "item": {
+          "items": [
+            "minecraft:powder_snow_bucket"
+          ]
+        }
+      }
+    },
+    "water_bucket": {
+      "trigger": "minecraft:filled_bucket",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_empty\"]}"
+            }
+          }
+        ],
+        "item": {
+          "items": [
+            "minecraft:water_bucket"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lava_bucket",
+      "milk_bucket",
+      "powder_snow_bucket",
+      "water_bucket"
+    ]
+  ],
+  "rewards": {
+    "function": "gm4_infinitas_shamir:empty/pickup"
+  }
+}

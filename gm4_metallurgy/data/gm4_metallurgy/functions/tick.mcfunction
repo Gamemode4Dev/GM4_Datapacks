@@ -2,8 +2,8 @@
 execute if score found_item_on_anvil gm4_ml_data matches 1 as @e[type=item,tag=gm4_ml_on_anvil] at @s if block ~ ~ ~ minecraft:moving_piston align xyz if entity @e[type=item,dx=0,nbt=!{Item:{tag:{gm4_metallurgy:{has_shamir:1b}}}}] run function gm4_metallurgy:smooshing/prepare_transfer
 
 
-# spiraculum
-execute if entity @e[tag=gm4_in_spiraculum] as @a[tag=gm4_has_spiraculum] at @s run function gm4_spiraculum_shamir:spiral
+# infinitas
+execute if entity @e[tag=gm4_in_infinitas] as @a[predicate=gm4_metallurgy:infinitas_active] at @s run function gm4_infinitas_shamir:spiral
 
 # arborenda
 function gm4_arborenda_shamir:main
