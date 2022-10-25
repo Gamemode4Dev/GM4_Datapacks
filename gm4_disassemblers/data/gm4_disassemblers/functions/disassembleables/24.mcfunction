@@ -1,0 +1,4 @@
+execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp Items[{"id":"minecraft:diamond_shovel"}] run loot replace block ~ ~ ~ container.0 loot gm4_disassemblers:disassembleables/diamond_shovel
+execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp Items[{"id":"minecraft:diamond_helmet"}] run loot replace block ~ ~ ~ container.0 loot gm4_disassemblers:disassembleables/diamond_helmet
+execute if data storage gm4_disassemblers:temp Items[{"id":"minecraft:golden_pickaxe"}] run loot replace block ~ ~ ~ container.0 loot gm4_disassemblers:disassembleables/golden_pickaxe
+execute if data storage gm4_disassemblers:temp Items[{"id":"minecraft:leather_helmet"}] run loot replace block ~ ~ ~ container.0 loot gm4_disassemblers:disassembleables/leather_helmet
