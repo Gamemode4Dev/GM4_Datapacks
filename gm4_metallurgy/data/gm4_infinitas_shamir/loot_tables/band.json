@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420125,SkullOwner:{Name:\"[Drop to Fix Item] gm4_infinitas_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"infinitas\"}}"
+                            "tag": "{CustomModelData:3420100,SkullOwner:{Name:\"[Drop to Fix Item] gm4_infinitas_shamir:band\"},gm4_metallurgy:{stored_shamir:\"infinitas\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",
