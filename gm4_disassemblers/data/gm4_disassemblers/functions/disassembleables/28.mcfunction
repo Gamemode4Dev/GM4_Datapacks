@@ -1,2 +1,0 @@
-execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp Items[{"id":"minecraft:diamond_chestplate"}] run loot replace block ~ ~ ~ container.0 loot gm4_disassemblers:disassembleables/diamond_chestplate
-execute if data storage gm4_disassemblers:temp Items[{"id":"minecraft:leather_chestplate"}] run loot replace block ~ ~ ~ container.0 loot gm4_disassemblers:disassembleables/leather_chestplate

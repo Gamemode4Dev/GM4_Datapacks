@@ -85,17 +85,38 @@ for i, item in enumerate(normal_items):
   with open("gm4_disassemblers/data/gm4_disassemblers/loot_tables/disassembleables/"+item.split(":")[1]+".json", "w+") as file:
     json.dump(lootTable, file, indent=2)
 
-lengths = {}
-for item in normal_items + special_items:
-  if str(len(item)) not in lengths:
-    lengths[str(len(item))] = []
-  lengths[str(len(item))].append(item)
+# lengths = {}
+# for item in normal_items + special_items:
+#   if str(len(item)) not in lengths:
+#     lengths[str(len(item))] = []
+#   lengths[str(len(item))].append(item)
 
-for length in lengths:
-  with open("gm4_disassemblers/data/gm4_disassemblers/functions/disassembleables/"+ length + ".mcfunction", "w+") as file:
-    for item in lengths[length]:
-      if "diamond" in item:
-        file.write('execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp Items[{"id":"' + item +'"}] run loot replace block ~ ~ ~ container.0 loot gm4_disassemblers:disassembleables/'+item.split(":")[1] + "\n")
-      else: 
-        file.write('execute if data storage gm4_disassemblers:temp Items[{"id":"' + item +'"}] run loot replace block ~ ~ ~ container.0 loot gm4_disassemblers:disassembleables/'+item.split(":")[1] + "\n")
-    
+# for length in lengths:
+#   with open("gm4_disassemblers/data/gm4_disassemblers/functions/disassembleables/"+ length + ".mcfunction", "w+") as file:
+#     for item in lengths[length]:
+#       if "diamond" in item:
+#         file.write('execute if score disassemble_diamonds gm4_disassembler matches 1 if data storage gm4_disassemblers:temp Items[{"id":"' + item +'"}] run loot replace block ~ ~ ~ container.0 loot gm4_disassemblers:disassembleables/'+item.split(":")[1] + "\n")
+#       else: 
+#         file.write('execute if data storage gm4_disassemblers:temp Items[{"id":"' + item +'"}] run loot replace block ~ ~ ~ container.0 loot gm4_disassemblers:disassembleables/'+item.split(":")[1] + "\n")
+
+caller = {"type": "minecraft:generic","pools":[{"rolls":1,"entries":[{"type":"minecraft:alternatives","children":[]}]}]}  
+for item in normal_items:
+  caller["pools"][0]["entries"][0]["children"].append(
+    {
+      "type": "minecraft:loot_table",
+      "name": f'gm4_disassemblers:disassembleables/{item.split(":")[1]}',
+      "conditions":[{
+        "condition":"entity_properties",
+        "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [item]
+                }
+              }
+            }
+      }]})
+  if item in diamond_items:
+    caller["pools"][0]["entries"][0]["children"][-1]["conditions"].append({"condition":"value_check","range":1,"value":{"type":"score","target":{"type":"fixed","name":"disassemble_diamonds"},"score":"gm4_disassembler"}})
+with open("gm4_disassemblers/data/gm4_disassemblers/loot_tables/caller.json", "w+") as file:
+  json.dump(caller, file, indent=2)
