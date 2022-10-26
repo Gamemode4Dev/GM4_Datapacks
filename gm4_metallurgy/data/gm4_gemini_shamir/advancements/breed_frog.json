@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "breed_turtles": {
+    "breed_frogs": {
       "trigger": "minecraft:bred_animals",
       "conditions": {
         "parent": [
@@ -8,7 +8,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:turtle"
+              "type": "minecraft:frog"
             }
           }
         ],
@@ -17,7 +17,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:turtle"
+              "type": "minecraft:frog"
             }
           }
         ]
@@ -25,6 +25,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_gemini_shamir:breed/check_turtle"
+    "function": "gm4_gemini_shamir:breed/check_frog"
   }
 }
