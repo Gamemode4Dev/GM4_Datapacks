@@ -17,7 +17,7 @@ execute positioned ~-1 ~ ~-1 if block ~ ~ ~ #gm4_arborenda_shamir:trunks unless 
 
 execute positioned ~ ~1 ~ unless block ~ ~ ~ #gm4_arborenda_shamir:trunks run function gm4_arborenda_shamir:trunk/neighbors/mark_top
 
-execute if block ~ ~ ~ #gm4_arborenda_shamir:fungus_foliage positioned ~ ~-1 ~ run function gm4_arborenda_shamir:trunk/neighbors/mark_bottom
+execute if block ~ ~ ~ #gm4_arborenda_shamir:foliage positioned ~ ~-1 ~ run function gm4_arborenda_shamir:trunk/neighbors/mark_bottom
 
 scoreboard players add $chop_count gm4_arb_data 1
 tag @s remove gm4_arborenda_init
