@@ -35,7 +35,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "processors": "minecraft:empty",
-        "location": "gm4_orbis:spawner/default/cave_spider_down"
+        "location": "gm4_orbis:spawner/extra/cave_spider_down"
       }
     },
     {
@@ -44,7 +44,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "processors": "minecraft:empty",
-        "location": "gm4_orbis:spawner/default/cave_spider_side"
+        "location": "gm4_orbis:spawner/extra/cave_spider_side"
       }
     },
     {
@@ -53,7 +53,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "processors": "minecraft:empty",
-        "location": "gm4_orbis:spawner/default/cave_spider_up"
+        "location": "gm4_orbis:spawner/extra/cave_spider_up"
       }
     }
   ]
