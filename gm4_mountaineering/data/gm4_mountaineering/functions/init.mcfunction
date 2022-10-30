@@ -8,6 +8,8 @@ scoreboard objectives add gm4_mountaineering_ski_downhill dummy
 scoreboard objectives add gm4_mountaineering_ski_steep_downhill dummy
 scoreboard objectives add gm4_mountaineering_poles_jump_boost dummy
 scoreboard objectives add gm4_mountaineering_jump_counter minecraft.custom:minecraft.jump
+scoreboard objectives add gm4_mountaineering_direction_facing dummy
+scoreboard objectives add gm4_mountaineering_climbing_shulker_countdown dummy
 
 schedule function gm4_mountaineering:main 10t
 
