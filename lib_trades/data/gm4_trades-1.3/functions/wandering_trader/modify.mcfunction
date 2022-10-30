@@ -1,13 +1,13 @@
 # collects trades added by various datapacks and adds them to the trader. Marks the trader as having received those trades.
 # @s = a wandering trader without the gm4_trader tag (aka without the new trades)
 # at @s
-# scheduled from gm4_trades-1.1:main or called by function tag gm4_trades:wandering_trader/setup
+# scheduled from gm4_trades-1.3:main
 
 # generate trades
 function #gm4_trades:register_trades
 
-# read in trade pools
-function gm4_trades-1.2:wandering_trader/create_pool
+# read-in trade pools
+function gm4_trades-1.3:wandering_trader/create_pool
 
 # remember trader was edited
 tag @s add gm4_trader
