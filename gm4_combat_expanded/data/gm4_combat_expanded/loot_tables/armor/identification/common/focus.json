@@ -108,9 +108,6 @@
           "lore": [
             [
               {
-                "text": " "
-              },
-              {
                 "translate": "attribute.modifier.plus.0",
                 "with": [
                   [
@@ -164,9 +161,6 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
               {
                 "translate": "attribute.modifier.plus.0",
                 "with": [

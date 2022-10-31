@@ -3,8 +3,8 @@
 # at world spawn
 # run from armor/check_modifier/night
 
-# resistance 4 if player has food haunches
-effect give @s[scores={gm4_ce_hunger=1..}] resistance 2 3
+# resistance 3 if player has food haunches
+effect give @s[scores={gm4_ce_hunger=1..}] resistance 2 2
 
 # hunger 100 if player took damage, upped to 150 if at full hunger
 effect give @s[scores={gm4_ce_hunger=..19,gm4_ce_hurt=1..}] hunger 3 99 true
