@@ -50,7 +50,8 @@ execute store result score $consume gm4_ce_data run data get storage gm4_combat_
 
 # store results in storage for changing attributes
 execute store result storage gm4_combat_expanded:temp armor int 1 run scoreboard players get $armor gm4_ce_data
-execute store result storage gm4_combat_expanded:temp damage float 0.2 run scoreboard players get $damage gm4_ce_data
+execute store result storage gm4_combat_expanded:temp damage float 0.1 run scoreboard players get $damage gm4_ce_data
+execute store result storage gm4_combat_expanded:temp level float 0.2 run scoreboard players get $damage gm4_ce_data
 execute store result storage gm4_combat_expanded:temp speed int 1 run scoreboard players get $speed gm4_ce_data
 execute store result storage gm4_combat_expanded:temp atkspeed int 1 run scoreboard players get $atkspeed gm4_ce_data
 execute store result storage gm4_combat_expanded:temp consume int 1 run scoreboard players get $consume gm4_ce_data
