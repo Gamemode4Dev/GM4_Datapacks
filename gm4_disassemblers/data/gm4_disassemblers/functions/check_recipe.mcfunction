@@ -1,5 +1,5 @@
 # processes each item
-# @s = armor stand display (we need the hand)
+# @s = armor stand display (we need the hand) [tag=gm4_disassembler_stand]
 # located at the disassembler block
 # run from extract
 data modify entity @s HandItems[0] set from storage gm4_disassemblers:temp Items[0]

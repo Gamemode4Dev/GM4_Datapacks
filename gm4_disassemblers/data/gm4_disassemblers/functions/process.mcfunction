@@ -1,5 +1,5 @@
 # checks for a single item in the dropper
-# @s = disassembler marker 
+# @s = disassembler marker [tag=gm4_disassembler]
 # located at the dissasembler block
 # run from main
 
