@@ -1,3 +1,6 @@
+# Checks player's inventory for an Infinitas Water Bucket
+# @s = player with tag, gm4_has_water_infinitas
+# run from gm4_infinitas_shamir:clock/inventory_check
 
 tag @s remove gm4_has_water_infinitas
 tag @s remove gm4_infinitas_mainhand_water

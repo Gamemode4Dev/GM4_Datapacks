@@ -1,3 +1,6 @@
+# Checks player's inventory for an empty Infinitas Bucket
+# @s = player with tag, gm4_has_empty_infinitas
+# run from gm4_infinitas_shamir:clock/inventory_check
 
 tag @s remove gm4_has_empty_infinitas
 tag @s remove gm4_infinitas_mainhand_empty

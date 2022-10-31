@@ -78,6 +78,7 @@ scoreboard objectives add gm4_infinitas_empty_held dummy
 scoreboard objectives add gm4_infinitas_water_held dummy
 scoreboard objectives add gm4_infinitas_leave minecraft.custom:leave_game
 scoreboard objectives add gm4_infinitas_success_check dummy
+scoreboard players add $lava_infinitas gm4_ml_data 0
 
 #musical
 scoreboard objectives add gm4_note_collect totalKillCount
