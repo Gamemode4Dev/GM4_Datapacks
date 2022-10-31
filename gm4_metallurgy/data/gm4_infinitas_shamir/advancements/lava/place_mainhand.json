@@ -1,0 +1,58 @@
+{
+  "criteria": {
+    "lava_bucket": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:alternative",
+              "terms": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$lava_infinitas"
+                    },
+                    "score": "gm4_ml_data"
+                  },
+                  "range": 0
+                },
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type_specific": {
+                      "type": "player",
+                      "gamemode": "creative"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:lava_bucket"
+                  ],
+                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_infinitas_shamir:lava/place"
+  }
+}
