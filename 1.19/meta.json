@@ -1,5 +1,5 @@
 {
-  "last_commit": "50f191e99a053499184cb6145d848384172dfd67",
+  "last_commit": "214a3f4b7badc4426b72201968a8d7eb0f896a89",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -20,7 +20,7 @@
       },
       "hidden": false,
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_apple_trees",
