@@ -1,5 +1,5 @@
 {
-  "last_commit": "add808af2e10ec3bf135d5323f4f6e2feacba20a",
+  "last_commit": "50f191e99a053499184cb6145d848384172dfd67",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1063,7 +1063,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_mending_tanks",
