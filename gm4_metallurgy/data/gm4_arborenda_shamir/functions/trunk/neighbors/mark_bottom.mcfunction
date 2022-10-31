@@ -1,5 +1,5 @@
-# Breaks fungus cap foliage from the top to the bottom.
-# @s = trunk marker within fungus foliage (#gm4_arborenda_shamir:fungus_foliage)
+# Breaks fungus cap foliage and mangrove roots from the top to the bottom.
+# @s = trunk marker within foliage (#gm4_arborenda_shamir:foliage)
 # at @s positioned ~ ~-1 ~
 # run from gm4_arborenda_shamir:trunk/neighbors/mark
 
