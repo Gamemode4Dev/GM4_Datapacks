@@ -1,15 +1,14 @@
 {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-      "equipment": {
-        "feet": {
-          "items": [
-            "minecraft:chainmail_boots"
-          ],
-          "nbt": "{gm4_mountaineering:{item:\"crampons\"}}"
-        }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "feet": {
+        "items": [
+          "minecraft:chainmail_boots"
+        ],
+        "nbt": "{gm4_mountaineering:{item:\"crampons\"}}"
       }
     }
   }
-  
+}
