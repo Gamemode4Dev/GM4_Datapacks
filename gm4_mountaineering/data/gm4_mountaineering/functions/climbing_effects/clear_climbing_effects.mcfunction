@@ -4,4 +4,5 @@
 # run from climbing_effects/crampons_equipped
 
 tag @s remove gm4_mountaineering_facing_climbable_block
-kill @e[type=minecraft:shulker, tag=gm4_mountaineering_climb_assist]
+tag @e[type=minecraft:shulker, tag=gm4_mountaineering_climb_assist] add gm4_mountaineering_kill_shulker
+execute run function gm4_mountaineering:climbing_effects/kill_shulkers
