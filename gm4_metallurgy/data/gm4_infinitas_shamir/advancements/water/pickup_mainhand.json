@@ -21,15 +21,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}",
-              "equipment": {
-                "mainhand": {
-                  "items": [
-                    "minecraft:water_bucket"
-                  ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
-                }
-              }
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}"
             }
           }
         ],
@@ -61,15 +53,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}",
-              "equipment": {
-                "mainhand": {
-                  "items": [
-                    "minecraft:water_bucket"
-                  ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
-                }
-              }
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}"
             }
           }
         ],
@@ -101,15 +85,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}",
-              "equipment": {
-                "mainhand": {
-                  "items": [
-                    "minecraft:water_bucket"
-                  ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
-                }
-              }
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}"
             }
           }
         ],
@@ -141,15 +117,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}",
-              "equipment": {
-                "mainhand": {
-                  "items": [
-                    "minecraft:water_bucket"
-                  ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
-                }
-              }
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}"
             }
           }
         ],
@@ -181,15 +149,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}",
-              "equipment": {
-                "mainhand": {
-                  "items": [
-                    "minecraft:water_bucket"
-                  ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
-                }
-              }
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}"
             }
           }
         ],
@@ -221,15 +181,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}",
-              "equipment": {
-                "mainhand": {
-                  "items": [
-                    "minecraft:water_bucket"
-                  ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
-                }
-              }
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}"
             }
           }
         ],

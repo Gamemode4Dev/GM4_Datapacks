@@ -79,6 +79,7 @@ scoreboard objectives add gm4_infinitas_water_held dummy
 scoreboard objectives add gm4_infinitas_leave minecraft.custom:leave_game
 scoreboard objectives add gm4_infinitas_success_check dummy
 scoreboard players add $lava_infinitas gm4_ml_data 0
+data modify storage gm4_infinitas_shamir:bucket shamir set value {display:{Lore:['{"italic":false,"color":"#467A1B","translate":"%1$s%3427655$s","with":["Curie\'s Bismium Band",{"translate":"item.gm4.metallurgy.band","with":[{"translate":"item.gm4.metallurgy.curies_bismium"}]}]}','{"italic":false,"color":"aqua","translate":"%1$s%3427655$s","with":["Shamir",{"translate":"item.gm4.metallurgy.shamir"}]}','{"italic":false,"color":"gray","translate":"%1$s%3427655$s","with":["Infinitas",{"translate":"item.gm4.shamir.infinitas"}]}']},CustomModelData:3420100,gm4_metallurgy:{metal:{type:"curies_bismium"},custom_model_data:3420100,has_shamir:1b,active_shamir:"infinitas",skull_owner:"[Drop to Fix Item] gm4_infinitas_shamir:band"}}
 
 #musical
 scoreboard objectives add gm4_note_collect totalKillCount
