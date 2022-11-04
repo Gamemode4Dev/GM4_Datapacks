@@ -12,12 +12,14 @@
     },
     "module_name": "Calling Bell",
     "module_id": "calling_bell",
+    "libraries": [
+        "lib_trades"
+    ],
     "hidden": false,
     "site_description": "Summon a Wandering Trader by using an Emerald on a Bell.",
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Calling_Bell",
     "required_modules": [
-        "lib_trades"
     ],
     "recommended_modules": [
         "apple_trees",

@@ -1,4 +1,4 @@
-#
-execute as @a[scores={gm4_calling_bell_rung=1..}] at @s anchored eyes positioned ^ ^ ^ run function gm4_calling_bell:emerald_check
+
+execute as @a[scores={gm4_calling_bell_rung=1..}] run function gm4_calling_bell:emerald_check
 
 schedule function gm4_calling_bell:tick 1t

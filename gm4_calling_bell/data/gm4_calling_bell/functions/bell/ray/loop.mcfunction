@@ -7,7 +7,7 @@
 scoreboard players remove $ray gm4_calling_bell 1
 
 # tests for bell
-execute if block ~ ~ ~ bell align xyz positioned ~0.5 ~0.6 ~0.5 run function gm4_calling_bell:trader/init
+execute if block ~ ~ ~ bell align xyz positioned ~0.5 ~1 ~0.5 run function gm4_calling_bell:trader/summon
 
 # runs the loop again
 execute unless block ~ ~ ~ bell if score $ray gm4_calling_bell matches 1.. positioned ^ ^ ^0.1 run function gm4_calling_bell:bell/ray/loop
