@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "axolotl_bucket": {
+    "pickup_axolotl": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
         "player": [
@@ -32,7 +32,7 @@
         }
       }
     },
-    "cod_bucket": {
+    "pickup_cod": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
         "player": [
@@ -64,7 +64,7 @@
         }
       }
     },
-    "pufferfish_bucket": {
+    "pickup_pufferfish": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
         "player": [
@@ -96,7 +96,7 @@
         }
       }
     },
-    "salmon_bucket": {
+    "pickup_salmon": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
         "player": [
@@ -128,7 +128,7 @@
         }
       }
     },
-    "tadpole_bucket": {
+    "pickup_tadpole": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
         "player": [
@@ -160,7 +160,7 @@
         }
       }
     },
-    "tropical_fish_bucket": {
+    "pickup_tropical_fish": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
         "player": [
@@ -195,12 +195,12 @@
   },
   "requirements": [
     [
-      "axolotl_bucket",
-      "cod_bucket",
-      "pufferfish_bucket",
-      "salmon_bucket",
-      "tadpole_bucket",
-      "tropical_fish_bucket"
+      "pickup_axolotl",
+      "pickup_cod",
+      "pickup_pufferfish",
+      "pickup_salmon",
+      "pickup_tadpole",
+      "pickup_tropical_fish"
     ]
   ],
   "rewards": {

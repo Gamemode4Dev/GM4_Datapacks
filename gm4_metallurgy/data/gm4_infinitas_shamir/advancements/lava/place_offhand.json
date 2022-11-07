@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "lava_bucket": {
+    "place_lava": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": [
@@ -10,16 +10,19 @@
               "condition": "minecraft:alternative",
               "terms": [
                 {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$lava_infinitas"
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$lava_infinitas"
+                      },
+                      "score": "gm4_ml_data"
                     },
-                    "score": "gm4_ml_data"
-                  },
-                  "range": 0
+                    "range": 1
+                  }
                 },
                 {
                   "condition": "minecraft:entity_properties",
@@ -50,8 +53,68 @@
           }
         ]
       }
+    },
+    "use_on_cauldron": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:alternative",
+              "terms": [
+                {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$lava_infinitas"
+                      },
+                      "score": "gm4_ml_data"
+                    },
+                    "range": 1
+                  }
+                },
+                {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                      "nbt": "{Tags:[\"gm4_infinitas_offhand_lava\"]}",
+                      "equipment": {
+                        "offhand": {
+                          "items": [
+                            "minecraft:bucket"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:lava_cauldron"
+            ]
+          }
+        }
+      }
     }
   },
+  "requirements": [
+    [
+      "place_lava",
+      "use_on_cauldron"
+    ]
+  ],
   "rewards": {
     "function": "gm4_infinitas_shamir:lava/place"
   }

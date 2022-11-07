@@ -1,3 +1,7 @@
+# Checks which hand slot player used to pickup a fish
+# @s = player holding fish bucket, previously holding Infinitas Water Bucket
+# at @s
+# run from gm4_infinitas_shamir:delayed_replace/check_tag
 
 scoreboard players reset @s gm4_infinitas_success_check
 

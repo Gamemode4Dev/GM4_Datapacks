@@ -75,6 +75,8 @@ execute unless score $enable_pvp gm4_ender_bolt_foreign_id matches 0..1 run scor
 
 #infinitas
 scoreboard objectives add gm4_infinitas_empty_held dummy
+scoreboard objectives add gm4_infinitas_lava_held dummy
+scoreboard objectives add gm4_infinitas_powder_snow_held dummy
 scoreboard objectives add gm4_infinitas_water_held dummy
 scoreboard objectives add gm4_infinitas_leave minecraft.custom:leave_game
 scoreboard objectives add gm4_infinitas_success_check dummy

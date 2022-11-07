@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "powder_snow_bucket": {
+    "place_powder_snow": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": [
@@ -33,8 +33,42 @@
           }
         ]
       }
+    },
+    "use_on_cauldron": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_infinitas_offhand_powder_snow\"]}",
+              "equipment": {
+                "offhand": {
+                  "items": [
+                    "minecraft:bucket"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:powder_snow_cauldron"
+            ]
+          }
+        }
+      }
     }
   },
+  "requirements": [
+    [
+      "place_powder_snow",
+      "use_on_cauldron"
+    ]
+  ],
   "rewards": {
     "function": "gm4_infinitas_shamir:powder_snow/place"
   }

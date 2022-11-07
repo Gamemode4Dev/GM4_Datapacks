@@ -1,5 +1,5 @@
-# Checks if player is holding an empty Infinitas Bucket
-# @s = player with empty Infinitas Bucket in their inventory
+# Checks which hand player is holding an Infinitas Empty Bucket
+# @s = player with Infinitas Empty Bucket in their inventory
 # run from gm4_infinitas_shamir:empty/check_inventory
 
 tag @s add gm4_has_empty_infinitas

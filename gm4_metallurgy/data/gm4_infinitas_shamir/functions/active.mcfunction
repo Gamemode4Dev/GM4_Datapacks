@@ -1,4 +1,4 @@
-# @s = player holding a infinitas bucket in one or the other hand
+# @s = player holding an Infinitas bucket in one or the other hand
 # run from metallurgy:shamir_in_hand
 
 execute as @e[tag=gm4_no_infinitas] at @s unless entity @a[predicate=gm4_metallurgy:infinitas_active,distance=..10] run tag @s remove gm4_no_infinitas

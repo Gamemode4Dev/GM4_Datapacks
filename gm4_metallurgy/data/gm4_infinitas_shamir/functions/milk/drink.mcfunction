@@ -1,4 +1,7 @@
-
+# Player drinking milk using Infinitas Milk Bucket
+# @s = player drinking an Infinitas Milk Bucket
+# at @s
+# run from advancement, gm4_infinitas_shamir:milk/drink_(mainhand or offhand)
 
 tag @s add gm4_has_infinitas
 tag @s add gm4_infinitas_delay_replace_milk

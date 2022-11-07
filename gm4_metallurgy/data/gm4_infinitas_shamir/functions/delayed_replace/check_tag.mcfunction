@@ -1,4 +1,7 @@
-
+# Checks which delay replace tag the player has
+# @s = player
+# at @s
+# run from gm4_infinitas_shamir:delayed_replace/call
 
 summon marker ~ ~ ~ {Tags:["gm4_infinitas_uuid_generator"]}
 data modify storage gm4_infinitas_shamir:bucket UUID set from entity @e[type=marker,tag=gm4_infinitas_uuid_generator,limit=1] UUID

@@ -1,7 +1,7 @@
-#
-#
-#
-#
+# Checks which hand slot player used to pickup liquid
+# @s = player now holding filled bucket, previously holding Infinitas Empty Bucket
+# at @s
+# run from gm4_infinitas_shamir:delayed_replace/check_tag
 
 execute store success score @s gm4_infinitas_success_check run item replace entity @s[advancements={gm4_infinitas_shamir:empty/pickup_mainhand=true},predicate=gm4_infinitas_shamir:mainhand/after/empty] weapon.mainhand with bucket
 execute if score @s gm4_infinitas_success_check matches 1 run item modify entity @s weapon.mainhand gm4_infinitas_shamir:set_shamir_nbt
@@ -11,4 +11,6 @@ execute if score @s gm4_infinitas_success_check matches 1 run item modify entity
 # clean up
 tag @s remove gm4_infinitas_delay_replace_empty
 advancement revoke @s only gm4_infinitas_shamir:empty/pickup_mainhand
+advancement revoke @s only gm4_infinitas_shamir:empty/pickup_cauldron_mainhand
 advancement revoke @s only gm4_infinitas_shamir:empty/pickup_offhand
+advancement revoke @s only gm4_infinitas_shamir:empty/place_cauldron_offhand

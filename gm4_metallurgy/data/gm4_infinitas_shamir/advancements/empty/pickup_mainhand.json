@@ -1,5 +1,35 @@
 {
   "criteria": {
+    "cauldron": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_empty\"]}",
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:lava_bucket",
+                    "minecraft:powder_snow_bucket",
+                    "minecraft:water_bucket"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:cauldron"
+            ]
+          }
+        }
+      }
+    },
     "lava_bucket": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
@@ -79,6 +109,7 @@
   },
   "requirements": [
     [
+      "cauldron",
       "lava_bucket",
       "milk_bucket",
       "powder_snow_bucket",

@@ -1,4 +1,4 @@
-# Checks if player is holding a Infinitas Water Bucket
+# Checks which hand player is holding an Infinitas Water Bucket
 # @s = player with Infinitas Water Bucket in their inventory
 # run from gm4_infinitas_shamir:water/check_inventory
 

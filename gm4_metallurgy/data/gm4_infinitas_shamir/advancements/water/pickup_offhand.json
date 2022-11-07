@@ -1,38 +1,20 @@
 {
   "criteria": {
-    "axolotl_bucket": {
+    "pickup_axolotl": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
         "player": [
           {
             "condition": "minecraft:inverted",
             "term": {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "type_specific": {
-                      "type": "player",
-                      "gamemode": "creative"
-                    }
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "equipment": {
-                      "mainhand": {
-                        "items": [
-                          "minecraft:axolotl_bucket"
-                        ]
-                      }
-                    }
-                  }
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
                 }
-              ]
+              }
             }
           },
           {
@@ -50,54 +32,28 @@
         }
       }
     },
-    "cod_bucket": {
+    "pickup_cod": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
         "player": [
           {
             "condition": "minecraft:inverted",
             "term": {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "type_specific": {
-                      "type": "player",
-                      "gamemode": "creative"
-                    }
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "equipment": {
-                      "mainhand": {
-                        "items": [
-                          "minecraft:cod_bucket"
-                        ]
-                      }
-                    }
-                  }
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
                 }
-              ]
+              }
             }
           },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}",
-              "equipment": {
-                "offhand": {
-                  "items": [
-                    "minecraft:water_bucket"
-                  ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
-                }
-              }
+              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}"
             }
           }
         ],
@@ -108,54 +64,28 @@
         }
       }
     },
-    "pufferfish_bucket": {
+    "pickup_pufferfish": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
         "player": [
           {
             "condition": "minecraft:inverted",
             "term": {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "type_specific": {
-                      "type": "player",
-                      "gamemode": "creative"
-                    }
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "equipment": {
-                      "mainhand": {
-                        "items": [
-                          "minecraft:pufferfish_bucket"
-                        ]
-                      }
-                    }
-                  }
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
                 }
-              ]
+              }
             }
           },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}",
-              "equipment": {
-                "offhand": {
-                  "items": [
-                    "minecraft:water_bucket"
-                  ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
-                }
-              }
+              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}"
             }
           }
         ],
@@ -166,54 +96,28 @@
         }
       }
     },
-    "salmon_bucket": {
+    "pickup_salmon": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
         "player": [
           {
             "condition": "minecraft:inverted",
             "term": {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "type_specific": {
-                      "type": "player",
-                      "gamemode": "creative"
-                    }
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "equipment": {
-                      "mainhand": {
-                        "items": [
-                          "minecraft:salmon_bucket"
-                        ]
-                      }
-                    }
-                  }
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
                 }
-              ]
+              }
             }
           },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}",
-              "equipment": {
-                "offhand": {
-                  "items": [
-                    "minecraft:water_bucket"
-                  ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
-                }
-              }
+              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}"
             }
           }
         ],
@@ -224,54 +128,28 @@
         }
       }
     },
-    "tadpole_bucket": {
+    "pickup_tadpole": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
         "player": [
           {
             "condition": "minecraft:inverted",
             "term": {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "type_specific": {
-                      "type": "player",
-                      "gamemode": "creative"
-                    }
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "equipment": {
-                      "mainhand": {
-                        "items": [
-                          "minecraft:tadpole_bucket"
-                        ]
-                      }
-                    }
-                  }
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
                 }
-              ]
+              }
             }
           },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}",
-              "equipment": {
-                "offhand": {
-                  "items": [
-                    "minecraft:water_bucket"
-                  ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
-                }
-              }
+              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}"
             }
           }
         ],
@@ -282,54 +160,28 @@
         }
       }
     },
-    "tropical_fish_bucket": {
+    "pickup_tropical_fish": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
         "player": [
           {
             "condition": "minecraft:inverted",
             "term": {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "type_specific": {
-                      "type": "player",
-                      "gamemode": "creative"
-                    }
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "equipment": {
-                      "mainhand": {
-                        "items": [
-                          "minecraft:tropical_fish_bucket"
-                        ]
-                      }
-                    }
-                  }
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
                 }
-              ]
+              }
             }
           },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}",
-              "equipment": {
-                "offhand": {
-                  "items": [
-                    "minecraft:water_bucket"
-                  ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
-                }
-              }
+              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}"
             }
           }
         ],
@@ -343,12 +195,12 @@
   },
   "requirements": [
     [
-      "axolotl_bucket",
-      "cod_bucket",
-      "pufferfish_bucket",
-      "salmon_bucket",
-      "tadpole_bucket",
-      "tropical_fish_bucket"
+      "pickup_axolotl",
+      "pickup_cod",
+      "pickup_pufferfish",
+      "pickup_salmon",
+      "pickup_tadpole",
+      "pickup_tropical_fish"
     ]
   ],
   "rewards": {

@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "axolotl_bucket": {
+    "place_axolotl": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": [
@@ -34,7 +34,7 @@
         ]
       }
     },
-    "cod_bucket": {
+    "place_cod": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": [
@@ -68,7 +68,7 @@
         ]
       }
     },
-    "pufferfish_bucket": {
+    "place_pufferfish": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": [
@@ -102,7 +102,7 @@
         ]
       }
     },
-    "salmon_bucket": {
+    "place_salmon": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": [
@@ -136,7 +136,7 @@
         ]
       }
     },
-    "tadpole_bucket": {
+    "place_tadpole": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": [
@@ -170,7 +170,7 @@
         ]
       }
     },
-    "tropical_fish_bucket": {
+    "place_tropical_fish": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": [
@@ -204,7 +204,7 @@
         ]
       }
     },
-    "water_bucket": {
+    "place_water": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": [
@@ -237,17 +237,46 @@
           }
         ]
       }
+    },
+    "use_on_cauldron": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}",
+              "equipment": {
+                "offhand": {
+                  "items": [
+                    "minecraft:bucket"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:water_cauldron"
+            ]
+          }
+        }
+      }
     }
   },
   "requirements": [
     [
-      "axolotl_bucket",
-      "cod_bucket",
-      "pufferfish_bucket",
-      "salmon_bucket",
-      "tadpole_bucket",
-      "tropical_fish_bucket",
-      "water_bucket"
+      "place_axolotl",
+      "place_cod",
+      "place_pufferfish",
+      "place_salmon",
+      "place_tadpole",
+      "place_tropical_fish",
+      "place_water",
+      "use_on_cauldron"
     ]
   ],
   "rewards": {
