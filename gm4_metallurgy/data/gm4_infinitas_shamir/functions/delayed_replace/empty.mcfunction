@@ -11,6 +11,4 @@ execute if score @s gm4_infinitas_success_check matches 1 run item modify entity
 # clean up
 tag @s remove gm4_infinitas_delay_replace_empty
 advancement revoke @s only gm4_infinitas_shamir:empty/pickup_mainhand
-advancement revoke @s only gm4_infinitas_shamir:empty/pickup_cauldron_mainhand
 advancement revoke @s only gm4_infinitas_shamir:empty/pickup_offhand
-advancement revoke @s only gm4_infinitas_shamir:empty/place_cauldron_offhand

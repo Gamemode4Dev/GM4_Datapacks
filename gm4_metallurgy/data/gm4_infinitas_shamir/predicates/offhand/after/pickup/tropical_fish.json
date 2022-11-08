@@ -3,7 +3,7 @@
   "entity": "this",
   "predicate": {
     "equipment": {
-      "mainhand": {
+      "offhand": {
         "items": [
           "minecraft:tropical_fish_bucket"
         ]
