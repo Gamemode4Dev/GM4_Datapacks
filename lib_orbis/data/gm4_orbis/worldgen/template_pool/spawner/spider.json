@@ -1,5 +1,5 @@
 {
-  "name": "gm4_orbis:spawner/default",
+  "name": "gm4_orbis:spawner/spider",
   "fallback": "minecraft:empty",
   "elements": [
     {
