@@ -1,5 +1,5 @@
 {
-  "last_commit": "214a3f4b7badc4426b72201968a8d7eb0f896a89",
+  "last_commit": "1823e65c65d3971fa93d9485a09d43a278ceaae1",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -99,7 +99,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19003
+      "patch": 19004
     },
     {
       "id": "gm4_bat_grenades",
