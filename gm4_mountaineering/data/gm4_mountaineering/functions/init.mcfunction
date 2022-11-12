@@ -12,5 +12,6 @@ scoreboard objectives add gm4_mountaineering_direction_facing dummy
 scoreboard objectives add gm4_mountaineering_climbing_shulker_countdown dummy
 
 schedule function gm4_mountaineering:main 10t
+schedule function gm4_mountaineering:climbing_main 10t
 
 #$moduleUpdateList
