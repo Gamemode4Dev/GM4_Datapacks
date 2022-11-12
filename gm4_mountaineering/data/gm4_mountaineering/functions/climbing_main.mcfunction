@@ -4,7 +4,6 @@
 execute as @a[gamemode=!spectator,predicate=gm4_mountaineering:wearing_crampons] at @s run function gm4_mountaineering:climbing_effects/crampons_equipped
 
 # Apply damage to any climbing shulkers
-execute if entity @e[type=minecraft:shulker, tag=gm4_mountaineering_climb_assist] run function gm4_mountaineering:climbing_effects/damage_shulkers
-execute if entity @e[type=minecraft:shulker, tag=gm4_mountaineering_new_shulker] run function gm4_mountaineering:climbing_effects/damage_shulkers
+execute as @e[type=minecraft:shulker, tag=gm4_mountaineering_climb_assist] at @s run function gm4_mountaineering:climbing_effects/damage_shulkers
 
 schedule function gm4_mountaineering:climbing_main 4t
