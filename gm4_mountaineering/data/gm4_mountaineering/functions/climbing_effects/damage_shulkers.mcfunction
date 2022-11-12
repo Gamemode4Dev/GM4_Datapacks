@@ -1,7 +1,7 @@
-# increase the score of each climbing shulker, and kill after reaching 30
+# increase the score of each climbing shulker, and kill after reaching 25
 # @s = shulker with tag gm4_mountaineering_climb_assist
 # at @s
 # run from climbing_main
 
 scoreboard players add @s gm4_mountaineering_climbing_shulker_countdown 1
-execute as @s[scores={gm4_mountaineering_climbing_shulker_countdown=30..}] run function gm4_mountaineering:climbing_effects/kill_shulkers
+execute as @s[scores={gm4_mountaineering_climbing_shulker_countdown=25..}] run function gm4_mountaineering:climbing_effects/kill_shulkers

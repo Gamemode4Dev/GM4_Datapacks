@@ -1,13 +1,7 @@
-# check for climable blocks in front, run climbing functions, and apply slowness effects when wearing crampons
+# check for climable blocks in front and run climbing functions
 # @s = player wearing crampons
 # at @s
 # run from climbing_main
-
-# Add a tag to indicate crampons are in use
-tag @s add gm4_mountaineering_using_crampons
-
-# Add slowness effects
-attribute @s minecraft:generic.movement_speed modifier add 4e6464b7-24dd-4750-a428-74898a251ead "gm4_mountaineering_crampon_slowness" -0.2 multiply_base
 
 # Check for stone, grass, or dirt in front of the player
 execute if entity @s[predicate=gm4_mountaineering:hands_empty] anchored eyes if block ^ ^ ^1 minecraft:stone run function gm4_mountaineering:climbing_effects/add_climb_effects
