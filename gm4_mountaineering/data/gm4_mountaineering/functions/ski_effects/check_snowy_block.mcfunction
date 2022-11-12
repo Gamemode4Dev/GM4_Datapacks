@@ -1,5 +1,5 @@
 # clear existing tags, check if the player is on a snowy block and wearing skis, add the skiing tag back if yes, and add ski_off_snow tag if not on snowy block
-# @s = player
+# @s = player wearing skis
 # at @s
 # run from skis_equipped
 

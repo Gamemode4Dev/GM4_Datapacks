@@ -1,7 +1,7 @@
 # Checks that the player still travels steep downhill (>=7 blocks, or >=5 blocks with poles)
 # @s = player with skiing tag and having fallen >=7 blocks, or >=5 blocks with poles
 # at @s
-# run from main
+# run from skis_equipped
 
 execute if entity @s[scores={gm4_mountaineering_ski_steep_downhill=1..},predicate=!gm4_mountaineering:holding_poles] unless score @s gm4_mountaineering_vy matches ..-7 run scoreboard players remove @s gm4_mountaineering_ski_steep_downhill 1
 execute if entity @s[scores={gm4_mountaineering_ski_steep_downhill=1..},predicate=gm4_mountaineering:holding_poles] unless score @s gm4_mountaineering_vy matches ..-5 run scoreboard players remove @s gm4_mountaineering_ski_steep_downhill 1

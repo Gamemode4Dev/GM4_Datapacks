@@ -1,4 +1,4 @@
-# run all ski-related functions
+# Run all ski-related functions
 # @s = player wearing skis
 # at @s
 # run from player_main

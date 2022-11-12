@@ -1,7 +1,7 @@
 # determine the direction that the player faces
-# @s = player wearing crampons
+# @s = player wearing crampons, with using_crampons tag, and facing a climbable block
 # at @s
-# run from climbing_effects/add_climb_effects
+# run from add_climb_effects
 
 # north:0, east:1, south:2, west:3
 scoreboard players set @s gm4_mountaineering_direction_facing 0

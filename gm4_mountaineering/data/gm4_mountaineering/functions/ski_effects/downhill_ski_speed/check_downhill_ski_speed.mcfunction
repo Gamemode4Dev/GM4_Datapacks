@@ -1,7 +1,7 @@
 # Checks that the player still travels downhill (>=2 blocks)
 # @s = player with skiing tag and having fallen >=2 blocks
 # at @s
-# run from main
+# run from skis_equipped
 
 execute if entity @s[scores={gm4_mountaineering_ski_downhill=1..}] unless score @s gm4_mountaineering_vy matches ..-2 run scoreboard players remove @s gm4_mountaineering_ski_downhill 1
 execute if score @s[tag=gm4_mountaineering_skiing] gm4_mountaineering_vy matches ..-2 run scoreboard players set @s gm4_mountaineering_ski_downhill 4

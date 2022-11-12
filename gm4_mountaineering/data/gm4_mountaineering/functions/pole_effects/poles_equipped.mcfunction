@@ -1,7 +1,7 @@
 # Give pole-related effects
 # @s = player holding poles
 # at @s
-# run from main
+# run from player_main
 
 # Add jump boost effects
 function gm4_mountaineering:pole_effects/poles_jump_boost

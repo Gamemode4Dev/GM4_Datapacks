@@ -1,5 +1,5 @@
 # check for climable blocks in front and run climbing functions
-# @s = player wearing crampons
+# @s = player wearing crampons with using_crampons tag
 # at @s
 # run from climbing_main
 
