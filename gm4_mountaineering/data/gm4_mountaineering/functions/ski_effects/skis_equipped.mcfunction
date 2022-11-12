@@ -1,7 +1,7 @@
 # run all ski-related functions
 # @s = player wearing skis
 # at @s
-# run from main
+# run from player_main
 
 # Adds tags for whether the player is skiing normally or skiing on a non-snowy block
 function gm4_mountaineering:ski_effects/check_snowy_block
