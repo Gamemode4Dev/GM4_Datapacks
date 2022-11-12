@@ -11,7 +11,18 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "minecraft:iron_chestplate"
+          "name": "minecraft:iron_chestplate",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            }
+          ]
         },
         {
           "type": "minecraft:item",
@@ -33,7 +44,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.8
                 }
               ]
             }
