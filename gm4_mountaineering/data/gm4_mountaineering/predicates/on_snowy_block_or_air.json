@@ -8,32 +8,15 @@
         "stepping_on": {
           "block": {
             "blocks": [
-              "minecraft:grass_block"
-            ],
-            "state": {
-              "snowy": true
-            }
-          }
-        }
-      }
-    },
-    {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "stepping_on": {
-          "block": {
-            "blocks": [
-              "minecraft:ice",
-              "minecraft:packed_ice",
-              "minecraft:blue_ice",
-              "minecraft:snow",
-              "minecraft:snow_block",
               "minecraft:air"
             ]
           }
         }
       }
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "gm4_mountaineering:on_snowy_block"
     }
   ]
 }

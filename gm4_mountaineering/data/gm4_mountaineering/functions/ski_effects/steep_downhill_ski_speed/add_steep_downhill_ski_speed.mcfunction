@@ -6,3 +6,6 @@
 tag @s add gm4_mountaineering_skiing_steep_downhill
 scoreboard players set @s gm4_mountaineering_ski_steep_downhill 4
 attribute @s minecraft:generic.movement_speed modifier add 8aed075d-afeb-4943-af9d-6b7e1d31e0de gm4_mountaineering_steep_downhill_speed_boost 0.150 multiply_base
+
+# Give an advancement if not yet achieved
+execute if entity @s[advancements={gm4:ski=true}] run advancement grant @s only gm4:ski_fast

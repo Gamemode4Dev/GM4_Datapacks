@@ -1,0 +1,34 @@
+{
+    "display": {
+      "icon": {
+        "item": "diamond_boots",
+        "nbt": "{CustomModelData:3420001}"
+      },
+      "title": {
+        "translate": "%1$s%3427655$s",
+        "with": [
+          "Ski Speedily",
+          {
+            "translate": "advancement.gm4.mountaineering.title"
+          }
+        ]
+      },
+      "description": {
+        "translate": "%1$s%3427655$s",
+        "with": [
+          "Reach the highest speed boost while skiing",
+          {
+            "translate": "advancement.gm4.mountaineering.description"
+          }
+        ],
+        "color": "gray"
+      }
+    },
+    "parent": "gm4:ski",
+    "criteria": {
+        "requirement": {
+          "trigger": "minecraft:impossible"
+        }
+      }
+  }
+  
