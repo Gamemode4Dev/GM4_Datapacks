@@ -4,13 +4,13 @@
 # run from main
 
 # Adds tags for whether the player is skiing normally or skiing on a non-snowy block
-execute run function gm4_mountaineering:ski_effects/check_snowy_block
+function gm4_mountaineering:ski_effects/check_snowy_block
 
 # Adds particles at the player's feet when moving
 execute if entity @s[tag=gm4_mountaineering_skiing] unless block ~ ~-2 ~ minecraft:air run particle minecraft:cloud ~ ~ ~ 0.1 0.1 0.1 0.001 50 normal
 
 # Records the player's y-velocity in a scoreboard
-execute run function gm4_mountaineering:get_velocity
+function gm4_mountaineering:get_velocity
 
 # Adds speed effects for skiing on a flat surface
 execute if entity @s[tag=gm4_mountaineering_skiing] run function gm4_mountaineering:ski_effects/flat_ski_speed/add_flat_ski_speed
