@@ -21,7 +21,11 @@
       "weight": 3
     },
     {
-      "structure": "gm4_dangerous_dungeons:ocean",
+      "structure": "gm4_dangerous_dungeons:ocean/default",
+      "weight": 3
+    },
+    {
+      "structure": "gm4_dangerous_dungeons:ocean/surface",
       "weight": 3
     },
     {
