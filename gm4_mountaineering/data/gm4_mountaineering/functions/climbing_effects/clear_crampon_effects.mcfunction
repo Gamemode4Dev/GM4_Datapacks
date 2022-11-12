@@ -5,4 +5,4 @@
 
 attribute @s minecraft:generic.movement_speed modifier remove 4e6464b7-24dd-4750-a428-74898a251ead
 tag @s remove gm4_mountaineering_facing_climbable_block
-execute run function climbing_effects/clear_climbing_effects
+execute run function gm4_mountaineering:climbing_effects/clear_climbing_effects

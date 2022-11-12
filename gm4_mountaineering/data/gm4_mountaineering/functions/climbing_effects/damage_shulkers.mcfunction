@@ -1,7 +1,7 @@
 # decrease the score of each climbing shulker
 # @s = player wearing crampons
 # at @s
-# run from climbing_effects/add_climb_effects
+# run from climbing_effects/add_climb_effects and climbing_effects/crampons_equipped
 
 tag @e[type=minecraft:shulker, tag=gm4_mountaineering_climb_assist] remove gm4_mountaineering_new_shulker
 scoreboard players remove @e[type=minecraft:shulker, tag=gm4_mountaineering_climb_assist] gm4_mountaineering_climbing_shulker_countdown 1
