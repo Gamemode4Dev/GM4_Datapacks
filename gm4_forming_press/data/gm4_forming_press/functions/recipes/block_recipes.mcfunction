@@ -2,4 +2,3 @@
 
 # logs to coal block
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if score $stack_size gm4_crafting matches ..32 if data storage gm4_forming_press:temp/crafter {Items:[{Slot:0b,item_tags:{minecraft:{logs_that_burn:1b}}},{Slot:1b,item_tags:{minecraft:{logs_that_burn:1b}}},{Slot:2b,item_tags:{minecraft:{logs_that_burn:1b}}},{Slot:3b,item_tags:{minecraft:{logs_that_burn:1b}}},{Slot:4b,item_tags:{minecraft:{logs_that_burn:1b}}},{Slot:5b,item_tags:{minecraft:{logs_that_burn:1b}}},{Slot:6b,item_tags:{minecraft:{logs_that_burn:1b}}},{Slot:7b,item_tags:{minecraft:{logs_that_burn:1b}}},{Slot:8b,item_tags:{minecraft:{logs_that_burn:1b}}}]} run loot replace block ~ ~ ~ container.0 loot gm4_forming_press:crafting/charcoal_block
-title @a actionbar ["",{"text":"block_recipes"}]
