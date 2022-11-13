@@ -1,5 +1,5 @@
 {
-  "last_commit": "1823e65c65d3971fa93d9485a09d43a278ceaae1",
+  "last_commit": "5e5be6214150734f8389619256718b98069bb180",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -173,7 +173,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_better_fire",
@@ -1448,7 +1448,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_potion_liquids",
