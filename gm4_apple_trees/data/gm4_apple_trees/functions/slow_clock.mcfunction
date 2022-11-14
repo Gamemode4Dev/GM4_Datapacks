@@ -1,0 +1,3 @@
+schedule function gm4_apple_trees:main 60s
+
+execute as @e[type=armor_stand,tag=gm4_apple] run function gm4_apple_trees:leaf/age

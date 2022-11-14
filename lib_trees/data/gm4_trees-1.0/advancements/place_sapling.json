@@ -1,0 +1,89 @@
+{
+  "criteria": {
+    "place_sapling": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_trees"
+              },
+              "score": "load.status"
+            },
+            "range": {
+              "min": 1
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_trees_minor"
+              },
+              "score": "load.status"
+            },
+            "range": {
+              "min": 0
+            }
+          }
+        ],
+        "item": {
+          "nbt": "{gm4_trees:{item:{id:\"sapling\"}}}"
+        }
+      }
+    },
+    "backwards_compat": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_trees"
+              },
+              "score": "load.status"
+            },
+            "range": {
+              "min": 1
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_trees_minor"
+              },
+              "score": "load.status"
+            },
+            "range": {
+              "min": 0
+            }
+          }
+        ],
+        "item": {
+          "nbt": "{gm4_fruiting_trees:{item:{id:\"sapling\"}}}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "place_sapling",
+      "backwards_compat"
+    ]
+  ],
+  "rewards": {
+    "function": "gm4_trees-1.0:sapling/place_sapling"
+  }
+}
