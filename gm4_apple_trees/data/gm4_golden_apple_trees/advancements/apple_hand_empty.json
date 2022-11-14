@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "apple": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_apple_trees"
+              },
+              "score": "load.status"
+            },
+            "range": {
+              "min": 1
+            }
+          }
+        ],
+        "item": {
+          "count": 0
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:armor_stand",
+              "nbt": "{Tags:[\"gm4_golden_apple\",\"gm4_ripe_apple\"]}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_golden_apple_trees:leaf/apple/hand_interact"
+  }
+}

@@ -4,7 +4,7 @@
   "step": "vegetal_decoration",
   "spawn_overrides": {},
   "terrain_adaptation": "beard_thin",
-  "start_pool": "gm4_apple_trees:apple_trees_wg",
+  "start_pool": "gm4_apple_trees:apple_trees",
   "size": 6,
   "start_height": {
     "absolute": 0

@@ -31,7 +31,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:armor_stand",
-              "nbt": "{Tags:[\"gm4_ripe_apple\"]}"
+              "nbt": "{Tags:[\"gm4_apple\",\"gm4_ripe_apple\"]}"
             }
           }
         ]
