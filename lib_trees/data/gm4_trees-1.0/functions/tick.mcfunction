@@ -5,6 +5,6 @@ execute as @e[type=area_effect_cloud,tag=gm4_fruiting_sapling] at @s run functio
 execute as @e[type=marker,tag=gm4_fruiting_sapling] run function #gm4_trees:upgrade_fruiting_to_general
 
 # process saplings
-execute as @e[type=marker,tag=gm4_sapling] at @s run function gm4_trees-1.0:sapling/process
+execute as @e[type=marker,tag=gm4_tree_sapling] at @s run function gm4_trees-1.0:sapling/process
 # process leaves
 execute as @e[type=marker,tag=gm4_tree_leaf] at @s if block ~ ~ ~ #gm4_trees-1.0:empty_block run function #gm4_trees:destroy_leaf

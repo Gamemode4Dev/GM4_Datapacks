@@ -1,5 +1,5 @@
 # verifies that the module is enabled and that the sapling type is from this module
-# @s = gm4_sapling marker
+# @s = gm4_tree_sapling marker
 # located at world spawn
 # run from gm4_trees-1.0:tick via #gm4_trees:upgrade_fruiting_to_general
 
