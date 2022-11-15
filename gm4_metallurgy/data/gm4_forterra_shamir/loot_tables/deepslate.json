@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:cobblestone"
+          "name": "minecraft:cobbled_deepslate"
         }
       ]
     },
@@ -209,6 +209,34 @@
                   }
                 },
                 "biome": "minecraft:windswept_hills"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:uniform_bonus_count",
+              "parameters": {
+                "bonusMultiplier": 1.25
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "position": {
+                  "y": {
+                    "min": -63,
+                    "max": 16
+                  }
+                }
               }
             }
           ]
@@ -467,7 +495,7 @@
         },
         {
           "type": "minecraft:empty",
-          "weight": 1000
+          "weight": 400
         }
       ]
     }
