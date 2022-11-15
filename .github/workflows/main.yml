@@ -74,7 +74,7 @@ jobs:
           mv -f out/* release/$VERSION
           cd release
           git add .
-          git commit -m "🚀 ${{ github.event.after }} ${{ toJSON(github.event.head_commit.message) }}"
+          git commit -m '🚀 ${{ github.event.after }} ${{ toJSON(github.event.head_commit.message) }}'
 
       - name: Push release
         if: github.event_name != 'pull_request'
