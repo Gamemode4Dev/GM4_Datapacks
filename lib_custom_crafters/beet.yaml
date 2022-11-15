@@ -19,6 +19,9 @@ require:
   - beet.contrib.model_merging
   - beet.contrib.babelbox
 
+require:
+  - gm4.plugins.resource_pack
+
 pipeline:
   - lib_custom_crafters.generate_item_tags
   - gm4.plugins.module.gm4_root_advancement

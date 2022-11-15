@@ -87,6 +87,8 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: b
 
 	build_dynamic_config(config, ctx, project, watch, link) # start the project build
 
+	os.remove(f.name) # delete tempfile
+
 
 @beet.command()
 def clean():
