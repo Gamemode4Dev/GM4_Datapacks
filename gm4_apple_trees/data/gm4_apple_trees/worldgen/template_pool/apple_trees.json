@@ -43,24 +43,6 @@
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
-        "location": "gm4_apple_trees:apple_tree_short_5",
-        "processors": "minecraft:empty"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "element_type": "minecraft:legacy_single_pool_element",
-        "projection": "rigid",
-        "location": "gm4_apple_trees:apple_tree_short_6",
-        "processors": "minecraft:empty"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "element_type": "minecraft:legacy_single_pool_element",
-        "projection": "rigid",
         "location": "gm4_apple_trees:apple_tree_tall_1",
         "processors": "minecraft:empty"
       }
@@ -89,24 +71,6 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "gm4_apple_trees:apple_tree_tall_4",
-        "processors": "minecraft:empty"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "element_type": "minecraft:legacy_single_pool_element",
-        "projection": "rigid",
-        "location": "gm4_apple_trees:apple_tree_tall_5",
-        "processors": "minecraft:empty"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "element_type": "minecraft:legacy_single_pool_element",
-        "projection": "rigid",
-        "location": "gm4_apple_trees:apple_tree_tall_6",
         "processors": "minecraft:empty"
       }
     }
