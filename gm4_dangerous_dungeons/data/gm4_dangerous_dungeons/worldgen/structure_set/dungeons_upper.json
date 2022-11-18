@@ -2,35 +2,35 @@
   "structures": [
     {
       "structure": "gm4_dangerous_dungeons:badlands/lower",
-      "weight": 2
+      "weight": 8
     },
     {
       "structure": "gm4_dangerous_dungeons:badlands/upper",
-      "weight": 3
+      "weight": 10
     },
     {
       "structure": "gm4_dangerous_dungeons:stone/default",
-      "weight": 2
+      "weight": 9
     },
     {
       "structure": "gm4_dangerous_dungeons:stone/ocean",
-      "weight": 2
+      "weight": 9
     },
     {
       "structure": "gm4_dangerous_dungeons:desert",
-      "weight": 3
+      "weight": 10
     },
     {
       "structure": "gm4_dangerous_dungeons:ocean/default",
-      "weight": 3
+      "weight": 7
     },
     {
       "structure": "gm4_dangerous_dungeons:ocean/surface",
-      "weight": 3
+      "weight": 12
     },
     {
       "structure": "gm4_dangerous_dungeons:snowy",
-      "weight": 4
+      "weight": 12
     }
   ],
   "placement": {

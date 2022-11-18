@@ -1,6 +1,6 @@
 {
   "name": "gm4_dangerous_dungeons:subpart/desert/medium_1_features",
-  "fallback": "minecraft:empty",
+  "fallback": "gm4_dangerous_dungeons:subpart/desert/medium_1_features",
   "elements": [
     {
       "weight": 1,
