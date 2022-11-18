@@ -10,11 +10,11 @@
     },
     {
       "structure": "gm4_dangerous_dungeons:stone/default",
-      "weight": 9
+      "weight": 10
     },
     {
       "structure": "gm4_dangerous_dungeons:stone/ocean",
-      "weight": 9
+      "weight": 10
     },
     {
       "structure": "gm4_dangerous_dungeons:desert",
@@ -22,11 +22,7 @@
     },
     {
       "structure": "gm4_dangerous_dungeons:ocean/default",
-      "weight": 7
-    },
-    {
-      "structure": "gm4_dangerous_dungeons:ocean/surface",
-      "weight": 12
+      "weight": 8
     },
     {
       "structure": "gm4_dangerous_dungeons:snowy",
@@ -36,7 +32,7 @@
   "placement": {
     "type": "minecraft:random_spread",
     "salt": 350397626,
-    "spacing": 8,
+    "spacing": 6,
     "separation": 3
   }
 }

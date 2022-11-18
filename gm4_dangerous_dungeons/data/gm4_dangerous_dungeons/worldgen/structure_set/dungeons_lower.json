@@ -6,13 +6,13 @@
     },
     {
       "structure": "gm4_dangerous_dungeons:lush",
-      "weight": 3
+      "weight": 4
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
     "salt": 1115141679,
-    "spacing": 8,
+    "spacing": 7,
     "separation": 3
   }
 }

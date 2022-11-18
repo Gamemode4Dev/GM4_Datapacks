@@ -17,22 +17,6 @@
       "weight": 6
     },
     {
-      "structure": "gm4_tower_structures:ocean/large_ship",
-      "weight": 9
-    },
-    {
-      "structure": "gm4_tower_structures:ocean/medium_ship",
-      "weight": 9
-    },
-    {
-      "structure": "gm4_tower_structures:ocean/small_ship",
-      "weight": 10
-    },
-    {
-      "structure": "gm4_tower_structures:ocean/raft",
-      "weight": 10
-    },
-    {
       "structure": "gm4_tower_structures:segmented/cold_frozen",
       "weight": 10
     },
@@ -56,7 +40,7 @@
   "placement": {
     "type": "minecraft:random_spread",
     "salt": 1948932716,
-    "spacing": 12,
-    "separation": 3
+    "spacing": 13,
+    "separation": 5
   }
 }
