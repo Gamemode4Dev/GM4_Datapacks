@@ -12,6 +12,10 @@
     },
     "module_name": "Mountaineering",
     "module_id": "mountaineering",
+    "libraries": [
+        "lib_machines",
+        "lib_forceload"
+    ],
     "site_description": "A mezze of mountaineering means!",
     "video_link": "YOUTUBE_VIDEO_URL",
     "wiki_link": "WIKI_URL",
