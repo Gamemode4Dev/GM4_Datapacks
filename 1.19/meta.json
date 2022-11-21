@@ -1,5 +1,5 @@
 {
-  "last_commit": "a0ed67c54d5b8fbc1e57dbdfe9604fae804ea6ba",
+  "last_commit": "9fea10e58a42d43968e8dec704b9173c04cacce7",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -50,7 +50,7 @@
       },
       "hidden": false,
       "important_note": "Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.",
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_audere_shamir",
@@ -87,8 +87,20 @@
       ],
       "requires": [],
       "recommends": [
+        "gm4_resource_pack",
+        "gm4_relocators",
         "gm4_standard_crafting",
-        "gm4_record_crafting"
+        "gm4_record_crafting",
+        "gm4_ender_hoppers",
+        "gm4_enchantment_extractors",
+        "gm4_forming_press",
+        "gm4_block_compressors",
+        "gm4_disassemblers",
+        "gm4_tunnel_bores",
+        "gm4_boots_of_ostara",
+        "gm4_heart_canisters",
+        "gm4_smelteries",
+        "gm4_liquid_tanks"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters/Auto_Crafting",
       "video_link": "",
@@ -99,7 +111,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_bat_grenades",
@@ -108,7 +120,10 @@
       "categories": [],
       "libraries": [],
       "requires": [],
-      "recommends": [],
+      "recommends": [
+        "gm4_enderman_support_class",
+        "gm4_metallurgy"
+      ],
       "wiki_link": "https://wiki.gm4.co/wiki/Bat_Grenades",
       "video_link": "https://www.youtube.com/watch?v=uUoEKtte1GQ",
       "credits": {
@@ -121,7 +136,7 @@
       },
       "hidden": false,
       "important_note": "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_beehive_inspector",
@@ -182,7 +197,10 @@
       "categories": [],
       "libraries": [],
       "requires": [],
-      "recommends": [],
+      "recommends": [
+        "gm4_bat_grenades",
+        "gm4_enderman_support_class"
+      ],
       "wiki_link": "https://wiki.gm4.co/wiki/Better_Fire",
       "video_link": "https://www.youtube.com/watch?v=J5024LhHuWk",
       "credits": {
@@ -199,7 +217,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_block_compressors",
@@ -212,7 +230,20 @@
       ],
       "requires": [],
       "recommends": [
-        "gm4_relocators"
+        "gm4_resource_pack",
+        "gm4_relocators",
+        "gm4_standard_crafting",
+        "gm4_auto_crafting",
+        "gm4_record_crafting",
+        "gm4_ender_hoppers",
+        "gm4_enchantment_extractors",
+        "gm4_forming_press",
+        "gm4_disassemblers",
+        "gm4_tunnel_bores",
+        "gm4_boots_of_ostara",
+        "gm4_heart_canisters",
+        "gm4_smelteries",
+        "gm4_liquid_tanks"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Block_Compressors",
       "video_link": "https://www.youtube.com/watch?v=sdrTJYjL8C0",
@@ -235,7 +266,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_book_binders",
@@ -273,8 +304,10 @@
       ],
       "requires": [],
       "recommends": [
+        "gm4_resource_pack",
         "gm4_desire_lines",
-        "gm4_better_armour_stands"
+        "gm4_better_armour_stands",
+        "gm4_standard_crafting"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Boots_of_Ostara",
       "video_link": "https://www.youtube.com/watch?v=H4UGM6_wGCE",
@@ -291,7 +324,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_cement_mixers",
@@ -324,7 +357,11 @@
       "categories": [],
       "libraries": [],
       "requires": [],
-      "recommends": [],
+      "recommends": [
+        "gm4_display_frames",
+        "gm4_better_armour_stands",
+        "gm4_holographic_tags"
+      ],
       "wiki_link": "https://wiki.gm4.co/wiki/Chairs",
       "video_link": "https://www.youtube.com/watch?v=7KbBw1hEKdY",
       "credits": {
@@ -337,7 +374,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_combat_expanded",
@@ -349,7 +386,9 @@
         "lib_lore"
       ],
       "requires": [],
-      "recommends": [],
+      "recommends": [
+        "gm4_metallurgy"
+      ],
       "wiki_link": "https://wiki.gm4.co/wiki/Combat_Expanded",
       "video_link": "",
       "credits": {
@@ -359,7 +398,7 @@
       },
       "hidden": false,
       "important_note": "Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.",
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_cooler_caves",
@@ -411,7 +450,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_crossbow_cartridges",
@@ -506,7 +545,20 @@
       ],
       "requires": [],
       "recommends": [
-        "gm4_relocators"
+        "gm4_resource_pack",
+        "gm4_relocators",
+        "gm4_standard_crafting",
+        "gm4_auto_crafting",
+        "gm4_record_crafting",
+        "gm4_ender_hoppers",
+        "gm4_enchantment_extractors",
+        "gm4_forming_press",
+        "gm4_block_compressors",
+        "gm4_tunnel_bores",
+        "gm4_boots_of_ostara",
+        "gm4_heart_canisters",
+        "gm4_smelteries",
+        "gm4_liquid_tanks"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Disassemblers",
       "video_link": "",
@@ -527,7 +579,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19010
+      "patch": 19011
     },
     {
       "id": "gm4_display_frames",
@@ -539,7 +591,11 @@
         "lib_potion_tracking"
       ],
       "requires": [],
-      "recommends": [],
+      "recommends": [
+        "gm4_chairs",
+        "gm4_better_armour_stands",
+        "gm4_holographic_tags"
+      ],
       "wiki_link": "https://wiki.gm4.co/wiki/Display_Frames",
       "video_link": "",
       "credits": {
@@ -553,7 +609,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_dripleaf_filters",
@@ -588,7 +644,20 @@
       ],
       "requires": [],
       "recommends": [
-        "gm4_relocators"
+        "gm4_resource_pack",
+        "gm4_relocators",
+        "gm4_standard_crafting",
+        "gm4_auto_crafting",
+        "gm4_record_crafting",
+        "gm4_ender_hoppers",
+        "gm4_forming_press",
+        "gm4_block_compressors",
+        "gm4_disassemblers",
+        "gm4_tunnel_bores",
+        "gm4_boots_of_ostara",
+        "gm4_heart_canisters",
+        "gm4_smelteries",
+        "gm4_liquid_tanks"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Enchantment_Extractors",
       "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
@@ -610,7 +679,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19009
+      "patch": 19010
     },
     {
       "id": "gm4_end_fishing",
@@ -636,7 +705,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_ender_hoppers",
@@ -650,7 +719,19 @@
       "requires": [],
       "recommends": [
         "gm4_resource_pack",
-        "gm4_relocators"
+        "gm4_relocators",
+        "gm4_standard_crafting",
+        "gm4_auto_crafting",
+        "gm4_record_crafting",
+        "gm4_enchantment_extractors",
+        "gm4_forming_press",
+        "gm4_block_compressors",
+        "gm4_disassemblers",
+        "gm4_tunnel_bores",
+        "gm4_boots_of_ostara",
+        "gm4_heart_canisters",
+        "gm4_smelteries",
+        "gm4_liquid_tanks"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
       "video_link": "https://www.youtube.com/watch?v=wrwg4BDgEGU",
@@ -671,7 +752,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19009
+      "patch": 19010
     },
     {
       "id": "gm4_enderman_support_class",
@@ -680,7 +761,9 @@
       "categories": [],
       "libraries": [],
       "requires": [],
-      "recommends": [],
+      "recommends": [
+        "gm4_bat_grenades"
+      ],
       "wiki_link": "https://wiki.gm4.co/wiki/Enderman_Support_Class",
       "video_link": "https://www.youtube.com/watch?v=2hWZ4OKUaqI",
       "credits": {
@@ -693,7 +776,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_everstone",
@@ -731,8 +814,20 @@
       ],
       "requires": [],
       "recommends": [
+        "gm4_resource_pack",
+        "gm4_relocators",
         "gm4_standard_crafting",
-        "gm4_relocators"
+        "gm4_auto_crafting",
+        "gm4_record_crafting",
+        "gm4_ender_hoppers",
+        "gm4_enchantment_extractors",
+        "gm4_block_compressors",
+        "gm4_disassemblers",
+        "gm4_tunnel_bores",
+        "gm4_boots_of_ostara",
+        "gm4_heart_canisters",
+        "gm4_smelteries",
+        "gm4_liquid_tanks"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Forming_Press",
       "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
@@ -753,7 +848,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19010
+      "patch": 19011
     },
     {
       "id": "gm4_fulcio_shamir",
@@ -801,7 +896,7 @@
       },
       "hidden": true,
       "important_note": "Experimental Module! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.",
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_heart_canisters",
@@ -814,7 +909,22 @@
         "lib_forceload"
       ],
       "requires": [],
-      "recommends": [],
+      "recommends": [
+        "gm4_resource_pack",
+        "gm4_relocators",
+        "gm4_standard_crafting",
+        "gm4_auto_crafting",
+        "gm4_record_crafting",
+        "gm4_ender_hoppers",
+        "gm4_enchantment_extractors",
+        "gm4_forming_press",
+        "gm4_block_compressors",
+        "gm4_disassemblers",
+        "gm4_tunnel_bores",
+        "gm4_boots_of_ostara",
+        "gm4_smelteries",
+        "gm4_liquid_tanks"
+      ],
       "wiki_link": "https://wiki.gm4.co/wiki/Heart_Canisters",
       "video_link": "https://www.youtube.com/watch?v=zjmL6rjoq0g",
       "credits": {
@@ -836,7 +946,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_holographic_tags",
@@ -943,7 +1053,7 @@
       },
       "hidden": false,
       "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_liquid_minecarts",
@@ -976,7 +1086,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19008
+      "patch": 19009
     },
     {
       "id": "gm4_liquid_tanks",
@@ -1016,7 +1126,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_live_catch",
@@ -1134,7 +1244,7 @@
       },
       "hidden": false,
       "important_note": "Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
-      "patch": 19012
+      "patch": 19013
     },
     {
       "id": "gm4_midnight_menaces",
@@ -1185,7 +1295,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19009
+      "patch": 19010
     },
     {
       "id": "gm4_mysterious_midnights",
@@ -1215,7 +1325,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_note_block_interface",
@@ -1267,7 +1377,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19010
+      "patch": 19011
     },
     {
       "id": "gm4_orbis",
@@ -1480,7 +1590,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_potion_swords",
@@ -1536,7 +1646,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_relocators",
@@ -1574,7 +1684,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_rope_ladders",
@@ -1593,7 +1703,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_scuba_gear",
@@ -1624,7 +1734,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_shroomites",
@@ -1685,7 +1795,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_soul_glass",
@@ -1712,7 +1822,7 @@
       },
       "hidden": false,
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_spawner_minecarts",
@@ -1790,7 +1900,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_sunken_treasure",
@@ -1872,7 +1982,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_tinkering_compressors",
@@ -1909,7 +2019,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_tnt_landmines",
@@ -1939,7 +2049,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_tower_structures",
@@ -1998,7 +2108,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_tunnel_bores",
@@ -2030,7 +2140,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19009
+      "patch": 19010
     },
     {
       "id": "gm4_undead_players",
@@ -2079,7 +2189,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_vertical_rails",
@@ -2242,7 +2352,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19009
+      "patch": 19010
     },
     {
       "id": "gm4_zauber_liquids",
