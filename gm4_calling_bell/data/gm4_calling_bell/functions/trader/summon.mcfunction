@@ -1,7 +1,7 @@
 # summon a wandering trader for the player
 # @s = player right clicking bell with emerald
 # above bell
-# run from gm4_calling_bell:trader/init
+# run from gm4_calling_bell:bell/ray/loop
 
 # summon trader
 summon wandering_trader ~ ~ ~ {Tags:["gm4_calling_bell_trader"],DespawnDelay:24000}

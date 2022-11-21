@@ -4,3 +4,4 @@ execute unless score gm4_trades load.status matches 1 unless score gm4_trades_mi
 
 execute if score gm4_calling_bell load.status matches 1 run function gm4_calling_bell:init
 execute unless score gm4_calling_bell load.status matches 1 run schedule clear gm4_calling_bell:tick
+execute unless score gm4_calling_bell load.status matches 1 run schedule clear gm4_calling_bell:day_clock
