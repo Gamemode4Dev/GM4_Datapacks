@@ -20,7 +20,20 @@
     "video_link": "https://www.youtube.com/watch?v=sdrTJYjL8C0",
     "wiki_link": "https://wiki.gm4.co/wiki/Block_Compressors",
     "recommended_modules": [
-        "relocators"
+        "resource_pack",
+        "relocators",
+        "standard_crafting",
+        "auto_crafting",
+        "record_crafting",
+        "ender_hoppers",
+        "enchantment_extractors",
+        "forming_press",
+        "disassemblers",
+        "tunnel_bores",
+        "boots_of_ostara",
+        "heart_canisters",
+        "smelteries",
+        "liquid_tanks"
     ],
     "credits": {
         "Creator": [
