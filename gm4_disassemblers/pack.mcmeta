@@ -20,7 +20,20 @@
     "video_link": "",
     "wiki_link": "https://wiki.gm4.co/wiki/Disassemblers",
     "recommended_modules": [
-        "relocators"
+        "resource_pack",
+        "relocators",
+        "standard_crafting",
+        "auto_crafting",
+        "record_crafting",
+        "ender_hoppers",
+        "enchantment_extractors",
+        "forming_press",
+        "block_compressors",
+        "tunnel_bores",
+        "boots_of_ostara",
+        "heart_canisters",
+        "smelteries",
+        "liquid_tanks"
     ],
     "credits": {
         "Creator": [

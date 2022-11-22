@@ -19,7 +19,11 @@
     "site_description": "Splash item frames with invisibilty to make invisbible item frames! Great for interior decor!",
     "wiki_link": "https://wiki.gm4.co/wiki/Display_Frames",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "chairs",
+        "better_armour_stands",
+        "holographic_tags"
+    ],
     "credits": {
         "Creators": [
             "BluePsychoRanger",
