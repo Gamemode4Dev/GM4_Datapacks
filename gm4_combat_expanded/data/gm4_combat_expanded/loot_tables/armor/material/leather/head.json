@@ -48,7 +48,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{armor_clamp:-1,unidentified:0,slot:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.leather_helmet\"}'}}"
+              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-1,unidentified:0,slot:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.leather_helmet\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",

@@ -48,7 +48,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{armor_clamp:-3,unidentified:0,slot:2,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_leggings\"}'}}"
+              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-3,unidentified:0,slot:2,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_leggings\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",
