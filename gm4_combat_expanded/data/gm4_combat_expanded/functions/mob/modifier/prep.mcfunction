@@ -5,7 +5,7 @@
 
 # biome specific modifiers for any mob
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_stats gm4_ce_data 3
-execute if predicate gm4_combat_expanded:mob/modifier/snowy run scoreboard players add $mob_health gm4_ce_data 4
+execute if predicate gm4_combat_expanded:mob/modifier/snowy run scoreboard players add $mob_health gm4_ce_data 8
 execute if predicate gm4_combat_expanded:mob/modifier/snowy run attribute @s generic.movement_speed modifier add 8b68cb8f-b3ac-489b-bb24-ed6cca2fcacf "gm4_ce_modifier_snowy" -0.15 multiply_base
 execute if predicate gm4_combat_expanded:mob/modifier/mountainous run scoreboard players add $mob_damage gm4_ce_data 2
 execute if predicate gm4_combat_expanded:mob/modifier/burned run scoreboard players add $mob_speed gm4_ce_data 3

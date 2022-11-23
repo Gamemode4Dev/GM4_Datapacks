@@ -17,3 +17,6 @@ execute as @e[type=wolf,tag=gm4_ce_wolf] run function gm4_combat_expanded:armor/
 
 # advance spores
 execute as @e[type=item,tag=gm4_ce_spore] at @s run function gm4_combat_expanded:mob/effect/spores/advance
+
+# phantoms drown under water
+execute as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water run effect give @s wither 1 1 true
