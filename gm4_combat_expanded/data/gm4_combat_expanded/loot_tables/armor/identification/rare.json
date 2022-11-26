@@ -5,31 +5,31 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/unidentified/rare/consume"
+          "name": "gm4_combat_expanded:armor/identification/rare/consume"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/unidentified/rare/immune"
+          "name": "gm4_combat_expanded:armor/identification/rare/immune"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/unidentified/rare/reactive"
+          "name": "gm4_combat_expanded:armor/identification/rare/reactive"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/unidentified/rare/shadow"
+          "name": "gm4_combat_expanded:armor/identification/rare/shadow"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/unidentified/rare/sneak"
+          "name": "gm4_combat_expanded:armor/identification/rare/sneak"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/unidentified/rare/soothe"
+          "name": "gm4_combat_expanded:armor/identification/rare/soothe"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/unidentified/rare/trade"
+          "name": "gm4_combat_expanded:armor/identification/rare/trade"
         }
       ]
     }

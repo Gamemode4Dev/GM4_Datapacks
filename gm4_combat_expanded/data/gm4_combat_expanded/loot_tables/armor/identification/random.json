@@ -6,17 +6,17 @@
         {
           "type": "minecraft:loot_table",
           "weight": 91,
-          "name": "gm4_combat_expanded:armor/unidentified/common"
+          "name": "gm4_combat_expanded:armor/identification/common"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 7,
-          "name": "gm4_combat_expanded:armor/unidentified/rare"
+          "name": "gm4_combat_expanded:armor/identification/rare"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "gm4_combat_expanded:armor/unidentified/epic"
+          "name": "gm4_combat_expanded:armor/identification/epic"
         }
       ]
     }

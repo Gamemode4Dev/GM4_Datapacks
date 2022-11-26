@@ -55,7 +55,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-3,unidentified:0,slot:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_helmet\"}'}}"
+              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-3,slot:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_helmet\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",

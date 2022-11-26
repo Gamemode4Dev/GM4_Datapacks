@@ -5,23 +5,23 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/unidentified/epic/challenge"
+          "name": "gm4_combat_expanded:armor/identification/epic/challenge"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/unidentified/epic/guardian"
+          "name": "gm4_combat_expanded:armor/identification/epic/guardian"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/unidentified/epic/overload"
+          "name": "gm4_combat_expanded:armor/identification/epic/overload"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/unidentified/epic/vorpal"
+          "name": "gm4_combat_expanded:armor/identification/epic/vorpal"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/unidentified/epic/witch"
+          "name": "gm4_combat_expanded:armor/identification/epic/witch"
         }
       ]
     }
