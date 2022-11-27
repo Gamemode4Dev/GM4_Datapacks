@@ -38,6 +38,18 @@
                                     "op": "merge"
                                 }
                             ]
+                        },
+                        {
+                            "function": "minecraft:set_attributes",
+                            "modifiers": [
+                                {
+                                    "attribute": "minecraft:generic.movement_speed",
+                                    "name": "gm4_mountaineering_crampon_slowness",
+                                    "amount": -0.2,
+                                    "operation": "multiply_base",
+                                    "slot": "feet"
+                                }
+                            ]
                         }
                     ]
                 }
