@@ -1,7 +1,7 @@
 # add the climbing tag, and spawn shulkers (which die after a brief time) to allow the player to climb a vertical wall
 # @s = player wearing crampons, with using_crampons tag, and facing a climbable block
 # at @s
-# run from climbing_main
+# run from fast_main
 
 # provide jump boost
 effect give @s jump_boost 1 1 true 
