@@ -4,16 +4,16 @@
 # run from main
 
 # Run ski-related functions
-execute if entity @s[predicate=gm4_mountaineering:wearing_skis] run function gm4_mountaineering:ski_effects/skis_equipped
+execute at @s if entity @s[predicate=gm4_mountaineering:wearing_skis] run function gm4_mountaineering:ski_effects/skis_equipped
 
 # Clear ski-related functions when skis are removed
-execute if entity @s[predicate=!gm4_mountaineering:wearing_skis,tag=gm4_mountaineering_using_skis] run function gm4_mountaineering:ski_effects/skis_removed
+execute at @s if entity @s[predicate=!gm4_mountaineering:wearing_skis,tag=gm4_mountaineering_using_skis] run function gm4_mountaineering:ski_effects/skis_removed
 
 # Adds jump boost effects when holding poles
-execute if entity @s[predicate=gm4_mountaineering:holding_poles] run function gm4_mountaineering:pole_effects/poles_equipped
+execute at @s if entity @s[predicate=gm4_mountaineering:holding_poles] run function gm4_mountaineering:pole_effects/poles_equipped
 
 # Initiate crampons when they are first equipped
-execute if entity @s[tag=!gm4_mountaineering_using_crampons,predicate=gm4_mountaineering:wearing_crampons] run function gm4_mountaineering:climbing_effects/init_crampons
+execute at @s if entity @s[tag=!gm4_mountaineering_using_crampons,predicate=gm4_mountaineering:wearing_crampons] run function gm4_mountaineering:climbing_effects/init_crampons
 
 # Clear any crampon effects when crampons are removed
-execute if entity @s[predicate=!gm4_mountaineering:wearing_crampons,tag=gm4_mountaineering_using_crampons] run function gm4_mountaineering:climbing_effects/clear_crampon_effects
+execute at @s if entity @s[predicate=!gm4_mountaineering:wearing_crampons,tag=gm4_mountaineering_using_crampons] run function gm4_mountaineering:climbing_effects/clear_crampon_effects

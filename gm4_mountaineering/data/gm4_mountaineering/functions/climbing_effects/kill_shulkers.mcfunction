@@ -3,5 +3,5 @@
 # at @s
 # run from damage_shulkers
 
-teleport @s ~ ~-400 ~
+teleport @s ~ -10000 ~
 kill @s
