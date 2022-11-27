@@ -18,10 +18,6 @@ function gm4_mountaineering:get_velocity
 execute if entity @s[tag=gm4_mountaineering_skiing,tag=!gm4_mountaineering_ski_speed] run function gm4_mountaineering:ski_effects/flat_ski_speed/add_flat_ski_speed
 execute if entity @s[tag=!gm4_mountaineering_skiing,tag=gm4_mountaineering_ski_speed] run function gm4_mountaineering:ski_effects/flat_ski_speed/remove_flat_ski_speed
 
-# Adds slowness effects for skiing on a non-snowy block
-execute if entity @s[tag=gm4_mountaineering_skiing_off_snow,tag=!gm4_mountaineering_ski_slowness] run function gm4_mountaineering:ski_effects/ski_off_snow_slowness/add_off_snow_slowness
-execute if entity @s[tag=!gm4_mountaineering_skiing_off_snow,tag=gm4_mountaineering_ski_slowness] at @s run function gm4_mountaineering:ski_effects/ski_off_snow_slowness/remove_off_snow_slowness
-
 # Adds increased speed effects for skiing on a downhill surface
 execute if entity @s[tag=gm4_mountaineering_skiing,tag=!gm4_mountaineering_skiing_downhill,scores={gm4_mountaineering_vy=..-2}] run function gm4_mountaineering:ski_effects/downhill_ski_speed/add_downhill_ski_speed
 execute if entity @s[tag=gm4_mountaineering_skiing_downhill] run function gm4_mountaineering:ski_effects/downhill_ski_speed/check_downhill_ski_speed
