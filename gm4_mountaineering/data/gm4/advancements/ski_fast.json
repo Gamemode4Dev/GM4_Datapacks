@@ -7,7 +7,7 @@
       "title": {
         "translate": "%1$s%3427655$s",
         "with": [
-          "Ski Speedily",
+          "Ski ya Later!",
           {
             "translate": "advancement.gm4.mountaineering.title"
           }
@@ -31,4 +31,3 @@
         }
       }
   }
-  

@@ -7,7 +7,7 @@
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Ski",
+        "Piste de Résistance",
         {
           "translate": "advancement.gm4.mountaineering.title"
         }
@@ -16,7 +16,7 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Craft skis",
+        "Get yourself a pair of skis",
         {
           "translate": "advancement.gm4.mountaineering.description"
         }

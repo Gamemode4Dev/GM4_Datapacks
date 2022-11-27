@@ -3,7 +3,7 @@
 # at @s
 # run from crampons_equipped
 
-tag @s add gm4_mountaineering_facing_climbable_block
+#tag @s add gm4_mountaineering_facing_climbable_block
 
 # provide jump boost
 effect give @s jump_boost 1 1 true 
