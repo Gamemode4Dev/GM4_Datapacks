@@ -4,4 +4,5 @@
 # run from player_main
 
 scoreboard players add @s gm4_mountaineering_climbing_shulker_countdown 1
-execute as @s[scores={gm4_mountaineering_climbing_shulker_countdown=6..}] run function gm4_mountaineering:climbing_effects/kill_shulkers
+teleport @s[scores={gm4_mountaineering_climbing_shulker_countdown=6..}] ~ -10000 ~
+kill @s[scores={gm4_mountaineering_climbing_shulker_countdown=6..}]
