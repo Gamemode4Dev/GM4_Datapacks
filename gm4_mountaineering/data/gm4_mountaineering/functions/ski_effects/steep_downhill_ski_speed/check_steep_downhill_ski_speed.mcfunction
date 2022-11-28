@@ -3,8 +3,8 @@
 # at @s
 # run from skis_equipped
 
-scoreboard players remove @s[scores={gm4_mountaineering_ski_steep_downhill=1.., gm4_mountaineering_vy=-6..},predicate=!gm4_mountaineering:holding_poles] gm4_mountaineering_ski_steep_downhill 1
-scoreboard players remove @s[scores={gm4_mountaineering_ski_steep_downhill=1.., gm4_mountaineering_vy=-4..},predicate=gm4_mountaineering:holding_poles] gm4_mountaineering_ski_steep_downhill 1
+scoreboard players remove @s[scores={gm4_mountaineering_ski_steep_downhill=1..,gm4_mountaineering_vy=-6..},predicate=!gm4_mountaineering:holding_poles] gm4_mountaineering_ski_steep_downhill 1
+scoreboard players remove @s[scores={gm4_mountaineering_ski_steep_downhill=1..,gm4_mountaineering_vy=-4..},predicate=gm4_mountaineering:holding_poles] gm4_mountaineering_ski_steep_downhill 1
 scoreboard players set @s[tag=gm4_mountaineering_skiing,scores={gm4_mountaineering_vy=..-7}] gm4_mountaineering_ski_steep_downhill 4
 scoreboard players set @s[tag=gm4_mountaineering_skiing,predicate=gm4_mountaineering:holding_poles,scores={gm4_mountaineering_vy=..-7}] gm4_mountaineering_ski_steep_downhill 4
 
