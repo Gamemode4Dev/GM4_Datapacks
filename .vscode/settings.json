@@ -3,11 +3,5 @@
 	"datapack.env.jsonVersion": "1.18",
 	"datapack.env.dataVersion": "1.18",
 	"datapack.lint.stringQuote": ["hint", true],
-	"datapack.lint.nbtStringQuoteType": [
-		"hint",
-		"prefer double"
-	],
-	"githubPullRequests.ignoredPullRequestBranches": [
-		"master"
-	]
+	"datapack.lint.nbtStringQuoteType": ["hint", "prefer double"]
 }

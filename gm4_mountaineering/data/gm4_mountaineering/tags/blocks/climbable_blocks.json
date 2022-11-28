@@ -1,25 +1,25 @@
 {
     "values":[
-    "minecraft:dirt",
-    "minecraft:grass_block",
     "#minecraft:base_stone_overworld",
-    "minecraft:cobblestone",
-    "minecraft:cobbled_deepslate",
-    "minecraft:packed_ice",
-    "minecraft:blue_ice",
     "#minecraft:coal_ores",
     "#minecraft:copper_ores",
-    "minecraft:gold_ore",
-    "minecraft:deepslate_gold_ore",
-    "#minecraft:iron_ores",
     "#minecraft:diamond_ores",
     "#minecraft:emerald_ores",
+    "#minecraft:iron_ores",
     "#minecraft:lapis_ores",
     "#minecraft:redstone_ores",
-    "minecraft:polished_granite",
-    "minecraft:polished_diorite",
+    "minecraft:blue_ice",
+    "minecraft:cobbled_deepslate",
+    "minecraft:cobblestone",
+    "minecraft:deepslate_bricks",
+    "minecraft:deepslate_gold_ore",
+    "minecraft:dirt",
+    "minecraft:gold_ore",
+    "minecraft:grass_block",
+    "minecraft:packed_ice",
     "minecraft:polished_andesite",
-    "minecraft:stone_bricks",
-    "minecraft:deepslate_bricks"
+    "minecraft:polished_diorite",
+    "minecraft:polished_granite",
+    "minecraft:stone_bricks"
     ]
    }
