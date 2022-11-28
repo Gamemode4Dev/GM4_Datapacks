@@ -23,13 +23,7 @@
       "predicate": {
         "stepping_on": {
           "block": {
-            "blocks": [
-              "minecraft:ice",
-              "minecraft:packed_ice",
-              "minecraft:blue_ice",
-              "minecraft:snow",
-              "minecraft:snow_block"
-            ]
+            "tag": "gm4_mountaineering:snowy_blocks"
           }
         }
       }
