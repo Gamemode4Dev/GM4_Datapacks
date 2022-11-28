@@ -1,5 +1,5 @@
 {
-  "last_commit": "9fea10e58a42d43968e8dec704b9173c04cacce7",
+  "last_commit": "382cc8da00aa6e4ef2c319c15b21accadbf75ea7",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -325,6 +325,30 @@
       "hidden": false,
       "important_note": false,
       "patch": 19008
+    },
+    {
+      "id": "gm4_calling_bell",
+      "name": "Calling Bell",
+      "description": "Summon a Wandering Trader by using an Emerald on a Bell.",
+      "categories": [],
+      "libraries": [
+        "lib_trades"
+      ],
+      "requires": [],
+      "recommends": [
+        "gm4_apple_trees",
+        "gm4_zauber_cauldrons"
+      ],
+      "wiki_link": "https://wiki.gm4.co/wiki/Calling_Bell",
+      "video_link": "",
+      "credits": {
+        "Creator": [
+          "TheEpyonProject"
+        ]
+      },
+      "hidden": false,
+      "important_note": false,
+      "patch": 19001
     },
     {
       "id": "gm4_cement_mixers",
