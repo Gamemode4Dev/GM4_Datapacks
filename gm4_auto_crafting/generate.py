@@ -270,57 +270,7 @@ def main() -> None:
 
 
 def get_recipes(version: str, remove_files: bool = True) -> list[dict]:
-    recipes = [{"name":x, "contents":y} for x,y in json.load(request.urlopen(GITHUB_URL)).items()]
-    return recipes
-    
-
-
-# def get_sha_for_tag(repository: Repository.Repository, tag: str) -> str:
-#     """
-#     Returns a commit PyGithub object for the specified repository and tag.
-#     """
-#     print("Getting sha for \"%s\"" % tag)
-#     branches = repository.get_branches()
-#     matched_branches = [match for match in branches if match.name == tag]
-#     if matched_branches:
-#         return matched_branches[0].commit.sha
-
-#     tags = repository.get_tags()
-#     matched_tags = [match for match in tags if match.name == tag]
-#     if not matched_tags:
-#         raise ValueError('No Tag or Branch exists with that name')
-#     print("sha: %s" % matched_tags[0].commit.sha)
-#     return matched_tags[0].commit.sha
-
-
-
-# def download_files(version: str) -> None:
-#     """
-#     downloads and extracts the data files for a specific MC version
-#     """
-#     # check if zip file already exists
-#     if not os.path.exists(f"{NAME}/temp_files.zip"):
-#         # download zip file from github if it doesn't exist
-#         login = getpass.getpass("Github Login Token: ")
-#         github = Github(login_or_token=login)
-#         repo = github.get_repo(full_name_or_id=GITHUB_REPO)
-#         # generate SHA if it's not set
-#         if SHA == "":
-#             tag = version + "-data-json"
-#             sha = get_sha_for_tag(repo, tag)
-#         else:
-#             sha = SHA
-#         # get download link for specific sha
-#         link = repo.get_archive_link("zipball", sha)
-#         # download zip
-#         print(f"Downloading {link}")
-#         request.urlretrieve(link, f"{NAME}/temp_files.zip")
-#     # extract zip
-#     print("Extracting files...")
-#     with zipfile.ZipFile(f"{NAME}/temp_files.zip", 'r') as zip_ref:
-#         zip_ref.extractall(f"{NAME}/temp_files")
-#     print("Files extracted")
-
+    return [{"name":x, "contents":y} for x,y in json.load(request.urlopen(GITHUB_URL)).items()]
 
 
 def interpret_recipe(contents: dict, name: str, shapeless: bool = False) -> tuple[dict, list[str]]:
@@ -335,10 +285,10 @@ def interpret_recipe(contents: dict, name: str, shapeless: bool = False) -> tupl
     predicates = []
     while len(needs_tag) > 0:
         # create a custom item tag for the items used in an ingredient list
-        predicate = generate_custom_item_tag(needs_tag[-1])
+        predicate = generate_custom_item_tag(needs_tag.pop())
         # add the custom item tag to a list to generate a predicate for
         predicates.append(predicate)
-        needs_tag.pop()
+        
     # create loot table file for recipe output
     generate_crafting_loot_table(recipe["result"], f"{name}.json")
     # get slot_count and total_length of recipe
@@ -364,8 +314,6 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
     needs_tag = []
     pattern = []
     result = []
-    total_row = 0
-    list_ingredients = 0
     list_symbols = []
 
     while len(recipe["pattern"]) < 3:
@@ -390,12 +338,10 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
                 # assume the ingredient is an item, not a tag
                 try:
                     # if the ingredient is a list of items, create a custom item tag
-                    item = ""
                     if type(recipe["key"][symbol]) is list:
                         # if symbol is not already in the list of symbols, add it
                         if symbol not in list_symbols:
-                            list_ingredients += 1
-                            needs_tag.append({"name": f"#{NAME}:{name}_ingredient_{list_ingredients}", "values": recipe["key"][symbol]})
+                            needs_tag.append({"name": f"#{NAME}:{name}_ingredient_{len(list_symbols) + 1}", "values": recipe["key"][symbol]})
                             # account for this symbol
                             list_symbols.append(symbol)
                         # add the custom list to the pattern
@@ -404,8 +350,6 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
                         item = recipe["key"][symbol]["item"]
                     pattern_row.append(item)
 
-                    # generate output list
-                    total_row += 1
                     # based on the last item, generate loot table rolls
                     if item in buckets:
                         if len(result) and result[-1]["name"] == "minecraft:bucket":
@@ -441,17 +385,7 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
         pattern.extend(pattern_row)
 
     # left align the pattern
-    if pattern[0] == "minecraft:air" and pattern[3] == "minecraft:air" and pattern[6] == "minecraft:air":
-        pattern[0] = pattern[1]
-        pattern[1] = pattern[2]
-        pattern[2] = "minecraft:air"
-        pattern[3] = pattern[4]
-        pattern[4] = pattern[5]
-        pattern[5] = "minecraft:air"
-        pattern[6] = pattern[7]
-        pattern[7] = pattern[8]
-        pattern[8] = "minecraft:air"
-    if pattern[0] == "minecraft:air" and pattern[3] == "minecraft:air" and pattern[6] == "minecraft:air":
+    while pattern[0] == "minecraft:air" and pattern[3] == "minecraft:air" and pattern[6] == "minecraft:air":
         pattern[0] = pattern[1]
         pattern[1] = pattern[2]
         pattern[2] = "minecraft:air"
@@ -462,7 +396,7 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
         pattern[7] = pattern[8]
         pattern[8] = "minecraft:air"
     # top align the pattern
-    if pattern[0] == "minecraft:air" and pattern[1] == "minecraft:air" and pattern[2] == "minecraft:air":
+    while pattern[0] == "minecraft:air" and pattern[1] == "minecraft:air" and pattern[2] == "minecraft:air":
         pattern[0] = pattern[3]
         pattern[1] = pattern[4]
         pattern[2] = pattern[5]
@@ -472,16 +406,7 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
         pattern[6] = "minecraft:air"
         pattern[7] = "minecraft:air"
         pattern[8] = "minecraft:air"
-    if pattern[0] == "minecraft:air" and pattern[1] == "minecraft:air" and pattern[2] == "minecraft:air":
-        pattern[0] = pattern[3]
-        pattern[1] = pattern[4]
-        pattern[2] = pattern[5]
-        pattern[3] = pattern[6]
-        pattern[4] = pattern[7]
-        pattern[5] = pattern[8]
-        pattern[6] = "minecraft:air"
-        pattern[7] = "minecraft:air"
-        pattern[8] = "minecraft:air"
+
 
     # mark mirror-able recipes
     mirror = False
@@ -557,15 +482,16 @@ def analyze_shapeless_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]
     bottle_count = 0
     air_count = 0
     total_count = 0
-    list_ingredients = 0
     for entry in recipe["ingredients"]:
         # assumes the ingredient is an item, not a tag
         try:
             # if the ingredient is a list of items, create a custom item tag
             if type(entry) is list:
-                list_ingredients += 1
-                item = f"#{NAME}:" + name + "_ingredient_" + str(list_ingredients)
-                needs_tag.append({"name": item, "values": entry})
+                if ({"name": item, "values": entry} in needs_tag):
+                    item = f"#{NAME}:{name}_ingredient_{needs_tag.index({'name': item, 'values': entry})}"
+                else: 
+                    item = f"#{NAME}:{name}_ingredient_{len(needs_tag)+1}"
+                    needs_tag.append({"name": item, "values": entry})
             else:
                 item = entry["item"]
             # special case: check if the item is a bucket or bottle type (used for output)
