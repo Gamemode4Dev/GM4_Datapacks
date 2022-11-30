@@ -3,5 +3,5 @@
 # at @s
 # run from add_climb_effects
 
-execute as @e[type=shulker, tag=gm4_mountaineering_climb_assist, tag=gm4_mountaineering_new_shulker] at @s run data merge entity @s {Peek:10}
-tag @e[type=shulker, tag=gm4_mountaineering_climb_assist, tag=gm4_mountaineering_new_shulker] remove gm4_mountaineering_new_shulker
+execute as @e[type=shulker, tag=gm4_mountaineering_climb_assist, tag=gm4_mountaineering_new_shulker] run data merge entity @s {Peek:10}
+tag @e[type=shulker] remove gm4_mountaineering_new_shulker
