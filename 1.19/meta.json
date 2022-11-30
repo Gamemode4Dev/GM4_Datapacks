@@ -1,5 +1,5 @@
 {
-  "last_commit": "382cc8da00aa6e4ef2c319c15b21accadbf75ea7",
+  "last_commit": "b913104c77009747217280782f0841a87f830419",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -172,7 +172,7 @@
         "gm4_particles_pack"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Better_Armour_Stands",
-      "video_link": "https://www.youtube.com/watch?v=E7DnQTlpgrw",
+      "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw",
       "credits": {
         "Creator": [
           "Sparks"
@@ -188,7 +188,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_better_fire",
@@ -463,7 +463,7 @@
       "requires": [],
       "recommends": [],
       "wiki_link": "https://wiki.gm4.co/wiki/Cozy_Campfires",
-      "video_link": "",
+      "video_link": "https://www.youtube.com/watch?v=nvAbzAtDFhw",
       "credits": {
         "Creator": [
           "Bloo"
@@ -474,7 +474,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_crossbow_cartridges",
@@ -485,7 +485,7 @@
       "requires": [],
       "recommends": [],
       "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
-      "video_link": "",
+      "video_link": "https://www.youtube.com/watch?v=XJiGvX7l-pI",
       "credits": {
         "Creators": [
           "Denniss",
@@ -497,7 +497,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_dangerous_dungeons",
@@ -1965,7 +1965,7 @@
       "requires": [],
       "recommends": [],
       "wiki_link": "https://wiki.gm4.co/wiki/Sweethearts",
-      "video_link": "https://www.youtube.com/watch?v=BE5eHyQKnKc",
+      "video_link": "https://www.youtube.com/watch?v=mcopNZzY2dA",
       "credits": {
         "Creator": [
           "The8BitMonkey"
@@ -1980,7 +1980,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_teleportation_anchors",
