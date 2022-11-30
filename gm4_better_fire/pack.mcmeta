@@ -17,7 +17,10 @@
     "video_link": "https://www.youtube.com/watch?v=J5024LhHuWk",
     "wiki_link": "https://wiki.gm4.co/wiki/Better_Fire",
     "required_modules": [],
-    "recommended_modules": [],
+    "recommended_modules": [
+        "bat_grenades",
+        "enderman_support_class"
+    ],
     "credits": {
         "Creator": [
             "Sparks"

@@ -9,6 +9,7 @@ on:
 env:
   VERSION: '1.19'
   PATCH_PREFIX: 19000
+  COMMIT_MSG: ${{ github.event.head_commit.message }}
 
 jobs:
   test:
@@ -74,7 +75,7 @@ jobs:
           mv -f out/* release/$VERSION
           cd release
           git add .
-          git commit -m "🚀 ${{ github.event.after }}"
+          git commit -m "🚀 ${{ github.event.after }} $COMMIT_MSG"
 
       - name: Push release
         if: github.event_name != 'pull_request'
