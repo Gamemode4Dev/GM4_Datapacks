@@ -1,5 +1,5 @@
 {
-  "last_commit": "b913104c77009747217280782f0841a87f830419",
+  "last_commit": "a9d3cd585cc7c1706cc5f5b26f0f8e6bf395fd39",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1445,7 +1445,7 @@
         "gm4_poses_pack"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Particles_Pack",
-      "video_link": "https://youtu.be/GpkWIKMP6aY",
+      "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=238s",
       "credits": {
         "Creator": [
           "Sparks"
@@ -1459,7 +1459,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19004
+      "patch": 19005
     },
     {
       "id": "gm4_percurro_shamir",
@@ -1567,7 +1567,7 @@
         "gm4_particles_pack"
       ],
       "wiki_link": "https://wiki.gm4.co/wiki/Poses_Pack",
-      "video_link": "https://www.youtube.com/watch?v=E7DnQTlpgrw",
+      "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=217s",
       "credits": {
         "Creators": [
           "Sparks"
@@ -1582,7 +1582,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_potion_liquids",
