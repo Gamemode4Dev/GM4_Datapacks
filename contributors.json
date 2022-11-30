@@ -36,6 +36,10 @@
         "links": ["https://youtube.com/user/Energyxxer"]
     },
     {
+        "name":"foodiebonus",
+        "links":[]
+    },
+    {
         "name": "Fyid",
         "links": ["https://twitter.com/FyidRants"]
     },
@@ -114,8 +118,5 @@
     {
         "name": "Wumpacraft",
         "links": ["https://twitter.com/wumpacraft"]
-    },
-    {
-        "name":"foodiebonus"
     }
 ]
