@@ -1,5 +1,5 @@
 {
-  "last_commit": "1de1605a521b5d8380125d30039ce828c141c1cc",
+  "last_commit": "7de2f9e26d04666019d4d5e4c11583abf38153b4",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -50,7 +50,7 @@
       },
       "hidden": false,
       "important_note": "Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.",
-      "patch": 19009
+      "patch": 19010
     },
     {
       "id": "gm4_audere_shamir",
@@ -348,7 +348,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19002
+      "patch": 19003
     },
     {
       "id": "gm4_cement_mixers",
@@ -1319,7 +1319,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19011
+      "patch": 19012
     },
     {
       "id": "gm4_mysterious_midnights",
@@ -2376,7 +2376,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19011
+      "patch": 19012
     },
     {
       "id": "gm4_zauber_liquids",
