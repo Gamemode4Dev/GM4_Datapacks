@@ -1,5 +1,5 @@
 {
-  "last_commit": "7de2f9e26d04666019d4d5e4c11583abf38153b4",
+  "last_commit": "cd9c014ec6af58ab5b043e5310b53da4eaf5e4af",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1292,7 +1292,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_mob_curing",
