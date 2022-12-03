@@ -58,7 +58,7 @@ To load trades, a function that spawns trade options must be provided (splitting
 For each trade option a `trader_llama` entity must be spawned, the following NBT is recommended as a base:<br>
 ```summon trader_llama ~ 0 ~ {Silent:1b,NoGravity:1b,Invulnerable:1b,ChestedHorse:1b,Variant:0,Strength:1,DespawnDelay:1,Tags:["gm4_trade_option"],Items:[{},{},{}]}```<br>
 
-The tag `gm4_trade_option` is mandetory and is used by the library to identify available trade options. If the llama has to be targed again after being spawned in (e.g. for populating its inventory using `/loot` or `/item replace`), the addition of an additional, temporary, tag is recommended.
+The tag `gm4_trade_option` is mandetory and is used by the library to identify available trade options. If the llama has to be targeted again after being spawned in (e.g. for populating its inventory using `/loot` or `/item replace`), the addition of a temporary tag is recommended.
 
 The `trader_llama` holds all information about the trade within its own NBT, following a special format:
 - `Items[{Slot:2b}]` || `horse.0`: Contents of the `sell` tag of the trade option.
