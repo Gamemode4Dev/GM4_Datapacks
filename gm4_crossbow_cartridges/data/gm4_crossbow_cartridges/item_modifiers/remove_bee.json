@@ -1,0 +1,16 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "gm4_crossbow_cartridges:temp"
+    },
+    "ops": [
+      {
+        "source": "bees",
+        "target": "BlockEntityTag.Bees",
+        "op": "replace"
+      }
+    ]
+  }
+]
