@@ -1,5 +1,5 @@
 pipeline:
-  - plugins.list_modules
+  - gm4.plugins.list_modules
 
 meta:
   autosave:

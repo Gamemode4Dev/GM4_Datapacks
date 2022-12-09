@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "gamemode4"
+name = "gm4"
 version = "1.0.0"
 description = "Datapacks for https://gm4.co"
 authors = ["Gamemode 4 Contributors"]
@@ -18,7 +18,7 @@ black = "^22.6.0"
 isort = "^5.10.1"
 
 [tool.poetry.plugins.beet]
-commands = "beet-dev"
+commands = "gm4.commands"
 
 [tool.pyright]
 typeCheckingMode = "strict"

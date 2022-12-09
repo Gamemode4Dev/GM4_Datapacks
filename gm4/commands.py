@@ -26,7 +26,8 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], reload: bool,
 		"broadcast": modules,
 		"extend": "beet.yaml",
 		"pipeline": [
-			"plugins.create_description"
+			"gm4.plugins.create_description",
+			"gm4.plugins.output"
 		]
 	}
 	project.config_overrides = [f"pipeline[] = {json.dumps(config)}"]
