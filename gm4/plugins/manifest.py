@@ -1,4 +1,5 @@
 from beet import Context, TextFile
+from pathlib import Path
 from typing import Any
 import json
 import os
@@ -13,36 +14,32 @@ def run(cmd: list[str]) -> str:
 def create(ctx: Context):
 	version = os.getenv("VERSION", "1.19")
 	prefix = int(os.getenv("PATCH_PREFIX", 0))
+	release_dir = Path('release') / version
+	manifest_file = release_dir / "meta.json"
 
 	modules: list[dict[str, Any]] = [{"id": p.name} for p in sorted(ctx.directory.glob("gm4_*"))]
 
 	for module in modules:
-		id = module["id"]
-		try:
-			with open(f"{id}/beet.yaml", "r+") as f:
-				meta = yaml.safe_load(f)
-				module["name"] = meta.get("name", id)
-				module.update(meta.get("meta", {}).get("gm4", {}))
-		except:
+		project_file = Path(module["id"]) / "beet.yaml"
+		if project_file.exists():
+			project_config = yaml.safe_load(project_file.read_text())
+			module["name"] = project_config["name"]
+			module.update(project_config.get("meta", {}).get("gm4", {}))
+		else:
 			module["id"] = None
 
-	try:
-		with open(f"release/{version}/meta.json", "r") as f:
-			manifest: Any = json.load(f)
-	except:
-		manifest = {
-			"last_commit": None,
-			"modules": [],
-			"contributors": [],
-		}
+	modules = [m for m in modules if m["id"] is not None]
 
-	last_commit = manifest["last_commit"]
-	released_modules: list[dict[str, Any]] = manifest["modules"]
+	if manifest_file.exists():
+		manifest = json.loads(manifest_file.read_text())
+		last_commit = manifest["last_commit"]
+		released_modules: list[dict[str, Any]] = manifest["modules"]
+	else:
+		last_commit = None
+		released_modules = []
 
 	for module in modules:
 		id = module["id"]
-		if id is None:
-			continue
 
 		diff = run(["git", "diff", last_commit, "--shortstat", "--", id]) if last_commit else True
 		released = next((m for m in released_modules if m["id"] == id), None)
@@ -54,24 +51,23 @@ def create(ctx: Context):
 			module["patch"] = patch + 1
 			print(f"[GM4] Updating {id} to {patch + 1}")
 	
-	try:
-		with open("contributors.json", "r") as f:
-			contributors: Any = {entry["name"]: entry for entry in json.load(f)}
-	except:
+	contributors_file = Path("contributors.json")
+	if contributors_file.exists():
+		contributors_list = json.loads(contributors_file.read_text())
+		contributors: Any = {c["name"]: c for c in contributors_list}
+	else:
 		contributors = []
 
 	head = run(["git", "rev-parse", "HEAD"])
 	new_manifest = {
 		"last_commit": head,
-		"modules": [m for m in modules if m.get("id") is not None],
+		"modules": modules,
 		"contributors": contributors,
 	}
 	ctx.cache["gm4_manifest"].json = new_manifest
 
-	os.makedirs(f'release/{version}', exist_ok=True)
-	with open(f'release/{version}/meta.json', 'w') as f:
-		json.dump(new_manifest, f, indent=2)
-		f.write('\n')
+	os.makedirs(release_dir, exist_ok=True)
+	manifest_file.write_text(json.dumps(new_manifest, indent=2))
 
 
 def write_credits(ctx: Context):
