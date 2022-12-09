@@ -1,5 +1,5 @@
 {
-  "last_commit": "4e2508388acc180316aeb88550cd20adcdaa00c3",
+  "last_commit": "c6b01e5851b5a0c090b46a5533c48c9f68484f35",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2006,7 +2006,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19007
+      "patch": 19008
     },
     {
       "id": "gm4_tinkering_compressors",
