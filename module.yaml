@@ -1,0 +1,10 @@
+require:
+  - beet.contrib.extra_files
+
+pipeline:
+  - data_pack:
+      load: 'base'
+
+meta:
+  extra_files:
+    data_pack: [README.md]

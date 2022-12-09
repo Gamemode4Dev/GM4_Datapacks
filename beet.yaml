@@ -1,0 +1,7 @@
+pipeline:
+  - plugins.list_modules
+  - broadcast: 'gm4_*'
+    extend: 'beet.yaml'
+    pipeline:
+      - plugins.create_description
+      - plugins.output

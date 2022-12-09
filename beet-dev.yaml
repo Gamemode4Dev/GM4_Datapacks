@@ -1,0 +1,6 @@
+pipeline:
+  - plugins.list_modules
+
+meta:
+  autosave:
+    link: false
