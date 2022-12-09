@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_audere_shamir
 name: Audere Shamir
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_weighted_armour
 name: Weighted Armour
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

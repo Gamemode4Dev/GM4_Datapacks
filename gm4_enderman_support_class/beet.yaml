@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_enderman_support_class
 name: Enderman Support Class
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

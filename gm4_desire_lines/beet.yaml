@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_desire_lines
 name: Desire Lines
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

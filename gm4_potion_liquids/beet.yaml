@@ -3,12 +3,11 @@ extend: '../module.yaml'
 id: gm4_potion_liquids
 name: Potion Liquids
 
-data_pack:
-  load: .
-
 pipeline:
   - directory: '../lib_brewing'
     extend: 'beet.yaml'
+  - data_pack:
+      load: .
 
 meta:
   gm4:

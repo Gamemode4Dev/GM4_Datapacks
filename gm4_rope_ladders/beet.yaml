@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_rope_ladders
 name: Rope Ladders
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

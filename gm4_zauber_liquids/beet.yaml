@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_zauber_liquids
 name: Zauber Liquids
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

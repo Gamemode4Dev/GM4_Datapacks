@@ -3,12 +3,11 @@ extend: '../module.yaml'
 id: gm4_apple_trees
 name: Apple Trees
 
-data_pack:
-  load: .
-
 pipeline:
   - directory: '../lib_trades'
     extend: 'beet.yaml'
+  - data_pack:
+      load: .
 
 meta:
   gm4:

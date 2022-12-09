@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_mending_tanks
 name: Mending Tanks
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

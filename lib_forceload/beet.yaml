@@ -1,8 +1,9 @@
 id: gm4_forceload
 name: Gamemode 4 Forceload
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

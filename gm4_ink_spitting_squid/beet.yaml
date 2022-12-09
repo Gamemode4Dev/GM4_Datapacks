@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_ink_spitting_squid
 name: Ink Spitting Squid
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

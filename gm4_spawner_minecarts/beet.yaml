@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_spawner_minecarts
 name: Spawner Minecarts
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

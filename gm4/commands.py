@@ -26,7 +26,7 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], reload: bool,
 		"broadcast": modules,
 		"extend": "beet.yaml",
 		"pipeline": [
-			"gm4.plugins.create_description",
+			"gm4.plugins.write_description",
 			"gm4.plugins.output"
 		]
 	}

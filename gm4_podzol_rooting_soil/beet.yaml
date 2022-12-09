@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_podzol_rooting_soil
 name: Podzol Rooting Soil
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

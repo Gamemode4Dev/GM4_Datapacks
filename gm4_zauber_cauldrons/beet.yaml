@@ -3,9 +3,6 @@ extend: '../module.yaml'
 id: gm4_zauber_cauldrons
 name: Zauber Cauldrons
 
-data_pack:
-  load: .
-
 pipeline:
   - directory: '../lib_forceload'
     extend: 'beet.yaml'
@@ -15,6 +12,8 @@ pipeline:
     extend: 'beet.yaml'
   - directory: '../lib_trades'
     extend: 'beet.yaml'
+  - data_pack:
+      load: .
 
 meta:
   gm4:

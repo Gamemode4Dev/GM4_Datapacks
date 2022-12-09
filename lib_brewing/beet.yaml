@@ -1,8 +1,9 @@
 id: gm4_brewing
 name: Gamemode 4 Brewing
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_holographic_tags
 name: Holographic Tags
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

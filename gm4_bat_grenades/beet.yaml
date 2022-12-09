@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_bat_grenades
 name: Bat Grenades
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

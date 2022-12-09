@@ -3,12 +3,11 @@ extend: '../module.yaml'
 id: gm4_disassemblers
 name: Disassemblers
 
-data_pack:
-  load: .
-
 pipeline:
   - directory: '../lib_machines'
     extend: 'beet.yaml'
+  - data_pack:
+      load: .
 
 meta:
   gm4:

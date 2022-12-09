@@ -3,14 +3,13 @@ extend: '../module.yaml'
 id: gm4_metallurgy
 name: Metallurgy
 
-data_pack:
-  load: .
-
 pipeline:
   - directory: '../lib_player_heads'
     extend: 'beet.yaml'
   - directory: '../lib_player_heads'
     extend: 'beet.yaml'
+  - data_pack:
+      load: .
 
 meta:
   gm4:

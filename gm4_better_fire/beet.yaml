@@ -3,8 +3,9 @@ extend: '../module.yaml'
 id: gm4_better_fire
 name: Better Fire
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:

@@ -1,8 +1,9 @@
 id: gm4_trades
 name: Gamemode 4 Trades
 
-data_pack:
-  load: .
+pipeline:
+  - data_pack:
+      load: .
 
 meta:
   gm4:
