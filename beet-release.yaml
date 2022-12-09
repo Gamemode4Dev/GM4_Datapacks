@@ -1,13 +1,13 @@
 pipeline:
   - gm4.plugins.list_modules
-  - gm4.plugins.create_manifest
+  - gm4.plugins.manifest.create
   - broadcast: 'gm4_*'
     extend: 'beet.yaml'
     pipeline:
-      - gm4.plugins.populate_updates
-      - gm4.plugins.populate_credits
-      - gm4.plugins.create_description
-      - gm4.plugins.output_release
+      - gm4.plugins.manifest.write_updates
+      - gm4.plugins.manifest.write_credits
+      - gm4.plugins.write_description
+      - gm4.plugins.output.release
 
 meta:
   autosave:

@@ -3,5 +3,5 @@ pipeline:
   - broadcast: 'gm4_*'
     extend: 'beet.yaml'
     pipeline:
-      - gm4.plugins.create_description
+      - gm4.plugins.write_description
       - gm4.plugins.output
