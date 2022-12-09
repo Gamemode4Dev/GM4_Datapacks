@@ -1,13 +1,34 @@
-Contributing to Gamemode 4
-==========================
+# Contributing to Gamemode 4
+Contributions are welcome! This project uses [poetry](https://python-poetry.org/) and [beet](https://mcbeet.dev) for building our data packs.
 
-## Adding a new GM4 Module
-- Create a fork of `GM4_Datapacks` using the Fork button in the top-right of the repo. You will then have a personal copy of the repo ready for your changes.
-- Each module you create should be made under a separate branch so that modules can be submitted, approved and tested individually.
+## Prerequisites
+1. Install [VSCode](https://code.visualstudio.com/)
+2. Install [git](https://git-scm.com/downloads)
+3. Install [Python]()
+4. Install [Poetry](https://python-poetry.org/docs/)
 
-### Getting the template
-- Set up a fresh Datapack or Go to [https://gm4.co/modules/generator](https://gm4.co/modules/generator) to generate your module template if one is available for your version. Be sure to **not** package the base.
-- All the functionality of your module should be inside the `gm4_module_id` namespace. The exception to this is visible advancements, which go in `gm4`. If your module does not have advancements you can delete this namespace.
+## Setup
+1. Create a fork of this repository and clone your fork locally.
+2. Each module or change should be made under a separate branch so that modules can be submitted, approved and tested individually.
+3. Run `poetry install`.
+4. Run `beet` to build all modules an `out` folder.
+
+## Developing
+Useful commands while developing:
+```bash
+# Build all modules
+$ beet build
+$ beet watch
+
+# Build only some modules
+$ beet dev bat_grenades disassemblers
+
+# Link the built packs to a local world (you only need to link once)
+$ beet dev metallurgy *_shamir --link MyWorld
+
+# auto-reload when changing files
+$ beet dev gm4_bat_grenades --reload
+```
 
 ### Load
 Gamemode 4 uses [LanternMC Load](https://github.com/LanternMC/Load) so modules work nicely with other data packs. This allows modules to check which version of the gm4 base is loaded and prevents conflicts. It also allows checking whether reliant modules are installed.
@@ -90,5 +111,5 @@ Make sure to credit all relevant people in `pack.mcmeta`. Most modules credit th
 
 To send us your finished module for testing and approval, simply submit a pull request and leave a comment if you have additional notes.
 
-## Updating a module on the repo
+### Updating a module on the repo
 If you've spotted a bug in a module or have a performance improvement you wish to make, create a branch of the repo similar to the process outlined in the section above and make your changes. Once you have edited the module files, create a pull request and leave a detailed note on why you have made your changes.
