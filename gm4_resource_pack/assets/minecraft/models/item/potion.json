@@ -45,6 +45,18 @@
             "predicate": {
                 "custom_model_data": 7
             },
+            "model": "gm4:item/standard_liquids/ink_bottle"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 8
+            },
+            "model": "gm4:item/standard_liquids/glow_ink_bottle"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 9
+            },
             "model": "minecraft:item/potion"
         },
         {
@@ -86,6 +98,18 @@
         {
             "predicate": {
                 "custom_model_data": 3420007
+            },
+            "model": "gm4:item/standard_liquids/ink_bottle"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420008
+            },
+            "model": "gm4:item/standard_liquids/glow_ink_bottle"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420009
             },
             "model": "minecraft:item/potion"
         }

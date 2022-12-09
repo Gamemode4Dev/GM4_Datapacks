@@ -47,6 +47,12 @@
             "predicate": {
                 "custom_model_data": 8
             },
+            "model": "gm4:block/auto_crafting/auto_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 9
+            },
             "model": "minecraft:item/crafting_table"
         },
         {
@@ -106,6 +112,12 @@
         {
             "predicate": {
                 "custom_model_data": 3420008
+            },
+            "model": "gm4:block/auto_crafting/auto_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420009
             },
             "model": "minecraft:item/crafting_table"
         },

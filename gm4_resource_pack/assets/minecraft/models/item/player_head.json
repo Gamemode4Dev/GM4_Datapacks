@@ -569,6 +569,12 @@
             "predicate": {
                 "custom_model_data": 140
             },
+            "model": "gm4:block/auto_crafting/auto_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 141
+            },
             "model": "minecraft:item/player_head"
         },
         {
@@ -1138,6 +1144,12 @@
         {
             "predicate": {
                 "custom_model_data": 3420140
+            },
+            "model": "gm4:block/auto_crafting/auto_crafter"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420141
             },
             "model": "minecraft:item/player_head"
         }
