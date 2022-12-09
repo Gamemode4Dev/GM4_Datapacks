@@ -11,6 +11,7 @@ Contributions are welcome! This project uses [poetry](https://python-poetry.org/
 1. Create a fork of this repository and clone your fork locally.
 2. Each module or change should be made under a separate branch so that modules can be submitted, approved and tested individually.
 3. Run `poetry install`.
+4. Poetry uses virtual environments, stored in a `.venv` folder. If VSCode doesn't detect this automatically, run `poetry shell` and then close and reopen the terminal. `(.venv)` should be printed in the terminal.
 4. Run `beet` to build all modules an `out` folder.
 
 ## Developing
