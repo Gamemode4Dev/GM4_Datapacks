@@ -7,8 +7,8 @@ data_pack:
   load: .
 
 pipeline:
-  - data_pack:
-      load: '../lib_trades'
+  - directory: '../lib_trades'
+    extend: 'beet.yaml'
 
 meta:
   gm4:

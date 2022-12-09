@@ -7,8 +7,8 @@ data_pack:
   load: .
 
 pipeline:
-  - data_pack:
-      load: '../lib_player_heads'
+  - directory: '../lib_player_heads'
+    extend: 'beet.yaml'
 
 meta:
   gm4:

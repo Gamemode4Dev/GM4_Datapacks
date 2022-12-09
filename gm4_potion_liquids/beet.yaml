@@ -7,8 +7,8 @@ data_pack:
   load: .
 
 pipeline:
-  - data_pack:
-      load: '../lib_brewing'
+  - directory: '../lib_brewing'
+    extend: 'beet.yaml'
 
 meta:
   gm4:

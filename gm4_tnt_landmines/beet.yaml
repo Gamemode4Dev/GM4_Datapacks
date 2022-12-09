@@ -7,12 +7,10 @@ data_pack:
   load: .
 
 pipeline:
-  - data_pack:
-      load: '../lib_player_heads'
-  - data_pack:
-      load: '../lib_machines'
-  - data_pack:
-      load: '../lib_forceload'
+  - directory: '../lib_player_heads'
+    extend: 'beet.yaml'
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
 
 meta:
   gm4:

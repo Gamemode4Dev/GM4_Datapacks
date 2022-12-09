@@ -2,8 +2,8 @@ require:
   - beet.contrib.extra_files
 
 pipeline:
-  - data_pack:
-      load: 'base'
+  - directory: 'base'
+    extend: 'beet.yaml'
 
 meta:
   extra_files:

@@ -7,8 +7,8 @@ data_pack:
   load: .
 
 pipeline:
-  - data_pack:
-      load: '../lib_forceload'
+  - directory: '../lib_forceload'
+    extend: 'beet.yaml'
 
 meta:
   gm4:

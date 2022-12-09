@@ -7,10 +7,8 @@ data_pack:
   load: .
 
 pipeline:
-  - data_pack:
-      load: '../lib_forceload'
-  - data_pack:
-      load: '../lib_potion_tracking'
+  - directory: '../lib_potion_tracking'
+    extend: 'beet.yaml'
 
 meta:
   gm4:
