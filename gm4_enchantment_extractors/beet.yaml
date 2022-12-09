@@ -1,0 +1,47 @@
+extend: '../module.yaml'
+
+id: gm4_enchantment_extractors
+name: Enchantment Extractors
+
+data_pack:
+  load: .
+
+pipeline:
+  - data_pack:
+      load: '../lib_machines'
+  - data_pack:
+      load: '../lib_forceload'
+
+meta:
+  gm4:
+    description: Remove enchantments from enchanted tools, armour, and weapons. But be careful, there might be unexpected side-effects.
+    required: []
+    recommended:
+      - gm4_resource_pack
+      - gm4_relocators
+      - gm4_standard_crafting
+      - gm4_auto_crafting
+      - gm4_record_crafting
+      - gm4_ender_hoppers
+      - gm4_forming_press
+      - gm4_block_compressors
+      - gm4_disassemblers
+      - gm4_tunnel_bores
+      - gm4_boots_of_ostara
+      - gm4_heart_canisters
+      - gm4_smelteries
+      - gm4_liquid_tanks
+    notes: []
+    video: https://www.youtube.com/watch?v=DT4PPHC23iM
+    wiki: https://wiki.gm4.co/wiki/Enchantment_Extractors
+    credits:
+      Creator:
+        - The8BitMonkey
+      Updated by:
+        - SpecialBuilder32
+        - Misode
+        - BluePsychoRanger
+      Textures by:
+        - kyrkis
+      Icon Design:
+        - DuckJr

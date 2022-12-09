@@ -1,0 +1,27 @@
+extend: '../module.yaml'
+
+id: gm4_sunken_treasure
+name: Sunken Treasure
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Digging sand underwater with a fortune tool can uncover buried treasures, or a nasty surprise! Who knows, maybe you'll even find some old love letters.
+    required: []
+    recommended:
+      - gm4_resource_pack
+      - gm4_scuba_gear
+    notes: []
+    video: https://www.youtube.com/watch?v=VV7ZIyIzKV0
+    wiki: https://wiki.gm4.co/wiki/Sunken_Treasure
+    credits:
+      Creators:
+        - Wumpacraft
+        - Sparks
+      Updated by:
+        - BluePsychoRanger
+        - Lue
+      Icon Design:
+        - Hozz

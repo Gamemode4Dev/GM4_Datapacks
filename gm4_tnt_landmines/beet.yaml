@@ -1,0 +1,32 @@
+extend: '../module.yaml'
+
+id: gm4_tnt_landmines
+name: TNT Landmines
+
+data_pack:
+  load: .
+
+pipeline:
+  - data_pack:
+      load: '../lib_player_heads'
+  - data_pack:
+      load: '../lib_machines'
+  - data_pack:
+      load: '../lib_forceload'
+
+meta:
+  gm4:
+    description: Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!
+    required: []
+    recommended: []
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/TNT_Landmines
+    credits:
+      Creator:
+        - Sparks
+      Updated By:
+        - kruthers
+        - BluePsychoRanger
+      Icon Design:
+        - Hozz

@@ -1,0 +1,21 @@
+id: gm4_machines
+name: Gamemode 4 Machines
+
+data_pack:
+  load: .
+
+pipeline:
+  - data_pack:
+      load: '../lib_forceload'
+
+meta:
+  gm4:
+    credits:
+      Machines Library Creator:
+        - BluePsychoRanger
+      Custom Crafters Creators:
+        - Bloo
+        - Sparks
+        - SpecialBuilder32
+      Textures by:
+        - kyrkis

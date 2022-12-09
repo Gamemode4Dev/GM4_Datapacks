@@ -1,0 +1,25 @@
+extend: '../module.yaml'
+
+id: gm4_xp_storage
+name: XP Storage
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Stand on top of an Ender Chest to store Experience, stand below to retrieve it!
+    required: []
+    recommended: []
+    notes: []
+    video: https://www.youtube.com/watch?v=hgq-5waSpVU&index=11&list=PLpa6LLAKqMWbXt5VvxCc6H4mwI-qacdGA
+    wiki: https://wiki.gm4.co/wiki/XP_Storage
+    credits:
+      Creator:
+        - Sparks
+      Updated by:
+        - Bloo
+        - Sparks
+        - SpecialBuilder32
+      Icon Design:
+        - Sparks

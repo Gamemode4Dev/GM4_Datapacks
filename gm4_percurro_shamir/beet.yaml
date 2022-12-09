@@ -1,0 +1,22 @@
+extend: '../module.yaml'
+
+id: gm4_percurro_shamir
+name: Percurro Shamir
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Adds the 'Percurro' Shamir to Metallurgy! Weapons with Percurro let you teleport past your enemies in the blink of an eye!
+    required:
+      - gm4_metallurgy
+    recommended: []
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Metallurgy/Percurro_Shamir
+    credits:
+      Creator:
+        - Bloo
+      Icon Design:
+        - BluePsychoRanger

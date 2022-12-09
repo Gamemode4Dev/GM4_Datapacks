@@ -1,0 +1,23 @@
+extend: '../module.yaml'
+
+id: gm4_holographic_tags
+name: Holographic Tags
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Set up floating messages with a simple name tag!
+    required: []
+    recommended: []
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Holographic_Tags
+    credits:
+      Creator:
+        - BluePsychoRanger
+      Inspired by:
+        - SethBling
+      Icon Design:
+        - Hozz

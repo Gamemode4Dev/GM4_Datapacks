@@ -1,0 +1,21 @@
+extend: '../module.yaml'
+
+id: gm4_cozy_campfires
+name: Cozy Campfires
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Allows Campfires to grant you up to 4 extra hearts that last for more than half of a Minecraft day. Perfect for those scary first nights in a Minecraft world.
+    required: []
+    recommended: []
+    notes: []
+    video: https://www.youtube.com/watch?v=nvAbzAtDFhw
+    wiki: https://wiki.gm4.co/wiki/Cozy_Campfires
+    credits:
+      Creator:
+        - Bloo
+      Icon Design:
+        - BluePsychoRanger

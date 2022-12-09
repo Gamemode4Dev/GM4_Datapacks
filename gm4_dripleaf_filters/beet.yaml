@@ -1,0 +1,21 @@
+extend: '../module.yaml'
+
+id: gm4_dripleaf_filters
+name: Dripleaf Filters
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Dripleaves will flick items that match a hopper's contents into the hopper for you!
+    required: []
+    recommended:
+      - gm4_book_binders
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Dripleaf_Filters
+    credits:
+      Creator:
+        - Sparks
+      Icon Design:

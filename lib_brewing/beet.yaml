@@ -1,0 +1,11 @@
+id: gm4_brewing
+name: Gamemode 4 Brewing
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    credits:
+      Creator:
+        - BluePsychoRanger

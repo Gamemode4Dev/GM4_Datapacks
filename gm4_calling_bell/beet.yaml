@@ -1,0 +1,25 @@
+extend: '../module.yaml'
+
+id: gm4_calling_bell
+name: Calling Bell
+
+data_pack:
+  load: .
+
+pipeline:
+  - data_pack:
+      load: '../lib_trades'
+
+meta:
+  gm4:
+    description: Summon a Wandering Trader by using an Emerald on a Bell.
+    required: []
+    recommended:
+      - gm4_apple_trees
+      - gm4_zauber_cauldrons
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Calling_Bell
+    credits:
+      Creator:
+        - TheEpyonProject

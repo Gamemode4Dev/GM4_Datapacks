@@ -1,0 +1,24 @@
+extend: '../module.yaml'
+
+id: gm4_sweethearts
+name: Sweethearts
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Transfer your health to another player using flowers.
+    required: []
+    recommended: []
+    notes: []
+    video: https://www.youtube.com/watch?v=mcopNZzY2dA
+    wiki: https://wiki.gm4.co/wiki/Sweethearts
+    credits:
+      Creator:
+        - The8BitMonkey
+      Updated by:
+        - BluePsychoRanger
+        - Thanathor
+      Icon Design:
+        - DuckJr

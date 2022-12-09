@@ -1,0 +1,26 @@
+extend: '../module.yaml'
+
+id: gm4_orbis
+name: Orbis
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: A seed-specific chunk scanner that modifies your world as you explore. Install expansions to add extra structures and terrain.
+    required: []
+    recommended:
+      - gm4_cooler_caves
+      - gm4_dangerous_dungeons
+      - gm4_tower_structures
+    notes: []
+    video: https://www.youtube.com/watch?v=cAsXiwLWHFo
+    wiki: https://wiki.gm4.co/wiki/Orbis
+    credits:
+      Creator:
+        - Sparks
+      Updated by:
+        - Misode
+      Icon Design:
+        - Sparks

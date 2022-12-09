@@ -1,0 +1,50 @@
+extend: '../module.yaml'
+
+id: gm4_heart_canisters
+name: Heart Canisters
+
+data_pack:
+  load: .
+
+pipeline:
+  - data_pack:
+      load: '../lib_player_heads'
+  - data_pack:
+      load: '../lib_machines'
+  - data_pack:
+      load: '../lib_forceload'
+
+meta:
+  gm4:
+    description: Introduces two tiers of pricey canisters that increase your health when carried.
+    required: []
+    recommended:
+      - gm4_resource_pack
+      - gm4_relocators
+      - gm4_standard_crafting
+      - gm4_auto_crafting
+      - gm4_record_crafting
+      - gm4_ender_hoppers
+      - gm4_enchantment_extractors
+      - gm4_forming_press
+      - gm4_block_compressors
+      - gm4_disassemblers
+      - gm4_tunnel_bores
+      - gm4_boots_of_ostara
+      - gm4_smelteries
+      - gm4_liquid_tanks
+    notes: []
+    video: https://www.youtube.com/watch?v=zjmL6rjoq0g
+    wiki: https://wiki.gm4.co/wiki/Heart_Canisters
+    credits:
+      Creators:
+        - Sparks
+        - SpiderRobotMan
+      Updated by:
+        - SpecialBuilder32
+        - Misode
+        - TheEpyonProject
+      Textures by:
+        - Jonpot
+      Icon Design:
+        - Hozz

@@ -1,0 +1,23 @@
+extend: '../module.yaml'
+
+id: gm4_phantom_scarecrows
+name: Phantom Scarecrows
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Set up Scarecrows that shoot homing rockets at Phantoms!
+    required: []
+    recommended: []
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Phantom_Scarecrows
+    credits:
+      Creator:
+        - Bloo
+      Inspired by:
+        - Chopper2112
+      Icon Design:
+        - DuckJr

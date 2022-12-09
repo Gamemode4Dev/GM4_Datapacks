@@ -1,0 +1,33 @@
+extend: '../module.yaml'
+
+id: gm4_boots_of_ostara
+name: Boots of Ostara
+
+data_pack:
+  load: .
+
+pipeline:
+  - data_pack:
+      load: '../lib_machines'
+  - data_pack:
+      load: '../lib_forceload'
+
+meta:
+  gm4:
+    description: A pair of boots every gardener would love to have! Boots of Ostara allow you to easily spread Grass and Moss, and they even stop the Desire Lines module from creating that pesky dirt.
+    required: []
+    recommended:
+      - gm4_resource_pack
+      - gm4_desire_lines
+      - gm4_better_armour_stands
+      - gm4_standard_crafting
+    notes: []
+    video: https://www.youtube.com/watch?v=H4UGM6_wGCE
+    wiki: https://wiki.gm4.co/wiki/Boots_of_Ostara
+    credits:
+      Creator:
+        - The8BitMonkey
+      Updated by:
+        - Misode
+      Icon Design:
+        - Hozz

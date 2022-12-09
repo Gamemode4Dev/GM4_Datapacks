@@ -1,0 +1,24 @@
+extend: '../module.yaml'
+
+id: gm4_chairs
+name: Chairs
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Place a saddle on a stair to have a chair to sit on!
+    required: []
+    recommended:
+      - gm4_display_frames
+      - gm4_better_armour_stands
+      - gm4_holographic_tags
+    notes: []
+    video: https://www.youtube.com/watch?v=7KbBw1hEKdY
+    wiki: https://wiki.gm4.co/wiki/Chairs
+    credits:
+      Creator:
+        - Denniss
+      Icon Design:
+        - DuckJr

@@ -1,0 +1,22 @@
+extend: '../module.yaml'
+
+id: gm4_midnight_menaces
+name: Midnight Menaces
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
+    required:
+      - gm4_mysterious_midnights
+    recommended: []
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Mysterious_Midnights/Midnight_Menaces
+    credits:
+      Creator:
+        - BluePsychoRanger
+      Icon Design:
+        - BluePsychoRanger

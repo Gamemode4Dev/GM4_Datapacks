@@ -1,0 +1,23 @@
+extend: '../module.yaml'
+
+id: gm4_everstone
+name: Everstone
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Collect Everstones during full moons and use them on baby mobs to stop them from aging! But watch out, some other mobs might start aging, too!
+    required: []
+    recommended:
+      - gm4_resource_pack
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Everstone
+    credits:
+      Creators:
+        - Denniss
+        - BluePsychoRanger
+      Icon Design:
+        - BluePsychoRanger

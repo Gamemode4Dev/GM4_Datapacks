@@ -1,0 +1,31 @@
+extend: '../module.yaml'
+
+id: gm4_apple_trees
+name: Apple Trees
+
+data_pack:
+  load: .
+
+pipeline:
+  - data_pack:
+      load: '../lib_trades'
+
+meta:
+  gm4:
+    description: Introduces fruit-bearing apple trees! Trade for apple saplings with wandering traders or commenly find these lifesavers in forests if you have Orbis installed.
+    required: []
+    recommended:
+      - gm4_resource_pack
+      - gm4_orbis
+      - gm4_podzol_rooting_soil
+    notes:
+      - Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Apple_Trees
+    credits:
+      Creators:
+        - Bloo
+        - BluePsychoRanger
+        - SpecialBuilder32
+      Icon Design:
+        - BluePsychoRanger

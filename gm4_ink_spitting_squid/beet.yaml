@@ -1,0 +1,23 @@
+extend: '../module.yaml'
+
+id: gm4_ink_spitting_squid
+name: Ink Spitting Squid
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Improves the vanilla ink effect by adding Blindness. Glow Squid will give Night Vision when disturbed, which might come in handy if you're out of torches!
+    required: []
+    recommended: []
+    notes: []
+    video: https://www.youtube.com/watch?v=68LMYEhueZ0
+    wiki: https://wiki.gm4.co/wiki/Ink_Spitting_Squid
+    credits:
+      Creator:
+        - Energyxxer
+      Updated by:
+        - BluePsychoRanger
+      Icon Design:
+        - Sparks

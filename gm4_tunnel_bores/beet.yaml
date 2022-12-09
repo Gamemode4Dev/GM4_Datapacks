@@ -1,0 +1,32 @@
+extend: '../module.yaml'
+
+id: gm4_tunnel_bores
+name: Tunnel Bores
+
+data_pack:
+  load: .
+
+pipeline:
+  - data_pack:
+      load: '../lib_machines'
+  - data_pack:
+      load: '../lib_forceload'
+
+meta:
+  gm4:
+    description: Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3⨉3 tunnels, and even lay rails behind themselves.
+    required: []
+    recommended:
+      - gm4_ziprails
+      - gm4_vertical_rails
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Tunnel_Bores
+    credits:
+      Creator:
+        - Bloo
+      Updated by:
+        - Bloo
+        - BluePsychoRanger
+      Icon Design:
+        - Hozz

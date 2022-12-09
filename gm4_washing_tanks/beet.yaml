@@ -1,0 +1,23 @@
+extend: '../module.yaml'
+
+id: gm4_washing_tanks
+name: Washing Tanks
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Die! Dye! Remove die from items in a Liquid Tank filled with Water, at the cost of ⅓ of a bucket.
+    required:
+      - gm4_liquid_tanks
+    recommended: []
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Washing_Tanks
+    credits:
+      Creators:
+        - Bunnygamers
+        - Misode
+      Icon Design:
+        - BluePsychoRanger

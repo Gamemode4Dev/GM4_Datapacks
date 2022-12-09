@@ -1,0 +1,25 @@
+extend: '../module.yaml'
+
+id: gm4_vertical_rails
+name: Vertical Rails
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Use ladders as vertical Minecart tracks.
+    required: []
+    recommended: []
+    notes: []
+    video: https://www.youtube.com/watch?v=LJoN7CmJL4Q
+    wiki: https://wiki.gm4.co/wiki/Vertical_Rails
+    credits:
+      Creators:
+        - Sparks
+        - SiberianHat
+      Updated by:
+        - SpecialBuilder32
+        - Kruthers
+      Icon Design:
+        - DuckJr

@@ -1,0 +1,21 @@
+extend: '../module.yaml'
+
+id: gm4_podzol_rooting_soil
+name: Podzol Rooting Soil
+
+data_pack:
+  load: .
+
+meta:
+  gm4:
+    description: Allows saplings to self-plant when on Podzol. The perfect choice for auto-treefarms!
+    required: []
+    recommended: []
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Podzol_Rooting_Soil
+    credits:
+      Creator:
+        - Bloo
+      Icon Design:
+        - BluePsychoRanger

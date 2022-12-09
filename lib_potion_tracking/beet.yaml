@@ -1,0 +1,15 @@
+id: gm4_potion_tracking
+name: Gamemode 4 Potion Tracking
+
+data_pack:
+  load: .
+
+pipeline:
+  - data_pack:
+      load: '../lib_forceload'
+
+meta:
+  gm4:
+    credits:
+      Creator:
+        - BluePsychoRanger
