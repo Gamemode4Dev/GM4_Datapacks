@@ -4,7 +4,7 @@ Contributions are welcome! This project uses [poetry](https://python-poetry.org/
 ## Prerequisites
 1. Install [VSCode](https://code.visualstudio.com/)
 2. Install [git](https://git-scm.com/downloads)
-3. Install [Python]()
+3. Install [Python](https://www.python.org/downloads/)
 4. Install [Poetry](https://python-poetry.org/docs/)
 
 ## Setup
