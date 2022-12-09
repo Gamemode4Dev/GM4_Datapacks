@@ -11,6 +11,7 @@
    "gui.gm4.liquid_tank": "\uf808\u9012\u9013\uf824",
    "gui.gm4.smeltery": "\u9015\u9014\u9015",
    "gui.gm4.teleportation_jammer.connected_on": "\u9017\u9016\u9017",
+   "gui.gm4.teleportation_jammer": "\u9017\u9016\u9017",
    "gui.gm4.tinkering_compressor": "\u9019\u9018\u9019",
    "text.gm4.guidebook.crafting.display.empty_slot": "\uf828\uf823",
    "text.gm4.guidebook.crafting.display.count.0": "\uf805\u0abf",
