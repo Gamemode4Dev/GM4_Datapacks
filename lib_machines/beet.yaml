@@ -6,6 +6,7 @@ pipeline:
     extend: 'beet.yaml'
   - data_pack:
       load: .
+  - lib_machines.generate_item_tags
 
 meta:
   gm4:
