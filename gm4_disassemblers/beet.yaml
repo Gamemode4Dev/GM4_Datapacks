@@ -8,6 +8,7 @@ pipeline:
     extend: 'beet.yaml'
   - data_pack:
       load: .
+  - gm4_disassemblers.generate_disassembly
 
 meta:
   gm4:

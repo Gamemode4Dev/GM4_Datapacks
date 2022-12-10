@@ -4,7 +4,7 @@ Contributions are welcome! This project uses [poetry](https://python-poetry.org/
 ## Prerequisites
 1. Install [VSCode](https://code.visualstudio.com/)
 2. Install [git](https://git-scm.com/downloads)
-3. Install [Python](https://www.python.org/downloads/)
+3. Install [Python](https://www.python.org/downloads/) version `3.10`
 4. Install [Poetry](https://python-poetry.org/docs/)
 
 ## Setup
@@ -24,8 +24,9 @@ $ beet watch
 # Build only some modules
 $ beet dev bat_grenades disassemblers
 
-# Link the built packs to a local world (you only need to link once)
-$ beet dev metallurgy *_shamir --link MyWorld
+# Link the built packs to a local world
+$ beet link "My World"
+$ beet dev metallurgy *_shamir
 
 # auto-reload when changing files
 $ beet dev gm4_bat_grenades --reload
