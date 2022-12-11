@@ -28,8 +28,7 @@ attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] zombie.spawn_reinf
 tag @s[predicate=gm4_combat_expanded:mob/modifier/snowy] add gm4_ce_slowing_attacks
 execute if entity @s[predicate=gm4_combat_expanded:mob/modifier/burned] run function gm4_combat_expanded:mob/effect/burned_husk
 execute if predicate gm4_combat_expanded:mob/modifier/mountainous run function gm4_combat_expanded:mob/effect/mountain_zombie
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/flowering] generic.max_health modifier add 8650cbae-ca74-423f-96c6-eba2c1c8e80e "gm4_ce_modifier_flowering" -0.25 multiply
-execute unless score @s[predicate=gm4_combat_expanded:mob/modifier/flowering] gm4_ce_generation matches 10.. run data modify entity @s ArmorDropChances[3] set value 2F
+execute if predicate gm4_combat_expanded:mob/modifier/flowering run function gm4_combat_expanded:mob/effect/flowering_zombie
 tag @s[predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_weakness_attacks
 execute if predicate gm4_combat_expanded:mob/modifier/growth run function gm4_combat_expanded:mob/effect/growth_husk
 
