@@ -4,6 +4,7 @@ import os
 
 
 def beet_default(ctx: Context):
+	"""Saves the datapack to the ./out folder."""
 	version = os.getenv("VERSION", "1.19")
 	out_dir = Path("out")
 
@@ -14,6 +15,7 @@ def beet_default(ctx: Context):
 
 
 def release(ctx: Context):
+	"""Saves the zipped datapack and metadata to the ./release/{version} folder."""
 	version = os.getenv("VERSION", "1.19")
 	release_dir = Path("release") / version
 

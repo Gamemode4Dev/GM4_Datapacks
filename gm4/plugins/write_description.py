@@ -2,6 +2,7 @@ from beet import Context
 import os
 
 def beet_default(ctx: Context):
+	"""Writes the pack.mcmeta description based on the module name and version."""
 	version = os.getenv("VERSION", "1.19")
 	ctx.data.description = [
 		ctx.project_name,

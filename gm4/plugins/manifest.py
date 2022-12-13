@@ -8,10 +8,12 @@ import yaml
 
 
 def run(cmd: list[str]) -> str:
+	"""Run a shell command and return the stdout."""
 	return subprocess.run(cmd, capture_output=True, encoding="utf8").stdout.strip()
 
 
 def create(ctx: Context):
+	"""Collect a manifest for all modules and update their patch version if necessary."""
 	version = os.getenv("VERSION", "1.19")
 	prefix = int(os.getenv("PATCH_PREFIX", 0))
 	release_dir = Path('release') / version
@@ -22,12 +24,14 @@ def create(ctx: Context):
 	for module in modules:
 		project_file = Path(module["id"]) / "beet.yaml"
 		if project_file.exists():
+			# Read all the metadata from the module's beet.yaml file
 			project_config = yaml.safe_load(project_file.read_text())
 			module["name"] = project_config["name"]
 			module.update(project_config.get("meta", {}).get("gm4", {}))
 		else:
 			module["id"] = None
 
+	# If a module doesn't have a valid beet.yaml file don't include it
 	modules = [m for m in modules if m["id"] is not None]
 
 	if manifest_file.exists():
@@ -41,16 +45,20 @@ def create(ctx: Context):
 	for module in modules:
 		id = module["id"]
 
+		# Check if there are any changes between last commit and HEAD
 		diff = run(["git", "diff", last_commit, "--shortstat", "--", id]) if last_commit else True
 		released = next((m for m in released_modules if m["id"] == id), None)
 
 		if not diff and released:
+			# No changes were made, keep the same patch version
 			module["patch"] = released["patch"]
 		else:
+			# Changes were made or this is the first release, bump the patch
 			patch = released["patch"] if released else prefix
 			module["patch"] = patch + 1
 			print(f"[GM4] Updating {id} to {patch + 1}")
 	
+	# Read the contributors metadata
 	contributors_file = Path("contributors.json")
 	if contributors_file.exists():
 		contributors_list = json.loads(contributors_file.read_text())
@@ -58,6 +66,7 @@ def create(ctx: Context):
 	else:
 		contributors = []
 
+	# Create the new manifest, using HEAD as the new last commit
 	head = run(["git", "rev-parse", "HEAD"])
 	new_manifest = {
 		"last_commit": head,
@@ -71,6 +80,7 @@ def create(ctx: Context):
 
 
 def write_credits(ctx: Context):
+	"""Writes the credits metadata to CREDITS.md."""
 	manifest = ctx.cache["gm4_manifest"].json
 	contributors = manifest.get("contributors", {})
 	credits: dict[str, list[str]] = next((m["credits"] for m in manifest.get("modules", []) if m["id"] == ctx.project_id), {})
@@ -95,16 +105,19 @@ def write_credits(ctx: Context):
 
 
 def write_updates(ctx: Context):
+	"""Writes the module update commands to this module's init function."""
 	init = ctx.data.functions.get(f"{ctx.project_id}:init", None)
 	if init is None:
 		return
 
+	# Remove the marker if it exists
 	if "#$moduleUpdateList" in init.lines:
 		init.lines.remove("#$moduleUpdateList")
 
 	manifest = ctx.cache["gm4_manifest"].json
 	modules = manifest["modules"]
 
+	# Append the module update list regardless if the marker existed
 	init.lines.append("# Module update list")
 	init.lines.append("data remove storage gm4:log queue[{type:'outdated'}]")
 	for m in modules:
