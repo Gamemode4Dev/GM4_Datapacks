@@ -1,6 +1,5 @@
 from beet import Context, LootTable
-import json
-from urllib import request
+from beet.contrib.vanilla import Vanilla
 import itertools
 from typing import Any
 
@@ -51,13 +50,13 @@ ITEMS = {
   "flint_and_steel": 65,
 }
 
-recipes_url = f"https://raw.githubusercontent.com/misode/mcmeta/{MCVERSION}-summary/data/recipe/data.min.json"
-recipes = json.load(request.urlopen(recipes_url))
-
 
 def beet_default(ctx: Context):
+  vanilla = ctx.inject(Vanilla)
+  recipes = vanilla.data.recipes
+
   for item, durability in ITEMS.items():
-    recipe = recipes[item]
+    recipe = recipes[f"minecraft:{item}"].data
     ingredients: list[tuple[str, int]] = []
     if recipe["type"] == "minecraft:crafting_shaped":
       pattern = "".join([

@@ -1,15 +1,15 @@
 from beet import Context, Function, Predicate
-import json
-from urllib import request
+from beet.contrib.vanilla import Vanilla
 
 MCVERSION = "1.19.2"
 CC_VERSION = "3.0"
 
-item_tags_url = f"https://raw.githubusercontent.com/misode/mcmeta/{MCVERSION}-registries/tag/item/data.min.json"
-item_tags = json.load(request.urlopen(item_tags_url))
-
 def beet_default(ctx: Context):
+  vanilla = ctx.inject(Vanilla)
+  item_tags = vanilla.data.item_tags
+
   for id in item_tags:
+    id = id.removeprefix("minecraft:")
     ctx.data[f"gm4_custom_crafters-{CC_VERSION}:vanilla_item_tags/{id}"] = Predicate({
       "condition": "minecraft:entity_properties",
       "entity": "this",
