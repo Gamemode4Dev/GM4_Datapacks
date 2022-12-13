@@ -32,12 +32,65 @@ $ beet dev metallurgy *_shamir
 $ beet dev gm4_bat_grenades --reload
 ```
 
+### beet.yaml
+Each module has a `beet.yaml` file that contains information on how to build the pack and some metadata used on the website.
+```yaml
+# Config file to extend. For modules should always be '../module.yaml'.
+extend: '../module.yaml'
+
+# The ID and name of this module. The ID should always be the same as the current directory name
+id: gm4_disassemblers
+name: Disassemblers
+
+# The build pipeline for this module
+pipeline:
+  # First include any libraries. The base library is automatically included.
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  # Load the current directory
+  - data_pack:
+      load: .
+  # Run any plugins to generate extra files or make changes programatically
+  - gm4_disassemblers.generate_disassembly
+
+# Metadata for the website and credits
+meta:
+  gm4:
+    # A description. This should be a good summary of what this module adds or achieves, to get someone interested in this module
+    description: Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!
+    # Any required modules
+    required: []
+    # Any recommended modules
+    recommended:
+      - gm4_resource_pack
+      - gm4_relocators
+    # Important notes for people when they download the module. This can
+    notes: []
+    # Either null or a link to the YouTube video
+    video: null
+    # Either null or a link to the wiki page
+    wiki: https://wiki.gm4.co/wiki/Disassemblers
+    # The credits section. Can have different titles each being a list of names
+    credits:
+      Creator:
+        - Sparks
+      Textures by:
+        - kyrkis
+```
+
 ### Load
 Gamemode 4 uses [LanternMC Load](https://github.com/LanternMC/Load) so modules work nicely with other data packs. This allows modules to check which version of the gm4 base is loaded and prevents conflicts. It also allows checking whether reliant modules are installed.
 
 If your module requires another module, you need to list it explicitly in a few places:
-- `data/load/tags/functions/gm4_module_id.json`: Prepend the values list with a value for each direct dependency. The order is important!
-- Create an empty function tag in `load` for each dependency. For example `#load:gm4_better_armor_stands`.
+- `data/load/tags/functions/gm4_module_id.json`: Prepend the values list with a value for each direct dependency. The order is important! Use optional tag entries, for example:
+```json
+{
+  "values": [
+    { "id": "#load:gm4_metallurgy", "required": false },
+    "gm4_vigere_shamir:load"
+  ]
+}
+```
 - `data/gm4_module_id/functions/load.mcfunction`: The first line checks scores to see if all dependencies are loaded. The following lines provide additional logging so the user can see which packs are incompatible or missing. This is discussed in the next section.
 
 Initialization goes above all other commands in `init.mcfunction`. This is mostly for adding scoreboards and initializing fake players.
@@ -54,20 +107,20 @@ Gamemode 4 modules use `/schedule` to run functions every few ticks. There are 2
 - `tick.mcfunction` runs every tick.
 - `main.mcfunction` runs every 16 ticks.
 
-### Naming and formatting standards
+### Naming and formatting
 Please be sure to match the formatting for Gamemode 4 modules to ensure readability and consistency.
 
 - Names should be as clear and relevant as possible to avoid confusion or two modules sharing the same name by mistake.
 - Any name, scoreboard name or tag should be formatted as `lowercase_with_underscores`
 - Scoreboards and tags should begin with the `gm4_` prefix.
-- fake players used to store numbers for scoreboard operations should be named as a "#" followed by that number e.g. `scoreboard players set #100 gm4_some_scoreboard 100`
-- fake players that aren't constants should be prefixed by "$" and be in `snake_case`, e.g. `$has_soul_fire_heatsource`
+- Fake players used to store numbers for scoreboard operations should be named as a "#" followed by that number e.g. `scoreboard players set #100 gm4_some_scoreboard 100`
+- Fake players that aren't constants should be prefixed by "$" and be in `snake_case`, e.g. `$has_soul_fire_heatsource`
 - Entities that aren't visible to the player (markers) should have custom names beginning with `gm4_` if this does not interfere with functionality.
 - Lore on items should have the first word capitalized and no fullstop at the end of the sentence if there is only one sentence. Other punctuation (?!) can be added. Descriptions should be `"color":"gray","italic":false` whilst flavor text or commands (such as "Throw to use") should be `"color":"dark_gray","italic":true`.
 - Names on items should follow Minecraft's rarity colorscheme and should be `"italic":false`.
 
-#### Comments
-- Any function except those included with the template file should start with a header comment that consists of:
+### Comments
+- All functions should start with a header comment that consists of:
 ```mcfunction
 # Plays a particle animation upon Zauber Cauldron creation
 # @s = player holding enchanted book
@@ -81,6 +134,7 @@ Please be sure to match the formatting for Gamemode 4 modules to ensure readabil
   - a single function, if the function is run by `/function ...`: `# run from zauber_cauldrons:cauldron/create`.
   - a folder, if multiple functions call this function using `/function`: `# run from functions in gm4_pig_tractors:till/blocks/`.
   - a function from where it was scheduled: `# scheduled by zauber_cauldrons:cauldron/create`.
+  - a function and function-tag pair: `# run from gm4_custom_crafters-3.0:process_input/check_item via #gm4_custom_crafter:custom_item_checks`.
   - a combination of these, in which multiple lines would be used.
 
 - Inline comments should be placed to partition code into logical sections and `#` should be followed by a space, e.g.
@@ -90,7 +144,7 @@ summon Item ~ ~ ~ {Item:{id:"minecraft:bone",Count:1b}}
 kill @s
 ```
 
-### Compatibility with GM4 Resources
+### Compatibility with the resource pack
 - All text visible to survival players (names, lore, actionbar, advancements) should use translation keys like this:
 ```json
 {
@@ -104,14 +158,7 @@ kill @s
 - Only when your module is about to be approved and merged, you should add `CustomModelData` id's.
 - Contact the collaborators of [GM4 Resources](https://github.com/Gamemode4Dev/GM4_Resources) to make sure the correct id's are allocated. Create an issue or pull request there so the correct translation keys are added.
 
-### Testing and submitting your module
-While testing your module, you need to make sure that the `base` datapack, which you can find in this repository, is included in your world's `datapacks` folder.
-
-If your module requires a library, e.g. `gm4_forceload`, be sure to include `gm4_forceload` as a library in your module's pack.mcmeta so that the website packages the appropriate files. An example of the libraries syntax can be see in the 1.18 Zauber Cauldrons pack.mcmeta.
-
-Make sure to credit all relevant people in `pack.mcmeta`. Most modules credit the creator (`Creator`), updaters (`Updated by`) and the icon designer (`Icon Design`), however, you may add credits for any work relevant to the module. Each credits section consists of an array of strings, which hold the names of the contributors. To add a link to your social media site of choice add an entry to `contributors.json`.  
+### Submitting your module
+Make sure to credit all relevant people in `beet.yaml`. Most modules credit the creator (`Creator`), updaters (`Updated by`) and the icon designer (`Icon Design`), however, you may add credits for any work relevant to the module. Each credits section consists of an array of strings, which hold the names of the contributors. To add a link to your social media site of choice add an entry to `contributors.json`.
 
 To send us your finished module for testing and approval, simply submit a pull request and leave a comment if you have additional notes.
-
-### Updating a module on the repo
-If you've spotted a bug in a module or have a performance improvement you wish to make, create a branch of the repo similar to the process outlined in the section above and make your changes. Once you have edited the module files, create a pull request and leave a detailed note on why you have made your changes.
