@@ -8,6 +8,7 @@ pipeline:
     extend: 'beet.yaml'
   - data_pack:
       load: .
+  - gm4_auto_crafting.generate
 
 meta:
   gm4:
