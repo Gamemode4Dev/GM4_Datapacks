@@ -88,10 +88,10 @@
     "rules": [
       {
         "type": "smithed:append",
-        "target": "pools[0].conditions",
+        "target": "pools[0].entries[0].conditions",
         "source": {
           "type": "smithed:reference",
-          "path": "pools[0].conditions[0]"
+          "path": "pools[0].entries[0].conditions[0]"
         }
       },
       {
