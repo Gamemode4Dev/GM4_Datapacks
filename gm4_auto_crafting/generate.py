@@ -1,7 +1,7 @@
 from beet import Context, Function, ItemTag, LootTable, Predicate
 from beet.contrib.vanilla import Vanilla
-from collections import defaultdict
-from typing import Any
+from itertools import groupby
+from typing import Any, Callable
 from dataclasses import dataclass
 
 
@@ -308,61 +308,33 @@ def analyze_shaped_recipe(ctx: Context, recipe: dict[str, Any], name: str) -> Re
 
         # check each ingredient
         for symbol in row:
-            
-            # if there's a space, then assume it's unfilled/air
             if symbol == " ":
-                pattern_row.append("minecraft:air")
-                if len(result) and result[-1].name == "minecraft:air":
+                item = "minecraft:air"
+            else:
+                ingredient: Any = recipe["key"][symbol]
+                if isinstance(ingredient, list):
+                    if symbol not in list_symbols:
+                        generate_custom_item_tag(ctx, TagData(f"#{NAMESPACE}:{name}_ingredient_{len(list_symbols) + 1}", ingredient)) #type: ignore
+                        list_symbols.append(symbol)
+                    item = f"#{NAMESPACE}:{name}_ingredient_{list_symbols.index(symbol) + 1}"
+                elif "item" in ingredient:
+                    item = ingredient["item"]
+                else:
+                    item = "#" + ingredient["tag"]
+            pattern_row.append(item)
+
+            def add_result(item: str):
+                if len(result) and result[-1].name == item:
                     result[-1].rolls += 1
                 else:
-                  result.append(RecipeResult("minecraft:air"))
-
+                    result.append(RecipeResult(item))
+            if item in buckets:
+                add_result("minecraft:bucket")
+            elif item in bottles:
+                add_result("minecraft:glass_bottle")
             else:
-                # assume the ingredient is an item, not a tag
-                try:
-                    # if the ingredient is a list of items, create a custom item tag
-                    if type(recipe["key"][symbol]) is list:
-                        # if symbol is not already in the list of symbols, add it
-                        if symbol not in list_symbols:
-                            generate_custom_item_tag(ctx, TagData(f"#{NAMESPACE}:{name}_ingredient_{len(list_symbols) + 1}", recipe["key"][symbol]))
-                            # account for this symbol
-                            list_symbols.append(symbol)
-                        # add the custom list to the pattern
-                        item = f"#{NAMESPACE}:{name}_ingredient_{list_symbols.index(symbol) + 1}"
-                    else:
-                        item = recipe["key"][symbol]["item"]
-                    pattern_row.append(item)
+                add_result("minecraft:air")
 
-                    # based on the last item, generate loot table rolls
-                    if item in buckets:
-                        if len(result) and result[-1].name == "minecraft:bucket":
-                            result[-1].rolls += 1
-                        else:
-                          result.append(RecipeResult("minecraft:bucket"))
-                    elif item in bottles:
-                        if len(result) and result[-1].name == "minecraft:glass_bottle":
-                            result[-1].rolls += 1
-                        else:
-                          result.append(RecipeResult("minecraft:glass_bottle"))
-                    else:
-                        if len(result) and result[-1].name == "minecraft:air":
-                            result[-1].rolls += 1
-                        else:
-                            result.append(RecipeResult("minecraft:air"))
-                # if that failed, assume the item is a tag
-                except:
-                    try:
-                        item_tag = recipe["key"][symbol]["tag"]
-                        pattern_row.append("#" + item_tag)
-                        if len(result) and result[-1].name == "minecraft:air":
-                            result[-1].rolls += 1
-                        else:
-                            result.append(RecipeResult("minecraft:air"))
-                    # if that failed, raise an error
-                    except:
-                        pattern_row.append("invalid")
-                        raise ValueError("Unknown JSON format: %s" % recipe["result"]["item"])
-        
         # add the input row to the pattern list
         pattern.extend(pattern_row)
 
@@ -398,14 +370,6 @@ def analyze_shaped_recipe(ctx: Context, recipe: dict[str, Any], name: str) -> Re
     elif (pattern[0] != pattern[2] or pattern[3] != pattern[5] or pattern[6] != pattern[8]):
         mirror = True
 
-
-    # get output result
-    result_id = recipe["result"]["item"]
-    # get result count
-    try:
-        result_count = recipe["result"]["count"]
-    except:
-        result_count = 1
     # get what the last output item was
     last_output = result[-1].name
     # remove the last output item from result
@@ -414,39 +378,38 @@ def analyze_shaped_recipe(ctx: Context, recipe: dict[str, Any], name: str) -> Re
         result.pop()
     # if last output item was not air, move it somewhere else
     if last_output != "minecraft:air":
-        i = 0
         found_match = False
         # check if the last item is the same as another item in the output loot table
-        while i < len(result) and not found_match:
+        for i, r in enumerate(result):
             # if a matching item is found, merge them
-            if result[i].name == last_output:
+            if r.name == last_output:
                 # if there's only one instance, just increase the count
-                if result[i].rolls == 1:
-                    result[i].count += 1
+                if r.rolls == 1:
+                    r.count += 1
                 # if there's multiple instances, increase the count for only one of the rolls
                 else:
-                    result[i].rolls -= 1
-                    result.insert(i, RecipeResult(result[i].name, count=2))
+                    r.rolls -= 1
+                    result.insert(i, RecipeResult(r.name, count=2))
                 found_match = True
-            i += 1
+                break
         # if there's no matching item in the output loot table, put the item in the first empty output slot
         if not found_match:
-            i = 0
-            found_match = False
-            while i < len(result) and not found_match:
+            for i, r in enumerate(result):
                 # find the first instance of an air roll
-                if result[i].name == "minecraft:air":
+                if r.name == "minecraft:air":
                     # decrease the number of air rolls, and add a roll for the last output item before that
-                    result[i].rolls -= 1
+                    r.rolls -= 1
                     result.insert(i, RecipeResult(last_output))
                     found_match = True
-                i += 1
+                    break
             # if the entire thing is full, just print the recipe for manual correction
             # if it gets here the last bottle/bucket will be voided
             if not found_match:
                 print("FULL: " + recipe["result"]["item"] + " -> " + last_output)
 
     # set the last slot to the recipe result
+    result_id = recipe["result"]["item"]
+    result_count = recipe["result"].get("count", 1)
     result.append(RecipeResult(result_id, count=result_count))
     # return the new formatted recipe
     return RecipeShape(pattern, result, shapeless=False, mirror=mirror)
@@ -462,10 +425,8 @@ def analyze_shapeless_recipe(ctx: Context, recipe: dict[str, Any], name: str) ->
     result: list[RecipeResult] = []
     bucket_count = 0
     bottle_count = 0
-    air_count = 0
-    total_count = 0
     for entry in recipe["ingredients"]:
-        if type(entry) is list:
+        if isinstance(entry, list):
             tag_count += 1
             item = f"#{NAMESPACE}:{name}_ingredient_{tag_count}"
             generate_custom_item_tag(ctx, TagData(item, entry)) # type: ignore
@@ -482,24 +443,16 @@ def analyze_shapeless_recipe(ctx: Context, recipe: dict[str, Any], name: str) ->
 
     # if there were (non-empty) buckets in the recipe, return empty buckets
     if bucket_count > 0:
-        total_count += 1
         result.append(RecipeResult("minecraft:bucket", count=bucket_count))
     # if there were (non-empty) bottles in the recipe, return empty bottles
     if bottle_count > 0:
-        total_count += 1
         result.append(RecipeResult("minecraft:glass_bottle", count=bottle_count))
     # fill the slots with air, up until the last slot
-    while total_count < 8:
-        total_count += 1
-        air_count += 1
+    air_count = 8 - bucket_count - bottle_count
     result.append(RecipeResult("minecraft:air", rolls=air_count))
-    result_id = recipe["result"]["item"]
-    # set the result count
-    try:
-        result_count = recipe["result"]["count"]
-    except:
-        result_count = 1
     # set the last slot to the recipe result
+    result_id = recipe["result"]["item"]
+    result_count = recipe["result"].get("count", 1)
     result.append(RecipeResult(result_id, count=result_count))
     # return the new formatted recipe
     return RecipeShape(ingredients, result, shapeless=True)
@@ -563,13 +516,10 @@ def generate_crafting_loot_table(ctx: Context, result: list[RecipeResult], targe
     json: Any = {"type": "minecraft:generic","pools": []}
     for r in result:
         # populate pools
-        pool: Any = {"rolls": r.rolls,"entries":[{"type":"minecraft:item","name":r.name}]}
+        pool: Any = {"rolls":r.rolls,"entries":[{"type":"minecraft:item","name":r.name}]}
         # set count
         if r.count > 1:
-            try:
-                pool["entries"][0]["functions"].append({"function":"minecraft:set_count","count":r.count})
-            except:
-                pool["entries"][0]["functions"] = [{"function":"minecraft:set_count","count":r.count}]
+            pool["entries"][0]["functions"] = [{"function":"minecraft:set_count","count":r.count}]
         json["pools"].append(pool)
 
     # write loot table file
@@ -581,305 +531,146 @@ def generate_trees(ctx: Context, recipes: list[RecipeData]) -> None:
     """
     generates the search tree functions
     """
-    # separate recipes list into lists of same slot_count
-    slot_counts: dict[int, list[RecipeData]] = defaultdict(list)
-    for recipe in recipes:
-        k = recipe.slot_count
-        slot_counts[k].append(recipe)
+    # separate recipes list into lists of same slot_count, sorted by total_length
+    recipes_by_slot_count = {
+        k: sorted([r for r in recipes if r.slot_count == k], key=lambda d: d.total_length)
+        for k in range(1, 10)
+    }
 
-    slot_counts = dict(slot_counts)
-    # sort each list of same slot_count by total_length
-    for i in slot_counts:
-        slot_counts[i] = sorted(slot_counts[i], key=lambda d: d.total_length)
+    def on_slot_leaf(value: int, path: str):
+        recipes = recipes_by_slot_count[value]
+
+        # turn recipes list into dict w/ total_length as key
+        recipes_by_total_length = {
+            k: list(g)
+            for k, g in groupby(recipes, key=lambda r: r.total_length)
+            if k != -1
+        }
+        recipes_using_tags = [r for r in recipes if r.total_length == -1]
+
+        # get the maximum length, this works because recipes was sorted by total_length
+        max_length = max(0, recipes[-1].total_length)
+
+        def on_length_leaf(value: int, path: str):
+            generate_recipe_function(ctx, recipes_by_total_length[value], path)
+
+        # create a search tree based on the total length
+        generate_search_tree(ctx, dict(recipes_by_total_length), 0, max_length, path, "$id_total gm4_crafting", on_length_leaf)
+
+        # if this slot_count has recipes that use tags, then create a function that doesn't check total_length
+        if recipes_using_tags:
+            path_uses_tags = f"{path}/uses_tags"
+            ctx.data.functions[f"{NAMESPACE}:{path}/search"].append(f"execute if score $crafted gm4_crafting matches 0 run function {NAMESPACE}:{path_uses_tags}")
+            generate_recipe_function(ctx, recipes_using_tags, path_uses_tags)
 
     # create a search tree based on the slot_count
-    generate_slot_tree(ctx, slot_counts, 0, 9, BRANCH_PATH, [], True)
+    generate_search_tree(ctx, recipes_by_slot_count, 0, 9, BRANCH_PATH, "$slot_count gm4_crafting", on_slot_leaf, "/search")
 
 
 
-def generate_slot_tree(ctx: Context, slot_counts: dict[int, list[RecipeData]], min:int, max: int, path: str, completed: list[int], root: bool = False) -> None:
-    """
-    creates the slot_count (weighted) search tree functions
-    """
-    def create_function(value: int, path: str, fn: Function) -> None:
+def generate_search_tree(ctx: Context, entries: dict[int, list[RecipeData]], start: int, end: int, path: str, score: str, on_leaf: Callable[[int, str], None], leaf_suffix: str = ""):
+    completed: set[int] = set()
+
+    def in_range(low: int, high: int):
         """
-        writes the function at the end of the slot_count tree to search the total_length tree
-        and creates the total_length tree
+        returns the indices of entries between low and high
         """
-        # verify the slot_count value exists
-        if value in slot_counts:
-            recipes = slot_counts[value]
-            # add value to list of completed functions
-            completed.append(value)
+        return [i for i in range(low, high + 1) if i in entries]
 
-            # get the maximum length
-            max_length: int = recipes[-1].total_length
-            if max_length < 0:
-                max_length = 0
-            
+    def create_leaves(low: int, high: int, path: str, fn: Function):
+        """
+        creates the leaves for entries between low and high need a function
+        """
+        # for all entries between low and high
+        for i in in_range(low, high):
+            # only generate if that slot_count exists and doesn't yet have a function
+            if i in completed:
+                continue
+            # add i to list of completed functions
+            completed.add(i)
             # write function file for this slot_count
-            fn.append(f"execute if score $crafted gm4_crafting matches 0 if score $slot_count gm4_crafting matches {value} run function {NAMESPACE}:{path}/{value}/search")
+            leaf_path = f"{path}/{i}"
+            fn.append(f"execute if score $crafted gm4_crafting matches 0 if score {score} matches {i} run function {NAMESPACE}:{leaf_path}{leaf_suffix}")
+            # call any specific leaf function
+            on_leaf(i, leaf_path)
 
-            # turn recipes list into dict w/ total_length as key
-            new_recipes: dict[int, list[RecipeData]] = defaultdict(list)
-            for recipe in recipes:
-                k = recipe.total_length
-                new_recipes[k].append(recipe)
+    def find_middle(low: int, high: int) -> int:
+        """
+        get weighted middle between min and max
+        """
+        # count the total number of values between min and max
+        total = sum([len(entries[i]) for i in range(low, high) if i in entries])
+        # get halfway point
+        target = total // 2
+        i = low
+        count = 0
+        # count the number of values until halfway is reached
+        while i < high and count < target:
+            if i in entries:
+                count += len(entries[i])
+            i += 1
+        return i
 
-            # create the total_length tree
-            generate_length_tree(ctx, dict(new_recipes), 0, max_length, f"{path}/{value}", [], True)
+    def update_range(low: int, high: int) -> tuple[int, int]:
+        """
+        move low and high to values that exist in dict
+        """
+        if low < high:
+            low = min([i for i in entries if i >= low])
+            high = max([i for i in entries if i <= high])
+        return low, high
 
-    def branch(min: int, max: int, path: str, fn: Function):
+    def branch(start: int, end: int, path: str, fn: Function):
         """
         creates two branches of the search tree
         """
         # get halfway point
-        half = find_middle(slot_counts, min, max)
+        half = find_middle(start, end)
         
         # get first half
-        low, high = min, half - 1
-        # move low and high points to values that actually exist
-        low, high = update(slot_counts, low, high)
+        low, high = update_range(start, half - 1)
         # if count(high - low) <= 1
-        if ready(low, high, 1):
+        if len(in_range(low, high)) <= 1:
             # create functions for the values between low and high
-            check_function_status(low, high, path, fn)
+            create_leaves(low, high, path, fn)
         else:
             # branch again
             new_path = f"{path}/{low}_{high}"
-            fn.append(f"execute if score $crafted gm4_crafting matches 0 if score $slot_count gm4_crafting matches {low}..{high} run function {NAMESPACE}:{new_path}/search")
-            generate_slot_tree(ctx, slot_counts, low, high, path, completed)
+            fn.append(f"execute if score $crafted gm4_crafting matches 0 if score {score} matches {low}..{high} run function {NAMESPACE}:{new_path}/search")
+            generate_tree(low, high, new_path)
 
         # get second half
-        low, high = half, max
-        # move low and high points to values that actually exist
-        low, high = update(slot_counts, low, high)
+        low, high = update_range(half, end)
         # if count(high - low) <= 1
-        if ready(low, high, 1):
+        if len(in_range(low, high)) <= 1:
             # create functions for the values between low and high
-            check_function_status(low, high, path, fn)
+            create_leaves(low, high, path, fn)
         else:
             # branch again
             new_path = f"{path}/{low}_{high}"
-            fn.append(f"execute if score $crafted gm4_crafting matches 0 if score $slot_count gm4_crafting matches {low}..{high} run function {NAMESPACE}:{new_path}/search")
-            generate_slot_tree(ctx, slot_counts, low, high, path, completed)
+            fn.append(f"execute if score $crafted gm4_crafting matches 0 if score {score} matches {low}..{high} run function {NAMESPACE}:{new_path}/search")
+            generate_tree(low, high, new_path)
 
-    def check_function_status(low: int, high: int, path: str, fn: Function):
-        """
-        checks if the values between low and high need a function
-        """
-        i = low
-        # for all slot_counts between low and high
-        while i <= high:
-            # only generate if that slot_count exists and doesn't yet have a function
-            if i in slot_counts and i not in completed:
-                create_function(i, path, fn)
-            i += 1
+    def generate_tree(start: int, end: int, path: str):
+        fn = Function()
 
-    def ready(low: int, high: int, val: int) -> bool:
-        """
-        checks if the number of existing slot_counts between low and high are less than val
-        """
-        i = low
-        total = 0
-        while i <= high:
-            # if slot_counts[i] exists
-            if i in slot_counts:
-                total += 1
-            i += 1
-        return (total <= val)
-
-    if not root:
-        # get next path (use current path if root is True)
-        path = f"{path}/{min}_{max}"
-
-    fn = Function()
-
-    if ready(min, max, 4):
-        check_function_status(min, max, path, fn)
-    else:
-        # get halfway point
-        half = find_middle(slot_counts, min, max)
-
-        # get first half
-        low, high = min, half - 1
-        # move low and high points to values that actually exist
-        low, high = update(slot_counts, low, high)
-        # branch the first half into two branches
-        branch(low, high, path, fn)
-
-        # get second half
-        low, high = half, max
-        # move low and high points to values that actually exist
-        low, high = update(slot_counts, low, high)
-        # branch the second half into two branches
-        branch(low, high, path, fn)
-
-    ctx.data[f"{NAMESPACE}:{path}/search"] = fn
-
-
-
-def generate_length_tree(ctx: Context, recipes: dict[int, list[RecipeData]], min: int, max: int, path:str, completed: list[int], root: bool = False) -> None:
-    """
-    creates the total_length (weighted) search tree functions
-    """
-    def create_function(value: int, path: str, fn: Function) -> None:
-        """
-        writes the function at the end of the slot_count tree to search the total_length tree
-        and creates the total_length tree
-        """
-        # verify the total_length value exists
-        if value in recipes:
-            recipe: Any = recipes[value]
-            # add value to list of completed functions
-            completed.append(value)
-
-            # write recipe function for this total_length
-            path = f"{path}/{value}"
-            fn.append(f"execute if score $crafted gm4_crafting matches 0 if score $id_total gm4_crafting matches {value} run function {NAMESPACE}:{path}")
-            generate_recipe_function(ctx, recipe, path)
-
-    def branch(min: int, max: int, path: str, fn: Function) -> None:
-        """
-        creates two branches of the search tree
-        """
-        # get halfway point
-        half = find_middle(recipes, min, max)
-
-         # get first half
-        low, high = min, half - 1
-        # move low and high points to values that actually exist
-        low, high = update(recipes, low, high)
-        # if count(high - low) <= 1
-        if ready(low, high, 1):
-            # create functions for the values between low and high
-            check_function_status(low, high, path, fn)
+        if len(in_range(start, end)) <= 4:
+            create_leaves(start, end, path, fn)
         else:
-            # branch again
-            new_path = f"{path}/{low}_{high}"
-            fn.append(f"execute if score $crafted gm4_crafting matches 0 if score $id_total gm4_crafting matches {low}..{high} run function {NAMESPACE}:{new_path}/search")
-            generate_length_tree(ctx, recipes, low, high, path, completed)
+            # get halfway point
+            half = find_middle(start, end)
 
-        # get second half
-        low, high = half, max
-        # move low and high points to values that actually exist
-        low, high = update(recipes, low, high)
-        # if count(high - low) <= 1
-        if ready(low, high, 1):
-            # create functions for the values between low and high
-            check_function_status(low, high, path, fn)
-        else:
-            # branch again
-            new_path = f"{path}/{low}_{high}"
-            fn.append(f"execute if score $crafted gm4_crafting matches 0 if score $id_total gm4_crafting matches {low}..{high} run function {NAMESPACE}:{new_path}/search")
-            generate_length_tree(ctx, recipes, low, high, path, completed)
+            # branch the first half into two branches
+            low, high = update_range(start, half - 1)
+            branch(low, high, path, fn)
 
-    def check_function_status(low: int, high: int, path: str, fn: Function):
-        """
-        checks if the values between low and high need a function
-        """
-        i = low
-        # for all slot_counts between low and high
-        while i <= high:
-            # only generate if that slot_count exists and doesn't yet have a function
-            if i in recipes and i not in completed:
-                create_function(i, path, fn)
-            i += 1
+            # branch the second half into two branches
+            low, high = update_range(half, end)
+            branch(low, high, path, fn)
 
-    def ready(low: int, high: int, val: int) -> bool:
-        """
-        checks if the number of existing slot_counts between low and high are less than val
-        """
-        i = low
-        total = 0
-        while i <= high:
-            # if recipes[i] exists
-            if i in recipes:
-                total += 1
-            i += 1
-        return (total <= val)
-        
-    if not root:
-        # get next path (use current path if root is True)
-        path = f"{path}/{min}_{max}"
+        ctx.data[f"{NAMESPACE}:{path}/search"] = fn
 
-    fn = Function()
-
-    # if count(max - min) <= 4, then create functions for them
-    if ready(min, max, 4):
-        check_function_status(min, max, path, fn)
-    else:
-        # get halfway point
-        half = find_middle(recipes, min, max)
-        
-        # get first half
-        low, high = min, half - 1
-        # move low and high points to values that actually exist
-        low, high = update(recipes, low, high)
-        # branch the first half into two branches
-        branch(low, high, path, fn)
-
-        # get second half
-        low, high = half, max
-        # move low and high points to values that actually exist
-        low, high = update(recipes, low, high)
-        # branch the second half into two branches
-        branch(low, high, path, fn)
-
-    # if this slot_count has recipes that use tags, then create a function that doesn't check total_length
-    if root and -1 in recipes:
-        new_path = f"{path}/uses_tags"
-        fn.append(f"execute if score $crafted gm4_crafting matches 0 run function {NAMESPACE}:{new_path}")
-        generate_recipe_function(ctx, recipes[-1], new_path)
-
-    ctx.data[f"{NAMESPACE}:{path}/search"] = fn
-
-
-def find_middle(dict: dict[int, list[Any]], min: int, max: int) -> int:
-    """
-    get weighted middle between min and max
-    """
-    i = min
-    total = 0
-    # count the total number of values between min and max
-    while i < max:
-        if i in dict:
-            total += len(dict[i])
-        i += 1
-    # get halfway point
-    target = total // 2
-    i = min
-    count = 0
-    # count the number of values until halfway is reached
-    while i < max and count < target:
-        if i in dict:
-            count += len(dict[i])
-        i += 1
-    return i
-
-
-
-def update(dict: dict[int, Any], low: int, high: int) -> tuple[int, int]:
-    """
-    move low and high to values that exist in dict
-    """
-    lowest = False
-    highest = False
-    # check values greater than 'low'
-    while low < high and not lowest:
-        # check if there's a value at this point
-        if low in dict:
-            lowest = True
-        else:
-            low += 1
-    # check values less than 'high'
-    while low < high and not highest:
-        # check if there's a value at this point
-        if high in dict:
-            highest = True
-        else:
-            high -= 1
-    return low, high
+    generate_tree(start, end, path)
 
 
 
