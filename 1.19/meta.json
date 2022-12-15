@@ -1,5 +1,5 @@
 {
-  "last_commit": "c6b01e5851b5a0c090b46a5533c48c9f68484f35",
+  "last_commit": "0b9645feea985b64c2b943be15dd141b209ad3f3",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -872,7 +872,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19011
+      "patch": 19012
     },
     {
       "id": "gm4_fulcio_shamir",
