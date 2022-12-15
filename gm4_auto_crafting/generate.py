@@ -1,7 +1,7 @@
 from beet import Context, Function, ItemTag, LootTable, Predicate
 from beet.contrib.vanilla import Vanilla
 from collections import defaultdict
-from typing import Any, Union
+from typing import Any
 from dataclasses import dataclass
 
 
@@ -231,22 +231,24 @@ stackable_16 = [
 
 
 @dataclass
-class ShapedRecipe:
-    pattern: Any
-    result: Any
-    mirror: bool
+class RecipeResult:
+    name: str
+    count: int = 1
+    rolls: int = 1
 
 
 @dataclass
-class ShapelessRecipe:
-    ingredients: list[Any]
-    result: Any
+class RecipeShape:
+    ingredients: list[str]
+    result: list[RecipeResult]
+    shapeless: bool
+    mirror: bool = False
 
 
 @dataclass
 class RecipeData:
     name: str
-    recipe: Union[ShapedRecipe, ShapelessRecipe]
+    recipe: RecipeShape
     slot_count: int
     total_length: int
 
@@ -264,60 +266,37 @@ def beet_default(ctx: Context):
     vanilla = ctx.inject(Vanilla)
 
     recipes: list[RecipeData] = []
-    predicates: list[str] = []
 
     for id, recipe in vanilla.data.recipes.items():
         name = id.split(':')[1]
         contents = recipe.data
         if contents["type"] == "minecraft:crafting_shaped":
-            recipe_data, predicate_list = interpret_recipe(ctx, contents, name, False)
-            recipes.append(recipe_data)
-            predicates.extend(predicate_list)
+            recipe = analyze_shaped_recipe(ctx, contents, name)
         elif contents["type"] == "minecraft:crafting_shapeless":
-            recipe_data, predicate_list = interpret_recipe(ctx, contents, name, True)
-            recipes.append(recipe_data)
-            predicates.extend(predicate_list)
+            recipe = analyze_shapeless_recipe(ctx, contents, name)
+        else:
+            continue
 
-    # create predicate files for items that were in a list in a recipe
-    generate_predicates(ctx, predicates)
+        # create loot table file for recipe output
+        generate_crafting_loot_table(ctx, recipe.result, name)
+
+        # gets the two parameters (slot_count and total_length) used for the search tree
+        all_items = [i for i in recipe.ingredients if i != "minecraft:air"]
+        has_tag = "#" in "".join(all_items)
+        total_length = -1 if has_tag else sum([len(i) for i in all_items])
+
+        recipes.append(RecipeData(name, recipe, len(all_items), total_length))
+
     # create the search tree functions
     generate_trees(ctx, recipes)
 
 
-def interpret_recipe(ctx: Context, contents: dict[str, Any], name: str, shapeless: bool = False) -> tuple[RecipeData, list[str]]:
-    """
-    interprets the json of a crafting recipe
-    """
-    # get recipe as a dict and a list of items that were used in an ingredient list
-    if not shapeless:
-        recipe, needs_tag = analyze_shaped_recipe(contents, name)
-    else:
-        recipe, needs_tag = analyze_shapeless_recipe(contents, name)
-    predicates: list[str] = []
-    while len(needs_tag) > 0:
-        # create a custom item tag for the items used in an ingredient list
-        predicate = generate_custom_item_tag(ctx, needs_tag.pop())
-        # add the custom item tag to a list to generate a predicate for
-        predicates.append(predicate)
-        
-    # create loot table file for recipe output
-    generate_crafting_loot_table(ctx, recipe.result, name)
-    # get slot_count and total_length of recipe
-    if isinstance(recipe, ShapedRecipe):
-        item_count, total_length = check_input(recipe.pattern)
-    else:
-        item_count, total_length = check_input(recipe.ingredients)
-    return RecipeData(name, recipe, item_count, total_length), predicates
-
-
-
-def analyze_shaped_recipe(recipe: dict[str, Any], name: str) -> tuple[ShapedRecipe, list[TagData]]:
+def analyze_shaped_recipe(ctx: Context, recipe: dict[str, Any], name: str) -> RecipeShape:
     """
     analyzes the contents of the shaped recipe json
     """
-    needs_tag: list[TagData] = []
     pattern: list[str] = []
-    result: list[dict[str, Any]] = []
+    result: list[RecipeResult] = []
     list_symbols: list[str] = []
 
     while len(recipe["pattern"]) < 3:
@@ -331,12 +310,12 @@ def analyze_shaped_recipe(recipe: dict[str, Any], name: str) -> tuple[ShapedReci
         for symbol in row:
             
             # if there's a space, then assume it's unfilled/air
-            if symbol == ' ':
+            if symbol == " ":
                 pattern_row.append("minecraft:air")
-                if len(result) and result[-1]["name"] == "minecraft:air":
-                    result[-1]["rolls"] += 1
+                if len(result) and result[-1].name == "minecraft:air":
+                    result[-1].rolls += 1
                 else:
-                  result.append({"name": "minecraft:air","count": 1,"rolls": 1})
+                  result.append(RecipeResult("minecraft:air"))
 
             else:
                 # assume the ingredient is an item, not a tag
@@ -345,7 +324,7 @@ def analyze_shaped_recipe(recipe: dict[str, Any], name: str) -> tuple[ShapedReci
                     if type(recipe["key"][symbol]) is list:
                         # if symbol is not already in the list of symbols, add it
                         if symbol not in list_symbols:
-                            needs_tag.append(TagData(f"#{NAMESPACE}:{name}_ingredient_{len(list_symbols) + 1}", recipe["key"][symbol]))
+                            generate_custom_item_tag(ctx, TagData(f"#{NAMESPACE}:{name}_ingredient_{len(list_symbols) + 1}", recipe["key"][symbol]))
                             # account for this symbol
                             list_symbols.append(symbol)
                         # add the custom list to the pattern
@@ -356,29 +335,29 @@ def analyze_shaped_recipe(recipe: dict[str, Any], name: str) -> tuple[ShapedReci
 
                     # based on the last item, generate loot table rolls
                     if item in buckets:
-                        if len(result) and result[-1]["name"] == "minecraft:bucket":
-                            result[-1]["rolls"] += 1
+                        if len(result) and result[-1].name == "minecraft:bucket":
+                            result[-1].rolls += 1
                         else:
-                          result.append({"name": "minecraft:bucket","count": 1,"rolls": 1})
+                          result.append(RecipeResult("minecraft:bucket"))
                     elif item in bottles:
-                        if len(result) and result[-1]["name"] == "minecraft:glass_bottle":
-                            result[-1]["rolls"] += 1
+                        if len(result) and result[-1].name == "minecraft:glass_bottle":
+                            result[-1].rolls += 1
                         else:
-                          result.append({"name": "minecraft:glass_bottle","count": 1,"rolls": 1})
+                          result.append(RecipeResult("minecraft:glass_bottle"))
                     else:
-                        if len(result) and result[-1]["name"] == "minecraft:air":
-                            result[-1]["rolls"] += 1
+                        if len(result) and result[-1].name == "minecraft:air":
+                            result[-1].rolls += 1
                         else:
-                            result.append({"name": "minecraft:air","count": 1,"rolls": 1})
+                            result.append(RecipeResult("minecraft:air"))
                 # if that failed, assume the item is a tag
                 except:
                     try:
                         item_tag = recipe["key"][symbol]["tag"]
                         pattern_row.append("#" + item_tag)
-                        if len(result) and result[-1]["name"] == "minecraft:air":
-                            result[-1]["rolls"] += 1
+                        if len(result) and result[-1].name == "minecraft:air":
+                            result[-1].rolls += 1
                         else:
-                            result.append({"name": "minecraft:air","count": 1,"rolls": 1})
+                            result.append(RecipeResult("minecraft:air"))
                     # if that failed, raise an error
                     except:
                         pattern_row.append("invalid")
@@ -428,10 +407,10 @@ def analyze_shaped_recipe(recipe: dict[str, Any], name: str) -> tuple[ShapedReci
     except:
         result_count = 1
     # get what the last output item was
-    last_output = result[-1]["name"]
+    last_output = result[-1].name
     # remove the last output item from result
-    result[-1]["rolls"] -= 1
-    if result[-1]["rolls"] == 0:
+    result[-1].rolls -= 1
+    if result[-1].rolls == 0:
         result.pop()
     # if last output item was not air, move it somewhere else
     if last_output != "minecraft:air":
@@ -440,14 +419,14 @@ def analyze_shaped_recipe(recipe: dict[str, Any], name: str) -> tuple[ShapedReci
         # check if the last item is the same as another item in the output loot table
         while i < len(result) and not found_match:
             # if a matching item is found, merge them
-            if result[i]["name"] == last_output:
+            if result[i].name == last_output:
                 # if there's only one instance, just increase the count
-                if result[i]["rolls"] == 1:
-                    result[i]["count"] += 1
+                if result[i].rolls == 1:
+                    result[i].count += 1
                 # if there's multiple instances, increase the count for only one of the rolls
                 else:
-                    result[i]["rolls"] -= 1
-                    result.insert(i, {"name": result[i]["name"],"count": 2,"rolls": 1})
+                    result[i].rolls -= 1
+                    result.insert(i, RecipeResult(result[i].name, count=2))
                 found_match = True
             i += 1
         # if there's no matching item in the output loot table, put the item in the first empty output slot
@@ -456,10 +435,10 @@ def analyze_shaped_recipe(recipe: dict[str, Any], name: str) -> tuple[ShapedReci
             found_match = False
             while i < len(result) and not found_match:
                 # find the first instance of an air roll
-                if result[i]["name"] == "minecraft:air":
+                if result[i].name == "minecraft:air":
                     # decrease the number of air rolls, and add a roll for the last output item before that
-                    result[i]["rolls"] -= 1
-                    result.insert(i, {"name": last_output,"count": 1,"rolls": 1})
+                    result[i].rolls -= 1
+                    result.insert(i, RecipeResult(last_output))
                     found_match = True
                 i += 1
             # if the entire thing is full, just print the recipe for manual correction
@@ -468,27 +447,28 @@ def analyze_shaped_recipe(recipe: dict[str, Any], name: str) -> tuple[ShapedReci
                 print("FULL: " + recipe["result"]["item"] + " -> " + last_output)
 
     # set the last slot to the recipe result
-    result.append({"name": result_id,"count": result_count,"rolls": 1})
-    # return the new formatted ingredients and result, and the items in custom item tags
-    return ShapedRecipe(pattern, result, mirror), needs_tag
+    result.append(RecipeResult(result_id, count=result_count))
+    # return the new formatted recipe
+    return RecipeShape(pattern, result, shapeless=False, mirror=mirror)
 
 
 
-def analyze_shapeless_recipe(recipe: dict[str, Any], name: str) -> tuple[ShapelessRecipe, list[TagData]]:
+def analyze_shapeless_recipe(ctx: Context, recipe: dict[str, Any], name: str) -> RecipeShape:
     """
     analyzes the contents of the shapeless recipe json
     """
-    needs_tag: list[TagData] = []
-    ingredients: list[Any | list[Any]] = []
-    result: Any = []
+    tag_count = 0
+    ingredients: list[str] = []
+    result: list[RecipeResult] = []
     bucket_count = 0
     bottle_count = 0
     air_count = 0
     total_count = 0
     for entry in recipe["ingredients"]:
         if type(entry) is list:
-            item = f"#{NAMESPACE}:{name}_ingredient_{len(needs_tag)+1}"
-            needs_tag.append(TagData(item, entry)) # type: ignore
+            tag_count += 1
+            item = f"#{NAMESPACE}:{name}_ingredient_{tag_count}"
+            generate_custom_item_tag(ctx, TagData(item, entry)) # type: ignore
         elif "item" in entry:
             item = entry["item"]
             # special case: check if the item is a bucket or bottle type (used for output)
@@ -503,16 +483,16 @@ def analyze_shapeless_recipe(recipe: dict[str, Any], name: str) -> tuple[Shapele
     # if there were (non-empty) buckets in the recipe, return empty buckets
     if bucket_count > 0:
         total_count += 1
-        result.append({"name": "minecraft:bucket","count": bucket_count,"rolls": 1})
+        result.append(RecipeResult("minecraft:bucket", count=bucket_count))
     # if there were (non-empty) bottles in the recipe, return empty bottles
     if bottle_count > 0:
         total_count += 1
-        result.append({"name": "minecraft:glass_bottle","count": bottle_count,"rolls": 1})
+        result.append(RecipeResult("minecraft:glass_bottle", count=bottle_count))
     # fill the slots with air, up until the last slot
     while total_count < 8:
         total_count += 1
         air_count += 1
-    result.append({"name": "minecraft:air","count": 1,"rolls": air_count})
+    result.append(RecipeResult("minecraft:air", rolls=air_count))
     result_id = recipe["result"]["item"]
     # set the result count
     try:
@@ -520,9 +500,9 @@ def analyze_shapeless_recipe(recipe: dict[str, Any], name: str) -> tuple[Shapele
     except:
         result_count = 1
     # set the last slot to the recipe result
-    result.append({"name": result_id,"count": result_count,"rolls": 1})
-    # return the new formatted ingredients and result, and the items in custom item tags
-    return ShapelessRecipe(ingredients, result), needs_tag
+    result.append(RecipeResult(result_id, count=result_count))
+    # return the new formatted recipe
+    return RecipeShape(ingredients, result, shapeless=True)
 
 
 
@@ -554,12 +534,28 @@ def generate_custom_item_tag(ctx: Context, data: TagData) -> str:
                 json["values"].append("#" + value["tag"])
     # create item tag file
     ctx.data[f"{NAMESPACE}:{name}"] = ItemTag(json)
+
+    # write the function that checks the predicates
+    fn_name = f"{NAMESPACE}:check_item_tags"
+    if fn_name not in ctx.data.functions:
+        ctx.data.functions[fn_name] = Function([
+            "# checks each slot for item tags",
+            "# @s = crafter armor stand\n# located at the center of the block",
+            "# run from gm4_custom_crafters-3.0:process_input/check_item_tags via #gm4_custom_crafters:custom_item_checks",
+            "",
+        ])
+    ctx.data.functions[fn_name].append(f"execute if predicate {NAMESPACE}:custom_item_tags/{name} run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.{NAMESPACE}.{name} set value 1b")
+
+    # create predicate file for the item tag check
+    json: Any = {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"mainhand":{"tag": f"{NAMESPACE}:{name}"}}}}
+    ctx.data[f"{NAMESPACE}:custom_item_tags/{name}"] = Predicate(json)
+
     # return the name of the item tag just created
     return data.name[1:]
 
 
 
-def generate_crafting_loot_table(ctx: Context, result: list[dict[str, Any]], target: str):
+def generate_crafting_loot_table(ctx: Context, result: list[RecipeResult], target: str):
     """
     creates a loot table for the output result of the custom crafting recipe
     """
@@ -567,63 +563,17 @@ def generate_crafting_loot_table(ctx: Context, result: list[dict[str, Any]], tar
     json: Any = {"type": "minecraft:generic","pools": []}
     for r in result:
         # populate pools
-        pool: Any = {"rolls": r["rolls"],"entries":[{"type":"minecraft:item","name":r["name"]}]}
+        pool: Any = {"rolls": r.rolls,"entries":[{"type":"minecraft:item","name":r.name}]}
         # set count
-        if r["count"] > 1:
+        if r.count > 1:
             try:
-                pool["entries"][0]["functions"].append({"function":"minecraft:set_count","count":r["count"]})
+                pool["entries"][0]["functions"].append({"function":"minecraft:set_count","count":r.count})
             except:
-                pool["entries"][0]["functions"] = [{"function":"minecraft:set_count","count":r["count"]}]
+                pool["entries"][0]["functions"] = [{"function":"minecraft:set_count","count":r.count}]
         json["pools"].append(pool)
-    
+
     # write loot table file
     ctx.data[f"{NAMESPACE}:{LOOT_PATH}/{target}"] = LootTable(json)
-
-
-
-def check_input(recipe: list[str]) -> tuple[int, int]:
-    """
-    gets the two parameters (slot_count and total_length) used for the search tree
-    """
-    item_count = 0
-    total_length = 0
-    has_tag = False
-    for item in recipe:
-        # ignore air
-        if item != "minecraft:air":
-            # add up total items used
-            item_count += 1
-            if "#" in item:
-                has_tag = True
-            else:
-                # add up total length of input ids
-                total_length += len(item)
-    # if there's an item tag, can't use total length
-    if has_tag:
-        total_length = -1
-    return item_count, total_length
-
-
-
-def generate_predicates(ctx: Context, predicates: list[str]) -> None:
-    """
-    creates predicate files for the custom item tag checks
-    """
-    # initial function header
-    function = "# checks each slot for item tags\n# @s = crafter armor stand\n# located at the center of the block\n# run from gm4_custom_crafters-3.0:process_input/check_item_tags via #gm4_custom_crafters:custom_item_checks\n\n"
-    for name in predicates:
-        # get prefix and name of tag
-        [prefix, tag] = name.split(":")
-        # newline for that specific predicate
-        function += f"execute if predicate {NAMESPACE}:custom_item_tags/{tag} run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.{prefix}.{tag} set value 1b\n"
-
-        # create predicate file for the item tag check
-        json: Any = {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"mainhand":{}}}}
-        json["predicate"]["equipment"]["mainhand"]["tag"] = name
-        ctx.data[f"{NAMESPACE}:custom_item_tags/{tag}"] = Predicate(json)
-
-    # write the function that checks the predicates
-    ctx.data[f"{NAMESPACE}:check_item_tags"] = Function(function)
 
 
 
@@ -937,13 +887,13 @@ def generate_recipe_function(ctx: Context, recipes: list[RecipeData], path: str)
     """
     create recipe function for the specific slot_count and total_length
     """
-    def stack_size(recipe: ShapelessRecipe | ShapedRecipe) -> str:
+    def stack_size(recipe: RecipeShape) -> str:
         """
         get max stack size of items based on result stackability and count
         """
         result = recipe.result[-1]
-        item = result["name"]
-        count = result["count"]
+        item = result.name
+        count = result.count
         # stack_size should be less than or equal to stack_count // result_count
         if item in unstackables:
             return "1"
@@ -965,7 +915,7 @@ def generate_recipe_function(ctx: Context, recipes: list[RecipeData], path: str)
         items: list[str] = []
         recipe_data = ""
         # if shapeless recipe
-        if isinstance(recipe, ShapelessRecipe):
+        if recipe.shapeless:
             duplicates: list[Any] = []
             counted: list[Any] = []
             for item in recipe.ingredients:
@@ -1020,7 +970,7 @@ def generate_recipe_function(ctx: Context, recipes: list[RecipeData], path: str)
         else:
             # keep track of the slot number
             i = 0
-            for item in recipe.pattern:
+            for item in recipe.ingredients:
                 if "#" in item:
                     item = item[1:]
                     [prefix, tag] = item.split(":")
@@ -1035,7 +985,7 @@ def generate_recipe_function(ctx: Context, recipes: list[RecipeData], path: str)
             # if mirrorable
             if recipe.mirror:
                 # mirror recipe
-                pattern: Any = recipe.pattern
+                pattern: Any = recipe.ingredients
                 # if 2 columns
                 if (pattern[2] == "minecraft:air" and (len(pattern) < 6 or pattern[5] == "minecraft:air") and (len(pattern) < 9 or pattern[8] == "minecraft:air")):
                     # flip columns 1 and 2
@@ -1073,7 +1023,6 @@ def generate_recipe_function(ctx: Context, recipes: list[RecipeData], path: str)
                         pattern[8] = temp
                 # add mirrored recipe
                 new_recipe = r.copy()
-                assert isinstance(new_recipe.recipe, ShapedRecipe)
                 # the copy is only shallow so changing mirror also modifies the old recipe,
                 # but this is not a problem since the old recipe is already processed and
                 # we are adding to the end of the list
