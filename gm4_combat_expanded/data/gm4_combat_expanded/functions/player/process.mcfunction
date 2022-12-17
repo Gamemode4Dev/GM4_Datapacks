@@ -18,6 +18,11 @@ scoreboard players set @s[scores={gm4_ce_kill=1..}] gm4_ce_t_kill 5
 # remove husk sprint score if player didn't sprint
 execute if score @s gm4_ce_t_sprinting matches 1.. unless score @s gm4_ce_sprinting matches 1.. run scoreboard players reset @s gm4_ce_t_sprinting
 
+# check attack damage
+execute store result score @s gm4_ce_atkd run attribute @s generic.attack_damage get 10
+execute if score @s[tag=!gm4_ce_weak] gm4_ce_atkd matches 0 run function gm4_combat_expanded:player/weak_apply
+execute if score @s[tag=gm4_ce_weak] gm4_ce_atkd matches 1.. run function gm4_combat_expanded:player/weak_remove
+
 # remove tags
 tag @s remove gm4_ce_beacon_active
 execute if entity @s[tag=gm4_ce_immune_active] run function gm4_combat_expanded:armor/modifier/type/immune/clear_immunities

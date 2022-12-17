@@ -16,8 +16,8 @@ execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add 
 execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add $mob_damage gm4_ce_data 2
 execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add $mob_toughness gm4_ce_data 2
 
-# spawn a second drowned if difficulty >= 11
-execute if score $difficulty gm4_ce_data matches 11.. if entity @s[tag=!gm4_ce_extra_mob] store success score $mob_extras gm4_ce_data run summon drowned ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
+# increase reinforcement chance at difficulty >= 11
+execute if score $difficulty gm4_ce_data matches 11.. run attribute @s zombie.spawn_reinforcements modifier add 7c9e8885-af69-4a6d-920e-76ffe9a589ed "gm4_ce_challenger_buff" 0.5 add
 
 # double armor drop rate at diff 11 or above
 execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s ArmorDropChances set value [0.17F,0.17F,0.17F,0.17F]
@@ -31,7 +31,7 @@ execute if predicate gm4_combat_expanded:mob/modifier/flowering run function gm4
 tag @s[predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_weakness_attacks
 execute if predicate gm4_combat_expanded:mob/modifier/deep run scoreboard players add $mob_damage gm4_ce_data 4
 tag @s[predicate=gm4_combat_expanded:mob/modifier/deep] add gm4_ce_fatigue_attacks
-execute if predicate gm4_combat_expanded:mob/modifier/growth run function gm4_combat_expanded:mob/effect/growth_drowned
+execute if predicate gm4_combat_expanded:mob/modifier/growth run function gm4_combat_expanded:mob/effect/growth_zombie
 execute if predicate gm4_combat_expanded:mob/modifier/reef run function gm4_combat_expanded:mob/effect/reef_drowned
 
 # set armor
@@ -39,9 +39,10 @@ loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/gener
 item replace entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering] armor.head with flowering_azalea_leaves{gm4_ce_spore:{type:drowned,generation:0}}
 execute if entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering] store result entity @s ArmorItems[3].tag.gm4_ce_spore.generation int 1 run scoreboard players add @s gm4_ce_generation 1
 # set weapon
-loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/generic
-item replace entity @s[predicate=gm4_combat_expanded:mob/modifier/reef,predicate=gm4_combat_expanded:technical/chance/reef_trident] weapon.mainhand with trident
+loot replace entity @s[predicate=!gm4_combat_expanded:mob/modifier/reef] weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/generic
 
+# tag trident wielders to not get droprate buff
+execute if data entity @s HandItems[{id:"minecraft:trident"}] run tag @s add gm4_ce_trident_wielder
 
 # set modifiers
 function gm4_combat_expanded:mob/modifier/prep

@@ -30,6 +30,7 @@ scoreboard objectives add gm4_ce_hunger food
 scoreboard objectives add gm4_ce_shielded_hit minecraft.used:minecraft.shield
 scoreboard objectives add gm4_ce_sprinting minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add gm4_ce_generation dummy
+scoreboard objectives add gm4_ce_atkd dummy
 
 # constants
 scoreboard players set #0 gm4_ce_data 0
