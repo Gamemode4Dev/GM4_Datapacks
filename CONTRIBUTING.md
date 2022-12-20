@@ -41,6 +41,8 @@ extend: '../module.yaml'
 # The ID and name of this module. The ID should always be the same as the current directory name
 id: gm4_disassemblers
 name: Disassemblers
+# Version is only necessary when publishing to Modrinth
+version: '1.3.8'
 
 # The build pipeline for this module
 pipeline:
@@ -55,6 +57,8 @@ pipeline:
 
 # Metadata for the website and credits
 meta:
+  modrinth: # This section is only necessary when publishing to Modrinth
+    project_id: itk6Zfe2
   gm4:
     # A description. This should be a good summary of what this module adds or achieves, to get someone interested in this module
     description: Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!
