@@ -65,7 +65,14 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install
 
-      - name: Build all modules
+      - name: Build and publish all modules
+        if: github.event_name != 'pull_request'
+        run: poetry run beet -p beet-release.yaml build
+        env:
+          BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+
+      - name: Build all modules for pull request
+        if: github.event_name == 'pull_request'
         run: poetry run beet -p beet-release.yaml build
 
       - name: Upload artifact
