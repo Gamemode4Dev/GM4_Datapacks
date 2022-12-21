@@ -1,5 +1,5 @@
 {
-  "last_commit": "0b9645feea985b64c2b943be15dd141b209ad3f3",
+  "last_commit": "f889e88d5f37c8ac1eafff5d46838d523499a5eb",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2164,7 +2164,7 @@
       },
       "hidden": false,
       "important_note": false,
-      "patch": 19010
+      "patch": 19011
     },
     {
       "id": "gm4_undead_players",
