@@ -26,13 +26,6 @@ execute store result score $mob_speed gm4_ce_data run data get storage gm4_comba
 execute store result score $mob_armor gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{Name:"gm4_ce_mob_armor"}].Amount
 execute store result score $mob_toughness gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{Name:"gm4_ce_mob_toughness"}].Amount
 
-# half droprate of armor in "Dark"
-data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
-
-# remove bonus damage if weapon is held, then set droprate to 20% (unless in "Dark")
-execute if data entity @s HandItems[{Count:1b}] run scoreboard players set $mob_damage gm4_ce_data 0
-execute if score $mob_damage gm4_ce_data matches 0 run data modify entity @s[tag=!gm4_ce_trident_wielder,predicate=!gm4_combat_expanded:mob/modifier/dark] HandDropChances set value [0.20F,0.20F]
-
 # remove bonus health if witch spawned in witch hut
 execute if entity @s[type=witch,predicate=gm4_combat_expanded:technical/in_witch_hut] run scoreboard players set $mob_health gm4_ce_data 0
 

@@ -21,5 +21,12 @@ execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s 
 # set armor
 loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/piglin
 
+# half droprate of armor in "Dark"
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
+
+# remove bonus damage if weapon is held, then set droprate to 20% (unless in "Dark")
+execute if data entity @s HandItems[{Count:1b}] run scoreboard players set $mob_damage gm4_ce_data 0
+execute if score $mob_damage gm4_ce_data matches 0 run data modify entity @s[predicate=!gm4_combat_expanded:mob/modifier/dark] HandDropChances set value [0.20F,0.20F]
+
 # set modifiers
 function gm4_combat_expanded:mob/modifier/prep

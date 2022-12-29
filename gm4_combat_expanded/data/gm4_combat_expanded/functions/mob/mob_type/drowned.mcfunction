@@ -41,8 +41,12 @@ execute if entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering] store
 # set weapon
 loot replace entity @s[predicate=!gm4_combat_expanded:mob/modifier/reef] weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/generic
 
-# tag trident wielders to not get droprate buff
-execute if data entity @s HandItems[{id:"minecraft:trident"}] run tag @s add gm4_ce_trident_wielder
+# half droprate of armor in "Dark"
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
+
+# remove bonus damage if weapon is held, then set droprate to 20% (unless in "Dark" or wielding trident)
+execute if data entity @s HandItems[{Count:1b}] run scoreboard players set $mob_damage gm4_ce_data 0
+execute if score $mob_damage gm4_ce_data matches 0 unless data entity @s HandItems[{id:"minecraft:trident"}] run data modify entity @s[predicate=!gm4_combat_expanded:mob/modifier/dark] HandDropChances set value [0.20F,0.20F]
 
 # set modifiers
 function gm4_combat_expanded:mob/modifier/prep

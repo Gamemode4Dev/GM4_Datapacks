@@ -18,11 +18,6 @@ scoreboard players set @s[scores={gm4_ce_kill=1..}] gm4_ce_t_kill 5
 # remove husk sprint score if player didn't sprint
 execute if score @s gm4_ce_t_sprinting matches 1.. unless score @s gm4_ce_sprinting matches 1.. run scoreboard players reset @s gm4_ce_t_sprinting
 
-# check attack damage
-execute store result score @s gm4_ce_atkd run attribute @s generic.attack_damage get 10
-execute if score @s[tag=!gm4_ce_weak] gm4_ce_atkd matches 0 run function gm4_combat_expanded:player/weak_apply
-execute if score @s[tag=gm4_ce_weak] gm4_ce_atkd matches 1.. run function gm4_combat_expanded:player/weak_remove
-
 # remove tags
 tag @s remove gm4_ce_beacon_active
 execute if entity @s[tag=gm4_ce_immune_active] run function gm4_combat_expanded:armor/modifier/type/immune/clear_immunities
@@ -34,3 +29,7 @@ execute if predicate gm4_combat_expanded:modified_armor/wearing run function gm4
 execute if score @s gm4_ce_absorp matches 1.. run function gm4_combat_expanded:player/shield_player
 # heal players if they have stored health
 execute if score @s gm4_ce_healstore matches 1.. run function gm4_combat_expanded:player/heal/heal_calc
+
+## compatability with older versions, can be removed later
+attribute @s[tag=gm4_ce_weak] generic.attack_speed modifier remove 6f512c49-960b-4792-91d3-1f8c73b252ac
+tag @s remove gm4_ce_weak

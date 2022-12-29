@@ -32,5 +32,8 @@ loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon
 # arrow drop rate
 execute if score $arrow gm4_ce_data matches 1 run data modify entity @s HandDropChances[1] set value 0.25F
 
+# half droprate of armor in "Dark"
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
+
 # set modifiers
 function gm4_combat_expanded:mob/modifier/prep

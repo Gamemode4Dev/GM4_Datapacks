@@ -1,0 +1,52 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:shield",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{HideFlags:32,BlockEntityTag:{Base:13,Patterns:[{Color:15,Pattern:\"bo\"}]}}"
+              },
+              {
+                "function": "minecraft:set_enchantments",
+                "enchantments": {
+                  "minecraft:thorns": 3
+                }
+              },
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      [
+                        "Barbed ",
+                        {
+                          "translate": "item.minecraft.shield"
+                        }
+                      ],
+                      {
+                        "translate": "item.gm4.combat_expanded.name.barbed",
+                        "with": [
+                          {
+                            "translate": "item.minecraft.shield"
+                          }
+                        ]
+                      }
+                    ],
+                    "italic": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

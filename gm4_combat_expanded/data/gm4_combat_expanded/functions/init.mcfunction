@@ -20,6 +20,7 @@ scoreboard objectives add gm4_ce_t_soothe dummy
 scoreboard objectives add gm4_ce_t_witch dummy
 scoreboard objectives add gm4_ce_t_wolf dummy
 scoreboard objectives add gm4_ce_t_sprinting dummy
+scoreboard objectives add gm4_ce_t_reactive dummy
 scoreboard objectives add gm4_ce_guarded minecraft.custom:minecraft.damage_resisted
 scoreboard objectives add gm4_ce_guard dummy
 scoreboard objectives add gm4_ce_absorp dummy
