@@ -16,7 +16,7 @@
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Pick up a machine with the relocator",
+        "Pick up a container with a relocator",
         {
           "translate": "advancement.gm4.relocators.description"
         }
