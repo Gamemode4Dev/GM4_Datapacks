@@ -38,6 +38,3 @@ scoreboard players operation $id_total gm4_crafting += $id_8 gm4_crafting
 scoreboard players set $crafted gm4_crafting 0
 data remove block 29999998 1 7134 Items
 execute positioned 29999998 1 7134 run function #gm4_custom_crafters:check_recipes
-
-# check if one of the recipes succeeded
-execute unless score $crafted gm4_crafting matches 0 run function gm4_auto_crafting:auto_crafter/craft/finish_crafting

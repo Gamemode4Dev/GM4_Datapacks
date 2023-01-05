@@ -22,7 +22,19 @@
     "required_modules": [],
     "recommended_modules": [
         "resource_pack",
-        "relocators"
+        "relocators",
+        "standard_crafting",
+        "auto_crafting",
+        "record_crafting",
+        "enchantment_extractors",
+        "forming_press",
+        "block_compressors",
+        "disassemblers",
+        "tunnel_bores",
+        "boots_of_ostara",
+        "heart_canisters",
+        "smelteries",
+        "liquid_tanks"
     ],
     "credits": {
         "Creator": [

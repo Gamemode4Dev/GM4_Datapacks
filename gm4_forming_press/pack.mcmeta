@@ -20,8 +20,20 @@
     "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
     "wiki_link": "https://wiki.gm4.co/wiki/Forming_Press",
     "recommended_modules": [
+        "resource_pack",
+        "relocators",
         "standard_crafting",
-        "relocators"
+        "auto_crafting",
+        "record_crafting",
+        "ender_hoppers",
+        "enchantment_extractors",
+        "block_compressors",
+        "disassemblers",
+        "tunnel_bores",
+        "boots_of_ostara",
+        "heart_canisters",
+        "smelteries",
+        "liquid_tanks"
     ],
     "credits": {
         "Creator": [
