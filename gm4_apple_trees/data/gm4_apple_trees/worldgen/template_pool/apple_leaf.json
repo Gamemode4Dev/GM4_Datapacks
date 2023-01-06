@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
-        "location": "gm4_apple_trees:apple_leaf",
+        "location": "gm4_apple_trees:worldgen/apple_leaf",
         "processors": "minecraft:empty"
       }
     },
