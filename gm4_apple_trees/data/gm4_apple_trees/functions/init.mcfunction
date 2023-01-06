@@ -9,6 +9,8 @@ scoreboard objectives add gm4_apple_data dummy
 scoreboard objectives add gm4_ga_root dummy
 scoreboard objectives add gm4_ga_root_count dummy
 
+scoreboard players set #8 gm4_apple_data 8
+scoreboard players set #4 gm4_apple_data 4
 scoreboard players set #stage_1_start gm4_apple_data 20
 scoreboard players set #stage_2_start gm4_apple_data 40
 scoreboard players set #stage_0_start gm4_apple_data 60
