@@ -1,11 +1,12 @@
 from io import TextIOWrapper
-import os, json, getpass, collections, shutil, zipfile
-from github import Github, Repository
+import os, json, collections, shutil
 from urllib import request
 
-GITHUB_REPO = "misode/mcmeta"   # github repo to extract recipes from
+
 VERSION = "1.19"              # version to extract recipes from
-SHA = "071befb7fa9569ffa0043f74289d0ef1ec5ffc8b" # <- sha for 1.19 --- change to empty string if generating for a new version
+GITHUB_URL = f"https://raw.githubusercontent.com/misode/mcmeta/{VERSION}-summary/data/recipe/data.min.json"
+
+
 
 NAME = "gm4_auto_crafting"      # name of the module
 DIR = f"{NAME}/data/{NAME}"
@@ -269,79 +270,7 @@ def main() -> None:
 
 
 def get_recipes(version: str, remove_files: bool = True) -> list[dict]:
-    recipes = []
-    # check if the files folder already exists
-    if not os.path.exists(f"{NAME}/temp_files"):
-        # if it doesn't, then download and extract the zip
-        download_files(version)
-    
-    # search all of the downloaded files
-    path = f"{NAME}/temp_files"
-    for root, subfolders, files in os.walk(path):
-        # find the recipes folder
-        if "/minecraft/recipes" in root:
-            # get all file contents in the recipes folder
-            for file in files:
-                file_path = root + "/" + file
-                with open(file_path) as json_file:
-                    data = json.load(json_file)
-                    recipes.append({"name": file.removesuffix(".json"), "contents": data})
-
-    # delete the temporary files
-    if remove_files:
-        shutil.rmtree(f"{NAME}/temp_files", True)
-        os.remove(f"{NAME}/temp_files.zip")
-    
-    return recipes
-    
-
-
-def get_sha_for_tag(repository: Repository.Repository, tag: str) -> str:
-    """
-    Returns a commit PyGithub object for the specified repository and tag.
-    """
-    print("Getting sha for \"%s\"" % tag)
-    branches = repository.get_branches()
-    matched_branches = [match for match in branches if match.name == tag]
-    if matched_branches:
-        return matched_branches[0].commit.sha
-
-    tags = repository.get_tags()
-    matched_tags = [match for match in tags if match.name == tag]
-    if not matched_tags:
-        raise ValueError('No Tag or Branch exists with that name')
-    print("sha: %s" % matched_tags[0].commit.sha)
-    return matched_tags[0].commit.sha
-
-
-
-def download_files(version: str) -> None:
-    """
-    downloads and extracts the data files for a specific MC version
-    """
-    # check if zip file already exists
-    if not os.path.exists(f"{NAME}/temp_files.zip"):
-        # download zip file from github if it doesn't exist
-        login = getpass.getpass("Github Login Token: ")
-        github = Github(login_or_token=login)
-        repo = github.get_repo(full_name_or_id=GITHUB_REPO)
-        # generate SHA if it's not set
-        if SHA == "":
-            tag = version + "-data-json"
-            sha = get_sha_for_tag(repo, tag)
-        else:
-            sha = SHA
-        # get download link for specific sha
-        link = repo.get_archive_link("zipball", sha)
-        # download zip
-        print(f"Downloading {link}")
-        request.urlretrieve(link, f"{NAME}/temp_files.zip")
-    # extract zip
-    print("Extracting files...")
-    with zipfile.ZipFile(f"{NAME}/temp_files.zip", 'r') as zip_ref:
-        zip_ref.extractall(f"{NAME}/temp_files")
-    print("Files extracted")
-
+    return [{"name":x, "contents":y} for x,y in json.load(request.urlopen(GITHUB_URL)).items()]
 
 
 def interpret_recipe(contents: dict, name: str, shapeless: bool = False) -> tuple[dict, list[str]]:
@@ -356,10 +285,10 @@ def interpret_recipe(contents: dict, name: str, shapeless: bool = False) -> tupl
     predicates = []
     while len(needs_tag) > 0:
         # create a custom item tag for the items used in an ingredient list
-        predicate = generate_custom_item_tag(needs_tag[-1])
+        predicate = generate_custom_item_tag(needs_tag.pop())
         # add the custom item tag to a list to generate a predicate for
         predicates.append(predicate)
-        needs_tag.pop()
+        
     # create loot table file for recipe output
     generate_crafting_loot_table(recipe["result"], f"{name}.json")
     # get slot_count and total_length of recipe
@@ -369,7 +298,14 @@ def interpret_recipe(contents: dict, name: str, shapeless: bool = False) -> tupl
         item_count, total_length = check_input(recipe["ingredients"])
     return {"name": name, "recipe": recipe, "slot_count": item_count, "total_length": total_length}, predicates
 
-
+def toList(recipe: dict) -> list:
+    """
+    converts a recipe dict to a list
+    """
+    recipe_list = []
+    for item in recipe:
+        recipe_list.append(item)
+    return recipe_list
 
 def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
     """
@@ -378,139 +314,78 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
     needs_tag = []
     pattern = []
     result = []
-    bucket_rolls = 0
-    bottle_rolls = 0
-    air_rolls = 0
-    last_roll = "air"
-    total_rolls = 0
-    list_ingredients = 0
     list_symbols = []
+
+    while len(recipe["pattern"]) < 3:
+        recipe["pattern"].append("   ")
     # convert pattern to array with items
     for row in recipe["pattern"]:
         pattern_row = []
-        total_row = 0
+        row = row.ljust(3)
+
         # check each ingredient
         for symbol in row:
+            
             # if there's a space, then assume it's unfilled/air
             if symbol == ' ':
                 pattern_row.append("minecraft:air")
+                if len(result) and result[-1]["name"] == "minecraft:air":
+                    result[-1]["rolls"] += 1
+                else:
+                  result.append({"name": "minecraft:air","count": 1,"rolls": 1})
 
-                # generate output list
-                total_rolls += 1
-                total_row += 1
-                air_rolls += 1
-                # if the roll before this was not air, then update the output with the corresponding item
-                if last_roll == "bucket" and bucket_rolls > 0:
-                    result.append({"name": "minecraft:bucket","count": 1, "rolls": bucket_rolls})
-                    bucket_rolls = 0
-                elif last_roll == "bottle" and bottle_rolls > 0:
-                    result.append({"name": "minecraft:glass_bottle","count": 1,"rolls": bottle_rolls})
-                    bottle_rolls = 0
-                last_roll = "air"
             else:
                 # assume the ingredient is an item, not a tag
                 try:
                     # if the ingredient is a list of items, create a custom item tag
                     if type(recipe["key"][symbol]) is list:
-                        # verify that this symbol wasn't already accounted for
+                        # if symbol is not already in the list of symbols, add it
                         if symbol not in list_symbols:
-                            list_ingredients += 1
-                            item = f"#{NAME}:" + name + "_ingredient_" + str(list_ingredients)
-                            needs_tag.append({"name": item, "values": recipe["key"][symbol]})
+                            needs_tag.append({"name": f"#{NAME}:{name}_ingredient_{len(list_symbols) + 1}", "values": recipe["key"][symbol]})
                             # account for this symbol
                             list_symbols.append(symbol)
+                        # add the custom list to the pattern
+                        item = f"#{NAME}:{name}_ingredient_{list_symbols.index(symbol) + 1}"
                     else:
                         item = recipe["key"][symbol]["item"]
                     pattern_row.append(item)
 
-                    # generate output list
-                    total_rolls += 1
-                    total_row += 1
                     # based on the last item, generate loot table rolls
                     if item in buckets:
-                        bucket_rolls += 1
-                        # if last item was not a bucket, then update the output with the corresponding item
-                        if last_roll == "air" and air_rolls > 0:
-                            result.append({"name": "minecraft:air","count": 1,"rolls": air_rolls})
-                            air_rolls = 0
-                        elif last_roll == "bottle" and bottle_rolls > 0:
-                            result.append({"name": "minecraft:glass_bottle","count": 1,"rolls": bottle_rolls})
-                            bottle_rolls = 0
-                        last_roll = "bucket"
+                        if len(result) and result[-1]["name"] == "minecraft:bucket":
+                            result[-1]["rolls"] += 1
+                        else:
+                          result.append({"name": "minecraft:bucket","count": 1,"rolls": 1})
                     elif item in bottles:
-                        bottle_rolls += 1
-                        # if last item was not a bottle, then update the output with the corresponding item
-                        if last_roll == "air" and air_rolls > 0:
-                            result.append({"name": "minecraft:air","count": 1,"rolls": air_rolls})
-                            air_rolls = 0
-                        elif last_roll == "bucket" and bucket_rolls > 0:
-                            result.append({"name": "minecraft:bucket","count": 1, "rolls": bucket_rolls})
-                            bucket_rolls = 0
-                        last_roll = "bottle"
+                        if len(result) and result[-1]["name"] == "minecraft:glass_bottle":
+                            result[-1]["rolls"] += 1
+                        else:
+                          result.append({"name": "minecraft:glass_bottle","count": 1,"rolls": 1})
                     else:
-                        air_rolls += 1
-                        # if last item was not air, then update the output with the corresponding item
-                        if last_roll == "bucket" and bucket_rolls > 0:
-                            result.append({"name": "minecraft:bucket","count": 1, "rolls": bucket_rolls})
-                            bucket_rolls = 0
-                        elif last_roll == "bottle" and bottle_rolls > 0:
-                            result.append({"name": "minecraft:glass_bottle","count": 1,"rolls": bottle_rolls})
-                            bottle_rolls = 0
-                        last_roll = "air"
+                        if len(result) and result[-1]["name"] == "minecraft:air":
+                            result[-1]["rolls"] += 1
+                        else:
+                            result.append({"name": "minecraft:air","count": 1,"rolls": 1})
                 # if that failed, assume the item is a tag
                 except:
                     try:
                         item_tag = recipe["key"][symbol]["tag"]
                         pattern_row.append("#" + item_tag)
-
-                        total_rolls += 1
-                        total_row += 1
-                        air_rolls += 1
-                        # if last item was not air, then update the output with the corresponding item
-                        if last_roll == "bucket" and bucket_rolls > 0:
-                            result.append({"name": "minecraft:bucket","count": 1, "rolls": bucket_rolls})
-                            bucket_rolls = 0
-                        elif last_roll == "bottle" and bottle_rolls > 0:
-                            result.append({"name": "minecraft:glass_bottle","count": 1,"rolls": bottle_rolls})
-                            bottle_rolls = 0
-                        last_roll = "air"
+                        if len(result) and result[-1]["name"] == "minecraft:air":
+                            result[-1]["rolls"] += 1
+                        else:
+                            result.append({"name": "minecraft:air","count": 1,"rolls": 1})
                     # if that failed, raise an error
                     except:
                         pattern_row.append("invalid")
+                        print(recipe)
                         raise ValueError("Unknown JSON format: %s" % recipe["result"]["item"])
         
-        # pad the row with air
-        while len(pattern_row) < 3:
-            pattern_row.append("minecraft:air")
         # add the input row to the pattern list
         pattern.extend(pattern_row)
 
-        # add extra air to output list
-        while total_row < 3:
-            total_rolls += 1
-            total_row += 1
-            air_rolls += 1
-            # if last item was not air, then update the output with the corresponding item
-            if last_roll == "bucket" and bucket_rolls > 0:
-                result.append({"name": "minecraft:bucket","count": 1,"rolls": bucket_rolls})
-                bucket_rolls = 0
-            elif last_roll == "bottle" and bottle_rolls > 0:
-                result.append({"name": "minecraft:glass_bottle","count": 1,"rolls": bottle_rolls})
-                bottle_rolls = 0
-            last_roll = "air"
-
     # left align the pattern
-    if pattern[0] == "minecraft:air" and pattern[3] == "minecraft:air" and pattern[6] == "minecraft:air":
-        pattern[0] = pattern[1]
-        pattern[1] = pattern[2]
-        pattern[2] = "minecraft:air"
-        pattern[3] = pattern[4]
-        pattern[4] = pattern[5]
-        pattern[5] = "minecraft:air"
-        pattern[6] = pattern[7]
-        pattern[7] = pattern[8]
-        pattern[8] = "minecraft:air"
-    if pattern[0] == "minecraft:air" and pattern[3] == "minecraft:air" and pattern[6] == "minecraft:air":
+    while pattern[0] == "minecraft:air" and pattern[3] == "minecraft:air" and pattern[6] == "minecraft:air":
         pattern[0] = pattern[1]
         pattern[1] = pattern[2]
         pattern[2] = "minecraft:air"
@@ -521,7 +396,7 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
         pattern[7] = pattern[8]
         pattern[8] = "minecraft:air"
     # top align the pattern
-    if pattern[0] == "minecraft:air" and pattern[1] == "minecraft:air" and pattern[2] == "minecraft:air":
+    while pattern[0] == "minecraft:air" and pattern[1] == "minecraft:air" and pattern[2] == "minecraft:air":
         pattern[0] = pattern[3]
         pattern[1] = pattern[4]
         pattern[2] = pattern[5]
@@ -531,58 +406,16 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
         pattern[6] = "minecraft:air"
         pattern[7] = "minecraft:air"
         pattern[8] = "minecraft:air"
-    if pattern[0] == "minecraft:air" and pattern[1] == "minecraft:air" and pattern[2] == "minecraft:air":
-        pattern[0] = pattern[3]
-        pattern[1] = pattern[4]
-        pattern[2] = pattern[5]
-        pattern[3] = pattern[6]
-        pattern[4] = pattern[7]
-        pattern[5] = pattern[8]
-        pattern[6] = "minecraft:air"
-        pattern[7] = "minecraft:air"
-        pattern[8] = "minecraft:air"
+
 
     # mark mirror-able recipes
     mirror = False
-    if (len(pattern) == 3):
-        if (pattern[2] == "minecraft:air"):
-            if (pattern[0] != pattern[1] != "minecraft:air"):
-                mirror = True
-        elif (pattern[0] != pattern[2]):
+    if (pattern[2] == "minecraft:air" and pattern[5] == "minecraft:air" and pattern[8] == "minecraft:air"):
+        if (pattern[0] != pattern[1] != "minecraft:air" or pattern[3] != pattern[4] != "minecraft:air" or pattern[6] != pattern[7] != "minecraft:air"):
             mirror = True
-    elif (len(pattern) == 6):
-        if (pattern[2] == "minecraft:air" and pattern[5] == "minecraft:air"):
-            if (pattern[0] != pattern[1] != "minecraft:air" or pattern[3] != pattern[4] != "minecraft:air"):
-                mirror = True
-        elif (pattern[0] != pattern[2] or pattern[3] != pattern[5]):
-            mirror = True
-    elif (len(pattern) == 9):
-        if (pattern[2] == "minecraft:air" and pattern[5] == "minecraft:air" and pattern[8] == "minecraft:air"):
-            if (pattern[0] != pattern[1] != "minecraft:air" or pattern[3] != pattern[4] != "minecraft:air" or pattern[6] != pattern[7] != "minecraft:air"):
-                mirror = True
-        elif (pattern[0] != pattern[2] or pattern[3] != pattern[5] or pattern[6] != pattern[8]):
-            mirror = True
+    elif (pattern[0] != pattern[2] or pattern[3] != pattern[5] or pattern[6] != pattern[8]):
+        mirror = True
 
-    # insert the final output list item(s)
-    if last_roll == "bucket" and bucket_rolls > 0:
-        result.append({"name": "minecraft:bucket","count": 1,"rolls": bucket_rolls})
-        bucket_rolls = 0
-    elif last_roll == "bottle" and bottle_rolls > 0:
-        result.append({"name": "minecraft:glass_bottle","count": 1,"rolls": bottle_rolls})
-        bottle_rolls = 0
-    else:
-        result.append({"name": "minecraft:air","count": 1,"rolls": air_rolls})
-        air_rolls = 0
-
-    # fill the rest of the output list with air
-    while total_rolls < 9:
-        total_rolls += 1
-        air_rolls += 1
-        if last_roll == "air":
-            result[-1]["rolls"] += 1
-        else:
-            result.append({"name": "minecraft:air","count": 1,"rolls": air_rolls})
-            last_roll = "air"
 
     # get output result
     result_id = recipe["result"]["item"]
@@ -649,15 +482,16 @@ def analyze_shapeless_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]
     bottle_count = 0
     air_count = 0
     total_count = 0
-    list_ingredients = 0
     for entry in recipe["ingredients"]:
         # assumes the ingredient is an item, not a tag
         try:
             # if the ingredient is a list of items, create a custom item tag
             if type(entry) is list:
-                list_ingredients += 1
-                item = f"#{NAME}:" + name + "_ingredient_" + str(list_ingredients)
-                needs_tag.append({"name": item, "values": entry})
+                if ({"name": item, "values": entry} in needs_tag):
+                    item = f"#{NAME}:{name}_ingredient_{needs_tag.index({'name': item, 'values': entry})}"
+                else: 
+                    item = f"#{NAME}:{name}_ingredient_{len(needs_tag)+1}"
+                    needs_tag.append({"name": item, "values": entry})
             else:
                 item = entry["item"]
             # special case: check if the item is a bucket or bottle type (used for output)
@@ -797,7 +631,7 @@ def generate_predicates(predicates: list[str]) -> None:
     # write the function that checks the predicates
     filename = f"{DIR}/functions/check_item_tags.mcfunction"
     os.makedirs(os.path.dirname(filename), exist_ok=True)
-    with open(filename, "w") as file:
+    with open(filename, "w", newline="\n") as file:
         file.write(f"{function}\n")
 
 
@@ -922,7 +756,7 @@ def generate_slot_tree(slot_counts: dict, min:int, max: int, path: str, complete
     filename = f"{FUNCTION_FOLDER}/{path}/search.mcfunction"
     os.makedirs(os.path.dirname(filename), exist_ok=True)
 
-    with open(filename, "w") as file:
+    with open(filename, "w", newline="\n") as file:
         # if count(max - min) <= 4, then create functions for them
         if ready(min, max, 4):
             check_function_status(min, max, path, file)
@@ -1032,7 +866,7 @@ def generate_length_tree(recipes: dict, min: int, max: int, path:str, completed:
     filename = f"{FUNCTION_FOLDER}/{path}/search.mcfunction"
     os.makedirs(os.path.dirname(filename), exist_ok=True)
 
-    with open(filename, "w") as file:
+    with open(filename, "w", newline="\n") as file:
         # if count(max - min) <= 4, then create functions for them
         if ready(min, max, 4):
             check_function_status(min, max, path, file)
@@ -1144,7 +978,7 @@ def generate_recipe_function(recipes: list[dict], path: str) -> None:
     filename = f"{FUNCTION_FOLDER}/{path}.mcfunction"
     os.makedirs(os.path.dirname(filename), exist_ok=True)
 
-    with open(filename, "w") as file:
+    with open(filename, "w", newline="\n") as file:
         for r in recipes:
             recipe = r["recipe"]
             # get max stack size for recipe
@@ -1288,7 +1122,7 @@ def write_json(path: str, content: dict) -> None:
         filename = f"{path}.json"
     # dump json to file
     os.makedirs(os.path.dirname(filename), exist_ok=True)
-    with open(filename, "w") as file:
+    with open(filename, "w", newline="\n") as file:
         json.dump(content, file, indent=2)
         file.write("\n")
 
