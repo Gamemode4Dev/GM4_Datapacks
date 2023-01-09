@@ -3,6 +3,8 @@
 # located at the center of the block to be placed
 # run from gm4_disassemblers:relocate/place_down_check
 
+scoreboard players set $placed_block gm4_rl_data 1
+
 summon armor_stand ~ ~-1.2 ~ {NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,Silent:1,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_enchantment_extractor_stand","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],HasVisualFire:1,CustomName:'"gm4_enchantment_extractor_stand"',ArmorItems:[{},{},{},{id:"minecraft:enchanting_table",Count:1b,tag:{CustomModelData:3420001}}],Rotation:[0.0f,0.0f]}
 summon marker ~ ~ ~ {Tags:["gm4_enchantment_extractor","gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:'"gm4_enchantment_extractor"',Rotation:[0.0f,0.0f]}
 
