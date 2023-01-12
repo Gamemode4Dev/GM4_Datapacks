@@ -48,6 +48,13 @@
                                     "amount": -0.2,
                                     "operation": "multiply_base",
                                     "slot": "feet"
+                                },
+                                {
+                                    "attribute": "minecraft:generic.armor",
+                                    "name": "gm4_mountaineering_crampon_armor",
+                                    "amount": 1,
+                                    "operation": "addition",
+                                    "slot": "feet"
                                 }
                             ]
                         }
