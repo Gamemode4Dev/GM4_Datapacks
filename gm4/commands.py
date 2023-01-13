@@ -33,6 +33,7 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, 
 	config = {
 		"broadcast": modules,
 		"extend": "beet.yaml",
+		"require": ["beet.contrib.livereload"] if reload else [],
 		"pipeline": [
 			"gm4.plugins.write_description",
 			"gm4.plugins.output"
@@ -43,10 +44,7 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, 
 		f"pipeline[] = gm4.plugins.finished",
 	]
 
-	if watch:
-		ctx.invoke(commands.watch, reload=reload, link=link)
-	else:
-		ctx.invoke(commands.build, link=link)
+	ctx.invoke(commands.watch if watch else commands.build, link=link)
 
 
 @beet.command()
