@@ -29,7 +29,7 @@ tag @s[predicate=gm4_combat_expanded:mob/modifier/snowy] add gm4_ce_slowing_atta
 execute if predicate gm4_combat_expanded:mob/modifier/mountainous run function gm4_combat_expanded:mob/effect/mountain_zombie
 execute if predicate gm4_combat_expanded:mob/modifier/flowering run function gm4_combat_expanded:mob/effect/flowering_zombie
 tag @s[predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_weakness_attacks
-execute if predicate gm4_combat_expanded:mob/modifier/growth run function gm4_combat_expanded:mob/effect/growth_zombie
+execute if entity @e[type=zombie,predicate=gm4_combat_expanded:mob/modifier/growth] run function gm4_combat_expanded:mob/effect/growth_zombie
 
 # set armor
 loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic

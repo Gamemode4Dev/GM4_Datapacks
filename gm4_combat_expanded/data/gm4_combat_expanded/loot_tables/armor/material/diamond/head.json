@@ -24,6 +24,13 @@
                   "amount": 2,
                   "operation": "addition",
                   "slot": "head"
+                },
+                {
+                  "attribute": "generic.knockback_resistance",
+                  "name": "generic.knockback_resistance",
+                  "amount": 0,
+                  "operation": "addition",
+                  "slot": "head"
                 }
               ]
             },

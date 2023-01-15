@@ -21,3 +21,6 @@ execute if score $modifier gm4_ce_data matches 101.. run function gm4_combat_exp
 # check sharpness level
 execute store result score $stored_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.sharpness
 execute unless score $stored_sharpness gm4_ce_data = $current_sharpness gm4_ce_data run function gm4_combat_expanded:weapon/update_sharpness
+
+# check netherite conversion
+execute if predicate gm4_combat_expanded:technical/convert_netherite/weapon run function gm4_combat_expanded:weapon/convert_netherite

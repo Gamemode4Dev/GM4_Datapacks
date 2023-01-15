@@ -24,6 +24,13 @@
                   "amount": 2,
                   "operation": "addition",
                   "slot": "feet"
+                },
+                {
+                  "attribute": "generic.knockback_resistance",
+                  "name": "generic.knockback_resistance",
+                  "amount": 0,
+                  "operation": "addition",
+                  "slot": "feet"
                 }
               ]
             },
