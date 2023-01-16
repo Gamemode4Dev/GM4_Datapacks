@@ -1,5 +1,5 @@
 {
-  "last_commit": "f889e88d5f37c8ac1eafff5d46838d523499a5eb",
+  "last_commit": "63386e582b59d5df08497b292f7060777d625d85",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -422,7 +422,7 @@
       },
       "hidden": false,
       "important_note": "Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.",
-      "patch": 19006
+      "patch": 19007
     },
     {
       "id": "gm4_cooler_caves",
