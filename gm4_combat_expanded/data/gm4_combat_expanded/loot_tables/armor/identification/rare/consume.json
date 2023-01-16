@@ -167,8 +167,7 @@
         {
           "function": "minecraft:set_enchantments",
           "enchantments": {
-            "minecraft:vanishing_curse": 1,
-            "minecraft:binding_curse": 1
+            "minecraft:vanishing_curse": 1
           },
           "add": true
         }

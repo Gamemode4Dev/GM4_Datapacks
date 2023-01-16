@@ -29,5 +29,8 @@ scoreboard players set $level gm4_ce_data 0
 execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded.reactive store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded.level
 scoreboard players operation @s gm4_ce_absorp += $level gm4_ce_data
 
+# cooldown
+scoreboard players set @s gm4_ce_t_reactive 37
+
 # grant effect
 function gm4_combat_expanded:player/shield_player
