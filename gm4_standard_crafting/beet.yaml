@@ -1,0 +1,26 @@
+extend: '../module.yaml'
+
+id: gm4_standard_crafting
+name: Standard Crafting
+
+pipeline:
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: A crafting recipe pack that adds some nifty new recipes to the game.
+    required: []
+    recommended: []
+    notes: []
+    video: https://www.youtube.com/watch?v=_GekIoefncg
+    wiki: https://wiki.gm4.co/wiki/Standard_Crafting
+    credits:
+      Creator:
+        - Sparks
+      Updated by:
+        - Bloo
+      Icon Design:
+        - Sparks

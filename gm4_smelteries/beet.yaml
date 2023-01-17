@@ -1,0 +1,33 @@
+extend: '../module.yaml'
+
+id: gm4_smelteries
+name: Smelteries
+
+pipeline:
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Build a Smeltery and double your ore output with this multi-block structure.
+    required: []
+    recommended:
+      - gm4_relocators
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/smelteries
+    credits:
+      Creator:
+        - Bloo
+      Updated By:
+        - Andante
+        - Kroppeb
+        - Misode
+        - SpecialBuilder32
+        - BluePsychoRanger
+      Textures By:
+        - kyrkis
+      Icon Design:
+        - Hozz

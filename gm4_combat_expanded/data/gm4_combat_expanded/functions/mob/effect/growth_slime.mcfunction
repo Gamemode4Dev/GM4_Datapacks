@@ -1,12 +1,10 @@
-# spawn 3 additional slimes
+# spawn additional slimes
 # @s = slime
 # at @s
 # run from mob/mob_type/slime
 
-summon slime ~ ~ ~0.15 {Tags:["gm4_ce_extra_mob","gm4_ce_set_slime_size"]}
-summon slime ~0.15 ~ ~-0.15 {Tags:["gm4_ce_extra_mob","gm4_ce_set_slime_size"]}
-summon slime ~-0.15 ~ ~-0.15 {Tags:["gm4_ce_extra_mob","gm4_ce_set_slime_size"]}
-scoreboard players remove $size gm4_ce_data 1
-execute as @e[type=slime,tag=gm4_ce_set_slime_size,distance=..1] store result entity @s Size int 1 run scoreboard players get $size gm4_ce_data
-tag @e[type=slime,tag=gm4_ce_set_slime_size,distance=..1] remove gm4_ce_set_slime_size
+summon slime ~ ~ ~0.15 {Tags:["gm4_ce_extra_mob"],Size:0}
+execute if score $size gm4_ce_data matches 2.. run summon slime ~0.15 ~ ~-0.15 {Tags:["gm4_ce_extra_mob"],Size:1}
+execute if score $size gm4_ce_data matches 3.. run summon slime ~-0.15 ~ ~-0.15 {Tags:["gm4_ce_extra_mob"],Size:0}
+execute if score $size gm4_ce_data matches 4.. run summon slime ~-0.15 ~ ~-0.15 {Tags:["gm4_ce_extra_mob"],Size:1}
 scoreboard players set $mob_extras gm4_ce_data 1

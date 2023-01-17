@@ -1,0 +1,12 @@
+id: gm4_player_heads
+name: Gamemode 4 Player Heads
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    credits:
+      Creator:
+        - Misode

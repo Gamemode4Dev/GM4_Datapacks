@@ -25,7 +25,7 @@
                   "op": "replace"
                 },
                 {
-                  "source": "damage",
+                  "source": "level",
                   "target": "gm4_combat_expanded.level2",
                   "op": "replace"
                 }

@@ -1,0 +1,59 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:shield",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{HideFlags:32,BlockEntityTag:{Base:13,Patterns:[{Color:0,Pattern:\"bo\"}]}}"
+              },
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      [
+                        "Brisk ",
+                        {
+                          "translate": "item.minecraft.shield"
+                        }
+                      ],
+                      {
+                        "translate": "item.gm4.combat_expanded.name.brisk",
+                        "with": [
+                          {
+                            "translate": "item.minecraft.shield"
+                          }
+                        ]
+                      }
+                    ],
+                    "italic": false
+                  }
+                ]
+              },
+              {
+                "function": "minecraft:set_attributes",
+                "modifiers": [
+                  {
+                    "attribute": "minecraft:generic.movement_speed",
+                    "name": "gm4_ce_shield_bonus",
+                    "amount": 0.1,
+                    "operation": "multiply_base",
+                    "id": "08def73c-e800-41be-8768-b177d5c113c8",
+                    "slot": "offhand"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

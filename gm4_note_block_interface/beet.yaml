@@ -1,0 +1,24 @@
+extend: '../module.yaml'
+
+id: gm4_note_block_interface
+name: Note Block Interface
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Adds a neat interface to improve your musical skills!
+    required: []
+    recommended: []
+    notes: []
+    video: https://www.youtube.com/watch?v=Kqrdy-8-sb8
+    wiki: https://wiki.gm4.co/wiki/Note_Block_Interface
+    credits:
+      Creator:
+        - Scommander
+      Updated by:
+        - Denniss
+      Icon Design:
+        - DuckJr

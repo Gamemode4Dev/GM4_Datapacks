@@ -36,7 +36,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{damage:50,atkspeed:16,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.stone_sword\"}'}}"
+              "tag": "{gm4_combat_expanded:{identified:0,damage:50,atkspeed:16,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.stone_sword\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",

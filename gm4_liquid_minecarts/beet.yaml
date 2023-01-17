@@ -1,0 +1,29 @@
+extend: '../module.yaml'
+
+id: gm4_liquid_minecarts
+name: Liquid Minecarts
+
+pipeline:
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Adds Liquid Tank Minecarts that allow you to move your liquids from one Liquid Tank to another.
+    required:
+      - gm4_liquid_tanks
+    recommended:
+      - gm4_potion_liquids
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts
+    credits:
+      Creator:
+        - Sparks
+      Updated by:
+        - SpecialBuilder32
+        - BluePsychoRanger
+      Icon Design:
+        - Hozz

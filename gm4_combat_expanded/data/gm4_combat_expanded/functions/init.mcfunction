@@ -9,6 +9,7 @@ scoreboard objectives add gm4_ce_alivetime minecraft.custom:minecraft.time_since
 scoreboard objectives add gm4_ce_data dummy
 scoreboard objectives add gm4_ce_health dummy
 scoreboard objectives add gm4_ce_hurt minecraft.custom:minecraft.damage_taken
+scoreboard objectives add gm4_ce_hurt2 minecraft.custom:minecraft.damage_absorbed
 scoreboard objectives add gm4_ce_t_hurt dummy
 scoreboard objectives add gm4_ce_kill minecraft.custom:minecraft.mob_kills
 scoreboard objectives add gm4_ce_t_shield dummy
@@ -19,6 +20,7 @@ scoreboard objectives add gm4_ce_t_soothe dummy
 scoreboard objectives add gm4_ce_t_witch dummy
 scoreboard objectives add gm4_ce_t_wolf dummy
 scoreboard objectives add gm4_ce_t_sprinting dummy
+scoreboard objectives add gm4_ce_t_reactive dummy
 scoreboard objectives add gm4_ce_guarded minecraft.custom:minecraft.damage_resisted
 scoreboard objectives add gm4_ce_guard dummy
 scoreboard objectives add gm4_ce_absorp dummy
@@ -29,6 +31,7 @@ scoreboard objectives add gm4_ce_hunger food
 scoreboard objectives add gm4_ce_shielded_hit minecraft.used:minecraft.shield
 scoreboard objectives add gm4_ce_sprinting minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add gm4_ce_generation dummy
+scoreboard objectives add gm4_ce_atkd dummy
 
 # constants
 scoreboard players set #0 gm4_ce_data 0

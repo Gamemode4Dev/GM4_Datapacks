@@ -1,0 +1,37 @@
+extend: '../module.yaml'
+
+id: gm4_zauber_cauldrons
+name: Zauber Cauldrons
+
+pipeline:
+  - directory: '../lib_forceload'
+    extend: 'beet.yaml'
+  - directory: '../lib_player_heads'
+    extend: 'beet.yaml'
+  - directory: '../lib_brewing'
+    extend: 'beet.yaml'
+  - directory: '../lib_trades'
+    extend: 'beet.yaml'
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game.
+    required: []
+    recommended:
+      - gm4_resource_pack
+    notes: []
+    video: https://www.youtube.com/watch?v=Io1JTFUzyrc
+    wiki: https://wiki.gm4.co/wiki/Zauber_Cauldrons
+    credits:
+      Creator:
+        - Bloo
+      Updated by:
+        - Bloo
+        - Lue
+        - BluePsychoRanger
+      Pixel Art:
+        - Memo
+      Icon Design:
+        - DuckJr

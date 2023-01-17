@@ -48,7 +48,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{armor_clamp:-1,unidentified:0,slot:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_boots\"}'}}"
+              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-1,slot:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_boots\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",
@@ -123,6 +123,50 @@
                 {
                   "condition": "minecraft:random_chance",
                   "chance": 0.8
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 1.5
+                },
+                "max": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 2.5
+                }
+              },
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$difficulty"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": {
+                    "min": 2
+                  }
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.2
                 }
               ]
             }

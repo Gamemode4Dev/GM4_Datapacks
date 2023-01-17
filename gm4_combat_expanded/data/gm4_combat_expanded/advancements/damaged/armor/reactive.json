@@ -38,6 +38,20 @@
               "value": {
                 "type": "minecraft:score",
                 "target": "this",
+                "score": "gm4_ce_t_reactive"
+              },
+              "range": {
+                "min": 1
+              }
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
                 "score": "gm4_ce_absorped"
               },
               "range": {

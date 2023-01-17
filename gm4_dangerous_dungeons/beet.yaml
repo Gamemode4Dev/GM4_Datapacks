@@ -1,0 +1,27 @@
+extend: '../module.yaml'
+
+id: gm4_dangerous_dungeons
+name: Dangerous Dungeons
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: A custom terrain expansion pack that adds new types of dungeons underground.
+    required:
+      - gm4_orbis
+    recommended:
+      - gm4_tower_structures
+      - gm4_cooler_caves
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Orbis/Dangerous_Dungeons
+    credits:
+      Creator:
+        - Sparks
+      Updated by:
+        - Misode
+      Icon Design:
+        - DuckJr

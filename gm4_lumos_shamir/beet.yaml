@@ -1,0 +1,26 @@
+extend: '../module.yaml'
+
+id: gm4_lumos_shamir
+name: Lumos Shamir
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Adds the shamir 'Lumos' to Metallurgy. It places torches when it is dark.
+    required:
+      - gm4_metallurgy
+    recommended: []
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Metallurgy/Lumos_Shamir
+    credits:
+      Creators:
+        - InternetAlien
+        - SirSheepe
+      Idea By:
+        - Misode
+      Icon Design:
+        - BluePsychoRanger
