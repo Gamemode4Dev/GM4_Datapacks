@@ -1,5 +1,5 @@
 {
-  "last_commit": "5ddca1b82ec310aabe400832c4524102ff58d618",
+  "last_commit": "baecc20ebaaac26f8ed1468c46f5a4ecb1354bc0",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -369,7 +369,7 @@
           "Thanathor"
         ]
       },
-      "patch": 19008
+      "patch": 19009
     },
     {
       "id": "gm4_cooler_caves",
