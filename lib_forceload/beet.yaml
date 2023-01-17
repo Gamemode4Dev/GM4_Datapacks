@@ -1,0 +1,12 @@
+id: gm4_forceload
+name: Gamemode 4 Forceload
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    credits:
+      Creator:
+        - Misode

@@ -1,0 +1,25 @@
+extend: '../module.yaml'
+
+id: gm4_teleportation_anchors
+name: Teleportation Anchors
+
+pipeline:
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Suppress and control chorus-based teleportation!
+    required: []
+    recommended:
+      - gm4_orb_of_ankou
+      - gm4_relocators
+      - gm4_zauber_cauldrons
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Teleportation_Anchors
+    credits:
+      Creator:
+        - BluePsychoRanger

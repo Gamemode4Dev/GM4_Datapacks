@@ -1,0 +1,25 @@
+extend: '../module.yaml'
+
+id: gm4_bat_grenades
+name: Bat Grenades
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!
+    required: []
+    recommended:
+      - gm4_enderman_support_class
+      - gm4_metallurgy
+    notes:
+      - Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.
+    video: https://www.youtube.com/watch?v=uUoEKtte1GQ
+    wiki: https://wiki.gm4.co/wiki/Bat_Grenades
+    credits:
+      Creator:
+        - Sparks
+      Icon Design:
+        - Sparks

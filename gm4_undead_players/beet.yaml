@@ -1,0 +1,25 @@
+extend: '../module.yaml'
+
+id: gm4_undead_players
+name: Undead Players
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: You'll find your death point faster, but you'll have to fight your corpse for your stuff back!
+    required: []
+    recommended: []
+    notes:
+      - Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.
+    video: https://www.youtube.com/watch?v=dD8nChP8t9A
+    wiki: https://wiki.gm4.co/wiki/Undead_Players
+    credits:
+      Creator:
+        - Sparks
+      Updated by:
+        - SunderB
+      Icon Design:
+        - Hozz

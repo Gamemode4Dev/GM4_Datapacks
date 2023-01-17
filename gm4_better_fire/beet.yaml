@@ -1,0 +1,27 @@
+extend: '../module.yaml'
+
+id: gm4_better_fire
+name: Better Fire
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Spice up Minecraft's fire mechanics with this module! Flame arrows set fire when they land and burning creepers explode when low on health!
+    required: []
+    recommended:
+      - gm4_bat_grenades
+      - gm4_enderman_support_class
+    notes: []
+    video: https://www.youtube.com/watch?v=J5024LhHuWk
+    wiki: https://wiki.gm4.co/wiki/Better_Fire
+    credits:
+      Creator:
+        - Sparks
+      Updated By:
+        - Bloo
+        - SpecialBuilder32
+      Icon Design:
+        - Sparks

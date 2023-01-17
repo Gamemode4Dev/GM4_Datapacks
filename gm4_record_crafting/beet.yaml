@@ -1,0 +1,27 @@
+extend: '../module.yaml'
+
+id: gm4_record_crafting
+name: Record Crafting
+
+pipeline:
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: A crafting recipe pack that lets you craft all the records in a Custom Crafter.
+    required: []
+    recommended:
+      - gm4_standard_crafting
+    notes: []
+    video: https://www.youtube.com/watch?v=_GekIoefncg
+    wiki: https://wiki.gm4.co/wiki/Record_Crafting
+    credits:
+      Creator:
+        - Sparks
+      Updated by:
+        - Bloo
+      Icon Design:
+        - BluePsychoRanger

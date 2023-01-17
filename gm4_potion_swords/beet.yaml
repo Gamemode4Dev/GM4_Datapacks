@@ -1,0 +1,25 @@
+extend: '../module.yaml'
+
+id: gm4_potion_swords
+name: Potion Swords
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: As if getting stabbed isn't enough... support your friends, terrify your enemies, make gold great again using Golden Swords and potions!
+    required: []
+    recommended: []
+    notes: []
+    video: https://www.youtube.com/watch?v=9xI3CQ1z5cg
+    wiki: https://wiki.gm4.co/wiki/Potion_Swords
+    credits:
+      Creator:
+        - Bloo
+      Updated by:
+        - Bloo
+        - SpecialBuilder32
+      Icon Design:
+        - DuckJr

@@ -2,7 +2,7 @@ name: Check and build modules
 
 on:
   push:
-    branches: [ master, ver/1.18, ver/1.17, ver/1.16, ver/1.15, ver/1.14, ver/1.13 ]
+    branches: [ master, ver/* ]
   pull_request:
   workflow_dispatch:
 
@@ -20,12 +20,14 @@ jobs:
       - uses: mcbeet/check-commands@v1
         with:
           minecraft: ${{ env.VERSION }}
-          source: base gm4_!(template_pack) lib_*
+          source: base gm4_* lib_*
           version: '0.52.2'
 
   build:
     needs: test
     runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.event_name != 'pull_request' && 'release' || format('pr-{0}', github.event.number) }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -42,37 +44,49 @@ jobs:
         if: github.event_name == 'pull_request'
         run: git fetch origin ${{ github.base_ref }}
 
-      - name: Set up Python 3.9
+      - name: Set up Python 3.10
         uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
-          cache: pip
+          python-version: '3.10'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1.2.1
+        with:
+          virtualenvs-in-project: true
+
+      - name: Setup cache
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: poetry install
 
-      - name: Build all modules
+      - name: Build and publish all modules
         if: github.event_name != 'pull_request'
-        run: beet build
+        run: poetry run beet -p beet-release.yaml build
+        env:
+          BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
 
-      - name: Build modules from pull request
+      - name: Build all modules for pull request
         if: github.event_name == 'pull_request'
-        run: beet --set 'meta.pull_request_base=origin/${{ github.base_ref }}' build
+        run: poetry run beet -p beet-release.yaml build
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v2
         with:
           name: 'Modules for pull request #${{ github.event.number }}'
-          path: ${{ github.workspace }}/out/
+          path: ${{ github.workspace }}/release/${{ env.VERSION }}/
 
       - name: Commit release
         if: github.event_name != 'pull_request'
         run: |
           git config --global user.email "${{ github.event.head_commit.author.email }}"
           git config --global user.name "${{ github.event.head_commit.author.username }}"
-          mkdir -p release/$VERSION
-          mv -f out/* release/$VERSION
           cd release
           git add .
           git commit -m "🚀 ${{ github.event.after }} $COMMIT_MSG"

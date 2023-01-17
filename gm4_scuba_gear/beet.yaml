@@ -1,0 +1,29 @@
+extend: '../module.yaml'
+
+id: gm4_scuba_gear
+name: SCUBA Gear
+
+pipeline:
+  - directory: '../lib_player_heads'
+    extend: 'beet.yaml'
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Ease ocean exploration with craftable scuba gear!
+    required: []
+    recommended:
+      - gm4_sunken_treasure
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/SCUBA_Gear
+    credits:
+      Creator:
+        - BluePsychoRanger
+      Textures by:
+        - BluePsychoRanger
+      Icon Design:
+        - DuckJr

@@ -1,0 +1,12 @@
+id: gm4_lore
+name: Gamemode 4 Lore
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    credits:
+      Creator:
+        - BluePsychoRanger
