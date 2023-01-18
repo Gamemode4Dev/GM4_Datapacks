@@ -68,6 +68,7 @@
     "minecraft:small_dripleaf",
     "minecraft:soul_torch",
     "minecraft:soul_wall_torch",
+    "minecraft:spore_blossom",
     "minecraft:spruce_sapling",
     "minecraft:structure_void",
     "minecraft:sugar_cane",
@@ -83,7 +84,6 @@
     "minecraft:warped_fungus",
     "minecraft:warped_roots",
     "minecraft:weeping_vines",
-    "minecraft:weeping_vines_plant",
-    "minecraft:spore_blossom"
+    "minecraft:weeping_vines_plant"
   ]
 }

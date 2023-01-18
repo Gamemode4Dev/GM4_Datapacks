@@ -22,6 +22,7 @@
     "minecraft:nether_sprouts",
     "minecraft:red_mushroom",
     "minecraft:small_dripleaf",
+    "minecraft:spore_blossom",
     "minecraft:sweet_berry_bush",
     "minecraft:tall_grass",
     "minecraft:twisting_vines",
@@ -30,7 +31,6 @@
     "minecraft:warped_fungus",
     "minecraft:warped_roots",
     "minecraft:weeping_vines",
-    "minecraft:weeping_vines_plant",
-    "minecraft:spore_blossom"
+    "minecraft:weeping_vines_plant"
   ]
 }
