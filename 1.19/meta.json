@@ -1,5 +1,5 @@
 {
-  "last_commit": "793e7f37a843518b8a5e83e4ab52262d867aaf98",
+  "last_commit": "1cbc67aec4d6481e7ea1789100bef04fd14bcb07",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -542,10 +542,9 @@
       "credits": {
         "Creator": [
           "Sparks"
-        ],
-        "Icon Design": null
+        ]
       },
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_enchantment_extractors",
