@@ -4,6 +4,12 @@ scoreboard players set mountaineering gm4_modules 1
 scoreboard objectives add gm4_mountaineering_y1 dummy
 scoreboard objectives add gm4_mountaineering_y2 dummy
 scoreboard objectives add gm4_mountaineering_vy dummy
+scoreboard objectives add gm4_mountaineering_x1 dummy
+scoreboard objectives add gm4_mountaineering_x2 dummy
+scoreboard objectives add gm4_mountaineering_vx dummy
+scoreboard objectives add gm4_mountaineering_z1 dummy
+scoreboard objectives add gm4_mountaineering_z2 dummy
+scoreboard objectives add gm4_mountaineering_vz dummy
 scoreboard objectives add gm4_mountaineering_ski_downhill dummy
 scoreboard objectives add gm4_mountaineering_ski_steep_downhill dummy
 scoreboard objectives add gm4_mountaineering_poles_jump_boost dummy

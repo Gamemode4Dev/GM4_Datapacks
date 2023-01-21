@@ -8,6 +8,9 @@ scoreboard players remove @s[scores={gm4_mountaineering_ski_downhill=1..,gm4_mou
 scoreboard players remove @s[scores={gm4_mountaineering_ski_downhill=1..,gm4_mountaineering_vy=1..}] gm4_mountaineering_ski_downhill 1
 scoreboard players set @s[tag=gm4_mountaineering_skiing,scores={gm4_mountaineering_vy=..-1}] gm4_mountaineering_ski_downhill 10
 
+# set scoreboard to 0 if player is not moving
+scoreboard players set @s[scores={gm4_mountaineering_vx=0,gm4_mountaineering_vy=0,gm4_mountaineering_vz=0}] gm4_mountaineering_ski_downhill 0
+
 # Remove speed if no longer travelling downhill or removed skis
 execute if entity @s[scores={gm4_mountaineering_ski_downhill=..0}] run function gm4_mountaineering:ski_effects/downhill_ski_speed/remove_downhill_ski_speed
 execute if entity @s[tag=!gm4_mountaineering_skiing] run function gm4_mountaineering:ski_effects/downhill_ski_speed/remove_downhill_ski_speed
