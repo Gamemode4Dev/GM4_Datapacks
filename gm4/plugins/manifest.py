@@ -27,7 +27,18 @@ def create(ctx: Context):
 			# Read all the metadata from the module's beet.yaml file
 			project_config = yaml.safe_load(project_file.read_text())
 			module["name"] = project_config["name"]
-			module.update(project_config.get("meta", {}).get("gm4", {}))
+			meta = project_config.get("meta", {}).get("gm4", {})
+			module["description"] = meta["description"]
+			module["requires"] = meta["required"]
+			module["recommends"] = meta["recommended"]
+			module["wiki_link"] = meta["wiki"] or ""
+			module["video_link"] = meta["video"] or ""
+			module["credits"] = meta["credits"]
+			if "hidden" in meta and meta["hidden"]:
+				module["hidden"] = True
+			if "notes" in meta and len(meta["notes"]) > 0:
+				module["important_note"] = meta["notes"][0]
+			module.update()
 		else:
 			module["id"] = None
 
