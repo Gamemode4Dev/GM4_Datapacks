@@ -1,0 +1,22 @@
+extend: '../module.yaml'
+
+id: gm4_intro_song
+name: Intro Song
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Plays the Gamemode 4 Intro Song upon first join
+    required: []
+    recommended: []
+    notes: []
+    video: https://soundcloud.com/stevenobrien/gamemode-4-theme
+    wiki: null
+    credits:
+      Creator:
+        - TheEpyonProject
+      Music By:
+        - Steven O'Brien
