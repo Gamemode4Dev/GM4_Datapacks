@@ -2,7 +2,7 @@
 effect give @a[gamemode=!spectator,gamemode=!creative,nbt={Inventory:[{id:"minecraft:player_head",tag:{gm4_metallurgy:{metal:{type:"thorium"},item:"ore"}}}]}] minecraft:mining_fatigue 2 1
 
 # manage moulds
-execute as @e[type=vex,tag=gm4_sand_ring] at @s run function gm4_metallurgy:casting/sustain_mould
+execute as @e[type=armor_stand,tag=gm4_sand_ring] at @s run function gm4_metallurgy:casting/sustain_mould
 
 # manage items
 scoreboard players reset found_item_on_anvil gm4_ml_data

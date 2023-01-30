@@ -1,4 +1,4 @@
-# @s = vex moulds
+# @s = armor_stand moulds
 # run from main
 
 
