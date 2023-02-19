@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_hotswap_hotbars"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
+        "item": {
+          "tag": "gm4_hotswap_hotbars:shulker_boxes",
+          "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_hotswap_hotbars:place_hotswapper/find_box"
+  }
+}

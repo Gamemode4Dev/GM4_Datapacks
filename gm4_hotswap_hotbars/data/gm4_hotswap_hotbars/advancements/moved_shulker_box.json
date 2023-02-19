@@ -1,0 +1,44 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_hotswap_hotbars"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:alternative",
+            "terms": [
+              {
+                "condition": "minecraft:reference",
+                "name": "gm4_hotswap_hotbars:shulker_box_mainhand"
+              },
+              {
+                "condition": "minecraft:reference",
+                "name": "gm4_hotswap_hotbars:shulker_box_offhand"
+              }
+            ]
+          }
+        ],
+        "items": [
+          {
+            "tag": "gm4_hotswap_hotbars:shulker_boxes"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_hotswap_hotbars:swap/restore_hotswapper"
+  }
+}

@@ -1,0 +1,84 @@
+[
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "offhand": {
+          "tag": "gm4_hotswap_hotbars:shulker_boxes"
+        }
+      }
+    }
+  },
+  {
+    "condition": "minecraft:alternative",
+    "terms": [
+      {
+        "condition": "minecraft:inverted",
+        "term": {
+          "condition": "minecraft:alternative",
+          "terms": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "offhand": {
+                      "nbt": "{display:{Name:'{\"italic\":false,\"translate\":\"%1$s%3427655$s\",\"with\":[\"Hotswapper\",{\"translate\":\"item.gm4.hotswapper\"}]}'}}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "equipment": {
+                  "offhand": {
+                    "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "condition": "minecraft:inverted",
+        "term": {
+          "condition": "minecraft:alternative",
+          "terms": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "offhand": {
+                      "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "equipment": {
+                  "offhand": {
+                    "nbt": "{display:{Name:'{\"italic\":false,\"translate\":\"%1$s%3427655$s\",\"with\":[\"Hotswapper\",{\"translate\":\"item.gm4.hotswapper\"}]}'}}"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

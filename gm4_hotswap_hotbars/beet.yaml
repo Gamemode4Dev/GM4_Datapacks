@@ -1,0 +1,24 @@
+extend: '../module.yaml'
+
+id: gm4_hotswap_hotbars
+name: Hotswap Hotbars
+
+pipeline:
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  - directory: '../lib_forceload'
+    extend: 'beet.yaml'
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Store and swap between additional hotbars with the new hotswapper item!
+    required: []
+    recommended: []
+    notes: []
+    video: 
+    wiki: https://wiki.gm4.co/wiki/Hotswap_Hotbars
+    credits:
+      Creator:
+        - BluePsychoRanger

@@ -1,0 +1,19 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{CustomModelData:3420001,gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
+  },
+  {
+    "function": "minecraft:set_name",
+    "name": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Hotswapper",
+        {
+          "translate": "item.gm4.hotswapper"
+        }
+      ],
+      "italic": false
+    }
+  }
+]

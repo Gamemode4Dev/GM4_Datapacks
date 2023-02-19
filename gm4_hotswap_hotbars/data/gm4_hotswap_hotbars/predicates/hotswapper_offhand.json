@@ -1,0 +1,12 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "offhand": {
+        "tag": "gm4_hotswap_hotbars:shulker_boxes",
+        "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
+      }
+    }
+  }
+}
