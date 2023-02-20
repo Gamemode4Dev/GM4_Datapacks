@@ -2,10 +2,15 @@
 
 Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands.
 
+<!--- I don't know which of these to use. Perhaps local links on src and then when sent to CDNs a script modifies to the hard remote link?-->
 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_better_armour_stands/images/better_armour_stands.webp" alt="Posing an Armor Stand" width="350"/>
 <img src="images/better_armour_stands.webp" alt="Chairs Creation Example" width="350"/>
 
 [![IMAGE ALT](https://img.youtube.com/vi/ZBqmGpAXqmw/default.jpg)](https://www.youtube.com/watch?v=ZBqmGpAXqmw)
+
+<!---
+ iframe should be removed in PMC and smithed (if smithed still prohibits iframes)
+-->
 
 <iframe
     width="640"
@@ -14,6 +19,7 @@ Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your
     frameborder="0"
     allow="autoplay; encrypted-media"
     allowfullscreen
+    alt="alttest"
 >
 </iframe>
 
@@ -43,9 +49,10 @@ Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your
 |`equip`    |transfer player offhand to selected body part  |
 
 ### Expansion Packs
+<!--- these will get links when those pages are made available-->
 Want some preset poses? Download the Poses Pack Expansion
 
-Add particles to your builds witht he Particles Pack Expansion
+Add particles to your builds with the Particles Pack Expansion
 
 
 ### More Info
