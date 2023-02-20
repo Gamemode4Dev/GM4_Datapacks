@@ -470,6 +470,12 @@
             "predicate": {
                 "custom_model_data": 3420235
             },
+            "model": "gm4:item/orb_of_ankou/shards/shrieking"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3420236
+            },
             "model": "minecraft:item/flint"
         }
     ]
