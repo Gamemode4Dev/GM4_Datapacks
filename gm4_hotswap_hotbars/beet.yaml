@@ -15,7 +15,14 @@ meta:
   gm4:
     description: Store and swap between additional hotbars with the new hotswapper item!
     required: []
-    recommended: []
+    recommended: 
+      - gm4_animi_shamir
+      - gm4_block_compressors
+      - gm4_potion_swords
+      - gm4_relocators
+      - gm4_tinkering_compressors
+      - gm4_tunnel_bores
+      - gm4_xp_storage
     notes: []
     video: 
     wiki: https://wiki.gm4.co/wiki/Hotswap_Hotbars
