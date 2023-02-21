@@ -4,8 +4,8 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:brown_shulker_box",
+          "type": "minecraft:loot_table",
+          "name": "gm4_hotswap_hotbars:technical/restore_shulker_box",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -23,6 +23,20 @@
                 ],
                 "italic": false
               }
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_hotswap_hotbars:temp"
+              },
+              "ops": [
+                {
+                  "source": "Item.tag",
+                  "target": "{}",
+                  "op": "merge"
+                }
+              ]
             }
           ]
         }

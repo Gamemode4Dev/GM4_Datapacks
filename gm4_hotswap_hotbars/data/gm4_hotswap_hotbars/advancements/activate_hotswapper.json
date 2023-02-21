@@ -17,28 +17,22 @@
             "range": 1
           },
           {
-            "condition": "minecraft:alternative",
-            "terms": [
-              {
-                "condition": "minecraft:reference",
-                "name": "gm4_hotswap_hotbars:shulker_box_mainhand"
-              },
-              {
-                "condition": "minecraft:reference",
-                "name": "gm4_hotswap_hotbars:shulker_box_offhand"
-              }
-            ]
+            "condition": "minecraft:reference",
+            "name": "gm4_hotswap_hotbars:hotswapper_mainhand"
           }
         ],
         "items": [
           {
-            "tag": "gm4_hotswap_hotbars:shulker_boxes"
+            "items": [
+              "minecraft:firework_star"
+            ],
+            "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper_item\"}}"
           }
         ]
       }
     }
   },
   "rewards": {
-    "function": "gm4_hotswap_hotbars:swap/restore_hotswapper"
+    "function": "gm4_hotswap_hotbars:swap/next_hotbar"
   }
 }

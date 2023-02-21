@@ -10,6 +10,7 @@ execute store success score $dropped_item gm4_machine_data as @e[type=item,nbt={
 
 # scan hoppers if no item was updated
 execute if score $dropped_item gm4_machine_data matches 0 run function gm4_hotswap_hotbars:machine/destroy/scan_hoppers
+data remove storage gm4_hotswap_hotbars:temp item_data
 
 # kill marker
 kill @s

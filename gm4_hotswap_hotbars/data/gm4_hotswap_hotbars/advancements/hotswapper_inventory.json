@@ -19,25 +19,23 @@
           {
             "condition": "minecraft:inverted",
             "term": {
-              "condition": "minecraft:reference",
-              "name": "gm4_hotswap_hotbars:hotswapper_offhand"
+              "condition": "reference",
+              "name": "gm4_hotswap_hotbars:hotswapper_mainhand"
             }
-          },
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_hotswap_hotbars:hotswapper_mainhand"
           }
         ],
         "items": [
           {
-            "tag": "gm4_hotswap_hotbars:shulker_boxes",
-            "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
+            "items": [
+              "minecraft:firework_star"
+            ],
+            "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper_item\"}}"
           }
         ]
       }
     }
   },
   "rewards": {
-    "function": "gm4_hotswap_hotbars:swap/next_hotbar"
+    "function": "gm4_hotswap_hotbars:swap/restore_box"
   }
 }

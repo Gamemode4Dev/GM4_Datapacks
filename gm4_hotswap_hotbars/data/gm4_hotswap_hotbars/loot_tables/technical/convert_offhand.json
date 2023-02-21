@@ -1,0 +1,348 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:firework_star",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;9987478]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:0}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 0
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;14739174]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:1}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 1
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;9079425]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:2}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 2
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;3751746]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:3}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;1579036]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:4}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;7422755]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:5}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;10166044]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:6}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;16151570]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:7}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 7
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;16500263]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:8}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 8
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;7060252]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:9}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 9
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;5335834]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:10}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 10
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;34449]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:11}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 11
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;2602201]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:12}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 12
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;2961817]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:13}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 13
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;7544741]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:14}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 14
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;12336045]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:15}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 15
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:32,Explosion:{Colors:[I;15960231]},gm4_hotswap_hotbars:{item:\"hotswapper_item\",color:16}}",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 16
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  "Hotswapper",
+                  {
+                    "translate": "item.gm4.hotswapper"
+                  }
+                ],
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_hotswap_hotbars:temp"
+              },
+              "ops": [
+                {
+                  "source": "Item.tag",
+                  "target": "{}",
+                  "op": "merge"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,0 @@
-{
-  "function": "minecraft:set_nbt",
-  "tag": "{CustomModelData:3420001,gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
-}

@@ -1,9 +1,9 @@
 # swaps hotbars
 # @s = player who has a hotswapper in their mainhand (and none in their offhand)
 # at @s
-# run from advancement "gm4_hotswap_hotbars:moved_hotswapper"
+# run from advancement "gm4_hotswap_hotbars:activate_hotswapper"
 
-advancement revoke @s only gm4_hotswap_hotbars:moved_hotswapper
+advancement revoke @s only gm4_hotswap_hotbars:activate_hotswapper
 
 # restore mainhand
 item replace block 29999998 1 7134 container.0 from entity @s weapon.offhand

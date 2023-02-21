@@ -1,12 +1,33 @@
-{
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "equipment": {
-      "mainhand": {
-        "tag": "gm4_hotswap_hotbars:shulker_boxes",
-        "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
+[
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "offhand": {
+            "items": [
+              "minecraft:firework_star"
+            ],
+            "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper_item\"}}"
+          }
+        }
+      }
+    }
+  },
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "mainhand": {
+          "items": [
+            "minecraft:firework_star"
+          ],
+          "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper_item\"}}"
+        }
       }
     }
   }
-}
+]
