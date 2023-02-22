@@ -17,11 +17,8 @@
             "range": 1
           },
           {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "reference",
-              "name": "gm4_hotswap_hotbars:hotswapper_mainhand"
-            }
+            "condition": "minecraft:reference",
+            "name": "gm4_hotswap_hotbars:hotswapper_item_moved"
           }
         ],
         "items": [

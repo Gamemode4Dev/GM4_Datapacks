@@ -11,3 +11,4 @@ data remove storage gm4_hotswap_hotbars:temp check
 
 # mark box as hotswapper
 execute if score $different gm4_hh_data matches 0 run function gm4_hotswap_hotbars:place_hotswapper/mark_hotswapper
+execute if score $different gm4_hh_data matches 1 if score $no_items gm4_hh_data matches 1 unless data block ~ ~ ~ Items run function gm4_hotswap_hotbars:place_hotswapper/mark_hotswapper

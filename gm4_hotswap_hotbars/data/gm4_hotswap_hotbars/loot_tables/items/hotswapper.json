@@ -23,6 +23,20 @@
                 ],
                 "italic": false
               }
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_hotswap_hotbars:temp"
+              },
+              "ops": [
+                {
+                  "source": "UUID",
+                  "target": "gm4_hotswap_hotbars.nonstackable",
+                  "op": "replace"
+                }
+              ]
             }
           ]
         }

@@ -6,11 +6,13 @@
 advancement revoke @s only gm4_hotswap_hotbars:activate_hotswapper
 
 # restore mainhand
+data remove block 29999998 1 7134 Items
 item replace block 29999998 1 7134 container.0 from entity @s weapon.offhand
 item replace entity @s weapon.offhand from entity @s weapon.mainhand
 item replace entity @s weapon.mainhand from block 29999998 1 7134 container.0
 
 # get shulker box items and current player inventory
+data remove block 29999998 1 7134 Items
 data modify storage gm4_hotswap_hotbars:temp Inventory set from entity @s Inventory
 data modify storage gm4_hotswap_hotbars:temp Items set from storage gm4_hotswap_hotbars:temp Inventory[{Slot:-106b}].tag.BlockEntityTag.Items
 data modify block 29999998 1 7134 Items set from storage gm4_hotswap_hotbars:temp Items
