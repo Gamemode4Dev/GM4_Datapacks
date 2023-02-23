@@ -6,6 +6,17 @@ Shoot more than just arrows! Crossbow Cartridges allows your crossbow to fire a 
 
 <img src="images/crossbow_cartridges.webp" alt="Chairs Creation Example" width="350"/>
 
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/XJiGvX7l-pI"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+    alt="alttest"
+>
+</iframe>
+
 ### Features:
 - Hold new projectiles in your offhand to shoot them from your crossbow
 - Shoot fish buckets, splash potions, tnt, fire charges, torches and string!
