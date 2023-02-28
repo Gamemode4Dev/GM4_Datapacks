@@ -1,27 +1,45 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:item_used_on_block",
-        "conditions": {
-          "item": {
-            "items": [
-              "minecraft:flint_and_steel",
-              "minecraft:fire_charge"
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:flint_and_steel",
+            "minecraft:fire_charge"
+          ]
+        },
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:obsidian",
+              "minecraft:crying_obsidian"
             ]
-          },
-          "location": {
-            "block": {
-              "blocks": [
-                "minecraft:obsidian",
-                "minecraft:crying_obsidian"
-              ]
-            }
           }
         }
       }
     },
-    "rewards": {
-      "function": "gm4_shapeless_portals:verify/portal_lit"
+    "module_loaded": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "shapeless_portals"
+              },
+              "score": "gm4_modules"
+            },
+            "range": 1
+          }
+        ]
+      }
     }
+  },
+  "rewards": {
+    "function": "gm4_shapeless_portals:portal_lit"
   }
-  
+}
