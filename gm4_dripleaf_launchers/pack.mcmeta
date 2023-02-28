@@ -1,0 +1,24 @@
+{
+    "pack": {
+        "pack_format": 10,
+        "description": [
+            "Dripleaf Launchers",
+            "\n",
+            {
+                "text": "Gamemode 4 for 1.19",
+                "color": "#4AA0C7"
+            }
+        ]
+    },
+    "module_name": "Dripleaf Launchers",
+    "module_id": "dripleaf_launchers",
+    "hidden": false,
+    "site_description": "Start your own Dripleaf Space Program!",
+    "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Launchers",
+    "required_modules": [],
+        "credits": {
+        "Creator": [
+            "Thanathor"
+        ]
+    }
+}

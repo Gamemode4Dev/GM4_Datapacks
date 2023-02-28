@@ -1,0 +1,37 @@
+{
+    "condition": "minecraft:alternative",
+    "terms": [
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "stepping_on": {
+                    "block": {
+                        "blocks": [
+                            "minecraft:big_dripleaf"
+                        ],
+                        "state": {
+                            "tilt": "partial"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "stepping_on": {
+                    "block": {
+                        "blocks": [
+                            "minecraft:big_dripleaf"
+                        ],
+                        "state": {
+                            "tilt": "unstable"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
