@@ -1,0 +1,27 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:item_used_on_block",
+        "conditions": {
+          "item": {
+            "items": [
+              "minecraft:flint_and_steel",
+              "minecraft:fire_charge"
+            ]
+          },
+          "location": {
+            "block": {
+              "blocks": [
+                "minecraft:obsidian",
+                "minecraft:crying_obsidian"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "gm4_shapeless_portals:verify/portal_lit"
+    }
+  }
+  
