@@ -1,7 +1,0 @@
-{
-    "values": [
-        { "id": "#load:gm4", "required": false },
-        { "id": "#load:gm4_forceload", "required": false },
-        "gm4_guidebook:pre_load"
-    ]
-}

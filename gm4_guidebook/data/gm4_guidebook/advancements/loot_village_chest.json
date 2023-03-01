@@ -342,6 +342,6 @@
     ]
   ],
   "rewards": {
-    "function": "gm4_guidebook:update_book/chest/looted"
+    "function": "gm4_guidebook:get_book/chest/looted"
   }
 }

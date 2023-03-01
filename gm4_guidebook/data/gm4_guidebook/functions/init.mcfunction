@@ -9,12 +9,9 @@ scoreboard players set #100 gm4_guide 100
 scoreboard players set #intro_pages gm4_guide 1
 scoreboard players reset $module_count gm4_guide
 
-# update the contents of the table of contents
-data merge storage gm4_guidebook:pre_analyze {modules:[]}
-data merge storage gm4_guidebook:front_matter {table_of_contents:[],pages:[]}
-execute positioned ~ 0 ~ run function gm4_guidebook:analyze_storage/get_modules
-schedule function gm4_guidebook:analyze_storage/interpret/schedule 1t
-
+#declare storage gm4_guidebook:temp
+#declare storage gm4_guidebook:register
+schedule function gm4_guidebook:update_storage/build_toc 2t
 
 # start up module
 execute unless score guidebook gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Guidebook"}

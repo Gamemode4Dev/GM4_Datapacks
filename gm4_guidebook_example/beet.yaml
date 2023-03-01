@@ -1,15 +1,11 @@
 extend: '../module.yaml'
 
-id: gm4_guidebook
-name: Guidebook
+id: gm4_guidebook_example
+name: Guidebook Example
 
 pipeline:
   - data_pack:
       load: .
-  - mecha
-
-require:
-  - bolt
 
 meta:
   gm4:
