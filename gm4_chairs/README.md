@@ -2,7 +2,7 @@
 
 Since the dawn of Minecraft, stairs have been used as chairs in every house you've ever built. With this simple datapack, players can actually sit on stairs by throwing a saddle on them. 
 
-<img src="images/chairs_creation_example.webp" alt="Chairs Creation Example" width="350"/> <!--$localAssetToURL-->
+<img src="images/chairs_creation_example.webp" alt="Chairs Creation Example" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo-->
 
 ### Features:
 - Throw a saddle on any stair block to turn it into a chair, which you can sit on
