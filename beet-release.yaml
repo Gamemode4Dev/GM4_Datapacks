@@ -6,6 +6,7 @@ pipeline:
     pipeline:
       - gm4.plugins.manifest.write_updates
       - gm4.plugins.manifest.write_credits
+      - gm4.plugins.readme_generator
       - gm4.plugins.write_description
       - gm4.plugins.output.release
 

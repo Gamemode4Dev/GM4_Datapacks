@@ -91,28 +91,38 @@ def create(ctx: Context):
 
 
 def write_credits(ctx: Context):
-	"""Writes the credits metadata to CREDITS.md."""
+	"""Writes the credits metadata to CREDITS.md. and collects for README.md"""
 	manifest = ctx.cache["gm4_manifest"].json
 	contributors = manifest.get("contributors", {})
 	credits: dict[str, list[str]] = next((m["credits"] for m in manifest.get("modules", []) if m["id"] == ctx.project_id), {})
 	if credits is None or len(credits) == 0:
 		return
 
-	text = "# Credits\n"
+	# traverses contributors and associates name with links for printing
+	linked_credits = {}
 	for title in credits:
 		people = credits[title]
 		if not isinstance(people, list) or len(people) == 0:
 			continue
-		text += f"\n## {title}\n"
+		linked_credits[title] = []
 		for p in people:
 			contributor = contributors.get(p, { "name": p })
 			name = contributor.get("name", p)
 			links: list[str] | str = contributor.get("links", [])
 			if isinstance(links, list) and len(links) >= 1:
-				text += f"- [{name}]({links[0]})\n"
+				linked_credits[title].append(f"[{name}]({links[0]})")
 			else:
-				text += f"- {name}\n"
+				linked_credits[title].append(f"{name}")
+	
+	# format credits for CREDITS.md
+	text = "# Credits\n"
+	for title in linked_credits:
+		text += f"\n## {title}\n"
+		for link in linked_credits[title]:
+			text += f'- {link}\n'
+
 	ctx.data.extra["CREDITS.md"] = TextFile(text)
+	ctx.meta['linked_credits'] = linked_credits # pass data to README portion of pipeline
 
 
 def write_updates(ctx: Context):

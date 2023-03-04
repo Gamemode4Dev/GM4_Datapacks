@@ -17,8 +17,7 @@ Since the dawn of Minecraft, stairs have been used as chairs in every house you'
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Chairs)
 
 ### Credits
- - Creator: [Denniss](https://twitter.com/Dennis2p_)
- - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
+<!--$creditsInsert -->
 
 
 ---
