@@ -1,6 +1,6 @@
 # check if new location is valid for a portal frame
 # @s = new portal frame marker
-# at @s
+# at potential new portal block
 # run from x/flood_fill
 
 tag @s remove gm4_sp_portal_check

@@ -3,6 +3,20 @@
     "requirement": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_shapeless_potals"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          }
+        ],
         "item": {
           "items": [
             "minecraft:flint_and_steel",
@@ -17,25 +31,6 @@
             ]
           }
         }
-      }
-    },
-    "module_loaded": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "shapeless_portals"
-              },
-              "score": "gm4_modules"
-            },
-            "range": 1
-          }
-        ]
       }
     }
   },

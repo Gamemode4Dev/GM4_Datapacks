@@ -1,6 +1,6 @@
 # fill new blocks in portal frame
 # @s = portal frame marker
-# at @s
+# at potential new portal block
 # run from portal_found
 # run from here
 
