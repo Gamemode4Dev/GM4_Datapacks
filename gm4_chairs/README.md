@@ -2,14 +2,22 @@
 
 Since the dawn of Minecraft, stairs have been used as chairs in every house you've ever built. With this simple datapack, players can actually sit on stairs by throwing a saddle on them. 
 
-<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_chairs/images/chairs_creation_example.webp" alt="Chairs Creation Example" width="350"/>
+<img src="images/chairs_creation_example.webp" alt="Chairs Creation Example" width="350"/> <!--$localAssetToURL-->
 
 ### Features:
 - Throw a saddle on any stair block to turn it into a chair, which you can sit on
 - Adds two chair-related advancements
 - No texture pack required!
 
-![Chairs Any Stair Example](https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_chairs/images/chairs_any_stair_example.png)
+![Chairs Any Stair Example](images/chairs_any_stair_example.png) <!--$localAssetToURL-->
+
+### Expansion Packs
+<!--- these will get links when those pages are made available-->
+Want some preset poses? Download the Poses Pack Expansion
+
+Add particles to your builds with the Particles Pack Expansion
+
+https://wiki.gm4.co/wiki/SPECS_MODULE
 
 ### More Info
 <!--$youtubeLinkInsert-->
