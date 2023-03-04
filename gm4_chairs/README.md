@@ -12,9 +12,9 @@ Since the dawn of Minecraft, stairs have been used as chairs in every house you'
 ![Chairs Any Stair Example](https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_chairs/images/chairs_any_stair_example.png)
 
 ### More Info
-[<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=7KbBw1hEKdY) 
+<!--$youtubeLinkInsert-->
 
-[<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Chairs)
+<!--$wikiLinkInsert-->
 
 ### Credits
 <!--$creditsInsert -->
