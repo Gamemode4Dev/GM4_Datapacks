@@ -25,10 +25,7 @@
         },
         "location": {
           "block": {
-            "blocks": [
-              "minecraft:obsidian",
-              "minecraft:crying_obsidian"
-            ]
+            "tag": "gm4_shapeless_portals:portal_block"
           }
         }
       }
