@@ -1,10 +1,10 @@
-# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Chairs by Gamemode 4
+# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Chairs by Gamemode 4 <!--$pmc:delete-->
 
-Since the dawn of Minecraft, stairs have been used as chairs in every house you've ever built. With this simple datapack, players can actually sit on stairs by throwing a saddle on them. 
+Since the dawn of Minecraft, stairs have been used as chairs in every house you've ever built. With this simple datapack, players can actually sit on stairs by throwing a saddle on them. <!--$pmc:headerSize-->
 
-<img src="images/chairs_creation_example.webp" alt="Chairs Creation Example" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo-->
+<img src="images/chairs_creation_example.webp" alt="Chairs Creation Example" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
-### Features:
+### Features
 - Throw a saddle on any stair block to turn it into a chair, which you can sit on
 - Adds two chair-related advancements
 - No texture pack required!
@@ -28,7 +28,6 @@ https://wiki.gm4.co/wiki/SPECS_MODULE
 
 ### Credits
 <!--$creditsInsert -->
-
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

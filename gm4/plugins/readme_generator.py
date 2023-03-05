@@ -73,6 +73,9 @@ def beet_default(ctx: Context):
         "pmc": {}
     }
 
+    # Remove lingering comments in main readme
+    site_replacements["gm4"].update({r"<!--.+?-->": ""})
+
     # Recommended modules dynamic linking; from gm4.co to modrinth/smithed/pmc
     rec_modules = re.findall(r"\(.+\)<!--\$dynamicLink:(.+)-->", global_contents)
         # TODO relative links
@@ -106,6 +109,27 @@ def beet_default(ctx: Context):
                 "></iframe>"
             )
         })
+
+    # PMC Element Deletion
+    site_replacements['pmc'].update({
+        r".+<!--\$pmc:delete.+>\n\n": ""
+    })
+
+    # PMC BBCode Translation # TODO only process if needed?
+    site_replacements['pmc'].update({
+        r"(.+)<!-- *\$pmc:headerSize.+>": r"[size=14px]\1[/size]",
+        r"#{2,3} (.+)": r"[style b size=14px]\1[/style]",
+        r"!\[(?!size|style|img|url)(.+)\]\((.+)\)": r"[img=\1]\2[/img]",
+        r"\[(?!size|style|img|url)(.+)\]\((.+)\)": r"[url=\2]\1[/url]",
+        r"<img src=\"(.+?)\" alt=(\".+?\") width=\"(.+?)\".+>": r"[img title=\2 width=\3]\1[/img]",
+        r"\*\*(.+)\*\*": r"[b]\1[/b]",
+        # r"\*(.+)\*": r"[i]\1[/i]",
+        # r"_(.+)_(?=\s)": r"[i]\1[/i]",
+        r"__(.+)__": r"[u]\1[/u]",
+        r"~~(.+)~~": r"[s]\1[/s]",
+        r"---*\n": r"[hr]",
+        r"<!--.+?-->": ""
+    })
     
     # Apply site-specific edits
     for site, replacements in site_replacements.items():
@@ -114,8 +138,6 @@ def beet_default(ctx: Context):
             site_contents = re.sub(pattern, repl, site_contents)
 
         if site == "gm4":
-            # Remove lingering comments and print to file
-            site_contents = re.sub(r"<!--.+?-->", "", site_contents)
             ctx.data.extra["README.md"] = TextFile(site_contents)
         else:
             ctx.meta[f'{site}_readme'] = TextFile(site_contents)
