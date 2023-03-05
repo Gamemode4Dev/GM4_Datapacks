@@ -74,7 +74,7 @@ def beet_default(ctx: Context):
     }
 
     # Remove lingering comments in main readme
-    site_replacements["gm4"].update({r"<!--.+?-->": ""})
+    site_replacements["gm4"].update({r"\n?<!--.+?-->": ""})
 
     # Recommended modules dynamic linking; from gm4.co to modrinth/smithed/pmc
     rec_modules = re.findall(r"\(.+\)<!--\$dynamicLink:(.+)-->", global_contents)
@@ -116,6 +116,26 @@ def beet_default(ctx: Context):
     })
 
     # PMC BBCode Translation # TODO only process if needed?
+        # tables are gross to autodetect and capture, so we'll cheat with helper tags
+    tables = re.findall(r'<!-- *\$pmc:startTable ?-->\n((?:.+\n)+)<!-- *\$pmc:endTable ?-->', global_contents)
+    print(tables)
+    for table in tables:
+        repl = "[table]\n"
+        for line in table.strip('\n').split('\n'):
+            if set(line).issubset(set("| -:")):
+                continue
+            repl += "[tr]\n"
+            for value in [v for v in line.split('|') if v != ""]:
+                repl += f"\t[td]{value.strip()}[/td]\n"
+            repl += "[/tr]"
+        repl += "[/table]"
+
+        site_replacements['pmc'].update({
+            f'<!-- *\\$pmc:startTable ?-->\n{re.escape(table)}<!-- *\\$pmc:endTable ?-->':
+                repl
+        })
+
+        # static BBCode translations
     site_replacements['pmc'].update({
         r"(.+)<!-- *\$pmc:headerSize.+>": r"[size=14px]\1[/size]",
         r"#{2,3} (.+)": r"[style b size=14px]\1[/style]",
@@ -123,12 +143,21 @@ def beet_default(ctx: Context):
         r"\[(?!size|style|img|url)(.+)\]\((.+)\)": r"[url=\2]\1[/url]",
         r"<img src=\"(.+?)\" alt=(\".+?\") width=\"(.+?)\".+>": r"[img title=\2 width=\3]\1[/img]",
         r"\*\*(.+)\*\*": r"[b]\1[/b]",
-        # r"\*(.+)\*": r"[i]\1[/i]",
-        # r"_(.+)_(?=\s)": r"[i]\1[/i]",
+        r"\*(.+)\*": r"[i]\1[/i]",
+        r"_([^_\n]+?)_(?![\w])": r"[i]\1[/i]",
         r"__(.+)__": r"[u]\1[/u]",
         r"~~(.+)~~": r"[s]\1[/s]",
-        r"---*\n": r"[hr]",
-        r"<!--.+?-->": ""
+        r"`(.+)`": r"\1", # BBCode has no inline code blocks
+        r"```(.+)```": r"[code]\1[/code]",
+        r"---*\n": r"[hr]"
+    })
+
+
+            
+
+
+    site_replacements['pmc'].update({
+        r"\n?<!--.+?-->": ""
     })
     
     # Apply site-specific edits

@@ -19,6 +19,27 @@ Add particles to your builds with the [Particles Pack Expansion]($dynamicLink:gm
 
 Sitting in some chairs put a pep in your step? Try [Chiairs]($dynamicLink:gm4_chairs)
 
+Here are *italics*, _italics2_, **bold text**, ~~strikethrough~~, __underliined__
+
+### Posing Codes
+<!--$pmc:startTable-->
+|Code       |Description                                    |
+| :---:     |-----------------------------------------------|
+|`arms`     |toggle arm visibility                          |
+|`base`     |toggle base-plate visibility                   |
+|`size`     |toggle small/tall size                         |
+|`gravity`  |toggle gravity                                 |
+|`visible`  |toggle invisibility                            |
+|`turn`     |slowly spin right or left                      |
+|`lock`     |disable interactions                           |
+|`unlock`   |enable interactions                            |
+|`pose`     |select and move body parts                     |
+|`default`  |restore the default pose                       |
+|`copy`     |copies pose to armor stand in offhand          |
+|`paste`    |pastes pose from armor stand in offhand        |
+|`equip`    |transfer player offhand to selected body part  |
+<!--$pmc:endTable-->
+
 https://wiki.gm4.co/wiki/SPECS_MODULE
 
 ### More Info
