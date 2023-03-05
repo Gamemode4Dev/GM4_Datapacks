@@ -10,7 +10,7 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_shapeless_potals"
+                "name": "gm4_shapeless_portals"
               },
               "score": "load.status"
             },
