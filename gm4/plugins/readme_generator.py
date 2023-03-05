@@ -38,7 +38,7 @@ def beet_default(ctx: Context):
         r'<!-- *\$youtubeLinkInsert.+>' : (
             f"[<img src=\"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png\" "
             f"alt=\"Youtube Logo\" width=\"40\" align=\"center\"/> "
-            f"**Watch on Youtube**]({ctx.meta['gm4']['video']})" # TODO should this reference the cached manifeset?
+            f"**Watch on Youtube**]({ctx.meta['gm4']['video']})"
         )
     })
     
@@ -55,7 +55,6 @@ def beet_default(ctx: Context):
     download_links = ctx.cache["download_links"].json
     rec_modules = re.findall(r"\[(.+)\]\(\$dynamicLink:(\w+)\)", global_contents)
     for m in [m for _, m in rec_modules]:
-        # TODO relative links
         global_replacements.update({
             f"\\[(.+)\\]\\((\\$dynamicLink:{m})\\)": f"[\\1](https://gm4.co/modules/{m[4:].replace('_','-')})<!--$dynamicLink:{m}-->"
         })
@@ -78,7 +77,7 @@ def beet_default(ctx: Context):
 
     # Recommended modules dynamic linking; from gm4.co to modrinth/smithed/pmc
     rec_modules = re.findall(r"\(.+\)<!--\$dynamicLink:(.+)-->", global_contents)
-        # TODO relative links
+        # TODO relative links, if they are better
     for m in rec_modules:
         if (v:=download_links[m].get('modrinth_id')):
             site_replacements["modrinth"].update({
@@ -90,7 +89,7 @@ def beet_default(ctx: Context):
         })
         if (v:=download_links[m].get('pmc_link')):
             site_replacements["pmc"].update({
-                f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://planetminecraft.com/data-pack/{v})" # NOTE links to in-beta browser smithed access
+                f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://planetminecraft.com/data-pack/{v})"
         })
 
     # Modrinth Youtube Video Embed
@@ -118,7 +117,6 @@ def beet_default(ctx: Context):
     # PMC BBCode Translation # TODO only process if needed?
         # tables are gross to autodetect and capture, so we'll cheat with helper tags
     tables = re.findall(r'<!-- *\$pmc:startTable ?-->\n((?:.+\n)+)<!-- *\$pmc:endTable ?-->', global_contents)
-    print(tables)
     for table in tables:
         repl = "[table]\n"
         for line in table.strip('\n').split('\n'):
@@ -151,10 +149,6 @@ def beet_default(ctx: Context):
         r"```(.+)```": r"[code]\1[/code]",
         r"---*\n": r"[hr]"
     })
-
-
-            
-
 
     site_replacements['pmc'].update({
         r"\n?<!--.+?-->": ""
