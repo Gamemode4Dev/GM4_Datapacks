@@ -15,13 +15,13 @@ setblock ~ ~ ~ air
 scoreboard players set $portal_blocks gm4_sp_data 0
 scoreboard players set $portal_build gm4_sp_data 0
 execute as @e[type=marker,tag=gm4_sp_portal_origin] at @s if predicate gm4_shapeless_portals:portal_validity_x run function gm4_shapeless_portals:x/flood_fill
-execute if score $portal_blocks gm4_sp_data <= $max_portal_size gm4_sp_data run function gm4_shapeless_portals:x/build
+execute if score $portal_blocks gm4_sp_data matches 1.. if score $portal_blocks gm4_sp_data <= $max_portal_size gm4_sp_data run function gm4_shapeless_portals:x/build
 
 # try to fill z-axis portal
 kill @e[type=marker,tag=gm4_sp_portal,tag=!gm4_sp_portal_origin]
 scoreboard players set $portal_blocks gm4_sp_data 0
 execute if score $portal_build gm4_sp_data matches 0 as @e[type=marker,tag=gm4_sp_portal_origin] at @s if predicate gm4_shapeless_portals:portal_validity_z run function gm4_shapeless_portals:z/flood_fill
-execute if score $portal_build gm4_sp_data matches 0 if score $portal_blocks gm4_sp_data <= $max_portal_size gm4_sp_data run function gm4_shapeless_portals:z/build
+execute if score $portal_blocks gm4_sp_data matches 1.. if score $portal_build gm4_sp_data matches 0 if score $portal_blocks gm4_sp_data <= $max_portal_size gm4_sp_data run function gm4_shapeless_portals:z/build
 
 # if no portal can be made return fire
 execute if score $portal_build gm4_sp_data matches 0 at @e[type=marker,tag=gm4_sp_portal_origin] run setblock ~ ~ ~ fire
