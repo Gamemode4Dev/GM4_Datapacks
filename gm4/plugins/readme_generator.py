@@ -81,8 +81,16 @@ def beet_default(ctx: Context):
             site_replacements["modrinth"].update({
                 f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://modrinth.com/datapack/{v})"
         })
+        if (v:=download_links[m].get('smithed_link')):
+            site_replacements["smithed"].update({
+                f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://beta.smithed.dev/packs/{v})" # NOTE links to in-beta browser smithed access
+        })
+        if (v:=download_links[m].get('pmc_link')):
+            site_replacements["pmc"].update({
+                f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://planetminecraft.com/data-pack/{v})" # NOTE links to in-beta browser smithed access
+        })
 
-    # Modrinth Edits
+    # Modrinth Youtube Video Embed
     if (vid_url:=ctx.meta['gm4']['video']) is not None:
         embed_url = re.sub(r'https:\/\/www.youtube.com\/watch\?v=(\w+)', r'https://www.youtube.com/embed/\1', vid_url)
 

@@ -17,6 +17,8 @@ Want some preset poses? Download the [Poses Pack Expansion]($dynamicLink:gm4_pos
 
 Add particles to your builds with the [Particles Pack Expansion]($dynamicLink:gm4_particles_pack)
 
+Sitting in some chairs put a pep in your step? Try [Chiairs]($dynamicLink:gm4_chairs)
+
 https://wiki.gm4.co/wiki/SPECS_MODULE
 
 ### More Info

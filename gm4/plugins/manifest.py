@@ -39,8 +39,8 @@ def create(ctx: Context):
 			if "notes" in meta and len(meta["notes"]) > 0:
 				module["important_note"] = meta["notes"][0]
 			module["modrinth_id"] = project_config.get("meta", {}).get("modrinth", {}).get("project_id")
-			module["smithed_link"] = project_config.get("meta", {}).get("smithed", {}).get("TO_BE_NAMED")
-			module["pmc_link"] = project_config.get("meta", {}).get("planetminecraft", {}).get("TO_BE_NAMED")
+			module["smithed_link"] = project_config.get("meta", {}).get("smithed", {}).get("uid") # NOTE field to be named when smithed api v2 leaves beta
+			module["pmc_link"] = project_config.get("meta", {}).get("planetminecraft", {}).get("uid")
 			module.update()
 		else:
 			module["id"] = None

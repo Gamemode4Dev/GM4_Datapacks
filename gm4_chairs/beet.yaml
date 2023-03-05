@@ -28,3 +28,8 @@ meta:
         - Notch
   modrinth:
     project_id: gm4-chairs
+  smithed:
+    uid: 3GMTIGiZRzsWskvOfozq
+  planetminecraft:
+    uid: chairs-gamemode-4-module
+

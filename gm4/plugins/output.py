@@ -43,6 +43,13 @@ def release(ctx: Context):
 	for file in ["README.md", "CREDITS.md", "pack.png"]:
 		if file in ctx.data.extra:
 			ctx.data.extra[file].dump(base_path, file)
+	if "modrinth_readme" in ctx.meta:
+		ctx.meta['modrinth_readme'].dump(base_path, "MODRINTH_README.md")
+	if "smithed_readme" in ctx.meta:
+		ctx.meta['smithed_readme'].dump(base_path, "SMITHED_README.md")
+	if "pmc_readme" in ctx.meta:
+		ctx.meta['pmc_readme'].dump(base_path, "PMC_README.txt") # TODO no need to export unless making PMC page
+		
 
 	# Publish to modrinth
 	modrinth = ctx.meta.get("modrinth", None)
