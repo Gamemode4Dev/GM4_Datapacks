@@ -23,3 +23,8 @@ meta:
         - Denniss
       Icon Design:
         - DuckJr
+      README Testing:
+        - SpecialBuilder32
+        - Notch
+  modrinth:
+    project_id: gm4-chairs

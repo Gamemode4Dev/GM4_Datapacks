@@ -38,6 +38,9 @@ def create(ctx: Context):
 				module["hidden"] = True
 			if "notes" in meta and len(meta["notes"]) > 0:
 				module["important_note"] = meta["notes"][0]
+			module["modrinth_id"] = project_config.get("meta", {}).get("modrinth", {}).get("project_id")
+			module["smithed_link"] = project_config.get("meta", {}).get("smithed", {}).get("TO_BE_NAMED")
+			module["pmc_link"] = project_config.get("meta", {}).get("planetminecraft", {}).get("TO_BE_NAMED")
 			module.update()
 		else:
 			module["id"] = None
@@ -53,6 +56,7 @@ def create(ctx: Context):
 		last_commit = None
 		released_modules = []
 
+	download_links: dict[str, dict[str, str]] = {}
 	for module in modules:
 		id = module["id"]
 
@@ -68,6 +72,16 @@ def create(ctx: Context):
 			patch = released["patch"] if released else prefix
 			module["patch"] = patch + 1
 			print(f"[GM4] Updating {id} to {patch + 1}")
+
+		# Assemble lookup table of available download links
+		download_links.update({
+			id: {
+				"modrinth_id": module["modrinth_id"],
+				"smithed_link": module["smithed_link"],
+				"pmc_link": module["pmc_link"]
+			}
+		})
+	ctx.cache["download_links"].json = download_links
 	
 	# Read the contributors metadata
 	contributors_file = Path("contributors.json")
@@ -99,7 +113,7 @@ def write_credits(ctx: Context):
 		return
 
 	# traverses contributors and associates name with links for printing
-	linked_credits = {}
+	linked_credits: dict[str, list[str]] = {}
 	for title in credits:
 		people = credits[title]
 		if not isinstance(people, list) or len(people) == 0:

@@ -13,9 +13,9 @@ Since the dawn of Minecraft, stairs have been used as chairs in every house you'
 
 ### Expansion Packs
 <!--- these will get links when those pages are made available-->
-Want some preset poses? Download the Poses Pack Expansion
+Want some preset poses? Download the [Poses Pack Expansion]($dynamicLink:gm4_poses_pack)
 
-Add particles to your builds with the Particles Pack Expansion
+Add particles to your builds with the [Particles Pack Expansion]($dynamicLink:gm4_particles_pack)
 
 https://wiki.gm4.co/wiki/SPECS_MODULE
 
