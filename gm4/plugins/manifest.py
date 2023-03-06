@@ -100,8 +100,16 @@ def create(ctx: Context):
 	}
 	ctx.cache["gm4_manifest"].json = new_manifest
 
+
+def write_meta(ctx: Context):
+	"""Write the updated meta.json file."""
+	version = os.getenv("VERSION", "1.19")
+	release_dir = Path('release') / version
 	os.makedirs(release_dir, exist_ok=True)
-	manifest_file.write_text(json.dumps(new_manifest, indent=2))
+
+	manifest_file = release_dir / "meta.json"
+	manifest = ctx.cache["gm4_manifest"].json
+	manifest_file.write_text(json.dumps(manifest, indent=2))
 
 
 def write_credits(ctx: Context):
