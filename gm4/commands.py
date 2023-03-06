@@ -51,4 +51,39 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, 
 def clean():
 	"""Cleans the output folder."""
 	shutil.rmtree("out", ignore_errors=True)
-	click.echo(f"[GM4] Cleaned output folder!")
+	shutil.rmtree("release", ignore_errors=True)
+	click.echo(f"[GM4] Cleaned output and release folder!")
+
+
+@beet.command()
+@pass_project
+@click.pass_context
+@click.argument("modules", nargs=-1)
+def readme_gen(ctx: click.Context, project: Project, modules: tuple[str]):
+	"""Generates all README files for manual uplaoad"""
+	
+	modules = tuple(m if m.startswith("gm4_") else f"gm4_{m}" for m in modules)
+	if len(modules) == 0:
+		click.echo("[GM4] You need at least one module")
+		return
+	
+	click.echo(f"[GM4] Generating READMEs for: {', '.join(modules)}")
+
+	project.config_path = "beet-dev.yaml"
+	config = {
+		"broadcast": modules,
+		"extend": "beet.yaml",
+		"pipeline": [
+			"gm4.plugins.manifest.write_credits",
+			"gm4.plugins.readme_generator",
+			"gm4.plugins.output.readmes"
+		]
+	}
+
+	project.config_overrides = [
+		f"pipeline[] = gm4.plugins.manifest.create",
+		f"pipeline[] = {json.dumps(config)}",
+		f"pipeline[] = gm4.plugins.finished",
+	]
+
+	ctx.invoke(commands.build)

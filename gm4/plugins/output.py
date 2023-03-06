@@ -43,13 +43,9 @@ def release(ctx: Context):
 	for file in ["README.md", "CREDITS.md", "pack.png"]:
 		if file in ctx.data.extra:
 			ctx.data.extra[file].dump(base_path, file)
-	if "modrinth_readme" in ctx.meta:
-		ctx.meta['modrinth_readme'].dump(base_path, "MODRINTH_README.md")
+			
 	if "smithed_readme" in ctx.meta:
 		ctx.meta['smithed_readme'].dump(base_path, "SMITHED_README.md")
-	if "pmc_readme" in ctx.meta:
-		ctx.meta['pmc_readme'].dump(base_path, "PMC_README.txt") # TODO no need to export unless making PMC page
-		
 
 	# Publish to modrinth
 	modrinth = ctx.meta.get("modrinth", None)
@@ -91,3 +87,18 @@ def release(ctx: Context):
 			print(f"[GM4] Failed to publish new version version: {res.status_code} {res.text}")
 			return
 		print(f"[GM4] Successfully published {res.json()['name']}")
+
+def readmes(ctx: Context):
+	"""Saves all READMEs intended for download sites to the ./out/readmes folder."""
+	print("[TEMP] output.readmes")
+	
+	readme_dir = Path("out/readmes")
+	base_path = readme_dir / ctx.project_id
+	os.makedirs(base_path, exist_ok=True)
+	
+	if "README.md" in ctx.data.extra:
+		ctx.data.extra["README.md"].dump(base_path, "GM4_README.md")
+
+	for file, ext in {"modrinth_readme":"md", "smithed_readme":"md", "pmc_readme":"txt"}.items():
+		if file in ctx.meta:
+			ctx.meta[file].dump(base_path, f"{file.upper()}.{ext}")
