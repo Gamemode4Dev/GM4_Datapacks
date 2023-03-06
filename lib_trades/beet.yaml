@@ -1,0 +1,12 @@
+id: gm4_trades
+name: Gamemode 4 Trades
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    credits:
+      Creator:
+        - Bloo

@@ -1,0 +1,23 @@
+extend: '../module.yaml'
+
+id: gm4_iacio_shamir
+name: Iacio Shamir
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Adds the 'Iacio' shamir to Metallurgy. It lets you throw things further! Launch an Ender Pearl into orbit or simply throw your Trident exceptionally far.
+    required:
+      - gm4_metallurgy
+    recommended: []
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Metallurgy/Iacio_Shamir
+    credits:
+      Creator:
+        - Denniss
+      Icon Design:
+        - BluePsychoRanger

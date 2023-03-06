@@ -1,0 +1,25 @@
+extend: '../module.yaml'
+
+id: gm4_ziprails
+name: Ziprails
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Automatically latch on to a tripwire to sail through the sky on a suspended line!
+    required: []
+    recommended:
+      - gm4_vertical_rails
+    notes: []
+    video: https://www.youtube.com/watch?v=QA7a5q2kVcg
+    wiki: https://wiki.gm4.co/wiki/Ziprails
+    credits:
+      Creators:
+        - Sparks
+        - SpecialBuilder32
+        - Bloo
+      Icon Design:
+        - DuckJr

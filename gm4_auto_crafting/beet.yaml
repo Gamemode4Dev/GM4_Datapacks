@@ -1,0 +1,37 @@
+extend: '../module.yaml'
+
+id: gm4_auto_crafting
+name: Auto Crafting
+
+pipeline:
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  - data_pack:
+      load: .
+  - gm4_auto_crafting.generate
+
+meta:
+  gm4:
+    description: Create an auto crafter to fully automate crafting! With this module installed, all vanilla crafting recipes are added to the GM4 Custom Crafter.
+    required: []
+    recommended:
+      - gm4_resource_pack
+      - gm4_relocators
+      - gm4_standard_crafting
+      - gm4_record_crafting
+      - gm4_ender_hoppers
+      - gm4_enchantment_extractors
+      - gm4_forming_press
+      - gm4_block_compressors
+      - gm4_disassemblers
+      - gm4_tunnel_bores
+      - gm4_boots_of_ostara
+      - gm4_heart_canisters
+      - gm4_smelteries
+      - gm4_liquid_tanks
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Custom_Crafters/Auto_Crafting
+    credits:
+      Creator:
+        - BluePsychoRanger

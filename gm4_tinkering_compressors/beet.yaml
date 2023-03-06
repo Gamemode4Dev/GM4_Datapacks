@@ -1,0 +1,32 @@
+extend: '../module.yaml'
+
+id: gm4_tinkering_compressors
+name: Tinkering Compressors
+
+pipeline:
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Automatically compress stacks of items into their block form with a tinker shamir as a machine block, and back.
+    required:
+      - gm4_block_compressors
+      - gm4_metallurgy
+    recommended:
+      - gm4_relocators
+    notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Tinkering_Compressors
+    credits:
+      Creator:
+        - SirSheepe
+      Updated by:
+        - MichaelMiner137
+        - BluePsychoRanger
+      Textures by:
+        - kyrkis
+      Icon Design:
+        - Sparks

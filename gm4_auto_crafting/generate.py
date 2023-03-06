@@ -1,18 +1,12 @@
-from io import TextIOWrapper
-import os, json, collections, shutil
-from urllib import request
+from beet import Context, Function, ItemTag, LootTable, Predicate
+from beet.contrib.vanilla import Vanilla
+from itertools import groupby
+from typing import Any, Callable
+from dataclasses import dataclass
 
 
-VERSION = "1.19"              # version to extract recipes from
-GITHUB_URL = f"https://raw.githubusercontent.com/misode/mcmeta/{VERSION}-summary/data/recipe/data.min.json"
-
-
-
-NAME = "gm4_auto_crafting"      # name of the module
-DIR = f"{NAME}/data/{NAME}"
-FUNCTION_FOLDER = f"{DIR}/functions"
+NAMESPACE = "gm4_auto_crafting"      # name of the module
 LOOT_PATH = "crafting/vanilla"
-
 BRANCH_PATH = "check_recipes"    # folder where all the search tree stuff will take place
 
 buckets = [
@@ -236,151 +230,111 @@ stackable_16 = [
 ]
 
 
+@dataclass
+class RecipeResult:
+    name: str
+    count: int = 1
+    rolls: int = 1
 
-def main() -> None:
-    recipes = []
-    predicates = []
-    # get the json of the recipes
-    recipes_json = get_recipes(VERSION, True)
-    ## test recipe
-    ## recipes_json = [{"name":"not_an_item", "contents": {"type": "minecraft:crafting_shaped","pattern": ["XX","XX","##"],"key": {"#": {"item": "minecraft:stick"},"X": {"tag": "minecraft:stone_tool_materials"}},"result": {"item": "minecraft:random"}}},{"name":"iron_pickaxe", "contents": {"type": "minecraft:crafting_shaped","pattern": ["XXX"," # "," # "],"key": {"#": {"item": "minecraft:stick"},"X": {"item": "minecraft:iron_ingot"}},"result": {"item": "minecraft:iron_pickaxe"}}},{"name":"netherite_pickaxe", "contents": {"type": "minecraft:crafting_shaped","pattern": ["XXX"," # "," # "],"key": {"#": {"item": "minecraft:stick"},"X": {"item": "minecraft:netherite_ingot"}},"result": {"item": "minecraft:netherite_pickaxe"}}},{"name":"stone_pickaxe", "contents": {"type": "minecraft:crafting_shaped","pattern": ["XXX"," # "," # "],"key": {"#": {"item": "minecraft:stick"},"X": {"item": "minecraft:cobblestone"}},"result": {"item": "minecraft:stone_pickaxe"}}},{"name":"wooden_pickaxe", "contents": {"type": "minecraft:crafting_shaped","pattern": ["XXX"," # "," # "],"key": {"#": {"item": "minecraft:stick"},"X": [[{"tag": "gm4:oak_planks"},{"item": "minecraft:chest"}],{"item": "minecraft:jungle_planks"}]},"result": {"item": "minecraft:wooden_pickaxe"}}},{"name":"diamond_pickaxe", "contents": {"type": "minecraft:crafting_shaped","pattern": ["XXX"," # "," # "],"key": {"#": {"item": "minecraft:stick"},"X": {"item": "minecraft:diamond"}},"result": {"item": "minecraft:diamond_pickaxe"}}},{"name":"diamond", "contents": {"type": "minecraft:crafting_shaped","pattern": ["X X","# #"," # "],"key": {"#": {"item": "minecraft:dirt"},"X": {"item": "minecraft:apple"}},"result": {"item": "minecraft:diamond"}}},{"name": "writable_book", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:dragon_breath"},{"item": "minecraft:ink_sac"},{"item": "minecraft:milk_bucket"}],"result": {"item": "minecraft:writable_book"}}},{"name": "cyan_dye", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:blue_dye"},{"item": "minecraft:ink_sac"},{"item": "minecraft:composter"}],"result": {"item": "minecraft:cyan_dye"}}},{"name": "crafting_table", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:blue_dye"},{"item": "minecraft:oak_planks"},{"item": "minecraft:stone"}],"result": {"item": "minecraft:crafting_table"}}},{"name": "flint", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"tag": "minecraft:dirt"},{"item": "minecraft:dirt"},{"item": "minecraft:andesite"}],"result": {"item": "minecraft:flint"}}},{"name": "iron_helmet", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"tag": "minecraft:dirt"},{"tag": "minecraft:dirt"},{"item": "minecraft:andesite"}],"result": {"item": "minecraft:iron_helmet"}}},{"name": "quartz", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:stone"},{"item": "minecraft:furnace"}],"result": {"item": "minecraft:quartz"}}},{"name": "cobblestone", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:tripwire_hook"},{"item": "minecraft:wooden_pickaxe"}],"result": {"item": "minecraft:cobblestone"}}},{"name": "raw_chicken", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:gravel"},{"item": "minecraft:feather"}],"result": {"item": "minecraft:chicken"}}},{"name": "cobblestone", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [[{"item": "minecraft:tripwire_hook"},{"item": "minecraft:wooden_pickaxe"}],{"tag": "minecraft:acacia_logs"}],"result": {"item": "minecraft:cobblestone"}}},{"name": "oak_leaves", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:gravel"}],"result": {"item": "minecraft:oak_leaves"}}},{"name": "netherite_ingot", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:gold_ingot"},{"item": "minecraft:gold_ingot"},{"item": "minecraft:gold_ingot"},{"item": "minecraft:gold_ingot"},{"item": "minecraft:netherite_ingot"},{"item": "minecraft:netherite_ingot"},{"item": "minecraft:netherite_ingot"},{"item": "minecraft:netherite_ingot"}],"result": {"item": "minecraft:netherite_ingot"}}},{"name": "netherite_ingot_1", "contents":{"type": "minecraft:crafting_shapeless","ingredients": [{"item": "minecraft:gold_ingot"},{"item": "minecraft:gold_ingot"},{"item": "minecraft:gold_ingot"},{"item": "minecraft:gold_ingot"},{"item": "minecraft:netherite_ingot"},{"item": "minecraft:netherite_ingot"},{"tag": "minecraft:netherite_ingot"},{"item": "minecraft:netherite_ingot"}],"result": {"item": "minecraft:netherite_ingot"}}}]
-    # clear old contents
-    shutil.rmtree(f"{DIR}/loot_tables/{LOOT_PATH}", True)
-    shutil.rmtree(f"{DIR}/tags/items", True)
-    shutil.rmtree(f"{DIR}/predicates/custom_item_tags", True)
-    for recipe_json in recipes_json:
-        # interpret the recipes
-        contents = recipe_json["contents"]
-        name = recipe_json["name"]
-        # only get crafting table recipes
-        if (contents["type"] == "minecraft:crafting_shaped"):
-            recipe_interpreted, predicate_list = interpret_recipe(contents, name, False)
-            recipes.append(recipe_interpreted)
-            predicates.extend(predicate_list)
-        elif (contents["type"] == "minecraft:crafting_shapeless"):
-            recipe_interpreted, predicate_list = interpret_recipe(contents, name, True)
-            recipes.append(recipe_interpreted)
-            predicates.extend(predicate_list)
 
-    # create predicate files for items that were in a list in a recipe
-    generate_predicates(predicates)
+@dataclass
+class RecipeShape:
+    ingredients: list[str]
+    result: list[RecipeResult]
+    shapeless: bool
+    mirror: bool = False
+
+
+@dataclass
+class RecipeData:
+    name: str
+    recipe: RecipeShape
+    slot_count: int
+    total_length: int
+
+    def copy(self):
+        return RecipeData(self.name, self.recipe, self.slot_count, self.total_length)
+
+
+@dataclass
+class TagData:
+    name: str
+    values: list[Any]
+
+
+def beet_default(ctx: Context):
+    vanilla = ctx.inject(Vanilla)
+
+    recipes: list[RecipeData] = []
+
+    for id, recipe in vanilla.data.recipes.items():
+        name = id.split(':')[1]
+        contents = recipe.data
+        if contents["type"] == "minecraft:crafting_shaped":
+            recipe = analyze_shaped_recipe(ctx, contents, name)
+        elif contents["type"] == "minecraft:crafting_shapeless":
+            recipe = analyze_shapeless_recipe(ctx, contents, name)
+        else:
+            continue
+
+        # create loot table file for recipe output
+        generate_crafting_loot_table(ctx, recipe.result, name)
+
+        # gets the two parameters (slot_count and total_length) used for the search tree
+        all_items = [i for i in recipe.ingredients if i != "minecraft:air"]
+        has_tag = "#" in "".join(all_items)
+        total_length = -1 if has_tag else sum([len(i) for i in all_items])
+
+        recipes.append(RecipeData(name, recipe, len(all_items), total_length))
+
     # create the search tree functions
-    generate_trees(recipes)
-    
+    generate_trees(ctx, recipes)
 
 
-def get_recipes(version: str, remove_files: bool = True) -> list[dict]:
-    return [{"name":x, "contents":y} for x,y in json.load(request.urlopen(GITHUB_URL)).items()]
-
-
-def interpret_recipe(contents: dict, name: str, shapeless: bool = False) -> tuple[dict, list[str]]:
-    """
-    interprets the json of a crafting recipe
-    """
-    # get recipe as a dict and a list of items that were used in an ingredient list
-    if not shapeless:
-        recipe, needs_tag = analyze_shaped_recipe(contents, name)
-    else:
-        recipe, needs_tag = analyze_shapeless_recipe(contents, name)
-    predicates = []
-    while len(needs_tag) > 0:
-        # create a custom item tag for the items used in an ingredient list
-        predicate = generate_custom_item_tag(needs_tag.pop())
-        # add the custom item tag to a list to generate a predicate for
-        predicates.append(predicate)
-        
-    # create loot table file for recipe output
-    generate_crafting_loot_table(recipe["result"], f"{name}.json")
-    # get slot_count and total_length of recipe
-    if not shapeless:
-        item_count, total_length = check_input(recipe["pattern"])
-    else:
-        item_count, total_length = check_input(recipe["ingredients"])
-    return {"name": name, "recipe": recipe, "slot_count": item_count, "total_length": total_length}, predicates
-
-def toList(recipe: dict) -> list:
-    """
-    converts a recipe dict to a list
-    """
-    recipe_list = []
-    for item in recipe:
-        recipe_list.append(item)
-    return recipe_list
-
-def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
+def analyze_shaped_recipe(ctx: Context, recipe: dict[str, Any], name: str) -> RecipeShape:
     """
     analyzes the contents of the shaped recipe json
     """
-    needs_tag = []
-    pattern = []
-    result = []
-    list_symbols = []
+    pattern: list[str] = []
+    result: list[RecipeResult] = []
+    list_symbols: list[str] = []
 
     while len(recipe["pattern"]) < 3:
         recipe["pattern"].append("   ")
     # convert pattern to array with items
     for row in recipe["pattern"]:
-        pattern_row = []
+        pattern_row: list[str] = []
         row = row.ljust(3)
 
         # check each ingredient
         for symbol in row:
-            
-            # if there's a space, then assume it's unfilled/air
-            if symbol == ' ':
-                pattern_row.append("minecraft:air")
-                if len(result) and result[-1]["name"] == "minecraft:air":
-                    result[-1]["rolls"] += 1
-                else:
-                  result.append({"name": "minecraft:air","count": 1,"rolls": 1})
-
+            if symbol == " ":
+                item = "minecraft:air"
             else:
-                # assume the ingredient is an item, not a tag
-                try:
-                    # if the ingredient is a list of items, create a custom item tag
-                    if type(recipe["key"][symbol]) is list:
-                        # if symbol is not already in the list of symbols, add it
-                        if symbol not in list_symbols:
-                            needs_tag.append({"name": f"#{NAME}:{name}_ingredient_{len(list_symbols) + 1}", "values": recipe["key"][symbol]})
-                            # account for this symbol
-                            list_symbols.append(symbol)
-                        # add the custom list to the pattern
-                        item = f"#{NAME}:{name}_ingredient_{list_symbols.index(symbol) + 1}"
-                    else:
-                        item = recipe["key"][symbol]["item"]
-                    pattern_row.append(item)
+                ingredient: Any = recipe["key"][symbol]
+                if isinstance(ingredient, list):
+                    if symbol not in list_symbols:
+                        generate_custom_item_tag(ctx, TagData(f"#{NAMESPACE}:{name}_ingredient_{len(list_symbols) + 1}", ingredient)) #type: ignore
+                        list_symbols.append(symbol)
+                    item = f"#{NAMESPACE}:{name}_ingredient_{list_symbols.index(symbol) + 1}"
+                elif "item" in ingredient:
+                    item = ingredient["item"]
+                else:
+                    item = "#" + ingredient["tag"]
+            pattern_row.append(item)
 
-                    # based on the last item, generate loot table rolls
-                    if item in buckets:
-                        if len(result) and result[-1]["name"] == "minecraft:bucket":
-                            result[-1]["rolls"] += 1
-                        else:
-                          result.append({"name": "minecraft:bucket","count": 1,"rolls": 1})
-                    elif item in bottles:
-                        if len(result) and result[-1]["name"] == "minecraft:glass_bottle":
-                            result[-1]["rolls"] += 1
-                        else:
-                          result.append({"name": "minecraft:glass_bottle","count": 1,"rolls": 1})
-                    else:
-                        if len(result) and result[-1]["name"] == "minecraft:air":
-                            result[-1]["rolls"] += 1
-                        else:
-                            result.append({"name": "minecraft:air","count": 1,"rolls": 1})
-                # if that failed, assume the item is a tag
-                except:
-                    try:
-                        item_tag = recipe["key"][symbol]["tag"]
-                        pattern_row.append("#" + item_tag)
-                        if len(result) and result[-1]["name"] == "minecraft:air":
-                            result[-1]["rolls"] += 1
-                        else:
-                            result.append({"name": "minecraft:air","count": 1,"rolls": 1})
-                    # if that failed, raise an error
-                    except:
-                        pattern_row.append("invalid")
-                        print(recipe)
-                        raise ValueError("Unknown JSON format: %s" % recipe["result"]["item"])
-        
+            def add_result(item: str):
+                if len(result) and result[-1].name == item:
+                    result[-1].rolls += 1
+                else:
+                    result.append(RecipeResult(item))
+            if item in buckets:
+                add_result("minecraft:bucket")
+            elif item in bottles:
+                add_result("minecraft:glass_bottle")
+            else:
+                add_result("minecraft:air")
+
         # add the input row to the pattern list
         pattern.extend(pattern_row)
 
@@ -416,557 +370,321 @@ def analyze_shaped_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
     elif (pattern[0] != pattern[2] or pattern[3] != pattern[5] or pattern[6] != pattern[8]):
         mirror = True
 
-
-    # get output result
-    result_id = recipe["result"]["item"]
-    # get result count
-    try:
-        result_count = recipe["result"]["count"]
-    except:
-        result_count = 1
     # get what the last output item was
-    last_output = result[-1]["name"]
+    last_output = result[-1].name
     # remove the last output item from result
-    result[-1]["rolls"] -= 1
-    if result[-1]["rolls"] == 0:
+    result[-1].rolls -= 1
+    if result[-1].rolls == 0:
         result.pop()
     # if last output item was not air, move it somewhere else
     if last_output != "minecraft:air":
-        i = 0
         found_match = False
         # check if the last item is the same as another item in the output loot table
-        while i < len(result) and not found_match:
+        for i, r in enumerate(result):
             # if a matching item is found, merge them
-            if result[i]["name"] == last_output:
+            if r.name == last_output:
                 # if there's only one instance, just increase the count
-                if result[i]["rolls"] == 1:
-                    result[i]["count"] += 1
+                if r.rolls == 1:
+                    r.count += 1
                 # if there's multiple instances, increase the count for only one of the rolls
                 else:
-                    result[i]["rolls"] -= 1
-                    result.insert(i, {"name": result[i]["name"],"count": 2,"rolls": 1})
+                    r.rolls -= 1
+                    result.insert(i, RecipeResult(r.name, count=2))
                 found_match = True
-            i += 1
+                break
         # if there's no matching item in the output loot table, put the item in the first empty output slot
         if not found_match:
-            i = 0
-            found_match = False
-            while i < len(result) and not found_match:
+            for i, r in enumerate(result):
                 # find the first instance of an air roll
-                if result[i]["name"] == "minecraft:air":
+                if r.name == "minecraft:air":
                     # decrease the number of air rolls, and add a roll for the last output item before that
-                    result[i]["rolls"] -= 1
-                    result.insert(i, {"name": last_output,"count": 1,"rolls": 1})
+                    r.rolls -= 1
+                    result.insert(i, RecipeResult(last_output))
                     found_match = True
-                i += 1
+                    break
             # if the entire thing is full, just print the recipe for manual correction
             # if it gets here the last bottle/bucket will be voided
             if not found_match:
                 print("FULL: " + recipe["result"]["item"] + " -> " + last_output)
 
     # set the last slot to the recipe result
-    result.append({"name": result_id,"count": result_count,"rolls": 1})
-    # return the new formatted ingredients and result, and the items in custom item tags
-    return {"pattern":pattern, "result":result, "mirror":mirror}, needs_tag
+    result_id = recipe["result"]["item"]
+    result_count = recipe["result"].get("count", 1)
+    result.append(RecipeResult(result_id, count=result_count))
+    # return the new formatted recipe
+    return RecipeShape(pattern, result, shapeless=False, mirror=mirror)
 
 
 
-def analyze_shapeless_recipe(recipe: dict, name: str) -> tuple[dict, list[dict]]:
+def analyze_shapeless_recipe(ctx: Context, recipe: dict[str, Any], name: str) -> RecipeShape:
     """
     analyzes the contents of the shapeless recipe json
     """
-    needs_tag = []
-    ingredients = []
-    result = []
+    tag_count = 0
+    ingredients: list[str] = []
+    result: list[RecipeResult] = []
     bucket_count = 0
     bottle_count = 0
-    air_count = 0
-    total_count = 0
     for entry in recipe["ingredients"]:
-        # assumes the ingredient is an item, not a tag
-        try:
-            # if the ingredient is a list of items, create a custom item tag
-            if type(entry) is list:
-                if ({"name": item, "values": entry} in needs_tag):
-                    item = f"#{NAME}:{name}_ingredient_{needs_tag.index({'name': item, 'values': entry})}"
-                else: 
-                    item = f"#{NAME}:{name}_ingredient_{len(needs_tag)+1}"
-                    needs_tag.append({"name": item, "values": entry})
-            else:
-                item = entry["item"]
+        if isinstance(entry, list):
+            tag_count += 1
+            item = f"#{NAMESPACE}:{name}_ingredient_{tag_count}"
+            generate_custom_item_tag(ctx, TagData(item, entry)) # type: ignore
+        elif "item" in entry:
+            item = entry["item"]
             # special case: check if the item is a bucket or bottle type (used for output)
             if item in buckets:
                 bucket_count += 1
             elif item in bottles:
                 bottle_count += 1
-        # if that failed, assumes the ingredient is an item tag and prepends '#'
-        except KeyError:
+        else:
             item = "#" + entry["tag"]
         ingredients.append(item)
 
     # if there were (non-empty) buckets in the recipe, return empty buckets
     if bucket_count > 0:
-        total_count += 1
-        result.append({"name": "minecraft:bucket","count": bucket_count,"rolls": 1})
+        result.append(RecipeResult("minecraft:bucket", count=bucket_count))
     # if there were (non-empty) bottles in the recipe, return empty bottles
     if bottle_count > 0:
-        total_count += 1
-        result.append({"name": "minecraft:glass_bottle","count": bottle_count,"rolls": 1})
+        result.append(RecipeResult("minecraft:glass_bottle", count=bottle_count))
     # fill the slots with air, up until the last slot
-    while total_count < 8:
-        total_count += 1
-        air_count += 1
-    result.append({"name": "minecraft:air","count": 1,"rolls": air_count})
-    result_id = recipe["result"]["item"]
-    # set the result count
-    try:
-        result_count = recipe["result"]["count"]
-    except:
-        result_count = 1
+    air_count = 8 - bucket_count - bottle_count
+    result.append(RecipeResult("minecraft:air", rolls=air_count))
     # set the last slot to the recipe result
-    result.append({"name": result_id,"count": result_count,"rolls": 1})
-    # return the new formatted ingredients and result, and the items in custom item tags
-    return {"ingredients": ingredients, "result": result}, needs_tag
+    result_id = recipe["result"]["item"]
+    result_count = recipe["result"].get("count", 1)
+    result.append(RecipeResult(result_id, count=result_count))
+    # return the new formatted recipe
+    return RecipeShape(ingredients, result, shapeless=True)
 
 
 
-def generate_custom_item_tag(data: dict) -> str:
+def generate_custom_item_tag(ctx: Context, data: TagData) -> str:
     """
     creates a custom item tag for a list of items
     """
     # get prefix and name of item tag
-    [prefix, name] = data["name"][1:].split(":")
-    path = f"{NAME}/data/{prefix}/tags/items/{name}"
-    json = {"values": []}
+    name = data.name.removeprefix(f"#{NAMESPACE}:")
+    json: Any = {"values": []}
     # move values to the json
-    for value in data["values"]:
+    for value in data.values:
         # if there's a nested list, combine them into a single values list
         # (just a failsafe; this makes no sense, but neither does Mojang)
-        if type(value) is list:
+        if type(value) is list[Any]:
             for item in value:
-                try:
+                if "item" in item:
                     # if it's an item, just append the item
                     json["values"].append(item["item"])
-                except:
+                elif "tag" in item:
                     # if it's an (actual) item tag, add '#' before the value
                     json["values"].append("#" + item["tag"])
         else:
-            try:
+            if "item" in value:
                 # if it's an item, just append the item
                 json["values"].append(value["item"])
-            except:
+            elif "tag" in value:
                 # if it's an (actual) item tag, add '#' before the value
                 json["values"].append("#" + value["tag"])
     # create item tag file
-    write_json(path, json)
+    ctx.data[f"{NAMESPACE}:{name}"] = ItemTag(json)
+
+    # write the function that checks the predicates
+    fn_name = f"{NAMESPACE}:check_item_tags"
+    if fn_name not in ctx.data.functions:
+        ctx.data.functions[fn_name] = Function([
+            "# checks each slot for item tags",
+            "# @s = crafter armor stand\n# located at the center of the block",
+            "# run from gm4_custom_crafters-3.0:process_input/check_item_tags via #gm4_custom_crafters:custom_item_checks",
+            "",
+        ])
+    ctx.data.functions[fn_name].append(f"execute if predicate {NAMESPACE}:custom_item_tags/{name} run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.{NAMESPACE}.{name} set value 1b")
+
+    # create predicate file for the item tag check
+    json: Any = {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"mainhand":{"tag": f"{NAMESPACE}:{name}"}}}}
+    ctx.data[f"{NAMESPACE}:custom_item_tags/{name}"] = Predicate(json)
+
     # return the name of the item tag just created
-    return data["name"][1:]
+    return data.name[1:]
 
 
 
-def generate_crafting_loot_table(result: list[dict], target: str) -> None:
+def generate_crafting_loot_table(ctx: Context, result: list[RecipeResult], target: str):
     """
     creates a loot table for the output result of the custom crafting recipe
     """
     # create initial loot table
-    json = {"type": "minecraft:generic","pools": []}
+    json: Any = {"type": "minecraft:generic","pools": []}
     for r in result:
         # populate pools
-        pool = {"rolls": r["rolls"],"entries":[{"type":"minecraft:item","name":r["name"]}]}
+        pool: Any = {"rolls":r.rolls,"entries":[{"type":"minecraft:item","name":r.name}]}
         # set count
-        if r["count"] > 1:
-            try:
-                pool["entries"][0]["functions"].append({"function":"minecraft:set_count","count":r["count"]})
-            except:
-                pool["entries"][0]["functions"] = [{"function":"minecraft:set_count","count":r["count"]}]
+        if r.count > 1:
+            pool["entries"][0]["functions"] = [{"function":"minecraft:set_count","count":r.count}]
         json["pools"].append(pool)
-    
+
     # write loot table file
-    write_json(f"{DIR}/loot_tables/{LOOT_PATH}/{target}", json)
+    ctx.data[f"{NAMESPACE}:{LOOT_PATH}/{target}"] = LootTable(json)
 
 
 
-def check_input(recipe: list) -> tuple[int, int]:
-    """
-    gets the two parameters (slot_count and total_length) used for the search tree
-    """
-    item_count = 0
-    total_length = 0
-    has_tag = False
-    for item in recipe:
-        # ignore air
-        if item != "minecraft:air":
-            # add up total items used
-            item_count += 1
-            if "#" in item:
-                has_tag = True
-            else:
-                # add up total length of input ids
-                total_length += len(item)
-    # if there's an item tag, can't use total length
-    if has_tag:
-        total_length = -1
-    return item_count, total_length
-
-
-
-def generate_predicates(predicates: list[str]) -> None:
-    """
-    creates predicate files for the custom item tag checks
-    """
-    # initial function header
-    function = "# checks each slot for item tags\n# @s = crafter armor stand\n# located at the center of the block\n# run from gm4_custom_crafters-3.0:process_input/check_item_tags via #gm4_custom_crafters:custom_item_checks\n\n"
-    for name in predicates:
-        # get prefix and name of tag
-        [prefix, tag] = name.split(":")
-        # newline for that specific predicate
-        function += f"execute if predicate {NAME}:custom_item_tags/{tag} run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.{prefix}.{tag} set value 1b\n"
-
-        # create predicate file for the item tag check
-        path = f"{DIR}/predicates/custom_item_tags/{tag}"
-        json = {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"mainhand":{}}}}
-        json["predicate"]["equipment"]["mainhand"]["tag"] = name
-        write_json(path, json)
-
-    # write the function that checks the predicates
-    filename = f"{DIR}/functions/check_item_tags.mcfunction"
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
-    with open(filename, "w", newline="\n") as file:
-        file.write(f"{function}\n")
-
-
-
-def generate_trees(recipes: list[dict]) -> None:
+def generate_trees(ctx: Context, recipes: list[RecipeData]) -> None:
     """
     generates the search tree functions
     """
-    # separate recipes list into lists of same slot_count
-    slot_counts = collections.defaultdict(list)
-    for recipe in recipes:
-        k = recipe["slot_count"]
-        slot_counts[k].append(recipe)
-    slot_counts = dict(slot_counts)
-    # sort each list of same slot_count by total_length
-    for i in slot_counts:
-        slot_counts[i] = sorted(slot_counts[i], key=lambda d: d["total_length"])
+    # separate recipes list into lists of same slot_count, sorted by total_length
+    recipes_by_slot_count = {
+        k: sorted([r for r in recipes if r.slot_count == k], key=lambda d: d.total_length)
+        for k in range(1, 10)
+    }
 
-    # delete old search tree functions
-    shutil.rmtree(FUNCTION_FOLDER + f"/{BRANCH_PATH}", True)
-    # create a search tree based on the slot_count
-    generate_slot_tree(slot_counts, 0, 9, BRANCH_PATH, [], True)
+    def on_slot_leaf(value: int, path: str):
+        recipes = recipes_by_slot_count[value]
 
+        # turn recipes list into dict w/ total_length as key
+        recipes_by_total_length = {
+            k: list(g)
+            for k, g in groupby(recipes, key=lambda r: r.total_length)
+            if k != -1
+        }
+        recipes_using_tags = [r for r in recipes if r.total_length == -1]
 
+        # get the maximum length, this works because recipes was sorted by total_length
+        max_length = max(0, recipes[-1].total_length)
 
-def generate_slot_tree(slot_counts: dict, min:int, max: int, path: str, completed: list[int], root: bool = False) -> None:
-    """
-    creates the slot_count (weighted) search tree functions
-    """
-    def create_function(value: int, path: str, file: TextIOWrapper) -> None:
-        """
-        writes the function at the end of the slot_count tree to search the total_length tree
-        and creates the total_length tree
-        """
-        # verify the slot_count value exists
-        if valid(value, slot_counts):
-            recipes = slot_counts[value]
-            # add value to list of completed functions
-            completed.append(value)
+        def on_length_leaf(value: int, path: str):
+            generate_recipe_function(ctx, recipes_by_total_length[value], path)
 
-            # get the maximum length
-            max = recipes[-1]["total_length"]
-            if max < 0:
-                max = 0
-            
-            # write function file for this slot_count
-            file.write(f"execute if score $crafted gm4_crafting matches 0 if score $slot_count gm4_crafting matches {value} run function {NAME}:{path}/{value}/search\n")
-
-            # turn recipes list into dict w/ total_length as key
-            new_recipes = collections.defaultdict(list)
-            for recipe in recipes:
-                k = recipe["total_length"]
-                new_recipes[k].append(recipe)
-            recipes = dict(new_recipes)
-
-            # create the total_length tree
-            generate_length_tree(recipes, 0, max, f"{path}/{value}", [], True)
-
-    def branch(min: int, max: int, path: str, file: TextIOWrapper):
-        """
-        creates two branches of the search tree
-        """
-        # get halfway point
-        half = find_middle(slot_counts, min, max)
-        
-        # get first half
-        low, high = min, half - 1
-        # move low and high points to values that actually exist
-        low, high = update(slot_counts, low, high)
-        # if count(high - low) <= 1
-        if ready(low, high, 1):
-            # create functions for the values between low and high
-            check_function_status(low, high, path, file)
-        else:
-            # branch again
-            new_path = f"{path}/{low}_{high}"
-            file.write(f"execute if score $crafted gm4_crafting matches 0 if score $slot_count gm4_crafting matches {low}..{high} run function {NAME}:{new_path}/search\n")
-            generate_slot_tree(slot_counts, low, high, path, completed)
-
-        # get second half
-        low, high = half, max
-        # move low and high points to values that actually exist
-        low, high = update(slot_counts, low, high)
-        # if count(high - low) <= 1
-        if ready(low, high, 1):
-            # create functions for the values between low and high
-            check_function_status(low, high, path, file)
-        else:
-            # branch again
-            new_path = f"{path}/{low}_{high}"
-            file.write(f"execute if score $crafted gm4_crafting matches 0 if score $slot_count gm4_crafting matches {low}..{high} run function {NAME}:{new_path}/search\n")
-            generate_slot_tree(slot_counts, low, high, path, completed)
-
-    def check_function_status(low, high, path, file):
-        """
-        checks if the values between low and high need a function
-        """
-        i = low
-        # for all slot_counts between low and high
-        while i <= high:
-            # only generate if that slot_count exists and doesn't yet have a function
-            if valid(i, slot_counts) and i not in completed:
-                create_function(i, path, file)
-            i += 1
-
-    def ready(low, high, val) -> bool:
-        """
-        checks if the number of existing slot_counts between low and high are less than val
-        """
-        i = low
-        total = 0
-        while i <= high:
-            # if slot_counts[i] exists
-            if valid(i, slot_counts):
-                total += 1
-            i += 1
-        return (total <= val)
-
-    if not root:
-        # get next path (use current path if root is True)
-        path = f"{path}/{min}_{max}"
-    filename = f"{FUNCTION_FOLDER}/{path}/search.mcfunction"
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
-
-    with open(filename, "w", newline="\n") as file:
-        # if count(max - min) <= 4, then create functions for them
-        if ready(min, max, 4):
-            check_function_status(min, max, path, file)
-        else:
-            # get halfway point
-            half = find_middle(slot_counts, min, max)
-
-            # get first half
-            low, high = min, half - 1
-            # move low and high points to values that actually exist
-            low, high = update(slot_counts, low, high)
-            # branch the first half into two branches
-            branch(low, high, path, file)
-
-            # get second half
-            low, high = half, max
-            # move low and high points to values that actually exist
-            low, high = update(slot_counts, low, high)
-            # branch the second half into two branches
-            branch(low, high, path, file)
-
-
-
-def generate_length_tree(recipes: dict, min: int, max: int, path:str, completed: list[int], root: bool = False) -> None:
-    """
-    creates the total_length (weighted) search tree functions
-    """
-    def create_function(value: int, path: str, file: TextIOWrapper) -> None:
-        """
-        writes the function at the end of the slot_count tree to search the total_length tree
-        and creates the total_length tree
-        """
-        # verify the total_length value exists
-        if valid(value, recipes):
-            recipe = recipes[value]
-            # add value to list of completed functions
-            completed.append(value)
-
-            # write recipe function for this total_length
-            path = f"{path}/{value}"
-            file.write(f"execute if score $crafted gm4_crafting matches 0 if score $id_total gm4_crafting matches {value} run function {NAME}:{path}\n")
-            generate_recipe_function(recipe, path)
-
-    def branch(min: int, max: int, path: str, file: TextIOWrapper) -> None:
-        """
-        creates two branches of the search tree
-        """
-        # get halfway point
-        half = find_middle(recipes, min, max)
-
-         # get first half
-        low, high = min, half - 1
-        # move low and high points to values that actually exist
-        low, high = update(recipes, low, high)
-        # if count(high - low) <= 1
-        if ready(low, high, 1):
-            # create functions for the values between low and high
-            check_function_status(low, high, path, file)
-        else:
-            # branch again
-            new_path = f"{path}/{low}_{high}"
-            file.write(f"execute if score $crafted gm4_crafting matches 0 if score $id_total gm4_crafting matches {low}..{high} run function {NAME}:{new_path}/search\n")
-            generate_length_tree(recipes, low, high, path, completed)
-
-        # get second half
-        low, high = half, max
-        # move low and high points to values that actually exist
-        low, high = update(recipes, low, high)
-        # if count(high - low) <= 1
-        if ready(low, high, 1):
-            # create functions for the values between low and high
-            check_function_status(low, high, path, file)
-        else:
-            # branch again
-            new_path = f"{path}/{low}_{high}"
-            file.write(f"execute if score $crafted gm4_crafting matches 0 if score $id_total gm4_crafting matches {low}..{high} run function {NAME}:{new_path}/search\n")
-            generate_length_tree(recipes, low, high, path, completed)
-
-    def check_function_status(low, high, path, file):
-        """
-        checks if the values between low and high need a function
-        """
-        i = low
-        # for all slot_counts between low and high
-        while i <= high:
-            # only generate if that slot_count exists and doesn't yet have a function
-            if valid(i, recipes) and i not in completed:
-                create_function(i, path, file)
-            i += 1
-
-    def ready(low, high, val) -> bool:
-        """
-        checks if the number of existing slot_counts between low and high are less than val
-        """
-        i = low
-        total = 0
-        while i <= high:
-            # if recipes[i] exists
-            if valid(i, recipes):
-                total += 1
-            i += 1
-        return (total <= val)
-        
-    if not root:
-        # get next path (use current path if root is True)
-        path = f"{path}/{min}_{max}"
-    filename = f"{FUNCTION_FOLDER}/{path}/search.mcfunction"
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
-
-    with open(filename, "w", newline="\n") as file:
-        # if count(max - min) <= 4, then create functions for them
-        if ready(min, max, 4):
-            check_function_status(min, max, path, file)
-        else:
-            # get halfway point
-            half = find_middle(recipes, min, max)
-            
-            # get first half
-            low, high = min, half - 1
-            # move low and high points to values that actually exist
-            low, high = update(recipes, low, high)
-            # branch the first half into two branches
-            branch(low, high, path, file)
-
-            # get second half
-            low, high = half, max
-            # move low and high points to values that actually exist
-            low, high = update(recipes, low, high)
-            # branch the second half into two branches
-            branch(low, high, path, file)
+        # create a search tree based on the total length
+        generate_search_tree(ctx, dict(recipes_by_total_length), 0, max_length, path, "$id_total gm4_crafting", on_length_leaf)
 
         # if this slot_count has recipes that use tags, then create a function that doesn't check total_length
-        if root and valid(-1, recipes):
-            path = f"{path}/uses_tags"
-            file.write(f"execute if score $crafted gm4_crafting matches 0 run function {NAME}:{path}")
-            generate_recipe_function(recipes[-1], path)
+        if recipes_using_tags:
+            path_uses_tags = f"{path}/uses_tags"
+            ctx.data.functions[f"{NAMESPACE}:{path}/search"].append(f"execute if score $crafted gm4_crafting matches 0 run function {NAMESPACE}:{path_uses_tags}")
+            generate_recipe_function(ctx, recipes_using_tags, path_uses_tags)
+
+    # create a search tree based on the slot_count
+    generate_search_tree(ctx, recipes_by_slot_count, 0, 9, BRANCH_PATH, "$slot_count gm4_crafting", on_slot_leaf, "/search")
 
 
 
-def valid(key, value) -> bool:
-    """
-    check if value[key] exists
-    """
-    try:
-        value[key]
-        return True
-    except:
-        return False
+def generate_search_tree(ctx: Context, entries: dict[int, list[RecipeData]], start: int, end: int, path: str, score: str, on_leaf: Callable[[int, str], None], leaf_suffix: str = ""):
+    completed: set[int] = set()
 
+    def in_range(low: int, high: int):
+        """
+        returns the indices of entries between low and high
+        """
+        return [i for i in range(low, high + 1) if i in entries]
 
+    def create_leaves(low: int, high: int, path: str, fn: Function):
+        """
+        creates the leaves for entries between low and high need a function
+        """
+        # for all entries between low and high
+        for i in in_range(low, high):
+            # only generate if that slot_count exists and doesn't yet have a function
+            if i in completed:
+                continue
+            # add i to list of completed functions
+            completed.add(i)
+            # write function file for this slot_count
+            leaf_path = f"{path}/{i}"
+            fn.append(f"execute if score $crafted gm4_crafting matches 0 if score {score} matches {i} run function {NAMESPACE}:{leaf_path}{leaf_suffix}")
+            # call any specific leaf function
+            on_leaf(i, leaf_path)
 
-def find_middle(dict: dict, min: int, max: int) -> int:
-    """
-    get weighted middle between min and max
-    """
-    i = min
-    total = 0
-    # count the total number of values between min and max
-    while i < max:
-        if valid(i, dict):
-            total += len(dict[i])
-        i += 1
-    # get halfway point
-    target = total // 2
-    i = min
-    count = 0
-    # count the number of values until halfway is reached
-    while i < max and count < target:
-        if valid(i, dict):
-            count += len(dict[i])
-        i += 1
-    return i
+    def find_middle(low: int, high: int) -> int:
+        """
+        get weighted middle between min and max
+        """
+        # count the total number of values between min and max
+        total = sum([len(entries[i]) for i in range(low, high) if i in entries])
+        # get halfway point
+        target = total // 2
+        i = low
+        count = 0
+        # count the number of values until halfway is reached
+        while i < high and count < target:
+            if i in entries:
+                count += len(entries[i])
+            i += 1
+        return i
 
+    def update_range(low: int, high: int) -> tuple[int, int]:
+        """
+        move low and high to values that exist in dict
+        """
+        if low < high:
+            low = min([i for i in entries if i >= low])
+            high = max([i for i in entries if i <= high])
+        return low, high
 
-
-def update(dict: dict, low: int, high: int) -> tuple[int, int]:
-    """
-    move low and high to values that exist in dict
-    """
-    lowest = False
-    highest = False
-    # check values greater than 'low'
-    while low < high and not lowest:
-        # check if there's a value at this point
-        if valid(low, dict):
-            lowest = True
+    def branch(start: int, end: int, path: str, fn: Function):
+        """
+        creates two branches of the search tree
+        """
+        # get halfway point
+        half = find_middle(start, end)
+        
+        # get first half
+        low, high = update_range(start, half - 1)
+        # if count(high - low) <= 1
+        if len(in_range(low, high)) <= 1:
+            # create functions for the values between low and high
+            create_leaves(low, high, path, fn)
         else:
-            low += 1
-    # check values less than 'high'
-    while low < high and not highest:
-        # check if there's a value at this point
-        if valid(high, dict):
-            highest = True
+            # branch again
+            new_path = f"{path}/{low}_{high}"
+            fn.append(f"execute if score $crafted gm4_crafting matches 0 if score {score} matches {low}..{high} run function {NAMESPACE}:{new_path}/search")
+            generate_tree(low, high, new_path)
+
+        # get second half
+        low, high = update_range(half, end)
+        # if count(high - low) <= 1
+        if len(in_range(low, high)) <= 1:
+            # create functions for the values between low and high
+            create_leaves(low, high, path, fn)
         else:
-            high -= 1
-    return low, high
+            # branch again
+            new_path = f"{path}/{low}_{high}"
+            fn.append(f"execute if score $crafted gm4_crafting matches 0 if score {score} matches {low}..{high} run function {NAMESPACE}:{new_path}/search")
+            generate_tree(low, high, new_path)
+
+    def generate_tree(start: int, end: int, path: str):
+        fn = Function()
+
+        if len(in_range(start, end)) <= 4:
+            create_leaves(start, end, path, fn)
+        else:
+            # get halfway point
+            half = find_middle(start, end)
+
+            # branch the first half into two branches
+            low, high = update_range(start, half - 1)
+            branch(low, high, path, fn)
+
+            # branch the second half into two branches
+            low, high = update_range(half, end)
+            branch(low, high, path, fn)
+
+        ctx.data[f"{NAMESPACE}:{path}/search"] = fn
+
+    generate_tree(start, end, path)
 
 
 
-def generate_recipe_function(recipes: list[dict], path: str) -> None:
+def generate_recipe_function(ctx: Context, recipes: list[RecipeData], path: str) -> None:
     """
     create recipe function for the specific slot_count and total_length
     """
-    def stack_size(recipe: dict) -> str:
+    def stack_size(recipe: RecipeShape) -> str:
         """
         get max stack size of items based on result stackability and count
         """
-        result = recipe["result"][-1]
-        item = result["name"]
-        count = result["count"]
+        result = recipe.result[-1]
+        item = result.name
+        count = result.count
         # stack_size should be less than or equal to stack_count // result_count
         if item in unstackables:
             return "1"
@@ -975,158 +693,138 @@ def generate_recipe_function(recipes: list[dict], path: str) -> None:
         else:
             return f"..{64 // count}"
 
-    filename = f"{FUNCTION_FOLDER}/{path}.mcfunction"
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    fn = Function()
 
-    with open(filename, "w", newline="\n") as file:
-        for r in recipes:
-            recipe = r["recipe"]
-            # get max stack size for recipe
-            max_stack = stack_size(recipe)
-            name = r["name"]
-            # set initial checks
-            checks = f"if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if score $stack_size gm4_crafting matches {max_stack}"
-            
-            items = []
-            recipe_data = ""
-            # if shapeless recipe
-            if valid("ingredients", recipe):
-                duplicates = []
-                counted = []
-                for item in recipe["ingredients"]:
-                    # check for duplicates in recipe
-                    if recipe["ingredients"].count(item) > 1:
-                        # add each duplicate items to a list with the number of duplicates
-                        if item not in counted:
-                            counted.append(item)
-                            duplicates.append({"item": item, "count": recipe["ingredients"].count(item)})
-                    else:
-                        # check if it's an item tag or a normal item
-                        if "#" in item:
-                            item = item[1:]
-                            [prefix, tag] = item.split(":")
-                            # construct special nbt for checking item tags
-                            s = "{item_tags:{" + prefix + ":{" + tag + ":1b}}}"
-                            items.append(s)
-                        else:
-                            # construct nbt for checking item id
-                            s = "{id:\"" + item + "\"}"
-                            items.append(s)
-                # if there are duplicates in the recipe, add some commands to check the count of slots with that item
-                if len(duplicates) > 0:
-                    # reset scoreboard in case a previous function checked the same items
-                    file.write("scoreboard players reset * gm4_craft_shapeless\n")
-                    # modify the checks to not do 'store result score $crafted gm4_crafting'; must be moved to end
-                    checks = f"if score $crafted gm4_crafting matches 0 if score $stack_size gm4_crafting matches {max_stack}"
-                    # for each type of duplicate item, check the count
-                    while len(duplicates) > 0:
-                        # get the item and number of required slots
-                        item = duplicates[0]["item"]
-                        count = duplicates[0]["count"]
-                        # check if it's an item tag or normal item
-                        if "#" in item:
-                            item = item[1:]
-                            [prefix, tag] = item.split(":")
-                            # construct special nbt for checking item tags
-                            s = "{item_tags:{" + prefix + ":{" + tag + ":1b}}}"
-                            item = "#" + item
-                        else:
-                            # construct nbt for checking item id
-                            s = "{id:\"" + item + "\"}"
-                        # write command to check item count
-                        command = f"execute {checks} store result score ${item} gm4_craft_shapeless if data storage gm4_custom_crafters:temp/crafter Items[" + s + "]"
-                        checks = f"if score ${item} gm4_craft_shapeless matches {count}"
-                        file.write(f"{command}\n")
-                        duplicates.pop(0)
-                    # re-add the 'store result score...' to end of the checks
-                    checks = f"{checks} store result score $crafted gm4_crafting"
-
-            # if shaped recipe
-            elif valid("pattern", recipe):
-                # keep track of the slot number
-                i = 0
-                for item in recipe["pattern"]:
+    for r in recipes:
+        recipe = r.recipe
+        # get max stack size for recipe
+        max_stack = stack_size(recipe)
+        name = r.name
+        # set initial checks
+        checks = f"if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if score $stack_size gm4_crafting matches {max_stack}"
+        
+        items: list[str] = []
+        recipe_data = ""
+        # if shapeless recipe
+        if recipe.shapeless:
+            duplicates: list[Any] = []
+            counted: list[Any] = []
+            for item in recipe.ingredients:
+                # check for duplicates in recipe
+                if recipe.ingredients.count(item) > 1:
+                    # add each duplicate items to a list with the number of duplicates
+                    if item not in counted:
+                        counted.append(item)
+                        duplicates.append({"item": item, "count": recipe.ingredients.count(item)})
+                else:
+                    # check if it's an item tag or a normal item
                     if "#" in item:
                         item = item[1:]
                         [prefix, tag] = item.split(":")
                         # construct special nbt for checking item tags
-                        s = "{Slot:" + str(i) + "b,item_tags:{" + prefix + ":{" + tag + ":1b}}}"
+                        s = "{item_tags:{" + prefix + ":{" + tag + ":1b}}}"
                         items.append(s)
-                    elif item != "minecraft:air":
-                        # construct nbt for checking item id
-                        s = "{Slot:" + str(i) + "b,id:\"" + item + "\"}"
-                        items.append(s)
-                    i += 1
-                # if mirrorable
-                if (recipe["mirror"] == True):
-                    # mirror recipe
-                    pattern = recipe["pattern"]
-                    # if 2 columns
-                    if (pattern[2] == "minecraft:air" and (len(pattern) < 6 or pattern[5] == "minecraft:air") and (len(pattern) < 9 or pattern[8] == "minecraft:air")):
-                        # flip columns 1 and 2
-                        if (len(pattern) >= 3):
-                            if (pattern[2] == "minecraft:air"):
-                                temp = pattern[0]
-                                pattern[0] = pattern[1]
-                                pattern[1] = temp
-                            else:
-                                temp = pattern[0]
-                                pattern[0] = pattern[2]
-                                pattern[2] = temp
-                        if (len(pattern) >= 6):
-                            temp = pattern[3]
-                            pattern[3] = pattern[4]
-                            pattern[4] = temp
-                        if (len(pattern) == 9):
-                            temp = pattern[6]
-                            pattern[6] = pattern[7]
-                            pattern[7] = temp
-                    # if 3 columns
                     else:
-                        # flip columsn 1 and 3
-                        if (len(pattern) >= 3):
+                        # construct nbt for checking item id
+                        s = "{id:\"" + item + "\"}"
+                        items.append(s)
+            # if there are duplicates in the recipe, add some commands to check the count of slots with that item
+            if len(duplicates) > 0:
+                # reset scoreboard in case a previous function checked the same items
+                fn.append("scoreboard players reset * gm4_craft_shapeless")
+                # modify the checks to not do 'store result score $crafted gm4_crafting'; must be moved to end
+                checks = f"if score $crafted gm4_crafting matches 0 if score $stack_size gm4_crafting matches {max_stack}"
+                # for each type of duplicate item, check the count
+                while len(duplicates) > 0:
+                    # get the item and number of required slots
+                    item = duplicates[0]["item"]
+                    count = duplicates[0]["count"]
+                    # check if it's an item tag or normal item
+                    if "#" in item:
+                        item = item[1:]
+                        [prefix, tag] = item.split(":")
+                        # construct special nbt for checking item tags
+                        s = "{item_tags:{" + prefix + ":{" + tag + ":1b}}}"
+                        item = "#" + item
+                    else:
+                        # construct nbt for checking item id
+                        s = "{id:\"" + item + "\"}"
+                    # write command to check item count
+                    command = f"execute {checks} store result score ${item} gm4_craft_shapeless if data storage gm4_custom_crafters:temp/crafter Items[" + s + "]"
+                    checks = f"if score ${item} gm4_craft_shapeless matches {count}"
+                    fn.append(command)
+                    duplicates.pop(0)
+                # re-add the 'store result score...' to end of the checks
+                checks = f"{checks} store result score $crafted gm4_crafting"
+
+        # if shaped recipe
+        else:
+            # keep track of the slot number
+            i = 0
+            for item in recipe.ingredients:
+                if "#" in item:
+                    item = item[1:]
+                    [prefix, tag] = item.split(":")
+                    # construct special nbt for checking item tags
+                    s = "{Slot:" + str(i) + "b,item_tags:{" + prefix + ":{" + tag + ":1b}}}"
+                    items.append(s)
+                elif item != "minecraft:air":
+                    # construct nbt for checking item id
+                    s = "{Slot:" + str(i) + "b,id:\"" + item + "\"}"
+                    items.append(s)
+                i += 1
+            # if mirrorable
+            if recipe.mirror:
+                # mirror recipe
+                pattern: Any = recipe.ingredients
+                # if 2 columns
+                if (pattern[2] == "minecraft:air" and (len(pattern) < 6 or pattern[5] == "minecraft:air") and (len(pattern) < 9 or pattern[8] == "minecraft:air")):
+                    # flip columns 1 and 2
+                    if (len(pattern) >= 3):
+                        if (pattern[2] == "minecraft:air"):
+                            temp = pattern[0]
+                            pattern[0] = pattern[1]
+                            pattern[1] = temp
+                        else:
                             temp = pattern[0]
                             pattern[0] = pattern[2]
                             pattern[2] = temp
-                        if (len(pattern) >= 6):
-                            temp = pattern[3]
-                            pattern[3] = pattern[5]
-                            pattern[5] = temp
-                        if (len(pattern) == 9):
-                            temp = pattern[6]
-                            pattern[6] = pattern[8]
-                            pattern[8] = temp
-                    # add mirrored recipe
-                    new_recipe = r.copy()
-                    new_recipe["recipe"]["mirror"] = False
-                    recipes.append(new_recipe)
+                    if (len(pattern) >= 6):
+                        temp = pattern[3]
+                        pattern[3] = pattern[4]
+                        pattern[4] = temp
+                    if (len(pattern) == 9):
+                        temp = pattern[6]
+                        pattern[6] = pattern[7]
+                        pattern[7] = temp
+                # if 3 columns
+                else:
+                    # flip columsn 1 and 3
+                    if (len(pattern) >= 3):
+                        temp = pattern[0]
+                        pattern[0] = pattern[2]
+                        pattern[2] = temp
+                    if (len(pattern) >= 6):
+                        temp = pattern[3]
+                        pattern[3] = pattern[5]
+                        pattern[5] = temp
+                    if (len(pattern) == 9):
+                        temp = pattern[6]
+                        pattern[6] = pattern[8]
+                        pattern[8] = temp
+                # add mirrored recipe
+                new_recipe = r.copy()
+                # the copy is only shallow so changing mirror also modifies the old recipe,
+                # but this is not a problem since the old recipe is already processed and
+                # we are adding to the end of the list
+                new_recipe.recipe.mirror = False
+                recipes.append(new_recipe)
 
-            # add final item check (used for shapeless recipes with both duplicate items and non-duplicate items)
-            if len(items) != 0:
-                recipe_data += "if data storage gm4_custom_crafters:temp/crafter {Items:[" + ",".join(items) + "]} "
+        # add final item check (used for shapeless recipes with both duplicate items and non-duplicate items)
+        if len(items) != 0:
+            recipe_data += "if data storage gm4_custom_crafters:temp/crafter {Items:[" + ",".join(items) + "]} "
 
-            # write final command to check if recipe is valid
-            command = f"execute {checks} {recipe_data}run loot replace block ~ ~ ~ container.0 loot {NAME}:{LOOT_PATH}/{name}"    
-            file.write(f"{command}\n")
+        # write final command to check if recipe is valid
+        fn.append(f"execute {checks} {recipe_data}run loot replace block ~ ~ ~ container.0 loot {NAMESPACE}:{LOOT_PATH}/{name}")
 
-
-
-def write_json(path: str, content: dict) -> None:
-    """
-    writes a json file from a Python dict
-    """
-    # if the path doesn't have a json file extension, add it
-    if ".json" in path:
-        filename = path
-    else:
-        filename = f"{path}.json"
-    # dump json to file
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
-    with open(filename, "w", newline="\n") as file:
-        json.dump(content, file, indent=2)
-        file.write("\n")
-
-
-
-if __name__ == '__main__':
-	main()
+    ctx.data[f"{NAMESPACE}:{path}"] = fn

@@ -1,0 +1,46 @@
+extend: '../module.yaml'
+
+id: gm4_metallurgy
+name: Metallurgy
+
+pipeline:
+  - directory: '../lib_lore'
+    extend: 'beet.yaml'
+  - directory: '../lib_player_heads'
+    extend: 'beet.yaml'
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!
+    required: []
+    recommended:
+      - gm4_resource_pack
+      - gm4_audere_shamir
+      - gm4_fulcio_shamir
+      - gm4_iacio_shamir
+      - gm4_lumos_shamir
+      - gm4_orb_of_ankou
+      - gm4_percurro_shamir
+      - gm4_vecto_shamir
+    notes:
+      - Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Metallurgy
+    credits:
+      Creators:
+        - Sparks
+        - SpecialBuilder32
+        - Bloo
+        - BluePsychoRanger
+        - SirSheepe
+      Updated by:
+        - Denniss
+        - Misode
+        - MichaelMiner137
+        - TheEpyonProject
+      Textures by:
+        - Memo
+      Icon Design:
+        - DuckJr

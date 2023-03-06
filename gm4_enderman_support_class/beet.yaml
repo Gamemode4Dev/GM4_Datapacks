@@ -1,0 +1,23 @@
+extend: '../module.yaml'
+
+id: gm4_enderman_support_class
+name: Enderman Support Class
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: This module allows Endermen to aid nearby hostiles in their fight against the player!
+    required: []
+    recommended:
+      - gm4_bat_grenades
+    notes: []
+    video: https://www.youtube.com/watch?v=2hWZ4OKUaqI
+    wiki: https://wiki.gm4.co/wiki/Enderman_Support_Class
+    credits:
+      Creator:
+        - Sparks
+      Icon Design:
+        - DuckJr

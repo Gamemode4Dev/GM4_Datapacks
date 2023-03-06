@@ -34,12 +34,11 @@ scoreboard players add @s gm4_ce_difficult 5
 scoreboard players operation @s gm4_ce_difficult /= #10 gm4_ce_data
 # min of 0
 scoreboard players operation @s gm4_ce_difficult > #0 gm4_ce_data
-# add challenge armor, this can exceed the normal cap of 10
-execute if predicate gm4_combat_expanded:modified_armor/challenge/head run scoreboard players add @s gm4_ce_difficult 1
-execute if predicate gm4_combat_expanded:modified_armor/challenge/chest run scoreboard players add @s gm4_ce_difficult 1
-execute if predicate gm4_combat_expanded:modified_armor/challenge/legs run scoreboard players add @s gm4_ce_difficult 1
-execute if predicate gm4_combat_expanded:modified_armor/challenge/feet run scoreboard players add @s gm4_ce_difficult 1
 
-# check advancements
+# challenger armor
+execute if predicate gm4_combat_expanded:modified_armor/wearing_challenge run scoreboard players set @s gm4_ce_difficult 11
+# grant advancement
+advancement grant @s[scores={gm4_ce_difficult=11}] only gm4:combat_expanded_challenger
+
+# check advancement
 execute if score #days_alive gm4_ce_difficult matches 10.. run advancement grant @s only gm4:combat_expanded_survive
-execute if predicate gm4_combat_expanded:modified_armor/challenge/any run advancement grant @s only gm4:combat_expanded_challenger
