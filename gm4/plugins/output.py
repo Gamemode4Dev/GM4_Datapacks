@@ -115,18 +115,3 @@ def readmes(ctx: Context):
 	for file, ext in {"modrinth_readme":"md", "smithed_readme":"md", "pmc_readme":"txt"}.items():
 		if file in ctx.meta:
 			ctx.meta[file].dump(base_path, f"{file.upper()}.{ext}")
-
-def readmes(ctx: Context):
-	"""Saves all READMEs intended for download sites to the ./out/readmes folder."""
-	print("[TEMP] output.readmes")
-	
-	readme_dir = Path("out/readmes")
-	base_path = readme_dir / ctx.project_id
-	os.makedirs(base_path, exist_ok=True)
-	
-	if "README.md" in ctx.data.extra:
-		ctx.data.extra["README.md"].dump(base_path, "GM4_README.md")
-
-	for file, ext in {"modrinth_readme":"md", "smithed_readme":"md", "pmc_readme":"txt"}.items():
-		if file in ctx.meta:
-			ctx.meta[file].dump(base_path, f"{file.upper()}.{ext}")
