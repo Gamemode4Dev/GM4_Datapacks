@@ -3,6 +3,7 @@ from pathlib import Path
 import os
 import json
 import requests
+import shutil
 
 MODRINTH_API = "https://api.modrinth.com/v2"
 AUTH_TOKEN_KEY = "BEET_MODRINTH_TOKEN"
@@ -15,7 +16,7 @@ def beet_default(ctx: Context):
 	out_dir = Path("out")
 
 	ctx.data.save(
-		path=out_dir / f"{ctx.project_id}_{version}",
+		path=out_dir / f"{ctx.project_id}_{version.replace('.', '_')}",
 		overwrite=True,
 	)
 
@@ -30,7 +31,7 @@ def release(ctx: Context):
 	"""
 	version = os.getenv("VERSION", "1.19")
 	release_dir = Path("release") / version
-	file_name = f"{ctx.project_id}_{version}.zip"
+	file_name = f"{ctx.project_id}_{version.replace('.', '_')}.zip"
 	
 	ctx.data.save(
 		path=release_dir / file_name,
@@ -84,3 +85,14 @@ def release(ctx: Context):
 			print(f"[GM4] Failed to publish new version version: {res.status_code} {res.text}")
 			return
 		print(f"[GM4] Successfully published {res.json()['name']}")
+
+
+def clear_release(ctx: Context):
+	"""
+	Empties the release folder preparing it to be overwritten. This makes sure that
+	1. Deleted modules no longer stick around in the current version
+	2. Changes to the build system (such as renamed files/folders) are properly reflected
+	"""
+	version = os.getenv("VERSION", "1.19")
+	release_dir = Path("release") / version
+	shutil.rmtree(release_dir, ignore_errors=True)

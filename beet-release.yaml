@@ -1,6 +1,7 @@
 pipeline:
   - gm4.plugins.list_modules
   - gm4.plugins.manifest.create
+  - gm4.plugins.output.clear_release
   - broadcast: 'gm4_*'
     extend: 'beet.yaml'
     pipeline:
