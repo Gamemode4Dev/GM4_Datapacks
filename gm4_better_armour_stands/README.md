@@ -1,27 +1,8 @@
-# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Better Armour Stands by Gamemode 4
+Better Armour Stands <!--$headerTitle--> <!--$pmc:delete-->
 
-Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands.
+Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands. <!--$pmc:headerSize-->
 
-<!--- I don't know which of these to use. Perhaps local links on src and then when sent to CDNs a script modifies to the hard remote link?-->
-<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_better_armour_stands/images/better_armour_stands.webp" alt="Posing an Armor Stand" width="350"/>
-<img src="images/better_armour_stands.webp" alt="Chairs Creation Example" width="350"/>
-
-[![IMAGE ALT](https://img.youtube.com/vi/ZBqmGpAXqmw/default.jpg)](https://www.youtube.com/watch?v=ZBqmGpAXqmw)
-
-<!---
- iframe should be removed in PMC and smithed (if smithed still prohibits iframes)
--->
-
-<iframe
-    width="640"
-    height="480"
-    src="https://www.youtube.com/embed/ZBqmGpAXqmw"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
-    alt="alttest"
->
-</iframe>
+<img src="images/better_armour_stands.webp" alt="Better Armour Stands Example" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
 ### Features:
 - All armor stands have arms by default
@@ -32,6 +13,7 @@ Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your
 - Survival Friendly!
 
 ### Posing Codes
+<!--$pmc:startTable-->
 |Code       |Description                                    |
 | :---:     |-----------------------------------------------|
 |`arms`     |toggle arm visibility                          |
@@ -47,23 +29,20 @@ Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your
 |`copy`     |copies pose to armor stand in offhand          |
 |`paste`    |pastes pose from armor stand in offhand        |
 |`equip`    |transfer player offhand to selected body part  |
+<!--$pmc:endTable-->
 
 ### Expansion Packs
-<!--- these will get links when those pages are made available-->
-Want some preset poses? Download the Poses Pack Expansion
+Want some preset poses? Download the [Poses Pack Expansion]($dynamicLink:gm4_poses_pack)
 
-Add particles to your builds with the Particles Pack Expansion
+Add particles to your builds with the [Particles Pack Expansion]($dynamicLink:gm4_particles_pack)
 
 
 ### More Info
-[<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=ZBqmGpAXqmw) 
+<!--$youtubeLinkInsert-->
 
-[<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Better_Armour_Stands)
+<!--$wikiLinkInsert-->
 
 ### Credits
- - Creator: [Sparks](https://twitter.com/SparksTheGamer), [Denniss](https://twitter.com/Dennis2p_)
+<!--$creditsInsert -->
 
-
----
-## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>
-Gamemode 4 is a series of command-powered creations that are designed to change and enhance the survival experience. All of our modules are designed to work together flawlessly, and are balanced for usage in a survival setting. Pick and choose your favorites from our [website](https://gm4.co), or wherever you get datapacks.
+<!--$footerInsert-->
