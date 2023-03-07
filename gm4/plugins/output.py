@@ -39,14 +39,17 @@ def release(ctx: Context):
 		zipped=True,
 	)
 
-	base_path = release_dir / ctx.project_id
-	os.makedirs(base_path, exist_ok=True)
-	for file in ["README.md", "CREDITS.md", "pack.png"]:
-		if file in ctx.data.extra:
-			ctx.data.extra[file].dump(base_path, file)
-			
+	generated_dir = release_dir / "generated"
+
+	pack_icon_dir = generated_dir / "pack_icons"
+	os.makedirs(pack_icon_dir, exist_ok=True)
+	if "pack.png" in ctx.data.extra:
+		ctx.data.extra["pack.png"].dump(pack_icon_dir, f"{ctx.project_id}.png")
+	
+	smithed_readme_dir = generated_dir / "smithed_readmes"
+	os.makedirs(smithed_readme_dir, exist_ok=True)
 	if "smithed_readme" in ctx.meta:
-		ctx.meta['smithed_readme'].dump(base_path, "SMITHED_README.md")
+		ctx.meta['smithed_readme'].dump(smithed_readme_dir, f"{ctx.project_id}.md")
 
 	# Publish to modrinth
 	modrinth = ctx.meta.get("modrinth", None)
