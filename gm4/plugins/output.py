@@ -103,7 +103,6 @@ def clear_release(ctx: Context):
 
 def readmes(ctx: Context):
 	"""Saves all READMEs intended for download sites to the ./out/readmes folder."""
-	print("[TEMP] output.readmes")
 	
 	readme_dir = Path("out/readmes")
 	base_path = readme_dir / ctx.project_id

@@ -11,7 +11,9 @@ def beet_default(ctx: Context):
         - converts local images to URLs pointed at the repo
         - download links for respective download sites
         - pulls credits from beet.yaml and contributors.json
-        - pulls YT link from beet.yaml"""
+        - pulls YT link from beet.yaml
+        - performs some site-specific replacements
+        - generates a BBCode translation of the markdown file"""
     readme_path = Path(ctx.project_id) / "README.md"
     if not readme_path.exists():
         return
@@ -52,7 +54,6 @@ def beet_default(ctx: Context):
     })
 
     # Recommended modules dynamic linking; to gm4.co, serves as fallback link if modrinth post does not exist
-    download_links = ctx.cache["download_links"].json
     rec_modules = re.findall(r"\[(.+)\]\(\$dynamicLink:(\w+)\)", global_contents)
     for m in [m for _, m in rec_modules]:
         global_replacements.update({
@@ -76,18 +77,20 @@ def beet_default(ctx: Context):
     site_replacements["gm4"].update({r"\n?<!--.+?-->": ""})
 
     # Recommended modules dynamic linking; from gm4.co to modrinth/smithed/pmc
+    manifest = ctx.cache["gm4_manifest"].json
     rec_modules = re.findall(r"\(.+\)<!--\$dynamicLink:(.+)-->", global_contents)
         # TODO relative links, if they are better
     for m in rec_modules:
-        if (v:=download_links[m].get('modrinth_id')):
+        manifest_m_entry = next((c for c in manifest["modules"] if c['id'] == m), {})
+        if (v:=manifest_m_entry.get('modrinth_id')):
             site_replacements["modrinth"].update({
                 f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://modrinth.com/datapack/{v})"
         })
-        if (v:=download_links[m].get('smithed_link')):
+        if (v:=manifest_m_entry.get('smithed_link')):
             site_replacements["smithed"].update({
                 f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://beta.smithed.dev/packs/{v})" # NOTE links to in-beta browser smithed access
         })
-        if (v:=download_links[m].get('pmc_link')):
+        if (v:=manifest_m_entry.get('pmc_link')):
             site_replacements["pmc"].update({
                 f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://planetminecraft.com/data-pack/{v})"
         })

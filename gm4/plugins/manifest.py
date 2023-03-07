@@ -13,12 +13,7 @@ def run(cmd: list[str]) -> str:
 
 
 def create(ctx: Context):
-	"""Collect a manifest for all modules and update their patch version if necessary."""
-	version = os.getenv("VERSION", "1.19")
-	prefix = int(os.getenv("PATCH_PREFIX", 0))
-	release_dir = Path('release') / version
-	manifest_file = release_dir / "meta.json"
-
+	"""Collect a manifest for all modules from respective beet.yaml files."""
 	modules: list[dict[str, Any]] = [{"id": p.name} for p in sorted(ctx.directory.glob("gm4_*"))]
 
 	for module in modules:
@@ -47,41 +42,6 @@ def create(ctx: Context):
 
 	# If a module doesn't have a valid beet.yaml file don't include it
 	modules = [m for m in modules if m["id"] is not None]
-
-	if manifest_file.exists():
-		manifest = json.loads(manifest_file.read_text())
-		last_commit = manifest["last_commit"]
-		released_modules: list[dict[str, Any]] = manifest["modules"]
-	else:
-		last_commit = None
-		released_modules = []
-
-	download_links: dict[str, dict[str, str]] = {}
-	for module in modules:
-		id = module["id"]
-
-		# Check if there are any changes between last commit and HEAD
-		diff = run(["git", "diff", last_commit, "--shortstat", "--", id]) if last_commit else True
-		released = next((m for m in released_modules if m["id"] == id), None)
-
-		if not diff and released:
-			# No changes were made, keep the same patch version
-			module["patch"] = released["patch"]
-		else:
-			# Changes were made or this is the first release, bump the patch
-			patch = released["patch"] if released else prefix
-			module["patch"] = patch + 1
-			print(f"[GM4] Updating {id} to {patch + 1}")
-
-		# Assemble lookup table of available download links
-		download_links.update({
-			id: {
-				"modrinth_id": module["modrinth_id"],
-				"smithed_link": module["smithed_link"],
-				"pmc_link": module["pmc_link"]
-			}
-		})
-	ctx.cache["download_links"].json = download_links
 	
 	# Read the contributors metadata
 	contributors_file = Path("contributors.json")
@@ -96,9 +56,46 @@ def create(ctx: Context):
 	new_manifest = {
 		"last_commit": head,
 		"modules": modules,
-		"contributors": contributors,
+		"contributors": contributors
 	}
 	ctx.cache["gm4_manifest"].json = new_manifest
+
+
+def update_patch(ctx: Context):
+	"""Retrieves manifest from previous build, and increments patch number
+	 	 if there are any changes between last commit and HEAD"""
+	version = os.getenv("VERSION", "1.19")
+	prefix = int(os.getenv("PATCH_PREFIX", 0))
+	release_dir = Path('release') / version
+	manifest_file = release_dir / "meta.json"
+
+	modules = ctx.cache["gm4_manifest"].json["modules"]
+
+	if manifest_file.exists():
+		old_manifest = json.loads(manifest_file.read_text())
+		last_commit = old_manifest["last_commit"]
+		released_modules: list[dict[str, Any]] = old_manifest["modules"]
+	else:
+		last_commit = None
+		released_modules = []
+
+	# Check if there are any changes between last commit and HEAD
+	for module in modules:
+		id = module["id"]
+
+		diff = run(["git", "diff", last_commit, "--shortstat", "--", id]) if last_commit else True
+		released = next((m for m in released_modules if m["id"] == id), None)
+
+		if not diff and released:
+			# No changes were made, keep the same patch version
+			module["patch"] = released["patch"]
+		else:
+			# Changes were made or this is the first release, bump the patch
+			patch = released["patch"] if released else prefix
+			module["patch"] = patch + 1
+			print(f"[GM4] Updating {id} to {patch + 1}")
+
+	ctx.cache["gm4_manifest"].json["modules"] = modules
 
 
 def write_meta(ctx: Context):

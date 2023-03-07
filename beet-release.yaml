@@ -1,6 +1,7 @@
 pipeline:
   - gm4.plugins.list_modules
   - gm4.plugins.manifest.create
+  - gm4.plugins.manifest.update_patch
   - gm4.plugins.output.clear_release
   - gm4.plugins.manifest.write_meta
   - broadcast: 'gm4_*'
