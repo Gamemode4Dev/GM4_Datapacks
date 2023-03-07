@@ -18,9 +18,8 @@ def beet_default(ctx: Context):
     if not readme_path.exists():
         return
     global_readme = TextFile(source_path=readme_path)
-        # this step handled by release plugin? doesnt seem to bind to ctx
-    # my_readme = ctx.data.extra["README.md"]
     global_contents = global_readme.text
+    running_readme_gen = ctx.meta.get("readme-gen", False)
 
     # Local Images to raw.githubusercontent URLs
     global_replacements.update({
@@ -43,6 +42,7 @@ def beet_default(ctx: Context):
             f"**Watch on Youtube**]({ctx.meta['gm4']['video']})"
         )
     })
+
     
     # Wiki Info
     global_replacements.update({
@@ -64,7 +64,6 @@ def beet_default(ctx: Context):
     for pattern, repl in global_replacements.items():
         global_contents = re.sub(pattern, repl, global_contents)
 
-    # TODO handle these by subfunction? For command line toggle options?
     # download-site specific edits
     site_replacements: dict[str, dict[str, str]] = {
         "gm4": {},
@@ -90,7 +89,7 @@ def beet_default(ctx: Context):
             site_replacements["smithed"].update({
                 f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://beta.smithed.dev/packs/{v})" # NOTE links to in-beta browser smithed access
         })
-        if (v:=manifest_m_entry.get('pmc_link')):
+        if running_readme_gen and (v:=manifest_m_entry.get('pmc_link')):
             site_replacements["pmc"].update({
                 f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://planetminecraft.com/data-pack/{v})"
         })
@@ -112,50 +111,51 @@ def beet_default(ctx: Context):
             )
         })
 
-    # PMC Element Deletion
-    site_replacements['pmc'].update({
-        r".+<!--\$pmc:delete.+>\n\n": ""
-    })
-
-    # PMC BBCode Translation # TODO only process if needed?
-        # tables are gross to autodetect and capture, so we'll cheat with helper tags
-    tables = re.findall(r'<!-- *\$pmc:startTable ?-->\n((?:.+\n)+)<!-- *\$pmc:endTable ?-->', global_contents)
-    for table in tables:
-        repl = "[table]\n"
-        for line in table.strip('\n').split('\n'):
-            if set(line).issubset(set("| -:")):
-                continue
-            repl += "[tr]\n"
-            for value in [v for v in line.split('|') if v != ""]:
-                repl += f"\t[td]{value.strip()}[/td]\n"
-            repl += "[/tr]"
-        repl += "[/table]"
-
+    if running_readme_gen:
+        # PMC Element Deletion
         site_replacements['pmc'].update({
-            f'<!-- *\\$pmc:startTable ?-->\n{re.escape(table)}<!-- *\\$pmc:endTable ?-->':
-                repl
+            r".+<!--\$pmc:delete.+>\n\n": ""
         })
 
-        # static BBCode translations
-    site_replacements['pmc'].update({
-        r"(.+)<!-- *\$pmc:headerSize.+>": r"[size=14px]\1[/size]",
-        r"#{2,3} (.+)": r"[style b size=14px]\1[/style]",
-        r"!\[(?!size|style|img|url)(.+)\]\((.+)\)": r"[img=\1]\2[/img]",
-        r"\[(?!size|style|img|url)(.+)\]\((.+)\)": r"[url=\2]\1[/url]",
-        r"<img src=\"(.+?)\" alt=(\".+?\") width=\"(.+?)\".+>": r"[img title=\2 width=\3]\1[/img]",
-        r"\*\*(.+)\*\*": r"[b]\1[/b]",
-        r"\*(.+)\*": r"[i]\1[/i]",
-        r"_([^_\n]+?)_(?![\w])": r"[i]\1[/i]",
-        r"__(.+)__": r"[u]\1[/u]",
-        r"~~(.+)~~": r"[s]\1[/s]",
-        r"`(.+)`": r"\1", # BBCode has no inline code blocks
-        r"```(.+)```": r"[code]\1[/code]",
-        r"---*\n": r"[hr]"
-    })
+        # Table BBCode conversion
+            # tables are gross to autodetect and capture, so we'll cheat with helper tags
+        tables = re.findall(r'<!-- *\$pmc:startTable ?-->\n((?:.+\n)+)<!-- *\$pmc:endTable ?-->', global_contents)
+        for table in tables:
+            repl = "[table]\n"
+            for line in table.strip('\n').split('\n'):
+                if set(line).issubset(set("| -:")):
+                    continue
+                repl += "[tr]\n"
+                for value in [v for v in line.split('|') if v != ""]:
+                    repl += f"\t[td]{value.strip()}[/td]\n"
+                repl += "[/tr]"
+            repl += "[/table]"
 
-    site_replacements['pmc'].update({
-        r"\n?<!--.+?-->": ""
-    })
+            site_replacements['pmc'].update({
+                f'<!-- *\\$pmc:startTable ?-->\n{re.escape(table)}<!-- *\\$pmc:endTable ?-->':
+                    repl
+            })
+
+        # static BBCode translations
+        site_replacements['pmc'].update({
+            r"(.+)<!-- *\$pmc:headerSize.+>": r"[size=14px]\1[/size]",
+            r"#{2,3} (.+)": r"[style b size=14px]\1[/style]",
+            r"!\[(?!size|style|img|url)(.+)\]\((.+)\)": r"[img=\1]\2[/img]",
+            r"\[(?!size|style|img|url)(.+)\]\((.+)\)": r"[url=\2]\1[/url]",
+            r"<img src=\"(.+?)\" alt=(\".+?\") width=\"(.+?)\".+>": r"[img title=\2 width=\3]\1[/img]",
+            r"\*\*(.+)\*\*": r"[b]\1[/b]",
+            r"\*(.+)\*": r"[i]\1[/i]",
+            r"_([^_\n]+?)_(?![\w])": r"[i]\1[/i]",
+            r"__(.+)__": r"[u]\1[/u]",
+            r"~~(.+)~~": r"[s]\1[/s]",
+            r"`(.+)`": r"\1", # BBCode has no inline code blocks
+            r"```(.+)```": r"[code]\1[/code]",
+            r"---*\n": r"[hr]"
+        })
+
+        site_replacements['pmc'].update({
+            r"\n?<!--.+?-->": ""
+        })
     
     # Apply site-specific edits
     for site, replacements in site_replacements.items():

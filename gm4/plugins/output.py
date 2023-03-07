@@ -109,10 +109,12 @@ def readmes(ctx: Context):
 	
 	readme_dir = Path("out/readmes")
 	base_path = readme_dir / ctx.project_id
-	os.makedirs(base_path, exist_ok=True)
 	
 	if "README.md" in ctx.data.extra:
+		os.makedirs(base_path, exist_ok=True)
 		ctx.data.extra["README.md"].dump(base_path, "GM4_README.md")
+	else:
+		print(f"[GM4] {ctx.project_id} has no README.md")
 
 	for file, ext in {"modrinth_readme":"md", "smithed_readme":"md", "pmc_readme":"txt"}.items():
 		if file in ctx.meta:
