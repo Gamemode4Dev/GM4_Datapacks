@@ -4,6 +4,7 @@ import os
 import json
 import requests
 import shutil
+from gm4.util import run
 
 MODRINTH_API = "https://api.modrinth.com/v2"
 AUTH_TOKEN_KEY = "BEET_MODRINTH_TOKEN"
@@ -56,7 +57,6 @@ def release(ctx: Context):
 		patch = next((m['patch'] for m in modules if m['id'] == ctx.project_id), 0)
 		prefix = int(os.getenv("PATCH_PREFIX", 0))
 		patched_version = ctx.project_version.replace('X', str(max(patch-prefix, 0)), 1)
-		print(patched_version)
 
 		res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}/version", headers={'Authorization': auth_token})
 		if not (200 <= res.status_code < 300):
@@ -73,11 +73,14 @@ def release(ctx: Context):
 		with open(release_dir / file_name, "rb") as f:
 			file_bytes = f.read()
 
+		changelog = run(["git", "log", "-1", "--format=%s"])
+
 		game_versions = modrinth.get("minecraft", SUPPORTED_GAME_VERSIONS)
 		res = requests.post(f"{MODRINTH_API}/version", headers={'Authorization': auth_token}, files={
 			"data": json.dumps({
 				"name": f"{ctx.project_name} {patched_version}",
 				"version_number": patched_version,
+				"changelog": changelog,
 				"dependencies": [],
 				"game_versions": game_versions,
 				"version_type": "alpha",#"release",
