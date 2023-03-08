@@ -136,3 +136,13 @@ def write_updates(ctx: Context):
 	init.lines.append("data remove storage gm4:log queue[{type:'outdated'}]")
 	for m in modules:
 		init.lines.append(f"execute if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{m['patch'] - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}'}}")
+
+def assemble_version(ctx: Context):
+	"""Assembles the full version number from beet.yaml and patch values, storing in meta"""
+	
+	#TODO move patch retrieval to before pipeline broadcast, but with safeguards for if it fails to access?
+	modules = ctx.cache['gm4_manifest'].json['modules']
+	patch = next((m['patch'] for m in modules if m['id'] == ctx.project_id), 0)
+	prefix = int(os.getenv("PATCH_PREFIX", 0))
+	ctx.meta['patched_version'] = ctx.project_version.replace('X', str(max(patch-prefix, 0)), 1)
+	

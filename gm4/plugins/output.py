@@ -51,12 +51,10 @@ def release(ctx: Context):
 	auth_token = os.getenv(AUTH_TOKEN_KEY, None)
 	if modrinth and auth_token and ctx.project_version:
 		modrinth_id = modrinth["project_id"]
-
-		#TODO move patch retrieval to before pipeline broadcast, but with safeguards for if it fails to access?
-		modules = ctx.cache['gm4_manifest'].json['modules']
-		patch = next((m['patch'] for m in modules if m['id'] == ctx.project_id), 0)
-		prefix = int(os.getenv("PATCH_PREFIX", 0))
-		patched_version = ctx.project_version.replace('X', str(max(patch-prefix, 0)), 1)
+		patched_version = ctx.meta.get('patched_version', None)
+		if patched_version is None:
+			print("[GM4] Full version number not available in ctx.meta. Skipping publishing")
+			return
 
 		res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}/version", headers={'Authorization': auth_token})
 		if not (200 <= res.status_code < 300):
