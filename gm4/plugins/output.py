@@ -51,6 +51,13 @@ def release(ctx: Context):
 	if modrinth and auth_token and ctx.project_version:
 		modrinth_id = modrinth["project_id"]
 
+		#TODO move patch retrieval to before pipeline broadcast, but with safeguards for if it fails to access?
+		modules = ctx.cache['gm4_manifest'].json['modules']
+		patch = next((m['patch'] for m in modules if m['id'] == ctx.project_id), 0)
+		prefix = int(os.getenv("PATCH_PREFIX", 0))
+		patched_version = ctx.project_version.replace('X', str(max(patch-prefix, 0)), 1)
+		print(patched_version)
+
 		res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}/version", headers={'Authorization': auth_token})
 		if not (200 <= res.status_code < 300):
 			if res.status_code == 404:
@@ -59,7 +66,7 @@ def release(ctx: Context):
 				print(f"[GM4] Failed to get project versions: {res.status_code} {res.text}")
 			return
 		project_data = res.json()
-		matching_version = next((v for v in project_data if v["version_number"] == ctx.project_version), None)
+		matching_version = next((v for v in project_data if v["version_number"] == patched_version), None)
 		if matching_version is not None:
 			return
 
@@ -69,12 +76,12 @@ def release(ctx: Context):
 		game_versions = modrinth.get("minecraft", SUPPORTED_GAME_VERSIONS)
 		res = requests.post(f"{MODRINTH_API}/version", headers={'Authorization': auth_token}, files={
 			"data": json.dumps({
-				"name": f"{ctx.project_name} {ctx.project_version}",
-				"version_number": ctx.project_version,
+				"name": f"{ctx.project_name} {patched_version}",
+				"version_number": patched_version,
 				"dependencies": [],
 				"game_versions": game_versions,
-				"version_type": "release",
-				"loaders": ["minecraft"],
+				"version_type": "alpha",#"release",
+				"loaders": ["datapack"],
 				"featured": False,
 				"project_id": modrinth_id,
 				"file_parts": [file_name],
