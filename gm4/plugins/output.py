@@ -48,7 +48,7 @@ def release(ctx: Context):
 
 	# Publish to modrinth
 	modrinth = ctx.meta.get("modrinth", None)
-	auth_token = os.environ.get(AUTH_TOKEN_KEY, None)
+	auth_token = os.getenv(AUTH_TOKEN_KEY, None)
 	if modrinth and auth_token and ctx.project_version:
 		modrinth_id = modrinth["project_id"]
 
@@ -83,7 +83,7 @@ def release(ctx: Context):
 				"changelog": changelog,
 				"dependencies": [],
 				"game_versions": game_versions,
-				"version_type": "alpha",#"release",
+				"version_type": "release",
 				"loaders": ["datapack"],
 				"featured": False,
 				"project_id": modrinth_id,
