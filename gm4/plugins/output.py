@@ -96,3 +96,4 @@ def clear_release(ctx: Context):
 	version = os.getenv("VERSION", "1.19")
 	release_dir = Path("release") / version
 	shutil.rmtree(release_dir, ignore_errors=True)
+	os.makedirs(release_dir, exist_ok=True)
