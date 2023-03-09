@@ -40,11 +40,17 @@ def release(ctx: Context):
 		zipped=True,
 	)
 
-	base_path = release_dir / ctx.project_id
-	os.makedirs(base_path, exist_ok=True)
-	for file in ["README.md", "CREDITS.md", "pack.png"]:
-		if file in ctx.data.extra:
-			ctx.data.extra[file].dump(base_path, file)
+	generated_dir = release_dir / "generated"
+
+	pack_icon_dir = generated_dir / "pack_icons"
+	os.makedirs(pack_icon_dir, exist_ok=True)
+	if "pack.png" in ctx.data.extra:
+		ctx.data.extra["pack.png"].dump(pack_icon_dir, f"{ctx.project_id}.png")
+	
+	smithed_readme_dir = generated_dir / "smithed_readmes"
+	os.makedirs(smithed_readme_dir, exist_ok=True)
+	if "smithed_readme" in ctx.meta:
+		ctx.meta['smithed_readme'].dump(smithed_readme_dir, f"{ctx.project_id}.md")
 
 	# Publish to modrinth
 	modrinth = ctx.meta.get("modrinth", None)
@@ -105,3 +111,19 @@ def clear_release(ctx: Context):
 	release_dir = Path("release") / version
 	shutil.rmtree(release_dir, ignore_errors=True)
 	os.makedirs(release_dir, exist_ok=True)
+
+def readmes(ctx: Context):
+	"""Saves all READMEs intended for download sites to the ./out/readmes folder."""
+	
+	readme_dir = Path("out/readmes")
+	base_path = readme_dir / ctx.project_id
+	
+	if "README.md" in ctx.data.extra:
+		os.makedirs(base_path, exist_ok=True)
+		ctx.data.extra["README.md"].dump(base_path, "GM4_README.md")
+	else:
+		print(f"[GM4] {ctx.project_id} has no README.md")
+
+	for file, ext in {"modrinth_readme":"md", "smithed_readme":"md", "pmc_readme":"txt"}.items():
+		if file in ctx.meta:
+			ctx.meta[file].dump(base_path, f"{file.upper()}.{ext}")
