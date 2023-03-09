@@ -1,6 +1,6 @@
 from beet import Context
 import os
-from gm4.util import run
+from gm4.utils import run
 
 def beet_default(ctx: Context):
 	"""Writes the pack.mcmeta description based on the module name and version."""

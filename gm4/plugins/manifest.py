@@ -4,7 +4,7 @@ from typing import Any
 import json
 import os
 import yaml
-from gm4.util import run
+from gm4.utils import run
 
 
 def create(ctx: Context):

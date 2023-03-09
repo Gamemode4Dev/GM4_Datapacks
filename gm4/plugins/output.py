@@ -4,7 +4,7 @@ import os
 import json
 import requests
 import shutil
-from gm4.util import run
+from gm4.utils import run
 
 MODRINTH_API = "https://api.modrinth.com/v2"
 AUTH_TOKEN_KEY = "BEET_MODRINTH_TOKEN"
