@@ -22,7 +22,7 @@ def create(ctx: Context):
 			# Read all the metadata from the module's beet.yaml file
 			project_config = yaml.safe_load(project_file.read_text())
 			module["name"] = project_config["name"]
-			module["version"] = project_config.get("version", 0)
+			module["version"] = project_config.get("version", "0.0.0")
 			meta = project_config.get("meta", {}).get("gm4", {})
 			module["description"] = meta["description"]
 			module["requires"] = meta["required"]
@@ -44,7 +44,7 @@ def create(ctx: Context):
 	if manifest_file.exists():
 		manifest = json.loads(manifest_file.read_text())
 		last_commit = manifest["last_commit"]
-		released_modules: dict[str, dict[str, Any]] = {m["id"]:m for m in manifest["modules"]}
+		released_modules: dict[str, dict[str, Any]] = {m["id"]:m for m in manifest["modules"] if m.get("version", None)}
 	else:
 		last_commit = None
 		released_modules = {}
@@ -61,7 +61,7 @@ def create(ctx: Context):
 			module["version"] = released["version"]
 		elif not released:
 			# First release
-			module["version"] = ctx.project_version.replace("X", "0") or "1.0.0"
+				module["version"] = module["version"].replace("X", "0")
 		else:
 			# Changes were made, bump the patch
 			version = dict(zip(("major", "minor"), map(int, module["version"].split(".")[0:2])))
