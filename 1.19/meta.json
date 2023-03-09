@@ -1,5 +1,5 @@
 {
-  "last_commit": "e6ac020e04e0e4c41b78e8f534acecf645aaafae",
+  "last_commit": "bcec30b70e077746c53b54c75fbf8a06f4568117",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1055,7 +1055,7 @@
         ]
       },
       "important_note": "Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
-      "patch": 19015
+      "patch": 19016
     },
     {
       "id": "gm4_midnight_menaces",
@@ -1905,7 +1905,7 @@
           "Hozz"
         ]
       },
-      "patch": 19005
+      "patch": 19006
     },
     {
       "id": "gm4_xp_storage",
