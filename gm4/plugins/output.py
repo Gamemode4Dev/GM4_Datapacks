@@ -51,7 +51,7 @@ def release(ctx: Context):
 	auth_token = os.getenv(AUTH_TOKEN_KEY, None)
 	if modrinth and auth_token and ctx.project_version:
 		modrinth_id = modrinth["project_id"]
-		version = next((m.get("version") for m in ctx.cache["gm4_manifest"].json["modules"] if m["id"] == ctx.project_id), None)
+		version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
 		if version is None:
 			print("[GM4] Full version number not available in ctx.meta. Skipping publishing")
 			return

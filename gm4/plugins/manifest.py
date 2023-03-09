@@ -13,9 +13,10 @@ def create(ctx: Context):
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
 
-	modules: list[dict[str, Any]] = [{"id": p.name} for p in sorted(ctx.directory.glob("gm4_*"))]
+	modules: dict[str, dict[str, Any]] = { p.name:{"id": p.name} for p in sorted(ctx.directory.glob("gm4_*")) }
 
-	for module in modules:
+	for m_key in modules:
+		module = modules[m_key]
 		project_file = Path(module["id"]) / "beet.yaml"
 		if project_file.exists():
 			# Read all the metadata from the module's beet.yaml file
@@ -38,22 +39,22 @@ def create(ctx: Context):
 			module["id"] = None
 
 	# If a module doesn't have a valid beet.yaml file don't include it
-	modules = [m for m in modules if m["id"] is not None]
+	modules = {k:v for k,v in modules.items() if v["id"] is not None}
 
 	if manifest_file.exists():
 		manifest = json.loads(manifest_file.read_text())
 		last_commit = manifest["last_commit"]
-		released_modules: list[dict[str, Any]] = manifest["modules"]
+		released_modules: dict[str, dict[str, Any]] = {m["id"]:m for m in manifest["modules"]}
 	else:
 		last_commit = None
-		released_modules = []
+		released_modules = {}
 
-	for module in modules:
-		id = module["id"]
+	for id in modules:
+		module = modules[id]
 
 		# Check if there are any changes between last commit and HEAD
 		diff = run(["git", "diff", last_commit, "--shortstat", "--", id]) if last_commit else True
-		released = next((m for m in released_modules if m["id"] == id), None)
+		released = released_modules.get(id, None)
 
 		if not diff and released:
 			# No changes were made, keep the same patch version
@@ -99,7 +100,8 @@ def write_meta(ctx: Context):
 	os.makedirs(release_dir, exist_ok=True)
 
 	manifest_file = release_dir / "meta.json"
-	manifest = ctx.cache["gm4_manifest"].json
+	manifest = ctx.cache["gm4_manifest"].json.copy()
+	manifest["modules"] = list(manifest["modules"].values()) # convert modules dict down to list for backwards compatability
 	manifest_file.write_text(json.dumps(manifest, indent=2))
 
 
@@ -107,7 +109,7 @@ def write_credits(ctx: Context):
 	"""Writes the credits metadata to CREDITS.md."""
 	manifest = ctx.cache["gm4_manifest"].json
 	contributors = manifest.get("contributors", {})
-	credits: dict[str, list[str]] = next((m["credits"] for m in manifest.get("modules", []) if m["id"] == ctx.project_id), {})
+	credits: dict[str, list[str]] = manifest.get(ctx.project_id, {}).get("credits", {})
 	if credits is None or len(credits) == 0:
 		return
 
@@ -144,6 +146,6 @@ def write_updates(ctx: Context):
 	# Append the module update list regardless if the marker existed
 	init.lines.append("# Module update list")
 	init.lines.append("data remove storage gm4:log queue[{type:'outdated'}]")
-	for m in modules:
+	for m in modules.values():
 		version = sum(map(lambda x,y: int(x)*y, m["version"].split("."), (100_000, 1_000, 1)))
 		init.lines.append(f"execute if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}'}}")

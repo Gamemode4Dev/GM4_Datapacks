@@ -14,6 +14,6 @@ def beet_default(ctx: Context):
 		}
 	]
 	ctx.data.mcmeta.data.update({
-		"version": next((m.get("version") for m in ctx.cache["gm4_manifest"].json["modules"] if m["id"] == ctx.project_id), None),
+		"version": ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None),
 		"commit_hash": run(["git", "log", "-1", "--format=%h"])
 	})
