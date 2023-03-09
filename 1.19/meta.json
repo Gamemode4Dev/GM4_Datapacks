@@ -1,5 +1,5 @@
 {
-  "last_commit": "a47c50a8df33ac855d4f4b96f38a1b3e44eb120a",
+  "last_commit": "64d3fed6f28e69b4af216d5b44ef02f6b593121e",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -17,6 +17,9 @@
         ]
       },
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -42,6 +45,9 @@
         ]
       },
       "important_note": "Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19011
     },
     {
@@ -62,6 +68,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -92,6 +101,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19007
     },
     {
@@ -114,7 +126,10 @@
         ]
       },
       "important_note": "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
-      "patch": 19007
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
+      "patch": 19008
     },
     {
       "id": "gm4_beehive_inspector",
@@ -132,6 +147,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -158,7 +176,10 @@
           "Sparks"
         ]
       },
-      "patch": 19008
+      "modrinth_id": "gm4-better-armor-stands",
+      "smithed_link": null,
+      "pmc_link": null,
+      "patch": 19009
     },
     {
       "id": "gm4_better_fire",
@@ -183,6 +204,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19007
     },
     {
@@ -225,6 +249,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -246,6 +273,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -272,6 +302,9 @@
           "Hozz"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -290,6 +323,9 @@
           "TheEpyonProject"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19004
     },
     {
@@ -310,6 +346,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -332,7 +371,10 @@
           "DuckJr"
         ]
       },
-      "patch": 19009
+      "modrinth_id": "gm4-chairs",
+      "smithed_link": "3GMTIGiZRzsWskvOfozq",
+      "pmc_link": "chairs-gamemode-4-module",
+      "patch": 19010
     },
     {
       "id": "gm4_combat_expanded",
@@ -350,6 +392,9 @@
         ]
       },
       "important_note": "Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -376,6 +421,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -394,6 +442,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19007
     },
     {
@@ -413,7 +464,10 @@
           "Sparks"
         ]
       },
-      "patch": 19007
+      "modrinth_id": "gm4-crossbow-cartridges",
+      "smithed_link": null,
+      "pmc_link": null,
+      "patch": 19008
     },
     {
       "id": "gm4_dangerous_dungeons",
@@ -439,6 +493,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -464,6 +521,9 @@
           "JonPot"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -504,6 +564,9 @@
           "Hozz"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19012
     },
     {
@@ -527,6 +590,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19007
     },
     {
@@ -544,6 +610,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -585,6 +654,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19011
     },
     {
@@ -605,6 +677,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19007
     },
     {
@@ -645,6 +720,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19011
     },
     {
@@ -665,6 +743,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19007
     },
     {
@@ -686,6 +767,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -726,6 +810,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19013
     },
     {
@@ -747,6 +834,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -766,6 +856,9 @@
       },
       "hidden": true,
       "important_note": "Experimental Module! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19007
     },
     {
@@ -808,6 +901,9 @@
           "Hozz"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -829,6 +925,9 @@
           "Hozz"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -849,6 +948,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -870,6 +972,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -896,6 +1001,9 @@
         ]
       },
       "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19007
     },
     {
@@ -922,6 +1030,9 @@
           "Hozz"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19010
     },
     {
@@ -955,6 +1066,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -970,6 +1084,9 @@
           "MichaelMiner137"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -994,6 +1111,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -1014,6 +1134,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -1055,6 +1178,9 @@
         ]
       },
       "important_note": "Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19016
     },
     {
@@ -1075,6 +1201,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19008
     },
     {
@@ -1096,6 +1225,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19013
     },
     {
@@ -1120,6 +1252,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19007
     },
     {
@@ -1141,7 +1276,10 @@
           "DuckJr"
         ]
       },
-      "patch": 19007
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
+      "patch": 19008
     },
     {
       "id": "gm4_orb_of_ankou",
@@ -1161,6 +1299,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19012
     },
     {
@@ -1186,6 +1327,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -1211,6 +1355,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -1231,6 +1378,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -1252,6 +1402,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -1270,6 +1423,9 @@
           "Hozz"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -1288,6 +1444,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -1314,6 +1473,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19007
     },
     {
@@ -1340,6 +1502,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19007
     },
     {
@@ -1362,6 +1527,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -1385,6 +1553,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -1416,6 +1587,9 @@
           "kyrkis"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -1431,6 +1605,9 @@
           "MichaelMiner137"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -1454,6 +1631,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -1474,6 +1654,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -1504,6 +1687,9 @@
           "Hozz"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -1525,6 +1711,9 @@
         ]
       },
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -1545,6 +1734,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -1567,6 +1759,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -1588,6 +1783,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -1614,6 +1812,9 @@
           "Hozz"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -1636,6 +1837,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -1655,6 +1859,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -1685,6 +1892,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -1707,6 +1917,9 @@
           "Hozz"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -1733,6 +1946,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -1755,6 +1971,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19009
     },
     {
@@ -1780,6 +1999,9 @@
           "Hozz"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19012
     },
     {
@@ -1802,7 +2024,10 @@
         ]
       },
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
-      "patch": 19005
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
+      "patch": 19006
     },
     {
       "id": "gm4_vecto_shamir",
@@ -1822,6 +2047,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19007
     },
     {
@@ -1845,6 +2073,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -1866,6 +2097,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -1887,6 +2121,9 @@
           "BluePsychoRanger"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -1905,6 +2142,9 @@
           "Hozz"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -1928,6 +2168,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19005
     },
     {
@@ -1956,6 +2199,9 @@
           "DuckJr"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19013
     },
     {
@@ -1985,6 +2231,9 @@
           "Sparks"
         ]
       },
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
       "patch": 19006
     },
     {
@@ -2007,7 +2256,10 @@
           "DuckJr"
         ]
       },
-      "patch": 19008
+      "modrinth_id": "gm4-ziprails",
+      "smithed_link": null,
+      "pmc_link": null,
+      "patch": 19009
     }
   ],
   "contributors": {
