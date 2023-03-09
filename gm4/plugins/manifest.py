@@ -10,7 +10,6 @@ from gm4.utils import run
 def create(ctx: Context):
 	"""Collect a manifest for all modules and update their patch version if necessary."""
 	version = os.getenv("VERSION", "1.19")
-	prefix = int(os.getenv("PATCH_PREFIX", 0))
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
 
