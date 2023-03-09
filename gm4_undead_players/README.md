@@ -1,4 +1,4 @@
-Undead Players<!--$headerTitle-->
+# Undead Players<!--$headerTitle-->
 
 Ever wonder what happens to your player's body after you die? Well wonder no longer. This modular datapack reanimates your fallen-corpse as a zombie. <!--$pmc:headerSize-->
 

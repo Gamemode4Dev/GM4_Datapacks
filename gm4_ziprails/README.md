@@ -1,4 +1,4 @@
-Ziprails<!--$headerTitle--><!--$pmc:delete-->
+# Ziprails<!--$headerTitle--><!--$pmc:delete-->
 
 Everyone loves building minecart rail systems, but giant mono-rails across your world can get to be an eyesore. With this simple datapack, enable your minecarts to hang from "ziprails" made of tripwire, much less intrusive 
 than regular rail lines. <!--$pmc:headerSize-->

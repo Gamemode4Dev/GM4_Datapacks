@@ -1,4 +1,4 @@
-Better Armour Stands <!--$headerTitle--> <!--$pmc:delete-->
+# Better Armour Stands <!--$headerTitle--> <!--$pmc:delete-->
 
 Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands. <!--$pmc:headerSize-->
 
