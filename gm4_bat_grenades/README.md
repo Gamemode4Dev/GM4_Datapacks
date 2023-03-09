@@ -1,4 +1,4 @@
-Bat Grenades<!--$headerTitle--><!--$pmc:delete-->
+# Bat Grenades<!--$headerTitle--><!--$pmc:delete-->
 
 Tired of the uselessness of bats? Need something to spice up your caving adventures? This modular datapack kills those two birds, er bats, with one stone, and turns bats into tiny furry flying balls of boom! <!--$pmc:headerSize-->
 

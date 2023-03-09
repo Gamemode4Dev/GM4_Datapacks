@@ -1,6 +1,7 @@
 from beet import Context, TextFile
 import re
 from pathlib import Path
+from typing import Any
 
 global_replacements = {
     r"https:\/\/wiki\.gm4\.co\/wiki\/([\w_]+)": r"https:MY_URL\\\1",
@@ -19,7 +20,7 @@ def beet_default(ctx: Context):
         return
     global_readme = TextFile(source_path=readme_path)
     global_contents = global_readme.text
-    running_readme_gen = ctx.meta.get("readme-gen", False)
+    running_readme_gen = ctx.meta.get("readme-gen", False) # used to disable pmc replacements on normal release
 
     # Local Images to raw.githubusercontent URLs
     global_replacements.update({
@@ -54,7 +55,7 @@ def beet_default(ctx: Context):
 
     # Header Title
     global_replacements.update({
-        r'(.+?) *<!-- *\$headerTitle.+>' : (
+        r'#? *(.+?) *<!-- *\$headerTitle.+>' : (
             "# <img src=\"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png\""
                 " alt=\"GM4 Logo\" width=\"32\" />"
             r" \1 by Gamemode 4"
@@ -100,7 +101,7 @@ def beet_default(ctx: Context):
     rec_modules = re.findall(r"\(.+\)<!--\$dynamicLink:(.+)-->", global_contents)
         # TODO relative links, if they are better
     for m in rec_modules:
-        manifest_m_entry = next((c for c in manifest["modules"] if c['id'] == m), {})
+        manifest_m_entry: dict[str, Any] = next((c for c in manifest["modules"] if c['id'] == m), {})
         if (v:=manifest_m_entry.get('modrinth_id')):
             site_replacements["modrinth"].update({
                 f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://modrinth.com/datapack/{v})"
@@ -170,13 +171,10 @@ def beet_default(ctx: Context):
             r"~~(.+)~~": r"[s]\1[/s]",
             r"`(.+)`": r"\1", # BBCode has no inline code blocks
             r"```(.+)```": r"[code]\1[/code]",
-            r"---*\n": r"[hr]"
-        })
-
-        site_replacements['pmc'].update({
+            r"---*\n": r"[hr]",
             r"\n?<!--.+?-->": ""
         })
-    
+
     # Apply site-specific edits
     for site, replacements in site_replacements.items():
         site_contents = global_contents
