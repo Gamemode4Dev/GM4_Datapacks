@@ -22,6 +22,7 @@ def create(ctx: Context):
 			# Read all the metadata from the module's beet.yaml file
 			project_config = yaml.safe_load(project_file.read_text())
 			module["name"] = project_config["name"]
+			module["version"] = project_config.get("version", 0)
 			meta = project_config.get("meta", {}).get("gm4", {})
 			module["description"] = meta["description"]
 			module["requires"] = meta["required"]
@@ -57,12 +58,22 @@ def create(ctx: Context):
 
 		if not diff and released:
 			# No changes were made, keep the same patch version
-			module["patch"] = released["patch"]
+			module["version"] = released["version"]
+		elif not released:
+			# First release
+			module["version"] = ctx.project_version.replace("X", "0") or "1.0.0"
 		else:
-			# Changes were made or this is the first release, bump the patch
-			patch = released["patch"] if released else prefix
-			module["patch"] = patch + 1
-			print(f"[GM4] Updating {id} to {patch + 1}")
+			# Changes were made, bump the patch
+			version = dict(zip(("major", "minor"), map(int, module["version"].split(".")[0:2])))
+			last_ver = dict(zip(("major", "minor", "patch"), map(int, released["version"].split("."))))
+			
+			if version["minor"] > last_ver["minor"]:
+				patch = 0
+			else:
+				patch = last_ver["patch"] + 1
+				print(f"[GM4] Updating {id} patch to {patch}")
+
+			module["version"] = f"{version['major']}.{version['minor']}.{patch}"
 	
 	# Read the contributors metadata
 	contributors_file = Path("contributors.json")
@@ -135,14 +146,5 @@ def write_updates(ctx: Context):
 	init.lines.append("# Module update list")
 	init.lines.append("data remove storage gm4:log queue[{type:'outdated'}]")
 	for m in modules:
-		init.lines.append(f"execute if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{m['patch'] - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}'}}")
-
-def assemble_version(ctx: Context):
-	"""Assembles the full version number from beet.yaml and patch values, storing in meta"""
-	
-	#TODO move patch retrieval to before pipeline broadcast, but with safeguards for if it fails to access?
-	modules = ctx.cache['gm4_manifest'].json['modules']
-	patch = next((m['patch'] for m in modules if m['id'] == ctx.project_id), 0)
-	prefix = int(os.getenv("PATCH_PREFIX", 0))
-	ctx.meta['patched_version'] = ctx.project_version.replace('X', str(max(patch-prefix, 0)), 1)
-	
+		version = sum(map(lambda x,y: int(x)*y, m["version"].split("."), (100_000, 1_000, 1)))
+		init.lines.append(f"execute if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}'}}")

@@ -30,9 +30,9 @@ def release(ctx: Context):
 	`BEET_MODRINTH_TOKEN` environment variable is set, will try to publish a
 	new version to Modrinth if it doesn't already exist.
 	"""
-	version = os.getenv("VERSION", "1.19")
-	release_dir = Path("release") / version
-	file_name = f"{ctx.project_id}_{version.replace('.', '_')}.zip"
+	version_dir = os.getenv("VERSION", "1.19")
+	release_dir = Path("release") / version_dir
+	file_name = f"{ctx.project_id}_{version_dir.replace('.', '_')}.zip"
 	
 	ctx.data.save(
 		path=release_dir / file_name,
@@ -51,8 +51,8 @@ def release(ctx: Context):
 	auth_token = os.getenv(AUTH_TOKEN_KEY, None)
 	if modrinth and auth_token and ctx.project_version:
 		modrinth_id = modrinth["project_id"]
-		patched_version = ctx.meta.get('patched_version', None)
-		if patched_version is None:
+		version = next((m.get("version") for m in ctx.cache["gm4_manifest"].json["modules"] if m["id"] == ctx.project_id), None)
+		if version is None:
 			print("[GM4] Full version number not available in ctx.meta. Skipping publishing")
 			return
 
@@ -64,7 +64,7 @@ def release(ctx: Context):
 				print(f"[GM4] Failed to get project versions: {res.status_code} {res.text}")
 			return
 		project_data = res.json()
-		matching_version = next((v for v in project_data if v["version_number"] == patched_version), None)
+		matching_version = next((v for v in project_data if v["version_number"] == version), None)
 		if matching_version is not None:
 			return
 
@@ -76,8 +76,8 @@ def release(ctx: Context):
 		game_versions = modrinth.get("minecraft", SUPPORTED_GAME_VERSIONS)
 		res = requests.post(f"{MODRINTH_API}/version", headers={'Authorization': auth_token}, files={
 			"data": json.dumps({
-				"name": f"{ctx.project_name} {patched_version}",
-				"version_number": patched_version,
+				"name": f"{ctx.project_name} {version}",
+				"version_number": version,
 				"changelog": changelog,
 				"dependencies": [],
 				"game_versions": game_versions,
