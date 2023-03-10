@@ -32,6 +32,10 @@ def release(ctx: Context):
 	If the module has the `version` and `meta.modrinth.project_id` fields, and
 	`BEET_MODRINTH_TOKEN` environment variable is set, will try to publish a
 	new version to Modrinth if it doesn't already exist.
+
+	Similarly, if the module has the `version` and `meta.smithed.pack_id` fields, and
+	`BEET_SMITHED_TOKEN` environment variable is set, will try to publish a
+	new version to Smithed if it doesn't already exist.
 	"""
 	version_dir = os.getenv("VERSION", "1.19")
 	release_dir = Path("release") / version_dir
@@ -55,7 +59,12 @@ def release(ctx: Context):
 	if "smithed_readme" in ctx.meta:
 		ctx.meta['smithed_readme'].dump(smithed_readme_dir, f"{ctx.project_id}.md")
 
-	# Publish to modrinth
+	# publish to download platforms
+	publish_modrinth(ctx, release_dir, file_name)
+	publish_smithed(ctx, release_dir, file_name)
+		
+def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
+	'''Attempts to publish pack to modrinth'''
 	modrinth = ctx.meta.get("modrinth", None)
 	auth_token = os.getenv(MODRINTH_AUTH_KEY, None)
 	if modrinth and auth_token:
@@ -72,10 +81,10 @@ def release(ctx: Context):
 		existing_readme = res.json()["body"]
 		if existing_readme != (d:=ctx.meta['modrinth_readme'].text):
 			res = requests.patch(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token}, json={"body": d})
-		if not (200 <= res.status_code < 300):
-			print(f"[GM4] Failed to update description: {res.status_code} {res.text}")
-			return
-		print(f"[GM4] Successfully updated description of {ctx.project_name}")
+			if not (200 <= res.status_code < 300):
+				print(f"[GM4] Failed to update description: {res.status_code} {res.text}")
+				return
+			print(f"[GM4] Successfully updated description of {ctx.project_name}")
 
 		# upload datapack zip
 		if ctx.project_version:
@@ -122,8 +131,8 @@ def release(ctx: Context):
 				return
 			print(f"[GM4] Successfully published {res.json()['name']}")
 
-	
-	# Publish to smithed
+def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
+	"""Attempts to publish pack to smithed"""
 	smithed = ctx.meta.get("smithed", None)
 	auth_token = os.getenv(SMITHED_AUTH_KEY, None)
 	if smithed and auth_token and ctx.project_version:
@@ -142,7 +151,6 @@ def release(ctx: Context):
 		project_data = res.json()
 		matching_version = next((v for v in project_data if v["name"] == version), None)
 		if matching_version is not None:
-			print(f"found existing version {matching_version['name']}")
 			return
 		
 		# remove other existing versions for that mc version
@@ -150,8 +158,8 @@ def release(ctx: Context):
 		for v in mc_version_matching_version:
 			res = requests.delete(f"{SMITHED_API}/packs/{smithed_id}/versions/{v}", params={'token': auth_token})
 			if not (200 <= res.status_code < 300):
-				print(f"[GM4] Failed to delete version version: {res.status_code} {res.text}")
-			print(f"[GM4] Successfully deleted old version {res.text}") # TODO make this pretty
+				print(f"[Smithed] Failed to delete version version: {res.status_code} {res.text}")
+			print(f"[Smithed] {res.text}") # TODO make this pretty
 		
 		# post new version
 		res = requests.post(f"{SMITHED_API}/packs/{smithed_id}/versions",
@@ -168,11 +176,9 @@ def release(ctx: Context):
 		)
 		print(res.text)
 		if not (200 <= res.status_code < 300):
-			print(f"[GM4] Failed to publish new version version: {res.status_code} {res.text}")
+			print(f"[Smithed] Failed to publish new version version: {res.status_code} {res.text}")
 			return
-		print(f"[GM4] Successfully published") # TODO
-		
-
+		print(f"[Smithed] {res.text}") # TODO
 
 
 

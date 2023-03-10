@@ -25,4 +25,6 @@ meta:
       Icon Design:
         - Sparks
   modrinth: 
-    project_id: NUbDtZev    pack_id: gm4_api_test_pack
+    project_id: NUbDtZev
+  smithed:
+    pack_id: gm4_api_test_pack
