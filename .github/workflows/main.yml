@@ -69,6 +69,7 @@ jobs:
         run: poetry run beet -p beet-release.yaml build
         env:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
 
       - name: Build all modules for pull request
         if: github.event_name == 'pull_request'
