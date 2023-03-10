@@ -1,0 +1,131 @@
+{
+  "id": "desire_lines",
+  "name": "Desire Lines",
+  "trigger_id": 17,
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:coarse_dirt",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "page_0/requirement": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "gm4_dl_affcoarse"
+            },
+            "range": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "page_0",
+      "enable": [],
+      "requirements": [
+        [
+          "page_0/requirement"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Desire_Lines\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Desire_Lines\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Desire Lines\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Walking or sprinting will trample blocks beneath the player.\\n\\nGrass blocks will trample into dirt and dirt into coarse dirt.\"},{\"translate\":\"text.gm4.guidebook.desire_lines.1\"}]}]"
+      ],
+      "pages_locked": [
+        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Desire_Lines\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Desire_Lines\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Desire Lines\",\"underlined\":true},{\"text\":\"\\n\"},{\"text\":\"???\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Undiscovered\"},{\"translate\":\"text.gm4.guidebook.undiscovered\"}],\"italic\":true,\"color\":\"red\"}]}}]"
+      ]
+    },
+    {
+      "name": "page_0",
+      "enable": [
+        {
+          "id": "gm4_boots_of_ostara",
+          "load": -1
+        },
+        {
+          "id": "gm4_metallurgy",
+          "load": -1
+        }
+      ],
+      "requirements": [
+        [
+          "page_0/requirement"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\"},{\"translate\":\"text.gm4.guidebook.desire_lines.2\"}]}]"
+      ]
+    },
+    {
+      "name": "page_0",
+      "enable": [
+        {
+          "id": "gm4_boots_of_ostara",
+          "load": 1
+        },
+        {
+          "id": "gm4_metallurgy",
+          "load": -1
+        }
+      ],
+      "requirements": [
+        [
+          "page_0/requirement"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\\n\\nThe Boots of Ostara can prevent desire lines.\"},{\"translate\":\"text.gm4.guidebook.desire_lines.2.boots_of_ostara\"}]}]"
+      ]
+    },
+    {
+      "name": "page_0",
+      "enable": [
+        {
+          "id": "gm4_boots_of_ostara",
+          "load": -1
+        },
+        {
+          "id": "gm4_metallurgy",
+          "load": 1
+        }
+      ],
+      "requirements": [
+        [
+          "page_0/requirement"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\\n\\nBoots with the Celaro Shamir can prevent desire lines\"},{\"translate\":\"text.gm4.guidebook.desire_lines.2.metallurgy\"}]}]"
+      ]
+    },
+    {
+      "name": "page_0",
+      "enable": [
+        {
+          "id": "gm4_boots_of_ostara",
+          "load": 1
+        },
+        {
+          "id": "gm4_metallurgy",
+          "load": 1
+        }
+      ],
+      "requirements": [
+        [
+          "page_0/requirement"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\\n\\nBoots with the Celaro Shamir, or normal Boots of Ostara can prevent desire lines.\"},{\"translate\":\"text.gm4.guidebook.desire_lines.2.boots_of_ostara_metallurgy\"}]}]"
+      ]
+    }
+  ]
+}
