@@ -5,6 +5,18 @@ from typing import TypedDict
 import json
 import os
 
+# TODO:
+# parse & update page contents
+# count line length for TOC
+# extra checks for reward functiions
+# delete old files
+# rename gudebook to guidebook
+# setup system for lecterns
+# display advancement description
+# update base module to use new tags
+# actual add_TOC function
+# merge some functions to reduce fuction call overhead
+
 
 class Section(TypedDict):
   name: str
@@ -157,9 +169,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
 
 def generate_advancement(book: Book, section_index: int) -> Advancement | None:
   section: Section = book["sections"][section_index]
-  module_name = book["name"]
   module_id = book["id"]
-  icon = book["icon"]
   all_criteria = book["criteria"]
   criteria_keys: set[str] = set()
   for requirement in section["requirements"]:
