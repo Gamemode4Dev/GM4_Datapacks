@@ -12,7 +12,7 @@ SMITHED_API = "https://api.smithed.dev/v2"
 SMITHED_AUTH_KEY = "BEET_SMITHED_TOKEN"
 SUPPORTED_GAME_VERSIONS = ["1.19", "1.19.1", "1.19.2", "1.19.3"]
 	# NOTE smithed only takes one game version number. Uses the first value in this list
-
+USER_AGENT = "Gamemode4Dev/GM4_Datapacks/release-pipeline (gamemode4official@gmail.com)"
 
 def beet_default(ctx: Context):
 	"""Saves the datapack to the ./out folder."""
@@ -71,7 +71,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 		modrinth_id = modrinth["project_id"]
 		
 		# update page description
-		res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token})
+		res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT})
 		if not (200 <= res.status_code < 300):
 			if res.status_code == 404:
 				print(f"[GM4] [Modrinth] Cannot edit description of modrinth project {modrinth_id} as it doesn't exist.")
@@ -80,7 +80,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 			return
 		existing_readme = res.json()["body"]
 		if existing_readme != (d:=ctx.meta['modrinth_readme'].text):
-			res = requests.patch(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token}, json={"body": d})
+			res = requests.patch(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, json={"body": d})
 			if not (200 <= res.status_code < 300):
 				print(f"[GM4] [Modrinth] Failed to update description: {res.status_code} {res.text}")
 				return
@@ -93,7 +93,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 				print("[GM4] [Modrinth] Full version number not available in ctx.meta. Skipping publishing")
 				return
 
-			res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}/version", headers={'Authorization': auth_token})
+			res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}/version", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT})
 			if not (200 <= res.status_code < 300):
 				if res.status_code == 404:
 					print(f"[GM4] [Modrinth] Cannot publish to modrinth project {modrinth_id} as it doesn't exist.")
@@ -111,7 +111,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 			changelog = run(["git", "log", "-1", "--format=%s"])
 
 			game_versions = modrinth.get("minecraft", SUPPORTED_GAME_VERSIONS)
-			res = requests.post(f"{MODRINTH_API}/version", headers={'Authorization': auth_token}, files={
+			res = requests.post(f"{MODRINTH_API}/version", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, files={
 				"data": json.dumps({
 					"name": f"{ctx.project_name} {version}",
 					"version_number": version,
