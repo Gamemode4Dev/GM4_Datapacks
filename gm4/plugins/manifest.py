@@ -78,7 +78,7 @@ def update_patch(ctx: Context):
 	for id in modules:
 		module = modules[id]
 
-		diff = run(["git", "diff", last_commit, "--shortstat", "--", id]) if last_commit else True
+		diff = run(["git", "diff", last_commit, "--shortstat", "--", id, ":!*\\README.md", ":!images"]) if last_commit else True
 		released = released_modules.get(id, None)
 
 		if not diff and released:
