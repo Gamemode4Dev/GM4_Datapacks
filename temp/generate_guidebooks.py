@@ -37,6 +37,11 @@ def get_pos_hash(module_id):
   return id
 
 
+def get_toc_lines(book_dict: Book) -> int:
+  # TODO
+  return 1
+
+
 def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]]:
   book_id = book_dict["id"]
   sections = book_dict["sections"]
@@ -156,19 +161,6 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
   module_id = book["id"]
   icon = book["icon"]
   all_criteria = book["criteria"]
-  display = {
-    "icon": icon,
-    "title": {
-      "text": "Check your guidebook!",
-      "color": "#4AA0C7",
-      "italic": True
-    },
-    "description": module_name,
-    "frame": "goal",
-    "show_toast": True,
-    "announce_to_chat": False,
-    "hidden": True
-  }
   criteria_keys: set[str] = set()
   for requirement in section["requirements"]:
     for criterion in requirement:
@@ -225,7 +217,6 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
       criterion["conditions"]["player"] = [*criterion["conditions"]["player"], *extra_player_checks]
 
   return Advancement({
-    "display": display,
     "parent": "gm4_guidebook:root",
     "criteria": criteria,
     "requirements": section["requirements"],
@@ -235,8 +226,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
   })
 
 
-def generate_display_advancement(book: Book, section_index: int) -> Advancement:
-
+def generate_display_advancement(book: Book) -> Advancement:
   module_name = book["name"]
   icon = book["icon"]
   display = {
@@ -264,6 +254,7 @@ def generate_display_advancement(book: Book, section_index: int) -> Advancement:
 
 
 def generate_reward_function(section: Section, book_id: str) -> Function:
+  # TODO: check for module Loads
   reward = Function([
     f"advancement grant @s only gm4_gudebook:{book_id}/display/{section['name']}"
   ])
@@ -318,6 +309,7 @@ def generate_summon_marker_function(book: Book) -> Function:
   marker_nbt["data"]["id"] = nbtlib.String(book["id"])
   marker_nbt["data"]["trigger"] = nbtlib.Int(book["trigger_id"])
   marker_nbt["data"]["module_name"] = nbtlib.String(book["name"])
+  marker_nbt["data"]["toc_lines"] = nbtlib.Int(get_toc_lines(book))
   return Function([
     f"summon marker ~ {get_pos_hash(book['id'])} ~ {nbtlib.serialize_tag(marker_nbt)}"
   ])
@@ -378,7 +370,7 @@ def beet_default(ctx: Context):
     for index, section in enumerate(book["sections"]):
       if (advancement := generate_advancement(book, index)) is not None:
         ctx.data[f"gm4_gudebook:{book['id']}/unlock/{section['name']}"] = advancement
-        ctx.data[f"gm4_gudebook:{book['id']}/display/{section['name']}"] = advancement
+        ctx.data[f"gm4_gudebook:{book['id']}/display/{section['name']}"] = generate_display_advancement(section)
         ctx.data[f"gm4_gudebook:{book['id']}/rewards/{section['name']}"] = generate_reward_function(section, book["id"])
 
   ctx.data["gm4_gudebook:add_toc"] = generate_add_toc_line_tag(book_ids)
