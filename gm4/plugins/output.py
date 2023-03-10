@@ -55,50 +55,70 @@ def release(ctx: Context):
 	# Publish to modrinth
 	modrinth = ctx.meta.get("modrinth", None)
 	auth_token = os.getenv(AUTH_TOKEN_KEY, None)
-	if modrinth and auth_token and ctx.project_version:
+	if modrinth and auth_token:
 		modrinth_id = modrinth["project_id"]
-		version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
-		if version is None:
-			print("[GM4] Full version number not available in ctx.meta. Skipping publishing")
-			return
-
-		res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}/version", headers={'Authorization': auth_token})
+		
+		# update page description
+		res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token})
 		if not (200 <= res.status_code < 300):
 			if res.status_code == 404:
-				print(f"[GM4] Cannot publish to modrinth project {modrinth_id} as it doesn't exist.")
+				print(f"[GM4] Cannot edit description of modrinth project {modrinth_id} as it doesn't exist.")
 			else:
-				print(f"[GM4] Failed to get project versions: {res.status_code} {res.text}")
+				print(f"[GM4] Failed to get project: {res.status_code} {res.text}")
 			return
-		project_data = res.json()
-		matching_version = next((v for v in project_data if v["version_number"] == version), None)
-		if matching_version is not None:
-			return
-
-		with open(release_dir / file_name, "rb") as f:
-			file_bytes = f.read()
-
-		changelog = run(["git", "log", "-1", "--format=%s"])
-
-		game_versions = modrinth.get("minecraft", SUPPORTED_GAME_VERSIONS)
-		res = requests.post(f"{MODRINTH_API}/version", headers={'Authorization': auth_token}, files={
-			"data": json.dumps({
-				"name": f"{ctx.project_name} {version}",
-				"version_number": version,
-				"changelog": changelog,
-				"dependencies": [],
-				"game_versions": game_versions,
-				"version_type": "release",
-				"loaders": ["datapack"],
-				"featured": False,
-				"project_id": modrinth_id,
-				"file_parts": [file_name],
-			}),
-			file_name: file_bytes,
-		})
+		existing_readme = res.json()["body"]
+		if existing_readme != (d:=ctx.meta['modrinth_readme'].text):
+			res = requests.patch(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token}, json={"body": d})
 		if not (200 <= res.status_code < 300):
-			print(f"[GM4] Failed to publish new version version: {res.status_code} {res.text}")
+			print(f"[GM4] Failed to update description: {res.status_code} {res.text}")
 			return
-		print(f"[GM4] Successfully published {res.json()['name']}")
+		print(f"[GM4] Successfully updated description of {ctx.project_name}")
+
+		# upload datapack zip
+		if ctx.project_version:
+			version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
+			if version is None:
+				print("[GM4] Full version number not available in ctx.meta. Skipping publishing")
+				return
+
+			res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}/version", headers={'Authorization': auth_token})
+			if not (200 <= res.status_code < 300):
+				if res.status_code == 404:
+					print(f"[GM4] Cannot publish to modrinth project {modrinth_id} as it doesn't exist.")
+				else:
+					print(f"[GM4] Failed to get project versions: {res.status_code} {res.text}")
+				return
+			project_data = res.json()
+			matching_version = next((v for v in project_data if v["version_number"] == version), None)
+			if matching_version is not None:
+				return
+
+			with open(release_dir / file_name, "rb") as f:
+				file_bytes = f.read()
+
+			changelog = run(["git", "log", "-1", "--format=%s"])
+
+			game_versions = modrinth.get("minecraft", SUPPORTED_GAME_VERSIONS)
+			res = requests.post(f"{MODRINTH_API}/version", headers={'Authorization': auth_token}, files={
+				"data": json.dumps({
+					"name": f"{ctx.project_name} {version}",
+					"version_number": version,
+					"changelog": changelog,
+					"dependencies": [],
+					"game_versions": game_versions,
+					"version_type": "release",
+					"loaders": ["datapack"],
+					"featured": False,
+					"project_id": modrinth_id,
+					"file_parts": [file_name],
+				}),
+				file_name: file_bytes,
+			})
+			if not (200 <= res.status_code < 300):
+				print(f"[GM4] Failed to publish new version version: {res.status_code} {res.text}")
+				return
+			print(f"[GM4] Successfully published {res.json()['name']}")
+
 
 
 def clear_release(ctx: Context):
