@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_bat_grenades
 name: Bat Grenades
+version: 0.2.X
 
 pipeline:
   - data_pack:
@@ -23,3 +24,5 @@ meta:
         - Sparks
       Icon Design:
         - Sparks
+  modrinth: 
+    project_id: NUbDtZev

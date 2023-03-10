@@ -101,7 +101,7 @@ def beet_default(ctx: Context):
     rec_modules = re.findall(r"\(.+\)<!--\$dynamicLink:(.+)-->", global_contents)
         # TODO relative links, if they are better
     for m in rec_modules:
-        manifest_m_entry: dict[str, Any] = next((c for c in manifest["modules"] if c['id'] == m), {})
+        manifest_m_entry: dict[str, Any] = manifest["modules"].get(m, {})
         if (v:=manifest_m_entry.get('modrinth_id')):
             site_replacements["modrinth"].update({
                 f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://modrinth.com/datapack/{v})"

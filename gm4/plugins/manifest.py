@@ -119,15 +119,15 @@ def write_credits(ctx: Context):
 	"""Writes the credits metadata to CREDITS.md. and collects for README.md"""
 	manifest = ctx.cache["gm4_manifest"].json
 	contributors = manifest.get("contributors", {})
-	credits: dict[str, list[str]] = manifest.get(ctx.project_id, {}).get("credits", {})
-	if credits is None or len(credits) == 0:
+	credits: dict[str, list[str]] = manifest["modules"].get(ctx.project_id, {}).get("credits", {})
+	if len(credits) == 0:
 		return
 
 	# traverses contributors and associates name with links for printing
 	linked_credits: dict[str, list[str]] = {}
 	for title in credits:
 		people = credits[title]
-		if not isinstance(people, list) or len(people) == 0:
+		if len(people) == 0:
 			continue
 		linked_credits[title] = []
 		for p in people:
