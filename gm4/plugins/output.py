@@ -74,31 +74,31 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 		res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token})
 		if not (200 <= res.status_code < 300):
 			if res.status_code == 404:
-				print(f"[GM4] Cannot edit description of modrinth project {modrinth_id} as it doesn't exist.")
+				print(f"[GM4] [Modrinth] Cannot edit description of modrinth project {modrinth_id} as it doesn't exist.")
 			else:
-				print(f"[GM4] Failed to get project: {res.status_code} {res.text}")
+				print(f"[GM4] [Modrinth] Failed to get project: {res.status_code} {res.text}")
 			return
 		existing_readme = res.json()["body"]
 		if existing_readme != (d:=ctx.meta['modrinth_readme'].text):
 			res = requests.patch(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token}, json={"body": d})
 			if not (200 <= res.status_code < 300):
-				print(f"[GM4] Failed to update description: {res.status_code} {res.text}")
+				print(f"[GM4] [Modrinth] Failed to update description: {res.status_code} {res.text}")
 				return
-			print(f"[GM4] Successfully updated description of {ctx.project_name}")
+			print(f"[GM4] [Modrinth] Successfully updated description of {ctx.project_name}")
 
 		# upload datapack zip
 		if ctx.project_version:
 			version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
 			if version is None:
-				print("[GM4] Full version number not available in ctx.meta. Skipping publishing")
+				print("[GM4] [Modrinth] Full version number not available in ctx.meta. Skipping publishing")
 				return
 
 			res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}/version", headers={'Authorization': auth_token})
 			if not (200 <= res.status_code < 300):
 				if res.status_code == 404:
-					print(f"[GM4] Cannot publish to modrinth project {modrinth_id} as it doesn't exist.")
+					print(f"[GM4] [Modrinth] Cannot publish to modrinth project {modrinth_id} as it doesn't exist.")
 				else:
-					print(f"[GM4] Failed to get project versions: {res.status_code} {res.text}")
+					print(f"[GM4] [Modrinth] Failed to get project versions: {res.status_code} {res.text}")
 				return
 			project_data = res.json()
 			matching_version = next((v for v in project_data if v["version_number"] == version), None)
@@ -127,9 +127,9 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 				file_name: file_bytes,
 			})
 			if not (200 <= res.status_code < 300):
-				print(f"[GM4] Failed to publish new version version: {res.status_code} {res.text}")
+				print(f"[GM4] [Modrinth] Failed to publish new version version: {res.status_code} {res.text}")
 				return
-			print(f"[GM4] Successfully published {res.json()['name']}")
+			print(f"[GM4] [Modrinth] Successfully published {res.json()['name']}")
 
 def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 	"""Attempts to publish pack to smithed"""
@@ -143,9 +143,9 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 		res = requests.get(f"{SMITHED_API}/packs/{smithed_id}/versions")
 		if not (200 <= res.status_code < 300):
 			if res.status_code == 404:
-				print(f"[GM4] Cannot publish to modrinth project {smithed_id} as it doesn't exist.")
+				print(f"[GM4] [Smithed] Cannot publish to smithed project {smithed_id} as it doesn't exist.")
 			else:
-				print(f"[GM4] Failed to get project versions: {res.status_code} {res.text}")
+				print(f"[GM4] [Smithed] Failed to get project versions: {res.status_code} {res.text}")
 			return
 		
 		project_data = res.json()
@@ -158,8 +158,8 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 		for v in mc_version_matching_version:
 			res = requests.delete(f"{SMITHED_API}/packs/{smithed_id}/versions/{v}", params={'token': auth_token})
 			if not (200 <= res.status_code < 300):
-				print(f"[Smithed] Failed to delete version version: {res.status_code} {res.text}")
-			print(f"[Smithed] {res.text}") # TODO make this pretty
+				print(f"[GM4] [Smithed] Failed to delete version version: {res.status_code} {res.text}")
+			print(f"[GM4] [Smithed] {res.text}")
 		
 		# post new version
 		res = requests.post(f"{SMITHED_API}/packs/{smithed_id}/versions",
@@ -174,11 +174,10 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 				"dependencies": []
 			}}
 		)
-		print(res.text)
 		if not (200 <= res.status_code < 300):
-			print(f"[Smithed] Failed to publish new version version: {res.status_code} {res.text}")
+			print(f"[GM4] [Smithed] Failed to publish new version: {res.status_code} {res.text}")
 			return
-		print(f"[Smithed] {res.text}") # TODO
+		print(f"[GM4] [Smithed] {res.text}") # TODO
 
 
 
