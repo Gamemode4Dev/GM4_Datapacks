@@ -7,8 +7,11 @@ import shutil
 from gm4.utils import run
 
 MODRINTH_API = "https://api.modrinth.com/v2"
-AUTH_TOKEN_KEY = "BEET_MODRINTH_TOKEN"
+MODRINTH_AUTH_KEY = "BEET_MODRINTH_TOKEN"
+SMITHED_API = "https://api.smithed.dev/v2"
+SMITHED_AUTH_KEY = "BEET_SMITHED_TOKEN"
 SUPPORTED_GAME_VERSIONS = ["1.19", "1.19.1", "1.19.2", "1.19.3"]
+	# NOTE smithed only takes one game version number. Uses the first value in this list
 
 
 def beet_default(ctx: Context):
@@ -54,7 +57,7 @@ def release(ctx: Context):
 
 	# Publish to modrinth
 	modrinth = ctx.meta.get("modrinth", None)
-	auth_token = os.getenv(AUTH_TOKEN_KEY, None)
+	auth_token = os.getenv(MODRINTH_AUTH_KEY, None)
 	if modrinth and auth_token:
 		modrinth_id = modrinth["project_id"]
 		
@@ -118,6 +121,58 @@ def release(ctx: Context):
 				print(f"[GM4] Failed to publish new version version: {res.status_code} {res.text}")
 				return
 			print(f"[GM4] Successfully published {res.json()['name']}")
+
+	
+	# Publish to smithed
+	smithed = ctx.meta.get("smithed", None)
+	auth_token = os.getenv(SMITHED_AUTH_KEY, None)
+	if smithed and auth_token and ctx.project_version:
+		version = version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
+		smithed_id = smithed["pack_id"]
+
+		# get existing versions
+		res = requests.get(f"{SMITHED_API}/packs/{smithed_id}/versions")
+		if not (200 <= res.status_code < 300):
+			if res.status_code == 404:
+				print(f"[GM4] Cannot publish to modrinth project {smithed_id} as it doesn't exist.")
+			else:
+				print(f"[GM4] Failed to get project versions: {res.status_code} {res.text}")
+			return
+		
+		project_data = res.json()
+		matching_version = next((v for v in project_data if v["name"] == version), None)
+		if matching_version is not None:
+			print(f"found existing version {matching_version['name']}")
+			return
+		
+		# remove other existing versions for that mc version
+		mc_version_matching_version = (v["name"] for v in project_data if v['supports'][0] == SUPPORTED_GAME_VERSIONS[0]) # NOTE smithed currently only supports one game version
+		for v in mc_version_matching_version:
+			res = requests.delete(f"{SMITHED_API}/packs/{smithed_id}/versions/{v}", params={'token': auth_token})
+			if not (200 <= res.status_code < 300):
+				print(f"[GM4] Failed to delete version version: {res.status_code} {res.text}")
+			print(f"[GM4] Successfully deleted old version {res.text}") # TODO make this pretty
+		
+		# post new version
+		res = requests.post(f"{SMITHED_API}/packs/{smithed_id}/versions",
+		    params={'token': auth_token, 'version': version},
+			json={"data":{
+				"downloads":{
+					"datapack": f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/{SUPPORTED_GAME_VERSIONS[0]}/{file_name}",
+					"resourcepack": ""
+				},
+				"name": version,
+				"supports": SUPPORTED_GAME_VERSIONS[0],
+				"dependencies": []
+			}}
+		)
+		print(res.text)
+		if not (200 <= res.status_code < 300):
+			print(f"[GM4] Failed to publish new version version: {res.status_code} {res.text}")
+			return
+		print(f"[GM4] Successfully published") # TODO
+		
+
 
 
 
