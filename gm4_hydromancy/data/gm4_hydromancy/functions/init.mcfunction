@@ -7,6 +7,7 @@ scoreboard players set #6 gm4_hy_data 6
 scoreboard players set #10 gm4_hy_data 10
 
 scoreboard objectives add gm4_hy_goal dummy
+scoreboard objectives add gm4_hy_charge dummy
 
 schedule function gm4_hydromancy:main 1t
 schedule function gm4_hydromancy:slow_clock 1t

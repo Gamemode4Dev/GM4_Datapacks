@@ -6,9 +6,6 @@
 
 scoreboard players remove $raycast_limit gm4_hy_data 1
 
-# TODO: remove dev particles
-particle happy_villager ~ ~ ~ 0 0.4 0 0 22
-
 execute if block ~ ~ ~ lily_pad run function gm4_hydromancy:coral_flower/growth/lily_pad
 execute if block ~ ~ ~ kelp run function gm4_hydromancy:coral_flower/growth/kelp/base
 execute if block ~ ~ ~ #gm4_hydromancy:seagrass run function gm4_hydromancy:coral_flower/growth/seagrass/chance
