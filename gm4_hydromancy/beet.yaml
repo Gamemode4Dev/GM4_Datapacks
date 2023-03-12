@@ -1,0 +1,18 @@
+extend: '../module.yaml'
+
+id: gm4_hydromancy
+name: Hydromancy
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    description: WATUR!
+    required: []
+    recommended: []
+    wiki: https://wiki.gm4.co/wiki/Hydromancy
+    credits:
+      Creator:
+        - Thanathor
