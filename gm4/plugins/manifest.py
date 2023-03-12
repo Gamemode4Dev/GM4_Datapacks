@@ -92,7 +92,7 @@ def update_patch(ctx: Context):
 			version = dict(zip(("major", "minor"), map(int, module["version"].split(".")[0:2])))
 			last_ver = dict(zip(("major", "minor", "patch"), map(int, released["version"].split("."))))
 			
-			if version["minor"] > last_ver["minor"]:
+			if version["minor"] > last_ver["minor"] or version["major"] > last_ver["major"]:
 				patch = 0
 			else:
 				patch = last_ver["patch"] + 1
