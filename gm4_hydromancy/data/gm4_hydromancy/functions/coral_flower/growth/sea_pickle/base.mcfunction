@@ -7,5 +7,5 @@ scoreboard players set $raycast_limit gm4_hy_data 0
 
 # if block is full do X
 execute if block ~ ~ ~ sea_pickle[pickles=4] run function gm4_hydromancy:coral_flower/growth/sea_pickle/
-# otherwise add 1 pickle
-execute unless block ~ ~ ~ sea_pickle[pickles=4] run function gm4_hydromancy:coral_flower/growth/sea_pickle/multiply
+# otherwise 50% chance to add 1 pickle
+execute unless block ~ ~ ~ sea_pickle[pickles=4] if predicate gm4_hydromancy:chance/sea_pickle_growth run function gm4_hydromancy:coral_flower/growth/sea_pickle/multiply

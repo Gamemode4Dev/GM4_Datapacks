@@ -5,6 +5,7 @@ scoreboard objectives add gm4_hy_data dummy
 scoreboard players set #3 gm4_hy_data 3
 scoreboard players set #6 gm4_hy_data 6
 scoreboard players set #10 gm4_hy_data 10
+scoreboard players set #15 gm4_hy_data 15
 
 scoreboard objectives add gm4_hy_goal dummy
 scoreboard objectives add gm4_hy_charge dummy
