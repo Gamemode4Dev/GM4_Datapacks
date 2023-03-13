@@ -4,7 +4,7 @@ from typing import Any
 import json
 import os
 import yaml
-from gm4.utils import run
+from gm4.utils import run, semver_to_int
 
 
 def create(ctx: Context):
@@ -156,16 +156,24 @@ def write_updates(ctx: Context):
 	if init is None:
 		return
 
+	manifest = ctx.cache["gm4_manifest"].json
+	modules = manifest["modules"]
+
+	score = f"{ctx.project_id.removeprefix('gm4_')} gm4_modules"
+	version = semver_to_int(modules[ctx.project_id]["version"])
+
+	# Update score setter for this module
+	for i, line in enumerate(init.lines):
+		if "gm4_modules" in line:
+			init.lines[i] = line.replace(f"{score} 1", f"{score} {version}").replace(f"{score} matches 1", f"{score} matches {version}")
+
 	# Remove the marker if it exists
 	if "#$moduleUpdateList" in init.lines:
 		init.lines.remove("#$moduleUpdateList")
-
-	manifest = ctx.cache["gm4_manifest"].json
-	modules = manifest["modules"]
 
 	# Append the module update list regardless if the marker existed
 	init.lines.append("# Module update list")
 	init.lines.append("data remove storage gm4:log queue[{type:'outdated'}]")
 	for m in modules.values():
-		version = sum(map(lambda x,y: int(x)*y, m["version"].split("."), (100_000, 1_000, 1)))
+		version = semver_to_int(m["version"])
 		init.lines.append(f"execute if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}'}}")
