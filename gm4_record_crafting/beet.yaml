@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_record_crafting
 name: Record Crafting
+version: 1.0.X
 
 pipeline:
   - directory: '../lib_machines'

@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_block_compressors
 name: Block Compressors
+version: 1.1.X
 
 pipeline:
   - directory: '../lib_machines'

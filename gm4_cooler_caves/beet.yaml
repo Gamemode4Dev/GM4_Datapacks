@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_cooler_caves
 name: Cooler Caves
+version: 2.0.X
 
 pipeline:
   - data_pack:

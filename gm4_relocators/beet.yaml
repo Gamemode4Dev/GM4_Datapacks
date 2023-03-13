@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_relocators
 name: Relocators
+version: 2.0.X
 
 pipeline:
   - directory: '../lib_machines'

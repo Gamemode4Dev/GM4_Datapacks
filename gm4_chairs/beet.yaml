@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_chairs
 name: Chairs
+version: 1.0.X
 
 pipeline:
   - data_pack:

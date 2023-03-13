@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_liquid_minecarts
 name: Liquid Minecarts
+version: 1.2.X
 
 pipeline:
   - directory: '../lib_machines'

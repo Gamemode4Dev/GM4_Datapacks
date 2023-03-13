@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_boots_of_ostara
 name: Boots of Ostara
+version: 1.3.X
 
 pipeline:
   - directory: '../lib_machines'

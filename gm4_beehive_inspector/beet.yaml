@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_beehive_inspector
 name: Beehive Inspector
+version: 1.0.X
 
 pipeline:
   - data_pack:

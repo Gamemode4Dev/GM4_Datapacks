@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_tower_structures
 name: Tower Structures
+version: 2.0.X
 
 pipeline:
   - data_pack:

@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_cement_mixers
 name: Cement Mixers
+version: 1.0.X
 
 pipeline:
   - data_pack:

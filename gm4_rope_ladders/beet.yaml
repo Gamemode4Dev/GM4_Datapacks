@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_rope_ladders
 name: Rope Ladders
+version: 1.0.X
 
 pipeline:
   - data_pack:

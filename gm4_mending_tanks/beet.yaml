@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_mending_tanks
 name: Mending Tanks
+version: 1.1.X
 
 pipeline:
   - data_pack:

@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_smelteries
 name: Smelteries
+version: 1.3.X
 
 pipeline:
   - directory: '../lib_machines'

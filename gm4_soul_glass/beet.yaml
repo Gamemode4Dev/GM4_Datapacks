@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_soul_glass
 name: Soul Glass
+version: 1.0.X
 
 pipeline:
   - directory: '../lib_machines'

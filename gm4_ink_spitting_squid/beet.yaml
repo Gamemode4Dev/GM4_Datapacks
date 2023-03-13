@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_ink_spitting_squid
 name: Ink Spitting Squid
+version: 1.1.X
 
 pipeline:
   - data_pack:

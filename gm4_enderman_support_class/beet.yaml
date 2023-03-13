@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_enderman_support_class
 name: Enderman Support Class
+version: 1.2.X
 
 pipeline:
   - data_pack:

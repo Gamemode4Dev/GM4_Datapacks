@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_pig_tractors
 name: Pig Tractors
+version: 1.3.X
 
 pipeline:
   - data_pack:

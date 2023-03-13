@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_phantom_scarecrows
 name: Phantom Scarecrows
+version: 1.0.X
 
 pipeline:
   - data_pack:

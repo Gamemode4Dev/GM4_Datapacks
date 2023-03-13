@@ -1,5 +1,6 @@
 id: gm4_brewing
 name: Gamemode 4 Brewing
+version: 1.0.0
 
 pipeline:
   - data_pack:

@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_audere_shamir
 name: Audere Shamir
+version: 1.0.X
 
 pipeline:
   - data_pack:

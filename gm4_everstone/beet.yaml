@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_everstone
 name: Everstone
+version: 1.0.X
 
 pipeline:
   - data_pack:

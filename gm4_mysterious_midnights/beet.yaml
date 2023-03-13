@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_mysterious_midnights
 name: Mysterious Midnights
+version: 1.1.X
 
 pipeline:
   - directory: '../lib_forceload'

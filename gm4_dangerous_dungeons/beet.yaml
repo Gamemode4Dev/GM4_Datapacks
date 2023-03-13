@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_dangerous_dungeons
 name: Dangerous Dungeons
+version: 2.0.X
 
 pipeline:
   - data_pack:

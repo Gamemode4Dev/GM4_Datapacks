@@ -1,3 +1,5 @@
 pipeline:
   - data_pack:
       load: .
+
+version: 1.2.0

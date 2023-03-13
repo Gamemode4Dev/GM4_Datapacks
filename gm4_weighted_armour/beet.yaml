@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_weighted_armour
 name: Weighted Armour
+version: 1.3.X
 
 pipeline:
   - data_pack:

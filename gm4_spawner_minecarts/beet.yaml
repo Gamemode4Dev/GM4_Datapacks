@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_spawner_minecarts
 name: Spawner Minecarts
+version: 2.2.X
 
 pipeline:
   - data_pack:

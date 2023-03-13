@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_liquid_tanks
 name: Liquid Tanks
+version: 2.1.X
 
 pipeline:
   - directory: '../lib_machines'
