@@ -16,13 +16,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Auto Crafter",
-                    {
-                      "translate": "block.gm4.auto_crafter"
-                    }
-                  ],
+                  "translate": "block.gm4.auto_crafter",
+                  "fallback": "Auto Crafter",
                   "color": "white",
                   "italic": false
                 }

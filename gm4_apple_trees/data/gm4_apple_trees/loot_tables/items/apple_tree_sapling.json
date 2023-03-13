@@ -11,13 +11,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Apple Tree Sapling",
-                                    {
-                                        "translate": "item.gm4.apple_tree_sapling"
-                                    }
-                                ],
+                                "translate": "item.gm4.apple_tree_sapling",
+                                "fallback": "Apple Tree Sapling",
                                 "italic": false,
                                 "color": "white"
                             }

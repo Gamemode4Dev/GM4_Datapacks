@@ -11,13 +11,8 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Bismutite Lump",
-                  {
-                    "translate": "item.gm4.metallurgy.bismutite_lump"
-                  }
-                ],
+                "translate": "item.gm4.metallurgy.bismutite_lump",
+                "fallback": "Bismutite Lump",
                 "italic": false,
                 "color": "white"
               }
@@ -38,79 +33,44 @@
                     "color": "gray"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "B",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.red"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.red",
+                    "fallback": "B",
                     "italic": false,
                     "color": "#F47989"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "i",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.orange"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.orange",
+                    "fallback": "i",
                     "italic": false,
                     "color": "#F5B478"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "s",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.yellow"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.yellow",
+                    "fallback": "s",
                     "italic": false,
                     "color": "#F5DD79"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "m",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.green"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.green",
+                    "fallback": "m",
                     "italic": false,
                     "color": "#78F4AE"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "u",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.blue"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.blue",
+                    "fallback": "u",
                     "italic": false,
                     "color": "#79D6F5"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "t",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.purple"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.purple",
+                    "fallback": "t",
                     "italic": false,
                     "color": "#8378F5"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "h",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.magenta"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.magenta",
+                    "fallback": "h",
                     "italic": false,
                     "color": "#D579F5"
                   }

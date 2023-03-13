@@ -15,13 +15,8 @@
                         {
                             "function": "set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Glow Ink Bottle",
-                                    {
-                                        "translate": "item.gm4.glow_ink_bottle"
-                                    }
-                                ],
+                                "translate": "item.gm4.glow_ink_bottle",
+                                "fallback": "Glow Ink Bottle",
                                 "italic": false
                             }
                         }

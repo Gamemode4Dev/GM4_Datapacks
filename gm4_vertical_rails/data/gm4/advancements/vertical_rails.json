@@ -5,22 +5,12 @@
       "nbt": "{CustomModelData:3420001}"
     },
     "title": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Up, Up and Away!",
-        {
-          "translate": "advancement.gm4.vertical_rails.title"
-        }
-      ]
+      "translate": "advancement.gm4.vertical_rails.title",
+      "fallback": "Up, Up and Away!"
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Ride a minecart going up a vertical rail",
-        {
-          "translate": "advancement.gm4.vertical_rails.description"
-        }
-      ],
+      "translate": "advancement.gm4.vertical_rails.description",
+      "fallback": "Ride a minecart going up a vertical rail",
       "color": "gray"
     }
   },

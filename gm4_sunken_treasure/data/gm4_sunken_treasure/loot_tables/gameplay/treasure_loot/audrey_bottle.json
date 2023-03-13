@@ -16,13 +16,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -61,13 +56,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -91,24 +81,14 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "sunk by a lily-pad and now I'm",
-                    {
-                      "translate": "text.gm4.dearest_audrey.2.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.2.2",
+                  "fallback": "sunk by a lily-pad and now I'm",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "stuck on this island.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.2.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.2.3",
+                  "fallback": "stuck on this island.",
                   "color": "gray",
                   "italic": false
                 }
@@ -128,13 +108,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -158,79 +133,44 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "your name, nor do I know you, but I",
-                    {
-                      "translate": "text.gm4.dearest_audrey.3.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.3.2",
+                  "fallback": "your name, nor do I know you, but I",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "do know that I love you, I feel like I",
-                    {
-                      "translate": "text.gm4.dearest_audrey.3.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.3.3",
+                  "fallback": "do know that I love you, I feel like I",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "have a mutual connection. After",
-                    {
-                      "translate": "text.gm4.dearest_audrey.3.4"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.3.4",
+                  "fallback": "have a mutual connection. After",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "you ordered the pizza with cheezy",
-                    {
-                      "translate": "text.gm4.dearest_audrey.3.5"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.3.5",
+                  "fallback": "you ordered the pizza with cheezy",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "crust and pinapple I just lost it. Oh",
-                    {
-                      "translate": "text.gm4.dearest_audrey.3.6"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.3.6",
+                  "fallback": "crust and pinapple I just lost it. Oh",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "no Clair you got shot... I mean Audrey.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.3.7"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.3.7",
+                  "fallback": "no Clair you got shot... I mean Audrey.",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "I don't mind that you're chunky",
-                    {
-                      "translate": "text.gm4.dearest_audrey.3.8"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.3.8",
+                  "fallback": "I don't mind that you're chunky",
                   "color": "gray",
                   "italic": false
                 }
@@ -250,13 +190,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -280,46 +215,26 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "to the ocean, all I hear is your",
-                    {
-                      "translate": "text.gm4.dearest_audrey.4.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.4.2",
+                  "fallback": "to the ocean, all I hear is your",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "snoring and I can't sleep. Please",
-                    {
-                      "translate": "text.gm4.dearest_audrey.4.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.4.3",
+                  "fallback": "snoring and I can't sleep. Please",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "silence your snoring... please, I",
-                    {
-                      "translate": "text.gm4.dearest_audrey.4.4"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.4.4",
+                  "fallback": "silence your snoring... please, I",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "need sleep.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.4.5"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.4.5",
+                  "fallback": "need sleep.",
                   "color": "gray",
                   "italic": false
                 }
@@ -339,13 +254,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -369,35 +279,20 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "day going? I'm good, BUT I'VE",
-                    {
-                      "translate": "text.gm4.dearest_audrey.5.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.5.2",
+                  "fallback": "day going? I'm good, BUT I'VE",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "BEEN STRANDED FOR 20 YEARS!",
-                    {
-                      "translate": "text.gm4.dearest_audrey.5.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.5.3",
+                  "fallback": "BEEN STRANDED FOR 20 YEARS!",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Thanks for your response.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.5.4"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.5.4",
+                  "fallback": "Thanks for your response.",
                   "color": "gray",
                   "italic": false
                 }
@@ -417,13 +312,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -447,35 +337,20 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "in the middle of nowhere,",
-                    {
-                      "translate": "text.gm4.dearest_audrey.6.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.6.2",
+                  "fallback": "in the middle of nowhere,",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "surrounded by things that",
-                    {
-                      "translate": "text.gm4.dearest_audrey.6.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.6.3",
+                  "fallback": "surrounded by things that",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "aren't cubic.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.6.4"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.6.4",
+                  "fallback": "aren't cubic.",
                   "color": "gray",
                   "italic": false
                 }
@@ -495,13 +370,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -525,24 +395,14 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "wait, no... is it Denise? ...Anyway,",
-                    {
-                      "translate": "text.gm4.dearest_audrey.7.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.7.2",
+                  "fallback": "wait, no... is it Denise? ...Anyway,",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "I love you.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.7.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.7.3",
+                  "fallback": "I love you.",
                   "color": "gray",
                   "italic": false
                 }
@@ -562,13 +422,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -592,35 +447,20 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "run out of clean water, if you could",
-                    {
-                      "translate": "text.gm4.dearest_audrey.8.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.8.2",
+                  "fallback": "run out of clean water, if you could",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "return this bottle with something to",
-                    {
-                      "translate": "text.gm4.dearest_audrey.8.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.8.3",
+                  "fallback": "return this bottle with something to",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "drink that would be wonderful.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.8.4"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.8.4",
+                  "fallback": "drink that would be wonderful.",
                   "color": "gray",
                   "italic": false
                 }
@@ -640,13 +480,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -670,24 +505,14 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "internet so I am sending you",
-                    {
-                      "translate": "text.gm4.dearest_audrey.9.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.9.2",
+                  "fallback": "internet so I am sending you",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "a bottle.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.9.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.9.3",
+                  "fallback": "a bottle.",
                   "color": "gray",
                   "italic": false
                 }
@@ -707,13 +532,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -737,24 +557,14 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "phone number; bottled messages",
-                    {
-                      "translate": "text.gm4.dearest_audrey.10.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.10.2",
+                  "fallback": "phone number; bottled messages",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "are hard to make!",
-                    {
-                      "translate": "text.gm4.dearest_audrey.10.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.10.3",
+                  "fallback": "are hard to make!",
                   "color": "gray",
                   "italic": false
                 }
@@ -774,13 +584,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -804,35 +609,20 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "on a barren island.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.11.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.11.2",
+                  "fallback": "on a barren island.",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "An enderdragon took me here,",
-                    {
-                      "translate": "text.gm4.dearest_audrey.11.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.11.3",
+                  "fallback": "An enderdragon took me here,",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "please rescue me.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.11.4"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.11.4",
+                  "fallback": "please rescue me.",
                   "color": "gray",
                   "italic": false
                 }
@@ -852,13 +642,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -897,13 +682,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -927,35 +707,20 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "seems to only point in the direction of our love,",
-                    {
-                      "translate": "text.gm4.dearest_audrey.13.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.13.2",
+                  "fallback": "seems to only point in the direction of our love,",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "but that seems to have vanished long ago.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.13.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.13.3",
+                  "fallback": "but that seems to have vanished long ago.",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Please, get help, even if it's the last thing you do.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.13.4"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.13.4",
+                  "fallback": "Please, get help, even if it's the last thing you do.",
                   "color": "gray",
                   "italic": false
                 }
@@ -975,13 +740,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -1005,35 +765,20 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "be my last attempt at finding help.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.14.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.14.2",
+                  "fallback": "be my last attempt at finding help.",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "I just want you to know... I always... loved...",
-                    {
-                      "translate": "text.gm4.dearest_audrey.14.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.14.3",
+                  "fallback": "I just want you to know... I always... loved...",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "your sister.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.14.4"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.14.4",
+                  "fallback": "your sister.",
                   "color": "gray",
                   "italic": false
                 }
@@ -1053,13 +798,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -1083,46 +823,26 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "and after several attempts to find food,",
-                    {
-                      "translate": "text.gm4.dearest_audrey.15.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.15.2",
+                  "fallback": "and after several attempts to find food,",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "shelter, or even enough water... I'm giving up.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.15.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.15.3",
+                  "fallback": "shelter, or even enough water... I'm giving up.",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Tell my family I love them, but most importantly,",
-                    {
-                      "translate": "text.gm4.dearest_audrey.15.4"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.15.4",
+                  "fallback": "Tell my family I love them, but most importantly,",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Audrey, I love you.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.15.5"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.15.5",
+                  "fallback": "Audrey, I love you.",
                   "color": "gray",
                   "italic": false
                 }
@@ -1142,13 +862,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -1172,57 +887,32 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "you are - play along. I don't have any",
-                    {
-                      "translate": "text.gm4.dearest_audrey.16.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.16.2",
+                  "fallback": "you are - play along. I don't have any",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "money. I burned it all trying to make a",
-                    {
-                      "translate": "text.gm4.dearest_audrey.16.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.16.3",
+                  "fallback": "money. I burned it all trying to make a",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "fire. But I can tell you I've developed",
-                    {
-                      "translate": "text.gm4.dearest_audrey.16.4"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.16.4",
+                  "fallback": "fire. But I can tell you I've developed",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "a very particular set of skills. Skills",
-                    {
-                      "translate": "text.gm4.dearest_audrey.16.5"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.16.5",
+                  "fallback": "a very particular set of skills. Skills",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "that'll make Bear Grylls quake in his boots.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.16.6"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.16.6",
+                  "fallback": "that'll make Bear Grylls quake in his boots.",
                   "color": "gray",
                   "italic": false
                 }
@@ -1242,13 +932,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -1272,24 +957,14 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "If you find my head, hang it on the",
-                    {
-                      "translate": "text.gm4.dearest_audrey.17.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.17.2",
+                  "fallback": "If you find my head, hang it on the",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "wall of fame.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.17.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.17.3",
+                  "fallback": "wall of fame.",
                   "color": "gray",
                   "italic": false
                 }
@@ -1309,13 +984,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -1339,35 +1009,20 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "is immensely terrible, painful and sad.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.18.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.18.2",
+                  "fallback": "is immensely terrible, painful and sad.",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Getting away from you just didn't",
-                    {
-                      "translate": "text.gm4.dearest_audrey.18.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.18.3",
+                  "fallback": "Getting away from you just didn't",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "improve anything.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.18.4"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.18.4",
+                  "fallback": "improve anything.",
                   "color": "gray",
                   "italic": false
                 }
@@ -1387,13 +1042,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -1417,46 +1067,26 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "made from native plants and ink",
-                    {
-                      "translate": "text.gm4.dearest_audrey.19.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.19.2",
+                  "fallback": "made from native plants and ink",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "from a squid I wrangled. I like it here.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.19.3"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.19.3",
+                  "fallback": "from a squid I wrangled. I like it here.",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "I found a dungeon. I'm setting up a mob",
-                    {
-                      "translate": "text.gm4.dearest_audrey.19.4"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.19.4",
+                  "fallback": "I found a dungeon. I'm setting up a mob",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "grinder and never coming home.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.19.5"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.19.5",
+                  "fallback": "grinder and never coming home.",
                   "color": "gray",
                   "italic": false
                 }
@@ -1476,13 +1106,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Message in a Bottle",
-                  {
-                    "translate": "item.gm4.message_in_a_bottle"
-                  }
-                ],
+                "translate": "item.gm4.message_in_a_bottle",
+                "fallback": "Message in a Bottle",
                 "italic": false
               }
             },
@@ -1506,13 +1131,8 @@
                   "italic": false
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "for logs doesn't work in real life.",
-                    {
-                      "translate": "text.gm4.dearest_audrey.20.2"
-                    }
-                  ],
+                  "translate": "text.gm4.dearest_audrey.20.2",
+                  "fallback": "for logs doesn't work in real life.",
                   "color": "gray",
                   "italic": false
                 }

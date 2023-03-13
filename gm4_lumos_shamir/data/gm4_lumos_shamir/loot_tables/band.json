@@ -16,13 +16,8 @@
 							"replace": false,
 							"lore": [
 								{
-									"translate": "%1$s%3427655$s",
-									"with": [
-										"Lumos",
-										{
-											"translate": "item.gm4.shamir.lumos"
-										}
-									],
+									"translate": "item.gm4.shamir.lumos",
+									"fallback": "Lumos",
 									"italic": false,
 									"color": "gray"
 								}

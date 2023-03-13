@@ -5,22 +5,12 @@
       "nbt": "{CustomModelData:3420001}"
     },
     "title": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Risen",
-        {
-          "translate": "advancement.gm4.undead_players.title"
-        }
-      ]
+      "translate": "advancement.gm4.undead_players.title",
+      "fallback": "Risen"
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Die and raise up an undead zombie in your body's place",
-        {
-          "translate": "advancement.gm4.undead_players.description"
-        }
-      ],
+      "translate": "advancement.gm4.undead_players.description",
+      "fallback": "Die and raise up an undead zombie in your body's place",
       "color": "gray"
     }
   },

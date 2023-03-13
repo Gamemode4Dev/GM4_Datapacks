@@ -14,13 +14,8 @@
       ]
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Obtain a Minecart with Piston",
-        {
-          "translate": "advancement.gm4.tunnel_bores.description"
-        }
-      ],
+      "translate": "advancement.gm4.tunnel_bores.description",
+      "fallback": "Obtain a Minecart with Piston",
       "color": "gray"
     }
   },

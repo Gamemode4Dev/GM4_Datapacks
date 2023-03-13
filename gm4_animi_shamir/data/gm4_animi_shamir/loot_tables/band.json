@@ -16,13 +16,8 @@
 							"replace": false,
 							"lore": [
 								{
-									"translate": "%1$s%3427655$s",
-									"with": [
-										"Animi",
-										{
-											"translate": "item.gm4.shamir.animi"
-										}
-									],
+									"translate": "item.gm4.shamir.animi",
+									"fallback": "Animi",
 									"italic": false,
 									"color": "gray"
 								}
