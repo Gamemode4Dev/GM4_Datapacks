@@ -15,4 +15,5 @@ execute unless score $cooldown gm4_creative matches 0.. run scoreboard players s
 execute unless score $global_cooldown gm4_creative matches 0.. run scoreboard players set $global_cooldown gm4_creative 10
 
 execute unless score gm4 gm4_modules matches 1.. run data modify storage gm4:log queue append value {type:"text",message:'{"text":"[GM4]: Welcome to Gamemode 4. Initialising...","color":"green"}'}
+execute unless score gm4 gm4_modules matches 1.. run schedule function gm4_intro_song:init_song 2s
 execute unless score gm4 gm4_modules matches 1.. run scoreboard players set gm4 gm4_modules 1
