@@ -135,6 +135,7 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 	"""Attempts to publish pack to smithed"""
 	smithed = ctx.meta.get("smithed", None)
 	auth_token = os.getenv(SMITHED_AUTH_KEY, None)
+	mc_version_dir = os.getenv("VERSION", "1.19")
 	if smithed and auth_token and ctx.project_version:
 		version = version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
 		smithed_id = smithed["pack_id"]
@@ -166,7 +167,7 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 		    params={'token': auth_token, 'version': version},
 			json={"data":{
 				"downloads":{
-					"datapack": f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/{SUPPORTED_GAME_VERSIONS[0]}/{file_name}",
+					"datapack": f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/{mc_version_dir}/{file_name}",
 					"resourcepack": ""
 				},
 				"name": version,
@@ -177,7 +178,7 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 		if not (200 <= res.status_code < 300):
 			print(f"[GM4] [Smithed] Failed to publish new version: {res.status_code} {res.text}")
 			return
-		print(f"[GM4] [Smithed] {res.text}") # TODO
+		print(f"[GM4] [Smithed] {res.text}")
 
 
 
