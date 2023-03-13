@@ -1,5 +1,5 @@
 {
-  "last_commit": "b3827707540e3431cf29ca38ffa87e7befb47e80",
+  "last_commit": "2a0db6345887bf6f7a93e3cc0efdcd9889073f72",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1590,7 +1590,7 @@
       "modrinth_id": null,
       "smithed_link": null,
       "pmc_link": null,
-      "patch": 19009
+      "patch": 19010
     },
     {
       "id": "gm4_rope_ladders",
