@@ -1,5 +1,19 @@
-{
+[
+  {
+    "condition": "minecraft:alternative",
+    "terms": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.333
+      },
+      {
+        "condition": "minecraft:weather_check",
+        "raining": true
+      }
+    ]
+  },
+  {
     "condition": "minecraft:random_chance",
-    "chance": 0.25
+    "chance": 0.75
   }
-  
+]

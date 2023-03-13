@@ -61,7 +61,6 @@
     "*gm4_cement_mixers.*": true,
     "*gm4_chairs": true,
     "*gm4_chairs.*": true,
-    "*gm4_combat_expanded": true,
     "*gm4_combat_expanded.*": true,
     "*gm4_cooler_caves": true,
     "*gm4_cooler_caves.*": true,
@@ -226,6 +225,7 @@
     "*pyproject.*": true,
     "*README": true,
     "*README.*": true,
-    ".beet_cache": true
+    ".beet_cache": true,
+    "gm4_combat_expanded": true
   }
 }

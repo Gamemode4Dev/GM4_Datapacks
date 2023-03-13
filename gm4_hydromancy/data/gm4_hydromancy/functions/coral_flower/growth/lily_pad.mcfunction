@@ -16,7 +16,7 @@ execute if block ~ ~ ~-1 #gm4:air if block ~ ~-1 ~-1 #gm4:water run summon marke
 # only stop raycast if growth is possible
 execute if entity @e[type=marker,tag=gm4_hy_possible_lily_pad] run scoreboard players set $raycast_limit gm4_hy_data 0
 
-# 25% chance to grow lily pads, 1-3x depending on size of current cluster
+# 25% chance to grow lily pads (75% in rain), 1-3x depending on size of current cluster
 execute store result score $lily_pad_count gm4_hy_data run clone ~-1 ~ ~-1 ~1 ~ ~1 ~-1 ~ ~-1 filtered lily_pad move
 execute if predicate gm4_hydromancy:chance/lily_pad_growth at @e[type=marker,tag=gm4_hy_possible_lily_pad,limit=1,sort=random] run setblock ~ ~ ~ lily_pad
 execute if score $lily_pad_count gm4_hy_data matches 4.. if predicate gm4_hydromancy:chance/lily_pad_growth at @e[type=marker,tag=gm4_hy_possible_lily_pad,limit=1,sort=random] run setblock ~ ~ ~ lily_pad
