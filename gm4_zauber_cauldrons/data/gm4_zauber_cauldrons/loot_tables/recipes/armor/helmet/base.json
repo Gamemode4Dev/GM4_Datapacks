@@ -10,15 +10,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Zauber Helmet",
-                                    [
-                                        {
-                                            "translate": "item.gm4.zauber_cauldrons.zauber_armor.helmet"
-                                        }
-                                    ]
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.zauber_armor.helmet",
+                                "fallback": "Zauber Helmet",
                                 "italic": false
                             }
                         },

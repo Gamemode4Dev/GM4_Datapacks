@@ -10,15 +10,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Zauber Boots",
-                                    [
-                                        {
-                                            "translate": "item.gm4.zauber_cauldrons.zauber_armor.boots"
-                                        }
-                                    ]
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.zauber_armor.boots",
+                                "fallback": "Zauber Boots",
                                 "italic": false
                             }
                         },

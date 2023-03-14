@@ -10,15 +10,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Zauber Leggings",
-                                    [
-                                        {
-                                            "translate": "item.gm4.zauber_cauldrons.zauber_armor.leggings"
-                                        }
-                                    ]
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.zauber_armor.leggings",
+                                "fallback": "Zauber Leggings",
                                 "italic": false
                             }
                         },

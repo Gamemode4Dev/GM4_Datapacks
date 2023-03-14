@@ -23,16 +23,12 @@
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
+                                    "translate": "item.gm4.metallurgy.band",
+                                    "fallback": "%s Band",
                                     "with": [
-                                        "Barium Band",
                                         {
-                                            "translate": "item.gm4.metallurgy.band",
-                                            "with": [
-                                                {
-                                                    "translate": "item.gm4.metallurgy.barium"
-                                                }
-                                            ]
+                                            "translate": "item.gm4.metallurgy.barium",
+                                            "fallback": "Barium"
                                         }
                                     ],
                                     "italic": false,

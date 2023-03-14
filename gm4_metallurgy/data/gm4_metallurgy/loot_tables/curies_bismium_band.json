@@ -23,16 +23,12 @@
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
+                                    "translate": "item.gm4.metallurgy.band",
+                                    "fallback": "%s Band",
                                     "with": [
-                                        "Curie's Bismium Band",
                                         {
-                                            "translate": "item.gm4.metallurgy.band",
-                                            "with": [
-                                                {
-                                                    "translate": "item.gm4.metallurgy.curies_bismium"
-                                                }
-                                            ]
+                                            "translate": "item.gm4.metallurgy.curies_bismium",
+                                            "fallback": "Curie's Bismium"
                                         }
                                     ],
                                     "italic": false,

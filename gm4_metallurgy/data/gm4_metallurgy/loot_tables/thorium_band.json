@@ -23,16 +23,12 @@
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
+                                    "translate": "item.gm4.metallurgy.band",
+                                    "fallback": "%s Band",
                                     "with": [
-                                        "Thorium Band",
                                         {
-                                            "translate": "item.gm4.metallurgy.band",
-                                            "with": [
-                                                {
-                                                    "translate": "item.gm4.metallurgy.thorium"
-                                                }
-                                            ]
+                                            "translate": "item.gm4.metallurgy.thorium",
+                                            "fallback": "Thorium"
                                         }
                                     ],
                                     "italic": false,

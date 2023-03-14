@@ -22,22 +22,15 @@
                         {
                             "function": "minecraft:set_lore",
                             "lore": [
-                                [
-                                    {
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            "Tier 2",
-                                            {
-                                                "translate": "item.gm4.heart_canister.lore.tier",
-                                                "with": [
-                                                    "2"
-                                                ]
-                                            }
-                                        ],
-                                        "italic": false,
-                                        "color": "gray"
-                                    }
-                                ]
+                                {
+                                    "translate": "item.gm4.heart_canister.lore.tier",
+                                    "fallback": "Tier %s",
+                                    "with": [
+                                        "2"
+                                    ],
+                                    "italic": false,
+                                    "color": "gray"
+                                }
                             ],
                             "replace": false
                         }

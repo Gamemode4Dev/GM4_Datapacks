@@ -23,16 +23,12 @@
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
+                                    "translate": "item.gm4.metallurgy.band",
+                                    "fallback": "%s Band",
                                     "with": [
-                                        "Copper Band",
                                         {
-                                            "translate": "item.gm4.metallurgy.band",
-                                            "with": [
-                                                {
-                                                    "translate": "item.gm4.metallurgy.copper"
-                                                }
-                                            ]
+                                            "translate": "item.gm4.metallurgy.copper",
+                                            "fallback": "Copper"
                                         }
                                     ],
                                     "italic": false,

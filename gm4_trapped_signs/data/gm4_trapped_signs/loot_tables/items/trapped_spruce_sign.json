@@ -14,16 +14,11 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
+                "translate": "item.gm4.trapped_sign",
+                "fallback": "Trapped %s",
                 "with": [
-                  "Trapped Spruce Sign",
                   {
-                    "translate": "item.gm4.trapped_sign",
-                    "with": [
-                      {
-                        "translate": "item.minecraft.spruce_sign"
-                      }
-                    ]
+                    "translate": "item.minecraft.spruce_sign"
                   }
                 ],
                 "italic": false

@@ -12,25 +12,12 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "translate": "%1$s%3427655$s",
+                "translate": "entity.gm4.drowned_player_name",
+                "fallback": "Drowned %s",
                 "with": [
                   {
-                    "text": "Drowned ",
-                    "extra": [
-                      {
-                        "storage": "gm4_undead_players:temp",
-                        "nbt": "name_attribute.Name"
-                      }
-                    ]
-                  },
-                  {
-                    "translate": "entity.gm4.drowned_player_name",
-                    "with": [
-                      {
-                        "storage": "gm4_undead_players:temp",
-                        "nbt": "name_attribute.Name"
-                      }
-                    ]
+                    "storage": "gm4_undead_players:temp",
+                    "nbt": "name_attribute.Name"
                   }
                 ]
               }
