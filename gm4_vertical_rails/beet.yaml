@@ -10,10 +10,11 @@ pipeline:
 
 meta:
   gm4:
-    description: Use ladders as vertical Minecart tracks.
+    website:
+      description: Use ladders as vertical Minecart tracks.
+      recommended: []
+      notes: []
     required: []
-    recommended: []
-    notes: []
     video: https://www.youtube.com/watch?v=LJoN7CmJL4Q
     wiki: https://wiki.gm4.co/wiki/Vertical_Rails
     credits:

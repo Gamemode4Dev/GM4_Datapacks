@@ -14,10 +14,11 @@ pipeline:
 
 meta:
   gm4:
-    description: Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!
+    website:
+      description: Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!
+      recommended: []
+      notes: []
     required: []
-    recommended: []
-    notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/TNT_Landmines
     credits:

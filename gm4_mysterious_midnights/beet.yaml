@@ -12,11 +12,12 @@ pipeline:
 
 meta:
   gm4:
-    description: Full moons gain a element of surprise with Myserious Midnights! This module adds random events during full moons. You might encounter falling stars, or Skeletons wielding poisonous arrows! So you better listen for that howl...
+    website:
+      description: Full moons gain a element of surprise with Myserious Midnights! This module adds random events during full moons. You might encounter falling stars, or Skeletons wielding poisonous arrows! So you better listen for that howl...
+      recommended:
+        - gm4_midnight_menaces
+      notes: []
     required: []
-    recommended:
-      - gm4_midnight_menaces
-    notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Mysterious_Midnights
     credits:

@@ -10,10 +10,11 @@ pipeline:
 
 meta:
   gm4:
-    description: Adds a handy tooltip to Beehive items, telling you exactly how many bees and how much honey is stored inside! A beekeepers' dream!
+    website:
+      description: Adds a handy tooltip to Beehive items, telling you exactly how many bees and how much honey is stored inside! A beekeepers' dream!
+      recommended: []
+      notes: []
     required: []
-    recommended: []
-    notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Beehive_Inspector
     credits:

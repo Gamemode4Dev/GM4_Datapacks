@@ -10,13 +10,14 @@ pipeline:
 
 meta:
   gm4:
-    description: A custom terrain expansion pack that adds four new tower structures to the world.
+    website:
+      description: A custom terrain expansion pack that adds four new tower structures to the world.
+      recommended:
+        - gm4_dangerous_dungeons
+        - gm4_cooler_caves
+      notes: []
     required:
       - gm4_orbis
-    recommended:
-      - gm4_dangerous_dungeons
-      - gm4_cooler_caves
-    notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Orbis/Tower_Structures
     credits:

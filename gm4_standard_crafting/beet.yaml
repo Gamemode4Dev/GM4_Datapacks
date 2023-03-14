@@ -12,10 +12,11 @@ pipeline:
 
 meta:
   gm4:
-    description: A crafting recipe pack that adds some nifty new recipes to the game.
+    website:
+      description: A crafting recipe pack that adds some nifty new recipes to the game.
+      recommended: []
+      notes: []
     required: []
-    recommended: []
-    notes: []
     video: https://www.youtube.com/watch?v=_GekIoefncg
     wiki: https://wiki.gm4.co/wiki/Standard_Crafting
     credits:

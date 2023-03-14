@@ -14,15 +14,20 @@ pipeline:
 
 meta:
   gm4:
-    description: Bottle and harness the power of lightning using Brewing Stands! Lightning in a Bottle comes in splash and lingering variants, too.
-    required: []
-    recommended:
-      - gm4_resource_pack
-      - gm4_liquid_tanks
-      - gm4_potion_liquids
-      - gm4_spawner_minecarts
-    notes:
-      - Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.
+    required:
+      - 'lib_potion_tracking : 1.1.0'
+      - 'lib_brewing : 1.2.3'
+      - 'gm4_liquid_tanks : 1.1.0'
+      - 'gm4_potion_liquids : 2.3.0'
+    website:
+      description: Bottle and harness the power of lightning using Brewing Stands! Lightning in a Bottle comes in splash and lingering variants, too.
+      recommended:
+        - gm4_resource_pack
+        - gm4_liquid_tanks
+        - gm4_potion_liquids
+        - gm4_spawner_minecarts
+      notes:
+        - Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.
     video: null
     wiki: https://wiki.gm4.co/wiki/Lightning_in_a_Bottle
     credits:

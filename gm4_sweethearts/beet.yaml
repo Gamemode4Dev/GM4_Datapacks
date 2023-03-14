@@ -10,10 +10,11 @@ pipeline:
 
 meta:
   gm4:
-    description: Transfer your health to another player using flowers.
+    website:
+      description: Transfer your health to another player using flowers.
+      recommended: []
+      notes: []
     required: []
-    recommended: []
-    notes: []
     video: https://www.youtube.com/watch?v=mcopNZzY2dA
     wiki: https://wiki.gm4.co/wiki/Sweethearts
     credits:

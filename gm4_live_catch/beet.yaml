@@ -10,10 +10,11 @@ pipeline:
 
 meta:
   gm4:
-    description: Catch live fish when fishing! But watch out for Pufferfish, those might make for a nasty surprise!
+    website:
+      description: Catch live fish when fishing! But watch out for Pufferfish, those might make for a nasty surprise!
+      recommended: []
+      notes: []
     required: []
-    recommended: []
-    notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Live_Catch
     credits:

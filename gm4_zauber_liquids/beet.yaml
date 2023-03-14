@@ -10,12 +10,13 @@ pipeline:
 
 meta:
   gm4:
-    description: From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!
+    website:
+      description: From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!
+      recommended: []
+      notes: []
     required:
       - gm4_liquid_tanks
       - gm4_zauber_cauldrons
-    recommended: []
-    notes: []
     video: https://www.youtube.com/watch?v=qa9lcbii1BE
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids
     credits:

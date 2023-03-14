@@ -14,12 +14,13 @@ pipeline:
 
 meta:
   gm4:
-    description: Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
+    website:
+      description: Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
+      recommended:
+        - gm4_metallurgy
+      notes:
+        - Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.
     required: []
-    recommended:
-      - gm4_metallurgy
-    notes:
-      - Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.
     video: null
     wiki: https://wiki.gm4.co/wiki/Combat_Expanded
     credits:

@@ -14,11 +14,12 @@ pipeline:
 
 meta:
   gm4:
-    description: Ease ocean exploration with craftable scuba gear!
+    website:
+      description: Ease ocean exploration with craftable scuba gear!
+      recommended:
+        - gm4_sunken_treasure
+      notes: []
     required: []
-    recommended:
-      - gm4_sunken_treasure
-    notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/SCUBA_Gear
     credits:

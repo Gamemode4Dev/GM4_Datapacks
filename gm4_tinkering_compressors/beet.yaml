@@ -12,13 +12,14 @@ pipeline:
 
 meta:
   gm4:
-    description: Automatically compress stacks of items into their block form with a tinker shamir as a machine block, and back.
+    website:
+      description: Automatically compress stacks of items into their block form with a tinker shamir as a machine block, and back.
+      recommended:
+        - gm4_relocators
+      notes: []
     required:
       - gm4_block_compressors
       - gm4_metallurgy
-    recommended:
-      - gm4_relocators
-    notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Tinkering_Compressors
     credits:

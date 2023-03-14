@@ -10,10 +10,11 @@ pipeline:
 
 meta:
   gm4:
-    description: Pick up Spawners and move them wherever you want with Minecarts.
+    website:
+      description: Pick up Spawners and move them wherever you want with Minecarts.
+      recommended: []
+      notes: []
     required: []
-    recommended: []
-    notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Spawner_Minecarts
     credits:

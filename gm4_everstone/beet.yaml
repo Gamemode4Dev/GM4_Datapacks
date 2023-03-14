@@ -10,11 +10,12 @@ pipeline:
 
 meta:
   gm4:
-    description: Collect Everstones during full moons and use them on baby mobs to stop them from aging! But watch out, some other mobs might start aging, too!
+    website:
+      description: Collect Everstones during full moons and use them on baby mobs to stop them from aging! But watch out, some other mobs might start aging, too!
+      recommended:
+        - gm4_resource_pack
+      notes: []
     required: []
-    recommended:
-      - gm4_resource_pack
-    notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Everstone
     credits:

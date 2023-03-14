@@ -10,11 +10,12 @@ pipeline:
 
 meta:
   gm4:
-    description: Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!
+    website:
+      description: Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!
+      recommended:
+        - gm4_boots_of_ostara
+      notes: []
     required: []
-    recommended:
-      - gm4_boots_of_ostara
-    notes: []
     video: https://www.youtube.com/watch?v=wmGaatfekfs
     wiki: https://wiki.gm4.co/wiki/Desire_Lines
     credits:

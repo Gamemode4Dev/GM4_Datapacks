@@ -13,23 +13,24 @@ def create(ctx: Context):
 
 	for m_key in modules:
 		module = modules[m_key]
-		project_file = Path(module["id"]) / "beet.yaml"
+		project_file = Path(m_key) / "beet.yaml"
 		if project_file.exists():
 			# Read all the metadata from the module's beet.yaml file
 			project_config = yaml.safe_load(project_file.read_text())
 			module["name"] = project_config["name"]
 			module["version"] = project_config.get("version", "0.0.0")
 			meta = project_config.get("meta", {}).get("gm4", {})
-			module["description"] = meta["description"]
-			module["requires"] = meta["required"]
-			module["recommends"] = meta["recommended"]
-			module["wiki_link"] = meta["wiki"] or ""
+			website = meta["website"]
 			module["video_link"] = meta["video"] or ""
+			module["wiki_link"] = meta["wiki"] or ""
 			module["credits"] = meta["credits"]
-			if "hidden" in meta and meta["hidden"]:
+			module["requires"] = meta["required"]
+			module["description"] = website["description"]
+			module["recommends"] = website["recommended"]
+			if "hidden" in website and website["hidden"]:
 				module["hidden"] = True
-			if "notes" in meta and len(meta["notes"]) > 0:
-				module["important_note"] = meta["notes"][0]
+			if "notes" in website and len(website["notes"]) > 0:
+				module["important_note"] = website["notes"][0]
 			module["modrinth_id"] = project_config.get("meta", {}).get("modrinth", {}).get("project_id")
 			module["smithed_link"] = project_config.get("meta", {}).get("smithed", {}).get("uid") # NOTE field to be named when smithed api v2 leaves beta
 			module["pmc_link"] = project_config.get("meta", {}).get("planetminecraft", {}).get("uid")
@@ -39,6 +40,19 @@ def create(ctx: Context):
 
 	# If a module doesn't have a valid beet.yaml file don't include it
 	modules = {k:v for k,v in modules.items() if v["id"] is not None}
+
+	# Collect libraries
+	libraries: dict[str, dict[str, Any]] = { p.name:{} for p in sorted(ctx.directory.glob("lib_*")) }
+
+	for l_key in libraries:
+		lib = libraries[l_key]
+		project_file = Path(l_key) / "beet.yaml"
+		if project_file.exists():
+			project_config = yaml.safe_load(project_file.read_text())
+			lib["id"] = project_config["id"]
+			lib["name"] = project_config["name"]
+			lib["version"] = project_config.get("version", "0.0.0")
+			lib["requires"] = project_config.get("meta", {}).get("gm4", {}).get("required", [])
 
 	# Read the contributors metadata
 	contributors_file = Path("contributors.json")
@@ -53,6 +67,7 @@ def create(ctx: Context):
 	new_manifest = {
 		"last_commit": head,
 		"modules": modules,
+		"libraries": libraries,
 		"contributors": contributors
 	}
 	ctx.cache["gm4_manifest"].json = new_manifest
@@ -112,6 +127,7 @@ def write_meta(ctx: Context):
 	manifest_file = release_dir / "meta.json"
 	manifest = ctx.cache["gm4_manifest"].json.copy()
 	manifest["modules"] = list(manifest["modules"].values()) # convert modules dict down to list for backwards compatability
+	manifest.pop("libraries")
 	manifest_file.write_text(json.dumps(manifest, indent=2))
 
 

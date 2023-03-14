@@ -10,12 +10,13 @@ pipeline:
 
 meta:
   gm4:
-    description: Spice up Minecraft's fire mechanics with this module! Flame arrows set fire when they land and burning creepers explode when low on health!
+    website:
+      description: Spice up Minecraft's fire mechanics with this module! Flame arrows set fire when they land and burning creepers explode when low on health!
+      recommended:
+        - gm4_bat_grenades
+        - gm4_enderman_support_class
+      notes: []
     required: []
-    recommended:
-      - gm4_bat_grenades
-      - gm4_enderman_support_class
-    notes: []
     video: https://www.youtube.com/watch?v=J5024LhHuWk
     wiki: https://wiki.gm4.co/wiki/Better_Fire
     credits:

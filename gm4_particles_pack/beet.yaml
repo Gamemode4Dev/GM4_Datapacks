@@ -10,12 +10,13 @@ pipeline:
 
 meta:
   gm4:
-    description: Fireflies to flames, add some pezazz to your projects! Allows you to turn Armour Stands into particle sources that you control!
+    website:
+      description: Fireflies to flames, add some pezazz to your projects! Allows you to turn Armour Stands into particle sources that you control!
+      recommended:
+        - gm4_poses_pack
+      notes: []
     required:
-      - gm4_better_armour_stands
-    recommended:
-      - gm4_poses_pack
-    notes: []
+      - 'gm4_better_armour_stands : 1.2.0'
     video: https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=238s
     wiki: https://wiki.gm4.co/wiki/Particles_Pack
     credits:

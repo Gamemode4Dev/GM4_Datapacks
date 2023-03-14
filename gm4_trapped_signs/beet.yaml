@@ -12,10 +12,11 @@ pipeline:
 
 meta:
   gm4:
-    description: Craft trapped signs in a Custom Crafter which, when right-clicked, give off a redstone signal.
+    website:
+      description: Craft trapped signs in a Custom Crafter which, when right-clicked, give off a redstone signal.
+      recommended: []
+      notes: []
     required: []
-    recommended: []
-    notes: []
     video: https://www.youtube.com/watch?v=IeHYiy5GTeQ
     wiki: https://wiki.gm4.co/wiki/Trapped_Signs
     credits:

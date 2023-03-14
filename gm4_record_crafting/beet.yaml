@@ -12,11 +12,14 @@ pipeline:
 
 meta:
   gm4:
-    description: A crafting recipe pack that lets you craft all the records in a Custom Crafter.
-    required: []
-    recommended:
-      - gm4_standard_crafting
-    notes: []
+    required: ['lib_machines:1.2.0']
+    clocks: "gm4_my_function"
+
+    website:
+      description: A crafting recipe pack that lets you craft all the records in a Custom Crafter.
+      recommended:
+        - gm4_standard_crafting
+      notes: []
     video: https://www.youtube.com/watch?v=_GekIoefncg
     wiki: https://wiki.gm4.co/wiki/Record_Crafting
     credits:

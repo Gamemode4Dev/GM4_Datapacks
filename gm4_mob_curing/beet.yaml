@@ -12,12 +12,13 @@ pipeline:
 
 meta:
   gm4:
-    description: Revert mooshrooms, pigmen and witches back to their previous forms.
+    website:
+      description: Revert mooshrooms, pigmen and witches back to their previous forms.
+      recommended:
+        - gm4_lightning_in_a_bottle
+        - gm4_shroomites
+      notes: []
     required: []
-    recommended:
-      - gm4_lightning_in_a_bottle
-      - gm4_shroomites
-    notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Mob_Curing
     credits:

@@ -12,16 +12,17 @@ pipeline:
 
 meta:
   gm4:
-    description: Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!
+    website:
+      description: Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!
+      recommended:
+        - gm4_resource_pack
+        - gm4_potion_liquids
+        - gm4_zauber_liquids
+        - gm4_liquid_minecarts
+        - gm4_cement_mixers
+        - gm4_relocators
+      notes: []
     required: []
-    recommended:
-      - gm4_resource_pack
-      - gm4_potion_liquids
-      - gm4_zauber_liquids
-      - gm4_liquid_minecarts
-      - gm4_cement_mixers
-      - gm4_relocators
-    notes: []
     video: https://www.youtube.com/watch?v=qa9lcbii1BE
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks
     credits:
