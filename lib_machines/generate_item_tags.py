@@ -8,9 +8,9 @@ def beet_default(ctx: Context):
   """Creates a predicate for every vanilla item tag and a function checking all of these predicates."""
   vanilla = ctx.inject(Vanilla)
   item_tags = vanilla.data.item_tags
+  item_tags = [id.removeprefix("minecraft:") for id in item_tags]
 
   for id in item_tags:
-    id = id.removeprefix("minecraft:")
     ctx.data[f"gm4_custom_crafters-{CC_VERSION}:vanilla_item_tags/{id}"] = Predicate({
       "condition": "minecraft:entity_properties",
       "entity": "this",
