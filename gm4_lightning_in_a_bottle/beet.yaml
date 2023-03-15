@@ -19,6 +19,9 @@ meta:
       - 'lib_brewing : 1.2.3'
       - 'gm4_liquid_tanks : 1.1.0'
       - 'gm4_potion_liquids : 2.3.0'
+    schedule_loops:
+      - main
+      - brewing_stand/texture_connector/process
     website:
       description: Bottle and harness the power of lightning using Brewing Stands! Lightning in a Bottle comes in splash and lingering variants, too.
       recommended:

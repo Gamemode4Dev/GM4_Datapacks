@@ -8,7 +8,6 @@ pipeline:
   - data_pack:
       load: .
   - lib_machines.generate_item_tags
-  - gm4.plugins.versioning.test
 
 meta:
   gm4:

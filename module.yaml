@@ -4,7 +4,6 @@ require:
 pipeline:
   - directory: 'base'
     extend: 'beet.yaml'
-  - gm4.plugins.versioning.test
   - gm4.plugins.versioning.assemble_load
 
 meta:
