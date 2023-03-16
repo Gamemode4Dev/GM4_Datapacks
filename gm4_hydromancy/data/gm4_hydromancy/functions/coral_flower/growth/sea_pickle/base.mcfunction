@@ -3,7 +3,8 @@
 # at @s
 # run from coral_flower/growth/raycast
 
-scoreboard players set $raycast_limit gm4_hy_data 0
+# if sea pickle is growing on a leaf continue the growth below it
+execute unless block ~ ~-1 ~ #gm4_hydromancy:expected_aquarium_blocks run scoreboard players set $raycast_limit gm4_hy_data 0
 
 # if block is full do X
 execute if block ~ ~ ~ sea_pickle[pickles=4] run function gm4_hydromancy:coral_flower/growth/sea_pickle/

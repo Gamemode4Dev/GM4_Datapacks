@@ -12,8 +12,12 @@ scoreboard players set #16842752 gm4_hy_data 16842752
 scoreboard objectives add gm4_hy_goal dummy
 scoreboard objectives add gm4_hy_charge dummy
 scoreboard objectives add gm4_hy_next_charge_change dummy
+scoreboard objectives add gm4_hy_vine_count dummy
+scoreboard objectives add gm4_hy_vine_root_count dummy
 
 schedule function gm4_hydromancy:main 1t
-schedule function gm4_hydromancy:slow_clock 1t
+schedule function gm4_hydromancy:clock_coral_flower 3s
+schedule function gm4_hydromancy:clock_coral_vine 1s
+schedule function gm4_hydromancy:clock_tracked_fish 1t
 
 #$moduleUpdateList

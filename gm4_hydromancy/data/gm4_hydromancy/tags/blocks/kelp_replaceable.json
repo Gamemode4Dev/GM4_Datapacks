@@ -1,7 +1,6 @@
 {
     "values": [
         "minecraft:water",
-        "minecraft:seagrass",
-        "minecraft:tall_seagrass"
+        "#gm4_hydromancy:seagrass"
     ]
 }

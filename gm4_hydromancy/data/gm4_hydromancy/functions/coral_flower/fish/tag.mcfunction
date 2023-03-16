@@ -8,4 +8,4 @@ execute summon marker run function gm4_hydromancy:coral_flower/fish/pick_goal
 scoreboard players operation @s gm4_hy_goal = $fish_goal gm4_hy_data
 
 scoreboard players add @s gm4_hy_next_charge_change 0
-execute if score @s gm4_hy_charge > @s gm4_hy_next_charge_change run function gm4_hydromancy:coral_flower/fish/update_color
+execute if score @s gm4_hy_charge > @s gm4_hy_next_charge_change at @s run function gm4_hydromancy:coral_flower/fish/update_color

@@ -8,5 +8,4 @@ scoreboard players remove $raycast_limit gm4_hy_data 1
 
 execute unless block ~ ~-1 ~ kelp_plant run function gm4_hydromancy:coral_flower/growth/kelp/spread
 
-tp @s ~ ~-1 ~
-execute if score $raycast_limit gm4_hy_data matches 1.. at @s run function gm4_hydromancy:coral_flower/growth/kelp/raycast
+execute if score $raycast_limit gm4_hy_data matches 1.. positioned ~ ~-1 ~ run function gm4_hydromancy:coral_flower/growth/kelp/raycast

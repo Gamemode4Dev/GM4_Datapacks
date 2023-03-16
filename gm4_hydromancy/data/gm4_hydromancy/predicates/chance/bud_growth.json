@@ -1,0 +1,68 @@
+[
+    {
+      "condition": "minecraft:alternative",
+      "terms": [
+        {
+          "condition": "minecraft:location_check",
+          "offsetZ": -1,
+          "predicate": {
+            "block": {
+              "blocks": [
+                "minecraft:water"
+              ]
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetZ": 1,
+          "predicate": {
+            "block": {
+              "blocks": [
+                "minecraft:water"
+              ]
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetX": -1,
+          "predicate": {
+            "block": {
+              "blocks": [
+                "minecraft:water"
+              ]
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetX": 1,
+          "predicate": {
+            "block": {
+              "blocks": [
+                "minecraft:water"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:location_check",
+        "offsetY": -1,
+        "predicate": {
+          "block": {
+            "tag": "gm4:full_collision"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.15
+    }
+  ]
+  

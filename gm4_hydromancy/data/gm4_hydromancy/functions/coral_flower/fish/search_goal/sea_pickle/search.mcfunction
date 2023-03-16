@@ -7,4 +7,4 @@ scoreboard players remove $max_search_depth gm4_hy_data 1
 
 execute if block ~ ~ ~ sea_pickle run function gm4_hydromancy:coral_flower/fish/search_goal/sea_pickle/found
 
-execute if score $max_search_depth gm4_hy_data matches 1.. positioned ~ ~-1 ~ if block ~ ~ ~ #gm4:water run function gm4_hydromancy:coral_flower/fish/search_goal/sea_pickle/search
+execute if score $max_search_depth gm4_hy_data matches 1.. positioned ~ ~-1 ~ if block ~ ~ ~ #gm4_hydromancy:expected_aquarium_blocks run function gm4_hydromancy:coral_flower/fish/search_goal/sea_pickle/search
