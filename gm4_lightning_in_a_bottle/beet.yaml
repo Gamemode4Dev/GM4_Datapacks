@@ -17,8 +17,6 @@ meta:
     required:
       - 'lib_potion_tracking : 1.1.0'
       - 'lib_brewing : 1.2.3'
-      - 'gm4_liquid_tanks : 1.1.0'
-      - 'gm4_potion_liquids : 2.3.0'
     schedule_loops:
       - main
       - brewing_stand/texture_connector/process

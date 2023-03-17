@@ -1,11 +1,20 @@
-from beet import Context, Function
+from beet import Context, Function, FunctionTag
 from gm4.utils import semver_to_dict
 
-def assemble_load(ctx: Context):
-    """Assembles the module load.mcfunction from dependancy information"""
+def modules(ctx: Context):
+    """Assembles version-functions for modules from dependancy information:
+        - load:{module_name}.json
+        - {module_name}:load.mcfunction
+        - load:load.json"""
     dependancies: list[str] = ctx.meta.get('gm4', {}).get('required', [])
     lines = ["execute ", ""]
 
+    # {{module_name}}.json tag
+    load_tag = dependancy_load_tags(ctx, dependancies)
+    load_tag.add(f"{ctx.project_id}:load")
+    ctx.data.function_tags[f"load:{ctx.project_id}_2"] = load_tag
+
+    # load.mcfunction
     dependancies.insert(0, f"gm4:{'1.1.0'}") # manually insert base version as dependancy
         # NOTE the required base version is always assumed to be the current base version #FIXME
 
@@ -39,12 +48,26 @@ def assemble_load(ctx: Context):
         namespaced_function = f"{ctx.project_id}:{function}" if ":" not in function else function
         lines.append(f"execute unless score {ctx.project_id} load.status matches {module_ver['major']} run schedule clear {namespaced_function}")
 
-    ctx.data.functions[f"{ctx.project_id}:load_2"] = Function(lines) # TODO tags=
+    ctx.data.functions[f"{ctx.project_id}:load_2"] = Function(lines)
 
-# TODO libs need to be named by their gm4_brewing name
+    # load.json tag
+    ctx.data.function_tags["load:load_2"] = FunctionTag({
+        "values": [
+            f"#load:{ctx.project_id}"
+        ]
+    })
+
 def libraries(ctx: Context):
-    """Assembles version-functions for libraries from dependancy information"""
+    """Assembles version-functions for libraries from dependancy information:
+        - {lib_name}:enumerate.mcfunction
+        - {lib_name}:resolve_load.mcfunction
+        - load:{lib_name}.json
+        - load:{lib_name}/enumerate.json
+        - load:{lib_name}/resolve_load.json
+        - load:{lib_name}/dependancies.json"""
+    dependancies: list[str] = ctx.meta.get('gm4', {}).get('required', [])
     lib_ver = semver_to_dict(ctx.project_version)
+    lib_namespace = f"{ctx.project_id}-{lib_ver['major']}.{lib_ver['minor']}"
 
     # enumerate.mcfunction
     lines = [
@@ -52,7 +75,6 @@ def libraries(ctx: Context):
         "",
     ]
 
-    dependancies: list[str] = ctx.meta.get('gm4', {}).get('required', [])
     dep_check_line = "execute "
     for dep in dependancies:
         dep_id, ver_str = map(lambda s: s.strip(), dep.split(":"))
@@ -68,12 +90,63 @@ def libraries(ctx: Context):
     lines.append(dep_check_line + f"{ctx.project_id}_minor load.status {lib_ver['minor']}")
     lines.append(dep_check_line + f"{ctx.project_id} load.status {lib_ver['major']}")
 
-    lib_namespace = f"{ctx.project_id}-{lib_ver['major']}.{lib_ver['minor']}"
     ctx.data.functions[f"{lib_namespace}:enumerate_2"] = Function(lines) # TODO replacement of actual enumerate
 
     # resolve_load.mcfunction
-    ctx.data.functions[f"{lib_namespace}:resolve_load_2"] = Function(
-        f"execute if score {ctx.project_id} load.status matches {lib_ver['major']} if score {ctx.project_id}_minor load.status matches {lib_ver['minor']} run function {lib_namespace}:load"
-    )
-    # TODO unscheduling of clocks when load should fail. 
-        # This is inconsistent between modules :/
+    lines = [f"execute if score {ctx.project_id} load.status matches {lib_ver['major']} if score {ctx.project_id}_minor load.status matches {lib_ver['minor']} run function {lib_namespace}:load"]
+
+    for func in ctx.meta["gm4"].get("schedule_loops", []):
+        lines.append(f"execute unless score {ctx.project_id} load.status matches {lib_ver['major']} run schedule clear {lib_namespace}:{func}")
+        lines.append(f"execute unless score {ctx.project_id}_minor load.status matches {lib_ver['minor']} run schedule clear {lib_namespace}:{func}")
+        
+    ctx.data.functions[f"{lib_namespace}:resolve_load_2"] = Function(lines)
+
+    # load/tags {{ lib name }}.json
+    ctx.data.function_tags[f"load:{ctx.project_id}_2"] = FunctionTag({
+        "values": [
+            f"#load:{ctx.project_id}/enumerate",
+            f"#load:{ctx.project_id}/resolve_load"
+        ]
+    })
+
+    # load/tags enumerate.json
+    ctx.data.function_tags[f"load:{ctx.project_id}/enumerate_2"] = FunctionTag({
+        "values": [
+            f"{lib_namespace}:enumerate"
+        ]
+    })
+
+    # load/tags resolve_load.json
+    ctx.data.function_tags[f"load:{ctx.project_id}/resolve_load_2"] = FunctionTag({
+        "values": [
+            f"{lib_namespace}:resolve_load"
+        ]
+    })
+
+    # load/tags dependancies.json
+    if len(dependancies) > 0:
+        dep_tag = dependancy_load_tags(ctx, dependancies)
+        ctx.data.function_tags[f"load:{ctx.project_id}/dependancies_2"] = dep_tag
+        ctx.data.function_tags[f"load:{ctx.project_id}_2"].prepend(FunctionTag({
+            "values": [
+                f"#load:{ctx.project_id}/dependancies"
+            ]
+        }))
+
+    # additional version injections
+    # TODO replacements on these fields
+
+def dependancy_load_tags(ctx: Context, dependancies: list[str]) -> FunctionTag:
+    """Assembles dependancy information into tag format. Ensures a pack's dependancies
+    get processed by lantern load before the primary startup checks for the module itself"""
+    dep_tag = FunctionTag()
+    for dep in dependancies:
+        dep_id, _ = map(lambda s: s.strip(), dep.split(":"))
+        if dep_id not in ctx.cache["gm4_manifest"].json["modules"]:
+            dep_id = ctx.cache["gm4_manifest"].json["libraries"].get(dep_id)["id"]
+        dep_tag.append(FunctionTag(
+            {"values":[
+                {"id": f"#load:{dep_id}", "required": False}
+            ]}
+        ))
+    return dep_tag

@@ -15,8 +15,8 @@ meta:
       recommended: []
       notes: []
     required:
-      - gm4_liquid_tanks
-      - gm4_zauber_cauldrons
+      - "gm4_liquid_tanks: 2.1.0"
+      - "gm4_zauber_cauldrons: 1.6.0"
     video: https://www.youtube.com/watch?v=qa9lcbii1BE
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids
     credits:

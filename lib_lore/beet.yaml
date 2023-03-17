@@ -2,6 +2,7 @@ id: gm4_lore
 name: Gamemode 4 Lore
 version: 1.0.0
 
+extend: ../library.yaml
 pipeline:
   - data_pack:
       load: .
