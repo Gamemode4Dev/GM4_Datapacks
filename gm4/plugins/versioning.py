@@ -133,8 +133,50 @@ def libraries(ctx: Context):
             ]
         }))
 
+    yield # wait for all pack files to load
+
+
     # additional version injections
-    # TODO replacements on these fields
+    extra_injections = ctx.meta["gm4"].get("extra_version_injections", {})
+
+    # NOTE functions get version checks replaced onto `load.status` checks
+    for entry in extra_injections.get("functions", []):
+        handle = ctx.data.functions[f"{lib_namespace}:{entry}"]
+        for i, line in enumerate(handle.lines):
+            if "load.status" in line:
+                handle.lines[i] = line.replace(f"{ctx.project_id} load.status matches 1", f"{ctx.project_id} load.status matches {lib_ver['major']} if score {ctx.project_id}_minor load.status matches {lib_ver['minor']}")
+                # FIXME use contrib replacements to use regex for optional repalcement of minor fields
+
+    # NOTE advancements get score checks injected into every criteria
+    for entry in extra_injections.get("advancements", []):
+        handle = ctx.data.advancements[f"{lib_namespace}:{entry}"]
+        for criteria in handle.data["criteria"].values():
+            player_conditions = criteria.setdefault("conditions", {}).setdefault("player", [])
+            player_conditions.append({
+                "condition": "minecraft:value_check",
+                "value": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": f"{ctx.project_id}"
+                },
+                "score": "load.status"
+                },
+                "range": lib_ver["major"]
+            })
+            player_conditions.append({
+                "condition": "minecraft:value_check",
+                "value": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": f"{ctx.project_id}_minor"
+                },
+                "score": "load.status"
+                },
+                "range": lib_ver["minor"]
+            })
+    
 
 def dependancy_load_tags(ctx: Context, dependancies: list[str]) -> FunctionTag:
     """Assembles dependancy information into tag format. Ensures a pack's dependancies

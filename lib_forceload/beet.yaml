@@ -9,6 +9,8 @@ pipeline:
 
 meta:
   gm4:
+    extra_version_injections:
+      advancements: [dimension_marking]
     credits:
       Creator:
         - Misode
