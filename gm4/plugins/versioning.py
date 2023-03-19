@@ -1,24 +1,26 @@
 from beet import Context, Function, FunctionTag
+from beet.contrib.rename_files import rename_files
+from beet.contrib.find_replace import find_replace
 from gm4.utils import semver_to_dict
 
 def modules(ctx: Context):
-    """Assembles version-functions for modules from dependancy information:
+    """Assembles version-functions for modules from dependency information:
         - load:{module_name}.json
         - {module_name}:load.mcfunction
         - load:load.json"""
-    dependancies: list[str] = ctx.meta.get('gm4', {}).get('required', [])
+    dependencies: list[str] = ctx.meta.get('gm4', {}).get('required', [])
     lines = ["execute ", ""]
 
     # {{module_name}}.json tag
-    load_tag = dependancy_load_tags(ctx, dependancies)
+    load_tag = dependency_load_tags(ctx, dependencies)
     load_tag.add(f"{ctx.project_id}:load")
-    ctx.data.function_tags[f"load:{ctx.project_id}_2"] = load_tag
+    ctx.data.function_tags[f"load:{ctx.project_id}"] = load_tag
 
     # load.mcfunction
-    dependancies.insert(0, f"gm4:{'1.1.0'}") # manually insert base version as dependancy
+    dependencies.insert(0, f"gm4:{'1.1.0'}") # manually insert base version as dependency
         # NOTE the required base version is always assumed to be the current base version #FIXME
 
-    for dep in dependancies:
+    for dep in dependencies:
         dep_id, ver_str = map(lambda s: s.strip(), dep.split(":"))
         dep_ver = semver_to_dict(ver_str)
         name_default_dict = {"name":"Gamemode 4 Base"} if dep_id == "gm4" else {"name":dep_id}
@@ -48,26 +50,25 @@ def modules(ctx: Context):
         namespaced_function = f"{ctx.project_id}:{function}" if ":" not in function else function
         lines.append(f"execute unless score {ctx.project_id} load.status matches {module_ver['major']} run schedule clear {namespaced_function}")
 
-    ctx.data.functions[f"{ctx.project_id}:load_2"] = Function(lines)
+    ctx.data.functions[f"{ctx.project_id}:load"] = Function(lines)
 
     # load.json tag
-    ctx.data.function_tags["load:load_2"] = FunctionTag({
+    ctx.data.function_tags["load:load"] = FunctionTag({
         "values": [
             f"#load:{ctx.project_id}"
         ]
     })
 
 def libraries(ctx: Context):
-    """Assembles version-functions for libraries from dependancy information:
+    """Assembles version-functions for libraries from dependency information:
         - {lib_name}:enumerate.mcfunction
         - {lib_name}:resolve_load.mcfunction
         - load:{lib_name}.json
         - load:{lib_name}/enumerate.json
         - load:{lib_name}/resolve_load.json
-        - load:{lib_name}/dependancies.json"""
-    dependancies: list[str] = ctx.meta.get('gm4', {}).get('required', [])
+        - load:{lib_name}/dependencies.json"""
+    dependencies: list[str] = ctx.meta.get('gm4', {}).get('required', [])
     lib_ver = semver_to_dict(ctx.project_version)
-    lib_namespace = f"{ctx.project_id}-{lib_ver['major']}.{lib_ver['minor']}"
 
     # enumerate.mcfunction
     lines = [
@@ -76,7 +77,7 @@ def libraries(ctx: Context):
     ]
 
     dep_check_line = "execute "
-    for dep in dependancies:
+    for dep in dependencies:
         dep_id, ver_str = map(lambda s: s.strip(), dep.split(":"))
         dep_ver = semver_to_dict(ver_str)
 
@@ -90,19 +91,19 @@ def libraries(ctx: Context):
     lines.append(dep_check_line + f"{ctx.project_id}_minor load.status {lib_ver['minor']}")
     lines.append(dep_check_line + f"{ctx.project_id} load.status {lib_ver['major']}")
 
-    ctx.data.functions[f"{lib_namespace}:enumerate_2"] = Function(lines) # TODO replacement of actual enumerate
+    ctx.data.functions[f"{ctx.project_id}:enumerate"] = Function(lines) # TODO replacement of actual enumerate
 
     # resolve_load.mcfunction
-    lines = [f"execute if score {ctx.project_id} load.status matches {lib_ver['major']} if score {ctx.project_id}_minor load.status matches {lib_ver['minor']} run function {lib_namespace}:load"]
+    lines = [f"execute if score {ctx.project_id} load.status matches {lib_ver['major']} if score {ctx.project_id}_minor load.status matches {lib_ver['minor']} run function {ctx.project_id}:load"]
 
     for func in ctx.meta["gm4"].get("schedule_loops", []):
-        lines.append(f"execute unless score {ctx.project_id} load.status matches {lib_ver['major']} run schedule clear {lib_namespace}:{func}")
-        lines.append(f"execute unless score {ctx.project_id}_minor load.status matches {lib_ver['minor']} run schedule clear {lib_namespace}:{func}")
+        lines.append(f"execute unless score {ctx.project_id} load.status matches {lib_ver['major']} run schedule clear {ctx.project_id}:{func}")
+        lines.append(f"execute unless score {ctx.project_id}_minor load.status matches {lib_ver['minor']} run schedule clear {ctx.project_id}:{func}")
         
-    ctx.data.functions[f"{lib_namespace}:resolve_load_2"] = Function(lines)
+    ctx.data.functions[f"{ctx.project_id}:resolve_load"] = Function(lines)
 
     # load/tags {{ lib name }}.json
-    ctx.data.function_tags[f"load:{ctx.project_id}_2"] = FunctionTag({
+    ctx.data.function_tags[f"load:{ctx.project_id}"] = FunctionTag({
         "values": [
             f"#load:{ctx.project_id}/enumerate",
             f"#load:{ctx.project_id}/resolve_load"
@@ -110,26 +111,26 @@ def libraries(ctx: Context):
     })
 
     # load/tags enumerate.json
-    ctx.data.function_tags[f"load:{ctx.project_id}/enumerate_2"] = FunctionTag({
+    ctx.data.function_tags[f"load:{ctx.project_id}/enumerate"] = FunctionTag({
         "values": [
-            f"{lib_namespace}:enumerate"
+            f"{ctx.project_id}:enumerate"
         ]
     })
 
     # load/tags resolve_load.json
-    ctx.data.function_tags[f"load:{ctx.project_id}/resolve_load_2"] = FunctionTag({
+    ctx.data.function_tags[f"load:{ctx.project_id}/resolve_load"] = FunctionTag({
         "values": [
-            f"{lib_namespace}:resolve_load"
+            f"{ctx.project_id}:resolve_load"
         ]
     })
 
-    # load/tags dependancies.json
-    if len(dependancies) > 0:
-        dep_tag = dependancy_load_tags(ctx, dependancies)
-        ctx.data.function_tags[f"load:{ctx.project_id}/dependancies_2"] = dep_tag
-        ctx.data.function_tags[f"load:{ctx.project_id}_2"].prepend(FunctionTag({
+    # load/tags dependencies.json
+    if len(dependencies) > 0:
+        dep_tag = dependency_load_tags(ctx, dependencies)
+        ctx.data.function_tags[f"load:{ctx.project_id}/dependencies"] = dep_tag
+        ctx.data.function_tags[f"load:{ctx.project_id}"].prepend(FunctionTag({
             "values": [
-                f"#load:{ctx.project_id}/dependancies"
+                f"#load:{ctx.project_id}/dependencies"
             ]
         }))
 
@@ -141,7 +142,7 @@ def libraries(ctx: Context):
 
     # NOTE functions get version checks replaced onto `load.status` checks
     for entry in extra_injections.get("functions", []):
-        handle = ctx.data.functions[f"{lib_namespace}:{entry}"]
+        handle = ctx.data.functions[f"{ctx.project_id}:{entry}"]
         for i, line in enumerate(handle.lines):
             if "load.status" in line:
                 handle.lines[i] = line.replace(f"{ctx.project_id} load.status matches 1", f"{ctx.project_id} load.status matches {lib_ver['major']} if score {ctx.project_id}_minor load.status matches {lib_ver['minor']}")
@@ -149,7 +150,7 @@ def libraries(ctx: Context):
 
     # NOTE advancements get score checks injected into every criteria
     for entry in extra_injections.get("advancements", []):
-        handle = ctx.data.advancements[f"{lib_namespace}:{entry}"]
+        handle = ctx.data.advancements[f"{ctx.project_id}:{entry}"]
         for criteria in handle.data["criteria"].values():
             player_conditions = criteria.setdefault("conditions", {}).setdefault("player", [])
             player_conditions.append({
@@ -176,13 +177,25 @@ def libraries(ctx: Context):
                 },
                 "range": lib_ver["minor"]
             })
+
+    # namespace renaming to include version number
+    versioned_namespace = f"{ctx.project_id}-{lib_ver['major']}.{lib_ver['minor']}"
+    ctx.require(rename_files(data_pack={
+        "match":{"functions": "*", "advancements": "*"},
+        "find": f"{ctx.project_id}:([a-z_/]+)",
+        "replace": f"{versioned_namespace}:\\1"
+    }))
+    ctx.require(find_replace(data_pack={"match": "*"}, substitute={
+        "find": f"(?<!#)(?<!storage ){ctx.project_id}:([a-z0-9_/]+)",
+        "replace": f"{versioned_namespace}:\\1"
+    }))
     
 
-def dependancy_load_tags(ctx: Context, dependancies: list[str]) -> FunctionTag:
-    """Assembles dependancy information into tag format. Ensures a pack's dependancies
+def dependency_load_tags(ctx: Context, dependencies: list[str]) -> FunctionTag:
+    """Assembles dependency information into tag format. Ensures a pack's dependencies
     get processed by lantern load before the primary startup checks for the module itself"""
     dep_tag = FunctionTag()
-    for dep in dependancies:
+    for dep in dependencies:
         dep_id, _ = map(lambda s: s.strip(), dep.split(":"))
         if dep_id not in ctx.cache["gm4_manifest"].json["modules"]:
             dep_id = ctx.cache["gm4_manifest"].json["libraries"].get(dep_id)["id"]
