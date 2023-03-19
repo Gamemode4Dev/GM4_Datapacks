@@ -10,6 +10,7 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops: [tick]
     website:
       description: Automatically latch on to a tripwire to sail through the sky on a suspended line!
       recommended:

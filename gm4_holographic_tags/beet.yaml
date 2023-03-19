@@ -10,11 +10,12 @@ pipeline:
 
 meta:
   gm4:
+    required: []
+    schedule_loops: [main]
     website:
       description: Set up floating messages with a simple name tag!
       recommended: []
       notes: []
-    required: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Holographic_Tags
     credits:

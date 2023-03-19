@@ -10,6 +10,7 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops: [main]
     website:
       description: Gives you a speed effect when you walk on path blocks.
       recommended: []

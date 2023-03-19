@@ -10,6 +10,9 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops:
+      - main
+      - slow_clock
     website:
       description: Ever wondered why all the Mooshrooms are locked up on islands? This Module makes Mooshrooms spread mycelium and mushrooms wherever they go.
       recommended: []

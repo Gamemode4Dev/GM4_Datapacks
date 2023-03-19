@@ -31,7 +31,7 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
-    required: []
+    required: ['lib_machines: 1.1.0']
     video: null
     wiki: https://wiki.gm4.co/wiki/Custom_Crafters/Auto_Crafting
     credits:

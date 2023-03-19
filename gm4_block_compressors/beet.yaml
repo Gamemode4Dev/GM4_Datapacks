@@ -12,6 +12,8 @@ pipeline:
 
 meta:
   gm4:
+    required: []
+    schedule_loops: [main]
     website:
       description: Chest space won't be an issue with this module! Use a Block Compressor to compress stacks of items, turning a stack of items into a single item for long-term storage. Make sure to uncompress your items before using them again, though!
       recommended:
@@ -30,7 +32,6 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
-    required: []
     video: https://www.youtube.com/watch?v=sdrTJYjL8C0
     wiki: https://wiki.gm4.co/wiki/Block_Compressors
     credits:

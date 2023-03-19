@@ -10,6 +10,8 @@ pipeline:
 
 meta:
   gm4:
+    required: []
+    schedule_loops: [main]
     website:
       description: Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!
       recommended:
@@ -17,7 +19,6 @@ meta:
         - gm4_metallurgy
       notes:
         - Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.
-    required: []
     video: https://www.youtube.com/watch?v=uUoEKtte1GQ
     wiki: https://wiki.gm4.co/wiki/Bat_Grenades
     credits:

@@ -10,6 +10,7 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops: [tick]
     website:
       description: As if getting stabbed isn't enough... support your friends, terrify your enemies, make gold great again using Golden Swords and potions!
       recommended: []

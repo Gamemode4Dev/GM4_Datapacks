@@ -10,6 +10,7 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops: [main]
     website:
       description: Transfer your health to another player using flowers.
       recommended: []

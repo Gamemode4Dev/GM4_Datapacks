@@ -10,6 +10,9 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops:
+      - main
+      - tick
     website:
       description: Use ladders as vertical Minecart tracks.
       recommended: []

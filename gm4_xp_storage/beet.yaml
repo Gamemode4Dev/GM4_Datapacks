@@ -10,6 +10,9 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops:
+      - main
+      - tick
     website:
       description: Stand on top of an Ender Chest to store Experience, stand below to retrieve it!
       recommended: []

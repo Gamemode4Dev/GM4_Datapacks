@@ -10,6 +10,9 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops: 
+      - main
+      - tick
     website:
       description: Climbing downward has never been easier!
       recommended: []

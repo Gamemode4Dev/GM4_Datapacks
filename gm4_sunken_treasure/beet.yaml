@@ -10,6 +10,7 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops: [tick]
     website:
       description: Digging sand underwater with a fortune tool can uncover buried treasures, or a nasty surprise! Who knows, maybe you'll even find some old love letters.
       recommended:

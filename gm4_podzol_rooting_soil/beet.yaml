@@ -10,6 +10,7 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops: [main]
     website:
       description: Allows saplings to self-plant when on Podzol. The perfect choice for auto-treefarms!
       recommended: []

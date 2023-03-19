@@ -10,6 +10,9 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops:
+      - main
+      - tick
     website:
       description: Set up Scarecrows that shoot homing rockets at Phantoms!
       recommended: []

@@ -10,6 +10,7 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops: [tick]
     website:
       description: Adds a neat interface to improve your musical skills!
       recommended: []

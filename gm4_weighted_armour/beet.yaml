@@ -10,6 +10,7 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops: [main]
     website:
       description: Perfect for UHCs, this module forces you to balance protection with speed.
       recommended: []

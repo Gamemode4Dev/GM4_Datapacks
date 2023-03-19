@@ -10,6 +10,10 @@ pipeline:
 
 meta:
   gm4:
+    schedule_loops: 
+      - main
+      - tick
+      - aging_clock
     website:
       description: Collect Everstones during full moons and use them on baby mobs to stop them from aging! But watch out, some other mobs might start aging, too!
       recommended:
