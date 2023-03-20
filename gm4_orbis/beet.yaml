@@ -10,6 +10,8 @@ pipeline:
 
 meta:
   gm4:
+    required: []
+    schedule_loops: [tick]
     website:
       description: A seed-specific chunk scanner that modifies your world as you explore. Install expansions to add extra structures and terrain.
       recommended:
@@ -17,7 +19,6 @@ meta:
         - gm4_dangerous_dungeons
         - gm4_tower_structures
       notes: []
-    required: []
     video: https://www.youtube.com/watch?v=cAsXiwLWHFo
     wiki: https://wiki.gm4.co/wiki/Orbis
     credits:
