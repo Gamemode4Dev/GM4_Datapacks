@@ -8,20 +8,17 @@ pipeline:
     extend: 'beet.yaml'
   - data_pack:
       load: .
-  - lib_machines.generate_item_tags
 
 meta:
   gm4:
     required: ['lib_forceload : 1.1.3']
     schedule_loops: [main]
     extra_version_injections:
-      functions: [resolve_tick]
+      functions:
+        - resolve_tick
+      advancements:
+        - place_machine_block
+        - place_machine_cart
     credits:
       Machines Library Creator:
         - BluePsychoRanger
-      Custom Crafters Creators:
-        - Bloo
-        - Sparks
-        - SpecialBuilder32
-      Textures by:
-        - kyrkis

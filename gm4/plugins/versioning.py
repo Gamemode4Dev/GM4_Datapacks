@@ -34,7 +34,6 @@ def modules(ctx: Context):
 
         # failure logs
         lines.append(f"execute unless score {dep_id} load.status matches {dep_ver['major']} unless score {dep_id}_minor load.status matches {dep_ver['minor']}.. run data modify storage gm4:log queue append value {{type:\"missing\",module:\"{ctx.project_name}\",require:\"{dep_name}\"}}")
-        # TODO minor==0 means don't check
     
     # finalize startup check
     module_ver = semver_to_dict(ctx.project_version)
@@ -91,7 +90,7 @@ def libraries(ctx: Context):
     lines.append(dep_check_line + f"{ctx.project_id}_minor load.status {lib_ver['minor']}")
     lines.append(dep_check_line + f"{ctx.project_id} load.status {lib_ver['major']}")
 
-    ctx.data.functions[f"{ctx.project_id}:enumerate"] = Function(lines) # TODO replacement of actual enumerate
+    ctx.data.functions[f"{ctx.project_id}:enumerate"] = Function(lines)
 
     # resolve_load.mcfunction
     lines = [f"execute if score {ctx.project_id} load.status matches {lib_ver['major']} if score {ctx.project_id}_minor load.status matches {lib_ver['minor']} run function {ctx.project_id}:load"]
@@ -135,7 +134,6 @@ def libraries(ctx: Context):
         }))
 
     yield # wait for all pack files to load
-
 
     # additional version injections
     extra_injections = ctx.meta["gm4"].get("extra_version_injections", {})
@@ -181,7 +179,7 @@ def libraries(ctx: Context):
     # namespace renaming to include version number
     versioned_namespace = f"{ctx.project_id}-{lib_ver['major']}.{lib_ver['minor']}"
     ctx.require(rename_files(data_pack={
-        "match":{"functions": "*", "advancements": "*"},
+        "match":{"functions": "*", "advancements": "*", "loot_tables": "*"},
         "find": f"{ctx.project_id}:([a-z_/]+)",
         "replace": f"{versioned_namespace}:\\1"
     }))
@@ -196,6 +194,8 @@ def dependency_load_tags(ctx: Context, dependencies: list[str]) -> FunctionTag:
     get processed by lantern load before the primary startup checks for the module itself"""
     dep_tag = FunctionTag()
     for dep in dependencies:
+        if ":" not in dep:
+            raise ValueError(f"{ctx.project_id} has a dependancy without a specified version; {dep}")
         dep_id, _ = map(lambda s: s.strip(), dep.split(":"))
         if dep_id not in ctx.cache["gm4_manifest"].json["modules"]:
             dep_id = ctx.cache["gm4_manifest"].json["libraries"].get(dep_id)["id"]
