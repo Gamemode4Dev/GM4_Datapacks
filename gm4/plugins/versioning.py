@@ -179,7 +179,7 @@ def libraries(ctx: Context):
     # namespace renaming to include version number
     versioned_namespace = f"{ctx.project_id}-{lib_ver['major']}.{lib_ver['minor']}"
     ctx.require(rename_files(data_pack={
-        "match":{"functions": "*", "advancements": "*", "loot_tables": "*"},
+        "match":{"functions": "*", "advancements": "*", "loot_tables": "*", "predicates": "*"},
         "find": f"{ctx.project_id}:([a-z_/]+)",
         "replace": f"{versioned_namespace}:\\1"
     }))

@@ -7,18 +7,21 @@ version: 1.2.X
 pipeline:
   - directory: '../lib_player_heads'
     extend: 'beet.yaml'
-  - directory: '../lib_machines'
+  - directory: '../lib_custom_crafters'
     extend: 'beet.yaml'
   - data_pack:
       load: .
 
 meta:
   gm4:
+    required:
+      - 'lib_custom_crafters: 3.0.0'
+      - 'lib_player_heads: 1.1.0'
+    schedule_loops: [main]
     website:
       description: Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!
       recommended: []
       notes: []
-    required: []
     video: null
     wiki: https://wiki.gm4.co/wiki/TNT_Landmines
     credits:

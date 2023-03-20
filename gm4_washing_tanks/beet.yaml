@@ -10,12 +10,12 @@ pipeline:
 
 meta:
   gm4:
+    required:
+      - 'gm4_liquid_tanks: 2.1.0'
     website:
       description: Die! Dye! Remove die from items in a Liquid Tank filled with Water, at the cost of ⅓ of a bucket.
       recommended: []
       notes: []
-    required:
-      - gm4_liquid_tanks
     video: null
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Washing_Tanks
     credits:

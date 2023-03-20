@@ -5,18 +5,18 @@ name: Standard Crafting
 version: 1.1.X
 
 pipeline:
-  - directory: '../lib_machines'
+  - directory: '../lib_custom_crafters'
     extend: 'beet.yaml'
   - data_pack:
       load: .
 
 meta:
   gm4:
+    required: ['lib_custom_crafters: 3.0.0']
     website:
       description: A crafting recipe pack that adds some nifty new recipes to the game.
       recommended: []
       notes: []
-    required: []
     video: https://www.youtube.com/watch?v=_GekIoefncg
     wiki: https://wiki.gm4.co/wiki/Standard_Crafting
     credits:

@@ -7,17 +7,22 @@ version: 1.3.X
 pipeline:
   - directory: '../lib_machines'
     extend: 'beet.yaml'
+  - directory: '../lib_custom_crafters'
+    extend: 'beet.yaml'
   - data_pack:
       load: .
 
 meta:
   gm4:
+    required:
+      - 'lib_custom_crafters: 3.0.0'
+      - 'lib_machines: 1.1.0'
+    schedule_loops: [main]
     website:
       description: Build a Smeltery and double your ore output with this multi-block structure.
       recommended:
         - gm4_relocators
       notes: []
-    required: []
     video: null
     wiki: https://wiki.gm4.co/wiki/smelteries
     credits:
