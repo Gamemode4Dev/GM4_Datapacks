@@ -6,4 +6,4 @@
 scoreboard players set $max_search_depth gm4_hy_data 0
 tag @s add gm4_hy_found_short_grass
 scoreboard players add @s gm4_hy_charge 2
-execute if entity @s[tag=gm4_hy_found_tall_grass] run function gm4_hydromancy:coral_flower/fish/search_goal/seagrass/both
+execute if entity @s[tag=gm4_hy_found_tall_grass] run function gm4_hydromancy:fish/search_goal/seagrass/both

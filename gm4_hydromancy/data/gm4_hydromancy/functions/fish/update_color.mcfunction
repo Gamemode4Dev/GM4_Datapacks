@@ -1,7 +1,8 @@
 # update the color of this fish
 # @s = tropical fish
 # at @s
-# run from coral_flower/fish/tag
+# run from fish/tag
+# run from fish/discharge
 
 # vfx
 particle minecraft:bubble_pop ~ ~ ~ 0.1 0.1 0.1 0.05 3
@@ -9,6 +10,7 @@ particle minecraft:bubble ~ ~ ~ 0.1 0.1 0.1 0.05 2
 playsound minecraft:block.bubble_column.bubble_pop block @a ~ ~ ~ 1 0.5
 
 # mark next charge milestone to not repeat this function unnecessarily
+scoreboard players set @s[scores={gm4_hy_charge=0}] gm4_hy_next_charge_change 1
 scoreboard players set @s[scores={gm4_hy_charge=1..32}] gm4_hy_next_charge_change 32
 scoreboard players set @s[scores={gm4_hy_charge=33..64}] gm4_hy_next_charge_change 64
 scoreboard players set @s[scores={gm4_hy_charge=65..96}] gm4_hy_next_charge_change 96

@@ -3,5 +3,7 @@
 # at @s
 # run from coral_flower/create/check_item
 
-execute align xyz run summon item_display ~.5 ~.5 ~.5 {Tags:["gm4_hy_coral_flower"],Rotation:[0F,-90F],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,-0.402f],scale:[0.525f,0.525f,0.001f]},item:{id:"minecraft:heart_of_the_sea",Count:1b}}
+data modify storage gm4_hydromancy:temp tag set from entity @s Item.tag
+execute align xyz positioned ~.5 ~.5 ~.5 summon item_display run function gm4_hydromancy:coral_flower/create/store_data
+data remove storage gm4_hydromancy:temp tag
 kill @s

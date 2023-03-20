@@ -4,4 +4,4 @@
 # run from clock_tracked_fish
 
 scoreboard players set $max_search_depth gm4_hy_data 9
-function gm4_hydromancy:coral_flower/fish/search_goal/find_surface/search
+function gm4_hydromancy:fish/search_goal/find_surface/search
