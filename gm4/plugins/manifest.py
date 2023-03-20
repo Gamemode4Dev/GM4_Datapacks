@@ -4,7 +4,7 @@ from typing import Any
 import json
 import os
 import yaml
-from gm4.utils import run, semver_to_int
+from gm4.utils import run, semver_to_int, semver_to_dict
 
 
 def create(ctx: Context):
@@ -24,7 +24,7 @@ def create(ctx: Context):
 			module["video_link"] = meta["video"] or ""
 			module["wiki_link"] = meta["wiki"] or ""
 			module["credits"] = meta["credits"]
-			module["requires"] = meta["required"]
+			module["requires"] = list(filter(lambda a: "lib" not in a[0:4], map(lambda a: a.split(":")[0], meta["required"])))
 			module["description"] = website["description"]
 			module["recommends"] = website["recommended"]
 			if "hidden" in website and website["hidden"]:
@@ -33,7 +33,7 @@ def create(ctx: Context):
 				module["important_note"] = website["notes"][0]
 			module["modrinth_id"] = project_config.get("meta", {}).get("modrinth", {}).get("project_id")
 			module["smithed_link"] = project_config.get("meta", {}).get("smithed", {}).get("uid") # NOTE field to be named when smithed api v2 leaves beta
-			module["pmc_link"] = project_config.get("meta", {}).get("planetminecraft", {}).get("uid")
+			module["pmc_link"] = project_config.get("meta", {}).get("planetminecraft", {}).get("uid") # NOTE PMC currently has no API, so this field is just made of hope
 			module.update()
 		else:
 			module["id"] = None
@@ -104,13 +104,13 @@ def update_patch(ctx: Context):
 			module["version"] = module["version"].replace("X", "0")
 		else:
 			# Changes were made, bump the patch
-			version = dict(zip(("major", "minor"), map(int, module["version"].split(".")[0:2])))
-			last_ver = dict(zip(("major", "minor", "patch"), map(int, released["version"].split("."))))
+			version = semver_to_dict(module["version"])
+			last_ver = semver_to_dict(released["version"])
 			
-			if version["minor"] > last_ver["minor"] or version["major"] > last_ver["major"]:
+			if version["minor"] > last_ver["minor"] or version["major"] > last_ver["major"]: # type: ignore
 				patch = 0
 			else:
-				patch = last_ver["patch"] + 1
+				patch = last_ver["patch"] + 1 # type: ignore
 				print(f"[GM4] Updating {id} patch to {patch}")
 
 			module["version"] = f"{version['major']}.{version['minor']}.{patch}"

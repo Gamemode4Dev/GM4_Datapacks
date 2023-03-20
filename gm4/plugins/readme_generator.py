@@ -3,10 +3,6 @@ import re
 from pathlib import Path
 from typing import Any
 
-global_replacements = {
-    r"https:\/\/wiki\.gm4\.co\/wiki\/([\w_]+)": r"https:MY_URL\\\1",
-    }
-
 def beet_default(ctx: Context):
     """Loads the README.md and modifies:
         - converts local images to URLs pointed at the repo
@@ -21,6 +17,7 @@ def beet_default(ctx: Context):
     global_readme = TextFile(source_path=readme_path)
     global_contents = global_readme.text
     running_readme_gen = ctx.meta.get("readme-gen", False) # used to disable pmc replacements on normal release
+    global_replacements: dict[str, str] = {}
 
     # Local Images to raw.githubusercontent URLs
     global_replacements.update({
