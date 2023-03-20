@@ -1,21 +1,17 @@
 from beet import Function, Advancement, LootTable, Context, FunctionTag
 import nbtlib
-import copy
 from typing import TypedDict
 import json
 import os
 
 # TODO:
 # parse & update page contents
-# count line length for TOC
-# extra checks for reward functiions
 # delete old files
-# rename gudebook to guidebook
 # setup system for lecterns
 # display advancement description
-# update base module to use new tags
-# actual add_TOC function
+# reward tellraw hover text (same as above)
 # merge some functions to reduce fuction call overhead
+# set up actual wiki link
 
 
 class Section(TypedDict):
@@ -49,9 +45,125 @@ def get_pos_hash(module_id):
   return id
 
 
-def get_toc_lines(book_dict: Book) -> int:
-  # TODO
-  return 1
+def generate_book_header(book_dict: Book) -> list:
+  return [
+    {
+      "text": "⌂",
+      "color": "#3D83A3",
+      "bold": True,
+      "clickEvent": {
+        "action": "run_command",
+        "value": f"/trigger gm4_guide set 1"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": {
+          "text": "Return to the table of contents"
+        }
+      }
+    },
+    " " * 6,
+    {
+      "text": "Ⓦ",
+      "color": "#864bc7",
+      "clickEvent": {
+        "action": "open_url",
+        "value": f"https://wiki.gm4.co"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": {
+          "text": "Open the wiki page for this module"
+        }
+      }
+    },
+    " " * 6,
+    {
+      "text": "◀",
+      "clickEvent": {
+        "action": "run_command",
+        "value": f"/trigger gm4_guide_prev set {book_dict['trigger_id']}"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": {
+          "text": "Go to the previous module"
+        }
+      }
+    },
+    " ",
+    {
+      "text": "▶",
+      "clickEvent": {
+        "action": "run_command",
+        "value": f"/trigger gm4_guide_next set {book_dict['trigger_id']}"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": {
+          "text": "Go to the next module"
+        }
+      }
+    },
+    "\n",
+    {
+      "text": book_dict["name"],
+      "underlined": True,
+      "color": "#4AA0C7"
+    }
+  ]
+
+
+advances = json.load(open("temp/advances.json"))
+
+
+def char_advance(str: str) -> int:
+  if str in advances:
+    if type(advances[str]) == dict:
+      return advances[str]["unicode"]
+    return advances[str]
+  return 6
+
+
+def split_into_lines(str: str) -> list[int]:
+  lines = []
+  words = []
+  for word in str.split(" "):
+    wlen = 0
+    for char in word:
+      wlen += char_advance(char)
+    words.append((word, wlen))
+
+  current_line = ""
+  current_len = 0
+  for word, wlen in words:
+    if current_len + wlen > 114:
+      if not current_line == "":
+        lines.append(current_line)
+      current_line = ""
+      current_len = 0
+      if wlen > 114:
+        for char in word:
+          if current_len + char_advance(char) > 114:
+            lines.append(current_line)
+            current_line = ""
+            current_len = 0
+          current_line += char
+          current_len += char_advance(char)
+        continue
+    current_line += word + " "
+    current_len += wlen + 4
+
+  lines.append(current_line)
+  for i in range(len(lines)):
+    lines[i] = lines[i].removesuffix(" ")
+
+  return lines
+
+
+def get_toc_line(book_dict: Book) -> str:
+  indent = "  ● " if book_dict["module_type"] == "expansion" else "● "
+  return f"{indent}{book_dict['name']}"
 
 
 def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]]:
@@ -174,7 +286,6 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
   criteria_keys: set[str] = set()
   for requirement in section["requirements"]:
     for criterion in requirement:
-      assert(criterion in all_criteria)
       criteria_keys.add(criterion)
   if len(criteria_keys) == 0:
     return None
@@ -232,7 +343,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
     "requirements": section["requirements"],
     "rewards": {
       "function": f"gm4_guidebook:rewards/{module_id}/{section['name']}",
-    } if "grants" in section else {}
+    }
   })
 
 
@@ -263,13 +374,46 @@ def generate_display_advancement(book: Book) -> Advancement:
   })
 
 
-def generate_reward_function(section: Section, book_id: str) -> Function:
-  # TODO: check for module Loads
+def generate_reward_function(section: Section, book_id: str, book_name: str) -> Function:
+  start = f"execute"
+  if "enable" in section:
+    for module_check in section["enable"]:
+      if module_check["load"] == -1:
+        start += f" unless "
+      else:
+        start += f" if "
+      start += f"score {module_check['id']} load.status matches 1.."
+  start += " run"
+  tellraw = nbtlib.List([
+      nbtlib.String(""),
+      {"selector": "@s"},
+      {"text": " "},
+      {"translate": "%1$s%3427655$s", "with": [{"text": "has discovered a guidebook page from"}, {
+        "translate": "%1$s%3427655$s", "with": [{"translate": "text.gm4.guidebook.discovered"}]}]},
+      {"text": " "},
+      {
+          "text": f"[{book_name}]",
+          "color": "#4AA0C7",
+          "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {"text": book_name, "color": "#4AA0C7"},
+                {"text": "\n"},
+                {
+                  "text": "Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!",
+                  "italic": True,
+                  "color": "gray"
+                }
+              ]
+          }
+      }
+  ])
   reward = Function([
-    f"advancement grant @s only gm4_gudebook:{book_id}/display/{section['name']}"
+    f"{start} tellraw @s {nbtlib.serialize_tag(tellraw)}",
+    f"{start} advancement grant @s only gm4_guidebook:{book_id}/display/{section['name']}"
   ])
   if "grant" in section:
-    reward.append([f"advancement grant @s only gm4_guidebook:{book_id}/{grant}" for grant in section["grants"]])
+    reward.append([f"{start} advancement grant @s only gm4_guidebook:{book_id}/{grant}" for grant in section["grants"]])
   return reward
 
 
@@ -297,8 +441,27 @@ def generate_add_toc_line_tag(book_ids: list[str]) -> FunctionTag:
 
 
 def generate_add_toc_line_function(book: Book) -> Function:
+  text_component = {
+    "text": get_toc_line(book),
+    "color": "#4AA0C7",
+    "clickEvent": {
+      "action": "run_command",
+      "value": f"/trigger gm4_guide set {book['trigger_id']}"
+    },
+    "hoverEvent": {
+      "action": "show_text",
+      "contents": [{
+        "translate": "%1$s%3427655$s",
+        "with": [
+          "Jump to Section",
+          {"translate": "text.gm4.guidebook.jump_to_section"}
+        ],
+        "color": "gold"
+      }]
+    }
+  }
   return Function([
-    f"data modufy"
+    f"execute if score $trigger gm4_guide matches {book['trigger_id']} run data modify storage gm4_guidebook:temp page append value ' {json.dumps(text_component, ensure_ascii=False)}'"
   ])
 
 
@@ -312,14 +475,16 @@ def generate_summon_marker_tag(book_ids: list[str]) -> FunctionTag:
 
 def generate_summon_marker_function(book: Book) -> Function:
   marker_nbt = nbtlib.Compound()
-  marker_nbt["CustomName"] = nbtlib.String(f"gm4_{book['id']}")
+  marker_nbt["CustomName"] = nbtlib.String(f'"gm4_{book["id"]}"')
   marker_nbt["Tags"] = nbtlib.List([nbtlib.String("gm4_guide")])
   marker_nbt["data"] = nbtlib.Compound()
   marker_nbt["data"]["type"] = nbtlib.String(book["module_type"])
+  if book["module_type"] == "expansion":
+    marker_nbt["data"]["base"] = nbtlib.String(book["base_module"])
   marker_nbt["data"]["id"] = nbtlib.String(book["id"])
   marker_nbt["data"]["trigger"] = nbtlib.Int(book["trigger_id"])
   marker_nbt["data"]["module_name"] = nbtlib.String(book["name"])
-  marker_nbt["data"]["toc_lines"] = nbtlib.Int(get_toc_lines(book))
+  marker_nbt["data"]["toc_lines"] = nbtlib.Int(len(split_into_lines(get_toc_line(book))))
   return Function([
     f"summon marker ~ {get_pos_hash(book['id'])} ~ {nbtlib.serialize_tag(marker_nbt)}"
   ])
@@ -336,8 +501,8 @@ def generate_update_hand_tag(book_ids: list[str]) -> FunctionTag:
 def generate_update_hand_function(book: Book, load: str) -> Function:
   start = f"execute if score @s gm4_guide matches {book['trigger_id']} if score {load} load.status matches 1.. run"
   return Function([
-    f"{start} run loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:{book['id']}",
-    f"{start} run loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:{book['id']}"
+    f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:{book['id']}",
+    f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:{book['id']}"
   ])
 
 
@@ -352,13 +517,14 @@ def generate_update_lectern_tag(book_ids: list[str]) -> FunctionTag:
 def generate_update_lectern_function(book: Book, load: str) -> Function:
   start = f"execute if score @s gm4_guide matches {book['trigger_id']} if score {load} load.status matches 1.. run"
   return Function([
-    f"{start} run loot spawn ~ ~-3000 ~ loot gm4_guidebook:gm4_guidebook:{book['id']}"
+    f"{start} loot spawn ~ ~-3000 ~ loot gm4_guidebook:{book['id']}"
   ])
 
 
 def beet_default(ctx: Context):
   if not os.path.exists(f"{ctx.directory}/data/gm4_guidebook"):
     return
+
   book_ids = []
   for file in os.listdir(f"{ctx.directory}/data/gm4_guidebook/"):
     if not file.endswith(".json"):
@@ -368,23 +534,24 @@ def beet_default(ctx: Context):
     book_ids.append(book["id"] if "id" in book else file[:-5])
 
     loottable, pages, pages_locked = generate_loottable(book)
-    ctx.data[f"gm4_gudebook:{book['id']}"] = loottable
+    ctx.data[f"gm4_guidebook:{book['id']}"] = loottable
 
-    ctx.data[f"gm4_gudebook:{book['id']}/add_toc_line"] = generate_add_toc_line_function(book)
-    ctx.data[f"gm4_gudebook:{book['id']}/setup_storage"] = generate_setup_storage_function(
+    ctx.data[f"gm4_guidebook:{book['id']}/add_toc_line"] = generate_add_toc_line_function(book)
+    ctx.data[f"gm4_guidebook:{book['id']}/setup_storage"] = generate_setup_storage_function(
       pages, pages_locked, book["id"])
-    ctx.data[f"gm4_gudebook:{book['id']}/summon_marker"] = generate_summon_marker_function(book)
-    ctx.data[f"gm4_gudebook:{book['id']}/update_hand"] = generate_update_hand_function(book, ctx.project_id)
-    ctx.data[f"gm4_gudebook:{book['id']}/update_lectern"] = generate_update_lectern_function(book, ctx.project_id)
+    ctx.data[f"gm4_guidebook:{book['id']}/summon_marker"] = generate_summon_marker_function(book)
+    ctx.data[f"gm4_guidebook:{book['id']}/update_hand"] = generate_update_hand_function(book, ctx.project_id)
+    ctx.data[f"gm4_guidebook:{book['id']}/update_lectern"] = generate_update_lectern_function(book, ctx.project_id)
 
     for index, section in enumerate(book["sections"]):
       if (advancement := generate_advancement(book, index)) is not None:
-        ctx.data[f"gm4_gudebook:{book['id']}/unlock/{section['name']}"] = advancement
-        ctx.data[f"gm4_gudebook:{book['id']}/display/{section['name']}"] = generate_display_advancement(section)
-        ctx.data[f"gm4_gudebook:{book['id']}/rewards/{section['name']}"] = generate_reward_function(section, book["id"])
+        ctx.data[f"gm4_guidebook:{book['id']}/unlock/{section['name']}"] = advancement
+        ctx.data[f"gm4_guidebook:{book['id']}/display/{section['name']}"] = generate_display_advancement(book)
+        ctx.data[f"gm4_guidebook:{book['id']}/rewards/{section['name']}"] = generate_reward_function(
+          section, book["id"], book["name"])
 
-  ctx.data["gm4_gudebook:add_toc"] = generate_add_toc_line_tag(book_ids)
-  ctx.data["gm4_gudebook:summon_marker"] = generate_summon_marker_tag(book_ids)
-  ctx.data["gm4_gudebook:update_hand"] = generate_update_hand_tag(book_ids)
-  ctx.data["gm4_gudebook:update_lectern"] = generate_update_lectern_tag(book_ids)
-  ctx.data["gm4_gudebook:setup_storage"] = generate_setup_storage_tag(book_ids)
+  ctx.data["gm4_guidebook:add_toc_line"] = generate_add_toc_line_tag(book_ids)
+  ctx.data["gm4_guidebook:summon_marker"] = generate_summon_marker_tag(book_ids)
+  ctx.data["gm4_guidebook:update_hand"] = generate_update_hand_tag(book_ids)
+  ctx.data["gm4_guidebook:update_lectern"] = generate_update_lectern_tag(book_ids)
+  ctx.data["gm4_guidebook:setup_storage"] = generate_setup_storage_tag(book_ids)

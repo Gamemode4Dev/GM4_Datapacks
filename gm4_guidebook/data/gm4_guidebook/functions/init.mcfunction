@@ -11,7 +11,11 @@ scoreboard players reset $module_count gm4_guide
 
 #declare storage gm4_guidebook:temp
 #declare storage gm4_guidebook:register
+#declare storage gm4_guidebook:pages
 schedule function gm4_guidebook:update_storage/build_toc 2t
+
+schedule function #gm4_guidebook:setup_storage 3t
+data modify storage gm4_guidebook:pages locked_default set value '["",{"text":"???","hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Undiscovered"},{"translate":"text.gm4.guidebook.undiscovered"}],"italic":true,"color":"red"}]}}]'
 
 # start up module
 execute unless score guidebook gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Guidebook"}

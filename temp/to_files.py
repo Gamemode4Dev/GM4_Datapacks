@@ -4,6 +4,8 @@ import nbtlib
 from mecha import Mecha
 from mecha import AstNbt, AstNbtPath
 import yaml
+import re
+import demjson
 
 mc = Mecha()
 
@@ -44,17 +46,17 @@ TIES = {
 }
 
 TO_DELETE = [{
-    "condition": "minecraft:inverted",
-    "term": {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-            "type_specific": {
-                  "type": "player",
-                  "gamemode": "spectator"
-            }
-        }
+  "condition": "minecraft:inverted",
+  "term": {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "type_specific": {
+        "type": "player",
+        "gamemode": "spectator"
+      }
     }
+  }
 }]
 
 ID_TO_NAME = {
@@ -164,7 +166,69 @@ ID_TO_NAME = {
     "custom_crafters": "Custom Crafters",
   }
 
-num_id = 1
+
+def parse_item(item):
+  if item["with"][0] == "\u2610":
+    return {"item": {"id": "air"}}
+  else:
+    return {
+      "item": item["hoverEvent"]["contents"],
+      "rp": item["with"][1],
+    }
+
+
+def simplify_page(page, name):
+  # return page
+  if page[0] == "":
+    page = page[1:]
+  new_page = []
+  i = 0
+  while i < len(page):
+    if "clickEvent" in page[i] and page[i]["clickEvent"] == {"action": "change_page", "value": "2"}:
+      new_page.append("header")
+    elif "clickEvent" in page[i] and page[i]["clickEvent"]["action"] == "open_url":
+      new_page.append("header")
+    elif "text" in page[i] and page[i]["text"] == name:
+      new_page.append("header_end")
+    elif "text" in page[i] and page[i]["text"] == "???":
+      new_page.append("hidden")
+    elif "with" in page[i] and (page[i]["with"][0] == "\u2610" or (type(page[i]["with"][0]) == dict and page[i]["with"][0]["text"] == "\u2612")):
+      new_page.append(parse_item(page[i]))
+    else:
+      new_page.append(page[i])
+    i += 1
+
+  if "header" in new_page:
+    new_page = new_page[new_page.index("header_end"):]
+    new_page[0] = {"insert": "header"}
+    if new_page[1] == {"text": "\n"}:
+      del new_page[1]
+
+  for i in range(len(new_page)):
+    if type(new_page[i]) == dict and "translate" in new_page[i] and new_page[i]["translate"] == "%1$s%3427655$s":
+      if len(dict.keys(new_page[i])) != 2:
+        continue
+      if type(new_page[i]["with"][1]) == dict and len(dict.keys(new_page[i]["with"][1])) == 1:
+        if re.match(r"text\.gm4\.guidebook\..+\d+.*", new_page[i]["with"][1]["translate"]):
+          new_page[i] = new_page[i]["with"][0]
+          if type(new_page[i]) == dict and list(new_page[i].keys()) == ["text"]:
+            new_page[i] = new_page[i]["text"]
+  return new_page
+
+
+def parse_page(page, name):
+  decoded = {}
+  try:
+    decoded = demjson.decode(str(page.replace(": True", ": true").replace(": False", ": false")))
+  except Exception as e:
+    try:
+      decoded = demjson.decode(str(page.replace(": True", ": true").replace(": False", ": false")[:-2]))
+    except Exception as q:
+      pass
+  return simplify_page(decoded, name)
+
+
+num_id = 2
 for folder in os.listdir():
   if not folder.startswith("gm4_") and not folder.startswith("lib_"):
     continue
@@ -460,5 +524,19 @@ for folder in os.listdir():
           for index, r in enumerate(req):
             req[index] = r.removeprefix(f"{key}/")
 
-    with open(f"{folder}/data/gm4_guidebook/{key}.json", "w") as f:
+    for section in guidebook["sections"]:
+      if "pages" in section:
+        temp_pages = []
+        for page in section["pages"]:
+          temp_pages.append(parse_page(page, guidebook["name"]))
+        section["pages"] = temp_pages
+      if "pages_locked" in section:
+        temp_pages = []
+        for page in section["pages_locked"]:
+          temp_pages.append(parse_page(page, guidebook["name"]))
+        section["pages_locked"] = temp_pages
+
+    # print(guidebook["name"])
+    # with open(f"{folder}/data/gm4_guidebook/{key}.json", "w") as f:
+    with open(f"temp/out/{key}.json", "w") as f:
       json.dump(guidebook, f, indent=2)
