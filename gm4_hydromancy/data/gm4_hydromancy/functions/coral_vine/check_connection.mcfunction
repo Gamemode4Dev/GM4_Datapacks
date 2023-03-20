@@ -1,7 +1,7 @@
 # check if coral vines are still connected
 # @s = coral flower
 # at @s positioned ~-7.5 ~-1.5 ~-7.5
-# run from coral_flower/kill
+# run from coral_core/kill
 # run from coral_vine/removed
 # run from coral_vine/grow/initiate
 

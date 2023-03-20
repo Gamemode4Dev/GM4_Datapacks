@@ -1,7 +1,7 @@
 # check block at water surface
 # @s = tropical fish with gm4_hy_tracked_fish tag
 # at @s, raycasted up to water surface
-# run from fish/search_goal/lily_pad/find_coral_flower
+# run from fish/search_goal/lily_pad/find_coral_core
 
 scoreboard players set $max_search_depth gm4_hy_data 0
 

@@ -2,7 +2,7 @@
 # @s = coral vine
 # at @s
 # run from coral_vine/check_connection
-# run from coral_vine/bud/discharge
+# run from coral_vine/flower/discharge
 
 # vfx
 particle block mangrove_roots ~ ~ ~ 0.35 0.35 0.35 0.1 8
@@ -14,5 +14,5 @@ tag @s remove gm4_hy_coral_vine.alive
 tag @s remove gm4_hy_coral_vine.connected
 tag @s remove gm4_hy_coral_vine.rooted
 
-# if budded remove buds
-execute if entity @s[tag=gm4_hy_coral_vine.budded] align xyz run kill @e[type=block_display,tag=gm4_hy_coral_bud,dx=0,dy=0,dz=0]
+# if flowering remove flowers
+execute if entity @s[tag=gm4_hy_coral_vine.flowering] align xyz run kill @e[type=block_display,tag=gm4_hy_coral_flower,dx=0,dy=0,dz=0]

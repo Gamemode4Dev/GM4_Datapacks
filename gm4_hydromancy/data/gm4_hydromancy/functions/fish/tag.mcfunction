@@ -1,7 +1,7 @@
 # tag tropical fish near coral flowers (11x11x11 box centered around the block the fan is on)
 # @s = tropical fish
 # at coral flower positioned ~-5.5 ~-6.5 ~-5.5
-# run from coral_flower/process
+# run from coral_core/process
 
 tag @s add gm4_hy_tracked_fish
 execute summon marker run function gm4_hydromancy:fish/pick_goal

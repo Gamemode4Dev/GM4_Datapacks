@@ -18,7 +18,7 @@ scoreboard objectives add gm4_hy_vine_root_count dummy
 
 schedule function gm4_hydromancy:tick 1t
 schedule function gm4_hydromancy:main 1t
-schedule function gm4_hydromancy:clock_coral_flower 3s
+schedule function gm4_hydromancy:clock_coral_core 3s
 schedule function gm4_hydromancy:clock_coral_vine 1s
 schedule function gm4_hydromancy:clock_tracked_fish 1t
 

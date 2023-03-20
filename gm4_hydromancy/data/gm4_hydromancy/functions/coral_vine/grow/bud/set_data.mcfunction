@@ -6,7 +6,7 @@
 # run from coral_vine/grow/bud/south
 # run from coral_vine/grow/bud/west
 
-tag @s add gm4_hy_coral_bud
+tag @s add gm4_hy_coral_flower
 
 # calculate some variability to the display location
 execute store result score $var1 gm4_hy_data run data get entity @s UUID[1]

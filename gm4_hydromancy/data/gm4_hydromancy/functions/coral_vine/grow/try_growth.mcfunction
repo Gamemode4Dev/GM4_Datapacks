@@ -15,8 +15,8 @@ execute positioned ~ ~1 ~1 if predicate gm4_hydromancy:valid_vine_growth run sum
 execute positioned ~ ~1 ~-1 if predicate gm4_hydromancy:valid_vine_growth run summon marker ~ ~ ~ {Tags:["gm4_hy_possible_vine_growth","gm4_hy_coral_vine","gm4_hy_coral_vine.alive","gm4_hy_coral_vine.connected"]}
 
 # replace vine leaf
-execute if entity @s[tag=!gm4_hy_coral_vine.budded] run setblock ~ ~ ~ azalea_leaves[waterlogged=true,persistent=true]
-execute if entity @s[tag=gm4_hy_coral_vine.budded] run setblock ~ ~ ~ flowering_azalea_leaves[waterlogged=true,persistent=true]
+execute if entity @s[tag=!gm4_hy_coral_vine.flowering] run setblock ~ ~ ~ azalea_leaves[waterlogged=true,persistent=true]
+execute if entity @s[tag=gm4_hy_coral_vine.flowering] run setblock ~ ~ ~ flowering_azalea_leaves[waterlogged=true,persistent=true]
 
 # keep trying until a possible location is found
 tag @s add gm4_hy_coral_vine.tried_growth
