@@ -38,7 +38,7 @@ def modules(ctx: Context):
     # finalize startup check
     module_ver = semver_to_dict(ctx.project_version)
     lines[1] = lines[0] + f"run scoreboard players set {ctx.project_id}_minor load.status {module_ver['minor']}"
-    lines[0] += f"run scoreboard players set {ctx.project_id} load.status {module_ver['major']}" # TODO, value and minor version
+    lines[0] += f"run scoreboard players set {ctx.project_id} load.status {module_ver['major']}"
 
     lines.append('')
     # start module clocks
@@ -139,12 +139,14 @@ def libraries(ctx: Context):
     extra_injections = ctx.meta["gm4"].get("extra_version_injections", {})
 
     # NOTE functions get version checks replaced onto `load.status` checks
-    for entry in extra_injections.get("functions", []):
-        handle = ctx.data.functions[f"{ctx.project_id}:{entry}"]
-        for i, line in enumerate(handle.lines):
-            if "load.status" in line:
-                handle.lines[i] = line.replace(f"{ctx.project_id} load.status matches 1", f"{ctx.project_id} load.status matches {lib_ver['major']} if score {ctx.project_id}_minor load.status matches {lib_ver['minor']}")
-                # FIXME use contrib replacements to use regex for optional repalcement of minor fields
+    ctx.require(find_replace(data_pack={"match": {
+        "functions": [f if ':' in f else f"{ctx.project_id}:{f}" for f in extra_injections.get("functions", [])]}
+        },
+        substitute={
+            "find": f"{ctx.project_id} load\\.status matches \\d(?: if score {ctx.project_id}_minor load\\.status matches \\d)?",
+            "replace": f"{ctx.project_id} load.status matches {lib_ver['major']} if score {ctx.project_id}_minor load.status matches {lib_ver['minor']}"
+        }
+    ))
 
     # NOTE advancements get score checks injected into every criteria
     for entry in extra_injections.get("advancements", []):
