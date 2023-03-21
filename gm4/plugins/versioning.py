@@ -221,6 +221,8 @@ def module_load_advancements(ctx: Context):
         handle = ctx.data.advancements[name]
         for criteria in handle.data["criteria"].values():
             player_conditions = criteria.setdefault("conditions", {}).setdefault("player", [])
+            if type(player_conditions) is dict:
+                raise ValueError(f"{name} is using legacy player conditions, which does not support load.status injections.")
             player_conditions.append({
                 "condition": "minecraft:value_check",
                 "value": {
