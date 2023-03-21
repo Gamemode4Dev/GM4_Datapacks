@@ -149,7 +149,6 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 			return
 		
 		project_data = res.json()
-		print(project_data)
 		
 		# update description and pack image
 			# ensures they point to the most up-to-date mc version branch
