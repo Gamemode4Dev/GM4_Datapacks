@@ -199,4 +199,4 @@ def write_updates(ctx: Context):
 	init.lines.append("data remove storage gm4:log queue[{type:'outdated'}]")
 	for m in modules.values():
 		version = semver_to_int(m["version"])
-		init.lines.append(f"execute if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}'}}")
+		init.lines.append(f"execute if score {m['id']} load.status matches 1.. if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}'}}")
