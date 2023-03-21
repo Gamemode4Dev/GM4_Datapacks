@@ -9,6 +9,7 @@ pipeline:
     extend: 'beet.yaml'
   - directory: '../lib_potion_tracking'
     extend: 'beet.yaml'
+  - gm4.plugins.post_library_plugins
   - data_pack:
       load: .
 

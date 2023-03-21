@@ -207,3 +207,31 @@ def dependency_load_tags(ctx: Context, dependencies: list[str]) -> FunctionTag:
             ]}
         ))
     return dep_tag
+
+def cache_premodule_advancements(ctx: Context):
+    """Stores advancements loaded in ctx right before the actual module data is loaded. 
+    Used to add version/startup checks to module-level advancements in versioning.module"""
+    ctx.meta["premodule_advancements"] = list(ctx.data.advancements.keys())
+
+def module_load_advancements(ctx: Context):
+    """Injects module load success checks (load.status 1..) into technical and display advancements for each module"""
+        # advancements get score checks injected into every criteria
+    base_exclusions = ["gm4:root", "gm4_intro_song:intro_song"] # manually set list to avoid checking base for advancements when it doesn't change module to module
+    for name in [a for a in ctx.data.advancements.keys() if a not in ctx.meta.get("premodule_advancements", []) + base_exclusions]:
+        handle = ctx.data.advancements[name]
+        for criteria in handle.data["criteria"].values():
+            player_conditions = criteria.setdefault("conditions", {}).setdefault("player", [])
+            player_conditions.append({
+                "condition": "minecraft:value_check",
+                "value": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": f"{ctx.project_id}"
+                },
+                "score": "load.status"
+                },
+                "range": {
+                    "min": 1
+                }
+            })
