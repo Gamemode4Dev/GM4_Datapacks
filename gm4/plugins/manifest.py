@@ -4,7 +4,7 @@ from typing import Any
 import json
 import os
 import yaml
-from gm4.utils import run, semver_to_int, semver_to_dict
+from gm4.utils import run, Version
 
 
 def create(ctx: Context):
@@ -110,16 +110,16 @@ def update_patch(ctx: Context):
 			module["version"] = module["version"].replace("X", "0")
 		else:
 			# Changes were made, bump the patch
-			version = semver_to_dict(module["version"])
-			last_ver = semver_to_dict(released["version"])
+			version = Version(module["version"])
+			last_ver = Version(released["version"])
 			
-			if version["minor"] > last_ver["minor"] or version["major"] > last_ver["major"]: # type: ignore
-				patch = 0
+			if version.minor > last_ver.minor or version.major > last_ver.major: # type: ignore
+				version.patch = 0
 			else:
-				patch = last_ver["patch"] + 1 # type: ignore
-				print(f"[GM4] Updating {id} patch to {patch}")
+				version.patch = last_ver.patch + 1 # type: ignore
+				print(f"[GM4] Updating {id} patch to {version.patch}")
 
-			module["version"] = f"{version['major']}.{version['minor']}.{patch}"
+			module["version"] = version # FIXME does this work?
 
 	ctx.cache["gm4_manifest"].json["modules"] = modules
 
@@ -183,7 +183,7 @@ def write_updates(ctx: Context):
 	modules = manifest["modules"]
 
 	score = f"{ctx.project_id.removeprefix('gm4_')} gm4_modules"
-	version = semver_to_int(modules[ctx.project_id]["version"])
+	version = Version(modules[ctx.project_id]["version"]).int_rep()
 
 	# Update score setter for this module
 	for i, line in enumerate(init.lines):
@@ -198,5 +198,5 @@ def write_updates(ctx: Context):
 	init.lines.append("# Module update list")
 	init.lines.append("data remove storage gm4:log queue[{type:'outdated'}]")
 	for m in modules.values():
-		version = semver_to_int(m["version"])
+		version = Version(m["version"]).int_rep()
 		init.lines.append(f"execute if score {m['id']} load.status matches 1.. if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}'}}")

@@ -186,7 +186,7 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 		for v in mc_version_matching_version:
 			res = requests.delete(f"{SMITHED_API}/packs/{smithed_id}/versions/{v}", params={'token': auth_token})
 			if not (200 <= res.status_code < 300):
-				print(f"[GM4] [Smithed] Failed to delete version version: {res.status_code} {res.text}")
+				print(f"[GM4] [Smithed] Failed to delete version {version}: {res.status_code} {res.text}")
 			print(f"[GM4] [Smithed] {res.text}")
 		
 		# post new version
