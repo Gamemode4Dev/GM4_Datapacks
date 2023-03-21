@@ -2,6 +2,7 @@ from beet import Context, TextFile
 import re
 from pathlib import Path
 from typing import Any
+from gm4.plugins.manifest import write_credits
 
 def beet_default(ctx: Context):
     """Loads the README.md and modifies:
@@ -26,7 +27,8 @@ def beet_default(ctx: Context):
     })
 
     # Credits
-    linked_credits = ctx.meta['linked_credits'] # NOTE this relies on the credits portion of manifest running first. Is that okay?
+    ctx.require(write_credits) # requires data from traversing credits files
+    linked_credits = ctx.meta['linked_credits']
     credits_text = ""
     for title in linked_credits:
         credits_text += f"- {title}: {', '.join(linked_credits[title])}\n"

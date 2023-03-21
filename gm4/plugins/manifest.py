@@ -62,13 +62,19 @@ def create(ctx: Context):
 	else:
 		contributors = []
 
+	# Read the gm4 base module metadata
+	base_file = Path("base/beet.yaml")
+	base_config = yaml.safe_load(base_file.read_text())
+	base = {"version": base_config["version"]}
+
 	# Create the new manifest, using HEAD as the new last commit
 	head = run(["git", "rev-parse", "HEAD"])
 	new_manifest = {
 		"last_commit": head,
 		"modules": modules,
 		"libraries": libraries,
-		"contributors": contributors
+		"base": base,
+		"contributors": contributors,
 	}
 	ctx.cache["gm4_manifest"].json = new_manifest
 
@@ -128,6 +134,7 @@ def write_meta(ctx: Context):
 	manifest = ctx.cache["gm4_manifest"].json.copy()
 	manifest["modules"] = list(manifest["modules"].values()) # convert modules dict down to list for backwards compatability
 	manifest.pop("libraries")
+	manifest.pop("base")
 	manifest_file.write_text(json.dumps(manifest, indent=2))
 
 

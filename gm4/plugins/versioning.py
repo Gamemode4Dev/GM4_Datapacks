@@ -17,8 +17,8 @@ def modules(ctx: Context):
     ctx.data.function_tags[f"load:{ctx.project_id}"] = load_tag
 
     # load.mcfunction
-    dependencies.insert(0, f"gm4:{'1.1.0'}") # manually insert base version as dependency
-        # NOTE the required base version is always assumed to be the current base version #FIXME
+    base_ver = ctx.cache["gm4_manifest"].json["base"]["version"]
+    dependencies.insert(0, f"gm4:{base_ver}") # manually insert base version as dependency, assumed to be current base version
 
     for dep in dependencies:
         dep_id, ver_str = map(lambda s: s.strip(), dep.split(":"))
