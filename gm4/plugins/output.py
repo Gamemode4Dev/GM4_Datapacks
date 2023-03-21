@@ -83,7 +83,6 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 			res = requests.patch(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, json={"body": d})
 			if not (200 <= res.status_code < 300):
 				print(f"[GM4] [Modrinth] Failed to update description: {res.status_code} {res.text}")
-				return
 			print(f"[GM4] [Modrinth] Successfully updated description of {ctx.project_name}")
 
 		# upload datapack zip
@@ -140,22 +139,51 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 		version = version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
 		smithed_id = smithed["pack_id"]
 
-		# get existing versions
-		res = requests.get(f"{SMITHED_API}/packs/{smithed_id}/versions")
+		# get project data and existing versions
+		res = requests.get(f"{SMITHED_API}/packs/{smithed_id}")#/versions")
 		if not (200 <= res.status_code < 300):
 			if res.status_code == 404:
 				print(f"[GM4] [Smithed] Cannot publish to smithed project {smithed_id} as it doesn't exist.")
 			else:
-				print(f"[GM4] [Smithed] Failed to get project versions: {res.status_code} {res.text}")
+				print(f"[GM4] [Smithed] Failed to get project: {res.status_code} {res.text}")
 			return
 		
 		project_data = res.json()
-		matching_version = next((v for v in project_data if v["name"] == version), None)
+		print(project_data)
+		
+		# update description and pack image
+			# ensures they point to the most up-to-date mc version branch
+		# project_display = project_data["display"]
+		# current_icon = f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/{mc_version_dir}/generated/pack_icons/{ctx.project_id}.png"
+		# current_readme = f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/{mc_version_dir}/generated/smithed_readmes/{ctx.project_id}.md"
+
+		# if project_display["icon"] != current_icon or project_display["webPage"] != current_readme:
+		# 	res = requests.patch(f"{SMITHED_API}/packs/{smithed_id}", params={'token': auth_token},
+		# 		json={"data": {
+		# 				"display": {
+		# 					"icon": current_icon,
+		# 					"webPage": current_readme,
+		# 					"name": project_display["name"],
+		# 					"hidden": project_display["hidden"],
+		# 					"description": project_display["description"]
+		# 				},
+		# 				"id": smithed_id,
+		# 				"versions": project_data["versions"], # NOTE smithed api currently does not permit non-overwriting api requests. Sad day.
+		# 				"categories": project_data["categories"]
+		# 		}})
+		# 	if not (200 <= res.status_code < 300):
+		# 		print(f"[GM4] [Smithed] Failed to update descripion: {res.status_code} {res.text}")
+		# 	print(f"[GM4] [Smithed] {res.text}")
+		# FIXME smithed has intentions to add a patch method that allows access to just the display data, so redundant version uploads are unnecessary. Uncomment and fix this code when that happens
+
+
+		project_versions = project_data["versions"]
+		matching_version = next((v for v in project_versions if v["name"] == version), None)
 		if matching_version is not None:
 			return
-		
+
 		# remove other existing versions for that mc version
-		mc_version_matching_version = (v["name"] for v in project_data if v['supports'][0] == SUPPORTED_GAME_VERSIONS[0]) # NOTE smithed currently only supports one game version
+		mc_version_matching_version = (v["name"] for v in project_versions if v['supports'][0] == SUPPORTED_GAME_VERSIONS[0]) # NOTE smithed currently only supports one game version
 		for v in mc_version_matching_version:
 			res = requests.delete(f"{SMITHED_API}/packs/{smithed_id}/versions/{v}", params={'token': auth_token})
 			if not (200 <= res.status_code < 300):
