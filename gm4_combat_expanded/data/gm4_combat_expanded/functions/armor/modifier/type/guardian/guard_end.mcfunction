@@ -3,8 +3,8 @@
 # at @s
 # run from player/submain
 
-# limit damage to 2 hearts
-scoreboard players set @s[scores={gm4_ce_guarded=41..}] gm4_ce_guarded 40
+# limit damage to 3 hearts
+scoreboard players set @s[scores={gm4_ce_guarded=41..}] gm4_ce_guarded 60
 
 # translate damage resisted to nearest guarder (not self)
 scoreboard players operation @p[tag=gm4_ce_guardian,distance=0.01..] gm4_ce_guard += @s gm4_ce_guarded
