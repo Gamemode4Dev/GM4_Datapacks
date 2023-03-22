@@ -17,8 +17,7 @@ meta:
     required: []
     recommended:
       - gm4_metallurgy
-    notes:
-      - Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.
+    notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Combat_Expanded
     credits:
