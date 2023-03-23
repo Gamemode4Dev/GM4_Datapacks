@@ -119,7 +119,7 @@ def update_patch(ctx: Context):
 				version.patch = last_ver.patch + 1 # type: ignore
 				print(f"[GM4] Updating {id} patch to {version.patch}")
 
-			module["version"] = version # FIXME does this work?
+			module["version"] = str(version)
 
 	ctx.cache["gm4_manifest"].json["modules"] = modules
 
@@ -183,13 +183,17 @@ def write_updates(ctx: Context):
 	modules = manifest["modules"]
 
 	score = f"{ctx.project_id.removeprefix('gm4_')} gm4_modules"
-	version = Version(modules[ctx.project_id]["version"]).int_rep()
+	version = Version(modules[ctx.project_id]["version"])
 
-	# Update score setter for this module
+	# Update score setter for this module, and add version to gm4:log
+	last_i=-1
 	for i, line in enumerate(init.lines):
 		if "gm4_modules" in line:
-			init.lines[i] = line.replace(f"{score} 1", f"{score} {version}").replace(f"{score} matches 1", f"{score} matches {version}")
+			init.lines[i] = line.replace(f"{score} 1", f"{score} {version.int_rep()}").replace(f"{score} matches 1", f"{score} matches {version.int_rep()}")
+			last_i = i
 
+	init.lines.insert(last_i+1, f"data modify storage gm4:log versions append value {{id:\"{ctx.project_id}\",module:\"{ctx.project_name}\",version:\"{version}\"}}")
+        
 	# Remove the marker if it exists
 	if "#$moduleUpdateList" in init.lines:
 		init.lines.remove("#$moduleUpdateList")
@@ -199,4 +203,5 @@ def write_updates(ctx: Context):
 	init.lines.append("data remove storage gm4:log queue[{type:'outdated'}]")
 	for m in modules.values():
 		version = Version(m["version"]).int_rep()
-		init.lines.append(f"execute if score {m['id']} load.status matches 1.. if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}'}}")
+		init.lines.append(f"execute if score {m['id']} load.status matches -1.. if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}',download:'https://gm4.co/modules/{ctx.project_id[4:].replace('_','-')}'}}")
+	

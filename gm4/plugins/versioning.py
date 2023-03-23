@@ -8,6 +8,7 @@ def modules(ctx: Context):
         - load:{module_name}.json
         - {module_name}:load.mcfunction
         - load:load.json"""
+    ctx.cache["currently_building"].json = {"name": ctx.project_name} # cache module's project id for access within library pipelines
     dependencies: list[str] = ctx.meta.get('gm4', {}).get('required', [])
     lines = ["execute ", ""]
 
@@ -33,12 +34,19 @@ def modules(ctx: Context):
         lines[0] += f"if score {dep_id} load.status matches {dep_ver.major} if score {dep_id}_minor load.status matches {dep_ver.minor}.. "
 
         # failure logs
-        lines.append(f"execute unless score {dep_id} load.status matches {dep_ver.major} unless score {dep_id}_minor load.status matches {dep_ver.minor}.. run data modify storage gm4:log queue append value {{type:\"missing\",module:\"{ctx.project_name}\",require:\"{dep_name}\"}}")
-    
+        lines.append(f"execute unless score {dep_id} load.status matches 1.. run data modify storage gm4:log queue append value {{type:\"missing\",module:\"{ctx.project_name}\",id:\"{ctx.project_id}\",require:\"{dep_name}\",require_id:\"{dep_id}\"}}")
+
+        log_data = f"{{type:\"version_conflict\",module:\"{ctx.project_name}\",id:\"{ctx.project_id}\",require:\"{dep_name}\",require_id:\"{dep_id}\",require_ver:\"{dep_ver}\"}}"
+        lines.append(f"execute if score {dep_id} load.status matches 1.. unless score {dep_id} load.status matches {dep_ver.major} run data modify storage gm4:log queue append value {log_data}")
+        lines.append(f"execute if score {dep_id} load.status matches {dep_ver.major} unless score {dep_id}_minor load.status matches {dep_ver.minor}.. run data modify storage gm4:log queue append value {log_data}")
+
     # finalize startup check
     module_ver = Version(ctx.project_version)
     lines[1] = lines[0] + f"run scoreboard players set {ctx.project_id}_minor load.status {module_ver.minor}"
     lines[0] += f"run scoreboard players set {ctx.project_id} load.status {module_ver.major}"
+
+    # otherwise, log failed startup with -1 load.status
+    lines.append(f"execute unless score {ctx.project_id} load.status matches 1.. run scoreboard players set {ctx.project_id} load.status -1")
 
     lines.append('')
     # start module clocks
@@ -85,7 +93,7 @@ def libraries(ctx: Context):
         
         dep_check_line += f"if score {dep_id} load.status matches {dep_ver.major} if score {dep_id}_minor load.status matches {dep_ver.minor}.. "
 
-    dep_check_line += f"unless score {ctx.project_id} load.status matches 1.. run scoreboard players set "
+    dep_check_line += f"unless score {ctx.project_id} load.status matches {lib_ver.major}.. run scoreboard players set "
 
     lines.append(dep_check_line + f"{ctx.project_id}_minor load.status {lib_ver.minor}")
     lines.append(dep_check_line + f"{ctx.project_id} load.status {lib_ver.major}")
@@ -177,6 +185,13 @@ def libraries(ctx: Context):
                 },
                 "range": lib_ver.minor
             })
+
+    # stamp version number and module bring packaged into into load.mcfunction
+    handle = ctx.data.functions[f"{ctx.project_id}:load"]
+    handle.append([
+        "\n",
+        f"data modify storage gm4:log versions append value {{id:\"{ctx.project_id}\",module:\"{ctx.project_id.replace('gm4', 'lib')}\",version:\"{ctx.project_version}\",from:\"{ctx.cache['currently_building'].json['name']}\"}}"
+    ])
 
     # namespace renaming to include version number
     versioned_namespace = f"{ctx.project_id}-{lib_ver.major}.{lib_ver.minor}"
