@@ -193,15 +193,44 @@ def libraries(ctx: Context):
         f"data modify storage gm4:log versions append value {{id:\"{ctx.project_id}\",module:\"{ctx.project_id.replace('gm4', 'lib')}\",version:\"{ctx.project_version}\",from:\"{ctx.cache['currently_building'].json['name']}\"}}"
     ])
 
-    # namespace renaming to include version number
-    versioned_namespace = f"{ctx.project_id}-{lib_ver.major}.{lib_ver.minor}"
+    # put library version number in namespace
+    versioned_namespace(ctx, lib_ver)
+
+def base(ctx: Context):
+    """Fills in version information to the base functions from the beet.yaml"""
+    ver = Version(ctx.project_version)
+    # enumerate.mcfunction
+    lines = [
+        f"execute if score gm4 load.status matches {ver.major} unless score gm4_minor load.status matches {ver.minor}.. run scoreboard players set gm4_minor load.status {ver.minor}",
+        "",
+        f"execute unless score gm4 load.status matches {ver.major}.. run scoreboard players set gm4_minor load.status {ver.minor}",
+        f"execute unless score gm4 load.status matches {ver.major}.. run scoreboard players set gm4 load.status {ver.minor}"
+    ]
+    ctx.data.functions[f"gm4:enumerate"] = Function(lines)
+
+    # resolve_load.mcfunction
+    lines = f"execute if score gm4 load.status matches {ver.major} if score gm4_minor load.status matches {ver.minor} run function gm4:load"
+    ctx.data.functions[f"gm4:resolve_load"] = Function(lines)
+    
+    # resolve_post_load.mcfunction
+    lines = f"execute if score gm4 load.status matches {ver.major} if score gm4_minor load.status matches {ver.minor} run function gm4:post_load"
+    ctx.data.functions[f"gm4:resolve_post_load"] = Function(lines)
+
+    versioned_namespace(ctx, ver)
+
+def versioned_namespace(ctx: Context, version: Version):
+    """Puts the project version into the namespace, and renames all references to match
+    Used for libraries that may have multiple versions exist in a world at once without
+    file overwrites"""
+    namespace = ctx.project_id if ctx.project_id != 'base' else 'gm4'
+    versioned_namespace = f"{namespace}-{version.major}.{version.minor}"
     ctx.require(rename_files(data_pack={
         "match":{"functions": "*", "advancements": "*", "loot_tables": "*", "predicates": "*"},
-        "find": f"{ctx.project_id}:([a-z_/]+)",
+        "find": f"{namespace}:([a-z_/]+)",
         "replace": f"{versioned_namespace}:\\1"
     }))
     ctx.require(find_replace(data_pack={"match": "*"}, substitute={
-        "find": f"(?<!#)(?<!storage ){ctx.project_id}:([a-z0-9_/]+)",
+        "find": f"(?<!#)(?<!storage ){namespace}:([a-z0-9_/]+)",
         "replace": f"{versioned_namespace}:\\1"
     }))
     

@@ -6,4 +6,4 @@ execute if score #not_match gm4_data matches 0 run tellraw @a[tag=gm4_show_log] 
 data remove storage gm4:log temp
 execute if score #not_match gm4_data matches 1 run data remove storage gm4:log traverse_versions[0]
 execute store result score #match_size gm4_data run data get storage gm4:log traverse_versions
-execute if score #not_match gm4_data matches 1 if score #match_size gm4_data matches 1.. run function gm4-1.2:conflict_logs/traverse
+execute if score #not_match gm4_data matches 1 if score #match_size gm4_data matches 1.. run function gm4:conflict_logs/traverse
