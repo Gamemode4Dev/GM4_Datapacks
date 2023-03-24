@@ -13,11 +13,12 @@ pipeline:
 
 meta:
   gm4:
-    required:
-      - lib_machines: 1.1.0
-    schedule_loops: 
-      - main
-      - beacon_clock
+    versioning:
+      required:
+        - lib_machines: 1.1.0
+      schedule_loops: 
+        - main
+        - beacon_clock
     website:
       description: Reverse the effects of beacons with corrupting glass! But be careful, a poison Beacon may sound great at first, but is incredibly painful in pratice.
       recommended: []

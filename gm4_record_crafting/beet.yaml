@@ -13,8 +13,9 @@ pipeline:
 
 meta:
   gm4:
-    required:
-      - lib_custom_crafters: 3.0.0
+    versioning:
+      required:
+        - lib_custom_crafters: 3.0.0
     website:
       description: A crafting recipe pack that lets you craft all the records in a Custom Crafter.
       recommended:

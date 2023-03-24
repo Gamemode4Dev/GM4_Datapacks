@@ -10,14 +10,14 @@ pipeline:
 
 meta:
   gm4:
-    schedule_loops: 
-      - main
-      - tick
+    versioning:
+      schedule_loops: 
+        - main
+        - tick
     website:
       description: Climbing downward has never been easier!
       recommended: []
       notes: []
-    required: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Rope_Ladders
     credits:

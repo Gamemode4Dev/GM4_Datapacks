@@ -10,8 +10,8 @@ pipeline:
 
 meta:
   gm4:
-    required: []
-    schedule_loops: [tick]
+    versioning:
+      schedule_loops: [tick]
     website:
       description: A seed-specific chunk scanner that modifies your world as you explore. Install expansions to add extra structures and terrain.
       recommended:

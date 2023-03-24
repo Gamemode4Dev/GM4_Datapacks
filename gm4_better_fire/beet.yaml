@@ -10,8 +10,8 @@ pipeline:
 
 meta:
   gm4:
-    required: []
-    schedule_loops: [main]
+    versioning:
+      schedule_loops: [main]
     website:
       description: Spice up Minecraft's fire mechanics with this module! Flame arrows set fire when they land and burning creepers explode when low on health!
       recommended:

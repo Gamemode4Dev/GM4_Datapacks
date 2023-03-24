@@ -14,12 +14,13 @@ pipeline:
 
 meta:
   gm4:
-    required:
-      - gm4_metallurgy: 1.2.0
-      - lib_custom_crafters: 3.0.0
-    schedule_loops:
-      - main
-      - tick
+    versioning:
+      required:
+        - gm4_metallurgy: 1.2.0
+        - lib_custom_crafters: 3.0.0
+      schedule_loops:
+        - main
+        - tick
     website:
       description: Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man.
       recommended: []

@@ -10,8 +10,8 @@ pipeline:
 
 meta:
   gm4:
-    required: []
-    schedule_loops: [main]
+    versioning:
+      schedule_loops: [main]
     website:
       description: Allows Campfires to grant you up to 4 extra hearts that last for more than half of a Minecraft day. Perfect for those scary first nights in a Minecraft world.
       recommended: []

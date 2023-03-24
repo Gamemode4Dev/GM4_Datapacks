@@ -10,13 +10,13 @@ pipeline:
 
 meta:
   gm4:
-    schedule_loops: [tick]
+    versioning:
+      schedule_loops: [tick]
     website:
       description: Automatically latch on to a tripwire to sail through the sky on a suspended line!
       recommended:
         - gm4_vertical_rails
       notes: []
-    required: []
     video: https://www.youtube.com/watch?v=QA7a5q2kVcg
     wiki: https://wiki.gm4.co/wiki/Ziprails
     credits:

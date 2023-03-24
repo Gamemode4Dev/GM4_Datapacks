@@ -15,12 +15,13 @@ pipeline:
 
 meta:
   gm4:
-    required:
-      - lib_custom_crafters: 3.0.0
-      - lib_machines: 1.1.0
-    schedule_loops:
-      - main
-      - tick
+    versioning:
+      required:
+        - lib_custom_crafters: 3.0.0
+        - lib_machines: 1.1.0
+      schedule_loops:
+        - main
+        - tick
     website:
       description: Suppress and control chorus-based teleportation!
       recommended:

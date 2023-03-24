@@ -10,14 +10,14 @@ pipeline:
 
 meta:
   gm4:
-    schedule_loops:
-      - main
-      - tick
+    versioning:
+      schedule_loops:
+        - main
+        - tick
     website:
       description: Stand on top of an Ender Chest to store Experience, stand below to retrieve it!
       recommended: []
       notes: []
-    required: []
     video: https://www.youtube.com/watch?v=hgq-5waSpVU&index=11&list=PLpa6LLAKqMWbXt5VvxCc6H4mwI-qacdGA
     wiki: https://wiki.gm4.co/wiki/XP_Storage
     credits:

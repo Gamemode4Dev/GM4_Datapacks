@@ -13,13 +13,14 @@ pipeline:
 
 meta:
   gm4:
-    required:
-      - gm4_block_compressors: 1.1.0
-      - gm4_metallurgy: 1.2.0
-      - lib_machines: 1.1.0
-    schedule_loops:
-      - main
-      - tick
+    versioning:
+      required:
+        - gm4_block_compressors: 1.1.0
+        - gm4_metallurgy: 1.2.0
+        - lib_machines: 1.1.0
+      schedule_loops:
+        - main
+        - tick
     website:
       description: Automatically compress stacks of items into their block form with a tinker shamir as a machine block, and back.
       recommended:

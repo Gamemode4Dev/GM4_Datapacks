@@ -12,16 +12,17 @@ pipeline:
 
 meta:
   gm4:
-    required: [lib_machines: 1.1.0]
-    schedule_loops: [main]
-    extra_version_injections:
-      functions: 
-        - versioning/check_item_tags
-        - check_recipes
-        - machine/verify_destroy
-        - machine/verify_place_down
-      advancements: 
-        - create_custom_crafter
+    versioning:
+      required: [lib_machines: 1.1.0]
+      schedule_loops: [main]
+      extra_version_injections:
+        functions: 
+          - versioning/check_item_tags
+          - check_recipes
+          - machine/verify_destroy
+          - machine/verify_place_down
+        advancements: 
+          - create_custom_crafter
     credits:
       Custom Crafters Creators:
         - Bloo

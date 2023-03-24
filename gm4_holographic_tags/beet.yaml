@@ -10,8 +10,8 @@ pipeline:
 
 meta:
   gm4:
-    required: []
-    schedule_loops: [main]
+    versioning:
+      schedule_loops: [main]
     website:
       description: Set up floating messages with a simple name tag!
       recommended: []

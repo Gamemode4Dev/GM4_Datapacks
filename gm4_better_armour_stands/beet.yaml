@@ -10,10 +10,10 @@ pipeline:
 
 meta:
   gm4:
-    required: []
-    schedule_loops: 
-      - main
-      - tick
+    versioning:
+      schedule_loops: 
+        - main
+        - tick
     website:
       description: Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands.
       recommended:

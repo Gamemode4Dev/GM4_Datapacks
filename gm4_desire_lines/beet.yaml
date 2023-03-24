@@ -10,8 +10,8 @@ pipeline:
 
 meta:
   gm4:
-    required: []
-    schedule_loops: [tick]
+    versioning:
+      schedule_loops: [tick]
     website:
       description: Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!
       recommended:

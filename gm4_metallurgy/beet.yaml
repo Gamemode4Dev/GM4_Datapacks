@@ -15,12 +15,13 @@ pipeline:
 
 meta:
   gm4:
-    required:
-      - lib_lore: 1.0.0
-      - lib_player_heads: 1.1.0
-    schedule_loops:
-      - main
-      - tick
+    versioning:
+      required:
+        - lib_lore: 1.0.0
+        - lib_player_heads: 1.1.0
+      schedule_loops:
+        - main
+        - tick
     website:
       description: Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!
       recommended:

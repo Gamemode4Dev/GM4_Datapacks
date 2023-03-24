@@ -1,6 +1,7 @@
 from beet import Context, Function, FunctionTag
 from beet.contrib.rename_files import rename_files
 from beet.contrib.find_replace import find_replace
+from typing import Any
 from gm4.utils import Version
 
 def modules(ctx: Context):
@@ -9,7 +10,8 @@ def modules(ctx: Context):
         - {module_name}:load.mcfunction
         - load:load.json"""
     ctx.cache["currently_building"].json = {"name": ctx.project_name} # cache module's project id for access within library pipelines
-    dependencies: list[dict[str,str]] = ctx.meta.get('gm4', {}).get('required', [])
+    versioning_config: dict[str, Any] = ctx.meta.get('gm4', {}).get('versioning', {})
+    dependencies: list[dict[str,str]] = versioning_config.get('required', [])
     lines = ["execute ", ""]
 
     # {{module_name}}.json tag
@@ -74,7 +76,8 @@ def libraries(ctx: Context):
         - load:{lib_name}/enumerate.json
         - load:{lib_name}/resolve_load.json
         - load:{lib_name}/dependencies.json"""
-    dependencies: list[dict[str, str]] = ctx.meta.get('gm4', {}).get('required', [])
+    versioning_config: dict[str, Any] = ctx.meta.get('gm4', {}).get('versioning', {})
+    dependencies: list[dict[str, str]] = versioning_config.get('required', [])
     lib_ver = Version(ctx.project_version)
 
     # enumerate.mcfunction
@@ -144,7 +147,7 @@ def libraries(ctx: Context):
     yield # wait for all pack files to load
 
     # additional version injections
-    extra_injections = ctx.meta["gm4"].get("extra_version_injections", {})
+    extra_injections: dict[str, list[str]] = versioning_config.get("extra_version_injections", {})
 
     # NOTE functions get version checks replaced onto `load.status` checks
     ctx.require(find_replace(data_pack={"match": {

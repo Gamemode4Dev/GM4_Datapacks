@@ -10,8 +10,8 @@ pipeline:
 
 meta:
   gm4:
-    required: []
-    schedule_loops: [main]
+    versioning:
+      schedule_loops: [main]
     website:
       description: Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!
       recommended:

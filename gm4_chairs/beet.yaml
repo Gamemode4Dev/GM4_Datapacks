@@ -10,8 +10,8 @@ pipeline:
 
 meta:
   gm4:
-    required: []
-    schedule_loops: [main]
+    versioning:
+      schedule_loops: [main]
     website:
       description: Place a saddle on a stair to have a chair to sit on!
       recommended:

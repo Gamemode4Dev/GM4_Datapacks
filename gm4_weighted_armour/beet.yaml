@@ -10,12 +10,12 @@ pipeline:
 
 meta:
   gm4:
-    schedule_loops: [main]
+    versioning:
+      schedule_loops: [main]
     website:
       description: Perfect for UHCs, this module forces you to balance protection with speed.
       recommended: []
       notes: []
-    required: []
     video: https://www.youtube.com/watch?v=rVRSXTGQPbg
     wiki: https://wiki.gm4.co/wiki/Weighted_Armour
     credits:

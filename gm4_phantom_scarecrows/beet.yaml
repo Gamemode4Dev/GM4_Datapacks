@@ -10,14 +10,14 @@ pipeline:
 
 meta:
   gm4:
-    schedule_loops:
-      - main
-      - tick
+    versioning:
+      schedule_loops:
+        - main
+        - tick
     website:
       description: Set up Scarecrows that shoot homing rockets at Phantoms!
       recommended: []
       notes: []
-    required: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Phantom_Scarecrows
     credits:

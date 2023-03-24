@@ -24,7 +24,8 @@ def create(ctx: Context):
 			module["video_link"] = meta["video"] or ""
 			module["wiki_link"] = meta["wiki"] or ""
 			module["credits"] = meta["credits"]
-			module["requires"] = list(filter(lambda a: "lib" not in a[0:4], map(lambda a: list(a.keys())[0], meta["required"])))
+			versioning_config = meta.get("versioning", {})
+			module["requires"] = list(filter(lambda a: "lib" not in a[0:4], map(lambda a: list(a.keys())[0], versioning_config.get("required", []))))
 			module["description"] = website["description"]
 			module["recommends"] = website["recommended"]
 			if "hidden" in website and website["hidden"]:

@@ -10,12 +10,12 @@ pipeline:
 
 meta:
   gm4:
-    schedule_loops: [main]
+    versioning:
+      schedule_loops: [main]
     website:
       description: Pick up Spawners and move them wherever you want with Minecarts.
       recommended: []
       notes: []
-    required: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Spawner_Minecarts
     credits:

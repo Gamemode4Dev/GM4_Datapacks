@@ -13,8 +13,9 @@ pipeline:
 
 meta:
   gm4:
-    required:
-      - lib_trades: 1.3.0
+    versioning:
+      required:
+        - lib_trades: 1.3.0
     website:
       description: Introduces fruit-bearing apple trees! Trade for apple saplings with wandering traders or commenly find these lifesavers in forests if you have Orbis installed.
       recommended:

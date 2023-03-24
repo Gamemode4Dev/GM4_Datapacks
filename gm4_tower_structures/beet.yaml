@@ -10,8 +10,9 @@ pipeline:
 
 meta:
   gm4:
-    required:
-      - gm4_orbis: 2.0.0
+    versioning:
+      required:
+        - gm4_orbis: 2.0.0
     website:
       description: A custom terrain expansion pack that adds four new tower structures to the world.
       recommended:
