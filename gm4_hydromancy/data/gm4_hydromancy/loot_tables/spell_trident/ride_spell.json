@@ -1,0 +1,39 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_hydromancy:spell_trident/base"
+                }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_nbt",
+                    "tag": "{gm4_hy_spell_trident:{spell_id:1,dura_disp:245,mana:{left:100,max:100}}}}"
+                },
+                {
+                    "function": "minecraft:set_lore",
+                    "lore": [
+                        {
+                            "text": ""
+                        },
+                        {
+                            "translate": "item.gm4_hydromancy.spell.header",
+                            "fallback": "Spell:",
+                            "color": "gray",
+                            "italic": false
+                        },
+                        {
+                            "translate": "item.gm4_hydromancy.spell.ride",
+                            "fallback": "Ride",
+                            "color": "blue",
+                            "italic": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
