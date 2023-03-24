@@ -11,7 +11,7 @@ pipeline:
 meta:
   gm4:
     required:
-      - 'gm4_orbis: 2.0.0'
+      - gm4_orbis: 2.0.0
     website:
       description: A custom terrain expansion pack that makes biome specific caves and mineshafts
       recommended:

@@ -14,7 +14,7 @@ pipeline:
 meta:
   gm4:
     required:
-      - 'lib_forceload: 1.1.0'
+      - lib_forceload: 1.1.0
     website:
       hidden: true
       description: Adds a dynamic guidebook to discover the mechanics of Gamemode 4! This provides a wiki-like experience in-game!

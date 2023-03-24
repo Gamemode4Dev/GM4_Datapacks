@@ -14,7 +14,7 @@ pipeline:
 meta:
   gm4:
     required:
-      - 'lib_player_heads: 1.1.0'
+      - lib_player_heads: 1.1.0
     schedule_loops:
       - main
       - tick

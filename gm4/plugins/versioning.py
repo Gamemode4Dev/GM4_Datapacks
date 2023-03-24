@@ -9,7 +9,7 @@ def modules(ctx: Context):
         - {module_name}:load.mcfunction
         - load:load.json"""
     ctx.cache["currently_building"].json = {"name": ctx.project_name} # cache module's project id for access within library pipelines
-    dependencies: list[str] = ctx.meta.get('gm4', {}).get('required', [])
+    dependencies: list[dict[str,str]] = ctx.meta.get('gm4', {}).get('required', [])
     lines = ["execute ", ""]
 
     # {{module_name}}.json tag
@@ -19,10 +19,10 @@ def modules(ctx: Context):
 
     # load.mcfunction
     base_ver = ctx.cache["gm4_manifest"].json["base"]["version"]
-    dependencies.insert(0, f"gm4:{base_ver}") # manually insert base version as dependency, assumed to be current base version
+    dependencies.insert(0, {"gm4":base_ver}) # manually insert base version as dependency, assumed to be current base version
 
     for dep in dependencies:
-        dep_id, ver_str = map(lambda s: s.strip(), dep.split(":"))
+        dep_id, ver_str = list(dep.items())[0]
         dep_ver = Version(ver_str)
         name_default_dict = {"name":"Gamemode 4 Base"} if dep_id == "gm4" else {"name":dep_id}
         dep_name: str = ctx.cache["gm4_manifest"].json["modules"].get(dep_id, name_default_dict)["name"]
@@ -74,7 +74,7 @@ def libraries(ctx: Context):
         - load:{lib_name}/enumerate.json
         - load:{lib_name}/resolve_load.json
         - load:{lib_name}/dependencies.json"""
-    dependencies: list[str] = ctx.meta.get('gm4', {}).get('required', [])
+    dependencies: list[dict[str, str]] = ctx.meta.get('gm4', {}).get('required', [])
     lib_ver = Version(ctx.project_version)
 
     # enumerate.mcfunction
@@ -85,7 +85,7 @@ def libraries(ctx: Context):
 
     dep_check_line = "execute "
     for dep in dependencies:
-        dep_id, ver_str = map(lambda s: s.strip(), dep.split(":"))
+        dep_id, ver_str = list(dep.items())[0]
         dep_ver = Version(ver_str)
 
         if dep_id not in ctx.cache["gm4_manifest"].json["modules"]:
@@ -235,14 +235,16 @@ def versioned_namespace(ctx: Context, version: Version):
     }))
     
 
-def dependency_load_tags(ctx: Context, dependencies: list[str]) -> FunctionTag:
+def dependency_load_tags(ctx: Context, dependencies: list[dict[str, str]]) -> FunctionTag:
     """Assembles dependency information into tag format. Ensures a pack's dependencies
     get processed by lantern load before the primary startup checks for the module itself"""
     dep_tag = FunctionTag()
     for dep in dependencies:
-        if ":" not in dep:
-            raise ValueError(f"{ctx.project_id} has a dependancy without a specified version; {dep}")
-        dep_id, _ = map(lambda s: s.strip(), dep.split(":"))
+        if type(dep) is str:
+            raise ValueError(f"{ctx.project_id} has a dependancy without a specified version {dep}")
+        if len(dep) > 1:
+            raise ValueError(f"{ctx.project_id} invalid dependancy formatting")
+        dep_id = list(dep.keys())[0]
         if dep_id not in ctx.cache["gm4_manifest"].json["modules"]:
             dep_id = ctx.cache["gm4_manifest"].json["libraries"].get(dep_id)["id"]
         dep_tag.append(FunctionTag(

@@ -16,8 +16,8 @@ pipeline:
 meta:
   gm4:
     required:
-      - 'lib_forceload: 1.1.0'
-      - 'lib_lore: 1.0.0'
+      - lib_forceload: 1.1.0
+      - lib_lore: 1.0.0
     schedule_loops: 
       - tick
       - main

@@ -11,7 +11,7 @@ pipeline:
 meta:
   gm4:
     required:
-      - 'gm4_metallurgy: 1.2.0'
+      - gm4_metallurgy: 1.2.0
     schedule_loops: [main]
     website:
       description: Adds the shamir 'Lumos' to Metallurgy. It places torches when it is dark.

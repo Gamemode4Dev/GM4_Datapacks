@@ -11,7 +11,7 @@ pipeline:
 meta:
   gm4:
     required:
-      - 'gm4_metallurgy: 1.2.0'
+      - gm4_metallurgy: 1.2.0
     website:
       description: Adds the 'Iacio' shamir to Metallurgy. It lets you throw things further! Launch an Ender Pearl into orbit or simply throw your Trident exceptionally far.
       recommended: []

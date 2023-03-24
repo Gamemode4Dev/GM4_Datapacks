@@ -11,8 +11,8 @@ pipeline:
 meta:
   gm4:
     required:
-      - "gm4_liquid_tanks: 2.1.0"
-      - "gm4_zauber_cauldrons: 1.6.0"
+      - gm4_liquid_tanks: 2.1.0
+      - gm4_zauber_cauldrons: 1.6.0
     website:
       description: From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!
       recommended: []

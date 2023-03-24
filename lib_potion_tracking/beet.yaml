@@ -11,7 +11,8 @@ pipeline:
 
 meta:
   gm4:
-    required: ['lib_forceload : 1.1.0']
+    required: 
+      - lib_forceload : 1.1.0
     extra_version_injections: 
       functions: [resolve_tick]
     credits:
