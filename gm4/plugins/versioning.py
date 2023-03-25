@@ -2,6 +2,7 @@ from beet import Context, Function, FunctionTag
 from beet.contrib.rename_files import rename_files
 from beet.contrib.find_replace import find_replace
 from typing import Any
+import warnings
 from gm4.utils import Version
 
 def modules(ctx: Context):
@@ -26,6 +27,8 @@ def modules(ctx: Context):
     for dep in dependencies:
         dep_id, ver_str = list(dep.items())[0]
         dep_ver = Version(ver_str)
+        warn_on_future_version(ctx, dep_id, dep_ver)
+
         name_default_dict = {"name":"Gamemode 4 Base"} if dep_id == "gm4" else {"name":dep_id}
         dep_name: str = ctx.cache["gm4_manifest"].json["modules"].get(dep_id, name_default_dict)["name"]
         
@@ -90,6 +93,7 @@ def libraries(ctx: Context):
     for dep in dependencies:
         dep_id, ver_str = list(dep.items())[0]
         dep_ver = Version(ver_str)
+        warn_on_future_version(ctx, dep_id, dep_ver)
 
         if dep_id not in ctx.cache["gm4_manifest"].json["modules"]:
             dep_id = ctx.cache["gm4_manifest"].json["libraries"].get(dep_id)["id"]
@@ -286,3 +290,17 @@ def module_load_advancements(ctx: Context):
                     "min": 1
                 }
             })
+
+def warn_on_future_version(ctx: Context, dep_id: str, ver: Version):
+    """Issues a console warning if the dependancy version a module requires is greater than the current version of that dependancy"""
+    if dep_id == "gm4":
+        return # the base version is not in the manifest, tis a special case
+    if "lib" in dep_id:
+        cache_compound = ctx.cache["gm4_manifest"].json["libraries"]
+    else:
+        cache_compound = ctx.cache["gm4_manifest"].json["modules"]
+    latest_dep_ver = Version(cache_compound.get(dep_id, {}).get("version", '0.0.0'))
+    
+    if (latest_dep_ver.major == ver.major and latest_dep_ver.minor < ver.minor) or (latest_dep_ver.major < ver.major): # type: ignore
+        message = f"{ctx.project_id} depends on a future version {dep_id} v{ver}, but the latest available is {latest_dep_ver}"
+        warnings.warn(message)
