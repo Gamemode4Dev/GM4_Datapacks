@@ -27,4 +27,8 @@ meta:
       Icon Design:
         - DuckJr
   modrinth:
-    project_id: gm4-ziprails
+    project_id: EpgLRkLf
+  smithed:
+    pack_id: gm4_ziprails
+  planetminecraft: 
+    uid: 4298467

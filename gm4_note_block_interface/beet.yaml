@@ -25,3 +25,7 @@ meta:
         - Denniss
       Icon Design:
         - DuckJr
+  smithed:
+    pack_id: gm4_note_block_interface
+  planetminecraft: 
+    uid: 4308978
