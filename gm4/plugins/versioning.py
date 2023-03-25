@@ -207,7 +207,7 @@ def base(ctx: Context):
         f"execute if score gm4 load.status matches {ver.major} unless score gm4_minor load.status matches {ver.minor}.. run scoreboard players set gm4_minor load.status {ver.minor}",
         "",
         f"execute unless score gm4 load.status matches {ver.major}.. run scoreboard players set gm4_minor load.status {ver.minor}",
-        f"execute unless score gm4 load.status matches {ver.major}.. run scoreboard players set gm4 load.status {ver.minor}"
+        f"execute unless score gm4 load.status matches {ver.major}.. run scoreboard players set gm4 load.status {ver.major}"
     ]
     ctx.data.functions[f"gm4:enumerate"] = Function(lines)
 
@@ -233,7 +233,7 @@ def versioned_namespace(ctx: Context, version: Version):
         "replace": f"{versioned_namespace}:\\1"
     }))
     ctx.require(find_replace(data_pack={"match": "*"}, substitute={
-        "find": f"(?<!#)(?<!storage ){namespace}:([a-z0-9_/]+)",
+        "find": f"(?<!#)(?<!storage )(?<!storage\":\"){namespace}:([a-z0-9_/]+)", # NOTE because re module requires fixed-length look behind, storage-referencing json *must* use no spaces between "storage":"ns:loc"
         "replace": f"{versioned_namespace}:\\1"
     }))
     

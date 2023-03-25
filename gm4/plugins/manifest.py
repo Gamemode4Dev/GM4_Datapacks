@@ -204,5 +204,6 @@ def write_updates(ctx: Context):
 	init.lines.append("data remove storage gm4:log queue[{type:'outdated'}]")
 	for m in modules.values():
 		version = Version(m["version"]).int_rep()
-		init.lines.append(f"execute if score {m['id']} load.status matches -1.. if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}',download:'https://gm4.co/modules/{ctx.project_id[4:].replace('_','-')}'}}")
+		website = f"https://gm4.co/modules/{m['id'][4:].replace('_','-')}"
+		init.lines.append(f"execute if score {m['id']} load.status matches -1.. if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}',download:'{website}',render:'{{\"text\":\"{m['name']}\",\"clickEvent\":{{\"action\":\"open_url\",\"value\":\"{website}\"}},\"hoverEvent\":{{\"action\":\"show_text\",\"value\":{{\"text\":\"Click to visit {website}\",\"color\":\"#4AA0C7\"}}}}}}'}}")
 	
