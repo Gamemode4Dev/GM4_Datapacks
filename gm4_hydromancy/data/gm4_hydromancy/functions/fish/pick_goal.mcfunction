@@ -4,6 +4,11 @@
 # run from fish/tag
 
 execute store result score $fish_goal gm4_hy_data run data get entity @s UUID[0]
-scoreboard players operation $fish_goal gm4_hy_data %= #6 gm4_hy_data
-scoreboard players operation $fish_goal gm4_hy_data < #3 gm4_hy_data
+scoreboard players operation $fish_goal gm4_hy_data %= #4 gm4_hy_data
 kill @s
+
+# | goals
+# 0: lily pad
+# 1: seagrass
+# 2: sea pickle
+# 3: kelp
