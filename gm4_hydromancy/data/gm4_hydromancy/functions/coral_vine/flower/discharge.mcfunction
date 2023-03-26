@@ -3,11 +3,13 @@
 # at @s
 # run from coral_vine/flower/charge
 
-# TODO: particles to central coral flower
-scoreboard players add @e[type=item_display,tag=gm4_hy_coral_core,limit=1,sort=nearest] gm4_hy_charge 1
-# limit of 12 blocks
+# charge nearest coral core
+execute as @e[type=item_display,tag=gm4_hy_coral_core,limit=1,sort=nearest] run function gm4_hydromancy:coral_core/charge/add
+# raycast with limit of 12 blocks
 scoreboard players set $raycast_limit gm4_hy_data 120
-execute facing entity @e[type=item_display,tag=gm4_hy_coral_core,limit=1,sort=nearest] eyes summon marker run function gm4_hydromancy:coral_vine/flower/raycast
+execute facing entity @e[type=item_display,tag=gm4_hy_coral_core,limit=1,sort=nearest] feet run function gm4_hydromancy:coral_vine/flower/raycast
 
-# kill this vine block
-function gm4_hydromancy:coral_vine/die
+# remove buds
+execute align xyz run kill @e[type=block_display,tag=gm4_hy_coral_flower,dx=0,dy=0,dz=0]
+setblock ~ ~ ~ azalea_leaves[waterlogged=true,persistent=true]
+tag @s remove gm4_hy_coral_vine.flowering

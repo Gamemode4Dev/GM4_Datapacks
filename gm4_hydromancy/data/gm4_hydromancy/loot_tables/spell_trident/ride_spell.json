@@ -11,10 +11,11 @@
             "functions": [
                 {
                     "function": "minecraft:set_nbt",
-                    "tag": "{gm4_hy_spell_trident:{spell_id:1,dura_disp:245,mana:{left:100,max:100}}}}"
+                    "tag": "{gm4_hy_spell_trident:{spell_id:1,dura:99,mana:{left:6000,max:6000}}}"
                 },
                 {
                     "function": "minecraft:set_lore",
+                    "entity": "this",
                     "lore": [
                         {
                             "text": ""

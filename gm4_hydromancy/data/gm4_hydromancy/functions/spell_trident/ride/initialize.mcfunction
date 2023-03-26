@@ -5,5 +5,6 @@
 
 tag @s add gm4_hy_spell_trident.ride
 
+ride @p[tag=gm4_hy_using_spell_trident] dismount
 ride @p[tag=gm4_hy_using_spell_trident] mount @s
 data modify entity @s damage set value 0.0d

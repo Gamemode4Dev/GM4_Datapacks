@@ -1,13 +1,12 @@
-[
-    {
-        "function": "minecraft:copy_nbt",
-        "source": "this",
-        "ops": [
-            {
-                "source": "gm4_hy_spell_trident.dura_display",
-                "target": "Damage",
-                "op": "replace"
-            }
-        ]
-    }
-]
+{
+  "function": "minecraft:set_damage",
+  "damage": {
+    "type": "minecraft:score",
+    "target": {
+      "type": "minecraft:fixed",
+      "name": "$durability"
+    },
+    "score": "gm4_hy_data",
+    "scale": 0.01
+  }
+}

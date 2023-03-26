@@ -10,5 +10,5 @@ execute if predicate gm4_hydromancy:chance/extra_bubbles run particle bubble_col
 execute if predicate gm4_hydromancy:chance/bubble_sound run playsound minecraft:block.bubble_column.upwards_ambient block @a[distance=..12] ~ ~-.5 ~ 1 0
 execute if predicate gm4_hydromancy:chance/bubble_pitched_sound run playsound minecraft:block.bubble_column.upwards_ambient block @a[distance=..12] ~ ~-.5 ~ 1 1.65
 
-# TODO: respawn heart of the sea
-execute unless block ~ ~ ~ #gm4_hydromancy:coral_fans[waterlogged=true] run function gm4_hydromancy:coral_core/kill
+# reslease heart of the sea
+execute unless block ~ ~ ~ #gm4_hydromancy:coral_fans[waterlogged=true] positioned ~ ~-.4 ~ run function gm4_hydromancy:coral_core/kill
