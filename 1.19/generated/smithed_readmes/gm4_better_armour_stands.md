@@ -7,7 +7,7 @@ Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your
 ### Features:
 - All armor stands have arms by default
 - Write commands into a Book and Quill to control your armor stands
-    - [Click Here](https:MY_URL\Better_Armour_Stands#Codes) to see a full list of codes
+    - [Click Here](https://wiki.gm4.co/wiki/Better_Armour_Stands#Codes) to see a full list of codes
 - Copy and Paste poses
 - Make custom statues
 - Survival Friendly!
