@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_dripleaf_launchers
 name: Dripleaf Launchers
+version: 1.0.X
 
 pipeline:
   - data_pack:
@@ -9,6 +10,10 @@ pipeline:
 
 meta:
   gm4:
+    versioning:
+      schedule_loops: 
+        - main
+        - tick
     description: Start your own Dripleaf Space Program!
     required: []
     recommended: []
