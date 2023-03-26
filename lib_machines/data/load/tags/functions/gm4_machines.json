@@ -1,7 +1,0 @@
-{
-    "values": [
-        "#load:gm4_machines/dependencies",
-        "#load:gm4_machines/enumerate",
-        "#load:gm4_machines/resolve_load"
-    ]
-}
