@@ -1,6 +1,0 @@
-{
-    "values": [
-        { "id": "#load:gm4_liquid_tanks", "required": false },
-        "gm4_cement_mixers:load"
-    ]
-}
