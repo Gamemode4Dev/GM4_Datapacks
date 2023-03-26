@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_better_armour_stands
 name: Better Armour Stands
+version: 2.0.X
 
 pipeline:
   - data_pack:
@@ -9,12 +10,16 @@ pipeline:
 
 meta:
   gm4:
-    description: Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands.
-    required: []
-    recommended:
-      - gm4_poses_pack
-      - gm4_particles_pack
-    notes: []
+    versioning:
+      schedule_loops: 
+        - main
+        - tick
+    website:
+      description: Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands.
+      recommended:
+        - gm4_poses_pack
+        - gm4_particles_pack
+      notes: []
     video: https://www.youtube.com/watch?v=ZBqmGpAXqmw
     wiki: https://wiki.gm4.co/wiki/Better_Armour_Stands
     credits:
@@ -27,4 +32,4 @@ meta:
       Icon Design:
         - Sparks
   modrinth:
-    project_id: gm4-better-armor-stands
+    project_id: ib7YfS5V
