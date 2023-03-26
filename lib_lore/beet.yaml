@@ -9,6 +9,13 @@ pipeline:
 
 meta:
   gm4:
+    versioning:
+      extra_version_injections:
+        functions:
+          - resolve_algorithm/insert
+          - resolve_algorithm/remove
+          - resolve_algorithm/replace
+          - resolve_algorithm/search
     credits:
       Creator:
         - BluePsychoRanger
