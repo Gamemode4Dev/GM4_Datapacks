@@ -112,7 +112,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 			game_versions = modrinth.get("minecraft", SUPPORTED_GAME_VERSIONS)
 			res = requests.post(f"{MODRINTH_API}/version", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, files={
 				"data": json.dumps({
-					"name": f"{ctx.project_name} {version}",
+					"name": f"{ctx.project_name} v{version}",
 					"version_number": version,
 					"changelog": changelog,
 					"dependencies": [],
