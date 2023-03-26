@@ -2,21 +2,27 @@ extend: '../module.yaml'
 
 id: gm4_liquid_minecarts
 name: Liquid Minecarts
+version: 1.2.X
 
 pipeline:
   - directory: '../lib_machines'
     extend: 'beet.yaml'
+  - gm4.plugins.post_library_plugins
   - data_pack:
       load: .
 
 meta:
   gm4:
-    description: Adds Liquid Tank Minecarts that allow you to move your liquids from one Liquid Tank to another.
-    required:
-      - gm4_liquid_tanks
-    recommended:
-      - gm4_potion_liquids
-    notes: []
+    versioning:
+      required:
+        - gm4_liquid_tanks: 2.1.0
+        - lib_machines: 1.1.0
+      schedule_loops: [main]
+    website:
+      description: Adds Liquid Tank Minecarts that allow you to move your liquids from one Liquid Tank to another.
+      recommended:
+        - gm4_potion_liquids
+      notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts
     credits:

@@ -2,10 +2,7 @@ from beet import Context, TextFile
 import re
 from pathlib import Path
 from typing import Any
-
-global_replacements = {
-    r"https:\/\/wiki\.gm4\.co\/wiki\/([\w_]+)": r"https:MY_URL\\\1",
-    }
+from gm4.plugins.manifest import write_credits
 
 def beet_default(ctx: Context):
     """Loads the README.md and modifies:
@@ -21,6 +18,7 @@ def beet_default(ctx: Context):
     global_readme = TextFile(source_path=readme_path)
     global_contents = global_readme.text
     running_readme_gen = ctx.meta.get("readme-gen", False) # used to disable pmc replacements on normal release
+    global_replacements: dict[str, str] = {}
 
     # Local Images to raw.githubusercontent URLs
     global_replacements.update({
@@ -29,7 +27,8 @@ def beet_default(ctx: Context):
     })
 
     # Credits
-    linked_credits = ctx.meta['linked_credits'] # NOTE this relies on the credits portion of manifest running first. Is that okay?
+    ctx.require(write_credits) # requires data from traversing credits files
+    linked_credits = ctx.meta['linked_credits']
     credits_text = ""
     for title in linked_credits:
         credits_text += f"- {title}: {', '.join(linked_credits[title])}\n"
@@ -101,7 +100,7 @@ def beet_default(ctx: Context):
     rec_modules = re.findall(r"\(.+\)<!--\$dynamicLink:(.+)-->", global_contents)
         # TODO relative links, if they are better
     for m in rec_modules:
-        manifest_m_entry: dict[str, Any] = next((c for c in manifest["modules"] if c['id'] == m), {})
+        manifest_m_entry: dict[str, Any] = manifest["modules"].get(m, {})
         if (v:=manifest_m_entry.get('modrinth_id')):
             site_replacements["modrinth"].update({
                 f"\\(.+\\)<!--\\$dynamicLink:{m}-->": f"(https://modrinth.com/datapack/{v})"

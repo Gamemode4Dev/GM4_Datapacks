@@ -1,4 +1,4 @@
-# @s = vex mould entity
+# @s = armor_stand mould entity
 # runs from sustain_mould
 
 # determine ore type and primary metal amount

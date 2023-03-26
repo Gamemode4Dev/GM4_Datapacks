@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "placed_machine_block": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:player_head"
+          ],
+          "nbt": "{SkullOwner:{Properties:{textures:[{Signature:\"gm4_machine\"}]}}}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_machines:place_down/place_machine_block"
+  }
+}

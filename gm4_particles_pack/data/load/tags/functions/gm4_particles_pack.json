@@ -1,6 +1,0 @@
-{
-    "values": [
-		{ "id": "#load:gm4_better_armour_stands", "required": false },
-        "gm4_particles_pack:load"
-    ]
-}

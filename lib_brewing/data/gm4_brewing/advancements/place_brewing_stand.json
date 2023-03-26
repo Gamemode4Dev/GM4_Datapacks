@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "place_brewing_stand": {
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "rewards": {
+    "function": "gm4_brewing:place_brewing_stand"
+  }
+}

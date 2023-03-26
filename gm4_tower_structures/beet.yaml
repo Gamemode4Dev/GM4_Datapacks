@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_tower_structures
 name: Tower Structures
+version: 2.0.X
 
 pipeline:
   - data_pack:
@@ -9,13 +10,15 @@ pipeline:
 
 meta:
   gm4:
-    description: A custom terrain expansion pack that adds four new tower structures to the world.
-    required:
-      - gm4_orbis
-    recommended:
-      - gm4_dangerous_dungeons
-      - gm4_cooler_caves
-    notes: []
+    versioning:
+      required:
+        - gm4_orbis: 2.0.0
+    website:
+      description: A custom terrain expansion pack that adds four new tower structures to the world.
+      recommended:
+        - gm4_dangerous_dungeons
+        - gm4_cooler_caves
+      notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Orbis/Tower_Structures
     credits:
