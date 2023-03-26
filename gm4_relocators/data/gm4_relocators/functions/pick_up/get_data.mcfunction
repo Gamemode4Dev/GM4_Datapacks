@@ -46,6 +46,7 @@ setblock ~ ~ ~ air replace
 playsound minecraft:block.beacon.power_select block @a[distance=..8] ~ ~ ~ 1 1.8
 particle minecraft:explosion ~ ~ ~ 0 0 0 0 0
 loot spawn ~ ~ ~ loot gm4_relocators:items/relocator_full
+advancement grant @s only gm4:relocators
 
 # clean up
 data remove storage gm4_relocators:temp gm4_relocation

@@ -3,16 +3,22 @@
     "requirement": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "player": {
-          "equipment": {
-            "mainhand": {
-              "items": [
-                "minecraft:writable_book"
-              ],
-              "nbt": "{gm4_bas_ignore:1b}"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:writable_book"
+                  ],
+                  "nbt": "{gm4_bas_ignore:1b}"
+                }
+              }
             }
           }
-        },
+        ],
         "entity": [
           {
             "condition": "minecraft:inverted",
