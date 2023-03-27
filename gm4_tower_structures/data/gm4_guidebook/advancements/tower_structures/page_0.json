@@ -22,6 +22,30 @@
       "conditions": {
         "player": [
           {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
@@ -37,6 +61,30 @@
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
@@ -54,6 +102,30 @@
       "conditions": {
         "player": [
           {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
@@ -69,6 +141,30 @@
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
@@ -86,6 +182,30 @@
       "conditions": {
         "player": [
           {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
@@ -101,6 +221,30 @@
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
@@ -118,6 +262,30 @@
       "conditions": {
         "player": [
           {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
@@ -133,6 +301,30 @@
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
@@ -150,6 +342,30 @@
       "conditions": {
         "player": [
           {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
@@ -165,6 +381,30 @@
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
@@ -182,6 +422,30 @@
       "conditions": {
         "player": [
           {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
@@ -198,6 +462,30 @@
       "conditions": {
         "player": [
           {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
@@ -213,6 +501,30 @@
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
