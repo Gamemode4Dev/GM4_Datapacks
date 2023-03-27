@@ -1,7 +1,7 @@
 # reverts the sapling to stage=0
 # @s = sapling marker
 # at @s align xyz
-# run from gm4_trees-1.0:sapling/process
+# run from gm4_trees:sapling/process
 
 # prevent normal tree from spawning
 execute if block ~ ~ ~ minecraft:oak_sapling run setblock ~ ~ ~ minecraft:oak_sapling[stage=0]
