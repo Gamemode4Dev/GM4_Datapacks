@@ -1,0 +1,36 @@
+extend: '../module.yaml'
+
+id: gm4_trapped_signs
+name: Trapped Signs
+version: 1.1.X
+
+pipeline:
+  - directory: '../lib_custom_crafters'
+    extend: 'beet.yaml'
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  - gm4.plugins.post_library_plugins
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    versioning:
+      required:
+        - lib_custom_crafters: 3.0.0
+        - lib_machines: 1.1.0
+      sehcdule_loops: [main]
+    website:
+      description: Craft trapped signs in a Custom Crafter which, when right-clicked, give off a redstone signal.
+      recommended: []
+      notes: []
+    video: https://www.youtube.com/watch?v=IeHYiy5GTeQ
+    wiki: https://wiki.gm4.co/wiki/Trapped_Signs
+    credits:
+      Creator:
+        - Fyid
+      Updated by:
+        - Misode
+        - BluePsychoRanger
+      Icon Design:
+        - Sparks

@@ -1,6 +1,0 @@
-{
-    "values": [
-        "#load:gm4_trades/enumerate",
-        "#load:gm4_trades/resolve_load"
-    ]
-}

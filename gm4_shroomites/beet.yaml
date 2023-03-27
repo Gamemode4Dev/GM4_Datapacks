@@ -1,0 +1,29 @@
+extend: '../module.yaml'
+
+id: gm4_shroomites
+name: Shroomites
+version: 1.1.X
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops:
+        - main
+        - slow_clock
+    website:
+      description: Ever wondered why all the Mooshrooms are locked up on islands? This Module makes Mooshrooms spread mycelium and mushrooms wherever they go.
+      recommended: []
+      notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Shroomites
+    credits:
+      Creators:
+        - Sparks
+        - SpecialBuilder32
+        - Bloo
+      Icon Design:
+        - DuckJr

@@ -11,3 +11,5 @@ execute if predicate gm4_combat_expanded:technical/chance/extra_drowned_spawn if
 execute if predicate gm4_combat_expanded:technical/chance/reef_guardian_spawn if entity @s[tag=!gm4_ce_extra_mob] store success score $mob_extras gm4_ce_data run summon guardian ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
 execute if predicate gm4_combat_expanded:technical/chance/reef_guardian_spawn if entity @s[tag=!gm4_ce_extra_mob] store success score $mob_extras gm4_ce_data run summon guardian ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
 execute if predicate gm4_combat_expanded:technical/chance/reef_guardian_spawn if entity @s[tag=!gm4_ce_extra_mob] store success score $mob_extras gm4_ce_data run summon guardian ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
+
+item replace entity @s[predicate=gm4_combat_expanded:technical/chance/reef_trident] weapon.mainhand with trident

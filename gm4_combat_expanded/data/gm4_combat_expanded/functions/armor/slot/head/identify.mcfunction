@@ -6,9 +6,8 @@
 # store information
 data modify storage gm4_combat_expanded:temp tag set from storage gm4_combat_expanded:temp Items[{Slot:0b}].tag
 
-# check unid
-function gm4_combat_expanded:armor/identify/check_unid
+# identify
+function gm4_combat_expanded:armor/identify/pick_mod
 
 # make changes
-execute if score $change gm4_ce_data matches 1 run item modify entity @s armor.head gm4_combat_expanded:update
-scoreboard players reset $change gm4_ce_data
+item modify entity @s armor.head gm4_combat_expanded:update

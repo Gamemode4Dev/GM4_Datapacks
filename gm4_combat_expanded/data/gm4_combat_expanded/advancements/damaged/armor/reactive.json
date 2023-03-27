@@ -5,18 +5,6 @@
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "gm4_combat_expanded"
-              },
-              "score": "load.status"
-            },
-            "range": 1
-          },
-          {
             "condition": "minecraft:reference",
             "name": "gm4_combat_expanded:modified_armor/wearing_reactive"
           },
@@ -29,6 +17,20 @@
             },
             "range": {
               "min": 1
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "gm4_ce_t_reactive"
+              },
+              "range": {
+                "min": 1
+              }
             }
           },
           {

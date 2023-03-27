@@ -5,7 +5,7 @@
 
 # biome specific modifiers for any mob
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_stats gm4_ce_data 3
-execute if predicate gm4_combat_expanded:mob/modifier/snowy run scoreboard players add $mob_health gm4_ce_data 4
+execute if predicate gm4_combat_expanded:mob/modifier/snowy run scoreboard players add $mob_health gm4_ce_data 8
 execute if predicate gm4_combat_expanded:mob/modifier/snowy run attribute @s generic.movement_speed modifier add 8b68cb8f-b3ac-489b-bb24-ed6cca2fcacf "gm4_ce_modifier_snowy" -0.15 multiply_base
 execute if predicate gm4_combat_expanded:mob/modifier/mountainous run scoreboard players add $mob_damage gm4_ce_data 2
 execute if predicate gm4_combat_expanded:mob/modifier/burned run scoreboard players add $mob_speed gm4_ce_data 3
@@ -26,8 +26,8 @@ execute store result score $mob_speed gm4_ce_data run data get storage gm4_comba
 execute store result score $mob_armor gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{Name:"gm4_ce_mob_armor"}].Amount
 execute store result score $mob_toughness gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{Name:"gm4_ce_mob_toughness"}].Amount
 
-# remove bonus damage if weapon is held
-execute if data entity @s HandItems[{Count:1b}] run scoreboard players set $mob_damage gm4_ce_data 0
+# remove bonus health if witch spawned in witch hut
+execute if entity @s[type=witch,predicate=gm4_combat_expanded:technical/in_witch_hut] run scoreboard players set $mob_health gm4_ce_data 0
 
 # add modifiers that have been altered
 execute if score $mob_health gm4_ce_data matches 1.. run function gm4_combat_expanded:mob/modifier/health

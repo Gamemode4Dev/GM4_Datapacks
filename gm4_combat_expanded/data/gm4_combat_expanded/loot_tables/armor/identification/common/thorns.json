@@ -20,7 +20,7 @@
               },
               "ops": [
                 {
-                  "source": "damage",
+                  "source": "level",
                   "target": "gm4_combat_expanded.level",
                   "op": "replace"
                 }

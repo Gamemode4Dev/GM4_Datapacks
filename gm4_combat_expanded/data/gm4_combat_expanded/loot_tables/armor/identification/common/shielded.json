@@ -62,20 +62,14 @@
           "lore": [
             [
               {
-                "translate": "potion.withDuration",
+                "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "potion.withAmplifier",
-                    "with": [
-                      {
-                        "translate": "effect.minecraft.absorption"
-                      },
-                      {
-                        "translate": "potion.potency.0"
-                      }
-                    ]
+                    "translate": "effect.minecraft.absorption"
                   },
-                  "0:03"
+                  {
+                    "translate": "potion.potency.0"
+                  }
                 ],
                 "color": "blue",
                 "italic": false

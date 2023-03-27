@@ -1,0 +1,67 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:shield",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{HideFlags:32,BlockEntityTag:{Base:13,Patterns:[{Color:12,Pattern:\"bo\"}]}}"
+              },
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      [
+                        "Bulky ",
+                        {
+                          "translate": "item.minecraft.shield"
+                        }
+                      ],
+                      {
+                        "translate": "item.gm4.combat_expanded.name.bulky",
+                        "with": [
+                          {
+                            "translate": "item.minecraft.shield"
+                          }
+                        ]
+                      }
+                    ],
+                    "italic": false
+                  }
+                ]
+              },
+              {
+                "function": "minecraft:set_attributes",
+                "modifiers": [
+                  {
+                    "attribute": "minecraft:generic.knockback_resistance",
+                    "name": "gm4_ce_shield_bonus",
+                    "amount": 0.1,
+                    "operation": "addition",
+                    "id": "fdf143d8-2614-40e5-b078-f5c97075e13a",
+                    "slot": "offhand"
+                  },
+                  {
+                    "attribute": "minecraft:generic.armor_toughness",
+                    "name": "gm4_ce_shield_bonus",
+                    "amount": 3,
+                    "operation": "addition",
+                    "id": "dc527b5d-ec1e-42c7-bdc1-8a9a79a21bd3",
+                    "slot": "offhand"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

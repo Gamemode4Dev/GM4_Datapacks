@@ -1,0 +1,30 @@
+extend: '../module.yaml'
+
+id: gm4_desire_lines
+name: Desire Lines
+version: 1.1.X
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [tick]
+    website:
+      description: Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!
+      recommended:
+        - gm4_boots_of_ostara
+      notes: []
+    video: https://www.youtube.com/watch?v=wmGaatfekfs
+    wiki: https://wiki.gm4.co/wiki/Desire_Lines
+    credits:
+      Creator:
+        - Sparks
+      Updated by:
+        - SpecialBuilder32
+        - Misode
+        - Andante
+      Icon Design:
+        - JonPot

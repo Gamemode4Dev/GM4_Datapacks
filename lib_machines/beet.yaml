@@ -1,0 +1,25 @@
+id: gm4_machines
+name: Gamemode 4 Machines
+version: 1.1.0
+
+extend: ../library.yaml
+pipeline:
+  - directory: '../lib_forceload'
+    extend: 'beet.yaml'
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    versioning:
+      required: [lib_forceload: 1.1.0]
+      schedule_loops: [main]
+      extra_version_injections:
+        functions:
+          - resolve_tick
+        advancements:
+          - place_machine_block
+          - place_machine_cart
+    credits:
+      Machines Library Creator:
+        - BluePsychoRanger
