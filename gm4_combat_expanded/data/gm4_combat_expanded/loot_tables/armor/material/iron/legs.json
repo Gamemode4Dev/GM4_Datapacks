@@ -48,7 +48,39 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{armor_clamp:-5,unidentified:0,slot:2,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_leggings\"}'}}"
+              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-5,slot:2,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_leggings\"}'}}"
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:depth_strider"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/modifier/reef"
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:projectile_protection"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/modifier/growth"
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.8
+                }
+              ]
             },
             {
               "function": "minecraft:enchant_with_levels",
@@ -91,38 +123,6 @@
                 {
                   "condition": "minecraft:random_chance",
                   "chance": 0.2
-                }
-              ]
-            },
-            {
-              "function": "minecraft:enchant_randomly",
-              "enchantments": [
-                "minecraft:depth_strider"
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/reef"
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
-            },
-            {
-              "function": "minecraft:enchant_randomly",
-              "enchantments": [
-                "minecraft:projectile_protection"
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/growth"
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.8
                 }
               ]
             }

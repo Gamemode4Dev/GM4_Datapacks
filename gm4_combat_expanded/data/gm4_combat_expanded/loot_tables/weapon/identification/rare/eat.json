@@ -100,7 +100,7 @@
               "with": [
                 [
                   {
-                    "translate": "minecraft.effect.saturation"
+                    "translate": "effect.minecraft.saturation"
                   },
                   {
                     "text": " (Self)"
@@ -110,7 +110,7 @@
                   "translate": "item.gm4.combat_expanded.lore.self",
                   "with": [
                     {
-                      "translate": "minecraft.effect.saturation"
+                      "translate": "effect.minecraft.saturation"
                     }
                   ]
                 }
@@ -327,7 +327,7 @@
                     },
                     {
                       "score": {
-                        "name": "$atkspeed_stored_10",
+                        "name": "$atkspeed_stored_01",
                         "objective": "gm4_ce_data"
                       }
                     }

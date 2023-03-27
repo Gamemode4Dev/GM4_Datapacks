@@ -1,0 +1,21 @@
+id: gm4_lore
+name: Gamemode 4 Lore
+version: 1.0.0
+
+extend: ../library.yaml
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    versioning:
+      extra_version_injections:
+        functions:
+          - resolve_algorithm/insert
+          - resolve_algorithm/remove
+          - resolve_algorithm/replace
+          - resolve_algorithm/search
+    credits:
+      Creator:
+        - BluePsychoRanger

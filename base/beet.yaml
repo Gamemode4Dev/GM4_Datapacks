@@ -1,0 +1,6 @@
+pipeline:
+  - data_pack:
+      load: .
+  - gm4.plugins.versioning.base
+
+version: 1.3.0

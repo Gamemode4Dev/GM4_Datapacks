@@ -1,0 +1,16 @@
+id: gm4_brewing
+name: Gamemode 4 Brewing
+version: 1.0.0
+
+extend: ../library.yaml
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [main]
+    credits:
+      Creator:
+        - BluePsychoRanger

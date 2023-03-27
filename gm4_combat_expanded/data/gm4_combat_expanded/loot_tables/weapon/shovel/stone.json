@@ -36,7 +36,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{damage:35,atkspeed:10,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.stone_shovel\"}'}}"
+              "tag": "{gm4_combat_expanded:{identified:0,damage:35,atkspeed:10,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.stone_shovel\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",

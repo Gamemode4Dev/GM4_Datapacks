@@ -50,6 +50,51 @@
               {
                 "translate": "%1$s%3427655$s",
                 "with": [
+                  [
+                    {
+                      "translate": "potion.withAmplifier",
+                      "with": [
+                        {
+                          "translate": "effect.minecraft.resistance"
+                        },
+                        {
+                          "translate": "potion.potency.1"
+                        }
+                      ]
+                    },
+                    " Aura"
+                  ],
+                  {
+                    "translate": "attribute.gm4.combat_expanded.aura",
+                    "with": [
+                      {
+                        "translate": "potion.withAmplifier",
+                        "with": [
+                          {
+                            "translate": "effect.minecraft.resistance"
+                          },
+                          {
+                            "translate": "potion.potency.1"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
                   {
                     "text": "Bulwark",
                     "color": "blue",

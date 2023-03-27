@@ -11,7 +11,7 @@ data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.active set 
 execute store result storage gm4_combat_expanded:temp tag.gm4_combat_expanded.day int 1 run scoreboard players get $day gm4_ce_data
 
 # spawn trader
-summon wandering_trader ~ ~ ~ {ActiveEffects:[{Id:14,Amplifier:0b,Duration:5000}]}
+summon wandering_trader ~ ~ ~ {DespawnDelay:48000,ActiveEffects:[{Id:14,Amplifier:0b,Duration:5000}]}
 execute as @a[distance=..12] at @s run playsound entity.wandering_trader.yes neutral @s ~ ~ ~
 
 # use lib_lore to darken the 'Trade' text

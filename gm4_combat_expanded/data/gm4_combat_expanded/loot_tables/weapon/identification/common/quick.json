@@ -209,7 +209,7 @@
                     },
                     {
                       "score": {
-                        "name": "$atkspeed_up_10",
+                        "name": "$atkspeed_up_01",
                         "objective": "gm4_ce_data"
                       }
                     }

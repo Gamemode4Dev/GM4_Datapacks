@@ -54,7 +54,7 @@
               },
               "ops": [
                 {
-                  "source": "damage",
+                  "source": "level",
                   "target": "gm4_combat_expanded.level",
                   "op": "replace"
                 }
@@ -127,7 +127,7 @@
                 },
                 "score": "gm4_ce_data"
               },
-              "range": 1
+              "range": 5
             }
           ]
         },
@@ -168,7 +168,7 @@
                 },
                 "score": "gm4_ce_data"
               },
-              "range": 2
+              "range": 10
             }
           ]
         },
@@ -217,7 +217,7 @@
                 },
                 "score": "gm4_ce_data"
               },
-              "range": 3
+              "range": 15
             }
           ]
         },
@@ -266,7 +266,7 @@
                 },
                 "score": "gm4_ce_data"
               },
-              "range": 4
+              "range": 20
             }
           ]
         },

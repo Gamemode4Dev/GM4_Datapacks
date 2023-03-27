@@ -1,0 +1,16 @@
+id: gm4_player_heads
+name: Gamemode 4 Player Heads
+version: 1.1.0
+
+extend: ../library.yaml
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [main]
+    credits:
+      Creator:
+        - Misode

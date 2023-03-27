@@ -1,0 +1,26 @@
+extend: '../module.yaml'
+
+id: gm4_mending_tanks
+name: Mending Tanks
+version: 1.1.X
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    versioning:
+      required:
+        - gm4_liquid_tanks: 2.1.0
+    website:
+      description: Enables Liquid Tanks filled with Experience to repair tools with the mending enchant on them.
+      recommended: []
+      notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Mending_Tanks
+    credits:
+      Creator:
+        - Kroppeb
+      Icon Design:
+        - Sparks

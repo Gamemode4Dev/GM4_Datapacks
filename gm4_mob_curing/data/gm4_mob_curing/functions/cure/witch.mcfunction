@@ -6,6 +6,7 @@
 summon villager ~ ~ ~ {Tags:["gm4_mob_curing_potion_cleric","gm4_mob_curing_needs_init"],VillagerData:{profession:"minecraft:cleric",level:5,type:"minecraft:plains"},Xp:1,CustomName:'{"translate":"%1$s%3427655$s","with":["Potion Cleric§",{"translate":"entity.gm4.potion_cleric"}]}',Team:"gm4_hide_name"}
 
 tp @e[type=villager,distance=..1,tag=gm4_mob_curing_needs_init,sort=nearest,limit=1] @s
+tag @s add gm4_mob_curing_needs_init
 data modify entity @e[type=villager,tag=gm4_mob_curing_needs_init,limit=1] {} merge from entity @s {}
 
 # Mark the gapple

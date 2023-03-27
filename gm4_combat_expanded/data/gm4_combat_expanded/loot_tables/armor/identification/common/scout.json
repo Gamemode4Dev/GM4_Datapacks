@@ -28,7 +28,7 @@
                       "name": "$damage-"
                     },
                     "score": "gm4_ce_data",
-                    "scale": 0.5
+                    "scale": 0.1
                   },
                   "operation": "addition",
                   "slot": "chest"

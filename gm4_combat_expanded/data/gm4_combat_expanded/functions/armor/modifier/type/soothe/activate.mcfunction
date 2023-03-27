@@ -12,14 +12,15 @@ execute store result storage gm4_combat_expanded:temp tag.gm4_combat_expanded.da
 
 # healing pulse effects
 execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level
-execute if score $level gm4_ce_data matches 1 run effect give @e[type=!player,distance=..1.75,tag=!smithed.strict] instant_health 1 0
-execute if score $level gm4_ce_data matches 2 run effect give @e[type=!player,distance=..2.25,tag=!smithed.strict] instant_health 1 1
-execute if score $level gm4_ce_data matches 3 run effect give @e[type=!player,distance=..3,tag=!smithed.strict] instant_health 1 2
-effect give @a[distance=..3] regeneration 4 2
-execute if score $level gm4_ce_data matches 2 run effect give @a[distance=..2.25] instant_health 1 0
-execute if score $level gm4_ce_data matches 3 run effect give @a[distance=..3] instant_health 1 1
+execute if score $level gm4_ce_data matches 1 run effect give @e[type=!player,distance=..2.75,tag=!smithed.strict] instant_health 1 0
+execute if score $level gm4_ce_data matches 2 run effect give @e[type=!player,distance=..4.5,tag=!smithed.strict] instant_health 1 1
+execute if score $level gm4_ce_data matches 3 run effect give @e[type=!player,distance=..6.25,tag=!smithed.strict] instant_health 1 2
+effect give @a[distance=..6.5] regeneration 2 4
+execute if score $level gm4_ce_data matches 2 run effect give @a[distance=..4.5] instant_health 1 0
+execute if score $level gm4_ce_data matches 3 run effect give @a[distance=..6.25] instant_health 1 1
 
-# healing pulse particles
+# healing pulse particles and sound
+playsound minecraft:block.conduit.activate player @a ~ ~ ~ 1 2
 summon marker ~ ~0.6 ~ {Tags:["gm4_ce_soothe_pulse"]}
 execute as @e[type=marker,tag=gm4_ce_soothe_pulse] at @s run function gm4_combat_expanded:armor/modifier/type/soothe/particles
 

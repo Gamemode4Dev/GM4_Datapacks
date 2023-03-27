@@ -256,7 +256,7 @@
                     },
                     {
                       "score": {
-                        "name": "$atkspeed_down_10",
+                        "name": "$atkspeed_down_01",
                         "objective": "gm4_ce_data"
                       }
                     }
@@ -340,7 +340,7 @@
               "with": [
                 [
                   {
-                    "text": "Choatic ",
+                    "text": "Chaotic ",
                     "italic": false,
                     "color": "yellow"
                   },

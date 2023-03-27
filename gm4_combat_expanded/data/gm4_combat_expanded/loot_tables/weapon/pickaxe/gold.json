@@ -36,7 +36,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{damage:20,atkspeed:12,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_pickaxe\"}'}}"
+              "tag": "{gm4_combat_expanded:{identified:0,damage:20,atkspeed:12,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_pickaxe\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",
