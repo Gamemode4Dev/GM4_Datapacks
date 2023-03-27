@@ -20,101 +20,161 @@
     "badlands_upper": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "location": {
-            "structure": "gm4_dangerous_dungeons:badlands/upper"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:badlands/upper"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "badlands_lower": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "location": {
-            "structure": "gm4_dangerous_dungeons:badlands/lower"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:badlands/lower"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "deep_slate": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "location": {
-            "structure": "gm4_dangerous_dungeons:deep_slate"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:deep_slate"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "desert": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "location": {
-            "structure": "gm4_dangerous_dungeons:desert"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:desert"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "lush": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "location": {
-            "structure": "gm4_dangerous_dungeons:lush"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:lush"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "ocean_default": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "location": {
-            "structure": "gm4_dangerous_dungeons:ocean/default"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:ocean/default"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "ocean_surface": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "location": {
-            "structure": "gm4_dangerous_dungeons:ocean/surface"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:ocean/surface"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "snowy": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "location": {
-            "structure": "gm4_dangerous_dungeons:snowy"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:snowy"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "stone_default": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "location": {
-            "structure": "gm4_dangerous_dungeons:stone/default"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:stone/default"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "stone_ocean": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "location": {
-            "structure": "gm4_dangerous_dungeons:stone/ocean"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:stone/ocean"
+              }
+            }
           }
-        }
+        ]
       }
     }
   },
