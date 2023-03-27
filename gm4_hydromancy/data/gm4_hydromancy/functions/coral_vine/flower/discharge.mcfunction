@@ -4,7 +4,7 @@
 # run from coral_vine/flower/charge
 
 # charge nearest coral core
-execute as @e[type=item_display,tag=gm4_hy_coral_core,limit=1,sort=nearest] run function gm4_hydromancy:coral_core/charge/add
+execute as @e[type=item_display,tag=gm4_hy_coral_core,limit=1,sort=nearest] at @s run function gm4_hydromancy:coral_core/charge/add
 # raycast with limit of 12 blocks
 scoreboard players set $raycast_limit gm4_hy_data 120
 execute facing entity @e[type=item_display,tag=gm4_hy_coral_core,limit=1,sort=nearest] feet run function gm4_hydromancy:coral_vine/flower/raycast
