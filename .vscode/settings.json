@@ -17,8 +17,6 @@
     "*.git.*": true,
     "*.github": true,
     "*.github.*": true,
-    "*.gitignore": true,
-    "*.gitignore.*": true,
     "*base": true,
     "*base.*": true,
     "*beet-dev": true,
@@ -61,6 +59,8 @@
     "*gm4_cement_mixers.*": true,
     "*gm4_chairs": true,
     "*gm4_chairs.*": true,
+    "*gm4_combat_expanded": true,
+    "*gm4_combat_expanded.*": true,
     "*gm4_cooler_caves": true,
     "*gm4_cooler_caves.*": true,
     "*gm4_cozy_campfires": true,
@@ -200,12 +200,18 @@
     "*gm4_zauber_liquids.*": true,
     "*gm4_ziprails": true,
     "*gm4_ziprails.*": true,
+    "*library": true,
+    "*library.*": true,
     "*lib_brewing": true,
     "*lib_brewing.*": true,
+    "*lib_custom_crafters": true,
+    "*lib_custom_crafters.*": true,
     "*lib_forceload": true,
     "*lib_forceload.*": true,
     "*lib_lore": true,
     "*lib_lore.*": true,
+    "*lib_machines": true,
+    "*lib_machines.*": true,
     "*lib_player_heads": true,
     "*lib_player_heads.*": true,
     "*lib_potion_tracking": true,
@@ -216,14 +222,14 @@
     "*LICENSE.*": true,
     "*module": true,
     "*module.*": true,
-    "*out": true,
-    "*out.*": true,
     "*poetry": true,
     "*poetry.*": true,
     "*pyproject": true,
     "*pyproject.*": true,
     "*README": true,
-    "*README.*": true,
-    "gm4_combat_expanded": true
-  }
+    "*README.*": true
+  },
+  "datapack.env.exclude": [
+    "out\\"
+  ]
 }

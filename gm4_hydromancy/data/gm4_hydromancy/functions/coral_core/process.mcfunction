@@ -1,5 +1,5 @@
-# process coral flowers (30s)
-# @s = coral flower
+# process coral cores (30s)
+# @s = coral core
 # at @s
 # run from clock_coral_core
 

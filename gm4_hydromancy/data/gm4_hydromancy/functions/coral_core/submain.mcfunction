@@ -1,5 +1,5 @@
-# process coral flowers (16t)
-# @s = coral flower
+# process coral cores (16t)
+# @s = coral core
 # at @s
 # run from main
 

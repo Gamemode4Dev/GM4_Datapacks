@@ -16,6 +16,7 @@
               "name": {
                 "translate": "item.gm4.spell_trident",
                 "fallback": "Spell Trident",
+                "color": "yellow",
                 "italic": false
               }
             },

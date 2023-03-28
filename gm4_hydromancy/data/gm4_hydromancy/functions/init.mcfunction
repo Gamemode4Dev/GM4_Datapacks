@@ -4,9 +4,11 @@ scoreboard players set hydromancy gm4_modules 1
 scoreboard objectives add gm4_hy_data dummy
 scoreboard players set #3 gm4_hy_data 3
 scoreboard players set #4 gm4_hy_data 4
+scoreboard players set #5 gm4_hy_data 5
 scoreboard players set #6 gm4_hy_data 6
 scoreboard players set #10 gm4_hy_data 10
 scoreboard players set #15 gm4_hy_data 15
+scoreboard players set #20 gm4_hy_data 20
 scoreboard players set #49 gm4_hy_data 49
 scoreboard players set #100 gm4_hy_data 100
 scoreboard players set #250 gm4_hy_data 250

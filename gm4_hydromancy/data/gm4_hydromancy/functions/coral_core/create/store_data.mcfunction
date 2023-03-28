@@ -1,5 +1,5 @@
 # put data in item display
-# @s = coral flower item display
+# @s = coral core item display
 # at @s
 # run from coral_core/create/summon
 
@@ -7,7 +7,7 @@ data merge entity @s {Tags:["gm4_hy_coral_core","gm4_hy_coral_vine.connected"],R
 data modify entity @s item.tag set from storage gm4_hydromancy:temp tag
 
 # charge circle
-scoreboard players set @s gm4_hy_charge 0
+execute store result score @s gm4_hy_charge run data get storage gm4_hydromancy:temp tag.gm4_hydromancy.stored_mana
 scoreboard players set $circle_steps gm4_hy_data 20
 execute at @s rotated ~-9 ~ run function gm4_hydromancy:coral_core/charge/display
 tag @s add gm4_hy_target

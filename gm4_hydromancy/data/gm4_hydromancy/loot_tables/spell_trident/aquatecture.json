@@ -18,17 +18,8 @@
                     "entity": "this",
                     "lore": [
                         {
-                            "text": ""
-                        },
-                        {
-                            "translate": "item.gm4_hydromancy.spell.header",
-                            "fallback": "Spell:",
-                            "color": "gray",
-                            "italic": false
-                        },
-                        {
-                            "translate": "item.gm4_hydromancy.spell.ride",
-                            "fallback": "Ride",
+                            "translate": "item.gm4_hydromancy.spell.builder",
+                            "fallback": "Aquatecture",
                             "color": "blue",
                             "italic": false
                         }

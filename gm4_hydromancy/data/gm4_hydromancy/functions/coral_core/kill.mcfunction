@@ -1,16 +1,15 @@
-# kill coral flower if it is destroyed, release heart of the sea
-# @s = coral flower
+# kill coral core if it is destroyed, release heart of the sea
+# @s = coral core
 # at @s positioned ~ ~-.4 ~
 # run from coral_core/submain
 
-# if mana charged alter item
-data modify storage gm4_hydromancy:temp tag set from entity @s item.tag
-# TODO
+# store mana in item, then calculate percentage
+execute store result storage gm4_hydromancy:temp stored_mana int 1 run scoreboard players get @s gm4_hy_charge
+scoreboard players operation @s gm4_hy_charge *= #5 gm4_hy_data
 
 # spawn item
-summon item ~ ~ ~ {Tags:["gm4_hy_item_checked",],Motion:[0.0,0.15,0.0],PickupDelay:20,Item:{id:"minecraft:heart_of_the_sea",Count:1b,tag:{}}}
-data modify entity @e[type=item,tag=gm4_hy_item_checked,limit=1,sort=nearest] Item.tag set from storage gm4_hydromancy:temp tag
-data remove storage gm4_hydromancy:temp item
+loot spawn ~ ~ ~ loot gm4_hydromancy:mana_stone
+data remove storage gm4_hydromancy:temp stored_mana
 
 # vfx
 particle bubble_pop ~ ~0.15 ~ 0.2 0.35 0.2 0.05 24
