@@ -1,7 +1,7 @@
 # process thrown spell trident
 # @s = spell trident
 # at @s
-# run from spell_trident/process
+# run from spell_trident/process_slow
 
 # track used mana
 scoreboard players add @s gm4_hy_mana_used 1

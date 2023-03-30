@@ -18,7 +18,7 @@
                     "entity": "this",
                     "lore": [
                         {
-                            "translate": "item.gm4_hydromancy.spell.item_suck",
+                            "translate": "item.gm4_hydromancy.spell.hopper",
                             "fallback": "Whirlpool",
                             "color": "blue",
                             "italic": false

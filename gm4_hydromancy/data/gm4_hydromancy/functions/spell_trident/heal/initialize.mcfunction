@@ -3,9 +3,8 @@
 # at @s
 # run from spell_trident/init_trident
 
-tag @s add gm4_hy_spell_trident.ride
+tag @s add gm4_hy_spell_trident.heal
 tag @s add gm4_hy_spell_trident.process_slow
 
-ride @p[tag=gm4_hy_using_spell_trident] dismount
-ride @p[tag=gm4_hy_using_spell_trident] mount @s
 data modify entity @s damage set value 0.0d
+# TODO: make soo it cant be picked up

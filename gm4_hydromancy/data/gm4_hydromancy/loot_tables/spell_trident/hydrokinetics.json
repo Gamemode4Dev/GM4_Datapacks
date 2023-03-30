@@ -18,7 +18,7 @@
                     "entity": "this",
                     "lore": [
                         {
-                            "translate": "item.gm4_hydromancy.spell.firecracker",
+                            "translate": "item.gm4_hydromancy.spell.firework",
                             "fallback": "Hydrokinetics",
                             "color": "blue",
                             "italic": false
