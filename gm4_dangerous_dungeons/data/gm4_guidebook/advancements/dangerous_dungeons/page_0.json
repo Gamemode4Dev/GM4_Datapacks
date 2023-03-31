@@ -17,23 +17,10 @@
   },
   "parent": "gm4_guidebook:root",
   "criteria": {
-    "requirement_1": {
-      "trigger": "minecraft:player_generates_container_loot",
+    "badlands_upper": {
+      "trigger": "minecraft:location",
       "conditions": {
         "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "type_specific": {
-                  "type": "player",
-                  "gamemode": "spectator"
-                }
-              }
-            }
-          },
           {
             "condition": "minecraft:value_check",
             "value": {
@@ -52,33 +39,28 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_dangerous_dungeons"
+                "name": "gm4_cooler_caves"
               },
               "score": "load.status"
             },
             "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:badlands/upper"
+              }
+            }
           }
-        ],
-        "loot_table": "gm4_orbis:chests/dungeon_20"
+        ]
       }
     },
-    "requirement_2": {
-      "trigger": "minecraft:player_generates_container_loot",
+    "badlands_lower": {
+      "trigger": "minecraft:location",
       "conditions": {
         "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "type_specific": {
-                  "type": "player",
-                  "gamemode": "spectator"
-                }
-              }
-            }
-          },
           {
             "condition": "minecraft:value_check",
             "value": {
@@ -97,33 +79,28 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_dangerous_dungeons"
+                "name": "gm4_cooler_caves"
               },
               "score": "load.status"
             },
             "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:badlands/lower"
+              }
+            }
           }
-        ],
-        "loot_table": "gm4_orbis:chests/dungeon_30"
+        ]
       }
     },
-    "requirement_3": {
-      "trigger": "minecraft:player_generates_container_loot",
+    "deep_slate": {
+      "trigger": "minecraft:location",
       "conditions": {
         "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "type_specific": {
-                  "type": "player",
-                  "gamemode": "spectator"
-                }
-              }
-            }
-          },
           {
             "condition": "minecraft:value_check",
             "value": {
@@ -142,22 +119,317 @@
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
-                "name": "gm4_dangerous_dungeons"
+                "name": "gm4_cooler_caves"
               },
               "score": "load.status"
             },
             "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:deep_slate"
+              }
+            }
           }
-        ],
-        "loot_table": "gm4_orbis:chests/dungeon_40"
+        ]
+      }
+    },
+    "desert": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "lush": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:lush"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ocean_default": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:ocean/default"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ocean_surface": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:ocean/surface"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "snowy": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:snowy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "stone_default": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:stone/default"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "stone_ocean": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_cooler_caves"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:stone/ocean"
+              }
+            }
+          }
+        ]
       }
     }
   },
   "requirements": [
     [
-      "requirement_1",
-      "requirement_2",
-      "requirement_3"
+      "badlands_upper",
+      "badlands_lower",
+      "deep_slate",
+      "desert",
+      "lush",
+      "ocean_default",
+      "ocean_surface",
+      "snowy",
+      "stone_default",
+      "stone_ocean"
     ]
   ],
   "rewards": {

@@ -1,0 +1,26 @@
+{
+  "structures": [
+    {
+      "structure": "gm4_tower_structures:ocean/large_ship",
+      "weight": 9
+    },
+    {
+      "structure": "gm4_tower_structures:ocean/medium_ship",
+      "weight": 9
+    },
+    {
+      "structure": "gm4_tower_structures:ocean/small_ship",
+      "weight": 10
+    },
+    {
+      "structure": "gm4_tower_structures:ocean/raft",
+      "weight": 10
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1800186508,
+    "spacing": 17,
+    "separation": 5
+  }
+}

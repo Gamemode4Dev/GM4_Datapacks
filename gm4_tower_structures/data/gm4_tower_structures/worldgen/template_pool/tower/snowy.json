@@ -1,0 +1,50 @@
+{
+  "name": "gm4_tower_structures:snowy",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/snowy/basic",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:ice",
+                    "probability": 0.2
+                  },
+                  "output_state": { "Name": "minecraft:packed_ice" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:ice",
+                    "probability": 0.8
+                  },
+                  "output_state": { "Name": "minecraft:snow_block" }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/snowy/boxy",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

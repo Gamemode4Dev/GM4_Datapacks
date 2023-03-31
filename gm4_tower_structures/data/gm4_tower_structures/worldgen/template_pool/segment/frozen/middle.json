@@ -1,0 +1,24 @@
+{
+  "name": "gm4_tower_structures:segment/frozen/middle",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:segmented/frozen/middle/frozen/1",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:segmented/frozen/middle/frozen/2",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}
