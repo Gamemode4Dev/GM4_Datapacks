@@ -1,5 +1,5 @@
 {
-  "last_commit": "9a43ea04ae721534c3fd2121e93f71eccafb14db",
+  "last_commit": "910717c8275699af77bbb8e70154202e88094a38",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -76,7 +76,7 @@
     {
       "id": "gm4_auto_crafting",
       "name": "Auto Crafting",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters/Auto_Crafting",
       "credits": {
