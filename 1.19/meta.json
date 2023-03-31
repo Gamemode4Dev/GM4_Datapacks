@@ -1,5 +1,5 @@
 {
-  "last_commit": "fd1651d4abe9d02de1aa77600ac2aa55c07fb736",
+  "last_commit": "b4b47c580f0956234cc4adc180d8351912a6eb3e",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -400,7 +400,7 @@
     {
       "id": "gm4_cooler_caves",
       "name": "Cooler Caves",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "video_link": "https://www.youtube.com/watch?v=cAsXiwLWHFo",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Cooler_Caves",
       "credits": {
@@ -414,9 +414,7 @@
           "DuckJr"
         ]
       },
-      "requires": [
-        "gm4_orbis"
-      ],
+      "requires": [],
       "description": "A custom terrain expansion pack that makes biome specific caves and mineshafts",
       "recommends": [
         "gm4_dangerous_dungeons",
@@ -472,7 +470,7 @@
     {
       "id": "gm4_dangerous_dungeons",
       "name": "Dangerous Dungeons",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Dangerous_Dungeons",
       "credits": {
@@ -486,9 +484,7 @@
           "DuckJr"
         ]
       },
-      "requires": [
-        "gm4_orbis"
-      ],
+      "requires": [],
       "description": "A custom terrain expansion pack that adds new types of dungeons underground.",
       "recommends": [
         "gm4_tower_structures",
@@ -1307,7 +1303,7 @@
     {
       "id": "gm4_orbis",
       "name": "Orbis",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "video_link": "https://www.youtube.com/watch?v=cAsXiwLWHFo",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis",
       "credits": {
@@ -1923,7 +1919,7 @@
     {
       "id": "gm4_tower_structures",
       "name": "Tower Structures",
-      "version": "2.0.0",
+      "version": "3.0.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Tower_Structures",
       "credits": {
@@ -1937,9 +1933,7 @@
           "DuckJr"
         ]
       },
-      "requires": [
-        "gm4_orbis"
-      ],
+      "requires": [],
       "description": "A custom terrain expansion pack that adds four new tower structures to the world.",
       "recommends": [
         "gm4_dangerous_dungeons",
