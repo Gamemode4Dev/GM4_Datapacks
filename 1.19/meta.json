@@ -1,5 +1,5 @@
 {
-  "last_commit": "b4b47c580f0956234cc4adc180d8351912a6eb3e",
+  "last_commit": "9a43ea04ae721534c3fd2121e93f71eccafb14db",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -25,7 +25,7 @@
     {
       "id": "gm4_apple_trees",
       "name": "Apple Trees",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Apple_Trees",
       "credits": {
@@ -39,7 +39,7 @@
         ]
       },
       "requires": [],
-      "description": "Introduces fruit-bearing apple trees! Trade for apple saplings with wandering traders or commenly find these lifesavers in forests if you have Orbis installed.",
+      "description": "Introduces fruit-bearing apple trees! Trade for apple saplings with wandering traders or find them growing in forests!",
       "recommends": [
         "gm4_resource_pack",
         "gm4_orbis",
