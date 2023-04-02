@@ -1,5 +1,5 @@
 {
-  "last_commit": "910717c8275699af77bbb8e70154202e88094a38",
+  "last_commit": "bba5ec139aec59452af65da1467a9a9803a928d8",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -331,7 +331,7 @@
     {
       "id": "gm4_cement_mixers",
       "name": "Cement Mixers",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Cement_Mixers",
       "credits": {
