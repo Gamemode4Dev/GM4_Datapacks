@@ -1,5 +1,5 @@
 {
-  "last_commit": "e7806c8b300e1335666ec8b2108decc9d7720858",
+  "last_commit": "946cf18cd022ed2ba462ae6ac37174ce3f4b8a21",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -435,7 +435,7 @@
         ]
       },
       "hidden": false,
-      "patch": 17001
+      "patch": 17002
     },
     {
       "id": "gm4_dangerous_dungeons",
