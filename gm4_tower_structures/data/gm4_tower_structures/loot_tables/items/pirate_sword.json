@@ -18,13 +18,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Pirate Sword",
-                                    {
-                                        "translate": "item.gm4.tower_structures.pirate_sword"
-                                    }
-                                ],
+                                "translate": "item.gm4.tower_structures.pirate_sword",
+                                "fallback": "Pirate Sword",
                                 "italic": false
                             }
                         }
