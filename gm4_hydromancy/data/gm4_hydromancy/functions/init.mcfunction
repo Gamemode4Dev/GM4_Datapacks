@@ -24,6 +24,9 @@ scoreboard objectives add gm4_hy_vine_count dummy
 scoreboard objectives add gm4_hy_vine_root_count dummy
 scoreboard objectives add gm4_hy_using_spell_trident dummy
 scoreboard objectives add gm4_hy_mana_used dummy
+scoreboard objectives add gm4_hy_duration dummy
+scoreboard objectives add gm4_hy_timer dummy
+scoreboard objectives add gm4_hy_id dummy
 
 schedule function gm4_hydromancy:tick 1t
 schedule function gm4_hydromancy:main 1t

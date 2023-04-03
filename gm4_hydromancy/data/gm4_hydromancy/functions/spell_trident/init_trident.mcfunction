@@ -19,7 +19,7 @@ execute if score $spell_id gm4_hy_data matches 1 run function gm4_hydromancy:spe
 #   Can be picked up only after right click (interaction entity), each action costs mana
 execute if score $spell_id gm4_hy_data matches 2
 # [Whirlpool] nearby items ride trident, when landed returns to owner (loyalty?), each item costs mana
-execute if score $spell_id gm4_hy_data matches 3
+execute if score $spell_id gm4_hy_data matches 3 run function gm4_hydromancy:spell_trident/hopper/initialize
 # [Hydrokinetics] disable gravity and deal drowing damage to nearby living/undead entities.
 #   Instantly returns to owner after some time, instant mana cost on cast
 execute if score $spell_id gm4_hy_data matches 4

@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:2}"
+              "tag": "{HideFlags:3}"
             },
             {
               "function": "minecraft:set_name",

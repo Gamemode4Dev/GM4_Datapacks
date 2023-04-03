@@ -20,7 +20,7 @@
                         {
                             "translate": "item.gm4_hydromancy.spell.ride",
                             "fallback": "Surge Surf",
-                            "color": "blue",
+                            "color": "gray",
                             "italic": false
                         }
                     ]

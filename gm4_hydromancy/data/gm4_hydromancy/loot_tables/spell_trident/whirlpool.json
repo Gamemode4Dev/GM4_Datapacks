@@ -11,7 +11,7 @@
             "functions": [
                 {
                     "function": "minecraft:set_nbt",
-                    "tag": "{gm4_hy_spell_trident:{spell_id:1,dura:99,mana:{left:6000,max:6000}}}"
+                    "tag": "{gm4_hy_spell_trident:{spell_id:3,dura:99,mana:{left:6000,max:6000}}}"
                 },
                 {
                     "function": "minecraft:set_lore",
@@ -20,7 +20,7 @@
                         {
                             "translate": "item.gm4_hydromancy.spell.hopper",
                             "fallback": "Whirlpool",
-                            "color": "blue",
+                            "color": "gray",
                             "italic": false
                         }
                     ]

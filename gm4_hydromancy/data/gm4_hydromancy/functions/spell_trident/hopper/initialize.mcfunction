@@ -6,4 +6,4 @@
 tag @s add gm4_hy_spell_trident.hopper
 tag @s add gm4_hy_spell_trident.process_fast
 
-data modify entity @s damage set value 0.0d
+data modify entity @s damage set value 4.0d

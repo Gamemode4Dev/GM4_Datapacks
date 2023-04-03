@@ -85,29 +85,6 @@
                                     }
                                 }
                             ]
-                        },
-                        {
-                            "function": "minecraft:set_name",
-                            "entity": "this",
-                            "name": {
-                                "translate": "item.gm4_hydromancy.mana_stone.name",
-                                "fallback": "Spellstone",
-                                "color": "yellow",
-                                "italic": false
-                            },
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:value_check",
-                                    "value": {
-                                        "type": "minecraft:score",
-                                        "target": "this",
-                                        "score": "gm4_hy_charge"
-                                    },
-                                    "range": {
-                                        "min": 1
-                                    }
-                                }
-                            ]
                         }
                     ]
                 }

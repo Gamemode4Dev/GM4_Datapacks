@@ -4,7 +4,7 @@
 # run from spell_trident/init_trident
 
 tag @s add gm4_hy_spell_trident.ride
-tag @s add gm4_hy_spell_trident.process_slow
+tag @s add gm4_hy_spell_trident.process_fast
 
 ride @p[tag=gm4_hy_using_spell_trident] dismount
 ride @p[tag=gm4_hy_using_spell_trident] mount @s

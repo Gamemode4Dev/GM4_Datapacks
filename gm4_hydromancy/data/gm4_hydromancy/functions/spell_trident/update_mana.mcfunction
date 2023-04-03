@@ -1,7 +1,8 @@
 # subtract used mana of this spell trident from mana left
 # @s = spell trident
 # at @s
-# run from any spell_trident/ride/process
+# run from spell_trident/ride/process
+# run from spell_trident/hopper/return
 
 # store left mana in trident data
 scoreboard players operation $mana gm4_hy_data = @s gm4_hy_charge
