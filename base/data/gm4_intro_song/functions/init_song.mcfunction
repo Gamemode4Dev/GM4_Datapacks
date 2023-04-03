@@ -1,8 +1,8 @@
 # Setup all online players
-# run from function tag, gm4_intro_song:play_online
+# run from base install function, gm4:load, or first join advancement, gm4_intro_song:play_song
 
-tag @a add gm4_intro_playing
-scoreboard players set @a gm4_intro_song -240
-scoreboard players set @a gm4_intro_song_t -1
+tag @s add gm4_intro_playing
+scoreboard players set @s gm4_intro_song -240
+scoreboard players set @s gm4_intro_song_t -1
 
-function gm4_intro_song:main
+schedule function gm4_intro_song:main 1t

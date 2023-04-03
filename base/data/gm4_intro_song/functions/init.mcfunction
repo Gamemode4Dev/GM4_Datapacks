@@ -1,10 +1,10 @@
+# Scoreboard init, non-standard init so it is here instead of init
 scoreboard objectives add gm4_intro_song dummy
 scoreboard objectives add gm4_intro_song_t dummy
+scoreboard objectives add gm4_intro_walked minecraft.custom:walk_one_cm
 
-# to enable intro song on first join, set to 1
-scoreboard players set $first_join gm4_intro_song 0
+# to enable intro song on first join, run
+# /scoreboard players set $first_join gm4_intro_song 1
+execute unless score $first_join gm4_intro_song matches 0.. run scoreboard players set $first_join gm4_intro_song 0
 
-execute unless score intro_song gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Intro Song"}
-scoreboard players set intro_song gm4_modules 1
-
-#$moduleUpdateList
+advancement grant @a only gm4_intro_song:play_song

@@ -5,28 +5,16 @@
       "nbt": "{CustomModelData:3420001}"
     },
     "title": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Gamemode 4",
-        {
-          "translate": "advancement.gm4.root.title"
-        }
-      ]
+      "translate": "advancement.gm4.root.title",
+      "fallback": "Gamemode 4"
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Semi-funny blurb about GM4",
-        {
-          "translate": "advancement.gm4.root.description"
-        }
-      ],
-      "color": "gray"
+      "text": "This should not be seen."
     },
     "show_toast": true,
     "announce_to_chat": false
   },
-  "parent": "gm4_intro_song:root",
+  "parent": "gm4_intro_song:invisible_root",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:impossible"
