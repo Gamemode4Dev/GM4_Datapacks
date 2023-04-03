@@ -1,6 +1,0 @@
-{
-    "values":[
-        { "id": "#load:gm4_fruiting_trees", "required": false },
-        "gm4_apple_trees:load"
-    ]
-}

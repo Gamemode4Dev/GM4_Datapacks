@@ -1,6 +1,0 @@
-{
-    "values": [
-        "#load:gm4_forceload/enumerate",
-        "#load:gm4_forceload/resolve_load"
-    ]
-}

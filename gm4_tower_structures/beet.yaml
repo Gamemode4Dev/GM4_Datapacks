@@ -2,20 +2,25 @@ extend: '../module.yaml'
 
 id: gm4_tower_structures
 name: Tower Structures
+version: 3.0.X
 
 pipeline:
+  - directory: '../pfb_orbis'
+    extend: 'beet.yaml'
   - data_pack:
       load: .
+  - gm4.plugins.prefabs.module_asset_rename
 
 meta:
   gm4:
-    description: A custom terrain expansion pack that adds four new tower structures to the world.
-    required:
+    prefabs:
       - gm4_orbis
-    recommended:
-      - gm4_dangerous_dungeons
-      - gm4_cooler_caves
-    notes: []
+    website:
+      description: A custom terrain expansion pack that adds four new tower structures to the world.
+      recommended:
+        - gm4_dangerous_dungeons
+        - gm4_cooler_caves
+      notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Orbis/Tower_Structures
     credits:

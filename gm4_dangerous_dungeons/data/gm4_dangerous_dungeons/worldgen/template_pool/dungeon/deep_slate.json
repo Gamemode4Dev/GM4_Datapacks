@@ -1,0 +1,266 @@
+{
+  "name": "gm4_dangerous_dungeons:dungeon/deep_slate",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/deep_slate/medium/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:cobweb",
+                    "probability": 0.9
+                  },
+                  "output_state": { "Name": "minecraft:air" }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "deepslate_bricks",
+                    "probability": 0.2
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cracked_deepslate_bricks"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "deepslate_bricks",
+                    "probability": 0.125
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cobbled_deepslate"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "deepslate_tiles",
+                    "probability": 0.3
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cracked_deepslate_tiles"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/deep_slate/small/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:cobweb",
+                    "probability": 0.9
+                  },
+                  "output_state": { "Name": "minecraft:air" }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "deepslate_bricks",
+                    "probability": 0.2
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cracked_deepslate_bricks"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "deepslate_bricks",
+                    "probability": 0.125
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cobbled_deepslate"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "deepslate_tiles",
+                    "probability": 0.3
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cracked_deepslate_tiles"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/deep_slate/large_1/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:cobweb",
+                    "probability": 0.9
+                  },
+                  "output_state": { "Name": "minecraft:air" }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "deepslate_bricks",
+                    "probability": 0.2
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cracked_deepslate_bricks"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "deepslate_bricks",
+                    "probability": 0.125
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cobbled_deepslate"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "deepslate_tiles",
+                    "probability": 0.3
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cracked_deepslate_tiles"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/deep_slate/large_2/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:cobweb",
+                    "probability": 0.9
+                  },
+                  "output_state": { "Name": "minecraft:air" }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "deepslate_bricks",
+                    "probability": 0.2
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cracked_deepslate_bricks"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "deepslate_bricks",
+                    "probability": 0.125
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cobbled_deepslate"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "deepslate_tiles",
+                    "probability": 0.3
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cracked_deepslate_tiles"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

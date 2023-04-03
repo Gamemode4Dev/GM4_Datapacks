@@ -10,7 +10,7 @@
     },
     "description": {
       "translate": "advancement.gm4.relocators.description",
-      "fallback": "Pick up a machine with the relocator",
+      "fallback": "Pick up a container with the relocator",
       "color": "gray"
     }
   },

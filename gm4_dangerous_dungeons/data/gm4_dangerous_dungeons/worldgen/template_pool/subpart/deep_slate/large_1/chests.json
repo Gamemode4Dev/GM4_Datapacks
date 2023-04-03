@@ -1,0 +1,24 @@
+{
+  "name": "gm4_dangerous_dungeons:subpart/deep_slate/large_1/chests",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/deep_slate/large_1/decor/chests/a",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/deep_slate/large_1/decor/chests/b",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}
