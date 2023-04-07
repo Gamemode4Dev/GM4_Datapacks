@@ -11,7 +11,7 @@
             "functions": [
                 {
                     "function": "minecraft:set_nbt",
-                    "tag": "{gm4_hy_spell_trident:{spell_id:5,dura:99,mana:{left:6000,max:6000}}}"
+                    "tag": "{gm4_hy_spell_trident:{spell_id:5,dura:99,mana:{left:750,max:750}}}"
                 },
                 {
                     "function": "minecraft:set_lore",

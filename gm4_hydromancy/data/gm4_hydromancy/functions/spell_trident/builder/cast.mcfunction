@@ -6,6 +6,9 @@
 # store off-hand block id
 execute on origin run data modify storage gm4_hydromancy builder.block_id set from entity @s Inventory[{Slot:-106b}].id
 
+# process mana
+scoreboard players set @s gm4_hy_mana_used 1
+function gm4_hydromancy:spell_trident/update_mana
 
 # spawn a marker facing the wall that should be build on
 scoreboard players set $builder.ori_found gm4_hy_data 0

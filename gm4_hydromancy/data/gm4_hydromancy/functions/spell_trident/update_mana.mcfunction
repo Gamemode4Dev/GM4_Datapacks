@@ -3,12 +3,14 @@
 # at @s
 # run from spell_trident/ride/process
 # run from spell_trident/hopper/return
+# run from spell_trident/builder/cast
 
 # store left mana in trident data
-scoreboard players operation $mana gm4_hy_data = @s gm4_hy_charge
-execute store result entity @s Trident.tag.gm4_hy_spell_trident.mana.left int 1 run scoreboard players operation $mana gm4_hy_data -= @s gm4_hy_mana_used
+execute store result entity @s Trident.tag.gm4_hy_spell_trident.mana.left int 1 run scoreboard players operation @s gm4_hy_charge -= @s gm4_hy_mana_used
+scoreboard players set @s gm4_hy_mana_used 0
 
 # use mana perc left for durability display (min 3%, max 99%)
+scoreboard players operation $mana gm4_hy_data = @s gm4_hy_charge
 execute store result score $mana_max gm4_hy_data run data get entity @s Trident.tag.gm4_hy_spell_trident.mana.max
 scoreboard players operation $mana gm4_hy_data *= #100 gm4_hy_data
 scoreboard players operation $mana gm4_hy_data /= $mana_max gm4_hy_data
