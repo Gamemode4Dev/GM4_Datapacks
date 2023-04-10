@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_crossbow_cartridges
 name: Crossbow Cartridges
-version: 1.2.X
+version: 1.3.X
 
 pipeline:
   - data_pack:

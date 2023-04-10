@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_shroomites
 name: Shroomites
-version: 1.1.X
+version: 1.2.X
 
 pipeline:
   - data_pack:
