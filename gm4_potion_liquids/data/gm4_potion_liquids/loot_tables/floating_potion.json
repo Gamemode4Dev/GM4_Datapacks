@@ -15,13 +15,8 @@
                         {
                             "function": "set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Potion of Floating",
-                                    {
-                                        "translate": "item.gm4.floating_potion"
-                                    }
-                                ],
+                                "translate": "item.gm4.floating_potion",
+                                "fallback": "Potion of Floating",
                                 "italic": false
                             }
                         }

@@ -10,15 +10,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Zauber Chestplate",
-                                    [
-                                        {
-                                            "translate": "item.gm4.zauber_cauldrons.zauber_armor.chestplate"
-                                        }
-                                    ]
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.zauber_armor.chestplate",
+                                "fallback": "Zauber Chestplate",
                                 "italic": false
                             }
                         },

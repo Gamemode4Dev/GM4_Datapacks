@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Musical",
-                                        {
-                                            "translate": "item.gm4.shamir.musical"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.musical",
+                                    "fallback": "Musical",
                                     "italic": false,
                                     "color": "gray"
                                 }

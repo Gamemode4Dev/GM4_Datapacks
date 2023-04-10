@@ -18,13 +18,8 @@
             {
               "function": "set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Everstone",
-                  {
-                    "translate": "item.gm4.everstone"
-                  }
-                ],
+                "translate": "item.gm4.everstone",
+                "fallback": "Everstone",
                 "italic": false
               }
             }

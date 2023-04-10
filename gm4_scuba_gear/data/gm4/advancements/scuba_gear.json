@@ -5,22 +5,12 @@
       "nbt": "{CustomModelData:3420048,SkullOwner:{Id:[I;505437377,1176259381,-1878264711,-101560156],Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NDMxNjc2MjM1NzMsInByb2ZpbGVJZCI6IjVjN2ZiNzhhMmQxMzQ5NTZhNWE1M2EyNGQ5NWY1YjRmIiwicHJvZmlsZU5hbWUiOiJQZWFyc29uSW5tYW4iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzc1OWY1NmU3MDc4NDkzYzEzMDZlZWI2YmQxM2UwYmQ1NTZlYjAxOGUzZGRjMDAzMGE1NzFhYjg4YzRjZGNlNGUifX19\"}]}}}"
     },
     "title": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Things Are Going Swimmingly!",
-        {
-          "translate": "advancement.gm4.scuba_gear.title"
-        }
-      ]
+      "translate": "advancement.gm4.scuba_gear.title",
+      "fallback": "Things Are Going Swimmingly!"
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Suit up with a full set of SCUBA gear",
-        {
-          "translate": "advancement.gm4.scuba_gear.description"
-        }
-      ],
+      "translate": "advancement.gm4.scuba_gear.description",
+      "fallback": "Suit up with a full set of SCUBA gear",
       "color": "gray"
     }
   },

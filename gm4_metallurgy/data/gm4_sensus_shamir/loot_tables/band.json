@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Sensus",
-                                        {
-                                            "translate": "item.gm4.shamir.sensus"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.sensus",
+                                    "fallback": "Sensus",
                                     "italic": false,
                                     "color": "gray"
                                 }
