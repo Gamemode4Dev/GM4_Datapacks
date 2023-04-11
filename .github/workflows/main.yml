@@ -20,7 +20,7 @@ jobs:
         with:
           minecraft: ${{ env.VERSION }}
           source: base gm4_* lib_*
-          version: '0.52.2'
+          version: '0.67.0'
 
   build:
     needs: test
