@@ -6,12 +6,12 @@ authors = ["Gamemode 4 Contributors"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-beet = ">=0.80.1"
-mecha = ">=0.57.5"
+beet = "^0.84.0"
+mecha = "^0.67.0"
 bolt = ">=0.20.1"
 PyYAML = "^6.0"
 pydantic = "^1.10.2"
-smithed-libraries = "^0.1.0"
+smithed-libraries = "^0.6.0"
 requests = "^2.28.1"
 
 [tool.poetry.dev-dependencies]
