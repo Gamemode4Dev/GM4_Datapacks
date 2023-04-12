@@ -5,8 +5,10 @@
 
 # stop spell
 data modify entity @s Motion set value [0.0,0.0,0.0]
+data modify entity @s SoundEvent set value "minecraft:item.trident.hit_ground"
+data modify entity @s Trident.tag.Enchantments set value [{id:"minecraft:loyalty",lvl:3s}]
+
 tag @s remove gm4_hy_spell_trident.process
-tag @s remove gm4_hy_spell_trident.process_fast
 tag @s add gm4_hy_spell_trident.landed
 execute on passengers run ride @s dismount
 

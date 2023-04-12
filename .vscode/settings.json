@@ -59,8 +59,6 @@
     "*gm4_cement_mixers.*": true,
     "*gm4_chairs": true,
     "*gm4_chairs.*": true,
-    "*gm4_combat_expanded": true,
-    "*gm4_combat_expanded.*": true,
     "*gm4_cooler_caves": true,
     "*gm4_cooler_caves.*": true,
     "*gm4_cozy_campfires": true,
@@ -194,7 +192,6 @@
     "*gm4_weighted_armour.*": true,
     "*gm4_xp_storage": true,
     "*gm4_xp_storage.*": true,
-    "*gm4_zauber_cauldrons": true,
     "*gm4_zauber_cauldrons.*": true,
     "*gm4_zauber_liquids": true,
     "*gm4_zauber_liquids.*": true,
@@ -227,7 +224,9 @@
     "*pyproject": true,
     "*pyproject.*": true,
     "*README": true,
-    "*README.*": true
+    "*README.*": true,
+    "gm4_zauber_cauldrons": true,
+    "gm4_combat_expanded": true
   },
   "datapack.env.exclude": [
     "out\\"

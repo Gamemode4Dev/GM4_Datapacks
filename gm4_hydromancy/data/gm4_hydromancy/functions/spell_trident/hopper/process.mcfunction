@@ -1,7 +1,7 @@
 # process thrown spell trident
 # @s = spell trident
 # at @s
-# run from spell_trident/process_fast
+# run from spell_trident/process
 
 # suck in items
 tag @s add gm4_hy_target
@@ -12,8 +12,8 @@ tag @s remove gm4_hy_target
 
 # limit to 60 seconds of on ground, when player gets nearby or until mana is empty
 scoreboard players add @s[tag=gm4_hy_spell_trident.landed] gm4_hy_duration 1
-execute if entity @s[scores={gm4_hy_duration=1200..}] run function gm4_hydromancy:spell_trident/hopper/stop
-execute if entity @a[distance=..0.66,gamemode=!spectator] run function gm4_hydromancy:spell_trident/hopper/stop
+execute if entity @s[scores={gm4_hy_duration=30..}] run function gm4_hydromancy:spell_trident/hopper/stop
+#execute if score @s gm4_hy_duration matches 30.. positioned ~-.5 ~-.2 ~-.5 if entity @a[gamemode=!spectator,dx=0,dy=0,dz=0] run function gm4_hydromancy:spell_trident/hopper/stop
 execute if score @s gm4_hy_mana_used >= @s gm4_hy_charge run function gm4_hydromancy:spell_trident/hopper/stop
 
 # vfx

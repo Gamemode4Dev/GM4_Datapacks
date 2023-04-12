@@ -17,14 +17,13 @@ execute store result score $spell_id gm4_hy_data run data get entity @s Trident.
 execute if score $spell_id gm4_hy_data matches 1 run function gm4_hydromancy:spell_trident/ride/initialize
 # [Healing Spring] 8 blocks around landing grow crops, regrow coral, regen entities (damage undead), breed mobs.
 #   Can be picked up only after right click (interaction entity), each action costs mana
-execute if score $spell_id gm4_hy_data matches 2
+execute if score $spell_id gm4_hy_data matches 2 run function gm4_hydromancy:spell_trident/heal/initialize
 # [Whirlpool] nearby items ride trident, when landed returns to owner (loyalty?), each item costs mana
 execute if score $spell_id gm4_hy_data matches 3 run function gm4_hydromancy:spell_trident/hopper/initialize
-# [Hydrokinetics] disable gravity and deal drowing damage to nearby living/undead entities.
-#   Instantly returns to owner after some time, instant mana cost on cast
-execute if score $spell_id gm4_hy_data matches 4
+# [Hydrokinetics] 
+#execute if score $spell_id gm4_hy_data matches 4 run function gm4_hydromancy:spell_trident/firework/initialize
 # [Aquatecture] builders wand, instant mana cost on cast
-execute if score $spell_id gm4_hy_data matches 5
+execute if score $spell_id gm4_hy_data matches 5 run function gm4_hydromancy:spell_trident/builder/on_throw/initialize
 
-# TODO: remove
-#data modify entity @s SoundEvent set value "item.trident.thunder"
+# SPELL IDEAS
+# ice based spell? slow everything?

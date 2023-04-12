@@ -9,6 +9,7 @@ scoreboard players set #6 gm4_hy_data 6
 scoreboard players set #10 gm4_hy_data 10
 scoreboard players set #15 gm4_hy_data 15
 scoreboard players set #20 gm4_hy_data 20
+scoreboard players set #25 gm4_hy_data 25
 scoreboard players set #49 gm4_hy_data 49
 scoreboard players set #100 gm4_hy_data 100
 scoreboard players set #250 gm4_hy_data 250
@@ -27,6 +28,8 @@ scoreboard objectives add gm4_hy_mana_used dummy
 scoreboard objectives add gm4_hy_duration dummy
 scoreboard objectives add gm4_hy_timer dummy
 scoreboard objectives add gm4_hy_id dummy
+scoreboard objectives add gm4_hy_regen_cd dummy
+scoreboard objectives add gm4_hy_firework_cd dummy
 
 schedule function gm4_hydromancy:tick 1t
 schedule function gm4_hydromancy:main 1t
@@ -35,3 +38,5 @@ schedule function gm4_hydromancy:clock_coral_vine 17s
 schedule function gm4_hydromancy:clock_tracked_fish 1t
 
 #$moduleUpdateList
+
+# I can't kelp myself

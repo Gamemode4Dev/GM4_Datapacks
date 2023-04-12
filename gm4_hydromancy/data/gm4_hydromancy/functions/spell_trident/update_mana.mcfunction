@@ -4,6 +4,7 @@
 # run from spell_trident/ride/process
 # run from spell_trident/hopper/return
 # run from spell_trident/builder/cast
+# run from spell_trident/heal/lost_interact
 
 # store left mana in trident data
 execute store result entity @s Trident.tag.gm4_hy_spell_trident.mana.left int 1 run scoreboard players operation @s gm4_hy_charge -= @s gm4_hy_mana_used

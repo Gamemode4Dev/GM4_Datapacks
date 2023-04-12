@@ -1,0 +1,14 @@
+[
+    {
+      "function": "minecraft:set_count",
+      "count": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$builder.blocks_keep"
+        },
+        "score": "gm4_hy_data"
+      }
+    }
+  ]
+  
