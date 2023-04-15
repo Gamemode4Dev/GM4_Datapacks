@@ -1,3 +1,7 @@
+# damage undead entities
+# @s = targeted entity
+# at spell trident
+# run from spell_trident/heal/regen/check_type
 
 scoreboard players add $heal.mana_used gm4_hy_data 3
 damage @s 4 trident

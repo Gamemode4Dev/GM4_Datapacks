@@ -1,3 +1,7 @@
+# stop spell once interaction entity is lost
+# @s = spell trident
+# at @s
+# run from spell_trident/heal/process
 
 # allow picking up of trident
 data modify entity @s pickup set value 1b

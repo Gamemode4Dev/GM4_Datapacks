@@ -1,3 +1,8 @@
+# particle trail to damaged entity
+# @s = targeted entity
+# at spell trident, raycasting to @s eyes
+# run from spell_trident/heal/regen/damage
+# run from here
 
 particle enchanted_hit
 
