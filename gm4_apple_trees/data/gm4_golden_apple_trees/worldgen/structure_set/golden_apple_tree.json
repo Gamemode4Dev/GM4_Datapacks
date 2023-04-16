@@ -1,0 +1,21 @@
+{
+  "structures": [
+    {
+      "structure": "gm4_golden_apple_trees:golden_apple_tree",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 193324921,
+    "frequency_reduction_method": "default",
+    "frequency": 0.1,
+    "locate_offset": [
+      14,
+      0,
+      3
+    ],
+    "spacing": 5,
+    "separation": 2
+  }
+}

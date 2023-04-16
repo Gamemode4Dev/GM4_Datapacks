@@ -1,0 +1,15 @@
+{
+  "name": "gm4_tower_structures:tower/ocean/large_ship",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/ocean/large_ship/base",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

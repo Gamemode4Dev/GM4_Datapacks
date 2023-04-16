@@ -1,0 +1,42 @@
+{
+  "name": "gm4_tower_structures:segment/hot_warm/middle",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:segmented/hot/middle/warm/1",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:segmented/hot/middle/warm/2",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:segmented/warm/middle/hot/1",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:segmented/warm/middle/hot/2",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

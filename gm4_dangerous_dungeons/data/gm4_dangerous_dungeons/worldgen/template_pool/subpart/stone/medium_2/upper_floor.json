@@ -1,0 +1,33 @@
+{
+  "name": "gm4_dangerous_dungeons:subpart/stone/medium_2/upper_floor",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/medium_2/decor/upper_floor/a"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/medium_2/decor/upper_floor/b"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/medium_2/decor/upper_floor/c"
+      }
+    }
+  ]
+}

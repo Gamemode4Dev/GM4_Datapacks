@@ -1,0 +1,15 @@
+{
+  "name": "gm4_dangerous_dungeons:ocean/default",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 9,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/ocean/default",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

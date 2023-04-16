@@ -1,0 +1,42 @@
+{
+  "name": "gm4_dangerous_dungeons:subpart/stone/large/center_features",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/large/decor/center/a"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/large/decor/center/b"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/large/decor/center/c"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/large/decor/center/d"
+      }
+    }
+  ]
+}

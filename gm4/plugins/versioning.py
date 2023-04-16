@@ -10,7 +10,7 @@ def modules(ctx: Context):
         - load:{module_name}.json
         - {module_name}:load.mcfunction
         - load:load.json"""
-    ctx.cache["currently_building"].json = {"name": ctx.project_name} # cache module's project id for access within library pipelines
+    ctx.cache["currently_building"].json = {"name": ctx.project_name, "id": ctx.project_id} # cache module's project id for access within library pipelines
     versioning_config: dict[str, Any] = ctx.meta.get('gm4', {}).get('versioning', {})
     dependencies: list[dict[str,str]] = versioning_config.get('required', [])
     lines = ["execute ", ""]
@@ -58,7 +58,7 @@ def modules(ctx: Context):
     lines.append(f"execute if score {ctx.project_id} load.status matches {module_ver.major} run function {ctx.project_id}:init")
 
     # unschedule clocks
-    for function in ctx.meta["gm4"].get("schedule_loops", []):
+    for function in ctx.meta["gm4"].get("versioning", {}).get("schedule_loops", []):
         namespaced_function = f"{ctx.project_id}:{function}" if ":" not in function else function
         lines.append(f"execute unless score {ctx.project_id} load.status matches {module_ver.major} run schedule clear {namespaced_function}")
 
@@ -110,7 +110,7 @@ def libraries(ctx: Context):
     # resolve_load.mcfunction
     lines = [f"execute if score {ctx.project_id} load.status matches {lib_ver.major} if score {ctx.project_id}_minor load.status matches {lib_ver.minor} run function {ctx.project_id}:load"]
 
-    for func in ctx.meta["gm4"].get("schedule_loops", []):
+    for func in ctx.meta["gm4"].get("versioning", {}).get("schedule_loops", []):
         lines.append(f"execute unless score {ctx.project_id} load.status matches {lib_ver.major} run schedule clear {ctx.project_id}:{func}")
         lines.append(f"execute unless score {ctx.project_id}_minor load.status matches {lib_ver.minor} run schedule clear {ctx.project_id}:{func}")
         

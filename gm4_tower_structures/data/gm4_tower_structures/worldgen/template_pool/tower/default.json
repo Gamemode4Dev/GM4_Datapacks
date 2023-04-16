@@ -1,0 +1,202 @@
+{
+  "name": "gm4_tower_structures:default",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/default/basic",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:stone",
+                    "probability": 0.08
+                  },
+                  "output_state": { "Name": "minecraft:cracked_stone_bricks" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:stone",
+                    "probability": 0.16
+                  },
+                  "output_state": { "Name": "minecraft:cobblestone" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:stone",
+                    "probability": 0.22
+                  },
+                  "output_state": { "Name": "minecraft:andesite" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:stone",
+                    "probability": 0.12
+                  },
+                  "output_state": { "Name": "minecraft:polished_andesite" }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/default/cobblestone1",
+        "processors": "empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/default/cobblestone2",
+        "processors": "empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/default/diorite",
+        "processors": "empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/default/granite",
+        "processors": "empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/default/small",
+        "processors": "empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/default/small2",
+        "processors": "empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/default/tall",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.2
+                  },
+                  "output_state": { "Name": "minecraft:cracked_stone_bricks" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.07
+                  },
+                  "output_state": { "Name": "minecraft:polished_andesite" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:cobblestone",
+                    "probability": 0.04
+                  },
+                  "output_state": { "Name": "minecraft:stone" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:cobblestone",
+                    "probability": 0.15
+                  },
+                  "output_state": { "Name": "minecraft:gravel" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:cobblestone",
+                    "probability": 0.87
+                  },
+                  "output_state": { "Name": "minecraft:andesite" }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/default/diorite_dark",
+        "processors": "empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/default/spruce",
+        "processors": "empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/acacia",
+        "processors": "empty"
+      }
+    }
+  ]
+}

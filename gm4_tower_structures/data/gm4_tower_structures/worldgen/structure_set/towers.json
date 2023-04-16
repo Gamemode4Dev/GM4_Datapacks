@@ -1,0 +1,46 @@
+{
+  "structures": [
+    {
+      "structure": "gm4_tower_structures:badlands",
+      "weight": 6
+    },
+    {
+      "structure": "gm4_tower_structures:default",
+      "weight": 6
+    },
+    {
+      "structure": "gm4_tower_structures:desert",
+      "weight": 6
+    },
+    {
+      "structure": "gm4_tower_structures:snowy",
+      "weight": 6
+    },
+    {
+      "structure": "gm4_tower_structures:segmented/cold_frozen",
+      "weight": 10
+    },
+    {
+      "structure": "gm4_tower_structures:segmented/frozen",
+      "weight": 10
+    },
+    {
+      "structure": "gm4_tower_structures:segmented/hot_warm",
+      "weight": 10
+    },
+    {
+      "structure": "gm4_tower_structures:segmented/hot",
+      "weight": 10
+    },
+    {
+      "structure": "gm4_tower_structures:segmented/warm_cold",
+      "weight": 10
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1948932716,
+    "spacing": 13,
+    "separation": 5
+  }
+}

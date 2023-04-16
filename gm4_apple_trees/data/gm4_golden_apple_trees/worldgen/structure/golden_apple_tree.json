@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "#gm4_apple_trees:has_structure/apple_tree",
+  "step": "vegetal_decoration",
+  "spawn_overrides": {},
+  "terrain_adaptation": "beard_thin",
+  "start_pool": "gm4_golden_apple_trees:golden_apple_trees",
+  "size": 6,
+  "start_height": {
+    "absolute": 0
+  },
+  "start_jigsaw_name": "gm4_apple_trees:trunk",
+  "project_start_to_heightmap": "MOTION_BLOCKING_NO_LEAVES",
+  "max_distance_from_center": 80,
+  "use_expansion_hack": false
+}
