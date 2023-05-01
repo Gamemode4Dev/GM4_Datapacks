@@ -1,5 +1,5 @@
 {
-  "last_commit": "5c9d08690c2703c56ac0d5f78a6dc171ee112dee",
+  "last_commit": "9e5dc0b2f52eb05d083070ed56ea1fdff2dc6fa0",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -614,7 +614,7 @@
     {
       "id": "gm4_enchantment_extractors",
       "name": "Enchantment Extractors",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
       "wiki_link": "https://wiki.gm4.co/wiki/Enchantment_Extractors",
       "credits": {
