@@ -1,0 +1,27 @@
+extend: '../module.yaml'
+
+id: gm4_mountaineering
+name: Mountaineering
+
+pipeline:
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  - gm4.plugins.post_library_plugins
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    versioning:
+      required:
+        - lib_custom_crafters: 3.0.0
+      schedule_loops: [main]
+    website:
+      description: A mezze of mountaineering means! Glide down slopes and scale cliffs.
+      recommended: []
+      notes: []
+    video: null
+    wiki: null
+    credits:
+      Creator:
+        - foodiebonus
