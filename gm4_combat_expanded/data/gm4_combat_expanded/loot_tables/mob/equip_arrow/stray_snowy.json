@@ -1,0 +1,71 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:tipped_arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomPotionEffects:[{Id:2,Amplifier:2b,Duration:600}],CustomPotionColor:5926017,HideFlags:32}"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "potion.withDuration",
+                  "with": [
+                    {
+                      "translate": "potion.withAmplifier",
+                      "with": [
+                        {
+                          "translate": "effect.minecraft.slowness"
+                        },
+                        {
+                          "translate": "potion.potency.1"
+                        }
+                      ]
+                    },
+                    "0:30"
+                  ],
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": ""
+                },
+                {
+                  "translate": "potion.whenDrank",
+                  "color": "purple",
+                  "italic": false
+                },
+                {
+                  "translate": "attribute.modifier.take.1",
+                  "with": [
+                    {
+                      "text": "30"
+                    },
+                    {
+                      "translate": "attribute.name.generic.movement_speed"
+                    }
+                  ],
+                  "color": "red",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.minecraft.tipped_arrow.effect.slowness",
+                "italic": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

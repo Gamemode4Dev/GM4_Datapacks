@@ -10,8 +10,9 @@ playsound minecraft:entity.tnt.primed block @a[distance=..8] ~ ~1 ~ 0.7 1.7
 execute if entity @s[nbt={Item:{tag:{gm4_tnt_landmines:{block:"minecraft:air"}}}}] run scoreboard players set invisible gm4_tnt_data 1
 
 # create initial landmine armor stand
-execute unless score invisible gm4_tnt_data matches 1 run summon armor_stand ~ ~ ~ {NoGravity:1b,Small:1b,Invisible:1b,Marker:1b,Invulnerable:1b,HasVisualFire:1,Tags:["gm4_tnt_mine_unset","gm4_no_edit"],DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:tnt",Count:1b}]}
-execute if score invisible gm4_tnt_data matches 1 run summon armor_stand ~ ~ ~ {NoGravity:1b,Small:1b,Invisible:1b,Marker:1b,Invulnerable:1b,HasVisualFire:1,Tags:["gm4_tnt_mine_unset","gm4_no_edit"],DisabledSlots:4144959}
+execute unless score invisible gm4_tnt_data matches 1 run summon armor_stand ~ ~ ~ {NoGravity:1b,Small:1b,Invisible:1b,Marker:1b,Invulnerable:1b,HasVisualFire:1,Tags:["gm4_tnt_mine_unset","gm4_no_edit","smithed.entity","smithed.strict"],DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:tnt",Count:1b}]}
+execute if score invisible gm4_tnt_data matches 1 run summon armor_stand ~ ~ ~ {NoGravity:1b,Small:1b,Invisible:1b,Marker:1b,Invulnerable:1b,HasVisualFire:1,Tags:["gm4_tnt_mine_unset","gm4_no_edit","smithed.entity","smithed.strict"],DisabledSlots:4144959}
+scoreboard players set @e[type=armor_stand,tag=gm4_tnt_mine_unset,limit=1,distance=..0.1] gm4_entity_version 1
 
 # set helmet slot to block and set boots slot to tnt landmine item
 data modify entity @e[type=armor_stand,tag=gm4_tnt_mine_unset,limit=1,distance=..0.1] ArmorItems[0] set from entity @s Item

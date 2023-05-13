@@ -7,7 +7,8 @@
 execute unless block ~ ~ ~ #gm4_shroomites:mushrooms run setblock ~ ~ ~ brown_mushroom destroy
 
 # place marker entity unless there is already a shroomite_shroom in this location. Do not place a marker if the global shroom cap was reached.
-execute align xyz positioned ~.5 ~.5 ~.5 unless entity @e[type=marker,tag=gm4_shroomite_shroom,distance=..0.1] run summon marker ~ ~ ~ {Tags:["gm4_shroomite_shroom","gm4_brown_shroomite"],CustomName:'"gm4_shroomite_shroom"'}
+execute align xyz positioned ~.5 ~.5 ~.5 unless entity @e[type=marker,tag=gm4_shroomite_shroom,distance=..0.1] run summon marker ~ ~ ~ {Tags:["gm4_shroomite_shroom","gm4_brown_shroomite","smithed.entity","smithed.strict","smithed.block"],CustomName:'"gm4_shroomite_shroom"'}
+execute align xyz positioned ~.5 ~.5 ~.5 run scoreboard players set @e[type=marker,tag=gm4_shroomite_shroom,distance=..0.1] gm4_entity_version 1
 
 # particles
 particle minecraft:block brown_mushroom ~ ~ ~ 0.1 0.1 0.1 1 10

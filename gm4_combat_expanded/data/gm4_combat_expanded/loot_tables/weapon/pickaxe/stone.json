@@ -1,0 +1,76 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone_pickaxe",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    [
+                      "Unidentified ",
+                      {
+                        "translate": "item.minecraft.stone_pickaxe"
+                      }
+                    ],
+                    {
+                      "translate": "item.gm4.combat_expanded.name.unidentified",
+                      "with": [
+                        {
+                          "translate": "item.minecraft.stone_pickaxe"
+                        }
+                      ]
+                    }
+                  ],
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_expanded:{identified:0,damage:30,atkspeed:12,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.stone_pickaxe\"}'}}"
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 1
+                },
+                "max": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 2
+                }
+              },
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

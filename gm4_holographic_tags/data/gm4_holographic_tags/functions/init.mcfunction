@@ -32,6 +32,8 @@ team modify gm4_green color dark_green
 team modify gm4_red color dark_red
 team modify gm4_black color black
 
+scoreboard objectives add gm4_entity_version dummy
+
 execute unless score holographic_tags gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Holographic Tags"}
 scoreboard players set holographic_tags gm4_modules 1
 

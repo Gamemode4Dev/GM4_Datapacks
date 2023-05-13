@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wooden_sword",
+          "functions": [
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_combat_expanded:temp"
+              },
+              "ops": [
+                {
+                  "source": "tag.Damage",
+                  "target": "Damage",
+                  "op": "replace"
+                },
+                {
+                  "source": "tag.display.Lore",
+                  "target": "display.Lore",
+                  "op": "replace"
+                },
+                {
+                  "source": "tag.AttributeModifiers",
+                  "target": "AttributeModifiers",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

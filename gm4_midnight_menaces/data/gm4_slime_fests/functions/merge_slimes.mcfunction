@@ -2,10 +2,10 @@
 # called by event
 
 # store size of all nearby slimes
-execute as @e[type=minecraft:slime,distance=..3] store result score @s gm4_menace_data run data get entity @s Size
+execute as @e[type=minecraft:slime,tag=!smithed.entity,distance=..3] store result score @s gm4_menace_data run data get entity @s Size
 
 # choose one random slime with the same size
-execute as @e[type=minecraft:slime,distance=0.01..3] if score @s gm4_menace_data = @e[type=minecraft:slime,distance=0,limit=1] gm4_menace_data run tag @s add gm4_slime_size_match
+execute as @e[type=minecraft:slime,tag=!smithed.entity,distance=0.01..3] if score @s gm4_menace_data = @e[type=minecraft:slime,distance=0,limit=1] gm4_menace_data run tag @s add gm4_slime_size_match
 tag @e[type=minecraft:slime,tag=gm4_slime_size_match,limit=1,sort=random] add gm4_merged_slime
 tag @e[type=minecraft:slime,distance=..3] remove gm4_slime_size_match
 

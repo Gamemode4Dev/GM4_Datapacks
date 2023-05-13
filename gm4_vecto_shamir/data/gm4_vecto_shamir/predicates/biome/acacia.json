@@ -4,13 +4,7 @@
     {
       "condition": "minecraft:location_check",
       "predicate": {
-        "biome": "minecraft:shattered_savanna_plateau"
-      }
-    },
-    {
-      "condition": "minecraft:location_check",
-      "predicate": {
-        "biome": "minecraft:shattered_savanna"
+        "biome": "minecraft:savanna"
       }
     },
     {
@@ -22,7 +16,7 @@
     {
       "condition": "minecraft:location_check",
       "predicate": {
-        "biome": "minecraft:savanna"
+        "biome": "minecraft:windswept_savanna"
       }
     }
   ]

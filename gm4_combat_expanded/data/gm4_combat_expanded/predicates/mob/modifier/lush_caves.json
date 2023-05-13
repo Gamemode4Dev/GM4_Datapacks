@@ -1,0 +1,8 @@
+[
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biome": "minecraft:lush_caves"
+    }
+  }
+]

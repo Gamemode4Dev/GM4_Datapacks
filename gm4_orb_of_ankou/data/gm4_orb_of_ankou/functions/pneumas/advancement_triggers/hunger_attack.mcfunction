@@ -3,4 +3,4 @@
 
 advancement revoke @s only gm4_orb_of_ankou:triggers/hunger_attack
 execute positioned ^ ^ ^2 run effect give @a[distance=..2.5,nbt={HurtTime:10s}] hunger 7 0
-execute positioned ^ ^ ^2 run effect give @e[type=!player,distance=..2.5,nbt={HurtTime:10s}] weakness 7 0
+execute positioned ^ ^ ^2 run effect give @e[type=!player,tag=!smithed.strict,distance=..2.5,nbt={HurtTime:10s}] weakness 7 0

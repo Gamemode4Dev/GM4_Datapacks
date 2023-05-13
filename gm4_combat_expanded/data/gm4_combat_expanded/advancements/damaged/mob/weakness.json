@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "nbt": "{Tags:[\"gm4_ce_weakness_attacks\"]}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_combat_expanded:mob/effect/weakness_attack"
+  }
+}
+  

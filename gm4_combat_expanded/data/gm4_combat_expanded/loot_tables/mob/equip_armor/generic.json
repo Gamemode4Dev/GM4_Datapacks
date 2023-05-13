@@ -1,0 +1,255 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "minecraft:empty"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/diamond/feet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/diamond"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/iron/feet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/golden/feet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/golden"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/chainmail/feet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/leather/feet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/leather"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "minecraft:empty"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/diamond/legs",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/diamond"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/iron/legs",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/golden/legs",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/golden"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/chainmail/legs",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/leather/legs",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/leather"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "minecraft:empty"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/diamond/chest",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/diamond"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/iron/chest",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/golden/chest",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/golden"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/chainmail/chest",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/leather/chest",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/leather"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "minecraft:empty"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/diamond/head",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/diamond"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/iron/head",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/golden/head",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/golden"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/chainmail/head",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/leather/head",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/leather"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/material/special/turtle_helmet",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:modified_armor/material_check/turtle_helmet"
+            },
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

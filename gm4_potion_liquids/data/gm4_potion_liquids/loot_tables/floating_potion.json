@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Potion:\"potion_liquids:floating\",CustomPotionEffects:[{Id:25b,Amplifier:2b,Duration:900}],CustomPotionColor:13631487}"
+                            "tag": "{Potion:\"potion_liquids:floating\",CustomPotionEffects:[{Id:25,Amplifier:2b,Duration:900}],CustomPotionColor:13631487}"
                         },
                         {
                             "function": "set_name",

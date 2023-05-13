@@ -1,0 +1,17 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:weapon/identification/epic/heal"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:weapon/identification/epic/wither"
+        }
+      ]
+    }
+  ]
+}

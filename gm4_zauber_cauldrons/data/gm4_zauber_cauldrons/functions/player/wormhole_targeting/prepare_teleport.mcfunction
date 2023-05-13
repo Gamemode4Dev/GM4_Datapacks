@@ -2,6 +2,9 @@
 # at @s
 # run from advancement zauber_cauldrons:use/wormhole
 
+# compatibility with other modules
+function #gm4_zauber_cauldrons:player/wormhole_targeting/prepare_teleport
+
 # revoke advancement for next teleport
 advancement revoke @s only gm4_zauber_cauldrons:use/wormhole
 

@@ -1,0 +1,107 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "name": "gm4_combat_expanded:mob/equip_weapon/generic",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/modifier/growth"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:bow",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "levels": {
+                    "min": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ce_data",
+                      "scale": 0.5
+                    },
+                    "max": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ce_data",
+                      "scale": 2
+                    }
+                  },
+                  "treasure": false,
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.15
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:enchant_randomly",
+                  "enchantments": [
+                    "minecraft:punch"
+                  ],
+                  "conditions": [
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/mountainous"
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:enchant_randomly",
+                  "enchantments": [
+                    "minecraft:flame"
+                  ],
+                  "conditions": [
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/burned"
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:enchant_randomly",
+                  "enchantments": [
+                    "minecraft:power"
+                  ],
+                  "conditions": [
+                    {
+                      "condition": "minecraft:value_check",
+                      "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                          "type": "minecraft:fixed",
+                          "name": "$difficulty"
+                        },
+                        "score": "gm4_ce_data"
+                      },
+                      "range": {
+                        "min": 11
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

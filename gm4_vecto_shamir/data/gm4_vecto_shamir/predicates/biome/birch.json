@@ -4,25 +4,13 @@
     {
       "condition": "minecraft:location_check",
       "predicate": {
-        "biome": "minecraft:tall_birch_hills"
-      }
-    },
-    {
-      "condition": "minecraft:location_check",
-      "predicate": {
-        "biome": "minecraft:tall_birch_forest"
-      }
-    },
-    {
-      "condition": "minecraft:location_check",
-      "predicate": {
-        "biome": "minecraft:birch_forest_hills"
-      }
-    },
-    {
-      "condition": "minecraft:location_check",
-      "predicate": {
         "biome": "minecraft:birch_forest"
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "biome": "minecraft:old_growth_birch_forest"
       }
     }
   ]

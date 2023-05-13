@@ -1,0 +1,20 @@
+{
+  "type": "generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:stone_button",
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{gm4_auto_crafting_temp:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -23,6 +23,7 @@ tag @s remove gm4_pneuma_phasing
 tag @s remove gm4_pneuma_retreating
 tag @s remove gm4_pneuma_rushing
 tag @s remove gm4_pneuma_scaling
+tag @s remove gm4_pneuma_shrieking
 tag @s remove gm4_pneuma_soaring
 tag @s remove gm4_pneuma_striding
 tag @s remove gm4_pneuma_synergetic

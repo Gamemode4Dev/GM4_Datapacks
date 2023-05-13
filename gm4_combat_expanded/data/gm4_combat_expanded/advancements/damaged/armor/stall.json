@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "damage": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:modified_armor/wearing_stall"
+          }
+        ],
+        "damage": {
+          "taken": {
+            "min": 1
+          },
+          "blocked": false,
+          "type": {
+            "bypasses_invulnerability": false,
+            "bypasses_magic": false,
+            "source_entity": {}
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_combat_expanded:armor/modifier/type/stall/activate"
+  }
+}

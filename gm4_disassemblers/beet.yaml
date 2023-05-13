@@ -1,0 +1,53 @@
+extend: '../module.yaml'
+
+id: gm4_disassemblers
+name: Disassemblers
+version: 2.0.X
+
+pipeline:
+  - directory: '../lib_machines'
+    extend: 'beet.yaml'
+  - directory: '../lib_custom_crafters'
+    extend: 'beet.yaml'
+  - gm4.plugins.post_library_plugins
+  - data_pack:
+      load: .
+  - gm4_disassemblers.generate_disassembly
+
+meta:
+  gm4:
+    versioning:
+      required:
+        - lib_custom_crafters: 3.0.0
+        - lib_machines: 1.1.0
+      schedule_loops: [main]
+    website:
+      description: Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!
+      recommended:
+        - gm4_resource_pack
+        - gm4_relocators
+        - gm4_standard_crafting
+        - gm4_auto_crafting
+        - gm4_record_crafting
+        - gm4_ender_hoppers
+        - gm4_enchantment_extractors
+        - gm4_forming_press
+        - gm4_block_compressors
+        - gm4_tunnel_bores
+        - gm4_boots_of_ostara
+        - gm4_heart_canisters
+        - gm4_smelteries
+        - gm4_liquid_tanks
+      notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Disassemblers
+    credits:
+      Creator:
+        - Sparks
+      Updated by:
+        - Federick90
+        - BluePsychoRanger
+      Textures by:
+        - kyrkis
+      Icon Design:
+        - Hozz

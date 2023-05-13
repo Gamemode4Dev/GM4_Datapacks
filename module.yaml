@@ -1,0 +1,11 @@
+require:
+  - beet.contrib.extra_files
+
+pipeline:
+  - directory: 'base'
+    extend: 'beet.yaml'
+  - gm4.plugins.versioning.modules
+
+meta:
+  extra_files:
+    data_pack: ['README.md']

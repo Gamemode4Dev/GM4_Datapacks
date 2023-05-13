@@ -3,10 +3,10 @@
 # run from main
 
 # reveal invisible armor_stand
-execute if predicate gm4_better_armour_stands:holding/mainhand/book_visible run effect give @e[type=armor_stand,tag=!gm4_no_edit,distance=..6,nbt={Invisible:1b}] glowing 2 0
+execute if predicate gm4_better_armour_stands:holding/mainhand/book_visible run effect give @e[type=armor_stand,tag=!gm4_no_edit,tag=!smithed.entity,distance=..6,nbt={Invisible:1b}] glowing 2 0
 
 # enable right click detection for nearby armor_stand
-execute if predicate gm4_better_armour_stands:holding/mainhand/book_arms positioned ^ ^ ^2.5 as @e[type=armor_stand,tag=!gm4_bas_no_arms,tag=!gm4_no_edit,distance=..2.5,nbt={ShowArms:0b}] at @s run function gm4_better_armour_stands:toggle/arms/detect_interaction
+execute if predicate gm4_better_armour_stands:holding/mainhand/book_arms positioned ^ ^ ^2.5 as @e[type=armor_stand,tag=!gm4_bas_no_arms,tag=!gm4_no_edit,tag=!smithed.entity,distance=..2.5,nbt={ShowArms:0b}] at @s run function gm4_better_armour_stands:toggle/arms/detect_interaction
 
 # remove ignore tag from writable_book
 item modify entity @s[predicate=gm4_better_armour_stands:holding/mainhand/book_ignore] weapon.mainhand gm4_better_armour_stands:remove_ignore

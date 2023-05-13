@@ -1,0 +1,33 @@
+{
+    "display": {
+      "icon": {
+        "item": "emerald",
+        "nbt": "{CustomModelData:3420001}"
+      },
+      "title": {
+        "translate": "%1$s%3427655$s",
+        "with": [
+          "House Call",
+          {
+            "translate": "advancement.gm4.calling_bell.title"
+          }
+        ]
+      },
+      "description": {
+        "translate": "%1$s%3427655$s",
+        "with": [
+          "Summon a wandering trader by ringing a bell with an emerald",
+          {
+            "translate": "advancement.gm4.calling_bell.description"
+          }
+        ],
+        "color": "gray"
+      }
+    },
+    "parent": "gm4:root",
+    "criteria": {
+      "calling_bell": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }

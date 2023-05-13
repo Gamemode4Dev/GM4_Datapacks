@@ -1,0 +1,33 @@
+extend: '../module.yaml'
+
+id: gm4_zauber_liquids
+name: Zauber Liquids
+version: 1.2.X
+
+pipeline:
+  - data_pack:
+      load: .
+
+meta:
+  gm4:
+    versioning:
+      required:
+        - gm4_liquid_tanks: 2.1.0
+        - gm4_zauber_cauldrons: 1.6.0
+    website:
+      description: From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!
+      recommended: []
+      notes: []
+    video: https://www.youtube.com/watch?v=qa9lcbii1BE
+    wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids
+    credits:
+      Creators:
+        - SpecialBuilder32
+        - Bloo
+      Updated by:
+        - JP12
+      Textures by:
+        - Vilder50
+        - Hozz
+      Icon Design:
+        - Sparks

@@ -1,0 +1,403 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_expanded:{modifier:51}}"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_combat_expanded:temp"
+              },
+              "ops": [
+                {
+                  "source": "armor",
+                  "target": "gm4_combat_expanded.level",
+                  "op": "replace"
+                },
+                {
+                  "source": "level",
+                  "target": "gm4_combat_expanded.level2",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                {
+                  "text": "When High on Health:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "translate": "item.gm4.combat_expanded.lore.high_hp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.mining_fatigue"
+                    },
+                    " Immunity"
+                  ],
+                  {
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.mining_fatigue"
+                      }
+                    ]
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 1
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.poison"
+                    },
+                    " Immunity"
+                  ],
+                  {
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.poison"
+                      }
+                    ]
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 2
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.wither"
+                    },
+                    " Immunity"
+                  ],
+                  {
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.wither"
+                      }
+                    ]
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 3
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.hunger"
+                    },
+                    " Immunity"
+                  ],
+                  {
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.hunger"
+                      }
+                    ]
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 5
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.blindness"
+                    },
+                    " Immunity"
+                  ],
+                  {
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.blindness"
+                      }
+                    ]
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 10
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.nausea"
+                    },
+                    " Immunity"
+                  ],
+                  {
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.nausea"
+                      }
+                    ]
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 15
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "%1$s%3427655$s",
+                "with": [
+                  [
+                    {
+                      "translate": "effect.minecraft.weakness"
+                    },
+                    " Immunity"
+                  ],
+                  {
+                    "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.weakness"
+                      }
+                    ]
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 20
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": [
+            {
+              "translate": "%1$s%3427655$s",
+              "with": [
+                [
+                  {
+                    "text": "Vigorous ",
+                    "italic": false,
+                    "color": "yellow"
+                  },
+                  {
+                    "nbt": "tag.gm4_combat_expanded.name",
+                    "storage": "gm4_combat_expanded:temp",
+                    "interpret": true,
+                    "color": "yellow"
+                  }
+                ],
+                {
+                  "translate": "item.gm4.combat_expanded.name.immune",
+                  "with": [
+                    {
+                      "nbt": "tag.gm4_combat_expanded.name",
+                      "storage": "gm4_combat_expanded:temp",
+                      "interpret": true,
+                      "color": "yellow"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

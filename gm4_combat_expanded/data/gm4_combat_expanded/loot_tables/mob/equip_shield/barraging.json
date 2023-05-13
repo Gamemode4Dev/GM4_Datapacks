@@ -1,0 +1,59 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:shield",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{HideFlags:32,BlockEntityTag:{Base:13,Patterns:[{Color:1,Pattern:\"bo\"}]}}"
+              },
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [
+                  {
+                    "translate": "%1$s%3427655$s",
+                    "with": [
+                      [
+                        "Barraging ",
+                        {
+                          "translate": "item.minecraft.shield"
+                        }
+                      ],
+                      {
+                        "translate": "item.gm4.combat_expanded.name.barraging",
+                        "with": [
+                          {
+                            "translate": "item.minecraft.shield"
+                          }
+                        ]
+                      }
+                    ],
+                    "italic": false
+                  }
+                ]
+              },
+              {
+                "function": "minecraft:set_attributes",
+                "modifiers": [
+                  {
+                    "attribute": "minecraft:generic.attack_speed",
+                    "name": "gm4_ce_shield_bonus",
+                    "amount": 0.2,
+                    "operation": "multiply_base",
+                    "id": "e9fa92e0-c1df-4ec2-84f2-1923537ec3c6",
+                    "slot": "offhand"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

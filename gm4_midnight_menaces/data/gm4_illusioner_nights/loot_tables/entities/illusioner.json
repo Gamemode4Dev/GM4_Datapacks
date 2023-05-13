@@ -65,7 +65,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{CustomPotionEffects:[{Duration:1200,Id:15b,Amplifier:0b}],Potion: \"minecraft:mundane\",display:{Name:\"{\\\"text\\\":\\\"Lingering Potion of Blindness\\\",\\\"italic\\\":false}\"}}"
+                            "tag": "{CustomPotionEffects:[{Duration:1200,Id:15,Amplifier:0b}],Potion: \"minecraft:mundane\",display:{Name:\"{\\\"text\\\":\\\"Lingering Potion of Blindness\\\",\\\"italic\\\":false}\"}}"
                         }
                     ]
                 }

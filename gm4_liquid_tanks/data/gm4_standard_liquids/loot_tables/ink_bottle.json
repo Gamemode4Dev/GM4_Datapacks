@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Potion:\"standard_liquids:blindness\",CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:2400}],CustomPotionColor:68378,CustomModelData:3420007}"
+                            "tag": "{Potion:\"standard_liquids:blindness\",CustomPotionEffects:[{Id:15,Amplifier:0b,Duration:2400}],CustomPotionColor:68378,CustomModelData:3420007}"
                         },
                         {
                             "function": "set_name",

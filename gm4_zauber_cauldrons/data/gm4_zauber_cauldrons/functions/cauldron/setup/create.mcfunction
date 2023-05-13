@@ -3,7 +3,9 @@
 # ran from cauldron/setup/validate_structure
 
 # summon marker AEC
-summon marker ~ ~ ~ {CustomName:'"gm4_zauber_cauldron"',Tags:["gm4_zauber_cauldron"]}
+summon marker ~ ~ ~ {CustomName:'"gm4_zauber_cauldron"',Tags:["gm4_zauber_cauldron","gm4_zauber_cauldron_new","smithed.entity","smithed.strict","smithed.block"]}
+scoreboard players set @e[type=marker,tag=gm4_zauber_cauldron_new,distance=0] gm4_entity_version 1
+tag @e[type=marker,distance=0] remove gm4_zauber_cauldron_new
 advancement grant @s only gm4:zauber_cauldrons_create
 playsound minecraft:entity.illusioner.prepare_mirror master @a[distance=..8] ~ ~ ~ 1 1.6
 

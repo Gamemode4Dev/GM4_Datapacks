@@ -1,0 +1,14 @@
+[
+  {
+    "condition": "minecraft:random_chance",
+    "chance": 0.75
+  },
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "fluid": {
+        "tag": "minecraft:water"
+      }
+    }
+  }
+]
