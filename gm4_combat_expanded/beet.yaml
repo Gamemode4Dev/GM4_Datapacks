@@ -25,6 +25,7 @@ meta:
         - slow_clock
         - player/submain
     website:
+      hidden: true
       description: Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
       recommended:
         - gm4_metallurgy
