@@ -1,11 +1,11 @@
 {
     "pack": {
-        "pack_format": 12,
+        "pack_format": 13,
         "description": [
             "Resource Pack",
             "\n",
             {
-                "text": "Gamemode 4 for 1.19",
+                "text": "Gamemode 4 for 1.19.4",
                 "color": "aqua"
             }
         ]
