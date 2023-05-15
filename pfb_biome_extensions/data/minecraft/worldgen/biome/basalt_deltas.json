@@ -46,7 +46,7 @@
     "#minecraft:vegetal_decoration/in_biome/basalt_deltas",
     "#minecraft:top_layer_modification/in_biome/basalt_deltas"
   ],
-  "precipitation": "none",
+  "has_precipitation": false,
   "spawn_costs": {},
   "spawners": {
     "ambient": [],

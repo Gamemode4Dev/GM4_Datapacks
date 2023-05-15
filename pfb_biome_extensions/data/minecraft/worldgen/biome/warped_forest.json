@@ -46,7 +46,7 @@
     "#minecraft:vegetal_decoration/in_biome/warped_forest",
     "#minecraft:top_layer_modification/in_biome/warped_forest"
   ],
-  "precipitation": "none",
+  "has_precipitation": false,
   "spawn_costs": {
     "minecraft:enderman": {
       "charge": 1.0,
