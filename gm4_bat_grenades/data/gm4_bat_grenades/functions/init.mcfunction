@@ -1,6 +1,9 @@
 execute unless score bat_grenades gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Bat Grenades"}
 scoreboard players set bat_grenades gm4_modules 1
 
+execute unless score bat_grenades gm4_earliest_version matches -2147483648..2147483647 run scoreboard players set bat_grenades gm4_earliest_version 2147483647
+scoreboard players operation bat_grenades gm4_earliest_version < bat_grenades gm4_modules
+
 schedule function gm4_bat_grenades:main 1t
 
 # guidebook

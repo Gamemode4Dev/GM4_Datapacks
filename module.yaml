@@ -5,6 +5,7 @@ pipeline:
   - directory: 'base'
     extend: 'beet.yaml'
   - gm4.plugins.versioning.modules
+  - gm4.plugins.upgrade_paths_a
 
 meta:
   extra_files:
