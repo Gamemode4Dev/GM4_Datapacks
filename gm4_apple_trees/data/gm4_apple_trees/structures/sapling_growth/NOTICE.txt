@@ -1,0 +1,13 @@
+NOTE. The following files in this directory were generated programatically from their worldgen structure counterparts. 
+    it is suggested that if you wish to edit the tree shapes, to do so in the jigsaw based versions and regenerate these
+    files to match them. 
+
+    apple_tree_short_1.nbt
+    apple_tree_short_2.nbt
+    apple_tree_short_3.nbt
+    apple_tree_short_4.nbt
+    apple_tree_tall_1.nbt
+    apple_tree_tall_2.nbt
+    apple_tree_tall_3.nbt
+    apple_tree_tall_4.nbt
+    apple_leaf.nbt

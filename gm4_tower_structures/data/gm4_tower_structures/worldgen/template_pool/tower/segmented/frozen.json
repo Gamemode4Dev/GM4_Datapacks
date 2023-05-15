@@ -1,0 +1,24 @@
+{
+  "name": "gm4_tower_structures:segmented/hot",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:segmented/frozen/base/frozen/1",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:segmented/frozen/base/frozen/2",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}
