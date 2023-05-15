@@ -88,13 +88,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Waders",
-                  {
-                    "translate": "item.gm4.waders"
-                  }
-                ],
+                "translate": "item.gm4.waders",
+                "fallback": "Waders",
                 "italic": false
               }
             },
@@ -221,13 +216,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Shipwreck Supply Chest",
-                  {
-                    "translate": "block.gm4.shipwreck_supply_chest"
-                  }
-                ],
+                "translate": "block.gm4.shipwreck_supply_chest",
+                "fallback": "Shipwreck Supply Chest",
                 "italic": false
               }
             }
@@ -245,13 +235,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Shipwreck Treasure Chest",
-                  {
-                    "translate": "block.gm4.shipwreck_treasure_chest"
-                  }
-                ],
+                "translate": "block.gm4.shipwreck_treasure_chest",
+                "fallback": "Shipwreck Treasure Chest",
                 "italic": false
               }
             }
@@ -269,13 +254,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Treasure Chest",
-                  {
-                    "translate": "block.gm4.treasure_chest"
-                  }
-                ],
+                "translate": "block.gm4.treasure_chest",
+                "fallback": "Treasure Chest",
                 "italic": false
               }
             }

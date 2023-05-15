@@ -16,13 +16,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Custom Crafter",
-                    {
-                      "translate": "block.gm4.custom_crafter"
-                    }
-                  ],
+                  "translate": "block.gm4.custom_crafter",
+                  "fallback": "Custom Crafter",
                   "color": "white",
                   "italic": false
                 }

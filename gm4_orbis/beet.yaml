@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_orbis
 name: Orbis
-version: 2.0.X
+version: 2.1.X
 
 pipeline:
   - data_pack:

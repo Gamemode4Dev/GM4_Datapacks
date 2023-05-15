@@ -2,7 +2,7 @@
 # at @s
 # run from pose/select
 
-title @a[tag=gm4_bas_active,limit=1] actionbar {"translate": "%1$s%3427655$s","with": ["Right click the joint of a part to start editing",{"translate": "tooltip.gm4.better_armour_stands.invalid_right_click_location"}]}
+title @a[tag=gm4_bas_active,limit=1] actionbar {"translate":"tooltip.gm4.better_armour_stands.invalid_right_click_location","fallback":"Right click the joint of a part to start editing"}
 
 scoreboard players reset @s gm4_bas_id
 

@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_apple_trees
 name: Apple Trees
-version: 2.0.X
+version: 2.1.X
 
 pipeline:
   - directory: '../lib_trades'

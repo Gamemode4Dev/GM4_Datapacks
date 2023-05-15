@@ -35,7 +35,7 @@
     "#minecraft:vegetal_decoration/in_biome/snowy_slopes",
     "#minecraft:top_layer_modification/in_biome/snowy_slopes"
   ],
-  "precipitation": "snow",
+  "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
     "ambient": [

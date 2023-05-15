@@ -35,7 +35,7 @@
     "#minecraft:vegetal_decoration/in_biome/old_growth_birch_forest",
     "#minecraft:top_layer_modification/in_biome/old_growth_birch_forest"
   ],
-  "precipitation": "rain",
+  "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
     "ambient": [

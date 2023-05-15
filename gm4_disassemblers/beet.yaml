@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_disassemblers
 name: Disassemblers
-version: 2.0.X
+version: 2.1.X
 
 pipeline:
   - directory: '../lib_machines'

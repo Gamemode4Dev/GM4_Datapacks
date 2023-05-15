@@ -16,13 +16,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Smeltery",
-                    {
-                      "translate": "block.gm4.smeltery"
-                    }
-                  ],
+                  "translate": "block.gm4.smeltery",
+                  "fallback": "Smeltery",
                   "color": "white",
                   "italic": false
                 }

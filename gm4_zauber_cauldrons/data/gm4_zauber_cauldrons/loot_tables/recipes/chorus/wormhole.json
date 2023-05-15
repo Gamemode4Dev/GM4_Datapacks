@@ -14,13 +14,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Wormhole in a Bottle",
-                                    {
-                                        "translate": "item.gm4.wormhole_in_a_bottle"
-                                    }
-                                ],
+                                "translate": "item.gm4.wormhole_in_a_bottle",
+                                "fallback": "Wormhole in a Bottle",
                                 "italic": false
                             }
                         },
@@ -28,13 +23,8 @@
                             "function": "minecraft:set_name",
                             "entity": "this",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Wormhole in a Bottle",
-                                    {
-                                        "translate": "item.gm4.wormhole_in_a_bottle"
-                                    }
-                                ],
+                                "translate": "item.gm4.wormhole_in_a_bottle",
+                                "fallback": "Wormhole in a Bottle",
                                 "italic": false
                             },
                             "conditions": [
@@ -122,15 +112,8 @@
                                         "italic": false
                                     },
                                     {
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            {
-                                                "text": "Sips"
-                                            },
-                                            {
-                                                "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lore.sips"
-                                            }
-                                        ],
+                                        "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lore.sips",
+                                        "fallback": "Sips",
                                         "color": "gray",
                                         "italic": false
                                     }

@@ -10,13 +10,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Flint",
-                  {
-                    "translate": "item.gm4.better_fire.flint"
-                  }
-                ],
+                "translate": "item.gm4.better_fire.flint",
+                "fallback": "Flint",
                 "italic": false
               }
             },
@@ -29,13 +24,8 @@
               "entity": "this",
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Charred arrowhead",
-                    {
-                      "translate": "item.gm4.better_fire.flint.lore"
-                    }
-                  ],
+                  "translate": "item.gm4.better_fire.flint.lore",
+                  "fallback": "Charred arrowhead",
                   "color": "dark_gray",
                   "italic": true
                 }

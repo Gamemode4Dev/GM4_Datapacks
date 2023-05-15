@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_tower_structures
 name: Tower Structures
-version: 3.0.X
+version: 3.1.X
 
 pipeline:
   - directory: '../pfb_orbis'
