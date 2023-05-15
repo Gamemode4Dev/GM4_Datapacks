@@ -10,9 +10,9 @@
         {
             "type": "ttf",
             "file": "gm4:minecraft.ttf",
-            "shift": [0, -32768],
+            "shift": [0,-0.5],
             "size": 13,
-            "oversample": 1.0
+            "oversample": 7
         }
     ]
 }
