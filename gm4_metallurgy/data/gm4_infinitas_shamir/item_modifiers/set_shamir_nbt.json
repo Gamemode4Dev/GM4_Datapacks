@@ -26,5 +26,19 @@
         "op": "append"
       }
     ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "gm4_infinitas_shamir:bucket"
+    },
+    "ops": [
+      {
+        "source": "fish_data",
+        "target": "{}",
+        "op": "merge"
+      }
+    ]
   }
 ]
