@@ -2,6 +2,7 @@
 # @s = none
 # located at world spawn
 # run from gm4_guidebook:update_storage/add_base
+# run from self
 
 # check if the expansion matches the base
 data modify storage gm4_guidebook:temp expansion set from storage gm4_guidebook:temp check_expansions[0]

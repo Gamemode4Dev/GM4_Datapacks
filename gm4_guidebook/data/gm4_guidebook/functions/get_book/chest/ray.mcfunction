@@ -2,6 +2,7 @@
 # @s = marker ray used to detect the chest
 # located at @s
 # run from gm4_guidebook:get_book/looted
+# run from self
 
 execute if data block ~ ~ ~ LootTable unless data block ~ ~ ~ LootTableSeed if predicate gm4_guidebook:chance_chest run loot insert ~ ~ ~ loot gm4_guidebook:guidebook
 execute if data block ~ ~ ~ LootTableSeed run function gm4_guidebook:get_book/chest/insert_seed_random

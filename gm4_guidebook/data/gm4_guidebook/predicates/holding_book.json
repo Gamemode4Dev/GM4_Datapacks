@@ -10,7 +10,7 @@
             "items": [
               "minecraft:written_book"
             ],
-            "nbt": "{gm4_guidebook:1b}"
+            "nbt": "{gm4_guidebook:{}}"
           }
         }
       }
@@ -24,7 +24,7 @@
             "items": [
               "minecraft:written_book"
             ],
-            "nbt": "{gm4_guidebook:1b}"
+            "nbt": "{gm4_guidebook:{}}"
           }
         }
       }

@@ -2,7 +2,6 @@
 # @s = none
 # located at world spawn
 # run from gm4_guidebook:init
-import json
 
 # get all module data
 data merge storage gm4_guidebook:temp {modules:[],expansions:[]}
@@ -16,20 +15,18 @@ data remove storage gm4_guidebook:temp modules[{type:"expansion"}]
 execute store result score $expansion_count gm4_guide run data get storage gm4_guidebook:temp expansions
 
 # build pages
-scoreboard players set $toc_pages gm4_guide 0
-data merge storage gm4_guidebook:register {table_of_contents:[]}
+scoreboard players operation $front_matter gm4_guide_pages = #intro gm4_guide_pages
+data merge storage gm4_guidebook:register {table_of_contents:[],trigger_order:[],toc_back:[],lectern_toc:[]}
+data merge storage gm4_guidebook:temp {lectern_pages:[]}
 function gm4_guidebook:update_storage/build_page
 
-# set toc pages
-for i in range(20):
-  page = {
-    "nbt": f"table_of_contents[{i}][]",
-    "storage": "gm4_guidebook:register",
-    "interpret": True,
-    "separator":"\n"
-  }
-  execute if score $toc_pages gm4_guide matches (i+1, None) run data modify storage gm4_guidebook:register toc_pages set value [json.dumps(page,separators=(',',':'))]
+# build lectern toc pages
+scoreboard players operation $click gm4_guide_pages = $front_matter gm4_guide_pages
+scoreboard players add $click gm4_guide_pages 2
+function gm4_guidebook:update_storage/lectern/build_page
 
 # clean up
 data remove storage gm4_guidebook:temp modules
 data remove storage gm4_guidebook:temp expansions
+scoreboard players reset $trigger gm4_guide
+kill @e[type=marker,tag=gm4_guide]
