@@ -13,8 +13,8 @@ execute unless score $trigger gm4_guide_next matches 1 run function gm4_guideboo
 
 # set guide score
 execute store result score $trigger gm4_guide run data get storage gm4_guidebook:temp triggers[0]
-## special case: if this is the last section, jump to toc
-execute unless data storage gm4_guidebook:temp triggers[-1] run scoreboard players set $trigger gm4_guide 1
+## special case: if this is the last section, just refresh the section
+execute unless data storage gm4_guidebook:temp triggers[-1] run scoreboard players operation $trigger gm4_guide = $trigger gm4_guide_next
 data remove storage gm4_guidebook:temp triggers
 
 # jump to section
