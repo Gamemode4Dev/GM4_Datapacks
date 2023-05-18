@@ -12,9 +12,6 @@ data remove storage gm4_hotswap_hotbars:temp Inventory[{Slot:-106b}]
 execute store success score $item gm4_hh_data run data modify storage gm4_hotswap_hotbars:temp Item set from storage gm4_hotswap_hotbars:temp Inventory[{tag:{gm4_hotswap_hotbars:{item:"hotswapper_item"}}}]
 execute if score $item gm4_hh_data matches 1.. store result score $color gm4_hh_data run data get storage gm4_hotswap_hotbars:temp Item.tag.gm4_hotswap_hotbars.color
 execute if score $item gm4_hh_data matches 1.. store result score $slot gm4_hh_data run data get storage gm4_hotswap_hotbars:temp Item.Slot
-
-execute if score $slot gm4_hh_data matches -106 run say offhand
-
 data remove storage gm4_hotswap_hotbars:temp Item.tag.Explosion
 data remove storage gm4_hotswap_hotbars:temp Item.tag.gm4_hotswap_hotbars.color
 data modify storage gm4_hotswap_hotbars:temp Item.tag.gm4_hotswap_hotbars.item set value "hotswapper"
