@@ -11,4 +11,5 @@ execute if score @s gm4_infinitas_success_check matches 1 run item modify entity
 advancement revoke @s only gm4_infinitas_shamir:powder_snow/place_mainhand
 advancement revoke @s only gm4_infinitas_shamir:powder_snow/place_offhand
 
+tag @s remove gm4_infinitas_delay_replace
 tag @s remove gm4_infinitas_delay_replace_powder_snow

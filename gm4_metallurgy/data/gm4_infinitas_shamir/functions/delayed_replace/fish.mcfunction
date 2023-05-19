@@ -15,4 +15,5 @@ data remove storage gm4_infinitas_shamir:bucket fish_data
 advancement revoke @s only gm4_infinitas_shamir:water/pickup_mainhand
 advancement revoke @s only gm4_infinitas_shamir:water/pickup_offhand
 
+tag @s remove gm4_infinitas_delay_replace
 tag @s remove gm4_infinitas_delay_replace_fish
