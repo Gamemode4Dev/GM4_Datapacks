@@ -1,5 +1,4 @@
 # set up scoreboards
-scoreboard objectives add gm4_count dummy
 scoreboard objectives add gm4_guide trigger
 scoreboard objectives add gm4_guide_next trigger
 scoreboard objectives add gm4_guide_prev trigger
