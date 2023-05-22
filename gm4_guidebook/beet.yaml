@@ -3,13 +3,15 @@ extend: '../module.yaml'
 id: gm4_guidebook
 name: Guidebook
 
+require:
+  - bolt
+
 pipeline:
+  - directory: '../lib_forceload'
+    extend: 'beet.yaml'
   - data_pack:
       load: .
   - mecha
-
-require:
-  - bolt
 
 meta:
   gm4:

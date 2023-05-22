@@ -8,4 +8,4 @@ execute store result score $loot_table_seed gm4_guide run data get block ~ ~ ~ L
 scoreboard players operation $loot_table_seed gm4_guide %= #100 gm4_guide
 
 # for 0-44, insert the guidebook
-execute if score $loot_table_seed gm4_guide matches ..44 run loot insert ~ ~ ~ loot gm4_guidebook:guidebook
+execute if score $loot_table_seed gm4_guide matches ..44 run loot insert ~ ~ ~ loot gm4_guidebook:_guidebook
