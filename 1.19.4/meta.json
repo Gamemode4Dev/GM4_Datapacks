@@ -1,5 +1,5 @@
 {
-  "last_commit": "0feea842284db73a8c4a7bbefbbd9184672d27bb",
+  "last_commit": "335b2a81f22cddc3e8a42660859d5cf2873663da",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -25,7 +25,7 @@
     {
       "id": "gm4_apple_trees",
       "name": "Apple Trees",
-      "version": "2.1.0",
+      "version": "2.1.1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Apple_Trees",
       "credits": {
