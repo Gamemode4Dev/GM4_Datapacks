@@ -15,3 +15,4 @@ execute if entity @s[tag=gm4_infinitas_delay_replace_water] run function gm4_inf
 
 kill @e[type=marker,tag=gm4_infinitas_uuid_generator]
 data remove storage gm4_infinitas_shamir:bucket UUID
+scoreboard players reset @s gm4_infinitas_success_check
