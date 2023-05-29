@@ -1,6 +1,6 @@
 # Crossbow Cartridges<!--$headerTitle--><!--$pmc:delete-->
 
-Shoot more than just arrows! Crossbow Cartridges allows your crossbow to fire a variety of projectiles; Shoot Pufferfish, Tripwires, Torches, and many more <!--$pmc:headerSize>
+Shoot more than just arrows! Crossbow Cartridges allows your crossbow to fire a variety of projectiles; Shoot Pufferfish, Tripwires, Torches, and many more <!--$pmc:headerSize-->
 
 <img src="images/crossbow_cartridges.webp" alt="Crossbow Cartridges Example" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
