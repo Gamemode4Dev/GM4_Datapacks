@@ -1,5 +1,5 @@
 {
-  "last_commit": "06853eee28ad33845e1b29d088f9a77efd05bbe4",
+  "last_commit": "50bdca34aae7211e059f6f66a80e01eb07036343",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1298,34 +1298,6 @@
       ],
       "description": "Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man.",
       "recommends": [],
-      "modrinth_id": null,
-      "smithed_link": null,
-      "pmc_link": null
-    },
-    {
-      "id": "gm4_orbis",
-      "name": "Orbis",
-      "version": "2.1.0",
-      "video_link": "https://www.youtube.com/watch?v=cAsXiwLWHFo",
-      "wiki_link": "https://wiki.gm4.co/wiki/Orbis",
-      "credits": {
-        "Creator": [
-          "Sparks"
-        ],
-        "Updated by": [
-          "Misode"
-        ],
-        "Icon Design": [
-          "Sparks"
-        ]
-      },
-      "requires": [],
-      "description": "A seed-specific chunk scanner that modifies your world as you explore. Install expansions to add extra structures and terrain.",
-      "recommends": [
-        "gm4_cooler_caves",
-        "gm4_dangerous_dungeons",
-        "gm4_tower_structures"
-      ],
       "modrinth_id": null,
       "smithed_link": null,
       "pmc_link": null
