@@ -1,5 +1,5 @@
 {
-  "last_commit": "335b2a81f22cddc3e8a42660859d5cf2873663da",
+  "last_commit": "06853eee28ad33845e1b29d088f9a77efd05bbe4",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1948,7 +1948,7 @@
     {
       "id": "gm4_trapped_signs",
       "name": "Trapped Signs",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "video_link": "https://www.youtube.com/watch?v=IeHYiy5GTeQ",
       "wiki_link": "https://wiki.gm4.co/wiki/Trapped_Signs",
       "credits": {
