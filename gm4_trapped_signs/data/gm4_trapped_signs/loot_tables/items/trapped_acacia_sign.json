@@ -18,7 +18,7 @@
                 "fallback": "Trapped %s",
                 "with": [
                   {
-                    "translate": "item.minecraft.acacia_sign"
+                    "translate": "block.minecraft.acacia_sign"
                   }
                 ],
                 "italic": false
