@@ -279,7 +279,7 @@ def versioned_advancements(ctx: Context, ver: Version, extra_injections):
 def module_load_advancements(ctx: Context):
     """Injects module load success checks (load.status 1..) into technical and display advancements for each module"""
         # advancements get score checks injected into every criteria
-    base_exclusions = ["gm4:root", "gm4_intro_song:intro_song"] # manually set list to avoid checking base for advancements when it doesn't change module to module
+    base_exclusions = ["gm4:root", "gm4_intro_song:play_song", "gm4_intro_song:invisible_root", "gm4_intro_song:root_display"] # manually set list to avoid checking base for advancements when it doesn't change module to module
     for name in [a for a in ctx.data.advancements.keys() if a not in ctx.meta.get("premodule_advancements", []) + base_exclusions]:
         handle = ctx.data.advancements[name]
         for criteria in handle.data["criteria"].values():
