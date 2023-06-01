@@ -163,42 +163,15 @@ def libraries(ctx: Context):
         }
     ))
 
-    # NOTE advancements get score checks injected into every criteria
-    for entry in extra_injections.get("advancements", []):
-        handle = ctx.data.advancements[f"{ctx.project_id}:{entry}"]
-        for criteria in handle.data["criteria"].values():
-            player_conditions = criteria.setdefault("conditions", {}).setdefault("player", [])
-            player_conditions.append({
-                "condition": "minecraft:value_check",
-                "value": {
-                "type": "minecraft:score",
-                "target": {
-                    "type": "minecraft:fixed",
-                    "name": f"{ctx.project_id}"
-                },
-                "score": "load.status"
-                },
-                "range": lib_ver.major
-            })
-            player_conditions.append({
-                "condition": "minecraft:value_check",
-                "value": {
-                "type": "minecraft:score",
-                "target": {
-                    "type": "minecraft:fixed",
-                    "name": f"{ctx.project_id}_minor"
-                },
-                "score": "load.status"
-                },
-                "range": lib_ver.minor
-            })
-
-    # stamp version number and module bring packaged into into load.mcfunction
+        # stamp version number and module bring packaged into into load.mcfunction
     handle = ctx.data.functions[f"{ctx.project_id}:load"]
     handle.append([
         "\n",
         f"data modify storage gm4:log versions append value {{id:\"{ctx.project_id}\",module:\"{ctx.project_id.replace('gm4', 'lib')}\",version:\"{ctx.project_version}\",from:\"{ctx.cache['currently_building'].json['name']}\"}}"
     ])
+
+    # strict version checks on advancements
+    versioned_advancements(ctx, lib_ver, extra_injections)
 
     # put library version number in namespace
     versioned_namespace(ctx, lib_ver)
@@ -224,6 +197,8 @@ def base(ctx: Context):
     ctx.data.functions[f"gm4:resolve_post_load"] = Function(lines)
 
     versioned_namespace(ctx, ver)
+    extra_injections = ctx.meta.get('gm4', {}).get('versioning', {}).get("extra_version_injections", {})
+    versioned_advancements(ctx, ver, extra_injections)
 
 def versioned_namespace(ctx: Context, version: Version):
     """Puts the project version into the namespace, and renames all references to match
@@ -265,6 +240,41 @@ def cache_premodule_advancements(ctx: Context):
     """Stores advancements loaded in ctx right before the actual module data is loaded. 
     Used to add version/startup checks to module-level advancements in versioning.module"""
     ctx.meta["premodule_advancements"] = list(ctx.data.advancements.keys())
+
+def versioned_advancements(ctx: Context, ver: Version, extra_injections):
+    """Adds strict versioning to advancements, used for libraries and base advancement injections"""
+    # NOTE advancements get score checks injected into every criteria
+    for entry in extra_injections.get("advancements", []):
+        if ":" in entry:
+            handle = ctx.data.advancements[entry]
+        else:
+            handle = ctx.data.advancements[f"{ctx.project_id}:{entry}"]
+        for criteria in handle.data["criteria"].values():
+            player_conditions = criteria.setdefault("conditions", {}).setdefault("player", [])
+            player_conditions.append({
+                "condition": "minecraft:value_check",
+                "value": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": f"{ctx.project_id}"
+                },
+                "score": "load.status"
+                },
+                "range": ver.major
+            })
+            player_conditions.append({
+                "condition": "minecraft:value_check",
+                "value": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": f"{ctx.project_id}_minor"
+                },
+                "score": "load.status"
+                },
+                "range": ver.minor
+            })
 
 def module_load_advancements(ctx: Context):
     """Injects module load success checks (load.status 1..) into technical and display advancements for each module"""
