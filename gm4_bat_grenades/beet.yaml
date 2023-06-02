@@ -28,5 +28,7 @@ meta:
         - Sparks
   modrinth: 
     project_id: qWQqEQMY
+  smithed:
+    pack_id: gm4_bat_grenades
   planetminecraft: 
     uid: 4293806
