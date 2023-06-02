@@ -13,12 +13,3 @@ Ever felt like minecraft could do with a bit more immersion? This modular datapa
 When playing with other Gamemode 4 datapacks, adds some bonus features:
 - Adds the Celaro shamir when used with the [Metallurgy]($dynamicLink:gm4_metallurgy) datapack.
 - Use the [Boots of Ostara]($dynamicLink:gm4_boots_of_ostara) module to spread nature instead of trampling it.
-### More Info
-<!--$youtubeLinkInsert-->
-
-<!--$wikiLinkInsert-->
-
-### Credits
-<!--$creditsInsert -->
-
-<!--$footerInsert-->
