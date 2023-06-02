@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:command_block",
+      "nbt": "{CustomModelData:3420001}"
+    },
+    "title": {
+      "translate": "advancement.gm4.root.title",
+      "fallback": "Gamemode 4"
+    },
+    "description": {
+      "text": "This should not be seen."
+    },
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "gm4:intro_song/invisible_root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

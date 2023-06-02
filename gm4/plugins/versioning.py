@@ -279,7 +279,9 @@ def versioned_advancements(ctx: Context, ver: Version, extra_injections):
 def module_load_advancements(ctx: Context):
     """Injects module load success checks (load.status 1..) into technical and display advancements for each module"""
         # advancements get score checks injected into every criteria
-    base_exclusions = ["gm4:root", "gm4_intro_song:play_song", "gm4_intro_song:invisible_root", "gm4_intro_song:root_display"] # manually set list to avoid checking base for advancements when it doesn't change module to module
+    base_exclusions = ["gm4:root", "gm4-1.4:intro_song/play_song", "gm4-1.4:intro_song/invisible_root", "gm4-1.4:intro_song/root_display"] # manually set list to avoid checking base for advancements when it doesn't change module to module
+        # FIXME This hardcoded base version number exists here as a time-efficient workaround to prevent intro song advancements from getting versioned in modules
+        # that have no libraries, and thus never call "post-library-plugins". The upcoming pipeline reversal will address this.
     for name in [a for a in ctx.data.advancements.keys() if a not in ctx.meta.get("premodule_advancements", []) + base_exclusions]:
         handle = ctx.data.advancements[name]
         for criteria in handle.data["criteria"].values():
