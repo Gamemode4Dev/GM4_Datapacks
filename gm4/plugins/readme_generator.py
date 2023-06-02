@@ -69,7 +69,7 @@ def beet_default(ctx: Context):
 
     # Header Title
     global_replacements.update({
-        r'#? *(.+?) *<!-- *\$headerTitle.+>' : (
+        r'#? *(.+?) *<!-- *\$headerTitle.+?>' : (
             "# <img src=\"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png\""
                 " alt=\"GM4 Logo\" width=\"32\" />"
             r" \1 by Gamemode 4"
@@ -164,11 +164,11 @@ def beet_default(ctx: Context):
             r"(.+)<!-- *\$pmc:headerSize.+>": r"[size=14px]\1[/size]",
             r"#{2,3} (.+)": r"[style b size=14px]\1[/style]",
             r"!\[(?!size|style|img|url)(.+)\]\((.+)\)": r"[img=\1]\2[/img]",
-            r"\[(?!size|style|img|url)(.+)\]\((.+)\)": r"[url=\2]\1[/url]",
+            r"\[(?!size|style|img|url)(.+?)\]\((.+?)\)": r"[url=\2]\1[/url]",
             r"<img src=\"(.+?)\" alt=(\".+?\") width=\"(.+?)\".+>": r"[img title=\2 width=\3]\1[/img]",
             r"\*\*(.+)\*\*": r"[b]\1[/b]",
             r"\*(.+)\*": r"[i]\1[/i]",
-            r"_([^_\n]+?)_(?![\w])": r"[i]\1[/i]",
+            r"_((?:https[^_\n])+?)_(?![\w])": r"[i]\1[/i]",
             r"__(.+)__": r"[u]\1[/u]",
             r"~~(.+)~~": r"[s]\1[/s]",
             r"`(.+)`": r"\1", # BBCode has no inline code blocks
