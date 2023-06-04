@@ -129,6 +129,7 @@
       ]
     }
   ],
+  "random_sequence": "minecraft:blocks/dark_oak_leaves",
   "__smithed__": {
     "rules": [
       {
