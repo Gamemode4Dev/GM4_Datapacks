@@ -18,7 +18,7 @@
                 "fallback": "Trapped %s",
                 "with": [
                   {
-                    "translate": "item.minecraft.spruce_sign"
+                    "translate": "block.minecraft.spruce_sign"
                   }
                 ],
                 "italic": false

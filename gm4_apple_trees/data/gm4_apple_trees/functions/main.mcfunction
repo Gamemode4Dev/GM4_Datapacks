@@ -1,4 +1,4 @@
-schedule function gm4_apple_trees:main 16s
+schedule function gm4_apple_trees:main 16t
 
 # upgrade old entities
 execute as @e[type=armor_stand,tag=gm4_apple_leaf] run function gm4_apple_trees:upgrade_path/apple_leaf_markers

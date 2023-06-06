@@ -18,7 +18,7 @@
                 "fallback": "Trapped %s",
                 "with": [
                   {
-                    "translate": "item.minecraft.oak_sign"
+                    "translate": "block.minecraft.oak_sign"
                   }
                 ],
                 "italic": false
