@@ -17,7 +17,7 @@
   "parent": "gm4:intro_song/invisible_root",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:impossible"
+      "trigger": "minecraft:location"
     }
   }
 }
