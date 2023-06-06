@@ -10,13 +10,13 @@ MODRINTH_API = "https://api.modrinth.com/v2"
 MODRINTH_AUTH_KEY = "BEET_MODRINTH_TOKEN"
 SMITHED_API = "https://api.smithed.dev/v2"
 SMITHED_AUTH_KEY = "BEET_SMITHED_TOKEN"
-SUPPORTED_GAME_VERSIONS = ["1.19.4"]
+SUPPORTED_GAME_VERSIONS = ["1.20"]
 	# NOTE smithed only takes one game version number. Uses the first value in this list
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/release-pipeline (gamemode4official@gmail.com)"
 
 def beet_default(ctx: Context):
 	"""Saves the datapack to the ./out folder."""
-	version = os.getenv("VERSION", "1.19.4")
+	version = os.getenv("VERSION", "1.20")
 	out_dir = Path("out")
 
 	ctx.data.save(
@@ -37,7 +37,7 @@ def release(ctx: Context):
 	`BEET_SMITHED_TOKEN` environment variable is set, will try to publish a
 	new version to Smithed if it doesn't already exist.
 	"""
-	version_dir = os.getenv("VERSION", "1.19.4")
+	version_dir = os.getenv("VERSION", "1.20")
 	release_dir = Path("release") / version_dir
 	file_name = f"{ctx.project_id}_{version_dir.replace('.', '_')}.zip"
 	
@@ -134,7 +134,7 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 	"""Attempts to publish pack to smithed"""
 	smithed = ctx.meta.get("smithed", None)
 	auth_token = os.getenv(SMITHED_AUTH_KEY, None)
-	mc_version_dir = os.getenv("VERSION", "1.19.4")
+	mc_version_dir = os.getenv("VERSION", "1.20")
 	if smithed and auth_token and ctx.project_version:
 		version = version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
 		smithed_id = smithed["pack_id"]
@@ -208,7 +208,7 @@ def clear_release(ctx: Context):
 	1. Deleted modules no longer stick around in the current version
 	2. Changes to the build system (such as renamed files/folders) are properly reflected
 	"""
-	version = os.getenv("VERSION", "1.19.4")
+	version = os.getenv("VERSION", "1.20")
 	release_dir = Path("release") / version
 	shutil.rmtree(release_dir, ignore_errors=True)
 	os.makedirs(release_dir, exist_ok=True)

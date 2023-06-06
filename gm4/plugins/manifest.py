@@ -83,7 +83,7 @@ def create(ctx: Context):
 def update_patch(ctx: Context):
 	"""Retrieves manifest from previous build, and increments patch number
 	 	 if there are any changes between last commit and HEAD"""
-	version = os.getenv("VERSION", "1.19.4")
+	version = os.getenv("VERSION", "1.20")
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
 
@@ -127,7 +127,7 @@ def update_patch(ctx: Context):
 
 def write_meta(ctx: Context):
 	"""Write the updated meta.json file."""
-	version = os.getenv("VERSION", "1.19.4")
+	version = os.getenv("VERSION", "1.20")
 	release_dir = Path('release') / version
 	os.makedirs(release_dir, exist_ok=True)
 
