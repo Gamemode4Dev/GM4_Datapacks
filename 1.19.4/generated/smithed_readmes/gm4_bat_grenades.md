@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Bat Grenades by Gamemode 4
+# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Bat Grenades by Gamemode 4<!--$pmc:delete-->
 
 Tired of the uselessness of bats? Need something to spice up your caving adventures? This modular datapack kills those two birds, er bats, with one stone, and turns bats into tiny furry flying balls of boom! <!--$pmc:headerSize-->
 
@@ -16,7 +16,6 @@ Tired of the uselessness of bats? Need something to spice up your caving adventu
 ### Credits
 - Creator: [Sparks](https://twitter.com/SparksTheGamer)
 - Icon Design: [Sparks](https://twitter.com/SparksTheGamer)
-
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

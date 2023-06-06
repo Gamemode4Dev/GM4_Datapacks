@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Better Armour Stands by Gamemode 4
+# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Better Armour Stands by Gamemode 4 <!--$pmc:delete-->
 
 Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands. <!--$pmc:headerSize-->
 
@@ -36,7 +36,6 @@ Want some preset poses? Download the [Poses Pack Expansion](https://gm4.co/modul
 
 Add particles to your builds with the [Particles Pack Expansion](https://gm4.co/modules/particles-pack)<!--$dynamicLink:gm4_particles_pack-->
 
-
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=ZBqmGpAXqmw)
 
@@ -46,7 +45,6 @@ Add particles to your builds with the [Particles Pack Expansion](https://gm4.co/
 - Creator: [Sparks](https://twitter.com/SparksTheGamer)
 - Updated by: [SpecialBuilder32](https://twitter.com/SpecialBuilder), [Misode](https://twitter.com/misode_), [Denniss](https://twitter.com/Dennis2p_)
 - Icon Design: [Sparks](https://twitter.com/SparksTheGamer)
-
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

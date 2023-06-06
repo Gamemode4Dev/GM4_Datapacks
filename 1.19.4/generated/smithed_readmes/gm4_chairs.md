@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Chairs by Gamemode 4
+# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Chairs by Gamemode 4 <!--$pmc:delete-->
 
 Since the dawn of Minecraft, stairs have been used as chairs in every house you've ever built. With this simple datapack, players can actually sit on stairs by throwing a saddle on them. <!--$pmc:headerSize-->
 
@@ -25,7 +25,6 @@ Add particles to your builds with the [Particles Pack Expansion](https://gm4.co/
 ### Credits
 - Creator: [Denniss](https://twitter.com/Dennis2p_)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
-
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

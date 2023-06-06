@@ -8,7 +8,7 @@ Ever wonder what happens to your player's body after you die? Well wonder no lon
 - The "Undead Player" can pickup items, potentially saving some of your gear from despawning.
 - Adds a custom advancement for those who "rise again" as an undead player.
 
-### More Info 
+### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=dD8nChP8t9A)
 
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Undead_Players)
@@ -17,7 +17,6 @@ Ever wonder what happens to your player's body after you die? Well wonder no lon
 - Creator: [Sparks](https://twitter.com/SparksTheGamer)
 - Updated by: SunderB
 - Icon Design: Hozz
-
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>
