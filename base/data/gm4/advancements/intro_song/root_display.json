@@ -5,7 +5,7 @@
       "nbt": "{CustomModelData:3420001}"
     },
     "title": {
-      "translate": "advancement.gm4.root.title",
+      "translate": "advancement.gm4.welcome_toast.title",
       "fallback": "Gamemode 4"
     },
     "description": {
