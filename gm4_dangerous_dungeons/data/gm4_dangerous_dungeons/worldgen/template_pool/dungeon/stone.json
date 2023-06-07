@@ -1,0 +1,294 @@
+{
+  "name": "gm4_dangerous_dungeons:default",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 8,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/default",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:cobweb",
+                    "probability": 0.93
+                  },
+                  "output_state": {
+                    "Name": "minecraft:air"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.30
+                  },
+                  "output_state": {
+                      "Name": "minecraft:cracked_stone_bricks"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.40
+                  },
+                  "output_state": {
+                      "Name": "minecraft:mossy_stone_bricks"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 8,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/default2",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:cobweb",
+                    "probability": 0.94
+                  },
+                  "output_state": {
+                    "Name": "minecraft:air"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.30
+                  },
+                  "output_state": {
+                      "Name": "minecraft:polished_andesite"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.40
+                  },
+                  "output_state": {
+                      "Name": "minecraft:cracked_stone_bricks"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/medium_1/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.2
+                  },
+                  "output_state": { "Name": "minecraft:cracked_stone_bricks" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.1875
+                  },
+                  "output_state": { "Name": "minecraft:mossy_stone_bricks" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.0833
+                  },
+                  "output_state": { "Name": "minecraft:cobblestone" }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/large/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.2
+                  },
+                  "output_state": { "Name": "minecraft:cracked_stone_bricks" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.1875
+                  },
+                  "output_state": { "Name": "minecraft:mossy_stone_bricks" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.0833
+                  },
+                  "output_state": { "Name": "minecraft:cobblestone" }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/temple/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.2
+                  },
+                  "output_state": { "Name": "minecraft:cracked_stone_bricks" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.1875
+                  },
+                  "output_state": { "Name": "minecraft:mossy_stone_bricks" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.0833
+                  },
+                  "output_state": { "Name": "minecraft:cobblestone" }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/medium_2/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.2
+                  },
+                  "output_state": { "Name": "minecraft:cracked_stone_bricks" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.1875
+                  },
+                  "output_state": { "Name": "minecraft:mossy_stone_bricks" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": { 
+                    "predicate_type": "random_block_match",
+                    "block": "minecraft:stone_bricks",
+                    "probability": 0.0833
+                  },
+                  "output_state": { "Name": "minecraft:cobblestone" }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

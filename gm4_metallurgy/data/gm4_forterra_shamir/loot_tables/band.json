@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Forterra",
-                                        {
-                                            "translate": "item.gm4.shamir.forterra"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.forterra",
+                                    "fallback": "Forterra",
                                     "italic": false,
                                     "color": "gray"
                                 }

@@ -14,13 +14,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Orb of Ankou",
-                                    {
-                                        "translate": "item.gm4.orb_of_ankou"
-                                    }
-                                ],
+                                "translate": "item.gm4.orb_of_ankou",
+                                "fallback": "Orb of Ankou",
                                 "italic": false,
                                 "color": "aqua"
                             }
@@ -30,13 +25,8 @@
                             "lore": [
                                 [
                                     {
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            "Empty",
-                                            {
-                                                "translate": "text.gm4.orb_of_ankou.empty"
-                                            }
-                                        ],
+                                        "translate": "text.gm4.orb_of_ankou.empty",
+                                        "fallback": "Empty",
                                         "color": "gray"
                                     }
                                 ]

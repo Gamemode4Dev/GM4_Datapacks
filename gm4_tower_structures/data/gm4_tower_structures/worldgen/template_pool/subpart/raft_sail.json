@@ -1,0 +1,150 @@
+{
+  "name": "gm4_tower_structures:subpart/raft_sail",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/black",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/blue",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/brown",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/cyan",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/green",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/grey",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/light_blue",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/light_grey",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/lime",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/magenta",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/orange",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/pink",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/purple",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/red",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/white",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "gm4_tower_structures:tower/ocean/raft/sail/yellow",
+          "processors": "minecraft:empty"
+      },
+      "weight": 1
+    }
+  ]
+}

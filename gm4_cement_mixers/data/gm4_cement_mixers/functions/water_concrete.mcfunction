@@ -17,3 +17,6 @@ execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:pu
 execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:red_concrete_powder"}} run function gm4_cement_mixers:item_fill/red_concrete
 execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:white_concrete_powder"}} run function gm4_cement_mixers:item_fill/white_concrete
 execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:yellow_concrete_powder"}} run function gm4_cement_mixers:item_fill/yellow_concrete
+execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:dirt"}} run function gm4_cement_mixers:item_fill/mud
+execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:coarse_dirt"}} run function gm4_cement_mixers:item_fill/mud
+execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:rooted_dirt"}} run function gm4_cement_mixers:item_fill/mud

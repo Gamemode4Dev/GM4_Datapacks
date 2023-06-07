@@ -28,13 +28,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Magic in a Bottle",
-                                    {
-                                        "translate": "item.gm4.magic_in_a_bottle"
-                                    }
-                                ],
+                                "translate": "item.gm4.magic_in_a_bottle",
+                                "fallback": "Magic in a Bottle",
                                 "italic": false
                             }
                         }

@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_zauber_cauldrons
 name: Zauber Cauldrons
-version: 1.6.X
+version: 1.7.X
 
 pipeline:
   - directory: '../lib_forceload'

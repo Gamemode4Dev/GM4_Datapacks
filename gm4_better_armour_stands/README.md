@@ -35,14 +35,3 @@ Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your
 Want some preset poses? Download the [Poses Pack Expansion]($dynamicLink:gm4_poses_pack)
 
 Add particles to your builds with the [Particles Pack Expansion]($dynamicLink:gm4_particles_pack)
-
-
-### More Info
-<!--$youtubeLinkInsert-->
-
-<!--$wikiLinkInsert-->
-
-### Credits
-<!--$creditsInsert -->
-
-<!--$footerInsert-->

@@ -149,14 +149,11 @@ kill @s
 ```
 
 ### Compatibility with the resource pack
-- All text visible to survival players (names, lore, actionbar, advancements) should use translation keys like this:
+- All text visible to survival players (names, lore, actionbar, advancements) should use translation fallbacks like this:
 ```json
 {
-  "translate": "%1$s%3427655$s",
-  "with": [
-    "Clever Crushing",
-    {"translate": "advancement.gm4.block_compressors.title"}
-  ]
+  "translate": "advancement.gm4.block_compressors.title",
+  "fallback": "Clever Crushing"
 }
 ```
 - Only when your module is about to be approved and merged, you should add `CustomModelData` id's.

@@ -15,13 +15,8 @@
                             "function": "minecraft:set_name",
                             "name": {
                                 "italic": false,
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Landmine",
-                                    {
-                                        "translate": "item.gm4.tnt_landmine"
-                                    }
-                                ]
+                                "translate": "item.gm4.tnt_landmine",
+                                "fallback": "Landmine"
                             }
                         },
                         {
@@ -29,13 +24,8 @@
                             "lore": [
                                 [
                                     {
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            "Drop to use",
-                                            {
-                                                "translate": "item.gm4.tnt_landmine.use"
-                                            }
-                                        ],
+                                        "translate": "item.gm4.tnt_landmine.use",
+                                        "fallback": "Drop to use",
                                         "color": "dark_gray",
                                         "italic": true
                                     }

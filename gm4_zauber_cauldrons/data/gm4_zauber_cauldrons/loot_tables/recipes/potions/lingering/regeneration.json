@@ -22,15 +22,8 @@
                             "function": "minecraft:set_name",
                             "entity": "this",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Lingering Soulution of Regeneration",
-                                    [
-                                        {
-                                            "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lingering_potion.regeneration"
-                                        }
-                                    ]
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lingering_potion.regeneration",
+                                "fallback": "Lingering Soulution of Regeneration",
                                 "italic": false
                             },
                             "conditions": [

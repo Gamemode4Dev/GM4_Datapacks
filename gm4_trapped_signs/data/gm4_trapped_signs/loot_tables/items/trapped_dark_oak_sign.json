@@ -14,16 +14,11 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
+                "translate": "item.gm4.trapped_sign",
+                "fallback": "Trapped %s",
                 "with": [
-                  "Trapped Dark Oak Sign",
                   {
-                    "translate": "item.gm4.trapped_sign",
-                    "with": [
-                      {
-                        "translate": "item.minecraft.dark_oak_sign"
-                      }
-                    ]
+                    "translate": "block.minecraft.dark_oak_sign"
                   }
                 ],
                 "italic": false

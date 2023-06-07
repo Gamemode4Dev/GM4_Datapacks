@@ -5,22 +5,12 @@
       "nbt": "{Enchantments:[{}]}"
     },
     "title": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "A Compressed Diet",
-        {
-          "translate": "advancement.gm4.block_compressors.compressed_diet.title"
-        }
-      ]
+      "translate": "advancement.gm4.block_compressors.compressed_diet.title",
+      "fallback": "A Compressed Diet"
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Eat too much of everything. This can't be good for you...",
-        {
-          "translate": "advancement.gm4.block_compressors.compressed_diet.description"
-        }
-      ],
+      "translate": "advancement.gm4.block_compressors.compressed_diet.description",
+      "fallback": "Eat too much of everything. This can't be good for you...",
       "color": "gray"
     },
     "frame": "challenge",

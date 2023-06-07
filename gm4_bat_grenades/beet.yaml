@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_bat_grenades
 name: Bat Grenades
-version: 1.1.X
+version: 1.2.X
 
 pipeline:
   - data_pack:
@@ -28,5 +28,7 @@ meta:
         - Sparks
   modrinth: 
     project_id: qWQqEQMY
+  smithed:
+    pack_id: gm4_bat_grenades
   planetminecraft: 
     uid: 4293806

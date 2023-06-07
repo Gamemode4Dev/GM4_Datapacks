@@ -14,13 +14,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Soul Glass",
-                  {
-                    "translate": "item.gm4.soul_glass"
-                  }
-                ],
+                "translate": "item.gm4.soul_glass",
+                "fallback": "Soul Glass",
                 "italic": false
               }
             }

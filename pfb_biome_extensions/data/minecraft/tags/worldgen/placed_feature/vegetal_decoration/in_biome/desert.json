@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:vegetal_decoration/in_overworld",
+      "required": false
+    },
+    "minecraft:glow_lichen",
+    "minecraft:flower_default",
+    "minecraft:patch_grass_badlands",
+    "minecraft:patch_dead_bush_2",
+    "minecraft:brown_mushroom_normal",
+    "minecraft:red_mushroom_normal",
+    "minecraft:patch_sugar_cane_desert",
+    "minecraft:patch_pumpkin",
+    "minecraft:patch_cactus_desert"
+  ]
+}

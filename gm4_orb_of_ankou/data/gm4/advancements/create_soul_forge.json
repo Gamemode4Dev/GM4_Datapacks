@@ -5,22 +5,12 @@
       "nbt": "{CustomModelData:3420001}"
     },
     "title": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "A Dangerous Magic",
-        {
-          "translate": "advancement.gm4.orb_of_ankou.create_soul_forge.title"
-        }
-      ]
+      "translate": "advancement.gm4.orb_of_ankou.create_soul_forge.title",
+      "fallback": "A Dangerous Magic"
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Light a Soul Forge",
-        {
-          "translate": "advancement.gm4.orb_of_ankou.create_soul_forge.description"
-        }
-      ],
+      "translate": "advancement.gm4.orb_of_ankou.create_soul_forge.description",
+      "fallback": "Light a Soul Forge",
       "color": "gray"
     }
   },

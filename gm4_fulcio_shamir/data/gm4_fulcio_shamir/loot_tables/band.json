@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Fulcio",
-                                        {
-                                            "translate": "item.gm4.shamir.fulcio"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.fulcio",
+                                    "fallback": "Fulcio",
                                     "italic": false,
                                     "color": "gray"
                                 }

@@ -11,13 +11,8 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Bauxite Lump",
-                  {
-                    "translate": "item.gm4.metallurgy.bauxite_lump"
-                  }
-                ],
+                "translate": "item.gm4.metallurgy.bauxite_lump",
+                "fallback": "Bauxite Lump",
                 "italic": false,
                 "color": "white"
               }
@@ -28,24 +23,14 @@
               "lore": [
                 [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "Contains ",
-                      {
-                        "translate": "text.gm4.metallurgy.contains"
-                      }
-                    ],
+                    "translate": "text.gm4.metallurgy.contains",
+                    "fallback": "Contains ",
                     "italic": false,
                     "color": "gray"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "Aluminium",
-                      {
-                        "translate": "text.gm4.metallurgy.aluminium"
-                      }
-                    ],
+                    "translate": "text.gm4.metallurgy.aluminium",
+                    "fallback": "Aluminium",
                     "italic": false,
                     "color": "#F47989"
                   }
