@@ -67,26 +67,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Night-Time:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.night"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.night",
+              "fallback": "When Night-Time:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -96,21 +87,11 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "attribute.gm4.combat_expanded.aura",
+                "fallback": "%s Aura",
                 "with": [
-                  [
-                    {
-                      "translate": "effect.minecraft.slowness"
-                    },
-                    " Aura"
-                  ],
                   {
-                    "translate": "attribute.gm4.combat_expanded.aura",
-                    "with": [
-                      {
-                        "translate": "effect.minecraft.slowness"
-                      }
-                    ]
+                    "translate": "effect.minecraft.slowness"
                   }
                 ],
                 "color": "red",
@@ -139,35 +120,17 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "attribute.gm4.combat_expanded.aura",
+                "fallback": "%s Aura",
                 "with": [
-                  [
-                    {
-                      "translate": "potion.withAmplifier",
-                      "with": [
-                        {
-                          "translate": "effect.minecraft.slowness"
-                        },
-                        {
-                          "translate": "potion.potency.1"
-                        }
-                      ]
-                    },
-                    " Aura"
-                  ],
                   {
-                    "translate": "attribute.gm4.combat_expanded.lore.aura",
+                    "translate": "potion.withAmplifier",
                     "with": [
                       {
-                        "translate": "potion.withAmplifier",
-                        "with": [
-                          {
-                            "translate": "effect.minecraft.slowness"
-                          },
-                          {
-                            "translate": "potion.potency.1"
-                          }
-                        ]
+                        "translate": "effect.minecraft.slowness"
+                      },
+                      {
+                        "translate": "potion.potency.1"
                       }
                     ]
                   }
@@ -198,35 +161,17 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "attribute.gm4.combat_expanded.aura",
+                "fallback": "%s Aura",
                 "with": [
-                  [
-                    {
-                      "translate": "potion.withAmplifier",
-                      "with": [
-                        {
-                          "translate": "effect.minecraft.slowness"
-                        },
-                        {
-                          "translate": "potion.potency.2"
-                        }
-                      ]
-                    },
-                    " Aura"
-                  ],
                   {
-                    "translate": "attribute.gm4.combat_expanded.lore.aura",
+                    "translate": "potion.withAmplifier",
                     "with": [
                       {
-                        "translate": "potion.withAmplifier",
-                        "with": [
-                          {
-                            "translate": "effect.minecraft.slowness"
-                          },
-                          {
-                            "translate": "potion.potency.2"
-                          }
-                        ]
+                        "translate": "effect.minecraft.slowness"
+                      },
+                      {
+                        "translate": "potion.potency.1"
                       }
                     ]
                   }
@@ -256,30 +201,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.gloom",
+              "fallback": "Gloomy %s",
               "with": [
-                [
-                  {
-                    "text": "Gloomy ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.gloom",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

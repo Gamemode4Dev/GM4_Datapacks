@@ -33,26 +33,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Low on Health:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.low_hp"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.low_hp",
+              "fallback": "When Low on Health:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -68,13 +59,8 @@
                     "translate": "enchantment.minecraft.thorns"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "XIV",
-                      {
-                        "translate": "enchantment.level.14"
-                      }
-                    ]
+                    "translate": "enchantment.level.14",
+                    "fallback": "XIV"
                   }
                 ],
                 "color": "blue",
@@ -109,13 +95,8 @@
                     "translate": "enchantment.minecraft.thorns"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "XV",
-                      {
-                        "translate": "enchantment.level.15"
-                      }
-                    ]
+                    "translate": "enchantment.level.15",
+                    "fallback": "XV"
                   }
                 ],
                 "color": "blue",
@@ -150,13 +131,8 @@
                     "translate": "enchantment.minecraft.thorns"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "XVI",
-                      {
-                        "translate": "enchantment.level.16"
-                      }
-                    ]
+                    "translate": "enchantment.level.16",
+                    "fallback": "XVI"
                   }
                 ],
                 "color": "blue",
@@ -191,13 +167,8 @@
                     "translate": "enchantment.minecraft.thorns"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "XVII",
-                      {
-                        "translate": "enchantment.level.17"
-                      }
-                    ]
+                    "translate": "enchantment.level.17",
+                    "fallback": "XVII"
                   }
                 ],
                 "color": "blue",
@@ -225,30 +196,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.thorns",
+              "fallback": "Thorny %s",
               "with": [
-                [
-                  {
-                    "text": "Thorny ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.thorns",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         },

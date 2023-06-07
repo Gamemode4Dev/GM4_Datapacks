@@ -9,7 +9,7 @@ data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.active set 
 
 # use lib_lore to brighten the 'Trade' text
 data modify storage gm4_lore:temp Source set from storage gm4_combat_expanded:temp tag.display.Lore
-data modify storage gm4_lore:temp Target set value '{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"dark_gray","text":"Trade"},{"translate":"item.gm4.combat_expanded.lore.trade"}]}'
-data modify storage gm4_lore:temp Input set value ['{"translate":"%1$s%3427655$s","with":[{"italic":false,"color":"blue","text":"Trade"},{"translate":"item.gm4.combat_expanded.lore.trade"}]}']
+data modify storage gm4_lore:temp Target set value '{"italic":false,"color":"dark_gray","translate":"item.gm4.combat_expanded.lore.trade","fallback":"Trade"}'
+data modify storage gm4_lore:temp Input set value ['{"italic":false,"color":"blue","translate":"item.gm4.combat_expanded.lore.trade","fallback":"Trade"}']
 function #gm4_lore:replace
 data modify storage gm4_combat_expanded:temp tag.display.Lore set from storage gm4_lore:temp Source

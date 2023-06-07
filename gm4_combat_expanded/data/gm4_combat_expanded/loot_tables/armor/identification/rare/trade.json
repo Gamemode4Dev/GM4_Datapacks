@@ -19,26 +19,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Equipped:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.equip"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.equip",
+              "fallback": "When Equipped:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -48,17 +39,10 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "Trade",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.trade"
-                  }
-                ]
+                "translate": "item.gm4.combat_expanded.lore.trade",
+                "fallback": "Trade",
+                "color": "blue",
+                "italic": false
               }
             ]
           ]
@@ -68,33 +52,18 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.trade",
+              "fallback": "Merchants %s",
               "with": [
-                [
-                  {
-                    "text": "Merchants ",
-                    "italic": false,
-                    "color": "yellow"
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true,
-                    "color": "yellow"
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.trade",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true,
-                      "color": "yellow"
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true,
+                  "color": "yellow"
                 }
-              ]
+              ],
+              "italic": false,
+              "color": "yellow"
             }
           ]
         }

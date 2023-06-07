@@ -67,26 +67,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Low on Health:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.low_hp"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.low_hp",
+              "fallback": "When Low on Health:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -99,15 +90,8 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Regenerate"
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.regen"
-                      }
-                    ]
+                    "translate": "item.gm4.combat_expanded.lore.regen",
+                    "fallback": "Regenerate"
                   },
                   {
                     "translate": "potion.potency.0"
@@ -142,15 +126,8 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Regenerate"
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.regen"
-                      }
-                    ]
+                    "translate": "item.gm4.combat_expanded.lore.regen",
+                    "fallback": "Regenerate"
                   },
                   {
                     "translate": "potion.potency.1"
@@ -185,15 +162,8 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Regenerate"
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.regen"
-                      }
-                    ]
+                    "translate": "item.gm4.combat_expanded.lore.regen",
+                    "fallback": "Regenerate"
                   },
                   {
                     "translate": "potion.potency.2"
@@ -228,15 +198,8 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Regenerate"
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.regen"
-                      }
-                    ]
+                    "translate": "item.gm4.combat_expanded.lore.regen",
+                    "fallback": "Regenerate"
                   },
                   {
                     "translate": "potion.potency.3"
@@ -267,30 +230,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.second_wind",
+              "fallback": "Rejuvenating %s",
               "with": [
-                [
-                  {
-                    "text": "Rejuvenating ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.second_wind",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

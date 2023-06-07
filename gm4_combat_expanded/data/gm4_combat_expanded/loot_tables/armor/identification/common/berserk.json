@@ -78,26 +78,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Low on Health:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.low_hp"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.low_hp",
+              "fallback": "When Low on Health:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -114,13 +105,9 @@
                       "score": {
                         "name": "$damage_10",
                         "objective": "gm4_ce_data"
-                      },
-                      "color": "blue",
-                      "italic": false
+                      }
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
                         "name": "$damage_01",
@@ -167,9 +154,7 @@
                     "score": {
                       "name": "$damage_10",
                       "objective": "gm4_ce_data"
-                    },
-                    "color": "blue",
-                    "italic": false
+                    }
                   },
                   {
                     "translate": "attribute.name.generic.attack_damage"
@@ -200,30 +185,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.berserkers",
+              "fallback": "Berserkers %s",
               "with": [
-                [
-                  {
-                    "text": "Berserkers ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.berserkers",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }
