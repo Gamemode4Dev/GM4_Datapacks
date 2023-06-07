@@ -10,12 +10,6 @@
     {
       "condition": "minecraft:location_check",
       "predicate": {
-        "biome": "minecraft:bamboo_jungle"
-      }
-    },
-    {
-      "condition": "minecraft:location_check",
-      "predicate": {
         "biome": "minecraft:sparse_jungle"
       }
     }
