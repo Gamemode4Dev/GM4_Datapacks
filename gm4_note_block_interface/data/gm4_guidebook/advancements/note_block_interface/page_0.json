@@ -68,13 +68,18 @@
             "range": 1
           }
         ],
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:note_block"
-            ]
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:note_block"
+                ]
+              }
+            }
           }
-        }
+        ]
       }
     }
   },

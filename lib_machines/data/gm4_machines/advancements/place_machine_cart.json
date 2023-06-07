@@ -3,15 +3,23 @@
     "placed_machine_entity": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "item": {
-          "tag": "gm4_machines:minecarts",
-          "nbt": "{gm4_machines:{}}"
-        },
-        "location": {
-          "block": {
-            "tag": "minecraft:rails"
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "tag": "gm4_machines:minecarts",
+              "nbt": "{gm4_machines:{}}"
+            }
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "tag": "minecraft:rails"
+              }
+            }
           }
-        }
+        ]
       }
     }
   },

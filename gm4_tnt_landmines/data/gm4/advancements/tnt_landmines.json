@@ -5,22 +5,12 @@
       "nbt": "{CustomModelData:3420001}"
     },
     "title": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Bomb Defused",
-        {
-          "translate": "advancement.gm4.tnt_landmines.title"
-        }
-      ]
+      "translate": "advancement.gm4.tnt_landmines.title",
+      "fallback": "Bomb Defused"
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Disarm a landmine",
-        {
-          "translate": "advancement.gm4.tnt_landmines.description"
-        }
-      ],
+      "translate": "advancement.gm4.tnt_landmines.description",
+      "fallback": "Disarm a landmine",
       "color": "gray"
     }
   },

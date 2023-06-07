@@ -12,13 +12,8 @@
               "lore": [
                 [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "Bees",
-                      {
-                        "translate": "text.gm4.beehive_inspector.bees"
-                      }
-                    ],
+                    "translate": "text.gm4.beehive_inspector.bees",
+                    "fallback": "Bees",
                     "color": "gray",
                     "italic": false
                   },
@@ -33,13 +28,8 @@
                 ],
                 [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "Honey",
-                      {
-                        "translate": "text.gm4.beehive_inspector.honey"
-                      }
-                    ],
+                    "translate": "text.gm4.beehive_inspector.honey",
+                    "fallback": "Honey",
                     "color": "gray",
                     "italic": false
                   },

@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Percurro",
-                                        {
-                                            "translate": "item.gm4.shamir.percurro"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.percurro",
+                                    "fallback": "Percurro",
                                     "italic": false,
                                     "color": "gray"
                                 }

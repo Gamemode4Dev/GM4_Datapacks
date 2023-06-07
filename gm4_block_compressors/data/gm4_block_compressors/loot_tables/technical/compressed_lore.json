@@ -12,27 +12,13 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "translate": "%1$s%3427655$s",
+                "translate": "text.gm4.block_compressors.compressed",
+                "fallback": "Compressed *",
                 "with": [
-                  [
-                    "Compressed x",
-                    {
-                      "nbt": "Item.tag.gm4_block_compressors.compression_level",
-                      "storage": "gm4_block_compressors:temp/item_stack"
-                    }
-                  ],
                   {
-                    "translate": "text.gm4.block_compressors.compressed",
-                    "with": [
-                      [
-                        " x",
-                        {
-                          "nbt": "Item.tag.gm4_block_compressors.compression_level",
-                          "storage": "gm4_block_compressors:temp/item_stack",
-                          "interpret": true
-                        }
-                      ]
-                    ]
+                    "nbt": "Item.tag.gm4_block_compressors.compression_level",
+                    "storage": "gm4_block_compressors:temp/item_stack",
+                    "interpret": true
                   }
                 ],
                 "color": "gray",

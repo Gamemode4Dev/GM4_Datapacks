@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_heart_canisters
 name: Heart Canisters
-version: 1.3.X
+version: 1.5.X
 
 pipeline:
   - directory: '../lib_player_heads'

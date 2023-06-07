@@ -12,13 +12,8 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Retreating",
-                    {
-                      "translate": "text.gm4.pneuma_retreating"
-                    }
-                  ],
+                  "translate": "text.gm4.pneuma_retreating",
+                  "fallback": "Retreating",
                   "italic": false,
                   "color": "blue"
                 }
@@ -27,13 +22,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Soul Essence",
-                  {
-                    "translate": "item.gm4.soul_essence"
-                  }
-                ],
+                "translate": "item.gm4.soul_essence",
+                "fallback": "Soul Essence",
                 "italic": false,
                 "color": "white"
               }

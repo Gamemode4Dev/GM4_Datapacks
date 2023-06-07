@@ -2,17 +2,17 @@ extend: '../module.yaml'
 
 id: gm4_cooler_caves
 name: Cooler Caves
-version: 2.0.X
+version: 2.2.X
 
 pipeline:
+  - directory: '../pfb_biome_extensions'
+    data_pack:
+      load: .
   - data_pack:
       load: .
 
 meta:
   gm4:
-    versioning:
-      required:
-        - gm4_orbis: 2.0.0
     website:
       description: A custom terrain expansion pack that makes biome specific caves and mineshafts
       recommended:

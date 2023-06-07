@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_guidebook
 name: Guidebook
-version: 1.0.X
+version: 1.2.X
 
 pipeline:
   - directory: '../lib_forceload'

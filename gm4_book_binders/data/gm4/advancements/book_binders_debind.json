@@ -5,22 +5,12 @@
       "nbt": "{CustomModelData:3420001,Enchantments:[{id:\"minecraft:mending\",lvl:1}]}"
     },
     "title": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Tearing Up!",
-        {
-          "translate": "advancement.gm4.book_binders_debind.title"
-        }
-      ]
+      "translate": "advancement.gm4.book_binders_debind.title",
+      "fallback": "Tearing Up!"
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Get your first enchanted page",
-        {
-          "translate": "advancement.gm4.book_binders_debind.description"
-        }
-      ],
+      "translate": "advancement.gm4.book_binders_debind.description",
+      "fallback": "Get your first enchanted page",
       "color": "gray"
     }
   },

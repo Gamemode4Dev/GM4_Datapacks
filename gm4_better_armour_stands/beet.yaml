@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_better_armour_stands
 name: Better Armour Stands
-version: 2.0.X
+version: 2.2.X
 
 pipeline:
   - data_pack:
@@ -33,3 +33,5 @@ meta:
         - Sparks
   modrinth:
     project_id: ib7YfS5V
+  smithed:
+    pack_id: gm4_better_armour_stands

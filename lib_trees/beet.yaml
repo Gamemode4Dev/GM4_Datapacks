@@ -1,0 +1,21 @@
+id: gm4_trees
+name: Gamemode 4 Trees
+version: 1.0.0
+
+extend: ../library.yaml
+pipeline:
+  - data_pack:
+      load: .
+
+meta: 
+  gm4:
+    versioning:
+      schedule_loops:
+        - tick
+      extra_version_injections:
+        advancements:
+          - place_sapling
+    credits:
+      Creator:
+        - BluePsychoRanger
+        - Bloo

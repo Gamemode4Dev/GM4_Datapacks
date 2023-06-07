@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_midnight_menaces
 name: Midnight Menaces
-version: 1.0.X
+version: 1.2.X
 
 pipeline:
   - data_pack:

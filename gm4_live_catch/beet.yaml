@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_live_catch
 name: Live Catch
-version: 1.0.X
+version: 1.2.X
 
 pipeline:
   - data_pack:
@@ -19,3 +19,5 @@ meta:
     credits:
       Creator:
         - MichaelMiner137
+      Icon Design:
+        - BluePsychoRanger

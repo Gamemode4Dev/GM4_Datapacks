@@ -1,8 +1,6 @@
 from beet import Context, Function, Predicate
 from beet.contrib.vanilla import Vanilla
 
-MCVERSION = "1.19.2"
-
 def beet_default(ctx: Context):
   """Creates a predicate for every vanilla item tag and a function checking all of these predicates."""
   vanilla = ctx.inject(Vanilla)

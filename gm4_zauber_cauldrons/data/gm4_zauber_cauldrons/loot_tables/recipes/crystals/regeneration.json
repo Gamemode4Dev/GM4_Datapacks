@@ -14,13 +14,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Crystal of Regeneration",
-                                    {
-                                        "translate": "item.gm4.zauber_cauldrons.crystal.regeneration"
-                                    }
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.crystal.regeneration",
+                                "fallback": "Crystal of Regeneration",
                                 "italic": false
                             }
                         },

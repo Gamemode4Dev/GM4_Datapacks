@@ -35,8 +35,8 @@ execute if entity @s[tag=gm4_lt_powder_snow] if data storage gm4_liquid_tanks:te
 
 #ink
 execute if entity @s[tag=gm4_lt_ink] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:ink_sac"}} run function gm4_standard_liquids:item_drain/ink_sac
-execute if entity @s[tag=gm4_lt_ink] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",tag:{Potion:"standard_liquids:blindness"}}} run function gm4_standard_liquids:item_drain/bottle
+execute if entity @s[tag=gm4_lt_ink] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",tag:{gm4_standard_liquids:{potion:"blindness"}}}} run function gm4_standard_liquids:item_drain/bottle
 
 #glow ink
 execute if entity @s[tag=gm4_lt_glow_ink] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glow_ink_sac"}} run function gm4_standard_liquids:item_drain/ink_sac
-execute if entity @s[tag=gm4_lt_glow_ink] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",tag:{Potion:"standard_liquids:glowing"}}} run function gm4_standard_liquids:item_drain/bottle
+execute if entity @s[tag=gm4_lt_glow_ink] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",tag:{gm4_standard_liquids:{potion:"glowing"}}}} run function gm4_standard_liquids:item_drain/bottle

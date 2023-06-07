@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Vigere",
-                                        {
-                                            "translate": "item.gm4.shamir.vigere"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.vigere",
+                                    "fallback": "Vigere",
                                     "italic": false,
                                     "color": "gray"
                                 }

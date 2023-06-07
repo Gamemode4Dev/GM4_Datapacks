@@ -1,0 +1,8 @@
+id: gm4_orbis
+name: Orbis Prefabs
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.prefabs

@@ -3,9 +3,6 @@ from beet.contrib.vanilla import Vanilla
 import itertools
 from typing import Any
 
-
-MCVERSION = "1.19.2"
-
 ITEMS = {
   "diamond_sword": 1562,
   "diamond_pickaxe": 1562,

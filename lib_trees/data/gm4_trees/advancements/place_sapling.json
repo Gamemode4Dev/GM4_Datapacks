@@ -1,0 +1,39 @@
+{
+  "criteria": {
+    "place_sapling": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "nbt": "{gm4_trees:{item:{id:\"sapling\"}}}"
+            }
+          }
+        ]
+      }
+    },
+    "backwards_compat": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "nbt": "{gm4_fruiting_trees:{item:{id:\"sapling\"}}}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "place_sapling",
+      "backwards_compat"
+    ]
+  ],
+  "rewards": {
+    "function": "gm4_trees:sapling/place_sapling"
+  }
+}
