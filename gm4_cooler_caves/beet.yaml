@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_cooler_caves
 name: Cooler Caves
-version: 2.1.X
+version: 2.2.X
 
 pipeline:
   - directory: '../pfb_biome_extensions'

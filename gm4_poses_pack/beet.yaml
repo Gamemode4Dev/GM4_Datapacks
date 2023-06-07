@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_poses_pack
 name: Poses Pack
-version: 1.3.X
+version: 1.4.X
 
 pipeline:
   - data_pack:

@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_xp_storage
 name: XP Storage
-version: 1.3.X
+version: 1.4.X
 
 pipeline:
   - data_pack:

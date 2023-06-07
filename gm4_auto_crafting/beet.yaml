@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_auto_crafting
 name: Auto Crafting
-version: 1.1.X
+version: 1.2.X
 
 pipeline:
   - directory: '../lib_machines'
