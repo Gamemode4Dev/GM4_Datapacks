@@ -17,7 +17,7 @@
                         "condition": "minecraft:location_check",
                         "predicate": {
                             "block": {
-                                "tag": "minecraft:signs"
+                                "tag": "minecraft:all_signs"
                             }
                         }
                     }
