@@ -139,11 +139,25 @@
           ]
         },
         {
+          "function": "minecraft:copy_nbt",
+          "source": {
+            "type": "minecraft:storage",
+            "source": "gm4_combat_expanded:temp"
+          },
+          "ops": [
+            {
+              "source": "tag.Enchantments",
+              "target": "Enchantments",
+              "op": "replace"
+            }
+          ]
+        },
+        {
           "function": "minecraft:set_enchantments",
           "enchantments": {
             "minecraft:vanishing_curse": 1
           },
-          "add": true
+          "add": false
         }
       ]
     }

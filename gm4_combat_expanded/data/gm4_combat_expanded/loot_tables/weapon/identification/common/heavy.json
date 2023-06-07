@@ -343,10 +343,14 @@
           ]
         },
         {
-          "function": "minecraft:enchant_randomly",
-          "enchantments": [
-            "minecraft:knockback"
-          ]
+          "function": "minecraft:set_enchantments",
+          "enchantments": {
+            "minecraft:knockback": {
+              "min": 2,
+              "max": 3
+            }
+          },
+          "add": false
         }
       ]
     }

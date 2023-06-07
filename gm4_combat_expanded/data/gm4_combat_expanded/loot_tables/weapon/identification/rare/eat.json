@@ -32,7 +32,7 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "$damage_up"
+                      "name": "$damage_stored"
                     },
                     "score": "gm4_ce_data",
                     "scale": 0.1
@@ -128,7 +128,7 @@
                     "italic": false
                   }
                 ],
-                "color": "blue",
+                "color": "red",
                 "italic": false
               }
             ]
@@ -163,16 +163,16 @@
                   [
                     {
                       "score": {
-                        "name": "$damage_up_10",
+                        "name": "$damage_stored_10",
                         "objective": "gm4_ce_data"
                       },
-                      "color": "green",
+                      "color": "dark_green",
                       "italic": false
                     },
                     ".",
                     {
                       "score": {
-                        "name": "$damage_up_01",
+                        "name": "$damage_stored_01",
                         "objective": "gm4_ce_data"
                       }
                     }
@@ -195,7 +195,7 @@
                   "type": "minecraft:score",
                   "target": {
                     "type": "minecraft:fixed",
-                    "name": "$damage_up_01"
+                    "name": "$damage_stored_01"
                   },
                   "score": "gm4_ce_data"
                 },
@@ -215,10 +215,10 @@
                 "with": [
                   {
                     "score": {
-                      "name": "$damage_up_10",
+                      "name": "$damage_stored_10",
                       "objective": "gm4_ce_data"
                     },
-                    "color": "green",
+                    "color": "dark_green",
                     "italic": false
                   },
                   {
@@ -237,7 +237,7 @@
                 "type": "minecraft:score",
                 "target": {
                   "type": "minecraft:fixed",
-                  "name": "$damage_up_01"
+                  "name": "$damage_stored_01"
                 },
                 "score": "gm4_ce_data"
               },

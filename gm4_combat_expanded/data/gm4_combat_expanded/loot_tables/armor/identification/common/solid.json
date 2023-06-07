@@ -34,6 +34,13 @@
                   "slot": "chest"
                 },
                 {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "gm4_ce_perm_2",
+                  "amount": -1,
+                  "operation": "addition",
+                  "slot": "chest"
+                },
+                {
                   "attribute": "generic.knockback_resistance",
                   "name": "gm4_combat_expanded_2",
                   "amount": 0,
@@ -54,7 +61,7 @@
               },
               "ops": [
                 {
-                  "source": "armor",
+                  "source": "solid_armor",
                   "target": "gm4_combat_expanded.level",
                   "op": "replace"
                 }
@@ -75,6 +82,11 @@
                 {
                   "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
                   "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
+                  "op": "replace"
+                },
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm_2\"}].Slot",
                   "op": "replace"
                 },
                 {
@@ -115,7 +127,7 @@
                 "with": [
                   {
                     "score": {
-                      "name": "$armor",
+                      "name": "$solid_armor",
                       "objective": "gm4_ce_data"
                     }
                   },

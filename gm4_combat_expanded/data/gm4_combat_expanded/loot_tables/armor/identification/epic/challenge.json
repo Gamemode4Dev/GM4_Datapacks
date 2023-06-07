@@ -62,8 +62,22 @@
                   "color": "light_purple"
                 }
               ],
-              "italic": false,
-              "color": "light_purple"
+              "color": "light_purple",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:copy_nbt",
+          "source": {
+            "type": "minecraft:storage",
+            "source": "gm4_combat_expanded:temp"
+          },
+          "ops": [
+            {
+              "source": "tag.Enchantments",
+              "target": "Enchantments",
+              "op": "replace"
             }
           ]
         },
@@ -72,7 +86,7 @@
           "enchantments": {
             "minecraft:vanishing_curse": 1
           },
-          "add": true
+          "add": false
         }
       ]
     }

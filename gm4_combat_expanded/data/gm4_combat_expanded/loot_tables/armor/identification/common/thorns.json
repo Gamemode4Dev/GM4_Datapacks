@@ -210,14 +210,25 @@
           ]
         },
         {
+          "function": "minecraft:copy_nbt",
+          "source": {
+            "type": "minecraft:storage",
+            "source": "gm4_combat_expanded:temp"
+          },
+          "ops": [
+            {
+              "source": "tag.Enchantments",
+              "target": "Enchantments",
+              "op": "replace"
+            }
+          ]
+        },
+        {
           "function": "minecraft:set_enchantments",
           "enchantments": {
-            "minecraft:thorns": {
-              "min": 1,
-              "max": 2
-            }
+            "minecraft:thorns": 3
           },
-          "add": true
+          "add": false
         }
       ]
     }

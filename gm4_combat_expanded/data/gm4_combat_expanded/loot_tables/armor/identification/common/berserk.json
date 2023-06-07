@@ -31,6 +31,13 @@
                   },
                   "operation": "addition",
                   "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "gm4_combat_expanded_2",
+                  "amount": 0,
+                  "operation": "multiply_base",
+                  "slot": "chest"
                 }
               ]
             },
@@ -54,6 +61,11 @@
                   "source": "damage",
                   "target": "gm4_combat_expanded.level",
                   "op": "replace"
+                },
+                {
+                  "source": "atkspeed",
+                  "target": "gm4_combat_expanded.level2",
+                  "op": "replace"
                 }
               ]
             },
@@ -67,6 +79,11 @@
                 {
                   "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
                   "target": "AttributeModifiers[{Name:\"gm4_combat_expanded\"}].Slot",
+                  "op": "replace"
+                },
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_2\"}].Slot",
                   "op": "replace"
                 }
               ]
@@ -90,6 +107,30 @@
               "color": "gray",
               "italic": false
             }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.plus.1",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$atkspeed",
+                      "objective": "gm4_ce_data"
+                    }
+                  },
+                  {
+                    "translate": "attribute.name.generic.attack_speed"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
           ]
         },
         {

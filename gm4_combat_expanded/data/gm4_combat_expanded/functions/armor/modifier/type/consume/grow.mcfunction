@@ -11,6 +11,9 @@ execute store result score $level gm4_ce_data run data get storage gm4_combat_ex
 execute store result score $cap gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.cap
 execute store result score $step gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.step
 
+# multiply step by amount of steps to take (count of mobs killed)
+scoreboard players operation $step gm4_ce_data *= @s gm4_ce_t_kill
+
 # increase level and check to cap
 execute store result storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level int 1 run scoreboard players operation $level gm4_ce_data += $step gm4_ce_data
 execute if score $level gm4_ce_data >= $cap gm4_ce_data at @s run function gm4_combat_expanded:armor/modifier/type/consume/satiated
