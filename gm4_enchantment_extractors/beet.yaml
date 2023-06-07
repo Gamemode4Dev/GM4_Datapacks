@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_enchantment_extractors
 name: Enchantment Extractors
-version: 2.1.X
+version: 2.2.X
 
 pipeline:
   - directory: '../lib_machines'

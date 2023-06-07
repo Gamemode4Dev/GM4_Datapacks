@@ -70,6 +70,7 @@
       ]
     }
   ],
+  "random_sequence": "minecraft:blocks/stone",
   "__smithed__": {
     "rules": [
       {

@@ -19,7 +19,12 @@
     "gm4_place_book_binder": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "block": "minecraft:lectern"
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:lectern"
+          }
+        ]
       }
     }
   }

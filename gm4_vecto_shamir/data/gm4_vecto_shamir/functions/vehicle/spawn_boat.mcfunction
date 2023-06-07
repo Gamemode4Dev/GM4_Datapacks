@@ -22,6 +22,8 @@ execute if predicate gm4_vecto_shamir:biome/dark_oak run data merge entity @e[ty
 execute if predicate gm4_vecto_shamir:biome/jungle run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"jungle"}
 execute if predicate gm4_vecto_shamir:biome/spruce run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"spruce"}
 execute if predicate gm4_vecto_shamir:biome/mangrove run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"mangrove"}
+execute if predicate gm4_vecto_shamir:biome/cherry run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"cherry"}
+execute if predicate gm4_vecto_shamir:biome/bamboo run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"bamboo"}
 
 # remove new tag
 tag @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] remove gm4_vecto_new_vehicle

@@ -53,6 +53,7 @@
       ]
     }
   ],
+  "random_sequence": "minecraft:blocks/deepslate",
   "__smithed__": {
     "rules": [
       {
