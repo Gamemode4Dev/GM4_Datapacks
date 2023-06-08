@@ -6,7 +6,7 @@
     },
     "title": {
       "translate": "advancement.gm4.welcome_toast.title",
-      "fallback": "Gamemode 4"
+      "fallback": "This world is using Gamemode 4 Datapacks!"
     },
     "description": {
       "text": "This should not be seen."
