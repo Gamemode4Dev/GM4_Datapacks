@@ -46,7 +46,7 @@
     "#minecraft:vegetal_decoration/in_biome/soul_sand_valley",
     "#minecraft:top_layer_modification/in_biome/soul_sand_valley"
   ],
-  "precipitation": "none",
+  "has_precipitation": false,
   "spawn_costs": {
     "minecraft:enderman": {
       "charge": 0.7,

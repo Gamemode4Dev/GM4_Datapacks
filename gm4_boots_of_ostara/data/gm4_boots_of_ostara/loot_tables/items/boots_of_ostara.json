@@ -15,13 +15,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Boots of Ostara",
-                                    {
-                                        "translate": "item.gm4.boots_of_ostara"
-                                    }
-                                ],
+                                "translate": "item.gm4.boots_of_ostara",
+                                "fallback": "Boots of Ostara",
                                 "italic": false
                             }
                         },
@@ -29,13 +24,8 @@
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Brings abundance beneath you!",
-                                        {
-                                            "translate": "item.gm4.boots_of_ostara.lore"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.boots_of_ostara.lore",
+                                    "fallback": "Brings abundance beneath you!",
                                     "color": "dark_gray",
                                     "italic": true
                                 }

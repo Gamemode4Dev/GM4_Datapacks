@@ -30,7 +30,7 @@
     "#minecraft:vegetal_decoration/in_biome/ice_spikes",
     "#minecraft:top_layer_modification/in_biome/ice_spikes"
   ],
-  "precipitation": "snow",
+  "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
     "ambient": [

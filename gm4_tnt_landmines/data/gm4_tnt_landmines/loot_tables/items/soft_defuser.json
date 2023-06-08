@@ -14,13 +14,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Soft Defuser",
-                                    {
-                                        "translate": "item.gm4.tnt_landmine.upgrade"
-                                    }
-                                ],
+                                "translate": "item.gm4.tnt_landmine.upgrade",
+                                "fallback": "Soft Defuser",
                                 "italic": false
                             }
                         },
@@ -30,13 +25,8 @@
                                 [
                                     {
                                         "color": "dark_gray",
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            "Drop to use",
-                                            {
-                                                "translate": "item.gm4.tnt_landmine.use"
-                                            }
-                                        ]
+                                        "translate": "item.gm4.tnt_landmine.use",
+                                        "fallback": "Drop to use"
                                     }
                                 ]
                             ]

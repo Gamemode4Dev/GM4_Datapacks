@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Audere",
-                                        {
-                                            "translate": "item.gm4.shamir.audere"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.audere",
+                                    "fallback": "Audere",
                                     "italic": false,
                                     "color": "gray"
                                 }

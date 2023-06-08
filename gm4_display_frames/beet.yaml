@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_display_frames
 name: Display Frames
-version: 1.0.X
+version: 1.2.X
 
 pipeline:
   - directory: '../lib_potion_tracking'

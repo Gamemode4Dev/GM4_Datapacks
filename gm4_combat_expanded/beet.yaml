@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_combat_expanded
 name: Combat Expanded
-version: 1.0.X
+version: 1.2.X
 
 pipeline:
   - directory: '../lib_forceload'
@@ -25,6 +25,7 @@ meta:
         - slow_clock
         - player/submain
     website:
+      hidden: true
       description: Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
       recommended:
         - gm4_metallurgy

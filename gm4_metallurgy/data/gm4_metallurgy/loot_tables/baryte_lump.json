@@ -11,13 +11,8 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Baryte Lump",
-                  {
-                    "translate": "item.gm4.metallurgy.baryte_lump"
-                  }
-                ],
+                "translate": "item.gm4.metallurgy.baryte_lump",
+                "fallback": "Baryte Lump",
                 "italic": false,
                 "color": "white"
               }
@@ -28,24 +23,14 @@
               "lore": [
                 [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "Contains ",
-                      {
-                        "translate": "text.gm4.metallurgy.contains"
-                      }
-                    ],
+                    "translate": "text.gm4.metallurgy.contains",
+                    "fallback": "Contains ",
                     "italic": false,
                     "color": "gray"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "Barium",
-                      {
-                        "translate": "text.gm4.metallurgy.barium"
-                      }
-                    ],
+                    "translate": "text.gm4.metallurgy.barium",
+                    "fallback": "Barium",
                     "italic": false,
                     "color": "#F0EAD6"
                   }

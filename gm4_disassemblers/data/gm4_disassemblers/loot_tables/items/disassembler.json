@@ -16,13 +16,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Disassembler",
-                    {
-                      "translate": "block.gm4.disassembler"
-                    }
-                  ],
+                  "translate": "block.gm4.disassembler",
+                  "fallback": "Disassembler",
                   "color": "white",
                   "italic": false
                 }

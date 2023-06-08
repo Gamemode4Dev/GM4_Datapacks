@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_chairs
 name: Chairs
-version: 1.0.X
+version: 1.2.X
 
 pipeline:
   - data_pack:
@@ -32,4 +32,3 @@ meta:
     pack_id: gm4_chairs
   planetminecraft:
     uid: 4299435
-

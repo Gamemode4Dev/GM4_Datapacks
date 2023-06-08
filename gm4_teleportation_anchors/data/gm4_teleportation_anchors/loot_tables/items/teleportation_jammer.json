@@ -16,13 +16,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Teleportation Jammer",
-                    {
-                      "translate": "block.gm4.teleportation_jammer"
-                    }
-                  ],
+                  "translate": "block.gm4.teleportation_jammer",
+                  "fallback": "Teleportation Jammer",
                   "color": "white",
                   "italic": false
                 }

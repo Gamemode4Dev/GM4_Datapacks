@@ -35,7 +35,7 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, 
 		"extend": "beet.yaml",
 		"require": ["beet.contrib.livereload"] if reload else [],
 		"pipeline": [
-			"gm4.plugins.write_description",
+			"gm4.plugins.write_mcmeta",
 			"gm4.plugins.versioning.module_load_advancements",
 			"gm4.plugins.output"
 		]

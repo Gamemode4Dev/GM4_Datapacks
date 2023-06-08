@@ -15,13 +15,8 @@
                         {
                             "function": "set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Lingering Potion of Floating",
-                                    {
-                                        "translate": "item.gm4.lingering_floating_potion"
-                                    }
-                                ],
+                                "translate": "item.gm4.lingering_floating_potion",
+                                "fallback": "Lingering Potion of Floating",
                                 "italic": false
                             }
                         },

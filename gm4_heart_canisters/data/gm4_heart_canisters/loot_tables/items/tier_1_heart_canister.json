@@ -14,35 +14,23 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Heart Canister",
-                                    {
-                                        "translate": "item.gm4.heart_canister"
-                                    }
-                                ],
+                                "translate": "item.gm4.heart_canister",
+                                "fallback": "Heart Canister",
                                 "italic": false
                             }
                         },
                         {
                             "function": "minecraft:set_lore",
                             "lore": [
-                                [
-                                    {
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            "Tier 1",
-                                            {
-                                                "translate": "item.gm4.heart_canister.lore.tier",
-                                                "with": [
-                                                    "1"
-                                                ]
-                                            }
-                                        ],
-                                        "italic": false,
-                                        "color": "gray"
-                                    }
-                                ]
+                                {
+                                    "translate": "item.gm4.heart_canister.lore.tier",
+                                    "fallback": "Tier %s",
+                                    "with": [
+                                        "1"
+                                    ],
+                                    "italic": false,
+                                    "color": "gray"
+                                }
                             ],
                             "replace": false
                         }

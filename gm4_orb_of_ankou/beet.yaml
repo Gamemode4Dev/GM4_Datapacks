@@ -2,7 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_orb_of_ankou
 name: Orb of Ankou
-version: 1.2.X
+version: 1.4.X
 
 pipeline:
   - directory: '../lib_custom_crafters'

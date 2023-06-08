@@ -14,13 +14,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Crystal of Strength",
-                                    {
-                                        "translate": "item.gm4.zauber_cauldrons.crystal.strength"
-                                    }
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.crystal.strength",
+                                "fallback": "Crystal of Strength",
                                 "italic": false
                             }
                         },

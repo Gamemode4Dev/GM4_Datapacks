@@ -31,7 +31,7 @@
     "#minecraft:vegetal_decoration/in_biome/wooded_badlands",
     "#minecraft:top_layer_modification/in_biome/wooded_badlands"
   ],
-  "precipitation": "none",
+  "has_precipitation": false,
   "spawn_costs": {},
   "spawners": {
     "ambient": [

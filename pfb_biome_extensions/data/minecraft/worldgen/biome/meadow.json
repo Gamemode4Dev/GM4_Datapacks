@@ -35,7 +35,7 @@
     "#minecraft:vegetal_decoration/in_biome/meadow",
     "#minecraft:top_layer_modification/in_biome/meadow"
   ],
-  "precipitation": "rain",
+  "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
     "ambient": [

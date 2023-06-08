@@ -36,7 +36,7 @@
     "#minecraft:vegetal_decoration/in_biome/dark_forest",
     "#minecraft:top_layer_modification/in_biome/dark_forest"
   ],
-  "precipitation": "rain",
+  "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
     "ambient": [
