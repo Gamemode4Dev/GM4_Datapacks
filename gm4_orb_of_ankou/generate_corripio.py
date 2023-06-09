@@ -1,10 +1,17 @@
-from beet import Context, Advancement, Function
+from beet import Context, Advancement, Function, LootTable
+import csv
+from typing import Any
 
-ENTITIES = ['allay','axolotl','bat','bee','blaze','cat','cave_spider','chicken','cod','cow','creeper','dolphin','donkey','drowned','elder_guardian','ender_dragon','enderman','endermite','evoker','fox','frog','ghast','giant','glow_squid','goat','guardian','hoglin','horse','husk','illusioner','iron_golem','llama','magma_cube','mooshroom','mule','ocelot','panda','parrot','phantom','pig','piglin','piglin_brute','pillager','polar_bear','pufferfish','rabbit','ravager','salmon','sheep','shulker','silverfish','skeleton_horse','skeleton','slime','snow_golem','spider','squid','stray','strider','tadpole','trader_llama','tropical_fish','turtle','vex','villager','vindicator','wandering_trader','warden','witch','wither_skeleton','wither','wolf','zoglin','zombie_horse','zombie_villager','zombie','zombified_piglin']
+SUPPORTED_LOOTING = 10
+
+entities = {}
+updated_csv = [['-Run beet to update columns 4-9'],[],['.Mob','.Soul Essence','Base','L I','L II','L III','.','K/E (L III)','K/S (L III)']]
 
 def beet_default(ctx: Context):
-  """Creates advancements and functions for each mob that the corripio shamir works on."""
-  for entity in ENTITIES:
+  """Creates advancements, functions, and loot tables for each mob that the corripio shamir works on."""
+  read_csv()
+  entity: Any
+  for entity in entities:
     # Advancement to detect when a player kills the mob using a corripio shamir
     ctx.data[f"gm4_corripio_shamir:kill_entity/{entity}"] = Advancement({
       "criteria": {
@@ -47,3 +54,66 @@ def beet_default(ctx: Context):
       "",
       f"advancement revoke @s only gm4_corripio_shamir:kill_entity/{entity}",
     ])
+
+    # Loot table to drop the items
+    pools: Any = []
+    essence: Any = ''
+    for essence in entities[entity]:
+      pool: Any = {
+        "rolls": 1,
+        "entries": [{
+          "type": "minecraft:loot_table",
+          "name": "ERROR"
+        }]
+      }
+      pool["entries"][0]["name"] = f"gm4_orb_of_ankou:items/soul_essence/{essence}"
+      pool["conditions"] = [{
+        "condition": "minecraft:table_bonus",
+        "enchantment": "minecraft:looting",
+        "chances": []
+      }]
+      base_chance: Any = entities[entity][essence]
+      for i in range(SUPPORTED_LOOTING+1):
+        pool["conditions"][0]["chances"].append(looting_chance(base_chance,i))
+      pools.append(pool)
+
+    ctx.data[f"gm4_corripio_shamir:entities/{entity}"] = LootTable({
+      "type": "minecraft:fishing",
+      "pools": pools
+    })
+
+
+
+def looting_chance(base: float,lvl: int) -> float:
+  return min(1.0,round(base * (1 + (3 * (lvl**3))),6))
+
+
+
+def read_csv():
+  # read csv file
+  with open('gm4_orb_of_ankou/soul_essence.csv', mode ='r') as file:
+    csv_file = csv.reader(file)
+
+    # skip first 3 rows
+    next(csv_file)
+    next(csv_file)
+    next(csv_file)
+
+    for row in csv_file:
+      # get info
+      entity = row[0]
+      essence = row[1]
+      base_chance = float(row[2][0:-1])/100
+      if entity not in entities:
+        entities[entity] = {}
+      entities[entity][essence] = round(base_chance,6)
+      # calculate extra info
+      entry = [entity,essence,str(round(base_chance*100,4))+'%',str(round(base_chance*400,3))+'%',str(round(base_chance*2500,3))+'%',str(round(base_chance*8200,2))+'%','',str(round(1/(base_chance*82),1)),str(round(13/(base_chance*82),1))]
+      updated_csv.append(entry)
+
+  # update calculated info
+  with open('gm4_orb_of_ankou/soul_essence.csv', mode ='w') as file:
+    csv_file = csv.writer(file)
+
+    # skip first two rows
+    csv_file.writerows(updated_csv)
