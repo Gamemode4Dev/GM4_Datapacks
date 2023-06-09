@@ -14,6 +14,10 @@ execute unless score $cooldown gm4_creative matches 0.. run scoreboard players s
 # Setting this to 0 will always show logs to all players
 execute unless score $global_cooldown gm4_creative matches 0.. run scoreboard players set $global_cooldown gm4_creative 10
 
+# Upgrade Paths
+scoreboard objectives add gm4_earliest_version dummy
+function gm4_upgrade_paths:
+
 execute unless score gm4 gm4_modules matches 1.. run data modify storage gm4:log queue append value {type:"text",message:'{"text":"[GM4]: Welcome to Gamemode 4. Initialising...","color":"green"}'}
 execute unless score gm4 gm4_modules matches 1.. run schedule function gm4:intro_song/init 2s
 execute unless score gm4 gm4_modules matches 1.. run scoreboard players set gm4 gm4_modules 1

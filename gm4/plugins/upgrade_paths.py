@@ -1,5 +1,6 @@
 from beet import Context, Function, FunctionTag
 from gm4.utils import Version
+import gm4.plugins.output
 
 def beet_default(ctx: Context):
     '''Processes upgrade paths for module data that persists in the world
@@ -8,8 +9,10 @@ def beet_default(ctx: Context):
     print(f"RUNNING UPGRADE PATHS {ctx.project_id}")
 
     yield # wait for pack files to load
+    # ctx.require(gm4.plugins.output.beet_default)
+    print("POSY YIELD")
         # BUG so uh we can't create files after a yield? Is that right? Is our pipeline that broken?
-    run_func = ctx.data[f'{ctx.project_id}:upgrade_paths/run'] = Function([], tags=["gm4_upgrade_paths:run"])
+    run_func = Function([], tags=["gm4_upgrade_paths:run"])
     
     upgrade_paths_dirs = [f'{ctx.project_id}:upgrade_paths'] # gm4_bat_grenades:upgrade_paths/... is processed by default
 
@@ -25,7 +28,8 @@ def beet_default(ctx: Context):
         for path in upgrade_paths_tree.keys():
             run_func.append(f'execute if score {score_holder} gm4_earliest_version matches ..{Version(path+".0").int_rep() -1} run function {ns}:{direc}/{path}')
     
-    print(ctx.data.functions)
+    ctx.data[f'{ctx.project_id}:upgrade_paths/run'] = run_func
+    # print(ctx.data.functions)
 
     # #gm4_upgrade_paths:run tag
     # ctx.data.function_tags['gm4_upgrade_paths:run']
