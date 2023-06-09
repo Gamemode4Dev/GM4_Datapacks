@@ -17,7 +17,25 @@
   "parent": "gm4:intro_song/invisible_root",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:location"
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4"
+              },
+              "score": "gm4_modules"
+            },
+            "range": {
+              "min": 1
+            }
+          }
+        ]
+      }
     }
   }
 }
