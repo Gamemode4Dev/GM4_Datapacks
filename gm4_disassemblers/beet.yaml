@@ -1,4 +1,3 @@
-extend: '../module.yaml'
 
 id: gm4_disassemblers
 name: Disassemblers
@@ -13,6 +12,7 @@ pipeline:
   - data_pack:
       load: .
   - gm4_disassemblers.generate_disassembly
+  - gm4.plugins.extend.module
 
 meta:
   gm4:

@@ -1,11 +1,9 @@
-require:
-  - beet.contrib.extra_files
-
 pipeline:
-  - directory: 'base'
-    extend: 'beet.yaml'
+  - beet.contrib.copy_files
   - gm4.plugins.versioning.modules
+    extend: 'beet.yaml'
 
 meta:
-  extra_files:
-    data_pack: ['README.md']
+  copy_files:
+    data_pack:
+      README.md: README.md
