@@ -1,15 +1,21 @@
-from beet import Context, Advancement, Function, LootTable
+from beet import Context, Advancement, Function, LootTable, Predicate
 import csv
 from typing import Any
 
 SUPPORTED_LOOTING = 10
 
 entities = {}
+pneumas = []
 updated_csv = [['-Run beet to update columns 4-9'],[],['.Mob','.Soul Essence','Base','L I','L II','L III','.','K/E (L III)','K/S (L III)']]
 
 def beet_default(ctx: Context):
   """Creates advancements, functions, and loot tables for each mob that the corripio shamir works on."""
   read_csv()
+  generate_corripio(ctx)
+  generate_pneuma_predicates(ctx)
+  
+
+def generate_corripio(ctx: Context):
   entity: Any
   for entity in entities:
     # Advancement to detect when a player kills the mob using a corripio shamir
@@ -63,10 +69,9 @@ def beet_default(ctx: Context):
         "rolls": 1,
         "entries": [{
           "type": "minecraft:loot_table",
-          "name": "ERROR"
+          "name": f"gm4_orb_of_ankou:items/soul_essence/{essence}"
         }]
       }
-      pool["entries"][0]["name"] = f"gm4_orb_of_ankou:items/soul_essence/{essence}"
       pool["conditions"] = [{
         "condition": "minecraft:table_bonus",
         "enchantment": "minecraft:looting",
@@ -82,6 +87,25 @@ def beet_default(ctx: Context):
       "pools": pools
     })
 
+
+
+def generate_pneuma_predicates(ctx: Context):
+  pneuma: Any = ""
+  for pneuma in pneumas:
+    # Predicate to check if a player has a certain pneuma equipped
+    nbt = "{gm4_orb_of_ankou:{pneumas:[{id:'"+ pneuma + "'}]}}"
+    ctx.data[f"gm4_orb_of_ankou:pneuma_equipped/{pneuma}"] = Predicate({
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "offhand": {
+            "tag": "gm4_orb_of_ankou:pneuma_container",
+            "nbt": nbt
+          }
+        }
+      }
+    })
 
 
 def looting_chance(base: float,lvl: int) -> float:
@@ -107,6 +131,8 @@ def read_csv():
       if entity not in entities:
         entities[entity] = {}
       entities[entity][essence] = round(base_chance,6)
+      if essence not in pneumas:
+        pneumas.append(essence)
       # calculate extra info
       entry = [entity,essence,str(round(base_chance*100,4))+'%',str(round(base_chance*400,3))+'%',str(round(base_chance*2500,3))+'%',str(round(base_chance*8200,2))+'%','',str(round(1/(base_chance*82),1)),str(round(13/(base_chance*82),1))]
       updated_csv.append(entry)
