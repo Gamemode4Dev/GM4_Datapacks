@@ -128,7 +128,7 @@
                 "fallback": "%s Immunity",
                 "with": [
                   {
-                    "translate": "effect.minecraft.wither"
+                    "translate": "effect.minecraft.weakness"
                   }
                 ],
                 "color": "blue",
@@ -260,7 +260,7 @@
                 "fallback": "%s Immunity",
                 "with": [
                   {
-                    "translate": "effect.minecraft.weakness"
+                    "translate": "effect.minecraft.wither"
                   }
                 ],
                 "color": "blue",

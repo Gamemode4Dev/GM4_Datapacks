@@ -9,40 +9,6 @@
           "name": "gm4_combat_expanded:armor/identification/base",
           "functions": [
             {
-              "function": "minecraft:set_attributes",
-              "modifiers": [
-                {
-                  "attribute": "minecraft:generic.movement_speed",
-                  "name": "gm4_ce_perm",
-                  "amount": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$speed-"
-                    },
-                    "score": "gm4_ce_data",
-                    "scale": 0.01
-                  },
-                  "operation": "multiply_base",
-                  "slot": "chest"
-                }
-              ]
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
-                  "op": "replace"
-                }
-              ]
-            },
-            {
               "function": "minecraft:set_nbt",
               "tag": "{gm4_combat_expanded:{modifier:62}}"
             },

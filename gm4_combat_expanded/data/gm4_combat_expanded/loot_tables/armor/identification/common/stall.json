@@ -90,7 +90,15 @@
                 "translate": "potion.withDuration",
                 "with": [
                   {
-                    "translate": "effect.minecraft.resistance"
+                    "translate": "potion.withAmplifier",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.resistance"
+                      },
+                      {
+                        "translate": "potion.potency.1"
+                      }
+                    ]
                   },
                   "0:02"
                 ],
@@ -129,7 +137,7 @@
                         "translate": "effect.minecraft.resistance"
                       },
                       {
-                        "translate": "potion.potency.1"
+                        "translate": "potion.potency.2"
                       }
                     ]
                   },
@@ -170,7 +178,7 @@
                         "translate": "effect.minecraft.resistance"
                       },
                       {
-                        "translate": "potion.potency.2"
+                        "translate": "potion.potency.3"
                       }
                     ]
                   },

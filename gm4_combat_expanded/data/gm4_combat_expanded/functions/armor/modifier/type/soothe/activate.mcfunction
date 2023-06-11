@@ -1,7 +1,7 @@
 # activate heal pulse
 # @s = player wearing soothing armour
 # at @s
-# run from armor/modifier/type/soothe/health_check
+# run from armor/modifier/type/soothe/check
 
 # mark for change and set to active
 scoreboard players set $change gm4_ce_data 1
