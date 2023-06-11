@@ -1,6 +1,7 @@
 pipeline:
   - beet.contrib.copy_files
   - gm4.plugins.versioning.modules
+  - directory: '../base'
     extend: 'beet.yaml'
 
 meta:

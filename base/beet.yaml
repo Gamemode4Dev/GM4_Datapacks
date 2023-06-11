@@ -1,10 +1,12 @@
-pipeline:
-  - data_pack:
-      load: .
-  - gm4.plugins.versioning.base
-
 version: 1.4.0
 id: gm4
+
+data_pack:
+  load: 
+    data: data
+
+pipeline:
+  - gm4.plugins.versioning.base
 
 meta:
   gm4:

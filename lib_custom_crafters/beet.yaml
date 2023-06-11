@@ -2,13 +2,15 @@ id: gm4_custom_crafters
 name: Gamemode 4 Custom Crafters
 version: 3.0.0
 
-extend: ../library.yaml
+data_pack:
+  load: 
+    data: data
+
 pipeline:
+  - lib_custom_crafters.generate_item_tags
+  - gm4.plugins.extend.library
   - directory: '../lib_machines'
     extend: 'beet.yaml'
-  - data_pack:
-      load: .
-  - lib_custom_crafters.generate_item_tags
 
 meta:
   gm4:
