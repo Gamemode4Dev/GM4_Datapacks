@@ -10,7 +10,7 @@ def modules(ctx: Context):
         - load:{module_name}.json
         - {module_name}:load.mcfunction
         - load:load.json"""
-    ctx.cache["currently_building"].json = {"name": ctx.project_name, "id": ctx.project_id} # cache module's project id for access within library pipelines
+    ctx.cache["currently_building"].json = {"name": ctx.project_name, "id": ctx.project_id, "added_libs": []} # cache module's project id for access within library pipelines
     versioning_config: dict[str, Any] = ctx.meta.get('gm4', {}).get('versioning', {})
     dependencies: list[dict[str,str]] = versioning_config.get('required', [])
     lines = ["execute ", ""]
