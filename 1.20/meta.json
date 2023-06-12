@@ -1,10 +1,10 @@
 {
-  "last_commit": "1978ec7c3880df8bc6bb8f3dbb93823bf1046717",
+  "last_commit": "75ce61bd47e7a84d22302537a6532598de38eaf9",
   "modules": [
     {
       "id": "gm4_animi_shamir",
       "name": "Animi Shamir",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Animi_Shamir",
       "credits": {
