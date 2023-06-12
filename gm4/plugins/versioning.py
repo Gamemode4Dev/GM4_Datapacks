@@ -71,6 +71,10 @@ def modules(ctx: Context):
         ]
     })
 
+    # inject module load success checks (load.status 1..) into technical and display advancements
+        # advancements get score checks injected into every criteria
+    versioned_advancements(ctx, Version("X.X.X"), [a for a in ctx.data.advancements.keys() if not a=="gm4:root"], False)
+
 def libraries(ctx: Context):
     """Assembles version-functions for libraries from dependency information:
         - {lib_name}:enumerate.mcfunction
@@ -169,7 +173,8 @@ def libraries(ctx: Context):
     ])
 
     # strict version checks on advancements
-    versioned_advancements(ctx, lib_ver, extra_injections)
+    versioned_advancements(ctx, lib_ver, extra_injections.get("advancements", []), strict=True)
+    # NOTE it may be possible/desirable to just automatically inject version checks into *all* library advancements
 
     # put library version number in namespace
     versioned_namespace(ctx, lib_ver)
@@ -194,9 +199,10 @@ def base(ctx: Context):
     lines = f"execute if score gm4 load.status matches {ver.major} if score gm4_minor load.status matches {ver.minor} run function gm4:post_load"
     ctx.data.functions[f"gm4:resolve_post_load"] = Function(lines)
 
+    extra_injections = ctx.meta.get('gm4', {}).get('versioning', {}).get("extra_version_injections", {}).get('advancements', []) #type:ignore
+    versioned_advancements(ctx, ver, extra_injections, strict=True) #type:ignore
+    
     versioned_namespace(ctx, ver)
-    extra_injections = ctx.meta.get('gm4', {}).get('versioning', {}).get("extra_version_injections", {}) #type:ignore
-    versioned_advancements(ctx, ver, extra_injections) #type:ignore
 
 def versioned_namespace(ctx: Context, version: Version):
     """Puts the project version into the namespace, and renames all references to match
@@ -234,72 +240,36 @@ def dependency_load_tags(ctx: Context, dependencies: list[dict[str, str]]) -> Fu
         ))
     return dep_tag
 
-def cache_premodule_advancements(ctx: Context):
-    """Stores advancements loaded in ctx right before the actual module data is loaded. 
-    Used to add version/startup checks to module-level advancements in versioning.module"""
-    ctx.meta["premodule_advancements"] = list(ctx.data.advancements.keys())
-
-def versioned_advancements(ctx: Context, ver: Version, extra_injections: dict[str, list[str]]):
-    """Adds strict versioning to advancements, used for libraries and base advancement injections"""
+def versioned_advancements(ctx: Context, ver: Version, targets: list[str], strict:bool=False):
+    """Adds versioning to advancements, either strict checks for libraries or load checks for most modules"""
     # NOTE advancements get score checks injected into every criteria
-    for entry in extra_injections.get("advancements", []):
+    assemble_value_check = lambda name_field, range_field: { # type:ignore
+        "condition": "minecraft:value_check",
+        "value": {
+            "type": "minecraft:score",
+            "target": {
+                "type": "minecraft:fixed",
+                "name": name_field
+            },
+            "score": "load.status"
+        },
+        "range": range_field
+    }
+
+    for entry in targets:
         if ":" in entry:
             handle = ctx.data.advancements[entry]
         else:
             handle = ctx.data.advancements[f"{ctx.project_id}:{entry}"]
         for criteria in handle.data["criteria"].values():
             player_conditions = criteria.setdefault("conditions", {}).setdefault("player", [])
-            player_conditions.append({
-                "condition": "minecraft:value_check",
-                "value": {
-                "type": "minecraft:score",
-                "target": {
-                    "type": "minecraft:fixed",
-                    "name": f"{ctx.project_id}"
-                },
-                "score": "load.status"
-                },
-                "range": ver.major
-            })
-            player_conditions.append({
-                "condition": "minecraft:value_check",
-                "value": {
-                "type": "minecraft:score",
-                "target": {
-                    "type": "minecraft:fixed",
-                    "name": f"{ctx.project_id}_minor"
-                },
-                "score": "load.status"
-                },
-                "range": ver.minor
-            })
-
-def module_load_advancements(ctx: Context):
-    """Injects module load success checks (load.status 1..) into technical and display advancements for each module"""
-        # advancements get score checks injected into every criteria
-    base_exclusions = ["gm4:root", "gm4-1.4:intro_song/play_song", "gm4-1.4:intro_song/invisible_root", "gm4-1.4:intro_song/root_display"] # manually set list to avoid checking base for advancements when it doesn't change module to module
-        # FIXME This hardcoded base version number exists here as a time-efficient workaround to prevent intro song advancements from getting versioned in modules
-        # that have no libraries, and thus never call "post-library-plugins". The upcoming pipeline reversal will address this.
-    for name in [a for a in ctx.data.advancements.keys() if a not in ctx.meta.get("premodule_advancements", []) + base_exclusions]:
-        handle = ctx.data.advancements[name]
-        for criteria in handle.data["criteria"].values():
-            player_conditions = criteria.setdefault("conditions", {}).setdefault("player", [])
             if type(player_conditions) is dict:
-                raise ValueError(f"{name} is using legacy player conditions, which does not support load.status injections.")
-            player_conditions.append({
-                "condition": "minecraft:value_check",
-                "value": {
-                "type": "minecraft:score",
-                "target": {
-                    "type": "minecraft:fixed",
-                    "name": f"{ctx.project_id}"
-                },
-                "score": "load.status"
-                },
-                "range": {
-                    "min": 1
-                }
-            })
+                raise ValueError(f"{entry} is using legacy player conditions, which does not support load.status injections.")
+            if strict:
+                player_conditions.append(assemble_value_check(ctx.project_id, ver.major))
+                player_conditions.append(assemble_value_check(f"{ctx.project_id}_minor", ver.minor))
+            else:
+                player_conditions.append(assemble_value_check(ctx.project_id, {"min": 1}))
 
 def warn_on_future_version(ctx: Context, dep_id: str, ver: Version):
     """Issues a console warning if the dependancy version a module requires is greater than the current version of that dependancy"""

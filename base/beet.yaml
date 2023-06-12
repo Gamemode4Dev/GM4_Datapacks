@@ -13,4 +13,4 @@ meta:
     versioning:
       extra_version_injections:
         advancements:
-          - 'gm4-1.4:intro_song/play_song'
+          - 'gm4:intro_song/play_song'
