@@ -148,8 +148,6 @@ def libraries(ctx: Context):
             ]
         }))
 
-    yield # wait for all pack files to load
-
     # additional version injections
     extra_injections: dict[str, list[str]] = versioning_config.get("extra_version_injections", {})
 
@@ -197,8 +195,8 @@ def base(ctx: Context):
     ctx.data.functions[f"gm4:resolve_post_load"] = Function(lines)
 
     versioned_namespace(ctx, ver)
-    extra_injections = ctx.meta.get('gm4', {}).get('versioning', {}).get("extra_version_injections", {})
-    versioned_advancements(ctx, ver, extra_injections)
+    extra_injections = ctx.meta.get('gm4', {}).get('versioning', {}).get("extra_version_injections", {}) #type:ignore
+    versioned_advancements(ctx, ver, extra_injections) #type:ignore
 
 def versioned_namespace(ctx: Context, version: Version):
     """Puts the project version into the namespace, and renames all references to match
@@ -241,7 +239,7 @@ def cache_premodule_advancements(ctx: Context):
     Used to add version/startup checks to module-level advancements in versioning.module"""
     ctx.meta["premodule_advancements"] = list(ctx.data.advancements.keys())
 
-def versioned_advancements(ctx: Context, ver: Version, extra_injections):
+def versioned_advancements(ctx: Context, ver: Version, extra_injections: dict[str, list[str]]):
     """Adds strict versioning to advancements, used for libraries and base advancement injections"""
     # NOTE advancements get score checks injected into every criteria
     for entry in extra_injections.get("advancements", []):
