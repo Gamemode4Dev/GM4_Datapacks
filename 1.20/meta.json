@@ -1,5 +1,5 @@
 {
-  "last_commit": "fd320d7a66e46ec21b40c8777aa95d2c9580231a",
+  "last_commit": "c6a06f2be44948f1a361690c4fa554ed4aa7701e",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -449,7 +449,7 @@
     {
       "id": "gm4_crossbow_cartridges",
       "name": "Crossbow Cartridges",
-      "version": "1.4.0",
+      "version": "1.4.1",
       "video_link": "https://www.youtube.com/watch?v=XJiGvX7l-pI",
       "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
       "credits": {
