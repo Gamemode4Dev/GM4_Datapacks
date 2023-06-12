@@ -9,8 +9,7 @@ data_pack:
 pipeline:
   - lib_custom_crafters.generate_item_tags
   - gm4.plugins.extend.library
-  - directory: '../lib_machines'
-    extend: 'beet.yaml'
+  - gm4.plugins.include.lib_machines
 
 meta:
   gm4:
