@@ -1,15 +1,13 @@
-extend: '../module.yaml'
-
 id: gm4_tinkering_compressors
 name: Tinkering Compressors
 version: 1.3.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../lib_machines'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_machines
 
 meta:
   gm4:

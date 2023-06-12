@@ -1,15 +1,20 @@
-extend: '../module.yaml'
-
 id: gm4_tower_structures
 name: Tower Structures
 version: 3.2.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.pfb_orbis
+  - gm4.plugins.prefabs.module_asset_rename
 
 pipeline:
   - directory: '../pfb_orbis'
     extend: 'beet.yaml'
   - data_pack:
       load: .
-  - gm4.plugins.prefabs.module_asset_rename
 
 meta:
   gm4:

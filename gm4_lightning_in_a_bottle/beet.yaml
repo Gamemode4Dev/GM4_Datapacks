@@ -1,17 +1,14 @@
-extend: '../module.yaml'
-
 id: gm4_lightning_in_a_bottle
 name: Lightning in a Bottle
 version: 1.3.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../lib_brewing'
-    extend: 'beet.yaml'
-  - directory: '../lib_potion_tracking'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_brewing
+  - gm4.plugins.include.lib_potion_tracking
 
 meta:
   gm4:
