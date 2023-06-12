@@ -1,5 +1,5 @@
 {
-  "last_commit": "75ce61bd47e7a84d22302537a6532598de38eaf9",
+  "last_commit": "bdaa93f006bb95395c0fb5120f89a173a1ae2fa4",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1606,6 +1606,24 @@
       "recommends": [
         "gm4_sunken_treasure"
       ],
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_shapeless_portals",
+      "name": "Shapeless Portals",
+      "version": "1.0.0",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Shapeless_Portals",
+      "credits": {
+        "Creator": [
+          "Thanathor"
+        ]
+      },
+      "requires": [],
+      "description": "Say goodbye to your boring old rectangular portals!",
+      "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
       "pmc_link": null
