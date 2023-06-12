@@ -8,10 +8,12 @@ def _generate_extend_plugin(name: str):
             - necessary to run "boilerplate" plugins in the middle of a build pipeline"""
         with open(Path(name)) as f:
             conf = yaml.safe_load(f)
-        for p in ['id', 'name', 'version']:
-            conf[p] = ctx.__getattribute__(f'project_{p}')
-        conf['meta'] = {**ctx.meta, **conf.get('meta', {})} # extended-yaml meta prioritized over parent
-        ctx.require(subproject(conf))
+        with ctx.override(**conf.get('meta', {})):
+            for process in conf['pipeline']: # manually call each pipeline entry as if it were in the parent config
+                if type(process) is dict: 
+                    process = subproject({"pipeline": [process], "meta": conf.get('meta', {})})
+                # else, it's a plugin name str
+                ctx.require(process)
     return plugin
 
 library = _generate_extend_plugin('library.yaml')
