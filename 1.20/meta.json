@@ -1,5 +1,5 @@
 {
-  "last_commit": "c6a06f2be44948f1a361690c4fa554ed4aa7701e",
+  "last_commit": "1978ec7c3880df8bc6bb8f3dbb93823bf1046717",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1285,7 +1285,7 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.4.0",
+      "version": "1.4.1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
