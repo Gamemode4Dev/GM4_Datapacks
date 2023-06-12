@@ -2,6 +2,7 @@
 # @s = player that placed a hotswapper
 # at @s anchored eyes positioned ^ ^ ^0.X where X = step count
 # run from gm4_hotswap_hotbars:place_hotswapper/find_box
+# run from here
 
 # check adjacent blocks
 execute if score $found gm4_hh_data matches 0 align xyz positioned ~0.5 ~1.5 ~0.5 if block ~ ~ ~ #minecraft:shulker_boxes run function gm4_hotswap_hotbars:place_hotswapper/verify_contents
