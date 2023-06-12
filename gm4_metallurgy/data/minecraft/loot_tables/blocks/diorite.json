@@ -66,6 +66,7 @@
       ]
     }
   ],
+  "random_sequence": "minecraft:blocks/diorite",
   "__smithed__": {
     "rules": [
       {

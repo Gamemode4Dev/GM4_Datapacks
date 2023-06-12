@@ -5,22 +5,12 @@
       "nbt": "{CustomModelData:3420001}"
     },
     "title": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "It's Alive!",
-        {
-          "translate": "advancement.gm4.lightning_in_a_bottle.lightning_shulker.title"
-        }
-      ]
+      "translate": "advancement.gm4.lightning_in_a_bottle.lightning_shulker.title",
+      "fallback": "It's Alive!"
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Strike a Purpur Block with lightning to create a Shulker",
-        {
-          "translate": "advancement.gm4.lightning_in_a_bottle.lightning_shulker.description"
-        }
-      ],
+      "translate": "advancement.gm4.lightning_in_a_bottle.lightning_shulker.description",
+      "fallback": "Strike a Purpur Block with lightning to create a Shulker",
       "color": "gray"
     }
   },

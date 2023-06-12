@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Celaro",
-                                        {
-                                            "translate": "item.gm4.shamir.celaro"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.celaro",
+                                    "fallback": "Celaro",
                                     "italic": false,
                                     "color": "gray"
                                 }

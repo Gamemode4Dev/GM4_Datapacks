@@ -12,13 +12,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Forged in a dragon's breath",
-                    {
-                      "translate": "text.gm4.end_city_sword.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.1",
+                  "fallback": "Forged in a dragon's breath",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -39,24 +34,14 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Life kills life all the time, so the Goddess",
-                    {
-                      "translate": "text.gm4.end_city_sword.2.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.2.1",
+                  "fallback": "Life kills life all the time, so the Goddess",
                   "color": "dark_gray",
                   "italic": true
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "sacrifices herself for her own animal.",
-                    {
-                      "translate": "text.gm4.end_city_sword.2.2"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.2.2",
+                  "fallback": "sacrifices herself for her own animal.",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -77,13 +62,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Blessed with Hylia's power",
-                    {
-                      "translate": "text.gm4.end_city_sword.3"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.3",
+                  "fallback": "Blessed with Hylia's power",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -104,13 +84,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Forged by Muramasa",
-                    {
-                      "translate": "text.gm4.end_city_sword.4"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.4",
+                  "fallback": "Forged by Muramasa",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -131,13 +106,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Powered by the living crystal within",
-                    {
-                      "translate": "text.gm4.end_city_sword.5"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.5",
+                  "fallback": "Powered by the living crystal within",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -158,13 +128,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Used to decapitate the Gorgon, Medusa",
-                    {
-                      "translate": "text.gm4.end_city_sword.6"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.6",
+                  "fallback": "Used to decapitate the Gorgon, Medusa",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -185,24 +150,14 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "This is believed to be one of the",
-                    {
-                      "translate": "text.gm4.end_city_sword.7.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.7.1",
+                  "fallback": "This is believed to be one of the",
                   "color": "dark_gray",
                   "italic": true
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "finest Japanese swords ever made.",
-                    {
-                      "translate": "text.gm4.end_city_sword.7.2"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.7.2",
+                  "fallback": "finest Japanese swords ever made.",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -223,13 +178,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Used at the Battle of the Trench",
-                    {
-                      "translate": "text.gm4.end_city_sword.8"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.8",
+                  "fallback": "Used at the Battle of the Trench",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -250,13 +200,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Removed from the Garden of Eden",
-                    {
-                      "translate": "text.gm4.end_city_sword.9"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.9",
+                  "fallback": "Removed from the Garden of Eden",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -277,13 +222,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Used to kill the dragon Fafnir",
-                    {
-                      "translate": "text.gm4.end_city_sword.10"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.10",
+                  "fallback": "Used to kill the dragon Fafnir",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -304,13 +244,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Snicker-snack!",
-                    {
-                      "translate": "text.gm4.end_city_sword.11"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.11",
+                  "fallback": "Snicker-snack!",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -331,24 +266,14 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Created by husband and wife magicians",
-                    {
-                      "translate": "text.gm4.end_city_sword.12.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.12.1",
+                  "fallback": "Created by husband and wife magicians",
                   "color": "dark_gray",
                   "italic": true
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "of the ancient Bön tradition",
-                    {
-                      "translate": "text.gm4.end_city_sword.12.2"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.12.2",
+                  "fallback": "of the ancient Bön tradition",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -369,13 +294,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Belongs to Roland",
-                    {
-                      "translate": "text.gm4.end_city_sword.13"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.13",
+                  "fallback": "Belongs to Roland",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -396,24 +316,14 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "If found, please return",
-                    {
-                      "translate": "text.gm4.end_city_sword.14.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.14.1",
+                  "fallback": "If found, please return",
                   "color": "dark_gray",
                   "italic": true
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "to William Wallace.",
-                    {
-                      "translate": "text.gm4.end_city_sword.14.2"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.14.2",
+                  "fallback": "to William Wallace.",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -434,13 +344,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Reforged from the shards of Narsil",
-                    {
-                      "translate": "text.gm4.end_city_sword.15"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.15",
+                  "fallback": "Reforged from the shards of Narsil",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -461,13 +366,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Forged by the Iron Sisters",
-                    {
-                      "translate": "text.gm4.end_city_sword.16"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.16",
+                  "fallback": "Forged by the Iron Sisters",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -488,24 +388,14 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Used to lead the revolutionary",
-                    {
-                      "translate": "text.gm4.end_city_sword.17.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.17.1",
+                  "fallback": "Used to lead the revolutionary",
                   "color": "dark_gray",
                   "italic": true
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "army against the Telmarines",
-                    {
-                      "translate": "text.gm4.end_city_sword.17.2"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.17.2",
+                  "fallback": "army against the Telmarines",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -526,13 +416,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Can only be wielded by a true Gryffindor",
-                    {
-                      "translate": "text.gm4.end_city_sword.18"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.18",
+                  "fallback": "Can only be wielded by a true Gryffindor",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -553,13 +438,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Sought by Thrax",
-                    {
-                      "translate": "text.gm4.end_city_sword.19"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.19",
+                  "fallback": "Sought by Thrax",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -580,13 +460,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Wielded by Lion-O",
-                    {
-                      "translate": "text.gm4.end_city_sword.20"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_sword.20",
+                  "fallback": "Wielded by Lion-O",
                   "color": "dark_gray",
                   "italic": true
                 }

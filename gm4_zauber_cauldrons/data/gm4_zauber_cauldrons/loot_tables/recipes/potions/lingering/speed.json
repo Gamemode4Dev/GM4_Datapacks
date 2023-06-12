@@ -22,15 +22,8 @@
                             "function": "minecraft:set_name",
                             "entity": "this",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Lingering Soulution of Swiftness",
-                                    [
-                                        {
-                                            "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lingering_potion.swiftness"
-                                        }
-                                    ]
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lingering_potion.swiftness",
+                                "fallback": "Lingering Soulution of Swiftness",
                                 "italic": false
                             },
                             "conditions": [

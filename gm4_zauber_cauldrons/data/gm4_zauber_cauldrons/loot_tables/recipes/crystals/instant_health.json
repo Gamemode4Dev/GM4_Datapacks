@@ -14,13 +14,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Crystal of Healing",
-                                    {
-                                        "translate": "item.gm4.zauber_cauldrons.crystal.instant_health"
-                                    }
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.crystal.instant_health",
+                                "fallback": "Crystal of Healing",
                                 "italic": false
                             }
                         },

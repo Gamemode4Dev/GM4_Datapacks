@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_desire_lines
 name: Desire Lines
+version: 1.3.X
 
 pipeline:
   - data_pack:
@@ -9,11 +10,13 @@ pipeline:
 
 meta:
   gm4:
-    description: Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!
-    required: []
-    recommended:
-      - gm4_boots_of_ostara
-    notes: []
+    versioning:
+      schedule_loops: [tick]
+    website:
+      description: Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!
+      recommended:
+        - gm4_boots_of_ostara
+      notes: []
     video: https://www.youtube.com/watch?v=wmGaatfekfs
     wiki: https://wiki.gm4.co/wiki/Desire_Lines
     credits:
@@ -25,3 +28,7 @@ meta:
         - Andante
       Icon Design:
         - JonPot
+  modrinth:
+    project_id: cx5dX4ug
+  smithed:
+    pack_id: gm4_desire_lines

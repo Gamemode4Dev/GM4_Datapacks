@@ -5,22 +5,12 @@
       "nbt": "{CustomModelData:3420002,Enchantments:[{}]}"
     },
     "title": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Give Me More!",
-        {
-          "translate": "advancement.gm4.combat_expanded.challenger.title"
-        }
-      ]
+      "translate": "advancement.gm4.combat_expanded.challenger.title",
+      "fallback": "Give Me More!"
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "When tough is not good enough",
-        {
-          "translate": "advancement.gm4.combat_expanded.challenger.description"
-        }
-      ]
+      "translate": "advancement.gm4.combat_expanded.challenger.description",
+      "fallback": "When tough is not good enough"
     },
     "frame": "challenge",
     "hidden": true

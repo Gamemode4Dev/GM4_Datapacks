@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Hypexperia",
-                                        {
-                                            "translate": "item.gm4.shamir.hypexperia"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.hypexperia",
+                                    "fallback": "Hypexperia",
                                     "italic": false,
                                     "color": "gray"
                                 }

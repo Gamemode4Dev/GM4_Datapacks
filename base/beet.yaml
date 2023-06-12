@@ -1,3 +1,14 @@
 pipeline:
   - data_pack:
       load: .
+  - gm4.plugins.versioning.base
+
+version: 1.4.0
+id: gm4
+
+meta:
+  gm4:
+    versioning:
+      extra_version_injections:
+        advancements:
+          - 'gm4-1.4:intro_song/play_song'

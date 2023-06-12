@@ -66,6 +66,7 @@
       ]
     }
   ],
+  "random_sequence": "minecraft:blocks/granite",
   "__smithed__": {
     "rules": [
       {

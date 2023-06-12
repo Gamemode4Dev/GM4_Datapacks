@@ -2,25 +2,34 @@ extend: '../module.yaml'
 
 id: gm4_liquid_tanks
 name: Liquid Tanks
+version: 2.3.X
 
 pipeline:
   - directory: '../lib_machines'
     extend: 'beet.yaml'
+  - directory: '../lib_custom_crafters'
+    extend: 'beet.yaml'
+  - gm4.plugins.post_library_plugins
   - data_pack:
       load: .
 
 meta:
   gm4:
-    description: Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!
-    required: []
-    recommended:
-      - gm4_resource_pack
-      - gm4_potion_liquids
-      - gm4_zauber_liquids
-      - gm4_liquid_minecarts
-      - gm4_cement_mixers
-      - gm4_relocators
-    notes: []
+    versioning:
+      required:
+        - lib_custom_crafters: 3.0.0
+        - lib_machines: 1.1.0
+      schedule_loops: [main]
+    website:
+      description: Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!
+      recommended:
+        - gm4_resource_pack
+        - gm4_potion_liquids
+        - gm4_zauber_liquids
+        - gm4_liquid_minecarts
+        - gm4_cement_mixers
+        - gm4_relocators
+      notes: []
     video: https://www.youtube.com/watch?v=qa9lcbii1BE
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks
     credits:

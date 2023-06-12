@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Moneo",
-                                        {
-                                            "translate": "item.gm4.shamir.moneo"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.moneo",
+                                    "fallback": "Moneo",
                                     "italic": false,
                                     "color": "gray"
                                 }

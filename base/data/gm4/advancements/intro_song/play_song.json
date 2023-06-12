@@ -1,0 +1,36 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:location",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "gm4_intro_walked": {
+                  "min": 1,
+                  "max": 9999
+                }
+              }
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$first_join"
+                },
+                "score": "gm4_intro_song"
+              },
+              "range": 1
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "gm4:intro_song/init_song"
+    }
+  }

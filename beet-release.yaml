@@ -1,12 +1,17 @@
 pipeline:
   - gm4.plugins.list_modules
   - gm4.plugins.manifest.create
+  - gm4.plugins.manifest.update_patch
+  - gm4.plugins.output.clear_release
+  - gm4.plugins.manifest.write_meta
   - broadcast: 'gm4_*'
     extend: 'beet.yaml'
     pipeline:
       - gm4.plugins.manifest.write_updates
       - gm4.plugins.manifest.write_credits
-      - gm4.plugins.write_description
+      - gm4.plugins.readme_generator
+      - gm4.plugins.write_mcmeta
+      - gm4.plugins.versioning.module_load_advancements
       - gm4.plugins.output.release
 
 meta:

@@ -1,0 +1,42 @@
+{
+  "name": "gm4_dangerous_dungeons:subpart/deep_slate/small/chest_sets",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/deep_slate/small/decor/chests/a",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/deep_slate/small/decor/chests/b",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/deep_slate/small/decor/chests/c",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/deep_slate/small/decor/chests/d",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

@@ -22,15 +22,8 @@
                             "function": "minecraft:set_name",
                             "entity": "this",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Splash Soulution of Poison",
-                                    [
-                                        {
-                                            "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.splash_potion.poison"
-                                        }
-                                    ]
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.splash_potion.poison",
+                                "fallback": "Splash Soulution of Poison",
                                 "italic": false
                             },
                             "conditions": [

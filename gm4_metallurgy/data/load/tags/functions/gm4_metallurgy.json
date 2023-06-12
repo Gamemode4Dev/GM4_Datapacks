@@ -1,7 +1,0 @@
-{
-    "values": [
-		{ "id": "#load:gm4_player_heads", "required": false },
-		{ "id": "#load:gm4_lore", "required": false },
-        "gm4_metallurgy:load"
-    ]
-}

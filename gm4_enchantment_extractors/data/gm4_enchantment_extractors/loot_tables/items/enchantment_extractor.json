@@ -16,13 +16,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Enchantment Extractor",
-                    {
-                      "translate": "block.gm4.enchantment_extractor"
-                    }
-                  ],
+                  "translate": "block.gm4.enchantment_extractor",
+                  "fallback": "Enchantment Extractor",
                   "color": "white",
                   "italic": false
                 }
