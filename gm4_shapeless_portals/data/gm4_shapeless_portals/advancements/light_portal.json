@@ -17,7 +17,7 @@
             "range": 1
           },
           {
-            "condition": "minecraft:alternative",
+            "condition": "minecraft:any_of",
             "terms": [
               {
                 "condition": "minecraft:location_check",
@@ -34,17 +34,25 @@
             ]
           }
         ],
-        "item": {
-          "items": [
-            "minecraft:flint_and_steel",
-            "minecraft:fire_charge"
-          ]
-        },
-        "location": {
-          "block": {
-            "tag": "gm4_shapeless_portals:portal_block"
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:flint_and_steel",
+                "minecraft:fire_charge"
+              ]
+            }
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "tag": "gm4_shapeless_portals:portal_block"
+              }
+            }
           }
-        }
+        ]
       }
     }
   },

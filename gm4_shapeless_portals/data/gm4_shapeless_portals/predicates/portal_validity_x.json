@@ -1,6 +1,6 @@
 [
     {
-        "condition": "minecraft:alternative",
+        "condition": "minecraft:any_of",
         "terms": [
             {
                 "condition": "minecraft:location_check",
@@ -23,7 +23,7 @@
         ]
     },
     {
-        "condition": "minecraft:alternative",
+        "condition": "minecraft:any_of",
         "terms": [
             {
                 "condition": "minecraft:location_check",
@@ -46,7 +46,7 @@
         ]
     },
     {
-        "condition": "minecraft:alternative",
+        "condition": "minecraft:any_of",
         "terms": [
             {
                 "condition": "minecraft:location_check",
@@ -69,7 +69,7 @@
         ]
     },
     {
-        "condition": "minecraft:alternative",
+        "condition": "minecraft:any_of",
         "terms": [
             {
                 "condition": "minecraft:location_check",
