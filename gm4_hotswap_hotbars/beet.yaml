@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_hotswap_hotbars
 name: Hotswap Hotbars
+version: 1.0.X
 
 pipeline:
   - directory: '../lib_machines'
@@ -13,18 +14,18 @@ pipeline:
 
 meta:
   gm4:
-    description: Store and swap between additional hotbars with the new hotswapper item!
-    required: []
-    recommended: 
-      - gm4_animi_shamir
-      - gm4_block_compressors
-      - gm4_potion_swords
-      - gm4_relocators
-      - gm4_tinkering_compressors
-      - gm4_tunnel_bores
-      - gm4_xp_storage
-    notes: []
-    video: 
+    website:
+      description: Store and swap between additional hotbars with the new hotswapper item!
+      recommended: 
+        - gm4_animi_shamir
+        - gm4_block_compressors
+        - gm4_potion_swords
+        - gm4_relocators
+        - gm4_tinkering_compressors
+        - gm4_tunnel_bores
+        - gm4_xp_storage
+      notes: []
+    video: null
     wiki: https://wiki.gm4.co/wiki/Hotswap_Hotbars
     credits:
       Creator:
