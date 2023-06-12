@@ -10,12 +10,6 @@ pipeline:
   - gm4.plugins.include.pfb_orbis
   - gm4.plugins.prefabs.module_asset_rename
 
-pipeline:
-  - directory: '../pfb_orbis'
-    extend: 'beet.yaml'
-  - data_pack:
-      load: .
-
 meta:
   gm4:
     prefabs:
