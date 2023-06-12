@@ -12,4 +12,4 @@ summon marker ~ ~ ~ {CustomName:'"gm4_hotswapper"',Tags:["gm4_hotswapper","gm4_m
 data remove storage gm4_hotswap_hotbars:temp item_data.BlockEntityTag
 data modify entity @e[type=marker,tag=gm4_new_machine,distance=..0.1,limit=1] data.gm4_hotswap_hotbars.item_data set from storage gm4_hotswap_hotbars:temp item_data
 scoreboard players set @e[type=marker,tag=gm4_new_machine,distance=..0.1,limit=1] gm4_entity_version 1
-tag @e[type=marker,distance=..0.1] remove gm4_new_machine
+tag @e[type=marker,tag=gm4_new_machine,distance=..0.1] remove gm4_new_machine
