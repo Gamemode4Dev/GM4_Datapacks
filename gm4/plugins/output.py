@@ -10,7 +10,7 @@ MODRINTH_API = "https://api.modrinth.com/v2"
 MODRINTH_AUTH_KEY = "BEET_MODRINTH_TOKEN"
 SMITHED_API = "https://api.smithed.dev/v2"
 SMITHED_AUTH_KEY = "BEET_SMITHED_TOKEN"
-SUPPORTED_GAME_VERSIONS = ["1.20"]
+SUPPORTED_GAME_VERSIONS = ["1.20", "1.20.1"]
 	# NOTE smithed only takes one game version number. Uses the first value in this list
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/release-pipeline (gamemode4official@gmail.com)"
 
@@ -101,7 +101,15 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 				return
 			project_data = res.json()
 			matching_version = next((v for v in project_data if v["version_number"] == str(version)), None)
-			if matching_version is not None:
+			game_versions = modrinth.get("minecraft", SUPPORTED_GAME_VERSIONS)
+			if matching_version is not None: # patch version already exists
+				# update mc versions if necessary
+				if not set(matching_version["game_versions"]) == set(game_versions):
+					res = requests.patch(f"{MODRINTH_API}/version/{matching_version['id']}", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, json={
+						"game_versions": game_versions
+					})
+					if not (200 <= res.status_code < 300):
+						print(f"[GM4] [Modrinth] Failed to patch project versions: {res.status_code} {res.text}")
 				return
 
 			with open(release_dir / file_name, "rb") as f:
@@ -109,7 +117,6 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 
 			changelog = run(["git", "log", "-1", "--format=%s"])
 
-			game_versions = modrinth.get("minecraft", SUPPORTED_GAME_VERSIONS)
 			res = requests.post(f"{MODRINTH_API}/version", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, files={
 				"data": json.dumps({
 					"name": f"{ctx.project_name} v{version}",
