@@ -1,10 +1,4 @@
 pipeline:
-  - beet.contrib.copy_files
   - gm4.plugins.versioning.modules
   - directory: '../base'
     extend: 'beet.yaml'
-
-meta:
-  copy_files:
-    data_pack:
-      README.md: README.md
