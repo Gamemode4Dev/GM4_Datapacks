@@ -1,6 +1,7 @@
 from beet import Context, TextFile
 from pathlib import Path
 from typing import Any
+from functools import cache
 import json
 import os
 import yaml
@@ -82,7 +83,7 @@ def create(ctx: Context):
 
 def update_patch(ctx: Context):
 	"""Retrieves manifest from previous build, and increments patch number
-	 	 if there are any changes between last commit and HEAD"""
+	 	 if there are any changes between last commit and HEAD in module or any of its dependancies"""
 	version = os.getenv("VERSION", "1.20")
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
@@ -99,8 +100,10 @@ def update_patch(ctx: Context):
 
 	for id in modules:
 		module = modules[id]
+		deps = _traverse_includes(id) | {"base"}
+		deps_dirs = [element for sublist in [[f"{d}/data", f"{d}/*py"] for d in deps] for element in sublist]
 
-		diff = run(["git", "diff", last_commit, "--shortstat", "--", id, ":!*\\README.md", ":!images"]) if last_commit else True
+		diff = run(["git", "diff", last_commit, "--shortstat", "--", f"{id}/data", f"{id}/*.py"] + deps_dirs) if last_commit else True
 		released = released_modules.get(id, None)
 
 		if not diff and released:
@@ -123,6 +126,19 @@ def update_patch(ctx: Context):
 			module["version"] = str(version)
 
 	ctx.cache["gm4_manifest"].json["modules"] = modules
+
+@cache
+def _traverse_includes(project_id: str) -> set[str]:
+	"""Recursively assembles list of included dependencies and sub-dependencies for a given module"""
+	project_file = Path(project_id) / "beet.yaml"
+	project_config = yaml.safe_load(project_file.read_text())
+	all_deps: set[str] = set()
+	for p in project_config.get('pipeline', []):
+		if "gm4.plugins.include" in p:
+			dep = p.split(".")[-1]
+			sub_deps = _traverse_includes(dep)
+			all_deps.update({dep, *sub_deps})
+	return all_deps
 
 
 def write_meta(ctx: Context):
