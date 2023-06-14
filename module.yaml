@@ -1,4 +1,6 @@
 pipeline:
+  - gm4.plugins.module.default_pack_icon
+  - gm4.plugins.module.gm4_root_advancement
   - gm4.plugins.versioning.modules
   - directory: '../base'
     extend: 'beet.yaml'
