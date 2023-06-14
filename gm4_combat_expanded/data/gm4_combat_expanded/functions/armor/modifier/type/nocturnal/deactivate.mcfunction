@@ -1,6 +1,6 @@
 # deactivate the modifiers on the armor piece
 # @s = player wearing the armor
-# at world spawn
+# at unspecified
 # run from functions in armor/modifier/type/nocturnal/check
 
 # mark for change and set to inactive

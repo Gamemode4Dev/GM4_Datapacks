@@ -101,7 +101,8 @@
                   "interpret": true
                 }
               ],
-              "italic": false
+              "italic": false,
+              "color": "yellow"
             }
           ]
         }

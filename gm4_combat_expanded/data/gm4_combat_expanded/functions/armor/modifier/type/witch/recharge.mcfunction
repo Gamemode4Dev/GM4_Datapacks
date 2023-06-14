@@ -1,6 +1,6 @@
 # recharge witch armor piece when cooldown finishes
 # @s = player wearing armour
-# at world spawn
+# at unspecified
 # run from armor/modifier/type/witch/tick_cooldown
 
 # use lib_lore to brighten the 'Discharge' text

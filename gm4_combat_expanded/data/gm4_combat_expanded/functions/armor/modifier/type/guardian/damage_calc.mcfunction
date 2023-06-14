@@ -1,6 +1,6 @@
 # calculate the damage guardian will take
 # @s = player that was guarding
-# at world spawn
+# at unspecified
 # run from main
 
 function gm4_combat_expanded:player/calculate_hp

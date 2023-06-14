@@ -1,6 +1,6 @@
 # match wolf to armor slot and player id
 # @s = new wolf
-# at world spawn
+# at unspecified
 # run from armor/type/canine/wolf_spawn
 
 data merge entity @s {CollarColor:15b,Tags:["gm4_ce_wolf"],ActiveEffects:[{Id:11,Amplifier:9b,Duration:-1,ShowParticles:0b}],Attributes:[{Name:"generic.attack_damage",Base:4}]}

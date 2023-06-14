@@ -1,6 +1,6 @@
 # process player
 # @s = online player
-# at world spawn
+# at unspecified
 # run from player/submain
 
 # calculate difficulty for newly (re)spawned players
@@ -14,6 +14,10 @@ execute if entity @s[tag=gm4_ce_guardian,scores={gm4_ce_guard=10..}] run functio
 scoreboard players operation @s gm4_ce_hurt += @s gm4_ce_hurt2
 scoreboard players set @s[scores={gm4_ce_hurt=1..}] gm4_ce_t_hurt 5
 scoreboard players set @s[scores={gm4_ce_kill=1..}] gm4_ce_t_kill 5
+
+# check for archer armor
+tag @s remove gm4_ce_wearing_archer
+tag @s[predicate=gm4_combat_expanded:modified_armor/wearing_archer] add gm4_ce_wearing_archer
 
 # remove husk sprint score if player didn't sprint for too long
 execute unless score @s gm4_ce_sprinting matches 1.. run scoreboard players add @s[scores={gm4_ce_t_sprinting=1..}] gm4_ce_sprinting_timeout 1
@@ -30,7 +34,3 @@ execute if predicate gm4_combat_expanded:modified_armor/wearing run function gm4
 execute if score @s gm4_ce_absorp matches 1.. run function gm4_combat_expanded:player/shield_player
 # heal players if they have stored health
 execute if score @s gm4_ce_healstore matches 1.. run function gm4_combat_expanded:player/heal/heal_calc
-
-## compatability with older versions, can be removed later
-attribute @s[tag=gm4_ce_weak] generic.attack_speed modifier remove 6f512c49-960b-4792-91d3-1f8c73b252ac
-tag @s remove gm4_ce_weak

@@ -1,6 +1,6 @@
 # activate the modifiers on the armor piece
 # @s = player wearing the armor
-# at world spawn
+# at unspecified
 # run from functions in armor/modifier/type/scout/check
 
 # mark for change and set to active

@@ -1,6 +1,6 @@
 # check the modifier on the armor piece
 # @s = player wearing modified armor
-# at world spawn
+# at unspecified
 # run from armor/modifier/check_modifier
 
 function gm4_combat_expanded:player/calculate_hp
@@ -14,3 +14,4 @@ execute if score $modifier gm4_ce_data matches 49 run function gm4_combat_expand
 # high hp
 execute if score $modifier gm4_ce_data matches 50 run function gm4_combat_expanded:armor/modifier/type/solid/check
 execute if score $modifier gm4_ce_data matches 51 if score @s gm4_ce_health > $half_health gm4_ce_data run function gm4_combat_expanded:armor/modifier/type/immune/get_immunities
+execute if score $modifier gm4_ce_data matches 52 run function gm4_combat_expanded:armor/modifier/type/half/apply

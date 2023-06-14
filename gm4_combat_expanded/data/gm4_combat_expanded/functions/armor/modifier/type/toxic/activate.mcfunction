@@ -34,7 +34,5 @@ execute if score $level gm4_ce_data matches 1 on attacker run effect give @s[tag
 execute if score $level gm4_ce_data matches 2 on attacker run effect give @s[tag=!smithed.strict] poison 10 0
 execute if score $level gm4_ce_data matches 3 on attacker run effect give @s[tag=!smithed.strict] poison 15 0
 
-execute on attacker run say test
-
 # toxic particles
 execute positioned ~ ~.6 ~ summon marker run function gm4_combat_expanded:armor/modifier/type/toxic/particles

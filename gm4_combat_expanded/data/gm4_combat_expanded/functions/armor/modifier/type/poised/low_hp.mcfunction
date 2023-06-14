@@ -1,6 +1,6 @@
 # activate the positive modifiers on the armor piece
 # @s = player wearing the armor
-# at world spawn
+# at unspecified
 # run from functions in armor/modifier/type/poised/check
 
 # mark for change and set to -active

@@ -1,6 +1,6 @@
 # stores random values in scoreboards and storage which can be used for identification
 # @s = player wearing the armor
-# at world spawn
+# at unspecified
 # run from armor/identify/pick_mod
 
 # use loot tables to fill shulker box with items

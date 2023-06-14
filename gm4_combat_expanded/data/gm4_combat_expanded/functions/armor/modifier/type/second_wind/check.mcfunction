@@ -1,6 +1,6 @@
 # check if second_wind piece is off cooldown
 # @s = player wearing armor
-# at world spawn
+# at unspecified
 # run from armor/check_modifier/hp_check
 
 # get cooldown of piece

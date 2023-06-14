@@ -276,7 +276,7 @@
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.quick",
-              "fallback": "Swift %s",
+              "fallback": "Light %s",
               "with": [
                 {
                   "nbt": "tag.gm4_combat_expanded.name",

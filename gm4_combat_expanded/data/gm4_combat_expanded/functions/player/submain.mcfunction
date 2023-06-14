@@ -1,6 +1,6 @@
 # process anything player related
 # @s = unspecified
-# at world spawn
+# at unspecified
 # scheduled from main (8t)
 
 # transfer damage from players that were guarded

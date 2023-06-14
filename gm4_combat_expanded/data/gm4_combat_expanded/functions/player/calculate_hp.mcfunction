@@ -1,7 +1,7 @@
 # calculate the red health of player calling this function and store in scoreboard gm4_ce_health
 # $max_health and $half_health in gm4_ce_data temporaraly store max and half of max health
 # @s = player to calculate health from
-# at world spawn
+# at unspecified
 # run from armor/identify/check_unid
 # run from armor/modifier/type/hp_check
 # run from armor/modifier/type/guardian/damage_calc

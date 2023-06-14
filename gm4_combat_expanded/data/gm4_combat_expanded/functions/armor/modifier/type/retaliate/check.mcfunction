@@ -1,6 +1,6 @@
 # check if armor should activate
 # @s = player being checked
-# at world spawn
+# at unspecified
 # run from armor/check_modifier/unsafe
 
 # activate armor if player has not taken damage for 5 seconds

@@ -16,11 +16,8 @@ execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add 
 execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add $mob_damage gm4_ce_data 2
 execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add $mob_toughness gm4_ce_data 2
 
-# increase reinforcement chance at difficulty >= 11
-execute if score $difficulty gm4_ce_data matches 11.. run attribute @s zombie.spawn_reinforcements modifier add 7c9e8885-af69-4a6d-920e-76ffe9a589ed "gm4_ce_challenger_buff" 0.5 add
-
-# double armor drop rate at diff 11 or above
-execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s ArmorDropChances set value [0.17F,0.17F,0.17F,0.17F]
+# quadruple armor drop rate at diff 11 or above
+execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s ArmorDropChances set value [0.34F,0.34F,0.34F,0.34F]
 
 # biome specific modifiers for this mob
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_toughness gm4_ce_data 4
@@ -49,6 +46,9 @@ execute if score $mob_damage gm4_ce_data matches 0 run data modify entity @s[pre
 execute if data entity @s[type=zombie] Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}] run function gm4_combat_expanded:mob/effect/zombie_leader
 execute if data entity @s[type=zombie_villager] Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}] run data remove entity @s Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}]
 execute if entity @s[tag=gm4_ce_miniboss] run function gm4_combat_expanded:mob/effect/zombie_miniboss
+
+# check if zombie is spawned from reinforcements
+execute if data entity @s Attributes[{Modifiers:[{Name:"Zombie reinforcement callee charge"}]}] run function gm4_combat_expanded:mob/effect/zombie_reinforcement
 
 # set modifiers
 function gm4_combat_expanded:mob/modifier/prep

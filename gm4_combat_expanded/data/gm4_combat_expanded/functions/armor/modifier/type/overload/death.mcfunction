@@ -1,6 +1,6 @@
 # custom death message from overload death
 # @s = player that died
-# at world spawn
+# at unspecified
 # run from armor/type/overload/activate
 
 # display custom death message if death messages are on

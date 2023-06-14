@@ -16,11 +16,8 @@ execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add 
 execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add $mob_damage gm4_ce_data 2
 execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add $mob_toughness gm4_ce_data 2
 
-# increase reinforcement chance at difficulty >= 11
-execute if score $difficulty gm4_ce_data matches 11.. run attribute @s zombie.spawn_reinforcements modifier add 7c9e8885-af69-4a6d-920e-76ffe9a589ed "gm4_ce_challenger_buff" 0.5 add
-
-# double armor drop rate at diff 11 or above
-execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s ArmorDropChances set value [0.17F,0.17F,0.17F,0.17F]
+# quadruple armor drop rate at diff 11 or above
+execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s ArmorDropChances set value [0.34F,0.34F,0.34F,0.34F]
 
 # biome specific modifiers for this mob
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_toughness gm4_ce_data 4

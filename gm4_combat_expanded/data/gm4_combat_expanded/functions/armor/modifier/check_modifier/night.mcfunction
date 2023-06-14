@@ -1,6 +1,6 @@
 # check the modifier on the armor piece
 # @s = player wearing modified armor
-# at world spawn
+# at unspecified
 # run from armor/modifier/check_modifier
 
 execute if score $modifier gm4_ce_data matches 60 run function gm4_combat_expanded:armor/modifier/type/nocturnal/check

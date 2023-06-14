@@ -1,6 +1,6 @@
 # check if thorns armor should be active
 # @s = player wearing armour
-# at world spawn
+# at unspecified
 # run from armor/check_modifier/hp_check
 
 # activate armor if hp below half

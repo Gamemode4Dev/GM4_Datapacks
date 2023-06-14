@@ -1,6 +1,6 @@
 # grant immunity tags to player depending on the armor worn
 # @s = player wearing immune armour above 50% health
-# at world spawn
+# at unspecified
 # run from armor/modifier/check_modifier/hp_check
 
 # get levels

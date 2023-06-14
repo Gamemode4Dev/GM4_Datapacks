@@ -1,6 +1,6 @@
 # deactivate active thorns armor
 # @s = player wearing armour
-# at world spawn
+# at unspecified
 # run from armor/modifier/type/thorns/check
 
 # mark for change and set to active

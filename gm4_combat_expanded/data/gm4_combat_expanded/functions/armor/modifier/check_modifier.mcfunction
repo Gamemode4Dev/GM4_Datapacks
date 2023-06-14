@@ -1,6 +1,6 @@
 # check the modifier on the armor piece
 # @s = player wearing modified armor
-# at world spawn
+# at unspecified
 # run from functions in armor/slot/SLOT/check
 
 # store information

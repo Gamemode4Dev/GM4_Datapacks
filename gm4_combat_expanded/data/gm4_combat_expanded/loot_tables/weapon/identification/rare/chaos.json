@@ -329,7 +329,7 @@
               "name": "$random_value"
             },
             "score": "gm4_ce_data",
-            "scale": 10
+            "scale": 50
           }
         }
       ]

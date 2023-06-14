@@ -13,8 +13,8 @@ execute if score $level gm4_ce_data matches 3 run effect give @s slowness 2 10
 execute if score $level gm4_ce_data matches 4 run effect give @s slowness 4 10
 
 # damage mobs at higher levels
-execute if score $level gm4_ce_data matches 3 run effect give @s wither 2 4 true
-execute if score $level gm4_ce_data matches 4 run effect give @s wither 4 4 true
+execute if score $level gm4_ce_data matches 3 run damage @s 4 freeze
+execute if score $level gm4_ce_data matches 4 run damage @s 8 freeze
 
 # extra effects
 effect give @s weakness 2 10 true

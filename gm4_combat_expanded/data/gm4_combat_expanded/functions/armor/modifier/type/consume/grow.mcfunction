@@ -1,6 +1,6 @@
 # increase the damage bonus on the consuming armor
 # @s = player to consume power
-# at world spawn
+# at unspecified
 # run from armor/check_modifier/killing
 
 # put changes on armor piece

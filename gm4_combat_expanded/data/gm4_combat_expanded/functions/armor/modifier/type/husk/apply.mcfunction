@@ -1,6 +1,6 @@
 # grant ramping move speed and hunger to sprinting player
 # @s = player wearing husk armour above 50% health and sprinting
-# at world spawn
+# at unspecified
 # run from armor/modifier/check_modifier/equip
 
 # advance sprinting timer (can advance by 1 for every husk armor piece) if player is sprinting

@@ -1,6 +1,6 @@
 # kill the guardian if they took damage exceeding their health
 # @s = player that died while guarding
-# at world spawn
+# at unspecified
 # run from armor/type/guardian/damage_calc
 
 # advancement

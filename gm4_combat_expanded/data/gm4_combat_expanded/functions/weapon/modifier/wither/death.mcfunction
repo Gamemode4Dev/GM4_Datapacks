@@ -1,6 +1,6 @@
 # custom death message for player that died from wither self-damage
 # @s = player that died 
-# at world spawn
+# at unspecified
 # run from weapon/modifier/wither/activate
 
 # display custom death message if death messages are on

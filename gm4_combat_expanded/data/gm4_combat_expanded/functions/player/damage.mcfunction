@@ -1,6 +1,6 @@
 # damage player according to score
 # @s = player that is taking damage
-# at world spawn
+# at unspecified
 # run from armor/modifier/type/guardian/damage_calc 
 # run from weapon/modifier/delay/explode_player
 
