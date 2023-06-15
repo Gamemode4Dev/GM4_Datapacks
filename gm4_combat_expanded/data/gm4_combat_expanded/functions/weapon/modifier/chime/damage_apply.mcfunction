@@ -1,10 +1,11 @@
-# apply chime damage
-# @s = mob being hit
-# at @s
-# run from weapon/check_modifier
 
-# find tagged target
-scoreboard players set $chime_target gm4_ce_data 0
-execute anchored eyes positioned ^ ^ ^2.5 as @e[distance=..2.4,tag=gm4_ce_chimed,predicate=gm4_combat_expanded:technical/unblocked_hit] run function gm4_combat_expanded:weapon/modifier/chime/damage_grow
-
-execute anchored eyes positioned ^ ^ ^2.5 as @e[distance=..2.4,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict] run function gm4_combat_expanded:weapon/modifier/glow/glow
+scoreboard players set $chime_target gm4_ce_data 1
+execute if score $chime_damage gm4_ce_data matches 2 run damage @s 2 player_attack
+execute if score $chime_damage gm4_ce_data matches 4 run damage @s 4 player_attack
+execute if score $chime_damage gm4_ce_data matches 8 run damage @s 8 player_attack
+execute if score $chime_damage gm4_ce_data matches 16 run damage @s 16 player_attack
+execute if score $chime_damage gm4_ce_data matches 32 run damage @s 32 player_attack
+execute if score $chime_damage gm4_ce_data matches 64 run damage @s 64 player_attack
+execute if score $chime_damage gm4_ce_data matches 128 run damage @s 128 player_attack
+execute if score $chime_damage gm4_ce_data matches 256 run damage @s 256 player_attack
+scoreboard players operation $chime_damage gm4_ce_data *= #2 gm4_ce_data

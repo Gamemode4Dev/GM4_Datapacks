@@ -35,6 +35,9 @@ scoreboard objectives add gm4_ce_generation dummy
 scoreboard objectives add gm4_ce_atkd dummy
 scoreboard objectives add gm4_ce_swimming minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add gm4_ce_used_bow minecraft.used:minecraft.bow
+scoreboard objectives add gm4_ce_chime_damage dummy
+scoreboard objectives add gm4_ce_giant_damage minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add gm4_ce_giant_damage_stored dummy
 
 # constants
 scoreboard players set #0 gm4_ce_data 0

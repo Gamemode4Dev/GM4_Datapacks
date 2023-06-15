@@ -322,15 +322,7 @@
         },
         {
           "function": "minecraft:enchant_with_levels",
-          "levels": {
-            "type": "minecraft:score",
-            "target": {
-              "type": "minecraft:fixed",
-              "name": "$random_value"
-            },
-            "score": "gm4_ce_data",
-            "scale": 50
-          }
+          "levels": 50
         }
       ]
     }
