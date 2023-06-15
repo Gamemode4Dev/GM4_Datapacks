@@ -9,6 +9,8 @@ pipeline:
     pipeline:
       - gm4.plugins.manifest.write_updates
       - gm4.plugins.manifest.write_credits
+      - require: [beet.contrib.copy_files]
+        meta: {copy_files: {data_pack: {LICENSE.md: "../LICENSE.md"}}}
       - gm4.plugins.readme_generator
       - gm4.plugins.write_mcmeta
       - gm4.plugins.output.release
