@@ -8,12 +8,13 @@ import yaml
 import logging
 from gm4.utils import run, Version
 
-logger = logging.getLogger("gm4")
+parent_logger = logging.getLogger("gm4.manifest")
 
 
 def create(ctx: Context):
 	"""Collect a manifest for all modules from respective beet.yaml files."""
 	modules: dict[str, dict[str, Any]] = { p.name:{"id": p.name} for p in sorted(ctx.directory.glob("gm4_*")) }
+	logger = parent_logger.getChild("create")
 
 	for m_key in modules:
 		module = modules[m_key]
@@ -41,6 +42,7 @@ def create(ctx: Context):
 			module["pmc_link"] = project_config.get("meta", {}).get("planetminecraft", {}).get("uid") # NOTE PMC currently has no API, so this field is just made of hope
 			module.update()
 		else:
+			logger.debug(f"No beet.yaml found for {m_key}")
 			module["id"] = None
 
 	# If a module doesn't have a valid beet.yaml file don't include it
@@ -58,6 +60,8 @@ def create(ctx: Context):
 			lib["name"] = project_config["name"]
 			lib["version"] = project_config.get("version", "0.0.0")
 			lib["requires"] = project_config.get("meta", {}).get("gm4", {}).get("required", [])
+		else:
+			logger.debug(f"No beet.yaml found for {l_key}")
 
 	# Read the contributors metadata
 	contributors_file = Path("contributors.json")
@@ -65,6 +69,7 @@ def create(ctx: Context):
 		contributors_list = json.loads(contributors_file.read_text())
 		contributors: Any = {c["name"]: c for c in contributors_list}
 	else:
+		logger.debug("No contributors.json found")
 		contributors = []
 
 	# Read the gm4 base module metadata
@@ -90,6 +95,7 @@ def update_patch(ctx: Context):
 	version = os.getenv("VERSION", "1.20")
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
+	logger = parent_logger.getChild("update_patch")
 
 	modules = ctx.cache["gm4_manifest"].json["modules"]
 
@@ -98,6 +104,7 @@ def update_patch(ctx: Context):
 		last_commit = manifest["last_commit"]
 		released_modules: dict[str, dict[str, Any]] = {m["id"]:m for m in manifest["modules"] if m.get("version", None)}
 	else:
+		logger.debug("No existing meta.json manifest file was located")
 		last_commit = None
 		released_modules = {}
 
@@ -115,6 +122,7 @@ def update_patch(ctx: Context):
 		elif not released:
 			# First release
 			module["version"] = module["version"].replace("X", "0")
+			logger.debug(f"First release of {id}")
 		else:
 			# Changes were made, bump the patch
 			version = Version(module["version"])

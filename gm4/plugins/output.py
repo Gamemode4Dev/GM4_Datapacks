@@ -70,7 +70,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 	'''Attempts to publish pack to modrinth'''
 	modrinth = ctx.meta.get("modrinth", None)
 	auth_token = os.getenv(MODRINTH_AUTH_KEY, None)
-	logger = parent_logger.getChild("modrinth")
+	logger = parent_logger.getChild(f"modrinth.{ctx.project_id}")
 	if modrinth and auth_token:
 		modrinth_id = modrinth["project_id"]
 		
@@ -84,6 +84,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 			return
 		existing_readme = res.json()["body"]
 		if existing_readme != (d:=ctx.meta['modrinth_readme'].text):
+			logger.debug("Readme and modrinth-page content differ. Updating webpage body")
 			res = requests.patch(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, json={"body": d})
 			if not (200 <= res.status_code < 300):
 				logger.warning(f"Failed to update description: {res.status_code} {res.text}")
@@ -93,7 +94,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 		if ctx.project_version:
 			version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
 			if version is None:
-				logger.info("Full version number not available in ctx.meta. Skipping publishing")
+				logger.warning("Full version number not available in ctx.meta. Skipping publishing")
 				return
 
 			res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}/version", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT})
@@ -109,6 +110,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 			if matching_version is not None: # patch version already exists
 				# update mc versions if necessary
 				if not set(matching_version["game_versions"]) == set(game_versions):
+					logger.debug("Additional MC version support has been added to an existing patch version. Updating existing modrinth version data")
 					res = requests.patch(f"{MODRINTH_API}/version/{matching_version['id']}", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, json={
 						"game_versions": game_versions
 					})
@@ -145,10 +147,10 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 	"""Attempts to publish pack to smithed"""
 	smithed = ctx.meta.get("smithed", None)
 	auth_token = os.getenv(SMITHED_AUTH_KEY, None)
-	logger = parent_logger.getChild("smithed")
+	logger = parent_logger.getChild(f"smithed.{ctx.project_id}")
 	mc_version_dir = os.getenv("VERSION", "1.20")
 	if smithed and auth_token and ctx.project_version:
-		version = version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
+		version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
 		smithed_id = smithed["pack_id"]
 
 		# get project data and existing versions
@@ -169,6 +171,7 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 		current_readme = f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/{mc_version_dir}/generated/smithed_readmes/{ctx.project_id}.md"
 
 		if project_display["icon"] != current_icon or project_display["webPage"] != current_readme:
+			logger.debug("Pack Icon or Readme hyperlink is incorrect. Updating project")
 			res = requests.patch(f"{SMITHED_API}/packs/{smithed_id}", params={'token': auth_token},
 				json={"data": {
 						"display": {
