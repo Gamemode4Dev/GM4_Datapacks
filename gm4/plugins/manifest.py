@@ -5,7 +5,10 @@ from functools import cache
 import json
 import os
 import yaml
+import logging
 from gm4.utils import run, Version
+
+logger = logging.getLogger("gm4")
 
 
 def create(ctx: Context):
@@ -121,7 +124,7 @@ def update_patch(ctx: Context):
 				version.patch = 0
 			else:
 				version.patch = last_ver.patch + 1 # type: ignore
-				print(f"[GM4] Updating {id} patch to {version.patch}")
+				logger.info(f"Updating {id} patch to {version.patch}")
 
 			module["version"] = str(version)
 

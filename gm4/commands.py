@@ -1,6 +1,7 @@
 import click
 import json
 import shutil
+import logging
 from beet import Project
 from beet.toolchain.cli import beet
 import beet.toolchain.commands as commands
@@ -28,6 +29,10 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, 
 		shutil.rmtree("out", ignore_errors=True)
 
 	click.echo(f"[GM4] Building modules: {', '.join(modules)}")
+
+	logger = logging.getLogger()
+	logger.setLevel(logging.INFO)
+	# logger.addHandler(LogHandler()) # TODO configure the log handler to GM4's preferred formatting
 
 	project.config_path = "beet-dev.yaml"
 	config = {
