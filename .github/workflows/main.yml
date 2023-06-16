@@ -9,7 +9,7 @@ on:
 env:
   VERSION: '1.20'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
-  LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO' }}
+  LOG_LEVEL: ${{ runner.debug == '1' && 'DEBUG' || 'INFO' }}
 
 jobs:
   test:
