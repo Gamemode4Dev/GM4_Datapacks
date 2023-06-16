@@ -16,7 +16,8 @@ pass_project = click.make_pass_decorator(Project) # type: ignore
 @click.option("-r", "--reload", is_flag=True, help="Enable live data pack reloading.")
 @click.option("-l", "--link", metavar="WORLD", help="Link the project before watching.")
 @click.option("-c", "--clean", is_flag=True, help="Clean the output folder.")
-def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, reload: bool, link: str | None, clean: bool):
+@click.option("--log", default="INFO", type=str, help="Set the logger level")
+def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, reload: bool, link: str | None, clean: bool, log: int | str):
 	"""Build or watch modules for development."""
 
 	modules = tuple(m if m.startswith("gm4_") else f"gm4_{m}" for m in modules)
@@ -31,7 +32,7 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, 
 	click.echo(f"[GM4] Building modules: {', '.join(modules)}")
 
 	logger = logging.getLogger()
-	logger.setLevel(logging.INFO)
+	logger.setLevel(log)
 	# logger.addHandler(LogHandler()) # TODO configure the log handler to GM4's preferred formatting
 
 	project.config_path = "beet-dev.yaml"
