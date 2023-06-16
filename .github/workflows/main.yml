@@ -9,7 +9,6 @@ on:
 env:
   VERSION: '1.20'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
-  LOG_LEVEL: ${{ runner.debug == '1' && 'DEBUG' || 'INFO' }}
 
 jobs:
   test:
@@ -71,10 +70,13 @@ jobs:
         env:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
+          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
       - name: Build all modules for pull request
         if: github.event_name == 'pull_request'
         run: poetry run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
+        env:
+          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'
