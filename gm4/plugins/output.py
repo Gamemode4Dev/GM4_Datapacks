@@ -1,5 +1,6 @@
 from beet import Context
 from pathlib import Path
+from bolt import Module
 import os
 import json
 import requests
@@ -20,6 +21,8 @@ def beet_default(ctx: Context):
 	"""Saves the datapack to the ./out folder."""
 	version = os.getenv("VERSION", "1.20")
 	out_dir = Path("out")
+
+	ctx.data[Module].clear() # manually cleanup bolt modules
 
 	ctx.data.save(
 		path=out_dir / f"{ctx.project_id}_{version.replace('.', '_')}",
@@ -42,6 +45,8 @@ def release(ctx: Context):
 	version_dir = os.getenv("VERSION", "1.20")
 	release_dir = Path("release") / version_dir
 	file_name = f"{ctx.project_id}_{version_dir.replace('.', '_')}.zip"
+
+	ctx.data[Module].clear() # manually cleanup bolt modules
 	
 	ctx.data.save(
 		path=release_dir / file_name,
