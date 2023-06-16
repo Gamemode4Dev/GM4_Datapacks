@@ -14,7 +14,6 @@ MODRINTH_AUTH_KEY = "BEET_MODRINTH_TOKEN"
 SMITHED_API = "https://api.smithed.dev/v2"
 SMITHED_AUTH_KEY = "BEET_SMITHED_TOKEN"
 SUPPORTED_GAME_VERSIONS = ["1.20", "1.20.1"]
-	# NOTE smithed only takes one game version number. Uses the first value in this list
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/release-pipeline (gamemode4official@gmail.com)"
 
 def beet_default(ctx: Context):
@@ -154,7 +153,7 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 		smithed_id = smithed["pack_id"]
 
 		# get project data and existing versions
-		res = requests.get(f"{SMITHED_API}/packs/{smithed_id}")#/versions")
+		res = requests.get(f"{SMITHED_API}/packs/{smithed_id}")
 		if not (200 <= res.status_code < 300):
 			if res.status_code == 404:
 				logger.warning(f"Cannot publish to smithed project {smithed_id} as it doesn't exist.")
@@ -185,11 +184,23 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 
 		project_versions = project_data["versions"]
 		matching_version = next((v for v in project_versions if v["name"] == str(version)), None)
-		if matching_version is not None:
+		print(project_versions)
+		game_versions = smithed.get("minecraft", SUPPORTED_GAME_VERSIONS)
+		if matching_version is not None: # patch version already exists
+			# update MC version if necessary
+			if not set(matching_version["supports"]) == set(game_versions):
+				logger.debug("Additional MC version support has been added to an existing patch version. Updating existing smithed version data")
+				res = requests.patch(f"{SMITHED_API}/packs/{smithed_id}/versions/{matching_version['name']}", params={'token': auth_token}, json={
+					"data": {
+						"supports": game_versions
+					}
+				})
+				if not (200 <= res.status_code < 300):
+					logger.warning(f"Failed to patch project versions: {res.status_code} {res.text}")
 			return
 
 		# remove other existing versions for that mc version
-		mc_version_matching_version = (v["name"] for v in project_versions if v['supports'][0] == SUPPORTED_GAME_VERSIONS[0]) # NOTE smithed currently only supports one game version
+		mc_version_matching_version = (v["name"] for v in project_versions if set(v['supports']) & set(game_versions))
 		for v in mc_version_matching_version:
 			res = requests.delete(f"{SMITHED_API}/packs/{smithed_id}/versions/{v}", params={'token': auth_token})
 			if not (200 <= res.status_code < 300):
@@ -206,7 +217,7 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 					"resourcepack": ""
 				},
 				"name": version,
-				"supports": SUPPORTED_GAME_VERSIONS[0],
+				"supports": game_versions,
 				"dependencies": []
 			}}
 		)
