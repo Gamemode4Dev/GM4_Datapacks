@@ -184,7 +184,6 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 
 		project_versions = project_data["versions"]
 		matching_version = next((v for v in project_versions if v["name"] == str(version)), None)
-		print(project_versions)
 		game_versions = smithed.get("minecraft", SUPPORTED_GAME_VERSIONS)
 		if matching_version is not None: # patch version already exists
 			# update MC version if necessary
