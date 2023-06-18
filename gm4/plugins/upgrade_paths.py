@@ -19,4 +19,5 @@ def beet_default(ctx: Context):
         for path in upgrade_paths_tree.keys():
             run_func.append(f'execute if score {score_holder} gm4_earliest_version matches ..{Version(path+".0").int_rep() -1} run function {ns}:{direc}/{path}')
     
-    ctx.data[f'{ctx.project_id}:upgrade_paths/run'] = run_func
+    if len(run_func.lines) > 0:
+        ctx.data[f'{ctx.project_id}:upgrade_paths/run'] = run_func
