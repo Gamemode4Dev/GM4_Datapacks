@@ -16,7 +16,9 @@
                                 },
                                 "score": "gm4_data"
                             },
-                            "range": 1
+                            "range": {
+                                "min": 1
+                            }
                         }
                     }
                 ]
