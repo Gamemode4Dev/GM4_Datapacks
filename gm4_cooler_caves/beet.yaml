@@ -1,15 +1,13 @@
-extend: '../module.yaml'
-
 id: gm4_cooler_caves
 name: Cooler Caves
 version: 2.2.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../pfb_biome_extensions'
-    data_pack:
-      load: .
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.pfb_biome_extensions
 
 meta:
   gm4:

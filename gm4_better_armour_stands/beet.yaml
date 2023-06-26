@@ -1,12 +1,12 @@
-extend: '../module.yaml'
-
 id: gm4_better_armour_stands
 name: Better Armour Stands
 version: 2.2.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
 
 meta:
   gm4:

@@ -1,12 +1,12 @@
-extend: '../module.yaml'
-
 id: gm4_shapeless_portals
 name: Shapeless Portals
 version: 1.0.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
 
 meta:
   gm4:

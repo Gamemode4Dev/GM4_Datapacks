@@ -1,16 +1,14 @@
-extend: '../module.yaml'
-
 id: gm4_orb_of_ankou
 name: Orb of Ankou
 version: 1.4.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../lib_custom_crafters'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
   - gm4_orb_of_ankou.generate_corripio
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_custom_crafters
 
 meta:
   gm4:

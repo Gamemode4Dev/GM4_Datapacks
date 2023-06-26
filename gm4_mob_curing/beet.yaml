@@ -1,15 +1,13 @@
-extend: '../module.yaml'
-
 id: gm4_mob_curing
 name: Mob Curing
 version: 1.4.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../lib_trades'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_trades
 
 meta:
   gm4:
