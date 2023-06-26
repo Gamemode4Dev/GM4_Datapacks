@@ -1,21 +1,16 @@
-extend: '../module.yaml'
-
 id: gm4_zauber_cauldrons
 name: Zauber Cauldrons
 version: 1.8.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../lib_forceload'
-    extend: 'beet.yaml'
-  - directory: '../lib_player_heads'
-    extend: 'beet.yaml'
-  - directory: '../lib_brewing'
-    extend: 'beet.yaml'
-  - directory: '../lib_trades'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_forceload
+  - gm4.plugins.include.lib_player_heads
+  - gm4.plugins.include.lib_brewing
+  - gm4.plugins.include.lib_trades
 
 meta:
   gm4:

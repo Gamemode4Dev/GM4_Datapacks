@@ -1,15 +1,13 @@
-extend: '../module.yaml'
-
 id: gm4_liquid_minecarts
 name: Liquid Minecarts
 version: 1.4.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../lib_machines'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_machines
 
 meta:
   gm4:
