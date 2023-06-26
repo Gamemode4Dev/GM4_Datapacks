@@ -2,4 +2,5 @@
 # at @s
 # run from gm4:upgrade_paths/changed_dimension advancement
 advancement revoke @s only gm4:upgrade_paths/changed_dimension
-function #gm4_upgrade_paths:run
+tag @s add gm4_running_upgrade_path
+function gm4:upgrade_paths/run_when_loaded

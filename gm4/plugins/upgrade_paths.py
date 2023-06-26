@@ -24,4 +24,5 @@ def beet_default(ctx: Context):
     
     if len(run_func.lines) > 0:
         run_func.append(f'execute if score {score_holder} gm4_earliest_version matches ..{Version(str(newest_version_with_upgrades)+".0").int_rep() -1} run scoreboard players add $active_upgrade_paths gm4_data 1')
+        run_func.append(f'tag @s remove gm4_running_upgrade_path')
         ctx.data[f'{ctx.project_id}:upgrade_paths/run'] = run_func
