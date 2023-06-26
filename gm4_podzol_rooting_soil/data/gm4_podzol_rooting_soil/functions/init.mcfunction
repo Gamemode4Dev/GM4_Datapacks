@@ -5,6 +5,7 @@ scoreboard players set #200 gm4_podzol_data 200
 
 # base
 execute unless score podzol_rooting_soil gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Podzol Rooting Soil"}
+execute unless score podzol_rooting_soil gm4_earliest_version < podzol_rooting_soil gm4_modules run scoreboard players operation podzol_rooting_soil gm4_earliest_version = podzol_rooting_soil gm4_modules
 scoreboard players set podzol_rooting_soil gm4_modules 1
 
 schedule function gm4_podzol_rooting_soil:main 10t

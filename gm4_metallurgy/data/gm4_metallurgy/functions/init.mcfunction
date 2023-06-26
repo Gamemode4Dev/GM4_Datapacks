@@ -94,6 +94,7 @@ scoreboard players set #shock_multiplier gm4_vibro_shock 20
 scoreboard players set #100 gm4_vibro_shock 100
 
 execute unless score metallurgy gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Metallurgy"}
+execute unless score metallurgy gm4_earliest_version < metallurgy gm4_modules run scoreboard players operation metallurgy gm4_earliest_version = metallurgy gm4_modules
 scoreboard players set metallurgy gm4_modules 1
 
 schedule function gm4_metallurgy:main 1t
