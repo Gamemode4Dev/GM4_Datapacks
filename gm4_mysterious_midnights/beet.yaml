@@ -1,15 +1,13 @@
-extend: '../module.yaml'
-
 id: gm4_mysterious_midnights
 name: Mysterious Midnights
 version: 1.3.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../lib_forceload'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_forceload
 
 meta:
   gm4:

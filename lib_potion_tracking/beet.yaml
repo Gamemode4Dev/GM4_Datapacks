@@ -2,12 +2,13 @@ id: gm4_potion_tracking
 name: Gamemode 4 Potion Tracking
 version: 1.0.0
 
-extend: '../library.yaml'
+data_pack:
+  load: 
+    data: data
+
 pipeline:
-  - directory: '../lib_forceload'
-    extend: 'beet.yaml'
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.library
+  - gm4.plugins.include.lib_forceload
 
 meta:
   gm4:

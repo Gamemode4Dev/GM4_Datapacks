@@ -1,12 +1,12 @@
-extend: '../module.yaml'
-
 id: gm4_sweethearts
 name: Sweethearts
 version: 1.3.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
 
 meta:
   gm4:

@@ -1,15 +1,13 @@
-extend: '../module.yaml'
-
 id: gm4_potion_liquids
 name: Potion Liquids
 version: 1.4.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../lib_brewing'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_brewing
 
 meta:
   gm4:

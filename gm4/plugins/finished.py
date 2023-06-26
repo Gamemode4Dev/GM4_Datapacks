@@ -1,4 +1,7 @@
 from beet import Context
+import logging
+
+logger = logging.getLogger("gm4")
 
 def beet_default(ctx: Context):
-	print("[GM4] Finished!")
+	logger.info("Finished!")

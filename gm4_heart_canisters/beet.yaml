@@ -1,17 +1,14 @@
-extend: '../module.yaml'
-
 id: gm4_heart_canisters
 name: Heart Canisters
 version: 1.5.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../lib_player_heads'
-    extend: 'beet.yaml'
-  - directory: '../lib_custom_crafters'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_player_heads
+  - gm4.plugins.include.lib_custom_crafters
 
 meta:
   gm4:
