@@ -17,7 +17,8 @@ def beet_default(ctx: Context):
     newest_version_with_upgrades = 0.0
     for ns, direc in map(lambda a: a.split(':'), upgrade_paths_dirs):
         upgrade_paths_tree = ctx.data[ns].functions.generate_tree(direc)
-        newest_version_with_upgrades = max(newest_version_with_upgrades, max(map(float, upgrade_paths_tree.keys())))
+        if upgrade_paths_tree:
+            newest_version_with_upgrades = max(newest_version_with_upgrades, max(map(float, upgrade_paths_tree.keys())))
         for path in upgrade_paths_tree.keys():
             run_func.append(f'execute if score {score_holder} gm4_earliest_version matches ..{Version(path+".0").int_rep() -1} run function {ns}:{direc}/{path}')
     
