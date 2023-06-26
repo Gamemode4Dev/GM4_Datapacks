@@ -1,7 +1,26 @@
 {
     "criteria": {
         "requirement": {
-            "trigger": "minecraft:changed_dimension"
+            "trigger": "minecraft:changed_dimension",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": {
+                                    "type": "minecraft:fixed",
+                                    "name": "$disable_upgrade_paths"
+                                },
+                                "score": "gm4_data"
+                            },
+                            "range": 1
+                        }
+                    }
+                ]
+            }
         }
     },
     "rewards": {
