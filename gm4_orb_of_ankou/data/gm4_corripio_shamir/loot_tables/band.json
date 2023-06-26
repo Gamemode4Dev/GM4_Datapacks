@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Corripio",
-                                        {
-                                            "translate": "item.gm4.shamir.corripio"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.corripio",
+                                    "fallback": "Corripio",
                                     "italic": false,
                                     "color": "gray"
                                 }

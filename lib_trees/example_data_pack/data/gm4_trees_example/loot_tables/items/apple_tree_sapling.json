@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:oak_sapling",
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "Apple Tree Sapling",
+								"italic": false,
+								"color": "white"
+							}
+						},
+						{
+							"function": "minecraft:set_nbt",
+							"tag": "{gm4_trees:{item:{id:\"sapling\",type:\"apple\"}}}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

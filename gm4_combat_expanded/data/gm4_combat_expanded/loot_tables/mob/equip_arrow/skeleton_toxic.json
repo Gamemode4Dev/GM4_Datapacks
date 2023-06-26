@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomPotionEffects:[{Id:18,Amplifier:0b,Duration:100},{Id:19,Amplifier:1b,Duration:100}],CustomPotionColor:5149489,HideFlags:32}"
+              "tag": "{CustomPotionEffects:[{Id:18,Amplifier:0b,Duration:100},{Id:17,Amplifier:1b,Duration:100},{Id:19,Amplifier:0b,Duration:100}],CustomPotionColor:5149489,HideFlags:32}"
             },
             {
               "function": "minecraft:set_lore",
@@ -21,7 +21,7 @@
                       "translate": "potion.withAmplifier",
                       "with": [
                         {
-                          "translate": "effect.minecraft.poison"
+                          "translate": "effect.minecraft.hunger"
                         },
                         {
                           "translate": "potion.potency.1"
@@ -38,6 +38,17 @@
                   "with": [
                     {
                       "translate": "effect.minecraft.weakness"
+                    },
+                    "0:05"
+                  ],
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "translate": "potion.withDuration",
+                  "with": [
+                    {
+                      "translate": "effect.minecraft.poison"
                     },
                     "0:05"
                   ],

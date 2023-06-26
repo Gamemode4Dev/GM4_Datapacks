@@ -1,0 +1,32 @@
+id: gm4_mysterious_midnights
+name: Mysterious Midnights
+version: 1.3.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_forceload
+
+meta:
+  gm4:
+    versioning:
+      required:
+        - lib_forceload: 1.1.0
+      schedule_loops: [main]
+    website:
+      description: Full moons gain a element of surprise with Myserious Midnights! This module adds random events during full moons. You might encounter falling stars, or Skeletons wielding poisonous arrows! So you better listen for that howl...
+      recommended:
+        - gm4_midnight_menaces
+      notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Mysterious_Midnights
+    credits:
+      Creator:
+        - Bloo
+      Updated by:
+        - Bloo
+        - BluePsychoRanger
+      Icon Design:
+        - DuckJr

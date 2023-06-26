@@ -1,0 +1,112 @@
+{
+  "name": "gm4_tower_structures:badlands",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/badlands/acacia",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/badlands/basic",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:terracotta",
+                    "probability": 0.25
+                  },
+                  "output_state": { "Name": "minecraft:orange_terracotta" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:terracotta",
+                    "probability": 0.333
+                  },
+                  "output_state": { "Name": "minecraft:red_terracotta" }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/badlands/sandy",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/badlands/tall",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:cut_red_sandstone",
+                    "probability": 0.1
+                  },
+                  "output_state": { "Name": "minecraft:smooth_red_sandstone" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:cut_red_sandstone",
+                    "probability": 0.04
+                  },
+                  "output_state": { "Name": "minecraft:chiseled_red_sandstone" }
+                },
+                {
+                  "location_predicate": { "predicate_type": "minecraft:always_true" },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:cut_red_sandstone",
+                    "probability": 0.9
+                  },
+                  "output_state": { "Name": "minecraft:red_sandstone" }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_tower_structures:tower/acacia",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

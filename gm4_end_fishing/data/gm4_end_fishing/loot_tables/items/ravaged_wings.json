@@ -14,13 +14,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Ravaged Wings",
-                  {
-                    "translate": "item.gm4.end_fishing.ravaged_wings"
-                  }
-                ],
+                "translate": "item.gm4.end_fishing.ravaged_wings",
+                "fallback": "Ravaged Wings",
                 "italic": false
               }
             },

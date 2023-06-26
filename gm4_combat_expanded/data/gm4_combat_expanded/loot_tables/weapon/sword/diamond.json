@@ -36,7 +36,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{damage:70,atkspeed:16,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_sword\"}'}}"
+              "tag": "{gm4_combat_expanded:{identified:0,damage:70,atkspeed:16,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_sword\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",

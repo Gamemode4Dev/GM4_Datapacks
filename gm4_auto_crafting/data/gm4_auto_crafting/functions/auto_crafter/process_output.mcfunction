@@ -24,7 +24,7 @@ data modify storage gm4_auto_crafting:temp output.temp set from storage gm4_auto
 
 # set slot count and stack size
 scoreboard players operation $slot_count gm4_crafting = @s gm4_ac_slot_count
-scoreboard players set $stack_count gm4_crafting 1
+scoreboard players set $stack_size gm4_crafting 1
 
 # mimic custom craft
 function gm4_auto_crafting:auto_crafter/craft/attempt_craft

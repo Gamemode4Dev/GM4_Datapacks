@@ -23,5 +23,8 @@ execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_
 # tnt
 execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/tnt] run function gm4_crossbow_cartridges:projectile/tnt
 
+# beehive
+execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/beehive] run function gm4_crossbow_cartridges:projectile/beehive
+
 tag @s remove gm4_cb_use
 data remove storage gm4_crossbow_cartridges:temp projectile

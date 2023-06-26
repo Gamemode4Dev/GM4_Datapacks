@@ -1,0 +1,21 @@
+id: gm4_trades
+name: Gamemode 4 Trades
+version: 1.3.0
+
+data_pack:
+  load: 
+    data: data
+
+pipeline:
+  - gm4.plugins.extend.library
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [main]
+      extra_version_injections:
+        functions:
+          - wandering_trader/resolve_modify_external
+    credits:
+      Creator:
+        - Bloo

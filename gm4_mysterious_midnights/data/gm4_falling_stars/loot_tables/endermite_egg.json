@@ -10,13 +10,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Endermite Egg",
-                                    {
-                                        "translate": "item.gm4.endermite_egg"
-                                    }
-                                ],
+                                "translate": "item.gm4.endermite_egg",
+                                "fallback": "Endermite Egg",
                                 "italic": false
                             }
                         },
@@ -24,13 +19,8 @@
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Oh, it didn't hatch",
-                                        {
-                                            "translate": "item.gm4.endermite_egg.lore"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.endermite_egg.lore",
+                                    "fallback": "Oh, it didn't hatch",
                                     "color": "dark_gray",
                                     "italic": true
                                 }

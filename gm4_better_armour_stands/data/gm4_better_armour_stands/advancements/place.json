@@ -3,11 +3,16 @@
     "requirement": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "item": {
-          "items": [
-            "minecraft:armor_stand"
-          ]
-        }
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:armor_stand"
+              ]
+            }
+          }
+        ]
       }
     }
   },

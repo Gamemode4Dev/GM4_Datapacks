@@ -1,0 +1,34 @@
+id: gm4_custom_crafters
+name: Gamemode 4 Custom Crafters
+version: 3.0.0
+
+data_pack:
+  load: 
+    data: data
+
+pipeline:
+  - lib_custom_crafters.generate_item_tags
+  - gm4.plugins.module.gm4_root_advancement
+  - gm4.plugins.extend.library
+  - gm4.plugins.include.lib_machines
+
+meta:
+  gm4:
+    versioning:
+      required: [lib_machines: 1.1.0]
+      schedule_loops: [main]
+      extra_version_injections:
+        functions: 
+          - versioning/check_item_tags
+          - check_recipes
+          - machine/verify_destroy
+          - machine/verify_place_down
+        advancements: 
+          - create_custom_crafter
+    credits:
+      Custom Crafters Creators:
+        - Bloo
+        - Sparks
+        - SpecialBuilder32
+      Textures by:
+        - kyrkis

@@ -1,0 +1,27 @@
+id: gm4_weighted_armour
+name: Weighted Armour
+version: 1.5.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [main]
+    website:
+      description: Perfect for UHCs, this module forces you to balance protection with speed.
+      recommended: []
+      notes: []
+    video: https://www.youtube.com/watch?v=rVRSXTGQPbg
+    wiki: https://wiki.gm4.co/wiki/Weighted_Armour
+    credits:
+      Creator:
+        - Sparks
+      Icon Design:
+        - Hozz
+  modrinth:
+    project_id: ReZCIa6j

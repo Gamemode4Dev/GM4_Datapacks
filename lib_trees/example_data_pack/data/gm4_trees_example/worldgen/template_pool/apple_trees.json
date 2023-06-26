@@ -1,0 +1,24 @@
+{
+  "name": "gm4_trees_example:apple_trees",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_trees_example:apple_tree_1",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_trees_example:apple_tree_2",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:loot_table",
+            "name": "gm4_combat_expanded:mob/equip_shield/barbed"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "name": "gm4_combat_expanded:mob/equip_shield/barraging"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "name": "gm4_combat_expanded:mob/equip_shield/brisk"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "name": "gm4_combat_expanded:mob/equip_shield/bulky"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "name": "gm4_combat_expanded:mob/equip_shield/burning"
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Gemini",
-                                        {
-                                            "translate": "item.gm4.shamir.gemini"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.gemini",
+                                    "fallback": "Gemini",
                                     "italic": false,
                                     "color": "gray"
                                 }

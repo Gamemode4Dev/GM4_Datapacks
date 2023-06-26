@@ -12,3 +12,4 @@ effect clear @s[tag=gm4_ce_immune_hunger] hunger
 effect clear @s[tag=gm4_ce_immune_blind] blindness
 effect clear @s[tag=gm4_ce_immune_nausea] nausea
 effect clear @s[tag=gm4_ce_immune_weakness] weakness
+

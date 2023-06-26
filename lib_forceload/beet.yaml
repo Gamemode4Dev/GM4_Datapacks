@@ -1,0 +1,19 @@
+id: gm4_forceload
+name: Gamemode 4 Forceload
+version: 1.1.0
+
+data_pack:
+  load: 
+    data: data
+
+pipeline:
+  - gm4.plugins.extend.library
+
+meta:
+  gm4:
+    versioning:
+      extra_version_injections:
+        advancements: [dimension_marking]
+    credits:
+      Creator:
+        - Misode

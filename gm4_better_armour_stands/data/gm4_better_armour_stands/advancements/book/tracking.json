@@ -3,13 +3,19 @@
     "requirement": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_bas_track\"]}"
+            }
+          }
+        ],
         "item": {
           "items": [
             "minecraft:writable_book"
           ]
-        },
-        "player": {
-          "nbt": "{Tags:[\"gm4_bas_track\"]}"
         },
         "entity": [
           {

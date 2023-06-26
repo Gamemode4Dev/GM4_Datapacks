@@ -14,16 +14,11 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
+                "translate": "item.gm4.trapped_sign",
+                "fallback": "Trapped %s",
                 "with": [
-                  "Trapped Acacia Sign",
                   {
-                    "translate": "item.gm4.trapped_sign",
-                    "with": [
-                      {
-                        "translate": "item.minecraft.acacia_sign"
-                      }
-                    ]
+                    "translate": "block.minecraft.acacia_sign"
                   }
                 ],
                 "italic": false

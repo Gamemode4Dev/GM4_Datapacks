@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "gm4"
+version = "1.0.0"
+description = "Datapacks for https://gm4.co"
+authors = ["Gamemode 4 Contributors"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+beet = "^0.84.0"
+mecha = "^0.67.0"
+bolt = ">=0.20.1"
+PyYAML = "^6.0"
+pydantic = "^1.10.2"
+smithed-libraries = "^0.6.0"
+requests = "^2.28.1"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+isort = "^5.10.1"
+
+[tool.poetry.plugins.beet]
+commands = "gm4.commands"
+
+[tool.pyright]
+typeCheckingMode = "strict"
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
