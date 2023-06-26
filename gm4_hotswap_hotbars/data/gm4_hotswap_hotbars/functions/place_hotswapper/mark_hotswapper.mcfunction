@@ -5,7 +5,7 @@
 
 # update box
 scoreboard players set $found gm4_hh_data 1
-data modify block ~ ~ ~ CustomName set value '{"italic":false,"translate":"%1$s%3427655$s","with":["Customize Hotbars",{"translate":"gui.gm4.hotswapper"}]}'
+data modify block ~ ~ ~ CustomName set value '{"italic":false,"translate":"gui.gm4.hotswapper","fallback":"Customize Hotbars"}'
 
 # summon marker
 summon marker ~ ~ ~ {CustomName:'"gm4_hotswapper"',Tags:["gm4_hotswapper","gm4_machine_marker","gm4_new_machine"]}

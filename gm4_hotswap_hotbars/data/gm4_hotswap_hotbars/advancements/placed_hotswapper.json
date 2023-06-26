@@ -17,10 +17,15 @@
             "range": 1
           }
         ],
-        "item": {
-          "tag": "gm4_hotswap_hotbars:shulker_boxes",
-          "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
-        }
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "tag": "gm4_hotswap_hotbars:shulker_boxes",
+              "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
+            }
+          }
+        ]
       }
     }
   },
