@@ -26,3 +26,11 @@ def beet_default(ctx: Context):
         run_func.append(f'execute if score {score_holder} gm4_earliest_version matches ..{Version(str(newest_version_with_upgrades)+".0").int_rep() -1} run scoreboard players add $active_upgrade_paths gm4_data 1')
         run_func.append(f'tag @s remove gm4_running_upgrade_path')
         ctx.data[f'{ctx.project_id}:upgrade_paths/run'] = run_func
+
+def lib(ctx: Context):
+    """Runs additional processing to assign libraries a psudo gm4_modules score for comparison"""
+    score_holder = ctx.project_id.removeprefix('gm4_')
+    ver_int = Version(ctx.project_version).int_rep()
+    ctx.data.functions[f'{ctx.project_id}:load'].append(f'execute unless score {score_holder} gm4_earliest_version matches ..{ver_int} run scoreboard players set {score_holder} gm4_earliest_version {ver_int}')
+
+    beet_default(ctx)
