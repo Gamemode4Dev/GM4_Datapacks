@@ -11,11 +11,14 @@ pipeline:
   - gm4.plugins.module.gm4_root_advancement
   - gm4.plugins.extend.library
   - gm4.plugins.include.lib_machines
+  - gm4.plugins.include.lib_forceload
 
 meta:
   gm4:
     versioning:
-      required: [lib_machines: 1.1.0]
+      required: 
+        - lib_machines: 1.1.0
+        - lib_forceload: 1.2.0
       schedule_loops: [main]
       extra_version_injections:
         functions: 
