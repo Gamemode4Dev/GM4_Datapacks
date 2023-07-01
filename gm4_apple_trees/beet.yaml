@@ -1,17 +1,14 @@
-extend: '../module.yaml'
-
 id: gm4_apple_trees
 name: Apple Trees
 version: 2.2.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../lib_trades'
-    extend: 'beet.yaml'
-  - directory: '../lib_trees'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_trades
+  - gm4.plugins.include.lib_trees
 
 meta:
   gm4:

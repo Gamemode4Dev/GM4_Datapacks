@@ -1,17 +1,14 @@
-extend: '../module.yaml'
-
 id: gm4_metallurgy
 name: Metallurgy
 version: 1.4.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../lib_lore'
-    extend: 'beet.yaml'
-  - directory: '../lib_player_heads'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_lore
+  - gm4.plugins.include.lib_player_heads
 
 meta:
   gm4:
