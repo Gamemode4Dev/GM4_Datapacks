@@ -1,6 +1,14 @@
 pipeline:
   - gm4.plugins.module.default_pack_icon
   - gm4.plugins.module.gm4_root_advancement
+  - gm4.plugins.player_heads
   - gm4.plugins.versioning.modules
+  - mecha
   - directory: '../base'
     extend: 'beet.yaml'
+
+meta:
+  mecha:
+    formatting:
+      layout: preserve
+      nbt_compact: True
