@@ -65,6 +65,7 @@
       ]
     }
   ],
+  "random_sequence": "minecraft:entities/bat",
   "__smithed__": {
     "rules": [
       {

@@ -17,8 +17,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:wandering_trader",
-              "team": "gm4_bas"
+              "type": "minecraft:interaction"
             }
           }
         ]

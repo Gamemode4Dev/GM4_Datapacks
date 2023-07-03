@@ -20,11 +20,16 @@
     "requirement": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": {
-          "block": {
-            "tag": "minecraft:campfires"
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "tag": "minecraft:campfires"
+              }
+            }
           }
-        },
+        ],
         "player": [
           {
             "condition": "minecraft:inverted",
