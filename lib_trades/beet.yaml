@@ -2,10 +2,12 @@ id: gm4_trades
 name: Gamemode 4 Trades
 version: 1.3.0
 
-extend: ../library.yaml
+data_pack:
+  load: 
+    data: data
+
 pipeline:
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.library
 
 meta:
   gm4:
