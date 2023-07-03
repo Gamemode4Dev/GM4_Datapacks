@@ -1,5 +1,5 @@
 {
-  "last_commit": "db51a4af23ba164d70fc77523eae788b5b40d44c",
+  "last_commit": "fab69356cbecefc5342ec137b6d36d35f53cdb1b",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -212,7 +212,7 @@
     {
       "id": "gm4_block_compressors",
       "name": "Block Compressors",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "video_link": "https://www.youtube.com/watch?v=sdrTJYjL8C0",
       "wiki_link": "https://wiki.gm4.co/wiki/Block_Compressors",
       "credits": {
@@ -526,7 +526,7 @@
     {
       "id": "gm4_disassemblers",
       "name": "Disassemblers",
-      "version": "2.2.1",
+      "version": "2.2.2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Disassemblers",
       "credits": {
@@ -615,7 +615,7 @@
     {
       "id": "gm4_enchantment_extractors",
       "name": "Enchantment Extractors",
-      "version": "2.2.1",
+      "version": "2.2.2",
       "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
       "wiki_link": "https://wiki.gm4.co/wiki/Enchantment_Extractors",
       "credits": {
@@ -682,7 +682,7 @@
     {
       "id": "gm4_ender_hoppers",
       "name": "Ender Hoppers",
-      "version": "1.4.1",
+      "version": "1.4.2",
       "video_link": "https://www.youtube.com/watch?v=wrwg4BDgEGU",
       "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
       "credits": {
@@ -772,7 +772,7 @@
     {
       "id": "gm4_forming_press",
       "name": "Forming Press",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
       "wiki_link": "https://wiki.gm4.co/wiki/Forming_Press",
       "credits": {
@@ -1036,7 +1036,7 @@
     {
       "id": "gm4_liquid_tanks",
       "name": "Liquid Tanks",
-      "version": "2.3.1",
+      "version": "2.3.2",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
       "credits": {
@@ -1532,7 +1532,7 @@
     {
       "id": "gm4_relocators",
       "name": "Relocators",
-      "version": "2.2.1",
+      "version": "2.2.2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Relocators",
       "credits": {
@@ -1654,7 +1654,7 @@
     {
       "id": "gm4_smelteries",
       "name": "Smelteries",
-      "version": "1.5.1",
+      "version": "1.5.2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/smelteries",
       "credits": {
@@ -1837,7 +1837,7 @@
     {
       "id": "gm4_teleportation_anchors",
       "name": "Teleportation Anchors",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Teleportation_Anchors",
       "credits": {
@@ -1859,7 +1859,7 @@
     {
       "id": "gm4_tinkering_compressors",
       "name": "Tinkering Compressors",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tinkering_Compressors",
       "credits": {
