@@ -1,5 +1,5 @@
 {
-  "last_commit": "fab69356cbecefc5342ec137b6d36d35f53cdb1b",
+  "last_commit": "3e7364bf4a4805c50152e6e021613966b2fcad83",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -155,7 +155,7 @@
     {
       "id": "gm4_better_armour_stands",
       "name": "Better Armour Stands",
-      "version": "2.2.1",
+      "version": "2.2.2",
       "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw",
       "wiki_link": "https://wiki.gm4.co/wiki/Better_Armour_Stands",
       "credits": {
