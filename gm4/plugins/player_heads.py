@@ -6,13 +6,24 @@ import json
 import os
 from nbtlib import String
 
-from beet import Context, PngFile
+from beet import Context, PngFile, DataPack
+import PIL.Image as Image
 from typing import ClassVar
+import hashlib
 
 class Skin(PngFile):
     """Class representing a skin texture file."""
     scope: ClassVar[tuple[str, ...]] = ("skins",)
     extension: ClassVar[str] = ".png"
+
+    def bind(self, pack: "DataPack", path: str):
+        super().bind(pack, path)
+
+        # deserializes file now for cache comparisons
+
+        # print(f"{self.image}")
+        print(f"hash of skin is {hashlib.sha1(self.image.tobytes()).hexdigest()}")
+
 
 def beet_default(ctx: Context):
     # register new container to datapack 
@@ -20,6 +31,8 @@ def beet_default(ctx: Context):
 
 def test(ctx: Context):
     print(ctx.data[Skin])
+    ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_2"] = Skin(source_path="base/pack.png")
+    ctx.data[Skin]["gm4_heart_canisters:test_img"] = Skin(Image.new("RGB", (128, 128), "red"))
 
 @rule(AstNbtCompoundEntry)
 def extra_nbt(node: AstNbtCompoundEntry) -> AstNbtCompoundEntry:
