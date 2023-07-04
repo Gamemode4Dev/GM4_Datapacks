@@ -1,5 +1,6 @@
 from dataclasses import replace, dataclass
-from mecha import Mecha, rule, AstNbtCompoundEntry, AstJsonObjectEntry, AstNbt, NbtParser, MutatingReducer
+from mecha import Mecha, rule, MutatingReducer#, AstNbtCompound, AstNbtCompoundEntry, AstJsonObjectEntry, AstNbt, NbtParser, MutatingReducer, AstNbtValue, AstChildren
+from mecha.ast import *
 from beet import Context, JsonFile, Function
 from gm4.utils import nested_get
 import json
@@ -26,11 +27,17 @@ class Skin(PngFile):
         # print(f"hash of skin is {hashlib.sha1(self.image.tobytes()).hexdigest()}")
         # TODO we shouldn't process hash on bind, rather search the pack for the right skin when the AST node encounters the reference
 
+        # maybe we keep a record of which skins are used so we can warn on unused textures?
+
 
 def beet_default(ctx: Context):
     # register new container to datapack 
     ctx.data.extend_namespace.append(Skin)
-    ctx.inject(Mecha).transform.extend(SkinNbtTransformer(skins_container=ctx.data[Skin]))
+    ctx.inject(Mecha).transform.extend(SkinNbtTransformer(skins_container=ctx.data[Skin], ctx=ctx))
+    
+    # yield
+    # print(my_list)
+
     
 
 def test(ctx: Context):
@@ -38,70 +45,43 @@ def test(ctx: Context):
     ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_2"] = Skin(source_path="base/pack.png")
     ctx.data[Skin]["gm4_heart_canisters:test_img"] = Skin(Image.new("RGB", (128, 128), "red"))
     # ctx.data[Skin]["gm4_heart_canisters:test_img"] = ctx.data[Skin]["gm4_heart_canisters:test_img"].image.rotate(45)
-    print(ctx.data[Skin])
+    # print(ctx.data[Skin])
 
 @dataclass
 class SkinNbtTransformer(MutatingReducer):
     skins_container: NamespaceProxy[Skin] = required_field()
+    ctx: Context = required_field() # FIXME is this a smart idea? I dunno but I need the project_id in the parser soooooo yea
 
     @rule(AstNbtCompoundEntry)
     def extra_nbt(self, node: AstNbtCompoundEntry) -> AstNbtCompoundEntry:
-        # print(node.key)
-        # print(str(node.value.evaluate()))
-        # print(node.evaluate())
         # modified = AstNbtCompound.from_value(node.evaluate() | {"foo": "bar"})
         # if node != modified:
         #     return modified
-        # return node
-        # return replace(node, value=56)
         if node.key.value == "SkullOwner":
-            print(node.value.evaluate())
-            print(self.skins_container)
-            # print(f"found SkullOwner! {node.value.evaluate()}")
-            # val = node.value.evaluate()
-            # if type(val) is String:
-            #     return node
-            # uuid = val.get("Id")
-            # if uuid is not None:
-            #     uuid = uuid.snbt()
-            # value = str(val.get("Properties", {}).get("textures", [{}])[0].get("Value"))
-            # if value == "None":
-            #     value=None
-            # name = str(val.get("Name")) if val.get("Name") is not None else None
-            # # print(f"{uuid}, {value}, {name}")
-            # # print(os.listdir("gm4"))
-
-            # if value is not None:
-            #     with open("gm4/skin_cache.json", "r+") as f:
-            #         # print("file opened")
-            #         # print(f.readlines())
-            #         data = json.load(f)
-            #         # print(data)
-            #         found_skin = False
-            #         for skin in data["skins"]:
-            #             if skin["value"] == value:
-            #                 found_skin = True
-            #                 # print("found the skin already")
-            #                 if skin["name"] == None and name is not None: # attempt to update name
-            #                     print(f"updatin name to {name}")
-            #                     skin["name"] = name
-            #                 if skin["uuid"] == None and uuid is not None: # attempt to update uuid
-            #                     skin["uuis"] = uuid
-            #                 else:
-            #                     skin = {"uuid": uuid, "value": value, "name": name}
-            #         if not found_skin:
-            #             data["skins"].append({"uuid": uuid, "value": value, "name": name})
-            #             # print(data)
-            #         f.seek(0)
-            #         json.dump(data, f, indent=2, )
-                    # f.write(str(data))
-
-
-
-
-        # if node.key.value == "SkullOwner" and "$" in str(value:=node.value.evaluate()):
-        #     return replace(node, value=AstNbt.from_value({"test":"values"}))
+            print(node.value)
+            match node.value:
+                case AstNbtValue(value=String(val)) if "$" in val:
+                    node = replace(node, value=AstNbtCompound.from_value({
+                        "Properties": {
+                            "textures":[{
+                                "Value": "1234567890abcdef=",
+                                "Signature": "foo"
+                            }]
+                        }
+                    }))
+                case AstNbtCompound(entries=AstChildren(
+                    (AstNbtCompoundEntry(
+                        key=AstNbtCompoundKey(value='Value'),
+                        value=AstNbtValue(value=String(val))),
+                    AstNbtCompoundEntry(
+                        key=AstNbtCompoundKey(value='Name'), 
+                        value=AstNbtValue(value=String('foo_name')))
+                    ))) if "$" in val:
+                    print(val)
+                case _:
+                    pass
         return node
+
 
 # FAILURE, this only ast's the stuff in commands
 # @rule(AstJsonObjectEntry)
