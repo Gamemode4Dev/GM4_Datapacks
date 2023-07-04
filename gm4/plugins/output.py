@@ -1,6 +1,7 @@
 from beet import Context
 from pathlib import Path
 from bolt import Module
+from gm4.plugins.player_heads import Skin
 import os
 import json
 import requests
@@ -23,6 +24,7 @@ def beet_default(ctx: Context):
 	out_dir = Path("out")
 
 	ctx.data[Module].clear() # manually cleanup bolt modules
+	ctx.data[Skin].clear() # manually cleanup skin files
 
 	ctx.data.save(
 		path=out_dir / f"{ctx.project_id}_{version.replace('.', '_')}",

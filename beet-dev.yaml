@@ -1,7 +1,6 @@
 pipeline:
   - gm4.plugins.list_modules
   - gm4.plugins.manifest.create
-  - gm4.plugins.player_heads.reset_skin_cache
 
 meta:
   autosave:
