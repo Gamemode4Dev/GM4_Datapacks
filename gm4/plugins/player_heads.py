@@ -5,7 +5,7 @@ from beet import Context, JsonFile, Function
 from gm4.utils import nested_get
 import json
 import os
-from nbtlib import String
+from nbtlib import *
 
 from beet import Context, PngFile, DataPack, NamespaceProxy
 import PIL.Image as Image
@@ -58,9 +58,9 @@ class SkinNbtTransformer(MutatingReducer):
         # if node != modified:
         #     return modified
         if node.key.value == "SkullOwner":
-            print(node.value)
-            match node.value:
-                case AstNbtValue(value=String(val)) if "$" in val:
+            print(node.value.evaluate())
+            match node.value.evaluate():
+                case String(val) if "$" in val:
                     node = replace(node, value=AstNbtCompound.from_value({
                         "Properties": {
                             "textures":[{
@@ -69,15 +69,26 @@ class SkinNbtTransformer(MutatingReducer):
                             }]
                         }
                     }))
-                case AstNbtCompound(entries=AstChildren(
-                    (AstNbtCompoundEntry(
-                        key=AstNbtCompoundKey(value='Value'),
-                        value=AstNbtValue(value=String(val))),
-                    AstNbtCompoundEntry(
-                        key=AstNbtCompoundKey(value='Name'), 
-                        value=AstNbtValue(value=String('foo_name')))
-                    ))) if "$" in val:
-                    print(val)
+                case Compound({"Value": String(val), **rest}) if "$" in val: # type: ignore
+                    node = replace(node, value=AstNbtCompound.from_value(
+                        ({"Name": n} if (n:=rest.get("Name")) else {}) | # type: ignore
+                        {"Properties": {
+                            "textures":[
+                                {"Value": "1234567890abcdef="} | 
+                                ({"Signature": s} if (s:=rest.get("Signature")) else {})] # type: ignore
+                            }
+                        }
+                    ))
+                case Compound({"Properties": Compound({"textures": List([Compound({"Value": String(val), **tex_rest})])}), **root_rest}) if "$" in val: # type: ignore
+                    node = replace(node, value=AstNbtCompound.from_value(
+                        ({"Name": n} if (n:=root_rest.get("Name")) else {}) | # type: ignore
+                        {"Properties": {
+                            "textures":[
+                                {"Value": "1234567890abcdef="} | 
+                                ({"Signature": s} if (s:=tex_rest.get("Signature")) else {})] # type: ignore
+                            }
+                        }
+                    ))
                 case _:
                     pass
         return node
