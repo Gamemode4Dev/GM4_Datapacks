@@ -51,7 +51,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{strike:1,modifier:110}}"
+              "tag": "{gm4_combat_expanded:{strike:giant,modifier:110}}"
             }
           ]
         }
@@ -210,10 +210,11 @@
                 "with": [
                   "0.5",
                   {
-                    "translate": "attribute.name.generic.attack_speed"
+                    "translate": "attribute.name.generic.attack_speed",
+                    "color": "dark_green"
                   }
                 ],
-                "color": "dark_green",
+                "color": "red",
                 "italic": false
               }
             ]

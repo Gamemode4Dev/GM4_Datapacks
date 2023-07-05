@@ -1,3 +1,7 @@
+# set storm arrow data
+# @s = storm arrow
+# at unspecified
+# run from armor/modifier/type/archer/apply
 
 # slightly adjust arrow motion
 data modify storage gm4_combat_expanded:temp archer_arrow.Motion_adj set value [0.0d,0.0d,0.0d] 

@@ -17,7 +17,7 @@ scoreboard players set @s[scores={gm4_ce_kill=1..}] gm4_ce_t_kill 5
 
 # check for archer armor
 tag @s remove gm4_ce_wearing_archer
-tag @s[predicate=gm4_combat_expanded:modified_armor/wearing_archer] add gm4_ce_wearing_archer
+tag @s[predicate=gm4_combat_expanded:modified_armor/archer/wearing] add gm4_ce_wearing_archer
 
 # remove husk sprint score if player didn't sprint for too long
 execute unless score @s gm4_ce_sprinting matches 1.. run scoreboard players add @s[scores={gm4_ce_t_sprinting=1..}] gm4_ce_sprinting_timeout 1

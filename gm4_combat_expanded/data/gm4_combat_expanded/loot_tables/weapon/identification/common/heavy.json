@@ -47,27 +47,12 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "$atkspeed_stored"
+                      "name": "$atkspeed_down"
                     },
                     "score": "gm4_ce_data",
                     "scale": 0.1
                   },
                   "operation": "addition",
-                  "slot": "mainhand"
-                },
-                {
-                  "attribute": "minecraft:generic.movement_speed",
-                  "name": "generic.movement_speed",
-                  "amount": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$speed-"
-                    },
-                    "score": "gm4_ce_data",
-                    "scale": 0.01
-                  },
-                  "operation": "multiply_base",
                   "slot": "mainhand"
                 }
               ]
@@ -203,16 +188,16 @@
                   [
                     {
                       "score": {
-                        "name": "$atkspeed_stored_10",
+                        "name": "$atkspeed_down_10",
                         "objective": "gm4_ce_data"
                       },
-                      "color": "dark_green",
+                      "color": "red",
                       "italic": false
                     },
                     ".",
                     {
                       "score": {
-                        "name": "$atkspeed_stored_01",
+                        "name": "$atkspeed_down_01",
                         "objective": "gm4_ce_data"
                       }
                     }
@@ -235,7 +220,7 @@
                   "type": "minecraft:score",
                   "target": {
                     "type": "minecraft:fixed",
-                    "name": "$atkspeed_stored_01"
+                    "name": "$atkspeed_down_01"
                   },
                   "score": "gm4_ce_data"
                 },
@@ -255,10 +240,10 @@
                 "with": [
                   {
                     "score": {
-                      "name": "$atkspeed_stored_10",
+                      "name": "$atkspeed_down_10",
                       "objective": "gm4_ce_data"
                     },
-                    "color": "dark_green",
+                    "color": "red",
                     "italic": false
                   },
                   {
@@ -277,37 +262,12 @@
                 "type": "minecraft:score",
                 "target": {
                   "type": "minecraft:fixed",
-                  "name": "$atkspeed_stored_01"
+                  "name": "$atkspeed_down_01"
                 },
                 "score": "gm4_ce_data"
               },
               "range": 0
             }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              "",
-              {
-                "translate": "attribute.modifier.equals.1",
-                "with": [
-                  {
-                    "score": {
-                      "name": "$speed-",
-                      "objective": "gm4_ce_data"
-                    }
-                  },
-                  {
-                    "translate": "attribute.name.generic.movement_speed"
-                  }
-                ],
-                "color": "red",
-                "italic": false
-              }
-            ]
           ]
         },
         {

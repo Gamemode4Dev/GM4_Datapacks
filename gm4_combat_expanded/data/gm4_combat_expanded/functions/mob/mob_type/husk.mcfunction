@@ -25,14 +25,13 @@ attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] zombie.spawn_reinf
 tag @s[predicate=gm4_combat_expanded:mob/modifier/snowy] add gm4_ce_slowing_attacks
 execute if entity @s[predicate=gm4_combat_expanded:mob/modifier/burned] run function gm4_combat_expanded:mob/effect/burned_husk
 execute if predicate gm4_combat_expanded:mob/modifier/mountainous run function gm4_combat_expanded:mob/effect/mountain_zombie
-execute if predicate gm4_combat_expanded:mob/modifier/flowering run function gm4_combat_expanded:mob/effect/flowering_zombie
+execute if predicate gm4_combat_expanded:mob/modifier/flowering run tag @s add gm4_ce_spore_zombie
 tag @s[predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_weakness_attacks
 execute if predicate gm4_combat_expanded:mob/modifier/growth run function gm4_combat_expanded:mob/effect/growth_zombie
 
 # set armor
 loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic
-item replace entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering] armor.head with flowering_azalea_leaves{gm4_ce_spore:{type:husk,generation:0}}
-execute if entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering] store result entity @s ArmorItems[3].tag.gm4_ce_spore.generation int 1 run scoreboard players add @s gm4_ce_generation 1
+execute if entity @s[tag=gm4_ce_spore_zombie] run function gm4_combat_expanded:mob/effect/flowering_zombie
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/generic
 
