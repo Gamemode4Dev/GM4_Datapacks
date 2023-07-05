@@ -18,7 +18,7 @@ import base64
 import requests
 from io import BytesIO, TextIOWrapper
 
-logger = logging.getLogger("gm4.player_heads")
+parent_logger = logging.getLogger("gm4.player_heads")
 
 MINESKIN_TOKEN = "f8afa76df6262b96e406ce90495c3490385a10d1e1101698d1051efe589046c3" # FIXME request token from user
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/player_head_management (gamemode4official@gmail.com)"
@@ -56,7 +56,8 @@ def test(ctx: Context):
     print(ctx.data[Skin])
     ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_2"] = Skin(source_path="base/pack.png")
     ctx.data[Skin]["gm4_heart_canisters:test_img"] = Skin(Img.new("RGB", (128, 128), "red"))
-    mineskin_upload(ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_1"], "heart_canisters_teir_2.png")
+    res = mineskin_upload(ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_1"], "heart_canisters_teir_2.png")
+    print(res)
     # ctx.data[Skin]["gm4_heart_canisters:test_img"] = ctx.data[Skin]["gm4_heart_canisters:test_img"].image.rotate(45)
     # print(ctx.data[Skin])
 
@@ -124,16 +125,29 @@ class SkinNbtTransformer(MutatingReducer):
         
         return cached_data["value"]
 
-def mineskin_upload(skin: Skin, filename: str) -> str:
+def mineskin_upload(skin: Skin, filename: str) -> str | None:
+    logger = parent_logger.getChild("mineskin_upload")
     buf = BytesIO()
     skin.image.save(buf, format="PNG")
-    response = requests.post(   
+    res = requests.post(   
         url='https://api.mineskin.org/generate/upload',
         data={"name":"GM4_Skin", "visibility":0},
         files={"file":(filename, buf.getvalue(), 'text/x-spam')},
         headers={"User-Agent": USER_AGENT, "Authorization": "Bearer "+MINESKIN_TOKEN}
     )
-    print(response.json())
+    if res.status_code == 429:
+        pass # FIXME, request sent too soon
+    elif res.status_code != 200:
+        logger.error(f"Mineskin upload failed: {res.status_code} {res.text}")
+        return None
+    logger.info(f"New skin texture \'{filename}\' successfully uploaded via Mineskin")
+    
+    # strip out unnecessary fields encoded within texture value
+    value = res.json()["data"]["texture"]["value"]
+    decoded_value = json.loads(base64.b64decode(value).decode('utf-8'))
+    trimmed_decoded_value = {"textures": {"SKIN": {"url": decoded_value["textures"]["SKIN"]["url"]}}}
+    trimmed_value = str(base64.b64encode(str(trimmed_decoded_value).encode('utf-8')))
+    return trimmed_value
 
 # def beet_default(ctx: Context):
 
