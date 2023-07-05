@@ -18,6 +18,7 @@ import base64
 import requests
 from io import BytesIO, TextIOWrapper
 from functools import cache
+import time
 
 parent_logger = logging.getLogger("gm4.player_heads")
 
@@ -152,7 +153,11 @@ class SkinNbtTransformer(MutatingReducer):
             headers={"User-Agent": USER_AGENT, "Authorization": "Bearer "+token}
         )
         if res.status_code == 429:
-            pass # FIXME, request sent too soon
+            logger.info(f"Mineskin request ratelimited! Waiting and trying again")
+            next_request_time = res.json()["nextRequest"]
+            wait_time = max(next_request_time - time.time(), 0)
+            time.sleep(wait_time)
+            return self.mineskin_upload(skin, filename)
         elif res.status_code != 200:
             logger.error(f"Mineskin upload failed: {res.status_code} {res.text}")
             return None, None
