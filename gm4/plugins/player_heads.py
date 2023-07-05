@@ -46,10 +46,11 @@ class Skin(PngFile):
 def beet_default(ctx: Context):
     # register new container to datapack 
     ctx.data.extend_namespace.append(Skin)
-    ctx.inject(Mecha).transform.extend(SkinNbtTransformer(skins_container=ctx.data[Skin], ctx=ctx))
+    tf = SkinNbtTransformer(skins_container=ctx.data[Skin], ctx=ctx)
+    ctx.inject(Mecha).transform.extend(tf)
     
-    # yield
-    # print(my_list)
+    yield
+    tf.output_skin_cache()
 
     
 
@@ -130,6 +131,9 @@ class SkinNbtTransformer(MutatingReducer):
             }
             return value
         return cached_data["value"]
+    
+    def output_skin_cache(self):
+        JsonFile(self.skin_cache).dump(origin="", path="gm4/skin_cache.json")
 
 def mineskin_upload(skin: Skin, filename: str) -> tuple[str|None, str|None]:
     logger = parent_logger.getChild("mineskin_upload")
@@ -152,7 +156,7 @@ def mineskin_upload(skin: Skin, filename: str) -> tuple[str|None, str|None]:
     value = res.json()["data"]["texture"]["value"]
     decoded_value = json.loads(base64.b64decode(value).decode('utf-8'))
     trimmed_decoded_value = {"textures": {"SKIN": {"url": decoded_value["textures"]["SKIN"]["url"]}}}
-    trimmed_value = str(base64.b64encode(str(trimmed_decoded_value).encode('utf-8')))
+    trimmed_value = str(base64.b64encode(str(trimmed_decoded_value).encode('utf-8')), 'utf-8')
 
     uuid = res.json()["uuid"]
     i = range(0,33,8)
