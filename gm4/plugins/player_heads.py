@@ -21,7 +21,6 @@ from functools import cache
 
 parent_logger = logging.getLogger("gm4.player_heads")
 
-MINESKIN_TOKEN = "f8afa76df6262b96e406ce90495c3490385a10d1e1101698d1051efe589046c3" # FIXME request token from user
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/player_head_management (gamemode4official@gmail.com)"
 
 
@@ -122,7 +121,7 @@ class SkinNbtTransformer(MutatingReducer):
 
         if skin_hash != cached_data["hash"]:
             # the image file contents have changed - upload the new image
-            value, uuid = mineskin_upload(skin_file, f"{skin_name.split(':')[-1]}.png")
+            value, uuid = self.mineskin_upload(skin_file, f"{skin_name.split(':')[-1]}.png")
             self.skin_cache["skins"][skin_name] = {
                 "uuid": uuid,
                 "value": value,
@@ -135,35 +134,37 @@ class SkinNbtTransformer(MutatingReducer):
     def output_skin_cache(self):
         JsonFile(self.skin_cache).dump(origin="", path="gm4/skin_cache.json")
 
-def mineskin_upload(skin: Skin, filename: str) -> tuple[str|None, str|None]:
-    logger = parent_logger.getChild("mineskin_upload")
-    buf = BytesIO()
-    skin.image.save(buf, format="PNG")
-    res = requests.post(   
-        url='https://api.mineskin.org/generate/upload',
-        data={"name":"GM4_Skin", "visibility":0},
-        files={"file":(filename, buf.getvalue(), 'text/x-spam')},
-        headers={"User-Agent": USER_AGENT, "Authorization": "Bearer "+MINESKIN_TOKEN}
-    )
-    if res.status_code == 429:
-        pass # FIXME, request sent too soon
-    elif res.status_code != 200:
-        logger.error(f"Mineskin upload failed: {res.status_code} {res.text}")
-        return None, None
-    logger.info(f"New skin texture \'{filename}\' successfully uploaded via Mineskin")
-    
-    # strip out unnecessary fields encoded within texture value
-    value = res.json()["data"]["texture"]["value"]
-    decoded_value = json.loads(base64.b64decode(value).decode('utf-8'))
-    trimmed_decoded_value = {"textures": {"SKIN": {"url": decoded_value["textures"]["SKIN"]["url"]}}}
-    trimmed_value = str(base64.b64encode(str(trimmed_decoded_value).encode('utf-8')), 'utf-8')
+    def mineskin_upload(self, skin: Skin, filename: str) -> tuple[str|None, str|None]:
+        logger = parent_logger.getChild("mineskin_upload")
+        token = self.ctx.inject(MineskinAuthManager).token
 
-    uuid = res.json()["uuid"]
-    i = range(0,33,8)
-    segmented_uuid = [uuid[a:b] for a,b in zip(i, i[1:])]
-    signed_int: Callable[[str], str] = lambda s: str(int.from_bytes(bytes.fromhex(s), byteorder="big", signed=True))
-    uuid_arr = f"[I; {', '.join(map(signed_int, segmented_uuid))}]"
-    return trimmed_value, uuid_arr
+        buf = BytesIO()
+        skin.image.save(buf, format="PNG")
+        res = requests.post(   
+            url='https://api.mineskin.org/generate/upload',
+            data={"name":"GM4_Skin", "visibility":0},
+            files={"file":(filename, buf.getvalue(), 'text/x-spam')},
+            headers={"User-Agent": USER_AGENT, "Authorization": "Bearer "+token}
+        )
+        if res.status_code == 429:
+            pass # FIXME, request sent too soon
+        elif res.status_code != 200:
+            logger.error(f"Mineskin upload failed: {res.status_code} {res.text}")
+            return None, None
+        logger.info(f"New skin texture \'{filename}\' successfully uploaded via Mineskin")
+        
+        # strip out unnecessary fields encoded within texture value
+        value = res.json()["data"]["texture"]["value"]
+        decoded_value = json.loads(base64.b64decode(value).decode('utf-8'))
+        trimmed_decoded_value = {"textures": {"SKIN": {"url": decoded_value["textures"]["SKIN"]["url"]}}}
+        trimmed_value = str(base64.b64encode(str(trimmed_decoded_value).encode('utf-8')), 'utf-8')
+
+        uuid = res.json()["uuid"]
+        i = range(0,33,8)
+        segmented_uuid = [uuid[a:b] for a,b in zip(i, i[1:])]
+        signed_int: Callable[[str], str] = lambda s: str(int.from_bytes(bytes.fromhex(s), byteorder="big", signed=True))
+        uuid_arr = f"[I; {', '.join(map(signed_int, segmented_uuid))}]"
+        return trimmed_value, uuid_arr
 
 # def beet_default(ctx: Context):
 
@@ -186,3 +187,20 @@ def mineskin_upload(skin: Skin, filename: str) -> tuple[str|None, str|None]:
     #         if entry[0] == '{':
     #             dummy_parse_function.append(f"summon marker ~ ~ ~ {entry}") # focre mecha to process nbt since I don't know how to submit it directly
     # ctx.data.functions["minecraft:mecha_dummy"] = dummy_parse_function
+
+class MineskinAuthManager():
+
+    def __init__(self, ctx: Context):
+        token_cache = ctx.cache.get("mineskin").json.get("token") # type: ignore , cache.get ensures cache exists
+        print(token_cache)
+
+        if token_cache is None:
+            # request token from user
+            print(("\033[93mThis build has detected a changed skin file, but no Mineskin API key is available locally.\n\t"
+                  "Visit mineskin.org/account, login or create an account with google, and create an API key.\n\t"
+                  "Beet will cache your token locally, but save the api key and key secret in a secure location in case the cache resets.\n\t"
+                  "You do not need to provide mineskin with your Minecraft account details unless you wish to\033[0m."))
+            self.token = input("API Key >>")
+            ctx.cache["mineskin"].json = {"token": self.token}
+            return
+        self.token = token_cache.json["token"]
