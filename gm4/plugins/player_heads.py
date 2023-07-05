@@ -10,13 +10,14 @@ from nbtlib import *
 from beet import Context, PngFile, DataPack, NamespaceProxy
 from PIL import Image as Img
 from PIL.Image import Image
-from typing import ClassVar
+from typing import ClassVar, Callable
 import hashlib
 from beet.core.utils import required_field
 import logging
 import base64
 import requests
 from io import BytesIO, TextIOWrapper
+from functools import cache
 
 parent_logger = logging.getLogger("gm4.player_heads")
 
@@ -56,8 +57,8 @@ def test(ctx: Context):
     print(ctx.data[Skin])
     ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_2"] = Skin(source_path="base/pack.png")
     ctx.data[Skin]["gm4_heart_canisters:test_img"] = Skin(Img.new("RGB", (128, 128), "red"))
-    res = mineskin_upload(ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_1"], "heart_canisters_teir_2.png")
-    print(res)
+    # res = mineskin_upload(ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_1"], "heart_canisters_teir_2.png")
+    # print(res)
     # ctx.data[Skin]["gm4_heart_canisters:test_img"] = ctx.data[Skin]["gm4_heart_canisters:test_img"].image.rotate(45)
     # print(ctx.data[Skin])
 
@@ -108,24 +109,29 @@ class SkinNbtTransformer(MutatingReducer):
                     pass
         return node
     
+    # @cache # FIXME? can this be caches?
     def retrieve_texture(self, skin_name: str):
         skin_name = skin_name.lstrip("$")
         if ":" not in skin_name:
             skin_name = f"{self.ctx.project_id}:{skin_name}"
-        cached_data = self.skin_cache["skins"].get(skin_name)
+        cached_data = self.skin_cache["skins"].get(skin_name, {"hash": None})
 
-        if cached_data is None:
-            # uploda new skin!
-            pass
-
-        skin_file = self.skins_container[skin_name]
+        skin_file: Skin = self.skins_container[skin_name] # FIXME bubble error on missing reference
         skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest()
+
         if skin_hash != cached_data["hash"]:
-            print("new texture. needs uploading!")
-        
+            # the image file contents have changed - upload the new image
+            value, uuid = mineskin_upload(skin_file, f"{skin_name.split(':')[-1]}.png")
+            self.skin_cache["skins"][skin_name] = {
+                "uuid": uuid,
+                "value": value,
+                "name": "foo",
+                "hash": skin_hash
+            }
+            return value
         return cached_data["value"]
 
-def mineskin_upload(skin: Skin, filename: str) -> str | None:
+def mineskin_upload(skin: Skin, filename: str) -> tuple[str|None, str|None]:
     logger = parent_logger.getChild("mineskin_upload")
     buf = BytesIO()
     skin.image.save(buf, format="PNG")
@@ -139,7 +145,7 @@ def mineskin_upload(skin: Skin, filename: str) -> str | None:
         pass # FIXME, request sent too soon
     elif res.status_code != 200:
         logger.error(f"Mineskin upload failed: {res.status_code} {res.text}")
-        return None
+        return None, None
     logger.info(f"New skin texture \'{filename}\' successfully uploaded via Mineskin")
     
     # strip out unnecessary fields encoded within texture value
@@ -147,7 +153,13 @@ def mineskin_upload(skin: Skin, filename: str) -> str | None:
     decoded_value = json.loads(base64.b64decode(value).decode('utf-8'))
     trimmed_decoded_value = {"textures": {"SKIN": {"url": decoded_value["textures"]["SKIN"]["url"]}}}
     trimmed_value = str(base64.b64encode(str(trimmed_decoded_value).encode('utf-8')))
-    return trimmed_value
+
+    uuid = res.json()["uuid"]
+    i = range(0,33,8)
+    segmented_uuid = [uuid[a:b] for a,b in zip(i, i[1:])]
+    signed_int: Callable[[str], str] = lambda s: str(int.from_bytes(bytes.fromhex(s), byteorder="big", signed=True))
+    uuid_arr = f"[I; {', '.join(map(signed_int, segmented_uuid))}]"
+    return trimmed_value, uuid_arr
 
 # def beet_default(ctx: Context):
 
