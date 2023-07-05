@@ -55,8 +55,8 @@ def beet_default(ctx: Context):
 
 def test(ctx: Context):
     print(ctx.data[Skin])
-    ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_2"] = Skin(source_path="base/pack.png")
-    ctx.data[Skin]["gm4_heart_canisters:test_img"] = Skin(Img.new("RGB", (128, 128), "red"))
+    # ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_2"] = Skin(source_path="base/pack.png")
+    # ctx.data[Skin]["gm4_heart_canisters:test_img"] = Skin(Img.new("RGB", (128, 128), "red"))
     # res = mineskin_upload(ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_1"], "heart_canisters_teir_2.png")
     # print(res)
     # ctx.data[Skin]["gm4_heart_canisters:test_img"] = ctx.data[Skin]["gm4_heart_canisters:test_img"].image.rotate(45)
@@ -77,8 +77,9 @@ class SkinNbtTransformer(MutatingReducer):
             # print(node.value.evaluate())
             match node.value.evaluate():
                 case String(val) if "$" in val:
-                    skin_val = self.retrieve_texture(val)
+                    skin_val, uuid = self.retrieve_texture(val)
                     node = replace(node, value=AstNbtCompound.from_value({
+                        "Id": IntArray(uuid),
                         "Properties": {
                             "textures":[{
                                 "Value": skin_val
@@ -86,9 +87,11 @@ class SkinNbtTransformer(MutatingReducer):
                         }
                     }))
                 case Compound({"Value": String(val), **rest}) if "$" in val: # type: ignore
+                    skin_val, uuid = self.retrieve_texture(val)
                     node = replace(node, value=AstNbtCompound.from_value(
                         ({"Name": n} if (n:=rest.get("Name")) else {}) | # type: ignore
-                        {"Properties": {
+                        {"Id": IntArray(uuid),
+                         "Properties": {
                             "textures":[
                                 {"Value": "1234567890abcdef="} | 
                                 ({"Signature": s} if (s:=rest.get("Signature")) else {})] # type: ignore
@@ -96,9 +99,11 @@ class SkinNbtTransformer(MutatingReducer):
                         }
                     ))
                 case Compound({"Properties": Compound({"textures": List([Compound({"Value": String(val), **tex_rest})])}), **root_rest}) if "$" in val: # type: ignore
+                    skin_val, uuid = self.retrieve_texture(val)
                     node = replace(node, value=AstNbtCompound.from_value(
                         ({"Name": n} if (n:=root_rest.get("Name")) else {}) | # type: ignore
-                        {"Properties": {
+                        {"Id": IntArray(uuid),
+                         "Properties": {
                             "textures":[
                                 {"Value": "1234567890abcdef="} | 
                                 ({"Signature": s} if (s:=tex_rest.get("Signature")) else {})] # type: ignore
@@ -128,13 +133,13 @@ class SkinNbtTransformer(MutatingReducer):
                 "name": "foo",
                 "hash": skin_hash
             }
-            return value
-        return cached_data["value"]
+            return value, uuid
+        return cached_data["value"], cached_data["uuid"]
     
     def output_skin_cache(self):
         JsonFile(self.skin_cache).dump(origin="", path="gm4/skin_cache.json")
 
-    def mineskin_upload(self, skin: Skin, filename: str) -> tuple[str|None, str|None]:
+    def mineskin_upload(self, skin: Skin, filename: str) -> tuple[str|None, list[int]|None]:
         logger = parent_logger.getChild("mineskin_upload")
         token = self.ctx.inject(MineskinAuthManager).token
 
@@ -162,8 +167,8 @@ class SkinNbtTransformer(MutatingReducer):
         uuid = res.json()["uuid"]
         i = range(0,33,8)
         segmented_uuid = [uuid[a:b] for a,b in zip(i, i[1:])]
-        signed_int: Callable[[str], str] = lambda s: str(int.from_bytes(bytes.fromhex(s), byteorder="big", signed=True))
-        uuid_arr = f"[I; {', '.join(map(signed_int, segmented_uuid))}]"
+        signed_int: Callable[[str], int] = lambda s: int.from_bytes(bytes.fromhex(s), byteorder="big", signed=True)
+        uuid_arr = list(map(signed_int, segmented_uuid))
         return trimmed_value, uuid_arr
 
 # def beet_default(ctx: Context):
@@ -203,4 +208,4 @@ class MineskinAuthManager():
             self.token = input("API Key >>")
             ctx.cache["mineskin"].json = {"token": self.token}
             return
-        self.token = token_cache.json["token"]
+        self.token = token_cache
