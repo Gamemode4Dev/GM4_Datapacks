@@ -17,7 +17,6 @@ import logging
 import base64
 import requests
 from io import BytesIO, TextIOWrapper
-from functools import cache
 import time
 
 parent_logger = logging.getLogger("gm4.player_heads")
@@ -31,28 +30,14 @@ class Skin(PngFile):
     extension: ClassVar[str] = ".png"
     image: ClassVar[FileDeserialize[Image]] = FileDeserialize() # FIXME this is here to try and fix type warnings
 
-    def bind(self, pack: "DataPack", path: str):
-        super().bind(pack, path)
-
-        # deserializes file now for cache comparisons
-
-        # print(f"{self.image}")
-        # print(f"hash of skin is {hashlib.sha1(self.image.tobytes()).hexdigest()}")
-        # TODO we shouldn't process hash on bind, rather search the pack for the right skin when the AST node encounters the reference
-
-        # maybe we keep a record of which skins are used so we can warn on unused textures?
-
-
 def beet_default(ctx: Context):
-    # register new container to datapack 
-    ctx.data.extend_namespace.append(Skin)
-    tf = SkinNbtTransformer(skins_container=ctx.data[Skin], ctx=ctx)
+    ctx.data.extend_namespace.append(Skin) # register new filetype to datapack
+    tf = ctx.inject(SkinNbtTransformer)
     ctx.inject(Mecha).transform.extend(tf)
-    
+
     yield
     tf.log_unused_textures()
     tf.output_skin_cache()
-
     
 
 def test(ctx: Context):
@@ -64,20 +49,20 @@ def test(ctx: Context):
     # ctx.data[Skin]["gm4_heart_canisters:test_img"] = ctx.data[Skin]["gm4_heart_canisters:test_img"].image.rotate(45)
     # print(ctx.data[Skin])
 
-@dataclass
 class SkinNbtTransformer(MutatingReducer):
-    skins_container: NamespaceProxy[Skin] = required_field()
-    ctx: Context = required_field() # FIXME is this a smart idea? I dunno but I need the project_id in the parser soooooo yea
-    skin_cache = JsonFile(source_path="gm4/skin_cache.json").data
-    used_textures: list[str] = field(default_factory=list)
+    # ctx: Context|None = None
+    # skin_cache = JsonFile(source_path="gm4/skin_cache.json").data
+    # used_textures: list[str] = field(default_factory=list)
+    def __init__(self, ctx: Context):
+        # NOTE better to bind not all of ctx
+        self.ctx: Context = ctx
+        self.skin_cache = JsonFile(source_path="gm4/skin_cache.json").data
+        self.used_textures: list[str] = []
+        super().__init__()
 
     @rule(AstNbtCompoundEntry)
-    def extra_nbt(self, node: AstNbtCompoundEntry) -> AstNbtCompoundEntry:
-        # modified = AstNbtCompound.from_value(node.evaluate() | {"foo": "bar"})
-        # if node != modified:
-        #     return modified
+    def skullowner_substitutions(self, node: AstNbtCompoundEntry) -> AstNbtCompoundEntry:
         if node.key.value == "SkullOwner":
-            # print(node.value.evaluate())
             match node.value.evaluate():
                 case String(val) if "$" in val:
                     skin_val, uuid = self.retrieve_texture(val)
@@ -118,7 +103,6 @@ class SkinNbtTransformer(MutatingReducer):
                         raise Diagnostic("warn", f"Unhandled SkullOwner substitution. Format failed to match known schemas.")
         return node
     
-    # @cache # FIXME? can this be caches?
     def retrieve_texture(self, skin_name: str):
         skin_name = skin_name.lstrip("$")
         if ":" not in skin_name:
@@ -126,7 +110,7 @@ class SkinNbtTransformer(MutatingReducer):
         cached_data = self.skin_cache["skins"].get(skin_name, {"hash": None})
 
         try:
-            skin_file: Skin = self.skins_container[skin_name]
+            skin_file: Skin = self.ctx.data[Skin][skin_name]
         except KeyError:
             raise Diagnostic("error", f"Unknown skin \'{skin_name}\'") # TODO when processing json sources, pass filename down to here if posible
         
@@ -190,30 +174,25 @@ class SkinNbtTransformer(MutatingReducer):
         for tex in set(cached_member_textures) - set(self.used_textures):
             logger.info(f"Cached skin texture {tex} is not referenced. Consider manually cleaning up skin_cache.json")
 
-# def beet_default(ctx: Context):
+def process_json_files(ctx: Context):
+    """Passes nbt contained in advancements, loot_tables ect.. through the custom Mecha AST rule for appropiate texture replacements"""
+    tf = ctx.inject(SkinNbtTransformer)
+    mc = ctx.inject(Mecha)
 
-    # functions
-    # ctx.inject(Mecha).transform.extend(extra_nbt)
-    # mc = ctx.inject(Mecha)
-    # mc.transform.extend(extra_nbt) # yea this wasn't quite working right
+    for jsonfile in [*ctx.data.loot_tables.values(), *ctx.data.item_modifiers.values(), *ctx.data.advancements.values()]:
+        # retrieve instances of nbt data
+        if type(jsonfile.data) is list: # FIXME what are these special cases?
+            continue
+        if "guidebook" in str(jsonfile.data):
+            continue
+        for entry in nested_get(jsonfile.data, "nbt")+nested_get(jsonfile.data, "tag"):
+            print(entry)
+            node = mc.parse(entry, type=AstNbtCompound) # parse string to AST
+            entry = mc.serialize(tf(node)) # run AST through custom rule, and serialize bacn to string
+            print(entry)
 
-    # loot tables, item modifiers, and advancements
-    # dummy_parse_function = Function("")
-
-    # for jsonfile in [*ctx.data.loot_tables.values(), *ctx.data.item_modifiers.values(), *ctx.data.advancements.values()]:
-    #     # retrieve instances of nbt data
-    #     if type(jsonfile.data) is list:
-    #         continue
-    #     if "guidebook" in str(jsonfile.data):
-    #         continue
-    #     for entry in nested_get(jsonfile.data, "nbt")+nested_get(jsonfile.data, "tag"):
-    #         # mc.parse(f"summon marker ~ ~ ~ {entry}")
-    #         if entry[0] == '{':
-    #             dummy_parse_function.append(f"summon marker ~ ~ ~ {entry}") # focre mecha to process nbt since I don't know how to submit it directly
-    # ctx.data.functions["minecraft:mecha_dummy"] = dummy_parse_function
 
 class MineskinAuthManager():
-
     def __init__(self, ctx: Context):
         token_cache = ctx.cache.get("mineskin").json.get("token") # type: ignore , cache.get ensures cache exists
         print(token_cache)
