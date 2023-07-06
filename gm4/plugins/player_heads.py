@@ -1,4 +1,4 @@
-from dataclasses import replace, dataclass
+from dataclasses import replace, dataclass, field
 from mecha import Mecha, rule, MutatingReducer, Diagnostic#, AstNbtCompound, AstNbtCompoundEntry, AstJsonObjectEntry, AstNbt, NbtParser, MutatingReducer, AstNbtValue, AstChildren
 from mecha.ast import *
 from beet import Context, JsonFile, Function, FileDeserialize
@@ -50,6 +50,7 @@ def beet_default(ctx: Context):
     ctx.inject(Mecha).transform.extend(tf)
     
     yield
+    tf.log_unused_textures()
     tf.output_skin_cache()
 
     
@@ -68,6 +69,7 @@ class SkinNbtTransformer(MutatingReducer):
     skins_container: NamespaceProxy[Skin] = required_field()
     ctx: Context = required_field() # FIXME is this a smart idea? I dunno but I need the project_id in the parser soooooo yea
     skin_cache = JsonFile(source_path="gm4/skin_cache.json").data
+    used_textures: list[str] = field(default_factory=list)
 
     @rule(AstNbtCompoundEntry)
     def extra_nbt(self, node: AstNbtCompoundEntry) -> AstNbtCompoundEntry:
@@ -128,6 +130,7 @@ class SkinNbtTransformer(MutatingReducer):
         except KeyError:
             raise Diagnostic("error", f"Unknown skin \'{skin_name}\'") # TODO when processing json sources, pass filename down to here if posible
         
+        self.used_textures.append(skin_name)
         skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest()
 
         if skin_hash != cached_data["hash"]:
@@ -146,7 +149,7 @@ class SkinNbtTransformer(MutatingReducer):
         JsonFile(self.skin_cache).dump(origin="", path="gm4/skin_cache.json")
 
     def mineskin_upload(self, skin: Skin, filename: str) -> tuple[str|None, list[int]|None]:
-        logger = parent_logger.getChild("mineskin_upload")
+        logger = parent_logger.getChild(f"mineskin_upload.{self.ctx.project_id}")
         token = self.ctx.inject(MineskinAuthManager).token
 
         buf = BytesIO()
@@ -180,6 +183,12 @@ class SkinNbtTransformer(MutatingReducer):
         signed_int: Callable[[str], int] = lambda s: int.from_bytes(bytes.fromhex(s), byteorder="big", signed=True)
         uuid_arr = list(map(signed_int, segmented_uuid))
         return trimmed_value, uuid_arr
+    
+    def log_unused_textures(self):
+        logger = parent_logger.getChild(self.ctx.project_id)
+        cached_member_textures = [e for e in self.skin_cache["skins"].keys() if e.split(":")[0] == self.ctx.project_id]
+        for tex in set(cached_member_textures) - set(self.used_textures):
+            logger.info(f"Cached skin texture {tex} is not referenced. Consider manually cleaning up skin_cache.json")
 
 # def beet_default(ctx: Context):
 
