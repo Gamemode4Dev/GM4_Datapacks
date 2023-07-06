@@ -1,5 +1,5 @@
 from dataclasses import replace, dataclass
-from mecha import Mecha, rule, MutatingReducer#, AstNbtCompound, AstNbtCompoundEntry, AstJsonObjectEntry, AstNbt, NbtParser, MutatingReducer, AstNbtValue, AstChildren
+from mecha import Mecha, rule, MutatingReducer, Diagnostic#, AstNbtCompound, AstNbtCompoundEntry, AstJsonObjectEntry, AstNbt, NbtParser, MutatingReducer, AstNbtValue, AstChildren
 from mecha.ast import *
 from beet import Context, JsonFile, Function, FileDeserialize
 from gm4.utils import nested_get
@@ -112,7 +112,8 @@ class SkinNbtTransformer(MutatingReducer):
                         }
                     ))
                 case _:
-                    pass
+                    if "$" in node.value.evaluate().snbt():
+                        raise Diagnostic("warn", f"Unhandled SkullOwner substitution. Format failed to match known schemas.")
         return node
     
     # @cache # FIXME? can this be caches?
@@ -122,7 +123,11 @@ class SkinNbtTransformer(MutatingReducer):
             skin_name = f"{self.ctx.project_id}:{skin_name}"
         cached_data = self.skin_cache["skins"].get(skin_name, {"hash": None})
 
-        skin_file: Skin = self.skins_container[skin_name] # FIXME bubble error on missing reference
+        try:
+            skin_file: Skin = self.skins_container[skin_name]
+        except KeyError:
+            raise Diagnostic("error", f"Unknown skin \'{skin_name}\'") # TODO when processing json sources, pass filename down to here if posible
+        
         skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest()
 
         if skin_hash != cached_data["hash"]:
