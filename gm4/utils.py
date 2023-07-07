@@ -38,11 +38,11 @@ def nested_get(d: dict[str, Any], key: str) -> list[Any]:
 	ret_list: list[Any] = []
 	for k, v in d.items():
 		if k == key:
-			ret_list.append(v)
+			ret_list.append(d[k])
 		elif type(v) is dict:
-			ret_list.extend(nested_get(v, key)) # type: ignore
+			ret_list.extend(nested_get(d[k], key)) # type: ignore
 		elif type(v) is list:
-			for elem in v:  # type: ignore
+			for elem in d[k]:  # type: ignore
 				if type(elem) is dict:  # type: ignore
 					ret_list.extend(nested_get(elem, key))  # type: ignore
 	return ret_list

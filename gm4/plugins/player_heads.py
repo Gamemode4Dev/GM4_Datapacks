@@ -179,17 +179,19 @@ def process_json_files(ctx: Context):
     tf = ctx.inject(SkinNbtTransformer)
     mc = ctx.inject(Mecha)
 
-    for jsonfile in [*ctx.data.loot_tables.values(), *ctx.data.item_modifiers.values(), *ctx.data.advancements.values()]:
-        # retrieve instances of nbt data
-        if type(jsonfile.data) is list: # FIXME what are these special cases?
-            continue
-        if "guidebook" in str(jsonfile.data):
-            continue
-        for entry in nested_get(jsonfile.data, "nbt")+nested_get(jsonfile.data, "tag"):
-            print(entry)
-            node = mc.parse(entry, type=AstNbtCompound) # parse string to AST
-            entry = mc.serialize(tf(node)) # run AST through custom rule, and serialize bacn to string
-            print(entry)
+    def transform_snbt(snbt: str) -> str:
+        node = mc.parse(snbt, type=AstNbtCompound) # parse string to AST
+        return mc.serialize(tf(node)) # run AST through custom rule, and serialize bacn to string
+    
+    for jsonfile in [*ctx.data.loot_tables.values(), *ctx.data.item_modifiers.values()]:
+        for func_list in nested_get(jsonfile.data, "functions"):
+            for entry in filter(lambda e: e["function"]=="minecraft:set_nbt", func_list): #type: ignore
+                entry["tag"] = transform_snbt(entry["tag"]) #type: ignore
+
+    for jsonfile in ctx.data.advancements.values():
+        for entry in nested_get(jsonfile.data, "icon"):
+            entry["nbt"] = transform_snbt(entry["nbt"])
+
 
 
 class MineskinAuthManager():
