@@ -18,7 +18,6 @@ import base64
 import requests
 from io import BytesIO, TextIOWrapper
 import time
-from tokenstream import SourceLocation, UNKNOWN_LOCATION
 
 parent_logger = logging.getLogger("gm4.player_heads")
 
@@ -189,33 +188,23 @@ def process_json_files(ctx: Context):
     tf = ctx.inject(SkinNbtTransformer)
     mc = ctx.inject(Mecha)
 
-    def transform_snbt(snbt: str, filename: str, file: JsonFile) -> str:
+    def transform_snbt(snbt: str, file: JsonFile) -> str:
         node = mc.parse(snbt, type=AstNbtCompound) # parse string to AST
-        mc.database.update({file: CompilationUnit(source=snbt)})
-        return mc.serialize(tf.invoke(node, filename=filename, file=file, loc=UNKNOWN_LOCATION)) # run AST through custom rule, and serialize bacn to string
+        filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None # get relative filepath for Diagnostics
+        mc.database.update({file: CompilationUnit(source=snbt)}) # register fake CompilationUnit for Diagnostic printing
+            # FIXME I bet this breaks when a file has multiple errors, key-collisions
+        return mc.serialize(tf.invoke(node, filename=filename, file=file)) # run AST through custom rule, and serialize back to string, passing along data for Diagnostic
     
     for jsonfile in [*ctx.data.loot_tables.values(), *ctx.data.item_modifiers.values()]:
-        filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None
         for func_list in nested_get(jsonfile.data, "functions"):
             for entry in filter(lambda e: e["function"]=="minecraft:set_nbt", func_list): #type: ignore
-                entry["tag"] = transform_snbt(entry["tag"], filename=filename, file=jsonfile) #type: ignore
+                entry["tag"] = transform_snbt(entry["tag"], file=jsonfile) #type: ignore
 
     for jsonfile in ctx.data.advancements.values():
-        filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None
         for entry in nested_get(jsonfile.data, "icon"):
-            entry["nbt"] = transform_snbt(entry["nbt"], filename=filename, file=jsonfile)
+            entry["nbt"] = transform_snbt(entry["nbt"], file=jsonfile)
 
-    print("done with json_process")
-    # print(mc.diagnostics.exceptions)
-    print(tf.diagnostics.exceptions)
-    # errors = list(tf.diagnostics.get_all_errors())
-    # print(errors)
-    # try:
-    #     raise DiagnosticErrorSummary(DiagnosticCollection(errors))
-    # finally:
-    # Mecha.log_reported_diagnostics(tf) # mangled call to diagnostic printer
-    # FIXME alternative, appent all tf diags to mecha and let it print?
-    #     pass
+    # send any raised diagnostic errors to Mecha for reporting
     mc.diagnostics.extend(tf.diagnostics)
     
     #FIXME this plugin needs to get called before gm4.output? Do we really *need* to manually add it to the pipeline or can we find a mecha exit phase to tack onto
