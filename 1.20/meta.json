@@ -1,5 +1,5 @@
 {
-  "last_commit": "3e7364bf4a4805c50152e6e021613966b2fcad83",
+  "last_commit": "25b24d72f9a009aacec13775def72de65fa87abb",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -20,7 +20,8 @@
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_apple_trees",
@@ -48,7 +49,8 @@
       "important_note": "Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.",
       "modrinth_id": "Afacz65w",
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_audere_shamir",
@@ -71,7 +73,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_auto_crafting",
@@ -104,7 +107,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_bat_grenades",
@@ -129,7 +133,8 @@
       "important_note": "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
       "modrinth_id": "qWQqEQMY",
       "smithed_link": null,
-      "pmc_link": 4293806
+      "pmc_link": 4293806,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_beehive_inspector",
@@ -150,7 +155,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_better_armour_stands",
@@ -179,7 +185,8 @@
       ],
       "modrinth_id": "ib7YfS5V",
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_better_fire",
@@ -207,7 +214,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_block_compressors",
@@ -252,7 +260,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 4344954
+      "pmc_link": 4344954,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_book_binders",
@@ -276,7 +285,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_boots_of_ostara",
@@ -305,7 +315,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_calling_bell",
@@ -326,7 +337,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_cement_mixers",
@@ -349,7 +361,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_chairs",
@@ -374,7 +387,8 @@
       ],
       "modrinth_id": "KLywOs5L",
       "smithed_link": null,
-      "pmc_link": 4299435
+      "pmc_link": 4299435,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_combat_expanded",
@@ -396,7 +410,8 @@
       "important_note": "Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_cooler_caves",
@@ -423,7 +438,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_cozy_campfires",
@@ -444,7 +460,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_crossbow_cartridges",
@@ -466,7 +483,8 @@
       "recommends": [],
       "modrinth_id": "E7M57BNU",
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_dangerous_dungeons",
@@ -493,7 +511,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_desire_lines",
@@ -521,7 +540,8 @@
       ],
       "modrinth_id": "cx5dX4ug",
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_disassemblers",
@@ -564,7 +584,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_display_frames",
@@ -590,7 +611,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_dripleaf_filters",
@@ -610,7 +632,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_enchantment_extractors",
@@ -654,7 +677,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_end_fishing",
@@ -677,7 +701,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_ender_hoppers",
@@ -720,7 +745,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_enderman_support_class",
@@ -743,7 +769,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 4297148
+      "pmc_link": 4297148,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_everstone",
@@ -767,7 +794,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_forming_press",
@@ -811,7 +839,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_fulcio_shamir",
@@ -835,7 +864,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_guidebook",
@@ -857,7 +887,8 @@
       "important_note": "Experimental Module! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_heart_canisters",
@@ -902,7 +933,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 4331371
+      "pmc_link": 4331371,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_holographic_tags",
@@ -926,7 +958,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_iacio_shamir",
@@ -949,7 +982,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_ink_spitting_squid",
@@ -973,7 +1007,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 4581763
+      "pmc_link": 4581763,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_lightning_in_a_bottle",
@@ -1002,7 +1037,8 @@
       "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_liquid_minecarts",
@@ -1031,7 +1067,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_liquid_tanks",
@@ -1067,7 +1104,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_live_catch",
@@ -1088,7 +1126,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_lumos_shamir",
@@ -1115,7 +1154,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_mending_tanks",
@@ -1138,7 +1178,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_metallurgy",
@@ -1182,7 +1223,8 @@
       "important_note": "Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_midnight_menaces",
@@ -1205,7 +1247,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_mob_curing",
@@ -1229,7 +1272,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_mysterious_midnights",
@@ -1256,7 +1300,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_note_block_interface",
@@ -1280,7 +1325,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 4308978
+      "pmc_link": 4308978,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_orb_of_ankou",
@@ -1303,7 +1349,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_particles_pack",
@@ -1329,7 +1376,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_percurro_shamir",
@@ -1352,7 +1400,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_phantom_scarecrows",
@@ -1376,7 +1425,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_pig_tractors",
@@ -1397,7 +1447,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_podzol_rooting_soil",
@@ -1418,7 +1469,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_poses_pack",
@@ -1447,7 +1499,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_potion_liquids",
@@ -1476,7 +1529,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_potion_swords",
@@ -1501,7 +1555,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 4578144
+      "pmc_link": 4578144,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_record_crafting",
@@ -1527,7 +1582,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_relocators",
@@ -1561,7 +1617,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_rope_ladders",
@@ -1582,7 +1639,8 @@
       "recommends": [],
       "modrinth_id": "wN3RC3Zr",
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_scuba_gear",
@@ -1608,7 +1666,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_shapeless_portals",
@@ -1626,7 +1685,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_shroomites",
@@ -1649,7 +1709,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_smelteries",
@@ -1682,7 +1743,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_soul_glass",
@@ -1706,7 +1768,8 @@
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_spawner_minecarts",
@@ -1729,7 +1792,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_speed_paths",
@@ -1754,7 +1818,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_standard_crafting",
@@ -1778,7 +1843,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_sunken_treasure",
@@ -1807,7 +1873,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_sweethearts",
@@ -1832,7 +1899,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 5484554
+      "pmc_link": 5484554,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_teleportation_anchors",
@@ -1854,7 +1922,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_tinkering_compressors",
@@ -1887,7 +1956,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_tnt_landmines",
@@ -1912,7 +1982,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_tower_structures",
@@ -1939,7 +2010,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_trapped_signs",
@@ -1964,7 +2036,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_tunnel_bores",
@@ -1992,7 +2065,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_undead_players",
@@ -2017,7 +2091,8 @@
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
       "modrinth_id": "jx6D06Q4",
       "smithed_link": null,
-      "pmc_link": 4294228
+      "pmc_link": 4294228,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_vecto_shamir",
@@ -2040,7 +2115,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_vertical_rails",
@@ -2066,7 +2142,8 @@
       "recommends": [],
       "modrinth_id": "PL3P0wBS",
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_vigere_shamir",
@@ -2090,7 +2167,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_washing_tanks",
@@ -2114,7 +2192,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_weighted_armour",
@@ -2135,7 +2214,8 @@
       "recommends": [],
       "modrinth_id": "ReZCIa6j",
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_xp_storage",
@@ -2161,7 +2241,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_zauber_cauldrons",
@@ -2192,7 +2273,8 @@
       ],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_zauber_liquids",
@@ -2224,7 +2306,8 @@
       "recommends": [],
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null
+      "pmc_link": null,
+      "publish_date": "2023-07-10"
     },
     {
       "id": "gm4_ziprails",
@@ -2249,7 +2332,8 @@
       ],
       "modrinth_id": "EpgLRkLf",
       "smithed_link": null,
-      "pmc_link": 4298467
+      "pmc_link": 4298467,
+      "publish_date": "2023-07-10"
     }
   ],
   "contributors": {
