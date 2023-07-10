@@ -1,5 +1,5 @@
 from dataclasses import replace, dataclass, field
-from mecha import Mecha, rule, MutatingReducer, Diagnostic#, AstNbtCompound, AstNbtCompoundEntry, AstJsonObjectEntry, AstNbt, NbtParser, MutatingReducer, AstNbtValue, AstChildren
+from mecha import DiagnosticCollection, DiagnosticErrorSummary, Mecha, rule, MutatingReducer, Diagnostic, CompilationUnit#, AstNbtCompound, AstNbtCompoundEntry, AstJsonObjectEntry, AstNbt, NbtParser, MutatingReducer, AstNbtValue, AstChildren
 from mecha.ast import *
 from beet import Context, JsonFile, Function, FileDeserialize
 from gm4.utils import nested_get
@@ -7,10 +7,10 @@ import json
 import os
 from nbtlib import *
 
-from beet import Context, PngFile, DataPack, NamespaceProxy
+from beet import Context, PngFile, DataPack, NamespaceProxy, TextFile
 from PIL import Image as Img
 from PIL.Image import Image
-from typing import ClassVar, Callable
+from typing import ClassVar, Callable, Any
 import hashlib
 from beet.core.utils import required_field
 import logging
@@ -18,6 +18,7 @@ import base64
 import requests
 from io import BytesIO, TextIOWrapper
 import time
+from tokenstream import SourceLocation, UNKNOWN_LOCATION
 
 parent_logger = logging.getLogger("gm4.player_heads")
 
@@ -38,6 +39,12 @@ def beet_default(ctx: Context):
     yield
     tf.log_unused_textures()
     tf.output_skin_cache()
+    mc = ctx.inject(Mecha)
+    
+    # for k, v in mc.database.items():
+    #     print(k)
+    #     print(v)
+    #     print("\n")
     
 
 def test(ctx: Context):
@@ -61,11 +68,11 @@ class SkinNbtTransformer(MutatingReducer):
         super().__init__()
 
     @rule(AstNbtCompoundEntry)
-    def skullowner_substitutions(self, node: AstNbtCompoundEntry) -> AstNbtCompoundEntry:
+    def skullowner_substitutions(self, node: AstNbtCompoundEntry, **kwargs: Any) -> AstNbtCompoundEntry:
         if node.key.value == "SkullOwner":
             match node.value.evaluate():
                 case String(val) if "$" in val:
-                    skin_val, uuid = self.retrieve_texture(val)
+                    skin_val, uuid = self.retrieve_texture(val, **kwargs)
                     node = replace(node, value=AstNbtCompound.from_value({
                         "Id": IntArray(uuid),
                         "Properties": {
@@ -75,7 +82,7 @@ class SkinNbtTransformer(MutatingReducer):
                         }
                     }))
                 case Compound({"Value": String(val), **rest}) if "$" in val: # type: ignore
-                    skin_val, uuid = self.retrieve_texture(val)
+                    skin_val, uuid = self.retrieve_texture(val, **kwargs)
                     node = replace(node, value=AstNbtCompound.from_value(
                         ({"Name": n} if (n:=rest.get("Name")) else {}) | # type: ignore
                         {"Id": IntArray(uuid),
@@ -87,7 +94,7 @@ class SkinNbtTransformer(MutatingReducer):
                         }
                     ))
                 case Compound({"Properties": Compound({"textures": List([Compound({"Value": String(val), **tex_rest})])}), **root_rest}) if "$" in val: # type: ignore
-                    skin_val, uuid = self.retrieve_texture(val)
+                    skin_val, uuid = self.retrieve_texture(val, **kwargs)
                     node = replace(node, value=AstNbtCompound.from_value(
                         ({"Name": n} if (n:=root_rest.get("Name")) else {}) | # type: ignore
                         {"Id": IntArray(uuid),
@@ -103,7 +110,7 @@ class SkinNbtTransformer(MutatingReducer):
                         raise Diagnostic("warn", f"Unhandled SkullOwner substitution. Format failed to match known schemas.")
         return node
     
-    def retrieve_texture(self, skin_name: str):
+    def retrieve_texture(self, skin_name: str, **kwargs: Any):
         skin_name = skin_name.lstrip("$")
         if ":" not in skin_name:
             skin_name = f"{self.ctx.project_id}:{skin_name}"
@@ -112,7 +119,10 @@ class SkinNbtTransformer(MutatingReducer):
         try:
             skin_file: Skin = self.ctx.data[Skin][skin_name]
         except KeyError:
-            raise Diagnostic("error", f"Unknown skin \'{skin_name}\'") # TODO when processing json sources, pass filename down to here if posible
+            raise Diagnostic("error", f"Unknown skin \'{skin_name}\'",
+                             filename=kwargs.get("filename"),
+                             file=kwargs.get("file")
+                            )
         
         self.used_textures.append(skin_name)
         skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest()
@@ -179,19 +189,36 @@ def process_json_files(ctx: Context):
     tf = ctx.inject(SkinNbtTransformer)
     mc = ctx.inject(Mecha)
 
-    def transform_snbt(snbt: str) -> str:
+    def transform_snbt(snbt: str, filename: str, file: JsonFile) -> str:
         node = mc.parse(snbt, type=AstNbtCompound) # parse string to AST
-        return mc.serialize(tf(node)) # run AST through custom rule, and serialize bacn to string
+        mc.database.update({file: CompilationUnit(source=snbt)})
+        return mc.serialize(tf.invoke(node, filename=filename, file=file, loc=UNKNOWN_LOCATION)) # run AST through custom rule, and serialize bacn to string
     
     for jsonfile in [*ctx.data.loot_tables.values(), *ctx.data.item_modifiers.values()]:
+        filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None
         for func_list in nested_get(jsonfile.data, "functions"):
             for entry in filter(lambda e: e["function"]=="minecraft:set_nbt", func_list): #type: ignore
-                entry["tag"] = transform_snbt(entry["tag"]) #type: ignore
+                entry["tag"] = transform_snbt(entry["tag"], filename=filename, file=jsonfile) #type: ignore
 
     for jsonfile in ctx.data.advancements.values():
+        filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None
         for entry in nested_get(jsonfile.data, "icon"):
-            entry["nbt"] = transform_snbt(entry["nbt"])
+            entry["nbt"] = transform_snbt(entry["nbt"], filename=filename, file=jsonfile)
 
+    print("done with json_process")
+    # print(mc.diagnostics.exceptions)
+    print(tf.diagnostics.exceptions)
+    # errors = list(tf.diagnostics.get_all_errors())
+    # print(errors)
+    # try:
+    #     raise DiagnosticErrorSummary(DiagnosticCollection(errors))
+    # finally:
+    # Mecha.log_reported_diagnostics(tf) # mangled call to diagnostic printer
+    # FIXME alternative, appent all tf diags to mecha and let it print?
+    #     pass
+    mc.diagnostics.extend(tf.diagnostics)
+    
+    #FIXME this plugin needs to get called before gm4.output? Do we really *need* to manually add it to the pipeline or can we find a mecha exit phase to tack onto
 
 
 class MineskinAuthManager():
