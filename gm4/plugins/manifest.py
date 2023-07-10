@@ -113,7 +113,8 @@ def update_patch(ctx: Context):
 		module = modules[id]
 		released = released_modules.get(id, None)
 
-		module["publish_date"] = released.get("publish_date", datetime.datetime.now().date().isoformat())
+		publish_date = released.get("publish_date", None) if released else None
+		module["publish_date"] = publish_date or datetime.datetime.now().date().isoformat()
 
 		deps = _traverse_includes(id) | {"base"}
 		deps_dirs = [element for sublist in [[f"{d}/data", f"{d}/*py"] for d in deps] for element in sublist]
