@@ -22,15 +22,8 @@
                             "function": "minecraft:set_name",
                             "entity": "this",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Splash Soulution of Healing",
-                                    [
-                                        {
-                                            "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.splash_potion.healing"
-                                        }
-                                    ]
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.splash_potion.healing",
+                                "fallback": "Splash Soulution of Healing",
                                 "italic": false
                             },
                             "conditions": [

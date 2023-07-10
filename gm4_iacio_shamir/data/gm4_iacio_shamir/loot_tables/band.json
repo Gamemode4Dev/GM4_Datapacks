@@ -16,13 +16,8 @@
 							"replace": false,
 							"lore": [
 								{
-									"translate": "%1$s%3427655$s",
-									"with": [
-										"Iacio",
-										{
-											"translate": "item.gm4.shamir.iacio"
-										}
-									],
+									"translate": "item.gm4.shamir.iacio",
+									"fallback": "Iacio",
 									"italic": false,
 									"color": "gray"
 								}

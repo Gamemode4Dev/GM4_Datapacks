@@ -1,12 +1,12 @@
-extend: '../module.yaml'
-
 id: gm4_rope_ladders
 name: Rope Ladders
-version: 1.0.X
+version: 1.2.X
+
+data_pack:
+  load: .
 
 pipeline:
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
 
 meta:
   gm4:
@@ -23,3 +23,9 @@ meta:
     credits:
       Creator:
         - MichaelMiner137
+      Icon Design:
+        - BluePsychoRanger
+  modrinth:
+    project_id: wN3RC3Zr
+  smithed:
+    pack_id: gm4_rope_ladders

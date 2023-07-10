@@ -122,14 +122,19 @@
             "range": 1
           }
         ],
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:dropper"
-            ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Disassembler\",{\"translate\":\"container.gm4.disassembler\"}]}'}"
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:dropper"
+                ],
+                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Disassembler\",{\"translate\":\"container.gm4.disassembler\"}]}'}"
+              }
+            }
           }
-        }
+        ]
       }
     }
   },

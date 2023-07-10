@@ -161,14 +161,19 @@
             "range": 1
           }
         ],
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:hopper"
-            ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Ender Hopper\",{\"translate\":\"container.gm4.ender_hopper\"}]}'}"
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:hopper"
+                ],
+                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Ender Hopper\",{\"translate\":\"container.gm4.ender_hopper\"}]}'}"
+              }
+            }
           }
-        }
+        ]
       }
     }
   },

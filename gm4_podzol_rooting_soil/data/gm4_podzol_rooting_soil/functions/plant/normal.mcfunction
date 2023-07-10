@@ -9,6 +9,8 @@ execute if entity @s[tag=gm4_birch_sapling] run setblock ~ ~ ~ minecraft:birch_s
 execute if entity @s[tag=gm4_spruce_sapling] run setblock ~ ~ ~ minecraft:spruce_sapling destroy
 execute if entity @s[tag=gm4_jungle_sapling] run setblock ~ ~ ~ minecraft:jungle_sapling destroy
 execute if entity @s[tag=gm4_acacia_sapling] run setblock ~ ~ ~ minecraft:acacia_sapling destroy
+execute if entity @s[tag=gm4_cherry_sapling] run setblock ~ ~ ~ minecraft:cherry_sapling destroy
+execute if entity @s[tag=gm4_mangrove_propagule] run setblock ~ ~ ~ minecraft:mangrove_propagule destroy
 
 # plant custom sapling
 execute if data entity @s Item.tag.gm4_podzol_rooting_soil run function #gm4_podzol_rooting_soil:plant_custom_sapling

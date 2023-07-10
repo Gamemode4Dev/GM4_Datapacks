@@ -14,13 +14,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Crystal of Leaping",
-                                    {
-                                        "translate": "item.gm4.zauber_cauldrons.crystal.jump_boost"
-                                    }
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.crystal.jump_boost",
+                                "fallback": "Crystal of Leaping",
                                 "italic": false
                             }
                         },

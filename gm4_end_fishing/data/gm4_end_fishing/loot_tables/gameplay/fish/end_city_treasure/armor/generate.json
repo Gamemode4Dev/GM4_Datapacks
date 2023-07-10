@@ -12,13 +12,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Lost on End City moving day",
-                    {
-                      "translate": "text.gm4.end_city_armor.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.1",
+                  "fallback": "Lost on End City moving day",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -39,13 +34,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Forged by Seppo Ilmarinen",
-                    {
-                      "translate": "text.gm4.end_city_armor.2"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.2",
+                  "fallback": "Forged by Seppo Ilmarinen",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -66,13 +56,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Belongs to Achilles",
-                    {
-                      "translate": "text.gm4.end_city_armor.3"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.3",
+                  "fallback": "Belongs to Achilles",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -93,13 +78,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Made by Wayland the Smith",
-                    {
-                      "translate": "text.gm4.end_city_armor.4"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.4",
+                  "fallback": "Made by Wayland the Smith",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -120,13 +100,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Worn during the battle of Ender Ender",
-                    {
-                      "translate": "text.gm4.end_city_armor.5"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.5",
+                  "fallback": "Worn during the battle of Ender Ender",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -147,24 +122,14 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "This thing's been rotting in",
-                    {
-                      "translate": "text.gm4.end_city_armor.6.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.6.1",
+                  "fallback": "This thing's been rotting in",
                   "color": "dark_gray",
                   "italic": true
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "the void for at least a century.",
-                    {
-                      "translate": "text.gm4.end_city_armor.6.2"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.6.2",
+                  "fallback": "the void for at least a century.",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -185,13 +150,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Passed down over many generations",
-                    {
-                      "translate": "text.gm4.end_city_armor.7"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.7",
+                  "fallback": "Passed down over many generations",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -212,13 +172,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Wear this to become invisible to nobody!",
-                    {
-                      "translate": "text.gm4.end_city_armor.8"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.8",
+                  "fallback": "Wear this to become invisible to nobody!",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -239,24 +194,14 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "I promise you can fly while wearing this.",
-                    {
-                      "translate": "text.gm4.end_city_armor.9.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.9.1",
+                  "fallback": "I promise you can fly while wearing this.",
                   "color": "dark_gray",
                   "italic": true
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Trust me, just jump into the void.",
-                    {
-                      "translate": "text.gm4.end_city_armor.9.2"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.9.2",
+                  "fallback": "Trust me, just jump into the void.",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -277,24 +222,14 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "With this you shall be immortal!",
-                    {
-                      "translate": "text.gm4.end_city_armor.10.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.10.1",
+                  "fallback": "With this you shall be immortal!",
                   "color": "dark_gray",
                   "italic": true
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Or is it immoral? I can't remember.",
-                    {
-                      "translate": "text.gm4.end_city_armor.10.2"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_armor.10.2",
+                  "fallback": "Or is it immoral? I can't remember.",
                   "color": "dark_gray",
                   "italic": true
                 }

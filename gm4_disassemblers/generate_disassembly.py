@@ -3,9 +3,6 @@ from beet.contrib.vanilla import Vanilla
 import itertools
 from typing import Any
 
-
-MCVERSION = "1.19.2"
-
 ITEMS = {
   "diamond_sword": 1562,
   "diamond_pickaxe": 1562,
@@ -67,7 +64,7 @@ def beet_default(ctx: Context):
       ingredient_groups = ["".join(g) for _, g in itertools.groupby(pattern)]
       recipe_keys = {k: n["item"] for k, n in recipe["key"].items()}
       ingredients = [
-        ("minecraft:air" if p[0] is " " else recipe_keys[p[0]], len(p))
+        ("minecraft:air" if p[0] == " " else recipe_keys[p[0]], len(p))
         for p in ingredient_groups
       ]
     else:

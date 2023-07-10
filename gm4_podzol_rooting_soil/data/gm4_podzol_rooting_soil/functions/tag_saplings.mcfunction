@@ -9,6 +9,8 @@ execute unless score success gm4_podzol_data matches 1.. store success score suc
 execute unless score success gm4_podzol_data matches 1.. store success score success gm4_podzol_data if entity @s[nbt={Item:{id:"minecraft:spruce_sapling"}}] run tag @s add gm4_spruce_sapling
 execute unless score success gm4_podzol_data matches 1.. store success score success gm4_podzol_data if entity @s[nbt={Item:{id:"minecraft:jungle_sapling"}}] run tag @s add gm4_jungle_sapling
 execute unless score success gm4_podzol_data matches 1.. store success score success gm4_podzol_data if entity @s[nbt={Item:{id:"minecraft:acacia_sapling"}}] run tag @s add gm4_acacia_sapling
+execute unless score success gm4_podzol_data matches 1.. store success score success gm4_podzol_data if entity @s[nbt={Item:{id:"minecraft:cherry_sapling"}}] run tag @s add gm4_cherry_sapling
+execute unless score success gm4_podzol_data matches 1.. store success score success gm4_podzol_data if entity @s[nbt={Item:{id:"minecraft:mangrove_propagule"}}] run tag @s add gm4_mangrove_propagule
 
 # mark saplings and not saplings
 execute if score success gm4_podzol_data matches 1 run tag @s add gm4_sapling

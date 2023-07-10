@@ -14,13 +14,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Crystal of Harming",
-                                    {
-                                        "translate": "item.gm4.zauber_cauldrons.crystal.instant_damage"
-                                    }
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.crystal.instant_damage",
+                                "fallback": "Crystal of Harming",
                                 "italic": false
                             }
                         },

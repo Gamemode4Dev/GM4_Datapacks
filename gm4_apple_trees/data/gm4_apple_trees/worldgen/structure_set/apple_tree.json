@@ -1,0 +1,21 @@
+{
+  "structures": [
+    {
+      "structure": "gm4_apple_trees:apple_tree",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 314989258,
+    "frequency_reduction_method": "default",
+    "frequency": 0.4,
+    "locate_offset": [
+      7,
+      0,
+      7
+    ],
+    "spacing": 3,
+    "separation": 0
+  }
+}

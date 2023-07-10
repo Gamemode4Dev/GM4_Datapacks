@@ -120,13 +120,8 @@
                         "translate": "effect.minecraft.levitation"
                       },
                       {
-                        "translate": "%1$s%3427655$s",
-                        "with": [
-                          "VI",
-                          {
-                            "translate": "enchantment.level.6"
-                          }
-                        ]
+                        "translate": "enchantment.level.6",
+                        "fallback": "VI"
                       }
                     ]
                   },
@@ -167,13 +162,8 @@
                         "translate": "effect.minecraft.levitation"
                       },
                       {
-                        "translate": "%1$s%3427655$s",
-                        "with": [
-                          "VIII",
-                          {
-                            "translate": "enchantment.level.8"
-                          }
-                        ]
+                        "translate": "enchantment.level.8",
+                        "fallback": "VIII"
                       }
                     ]
                   },
@@ -214,13 +204,8 @@
                         "translate": "effect.minecraft.levitation"
                       },
                       {
-                        "translate": "%1$s%3427655$s",
-                        "with": [
-                          "X",
-                          {
-                            "translate": "enchantment.level.10"
-                          }
-                        ]
+                        "translate": "enchantment.level.10",
+                        "fallback": "X"
                       }
                     ]
                   },

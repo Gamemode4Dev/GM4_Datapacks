@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "gm4_dangerous_dungeons:ocean/surface",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1301289086,
+    "spacing": 12,
+    "separation": 3
+  }
+}
