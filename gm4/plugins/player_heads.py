@@ -12,7 +12,7 @@ import requests
 from beet import Context, FileDeserialize, JsonFile, PngFile
 from mecha import CompilationUnit, Diagnostic, Mecha, MutatingReducer, rule
 from mecha.ast import AstNbtCompound, AstNbtCompoundEntry
-from nbtlib import Compound, IntArray, String
+from nbtlib import Compound, IntArray, String, List
 from PIL.Image import Image
 
 from gm4.utils import nested_get
