@@ -106,7 +106,8 @@ class SkinNbtTransformer(MutatingReducer):
                     ))
                 case _:
                     if "$" in node.value.evaluate().snbt():
-                        raise Diagnostic("warn", f"Unhandled SkullOwner substitution. Format failed to match known schemas.")
+                        raise Diagnostic("warn", f"Unhandled SkullOwner substitution. Format failed to match known schemas.", 
+                                            filename=kwargs.get("filename"), file=kwargs.get("file"))
         return node
     
     def retrieve_texture(self, skin_name: str, **kwargs: Any):
@@ -132,7 +133,7 @@ class SkinNbtTransformer(MutatingReducer):
             self.skin_cache["skins"][skin_name] = {
                 "uuid": uuid,
                 "value": value,
-                "name": "foo",
+                "name": "foo", # FIXME
                 "hash": skin_hash
             }
             return value, uuid
@@ -188,21 +189,20 @@ def process_json_files(ctx: Context):
     tf = ctx.inject(SkinNbtTransformer)
     mc = ctx.inject(Mecha)
 
-    def transform_snbt(snbt: str, file: JsonFile) -> str:
+    def transform_snbt(snbt: str, db_entry_key: str) -> str:
         node = mc.parse(snbt, type=AstNbtCompound) # parse string to AST
         filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None # get relative filepath for Diagnostics
-        mc.database.update({file: CompilationUnit(source=snbt)}) # register fake CompilationUnit for Diagnostic printing
-            # FIXME I bet this breaks when a file has multiple errors, key-collisions
-        return mc.serialize(tf.invoke(node, filename=filename, file=file)) # run AST through custom rule, and serialize back to string, passing along data for Diagnostic
+        mc.database.update({db_entry_key: CompilationUnit(source=snbt)}) #type:ignore   # register fake CompilationUnit for Diagnostic printing, using unique string as key instead of the File() object, to support multiple entries from the same file
+        return mc.serialize(tf.invoke(node, filename=filename, file=db_entry_key)) # run AST through custom rule, and serialize back to string, passing along data for Diagnostic
     
-    for jsonfile in [*ctx.data.loot_tables.values(), *ctx.data.item_modifiers.values()]:
+    for name, jsonfile in [*ctx.data.loot_tables.items(), *ctx.data.item_modifiers.items()]:
         for func_list in nested_get(jsonfile.data, "functions"):
-            for entry in filter(lambda e: e["function"]=="minecraft:set_nbt", func_list): #type: ignore
-                entry["tag"] = transform_snbt(entry["tag"], file=jsonfile) #type: ignore
+            for i, entry in enumerate(filter(lambda e: e["function"]=="minecraft:set_nbt", func_list)): #type: ignore
+                entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{name}_{i}") #type: ignore
 
-    for jsonfile in ctx.data.advancements.values():
-        for entry in nested_get(jsonfile.data, "icon"):
-            entry["nbt"] = transform_snbt(entry["nbt"], file=jsonfile)
+    for name, jsonfile in ctx.data.advancements.items():
+        for i, entry in enumerate(nested_get(jsonfile.data, "icon")):
+            entry["nbt"] = transform_snbt(entry["nbt"], db_entry_key=f"{name}_{i}")
 
     # send any raised diagnostic errors to Mecha for reporting
     mc.diagnostics.extend(tf.diagnostics)
@@ -211,6 +211,7 @@ def process_json_files(ctx: Context):
 
 
 class MineskinAuthManager():
+    """A process for managing mineskin access credentials, prompting the user if needed"""
     def __init__(self, ctx: Context):
         token_cache = ctx.cache.get("mineskin").json.get("token") # type: ignore , cache.get ensures cache exists
         print(token_cache)
