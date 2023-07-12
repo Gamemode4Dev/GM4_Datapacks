@@ -1,23 +1,21 @@
-from dataclasses import replace, dataclass, field
-from mecha import DiagnosticCollection, DiagnosticErrorSummary, Mecha, rule, MutatingReducer, Diagnostic, CompilationUnit#, AstNbtCompound, AstNbtCompoundEntry, AstJsonObjectEntry, AstNbt, NbtParser, MutatingReducer, AstNbtValue, AstChildren
-from mecha.ast import *
-from beet import Context, JsonFile, Function, FileDeserialize
-from gm4.utils import nested_get
-import json
-import os
-from nbtlib import *
-
-from beet import Context, PngFile, DataPack, NamespaceProxy, TextFile
-from PIL import Image as Img
-from PIL.Image import Image
-from typing import ClassVar, Callable, Any
-import hashlib
-from beet.core.utils import required_field
-import logging
 import base64
-import requests
-from io import BytesIO, TextIOWrapper
+import hashlib
+import json
+import logging
+import os
 import time
+from dataclasses import replace
+from io import BytesIO
+from typing import Any, Callable, ClassVar
+
+import requests
+from beet import Context, FileDeserialize, JsonFile, PngFile
+from mecha import CompilationUnit, Diagnostic, Mecha, MutatingReducer, rule
+from mecha.ast import AstNbtCompound, AstNbtCompoundEntry
+from nbtlib import Compound, IntArray, String
+from PIL.Image import Image
+
+from gm4.utils import nested_get
 
 parent_logger = logging.getLogger("gm4.player_heads")
 
@@ -28,7 +26,7 @@ class Skin(PngFile):
     """Class representing a skin texture file."""
     scope: ClassVar[tuple[str, ...]] = ("skins",)
     extension: ClassVar[str] = ".png"
-    image: ClassVar[FileDeserialize[Image]] = FileDeserialize() # FIXME this is here to try and fix type warnings
+    image: ClassVar[FileDeserialize[Image]] = FileDeserialize() # purely here to solve type-warnings on PIL images
 
 def beet_default(ctx: Context):
     ctx.data.extend_namespace.append(Skin) # register new filetype to datapack
@@ -38,29 +36,11 @@ def beet_default(ctx: Context):
     yield
     tf.log_unused_textures()
     tf.output_skin_cache()
-    mc = ctx.inject(Mecha)
     
-    # for k, v in mc.database.items():
-    #     print(k)
-    #     print(v)
-    #     print("\n")
-    
-
-def test(ctx: Context):
-    print(ctx.data[Skin])
-    # ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_2"] = Skin(source_path="base/pack.png")
-    # ctx.data[Skin]["gm4_heart_canisters:test_img"] = Skin(Img.new("RGB", (128, 128), "red"))
-    # res = mineskin_upload(ctx.data[Skin]["gm4_heart_canisters:heart_canister_teir_1"], "heart_canisters_teir_2.png")
-    # print(res)
-    # ctx.data[Skin]["gm4_heart_canisters:test_img"] = ctx.data[Skin]["gm4_heart_canisters:test_img"].image.rotate(45)
-    # print(ctx.data[Skin])
 
 class SkinNbtTransformer(MutatingReducer):
-    # ctx: Context|None = None
-    # skin_cache = JsonFile(source_path="gm4/skin_cache.json").data
-    # used_textures: list[str] = field(default_factory=list)
+    """Reducer class defining custom mecha parsing rules for skin texture data, and storing needed data for those operations"""
     def __init__(self, ctx: Context):
-        # NOTE better to bind not all of ctx
         self.ctx: Context = ctx
         self.skin_cache = JsonFile(source_path="gm4/skin_cache.json").data
         self.used_textures: list[str] = []
@@ -125,7 +105,7 @@ class SkinNbtTransformer(MutatingReducer):
                             )
         
         self.used_textures.append(skin_name)
-        skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest()
+        skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest() #type:ignore
 
         if skin_hash != cached_data["hash"]:
             # the image file contents have changed - upload the new image

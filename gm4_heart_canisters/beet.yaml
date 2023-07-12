@@ -6,7 +6,6 @@ data_pack:
   load: .
 
 pipeline:
-  - gm4.plugins.player_heads.test
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_player_heads
   - gm4.plugins.include.lib_custom_crafters
