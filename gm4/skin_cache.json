@@ -165,7 +165,7 @@
       "name": "gm4_metallurgy:band/barimium",
       "hash": "f75253001a1bababc6715a25f883cd19fa6f2d11"
     },
-    "gm4_heart_canisters:heart_canister_teir_1": {
+    "gm4_heart_canisters:heart_canister_tier_1": {
       "uuid": [
         1567268555,
         400377645,
@@ -176,7 +176,7 @@
       "name": "gm4_heart_canisters:heart_canister_teir_1",
       "hash": "c36f3f29070e940d4bd0e8994c3f6d390e2e9c77"
     },
-    "gm4_heart_canisters:heart_canister_teir_2": {
+    "gm4_heart_canisters:heart_canister_tier_2": {
       "uuid": [
         -320501529,
         -244889622,
