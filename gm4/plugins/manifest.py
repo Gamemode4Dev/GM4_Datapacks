@@ -6,6 +6,7 @@ import json
 import os
 import yaml
 import logging
+import datetime
 from gm4.utils import run, Version
 
 parent_logger = logging.getLogger("gm4.manifest")
@@ -110,11 +111,15 @@ def update_patch(ctx: Context):
 
 	for id in modules:
 		module = modules[id]
+		released = released_modules.get(id, None)
+
+		publish_date = released.get("publish_date", None) if released else None
+		module["publish_date"] = publish_date or datetime.datetime.now().date().isoformat()
+
 		deps = _traverse_includes(id) | {"base"}
 		deps_dirs = [element for sublist in [[f"{d}/data", f"{d}/*py"] for d in deps] for element in sublist]
 
 		diff = run(["git", "diff", last_commit, "--shortstat", "--", f"{id}/data", f"{id}/*.py"] + deps_dirs) if last_commit else True
-		released = released_modules.get(id, None)
 
 		if not diff and released:
 			# No changes were made, keep the same patch version
