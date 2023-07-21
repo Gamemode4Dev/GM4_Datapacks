@@ -107,9 +107,9 @@ class SkinNbtTransformer(MutatingReducer):
                 case Compound({"value": String(value)}) if "$" in value:
                     skin_val, _, d = self.retrieve_texture(value)
                     if d:
-                        yield d
+                        erroring_subnode = next(i for i in node.arguments[2].entries if i.key.value == "value") # type: ignore
+                        yield set_location(d, erroring_subnode)
                     node = replace(node, arguments=AstChildren((*node.arguments[:2], AstNbtCompound.from_value(nbt|{"value": skin_val})))) # type: ignore
-                    # TODO diagnostic location correction
         return node
     
     def retrieve_texture(self, skin_name: str, **kwargs: Any) -> tuple[str, list[int], Diagnostic|None]:
