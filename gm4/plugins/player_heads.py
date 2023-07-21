@@ -74,7 +74,7 @@ class SkinNbtTransformer(MutatingReducer):
                         {"Id": IntArray(uuid),
                          "Properties": {
                             "textures":[
-                                {"Value": "1234567890abcdef="} | #FIXME
+                                {"Value": skin_val} |
                                 ({"Signature": s} if (s:=rest.get("Signature")) else {})] # type: ignore
                             }
                         }
@@ -88,7 +88,7 @@ class SkinNbtTransformer(MutatingReducer):
                         {"Id": IntArray(uuid),
                          "Properties": {
                             "textures":[
-                                {"Value": "1234567890abcdef="} | 
+                                {"Value": skin_val} | 
                                 ({"Signature": s} if (s:=tex_rest.get("Signature")) else {})] # type: ignore
                             }
                         }
