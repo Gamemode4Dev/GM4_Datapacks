@@ -11,8 +11,8 @@ from typing import Any, Callable, ClassVar
 import requests
 from beet import Context, FileDeserialize, JsonFile, PngFile
 from mecha import CompilationUnit, Diagnostic, Mecha, MutatingReducer, rule
-from mecha.ast import AstNbtCompound, AstNbtCompoundEntry
-from nbtlib import Compound, IntArray, String, List
+from mecha.ast import AstNbtCompound, AstNbtCompoundEntry, AstCommand
+from nbtlib import Compound, IntArray, List, String
 from PIL.Image import Image
 
 from gm4.utils import nested_get
@@ -67,7 +67,7 @@ class SkinNbtTransformer(MutatingReducer):
                         {"Id": IntArray(uuid),
                          "Properties": {
                             "textures":[
-                                {"Value": "1234567890abcdef="} | 
+                                {"Value": "1234567890abcdef="} | #FIXME
                                 ({"Signature": s} if (s:=rest.get("Signature")) else {})] # type: ignore
                             }
                         }
@@ -88,6 +88,17 @@ class SkinNbtTransformer(MutatingReducer):
                     if "$" in node.value.evaluate().snbt():
                         raise Diagnostic("warn", f"Unhandled SkullOwner substitution. Format failed to match known schemas.", 
                                             filename=kwargs.get("filename"), file=kwargs.get("file"))
+        return node
+    
+    @rule(AstCommand, identifier="data:modify:storage:target:targetPath:append:value:value")
+    def lib_player_heads_skullowner_subs(self, node: AstCommand) -> AstCommand:
+        """Captures skin texture data in lib_player_heads setup"""
+        if node.arguments[0].get_value() == "gm4_player_heads:register" and node.arguments[1].components[0].value == "heads": # type:ignore
+            match nbt:=node.arguments[2].evaluate(): # type:ignore
+                case Compound({"value": String(value)}) if "$" in value:
+                    node = replace(node, arguments=AstChildren((*node.arguments[:2], AstNbtCompound.from_value(nbt|{"value": self.retrieve_texture(value)[0]})))) # type: ignore
+                case _:
+                    pass
         return node
     
     def retrieve_texture(self, skin_name: str, **kwargs: Any):
