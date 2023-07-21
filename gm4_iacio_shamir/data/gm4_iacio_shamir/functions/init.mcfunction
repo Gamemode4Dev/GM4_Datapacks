@@ -7,6 +7,7 @@ scoreboard objectives add gm4_iacio_splash minecraft.used:minecraft.splash_potio
 scoreboard objectives add gm4_iacio_linger minecraft.used:minecraft.lingering_potion
 
 execute unless score iacio_shamir gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Iacio shamir"}
+execute unless score iacio_shamir gm4_earliest_version < iacio_shamir gm4_modules run scoreboard players operation iacio_shamir gm4_earliest_version = iacio_shamir gm4_modules
 scoreboard players set iacio_shamir gm4_modules 1
 
 # unregister old shamir
