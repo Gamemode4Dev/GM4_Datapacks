@@ -6,12 +6,14 @@ import os
 import time
 from dataclasses import replace
 from io import BytesIO
-from typing import Any, Callable, ClassVar
+from typing import Any, Callable, ClassVar, Generator
+from tokenstream import set_location
 
 import requests
 from beet import Context, FileDeserialize, JsonFile, PngFile
 from mecha import CompilationUnit, Diagnostic, Mecha, MutatingReducer, rule
 from mecha.ast import AstNbtCompound, AstNbtCompoundEntry, AstCommand
+from mecha.ast import *
 from nbtlib import Compound, IntArray, List, String
 from PIL.Image import Image
 
@@ -20,6 +22,7 @@ from gm4.utils import nested_get
 parent_logger = logging.getLogger("gm4.player_heads")
 
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/player_head_management (gamemode4official@gmail.com)"
+MISSING_TEXTURE_SKIN = "eyJ0ZXh0dXJlcyIgOiB7ICJTS0lOIiA6IHsgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kYWUyOTA0YTI4NmI5NTNmYWI4ZWNlNTFkNjJiZmNjYjMyY2IwMjc0OGY0NjdjMDBiYzMxODg1NTk4MDUwNThiIn19fQ=="
 
 
 class Skin(PngFile):
@@ -47,11 +50,13 @@ class SkinNbtTransformer(MutatingReducer):
         super().__init__()
 
     @rule(AstNbtCompoundEntry)
-    def skullowner_substitutions(self, node: AstNbtCompoundEntry, **kwargs: Any) -> AstNbtCompoundEntry:
+    def skullowner_substitutions(self, node: AstNbtCompoundEntry, **kwargs: Any) -> Generator[Diagnostic, None, AstNbtCompoundEntry]:
         if node.key.value == "SkullOwner":
             match node.value.evaluate():
                 case String(val) if "$" in val:
-                    skin_val, uuid = self.retrieve_texture(val, **kwargs)
+                    skin_val, uuid, d = self.retrieve_texture(val, **kwargs)
+                    if d:
+                        yield d
                     node = replace(node, value=AstNbtCompound.from_value({
                         "Id": IntArray(uuid),
                         "Properties": {
@@ -61,7 +66,9 @@ class SkinNbtTransformer(MutatingReducer):
                         }
                     }))
                 case Compound({"Value": String(val), **rest}) if "$" in val: # type: ignore
-                    skin_val, uuid = self.retrieve_texture(val, **kwargs)
+                    skin_val, uuid, d = self.retrieve_texture(val, **kwargs)
+                    if d:
+                        yield d
                     node = replace(node, value=AstNbtCompound.from_value(
                         ({"Name": n} if (n:=rest.get("Name")) else {}) | # type: ignore
                         {"Id": IntArray(uuid),
@@ -73,7 +80,9 @@ class SkinNbtTransformer(MutatingReducer):
                         }
                     ))
                 case Compound({"Properties": Compound({"textures": List([Compound({"Value": String(val), **tex_rest})])}), **root_rest}) if "$" in val: # type: ignore
-                    skin_val, uuid = self.retrieve_texture(val, **kwargs)
+                    skin_val, uuid, d = self.retrieve_texture(val, **kwargs)
+                    if d:
+                        yield d
                     node = replace(node, value=AstNbtCompound.from_value(
                         ({"Name": n} if (n:=root_rest.get("Name")) else {}) | # type: ignore
                         {"Id": IntArray(uuid),
@@ -86,22 +95,24 @@ class SkinNbtTransformer(MutatingReducer):
                     ))
                 case _:
                     if "$" in node.value.evaluate().snbt():
-                        raise Diagnostic("warn", f"Unhandled SkullOwner substitution. Format failed to match known schemas.", 
+                        yield Diagnostic("warn", f"Unhandled SkullOwner substitution. Format failed to match known schemas.", 
                                             filename=kwargs.get("filename"), file=kwargs.get("file"))
         return node
     
     @rule(AstCommand, identifier="data:modify:storage:target:targetPath:append:value:value")
-    def lib_player_heads_skullowner_subs(self, node: AstCommand) -> AstCommand:
+    def lib_player_heads_skullowner_subs(self, node: AstCommand) -> Generator[Diagnostic, None, AstCommand]:
         """Captures skin texture data in lib_player_heads setup"""
         if node.arguments[0].get_value() == "gm4_player_heads:register" and node.arguments[1].components[0].value == "heads": # type:ignore
             match nbt:=node.arguments[2].evaluate(): # type:ignore
                 case Compound({"value": String(value)}) if "$" in value:
-                    node = replace(node, arguments=AstChildren((*node.arguments[:2], AstNbtCompound.from_value(nbt|{"value": self.retrieve_texture(value)[0]})))) # type: ignore
-                case _:
-                    pass
+                    skin_val, _, d = self.retrieve_texture(value)
+                    if d:
+                        yield d
+                    node = replace(node, arguments=AstChildren((*node.arguments[:2], AstNbtCompound.from_value(nbt|{"value": skin_val})))) # type: ignore
+                    # TODO diagnostic location correction
         return node
     
-    def retrieve_texture(self, skin_name: str, **kwargs: Any):
+    def retrieve_texture(self, skin_name: str, **kwargs: Any) -> tuple[str, list[int], Diagnostic|None]:
         skin_name = skin_name.lstrip("$")
         if ":" not in skin_name:
             skin_name = f"{self.ctx.project_id}:{skin_name}"
@@ -110,25 +121,28 @@ class SkinNbtTransformer(MutatingReducer):
         try:
             skin_file: Skin = self.ctx.data[Skin][skin_name]
         except KeyError:
-            raise Diagnostic("error", f"Unknown skin \'{skin_name}\'",
+            d = Diagnostic("error", f"Unknown skin \'{skin_name}\'",
                              filename=kwargs.get("filename"),
                              file=kwargs.get("file")
                             )
-        
-        self.used_textures.append(skin_name)
-        skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest() #type:ignore
+            return MISSING_TEXTURE_SKIN, [0,0,0,0], d
+        else:
+            self.used_textures.append(skin_name)
+            skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest() #type:ignore
 
-        if skin_hash != cached_data["hash"]:
-            # the image file contents have changed - upload the new image
-            value, uuid = self.mineskin_upload(skin_file, f"{skin_name.split(':')[-1]}.png")
-            self.skin_cache["skins"][skin_name] = {
-                "uuid": uuid,
-                "value": value,
-                "name": "foo", # FIXME
-                "hash": skin_hash
-            }
-            return value, uuid
-        return cached_data["value"], cached_data["uuid"]
+            if skin_hash != cached_data["hash"]:
+                # the image file contents have changed - upload the new image
+                value, uuid = self.mineskin_upload(skin_file, f"{skin_name.split(':')[-1]}.png")
+                if value is None or uuid is None:
+                    return MISSING_TEXTURE_SKIN, [0,0,0,0], None # skin upload failed, don't cache the result and return missing texture
+                self.skin_cache["skins"][skin_name] = {
+                    "uuid": uuid,
+                    "value": value,
+                    "name": "foo", # FIXME
+                    "hash": skin_hash
+                }
+                return value, uuid, None
+        return cached_data["value"], cached_data["uuid"], None
     
     def output_skin_cache(self):
         JsonFile(self.skin_cache).dump(origin="", path="gm4/skin_cache.json")
