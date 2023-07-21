@@ -204,7 +204,10 @@ def process_json_files(ctx: Context):
         return mc.serialize(tf.invoke(node, filename=filename, file=db_entry_key)) # run AST through custom rule, and serialize back to string, passing along data for Diagnostic
     
     for name, jsonfile in [*ctx.data.loot_tables.items(), *ctx.data.item_modifiers.items()]:
-        for func_list in nested_get(jsonfile.data, "functions"):
+        # item modifiers, annoyingly, can have a list as the root, so we wrap in a dict to use nested_get
+        contents = {"listroot": jsonfile.data} if type(jsonfile.data) is list else jsonfile.data
+
+        for func_list in nested_get(contents, "functions"):
             for i, entry in enumerate(filter(lambda e: e["function"]=="minecraft:set_nbt", func_list)): #type: ignore
                 entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{name}_{i}") #type: ignore
 

@@ -46,3 +46,4 @@ def nested_get(d: dict[str, Any], key: str) -> list[Any]:
 				if type(elem) is dict:  # type: ignore
 					ret_list.extend(nested_get(elem, key))  # type: ignore
 	return ret_list
+# FIXME isinstance for inheritance stuffs?
