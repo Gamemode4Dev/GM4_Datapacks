@@ -148,6 +148,10 @@ class SkinNbtTransformer(MutatingReducer):
 
     def mineskin_upload(self, skin: Skin, filename: str) -> tuple[str|None, list[int]|None]:
         logger = parent_logger.getChild(f"mineskin_upload.{self.ctx.project_id}")
+        if os.getenv("GITHUB_ACTIONS"):
+            logger.error("Github Action cannot upload skins via the mineskin api")
+            return None, None
+
         token = self.ctx.inject(MineskinAuthManager).token
 
         buf = BytesIO()
