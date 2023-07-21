@@ -9,6 +9,7 @@ team add gm4_hide_name
 team modify gm4_hide_name nametagVisibility never
 
 execute unless score midnight_menaces gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Midnight Menaces"}
+execute unless score midnight_menaces gm4_earliest_version < midnight_menaces gm4_modules run scoreboard players operation midnight_menaces gm4_earliest_version = midnight_menaces gm4_modules
 scoreboard players set midnight_menaces gm4_modules 1
 
 schedule function gm4_menacing_goblins:main 1t

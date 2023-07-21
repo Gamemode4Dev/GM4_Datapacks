@@ -22,6 +22,7 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_end_fishing
 execute unless data storage gm4_player_heads:register heads[{id:"gm4_end_fishing:enderpuff/v1"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_end_fishing:enderpuff/v1",value:'ewogICJ0aW1lc3RhbXAiIDogMTYxNzM3NjU5NjgxNiwKICAicHJvZmlsZUlkIiA6ICI4NDMwMDNlM2JlNTY0M2Q5OTQxMTBkMzJhMzU2MTk2MCIsCiAgInByb2ZpbGVOYW1lIiA6ICJHYWJvTWNHYW1lciIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9lYjIzNTI3MWNhNTZlOGExYTQzMWViMWU2NWNlODIwYWE3ZTUwMWYwNmMxZjEzNTZhY2ViN2U4NjJmMTRhMjgiCiAgICB9CiAgfQp9',item:{CustomModelData:3420014,gm4_end_fishing:{enderpuff:1b},display:{Name:'{"translate":"item.gm4.enderpuff","fallback":"Enderpuff","italic":false}'}}}
 
 execute unless score end_fishing gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"End Fishing"}
+execute unless score end_fishing gm4_earliest_version < end_fishing gm4_modules run scoreboard players operation end_fishing gm4_earliest_version = end_fishing gm4_modules
 scoreboard players set end_fishing gm4_modules 1
 
 schedule function gm4_end_fishing:main 1t

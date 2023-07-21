@@ -3,6 +3,7 @@ data modify storage gm4:log queue append value {type:"text",message:'{"text":"[G
 
 scoreboard objectives add gm4_modules dummy
 scoreboard objectives add gm4_data dummy
+function gm4:upgrade_paths/load
 
 # Counts the number of consecutive reloads the player has not been seen in creative
 scoreboard objectives add gm4_creative dummy

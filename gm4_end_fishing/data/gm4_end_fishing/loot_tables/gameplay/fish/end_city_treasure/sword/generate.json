@@ -231,7 +231,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420019,gm4_end_fishing:{end_city_sword:1-b}}"
+              "tag": "{CustomModelData:3420019,gm4_end_fishing:{end_city_sword:10b}}"
             }
           ]
         },

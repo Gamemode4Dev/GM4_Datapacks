@@ -1,4 +1,5 @@
 execute unless score combat_expanded gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Combat Expanded"}
+execute unless score combat_expanded gm4_earliest_version < combat_expanded gm4_modules run scoreboard players operation combat_expanded gm4_earliest_version = combat_expanded gm4_modules
 scoreboard players set combat_expanded gm4_modules 1
 
 # scoreboards

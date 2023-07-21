@@ -32,6 +32,7 @@ scoreboard players set $data_version gm4_zc_data 1
 
 # website maintained module version
 execute unless score zauber_cauldrons gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Zauber Cauldrons"}
+execute unless score zauber_cauldrons gm4_earliest_version < zauber_cauldrons gm4_modules run scoreboard players operation zauber_cauldrons gm4_earliest_version = zauber_cauldrons gm4_modules
 scoreboard players set zauber_cauldrons gm4_modules 1
 
 # start core functionality

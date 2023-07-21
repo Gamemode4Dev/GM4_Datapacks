@@ -9,6 +9,7 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_heart_canis
 execute unless data storage gm4_player_heads:register heads[{id:"gm4_heart_canisters:heart_canister/tier_2/v1"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_heart_canisters:heart_canister/tier_2/v1",value:'$heart_canister_tier_2',item:{CustomModelData:3420008,gm4_heart_canister:1b,gm4_heart_canister_tier:2b,display:{Lore:['{"translate":"item.gm4.heart_canister.lore.tier","fallback":"Tier %s","with":["2"],"italic":false,"color":"gray"}'],Name:'{"translate":"item.gm4.heart_canister","fallback":"Heart Canister","italic":false}'}}}
 
 execute unless score heart_canisters gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Heart Canisters"}
+execute unless score heart_canisters gm4_earliest_version < heart_canisters gm4_modules run scoreboard players operation heart_canisters gm4_earliest_version = heart_canisters gm4_modules
 scoreboard players set heart_canisters gm4_modules 1
 
 schedule function gm4_heart_canisters:main 1t

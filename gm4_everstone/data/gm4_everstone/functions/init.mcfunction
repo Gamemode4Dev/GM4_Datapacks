@@ -6,6 +6,7 @@ scoreboard objectives add gm4_es_mine minecraft.mined:minecraft.stone
 scoreboard players set #chance gm4_es_data 10
 
 execute unless score everstone gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Everstone"}
+execute unless score everstone gm4_earliest_version < everstone gm4_modules run scoreboard players operation everstone gm4_earliest_version = everstone gm4_modules
 scoreboard players set everstone gm4_modules 1
 
 schedule function gm4_everstone:main 1t

@@ -3,6 +3,7 @@ pipeline:
   - gm4.plugins.module.gm4_root_advancement
   - gm4.plugins.player_heads.process_json_files
   - gm4.plugins.versioning.modules
+  - gm4.plugins.upgrade_paths
   - mecha
   - directory: '../base'
     extend: 'beet.yaml'

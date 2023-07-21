@@ -12,6 +12,7 @@ scoreboard players set #global_spore_cap gm4_shroom_data 2048
 scoreboard players set #global_shroom_cap gm4_shroom_data 1024
 
 execute unless score shroomites gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Shroomites"}
+execute unless score shroomites gm4_earliest_version < shroomites gm4_modules run scoreboard players operation shroomites gm4_earliest_version = shroomites gm4_modules
 scoreboard players set shroomites gm4_modules 1
 
 schedule function gm4_shroomites:main 1t
