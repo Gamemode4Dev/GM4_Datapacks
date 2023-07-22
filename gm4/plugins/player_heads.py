@@ -198,7 +198,12 @@ def process_json_files(ctx: Context):
     mc = ctx.inject(Mecha)
 
     def transform_snbt(snbt: str, db_entry_key: str) -> str:
-        node = mc.parse(snbt, type=AstNbtCompound) # parse string to AST
+        escaped_snbt = snbt.encode('unicode_escape').decode('utf-8').encode('unicode_escape').decode('utf-8')
+            # NOTE snbt in loot-tables reacts weird to \n characters. Both \n and \\\\n produce the same ingame output (\\n). 
+            # gm4 only has one case of \n in loot tables, so this "double-escape" forces \n->\\\\n for the mecha parser to read it right.
+            # this may need to be altered in the future, but for now this means that \\\\n, while valid in vanilla loot-tables, will not
+            # work after being put through the mecha parser
+        node = mc.parse(escaped_snbt, type=AstNbtCompound, multiline=True) # parse string to AST
         filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None # get relative filepath for Diagnostics
         mc.database.update({db_entry_key: CompilationUnit(source=snbt)}) #type:ignore   # register fake CompilationUnit for Diagnostic printing, using unique string as key instead of the File() object, to support multiple entries from the same file
         return mc.serialize(tf.invoke(node, filename=filename, file=db_entry_key)) # run AST through custom rule, and serialize back to string, passing along data for Diagnostic
@@ -225,7 +230,6 @@ class MineskinAuthManager():
     """A process for managing mineskin access credentials, prompting the user if needed"""
     def __init__(self, ctx: Context):
         token_cache = ctx.cache.get("mineskin").json.get("token") # type: ignore , cache.get ensures cache exists
-        print(token_cache)
 
         if token_cache is None:
             # request token from user
