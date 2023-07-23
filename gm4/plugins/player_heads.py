@@ -227,7 +227,7 @@ def process_json_files(ctx: Context):
         contents = {"listroot": jsonfile.data} if type(jsonfile.data) is list else jsonfile.data
 
         for func_list in nested_get(contents, "functions"):
-            f: Callable[[Any], bool] = lambda e: e["function"].removeprefix('minecraft')=="set_nbt"
+            f: Callable[[Any], bool] = lambda e: e["function"].removeprefix('minecraft:')=="set_nbt"
             for i, entry in enumerate(filter(f, func_list)):
                 entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{name}_{i}")
 
