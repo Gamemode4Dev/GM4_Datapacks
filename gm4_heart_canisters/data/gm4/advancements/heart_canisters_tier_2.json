@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "player_head",
-      "nbt": "{CustomModelData:3420005,SkullOwner:'$Fox_Suit_Skin'}"
+      "nbt": "{CustomModelData:3420005,SkullOwner:'$heart_canister_tier_2'}"
     },
     "title": {
       "translate": "advancement.gm4.heart_canisters.tier_2.title",

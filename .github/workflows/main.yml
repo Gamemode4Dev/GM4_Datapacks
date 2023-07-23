@@ -2,7 +2,7 @@ name: Check and build modules
 
 on:
   push:
-    branches: [ master, ver/*, player_head_management ]
+    branches: [ master, ver/* ]
   pull_request:
   workflow_dispatch:
 
