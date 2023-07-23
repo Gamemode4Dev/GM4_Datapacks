@@ -39,11 +39,10 @@ def nested_get(d: dict[str, Any], key: str) -> list[Any]:
 	for k, v in d.items():
 		if k == key:
 			ret_list.append(d[k])
-		elif type(v) is dict:
-			ret_list.extend(nested_get(d[k], key)) # type: ignore
-		elif type(v) is list:
-			for elem in d[k]:  # type: ignore
-				if type(elem) is dict:  # type: ignore
-					ret_list.extend(nested_get(elem, key))  # type: ignore
+		elif isinstance(v, dict):
+			ret_list.extend(nested_get(d[k], key))
+		elif isinstance(v, list):
+			for elem in d[k]:
+				if isinstance(elem, dict):
+					ret_list.extend(nested_get(elem, key)) #type: ignore ; NBT is hard to type due to its nested nature
 	return ret_list
-# FIXME isinstance for inheritance stuffs?

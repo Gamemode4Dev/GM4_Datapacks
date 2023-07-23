@@ -3,20 +3,27 @@ import hashlib
 import json
 import logging
 import os
-import time
 import sys
+import time
 from dataclasses import replace
 from io import BytesIO
 from typing import Any, Callable, ClassVar, Generator
-from tokenstream import set_location
 
 import requests
 from beet import Context, FileDeserialize, JsonFile, PngFile
 from mecha import CompilationUnit, Diagnostic, Mecha, MutatingReducer, rule
-from mecha.ast import AstNbtCompound, AstNbtCompoundEntry, AstCommand
-from mecha.ast import *
-from nbtlib import Compound, IntArray, List, String
+from mecha.ast import (
+    AstChildren,
+    AstCommand,
+    AstNbtCompound,
+    AstNbtCompoundEntry,
+    AstNbtPath,
+    AstNbtPathKey,
+    AstResourceLocation,
+)
+from nbtlib import IntArray
 from PIL.Image import Image
+from tokenstream import set_location
 
 from gm4.utils import nested_get
 
@@ -54,7 +61,7 @@ class SkinNbtTransformer(MutatingReducer):
     def skullowner_substitutions(self, node: AstNbtCompoundEntry, **kwargs: Any) -> Generator[Diagnostic, None, AstNbtCompoundEntry]:
         if node.key.value == "SkullOwner":
             match node.value.evaluate():
-                case String(val) if "$" in val:
+                case val if "$" in val:
                     skin_val, uuid, d = self.retrieve_texture(val, **kwargs)
                     if d:
                         yield d
@@ -66,31 +73,31 @@ class SkinNbtTransformer(MutatingReducer):
                             }]
                         }
                     }))
-                case Compound({"Value": String(val), **rest}) if "$" in val: # type: ignore
+                case {"Value": str(val), **rest} if "$" in val:
                     skin_val, uuid, d = self.retrieve_texture(val, **kwargs)
                     if d:
                         yield d
                     node = replace(node, value=AstNbtCompound.from_value(
-                        ({"Name": n} if (n:=rest.get("Name")) else {}) | # type: ignore
+                        ({"Name": n} if (n:=rest.get("Name")) else {}) |
                         {"Id": IntArray(uuid),
                          "Properties": {
                             "textures":[
                                 {"Value": skin_val} |
-                                ({"Signature": s} if (s:=rest.get("Signature")) else {})] # type: ignore
+                                ({"Signature": s} if (s:=rest.get("Signature")) else {})]
                             }
                         }
                     ))
-                case Compound({"Properties": Compound({"textures": List([Compound({"Value": String(val), **tex_rest})])}), **root_rest}) if "$" in val: # type: ignore
+                case {"Properties": {"textures": [{"Value": str(val), **tex_rest}]}, **root_rest} if "$" in val:
                     skin_val, uuid, d = self.retrieve_texture(val, **kwargs)
                     if d:
                         yield d
                     node = replace(node, value=AstNbtCompound.from_value(
-                        ({"Name": n} if (n:=root_rest.get("Name")) else {}) | # type: ignore
+                        ({"Name": n} if (n:=root_rest.get("Name")) else {}) |
                         {"Id": IntArray(uuid),
                          "Properties": {
                             "textures":[
                                 {"Value": skin_val} | 
-                                ({"Signature": s} if (s:=tex_rest.get("Signature")) else {})] # type: ignore
+                                ({"Signature": s} if (s:=tex_rest.get("Signature")) else {})]
                             }
                         }
                     ))
@@ -103,14 +110,19 @@ class SkinNbtTransformer(MutatingReducer):
     @rule(AstCommand, identifier="data:modify:storage:target:targetPath:append:value:value")
     def lib_player_heads_skullowner_subs(self, node: AstCommand) -> Generator[Diagnostic, None, AstCommand]:
         """Captures skin texture data in lib_player_heads setup"""
-        if node.arguments[0].get_value() == "gm4_player_heads:register" and node.arguments[1].components[0].value == "heads": # type:ignore
-            match nbt:=node.arguments[2].evaluate(): # type:ignore
-                case Compound({"value": String(value)}) if "$" in value:
-                    skin_val, _, d = self.retrieve_texture(value)
-                    if d:
-                        erroring_subnode = next(i for i in node.arguments[2].entries if i.key.value == "value") # type: ignore
-                        yield set_location(d, erroring_subnode)
-                    node = replace(node, arguments=AstChildren((*node.arguments[:2], AstNbtCompound.from_value(nbt|{"value": skin_val})))) # type: ignore
+        ast_storage, ast_storage_path, ast_nbt = node.arguments
+        if isinstance(ast_storage, AstResourceLocation) and isinstance(ast_storage_path, AstNbtPath) and isinstance(ast_nbt, AstNbtCompound) and isinstance(path_key:=ast_storage_path.components[0], AstNbtPathKey):
+            if ast_storage.get_value() == "gm4_player_heads:register" and path_key.value == "heads":
+                nbt: dict[str, Any] = ast_nbt.evaluate()
+                match nbt:
+                    case {"value": str(value)} if "$" in value:
+                        skin_val, _, d = self.retrieve_texture(value)
+                        if d:
+                            erroring_subnode = next(i for i in ast_nbt.entries if i.key.value == "value")
+                            yield set_location(d, erroring_subnode)
+                        node = replace(node, arguments=AstChildren((ast_storage, ast_storage_path, AstNbtCompound.from_value(nbt|{"value": skin_val}))))
+                    case _:
+                        pass
         return node
     
     def retrieve_texture(self, skin_name: str, **kwargs: Any) -> tuple[str, list[int], Diagnostic|None]:
@@ -129,7 +141,7 @@ class SkinNbtTransformer(MutatingReducer):
             return MISSING_TEXTURE_SKIN, [0,0,0,0], d
         else:
             self.used_textures.append(skin_name)
-            skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest() #type:ignore
+            skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest() #type: ignore
 
             if skin_hash != cached_data["hash"]:
                 # the image file contents have changed - upload the new image
@@ -214,8 +226,9 @@ def process_json_files(ctx: Context):
         contents = {"listroot": jsonfile.data} if type(jsonfile.data) is list else jsonfile.data
 
         for func_list in nested_get(contents, "functions"):
-            for i, entry in enumerate(filter(lambda e: e["function"]=="minecraft:set_nbt", func_list)): #type: ignore
-                entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{name}_{i}") #type: ignore
+            f: Callable[[Any], bool] = lambda e: e["function"]=="minecraft:set_nbt"
+            for i, entry in enumerate(filter(f, func_list)):
+                entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{name}_{i}")
 
     for name, jsonfile in ctx.data.advancements.items():
         for i, entry in enumerate(nested_get(jsonfile.data, "icon")):
