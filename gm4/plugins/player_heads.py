@@ -42,7 +42,7 @@ class Skin(PngFile):
 def beet_default(ctx: Context):
     ctx.data.extend_namespace.append(Skin) # register new filetype to datapack
     tf = ctx.inject(SkinNbtTransformer)
-    ctx.inject(Mecha).transform.extend(tf)
+    ctx.inject(Mecha).transform.extend(tf) # register new ruleset to mecha
 
     yield
     tf.log_unused_textures()
@@ -192,6 +192,7 @@ class SkinNbtTransformer(MutatingReducer):
         trimmed_decoded_value = {"textures": {"SKIN": {"url": decoded_value["textures"]["SKIN"]["url"]}}}
         trimmed_value = str(base64.b64encode(str(trimmed_decoded_value).encode('utf-8')), 'utf-8')
 
+        # split hex uuid into 4 ints
         uuid = res.json()["uuid"]
         i = range(0,33,8)
         segmented_uuid = [uuid[a:b] for a,b in zip(i, i[1:])]
@@ -216,7 +217,7 @@ def process_json_files(ctx: Context):
             # gm4 only has one case of \n in loot tables, so this "double-escape" forces \n->\\\\n for the mecha parser to read it right.
             # this may need to be altered in the future, but for now this means that \\\\n, while valid in vanilla loot-tables, will not
             # work after being put through the mecha parser
-        node = mc.parse(escaped_snbt, type=AstNbtCompound, multiline=True) # parse string to AST
+        node = mc.parse(escaped_snbt, type=AstNbtCompound) # parse string to AST
         filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None # get relative filepath for Diagnostics
         mc.database.update({db_entry_key: CompilationUnit(source=snbt)}) #type:ignore   # register fake CompilationUnit for Diagnostic printing, using unique string as key instead of the File() object, to support multiple entries from the same file
         return mc.serialize(tf.invoke(node, filename=filename, file=db_entry_key)) # run AST through custom rule, and serialize back to string, passing along data for Diagnostic
@@ -226,7 +227,7 @@ def process_json_files(ctx: Context):
         contents = {"listroot": jsonfile.data} if type(jsonfile.data) is list else jsonfile.data
 
         for func_list in nested_get(contents, "functions"):
-            f: Callable[[Any], bool] = lambda e: e["function"]=="minecraft:set_nbt"
+            f: Callable[[Any], bool] = lambda e: e["function"].removeprefix('minecraft')=="set_nbt"
             for i, entry in enumerate(filter(f, func_list)):
                 entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{name}_{i}")
 
