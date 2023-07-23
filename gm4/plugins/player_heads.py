@@ -4,6 +4,7 @@ import json
 import logging
 import os
 import time
+import sys
 from dataclasses import replace
 from io import BytesIO
 from typing import Any, Callable, ClassVar, Generator
@@ -149,8 +150,8 @@ class SkinNbtTransformer(MutatingReducer):
     def mineskin_upload(self, skin: Skin, filename: str) -> tuple[str|None, list[int]|None]:
         logger = parent_logger.getChild(f"mineskin_upload.{self.ctx.project_id}")
         if os.getenv("GITHUB_ACTIONS"):
-            logger.error("Github Action cannot upload skins via the mineskin api")
-            raise SystemExit()
+            logger.error(f"Failed to upload {filename}. Github Actions cannot upload skins via the mineskin api")
+            sys.exit(1)
 
         token = self.ctx.inject(MineskinAuthManager).token
 
