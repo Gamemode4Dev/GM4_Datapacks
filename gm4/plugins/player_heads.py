@@ -150,7 +150,7 @@ class SkinNbtTransformer(MutatingReducer):
         logger = parent_logger.getChild(f"mineskin_upload.{self.ctx.project_id}")
         if os.getenv("GITHUB_ACTIONS"):
             logger.error("Github Action cannot upload skins via the mineskin api")
-            raise RuntimeError
+            raise SystemExit()
 
         token = self.ctx.inject(MineskinAuthManager).token
 
