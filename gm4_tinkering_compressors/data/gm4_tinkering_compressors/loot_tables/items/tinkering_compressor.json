@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420136,gm4_machines:{id:\"tinkering_compressor\"},gm4_metallurgy:{has_shamir:1b},SkullOwner:{Name:\"gm4_tinkering_compressor\",Id:[I;1102824805,-1759752670,-1411440773,621305304],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTY0Mjg1NDM0MjA3MiwKICAicHJvZmlsZUlkIiA6ICI3MzgyZGRmYmU0ODU0NTVjODI1ZjkwMGY4OGZkMzJmOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJJb3lhbCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8xZDYwOWQzYTNiNjRiNjlmZTE0MDhjZmE0NjY3YjU1ZTU1YWE3NTI3OWQ2ZjAyOTU4MjEzOTYyYTlkZDBkMTQ4IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=\"}]}}}"
+              "tag": "{CustomModelData:3420136,gm4_machines:{id:\"tinkering_compressor\"},gm4_metallurgy:{has_shamir:1b},SkullOwner:{Name:\"gm4_tinkering_compressor\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$tinkering_compressor\"}]}}}"
             },
             {
               "function": "set_name",

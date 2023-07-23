@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420041,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:grass_block\"},SkullOwner:{Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NTQ0NzQwMDkwMDUsInByb2ZpbGVJZCI6IjNmYzdmZGY5Mzk2MzRjNDE5MTE5OWJhM2Y3Y2MzZmVkIiwicHJvZmlsZU5hbWUiOiJZZWxlaGEiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzZiMzBmZTgxYWZlNTI2NjkxZGM1MDlhYzEwN2EzYjNjYTk1NTdjNDExZmYwZGMyZmNiNWE4YTlkNzc1ZTk0ODMifX19\"}]},Id:[I;940595468,1686389043,-1269390340,931805603]}}"
+                            "tag": "{CustomModelData:3420041,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:grass_block\"},SkullOwner:\"$disguised/grass\"}"
                         },
                         {
                             "function": "minecraft:set_name",

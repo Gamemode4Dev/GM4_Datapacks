@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420130,gm4_machines:{id:\"block_compressor\"},SkullOwner:{Name:\"gm4_block_compressor\",Id:[I;788137431,1839549415,-1633195690,-1508391925],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTY0Mjg1MzYzMTM1MiwKICAicHJvZmlsZUlkIiA6ICI0ZWQ4MjMzNzFhMmU0YmI3YTVlYWJmY2ZmZGE4NDk1NyIsCiAgInByb2ZpbGVOYW1lIiA6ICJGaXJlYnlyZDg4IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzZmYTkzMjMxZjZmNjVkNjc1NDI2NjgyMzE3NWIwOWFmNGNhN2E1NzQ1NDQzYjMyNjFlZGE3OGUzNTk5NTgyYmYiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==\"}]}}}"
+              "tag": "{CustomModelData:3420130,gm4_machines:{id:\"block_compressor\"},SkullOwner:{Name:\"gm4_block_compressor\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"block_compressor\"}]}}}"
             },
             {
               "function": "set_name",

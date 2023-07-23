@@ -129,31 +129,32 @@ class SkinNbtTransformer(MutatingReducer):
         skin_name = skin_name.lstrip("$")
         if ":" not in skin_name:
             skin_name = f"{self.ctx.project_id}:{skin_name}"
-        cached_data = self.skin_cache["skins"].get(skin_name, {"hash": None})
+        cached_data = self.skin_cache["skins"].get(skin_name, {"hash": None, "parent_module": self.ctx.project_id})
 
-        try:
-            skin_file: Skin = self.ctx.data[Skin][skin_name]
-        except KeyError:
-            d = Diagnostic("error", f"Unknown skin \'{skin_name}\'",
-                             filename=kwargs.get("filename"),
-                             file=kwargs.get("file")
-                            )
-            return MISSING_TEXTURE_SKIN, [0,0,0,0], d
-        else:
-            self.used_textures.append(skin_name)
-            skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest() #type: ignore
+        if cached_data["parent_module"] == self.ctx.project_id: # if the skin belongs to another module, just trust the cache to be right. The skin.png file isn't available to check
+            try:
+                skin_file: Skin = self.ctx.data[Skin][skin_name]
+            except KeyError:
+                d = Diagnostic("error", f"Unknown skin \'{skin_name}\'",
+                                filename=kwargs.get("filename"),
+                                file=kwargs.get("file")
+                                )
+                return MISSING_TEXTURE_SKIN, [0,0,0,0], d
+            else:
+                self.used_textures.append(skin_name)
+                skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest() #type: ignore
 
-            if skin_hash != cached_data["hash"]:
-                # the image file contents have changed - upload the new image
-                value, uuid = self.mineskin_upload(skin_file, f"{skin_name.split(':')[-1]}.png")
-                if value is None or uuid is None:
-                    return MISSING_TEXTURE_SKIN, [0,0,0,0], None # skin upload failed, don't cache the result and return missing texture
-                self.skin_cache["skins"][skin_name] = {
-                    "uuid": uuid,
-                    "value": value,
-                    "hash": skin_hash
-                }
-                return value, uuid, None
+                if skin_hash != cached_data["hash"]:
+                    # the image file contents have changed - upload the new image
+                    value, uuid = self.mineskin_upload(skin_file, f"{skin_name.split(':')[-1]}.png")
+                    if value is None or uuid is None:
+                        return MISSING_TEXTURE_SKIN, [0,0,0,0], None # skin upload failed, don't cache the result and return missing texture
+                    self.skin_cache["skins"][skin_name] = {
+                        "uuid": uuid,
+                        "value": value,
+                        "hash": skin_hash
+                    }
+                    return value, uuid, None
         return cached_data["value"], cached_data["uuid"], None
     
     def output_skin_cache(self):
@@ -212,9 +213,9 @@ def process_json_files(ctx: Context):
     mc = ctx.inject(Mecha)
 
     def transform_snbt(snbt: str, db_entry_key: str) -> str:
-        escaped_snbt = snbt.encode('unicode_escape').decode('utf-8').encode('unicode_escape').decode('utf-8')
+        escaped_snbt = snbt.replace("\n", "\\\\n")
             # NOTE snbt in loot-tables reacts weird to \n characters. Both \n and \\\\n produce the same ingame output (\\n). 
-            # gm4 only has one case of \n in loot tables, so this "double-escape" forces \n->\\\\n for the mecha parser to read it right.
+            # gm4 only has one case of \n in loot tables, so this replacement forces \n->\\\\n for the mecha parser to read it right.
             # this may need to be altered in the future, but for now this means that \\\\n, while valid in vanilla loot-tables, will not
             # work after being put through the mecha parser
         node = mc.parse(escaped_snbt, type=AstNbtCompound) # parse string to AST

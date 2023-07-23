@@ -39,7 +39,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_metallurgy:{metal:{type:\"thorium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420020,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/thorium/v0\",Id:[I;140191582,-1151712444,-1271454064,-1822255261],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyOTY4NDM2MzM0MywKICAicHJvZmlsZUlkIiA6ICI3NzI3ZDM1NjY5Zjk0MTUxODAyM2Q2MmM2ODE3NTkxOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJsaWJyYXJ5ZnJlYWsiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcxYWQ1MTBhMTBjNWMxYzZkMGY3NzVjYWRkNWVmMTliZWRkODY2NTQwNmE5ZWY1NTI0ZGJmOGZiNjQ2MmViIgogICAgfQogIH0KfQ==\"}]}}}"
+              "tag": "{gm4_metallurgy:{metal:{type:\"thorium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420020,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/thorium/v0\",Properties:{textures:[{Value:\"$ore/thorium\"}]}}}"
             }
           ]
         }

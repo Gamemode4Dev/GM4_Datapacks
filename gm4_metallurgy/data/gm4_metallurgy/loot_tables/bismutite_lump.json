@@ -75,7 +75,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_metallurgy:{metal:{type:\"bismuth\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420017,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/bismuth\",Id:[I;140254582,-1151718614,-1277548307,1366135037],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyOTY4NDM0MzA2MCwKICAicHJvZmlsZUlkIiA6ICI0OWIzODUyNDdhMWY0NTM3YjBmN2MwZTFmMTVjMTc2NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJiY2QyMDMzYzYzZWM0YmY4IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2EwODFiMmY2Nzk3ZDk2YzcxMGYyMjk1YmQ2MGJmYjc3NTE5ZDU4Yzk3NGEwYjM0YjViZDcyZmNkNzc3OTYyMWIiCiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzIzNDBjMGUwM2RkMjRhMTFiMTVhOGIzM2MyYTdlOWUzMmFiYjIwNTFiMjQ4MWQwYmE3ZGVmZDYzNWNhN2E5MzMiCiAgICB9CiAgfQp9\"}]}}}"
+              "tag": "{gm4_metallurgy:{metal:{type:\"bismuth\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420017,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/bismuth\",Properties:{textures:[{Value:\"$ore/bismuth\"}]}}}"
             }
           ]
         }

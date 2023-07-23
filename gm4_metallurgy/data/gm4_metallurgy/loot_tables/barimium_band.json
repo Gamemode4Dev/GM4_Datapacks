@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_metallurgy:{has_shamir:1b,metal:{type:\"barimium\",amount:[9s,3s],castable:1b},item:\"obsidian_cast\"},SkullOwner:{Id:[I;-340714413,1525011343,50560746,-1948445052],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyODc5MjUwNDk5MiwKICAicHJvZmlsZUlkIiA6ICI5MWYwNGZlOTBmMzY0M2I1OGYyMGUzMzc1Zjg2ZDM5ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTdG9ybVN0b3JteSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85MzU2MjZhYzgwZmZmYWFiOTkyOWMwYWViNTg5N2RkN2FlOThjOWI5NTY1NjVjZTc3YTEyNjE0MjExYWI2NTg0IgogICAgfQogIH0KfQ==\"}]}}}"
+                            "tag": "{gm4_metallurgy:{has_shamir:1b,metal:{type:\"barimium\",amount:[9s,3s],castable:1b},item:\"obsidian_cast\"},SkullOwner:\"$band/barimium\"}"
                         },
                         {
                             "function": "minecraft:set_name",
