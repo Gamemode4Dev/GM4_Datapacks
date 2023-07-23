@@ -152,7 +152,8 @@ class SkinNbtTransformer(MutatingReducer):
                     self.skin_cache["skins"][skin_name] = {
                         "uuid": uuid,
                         "value": value,
-                        "hash": skin_hash
+                        "hash": skin_hash,
+                        "parent_module": self.ctx.project_id
                     }
                     return value, uuid, None
         return cached_data["value"], cached_data["uuid"], None
