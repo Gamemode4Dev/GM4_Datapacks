@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420005,HideFlags:32,gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
+              "tag": "{CustomModelData:3420005,HideFlags:2,gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
             },
             {
               "function": "minecraft:set_name",

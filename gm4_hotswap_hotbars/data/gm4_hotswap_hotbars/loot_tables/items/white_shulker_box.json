@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:shulker_box",
+          "name": "minecraft:white_shulker_box",
           "functions": [
             {
               "function": "minecraft:set_nbt",
