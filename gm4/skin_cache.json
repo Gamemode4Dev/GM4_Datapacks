@@ -1067,5 +1067,10 @@
       "hash": "18bab6e06c67bcfeba73698c923d43d78cd82ee7",
       "parent_module": "gm4_custom_crafters"
     }
+  },
+  "nonnative_references": {
+    "gm4_animi_shamir": [
+      "gm4_metallurgy:band/curies_bismium"
+    ]
   }
 }

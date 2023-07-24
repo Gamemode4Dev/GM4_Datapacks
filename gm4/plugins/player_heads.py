@@ -45,6 +45,7 @@ def beet_default(ctx: Context):
     ctx.inject(Mecha).transform.extend(tf) # register new ruleset to mecha
 
     yield
+    tf.cache_nonnative_references()
     tf.log_unused_textures()
     tf.output_skin_cache()
     
@@ -129,6 +130,7 @@ class SkinNbtTransformer(MutatingReducer):
         skin_name = skin_name.lstrip("$")
         if ":" not in skin_name:
             skin_name = f"{self.ctx.project_id}:{skin_name}"
+        self.used_textures.append(skin_name)
         cached_data = self.skin_cache["skins"].get(skin_name, {"hash": None, "parent_module": self.ctx.project_id})
 
         if cached_data["parent_module"] == self.ctx.project_id: # if the skin belongs to another module, just trust the cache to be right. The skin.png file isn't available to check
@@ -141,7 +143,6 @@ class SkinNbtTransformer(MutatingReducer):
                                 )
                 return MISSING_TEXTURE_SKIN, [0,0,0,0], d
             else:
-                self.used_textures.append(skin_name)
                 skin_hash = hashlib.sha1(skin_file.image.tobytes()).hexdigest() #type: ignore
 
                 if skin_hash != cached_data["hash"]:
@@ -157,9 +158,6 @@ class SkinNbtTransformer(MutatingReducer):
                     }
                     return value, uuid, None
         return cached_data["value"], cached_data["uuid"], None
-    
-    def output_skin_cache(self):
-        JsonFile(self.skin_cache).dump(origin="", path="gm4/skin_cache.json")
 
     def mineskin_upload(self, skin: Skin, filename: str) -> tuple[str|None, list[int]|None]:
         logger = parent_logger.getChild(f"mineskin_upload.{self.ctx.project_id}")
@@ -207,6 +205,14 @@ class SkinNbtTransformer(MutatingReducer):
         cached_member_textures = [e for e in self.skin_cache["skins"].keys() if e.split(":")[0] == self.ctx.project_id]
         for tex in set(cached_member_textures) - set(self.used_textures):
             logger.info(f"Cached skin texture {tex} is not referenced. Consider manually cleaning up skin_cache.json")
+    
+    def cache_nonnative_references(self):
+        """Adds any skin references from another module into skin_cache.json, so changes can trigger patch increments"""
+        if (nonnative_refs := set(self.used_textures) - set(self.ctx.data[Skin])):
+            self.skin_cache["nonnative_references"][self.ctx.project_id] = list(nonnative_refs)
+
+    def output_skin_cache(self):
+        JsonFile(self.skin_cache).dump(origin="", path="gm4/skin_cache.json")
 
 def process_json_files(ctx: Context):
     """Passes nbt contained in advancements, loot_tables ect.. through the custom Mecha AST rule for appropiate texture replacements"""
