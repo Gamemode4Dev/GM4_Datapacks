@@ -48,6 +48,7 @@ def beet_default(ctx: Context):
     tf.cache_nonnative_references()
     tf.log_unused_textures()
     tf.output_skin_cache()
+    ctx.data[Skin].clear() # cleanup skin files from output pack
     
 
 class SkinNbtTransformer(MutatingReducer):

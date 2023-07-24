@@ -1,7 +1,5 @@
 from beet import Context
 from pathlib import Path
-from bolt import Module
-from gm4.plugins.player_heads import Skin
 import os
 import json
 import requests
@@ -19,13 +17,13 @@ SUPPORTED_GAME_VERSIONS = ["1.20", "1.20.1"]
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/release-pipeline (gamemode4official@gmail.com)"
 
 def beet_default(ctx: Context):
-	"""Saves the datapack to the ./out folder."""
+	"""Saves the datapack to the ./out folder in it's exit phase.
+	 	Should be first in pipeline to properly wrap all other plugins cleanup phases"""
 	version = os.getenv("VERSION", "1.20")
 	out_dir = Path("out")
 
-	ctx.data[Module].clear() # manually cleanup bolt modules
-	ctx.data[Skin].clear() # manually cleanup skin files
-
+	yield # wait for exit phase, after other plugins cleanup
+	
 	ctx.data.save(
 		path=out_dir / f"{ctx.project_id}_{version.replace('.', '_')}",
 		overwrite=True,
@@ -35,6 +33,7 @@ def beet_default(ctx: Context):
 def release(ctx: Context):
 	"""
 	Saves the zipped datapack and metadata to the ./release/{version} folder.
+		Should be first in pipeline to properly wrap all other plugins cleanup phases
 	
 	If the module has the `version` and `meta.modrinth.project_id` fields, and
 	`BEET_MODRINTH_TOKEN` environment variable is set, will try to publish a
@@ -48,7 +47,7 @@ def release(ctx: Context):
 	release_dir = Path("release") / version_dir
 	file_name = f"{ctx.project_id}_{version_dir.replace('.', '_')}.zip"
 
-	ctx.data[Module].clear() # manually cleanup bolt modules
+	yield # wait for exit phase, after other plugins cleanup
 	
 	ctx.data.save(
 		path=release_dir / file_name,

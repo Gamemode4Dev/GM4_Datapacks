@@ -4,7 +4,7 @@ pipeline:
   - broadcast: 'gm4_*'
     extend: 'beet.yaml'
     require:
+      - gm4.plugins.output
       - gm4.plugins.player_heads
     pipeline:
       - gm4.plugins.write_mcmeta
-      - gm4.plugins.output

@@ -7,6 +7,7 @@ pipeline:
   - broadcast: 'gm4_*'
     extend: 'beet.yaml'
     require:
+      - gm4.plugins.output.release
       - gm4.plugins.player_heads
     pipeline:
       - gm4.plugins.manifest.write_updates
@@ -15,7 +16,6 @@ pipeline:
         meta: {copy_files: {data_pack: {LICENSE.md: "../LICENSE.md"}}}
       - gm4.plugins.readme_generator
       - gm4.plugins.write_mcmeta
-      - gm4.plugins.output.release
 
 meta:
   autosave:

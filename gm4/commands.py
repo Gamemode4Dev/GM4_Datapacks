@@ -39,10 +39,9 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, 
 	config = {
 		"broadcast": modules,
 		"extend": "beet.yaml",
-		"require": ["beet.contrib.livereload", "gm4.plugins.player_heads"] if reload else ["gm4.plugins.player_heads"],
+		"require": ["gm4.plugins.output", "beet.contrib.livereload", "gm4.plugins.player_heads"] if reload else ["gm4.plugins.output", "gm4.plugins.player_heads"],
 		"pipeline": [
-			"gm4.plugins.write_mcmeta",
-			"gm4.plugins.output"
+			"gm4.plugins.write_mcmeta"
 		]
 	}
 	project.config_overrides = [
