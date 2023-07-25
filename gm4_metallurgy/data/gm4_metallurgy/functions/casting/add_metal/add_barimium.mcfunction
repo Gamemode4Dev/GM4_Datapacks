@@ -3,7 +3,7 @@
 
 # add score to sand ring
 tag @s add gm4_contains_metal
-data modify entity @s ArmorItems[3].tag set value {CustomModelData:3420026,SkullOwner:"$moulds/1"}
+data modify entity @s ArmorItems[3].tag set value {CustomModelData:3420026,SkullOwner:"$mould/hot_metal"}
 
 # add primary metal
 scoreboard players operation @s gm4_ml_ore_al += $metal_amount gm4_ml_data
