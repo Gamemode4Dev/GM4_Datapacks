@@ -21,7 +21,7 @@ from mecha.ast import (
     AstNbtPathKey,
     AstResourceLocation,
 )
-from nbtlib import IntArray
+from nbtlib import IntArray # type: ignore
 from PIL.Image import Image
 from tokenstream import set_location
 
@@ -210,6 +210,8 @@ class SkinNbtTransformer(MutatingReducer):
         """Adds any skin references from another module into skin_cache.json, so changes can trigger patch increments"""
         if (nonnative_refs := set(self.used_textures) - set(self.ctx.data[Skin])):
             self.skin_cache["nonnative_references"][self.ctx.project_id] = list(nonnative_refs)
+        else:
+            self.skin_cache["nonnative_references"].pop(self.ctx.project_id, None)
 
     def output_skin_cache(self):
         JsonFile(self.skin_cache).dump(origin="", path="gm4/skin_cache.json")
