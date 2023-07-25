@@ -8,3 +8,8 @@ pipeline:
       - gm4.plugins.player_heads
     pipeline:
       - gm4.plugins.write_mcmeta
+    meta:
+      mecha:
+        layout: preserve
+        nbt_compact: True
+        cmd_compact: True

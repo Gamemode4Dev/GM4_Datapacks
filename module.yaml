@@ -1,15 +1,9 @@
 pipeline:
   - gm4.plugins.module.default_pack_icon
   - gm4.plugins.module.gm4_root_advancement
-  - gm4.plugins.player_heads.process_json_files
   - gm4.plugins.versioning.modules
   - gm4.plugins.upgrade_paths
+  - gm4.plugins.player_heads.process_json_files
   - mecha
   - directory: '../base'
     extend: 'beet.yaml'
-
-meta:
-  mecha:
-    formatting:
-      layout: preserve
-      nbt_compact: True

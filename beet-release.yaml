@@ -16,6 +16,11 @@ pipeline:
         meta: {copy_files: {data_pack: {LICENSE.md: "../LICENSE.md"}}}
       - gm4.plugins.readme_generator
       - gm4.plugins.write_mcmeta
+    meta:
+      mecha:
+        formatting:
+          layout: preserve
+          nbt_compact: True
 
 meta:
   autosave:

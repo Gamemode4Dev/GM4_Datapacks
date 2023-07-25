@@ -32,13 +32,6 @@ parent_logger = logging.getLogger("gm4.player_heads")
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/player_head_management (gamemode4official@gmail.com)"
 MISSING_TEXTURE_SKIN = "eyJ0ZXh0dXJlcyIgOiB7ICJTS0lOIiA6IHsgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kYWUyOTA0YTI4NmI5NTNmYWI4ZWNlNTFkNjJiZmNjYjMyY2IwMjc0OGY0NjdjMDBiYzMxODg1NTk4MDUwNThiIn19fQ=="
 
-
-class Skin(PngFile):
-    """Class representing a skin texture file."""
-    scope: ClassVar[tuple[str, ...]] = ("skins",)
-    extension: ClassVar[str] = ".png"
-    image: ClassVar[FileDeserialize[Image]] = FileDeserialize() # purely here to solve type-warnings on PIL images
-
 def beet_default(ctx: Context):
     ctx.data.extend_namespace.append(Skin) # register new filetype to datapack
     tf = ctx.inject(SkinNbtTransformer)
@@ -49,6 +42,12 @@ def beet_default(ctx: Context):
     tf.log_unused_textures()
     tf.output_skin_cache()
     ctx.data[Skin].clear() # cleanup skin files from output pack
+
+class Skin(PngFile):
+    """Class representing a skin texture file."""
+    scope: ClassVar[tuple[str, ...]] = ("skins",)
+    extension: ClassVar[str] = ".png"
+    image: ClassVar[FileDeserialize[Image]] = FileDeserialize() # purely here to solve type-warnings on PIL images
     
 
 class SkinNbtTransformer(MutatingReducer):
@@ -246,8 +245,6 @@ def process_json_files(ctx: Context):
 
     # send any raised diagnostic errors to Mecha for reporting
     mc.diagnostics.extend(tf.diagnostics)
-    
-    #FIXME this plugin needs to get called before gm4.output? Do we really *need* to manually add it to the pipeline or can we find a mecha exit phase to tack onto
 
 
 class MineskinAuthManager():
