@@ -167,14 +167,18 @@
     },
     "gm4_heart_canisters:heart_canister_tier_1": {
       "uuid": [
-        1567268555,
-        400377645,
-        -2090593244,
-        -1749540666
+        -1038718023,
+        750600508,
+        -1094247260,
+        -1186971380
       ],
-      "value": "ewogICJ0aW1lc3RhbXAiIDogMTYxNjM4NTc2NTU0MSwKICAicHJvZmlsZUlkIiA6ICI3NzI3ZDM1NjY5Zjk0MTUxODAyM2Q2MmM2ODE3NTkxOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJsaWJyYXJ5ZnJlYWsiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjkxNzBhNzY4ZGY1MDQ1OTcwM2JkYWRkYjNlZGI2OTMyNmJkY2NjY2JmNDQxODM4MDM0YTI0N2I2NDFiN2UyZiIKICAgIH0KICB9Cn0=",
-      "hash": "c36f3f29070e940d4bd0e8994c3f6d390e2e9c77",
-      "parent_module": "gm4_heart_canisters"
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzIxY2EwOGEzM2ViYTlmMzI2YjE0YTA2MzRhMGU4N2EwZDViZWQzZmZkZmIxYTJkNGFmYzE0OGYyZWNmNGNiOCd9fX0=",
+      "hash": "63708161099d7472755891db988d3919f967401f",
+      "parent_module": "gm4_heart_canisters",
+      "lib_player_heads_registry": {
+        "version": 2,
+        "hash": "63708161099d7472755891db988d3919f967401f"
+      }
     },
     "gm4_heart_canisters:heart_canister_tier_2": {
       "uuid": [
@@ -185,7 +189,11 @@
       ],
       "value": "ewogICJ0aW1lc3RhbXAiIDogMTYxNjM4NTgyOTM1NSwKICAicHJvZmlsZUlkIiA6ICI0ZTMwZjUwZTdiYWU0M2YzYWZkMmE3NDUyY2ViZTI5YyIsCiAgInByb2ZpbGVOYW1lIiA6ICJfdG9tYXRvel8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzgxZmU0ZjA2YTM1ZWU3YzQyMzA5ZDM5M2MyNWJjMTFjZDFiNWIxNTBhMTllZGYzODllOGVjY2E0ZmNlMWRkZiIKICAgIH0KICB9Cn0=",
       "hash": "e451ff78653c15dc5976ba6b9f650503b7f0ea57",
-      "parent_module": "gm4_heart_canisters"
+      "parent_module": "gm4_heart_canisters",
+      "lib_player_heads_registry": {
+        "version": 1,
+        "hash": "e451ff78653c15dc5976ba6b9f650503b7f0ea57"
+      }
     },
     "gm4_lightning_in_a_bottle:texture_connector": {
       "uuid": [

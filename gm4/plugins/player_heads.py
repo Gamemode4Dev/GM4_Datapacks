@@ -5,6 +5,7 @@ import logging
 import os
 import sys
 import time
+import re
 from dataclasses import replace
 from io import BytesIO
 from typing import Any, Callable, ClassVar, Generator
@@ -109,19 +110,40 @@ class SkinNbtTransformer(MutatingReducer):
         return node
     
     @rule(AstCommand, identifier="data:modify:storage:target:targetPath:append:value:value")
-    def lib_player_heads_skullowner_subs(self, node: AstCommand) -> Generator[Diagnostic, None, AstCommand]:
+    def lib_player_heads_skullowner_subs(self, node: AstCommand, **kwargs: Any) -> Generator[Diagnostic, None, AstCommand]:
         """Captures skin texture data in lib_player_heads setup"""
         ast_storage, ast_storage_path, ast_nbt = node.arguments
         if isinstance(ast_storage, AstResourceLocation) and isinstance(ast_storage_path, AstNbtPath) and isinstance(ast_nbt, AstNbtCompound) and isinstance(path_key:=ast_storage_path.components[0], AstNbtPathKey):
             if ast_storage.get_value() == "gm4_player_heads:register" and path_key.value == "heads":
                 nbt: dict[str, Any] = ast_nbt.evaluate()
                 match nbt:
-                    case {"value": str(value)} if "$" in value:
+                    case {"value": str(value), "id": str(id)} if "$" in value:
                         skin_val, _, d = self.retrieve_texture(value)
                         if d:
                             erroring_subnode = next(i for i in ast_nbt.entries if i.key.value == "value")
                             yield set_location(d, erroring_subnode)
                         node = replace(node, arguments=AstChildren((ast_storage, ast_storage_path, AstNbtCompound.from_value(nbt|{"value": skin_val}))))
+                        
+                        # version number records # FIXME should happen for loot tables and Name field
+                        m = re.search(r'^.+v(\d+)$', id)
+                        if m and not d:
+                            ver = int(m.group(1)) # get version number in src
+                            skin_name = value.lstrip("$")
+                            if ":" not in skin_name:
+                                skin_name = f"{self.ctx.project_id}:{skin_name}"
+                            skin_data = self.skin_cache["skins"][skin_name]
+                            ver_cache = skin_data.get("lib_player_heads_registry")
+                            if ver_cache is None or ver > ver_cache["version"]: # init or update cache
+                                skin_data["lib_player_heads_registry"] = {
+                                    "version": ver,
+                                    "hash": skin_data["hash"]
+                                }
+                            elif skin_data["hash"] != ver_cache["hash"]: # warn if player head name-version needs updating
+                                logger = parent_logger.getChild("lib_player_heads")
+                                logger.warning(f"lib_player_heads registration for {skin_name} should have it's id ({id}) version incremented on skin changes")
+                            # elif ver < ver_cache["version"]:
+                            #     logger.warning(f"nonunanimous versioning in {skin_name} lib_player_heads usage") # TODO this should be in lib_player_heads linting really...
+
                     case _:
                         pass
         return node
@@ -155,7 +177,7 @@ class SkinNbtTransformer(MutatingReducer):
                         "value": value,
                         "hash": skin_hash,
                         "parent_module": self.ctx.project_id
-                    }
+                    } | {"lib_player_heads_registry": c} if (c:=self.skin_cache["skins"][skin_name].get("lib_player_heads_registry")) else {}
                     return value, uuid, None
         return cached_data["value"], cached_data["uuid"], None
 
