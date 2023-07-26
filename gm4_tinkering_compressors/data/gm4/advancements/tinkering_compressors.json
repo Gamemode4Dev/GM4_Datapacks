@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "player_head",
-      "nbt": "{CustomModelData:3420015,SkullOwner:\"$gm4_metallurgy:band/thorium_brass\"}"
+      "nbt": "{CustomModelData:3420015,SkullOwner:\"$gm4_metallurgy:band/curies_bismium\"}"
     },
     "title": {
       "translate": "advancement.gm4.tinkering_compressors.title",

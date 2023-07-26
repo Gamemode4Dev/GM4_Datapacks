@@ -55,7 +55,7 @@
       "hash": "4550bb57cbcacc21036cbb3be9dfb3429df74d26",
       "parent_module": "gm4_block_compressors"
     },
-    "gm4_metallurgy:band/aluminium_2": {
+    "gm4_metallurgy:band/aluminium": {
       "uuid": [
         1961294324,
         1560605478,
@@ -484,17 +484,6 @@
       "hash": "3727bbe1dc210a6a23aed1754132d6bc54cc8c4b",
       "parent_module": "gm4_metallurgy"
     },
-    "gm4_metallurgy:band/mundane_unknown_2": {
-      "uuid": [
-        2090045838,
-        1070000930,
-        -1136417339,
-        1085846924
-      ],
-      "value": "ewogICJ0aW1lc3RhbXAiIDogMTYyODYyODgyMjk0MiwKICAicHJvZmlsZUlkIiA6ICIxYTc1ZTNiYmI1NTk0MTc2OTVjMmY4NTY1YzNlMDAzZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJUZXJvZmFyIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzljNjY5YzQzYWY3NzEwY2I1OWU2NzU2MmI0NWUxMzE5MzA5YWVhZTM0MTJiMmY1NTNiYjQ5MDA5MGZmYTQyMGMiCiAgICB9CiAgfQp9",
-      "hash": "ab8cda444326c69df2156b9fd919dc5e0ba919a9",
-      "parent_module": "gm4_metallurgy"
-    },
     "gm4_metallurgy:band/thorium": {
       "uuid": [
         1709100198,
@@ -548,28 +537,6 @@
       ],
       "value": "eyJ0aW1lc3RhbXAiOjE0ODg0NjY1NTQzODUsInByb2ZpbGVJZCI6IjkxYTBlZmEyM2QxODQ5Y2ZiM2JkMGExNzdjZjM3Nzg4IiwicHJvZmlsZU5hbWUiOiJEdWNrSnIiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDk2ZWJmMzMxZmQ1MzM3MjM0ZmU0OTM2ZWMyOTU2NTI4ZDQ3N2FiYTU4NzU5YmM2ZWIyODRiMmU5MmQxNDI4In19fQ==",
       "hash": "b1173eacf6e07f062e2301d25669acc1a3a0ac20",
-      "parent_module": "gm4_metallurgy"
-    },
-    "gm4_metallurgy:ore/aluminium_2": {
-      "uuid": [
-        140191582,
-        -1151712444,
-        -1271445916,
-        307298631
-      ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0ODE0MDk5OTEzMzMsInByb2ZpbGVJZCI6Ijk4NWIyNzVlYmI1YTQzNDRiNDM3Njg5NTI4NjNhNjNmIiwicHJvZmlsZU5hbWUiOiJTcGFya3MiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzdmNTRiOTc5Y2Y0YzUzM2Q5OTVjMDdiOTljMWU5OWI5MTdlYzA2ODU2ZDQ2YjBhMmU2ODhiYmQzZDE0ZSJ9LCJDQVBFIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWMzY2E3ZWUyYTQ5OGYxYjVkMjU4ZDVmYTkyN2U2M2U0MzMxNDNhZGQ1NTM4Y2Y2M2I2YTliNzhhZTczNSJ9fX0=",
-      "hash": "eced42939e04687eb5c5f75e0633872ee4da8a75",
-      "parent_module": "gm4_metallurgy"
-    },
-    "gm4_metallurgy:band/OLD_aluminium": {
-      "uuid": [
-        1961294324,
-        1560605478,
-        885901402,
-        915511979
-      ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0ODE2NjMyMjQ2MTUsInByb2ZpbGVJZCI6IjkxYTBlZmEyM2QxODQ5Y2ZiM2JkMGExNzdjZjM3Nzg4IiwicHJvZmlsZU5hbWUiOiJEdWNrSnIiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTc5ZWRhYmI2MjU1YzhkMjQyOWE3ZTUzM2U4MzUxOWE4NjVhNTk0ZGJmMTRhMTdjZjVhYzIxMzUzYTM5N2U3In19fQ==",
-      "hash": "d9983f0136b751fcebbde93ef36c0f10e3d382ca",
       "parent_module": "gm4_metallurgy"
     },
     "gm4_potion_liquids:liquids/fire_resistance": {
@@ -1062,7 +1029,7 @@
       "gm4_metallurgy:band/curies_bismium"
     ],
     "gm4_desire_lines": [
-      "gm4_metallurgy:band/aluminium_2"
+      "gm4_metallurgy:band/aluminium"
     ],
     "gm4_fulcio_shamir": [
       "gm4_metallurgy:band/barimium"
@@ -1080,13 +1047,13 @@
       "gm4_metallurgy:band/curies_bismium"
     ],
     "gm4_tinkering_compressors": [
-      "gm4_metallurgy:band/thorium_brass"
+      "gm4_metallurgy:band/curies_bismium"
     ],
     "gm4_vecto_shamir": [
       "gm4_metallurgy:band/bismuth"
     ],
     "gm4_weighted_armour": [
-      "gm4_metallurgy:band/aluminium_2"
+      "gm4_metallurgy:band/aluminium"
     ],
     "gm4_zauber_liquids": [
       "gm4_potion_liquids:liquids/swiftness",

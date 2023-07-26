@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_metallurgy:{has_shamir:1b,metal:{type:\"aluminium\",amount:[12s],castable:1b},item:\"obsidian_cast\"},SkullOwner:\"$band/aluminium_2\"}"
+                            "tag": "{gm4_metallurgy:{has_shamir:1b,metal:{type:\"aluminium\",amount:[12s],castable:1b},item:\"obsidian_cast\"},SkullOwner:\"$band/aluminium\"}"
                         },
                         {
                             "function": "minecraft:set_name",
