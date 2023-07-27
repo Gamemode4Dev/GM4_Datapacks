@@ -79,7 +79,22 @@ def release(ctx: Context):
 
 	# publish to download platforms
 	publish_modrinth(ctx, release_dir, file_name)
-	publish_smithed(ctx, release_dir, file_name)
+	publish_smithed(ctx, file_name)
+
+
+def libraries(ctx: Context):
+	"""Saves the zipped standalong library to FIXME"""
+	release_dir = Path("release")
+	libs_dir = release_dir / "libraries"
+	file_name = f"{ctx.project_version}.zip"
+
+	ctx.data.save(
+		path=libs_dir / ctx.project_id / file_name,
+		overwrite=True,
+	)
+
+	publish_smithed(ctx, file_name, library_mode=True)
+
 		
 def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 	'''Attempts to publish pack to modrinth'''
@@ -158,7 +173,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 				return
 			logger.info(f"Successfully published {res.json()['name']}")
 
-def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
+def publish_smithed(ctx: Context, file_name: str, library_mode: bool = False):
 	"""Attempts to publish pack to smithed"""
 	smithed = ctx.meta.get("smithed", None)
 	auth_token = os.getenv(SMITHED_AUTH_KEY, None)
