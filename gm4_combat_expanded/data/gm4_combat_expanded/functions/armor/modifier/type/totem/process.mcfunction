@@ -18,5 +18,4 @@ execute if entity @s[tag=gm4_ce_totem.resistance] run particle dust 0.600 0.271 
 execute if entity @s[tag=gm4_ce_totem.speed] run particle dust 0.486 0.686 0.776 2 ^0.3 ^1.45 ^-0.3 0 0 0 0 0 normal
 execute if entity @s[tag=gm4_ce_totem.strength] run particle dust 0.988 0.773 0.000 2 ^-0.3 ^1.45 ^-0.3 0 0 0 0 0 normal
 
-execute unless entity @a[distance=..12,gamemode=!spectator] on passengers run kill @s
-execute unless entity @a[distance=..12,gamemode=!spectator] run kill @s
+execute unless entity @a[distance=..12,gamemode=!spectator] run function gm4_combat_expanded:armor/modifier/type/totem/remove
