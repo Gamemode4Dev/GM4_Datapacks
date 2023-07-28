@@ -1,4 +1,4 @@
-# Bat Grenades<!--$headerTitle--><!--$pmc:delete-->
+# Double Doors<!--$headerTitle--><!--$pmc:delete-->
 
 Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blacks tall? This data pack automatically opens adjecent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player. <!--$pmc:headerSize-->
 
