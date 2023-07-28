@@ -5,7 +5,7 @@
 
 # revoke advancement
 advancement revoke @s only gm4_double_doors:use_door
-title @a actionbar "Door Click Detected"
+
 # raycast
 scoreboard players set $ray gm4_double_doors_data 50
 scoreboard players set $found gm4_double_doors_data 0
