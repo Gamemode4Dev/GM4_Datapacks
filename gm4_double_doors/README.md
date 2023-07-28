@@ -1,8 +1,9 @@
 # Bat Grenades<!--$headerTitle--><!--$pmc:delete-->
 
-Annoyed by how vanilla handles double doors? Sick of having to interact with both doors when opening them manually? This Data pack makes it so that interacting with one also opens the other door! <!--$pmc:headerSize-->
+Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blacks tall? This data pack automatically opens adjecent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player. <!--$pmc:headerSize-->
 
 ### Features
 - When a player interacts with a door that is part of a double door, both doors are opened/closed automatically!
-- Only doors which are of the same type and adjacent show this behavior.
-- Holding shift whilst interacting disables the auto-opening!
+- Open bottom-half trapdoors placed above a door will open/close alongside the door!
+- Only doors and trapdoors which are of the same type and adjacent show this behavior.
+- Hold shift to enforce normal 'vanilla' door behavior!

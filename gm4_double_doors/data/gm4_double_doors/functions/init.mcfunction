@@ -3,6 +3,6 @@ execute unless score double_doors gm4_earliest_version < double_doors gm4_module
 scoreboard players set double_doors gm4_modules 1
 
 scoreboard objectives add gm4_double_doors_data dummy
-execute unless score $trap_door_limit gm4_double_doors_data matches 0.. run scoreboard players set $trap_door_limit gm4_double_doors_data 4
+execute unless score $trap_door_limit gm4_double_doors_data matches 0.. run scoreboard players set $trap_door_limit gm4_double_doors_data 2
 
 #$moduleUpdateList
