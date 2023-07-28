@@ -6,7 +6,7 @@ import json
 import requests
 import shutil
 import logging
-from gm4.utils import run
+from gm4.utils import run, Version
 
 parent_logger = logging.getLogger("gm4.output")
 
@@ -91,7 +91,11 @@ def libraries(ctx: Context):
 	ctx.data.save(
 		path=libs_dir / ctx.project_id / file_name,
 		overwrite=True,
+		zipped=True
 	)
+
+	if "pack.png" in ctx.data.extra:
+		ctx.data.extra["pack.png"].dump(libs_dir / ctx.project_id, f"pack.png")
 
 	publish_smithed(ctx, file_name, library_mode=True)
 
@@ -180,7 +184,10 @@ def publish_smithed(ctx: Context, file_name: str, library_mode: bool = False):
 	logger = parent_logger.getChild(f"smithed.{ctx.project_id}")
 	mc_version_dir = os.getenv("VERSION", "1.20")
 	if smithed and auth_token and ctx.project_version:
-		version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
+		if not library_mode:
+			version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
+		else:
+			version = ctx.project_version
 		smithed_id = smithed["pack_id"]
 
 		# get project data and existing versions
@@ -193,27 +200,33 @@ def publish_smithed(ctx: Context, file_name: str, library_mode: bool = False):
 			return
 		
 		project_data = res.json()
-		
+
 		# update description and pack image
 			# ensures they point to the most up-to-date mc version branch
-		project_display = project_data["display"]
-		current_icon = f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/{mc_version_dir}/generated/pack_icons/{ctx.project_id}.png"
-		current_readme = f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/{mc_version_dir}/generated/smithed_readmes/{ctx.project_id}.md"
-
-		if project_display["icon"] != current_icon or project_display["webPage"] != current_readme:
-			logger.debug("Pack Icon or Readme hyperlink is incorrect. Updating project")
-			res = requests.patch(f"{SMITHED_API}/packs/{smithed_id}", params={'token': auth_token},
-				json={"data": {
-						"display": {
-							"icon": current_icon,
-							"webPage": current_readme,
-						},
-				}})
-			if not (200 <= res.status_code < 300):
-				logger.warning(f"Failed to update descripion: {res.status_code} {res.text}")
-			logger.info(f"{ctx.project_name} {res.text}")
-
 		project_versions = project_data["versions"]
+		newest_version = sorted([Version(v["name"]) for v in project_versions])[-1]
+		if Version(version) > newest_version: # only update the description if we're not patching an old version
+			project_display = project_data["display"]
+			if not library_mode:
+				current_icon = f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/{mc_version_dir}/generated/pack_icons/{ctx.project_id}.png"
+				current_readme = f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/{mc_version_dir}/generated/smithed_readmes/{ctx.project_id}.md"
+			else:
+				current_icon = f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/libraries/{ctx.project_id}/pack.png"
+				current_readme = f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/lib_{ctx.project_id.removeprefix('gm4_')}/README.md"
+
+			if project_display["icon"] != current_icon or project_display["webPage"] != current_readme:
+				logger.debug("Pack Icon or Readme hyperlink is incorrect. Updating project")
+				res = requests.patch(f"{SMITHED_API}/packs/{smithed_id}", params={'token': auth_token},
+					json={"data": {
+							"display": {
+								"icon": current_icon,
+								"webPage": current_readme,
+							},
+					}})
+				if not (200 <= res.status_code < 300):
+					logger.warning(f"Failed to update descripion: {res.status_code} {res.text}")
+				logger.info(f"{ctx.project_name} {res.text}")
+
 		matching_version = next((v for v in project_versions if v["name"] == str(version)), None)
 		game_versions = smithed.get("minecraft", SUPPORTED_GAME_VERSIONS)
 		if matching_version is not None: # patch version already exists
@@ -229,14 +242,15 @@ def publish_smithed(ctx: Context, file_name: str, library_mode: bool = False):
 					logger.warning(f"Failed to patch project versions: {res.status_code} {res.text}")
 			return
 
-		# remove other existing versions for that mc version
-		mc_version_matching_version = (v["name"] for v in project_versions if set(v['supports']) & set(game_versions))
-		for v in mc_version_matching_version:
-			res = requests.delete(f"{SMITHED_API}/packs/{smithed_id}/versions/{v}", params={'token': auth_token})
-			if not (200 <= res.status_code < 300):
-				logger.warning(f"Failed to delete {ctx.project_name} version {v}: {res.status_code} {res.text}")
-			else:
-				logger.info(f"{ctx.project_name} {res.text}")
+		if not library_mode:
+			# remove other existing versions for that mc version
+			mc_version_matching_version = (v["name"] for v in project_versions if set(v['supports']) & set(game_versions))
+			for v in mc_version_matching_version:
+				res = requests.delete(f"{SMITHED_API}/packs/{smithed_id}/versions/{v}", params={'token': auth_token})
+				if not (200 <= res.status_code < 300):
+					logger.warning(f"Failed to delete {ctx.project_name} version {v}: {res.status_code} {res.text}")
+				else:
+					logger.info(f"{ctx.project_name} {res.text}")
 		
 		# post new version
 		res = requests.post(f"{SMITHED_API}/packs/{smithed_id}/versions",
