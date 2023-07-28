@@ -1,7 +1,7 @@
 # Checks for neighbouring doors which may also have to be opened alongside this door.
 # @s = player that interacted with a door
 # at location of the lower half of the door the player has interacted with
-# run from gm4_double_doors:$material_name$/door/north/get_hinge
+# run from gm4_double_doors:$material_name$/door/north/right/get_hinge
 
 # open this door
 function gm4_double_doors:$material_name$/door/north/right/toggle

@@ -1,7 +1,7 @@
 # Raycasts to the door that was clicked by the player.
 # @s = a player who has clicked a door and is not sneaking
 # at @s of the player
-# run from advancement gm4_double_doors:use_door
+# run from advancement gm4_double_doors:$material_name$/use_door
 
 # revoke advancement
 advancement revoke @s only gm4_double_doors:$material_name$/use_door
