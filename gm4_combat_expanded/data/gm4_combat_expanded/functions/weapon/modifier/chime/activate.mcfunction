@@ -9,7 +9,7 @@ scoreboard players operation $chime_damage gm4_ce_data > #2 gm4_ce_data
 
 # find tagged target
 scoreboard players set $chime_target gm4_ce_data 0
-execute anchored eyes positioned ^ ^ ^2.5 as @e[distance=..2.4,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict] run function gm4_combat_expanded:weapon/modifier/chime/check_target
+execute anchored eyes positioned ^ ^ ^2.5 as @e[distance=..3.4,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict] run function gm4_combat_expanded:weapon/modifier/chime/check_target
 
 execute if score $chime_target gm4_ce_data matches 0 run function gm4_combat_expanded:weapon/modifier/chime/target_set
 
