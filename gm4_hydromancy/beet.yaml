@@ -1,22 +1,11 @@
-extend: '../module.yaml'
-
 id: gm4_hydromancy
 name: Hydromancy
 version: 1.0.X
 
-pipeline:
-  - directory: '../lib_forceload'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
-
 meta:
   gm4:
     versioning:
-      required:
-        - lib_forceload: 1.1.0
-      schedule_loops:
+      schedule_loops: 
         - main
         - tick
         - clock_coral_core
