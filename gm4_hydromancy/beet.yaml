@@ -2,6 +2,12 @@ id: gm4_hydromancy
 name: Hydromancy
 version: 1.0.X
 
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
 meta:
   gm4:
     versioning:
