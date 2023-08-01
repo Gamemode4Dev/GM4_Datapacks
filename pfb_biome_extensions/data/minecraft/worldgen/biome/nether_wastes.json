@@ -40,7 +40,7 @@
     "#minecraft:vegetal_decoration/in_biome/nether_wastes",
     "#minecraft:top_layer_modification/in_biome/nether_wastes"
   ],
-  "precipitation": "none",
+  "has_precipitation": false,
   "spawn_costs": {},
   "spawners": {
     "ambient": [],

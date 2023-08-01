@@ -5,22 +5,12 @@
       "nbt": "{CustomModelData:3420001}"
     },
     "title": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Heavy Artillery",
-        {
-          "translate": "advancement.gm4.orb_of_ankou.all_pneumas.title"
-        }
-      ]
+      "translate": "advancement.gm4.orb_of_ankou.all_pneumas.title",
+      "fallback": "Heavy Artillery"
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Few have wielded this much power",
-        {
-          "translate": "advancement.gm4.orb_of_ankou.all_pneumas.description"
-        }
-      ],
+      "translate": "advancement.gm4.orb_of_ankou.all_pneumas.description",
+      "fallback": "Few have wielded this much power",
       "color": "gray"
     },
     "frame": "challenge"

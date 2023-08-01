@@ -16,13 +16,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Forming Press",
-                    {
-                      "translate": "block.gm4.forming_press"
-                    }
-                  ],
+                  "translate": "block.gm4.forming_press",
+                  "fallback": "Forming Press",
                   "color": "white",
                   "italic": false
                 }

@@ -18,13 +18,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Pirate Hat",
-                                    {
-                                        "translate": "item.gm4.tower_structures.pirate_hat"
-                                    }
-                                ],
+                                "translate": "item.gm4.tower_structures.pirate_hat",
+                                "fallback": "Pirate Hat",
                                 "italic": false
                             }
                         }

@@ -3,12 +3,17 @@
     "placed_machine_block": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "item": {
-          "items": [
-            "minecraft:player_head"
-          ],
-          "nbt": "{SkullOwner:{Properties:{textures:[{Signature:\"gm4_machine\"}]}}}"
-        }
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:player_head"
+              ],
+              "nbt": "{SkullOwner:{Properties:{textures:[{Signature:\"gm4_machine\"}]}}}"
+            }
+          }
+        ]
       }
     }
   },

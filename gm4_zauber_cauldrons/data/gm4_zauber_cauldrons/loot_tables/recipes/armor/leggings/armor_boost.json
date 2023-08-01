@@ -53,15 +53,10 @@
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
+                                    "translate": "item.gm4.zauber_cauldrons.zauber_armor.magic",
+                                    "fallback": "+%s%% Magic",
                                     "with": [
-                                        "+25% Magic",
-                                        {
-                                            "translate": "item.gm4.zauber_cauldrons.zauber_armor.magic",
-                                            "with": [
-                                                "25"
-                                            ]
-                                        }
+                                        "25"
                                     ],
                                     "color": "blue",
                                     "italic": false

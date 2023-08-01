@@ -1,12 +1,12 @@
-extend: '../module.yaml'
-
 id: gm4_undead_players
 name: Undead Players
-version: 1.2.X
+version: 1.4.X
+
+data_pack:
+  load: .
 
 pipeline:
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
 
 meta:
   gm4:
@@ -27,6 +27,6 @@ meta:
       Icon Design:
         - Hozz
   modrinth: 
-    project_id: jx6D06Q4s
+    project_id: jx6D06Q4
   planetminecraft:
     uid: 4294228

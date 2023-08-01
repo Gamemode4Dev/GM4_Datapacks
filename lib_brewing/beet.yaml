@@ -2,10 +2,12 @@ id: gm4_brewing
 name: Gamemode 4 Brewing
 version: 1.0.0
 
-extend: ../library.yaml
+data_pack:
+  load: 
+    data: data
+
 pipeline:
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.library
 
 meta:
   gm4:

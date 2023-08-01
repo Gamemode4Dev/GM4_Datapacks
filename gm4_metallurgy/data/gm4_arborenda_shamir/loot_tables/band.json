@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Arborenda",
-                                        {
-                                            "translate": "item.gm4.shamir.arborenda"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.arborenda",
+                                    "fallback": "Arborenda",
                                     "italic": false,
                                     "color": "gray"
                                 }

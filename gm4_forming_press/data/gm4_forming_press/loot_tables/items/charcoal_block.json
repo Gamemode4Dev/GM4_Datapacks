@@ -16,13 +16,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Block of Charcoal",
-                    {
-                      "translate": "block.gm4.charcoal_block"
-                    }
-                  ],
+                  "translate": "block.gm4.charcoal_block",
+                  "fallback": "Block of Charcoal",
                   "italic": false
                 }
               ]

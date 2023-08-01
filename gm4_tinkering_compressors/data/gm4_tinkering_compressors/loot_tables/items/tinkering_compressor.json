@@ -16,13 +16,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Tinkering Compressor",
-                    {
-                      "translate": "block.gm4.tinkering_compressor"
-                    }
-                  ],
+                  "translate": "block.gm4.tinkering_compressor",
+                  "fallback": "Tinkering Compressor",
                   "color": "white",
                   "italic": false
                 }

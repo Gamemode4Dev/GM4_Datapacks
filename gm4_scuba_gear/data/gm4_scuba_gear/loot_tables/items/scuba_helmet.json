@@ -14,13 +14,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "SCUBA Helmet",
-                  {
-                    "translate": "item.gm4.scuba_helmet"
-                  }
-                ],
+                "translate": "item.gm4.scuba_helmet",
+                "fallback": "SCUBA Helmet",
                 "italic": false,
                 "color": "white"
               }

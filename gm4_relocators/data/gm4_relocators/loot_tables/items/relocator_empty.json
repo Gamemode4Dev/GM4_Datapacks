@@ -16,13 +16,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Relocator",
-                    {
-                      "translate": "item.gm4.relocator"
-                    }
-                  ],
+                  "translate": "item.gm4.relocator",
+                  "fallback": "Relocator",
                   "italic": false
                 }
               ]

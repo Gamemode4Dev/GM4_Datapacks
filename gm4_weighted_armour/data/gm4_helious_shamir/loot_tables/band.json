@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Helious",
-                                        {
-                                            "translate": "item.gm4.shamir.helious"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.helious",
+                                    "fallback": "Helious",
                                     "italic": false,
                                     "color": "gray"
                                 }

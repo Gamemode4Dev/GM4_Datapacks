@@ -20,56 +20,59 @@ def beet_default(ctx: Context):
     running_readme_gen = ctx.meta.get("readme-gen", False) # used to disable pmc replacements on normal release
     global_replacements: dict[str, str] = {}
 
+    # Append standard footer content
+    footer = "\n### More Info\n"
+        # Youtube Info
+    if (vid_url:=ctx.meta['gm4']['video']) is not None:
+        footer += (
+            f"[<img src=\"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png\" "
+            f"alt=\"Youtube Logo\" width=\"40\" align=\"center\"/> "
+            f"**Watch on Youtube**]({vid_url})"
+            "\n\n"
+        )
+
+        # Wiki Info
+    footer += (
+        f"[<img src=\"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png\" "
+        f"alt=\"Gamemode 4 Wiki Logo\" width=\"40\" align=\"center\"/> "
+        f"**Read the Wiki**]({ctx.meta['gm4']['wiki']})"
+        "\n\n"
+    )
+
+    footer += "### Credits\n"
+
+        # Credits
+    ctx.require(write_credits) # requires data from traversing credits files
+    linked_credits = ctx.meta['linked_credits']
+    credits_text = ""
+    for title in linked_credits:
+        credits_text += f"- {title}: {', '.join(linked_credits[title])}\n"
+    footer += credits_text
+
+        # Info Blurb
+    footer += (
+        "\n---\n"
+        "## About Gamemode 4 <img src=\"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png\""
+            " alt=\"Gamemode 4 Logo\" width=\"20\"/>\n"
+        "Gamemode 4 is a series of command-powered creations that are designed to change and enhance the survival experience. "
+        "All of our modules are designed to work together flawlessly, and are balanced for usage in a survival setting. "
+        "Pick and choose your favorites from our [website](https://gm4.co), or wherever you get datapacks."
+    )
+
+    global_contents += footer
+    
     # Local Images to raw.githubusercontent URLs
     global_replacements.update({
         r"([!<].*?[\"(])(.*?)([\")].*) *<!-- *\$localAssetToURL[ -]+?>":
             f"\\1https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/{ctx.project_id}/\\2\\3"
     })
 
-    # Credits
-    ctx.require(write_credits) # requires data from traversing credits files
-    linked_credits = ctx.meta['linked_credits']
-    credits_text = ""
-    for title in linked_credits:
-        credits_text += f"- {title}: {', '.join(linked_credits[title])}\n"
-    global_replacements.update({r'<!-- *\$creditsInsert.+>' : credits_text})
-
-    # Youtube Info
-    global_replacements.update({
-        r'<!-- *\$youtubeLinkInsert.+>' : (
-            f"[<img src=\"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png\" "
-            f"alt=\"Youtube Logo\" width=\"40\" align=\"center\"/> "
-            f"**Watch on Youtube**]({ctx.meta['gm4']['video']})"
-        )
-    })
-
-    # Wiki Info
-    global_replacements.update({
-        r'<!-- *\$wikiLinkInsert.+>' : (
-            f"[<img src=\"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png\" "
-            f"alt=\"Gamemode 4 Wiki Logo\" width=\"40\" align=\"center\"/> "
-            f"**Read the Wiki**]({ctx.meta['gm4']['wiki']})"
-        )
-    })
-
     # Header Title
     global_replacements.update({
-        r'#? *(.+?) *<!-- *\$headerTitle.+>' : (
+        r'#? *(.+?) *<!-- *\$headerTitle.+?>' : (
             "# <img src=\"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png\""
                 " alt=\"GM4 Logo\" width=\"32\" />"
             r" \1 by Gamemode 4"
-        )
-    })
-
-    # Footer
-    global_replacements.update({
-        r'<!-- *\$footerInsert.+>' : (
-            "---\n"
-            "## About Gamemode 4 <img src=\"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png\""
-                " alt=\"Gamemode 4 Logo\" width=\"20\"/>\n"
-            "Gamemode 4 is a series of command-powered creations that are designed to change and enhance the survival experience. "
-            "All of our modules are designed to work together flawlessly, and are balanced for usage in a survival setting. "
-            "Pick and choose your favorites from our [website](https://gm4.co), or wherever you get datapacks."
         )
     })
 
@@ -161,11 +164,11 @@ def beet_default(ctx: Context):
             r"(.+)<!-- *\$pmc:headerSize.+>": r"[size=14px]\1[/size]",
             r"#{2,3} (.+)": r"[style b size=14px]\1[/style]",
             r"!\[(?!size|style|img|url)(.+)\]\((.+)\)": r"[img=\1]\2[/img]",
-            r"\[(?!size|style|img|url)(.+)\]\((.+)\)": r"[url=\2]\1[/url]",
+            r"\[(?!size|style|img|url)(.+?)\]\((.+?)\)": r"[url=\2]\1[/url]",
             r"<img src=\"(.+?)\" alt=(\".+?\") width=\"(.+?)\".+>": r"[img title=\2 width=\3]\1[/img]",
             r"\*\*(.+)\*\*": r"[b]\1[/b]",
             r"\*(.+)\*": r"[i]\1[/i]",
-            r"_([^_\n]+?)_(?![\w])": r"[i]\1[/i]",
+            r"_((?:https[^_\n])+?)_(?![\w])": r"[i]\1[/i]",
             r"__(.+)__": r"[u]\1[/u]",
             r"~~(.+)~~": r"[s]\1[/s]",
             r"`(.+)`": r"\1", # BBCode has no inline code blocks

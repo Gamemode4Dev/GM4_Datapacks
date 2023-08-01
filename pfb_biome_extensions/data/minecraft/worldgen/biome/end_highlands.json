@@ -29,7 +29,7 @@
     "#minecraft:vegetal_decoration/in_biome/end_highlands",
     "#minecraft:top_layer_modification/in_biome/end_highlands"
   ],
-  "precipitation": "none",
+  "has_precipitation": false,
   "spawn_costs": {},
   "spawners": {
     "ambient": [],

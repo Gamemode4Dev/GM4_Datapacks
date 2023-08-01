@@ -14,13 +14,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Obsidian Cast",
-                                    {
-                                        "translate": "item.gm4.metallurgy.obsidian_cast"
-                                    }
-                                ],
+                                "translate": "item.gm4.metallurgy.obsidian_cast",
+                                "fallback": "Obsidian Cast",
                                 "italic": false
                             }
                         },
@@ -29,126 +24,51 @@
                             "lore": [
                                 [
                                     {
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            "Bi",
-                                            {
-                                                "translate": "item.gm4.metallurgy.band",
-                                                "with": [
-                                                    {
-                                                        "translate": "item.gm4.metallurgy.bismuth.red"
-                                                    }
-                                                ]
-                                            }
-                                        ],
+                                        "translate": "item.gm4.metallurgy.bismuth.red",
+                                        "fallback": "Bi",
                                         "italic": false,
                                         "color": "#F47989"
                                     },
                                     {
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            "sm",
-                                            {
-                                                "translate": "item.gm4.metallurgy.band",
-                                                "with": [
-                                                    {
-                                                        "translate": "item.gm4.metallurgy.bismuth.orange"
-                                                    }
-                                                ]
-                                            }
-                                        ],
+                                        "translate": "item.gm4.metallurgy.bismuth.orange",
+                                        "fallback": "sm",
                                         "italic": false,
                                         "color": "#F5B478"
                                     },
                                     {
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            "ut",
-                                            {
-                                                "translate": "item.gm4.metallurgy.band",
-                                                "with": [
-                                                    {
-                                                        "translate": "item.gm4.metallurgy.bismuth.yellow"
-                                                    }
-                                                ]
-                                            }
-                                        ],
+                                        "translate": "item.gm4.metallurgy.bismuth.yellow",
+                                        "fallback": "ut",
                                         "italic": false,
                                         "color": "#F5DD79"
                                     },
                                     {
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            "h ",
-                                            {
-                                                "translate": "item.gm4.metallurgy.band",
-                                                "with": [
-                                                    {
-                                                        "translate": "item.gm4.metallurgy.bismuth.green"
-                                                    }
-                                                ]
-                                            }
-                                        ],
+                                        "translate": "item.gm4.metallurgy.bismuth.green",
+                                        "fallback": "h ",
                                         "italic": false,
                                         "color": "#78F4AE"
                                     },
                                     {
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            "Ba",
-                                            {
-                                                "translate": "item.gm4.metallurgy.band",
-                                                "with": [
-                                                    {
-                                                        "translate": "item.gm4.metallurgy.bismuth.blue"
-                                                    }
-                                                ]
-                                            }
-                                        ],
+                                        "translate": "item.gm4.metallurgy.bismuth.blue",
+                                        "fallback": "Ba",
                                         "italic": false,
                                         "color": "#79D6F5"
                                     },
                                     {
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            "nd",
-                                            {
-                                                "translate": "item.gm4.metallurgy.band",
-                                                "with": [
-                                                    {
-                                                        "translate": "item.gm4.metallurgy.bismuth.purple"
-                                                    }
-                                                ]
-                                            }
-                                        ],
+                                        "translate": "item.gm4.metallurgy.bismuth.purple",
+                                        "fallback": "nd",
                                         "italic": false,
                                         "color": "#8378F5"
                                     },
                                     {
-                                        "translate": "%1$s%3427655$s",
-                                        "with": [
-                                            "",
-                                            {
-                                                "translate": "item.gm4.metallurgy.band",
-                                                "with": [
-                                                    {
-                                                        "translate": "item.gm4.metallurgy.bismuth.magenta"
-                                                    }
-                                                ]
-                                            }
-                                        ],
+                                        "translate": "item.gm4.metallurgy.bismuth.magenta",
+                                        "fallback": "",
                                         "italic": false,
                                         "color": "#D579F5"
                                     }
                                 ],
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Shamir",
-                                        {
-                                            "translate": "item.gm4.metallurgy.shamir"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.metallurgy.shamir",
+                                    "fallback": "Shamir",
                                     "italic": false,
                                     "color": "aqua"
                                 }

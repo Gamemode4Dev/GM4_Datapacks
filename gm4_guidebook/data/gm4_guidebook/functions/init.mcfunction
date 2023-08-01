@@ -18,6 +18,7 @@ schedule function gm4_guidebook:analyze_storage/interpret/schedule 1t
 
 # start up module
 execute unless score guidebook gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Guidebook"}
+execute unless score guidebook gm4_earliest_version < guidebook gm4_modules run scoreboard players operation guidebook gm4_earliest_version = guidebook gm4_modules
 scoreboard players set guidebook gm4_modules 1
 
 schedule function gm4_guidebook:main 2t
