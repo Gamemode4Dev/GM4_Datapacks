@@ -1,7 +1,10 @@
-from beet import Context, PluginOptions, configurable, JsonFile, ListOption
+from beet import Context, PluginOptions, configurable, JsonFile, ListOption, Model
 from typing import Union, Optional, Any
 from beet.core.utils import extra_field
 from pydantic import BaseModel, Extra
+from functools import partial
+
+CUSTOM_MODEL_PREFIX = 3420000
 
 class ModelData(BaseModel):
     item: Optional[str]
@@ -19,6 +22,8 @@ class ModelData(BaseModel):
                 ret_list.extend(m)
             else:
                 ret_list.append(m)
+        if not self.broadcast:
+            ret_list.append(self)
         return ret_list
 
 class ModelDataOptions(PluginOptions, extra=Extra.ignore):
@@ -35,16 +40,52 @@ class ModelDataOptions(PluginOptions, extra=Extra.ignore):
 @configurable(name="gm4", validator=ModelDataOptions)
 def generate_model_overrides(ctx: Context, opts: ModelDataOptions):
     """Generates item model overrides in the 'minecraft' namespace, adding predicates for CustomModelData"""
-    print(opts.model_data)
+
+    registry = JsonFile(source_path="gm4/modeldata_registry.json").data
+
     opts.process_inheritance()
-    print(opts.model_data)
+    
+    # sort models by item id
+    for item_id in {m.item for m in opts.model_data}:
+        models = list(filter(lambda m: m.item == item_id, opts.model_data))
 
-    registry = JsonFile(source_path="gm4/modeldata_registry.json")
+        model_override = {
+            "parent": "minecraft:item/generated",
+            "textures": {
+                "layer0": f"minecraft:item/{item_id}" # TODO block models don't get this?
+            },
+            "overrides": []
+        }
+        overrides = model_override["overrides"]
 
-    # for ref_id, data in opts.entries:
-    #     if isinstance(data, str):
-    #         item = data
-    #     elif isinstance(data, dict):
-    #         item = data["item"] # TODO sub config on each entry of ModelDataOptions
-            
-        # NOTE hmm actually I would need to assemble per-item lists first? Would it be better to invert the config? Root is item_type and has list of model refs?
+        filter_func = partial(_filter_by_reference, models=models, namespace=ctx.project_id)
+        custom_model_data = dict(filter(filter_func, registry["items"][item_id].items())) # TODO error logging
+        
+        for model in models:
+            # if model.model # TODO this check
+            if ":" not in (ref:=model.reference):
+                ref = f"{ctx.project_id}:{ref}"
+            overrides.append({
+                "predicate": {
+                    "custom_model_data": CUSTOM_MODEL_PREFIX+custom_model_data[ref]
+                },
+                "model": model.model
+            })
+
+        ctx.assets.models[f"minecraft:item/{item_id}"] = Model(model_override) # TODO skipped-values spacing, on RP output after merge :)
+
+def _filter_by_reference(registry_itemview: tuple[str, int], models: list[ModelData], namespace: str) -> bool:
+    """a filter checking if an entriy of the cmd registry matches a given list of models"""
+    registry_ref, index = registry_itemview
+    models_references = [m.reference for m in models]
+    
+    for config_ref in models_references:
+        if ":" not in config_ref:
+            config_ref = f"{namespace}:{config_ref}"
+        
+        if registry_ref == config_ref:
+            return True
+    return False
+
+
+        

@@ -1,0 +1,11 @@
+{
+    "items": {
+        "apple": {
+            "gm4_apple_trees:block/apple_unripe": 1,
+            "gm4_apple_trees:test/my_model": 34
+        },
+        "oak_sapling": {
+            "gm4_apple_trees:item/apple_tree_sapling": 4
+        }
+    }
+}
