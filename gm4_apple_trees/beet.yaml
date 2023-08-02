@@ -44,7 +44,7 @@ meta:
         reference: block/apple_unripe
       - item: oak_sapling
         reference: item/apple_tree_sapling
-      - item: apple
+      - item: [apple, oak_sapling]
         reference: test/my_model
       # - item: cobblestone
       #   broadcast:

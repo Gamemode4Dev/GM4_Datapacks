@@ -7,7 +7,7 @@ from functools import partial
 CUSTOM_MODEL_PREFIX = 3420000
 
 class ModelData(BaseModel):
-    item: Optional[str]
+    item: ListOption[str]
     reference: Optional[str]
     model: Optional[str]
     broadcast: Optional[list['ModelData']] = []
@@ -46,8 +46,8 @@ def generate_model_overrides(ctx: Context, opts: ModelDataOptions):
     opts.process_inheritance()
     
     # sort models by item id
-    for item_id in {m.item for m in opts.model_data}:
-        models = list(filter(lambda m: m.item == item_id, opts.model_data))
+    for item_id in {i for m in opts.model_data for i in m.item.entries()}:
+        models = list(filter(lambda m: item_id in m.item.entries(), opts.model_data))
 
         model_override = {
             "parent": "minecraft:item/generated",
