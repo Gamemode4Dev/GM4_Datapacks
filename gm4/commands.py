@@ -47,6 +47,7 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, 
 	}
 	project.config_overrides = [
 		f"pipeline[] = {json.dumps(config)}",
+		f"pipeline[] = gm4.plugins.output.resource_pack",
 		f"pipeline[] = gm4.plugins.finished",
 	]
 

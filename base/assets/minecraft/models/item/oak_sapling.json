@@ -8,7 +8,7 @@
             "predicate": {
                 "custom_model_data": 4
             },
-            "model": "gm4:item/apple_trees/apple_tree_sapling"
+            "model": "gm4:item/apple_tree_sapling"
         },
         {
             "predicate": {
@@ -20,7 +20,7 @@
             "predicate": {
                 "custom_model_data": 3420004
             },
-            "model": "gm4:item/apple_trees/apple_tree_sapling"
+            "model": "gm4:item/apple_tree_sapling"
         },
         {
             "predicate": {
