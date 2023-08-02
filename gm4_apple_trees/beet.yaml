@@ -39,6 +39,21 @@ meta:
         - SpecialBuilder32
       Icon Design:
         - BluePsychoRanger
+    model_data:
+      - item: apple
+        reference: block/apple_unripe
+      - item: oak_sapling
+        reference: block/apple_unripe
+      - item: cobblestone
+        broadcast:
+          - reference: block/model_1
+          - reference: block/model_2
+            item: redstone_block
+            broadcast:
+              - item: redstone_ore
+              - reference: block/model_69
+          - reference: block/model_3
+            item: stone
   modrinth:
     project_id: Afacz65w
   smithed:
