@@ -3,6 +3,7 @@ from typing import Union, Optional, Any
 from beet.core.utils import extra_field
 from pydantic import BaseModel, Extra
 from functools import partial
+from beet.contrib.vanilla import Vanilla
 
 CUSTOM_MODEL_PREFIX = 3420000
 
@@ -42,6 +43,8 @@ def generate_model_overrides(ctx: Context, opts: ModelDataOptions):
     """Generates item model overrides in the 'minecraft' namespace, adding predicates for CustomModelData"""
 
     registry = JsonFile(source_path="gm4/modeldata_registry.json").data
+    vanilla = ctx.inject(Vanilla)
+    # vanilla_models_jar = vanilla.mount("assets/minecraft/models/items")
 
     opts.process_inheritance()
     
@@ -49,13 +52,7 @@ def generate_model_overrides(ctx: Context, opts: ModelDataOptions):
     for item_id in {i for m in opts.model_data for i in m.item.entries()}:
         models = list(filter(lambda m: item_id in m.item.entries(), opts.model_data))
 
-        model_override = {
-            "parent": "minecraft:item/generated",
-            "textures": {
-                "layer0": f"minecraft:item/{item_id}" # TODO block models don't get this?
-            },
-            "overrides": []
-        }
+        model_override = (v:=vanilla.assets.models[f"minecraft:item/{item_id}"].data) | ({} if v.get("overrides") else {"overrides": []})
         overrides = model_override["overrides"]
 
         filter_func = partial(_filter_by_reference, models=models, namespace=ctx.project_id)

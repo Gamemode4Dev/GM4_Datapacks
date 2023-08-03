@@ -46,6 +46,8 @@ meta:
         reference: item/apple_tree_sapling
       - item: [apple, oak_sapling]
         reference: test/my_model
+      - item: elytra
+        reference: test/my_model
       # - item: cobblestone
       #   broadcast:
       #     - reference: block/model_1
