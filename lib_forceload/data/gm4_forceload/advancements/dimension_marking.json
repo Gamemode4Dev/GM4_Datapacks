@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "change_inventory": {
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "rewards": {
+    "function": "gm4_forceload:check_dimension"
+  }
+}

@@ -6,6 +6,7 @@ scoreboard players set #100 gm4_lm_data 100
 data merge storage gm4_liquid_minecarts:compare {liquid:"null"}
 
 execute unless score liquid_minecarts gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Liquid Minecarts"}
+execute unless score liquid_minecarts gm4_earliest_version < liquid_minecarts gm4_modules run scoreboard players operation liquid_minecarts gm4_earliest_version = liquid_minecarts gm4_modules
 scoreboard players set liquid_minecarts gm4_modules 1
 
 schedule function gm4_liquid_minecarts:main 1t

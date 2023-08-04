@@ -1,0 +1,42 @@
+{
+  "name": "gm4_dangerous_dungeons:subpart/lush/grid_large_features",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/lush/grid_large/decor/a"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/lush/grid_large/decor/b"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/lush/grid_large/decor/c"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/lush/grid_large/decor/d"
+      }
+    }
+  ]
+}

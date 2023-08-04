@@ -1,0 +1,118 @@
+{
+  "name": "gm4_dangerous_dungeons:dungeon/lush",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/lush/grid_small/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "stone",
+                    "probability": 0.5
+                  },
+                  "output_state": {
+                    "Name": "cobblestone"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/lush/grid_1/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "stone",
+                    "probability": 0.5
+                  },
+                  "output_state": {
+                    "Name": "cobblestone"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/lush/grid_2/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "stone",
+                    "probability": 0.5
+                  },
+                  "output_state": {
+                    "Name": "cobblestone"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/lush/grid_large/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "rule",
+              "rules": [
+                {
+                  "location_predicate": { "predicate_type": "always_true" },
+                  "input_predicate": {
+                    "predicate_type": "random_block_match",
+                    "block": "stone",
+                    "probability": 0.5
+                  },
+                  "output_state": {
+                    "Name": "cobblestone"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

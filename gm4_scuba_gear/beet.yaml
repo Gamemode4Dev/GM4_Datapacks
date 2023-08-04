@@ -1,23 +1,27 @@
-extend: '../module.yaml'
-
 id: gm4_scuba_gear
 name: SCUBA Gear
+version: 1.3.X
+
+data_pack:
+  load: .
 
 pipeline:
-  - directory: '../lib_player_heads'
-    extend: 'beet.yaml'
-  - directory: '../lib_machines'
-    extend: 'beet.yaml'
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_player_heads
+  - gm4.plugins.include.lib_custom_crafters
 
 meta:
   gm4:
-    description: Ease ocean exploration with craftable scuba gear!
-    required: []
-    recommended:
-      - gm4_sunken_treasure
-    notes: []
+    versioning:
+      required:
+        - lib_custom_crafters: 3.0.0
+        - lib_player_heads: 1.1.0
+      schedule_loops: [main]
+    website:
+      description: Ease ocean exploration with craftable scuba gear!
+      recommended:
+        - gm4_sunken_treasure
+      notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/SCUBA_Gear
     credits:

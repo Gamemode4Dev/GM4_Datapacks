@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "gm4_dangerous_dungeons:deep_slate",
+      "weight": 1
+    },
+    {
+      "structure": "gm4_dangerous_dungeons:lush",
+      "weight": 4
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1115141679,
+    "spacing": 7,
+    "separation": 3
+  }
+}

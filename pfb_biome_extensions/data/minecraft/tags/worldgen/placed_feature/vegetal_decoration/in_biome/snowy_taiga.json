@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:vegetal_decoration/in_overworld",
+      "required": false
+    },
+    "minecraft:glow_lichen",
+    "minecraft:patch_large_fern",
+    "minecraft:trees_taiga",
+    "minecraft:flower_default",
+    "minecraft:patch_grass_taiga_2",
+    "minecraft:brown_mushroom_taiga",
+    "minecraft:red_mushroom_taiga",
+    "minecraft:patch_sugar_cane",
+    "minecraft:patch_pumpkin",
+    "minecraft:patch_berry_rare"
+  ]
+}

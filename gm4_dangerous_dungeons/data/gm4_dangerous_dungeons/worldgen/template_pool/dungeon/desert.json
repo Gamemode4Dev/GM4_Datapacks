@@ -1,0 +1,347 @@
+{
+  "name": "gm4_dangerous_dungeons:desert",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 8,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/desert/default",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:cobweb",
+                    "probability": 0.97
+                  },
+                  "output_state": {
+                    "Name": "minecraft:air"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:smooth_sandstone",
+                    "probability": 0.30
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cut_sandstone"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:smooth_sandstone",
+                    "probability": 0.60
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sandstone"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/desert/tiny/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:sandstone",
+                    "probability": 0.1
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sand"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:sandstone",
+                    "probability": 0.333
+                  },
+                  "output_state": {
+                    "Name": "minecraft:smooth_sandstone"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:yellow_concrete_powder",
+                    "probability": 0.25
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sandstone"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:block_match",
+                    "block": "minecraft:yellow_concrete_powder"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sand"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/desert/medium_1/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:sandstone",
+                    "probability": 0.1
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sand"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:sandstone",
+                    "probability": 0.333
+                  },
+                  "output_state": {
+                    "Name": "minecraft:smooth_sandstone"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:yellow_concrete_powder",
+                    "probability": 0.25
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sandstone"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:block_match",
+                    "block": "minecraft:yellow_concrete_powder"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sand"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/desert/medium_2/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:cobweb",
+                    "probability": 0.75
+                  },
+                  "output_state": {
+                    "Name": "minecraft:air"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:sandstone",
+                    "probability": 0.1
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sand"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:sandstone",
+                    "probability": 0.333
+                  },
+                  "output_state": {
+                    "Name": "minecraft:smooth_sandstone"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:yellow_concrete_powder",
+                    "probability": 0.25
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sandstone"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:block_match",
+                    "block": "minecraft:yellow_concrete_powder"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sand"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "gm4_dangerous_dungeons:dungeon/desert/large/base",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:sandstone",
+                    "probability": 0.1
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sand"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:sandstone",
+                    "probability": 0.333
+                  },
+                  "output_state": {
+                    "Name": "minecraft:smooth_sandstone"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:yellow_concrete_powder",
+                    "probability": 0.25
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sandstone"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:block_match",
+                    "block": "minecraft:yellow_concrete_powder"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:sand"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "gm4_dangerous_dungeons:subpart/stone/temple_side",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/temple/decor/a"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/stone/temple/decor/b"
+      }
+    }
+  ]
+}

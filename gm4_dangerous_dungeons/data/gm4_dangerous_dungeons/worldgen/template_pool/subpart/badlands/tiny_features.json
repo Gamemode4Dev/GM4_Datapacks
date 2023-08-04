@@ -1,0 +1,51 @@
+{
+  "name": "gm4_dangerous_dungeons:subpart/badlands/tiny_features",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/badlands/tiny/decor/a"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/badlands/tiny/decor/b"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/badlands/tiny/decor/c"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/badlands/tiny/decor/d"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty",
+        "location": "gm4_dangerous_dungeons:dungeon/badlands/tiny/decor/e"
+      }
+    }
+  ]
+}

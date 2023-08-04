@@ -1,0 +1,3 @@
+pipeline:
+  - gm4.plugins.upgrade_paths.lib
+  - gm4.plugins.versioning.libraries

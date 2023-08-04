@@ -1,21 +1,24 @@
-extend: '../module.yaml'
-
 id: gm4_potion_liquids
 name: Potion Liquids
+version: 1.4.X
+
+data_pack:
+  load: .
 
 pipeline:
-  - directory: '../lib_brewing'
-    extend: 'beet.yaml'
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_brewing
 
 meta:
   gm4:
-    description: Adds the ability to store potions in Liquid Tanks! You can also use a potion by walking beneath a potion-filled Liquid Tank.
-    required:
-      - gm4_liquid_tanks
-    recommended: []
-    notes: []
+    versioning:
+      required:
+        - gm4_liquid_tanks: 2.1.0
+        - lib_brewing: 1.0.0
+    website:
+      description: Adds the ability to store potions in Liquid Tanks! You can also use a potion by walking beneath a potion-filled Liquid Tank.
+      recommended: []
+      notes: []
     video: https://www.youtube.com/watch?v=qa9lcbii1BE
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids
     credits:

@@ -7,8 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  VERSION: '1.19'
-  PATCH_PREFIX: 19000
+  VERSION: '1.20'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
 
 jobs:
@@ -19,9 +18,9 @@ jobs:
 
       - uses: mcbeet/check-commands@v1
         with:
-          minecraft: ${{ env.VERSION }}
+          minecraft: '1.19' # temp manual assignment. mecha does not support 1.19.4 as valid version.      ${{ env.VERSION }}
           source: base gm4_* lib_*
-          version: '0.52.2'
+          version: '0.67.0'
 
   build:
     needs: test
@@ -67,13 +66,17 @@ jobs:
 
       - name: Build and publish all modules
         if: github.event_name != 'pull_request'
-        run: poetry run beet -p beet-release.yaml build
+        run: poetry run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
         env:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
+          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
       - name: Build all modules for pull request
         if: github.event_name == 'pull_request'
-        run: poetry run beet -p beet-release.yaml build
+        run: poetry run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
+        env:
+          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'

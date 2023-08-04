@@ -7,4 +7,4 @@
 execute if block ~ ~1 ~ ladder[facing=south] run setblock ~ ~ ~ ladder[facing=south,waterlogged=true]
 execute if block ~ ~1 ~ ladder[facing=north] run setblock ~ ~ ~ ladder[facing=north,waterlogged=true]
 execute if block ~ ~1 ~ ladder[facing=east] run setblock ~ ~ ~ ladder[facing=east,waterlogged=true]
-execute if block ~ ~11 ~ ladder[facing=west] run setblock ~ ~ ~ ladder[facing=west,waterlogged=true]
+execute if block ~ ~1 ~ ladder[facing=west] run setblock ~ ~ ~ ladder[facing=west,waterlogged=true]

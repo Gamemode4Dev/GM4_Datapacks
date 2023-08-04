@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Defuse",
-                                        {
-                                            "translate": "item.gm4.shamir.defuse"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.defuse",
+                                    "fallback": "Defuse",
                                     "italic": false,
                                     "color": "gray"
                                 }

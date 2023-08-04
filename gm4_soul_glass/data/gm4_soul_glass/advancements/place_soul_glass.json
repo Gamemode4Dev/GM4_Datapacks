@@ -16,24 +16,20 @@
                 }
               }
             }
+          }          
+        ],
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:brown_stained_glass"
           },
           {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "gm4_soul_glass"
-              },
-              "score": "load.status"
-            },
-            "range": 1
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "nbt": "{gm4_soul_glass:1b}"
+            }
           }
-        ],
-        "block": "minecraft:brown_stained_glass",
-        "item": {
-          "nbt": "{gm4_soul_glass:1b}"
-        }
+        ]
       }
     }
   },
