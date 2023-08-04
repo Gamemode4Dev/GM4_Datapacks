@@ -10,6 +10,12 @@ def X_int(val: str) -> int | None:
 	"""Int casting that accepts character 'X' and returns None"""
 	return None if val.lower() == 'x' else int(val)
 
+def add_namespace(val: str, namespace: str) -> str:
+	"""Adds a namsepace prefix to a string, if one does not already exist"""
+	if ":" not in val:
+		return f"{namespace}:{val}"
+	return val
+
 @dataclass
 class Version():
 	"""Class with methods useful for semver versions in the gm4 build pipeline"""

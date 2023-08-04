@@ -4,8 +4,12 @@ from beet.core.utils import extra_field
 from pydantic import BaseModel, Extra
 from functools import partial
 from beet.contrib.vanilla import Vanilla
+from gm4.utils import add_namespace
+import logging
 
 CUSTOM_MODEL_PREFIX = 3420000
+
+parent_logger = logging.getLogger("gm4.resource_pack")
 
 class ModelData(BaseModel):
     item: ListOption[str]
@@ -37,7 +41,38 @@ class ModelDataOptions(PluginOptions, extra=Extra.ignore):
             new_data.extend(model.collapse_broadcast())
         self.model_data = new_data
 
+@configurable(name="gm4", validator=ModelDataOptions)
+def update_modeldata_registry(ctx: Context, opts: ModelDataOptions):
+    """Updates shared modeldata_registry.json with entries from the beet.yaml"""
+    registry_file = JsonFile(source_path="gm4/modeldata_registry.json")
+    logger = parent_logger.getChild(f"update_modeldata_registry.{ctx.project_id}")
+    item_registry = registry_file.data["items"]
+    opts.process_inheritance()
 
+    # add new references and assign values
+    for m in opts.model_data:
+        for item_id in m.item.entries():
+            ref = add_namespace(m.reference, ctx.project_id)
+            if ref not in item_registry.setdefault(item_id, {}):
+                item_registry[item_id][ref] = -1 # TODO new number assignments: based on allocated ranges!
+                logger.info(f"Issuing new CustomModelData for '{ref}': {-1}")
+
+    #FIXME what to do about a reference that gets a new item added
+
+    # remove unused references
+        # NOTE deleting modeldata is really only supported for development cycles. Once published, a cmd value should be permanent.
+        # Thus, a reference will only be removed if it is no longer present on *any* item in the beet.yaml
+    all_refs = {v for r in opts.model_data if (v:=add_namespace(r.reference, ctx.project_id)).startswith(ctx.project_id)}
+    for item_id, reg in item_registry.items():
+        for ref in list(reg.keys()):
+            if ref.startswith(ctx.project_id) and ref not in all_refs:
+                logger.info(f"Removing undefined CustomModelData from registry: '{ref}'")
+                del reg[ref]
+
+    registry_file.dump(origin="", path="gm4/modeldata_registry.json") # TODO cache this file somehow? Part of RP service exit?
+
+
+# TODO move this to a service object to prevent re-creating the meta config or inheritance process?
 @configurable(name="gm4", validator=ModelDataOptions)
 def generate_model_overrides(ctx: Context, opts: ModelDataOptions):
     """Generates item model overrides in the 'minecraft' namespace, adding predicates for CustomModelData"""
@@ -60,8 +95,7 @@ def generate_model_overrides(ctx: Context, opts: ModelDataOptions):
         
         for model in models:
             # if model.model # TODO this check
-            if ":" not in (ref:=model.reference):
-                ref = f"{ctx.project_id}:{ref}"
+            ref = add_namespace(model.reference, ctx.project_id)
             overrides.append({
                 "predicate": {
                     "custom_model_data": CUSTOM_MODEL_PREFIX+custom_model_data[ref]
@@ -83,6 +117,3 @@ def _filter_by_reference(registry_itemview: tuple[str, int], models: list[ModelD
         if registry_ref == config_ref:
             return True
     return False
-
-
-        

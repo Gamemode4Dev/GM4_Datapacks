@@ -3,6 +3,7 @@ pipeline:
   - gm4.plugins.module.gm4_root_advancement
   - gm4.plugins.versioning.modules
   - gm4.plugins.upgrade_paths
+  - gm4.plugins.resource_pack.update_modeldata_registry
   - gm4.plugins.resource_pack.generate_model_overrides
   - directory: '../base'
     extend: 'beet.yaml'

@@ -31,3 +31,6 @@ meta:
         - BluePsychoRanger
       Icon Design:
         - DuckJr
+    model_data:
+      - item: elytra
+        reference: test/my_model2
