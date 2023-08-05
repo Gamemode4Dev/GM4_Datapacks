@@ -1,18 +1,31 @@
 {
   "items": {
     "apple": {
-      "gm4_apple_trees:block/apple_unripe": -1,
-      "gm4_apple_trees:test/my_model": -1
+      "gm4_apple_trees:block/apple_unripe": 2,
+      "gm4_apple_trees:test/my_model": 1,
+      "gm4_apple_trees:test/my_model_3": 3
     },
-    "oak_sapling": {
-      "gm4_apple_trees:item/apple_tree_sapling": -1,
-      "gm4_apple_trees:test/my_model": -1
+    "diamond": {
+      "gm4_apple_trees:test/my_model": -1,
+      "gm4_apple_trees:test/my_model_2": 0,
+      "gm4_apple_trees:test/my_model_3": 3
     },
     "elytra": {
       "gm4_scuba_gear:test/my_model2": 4
     },
-    "diamond": {
+    "oak_sapling": {
+      "gm4_apple_trees:item/apple_tree_sapling": -1,
       "gm4_apple_trees:test/my_model": -1
     }
+  },
+  "allocations": {
+    "gm4_metallurgy": [
+      100,
+      199
+    ],
+    "gm4_orb_of_ankou": [
+      200,
+      299
+    ]
   }
 }

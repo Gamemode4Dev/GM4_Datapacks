@@ -47,7 +47,9 @@ meta:
       - item: [apple, oak_sapling]
         reference: test/my_model
       - item: diamond
-        reference: test/my_model
+        reference: test/my_model_2
+      - item: [diamond, apple]
+        reference: test/my_model_3
       # - item: apple
       #   reference: a_new_entry
       # - item: cobblestone

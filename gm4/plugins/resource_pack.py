@@ -46,16 +46,17 @@ def update_modeldata_registry(ctx: Context, opts: ModelDataOptions):
     """Updates shared modeldata_registry.json with entries from the beet.yaml"""
     registry_file = JsonFile(source_path="gm4/modeldata_registry.json")
     logger = parent_logger.getChild(f"update_modeldata_registry.{ctx.project_id}")
-    item_registry = registry_file.data["items"]
+    item_registry: dict[str, dict[str, int]] = registry_file.data["items"]
     opts.process_inheritance()
 
     # add new references and assign values
     for m in opts.model_data:
+        i = _retrieve_new_index(m.item.entries(), ctx.project_id)
         for item_id in m.item.entries():
             ref = add_namespace(m.reference, ctx.project_id)
             if ref not in item_registry.setdefault(item_id, {}):
-                item_registry[item_id][ref] = -1 # TODO new number assignments: based on allocated ranges!
-                logger.info(f"Issuing new CustomModelData for '{ref}': {-1}")
+                item_registry[item_id][ref] = i
+                logger.info(f"Issuing new CustomModelData for '{ref}': {i}") # FIXME issues with adding a new item to existing registry
 
     #FIXME what to do about a reference that gets a new item added
 
@@ -68,6 +69,11 @@ def update_modeldata_registry(ctx: Context, opts: ModelDataOptions):
             if ref.startswith(ctx.project_id) and ref not in all_refs:
                 logger.info(f"Removing undefined CustomModelData from registry: '{ref}'")
                 del reg[ref]
+
+    # sort registriy alphabetically and numerically # TODO this as a cleanup step?
+    registry_file.data["items"] = dict(sorted(registry_file.data["items"].items()))
+    for item_id, ref_map in item_registry.items():
+        item_registry[item_id] = dict(sorted(ref_map.items(), key=lambda e: e[1]))
 
     registry_file.dump(origin="", path="gm4/modeldata_registry.json") # TODO cache this file somehow? Part of RP service exit?
 
@@ -117,3 +123,18 @@ def _filter_by_reference(registry_itemview: tuple[str, int], models: list[ModelD
         if registry_ref == config_ref:
             return True
     return False
+
+def _retrieve_new_index(item_ids: list[str], project_id: str) -> int:
+    """finds the next available CMD value for the given model"""
+    registry = JsonFile(source_path="gm4/modeldata_registry.json").data # TODO this might be a service object member 
+    l, u = registry["allocations"].get(project_id, (0,99)) # FIXME what happens when the default allocation fills up
+    available_indices = set(range(l, u+1))
+
+    for item_id in item_ids:
+        used_values = set(registry["items"].get(item_id, {}).values())
+        available_indices -= used_values
+
+    if not available_indices:
+        parent_logger.warning("No Valid CMD is open for assignment!") # FIXME this warn
+        return None
+    return min(available_indices)
