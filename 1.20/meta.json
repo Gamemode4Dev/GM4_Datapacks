@@ -1,5 +1,5 @@
 {
-  "last_commit": "9fc1a2b627b956595c85e2aee35c0b4014ad9998",
+  "last_commit": "af4952dd783793d3229304cc695e619b1f175b31",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1988,7 +1988,7 @@
     {
       "id": "gm4_tower_structures",
       "name": "Tower Structures",
-      "version": "3.2.1",
+      "version": "3.2.2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Tower_Structures",
       "credits": {
