@@ -1,99 +1,55 @@
-from beet import Context, Function, Advancement, Structure
-from typing import Dict, List
-from dataclasses import dataclass
+from typing import ClassVar
 
-NAMESPACE = 'gm4_double_doors'
-TEMPLATE_FOLDER = 'template'
-TEMPLATE_PLACEHOLDER = '$material_name$'
+from beet import Context, Structure, TextFile, subproject
+from beet.contrib.vanilla import Vanilla
+from nbtlib import parse_nbt
 
 
-@dataclass
-class Clone:
-    name: str
+class StringStructure(TextFile):
+    """Create class that loads .snbt files into the beet project"""
+    scope: ClassVar[tuple[str, ...]] = ("structures",)
+    extension: ClassVar[str] = ".snbt"
 
-    advancements: Dict[str, Advancement]
-    functions: Dict[str, Function]
-    structures: Dict[str, Structure]
+    def serialize_to_structure(self) -> Structure:
+        return Structure(parse_nbt(self.text))
+
+def register_snbt_files(ctx: Context):
+    # register the custom file-type with beet so those files are mounted
+    ctx.data.extend_namespace.append(StringStructure)
 
 
 def beet_default(ctx: Context):
+    vanilla = ctx.inject(Vanilla)
+    wooden_doors = vanilla.data.block_tags["minecraft:wooden_doors"]
+    
+    # for each wood type in the vanilla doors tag, render a copy of the "templates" directory with the appropiate wood-type
+    for wood_type in [s.removeprefix("minecraft:").removesuffix("_door") for s in wooden_doors.data["values"]]:
+        subproject_config = {
+            "require": [
+                "gm4_double_doors.generate.register_snbt_files"
+            ],
+            "data_pack":{
+                "load": [
+                    {
+                        f"data/gm4_double_doors/advancements/{wood_type}": "data/gm4_double_doors/templates/advancements",
+                        f"data/gm4_double_doors/functions/{wood_type}": "data/gm4_double_doors/templates/functions",
+                        f"data/gm4_double_doors/structures/{wood_type}": "data/gm4_double_doors/templates/structures",
+                    }
+                ],
+                "render":{
+                    "advancements": "*",
+                    "functions": "*",
+                    "string_structures": "*" # renders all mounted files of the StringStructure container
+                }
+            },
+            "meta":{
+                "material_name": wood_type
+            }
+        }
 
-    # list of supported wood types. Add new wood types here.
-    material_names: List[str] = ['acacia', 'bamboo', 'birch', 'cherry', 'crimson', 'dark_oak', 'jungle', 'mangrove', 'oak', 'spruce', 'warped']
-    build_output_data_pack(ctx, material_names)
+        ctx.require(subproject(subproject_config))
 
-
-def build_output_data_pack(ctx: Context, material_names: List[str]):
-    """Builds the data pack to be pushed to the output"""
-
-    # create clones of template
-    clones: List[Clone] = []
-    for material_name in material_names:
-        clones.append(clone_template(ctx, material_name))
-
-    # remove template (template will not appear in the output, but stays in the input)
-    ctx.data.advancements.clear()
-    ctx.data.functions.clear()
-    ctx.data.structures.clear()
-
-    # re-build datapack based on clones
-    for clone in clones:
-        merge_clone(ctx, clone)
-
-
-def clone_template(ctx: Context, material_name: str) -> Clone:
-    """Clones the template consisting of a trigger advancement, functions, and structures and replaces all mentions of TEMPLATE_PLACEHOLDER with material_name."""
-
-    # clone advancements
-    cloned_advancements: Dict[str, Advancement] = {}
-    for advancement_path in ctx.data.advancements.match(f'{NAMESPACE}:{TEMPLATE_FOLDER}/*'):
-        advancement = ctx.data.advancements.get(advancement_path)
-        if advancement is None:
-            continue
-
-        # save clone populated with altered version of template
-        cloned_advancements[advancement_path.replace(TEMPLATE_FOLDER, material_name)] = Advancement(
-            advancement.get_content().replace(TEMPLATE_PLACEHOLDER, material_name))
-
-    # clone functions
-    cloned_functions: Dict[str, Function] = {}
-    for function_path in ctx.data.functions.match(f'{NAMESPACE}:{TEMPLATE_FOLDER}/*'):
-        function = ctx.data.functions.get(function_path)
-        if function is None:
-            continue
-
-        # save clone populated with altered version of template
-        cloned_functions[function_path.replace(TEMPLATE_FOLDER, material_name)] = Function(
-            function.get_content().replace(TEMPLATE_PLACEHOLDER, material_name))
-
-    # clone structures
-    cloned_structures: Dict[str, Structure] = {}
-    for structure_path in ctx.data.structures.match(f'{NAMESPACE}:{TEMPLATE_FOLDER}/*'):
-        structure = ctx.data.structures.get(structure_path)
-        if structure is None:
-            continue
-
-        # save clone populated with altered version of template (copy is required to avoid overwriting the template)
-        cloned_structures[structure_path.replace(TEMPLATE_FOLDER, material_name)] = set_structure_palette(structure.copy(), material_name)
-
-    return Clone(material_name, cloned_advancements, cloned_functions, cloned_structures)
-
-
-def merge_clone(ctx: Context, clone: Clone):
-    """Merges the provided clone with the context."""
-
-    ctx.data.advancements.merge(clone.advancements)
-    ctx.data.functions.merge(clone.functions)
-    ctx.data.structures.merge(clone.structures)
-
-
-def set_structure_palette(structure: Structure, material_name: str) -> Structure:
-    """Searches through a structure file and replaces all mentions of TEMPLATE_PLACEHOLDER in the block type of a palette entry with material_name."""
-
-    # look through the structure file's contents for blocks which have TEMPLATE_PLACEHOLDER as their name
-    for block_state in structure.ensure_deserialized()['palette']:
-        block_state['Name'] = block_state['Name'].replace(TEMPLATE_PLACEHOLDER, material_name)
-
-    # reserialize
-    structure.ensure_serialized()
-    return structure
+    # transform the "string-structure" files into actual binary files
+    for name, struct in ctx.data[StringStructure].items():
+        ctx.data[Structure][name] = struct.serialize_to_structure()
+    ctx.data[StringStructure].clear()
