@@ -8,14 +8,21 @@
     "diamond": {
       "gm4_apple_trees:test/my_model": -1,
       "gm4_apple_trees:test/my_model_2": 0,
-      "gm4_apple_trees:test/my_model_3": 3
+      "gm4_apple_trees:test/my_model_3": 3,
+      "gm4_apple_trees:test/my_model_4": 1
     },
     "elytra": {
       "gm4_scuba_gear:test/my_model2": 4
     },
+    "emerald": {
+      "gm4_apple_trees:block/apple_unripe": 0
+    },
     "oak_sapling": {
-      "gm4_apple_trees:item/apple_tree_sapling": -1,
+      "gm4_apple_trees:item/apple_tree_sapling": 10,
       "gm4_apple_trees:test/my_model": -1
+    },
+    "snowball": {
+      "gm4_apple_trees:test/my_model_4": 0
     }
   },
   "allocations": {

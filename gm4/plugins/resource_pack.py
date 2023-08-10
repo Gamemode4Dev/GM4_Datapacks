@@ -51,14 +51,24 @@ def update_modeldata_registry(ctx: Context, opts: ModelDataOptions):
 
     # add new references and assign values
     for m in opts.model_data:
-        i = _retrieve_new_index(m.item.entries(), ctx.project_id)
+        ref = add_namespace(m.reference, ctx.project_id)
+        i = _retrieve_index(ref)
+        print(f"existing index {i}")
+        if i is not None: # existing index, is it available to assign to all items
+            conflicts = False
+            for item_id in m.item.entries():
+                reg = item_registry[item_id]
+                used_idxs = {k: reg[k] for k in reg.keys() - {ref}}.values()
+                print(used_idxs)
+                if i in used_idxs:
+                    logger.warning(f"Failed to share existing CustomModelData for '{ref}' to '{item_id}'. A new value will be assigned for this reference; existing items may lose their texture!")
+                    conflicts = True
+        if i is None or conflicts: # no existing index, or existing isn't available; get a new one
+            i = _retrieve_new_index(m.item.entries(), ctx.project_id)
         for item_id in m.item.entries():
-            ref = add_namespace(m.reference, ctx.project_id)
             if ref not in item_registry.setdefault(item_id, {}):
                 item_registry[item_id][ref] = i
                 logger.info(f"Issuing new CustomModelData for '{ref}': {i}") # FIXME issues with adding a new item to existing registry
-
-    #FIXME what to do about a reference that gets a new item added
 
     # remove unused references
         # NOTE deleting modeldata is really only supported for development cycles. Once published, a cmd value should be permanent.
@@ -69,6 +79,7 @@ def update_modeldata_registry(ctx: Context, opts: ModelDataOptions):
             if ref.startswith(ctx.project_id) and ref not in all_refs:
                 logger.info(f"Removing undefined CustomModelData from registry: '{ref}'")
                 del reg[ref]
+        #FIXME clear references from items no longer configured too
 
     # sort registriy alphabetically and numerically # TODO this as a cleanup step?
     registry_file.data["items"] = dict(sorted(registry_file.data["items"].items()))
@@ -138,3 +149,12 @@ def _retrieve_new_index(item_ids: list[str], project_id: str) -> int:
         parent_logger.warning("No Valid CMD is open for assignment!") # FIXME this warn
         return None
     return min(available_indices)
+
+def _retrieve_index(reference: str) -> int:
+    """retrieves the CMD value for the given reference""" # TODO move to service objecT? rename this function?
+    registry = JsonFile(source_path="gm4/modeldata_registry.json").data
+
+    for item_id, reg in registry["items"].items():
+        if reference in reg:
+            return reg[reference]
+    return None # TODO this becomes an exception? KeyError

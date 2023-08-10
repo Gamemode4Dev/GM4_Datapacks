@@ -40,7 +40,7 @@ meta:
       Icon Design:
         - BluePsychoRanger
     model_data:
-      - item: apple
+      - item: emerald
         reference: block/apple_unripe
       - item: oak_sapling
         reference: item/apple_tree_sapling
@@ -50,6 +50,8 @@ meta:
         reference: test/my_model_2
       - item: [diamond, apple]
         reference: test/my_model_3
+      - item: [snowball, diamond]
+        reference: test/my_model_4
       # - item: apple
       #   reference: a_new_entry
       # - item: cobblestone
