@@ -6,7 +6,7 @@ authors = ["Gamemode 4 Contributors"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-beet = "^0.84.0"
+beet = "0.92.0"
 mecha = "^0.67.0"
 bolt = ">=0.20.1"
 PyYAML = "^6.0"
