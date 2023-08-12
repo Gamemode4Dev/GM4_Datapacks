@@ -1,5 +1,5 @@
 {
-  "last_commit": "af4952dd783793d3229304cc695e619b1f175b31",
+  "last_commit": "c35c657027f223b31dfc9a4c5938d90054547a90",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -634,6 +634,25 @@
       "smithed_link": null,
       "pmc_link": null,
       "publish_date": "2023-07-10"
+    },
+    {
+      "id": "gm4_dripleaf_launchers",
+      "name": "Dripleaf Launchers",
+      "version": "1.0.0",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Launchers",
+      "credits": {
+        "Creator": [
+          "Thanathor"
+        ]
+      },
+      "requires": [],
+      "description": "Start your own Dripleaf Space Program!",
+      "recommends": [],
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
+      "publish_date": "2023-08-12"
     },
     {
       "id": "gm4_enchantment_extractors",
