@@ -1,5 +1,5 @@
 {
-  "last_commit": "c35c657027f223b31dfc9a4c5938d90054547a90",
+  "last_commit": "060a5a78bd97584023cd684c14d439d31862cf53",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -613,6 +613,25 @@
       "smithed_link": null,
       "pmc_link": null,
       "publish_date": "2023-07-10"
+    },
+    {
+      "id": "gm4_double_doors",
+      "name": "Double Doors",
+      "version": "1.0.0",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Double_Doors",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ]
+      },
+      "requires": [],
+      "description": "Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blacks tall? This data pack automatically opens adjecent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.",
+      "recommends": [],
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
+      "publish_date": "2023-08-12"
     },
     {
       "id": "gm4_dripleaf_filters",
