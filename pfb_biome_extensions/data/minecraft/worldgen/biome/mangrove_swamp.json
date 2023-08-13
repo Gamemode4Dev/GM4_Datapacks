@@ -37,7 +37,7 @@
     "#minecraft:vegetal_decoration/in_biome/mangrove_swamp",
     "#minecraft:top_layer_modification/in_biome/mangrove_swamp"
   ],
-  "precipitation": "rain",
+  "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
     "ambient": [

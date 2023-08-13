@@ -68,13 +68,8 @@
                     "translate": "enchantment.minecraft.thorns"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "XIV",
-                      {
-                        "translate": "enchantment.level.14"
-                      }
-                    ]
+                    "translate": "enchantment.level.14",
+                    "fallback": "XIV"
                   }
                 ],
                 "color": "blue",
@@ -109,13 +104,8 @@
                     "translate": "enchantment.minecraft.thorns"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "XV",
-                      {
-                        "translate": "enchantment.level.15"
-                      }
-                    ]
+                    "translate": "enchantment.level.15",
+                    "fallback": "XV"
                   }
                 ],
                 "color": "blue",
@@ -150,13 +140,8 @@
                     "translate": "enchantment.minecraft.thorns"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "XVI",
-                      {
-                        "translate": "enchantment.level.16"
-                      }
-                    ]
+                    "translate": "enchantment.level.16",
+                    "fallback": "XVI"
                   }
                 ],
                 "color": "blue",
@@ -191,13 +176,8 @@
                     "translate": "enchantment.minecraft.thorns"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "XVII",
-                      {
-                        "translate": "enchantment.level.17"
-                      }
-                    ]
+                    "translate": "enchantment.level.17",
+                    "fallback": "XVII"
                   }
                 ],
                 "color": "blue",

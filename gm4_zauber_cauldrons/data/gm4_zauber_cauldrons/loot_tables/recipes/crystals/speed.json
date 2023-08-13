@@ -14,13 +14,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Crystal of Swiftness",
-                                    {
-                                        "translate": "item.gm4.zauber_cauldrons.crystal.speed"
-                                    }
-                                ],
+                                "translate": "item.gm4.zauber_cauldrons.crystal.speed",
+                                "fallback": "Crystal of Swiftness",
                                 "italic": false
                             }
                         },

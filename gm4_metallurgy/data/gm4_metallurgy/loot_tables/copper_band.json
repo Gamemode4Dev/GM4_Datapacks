@@ -14,13 +14,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Obsidian Cast",
-                                    {
-                                        "translate": "item.gm4.metallurgy.obsidian_cast"
-                                    }
-                                ],
+                                "translate": "item.gm4.metallurgy.obsidian_cast",
+                                "fallback": "Obsidian Cast",
                                 "italic": false
                             }
                         },
@@ -28,29 +23,20 @@
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
+                                    "translate": "item.gm4.metallurgy.band",
+                                    "fallback": "%s Band",
                                     "with": [
-                                        "Copper Band",
                                         {
-                                            "translate": "item.gm4.metallurgy.band",
-                                            "with": [
-                                                {
-                                                    "translate": "item.gm4.metallurgy.copper"
-                                                }
-                                            ]
+                                            "translate": "item.gm4.metallurgy.copper",
+                                            "fallback": "Copper"
                                         }
                                     ],
                                     "italic": false,
                                     "color": "gold"
                                 },
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Shamir",
-                                        {
-                                            "translate": "item.gm4.metallurgy.shamir"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.metallurgy.shamir",
+                                    "fallback": "Shamir",
                                     "italic": false,
                                     "color": "aqua"
                                 }

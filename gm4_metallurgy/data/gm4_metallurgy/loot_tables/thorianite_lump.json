@@ -11,13 +11,8 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Thorianite Lump",
-                  {
-                    "translate": "item.gm4.metallurgy.thorianite_lump"
-                  }
-                ],
+                "translate": "item.gm4.metallurgy.thorianite_lump",
+                "fallback": "Thorianite Lump",
                 "italic": false,
                 "color": "white"
               }
@@ -28,24 +23,14 @@
               "lore": [
                 [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "Contains ",
-                      {
-                        "translate": "text.gm4.metallurgy.contains"
-                      }
-                    ],
+                    "translate": "text.gm4.metallurgy.contains",
+                    "fallback": "Contains ",
                     "italic": false,
                     "color": "gray"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "Thorium",
-                      {
-                        "translate": "text.gm4.metallurgy.thorium"
-                      }
-                    ],
+                    "translate": "text.gm4.metallurgy.thorium",
+                    "fallback": "Thorium",
                     "italic": false,
                     "color": "#767676"
                   }

@@ -16,13 +16,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Minecart with Ender Hopper",
-                    {
-                      "translate": "item.gm4.ender_hopper_minecart"
-                    }
-                  ],
+                  "translate": "item.gm4.ender_hopper_minecart",
+                  "fallback": "Minecart with Ender Hopper",
                   "italic": false
                 }
               ]

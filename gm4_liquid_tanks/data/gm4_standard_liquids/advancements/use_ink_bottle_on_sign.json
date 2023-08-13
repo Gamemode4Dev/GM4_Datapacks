@@ -3,17 +3,25 @@
         "requirement": {
             "trigger": "minecraft:item_used_on_block",
             "conditions": {
-                "item": {
-                    "items": [
-                        "minecraft:potion"
-                    ],
-                    "nbt": "{Potion:\"standard_liquids:blindness\"}"
-                },
-                "location": {
-                    "block": {
-                        "tag": "minecraft:signs"
+                "location": [
+                    {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                            "items": [
+                                "minecraft:potion"
+                            ],
+                            "nbt": "{gm4_standard_liquids:{potion:\"blindness\"}}"
+                        }
+                    },
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "tag": "minecraft:all_signs"
+                            }
+                        }
                     }
-                }
+                ]
             }
         }
     },

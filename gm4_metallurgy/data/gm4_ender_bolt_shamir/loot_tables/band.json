@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Ender Bolt",
-                                        {
-                                            "translate": "item.gm4.shamir.ender_bolt"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.ender_bolt",
+                                    "fallback": "Ender Bolt",
                                     "italic": false,
                                     "color": "gray"
                                 }

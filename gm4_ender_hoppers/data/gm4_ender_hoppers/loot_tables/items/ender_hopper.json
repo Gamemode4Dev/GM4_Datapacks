@@ -16,13 +16,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Ender Hopper",
-                    {
-                      "translate": "block.gm4.ender_hopper"
-                    }
-                  ],
+                  "translate": "block.gm4.ender_hopper",
+                  "fallback": "Ender Hopper",
                   "color": "white",
                   "italic": false
                 }

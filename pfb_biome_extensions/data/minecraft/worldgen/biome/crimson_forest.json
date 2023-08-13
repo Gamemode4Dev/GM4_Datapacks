@@ -46,7 +46,7 @@
     "#minecraft:vegetal_decoration/in_biome/crimson_forest",
     "#minecraft:top_layer_modification/in_biome/crimson_forest"
   ],
-  "precipitation": "none",
+  "has_precipitation": false,
   "spawn_costs": {},
   "spawners": {
     "ambient": [],

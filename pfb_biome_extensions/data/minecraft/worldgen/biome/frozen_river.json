@@ -29,7 +29,7 @@
     "#minecraft:vegetal_decoration/in_biome/frozen_river",
     "#minecraft:top_layer_modification/in_biome/frozen_river"
   ],
-  "precipitation": "snow",
+  "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
     "ambient": [

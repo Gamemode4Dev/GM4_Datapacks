@@ -16,13 +16,8 @@
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Spiraculum",
-                                        {
-                                            "translate": "item.gm4.shamir.spiraculum"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.spiraculum",
+                                    "fallback": "Spiraculum",
                                     "italic": false,
                                     "color": "gray"
                                 }

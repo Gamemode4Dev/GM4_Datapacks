@@ -3,18 +3,26 @@
         "place_lightning_rod": {
             "trigger": "minecraft:item_used_on_block",
             "conditions": {
-                "item": {
-                    "items": [
-                        "minecraft:lightning_rod"
-                    ]
-                },
-                "location": {
-                    "block": {
-                        "blocks": [
-                            "minecraft:brewing_stand"
-                        ]
+                "location": [
+                    {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                            "items": [
+                                "minecraft:lightning_rod"
+                            ]
+                        }
+                    },
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "blocks": [
+                                    "minecraft:brewing_stand"
+                                ]
+                            }
+                        }
                     }
-                }
+                ]
             }
         }
     },

@@ -14,13 +14,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Flippers",
-                  {
-                    "translate": "item.gm4.flippers"
-                  }
-                ],
+                "translate": "item.gm4.flippers",
+                "fallback": "Flippers",
                 "italic": false
               }
             }
