@@ -17,7 +17,8 @@
                         "type": "minecraft:fixed",
                         "name": "$damage_chance"
                     },
-                    "score": "gm4_arb_data"
+                    "score": "gm4_arb_data",
+                    "scale": 0.01
                 }
             },
             "entries": [

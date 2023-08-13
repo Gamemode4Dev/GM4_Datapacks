@@ -2,6 +2,7 @@ scoreboard objectives add gm4_armor armor
 scoreboard objectives add gm4_armor_weight dummy
 
 execute unless score weighted_armour gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Weighted Armour"}
+execute unless score weighted_armour gm4_earliest_version < weighted_armour gm4_modules run scoreboard players operation weighted_armour gm4_earliest_version = weighted_armour gm4_modules
 scoreboard players set weighted_armour gm4_modules 1
 
 data remove storage gm4_player_heads:register heads[{id:"gm4_helious_shamir:band/v0"}]

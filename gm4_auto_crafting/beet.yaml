@@ -1,18 +1,15 @@
-extend: '../module.yaml'
-
 id: gm4_auto_crafting
 name: Auto Crafting
 version: 1.2.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - directory: '../lib_machines'
-    extend: 'beet.yaml'
-  - directory: '../lib_custom_crafters'
-    extend: 'beet.yaml'
-  - gm4.plugins.post_library_plugins
-  - data_pack:
-      load: .
   - gm4_auto_crafting.generate
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_machines
+  - gm4.plugins.include.lib_custom_crafters
 
 meta:
   gm4:
