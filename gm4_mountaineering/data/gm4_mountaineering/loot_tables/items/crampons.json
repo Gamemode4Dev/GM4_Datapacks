@@ -15,13 +15,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Crampons",
-                                    {
-                                        "translate": "item.gm4.crampons"
-                                    }
-                                ],
+                                "translate": "item.gm4.crampons",
+                                "fallback": "Crampons",
                                 "italic": false
                             }
                         },

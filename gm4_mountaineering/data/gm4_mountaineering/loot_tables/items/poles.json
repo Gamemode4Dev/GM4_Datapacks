@@ -15,13 +15,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Ski Poles",
-                                    {
-                                        "translate": "item.gm4.poles"
-                                    }
-                                ],
+                                "translate": "item.gm4.poles",
+                                "fallback": "Ski Poles",
                                 "italic": false
                             }
                         }

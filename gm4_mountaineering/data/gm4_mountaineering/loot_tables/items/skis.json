@@ -15,13 +15,8 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "%1$s%3427655$s",
-                                "with": [
-                                    "Skis",
-                                    {
-                                        "translate": "item.gm4.skis"
-                                    }
-                                ],
+                                "translate": "item.gm4.skis",
+                                "fallback": "Skis",
                                 "italic": false
                             }
                         },
