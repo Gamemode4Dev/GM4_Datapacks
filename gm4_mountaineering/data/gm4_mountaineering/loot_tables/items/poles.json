@@ -16,7 +16,7 @@
                             "function": "minecraft:set_name",
                             "name": {
                                 "translate": "item.gm4.poles",
-                                "fallback": "Ski Poles",
+                                "fallback": "Ski Pole",
                                 "italic": false
                             }
                         }
