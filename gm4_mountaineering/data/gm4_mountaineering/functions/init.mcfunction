@@ -16,4 +16,5 @@ scoreboard objectives add gm4_mountaineering_poles_jump_boost dummy
 scoreboard objectives add gm4_mountaineering_jump_counter minecraft.custom:minecraft.jump
 scoreboard objectives add gm4_mountaineering_climbing_shulker_countdown dummy
 
-#$moduleUpdateList
+schedule function gm4_mountaineering:main 1t
+schedule function gm4_mountaineering:fast_main 1t
