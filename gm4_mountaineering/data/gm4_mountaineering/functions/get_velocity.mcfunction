@@ -1,7 +1,7 @@
 # Update the player's velocity scores
 # @s = player wearing skis
 # at @s
-# run from ski_effects/skis_equipped
+# run from ski_effects/skis_equipped and pole_effects/poles_equipped
 
 # Get current y-position, store as y1
 execute store result score @s gm4_mountaineering_y1 run data get entity @s Pos[1]

@@ -11,7 +11,7 @@ function gm4_mountaineering:ski_effects/check_snowy_block
 # Adds particles at the player's feet when skiing on a snowy bock and without air below
 execute if entity @s[tag=gm4_mountaineering_skiing] unless block ~ ~-2 ~ minecraft:air run particle minecraft:cloud ~ ~ ~ 0.1 0.1 0.1 0.001 2 normal
 
-# Records the player's y-velocity in a scoreboard
+# Records the player's velocities in scoreboards
 function gm4_mountaineering:get_velocity
 
 # Adds speed effects for skiing on a flat surface
