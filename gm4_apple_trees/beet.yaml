@@ -66,8 +66,8 @@ meta:
       #   reference: test/my_model_5
       # - item: apple
       #   reference: a_new_entry
-      # - item: cobblestone
-      - broadcast:
+      - item: cobblestone
+        broadcast:
         - reference: block/model_1
         - reference: block/model_2
           # broadcast:
@@ -75,7 +75,7 @@ meta:
           #   - reference: block/model_69
         - reference: block/model_3
           item: stone
-      - broadcast:
+      # - broadcast:
   modrinth:
     project_id: Afacz65w
   smithed:
