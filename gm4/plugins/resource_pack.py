@@ -1,7 +1,9 @@
-from beet import Context, PluginOptions, configurable, JsonFile, ListOption, Model
+from beet import Context, PluginOptions, configurable, JsonFile, ListOption, Model, InvalidOptions
+from beet.core.utils import format_validation_error
 from typing import Union, Optional, Any
 from beet.core.utils import extra_field
-from pydantic import BaseModel, Extra
+from pydantic import BaseModel, Extra, ValidationError
+from pydantic.error_wrappers import ErrorWrapper
 from functools import partial, cached_property
 from beet.contrib.vanilla import Vanilla
 from gm4.utils import add_namespace
@@ -12,34 +14,64 @@ CUSTOM_MODEL_PREFIX = 3420000
 parent_logger = logging.getLogger("gm4.resource_pack")
 
 class ModelData(BaseModel):
+    """A complete config for a single model"""
     item: ListOption[str]
-    reference: Optional[str]
-    model: Optional[str|list[dict[str,Any]]]
-    broadcast: Optional[list['ModelData']] = []
+    reference: str
+    model: str|list[dict[str,Any]]
 
-    def collapse_broadcast(self) -> list['ModelData']:
-        """Collapses inherited config through the broadcast field into a list of single ModelData's"""
-        ret_list: list[ModelData] = []
+class NestedModelData(BaseModel):
+    """A potentially incomplete config, allowing for nested inheritance of fields"""
+    item: Optional[ListOption[str]]
+    reference: Optional[str]
+    model: Optional[str|list[dict[str,Any]]] = "empty" # TEMP this does not get a default value in the end
+    broadcast: Optional[list['NestedModelData']] = []
+
+    def collapse_broadcast(self) -> list['NestedModelData']:
+        """Recursively collapses broadcast fields into a list of NestedModelData"""
+        if not self.broadcast:
+            return [self]
+        ret_list: list[NestedModelData] = []
         for child in self.broadcast:
-            m = ModelData.parse_obj(self.dict(exclude_unset=True,exclude={"broadcast"}) | child.dict(exclude_unset=True))
+            m = NestedModelData.parse_obj(self.dict(exclude_unset=True,exclude={"broadcast"}) | child.dict(exclude_unset=True))
             if m.broadcast:
                 m = m.collapse_broadcast()
                 ret_list.extend(m)
             else:
                 ret_list.append(m)
-        if not self.broadcast:
-            ret_list.append(self)
         return ret_list
 
-class ModelDataOptions(PluginOptions, extra=Extra.ignore):
-    model_data: list[ModelData] = []
+class FlatModelDataOptions(BaseModel):
+    """Contains a flat list of complete model config objects"""
+    model_data: list[ModelData]
 
-    def process_inheritance(self) -> 'ModelDataOptions':
-        """Collapses and returns any broadcast fields in new ModelDataOptions"""
-        new_data = []
-        for model in self.model_data:
-            new_data.extend(model.collapse_broadcast())
-        return ModelDataOptions(model_data=new_data)
+class ModelDataOptions(PluginOptions, extra=Extra.ignore):
+    model_data: list[NestedModelData] = []
+
+    def process_inheritance(self) -> FlatModelDataOptions:
+        """Collapses and returns any broadcast fields into processed flat list"""
+        ret: list[ModelData] = []
+        errors: list[tuple[int, ValidationError]] = []
+        for i, model in enumerate(self.model_data):
+            try:
+                ret.extend([ModelData(**m.dict()) for m in model.collapse_broadcast()])
+            except ValidationError as exc:
+                errors.append((i, exc))
+
+        if errors: # generate traceback for configs missing information
+            wrapper_errors: list[ErrorWrapper] = []
+            for i, error in errors:
+                primary_loc = ("model_data", i)
+                s = format_validation_error("gm4", ValidationError(model=ModelData, errors=[
+                    ErrorWrapper(ValueError(e['msg']), loc=(*primary_loc,*e['loc']))
+                    for e in error.errors()
+                ]))
+                sub_explainations = "\n\t"+"\n\t".join(s.split("\n"))
+                wrapper_errors.append(ErrorWrapper(ValueError("a child inherited incomplete options:"+sub_explainations), loc=primary_loc))
+            complete_explaination = format_validation_error("gm4", ValidationError(model=ModelData, errors=wrapper_errors))
+            raise InvalidOptions("gm4", complete_explaination)
+        
+        return FlatModelDataOptions(model_data=ret)
+
 
 def update_modeldata_registry(ctx: Context): # TEMP redirect
     o = ctx.inject(GM4ResourcePack)
@@ -60,10 +92,10 @@ class GM4ResourcePack():
 
     def __init__(self, ctx: Context):
         self.ctx = ctx
-        self.registry_file = JsonFile(source_path="gm4/modeldata_registry.json")
+        self.registry_file = JsonFile(source_path="gm4/modeldata_registry.json") # TODO caching/save/output this
 
     @cached_property
-    def opts(self) -> ModelDataOptions:
+    def opts(self) -> FlatModelDataOptions:
         # load and process config when it's first accessed. 
         return self.ctx.validate("gm4", validator=ModelDataOptions).process_inheritance()
 

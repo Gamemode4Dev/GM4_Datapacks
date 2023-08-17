@@ -40,7 +40,7 @@ meta:
       Icon Design:
         - BluePsychoRanger
     model_data:
-      - item: emerald
+      - item: apple
         reference: block/apple_unripe
       - item: oak_sapling
         reference: item/apple_tree_sapling
@@ -67,14 +67,15 @@ meta:
       # - item: apple
       #   reference: a_new_entry
       # - item: cobblestone
-      #   broadcast:
-      #     - reference: block/model_1
-      #     - reference: block/model_2
-      #       broadcast:
-      #         - item: redstone_ore
-      #         - reference: block/model_69
-      #     - reference: block/model_3
-      #       item: stone
+      - broadcast:
+        - reference: block/model_1
+        - reference: block/model_2
+          # broadcast:
+          #   # - item: redstone_ore
+          #   - reference: block/model_69
+        - reference: block/model_3
+          item: stone
+      - broadcast:
   modrinth:
     project_id: Afacz65w
   smithed:
