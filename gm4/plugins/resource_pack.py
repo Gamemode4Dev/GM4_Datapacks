@@ -2,7 +2,7 @@ from beet import Context, PluginOptions, configurable, JsonFile, ListOption, Mod
 from typing import Union, Optional, Any
 from beet.core.utils import extra_field
 from pydantic import BaseModel, Extra
-from functools import partial
+from functools import partial, cached_property
 from beet.contrib.vanilla import Vanilla
 from gm4.utils import add_namespace
 import logging
@@ -34,12 +34,12 @@ class ModelData(BaseModel):
 class ModelDataOptions(PluginOptions, extra=Extra.ignore):
     model_data: list[ModelData] = []
 
-    def process_inheritance(self):
-        """Mutates its own data, collapsing any broadcast fields"""
+    def process_inheritance(self) -> 'ModelDataOptions':
+        """Collapses and returns any broadcast fields in new ModelDataOptions"""
         new_data = []
         for model in self.model_data:
             new_data.extend(model.collapse_broadcast())
-        self.model_data = new_data
+        return ModelDataOptions(model_data=new_data)
 
 def update_modeldata_registry(ctx: Context): # TEMP redirect
     o = ctx.inject(GM4ResourcePack)
@@ -48,19 +48,29 @@ def generate_model_overrides(ctx: Context): # TEMP redirect
     o = ctx.inject(GM4ResourcePack)
     o.generate_model_overrides()
 
+def beet_default():
+    # TEMP record of process
+    # mecha register
+    # yield
+    # save registry out / cache for next step in build
+    pass
+
 class GM4ResourcePack():
     """Service Object handling CustomModelData and generated item models"""
 
     def __init__(self, ctx: Context):
         self.ctx = ctx
-        self.opts = ctx.validate("gm4", validator=ModelDataOptions) # TODO process inheritance?
         self.registry_file = JsonFile(source_path="gm4/modeldata_registry.json")
+
+    @cached_property
+    def opts(self) -> ModelDataOptions:
+        # load and process config when it's first accessed. 
+        return self.ctx.validate("gm4", validator=ModelDataOptions).process_inheritance()
 
     def update_modeldata_registry(self):
         """Updates shared modeldata_registry.json with entries from the beet.yaml"""
         logger = parent_logger.getChild(f"update_modeldata_registry.{self.ctx.project_id}")
         item_registry: dict[str, dict[str, int]] = self.registry_file.data["items"]
-        self.opts.process_inheritance()
 
         # add new references and assign values
         for m in self.opts.model_data:
@@ -107,8 +117,7 @@ class GM4ResourcePack():
         vanilla = self.ctx.inject(Vanilla)
         vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
 
-        self.opts.process_inheritance()
-        
+       
         # sort models by item id
         for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
             models = list(filter(lambda m: item_id in m.item.entries(), self.opts.model_data))
