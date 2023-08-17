@@ -14,7 +14,7 @@ parent_logger = logging.getLogger("gm4.resource_pack")
 class ModelData(BaseModel):
     item: ListOption[str]
     reference: Optional[str]
-    model: Optional[str]
+    model: Optional[str|list[dict[str,Any]]]
     broadcast: Optional[list['ModelData']] = []
 
     def collapse_broadcast(self) -> list['ModelData']:
@@ -53,13 +53,11 @@ def update_modeldata_registry(ctx: Context, opts: ModelDataOptions):
     for m in opts.model_data:
         ref = add_namespace(m.reference, ctx.project_id)
         i = _retrieve_index(ref)
-        print(f"existing index {i}")
         if i is not None: # existing index, is it available to assign to all items
             conflicts = False
             for item_id in m.item.entries():
                 reg = item_registry[item_id]
                 used_idxs = {k: reg[k] for k in reg.keys() - {ref}}.values()
-                print(used_idxs)
                 if i in used_idxs:
                     logger.warning(f"Failed to share existing CustomModelData for '{ref}' to '{item_id}'. A new value will be assigned for this reference; existing items may lose their texture!")
                     conflicts = True
@@ -96,30 +94,41 @@ def generate_model_overrides(ctx: Context, opts: ModelDataOptions):
 
     registry = JsonFile(source_path="gm4/modeldata_registry.json").data
     vanilla = ctx.inject(Vanilla)
-    # vanilla_models_jar = vanilla.mount("assets/minecraft/models/items")
+    vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
 
     opts.process_inheritance()
     
     # sort models by item id
     for item_id in {i for m in opts.model_data for i in m.item.entries()}:
         models = list(filter(lambda m: item_id in m.item.entries(), opts.model_data))
+        print(f"{item_id} models: {models}")
 
-        model_override = (v:=vanilla.assets.models[f"minecraft:item/{item_id}"].data) | ({} if v.get("overrides") else {"overrides": []})
+        model_override = (v:=vanilla_models_jar.assets.models[f"minecraft:item/{item_id}"].data) | ({} if v.get("overrides") else {"overrides": []})
         overrides = model_override["overrides"]
+        print(f"{item_id} overrides start: {overrides}")
 
         filter_func = partial(_filter_by_reference, models=models, namespace=ctx.project_id)
         custom_model_data = dict(filter(filter_func, registry["items"][item_id].items())) # TODO error logging
         
         for model in models:
-            # if model.model # TODO this check
-            ref = add_namespace(model.reference, ctx.project_id)
-            overrides.append({
-                "predicate": {
-                    "custom_model_data": CUSTOM_MODEL_PREFIX+custom_model_data[ref]
-                },
-                "model": model.model
-            })
+            # setup overrides to add CMD to
+            if isinstance(model.model, list): # manual predicate merging specified
+                merge_overrides = model.model # FIXME check branch unnecessary
+            elif isinstance(model.model, str): 
+                merge_overrides = overrides.copy() # get vanilla overrides # FIXME deepcopy?
+            if len(merge_overrides) == 0:
+                merge_overrides.append({}) # add an empty predicate to add CMD onto
 
+            ref = add_namespace(model.reference, ctx.project_id)
+
+            for pred in merge_overrides:
+                overrides.append({
+                    "predicate": {
+                        "custom_model_data": CUSTOM_MODEL_PREFIX+custom_model_data[ref]
+                    } | pred.get("predicate", {}),
+                    "model": ref #model.model # FIXME points to generated model file?
+                })
+        print(overrides)
         ctx.assets.models[f"minecraft:item/{item_id}"] = Model(model_override) # TODO skipped-values spacing, on RP output after merge :)
 
 def _filter_by_reference(registry_itemview: tuple[str, int], models: list[ModelData], namespace: str) -> bool:

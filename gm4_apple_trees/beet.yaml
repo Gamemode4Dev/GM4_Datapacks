@@ -48,10 +48,22 @@ meta:
         reference: test/my_model
       - item: diamond
         reference: test/my_model_2
+      - item: apple
+        reference: test/my_model_2
+        model:
+          - predicate:
+              broken: 1
+            name: my_model_2_broken
+          - predicate:
+              broken: 0
+            name: my_model_2_unbroken
+
       - item: [diamond, apple]
         reference: test/my_model_3
       - item: [snowball, diamond]
         reference: test/my_model_4
+      # - item: [compass]
+      #   reference: test/my_model_5
       # - item: apple
       #   reference: a_new_entry
       # - item: cobblestone
