@@ -116,12 +116,12 @@ def generate_model_overrides(ctx: Context): # TEMP redirect
     o.generate_model_overrides()
     o.generate_model_files() # TEMP
 
-def beet_default():
-    # TEMP record of process
+def beet_default(ctx: Context):
+    rp = ctx.inject(GM4ResourcePack)
     # mecha register
-    # yield
-    # save registry out / cache for next step in build
-    pass
+
+    yield
+    rp.output_registry()
 
 class GM4ResourcePack():
     """Service Object handling CustomModelData and generated item models"""
@@ -173,12 +173,6 @@ class GM4ResourcePack():
                     del reg[ref]
             #FIXME clear references from items no longer configured too
 
-        # # sort registriy alphabetically and numerically # TODO this as a cleanup step?
-        # self.registry_file.data["items"] = dict(sorted(registry_file.data["items"].items()))
-        # for item_id, ref_map in item_registry.items():
-        #     item_registry[item_id] = dict(sorted(ref_map.items(), key=lambda e: e[1]))
-
-        # self.registry_file.dump(origin="", path="gm4/modeldata_registry.json") # TODO cache this file somehow? Part of RP service exit?
 
     def generate_model_overrides(self):
         """Generates item model overrides in the 'minecraft' namespace, adding predicates for CustomModelData"""
@@ -246,6 +240,14 @@ class GM4ResourcePack():
                 item_registry[item_id][reference] = i
                 logger.info(f"Issuing new CustomModelData for '{reference}': {i}")
 
+    def output_registry(self):
+        # sort registriy alphabetically and numerically
+        self.registry["items"] = dict(sorted(self.registry["items"].items()))
+        for item_id, ref_map in self.registry["items"].items():
+            self.registry["items"][item_id] = dict(sorted(ref_map.items(), key=lambda e: e[1]))
+
+        JsonFile(self.registry).dump(origin="", path="gm4/modeldata_registry.json") # TODO cache this file somehow? Part of RP service exit?
+
     #== Mecha Transformer Rules ==#
     # TODO
 
@@ -273,7 +275,7 @@ class GM4ResourcePack():
     
      # default model templates # FIXME should these be class members? Or generated on init and not bound after that point? Thdy don't have self so maybe not in class
     @staticmethod
-    def custom(textures): # TODO decorator for argument passing? Verification of texture existance?
+    def custom(textures: list[str]): # TODO decorator for argument passing? Verification of texture existance?
         """A model file will be provided in source - do not generate a model"""
         return None
 
