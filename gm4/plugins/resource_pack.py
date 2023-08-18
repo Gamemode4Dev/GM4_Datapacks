@@ -1,6 +1,6 @@
 from beet import Context, PluginOptions, configurable, JsonFile, ListOption, Model, InvalidOptions
 from beet.core.utils import format_validation_error
-from typing import Union, Optional, Any
+from typing import Union, Optional, Any, Callable
 from beet.core.utils import extra_field
 from pydantic import BaseModel, Extra, ValidationError
 from pydantic.error_wrappers import ErrorWrapper
@@ -148,13 +148,11 @@ class GM4ResourcePack():
         # group models by item id
         for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
             models = list(filter(lambda m: item_id in m.item.entries(), self.opts.model_data))
-            print(f"{item_id} models: {models}")
 
             model_override = (v:=vanilla_models_jar.assets.models[f"minecraft:item/{item_id}"].data) | ({} if v.get("overrides") else {"overrides": []})
             overrides = model_override["overrides"]
-            print(f"{item_id} overrides start: {overrides}")
 
-            filter_func = partial(_filter_by_reference, models=models, namespace=self.ctx.project_id)
+            filter_func: Callable[[tuple[str, int]], bool] = lambda t: t[0] in [add_namespace(m.reference, self.ctx.project_id) for m in models]
             custom_model_data = dict(filter(filter_func, self.registry["items"][item_id].items())) # TODO error logging
             
             for model in models:
@@ -163,7 +161,7 @@ class GM4ResourcePack():
                 if isinstance(model.model, list): # manual predicate merging specified
                     merge_overrides = model.model # FIXME check branch unnecessary
                 else: 
-                    merge_overrides = overrides.copy() # get vanilla overrides # FIXME deepcopy?
+                    merge_overrides = overrides.copy() # get vanilla overrides
                 if len(merge_overrides) == 0:
                     merge_overrides.append({}) # add an empty predicate to add CMD onto
 
@@ -176,7 +174,6 @@ class GM4ResourcePack():
                         } | pred.get("predicate", {}),
                         "model": ref #model.model # FIXME points to generated model file?
                     })
-            print(overrides)
             self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(model_override) # TODO skipped-values spacing, on RP output after merge :)
 
     def retrieve_index(self, reference: str) -> tuple[int, KeyError|Diagnostic|None]:
@@ -207,19 +204,6 @@ class GM4ResourcePack():
             if reference not in item_registry.setdefault(item_id, {}):
                 item_registry[item_id][reference] = i
                 logger.info(f"Issuing new CustomModelData for '{reference}': {i}")
-        
-
-def _filter_by_reference(registry_itemview: tuple[str, int], models: list[ModelData], namespace: str) -> bool:
-    """a filter checking if an entriy of the cmd registry matches a given list of models"""
-    registry_ref, index = registry_itemview
-    models_references = [m.reference for m in models]
-    
-    for config_ref in models_references:
-        if ":" not in config_ref:
-            config_ref = f"{namespace}:{config_ref}"
-        
-        if registry_ref == config_ref:
-            return True
-    return False
+                
 
 
