@@ -23,20 +23,20 @@ class ModelData(BaseModel):
     textures: Optional[ListOption[str]] # defaults to same value as reference
 
     @validator('model')
-    def default_model(cls, model: str|None, values: dict[str,Any]) -> str:
-        if model is None:
+    def default_model(cls, model: str|None, values: dict[str,Any]) -> str|None:
+        if model is None and "reference" in values:
             return values["reference"]
         return model
     
     @validator('template')
     def enforce_custom_with_override_predicates(cls, template: str, values: dict[str,Any]) -> str:
-        if not isinstance(values['model'], str) and template != "custom":
+        if isinstance(values['model'], list) and template != "custom":
             raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
         return template
     
     @validator('textures')
     def default_texture(cls, textures: ListOption[str], values: dict[str,Any]) -> ListOption[str]:
-        if (not textures or not textures.entries()) and isinstance(v:=values["reference"], str):
+        if (not textures or not textures.entries()) and isinstance(v:=values.get("reference"), str):
             return ListOption(__root__=[v])
         return textures
 

@@ -53,5 +53,5 @@ meta:
         - DuckJr
     model_data:
       - item: paper
-        r: item/enchanted_page
+        reference: item/enchanted_page
         template: generated
