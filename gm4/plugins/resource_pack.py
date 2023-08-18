@@ -20,7 +20,7 @@ class ModelData(BaseModel):
     reference: str
     model: Optional[str|list[dict[str,Any]]] # defaults to same value as 'reference'
     template: str = "custom"
-    textures: ListOption[str] = []
+    textures: Optional[ListOption[str]] # defaults to same value as reference
 
     @validator('model')
     def default_model(cls, model: str|None, values: dict[str,Any]) -> str:
@@ -33,6 +33,12 @@ class ModelData(BaseModel):
         if not isinstance(values['model'], str) and template != "custom":
             raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
         return template
+    
+    @validator('textures')
+    def default_texture(cls, textures: ListOption[str], values: dict[str,Any]) -> ListOption[str]:
+        if (not textures or not textures.entries()) and isinstance(v:=values["reference"], str):
+            return ListOption(__root__=[v])
+        return textures
 
     # @validator('template')
     # def template_is_registered(): # TODO is this better than runtime checking?
@@ -52,7 +58,7 @@ class NestedModelData(BaseModel):
     reference: Optional[str]
     model: Optional[str|list[dict[str,Any]]]# = "empty" # TEMP this does not get a default value in the end -> defalts to reference
     template: Optional[str] = "custom"
-    textures: Optional[ListOption[str]] = ["none"] # TEMP dev init value
+    textures: Optional[ListOption[str]]
     broadcast: Optional[list['NestedModelData']] = []
 
     def collapse_broadcast(self) -> list['NestedModelData']:

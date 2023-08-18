@@ -46,7 +46,7 @@ meta:
       - item: oak_sapling
         reference: item/apple_tree_sapling
         template: generated
-        textures: item/apple_tree_sapling
+        # textures: item/apple_tree_sapling
       # - item: [apple, oak_sapling]
       #   reference: test/my_model
       # - item: diamond
