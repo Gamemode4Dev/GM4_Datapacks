@@ -2,7 +2,7 @@ from beet import Context, PluginOptions, configurable, JsonFile, ListOption, Mod
 from beet.core.utils import format_validation_error
 from typing import Union, Optional, Any, Callable
 from beet.core.utils import extra_field
-from pydantic import BaseModel, Extra, ValidationError
+from pydantic import BaseModel, Extra, ValidationError, validator
 from pydantic.error_wrappers import ErrorWrapper
 from functools import partial, cached_property
 from beet.contrib.vanilla import Vanilla
@@ -18,13 +18,41 @@ class ModelData(BaseModel):
     """A complete config for a single model"""
     item: ListOption[str]
     reference: str
-    model: str|list[dict[str,Any]]
+    model: Optional[str|list[dict[str,Any]]] # defaults to same value as 'reference'
+    template: str = "custom"
+    textures: ListOption[str] = []
+
+    @validator('model')
+    def default_model(cls, model: str|None, values: dict[str,Any]) -> str:
+        if model is None:
+            return values["reference"]
+        return model
+    
+    @validator('template')
+    def enforce_custom_with_override_predicates(cls, template: str, values: dict[str,Any]) -> str:
+        if not isinstance(values['model'], str) and template != "custom":
+            raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
+        return template
+
+    # @validator('template')
+    # def template_is_registered(): # TODO is this better than runtime checking?
+    #     pass
+
+    # howwever texture validation seems like a good idea to do here, unless that should not be an exception throwing validator
+    # @validator("textures")
+    # def check_textures_defined(val: Any):
+    #     print()
+    #     return True
+    
+    # TODO oh hm also add the namespace information when the config is loaded and not at runtime, might be handy! Oh How to get ctx though? Fizzy says no on that front
 
 class NestedModelData(BaseModel):
     """A potentially incomplete config, allowing for nested inheritance of fields"""
     item: Optional[ListOption[str]]
     reference: Optional[str]
-    model: Optional[str|list[dict[str,Any]]] = "empty" # TEMP this does not get a default value in the end
+    model: Optional[str|list[dict[str,Any]]]# = "empty" # TEMP this does not get a default value in the end -> defalts to reference
+    template: Optional[str] = "custom"
+    textures: Optional[ListOption[str]] = ["none"] # TEMP dev init value
     broadcast: Optional[list['NestedModelData']] = []
 
     def collapse_broadcast(self) -> list['NestedModelData']:
@@ -80,6 +108,7 @@ def update_modeldata_registry(ctx: Context): # TEMP redirect
 def generate_model_overrides(ctx: Context): # TEMP redirect
     o = ctx.inject(GM4ResourcePack)
     o.generate_model_overrides()
+    o.generate_model_files() # TEMP
 
 def beet_default():
     # TEMP record of process
@@ -91,15 +120,22 @@ def beet_default():
 class GM4ResourcePack():
     """Service Object handling CustomModelData and generated item models"""
 
-    def __init__(self, ctx: Context):
+    def __init__(self, ctx: Context): # TODO dataclass-ify this?
         self.ctx = ctx
         self.registry = JsonFile(source_path="gm4/modeldata_registry.json").data # TODO caching/save/output this
+        self.model_templates = [
+            self.custom,
+            self.generated,
+            self.handheld
+        ] # TODO init with default templates
 
     @cached_property
     def opts(self) -> FlatModelDataOptions:
         # load and process config when it's first accessed. 
         return self.ctx.validate("gm4", validator=ModelDataOptions).process_inheritance()
+        # TODO this is where we could pass in the ctx to namespace everything?
 
+    #== Custom Model Data registration and management ==#
     def update_modeldata_registry(self):
         """Updates shared modeldata_registry.json with entries from the beet.yaml"""
         logger = parent_logger.getChild(f"update_modeldata_registry.{self.ctx.project_id}") # FIXME logger for class?
@@ -137,7 +173,6 @@ class GM4ResourcePack():
         #     item_registry[item_id] = dict(sorted(ref_map.items(), key=lambda e: e[1]))
 
         # self.registry_file.dump(origin="", path="gm4/modeldata_registry.json") # TODO cache this file somehow? Part of RP service exit?
-
 
     def generate_model_overrides(self):
         """Generates item model overrides in the 'minecraft' namespace, adding predicates for CustomModelData"""
@@ -204,6 +239,52 @@ class GM4ResourcePack():
             if reference not in item_registry.setdefault(item_id, {}):
                 item_registry[item_id][reference] = i
                 logger.info(f"Issuing new CustomModelData for '{reference}': {i}")
-                
 
+    #== Mecha Transformer Rules ==#
+    # TODO
 
+    #== Model file generation and template registration ==#
+    def generate_model_files(self):
+        """Create individual models for each item/block according to its config"""
+
+        for model in self.opts.model_data:
+            # warn on missing textures
+            texs = [add_namespace(t, self.ctx.project_id) for t in model.textures.entries()]
+            for tex in texs:
+                if tex not in self.ctx.assets.textures:
+                    parent_logger.warning(f"Referenced texture '{tex}' does not exist") # TODO logger and format as MC messaage
+            
+            # retrieve model generator function
+            try:
+                g = next((f for f in self.model_templates if f.__name__ == model.template))
+            except StopIteration:
+                raise KeyError("template not found") # TODO this error properly
+            
+            # generate model and mount to the pack
+            m = g([add_namespace(t, self.ctx.project_id) for t in model.textures.entries()])
+            if m and isinstance(model.model, str): # pydantic validation ensures type match
+                self.ctx.assets.models[add_namespace(model.model, self.ctx.project_id)] = m
+    
+     # default model templates # FIXME should these be class members? Or generated on init and not bound after that point? Thdy don't have self so maybe not in class
+    @staticmethod
+    def custom(textures): # TODO decorator for argument passing? Verification of texture existance?
+        """A model file will be provided in source - do not generate a model"""
+        return None
+
+    @staticmethod
+    def generated(textures: list[str]):
+        return Model({
+            "parent": "minecraft:item/generated",
+            "textures": {
+                "layer0": f"{textures[0]}"
+            }
+        })
+
+    @staticmethod
+    def handheld(textures: list[str]): # TODO can some of the similar ones be function generated even?
+        return Model({
+            "parent": "minecraft:item/handheld",
+            "textures": {
+                "layer0": f"{textures[0]}" # TODO this path correction
+            }
+        })

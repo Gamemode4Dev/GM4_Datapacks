@@ -42,40 +42,43 @@ meta:
     model_data:
       - item: apple
         reference: block/apple_unripe
+        template: generated
       - item: oak_sapling
         reference: item/apple_tree_sapling
-      - item: [apple, oak_sapling]
-        reference: test/my_model
-      - item: diamond
-        reference: test/my_model_2
-      - item: apple
-        reference: test/my_model_2
-        model:
-          - predicate:
-              broken: 1
-            name: my_model_2_broken
-          - predicate:
-              broken: 0
-            name: my_model_2_unbroken
-
-      - item: [diamond, apple]
-        reference: test/my_model_3
-      - item: [snowball, diamond]
-        reference: test/my_model_4
-      # - item: [compass]
-      #   reference: test/my_model_5
+        template: generated
+        textures: item/apple_tree_sapling
+      # - item: [apple, oak_sapling]
+      #   reference: test/my_model
+      # - item: diamond
+      #   reference: test/my_model_2
       # - item: apple
-      #   reference: a_new_entry
-      - item: cobblestone
-        broadcast:
-        - reference: block/model_1
-        - reference: block/model_2
-          # broadcast:
-          #   # - item: redstone_ore
-          #   - reference: block/model_69
-        - reference: block/model_3
-          item: stone
-      # - broadcast:
+      #   reference: test/my_model_2
+      #   model:
+      #     - predicate:
+      #         broken: 1
+      #       name: my_model_2_broken
+      #     - predicate:
+      #         broken: 0
+      #       name: my_model_2_unbroken
+
+      # - item: [diamond, apple]
+      #   reference: test/my_model_3
+      # - item: [snowball, diamond]
+      #   reference: test/my_model_4
+      # # - item: [compass]
+      # #   reference: test/my_model_5
+      # # - item: apple
+      # #   reference: a_new_entry
+      # - item: cobblestone
+      #   broadcast:
+      #   - reference: block/model_1
+      #   - reference: block/model_2
+      #     # broadcast:
+      #     #   # - item: redstone_ore
+      #     #   - reference: block/model_69
+      #   - reference: block/model_3
+      #     item: stone
+      # # - broadcast:
   modrinth:
     project_id: Afacz65w
   smithed:
