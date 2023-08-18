@@ -1,7 +1,6 @@
 {
   "items": {
     "apple": {
-      "gm4_apple_trees:test/my_model": 0,
       "gm4_apple_trees:block/apple_unripe": 2
     },
     "compass": {},
@@ -12,9 +11,17 @@
     "emerald": {
       "gm4_apple_trees:block/apple_unripe": 0
     },
+    "flint": {
+      "gm4_better_fire:item/charred_arrowhead": 0
+    },
     "oak_sapling": {
-      "gm4_apple_trees:test/my_model": 0,
       "gm4_apple_trees:item/apple_tree_sapling": 10
+    },
+    "paper": {
+      "gm4_enchantment_extractors:item/enchanted_page": 0
+    },
+    "rabbit_hide": {
+      "gm4_bat_grenades:item/bat_leather": 0
     },
     "snowball": {}
   },

@@ -5,6 +5,9 @@ version: 1.3.X
 data_pack:
   load: .
 
+resource_pack: 
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
 
@@ -28,3 +31,7 @@ meta:
         - SpecialBuilder32
       Icon Design:
         - Sparks
+    model_data:
+      - item: flint
+        reference: item/charred_arrowhead
+        template: generated

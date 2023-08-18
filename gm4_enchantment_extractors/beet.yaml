@@ -5,6 +5,9 @@ version: 2.2.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
@@ -48,3 +51,7 @@ meta:
         - kyrkis
       Icon Design:
         - DuckJr
+    model_data:
+      - item: paper
+        r: item/enchanted_page
+        template: generated

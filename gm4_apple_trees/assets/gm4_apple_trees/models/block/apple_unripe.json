@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "gm4:block/apple_unripe"
+        "layer0": "gm4_apple_trees:block/apple_unripe"
     },
     "display": {
         "thirdperson_righthand": {

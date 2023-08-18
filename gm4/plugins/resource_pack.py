@@ -56,7 +56,7 @@ class NestedModelData(BaseModel):
     """A potentially incomplete config, allowing for nested inheritance of fields"""
     item: Optional[ListOption[str]]
     reference: Optional[str]
-    model: Optional[str|list[dict[str,Any]]]# = "empty" # TEMP this does not get a default value in the end -> defalts to reference
+    model: Optional[str|list[dict[str,Any]]] # defalts to reference
     template: Optional[str] = "custom"
     textures: Optional[ListOption[str]]
     broadcast: Optional[list['NestedModelData']] = []
@@ -108,20 +108,18 @@ class ModelDataOptions(PluginOptions, extra=Extra.ignore):
         return FlatModelDataOptions(model_data=ret)
 
 
-def update_modeldata_registry(ctx: Context): # TEMP redirect
-    o = ctx.inject(GM4ResourcePack)
-    o.update_modeldata_registry()
-def generate_model_overrides(ctx: Context): # TEMP redirect
-    o = ctx.inject(GM4ResourcePack)
-    o.generate_model_overrides()
-    o.generate_model_files() # TEMP
-
 def beet_default(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
     # mecha register
 
     yield
     rp.output_registry()
+
+def build(ctx: Context):
+    rp = ctx.inject(GM4ResourcePack)
+    rp.update_modeldata_registry()
+    rp.generate_model_overrides()
+    rp.generate_model_files()
 
 class GM4ResourcePack():
     """Service Object handling CustomModelData and generated item models"""
@@ -254,8 +252,10 @@ class GM4ResourcePack():
     #== Model file generation and template registration ==#
     def generate_model_files(self):
         """Create individual models for each item/block according to its config"""
-
         for model in self.opts.model_data:
+            if model.textures is None:
+                continue # validation should ensure this - here for type checking
+
             # warn on missing textures
             texs = [add_namespace(t, self.ctx.project_id) for t in model.textures.entries()]
             for tex in texs:
