@@ -1,14 +1,24 @@
-from beet import Context, PluginOptions, configurable, JsonFile, ListOption, Model, InvalidOptions
+import logging
+import os
+import sys
+from functools import cached_property
+from typing import Any, Callable, Optional
+
+from beet import (
+    Context,
+    InvalidOptions,
+    JsonFile,
+    ListOption,
+    Model,
+    PluginOptions
+)
+from beet.contrib.vanilla import Vanilla
 from beet.core.utils import format_validation_error
-from typing import Union, Optional, Any, Callable
-from beet.core.utils import extra_field
+from mecha import Diagnostic
 from pydantic import BaseModel, Extra, ValidationError, validator
 from pydantic.error_wrappers import ErrorWrapper
-from functools import partial, cached_property
-from beet.contrib.vanilla import Vanilla
+
 from gm4.utils import add_namespace
-import logging
-from mecha import Diagnostic
 
 CUSTOM_MODEL_PREFIX = 3420000
 
@@ -221,6 +231,10 @@ class GM4ResourcePack():
         l, u = self.registry["allocations"].get(self.ctx.project_id, (0,99)) # FIXME what happens when the default allocation fills up
         logger = parent_logger.getChild("assign_new_index") # TODO better logger structure
         available_indices = set(range(l, u+1))
+
+        if os.getenv("GITHUB_ACTIONS"):
+            logger.error(f"Model-Data cache is outdated. Github Actions cannot issue CustomModelData. Run the build locally and commit changes to modeldata_registry.json")
+            sys.exit(1) # stop the build and mark the github action as failed
 
         for item_id in item_ids:
             used_values = set(self.registry["items"].get(item_id, {}).values())
