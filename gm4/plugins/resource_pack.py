@@ -162,13 +162,16 @@ class GM4ResourcePack():
             i, err = self.retrieve_index(ref)
             if not err: # existing index, is it available to assign to all items?
                 for item_id in m.item.entries():
-                    reg = item_registry[item_id]
+                    reg = item_registry.setdefault(item_id, {})
                     used_idxs = {k: reg[k] for k in reg.keys() - {ref}}.values()
                     if i in used_idxs:
                         logger.warning(f"Failed to share existing CustomModelData for '{ref}' to '{item_id}'. A new value will be assigned for this reference; existing items may lose their texture!")
                         conflicts = True
+                if not conflicts: # existing CMD is available to apply to any new items
+                    for item_id in [e for e in m.item.entries() if ref not in item_registry.get(e, {})]:
+                        self.set_index(item_id, i, ref)
             if err or conflicts: # no existing index, or existing isn't available; get a new one
-                self.assign_new_index(m.item.entries(), ref)
+                self.find_new_index(m.item.entries(), ref)
 
         # remove unused references
             # NOTE deleting modeldata is really only supported for development cycles. Once published, a cmd value should be permanent.
@@ -177,7 +180,7 @@ class GM4ResourcePack():
         for item_id, reg in item_registry.items():
             for ref in list(reg.keys()):
                 if ref.startswith(self.ctx.project_id) and ref not in all_refs:
-                    logger.info(f"Removing undefined CustomModelData from registry: '{ref}'")
+                    logger.info(f"Removing undefined CustomModelData from {item_id} registry: '{ref}'")
                     del reg[ref]
             #FIXME clear references from items no longer configured too
 
@@ -226,15 +229,11 @@ class GM4ResourcePack():
                 return reg[reference], None
         return -CUSTOM_MODEL_PREFIX, KeyError(f"{reference} has no asscioated index") # TODO make this Diagnostic
     
-    def assign_new_index(self, item_ids: list[str], reference: str):
+    def find_new_index(self, item_ids: list[str], reference: str):
         """finds the next available CMD value for the given items and applies it to the registry"""
         l, u = self.registry["allocations"].get(self.ctx.project_id, (0,99)) # FIXME what happens when the default allocation fills up
         logger = parent_logger.getChild("assign_new_index") # TODO better logger structure
         available_indices = set(range(l, u+1))
-
-        if os.getenv("GITHUB_ACTIONS"):
-            logger.error(f"Model-Data cache is outdated. Github Actions cannot issue CustomModelData. Run the build locally and commit changes to modeldata_registry.json")
-            sys.exit(1) # stop the build and mark the github action as failed
 
         for item_id in item_ids:
             used_values = set(self.registry["items"].get(item_id, {}).values())
@@ -245,12 +244,21 @@ class GM4ResourcePack():
             raise RuntimeError("ran out of CMD to assign") # FIXME
         
         i = min(available_indices)
-    
-        item_registry = self.registry.setdefault("items", {})
+        logger.info(f"Issuing new CustomModelData for '{reference}': {i}")
         for item_id in item_ids:
-            if reference not in item_registry.setdefault(item_id, {}):
-                item_registry[item_id][reference] = i
-                logger.info(f"Issuing new CustomModelData for '{reference}': {i}")
+            self.set_index(item_id, i, reference)
+    
+
+    def set_index(self, item_id: str, index: int, reference: str):
+        """sets the given cmd index on the item"""
+        logger = parent_logger # FIXME
+
+        if os.getenv("GITHUB_ACTIONS"):
+            logger.error(f"Model-Data cache is outdated. Github Actions cannot issue CustomModelData. Run the build locally and commit changes to modeldata_registry.json")
+            sys.exit(1) # stop the build and mark the github action as failed
+
+        self.registry.setdefault("items", {}).setdefault(item_id, {})[reference] = index
+        logger.info(f"Issuing CustomModelData {index} for {item_id}")
 
     def output_registry(self):
         # sort registriy alphabetically and numerically
