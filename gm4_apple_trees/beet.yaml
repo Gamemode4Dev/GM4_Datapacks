@@ -40,7 +40,7 @@ meta:
       Icon Design:
         - BluePsychoRanger
     model_data:
-      - item: [apple, emerald]
+      - item: apple
         reference: block/apple_unripe
         model: block/apple_unripe
       - item: oak_sapling

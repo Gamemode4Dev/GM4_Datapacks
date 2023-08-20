@@ -142,6 +142,7 @@ class GM4ResourcePack():
             self.generated,
             self.handheld
         ] # TODO init with default templates
+        self.logger = parent_logger.getChild(ctx.project_id)
 
     @cached_property
     def opts(self) -> FlatModelDataOptions:
@@ -152,7 +153,6 @@ class GM4ResourcePack():
     #== Custom Model Data registration and management ==#
     def update_modeldata_registry(self):
         """Updates shared modeldata_registry.json with entries from the beet.yaml"""
-        logger = parent_logger.getChild(f"update_modeldata_registry.{self.ctx.project_id}") # FIXME logger for class?
         item_registry: dict[str, dict[str, int]] = self.registry.setdefault("items", {})
 
         # add new references and assign values
@@ -165,7 +165,7 @@ class GM4ResourcePack():
                     reg = item_registry.setdefault(item_id, {})
                     used_idxs = {k: reg[k] for k in reg.keys() - {ref}}.values()
                     if i in used_idxs:
-                        logger.warning(f"Failed to share existing CustomModelData for '{ref}' to '{item_id}'. A new value will be assigned for this reference; existing items may lose their texture!")
+                        self.logger.warning(f"Failed to share existing CustomModelData for '{ref}' to '{item_id}'. A new value will be assigned for this reference; existing items may lose their texture!")
                         conflicts = True
                 if not conflicts: # existing CMD is available to apply to any new items
                     for item_id in [e for e in m.item.entries() if ref not in item_registry.get(e, {})]:
@@ -180,7 +180,7 @@ class GM4ResourcePack():
         for item_id, reg in item_registry.items():
             for ref in list(reg.keys()):
                 if ref.startswith(self.ctx.project_id) and ref not in all_refs:
-                    logger.info(f"Removing undefined CustomModelData from {item_id} registry: '{ref}'")
+                    self.logger.info(f"Removing undefined CustomModelData from {item_id} registry: '{ref}'")
                     del reg[ref]
             #FIXME clear references from items no longer configured too
 
@@ -199,7 +199,7 @@ class GM4ResourcePack():
             overrides = model_override["overrides"]
 
             filter_func: Callable[[tuple[str, int]], bool] = lambda t: t[0] in [add_namespace(m.reference, self.ctx.project_id) for m in models]
-            custom_model_data = dict(filter(filter_func, self.registry["items"][item_id].items())) # TODO error logging
+            custom_model_data = dict(filter(filter_func, self.registry["items"][item_id].items()))
             
             for model in models:
                 # setup overrides to add CMD to
@@ -218,7 +218,7 @@ class GM4ResourcePack():
                         "predicate": {
                             "custom_model_data": CUSTOM_MODEL_PREFIX+custom_model_data[ref]
                         } | pred.get("predicate", {}),
-                        "model": ref #model.model # FIXME points to generated model file?
+                        "model": model.model
                     })
             self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(model_override) # TODO skipped-values spacing, on RP output after merge :)
 
@@ -232,7 +232,6 @@ class GM4ResourcePack():
     def find_new_index(self, item_ids: list[str], reference: str):
         """finds the next available CMD value for the given items and applies it to the registry"""
         l, u = self.registry["allocations"].get(self.ctx.project_id, (0,99)) # FIXME what happens when the default allocation fills up
-        logger = parent_logger.getChild("assign_new_index") # TODO better logger structure
         available_indices = set(range(l, u+1))
 
         for item_id in item_ids:
@@ -240,25 +239,23 @@ class GM4ResourcePack():
             available_indices -= used_values
 
         if not available_indices:
-            parent_logger.warning("No Valid CMD is open for assignment!") # FIXME this warn
+            self.logger.warning("No Valid CMD is open for assignment!") # FIXME this warn
             raise RuntimeError("ran out of CMD to assign") # FIXME
         
         i = min(available_indices)
-        logger.info(f"Issuing new CustomModelData for '{reference}': {i}")
+        self.logger.info(f"Issuing new CustomModelData for '{reference}': {i}")
         for item_id in item_ids:
             self.set_index(item_id, i, reference)
     
 
     def set_index(self, item_id: str, index: int, reference: str):
         """sets the given cmd index on the item"""
-        logger = parent_logger # FIXME
-
         if os.getenv("GITHUB_ACTIONS"):
-            logger.error(f"Model-Data cache is outdated. Github Actions cannot issue CustomModelData. Run the build locally and commit changes to modeldata_registry.json")
+            self.logger.error(f"Model-Data cache is outdated. Github Actions cannot issue CustomModelData. Run the build locally and commit changes to modeldata_registry.json")
             sys.exit(1) # stop the build and mark the github action as failed
 
         self.registry.setdefault("items", {}).setdefault(item_id, {})[reference] = index
-        logger.info(f"Issuing CustomModelData {index} for {item_id}")
+        self.logger.info(f"Issuing CustomModelData {index} for {item_id}")
 
     def output_registry(self):
         # sort registriy alphabetically and numerically
@@ -282,7 +279,7 @@ class GM4ResourcePack():
             texs = [add_namespace(t, self.ctx.project_id) for t in model.textures.entries()]
             for tex in texs:
                 if tex not in self.ctx.assets.textures:
-                    parent_logger.warning(f"Referenced texture '{tex}' does not exist") # TODO logger and format as MC messaage
+                    self.logger.warning(f"Referenced texture '{tex}' does not exist") # TODO logger and format as MC messaage
             
             # retrieve model generator function
             try:
