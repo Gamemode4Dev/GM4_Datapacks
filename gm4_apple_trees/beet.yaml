@@ -46,6 +46,8 @@ meta:
       - item: oak_sapling
         reference: item/apple_tree_sapling
         template: generated
+      - item: elytra
+        reference: test_model_1
   modrinth:
     project_id: Afacz65w
   smithed:

@@ -195,32 +195,39 @@ class GM4ResourcePack():
         for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
             models = list(filter(lambda m: item_id in m.item.entries(), self.opts.model_data))
 
-            model_override = (v:=vanilla_models_jar.assets.models[f"minecraft:item/{item_id}"].data) | ({} if v.get("overrides") else {"overrides": []})
-            overrides = model_override["overrides"]
+            vanilla_model = (v:=vanilla_models_jar.assets.models[f"minecraft:item/{item_id}"].data) | ({} if v.get("overrides") else {"overrides": []})
+            vanilla_overrides: list[Any] = vanilla_model["overrides"]
+            for override in vanilla_overrides:
+                override["model"] = add_namespace(override["model"], "minecraft") # ensure vanilla models have namespaced files
+                # FIXME how to differentiate vanilla overrides from specified overrides?
 
             filter_func: Callable[[tuple[str, int]], bool] = lambda t: t[0] in [add_namespace(m.reference, self.ctx.project_id) for m in models]
             custom_model_data = dict(filter(filter_func, self.registry["items"][item_id].items()))
             
             for model in models:
                 # setup overrides to add CMD to
-                merge_overrides = [] # FIXME this shouldnt need to be initialized
                 if isinstance(model.model, list): # manual predicate merging specified
                     merge_overrides = model.model # FIXME check branch unnecessary
                 else: 
-                    merge_overrides = overrides.copy() # get vanilla overrides
+                    merge_overrides = vanilla_overrides.copy() # get vanilla overrides
                 if len(merge_overrides) == 0:
                     merge_overrides.append({}) # add an empty predicate to add CMD onto
 
                 ref = add_namespace(model.reference, self.ctx.project_id)
+                if isinstance(model.model, str):
+                    sub_model = add_namespace(model.model, self.ctx.project_id)
 
                 for pred in merge_overrides:
-                    overrides.append({
+                    
+                    pred.get("model") # is this a MC model?
+
+                    vanilla_overrides.append({
                         "predicate": {
                             "custom_model_data": CUSTOM_MODEL_PREFIX+custom_model_data[ref]
                         } | pred.get("predicate", {}),
-                        "model": model.model
+                        "model": p if (p:=pred.get("model")) else sub_model
                     })
-            self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(model_override) # TODO skipped-values spacing, on RP output after merge :)
+            self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(vanilla_model) # TODO skipped-values spacing, on RP output after merge :)
 
     def retrieve_index(self, reference: str) -> tuple[int, KeyError|Diagnostic|None]:
         """retrieves the CMD value for the given reference"""
