@@ -2,7 +2,7 @@ from beet import Context, subproject
 
 
 class furnitures:
-    def __init__(self, technical_id, display_name, cmd, block_id="barrier", sittable=0, dyable=0, wall_only=0, length=1, depth=1, height=1, table=0):
+    def __init__(self, technical_id, display_name, cmd, block_id="barrier", sittable=0, dyable=0, wall_only=0, length=1, depth=1, heigth=1, table=0, scale=1):
         self.technical_id = technical_id
         self.display_name = display_name
         self.cmd = cmd
@@ -12,8 +12,9 @@ class furnitures:
         self.dyable = dyable
         self.length = length
         self.depth = depth
-        self.height = height
+        self.heigth = heigth
         self.table = table
+        self.scale = scale
 
 
 def beet_default(ctx: Context):
@@ -71,9 +72,9 @@ def beet_default(ctx: Context):
                 "dyable": furniture_data.dyable,
                 "length": furniture_data.length,
                 "depth": furniture_data.depth,
-                "height": furniture_data.height,
+                "heigth": furniture_data.heigth,
                 "table": furniture_data.table,
-                
+                "scale": furniture_data.scale,                
             }
         }
 

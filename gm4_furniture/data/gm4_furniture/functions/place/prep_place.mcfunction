@@ -11,7 +11,6 @@ execute if score $wall_placement gm4_furniture_data matches 1 if block ~ ~ ~ pla
 execute if score $wall_placement gm4_furniture_data matches 1 if block ~ ~ ~ player_wall_head[facing=south] run scoreboard players set $rotation gm4_furniture_data 1
 execute if score $wall_placement gm4_furniture_data matches 1 if block ~ ~ ~ player_wall_head[facing=west] run scoreboard players set $rotation gm4_furniture_data 2
 
-scoreboard players set $placed_block gm4_furniture_data 0
 scoreboard players remove $player_head_count gm4_furniture_data 1
 
 data modify storage gm4_furniture:temp command.function set from block ~ ~ ~ SkullOwner.Name

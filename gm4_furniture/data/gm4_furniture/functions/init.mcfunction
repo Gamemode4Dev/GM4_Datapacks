@@ -8,6 +8,15 @@ scoreboard objectives add gm4_furniture_id dummy
 
 scoreboard players set #2 gm4_furniture_data 2
 
+team add gm4_furniture_nocol
+team modify gm4_furniture_nocol collisionRule never
+
+data modify storage gm4_furniture:furniture_station categories set value []
+data modify storage gm4_furniture:furniture_station categories append value {test:1}
+data modify storage gm4_furniture:furniture_station categories append value {test:2}
+data modify storage gm4_furniture:furniture_station categories append value {test:3}
+function #gm4_furniture:add_categories
+
 schedule function gm4_furniture:main 1t
 
 #$moduleUpdateList

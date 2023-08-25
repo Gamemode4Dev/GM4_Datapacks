@@ -1,0 +1,29 @@
+{
+  "type": "block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{CustomModelData:3420150,gm4_furniture:{id:\"gm4.furniture_station\"},SkullOwner:{Id:[I;1862739911,-1668725896,-1286726243,-1817885533],Name:\"gm4_furniture:place/furniture/furniture_station\",Properties:{textures:[{Signature:\"gm4_furniture\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTY5Mjg3NTg0Njc2OCwKICAicHJvZmlsZUlkIiA6ICJhNWZlYWViNDdhYjA0ZDZiYTk2ZjMyOGJjMDQ3MDZjMyIsCiAgInByb2ZpbGVOYW1lIiA6ICJYeW5kcmEyIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzMzMDU1YjMzMGVmZTY0ZTQxMmQxZDc4MTE5MTM5YzRkMTA3YjZlMDdkNmUyMGU5MTVkYWE5MjFlYTgzMDgwMiIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9\"}]}}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.gm4_furniture.furniture_station",
+                "fallback": "Furniture Station",
+                "color": "white",
+                "italic": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
