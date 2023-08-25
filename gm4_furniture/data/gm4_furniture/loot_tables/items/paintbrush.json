@@ -1,0 +1,28 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_horse_armor",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420200,gm4_furniture:paintbrush}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.gm4_furniture.paintbrush",
+                "fallback": "Paintbrush",
+                "color": "white",
+                "italic": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
