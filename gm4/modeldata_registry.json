@@ -3,7 +3,9 @@
     "apple": {
       "gm4_apple_trees:block/apple_unripe": 0
     },
-    "compass": {},
+    "compass": {
+      "gm4_apple_trees:test_model_1": 0
+    },
     "diamond": {},
     "elytra": {
       "gm4_apple_trees:test_model_1": 0,

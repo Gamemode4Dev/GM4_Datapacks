@@ -207,25 +207,23 @@ class GM4ResourcePack():
             for model in models:
                 # setup overrides to add CMD to
                 if isinstance(model.model, list): # manual predicate merging specified
-                    merge_overrides = model.model # FIXME check branch unnecessary
+                    merge_overrides = [o|{"user_defined": True} for o in model.model] # FIXME check branch unnecessary
                 else: 
                     merge_overrides = vanilla_overrides.copy() # get vanilla overrides
                 if len(merge_overrides) == 0:
                     merge_overrides.append({}) # add an empty predicate to add CMD onto
 
                 ref = add_namespace(model.reference, self.ctx.project_id)
-                if isinstance(model.model, str):
-                    sub_model = add_namespace(model.model, self.ctx.project_id)
 
                 for pred in merge_overrides:
-                    
-                    pred.get("model") # is this a MC model?
-
+                    if not pred.get("model") and not isinstance(model.model, str):
+                        self.logger.warn(f"Manually specified model predicate has no 'model' field, and is malformed:\n\t{pred}")
+                        continue # TODO this is an exception?
                     vanilla_overrides.append({
                         "predicate": {
                             "custom_model_data": CUSTOM_MODEL_PREFIX+custom_model_data[ref]
                         } | pred.get("predicate", {}),
-                        "model": p if (p:=pred.get("model")) else sub_model
+                        "model": pred["model"] if pred.get("user_defined") else add_namespace(model.model, self.ctx.project_id) # type:ignore , user-defined model predicates use their own model reference. model.model is a string in all other cases
                     })
             self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(vanilla_model) # TODO skipped-values spacing, on RP output after merge :)
 
