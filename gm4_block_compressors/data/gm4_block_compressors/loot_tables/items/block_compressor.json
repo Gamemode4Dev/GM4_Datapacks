@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420130,gm4_machines:{id:\"block_compressor\"},SkullOwner:{Name:\"gm4_block_compressor\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"block_compressor\"}]}}}"
+              "tag": "{CustomModelData:3420130,gm4_machines:{id:\"block_compressor\"},SkullOwner:{Name:\"gm4_block_compressor\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$block_compressor\"}]}}}"
             },
             {
               "function": "set_name",

@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:player_head",
-      "nbt": "{CustomModelData:3420037,SkullOwner:\"$gm4_relocators:OLD_relocator\"}"
+      "nbt": "{CustomModelData:3420037,SkullOwner:\"$gm4_relocators:relocator_empty\"}"
     },
     "title": {
       "translate": "advancement.gm4.relocators.title",

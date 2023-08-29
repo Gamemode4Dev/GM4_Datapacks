@@ -33,17 +33,6 @@
       "hash": "122bb193187f87d87f97abb6b83b7b02a7349912",
       "parent_module": "gm4_auto_crafting"
     },
-    "gm4_block_compressors:OLD_block_compressor": {
-      "uuid": [
-        -1851723870,
-        1025001935,
-        -1279456745,
-        2096330633
-      ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0NTMzMjYwNjc3NzksInByb2ZpbGVJZCI6IjkxYTBlZmEyM2QxODQ5Y2ZiM2JkMGExNzdjZjM3Nzg4IiwicHJvZmlsZU5hbWUiOiJEdWNrSnIiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzFkNmNkYTQwYjViODEyODVhZmRiY2RlOWQ2M2M3OGUxNzZkMzFiNTk0YjFhNmQ5Nzc5OWQ0OTBkN2VmMjkyIn19fQ==",
-      "hash": "11ba2f3ff6d65b48980751a9949748eea4b03b4d",
-      "parent_module": "gm4_block_compressors"
-    },
     "gm4_block_compressors:block_compressor": {
       "uuid": [
         788137431,
@@ -108,17 +97,6 @@
       ],
       "value": "ewogICJ0aW1lc3RhbXAiIDogMTY0NDM1MTIwMTExNywKICAicHJvZmlsZUlkIiA6ICI5NTE3OTkxNjljYzE0MGY1OGM2MmRjOGZmZTU3NjBiZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJPcmRpbmFsQ2FyZGluYWwiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTI4NzVlODdmNzBkODMzNjcxYTEzMWJjZjE2OGI2Y2VjYWQ4YmIwNjlhYTkwM2ZiOTFiOGVhMWYwOWRhZDQ1NyIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9",
       "hash": "6bb95eece3cb1ee8ec0265aa12620ebc88c6f9e9",
-      "parent_module": "gm4_ender_hoppers"
-    },
-    "gm4_ender_hoppers:OLD_ender_hopper_display": {
-      "uuid": [
-        -1738856610,
-        -1151712444,
-        -1271437163,
-        677619263
-      ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0Nzc4NTE1MDIxNDUsInByb2ZpbGVJZCI6Ijk4NWIyNzVlYmI1YTQzNDRiNDM3Njg5NTI4NjNhNjNmIiwicHJvZmlsZU5hbWUiOiJTcGFya3MiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzhiOWUyMTVkM2Q4NzQ3YzhkZjYxNGZkOGZlNGQxMzlkZTEyMTI0ZmZlMTlmMjkwOWQzOGNkNGE3MzI5MjVkIn0sIkNBUEUiOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81YzNjYTdlZTJhNDk4ZjFiNWQyNThkNWZhOTI3ZTYzZTQzMzE0M2FkZDU1MzhjZjYzYjZhOWI3OGFlNzM1In19fQ==",
-      "hash": "ca1ed567122bce3392df6fa7d25c85c272948175",
       "parent_module": "gm4_ender_hoppers"
     },
     "gm4_ender_hoppers:ender_hopper": {
@@ -748,17 +726,6 @@
       "hash": "7ec650f7cee4d232b2f48833d2095448ca2f39c3",
       "parent_module": "gm4_relocators"
     },
-    "gm4_relocators:OLD_relocator": {
-      "uuid": [
-        739224026,
-        -1192800770,
-        -2115274619,
-        -970102126
-      ],
-      "value": "eyJ0aW1lc3RhbXAiOjE1NjM4MTY4ODE5NTcsInByb2ZpbGVJZCI6IjdkYTJhYjNhOTNjYTQ4ZWU4MzA0OGFmYzNiODBlNjhlIiwicHJvZmlsZU5hbWUiOiJHb2xkYXBmZWwiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzMwM2Q3YTkyNTIxZDZmZTU1M2ZiNGYyNzIxOTI2Yzk4YTVlMDdlMDhmZjdiNzg4OTg1OTc3MGM0Yjg0NmJlZDYifX19",
-      "hash": "d8a170204bb992aa5af9a7b5f07716b1104ba4fe",
-      "parent_module": "gm4_relocators"
-    },
     "gm4_scuba_gear:scuba_helmet": {
       "uuid": [
         -68336571,
@@ -768,17 +735,6 @@
       ],
       "value": "ewogICJ0aW1lc3RhbXAiIDogMTYyODUzNDg1MTY2MCwKICAicHJvZmlsZUlkIiA6ICJmMGIzYmRkMjEwNDg0Y2VlYjZhNTQyYmZiOGEyNTdiMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJBbm9uaW1ZVFQiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDExZTAyOTJlZTgzZDUwZTQzM2MxNTkxNzE5OGZhNDRjYjZkMTMyODhiNmFhNjZmYmUzY2QxZTZkZjY1OGRhNCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9",
       "hash": "9b2ea1635d53878417688b505a8875422100d314",
-      "parent_module": "gm4_scuba_gear"
-    },
-    "gm4_scuba_gear:OLD_scuba_helmet": {
-      "uuid": [
-        505437377,
-        1176259381,
-        -1878264711,
-        -101560156
-      ],
-      "value": "eyJ0aW1lc3RhbXAiOjE1NDMxNjc2MjM1NzMsInByb2ZpbGVJZCI6IjVjN2ZiNzhhMmQxMzQ5NTZhNWE1M2EyNGQ5NWY1YjRmIiwicHJvZmlsZU5hbWUiOiJQZWFyc29uSW5tYW4iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzc1OWY1NmU3MDc4NDkzYzEzMDZlZWI2YmQxM2UwYmQ1NTZlYjAxOGUzZGRjMDAzMGE1NzFhYjg4YzRjZGNlNGUifX19",
-      "hash": "80de66e60104433775d874240d1dd5eb32472943",
       "parent_module": "gm4_scuba_gear"
     },
     "gm4_smelteries:smeltery": {
@@ -813,17 +769,6 @@
       "value": "ewogICJ0aW1lc3RhbXAiIDogMTY0NDQ3MTUyNDc4NSwKICAicHJvZmlsZUlkIiA6ICIzZmM3ZmRmOTM5NjM0YzQxOTExOTliYTNmN2NjM2ZlZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJZZWxlaGEiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzI4MDdlOGM2YjcwMzI2ZjU2Y2I4ZDU1NTQzNWU2MjYwMmM5YWJhYzc4NWM0ZmQ4ZjJjY2IwOGMwMDNmY2ZlZCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9",
       "hash": "1019c31eb601ab9cbc21482eaa72759805b57917",
       "parent_module": "gm4_teleportation_anchors"
-    },
-    "gm4_tinkering_compressors:OLD_tinkering_compressor": {
-      "uuid": [
-        690199207,
-        -409122254,
-        -1436298594,
-        1358624862
-      ],
-      "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWQyZTU2OTkwOTI4ZWM2ZjI1NzY5YTczNjE2M2MxOWFjOTcwNmYyNTM0Y2YwM2FlOWNhMzgyOWY2MzdiYTMwMCJ9fX0=",
-      "hash": "d9c7e9c6fafc2551f9192c2519741a820a787d1c",
-      "parent_module": "gm4_tinkering_compressors"
     },
     "gm4_tinkering_compressors:tinkering_compressor": {
       "uuid": [
@@ -1056,13 +1001,16 @@
       "gm4_metallurgy:band/aluminium"
     ],
     "gm4_zauber_liquids": [
-      "gm4_potion_liquids:liquids/swiftness",
       "gm4_potion_liquids:liquids/regeneration",
+      "gm4_potion_liquids:liquids/leaping",
+      "gm4_potion_liquids:liquids/poison",
       "gm4_potion_liquids:liquids/strength",
       "gm4_potion_liquids:liquids/healing",
-      "gm4_potion_liquids:liquids/poison",
-      "gm4_potion_liquids:liquids/leaping",
+      "gm4_potion_liquids:liquids/swiftness",
       "gm4_potion_liquids:liquids/harming"
+    ],
+    "gm4_audere_shamir": [
+      "gm4_metallurgy:band/barium"
     ]
   }
 }
