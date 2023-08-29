@@ -1,5 +1,5 @@
 {
-  "last_commit": "060a5a78bd97584023cd684c14d439d31862cf53",
+  "last_commit": "8a11e41b72537ee3915a11ad5b3f51d07a010135",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -626,9 +626,9 @@
         ]
       },
       "requires": [],
-      "description": "Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blacks tall? This data pack automatically opens adjecent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.",
+      "description": "Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blacks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.",
       "recommends": [],
-      "modrinth_id": null,
+      "modrinth_id": "Vx4zJ1Np",
       "smithed_link": null,
       "pmc_link": null,
       "publish_date": "2023-08-12"
