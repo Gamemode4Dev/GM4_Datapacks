@@ -14,7 +14,7 @@ meta:
     versioning:
       schedule_loops: []
     website:
-      description: Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blacks tall? This data pack automatically opens adjecent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.
+      description: Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blacks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.
       recommended: []
       notes: []
     video: null
@@ -22,3 +22,7 @@ meta:
     credits:
       Creator:
         - Bloo
+  modrinth:
+    project_id: Vx4zJ1Np
+  smited:
+    pack_id: gm4_double_doors
