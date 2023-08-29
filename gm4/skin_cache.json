@@ -506,17 +506,6 @@
       "hash": "915a5cc5ebbf4d799049f4e5e0846d539253ff38",
       "parent_module": "gm4_metallurgy"
     },
-    "gm4_metallurgy:band/thorium_brass": {
-      "uuid": [
-        -1331314679,
-        659659762,
-        2101919484,
-        662148976
-      ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0ODg0NjY1NTQzODUsInByb2ZpbGVJZCI6IjkxYTBlZmEyM2QxODQ5Y2ZiM2JkMGExNzdjZjM3Nzg4IiwicHJvZmlsZU5hbWUiOiJEdWNrSnIiLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDk2ZWJmMzMxZmQ1MzM3MjM0ZmU0OTM2ZWMyOTU2NTI4ZDQ3N2FiYTU4NzU5YmM2ZWIyODRiMmU5MmQxNDI4In19fQ==",
-      "hash": "b1173eacf6e07f062e2301d25669acc1a3a0ac20",
-      "parent_module": "gm4_metallurgy"
-    },
     "gm4_potion_liquids:liquids/fire_resistance": {
       "uuid": [
         2130271109,
@@ -967,6 +956,17 @@
       "value": "ewogICJ0aW1lc3RhbXAiIDogMTY0Mjg1Mzk1Mjk4NiwKICAicHJvZmlsZUlkIiA6ICJhYjlkYmMzZjk4NGE0ZWI4YTVmY2RlYWMzNzEzZWFkMSIsCiAgInByb2ZpbGVOYW1lIiA6ICJDeWJvcm51dDIiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTE1ZDUwNmI2MzlhMzI1OWVlNDhkMTcyMjYzZWI2NzljY2NhNDQzNjVmY2VlMTllZDllYjI3NzU1YjAxN2IyYyIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9",
       "hash": "18bab6e06c67bcfeba73698c923d43d78cd82ee7",
       "parent_module": "gm4_custom_crafters"
+    },
+    "gm4_metallurgy:band/thorium_brass_RETIRED": {
+      "uuid": [
+        -1284920301,
+        -2083305742,
+        -2124503944,
+        -860338126
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzA1YTY0N2YzYmY2YzMzZGQwNWI5M2JkZTJiNzRlYzViOWE5YTMxODQxM2FlZWRkZGE3ZDFhYjk3NDVkZmE5OCd9fX0=",
+      "hash": "b1173eacf6e07f062e2301d25669acc1a3a0ac20",
+      "parent_module": "gm4_metallurgy"
     }
   },
   "nonnative_references": {
