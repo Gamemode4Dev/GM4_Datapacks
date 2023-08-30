@@ -1,3 +1,8 @@
+# run the function belonging to the placed furniture
+# @s = player that just placed a furniture player head
+# at the center of the furniture player head that was placed
+# run from place/prep_place
+# $(function) = function path (gm4_furniture:place/furniture/<technical_id>)
 
 $execute if score $rotation gm4_furniture_data matches 1 rotated 0 0 run function $(function)
 $execute if score $rotation gm4_furniture_data matches 2 rotated 90 0 run function $(function)

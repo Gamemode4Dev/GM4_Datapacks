@@ -2,7 +2,7 @@ from beet import Context, subproject
 
 
 class furnitures:
-    def __init__(self, technical_id, display_name, cmd, block_id="barrier", sittable=0, dyable=0, wall_only=0, length=1, depth=1, heigth=1, table=0, scale=1):
+    def __init__(self, technical_id, display_name, cmd, block_id="barrier", sittable=0, dyable=0, wall_only=0, length=1, depth=1, height=1, table=0, scale=1):
         self.technical_id = technical_id
         self.display_name = display_name
         self.cmd = cmd
@@ -12,7 +12,7 @@ class furnitures:
         self.dyable = dyable
         self.length = length
         self.depth = depth
-        self.heigth = heigth
+        self.height = height
         self.table = table
         self.scale = scale
 
@@ -33,11 +33,11 @@ def beet_default(ctx: Context):
     furniture_list.append(furnitures(
         'wooden_bench_2', 'Wooden Bench', 3420206, sittable=50, length=3))
     furniture_list.append(furnitures(
-        'dyable_armchair_1', 'Cloth Armchair', 3420207, sittable=1, dyable=1))
+        'dyable_armchair_1', 'Cloth Armchair', 3420207, sittable=50, dyable=1))
     furniture_list.append(furnitures(
-        'wooden_candelabra_1', 'Candelabra', 3420208, block_id="light[level=15]", dyable=1))
+        'wooden_3_candle_holder_1', 'Candelabra', 3420208, block_id="light[level=15]", dyable=1))
     furniture_list.append(furnitures(
-        'wooden_candelabra_2', 'Candelabra', 3420209, block_id="light[level=15]", dyable=1))
+        'wooden_5_candle_holder_1', 'Candelabra', 3420209, block_id="light[level=15]", dyable=1))
     furniture_list.append(furnitures(
         'dyable_stool_1', 'Ottoman', 3420210, sittable=50, dyable=1))
     furniture_list.append(furnitures(
@@ -46,6 +46,28 @@ def beet_default(ctx: Context):
         'wooden_table_2', 'Wooden Table', 3420212, table=1))
     furniture_list.append(furnitures(
         'dyable_wooden_table_1', 'Wooden Table with Cloth', 3420213, dyable=1, table=1))
+    furniture_list.append(furnitures(
+        'dyable_wooden_sofa_1', 'Wooden Sofa with Cushions', 3420214, sittable=50, dyable=1, length=3))
+    furniture_list.append(furnitures(
+        '2x1_log_seat_1', 'Log Bench', 3420215, sittable=50, length=2))
+    furniture_list.append(furnitures(
+        '1x1_log_seat_1', 'Log Seat', 3420216, sittable=50))
+    furniture_list.append(furnitures(
+        'stone_frog_statue', 'Frog Statue', 3420217))
+    furniture_list.append(furnitures(
+        'wooden_wall_candle_holder_1', 'Wall Candle', 3420218, block_id="light[level=15]", dyable=1, wall_only=1))
+    furniture_list.append(furnitures(
+        'dyable_wooden_chair_1', 'Wooden Chair with Cushions', 3420219, sittable=50, dyable=1))
+    furniture_list.append(furnitures(
+        'gold_5_candle_holder_1', 'Gold Candelabra', 3420220, block_id="light[level=15]", dyable=1))
+    furniture_list.append(furnitures(
+        'gold_3_candle_holder_1', 'Gold Candelabra', 3420221, block_id="light[level=15]", dyable=1))
+    furniture_list.append(furnitures(
+        'iron_5_candle_holder_1', 'Iron Candelabra', 3420222, block_id="light[level=15]", dyable=1))
+    furniture_list.append(furnitures(
+        'iron_3_candle_holder_1', 'Iron Candelabra', 3420223, block_id="light[level=15]", dyable=1))
+    furniture_list.append(furnitures(
+        '2x2_wooden_table_2', 'Wooden Table', 3420224, length=2, depth=2, table=1))
     
     
     for furniture_data in furniture_list:
@@ -72,7 +94,7 @@ def beet_default(ctx: Context):
                 "dyable": furniture_data.dyable,
                 "length": furniture_data.length,
                 "depth": furniture_data.depth,
-                "heigth": furniture_data.heigth,
+                "height": furniture_data.height,
                 "table": furniture_data.table,
                 "scale": furniture_data.scale,                
             }

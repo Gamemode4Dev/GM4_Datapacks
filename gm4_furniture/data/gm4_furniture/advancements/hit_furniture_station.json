@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "requirement": {
+        "hit_furniture_station": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
                 "player": [
@@ -31,6 +31,11 @@
             }
         }
     },
+    "requirements": [
+        [
+            "hit_furniture_station"
+        ]
+    ],
     "rewards": {
         "function": "gm4_furniture:interact/furniture_station/hit"
     }

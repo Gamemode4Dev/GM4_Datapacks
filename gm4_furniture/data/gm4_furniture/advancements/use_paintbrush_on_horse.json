@@ -1,6 +1,6 @@
 {
     "criteria": {
-      "requirement": {
+      "used_paintbrush": {
         "trigger": "minecraft:player_interacted_with_entity",
         "conditions": {
           "player": [],
@@ -22,6 +22,11 @@
         }
       }
     },
+    "requirements": [
+      [
+        "used_paintbrush"
+      ]
+    ],
     "rewards": {
       "function": "gm4_furniture:technical/paintbrush/used_on_horse"
     }

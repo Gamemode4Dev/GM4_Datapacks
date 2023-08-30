@@ -1,4 +1,9 @@
+# detect interaction on paintable furniture by a player holding a paintbrush
+# @s = furniture's interacted interaction entity 
+# at @s
+# run from interact/process
 
-data modify storage gm4_furniture:temp color set from entity @s SelectedItem.tag.display.color
-execute if data storage gm4_furniture:temp color as @e[type=interaction,tag=gm4_furniture.dyable,distance=..8] if data entity @s interaction at @s run function gm4_furniture:interact/paint/process
+# store color from paintbrush and process application if there is some
+data modify storage gm4_furniture:temp color set from entity @p[tag=gm4_furniture_target] SelectedItem.tag.display.color
+execute if data storage gm4_furniture:temp color run function gm4_furniture:interact/paint/process
 data remove storage gm4_furniture:temp color

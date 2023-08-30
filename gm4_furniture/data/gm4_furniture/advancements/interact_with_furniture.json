@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "requirement": {
+    "interact_with_furniture": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
         "player": [],
@@ -17,6 +17,11 @@
       }
     }
   },
+  "requirements": [
+    [
+      "interact_with_furniture"
+    ]
+  ],
   "rewards": {
     "function": "gm4_furniture:interact/detect"
   }

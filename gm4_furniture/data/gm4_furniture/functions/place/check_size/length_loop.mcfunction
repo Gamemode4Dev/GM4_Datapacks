@@ -10,4 +10,4 @@ execute if score $placement_blocked gm4_furniture_data matches 1 run return 0
 summon marker ~ ~ ~ {Tags:["gm4_furniture","gm4_furniture.marked_block"]}
 
 scoreboard players remove $length gm4_furniture_data 1
-execute if score $length gm4_furniture_data matches 1.. positioned ^-1 ^ ^ run function gm4_furniture:place/check_size/length_loop
+execute if score $length gm4_furniture_data matches 1.. positioned ^1 ^ ^ run function gm4_furniture:place/check_size/length_loop

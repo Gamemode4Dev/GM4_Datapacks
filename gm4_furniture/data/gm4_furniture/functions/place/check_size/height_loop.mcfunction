@@ -9,5 +9,6 @@ execute if score $placement_blocked gm4_furniture_data matches 0 align y if enti
 execute if score $placement_blocked gm4_furniture_data matches 1 run return 0
 summon marker ~ ~ ~ {Tags:["gm4_furniture","gm4_furniture.marked_block"]}
 
-scoreboard players remove $height gm4_furniture_data 1
-execute if score $height gm4_furniture_data matches 1.. positioned ^ ^ ^1 run function gm4_furniture:place/check_size/height_loop
+scoreboard players add $height_done gm4_furniture_data 1
+execute if score $height_done gm4_furniture_data = $height gm4_furniture_data run scoreboard players reset $height_done gm4_furniture_data
+execute if score $height_done gm4_furniture_data < $height gm4_furniture_data positioned ^ ^1 ^ run function gm4_furniture:place/check_size/height_loop
