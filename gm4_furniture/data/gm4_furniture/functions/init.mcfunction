@@ -5,17 +5,22 @@ scoreboard players set furniture gm4_modules 1
 scoreboard objectives add gm4_furniture_data dummy
 scoreboard objectives add gm4_furniture_last_hit dummy
 scoreboard objectives add gm4_furniture_id dummy
+scoreboard objectives add gm4_furniture_index dummy
 
 scoreboard players set #2 gm4_furniture_data 2
+scoreboard players set #16 gm4_furniture_data 16
+scoreboard players set #256 gm4_furniture_data 256
+scoreboard players set #65536 gm4_furniture_data 65536
 
 team add gm4_furniture_nocol
 team modify gm4_furniture_nocol collisionRule never
 
-data modify storage gm4_furniture:furniture_station categories set value []
-data modify storage gm4_furniture:furniture_station categories append value {test:1}
-data modify storage gm4_furniture:furniture_station categories append value {test:2}
-data modify storage gm4_furniture:furniture_station categories append value {test:3}
+# build furniture station trade data
+data modify storage gm4_furniture:data furniture_station set value []
+function gm4_furniture:generate_trades
 function #gm4_furniture:add_categories
+execute store result score $max_index gm4_furniture_index run data get storage gm4_furniture:data furniture_station
+scoreboard players remove $max_index gm4_furniture_index 1
 
 schedule function gm4_furniture:main 1t
 

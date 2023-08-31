@@ -1,6 +1,6 @@
 # check if furniture fits here
 # @s = player who placed the furniture player head
-# at the center of the placed block rotated along axis to face towards player or away from the wall, positioned ^x ^ ^
+# at the center of the placed block rotated along axis to face towards player or away from the wall, positioned ^ ^x ^
 # run from place/check_size/height_prep
 # run from here
 

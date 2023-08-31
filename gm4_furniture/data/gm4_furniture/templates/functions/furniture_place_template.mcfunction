@@ -17,11 +17,14 @@ execute if score $rotation gm4_furniture_data matches 4 run data modify storage 
 scoreboard players set $wall_only gm4_furniture_data {{ wall_only }}
 execute if score $wall_only gm4_furniture_data matches 1 unless score $wall_placement gm4_furniture_data matches 1 run scoreboard players set $valid_placement gm4_furniture_data 0
 
+# ceiling only furniture must be placed on a ceiling
+scoreboard players set $ceiling_only gm4_furniture_data {{ ceiling_only }}
+execute if score $ceiling_only gm4_furniture_data matches 1 if block ~ ~1 ~ #gm4:replaceable run scoreboard players set $valid_placement gm4_furniture_data 0
+
 # wall placed furniture is not allowed to have depth, if any size is bigger than 1 check if there is space
 scoreboard players set $length gm4_furniture_data {{ length }}
 scoreboard players set $depth gm4_furniture_data {{ depth }}
 scoreboard players set $height gm4_furniture_data {{ height }}
-execute if score $wall_placement gm4_furniture_data matches 1 if score $depth gm4_furniture_data matches 2.. run scoreboard players set $valid_placement gm4_furniture_data 0
 scoreboard players set $placement_blocked gm4_furniture_data 0
 execute if score $valid_placement gm4_furniture_data matches 1 if score $length gm4_furniture_data matches 2.. run function gm4_furniture:place/check_size/length_prep
 summon marker ~ ~ ~ {Tags:["gm4_furniture","gm4_furniture.marked_block","gm4_furniture.middle"]}
@@ -40,22 +43,30 @@ execute if score $valid_placement gm4_furniture_data matches 0 run return 0
 scoreboard players set $sittable gm4_furniture_data {{ sittable }}
 scoreboard players set $dyable gm4_furniture_data {{ dyable }}
 scoreboard players set $table gm4_furniture_data {{ table }}
+scoreboard players set $custom_interaction gm4_furniture_data {{ custom_interaction }}
 
 # spawn the furniture
-execute positioned ~ ~-0.4999 ~ run summon item_display ~ ~0.{{ sittable }} ~ {Tags:["gm4_furniture","gm4_furniture.display","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture_display.{{ technical_id }}"',item:{id:"leather_horse_armor",Count:1,tag:{data:{loot_table:"gm4_furniture:furniture/{{ technical_id }}"},CustomModelData:{{ cmd }}}},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[{{ scale }}f,{{ scale }}f,{{ scale }}f]}}
+execute positioned ~ ~-0.4999 ~ run summon item_display ~ ~0.{{ sittable }} ~ {Tags:["gm4_furniture","gm4_furniture.display","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture_display.{{ technical_id }}"',item:{id:"leather_horse_armor",Count:1,tag:{data:{technical_id:"{{ technical_id }}"},CustomModelData:{{ cmd }}}},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[{{ scale }}f,{{ scale }}f,{{ scale }}f]}}
 summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.main","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture.{{ technical_id }}"',height:1.0002f,width:1.0002f,response:1b}
 setblock ~ ~ ~ {{ block_id }}
+
+# add placement tags
+execute if score $wall_only gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture] add gm4_furniture.on_wall
+execute if score $ceiling_only gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture] add gm4_furniture.on_ceiling
 
 # spawn extensions if they exist and set id
 execute at @e[type=marker,tag=gm4_furniture.marked_block] run summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.additional","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture.{{ technical_id }}"',height:1.0002f,width:1.0002f,response:1b}
 execute at @e[type=marker,tag=gm4_furniture.marked_block] run setblock ~ ~ ~ {{ block_id }}
 execute store result score @e[type=interaction,tag=gm4_new_furniture] gm4_furniture_id run scoreboard players add $next_id gm4_furniture_id 1
 
+# add custom interaction tags
+execute if score $custom_interaction gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture] add gm4_furniture.custom_interaction
+
 # if furniture is a table reduce interaction height
 execute if score $table gm4_furniture_data matches 1 as @e[type=interaction,tag=gm4_new_furniture,distance=..8] run data modify entity @s height set value 1f
 
 # if furniture is dyable set to basic white
-execute if score $dyable gm4_furniture_data matches 1 run data modify entity @e[type=item_display,distance=..2,tag=gm4_new_furniture,limit=1,sort=nearest] item.tag.display.color set value 16777215
+execute if score $dyable gm4_furniture_data matches 1 run data modify entity @e[type=item_display,distance=..2,tag=gm4_new_furniture,limit=1,sort=nearest] item.tag.display.color set from storage gm4_furniture:temp furniture_data.color
 execute if score $dyable gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture,distance=..8] add gm4_furniture.dyable
 
 # if furniture is sittable spawn sitting item_displays at appropiate locations and add tag
@@ -70,4 +81,6 @@ execute if score $rotation gm4_furniture_data matches 2.. as @e[tag=gm4_new_furn
 # mark block as placed
 playsound minecraft:block.barrel.close block @a[distance=..6] ~ ~ ~ 1 1.6
 tag @e[distance=..2] remove gm4_new_furniture
+
+# cleanup
 kill @e[type=marker,tag=gm4_furniture.marked_block]

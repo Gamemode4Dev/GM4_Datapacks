@@ -3,6 +3,10 @@
 # at @s
 advancement revoke @s only gm4_furniture:place_furniture
 
+# get item data
+execute store success score $mainhand gm4_furniture_data run data modify storage gm4_furniture:temp furniture_data set from entity @s SelectedItem.tag.gm4_furniture 
+execute if score $mainhand gm4_furniture_data matches 0 run data modify storage gm4_furniture:temp furniture_data set from entity @s Inventory[{Slot:-106b}].tag.gm4_furniture 
+
 # get rotation of player
 # key: direction of player
 # 1: north, 2: east, 3: south, 4: west
@@ -27,3 +31,6 @@ execute if score $player_head_count gm4_furniture_data matches 1.. if score $rot
 execute if score $player_head_count gm4_furniture_data matches 1.. if score $rotation gm4_furniture_data matches 2 align xyz positioned ~0.5 ~0.5 ~0.5 rotated -90 0 positioned ^-4 ^-4 ^-1 run function gm4_furniture:place/check_layer
 execute if score $player_head_count gm4_furniture_data matches 1.. if score $rotation gm4_furniture_data matches 3 align xyz positioned ~0.5 ~0.5 ~0.5 rotated 0 0 positioned ^-4 ^-4 ^-1 run function gm4_furniture:place/check_layer
 execute if score $player_head_count gm4_furniture_data matches 1.. if score $rotation gm4_furniture_data matches 4 align xyz positioned ~0.5 ~0.5 ~0.5 rotated 90 0 positioned ^-4 ^-4 ^-1 run function gm4_furniture:place/check_layer
+
+# cleanup
+data remove storage gm4_furniture:temp furniture_data

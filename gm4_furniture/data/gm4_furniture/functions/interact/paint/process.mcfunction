@@ -10,3 +10,4 @@ execute as @e[type=interaction,tag=gm4_furniture.main,distance=..8] if score @s 
 # if furniture was painted mark interaction as resolved and play paint sound
 execute if score $paint_changed gm4_furniture_data matches 1 run playsound item.dye.use player @a[distance=..8] ~ ~ ~ 1 1
 execute if score $paint_changed gm4_furniture_data matches 1 run scoreboard players set $interaction_processed gm4_furniture_data 1
+execute if score $paint_changed gm4_furniture_data matches 1 as @e[type=interaction,tag=gm4_furniture.main,distance=..8] if score @s gm4_furniture_id = $check_id gm4_furniture_id run tag @s add gm4_furniture.painted

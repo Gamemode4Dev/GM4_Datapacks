@@ -13,6 +13,4 @@ execute if score $wall_placement gm4_furniture_data matches 1 if block ~ ~ ~ pla
 
 scoreboard players remove $player_head_count gm4_furniture_data 1
 
-data modify storage gm4_furniture:temp command.function set from block ~ ~ ~ SkullOwner.Name
-function gm4_furniture:place/resolve_id with storage gm4_furniture:temp command
-data remove storage gm4_furniture:temp command
+function gm4_furniture:place/resolve_id with storage gm4_furniture:temp furniture_data
