@@ -5,6 +5,9 @@ version: 1.3.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
@@ -17,6 +20,10 @@ meta:
         - lib_custom_crafters: 3.0.0
         - lib_machines: 1.1.0
       schedule_loops: [pulse_check]
+    model_data:
+      - item: furnace_minecart
+        reference: item/piston_minecart
+        template: generated
     website:
       description: Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3⨉3 tunnels, and even lay rails behind themselves.
       recommended:

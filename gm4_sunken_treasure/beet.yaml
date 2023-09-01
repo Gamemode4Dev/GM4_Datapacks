@@ -5,12 +5,28 @@ version: 1.4.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
 meta:
   gm4:
     versioning:
       schedule_loops: [tick]
+    model_data:
+      - item: glass_bottle
+        reference: item/message_in_a_bottle
+        template: generated
+      - item: golden_boots
+        reference: item/waders
+        template: generated
+      - item: chest
+        template: vanilla
+        broadcast:
+          - reference: item/shipwreck_supply
+          - reference: item/shipwreck_treasure
+          - reference: item/treasure_chest
     website:
       description: Digging sand underwater with a fortune tool can uncover buried treasures, or a nasty surprise! Who knows, maybe you'll even find some old love letters.
       recommended:

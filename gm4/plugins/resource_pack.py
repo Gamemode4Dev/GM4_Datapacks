@@ -24,6 +24,8 @@ CUSTOM_MODEL_PREFIX = 3420000
 
 parent_logger = logging.getLogger("gm4.resource_pack")
 
+# TODO debug loggers ... everywhere
+
 class ModelData(BaseModel):
     """A complete config for a single model"""
     item: ListOption[str]
@@ -140,6 +142,8 @@ class GM4ResourcePack():
         self.model_templates = [
             self.custom,
             self.generated,
+            self.generated_overlay,
+            self.vanilla,
             self.handheld
         ] # TODO init with default templates
         self.logger = parent_logger.getChild(ctx.project_id)
@@ -293,30 +297,50 @@ class GM4ResourcePack():
                 raise KeyError("template not found") # TODO this error properly
             
             # generate model and mount to the pack
-            m = g([add_namespace(t, self.ctx.project_id) for t in model.textures.entries()])
+            # TODO redo what data gets passed into the template generators? 
+            m = g([add_namespace(t, self.ctx.project_id) for t in model.textures.entries()], model.item)
             if m and isinstance(model.model, str): # pydantic validation ensures type match
                 self.ctx.assets.models[add_namespace(model.model, self.ctx.project_id)] = m
     
      # default model templates # FIXME should these be class members? Or generated on init and not bound after that point? Thdy don't have self so maybe not in class
     @staticmethod
-    def custom(textures: list[str]): # TODO decorator for argument passing? Verification of texture existance?
+    def custom(textures: list[str], *args): # TODO decorator for argument passing? Verification of texture existance?
         """A model file will be provided in source - do not generate a model"""
         return None
 
     @staticmethod
-    def generated(textures: list[str]):
+    def generated(textures: list[str], *args):
         return Model({
             "parent": "minecraft:item/generated",
             "textures": {
-                "layer0": f"{textures[0]}"
+                "layer0": f"{textures[0]}" # TODO should this just layer every specified texture?
+            }
+        })
+    
+    @staticmethod
+    def generated_overlay(textures: list[str], *args): # TODO should this just be default behavior for the "generated" template?
+        """A special-case 'generated' template, where an 'overlay' texture is specified by appending '_overlay' to its filename"""
+        return Model({
+            "parent": "minecraft:item/generated",
+            "textures": {
+                "layer0": f"{textures[0]}",
+                "layer1": f"{textures[0]}_overlay"
             }
         })
 
     @staticmethod
-    def handheld(textures: list[str]): # TODO can some of the similar ones be function generated even?
+    def handheld(textures: list[str], *args): # TODO can some of the similar ones be function generated even?
         return Model({
             "parent": "minecraft:item/handheld",
             "textures": {
                 "layer0": f"{textures[0]}" # TODO this path correction
             }
         })
+
+    @staticmethod
+    def vanilla(textures: list[str], items: ListOption[str]):
+        item = items.entries()[0] # TODO should only be one entry?
+        return Model({
+            "parent": f"minecraft:item/{item}"
+        })
+    # TODO this should also prevent the texture warnings? Maybe that should be a method of these templates?

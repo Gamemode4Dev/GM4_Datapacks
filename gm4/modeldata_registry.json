@@ -3,6 +3,11 @@
     "apple": {
       "gm4_apple_trees:block/apple_unripe": 0
     },
+    "chest": {
+      "gm4_sunken_treasure:item/shipwreck_supply": 3,
+      "gm4_sunken_treasure:item/shipwreck_treasure": 4,
+      "gm4_sunken_treasure:item/treasure_chest": 5
+    },
     "compass": {
       "gm4_apple_trees:test_model_1": 0
     },
@@ -14,19 +19,48 @@
     "emerald": {
       "gm4_apple_trees:block/apple_unripe": 0
     },
+    "firework_star": {
+      "gm4_everstone:item/everstone": 1
+    },
     "flint": {
       "gm4_better_fire:item/charred_arrowhead": 0
+    },
+    "furnace_minecart": {
+      "gm4_tunnel_bores:item/piston_minecart": 0
+    },
+    "glass_bottle": {
+      "gm4_sunken_treasure:item/message_in_a_bottle": 0
+    },
+    "golden_boots": {
+      "gm4_sunken_treasure:item/waders": 0
+    },
+    "hopper_minecart": {
+      "gm4_ender_hoppers:item/ender_hopper_minecart": 0,
+      "gm4_liquid_minecarts:item/liquid_minecart": 1
+    },
+    "leather_boots": {
+      "gm4_boots_of_ostara:item/boots_of_ostara": 2,
+      "gm4_boots_of_ostara:item/flippers_of_ostara": 3
+    },
+    "lingering_potion": {
+      "gm4_lightning_in_a_bottle:item/lingering_lightning_in_a_bottle": 0
     },
     "oak_sapling": {
       "gm4_apple_trees:item/apple_tree_sapling": 10
     },
     "paper": {
-      "gm4_enchantment_extractors:item/enchanted_page": 0
+      "gm4_book_binders:item/enchanted_page": 1
+    },
+    "potion": {
+      "gm4_lightning_in_a_bottle:item/lightning_in_a_bottle": 0
     },
     "rabbit_hide": {
       "gm4_bat_grenades:item/bat_leather": 2
     },
-    "snowball": {}
+    "snowball": {},
+    "splash_potion": {
+      "gm4_lightning_in_a_bottle:item/splash_lightning_in_a_bottle": 0
+    }
   },
   "allocations": {
     "gm4_metallurgy": [

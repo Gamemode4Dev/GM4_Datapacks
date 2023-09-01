@@ -5,6 +5,9 @@ version: 1.4.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
@@ -16,6 +19,10 @@ meta:
         - gm4_liquid_tanks: 2.1.0
         - lib_machines: 1.1.0
       schedule_loops: [main]
+    model_data:
+      - item: hopper_minecart
+        reference: item/liquid_minecart
+        template: generated
     website:
       description: Adds Liquid Tank Minecarts that allow you to move your liquids from one Liquid Tank to another.
       recommended:

@@ -5,6 +5,9 @@ version: 1.4.X
 data_pack:
   load: .
 
+resource_pack: 
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
@@ -17,6 +20,10 @@ meta:
         - lib_custom_crafters: 3.0.0
         - lib_machines: 1.1.0
       schedule_loops: [main]
+    model_data:
+      - item: hopper_minecart
+        reference: item/ender_hopper_minecart
+        template: generated
     website:
       description: Create special hoppers that teleport nearby items to them.
       recommended:

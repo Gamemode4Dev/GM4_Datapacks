@@ -51,7 +51,3 @@ meta:
         - kyrkis
       Icon Design:
         - DuckJr
-    model_data:
-      - item: paper
-        reference: item/enchanted_page
-        template: generated
