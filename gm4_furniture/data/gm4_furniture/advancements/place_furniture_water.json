@@ -1,0 +1,54 @@
+{
+  "criteria": {
+    "placed_furniture": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_furniture"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_furniture_minor"
+              },
+              "score": "load.status"
+            },
+            "range": 0
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:player_head"
+              ],
+              "nbt": "{SkullOwner:{Properties:{textures:[{Signature:\"gm4_furniture\"}]}}}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_furniture"
+    ]
+  ],
+  "rewards": {
+    "function": "gm4_furniture:place/place_furniture_water"
+  }
+}

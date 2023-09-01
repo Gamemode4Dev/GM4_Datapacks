@@ -2,6 +2,7 @@
 # @s = player that just placed a furniture player head
 # at @s
 advancement revoke @s only gm4_furniture:place_furniture
+# run from place/place_furniture_water
 
 # get item data
 execute store success score $mainhand gm4_furniture_data run data modify storage gm4_furniture:temp furniture_data set from entity @s SelectedItem.tag.gm4_furniture 
