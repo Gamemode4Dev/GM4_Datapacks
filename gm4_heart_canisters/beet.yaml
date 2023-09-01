@@ -5,6 +5,9 @@ version: 1.5.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_player_heads
@@ -17,6 +20,12 @@ meta:
         - lib_custom_crafters: 3.0.0
         - lib_player_heads: 1.1.0
       schedule_loops: [main]
+    model_data:
+      - item: player_head
+        template: generated
+        broadcast:
+          - reference: item/heart_canister_tier_1
+          - reference: item/heart_canister_tier_2
     website:
       description: Introduces two tiers of pricey canisters that increase your health when carried.
       recommended:

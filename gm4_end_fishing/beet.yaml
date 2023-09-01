@@ -5,7 +5,11 @@ version: 1.3.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
+  - register_model_data
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_player_heads
 
@@ -16,7 +20,27 @@ meta:
         - lib_player_heads: 1.1.0
       schedule_loops:
         - main
-        - tick
+        - cauldron/extra_items/crack_bottle
+    model_data:
+      # swords, armor, and tools are registered by plugin
+      - template: generated
+        item: player_head
+        reference: item/enderpuff
+      - item: elytra
+        reference: item/elytra/elytra_10
+        model:
+          - predicate: {broken: 0}
+            model: item/elytra/elytra_10
+          - predicate: {broken: 1}
+            model: item/elytra/broken_elytra_10
+      - item: elytra
+        reference: item/elytra/elytra_11
+        model:
+          - predicate: {broken: 0}
+            model: item/elytra/elytra_11
+          - predicate: {broken: 1}
+            model: item/elytra/broken_elytra_11
+
     website:
       description: Catch rare loot by fishing in the end void! The void holds many riches, from End City loot and Elytra to weapons that once belonged to explorers time forgot, collect them all!
       recommended:

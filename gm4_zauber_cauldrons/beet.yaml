@@ -5,6 +5,9 @@ version: 1.8.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_forceload
@@ -23,6 +26,54 @@ meta:
       schedule_loops:
         - main
         - cauldron/extra_items/crack_bottle
+    model_data:
+      - item: prismarine_shard
+        reference: item/enchanted_prismarine_shard
+        template: generated
+      - item: glass_bottle
+        reference: item/magic_in_a_bottle
+        template: generated
+      - item: potion
+        reference: item/wormhole_in_a_bottle
+        tempalte: generated_overlay
+      - item: player_head
+        template: generated
+        broadcast:
+          - reference: item/crystal/harming
+          - reference: item/crystal/health
+          - reference: item/crystal/leaping
+          - reference: item/crystal/poison
+          - reference: item/crystal/regeneration
+          - reference: item/crystal/speed
+          - reference: item/crystal/strength
+      - item: golden_helmet 
+        template: generated
+        broadcast:
+          - reference: item/zauber_armor/armor/helmet
+          - reference: item/zauber_armor/attack/helmet
+          - reference: item/zauber_armor/health/helmet
+          - reference: item/zauber_armor/speed/helmet
+      - item: golden_chestplate
+        template: generated
+        broadcast:
+          - reference: item/zauber_armor/armor/chestplate
+          - reference: item/zauber_armor/attack/chestplate
+          - reference: item/zauber_armor/health/chestplate
+          - reference: item/zauber_armor/speed/chestplate
+      - item: golden_leggings
+        template: generated
+        broadcast:
+          - reference: item/zauber_armor/armor/leggings
+          - reference: item/zauber_armor/attack/leggings
+          - reference: item/zauber_armor/health/leggings
+          - reference: item/zauber_armor/speed/leggings
+      - item: golden_boots
+        template: generated
+        broadcast:
+          - reference: item/zauber_armor/armor/boots
+          - reference: item/zauber_armor/attack/boots
+          - reference: item/zauber_armor/health/boots
+          - reference: item/zauber_armor/speed/boots
     website:
       description: Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game.
       recommended:
