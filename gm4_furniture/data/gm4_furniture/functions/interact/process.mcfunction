@@ -6,6 +6,9 @@
 # first successful interaction will be used, any lower down this list will be ignored
 scoreboard players set $interaction_processed gm4_furniture_data 0
 
+# check for waterlogging
+execute if score $interaction_processed gm4_furniture_data matches 0 if entity @p[tag=gm4_furniture_target,predicate=gm4_furniture:holding_bucket] positioned ~ ~0.5 ~ run function gm4_furniture:interact/waterlog/check
+
 # check for furniture station interactions
 execute if score $interaction_processed gm4_furniture_data matches 0 if entity @s[tag=gm4_furniture.swap_tool] run function gm4_furniture:interact/furniture_station/swap_tool
 
