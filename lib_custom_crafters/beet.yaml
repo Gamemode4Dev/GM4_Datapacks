@@ -6,6 +6,9 @@ data_pack:
   load: 
     data: data
 
+resource_pack:
+  load: .
+
 pipeline:
   - lib_custom_crafters.generate_item_tags
   - gm4.plugins.module.gm4_root_advancement
@@ -28,6 +31,10 @@ meta:
           - machine/verify_place_down
         advancements: 
           - create_custom_crafter
+    model_data:
+      - item: crafting_table
+        reference: item/slightly_damaged_workbench
+        template: vanilla
     credits:
       Custom Crafters Creators:
         - Bloo

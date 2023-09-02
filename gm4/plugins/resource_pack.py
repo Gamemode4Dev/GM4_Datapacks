@@ -204,6 +204,7 @@ class GM4ResourcePack():
             for override in vanilla_overrides:
                 override["model"] = add_namespace(override["model"], "minecraft") # ensure vanilla models have namespaced files
                 # FIXME how to differentiate vanilla overrides from specified overrides?
+            unchanged_vanilla_overrides = vanilla_overrides.copy()
 
             filter_func: Callable[[tuple[str, int]], bool] = lambda t: t[0] in [add_namespace(m.reference, self.ctx.project_id) for m in models]
             custom_model_data = dict(filter(filter_func, self.registry["items"][item_id].items()))
@@ -213,7 +214,7 @@ class GM4ResourcePack():
                 if isinstance(model.model, list): # manual predicate merging specified
                     merge_overrides = [o|{"user_defined": True} for o in model.model] # FIXME check branch unnecessary
                 else: 
-                    merge_overrides = vanilla_overrides.copy() # get vanilla overrides
+                    merge_overrides = unchanged_vanilla_overrides # get vanilla overrides
                 if len(merge_overrides) == 0:
                     merge_overrides.append({}) # add an empty predicate to add CMD onto
 
