@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 from functools import cached_property
-from typing import Any, Callable, Optional
+from typing import Any, Callable, Optional, Literal, ClassVar, Type
 
 from beet import (
     Context,
@@ -15,7 +15,7 @@ from beet import (
 from beet.contrib.vanilla import Vanilla
 from beet.core.utils import format_validation_error
 from mecha import Diagnostic
-from pydantic import BaseModel, Extra, ValidationError, validator
+from pydantic import BaseModel, Extra, ValidationError, validator, Field
 from pydantic.error_wrappers import ErrorWrapper
 
 from gm4.utils import add_namespace
@@ -32,6 +32,7 @@ class ModelData(BaseModel):
     reference: str
     model: Optional[str|list[dict[str,Any]]] # defaults to same value as 'reference'
     template: str = "custom"
+    template_options: Optional['TemplateOptions']
     textures: Optional[ListOption[str]] # defaults to same value as reference
 
     @validator('model')
@@ -45,6 +46,15 @@ class ModelData(BaseModel):
         if isinstance(values['model'], list) and template != "custom":
             raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
         return template
+    
+    @validator('template_options')
+    def apply_template_submodel(cls, template_options: 'TemplateOptions', values: dict[str,Any]) -> None|Type['TemplateOptions']:
+        # get proper submodel
+        submodel = {m.name: m for m in TemplateOptions.__subclasses__()}.get(values['template'], None)
+        # apply submodel to this field
+        if submodel:
+            return submodel.parse_obj(template_options.dict())
+        return None
     
     @validator('textures')
     def default_texture(cls, textures: ListOption[str], values: dict[str,Any]) -> ListOption[str]:
@@ -70,6 +80,7 @@ class NestedModelData(BaseModel):
     reference: Optional[str]
     model: Optional[str|list[dict[str,Any]]] # defalts to reference
     template: Optional[str] = "custom"
+    template_options: Optional['TemplateOptions']
     textures: Optional[ListOption[str]]
     broadcast: Optional[list['NestedModelData']] = []
 
@@ -119,6 +130,13 @@ class ModelDataOptions(PluginOptions, extra=Extra.ignore):
         
         return FlatModelDataOptions(model_data=ret)
 
+class TemplateOptions(BaseModel, extra=Extra.allow):
+    """A base pydantic model for model templates with special options"""
+    name: ClassVar[str]
+    def __init_subclass__(cls) -> None:
+        cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
+NestedModelData.update_forward_refs()
+ModelData.update_forward_refs()
 
 def beet_default(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
@@ -144,7 +162,8 @@ class GM4ResourcePack():
             self.generated,
             self.generated_overlay,
             self.vanilla,
-            self.handheld
+            self.handheld,
+            ItemDisplayModel.item_display
         ] # TODO init with default templates
         self.logger = parent_logger.getChild(ctx.project_id)
 
@@ -299,7 +318,7 @@ class GM4ResourcePack():
             
             # generate model and mount to the pack
             # TODO redo what data gets passed into the template generators? 
-            m = g([add_namespace(t, self.ctx.project_id) for t in model.textures.entries()], model.item)
+            m = g([add_namespace(t, self.ctx.project_id) for t in model.textures.entries()], model.item, model)
             if m and isinstance(model.model, str): # pydantic validation ensures type match
                 self.ctx.assets.models[add_namespace(model.model, self.ctx.project_id)] = m
     
@@ -345,3 +364,16 @@ class GM4ResourcePack():
             "parent": f"minecraft:item/{item}"
         })
     # TODO this should also prevent the texture warnings? Maybe that should be a method of these templates?
+
+# TODO all these names!
+class ItemDisplayModel(TemplateOptions):
+    origin: list[float] = Field(..., max_items=3, min_items=3)
+    scale: list[float] = Field(..., max_items=3, min_items=3)
+    translation: list[float] = Field(..., max_items=3, min_items=3)
+    name: ClassVar[Literal["item_display"]] = "item_display"
+
+    @staticmethod
+    def item_display(textures: list[str], _, model: ModelData):
+        print(model)
+        print(model.template_options)
+        pass

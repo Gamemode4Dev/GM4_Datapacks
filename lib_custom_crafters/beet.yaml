@@ -12,6 +12,7 @@ resource_pack:
 pipeline:
   - lib_custom_crafters.generate_item_tags
   - gm4.plugins.module.gm4_root_advancement
+  - gm4.plugins.resource_pack.build
   - gm4.plugins.extend.library
   - gm4.plugins.include.lib_machines
   - gm4.plugins.include.lib_forceload
@@ -32,9 +33,17 @@ meta:
         advancements: 
           - create_custom_crafter
     model_data:
+      - item: player_head
+        reference: item/custom_crafter
+        template: generated
       - item: crafting_table
-        reference: item/slightly_damaged_workbench
-        template: vanilla
+        reference: block/custom_crafter
+        template: item_display
+        template_options:
+          origin: [0.5, 1, 0.5]
+          scale: [0.438, 0.438, 0.438]
+          translation: [0, 0.001, 0]
+
     credits:
       Custom Crafters Creators:
         - Bloo
