@@ -3,6 +3,7 @@ import os
 import sys
 from functools import cached_property
 from typing import Any, Callable, Optional, Literal, ClassVar, Type
+import numpy as np
 
 from beet import (
     Context,
@@ -148,9 +149,10 @@ class ModelDataOptions(PluginOptions, extra=Extra.ignore):
 def model_template(func: Callable[[ModelData], Model]) -> Callable[[ModelData], None|Model]: # TODO can i move this down in the document?
     """Decorator for model template generators, applying needed transforms"""
     def wrapped_func(config: ModelData) -> None|Model:
-        output_model = func(config)
-        if output_model:
-            print(output_model.data)
+        output_model = func(config) # get core model
+        if config.transforms:
+            for transform in config.transforms:
+                transform.apply_transform(output_model)
         return output_model
     wrapped_func.__name__ = func.__name__
     return wrapped_func
@@ -163,6 +165,10 @@ class TransformOptions(BaseModel, extra=Extra.allow):
 
     def dict(self, **kwargs: Any) -> dict[str,Any]:
         return super().dict(**kwargs) | {"name": self.name} # ensure name class-var is preserved in dict-casting
+    
+    def apply_transform(self, model: Model) -> None:
+        """Modifies the given model, applying transformation data to the display compound"""
+        raise NotImplementedError()
 NestedModelData.update_forward_refs()
 ModelData.update_forward_refs()
 
@@ -191,7 +197,7 @@ class GM4ResourcePack():
             self.generated_overlay,
             self.vanilla,
             self.handheld,
-            ItemDisplayModel.item_display
+            self.cobblestone
         ] # TODO init with default templates
         self.logger = parent_logger.getChild(ctx.project_id)
 
@@ -392,15 +398,24 @@ class GM4ResourcePack():
         })
     # TODO this should also prevent the texture warnings? Maybe that should be a method of these templates?
 
-# TODO all these names!
+    @staticmethod
+    @model_template
+    def cobblestone(model_config: ModelData):
+        return Model({
+            "parent": "minecraft:block/cobblestone"
+        })
+
 class ItemDisplayModel(TransformOptions):
+    """Calculates the model transform for an item_display entity, located at the specified origin, facing south, for the model to align with the block-grid"""
     origin: list[float] = Field(..., max_items=3, min_items=3)
     scale: list[float] = Field(..., max_items=3, min_items=3)
     translation: list[float] = Field(..., max_items=3, min_items=3)
+    display: Literal["none", "thirdperson_lefthand", "thirdperson_righthand", "firstperson_lefthand", "firstperson_righthand", "head", "gui", "ground", "fixed"]
     name: ClassVar[Literal["item_display"]] = "item_display"
 
-    @staticmethod
-    def item_display(model: ModelData):
-        return Model({
-
-        })
+    def apply_transform(self, model: Model):
+        model.data.setdefault("display", {})[self.display] = {
+            "rotation": [0,0,0],
+            "translation": list(16 * (np.array([-0.5,0.5,-0.5])+(np.array(self.origin)*np.array([1,-1,1]))+np.array(self.translation)) / np.array(self.scale)),
+            "scale": list(1/np.array(self.scale)*1.006)
+        }
