@@ -38,11 +38,12 @@ meta:
         template: generated
       - item: crafting_table
         reference: block/custom_crafter
-        template: item_display
-        template_options:
-          origin: [0.5, 1, 0.5]
-          scale: [0.438, 0.438, 0.438]
-          translation: [0, 0.001, 0]
+        template: handheld
+        transforms:
+          - name: item_display
+            origin: [0.5, 1, 0.5]
+            scale: [0.438, 0.438, 0.438]
+            translation: [0, 0.001, 0]
 
     credits:
       Custom Crafters Creators:

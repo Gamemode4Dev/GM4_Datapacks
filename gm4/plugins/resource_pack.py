@@ -32,7 +32,7 @@ class ModelData(BaseModel):
     reference: str
     model: Optional[str|list[dict[str,Any]]] # defaults to same value as 'reference'
     template: str = "custom"
-    template_options: Optional['TemplateOptions']
+    transforms: Optional[list['TransformOptions']]
     textures: Optional[ListOption[str]] # defaults to same value as reference
 
     @validator('model')
@@ -47,13 +47,12 @@ class ModelData(BaseModel):
             raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
         return template
     
-    @validator('template_options')
-    def apply_template_submodel(cls, template_options: 'TemplateOptions', values: dict[str,Any]) -> None|Type['TemplateOptions']:
-        # get proper submodel
-        submodel = {m.name: m for m in TemplateOptions.__subclasses__()}.get(values['template'], None)
-        # apply submodel to this field
+    @validator('transforms', each_item=True)
+    def apply_template_submodel(cls, transform: 'TransformOptions', values: dict[str,Any]) -> None|Type['TransformOptions']:
+        # find and apply proper submodel
+        submodel = {m.name: m for m in TransformOptions.__subclasses__()}.get(transform.name)
         if submodel:
-            return submodel.parse_obj(template_options.dict())
+            return submodel.parse_obj(transform.dict())
         return None
     
     @validator('textures')
@@ -71,16 +70,23 @@ class ModelData(BaseModel):
     # def check_textures_defined(val: Any):
     #     print()
     #     return True
+    def add_namespace(self, namespace: str) -> 'ModelData':
+        """Returns a new ModelData with the given given namespace applied to any fields"""
+        ret_dict = self.dict()
+        ret_dict["reference"] = add_namespace(self.reference, namespace)
+        if isinstance(self.model, str):
+            ret_dict["model"] = add_namespace(self.model, namespace)
+        if self.textures:
+            ret_dict["textures"] = ListOption(__root__=[add_namespace(t, namespace) for t in self.textures.entries()])
+        return ModelData.parse_obj(ret_dict)
     
-    # TODO oh hm also add the namespace information when the config is loaded and not at runtime, might be handy! Oh How to get ctx though? Fizzy says no on that front
-
 class NestedModelData(BaseModel):
     """A potentially incomplete config, allowing for nested inheritance of fields"""
     item: Optional[ListOption[str]]
     reference: Optional[str]
     model: Optional[str|list[dict[str,Any]]] # defalts to reference
     template: Optional[str] = "custom"
-    template_options: Optional['TemplateOptions']
+    transforms: Optional[list['TransformOptions']]
     textures: Optional[ListOption[str]]
     broadcast: Optional[list['NestedModelData']] = []
 
@@ -101,6 +107,9 @@ class NestedModelData(BaseModel):
 class FlatModelDataOptions(BaseModel):
     """Contains a flat list of complete model config objects"""
     model_data: list[ModelData]
+
+    def add_namespace(self, namespace:str) -> 'FlatModelDataOptions':
+        return FlatModelDataOptions(model_data=[m.add_namespace(namespace) for m in self.model_data])
 
 class ModelDataOptions(PluginOptions, extra=Extra.ignore):
     model_data: list[NestedModelData] = []
@@ -130,11 +139,30 @@ class ModelDataOptions(PluginOptions, extra=Extra.ignore):
         
         return FlatModelDataOptions(model_data=ret)
 
-class TemplateOptions(BaseModel, extra=Extra.allow):
-    """A base pydantic model for model templates with special options"""
+# class TemplateOptions(BaseModel, extra=Extra.allow):
+#     """A base pydantic model for model templates with special options"""
+#     name: ClassVar[str]
+#     def __init_subclass__(cls) -> None:
+#         cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
+
+def model_template(func: Callable[[ModelData], Model]) -> Callable[[ModelData], None|Model]: # TODO can i move this down in the document?
+    """Decorator for model template generators, applying needed transforms"""
+    def wrapped_func(config: ModelData) -> None|Model:
+        output_model = func(config)
+        if output_model:
+            print(output_model.data)
+        return output_model
+    wrapped_func.__name__ = func.__name__
+    return wrapped_func
+
+class TransformOptions(BaseModel, extra=Extra.allow):
+    """A pydantic model to be extended to configure model transformers"""
     name: ClassVar[str]
     def __init_subclass__(cls) -> None:
         cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
+
+    def dict(self, **kwargs: Any) -> dict[str,Any]:
+        return super().dict(**kwargs) | {"name": self.name} # ensure name class-var is preserved in dict-casting
 NestedModelData.update_forward_refs()
 ModelData.update_forward_refs()
 
@@ -169,9 +197,8 @@ class GM4ResourcePack():
 
     @cached_property
     def opts(self) -> FlatModelDataOptions:
-        # load and process config when it's first accessed. 
-        return self.ctx.validate("gm4", validator=ModelDataOptions).process_inheritance()
-        # TODO this is where we could pass in the ctx to namespace everything?
+        # load and process config when it's first accessed.
+        return self.ctx.validate("gm4", validator=ModelDataOptions).process_inheritance().add_namespace(self.ctx.project_id)
 
     #== Custom Model Data registration and management ==#
     def update_modeldata_registry(self):
@@ -180,26 +207,25 @@ class GM4ResourcePack():
 
         # add new references and assign values
         for m in self.opts.model_data:
-            ref = add_namespace(m.reference, self.ctx.project_id)
             conflicts = False
-            i, err = self.retrieve_index(ref)
+            i, err = self.retrieve_index(m.reference)
             if not err: # existing index, is it available to assign to all items?
                 for item_id in m.item.entries():
                     reg = item_registry.setdefault(item_id, {})
-                    used_idxs = {k: reg[k] for k in reg.keys() - {ref}}.values()
+                    used_idxs = {k: reg[k] for k in reg.keys() - {m.reference}}.values()
                     if i in used_idxs:
-                        self.logger.warning(f"Failed to share existing CustomModelData for '{ref}' to '{item_id}'. A new value will be assigned for this reference; existing items may lose their texture!")
+                        self.logger.warning(f"Failed to share existing CustomModelData for '{m.reference}' to '{item_id}'. A new value will be assigned for this reference; existing items may lose their texture!")
                         conflicts = True
                 if not conflicts: # existing CMD is available to apply to any new items
-                    for item_id in [e for e in m.item.entries() if ref not in item_registry.get(e, {})]:
-                        self.set_index(item_id, i, ref)
+                    for item_id in [e for e in m.item.entries() if m.reference not in item_registry.get(e, {})]:
+                        self.set_index(item_id, i, m.reference)
             if err or conflicts: # no existing index, or existing isn't available; get a new one
-                self.find_new_index(m.item.entries(), ref)
+                self.find_new_index(m.item.entries(), m.reference)
 
         # remove unused references
             # NOTE deleting modeldata is really only supported for development cycles. Once published, a cmd value should be permanent.
             # Thus, a reference will only be removed if it is no longer present on *any* item in the beet.yaml
-        all_refs = {v for r in self.opts.model_data if (v:=add_namespace(r.reference, self.ctx.project_id)).startswith(self.ctx.project_id)}
+        all_refs = {r.reference for r in self.opts.model_data if r.reference.startswith(self.ctx.project_id)}
         for item_id, reg in item_registry.items():
             for ref in list(reg.keys()):
                 if ref.startswith(self.ctx.project_id) and ref not in all_refs:
@@ -225,7 +251,7 @@ class GM4ResourcePack():
                 # FIXME how to differentiate vanilla overrides from specified overrides?
             unchanged_vanilla_overrides = vanilla_overrides.copy()
 
-            filter_func: Callable[[tuple[str, int]], bool] = lambda t: t[0] in [add_namespace(m.reference, self.ctx.project_id) for m in models]
+            filter_func: Callable[[tuple[str, int]], bool] = lambda t: t[0] in [m.reference for m in models]
             custom_model_data = dict(filter(filter_func, self.registry["items"][item_id].items()))
             
             for model in models:
@@ -237,17 +263,15 @@ class GM4ResourcePack():
                 if len(merge_overrides) == 0:
                     merge_overrides.append({}) # add an empty predicate to add CMD onto
 
-                ref = add_namespace(model.reference, self.ctx.project_id)
-
                 for pred in merge_overrides:
                     if not pred.get("model") and not isinstance(model.model, str):
                         self.logger.warn(f"Manually specified model predicate has no 'model' field, and is malformed:\n\t{pred}")
                         continue # TODO this is an exception?
                     vanilla_overrides.append({
                         "predicate": {
-                            "custom_model_data": CUSTOM_MODEL_PREFIX+custom_model_data[ref]
+                            "custom_model_data": CUSTOM_MODEL_PREFIX+custom_model_data[model.reference]
                         } | pred.get("predicate", {}),
-                        "model": pred["model"] if pred.get("user_defined") else add_namespace(model.model, self.ctx.project_id) # type:ignore , user-defined model predicates use their own model reference. model.model is a string in all other cases
+                        "model": pred["model"] if pred.get("user_defined") else model.model # type:ignore , user-defined model predicates use their own model reference. model.model is a string in all other cases
                     })
             self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(vanilla_model) # TODO skipped-values spacing, on RP output after merge :)
 
@@ -305,8 +329,7 @@ class GM4ResourcePack():
                 continue # validation should ensure this - here for type checking
 
             # warn on missing textures
-            texs = [add_namespace(t, self.ctx.project_id) for t in model.textures.entries()]
-            for tex in texs:
+            for tex in model.textures.entries():
                 if tex not in self.ctx.assets.textures:
                     self.logger.warning(f"Referenced texture '{tex}' does not exist") # TODO logger and format as MC messaage
             
@@ -317,63 +340,67 @@ class GM4ResourcePack():
                 raise KeyError("template not found") # TODO this error properly
             
             # generate model and mount to the pack
-            # TODO redo what data gets passed into the template generators? 
-            m = g([add_namespace(t, self.ctx.project_id) for t in model.textures.entries()], model.item, model)
+            m = g(model)
             if m and isinstance(model.model, str): # pydantic validation ensures type match
-                self.ctx.assets.models[add_namespace(model.model, self.ctx.project_id)] = m
+                self.ctx.assets.models[model.model] = m
     
      # default model templates # FIXME should these be class members? Or generated on init and not bound after that point? Thdy don't have self so maybe not in class
     @staticmethod
-    def custom(textures: list[str], *args): # TODO decorator for argument passing? Verification of texture existance?
+    @model_template
+    def custom(model_config: ModelData): # TODO decorator for argument passing? Verification of texture existance?
         """A model file will be provided in source - do not generate a model"""
         return None
 
     @staticmethod
-    def generated(textures: list[str], *args):
+    @model_template
+    def generated(model_config: ModelData):
         return Model({
             "parent": "minecraft:item/generated",
             "textures": {
-                "layer0": f"{textures[0]}" # TODO should this just layer every specified texture?
+                "layer0": f"{model_config.textures.entries()[0]}" # TODO should this just layer every specified texture?
             }
         })
     
     @staticmethod
-    def generated_overlay(textures: list[str], *args): # TODO should this just be default behavior for the "generated" template?
+    @model_template
+    def generated_overlay(model_config: ModelData): # TODO should this just be default behavior for the "generated" template?
         """A special-case 'generated' template, where an 'overlay' texture is specified by appending '_overlay' to its filename"""
         return Model({
             "parent": "minecraft:item/generated",
             "textures": {
-                "layer0": f"{textures[0]}",
-                "layer1": f"{textures[0]}_overlay"
+                "layer0": f"{model_config.textures.entries()[0]}",
+                "layer1": f"{model_config.textures.entries()[0]}_overlay"
             }
         })
 
     @staticmethod
-    def handheld(textures: list[str], *args): # TODO can some of the similar ones be function generated even?
+    @model_template
+    def handheld(model_config: ModelData): # TODO can some of the similar ones be function generated even?
         return Model({
             "parent": "minecraft:item/handheld",
             "textures": {
-                "layer0": f"{textures[0]}" # TODO this path correction
+                "layer0": f"{model_config.textures.entries()[0]}" # TODO this path correction
             }
         })
 
     @staticmethod
-    def vanilla(textures: list[str], items: ListOption[str]):
-        item = items.entries()[0] # TODO should only be one entry?
+    @model_template
+    def vanilla(model_config: ModelData):
+        item = model_config.item.entries()[0] # TODO should only be one entry?
         return Model({
             "parent": f"minecraft:item/{item}"
         })
     # TODO this should also prevent the texture warnings? Maybe that should be a method of these templates?
 
 # TODO all these names!
-class ItemDisplayModel(TemplateOptions):
+class ItemDisplayModel(TransformOptions):
     origin: list[float] = Field(..., max_items=3, min_items=3)
     scale: list[float] = Field(..., max_items=3, min_items=3)
     translation: list[float] = Field(..., max_items=3, min_items=3)
     name: ClassVar[Literal["item_display"]] = "item_display"
 
     @staticmethod
-    def item_display(textures: list[str], _, model: ModelData):
-        print(model)
-        print(model.template_options)
-        pass
+    def item_display(model: ModelData):
+        return Model({
+
+        })
