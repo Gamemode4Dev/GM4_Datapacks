@@ -144,29 +144,12 @@ class ModelDataOptions(PluginOptions, extra=Extra.ignore):
         
         return FlatModelDataOptions(model_data=ret)
 
-# class TemplateOptions(BaseModel, extra=Extra.allow):
-#     """A base pydantic model for model templates with special options"""
-#     name: ClassVar[str]
-#     def __init_subclass__(cls) -> None:
-#         cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
-
-# def model_template(func: Callable[[ModelData], Model]) -> Callable[[ModelData], None|Model]: # TODO can i move this down in the document?
-#     """Decorator for model template generators, applying needed transforms"""
-#     def wrapped_func(config: ModelData) -> None|Model:
-#         output_model = func(config) # get core model
-#         if config.transforms:
-#             for transform in config.transforms:
-#                 transform.apply_transform(output_model)
-#         return output_model
-#     wrapped_func.__name__ = func.__name__
-#     return wrapped_func
-
 #== Configurable Base Classes ==#
 class TemplateBase():
     """A base class to extend for model templates"""
     default_transforms: list['TransformOptions'] = []
     name: str
-    texture_map: list[str] = []
+    texture_map: list[str]|None = None
 
     @classmethod
     def generate_model(cls, config: ModelData) -> Model|None:
@@ -467,3 +450,16 @@ class ItemDisplayModel(TransformOptions):
             "translation": list(16 * (np.array([-0.5,0.5,-0.5])+(np.array(self.origin)*np.array([1,-1,1]))+np.array(self.translation)) / np.array(self.scale)),
             "scale": list(1/np.array(self.scale)*1.006)
         }
+
+#== Convience Template/Transform Presets ==#
+class LegacyMachineArmorStand(BlockTemplate, TemplateBase):
+    """An 'block' template preset with the 'item_display' transformer for the legacy small-armor-stand-head-slot of custom crafters"""
+    default_transforms = [
+        ItemDisplayModel(
+            origin=[0.5, 1, 0.5],
+            scale=[0.438, 0.438, 0.438],
+            translation=[0, 0, 0],
+            display='head'
+        )
+    ]
+    name = "legacy_machine_block"
