@@ -191,8 +191,8 @@ def beet_default(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
     # mecha register
 
-    yield
-    rp.output_registry()
+    # yield
+    # rp.output_registry()
 
 def build(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
@@ -200,12 +200,25 @@ def build(ctx: Context):
     rp.generate_model_overrides()
     rp.generate_model_files()
 
+def mount_registry(ctx: Context):
+    ctx.cache["modeldata_registry"].json = JsonFile(source_path="gm4/modeldata_registry.json").data
+
+def dump_registry(ctx: Context):
+    registry = ctx.cache["modeldata_registry"].json
+    # sort registriy alphabetically and numerically
+    registry["items"] = dict(sorted(registry["items"].items()))
+    for item_id, ref_map in registry["items"].items():
+        registry["items"][item_id] = dict(sorted(ref_map.items(), key=lambda e: e[1]))
+
+    JsonFile(registry).dump(origin="", path="gm4/modeldata_registry.json")
+    ctx.cache["modeldata_registry"].delete()
+
 class GM4ResourcePack():
     """Service Object handling CustomModelData and generated item models"""
 
     def __init__(self, ctx: Context): # TODO dataclass-ify this?
         self.ctx = ctx
-        self.registry = JsonFile(source_path="gm4/modeldata_registry.json").data # TODO caching/save/output this
+        self.registry = ctx.cache["modeldata_registry"].json
         self.logger = parent_logger.getChild(ctx.project_id)
 
     @cached_property
@@ -323,14 +336,6 @@ class GM4ResourcePack():
         self.registry.setdefault("items", {}).setdefault(item_id, {})[reference] = index
         self.logger.info(f"Issuing CustomModelData {index} for {item_id}")
 
-    def output_registry(self):
-        # sort registriy alphabetically and numerically
-        self.registry["items"] = dict(sorted(self.registry["items"].items()))
-        for item_id, ref_map in self.registry["items"].items():
-            self.registry["items"][item_id] = dict(sorted(ref_map.items(), key=lambda e: e[1]))
-
-        JsonFile(self.registry).dump(origin="", path="gm4/modeldata_registry.json") # TODO cache this file somehow? Part of RP service exit?
-
     #== Mecha Transformer Rules ==#
     # TODO
 
@@ -421,7 +426,6 @@ class BlockTemplate(TemplateBase):
 
     @staticmethod
     def process(config: ModelData):
-        print(config.textures)
         if not isinstance(config.textures, dict):
             return # FIXME this is garunteed by the sole place the proicess function gets called from? How can I avoid type-checker errors
         return Model({
@@ -429,8 +433,8 @@ class BlockTemplate(TemplateBase):
             "textures": {
                 "down":  config.textures['bottom'],
                 "up":    config.textures['top'],
-                "north": config.textures['side'],
-                "south": config.textures['front'],
+                "north": config.textures['front'],
+                "south": config.textures['side'],
                 "west":  config.textures['side'],
                 "east":  config.textures['side']
             }

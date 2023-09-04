@@ -49,6 +49,11 @@
     "compass": {
       "gm4_apple_trees:test_model_1": 0
     },
+    "crafting_table": {
+      "gm4_custom_crafters:block/custom_crafter": 0,
+      "gm4_custom_crafters:block/custom_crafter_side": 1,
+      "gm4_custom_crafters:block/custom_crafter_down": 2
+    },
     "diamond": {
       "gm4_end_fishing:item/ores/diamond_10": 1,
       "gm4_end_fishing:item/ores/diamond_11": 2,
@@ -500,7 +505,8 @@
       "gm4_tnt_landmines:item/tnt_landmine_invisible": 14,
       "gm4_tnt_landmines:item/tnt_landmine_netherrack": 15,
       "gm4_tnt_landmines:item/tnt_landmine_stone_bricks": 16,
-      "gm4_tnt_landmines:item/tnt_landmine_stone": 17
+      "gm4_tnt_landmines:item/tnt_landmine_stone": 17,
+      "gm4_custom_crafters:item/custom_crafter": 18
     },
     "potion": {
       "gm4_lightning_in_a_bottle:item/lightning_in_a_bottle": 0,
