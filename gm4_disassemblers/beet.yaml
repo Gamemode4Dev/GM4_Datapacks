@@ -5,6 +5,9 @@ version: 2.2.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4_disassemblers.generate_disassembly
   - gm4.plugins.extend.module
@@ -18,6 +21,31 @@ meta:
         - lib_custom_crafters: 3.0.0
         - lib_machines: 1.1.0
       schedule_loops: [main]
+    model_data:
+      - item: player_head
+        reference: item/disassembler
+        model: block/disassembler
+      - item: tnt
+        template: legacy_machine_block
+        broadcast:
+          - reference: block/disassembler
+            textures:
+              bottom: gm4_smeltries:block/smeltery_bottom
+              top: block/disassembler_top_out
+              front: block/disassembler_side
+              side: block/disassembler_side
+          - reference: block/disassembler_side
+            textures:
+              bottom: gm4_smeltries:block/smeltery_bottom
+              top: block/disassembler_top
+              front: block/disassembler_side_front
+              side: block/disassembler_side
+          - reference: block/disassembler_down
+            textures:
+              bottom: block/disassembler_bottom_out
+              top: block/disassembler_top
+              front: block/disassembler_side
+              side: block/disassembler_side
     website:
       description: Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!
       recommended:

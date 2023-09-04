@@ -1,9 +1,0 @@
-{
-    "parent": "gm4:block/cube",
-    "textures": {
-        "side": "gm4:block/custom_crafter_side",
-        "top": "gm4:block/custom_crafter_top_out",
-        "front": "gm4:block/custom_crafter_side",
-        "bottom": "minecraft:block/furnace_top"
-    }
-}

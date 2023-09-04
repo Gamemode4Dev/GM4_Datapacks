@@ -506,7 +506,8 @@
       "gm4_tnt_landmines:item/tnt_landmine_netherrack": 15,
       "gm4_tnt_landmines:item/tnt_landmine_stone_bricks": 16,
       "gm4_tnt_landmines:item/tnt_landmine_stone": 17,
-      "gm4_custom_crafters:item/custom_crafter": 18
+      "gm4_custom_crafters:item/custom_crafter": 18,
+      "gm4_disassemblers:item/disassembler": 135
     },
     "potion": {
       "gm4_lightning_in_a_bottle:item/lightning_in_a_bottle": 0,
@@ -521,6 +522,11 @@
     "snowball": {},
     "splash_potion": {
       "gm4_lightning_in_a_bottle:item/splash_lightning_in_a_bottle": 0
+    },
+    "tnt": {
+      "gm4_disassemblers:block/disassembler": 1,
+      "gm4_disassemblers:block/disassembler_side": 5,
+      "gm4_disassemblers:block/disassembler_down": 6
     },
     "written_book": {
       "gm4_guidebook:item/guidebook": 0
