@@ -40,10 +40,10 @@ meta:
         reference: block/custom_crafter
         template: block
         textures:
-          - block/custom_crafter_top
-          - block/custom_crafter_bottom
-          - block/custom_crafter_front
-          - block/custom_crafter_side
+          bottom: block/custom_crafter_bottom
+          top: block/custom_crafter_top
+          front: block/custom_crafter_front
+          side: block/custom_crafter_side
         transforms:
           - name: item_display
             origin: [0.5, 1, 0.5]

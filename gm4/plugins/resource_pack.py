@@ -27,6 +27,7 @@ parent_logger = logging.getLogger("gm4.resource_pack")
 
 # TODO debug loggers ... everywhere
 
+#== Pydantic Plugin Config Models ==#
 class ModelData(BaseModel):
     """A complete config for a single model"""
     item: ListOption[str]
@@ -34,7 +35,7 @@ class ModelData(BaseModel):
     model: Optional[str|list[dict[str,Any]]] # defaults to same value as 'reference'
     template: str = "custom"
     transforms: Optional[list['TransformOptions']]
-    textures: Optional[ListOption[str]] # defaults to same value as reference
+    textures: Optional[ListOption[str]|dict[str,str]] # defaults to same value as reference
 
     @validator('model')
     def default_model(cls, model: str|None, values: dict[str,Any]) -> str|None:
@@ -49,7 +50,7 @@ class ModelData(BaseModel):
         return template
     
     @validator('transforms', each_item=True)
-    def apply_template_submodel(cls, transform: 'TransformOptions', values: dict[str,Any]) -> None|Type['TransformOptions']:
+    def apply_transform_submodel(cls, transform: 'TransformOptions', values: dict[str,Any]) -> None|Type['TransformOptions']:
         # find and apply proper submodel
         submodel = {m.name: m for m in TransformOptions.__subclasses__()}.get(transform.name)
         if submodel:
@@ -58,7 +59,7 @@ class ModelData(BaseModel):
     
     @validator('textures')
     def default_texture(cls, textures: ListOption[str], values: dict[str,Any]) -> ListOption[str]:
-        if (not textures or not textures.entries()) and isinstance(v:=values.get("reference"), str):
+        if not isinstance(textures, dict) and (not textures or not textures.entries()) and isinstance(v:=values.get("reference"), str):
             return ListOption(__root__=[v])
         return textures
 
@@ -78,7 +79,10 @@ class ModelData(BaseModel):
         if isinstance(self.model, str):
             ret_dict["model"] = add_namespace(self.model, namespace)
         if self.textures:
-            ret_dict["textures"] = ListOption(__root__=[add_namespace(t, namespace) for t in self.textures.entries()])
+            if isinstance(self.textures, ListOption):
+                ret_dict["textures"] = ListOption(__root__=[add_namespace(t, namespace) for t in self.textures.entries()])
+            else: # isinstance(_, dict)
+                ret_dict["textures"] = {k: add_namespace(v, namespace) for k, v in self.textures.items()}
         return ModelData.parse_obj(ret_dict)
     
 class NestedModelData(BaseModel):
@@ -88,7 +92,7 @@ class NestedModelData(BaseModel):
     model: Optional[str|list[dict[str,Any]]] # defalts to reference
     template: Optional[str] = "custom"
     transforms: Optional[list['TransformOptions']]
-    textures: Optional[ListOption[str]]
+    textures: Optional[ListOption[str]|dict[str,str]]
     broadcast: Optional[list['NestedModelData']] = []
 
     def collapse_broadcast(self) -> list['NestedModelData']:
@@ -146,19 +150,46 @@ class ModelDataOptions(PluginOptions, extra=Extra.ignore):
 #     def __init_subclass__(cls) -> None:
 #         cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
 
-def model_template(func: Callable[[ModelData], Model]) -> Callable[[ModelData], None|Model]: # TODO can i move this down in the document?
-    """Decorator for model template generators, applying needed transforms"""
-    def wrapped_func(config: ModelData) -> None|Model:
-        output_model = func(config) # get core model
-        if config.transforms:
-            for transform in config.transforms:
-                transform.apply_transform(output_model)
+# def model_template(func: Callable[[ModelData], Model]) -> Callable[[ModelData], None|Model]: # TODO can i move this down in the document?
+#     """Decorator for model template generators, applying needed transforms"""
+#     def wrapped_func(config: ModelData) -> None|Model:
+#         output_model = func(config) # get core model
+#         if config.transforms:
+#             for transform in config.transforms:
+#                 transform.apply_transform(output_model)
+#         return output_model
+#     wrapped_func.__name__ = func.__name__
+#     return wrapped_func
+
+#== Configurable Base Classes ==#
+class TemplateBase():
+    """A base class to extend for model templates"""
+    default_transforms: list['TransformOptions'] = []
+    name: str
+    texture_map: list[str] = []
+
+    @classmethod
+    def generate_model(cls, config: ModelData) -> Model|None:
+        """Processes the template, transforms and returns the model object"""
+        if cls.texture_map and isinstance(config.textures, ListOption):
+            config = ModelData(**config.dict() | {"textures": dict(zip(cls.texture_map, config.textures.entries()))})
+        output_model = cls.process(config)
+        if output_model:
+            if cls.default_transforms:
+                for transform in cls.default_transforms:
+                    transform.apply_transform(output_model)
+            if config.transforms:
+                for transform in config.transforms:
+                    transform.apply_transform(output_model)
         return output_model
-    wrapped_func.__name__ = func.__name__
-    return wrapped_func
+
+    @staticmethod
+    def process(config: ModelData) -> Model|None:
+        """Overridden to create and return the model object"""
+        raise NotImplementedError()
 
 class TransformOptions(BaseModel, extra=Extra.allow):
-    """A pydantic model to be extended to configure model transformers"""
+    """A pydantic model to extend for configured model transformers"""
     name: ClassVar[str]
     def __init_subclass__(cls) -> None:
         cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
@@ -172,6 +203,7 @@ class TransformOptions(BaseModel, extra=Extra.allow):
 NestedModelData.update_forward_refs()
 ModelData.update_forward_refs()
 
+#== Beet Plugins ==#
 def beet_default(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
     # mecha register
@@ -191,15 +223,6 @@ class GM4ResourcePack():
     def __init__(self, ctx: Context): # TODO dataclass-ify this?
         self.ctx = ctx
         self.registry = JsonFile(source_path="gm4/modeldata_registry.json").data # TODO caching/save/output this
-        self.model_templates = [
-            self.custom,
-            self.generated,
-            self.generated_overlay,
-            self.vanilla,
-            self.handheld,
-            self.cobblestone,
-            self.block
-        ] # TODO init with default templates
         self.logger = parent_logger.getChild(ctx.project_id)
 
     @cached_property
@@ -328,96 +351,105 @@ class GM4ResourcePack():
     #== Mecha Transformer Rules ==#
     # TODO
 
-    #== Model file generation and template registration ==#
+    #== Model file generation ==#
     def generate_model_files(self):
         """Create individual models for each item/block according to its config"""
         for model in self.opts.model_data:
             if model.textures is None:
                 continue # validation should ensure this - here for type checking
 
-            # warn on missing textures
-            for tex in model.textures.entries():
-                if tex not in self.ctx.assets.textures:
-                    self.logger.warning(f"Referenced texture '{tex}' does not exist") # TODO logger and format as MC messaage
+            # # warn on missing textures # FIXME restore this functionality
+            # for tex in model.textures.entries():
+            #     if tex not in self.ctx.assets.textures:
+            #         self.logger.warning(f"Referenced texture '{tex}' does not exist") # TODO logger and format as MC messaage
             
             # retrieve model generator function
             try:
-                g = next((f for f in self.model_templates if f.__name__ == model.template))
+                template = next((f for f in TemplateBase.__subclasses__() if f.name == model.template))
             except StopIteration:
                 raise KeyError("template not found") # TODO this error properly
             
             # generate model and mount to the pack
-            m = g(model)
+            m = template.generate_model(model)
             if m and isinstance(model.model, str): # pydantic validation ensures type match
                 self.ctx.assets.models[model.model] = m
     
-     # default model templates # FIXME should these be class members? Or generated on init and not bound after that point? Thdy don't have self so maybe not in class
+#== Default Templates and Transforms ==#
+class BlankTemplate(TemplateBase):
+    name = "custom"
+
     @staticmethod
-    @model_template
-    def custom(model_config: ModelData): # TODO decorator for argument passing? Verification of texture existance?
+    def process(config: ModelData): # TODO decorator for argument passing? Verification of texture existance?
         """A model file will be provided in source - do not generate a model"""
         return None
 
+class GeneratedTemplate(TemplateBase):
+    name = "generated"
+
     @staticmethod
-    @model_template
-    def generated(model_config: ModelData):
+    def process(config: ModelData):
         return Model({
             "parent": "minecraft:item/generated",
             "textures": {
-                "layer0": f"{model_config.textures.entries()[0]}" # TODO should this just layer every specified texture?
+                "layer0": f"{config.textures.entries()[0]}" # TODO should this just layer every specified texture?
             }
         })
     
+class GeneratedOverlayTemplate(TemplateBase):
+    name = "generated_overlay"
+
     @staticmethod
-    @model_template
-    def generated_overlay(model_config: ModelData): # TODO should this just be default behavior for the "generated" template?
+    def process(config: ModelData): # TODO should this just be default behavior for the "generated" template?
         """A special-case 'generated' template, where an 'overlay' texture is specified by appending '_overlay' to its filename"""
         return Model({
             "parent": "minecraft:item/generated",
             "textures": {
-                "layer0": f"{model_config.textures.entries()[0]}",
-                "layer1": f"{model_config.textures.entries()[0]}_overlay"
+                "layer0": f"{config.textures.entries()[0]}",
+                "layer1": f"{config.textures.entries()[0]}_overlay"
             }
         })
 
+class HandheldTemplate(TemplateBase):
+    name = "handheld"
+
     @staticmethod
-    @model_template
-    def handheld(model_config: ModelData): # TODO can some of the similar ones be function generated even?
+    def process(config: ModelData): # TODO can some of the similar ones be function generated even?
         return Model({
             "parent": "minecraft:item/handheld",
             "textures": {
-                "layer0": f"{model_config.textures.entries()[0]}" # TODO this path correction
+                "layer0": f"{config.textures.entries()[0]}" # TODO this path correction
             }
         })
 
+class VanillaTemplate(TemplateBase):
+    name = "vanilla"
+
     @staticmethod
-    @model_template
-    def vanilla(model_config: ModelData):
-        item = model_config.item.entries()[0] # TODO should only be one entry?
+    def process(config: ModelData):
+        item = config.item.entries()[0] # TODO should only be one entry?
         return Model({
             "parent": f"minecraft:item/{item}"
         })
     # TODO this should also prevent the texture warnings? Maybe that should be a method of these templates?
 
+class BlockTemplate(TemplateBase):
+    name = "block"
+    texture_map = ["top", "bottom", "front", "side"]
+
     @staticmethod
-    @model_template
-    def cobblestone(model_config: ModelData):
-        return Model({
-            "parent": "minecraft:block/cobblestone"
-        })
-    
-    @staticmethod
-    @model_template
-    def block(model_config: ModelData):
+    def process(config: ModelData):
+        print(config.textures)
+        if not isinstance(config.textures, dict):
+            return # FIXME this is garunteed by the sole place the proicess function gets called from? How can I avoid type-checker errors
         return Model({
             "parent": "minecraft:block/cube",
             "textures": {
-                "down":  model_config.textures.entries()[1],
-                "up":    model_config.textures.entries()[0],
-                "north": model_config.textures.entries()[3],
-                "south": model_config.textures.entries()[2],
-                "west":  model_config.textures.entries()[3],
-                "east":  model_config.textures.entries()[3]
+                "down":  config.textures['bottom'],
+                "up":    config.textures['top'],
+                "north": config.textures['side'],
+                "south": config.textures['front'],
+                "west":  config.textures['side'],
+                "east":  config.textures['side']
             }
         })
 
