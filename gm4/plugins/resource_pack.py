@@ -197,7 +197,8 @@ class GM4ResourcePack():
             self.generated_overlay,
             self.vanilla,
             self.handheld,
-            self.cobblestone
+            self.cobblestone,
+            self.block
         ] # TODO init with default templates
         self.logger = parent_logger.getChild(ctx.project_id)
 
@@ -403,6 +404,21 @@ class GM4ResourcePack():
     def cobblestone(model_config: ModelData):
         return Model({
             "parent": "minecraft:block/cobblestone"
+        })
+    
+    @staticmethod
+    @model_template
+    def block(model_config: ModelData):
+        return Model({
+            "parent": "minecraft:block/cube",
+            "textures": {
+                "down":  model_config.textures.entries()[1],
+                "up":    model_config.textures.entries()[0],
+                "north": model_config.textures.entries()[3],
+                "south": model_config.textures.entries()[2],
+                "west":  model_config.textures.entries()[3],
+                "east":  model_config.textures.entries()[3]
+            }
         })
 
 class ItemDisplayModel(TransformOptions):
