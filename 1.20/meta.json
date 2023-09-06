@@ -1,5 +1,5 @@
 {
-  "last_commit": "b106c706d9fc4feba1a0e077350a5ade9a17d7b9",
+  "last_commit": "c0ca619f46bc40e81c7fbb3c7a43a9ca0d0a3438",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1314,6 +1314,26 @@
       "publish_date": "2023-07-10"
     },
     {
+      "id": "gm4_mountaineering",
+      "name": "Mountaineering",
+      "version": "1.0.0",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "foodiebonus"
+        ]
+      },
+      "requires": [],
+      "description": "A mezze of mountaineering means! Glide down slopes and scale cliffs.",
+      "recommends": [],
+      "important_note": "Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null,
+      "publish_date": "2023-09-06"
+    },
+    {
       "id": "gm4_mysterious_midnights",
       "name": "Mysterious Midnights",
       "version": "1.3.1",
@@ -2428,6 +2448,10 @@
       "links": [
         "https://youtube.com/user/Energyxxer"
       ]
+    },
+    "foodiebonus": {
+      "name": "foodiebonus",
+      "links": []
     },
     "Fyid": {
       "name": "Fyid",
