@@ -216,7 +216,7 @@ def versioned_namespace(ctx: Context, version: Version):
         "replace": f"{versioned_namespace}:\\1"
     }))
     ctx.require(find_replace(data_pack={"match": "*"}, substitute={
-        "find": f"(?<!#)(?<!storage )(?<!storage\":\"){namespace}:([a-z0-9_/]+)", # NOTE because re module requires fixed-length look behind, storage-referencing json *must* use no spaces between "storage":"ns:loc"
+        "find": f"(?<![#$])(?<!storage )(?<!storage\":\"){namespace}:([a-z0-9_/]+)", # NOTE because re module requires fixed-length look behind, storage-referencing json *must* use no spaces between "storage":"ns:loc"
         "replace": f"{versioned_namespace}:\\1"
     }))
     

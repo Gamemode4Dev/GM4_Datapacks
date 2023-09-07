@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:player_head",
-      "nbt": "{CustomModelData:3420060,SkullOwner:{Id:[I;1567268555,400377645,-2090593244,-1749540666],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYxNjM4NTc2NTU0MSwKICAicHJvZmlsZUlkIiA6ICI3NzI3ZDM1NjY5Zjk0MTUxODAyM2Q2MmM2ODE3NTkxOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJsaWJyYXJ5ZnJlYWsiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjkxNzBhNzY4ZGY1MDQ1OTcwM2JkYWRkYjNlZGI2OTMyNmJkY2NjY2JmNDQxODM4MDM0YTI0N2I2NDFiN2UyZiIKICAgIH0KICB9Cn0=\"}]}}}"
+      "nbt": "{CustomModelData:3420060,SkullOwner:'$heart_canister_tier_1'}"
     },
     "title": {
       "text": "Check your guidebook!",
