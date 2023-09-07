@@ -1,6 +1,7 @@
 import subprocess
 import warnings
 from dataclasses import dataclass
+from typing import Any
 
 def run(cmd: list[str]) -> str:
 	"""Run a shell command and return the stdout."""
@@ -30,3 +31,18 @@ class Version():
 		if type(None) in map(type, [self.major, self.minor, self.patch]):
 			raise TypeError(f"Version number cannot be converted to integer when one or more fields are not set")
 		return 100_000*self.major + 1_000*self.minor + self.patch # type: ignore
+	
+def nested_get(d: dict[str, Any], key: str) -> list[Any]:
+	"""Recursively traverses a string-keyed dict (like minecraft json files) for the specified key, returning all that exist
+		returns empty list and throws no errors if key does not exist"""
+	ret_list: list[Any] = []
+	for k, v in d.items():
+		if k == key:
+			ret_list.append(d[k])
+		elif isinstance(v, dict):
+			ret_list.extend(nested_get(d[k], key))
+		elif isinstance(v, list):
+			for elem in d[k]:
+				if isinstance(elem, dict):
+					ret_list.extend(nested_get(elem, key)) #type: ignore ; NBT is hard to type due to its nested nature
+	return ret_list

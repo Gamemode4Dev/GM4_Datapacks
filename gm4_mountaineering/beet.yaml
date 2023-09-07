@@ -1,0 +1,29 @@
+id: gm4_mountaineering
+name: Mountaineering
+version: 1.0.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_custom_crafters
+
+meta:
+  gm4:
+    versioning:
+      required:
+        - lib_custom_crafters: 3.0.0
+      schedule_loops:
+        - main
+        - fast_main
+    website:
+      description: A mezze of mountaineering means! Glide down slopes and scale cliffs.
+      recommended: []
+      notes:
+        - Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.
+    video: null
+    wiki: null
+    credits:
+      Creator:
+        - foodiebonus

@@ -28,48 +28,63 @@ $ beet dev bat_grenades disassemblers
 $ beet link "My World"
 $ beet dev metallurgy *_shamir
 
-# auto-reload when changing files
+# auto-/reload when changing files
 $ beet dev gm4_bat_grenades --reload
+
+# watch for file changes and rebuild
+$ beet dev gm4_bat_grenades --watch
 ```
 
 ### beet.yaml
 Each module has a `beet.yaml` file that contains information on how to build the pack and some metadata used on the website.
 ```yaml
-# Config file to extend. For modules should always be '../module.yaml'.
-extend: '../module.yaml'
-
 # The ID and name of this module. The ID should always be the same as the current directory name
 id: gm4_disassemblers
 name: Disassemblers
-# Version is only necessary when publishing to Modrinth
-version: '1.3.8'
+# Version "patch" value is managed by a github action. Leave it as 'X'
+version: '1.3.X'
+
+# Load the current directory
+data_pack:
+  load: .
 
 # The build pipeline for this module
 pipeline:
-  # First include any libraries. The base library is automatically included.
-  - directory: '../lib_machines'
-    extend: 'beet.yaml'
-  # Load the current directory
-  - data_pack:
-      load: .
-  # Run any plugins to generate extra files or make changes programatically
+  # First run any plugins to generate extra files or make changes programatically
   - gm4_disassemblers.generate_disassembly
 
-# Metadata for the website and credits
+  # Extend the default config for modules. This adds the base library and other boilerplate
+  - gm4.plugins.extend.modules
+
+  # Include any libraries
+  - gm4.plugins.include.lib_machines
+  - gm4.plugins.include.lib_custom_crafters
+
+# Metadata for the build and publishing on the website
 meta:
-  modrinth: # This section is only necessary when publishing to Modrinth
-    project_id: itk6Zfe2
   gm4:
-    # A description. This should be a good summary of what this module adds or achieves, to get someone interested in this module
-    description: Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!
-    # Any required modules
-    required: []
-    # Any recommended modules
-    recommended:
-      - gm4_resource_pack
-      - gm4_relocators
-    # Important notes for people when they download the module. This can
-    notes: []
+    versioning:
+      # A list of minimum-required versions for libraries or other modules
+      required:
+        - lib_custom_crafters: 3.0.0
+        - lib_machines: 1.1.0
+        - gm4_bat_grenades: 1.2.0
+
+      # A list of any functions that create "schedule loop clocks". Necessary to turn off the module in case of a load failure
+      schedule_loops:
+        - main # namespace assumed to be the id
+        - gm4_bat_grenades:tick # but one can be manually specified
+
+    website:
+      # A description. This should be a good summary of what this module adds or achieves, to get someone interested in this module
+      description: Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!
+      # Any recommended modules
+      recommended:
+        - gm4_resource_pack
+        - gm4_relocators
+      # Important notes for people when they download the module. This can be empty
+      notes: []
+
     # Either null or a link to the YouTube video
     video: null
     # Either null or a link to the wiki page
@@ -80,29 +95,24 @@ meta:
         - Sparks
       Textures by:
         - kyrkis
+
+  modrinth: # This section is only necessary when publishing to Modrinth
+    project_id: itk6Zfe2
+  smithed: # This section is only necessary when publiching to Smithed
+    pack_id: gm4_disassemblers
 ```
 
 ### Load
 Gamemode 4 uses [LanternMC Load](https://github.com/LanternMC/Load) so modules work nicely with other data packs. This allows modules to check which version of the gm4 base is loaded and prevents conflicts. It also allows checking whether reliant modules are installed.
 
-If your module requires another module, you need to list it explicitly in a few places:
-- `data/load/tags/functions/gm4_module_id.json`: Prepend the values list with a value for each direct dependency. The order is important! Use optional tag entries, for example:
-```json
-{
-  "values": [
-    { "id": "#load:gm4_metallurgy", "required": false },
-    "gm4_vigere_shamir:load"
-  ]
-}
-```
-- `data/gm4_module_id/functions/load.mcfunction`: The first line checks scores to see if all dependencies are loaded. The following lines provide additional logging so the user can see which packs are incompatible or missing. This is discussed in the next section.
+The required files to interact with LanternMC Load are generated automatically by a beet plugin included in the `extend.module` config, based on the metadata specified in `meta.gm4.versioning` of the `beet.yaml`. This includes the previously required `data/load/tags/functions/gm4_module_id.json` and `data/gm4_module_id/functions/load.mcfunction`
 
-Initialization goes above all other commands in `init.mcfunction`. This is mostly for adding scoreboards and initializing fake players.
+If all required dependencies are present, Lantern Load will call `init.mcfunction`. This function is written by the developer, and is responsible for adding necessary scoreboards and `/schedule`-ing any clocked functions.
 
 #### Logging
 Messages can be logged during the load process. This can be done by appending to the `queue` tag in the `gm4:log` storage. Here are a few examples:
 ```mcfunction
-data modify storage gm4:log queue append value {type:"install",module:"XP Storage"}
+data modify storage gm4:log queue append value {type:"text",message:"We've been attempting to contant you about your cars extended warranty"}
 data modify storage gm4:log queue append value {type:"missing",module:"Relocators",require:"Custom Crafters"}
 ```
 

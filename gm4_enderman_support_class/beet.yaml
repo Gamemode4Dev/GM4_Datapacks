@@ -1,12 +1,12 @@
-extend: '../module.yaml'
-
 id: gm4_enderman_support_class
 name: Enderman Support Class
 version: 1.4.X
 
+data_pack:
+  load: .
+
 pipeline:
-  - data_pack:
-      load: .
+  - gm4.plugins.extend.module
 
 meta:
   gm4:

@@ -4,21 +4,26 @@ import os
 import json
 import requests
 import shutil
+import logging
 from gm4.utils import run
+
+parent_logger = logging.getLogger("gm4.output")
 
 MODRINTH_API = "https://api.modrinth.com/v2"
 MODRINTH_AUTH_KEY = "BEET_MODRINTH_TOKEN"
 SMITHED_API = "https://api.smithed.dev/v2"
 SMITHED_AUTH_KEY = "BEET_SMITHED_TOKEN"
-SUPPORTED_GAME_VERSIONS = ["1.20"]
-	# NOTE smithed only takes one game version number. Uses the first value in this list
+SUPPORTED_GAME_VERSIONS = ["1.20", "1.20.1"]
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/release-pipeline (gamemode4official@gmail.com)"
 
 def beet_default(ctx: Context):
-	"""Saves the datapack to the ./out folder."""
+	"""Saves the datapack to the ./out folder in it's exit phase.
+	 	Should be first in pipeline to properly wrap all other plugins cleanup phases"""
 	version = os.getenv("VERSION", "1.20")
 	out_dir = Path("out")
 
+	yield # wait for exit phase, after other plugins cleanup
+	
 	ctx.data.save(
 		path=out_dir / f"{ctx.project_id}_{version.replace('.', '_')}",
 		overwrite=True,
@@ -28,6 +33,7 @@ def beet_default(ctx: Context):
 def release(ctx: Context):
 	"""
 	Saves the zipped datapack and metadata to the ./release/{version} folder.
+		Should be first in pipeline to properly wrap all other plugins cleanup phases
 	
 	If the module has the `version` and `meta.modrinth.project_id` fields, and
 	`BEET_MODRINTH_TOKEN` environment variable is set, will try to publish a
@@ -40,6 +46,8 @@ def release(ctx: Context):
 	version_dir = os.getenv("VERSION", "1.20")
 	release_dir = Path("release") / version_dir
 	file_name = f"{ctx.project_id}_{version_dir.replace('.', '_')}.zip"
+
+	yield # wait for exit phase, after other plugins cleanup
 	
 	ctx.data.save(
 		path=release_dir / file_name,
@@ -67,6 +75,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 	'''Attempts to publish pack to modrinth'''
 	modrinth = ctx.meta.get("modrinth", None)
 	auth_token = os.getenv(MODRINTH_AUTH_KEY, None)
+	logger = parent_logger.getChild(f"modrinth.{ctx.project_id}")
 	if modrinth and auth_token:
 		modrinth_id = modrinth["project_id"]
 		
@@ -74,34 +83,44 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 		res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT})
 		if not (200 <= res.status_code < 300):
 			if res.status_code == 404:
-				print(f"[GM4] [Modrinth] Cannot edit description of modrinth project {modrinth_id} as it doesn't exist.")
+				logger.warning(f"Cannot edit description of modrinth project {modrinth_id} as it doesn't exist.")
 			else:
-				print(f"[GM4] [Modrinth] Failed to get project: {res.status_code} {res.text}")
+				logger.warning(f"Failed to get project: {res.status_code} {res.text}")
 			return
 		existing_readme = res.json()["body"]
 		if existing_readme != (d:=ctx.meta['modrinth_readme'].text):
+			logger.debug("Readme and modrinth-page content differ. Updating webpage body")
 			res = requests.patch(f"{MODRINTH_API}/project/{modrinth_id}", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, json={"body": d})
 			if not (200 <= res.status_code < 300):
-				print(f"[GM4] [Modrinth] Failed to update description: {res.status_code} {res.text}")
-			print(f"[GM4] [Modrinth] Successfully updated description of {ctx.project_name}")
+				logger.warning(f"Failed to update description: {res.status_code} {res.text}")
+			logger.info(f"Successfully updated description of {ctx.project_name}")
 
 		# upload datapack zip
 		if ctx.project_version:
 			version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
 			if version is None:
-				print("[GM4] [Modrinth] Full version number not available in ctx.meta. Skipping publishing")
+				logger.warning("Full version number not available in ctx.meta. Skipping publishing")
 				return
 
 			res = requests.get(f"{MODRINTH_API}/project/{modrinth_id}/version", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT})
 			if not (200 <= res.status_code < 300):
 				if res.status_code == 404:
-					print(f"[GM4] [Modrinth] Cannot publish to modrinth project {modrinth_id} as it doesn't exist.")
+					logger.warning(f"Cannot publish to modrinth project {modrinth_id} as it doesn't exist.")
 				else:
-					print(f"[GM4] [Modrinth] Failed to get project versions: {res.status_code} {res.text}")
+					logger.warning(f"Failed to get project versions: {res.status_code} {res.text}")
 				return
 			project_data = res.json()
 			matching_version = next((v for v in project_data if v["version_number"] == str(version)), None)
-			if matching_version is not None:
+			game_versions = modrinth.get("minecraft", SUPPORTED_GAME_VERSIONS)
+			if matching_version is not None: # patch version already exists
+				# update mc versions if necessary
+				if not set(matching_version["game_versions"]) == set(game_versions):
+					logger.debug("Additional MC version support has been added to an existing patch version. Updating existing modrinth version data")
+					res = requests.patch(f"{MODRINTH_API}/version/{matching_version['id']}", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, json={
+						"game_versions": game_versions
+					})
+					if not (200 <= res.status_code < 300):
+						logger.warning(f"Failed to patch project versions: {res.status_code} {res.text}")
 				return
 
 			with open(release_dir / file_name, "rb") as f:
@@ -109,7 +128,6 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 
 			changelog = run(["git", "log", "-1", "--format=%s"])
 
-			game_versions = modrinth.get("minecraft", SUPPORTED_GAME_VERSIONS)
 			res = requests.post(f"{MODRINTH_API}/version", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, files={
 				"data": json.dumps({
 					"name": f"{ctx.project_name} v{version}",
@@ -126,26 +144,27 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 				file_name: file_bytes,
 			})
 			if not (200 <= res.status_code < 300):
-				print(f"[GM4] [Modrinth] Failed to publish new version version: {res.status_code} {res.text}")
+				logger.warning(f"Failed to publish new version version: {res.status_code} {res.text}")
 				return
-			print(f"[GM4] [Modrinth] Successfully published {res.json()['name']}")
+			logger.info(f"Successfully published {res.json()['name']}")
 
 def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 	"""Attempts to publish pack to smithed"""
 	smithed = ctx.meta.get("smithed", None)
 	auth_token = os.getenv(SMITHED_AUTH_KEY, None)
+	logger = parent_logger.getChild(f"smithed.{ctx.project_id}")
 	mc_version_dir = os.getenv("VERSION", "1.20")
 	if smithed and auth_token and ctx.project_version:
-		version = version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
+		version = ctx.cache["gm4_manifest"].json["modules"].get(ctx.project_id, {}).get("version", None)
 		smithed_id = smithed["pack_id"]
 
 		# get project data and existing versions
-		res = requests.get(f"{SMITHED_API}/packs/{smithed_id}")#/versions")
+		res = requests.get(f"{SMITHED_API}/packs/{smithed_id}")
 		if not (200 <= res.status_code < 300):
 			if res.status_code == 404:
-				print(f"[GM4] [Smithed] Cannot publish to smithed project {smithed_id} as it doesn't exist.")
+				logger.warning(f"Cannot publish to smithed project {smithed_id} as it doesn't exist.")
 			else:
-				print(f"[GM4] [Smithed] Failed to get project: {res.status_code} {res.text}")
+				logger.warning(f"Failed to get project: {res.status_code} {res.text}")
 			return
 		
 		project_data = res.json()
@@ -157,6 +176,7 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 		current_readme = f"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/{mc_version_dir}/generated/smithed_readmes/{ctx.project_id}.md"
 
 		if project_display["icon"] != current_icon or project_display["webPage"] != current_readme:
+			logger.debug("Pack Icon or Readme hyperlink is incorrect. Updating project")
 			res = requests.patch(f"{SMITHED_API}/packs/{smithed_id}", params={'token': auth_token},
 				json={"data": {
 						"display": {
@@ -165,22 +185,33 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 						},
 				}})
 			if not (200 <= res.status_code < 300):
-				print(f"[GM4] [Smithed] Failed to update descripion: {res.status_code} {res.text}")
-			print(f"[GM4] [Smithed] {ctx.project_name} {res.text}")
+				logger.warning(f"Failed to update descripion: {res.status_code} {res.text}")
+			logger.info(f"{ctx.project_name} {res.text}")
 
 		project_versions = project_data["versions"]
 		matching_version = next((v for v in project_versions if v["name"] == str(version)), None)
-		if matching_version is not None:
+		game_versions = smithed.get("minecraft", SUPPORTED_GAME_VERSIONS)
+		if matching_version is not None: # patch version already exists
+			# update MC version if necessary
+			if not set(matching_version["supports"]) == set(game_versions):
+				logger.debug("Additional MC version support has been added to an existing patch version. Updating existing smithed version data")
+				res = requests.patch(f"{SMITHED_API}/packs/{smithed_id}/versions/{matching_version['name']}", params={'token': auth_token}, json={
+					"data": {
+						"supports": game_versions
+					}
+				})
+				if not (200 <= res.status_code < 300):
+					logger.warning(f"Failed to patch project versions: {res.status_code} {res.text}")
 			return
 
 		# remove other existing versions for that mc version
-		mc_version_matching_version = (v["name"] for v in project_versions if v['supports'][0] == SUPPORTED_GAME_VERSIONS[0]) # NOTE smithed currently only supports one game version
+		mc_version_matching_version = (v["name"] for v in project_versions if set(v['supports']) & set(game_versions))
 		for v in mc_version_matching_version:
 			res = requests.delete(f"{SMITHED_API}/packs/{smithed_id}/versions/{v}", params={'token': auth_token})
 			if not (200 <= res.status_code < 300):
-				print(f"[GM4] [Smithed] Failed to delete {ctx.project_name} version {v}: {res.status_code} {res.text}")
+				logger.warning(f"Failed to delete {ctx.project_name} version {v}: {res.status_code} {res.text}")
 			else:
-				print(f"[GM4] [Smithed] {ctx.project_name} {res.text}")
+				logger.info(f"{ctx.project_name} {res.text}")
 		
 		# post new version
 		res = requests.post(f"{SMITHED_API}/packs/{smithed_id}/versions",
@@ -191,14 +222,14 @@ def publish_smithed(ctx: Context, release_dir: Path, file_name: str):
 					"resourcepack": ""
 				},
 				"name": version,
-				"supports": SUPPORTED_GAME_VERSIONS[0],
+				"supports": game_versions,
 				"dependencies": []
 			}}
 		)
 		if not (200 <= res.status_code < 300):
-			print(f"[GM4] [Smithed] Failed to publish new version of {ctx.project_name}: {res.status_code} {res.text}")
+			logger.warning(f"Failed to publish new version of {ctx.project_name}: {res.status_code} {res.text}")
 			return
-		print(f"[GM4] [Smithed] {ctx.project_name} {res.text}")
+		logger.info(f"{ctx.project_name} {res.text}")
 
 
 
@@ -223,7 +254,7 @@ def readmes(ctx: Context):
 		os.makedirs(base_path, exist_ok=True)
 		ctx.data.extra["README.md"].dump(base_path, "GM4_README.md")
 	else:
-		print(f"[GM4] {ctx.project_id} has no README.md")
+		parent_logger.info(f"[GM4] {ctx.project_id} has no README.md")
 
 	for file, ext in {"modrinth_readme":"md", "smithed_readme":"md", "pmc_readme":"txt"}.items():
 		if file in ctx.meta:

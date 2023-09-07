@@ -1,19 +1,29 @@
 id: gm4_custom_crafters
 name: Gamemode 4 Custom Crafters
-version: 3.0.0
+version: 3.1.0
 
-extend: ../library.yaml
+data_pack:
+  load: 
+    data: data
+
+require:
+  - gm4.plugins.player_heads
+
 pipeline:
-  - directory: '../lib_machines'
-    extend: 'beet.yaml'
-  - data_pack:
-      load: .
   - lib_custom_crafters.generate_item_tags
+  - gm4.plugins.module.gm4_root_advancement
+  - gm4.plugins.player_heads.process_json_files
+  - mecha
+  - gm4.plugins.extend.library
+  - gm4.plugins.include.lib_machines
+  - gm4.plugins.include.lib_forceload
 
 meta:
   gm4:
     versioning:
-      required: [lib_machines: 1.1.0]
+      required: 
+        - lib_machines: 1.1.0
+        - lib_forceload: 1.2.0
       schedule_loops: [main]
       extra_version_injections:
         functions: 
@@ -30,3 +40,7 @@ meta:
         - SpecialBuilder32
       Textures by:
         - kyrkis
+  mecha:
+    layout: preserve
+    nbt_compact: True
+    cmd_compact: True
