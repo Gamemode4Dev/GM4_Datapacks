@@ -9,6 +9,9 @@ data_pack:
 resource_pack:
   load: .
 
+require:
+  - gm4.plugins.resource_pack
+
 pipeline:
   - lib_custom_crafters.generate_item_tags
   - gm4.plugins.module.gm4_root_advancement
@@ -35,7 +38,7 @@ meta:
     model_data:
       - item: player_head
         reference: item/custom_crafter
-        template: generated
+        model: block/custom_crafter
       - item: crafting_table
         template: legacy_machine_block
         broadcast:

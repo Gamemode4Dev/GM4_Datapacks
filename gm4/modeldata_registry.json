@@ -222,6 +222,9 @@
     "furnace_minecart": {
       "gm4_tunnel_bores:item/piston_minecart": 0
     },
+    "glass": {
+      "gm4_liquid_tanks:block/liquid_tank": 0
+    },
     "glass_bottle": {
       "gm4_sunken_treasure:item/message_in_a_bottle": 0,
       "gm4_zauber_cauldrons:item/magic_in_a_bottle": 1

@@ -5,6 +5,9 @@ version: 2.3.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
@@ -17,6 +20,16 @@ meta:
         - lib_custom_crafters: 3.0.0
         - lib_machines: 1.1.0
       schedule_loops: [main]
+    model_data:
+      - item: glass
+        reference: block/liquid_tank
+        template: custom
+        transforms:
+          - name: item_display
+            origin: [0.5,0.9,0.5]
+            scale: [0.438,0.438,0.438]
+            translation: [0,0,0]
+            display: head
     website:
       description: Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!
       recommended:

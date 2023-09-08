@@ -11,7 +11,8 @@ from beet import (
     JsonFile,
     ListOption,
     Model,
-    PluginOptions
+    PluginOptions,
+    NamespaceProxy
 )
 from beet.contrib.vanilla import Vanilla
 from beet.core.utils import format_validation_error
@@ -152,11 +153,11 @@ class TemplateBase():
     texture_map: list[str]|None = None
 
     @classmethod
-    def generate_model(cls, config: ModelData) -> Model|None:
+    def generate_model(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> Model|None:
         """Processes the template, transforms and returns the model object"""
         if cls.texture_map and isinstance(config.textures, ListOption):
             config = ModelData(**config.dict() | {"textures": dict(zip(cls.texture_map, config.textures.entries()))})
-        output_model = cls.process(config)
+        output_model = cls.process(config, models_container)
         if output_model:
             if cls.default_transforms:
                 for transform in cls.default_transforms:
@@ -167,7 +168,7 @@ class TemplateBase():
         return output_model
 
     @staticmethod
-    def process(config: ModelData) -> Model|None:
+    def process(config: ModelData, models_container: NamespaceProxy[Model]) -> Model|None:
         """Overridden to create and return the model object"""
         raise NotImplementedError()
 
@@ -189,6 +190,7 @@ ModelData.update_forward_refs()
 #== Beet Plugins ==#
 def beet_default(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
+    # print(ctx.assets[Model])
     # mecha register
 
     # yield
@@ -358,7 +360,7 @@ class GM4ResourcePack():
                 raise KeyError("template not found") # TODO this error properly
             
             # generate model and mount to the pack
-            m = template.generate_model(model)
+            m = template.generate_model(model, self.ctx.assets.models)
             if m and isinstance(model.model, str): # pydantic validation ensures type match
                 self.ctx.assets.models[model.model] = m
     
@@ -367,15 +369,23 @@ class BlankTemplate(TemplateBase):
     name = "custom"
 
     @staticmethod
-    def process(config: ModelData): # TODO decorator for argument passing? Verification of texture existance?
-        """A model file will be provided in source - do not generate a model"""
+    def process(config: ModelData, models_container: NamespaceProxy[Model]):
+        """A model file will be provided in source - do not generate a model.
+            Will process any specified transforms and add them to the model file"""
+        if config.transforms:
+            if not isinstance(config.model, str):
+                raise ValueError("Complex model terms are incompatiable here") # TODO this error. ConfigError?
+            try:
+                return models_container[config.model]
+            except:
+                parent_logger.warning(f"Custom specified model {config.model} does not exist, but was configured to recieve transforms.") # TODO logger term
         return None
 
 class GeneratedTemplate(TemplateBase):
     name = "generated"
 
     @staticmethod
-    def process(config: ModelData):
+    def process(config: ModelData, models_container: NamespaceProxy[Model]):
         return Model({
             "parent": "minecraft:item/generated",
             "textures": {
@@ -387,7 +397,7 @@ class GeneratedOverlayTemplate(TemplateBase):
     name = "generated_overlay"
 
     @staticmethod
-    def process(config: ModelData): # TODO should this just be default behavior for the "generated" template?
+    def process(config: ModelData, models_container: NamespaceProxy[Model]): # TODO should this just be default behavior for the "generated" template?
         """A special-case 'generated' template, where an 'overlay' texture is specified by appending '_overlay' to its filename"""
         return Model({
             "parent": "minecraft:item/generated",
@@ -401,7 +411,7 @@ class HandheldTemplate(TemplateBase):
     name = "handheld"
 
     @staticmethod
-    def process(config: ModelData): # TODO can some of the similar ones be function generated even?
+    def process(config: ModelData, models_container: NamespaceProxy[Model]): # TODO can some of the similar ones be function generated even?
         return Model({
             "parent": "minecraft:item/handheld",
             "textures": {
@@ -413,7 +423,7 @@ class VanillaTemplate(TemplateBase):
     name = "vanilla"
 
     @staticmethod
-    def process(config: ModelData):
+    def process(config: ModelData, models_container: NamespaceProxy[Model]):
         item = config.item.entries()[0] # TODO should only be one entry?
         return Model({
             "parent": f"minecraft:item/{item}"
@@ -425,7 +435,7 @@ class BlockTemplate(TemplateBase):
     texture_map = ["top", "bottom", "front", "side"]
 
     @staticmethod
-    def process(config: ModelData):
+    def process(config: ModelData, models_container: NamespaceProxy[Model]):
         if not isinstance(config.textures, dict):
             return # FIXME this is garunteed by the sole place the proicess function gets called from? How can I avoid type-checker errors
         return Model({
@@ -444,7 +454,7 @@ class ItemDisplayModel(TransformOptions):
     """Calculates the model transform for an item_display entity, located at the specified origin, facing south, for the model to align with the block-grid"""
     origin: list[float] = Field(..., max_items=3, min_items=3)
     scale: list[float] = Field(..., max_items=3, min_items=3)
-    translation: list[float] = Field(..., max_items=3, min_items=3)
+    translation: list[float] = Field(default=[0,0,0], max_items=3, min_items=3)
     display: Literal["none", "thirdperson_lefthand", "thirdperson_righthand", "firstperson_lefthand", "firstperson_righthand", "head", "gui", "ground", "fixed"]
     name: ClassVar[Literal["item_display"]] = "item_display"
 
