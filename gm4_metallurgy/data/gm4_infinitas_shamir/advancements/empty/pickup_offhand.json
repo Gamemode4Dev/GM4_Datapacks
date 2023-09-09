@@ -21,13 +21,18 @@
             }
           }
         ],
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:cauldron"
-            ]
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:cauldron"
+                ]
+              }
+            }
           }
-        }
+        ]
       }
     },
     "lava_bucket": {
@@ -50,7 +55,7 @@
       }
     },
     "milk_bucket": {
-      "trigger": "minecraft:filled_bucket",
+      "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
         "player": [
           {
@@ -63,7 +68,7 @@
         ],
         "item": {
           "items": [
-            "minecraft:milk_bucket"
+            "minecraft:bucket"
           ]
         }
       }

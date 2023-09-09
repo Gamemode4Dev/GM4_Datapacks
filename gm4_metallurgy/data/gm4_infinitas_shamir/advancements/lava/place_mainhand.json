@@ -7,35 +7,27 @@
           {
             "condition": "minecraft:inverted",
             "term": {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:inverted",
-                  "term": {
-                    "condition": "minecraft:value_check",
-                    "value": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$lava_infinitas"
-                      },
-                      "score": "gm4_ml_data"
-                    },
-                    "range": 1
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "type_specific": {
-                      "type": "player",
-                      "gamemode": "creative"
-                    }
-                  }
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
                 }
-              ]
+              }
             }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "$lava_infinitas"
+              },
+              "score": "gm4_ml_data"
+            },
+            "range": 1
           },
           {
             "condition": "minecraft:entity_properties",
@@ -51,6 +43,18 @@
               }
             }
           }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:lava"
+                ]
+              }
+            }
+          }
         ]
       }
     },
@@ -61,51 +65,55 @@
           {
             "condition": "minecraft:inverted",
             "term": {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:inverted",
-                  "term": {
-                    "condition": "minecraft:value_check",
-                    "value": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$lava_infinitas"
-                      },
-                      "score": "gm4_ml_data"
-                    },
-                    "range": 1
-                  }
-                },
-                {
-                  "condition": "minecraft:inverted",
-                  "term": {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                      "nbt": "{Tags:[\"gm4_infinitas_mainhand_lava\"]}",
-                      "equipment": {
-                        "mainhand": {
-                          "items": [
-                            "minecraft:bucket"
-                          ]
-                        }
-                      }
-                    }
-                  }
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
                 }
-              ]
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "$lava_infinitas"
+              },
+              "score": "gm4_ml_data"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_lava\"]}",
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:bucket"
+                  ]
+                }
+              }
             }
           }
         ],
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:lava_cauldron"
-            ]
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:lava_cauldron"
+                ]
+              }
+            }
           }
-        }
+        ]
       }
     }
   },

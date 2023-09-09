@@ -31,6 +31,18 @@
               }
             }
           }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:water"
+                ]
+              }
+            }
+          }
         ]
       }
     },
@@ -62,6 +74,18 @@
                   ],
                   "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
                 }
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:water"
+                ]
               }
             }
           }
@@ -99,6 +123,18 @@
               }
             }
           }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:water"
+                ]
+              }
+            }
+          }
         ]
       }
     },
@@ -130,6 +166,18 @@
                   ],
                   "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
                 }
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:water"
+                ]
               }
             }
           }
@@ -167,6 +215,18 @@
               }
             }
           }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:water"
+                ]
+              }
+            }
+          }
         ]
       }
     },
@@ -198,6 +258,18 @@
                   ],
                   "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
                 }
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:water"
+                ]
               }
             }
           }
@@ -235,6 +307,18 @@
               }
             }
           }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:water"
+                ]
+              }
+            }
+          }
         ]
       }
     },
@@ -257,13 +341,18 @@
             }
           }
         ],
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:water_cauldron"
-            ]
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:water_cauldron"
+                ]
+              }
+            }
           }
-        }
+        ]
       }
     }
   },
