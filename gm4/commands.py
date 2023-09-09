@@ -1,8 +1,11 @@
 import click
 import json
+import yaml
 import shutil
 import logging
-from beet import Project
+from pathlib import Path
+from typing import Any
+from beet import Project, ProjectConfig
 from beet.toolchain.cli import beet
 import beet.toolchain.commands as commands
 
@@ -35,21 +38,15 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, 
 	logger.setLevel(log)
 	# logger.addHandler(LogHandler()) # TODO configure the log handler to GM4's preferred formatting
 
-	project.config_path = "beet-dev.yaml"
-	config = {
-		"broadcast": modules,
-		"extend": "beet.yaml",
-		"require": ["beet.contrib.livereload", "gm4.plugins.resource_pack"] if reload else ["gm4.plugins.resource_pack"],
-		"pipeline": [
-			"gm4.plugins.write_mcmeta",
-			"gm4.plugins.output"
-		]
-	}
-	project.config_overrides = [
-		f"pipeline[] = {json.dumps(config)}",
-		f"pipeline[] = gm4.plugins.output.resource_pack",
-		f"pipeline[] = gm4.plugins.finished",
-	]
+	config = yaml.safe_load(Path("beet-dev.yaml").read_text())
+
+	# command-determined config options
+	broadcast_config: dict[str, Any] = next((p for p in config["pipeline"] if isinstance(p, dict))) # type: ignore
+	broadcast_config["broadcast"] = modules
+	if reload:
+		broadcast_config["require"].prepend("beet.contrib.livereload")
+
+	project.resolved_config = ProjectConfig(**config).resolve(Path("beet-dev.yaml").parent)
 
 	ctx.invoke(commands.watch if watch else commands.build, link=link)
 

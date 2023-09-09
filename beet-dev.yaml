@@ -2,6 +2,16 @@ pipeline:
   - gm4.plugins.list_modules
   - gm4.plugins.manifest.create
   - gm4.plugins.resource_pack.mount_registry
+  - broadcast: null
+    extend: beet.yaml
+    require: 
+      - gm4.plugins.resource_pack
+    pipeline:
+      - gm4.plugins.write_mcmeta
+      - gm4.plugins.output
+  - gm4.plugins.output.resource_pack
+  - gm4.plugins.resource_pack.dump_registry
+  - gm4.plugins.finished
 
 meta:
   autosave:
