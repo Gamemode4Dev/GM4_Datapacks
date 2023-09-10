@@ -20,7 +20,7 @@ from mecha import Diagnostic
 from pydantic import BaseModel, Extra, ValidationError, validator, Field
 from pydantic.error_wrappers import ErrorWrapper
 
-from gm4.utils import add_namespace
+from gm4.utils import add_namespace, MapOption
 
 CUSTOM_MODEL_PREFIX = 3420000
 
@@ -36,7 +36,7 @@ class ModelData(BaseModel):
     model: Optional[str|list[dict[str,Any]]] # defaults to same value as 'reference'
     template: str = "custom"
     transforms: Optional[list['TransformOptions']]
-    textures: Optional[ListOption[str]|dict[str,str]] # defaults to same value as reference
+    textures: Optional[MapOption[str]] # defaults to same value as reference
 
     @validator('model')
     def default_model(cls, model: str|None, values: dict[str,Any]) -> str|None:
@@ -59,9 +59,9 @@ class ModelData(BaseModel):
         return None
     
     @validator('textures')
-    def default_texture(cls, textures: ListOption[str], values: dict[str,Any]) -> ListOption[str]:
-        if not isinstance(textures, dict) and (not textures or not textures.entries()) and isinstance(v:=values.get("reference"), str):
-            return ListOption(__root__=[v])
+    def default_texture(cls, textures: MapOption[str], values: dict[str,Any]) -> MapOption[str]:
+        if (not textures or not textures.entries()) and isinstance(v:=values.get("reference"), str):
+            return MapOption(__root__=[v])
         return textures
 
     # @validator('template')
@@ -80,10 +80,10 @@ class ModelData(BaseModel):
         if isinstance(self.model, str):
             ret_dict["model"] = add_namespace(self.model, namespace)
         if self.textures:
-            if isinstance(self.textures, ListOption):
-                ret_dict["textures"] = ListOption(__root__=[add_namespace(t, namespace) for t in self.textures.entries()])
-            else: # isinstance(_, dict)
-                ret_dict["textures"] = {k: add_namespace(v, namespace) for k, v in self.textures.items()}
+            if isinstance(self.textures.__root__, list):
+                ret_dict["textures"] = MapOption(__root__=[add_namespace(t, namespace) for t in self.textures.entries()])
+            else: # isinstance(self.textures.__root__, dict):
+                ret_dict["textures"] = MapOption(__root__={k: add_namespace(v, namespace) for k, v in self.textures.items()})
         return ModelData.parse_obj(ret_dict)
     
 class NestedModelData(BaseModel):
@@ -93,7 +93,7 @@ class NestedModelData(BaseModel):
     model: Optional[str|list[dict[str,Any]]] # defalts to reference
     template: Optional[str] = "custom"
     transforms: Optional[list['TransformOptions']]
-    textures: Optional[ListOption[str]|dict[str,str]]
+    textures: Optional[MapOption[str]]
     broadcast: Optional[list['NestedModelData']] = []
 
     def collapse_broadcast(self) -> list['NestedModelData']:
@@ -155,7 +155,7 @@ class TemplateBase():
     @classmethod
     def generate_model(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> Model|None:
         """Processes the template, transforms and returns the model object"""
-        if cls.texture_map and isinstance(config.textures, ListOption):
+        if cls.texture_map and config.textures and isinstance(config.textures.__root__, list):
             config = ModelData(**config.dict() | {"textures": dict(zip(cls.texture_map, config.textures.entries()))})
         output_model = cls.process(config, models_container)
         if output_model:

@@ -1,6 +1,12 @@
 import subprocess
 import warnings
 from dataclasses import dataclass
+from beet import ListOption
+from typing import TypeVar, Generic, Any
+from pydantic.generics import GenericModel
+from pydantic import validator
+
+T = TypeVar('T')
 
 def run(cmd: list[str]) -> str:
 	"""Run a shell command and return the stdout."""
@@ -36,3 +42,35 @@ class Version():
 		if type(None) in map(type, [self.major, self.minor, self.patch]):
 			raise TypeError(f"Version number cannot be converted to integer when one or more fields are not set")
 		return 100_000*self.major + 1_000*self.minor + self.patch # type: ignore
+
+class MapOption(GenericModel, Generic[T]):
+	"""A union-like type of dict and list, supporting common methods for both
+		- Written for use in resource_pack plugin's texture lists"""
+	__root__: list[T]|dict[str,T]
+
+	def entries(self) -> list[T]:
+		if isinstance(self.__root__, list):
+			return self.__root__
+		return list(self.__root__.values())
+	
+	def __getitem__(self, key: str|int) -> T:
+		if isinstance(key, int):
+			return self.entries()[key]
+		if isinstance(self.__root__, list):
+			raise KeyError(f"MapOption has no mapping data keys. Could not retrieve {key}")
+		return self.__root__[key]
+	
+	def items(self):
+		if isinstance(self.__root__, dict):
+			return self.__root__.items()
+		raise KeyError("MapOption has no mapping data keys. Can not retrieve items()")
+	
+	@validator("__root__", pre=True)
+	def validate_root(cls, value: list[T]|dict[str,T]|T) -> list[T]|dict[str,T]:
+		if value is None:
+			value = []
+		elif isinstance(value, ListOption):
+			value = value.entries()
+		if not isinstance(value, (list, tuple, dict)): # single element
+			value = [value]
+		return value # type: ignore
