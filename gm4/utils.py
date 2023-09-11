@@ -46,7 +46,7 @@ class Version():
 class MapOption(GenericModel, Generic[T]):
 	"""A union-like type of dict and list, supporting common methods for both
 		- Written for use in resource_pack plugin's texture lists"""
-	__root__: list[T]|dict[str,T]
+	__root__: list[T]|dict[str,T] = []
 
 	def entries(self) -> list[T]:
 		if isinstance(self.__root__, list):

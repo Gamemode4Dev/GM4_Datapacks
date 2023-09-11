@@ -33,20 +33,20 @@ class ModelData(BaseModel):
     """A complete config for a single model"""
     item: ListOption[str]
     reference: str
-    model: Optional[str|list[dict[str,Any]]] # defaults to same value as 'reference'
+    model: str|list[dict[str,Any]] = "" # defaults to same value as 'reference'
     template: str = "custom"
     transforms: Optional[list['TransformOptions']]
-    textures: Optional[MapOption[str]] # defaults to same value as reference
+    textures: MapOption[str]# = Field(default=MapOption(__root__=[])) # defaults to same value as reference
 
-    @validator('model')
-    def default_model(cls, model: str|None, values: dict[str,Any]) -> str|None:
-        if model is None and "reference" in values:
+    @validator('model', pre=True, always=True)
+    def default_model(cls, model: str, values: dict[str,Any]) -> str:
+        if not model and "reference" in values:
             return values["reference"]
         return model
     
     @validator('template')
     def enforce_custom_with_override_predicates(cls, template: str, values: dict[str,Any]) -> str:
-        if isinstance(values['model'], list) and template != "custom":
+        if isinstance(values.get('model'), list) and template != "custom":
             raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
         return template
     
@@ -58,9 +58,13 @@ class ModelData(BaseModel):
             return submodel.parse_obj(transform.dict())
         return None
     
-    @validator('textures')
+    @validator('textures', pre=True, always=True)
     def default_texture(cls, textures: MapOption[str], values: dict[str,Any]) -> MapOption[str]:
-        if (not textures or not textures.entries()) and isinstance(v:=values.get("reference"), str):
+        if isinstance(textures, (list,dict)):
+            empty_list = len(textures)==0
+        else:
+            empty_list = len(textures.entries())==0
+        if empty_list and isinstance(v:=values.get("reference"), str):
             return MapOption(__root__=[v])
         return textures
 
@@ -126,7 +130,7 @@ class ModelDataOptions(PluginOptions, extra=Extra.ignore):
         errors: list[tuple[int, ValidationError]] = []
         for i, model in enumerate(self.model_data):
             try:
-                ret.extend([ModelData(**m.dict()) for m in model.collapse_broadcast()])
+                ret.extend([ModelData.parse_obj(m.dict()) for m in model.collapse_broadcast()])
             except ValidationError as exc:
                 errors.append((i, exc))
 
