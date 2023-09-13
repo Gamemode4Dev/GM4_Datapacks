@@ -510,6 +510,7 @@
       "gm4_tnt_landmines:item/tnt_landmine_stone_bricks": 16,
       "gm4_tnt_landmines:item/tnt_landmine_stone": 17,
       "gm4_custom_crafters:item/custom_crafter": 18,
+      "gm4_liquid_tanks:item/liquid_tank": 19,
       "gm4_disassemblers:item/disassembler": 135
     },
     "potion": {

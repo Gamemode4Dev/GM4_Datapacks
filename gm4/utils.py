@@ -2,7 +2,7 @@ import subprocess
 import warnings
 from dataclasses import dataclass
 from beet import ListOption
-from typing import TypeVar, Generic, Any
+from typing import TypeVar, Generic
 from pydantic.generics import GenericModel
 from pydantic import validator
 

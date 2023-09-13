@@ -21,6 +21,9 @@ meta:
         - lib_machines: 1.1.0
       schedule_loops: [main]
     model_data:
+      - item: player_head
+        reference: item/liquid_tank
+        model: item/liquid_tank_full
       - item: glass
         reference: block/liquid_tank
         template: custom

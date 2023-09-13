@@ -1,13 +1,13 @@
 {
-  "parent": "gm4:block/cube",
+  "parent": "minecraft:block/block",
   "ambientocclusion": false,
   "textures": {
     "particle": "block/hopper_outside",
     "top": "block/hopper_top",
     "side": "block/hopper_outside",
     "inside": "block/hopper_inside",
-    "5": "gm4:block/liquid_tank_side",
-    "6": "gm4:block/liquid_tank_top"
+    "5": "gm4_liquid_tanks:block/liquid_tank_side",
+    "6": "gm4_liquid_tanks:block/liquid_tank_top"
   },
   "elements": [
     {
@@ -294,19 +294,6 @@
         }
       }
     }
-  ],
-  "display": {
-    "gui": {
-      "rotation": [
-        30,
-        225,
-        0
-      ],
-      "scale": [
-        0.625,
-        0.625,
-        0.625
-      ]
-    }
-  }
+  ]
+  
 }

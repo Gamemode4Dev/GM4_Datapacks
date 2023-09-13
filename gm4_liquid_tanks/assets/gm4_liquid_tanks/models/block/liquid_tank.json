@@ -1,13 +1,13 @@
 {
 	"textures": {
-		"top": "gm4:block/liquid_tank_top",
-		"bottom": "gm4:block/liquid_tank_top",
-		"side": "gm4:block/liquid_tank_side"
+		"top": "gm4_liquid_tanks:block/liquid_tank_top",
+		"bottom": "gm4_liquid_tanks:block/liquid_tank_top",
+		"side": "gm4_liquid_tanks:block/liquid_tank_side"
 	},
 	"elements": [
 		{
-			"from": [0, 0, 0],
-			"to": [16, 14, 16],
+			"from": [4, 11, 4],
+			"to": [12, 18, 12],
 			"faces": {
 				"north": {"uv": [0, 0, 16, 14], "texture": "#side", "cullface": "north"},
 				"east": {"uv": [0, 0, 16, 14], "texture": "#side", "cullface": "east"},

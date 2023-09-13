@@ -60,7 +60,9 @@ class ModelData(BaseModel):
     
     @validator('textures', pre=True, always=True)
     def default_texture(cls, textures: MapOption[str], values: dict[str,Any]) -> MapOption[str]:
-        if isinstance(textures, (list,dict)):
+        if textures is None: # type: ignore
+            empty_list = True
+        elif isinstance(textures, (list,dict)):
             empty_list = len(textures)==0
         else:
             empty_list = len(textures.entries())==0
@@ -440,8 +442,6 @@ class BlockTemplate(TemplateBase):
 
     @staticmethod
     def process(config: ModelData, models_container: NamespaceProxy[Model]):
-        if not isinstance(config.textures, dict):
-            return # FIXME this is garunteed by the sole place the proicess function gets called from? How can I avoid type-checker errors
         return Model({
             "parent": "minecraft:block/cube",
             "textures": {
