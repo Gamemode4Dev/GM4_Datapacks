@@ -33,6 +33,9 @@ meta:
             scale: [0.438,0.438,0.438]
             translation: [0,0,0]
             display: head
+      - item: honey_block
+        reference: block/cast_honey_block
+        template: vanilla
     website:
       description: Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!
       recommended:

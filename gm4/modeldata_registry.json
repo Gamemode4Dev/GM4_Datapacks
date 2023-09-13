@@ -271,6 +271,9 @@
     "gunpowder": {
       "gm4_tnt_landmines:item/soft_defuser": 0
     },
+    "honey_block": {
+      "gm4_liquid_tanks:block/cast_honey_block": 0
+    },
     "hopper_minecart": {
       "gm4_ender_hoppers:item/ender_hopper_minecart": 0,
       "gm4_liquid_minecarts:item/liquid_minecart": 1
@@ -511,6 +514,8 @@
       "gm4_tnt_landmines:item/tnt_landmine_stone": 17,
       "gm4_custom_crafters:item/custom_crafter": 18,
       "gm4_liquid_tanks:item/liquid_tank": 19,
+      "gm4_ender_hoppers:block/ender_hopper": 20,
+      "gm4_ender_hoppers:item/ender_hopper": 21,
       "gm4_disassemblers:item/disassembler": 135
     },
     "potion": {
