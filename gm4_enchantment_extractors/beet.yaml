@@ -20,6 +20,37 @@ meta:
         - lib_custom_crafters: 3.0.0
         - lib_machines: 1.1.0
       schedule_loops: [main]
+    model_data:
+      - item: player_head
+        reference: item/enchantment_extractor
+        model: block/enchantment_extractor
+      - item: enchanting_table
+        template: block
+        transforms:
+          - name: item_display
+            origin: [0.5,1,0.5]
+            scale: [0.625, 0.625,0.625]
+            translation: [0,0,0]
+            display: head
+        broadcast:
+          - reference: block/enchantment_extractor
+            textures:
+              side: block/enchantment_extractor_side
+              top: block/enchantment_extractor_top_out
+              bottom: minecraft:block/furnace_top
+              front: block/enchantment_extractor_side
+          - reference: block/enchantment_extractor_side
+            textures:
+              side: block/enchantment_extractor_side
+              top: block/enchantment_extractor_top
+              bottom: minecraft:block/furnace_top
+              front: block/enchantment_extractor_front
+          - reference: block/enchantment_extractor_down
+            textures:
+              side: block/enchantment_extractor_side
+              top: block/enchantment_extractor_top
+              bottom: block/enchantment_extractor_bottom
+              front: block/enchantment_extractor_side
     website:
       description: Remove enchantments from enchanted tools, armour, and weapons. But be careful, there might be unexpected side-effects.
       recommended:

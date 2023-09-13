@@ -177,6 +177,11 @@
       "gm4_end_fishing:item/ores/emerald_13": 5,
       "gm4_end_fishing:item/ores/emerald_14": 6
     },
+    "enchanting_table": {
+      "gm4_enchantment_extractors:block/enchantment_extractor": 0,
+      "gm4_enchantment_extractors:block/enchantment_extractor_side": 1,
+      "gm4_enchantment_extractors:block/enchantment_extractor_down": 2
+    },
     "firework_star": {
       "gm4_everstone:item/everstone": 1,
       "gm4_orb_of_ankou:item/orb_of_ankou": 200
@@ -518,6 +523,7 @@
       "gm4_ender_hoppers:block/ender_hopper": 20,
       "gm4_ender_hoppers:item/ender_hopper": 21,
       "gm4_auto_crafting:item/auto_crafter": 22,
+      "gm4_enchantment_extractors:item/enchantment_extractor": 23,
       "gm4_disassemblers:item/disassembler": 135
     },
     "potion": {
