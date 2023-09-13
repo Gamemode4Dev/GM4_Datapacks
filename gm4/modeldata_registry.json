@@ -52,7 +52,8 @@
     "crafting_table": {
       "gm4_custom_crafters:block/custom_crafter": 0,
       "gm4_custom_crafters:block/custom_crafter_side": 1,
-      "gm4_custom_crafters:block/custom_crafter_down": 2
+      "gm4_custom_crafters:block/custom_crafter_down": 2,
+      "gm4_auto_crafting:block/auto_crafter": 3
     },
     "diamond": {
       "gm4_end_fishing:item/ores/diamond_10": 1,
@@ -516,6 +517,7 @@
       "gm4_liquid_tanks:item/liquid_tank": 19,
       "gm4_ender_hoppers:block/ender_hopper": 20,
       "gm4_ender_hoppers:item/ender_hopper": 21,
+      "gm4_auto_crafting:item/auto_crafter": 22,
       "gm4_disassemblers:item/disassembler": 135
     },
     "potion": {

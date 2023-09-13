@@ -465,7 +465,7 @@ class ItemDisplayModel(TransformOptions):
     def apply_transform(self, model: Model):
         model.data.setdefault("display", {})[self.display] = {
             "rotation": [0,0,0],
-            "translation": list(16 * (np.array([-0.5,0.5,-0.5])+(np.array(self.origin)*np.array([1,-1,1]))+np.array(self.translation)) / np.array(self.scale)),
+            "translation": list(16 * (np.array([-0.5,0.5,-0.5])+(np.array(self.origin)*np.array([1,-1,1]))-np.array(self.translation)) / np.array(self.scale)), # type: ignore ; self.origin*[1,-1,1] is faulty interpreted by type checker as ndarray[bool_]
             "scale": list(1/np.array(self.scale)*1.006)
         }
 
