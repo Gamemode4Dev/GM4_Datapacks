@@ -5,6 +5,9 @@ version: 1.2.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
@@ -19,6 +22,24 @@ meta:
       schedule_loops:
         - main
         - tick
+    model_data:
+      - item: player_head
+        reference: item/teleportation_anchor
+        model: block/teleportation_anchor
+      - item: end_portal_frame
+        reference: block/teleportation_anchor
+        template: legacy_machine_block
+        textures:
+          top: block/teleportation_anchor_top
+          side: block/teleportation_anchor_side
+          front: block/teleportation_anchor_side
+          bottom: gm4_forming_press:block/forming_press_bottom
+      - item: player_head
+        reference: item/teleportation_jammer
+        model: block/teleportation_jammer
+      - item: purpur_pillar
+        reference: block/teleportation_jammer
+        template: custom
     website:
       description: Suppress and control chorus-based teleportation!
       recommended:

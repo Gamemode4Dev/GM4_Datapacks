@@ -1,13 +1,13 @@
 {
 	"textures": {
-		"eye_top": "gm4:block/eye_top",
-		"eye_side1": "gm4:block/eye_side1",
-		"eye_side2": "gm4:block/eye_side2",
-		"eye_side3": "gm4:block/eye_side3",
-		"eye_side4": "gm4:block/eye_side4",
-		"top": "gm4:block/teleportation_jammer_top",
-		"particle": "gm4:block/teleportation_jammer_side",
-		"side": "gm4:block/teleportation_jammer_side",
+		"eye_top": "gm4_teleportation_anchors:block/eye_top",
+		"eye_side1": "gm4_teleportation_anchors:block/eye_side1",
+		"eye_side2": "gm4_teleportation_anchors:block/eye_side2",
+		"eye_side3": "gm4_teleportation_anchors:block/eye_side3",
+		"eye_side4": "gm4_teleportation_anchors:block/eye_side4",
+		"top": "gm4_teleportation_anchors:block/teleportation_jammer_top",
+		"particle": "gm4_teleportation_anchors:block/teleportation_jammer_side",
+		"side": "gm4_teleportation_anchors:block/teleportation_jammer_side",
 		"bottom": "minecraft:block/furnace_top"
 	},
 	"elements": [

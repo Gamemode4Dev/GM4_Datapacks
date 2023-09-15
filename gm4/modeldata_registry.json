@@ -182,6 +182,9 @@
       "gm4_enchantment_extractors:block/enchantment_extractor_side": 1,
       "gm4_enchantment_extractors:block/enchantment_extractor_down": 2
     },
+    "end_portal_frame": {
+      "gm4_teleportation_anchors:block/teleportation_anchor": 0
+    },
     "firework_star": {
       "gm4_everstone:item/everstone": 1,
       "gm4_orb_of_ankou:item/orb_of_ankou": 200
@@ -524,6 +527,8 @@
       "gm4_ender_hoppers:item/ender_hopper": 21,
       "gm4_auto_crafting:item/auto_crafter": 22,
       "gm4_enchantment_extractors:item/enchantment_extractor": 23,
+      "gm4_teleportation_anchors:item/teleportation_anchor": 24,
+      "gm4_teleportation_anchors:item/teleportation_jammer": 25,
       "gm4_disassemblers:item/disassembler": 135
     },
     "potion": {
@@ -532,6 +537,9 @@
     },
     "prismarine_shard": {
       "gm4_zauber_cauldrons:item/enchanted_prismarine_shard": 0
+    },
+    "purpur_pillar": {
+      "gm4_teleportation_anchors:block/teleportation_jammer": 0
     },
     "rabbit_hide": {
       "gm4_bat_grenades:item/bat_leather": 2

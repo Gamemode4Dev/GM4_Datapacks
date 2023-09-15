@@ -459,7 +459,7 @@ class ItemDisplayModel(TransformOptions):
     origin: list[float] = Field(..., max_items=3, min_items=3)
     scale: list[float] = Field(..., max_items=3, min_items=3)
     translation: list[float] = Field(default=[0,0,0], max_items=3, min_items=3)
-    display: Literal["none", "thirdperson_lefthand", "thirdperson_righthand", "firstperson_lefthand", "firstperson_righthand", "head", "gui", "ground", "fixed"]
+    display: Literal["none", "thirdperson_lefthand", "thirdperson_righthand", "firstperson_lefthand", "firstperson_righthand", "head", "gui", "ground", "fixed"] = "head"
     name: ClassVar[Literal["item_display"]] = "item_display"
 
     def apply_transform(self, model: Model):
