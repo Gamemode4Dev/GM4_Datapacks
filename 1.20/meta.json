@@ -1,5 +1,5 @@
 {
-  "last_commit": "20812c83e661ea26a06f0f79403a22106b49b15b",
+  "last_commit": "6f3b2eaac1c5ec15ab9590d83431a25cb11e7ca2",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1318,7 +1318,7 @@
       "name": "Mountaineering",
       "version": "1.0.2",
       "video_link": "",
-      "wiki_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Mountaineering",
       "credits": {
         "Creator": [
           "foodiebonus"
