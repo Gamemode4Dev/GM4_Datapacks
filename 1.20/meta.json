@@ -1,5 +1,5 @@
 {
-  "last_commit": "8b20ca8a31bd61913bc1446d3c14b48d5b9c9b03",
+  "last_commit": "1d1f6d247c979c6c6c7878457530045a1d35eda9",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1328,7 +1328,7 @@
       "description": "A mezze of mountaineering means! Glide down slopes and scale cliffs.",
       "recommends": [],
       "important_note": "Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.",
-      "modrinth_id": null,
+      "modrinth_id": "Wq7Qfkuh",
       "smithed_link": null,
       "pmc_link": null,
       "publish_date": "2023-09-06"

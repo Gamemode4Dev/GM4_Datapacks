@@ -1,14 +1,14 @@
 # <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Mountaineering by Gamemode 4<!--$pmc:delete-->
 
-Scale mountains and cross fields of snow with ease! Climb steep slopes with crampons and descend into valleys on skis, perhaps with a jump on the way. <!--$pmc:headerSize-->
+Scale mountains and cross fields of snow with ease! Climb steep slopes with Crampons and descend into valleys on Skis, perhaps with a jump on the way. <!--$pmc:headerSize-->
 
 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_mountaineering/images/mountaineering.webp" alt="Mountaineering Example" width="350"/>  
 
 ### Features:
 - Crampons allow for vertical stone walls to be climbed
-- Use skis to descend hills quickly and safely; your speed depends on the slope gradient
-- Hold ski poles in each hand to gain jump boost effects; best paired with skis
-- Adds two ski-related advancements
+- Use Skis to descend hills quickly and safely; your speed depends on the slope gradient
+- Hold Poles in each hand to gain jump boost effects; best paired with Skis
+- Adds two Ski-related advancements
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](None)
