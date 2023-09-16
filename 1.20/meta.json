@@ -1,5 +1,5 @@
 {
-  "last_commit": "6f3b2eaac1c5ec15ab9590d83431a25cb11e7ca2",
+  "last_commit": "9bd5e70e7f15beb904657cfb89b204d013f84bb8",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1741,7 +1741,7 @@
       "requires": [],
       "description": "Say goodbye to your boring old rectangular portals!",
       "recommends": [],
-      "modrinth_id": null,
+      "modrinth_id": "eq7hf4YU",
       "smithed_link": null,
       "pmc_link": null,
       "publish_date": "2023-07-10"
