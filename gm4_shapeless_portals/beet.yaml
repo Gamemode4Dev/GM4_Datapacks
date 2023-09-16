@@ -22,6 +22,6 @@ meta:
       Creator:
         - Thanathor
   modrinth:
-    pack_id: eq7hf4YU
+    project_id: eq7hf4YU
   smithed:
-    project_id: gm4_shapeless_portals
+    pack_id: gm4_shapeless_portals
