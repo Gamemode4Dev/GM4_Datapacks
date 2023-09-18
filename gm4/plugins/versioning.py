@@ -1,9 +1,13 @@
-from beet import Context, Function, FunctionTag
+from beet import Context, Function, FunctionTag, PluginOptions
 from beet.contrib.rename_files import rename_files
 from beet.contrib.find_replace import find_replace
-from typing import Any
+from typing import Any, Optional
 import warnings
 from gm4.utils import Version
+
+class VersioningConfig(PluginOptions):
+    schedule_loops: list[str]
+    required: Optional[dict[str, str]]
 
 def modules(ctx: Context):
     """Assembles version-functions for modules from dependency information:

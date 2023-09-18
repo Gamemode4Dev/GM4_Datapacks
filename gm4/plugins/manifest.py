@@ -1,6 +1,6 @@
-from beet import Context, TextFile, JsonFile
+from beet import Context, TextFile, JsonFile, PluginOptions
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 from functools import cache
 import json
 import os
@@ -8,8 +8,25 @@ import yaml
 import logging
 import datetime
 from gm4.utils import run, Version
+from gm4.plugins.versioning import VersioningConfig
 
 parent_logger = logging.getLogger("gm4.manifest")
+
+class WebsiteConfig(PluginOptions):
+	description: str
+	recommended: list[str]
+	notes: list[str]
+	hidden: Optional[bool] = False
+
+class CreditsConfig(PluginOptions):
+	credits: dict[str, list[str]]
+
+class ManifestConfig(PluginOptions):
+	versioning: VersioningConfig
+	website: WebsiteConfig
+	video: str|None
+	wiki: str|None
+	credits: CreditsConfig
 
 
 def create(ctx: Context):
