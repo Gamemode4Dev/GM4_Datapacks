@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420132,gm4_machines:{id:\"liquid_tank\"},SkullOwner:{Name:\"gm4_liquid_tank\",Id:[I;506554253,2099987480,-1876292803,1704690390],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTY0Mjg1NDI1OTYyNSwKICAicHJvZmlsZUlkIiA6ICJiNzVjZDRmMThkZjg0MmNlYjJhY2MxNTU5MTNiMjA0YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJLcmlzdGlqb25hczEzIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzFlOGI5ZjNiODgwNjIzZDNlM2ZmZGZkNmUyZTljYTY0OWQ0ODcyMDY0YzY0NmUyNWNjNDEyZGYzYTZjNmRlMTkiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==\"}]}}}"
+              "tag": "{CustomModelData:3420132,gm4_machines:{id:\"liquid_tank\"},SkullOwner:{Name:\"gm4_liquid_tank\",Id:[I;506554253,2099987480,-1876292803,1704690390],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$liquid_tank\"}]}}}"
             },
             {
               "function": "set_name",

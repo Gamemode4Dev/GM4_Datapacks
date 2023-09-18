@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420045,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:crafting_table\"},SkullOwner:{Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NTQ0NzQyODI1NTUsInByb2ZpbGVJZCI6Ijc1MTQ0NDgxOTFlNjQ1NDY4Yzk3MzlhNmUzOTU3YmViIiwicHJvZmlsZU5hbWUiOiJUaGFua3NNb2phbmciLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzY2ODBmZmEyMTE5MzAwZGU2NWQzNjE4ODVkNjE0YjNlYTM3Y2QwODhiODc5OTAzMjc0MzNkNGMxMWU1ZjNjNSJ9fX0=\"}]},Id:[I;-893485270,-1979301661,-1601571774,-1580648190]}}"
+                            "tag": "{CustomModelData:3420045,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:crafting_table\"},SkullOwner:\"$disguised/crafting_table\"}"
                         },
                         {
                             "function": "minecraft:set_name",

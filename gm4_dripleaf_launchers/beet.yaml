@@ -1,0 +1,25 @@
+id: gm4_dripleaf_launchers
+name: Dripleaf Launchers
+version: 1.0.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: 
+        - main
+        - tick
+    website:
+      description: Start your own Dripleaf Space Program!
+      recommended: []
+      notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Dripleaf_Launchers
+    credits:
+      Creator:
+        - Thanathor

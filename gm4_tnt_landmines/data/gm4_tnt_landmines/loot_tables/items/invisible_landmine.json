@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420047,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:air\"},SkullOwner:{Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NTQ0NzQzODQ0NTUsInByb2ZpbGVJZCI6IjU3MGIwNWJhMjZmMzRhOGViZmRiODBlY2JjZDdlNjIwIiwicHJvZmlsZU5hbWUiOiJMb3JkU29ubnkiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVlY2NhZmZlN2UwMWJjNjFiNjdmMDZkNGRmNjU2ZjQxZjdjMGJkODE3NzllNjFkMmEzYjk2YjE0MDVlYWQ1ODYifX19\"}]},Id:[I;1874250570,-1321581040,-1389990572,-1166592501]}}"
+                            "tag": "{CustomModelData:3420047,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:air\"},SkullOwner:\"$disguised/invisible\"}"
                         },
                         {
                             "function": "minecraft:set_name",

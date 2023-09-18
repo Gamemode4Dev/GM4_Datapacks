@@ -1,4 +1,4 @@
-from beet import Context, TextFile
+from beet import Context, TextFile, JsonFile
 from pathlib import Path
 from typing import Any
 from functools import cache
@@ -6,6 +6,7 @@ import json
 import os
 import yaml
 import logging
+import datetime
 from gm4.utils import run, Version
 
 parent_logger = logging.getLogger("gm4.manifest")
@@ -96,6 +97,7 @@ def update_patch(ctx: Context):
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
 	logger = parent_logger.getChild("update_patch")
+	skin_cache = JsonFile(source_path="gm4/skin_cache.json").data
 
 	modules = ctx.cache["gm4_manifest"].json["modules"]
 
@@ -110,11 +112,24 @@ def update_patch(ctx: Context):
 
 	for id in modules:
 		module = modules[id]
+		released = released_modules.get(id, None)
+
+		publish_date = released.get("publish_date", None) if released else None
+		module["publish_date"] = publish_date or datetime.datetime.now().date().isoformat()
+
 		deps = _traverse_includes(id) | {"base"}
 		deps_dirs = [element for sublist in [[f"{d}/data", f"{d}/*py"] for d in deps] for element in sublist]
 
-		diff = run(["git", "diff", last_commit, "--shortstat", "--", f"{id}/data", f"{id}/*.py"] + deps_dirs) if last_commit else True
-		released = released_modules.get(id, None)
+		 # add watches to skins this module uses from other modules. NOTE this could be done in a more extendable way in the future, rather than "hardcoded"
+		skin_dep_dirs: list[str] = []
+		for skin_ref in skin_cache["nonnative_references"].get(id, []):
+			d = skin_cache["skins"][skin_ref]["parent_module"]
+			ns, path = skin_ref.split(":")	
+			skin_dep_dirs.append(f"{d}/data/{ns}/skins/{path}.png")
+		
+		watch_dirs = deps_dirs+skin_dep_dirs
+
+		diff = run(["git", "diff", last_commit, "--shortstat", "--", f"{id}/data", f"{id}/*.py"] + watch_dirs) if last_commit else True
 
 		if not diff and released:
 			# No changes were made, keep the same patch version

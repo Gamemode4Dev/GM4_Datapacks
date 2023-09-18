@@ -1,0 +1,49 @@
+{
+  size: [
+    1,
+    2,
+    1
+  ],
+  entities: [],
+  blocks: [
+    {
+      pos: [
+        0,
+        0,
+        0
+      ],
+      state: 0
+    },
+    {
+      pos: [
+        0,
+        1,
+        0
+      ],
+      state: 1
+    }
+  ],
+  palette: [
+    {
+      Properties: {
+        hinge: "left",
+        half: "lower",
+        powered: "false",
+        facing: "east",
+        open: "true"
+      },
+      Name: "minecraft:{{ material_name }}_door"
+    },
+    {
+      Properties: {
+        hinge: "left",
+        half: "upper",
+        powered: "false",
+        facing: "east",
+        open: "true"
+      },
+      Name: "minecraft:{{ material_name }}_door"
+    }
+  ],
+  DataVersion: 3465
+}
