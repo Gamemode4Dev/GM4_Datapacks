@@ -6,8 +6,8 @@ import warnings
 from gm4.utils import Version
 
 class VersioningConfig(PluginOptions):
-    schedule_loops: list[str]
-    required: Optional[dict[str, str]]
+    schedule_loops: Optional[list[str]]
+    required: Optional[list[dict[str, str]]] # FIXME reformat to normal dict
 
 def modules(ctx: Context):
     """Assembles version-functions for modules from dependency information:
