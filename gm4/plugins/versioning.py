@@ -1,4 +1,4 @@
-from beet import Context, Function, FunctionTag, PluginOptions
+from beet import Context, Function, FunctionTag, PluginOptions, configurable
 from beet.contrib.rename_files import rename_files
 from beet.contrib.find_replace import find_replace
 from typing import Any, Optional
@@ -14,14 +14,14 @@ class VersioningConfig(PluginOptions):
     required: Optional[list[dict[str, str]]] # FIXME reformat to normal dict
     extra_version_injections: Optional[VersionInjectionConfig]
 
-def modules(ctx: Context):
+@configurable("gm4.versioning", validator=VersioningConfig)
+def modules(ctx: Context, opts: VersioningConfig):
     """Assembles version-functions for modules from dependency information:
         - load:{module_name}.json
         - {module_name}:load.mcfunction
         - load:load.json"""
     ctx.cache["currently_building"].json = {"name": ctx.project_name, "id": ctx.project_id, "added_libs": []} # cache module's project id for access within library pipelines
-    versioning_config: dict[str, Any] = ctx.meta.get('gm4', {}).get('versioning', {})
-    dependencies: list[dict[str,str]] = versioning_config.get('required', [])
+    dependencies: list[dict[str,str]] = opts.required or []
     lines = ["execute ", ""]
 
     # {{module_name}}.json tag
