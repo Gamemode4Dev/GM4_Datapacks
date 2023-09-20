@@ -5,9 +5,14 @@ from typing import Any, Optional
 import warnings
 from gm4.utils import Version
 
+class VersionInjectionConfig(PluginOptions):
+    functions: Optional[list[str]]
+    advancements: Optional[list[str]]
+
 class VersioningConfig(PluginOptions):
     schedule_loops: Optional[list[str]]
     required: Optional[list[dict[str, str]]] # FIXME reformat to normal dict
+    extra_version_injections: Optional[VersionInjectionConfig]
 
 def modules(ctx: Context):
     """Assembles version-functions for modules from dependency information:

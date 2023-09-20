@@ -55,127 +55,65 @@ class ManifestModel(BaseModel):
 	"""class describing the structure of the meta.json manifest file"""
 	last_commit: str
 	modules: dict[str, ManifestModuleModel]
-	# libraries: dict[str, ManifestModuleModel] # TODO smaller section? Or lib release ready
-	# base: ManifestModuleModel # TODO
+	libraries: dict[str, ManifestModuleModel] # TODO smaller section? Or lib release ready
+	base: Any#ManifestModuleModel # TODO
 	contributors: Any # TODO loads from jsonfile directly
 
 
 def create(ctx: Context):
 	"""Collect a manifest for all modules from respective beet.yaml files."""
-	# modules: dict[str, dict[str, Any]] = { p.name:{"id": p.name} for p in sorted(ctx.directory.glob("gm4_*")) }
-	manifest = ManifestModel(last_commit=run(["git", "rev-parse", "HEAD"]), modules={}, contributors=None)
+	manifest = ManifestModel(last_commit=run(["git", "rev-parse", "HEAD"]), modules={}, libraries={}, base={}, contributors=None)
 	logger = parent_logger.getChild("create")
 
-	for module_id in [p.name for p in sorted(ctx.directory.glob("gm4_*"))]:
-		try:
-			config = load_config(Path(module_id) / "beet.yaml") # TODO existance check?
-			m_ctx = Context( # load module's config into a non-processing context for plugin config validation
-					project_id=config.id,
-					project_name=config.name,
-					project_description=config.description,
-					project_author=config.author,
-					project_version=config.version,
-					project_root=True,#self.root, ??
-					minecraft_version=config.minecraft,
-					directory=Path(module_id),#project.directory, ?? # TODO
-					output_directory=None,#project.output_directory,
-					meta=config.meta,
-					cache=ctx.cache,#,cache,
-					worker=ctx.worker,
-					template=ctx.template
-					# whitelist=config.whitelist,
+	LIB_OVERRIDES: dict[Any, Any] = {
+		"website": {"description": "", "recommended": [], "notes": []},
+		"video": None, "wiki": None
+	}
+
+	for glob, manifest_section, config_overrides in [("gm4_*", manifest.modules, {}), ("lib_*", manifest.libraries, LIB_OVERRIDES)]:
+		for pack_id in [p.name for p in sorted(ctx.directory.glob(glob))]:
+			print(pack_id)
+			try:
+				config = load_config(Path(pack_id) / "beet.yaml") # TODO existance check?
+				gm4_meta = ctx.validate("gm4", validator=ManifestConfig, options=config.meta["gm4"]|config_overrides) # manually parse config into models  
+				modrinth_meta = ctx.validate("modrinth", validator=ModrinthConfig, options=config.meta.get("modrinth"))
+				smithed_meta = ctx.validate("smithed", validator=SmithedConfig, options=config.meta.get("smithed"))
+				pmc_meta = ctx.validate("pmc", validator=PMCConfig, options=config.meta.get("pmc"))
+
+				manifest_section[pack_id] = ManifestModuleModel(
+					id = pack_id,
+					name = config.name,
+					version = config.version,
+					video_link = gm4_meta.video or "",
+					wiki_link = gm4_meta.wiki or "",
+					credits = gm4_meta.credits,
+					requires = [],#gm4_meta.versioning.required, # TODO only inclide modules, once format is fixed
+					description = gm4_meta.website.description,
+					recommends = gm4_meta.website.recommended,
+					important_note = gm4_meta.website.notes[0] if len(gm4_meta.website.notes)>0 else None,
+					hidden = gm4_meta.website.hidden,
+					modrinth_id = modrinth_meta.project_id,
+					smithed_link = smithed_meta.pack_id,
+					pmc_link = pmc_meta.uid
 				)
-			gm4_meta = m_ctx.validate("gm4", validator=ManifestConfig)
-			modrinth_meta = m_ctx.validate("modrinth", validator=ModrinthConfig)
-			smithed_meta = m_ctx.validate("smithed", validator=SmithedConfig)
-			pmc_meta = m_ctx.validate("planetminecraft", validator=PMCConfig)
-
-			manifest.modules[module_id] = ManifestModuleModel(
-				id = module_id,
-				name = m_ctx.project_name,
-				version = m_ctx.project_version,
-				video_link = gm4_meta.video or "",
-				wiki_link = gm4_meta.wiki or "",
-				credits = gm4_meta.credits,
-				requires = [],#gm4_meta.versioning.required, # TODO only inclide modules, once format is fixed
-				description = gm4_meta.website.description,
-				recommends = gm4_meta.website.recommended,
-				important_note = gm4_meta.website.notes[0] if len(gm4_meta.website.notes)>0 else None,
-				hidden = gm4_meta.website.hidden,
-				modrinth_id = modrinth_meta.project_id,
-				smithed_link = smithed_meta.pack_id,
-				pmc_link = pmc_meta.uid
-			)
-		except InvalidProjectConfig as exc:
-			logger.debug(exc.explanation)
-
-		# if project_file.exists():
-		# 	# Read all the metadata from the module's beet.yaml file
-		# 	project_config = yaml.safe_load(project_file.read_text())
-		# 	module["name"] = project_config["name"]
-		# 	module["version"] = project_config.get("version", "0.0.0")
-		# 	meta = project_config.get("meta", {}).get("gm4", {})
-		# 	website = meta["website"]
-		# 	module["video_link"] = meta["video"] or ""
-		# 	module["wiki_link"] = meta["wiki"] or ""
-		# 	module["credits"] = meta["credits"]
-		# 	versioning_config = meta.get("versioning", {})
-		# 	module["requires"] = list(filter(lambda a: "lib" not in a[0:4], map(lambda a: list(a.keys())[0], versioning_config.get("required", []))))
-		# 	module["description"] = website["description"]
-		# 	module["recommends"] = website["recommended"]
-		# 	if "hidden" in website and website["hidden"]:
-		# 		module["hidden"] = True
-		# 	if "notes" in website and len(website["notes"]) > 0:
-		# 		module["important_note"] = website["notes"][0]
-		# 	module["modrinth_id"] = project_config.get("meta", {}).get("modrinth", {}).get("project_id")
-		# 	module["smithed_link"] = project_config.get("meta", {}).get("smithed", {}).get("uid") # NOTE field to be named when smithed api v2 leaves beta
-		# 	module["pmc_link"] = project_config.get("meta", {}).get("planetminecraft", {}).get("uid") # NOTE PMC currently has no API, so this field is just made of hope
-		# 	module.update()
-		# else:
-		# 	logger.debug(f"No beet.yaml found for {m_key}")
-		# 	module["id"] = None
-
-	# DONE
-	# # If a module doesn't have a valid beet.yaml file don't include it
-	# modules = {k:v for k,v in modules.items() if v["id"] is not None}
-
-	# Collect libraries
-	libraries: dict[str, dict[str, Any]] = { p.name:{} for p in sorted(ctx.directory.glob("lib_*")) }
-
-	for l_key in libraries:
-		lib = libraries[l_key]
-		project_file = Path(l_key) / "beet.yaml"
-		if project_file.exists():
-			project_config = yaml.safe_load(project_file.read_text())
-			lib["id"] = project_config["id"]
-			lib["name"] = project_config["name"]
-			lib["version"] = project_config.get("version", "0.0.0")
-			lib["requires"] = project_config.get("meta", {}).get("gm4", {}).get("required", [])
-		else:
-			logger.debug(f"No beet.yaml found for {l_key}")
+			except InvalidProjectConfig as exc:
+				logger.debug(exc.explanation)
 
 	# Read the contributors metadata
 	contributors_file = Path("contributors.json")
 	if contributors_file.exists():
 		contributors_list = json.loads(contributors_file.read_text())
-		contributors: Any = {c["name"]: c for c in contributors_list}
+		manifest.contributors = {c["name"]: c for c in contributors_list}
 	else:
 		logger.debug("No contributors.json found")
-		contributors = []
+		manifest.contributors = []
 
 	# Read the gm4 base module metadata
 	base_file = Path("base/beet.yaml")
 	base_config = yaml.safe_load(base_file.read_text())
-	base = {"version": base_config["version"]}
+	manifest.base = {"version": base_config["version"]}
 
-	# # Create the new manifest, using HEAD as the new last commit
-	# new_manifest = {
-	# 	"last_commit": head,
-	# 	"modules": modules,
-	# 	"libraries": libraries,
-	# 	"base": base,
-	# 	"contributors": contributors,
-	# }
+	# Cache the new manifest, so sub-pipelines can access it
 	ctx.cache["gm4_manifest"].json = manifest.dict()
 
 
