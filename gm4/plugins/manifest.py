@@ -46,23 +46,30 @@ class ManifestModuleModel(BaseModel):
 	recommends: list[str] = []
 	hidden: bool = False
 	important_note: Optional[str]
+	publish_date: Optional[str] # TODO ISO model?
 	modrinth_id: Optional[str]
 	smithed_link: Optional[str]
 	pmc_link: Optional[int]
 
 
-class ManifestModel(BaseModel):
-	"""class describing the structure of the meta.json manifest file"""
+class ManifestCacheModel(BaseModel):
+	"""describes the structure of the cached manifest"""
 	last_commit: str
 	modules: dict[str, ManifestModuleModel]
-	libraries: dict[str, ManifestModuleModel] # TODO smaller section? Or lib release ready
+	libraries: dict[str, ManifestModuleModel]
 	base: Any#ManifestModuleModel # TODO
 	contributors: Any # TODO loads from jsonfile directly
+
+class ManifestFileModel(BaseModel):
+	"""describes the structure of the meta.json saved to disk"""
+	last_commit: str
+	modules: list[ManifestModuleModel]
+	contributors: Any # TODO
 
 
 def create(ctx: Context):
 	"""Collect a manifest for all modules from respective beet.yaml files."""
-	manifest = ManifestModel(last_commit=run(["git", "rev-parse", "HEAD"]), modules={}, libraries={}, base={}, contributors=None)
+	manifest = ManifestCacheModel(last_commit=run(["git", "rev-parse", "HEAD"]), modules={}, libraries={}, base={}, contributors=None)
 	logger = parent_logger.getChild("create")
 
 	LIB_OVERRIDES: dict[Any, Any] = {
@@ -72,7 +79,6 @@ def create(ctx: Context):
 
 	for glob, manifest_section, config_overrides in [("gm4_*", manifest.modules, {}), ("lib_*", manifest.libraries, LIB_OVERRIDES)]:
 		for pack_id in [p.name for p in sorted(ctx.directory.glob(glob))]:
-			print(pack_id)
 			try:
 				config = load_config(Path(pack_id) / "beet.yaml") # TODO existance check?
 				gm4_meta = ctx.validate("gm4", validator=ManifestConfig, options=config.meta["gm4"]|config_overrides) # manually parse config into models  
@@ -92,6 +98,7 @@ def create(ctx: Context):
 					recommends = gm4_meta.website.recommended,
 					important_note = gm4_meta.website.notes[0] if len(gm4_meta.website.notes)>0 else None,
 					hidden = gm4_meta.website.hidden,
+					publish_date = None,
 					modrinth_id = modrinth_meta.project_id,
 					smithed_link = smithed_meta.pack_id,
 					pmc_link = pmc_meta.uid
@@ -126,12 +133,12 @@ def update_patch(ctx: Context):
 	logger = parent_logger.getChild("update_patch")
 	skin_cache = JsonFile(source_path="gm4/skin_cache.json").data
 
-	modules = ctx.cache["gm4_manifest"].json["modules"]
+	modules = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json).modules
 
 	if manifest_file.exists():
-		manifest = json.loads(manifest_file.read_text())
-		last_commit = manifest["last_commit"]
-		released_modules: dict[str, dict[str, Any]] = {m["id"]:m for m in manifest["modules"] if m.get("version", None)}
+		manifest = ManifestFileModel.parse_obj(json.loads(manifest_file.read_text()))
+		last_commit = manifest.last_commit
+		released_modules: dict[str, ManifestModuleModel] = {m.id:m for m in manifest.modules if m.version}
 	else:
 		logger.debug("No existing meta.json manifest file was located")
 		last_commit = None
@@ -141,8 +148,8 @@ def update_patch(ctx: Context):
 		module = modules[id]
 		released = released_modules.get(id, None)
 
-		publish_date = released.get("publish_date", None) if released else None
-		module["publish_date"] = publish_date or datetime.datetime.now().date().isoformat()
+		publish_date = released.publish_date if released else None
+		module.publish_date = publish_date or datetime.datetime.now().date().isoformat()
 
 		deps = _traverse_includes(id) | {"base"}
 		deps_dirs = [element for sublist in [[f"{d}/data", f"{d}/*py"] for d in deps] for element in sublist]
@@ -160,15 +167,15 @@ def update_patch(ctx: Context):
 
 		if not diff and released:
 			# No changes were made, keep the same patch version
-			module["version"] = released["version"]
+			module.version = released.version
 		elif not released:
 			# First release
-			module["version"] = module["version"].replace("X", "0")
+			module.version = module.version.replace("X", "0")
 			logger.debug(f"First release of {id}")
 		else:
 			# Changes were made, bump the patch
-			version = Version(module["version"])
-			last_ver = Version(released["version"])
+			version = Version(module.version)
+			last_ver = Version(released.version)
 			
 			if version.minor > last_ver.minor or version.major > last_ver.major: # type: ignore
 				version.patch = 0
@@ -176,9 +183,9 @@ def update_patch(ctx: Context):
 				version.patch = last_ver.patch + 1 # type: ignore
 				logger.info(f"Updating {id} patch to {version.patch}")
 
-			module["version"] = str(version)
+			module.version = str(version)
 
-	ctx.cache["gm4_manifest"].json["modules"] = modules
+	ctx.cache["gm4_manifest"].json["modules"] = {id:m.dict() for id, m in modules.items()}
 
 @cache
 def _traverse_includes(project_id: str) -> set[str]:
@@ -210,14 +217,15 @@ def write_meta(ctx: Context):
 
 def write_credits(ctx: Context):
 	"""Writes the credits metadata to CREDITS.md. and collects for README.md"""
-	manifest = ctx.cache["gm4_manifest"].json
-	contributors = manifest.get("contributors", {})
-	credits: dict[str, list[str]] = manifest["modules"].get(ctx.project_id, {}).get("credits", {})
+	manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+	contributors = manifest.contributors
+	module = manifest.modules.get(ctx.project_id)
+	credits = module.credits if module else {}
 	if len(credits) == 0:
 		return
 
 	# traverses contributors and associates name with links for printing
-	linked_credits: dict[str, list[str]] = {}
+	linked_credits: CreditsModel = {}
 	for title in credits:
 		people = credits[title]
 		if len(people) == 0:
@@ -249,11 +257,11 @@ def write_updates(ctx: Context):
 	if init is None:
 		return
 
-	manifest = ctx.cache["gm4_manifest"].json
-	modules = manifest["modules"]
+	manifest =ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+	modules = manifest.modules
 
 	score = f"{ctx.project_id.removeprefix('gm4_')} gm4_modules"
-	version = Version(modules[ctx.project_id]["version"])
+	version = Version(modules[ctx.project_id].version)
 
 	# Update score setter for this module, and add version to gm4:log
 	last_i=-1
@@ -272,7 +280,7 @@ def write_updates(ctx: Context):
 	init.lines.append("# Module update list")
 	init.lines.append("data remove storage gm4:log queue[{type:'outdated'}]")
 	for m in modules.values():
-		version = Version(m["version"]).int_rep()
-		website = f"https://gm4.co/modules/{m['id'][4:].replace('_','-')}"
-		init.lines.append(f"execute if score {m['id']} load.status matches -1.. if score {m['id'].removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m['name']}',download:'{website}',render:'{{\"text\":\"{m['name']}\",\"clickEvent\":{{\"action\":\"open_url\",\"value\":\"{website}\"}},\"hoverEvent\":{{\"action\":\"show_text\",\"value\":{{\"text\":\"Click to visit {website}\",\"color\":\"#4AA0C7\"}}}}}}'}}")
+		version = Version(m.version).int_rep()
+		website = f"https://gm4.co/modules/{m.id[4:].replace('_','-')}"
+		init.lines.append(f"execute if score {m.id} load.status matches -1.. if score {m.id.removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m.name}',download:'{website}',render:'{{\"text\":\"{m.name}\",\"clickEvent\":{{\"action\":\"open_url\",\"value\":\"{website}\"}},\"hoverEvent\":{{\"action\":\"show_text\",\"value\":{{\"text\":\"Click to visit {website}\",\"color\":\"#4AA0C7\"}}}}}}'}}")
 	
