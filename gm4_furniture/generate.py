@@ -1,124 +1,41 @@
 from beet import Context, subproject
+import pandas as pd
 
-class furnitures:
-    def __init__(self, technical_id, display_name, cmd, crafting, block_id="barrier[", sittable=0, dyable=0, wall_only=0, ceiling_only=0, length=1, depth=1, height=1, table=0, scale=1, custom_interaction=0):
-        self.technical_id = technical_id
-        self.display_name = display_name
-        self.cmd = cmd
-        self.crafting = crafting
-        self.block_id = block_id
-        self.sittable = sittable
-        self.wall_only = wall_only
-        self.ceiling_only = ceiling_only
-        self.dyable = dyable
-        self.length = length
-        self.depth = depth
-        self.height = height
-        self.table = table
-        self.scale = scale
-        self.custom_interaction = custom_interaction
-
-# Add new furniture here, technical_id, display_name, cmd, crafting are required in that order, then any other flags can be used to override the default
-# crafting should be formatted as (category, item_1,count, item_2,count)
-## allowed block_id = "light[level=0," or "light[level=15,", make sure it is formatted exactly like that !!!
 def beet_default(ctx: Context):
-    furniture_list = []
+
+    trades_init = []
     trades_list = []
-    furniture_list.append(furnitures(
-        'wooden_stool_1', 'Wooden Stool', 3420201, ("test1", "stick","3", "iron_ingot","1"), sittable=50))
-    furniture_list.append(furnitures(
-        'wooden_stool_2', 'Wooden Stool', 3420202, ("test1", "stick","3", "iron_ingot","1"), sittable=50))
-    furniture_list.append(furnitures(
-        'wooden_chair_1', 'Wooden Chair', 3420203, ("test1", "stick","3", "iron_ingot","1"), sittable=50))
-    furniture_list.append(furnitures(
-        'wooden_chair_2', 'Wooden Chair', 3420204, ("test1", "stick","3", "iron_ingot","1"), sittable=50))
-    furniture_list.append(furnitures(
-        'wooden_bench_1', 'Wooden Bench', 3420205, ("test1", "stick","3", "iron_ingot","1"), sittable=50, length=3))
-    furniture_list.append(furnitures(
-        'wooden_bench_2', 'Wooden Bench', 3420206, ("test1", "stick","3", "iron_ingot","1"), sittable=50, length=3))
-    furniture_list.append(furnitures(
-        'dyable_armchair_1', 'Cloth Armchair', 3420207, ("test1", "stick","3", "iron_ingot","1"), sittable=50, dyable=1))
-    furniture_list.append(furnitures(
-        'wooden_3_candle_holder_1', 'Candelabra', 3420208, ("test1", "stick","3", "iron_ingot","1"), block_id="light[level=15,", dyable=1))
-    furniture_list.append(furnitures(
-        'wooden_5_candle_holder_1', 'Candelabra', 3420209, ("test1", "stick","3", "iron_ingot","1"), block_id="light[level=15,", dyable=1))
-    furniture_list.append(furnitures(
-        'dyable_stool_1', 'Ottoman', 3420210, ("test1", "stick","3", "iron_ingot","1"), sittable=50, dyable=1))
-    furniture_list.append(furnitures(
-        'wooden_table_1', 'Wooden Table', 3420211, ("test1", "stick","3", "iron_ingot","1"), table=1))
-    furniture_list.append(furnitures(
-        'wooden_table_2', 'Wooden Table', 3420212, ("test1", "stick","3", "iron_ingot","1"), table=1))
-    furniture_list.append(furnitures(
-        'dyable_wooden_table_1', 'Wooden Table with Cloth', 3420213, ("test1", "stick","3", "iron_ingot","1"), dyable=1, table=1))
-    furniture_list.append(furnitures(
-        'dyable_wooden_sofa_1', 'Wooden Sofa with Cushions', 3420214, ("test1", "stick","3", "iron_ingot","1"), sittable=50, dyable=1, length=3))
-    furniture_list.append(furnitures(
-        '2x1_log_seat_1', 'Log Bench', 3420215, ("test3","stick","3","iron_ingot","1"), sittable=50, length=2))
-    furniture_list.append(furnitures(
-        '1x1_log_seat_1', 'Log Seat', 3420216, ("test3","stick","3","iron_ingot","1"), sittable=50))
-    furniture_list.append(furnitures(
-        'stone_frog_statue', 'Frog Statue', 3420217, ("test1", "stick","3", "iron_ingot","1"), custom_interaction=1))
-    furniture_list.append(furnitures(
-        'wooden_wall_candle_holder_1', 'Wall Candle', 3420218, ("test1", "stick","3", "iron_ingot","1"), block_id="light[level=15,", dyable=1, wall_only=1))
-    furniture_list.append(furnitures(
-        'dyable_wooden_chair_1', 'Wooden Chair with Cushions', 3420219, ("test2","stick","3","iron_ingot","1"), sittable=50, dyable=1))
-    furniture_list.append(furnitures(
-        'gold_5_candle_holder_1', 'Gold Candelabra', 3420220, ("test2","stick","3","iron_ingot","1"), block_id="light[level=15,", dyable=1))
-    furniture_list.append(furnitures(
-        'gold_3_candle_holder_1', 'Gold Candelabra', 3420221, ("test2","stick","3","iron_ingot","1"), block_id="light[level=15,", dyable=1))
-    furniture_list.append(furnitures(
-        'iron_5_candle_holder_1', 'Iron Candelabra', 3420222, ("test2","stick","3","iron_ingot","1"), block_id="light[level=15,", dyable=1))
-    furniture_list.append(furnitures(
-        'iron_3_candle_holder_1', 'Iron Candelabra', 3420223, ("test2","stick","3","iron_ingot","1"), block_id="light[level=15,", dyable=1))
-    furniture_list.append(furnitures(
-        '2x2_wooden_table_2', 'Wooden Table', 3420224, ("test2","stick","3","iron_ingot","1"), length=2, depth=2, table=1))
+    trades_append = []
+
+    # read in the furniture data
+    xls = pd.ExcelFile(r'gm4_furniture/furniture_data.xlsx')
+
+    for category in xls.sheet_names:
+
+        # skip the sheet if it is the template (TODO: remove the template sheet)
+        if category == 'template_sheet':
+            continue
+
+        # read trade data from this sheet
+        tool_cmd = pd.read_excel(xls, category).iloc[0,0]
+        trade_data = pd.read_excel(xls, category, skiprows=2, usecols="A:E")
+
+        new_trades_init,new_trades_list,new_trades_append = generate_trade_data(trade_data, tool_cmd, category)
+
+        trades_init.append(new_trades_init)
+        trades_list.append(new_trades_list)
+        trades_append.append(new_trades_append)
+
+        # read furniture data from this sheet
+        furniture_data = pd.read_excel(xls, category, skiprows=2, usecols="E:R")
+        generate_furniture_data(ctx, furniture_data)
 
 
-    # create furniture loot tables and placement functions
-    for furniture_data in furniture_list:
-        subproject_config = {
-            "data_pack": {
-                "load": [
-                    {
-                        f"data/gm4_furniture/loot_tables/furniture/{furniture_data.technical_id}.json": "data/gm4_furniture/templates/loot_tables/furniture_item_template.json",
-                        f"data/gm4_furniture/functions/place/furniture/{furniture_data.technical_id}.mcfunction": "data/gm4_furniture/templates/functions/furniture_place_template.mcfunction",
-                    }
-                ],
-                "render": {
-                    "loot_tables": "*",
-                    "functions": "*"
-                }
-            },
-            "meta": {
-                "technical_id": furniture_data.technical_id,
-                "display_name": furniture_data.display_name,
-                "cmd": furniture_data.cmd,
-                "crafting": furniture_data.crafting,
-                "block_id": furniture_data.block_id,
-                "sittable": furniture_data.sittable,
-                "wall_only": furniture_data.wall_only,
-                "ceiling_only": furniture_data.ceiling_only,
-                "dyable": furniture_data.dyable,
-                "length": furniture_data.length,
-                "depth": furniture_data.depth,
-                "height": furniture_data.height,
-                "table": furniture_data.table,
-                "scale": furniture_data.scale,
-                "custom_interaction": furniture_data.custom_interaction
-            }
-        }
-
-        ctx.require(subproject(subproject_config))
-
-
-    # create a list of all trade data
-    # any used trade category should be initiated with a cmd for the used tool, this is done in gm4_furnitures:generate_trades in this datapack
-    # for expansions #gm4_furniture:add_categories is called, this should lead to a similar function file.
-    for furniture_data in furniture_list:
-        trades_list.append("data modify storage gm4_furniture:temp new_trades." + furniture_data.crafting[0] + ".trades append value {cost:[{id:" + furniture_data.crafting[1] + ",Count:" + furniture_data.crafting[2] + "b},{id:" + furniture_data.crafting[3] + ",Count:" + furniture_data.crafting[4] + "b}],technical_id:\"" + furniture_data.technical_id + "\"}")
+    # build the trade data function
+    trades_init = '\n'.join(trades_init)
     trades_list = '\n'.join(trades_list)
+    trades_append = '\n'.join(trades_append)
 
-    # add a function to add trade data to a storage
     subproject_config = {
         "data_pack": {
             "load": [
@@ -131,8 +48,69 @@ def beet_default(ctx: Context):
             }
         },
         "meta": {
-            "furniture_list": trades_list,
+            "trades_init": trades_init,
+            "trades_list": trades_list,
+            "trades_append": trades_append,
         }
     }
 
     ctx.require(subproject(subproject_config))
+
+
+
+def generate_trade_data(trade_data, tool_cmd, category):
+
+    # create a command to make an empty storage called new_trades that holds the category name and tool cmd
+    new_trades_init = "data modify storage gm4_furniture:temp new_trades." + category + " set value {cmd:" + tool_cmd + ",trades:[]}"
+
+    # iterate over the rows in the spreadsheet and add the trade data to the storage
+    new_trades_list = []
+    for row in trade_data.index:
+        new_trades_list.append("data modify storage gm4_furniture:temp new_trades." + category + ".trades append value {cost:[{id:" + str(trade_data['craft_item_1_id'][row]) + ",Count:" + str(trade_data['craft_item_1_count'][row]) + "b},{id:" + str(trade_data['craft_item_2_id'][row]) + ",Count:" + str(trade_data['craft_item_1_count'][row]) + "b}],technical_id:\"" + str(trade_data['technical_id'][row]) + "\"}")
+    new_trades_list = '\n'.join(new_trades_list)
+
+    # add command to append the main furniture datastorage with the newly created one
+    new_trades_append = "data modify storage gm4_furniture:data furniture_station append from storage gm4_furniture:temp new_trades." + category
+
+    # return the created commands
+    return(new_trades_init,new_trades_list,new_trades_append)
+
+
+
+def generate_furniture_data(ctx, furniture_data):
+
+    # create furniture loot tables and placement functions for every furniture in this category
+    for row in furniture_data.index:
+
+        subproject_config = {
+            "data_pack": {
+                "load": [
+                    {
+                        f"data/gm4_furniture/loot_tables/furniture/{furniture_data['technical_id'][row]}.json": "data/gm4_furniture/templates/loot_tables/furniture_item_template.json",
+                        f"data/gm4_furniture/functions/place/furniture/{furniture_data['technical_id'][row]}.mcfunction": "data/gm4_furniture/templates/functions/furniture_place_template.mcfunction",
+                    }
+                ],
+                "render": {
+                    "loot_tables": "*",
+                    "functions": "*"
+                }
+            },
+            "meta": {
+                "technical_id": furniture_data['technical_id'][row],
+                "display_name": furniture_data['display_name'][row],
+                "cmd": str(furniture_data['cmd'][row]),
+                "block_id": furniture_data['block_id'][row],
+                "sittable": str(furniture_data['sittable'][row]),
+                "wall_only": str(int(furniture_data['wall_only'][row])),
+                "ceiling_only": str(int(furniture_data['ceiling_only'][row])),
+                "dyable": str(int(furniture_data['dyable'][row])),
+                "length": str(furniture_data['length'][row]),
+                "depth": str(furniture_data['depth'][row]),
+                "height": str(furniture_data['height'][row]),
+                "table": str(int(furniture_data['table'][row])),
+                "scale": str(furniture_data['scale'][row]),
+                "custom_interaction": str(int(furniture_data['custom'][row]))
+            }
+        }
+
+        ctx.require(subproject(subproject_config))

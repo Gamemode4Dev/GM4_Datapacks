@@ -18,7 +18,6 @@ team modify gm4_furniture_nocol collisionRule never
 # build furniture station trade data
 data modify storage gm4_furniture:data furniture_station set value []
 function gm4_furniture:generate_trades
-function #gm4_furniture:add_categories
 execute store result score $max_index gm4_furniture_index run data get storage gm4_furniture:data furniture_station
 scoreboard players remove $max_index gm4_furniture_index 1
 

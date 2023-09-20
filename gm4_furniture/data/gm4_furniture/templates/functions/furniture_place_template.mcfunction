@@ -48,8 +48,7 @@ scoreboard players set $custom_interaction gm4_furniture_data {{ custom_interact
 # spawn the furniture
 execute positioned ~ ~-0.4999 ~ run summon item_display ~ ~0.{{ sittable }} ~ {Tags:["gm4_furniture","gm4_furniture.display","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture_display.{{ technical_id }}"',item:{id:"leather_horse_armor",Count:1,tag:{data:{technical_id:"{{ technical_id }}"},CustomModelData:{{ cmd }}}},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[{{ scale }}f,{{ scale }}f,{{ scale }}f]}}
 summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.main","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture.{{ technical_id }}"',height:1.0002f,width:1.0002f,response:1b}
-execute unless score $waterlog gm4_furniture_data matches 1 run setblock ~ ~ ~ {{ block_id }}]
-execute if score $waterlog gm4_furniture_data matches 1 run setblock ~ ~ ~ {{ block_id }}waterlogged=true]
+setblock ~ ~ ~ {{ block_id }}
 
 # add placement tags
 execute if score $wall_only gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture] add gm4_furniture.on_wall
@@ -57,8 +56,7 @@ execute if score $ceiling_only gm4_furniture_data matches 1 run tag @e[type=inte
 
 # spawn extensions if they exist and set id
 execute at @e[type=marker,tag=gm4_furniture.marked_block] run summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.additional","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture.{{ technical_id }}"',height:1.0002f,width:1.0002f,response:1b}
-execute at @e[type=marker,tag=gm4_furniture.marked_block] unless block ~ ~ ~ water[level=0] run setblock ~ ~ ~ {{ block_id }}]
-execute at @e[type=marker,tag=gm4_furniture.marked_block] if block ~ ~ ~ water[level=0] run setblock ~ ~ ~ {{ block_id }}waterlogged=true]
+execute at @e[type=marker,tag=gm4_furniture.marked_block] run setblock ~ ~ ~ {{ block_id }}
 execute store result score @e[type=interaction,tag=gm4_new_furniture] gm4_furniture_id run scoreboard players add $next_id gm4_furniture_id 1
 
 # add custom interaction tags
