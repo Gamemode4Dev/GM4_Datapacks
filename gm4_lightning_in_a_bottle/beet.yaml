@@ -14,8 +14,8 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_potion_tracking : 1.0.0
-        - lib_brewing : 1.0.0
+        lib_potion_tracking: 1.0.0
+        lib_brewing: 1.0.0
       schedule_loops:
         - main
         - brewing_stand/texture_connector/process

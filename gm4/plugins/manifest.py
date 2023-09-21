@@ -80,7 +80,7 @@ def create(ctx: Context):
 	for glob, manifest_section, config_overrides in [("gm4_*", manifest.modules, {}), ("lib_*", manifest.libraries, LIB_OVERRIDES)]:
 		for pack_id in [p.name for p in sorted(ctx.directory.glob(glob))]:
 			try:
-				config = load_config(Path(pack_id) / "beet.yaml") # TODO existance check?
+				config = load_config(Path(pack_id) / "beet.yaml")
 				gm4_meta = ctx.validate("gm4", validator=ManifestConfig, options=config.meta["gm4"]|config_overrides) # manually parse config into models  
 				modrinth_meta = ctx.validate("modrinth", validator=ModrinthConfig, options=config.meta.get("modrinth"))
 				smithed_meta = ctx.validate("smithed", validator=SmithedConfig, options=config.meta.get("smithed"))
@@ -93,7 +93,7 @@ def create(ctx: Context):
 					video_link = gm4_meta.video or "",
 					wiki_link = gm4_meta.wiki or "",
 					credits = gm4_meta.credits,
-					requires = [],#gm4_meta.versioning.required, # TODO only inclide modules, once format is fixed
+					requires = [e for e in gm4_meta.versioning.required.keys() if not e.startswith("lib")] if gm4_meta.versioning else [],
 					description = gm4_meta.website.description,
 					recommends = gm4_meta.website.recommended,
 					important_note = gm4_meta.website.notes[0] if len(gm4_meta.website.notes)>0 else None,

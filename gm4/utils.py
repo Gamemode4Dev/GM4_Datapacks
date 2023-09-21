@@ -46,3 +46,8 @@ def nested_get(d: dict[str, Any], key: str) -> list[Any]:
 				if isinstance(elem, dict):
 					ret_list.extend(nested_get(elem, key)) #type: ignore ; NBT is hard to type due to its nested nature
 	return ret_list
+
+class NoneAttribute():
+	"""Object which returns None for any arbitrary attribute access. Used for default members"""
+	def __getattribute__(self, __name: str) -> None:
+		return None
