@@ -1,8 +1,7 @@
 from beet import Context, Function, FunctionTag, PluginOptions, configurable
 from beet.contrib.rename_files import rename_files
 from beet.contrib.find_replace import find_replace
-from pydantic import Field
-from typing import Any, Optional
+from pydantic import Field, Extra
 import warnings
 from gm4.utils import Version, NoneAttribute
 import gm4.plugins.manifest # for ManifestCacheModel; a runtime circular dependency
@@ -11,7 +10,7 @@ class VersionInjectionConfig(PluginOptions):
     functions: list[str] = []
     advancements: list[str] = []
 
-class VersioningConfig(PluginOptions):
+class VersioningConfig(PluginOptions, extra=Extra.ignore):
     schedule_loops: list[str] = []
     required: dict[str, str] = {}
     extra_version_injections: VersionInjectionConfig = Field(default=VersionInjectionConfig())
