@@ -87,7 +87,7 @@ def create(ctx: Context):
 				pmc_meta = ctx.validate("pmc", validator=PMCConfig, options=config.meta.get("pmc"))
 
 				manifest_section[pack_id] = ManifestModuleModel(
-					id = pack_id,
+					id = config.id,
 					name = config.name,
 					version = config.version,
 					video_link = gm4_meta.video or "",
