@@ -36,7 +36,7 @@ execute if score $placement_blocked gm4_furniture_data matches 1 run scoreboard 
 execute if score $placement_blocked gm4_furniture_data matches 1 run kill @e[type=marker,tag=gm4_furniture.marked_block]
 
 # if placement is not valid cancel placement
-execute if score $valid_placement gm4_furniture_data matches 0 run loot spawn ~ ~ ~ loot gm4_furniture:furniture/{{ technical_id }}
+execute if score $valid_placement gm4_furniture_data matches 0 run loot spawn ~ ~ ~ loot gm4_furniture:furniture/{{ category }}/{{ technical_id }}
 execute if score $valid_placement gm4_furniture_data matches 0 run return 0
 
 # set variables
@@ -46,18 +46,17 @@ scoreboard players set $table gm4_furniture_data {{ table }}
 scoreboard players set $custom_interaction gm4_furniture_data {{ custom_interaction }}
 
 # spawn the furniture
-execute positioned ~ ~-0.4999 ~ run summon item_display ~ ~0.{{ sittable }} ~ {Tags:["gm4_furniture","gm4_furniture.display","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture_display.{{ technical_id }}"',item:{id:"leather_horse_armor",Count:1,tag:{data:{technical_id:"{{ technical_id }}"},CustomModelData:{{ cmd }}}},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[{{ scale }}f,{{ scale }}f,{{ scale }}f]}}
-summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.main","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture.{{ technical_id }}"',height:1.0002f,width:1.0002f,response:1b}
+execute positioned ~ ~-0.4999 ~ run summon item_display ~ ~0.{{ sittable }} ~ {Tags:["gm4_furniture","gm4_furniture.display","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture_display.{{ category }}.{{ technical_id }}"',item:{id:"leather_horse_armor",Count:1,tag:{data:{furniture_id:"{{ category }}/{{ technical_id }}"},CustomModelData:{{ cmd }}}},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[{{ scale }}f,{{ scale }}f,{{ scale }}f]}}
+summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.main","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture.{{ category }}.{{ technical_id }}"',height:1.0002f,width:1.0002f,response:1b}
 setblock ~ ~ ~ {{ block_id }}
 
 # add placement tags
 execute if score $wall_only gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture] add gm4_furniture.on_wall
 execute if score $ceiling_only gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture] add gm4_furniture.on_ceiling
 
-# spawn extensions if they exist and set id
-execute at @e[type=marker,tag=gm4_furniture.marked_block] run summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.additional","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture.{{ technical_id }}"',height:1.0002f,width:1.0002f,response:1b}
+# spawn extensions if they exist
+execute at @e[type=marker,tag=gm4_furniture.marked_block] run summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.additional","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture.{{ category }}.{{ technical_id }}"',height:1.0002f,width:1.0002f,response:1b}
 execute at @e[type=marker,tag=gm4_furniture.marked_block] run setblock ~ ~ ~ {{ block_id }}
-execute store result score @e[type=interaction,tag=gm4_new_furniture] gm4_furniture_id run scoreboard players add $next_id gm4_furniture_id 1
 
 # add custom interaction tags
 execute if score $custom_interaction gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture] add gm4_furniture.custom_interaction
@@ -73,14 +72,15 @@ execute if score $dyable gm4_furniture_data matches 1 run tag @e[type=interactio
 execute if score $sittable gm4_furniture_data matches 1.. run tag @e[type=interaction,tag=gm4_new_furniture,distance=..8] add gm4_furniture.sittable
 scoreboard players set $sit_height gm4_furniture_data 50
 execute if score $sittable gm4_furniture_data matches 1.. store result entity @e[type=item_display,tag=gm4_new_furniture,distance=..2,limit=1,sort=nearest] transformation.translation[1] float 0.01 run scoreboard players operation $sit_height gm4_furniture_data -= $sittable gm4_furniture_data
-execute if score $sittable gm4_furniture_data matches 1.. at @e[type=marker,tag=gm4_furniture.marked_block] positioned ~ ~-0.4999 ~ run summon item_display ~ ~0.{{ sittable }} ~ {Tags:["gm4_furniture","gm4_furniture.seat","gm4_furniture.sittable","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture_display.{{ technical_id }}_seat"',item:{id:"air",Count:1},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]}}
+execute if score $sittable gm4_furniture_data matches 1.. at @e[type=marker,tag=gm4_furniture.marked_block] positioned ~ ~-0.4999 ~ run summon item_display ~ ~0.{{ sittable }} ~ {Tags:["gm4_furniture","gm4_furniture.seat","gm4_furniture.sittable","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture_display.{{ category }}.{{ technical_id }}_seat"',item:{id:"air",Count:1},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]}}
 
 # rotate furniture depending on rotation set by player (if rotation is 1 default rotation can be kept)
 execute if score $rotation gm4_furniture_data matches 2.. as @e[tag=gm4_new_furniture,distance=..8] run data modify entity @s Rotation set from storage gm4_furniture:data Rotation
 
-# mark block as placed
+# mark block as placed and set id
 playsound minecraft:block.barrel.close block @a[distance=..6] ~ ~ ~ 1 1.6
-tag @e[distance=..2] remove gm4_new_furniture
+execute store result score @e[tag=gm4_new_furniture] gm4_furniture_id run scoreboard players add $next_id gm4_furniture_id 1
+tag @e[tag=gm4_new_furniture] remove gm4_new_furniture
 
 # cleanup
 kill @e[type=marker,tag=gm4_furniture.marked_block]
