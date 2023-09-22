@@ -13,11 +13,24 @@
             }
           },
           "type": {
-            "is_lightning": false,
-            "is_projectile": false,
-            "is_magic": false,
-            "is_fire": false,
-            "is_explosion": false
+            "tags": [
+              {
+                "id": "minecraft:is_explosion",
+                "expected": false
+              },
+              {
+                "id": "minecraft:is_fire",
+                "expected": false
+              },
+              {
+                "id": "minecraft:is_projectile",
+                "expected": false
+              },
+              {
+                "id": "minecraft:witch_resistant_to",
+                "expected": false
+              }
+            ]
           }
         }
       }
