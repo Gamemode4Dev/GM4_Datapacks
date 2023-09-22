@@ -1,5 +1,5 @@
 {
-  "last_commit": "1613e3d13464e962fa8b19df72cc7d67ab596820",
+  "last_commit": "b1248f4fdfc36db7e1e1b1fd08f8e6a6ad40c6fa",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -17,11 +17,13 @@
       ],
       "description": "Adds the Animi Shamir to Metallurgy. Items with Animi will respawn with you when you die!",
       "recommends": [],
+      "hidden": false,
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_apple_trees",
@@ -46,11 +48,13 @@
         "gm4_orbis",
         "gm4_podzol_rooting_soil"
       ],
+      "hidden": false,
       "important_note": "Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": "Afacz65w",
-      "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "smithed_link": "gm4_apple_trees",
+      "pmc_link": null
     },
     {
       "id": "gm4_audere_shamir",
@@ -71,10 +75,13 @@
       ],
       "description": "Adds the shamir 'Audere' to Metallurgy. Gain Haste with low durability tools.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_auto_crafting",
@@ -105,10 +112,13 @@
         "gm4_smelteries",
         "gm4_liquid_tanks"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_bat_grenades",
@@ -130,11 +140,13 @@
         "gm4_enderman_support_class",
         "gm4_metallurgy"
       ],
+      "hidden": false,
       "important_note": "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": "qWQqEQMY",
-      "smithed_link": null,
-      "pmc_link": 4293806,
-      "publish_date": "2023-07-10"
+      "smithed_link": "gm4_bat_grenades",
+      "pmc_link": null
     },
     {
       "id": "gm4_beehive_inspector",
@@ -153,10 +165,13 @@
       "requires": [],
       "description": "Adds a handy tooltip to Beehive items, telling you exactly how many bees and how much honey is stored inside! A beekeepers' dream!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_better_armour_stands",
@@ -183,10 +198,13 @@
         "gm4_poses_pack",
         "gm4_particles_pack"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": "ib7YfS5V",
-      "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "smithed_link": "gm4_better_armour_stands",
+      "pmc_link": null
     },
     {
       "id": "gm4_better_fire",
@@ -212,10 +230,13 @@
         "gm4_bat_grenades",
         "gm4_enderman_support_class"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_block_compressors",
@@ -258,10 +279,13 @@
         "gm4_smelteries",
         "gm4_liquid_tanks"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 4344954,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_book_binders",
@@ -283,10 +307,13 @@
       "recommends": [
         "gm4_resource_pack"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_boots_of_ostara",
@@ -313,10 +340,13 @@
         "gm4_better_armour_stands",
         "gm4_standard_crafting"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_calling_bell",
@@ -335,10 +365,13 @@
         "gm4_apple_trees",
         "gm4_zauber_cauldrons"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_cement_mixers",
@@ -359,10 +392,13 @@
       ],
       "description": "Allows Liquid Tanks to convert Concrete Powder items into Concrete, at the cost of \u2153 of a Bucket of Water per Concrete Powder.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_chairs",
@@ -385,10 +421,13 @@
         "gm4_better_armour_stands",
         "gm4_holographic_tags"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": "KLywOs5L",
-      "smithed_link": null,
-      "pmc_link": 4299435,
-      "publish_date": "2023-07-10"
+      "smithed_link": "gm4_chairs",
+      "pmc_link": null
     },
     {
       "id": "gm4_combat_expanded",
@@ -406,10 +445,13 @@
       "recommends": [
         "gm4_metallurgy"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_cooler_caves",
@@ -434,10 +476,13 @@
         "gm4_dangerous_dungeons",
         "gm4_tower_structures"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_cozy_campfires",
@@ -456,10 +501,13 @@
       "requires": [],
       "description": "Allows Campfires to grant you up to 4 extra hearts that last for more than half of a Minecraft day. Perfect for those scary first nights in a Minecraft world.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_crossbow_cartridges",
@@ -479,10 +527,13 @@
       "requires": [],
       "description": "Shoot more than just arrows! Crossbow Cartridges allows your crossbow to fire a variety of projectiles; Shoot Pufferfish, Tripwires, Torches, and many more. Synergizes nicely with the Ziprails Module for easy Ziprail construction.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": "E7M57BNU",
-      "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "smithed_link": "gm4_crossbow_cartridges",
+      "pmc_link": null
     },
     {
       "id": "gm4_dangerous_dungeons",
@@ -507,10 +558,13 @@
         "gm4_tower_structures",
         "gm4_cooler_caves"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_desire_lines",
@@ -536,10 +590,13 @@
       "recommends": [
         "gm4_boots_of_ostara"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": "cx5dX4ug",
-      "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "smithed_link": "gm4_desire_lines",
+      "pmc_link": null
     },
     {
       "id": "gm4_disassemblers",
@@ -580,10 +637,13 @@
         "gm4_smelteries",
         "gm4_liquid_tanks"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_display_frames",
@@ -607,10 +667,13 @@
         "gm4_better_armour_stands",
         "gm4_holographic_tags"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_double_doors",
@@ -626,10 +689,13 @@
       "requires": [],
       "description": "Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blacks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-08-12",
       "modrinth_id": "Vx4zJ1Np",
-      "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-08-12"
+      "smithed_link": "gm4_double_doors",
+      "pmc_link": null
     },
     {
       "id": "gm4_dripleaf_filters",
@@ -647,10 +713,13 @@
       "recommends": [
         "gm4_book_binders"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_dripleaf_launchers",
@@ -666,10 +735,13 @@
       "requires": [],
       "description": "Start your own Dripleaf Space Program!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-08-12",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-08-12"
+      "pmc_link": null
     },
     {
       "id": "gm4_enchantment_extractors",
@@ -711,10 +783,13 @@
         "gm4_smelteries",
         "gm4_liquid_tanks"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_end_fishing",
@@ -735,10 +810,13 @@
       "recommends": [
         "gm4_resource_pack"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_ender_hoppers",
@@ -779,10 +857,13 @@
         "gm4_smelteries",
         "gm4_liquid_tanks"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_enderman_support_class",
@@ -803,10 +884,13 @@
       "recommends": [
         "gm4_bat_grenades"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 4297148,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_everstone",
@@ -828,10 +912,13 @@
       "recommends": [
         "gm4_resource_pack"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_forming_press",
@@ -873,10 +960,13 @@
         "gm4_smelteries",
         "gm4_liquid_tanks"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_fulcio_shamir",
@@ -898,10 +988,13 @@
       ],
       "description": "Adds the shamir 'Fulcio' to Metallurgy. It allows you to place blocks in mid-air! This also enables you to choose the orientation of blocks like logs without needing a supporting block.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_guidebook",
@@ -921,10 +1014,11 @@
       ],
       "hidden": true,
       "important_note": "Experimental Module! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_heart_canisters",
@@ -967,10 +1061,13 @@
         "gm4_smelteries",
         "gm4_liquid_tanks"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 4331371,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_holographic_tags",
@@ -992,10 +1089,13 @@
       "requires": [],
       "description": "Set up floating messages with a simple name tag!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_iacio_shamir",
@@ -1016,10 +1116,13 @@
       ],
       "description": "Adds the 'Iacio' shamir to Metallurgy. It lets you throw things further! Launch an Ender Pearl into orbit or simply throw your Trident exceptionally far.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_ink_spitting_squid",
@@ -1041,10 +1144,13 @@
       "requires": [],
       "description": "Improves the vanilla ink effect by adding Blindness. Glow Squid will give Night Vision when disturbed, which might come in handy if you're out of torches!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 4581763,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_lightning_in_a_bottle",
@@ -1070,11 +1176,13 @@
         "gm4_potion_liquids",
         "gm4_spawner_minecarts"
       ],
+      "hidden": false,
       "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_liquid_minecarts",
@@ -1101,10 +1209,13 @@
       "recommends": [
         "gm4_potion_liquids"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_liquid_tanks",
@@ -1138,10 +1249,13 @@
         "gm4_cement_mixers",
         "gm4_relocators"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_live_catch",
@@ -1160,10 +1274,13 @@
       "requires": [],
       "description": "Catch live fish when fishing! But watch out for Pufferfish, those might make for a nasty surprise!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_lumos_shamir",
@@ -1188,10 +1305,13 @@
       ],
       "description": "Adds the shamir 'Lumos' to Metallurgy. It places torches when it is dark.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_mending_tanks",
@@ -1212,15 +1332,18 @@
       ],
       "description": "Enables Liquid Tanks filled with Experience to repair tools with the mending enchant on them.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.4.6",
+      "version": "1.4.7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -1256,11 +1379,26 @@
         "gm4_percurro_shamir",
         "gm4_vecto_shamir"
       ],
+      "hidden": false,
       "important_note": "Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
+      "search_keywords": [
+        "arborenda",
+        "defuse",
+        "forterra",
+        "gemini",
+        "hypexperia",
+        "infinitas",
+        "moneo",
+        "musical",
+        "sensus",
+        "tinker",
+        "vibro",
+        "shamir"
+      ],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_midnight_menaces",
@@ -1281,10 +1419,13 @@
       ],
       "description": "Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_mob_curing",
@@ -1306,10 +1447,13 @@
         "gm4_lightning_in_a_bottle",
         "gm4_shroomites"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_mountaineering",
@@ -1325,11 +1469,13 @@
       "requires": [],
       "description": "A mezze of mountaineering means! Glide down slopes and scale cliffs.",
       "recommends": [],
+      "hidden": false,
       "important_note": "Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.",
+      "search_keywords": [],
+      "publish_date": "2023-09-06",
       "modrinth_id": "Wq7Qfkuh",
-      "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-09-06"
+      "smithed_link": "gm4_mountaineering",
+      "pmc_link": null
     },
     {
       "id": "gm4_mysterious_midnights",
@@ -1354,10 +1500,13 @@
       "recommends": [
         "gm4_midnight_menaces"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_note_block_interface",
@@ -1379,10 +1528,13 @@
       "requires": [],
       "description": "Adds a neat interface to improve your musical skills!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
-      "smithed_link": null,
-      "pmc_link": 4308978,
-      "publish_date": "2023-07-10"
+      "smithed_link": "gm4_note_block_interface",
+      "pmc_link": null
     },
     {
       "id": "gm4_orb_of_ankou",
@@ -1403,10 +1555,13 @@
       ],
       "description": "Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_particles_pack",
@@ -1430,10 +1585,13 @@
       "recommends": [
         "gm4_poses_pack"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_percurro_shamir",
@@ -1454,10 +1612,13 @@
       ],
       "description": "Adds the 'Percurro' Shamir to Metallurgy! Weapons with Percurro let you teleport past your enemies in the blink of an eye!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_phantom_scarecrows",
@@ -1479,10 +1640,13 @@
       "requires": [],
       "description": "Set up Scarecrows that shoot homing rockets at Phantoms!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_pig_tractors",
@@ -1501,10 +1665,13 @@
       "requires": [],
       "description": "Ride pigs through fields to quickly harvest and plant crops! Who knows, maybe you will even dig up some useful things in the process.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_podzol_rooting_soil",
@@ -1523,10 +1690,13 @@
       "requires": [],
       "description": "Allows saplings to self-plant when on Podzol. The perfect choice for auto-treefarms!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_poses_pack",
@@ -1553,10 +1723,13 @@
       "recommends": [
         "gm4_particles_pack"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_potion_liquids",
@@ -1583,10 +1756,13 @@
       ],
       "description": "Adds the ability to store potions in Liquid Tanks! You can also use a potion by walking beneath a potion-filled Liquid Tank.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_potion_swords",
@@ -1609,10 +1785,13 @@
       "requires": [],
       "description": "As if getting stabbed isn't enough... support your friends, terrify your enemies, make gold great again using Golden Swords and potions!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 4578144,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_record_crafting",
@@ -1636,10 +1815,13 @@
       "recommends": [
         "gm4_standard_crafting"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_relocators",
@@ -1671,10 +1853,13 @@
         "gm4_smelteries",
         "gm4_tinkering_compressors"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_rope_ladders",
@@ -1693,10 +1878,13 @@
       "requires": [],
       "description": "Climbing downward has never been easier!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": "wN3RC3Zr",
-      "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "smithed_link": "gm4_rope_ladders",
+      "pmc_link": null
     },
     {
       "id": "gm4_scuba_gear",
@@ -1720,10 +1908,13 @@
       "recommends": [
         "gm4_sunken_treasure"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_shapeless_portals",
@@ -1739,10 +1930,13 @@
       "requires": [],
       "description": "Say goodbye to your boring old rectangular portals!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": "eq7hf4YU",
-      "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "smithed_link": "gm4_shapeless_portals",
+      "pmc_link": null
     },
     {
       "id": "gm4_shroomites",
@@ -1763,10 +1957,13 @@
       "requires": [],
       "description": "Ever wondered why all the Mooshrooms are locked up on islands? This Module makes Mooshrooms spread mycelium and mushrooms wherever they go.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_smelteries",
@@ -1797,10 +1994,13 @@
       "recommends": [
         "gm4_relocators"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_soul_glass",
@@ -1821,11 +2021,13 @@
       "requires": [],
       "description": "Reverse the effects of beacons with corrupting glass! But be careful, a poison Beacon may sound great at first, but is incredibly painful in pratice.",
       "recommends": [],
+      "hidden": false,
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_spawner_minecarts",
@@ -1846,10 +2048,13 @@
       "requires": [],
       "description": "Pick up Spawners and move them wherever you want with Minecarts.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_speed_paths",
@@ -1872,10 +2077,13 @@
       "requires": [],
       "description": "Gives you a speed effect when you walk on path blocks.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_standard_crafting",
@@ -1897,10 +2105,13 @@
       "requires": [],
       "description": "A crafting recipe pack that adds some nifty new recipes to the game.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_sunken_treasure",
@@ -1927,10 +2138,13 @@
         "gm4_resource_pack",
         "gm4_scuba_gear"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_sweethearts",
@@ -1953,10 +2167,13 @@
       "requires": [],
       "description": "Transfer your health to another player using flowers.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": 5484554,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_teleportation_anchors",
@@ -1976,10 +2193,13 @@
         "gm4_relocators",
         "gm4_zauber_cauldrons"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_tinkering_compressors",
@@ -2010,10 +2230,13 @@
       "recommends": [
         "gm4_relocators"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_tnt_landmines",
@@ -2036,10 +2259,13 @@
       "requires": [],
       "description": "Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_tower_structures",
@@ -2064,10 +2290,13 @@
         "gm4_dangerous_dungeons",
         "gm4_cooler_caves"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_trapped_signs",
@@ -2090,10 +2319,13 @@
       "requires": [],
       "description": "Craft trapped signs in a Custom Crafter which, when right-clicked, give off a redstone signal.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_tunnel_bores",
@@ -2119,10 +2351,13 @@
         "gm4_ziprails",
         "gm4_vertical_rails"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_undead_players",
@@ -2144,11 +2379,13 @@
       "requires": [],
       "description": "You'll find your death point faster, but you'll have to fight your corpse for your stuff back!",
       "recommends": [],
+      "hidden": false,
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": "jx6D06Q4",
       "smithed_link": null,
-      "pmc_link": 4294228,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_vecto_shamir",
@@ -2169,10 +2406,13 @@
       ],
       "description": "Adds the 'Vecto' Shamir to Metallury. Summon a Boat or Minecart out of thin air when in need, no more wasting an inventory slot!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_vertical_rails",
@@ -2196,10 +2436,13 @@
       "requires": [],
       "description": "Use ladders as vertical Minecart tracks.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": "PL3P0wBS",
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_vigere_shamir",
@@ -2221,10 +2464,13 @@
       ],
       "description": "Adds the shamir 'Vigere' to Metallurgy. It heals you when you block with a shield.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_washing_tanks",
@@ -2246,10 +2492,13 @@
       ],
       "description": "Die! Dye! Remove die from items in a Liquid Tank filled with Water, at the cost of \u2153 of a bucket.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_weighted_armour",
@@ -2268,10 +2517,13 @@
       "requires": [],
       "description": "Perfect for UHCs, this module forces you to balance protection with speed.",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": "ReZCIa6j",
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_xp_storage",
@@ -2295,10 +2547,13 @@
       "requires": [],
       "description": "Stand on top of an Ender Chest to store Experience, stand below to retrieve it!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_zauber_cauldrons",
@@ -2327,10 +2582,13 @@
       "recommends": [
         "gm4_resource_pack"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_zauber_liquids",
@@ -2360,10 +2618,13 @@
       ],
       "description": "From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!",
       "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": null,
       "smithed_link": null,
-      "pmc_link": null,
-      "publish_date": "2023-07-10"
+      "pmc_link": null
     },
     {
       "id": "gm4_ziprails",
@@ -2386,10 +2647,13 @@
       "recommends": [
         "gm4_vertical_rails"
       ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
       "modrinth_id": "EpgLRkLf",
-      "smithed_link": null,
-      "pmc_link": 4298467,
-      "publish_date": "2023-07-10"
+      "smithed_link": "gm4_ziprails",
+      "pmc_link": null
     }
   ],
   "contributors": {
