@@ -57,14 +57,14 @@ class ManifestCacheModel(BaseModel):
 	last_commit: str
 	modules: dict[str, ManifestModuleModel]
 	libraries: dict[str, ManifestModuleModel]
-	base: Any#ManifestModuleModel # TODO
-	contributors: Any # TODO loads from jsonfile directly
+	base: Any
+	contributors: Any
 
 class ManifestFileModel(BaseModel):
 	"""describes the structure of the meta.json saved to disk"""
 	last_commit: str
 	modules: list[ManifestModuleModel]
-	contributors: Any # TODO
+	contributors: Any
 
 
 def create(ctx: Context):
