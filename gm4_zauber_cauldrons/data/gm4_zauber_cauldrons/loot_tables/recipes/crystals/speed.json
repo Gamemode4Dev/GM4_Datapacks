@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420012,gm4_zauber_cauldrons:{item:\"crystal\",type:\"speed\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/speed/v1\",Id:[I;143602933,54143057,74884136,193769722],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyNzU4Nzg4NDkwOSwKICAicHJvZmlsZUlkIiA6ICJmMGIzYmRkMjEwNDg0Y2VlYjZhNTQyYmZiOGEyNTdiMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJBbm9uaW1ZVFQiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODkwYzMwMzUzN2QwN2FlMTM0Y2YwNzA4MzdkZWMwNGQyN2VhY2NkZTg5M2VlNDIwOTQyMjk5ODk2YmY5Njk3MSIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9\"}]}},HideFlags:1}"
+                            "tag": "{CustomModelData:3420012,gm4_zauber_cauldrons:{item:\"crystal\",type:\"speed\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/speed/v1\",Properties:{textures:[{Value:\"$crystal/speed\"}]}},HideFlags:1}"
                         },
                         {
                             "function": "minecraft:set_name",
