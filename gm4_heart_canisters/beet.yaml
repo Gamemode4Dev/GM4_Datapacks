@@ -14,8 +14,8 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_custom_crafters: 3.0.0
-        - lib_player_heads: 1.1.0
+        lib_custom_crafters: 3.0.0
+        lib_player_heads: 1.1.0
       schedule_loops: [main]
     website:
       description: Introduces two tiers of pricey canisters that increase your health when carried.

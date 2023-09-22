@@ -19,7 +19,7 @@ meta:
       notes: []
     versioning:
       required:
-        - lib_trades: 1.3.0
+        lib_trades: 1.3.0
       schedule_loops:
         - tick
         - day_clock

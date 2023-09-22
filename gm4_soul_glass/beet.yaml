@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_machines: 1.1.0
+        lib_machines: 1.1.0
       schedule_loops: 
         - main
         - beacon_clock

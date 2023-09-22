@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_custom_crafters: 3.0.0
+        lib_custom_crafters: 3.0.0
     website:
       description: A crafting recipe pack that lets you craft all the records in a Custom Crafter.
       recommended:

@@ -13,7 +13,7 @@ pipeline:
 meta:
   gm4:
     versioning:
-      required: [lib_forceload: 1.1.0]
+      required: {lib_forceload: 1.1.0}
       schedule_loops: [main]
       extra_version_injections:
         functions:

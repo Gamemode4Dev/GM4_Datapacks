@@ -12,7 +12,7 @@ meta:
   gm4:
     versioning:
       required:
-        - gm4_better_armour_stands: 2.0.0
+        gm4_better_armour_stands: 2.0.0
     website:
       description: Adds a bunch of preset poses to the Better Armour Stands Module. This can be really hand for applying common poses like 'walking' or raised arms!
       recommended:

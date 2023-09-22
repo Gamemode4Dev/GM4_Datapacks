@@ -1,4 +1,5 @@
-from beet import Context
+from beet import Context, PluginOptions
+from typing import Optional
 from pathlib import Path
 import os
 import json
@@ -15,6 +16,15 @@ SMITHED_API = "https://api.smithed.dev/v2"
 SMITHED_AUTH_KEY = "BEET_SMITHED_TOKEN"
 SUPPORTED_GAME_VERSIONS = ["1.20", "1.20.1"]
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/release-pipeline (gamemode4official@gmail.com)"
+
+class ModrinthConfig(PluginOptions):
+	project_id: Optional[str]
+
+class SmithedConfig(PluginOptions):
+	pack_id: Optional[str]
+
+class PMCConfig(PluginOptions):
+	uid: Optional[int]
 
 def beet_default(ctx: Context):
 	"""Saves the datapack to the ./out folder in it's exit phase.

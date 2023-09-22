@@ -1,7 +1,12 @@
-from beet import Context, Function
+from beet import Context, Function, configurable, PluginOptions
+from pydantic import Extra
 from gm4.utils import Version
 
-def beet_default(ctx: Context):
+class UpgradePathsConfig(PluginOptions, extra=Extra.ignore):
+    upgrade_paths: list[str] = [] # additional upgrade paths to process
+
+@configurable("gm4", validator=UpgradePathsConfig)
+def beet_default(ctx: Context, opts: UpgradePathsConfig):
     '''Processes upgrade paths for module data that persists in the world
     between minecraft / module versions, such as the type of
     technical entity used to mark a place.'''
@@ -9,7 +14,7 @@ def beet_default(ctx: Context):
     run_func = Function([], tags=["gm4_upgrade_paths:run"])
     
     upgrade_paths_dirs = [f'{ctx.project_id}:upgrade_paths'] # gm4_bat_grenades:upgrade_paths/... is processed by default
-    upgrade_paths_dirs.extend(ctx.meta['gm4'].get('upgrade_paths', [])) # additional upgrade paths to process
+    upgrade_paths_dirs.extend(opts.upgrade_paths)
 
     # module:upgrade_paths/run
         # handles checking which paths should be run

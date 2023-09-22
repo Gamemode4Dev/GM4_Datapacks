@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_custom_crafters: 3.0.0
+        lib_custom_crafters: 3.0.0
       schedule_loops:
         - main
         - fast_main
