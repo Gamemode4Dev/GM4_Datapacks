@@ -24,6 +24,7 @@ class WebsiteConfig(PluginOptions):
 	recommended: list[str]
 	notes: list[str]
 	hidden: bool = False
+	search_keywords: list[str] = []
 
 class ManifestConfig(PluginOptions, extra=Extra.ignore):
 	versioning: Optional[VersioningConfig]
@@ -37,7 +38,7 @@ class ManifestModuleModel(BaseModel):
 	"""Single module's entry in manifest"""
 	id: str
 	name: str
-	version: str # TODO Version() objecT?, defaults to 0.0.0?
+	version: str
 	video_link: str = ""
 	wiki_link: str = ""
 	credits: CreditsModel
@@ -46,7 +47,8 @@ class ManifestModuleModel(BaseModel):
 	recommends: list[str] = []
 	hidden: bool = False
 	important_note: Optional[str]
-	publish_date: Optional[str] # TODO ISO model?
+	search_keywords: list[str] = []
+	publish_date: Optional[str]
 	modrinth_id: Optional[str]
 	smithed_link: Optional[str]
 	pmc_link: Optional[int]
@@ -99,6 +101,7 @@ def create(ctx: Context):
 					important_note = gm4_meta.website.notes[0] if len(gm4_meta.website.notes)>0 else None,
 					hidden = gm4_meta.website.hidden,
 					publish_date = None,
+					search_keywords = gm4_meta.website.search_keywords,
 					modrinth_id = modrinth_meta.project_id,
 					smithed_link = smithed_meta.pack_id,
 					pmc_link = pmc_meta.uid
