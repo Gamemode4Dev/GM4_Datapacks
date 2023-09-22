@@ -21,8 +21,8 @@ CreditsModel = dict[str, list[str]]
 
 class WebsiteConfig(PluginOptions):
 	description: str
-	recommended: list[str]
-	notes: list[str]
+	recommended: list[str] = []
+	notes: list[str] = []
 	hidden: bool = False
 	search_keywords: list[str] = []
 
