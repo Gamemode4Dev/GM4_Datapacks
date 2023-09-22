@@ -1,5 +1,5 @@
 {
-  "last_commit": "9bd5e70e7f15beb904657cfb89b204d013f84bb8",
+  "last_commit": "c39d15fd75374d8a8956eb4f8db1228f2f73d91a",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1681,7 +1681,7 @@
     {
       "id": "gm4_rope_ladders",
       "name": "Rope Ladders",
-      "version": "1.2.3",
+      "version": "1.2.4",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Rope_Ladders",
       "credits": {
