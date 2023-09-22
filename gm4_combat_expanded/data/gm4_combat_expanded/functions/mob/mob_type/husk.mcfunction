@@ -16,11 +16,8 @@ execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add 
 execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add $mob_damage gm4_ce_data 2
 execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add $mob_toughness gm4_ce_data 2
 
-# increase reinforcement chance at difficulty >= 11
-execute if score $difficulty gm4_ce_data matches 11.. run attribute @s zombie.spawn_reinforcements modifier add 7c9e8885-af69-4a6d-920e-76ffe9a589ed "gm4_ce_challenger_buff" 0.5 add
-
-# double armor drop rate at diff 11 or above
-execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s ArmorDropChances set value [0.17F,0.17F,0.17F,0.17F]
+# quadruple armor drop rate at diff 11 or above
+execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s ArmorDropChances set value [0.34F,0.34F,0.34F,0.34F]
 
 # biome specific modifiers for this mob
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_toughness gm4_ce_data 4
@@ -28,14 +25,13 @@ attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] zombie.spawn_reinf
 tag @s[predicate=gm4_combat_expanded:mob/modifier/snowy] add gm4_ce_slowing_attacks
 execute if entity @s[predicate=gm4_combat_expanded:mob/modifier/burned] run function gm4_combat_expanded:mob/effect/burned_husk
 execute if predicate gm4_combat_expanded:mob/modifier/mountainous run function gm4_combat_expanded:mob/effect/mountain_zombie
-execute if predicate gm4_combat_expanded:mob/modifier/flowering run function gm4_combat_expanded:mob/effect/flowering_zombie
+execute if predicate gm4_combat_expanded:mob/modifier/flowering run tag @s add gm4_ce_spore_zombie
 tag @s[predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_weakness_attacks
 execute if predicate gm4_combat_expanded:mob/modifier/growth run function gm4_combat_expanded:mob/effect/growth_zombie
 
 # set armor
 loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic
-item replace entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering] armor.head with flowering_azalea_leaves{gm4_ce_spore:{type:husk,generation:0}}
-execute if entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering] store result entity @s ArmorItems[3].tag.gm4_ce_spore.generation int 1 run scoreboard players add @s gm4_ce_generation 1
+execute if entity @s[tag=gm4_ce_spore_zombie] run function gm4_combat_expanded:mob/effect/flowering_zombie
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/generic
 

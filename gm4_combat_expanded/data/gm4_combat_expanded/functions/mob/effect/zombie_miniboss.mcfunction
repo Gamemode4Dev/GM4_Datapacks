@@ -12,8 +12,8 @@ attribute @s generic.knockback_resistance modifier add d8b8f22e-bba8-47ca-b502-4
 
 loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/miniboss
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/miniboss
-loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_shield/random
+loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_weapon/shield
 
-data modify entity @s ArmorDropChances set value [0.30F,0.30F,0.30F,0.30F]
+data modify entity @s ArmorDropChances set value [0.50F,0.50F,0.50F,0.50F]
 
 data modify entity @s HandDropChances set value [0.50F,0.75F]

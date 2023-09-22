@@ -1,9 +1,8 @@
 # store weapon used to strike in storage and process
 # @s = player that used a weapon with modifier
 # at @s
-# run from advancement used_strike_weapon
-
 advancement revoke @s only gm4_combat_expanded:used_strike_weapon
+# run from advancement used_giant_weapon
 
 # store weapon item to shulker box and put in storage
 item replace block 29999998 1 7134 container.0 from entity @s weapon.mainhand

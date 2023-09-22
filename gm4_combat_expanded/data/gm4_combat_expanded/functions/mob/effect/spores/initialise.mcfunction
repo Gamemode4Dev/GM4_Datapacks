@@ -1,6 +1,6 @@
 # tag spore item as spore
 # @s = spore item
-# at world spawn
+# at unspecified
 # run from mob/effect/spores/check
 
 tag @s add gm4_ce_spore

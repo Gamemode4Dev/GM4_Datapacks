@@ -52,26 +52,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Night-Time:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.night"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.night",
+              "fallback": "When Night-Time:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -80,17 +71,10 @@
           "entity": "this",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "Shadow Veil",
-                  "color": "blue",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.shadow"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.shadow",
+              "fallback": "Shadow Veil",
+              "color": "blue",
+              "italic": false
             }
           ]
         },
@@ -99,33 +83,18 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.shadow",
+              "fallback": "Umbral %s",
               "with": [
-                [
-                  {
-                    "text": "Umbral ",
-                    "italic": false,
-                    "color": "yellow"
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true,
-                    "color": "yellow"
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.shadow",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true,
-                      "color": "yellow"
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true,
+                  "color": "yellow"
                 }
-              ]
+              ],
+              "italic": false,
+              "color": "yellow"
             }
           ]
         }

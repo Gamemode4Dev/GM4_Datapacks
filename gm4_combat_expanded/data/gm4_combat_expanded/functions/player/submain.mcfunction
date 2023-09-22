@@ -1,6 +1,6 @@
 # process anything player related
 # @s = unspecified
-# at world spawn
+# at unspecified
 # scheduled from main (8t)
 
 # transfer damage from players that were guarded
@@ -25,3 +25,4 @@ scoreboard players reset @a gm4_ce_hurt
 scoreboard players reset @a gm4_ce_hurt2
 scoreboard players reset @a gm4_ce_kill
 scoreboard players reset @a gm4_ce_sprinting
+scoreboard players reset @a gm4_ce_swimming

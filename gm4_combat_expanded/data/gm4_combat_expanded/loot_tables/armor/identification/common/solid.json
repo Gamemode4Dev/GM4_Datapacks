@@ -34,6 +34,13 @@
                   "slot": "chest"
                 },
                 {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "gm4_ce_perm_2",
+                  "amount": -1,
+                  "operation": "addition",
+                  "slot": "chest"
+                },
+                {
                   "attribute": "generic.knockback_resistance",
                   "name": "gm4_combat_expanded_2",
                   "amount": 0,
@@ -54,7 +61,7 @@
               },
               "ops": [
                 {
-                  "source": "armor",
+                  "source": "solid_armor",
                   "target": "gm4_combat_expanded.level",
                   "op": "replace"
                 }
@@ -79,6 +86,11 @@
                 },
                 {
                   "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm_2\"}].Slot",
+                  "op": "replace"
+                },
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
                   "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_2\"}].Slot",
                   "op": "replace"
                 }
@@ -91,26 +103,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When High on Health:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.high_hp"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.high_hp",
+              "fallback": "When High on Health:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -124,7 +127,7 @@
                 "with": [
                   {
                     "score": {
-                      "name": "$armor",
+                      "name": "$solid_armor",
                       "objective": "gm4_ce_data"
                     }
                   },
@@ -156,30 +159,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.solid",
+              "fallback": "Solid %s",
               "with": [
-                [
-                  {
-                    "text": "Solid ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.solid",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

@@ -1,6 +1,6 @@
 # check if wolf has matching armor equipped by player
 # @s = wolf from canine armor
-# at world spawn
+# at unspecified
 # run from main
 
 # despawn wolf if it was not matched to armor this check
