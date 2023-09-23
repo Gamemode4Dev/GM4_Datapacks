@@ -1,6 +1,6 @@
 # clear effects depending on player tags from armor
 # @s = player wearing immune armour above 50% health
-# at world spawn
+# at unspecified
 # run from tick
 
 # clear effects
@@ -12,4 +12,3 @@ effect clear @s[tag=gm4_ce_immune_hunger] hunger
 effect clear @s[tag=gm4_ce_immune_blind] blindness
 effect clear @s[tag=gm4_ce_immune_nausea] nausea
 effect clear @s[tag=gm4_ce_immune_weakness] weakness
-

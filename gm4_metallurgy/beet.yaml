@@ -14,8 +14,8 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_lore: 1.0.0
-        - lib_player_heads: 1.1.0
+        lib_lore: 1.0.0
+        lib_player_heads: 1.1.0
       schedule_loops:
         - main
         - tick
@@ -32,6 +32,19 @@ meta:
         - gm4_vecto_shamir
       notes:
         - Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.
+      search_keywords: 
+        - arborenda
+        - defuse
+        - forterra
+        - gemini
+        - hypexperia
+        - infinitas
+        - moneo
+        - musical
+        - sensus
+        - tinker
+        - vibro
+        - shamir
     video: null
     wiki: https://wiki.gm4.co/wiki/Metallurgy
     credits:

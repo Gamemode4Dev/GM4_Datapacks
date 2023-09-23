@@ -4,6 +4,6 @@
 # run from function: gm4_rope_ladders:mechanics/right_click_detection/detect_ladder_raycast/found
 
 # visuals
-particle wax_on ~ ~0.25 ~ 0 0 0 .01 3
-particle wax_on ~ ~0.50 ~ 0 0 0 .01 3
-particle wax_on ~ ~0.75 ~ 0 0 0 .01 3
+particle wax_on ~ ~0.2 ~ 0 0 0 .01 3
+particle wax_on ~ ~0.5 ~ 0 0 0 .01 3
+particle wax_on ~ ~0.8 ~ 0 0 0 .01 3

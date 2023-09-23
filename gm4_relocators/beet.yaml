@@ -14,8 +14,8 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_machines: 1.1.0
-        - lib_custom_crafters: 3.0.0
+        lib_machines: 1.1.0
+        lib_custom_crafters: 3.0.0
     website:
       description: Craft Relocators to pick up and move containers such as chests and Custom Crafters.
       recommended:

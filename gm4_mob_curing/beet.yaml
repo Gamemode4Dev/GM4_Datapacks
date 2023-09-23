@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_trades: 1.3.0
+        lib_trades: 1.3.0
       schedule_loops: [main]
     website:
       description: Revert mooshrooms, pigmen and witches back to their previous forms.

@@ -9,9 +9,9 @@ function gm4_combat_expanded:player/calculate_hp
 scoreboard players operation $remove_health gm4_ce_data = $max_health gm4_ce_data
 
 scoreboard players operation $remove_health gm4_ce_data -= @s gm4_ce_health
-execute if entity @s[tag=gm4_cd_delay_lvl_1] run scoreboard players add $remove_health gm4_ce_data 4
-execute if entity @s[tag=gm4_cd_delay_lvl_2] run scoreboard players add $remove_health gm4_ce_data 6
-execute if entity @s[tag=gm4_cd_delay_lvl_3] run scoreboard players add $remove_health gm4_ce_data 8
+execute if entity @s[tag=gm4_cd_delay_lvl_1] run scoreboard players add $remove_health gm4_ce_data 6
+execute if entity @s[tag=gm4_cd_delay_lvl_2] run scoreboard players add $remove_health gm4_ce_data 9
+execute if entity @s[tag=gm4_cd_delay_lvl_3] run scoreboard players add $remove_health gm4_ce_data 12
 
 # damage player if they are alive
 execute if score $remove_health gm4_ce_data < $max_health gm4_ce_data run function gm4_combat_expanded:player/damage/apply

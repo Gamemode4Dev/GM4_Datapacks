@@ -102,26 +102,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Equipped:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.equip"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.equip",
+              "fallback": "When Equipped:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -131,21 +122,11 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "attribute.gm4.combat_expanded.aura",
+                "fallback": "%s Aura",
                 "with": [
-                  [
-                    {
-                      "translate": "effect.minecraft.strength"
-                    },
-                    " Aura"
-                  ],
                   {
-                    "translate": "attribute.gm4.combat_expanded.aura",
-                    "with": [
-                      {
-                        "translate": "effect.minecraft.strength"
-                      }
-                    ]
+                    "translate": "effect.minecraft.strength"
                   }
                 ],
                 "color": "blue",
@@ -177,35 +158,17 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
+                "translate": "attribute.gm4.combat_expanded.aura",
+                "fallback": "%s Aura",
                 "with": [
-                  [
-                    {
-                      "translate": "potion.withAmplifier",
-                      "with": [
-                        {
-                          "translate": "effect.minecraft.strength"
-                        },
-                        {
-                          "translate": "potion.potency.1"
-                        }
-                      ]
-                    },
-                    " Aura"
-                  ],
                   {
-                    "translate": "attribute.gm4.combat_expanded.lore.aura",
+                    "translate": "potion.withAmplifier",
                     "with": [
                       {
-                        "translate": "potion.withAmplifier",
-                        "with": [
-                          {
-                            "translate": "effect.minecraft.strength"
-                          },
-                          {
-                            "translate": "potion.potency.1"
-                          }
-                        ]
+                        "translate": "effect.minecraft.strength"
+                      },
+                      {
+                        "translate": "potion.potency.1"
                       }
                     ]
                   }
@@ -235,30 +198,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.link",
+              "fallback": "Bolstering %s",
               "with": [
-                [
-                  {
-                    "text": "Bolstering ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.link",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

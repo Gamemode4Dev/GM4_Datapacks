@@ -13,21 +13,11 @@
               "entity": "this",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
+                  "translate": "item.gm4.combat_expanded.name.unidentified",
+                  "fallback": "Unidentified %s",
                   "with": [
-                    [
-                      "Unidentified ",
-                      {
-                        "translate": "item.minecraft.wooden_sword"
-                      }
-                    ],
                     {
-                      "translate": "item.gm4.combat_expanded.name.unidentified",
-                      "with": [
-                        {
-                          "translate": "item.minecraft.wooden_sword"
-                        }
-                      ]
+                      "translate": "item.minecraft.wooden_sword"
                     }
                   ],
                   "italic": false

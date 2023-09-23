@@ -33,26 +33,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Low on Health:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.low_hp"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.low_hp",
+              "fallback": "When Low on Health:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -205,42 +196,39 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.thorns",
+              "fallback": "Thorny %s",
               "with": [
-                [
-                  {
-                    "text": "Thorny ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.thorns",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:copy_nbt",
+          "source": {
+            "type": "minecraft:storage",
+            "source": "gm4_combat_expanded:temp"
+          },
+          "ops": [
+            {
+              "source": "tag.Enchantments",
+              "target": "Enchantments",
+              "op": "replace"
             }
           ]
         },
         {
           "function": "minecraft:set_enchantments",
           "enchantments": {
-            "minecraft:thorns": {
-              "min": 1,
-              "max": 2
-            }
+            "minecraft:thorns": 3
           },
-          "add": true
+          "add": false
         }
       ]
     }

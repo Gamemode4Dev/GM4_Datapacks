@@ -1,6 +1,6 @@
 # keep damage shield active while player has food
 # @s = player being checked
-# at world spawn
+# at unspecified
 # run from armor/check_modifier/night
 
 # resistance 3 if player has food haunches

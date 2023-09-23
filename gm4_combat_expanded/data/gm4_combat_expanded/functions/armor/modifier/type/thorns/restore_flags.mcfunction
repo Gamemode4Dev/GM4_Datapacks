@@ -1,6 +1,6 @@
 # restore HideFlags on armor to original value
 # @s = player wearing armour
-# at world spawn
+# at unspecified
 # run from armor/modifier/type/thorns/deactivate
 
 execute store result score $hideflags gm4_ce_data run data get storage gm4_combat_expanded:temp tag.HideFlags

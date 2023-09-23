@@ -9,7 +9,7 @@ execute if score $level gm4_ce_data matches 2 run effect give @s instant_health 
 execute if score $level gm4_ce_data matches 3 run effect give @s instant_health 1 2
 
 # particles
-execute anchored eyes run particle entity_effect ^ ^ ^ 0.973 0.141 0.137 1 0
-execute anchored eyes run particle entity_effect ^ ^ ^ 0.973 0.141 0.137 1 0
-execute anchored eyes run particle entity_effect ^ ^ ^ 0.973 0.141 0.137 1 0
-execute anchored eyes run particle entity_effect ^ ^ ^ 0.973 0.141 0.137 1 0
+execute anchored eyes run particle entity_effect ^ ^ ^ 0.988 0.145 0.141 1 0
+execute anchored eyes run particle entity_effect ^ ^ ^ 0.988 0.145 0.141 1 0
+execute anchored eyes run particle entity_effect ^ ^ ^ 0.988 0.145 0.141 1 0
+execute anchored eyes run particle entity_effect ^ ^ ^ 0.988 0.145 0.141 1 0

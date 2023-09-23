@@ -24,6 +24,13 @@
                   "amount": 0,
                   "operation": "addition",
                   "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "gm4_combat_expanded_3",
+                  "amount": 0,
+                  "operation": "multiply_base",
+                  "slot": "chest"
                 }
               ]
             },
@@ -47,6 +54,11 @@
                   "source": "damage",
                   "target": "gm4_combat_expanded.level2",
                   "op": "replace"
+                },
+                {
+                  "source": "atkspeed",
+                  "target": "gm4_combat_expanded.level3",
+                  "op": "replace"
                 }
               ]
             },
@@ -66,6 +78,11 @@
                   "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
                   "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_2\"}].Slot",
                   "op": "replace"
+                },
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_3\"}].Slot",
+                  "op": "replace"
                 }
               ]
             }
@@ -76,27 +93,42 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Night-Time:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.night"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.night",
+              "fallback": "When Night-Time:",
+              "color": "gray",
+              "italic": false
             }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.plus.1",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$atkspeed",
+                      "objective": "gm4_ce_data"
+                    }
+                  },
+                  {
+                    "translate": "attribute.name.generic.attack_speed"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
           ]
         },
         {
@@ -140,9 +172,7 @@
                       "color": "blue",
                       "italic": false
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
                         "name": "$damage_01",
@@ -222,30 +252,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.nocturnal",
+              "fallback": "Nocturnal %s",
               "with": [
-                [
-                  {
-                    "text": "Nocturnal ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.nocturnal",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

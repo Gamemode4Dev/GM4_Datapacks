@@ -1,6 +1,6 @@
 # give player absorption effect based on their score in gm4_ce_absorp
 # @s = player to grant shield
-# at world spawn
+# at unspecified
 # run from armor/modifier/type/reactive/add_level
 # run from player/process
 

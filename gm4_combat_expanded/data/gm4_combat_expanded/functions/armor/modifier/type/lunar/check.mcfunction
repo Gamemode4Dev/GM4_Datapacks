@@ -1,6 +1,6 @@
 # check moon phase and time of day
 # @s = player wearing armour
-# at world spawn
+# at unspecified
 # run from armor/check_modifier/night
 
 # get moon cycle (0 = full moon)

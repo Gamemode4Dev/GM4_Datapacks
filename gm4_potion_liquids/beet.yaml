@@ -13,8 +13,8 @@ meta:
   gm4:
     versioning:
       required:
-        - gm4_liquid_tanks: 2.1.0
-        - lib_brewing: 1.0.0
+        gm4_liquid_tanks: 2.1.0
+        lib_brewing: 1.0.0
     website:
       description: Adds the ability to store potions in Liquid Tanks! You can also use a potion by walking beneath a potion-filled Liquid Tank.
       recommended: []

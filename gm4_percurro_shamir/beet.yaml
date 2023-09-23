@@ -12,7 +12,7 @@ meta:
   gm4:
     versioning:
       required:
-        - gm4_metallurgy: 1.2.0
+        gm4_metallurgy: 1.2.0
     website:
       description: Adds the 'Percurro' Shamir to Metallurgy! Weapons with Percurro let you teleport past your enemies in the blink of an eye!
       recommended: []

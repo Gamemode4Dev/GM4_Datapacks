@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_potion_tracking: 1.0.0
+        lib_potion_tracking: 1.0.0
       schedule_loops: [main]
     website:
       description: Splash item frames with invisibilty to make invisbible item frames! Great for interior decor!

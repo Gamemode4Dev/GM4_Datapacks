@@ -33,26 +33,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Low on Health:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.low_hp"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.low_hp",
+              "fallback": "When Low on Health:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -65,15 +56,8 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Heal Pulse"
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.soothe"
-                      }
-                    ]
+                    "translate": "item.gm4.combat_expanded.lore.soothe",
+                    "fallback": "Heal Pulse"
                   },
                   {
                     "translate": "potion.potency.0"
@@ -108,15 +92,8 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Heal Pulse"
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.soothe"
-                      }
-                    ]
+                    "translate": "item.gm4.combat_expanded.lore.soothe",
+                    "fallback": "Heal Pulse"
                   },
                   {
                     "translate": "potion.potency.1"
@@ -151,15 +128,8 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Heal Pulse"
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.soothe"
-                      }
-                    ]
+                    "translate": "item.gm4.combat_expanded.lore.soothe",
+                    "fallback": "Heal Pulse"
                   },
                   {
                     "translate": "potion.potency.2"
@@ -190,33 +160,18 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.soothe",
+              "fallback": "Soothing %s",
               "with": [
-                [
-                  {
-                    "text": "Soothing ",
-                    "italic": false,
-                    "color": "yellow"
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true,
-                    "color": "yellow"
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.soothe",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true,
-                      "color": "yellow"
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true,
+                  "color": "yellow"
                 }
-              ]
+              ],
+              "italic": false,
+              "color": "yellow"
             }
           ]
         }
