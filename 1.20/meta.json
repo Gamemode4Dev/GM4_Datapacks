@@ -1,5 +1,5 @@
 {
-  "last_commit": "62303d74f9ae0e1402db03149106eaa284026bd1",
+  "last_commit": "a26bc71c95a5067aad3350b397c3d5f94f56a79a",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -449,8 +449,8 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
-      "smithed_link": null,
+      "modrinth_id": "zgxd3poi",
+      "smithed_link": "gm4_combat_expanded",
       "pmc_link": null
     },
     {
