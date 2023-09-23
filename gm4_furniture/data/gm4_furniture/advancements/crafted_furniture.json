@@ -4,6 +4,7 @@
         "trigger": "minecraft:villager_trade",
         "conditions": {
           "villager": [
+            {
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
