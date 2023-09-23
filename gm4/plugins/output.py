@@ -241,10 +241,17 @@ def publish_smithed(ctx: Context, file_name: str):
 					logger.warning(f"Failed to patch project versions: {res.status_code} {res.text}")
 			return
 
-		# remove other existing versions for that mc version
+		# permalink previous versions (in that MC version) to the git history
 		mc_version_matching_version = (v["name"] for v in project_versions if set(v['supports']) & set(game_versions))
 		for v in mc_version_matching_version:
-			res = requests.delete(f"{SMITHED_API}/packs/{opts.pack_id}/versions/{v}", params={'token': auth_token})
+			res = requests.patch(f"{SMITHED_API}/packs/{opts.pack_id}/versions/{v}", params={'token': auth_token}, json={
+				"data":{
+					"downloads": {
+					"datapack": f"https://github.com/Gamemode4Dev/GM4_Datapacks/blob/{commit_hash}/{mc_version_dir}/{file_name}?raw=true",
+					"resourcepack": ""
+					}
+				}
+			})
 			if not (200 <= res.status_code < 300):
 				logger.warning(f"Failed to delete {project_id} version {v}: {res.status_code} {res.text}")
 			else:
