@@ -181,7 +181,6 @@ def update_patch(ctx: Context):
 				pack.version = pack.version.replace("X", "0")
 				logger.debug(f"First release of {id}")
 			else:
-				print(id)
 				# Changes were made, bump the patch
 				version = Version(pack.version)
 				last_ver = Version(released.version)
