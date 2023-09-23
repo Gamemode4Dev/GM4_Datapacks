@@ -1,6 +1,6 @@
 id: gm4_custom_crafters
 name: Gamemode 4 Custom Crafters
-version: 3.1.0
+version: 3.1.X
 
 data_pack:
   load: 

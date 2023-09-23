@@ -36,11 +36,11 @@ pipeline:
       - gm4.plugins.module.default_pack_icon
       - gm4.plugins.write_mcmeta
       - gm4.plugins.output.libraries
-        meta:
-    mecha:
-      formatting:
-        layout: preserve
-        nbt_compact: True
+    meta:
+      mecha:
+        formatting:
+          layout: preserve
+          nbt_compact: True
 meta:
   autosave:
     link: false

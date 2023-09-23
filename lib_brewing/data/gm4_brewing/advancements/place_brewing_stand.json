@@ -6,7 +6,7 @@
         "location": [
           {
             "condition": "minecraft:block_state_property",
-            "block": "minecraft:brewing_stand"
+            "block": "minecraft:brewing_stand2"
           }
         ]
       }
