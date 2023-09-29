@@ -1,5 +1,5 @@
 {
-  "last_commit": "f1773b8f206c85941077f68c8c71c410fac0c358",
+  "last_commit": "a2b07740c430944277ddea9924c83dc60b9c4054",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -403,7 +403,7 @@
     {
       "id": "gm4_chairs",
       "name": "Chairs",
-      "version": "1.2.4",
+      "version": "1.2.5",
       "video_link": "https://www.youtube.com/watch?v=7KbBw1hEKdY",
       "wiki_link": "https://wiki.gm4.co/wiki/Chairs",
       "credits": {
