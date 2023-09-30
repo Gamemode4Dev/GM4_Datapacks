@@ -87,24 +87,6 @@ def release(ctx: Context):
 	publish_modrinth(ctx, release_dir, file_name)
 	publish_smithed(ctx, file_name)
 
-
-# def libraries(ctx: Context): # FIXME this is no longer a needd function
-# 	"""Saves the zipped standalong library to FIXME"""
-# 	release_dir = Path("release")
-# 	libs_dir = release_dir / "libraries"
-# 	file_name = f"{ctx.project_version}.zip"
-
-# 	ctx.data.save(
-# 		path=libs_dir / ctx.project_id / file_name,
-# 		overwrite=True,
-# 		zipped=True
-# 	)
-
-# 	if "pack.png" in ctx.data.extra:
-# 		ctx.data.extra["pack.png"].dump(libs_dir / ctx.project_id, f"pack.png")
-
-# 	publish_smithed(ctx, file_name, library_mode=True)
-
 		
 def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 	'''Attempts to publish pack to modrinth'''

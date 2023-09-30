@@ -292,3 +292,12 @@ def warn_on_future_version(ctx: Context, dep_id: str, ver: Version):
     if (latest_dep_ver.major == ver.major and latest_dep_ver.minor < ver.minor) or (latest_dep_ver.major < ver.major): # type: ignore
         message = f"{ctx.project_id} depends on a future version {dep_id} v{ver}, but the latest available is {latest_dep_ver}"
         warnings.warn(message)
+
+def isolated_library(ctx: Context):
+    """Generates the #load:load function tag when building libraries in isloation"""
+    # load.json tag
+    ctx.data.function_tags["load:load"] = FunctionTag({
+        "values": [
+            f"#load:{ctx.project_id}"
+        ]
+    })
