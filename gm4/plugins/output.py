@@ -7,7 +7,7 @@ import requests
 import shutil
 import logging
 from gm4.utils import run, Version, NoneAttribute
-from gm4.plugins.manifest import ManifestCacheModel
+import gm4.plugins.manifest # for ManifestCacheModel; a runtime circular dependency
 
 parent_logger = logging.getLogger("gm4.output")
 
@@ -108,10 +108,10 @@ def release(ctx: Context):
 		
 def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 	'''Attempts to publish pack to modrinth'''
-	opts = ctx.validate("gm4.modrinth", ModrinthConfig)
+	opts = ctx.validate("modrinth", ModrinthConfig)
 	auth_token = os.getenv(MODRINTH_AUTH_KEY, None)
 	logger = parent_logger.getChild(f"modrinth.{ctx.project_id}")
-	if opts and auth_token:
+	if opts.project_id and auth_token:
 		# update page description
 		res = requests.get(f"{MODRINTH_API}/project/{opts.project_id}", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT})
 		if not (200 <= res.status_code < 300):
@@ -183,14 +183,14 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 
 def publish_smithed(ctx: Context, file_name: str):
 	"""Attempts to publish pack to smithed"""
-	opts = ctx.validate("gm4.smithed", SmithedConfig)
+	opts = ctx.validate("smithed", SmithedConfig)
 	auth_token = os.getenv(SMITHED_AUTH_KEY, None)
 	logger = parent_logger.getChild(f"smithed.{ctx.project_id}")
 	mc_version_dir = os.getenv("VERSION", "1.20")
-	manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+	manifest = gm4.plugins.manifest.ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
 	project_id = stem if (stem:=ctx.directory.stem).startswith("lib") else ctx.project_id
 
-	if opts and auth_token and ctx.project_version:
+	if opts.pack_id and auth_token:
 		version = (manifest.modules|manifest.libraries).get(project_id, NoneAttribute()).version or ""
 
 		# get project data and existing versions
@@ -241,10 +241,13 @@ def publish_smithed(ctx: Context, file_name: str):
 					logger.warning(f"Failed to patch project versions: {res.status_code} {res.text}")
 			return
 
-		# permalink previous versions (in that MC version) to the git history
-		mc_version_matching_version = (v["name"] for v in project_versions if set(v['supports']) & set(game_versions))
-		for v in mc_version_matching_version:
-			res = requests.patch(f"{SMITHED_API}/packs/{opts.pack_id}/versions/{v}", params={'token': auth_token}, json={
+		# permalink previous version (in that MC version) to the git history
+		commit_hash = run("cd release && git log -1 --format=%H")
+		matching_mc_versions = sorted((Version(v["name"]) for v in project_versions if set(v['supports']) & set(game_versions)))
+		prior_version_in_mc_version = matching_mc_versions[-1] if len(matching_mc_versions) > 0 else None # newest version number, with any MC overlap
+		prior_url: str = next((v["downloads"]["datapack"] for v in project_versions if Version(v["name"]) == prior_version_in_mc_version), "")
+		if "https://github.com/Gamemode4Dev/GM4_Datapacks/blob/" not in prior_url and prior_version_in_mc_version:
+			res = requests.patch(f"{SMITHED_API}/packs/{opts.pack_id}/versions/{prior_version_in_mc_version}", params={'token': auth_token}, json={
 				"data":{
 					"downloads": {
 					"datapack": f"https://github.com/Gamemode4Dev/GM4_Datapacks/blob/{commit_hash}/{mc_version_dir}/{file_name}?raw=true",
@@ -253,9 +256,9 @@ def publish_smithed(ctx: Context, file_name: str):
 				}
 			})
 			if not (200 <= res.status_code < 300):
-				logger.warning(f"Failed to delete {project_id} version {v}: {res.status_code} {res.text}")
+				logger.warning(f"Failed to permalink {project_id} version {prior_version_in_mc_version}: {res.status_code} {res.text}")
 			else:
-				logger.info(f"{project_id} {res.text}")
+				logger.info(f"Permalinked {project_id} {prior_version_in_mc_version} to git history: {res.text}")
 		
 		# post new version
 		res = requests.post(f"{SMITHED_API}/packs/{opts.pack_id}/versions",
