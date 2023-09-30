@@ -1,9 +1,6 @@
 # lib_potion_tracking
 lib_potion_tracking is a mcfunction library that allows other datapacks to track thrown splash or lingering potions. This can be used to create custom splash/lingering potion events.
 
-## Installation
-This library requires the Gamemode 4 forceloaded chunk library (`lib_forceload`). If a data pack includes `lib_potion_tracking`, it must also include `lib_forceload`.
-
 ## How to Use
 There are 2 function tags to be used: one to initially tag the potion to be tracked, and another which activates when the tracked potion lands.
 
@@ -24,3 +21,6 @@ A function tag under the namespace `#gm4_potion_tracking:potion_landed` can be u
 When the potion lands, data storage under the namespace `gm4_potion_tracking:temp entity_data` is set to the original potion's entity nbt (set from the marker's entity NBT `{data:{gm4_potion:{<This data is copied over>}}}`). 
 
 The storage should be used to verify if the potion matches the module's custom potion. The marker's entity nbt is available (This is `@s` in the context of the function tag), but storage look up is more efficient in almost all cases.
+
+## License
+This library, and the contents of the `lib_potion_tracking` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.

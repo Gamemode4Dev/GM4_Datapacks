@@ -185,3 +185,6 @@ scoreboard players set $insert gm4_brewing_data -1
         - `execute if entity @s[nbt={data:{gm4_brewing:{previous_items:[BLOCK_DATA]}}}]`
         - e.g. this is the code that checks if a splash potion should be created: 
             - `execute if entity @s[nbt={data:{gm4_brewing:{previous_items:[{Slot:3b,id:"minecraft:gunpowder"}]}}}]`
+
+## License
+This library, and the contents of the `lib_brewing` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.

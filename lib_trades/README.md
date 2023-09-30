@@ -77,3 +77,6 @@ Not summoning a `trader_llama` for a trade option will result in the trade optio
 ## Registering Trades
 Registering trades is only necessary when naturally spawned Wandering Traders are supposed to receive them, it is **not** necessary for adding trades to external traders.<br>
 To register trades, the function that loads the trades must be added to the `#gm4_trades:register_trades` function tag.
+
+## License
+This library, and the contents of the `lib_forceload` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.

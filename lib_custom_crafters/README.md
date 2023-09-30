@@ -73,3 +73,6 @@ When setting the outputs with the loot table, the count determines how much the 
 execute if score $crafted gm4_crafting matches 0 store result score $crafted gm4_crafting if score $slot_count gm4_crafting matches 1 if score $stack_size gm4_crafting matches ..16 if data storage gm4_custom_crafters:temp/crafter {Items:[{id:"minecraft:oak_log"}]} run loot replace block ~ ~ ~ container.0 loot gm4_craft:crafting/oak_planks
 ```
 In the example above, the stack size is 16 because 16 maximum input items * 4 output items per recipe = 64 total output items max.
+
+## License
+This library, and the contents of the `lib_custom_crafters` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.
