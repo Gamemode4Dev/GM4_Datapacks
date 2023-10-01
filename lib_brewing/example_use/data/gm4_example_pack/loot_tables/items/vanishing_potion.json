@@ -1,0 +1,33 @@
+{
+  "type": "generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_nbt",
+              "tag": "{custom_potion:\"vanishing\",Potion:\"minecraft:mundane\",CustomPotionEffects:[{Id:14b,Amplifier:9b,Duration:600}]}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "text": "Potion of Vanishing"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
