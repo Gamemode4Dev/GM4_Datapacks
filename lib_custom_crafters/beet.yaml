@@ -44,3 +44,5 @@ meta:
     layout: preserve
     nbt_compact: True
     cmd_compact: True
+  smithed:
+    pack_id: gm4_lib_custom_crafters

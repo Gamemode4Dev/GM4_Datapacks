@@ -19,3 +19,5 @@ meta:
     credits:
       Creator:
         - Bloo
+  smithed:
+    pack_id: gm4_lib_trades
