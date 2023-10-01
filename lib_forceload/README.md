@@ -10,7 +10,7 @@ lib_forceload is a mcfunction library adding a forceloaded chunk with common utl
 This library forceloads the chunk `29999999 7134`, which lies beyond the maximum world size, in every dimension - including custom defined dimensions. Each dimension initializes its forceloaded chunk when a player first logs into that dimension.
 
 ### Yellow Shulker Box
-Every dimension gets a `yellow_shulker_box` placed at `29999998 1 7134` for use with inventory manipulations. This library follows the "yellow-shulker-box" convention, including the standard loot table. LINK
+Every dimension gets a `yellow_shulker_box` placed at `29999998 1 7134` for use with inventory manipulations. This library follows the "yellow-shulker-box" convention, including the standard loot table.
 
 example:
 ```
@@ -33,7 +33,7 @@ Every dimension gets a `jukebox` placed at `29999998 1 7132`. The item contained
 ### Unique Dimension ID
 In each dimension, a marker entity with the tag `gm4_dimension` is summoned. This marker has a unique scoreboard value stored in the objective `gm4_dimension`, and a name matching the dimension's string ID. 
 
-This score can be used to dynamically store a dimension on an item, such as for a recall ability, or for your datapack to support an arbitraty number of dimensions, added by other datapacks.
+This score can be used to dynamically store a dimension on an item, such as for a recall ability, or for your datapack to support an arbitrary number of dimensions, added by other datapacks.
 
 ### Repeating Command Block
 The overworld dimension has a repeating command block running the function tag `#gm4_forceload:command_block_tick`. Adding functions to this tag lets their contents to be run at a different subtick than ordinary functions. This is commonly used to intercept item drops before a player has the change to pick them up, but may be used to properly time other datapack code.

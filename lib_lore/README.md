@@ -17,7 +17,7 @@ data modify storage gm4_lore:temp Source set from <...>
 data modify storage gm4_lore:temp Target set from <...>
 ```
 
-`Input`: This is list of the lore that will be inserted or replaced. This should not be set when simply searching or removing and will be ignored if set while using the search of remove operation.
+`Input`: This is list of the lore that will be inserted or replaced. This should not be set when simply searching or removing and will be ignored if set while using the search or remove operation.
 ```mcfunction
 data modify storage gm4_lore:temp Input set from <...>
 ```
