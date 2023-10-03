@@ -1,5 +1,5 @@
 {
-  "last_commit": "a2b07740c430944277ddea9924c83dc60b9c4054",
+  "last_commit": "b1b6eecf53568b63ddcbf5586f08bdab28a52aa8",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -739,8 +739,8 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-08-12",
-      "modrinth_id": null,
-      "smithed_link": null,
+      "modrinth_id": "kUn3Z6gZ",
+      "smithed_link": "gm4_dripleaf_launchers",
       "pmc_link": null
     },
     {
