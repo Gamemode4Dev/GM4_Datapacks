@@ -38,7 +38,10 @@ def lib(ctx: Context):
     score_holder = ctx.project_id.removeprefix('gm4_')
     manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
     ver_str = manifest.libraries.get(ctx.project_id.replace("gm4_", "lib_"), NoneAttribute()).version or "0.0.0"
-    ver_int = Version(ver_str).int_rep()
+    ver = Version(ver_str)
+    if ver.patch is None:
+        ver.patch = 0 #  when beet-dev is run, pipeline has no patch number record, but dev builds should still allow int conversion
+    ver_int = ver.int_rep()
     ctx.data.functions[f'{ctx.project_id}:load'].append(f'execute unless score {score_holder} gm4_earliest_version matches ..{ver_int} run scoreboard players set {score_holder} gm4_earliest_version {ver_int}')
 
     beet_default(ctx)

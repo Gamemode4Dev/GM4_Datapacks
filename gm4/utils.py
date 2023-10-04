@@ -35,7 +35,9 @@ class Version():
 		return 100_000*self.major + 1_000*self.minor + self.patch # type: ignore
 
 	def __eq__(self, other: object) -> bool:
-		if isinstance(other, Version):
+		if other is None:
+			return False
+		elif isinstance(other, Version):
 			return self.major==other.major and self.minor==other.minor and self.patch==other.patch
 		raise TypeError
 	
