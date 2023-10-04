@@ -4,7 +4,7 @@ This library, based upon the old Gamemode 4 Module of the same name, adds for a 
 ## How to Use
 Custom Crafters have a function tag used to check recipes: `#gm4_custom_crafters:check_recipes`. Data packs should use this to set up recipes to be crafted in a custom crafter. Custom Crafters run every 16 ticks automatically checking for recipes and replacing them with their appropriate output.
 
-Below is specific details in implementing a `check_recipes` function. Custom Crafters will only run recipe checks if all slots have the same item count.
+Below are specific details in implementing a `check_recipes` function. Custom Crafters will only run recipe checks if all slots have the same item count.
 
 ### Check that no other recipes have been completed
 
@@ -68,8 +68,44 @@ Note that the Custom Crafter automatically supports recipes placed anywhere in t
 When setting the outputs with the loot table, the count determines how much the item stack will be multiplied by. For example setting the count to 4 will output 4 of that item per recipe (like the log -> planks example from earlier).
 
 ## Recipe Check Function Example
+a function that is called by `#gm4_custom_crafters:check_recipes`:
 ```mcfunction
-# 1 oak log -> 4 oak planks (shapeless)
-execute if score $crafted gm4_crafting matches 0 store result score $crafted gm4_crafting if score $slot_count gm4_crafting matches 1 if score $stack_size gm4_crafting matches ..16 if data storage gm4_custom_crafters:temp/crafter {Items:[{id:"minecraft:oak_log"}]} run loot replace block ~ ~ ~ container.0 loot gm4_craft:crafting/oak_planks
+# 1 white wool -> 3 string (shapeless)
+execute if score $crafted gm4_crafting matches 0 store result score $crafted gm4_crafting if score $slot_count gm4_crafting matches 1 if score $stack_size gm4_crafting matches ..21 if data storage gm4_custom_crafters:temp/crafter {Items:[{id:"minecraft:white_wool"}]} run loot replace block ~ ~ ~ container.0 loot gm4_craft:crafting/string
 ```
-In the example above, the stack size is 16 because 16 maximum input items * 4 output items per recipe = 64 total output items max.
+the loot table `gm4_craft:crafting/string`:
+```json
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 8,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:string",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+In the example above, the `stack_size` is set to 21 because the output for a single craft is 3 string and the maximum stack size for string is 64, so 64/3 = 21.3 maximum input items (then round down since 22 would exceed the max stack size of string). The loot table ensures that all items are deleted and the last slot of the dropper is replaced with the output for one craft.
+
+## License
+This library, and the contents of the `lib_custom_crafters` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.

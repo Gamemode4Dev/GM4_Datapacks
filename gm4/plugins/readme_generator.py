@@ -188,3 +188,8 @@ def beet_default(ctx: Context, opts: ManifestConfig):
             ctx.data.extra["README.md"] = TextFile(site_contents)
         else:
             ctx.meta[f'{site}_readme'] = TextFile(site_contents)
+
+
+def libraries(ctx: Context):
+    """Dumps the README (library docs) to the "smithed_readme" meta, so it ends up in the generated folder. No edits are made"""
+    ctx.meta['smithed_readme'] = ctx.data.extra["README.md"] # relies on copy_files to load into datapack container. 

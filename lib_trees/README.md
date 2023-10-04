@@ -1,9 +1,6 @@
 # lib_trees
 lib_trees is a mcfunction library that facilites the creation of custom trees. This library handles many of the functions required for growing custom trees from saplings: sapling placement and breaking, tree growth via saplings, and sapling drops from specific leaves.
 
-## Installation
-This library relies on [lantern load](https://github.com/LanternMC/load). If you don't know how to create a datapack that utilizes lantern load, refer to the [documentation](https://github.com/LanternMC/load/blob/master/README.adoc).
-
 ## Example Pack
 The example datapack has everything required to use this library (except for full lantern load implementation). This document will refer to the example pack for specific details.
 
@@ -81,3 +78,6 @@ That should run a function that generates the tree using `/place jigsaw` then ki
 place jigsaw gm4_trees_example:apple_trees gm4_trees:trunk 6 ~ ~1 ~
 kill @s
 ```
+
+## License
+This library, and the contents of the `lib_trees` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.

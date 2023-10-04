@@ -1,6 +1,6 @@
 id: gm4_forceload
 name: Gamemode 4 Forceload
-version: 1.2.0
+version: 1.2.X
 
 data_pack:
   load: 
@@ -17,3 +17,5 @@ meta:
     credits:
       Creator:
         - Misode
+  smithed:
+    pack_id: gm4_lib_forceload
