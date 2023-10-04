@@ -1,6 +1,5 @@
 {
-  "last_commit": "b1b6eecf53568b63ddcbf5586f08bdab28a52aa8",
-  "libraries":{},
+  "last_commit": "d321d8bbdbb1a55d9c242b1edae6e4cb165c2a7f",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2657,6 +2656,212 @@
       "pmc_link": null
     }
   ],
+  "libraries": {
+    "lib_brewing": {
+      "id": "gm4_brewing",
+      "name": "Gamemode 4 Brewing",
+      "version": "1.0.0",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "BluePsychoRanger"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_brewing",
+      "pmc_link": null
+    },
+    "lib_custom_crafters": {
+      "id": "gm4_custom_crafters",
+      "name": "Gamemode 4 Custom Crafters",
+      "version": "3.1.0",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Custom Crafters Creators": [
+          "Bloo",
+          "Sparks",
+          "SpecialBuilder32"
+        ],
+        "Textures by": [
+          "kyrkis"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_custom_crafters",
+      "pmc_link": null
+    },
+    "lib_forceload": {
+      "id": "gm4_forceload",
+      "name": "Gamemode 4 Forceload",
+      "version": "1.2.0",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "Misode"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_forceload",
+      "pmc_link": null
+    },
+    "lib_lore": {
+      "id": "gm4_lore",
+      "name": "Gamemode 4 Lore",
+      "version": "1.0.0",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "BluePsychoRanger"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_lore",
+      "pmc_link": null
+    },
+    "lib_machines": {
+      "id": "gm4_machines",
+      "name": "Gamemode 4 Machines",
+      "version": "1.1.0",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Machines Library Creator": [
+          "BluePsychoRanger"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_machines",
+      "pmc_link": null
+    },
+    "lib_player_heads": {
+      "id": "gm4_player_heads",
+      "name": "Gamemode 4 Player Heads",
+      "version": "1.1.0",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "Misode"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_player_heads",
+      "pmc_link": null
+    },
+    "lib_potion_tracking": {
+      "id": "gm4_potion_tracking",
+      "name": "Gamemode 4 Potion Tracking",
+      "version": "1.0.0",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "BluePsychoRanger"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_potion_tracking",
+      "pmc_link": null
+    },
+    "lib_trades": {
+      "id": "gm4_trades",
+      "name": "Gamemode 4 Trades",
+      "version": "1.3.0",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_trades",
+      "pmc_link": null
+    },
+    "lib_trees": {
+      "id": "gm4_trees",
+      "name": "Gamemode 4 Trees",
+      "version": "1.0.0",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "BluePsychoRanger",
+          "Bloo"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_trees",
+      "pmc_link": null
+    }
+  },
   "contributors": {
     "15Redstones": {
       "name": "15Redstones",
