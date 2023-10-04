@@ -6,7 +6,7 @@ from functools import total_ordering
 
 def run(cmd: list[str]|str) -> str:
 	"""Run a shell command and return the stdout."""
-	return subprocess.run(cmd, capture_output=True, encoding="utf8", shell=True).stdout.strip()
+	return subprocess.run(cmd, capture_output=True, encoding="utf8").stdout.strip()
 
 def X_int(val: str) -> int | None:
 	"""Int casting that accepts character 'X' and returns None"""
