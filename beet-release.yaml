@@ -34,7 +34,9 @@ pipeline:
             data_pack:
               LICENSE.md: "LICENSE.md"
               README.md: "README.md"
+              pack.png: "pack.png"
       - gm4.plugins.module.default_pack_icon
+      - gm4.plugins.readme_generator.libraries
       - gm4.plugins.write_mcmeta
       - gm4.plugins.output.release
     meta:
