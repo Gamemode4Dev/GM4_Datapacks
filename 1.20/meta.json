@@ -1,5 +1,5 @@
 {
-  "last_commit": "d321d8bbdbb1a55d9c242b1edae6e4cb165c2a7f",
+  "last_commit": "b0078a91cce039b7cdbc7a45654aae1209c7935a",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -10,6 +10,9 @@
       "credits": {
         "Creator": [
           "Bloo"
+        ],
+        "Icon Design": [
+          "Hozz"
         ]
       },
       "requires": [
@@ -92,6 +95,9 @@
       "credits": {
         "Creator": [
           "BluePsychoRanger"
+        ],
+        "Icon Design": [
+          "Hozz"
         ]
       },
       "requires": [],
@@ -357,6 +363,9 @@
       "credits": {
         "Creator": [
           "TheEpyonProject"
+        ],
+        "Icon Design": [
+          "Hozz"
         ]
       },
       "requires": [],
@@ -438,6 +447,9 @@
       "credits": {
         "Creator": [
           "Thanathor"
+        ],
+        "Icon Design": [
+          "Hozz"
         ]
       },
       "requires": [],
@@ -706,6 +718,9 @@
       "credits": {
         "Creator": [
           "Sparks"
+        ],
+        "Icon Design": [
+          "Hozz"
         ]
       },
       "requires": [],
@@ -1925,6 +1940,9 @@
       "credits": {
         "Creator": [
           "Thanathor"
+        ],
+        "Icon Design": [
+          "Hozz"
         ]
       },
       "requires": [],
@@ -2184,6 +2202,9 @@
       "credits": {
         "Creator": [
           "BluePsychoRanger"
+        ],
+        "Icon Design": [
+          "Hozz"
         ]
       },
       "requires": [],

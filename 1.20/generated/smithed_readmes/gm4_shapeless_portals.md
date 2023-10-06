@@ -13,6 +13,7 @@ Rectangles are boring, so use this Datapack and make your Nether Portals any sha
 
 ### Credits
 - Creator: [Thanathor](https://twitter.com/The_Thanathor)
+- Icon Design: Hozz
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

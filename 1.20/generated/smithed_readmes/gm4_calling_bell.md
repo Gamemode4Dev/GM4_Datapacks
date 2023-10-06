@@ -4,6 +4,7 @@
 
 ### Credits
 - Creator: TheEpyonProject
+- Icon Design: Hozz
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

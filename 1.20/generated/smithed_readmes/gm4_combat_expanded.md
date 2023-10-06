@@ -18,6 +18,7 @@ A full list of all modifiers to mobs, weapons and armor can be found at the [Wik
 
 ### Credits
 - Creator: [Thanathor](https://twitter.com/The_Thanathor)
+- Icon Design: Hozz
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>
