@@ -7,6 +7,7 @@ data_pack:
 
 pipeline:
   - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_forceload
   - gm4.plugins.include.lib_machines
   - gm4.plugins.include.lib_custom_crafters
 
