@@ -499,6 +499,9 @@
     "oak_sapling": {
       "gm4_apple_trees:item/apple_tree_sapling": 4
     },
+    "oxidized_cut_copper": {
+      "gm4_tinkering_compressors:block/tinkering_compressor_plate": 0
+    },
     "paper": {
       "gm4_book_binders:item/enchanted_page": 1
     },
@@ -530,6 +533,7 @@
       "gm4_teleportation_anchors:item/teleportation_anchor": 24,
       "gm4_teleportation_anchors:item/teleportation_jammer": 25,
       "gm4_block_compressors:block/block_compressor_full": 26,
+      "gm4_tinkering_compressors:block/tinkering_compressor_full": 27,
       "gm4_disassemblers:item/disassembler": 135
     },
     "potion": {
@@ -553,6 +557,7 @@
       "gm4_lightning_in_a_bottle:item/splash_lightning_in_a_bottle": 0
     },
     "stone": {
+      "gm4_tinkering_compressors:block/tinkering_compressor": 0,
       "gm4_block_compressors:block/block_compressor": 1
     },
     "tnt": {

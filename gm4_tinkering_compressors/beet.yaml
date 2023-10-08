@@ -5,6 +5,9 @@ version: 1.3.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
@@ -19,6 +22,29 @@ meta:
       schedule_loops:
         - main
         - tick
+    model_data:
+      - item: oxidized_cut_copper
+        reference: block/tinkering_compressor_plate
+        transforms:
+          - name: item_display
+            origin: [0.5, 0.5, 0.5]
+            scale: [0.625, 0.625, 0.625]
+            translation: [0, -0.225, 0]
+            rotation: [180, 0, 0]
+      - item: stone
+        reference: block/tinkering_compressor
+        template: block
+        textures:
+          top: gm4_tinkering_compressors:block/tinkering_compressor_top
+          bottom: minecraft:block/furnace_top
+          front: gm4_tinkering_compressors:block/tinkering_compressor_side
+          side: gm4_tinkering_compressors:block/tinkering_compressor_side
+        transforms:
+          - name: item_display
+            origin: [0.5, 0.5, 0.5]
+            scale: [0.5, 0.5, 0.5]
+      - item: player_head
+        reference: block/tinkering_compressor_full
     website:
       description: Automatically compress stacks of items into their block form with a tinker shamir as a machine block, and back.
       recommended:
