@@ -1,0 +1,10 @@
+{
+	"parent": "gm4:block/cube_with_plate",
+	"textures": {
+		"side": "gm4_block_compressors:block/block_compressor_side",
+		"bottom": "minecraft:block/furnace_top",
+		"top": "gm4_block_compressors:block/block_compressor_top",
+		"front": "gm4_block_compressors:block/block_compressor_side",
+		"plate": "gm4_block_compressors:block/block_compressor_plate"
+	}
+}

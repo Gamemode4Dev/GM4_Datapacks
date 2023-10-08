@@ -1,5 +1,5 @@
 {
-  "parent": "gm4:block/cube",
+  "parent": "minecraft:block/cube",
   "elements": [
     {
       "name": "plate",

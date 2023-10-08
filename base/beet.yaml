@@ -5,8 +5,9 @@ data_pack:
   load: 
     data: data
 
-# resource_pack: 
-#   load: .
+resource_pack: 
+  load: 
+    assets/gm4/models: assets/gm4/models
 
 pipeline:
   - gm4.plugins.versioning.base

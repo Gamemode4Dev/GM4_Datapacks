@@ -529,6 +529,7 @@
       "gm4_enchantment_extractors:item/enchantment_extractor": 23,
       "gm4_teleportation_anchors:item/teleportation_anchor": 24,
       "gm4_teleportation_anchors:item/teleportation_jammer": 25,
+      "gm4_block_compressors:block/block_compressor_full": 26,
       "gm4_disassemblers:item/disassembler": 135
     },
     "potion": {
@@ -537,6 +538,9 @@
     },
     "prismarine_shard": {
       "gm4_zauber_cauldrons:item/enchanted_prismarine_shard": 0
+    },
+    "purpur_block": {
+      "gm4_block_compressors:block/block_compressor_plate": 2
     },
     "purpur_pillar": {
       "gm4_teleportation_anchors:block/teleportation_jammer": 0
@@ -547,6 +551,9 @@
     "snowball": {},
     "splash_potion": {
       "gm4_lightning_in_a_bottle:item/splash_lightning_in_a_bottle": 0
+    },
+    "stone": {
+      "gm4_block_compressors:block/block_compressor": 1
     },
     "tnt": {
       "gm4_disassemblers:block/disassembler": 1,

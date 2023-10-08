@@ -459,12 +459,13 @@ class ItemDisplayModel(TransformOptions):
     origin: list[float] = Field(..., max_items=3, min_items=3)
     scale: list[float] = Field(..., max_items=3, min_items=3)
     translation: list[float] = Field(default=[0,0,0], max_items=3, min_items=3)
+    rotation: list[float] = Field(default=[0.,0.,0.], max_items=3, min_items=3) # euler angle form of total rotation. NOTE only accounts for simple angles (90,180 ect...)
     display: Literal["none", "thirdperson_lefthand", "thirdperson_righthand", "firstperson_lefthand", "firstperson_righthand", "head", "gui", "ground", "fixed"] = "head"
     name: ClassVar[Literal["item_display"]] = "item_display"
 
     def apply_transform(self, model: Model):
         model.data.setdefault("display", {})[self.display] = {
-            "rotation": [0,0,0],
+            "rotation": list(-1*np.array(self.rotation)),
             "translation": list(16 * (np.array([-0.5,0.5,-0.5])+(np.array(self.origin)*np.array([1,-1,1]))-np.array(self.translation)) / np.array(self.scale)), # type: ignore ; self.origin*[1,-1,1] is faulty interpreted by type checker as ndarray[bool_]
             "scale": list(1/np.array(self.scale)*1.006)
         }
