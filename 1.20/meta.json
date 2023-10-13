@@ -1,5 +1,5 @@
 {
-  "last_commit": "f4f884b62c879bff5b9d45a71788cd7f9c96df15",
+  "last_commit": "5f0b408eeea92ab003a7444a05e739e137c735c0",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -379,7 +379,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "qNzelyE3",
-      "smithed_link": null,
+      "smithed_link": "gm4_calling_bell",
       "pmc_link": null
     },
     {
