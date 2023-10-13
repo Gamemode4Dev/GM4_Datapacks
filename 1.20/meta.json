@@ -1,5 +1,5 @@
 {
-  "last_commit": "f6294bc479747c9183ef6f8d3f68cb8f3d568adc",
+  "last_commit": "f4f884b62c879bff5b9d45a71788cd7f9c96df15",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2196,7 +2196,7 @@
     {
       "id": "gm4_teleportation_anchors",
       "name": "Teleportation Anchors",
-      "version": "1.2.6",
+      "version": "1.2.7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Teleportation_Anchors",
       "credits": {
