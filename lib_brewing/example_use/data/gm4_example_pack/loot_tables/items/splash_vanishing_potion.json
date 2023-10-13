@@ -15,7 +15,7 @@
             },
             {
               "function": "set_nbt",
-              "tag": "{custom_potion:\"vanishing\",Potion:\"minecraft:mundane\",CustomPotionEffects:[{Id:14b,Amplifier:9b,Duration:600}]}"
+              "tag": "{custom_potion:\"vanishing\",Potion:\"minecraft:mundane\",CustomPotionEffects:[{Id:14,Amplifier:9b,Duration:600}]}"
             },
             {
               "function": "set_name",
