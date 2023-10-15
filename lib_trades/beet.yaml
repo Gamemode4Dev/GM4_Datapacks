@@ -1,6 +1,6 @@
 id: gm4_trades
 name: Gamemode 4 Trades
-version: 1.3.0
+version: 1.3.X
 
 data_pack:
   load: 
@@ -19,3 +19,5 @@ meta:
     credits:
       Creator:
         - Bloo
+  smithed:
+    pack_id: gm4_lib_trades

@@ -1,6 +1,6 @@
 id: gm4_custom_crafters
 name: Gamemode 4 Custom Crafters
-version: 3.1.0
+version: 3.1.X
 
 data_pack:
   load: 
@@ -44,3 +44,5 @@ meta:
     layout: preserve
     nbt_compact: True
     cmd_compact: True
+  smithed:
+    pack_id: gm4_lib_custom_crafters

@@ -4,7 +4,7 @@
   "predicate": {
     "vehicle": {
       "type": "minecraft:pig",
-      "team": "gm4_chairs"
+      "nbt": "{Tags:[\"gm4_chairs\"]}"
     }
   }
 }

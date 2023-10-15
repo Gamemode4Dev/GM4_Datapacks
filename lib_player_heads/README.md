@@ -32,3 +32,6 @@ Please note that the `example_pack` must be started by calling `#load:load`, as 
 ## Technical Details
  - All player head data is stored in storage at `gm4_player_heads:register`.
  - Player heads with the `gm4_player_head:1b` tag will be excluded from processing.
+
+## License
+This library, and the contents of the `lib_player_heads` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.

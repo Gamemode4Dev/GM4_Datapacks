@@ -1,6 +1,6 @@
 id: gm4_lore
 name: Gamemode 4 Lore
-version: 1.0.0
+version: 1.0.X
 
 data_pack:
   load: 
@@ -21,3 +21,5 @@ meta:
     credits:
       Creator:
         - BluePsychoRanger
+  smithed:
+    pack_id: gm4_lib_lore
