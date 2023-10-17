@@ -46,6 +46,9 @@
       "gm4_sunken_treasure:item/shipwreck_treasure": 4,
       "gm4_sunken_treasure:item/treasure_chest": 5
     },
+    "coal_block": {
+      "gm4_forming_press:item/charcoal_block": 0
+    },
     "compass": {
       "gm4_apple_trees:test_model_1": 0
     },
@@ -505,6 +508,11 @@
     "paper": {
       "gm4_book_binders:item/enchanted_page": 1
     },
+    "piston": {
+      "gm4_forming_press:block/forming_press": 1,
+      "gm4_forming_press:block/forming_press_side": 6,
+      "gm4_forming_press:block/forming_press_down": 7
+    },
     "player_head": {
       "gm4_zauber_cauldrons:item/crystal/harming": 0,
       "gm4_zauber_cauldrons:item/crystal/health": 1,
@@ -536,6 +544,7 @@
       "gm4_tinkering_compressors:block/tinkering_compressor_full": 27,
       "gm4_ender_hoppers:block/ender_hopper_side": 28,
       "gm4_ender_hoppers:block/ender_hopper_minecart": 29,
+      "gm4_forming_press:item/forming_press": 129,
       "gm4_disassemblers:item/disassembler": 135
     },
     "potion": {
