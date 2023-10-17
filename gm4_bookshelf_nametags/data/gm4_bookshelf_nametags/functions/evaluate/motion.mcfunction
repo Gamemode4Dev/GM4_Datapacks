@@ -10,7 +10,11 @@ execute store result score $Mot_1 gm4_bookshelf_nametags_data run data get stora
 execute store result score $Mot_2 gm4_bookshelf_nametags_data run data get storage gm4_bookshelf_nametags:temp Motion[2]
 scoreboard players operation $Mot_0 gm4_bookshelf_nametags_data += $Mot_1 gm4_bookshelf_nametags_data
 scoreboard players operation $Mot_0 gm4_bookshelf_nametags_data += $Mot_2 gm4_bookshelf_nametags_data
-execute if score $Mot_0 gm4_bookshelf_nametags_data matches 1.. run scoreboard players set $evaluate gm4_bookshelf_nametags_data 0
+
+# if motion was detected set a full cooldown on displaying nametags
+execute if score $Mot_0 gm4_bookshelf_nametags_data matches 1.. run scoreboard players set $evaluate gm4_bookshelf_nametags_data -1
+
+# cleanup
 data remove storage gm4_bookshelf_nametags:temp Motion
 
 # if player had no motion check rotation

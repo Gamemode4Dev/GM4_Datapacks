@@ -20,7 +20,7 @@ scoreboard players operation @s gm4_bookshelf_nametags_yaw = $yaw gm4_bookshelf_
 # if player had no rotation add to their standing_still score
 execute if score $evaluate gm4_bookshelf_nametags_data matches 1 run scoreboard players add @s gm4_bookshelf_nametags_standing_still 1
 
-# if player has not moved for 0.25s check for chiseled bookshelves
-# evaluation is not checked here, this means that if you don't move rotation will not reset the 0.5s as long as you keep looking
-# at a valid book, making scanning shelves nicer
-execute if score @s gm4_bookshelf_nametags_standing_still matches 5.. run function gm4_bookshelf_nametags:find_book/prep
+# if player has not moved for 0.5s and not rotated for 0.1s check for chiseled bookshelves
+# evaluation is not checked here, this means that if you don't move rotation will not reset the 0.1s as long as you keep looking
+# at a chiseled bookshelf, making scanning shelves nicer
+execute if score @s gm4_bookshelf_nametags_standing_still matches 10.. run function gm4_bookshelf_nametags:find_book/prep

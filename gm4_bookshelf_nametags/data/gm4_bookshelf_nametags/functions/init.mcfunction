@@ -7,6 +7,7 @@ scoreboard objectives add gm4_bookshelf_nametags_pitch dummy
 scoreboard objectives add gm4_bookshelf_nametags_yaw dummy
 scoreboard objectives add gm4_bookshelf_nametags_standing_still dummy
 scoreboard objectives add gm4_bookshelf_nametags_keep dummy
+scoreboard objectives add gm4_bookshelf_nametags_display_state dummy
 scoreboard objectives add gm4_bookshelf_nametags_walk custom:walk_one_cm
 scoreboard objectives add gm4_bookshelf_nametags_sprint custom:sprint_one_cm
 

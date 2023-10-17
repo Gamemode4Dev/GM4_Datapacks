@@ -7,7 +7,7 @@
 scoreboard players remove $raycast gm4_bookshelf_nametags_data 1
 
 # check for bookshelf slightly up ahead
-execute if block ^ ^ ^0.025 chiseled_bookshelf positioned ^ ^ ^0.025 run function gm4_bookshelf_nametags:find_book/find_book
+execute if block ^ ^ ^0.0501 chiseled_bookshelf run function gm4_bookshelf_nametags:find_book/find_book
 
 # if a block is hit stop the raycast
 execute unless block ~ ~ ~ #gm4:no_collision run scoreboard players set $raycast gm4_bookshelf_nametags_data 0
