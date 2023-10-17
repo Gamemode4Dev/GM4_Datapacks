@@ -25,7 +25,10 @@ meta:
         reference: item/ender_hopper_minecart
         template: generated
       - item: player_head
-        reference: block/ender_hopper
+        broadcast:
+          - reference: block/ender_hopper
+          - reference: block/ender_hopper_side
+          - reference: block/ender_hopper_minecart
         template: custom
         transforms: 
           - name: item_display
