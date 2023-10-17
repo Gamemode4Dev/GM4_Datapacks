@@ -46,17 +46,32 @@
       "gm4_sunken_treasure:item/shipwreck_treasure": 4,
       "gm4_sunken_treasure:item/treasure_chest": 5
     },
+    "chorus_flower": {
+      "gm4_smelteries:block/ore_display/chorus_fruit": 0
+    },
     "coal_block": {
       "gm4_forming_press:item/charcoal_block": 0
     },
     "compass": {
       "gm4_apple_trees:test_model_1": 0
     },
+    "copper_ore": {
+      "gm4_smelteries:block/ore_display/copper_ore": 0
+    },
     "crafting_table": {
       "gm4_custom_crafters:block/custom_crafter": 0,
       "gm4_custom_crafters:block/custom_crafter_side": 1,
       "gm4_custom_crafters:block/custom_crafter_down": 2,
       "gm4_auto_crafting:block/auto_crafter": 3
+    },
+    "deepslate_copper_ore": {
+      "gm4_smelteries:block/ore_display/deepslate_copper_ore": 0
+    },
+    "deepslate_gold_ore": {
+      "gm4_smelteries:block/ore_display/deepslate_gold_ore": 0
+    },
+    "deepslate_iron_ore": {
+      "gm4_smelteries:block/ore_display/deepslate_iron_ore": 0
     },
     "diamond": {
       "gm4_end_fishing:item/ores/diamond_10": 1,
@@ -248,6 +263,9 @@
       "gm4_end_fishing:item/ores/gold_ingot_13": 4,
       "gm4_end_fishing:item/ores/gold_ingot_14": 5
     },
+    "gold_ore": {
+      "gm4_smelteries:block/ore_display/gold_ore": 0
+    },
     "golden_boots": {
       "gm4_sunken_treasure:item/waders": 0,
       "gm4_zauber_cauldrons:item/zauber_armor/armor/boots": 1,
@@ -289,6 +307,10 @@
     "hopper_minecart": {
       "gm4_ender_hoppers:item/ender_hopper_minecart": 0,
       "gm4_liquid_minecarts:item/liquid_minecart": 1
+    },
+    "iron_block": {
+      "gm4_smelteries:block/smeltery_unlit": 0,
+      "gm4_smelteries:block/smeltery_lit": 1
     },
     "iron_boots": {
       "gm4_end_fishing:item/armor/iron_boots_10": 0,
@@ -352,6 +374,9 @@
       "gm4_end_fishing:item/armor/iron_leggings_18": 8,
       "gm4_end_fishing:item/armor/iron_leggings_19": 9
     },
+    "iron_ore": {
+      "gm4_smelteries:block/ore_display/iron_ore": 0
+    },
     "iron_pickaxe": {
       "gm4_end_fishing:item/tools/iron_pickaxe_10": 0,
       "gm4_end_fishing:item/tools/iron_pickaxe_11": 1,
@@ -404,6 +429,9 @@
     },
     "lingering_potion": {
       "gm4_lightning_in_a_bottle:item/lingering_lightning_in_a_bottle": 0
+    },
+    "nether_gold_ore": {
+      "gm4_smelteries:block/ore_display/nether_gold_ore": 0
     },
     "netherite_boots": {
       "gm4_end_fishing:item/armor/netherite_boots_10": 0,
@@ -544,6 +572,7 @@
       "gm4_tinkering_compressors:block/tinkering_compressor_full": 27,
       "gm4_ender_hoppers:block/ender_hopper_side": 28,
       "gm4_ender_hoppers:block/ender_hopper_minecart": 29,
+      "gm4_smelteries:item/smeltery": 30,
       "gm4_forming_press:item/forming_press": 129,
       "gm4_disassemblers:item/disassembler": 135
     },
@@ -562,6 +591,30 @@
     },
     "rabbit_hide": {
       "gm4_bat_grenades:item/bat_leather": 2
+    },
+    "raw_copper": {
+      "gm4_smelteries:block/ore_display/raw_copper": 1
+    },
+    "raw_copper_block": {
+      "gm4_smelteries:block/ore_display/raw_copper": 1
+    },
+    "raw_gold": {
+      "gm4_smelteries:block/ore_display/raw_gold": 0
+    },
+    "raw_gold_block": {
+      "gm4_smelteries:block/ore_display/raw_gold": 0
+    },
+    "raw_iron": {
+      "gm4_smelteries:block/ore_display/raw_iron": 0
+    },
+    "raw_iron_block": {
+      "gm4_smelteries:block/ore_display/raw_iron": 0
+    },
+    "red_sand": {
+      "gm4_smelteries:block/ore_display/red_sand": 0
+    },
+    "sand": {
+      "gm4_smelteries:block/ore_display/sand": 0
     },
     "snowball": {},
     "splash_potion": {

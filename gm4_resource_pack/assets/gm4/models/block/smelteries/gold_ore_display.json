@@ -1,8 +1,0 @@
-{
-    "parent": "gm4:block/cube_small_display",
-	"textures": {
-		"top": "gm4:block/gold_ore_display_top",
-		"side": "gm4:block/gold_ore_display_side",
-		"bottom": "gm4:block/gold_ore_display_top"
-	}
-}
