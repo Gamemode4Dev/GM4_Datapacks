@@ -8,6 +8,7 @@ data_pack:
 resource_pack: 
   load: 
     assets/gm4/models: assets/gm4/models
+    assets/minecraft/atlases: assets/minecraft/atlases
 
 pipeline:
   - gm4.plugins.versioning.base

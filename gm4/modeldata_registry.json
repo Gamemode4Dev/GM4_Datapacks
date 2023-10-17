@@ -62,7 +62,8 @@
       "gm4_custom_crafters:block/custom_crafter": 0,
       "gm4_custom_crafters:block/custom_crafter_side": 1,
       "gm4_custom_crafters:block/custom_crafter_down": 2,
-      "gm4_auto_crafting:block/auto_crafter": 3
+      "gm4_auto_crafting:block/auto_crafter": 3,
+      "gm4_tnt_landmines:entity/tnt_landmine_crafting_table": 4
     },
     "deepslate_copper_ore": {
       "gm4_smelteries:block/ore_display/deepslate_copper_ore": 0
@@ -181,6 +182,9 @@
       "gm4_end_fishing:item/swords/diamond_sword_28": 18,
       "gm4_end_fishing:item/swords/diamond_sword_29": 19
     },
+    "dirt": {
+      "gm4_tnt_landmines:entity/tnt_landmine_dirt": 0
+    },
     "elytra": {
       "gm4_apple_trees:test_model_1": 0,
       "gm4_end_fishing:item/elytra/elytra_10": 1,
@@ -297,6 +301,9 @@
       "gm4_zauber_cauldrons:item/zauber_armor/attack/leggings": 1,
       "gm4_zauber_cauldrons:item/zauber_armor/health/leggings": 2,
       "gm4_zauber_cauldrons:item/zauber_armor/speed/leggings": 3
+    },
+    "grass_block": {
+      "gm4_tnt_landmines:entity/tnt_landmine_grass": 0
     },
     "gunpowder": {
       "gm4_tnt_landmines:item/soft_defuser": 0
@@ -527,6 +534,9 @@
       "gm4_end_fishing:item/swords/netherite_sword_28": 18,
       "gm4_end_fishing:item/swords/netherite_sword_29": 19
     },
+    "netherrack": {
+      "gm4_tnt_landmines:entity/tnt_landmine_netherrack": 0
+    },
     "oak_sapling": {
       "gm4_apple_trees:item/apple_tree_sapling": 4
     },
@@ -622,9 +632,14 @@
     },
     "stone": {
       "gm4_tinkering_compressors:block/tinkering_compressor": 0,
-      "gm4_block_compressors:block/block_compressor": 1
+      "gm4_block_compressors:block/block_compressor": 1,
+      "gm4_tnt_landmines:entity/tnt_landmine_stone": 2
+    },
+    "stone_bricks": {
+      "gm4_tnt_landmines:entity/tnt_landmine_stone_bricks": 0
     },
     "tnt": {
+      "gm4_tnt_landmines:entity/tnt_landmine": 0,
       "gm4_disassemblers:block/disassembler": 1,
       "gm4_disassemblers:block/disassembler_side": 5,
       "gm4_disassemblers:block/disassembler_down": 6

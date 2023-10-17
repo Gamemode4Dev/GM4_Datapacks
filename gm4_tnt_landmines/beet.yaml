@@ -9,6 +9,7 @@ resource_pack:
   load: .
 
 pipeline:
+  - gm4_tnt_landmines.landmine_model
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_player_heads
   - gm4.plugins.include.lib_custom_crafters
@@ -35,6 +36,22 @@ meta:
       - item: gunpowder
         template: generated
         reference: item/soft_defuser
+      - template: tnt_landmines:landmine
+        broadcast:
+          - item: tnt
+            reference: entity/tnt_landmine
+          - item: crafting_table
+            reference: entity/tnt_landmine_crafting_table
+          - item: dirt
+            reference: entity/tnt_landmine_dirt
+          - item: grass_block
+            reference: entity/tnt_landmine_grass
+          - item: netherrack
+            reference: entity/tnt_landmine_netherrack
+          - item: stone_bricks
+            reference: entity/tnt_landmine_stone_bricks
+          - item: stone
+            reference: entity/tnt_landmine_stone
     website:
       description: Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!
       recommended: []

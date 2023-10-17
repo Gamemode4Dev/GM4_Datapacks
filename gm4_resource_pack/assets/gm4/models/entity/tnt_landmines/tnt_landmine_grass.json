@@ -1,8 +1,0 @@
-{
-    "parent": "gm4:entity/tnt_landmines/landmine",
-	"textures": {
-		"side": "gm4:entity/tnt_landmines/tnt_landmine_grass_side",
-		"top": "gm4:entity/tnt_landmines/tnt_landmine_grass_top",
-		"bottom": "gm4:entity/tnt_landmines/tnt_landmine_bottom"
-	}
-}
