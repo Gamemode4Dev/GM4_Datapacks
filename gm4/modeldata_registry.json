@@ -208,8 +208,8 @@
       "gm4_teleportation_anchors:block/teleportation_anchor": 0
     },
     "firework_star": {
-      "gm4_everstone:item/everstone": 1,
-      "gm4_orb_of_ankou:item/orb_of_ankou": 200
+      "gm4_orb_of_ankou:item/orb_of_ankou": 1,
+      "gm4_everstone:item/everstone": 2
     },
     "flint": {
       "gm4_better_fire:item/charred_arrowhead": 0,
@@ -588,7 +588,9 @@
     },
     "potion": {
       "gm4_lightning_in_a_bottle:item/lightning_in_a_bottle": 0,
-      "gm4_zauber_cauldrons:item/wormhole_in_a_bottle": 1
+      "gm4_zauber_cauldrons:item/wormhole_in_a_bottle": 1,
+      "gm4_standard_liquids:item/ink_bottle": 2,
+      "gm4_standard_liquids:item/glow_ink_bottle": 3
     },
     "prismarine_shard": {
       "gm4_zauber_cauldrons:item/enchanted_prismarine_shard": 0

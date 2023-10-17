@@ -36,6 +36,11 @@ meta:
       - item: honey_block
         reference: block/cast_honey_block
         template: vanilla
+      - item: potion
+        tempalte: vanilla
+        broadcast:
+          - reference: gm4_standard_liquids:item/ink_bottle
+          - reference: gm4_standard_liquids:item/glow_ink_bottle
     website:
       description: Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!
       recommended:
