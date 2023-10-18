@@ -9,6 +9,7 @@ resource_pack:
   load: .
 
 pipeline:
+  - gm4_metallurgy.generate_tool_models
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_lore
   - gm4.plugins.include.lib_player_heads
@@ -87,4 +88,5 @@ meta:
           - reference: item/lump/bauxite_lump
           - reference: item/lump/bismutite_lump
           - reference: item/lump/thorianite_lump
+      # tool/armor textures registered via plugin
           
