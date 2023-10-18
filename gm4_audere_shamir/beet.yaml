@@ -14,6 +14,11 @@ meta:
       required:
         - gm4_metallurgy: 1.2.0
       schedule_loops: [main]
+    model_data:
+      - item: player_head
+        template: generated
+        reference: item/audere_band
+        textures: gm4_metallurgy:item/band/barium_band
     website:
       description: Adds the shamir 'Audere' to Metallurgy. Gain Haste with low durability tools.
       recommended: []

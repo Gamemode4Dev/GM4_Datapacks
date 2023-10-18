@@ -12,6 +12,11 @@ meta:
   gm4:
     versioning:
       schedule_loops: [main]
+    model_data:
+      - item: player_head
+        template: generated
+        reference: item/helious_band
+        textures: gm4_metallurgy:item/band/aluminium_band
     website:
       description: Perfect for UHCs, this module forces you to balance protection with speed.
       recommended: []

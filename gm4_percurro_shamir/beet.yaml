@@ -13,6 +13,11 @@ meta:
     versioning:
       required:
         - gm4_metallurgy: 1.2.0
+    model_data:
+      - item: player_head
+        template: generated
+        reference: item/percurro_band
+        textures: gm4_metallurgy:item/band/curies_bismium_band
     website:
       description: Adds the 'Percurro' Shamir to Metallurgy! Weapons with Percurro let you teleport past your enemies in the blink of an eye!
       recommended: []

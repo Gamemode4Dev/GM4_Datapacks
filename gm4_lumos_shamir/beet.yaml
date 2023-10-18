@@ -14,6 +14,11 @@ meta:
       required:
         - gm4_metallurgy: 1.2.0
       schedule_loops: [main]
+    model_data:
+      - item: player_head
+        template: generated
+        reference: item/lumos_band
+        textures: gm4_metallurgy:item/band/curies_bismium_band
     website:
       description: Adds the shamir 'Lumos' to Metallurgy. It places torches when it is dark.
       recommended: []

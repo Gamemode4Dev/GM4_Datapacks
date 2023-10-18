@@ -5,6 +5,9 @@ version: 1.4.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_lore
@@ -50,3 +53,38 @@ meta:
         - Memo
       Icon Design:
         - DuckJr
+    model_data:
+      - item: player_head
+        template: generated
+        broadcast:
+          - textures: item/band/aluminium_band
+            broadcast:
+              - reference: item/band/defuse_band
+              - reference: item/band/moneo_band
+          - textures: item/band/barimium_band
+            broadcast:
+              - reference: item/band/gemini_band
+              - reference: item/band/musical_band
+          - textures: item/band/barium_band
+            broadcast:
+              - reference: item/band/arborenda_band
+              - reference: item/band/sensus_band
+          - textures: item/band/bismuth_band
+            broadcast:
+              - reference: item/band/forterra_band
+              - reference: item/band/hypexperia_band
+          - textures: item/band/curies_bismium_band
+            broadcast:
+              - reference: item/band/spiraculum_band
+              - reference: item/band/tinker_band
+          - textures: item/band/thorium_band
+            broadcast:
+              - reference: item/band/vibro_band
+              - reference: item/band/ender_bolt_band
+          - textures: item/band/mundane_band
+            reference: item/band/mundane_band
+          - reference: item/lump/baryte_lump
+          - reference: item/lump/bauxite_lump
+          - reference: item/lump/bismutite_lump
+          - reference: item/lump/thorianite_lump
+          

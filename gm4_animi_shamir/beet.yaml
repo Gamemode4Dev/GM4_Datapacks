@@ -14,6 +14,11 @@ meta:
       required:
         - gm4_metallurgy: 1.2.0
       schedule_loops: [main]
+    model_data:
+      - item: player_head
+        template: generated
+        reference: item/animi_band
+        textures: gm4_metallurgy:item/band/curies_bismium_band
     website:
       description: Adds the Animi Shamir to Metallurgy. Items with Animi will respawn with you when you die!
       recommended: []

@@ -16,6 +16,11 @@ meta:
       schedule_loops:
         - main
         - 4_tick
+    model_data:
+      - item: player_head
+        template: generated
+        reference: item/fulcio_band
+        textures: gm4_metallurgy:item/band/barimium_band
     website:
       description: Adds the shamir 'Fulcio' to Metallurgy. It allows you to place blocks in mid-air! This also enables you to choose the orientation of blocks like logs without needing a supporting block.
       recommended: []

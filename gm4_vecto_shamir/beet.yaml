@@ -14,6 +14,11 @@ meta:
       required:
         - gm4_metallurgy: 1.2.0
       schedule_loops: [main]
+    model_data:
+      - item: player_head
+        template: generated
+        reference: item/vecto_band
+        textures: gm4_metallurgy:item/band/bismuth_band
     website:
       description: Adds the 'Vecto' Shamir to Metallury. Summon a Boat or Minecart out of thin air when in need, no more wasting an inventory slot!
       recommended: []

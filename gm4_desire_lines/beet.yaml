@@ -12,6 +12,11 @@ meta:
   gm4:
     versioning:
       schedule_loops: [tick]
+    model_data:
+      - item: player_head
+        template: generated
+        reference: item/celaro_band
+        textures: gm4_metallurgy:item/band/aluminium_band
     website:
       description: Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!
       recommended:
