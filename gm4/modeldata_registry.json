@@ -579,10 +579,12 @@
       "gm4_teleportation_anchors:item/teleportation_anchor": 24,
       "gm4_teleportation_anchors:item/teleportation_jammer": 25,
       "gm4_block_compressors:block/block_compressor_full": 26,
-      "gm4_tinkering_compressors:block/tinkering_compressor_full": 27,
+      "gm4_relocators:item/relocator_empty": 27,
       "gm4_ender_hoppers:block/ender_hopper_side": 28,
       "gm4_ender_hoppers:block/ender_hopper_minecart": 29,
       "gm4_smelteries:item/smeltery": 30,
+      "gm4_tinkering_compressors:block/tinkering_compressor_full": 31,
+      "gm4_relocators:item/relocator_full": 61,
       "gm4_forming_press:item/forming_press": 129,
       "gm4_disassemblers:item/disassembler": 135
     },
