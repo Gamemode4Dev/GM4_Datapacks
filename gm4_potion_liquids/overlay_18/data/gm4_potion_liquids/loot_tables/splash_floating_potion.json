@@ -1,0 +1,28 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "splash_potion",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Potion:\"potion_liquids:floating\",CustomPotionEffects:[{Id:25,Amplifier:2b,Duration:900}],CustomPotionColor:13631487}"
+                        },
+                        {
+                            "function": "set_name",
+                            "name": {
+                                "translate": "item.gm4.splash_floating_potion",
+                                "fallback": "Splash Potion of Floating",
+                                "italic": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
