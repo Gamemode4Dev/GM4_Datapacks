@@ -5,7 +5,11 @@ version: 1.3.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
+  - gm4_trapped_signs.trapped_sign_model
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_custom_crafters
   - gm4.plugins.include.lib_machines
@@ -17,6 +21,53 @@ meta:
         - lib_custom_crafters: 3.0.0
         - lib_machines: 1.1.0
       sehcdule_loops: [main]
+    model_data:
+      - template: trapped_signs:sign_overlay
+        broadcast:
+          - item: acacia_sign
+            reference: item/trapped_acacia_sign
+          - item: acacia_sign
+            reference: item/secret_trapped_acacia_sign
+          - item: bamboo_sign
+            reference: item/trapped_bamboo_sign
+          - item: bamboo_sign
+            reference: item/secret_trapped_bamboo_sign
+          - item: birch_sign
+            reference: item/trapped_birch_sign
+          - item: birch_sign
+            reference: item/secret_trapped_birch_sign
+          - item: cherry_sign
+            reference: item/trapped_cherry_sign
+          - item: cherry_sign
+            reference: item/secret_trapped_cherry_sign
+          - item: crimson_sign
+            reference: item/trapped_crimson_sign
+          - item: crimson_sign
+            reference: item/secret_trapped_crimson_sign
+          - item: dark_oak_sign
+            reference: item/trapped_dark_oak_sign
+          - item: dark_oak_sign
+            reference: item/secret_trapped_dark_oak_sign
+          - item: jungle_sign
+            reference: item/trapped_jungle_sign
+          - item: jungle_sign
+            reference: item/secret_trapped_jungle_sign
+          - item: mangrove_sign
+            reference: item/trapped_mangrove_sign
+          - item: mangrove_sign
+            reference: item/secret_trapped_mangrove_sign
+          - item: oak_sign
+            reference: item/trapped_oak_sign
+          - item: oak_sign
+            reference: item/secret_trapped_oak_sign
+          - item: spruce_sign
+            reference: item/trapped_spruce_sign
+          - item: spruce_sign
+            reference: item/secret_trapped_spruce_sign
+          - item: warped_sign
+            reference: item/trapped_warped_sign
+          - item: warped_sign
+            reference: item/secret_trapped_warped_sign
     website:
       description: Craft trapped signs in a Custom Crafter which, when right-clicked, give off a redstone signal.
       recommended: []

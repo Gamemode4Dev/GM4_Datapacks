@@ -35,7 +35,7 @@ meta:
         template: generated
       - item: potion
         reference: item/wormhole_in_a_bottle
-        tempalte: generated_overlay
+        template: generated_overlay
       - item: player_head
         template: generated
         broadcast:
