@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_zauber_cauldrons:{item:\"splash_potion\",type:\"instant_health\",bottle:{multi_use:0b}},HideFlags:32,CustomPotionColor:16262179,CustomPotionEffects:[{Id:6,Amplifier:3,Duration:1},{Id:9,Amplifier:0,Duration:160}]}"
+                            "tag": "{gm4_zauber_cauldrons:{item:\"splash_potion\",type:\"instant_health\",bottle:{multi_use:0b}},HideFlags:32,CustomPotionColor:16262179,custom_potion_effects:[{id:'minecraft:instant_health',amplifier:3,duration:1},{id:'minecraft:nausea',amplifier:0,duration:160}]}"
                         },
                         {
                             "function": "minecraft:set_name",

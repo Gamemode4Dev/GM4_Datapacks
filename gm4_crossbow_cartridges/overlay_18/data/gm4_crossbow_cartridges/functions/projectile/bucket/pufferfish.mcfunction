@@ -4,7 +4,7 @@
 # run from projectile/bucket
 
 # replace arrow with pufferfish and copy data
-summon minecraft:pufferfish ~ ~ ~ {FromBucket:1b,Tags:["gm4_cb_projectile"],ActiveEffects:[{Id:10,Amplifier:10,Duration:200,ShowParticles:0b}]}
+summon minecraft:pufferfish ~ ~ ~ {FromBucket:1b,Tags:["gm4_cb_projectile"],active_effects:[{id:'minecraft:regeneration',amplifier:10,duration:200,show_particles:0b}]}
 
 execute as @e[type=minecraft:pufferfish,tag=gm4_cb_projectile,limit=1,distance=..1] run function gm4_crossbow_cartridges:projectile/arrow_motion
 
