@@ -5,7 +5,8 @@
       "gm4_trapped_signs:item/secret_trapped_acacia_sign": 2
     },
     "apple": {
-      "gm4_apple_trees:block/apple_unripe": 0
+      "gm4_apple_trees:block/apple_unripe": 0,
+      "gm4_metallurgy:test_reference": 150
     },
     "bamboo_sign": {
       "gm4_trapped_signs:item/trapped_bamboo_sign": 0,
@@ -141,7 +142,10 @@
       "gm4_end_fishing:item/ores/diamond_11": 2,
       "gm4_end_fishing:item/ores/diamond_12": 3,
       "gm4_end_fishing:item/ores/diamond_13": 4,
-      "gm4_end_fishing:item/ores/diamond_14": 5
+      "gm4_end_fishing:item/ores/diamond_14": 5,
+      "gm4_apple_trees:test_model_2": 7,
+      "gm4_apple_trees:test_model_3": 8,
+      "gm4_metallurgy:test_reference": 150
     },
     "diamond_axe": {
       "gm4_metallurgy:item/shamir/aluminium/diamond_axe": 100,
@@ -296,7 +300,10 @@
       "gm4_end_fishing:item/ores/emerald_11": 3,
       "gm4_end_fishing:item/ores/emerald_12": 4,
       "gm4_end_fishing:item/ores/emerald_13": 5,
-      "gm4_end_fishing:item/ores/emerald_14": 6
+      "gm4_end_fishing:item/ores/emerald_14": 6,
+      "gm4_apple_trees:test_model_2": 7,
+      "gm4_apple_trees:test_model_3": 8,
+      "gm4_metallurgy:test_reference": 150
     },
     "enchanting_table": {
       "gm4_enchantment_extractors:block/enchantment_extractor": 0,

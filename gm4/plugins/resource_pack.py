@@ -3,6 +3,8 @@ import os
 import sys
 from functools import cached_property
 from typing import Any, Callable, Optional, Literal, ClassVar, Type
+from itertools import cycle
+from copy import deepcopy
 import numpy as np
 
 from beet import (
@@ -33,16 +35,26 @@ class ModelData(BaseModel):
     """A complete config for a single model"""
     item: ListOption[str]
     reference: str
-    model: str|list[dict[str,Any]] = "" # defaults to same value as 'reference'
+    model: MapOption[str|list[dict[str,Any]]] = "" # defaults to same value as 'reference'      #type:ignore ; the validator handles the default value
     template: str = "custom"
     transforms: Optional[list['TransformOptions']]
-    textures: MapOption[str]# = Field(default=MapOption(__root__=[])) # defaults to same value as reference
+    textures: MapOption[str] = [] # defaults to same value as reference         #type:ignore ; the validator handles the default value
 
     @validator('model', pre=True, always=True)
-    def default_model(cls, model: str, values: dict[str,Any]) -> str:
-        if not model and "reference" in values:
-            return values["reference"]
-        return model
+    def default_model(cls, model: Any, values: dict[str,Any]) -> dict[str, str|list[dict[str,Any]]]:
+        if isinstance(model, str):
+            model = [model] # so we can check len for number of items
+        if not model and "reference" in values: # no reference set, default to reference string
+            return {item: values["reference"] for item in values['item'].entries()}
+        if len(i:=values['item'].entries()) == 1 and isinstance(model, list) and isinstance(model[0], dict): # only one item id, predicate model allowed to be single list
+            return {i[0]: model}
+        if len(model)!=len(values["item"].entries()) and len(model)>1: # a single model name may be broadcast to all items, but otherwise lengths match       # type: ignore ; 'model' inherits list[Unknown] from previous isinstance check
+            raise ValidationError([ErrorWrapper(ValueError("length of 'item' and 'model' do not match"), loc=())], model=ModelData)
+        if isinstance(model, list): # apply item->model map data
+            return dict(zip(values['item'].entries(), cycle(model))) # type: ignore
+        if isinstance(model, dict) and set(model.keys())!=set(values['item'].entries()): # make sure the map keys match the item types       # type: ignore ; model is Unknown type
+            raise ValidationError([ErrorWrapper(ValueError("dict keys do not match values in 'item'"), loc=())], model=ModelData)
+        return model # model is already a mapped dict, of the same length as item      # type: ignore
     
     @validator('template')
     def enforce_custom_with_override_predicates(cls, template: str, values: dict[str,Any]) -> str:
@@ -83,20 +95,27 @@ class ModelData(BaseModel):
         """Returns a new ModelData with the given given namespace applied to any fields"""
         ret_dict = self.dict()
         ret_dict["reference"] = add_namespace(self.reference, namespace)
-        if isinstance(self.model, str):
-            ret_dict["model"] = add_namespace(self.model, namespace)
+        ret_model = deepcopy(self.model.entries())
+        for i, model_name in enumerate(ret_model):
+            if isinstance(model_name, str):
+                ret_model[i] = add_namespace(model_name, namespace) # accessed by index to overwrite original
+            else: # isinstance(model_name, list[dict]), add namespace to buried model parameter
+                for predicated_model in model_name:
+                    if 'model' in predicated_model:
+                        predicated_model['model'] = add_namespace(predicated_model['model'], namespace)
+        ret_dict["model"] = ret_model
         if self.textures:
             if isinstance(self.textures.__root__, list):
-                ret_dict["textures"] = MapOption(__root__=[add_namespace(t, namespace) for t in self.textures.entries()])
+                ret_dict["textures"] = [add_namespace(t, namespace) for t in self.textures.entries()]
             else: # isinstance(self.textures.__root__, dict):
-                ret_dict["textures"] = MapOption(__root__={k: add_namespace(v, namespace) for k, v in self.textures.items()})
+                ret_dict["textures"] = {k: add_namespace(v, namespace) for k, v in self.textures.items()}
         return ModelData.parse_obj(ret_dict)
     
 class NestedModelData(BaseModel):
     """A potentially incomplete config, allowing for nested inheritance of fields"""
     item: Optional[ListOption[str]]
     reference: Optional[str]
-    model: Optional[str|list[dict[str,Any]]] # defalts to reference
+    model: Optional[Any] # defalts to reference, expects type of 'Optional[MapOption[str|list[dict[str,Any]]]]', but Pydantic casting caused unknown issues
     template: Optional[str] = "custom"
     transforms: Optional[list['TransformOptions']]
     textures: Optional[MapOption[str]]
@@ -289,23 +308,24 @@ class GM4ResourcePack():
             custom_model_data = dict(filter(filter_func, self.registry["items"][item_id].items()))
             
             for model in models:
+                m = model.model[item_id] # model string, or predicate settings, for this particular item id
                 # setup overrides to add CMD to
-                if isinstance(model.model, list): # manual predicate merging specified
-                    merge_overrides = [o|{"user_defined": True} for o in model.model] # FIXME check branch unnecessary
+                if isinstance(m, list): # manual predicate merging specified
+                    merge_overrides = [o|{"user_defined": True} for o in m]
                 else: 
                     merge_overrides = unchanged_vanilla_overrides # get vanilla overrides
                 if len(merge_overrides) == 0:
                     merge_overrides.append({}) # add an empty predicate to add CMD onto
 
                 for pred in merge_overrides:
-                    if not pred.get("model") and not isinstance(model.model, str):
+                    if not pred.get("model") and not isinstance(m, str):
                         self.logger.warn(f"Manually specified model predicate has no 'model' field, and is malformed:\n\t{pred}")
                         continue # TODO this is an exception?
                     vanilla_overrides.append({
                         "predicate": {
                             "custom_model_data": CUSTOM_MODEL_PREFIX+custom_model_data[model.reference]
                         } | pred.get("predicate", {}),
-                        "model": pred["model"] if pred.get("user_defined") else model.model # type:ignore , user-defined model predicates use their own model reference. model.model is a string in all other cases
+                        "model": pred["model"] if pred.get("user_defined") else m # type:ignore , user-defined model predicates use their own model reference. m is a string in all other cases
                     })
             self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(vanilla_model) # TODO skipped-values spacing, on RP output after merge :)
 
@@ -367,8 +387,9 @@ class GM4ResourcePack():
             
             # generate model and mount to the pack
             m = template.generate_model(model, self.ctx.assets.models)
-            if m and isinstance(model.model, str): # pydantic validation ensures type match
-                self.ctx.assets.models[model.model] = m
+            if m and isinstance(l:=model.model.entries()[0], str): # pydantic validation ensures type match
+                self.ctx.assets.models[l] = m
+                # FIXME this only works for single-item model generation, maybe add a warn for trying to template multiple complex models?
     
 #== Default Templates and Transforms ==#
 class BlankTemplate(TemplateBase):
@@ -461,7 +482,7 @@ class ItemDisplayModel(TransformOptions):
     translation: list[float] = Field(default=[0,0,0], max_items=3, min_items=3)
     rotation: list[float] = Field(default=[0.,0.,0.], max_items=3, min_items=3) # euler angle form of total rotation. NOTE only accounts for simple angles (90,180 ect...)
     display: Literal["none", "thirdperson_lefthand", "thirdperson_righthand", "firstperson_lefthand", "firstperson_righthand", "head", "gui", "ground", "fixed"] = "head"
-    name: ClassVar[Literal["item_display"]] = "item_display"
+    name: ClassVar[str] = "item_display"
 
     def apply_transform(self, model: Model):
         model.data.setdefault("display", {})[self.display] = {

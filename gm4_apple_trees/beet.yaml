@@ -48,6 +48,31 @@ meta:
         template: generated
       - item: elytra
         reference: test_model_1
+        model:
+          - predicate: {broken: 1}
+            model: test_model_broken
+          - predicate: {broken: 2}
+            model: test_model_broken2
+      - item:
+          - diamond
+          - emerald
+        reference: test_model_2
+        model:
+          - diamond_model
+          - [
+            {predicate: {a: 1}, model: emerald_1},
+            {predicate: {a: 2}, model: emerald_2}
+          ]
+      - item:
+          - diamond
+          - emerald
+        reference: test_model_3
+        model:
+          diamond: diamond_model2
+          emerald: [
+            {predicate: {a: 1}, model: emerald_1},
+            {predicate: {a: 2}, model: emerald_2}
+          ]
   modrinth:
     project_id: Afacz65w
   smithed:
