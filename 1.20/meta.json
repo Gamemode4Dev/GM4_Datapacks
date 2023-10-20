@@ -1,5 +1,5 @@
 {
-  "last_commit": "5f0b408eeea92ab003a7444a05e739e137c735c0",
+  "last_commit": "b99d3ac2f838784bc521a2b15d513341479d2bfe",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -122,8 +122,8 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
-      "smithed_link": null,
+      "modrinth_id": "WkDoUESw",
+      "smithed_link": "gm4_auto_crafting",
       "pmc_link": null
     },
     {
