@@ -12,11 +12,11 @@ Excited for the new 1.21 crafter block? Want to start making the cake factory of
 ### Creation
 Craft the auto-crafter in a [Custom Crafter](https://wiki.gm4.co/wiki/Custom_Crafters)
 
-<img src="images/crafting_recipe.png" alt="Auto Crafter Recipe" width="150"/> <!--$localAssetToUrl-->
+<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_auto_crafting/images/crafting_recipe.png" alt="Auto Crafter Recipe" width="150"/> 
 
 Build the Multiblock Structure
 
-<img src="images/setting-up-a-crafter.webp" alt="Auto Crafter Recipe" width="200"/> <!--$localAssetToUrl-->
+<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_auto_crafting/images/setting-up-a-crafter.webp" alt="Auto Crafter Recipe" width="200"/> 
 
 ### Usage
 - Set the shape of your recipe inside the Auto Crafter, using any items
