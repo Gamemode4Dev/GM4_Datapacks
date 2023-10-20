@@ -9,7 +9,7 @@ resource_pack:
   load: .
 
 pipeline:
-  - gm4_metallurgy.generate_tool_models
+  - generate_tool_models
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_lore
   - gm4.plugins.include.lib_player_heads
