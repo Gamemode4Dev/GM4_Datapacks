@@ -1,5 +1,5 @@
 {
-  "last_commit": "123d8aa29f1d701cb703be2aaf0486e293c43c25",
+  "last_commit": "bb4cde7deafb29da363fc73671c75e683a611e66",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -412,7 +412,7 @@
     {
       "id": "gm4_chairs",
       "name": "Chairs",
-      "version": "1.2.5",
+      "version": "1.3.0",
       "video_link": "https://www.youtube.com/watch?v=7KbBw1hEKdY",
       "wiki_link": "https://wiki.gm4.co/wiki/Chairs",
       "credits": {
@@ -441,7 +441,7 @@
     {
       "id": "gm4_combat_expanded",
       "name": "Combat Expanded",
-      "version": "1.3.1",
+      "version": "1.4.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Combat_Expanded",
       "credits": {
@@ -524,7 +524,7 @@
     {
       "id": "gm4_crossbow_cartridges",
       "name": "Crossbow Cartridges",
-      "version": "1.4.5",
+      "version": "1.5.0",
       "video_link": "https://www.youtube.com/watch?v=XJiGvX7l-pI",
       "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
       "credits": {
@@ -660,7 +660,7 @@
     {
       "id": "gm4_display_frames",
       "name": "Display Frames",
-      "version": "1.2.4",
+      "version": "1.3.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Display_Frames",
       "credits": {
@@ -739,7 +739,7 @@
     {
       "id": "gm4_dripleaf_launchers",
       "name": "Dripleaf Launchers",
-      "version": "1.0.2",
+      "version": "1.1.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Launchers",
       "credits": {
@@ -1170,7 +1170,7 @@
     {
       "id": "gm4_lightning_in_a_bottle",
       "name": "Lightning in a Bottle",
-      "version": "1.4.3",
+      "version": "1.5.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
       "credits": {
@@ -1235,7 +1235,7 @@
     {
       "id": "gm4_liquid_tanks",
       "name": "Liquid Tanks",
-      "version": "2.3.6",
+      "version": "2.4.0",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
       "credits": {
@@ -1418,7 +1418,7 @@
     {
       "id": "gm4_midnight_menaces",
       "name": "Midnight Menaces",
-      "version": "1.2.3",
+      "version": "1.3.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights/Midnight_Menaces",
       "credits": {
@@ -1445,7 +1445,7 @@
     {
       "id": "gm4_mob_curing",
       "name": "Mob Curing",
-      "version": "1.4.4",
+      "version": "1.5.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mob_Curing",
       "credits": {
@@ -1473,7 +1473,7 @@
     {
       "id": "gm4_mountaineering",
       "name": "Mountaineering",
-      "version": "1.0.3",
+      "version": "1.1.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mountaineering",
       "credits": {
@@ -1495,7 +1495,7 @@
     {
       "id": "gm4_mysterious_midnights",
       "name": "Mysterious Midnights",
-      "version": "1.3.3",
+      "version": "1.4.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights",
       "credits": {
@@ -1554,7 +1554,7 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.4.7",
+      "version": "1.5.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -1749,7 +1749,7 @@
     {
       "id": "gm4_potion_liquids",
       "name": "Potion Liquids",
-      "version": "1.4.5",
+      "version": "1.5.0",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids",
       "credits": {
@@ -1782,7 +1782,7 @@
     {
       "id": "gm4_potion_swords",
       "name": "Potion Swords",
-      "version": "1.3.4",
+      "version": "1.4.0",
       "video_link": "https://www.youtube.com/watch?v=9xI3CQ1z5cg",
       "wiki_link": "https://wiki.gm4.co/wiki/Potion_Swords",
       "credits": {
@@ -2196,7 +2196,7 @@
     {
       "id": "gm4_teleportation_anchors",
       "name": "Teleportation Anchors",
-      "version": "1.2.7",
+      "version": "1.3.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Teleportation_Anchors",
       "credits": {
@@ -2262,7 +2262,7 @@
     {
       "id": "gm4_tnt_landmines",
       "name": "TNT Landmines",
-      "version": "1.4.5",
+      "version": "1.5.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/TNT_Landmines",
       "credits": {
@@ -2579,7 +2579,7 @@
     {
       "id": "gm4_zauber_cauldrons",
       "name": "Zauber Cauldrons",
-      "version": "1.8.5",
+      "version": "1.9.0",
       "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
       "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
       "credits": {
@@ -2614,7 +2614,7 @@
     {
       "id": "gm4_zauber_liquids",
       "name": "Zauber Liquids",
-      "version": "1.4.4",
+      "version": "1.5.0",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids",
       "credits": {
@@ -2681,7 +2681,7 @@
     "lib_brewing": {
       "id": "gm4_brewing",
       "name": "Gamemode 4 Brewing",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "video_link": "",
       "wiki_link": "",
       "credits": {
