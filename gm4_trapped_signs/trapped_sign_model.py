@@ -1,7 +1,7 @@
 from beet import Context, Model, NamespaceProxy
-from gm4.plugins.resource_pack import ModelData, TemplateBase
+from gm4.plugins.resource_pack import ModelData, TemplateOptions
 
-class TrappedSignTemplate(TemplateBase):
+class TrappedSignTemplate(TemplateOptions):
     """Generates the models for trapped signs, putting a shared overlay atop the vanilla sign texture"""
     name = "trapped_signs:sign_overlay"
 

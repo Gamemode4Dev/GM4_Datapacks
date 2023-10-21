@@ -36,7 +36,7 @@ class ModelData(BaseModel):
     item: ListOption[str]
     reference: str
     model: MapOption[str|list[dict[str,Any]]] = "" # defaults to same value as 'reference'      #type:ignore ; the validator handles the default value
-    template: str = "custom"
+    template: 'str|TemplateOptions' = "custom"
     transforms: Optional[list['TransformOptions']]
     textures: MapOption[str] = [] # defaults to same value as reference         #type:ignore ; the validator handles the default value
 
@@ -57,17 +57,24 @@ class ModelData(BaseModel):
         return model # model is already a mapped dict, of the same length as item      # type: ignore
     
     @validator('template')
-    def enforce_custom_with_override_predicates(cls, template: str, values: dict[str,Any]) -> str:
+    def enforce_custom_with_override_predicates(cls, template: 'str|TemplateOptions', values: dict[str,Any]) -> Type['TemplateOptions']:
         if isinstance(values.get('model'), list) and template != "custom":
             raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
-        return template
+            # FIXME is this true anymore? I think this check is also wrong now
+        # find and apply proper submodel
+        name = template.name if isinstance(template, TemplateOptions) else template
+        try:
+            submodel = {m.name: m for m in TemplateOptions.__subclasses__()}[name]
+            return submodel.parse_obj(template.dict() if isinstance(template, TemplateOptions) else {"name": template}) # TODO error checking here? Pass the Validation Errors upward?
+        except KeyError:
+            raise ValidationError([ErrorWrapper(ValueError(f"the specified template '{name}' could not be found"), loc=())], model=ModelData)
     
     @validator('transforms', each_item=True)
     def apply_transform_submodel(cls, transform: 'TransformOptions', values: dict[str,Any]) -> None|Type['TransformOptions']:
         # find and apply proper submodel
         submodel = {m.name: m for m in TransformOptions.__subclasses__()}.get(transform.name)
         if submodel:
-            return submodel.parse_obj(transform.dict())
+            return submodel.parse_obj(transform.dict()) # TODO error checking here? Pass the Validation Errors upward?
         return None
     
     @validator('textures', pre=True, always=True)
@@ -116,7 +123,7 @@ class NestedModelData(BaseModel):
     item: Optional[ListOption[str]]
     reference: Optional[str]
     model: Optional[Any] # defalts to reference, expects type of 'Optional[MapOption[str|list[dict[str,Any]]]]', but Pydantic casting caused unknown issues
-    template: Optional[str] = "custom"
+    template: Optional["str|TemplateOptions"] = "custom"
     transforms: Optional[list['TransformOptions']]
     textures: Optional[MapOption[str]]
     broadcast: Optional[list['NestedModelData']] = []
@@ -171,11 +178,17 @@ class ModelDataOptions(PluginOptions, extra=Extra.ignore):
         return FlatModelDataOptions(model_data=ret)
 
 #== Configurable Base Classes ==#
-class TemplateBase():
-    """A base class to extend for model templates"""
-    default_transforms: list['TransformOptions'] = []
-    name: str
-    texture_map: list[str]|None = None
+class TemplateOptions(BaseModel, extra=Extra.allow):
+    """A pydantic model to extend for configured model templates, which generate model files for common"""
+    default_transforms: ClassVar[list['TransformOptions']] = []
+    name: ClassVar[str]
+    texture_map: ClassVar[list[str]|None] = None
+
+    def __init_subclass__(cls) -> None:
+        cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
+
+    def dict(self, **kwargs: Any) -> dict[str,Any]:
+        return super().dict(**kwargs) | {"name": self.name} # ensure name class-var is preserved in dict-casting
 
     @classmethod
     def generate_model(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> Model|None:
@@ -198,7 +211,7 @@ class TemplateBase():
         raise NotImplementedError()
 
 class TransformOptions(BaseModel, extra=Extra.allow):
-    """A pydantic model to extend for configured model transformers"""
+    """A pydantic model to extend for configured model transformers, which add model offset/scale ect.. to model files"""
     name: ClassVar[str]
     def __init_subclass__(cls) -> None:
         cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
@@ -379,20 +392,14 @@ class GM4ResourcePack():
             #     if tex not in self.ctx.assets.textures:
             #         self.logger.warning(f"Referenced texture '{tex}' does not exist") # TODO logger and format as MC messaage
             
-            # retrieve model generator function
-            try:
-                template = next((f for f in TemplateBase.__subclasses__() if f.name == model.template))
-            except StopIteration:
-                raise KeyError("template not found") # TODO this error properly
-            
             # generate model and mount to the pack
-            m = template.generate_model(model, self.ctx.assets.models)
+            m = model.template.generate_model(model, self.ctx.assets.models)
             if m and isinstance(l:=model.model.entries()[0], str): # pydantic validation ensures type match
                 self.ctx.assets.models[l] = m
                 # FIXME this only works for single-item model generation, maybe add a warn for trying to template multiple complex models?
     
 #== Default Templates and Transforms ==#
-class BlankTemplate(TemplateBase):
+class BlankTemplate(TemplateOptions):
     name = "custom"
 
     @staticmethod
@@ -408,7 +415,7 @@ class BlankTemplate(TemplateBase):
                 parent_logger.warning(f"Custom specified model {config.model} does not exist, but was configured to recieve transforms.") # TODO logger term
         return None
 
-class GeneratedTemplate(TemplateBase):
+class GeneratedTemplate(TemplateOptions):
     name = "generated"
 
     @staticmethod
@@ -420,7 +427,7 @@ class GeneratedTemplate(TemplateBase):
             }
         })
     
-class GeneratedOverlayTemplate(TemplateBase):
+class GeneratedOverlayTemplate(TemplateOptions):
     name = "generated_overlay"
 
     @staticmethod
@@ -434,7 +441,7 @@ class GeneratedOverlayTemplate(TemplateBase):
             }
         })
 
-class HandheldTemplate(TemplateBase):
+class HandheldTemplate(TemplateOptions):
     name = "handheld"
 
     @staticmethod
@@ -446,7 +453,7 @@ class HandheldTemplate(TemplateBase):
             }
         })
 
-class VanillaTemplate(TemplateBase):
+class VanillaTemplate(TemplateOptions):
     name = "vanilla"
 
     @staticmethod
@@ -457,7 +464,7 @@ class VanillaTemplate(TemplateBase):
         })
     # TODO this should also prevent the texture warnings? Maybe that should be a method of these templates?
 
-class BlockTemplate(TemplateBase):
+class BlockTemplate(TemplateOptions):
     name = "block"
     texture_map = ["top", "bottom", "front", "side"]
 
@@ -492,7 +499,7 @@ class ItemDisplayModel(TransformOptions):
         }
 
 #== Convience Template/Transform Presets ==#
-class LegacyMachineArmorStand(BlockTemplate, TemplateBase):
+class LegacyMachineArmorStand(BlockTemplate, TemplateOptions):
     """An 'block' template preset with the 'item_display' transformer for the legacy small-armor-stand-head-slot of custom crafters"""
     default_transforms = [
         ItemDisplayModel(

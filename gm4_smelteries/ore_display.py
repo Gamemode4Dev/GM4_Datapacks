@@ -1,7 +1,7 @@
 from beet import NamespaceProxy, Model, Context
-from gm4.plugins.resource_pack import TemplateBase, ModelData, ItemDisplayModel
+from gm4.plugins.resource_pack import TemplateOptions, ModelData, ItemDisplayModel
 
-class OreDisplayTemplate(TemplateBase):
+class OreDisplayTemplate(TemplateOptions):
     """setup a model template for the smeltable ores displayed by smeltries"""
     name = "smelteries:ore_display"
     texture_map = ["top", "side"]

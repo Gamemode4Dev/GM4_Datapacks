@@ -1,7 +1,7 @@
 from beet import Context, Model, NamespaceProxy
-from gm4.plugins.resource_pack import ModelData, TemplateBase, ItemDisplayModel
+from gm4.plugins.resource_pack import ModelData, TemplateOptions, ItemDisplayModel
 
-class LandmineTempalte(TemplateBase):
+class LandmineTempalte(TemplateOptions):
     name = "tnt_landmines:landmine"
     texture_map = []
 
