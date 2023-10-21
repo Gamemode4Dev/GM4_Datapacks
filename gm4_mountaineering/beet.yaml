@@ -1,6 +1,6 @@
 id: gm4_mountaineering
 name: Mountaineering
-version: 1.0.X
+version: 1.1.X
 
 data_pack:
   load: .
