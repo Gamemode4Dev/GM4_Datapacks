@@ -1,6 +1,6 @@
 import subprocess
 import warnings
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from typing import Any
 from functools import total_ordering
 
@@ -56,6 +56,11 @@ class Version():
 						return True
 			return False
 		raise TypeError
+	
+	def replace(self, **changes: Any):
+		params = asdict(self) | changes
+		params = {k:(v if v is not None else 'X') for k,v in params.items()}
+		return Version(f"{params['major']}.{params['minor']}.{params['patch']}")
 	
 def nested_get(d: dict[str, Any], key: str) -> list[Any]:
 	"""Recursively traverses a string-keyed dict (like minecraft json files) for the specified key, returning all that exist

@@ -153,25 +153,32 @@ def update_patch(ctx: Context):
 		for id in packs:
 			pack = packs[id]
 			released = released_modules.get(id, None)
+			last_ver = Version(released.version) if released else Version("0.0.0")
+			version = Version(pack.version)
 
 			publish_date = released.publish_date if released else None
 			pack.publish_date = publish_date or datetime.datetime.now().date().isoformat()
 
-			deps = _traverse_includes(id)
-			if packs is manifest_cache.modules:
-				deps |= {"base"} # scan the base directory if this is a module
-			deps_dirs = [element for sublist in [[f"{d}/data", f"{d}/overlay_*/data", f"{d}/*py"] for d in deps] for element in sublist]
+			if version != last_ver.replace(patch=None): # check for forced content-less version increment
+				diff = True
 
-			# add watches to skins this module uses from other modules. NOTE this could be done in a more extendable way in the future, rather than "hardcoded"
-			skin_dep_dirs: list[str] = []
-			for skin_ref in skin_cache["nonnative_references"].get(id, []):
-				d = skin_cache["skins"][skin_ref]["parent_module"]
-				ns, path = skin_ref.split(":")	
-				skin_dep_dirs.append(f"{d}/data/{ns}/skins/{path}.png")
-			
-			watch_dirs = deps_dirs+skin_dep_dirs
+			else: # otherwise check for file differences
+				deps = _traverse_includes(id)
+				if packs is manifest_cache.modules:
+					deps |= {"base"} # scan the base directory if this is a module
+				deps_dirs = [element for sublist in [[f"{d}/data", f"{d}/overlay_*/data", f"{d}/*py"] for d in deps] for element in sublist]
 
-			diff = run(["git", "diff", last_commit, "--shortstat", "--", f"{id}/data", f"{id}/overlay_*/data", f"{id}/*.py"] + watch_dirs) if last_commit else True
+				# add watches to skins this module uses from other modules. NOTE this could be done in a more extendable way in the future, rather than "hardcoded"
+				skin_dep_dirs: list[str] = []
+				for skin_ref in skin_cache["nonnative_references"].get(id, []):
+					d = skin_cache["skins"][skin_ref]["parent_module"]
+					ns, path = skin_ref.split(":")	
+					skin_dep_dirs.append(f"{d}/data/{ns}/skins/{path}.png")
+				
+				watch_dirs = deps_dirs+skin_dep_dirs
+
+				diff = run(["git", "diff", last_commit, "--shortstat", "--", f"{id}/data", f"{id}/overlay_*", f"{id}/*.py"] + watch_dirs) if last_commit else True
+					# NOTE it may be needed later to only search overlay_*/data, but that currently caused some issues with GH action
 
 			if not diff and released:
 				# No changes were made, keep the same patch version
@@ -181,12 +188,10 @@ def update_patch(ctx: Context):
 				pack.version = pack.version.replace("X", "0")
 				logger.debug(f"First release of {id}")
 			else:
-				# Changes were made, bump the patch
-				version = Version(pack.version)
-				last_ver = Version(released.version)
-				
+				# Changes were made, bump the patch			
 				if version.minor > last_ver.minor or version.major > last_ver.major: # type: ignore
 					version.patch = 0
+					logger.info(f"Feature update for {id}, setting version to {version}")
 				else:
 					version.patch = last_ver.patch + 1 # type: ignore
 					logger.info(f"Updating {id} patch to {version.patch}")
