@@ -160,7 +160,7 @@ def update_patch(ctx: Context):
 			deps = _traverse_includes(id)
 			if packs is manifest_cache.modules:
 				deps |= {"base"} # scan the base directory if this is a module
-			deps_dirs = [element for sublist in [[f"{d}/data", f"{d}/*py"] for d in deps] for element in sublist]
+			deps_dirs = [element for sublist in [[f"{d}/data", f"{d}/overlay_*/data", f"{d}/*py"] for d in deps] for element in sublist]
 
 			# add watches to skins this module uses from other modules. NOTE this could be done in a more extendable way in the future, rather than "hardcoded"
 			skin_dep_dirs: list[str] = []
@@ -171,7 +171,7 @@ def update_patch(ctx: Context):
 			
 			watch_dirs = deps_dirs+skin_dep_dirs
 
-			diff = run(["git", "diff", last_commit, "--shortstat", "--", f"{id}/data", f"{id}/*.py"] + watch_dirs) if last_commit else True
+			diff = run(["git", "diff", last_commit, "--shortstat", "--", f"{id}/data", f"{id}/overlay_*/data", f"{id}/*.py"] + watch_dirs) if last_commit else True
 
 			if not diff and released:
 				# No changes were made, keep the same patch version
