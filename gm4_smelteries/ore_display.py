@@ -1,5 +1,5 @@
 from beet import NamespaceProxy, Model, Context
-from gm4.plugins.resource_pack import TemplateOptions, ModelData, ItemDisplayModel
+from gm4.plugins.resource_pack import TemplateOptions, ModelData, ItemDisplayModel, ensure_single_model_config
 
 class OreDisplayTemplate(TemplateOptions):
     """setup a model template for the smeltable ores displayed by smeltries"""
@@ -14,16 +14,18 @@ class OreDisplayTemplate(TemplateOptions):
         )
     ]
 
-    @staticmethod
-    def process(config: ModelData, models_container: NamespaceProxy[Model]):
+    @classmethod
+    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]):
+        model_name = ensure_single_model_config(cls.name, config)
         reference = config.reference.split('/')[-1]
-        return Model({
+        m = models_container[model_name] = Model({
             "parent": "gm4_smelteries:block/ore_display",
             "textures":{
                 "top": f"gm4_smelteries:block/ore_display/{reference}_top",
                 "side": f"gm4_smelteries:block/ore_display/{reference}_side",
             }
         })
+        return [m]
 
 def beet_default(ctx: Context):
     pass

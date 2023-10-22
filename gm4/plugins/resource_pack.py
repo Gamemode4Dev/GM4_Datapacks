@@ -24,7 +24,7 @@ from pydantic.error_wrappers import ErrorWrapper
 
 from gm4.utils import add_namespace, MapOption
 
-CUSTOM_MODEL_PREFIX = 3420000
+CUSTOM_MODEL_PREFIX = 3420000 # TODO this is configurable for public server stuff?
 
 parent_logger = logging.getLogger("gm4.resource_pack")
 
@@ -88,10 +88,6 @@ class ModelData(BaseModel):
         if empty_list and isinstance(v:=values.get("reference"), str):
             return MapOption(__root__=[v])
         return textures
-
-    # @validator('template')
-    # def template_is_registered(): # TODO is this better than runtime checking?
-    #     pass
 
     # howwever texture validation seems like a good idea to do here, unless that should not be an exception throwing validator
     # @validator("textures")
@@ -191,23 +187,21 @@ class TemplateOptions(BaseModel, extra=Extra.allow):
         return super().dict(**kwargs) | {"name": self.name} # ensure name class-var is preserved in dict-casting
 
     @classmethod
-    def generate_model(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> Model|None:
-        """Processes the template, transforms and returns the model object"""
+    def generate_model(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> None:
+        """Processes the template, and applies transforms"""
         if cls.texture_map and config.textures and isinstance(config.textures.__root__, list):
             config = ModelData(**config.dict() | {"textures": dict(zip(cls.texture_map, config.textures.entries()))})
-        output_model = cls.process(config, models_container)
-        if output_model:
+        for output_model in cls.process(config, models_container): # for each returned pointer, add transforms as needed
             if cls.default_transforms:
                 for transform in cls.default_transforms:
                     transform.apply_transform(output_model)
             if config.transforms:
                 for transform in config.transforms:
                     transform.apply_transform(output_model)
-        return output_model
 
-    @staticmethod
-    def process(config: ModelData, models_container: NamespaceProxy[Model]) -> Model|None:
-        """Overridden to create and return the model object"""
+    @classmethod
+    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+        """Overridden to create and mount the model object, and return pointers to them"""
         raise NotImplementedError()
 
 class TransformOptions(BaseModel, extra=Extra.allow):
@@ -393,84 +387,118 @@ class GM4ResourcePack():
             #         self.logger.warning(f"Referenced texture '{tex}' does not exist") # TODO logger and format as MC messaage
             
             # generate model and mount to the pack
-            m = model.template.generate_model(model, self.ctx.assets.models)
-            if m and isinstance(l:=model.model.entries()[0], str): # pydantic validation ensures type match
-                self.ctx.assets.models[l] = m
-                # FIXME this only works for single-item model generation, maybe add a warn for trying to template multiple complex models?
+            model.template.generate_model(model, self.ctx.assets.models)
     
 #== Default Templates and Transforms ==#
+# ProcessFunc = Callable[[Type[TemplateOptions], ModelData, NamespaceProxy[Model]], list[Model]]
+# DecoratedFunc = Callable[[Type[TemplateOptions], ModelData, NamespaceProxy[Model], str], list[Model]]
+# def singlemodel(process_func: DecoratedFunc) -> ProcessFunc:
+#     """decorator wrapper for error-checking templates which only work when creating a single model file"""
+#     def wrap(cls: Type[TemplateOptions], config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+#         if len(config.model.entries()) > 1:
+#             raise InvalidOptions("gm4.model_data", f"{config.reference}; Template '{cls.name}' only supports single entry 'model' fields.")
+#         if isinstance(model_name:=config.model.entries()[0], list):
+#             raise InvalidOptions("gm4.model_data", f"{config.reference}; Template '{cls.name}' does not support predicate override 'model' fields.")
+        
+#         return process_func(cls, config, models_container, model_name)
+#     return wrap # NOTE this as a decorator just failed to work; I think its cause decorators *and* overriding class members is weird
+def ensure_single_model_config(template_name: str, config: ModelData) -> str:
+    """Does common error checking for templates that wonly work when creating a single model file"""
+    if len(config.model.entries()) > 1:
+        raise InvalidOptions("gm4.model_data", f"{config.reference}; Template '{template_name}' only supports single entry 'model' fields.")
+    if isinstance(model_name:=config.model.entries()[0], list):
+        raise InvalidOptions("gm4.model_data", f"{config.reference}; Template '{template_name}' does not support predicate override 'model' fields.")
+    return model_name
+
 class BlankTemplate(TemplateOptions):
     name = "custom"
 
-    @staticmethod
-    def process(config: ModelData, models_container: NamespaceProxy[Model]):
+    @classmethod
+    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         """A model file will be provided in source - do not generate a model.
             Will process any specified transforms and add them to the model file"""
         if config.transforms:
-            if not isinstance(config.model, str):
-                raise ValueError("Complex model terms are incompatiable here") # TODO this error. ConfigError?
-            try:
-                return models_container[config.model]
-            except:
-                parent_logger.warning(f"Custom specified model {config.model} does not exist, but was configured to recieve transforms.") # TODO logger term
-        return None
+            ret_list: list[Model] = []
+            for m in config.model.entries():
+                for model_file in ([override['model'] for override in m] if not isinstance(m, str) else [m]):
+                    try:
+                        ret_list.append(models_container[model_file])
+                    except:
+                        parent_logger.warning(f"Custom specified model {model_file} does not exist, but was configured to recieve transforms.")
+            return ret_list
+        return []
 
 class GeneratedTemplate(TemplateOptions):
     name = "generated"
 
-    @staticmethod
-    def process(config: ModelData, models_container: NamespaceProxy[Model]):
-        return Model({
+    @classmethod
+    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+        model_name = ensure_single_model_config(cls.name, config)
+        m = models_container[model_name] = Model({
             "parent": "minecraft:item/generated",
             "textures": {
-                "layer0": f"{config.textures.entries()[0]}" # TODO should this just layer every specified texture?
+                "layer0": f"{config.textures.entries()[0]}"
             }
         })
+        return [m]
     
 class GeneratedOverlayTemplate(TemplateOptions):
     name = "generated_overlay"
 
-    @staticmethod
-    def process(config: ModelData, models_container: NamespaceProxy[Model]): # TODO should this just be default behavior for the "generated" template?
+    @classmethod
+    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         """A special-case 'generated' template, where an 'overlay' texture is specified by appending '_overlay' to its filename"""
-        return Model({
+        model_name = ensure_single_model_config(cls.name, config)
+        m = models_container[model_name] = Model({
             "parent": "minecraft:item/generated",
             "textures": {
                 "layer0": f"{config.textures.entries()[0]}",
                 "layer1": f"{config.textures.entries()[0]}_overlay"
             }
         })
+        return [m]
 
 class HandheldTemplate(TemplateOptions):
     name = "handheld"
 
-    @staticmethod
-    def process(config: ModelData, models_container: NamespaceProxy[Model]): # TODO can some of the similar ones be function generated even?
-        return Model({
+    @classmethod
+    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]):
+        model_name = ensure_single_model_config(cls.name, config)
+        m = models_container[model_name] = Model({
             "parent": "minecraft:item/handheld",
             "textures": {
                 "layer0": f"{config.textures.entries()[0]}" # TODO this path correction
             }
         })
+        return [m]
 
 class VanillaTemplate(TemplateOptions):
     name = "vanilla"
 
-    @staticmethod
-    def process(config: ModelData, models_container: NamespaceProxy[Model]):
-        item = config.item.entries()[0] # TODO should only be one entry?
-        return Model({
-            "parent": f"minecraft:item/{item}"
-        })
-    # TODO this should also prevent the texture warnings? Maybe that should be a method of these templates?
+    @classmethod
+    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]):
+        model_names = config.model.entries()
+        if any([isinstance(m, list) for m in model_names]):
+            raise InvalidOptions("gm4.model_data", f"{config.reference}; Template 'vanilla' does not support predicate override 'model' fields.")
+        if len(model_names) == 1 and len(config.item.entries()) > 1:
+            model_names = [f"{model_names[0]}_{item}" for item in config.item.entries()] # if only one model name given, make one model per item id
+
+        ret_list: list[Model] = []
+        for item, model_name in zip(config.item.entries(), model_names):
+            m = models_container[model_name] = Model({      # type: ignore ; list is checked above to be all strings
+                "parent": f"minecraft:item/{item}"
+            })
+            ret_list.append(m)
+        return ret_list
 
 class BlockTemplate(TemplateOptions):
     name = "block"
     texture_map = ["top", "bottom", "front", "side"]
 
-    @staticmethod
-    def process(config: ModelData, models_container: NamespaceProxy[Model]):
-        return Model({
+    @classmethod
+    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]):
+        model_name = ensure_single_model_config(cls.name, config)
+        m = models_container[model_name] = Model({
             "parent": "minecraft:block/cube",
             "textures": {
                 "down":  config.textures['bottom'],
@@ -481,6 +509,7 @@ class BlockTemplate(TemplateOptions):
                 "east":  config.textures['side']
             }
         })
+        return [m]
 
 class ItemDisplayModel(TransformOptions):
     """Calculates the model transform for an item_display entity, located at the specified origin, facing south, for the model to align with the block-grid"""
