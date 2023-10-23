@@ -3,8 +3,7 @@
 # at unspecified
 # run from evaluate/motion
 
-# read player rotation into scores
-data modify storage gm4_bookshelf_nametags:temp Rotation set from entity @s Rotation
+# read player rotation into scores from storage
 execute store result score $yaw gm4_bookshelf_nametags_data run data get storage gm4_bookshelf_nametags:temp Rotation[0]
 execute store result score $pitch gm4_bookshelf_nametags_data run data get storage gm4_bookshelf_nametags:temp Rotation[1]
 data remove storage gm4_bookshelf_nametags:temp Rotation

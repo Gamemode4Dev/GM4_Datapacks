@@ -3,8 +3,12 @@
 # at unspecified
 # run from evaluate/run
 
-# store player motion, round down to lowest integer, if all are 0 consider player to not be moving
-data modify storage gm4_bookshelf_nametags:temp Motion set from entity @s Motion
+# store player motion using a marker to avoid reading player NBT
+tag @s add gm4_bookshelf_nametags_target
+execute summon marker run function gm4_bookshelf_nametags:evaluate/get_pos
+tag @s remove gm4_bookshelf_nametags_target
+
+# round down to lowest integer, if all are 0 consider player to not be moving
 execute store result score $Mot_0 gm4_bookshelf_nametags_data run data get storage gm4_bookshelf_nametags:temp Motion[0]
 execute store result score $Mot_1 gm4_bookshelf_nametags_data run data get storage gm4_bookshelf_nametags:temp Motion[1]
 execute store result score $Mot_2 gm4_bookshelf_nametags_data run data get storage gm4_bookshelf_nametags:temp Motion[2]
