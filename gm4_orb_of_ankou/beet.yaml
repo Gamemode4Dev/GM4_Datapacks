@@ -6,10 +6,13 @@ data_pack:
   load: .
 
 resource_pack:
-  load: .
+  load:
+    - .
+    - ../gm4_metallurgy
 
 pipeline:
   - gm4_orb_of_ankou.generate_corripio
+  - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_custom_crafters
 
@@ -119,3 +122,9 @@ meta:
         template: generated
         reference: item/corripio_band
         textures: gm4_metallurgy:item/band/bismuth_band
+      - item: swords
+        reference: item/corripio_shamir
+        template:
+          name: shamir
+          metal: bismuth
+          textures_path: gm4_metallurgy:item/shamir/bismuth

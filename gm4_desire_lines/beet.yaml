@@ -5,7 +5,11 @@ version: 1.3.X
 data_pack:
   load: .
 
+resource_pack:
+  load: ../gm4_metallurgy
+
 pipeline:
+  - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
 
 meta:
@@ -17,6 +21,12 @@ meta:
         template: generated
         reference: item/celaro_band
         textures: gm4_metallurgy:item/band/aluminium_band
+      - item: boots
+        reference: item/celaro_shamir
+        template:
+          name: shamir
+          metal: aluminium
+          textures_path: gm4_metallurgy:item/shamir/aluminium
     website:
       description: Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!
       recommended:

@@ -79,11 +79,12 @@ class ModelData(BaseModel):
     
     @validator('textures', pre=True, always=True)
     def default_texture(cls, textures: MapOption[str], values: dict[str,Any]) -> MapOption[str]:
+        empty_list = False
         if textures is None: # type: ignore
             empty_list = True
         elif isinstance(textures, (list,dict)):
             empty_list = len(textures)==0
-        else:
+        elif isinstance(textures, MapOption): # type: ignore
             empty_list = len(textures.entries())==0
         if empty_list and isinstance(v:=values.get("reference"), str):
             return MapOption(__root__=[v])
@@ -186,21 +187,19 @@ class TemplateOptions(BaseModel, extra=Extra.allow):
     def dict(self, **kwargs: Any) -> dict[str,Any]:
         return super().dict(**kwargs) | {"name": self.name} # ensure name class-var is preserved in dict-casting
 
-    @classmethod
-    def generate_model(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> None:
+    def generate_model(self, config: ModelData, models_container: NamespaceProxy[Model]) -> None:
         """Processes the template, and applies transforms"""
-        if cls.texture_map and config.textures and isinstance(config.textures.__root__, list):
-            config = ModelData(**config.dict() | {"textures": dict(zip(cls.texture_map, config.textures.entries()))})
-        for output_model in cls.process(config, models_container): # for each returned pointer, add transforms as needed
-            if cls.default_transforms:
-                for transform in cls.default_transforms:
+        if self.texture_map and config.textures and isinstance(config.textures.__root__, list):
+            config = ModelData(**config.dict() | {"textures": dict(zip(self.texture_map, config.textures.entries()))})
+        for output_model in self.process(config, models_container): # for each returned pointer, add transforms as needed
+            if self.default_transforms:
+                for transform in self.default_transforms:
                     transform.apply_transform(output_model)
             if config.transforms:
                 for transform in config.transforms:
                     transform.apply_transform(output_model)
 
-    @classmethod
-    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         """Overridden to create and mount the model object, and return pointers to them"""
         raise NotImplementedError()
 
@@ -231,8 +230,8 @@ def beet_default(ctx: Context):
 def build(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
     rp.update_modeldata_registry()
-    rp.generate_model_overrides()
     rp.generate_model_files()
+    rp.generate_model_overrides()
 
 def mount_registry(ctx: Context):
     ctx.cache["modeldata_registry"].json = JsonFile(source_path="gm4/modeldata_registry.json").data
@@ -413,8 +412,7 @@ def ensure_single_model_config(template_name: str, config: ModelData) -> str:
 class BlankTemplate(TemplateOptions):
     name = "custom"
 
-    @classmethod
-    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         """A model file will be provided in source - do not generate a model.
             Will process any specified transforms and add them to the model file"""
         if config.transforms:
@@ -431,9 +429,8 @@ class BlankTemplate(TemplateOptions):
 class GeneratedTemplate(TemplateOptions):
     name = "generated"
 
-    @classmethod
-    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
-        model_name = ensure_single_model_config(cls.name, config)
+    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+        model_name = ensure_single_model_config(self.name, config)
         m = models_container[model_name] = Model({
             "parent": "minecraft:item/generated",
             "textures": {
@@ -445,10 +442,9 @@ class GeneratedTemplate(TemplateOptions):
 class GeneratedOverlayTemplate(TemplateOptions):
     name = "generated_overlay"
 
-    @classmethod
-    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         """A special-case 'generated' template, where an 'overlay' texture is specified by appending '_overlay' to its filename"""
-        model_name = ensure_single_model_config(cls.name, config)
+        model_name = ensure_single_model_config(self.name, config)
         m = models_container[model_name] = Model({
             "parent": "minecraft:item/generated",
             "textures": {
@@ -461,9 +457,8 @@ class GeneratedOverlayTemplate(TemplateOptions):
 class HandheldTemplate(TemplateOptions):
     name = "handheld"
 
-    @classmethod
-    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]):
-        model_name = ensure_single_model_config(cls.name, config)
+    def process(self, config: ModelData, models_container: NamespaceProxy[Model]):
+        model_name = ensure_single_model_config(self.name, config)
         m = models_container[model_name] = Model({
             "parent": "minecraft:item/handheld",
             "textures": {
@@ -475,8 +470,7 @@ class HandheldTemplate(TemplateOptions):
 class VanillaTemplate(TemplateOptions):
     name = "vanilla"
 
-    @classmethod
-    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]):
+    def process(self, config: ModelData, models_container: NamespaceProxy[Model]):
         model_names = config.model.entries()
         if any([isinstance(m, list) for m in model_names]):
             raise InvalidOptions("gm4.model_data", f"{config.reference}; Template 'vanilla' does not support predicate override 'model' fields.")
@@ -495,9 +489,8 @@ class BlockTemplate(TemplateOptions):
     name = "block"
     texture_map = ["top", "bottom", "front", "side"]
 
-    @classmethod
-    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]):
-        model_name = ensure_single_model_config(cls.name, config)
+    def process(self, config: ModelData, models_container: NamespaceProxy[Model]):
+        model_name = ensure_single_model_config(self.name, config)
         m = models_container[model_name] = Model({
             "parent": "minecraft:block/cube",
             "textures": {

@@ -5,7 +5,11 @@ version: 1.2.X
 data_pack:
   load: .
 
+resource_pack:
+  load: ../gm4_metallurgy
+
 pipeline:
+  - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
 
 meta:
@@ -19,6 +23,12 @@ meta:
         template: generated
         reference: item/audere_band
         textures: gm4_metallurgy:item/band/barium_band
+      - item: tools
+        reference: item/audere_shamir
+        template: 
+          name: shamir
+          metal: barium
+          textures_path: gm4_metallurgy:item/shamir/barium
     website:
       description: Adds the shamir 'Audere' to Metallurgy. Gain Haste with low durability tools.
       recommended: []

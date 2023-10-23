@@ -5,7 +5,11 @@ version: 1.2.X
 data_pack:
   load: .
 
+resource_pack:
+  load: ../gm4_metallurgy
+
 pipeline:
+  - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
 
 meta:
@@ -18,6 +22,12 @@ meta:
         template: generated
         reference: item/iacio_band
         textures: gm4_metallurgy:item/band/barium_band
+      - item: chestplates
+        reference: item/iacio_shamir
+        template:
+          name: shamir
+          metal: barium
+          textures_path: gm4_metallurgy:item/shamir/barium
     website:
       description: Adds the 'Iacio' shamir to Metallurgy. It lets you throw things further! Launch an Ender Pearl into orbit or simply throw your Trident exceptionally far.
       recommended: []

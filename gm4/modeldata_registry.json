@@ -8,7 +8,7 @@
       "gm4_apple_trees:block/apple_unripe": 0
     },
     "axolotl_bucket": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "bamboo_sign": {
       "gm4_trapped_signs:item/trapped_bamboo_sign": 0,
@@ -57,33 +57,37 @@
       "gm4_orb_of_ankou:item/essences/shrieking": 235
     },
     "bow": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20
     },
     "bucket": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "carrot_on_a_stick": {
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20
     },
     "chainmail_boots": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_desire_lines:item/celaro_shamir": 10,
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_vecto_shamir:item/vecto_shamir": 12,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/vibro": 101
     },
     "chainmail_chestplate": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_iacio_shamir:item/iacio_shamir": 10,
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "chainmail_helmet": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "chainmail_leggings": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "cherry_sign": {
       "gm4_trapped_signs:item/trapped_cherry_sign": 0,
@@ -98,18 +102,18 @@
       "gm4_smelteries:block/ore_display/chorus_fruit": 0
     },
     "clock": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20
     },
     "coal_block": {
       "gm4_forming_press:item/charcoal_block": 0
     },
     "cod_bucket": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "compass": {
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_fulcio_shamir:item/fulcio_shamir": 0,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/sensus": 100
     },
     "copper_ore": {
       "gm4_smelteries:block/ore_display/copper_ore": 0
@@ -126,7 +130,7 @@
       "gm4_trapped_signs:item/secret_trapped_crimson_sign": 2
     },
     "crossbow": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20
     },
     "dark_oak_sign": {
       "gm4_trapped_signs:item/trapped_dark_oak_sign": 0,
@@ -149,10 +153,12 @@
       "gm4_end_fishing:item/ores/diamond_14": 5
     },
     "diamond_axe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/arborenda": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102
     },
     "diamond_boots": {
       "gm4_end_fishing:item/armor/diamond_boots_10": 0,
@@ -165,10 +171,12 @@
       "gm4_end_fishing:item/armor/diamond_boots_17": 7,
       "gm4_end_fishing:item/armor/diamond_boots_18": 8,
       "gm4_end_fishing:item/armor/diamond_boots_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_desire_lines:item/celaro_shamir": 10,
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_vecto_shamir:item/vecto_shamir": 12,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/vibro": 101
     },
     "diamond_chestplate": {
       "gm4_end_fishing:item/armor/diamond_chestplate_10": 0,
@@ -181,9 +189,10 @@
       "gm4_end_fishing:item/armor/diamond_chestplate_17": 7,
       "gm4_end_fishing:item/armor/diamond_chestplate_18": 8,
       "gm4_end_fishing:item/armor/diamond_chestplate_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_iacio_shamir:item/iacio_shamir": 10,
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "diamond_helmet": {
       "gm4_end_fishing:item/armor/diamond_helmet_10": 0,
@@ -196,14 +205,16 @@
       "gm4_end_fishing:item/armor/diamond_helmet_17": 7,
       "gm4_end_fishing:item/armor/diamond_helmet_18": 8,
       "gm4_end_fishing:item/armor/diamond_helmet_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "diamond_hoe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "diamond_horse_armor": {
       "gm4_end_fishing:item/horse_armor/diamond_horse_armor_10": 5,
@@ -223,8 +234,9 @@
       "gm4_end_fishing:item/armor/diamond_leggings_17": 7,
       "gm4_end_fishing:item/armor/diamond_leggings_18": 8,
       "gm4_end_fishing:item/armor/diamond_leggings_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "diamond_pickaxe": {
       "gm4_end_fishing:item/tools/diamond_pickaxe_10": 0,
@@ -237,10 +249,13 @@
       "gm4_end_fishing:item/tools/diamond_pickaxe_17": 7,
       "gm4_end_fishing:item/tools/diamond_pickaxe_18": 8,
       "gm4_end_fishing:item/tools/diamond_pickaxe_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_lumos_shamir:item/lumos_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/forterra": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "diamond_shovel": {
       "gm4_end_fishing:item/tools/diamond_shovel_10": 0,
@@ -253,10 +268,12 @@
       "gm4_end_fishing:item/tools/diamond_shovel_17": 7,
       "gm4_end_fishing:item/tools/diamond_shovel_18": 8,
       "gm4_end_fishing:item/tools/diamond_shovel_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_lumos_shamir:item/lumos_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "diamond_sword": {
       "gm4_end_fishing:item/swords/diamond_sword_10": 0,
@@ -279,10 +296,13 @@
       "gm4_end_fishing:item/swords/diamond_sword_27": 17,
       "gm4_end_fishing:item/swords/diamond_sword_28": 18,
       "gm4_end_fishing:item/swords/diamond_sword_29": 19,
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/ender_bolt": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103,
+      "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "dirt": {
       "gm4_tnt_landmines:entity/tnt_landmine_dirt": 0
@@ -291,8 +311,8 @@
       "gm4_end_fishing:item/elytra/elytra_10": 1,
       "gm4_end_fishing:item/elytra/elytra_11": 2,
       "gm4_scuba_gear:test/my_model2": 4,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100
     },
     "emerald": {
       "gm4_apple_trees:block/apple_unripe": 0,
@@ -315,8 +335,8 @@
       "gm4_everstone:item/everstone": 2
     },
     "fishing_rod": {
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/hypexperia": 102
     },
     "flint": {
       "gm4_better_fire:item/charred_arrowhead": 0,
@@ -358,7 +378,7 @@
       "gm4_orb_of_ankou:item/shards/shrieking": 235
     },
     "flint_and_steel": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20
     },
     "furnace_minecart": {
       "gm4_tunnel_bores:item/piston_minecart": 0
@@ -381,10 +401,12 @@
       "gm4_smelteries:block/ore_display/gold_ore": 0
     },
     "golden_axe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/arborenda": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102
     },
     "golden_boots": {
       "gm4_sunken_treasure:item/waders": 0,
@@ -392,33 +414,38 @@
       "gm4_zauber_cauldrons:item/zauber_armor/attack/boots": 2,
       "gm4_zauber_cauldrons:item/zauber_armor/health/boots": 3,
       "gm4_zauber_cauldrons:item/zauber_armor/speed/boots": 4,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_desire_lines:item/celaro_shamir": 10,
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_vecto_shamir:item/vecto_shamir": 12,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/vibro": 101
     },
     "golden_chestplate": {
       "gm4_zauber_cauldrons:item/zauber_armor/armor/chestplate": 0,
       "gm4_zauber_cauldrons:item/zauber_armor/attack/chestplate": 1,
       "gm4_zauber_cauldrons:item/zauber_armor/health/chestplate": 2,
       "gm4_zauber_cauldrons:item/zauber_armor/speed/chestplate": 3,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_iacio_shamir:item/iacio_shamir": 10,
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "golden_helmet": {
       "gm4_zauber_cauldrons:item/zauber_armor/armor/helmet": 0,
       "gm4_zauber_cauldrons:item/zauber_armor/attack/helmet": 1,
       "gm4_zauber_cauldrons:item/zauber_armor/health/helmet": 2,
       "gm4_zauber_cauldrons:item/zauber_armor/speed/helmet": 3,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "golden_hoe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "golden_horse_armor": {
       "gm4_end_fishing:item/horse_armor/golden_horse_armor_10": 5,
@@ -432,26 +459,35 @@
       "gm4_zauber_cauldrons:item/zauber_armor/attack/leggings": 1,
       "gm4_zauber_cauldrons:item/zauber_armor/health/leggings": 2,
       "gm4_zauber_cauldrons:item/zauber_armor/speed/leggings": 3,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "golden_pickaxe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_lumos_shamir:item/lumos_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/forterra": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "golden_shovel": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_lumos_shamir:item/lumos_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "golden_sword": {
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/ender_bolt": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103,
+      "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "grass_block": {
       "gm4_tnt_landmines:entity/tnt_landmine_grass": 0
@@ -467,10 +503,12 @@
       "gm4_liquid_minecarts:item/liquid_minecart": 1
     },
     "iron_axe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/arborenda": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102
     },
     "iron_block": {
       "gm4_smelteries:block/smeltery_unlit": 0,
@@ -487,10 +525,12 @@
       "gm4_end_fishing:item/armor/iron_boots_17": 7,
       "gm4_end_fishing:item/armor/iron_boots_18": 8,
       "gm4_end_fishing:item/armor/iron_boots_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_desire_lines:item/celaro_shamir": 10,
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_vecto_shamir:item/vecto_shamir": 12,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/vibro": 101
     },
     "iron_chestplate": {
       "gm4_end_fishing:item/armor/iron_chestplate_10": 0,
@@ -503,9 +543,10 @@
       "gm4_end_fishing:item/armor/iron_chestplate_17": 7,
       "gm4_end_fishing:item/armor/iron_chestplate_18": 8,
       "gm4_end_fishing:item/armor/iron_chestplate_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_iacio_shamir:item/iacio_shamir": 10,
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "iron_helmet": {
       "gm4_end_fishing:item/armor/iron_helmet_10": 0,
@@ -518,14 +559,16 @@
       "gm4_end_fishing:item/armor/iron_helmet_17": 7,
       "gm4_end_fishing:item/armor/iron_helmet_18": 8,
       "gm4_end_fishing:item/armor/iron_helmet_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "iron_hoe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "iron_horse_armor": {
       "gm4_end_fishing:item/horse_armor/iron_horse_armor_10": 5,
@@ -552,8 +595,9 @@
       "gm4_end_fishing:item/armor/iron_leggings_17": 7,
       "gm4_end_fishing:item/armor/iron_leggings_18": 8,
       "gm4_end_fishing:item/armor/iron_leggings_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "iron_ore": {
       "gm4_smelteries:block/ore_display/iron_ore": 0
@@ -569,10 +613,13 @@
       "gm4_end_fishing:item/tools/iron_pickaxe_17": 7,
       "gm4_end_fishing:item/tools/iron_pickaxe_18": 8,
       "gm4_end_fishing:item/tools/iron_pickaxe_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_lumos_shamir:item/lumos_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/forterra": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "iron_shovel": {
       "gm4_end_fishing:item/tools/iron_shovel_10": 0,
@@ -585,10 +632,12 @@
       "gm4_end_fishing:item/tools/iron_shovel_17": 7,
       "gm4_end_fishing:item/tools/iron_shovel_18": 8,
       "gm4_end_fishing:item/tools/iron_shovel_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_lumos_shamir:item/lumos_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "iron_sword": {
       "gm4_end_fishing:item/swords/iron_sword_10": 0,
@@ -611,38 +660,46 @@
       "gm4_end_fishing:item/swords/iron_sword_27": 17,
       "gm4_end_fishing:item/swords/iron_sword_28": 18,
       "gm4_end_fishing:item/swords/iron_sword_29": 19,
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/ender_bolt": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103,
+      "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "jungle_sign": {
       "gm4_trapped_signs:item/trapped_jungle_sign": 0,
       "gm4_trapped_signs:item/secret_trapped_jungle_sign": 2
     },
     "lava_bucket": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "leather_boots": {
       "gm4_boots_of_ostara:item/boots_of_ostara": 2,
       "gm4_boots_of_ostara:item/flippers_of_ostara": 3,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_desire_lines:item/celaro_shamir": 10,
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_vecto_shamir:item/vecto_shamir": 12,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/vibro": 101
     },
     "leather_chestplate": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_iacio_shamir:item/iacio_shamir": 10,
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "leather_helmet": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "leather_leggings": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "lingering_potion": {
       "gm4_lightning_in_a_bottle:item/lingering_lightning_in_a_bottle": 0
@@ -652,16 +709,18 @@
       "gm4_trapped_signs:item/secret_trapped_mangrove_sign": 2
     },
     "milk_bucket": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "nether_gold_ore": {
       "gm4_smelteries:block/ore_display/nether_gold_ore": 0
     },
     "netherite_axe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/arborenda": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102
     },
     "netherite_boots": {
       "gm4_end_fishing:item/armor/netherite_boots_10": 0,
@@ -674,10 +733,12 @@
       "gm4_end_fishing:item/armor/netherite_boots_17": 7,
       "gm4_end_fishing:item/armor/netherite_boots_18": 8,
       "gm4_end_fishing:item/armor/netherite_boots_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_desire_lines:item/celaro_shamir": 10,
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_vecto_shamir:item/vecto_shamir": 12,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/vibro": 101
     },
     "netherite_chestplate": {
       "gm4_end_fishing:item/armor/netherite_chestplate_10": 0,
@@ -690,9 +751,10 @@
       "gm4_end_fishing:item/armor/netherite_chestplate_17": 7,
       "gm4_end_fishing:item/armor/netherite_chestplate_18": 8,
       "gm4_end_fishing:item/armor/netherite_chestplate_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_iacio_shamir:item/iacio_shamir": 10,
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "netherite_helmet": {
       "gm4_end_fishing:item/armor/netherite_helmet_10": 0,
@@ -705,14 +767,16 @@
       "gm4_end_fishing:item/armor/netherite_helmet_17": 7,
       "gm4_end_fishing:item/armor/netherite_helmet_18": 8,
       "gm4_end_fishing:item/armor/netherite_helmet_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "netherite_hoe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "netherite_leggings": {
       "gm4_end_fishing:item/armor/netherite_leggings_10": 0,
@@ -725,8 +789,9 @@
       "gm4_end_fishing:item/armor/netherite_leggings_17": 7,
       "gm4_end_fishing:item/armor/netherite_leggings_18": 8,
       "gm4_end_fishing:item/armor/netherite_leggings_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "netherite_pickaxe": {
       "gm4_end_fishing:item/tools/netherite_pickaxe_10": 0,
@@ -739,10 +804,13 @@
       "gm4_end_fishing:item/tools/netherite_pickaxe_17": 7,
       "gm4_end_fishing:item/tools/netherite_pickaxe_18": 8,
       "gm4_end_fishing:item/tools/netherite_pickaxe_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_lumos_shamir:item/lumos_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/forterra": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "netherite_shovel": {
       "gm4_end_fishing:item/tools/netherite_shovel_10": 0,
@@ -755,10 +823,12 @@
       "gm4_end_fishing:item/tools/netherite_shovel_17": 7,
       "gm4_end_fishing:item/tools/netherite_shovel_18": 8,
       "gm4_end_fishing:item/tools/netherite_shovel_19": 9,
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_lumos_shamir:item/lumos_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "netherite_sword": {
       "gm4_end_fishing:item/swords/netherite_sword_10": 0,
@@ -781,10 +851,13 @@
       "gm4_end_fishing:item/swords/netherite_sword_27": 17,
       "gm4_end_fishing:item/swords/netherite_sword_28": 18,
       "gm4_end_fishing:item/swords/netherite_sword_29": 19,
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/ender_bolt": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103,
+      "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "netherrack": {
       "gm4_tnt_landmines:entity/tnt_landmine_netherrack": 0
@@ -845,6 +918,15 @@
       "gm4_smelteries:item/smeltery": 30,
       "gm4_tinkering_compressors:block/tinkering_compressor_full": 31,
       "gm4_animi_shamir:item/animi_band": 32,
+      "gm4_audere_shamir:item/audere_band": 33,
+      "gm4_desire_lines:item/celaro_band": 34,
+      "gm4_weighted_armour:item/helious_band": 35,
+      "gm4_iacio_shamir:item/iacio_band": 36,
+      "gm4_vecto_shamir:item/vecto_band": 37,
+      "gm4_fulcio_shamir:item/fulcio_band": 38,
+      "gm4_vigere_shamir:item/vigere_band": 39,
+      "gm4_lumos_shamir:item/lumos_band": 40,
+      "gm4_percurro_shamir:item/percurro_band": 41,
       "gm4_relocators:item/relocator_full": 61,
       "gm4_metallurgy:item/band/defuse_band": 100,
       "gm4_metallurgy:item/band/moneo_band": 101,
@@ -860,7 +942,8 @@
       "gm4_metallurgy:item/band/ender_bolt_band": 111,
       "gm4_metallurgy:item/band/mundane_band": 112,
       "gm4_forming_press:item/forming_press": 129,
-      "gm4_disassemblers:item/disassembler": 135
+      "gm4_disassemblers:item/disassembler": 135,
+      "gm4_orb_of_ankou:item/corripio_band": 200
     },
     "potion": {
       "gm4_lightning_in_a_bottle:item/lightning_in_a_bottle": 0,
@@ -869,13 +952,13 @@
       "gm4_standard_liquids:item/glow_ink_bottle": 3
     },
     "powder_snow_bucket": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "prismarine_shard": {
       "gm4_zauber_cauldrons:item/enchanted_prismarine_shard": 0
     },
     "pufferfish_bucket": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "purpur_block": {
       "gm4_block_compressors:block/block_compressor_plate": 2
@@ -905,22 +988,24 @@
       "gm4_smelteries:block/ore_display/raw_iron": 0
     },
     "recovery_compass": {
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20
     },
     "red_sand": {
       "gm4_smelteries:block/ore_display/red_sand": 0
     },
     "salmon_bucket": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "sand": {
       "gm4_smelteries:block/ore_display/sand": 0
     },
     "shears": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100
+    },
+    "shield": {
+      "gm4_vigere_shamir:item/vigere_shamir": 0,
+      "gm4_animi_shamir:item/animi_shamir": 20
     },
     "snowball": {},
     "splash_potion": {
@@ -931,7 +1016,7 @@
       "gm4_trapped_signs:item/secret_trapped_spruce_sign": 1
     },
     "spyglass": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20
     },
     "stone": {
       "gm4_tinkering_compressors:block/tinkering_compressor": 0,
@@ -939,40 +1024,51 @@
       "gm4_tnt_landmines:entity/tnt_landmine_stone": 2
     },
     "stone_axe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/arborenda": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102
     },
     "stone_bricks": {
       "gm4_tnt_landmines:entity/tnt_landmine_stone_bricks": 0
     },
     "stone_hoe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "stone_pickaxe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_lumos_shamir:item/lumos_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/forterra": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "stone_shovel": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_lumos_shamir:item/lumos_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "stone_sword": {
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/ender_bolt": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103,
+      "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "tadpole_bucket": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "tnt": {
       "gm4_tnt_landmines:entity/tnt_landmine": 0,
@@ -981,57 +1077,69 @@
       "gm4_disassemblers:block/disassembler_down": 6
     },
     "trident": {
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/ender_bolt": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101
     },
     "tropical_fish_bucket": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "turtle_helmet": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/defuse": 100
     },
     "warped_fungus_on_a_stick": {
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20
     },
     "warped_sign": {
       "gm4_trapped_signs:item/trapped_warped_sign": 0,
       "gm4_trapped_signs:item/secret_trapped_warped_sign": 1
     },
     "water_bucket": {
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "wooden_axe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/arborenda": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102
     },
     "wooden_hoe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "wooden_pickaxe": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_lumos_shamir:item/lumos_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/forterra": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "wooden_shovel": {
-      "gm4_metallurgy:item/shamir/aluminium": 104,
-      "gm4_metallurgy:item/shamir/barium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_audere_shamir:item/audere_shamir": 10,
+      "gm4_lumos_shamir:item/lumos_shamir": 11,
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103
     },
     "wooden_sword": {
-      "gm4_metallurgy:item/shamir/barimium": 105,
-      "gm4_metallurgy:item/shamir/thorium": 106,
-      "gm4_metallurgy:item/shamir/bismuth": 107,
-      "gm4_metallurgy:item/shamir/curies_bismium": 108
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_percurro_shamir:item/percurro_shamir": 21,
+      "gm4_metallurgy:item/shamir/ender_bolt": 100,
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_metallurgy:item/shamir/tinker": 103,
+      "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "written_book": {
       "gm4_guidebook:item/guidebook": 0

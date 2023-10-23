@@ -5,7 +5,11 @@ version: 1.2.X
 data_pack:
   load: .
 
+resource_pack:
+  load: ../gm4_metallurgy
+
 pipeline:
+  - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
 
 meta:
@@ -21,6 +25,12 @@ meta:
         template: generated
         reference: item/fulcio_band
         textures: gm4_metallurgy:item/band/barimium_band
+      - item: compass
+        reference: item/fulcio_shamir
+        template:
+          name: shamir
+          metal: barimium
+          textures_path: gm4_metallurgy:item/shamir/barimium
     website:
       description: Adds the shamir 'Fulcio' to Metallurgy. It allows you to place blocks in mid-air! This also enables you to choose the orientation of blocks like logs without needing a supporting block.
       recommended: []

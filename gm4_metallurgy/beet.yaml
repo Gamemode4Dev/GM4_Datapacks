@@ -9,7 +9,7 @@ resource_pack:
   load: .
 
 pipeline:
-  - generate_tool_models
+  - shamir_model_template
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_lore
   - gm4.plugins.include.lib_player_heads
@@ -88,5 +88,75 @@ meta:
           - reference: item/lump/bauxite_lump
           - reference: item/lump/bismutite_lump
           - reference: item/lump/thorianite_lump
-      # tool/armor textures registered via plugin
-          
+      - reference: item/shamir/defuse
+        item: armor
+        template: 
+          name: shamir
+          metal: aluminium
+          textures_path: item/shamir/aluminium
+      - reference: item/shamir/moneo
+        item: [tools, elytra, shears]
+        template: 
+          name: shamir
+          metal: aluminium
+          textures_path: item/shamir/aluminium
+      - reference: item/shamir/arborenda
+        item: axes
+        template: 
+          name: shamir
+          metal: barium
+          textures_path: item/shamir/barium
+      - reference: item/shamir/sensus
+        item: compass
+        template: 
+          name: shamir
+          metal: barium
+          textures_path: item/shamir/barium
+      - reference: item/shamir/gemini
+        item: hoes
+        template: 
+          name: shamir
+          metal: barimium
+          textures_path: item/shamir/barimium
+      - reference: item/shamir/gemini
+        item: [swords, trident]
+        template: 
+          name: shamir
+          metal: barimium
+          textures_path: item/shamir/barimium
+      - reference: item/shamir/forterra
+        item: pickaxes
+        template: 
+          name: shamir
+          metal: bismuth
+          textures_path: item/shamir/bismuth
+      - reference: item/shamir/hypexperia
+        item: [swords, pickaxes, axes, shovels, fishing_rod]
+        template: 
+          name: shamir
+          metal: bismuth
+          textures_path: item/shamir/bismuth
+      - reference: item/shamir/vibro
+        item: boots
+        template: 
+          name: shamir
+          metal: thorium
+          textures_path: item/shamir/thorium
+      - reference: item/shamir/ender_bolt
+        item: [swords, trident]
+        template: 
+          name: shamir
+          metal: thorium
+          textures_path: item/shamir/thorium
+      - reference: item/shamir/infinatas
+        item: buckets
+        template: 
+          name: shamir
+          metal: curies_bismium
+          textures_path: item/shamir/curies_bismium
+      - reference: item/shamir/tinker
+        item: [pickaxes, shovels, hoes, swords]
+        template: 
+          name: shamir
+          metal: curies_bismium
+          textures_path: item/shamir/curies_bismium
