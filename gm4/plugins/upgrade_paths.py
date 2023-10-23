@@ -1,6 +1,7 @@
 from beet import Context, Function, configurable, PluginOptions
 from pydantic import Extra
-from gm4.utils import Version
+from gm4.plugins.manifest import ManifestCacheModel
+from gm4.utils import Version, NoneAttribute
 
 class UpgradePathsConfig(PluginOptions, extra=Extra.ignore):
     upgrade_paths: list[str] = [] # additional upgrade paths to process
@@ -35,7 +36,12 @@ def beet_default(ctx: Context, opts: UpgradePathsConfig):
 def lib(ctx: Context):
     """Runs additional processing to assign libraries a psudo gm4_modules score for comparison"""
     score_holder = ctx.project_id.removeprefix('gm4_')
-    ver_int = Version(ctx.project_version).int_rep()
+    manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+    ver_str = manifest.libraries.get(ctx.project_id.replace("gm4_", "lib_"), NoneAttribute()).version or "0.0.0"
+    ver = Version(ver_str)
+    if ver.patch is None:
+        ver.patch = 0 #  when beet-dev is run, pipeline has no patch number record, but dev builds should still allow int conversion
+    ver_int = ver.int_rep()
     ctx.data.functions[f'{ctx.project_id}:load'].append(f'execute unless score {score_holder} gm4_earliest_version matches ..{ver_int} run scoreboard players set {score_holder} gm4_earliest_version {ver_int}')
 
     beet_default(ctx)

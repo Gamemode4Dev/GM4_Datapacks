@@ -1,0 +1,21 @@
+{
+    "pack": {
+        "pack_format": 7,
+        "description": [
+            "Example Pack",
+            "\n",
+            {
+                "text": "Usage example of lib_lore",
+                "color": "gold"
+            }
+        ]
+    },
+    "credits": {
+        "Creator": [
+            [
+                "BluePsychoRanger",
+                "https://twitter.com/BluPsychoRanger"
+            ]
+        ]
+    }
+}

@@ -65,7 +65,8 @@ class ManifestCacheModel(BaseModel):
 class ManifestFileModel(BaseModel):
 	"""describes the structure of the meta.json saved to disk"""
 	last_commit: str
-	modules: list[ManifestModuleModel]
+	modules: list[ManifestModuleModel] # straight list for website backward compat
+	libraries: dict[str, ManifestModuleModel]
 	contributors: Any
 
 
@@ -136,59 +137,68 @@ def update_patch(ctx: Context):
 	logger = parent_logger.getChild("update_patch")
 	skin_cache = JsonFile(source_path="gm4/skin_cache.json").data
 
-	modules = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json).modules
+	manifest_cache = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
 
 	if manifest_file.exists():
 		manifest = ManifestFileModel.parse_obj(json.loads(manifest_file.read_text()))
 		last_commit = manifest.last_commit
 		released_modules: dict[str, ManifestModuleModel] = {m.id:m for m in manifest.modules if m.version}
+		released_modules |= manifest.libraries
 	else:
 		logger.debug("No existing meta.json manifest file was located")
 		last_commit = None
 		released_modules = {}
 
-	for id in modules:
-		module = modules[id]
-		released = released_modules.get(id, None)
+	for packs in (manifest_cache.modules, manifest_cache.libraries):
+		for id in packs:
+			pack = packs[id]
+			released = released_modules.get(id, None)
+			last_ver = Version(released.version) if released else Version("0.0.0")
+			version = Version(pack.version)
 
-		publish_date = released.publish_date if released else None
-		module.publish_date = publish_date or datetime.datetime.now().date().isoformat()
+			publish_date = released.publish_date if released else None
+			pack.publish_date = publish_date or datetime.datetime.now().date().isoformat()
 
-		deps = _traverse_includes(id) | {"base"}
-		deps_dirs = [element for sublist in [[f"{d}/data", f"{d}/*py"] for d in deps] for element in sublist]
+			if version != last_ver.replace(patch=None): # check for forced content-less version increment
+				diff = True
 
-		 # add watches to skins this module uses from other modules. NOTE this could be done in a more extendable way in the future, rather than "hardcoded"
-		skin_dep_dirs: list[str] = []
-		for skin_ref in skin_cache["nonnative_references"].get(id, []):
-			d = skin_cache["skins"][skin_ref]["parent_module"]
-			ns, path = skin_ref.split(":")	
-			skin_dep_dirs.append(f"{d}/data/{ns}/skins/{path}.png")
-		
-		watch_dirs = deps_dirs+skin_dep_dirs
+			else: # otherwise check for file differences
+				deps = _traverse_includes(id)
+				if packs is manifest_cache.modules:
+					deps |= {"base"} # scan the base directory if this is a module
+				deps_dirs = [element for sublist in [[f"{d}/data", f"{d}/overlay_*/data", f"{d}/*py"] for d in deps] for element in sublist]
 
-		diff = run(["git", "diff", last_commit, "--shortstat", "--", f"{id}/data", f"{id}/*.py"] + watch_dirs) if last_commit else True
+				# add watches to skins this module uses from other modules. NOTE this could be done in a more extendable way in the future, rather than "hardcoded"
+				skin_dep_dirs: list[str] = []
+				for skin_ref in skin_cache["nonnative_references"].get(id, []):
+					d = skin_cache["skins"][skin_ref]["parent_module"]
+					ns, path = skin_ref.split(":")	
+					skin_dep_dirs.append(f"{d}/data/{ns}/skins/{path}.png")
+				
+				watch_dirs = deps_dirs+skin_dep_dirs
 
-		if not diff and released:
-			# No changes were made, keep the same patch version
-			module.version = released.version
-		elif not released:
-			# First release
-			module.version = module.version.replace("X", "0")
-			logger.debug(f"First release of {id}")
-		else:
-			# Changes were made, bump the patch
-			version = Version(module.version)
-			last_ver = Version(released.version)
-			
-			if version.minor > last_ver.minor or version.major > last_ver.major: # type: ignore
-				version.patch = 0
+				diff = run(["git", "diff", last_commit, "--shortstat", "--", f"{id}/data", f"{id}/overlay_*", f"{id}/*.py"] + watch_dirs) if last_commit else True
+					# NOTE it may be needed later to only search overlay_*/data, but that currently caused some issues with GH action
+
+			if not diff and released:
+				# No changes were made, keep the same patch version
+				pack.version = released.version
+			elif not released:
+				# First release
+				pack.version = pack.version.replace("X", "0")
+				logger.debug(f"First release of {id}")
 			else:
-				version.patch = last_ver.patch + 1 # type: ignore
-				logger.info(f"Updating {id} patch to {version.patch}")
+				# Changes were made, bump the patch			
+				if version.minor > last_ver.minor or version.major > last_ver.major: # type: ignore
+					version.patch = 0
+					logger.info(f"Feature update for {id}, setting version to {version}")
+				else:
+					version.patch = last_ver.patch + 1 # type: ignore
+					logger.info(f"Updating {id} patch to {version.patch}")
 
-			module.version = str(version)
+				pack.version = str(version)
 
-	ctx.cache["gm4_manifest"].json["modules"] = {id:m.dict() for id, m in modules.items()}
+	ctx.cache["gm4_manifest"].json = manifest_cache.dict()
 
 @cache
 def _traverse_includes(project_id: str) -> set[str]:
@@ -213,7 +223,6 @@ def write_meta(ctx: Context):
 	manifest_file = release_dir / "meta.json"
 	manifest = ctx.cache["gm4_manifest"].json.copy()
 	manifest["modules"] = list(manifest["modules"].values()) # convert modules dict down to list for backwards compatability
-	manifest.pop("libraries")
 	manifest.pop("base")
 	manifest_file.write_text(json.dumps(manifest, indent=2))
 
@@ -260,7 +269,7 @@ def write_updates(ctx: Context):
 	if init is None:
 		return
 
-	manifest =ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+	manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
 	modules = manifest.modules
 
 	score = f"{ctx.project_id.removeprefix('gm4_')} gm4_modules"
