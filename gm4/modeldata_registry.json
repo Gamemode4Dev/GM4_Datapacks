@@ -129,7 +129,8 @@
       "gm4_custom_crafters:block/custom_crafter_side": 1,
       "gm4_custom_crafters:block/custom_crafter_down": 2,
       "gm4_auto_crafting:block/auto_crafter": 3,
-      "gm4_tnt_landmines:entity/tnt_landmine_crafting_table": 4
+      "gm4_tnt_landmines:entity/tnt_landmine_crafting_table": 4,
+      "gm4_custom_crafters:gui/advancement/custom_crafters": 5
     },
     "crimson_sign": {
       "gm4_trapped_signs:item/trapped_crimson_sign": 0,
@@ -316,7 +317,6 @@
     "elytra": {
       "gm4_end_fishing:item/elytra/elytra_10": 1,
       "gm4_end_fishing:item/elytra/elytra_11": 2,
-      "gm4_scuba_gear:test/my_model2": 4,
       "gm4_animi_shamir:item/animi_shamir": 20,
       "gm4_metallurgy:item/shamir/moneo": 100
     },
@@ -432,6 +432,7 @@
       "gm4_zauber_cauldrons:item/zauber_armor/attack/chestplate": 1,
       "gm4_zauber_cauldrons:item/zauber_armor/health/chestplate": 2,
       "gm4_zauber_cauldrons:item/zauber_armor/speed/chestplate": 3,
+      "gm4_scuba_gear:item/scuba_tank": 4,
       "gm4_iacio_shamir:item/iacio_shamir": 10,
       "gm4_weighted_armour:item/helious_shamir": 11,
       "gm4_animi_shamir:item/animi_shamir": 20,
@@ -683,6 +684,7 @@
       "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "leather_boots": {
+      "gm4_scuba_gear:item/flippers": 0,
       "gm4_boots_of_ostara:item/boots_of_ostara": 2,
       "gm4_boots_of_ostara:item/flippers_of_ostara": 3,
       "gm4_desire_lines:item/celaro_shamir": 10,
@@ -934,6 +936,8 @@
       "gm4_ender_hoppers:item/ender_hopper": 42,
       "gm4_liquid_tanks:item/liquid_tank": 43,
       "gm4_tnt_landmines:item/tnt_landmine_stone": 44,
+      "gm4_scuba_gear:item/scuba_helmet": 45,
+      "gm4_scuba_gear:gui/advancement/scuba_gear": 46,
       "gm4_relocators:item/relocator_full": 61,
       "gm4_metallurgy:item/band/defuse_band": 100,
       "gm4_metallurgy:item/band/moneo_band": 101,

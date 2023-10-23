@@ -5,6 +5,9 @@ version: 1.3.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_player_heads
@@ -32,5 +35,17 @@ meta:
       Icon Design:
         - DuckJr
     model_data:
-      - item: elytra
-        reference: test/my_model2
+      - item: leather_boots
+        reference: item/flippers
+        template: generated_overlay
+      - item: golden_chestplate
+        reference: item/scuba_tank
+        tempalte: generated
+      - item: player_head
+        reference: item/scuba_helmet
+        template: generated
+      - item: player_head
+        reference: gui/advancement/scuba_gear
+        template:
+          name: advancement
+          forward: item/scuba_helmet
