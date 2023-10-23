@@ -3,10 +3,7 @@
 # at @s
 # run from armor/type/vorpal/attempt
 
-scoreboard players operation $randomZ gm4_ce_data = $randomX gm4_ce_data
-scoreboard players operation $randomZ gm4_ce_data %= #64 gm4_ce_data
-
-scoreboard players operation $randomX gm4_ce_data %= #17 gm4_ce_data
-scoreboard players operation $randomZ gm4_ce_data %= #17 gm4_ce_data
+execute store result score $randomZ gm4_ce_data run random value 0..16
+execute store result score $randomZ gm4_ce_data run random value 0..16
 
 execute as @e[type=marker,tag=gm4_ce_vorpal] at @s run function gm4_combat_expanded:armor/modifier/type/vorpal/tp_marker

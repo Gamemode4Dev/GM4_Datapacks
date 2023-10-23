@@ -3,9 +3,7 @@
 # at unspecified
 # run from weapon/chaos/activate
 
-execute summon marker run function gm4_combat_expanded:weapon/modifier/chaos/rng
-
-scoreboard players operation $chaos_rng gm4_ce_data %= #14 gm4_ce_data
+execute store result score $chaos_rng gm4_ce_data run random value 0..13
 
 execute if score $chaos_rng gm4_ce_data matches 0 run effect give @s fire_resistance 6 0
 execute if score $chaos_rng gm4_ce_data matches 1 run effect give @s glowing 6 0

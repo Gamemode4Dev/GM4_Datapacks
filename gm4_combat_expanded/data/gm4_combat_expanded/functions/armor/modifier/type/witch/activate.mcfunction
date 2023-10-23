@@ -9,7 +9,7 @@ data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.cooldown se
 
 # release potion
 summon potion ~ ~-0.1 ~ {Motion:[0.0,0.1,0.0],Tags:["gm4_ce_witch_potion"],Item:{id:"minecraft:lingering_potion",Count:1b,tag:{Potion:"minecraft:water"}}}
-data modify entity @e[type=potion,tag=gm4_ce_witch_potion,limit=1,sort=nearest] Item.tag.CustomPotionEffects set from entity @s ActiveEffects
+data modify entity @e[type=potion,tag=gm4_ce_witch_potion,limit=1,sort=nearest] Item.tag.custom_potion_effects set from entity @s active_effects
 
 # use lib_lore to darken the 'Discharge' text
 data modify storage gm4_lore:temp Source set from storage gm4_combat_expanded:temp tag.display.Lore

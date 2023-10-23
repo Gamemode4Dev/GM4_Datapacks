@@ -10,7 +10,6 @@ summon marker ~ ~ ~ {Tags:["gm4_ce_vorpal"]}
 execute at @s run tp @e[tag=gm4_ce_vorpal] ~-8 ~ ~-8
 
 execute store result score $y_pos gm4_ce_data run data get entity @s Pos[1]
-execute store result score $randomX gm4_ce_data run data get entity @e[tag=gm4_ce_vorpal,limit=1] UUID[0]
 scoreboard players set $warp_attempt gm4_ce_data 0
 function gm4_combat_expanded:armor/modifier/type/vorpal/randomize
 

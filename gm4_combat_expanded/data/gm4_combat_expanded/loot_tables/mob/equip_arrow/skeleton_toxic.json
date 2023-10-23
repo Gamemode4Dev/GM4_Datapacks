@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomPotionEffects:[{Id:18,Amplifier:0b,Duration:100},{Id:17,Amplifier:1b,Duration:100},{Id:19,Amplifier:0b,Duration:100}],CustomPotionColor:5149489,HideFlags:32}"
+              "tag": "{custom_potion_effects:[{id:\"minecraft:weakness\",amplifier:0b,duration:100},{id:\"minecraft:hunger\",amplifier:1b,duration:100},{id:\"minecraft:poison\",amplifier:0b,duration:100}],CustomPotionColor:5149489,HideFlags:32}"
             },
             {
               "function": "minecraft:set_lore",
