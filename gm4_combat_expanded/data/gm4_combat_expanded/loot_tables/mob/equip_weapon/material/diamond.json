@@ -12,7 +12,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/dark"
+                  "name": "gm4_combat_expanded:mob/init/modifier/dark"
                 },
                 {
                   "condition": "minecraft:random_chance",

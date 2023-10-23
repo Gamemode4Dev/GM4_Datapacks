@@ -93,7 +93,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/reef"
+                  "name": "gm4_combat_expanded:mob/init/modifier/reef"
                 },
                 {
                   "condition": "minecraft:random_chance",
@@ -109,7 +109,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/growth"
+                  "name": "gm4_combat_expanded:mob/init/modifier/growth"
                 },
                 {
                   "condition": "minecraft:random_chance",

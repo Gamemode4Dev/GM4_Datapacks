@@ -85,7 +85,7 @@
           "condition": "minecraft:inverted",
           "term": {
             "condition": "minecraft:reference",
-            "name": "gm4_combat_expanded:mob/modifier/flowering"
+            "name": "gm4_combat_expanded:mob/init/modifier/flowering"
           }
         }
       ]
