@@ -74,6 +74,25 @@ meta:
           - reference: item/zauber_armor/attack/boots
           - reference: item/zauber_armor/health/boots
           - reference: item/zauber_armor/speed/boots
+      - item: cauldron
+        reference: gui/advancement/zauber_cauldrons_create
+        template: advancement
+      - item: chorus_fruit
+        reference: gui/advancement/zauber_cauldrons_wormhole
+        template:
+          name: advancement
+          forward: item/wormhole_in_a_bottle
+      - item: glass_bottle
+        reference: gui/advancement/zauber_cauldron_drink_multi_use_bottle
+        template: advancement
+      - item: golden_chestplate
+        reference: gui/advancement/zauber_cauldrons_full_armor
+        template:
+          name: advancement
+          forward: item/zauber_armor/attack/chestplate
+      - item: rabbit_foot
+        reference: gui/advancement/zauber_cauldrons_rabbit
+        template: advancement
     website:
       description: Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game.
       recommended:

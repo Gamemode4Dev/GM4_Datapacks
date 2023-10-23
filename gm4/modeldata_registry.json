@@ -8,7 +8,8 @@
       "gm4_apple_trees:block/apple_unripe": 0
     },
     "armor_stand": {
-      "gm4_better_armour_stands:gui/advancement/better_armour_stands": 0
+      "gm4_better_armour_stands:gui/advancement/better_armour_stands": 0,
+      "gm4_poses_pack:gui/advancement/poses_pacj": 1
     },
     "axolotl_bucket": {
       "gm4_metallurgy:item/shamir/infinatas": 100
@@ -60,16 +61,24 @@
       "gm4_orb_of_ankou:item/essences/striding": 232,
       "gm4_orb_of_ankou:item/essences/freezing": 233,
       "gm4_orb_of_ankou:item/essences/feigning": 234,
-      "gm4_orb_of_ankou:item/essences/shrieking": 235
+      "gm4_orb_of_ankou:item/essences/shrieking": 235,
+      "gm4_orb_of_ankou:gui/advancement/orb_of_ankou_soul_essence": 236
     },
     "bow": {
+      "gm4_better_fire:gui/advancement/better_fire": 0,
       "gm4_animi_shamir:item/animi_shamir": 20
+    },
+    "brown_stained_glass": {
+      "gm4_soul_glass:gui/advancement/soul_glass": 0
     },
     "bucket": {
       "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "carrot_on_a_stick": {
       "gm4_animi_shamir:item/animi_shamir": 20
+    },
+    "cauldron": {
+      "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_create": 0
     },
     "chainmail_boots": {
       "gm4_desire_lines:item/celaro_shamir": 10,
@@ -107,11 +116,18 @@
     "chorus_flower": {
       "gm4_smelteries:block/ore_display/chorus_fruit": 0
     },
+    "chorus_fruit": {
+      "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_wormhole": 0
+    },
     "clock": {
+      "gm4_combat_expanded:gui/advancement/combat_expanded_challenger": 0,
       "gm4_animi_shamir:item/animi_shamir": 20
     },
     "coal_block": {
       "gm4_forming_press:item/charcoal_block": 0
+    },
+    "coarse_dirt": {
+      "gm4_desire_lines:gui/advancement/desire_lines_10000": 0
     },
     "cod_bucket": {
       "gm4_metallurgy:item/shamir/infinatas": 100
@@ -304,6 +320,7 @@
       "gm4_end_fishing:item/swords/diamond_sword_28": 18,
       "gm4_end_fishing:item/swords/diamond_sword_29": 19,
       "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_end_fishing:gui/advancement/end_fishing_swords": 21,
       "gm4_metallurgy:item/shamir/ender_bolt": 100,
       "gm4_metallurgy:item/shamir/gemini": 101,
       "gm4_metallurgy:item/shamir/hypexperia": 102,
@@ -315,28 +332,46 @@
       "gm4_tnt_landmines:entity/tnt_landmine_dirt": 0
     },
     "elytra": {
+      "gm4_end_fishing:gui/advancement/end_fishing_phantom": 0,
       "gm4_end_fishing:item/elytra/elytra_10": 1,
       "gm4_end_fishing:item/elytra/elytra_11": 2,
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_metallurgy:item/shamir/moneo": 100
+      "gm4_metallurgy:item/shamir/moneo": 100,
+      "gm4_orb_of_ankou:gui/advancement/orb_of_ankou_soaring_pneuma": 200
     },
     "emerald": {
       "gm4_apple_trees:block/apple_unripe": 0,
+      "gm4_calling_bell:gui/advancement/calling_bell": 1,
       "gm4_end_fishing:item/ores/emerald_10": 2,
       "gm4_end_fishing:item/ores/emerald_11": 3,
       "gm4_end_fishing:item/ores/emerald_12": 4,
       "gm4_end_fishing:item/ores/emerald_13": 5,
       "gm4_end_fishing:item/ores/emerald_14": 6
     },
+    "enchanted_book": {
+      "gm4_book_binders:gui/advancement/book_binders_bind": 0,
+      "gm4_enchantment_extractors:gui/advancement/enchantment_extractors_mending": 1
+    },
     "enchanting_table": {
       "gm4_enchantment_extractors:block/enchantment_extractor": 0,
       "gm4_enchantment_extractors:block/enchantment_extractor_side": 1,
-      "gm4_enchantment_extractors:block/enchantment_extractor_down": 2
+      "gm4_enchantment_extractors:block/enchantment_extractor_down": 2,
+      "gm4_enchantment_extractors:gui/advancement/enchantment_extractors": 3
     },
     "end_portal_frame": {
       "gm4_teleportation_anchors:block/teleportation_anchor": 0
     },
+    "end_rod": {
+      "gm4_teleportation_anchors:gui/advancement/teleportation_jammer": 0
+    },
+    "experience_bottle": {
+      "standard_liquids:gui/advancement/standard_liquids": 0
+    },
+    "firework_rocket": {
+      "gm4_phantom_scarecrows:gui/advancement/phantom_scarecrows": 0
+    },
     "firework_star": {
+      "gm4_everstone:gui/advancement/everstones": 0,
       "gm4_orb_of_ankou:item/orb_of_ankou": 1,
       "gm4_everstone:item/everstone": 2
     },
@@ -381,10 +416,15 @@
       "gm4_orb_of_ankou:item/shards/striding": 232,
       "gm4_orb_of_ankou:item/shards/freezing": 233,
       "gm4_orb_of_ankou:item/shards/feigning": 234,
-      "gm4_orb_of_ankou:item/shards/shrieking": 235
+      "gm4_orb_of_ankou:item/shards/shrieking": 235,
+      "gm4_orb_of_ankou:gui/advancement/orb_of_ankou_soul_shard": 236
     },
     "flint_and_steel": {
-      "gm4_animi_shamir:item/animi_shamir": 20
+      "gm4_animi_shamir:item/animi_shamir": 20,
+      "gm4_orb_of_ankou:gui/advancement/orb_of_ankou_soul_forge": 200
+    },
+    "furnace": {
+      "gm4_smelteries:gui/advancement/smelteries": 0
     },
     "furnace_minecart": {
       "gm4_tunnel_bores:item/piston_minecart": 0
@@ -394,7 +434,12 @@
     },
     "glass_bottle": {
       "gm4_sunken_treasure:item/message_in_a_bottle": 0,
-      "gm4_zauber_cauldrons:item/magic_in_a_bottle": 1
+      "gm4_zauber_cauldrons:item/magic_in_a_bottle": 1,
+      "gm4_sunken_treasure:gui/advancement/sunken_treasure": 2,
+      "gm4_zauber_cauldrons:gui/advancement/zauber_cauldron_drink_multi_use_bottle": 3
+    },
+    "glow_ink_sac": {
+      "gm4_ink_spitting_squid:gui/advancement/glow_ink_spitting_squid": 0
     },
     "gold_ingot": {
       "gm4_end_fishing:item/ores/gold_ingot_10": 1,
@@ -433,6 +478,7 @@
       "gm4_zauber_cauldrons:item/zauber_armor/health/chestplate": 2,
       "gm4_zauber_cauldrons:item/zauber_armor/speed/chestplate": 3,
       "gm4_scuba_gear:item/scuba_tank": 4,
+      "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_full_armor": 5,
       "gm4_iacio_shamir:item/iacio_shamir": 10,
       "gm4_weighted_armour:item/helious_shamir": 11,
       "gm4_animi_shamir:item/animi_shamir": 20,
@@ -506,9 +552,15 @@
     "honey_block": {
       "gm4_liquid_tanks:block/cast_honey_block": 0
     },
+    "hopper": {
+      "gm4_liquid_tanks:gui/advancement/liquid_tanks_create": 0
+    },
     "hopper_minecart": {
       "gm4_ender_hoppers:item/ender_hopper_minecart": 0,
       "gm4_liquid_minecarts:item/liquid_minecart": 1
+    },
+    "ink_sac": {
+      "gm4_ink_spitting_squid:gui/advancement/ink_spitting_squid": 0
     },
     "iron_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
@@ -553,6 +605,7 @@
       "gm4_end_fishing:item/armor/iron_chestplate_19": 9,
       "gm4_iacio_shamir:item/iacio_shamir": 10,
       "gm4_weighted_armour:item/helious_shamir": 11,
+      "gm4_combat_expanded:gui/advancement/combat_expanded_full_set": 12,
       "gm4_animi_shamir:item/animi_shamir": 20,
       "gm4_metallurgy:item/shamir/defuse": 100
     },
@@ -680,11 +733,16 @@
       "gm4_trapped_signs:item/trapped_jungle_sign": 0,
       "gm4_trapped_signs:item/secret_trapped_jungle_sign": 2
     },
+    "ladder": {
+      "gm4_vertical_rails:gui/advancement/vertical_rails": 0
+    },
     "lava_bucket": {
-      "gm4_metallurgy:item/shamir/infinatas": 100
+      "gm4_metallurgy:item/shamir/infinatas": 100,
+      "gm4_metallurgy:gui/advancement/metallurgy_overheat_cast": 101
     },
     "leather_boots": {
       "gm4_scuba_gear:item/flippers": 0,
+      "gm4_boots_of_ostara:gui/advancement/boots_of_ostara": 1,
       "gm4_boots_of_ostara:item/boots_of_ostara": 2,
       "gm4_boots_of_ostara:item/flippers_of_ostara": 3,
       "gm4_desire_lines:item/celaro_shamir": 10,
@@ -710,8 +768,14 @@
       "gm4_animi_shamir:item/animi_shamir": 20,
       "gm4_metallurgy:item/shamir/defuse": 100
     },
+    "lectern": {
+      "gm4_book_binders:gui/advancement/book_binders": 0
+    },
     "lingering_potion": {
       "gm4_lightning_in_a_bottle:item/lingering_lightning_in_a_bottle": 0
+    },
+    "lodestone": {
+      "gm4_teleportation_anchors:gui/advancement/teleportation_anchor": 0
     },
     "mangrove_sign": {
       "gm4_trapped_signs:item/trapped_mangrove_sign": 0,
@@ -719,6 +783,12 @@
     },
     "milk_bucket": {
       "gm4_metallurgy:item/shamir/infinatas": 100
+    },
+    "minecart": {
+      "gm4_ziprails:gui/advancement/ziprails": 0
+    },
+    "name_tag": {
+      "gm4_holographic_tags:gui/advancement/holographic_tags": 0
     },
     "nether_gold_ore": {
       "gm4_smelteries:block/ore_display/nether_gold_ore": 0
@@ -871,6 +941,9 @@
     "netherrack": {
       "gm4_tnt_landmines:entity/tnt_landmine_netherrack": 0
     },
+    "oak_planks": {
+      "gm4_desire_lines:gui/advancement/desire_lines_8000": 0
+    },
     "oak_sapling": {
       "gm4_apple_trees:item/apple_tree_sapling": 4
     },
@@ -882,11 +955,13 @@
       "gm4_tinkering_compressors:block/tinkering_compressor_plate": 0
     },
     "paper": {
+      "gm4_book_binders:gui/advancement/book_binders_debind": 0,
       "gm4_book_binders:item/enchanted_page": 1
     },
     "piston": {
       "gm4_block_compressors:gui/advancement/block_compressors": 0,
       "gm4_forming_press:block/forming_press": 1,
+      "gm4_tunnel_bores:gui/advancement/tunnel_bores": 2,
       "gm4_forming_press:block/forming_press_side": 6,
       "gm4_forming_press:block/forming_press_down": 7
     },
@@ -938,6 +1013,12 @@
       "gm4_tnt_landmines:item/tnt_landmine_stone": 44,
       "gm4_scuba_gear:item/scuba_helmet": 45,
       "gm4_scuba_gear:gui/advancement/scuba_gear": 46,
+      "gm4_enderman_support_class:gui/advancement/enderman_support_class": 47,
+      "gm4_heart_canisters:gui/advancement/heart_canisters_tier_1": 48,
+      "gm4_heart_canisters:gui/advancement/heart_canisters_tier_2": 49,
+      "gm4_heart_canisters:gui/advancement/heart_canisters_max": 50,
+      "gm4_relocators:gui/advancement/relocators": 51,
+      "gm4_tinkering_compressors:gui/advancement/tinkering_compressors": 52,
       "gm4_relocators:item/relocator_full": 61,
       "gm4_metallurgy:item/band/defuse_band": 100,
       "gm4_metallurgy:item/band/moneo_band": 101,
@@ -953,15 +1034,25 @@
       "gm4_metallurgy:item/band/ender_bolt_band": 111,
       "gm4_metallurgy:item/band/mundane_band": 112,
       "gm4_percurro_shamir:item/percurro_band": 113,
+      "gm4_metallurgy:gui/advancement/metallurgy_blast_ore": 114,
+      "gm4_metallurgy:gui/advancement/metallurgy_cast": 115,
       "gm4_forming_press:item/forming_press": 129,
       "gm4_disassemblers:item/disassembler": 135,
       "gm4_orb_of_ankou:item/corripio_band": 200
+    },
+    "poisonous_potato": {
+      "gm4_chairs:gui/advancement/chairs_sit": 0
+    },
+    "poppy": {
+      "gm4_sweethearts:gui/advancement/sweethearts": 0
     },
     "potion": {
       "gm4_lightning_in_a_bottle:item/lightning_in_a_bottle": 0,
       "gm4_zauber_cauldrons:item/wormhole_in_a_bottle": 1,
       "gm4_standard_liquids:item/ink_bottle": 2,
-      "gm4_standard_liquids:item/glow_ink_bottle": 3
+      "gm4_standard_liquids:item/glow_ink_bottle": 3,
+      "gm4_lightning_in_a_bottle:gui/advancement/lightning_in_a_bottle_drink": 4,
+      "gm4_potion_liquids:gui/advancement/potion_liquids": 5
     },
     "powder_snow_bucket": {
       "gm4_metallurgy:item/shamir/infinatas": 100
@@ -973,10 +1064,14 @@
       "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "purpur_block": {
+      "gm4_lightning_in_a_bottle:gui/advancement/lightning_in_a_bottle_shulker": 0,
       "gm4_block_compressors:block/block_compressor_plate": 2
     },
     "purpur_pillar": {
       "gm4_teleportation_anchors:block/teleportation_jammer": 0
+    },
+    "rabbit_foot": {
+      "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_rabbit": 0
     },
     "rabbit_hide": {
       "gm4_bat_grenades:item/bat_leather": 2
@@ -1002,8 +1097,14 @@
     "recovery_compass": {
       "gm4_animi_shamir:item/animi_shamir": 20
     },
+    "red_mushroom": {
+      "gm4_shroomites:gui/advancement/shroomites": 0
+    },
     "red_sand": {
       "gm4_smelteries:block/ore_display/red_sand": 0
+    },
+    "saddle": {
+      "gm4_pig_tractors:gui/advancement/pig_tractors": 0
     },
     "salmon_bucket": {
       "gm4_metallurgy:item/shamir/infinatas": 100
@@ -1012,16 +1113,22 @@
       "gm4_smelteries:block/ore_display/sand": 0
     },
     "shears": {
+      "gm4_tnt_landmines:gui/advancement/tnt_landmines": 0,
       "gm4_animi_shamir:item/animi_shamir": 20,
       "gm4_metallurgy:item/shamir/moneo": 100
     },
     "shield": {
       "gm4_vigere_shamir:item/vigere_shamir": 0,
+      "gm4_combat_expanded:gui/advancement/combat_expanded_guardian": 1,
       "gm4_animi_shamir:item/animi_shamir": 20
     },
     "snowball": {},
+    "spawner": {
+      "gm4_spawner_minecarts:gui/advancement/spawner_minecarts": 0
+    },
     "splash_potion": {
-      "gm4_lightning_in_a_bottle:item/splash_lightning_in_a_bottle": 0
+      "gm4_lightning_in_a_bottle:item/splash_lightning_in_a_bottle": 0,
+      "gm4_display_frames:gui/advancement/display_frames": 1
     },
     "spruce_sign": {
       "gm4_trapped_signs:item/trapped_spruce_sign": 0,
@@ -1085,6 +1192,7 @@
     "tnt": {
       "gm4_tnt_landmines:entity/tnt_landmine": 0,
       "gm4_disassemblers:block/disassembler": 1,
+      "gm4_disassemblers:gui/advancement/disassemblers": 2,
       "gm4_disassemblers:block/disassembler_side": 5,
       "gm4_disassemblers:block/disassembler_down": 6
     },
@@ -1094,7 +1202,11 @@
       "gm4_metallurgy:item/shamir/gemini": 101,
       "gm4_percurro_shamir:item/percurro_shamir": 104
     },
+    "tripwire_hook": {
+      "gm4_crossbow_cartridges:gui/advancement/crossbow_cartridges_string": 0
+    },
     "tropical_fish_bucket": {
+      "gm4_crossbow_cartridges:gui/advancement/crossbow_cartridges_bucket": 0,
       "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "turtle_helmet": {
@@ -1155,6 +1267,9 @@
     },
     "written_book": {
       "gm4_guidebook:item/guidebook": 0
+    },
+    "zombie_head": {
+      "gm4_undead_players:gui/advancement/undead_players": 0
     }
   },
   "allocations": {

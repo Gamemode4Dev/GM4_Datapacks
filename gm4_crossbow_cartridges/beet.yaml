@@ -23,7 +23,7 @@ meta:
       Icon Design:
         - Sparks
     model_data:
-      - item: tropial_fish_bucket
+      - item: tropical_fish_bucket
         reference: gui/advancement/crossbow_cartridges_bucket
         template: advancement
       - item: tripwire_hook

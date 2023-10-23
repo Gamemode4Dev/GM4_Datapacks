@@ -45,6 +45,11 @@ meta:
             scale: [0.5, 0.5, 0.5]
       - item: player_head
         reference: block/tinkering_compressor_full
+      - item: player_head
+        reference: gui/advancement/tinkering_compressors
+        template:
+          name: advancement
+          forward: block/tinkering_compressor_full
     website:
       description: Automatically compress stacks of items into their block form with a tinker shamir as a machine block, and back.
       recommended:

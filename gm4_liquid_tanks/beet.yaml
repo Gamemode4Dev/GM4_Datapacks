@@ -46,6 +46,9 @@ meta:
         template: 
           name: advancement
           forward: item/liquid_tank_full
+      - item: experience_bottle
+        reference: standard_liquids:gui/advancement/standard_liquids
+        template: advancement
     website:
       description: Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!
       recommended:

@@ -23,6 +23,11 @@ meta:
       - item: hopper_minecart
         reference: item/liquid_minecart
         template: generated
+      - item: hopper_minecart
+        reference: gui/advancement/liquid_minecarts_create
+        template:
+          name: advancement
+          forward: item/liquid_minecart
     website:
       description: Adds Liquid Tank Minecarts that allow you to move your liquids from one Liquid Tank to another.
       recommended:

@@ -24,6 +24,11 @@ meta:
       - item: furnace_minecart
         reference: item/piston_minecart
         template: generated
+      - item: piston
+        reference: gui/advancement/tunnel_bores
+        template:
+          name: advancement
+          forward: item/piston_minecart
     website:
       description: Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3⨉3 tunnels, and even lay rails behind themselves.
       recommended:

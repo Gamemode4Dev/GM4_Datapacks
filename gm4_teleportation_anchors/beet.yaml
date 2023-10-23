@@ -40,6 +40,16 @@ meta:
       - item: purpur_pillar
         reference: block/teleportation_jammer
         template: custom
+      - item: end_rod
+        reference: gui/advancement/teleportation_jammer
+        template:
+          name: advancement
+          forward: block/teleportation_jammer
+      - item: lodestone
+        reference: gui/advancement/teleportation_anchor
+        template:
+          name: advancement
+          forward: block/teleportation_anchor
     website:
       description: Suppress and control chorus-based teleportation!
       recommended:

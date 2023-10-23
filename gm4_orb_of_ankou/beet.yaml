@@ -146,3 +146,11 @@ meta:
       - item: flint_and_steel
         reference: gui/advancement/orb_of_ankou_soul_forge
         template: advancement
+      - item: nether_star
+        reference: gui/advancement/orb_of_ankou_all_pneumas
+        template: advancement
+      - item: firework_star
+        reference: gui/advancement/orb_of_ankou_max_orb
+        template:
+          name: advancement
+          forward: item/orb_of_ankou

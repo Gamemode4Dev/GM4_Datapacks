@@ -27,6 +27,11 @@ meta:
           - reference: item/shipwreck_supply
           - reference: item/shipwreck_treasure
           - reference: item/treasure_chest
+      - item: glass_bottle
+        reference: gui/advancement/sunken_treasure
+        template:
+          name: advancement
+          forward: item/message_in_a_bottle
     website:
       description: Digging sand underwater with a fortune tool can uncover buried treasures, or a nasty surprise! Who knows, maybe you'll even find some old love letters.
       recommended:

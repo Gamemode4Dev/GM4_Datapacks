@@ -15,6 +15,10 @@ meta:
       required:
         - lib_trades: 1.3.0
       schedule_loops: [main]
+    model_data:
+      - item: potion
+        reference: gui/advancement/mob_curing
+        template: advancement
     website:
       description: Revert mooshrooms, pigmen and witches back to their previous forms.
       recommended:

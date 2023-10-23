@@ -14,6 +14,10 @@ meta:
     versioning:
       required:
         - lib_custom_crafters: 3.0.0
+    model_data:
+      - item: music_disc_13
+        reference: gui/advancement/record_crafting
+        template: advancement
     website:
       description: A crafting recipe pack that lets you craft all the records in a Custom Crafter.
       recommended:

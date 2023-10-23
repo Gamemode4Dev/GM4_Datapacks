@@ -84,6 +84,11 @@ meta:
       - item: sand
         template: smelteries:ore_display
         reference: block/ore_display/sand
+      - item: furnace
+        reference: gui/advancement/smelteries
+        template:
+          name: advancement
+          forward: block/smeltery_unlit
     website:
       description: Build a Smeltery and double your ore output with this multi-block structure.
       recommended:

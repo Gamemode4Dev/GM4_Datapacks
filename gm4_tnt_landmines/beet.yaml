@@ -52,6 +52,9 @@ meta:
             reference: entity/tnt_landmine_stone_bricks
           - item: stone
             reference: entity/tnt_landmine_stone
+      - item: shears
+        reference: gui/advancement/tnt_landmines
+        template: advancement
     website:
       description: Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!
       recommended: []
