@@ -4,6 +4,7 @@ import sys
 from functools import cached_property
 from typing import Any, Callable, Optional, Literal, ClassVar, Type
 from itertools import cycle
+from fnmatch import fnmatch
 from copy import deepcopy
 import numpy as np
 
@@ -344,7 +345,11 @@ class GM4ResourcePack():
     
     def find_new_index(self, item_ids: list[str], reference: str):
         """finds the next available CMD value for the given items and applies it to the registry"""
-        l, u = self.registry["allocations"].get(self.ctx.project_id, (0,99)) # FIXME what happens when the default allocation fills up
+        try:
+            allocation_id = next(filter(lambda k: fnmatch(self.ctx.project_id, k), self.registry["allocations"].keys())) #type: ignore ; type checker thinks 'k' is _T@next, not str
+        except StopIteration:
+            allocation_id = None
+        l, u = self.registry["allocations"].get(allocation_id, (0,99)) # FIXME what happens when the default allocation fills up
         available_indices = set(range(l, u+1))
 
         for item_id in item_ids:

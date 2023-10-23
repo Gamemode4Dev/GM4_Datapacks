@@ -155,10 +155,10 @@
     "diamond_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/moneo": 100,
       "gm4_metallurgy:item/shamir/arborenda": 101,
-      "gm4_metallurgy:item/shamir/hypexperia": 102
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_percurro_shamir:item/percurro_shamir": 104
     },
     "diamond_boots": {
       "gm4_end_fishing:item/armor/diamond_boots_10": 0,
@@ -297,11 +297,11 @@
       "gm4_end_fishing:item/swords/diamond_sword_28": 18,
       "gm4_end_fishing:item/swords/diamond_sword_29": 19,
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/ender_bolt": 100,
       "gm4_metallurgy:item/shamir/gemini": 101,
       "gm4_metallurgy:item/shamir/hypexperia": 102,
       "gm4_metallurgy:item/shamir/tinker": 103,
+      "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "dirt": {
@@ -403,10 +403,10 @@
     "golden_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/moneo": 100,
       "gm4_metallurgy:item/shamir/arborenda": 101,
-      "gm4_metallurgy:item/shamir/hypexperia": 102
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_percurro_shamir:item/percurro_shamir": 104
     },
     "golden_boots": {
       "gm4_sunken_treasure:item/waders": 0,
@@ -482,11 +482,11 @@
     },
     "golden_sword": {
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/ender_bolt": 100,
       "gm4_metallurgy:item/shamir/gemini": 101,
       "gm4_metallurgy:item/shamir/hypexperia": 102,
       "gm4_metallurgy:item/shamir/tinker": 103,
+      "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "grass_block": {
@@ -505,10 +505,10 @@
     "iron_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/moneo": 100,
       "gm4_metallurgy:item/shamir/arborenda": 101,
-      "gm4_metallurgy:item/shamir/hypexperia": 102
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_percurro_shamir:item/percurro_shamir": 104
     },
     "iron_block": {
       "gm4_smelteries:block/smeltery_unlit": 0,
@@ -661,11 +661,11 @@
       "gm4_end_fishing:item/swords/iron_sword_28": 18,
       "gm4_end_fishing:item/swords/iron_sword_29": 19,
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/ender_bolt": 100,
       "gm4_metallurgy:item/shamir/gemini": 101,
       "gm4_metallurgy:item/shamir/hypexperia": 102,
       "gm4_metallurgy:item/shamir/tinker": 103,
+      "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "jungle_sign": {
@@ -717,10 +717,10 @@
     "netherite_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/moneo": 100,
       "gm4_metallurgy:item/shamir/arborenda": 101,
-      "gm4_metallurgy:item/shamir/hypexperia": 102
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_percurro_shamir:item/percurro_shamir": 104
     },
     "netherite_boots": {
       "gm4_end_fishing:item/armor/netherite_boots_10": 0,
@@ -852,11 +852,11 @@
       "gm4_end_fishing:item/swords/netherite_sword_28": 18,
       "gm4_end_fishing:item/swords/netherite_sword_29": 19,
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/ender_bolt": 100,
       "gm4_metallurgy:item/shamir/gemini": 101,
       "gm4_metallurgy:item/shamir/hypexperia": 102,
       "gm4_metallurgy:item/shamir/tinker": 103,
+      "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "netherrack": {
@@ -926,7 +926,6 @@
       "gm4_fulcio_shamir:item/fulcio_band": 38,
       "gm4_vigere_shamir:item/vigere_band": 39,
       "gm4_lumos_shamir:item/lumos_band": 40,
-      "gm4_percurro_shamir:item/percurro_band": 41,
       "gm4_relocators:item/relocator_full": 61,
       "gm4_metallurgy:item/band/defuse_band": 100,
       "gm4_metallurgy:item/band/moneo_band": 101,
@@ -941,6 +940,7 @@
       "gm4_metallurgy:item/band/vibro_band": 110,
       "gm4_metallurgy:item/band/ender_bolt_band": 111,
       "gm4_metallurgy:item/band/mundane_band": 112,
+      "gm4_percurro_shamir:item/percurro_band": 113,
       "gm4_forming_press:item/forming_press": 129,
       "gm4_disassemblers:item/disassembler": 135,
       "gm4_orb_of_ankou:item/corripio_band": 200
@@ -1026,10 +1026,10 @@
     "stone_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/moneo": 100,
       "gm4_metallurgy:item/shamir/arborenda": 101,
-      "gm4_metallurgy:item/shamir/hypexperia": 102
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_percurro_shamir:item/percurro_shamir": 104
     },
     "stone_bricks": {
       "gm4_tnt_landmines:entity/tnt_landmine_stone_bricks": 0
@@ -1060,11 +1060,11 @@
     },
     "stone_sword": {
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/ender_bolt": 100,
       "gm4_metallurgy:item/shamir/gemini": 101,
       "gm4_metallurgy:item/shamir/hypexperia": 102,
       "gm4_metallurgy:item/shamir/tinker": 103,
+      "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "tadpole_bucket": {
@@ -1078,9 +1078,9 @@
     },
     "trident": {
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/ender_bolt": 100,
-      "gm4_metallurgy:item/shamir/gemini": 101
+      "gm4_metallurgy:item/shamir/gemini": 101,
+      "gm4_percurro_shamir:item/percurro_shamir": 104
     },
     "tropical_fish_bucket": {
       "gm4_metallurgy:item/shamir/infinatas": 100
@@ -1103,10 +1103,10 @@
     "wooden_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/moneo": 100,
       "gm4_metallurgy:item/shamir/arborenda": 101,
-      "gm4_metallurgy:item/shamir/hypexperia": 102
+      "gm4_metallurgy:item/shamir/hypexperia": 102,
+      "gm4_percurro_shamir:item/percurro_shamir": 104
     },
     "wooden_hoe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
@@ -1134,11 +1134,11 @@
     },
     "wooden_sword": {
       "gm4_animi_shamir:item/animi_shamir": 20,
-      "gm4_percurro_shamir:item/percurro_shamir": 21,
       "gm4_metallurgy:item/shamir/ender_bolt": 100,
       "gm4_metallurgy:item/shamir/gemini": 101,
       "gm4_metallurgy:item/shamir/hypexperia": 102,
       "gm4_metallurgy:item/shamir/tinker": 103,
+      "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "written_book": {
@@ -1153,6 +1153,10 @@
     "gm4_orb_of_ankou": [
       200,
       299
+    ],
+    "*_shamir": [
+      100,
+      199
     ]
   }
 }
