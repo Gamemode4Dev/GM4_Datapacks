@@ -5,9 +5,10 @@
 
 scoreboard players set $evaluate gm4_bookshelf_nametags_data 1
 
-# check often used transportation methods for movement to skip costly player nbt checks
+# check often used transportation methods for movement to skip costly nbt checks
 execute if score @s gm4_bookshelf_nametags_walk matches 1.. run scoreboard players set $evaluate gm4_bookshelf_nametags_data -1
 execute if score @s gm4_bookshelf_nametags_sprint matches 1.. run scoreboard players set $evaluate gm4_bookshelf_nametags_data -1
+execute if score @s gm4_bookshelf_nametags_dall matches 1.. run scoreboard players set $evaluate gm4_bookshelf_nametags_data -1
 
 # check if player has motion
 execute if score $evaluate gm4_bookshelf_nametags_data matches 1 run function gm4_bookshelf_nametags:evaluate/motion
@@ -19,3 +20,4 @@ execute if score $evaluate gm4_bookshelf_nametags_data matches -1 run scoreboard
 # cleanup scores
 scoreboard players reset @s gm4_bookshelf_nametags_walk
 scoreboard players reset @s gm4_bookshelf_nametags_sprint
+scoreboard players reset @s gm4_bookshelf_nametags_fall

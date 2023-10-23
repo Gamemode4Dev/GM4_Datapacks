@@ -4,6 +4,7 @@
 # run from process_display/spawn/decide_name
 
 # create array of all enchantments with levels
+scoreboard players set $enchantments_max gm4_bookshelf_nametags_data 3
 data modify storage gm4_bookshelf_nametags:temp enchantments set from storage gm4_bookshelf_nametags:temp book_data.tag.StoredEnchantments
 data modify storage gm4_bookshelf_nametags:store enchantment_list set value []
 function gm4_bookshelf_nametags:process_display/spawn/process_enchantments

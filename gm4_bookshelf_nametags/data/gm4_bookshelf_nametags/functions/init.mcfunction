@@ -10,6 +10,7 @@ scoreboard objectives add gm4_bookshelf_nametags_keep dummy
 scoreboard objectives add gm4_bookshelf_nametags_display_state dummy
 scoreboard objectives add gm4_bookshelf_nametags_walk custom:walk_one_cm
 scoreboard objectives add gm4_bookshelf_nametags_sprint custom:sprint_one_cm
+scoreboard objectives add gm4_bookshelf_nametags_fall custom:fall_one_cm
 
 scoreboard players set #100 gm4_bookshelf_nametags_data 100
 

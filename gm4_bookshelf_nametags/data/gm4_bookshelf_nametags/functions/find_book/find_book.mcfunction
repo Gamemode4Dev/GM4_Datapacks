@@ -30,7 +30,7 @@ execute if score $book_slot gm4_bookshelf_nametags_data matches 5 run data modif
 
 # check if slot actually has a book, otherwise stop the function
 # this does not fail evaluation, so there is no delay in case the player is scanning over a half-filled bookshelf
-execute unless data storage gm4_bookshelf_nametags:temp book_data run return 0
+execute unless data storage gm4_bookshelf_nametags:temp book_data.id run return 0
 
 # find top-left location of this chiseled bookshelf
 # 1=north / 2=south / 3=west / 4=east (this is facing direction, so you look against the opposite side of the block)

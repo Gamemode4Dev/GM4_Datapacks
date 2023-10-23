@@ -1,7 +1,7 @@
 # transform enchantment id and lvl into displayable text
 # @s = text display
 # at chiseled bookshelf, selected book slot
-# run from process_display/spawn/list_enchantments
+# run from process_display/spawn/process_enchantments
 # with $id = id of the enchantment with "minecract." stripped off
 # with $lvl = level of the enchantment as integer
 

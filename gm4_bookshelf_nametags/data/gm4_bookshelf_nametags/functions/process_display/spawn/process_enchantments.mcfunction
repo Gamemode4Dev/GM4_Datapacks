@@ -15,6 +15,9 @@ function gm4_bookshelf_nametags:process_display/spawn/eval_enchantment with stor
 # cleanup
 data remove storage gm4_bookshelf_nametags:temp new_enchant
 
-# repeat for each enchant on the book
+# repeat for each enchant on the book, max 3
+scoreboard players remove $enchantments_max gm4_bookshelf_nametags_data 1
 data remove storage gm4_bookshelf_nametags:temp enchantments[0]
-execute if data storage gm4_bookshelf_nametags:temp enchantments[0] run function gm4_bookshelf_nametags:process_display/spawn/process_enchantments
+execute if score $enchantments_max gm4_bookshelf_nametags_data matches 0 store result score $enchantment_count gm4_bookshelf_nametags_data run data get storage gm4_bookshelf_nametags:temp enchantments
+execute if score $enchantments_max gm4_bookshelf_nametags_data matches 0 if score $enchantment_count gm4_bookshelf_nametags_data matches 1.. run data modify storage gm4_bookshelf_nametags:store enchantment_list append value '{"translate":"container.shulkerBox.more","with":[{"score":{"name":"$enchantment_count","objective":"gm4_bookshelf_nametags_data"}}]}'
+execute if score $enchantments_max gm4_bookshelf_nametags_data matches 1.. if data storage gm4_bookshelf_nametags:temp enchantments[0] run function gm4_bookshelf_nametags:process_display/spawn/process_enchantments

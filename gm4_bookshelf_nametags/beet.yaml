@@ -13,11 +13,11 @@ meta:
     versioning:
       schedule_loops: [main]
     website:
-      description: WIP!
+      description: See what's in your Chiseled Bookshelves without having to take all the books out!
       recommended: []
       notes: []
     video: null
-    wiki: https://wiki.gm4.co/wiki/Bookshelf_Readeing
+    wiki: https://wiki.gm4.co/wiki/Bookshelf_Nametags
     credits:
       Creator:
         - Thanathor
