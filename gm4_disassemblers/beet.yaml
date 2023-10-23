@@ -46,6 +46,11 @@ meta:
               top: block/disassembler_top
               front: block/disassembler_side
               side: block/disassembler_side
+      - item: tnt
+        reference: gui/advancement/disassemblers
+        template:
+          name: advancement
+          forward: block/disassembler
     website:
       description: Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!
       recommended:

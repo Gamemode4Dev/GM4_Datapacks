@@ -128,3 +128,21 @@ meta:
           name: shamir
           metal: bismuth
           textures_path: gm4_metallurgy:item/shamir/bismuth
+      - item: black_dye
+        reference: gui/advancement/orb_of_ankou_soul_essence
+        template:
+          name: advancement
+          forward: item/essences/lifeless
+      - item: elytra
+        reference: gui/advancement/orb_of_ankou_soaring_pneuma
+        template:
+          name: advancement
+          forward: item/essences/soaring
+      - item: flint
+        reference: gui/advancement/orb_of_ankou_soul_shard
+        template:
+          name: advancement
+          forward: item/shards/lifeless
+      - item: flint_and_steel
+        reference: gui/advancement/orb_of_ankou_soul_forge
+        template: advancement

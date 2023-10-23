@@ -27,6 +27,12 @@ meta:
           name: shamir
           metal: aluminium
           textures_path: gm4_metallurgy:item/shamir/aluminium
+      - item: coarse_dirt
+        reference: gui/advancement/desire_lines_10000
+        template: advancement
+      - item: oak_planks
+        reference: gui/advancement/desire_lines_8000
+        template: advancement
     website:
       description: Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!
       recommended:

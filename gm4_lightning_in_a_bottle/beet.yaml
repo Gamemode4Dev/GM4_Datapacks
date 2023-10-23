@@ -31,6 +31,14 @@ meta:
             reference: item/lingering_lightning_in_a_bottle
           - item: splash_potion
             reference: item/splash_lightning_in_a_bottle
+      - item: potion
+        reference: gui/advancement/lightning_in_a_bottle_drink
+        template:
+          name: advancement
+          forward: item/lightning_in_a_bottle
+      - item: purpur_block
+        reference: gui/advancement/lightning_in_a_bottle_shulker
+        template: advancement
     website:
       description: Bottle and harness the power of lightning using Brewing Stands! Lightning in a Bottle comes in splash and lingering variants, too.
       recommended:

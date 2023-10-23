@@ -24,6 +24,11 @@ meta:
         reference: item/relocator_empty
       - item: player_head
         reference: item/relocator_full
+      - item: player_head
+        reference: gui/advancement/relocators
+        template:
+          name: advancement
+          forward: item/relocator_empty
     website:
       description: Craft Relocators to pick up and move containers such as chests and Custom Crafters.
       recommended:

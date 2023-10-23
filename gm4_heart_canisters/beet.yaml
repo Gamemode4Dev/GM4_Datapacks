@@ -26,6 +26,18 @@ meta:
         broadcast:
           - reference: item/heart_canister_tier_1
           - reference: item/heart_canister_tier_2
+      - item: player_head
+        reference: gui/advancement/heart_canisters_tier_1
+        template:
+          name: advancement
+          forward: item/heart_canister_tier_1
+      - item: player_head
+        template:
+          name: advancement
+          forward: item/heart_canister_tier_2
+        broadcast:
+          - reference: gui/advancement/heart_canisters_tier_2
+          - reference: gui/advancement/heart_canisters_max
     website:
       description: Introduces two tiers of pricey canisters that increase your health when carried.
       recommended:

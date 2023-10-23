@@ -160,3 +160,16 @@ meta:
           name: shamir
           metal: curies_bismium
           textures_path: item/shamir/curies_bismium
+      - item: lava_bucket
+        reference: gui/advancement/metallurgy_overheat_cast
+        template: advancement
+      - item: player_head
+        reference: gui/advancement/metallurgy_blast_ore
+        template:
+          name: advancement
+          forward: item/lump/bauxite_lump
+      - item: player_head
+        reference: gui/advancement/metallurgy_cast
+        template:
+          name: advancement
+          forward: item/band/defuse_band

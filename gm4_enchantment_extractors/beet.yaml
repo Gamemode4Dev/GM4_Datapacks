@@ -51,6 +51,14 @@ meta:
               top: block/enchantment_extractor_top
               bottom: block/enchantment_extractor_bottom
               front: block/enchantment_extractor_side
+      - item: enchanted_book
+        reference: gui/advancement/enchantment_extractors_mending
+        template: advancement
+      - item: enchanting_table
+        reference: gui/advancement/enchantment_extractors
+        template:
+          name: advancement
+          forward: block/enchantment_extractor
     website:
       description: Remove enchantments from enchanted tools, armour, and weapons. But be careful, there might be unexpected side-effects.
       recommended:

@@ -15,6 +15,10 @@ meta:
       required:
         - gm4_liquid_tanks: 2.1.0
         - lib_brewing: 1.0.0
+    model_data:
+      - item: potion
+        reference: gui/advancement/potion_liquids
+        template: advancement
     website:
       description: Adds the ability to store potions in Liquid Tanks! You can also use a potion by walking beneath a potion-filled Liquid Tank.
       recommended: []

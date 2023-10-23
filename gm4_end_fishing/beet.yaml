@@ -40,7 +40,16 @@ meta:
             model: item/elytra/elytra_11
           - predicate: {broken: 1}
             model: item/elytra/broken_elytra_11
-
+      - item: diamond_sword
+        reference: gui/advancement/end_fishing_swords
+        template:
+          name: advancement
+          forward: item/swords/diamond_sword_22
+      - item: elytra
+        reference: gui/advancement/end_fishing_phantom
+        template:
+          name: advancement
+          forward: item/elytra/broken_elytra_11
     website:
       description: Catch rare loot by fishing in the end void! The void holds many riches, from End City loot and Elytra to weapons that once belonged to explorers time forgot, collect them all!
       recommended:

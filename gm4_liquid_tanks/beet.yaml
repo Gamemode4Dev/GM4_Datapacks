@@ -41,6 +41,11 @@ meta:
         broadcast:
           - reference: gm4_standard_liquids:item/ink_bottle
           - reference: gm4_standard_liquids:item/glow_ink_bottle
+      - item: hopper
+        reference: gui/advancement/liquid_tanks_create
+        template: 
+          name: advancement
+          forward: item/liquid_tank_full
     website:
       description: Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!
       recommended:
