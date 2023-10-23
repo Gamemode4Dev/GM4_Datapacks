@@ -7,6 +7,10 @@ def beet_default(ctx: Context):
 	"""Writes the pack.mcmeta based on the module name and version."""
 	version = os.getenv("VERSION", "1.20")
 	ctx.data.pack_format = 15 # manually set as beet's `latest` is not available for 1.20 at this time.
+	ctx.data.supported_formats = {
+		"min_inclusive": 15,
+		"max_inclusive": 18
+	}
 	ctx.data.description = [
 		ctx.project_name,
 		"\n",
