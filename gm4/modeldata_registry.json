@@ -7,6 +7,9 @@
     "apple": {
       "gm4_apple_trees:block/apple_unripe": 0
     },
+    "armor_stand": {
+      "gm4_better_armour_stands:gui/advancement/better_armour_stands": 0
+    },
     "axolotl_bucket": {
       "gm4_metallurgy:item/shamir/infinatas": 100
     },
@@ -17,6 +20,9 @@
     "birch_sign": {
       "gm4_trapped_signs:item/trapped_birch_sign": 0,
       "gm4_trapped_signs:item/secret_trapped_birch_sign": 2
+    },
+    "birch_stairs": {
+      "gm4_chairs:gui/advancement/chairs_creation": 0
     },
     "black_dye": {
       "gm4_orb_of_ankou:item/essences/aggressive": 200,
@@ -493,7 +499,8 @@
       "gm4_tnt_landmines:entity/tnt_landmine_grass": 0
     },
     "gunpowder": {
-      "gm4_tnt_landmines:item/soft_defuser": 0
+      "gm4_tnt_landmines:item/soft_defuser": 0,
+      "gm4_bat_grenades:gui/advancement/bat_grenades": 1
     },
     "honey_block": {
       "gm4_liquid_tanks:block/cast_honey_block": 0
@@ -876,16 +883,13 @@
       "gm4_book_binders:item/enchanted_page": 1
     },
     "piston": {
+      "gm4_block_compressors:gui/advancement/block_compressors": 0,
       "gm4_forming_press:block/forming_press": 1,
       "gm4_forming_press:block/forming_press_side": 6,
       "gm4_forming_press:block/forming_press_down": 7
     },
     "player_head": {
       "gm4_zauber_cauldrons:item/crystal/harming": 0,
-      "gm4_tnt_landmines:item/tnt_landmine_stone": 0,
-      "gm4_liquid_tanks:item/liquid_tank": 0,
-      "gm4_ender_hoppers:block/ender_hopper": 0,
-      "gm4_ender_hoppers:item/ender_hopper": 0,
       "gm4_zauber_cauldrons:item/crystal/health": 1,
       "gm4_zauber_cauldrons:item/crystal/leaping": 2,
       "gm4_zauber_cauldrons:item/crystal/poison": 3,
@@ -926,6 +930,10 @@
       "gm4_fulcio_shamir:item/fulcio_band": 38,
       "gm4_vigere_shamir:item/vigere_band": 39,
       "gm4_lumos_shamir:item/lumos_band": 40,
+      "gm4_ender_hoppers:block/ender_hopper": 41,
+      "gm4_ender_hoppers:item/ender_hopper": 42,
+      "gm4_liquid_tanks:item/liquid_tank": 43,
+      "gm4_tnt_landmines:item/tnt_landmine_stone": 44,
       "gm4_relocators:item/relocator_full": 61,
       "gm4_metallurgy:item/band/defuse_band": 100,
       "gm4_metallurgy:item/band/moneo_band": 101,

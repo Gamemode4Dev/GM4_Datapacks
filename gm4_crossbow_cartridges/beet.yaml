@@ -22,6 +22,13 @@ meta:
         - Nik3141
       Icon Design:
         - Sparks
+    model_data:
+      - item: tropial_fish_bucket
+        reference: gui/advancement/crossbow_cartridges_bucket
+        template: advancement
+      - item: tripwire_hook
+        reference: gui/advancement/crossbow_cartridges_string
+        template: advancement
   modrinth:
     project_id: E7M57BNU
   smithed:

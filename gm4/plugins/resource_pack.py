@@ -114,6 +114,7 @@ class ModelData(BaseModel):
                 ret_dict["textures"] = [add_namespace(t, namespace) for t in self.textures.entries()]
             else: # isinstance(self.textures.__root__, dict):
                 ret_dict["textures"] = {k: add_namespace(v, namespace) for k, v in self.textures.items()}
+        ret_dict["template"] = self.template.add_namespace(namespace) # type: ignore ; pydantic validation ensures type is TemplateBase
         return ModelData.parse_obj(ret_dict)
     
 class NestedModelData(BaseModel):
@@ -203,6 +204,10 @@ class TemplateOptions(BaseModel, extra=Extra.allow):
     def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         """Overridden to create and mount the model object, and return pointers to them"""
         raise NotImplementedError()
+    
+    def add_namespace(self, namespace: str):
+        """Overridden to add namespace data to sub-config fields added by a template"""
+        return self.dict()
 
 class TransformOptions(BaseModel, extra=Extra.allow):
     """A pydantic model to extend for configured model transformers, which add model offset/scale ect.. to model files"""
@@ -508,6 +513,24 @@ class BlockTemplate(TemplateOptions):
             }
         })
         return [m]
+    
+class AdvancementIconTemplate(TemplateOptions):
+    name = "advancement"
+    forward: Optional[str]
+
+    # NOTE since advancements are all in the gm4 namespace, so are these models. This template ignores the 'model' field of ModelData
+    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+        advancement_name = config.reference.split("/")[-1]
+        if not self.forward:
+            self.forward = f"minecraft:item/{config.item.entries()[0]}"
+        m = models_container[f"gm4:gui/advancements/{advancement_name}"] = Model({
+            "parent": self.forward
+        })
+        config.model = MapOption(__root__={config.item.entries()[0]: f"gm4:gui/advancements/{advancement_name}"})
+        return [m]
+    
+    def add_namespace(self, namespace: str):
+        return self.dict() | ({"forward": add_namespace(self.forward, namespace)} if self.forward else {})
 
 class ItemDisplayModel(TransformOptions):
     """Calculates the model transform for an item_display entity, located at the specified origin, facing south, for the model to align with the block-grid"""

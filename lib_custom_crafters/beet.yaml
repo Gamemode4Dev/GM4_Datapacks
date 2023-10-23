@@ -60,6 +60,11 @@ meta:
               top: block/custom_crafter_top
               front: block/custom_crafter_side
               side: block/custom_crafter_side
+      - item: crafting_table
+        reference: gui/advancement/custom_crafters
+        template: 
+          name: advancement
+          forward: block/custom_crafter
     credits:
       Custom Crafters Creators:
         - Bloo

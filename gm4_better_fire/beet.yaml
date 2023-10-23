@@ -35,3 +35,8 @@ meta:
       - item: flint
         reference: item/charred_arrowhead
         template: generated
+      - item: bow
+        reference: gui/advancement/better_fire
+        template:
+          name: advancement
+          forward: minecraft:item/bow

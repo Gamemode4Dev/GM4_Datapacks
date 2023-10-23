@@ -33,6 +33,11 @@ meta:
       - item: rabbit_hide
         reference: item/bat_leather
         template: generated
+      - item: gunpowder
+        reference: gui/advancement/bat_grenades
+        template:
+          name: advancement
+          forward: item/bat_leather
   modrinth: 
     project_id: qWQqEQMY
   smithed:

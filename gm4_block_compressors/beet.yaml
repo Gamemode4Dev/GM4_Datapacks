@@ -44,6 +44,11 @@ meta:
             scale: [0.5, 0.5, 0.5]
       - item: player_head
         reference: block/block_compressor_full
+      - item: piston
+        reference: gui/advancement/block_compressors
+        template:
+          name: advancement
+          forward: block/block_compressor_full
     website:
       description: Chest space won't be an issue with this module! Use a Block Compressor to compress stacks of items, turning a stack of items into a single item for long-term storage. Make sure to uncompress your items before using them again, though!
       recommended:
