@@ -2,6 +2,12 @@ execute unless score combat_expanded gm4_modules matches 1 run data modify stora
 execute unless score combat_expanded gm4_earliest_version < combat_expanded gm4_modules run scoreboard players operation combat_expanded gm4_earliest_version = combat_expanded gm4_modules
 scoreboard players set combat_expanded gm4_modules 1
 
+# disable natural regeneration
+execute unless score $natural_regen gm4_ce_data matches -1 store result score $natural_regen gm4_ce_data run gamerule naturalRegeneration
+execute unless score $natural_regen_disabled gm4_ce_data matches 1.. run gamerule naturalRegeneration false
+execute unless score $natural_regen_disabled gm4_ce_data matches 1.. if score $natural_regen gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'{"text":"Combat Expanded: disabled Natural Regeneration"}'}
+scoreboard players set $natural_regen_disabled gm4_ce_data 1
+
 # scoreboards
 scoreboard objectives add gm4_ce_id dummy
 scoreboard objectives add gm4_ce_difficult dummy {"text":"GM4 Combat Expanded: Difficulty"}
@@ -38,6 +44,8 @@ scoreboard objectives add gm4_ce_swimming minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add gm4_ce_used_bow minecraft.used:minecraft.bow
 scoreboard objectives add gm4_ce_used_crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add gm4_ce_chime_damage dummy
+scoreboard objectives add gm4_ce_natural_regen_damage dummy
+scoreboard objectives add gm4_ce_natural_regen_delay dummy
 
 # constants
 scoreboard players set #0 gm4_ce_data 0
