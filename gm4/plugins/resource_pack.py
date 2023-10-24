@@ -327,8 +327,7 @@ class GM4ResourcePack():
                     merge_overrides = [o|{"user_defined": True} for o in m]
                 else: 
                     merge_overrides = unchanged_vanilla_overrides # get vanilla overrides
-                if len(merge_overrides) == 0:
-                    merge_overrides.append({}) # add an empty predicate to add CMD onto
+                    merge_overrides.append({}) # add an empty predicate to add CMD onto, without all other case checks
 
                 for pred in merge_overrides:
                     if not pred.get("model") and not isinstance(m, str):

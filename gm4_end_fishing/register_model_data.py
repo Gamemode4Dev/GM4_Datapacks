@@ -22,7 +22,7 @@ def beet_default(ctx: Context):
             model_data_reg.append({
                 "item": f"{material}_{tool}",
                 "reference": f"item/tools/{material}_{tool}_{i}",
-                "template": "generated"
+                "template": "handheld"
             })
 
     for material in MATERIALS:
@@ -30,7 +30,7 @@ def beet_default(ctx: Context):
             model_data_reg.append({
                 "item": f"{material}_sword",
                 "reference": f"item/swords/{material}_sword_{i}",
-                "template": "generated"
+                "template": "custom"
             })
 
     for material in ["diamond", "golden", "iron"]:

@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "gm4:item/end_fishing/elytra/elytra_11"
+        "layer0": "gm4_end_fishing:item/elytra/elytra_11"
     }
 }
