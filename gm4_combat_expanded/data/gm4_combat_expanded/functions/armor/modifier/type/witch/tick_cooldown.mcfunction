@@ -1,6 +1,6 @@
 # reduce cooldown on witch armor piece
 # @s = player wearing armour
-# at world spawn
+# at unspecified
 # run from armor/modifier/type/witch/check
 
 # mark for change

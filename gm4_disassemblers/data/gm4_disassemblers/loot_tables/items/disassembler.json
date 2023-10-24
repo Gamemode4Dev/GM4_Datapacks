@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420135,gm4_machines:{id:\"disassembler\"},SkullOwner:{Name:\"gm4_disassembler\",Id:[I;-1561282646,-258324274,-1153094374,-693854673],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"ewogICJ0aW1lc3RhbXAiIDogMTY0Mjg1NDAzMTQ2MywKICAicHJvZmlsZUlkIiA6ICJjNDM5NDI3Y2U1NGQ0NDMwYTYzOGU5OTdlYzc2YTBhOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJUaGVNYXN0ZXJHb2xkZW4iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODFjNzQ2NzEwZjQ3ODZiYzgxZTI1ZWVmOTM5ODI3ZjNiNDMzMjFhODQ1ZmYyNmU4N2E3MjVmZDBkMzU2Y2Y5MCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9\"}]}}}"
+              "tag": "{CustomModelData:3420135,gm4_machines:{id:\"disassembler\"},SkullOwner:{Name:\"gm4_disassembler\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$disassembler\"}]}}}"
             },
             {
               "function": "set_name",

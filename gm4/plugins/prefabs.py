@@ -1,8 +1,13 @@
-from beet import Context
-from beet.contrib.rename_files import rename_files
+from beet import Context, PluginOptions, configurable
 from beet.contrib.find_replace import find_replace
+from beet.contrib.rename_files import rename_files
+from pydantic import Extra
 import nbtlib
 import re
+
+
+class PrefabConfig(PluginOptions, extra=Extra.ignore):
+    prefabs: list[str]
 
 def beet_default(ctx: Context):
     """Handles renaming of prefab assets as they merge into a for modules use"""
@@ -10,10 +15,11 @@ def beet_default(ctx: Context):
     module_namsepace = ctx.cache["currently_building"].json["id"]
     
     structure_deep_rename(ctx, prefab_namespace, module_namsepace)
-                    
-def module_asset_rename(ctx: Context):
+
+@configurable("gm4", validator=PrefabConfig)
+def module_asset_rename(ctx: Context, opts: PrefabConfig):
     """Handles renaming of prefab assets already present in module folder"""
-    for prefab in ctx.meta["gm4"].get("prefabs", []):
+    for prefab in opts.prefabs:
         structure_deep_rename(ctx, prefab, ctx.project_id)
 
 def structure_deep_rename(ctx: Context, find_namespace: str, repl_namespace: str):

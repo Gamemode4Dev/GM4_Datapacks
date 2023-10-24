@@ -1,6 +1,6 @@
 # damage players hit by 'glow' that do not have glowing
 # @s = entity first being hit with glow
-# at world spawn
+# at unspecified
 # run from weapon/modifier/glow/glow
 
 # get item level

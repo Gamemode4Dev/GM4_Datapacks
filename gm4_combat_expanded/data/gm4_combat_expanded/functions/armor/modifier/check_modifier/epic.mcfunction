@@ -1,6 +1,6 @@
 # check the modifier on the armor piece
 # @s = player wearing modified armor
-# at world spawn
+# at unspecified
 # run from armor/modifier/check_modifier
 
 execute if score $modifier gm4_ce_data matches 81 unless score @s gm4_ce_t_hurt matches 1.. run function gm4_combat_expanded:armor/modifier/type/overload/activate

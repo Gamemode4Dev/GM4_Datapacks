@@ -1,6 +1,6 @@
 # identify the leggings
 # @s = player wearing the armor
-# at world spawn
+# at unspecified
 # run from armor/process
 
 # store information

@@ -18,8 +18,8 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_machines: 1.1.0
-        - lib_custom_crafters: 3.0.0
+        lib_machines: 1.1.0
+        lib_custom_crafters: 3.0.0
       schedule_loops:
         - main
         - tick
@@ -64,3 +64,11 @@ meta:
     credits:
       Creator:
         - BluePsychoRanger
+      Icon Design:
+        - Hozz
+  modrinth:
+    project_id: WkDoUESw
+  smithed:
+    pack_id: gm4_auto_crafting
+  planetminecraft:
+    uid: 6097435

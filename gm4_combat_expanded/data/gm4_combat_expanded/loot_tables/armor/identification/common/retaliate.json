@@ -44,7 +44,7 @@
                   "op": "replace"
                 },
                 {
-                  "source": "damage",
+                  "source": "level",
                   "target": "gm4_combat_expanded.level2",
                   "op": "replace"
                 }
@@ -76,26 +76,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Under Attack:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.unsafe"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.unsafe",
+              "fallback": "When Under Attack:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -131,63 +122,9 @@
               {
                 "translate": "attribute.modifier.plus.0",
                 "with": [
-                  [
-                    {
-                      "score": {
-                        "name": "$damage_10",
-                        "objective": "gm4_ce_data"
-                      },
-                      "color": "blue",
-                      "italic": false
-                    },
-                    {
-                      "text": "."
-                    },
-                    {
-                      "score": {
-                        "name": "$damage_01",
-                        "objective": "gm4_ce_data"
-                      }
-                    }
-                  ],
-                  {
-                    "translate": "attribute.name.generic.attack_damage"
-                  }
-                ],
-                "color": "blue",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:value_check",
-                "value": {
-                  "type": "minecraft:score",
-                  "target": {
-                    "type": "minecraft:fixed",
-                    "name": "$damage_01"
-                  },
-                  "score": "gm4_ce_data"
-                },
-                "range": 0
-              }
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "attribute.modifier.plus.0",
-                "with": [
                   {
                     "score": {
-                      "name": "$damage_10",
+                      "name": "$damage_double",
                       "objective": "gm4_ce_data"
                     },
                     "color": "blue",
@@ -201,20 +138,6 @@
                 "italic": false
               }
             ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$damage_01"
-                },
-                "score": "gm4_ce_data"
-              },
-              "range": 0
-            }
           ]
         },
         {
@@ -222,30 +145,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.retaliate",
+              "fallback": "Retaliatory %s",
               "with": [
-                [
-                  {
-                    "text": "Retaliatory ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.retaliate",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

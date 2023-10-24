@@ -16,8 +16,8 @@ meta:
   gm4:
     versioning:
       required:
-        - gm4_liquid_tanks: 2.1.0
-        - lib_machines: 1.1.0
+        gm4_liquid_tanks: 2.1.0
+        lib_machines: 1.1.0
       schedule_loops: [main]
     model_data:
       - item: hopper_minecart

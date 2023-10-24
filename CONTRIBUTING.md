@@ -84,6 +84,10 @@ meta:
         - gm4_relocators
       # Important notes for people when they download the module. This can be empty
       notes: []
+      # Keywords used by gm4.co's search feature, may be omitted
+      search_keywords:
+        - shamir
+        - enderpuff
 
     # Either null or a link to the YouTube video
     video: null

@@ -1,6 +1,6 @@
 # remove effects from lunar armor during the day
 # @s = player wearing armour
-# at world spawn
+# at unspecified
 # run from armor/modifier/type/lunar/check
 
 # mark for change and set to inactive

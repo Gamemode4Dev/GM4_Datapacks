@@ -22,7 +22,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:villager",
+              "type": "minecraft:interaction",
               "nbt": "{Tags:[\"gm4_rol_rcd_ladder\"]}"
             }
           }

@@ -17,7 +17,7 @@ meta:
   gm4:
     versioning:
       required:
-        - gm4_metallurgy: 1.2.0
+        gm4_metallurgy: 1.2.0
       schedule_loops: [main]
     model_data:
       - item: player_head
@@ -40,3 +40,5 @@ meta:
     credits:
       Creator:
         - Bloo
+      Icon Design:
+        - Hozz

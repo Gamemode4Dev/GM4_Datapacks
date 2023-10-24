@@ -4,9 +4,6 @@ lib_machines is a mcfunction library that adds logic for placing and breaking cu
 ## Terminology
 Gamemode 4 primarily uses this library for machine blocks, but any mention of "machine" or "machine blocks" below refers to any custom block.
 
-## Installation
-This library requires the Gamemode 4 forceloaded chunk library (`lib_forceload`). If a data pack includes `lib_machines`, it must also include `lib_forceload`.
-
 ## How to Use
 There are 2 function tags to be used: one for placing machines (`#gm4_machines:place_down`) and one for breaking machines (`#gm4_machines:destroy`).
 
@@ -85,3 +82,6 @@ The following command should be used to verify the specific machine destroyed:
 ```mcfunction
 execute if entity @s[tag=IDENTIFIER] run function MODULE_NAMESPACE:machine/destroy
 ```
+
+## License
+This library, and the contents of the `lib_machines` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.

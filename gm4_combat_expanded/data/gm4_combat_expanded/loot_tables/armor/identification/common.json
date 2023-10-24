@@ -5,19 +5,11 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/identification/common/archer"
+        },
+        {
+          "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:armor/identification/common/beacon"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/common/berserk"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/common/canine"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/common/combo"
         },
         {
           "type": "minecraft:loot_table",
@@ -25,11 +17,15 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/common/focus"
+          "name": "gm4_combat_expanded:armor/identification/common/gloom"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/common/gloom"
+          "name": "gm4_combat_expanded:armor/identification/common/half"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/identification/common/horse"
         },
         {
           "type": "minecraft:loot_table",
@@ -65,10 +61,6 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/common/sentinel"
-        },
-        {
-          "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:armor/identification/common/shielded"
         },
         {
@@ -82,6 +74,14 @@
         {
           "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:armor/identification/common/thorns"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/identification/common/totem"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/identification/common/toxic"
         },
         {
           "type": "minecraft:loot_table",

@@ -1,6 +1,6 @@
 # weakness and hunger players hit with a toxic bite
 # @s = player that was hit
-# at world spawn
+# at unspecified
 # run from advancement damaged/mob/toxic
 
 advancement revoke @s only gm4_combat_expanded:damaged/mob/toxic

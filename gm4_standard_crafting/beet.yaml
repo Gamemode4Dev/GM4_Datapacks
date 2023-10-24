@@ -12,7 +12,8 @@ pipeline:
 meta:
   gm4:
     versioning:
-      required: [lib_custom_crafters: 3.0.0]
+      required:
+        lib_custom_crafters: 3.0.0
     website:
       description: A crafting recipe pack that adds some nifty new recipes to the game.
       recommended: []

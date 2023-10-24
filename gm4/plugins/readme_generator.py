@@ -1,10 +1,11 @@
-from beet import Context, TextFile
+from beet import Context, TextFile, configurable
 import re
 from pathlib import Path
 from typing import Any
-from gm4.plugins.manifest import write_credits
+from gm4.plugins.manifest import write_credits, ManifestConfig
 
-def beet_default(ctx: Context):
+@configurable("gm4", validator=ManifestConfig)
+def beet_default(ctx: Context, opts: ManifestConfig):
     """Loads the README.md and modifies:
         - converts local images to URLs pointed at the repo
         - download links for respective download sites
@@ -23,11 +24,11 @@ def beet_default(ctx: Context):
     # Append standard footer content
     footer = "\n### More Info\n"
         # Youtube Info
-    if (vid_url:=ctx.meta['gm4']['video']) is not None:
+    if opts.video is not None:
         footer += (
             f"[<img src=\"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png\" "
             f"alt=\"Youtube Logo\" width=\"40\" align=\"center\"/> "
-            f"**Watch on Youtube**]({vid_url})"
+            f"**Watch on Youtube**]({opts.video})"
             "\n\n"
         )
 
@@ -35,7 +36,7 @@ def beet_default(ctx: Context):
     footer += (
         f"[<img src=\"https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png\" "
         f"alt=\"Gamemode 4 Wiki Logo\" width=\"40\" align=\"center\"/> "
-        f"**Read the Wiki**]({ctx.meta['gm4']['wiki']})"
+        f"**Read the Wiki**]({opts.wiki})"
         "\n\n"
     )
 
@@ -187,3 +188,8 @@ def beet_default(ctx: Context):
             ctx.data.extra["README.md"] = TextFile(site_contents)
         else:
             ctx.meta[f'{site}_readme'] = TextFile(site_contents)
+
+
+def libraries(ctx: Context):
+    """Dumps the README (library docs) to the "smithed_readme" meta, so it ends up in the generated folder. No edits are made"""
+    ctx.meta['smithed_readme'] = ctx.data.extra["README.md"] # relies on copy_files to load into datapack container. 

@@ -16,7 +16,7 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_forceload: 1.1.0
+        lib_forceload: 1.1.0
     model_data:
       - item: written_book
         reference: item/guidebook
