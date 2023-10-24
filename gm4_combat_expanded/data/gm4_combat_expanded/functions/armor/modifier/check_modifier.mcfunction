@@ -1,7 +1,7 @@
 # check the modifier on the armor piece
 # @s = player wearing modified armor
 # at unspecified
-# run from functions in armor/slot/SLOT/check
+# run from functions in armor/slot/<SLOT>
 
 # store information
 execute store result score $active gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.active

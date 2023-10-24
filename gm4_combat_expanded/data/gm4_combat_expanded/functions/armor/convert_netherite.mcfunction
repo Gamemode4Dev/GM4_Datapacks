@@ -1,7 +1,7 @@
 # update the weapon damage tooltip and name when it is upgraded to netherite
 # @s = player wielding the weapon
 # at @s
-# run from any armor/slot/<SLOT>/check
+# run from any armor/slot/<SLOT>
 
 # set armor to be converted
 data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.netherite set value 1

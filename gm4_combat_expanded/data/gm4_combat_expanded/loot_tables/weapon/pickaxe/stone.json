@@ -13,12 +13,12 @@
               "entity": "this",
               "name": [
                 {
-                  "translate": "item.gm4.combat_expanded.name.unidentified",
-                  "fallback": "Unidentified %s",
+                  "translate": "tutorial.open_inventory.description",
                   "with": [
-                    {
-                      "translate": "item.minecraft.stone_pickaxe"
-                    }
+                        {
+                          "keybind": "key.drop"
+                        }
+                      
                   ],
                   "italic": false
                 }

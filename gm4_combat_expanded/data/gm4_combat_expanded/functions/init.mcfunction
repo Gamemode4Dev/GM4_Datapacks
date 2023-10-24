@@ -2,18 +2,6 @@ execute unless score combat_expanded gm4_modules matches 1 run data modify stora
 execute unless score combat_expanded gm4_earliest_version < combat_expanded gm4_modules run scoreboard players operation combat_expanded gm4_earliest_version = combat_expanded gm4_modules
 scoreboard players set combat_expanded gm4_modules 1
 
-## New Folder Structure
-##debug
-##player
-# armor
-# weapon
-# identification
-    # armor
-    # weapon
-##mob
-    ##init
-    ##process
-
 # scoreboards
 scoreboard objectives add gm4_ce_id dummy
 scoreboard objectives add gm4_ce_difficult dummy {"text":"GM4 Combat Expanded: Difficulty"}

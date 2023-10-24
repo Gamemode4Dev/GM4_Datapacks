@@ -13,12 +13,12 @@
               "entity": "this",
               "name": [
                 {
-                  "translate": "item.gm4.combat_expanded.name.unidentified",
-                  "fallback": "Unidentified %s",
+                  "translate": "tutorial.open_inventory.description",
                   "with": [
-                    {
-                      "translate": "item.minecraft.stone_sword"
-                    }
+                        {
+                          "keybind": "key.drop"
+                        }
+                      
                   ],
                   "italic": false
                 }
@@ -66,7 +66,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/init/modifier/mountainous"
+                  "name": "gm4_combat_expanded:mob/modifier/mountainous"
                 },
                 {
                   "condition": "minecraft:random_chance",
@@ -82,7 +82,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/init/modifier/burned"
+                  "name": "gm4_combat_expanded:mob/modifier/burned"
                 },
                 {
                   "condition": "minecraft:random_chance",

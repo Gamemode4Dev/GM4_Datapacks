@@ -25,11 +25,10 @@
               "entity": "this",
               "name": [
                 {
-                  "translate": "item.gm4.combat_expanded.name.unidentified",
-                  "fallback": "Unidentified %s",
+                  "translate": "tutorial.open_inventory.description",
                   "with": [
                         {
-                          "translate": "item.minecraft.chainmail_leggings"
+                          "keybind": "key.drop"
                         }
                       
                   ],
@@ -49,7 +48,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/init/modifier/reef"
+                  "name": "gm4_combat_expanded:mob/modifier/reef"
                 },
                 {
                   "condition": "minecraft:random_chance",
@@ -65,7 +64,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/init/modifier/growth"
+                  "name": "gm4_combat_expanded:mob/modifier/growth"
                 },
                 {
                   "condition": "minecraft:random_chance",

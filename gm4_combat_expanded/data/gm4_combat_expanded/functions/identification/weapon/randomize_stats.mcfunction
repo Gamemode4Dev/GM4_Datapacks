@@ -1,7 +1,7 @@
 # randomise stats for identification
-# @s = player wielding the weapon
+# @s = unidentified item
 # at unspecified
-# run from weapon/identify/pick_mod
+# run from identification/weapon/pick_mod
 
 # use loot tables to fill shulker box with items
 # slots 0 is reserved for the weapon, slot 1 is reserved for the modifier

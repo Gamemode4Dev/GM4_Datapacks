@@ -1,10 +1,10 @@
 # gives newly equipped a random unid (stored modifier), this does not identify that armor
-# @s = player wearing the armor
+# @s = unidentified item
 # at unspecified
-# run from any armor/slot/SLOT/identify
+# run from any identification/prep
 
 # randomize stats
-function gm4_combat_expanded:armor/identify/randomize_stats
+function gm4_combat_expanded:identification/armor/randomize_stats
 
 # get a random modifier and apply it to the storage
 loot replace block 29999998 1 7134 container.4 loot gm4_combat_expanded:armor/identification/random
@@ -25,9 +25,3 @@ execute store result storage gm4_combat_expanded:temp tag.Damage int 0.5 run dat
 
 # keep old name if it was changed
 execute if score $namelen gm4_ce_data matches ..75 run data modify storage gm4_combat_expanded:temp tag.display.Name set from storage gm4_combat_expanded:temp stored_name
-
-# playsound
-execute at @s run playsound block.enchantment_table.use player @s ~ ~ ~ 0.8 1.2
-
-# advancement
-advancement grant @s only gm4:combat_expanded_identify

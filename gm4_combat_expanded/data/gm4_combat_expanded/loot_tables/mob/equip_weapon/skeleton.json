@@ -13,7 +13,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/init/modifier/growth"
+                  "name": "gm4_combat_expanded:mob/modifier/growth"
                 }
               ]
             },
@@ -59,7 +59,7 @@
                   "conditions": [
                     {
                       "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/init/modifier/mountainous"
+                      "name": "gm4_combat_expanded:mob/modifier/mountainous"
                     }
                   ]
                 },
@@ -71,7 +71,7 @@
                   "conditions": [
                     {
                       "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/init/modifier/burned"
+                      "name": "gm4_combat_expanded:mob/modifier/burned"
                     }
                   ]
                 },
