@@ -16,9 +16,9 @@ data modify entity @s text set value '{"nbt":"text[]","storage":"gm4_bookshelf_n
 data remove storage gm4_bookshelf_nametags:temp text
 
 # set rotation
-execute if score $rot gm4_bookshelf_nametags_data matches 1 run data modify entity @s Rotation set value [0.0F,0.0F]
-execute if score $rot gm4_bookshelf_nametags_data matches 2 run data modify entity @s Rotation set value [180.0F,0.0F]
-execute if score $rot gm4_bookshelf_nametags_data matches 3 run data modify entity @s Rotation set value [-90.0F,0.0F]
-execute if score $rot gm4_bookshelf_nametags_data matches 4 run data modify entity @s Rotation set value [90.0F,0.0F]
+execute if score $rotation gm4_bookshelf_nametags_data matches 1 run data modify entity @s Rotation set value [0.0F,0.0F]
+execute if score $rotation gm4_bookshelf_nametags_data matches 2 run data modify entity @s Rotation set value [180.0F,0.0F]
+execute if score $rotation gm4_bookshelf_nametags_data matches 3 run data modify entity @s Rotation set value [-90.0F,0.0F]
+execute if score $rotation gm4_bookshelf_nametags_data matches 4 run data modify entity @s Rotation set value [90.0F,0.0F]
 
 scoreboard players set @s gm4_bookshelf_nametags_keep 1
