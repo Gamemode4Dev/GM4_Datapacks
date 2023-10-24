@@ -5,11 +5,12 @@ pipeline:
   - broadcast: null
     extend: beet.yaml
     require: 
+      - gm4.plugins.output
+      - gm4.plugins.player_heads
       - gm4.plugins.resource_pack
       - beet.contrib.model_merging
     pipeline:
       - gm4.plugins.write_mcmeta
-      - gm4.plugins.output
   - gm4.plugins.output.resource_pack
   - gm4.plugins.resource_pack.dump_registry
   - gm4.plugins.finished
@@ -17,3 +18,8 @@ pipeline:
 meta:
   autosave:
     link: false
+  mecha:
+    formatting:
+      layout: preserve
+      nbt_compact: True
+      cmd_compact: True

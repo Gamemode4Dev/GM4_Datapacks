@@ -1,8 +1,8 @@
 import subprocess
 import warnings
 from dataclasses import dataclass, asdict
-from beet import ListOption, Any
-from typing import TypeVar, Generic
+from beet import ListOption
+from typing import TypeVar, Generic, Any
 from functools import total_ordering
 from pydantic.generics import GenericModel
 from pydantic import validator

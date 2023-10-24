@@ -16,7 +16,6 @@ pipeline:
         meta: {copy_files: {data_pack: {LICENSE.md: "../LICENSE.md"}}}
       - gm4.plugins.readme_generator
       - gm4.plugins.write_mcmeta
-      - gm4.plugins.output.release
     meta:
       mecha:
         formatting:
@@ -24,6 +23,8 @@ pipeline:
           nbt_compact: True
   - broadcast: 'lib_*'
     extend: 'beet.yaml'
+    require:
+      - gm4.plugins.output.release
     pipeline:
       - beet.contrib.lantern_load.base_data_pack
       - gm4.plugins.versioning.isolated_library
@@ -38,7 +39,6 @@ pipeline:
       - gm4.plugins.module.default_pack_icon
       - gm4.plugins.readme_generator.libraries
       - gm4.plugins.write_mcmeta
-      - gm4.plugins.output.release
     meta:
       mecha:
         formatting:
