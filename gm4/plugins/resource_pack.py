@@ -1,29 +1,31 @@
 import logging
 import os
 import sys
-from functools import cached_property
-from typing import Any, Callable, Optional, Literal, ClassVar, Type
-from itertools import cycle
-from fnmatch import fnmatch
 from copy import deepcopy
-import numpy as np
+from fnmatch import fnmatch
+from functools import cached_property
+from dataclasses import replace
+from itertools import cycle
+from typing import Any, Callable, ClassVar, Literal, Optional, Type
 
+import numpy as np
 from beet import (
     Context,
     InvalidOptions,
     JsonFile,
     ListOption,
     Model,
+    NamespaceProxy,
     PluginOptions,
-    NamespaceProxy
 )
 from beet.contrib.vanilla import Vanilla
 from beet.core.utils import format_validation_error
-from mecha import Diagnostic
-from pydantic import BaseModel, Extra, ValidationError, validator, Field
+from mecha import AstNbtCompoundEntry, Diagnostic, Mecha, MutatingReducer, rule, AstNbtValue
+from pydantic import BaseModel, Extra, Field, ValidationError, validator
 from pydantic.error_wrappers import ErrorWrapper
+from nbtlib import String
 
-from gm4.utils import add_namespace, MapOption
+from gm4.utils import MapOption, add_namespace
 
 CUSTOM_MODEL_PREFIX = 3420000 # TODO this is configurable for public server stuff?
 
@@ -230,6 +232,7 @@ def beet_default(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
     # print(ctx.assets[Model])
     # mecha register
+    ctx.inject(Mecha).transform.extend(rp)
 
     # yield
     # rp.output_registry()
@@ -253,13 +256,14 @@ def dump_registry(ctx: Context):
     JsonFile(registry).dump(origin="", path="gm4/modeldata_registry.json")
     ctx.cache["modeldata_registry"].delete()
 
-class GM4ResourcePack():
+class GM4ResourcePack(MutatingReducer):
     """Service Object handling CustomModelData and generated item models"""
 
     def __init__(self, ctx: Context): # TODO dataclass-ify this?
         self.ctx = ctx
         self.registry = ctx.cache["modeldata_registry"].json
         self.logger = parent_logger.getChild(ctx.project_id)
+        super().__init__()
 
     @cached_property
     def opts(self) -> FlatModelDataOptions:
@@ -298,7 +302,6 @@ class GM4ResourcePack():
                     self.logger.info(f"Removing undefined CustomModelData from {item_id} registry: '{ref}'")
                     del reg[ref]
             #FIXME clear references from items no longer configured too
-
 
     def generate_model_overrides(self):
         """Generates item model overrides in the 'minecraft' namespace, adding predicates for CustomModelData"""
@@ -370,7 +373,6 @@ class GM4ResourcePack():
         for item_id in item_ids:
             self.set_index(item_id, i, reference)
     
-
     def set_index(self, item_id: str, index: int, reference: str):
         """sets the given cmd index on the item"""
         if os.getenv("GITHUB_ACTIONS"):
@@ -381,7 +383,17 @@ class GM4ResourcePack():
         self.logger.info(f"Issuing CustomModelData {index} for {item_id}")
 
     #== Mecha Transformer Rules ==#
-    # TODO
+    @rule(AstNbtCompoundEntry)
+    def cmd_substitutions(self, node: AstNbtCompoundEntry):
+        if node.key.value == "CustomModelData":
+            match node.value.evaluate():
+                case String(reference):
+                    index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
+                    # TODO if no value, raise error
+                    node = replace(node, value=AstNbtValue.from_value(index+CUSTOM_MODEL_PREFIX))
+                case _:
+                    pass
+        return node
 
     #== Model file generation ==#
     def generate_model_files(self):
