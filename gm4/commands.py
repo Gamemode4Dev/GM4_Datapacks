@@ -99,6 +99,9 @@ def readme_gen(ctx: click.Context, project: Project, modules: tuple[str], watch:
 		"broadcast": modules,
 		"extend": "beet.yaml",
 		"meta": {"readme-gen": True},
+		"require":[
+			"gm4.plugins.player_heads",
+		],
 		"pipeline": [
 			"gm4.plugins.manifest.write_credits",
 			"gm4.plugins.readme_generator",
