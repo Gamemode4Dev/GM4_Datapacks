@@ -58,7 +58,7 @@ class ModelData(BaseModel):
         return model # model is already a mapped dict, of the same length as item      # type: ignore
     
     @validator('template')
-    def enforce_custom_with_override_predicates(cls, template: 'str|TemplateOptions', values: dict[str,Any]) -> Type['TemplateOptions']:
+    def enforce_custom_with_override_predicates(cls, template: 'str|TemplateOptions', values: dict[str,Any]) -> 'TemplateOptions':
         if isinstance(values.get('model'), list) and template != "custom":
             raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
             # FIXME is this true anymore? I think this check is also wrong now
@@ -66,17 +66,18 @@ class ModelData(BaseModel):
         name = template.name if isinstance(template, TemplateOptions) else template
         try:
             submodel = {m.name: m for m in TemplateOptions.__subclasses__()}[name]
-            return submodel.parse_obj(template.dict() if isinstance(template, TemplateOptions) else {"name": template}) # TODO error checking here? Pass the Validation Errors upward?
+            return submodel.parse_obj(template.dict() if isinstance(template, TemplateOptions) else {"name": template})
         except KeyError:
             raise ValidationError([ErrorWrapper(ValueError(f"the specified template '{name}' could not be found"), loc=())], model=ModelData)
     
     @validator('transforms', each_item=True)
-    def apply_transform_submodel(cls, transform: 'TransformOptions', values: dict[str,Any]) -> None|Type['TransformOptions']:
+    def apply_transform_submodel(cls, transform: 'TransformOptions', values: dict[str,Any]) -> 'None|TransformOptions':
         # find and apply proper submodel
-        submodel = {m.name: m for m in TransformOptions.__subclasses__()}.get(transform.name)
-        if submodel:
-            return submodel.parse_obj(transform.dict()) # TODO error checking here? Pass the Validation Errors upward?
-        return None
+        try:
+            submodel = {m.name: m for m in TransformOptions.__subclasses__()}[transform.name]
+            return submodel.parse_obj(transform.dict())
+        except KeyError:
+            raise ValidationError([ErrorWrapper(ValueError(f"the specified template '{transform.name}' could not be found"), loc=())], model=ModelData)
     
     @validator('textures', pre=True, always=True)
     def default_texture(cls, textures: MapOption[str], values: dict[str,Any]) -> MapOption[str]:
