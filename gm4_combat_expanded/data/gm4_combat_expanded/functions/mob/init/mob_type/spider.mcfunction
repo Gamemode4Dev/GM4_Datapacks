@@ -17,8 +17,8 @@ execute if score $difficulty gm4_ce_data matches 11.. run scoreboard players add
 effect give @s[predicate=gm4_combat_expanded:mob/init/modifier/dark,predicate=gm4_combat_expanded:technical/chance/spider_invisibility] invisibility infinite 0
 effect give @s[predicate=gm4_combat_expanded:mob/init/modifier/mountainous] jump_boost infinite 1
 effect give @s[predicate=gm4_combat_expanded:mob/init/modifier/burned,predicate=gm4_combat_expanded:technical/chance/spider_fire_resist] fire_resistance infinite 0
-execute if predicate gm4_combat_expanded:mob/init/modifier/lush_caves if predicate gm4_combat_expanded:technical/chance/spider_replace run function gm4_combat_expanded:mob/init/modifier/special/lush_caves_spider
-execute if predicate gm4_combat_expanded:mob/init/modifier/toxic run function gm4_combat_expanded:mob/init/modifier/special/toxic_spider
+execute if predicate gm4_combat_expanded:mob/modifier/lush_caves if predicate gm4_combat_expanded:technical/chance/spider_replace run function gm4_combat_expanded:mob/init/modifier/special/lush_caves_spider
+execute if predicate gm4_combat_expanded:mob/modifier/toxic run function gm4_combat_expanded:mob/init/modifier/special/toxic_spider
 execute if entity @s[tag=!gm4_ce_extra_mob,predicate=gm4_combat_expanded:mob/init/modifier/growth] store success score $mob_extras gm4_ce_data run summon spider ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
 execute if entity @s[tag=!gm4_ce_extra_mob,predicate=gm4_combat_expanded:mob/init/modifier/growth,predicate=gm4_combat_expanded:technical/chance/extra_spider_spawn] store success score $mob_extras gm4_ce_data run summon spider ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
 

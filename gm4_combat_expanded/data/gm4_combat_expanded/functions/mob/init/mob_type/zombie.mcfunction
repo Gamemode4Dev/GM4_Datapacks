@@ -20,11 +20,11 @@ execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add 
 execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s ArmorDropChances set value [0.34F,0.34F,0.34F,0.34F]
 
 # biome specific modifiers for this mob
-execute if predicate gm4_combat_expanded:mob/init/modifier/dark run scoreboard players add $mob_toughness gm4_ce_data 4
+execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_toughness gm4_ce_data 4
 attribute @s[predicate=gm4_combat_expanded:mob/init/modifier/dark] zombie.spawn_reinforcements modifier add 88708a3a-b8f0-46f8-8dd9-1f8fb0f315d6 "gm4_ce_modifier_dark" 0.25 multiply_base
 tag @s[predicate=gm4_combat_expanded:mob/init/modifier/snowy] add gm4_ce_slowing_attacks
-execute if predicate gm4_combat_expanded:mob/init/modifier/mountainous run function gm4_combat_expanded:mob/init/modifier/special/mountain_zombie
-execute if predicate gm4_combat_expanded:mob/init/modifier/flowering run tag @s add gm4_ce_spore_zombie
+execute if predicate gm4_combat_expanded:mob/modifier/mountainous run function gm4_combat_expanded:mob/init/modifier/special/mountain_zombie
+execute if predicate gm4_combat_expanded:mob/modifier/flowering run tag @s add gm4_ce_spore_zombie
 tag @s[predicate=gm4_combat_expanded:mob/init/modifier/toxic] add gm4_ce_weakness_attacks
 execute if entity @s[type=zombie,predicate=gm4_combat_expanded:mob/init/modifier/growth] run function gm4_combat_expanded:mob/init/modifier/special/growth_zombie
 

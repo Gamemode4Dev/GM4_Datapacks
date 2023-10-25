@@ -6,6 +6,30 @@
 # get difficulty score from the nearest player
 scoreboard players operation $difficulty gm4_ce_data = @p[gamemode=!spectator] gm4_ce_difficult
 
+# get moon cycle (0 = new moon, 4 = full moon)
+execute store result score $moon gm4_ce_data run time query day
+scoreboard players operation $moon gm4_ce_data %= #8 gm4_ce_data
+execute if score $moon gm4_ce_data matches ..3 store result score $moon gm4_ce_data run scoreboard players operation #8 gm4_ce_data -= $moon gm4_ce_data
+scoreboard players remove $moon gm4_ce_data 4
+
+# modify difficulty score based on some factors
+scoreboard players set $difficulty_mult gm4_ce_data 0
+# raining +20%
+execute if predicate gm4_combat_expanded:technical/raining run scoreboard players add $difficulty_mult gm4_ce_data 2
+# night & not in dark biome +0-40% based on moon phase
+execute unless predicate gm4_combat_expanded:mob/modifier/dark if predicate gm4_combat_expanded:technical/night_time run scoreboard players operation $difficulty_mult gm4_ce_data += $moon gm4_ce_data
+# dark biome +30%
+execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $difficulty_mult gm4_ce_data 3
+# mountainous +20%
+execute if predicate gm4_combat_expanded:mob/modifier/mountainous run scoreboard players add $difficulty_mult gm4_ce_data 2
+# trial spawner
+##scoreboard players add $difficulty_mult gm4_ce_data 6
+# apply difficulty_mult
+scoreboard players operation $difficulty_add gm4_ce_data = $difficulty gm4_ce_data
+scoreboard players operation $difficulty_add gm4_ce_data *= $difficulty_mult gm4_ce_data
+scoreboard players operation $difficulty_add gm4_ce_data /= #10 gm4_ce_data
+scoreboard players operation $difficulty gm4_ce_data += $difficulty_add gm4_ce_data
+
 # reset scoreboards
 scoreboard players reset $mob_extras gm4_ce_data
 scoreboard players set $mob_stats gm4_ce_data 0

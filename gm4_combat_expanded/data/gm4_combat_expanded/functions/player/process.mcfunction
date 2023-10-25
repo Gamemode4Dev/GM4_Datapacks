@@ -3,8 +3,8 @@
 # at unspecified
 # run from player/submain
 
-# calculate difficulty for newly (re)spawned players
-execute if score @s gm4_ce_alivetime matches 1..16 run function gm4_combat_expanded:player/calculate_difficulty
+# process player deaths
+execute if score @s[scores={gm4_ce_play_time=2..}] gm4_ce_alivetime matches ..16 run function gm4_combat_expanded:player/process_death
 
 # calculate damage taken from guarding
 execute if entity @s[tag=gm4_ce_guardian,scores={gm4_ce_guard=10..}] run function gm4_combat_expanded:armor/modifier/type/guardian/damage_calc

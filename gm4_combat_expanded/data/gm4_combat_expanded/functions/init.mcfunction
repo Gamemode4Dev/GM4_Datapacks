@@ -11,7 +11,9 @@ scoreboard players set $natural_regen_disabled gm4_ce_data 1
 # scoreboards
 scoreboard objectives add gm4_ce_id dummy
 scoreboard objectives add gm4_ce_difficult dummy {"text":"GM4 Combat Expanded: Difficulty"}
-scoreboard objectives add gm4_ce_playtime minecraft.custom:minecraft.play_time
+scoreboard objectives add gm4_ce_play_time dummy
+scoreboard objectives add gm4_ce_death_mult dummy
+scoreboard objectives add gm4_ce_since_last_death dummy
 scoreboard objectives add gm4_ce_alivetime minecraft.custom:minecraft.time_since_death
 scoreboard objectives add gm4_ce_data dummy
 scoreboard objectives add gm4_ce_health dummy
@@ -46,6 +48,7 @@ scoreboard objectives add gm4_ce_used_crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add gm4_ce_chime_damage dummy
 scoreboard objectives add gm4_ce_natural_regen_damage dummy
 scoreboard objectives add gm4_ce_natural_regen_delay dummy
+scoreboard objectives add gm4_ce_death_mult dummy
 
 # constants
 scoreboard players set #0 gm4_ce_data 0
@@ -64,10 +67,14 @@ scoreboard players set #15 gm4_ce_data 15
 scoreboard players set #17 gm4_ce_data 17
 scoreboard players set #21 gm4_ce_data 21
 scoreboard players set #25 gm4_ce_data 25
+scoreboard players set #30 gm4_ce_data 30
 scoreboard players set #35 gm4_ce_data 35
 scoreboard players set #40 gm4_ce_data 40
+scoreboard players set #50 gm4_ce_data 50
 scoreboard players set #64 gm4_ce_data 64
-scoreboard players set #24000 gm4_ce_data 24000
+scoreboard players set #75 gm4_ce_data 75
+scoreboard players set #100 gm4_ce_data 100
+scoreboard players set #6000 gm4_ce_data 6000
 
 # start clocks
 schedule function gm4_combat_expanded:tick 1t

@@ -3,10 +3,6 @@
 # at unspecified
 # run from armor/check_modifier/night
 
-# get moon cycle (0 = full moon)
-execute store result score $moon gm4_ce_data run time query day
-scoreboard players operation $moon gm4_ce_data %= #8 gm4_ce_data
-
 # deactivate during the day
 execute if score $active gm4_ce_data matches 1 unless predicate gm4_combat_expanded:technical/night_time run function gm4_combat_expanded:armor/modifier/type/lunar/deactivate
 

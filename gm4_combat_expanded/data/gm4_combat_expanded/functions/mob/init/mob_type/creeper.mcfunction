@@ -15,8 +15,8 @@ execute if score $difficulty gm4_ce_data matches 11.. run scoreboard players add
 # biome specific modifiers for this mob
 data modify entity @s[predicate=gm4_combat_expanded:mob/init/modifier/dark] ExplosionRadius set value 4s
 data modify entity @s[predicate=gm4_combat_expanded:mob/init/modifier/burned] Fuse set value 22
-execute if predicate gm4_combat_expanded:mob/init/modifier/flowering run function gm4_combat_expanded:mob/init/modifier/special/flowering_creeper
-execute if predicate gm4_combat_expanded:mob/init/modifier/toxic run function gm4_combat_expanded:mob/process/toxic_creeper
+execute if predicate gm4_combat_expanded:mob/modifier/flowering run function gm4_combat_expanded:mob/init/modifier/special/flowering_creeper
+execute if predicate gm4_combat_expanded:mob/modifier/toxic run function gm4_combat_expanded:mob/process/toxic_creeper
 tag @s[predicate=gm4_combat_expanded:mob/init/modifier/toxic] add gm4_ce_toxic_creeper
 
 # set modifiers

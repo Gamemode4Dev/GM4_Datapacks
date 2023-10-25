@@ -17,8 +17,8 @@ execute if score $difficulty gm4_ce_data matches 11.. run scoreboard players add
 execute if score $difficulty gm4_ce_data matches 11.. run scoreboard players add $mob_speed gm4_ce_data 8
 
 # biome specific modifiers for this mob
-execute if predicate gm4_combat_expanded:mob/init/modifier/flowering if predicate gm4_combat_expanded:technical/chance/replace_enderman run function gm4_combat_expanded:mob/init/modifier/special/flowering_enderman
-execute if predicate gm4_combat_expanded:mob/init/modifier/the_end run scoreboard players add $mob_stats gm4_ce_data 4
+execute if predicate gm4_combat_expanded:mob/modifier/flowering if predicate gm4_combat_expanded:technical/chance/replace_enderman run function gm4_combat_expanded:mob/init/modifier/special/flowering_enderman
+execute if predicate gm4_combat_expanded:mob/modifier/the_end run scoreboard players add $mob_stats gm4_ce_data 4
 
 # set modifiers
 function gm4_combat_expanded:mob/init/modifier/stat/prep

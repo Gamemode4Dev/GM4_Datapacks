@@ -1,7 +1,9 @@
 schedule function gm4_combat_expanded:slow_clock 30s
 
-# calculate player difficulty score
-execute as @a[gamemode=!spectator] run function gm4_combat_expanded:player/calculate_difficulty
+# calculate player difficulty score every 5 min
+scoreboard players add $calc_diff_clock gm4_ce_data 1
+execute if score $calc_diff_clock gm4_ce_data matches 10.. as @a[gamemode=!spectator] run function gm4_combat_expanded:player/calculate_difficulty
+execute if score $calc_diff_clock gm4_ce_data matches 10.. run scoreboard players set $calc_diff_clock gm4_ce_data 0
 
 # toxic creepers
 execute as @e[type=creeper,tag=gm4_ce_toxic_creeper] run function gm4_combat_expanded:mob/process/toxic_creeper
