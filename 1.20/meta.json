@@ -1,5 +1,5 @@
 {
-  "last_commit": "bb4cde7deafb29da363fc73671c75e683a611e66",
+  "last_commit": "3c85f6e7184cb0a3b90ef3ca1c980012939e06bf",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -441,7 +441,7 @@
     {
       "id": "gm4_combat_expanded",
       "name": "Combat Expanded",
-      "version": "1.4.0",
+      "version": "1.4.1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Combat_Expanded",
       "credits": {
@@ -524,7 +524,7 @@
     {
       "id": "gm4_crossbow_cartridges",
       "name": "Crossbow Cartridges",
-      "version": "1.5.0",
+      "version": "1.5.1",
       "video_link": "https://www.youtube.com/watch?v=XJiGvX7l-pI",
       "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
       "credits": {
@@ -1170,7 +1170,7 @@
     {
       "id": "gm4_lightning_in_a_bottle",
       "name": "Lightning in a Bottle",
-      "version": "1.5.0",
+      "version": "1.5.1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
       "credits": {
@@ -2023,7 +2023,7 @@
     {
       "id": "gm4_soul_glass",
       "name": "Soul Glass",
-      "version": "1.2.4",
+      "version": "1.2.5",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Soul_Glass",
       "credits": {
