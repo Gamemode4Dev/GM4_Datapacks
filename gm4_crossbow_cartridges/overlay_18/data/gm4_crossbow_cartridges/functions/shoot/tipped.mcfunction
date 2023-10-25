@@ -8,7 +8,7 @@ advancement revoke @s only gm4_crossbow_cartridges:shoot/tipped
 execute anchored eyes positioned ^ ^ ^ run tag @e[type=minecraft:arrow,nbt={inGround:0b},distance=..0.2,sort=nearest,limit=3] add gm4_cb_arrow
 
 # store tipped arrow potion data
-data modify storage gm4_crossbow_cartridges:temp projectile.ActiveEffects set from entity @e[type=arrow,tag=gm4_cb_arrow,limit=1,distance=..2] CustomPotionEffects
+data modify storage gm4_crossbow_cartridges:temp projectile.active_effects set from entity @e[type=arrow,tag=gm4_cb_arrow,limit=1,distance=..2] custom_potion_effects
 data modify storage gm4_crossbow_cartridges:temp effect set from entity @e[type=arrow,tag=gm4_cb_arrow,limit=1,distance=..2] Potion
 execute if data storage gm4_crossbow_cartridges:temp effect run function gm4_crossbow_cartridges:shoot/effect
 

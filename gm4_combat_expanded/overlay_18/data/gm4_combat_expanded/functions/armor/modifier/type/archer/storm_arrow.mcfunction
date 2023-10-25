@@ -31,6 +31,6 @@ data modify entity @s damage set from storage gm4_combat_expanded:temp archer_ar
 data modify entity @s crit set from storage gm4_combat_expanded:temp archer_arrow.crit
 data modify entity @s Fire set from storage gm4_combat_expanded:temp archer_arrow.Fire
 execute if data storage gm4_combat_expanded:temp archer_arrow.Potion run data modify entity @s Potion set from storage gm4_combat_expanded:temp archer_arrow.Potion
-execute if data storage gm4_combat_expanded:temp archer_arrow.CustomPotionEffects run data modify entity @s CustomPotionEffects set from storage gm4_combat_expanded:temp archer_arrow.CustomPotionEffects
+execute if data storage gm4_combat_expanded:temp archer_arrow.custom_potion_effects run data modify entity @s custom_potion_effects set from storage gm4_combat_expanded:temp archer_arrow.custom_potion_effects
 execute if data storage gm4_combat_expanded:temp archer_arrow.Color run data modify entity @s Color set from storage gm4_combat_expanded:temp archer_arrow.Color
 tag @s add gm4_ce_archer_arrow
