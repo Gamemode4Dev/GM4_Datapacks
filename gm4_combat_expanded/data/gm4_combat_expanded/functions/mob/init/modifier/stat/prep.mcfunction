@@ -1,21 +1,26 @@
 # apply biome-specific modifiers randomize the stats
 # @s = mobs that can be buffed
 # at @s
-# run from functions in mob/init/mob_types/
+# run from functions in mob/init/mob_type/<MOB>
 
-# biome specific modifiers for any mob
-execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_stats gm4_ce_data 3
-execute if predicate gm4_combat_expanded:mob/modifier/snowy run scoreboard players add $mob_health gm4_ce_data 8
-execute if predicate gm4_combat_expanded:mob/modifier/snowy run attribute @s generic.movement_speed modifier add 8b68cb8f-b3ac-489b-bb24-ed6cca2fcacf "gm4_ce_modifier_snowy" -0.15 multiply_base
-execute if predicate gm4_combat_expanded:mob/modifier/mountainous run scoreboard players add $mob_damage gm4_ce_data 2
-execute if predicate gm4_combat_expanded:mob/modifier/burned run scoreboard players add $mob_speed gm4_ce_data 3
-execute if predicate gm4_combat_expanded:mob/modifier/toxic run attribute @s generic.attack_damage modifier add 6cc324d6-32af-49cb-a3d0-c7c9982cdb65 "gm4_ce_modifier_toxic" -0.25 multiply
-execute if predicate gm4_combat_expanded:mob/modifier/deep run scoreboard players add $mob_toughness gm4_ce_data 1
-
-# translate general stat+ to their stats
-scoreboard players operation $mob_health gm4_ce_data += $mob_stats gm4_ce_data
-scoreboard players operation $mob_damage gm4_ce_data += $mob_stats gm4_ce_data
-scoreboard players operation $mob_speed gm4_ce_data += $mob_stats gm4_ce_data
+# | Biome Modifiers
+# snowy
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] generic.movement_speed modifier add 8b68cb8f-b3ac-489b-bb24-ed6cca2fcacf "gm4_ce_modifier_snowy" -0.15 multiply
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] generic.max_health modifier add 9e950abf-f1d2-407d-a886-749059c29325 "gm4_ce_modifier_snowy" 0.15 multiply_base
+# mountainous
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.attack_damage modifier add ba452899-be21-45b2-860c-c28947ba8c23 "gm4_ce_modifier_mountainous" 0.1 multiply_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.armor_toughness modifier add 899a6423-93ed-4293-bde3-d993a3c50d33 "gm4_ce_modifier_mountainous" 0.5 multiply_base
+# burned
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/burned] generic.movement_speed modifier add 00a0987e-646e-4c9e-911e-8b07ad12df20 "gm4_ce_modifier_burned" 0.1 multiply_base
+# flowering
+# toxic
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/tocix] generic.attack_damage modifier add 0bb9ee29-b563-4cf7-b665-716391af0085 "gm4_ce_modifier_toxic" -0.25 multiply
+# deep
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/deep] generic.armor_toughness modifier add 5f5931f9-24d8-41ae-bab1-1468b5c8f35c "gm4_ce_modifier_deep" 0.6 multiply_base
+# reef
+# growth
+# dark
+execute if predicate gm4_combat_expanded:mob/modifier/dark run function gm4_combat_expanded:mob/init/modifier/special/dark_mob
 
 # remove bonus health if witch spawned in witch hut
 execute if entity @s[type=witch,predicate=gm4_combat_expanded:technical/in_witch_hut] run scoreboard players set $mob_health gm4_ce_data 0

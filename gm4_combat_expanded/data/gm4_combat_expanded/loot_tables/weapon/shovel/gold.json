@@ -38,7 +38,7 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 0.5
+                  "scale": 0.1
                 },
                 "max": {
                   "type": "minecraft:score",
@@ -47,7 +47,7 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 2.5
+                  "scale": 0.3
                 }
               },
               "treasure": false,

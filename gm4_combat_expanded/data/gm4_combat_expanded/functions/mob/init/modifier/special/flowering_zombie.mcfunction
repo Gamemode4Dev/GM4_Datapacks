@@ -1,8 +1,6 @@
 # set flowering zombie stats
 # @s = zombie
 # at @s
-# run from mob/init/mob_type/drowned
-# run from mob/init/mob_type/husk
 # run from mob/init/mob_type/zombie
 
 execute unless score @s gm4_ce_generation matches 10.. run data modify entity @s ArmorDropChances[3] set value 2F

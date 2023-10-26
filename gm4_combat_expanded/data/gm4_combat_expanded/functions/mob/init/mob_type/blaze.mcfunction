@@ -3,12 +3,27 @@
 # at @s
 # run from mob/init/initiate
 
-# calculate stats based on difficulty
-scoreboard players operation $mob_armor gm4_ce_data += $difficulty gm4_ce_data
-execute if score $difficulty gm4_ce_data matches ..3 run attribute @s generic.attack_damage modifier add 697ef750-9a49-4c73-a780-188b7a4f4303 "gm4_ce_modifier_weaker_blaze" -0.75 multiply
-execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add $mob_armor gm4_ce_data 5
-execute if score $difficulty gm4_ce_data matches 11.. run scoreboard players add $mob_damage gm4_ce_data 4
-execute if score $difficulty gm4_ce_data matches 11.. run scoreboard players add $mob_toughness gm4_ce_data 5
+# base stat nerf
+attribute @s generic.attack_damage modifier add 3182427e-beb4-4f9a-9f39-674baf1d5ee4 "gm4_ce_base_damage_nerf" -5 add
+
+# max stat buffs
+scoreboard players set $mob_health gm4_ce_data 0
+scoreboard players set $mob_damage gm4_ce_data 0
+scoreboard players set $mob_speed gm4_ce_data 0
+scoreboard players set $mob_armor gm4_ce_data 12
+scoreboard players set $mob_toughness gm4_ce_data 12
+
+# translate stat buffs using difficulty
+#scoreboard players operation $mob_health gm4_ce_data *= $difficulty gm4_ce_data
+#scoreboard players operation $mob_damage gm4_ce_data *= $difficulty gm4_ce_data
+#scoreboard players operation $mob_speed gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_armor gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_toughness gm4_ce_data *= $difficulty gm4_ce_data
+#scoreboard players operation $mob_health gm4_ce_data /= #100 gm4_ce_data
+#scoreboard players operation $mob_damage gm4_ce_data /= #100 gm4_ce_data
+#scoreboard players operation $mob_speed gm4_ce_data /= #100 gm4_ce_data
+scoreboard players operation $mob_armor gm4_ce_data /= #100 gm4_ce_data
+scoreboard players operation $mob_toughness gm4_ce_data /= #100 gm4_ce_data
 
 # set modifiers
 function gm4_combat_expanded:mob/init/modifier/stat/prep

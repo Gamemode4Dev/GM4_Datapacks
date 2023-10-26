@@ -4,20 +4,37 @@
 # run from mob/init/initiate
 
 # base stat nerf
-attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -2 add
+attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -6 add
 
-# calculate stats based on difficulty
-scoreboard players operation $mob_speed gm4_ce_data += $difficulty gm4_ce_data
-execute if score $difficulty gm4_ce_data matches 4.. run scoreboard players operation $mob_health gm4_ce_data += $difficulty gm4_ce_data
-execute if score $difficulty gm4_ce_data matches 4.. run scoreboard players remove $mob_health gm4_ce_data 3
-execute if score $difficulty gm4_ce_data matches 11.. run scoreboard players add $mob_armor gm4_ce_data 4
+# max stat buffs
+scoreboard players set $mob_health gm4_ce_data 12
+scoreboard players set $mob_damage gm4_ce_data 0
+scoreboard players set $mob_speed gm4_ce_data 8
+scoreboard players set $mob_armor gm4_ce_data 14
+scoreboard players set $mob_toughness gm4_ce_data 0
 
-# biome specific modifiers for this mob
-data modify entity @s[predicate=gm4_combat_expanded:mob/init/modifier/dark] ExplosionRadius set value 4s
-data modify entity @s[predicate=gm4_combat_expanded:mob/init/modifier/burned] Fuse set value 22
+# translate stat buffs using difficulty
+scoreboard players operation $mob_health gm4_ce_data *= $difficulty gm4_ce_data
+#scoreboard players operation $mob_damage gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_speed gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_armor gm4_ce_data *= $difficulty gm4_ce_data
+#scoreboard players operation $mob_toughness gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_health gm4_ce_data /= #100 gm4_ce_data
+#scoreboard players operation $mob_damage gm4_ce_data /= #100 gm4_ce_data
+scoreboard players operation $mob_speed gm4_ce_data /= #100 gm4_ce_data
+scoreboard players operation $mob_armor gm4_ce_data /= #100 gm4_ce_data
+#scoreboard players operation $mob_toughness gm4_ce_data /= #100 gm4_ce_data
+
+# | Biome Modifiers
+# burned
+execute if predicate gm4_combat_expanded:mob/modifier/burned store result entity @s Fuse int 0.75 run data get entity @s Fuse
+# flowering 
 execute if predicate gm4_combat_expanded:mob/modifier/flowering run function gm4_combat_expanded:mob/init/modifier/special/flowering_creeper
+# toxic
 execute if predicate gm4_combat_expanded:mob/modifier/toxic run function gm4_combat_expanded:mob/process/toxic_creeper
-tag @s[predicate=gm4_combat_expanded:mob/init/modifier/toxic] add gm4_ce_toxic_creeper
+tag @s[predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_toxic_creeper
+# dark
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ExplosionRadius set value 4s
 
 # set modifiers
 function gm4_combat_expanded:mob/init/modifier/stat/prep

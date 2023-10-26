@@ -41,50 +41,6 @@
               "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-1,slot:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_boots\"}'}}"
             },
             {
-              "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "min": {
-                  "type": "minecraft:score",
-                  "target": {
-                    "type": "minecraft:fixed",
-                    "name": "$difficulty"
-                  },
-                  "score": "gm4_ce_data",
-                  "scale": 2
-                },
-                "max": {
-                  "type": "minecraft:score",
-                  "target": {
-                    "type": "minecraft:fixed",
-                    "name": "$difficulty"
-                  },
-                  "score": "gm4_ce_data",
-                  "scale": 3
-                }
-              },
-              "treasure": false,
-              "conditions": [
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$difficulty"
-                    },
-                    "score": "gm4_ce_data"
-                  },
-                  "range": {
-                    "min": 2
-                  }
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.33
-                }
-              ]
-            },
-            {
               "function": "minecraft:enchant_randomly",
               "enchantments": [
                 "minecraft:depth_strider"
@@ -126,7 +82,7 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 1.5
+                  "scale": 0.2
                 },
                 "max": {
                   "type": "minecraft:score",
@@ -135,7 +91,7 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 2.5
+                  "scale": 0.3
                 }
               },
               "treasure": false,
@@ -151,7 +107,7 @@
                     "score": "gm4_ce_data"
                   },
                   "range": {
-                    "min": 2
+                    "min": 20
                   }
                 },
                 {

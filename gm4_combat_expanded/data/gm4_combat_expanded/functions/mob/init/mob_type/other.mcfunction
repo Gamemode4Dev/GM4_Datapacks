@@ -17,11 +17,24 @@
 # Witch
 # Zoglin
 
-# calculate stats based on difficulty
-scoreboard players operation $mob_stats gm4_ce_data += $difficulty gm4_ce_data
-execute if score $difficulty gm4_ce_data matches 4.. run scoreboard players add $mob_armor gm4_ce_data 2
-execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add $mob_armor gm4_ce_data 2
-execute if score $difficulty gm4_ce_data matches 11.. run scoreboard players add $mob_armor gm4_ce_data 3
+# max stat buffs
+scoreboard players set $mob_health gm4_ce_data 15
+scoreboard players set $mob_damage gm4_ce_data 11
+scoreboard players set $mob_speed gm4_ce_data 15
+scoreboard players set $mob_armor gm4_ce_data 7
+scoreboard players set $mob_toughness gm4_ce_data 7
+
+# translate stat buffs using difficulty
+scoreboard players operation $mob_health gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_damage gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_speed gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_armor gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_toughness gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_health gm4_ce_data /= #100 gm4_ce_data
+scoreboard players operation $mob_damage gm4_ce_data /= #100 gm4_ce_data
+scoreboard players operation $mob_speed gm4_ce_data /= #100 gm4_ce_data
+scoreboard players operation $mob_armor gm4_ce_data /= #100 gm4_ce_data
+scoreboard players operation $mob_toughness gm4_ce_data /= #100 gm4_ce_data
 
 # set modifiers
 function gm4_combat_expanded:mob/init/modifier/stat/prep

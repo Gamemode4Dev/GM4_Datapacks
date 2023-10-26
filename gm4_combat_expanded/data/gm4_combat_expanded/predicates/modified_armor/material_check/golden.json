@@ -1,7 +1,7 @@
 [
   {
     "condition": "minecraft:random_chance",
-    "chance": 0.25
+    "chance": 0.35
   },
   {
     "condition": "minecraft:value_check",
@@ -17,6 +17,9 @@
       },
       "p": 0.55
     },
-    "range": 5
+    "range": {
+      "min": 35,
+      "max": 55
+    }
   }
 ]
