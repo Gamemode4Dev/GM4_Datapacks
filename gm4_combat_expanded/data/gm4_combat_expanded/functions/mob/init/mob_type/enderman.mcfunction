@@ -39,6 +39,7 @@ execute if predicate gm4_combat_expanded:mob/modifier/flowering if predicate gm4
 # the end
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/the_end] generic.attack_damage modifier add 0872b8ed-f482-4a29-94dc-22df9a28dddb "gm4_ce_modifier_end" 0.2 multiply_base
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/the_end] generic.movement_speed modifier add 17004032-9186-4202-b662-14841061fbb2 "gm4_ce_modifier_end" 0.15 multiply_base
+# warped forest
 
 # set modifiers
 function gm4_combat_expanded:mob/init/modifier/stat/prep

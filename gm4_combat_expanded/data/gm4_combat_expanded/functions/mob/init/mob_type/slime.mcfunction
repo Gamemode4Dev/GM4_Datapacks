@@ -43,6 +43,9 @@ execute if predicate gm4_combat_expanded:mob/modifier/flowering run function gm4
 tag @s[type=slime,predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_poison_landing
 # growth
 execute if score $size gm4_ce_data matches 1.. if entity @s[type=slime,tag=!gm4_ce_extra_mob,predicate=gm4_combat_expanded:mob/modifier/growth] run function gm4_combat_expanded:mob/init/modifier/special/growth_slime
+# basalt deltas
+execute if score $size gm4_ce_data matches 1..2 if entity @s[type=magma_cube,predicate=gm4_combat_expanded:mob/modifier/nether/basalt_deltas] run scoreboard players add $size gm4_ce_data 1
+attribute @s generic.attack_damage modifier add 1c2ac6d1-109f-4724-aafb-7cc43049ee99 "gm4_ce_modifier_basalt_deltas" 0.15 multiply_base
 
 # size changes based on difficulty
 execute if score $difficulty gm4_ce_data matches 50.. if score $size gm4_ce_data matches 1..3 if predicate gm4_combat_expanded:technical/chance/slime_grow_rare run scoreboard players add $size gm4_ce_data 1

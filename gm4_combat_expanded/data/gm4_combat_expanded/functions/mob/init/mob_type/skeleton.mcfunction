@@ -56,6 +56,8 @@ execute if predicate gm4_combat_expanded:mob/modifier/growth run function gm4_co
 # dark
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_speed gm4_ce_data 2
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_toughness gm4_ce_data 2
+# soul sand valley
+execute if predicate gm4_combat_expanded:mob/modifier/nether/soul_sand_valley run effect give @s fire_resistance infinite 0 true
 
 # drop rate for custom arrows
 execute if score $arrow gm4_ce_data matches 1 run data modify entity @s HandDropChances[1] set value 0.25F

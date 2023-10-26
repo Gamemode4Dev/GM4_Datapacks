@@ -15,7 +15,8 @@ scoreboard players set $mob_speed gm4_ce_data 10
 scoreboard players set $mob_armor gm4_ce_data 30
 scoreboard players set $mob_toughness gm4_ce_data 16
 
-scoreboard players set $mob_health.cap gm4_ce_data 28
+scoreboard players set $mob_health.cap gm4_ce_data 18
+execute if predicate gm4_combat_expanded:mob/modifier/nether/crimson_forest run scoreboard players set $mob_health.cap gm4_ce_data 28
 scoreboard players set $mob_damage.cap gm4_ce_data 0
 scoreboard players set $mob_speed.cap gm4_ce_data 8
 scoreboard players set $mob_armor.cap gm4_ce_data 12

@@ -48,6 +48,7 @@ execute if entity @s[type=wither_skeleton] run function gm4_combat_expanded:mob/
 execute if entity @s[type=piglin] run function gm4_combat_expanded:mob/init/mob_type/piglin
 execute if entity @s[type=zombified_piglin] run function gm4_combat_expanded:mob/init/mob_type/zombified_piglin
 execute if entity @s[type=blaze] run function gm4_combat_expanded:mob/init/mob_type/blaze
+execute if entity @s[type=hoglin] run function gm4_combat_expanded:mob/init/mob_type/hoglin
 execute if entity @s[type=#gm4_combat_expanded:basic_modifiers_only] run function gm4_combat_expanded:mob/init/mob_type/other
 
 # heal to max health

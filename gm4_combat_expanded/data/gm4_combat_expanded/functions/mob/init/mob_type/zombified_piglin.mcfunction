@@ -36,7 +36,7 @@ scoreboard players operation $mob_armor gm4_ce_data /= #100 gm4_ce_data
 scoreboard players operation $mob_toughness gm4_ce_data /= #100 gm4_ce_data
 
 # set armor
-loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/piglin
+loot replace entity @s[predicate=gm4_combat_expanded:mob/modifier/nether/crimson_forest] armor.feet loot gm4_combat_expanded:mob/equip_armor/piglin
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:weapon/sword/gold
 
 # half droprate of armor in "Dark"

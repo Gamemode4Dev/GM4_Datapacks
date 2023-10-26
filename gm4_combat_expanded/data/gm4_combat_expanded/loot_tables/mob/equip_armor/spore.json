@@ -5,6 +5,33 @@
         "entries": [
           {
             "type": "minecraft:item",
+            "name": "minecraft:warped_wart_block",
+            "functions": [
+              {
+                "function": "minecraft:set_attributes",
+                "modifiers": [
+                  {
+                    "attribute": "minecraft:generic.attack_damage",
+                    "name": "",
+                    "amount": 2,
+                    "operation": "addition",
+                    "slot": "head"
+                  }
+                ]
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{Tags:[\"gm4_ce_spore_zombie.warped\"]}"
+                }
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
             "name": "minecraft:cherry_leaves",
             "functions": [
               {
@@ -27,6 +54,16 @@
                 "predicate": {
                   "nbt": "{Tags:[\"gm4_ce_spore_zombie.cherry\"]}"
                 }
+              },
+              {
+                "condition": "minecraft:inverted",
+                "term": {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "nbt": "{Tags:[\"gm4_ce_spore_zombie.warped\"]}"
+                  }
+                }
               }
             ]
           },
@@ -41,6 +78,16 @@
                   "entity": "this",
                   "predicate": {
                     "nbt": "{Tags:[\"gm4_ce_spore_zombie.cherry\"]}"
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:inverted",
+                "term": {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "nbt": "{Tags:[\"gm4_ce_spore_zombie.warped\"]}"
                   }
                 }
               }
