@@ -38,16 +38,14 @@ loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/gener
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/skeleton
 
 # difficulty based effects
-# TODO: make chance predicate based on diff
-execute if score $difficulty gm4_ce_data matches 75.. if entity @s[type=skeleton] store success score $arrow gm4_ce_data run loot replace entity @s[predicate=gm4_combat_expanded:technical/chance/skeleton_harming_arrow,predicate=!gm4_combat_expanded:mob/modifier/growth] weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/skeleton_harming
-execute if score $difficulty gm4_ce_data matches 75.. if entity @s[type=stray] store success score $arrow gm4_ce_data run loot replace entity @s[predicate=gm4_combat_expanded:technical/chance/skeleton_harming_arrow,predicate=!gm4_combat_expanded:mob/modifier/growth] weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/stray_harming
+execute if entity @s[type=skeleton] store success score $arrow gm4_ce_data run loot replace entity @s[predicate=gm4_combat_expanded:technical/chance/skeleton_harming_arrow,predicate=!gm4_combat_expanded:mob/modifier/growth] weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/skeleton_harming
+execute if entity @s[type=stray] store success score $arrow gm4_ce_data run loot replace entity @s[predicate=gm4_combat_expanded:technical/chance/skeleton_harming_arrow,predicate=!gm4_combat_expanded:mob/modifier/growth] weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/stray_harming
 
 # | Biome Modifiers
 # snowy
 execute if entity @s[type=stray,predicate=gm4_combat_expanded:mob/modifier/snowy,predicate=!gm4_combat_expanded:mob/modifier/growth] store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/stray_snowy
 # flowering
-# TODO: combine predicates
-execute if predicate gm4_combat_expanded:mob/modifier/flowering if predicate gm4_combat_expanded:technical/chance/replace_skeleton run function gm4_combat_expanded:mob/init/modifier/special/flowering_skeleton
+execute if predicate gm4_combat_expanded:technical/chance/replace_flowering_skeleton run function gm4_combat_expanded:mob/init/modifier/special/flowering_skeleton
 # toxic
 execute if entity @s[type=skeleton,predicate=gm4_combat_expanded:mob/modifier/toxic,predicate=!gm4_combat_expanded:mob/modifier/growth] store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/skeleton_toxic
 execute if entity @s[type=stray,predicate=gm4_combat_expanded:mob/modifier/toxic,predicate=!gm4_combat_expanded:mob/modifier/growth] store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/stray_toxic
