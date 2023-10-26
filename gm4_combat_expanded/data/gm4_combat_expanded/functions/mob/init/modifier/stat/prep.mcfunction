@@ -37,16 +37,11 @@ execute store result score $mob_armor gm4_ce_data run data get storage gm4_comba
 execute store result score $mob_toughness gm4_ce_data run data get storage gm4_combat_expanded:temp random_stats[{Name:"gm4_ce_mob_toughness"}].Amount
 
 # store modifiers capped to a max value
-# health        1*15 = 15
-# damage        0.5*11 = 5.5
-# speed         0.02*15 = 0.3 (30%)
-# armor         1*7 = 7
-# toughness     5*7 = 35
-execute store result storage gm4_combat_expanded:temp picked_stat.health float 1 run scoreboard players operation $mob_health gm4_ce_data < #15 gm4_ce_data
-execute store result storage gm4_combat_expanded:temp picked_stat.damage float 0.5 run scoreboard players operation $mob_damage gm4_ce_data < #11 gm4_ce_data
-execute store result storage gm4_combat_expanded:temp picked_stat.speed float 0.02 run scoreboard players operation $mob_speed gm4_ce_data < #15 gm4_ce_data
-execute store result storage gm4_combat_expanded:temp picked_stat.armor float 1 run scoreboard players operation $mob_armor gm4_ce_data < #7 gm4_ce_data
-execute store result storage gm4_combat_expanded:temp picked_stat.toughness float 5 run scoreboard players operation $mob_toughness gm4_ce_data < #7 gm4_ce_data
+execute store result storage gm4_combat_expanded:temp picked_stat.health float 1 run scoreboard players operation $mob_health gm4_ce_data < $mob_health.cap gm4_ce_data
+execute store result storage gm4_combat_expanded:temp picked_stat.damage float 0.5 run scoreboard players operation $mob_damage gm4_ce_data < $mob_damage.cap gm4_ce_data
+execute store result storage gm4_combat_expanded:temp picked_stat.speed float 0.02 run scoreboard players operation $mob_speed gm4_ce_data < $mob_speed.cap gm4_ce_data
+execute store result storage gm4_combat_expanded:temp picked_stat.armor float 1 run scoreboard players operation $mob_armor gm4_ce_data < $mob_armor.cap gm4_ce_data
+execute store result storage gm4_combat_expanded:temp picked_stat.toughness float 5 run scoreboard players operation $mob_toughness gm4_ce_data < $mob_toughness.cap gm4_ce_data
 
 # evaluate stats and add modifiers to mob
 function gm4_combat_expanded:mob/init/modifier/stat/eval with storage gm4_combat_expanded:temp picked_stat

@@ -14,6 +14,12 @@ scoreboard players set $mob_speed gm4_ce_data 12
 scoreboard players set $mob_armor gm4_ce_data 7
 scoreboard players set $mob_toughness gm4_ce_data 3
 
+scoreboard players set $mob_health.cap gm4_ce_data 12
+scoreboard players set $mob_damage.cap gm4_ce_data 6
+scoreboard players set $mob_speed.cap gm4_ce_data 10
+scoreboard players set $mob_armor.cap gm4_ce_data 5
+scoreboard players set $mob_toughness.cap gm4_ce_data 2
+
 # translate stat buffs using difficulty
 scoreboard players operation $mob_health gm4_ce_data *= $difficulty gm4_ce_data
 scoreboard players operation $mob_damage gm4_ce_data *= $difficulty gm4_ce_data
