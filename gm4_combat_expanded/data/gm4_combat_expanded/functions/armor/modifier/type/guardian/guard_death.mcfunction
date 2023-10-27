@@ -3,9 +3,6 @@
 # at unspecified
 # run from armor/type/guardian/damage_calc
 
-# advancement
-advancement grant @s only gm4:combat_expanded_guardian
-
 # display custom death message if death messages are on
 execute store result score $death_messages gm4_ce_data run gamerule showDeathMessages
 gamerule showDeathMessages false

@@ -1,8 +1,6 @@
 # actiavate stall armor on wearer getting hit
 # @s = player wearing armor
 # at @s
-# run from advancement damaged/armor/stall
-
 advancement revoke @s only gm4_combat_expanded:damaged/armor/stall
 
 # store armor for checking

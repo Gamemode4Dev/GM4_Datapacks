@@ -1,8 +1,6 @@
 # check for interactions with canine wolves
 # @s = player that interacted with a canine wolf
 # at @s
-# run from advancement interact_canine
-
 advancement revoke @s only gm4_combat_expanded:interact_canine
 
 # give power to wolves that were fed

@@ -31,6 +31,3 @@ scoreboard players operation $playtime gm4_ce_difficult /= #100 gm4_ce_data
 
 # store difficulty in player score
 scoreboard players operation @s gm4_ce_difficult = $playtime gm4_ce_difficult
-
-# check advancement
-execute if score #days_alive gm4_ce_difficult matches 10.. run advancement grant @s only gm4:combat_expanded_survive

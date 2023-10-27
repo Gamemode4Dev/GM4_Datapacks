@@ -1,8 +1,6 @@
 # actiavate toxic armor on wearer getting hit
 # @s = player wearing armor
 # at @s
-# run from advancement damaged/armor/toxic
-
 advancement revoke @s only gm4_combat_expanded:damaged/armor/toxic
 
 # store armor for checking
