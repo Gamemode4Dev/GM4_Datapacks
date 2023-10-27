@@ -6,7 +6,7 @@
 # base stat nerf
 attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -5 add
 attribute @s generic.attack_damage modifier add 3182427e-beb4-4f9a-9f39-674baf1d5ee4 "gm4_ce_base_damage_nerf" -2 add
-attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd7173297b "gm4_ce_base_speed_nerf" -0.04 multiply_base
+attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd7173297b "gm4_ce_base_speed_nerf" -0.04 multiply
 
 # max stat buffs
 scoreboard players set $mob_health gm4_ce_data 15
@@ -53,14 +53,14 @@ execute if entity @s[tag=gm4_ce_spore_zombie] run function gm4_combat_expanded:m
 # toxic
 tag @s[predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_weakness_attacks
 # deep
-attribute @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/deep] generic.attack_damage modifier add 34e4955b-8f75-4292-89e9-7a1639499717 "gm4_ce_modifier_deep" 0.2 multiply_base
+attribute @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/deep] generic.attack_damage modifier add 34e4955b-8f75-4292-89e9-7a1639499717 "gm4_ce_modifier_deep" 0.2 multiply
 # reef
 execute if entity @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/reef] run function gm4_combat_expanded:mob/init/modifier/special/reef_drowned
 # growth
 execute if entity @s[type=!zombie_villager,predicate=gm4_combat_expanded:mob/modifier/growth] run function gm4_combat_expanded:mob/init/modifier/special/growth_zombie
 # dark
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] generic.armor_toughness modifier add e25ac14f-4a06-48e0-adce-2e95e773d4a2 "gm4_ce_modifier_dark" 0.15 multiply_base
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] zombie.spawn_reinforcements modifier add 88708a3a-b8f0-46f8-8dd9-1f8fb0f315d6 "gm4_ce_modifier_dark" 0.25 multiply_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] generic.armor_toughness modifier add e25ac14f-4a06-48e0-adce-2e95e773d4a2 "gm4_ce_modifier_dark" 0.15 multiply
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] zombie.spawn_reinforcements modifier add 88708a3a-b8f0-46f8-8dd9-1f8fb0f315d6 "gm4_ce_modifier_dark" 0.25 multiply
 
 # half droprate of armor in "Dark"
 data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
