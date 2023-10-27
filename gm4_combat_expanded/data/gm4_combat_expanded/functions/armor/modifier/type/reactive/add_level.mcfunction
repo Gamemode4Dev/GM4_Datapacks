@@ -31,4 +31,4 @@ scoreboard players operation @s gm4_ce_absorp += $level gm4_ce_data
 scoreboard players set @s gm4_ce_t_reactive 37
 
 # grant effect
-function gm4_combat_expanded:player/shield_player
+function gm4_combat_expanded:player/shield/prep

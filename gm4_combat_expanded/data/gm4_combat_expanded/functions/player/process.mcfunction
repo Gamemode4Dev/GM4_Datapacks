@@ -35,6 +35,6 @@ execute if entity @s[tag=gm4_ce_immune_active] run function gm4_combat_expanded:
 execute if predicate gm4_combat_expanded:modified_armor/wearing run function gm4_combat_expanded:armor/process
 
 # shield players if they have stored shield
-execute if score @s gm4_ce_absorp matches 1.. run function gm4_combat_expanded:player/shield_player
+execute if score @s gm4_ce_absorp matches 1.. run function gm4_combat_expanded:player/shield/prep
 # heal players if they have stored health
 execute if score @s gm4_ce_healstore matches 1.. run function gm4_combat_expanded:player/heal/heal_calc
