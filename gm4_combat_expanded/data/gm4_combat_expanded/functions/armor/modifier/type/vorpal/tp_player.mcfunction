@@ -13,3 +13,6 @@ execute at @s run particle portal ~ ~0.8 ~ 0.2 0.4 0.2 1 16
 
 # compatibility with teleportation anchors
 execute if score gm4_teleportation_anchors load.status matches 1 run function gm4_teleportation_anchors:player/used_chorus
+
+# advancement
+advancement grant @s only gm4:combat_expanded_vorpal

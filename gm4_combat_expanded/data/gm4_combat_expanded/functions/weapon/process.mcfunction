@@ -20,3 +20,6 @@ execute unless score $stored_sharpness gm4_ce_data = $current_sharpness gm4_ce_d
 
 # check netherite conversion
 execute if predicate gm4_combat_expanded:technical/convert_netherite/weapon run function gm4_combat_expanded:weapon/convert_netherite
+
+# advancement
+advancement grant @s only gm4:combat_expanded_identify

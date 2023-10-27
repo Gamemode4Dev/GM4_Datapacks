@@ -1,8 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:leather_chestplate",
-      "nbt": "{CustomModelData:3420001}"
+      "item": "minecraft:iron_chestplate"
     },
     "title": {
       "translate": "advancement.gm4.combat_expanded.identify.title",
@@ -10,15 +9,68 @@
     },
     "description": {
       "translate": "advancement.gm4.combat_expanded.identify.description",
-      "fallback": "Identify a weapon or piece of armor looted from a mob",
+      "fallback": "Use an Indentified weapon or piece of armor looted from a mob",
       "color": "gray"
     },
     "frame": "task"
   },
-  "parent": "gm4:root",
+  "parent": "gm4:combat_expanded_identify",
   "criteria": {
-    "identify": {
-      "trigger": "minecraft:impossible"
+    "full_set": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "head": {
+                      "nbt": "{gm4_combat_expanded:{}}"
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "chest": {
+                      "nbt": "{gm4_combat_expanded:{}}"
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "legs": {
+                      "nbt": "{gm4_combat_expanded:{}}"
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "feet": {
+                      "nbt": "{gm4_combat_expanded:{}}"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   }
 }

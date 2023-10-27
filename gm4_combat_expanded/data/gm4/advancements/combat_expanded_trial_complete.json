@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:spawner",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": {
+      "translate": "advancement.gm4.combat_expanded.trial_complete.title",
+      "fallback": "Trial by Combat"
+    },
+    "description": {
+      "translate": "advancement.gm4.combat_expanded.trial_complete.description",
+      "fallback": "Complete a Combat Trial and claim your reward!"
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "parent": "gm4:combat_expanded_trial_found",
+  "criteria": {
+    "challenger": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
