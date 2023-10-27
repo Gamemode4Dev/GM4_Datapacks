@@ -5,10 +5,6 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/epic/challenge"
-        },
-        {
-          "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:armor/identification/epic/guardian"
         },
         {
