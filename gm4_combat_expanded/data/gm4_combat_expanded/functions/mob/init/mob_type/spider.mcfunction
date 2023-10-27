@@ -34,6 +34,8 @@ scoreboard players operation $mob_armor gm4_ce_data /= #100 gm4_ce_data
 #scoreboard players operation $mob_toughness gm4_ce_data /= #100 gm4_ce_data
 
 # | Biome Modifiers
+# snowy
+tag @s[type=spider,predicate=gm4_combat_expanded:mob/modifier/snowy] add gm4_ce_slowing_attacks
 # mountainous
 effect give @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] jump_boost infinite 1
 # burned

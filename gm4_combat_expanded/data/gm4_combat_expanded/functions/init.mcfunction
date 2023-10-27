@@ -8,6 +8,12 @@ execute unless score $natural_regen_disabled gm4_ce_data matches 1.. run gamerul
 execute unless score $natural_regen_disabled gm4_ce_data matches 1.. if score $natural_regen gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'{"text":"Combat Expanded: disabled Natural Regeneration"}'}
 scoreboard players set $natural_regen_disabled gm4_ce_data 1
 
+# disable natural phantom spawning
+execute unless score $phantoms gm4_ce_data matches -1 store result score $phantoms gm4_ce_data run gamerule doInsomnia
+execute unless score $phantoms_disabled gm4_ce_data matches 1.. run gamerule doInsomnia false
+execute unless score $phantoms_disabled gm4_ce_data matches 1.. if score $phantoms gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'{"text":"Combat Expanded: disabled Phantom Spawning"}'}
+scoreboard players set $phantoms_disabled gm4_ce_data 1
+
 # scoreboards
 scoreboard objectives add gm4_ce_id dummy
 scoreboard objectives add gm4_ce_difficult dummy {"text":"GM4 Combat Expanded: Difficulty"}

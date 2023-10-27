@@ -3,11 +3,44 @@
 # at @s
 # run from mob/init/initiate
 
-# TODO: rework phantoms
+# base stat nerf
+attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -15 add
+attribute @s generic.attack_damage modifier add 3182427e-beb4-4f9a-9f39-674baf1d5ee4 "gm4_ce_base_damage_nerf" -1.5 add
 
-# calculate stats based on difficulty
-attribute @s generic.max_health modifier add 54baf755-966a-451c-a7c3-0aefc1dfd8ee "gm4_ce_modifier_weaker_phantom" -0.5 multiply
-attribute @s generic.attack_damage modifier add b97c88de-3c7e-4f7f-8ac0-e664aa3b5dbc "gm4_ce_modifier_weaker_phantom" -0.5 add
+# max stat buffs
+scoreboard players set $mob_health gm4_ce_data 30
+scoreboard players set $mob_damage gm4_ce_data 8
+scoreboard players set $mob_speed gm4_ce_data 0
+scoreboard players set $mob_armor gm4_ce_data 8
+scoreboard players set $mob_toughness gm4_ce_data 0
 
-# set modifiers (doesn't need to run for Phantoms, they do not deserve buffs)
-#function gm4_combat_expanded:mob/init/modifier/stat/prep
+scoreboard players set $mob_health.cap gm4_ce_data 22
+scoreboard players set $mob_damage.cap gm4_ce_data 6
+scoreboard players set $mob_speed.cap gm4_ce_data 0
+scoreboard players set $mob_armor.cap gm4_ce_data 5
+scoreboard players set $mob_toughness.cap gm4_ce_data 0
+
+# translate stat buffs using difficulty
+scoreboard players operation $mob_health gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_damage gm4_ce_data *= $difficulty gm4_ce_data
+#scoreboard players operation $mob_speed gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_armor gm4_ce_data *= $difficulty gm4_ce_data
+#scoreboard players operation $mob_toughness gm4_ce_data *= $difficulty gm4_ce_data
+scoreboard players operation $mob_health gm4_ce_data /= #100 gm4_ce_data
+scoreboard players operation $mob_damage gm4_ce_data /= #100 gm4_ce_data
+#scoreboard players operation $mob_speed gm4_ce_data /= #100 gm4_ce_data
+scoreboard players operation $mob_armor gm4_ce_data /= #100 gm4_ce_data
+#scoreboard players operation $mob_toughness gm4_ce_data /= #100 gm4_ce_data
+
+# | Biome Modifiers
+# snowy
+tag @s[predicate=gm4_combat_expanded:mob/modifier/snowy] add gm4_ce_slowing_attacks
+# burned
+effect give @s[predicate=gm4_combat_expanded:mob/modifier/burned] fire_resistance infinite 0 true
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/burned,predicate=gm4_combat_expanded:technical/chance/grow_phantom_slight] Size set value 1
+# flowering
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering,predicate=gm4_combat_expanded:technical/chance/grow_phantom_slight] Size set value 1
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering,predicate=gm4_combat_expanded:technical/chance/grow_phantom_large] Size set value 3
+
+# set modifiers
+function gm4_combat_expanded:mob/init/modifier/stat/prep

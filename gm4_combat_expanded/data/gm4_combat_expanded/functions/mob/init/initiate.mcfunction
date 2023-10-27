@@ -22,6 +22,9 @@ execute unless predicate gm4_combat_expanded:mob/modifier/dark if predicate gm4_
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $difficulty_mult gm4_ce_data 3
 # mountainous +20%
 execute if predicate gm4_combat_expanded:mob/modifier/mountainous run scoreboard players add $difficulty_mult gm4_ce_data 2
+# home bed nearby-ish
+##TODO
+#execute align xz positioned ~-96 ~ ~-96 as @e[type=marker,tag=gm4_ce_home,dx=192,dz=192]
 # trial spawner TODO
 ##scoreboard players add $difficulty_mult gm4_ce_data 6
 # apply difficulty_mult
