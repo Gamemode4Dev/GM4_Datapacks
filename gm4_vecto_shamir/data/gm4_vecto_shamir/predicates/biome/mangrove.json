@@ -1,6 +1,0 @@
-{
-  "condition": "minecraft:location_check",
-  "predicate": {
-    "biome": "minecraft:mangrove_swamp"
-  }
-}

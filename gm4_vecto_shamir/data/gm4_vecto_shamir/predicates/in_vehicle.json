@@ -1,9 +1,0 @@
-{
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "vehicle": {
-      "nbt": "{Tags:[\"gm4_vecto_vehicle\"]}"
-    }
-  }
-}

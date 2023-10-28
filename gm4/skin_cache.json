@@ -1001,13 +1001,13 @@
       "gm4_metallurgy:band/aluminium"
     ],
     "gm4_zauber_liquids": [
-      "gm4_potion_liquids:liquids/regeneration",
-      "gm4_potion_liquids:liquids/leaping",
-      "gm4_potion_liquids:liquids/poison",
-      "gm4_potion_liquids:liquids/strength",
       "gm4_potion_liquids:liquids/healing",
+      "gm4_potion_liquids:liquids/regeneration",
+      "gm4_potion_liquids:liquids/poison",
+      "gm4_potion_liquids:liquids/harming",
       "gm4_potion_liquids:liquids/swiftness",
-      "gm4_potion_liquids:liquids/harming"
+      "gm4_potion_liquids:liquids/leaping",
+      "gm4_potion_liquids:liquids/strength"
     ],
     "gm4_audere_shamir": [
       "gm4_metallurgy:band/barium"
