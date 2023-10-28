@@ -1,7 +1,7 @@
 # check player rotation
 # @s = player not in spectator mode
 # at unspecified
-# run from evaluate/motion
+# run from evaluate/position
 
 # read player rotation into scores from storage
 execute store result score $yaw gm4_bookshelf_inspector_data run data get storage gm4_bookshelf_inspector:temp Rotation[0]
