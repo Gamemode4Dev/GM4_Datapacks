@@ -21,6 +21,7 @@ scoreboard objectives add gm4_ce_play_time dummy
 scoreboard objectives add gm4_ce_death_mult dummy
 scoreboard objectives add gm4_ce_since_last_death dummy
 scoreboard objectives add gm4_ce_alivetime minecraft.custom:minecraft.time_since_death
+scoreboard objectives add gm4_ce_deaths minecraft.custom:minecraft.deaths
 scoreboard objectives add gm4_ce_data dummy
 scoreboard objectives add gm4_ce_health dummy
 scoreboard objectives add gm4_ce_hurt minecraft.custom:minecraft.damage_taken

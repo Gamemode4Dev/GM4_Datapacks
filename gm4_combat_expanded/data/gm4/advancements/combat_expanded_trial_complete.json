@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:spawner",
-      "nbt": "{Enchantments:[{}]}"
+      "nbt": "{}"
     },
     "title": {
       "translate": "advancement.gm4.combat_expanded.trial_complete.title",

@@ -9,6 +9,7 @@ attribute @s generic.armor_toughness modifier add 6512eccc-ca44-4cf0-ad13-0fa881
 attribute @s generic.armor modifier add 52d29350-f0c7-4be5-9bbc-59d1d409b254 "gm4_ce_miniboss" 0.5 multiply
 attribute @s generic.attack_knockback modifier add 3e53c594-21c0-4ed3-9833-b135a4879a6c "gm4_ce_miniboss" 0.75 add
 attribute @s generic.knockback_resistance modifier add d8b8f22e-bba8-47ca-b502-4cf83a847b4d "gm4_ce_miniboss" 0.85 add
+attribute @s generic.attack_damage modifier add d8b8f22e-bba8-47ca-b502-4cf83a847b4d "gm4_ce_miniboss" -3 add
 
 loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/miniboss
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/miniboss

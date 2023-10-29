@@ -1,7 +1,8 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:iron_chestplate"
+      "item": "minecraft:iron_chestplate",
+      "nbt": "{}"
     },
     "title": {
       "translate": "advancement.gm4.combat_expanded.identify.title",

@@ -4,34 +4,22 @@
 # run from mob/init/initiate
 
 # base stat nerf
-attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -14 add
+attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -6 add
 attribute @s generic.attack_damage modifier add 3182427e-beb4-4f9a-9f39-674baf1d5ee4 "gm4_ce_base_damage_nerf" -1.5 add
-attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd7173297b "gm4_ce_base_speed_nerf" -0.08 multiply
+attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd7173297b "gm4_ce_base_speed_nerf" -0.08 multiply_base
 
 # max stat buffs
 scoreboard players set $mob_health gm4_ce_data 30
 scoreboard players set $mob_damage gm4_ce_data 10
-scoreboard players set $mob_speed gm4_ce_data 24
+scoreboard players set $mob_speed gm4_ce_data 64
 scoreboard players set $mob_armor gm4_ce_data 4
 scoreboard players set $mob_toughness gm4_ce_data 0
 
-scoreboard players set $mob_health.cap gm4_ce_data 17
+scoreboard players set $mob_health.cap gm4_ce_data 12
 scoreboard players set $mob_damage.cap gm4_ce_data 10
-scoreboard players set $mob_speed.cap gm4_ce_data 20
-scoreboard players set $mob_armor.cap gm4_ce_data 4
+scoreboard players set $mob_speed.cap gm4_ce_data 34
+scoreboard players set $mob_armor.cap gm4_ce_data 2
 scoreboard players set $mob_toughness.cap gm4_ce_data 0
-
-# translate stat buffs using difficulty
-scoreboard players operation $mob_health gm4_ce_data *= $difficulty gm4_ce_data
-scoreboard players operation $mob_damage gm4_ce_data *= $difficulty gm4_ce_data
-scoreboard players operation $mob_speed gm4_ce_data *= $difficulty gm4_ce_data
-scoreboard players operation $mob_armor gm4_ce_data *= $difficulty gm4_ce_data
-#scoreboard players operation $mob_toughness gm4_ce_data *= $difficulty gm4_ce_data
-scoreboard players operation $mob_health gm4_ce_data /= #100 gm4_ce_data
-scoreboard players operation $mob_damage gm4_ce_data /= #100 gm4_ce_data
-scoreboard players operation $mob_speed gm4_ce_data /= #100 gm4_ce_data
-scoreboard players operation $mob_armor gm4_ce_data /= #100 gm4_ce_data
-#scoreboard players operation $mob_toughness gm4_ce_data /= #100 gm4_ce_data
 
 # | Biome Modifiers
 # snowy
@@ -51,4 +39,5 @@ execute if entity @s[tag=!gm4_ce_extra_mob,predicate=gm4_combat_expanded:mob/mod
 effect give @s[predicate=gm4_combat_expanded:mob/modifier/dark,predicate=gm4_combat_expanded:technical/chance/spider_invisibility] invisibility infinite 0
 
 # set modifiers
-function gm4_combat_expanded:mob/init/modifier/stat/prep
+execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep
+scoreboard players reset $replaced_mob gm4_ce_data

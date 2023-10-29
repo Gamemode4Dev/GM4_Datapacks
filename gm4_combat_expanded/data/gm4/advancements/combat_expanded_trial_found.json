@@ -1,7 +1,8 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:tuff_bricks"
+      "item": "minecraft:tuff",
+      "nbt": "{}"
     },
     "title": {
       "translate": "advancement.gm4.combat_expanded.trial_found.title",

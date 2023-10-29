@@ -28,8 +28,7 @@
                   "id": "minecraft:is_fall",
                   "expected": false
                 }
-              ],
-              "source_entity": {}
+              ]
             }
           }
         }

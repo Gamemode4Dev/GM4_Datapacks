@@ -20,18 +20,6 @@ scoreboard players set $mob_speed.cap gm4_ce_data 0
 scoreboard players set $mob_armor.cap gm4_ce_data 5
 scoreboard players set $mob_toughness.cap gm4_ce_data 0
 
-# translate stat buffs using difficulty
-scoreboard players operation $mob_health gm4_ce_data *= $difficulty gm4_ce_data
-scoreboard players operation $mob_damage gm4_ce_data *= $difficulty gm4_ce_data
-#scoreboard players operation $mob_speed gm4_ce_data *= $difficulty gm4_ce_data
-scoreboard players operation $mob_armor gm4_ce_data *= $difficulty gm4_ce_data
-#scoreboard players operation $mob_toughness gm4_ce_data *= $difficulty gm4_ce_data
-scoreboard players operation $mob_health gm4_ce_data /= #100 gm4_ce_data
-scoreboard players operation $mob_damage gm4_ce_data /= #100 gm4_ce_data
-#scoreboard players operation $mob_speed gm4_ce_data /= #100 gm4_ce_data
-scoreboard players operation $mob_armor gm4_ce_data /= #100 gm4_ce_data
-#scoreboard players operation $mob_toughness gm4_ce_data /= #100 gm4_ce_data
-
 # | Biome Modifiers
 # snowy
 tag @s[predicate=gm4_combat_expanded:mob/modifier/snowy] add gm4_ce_slowing_attacks
@@ -43,4 +31,5 @@ data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering,predi
 data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering,predicate=gm4_combat_expanded:technical/chance/grow_phantom_large] Size set value 3
 
 # set modifiers
-function gm4_combat_expanded:mob/init/modifier/stat/prep
+execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep
+scoreboard players reset $replaced_mob gm4_ce_data

@@ -4,7 +4,7 @@
 # run from player/submain
 
 # process player deaths
-execute if score @s[scores={gm4_ce_play_time=2..}] gm4_ce_alivetime matches ..16 run function gm4_combat_expanded:player/process_death
+execute if score @s[scores={gm4_ce_deaths=1..}] gm4_ce_alivetime matches ..16 run function gm4_combat_expanded:player/process_death
 
 # calculate damage taken from guarding
 execute if entity @s[tag=gm4_ce_guardian,scores={gm4_ce_guard=10..}] run function gm4_combat_expanded:armor/modifier/type/guardian/damage_calc
@@ -38,3 +38,6 @@ execute if predicate gm4_combat_expanded:modified_armor/wearing run function gm4
 execute if score @s gm4_ce_absorp matches 1.. run function gm4_combat_expanded:player/shield/prep
 # heal players if they have stored health
 execute if score @s gm4_ce_healstore matches 1.. run function gm4_combat_expanded:player/heal/heal_calc
+
+# DEV: trigger for players with `gm4_ce_dev` tag
+execute if entity @s[tag=gm4_ce_dev] at @s as @e[type=#gm4_combat_expanded:modify,limit=1,sort=nearest] run function gm4_combat_expanded:debug/dev 

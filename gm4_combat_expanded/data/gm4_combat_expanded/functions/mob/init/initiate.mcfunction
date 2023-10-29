@@ -12,8 +12,8 @@ scoreboard players operation $moon gm4_ce_data %= #8 gm4_ce_data
 execute if score $moon gm4_ce_data matches ..3 store result score $moon gm4_ce_data run scoreboard players operation #8 gm4_ce_data -= $moon gm4_ce_data
 scoreboard players remove $moon gm4_ce_data 4
 
-# modify difficulty score based on some factors
-scoreboard players set $difficulty_mult gm4_ce_data 0
+# modify difficulty score based on some factors, starting with a randomized value
+execute store result score $difficulty_mult gm4_ce_data run random value -3..3
 # raining +20%
 execute if predicate gm4_combat_expanded:technical/raining run scoreboard players add $difficulty_mult gm4_ce_data 2
 # night & not in dark biome +0-40% based on moon phase
@@ -22,16 +22,20 @@ execute unless predicate gm4_combat_expanded:mob/modifier/dark if predicate gm4_
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $difficulty_mult gm4_ce_data 3
 # mountainous +20%
 execute if predicate gm4_combat_expanded:mob/modifier/mountainous run scoreboard players add $difficulty_mult gm4_ce_data 2
-# home bed nearby-ish
+# home bed nearby-ish -40% and set a score to disable some mechanics
 ##TODO
 #execute align xz positioned ~-96 ~ ~-96 as @e[type=marker,tag=gm4_ce_home,dx=192,dz=192]
-# trial spawner TODO
+# trial spawner +60% TODO
 ##scoreboard players add $difficulty_mult gm4_ce_data 6
 # apply difficulty_mult
 scoreboard players operation $difficulty_add gm4_ce_data = $difficulty gm4_ce_data
 scoreboard players operation $difficulty_add gm4_ce_data *= $difficulty_mult gm4_ce_data
 scoreboard players operation $difficulty_add gm4_ce_data /= #10 gm4_ce_data
 scoreboard players operation $difficulty gm4_ce_data += $difficulty_add gm4_ce_data
+# apply a flat diff increase and make sure difficulty is at least 0
+execute store result score $difficulty_flat gm4_ce_data run random value -10..10
+scoreboard players operation $difficulty gm4_ce_data += $difficulty_flat gm4_ce_data
+scoreboard players operation $difficulty gm4_ce_data > #0 gm4_ce_data
 
 # reset scoreboard
 scoreboard players reset $mob_extras gm4_ce_data

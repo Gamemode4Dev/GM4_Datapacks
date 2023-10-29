@@ -9,17 +9,20 @@
           "name": "minecraft:golden_sword",
           "functions": [
             {
-              "function": "minecraft:set_name",
+              "function": "minecraft:set_lore",
               "entity": "this",
-              "name": [
+              "lore": [
                 {
-                  "translate": "tutorial.open_inventory.description",
+                  "translate": "item.gm4.combat_expanded.lore.unidentified",
+                  "fallback": "%s Unidentified Item - Drop to Identify",
                   "with": [
-                        {
-                          "keybind": "key.drop"
-                        }
-                      
+                    {
+                      "text": "⚠",
+                      "color": "red",
+                      "italic": false
+                    }
                   ],
+                  "color": "gray",
                   "italic": false
                 }
               ]

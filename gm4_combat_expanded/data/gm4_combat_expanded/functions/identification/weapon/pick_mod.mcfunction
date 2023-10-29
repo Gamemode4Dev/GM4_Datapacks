@@ -21,5 +21,9 @@ execute store result storage gm4_combat_expanded:temp tag.Damage int 0.5 run dat
 # keep old name if it was changed
 execute if score $namelen gm4_ce_data matches ..75 run data modify storage gm4_combat_expanded:temp tag.display.Name set from storage gm4_combat_expanded:temp stored_name
 
+# check sharpness level
+execute store result score $current_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp tag.Enchantments[{id:"minecraft:sharpness"}].lvl
+execute if score $current_sharpness gm4_ce_data matches 1.. run function gm4_combat_expanded:weapon/update_sharpness
+
 # mark as identified
 data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.identified set value 1

@@ -1,7 +1,8 @@
-# update the weapon damage tooltip when sharpness level changes
-# @s = player wielding the weapon
+# update the weapon damage tooltip when sharpness level changes or when it gets identified
+# @s = player wielding the weapon / weapon item
 # at @s
 # run from weapon/process
+# run from identification/weapon/pick_mod
 
 # store actual sharpness level in storage
 execute store result storage gm4_combat_expanded:temp tag.gm4_combat_expanded.sharpness short 1 run scoreboard players get $current_sharpness gm4_ce_data
@@ -35,4 +36,4 @@ function #gm4_lore:insert
 data modify storage gm4_combat_expanded:temp tag.display.Lore set from storage gm4_lore:temp Source
 
 # update item
-item modify entity @s weapon.mainhand gm4_combat_expanded:update
+item modify entity @s[type=player] weapon.mainhand gm4_combat_expanded:update
