@@ -451,6 +451,9 @@
     "gold_ore": {
       "gm4_smelteries:block/ore_display/gold_ore": 0
     },
+    "golden_apple": {
+      "gm4_apple_trees:block/golden_apple_unripe": 0
+    },
     "golden_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_animi_shamir:item/animi_shamir": 20,

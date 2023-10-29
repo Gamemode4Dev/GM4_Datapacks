@@ -46,6 +46,9 @@ meta:
       - item: oak_sapling
         reference: item/apple_tree_sapling
         template: generated
+      - item: golden_apple
+        reference: block/golden_apple_unripe
+        template: vanilla
   modrinth:
     project_id: Afacz65w
   smithed:
