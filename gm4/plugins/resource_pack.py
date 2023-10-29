@@ -25,7 +25,7 @@ from pydantic import BaseModel, Extra, Field, ValidationError, validator
 from pydantic.error_wrappers import ErrorWrapper
 from nbtlib import String
 
-from gm4.utils import MapOption, add_namespace
+from gm4.utils import MapOption, add_namespace, mecha_transform_jsonfiles
 
 CUSTOM_MODEL_PREFIX = 3420000 # TODO this is configurable for public server stuff?
 
@@ -242,6 +242,7 @@ def build(ctx: Context):
     rp.update_modeldata_registry()
     rp.generate_model_files()
     rp.generate_model_overrides()
+    mecha_transform_jsonfiles(ctx, GM4ResourcePack)
 
 def mount_registry(ctx: Context):
     ctx.cache["modeldata_registry"].json = JsonFile(source_path="gm4/modeldata_registry.json").data
@@ -344,7 +345,7 @@ class GM4ResourcePack(MutatingReducer):
                     })
             self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(vanilla_model) # TODO skipped-values spacing, on RP output after merge :)
 
-    def retrieve_index(self, reference: str) -> tuple[int, KeyError|Diagnostic|None]:
+    def retrieve_index(self, reference: str) -> tuple[int, KeyError|None]:
         """retrieves the CMD value for the given reference"""
         for reg in self.registry["items"].values():
             if reference in reg:
@@ -384,12 +385,13 @@ class GM4ResourcePack(MutatingReducer):
 
     #== Mecha Transformer Rules ==#
     @rule(AstNbtCompoundEntry)
-    def cmd_substitutions(self, node: AstNbtCompoundEntry):
+    def cmd_substitutions(self, node: AstNbtCompoundEntry, **kwargs: Any):
         if node.key.value == "CustomModelData":
             match node.value.evaluate():
                 case String(reference):
                     index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
-                    # TODO if no value, raise error
+                    if exc:
+                        yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
                     node = replace(node, value=AstNbtValue.from_value(index+CUSTOM_MODEL_PREFIX))
                 case _:
                     pass
@@ -411,20 +413,8 @@ class GM4ResourcePack(MutatingReducer):
             model.template.generate_model(model, self.ctx.assets.models)
     
 #== Default Templates and Transforms ==#
-# ProcessFunc = Callable[[Type[TemplateOptions], ModelData, NamespaceProxy[Model]], list[Model]]
-# DecoratedFunc = Callable[[Type[TemplateOptions], ModelData, NamespaceProxy[Model], str], list[Model]]
-# def singlemodel(process_func: DecoratedFunc) -> ProcessFunc:
-#     """decorator wrapper for error-checking templates which only work when creating a single model file"""
-#     def wrap(cls: Type[TemplateOptions], config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
-#         if len(config.model.entries()) > 1:
-#             raise InvalidOptions("gm4.model_data", f"{config.reference}; Template '{cls.name}' only supports single entry 'model' fields.")
-#         if isinstance(model_name:=config.model.entries()[0], list):
-#             raise InvalidOptions("gm4.model_data", f"{config.reference}; Template '{cls.name}' does not support predicate override 'model' fields.")
-        
-#         return process_func(cls, config, models_container, model_name)
-#     return wrap # NOTE this as a decorator just failed to work; I think its cause decorators *and* overriding class members is weird
 def ensure_single_model_config(template_name: str, config: ModelData) -> str:
-    """Does common error checking for templates that wonly work when creating a single model file"""
+    """Does common error checking for templates that only work when creating a single model file"""
     if len(config.model.entries()) > 1:
         raise InvalidOptions("gm4.model_data", f"{config.reference}; Template '{template_name}' only supports single entry 'model' fields.")
     if isinstance(model_name:=config.model.entries()[0], list):
