@@ -358,7 +358,7 @@ class GM4ResourcePack(MutatingReducer):
             allocation_id = next(filter(lambda k: fnmatch(self.ctx.project_id, k), self.registry["allocations"].keys())) #type: ignore ; type checker thinks 'k' is _T@next, not str
         except StopIteration:
             allocation_id = None
-        l, u = self.registry["allocations"].get(allocation_id, (0,99)) # FIXME what happens when the default allocation fills up
+        l, u = self.registry["allocations"].get(allocation_id, (1,99)) # FIXME what happens when the default allocation fills up
         available_indices = set(range(l, u+1))
 
         for item_id in item_ids:
