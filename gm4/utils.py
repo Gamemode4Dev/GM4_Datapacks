@@ -140,7 +140,7 @@ def mecha_transform_jsonfiles(ctx: Context, transformer: Any):
             # gm4 only has one case of \n in loot tables, so this replacement forces \n->\\\\n for the mecha parser to read it right.
             # this may need to be altered in the future, but for now this means that \\\\n, while valid in vanilla loot-tables, will not
             # work after being put through the mecha parser
-        print(snbt)
+        node = mc.parse(escaped_snbt, type=AstNbtCompound) # parse string to AST
         filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None # get relative filepath for Diagnostics
         mc.database.update({db_entry_key: CompilationUnit(source=snbt)}) #type:ignore   # register fake CompilationUnit for Diagnostic printing, using unique string as key instead of the File() object, to support multiple entries from the same file
         return mc.serialize(tf.invoke(node, filename=filename, file=db_entry_key)) # run AST through custom rule, and serialize back to string, passing along data for Diagnostic
@@ -152,11 +152,11 @@ def mecha_transform_jsonfiles(ctx: Context, transformer: Any):
         for func_list in nested_get(contents, "functions"):
             f: Callable[[Any], bool] = lambda e: e["function"].removeprefix('minecraft:')=="set_nbt"
             for i, entry in enumerate(filter(f, func_list)):
-                entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{name}_{i}")
+                entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{transformer.__name__}:{name}_{i}")
 
     for name, jsonfile in ctx.data.advancements.items():
         for i, entry in enumerate(nested_get(jsonfile.data, "icon")):
-            entry["nbt"] = transform_snbt(entry["nbt"], db_entry_key=f"{name}_{i}")
+            entry["nbt"] = transform_snbt(entry["nbt"], db_entry_key=f"{transformer.__name__}:{name}_{i}")
 
     # send any raised diagnostic errors to Mecha for reporting
     mc.diagnostics.extend(tf.diagnostics)
