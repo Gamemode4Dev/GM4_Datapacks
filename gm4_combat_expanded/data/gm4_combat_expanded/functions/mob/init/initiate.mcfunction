@@ -13,7 +13,7 @@ execute if score $moon gm4_ce_data matches ..3 store result score $moon gm4_ce_d
 scoreboard players remove $moon gm4_ce_data 4
 
 # modify difficulty score based on some factors, starting with a randomized value
-execute store result score $difficulty_mult gm4_ce_data run random value -3..3
+execute store result score $difficulty_mult gm4_ce_data run random value -1..1
 # raining +20%
 execute if predicate gm4_combat_expanded:technical/raining run scoreboard players add $difficulty_mult gm4_ce_data 2
 # night & not in dark biome +0-40% based on moon phase
@@ -33,7 +33,7 @@ scoreboard players operation $difficulty_add gm4_ce_data *= $difficulty_mult gm4
 scoreboard players operation $difficulty_add gm4_ce_data /= #10 gm4_ce_data
 scoreboard players operation $difficulty gm4_ce_data += $difficulty_add gm4_ce_data
 # apply a flat diff increase and make sure difficulty is at least 0
-execute store result score $difficulty_flat gm4_ce_data run random value -10..10
+execute store result score $difficulty_flat gm4_ce_data run random value -5..5
 scoreboard players operation $difficulty gm4_ce_data += $difficulty_flat gm4_ce_data
 scoreboard players operation $difficulty gm4_ce_data > #0 gm4_ce_data
 
