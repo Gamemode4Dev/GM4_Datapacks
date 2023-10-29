@@ -10,13 +10,13 @@ attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd717
 
 # max stat buffs
 scoreboard players set $mob_health gm4_ce_data 20
-scoreboard players set $mob_damage gm4_ce_data 44
+scoreboard players set $mob_damage gm4_ce_data 35
 scoreboard players set $mob_speed gm4_ce_data 15
 scoreboard players set $mob_armor gm4_ce_data 10
 scoreboard players set $mob_toughness gm4_ce_data 25
 
 scoreboard players set $mob_health.cap gm4_ce_data 15
-scoreboard players set $mob_damage.cap gm4_ce_data 10
+scoreboard players set $mob_damage.cap gm4_ce_data 7
 scoreboard players set $mob_speed.cap gm4_ce_data 6
 scoreboard players set $mob_armor.cap gm4_ce_data 4
 scoreboard players set $mob_toughness.cap gm4_ce_data 8

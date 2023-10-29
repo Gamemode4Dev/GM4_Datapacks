@@ -28,7 +28,7 @@ execute if predicate gm4_combat_expanded:mob/modifier/flowering if predicate gm4
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/the_end] generic.attack_damage modifier add 0872b8ed-f482-4a29-94dc-22df9a28dddb "gm4_ce_modifier_end" 0.2 multiply
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/the_end] generic.movement_speed modifier add 17004032-9186-4202-b662-14841061fbb2 "gm4_ce_modifier_end" 0.15 multiply
 # warped forest
-execute if predicate gm4_combat_expanded:mob/modifier/nether/warped_forest if predicate gm4_combat_expanded:technical/chance/replace_enderman_spore_zombie run function gm4_combat_expanded:mob/init/modifier/special/warped_forest_enderman
+execute if predicate gm4_combat_expanded:mob/modifier/nether/warped_forest if predicate gm4_combat_expanded:technical/chance/replace_enderman_skeleton run function gm4_combat_expanded:mob/init/modifier/special/warped_forest_enderman
 # nether wastes
 execute if predicate gm4_combat_expanded:mob/modifier/nether/nether_wastes if predicate gm4_combat_expanded:technical/chance/replace_enderman_blaze run function gm4_combat_expanded:mob/init/modifier/special/nether_wastes_enderman
 # soul sand valley

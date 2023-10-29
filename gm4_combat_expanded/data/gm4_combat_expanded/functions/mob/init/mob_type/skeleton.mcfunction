@@ -47,6 +47,8 @@ execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard player
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_toughness gm4_ce_data 2
 # soul sand valley
 execute if predicate gm4_combat_expanded:mob/modifier/nether/soul_sand_valley run effect give @s fire_resistance infinite 0 true
+# warped forest
+execute if predicate gm4_combat_expanded:mob/modifier/nether/warped_forest run function gm4_combat_expanded:mob/init/modifier/special/warped_forest_skeleton
 
 # drop rate for custom arrows
 execute if score $arrow gm4_ce_data matches 1 run data modify entity @s HandDropChances[1] set value 0.25F

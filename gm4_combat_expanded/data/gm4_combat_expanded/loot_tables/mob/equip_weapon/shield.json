@@ -10,7 +10,6 @@
             {
               "function": "minecraft:set_enchantments",
               "enchantments": {
-                "minecraft:thorns": 3,
                 "minecraft:unbreaking": 5
               }
             }

@@ -27,7 +27,6 @@ loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/pigli
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/piglin
 
-
 # half droprate of armor in "Dark"
 data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
 
