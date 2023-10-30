@@ -1,5 +1,5 @@
 {
-  "last_commit": "3c85f6e7184cb0a3b90ef3ca1c980012939e06bf",
+  "last_commit": "6782f5743134a52218d0f4ace0fc8171fc41180b",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1170,7 +1170,7 @@
     {
       "id": "gm4_lightning_in_a_bottle",
       "name": "Lightning in a Bottle",
-      "version": "1.5.1",
+      "version": "1.5.2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
       "credits": {
@@ -1749,7 +1749,7 @@
     {
       "id": "gm4_potion_liquids",
       "name": "Potion Liquids",
-      "version": "1.5.0",
+      "version": "1.5.1",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids",
       "credits": {
@@ -2579,7 +2579,7 @@
     {
       "id": "gm4_zauber_cauldrons",
       "name": "Zauber Cauldrons",
-      "version": "1.9.0",
+      "version": "1.9.1",
       "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
       "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
       "credits": {
@@ -2681,7 +2681,7 @@
     "lib_brewing": {
       "id": "gm4_brewing",
       "name": "Gamemode 4 Brewing",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "video_link": "",
       "wiki_link": "",
       "credits": {
