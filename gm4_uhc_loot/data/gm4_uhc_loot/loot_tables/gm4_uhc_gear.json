@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_uhc_loot:gm4_combat_expanded_armor",
+                    "weight": 30
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_uhc_loot:gm4_combat_expanded_weapon",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_uhc_loot:gm4_metallurgy",
+                    "weight": 30
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_uhc_loot:gm4_heart_canisters",
+                    "weight": 15
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_boots_of_ostara:items/boots_of_ostara",
+                    "weight": 15
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_lightning_in_a_bottle:items/splash_bottle_of_lightning",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_uhc_loot:gm4_zauber_potions",
+          "weight": 60
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_potion_liquids:splash_floating_potion",
+          "weight": 20
+        }
+      ]
+    }
+  ]
+}
