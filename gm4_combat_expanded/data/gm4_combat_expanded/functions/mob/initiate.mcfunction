@@ -3,8 +3,8 @@
 # at @s
 # run from mob/check_mob
 
-# get difficulty score from the nearest player
-scoreboard players operation $difficulty gm4_ce_data = @p[gamemode=!spectator] gm4_ce_difficult
+# get difficulty score from global difficulty
+scoreboard players operation $difficulty gm4_ce_data = $global_difficulty gm4_ce_data
 
 # reset scoreboards
 scoreboard players reset $mob_extras gm4_ce_data
