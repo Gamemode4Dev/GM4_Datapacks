@@ -10,13 +10,8 @@
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 8,
+          "weight": 10,
           "name": "gm4_combat_expanded:weapon/identification/rare"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "weight": 2,
-          "name": "gm4_combat_expanded:weapon/identification/epic"
         }
       ]
     }

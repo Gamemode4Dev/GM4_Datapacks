@@ -16,9 +16,6 @@ execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add 
 execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add $mob_damage gm4_ce_data 2
 execute if score $difficulty gm4_ce_data matches 8.. run scoreboard players add $mob_toughness gm4_ce_data 2
 
-# quadruple armor drop rate at diff 11 or above
-execute if score $difficulty gm4_ce_data matches 11.. run data modify entity @s ArmorDropChances set value [0.34F,0.34F,0.34F,0.34F]
-
 # biome specific modifiers for this mob
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_toughness gm4_ce_data 4
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] zombie.spawn_reinforcements modifier add 88708a3a-b8f0-46f8-8dd9-1f8fb0f315d6 "gm4_ce_modifier_dark" 0.25 multiply_base
@@ -36,9 +33,6 @@ loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/gener
 execute if entity @s[tag=gm4_ce_spore_zombie] run function gm4_combat_expanded:mob/effect/flowering_zombie
 # set weapon
 loot replace entity @s[predicate=!gm4_combat_expanded:mob/modifier/reef] weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/generic
-
-# half droprate of armor in "Dark"
-data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
 
 # remove bonus damage if weapon is held, then set droprate to 20% (unless in "Dark" or wielding trident)
 execute if data entity @s HandItems[{Count:1b}] run scoreboard players set $mob_damage gm4_ce_data 0
