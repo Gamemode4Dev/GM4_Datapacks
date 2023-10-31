@@ -34,42 +34,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 6,
-          "name": "minecraft:diamond_chestplate"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 6,
-          "name": "minecraft:diamond_boots"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 7,
-          "name": "minecraft:diamond_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 5,
-          "name": "minecraft:diamond_shovel"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 7,
-          "name": "minecraft:diamond_sword",
-          "functions": [
-            {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.8
-                }
-              ]
-            }
-          ]
         }
       ]
     },

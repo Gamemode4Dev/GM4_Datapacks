@@ -57,32 +57,6 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 1,
-          "name": "minecraft:diamond_chestplate"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 2,
-          "name": "minecraft:diamond_helmet"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "name": "minecraft:diamond_sword",
-          "functions": [
-            {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.3
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
           "weight": 6,
           "name": "minecraft:iron_pickaxe"
         }
