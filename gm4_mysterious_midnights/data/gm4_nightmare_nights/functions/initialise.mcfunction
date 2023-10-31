@@ -3,7 +3,7 @@
 #called by event. Only runs once per nightmare night.
 
 #red screen tint
-worldborder warning distance 300000000
+#worldborder warning distance 300000000
 
 #activate all nightmare night expansions
 execute positioned 29999998 1 7134 run function #gm4_nightmare_nights:nightmare_night_expansion
