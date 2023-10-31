@@ -3,6 +3,9 @@
 # at @s
 # run from functions in mob/mob_types/
 
+# increased droprate armor
+data modify entity @s[tag=!gm4_ce_miniboss,tag=!gm4_ce_spore_zombie] ArmorDropChances set value [0.15F,0.15F,0.15F,0.15F]
+
 # biome specific modifiers for any mob
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $mob_stats gm4_ce_data 3
 execute if predicate gm4_combat_expanded:mob/modifier/snowy run scoreboard players add $mob_health gm4_ce_data 8
