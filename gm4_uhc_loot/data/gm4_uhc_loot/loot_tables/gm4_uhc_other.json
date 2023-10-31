@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 35,
+          "name": "gm4_zauber_cauldrons:recipes/precursors/enchanted_prismarine_shard",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 40,
+          "name": "gm4_uhc_loot:gm4_tnt_landmines"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 25,
+          "name": "gm4_relocators:items/relocator_empty"
+        }
+      ]
+    }
+  ]
+}

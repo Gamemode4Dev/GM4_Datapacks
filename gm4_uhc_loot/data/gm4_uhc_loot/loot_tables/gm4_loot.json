@@ -1,0 +1,24 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"weight": 60,
+					"name": "gm4_uhc_loot:gm4_uhc_gear"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 25,
+					"name": "gm4_uhc_loot:gm4_uhc_potions"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 15,
+					"name": "gm4_uhc_loot:gm4_uhc_other"
+				}
+			]
+		}
+	]
+}

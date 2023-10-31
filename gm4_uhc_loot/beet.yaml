@@ -1,0 +1,22 @@
+id: uhc_loot
+name: UHC Loot
+version: 1.0.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [main]
+    website:
+      description: Modifies loot tables for the gm4 1.20 UHC!
+      recommended: []
+    video: null
+    wiki: null
+    credits:
+      Creator:
+        - n/a
