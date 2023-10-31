@@ -47,7 +47,7 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "$atkspeed_up"
+                      "name": "$atkspeed_quick"
                     },
                     "score": "gm4_ce_data",
                     "scale": 0.1
@@ -68,9 +68,7 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
@@ -89,9 +87,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -104,9 +100,7 @@
                       "color": "red",
                       "italic": false
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
                         "name": "$damage_down_01",
@@ -146,9 +140,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -189,27 +181,23 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
                   [
                     {
                       "score": {
-                        "name": "$atkspeed_up_10",
+                        "name": "$atkspeed_quick_10",
                         "objective": "gm4_ce_data"
                       },
                       "color": "green",
                       "italic": false
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
-                        "name": "$atkspeed_up_01",
+                        "name": "$atkspeed_quick_01",
                         "objective": "gm4_ce_data"
                       }
                     }
@@ -232,7 +220,7 @@
                   "type": "minecraft:score",
                   "target": {
                     "type": "minecraft:fixed",
-                    "name": "$atkspeed_up_01"
+                    "name": "$atkspeed_quick_01"
                   },
                   "score": "gm4_ce_data"
                 },
@@ -246,15 +234,13 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
                   {
                     "score": {
-                      "name": "$atkspeed_up_10",
+                      "name": "$atkspeed_quick_10",
                       "objective": "gm4_ce_data"
                     },
                     "color": "green",
@@ -276,7 +262,7 @@
                 "type": "minecraft:score",
                 "target": {
                   "type": "minecraft:fixed",
-                  "name": "$atkspeed_up_01"
+                  "name": "$atkspeed_quick_01"
                 },
                 "score": "gm4_ce_data"
               },
@@ -289,30 +275,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.quick",
+              "fallback": "Light %s",
               "with": [
-                [
-                  {
-                    "text": "Swift ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.quick",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

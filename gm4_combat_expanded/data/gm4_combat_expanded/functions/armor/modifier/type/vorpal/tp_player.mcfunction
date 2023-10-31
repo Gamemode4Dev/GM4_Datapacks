@@ -4,7 +4,7 @@
 # run from armor/type/vorpal/attempt
 
 # effects
-execute at @e[type=marker,tag=gm4_ce_vorpal,distance=..16] align xyz run tp @s ~0.5 ~ ~0.5
+execute if score $warp_safe gm4_ce_data matches 1.. at @e[type=marker,tag=gm4_ce_vorpal,distance=..16] align xyz run tp @s ~0.5 ~ ~0.5
 kill @e[type=marker,tag=gm4_ce_vorpal]
 
 playsound entity.enderman.teleport player @a ~ ~ ~ 0.8 1.2

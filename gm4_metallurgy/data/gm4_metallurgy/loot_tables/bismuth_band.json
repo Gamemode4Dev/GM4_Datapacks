@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_metallurgy:{has_shamir:1b,metal:{type:\"bismuth\",amount:[12s],castable:1b},item:\"obsidian_cast\"},CustomModelData:3420053,SkullOwner:{Id:[I;-359255454,30123560,-1513962184,-616842323],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyODAxNDc0OTQ2MSwKICAicHJvZmlsZUlkIiA6ICJiMWMyNWQ0YjMwZDU0N2Y4YTk3NmZlYTllOGU1YzBjMyIsCiAgInByb2ZpbGVOYW1lIiA6ICJvd29FbmRlciIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82NmM0ODcwYmNiMDdkYWJjMjNiNTZkMzJlNzI5OWI5NTE4ZTU1N2VmMzU2YTNiZGRmNDBkNGM3MDIwYzI3MTdhIgogICAgfQogIH0KfQ==\"}]}}}"
+                            "tag": "{gm4_metallurgy:{has_shamir:1b,metal:{type:\"bismuth\",amount:[12s],castable:1b},item:\"obsidian_cast\"},CustomModelData:3420053,SkullOwner:{Properties:{textures:[{Value:\"$band/bismuth\"}]}}}"
                         },
                         {
                             "function": "minecraft:set_name",

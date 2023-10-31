@@ -1,5 +1,5 @@
 # @s = marker ray used to find the brewing stand
-# run from gm4_brewing-1.0:place_brewing_stand
+# run from gm4_brewing:place_brewing_stand
 
 # check blocks around the marker ray
 scoreboard players set $found gm4_count 0

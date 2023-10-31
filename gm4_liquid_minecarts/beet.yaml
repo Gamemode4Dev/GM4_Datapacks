@@ -13,8 +13,8 @@ meta:
   gm4:
     versioning:
       required:
-        - gm4_liquid_tanks: 2.1.0
-        - lib_machines: 1.1.0
+        gm4_liquid_tanks: 2.1.0
+        lib_machines: 1.1.0
       schedule_loops: [main]
     website:
       description: Adds Liquid Tank Minecarts that allow you to move your liquids from one Liquid Tank to another.

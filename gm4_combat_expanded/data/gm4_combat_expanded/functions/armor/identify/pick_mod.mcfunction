@@ -1,6 +1,6 @@
 # gives newly equipped a random unid (stored modifier), this does not identify that armor
 # @s = player wearing the armor
-# at world spawn
+# at unspecified
 # run from any armor/slot/SLOT/identify
 
 # randomize stats

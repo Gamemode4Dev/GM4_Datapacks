@@ -1,7 +1,7 @@
 # store 1 health in 'healstore' which will be healed at the end of player processing (this tick)
 # @s = player wearing armor
-# at world spawn
-# run from armor/modifier/type/second_wind/heal_check
+# at unspecified
+# run from armor/modifier/type/second_wind/check
 
 # store healing for later
 scoreboard players add @s gm4_ce_healstore 1

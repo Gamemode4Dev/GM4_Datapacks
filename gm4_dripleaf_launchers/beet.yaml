@@ -1,6 +1,6 @@
 id: gm4_dripleaf_launchers
 name: Dripleaf Launchers
-version: 1.0.X
+version: 1.1.X
 
 data_pack:
   load: .
@@ -23,3 +23,7 @@ meta:
     credits:
       Creator:
         - Thanathor
+  modrinth:
+    project_id: kUn3Z6gZ
+  smithed:
+    pack_id: gm4_dripleaf_launchers

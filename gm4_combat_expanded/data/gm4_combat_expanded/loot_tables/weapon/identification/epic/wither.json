@@ -68,26 +68,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "Baneful Strikes:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.wither_strike"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.wither_strike",
+              "fallback": "Baneful Strikes:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -95,39 +86,23 @@
           "function": "minecraft:set_lore",
           "entity": "this",
           "lore": [
-            [
-              {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  [
-                    {
-                      "translate": "effect.minecraft.wither"
-                    },
-                    {
-                      "text": " (Self)"
-                    }
-                  ],
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.self",
-                    "with": [
-                      {
-                        "translate": "effect.minecraft.wither"
-                      }
-                    ]
-                  }
-                ],
-                "color": "red",
-                "italic": false
-              }
-            ]
+            {
+              "translate": "item.gm4.combat_expanded.lore.self",
+              "fallback": "%s (Self)",
+              "with": [
+                {
+                  "translate": "effect.minecraft.wither"
+                }
+              ],
+              "color": "red",
+              "italic": false
+            }
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
@@ -146,9 +121,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -175,9 +148,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -190,9 +161,7 @@
                       "color": "dark_green",
                       "italic": false
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
                         "name": "$atkspeed_stored_01",
@@ -232,9 +201,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -275,31 +242,17 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.wither",
+              "fallback": "Demonic %s",
               "with": [
-                [
-                  {
-                    "text": "Demonic ",
-                    "italic": false,
-                    "color": "light_purple"
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.wither",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false,
+              "color": "light_purple"
             }
           ]
         }

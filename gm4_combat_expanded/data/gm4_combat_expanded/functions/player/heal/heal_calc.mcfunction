@@ -1,6 +1,6 @@
 # code taken from sweethearts
 # @s = player to heal
-# at world spawn
+# at unspecified
 # run from player/process
 
 function gm4_combat_expanded:player/calculate_hp
