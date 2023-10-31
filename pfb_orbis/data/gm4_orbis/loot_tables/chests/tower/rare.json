@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 6,
+          "weight": 8,
           "name": "minecraft:iron_chestplate",
           "functions": [
             {
@@ -21,7 +21,7 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 6,
+          "weight": 8,
           "name": "minecraft:iron_leggings",
           "functions": [
             {
@@ -34,6 +34,43 @@
               ]
             }
           ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "minecraft:iron_boots",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "minecraft:iron_helmet",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "name": "gm4_uhc_loot:gm4_loot"
         }
       ]
     },
@@ -104,6 +141,11 @@
           "type": "minecraft:item",
           "weight": 7,
           "name": "minecraft:campfire"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "name": "gm4_uhc_loot:gm4_loot"
         }
       ]
     },

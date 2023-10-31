@@ -70,6 +70,11 @@
           "type": "minecraft:item",
           "weight": 7,
           "name": "minecraft:diamond_shovel"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 5,
+          "name": "gm4_uhc_loot:uhc_loot"
         }
       ]
     },
@@ -148,6 +153,11 @@
           "type": "minecraft:item",
           "weight": 7,
           "name": "minecraft:melon_seeds"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 5,
+          "name": "gm4_uhc_loot:uhc_loot"
         }
       ]
     },
