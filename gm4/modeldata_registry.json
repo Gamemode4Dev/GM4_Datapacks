@@ -120,7 +120,8 @@
       "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_wormhole": 1
     },
     "clock": {
-      "gm4_combat_expanded:gui/advancement/combat_expanded_challenger": 1,
+      "gm4_combat_expanded:gui/advancement/combat_expanded_survive": 1,
+      "gm4_combat_expanded:gui/advancement/combat_expanded_challenger": 2,
       "gm4_animi_shamir:shamir/animi": 124
     },
     "coal_block": {
@@ -378,6 +379,7 @@
       "gm4_orb_of_ankou:gui/advancement/orb_of_ankou_max_orb": 200
     },
     "fishing_rod": {
+      "gm4_end_fishing:gui/advancement/end_fishing": 1,
       "gm4_metallurgy:shamir/hypexperia": 110,
       "gm4_animi_shamir:shamir/animi": 124
     },
@@ -599,7 +601,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "iron_chestplate": {
-      "gm4_combat_expanded:gui/advancement/combat_expanded_full_set": 2,
+      "gm4_combat_expanded:gui/advancement/combat_expanded_full_set": 3,
       "gm4_end_fishing:item/armor/iron_chestplate_10": 10,
       "gm4_end_fishing:item/armor/iron_chestplate_11": 11,
       "gm4_end_fishing:item/armor/iron_chestplate_12": 12,
@@ -760,6 +762,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "leather_chestplate": {
+      "gm4_combat_expanded:gui/advancement/combat_expanded_identify": 1,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_iacio_shamir:shamir/iacio": 122,
@@ -1129,7 +1132,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "shield": {
-      "gm4_combat_expanded:gui/advancement/combat_expanded_guardian": 1,
+      "gm4_combat_expanded:gui/advancement/combat_expanded_guardian": 3,
       "gm4_vigere_shamir:shamir/vigere": 119,
       "gm4_animi_shamir:shamir/animi": 124
     },

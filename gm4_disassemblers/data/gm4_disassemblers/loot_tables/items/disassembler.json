@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420135,gm4_machines:{id:\"disassembler\"},SkullOwner:{Name:\"gm4_disassembler\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$disassembler\"}]}}}"
+              "tag": "{CustomModelData:'item/disassembler',gm4_machines:{id:\"disassembler\"},SkullOwner:{Name:\"gm4_disassembler\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$disassembler\"}]}}}"
             },
             {
               "function": "set_name",

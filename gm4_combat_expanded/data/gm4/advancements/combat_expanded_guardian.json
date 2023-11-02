@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:shield",
-      "nbt": "{CustomModelData:3420003}"
+      "nbt": "{CustomModelData:'gui/advancement/combat_expanded_guardian'}"
     },
     "title": {
       "translate": "advancement.gm4.combat_expanded.guardian.title",

@@ -40,6 +40,9 @@ meta:
             model: item/elytra/elytra_11
           - predicate: {broken: 1}
             model: item/elytra/broken_elytra_11
+      - item: fishing_rod
+        reference: gui/advancement/end_fishing
+        template: advancement
       - item: diamond_sword
         reference: gui/advancement/end_fishing_swords
         template:
