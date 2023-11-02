@@ -57,6 +57,9 @@ scoreboard objectives add gm4_ce_natural_regen_damage dummy
 scoreboard objectives add gm4_ce_natural_regen_delay dummy
 scoreboard objectives add gm4_ce_death_mult dummy
 
+scoreboard objectives add gm4_ce_sleep custom:sleep_in_bed
+scoreboard objectives add gm4_ce_last_sleep dummy
+
 # constants
 scoreboard players set #0 gm4_ce_data 0
 scoreboard players set #1 gm4_ce_data 1

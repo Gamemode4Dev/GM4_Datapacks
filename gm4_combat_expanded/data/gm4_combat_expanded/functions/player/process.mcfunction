@@ -39,5 +39,9 @@ execute if score @s gm4_ce_absorp matches 1.. run function gm4_combat_expanded:p
 # heal players if they have stored health
 execute if score @s gm4_ce_healstore matches 1.. run function gm4_combat_expanded:player/heal/heal_calc
 
+# process player sleeping
+execute if score @s gm4_ce_sleep matches 1.. at @s run function gm4_combat_expanded:home/detect_sleep
+
+##TODO: remove this
 # DEV: trigger for players with `gm4_ce_dev` tag
 execute if entity @s[tag=gm4_ce_dev] at @s as @e[type=#gm4_combat_expanded:modify,limit=1,sort=nearest] run function gm4_combat_expanded:debug/dev 
