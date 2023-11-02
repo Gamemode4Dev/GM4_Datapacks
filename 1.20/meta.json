@@ -1,5 +1,5 @@
 {
-  "last_commit": "a76da1ea8d3892effcc28b5c8c24ade3fcf2a2ad",
+  "last_commit": "80ff94fd88ca1b09f7c68f036e8470b4c6f40121",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -986,7 +986,7 @@
     {
       "id": "gm4_fulcio_shamir",
       "name": "Fulcio Shamir",
-      "version": "1.2.4",
+      "version": "1.2.5",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Fulcio_Shamir",
       "credits": {
