@@ -19,10 +19,6 @@ meta:
         gm4_metallurgy: 1.2.0
       schedule_loops: [main]
     model_data:
-      - item: player_head
-        template: generated
-        reference: item/vigere_band
-        textures: gm4_metallurgy:item/band/barimium_band
       - item: shield
         reference: item/vigere_shamir
         template:

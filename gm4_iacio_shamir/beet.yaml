@@ -18,10 +18,6 @@ meta:
       required:
         gm4_metallurgy: 1.2.0
     model_data:
-      - item: player_head
-        template: generated
-        reference: item/iacio_band
-        textures: gm4_metallurgy:item/band/barium_band
       - item: chestplates
         reference: item/iacio_shamir
         template:

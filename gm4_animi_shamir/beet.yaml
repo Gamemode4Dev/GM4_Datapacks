@@ -20,10 +20,6 @@ meta:
         gm4_metallurgy: 1.2.0
       schedule_loops: [main]
     model_data:
-      - item: player_head
-        template: generated
-        reference: item/animi_band
-        textures: gm4_metallurgy:item/band/curies_bismium_band
       - reference: item/animi_shamir
         item: [armor, tools, weapons, elytra, bow, crossbow, fishing_rod, warped_fungus_on_a_stick, carrot_on_a_stick, shield, flint_and_steel, shears, clock, compass, recovery_compass, spyglass]
         template:

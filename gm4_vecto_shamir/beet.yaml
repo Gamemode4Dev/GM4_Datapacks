@@ -19,10 +19,6 @@ meta:
         gm4_metallurgy: 1.2.0
       schedule_loops: [main]
     model_data:
-      - item: player_head
-        template: generated
-        reference: item/vecto_band
-        textures: gm4_metallurgy:item/band/bismuth_band
       - item: boots
         reference: item/vecto_shamir
         template:

@@ -19,10 +19,6 @@ meta:
         gm4_metallurgy: 1.2.0
       schedule_loops: [main]
     model_data:
-      - item: player_head
-        template: generated
-        reference: item/audere_band
-        textures: gm4_metallurgy:item/band/barium_band
       - item: tools
         reference: item/audere_shamir
         template: 

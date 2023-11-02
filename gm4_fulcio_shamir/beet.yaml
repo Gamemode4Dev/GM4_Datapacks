@@ -21,10 +21,6 @@ meta:
         - main
         - 4_tick
     model_data:
-      - item: player_head
-        template: generated
-        reference: item/fulcio_band
-        textures: gm4_metallurgy:item/band/barimium_band
       - item: compass
         reference: item/fulcio_shamir
         template:
