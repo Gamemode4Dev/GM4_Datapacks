@@ -1,8 +1,7 @@
 from beet import Context, Model, NamespaceProxy, ListOption, ResourcePack
 from beet.contrib.vanilla import Vanilla, ClientJar
-from typing import Any, ClassVar
+from typing import Any, ClassVar, Literal
 from itertools import product, chain
-from pydantic import ValidationError
 import logging
 
 from gm4.plugins.resource_pack import ModelData, TemplateOptions
@@ -57,8 +56,9 @@ TEXTURE_LOOKUP = { # what texture to use if the exact item name is not present
 class ShamirTemplate(TemplateOptions):
     """Model Template for generating models for shamirs on tools/armor"""
     name = "shamir"
+    texture_map = ["", "band"]
     textures_path: str = "" # directory of texture files to use for shamirs, falling back to the default metallurgy textures
-    metal: str # the metallurgy metal this shamir is made of
+    metal: Literal["aluminium", "barimium", "barium", "bismuth", "curies_bismium", "thorium"] # the metallurgy metal this shamir is made of
 
     bound_ctx: ClassVar[Context]
     metallurgy_assets: ClassVar[ResourcePack] = ResourcePack(path="gm4_metallurgy") # load metallurgy textures so expansion shamirs can fall back on their
@@ -71,6 +71,20 @@ class ShamirTemplate(TemplateOptions):
         ret_list: list[Model] = []
 
         for item in config.item.entries():
+            if item == "player_head":
+                # create the band item-model, which shares the same CMD as all the tools/armor
+                m = Model({
+                    "parent": "item/generated",
+                    "textures": {
+                        "layer0": config.textures["band"]
+                    }
+                })
+                models_container[f"{models_loc}/band"] = m
+                ret_list.append(m)
+                models.update({"player_head": f"{models_loc}/band"})
+                continue
+
+
             # find the texture to use; first in this module at the path directed
             if (t:=add_namespace(f"{self.textures_path}/{item}" , self.bound_ctx.project_id)) in self.bound_ctx.assets.textures: # check for the item exactly
                 texture = t
@@ -130,22 +144,18 @@ class ShamirTemplate(TemplateOptions):
 
         config.model = MapOption(__root__=models)
         return ret_list
+    
+    def mutate_config(self, config: ModelData):
+        expanded_items = set(chain.from_iterable([GROUP_LOOKUP.get(group, [group]) for group in config.item.entries()])) | {"player_head"}
+        config.item = ListOption(__root__=list(expanded_items))
+        config.model = MapOption(__root__={item: config.reference for item in expanded_items})
+        if isinstance(config.textures.__root__, list):
+            config.textures = MapOption(__root__={"band": f"gm4_metallurgy:item/band/{self.metal}_band"})
+        else: # isinstance(.., dict):
+            config.textures = MapOption(__root__={"band": f"gm4_metallurgy:item/band/{self.metal}_band"}|config.textures.__root__)
 
 def beet_default(ctx: Context):
     # bind context object to a ClassVar so it can be accessed later during template processing
     ShamirTemplate.bound_ctx = ctx
     vanilla = ctx.inject(Vanilla)
     ShamirTemplate.vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
-
-    # manually edit the meta config, expanding item groups a full item list, before parsed by the RP for CMD registration
-        # NOTE this does not traverse down broadcasts, so this plugin is incompatable with broadcast config
-    for i, model_data_dict in enumerate(meta_model_data:=ctx.meta['gm4'].get('model_data')):
-        try:
-            model_data = ModelData.parse_obj(model_data_dict)
-        except ValidationError:
-            # config entry is likely nested and therefore not processed
-            continue
-        expanded_items = set(chain.from_iterable([GROUP_LOOKUP.get(group, [group]) for group in model_data.item.entries()]))
-        model_data.item = ListOption(__root__=list(expanded_items))
-        model_data.model = MapOption(__root__={item: model_data.reference for item in expanded_items})
-        meta_model_data[i] = model_data.dict()

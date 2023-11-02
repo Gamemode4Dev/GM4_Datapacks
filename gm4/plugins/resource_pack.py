@@ -3,10 +3,9 @@ import os
 import sys
 from copy import deepcopy
 from fnmatch import fnmatch
-from functools import cached_property
 from dataclasses import replace
 from itertools import cycle
-from typing import Any, Callable, ClassVar, Literal, Optional, Type
+from typing import Any, Callable, ClassVar, Literal, Optional
 
 import numpy as np
 from beet import (
@@ -148,8 +147,12 @@ class FlatModelDataOptions(BaseModel):
     """Contains a flat list of complete model config objects"""
     model_data: list[ModelData]
 
-    def add_namespace(self, namespace:str) -> 'FlatModelDataOptions':
-        return FlatModelDataOptions(model_data=[m.add_namespace(namespace) for m in self.model_data])
+    def add_namespace(self, namespace:str):
+        self.model_data=[m.add_namespace(namespace) for m in self.model_data]
+    
+    def template_mutations(self):
+        for m in self.model_data:
+            m.template.mutate_config(m) # type: ignore , model validation ensures tempalte is type TemplateOptions()
 
 class ModelDataOptions(PluginOptions, extra=Extra.ignore):
     model_data: list[NestedModelData] = []
@@ -211,6 +214,10 @@ class TemplateOptions(BaseModel, extra=Extra.allow):
     def add_namespace(self, namespace: str):
         """Overridden to add namespace data to sub-config fields added by a template"""
         return self.dict()
+    
+    def mutate_config(self, config: ModelData):
+        """Overridden to let a template mutate/mangle root level fields of ModelData"""
+        pass
 
 class TransformOptions(BaseModel, extra=Extra.allow):
     """A pydantic model to extend for configured model transformers, which add model offset/scale ect.. to model files"""
@@ -239,6 +246,7 @@ def beet_default(ctx: Context):
 
 def build(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
+    rp.resolve_config()
     rp.update_modeldata_registry()
     rp.generate_model_files()
     rp.generate_model_overrides()
@@ -264,12 +272,17 @@ class GM4ResourcePack(MutatingReducer):
         self.ctx = ctx
         self.registry = ctx.cache["modeldata_registry"].json
         self.logger = parent_logger.getChild(ctx.project_id)
+        self._opts = FlatModelDataOptions(model_data=[]) # unloaded config
         super().__init__()
 
-    @cached_property
+    @property
     def opts(self) -> FlatModelDataOptions:
-        # load and process config when it's first accessed.
-        return self.ctx.validate("gm4", validator=ModelDataOptions).process_inheritance().add_namespace(self.ctx.project_id)
+        return self._opts
+    
+    def resolve_config(self):
+        self._opts = self.ctx.validate("gm4", validator=ModelDataOptions).process_inheritance()
+        self._opts.add_namespace(self.ctx.project_id)
+        self._opts.template_mutations()
 
     #== Custom Model Data registration and management ==#
     def update_modeldata_registry(self):
@@ -319,7 +332,7 @@ class GM4ResourcePack(MutatingReducer):
             for override in vanilla_overrides:
                 override["model"] = add_namespace(override["model"], "minecraft") # ensure vanilla models have namespaced files
                 # FIXME how to differentiate vanilla overrides from specified overrides?
-            unchanged_vanilla_overrides = vanilla_overrides.copy()
+            unchanged_vanilla_overrides = deepcopy(vanilla_overrides)
 
             filter_func: Callable[[tuple[str, int]], bool] = lambda t: t[0] in [m.reference for m in models]
             custom_model_data = dict(filter(filter_func, self.registry["items"][item_id].items()))
@@ -330,7 +343,7 @@ class GM4ResourcePack(MutatingReducer):
                 if isinstance(m, list): # manual predicate merging specified
                     merge_overrides = [o|{"user_defined": True} for o in m]
                 else: 
-                    merge_overrides = unchanged_vanilla_overrides # get vanilla overrides
+                    merge_overrides = unchanged_vanilla_overrides.copy() # get vanilla overrides
                     merge_overrides.append({}) # add an empty predicate to add CMD onto, without all other case checks
 
                 for pred in merge_overrides:
