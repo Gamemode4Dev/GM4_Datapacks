@@ -2,8 +2,8 @@ import logging
 import os
 import sys
 from copy import deepcopy
-from fnmatch import fnmatch
 from dataclasses import replace
+from fnmatch import fnmatch
 from itertools import cycle
 from typing import Any, Callable, ClassVar, Literal, Optional
 
@@ -19,10 +19,22 @@ from beet import (
 )
 from beet.contrib.vanilla import Vanilla
 from beet.core.utils import format_validation_error
-from mecha import AstNbtCompoundEntry, Diagnostic, Mecha, MutatingReducer, rule, AstNbtValue
+from mecha import (
+    AstCommand,
+    AstChildren,
+    AstNbtCompoundEntry,
+    AstNbtValue,
+    AstNbtPath,
+    AstNbtPathKey,
+    Diagnostic,
+    Mecha,
+    MutatingReducer,
+    rule,
+)
+from nbtlib import String # type: ignore ; nbtlib missing stubfile
+from tokenstream import set_location
 from pydantic import BaseModel, Extra, Field, ValidationError, validator
 from pydantic.error_wrappers import ErrorWrapper
-from nbtlib import String
 
 from gm4.utils import MapOption, add_namespace, mecha_transform_jsonfiles
 
@@ -408,6 +420,20 @@ class GM4ResourcePack(MutatingReducer):
                     node = replace(node, value=AstNbtValue.from_value(index+CUSTOM_MODEL_PREFIX))
                 case _:
                     pass
+        return node
+
+    @rule(AstCommand, identifier="data:modify:storage:target:targetPath:set:value:value")
+    @rule(AstCommand, identifier="data:modify:block:targetPos:targetPath:set:value:value")
+    @rule(AstCommand, identifier="data:modify:entity:target:targetPath:set:value:value")
+    def cmd_subs_datamodify(self, node: AstCommand):
+        ast_target, ast_target_path, ast_nbt = node.arguments
+        match ast_target_path, ast_nbt.evaluate(): # type: ignore ; ast_nbt is AstNbtValue|AstNbtCompound, which do have .evaluate() methods
+            case AstNbtPath(components=[*_, AstNbtPathKey(value="CustomModelData")]), String(reference):
+                index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
+                if exc:
+                    d = Diagnostic("error", str(exc))
+                    yield set_location(d, ast_nbt)
+                node = replace(node, arguments=AstChildren([ast_target, ast_target_path, AstNbtValue.from_value(index+CUSTOM_MODEL_PREFIX)]))
         return node
 
     #== Model file generation ==#
