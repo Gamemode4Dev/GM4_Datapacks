@@ -118,12 +118,8 @@ meta:
           - reference: item/essences/freezing
           - reference: item/essences/feigning
           - reference: item/essences/shrieking
-      - item: player_head
-        template: generated
-        reference: item/corripio_band
-        textures: gm4_metallurgy:item/band/bismuth_band
       - item: swords
-        reference: item/corripio_shamir
+        reference: shamir/corripio
         template:
           name: shamir
           metal: bismuth

@@ -17,12 +17,8 @@ meta:
     versioning:
       schedule_loops: [main]
     model_data:
-      - item: player_head
-        template: generated
-        reference: item/helious_band
-        textures: gm4_metallurgy:item/band/aluminium_band
       - item: armor
-        reference: item/helious_shamir
+        reference: shamir/helious
         template:
           name: shamir
           metal: aluminium

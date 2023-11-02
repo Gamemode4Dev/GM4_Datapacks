@@ -19,7 +19,7 @@ meta:
         gm4_metallurgy: 1.2.0
     model_data:
       - item: weapons
-        reference: item/percurro_shamir
+        reference: shamir/percurro
         template:
           name: shamir
           metal: curies_bismium

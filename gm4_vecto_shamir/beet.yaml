@@ -20,7 +20,7 @@ meta:
       schedule_loops: [main]
     model_data:
       - item: boots
-        reference: item/vecto_shamir
+        reference: shamir/vecto
         template:
           name: shamir
           metal: bismuth

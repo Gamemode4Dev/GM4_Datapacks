@@ -20,7 +20,7 @@ meta:
       schedule_loops: [main]
     model_data:
       - item: tools
-        reference: item/audere_shamir
+        reference: shamir/audere
         template: 
           name: shamir
           metal: barium

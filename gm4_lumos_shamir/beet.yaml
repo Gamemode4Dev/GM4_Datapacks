@@ -20,7 +20,7 @@ meta:
       schedule_loops: [main]
     model_data:
       - item: [pickaxes, shovels]
-        reference: item/lumos_shamir
+        reference: shamir/lumos
         template:
           name: shamir
           metal: curies_bismium

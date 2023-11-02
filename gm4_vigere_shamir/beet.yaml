@@ -20,7 +20,7 @@ meta:
       schedule_loops: [main]
     model_data:
       - item: shield
-        reference: item/vigere_shamir
+        reference: shamir/vigere
         template:
           name: shamir
           metal: barimium

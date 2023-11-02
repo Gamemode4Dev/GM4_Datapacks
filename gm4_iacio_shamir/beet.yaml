@@ -19,7 +19,7 @@ meta:
         gm4_metallurgy: 1.2.0
     model_data:
       - item: chestplates
-        reference: item/iacio_shamir
+        reference: shamir/iacio
         template:
           name: shamir
           metal: barium

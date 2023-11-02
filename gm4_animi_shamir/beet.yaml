@@ -20,7 +20,7 @@ meta:
         gm4_metallurgy: 1.2.0
       schedule_loops: [main]
     model_data:
-      - reference: item/animi_shamir
+      - reference: shamir/animi
         item: [armor, tools, weapons, elytra, bow, crossbow, fishing_rod, warped_fungus_on_a_stick, carrot_on_a_stick, shield, flint_and_steel, shears, clock, compass, recovery_compass, spyglass]
         template:
           name: shamir

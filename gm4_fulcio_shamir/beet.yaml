@@ -22,7 +22,7 @@ meta:
         - 4_tick
     model_data:
       - item: compass
-        reference: item/fulcio_shamir
+        reference: shamir/fulcio
         template:
           name: shamir
           metal: barimium

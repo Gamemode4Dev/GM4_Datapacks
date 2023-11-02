@@ -17,12 +17,8 @@ meta:
     versioning:
       schedule_loops: [tick]
     model_data:
-      - item: player_head
-        template: generated
-        reference: item/celaro_band
-        textures: gm4_metallurgy:item/band/aluminium_band
       - item: boots
-        reference: item/celaro_shamir
+        reference: shamir/celaro
         template:
           name: shamir
           metal: aluminium
