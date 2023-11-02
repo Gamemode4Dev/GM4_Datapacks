@@ -12,7 +12,7 @@
       "gm4_poses_pack:gui/advancement/poses_pack": 2
     },
     "axolotl_bucket": {
-      "gm4_metallurgy:item/shamir/infinatas": 110
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "bamboo_sign": {
       "gm4_trapped_signs:item/trapped_bamboo_sign": 1,
@@ -72,7 +72,7 @@
       "gm4_soul_glass:gui/advancement/soul_glass": 1
     },
     "bucket": {
-      "gm4_metallurgy:item/shamir/infinatas": 110
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "carrot_on_a_stick": {
       "gm4_animi_shamir:item/animi_shamir": 124
@@ -84,24 +84,24 @@
       "gm4_desire_lines:item/celaro_shamir": 1,
       "gm4_weighted_armour:item/helious_shamir": 2,
       "gm4_vecto_shamir:item/vecto_shamir": 3,
-      "gm4_metallurgy:item/shamir/defuse": 100,
-      "gm4_metallurgy:item/shamir/vibro": 108,
+      "gm4_metallurgy:item/shamir/defuse": 106,
+      "gm4_metallurgy:item/shamir/vibro": 123,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "chainmail_chestplate": {
       "gm4_weighted_armour:item/helious_shamir": 2,
       "gm4_iacio_shamir:item/iacio_shamir": 10,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "chainmail_helmet": {
       "gm4_weighted_armour:item/helious_shamir": 2,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "chainmail_leggings": {
       "gm4_weighted_armour:item/helious_shamir": 2,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "cherry_sign": {
@@ -130,11 +130,11 @@
       "gm4_desire_lines:gui/advancement/desire_lines_10000": 1
     },
     "cod_bucket": {
-      "gm4_metallurgy:item/shamir/infinatas": 110
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "compass": {
       "gm4_fulcio_shamir:item/fulcio_shamir": 0,
-      "gm4_metallurgy:item/shamir/sensus": 102,
+      "gm4_metallurgy:item/shamir/sensus": 101,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "copper_ore": {
@@ -177,10 +177,10 @@
     },
     "diamond_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
-      "gm4_metallurgy:item/shamir/arborenda": 101,
+      "gm4_metallurgy:item/shamir/arborenda": 112,
       "gm4_percurro_shamir:item/percurro_shamir": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "diamond_boots": {
@@ -197,8 +197,8 @@
       "gm4_end_fishing:item/armor/diamond_boots_17": 17,
       "gm4_end_fishing:item/armor/diamond_boots_18": 18,
       "gm4_end_fishing:item/armor/diamond_boots_19": 19,
-      "gm4_metallurgy:item/shamir/defuse": 100,
-      "gm4_metallurgy:item/shamir/vibro": 108,
+      "gm4_metallurgy:item/shamir/defuse": 106,
+      "gm4_metallurgy:item/shamir/vibro": 123,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "diamond_chestplate": {
@@ -214,7 +214,7 @@
       "gm4_end_fishing:item/armor/diamond_chestplate_17": 17,
       "gm4_end_fishing:item/armor/diamond_chestplate_18": 18,
       "gm4_end_fishing:item/armor/diamond_chestplate_19": 19,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "diamond_helmet": {
@@ -229,14 +229,14 @@
       "gm4_end_fishing:item/armor/diamond_helmet_17": 17,
       "gm4_end_fishing:item/armor/diamond_helmet_18": 18,
       "gm4_end_fishing:item/armor/diamond_helmet_19": 19,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "diamond_hoe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
-      "gm4_metallurgy:item/shamir/moneo": 105,
+      "gm4_metallurgy:item/shamir/moneo": 113,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/gemini": 112,
+      "gm4_metallurgy:item/shamir/gemini": 109,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "diamond_horse_armor": {
@@ -258,7 +258,7 @@
       "gm4_end_fishing:item/armor/diamond_leggings_17": 17,
       "gm4_end_fishing:item/armor/diamond_leggings_18": 18,
       "gm4_end_fishing:item/armor/diamond_leggings_19": 19,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "diamond_pickaxe": {
@@ -274,9 +274,9 @@
       "gm4_end_fishing:item/tools/diamond_pickaxe_17": 17,
       "gm4_end_fishing:item/tools/diamond_pickaxe_18": 18,
       "gm4_end_fishing:item/tools/diamond_pickaxe_19": 19,
-      "gm4_metallurgy:item/shamir/forterra": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/forterra": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_metallurgy:item/shamir/tinker": 111,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
@@ -293,8 +293,8 @@
       "gm4_end_fishing:item/tools/diamond_shovel_17": 17,
       "gm4_end_fishing:item/tools/diamond_shovel_18": 18,
       "gm4_end_fishing:item/tools/diamond_shovel_19": 19,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_metallurgy:item/shamir/tinker": 111,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
@@ -323,10 +323,10 @@
       "gm4_end_fishing:item/swords/diamond_sword_29": 29,
       "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_metallurgy:item/shamir/gemini": 106,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
-      "gm4_metallurgy:item/shamir/ender_bolt": 109,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
+      "gm4_metallurgy:item/shamir/ender_bolt": 105,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/musical": 113,
+      "gm4_metallurgy:item/shamir/musical": 108,
       "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "dirt": {
@@ -336,7 +336,7 @@
       "gm4_end_fishing:gui/advancement/end_fishing_phantom": 1,
       "gm4_end_fishing:item/elytra/elytra_10": 10,
       "gm4_end_fishing:item/elytra/elytra_11": 11,
-      "gm4_metallurgy:item/shamir/moneo": 105,
+      "gm4_metallurgy:item/shamir/moneo": 113,
       "gm4_animi_shamir:item/animi_shamir": 124,
       "gm4_orb_of_ankou:gui/advancement/orb_of_ankou_soaring_pneuma": 200
     },
@@ -377,7 +377,7 @@
       "gm4_everstone:gui/advancement/everstones": 3
     },
     "fishing_rod": {
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "flint": {
@@ -457,10 +457,10 @@
     },
     "golden_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
-      "gm4_metallurgy:item/shamir/arborenda": 101,
+      "gm4_metallurgy:item/shamir/arborenda": 112,
       "gm4_percurro_shamir:item/percurro_shamir": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "golden_boots": {
@@ -472,8 +472,8 @@
       "gm4_vecto_shamir:item/vecto_shamir": 3,
       "gm4_zauber_cauldrons:item/zauber_armor/speed/boots": 4,
       "gm4_zauber_cauldrons:item/zauber_armor/armor/boots": 5,
-      "gm4_metallurgy:item/shamir/defuse": 100,
-      "gm4_metallurgy:item/shamir/vibro": 108,
+      "gm4_metallurgy:item/shamir/defuse": 106,
+      "gm4_metallurgy:item/shamir/vibro": 123,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "golden_chestplate": {
@@ -485,7 +485,7 @@
       "gm4_zauber_cauldrons:item/zauber_armor/speed/chestplate": 4,
       "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_full_armor": 6,
       "gm4_iacio_shamir:item/iacio_shamir": 10,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "golden_helmet": {
@@ -494,14 +494,14 @@
       "gm4_zauber_cauldrons:item/zauber_armor/attack/helmet": 3,
       "gm4_zauber_cauldrons:item/zauber_armor/speed/helmet": 4,
       "gm4_zauber_cauldrons:item/zauber_armor/armor/helmet": 5,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "golden_hoe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
-      "gm4_metallurgy:item/shamir/moneo": 105,
+      "gm4_metallurgy:item/shamir/moneo": 113,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/gemini": 112,
+      "gm4_metallurgy:item/shamir/gemini": 109,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "golden_horse_armor": {
@@ -517,33 +517,33 @@
       "gm4_zauber_cauldrons:item/zauber_armor/attack/leggings": 3,
       "gm4_zauber_cauldrons:item/zauber_armor/speed/leggings": 4,
       "gm4_zauber_cauldrons:item/zauber_armor/armor/leggings": 5,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "golden_pickaxe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_lumos_shamir:item/lumos_shamir": 11,
-      "gm4_metallurgy:item/shamir/forterra": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/forterra": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_metallurgy:item/shamir/tinker": 111,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "golden_shovel": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_lumos_shamir:item/lumos_shamir": 11,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_metallurgy:item/shamir/tinker": 111,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "golden_sword": {
       "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_metallurgy:item/shamir/gemini": 106,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
-      "gm4_metallurgy:item/shamir/ender_bolt": 109,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
+      "gm4_metallurgy:item/shamir/ender_bolt": 105,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/musical": 113,
+      "gm4_metallurgy:item/shamir/musical": 108,
       "gm4_animi_shamir:item/animi_shamir": 124,
       "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
@@ -569,10 +569,10 @@
     },
     "iron_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
-      "gm4_metallurgy:item/shamir/arborenda": 101,
+      "gm4_metallurgy:item/shamir/arborenda": 112,
       "gm4_percurro_shamir:item/percurro_shamir": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "iron_block": {
@@ -593,8 +593,8 @@
       "gm4_end_fishing:item/armor/iron_boots_17": 17,
       "gm4_end_fishing:item/armor/iron_boots_18": 18,
       "gm4_end_fishing:item/armor/iron_boots_19": 19,
-      "gm4_metallurgy:item/shamir/defuse": 100,
-      "gm4_metallurgy:item/shamir/vibro": 108,
+      "gm4_metallurgy:item/shamir/defuse": 106,
+      "gm4_metallurgy:item/shamir/vibro": 123,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "iron_chestplate": {
@@ -611,7 +611,7 @@
       "gm4_end_fishing:item/armor/iron_chestplate_17": 17,
       "gm4_end_fishing:item/armor/iron_chestplate_18": 18,
       "gm4_end_fishing:item/armor/iron_chestplate_19": 19,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "iron_helmet": {
@@ -626,14 +626,14 @@
       "gm4_end_fishing:item/armor/iron_helmet_17": 17,
       "gm4_end_fishing:item/armor/iron_helmet_18": 18,
       "gm4_end_fishing:item/armor/iron_helmet_19": 19,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "iron_hoe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
-      "gm4_metallurgy:item/shamir/moneo": 105,
+      "gm4_metallurgy:item/shamir/moneo": 113,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/gemini": 112,
+      "gm4_metallurgy:item/shamir/gemini": 109,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "iron_horse_armor": {
@@ -662,7 +662,7 @@
       "gm4_end_fishing:item/armor/iron_leggings_17": 17,
       "gm4_end_fishing:item/armor/iron_leggings_18": 18,
       "gm4_end_fishing:item/armor/iron_leggings_19": 19,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "iron_ore": {
@@ -681,9 +681,9 @@
       "gm4_end_fishing:item/tools/iron_pickaxe_17": 17,
       "gm4_end_fishing:item/tools/iron_pickaxe_18": 18,
       "gm4_end_fishing:item/tools/iron_pickaxe_19": 19,
-      "gm4_metallurgy:item/shamir/forterra": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/forterra": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_metallurgy:item/shamir/tinker": 111,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
@@ -700,8 +700,8 @@
       "gm4_end_fishing:item/tools/iron_shovel_17": 17,
       "gm4_end_fishing:item/tools/iron_shovel_18": 18,
       "gm4_end_fishing:item/tools/iron_shovel_19": 19,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_metallurgy:item/shamir/tinker": 111,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
@@ -729,10 +729,10 @@
       "gm4_end_fishing:item/swords/iron_sword_29": 29,
       "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_metallurgy:item/shamir/gemini": 106,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
-      "gm4_metallurgy:item/shamir/ender_bolt": 109,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
+      "gm4_metallurgy:item/shamir/ender_bolt": 105,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/musical": 113,
+      "gm4_metallurgy:item/shamir/musical": 108,
       "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "jungle_sign": {
@@ -744,7 +744,7 @@
     },
     "lava_bucket": {
       "gm4_metallurgy:gui/advancement/metallurgy_overheat_cast": 1,
-      "gm4_metallurgy:item/shamir/infinatas": 110
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "leather_boots": {
       "gm4_desire_lines:item/celaro_shamir": 1,
@@ -754,24 +754,24 @@
       "gm4_boots_of_ostara:gui/advancement/boots_of_ostara": 3,
       "gm4_vecto_shamir:item/vecto_shamir": 3,
       "gm4_boots_of_ostara:item/flippers_of_ostara": 4,
-      "gm4_metallurgy:item/shamir/defuse": 100,
-      "gm4_metallurgy:item/shamir/vibro": 108,
+      "gm4_metallurgy:item/shamir/defuse": 106,
+      "gm4_metallurgy:item/shamir/vibro": 123,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "leather_chestplate": {
       "gm4_weighted_armour:item/helious_shamir": 2,
       "gm4_iacio_shamir:item/iacio_shamir": 10,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "leather_helmet": {
       "gm4_weighted_armour:item/helious_shamir": 2,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "leather_leggings": {
       "gm4_weighted_armour:item/helious_shamir": 2,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "lectern": {
@@ -788,7 +788,7 @@
       "gm4_trapped_signs:item/secret_trapped_mangrove_sign": 2
     },
     "milk_bucket": {
-      "gm4_metallurgy:item/shamir/infinatas": 110
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "minecart": {
       "gm4_ziprails:gui/advancement/ziprails": 1
@@ -801,10 +801,10 @@
     },
     "netherite_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
-      "gm4_metallurgy:item/shamir/arborenda": 101,
+      "gm4_metallurgy:item/shamir/arborenda": 112,
       "gm4_percurro_shamir:item/percurro_shamir": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "netherite_boots": {
@@ -821,8 +821,8 @@
       "gm4_end_fishing:item/armor/netherite_boots_17": 17,
       "gm4_end_fishing:item/armor/netherite_boots_18": 18,
       "gm4_end_fishing:item/armor/netherite_boots_19": 19,
-      "gm4_metallurgy:item/shamir/defuse": 100,
-      "gm4_metallurgy:item/shamir/vibro": 108,
+      "gm4_metallurgy:item/shamir/defuse": 106,
+      "gm4_metallurgy:item/shamir/vibro": 123,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "netherite_chestplate": {
@@ -838,7 +838,7 @@
       "gm4_end_fishing:item/armor/netherite_chestplate_17": 17,
       "gm4_end_fishing:item/armor/netherite_chestplate_18": 18,
       "gm4_end_fishing:item/armor/netherite_chestplate_19": 19,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "netherite_helmet": {
@@ -853,14 +853,14 @@
       "gm4_end_fishing:item/armor/netherite_helmet_17": 17,
       "gm4_end_fishing:item/armor/netherite_helmet_18": 18,
       "gm4_end_fishing:item/armor/netherite_helmet_19": 19,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "netherite_hoe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
-      "gm4_metallurgy:item/shamir/moneo": 105,
+      "gm4_metallurgy:item/shamir/moneo": 113,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/gemini": 112,
+      "gm4_metallurgy:item/shamir/gemini": 109,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "netherite_leggings": {
@@ -875,7 +875,7 @@
       "gm4_end_fishing:item/armor/netherite_leggings_17": 17,
       "gm4_end_fishing:item/armor/netherite_leggings_18": 18,
       "gm4_end_fishing:item/armor/netherite_leggings_19": 19,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "netherite_pickaxe": {
@@ -891,9 +891,9 @@
       "gm4_end_fishing:item/tools/netherite_pickaxe_17": 17,
       "gm4_end_fishing:item/tools/netherite_pickaxe_18": 18,
       "gm4_end_fishing:item/tools/netherite_pickaxe_19": 19,
-      "gm4_metallurgy:item/shamir/forterra": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/forterra": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_metallurgy:item/shamir/tinker": 111,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
@@ -910,8 +910,8 @@
       "gm4_end_fishing:item/tools/netherite_shovel_17": 17,
       "gm4_end_fishing:item/tools/netherite_shovel_18": 18,
       "gm4_end_fishing:item/tools/netherite_shovel_19": 19,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_metallurgy:item/shamir/tinker": 111,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
@@ -939,10 +939,10 @@
       "gm4_end_fishing:item/swords/netherite_sword_29": 29,
       "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_metallurgy:item/shamir/gemini": 106,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
-      "gm4_metallurgy:item/shamir/ender_bolt": 109,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
+      "gm4_metallurgy:item/shamir/ender_bolt": 105,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/musical": 113,
+      "gm4_metallurgy:item/shamir/musical": 108,
       "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "netherrack": {
@@ -1010,20 +1010,20 @@
       "gm4_zauber_cauldrons:item/crystal/poison": 57,
       "gm4_zauber_cauldrons:item/crystal/strength": 58,
       "gm4_relocators:item/relocator_full": 61,
-      "gm4_metallurgy:item/shamir/defuse": 100,
-      "gm4_metallurgy:item/shamir/arborenda": 101,
-      "gm4_metallurgy:item/shamir/sensus": 102,
+      "gm4_metallurgy:item/shamir/defuse": 106,
+      "gm4_metallurgy:item/shamir/arborenda": 112,
+      "gm4_metallurgy:item/shamir/sensus": 101,
       "gm4_weighted_armour:item/helious_band": 103,
-      "gm4_metallurgy:item/shamir/forterra": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/mundane_band": 106,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
-      "gm4_metallurgy:item/shamir/vibro": 108,
-      "gm4_metallurgy:item/shamir/ender_bolt": 109,
-      "gm4_metallurgy:item/shamir/infinatas": 110,
+      "gm4_metallurgy:item/shamir/forterra": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/mundane_band": 22,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
+      "gm4_metallurgy:item/shamir/vibro": 123,
+      "gm4_metallurgy:item/shamir/ender_bolt": 105,
+      "gm4_metallurgy:item/shamir/infinatas": 100,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/gemini": 112,
-      "gm4_metallurgy:item/shamir/musical": 113,
+      "gm4_metallurgy:item/shamir/gemini": 109,
+      "gm4_metallurgy:item/shamir/musical": 108,
       "gm4_lumos_shamir:item/lumos_band": 114,
       "gm4_fulcio_shamir:item/fulcio_band": 115,
       "gm4_orb_of_ankou:item/corripio_band": 116,
@@ -1062,13 +1062,13 @@
       "gm4_standard_liquids:item/glow_ink_bottle": 8
     },
     "powder_snow_bucket": {
-      "gm4_metallurgy:item/shamir/infinatas": 110
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "prismarine_shard": {
       "gm4_zauber_cauldrons:item/enchanted_prismarine_shard": 1
     },
     "pufferfish_bucket": {
-      "gm4_metallurgy:item/shamir/infinatas": 110
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "purpur_block": {
       "gm4_lightning_in_a_bottle:gui/advancement/lightning_in_a_bottle_shulker": 1,
@@ -1114,14 +1114,14 @@
       "gm4_pig_tractors:gui/advancement/pig_tractors": 1
     },
     "salmon_bucket": {
-      "gm4_metallurgy:item/shamir/infinatas": 110
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "sand": {
       "gm4_smelteries:block/ore_display/sand": 1
     },
     "shears": {
       "gm4_tnt_landmines:gui/advancement/tnt_landmines": 1,
-      "gm4_metallurgy:item/shamir/moneo": 105,
+      "gm4_metallurgy:item/shamir/moneo": 113,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "shield": {
@@ -1151,10 +1151,10 @@
     },
     "stone_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
-      "gm4_metallurgy:item/shamir/arborenda": 101,
+      "gm4_metallurgy:item/shamir/arborenda": 112,
       "gm4_percurro_shamir:item/percurro_shamir": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "stone_bricks": {
@@ -1162,40 +1162,40 @@
     },
     "stone_hoe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
-      "gm4_metallurgy:item/shamir/moneo": 105,
+      "gm4_metallurgy:item/shamir/moneo": 113,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/gemini": 112,
+      "gm4_metallurgy:item/shamir/gemini": 109,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "stone_pickaxe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_lumos_shamir:item/lumos_shamir": 11,
-      "gm4_metallurgy:item/shamir/forterra": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/forterra": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_metallurgy:item/shamir/tinker": 111,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "stone_shovel": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_lumos_shamir:item/lumos_shamir": 11,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_metallurgy:item/shamir/tinker": 111,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "stone_sword": {
       "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_metallurgy:item/shamir/gemini": 106,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
-      "gm4_metallurgy:item/shamir/ender_bolt": 109,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
+      "gm4_metallurgy:item/shamir/ender_bolt": 105,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/musical": 113,
+      "gm4_metallurgy:item/shamir/musical": 108,
       "gm4_animi_shamir:item/animi_shamir": 124,
       "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
     "tadpole_bucket": {
-      "gm4_metallurgy:item/shamir/infinatas": 110
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "tnt": {
       "gm4_disassemblers:block/disassembler": 1,
@@ -1207,8 +1207,8 @@
     "trident": {
       "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_metallurgy:item/shamir/gemini": 106,
-      "gm4_metallurgy:item/shamir/ender_bolt": 109,
-      "gm4_metallurgy:item/shamir/musical": 113,
+      "gm4_metallurgy:item/shamir/ender_bolt": 105,
+      "gm4_metallurgy:item/shamir/musical": 108,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "tripwire_hook": {
@@ -1216,11 +1216,11 @@
     },
     "tropical_fish_bucket": {
       "gm4_crossbow_cartridges:gui/advancement/crossbow_cartridges_bucket": 1,
-      "gm4_metallurgy:item/shamir/infinatas": 110
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "turtle_helmet": {
       "gm4_weighted_armour:item/helious_shamir": 2,
-      "gm4_metallurgy:item/shamir/defuse": 100,
+      "gm4_metallurgy:item/shamir/defuse": 106,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "warped_fungus_on_a_stick": {
@@ -1231,47 +1231,47 @@
       "gm4_trapped_signs:item/secret_trapped_warped_sign": 2
     },
     "water_bucket": {
-      "gm4_metallurgy:item/shamir/infinatas": 110
+      "gm4_metallurgy:item/shamir/infinatas": 100
     },
     "wooden_axe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
-      "gm4_metallurgy:item/shamir/arborenda": 101,
+      "gm4_metallurgy:item/shamir/arborenda": 112,
       "gm4_percurro_shamir:item/percurro_shamir": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "wooden_hoe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
-      "gm4_metallurgy:item/shamir/moneo": 105,
+      "gm4_metallurgy:item/shamir/moneo": 113,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/gemini": 112,
+      "gm4_metallurgy:item/shamir/gemini": 109,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "wooden_pickaxe": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_lumos_shamir:item/lumos_shamir": 11,
-      "gm4_metallurgy:item/shamir/forterra": 104,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/forterra": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_metallurgy:item/shamir/tinker": 111,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "wooden_shovel": {
       "gm4_audere_shamir:item/audere_shamir": 10,
       "gm4_lumos_shamir:item/lumos_shamir": 11,
-      "gm4_metallurgy:item/shamir/moneo": 105,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
+      "gm4_metallurgy:item/shamir/moneo": 113,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
       "gm4_metallurgy:item/shamir/tinker": 111,
       "gm4_animi_shamir:item/animi_shamir": 124
     },
     "wooden_sword": {
       "gm4_percurro_shamir:item/percurro_shamir": 104,
       "gm4_metallurgy:item/shamir/gemini": 106,
-      "gm4_metallurgy:item/shamir/hypexperia": 107,
-      "gm4_metallurgy:item/shamir/ender_bolt": 109,
+      "gm4_metallurgy:item/shamir/hypexperia": 110,
+      "gm4_metallurgy:item/shamir/ender_bolt": 105,
       "gm4_metallurgy:item/shamir/tinker": 111,
-      "gm4_metallurgy:item/shamir/musical": 113,
+      "gm4_metallurgy:item/shamir/musical": 108,
       "gm4_animi_shamir:item/animi_shamir": 124,
       "gm4_orb_of_ankou:item/corripio_shamir": 200
     },
