@@ -11,7 +11,7 @@ pipeline:
 meta:
   gm4:
     versioning:
-      schedule_loops: [main]
+      schedule_loops: [tick]
     website:
       description: Modifies loot tables for the gm4 1.20 UHC!
       recommended: []
