@@ -5,7 +5,7 @@ from copy import deepcopy
 from dataclasses import replace
 from fnmatch import fnmatch
 from itertools import cycle
-from typing import Any, Callable, ClassVar, Literal, Optional
+from typing import Any, ClassVar, Literal, Optional
 
 import numpy as np
 from beet import (
@@ -337,7 +337,8 @@ class GM4ResourcePack(MutatingReducer):
        
         # group models by item id
         for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
-            models = list(filter(lambda m: item_id in m.item.entries(), self.opts.model_data))
+            models = filter(lambda m: item_id in m.item.entries(), self.opts.model_data) # with this item_id
+            models = sorted(models, key=lambda m: self.retrieve_index(m.reference)[0])
 
             vanilla_model = (v:=vanilla_models_jar.assets.models[f"minecraft:item/{item_id}"].data) | ({} if v.get("overrides") else {"overrides": []})
             vanilla_overrides: list[Any] = vanilla_model["overrides"]
@@ -346,8 +347,6 @@ class GM4ResourcePack(MutatingReducer):
                 # FIXME how to differentiate vanilla overrides from specified overrides?
             unchanged_vanilla_overrides = deepcopy(vanilla_overrides)
 
-            filter_func: Callable[[tuple[str, int]], bool] = lambda t: t[0] in [m.reference for m in models]
-            custom_model_data = dict(filter(filter_func, self.registry["items"][item_id].items()))
             
             for model in models:
                 m = model.model[item_id] # model string, or predicate settings, for this particular item id
@@ -364,7 +363,7 @@ class GM4ResourcePack(MutatingReducer):
                         continue # TODO this is an exception?
                     vanilla_overrides.append({
                         "predicate": {
-                            "custom_model_data": CUSTOM_MODEL_PREFIX+custom_model_data[model.reference]
+                            "custom_model_data": CUSTOM_MODEL_PREFIX+self.retrieve_index(model.reference)[0],
                         } | pred.get("predicate", {}),
                         "model": pred["model"] if pred.get("user_defined") else m # type:ignore , user-defined model predicates use their own model reference. m is a string in all other cases
                     })
