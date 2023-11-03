@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "fishing_rod",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/end_fishing'}"
     },
     "title": {
       "translate": "advancement.gm4.end_fishing.title",

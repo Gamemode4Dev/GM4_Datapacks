@@ -128,7 +128,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420010}"
+              "tag": "{CustomModelData:'item/elytra/elytra_10'}"
             },
             {
               "function": "minecraft:set_lore",

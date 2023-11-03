@@ -27,7 +27,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420010}"
+              "tag": "{CustomModelData:'item/tools_10'}"
             }
           ]
         },
@@ -55,7 +55,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420011}"
+              "tag": "{CustomModelData:'item/tools_11'}"
             }
           ]
         },
@@ -77,7 +77,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420012}"
+              "tag": "{CustomModelData:'item/tools_12'}"
             }
           ]
         },
@@ -105,7 +105,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420013}"
+              "tag": "{CustomModelData:'item/tools_13'}"
             }
           ]
         },
@@ -127,7 +127,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420014}"
+              "tag": "{CustomModelData:'item/tools_14'}"
             }
           ]
         },
@@ -155,7 +155,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420015}"
+              "tag": "{CustomModelData:'item/tools_15'}"
             }
           ]
         },
@@ -177,7 +177,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420016}"
+              "tag": "{CustomModelData:'item/tools_16'}"
             }
           ]
         },
@@ -205,7 +205,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420017}"
+              "tag": "{CustomModelData:'item/tools_17'}"
             }
           ]
         },
@@ -227,7 +227,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420018}"
+              "tag": "{CustomModelData:'item/tools_18'}"
             }
           ]
         },
@@ -255,7 +255,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420019}"
+              "tag": "{CustomModelData:'item/tools_19'}"
             }
           ]
         }

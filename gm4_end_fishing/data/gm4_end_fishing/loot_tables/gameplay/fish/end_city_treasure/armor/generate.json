@@ -21,7 +21,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420010}"
+              "tag": "{CustomModelData:'item/armor_10'}"
             }
           ]
         },
@@ -43,7 +43,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420011}"
+              "tag": "{CustomModelData:'item/armor_11'}"
             }
           ]
         },
@@ -65,7 +65,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420012}"
+              "tag": "{CustomModelData:'item/armor_12'}"
             }
           ]
         },
@@ -87,7 +87,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420013}"
+              "tag": "{CustomModelData:'item/armor_13'}"
             }
           ]
         },
@@ -109,7 +109,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420014}"
+              "tag": "{CustomModelData:'item/armor_14'}"
             }
           ]
         },
@@ -137,7 +137,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420015}"
+              "tag": "{CustomModelData:'item/armor_15'}"
             }
           ]
         },
@@ -159,7 +159,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420016}"
+              "tag": "{CustomModelData:'item/armor_16'}"
             }
           ]
         },
@@ -181,7 +181,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420017}"
+              "tag": "{CustomModelData:'item/armor_17'}"
             }
           ]
         },
@@ -209,7 +209,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420018}"
+              "tag": "{CustomModelData:'item/armor_18'}"
             }
           ]
         },
@@ -237,7 +237,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420019}"
+              "tag": "{CustomModelData:'item/armor_19'}"
             }
           ]
         }
