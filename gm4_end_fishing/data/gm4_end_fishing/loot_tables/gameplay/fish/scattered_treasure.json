@@ -128,7 +128,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/elytra/elytra_10'}"
+              "tag": "{CustomModelData:'item/captains_wings'}"
             },
             {
               "function": "minecraft:set_lore",

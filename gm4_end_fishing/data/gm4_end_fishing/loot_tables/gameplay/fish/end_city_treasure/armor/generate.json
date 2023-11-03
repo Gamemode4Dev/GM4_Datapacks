@@ -21,7 +21,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/armor_10'}"
+              "tag": "{CustomModelData:'item/end_city_armor_1'}"
             }
           ]
         },
@@ -43,7 +43,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/armor_11'}"
+              "tag": "{CustomModelData:'item/end_city_armor_2'}"
             }
           ]
         },
@@ -65,7 +65,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/armor_12'}"
+              "tag": "{CustomModelData:'item/end_city_armor_3'}"
             }
           ]
         },
@@ -87,7 +87,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/armor_13'}"
+              "tag": "{CustomModelData:'item/end_city_armor_4'}"
             }
           ]
         },
@@ -109,7 +109,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/armor_14'}"
+              "tag": "{CustomModelData:'item/end_city_armor_5'}"
             }
           ]
         },
@@ -137,7 +137,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/armor_15'}"
+              "tag": "{CustomModelData:'item/end_city_armor_6'}"
             }
           ]
         },
@@ -159,7 +159,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/armor_16'}"
+              "tag": "{CustomModelData:'item/end_city_armor_7'}"
             }
           ]
         },
@@ -181,7 +181,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/armor_17'}"
+              "tag": "{CustomModelData:'item/end_city_armor_8'}"
             }
           ]
         },
@@ -209,7 +209,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/armor_18'}"
+              "tag": "{CustomModelData:'item/end_city_armor_9'}"
             }
           ]
         },
@@ -237,7 +237,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/armor_19'}"
+              "tag": "{CustomModelData:'item/end_city_armor_10'}"
             }
           ]
         }

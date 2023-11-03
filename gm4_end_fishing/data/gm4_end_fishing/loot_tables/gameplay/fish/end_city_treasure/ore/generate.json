@@ -21,7 +21,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/ore_10'}"
+              "tag": "{CustomModelData:'item/end_city_ore_1'}"
             }
           ]
         },
@@ -43,7 +43,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/ore_11'}"
+              "tag": "{CustomModelData:'item/end_city_ore_2'}"
             }
           ]
         },
@@ -65,7 +65,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/ore_12'}"
+              "tag": "{CustomModelData:'item/end_city_ore_3'}"
             }
           ]
         },
@@ -87,7 +87,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/ore_13'}"
+              "tag": "{CustomModelData:'item/end_city_ore_4'}"
             }
           ]
         },
@@ -109,7 +109,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/ore_14'}"
+              "tag": "{CustomModelData:'item/end_city_ore_5'}"
             }
           ]
         },
@@ -131,7 +131,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/ore_15'}"
+              "tag": "{CustomModelData:'item/end_city_ore_6'}"
             }
           ]
         }

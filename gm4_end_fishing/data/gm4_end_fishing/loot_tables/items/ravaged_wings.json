@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/elytra/elytra_11'}"
+              "tag": "{CustomModelData:'item/ravaged_wings'}"
             },
             {
               "function": "minecraft:set_name",

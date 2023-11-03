@@ -27,7 +27,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/tools_10'}"
+              "tag": "{CustomModelData:'item/end_city_tools_1'}"
             }
           ]
         },
@@ -55,7 +55,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/tools_11'}"
+              "tag": "{CustomModelData:'item/end_city_tools_2'}"
             }
           ]
         },
@@ -77,7 +77,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/tools_12'}"
+              "tag": "{CustomModelData:'item/end_city_tools_3'}"
             }
           ]
         },
@@ -105,7 +105,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/tools_13'}"
+              "tag": "{CustomModelData:'item/end_city_tools_4'}"
             }
           ]
         },
@@ -127,7 +127,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/tools_14'}"
+              "tag": "{CustomModelData:'item/end_city_tools_5'}"
             }
           ]
         },
@@ -155,7 +155,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/tools_15'}"
+              "tag": "{CustomModelData:'item/end_city_tools_6'}"
             }
           ]
         },
@@ -177,7 +177,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/tools_16'}"
+              "tag": "{CustomModelData:'item/end_city_tools_7'}"
             }
           ]
         },
@@ -205,7 +205,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/tools_17'}"
+              "tag": "{CustomModelData:'item/end_city_tools_8'}"
             }
           ]
         },
@@ -227,7 +227,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/tools_18'}"
+              "tag": "{CustomModelData:'item/end_city_tools_9'}"
             }
           ]
         },
@@ -255,7 +255,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/tools_19'}"
+              "tag": "{CustomModelData:'item/end_city_tools_10'}"
             }
           ]
         }
