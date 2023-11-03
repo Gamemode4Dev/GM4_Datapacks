@@ -74,7 +74,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 5,
-          "name": "gm4_uhc_loot:uhc_loot"
+          "name": "gm4_uhc_loot:gm4_loot"
         }
       ]
     },
@@ -157,7 +157,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 5,
-          "name": "gm4_uhc_loot:uhc_loot"
+          "name": "gm4_uhc_loot:gm4_loot"
         }
       ]
     },
