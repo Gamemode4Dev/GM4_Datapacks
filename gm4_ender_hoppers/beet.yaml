@@ -1,6 +1,6 @@
 id: gm4_ender_hoppers
 name: Ender Hoppers
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -32,9 +32,9 @@ meta:
         template: custom
         transforms: 
           - name: item_display
-            origin: [0.5,0.9,0.5]
-            scale: [0.438,0.438,0.438]
-            translation: [0,0,0]
+            origin: [0.5,0.5,0.5]
+            scale: [0.83,0.83,0.83]
+            translation: [0,0.641,0]
             display: head
       - item: player_head
         reference: item/ender_hopper

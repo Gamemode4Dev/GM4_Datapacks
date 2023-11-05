@@ -79,17 +79,6 @@
     },
     "gm4_ender_hoppers:ender_hopper_display": {
       "uuid": [
-        986384532,
-        2063540834,
-        -1688310937,
-        -1123024522
-      ],
-      "value": "ewogICJ0aW1lc3RhbXAiIDogMTY0NDM4ODkxMTA4NSwKICAicHJvZmlsZUlkIiA6ICJkMWY2OTc0YzE2ZmI0ZjdhYjI1NjU4NzExNjM3M2U2NSIsCiAgInByb2ZpbGVOYW1lIiA6ICJGaW9saWVzdGEiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWQ0MWJkNGZkYzgwYzczY2NlNTQ5NTY1ZDIyN2U3MjVlMjZlZDM2MzJhNmRiYjVlODExMTVhYjgwMmM1ZjI0MSIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9",
-      "hash": "6ea03d4e586f8155901bea7ec5396adad9d892a0",
-      "parent_module": "gm4_ender_hoppers"
-    },
-    "gm4_ender_hoppers:ender_hopper_display_2": {
-      "uuid": [
         -1738045610,
         -1151472894,
         -1829437163,

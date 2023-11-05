@@ -984,6 +984,7 @@
       "gm4_forming_press:block/forming_press_down": 7
     },
     "player_head": {
+      "gm4_ender_hoppers:block/ender_hopper": 1,
       "gm4_enderman_support_class:gui/advancement/enderman_support_class": 3,
       "gm4_heart_canisters:gui/advancement/heart_canisters_tier_1": 4,
       "gm4_heart_canisters:gui/advancement/heart_canisters_tier_2": 5,
@@ -1005,7 +1006,6 @@
       "gm4_ender_hoppers:block/ender_hopper_minecart": 29,
       "gm4_tnt_landmines:item/tnt_landmine": 40,
       "gm4_tnt_landmines:item/tnt_landmine_grass": 41,
-      "gm4_ender_hoppers:block/ender_hopper": 41,
       "gm4_tnt_landmines:item/tnt_landmine_dirt": 42,
       "gm4_tnt_landmines:item/tnt_landmine_stone": 43,
       "gm4_tnt_landmines:item/tnt_landmine_stone_bricks": 44,

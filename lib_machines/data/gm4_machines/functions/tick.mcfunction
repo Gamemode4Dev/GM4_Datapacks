@@ -5,6 +5,9 @@
 
 # check if machine blocks have been broken or moved by a piston (note: this assumes that the block is never replaced with a /fill command)
 execute as @e[type=marker,tag=gm4_machine_marker] at @s if block ~ ~ ~ #gm4_machines:empty_block run function #gm4_machines:destroy
-execute as @e[type=armor_stand,tag=gm4_machine_cart,predicate=!gm4_machines:has_vehicle] at @s run function #gm4_machines:destroy_cart
+execute as @e[type=item_display,tag=gm4_machine_cart,predicate=!gm4_machines:has_vehicle] at @s run function #gm4_machines:destroy_cart
 execute as @e[type=area_effect_cloud,tag=gm4_machine_cart,predicate=!gm4_machines:has_vehicle] at @s run function #gm4_machines:destroy_cart
 execute as @e[type=marker,tag=gm4_machine_cart,predicate=!gm4_machines:has_vehicle] at @s run function #gm4_machines:destroy_cart
+
+# NOTE 1.21 update, remove this line
+execute as @e[type=armor_stand,tag=gm4_machine_cart,predicate=!gm4_machines:has_vehicle] at @s run function #gm4_machines:destroy_cart
