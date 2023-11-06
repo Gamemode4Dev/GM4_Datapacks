@@ -1,5 +1,5 @@
 {
-  "last_commit": "80ff94fd88ca1b09f7c68f036e8470b4c6f40121",
+  "last_commit": "5c33b898362c5637a940f197d6330f24bcdf662d",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -524,7 +524,7 @@
     {
       "id": "gm4_crossbow_cartridges",
       "name": "Crossbow Cartridges",
-      "version": "1.5.1",
+      "version": "1.5.2",
       "video_link": "https://www.youtube.com/watch?v=XJiGvX7l-pI",
       "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
       "credits": {
@@ -1473,7 +1473,7 @@
     {
       "id": "gm4_mountaineering",
       "name": "Mountaineering",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mountaineering",
       "credits": {
