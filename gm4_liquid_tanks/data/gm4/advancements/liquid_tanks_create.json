@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "hopper",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/liquid_tanks_create'}"
     },
     "title": {
       "translate": "advancement.gm4.liquid_tanks.title",

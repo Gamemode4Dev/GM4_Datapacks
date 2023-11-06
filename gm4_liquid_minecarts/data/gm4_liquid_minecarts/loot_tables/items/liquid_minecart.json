@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420003,gm4_machines:{id:\"liquid_minecart\"}}"
+              "tag": "{CustomModelData:'item/liquid_minecart',gm4_machines:{id:\"liquid_minecart\"}}"
             },
             {
               "function": "set_name",

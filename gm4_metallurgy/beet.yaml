@@ -73,10 +73,20 @@ meta:
         broadcast:
           - textures: item/band/mundane_band
             reference: item/mundane_band
-          - reference: item/lump/baryte_lump
-          - reference: item/lump/bauxite_lump
-          - reference: item/lump/bismutite_lump
-          - reference: item/lump/thorianite_lump
+          - reference: item/lump/baryte
+          - reference: item/lump/bauxite
+          - reference: item/lump/bismutite
+          - reference: item/lump/thorianite
+      - item: player_head
+        template: vanilla
+        broadcast:
+          - reference: block/mould/cool_empty
+          - reference: block/mould/hot_empty
+          - reference: block/mould/cool_metal
+          - reference: block/mould/hot_metal
+      - item: obsidian
+        reference: item/slightly_damanged_obsidian
+        template: vanilla
       - reference: shamir/defuse
         item: armor
         template: 
@@ -137,7 +147,7 @@ meta:
           name: shamir
           metal: thorium
           textures_path: item/shamir/thorium
-      - reference: shamir/infinatas
+      - reference: shamir/infinitas
         item: buckets
         template: 
           name: shamir

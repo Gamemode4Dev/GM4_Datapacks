@@ -38,7 +38,7 @@ data merge entity @s {Silent:1,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_li
 execute if block ~ ~ ~ hopper[facing=north] run data merge entity @s {Silent:1,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict"],HasVisualFire:1,CustomName:'"gm4_liquid_tank_stand"',Rotation:[180.0f,0.0f]}
 execute if block ~ ~ ~ hopper[facing=east] run data merge entity @s {Silent:1,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict"],HasVisualFire:1,CustomName:'"gm4_liquid_tank_stand"',Rotation:[-90.0f,0.0f]}
 execute if block ~ ~ ~ hopper[facing=west] run data merge entity @s {Silent:1,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict"],HasVisualFire:1,CustomName:'"gm4_liquid_tank_stand"',Rotation:[90.0f,0.0f]}
-execute unless block ~ ~ ~ hopper[facing=down] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 3420003
+execute unless block ~ ~ ~ hopper[facing=down] run data modify entity @s ArmorItems[3].tag.CustomModelData set value "block/liquid_tank_side"
 
 scoreboard players set @s gm4_entity_version 1
 scoreboard players set @e[type=marker,tag=gm4_new_machine_marker,distance=..1,limit=1] gm4_entity_version 1

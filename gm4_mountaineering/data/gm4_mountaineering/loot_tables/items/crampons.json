@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420001,gm4_mountaineering:{item:\"crampons\"}}"
+                            "tag": "{CustomModelData:'item/crampons',gm4_mountaineering:{item:\"crampons\"}}"
                         },
                         {
                             "function": "minecraft:set_name",

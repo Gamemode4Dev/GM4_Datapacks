@@ -17,6 +17,22 @@ meta:
       schedule_loops:
         - main
         - fast_main
+    model_data:
+      - item: iron_boots
+        reference: gui/advancement/ski
+        template: advancement
+      - item: diamond_boots
+        reference: gui/advancement/ski_fast
+        template: advancement
+      - item: chainmail_boots
+        reference: item/crampons
+        template: vanilla
+      - item: stick
+        reference: item/poles
+        template: vanilla
+      - item: iron_boots
+        reference: item/skis
+        template: vanilla
     website:
       description: A mezze of mountaineering means! Glide down slopes and scale cliffs.
       recommended: []

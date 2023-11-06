@@ -12,7 +12,7 @@
       "gm4_poses_pack:gui/advancement/poses_pack": 2
     },
     "axolotl_bucket": {
-      "gm4_metallurgy:shamir/infinatas": 100
+      "gm4_metallurgy:shamir/infinitas": 100
     },
     "bamboo_sign": {
       "gm4_trapped_signs:item/trapped_bamboo_sign": 1,
@@ -72,7 +72,7 @@
       "gm4_soul_glass:gui/advancement/soul_glass": 1
     },
     "bucket": {
-      "gm4_metallurgy:shamir/infinatas": 100
+      "gm4_metallurgy:shamir/infinitas": 100
     },
     "carrot_on_a_stick": {
       "gm4_animi_shamir:shamir/animi": 124
@@ -81,6 +81,7 @@
       "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_create": 1
     },
     "chainmail_boots": {
+      "gm4_mountaineering:item/crampons": 1,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_desire_lines:shamir/celaro": 118,
@@ -131,7 +132,7 @@
       "gm4_desire_lines:gui/advancement/desire_lines_10000": 1
     },
     "cod_bucket": {
-      "gm4_metallurgy:shamir/infinatas": 100
+      "gm4_metallurgy:shamir/infinitas": 100
     },
     "compass": {
       "gm4_metallurgy:shamir/sensus": 101,
@@ -186,6 +187,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "diamond_boots": {
+      "gm4_mountaineering:gui/advancement/ski_fast": 1,
       "gm4_end_fishing:item/end_city_armor_1": 10,
       "gm4_end_fishing:item/end_city_armor_2": 11,
       "gm4_end_fishing:item/end_city_armor_3": 12,
@@ -368,6 +370,9 @@
     "end_rod": {
       "gm4_teleportation_anchors:gui/advancement/teleportation_jammer": 1
     },
+    "end_stone": {
+      "gm4_mysterious_midnights:item/endermite_egg": 1
+    },
     "experience_bottle": {
       "standard_liquids:gui/advancement/standard_liquids": 1
     },
@@ -436,7 +441,8 @@
       "gm4_tunnel_bores:item/piston_minecart": 1
     },
     "glass": {
-      "gm4_liquid_tanks:block/liquid_tank": 1
+      "gm4_liquid_tanks:block/liquid_tank": 1,
+      "gm4_liquid_tanks:block/liquid_tank_side": 3
     },
     "glass_bottle": {
       "gm4_sunken_treasure:item/message_in_a_bottle": 1,
@@ -586,6 +592,8 @@
       "gm4_smelteries:block/smeltery_lit": 3
     },
     "iron_boots": {
+      "gm4_mountaineering:item/skis": 1,
+      "gm4_mountaineering:gui/advancement/ski": 2,
       "gm4_end_fishing:item/end_city_armor_1": 10,
       "gm4_end_fishing:item/end_city_armor_2": 11,
       "gm4_end_fishing:item/end_city_armor_3": 12,
@@ -751,7 +759,7 @@
     },
     "lava_bucket": {
       "gm4_metallurgy:gui/advancement/metallurgy_overheat_cast": 1,
-      "gm4_metallurgy:shamir/infinatas": 100
+      "gm4_metallurgy:shamir/infinitas": 100
     },
     "leather_boots": {
       "gm4_boots_of_ostara:item/boots_of_ostara": 1,
@@ -796,7 +804,7 @@
       "gm4_trapped_signs:item/secret_trapped_mangrove_sign": 2
     },
     "milk_bucket": {
-      "gm4_metallurgy:shamir/infinatas": 100
+      "gm4_metallurgy:shamir/infinitas": 100
     },
     "minecart": {
       "gm4_ziprails:gui/advancement/ziprails": 1
@@ -969,6 +977,9 @@
       "gm4_trapped_signs:item/trapped_oak_sign": 1,
       "gm4_trapped_signs:item/secret_trapped_oak_sign": 2
     },
+    "obsidian": {
+      "gm4_metallurgy:item/slightly_damanged_obsidian": 1
+    },
     "oxidized_cut_copper": {
       "gm4_tinkering_compressors:block/tinkering_compressor_plate": 1
     },
@@ -996,11 +1007,15 @@
       "gm4_zauber_cauldrons:item/crystal/regeneration": 13,
       "gm4_end_fishing:item/enderpuff": 14,
       "gm4_tinkering_compressors:gui/advancement/tinkering_compressors": 15,
-      "gm4_metallurgy:item/lump/bismutite_lump": 17,
-      "gm4_metallurgy:item/lump/baryte_lump": 19,
-      "gm4_metallurgy:item/lump/thorianite_lump": 20,
-      "gm4_metallurgy:item/lump/bauxite_lump": 21,
+      "gm4_metallurgy:item/lump/bismutite": 17,
+      "gm4_metallurgy:item/lump/baryte": 19,
+      "gm4_metallurgy:item/lump/thorianite": 20,
+      "gm4_metallurgy:item/lump/bauxite": 21,
       "gm4_metallurgy:item/mundane_band": 22,
+      "gm4_metallurgy:block/mould/cool_empty": 23,
+      "gm4_metallurgy:block/mould/hot_empty": 24,
+      "gm4_metallurgy:block/mould/cool_metal": 25,
+      "gm4_metallurgy:block/mould/hot_metal": 26,
       "gm4_relocators:item/relocator_empty": 27,
       "gm4_ender_hoppers:block/ender_hopper_side": 28,
       "gm4_ender_hoppers:block/ender_hopper_minecart": 29,
@@ -1022,7 +1037,7 @@
       "gm4_zauber_cauldrons:item/crystal/poison": 57,
       "gm4_zauber_cauldrons:item/crystal/strength": 58,
       "gm4_relocators:item/relocator_full": 61,
-      "gm4_metallurgy:shamir/infinatas": 100,
+      "gm4_metallurgy:shamir/infinitas": 100,
       "gm4_metallurgy:shamir/sensus": 101,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/ender_bolt": 105,
@@ -1073,13 +1088,13 @@
       "gm4_standard_liquids:item/glow_ink_bottle": 8
     },
     "powder_snow_bucket": {
-      "gm4_metallurgy:shamir/infinatas": 100
+      "gm4_metallurgy:shamir/infinitas": 100
     },
     "prismarine_shard": {
       "gm4_zauber_cauldrons:item/enchanted_prismarine_shard": 1
     },
     "pufferfish_bucket": {
-      "gm4_metallurgy:shamir/infinatas": 100
+      "gm4_metallurgy:shamir/infinitas": 100
     },
     "purpur_block": {
       "gm4_lightning_in_a_bottle:gui/advancement/lightning_in_a_bottle_shulker": 1,
@@ -1125,7 +1140,7 @@
       "gm4_pig_tractors:gui/advancement/pig_tractors": 1
     },
     "salmon_bucket": {
-      "gm4_metallurgy:shamir/infinatas": 100
+      "gm4_metallurgy:shamir/infinitas": 100
     },
     "sand": {
       "gm4_smelteries:block/ore_display/sand": 1
@@ -1154,6 +1169,9 @@
     },
     "spyglass": {
       "gm4_animi_shamir:shamir/animi": 124
+    },
+    "stick": {
+      "gm4_mountaineering:item/poles": 1
     },
     "stone": {
       "gm4_tinkering_compressors:block/tinkering_compressor": 0,
@@ -1206,7 +1224,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "tadpole_bucket": {
-      "gm4_metallurgy:shamir/infinatas": 100
+      "gm4_metallurgy:shamir/infinitas": 100
     },
     "tnt": {
       "gm4_disassemblers:block/disassembler": 1,
@@ -1227,7 +1245,7 @@
     },
     "tropical_fish_bucket": {
       "gm4_crossbow_cartridges:gui/advancement/crossbow_cartridges_bucket": 1,
-      "gm4_metallurgy:shamir/infinatas": 100
+      "gm4_metallurgy:shamir/infinitas": 100
     },
     "turtle_helmet": {
       "gm4_weighted_armour:shamir/helious": 103,
@@ -1242,7 +1260,7 @@
       "gm4_trapped_signs:item/secret_trapped_warped_sign": 2
     },
     "water_bucket": {
-      "gm4_metallurgy:shamir/infinatas": 100
+      "gm4_metallurgy:shamir/infinitas": 100
     },
     "wooden_axe": {
       "gm4_metallurgy:shamir/hypexperia": 110,
