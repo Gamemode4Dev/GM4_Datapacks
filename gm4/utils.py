@@ -5,7 +5,7 @@ from dataclasses import asdict, dataclass
 from functools import total_ordering
 from typing import Any, Callable, Generic, TypeVar
 
-from beet import ListOption, Context
+from beet import ListOption, Context, LootTable, ItemModifier, Advancement
 from mecha import AstNbtCompound, Mecha, CompilationUnit
 from pydantic import validator
 from pydantic.generics import GenericModel
@@ -130,33 +130,33 @@ class MapOption(GenericModel, Generic[T]):
 	
 
 def mecha_transform_jsonfiles(ctx: Context, transformer: Any):
-    """Passes nbt contained in advancements, loot_tables ect.. through a custom specified Mecha AST rule"""
-    tf = ctx.inject(transformer)
-    mc = ctx.inject(Mecha)
+	"""Passes nbt contained in advancements, loot_tables ect.. through a custom specified Mecha AST rule"""
+	tf = ctx.inject(transformer)
+	mc = ctx.inject(Mecha)
 
-    def transform_snbt(snbt: str, db_entry_key: str) -> str:
-        escaped_snbt = snbt.replace("\n", "\\\\n")
-            # NOTE snbt in loot-tables reacts weird to \n characters. Both \n and \\\\n produce the same ingame output (\\n). 
-            # gm4 only has one case of \n in loot tables, so this replacement forces \n->\\\\n for the mecha parser to read it right.
-            # this may need to be altered in the future, but for now this means that \\\\n, while valid in vanilla loot-tables, will not
-            # work after being put through the mecha parser
-        node = mc.parse(escaped_snbt, type=AstNbtCompound) # parse string to AST
-        filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None # get relative filepath for Diagnostics
-        mc.database.update({db_entry_key: CompilationUnit(source=snbt)}) #type:ignore   # register fake CompilationUnit for Diagnostic printing, using unique string as key instead of the File() object, to support multiple entries from the same file
-        return mc.serialize(tf.invoke(node, filename=filename, file=db_entry_key)) # run AST through custom rule, and serialize back to string, passing along data for Diagnostic
-    
-    for name, jsonfile in [*ctx.data.loot_tables.items(), *ctx.data.item_modifiers.items()]:
-        # item modifiers, annoyingly, can have a list as the root, so we wrap in a dict to use nested_get
-        contents = {"listroot": jsonfile.data} if type(jsonfile.data) is list else jsonfile.data
+	def transform_snbt(snbt: str, db_entry_key: str) -> str:
+		escaped_snbt = snbt.replace("\n", "\\\\n")
+			# NOTE snbt in loot-tables reacts weird to \n characters. Both \n and \\\\n produce the same ingame output (\\n). 
+			# gm4 only has one case of \n in loot tables, so this replacement forces \n->\\\\n for the mecha parser to read it right.
+			# this may need to be altered in the future, but for now this means that \\\\n, while valid in vanilla loot-tables, will not
+			# work after being put through the mecha parser
+		node = mc.parse(escaped_snbt, type=AstNbtCompound) # parse string to AST
+		filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None # get relative filepath for Diagnostics
+		mc.database.update({db_entry_key: CompilationUnit(source=snbt)}) #type:ignore   # register fake CompilationUnit for Diagnostic printing, using unique string as key instead of the File() object, to support multiple entries from the same file
+		return mc.serialize(tf.invoke(node, filename=filename, file=db_entry_key)) # run AST through custom rule, and serialize back to string, passing along data for Diagnostic
 
-        for func_list in nested_get(contents, "functions"):
-            f: Callable[[Any], bool] = lambda e: e["function"].removeprefix('minecraft:')=="set_nbt"
-            for i, entry in enumerate(filter(f, func_list)):
-                entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{transformer.__name__}:{name}_{i}")
+	for name, jsonfile in [*ctx[LootTable], *ctx[ItemModifier]]:
+		# item modifiers, annoyingly, can have a list as the root, so we wrap in a dict to use nested_get
+		contents = {"listroot": jsonfile.data} if type(jsonfile.data) is list else jsonfile.data
 
-    for name, jsonfile in ctx.data.advancements.items():
-        for i, entry in enumerate(nested_get(jsonfile.data, "icon")):
-            entry["nbt"] = transform_snbt(entry["nbt"], db_entry_key=f"{transformer.__name__}:{name}_{i}")
+		for func_list in nested_get(contents, "functions"):
+			f: Callable[[Any], bool] = lambda e: e["function"].removeprefix('minecraft:')=="set_nbt"
+			for i, entry in enumerate(filter(f, func_list)):
+				entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{transformer.__name__}:{name}_{i}")
 
-    # send any raised diagnostic errors to Mecha for reporting
-    mc.diagnostics.extend(tf.diagnostics)
+	for name, jsonfile in ctx[Advancement]:
+		for i, entry in enumerate(nested_get(jsonfile.data, "icon")):
+			entry["nbt"] = transform_snbt(entry["nbt"], db_entry_key=f"{transformer.__name__}:{name}_{i}")
+
+	# send any raised diagnostic errors to Mecha for reporting
+	mc.diagnostics.extend(tf.diagnostics)
