@@ -6,6 +6,7 @@
 scoreboard players set $expected_item_amount gm4_zc_fullness 3
 
 # recipes
+# the crystals/effects/ functions are generated via beet from templates
 execute if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"potion",type:"instant_damage"}}}] run function gm4_zauber_cauldrons:recipes/crystals/effects/instant_damage
 execute if score $recipe_success gm4_zc_data matches 0 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"potion",type:"instant_health"}}}] run function gm4_zauber_cauldrons:recipes/crystals/effects/instant_health
 execute if score $recipe_success gm4_zc_data matches 0 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"potion",type:"jump_boost"}}}] run function gm4_zauber_cauldrons:recipes/crystals/effects/jump_boost

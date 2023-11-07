@@ -1,0 +1,14 @@
+[
+    {
+        "function": "minecraft:set_attributes",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.max_health",
+                "name": "test",
+                "amount": 4,
+                "operation": "addition",
+                "slot": "mainhand"
+            }
+        ]
+    }
+]

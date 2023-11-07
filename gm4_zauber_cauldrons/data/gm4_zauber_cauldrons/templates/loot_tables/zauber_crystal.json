@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:{{custom_model_data}},gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/{{effect}}/{{texture_version}}\",Properties:{textures:[{Value:\"$crystal/{{effect}}\"}]}},HideFlags:1}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.gm4.zauber_cauldrons.crystal.{{effect}}",
+                                "fallback": "{{translate_fallback}}",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": {{lore}},
+                            "replace": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

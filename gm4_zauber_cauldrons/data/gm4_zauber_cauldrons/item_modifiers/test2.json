@@ -1,0 +1,14 @@
+[
+    {
+        "function": "minecraft:set_attributes",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.attack_damage",
+                "name": "test",
+                "amount": 4,
+                "operation": "addition",
+                "slot": "mainhand"
+            }
+        ]
+    }
+]
