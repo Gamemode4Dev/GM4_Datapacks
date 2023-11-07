@@ -2,6 +2,8 @@
 # at center of block
 # run from recipe/armor/{{piece}}/select_flavor
 
+# templates/functions/armor/craft_piece.mcfunction
+
 # remove ingredients
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 

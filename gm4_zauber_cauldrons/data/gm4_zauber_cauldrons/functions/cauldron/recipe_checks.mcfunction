@@ -14,13 +14,13 @@ execute if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Co
 scoreboard players set $recipe_success gm4_zc_data 0
 
 # tier 4 potions
-execute if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:prismarine_crystals"}}}] if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:golden_apple"}}}] run function gm4_zauber_cauldrons:recipes/potions/zauber_potions
+execute if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:prismarine_crystals"}}}] if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:golden_apple"}}}] run function gm4_zauber_cauldrons:recipes/potions/select_bottle
 
 # zauber armor
-execute if score $recipe_success gm4_zc_data matches 0 if score $has_water gm4_zc_data matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"enchanted_prismarine_shard"}}}] run function gm4_zauber_cauldrons:recipes/armor/zauber_armor
+execute if score $recipe_success gm4_zc_data matches 0 if score $has_water gm4_zc_data matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"enchanted_prismarine_shard"}}}] run function gm4_zauber_cauldrons:recipes/armor/select_piece
 
 # zauber crystals
-execute if score $recipe_success gm4_zc_data matches 0 if score $has_water gm4_zc_data matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:sea_lantern"}}}] if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:nether_star"}}}] run function gm4_zauber_cauldrons:recipes/crystals/zauber_crystals
+execute if score $recipe_success gm4_zc_data matches 0 if score $has_water gm4_zc_data matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:sea_lantern"}}}] if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:nether_star"}}}] run function gm4_zauber_cauldrons:recipes/crystals/select_effect
 
 # enchanted prismarine shard
 execute if score $recipe_success gm4_zc_data matches 0 if score $has_water gm4_zc_data matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:prismarine_shard"}}}] if entity @a[level=30..,distance=..2,limit=1,sort=nearest,gamemode=!spectator] run function gm4_zauber_cauldrons:recipes/precursors/enchanted_prismarine_shard

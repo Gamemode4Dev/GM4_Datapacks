@@ -8,3 +8,6 @@ execute if block ~ ~ ~ minecraft:powder_snow_cauldron[level=3] run setblock ~ ~ 
 
 # particle
 particle minecraft:snowflake ~ ~ ~ .15 0.4 .15 0 24
+
+# sound
+playsound minecraft:item.bucket.fill_powder_snow block @a[distance=..8] ~ ~ ~ 0.75 0.75

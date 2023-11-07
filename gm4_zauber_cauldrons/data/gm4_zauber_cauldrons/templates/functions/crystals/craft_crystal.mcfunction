@@ -1,6 +1,8 @@
 # @s = heated water zauber cauldron with crystal recipe inside
 # at center of block
-# run from zauber_crystals
+# run from recipes/crystals/select_effect
+
+# templates/functions/crystals/craft_crystal.mcfunction
 
 # remove ingredients
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
