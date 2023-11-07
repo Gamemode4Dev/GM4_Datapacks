@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420012,gm4_zauber_cauldrons:{item:\"crystal\",type:\"speed\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/speed/v1\",Properties:{textures:[{Value:\"$crystal/speed\"}]}},HideFlags:1}"
+                            "tag": "{CustomModelData:'item/crystal/speed',gm4_zauber_cauldrons:{item:\"crystal\",type:\"speed\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/speed/v1\",Properties:{textures:[{Value:\"$crystal/speed\"}]}},HideFlags:1}"
                         },
                         {
                             "function": "minecraft:set_name",

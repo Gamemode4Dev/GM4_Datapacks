@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420058,gm4_zauber_cauldrons:{item:\"crystal\",type:\"strength\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/strength/v0\",Properties:{textures:[{Value:\"$crystal/strength\"}]}},HideFlags:1}"
+                            "tag": "{CustomModelData:'item/crystal/strength',gm4_zauber_cauldrons:{item:\"crystal\",type:\"strength\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/strength/v0\",Properties:{textures:[{Value:\"$crystal/strength\"}]}},HideFlags:1}"
                         },
                         {
                             "function": "minecraft:set_name",

@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420128,gm4_machines:{id:\"custom_crafter\"},SkullOwner:{Name:\"gm4_custom_crafter\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$gm4_custom_crafters:custom_crafter\"}]}}}"
+              "tag": "{CustomModelData:'item/custom_crafter',gm4_machines:{id:\"custom_crafter\"},SkullOwner:{Name:\"gm4_custom_crafter\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$gm4_custom_crafters:custom_crafter\"}]}}}"
             },
             {
               "function": "set_name",

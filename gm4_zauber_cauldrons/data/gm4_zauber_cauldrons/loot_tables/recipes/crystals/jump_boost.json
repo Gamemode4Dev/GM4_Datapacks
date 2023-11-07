@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420056,gm4_zauber_cauldrons:{item:\"crystal\",type:\"jump_boost\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/jump_boost/v0\",Properties:{textures:[{Value:\"$crystal/jump_boost\"}]}},HideFlags:1}"
+                            "tag": "{CustomModelData:'item/crystal/leaping',gm4_zauber_cauldrons:{item:\"crystal\",type:\"jump_boost\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/jump_boost/v0\",Properties:{textures:[{Value:\"$crystal/jump_boost\"}]}},HideFlags:1}"
                         },
                         {
                             "function": "minecraft:set_name",

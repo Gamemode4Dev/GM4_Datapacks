@@ -19,6 +19,9 @@ meta:
         - beacon_clock
     model_data:
       - item: brown_stained_glass
+        reference: item/soul_glass
+        template: vanilla
+      - item: brown_stained_glass
         reference: gui/advancement/soul_glass
         template: advancement
     website:

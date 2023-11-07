@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "rabbit_foot",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_rabbit'}"
     },
     "title": {
       "translate": "advancement.gm4.zauber_cauldrons.rabbit.title",

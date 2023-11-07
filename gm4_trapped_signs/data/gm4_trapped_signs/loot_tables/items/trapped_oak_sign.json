@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_trapped_sign:1b,HideFlags:1,Enchantments:[{id:\"minecraft:protection\",lvl:0s}]}"
+              "tag": "{CustomModelData:'item/trapped_oak_sign',gm4_trapped_sign:1b,HideFlags:1,Enchantments:[{id:\"minecraft:protection\",lvl:0s}]}"
             },
             {
               "function": "minecraft:set_name",

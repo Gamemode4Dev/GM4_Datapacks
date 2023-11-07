@@ -44,7 +44,8 @@ meta:
             origin: [0.5, 0.5, 0.5]
             scale: [0.5, 0.5, 0.5]
       - item: player_head
-        reference: block/tinkering_compressor_full
+        reference: item/tinkering_compressor
+        model: block/tinkering_compressor_full
       - item: player_head
         reference: gui/advancement/tinkering_compressors
         template:

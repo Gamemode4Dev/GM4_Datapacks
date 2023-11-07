@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "ladder",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/vertical_rails'}"
     },
     "title": {
       "translate": "advancement.gm4.vertical_rails.title",

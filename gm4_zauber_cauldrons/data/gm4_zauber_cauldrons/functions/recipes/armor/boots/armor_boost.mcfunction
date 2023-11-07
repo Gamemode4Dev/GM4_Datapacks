@@ -6,7 +6,7 @@
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 
 # set blueprint
-data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/attribute/armor_boost CustomModelData set value 3420005
+data modify storage gm4_zauber_cauldrons:blueprint/item/zauber_armor/attribute/armor_boost CustomModelData set value "item/zauber_armor/armor/boots"
 
 # summon item
 loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:recipes/armor/boots/armor_boost

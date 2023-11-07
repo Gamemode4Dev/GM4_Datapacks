@@ -68,10 +68,12 @@
     },
     "bow": {
       "gm4_better_fire:gui/advancement/better_fire": 1,
+      "gm4_tower_structures:item/pirate_bow": 4,
       "gm4_animi_shamir:shamir/animi": 124
     },
     "brown_stained_glass": {
-      "gm4_soul_glass:gui/advancement/soul_glass": 1
+      "gm4_soul_glass:gui/advancement/soul_glass": 1,
+      "gm4_soul_glass:item/soul_glass": 2
     },
     "bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
@@ -786,6 +788,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "leather_helmet": {
+      "gm4_tower_structures:item/pirate_hat": 2,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_animi_shamir:shamir/animi": 124
@@ -1073,7 +1076,7 @@
       "gm4_smelteries:item/smeltery": 133,
       "gm4_enchantment_extractors:item/enchantment_extractor": 134,
       "gm4_disassemblers:item/disassembler": 135,
-      "gm4_tinkering_compressors:block/tinkering_compressor_full": 136,
+      "gm4_tinkering_compressors:item/tinkering_compressor": 136,
       "gm4_teleportation_anchors:item/teleportation_jammer": 138,
       "gm4_teleportation_anchors:item/teleportation_anchor": 139,
       "gm4_auto_crafting:item/auto_crafter": 140
@@ -1219,6 +1222,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "stone_sword": {
+      "gm4_tower_structures:item/pirate_sword": 2,
       "gm4_metallurgy:shamir/ender_bolt": 105,
       "gm4_metallurgy:shamir/gemini": 106,
       "gm4_metallurgy:shamir/musical": 108,
@@ -1253,6 +1257,7 @@
       "gm4_metallurgy:shamir/infinitas": 100
     },
     "turtle_helmet": {
+      "gm4_tower_structures:item/pirate_turtle_helmet": 1,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_animi_shamir:shamir/animi": 124

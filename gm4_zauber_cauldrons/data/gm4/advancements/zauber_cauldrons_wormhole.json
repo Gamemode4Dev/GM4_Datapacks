@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "chorus_fruit",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_wormhole'}"
     },
     "title": {
       "translate": "advancement.gm4.zauber_cauldrons.wormhole.title",

@@ -11,7 +11,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:1b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:1b}"
             },
             {
               "function": "minecraft:set_name",
@@ -47,7 +47,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:2b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:2b}"
             },
             {
               "function": "minecraft:set_name",
@@ -95,7 +95,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:3b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:3b}"
             },
             {
               "function": "minecraft:set_name",
@@ -173,7 +173,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:4b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:4b}"
             },
             {
               "function": "minecraft:set_name",
@@ -233,7 +233,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:5b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:5b}"
             },
             {
               "function": "minecraft:set_name",
@@ -287,7 +287,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:6b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:6b}"
             },
             {
               "function": "minecraft:set_name",
@@ -341,7 +341,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:7b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:7b}"
             },
             {
               "function": "minecraft:set_name",
@@ -389,7 +389,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:8b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:8b}"
             },
             {
               "function": "minecraft:set_name",
@@ -443,7 +443,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:9b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:9b}"
             },
             {
               "function": "minecraft:set_name",
@@ -491,7 +491,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:10b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:10b}"
             },
             {
               "function": "minecraft:set_name",
@@ -539,7 +539,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:11b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:11b}"
             },
             {
               "function": "minecraft:set_name",
@@ -593,7 +593,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:12b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:12b}"
             },
             {
               "function": "minecraft:set_name",
@@ -629,7 +629,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:13b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:13b}"
             },
             {
               "function": "minecraft:set_name",
@@ -683,7 +683,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:14b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:14b}"
             },
             {
               "function": "minecraft:set_name",
@@ -737,7 +737,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:15b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:15b}"
             },
             {
               "function": "minecraft:set_name",
@@ -797,7 +797,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:16b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:16b}"
             },
             {
               "function": "minecraft:set_name",
@@ -863,7 +863,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:17b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:17b}"
             },
             {
               "function": "minecraft:set_name",
@@ -911,7 +911,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:18b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:18b}"
             },
             {
               "function": "minecraft:set_name",
@@ -965,7 +965,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:19b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:19b}"
             },
             {
               "function": "minecraft:set_name",
@@ -1025,7 +1025,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,gm4_audrey:20b}"
+              "tag": "{CustomModelData:'item/message_in_a_bottle',gm4_audrey:20b}"
             },
             {
               "function": "minecraft:set_name",

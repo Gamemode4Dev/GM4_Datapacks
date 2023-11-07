@@ -14,9 +14,8 @@ class OreDisplayTemplate(TemplateOptions):
         )
     ]
 
-    @classmethod
-    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]):
-        model_name = ensure_single_model_config(cls.name, config)
+    def process(self, config: ModelData, models_container: NamespaceProxy[Model]):
+        model_name = ensure_single_model_config(self.name, config)
         reference = config.reference.split('/')[-1]
         m = models_container[model_name] = Model({
             "parent": "gm4_smelteries:block/ore_display",

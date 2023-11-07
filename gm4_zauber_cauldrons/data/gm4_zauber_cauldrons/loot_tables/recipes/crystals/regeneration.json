@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420013,gm4_zauber_cauldrons:{item:\"crystal\",type:\"regeneration\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/regeneration/v1\",Properties:{textures:[{Value:\"$crystal/regeneration\"}]}},HideFlags:1}"
+                            "tag": "{CustomModelData:'item/crystal/regeneration',gm4_zauber_cauldrons:{item:\"crystal\",type:\"regeneration\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/regeneration/v1\",Properties:{textures:[{Value:\"$crystal/regeneration\"}]}},HideFlags:1}"
                         },
                         {
                             "function": "minecraft:set_name",
