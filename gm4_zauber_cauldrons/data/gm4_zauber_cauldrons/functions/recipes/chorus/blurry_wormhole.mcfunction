@@ -27,7 +27,7 @@ execute store result storage gm4_zauber_cauldrons:blueprint/item/wormhole gm4_za
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 
 # summon wormhole
-loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:recipes/chorus/wormhole
+loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:items/wormhole
 
 # make items in cauldron pickup-able instantly
 execute align xyz as @e[type=item,dx=0,dy=0,dz=0] run data modify entity @s PickupDelay set value 0s
