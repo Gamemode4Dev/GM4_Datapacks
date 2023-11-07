@@ -12,6 +12,7 @@ resource_pack:
 
 pipeline:
   - gm4_orb_of_ankou.generate_pneumas
+  - gm4_orb_of_ankou.pneuma_model_template
   - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_custom_crafters
@@ -40,90 +41,56 @@ meta:
       - item: firework_star
         reference: item/orb_of_ankou
         template: generated_overlay
-      - item: flint
-        template: generated
+      - item: [flint, black_dye]
+        template: pneuma
         broadcast:
-          - reference: item/shards/aggressive
-          - reference: item/shards/agile
-          - reference: item/shards/anchoring
-          - reference: item/shards/bargaining
-          - reference: item/shards/bashing
-          - reference: item/shards/blasting
-          - reference: item/shards/blinding
-          - reference: item/shards/bounding
-          - reference: item/shards/bubbly
-          - reference: item/shards/conjuring
-          - reference: item/shards/depriving
-          - reference: item/shards/draining
-          - reference: item/shards/enduring
-          - reference: item/shards/expeditious
-          - reference: item/shards/feathery
-          - reference: item/shards/gazing
-          - reference: item/shards/gliding
-          - reference: item/shards/hawkeye
-          - reference: item/shards/incombustible
-          - reference: item/shards/lifeless
-          - reference: item/shards/neutralizing
-          - reference: item/shards/phasing
-          - reference: item/shards/pricking
-          - reference: item/shards/retreating
-          - reference: item/shards/rushing
-          - reference: item/shards/scaling
-          - reference: item/shards/soaring
-          - reference: item/shards/synergetic
-          - reference: item/shards/vanishing
-          - reference: item/shards/venomous
-          - reference: item/shards/volatile
-          - reference: item/shards/withering
-          - reference: item/shards/striding
-          - reference: item/shards/freezing
-          - reference: item/shards/feigning
-          - reference: item/shards/shrieking
-      - item: black_dye
-        template: generated
-        broadcast:
-          - reference: item/essences/aggressive
-          - reference: item/essences/agile
-          - reference: item/essences/anchoring
-          - reference: item/essences/bargaining
-          - reference: item/essences/bashing
-          - reference: item/essences/blasting
-          - reference: item/essences/blinding
-          - reference: item/essences/bounding
-          - reference: item/essences/bubbly
-          - reference: item/essences/conjuring
-          - reference: item/essences/depriving
-          - reference: item/essences/draining
-          - reference: item/essences/enduring
-          - reference: item/essences/expeditious
-          - reference: item/essences/feathery
-          - reference: item/essences/gazing
-          - reference: item/essences/gliding
-          - reference: item/essences/hawkeye
-          - reference: item/essences/incombustible
-          - reference: item/essences/lifeless
-          - reference: item/essences/neutralizing
-          - reference: item/essences/phasing
-          - reference: item/essences/pricking
-          - reference: item/essences/retreating
-          - reference: item/essences/rushing
-          - reference: item/essences/scaling
-          - reference: item/essences/soaring
-          - reference: item/essences/synergetic
-          - reference: item/essences/vanishing
-          - reference: item/essences/venomous
-          - reference: item/essences/volatile
-          - reference: item/essences/withering
-          - reference: item/essences/striding
-          - reference: item/essences/freezing
-          - reference: item/essences/feigning
-          - reference: item/essences/shrieking
+          - reference: pneuma/aggressive
+          - reference: pneuma/agile
+          - reference: pneuma/anchoring
+          - reference: pneuma/bargaining
+          - reference: pneuma/bashing
+          - reference: pneuma/blasting
+          - reference: pneuma/blinding
+          - reference: pneuma/bounding
+          - reference: pneuma/bubbly
+          - reference: pneuma/conjuring
+          - reference: pneuma/dashing
+          - reference: pneuma/depriving
+          - reference: pneuma/draining
+          - reference: pneuma/enduring
+          - reference: pneuma/expeditious
+          - reference: pneuma/feathery
+          - reference: pneuma/gazing
+          - reference: pneuma/gliding
+          - reference: pneuma/hawkeye
+          - reference: pneuma/incombustible
+          - reference: pneuma/lifeless
+          - reference: pneuma/neutralizing
+          - reference: pneuma/phasing
+          - reference: pneuma/pricking
+          - reference: pneuma/retreating
+          - reference: pneuma/rushing
+          - reference: pneuma/scaling
+          - reference: pneuma/sniffing
+          - reference: pneuma/soaring
+          - reference: pneuma/synergetic
+          - reference: pneuma/vanishing
+          - reference: pneuma/venomous
+          - reference: pneuma/volatile
+          - reference: pneuma/withering
+          - reference: pneuma/striding
+          - reference: pneuma/freezing
+          - reference: pneuma/feigning
+          - reference: pneuma/shrieking
       - item: swords
         reference: shamir/corripio
         template:
           name: shamir
           metal: bismuth
           textures_path: gm4_metallurgy:item/shamir/bismuth
+      - item: golden_helmet
+        reference: entity/fire_sprite
+        template: vanilla
       - item: black_dye
         reference: gui/advancement/orb_of_ankou_soul_essence
         template:
