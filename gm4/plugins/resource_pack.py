@@ -105,11 +105,6 @@ class ModelData(BaseModel):
             return MapOption(__root__=[v])
         return textures
 
-    # howwever texture validation seems like a good idea to do here, unless that should not be an exception throwing validator
-    # @validator("textures")
-    # def check_textures_defined(val: Any):
-    #     print()
-    #     return True
     def add_namespace(self, namespace: str) -> 'ModelData':
         """Returns a new ModelData with the given given namespace applied to any fields"""
         ret_dict = self.dict()
@@ -249,7 +244,6 @@ ModelData.update_forward_refs()
 #== Beet Plugins ==#
 def beet_default(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
-    # print(ctx.assets[Model])
     # mecha register
     ctx.inject(Mecha).transform.extend(rp)
 
@@ -261,6 +255,7 @@ def build(ctx: Context):
     rp.resolve_config()
     rp.update_modeldata_registry()
     rp.generate_model_files()
+    rp.lint_model_textures()
     rp.generate_model_overrides()
     mecha_transform_jsonfiles(ctx, GM4ResourcePack)
 
@@ -280,7 +275,7 @@ def dump_registry(ctx: Context):
 class GM4ResourcePack(MutatingReducer):
     """Service Object handling CustomModelData and generated item models"""
 
-    def __init__(self, ctx: Context): # TODO dataclass-ify this?
+    def __init__(self, ctx: Context):
         self.ctx = ctx
         self.registry = ctx.cache["modeldata_registry"].json
         self.logger = parent_logger.getChild(ctx.project_id)
@@ -374,7 +369,7 @@ class GM4ResourcePack(MutatingReducer):
         for reg in self.registry["items"].values():
             if reference in reg:
                 return reg[reference], None
-        return -CUSTOM_MODEL_PREFIX, KeyError(f"{reference} has no asscioated index") # TODO make this Diagnostic
+        return -CUSTOM_MODEL_PREFIX, KeyError(f"{reference} has no asscioated index")
     
     def find_new_index(self, item_ids: list[str], reference: str):
         """finds the next available CMD value for the given items and applies it to the registry"""
@@ -439,16 +434,19 @@ class GM4ResourcePack(MutatingReducer):
     def generate_model_files(self):
         """Create individual models for each item/block according to its config"""
         for model in self.opts.model_data:
-            if model.textures is None:
-                continue # validation should ensure this - here for type checking
-
-            # # warn on missing textures # FIXME restore this functionality
-            # for tex in model.textures.entries():
-            #     if tex not in self.ctx.assets.textures:
-            #         self.logger.warning(f"Referenced texture '{tex}' does not exist") # TODO logger and format as MC messaage
+            if isinstance(model.template, str): # type annotation, ensured by model validation
+                continue
             
             # generate model and mount to the pack
             model.template.generate_model(model, self.ctx.assets.models)
+
+    def lint_model_textures(self):
+        """Checks model files to ensure referenced textures exist"""
+        for name, model in self.ctx.assets.models.items():
+            for tex in model.data.get("textures", {}).values():
+                if not tex.startswith("minecraft:") and tex not in self.ctx.assets.textures:
+                    self.logger.warning(f"Missing texture '{tex}' in {name}")
+            
     
 #== Default Templates and Transforms ==#
 def ensure_single_model_config(template_name: str, config: ModelData) -> str:
