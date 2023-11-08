@@ -498,8 +498,8 @@
       "gm4_scuba_gear:item/scuba_tank": 1,
       "gm4_zauber_cauldrons:item/zauber_armor/health/chestplate": 2,
       "gm4_zauber_cauldrons:item/zauber_armor/attack/chestplate": 3,
-      "gm4_zauber_cauldrons:item/zauber_armor/armor/chestplate": 4,
       "gm4_zauber_cauldrons:item/zauber_armor/speed/chestplate": 4,
+      "gm4_zauber_cauldrons:item/zauber_armor/armor/chestplate": 5,
       "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_full_armor": 6,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
@@ -557,6 +557,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "golden_sword": {
+      "gm4_potion_swords:gui/advancement/potion_swords": 1,
       "gm4_metallurgy:shamir/ender_bolt": 105,
       "gm4_metallurgy:shamir/gemini": 106,
       "gm4_metallurgy:shamir/musical": 108,
@@ -580,6 +581,7 @@
       "gm4_liquid_tanks:gui/advancement/liquid_tanks_create": 1
     },
     "hopper_minecart": {
+      "gm4_liquid_minecarts:gui/advancement/liquid_minecarts_create": 1,
       "gm4_ender_hoppers:item/ender_hopper_minecart": 2,
       "gm4_liquid_minecarts:item/liquid_minecart": 3
     },
@@ -762,7 +764,8 @@
       "gm4_trapped_signs:item/secret_trapped_jungle_sign": 2
     },
     "ladder": {
-      "gm4_vertical_rails:gui/advancement/vertical_rails": 1
+      "gm4_vertical_rails:gui/advancement/vertical_rails": 1,
+      "gm4_rope_ladders:gui/advancement/rope_ladders": 2
     },
     "lava_bucket": {
       "gm4_metallurgy:gui/advancement/metallurgy_overheat_cast": 1,
@@ -816,6 +819,9 @@
     },
     "minecart": {
       "gm4_ziprails:gui/advancement/ziprails": 1
+    },
+    "music_disc_13": {
+      "gm4_record_crafting:gui/advancement/record_crafting": 1
     },
     "name_tag": {
       "gm4_holographic_tags:gui/advancement/holographic_tags": 1
@@ -986,7 +992,7 @@
       "gm4_trapped_signs:item/secret_trapped_oak_sign": 2
     },
     "obsidian": {
-      "gm4_metallurgy:item/slightly_damanged_obsidian": 1
+      "gm4_metallurgy:item/slightly_damaged_obsidian": 1
     },
     "oxidized_cut_copper": {
       "gm4_tinkering_compressors:block/tinkering_compressor_plate": 1
@@ -1092,6 +1098,7 @@
       "gm4_potion_liquids:gui/advancement/potion_liquids": 2,
       "gm4_lightning_in_a_bottle:gui/advancement/lightning_in_a_bottle_drink": 3,
       "gm4_lightning_in_a_bottle:item/lightning_in_a_bottle": 4,
+      "gm4_mob_curing:gui/advancement/mob_curing": 5,
       "gm4_standard_liquids:item/ink_bottle": 7,
       "gm4_standard_liquids:item/glow_ink_bottle": 8
     },
@@ -1100,6 +1107,9 @@
     },
     "prismarine_shard": {
       "gm4_zauber_cauldrons:item/enchanted_prismarine_shard": 1
+    },
+    "pufferfish": {
+      "gm4_live_catch:gui/advancement/live_catch": 1
     },
     "pufferfish_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100

@@ -46,7 +46,7 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, 
 	if reload:
 		broadcast_config["require"].prepend("beet.contrib.livereload")
 
-	project.resolved_config = ProjectConfig(**config).resolve(Path("beet-dev.yaml").parent)
+	project.resolved_config = ProjectConfig(**config).resolve(Path("beet-dev.yaml").parent.absolute())
 
 	ctx.invoke(commands.watch if watch else commands.build, link=link)
 

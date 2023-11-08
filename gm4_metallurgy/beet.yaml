@@ -85,7 +85,7 @@ meta:
           - reference: block/mould/cool_metal
           - reference: block/mould/hot_metal
       - item: obsidian
-        reference: item/slightly_damanged_obsidian
+        reference: item/slightly_damaged_obsidian
         template: vanilla
       - reference: shamir/defuse
         item: armor

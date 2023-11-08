@@ -137,8 +137,6 @@ def read_csv():
       entry = [entity,essence,str(round(base_chance*100,4))+'%',str(round(base_chance*400,3))+'%',str(round(base_chance*2500,3))+'%',str(round(base_chance*8200,2))+'%','',str(round(1/(base_chance*82),1)),str(round(13/(base_chance*82),1))]
       updated_csv.append(entry)
 
-  print(updated_csv)
-
   # update calculated info
   with open('gm4_orb_of_ankou/soul_essence.csv', mode ='w', newline='') as file:
     csv_file = csv.writer(file)
