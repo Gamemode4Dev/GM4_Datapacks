@@ -9,6 +9,7 @@ pipeline:
       - gm4.plugins.player_heads
       - gm4.plugins.resource_pack
       - beet.contrib.model_merging
+      - beet.contrib.optifine
     pipeline:
       - gm4.plugins.write_mcmeta
   - gm4.plugins.output.resource_pack
