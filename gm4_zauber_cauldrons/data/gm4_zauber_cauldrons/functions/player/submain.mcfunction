@@ -13,7 +13,7 @@ execute if score $success gm4_zc_data matches 0 if score @s gm4_zc_crystal match
 # effect players with luck when they crafted it using flowers and remove tag after death
 tag @s[scores={gm4_zc_deaths=1..}] remove gm4_zc_luck
 scoreboard players reset @s gm4_zc_deaths
-effect give @s[tag=gm4_zc_luck] minecraft:luck 12 0 true
+effect give @s[tag=gm4_zc_luck] minecraft:luck infinite 0 true
 
 # reset fake player
 scoreboard players reset $success
