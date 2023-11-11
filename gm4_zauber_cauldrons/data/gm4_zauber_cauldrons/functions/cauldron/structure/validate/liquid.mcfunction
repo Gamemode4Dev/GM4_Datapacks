@@ -1,5 +1,5 @@
 # @s = zauber cauldron
-# at @s
+# at @s align xzy
 # run from main
 
 # reset rabbit target score (set to 1 in cauldron/structure/analyze/cauldron if an empty cauldron is present)

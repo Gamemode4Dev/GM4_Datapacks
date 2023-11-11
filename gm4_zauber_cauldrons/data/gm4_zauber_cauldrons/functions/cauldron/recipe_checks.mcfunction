@@ -1,5 +1,5 @@
 # @s boiling zauber cauldron with valid structure and item(s) inside.
-# at center of block
+# at @s align xyz
 # ran from cauldron/structure/valid
 
 # branches off into different module components
