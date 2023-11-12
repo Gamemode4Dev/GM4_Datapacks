@@ -18,7 +18,7 @@ execute unless score $previous_fill_level gm4_zc_data matches 2 run function gm4
 
 # in the case that the cauldron was previously at level=2 we can not distinguish between the use of a bucket or the use of a water bottle
 # without looking at the player's inventory (and even then there is a case in which we can not tell)
-execute if score $previous_fill_level gm4_zc_data matches 2 as @a[tag=gm4_zc_actor,limit=1] store result score $item_use_code gm4_zc_data run function gm4_zauber_cauldrons:cauldron/liquid/level/3/item_used/analyze_held_items
+execute if score $previous_fill_level gm4_zc_data matches 2 as @a[tag=gm4_zc_actor,limit=1] store result score $item_use_code gm4_zc_data run function gm4_zauber_cauldrons:cauldron/liquid/level/3/analyze_held_items/select_gamemode
 execute if score $item_use_code gm4_zc_data matches 0..1 run function gm4_zauber_cauldrons:cauldron/liquid/level/3/item_used/filled_bucket
 execute if score $item_use_code gm4_zc_data matches 2..3 run function gm4_zauber_cauldrons:cauldron/liquid/level/3/item_used/water_bottle
 
