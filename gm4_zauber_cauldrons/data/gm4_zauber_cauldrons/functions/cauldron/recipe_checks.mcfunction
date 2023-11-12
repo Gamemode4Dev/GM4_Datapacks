@@ -31,6 +31,9 @@ execute if score $recipe_success gm4_zc_data matches 0 if score $has_water gm4_z
 # wormhole in a bottle
 execute if score $recipe_success gm4_zc_data matches 0 if score $has_water gm4_zc_data matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}] if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"enchanted_prismarine_shard"}}}] run function gm4_zauber_cauldrons:recipes/chorus/count_chorus
 
+# magicol
+execute if score $recipe_success gm4_zc_data matches 0 if score $has_magicol gm4_zc_data matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}] if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"enchanted_prismarine_shard"}}}] run say hi
+
 # reset fake players and storage
 scoreboard players reset $recipe_success gm4_zc_data
 scoreboard players reset $has_bottle gm4_zc_fullness

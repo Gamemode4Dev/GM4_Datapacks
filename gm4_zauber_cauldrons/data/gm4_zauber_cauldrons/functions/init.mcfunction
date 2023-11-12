@@ -6,6 +6,7 @@ scoreboard objectives add gm4_zc_deaths deathCount
 scoreboard objectives add gm4_zc_flowers dummy
 scoreboard objectives add gm4_zc_fullness dummy
 scoreboard objectives add gm4_zc_id dummy
+scoreboard objectives add gm4_zc_liquid_level dummy
 scoreboard objectives add gm4_zc_rabtarget dummy
 scoreboard objectives add gm4_zc_no_explode dummy
 function gm4_zauber_cauldrons:recipes/flowers/initiate_flower_types

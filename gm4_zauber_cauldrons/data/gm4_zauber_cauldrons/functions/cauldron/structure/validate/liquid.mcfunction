@@ -18,4 +18,5 @@ execute unless score $has_liquid gm4_zc_data matches 1 run function gm4_zauber_c
 scoreboard players reset $has_liquid gm4_zc_data
 scoreboard players reset $has_water gm4_zc_data
 scoreboard players reset $has_powder_snow gm4_zc_data
+scoreboard players reset $has_magicol gm4_zc_data
 scoreboard players reset $has_lava gm4_zc_data

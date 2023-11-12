@@ -8,6 +8,7 @@ tag @s add gm4_current_zauber_cauldron
 # particles
 execute if score $has_water gm4_zc_data matches 1 run particle minecraft:poof ~.5 ~.5 ~.5 .005 .2 .005 .0005 4
 execute if score $has_powder_snow gm4_zc_data matches 1 run particle minecraft:dripping_water ~.5 ~0.88 ~.5 0.14 0 0.14 1 1
+execute if score $has_magicol gm4_zc_data matches 1 run particle entity_effect ~.5 ~.8 ~.5 .01 .2 .01 1 4
 
 # count items in cauldron
 scoreboard players set @s gm4_zc_fullness 0

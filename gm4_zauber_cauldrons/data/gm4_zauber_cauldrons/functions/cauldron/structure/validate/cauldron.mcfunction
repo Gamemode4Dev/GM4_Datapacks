@@ -10,4 +10,4 @@ execute store success score @s gm4_zc_rabtarget if block ~ ~ ~ minecraft:cauldro
 execute if score @s gm4_zc_rabtarget matches 1 if entity @e[type=rabbit,dx=0,dy=0,dz=0,limit=1] if entity @a[gamemode=!spectator,predicate=gm4_zauber_cauldrons:player/equipment/armor/full,distance=..2] run function gm4_zauber_cauldrons:cauldron/rabbit_teleportation
 
 # kill zauber cauldron if no cauldron is present
-execute if score @s gm4_zc_rabtarget matches 0 run kill @s
+execute if score @s gm4_zc_rabtarget matches 0 run function gm4_zauber_cauldrons:cauldron/structure/validate/destroy
