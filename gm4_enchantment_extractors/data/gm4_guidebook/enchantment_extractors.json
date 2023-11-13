@@ -1,0 +1,97 @@
+{
+  "id": "enchantment_extractors",
+  "name": "Enchantment Extractors",
+  "trigger_id": 21,
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:enchanting_table",
+    "nbt": "{CustomModelData:3420003}"
+  },
+  "criteria": {
+    "page_1/requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:enchanting_table"
+            ]
+          }
+        ]
+      }
+    },
+    "page_2/requirement": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:enchantment_extractors": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page_2/open_enchantment_extractor": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:dropper"
+            ],
+            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Enchantment Extractor\",{\"translate\":\"container.gm4.enchantment_extractor\"}]}'}"
+          }
+        }
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "initial",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Enchantment_Extractors\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Enchantment_Extractors\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Enchantment Extractors\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Enchantment Extractors are used to remove enchantments from tools, weapons, and armour.\"},{\"translate\":\"text.gm4.guidebook.enchantment_extractors.1\"}]}]"
+      ]
+    },
+    {
+      "name": "page_1",
+      "enable": [],
+      "requirements": [
+        [
+          "page_1/requirement"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"To create an Enchantment Extractor, arrange the following recipe in a dropper then drop an enchanting table on top of it:\"},{\"translate\":\"text.gm4.guidebook.enchantment_extractors.2\"}]},\"\\n\\n  \",{\"translate\":\"block.minecraft.dropper\"},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#7d4f00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.book\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"book\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#1c1c17\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.hopper\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"hopper\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#7d4f00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.book\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"book\"}}},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#7d4f00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.book\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"book\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#4f3505\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.writable_book\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"writable_book\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#7d4f00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.book\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"book\"}}},\" \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u25fc\",\"color\":\"#c2194f\"},{\"translate\":\"text.gm4.guidebook.crafting.catalyst.block.minecraft.enchanting_table\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"enchanting_table\"}}},\"\u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2588\",\"color\":\"#7d0b2a\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.gm4.enchantment_extractor\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"dropper\",\"tag\":\"{display:{Name:'{\\\"translate\\\":\\\"%1$s%3427655$s\\\",\\\"with\\\":[\\\"Enchantment Extractor\\\",{\\\"translate\\\":\\\"block.gm4.enchantment_extractor\\\"}],\\\"italic\\\":false}'}}\"}}},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#7d4f00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.book\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"book\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#7d4f00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.book\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"book\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#7d4f00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.book\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"book\"}}}]}]"
+      ]
+    },
+    {
+      "name": "page_2",
+      "enable": [],
+      "requirements": [
+        [
+          "page_2/requirement"
+        ],
+        [
+          "page_2/open_enchantment_extractor"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Dropping enchanted items on top of the enchantment extractor will unenchant it and has a chance to put enchanted books containing those enchantments into the extractor.\"},{\"translate\":\"text.gm4.guidebook.enchantment extractors.3\"}]}]",
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"The chance of extraction is lower for more powerful enchantments.\\n\\nSome high level enchants may become cursed with vanishing.\\n\\nIf an extraction fails, a puff of smoke or a congealed enchantment (Vex) will appear.\"},{\"translate\":\"text.gm4.guidebook.enchantment extractors.4\"}]}]"
+      ],
+      "grants": [
+        "page_1"
+      ]
+    }
+  ]
+}

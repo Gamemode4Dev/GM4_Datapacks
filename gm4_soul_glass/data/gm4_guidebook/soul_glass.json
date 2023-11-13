@@ -1,0 +1,69 @@
+{
+  "id": "soul_glass",
+  "name": "Soul Glass",
+  "trigger_id": 82,
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:brown_stained_glass",
+    "nbt": "{CustomModelData:3420002,Enchantments:[{id:\"minecraft:protection\",lvl:0s}]}"
+  },
+  "criteria": {
+    "page_0/requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:soul_sand"
+            ]
+          }
+        ]
+      }
+    },
+    "page_1/requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:brown_stained_glass"
+            ],
+            "nbt": "{gm4_soul_glass:1b}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "page_0",
+      "enable": [],
+      "requirements": [
+        [
+          "page_0/requirement"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Soul_Glass\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Soul_Glass\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Soul Glass\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Soul Sand can be smelted in a blast furnace to get Soul Glass. When placed directly over a beacon, soul glass will corrupt the effects. To retrieve the soul glass, break the beacon.\"},{\"translate\":\"text.gm4.guidebook.soul_glass.1\"}]}]"
+      ],
+      "pages_locked": [
+        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Soul_Glass\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Soul_Glass\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Soul Glass\",\"underlined\":true},{\"text\":\"\\n\"},{\"text\":\"???\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Undiscovered\"},{\"translate\":\"text.gm4.guidebook.undiscovered\"}],\"italic\":true,\"color\":\"red\"}]}}]"
+      ]
+    },
+    {
+      "name": "page_1",
+      "enable": [],
+      "requirements": [
+        [
+          "page_1/requirement"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Corrupted Effects:\"},{\"translate\":\"text.gm4.guidebook.soul_glass.2\"}]},\"\\n\\n\",{\"translate\":\"effect.minecraft.speed\"},\"\\n - \",{\"translate\":\"effect.minecraft.slowness\"},\"\\n\",{\"translate\":\"effect.minecraft.haste\"},\"\\n - \",{\"translate\":\"effect.minecraft.mining_fatigue\"},\"\\n\",{\"translate\":\"effect.minecraft.resistance\"},\"\\n - \",{\"translate\":\"effect.minecraft.glowing\"},\"\\n\",{\"translate\":\"effect.minecraft.jump_boost\"},\"\\n - \",{\"translate\":\"effect.minecraft.slow_falling\"},\"\\n\",{\"translate\":\"effect.minecraft.strength\"},\"\\n - \",{\"translate\":\"effect.minecraft.weakness\"},\"\\n\",{\"translate\":\"effect.minecraft.regeneration\"},\"\\n - \",{\"translate\":\"effect.minecraft.poison\"}]"
+      ],
+      "grants": [
+        "page_0"
+      ]
+    }
+  ]
+}

@@ -7,3 +7,8 @@ pipeline:
   - mecha
   - directory: '../base'
     extend: 'beet.yaml'
+  - temp.generate_guidebooks
+
+meta:
+  extra_files:
+    data_pack: [README.md]

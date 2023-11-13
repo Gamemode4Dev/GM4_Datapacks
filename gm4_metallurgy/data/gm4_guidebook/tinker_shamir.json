@@ -1,0 +1,45 @@
+{
+  "id": "tinker_shamir",
+  "name": "Tinker Shamir",
+  "trigger_id": 39,
+  "module_type": "expansion",
+  "base_module": "metallurgy",
+  "icon": {
+    "item": "minecraft:anvil",
+    "nbt": "{CustomModelData:3420111}"
+  },
+  "criteria": {
+    "page_1/requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'tinker'}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "initial",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Metallurgy/Tinker_Shamir\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Metallurgy/Tinker_Shamir\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Tinker Shamir\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Tinker causes items to be converted to their equivalent storage block form.\"},{\"translate\":\"text.gm4.guidebook.tinker_shamir.1\"}]}]"
+      ]
+    },
+    {
+      "name": "page_1",
+      "enable": [],
+      "requirements": [
+        [
+          "page_1/requirement"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"The Tinker Shamir is found on Curie's Bismium Bands. It can be placed onto pickaxes, shovels, hoes, and swords.\\n\\nHolding the tool will convert items into their block form (e.g. iron ingot to iron block). Each tool tinkers a set of items, matching the tool.\"},{\"translate\":\"text.gm4.guidebook.tinker_shamir.2\"}]}]"
+      ]
+    }
+  ]
+}

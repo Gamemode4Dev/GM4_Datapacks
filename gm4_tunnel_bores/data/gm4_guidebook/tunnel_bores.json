@@ -1,0 +1,90 @@
+{
+  "id": "tunnel_bores",
+  "name": "Tunnel Bores",
+  "trigger_id": 92,
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:piston",
+    "nbt": "{CustomModelData:3420004}"
+  },
+  "criteria": {
+    "page_1/requirement_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:minecart"
+            ]
+          }
+        ]
+      }
+    },
+    "page_1/requirement_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:piston"
+            ]
+          }
+        ]
+      }
+    },
+    "page_2/requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:furnace_minecart"
+            ],
+            "nbt": "{display:{Name:'{\"translate\":\"%1$s\",\"with\":[\"Minecart with Piston\",{\"translate\":\"item.gm4.minecart.bore\"}],\"italic\":false,\"color\":\"white\"}'}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "initial",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Tunnel_Bores\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Tunnel_Bores\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Tunnel Bores\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Tunnel Bores can be crafted to aid in excavation. These bores\u2014or Piston Minecarts\u2014will break blocks and place rails, moving forward.\\n\\nThey can be crafted in a Custom Crafter.\"},{\"translate\":\"text.gm4.guidebook.tunnel_bores.1\"}]}]"
+      ]
+    },
+    {
+      "name": "page_1",
+      "enable": [],
+      "requirements": [
+        [
+          "page_1/requirement_1"
+        ],
+        [
+          "page_1/requirement_2"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"The recipes for tunnel bores are as follows:\"},{\"translate\":\"text.gm4.guidebook.tunnel_bores.2\"}]},\"\\n\\n  \",{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#2e2a28\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.furnace\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"furnace\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#8c6c26\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.tripwire_hook\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"tripwire_hook\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#4d4844\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.minecart\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"minecart\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#a36f2f\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.piston\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"piston\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#4d2e16\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.gm4.piston_minecart\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"furnace_minecart\",\"tag\":\"{CustomModelData:3420001,display:{Name:'{\\\"translate\\\":\\\"%1$s\\\",\\\"with\\\":[\\\"Minecart with Piston\\\",{\\\"translate\\\":\\\"item.gm4.minecart.bore\\\"}],\\\"color\\\":\\\"white\\\",\\\"italic\\\":false}'}}\"}}},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},\"\\n      \",{\"text\":\"**\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Recipe can be placed on any line of the grid\"},{\"translate\":\"text.gm4.guidebook.tunnel_bores.2_1\"}]}]}},\"\\n\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#8c6c26\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.tripwire_hook\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"tripwire_hook\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#261b13\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.furnace_minecart\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"furnace_minecart\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#a36f2f\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.piston\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"piston\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#4d2e16\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.gm4.piston_minecart\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"furnace_minecart\",\"tag\":\"{CustomModelData:3420001,display:{Name:'{\\\"translate\\\":\\\"%1$s\\\",\\\"with\\\":[\\\"Minecart with Piston\\\",{\\\"translate\\\":\\\"item.gm4.minecart.bore\\\"}],\\\"color\\\":\\\"white\\\",\\\"italic\\\":false}'}}\"}}},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},\"\\n      \",{\"text\":\"**\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Recipe can be placed on any line of the grid\"},{\"translate\":\"text.gm4.guidebook.tunnel_bores.2_1\"}]}]}}]"
+      ]
+    },
+    {
+      "name": "page_2",
+      "enable": [],
+      "requirements": [
+        [
+          "page_2/requirement"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Piston Minecarts are upgraded furnace minecarts and require coal as fuel. To start the bore, use a piece of coal on the bore.\\n\\nPiston Minecarts will mine (piston-movable) blocks in a 3x3 area centered at the block above it, and place rails on solid blocks in front of it.\"},{\"translate\":\"text.gm4.guidebook.tunnel_bores.3\"}]}]",
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Chest Minecarts can be attached to supply the Piston Minecart with rails and coal.\\n\\nTunnel bores will continuously mine blocks when it hits a breakable block, but can be manually triggered when on a powered activator rail. This will activate mining and refueling.\"},{\"translate\":\"text.gm4.guidebook.tunnel_bores.4\"}]}]"
+      ],
+      "grants": [
+        "page_1"
+      ]
+    }
+  ]
+}

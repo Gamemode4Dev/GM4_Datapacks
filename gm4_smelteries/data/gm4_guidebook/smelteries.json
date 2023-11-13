@@ -1,0 +1,160 @@
+{
+  "id": "smelteries",
+  "name": "Smelteries",
+  "trigger_id": 81,
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:furnace",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "page_0/requirement": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:custom_crafters": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page_0/open_custom_crafter": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:dropper"
+            ],
+            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]}'}"
+          }
+        }
+      }
+    },
+    "page_1/requirement_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:furnace"
+            ]
+          }
+        ]
+      }
+    },
+    "page_1/requirement_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:piston"
+            ]
+          }
+        ]
+      }
+    },
+    "page_2/requirement": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:smelteries": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page_2/open_smeltery": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:furnace"
+            ],
+            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Smeltery\",{\"translate\":\"container.gm4.smeltery\"}]}'}"
+          }
+        }
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "page_0",
+      "enable": [],
+      "requirements": [
+        [
+          "page_0/requirement"
+        ],
+        [
+          "page_0/open_custom_crafter"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Smelteries\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Smelteries\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Smelteries\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Custom Crafters can be upgraded into Smelteries to refine some furnace recipes.\\n\\nMetal ores, sand, and chorus fruit can be doubled with Smelteries.\"},{\"translate\":\"text.gm4.guidebook.smelteries.1\"}]}]"
+      ],
+      "pages_locked": [
+        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Smelteries\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Smelteries\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Smelteries\",\"underlined\":true},{\"text\":\"\\n\"},{\"text\":\"???\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Undiscovered\"},{\"translate\":\"text.gm4.guidebook.undiscovered\"}],\"italic\":true,\"color\":\"red\"}]}}]"
+      ]
+    },
+    {
+      "name": "page_1",
+      "enable": [],
+      "requirements": [
+        [
+          "page_1/requirement_1"
+        ],
+        [
+          "page_1/requirement_2"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"To create a Smeltery the following recipe must be arranged in a Custom Crafter:\"},{\"translate\":\"text.gm4.guidebook.smelteries.2\"}]},\"\\n\\n  \",{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#4e5e5d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.iron_bars\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"iron_bars\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#85847b\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.iron_block\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"iron_block\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#4e5e5d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.iron_bars\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"iron_bars\"}}},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#a36f2f\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.piston\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"piston\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2588\",\"color\":\"#4a3930\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.gm4.smeltery\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"furnace\",\"tag\":\"{display:{Name:'{\\\"translate\\\":\\\"%1$s%3427655$s\\\",\\\"with\\\":[\\\"Smeltery\\\",{\\\"translate\\\":\\\"block.gm4.smeltery\\\"}],\\\"italic\\\":false}'}}\"}}},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#732728\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.comparator\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"comparator\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#bd2f00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.redstone_torch\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"redstone_torch\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#732728\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.comparator\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"comparator\"}}}]}]"
+      ],
+      "grants": [
+        "page_0"
+      ],
+      "prerequisites": [
+        "page_0"
+      ]
+    },
+    {
+      "name": "page_2",
+      "enable": [],
+      "requirements": [
+        [
+          "page_2/requirement"
+        ],
+        [
+          "page_2/open_smeltery"
+        ]
+      ],
+      "pages": [
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"The smeltery requires a multi-block structure to work.\\n\\nThe smeltery needs to be attached to the back of a furnace. The rest of the 3x3 grid must be filled with iron blocks, then another layer of iron blocks above the first.\"},{\"translate\":\"text.gm4.guidebook.smelteries.3\"}]}]",
+        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Once the multi-block is set up, the doubled output will appear in the Smeltery inventory. The furnace will work as normal.\\n\\nSmelting metal ores, raw metals, sand, red sand, or chorus fruit will result in doubled outputs.\"},{\"translate\":\"text.gm4.guidebook.smelteries.4\"}]}]"
+      ],
+      "grants": [
+        "page_1"
+      ]
+    }
+  ]
+}
