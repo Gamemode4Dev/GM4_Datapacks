@@ -3,8 +3,6 @@
 # at position of cauldron, align xyz
 # run from gm4_zauber_cauldrons:cauldron/liquid/update/level_1/ray
 
-tellraw @a {"text":"Found targeted Zauber Cauldron (level=1).","color":"gray"}
-
 # check whether the player who caused the interaction was in creative or survival/adventure
 execute as @a[tag=gm4_zc_actor,limit=1] store result score $actor_gamemode gm4_zc_data run function gm4_zauber_cauldrons:player/check_gamemode
 

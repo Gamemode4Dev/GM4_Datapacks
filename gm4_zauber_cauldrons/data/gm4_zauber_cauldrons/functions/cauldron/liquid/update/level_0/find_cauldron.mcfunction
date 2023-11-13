@@ -2,7 +2,7 @@
 # @s = player who has interacted with the cauldron. May be survival or creative and may have used the offhand or the mainhand.
 # at @s
 # run from advancement cauldron/level_0
-tellraw @a ["","Player set Cauldron to ",{"text":"level=0","color":"yellow"},"!"]
+
 advancement revoke @s only gm4_zauber_cauldrons:cauldron/level_0
 
 # remember player who has interacted with the cauldron

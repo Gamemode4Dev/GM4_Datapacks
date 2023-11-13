@@ -9,5 +9,3 @@ execute unless score $found_hand gm4_zc_data matches 1.. if predicate gm4_zauber
 # reset fake player and prevent bottle fill sound
 stopsound @s block minecraft:item.bottle.fill
 scoreboard players reset $found_hand gm4_zc_data
-
-tellraw @a {"text":"Returned Glass Bottle to player.","color":"yellow"}
