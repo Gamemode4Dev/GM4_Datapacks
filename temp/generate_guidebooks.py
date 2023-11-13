@@ -375,15 +375,17 @@ def generate_display_advancement(book: Book) -> Advancement:
 
 
 def generate_reward_function(section: Section, book_id: str, book_name: str) -> Function:
-  start = f"execute"
-  if "enable" in section:
+  if "enable" in section and len(section["enable"]) > 0:
+    start = "execute"
     for module_check in section["enable"]:
       if module_check["load"] == -1:
         start += f" unless "
       else:
         start += f" if "
       start += f"score {module_check['id']} load.status matches 1.."
-  start += " run"
+    start += " run"
+  else:
+    start = ""
   tellraw = nbtlib.List([
       nbtlib.String(""),
       {"selector": "@s"},
