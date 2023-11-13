@@ -1,7 +1,6 @@
 {
   "id": "spawner_minecarts",
   "name": "Spawner Minecarts",
-  "trigger_id": 12,
   "module_type": "module",
   "icon": {
     "item": "minecraft:spawner",

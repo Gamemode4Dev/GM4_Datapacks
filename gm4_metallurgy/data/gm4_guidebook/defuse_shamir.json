@@ -1,7 +1,6 @@
 {
   "id": "defuse_shamir",
   "name": "Defuse Shamir",
-  "trigger_id": 28,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

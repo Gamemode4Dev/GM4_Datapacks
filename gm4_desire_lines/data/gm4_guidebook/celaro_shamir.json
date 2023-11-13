@@ -1,7 +1,6 @@
 {
   "id": "celaro_shamir",
   "name": "Celaro Shamir",
-  "trigger_id": 77,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

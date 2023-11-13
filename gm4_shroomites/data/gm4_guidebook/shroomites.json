@@ -1,7 +1,6 @@
 {
   "id": "shroomites",
   "name": "Shroomites",
-  "trigger_id": 2,
   "module_type": "module",
   "icon": {
     "item": "minecraft:mycelium",

@@ -1,7 +1,6 @@
 {
   "id": "block_compressors",
   "name": "Block Compressors",
-  "trigger_id": 54,
   "module_type": "module",
   "icon": {
     "item": "minecraft:piston",

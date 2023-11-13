@@ -1,7 +1,6 @@
 {
   "id": "cozy_campfires",
   "name": "Cozy Campfires",
-  "trigger_id": 61,
   "module_type": "module",
   "icon": {
     "item": "minecraft:campfire",

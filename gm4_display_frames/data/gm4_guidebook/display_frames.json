@@ -1,7 +1,6 @@
 {
   "id": "display_frames",
   "name": "Display Frames",
-  "trigger_id": 5,
   "module_type": "module",
   "icon": {
     "item": "minecraft:splash_potion",

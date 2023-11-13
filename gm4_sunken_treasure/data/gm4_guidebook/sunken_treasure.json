@@ -1,7 +1,6 @@
 {
   "id": "sunken_treasure",
   "name": "Sunken Treasure",
-  "trigger_id": 4,
   "module_type": "module",
   "icon": {
     "item": "minecraft:golden_shovel",

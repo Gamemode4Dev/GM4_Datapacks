@@ -1,7 +1,6 @@
 {
   "id": "vertical_rails",
   "name": "Vertical Rails",
-  "trigger_id": 84,
   "module_type": "module",
   "icon": {
     "item": "minecraft:ladder",

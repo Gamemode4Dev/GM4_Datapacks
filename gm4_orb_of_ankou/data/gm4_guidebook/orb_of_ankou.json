@@ -1,7 +1,6 @@
 {
   "id": "orb_of_ankou",
   "name": "Orb of Ankou",
-  "trigger_id": 85,
   "module_type": "module",
   "icon": {
     "item": "minecraft:flint_and_steel",

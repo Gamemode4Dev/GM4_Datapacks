@@ -1,7 +1,6 @@
 {
   "id": "falling_stars",
   "name": "Falling Stars",
-  "trigger_id": 46,
   "module_type": "expansion",
   "base_module": "mysterious_midnights",
   "icon": {

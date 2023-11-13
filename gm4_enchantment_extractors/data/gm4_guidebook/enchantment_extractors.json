@@ -1,7 +1,6 @@
 {
   "id": "enchantment_extractors",
   "name": "Enchantment Extractors",
-  "trigger_id": 49,
   "module_type": "module",
   "icon": {
     "item": "minecraft:enchanting_table",

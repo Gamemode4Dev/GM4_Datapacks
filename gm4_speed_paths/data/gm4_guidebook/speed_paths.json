@@ -1,7 +1,6 @@
 {
   "id": "speed_paths",
   "name": "Speed Paths",
-  "trigger_id": 30,
   "module_type": "module",
   "icon": {
     "item": "minecraft:dirt_path",

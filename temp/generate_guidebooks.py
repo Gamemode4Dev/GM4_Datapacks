@@ -531,6 +531,17 @@ def beet_default(ctx: Context):
       continue
 
     book = json.load(open(f"{ctx.directory}/data/gm4_guidebook/{file}"))
+
+    # get trigger id, generate one if not already existing
+    triggers = json.load(open("gm4_guidebook/triggers.json"))
+    if book['id'] not in triggers:
+      with open("gm4_guidebook/triggers.json", "w") as t:
+        triggers[book['id']] = triggers['__next__']
+        triggers['__next__'] += 1
+        t.write(json.dumps(triggers, indent=2, sort_keys=True))
+        t.write("\n")
+    book['trigger_id'] = triggers[book['id']]
+
     book_ids.append(book["id"] if "id" in book else file[:-5])
 
     loottable, pages, pages_locked = generate_loottable(book)

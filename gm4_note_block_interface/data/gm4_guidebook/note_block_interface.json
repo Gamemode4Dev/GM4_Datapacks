@@ -1,7 +1,6 @@
 {
   "id": "note_block_interface",
   "name": "Note Block Interface",
-  "trigger_id": 10,
   "module_type": "module",
   "icon": {
     "item": "minecraft:note_block",

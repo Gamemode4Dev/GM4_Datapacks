@@ -1,7 +1,6 @@
 {
   "id": "bat_grenades",
   "name": "Bat Grenades",
-  "trigger_id": 90,
   "module_type": "module",
   "icon": {
     "item": "minecraft:gunpowder",

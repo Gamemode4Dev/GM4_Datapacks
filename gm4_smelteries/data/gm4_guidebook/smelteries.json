@@ -1,7 +1,6 @@
 {
   "id": "smelteries",
   "name": "Smelteries",
-  "trigger_id": 9,
   "module_type": "module",
   "icon": {
     "item": "minecraft:furnace",

@@ -1,7 +1,6 @@
 {
   "id": "phantom_scarecrows",
   "name": "Phantom Scarecrows",
-  "trigger_id": 55,
   "module_type": "module",
   "icon": {
     "item": "minecraft:skeleton_skull",

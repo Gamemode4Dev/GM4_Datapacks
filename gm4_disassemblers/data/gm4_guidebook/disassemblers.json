@@ -1,7 +1,6 @@
 {
   "id": "disassemblers",
   "name": "Disassemblers",
-  "trigger_id": 81,
   "module_type": "module",
   "icon": {
     "item": "minecraft:tnt",

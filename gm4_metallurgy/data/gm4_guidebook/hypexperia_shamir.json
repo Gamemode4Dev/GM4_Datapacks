@@ -1,7 +1,6 @@
 {
   "id": "hypexperia_shamir",
   "name": "Hypexperia Shamir",
-  "trigger_id": 24,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

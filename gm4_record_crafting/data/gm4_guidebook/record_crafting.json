@@ -1,7 +1,6 @@
 {
   "id": "record_crafting",
   "name": "Record Crafting",
-  "trigger_id": 97,
   "module_type": "expansion",
   "base_module": "custom_crafters",
   "icon": {

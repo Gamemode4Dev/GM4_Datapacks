@@ -1,7 +1,6 @@
 {
   "id": "relocators",
   "name": "Relocators",
-  "trigger_id": 70,
   "module_type": "module",
   "icon": {
     "item": "minecraft:shulker_box",

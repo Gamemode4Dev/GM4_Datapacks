@@ -1,7 +1,6 @@
 {
   "id": "slime_fests",
   "name": "Slime Fests",
-  "trigger_id": 98,
   "module_type": "expansion",
   "base_module": "mysterious_midnights",
   "icon": {

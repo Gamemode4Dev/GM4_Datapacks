@@ -1,7 +1,6 @@
 {
   "id": "liquid_minecarts",
   "name": "Liquid Minecarts",
-  "trigger_id": 47,
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {

@@ -1,7 +1,6 @@
 {
   "id": "standard_liquids",
   "name": "Standard Liquids",
-  "trigger_id": 63,
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {

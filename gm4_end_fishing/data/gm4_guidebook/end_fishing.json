@@ -1,7 +1,6 @@
 {
   "id": "end_fishing",
   "name": "End Fishing",
-  "trigger_id": 7,
   "module_type": "module",
   "icon": {
     "item": "minecraft:fishing_rod",

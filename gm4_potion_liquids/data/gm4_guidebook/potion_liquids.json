@@ -1,7 +1,6 @@
 {
   "id": "potion_liquids",
   "name": "Potion Liquids",
-  "trigger_id": 32,
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {

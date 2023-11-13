@@ -1,7 +1,6 @@
 {
   "id": "musical_shamir",
   "name": "Musical Shamir",
-  "trigger_id": 21,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

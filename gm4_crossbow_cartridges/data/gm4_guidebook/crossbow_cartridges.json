@@ -1,7 +1,6 @@
 {
   "id": "crossbow_cartridges",
   "name": "Crossbow Cartridges",
-  "trigger_id": 65,
   "module_type": "module",
   "icon": {
     "item": "minecraft:crossbow",

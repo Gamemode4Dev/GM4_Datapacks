@@ -1,7 +1,6 @@
 {
   "id": "resurrecting_skeletons",
   "name": "Resurrecting Skeletons",
-  "trigger_id": 42,
   "module_type": "expansion",
   "base_module": "mysterious_midnights",
   "icon": {

@@ -1,7 +1,6 @@
 {
   "id": "iacio_shamir",
   "name": "Iacio Shamir",
-  "trigger_id": 88,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

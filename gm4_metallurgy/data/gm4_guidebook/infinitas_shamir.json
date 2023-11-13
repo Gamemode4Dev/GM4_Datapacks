@@ -1,7 +1,6 @@
 {
   "id": "infinitas_shamir",
   "name": "Infinitas Shamir",
-  "trigger_id": 19,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

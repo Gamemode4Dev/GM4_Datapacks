@@ -1,7 +1,6 @@
 {
   "id": "poses_pack",
   "name": "Poses Pack",
-  "trigger_id": 92,
   "module_type": "expansion",
   "base_module": "better_armour_stands",
   "icon": {

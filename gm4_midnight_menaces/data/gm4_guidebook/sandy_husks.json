@@ -1,7 +1,6 @@
 {
   "id": "sandy_husks",
   "name": "Sandy Husks",
-  "trigger_id": 99,
   "module_type": "expansion",
   "base_module": "mysterious_midnights",
   "icon": {

@@ -1,7 +1,6 @@
 {
   "id": "corripio_shamir",
   "name": "Corripio Shamir",
-  "trigger_id": 86,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

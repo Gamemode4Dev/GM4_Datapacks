@@ -1,7 +1,6 @@
 {
   "id": "potion_swords",
   "name": "Potion Swords",
-  "trigger_id": 62,
   "module_type": "module",
   "icon": {
     "item": "minecraft:golden_sword",

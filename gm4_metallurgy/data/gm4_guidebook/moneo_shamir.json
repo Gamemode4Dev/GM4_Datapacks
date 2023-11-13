@@ -1,7 +1,6 @@
 {
   "id": "moneo_shamir",
   "name": "Moneo Shamir",
-  "trigger_id": 22,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

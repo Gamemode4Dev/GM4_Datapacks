@@ -1,7 +1,6 @@
 {
   "id": "better_fire",
   "name": "Better Fire",
-  "trigger_id": 57,
   "module_type": "module",
   "icon": {
     "item": "minecraft:flint_and_steel",

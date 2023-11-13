@@ -1,7 +1,6 @@
 {
   "id": "forming_press",
   "name": "Forming Press",
-  "trigger_id": 16,
   "module_type": "module",
   "icon": {
     "item": "minecraft:furnace",

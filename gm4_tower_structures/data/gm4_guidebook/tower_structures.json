@@ -1,7 +1,6 @@
 {
   "id": "tower_structures",
   "name": "Tower Structures",
-  "trigger_id": 89,
   "module_type": "module",
   "icon": {
     "item": "minecraft:ladder",

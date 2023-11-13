@@ -1,7 +1,6 @@
 {
   "id": "vigere_shamir",
   "name": "Vigere Shamir",
-  "trigger_id": 14,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

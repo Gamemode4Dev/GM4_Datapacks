@@ -1,7 +1,6 @@
 {
   "id": "zauber_cauldrons",
   "name": "Zauber Cauldrons",
-  "trigger_id": 53,
   "module_type": "module",
   "icon": {
     "item": "minecraft:cauldron",

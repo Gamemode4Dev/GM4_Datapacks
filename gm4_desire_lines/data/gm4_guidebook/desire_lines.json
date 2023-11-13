@@ -1,7 +1,6 @@
 {
   "id": "desire_lines",
   "name": "Desire Lines",
-  "trigger_id": 76,
   "module_type": "module",
   "icon": {
     "item": "minecraft:coarse_dirt",

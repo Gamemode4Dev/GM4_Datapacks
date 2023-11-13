@@ -1,7 +1,6 @@
 {
   "id": "liquid_tanks",
   "name": "Liquid Tanks",
-  "trigger_id": 64,
   "module_type": "base",
   "icon": {
     "item": "minecraft:glass",

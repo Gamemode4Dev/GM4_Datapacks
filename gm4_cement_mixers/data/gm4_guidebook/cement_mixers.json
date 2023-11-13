@@ -1,7 +1,6 @@
 {
   "id": "cement_mixers",
   "name": "Cement Mixers",
-  "trigger_id": 66,
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {

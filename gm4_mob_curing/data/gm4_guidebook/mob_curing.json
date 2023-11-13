@@ -1,7 +1,6 @@
 {
   "id": "mob_curing",
   "name": "Mob Curing",
-  "trigger_id": 38,
   "module_type": "module",
   "icon": {
     "item": "minecraft:golden_apple",

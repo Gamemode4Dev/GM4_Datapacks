@@ -1,7 +1,6 @@
 {
   "id": "book_binders",
   "name": "Book Binders",
-  "trigger_id": 72,
   "module_type": "module",
   "icon": {
     "item": "minecraft:enchanted_book",

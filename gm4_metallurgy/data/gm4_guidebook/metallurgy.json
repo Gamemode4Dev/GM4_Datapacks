@@ -1,7 +1,6 @@
 {
   "id": "metallurgy",
   "name": "Metallurgy",
-  "trigger_id": 23,
   "module_type": "base",
   "icon": {
     "item": "minecraft:anvil",

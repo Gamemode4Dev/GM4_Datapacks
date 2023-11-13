@@ -1,7 +1,6 @@
 {
   "id": "animi_shamir",
   "name": "Animi Shamir",
-  "trigger_id": 91,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

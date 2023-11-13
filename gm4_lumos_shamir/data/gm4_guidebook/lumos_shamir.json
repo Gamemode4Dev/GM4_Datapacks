@@ -1,7 +1,6 @@
 {
   "id": "lumos_shamir",
   "name": "Lumos Shamir",
-  "trigger_id": 71,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

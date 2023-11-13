@@ -1,7 +1,6 @@
 {
   "id": "chairs",
   "name": "Chairs",
-  "trigger_id": 73,
   "module_type": "module",
   "icon": {
     "item": "minecraft:saddle",

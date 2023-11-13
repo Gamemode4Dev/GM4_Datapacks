@@ -1,7 +1,6 @@
 {
   "id": "enlarging_phantoms",
   "name": "Enlarging Phantoms",
-  "trigger_id": 103,
   "module_type": "expansion",
   "base_module": "mysterious_midnights",
   "icon": {

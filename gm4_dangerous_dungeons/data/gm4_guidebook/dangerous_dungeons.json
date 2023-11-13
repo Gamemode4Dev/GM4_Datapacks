@@ -1,7 +1,6 @@
 {
   "id": "dangerous_dungeons",
   "name": "Dangerous Dungeons",
-  "trigger_id": 60,
   "module_type": "module",
   "icon": {
     "item": "minecraft:spawner",

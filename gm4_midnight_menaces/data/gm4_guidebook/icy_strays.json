@@ -1,7 +1,6 @@
 {
   "id": "icy_strays",
   "name": "Icy Strays",
-  "trigger_id": 102,
   "module_type": "expansion",
   "base_module": "mysterious_midnights",
   "icon": {

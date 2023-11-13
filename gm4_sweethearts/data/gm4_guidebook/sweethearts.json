@@ -1,7 +1,6 @@
 {
   "id": "sweethearts",
   "name": "Sweethearts",
-  "trigger_id": 33,
   "module_type": "module",
   "icon": {
     "item": "minecraft:poppy",

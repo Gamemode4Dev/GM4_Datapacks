@@ -1,7 +1,6 @@
 {
   "id": "gemini_shamir",
   "name": "Gemini Shamir",
-  "trigger_id": 25,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

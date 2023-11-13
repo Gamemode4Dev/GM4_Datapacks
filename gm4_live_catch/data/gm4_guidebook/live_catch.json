@@ -1,7 +1,6 @@
 {
   "id": "live_catch",
   "name": "Live Catch",
-  "trigger_id": 11,
   "module_type": "module",
   "icon": {
     "item": "minecraft:cod",

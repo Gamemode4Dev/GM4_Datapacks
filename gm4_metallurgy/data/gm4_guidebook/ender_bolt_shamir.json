@@ -1,7 +1,6 @@
 {
   "id": "ender_bolt_shamir",
   "name": "Ender Bolt Shamir",
-  "trigger_id": 27,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

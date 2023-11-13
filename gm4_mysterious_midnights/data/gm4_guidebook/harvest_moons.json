@@ -1,7 +1,6 @@
 {
   "id": "harvest_moons",
   "name": "Harvest Moons",
-  "trigger_id": 45,
   "module_type": "expansion",
   "base_module": "mysterious_midnights",
   "icon": {

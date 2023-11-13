@@ -1,7 +1,6 @@
 {
   "id": "menacing_goblins",
   "name": "Menacing Goblins",
-  "trigger_id": 100,
   "module_type": "expansion",
   "base_module": "mysterious_midnights",
   "icon": {

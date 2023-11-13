@@ -1,7 +1,6 @@
 {
   "id": "cooler_caves",
   "name": "Cooler Caves",
-  "trigger_id": 82,
   "module_type": "module",
   "icon": {
     "item": "minecraft:dark_prismarine",

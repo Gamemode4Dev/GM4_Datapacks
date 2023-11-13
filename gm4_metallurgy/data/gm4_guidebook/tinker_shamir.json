@@ -1,7 +1,6 @@
 {
   "id": "tinker_shamir",
   "name": "Tinker Shamir",
-  "trigger_id": 18,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

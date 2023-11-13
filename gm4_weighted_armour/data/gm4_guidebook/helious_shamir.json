@@ -1,7 +1,6 @@
 {
   "id": "helious_shamir",
   "name": "Helious Shamir",
-  "trigger_id": 69,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

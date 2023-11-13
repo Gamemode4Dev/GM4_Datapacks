@@ -1,7 +1,6 @@
 {
   "id": "resurrecting_zombies",
   "name": "Resurrecting Zombies",
-  "trigger_id": 41,
   "module_type": "expansion",
   "base_module": "mysterious_midnights",
   "icon": {

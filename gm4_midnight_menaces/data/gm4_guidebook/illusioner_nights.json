@@ -1,7 +1,6 @@
 {
   "id": "illusioner_nights",
   "name": "Illusioner Nights",
-  "trigger_id": 101,
   "module_type": "expansion",
   "base_module": "mysterious_midnights",
   "icon": {

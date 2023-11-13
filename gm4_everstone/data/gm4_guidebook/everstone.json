@@ -1,7 +1,6 @@
 {
   "id": "everstone",
   "name": "Everstone",
-  "trigger_id": 75,
   "module_type": "module",
   "icon": {
     "item": "minecraft:firework_star",

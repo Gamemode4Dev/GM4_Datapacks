@@ -1,7 +1,6 @@
 {
   "id": "tinkering_compressors",
   "name": "Tinkering Compressors",
-  "trigger_id": 52,
   "module_type": "module",
   "icon": {
     "item": "minecraft:iron_block",

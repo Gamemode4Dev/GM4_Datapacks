@@ -1,7 +1,6 @@
 {
   "id": "pig_tractors",
   "name": "Pig Tractors",
-  "trigger_id": 56,
   "module_type": "module",
   "icon": {
     "item": "minecraft:iron_hoe",

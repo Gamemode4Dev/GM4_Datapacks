@@ -1,7 +1,6 @@
 {
   "id": "vibro_shamir",
   "name": "Vibro Shamir",
-  "trigger_id": 17,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

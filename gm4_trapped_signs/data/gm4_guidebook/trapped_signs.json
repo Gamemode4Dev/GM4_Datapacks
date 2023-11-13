@@ -1,7 +1,6 @@
 {
   "id": "trapped_signs",
   "name": "Trapped Signs",
-  "trigger_id": 34,
   "module_type": "module",
   "icon": {
     "item": "minecraft:oak_sign",

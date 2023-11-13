@@ -1,7 +1,6 @@
 {
   "id": "xp_storage",
   "name": "XP Storage",
-  "trigger_id": 48,
   "module_type": "module",
   "icon": {
     "item": "minecraft:ender_chest",

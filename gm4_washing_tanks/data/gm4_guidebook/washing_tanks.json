@@ -1,7 +1,6 @@
 {
   "id": "washing_tanks",
   "name": "Washing Tanks",
-  "trigger_id": 3,
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {

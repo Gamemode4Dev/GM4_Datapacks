@@ -1,7 +1,6 @@
 {
   "id": "apple_trees",
   "name": "Apple Trees",
-  "trigger_id": 83,
   "module_type": "module",
   "icon": {
     "item": "minecraft:apple",

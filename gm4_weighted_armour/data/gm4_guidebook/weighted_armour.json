@@ -1,7 +1,6 @@
 {
   "id": "weighted_armour",
   "name": "Weighted Armour",
-  "trigger_id": 68,
   "module_type": "module",
   "icon": {
     "item": "minecraft:iron_chestplate",

@@ -1,7 +1,6 @@
 {
   "id": "vecto_shamir",
   "name": "Vecto Shamir",
-  "trigger_id": 95,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

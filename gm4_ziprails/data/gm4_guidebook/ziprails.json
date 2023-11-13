@@ -1,7 +1,6 @@
 {
   "id": "ziprails",
   "name": "Ziprails",
-  "trigger_id": 50,
   "module_type": "module",
   "icon": {
     "item": "minecraft:minecart",

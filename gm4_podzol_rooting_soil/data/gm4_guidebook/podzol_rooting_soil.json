@@ -1,7 +1,6 @@
 {
   "id": "podzol_rooting_soil",
   "name": "Podzol Rooting Soil",
-  "trigger_id": 36,
   "module_type": "module",
   "icon": {
     "item": "minecraft:spruce_sapling",

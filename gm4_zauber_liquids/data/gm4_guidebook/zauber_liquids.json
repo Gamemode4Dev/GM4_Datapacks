@@ -1,7 +1,6 @@
 {
   "id": "zauber_liquids",
   "name": "Zauber Liquids",
-  "trigger_id": 31,
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {

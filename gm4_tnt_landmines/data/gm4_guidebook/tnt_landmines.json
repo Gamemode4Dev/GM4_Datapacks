@@ -1,7 +1,6 @@
 {
   "id": "tnt_landmines",
   "name": "TNT Landmines",
-  "trigger_id": 39,
   "module_type": "module",
   "icon": {
     "item": "minecraft:tnt",

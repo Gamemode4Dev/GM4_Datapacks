@@ -1,7 +1,6 @@
 {
   "id": "fulcio_shamir",
   "name": "Fulcio Shamir",
-  "trigger_id": 79,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

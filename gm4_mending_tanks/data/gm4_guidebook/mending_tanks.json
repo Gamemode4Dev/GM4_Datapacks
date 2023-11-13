@@ -1,7 +1,6 @@
 {
   "id": "mending_tanks",
   "name": "Mending Tanks",
-  "trigger_id": 13,
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {

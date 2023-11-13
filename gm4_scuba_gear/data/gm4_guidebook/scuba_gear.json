@@ -1,7 +1,6 @@
 {
   "id": "scuba_gear",
   "name": "SCUBA Gear",
-  "trigger_id": 96,
   "module_type": "module",
   "icon": {
     "item": "minecraft:horn_coral",

@@ -1,7 +1,6 @@
 {
   "id": "ender_hoppers",
   "name": "Ender Hoppers",
-  "trigger_id": 35,
   "module_type": "module",
   "icon": {
     "item": "minecraft:ender_eye",

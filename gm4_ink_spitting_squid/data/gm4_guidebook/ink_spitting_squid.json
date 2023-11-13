@@ -1,7 +1,6 @@
 {
   "id": "ink_spitting_squid",
   "name": "Ink Spitting Squid",
-  "trigger_id": 78,
   "module_type": "module",
   "icon": {
     "item": "minecraft:ink_sac",

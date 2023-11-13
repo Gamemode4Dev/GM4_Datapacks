@@ -1,7 +1,6 @@
 {
   "id": "percurro_shamir",
   "name": "Percurro Shamir",
-  "trigger_id": 37,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

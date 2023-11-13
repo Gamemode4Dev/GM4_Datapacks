@@ -1,7 +1,6 @@
 {
   "id": "beehive_inspector",
   "name": "Beehive Inspector",
-  "trigger_id": 51,
   "module_type": "module",
   "icon": {
     "item": "minecraft:beehive",

@@ -1,7 +1,6 @@
 {
   "id": "standard_crafting",
   "name": "Standard Crafting",
-  "trigger_id": 93,
   "module_type": "expansion",
   "base_module": "custom_crafters",
   "icon": {

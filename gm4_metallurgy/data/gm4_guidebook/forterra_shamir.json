@@ -1,7 +1,6 @@
 {
   "id": "forterra_shamir",
   "name": "Forterra Shamir",
-  "trigger_id": 26,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

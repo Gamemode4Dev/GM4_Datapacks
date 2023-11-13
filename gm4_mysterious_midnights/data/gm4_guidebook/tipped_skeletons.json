@@ -1,7 +1,6 @@
 {
   "id": "tipped_skeletons",
   "name": "Tipped Skeletons",
-  "trigger_id": 40,
   "module_type": "expansion",
   "base_module": "mysterious_midnights",
   "icon": {

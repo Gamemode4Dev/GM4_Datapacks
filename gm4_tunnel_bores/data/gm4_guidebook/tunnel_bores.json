@@ -1,7 +1,6 @@
 {
   "id": "tunnel_bores",
   "name": "Tunnel Bores",
-  "trigger_id": 59,
   "module_type": "module",
   "icon": {
     "item": "minecraft:piston",

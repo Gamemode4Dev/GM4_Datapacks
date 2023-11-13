@@ -1,7 +1,6 @@
 {
   "id": "particles_pack",
   "name": "Particles Pack",
-  "trigger_id": 6,
   "module_type": "expansion",
   "base_module": "better_armour_stands",
   "icon": {

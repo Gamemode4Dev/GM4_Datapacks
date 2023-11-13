@@ -1,7 +1,6 @@
 {
   "id": "boots_of_ostara",
   "name": "Boots of Ostara",
-  "trigger_id": 87,
   "module_type": "module",
   "icon": {
     "item": "minecraft:leather_boots",

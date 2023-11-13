@@ -1,7 +1,6 @@
 {
   "id": "holographic_tags",
   "name": "Holographic Tags",
-  "trigger_id": 94,
   "module_type": "module",
   "icon": {
     "item": "minecraft:name_tag",

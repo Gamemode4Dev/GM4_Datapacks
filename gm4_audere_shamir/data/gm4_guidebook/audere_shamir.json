@@ -1,7 +1,6 @@
 {
   "id": "audere_shamir",
   "name": "Audere Shamir",
-  "trigger_id": 8,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {

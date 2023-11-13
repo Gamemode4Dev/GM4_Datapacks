@@ -1,7 +1,6 @@
 {
   "id": "enderman_support_class",
   "name": "Enderman Support Class",
-  "trigger_id": 80,
   "module_type": "module",
   "icon": {
     "item": "minecraft:player_head",

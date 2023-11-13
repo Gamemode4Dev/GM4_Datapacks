@@ -1,7 +1,6 @@
 {
   "id": "heart_canisters",
   "name": "Heart Canisters",
-  "trigger_id": 15,
   "module_type": "module",
   "icon": {
     "item": "minecraft:player_head",

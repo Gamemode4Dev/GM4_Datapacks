@@ -1,7 +1,6 @@
 {
   "id": "soul_glass",
   "name": "Soul Glass",
-  "trigger_id": 58,
   "module_type": "module",
   "icon": {
     "item": "minecraft:brown_stained_glass",
