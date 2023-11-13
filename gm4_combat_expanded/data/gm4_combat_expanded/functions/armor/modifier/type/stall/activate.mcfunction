@@ -30,10 +30,12 @@ scoreboard players operation $level gm4_ce_data > $level_check gm4_ce_data
 scoreboard players reset $level_check gm4_ce_data
 
 # grant effect
-execute if score $level gm4_ce_data matches 1 run effect give @e[distance=..3,tag=!smithed.strict] resistance 2 0
-execute if score $level gm4_ce_data matches 2 run effect give @e[distance=..3,tag=!smithed.strict] resistance 2 1
-execute if score $level gm4_ce_data matches 3 run effect give @e[distance=..3,tag=!smithed.strict] resistance 2 2
+execute if score $level gm4_ce_data matches 1 run effect give @e[distance=0.001..3,tag=!smithed.strict] resistance 2 0
+execute if score $level gm4_ce_data matches 2 run effect give @e[distance=0.001..3,tag=!smithed.strict] resistance 2 1
+execute if score $level gm4_ce_data matches 3 run effect give @e[distance=0.001..3,tag=!smithed.strict] resistance 2 2
+execute if score $level gm4_ce_data matches 1 run effect give @s resistance 2 1
+execute if score $level gm4_ce_data matches 2 run effect give @s resistance 2 2
+execute if score $level gm4_ce_data matches 3 run effect give @s resistance 2 3
 
 # stall particles
-summon marker ~ ~0.6 ~ {Tags:["gm4_ce_stall_aura"]}
-execute as @e[type=marker,tag=gm4_ce_stall_aura] at @s run function gm4_combat_expanded:armor/modifier/type/stall/particles
+execute positioned ~ ~.6 ~ summon marker run function gm4_combat_expanded:armor/modifier/type/stall/particles

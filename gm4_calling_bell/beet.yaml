@@ -19,7 +19,7 @@ meta:
       notes: []
     versioning:
       required:
-        - lib_trades: 1.3.0
+        lib_trades: 1.3.0
       schedule_loops:
         - tick
         - day_clock
@@ -28,3 +28,9 @@ meta:
     credits:
       Creator:
         - TheEpyonProject
+      Icon Design:
+        - Hozz
+  modrinth:
+    project_id: qNzelyE3
+  smithed:
+    pack_id: gm4_calling_bell

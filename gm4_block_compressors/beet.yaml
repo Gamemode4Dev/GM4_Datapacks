@@ -14,8 +14,8 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_custom_crafters: 3.0.0
-        - lib_machines: 1.1.0
+        lib_custom_crafters: 3.0.0
+        lib_machines: 1.1.0
       schedule_loops: [main]
     website:
       description: Chest space won't be an issue with this module! Use a Block Compressor to compress stacks of items, turning a stack of items into a single item for long-term storage. Make sure to uncompress your items before using them again, though!

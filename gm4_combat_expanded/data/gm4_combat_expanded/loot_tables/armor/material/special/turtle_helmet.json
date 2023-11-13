@@ -25,22 +25,13 @@
               "entity": "this",
               "name": [
                 {
-                  "translate": "%1$s%3427655$s",
+                  "translate": "item.gm4.combat_expanded.name.unidentified",
+                  "fallback": "Unidentified %s",
                   "with": [
-                    [
-                      "Unidentified ",
-                      {
-                        "translate": "item.minecraft.turtle_helmet"
-                      }
-                    ],
-                    {
-                      "translate": "item.gm4.combat_expanded.name.unidentified",
-                      "with": [
                         {
                           "translate": "item.minecraft.turtle_helmet"
                         }
-                      ]
-                    }
+                      
                   ],
                   "italic": false
                 }

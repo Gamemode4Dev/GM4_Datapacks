@@ -18,9 +18,9 @@ jobs:
 
       - uses: mcbeet/check-commands@v1
         with:
-          minecraft: '1.19' # temp manual assignment. mecha does not support 1.19.4 as valid version.      ${{ env.VERSION }}
+          minecraft: '1.20'
           source: base gm4_* lib_*
-          version: '0.67.0'
+          version: '0.83.0'
 
   build:
     needs: test

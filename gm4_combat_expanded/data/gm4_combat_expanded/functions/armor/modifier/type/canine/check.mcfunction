@@ -1,6 +1,6 @@
 # check if the current canine armor piece has an existing matching wolf
 # @s = player that has canine armor
-# at world spawn
+# at unspecified
 # run from armor/check_modifier/equip
 
 # get armor slot and player id

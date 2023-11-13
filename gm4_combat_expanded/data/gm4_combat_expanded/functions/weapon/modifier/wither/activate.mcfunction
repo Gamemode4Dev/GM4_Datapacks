@@ -1,6 +1,6 @@
 # damage wielder when weapon is used
 # @s = player wielding the weapon
-# at world spawn
+# at unspecified
 # run from weapon/check_modifier
 
 # calculate health

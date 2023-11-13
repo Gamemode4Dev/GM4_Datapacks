@@ -15,8 +15,16 @@
           },
           "blocked": false,
           "type": {
-            "bypasses_invulnerability": false,
-            "bypasses_magic": false,
+            "tags": [
+              {
+                "id": "minecraft:bypasses_invulnerability",
+                "expected": false
+              },
+              {
+                "id": "minecraft:bypasses_effects",
+                "expected": false
+              }
+            ],
             "source_entity": {}
           }
         }

@@ -23,6 +23,9 @@ scoreboard players reset @a gm4_oa_swim
 tag @a[tag=gm4_oa_soaring_off_ground,nbt={OnGround:1b}] remove gm4_oa_soaring_off_ground
 effect give @a[gamemode=!spectator,tag=gm4_oa_soaring_off_ground] jump_boost 2 255 true
 
+# sniffing
+scoreboard players remove @a[scores={gm4_oa_sniff=1..}] gm4_oa_sniff 1
+
 # run player commands
 execute as @a[gamemode=!spectator,tag=gm4_has_pneuma] run function gm4_orb_of_ankou:player
 

@@ -1,6 +1,6 @@
 id: gm4_combat_expanded
 name: Combat Expanded
-version: 1.2.X
+version: 1.4.X
 
 data_pack:
   load: .
@@ -14,22 +14,25 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_forceload: 1.1.0
-        - lib_lore: 1.0.0
+        lib_forceload: 1.1.0
+        lib_lore: 1.0.0
       schedule_loops: 
         - tick
         - main
         - slow_clock
         - player/submain
     website:
-      hidden: true
       description: Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
       recommended:
         - gm4_metallurgy
-      notes:
-        - Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.
     video: null
     wiki: https://wiki.gm4.co/wiki/Combat_Expanded
     credits:
       Creator:
         - Thanathor
+      Icon Design:
+        - Hozz
+  modrinth:
+    project_id: zgxd3poi
+  smithed:
+    pack_id: gm4_combat_expanded

@@ -27,19 +27,19 @@
             "predicate": {
               "equipment": {
                 "mainhand": {
-                  "nbt": "{gm4_combat_expanded:{identified:1}}"
+                  "nbt": "{gm4_combat_expanded:{}}"
                 },
                 "head": {
-                  "nbt": "{gm4_combat_expanded:{identified:1}}"
+                  "nbt": "{gm4_combat_expanded:{}}"
                 },
                 "chest": {
-                  "nbt": "{gm4_combat_expanded:{identified:1}}"
+                  "nbt": "{gm4_combat_expanded:{}}"
                 },
                 "legs": {
-                  "nbt": "{gm4_combat_expanded:{identified:1}}"
+                  "nbt": "{gm4_combat_expanded:{}}"
                 },
                 "feet": {
-                  "nbt": "{gm4_combat_expanded:{identified:1}}"
+                  "nbt": "{gm4_combat_expanded:{}}"
                 }
               }
             }

@@ -45,26 +45,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Under Attack:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.unsafe"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.unsafe",
+              "fallback": "When Under Attack:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -74,17 +65,10 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "Warp",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.warp"
-                  }
-                ]
+                "translate": "item.gm4.combat_expanded.lore.warp",
+                "fallback": "Warp",
+                "color": "blue",
+                "italic": false
               }
             ]
           ]
@@ -94,33 +78,18 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.vorpal",
+              "fallback": "Vorpal %s",
               "with": [
-                [
-                  {
-                    "text": "Vorpal ",
-                    "italic": false,
-                    "color": "light_purple"
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true,
-                    "color": "light_purple"
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.vorpal",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true,
-                      "color": "light_purple"
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true,
+                  "color": "light_purple"
                 }
-              ]
+              ],
+              "italic": false,
+              "color": "light_purple"
             }
           ]
         }

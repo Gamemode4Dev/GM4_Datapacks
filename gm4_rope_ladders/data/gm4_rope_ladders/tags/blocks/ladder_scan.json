@@ -1,7 +1,6 @@
 {
   "values": [
-    "#gm4:air",
-    "water",
+    "#gm4:replaceable",
     "minecraft:ladder"
   ]
 }

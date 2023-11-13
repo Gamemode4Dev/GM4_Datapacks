@@ -1,6 +1,6 @@
 # damage undamaged player wearing overload armor
 # @s = player wearing armour
-# at world spawn
+# at unspecified
 # run from armor/check_modifier/epic
 
 # calculate health

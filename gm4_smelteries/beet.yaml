@@ -14,8 +14,8 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_custom_crafters: 3.0.0
-        - lib_machines: 1.1.0
+        lib_custom_crafters: 3.0.0
+        lib_machines: 1.1.0
       schedule_loops: [main]
     website:
       description: Build a Smeltery and double your ore output with this multi-block structure.

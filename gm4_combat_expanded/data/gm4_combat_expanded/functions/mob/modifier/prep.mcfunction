@@ -28,6 +28,8 @@ execute store result score $mob_toughness gm4_ce_data run data get storage gm4_c
 
 # remove bonus health if witch spawned in witch hut
 execute if entity @s[type=witch,predicate=gm4_combat_expanded:technical/in_witch_hut] run scoreboard players set $mob_health gm4_ce_data 0
+# remove bonus health if enderman spawned in end
+execute if entity @s[type=enderman] if dimension the_end run scoreboard players set $mob_health gm4_ce_data 0
 
 # add modifiers that have been altered
 execute if score $mob_health gm4_ce_data matches 1.. run function gm4_combat_expanded:mob/modifier/health
