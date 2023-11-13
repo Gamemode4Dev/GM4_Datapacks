@@ -45,7 +45,7 @@ def get_pos_hash(module_id: str):
   return id
 
 
-def generate_book_header(book_dict: Book) -> list[Any]:
+def generate_book_header(book_dict: Book) -> list[dict[Any, Any] | str]:
   return [
     {
       "text": "⌂",
@@ -172,13 +172,13 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
   page_storage:list[Any] = []
   fallback_storage:list[Any] = []
 
-  functions:list[Any] = [{
+  functions:list[dict[Any, Any]] = [{
     "function": "minecraft:set_nbt",
     "tag": "{CustomModelData:3420001,gm4_guidebook:1b,title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
   }]
 
   for section in sections:
-    enable_conditions:list[Any] = []
+    enable_conditions:list[dict[Any, Any]] = []
 
     for module_check in section["enable"]:
       condition = {
@@ -210,8 +210,8 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
       }
     }
 
-    enabled_ops:list[Any] = []
-    fallback_ops:list[Any] = []
+    enabled_ops:list[dict[Any, Any]] = []
+    fallback_ops:list[dict[Any, Any]] = []
     for page in section["pages"]:
       enabled_ops.append({
         "op": "append",
