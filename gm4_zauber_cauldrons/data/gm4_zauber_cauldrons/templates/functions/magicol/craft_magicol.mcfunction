@@ -19,7 +19,7 @@ execute if block ~ ~ ~ minecraft:water_cauldron[level=3] run scoreboard players 
 data modify entity @s data.gm4_zauber_cauldrons.liquid set value {id:"magicol",magicol:{color:"{{color}}"}}
 
 # visuals
-summon minecraft:item_display ~ ~.0781 ~ {item:{id:"minecraft:{{color}}_concrete_powder",Count:1b},item_display:"fixed",transformation:[1.984f,0f,0f,0f,0f,0f,0f,0f,0f,0f,1.984f,0f,0f,0f,0f,1f],Tags:["gm4_zc_liquid","gm4_zc_magicol","gm4_zc_{{color}}_magicol"]}
+summon minecraft:item_display ~ ~.0781 ~ {item:{id:"minecraft:{{color}}_concrete_powder",Count:1b,tag:{CustomModelData:{{custom_model_data}}}},item_display:"fixed",transformation:[1.984f,0f,0f,0f,0f,0f,0f,0f,0f,0f,1.984f,0f,0f,0f,0f,1f],Tags:["gm4_zc_liquid","gm4_zc_magicol","gm4_zc_{{color}}_magicol"]}
 execute align xyz run function gm4_zauber_cauldrons:cauldron/liquid/update/from_score
 
 # set flag

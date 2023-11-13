@@ -180,7 +180,8 @@ def generate_magicol_recipes(ctx: Context):
                 }
             },
             "meta": {
-                "color": color_data['color']
+                "color": color_data['color'],
+                "custom_model_data": color_data['custom_model_data']
             }
         }
         ctx.require(subproject(subproject_config))
