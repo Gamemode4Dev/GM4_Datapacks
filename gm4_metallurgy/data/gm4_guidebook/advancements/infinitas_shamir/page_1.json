@@ -9,7 +9,7 @@
       "color": "#4AA0C7",
       "italic": true
     },
-    "description": "Spiraculum Shamir",
+    "description": "Infinitas Shamir",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": false,
@@ -61,13 +61,13 @@
         ],
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'spiraculum'}}"
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'infinitas'}}"
           }
         ]
       }
     }
   },
   "rewards": {
-    "function": "gm4_spiraculum_shamir:guidebook/unlock_page"
+    "function": "gm4_infinitas_shamir:guidebook/unlock_page"
   }
 }

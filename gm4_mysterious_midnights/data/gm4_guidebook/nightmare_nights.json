@@ -1,7 +1,7 @@
 {
   "id": "nightmare_nights",
   "name": "Nightmare Nights",
-  "trigger_id": 61,
+  "trigger_id": 43,
   "module_type": "expansion",
   "base_module": "mysterious_midnights",
   "icon": {
@@ -65,10 +65,25 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Mysterious_Midnights/Nightmare_Nights\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Mysterious_Midnights/Nightmare_Nights\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Nightmare Nights\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"During a Nightmare Nights event, players cannot sleep the night away. Attempting to sleep will deal instant damage to the player.\\n\\nAdditionally, multiple Mysterious Midnights events will occur.\"},{\"translate\":\"text.gm4.guidebook.nightmare_nights.1\"}]}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "translate": "text.gm4.guidebook.nightmare_nights.1",
+            "fallback": "During a Nightmare Nights event, players cannot sleep the night away. Attempting to sleep will deal instant damage to the player.\n\nAdditionally, multiple Mysterious Midnights events will occur."
+          }
+        ]
       ],
       "pages_locked": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Mysterious_Midnights/Nightmare_Nights\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Mysterious_Midnights/Nightmare_Nights\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Nightmare Nights\",\"underlined\":true},{\"text\":\"\\n\"},{\"text\":\"???\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Undiscovered\"},{\"translate\":\"text.gm4.guidebook.undiscovered\"}],\"italic\":true,\"color\":\"red\"}]}}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "insert": "locked_text"
+          }
+        ]
       ]
     },
     {
@@ -85,7 +100,12 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"While a Nightmare Night is active, the following events will occur:\\n\\n - Resurrecting Skeletons\\n - Resurrecting Zombies\\n - Tipped Skeletons\"},{\"translate\":\"text.gm4.guidebook.nightmare_nights.2\"}]}]"
+        [
+          {
+            "translate": "text.gm4.guidebook.nightmare_nights.2",
+            "fallback": "While a Nightmare Night is active, the following events will occur:\n\n - Resurrecting Skeletons\n - Resurrecting Zombies\n - Tipped Skeletons"
+          }
+        ]
       ]
     },
     {
@@ -102,7 +122,12 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"While a Nightmare Night is active, the following events will occur:\\n\\n - Resurrecting Skeletons\\n - Resurrecting Zombies\\n - Tipped Skeletons\\n - Enlarging Phantoms\\n - Illusioner Nights\\n - Menacing Goblins\"},{\"translate\":\"text.gm4.guidebook.nightmare_nights.2\"}]}]"
+        [
+          {
+            "translate": "text.gm4.guidebook.nightmare_nights.2",
+            "fallback": "While a Nightmare Night is active, the following events will occur:\n\n - Resurrecting Skeletons\n - Resurrecting Zombies\n - Tipped Skeletons\n - Enlarging Phantoms\n - Illusioner Nights\n - Menacing Goblins"
+          }
+        ]
       ]
     }
   ]

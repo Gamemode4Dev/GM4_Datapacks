@@ -1,7 +1,7 @@
 {
   "id": "forming_press",
   "name": "Forming Press",
-  "trigger_id": 26,
+  "trigger_id": 16,
   "module_type": "module",
   "icon": {
     "item": "minecraft:furnace",
@@ -30,14 +30,19 @@
     "page_0/open_custom_crafter": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:dropper"
-            ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]}'}"
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:dropper"
+                ],
+                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]}'}"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "page_2/requirement_1": {
@@ -67,14 +72,19 @@
     "page_3/requirement": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:dropper"
-            ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Forming Press\",{\"translate\":\"block.gm4.forming_press\"}]}'}"
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:dropper"
+                ],
+                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Forming Press\",{\"translate\":\"block.gm4.forming_press\"}]}'}"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "page_4/requirement": {
@@ -135,11 +145,31 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Forming_Press\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Forming_Press\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Forming Press\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Custom Crafters can be upgraded into Forming Presss to process both smelting as well as crafting, such as brick crafting, charcoal creation, and lava generation.\"},{\"translate\":\"text.gm4.guidebook.forming_press.1\"}]}]",
-        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"The overall output of the Forming Press is approximately doubled compared to normal crafting operations.\\n\\nThe Forming Press does not remove functionality of a normal Custom Crafter, it simply adds recipes onto the Custom Crafter.\"},{\"translate\":\"text.gm4.guidebook.forming_press.2\"}]}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "translate": "text.gm4.guidebook.forming_press.1",
+            "fallback": "Custom Crafters can be upgraded into Forming Presss to process both smelting as well as crafting, such as brick crafting, charcoal creation, and lava generation."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.forming_press.2",
+            "fallback": "The overall output of the Forming Press is approximately doubled compared to normal crafting operations.\n\nThe Forming Press does not remove functionality of a normal Custom Crafter, it simply adds recipes onto the Custom Crafter."
+          }
+        ]
       ],
       "pages_locked": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Forming_Press\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Forming_Press\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Forming Press\",\"underlined\":true},{\"text\":\"\\n\"},{\"text\":\"???\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Undiscovered\"},{\"translate\":\"text.gm4.guidebook.undiscovered\"}],\"italic\":true,\"color\":\"red\"}]}}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "insert": "locked_text"
+          }
+        ]
       ]
     },
     {
@@ -154,7 +184,130 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"To create a Forming Press, the following recipe must be arranged in a Custom Crafter:\"},{\"translate\":\"text.gm4.guidebook.forming_press.3\"}]},\"\\n\\n  \",{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#353b40\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.cobblestone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"cobblestone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#a36f2f\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.piston\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"piston\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#353b40\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.cobblestone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"cobblestone\"}}},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#a36f2f\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.piston\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"piston\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#a36f2f\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.piston\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"piston\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2588\",\"color\":\"#964012\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.gm4.forming_press\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"dropper\",\"tag\":\"{display:{Name:'{\\\"translate\\\":\\\"%1$s%3427655$s\\\",\\\"with\\\":[\\\"Forming Press\\\",{\\\"translate\\\":\\\"block.gm4.forming_press\\\"}],\\\"italic\\\":false}'}}\"}}},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#732728\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.comparator\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"comparator\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#2e2a28\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.furnace\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"furnace\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#732728\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.comparator\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"comparator\"}}}]}]"
+        [
+          {
+            "translate": "text.gm4.guidebook.forming_press.3",
+            "fallback": "To create a Forming Press, the following recipe must be arranged in a Custom Crafter:"
+          },
+          [
+            "\n\n  ",
+            {
+              "translate": "container.gm4.custom_crafter",
+              "fallback": "Custom Crafter"
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "cobblestone"
+              },
+              "color": "#353b40",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "piston"
+              },
+              "color": "#a36f2f",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.piston",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "cobblestone"
+              },
+              "color": "#353b40",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n",
+            "      ",
+            {
+              "item": {
+                "id": "piston"
+              },
+              "color": "#a36f2f",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.piston",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "air"
+              }
+            },
+            {
+              "item": {
+                "id": "piston"
+              },
+              "color": "#a36f2f",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.piston",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "dropper",
+                "tag": "{display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Forming Press\",{\"translate\":\"block.gm4.forming_press\"}],\"italic\":false}'}}"
+              },
+              "color": "#964012",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.gm4.forming_press",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n",
+            "      ",
+            {
+              "item": {
+                "id": "comparator"
+              },
+              "color": "#732728",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.comparator",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "furnace"
+              },
+              "color": "#2e2a28",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.furnace",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "comparator"
+              },
+              "color": "#732728",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.comparator",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            }
+          ]
+        ]
       ],
       "grants": [
         "page_0"
@@ -172,7 +325,270 @@
         ]
       ],
       "pages": [
-        "[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"The following recipes can be used in a Forming Press:\"},{\"translate\":\"text.gm4.guidebook.forming_press.4_0\"}]},\"\\n\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#919089\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.bucket\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"bucket\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#d14900\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.lava_bucket\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"lava_bucket\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},\"\\n\\n\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#633a00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.oak_log\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"oak_log\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#633a00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.oak_log\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"oak_log\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#633a00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.oak_log\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"oak_log\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#633a00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.oak_log\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"oak_log\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#947112\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.wheat\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"wheat\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#633a00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.oak_log\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"oak_log\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#09070a\"},[{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.coal_block\",\"font\":\"gm4:guidebook\",\"color\":\"white\"},{\"translate\":\"text.gm4.guidebook.crafting.display.count.2\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"coal_block\",\"tag\":\"{display:{Name:'[{\\\"translate\\\":\\\"%1$s%3427656$s\\\",\\\"with\\\":[[{\\\"translate\\\":\\\"%1$s%3427655$s\\\",\\\"with\\\":[\\\"Block of Charcoal\\\",{\\\"translate\\\":\\\"block.gm4.charcoal_block\\\"}],\\\"italic\\\":false},{\\\"text\\\":\\\" (x2)\\\",\\\"italic\\\":true}],{\\\"translate\\\":\\\"%1$s%3427655$s\\\",\\\"with\\\":[\\\"Block of Charcoal\\\",{\\\"translate\\\":\\\"block.gm4.charcoal_block\\\"}],\\\"italic\\\":false}]}]'}}\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#633a00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.oak_log\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"oak_log\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#633a00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.oak_log\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"oak_log\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#633a00\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.oak_log\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"oak_log\"}}},\"\\n      \",{\"text\":\"**\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Any log type can be used,\\nas long as they are all the same\"},{\"translate\":\"text.gm4.guidebook.forming_press.4_1\"}]}]}}]"
+        [
+          {
+            "translate": "text.gm4.guidebook.forming_press.4_0",
+            "fallback": "The following recipes can be used in a Forming Press:"
+          },
+          [
+            "\n\n      ",
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "bucket"
+              },
+              "color": "#919089",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.bucket",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "lava_bucket"
+              },
+              "color": "#d14900",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.lava_bucket",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n\n\n      ",
+            {
+              "item": {
+                "id": "oak_log"
+              },
+              "color": "#633a00",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.oak_log",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "oak_log"
+              },
+              "color": "#633a00",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.oak_log",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "oak_log"
+              },
+              "color": "#633a00",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.oak_log",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "oak_log"
+              },
+              "color": "#633a00",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.oak_log",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "wheat"
+              },
+              "color": "#947112",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.wheat",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "oak_log"
+              },
+              "color": "#633a00",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.oak_log",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "coal_block",
+                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Block of Charcoal\",{\"translate\":\"block.gm4.charcoal_block\"}],\"italic\":false},{\"text\":\" (x2)\",\"italic\":true}],{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Block of Charcoal\",{\"translate\":\"block.gm4.charcoal_block\"}],\"italic\":false}]}]'}}"
+              },
+              "color": "#09070a",
+              "rp": [
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.coal_block",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                },
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.count.2",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                }
+              ]
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "oak_log"
+              },
+              "color": "#633a00",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.oak_log",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "oak_log"
+              },
+              "color": "#633a00",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.oak_log",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "oak_log"
+              },
+              "color": "#633a00",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.oak_log",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      "
+          ],
+          {
+            "text": "**",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    {
+                      "text": "Any log type can be used,\nas long as they are all the same"
+                    },
+                    {
+                      "translate": "text.gm4.guidebook.forming_press.4_1"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
       ],
       "grants": [
         "page_2"
@@ -187,7 +603,376 @@
         ]
       ],
       "pages": [
-        "[\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#353b40\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.cobblestone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"cobblestone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#353b40\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.cobblestone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"cobblestone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#353b40\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.cobblestone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"cobblestone\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#353b40\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.cobblestone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"cobblestone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#353b40\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.cobblestone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"cobblestone\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#36342e\"},[{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.stone_bricks\",\"font\":\"gm4:guidebook\",\"color\":\"white\"},{\"translate\":\"text.gm4.guidebook.crafting.display.count.16\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"stone_bricks\",\"tag\":\"{display:{Name:'[{\\\"translate\\\":\\\"%1$s%3427656$s\\\",\\\"with\\\":[[{\\\"translate\\\":\\\"block.minecraft.stone_bricks\\\",\\\"italic\\\":false},{\\\"text\\\":\\\" (x16)\\\",\\\"italic\\\":true}],{\\\"translate\\\":\\\"block.minecraft.stone_bricks\\\",\\\"italic\\\":false}]}]'}}\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#353b40\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.cobblestone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"cobblestone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#353b40\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.cobblestone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"cobblestone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#353b40\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.cobblestone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"cobblestone\"}}},\"\\n\\n\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#852001\"},[{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.bricks\",\"font\":\"gm4:guidebook\",\"color\":\"white\"},{\"translate\":\"text.gm4.guidebook.crafting.display.count.4\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"bricks\",\"tag\":\"{display:{Name:'[{\\\"translate\\\":\\\"%1$s%3427656$s\\\",\\\"with\\\":[[{\\\"translate\\\":\\\"block.minecraft.bricks\\\",\\\"italic\\\":false},{\\\"text\\\":\\\" (x4)\\\",\\\"italic\\\":true}],{\\\"translate\\\":\\\"block.minecraft.bricks\\\",\\\"italic\\\":false}]}]'}}\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},\"\\n\\n\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#20a89b\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"prismarine_shard\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#20a89b\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"prismarine_shard\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#20a89b\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"prismarine_shard\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#20a89b\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"prismarine_shard\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#20a89b\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"prismarine_shard\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#00a38b\"},[{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.prismarine_bricks\",\"font\":\"gm4:guidebook\",\"color\":\"white\"},{\"translate\":\"text.gm4.guidebook.crafting.display.count.2\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"prismarine_bricks\",\"tag\":\"{display:{Name:'[{\\\"translate\\\":\\\"%1$s%3427656$s\\\",\\\"with\\\":[[{\\\"translate\\\":\\\"block.minecraft.prismarine_bricks\\\",\\\"italic\\\":false},{\\\"text\\\":\\\" (x2)\\\",\\\"italic\\\":true}],{\\\"translate\\\":\\\"block.minecraft.prismarine_bricks\\\",\\\"italic\\\":false}]}]'}}\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#20a89b\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"prismarine_shard\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#20a89b\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"prismarine_shard\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#20a89b\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"prismarine_shard\"}}}]"
+        [
+          [
+            "      ",
+            {
+              "item": {
+                "id": "cobblestone"
+              },
+              "color": "#353b40",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "cobblestone"
+              },
+              "color": "#353b40",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "cobblestone"
+              },
+              "color": "#353b40",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "cobblestone"
+              },
+              "color": "#353b40",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "cobblestone"
+              },
+              "color": "#353b40",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "stone_bricks",
+                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.stone_bricks\",\"italic\":false},{\"text\":\" (x16)\",\"italic\":true}],{\"translate\":\"block.minecraft.stone_bricks\",\"italic\":false}]}]'}}"
+              },
+              "color": "#36342e",
+              "rp": [
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.stone_bricks",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                },
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.count.16",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                }
+              ]
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "cobblestone"
+              },
+              "color": "#353b40",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "cobblestone"
+              },
+              "color": "#353b40",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "cobblestone"
+              },
+              "color": "#353b40",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n\n\n      ",
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "bricks",
+                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.bricks\",\"italic\":false},{\"text\":\" (x4)\",\"italic\":true}],{\"translate\":\"block.minecraft.bricks\",\"italic\":false}]}]'}}"
+              },
+              "color": "#852001",
+              "rp": [
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.bricks",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                },
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.count.4",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                }
+              ]
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n\n\n      ",
+            {
+              "item": {
+                "id": "prismarine_shard"
+              },
+              "color": "#20a89b",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "prismarine_shard"
+              },
+              "color": "#20a89b",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "prismarine_shard"
+              },
+              "color": "#20a89b",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "prismarine_shard"
+              },
+              "color": "#20a89b",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "prismarine_shard"
+              },
+              "color": "#20a89b",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "prismarine_bricks",
+                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.prismarine_bricks\",\"italic\":false},{\"text\":\" (x2)\",\"italic\":true}],{\"translate\":\"block.minecraft.prismarine_bricks\",\"italic\":false}]}]'}}"
+              },
+              "color": "#00a38b",
+              "rp": [
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.prismarine_bricks",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                },
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.count.2",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                }
+              ]
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "prismarine_shard"
+              },
+              "color": "#20a89b",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "prismarine_shard"
+              },
+              "color": "#20a89b",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "prismarine_shard"
+              },
+              "color": "#20a89b",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.prismarine_shard",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            }
+          ]
+        ]
       ],
       "prerequisites": [
         "page_3"
@@ -202,7 +987,396 @@
         ]
       ],
       "pages": [
-        "[\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#0e0e12\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.blackstone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"blackstone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#0e0e12\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.blackstone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"blackstone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#0e0e12\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.blackstone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"blackstone\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#0e0e12\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.blackstone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"blackstone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#0e0e12\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.blackstone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"blackstone\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#0e0c0f\"},[{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.polished_blackstone_bricks\",\"font\":\"gm4:guidebook\",\"color\":\"white\"},{\"translate\":\"text.gm4.guidebook.crafting.display.count.16\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"polished_blackstone_bricks\",\"tag\":\"{display:{Name:'[{\\\"translate\\\":\\\"%1$s%3427656$s\\\",\\\"with\\\":[[{\\\"translate\\\":\\\"block.minecraft.polished_blackstone_bricks\\\",\\\"italic\\\":false},{\\\"text\\\":\\\" (x16)\\\",\\\"italic\\\":true}],{\\\"translate\\\":\\\"block.minecraft.polished_blackstone_bricks\\\",\\\"italic\\\":false}]}]'}}\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#0e0e12\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.blackstone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"blackstone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#0e0e12\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.blackstone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"blackstone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#0e0e12\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.blackstone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"blackstone\"}}},\"\\n\\n\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#2b0400\"},[{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.nether_bricks\",\"font\":\"gm4:guidebook\",\"color\":\"white\"},{\"translate\":\"text.gm4.guidebook.crafting.display.count.4\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"nether_bricks\",\"tag\":\"{display:{Name:'[{\\\"translate\\\":\\\"%1$s%3427656$s\\\",\\\"with\\\":[[{\\\"translate\\\":\\\"block.minecraft.nether_bricks\\\",\\\"italic\\\":false},{\\\"text\\\":\\\" (x4)\\\",\\\"italic\\\":true}],{\\\"translate\\\":\\\"block.minecraft.nether_bricks\\\",\\\"italic\\\":false}]}]'}}\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},\"\\n\\n\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#9e0020\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.nether_wart\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"nether_wart\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#9e0020\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.nether_wart\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"nether_wart\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#5e0900\"},[{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.red_nether_bricks\",\"font\":\"gm4:guidebook\",\"color\":\"white\"},{\"translate\":\"text.gm4.guidebook.crafting.display.count.4\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"red_nether_bricks\",\"tag\":\"{display:{Name:'[{\\\"translate\\\":\\\"%1$s%3427656$s\\\",\\\"with\\\":[[{\\\"translate\\\":\\\"block.minecraft.red_nether_bricks\\\",\\\"italic\\\":false},{\\\"text\\\":\\\" (x4)\\\",\\\"italic\\\":true}],{\\\"translate\\\":\\\"block.minecraft.red_nether_bricks\\\",\\\"italic\\\":false}]}]'}}\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#9e0020\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.nether_wart\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"nether_wart\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#691121\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.netherrack\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"netherrack\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#9e0020\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.nether_wart\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"nether_wart\"}}},\"\\n      \",{\"text\":\"**\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Netherrack and Nether Wart can swap slots\"},{\"translate\":\"text.gm4.guidebook.forming_press.6\"}]}]}}]"
+        [
+          [
+            "      ",
+            {
+              "item": {
+                "id": "blackstone"
+              },
+              "color": "#0e0e12",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.blackstone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "blackstone"
+              },
+              "color": "#0e0e12",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.blackstone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "blackstone"
+              },
+              "color": "#0e0e12",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.blackstone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "blackstone"
+              },
+              "color": "#0e0e12",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.blackstone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "blackstone"
+              },
+              "color": "#0e0e12",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.blackstone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "polished_blackstone_bricks",
+                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.polished_blackstone_bricks\",\"italic\":false},{\"text\":\" (x16)\",\"italic\":true}],{\"translate\":\"block.minecraft.polished_blackstone_bricks\",\"italic\":false}]}]'}}"
+              },
+              "color": "#0e0c0f",
+              "rp": [
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.polished_blackstone_bricks",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                },
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.count.16",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                }
+              ]
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "blackstone"
+              },
+              "color": "#0e0e12",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.blackstone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "blackstone"
+              },
+              "color": "#0e0e12",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.blackstone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "blackstone"
+              },
+              "color": "#0e0e12",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.blackstone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n\n\n      ",
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "nether_bricks",
+                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.nether_bricks\",\"italic\":false},{\"text\":\" (x4)\",\"italic\":true}],{\"translate\":\"block.minecraft.nether_bricks\",\"italic\":false}]}]'}}"
+              },
+              "color": "#2b0400",
+              "rp": [
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.nether_bricks",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                },
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.count.4",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                }
+              ]
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n\n\n      ",
+            {
+              "item": {
+                "id": "nether_wart"
+              },
+              "color": "#9e0020",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.nether_wart",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "nether_wart"
+              },
+              "color": "#9e0020",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.nether_wart",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "red_nether_bricks",
+                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.red_nether_bricks\",\"italic\":false},{\"text\":\" (x4)\",\"italic\":true}],{\"translate\":\"block.minecraft.red_nether_bricks\",\"italic\":false}]}]'}}"
+              },
+              "color": "#5e0900",
+              "rp": [
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.red_nether_bricks",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                },
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.count.4",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                }
+              ]
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "nether_wart"
+              },
+              "color": "#9e0020",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.nether_wart",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "netherrack"
+              },
+              "color": "#691121",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.netherrack",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "nether_wart"
+              },
+              "color": "#9e0020",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.nether_wart",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      "
+          ],
+          {
+            "text": "**",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "%1$s%3427655$s",
+                  "with": [
+                    {
+                      "text": "Netherrack and Nether Wart can swap slots"
+                    },
+                    {
+                      "translate": "text.gm4.guidebook.forming_press.6"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
       ],
       "prerequisites": [
         "page_3"
@@ -217,7 +1391,254 @@
         ]
       ],
       "pages": [
-        "[\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#b3a407\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.end_stone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"end_stone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#b3a407\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.end_stone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"end_stone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#b3a407\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.end_stone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"end_stone\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#b3a407\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.end_stone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"end_stone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#b3a407\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.end_stone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"end_stone\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#aba024\"},[{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.end_stone_bricks\",\"font\":\"gm4:guidebook\",\"color\":\"white\"},{\"translate\":\"text.gm4.guidebook.crafting.display.count.16\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"end_stone_bricks\",\"tag\":\"{display:{Name:'[{\\\"translate\\\":\\\"%1$s%3427656$s\\\",\\\"with\\\":[[{\\\"translate\\\":\\\"block.minecraft.end_stone_bricks\\\",\\\"italic\\\":false},{\\\"text\\\":\\\" (x16)\\\",\\\"italic\\\":true}],{\\\"translate\\\":\\\"block.minecraft.end_stone_bricks\\\",\\\"italic\\\":false}]}]'}}\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#b3a407\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.end_stone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"end_stone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#b3a407\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.end_stone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"end_stone\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#b3a407\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.end_stone\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"end_stone\"}}},\"\\n\\n\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#612c5e\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"chorus_fruit\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#612c5e\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"chorus_fruit\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#612c5e\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"chorus_fruit\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#612c5e\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"chorus_fruit\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#51635d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.clay_ball\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"clay_ball\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#612c5e\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"chorus_fruit\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#a3439f\"},[{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.purpur_block\",\"font\":\"gm4:guidebook\",\"color\":\"white\"},{\"translate\":\"text.gm4.guidebook.crafting.display.count.16\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"purpur_block\",\"tag\":\"{display:{Name:'[{\\\"translate\\\":\\\"%1$s%3427656$s\\\",\\\"with\\\":[[{\\\"translate\\\":\\\"block.minecraft.purpur_block\\\",\\\"italic\\\":false},{\\\"text\\\":\\\" (x16)\\\",\\\"italic\\\":true}],{\\\"translate\\\":\\\"block.minecraft.purpur_block\\\",\\\"italic\\\":false}]}]'}}\"}}},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#612c5e\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"chorus_fruit\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#612c5e\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"chorus_fruit\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#612c5e\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"chorus_fruit\"}}}]"
+        [
+          [
+            "      ",
+            {
+              "item": {
+                "id": "end_stone"
+              },
+              "color": "#b3a407",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.end_stone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "end_stone"
+              },
+              "color": "#b3a407",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.end_stone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "end_stone"
+              },
+              "color": "#b3a407",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.end_stone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "end_stone"
+              },
+              "color": "#b3a407",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.end_stone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "end_stone"
+              },
+              "color": "#b3a407",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.end_stone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "end_stone_bricks",
+                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.end_stone_bricks\",\"italic\":false},{\"text\":\" (x16)\",\"italic\":true}],{\"translate\":\"block.minecraft.end_stone_bricks\",\"italic\":false}]}]'}}"
+              },
+              "color": "#aba024",
+              "rp": [
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.end_stone_bricks",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                },
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.count.16",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                }
+              ]
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "end_stone"
+              },
+              "color": "#b3a407",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.end_stone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "end_stone"
+              },
+              "color": "#b3a407",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.end_stone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "end_stone"
+              },
+              "color": "#b3a407",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.end_stone",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n\n\n      ",
+            {
+              "item": {
+                "id": "chorus_fruit"
+              },
+              "color": "#612c5e",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "chorus_fruit"
+              },
+              "color": "#612c5e",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "chorus_fruit"
+              },
+              "color": "#612c5e",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "chorus_fruit"
+              },
+              "color": "#612c5e",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "clay_ball"
+              },
+              "color": "#51635d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.clay_ball",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "chorus_fruit"
+              },
+              "color": "#612c5e",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "purpur_block",
+                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.purpur_block\",\"italic\":false},{\"text\":\" (x16)\",\"italic\":true}],{\"translate\":\"block.minecraft.purpur_block\",\"italic\":false}]}]'}}"
+              },
+              "color": "#a3439f",
+              "rp": [
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.purpur_block",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                },
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.count.16",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                }
+              ]
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "chorus_fruit"
+              },
+              "color": "#612c5e",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "chorus_fruit"
+              },
+              "color": "#612c5e",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "chorus_fruit"
+              },
+              "color": "#612c5e",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.chorus_fruit",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            }
+          ]
+        ]
       ],
       "prerequisites": [
         "page_3"

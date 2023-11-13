@@ -1,41 +1,219 @@
 {
   "id": "tower_structures",
   "name": "Tower Structures",
-  "trigger_id": 90,
+  "trigger_id": 89,
   "module_type": "module",
   "icon": {
     "item": "minecraft:ladder",
     "nbt": "{CustomModelData:3420003}"
   },
   "criteria": {
-    "page_0/requirement_1": {
-      "trigger": "minecraft:player_generates_container_loot",
+    "page_0/badlands": {
+      "trigger": "minecraft:location",
       "conditions": {
-        "loot_table": "gm4_orbis:chests/tower_70"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:badlands"
+              }
+            }
+          }
+        ]
       }
     },
-    "page_0/requirement_2": {
-      "trigger": "minecraft:player_generates_container_loot",
+    "page_0/default": {
+      "trigger": "minecraft:location",
       "conditions": {
-        "loot_table": "gm4_orbis:chests/tower_90"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:default"
+              }
+            }
+          }
+        ]
       }
     },
-    "page_0/requirement_3": {
-      "trigger": "minecraft:player_generates_container_loot",
+    "page_0/desert": {
+      "trigger": "minecraft:location",
       "conditions": {
-        "loot_table": "gm4_orbis:chests/tower_110"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:desert"
+              }
+            }
+          }
+        ]
       }
     },
-    "page_0/requirement_4": {
-      "trigger": "minecraft:player_generates_container_loot",
+    "page_0/snowy": {
+      "trigger": "minecraft:location",
       "conditions": {
-        "loot_table": "gm4_orbis:chests/tower_130"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:snowy"
+              }
+            }
+          }
+        ]
       }
     },
-    "page_0/requirement_5": {
-      "trigger": "minecraft:player_generates_container_loot",
+    "page_0/large_ship": {
+      "trigger": "minecraft:location",
       "conditions": {
-        "loot_table": "gm4_orbis:chests/tower_150"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:ocean/large_ship"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page_0/medium_ship": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:ocean/medium_ship"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page_0/raft": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:ocean/raft"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page_0/small_ship": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:ocean/small_ship"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page_0/segmented_cold_frozen": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:segmented/cold_frozen"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page_0/segmented_frozen": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:segmented/frozen"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page_0/segmented_hot": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:segmented/hot"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page_0/segmented_hot_warm": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:segmented/hot_warm"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page_0/segmented_warm_cold": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_tower_structures:segmented/warm_cold"
+              }
+            }
+          }
+        ]
       }
     }
   },
@@ -50,26 +228,65 @@
       ],
       "requirements": [
         [
-          "page_0/requirement_1"
+          "page_0/badlands"
         ],
         [
-          "page_0/requirement_2"
+          "page_0/default"
         ],
         [
-          "page_0/requirement_3"
+          "page_0/desert"
         ],
         [
-          "page_0/requirement_4"
+          "page_0/snowy"
         ],
         [
-          "page_0/requirement_5"
+          "page_0/large_ship"
+        ],
+        [
+          "page_0/medium_ship"
+        ],
+        [
+          "page_0/raft"
+        ],
+        [
+          "page_0/small_ship"
+        ],
+        [
+          "page_0/segmented_cold_frozen"
+        ],
+        [
+          "page_0/segmented_frozen"
+        ],
+        [
+          "page_0/segmented_hot"
+        ],
+        [
+          "page_0/segmented_hot_warm"
+        ],
+        [
+          "page_0/segmented_warm_cold"
         ]
       ],
       "pages": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Orbis/Tower_Structures\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Orbis/Tower_Structures\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Tower Structures\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Towers can be found on the surface. These towers contain rare loot and special spawners.\"},{\"translate\":\"text.gm4.guidebook.tower_structures.1\"}]}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "translate": "text.gm4.guidebook.tower_structures.1",
+            "fallback": "Towers can be found on the surface. These towers contain rare loot and special spawners."
+          }
+        ]
       ],
       "pages_locked": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Orbis/Tower_Structures\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Orbis/Tower_Structures\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Tower Structures\",\"underlined\":true},{\"text\":\"\\n\"},{\"text\":\"???\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Undiscovered\"},{\"translate\":\"text.gm4.guidebook.undiscovered\"}],\"italic\":true,\"color\":\"red\"}]}}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "insert": "locked_text"
+          }
+        ]
       ]
     },
     {
@@ -82,26 +299,65 @@
       ],
       "requirements": [
         [
-          "page_0/requirement_1"
+          "page_0/badlands"
         ],
         [
-          "page_0/requirement_2"
+          "page_0/default"
         ],
         [
-          "page_0/requirement_3"
+          "page_0/desert"
         ],
         [
-          "page_0/requirement_4"
+          "page_0/snowy"
         ],
         [
-          "page_0/requirement_5"
+          "page_0/large_ship"
+        ],
+        [
+          "page_0/medium_ship"
+        ],
+        [
+          "page_0/raft"
+        ],
+        [
+          "page_0/small_ship"
+        ],
+        [
+          "page_0/segmented_cold_frozen"
+        ],
+        [
+          "page_0/segmented_frozen"
+        ],
+        [
+          "page_0/segmented_hot"
+        ],
+        [
+          "page_0/segmented_hot_warm"
+        ],
+        [
+          "page_0/segmented_warm_cold"
         ]
       ],
       "pages": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Orbis/Tower_Structures\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Orbis/Tower_Structures\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Tower Structures\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Towers can be found on the surface. These towers contain rare loot and special spawners.\\n\\nThe spawners can be moved with Spawner Minecarts.\"},{\"translate\":\"text.gm4.guidebook.tower_structures.1.spawner_minecarts\"}]}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "translate": "text.gm4.guidebook.tower_structures.1.spawner_minecarts",
+            "fallback": "Towers can be found on the surface. These towers contain rare loot and special spawners.\n\nThe spawners can be moved with Spawner Minecarts."
+          }
+        ]
       ],
       "pages_locked": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Orbis/Tower_Structures\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Orbis/Tower_Structures\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Tower Structures\",\"underlined\":true},{\"text\":\"\\n\"},{\"text\":\"???\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Undiscovered\"},{\"translate\":\"text.gm4.guidebook.undiscovered\"}],\"italic\":true,\"color\":\"red\"}]}}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "insert": "locked_text"
+          }
+        ]
       ]
     }
   ]

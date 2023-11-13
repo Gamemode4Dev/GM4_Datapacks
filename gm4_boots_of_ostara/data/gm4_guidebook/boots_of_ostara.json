@@ -1,7 +1,7 @@
 {
   "id": "boots_of_ostara",
   "name": "Boots of Ostara",
-  "trigger_id": 10,
+  "trigger_id": 87,
   "module_type": "module",
   "icon": {
     "item": "minecraft:leather_boots",
@@ -52,7 +52,15 @@
       "enable": [],
       "requirements": [],
       "pages": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Boots_of_Ostara\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Boots_of_Ostara\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Boots of Ostara\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Boots of Ostara can be crafted to aid in the spreading of grass and moss.\\n\\nThe boots can be crafted in a Custom Crafter.\"},{\"translate\":\"text.gm4.guidebook.boot_of_ostara.1\"}]}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "translate": "text.gm4.guidebook.boot_of_ostara.1",
+            "fallback": "Boots of Ostara can be crafted to aid in the spreading of grass and moss.\n\nThe boots can be crafted in a Custom Crafter."
+          }
+        ]
       ]
     },
     {
@@ -67,7 +75,126 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"The recipe for the Boots of Ostara is as follows:\"},{\"translate\":\"text.gm4.guidebook.boots_of_ostara.2\"}]},\"\\n\\n  \",{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#4d8a32\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.wheat_seeds\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"wheat_seeds\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#314711\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.moss_block\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"moss_block\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#bd771c\"},[{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.leather_boots\",\"font\":\"gm4:guidebook\",\"color\":\"#a06540\"},{\"translate\":\"text.gm4.guidebook.crafting.display.overlay.minecraft.leather_boots_overlay\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"leather_boots\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#029c1b\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.grass_block\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"grass_block\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#186b13\"},[{\"translate\":\"text.gm4.guidebook.crafting.display.item.gm4.boots_of_ostara\",\"font\":\"gm4:guidebook\",\"color\":\"#388C2B\"},{\"translate\":\"text.gm4.guidebook.crafting.display.overlay.gm4.boots_of_ostara_overlay\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"leather_boots\",\"tag\":\"{CustomModelData:1,gm4_boots_of_ostara:1b,HideFlags:64,display:{Name:'{\\\"translate\\\":\\\"%1$s%3427655$s\\\",\\\"with\\\":[\\\"Boots of Ostara\\\",{\\\"translate\\\":\\\"item.gm4.boots_of_ostara\\\"}],\\\"italic\\\":false}',color:3705899,Lore:['{\\\"translate\\\":\\\"%1$s%3427655$s\\\",\\\"with\\\":[\\\"Brings abundance beneath you!\\\",{\\\"translate\\\":\\\"item.gm4.boots_of_ostara.lore\\\"}],\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}}\"}}},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#008dd9\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.water_bucket\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"water_bucket\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[\"\u2610\",{\"translate\":\"text.gm4.guidebook.crafting.display.empty_slot\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}]}]"
+        [
+          {
+            "translate": "text.gm4.guidebook.boots_of_ostara.2",
+            "fallback": "The recipe for the Boots of Ostara is as follows:"
+          },
+          [
+            "\n\n  ",
+            {
+              "translate": "container.gm4.custom_crafter",
+              "fallback": "Custom Crafter"
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "air"
+              }
+            },
+            {
+              "item": {
+                "id": "wheat_seeds"
+              },
+              "color": "#4d8a32",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.wheat_seeds",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "air"
+              }
+            },
+            "\n",
+            "      ",
+            {
+              "item": {
+                "id": "moss_block"
+              },
+              "color": "#314711",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.moss_block",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "leather_boots"
+              },
+              "color": "#bd771c",
+              "rp": [
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.item.minecraft.leather_boots",
+                  "font": "gm4:guidebook",
+                  "color": "#a06540"
+                },
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.overlay.minecraft.leather_boots_overlay",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                }
+              ]
+            },
+            {
+              "item": {
+                "id": "grass_block"
+              },
+              "color": "#029c1b",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.grass_block",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "leather_boots",
+                "tag": "{CustomModelData:1,gm4_boots_of_ostara:1b,HideFlags:64,display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Boots of Ostara\",{\"translate\":\"item.gm4.boots_of_ostara\"}],\"italic\":false}',color:3705899,Lore:['{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Brings abundance beneath you!\",{\"translate\":\"item.gm4.boots_of_ostara.lore\"}],\"color\":\"dark_gray\",\"italic\":true}']}}"
+              },
+              "color": "#186b13",
+              "rp": [
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.item.gm4.boots_of_ostara",
+                  "font": "gm4:guidebook",
+                  "color": "#388C2B"
+                },
+                {
+                  "translate": "text.gm4.guidebook.crafting.display.overlay.gm4.boots_of_ostara_overlay",
+                  "font": "gm4:guidebook",
+                  "color": "white"
+                }
+              ]
+            },
+            "\n",
+            "      ",
+            {
+              "item": {
+                "id": "air"
+              }
+            },
+            {
+              "item": {
+                "id": "water_bucket"
+              },
+              "color": "#008dd9",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.water_bucket",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "air"
+              }
+            }
+          ]
+        ]
       ]
     },
     {
@@ -84,7 +211,12 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wearing the boots and holding a grass block in the offhand will spread grass onto dirt beneath the player. Armor stands wearing the boots and holding a grass block will have the same effect.\"},{\"translate\":\"text.gm4.guidebook.boots_of_ostara.3\"}]}]"
+        [
+          {
+            "translate": "text.gm4.guidebook.boots_of_ostara.3",
+            "fallback": "Wearing the boots and holding a grass block in the offhand will spread grass onto dirt beneath the player. Armor stands wearing the boots and holding a grass block will have the same effect."
+          }
+        ]
       ],
       "grants": [
         "page_1"
@@ -104,7 +236,12 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wearing the boots and holding a grass block in the offhand will spread grass onto dirt beneath the player. Armor stands wearing the boots and holding a grass block will have the same effect.\\n\\nBoots of Ostara also prevent desire lines.\"},{\"translate\":\"text.gm4.guidebook.boots_of_ostara.3.desire_lines\"}]}]"
+        [
+          {
+            "translate": "text.gm4.guidebook.boots_of_ostara.3.desire_lines",
+            "fallback": "Wearing the boots and holding a grass block in the offhand will spread grass onto dirt beneath the player. Armor stands wearing the boots and holding a grass block will have the same effect.\n\nBoots of Ostara also prevent desire lines."
+          }
+        ]
       ],
       "grants": [
         "page_1"

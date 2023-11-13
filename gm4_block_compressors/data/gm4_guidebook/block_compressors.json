@@ -1,7 +1,7 @@
 {
   "id": "block_compressors",
   "name": "Block Compressors",
-  "trigger_id": 8,
+  "trigger_id": 54,
   "module_type": "module",
   "icon": {
     "item": "minecraft:piston",
@@ -30,14 +30,19 @@
     "page_0/open_custom_crafter": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:dropper"
-            ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]}'}"
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:dropper"
+                ],
+                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]}'}"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "page_1/requirement_1": {
@@ -86,14 +91,19 @@
     "page_2/open_block_compressor": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:dropper"
-            ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Compressor\",{\"translate\":\"container.gm4.block_compressor\"}]}'}"
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:dropper"
+                ],
+                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Compressor\",{\"translate\":\"container.gm4.block_compressor\"}]}'}"
+              }
+            }
           }
-        }
+        ]
       }
     }
   },
@@ -110,10 +120,25 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Block_Compressors\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Block_Compressors\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Block Compressors\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Custom Crafters can be upgraded into Block Compressors to cut down on bulk storage. Item stacks can be compressed into a single item, and vice versa.\"},{\"translate\":\"text.gm4.guidebook.block_compressors.1\"}]}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "translate": "text.gm4.guidebook.block_compressors.1",
+            "fallback": "Custom Crafters can be upgraded into Block Compressors to cut down on bulk storage. Item stacks can be compressed into a single item, and vice versa."
+          }
+        ]
       ],
       "pages_locked": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Block_Compressors\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Block_Compressors\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Block Compressors\",\"underlined\":true},{\"text\":\"\\n\"},{\"text\":\"???\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Undiscovered\"},{\"translate\":\"text.gm4.guidebook.undiscovered\"}],\"italic\":true,\"color\":\"red\"}]}}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "insert": "locked_text"
+          }
+        ]
       ]
     },
     {
@@ -128,7 +153,136 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"To create a Block Compressor, the following recipe must be arranged in a Custom Crafter:\"},{\"translate\":\"text.gm4.guidebook.block_compressors.2\"}]},\"\\n\\n  \",{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]},\"\\n      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#96958c\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot\",\"font\":\"gm4:guidebook\",\"color\":\"white\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"iron_ingot\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#471e61\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.obsidian\",\"font\":\"gm4:guidebook\",\"color\":\"white\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"obsidian\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#96958c\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot\",\"font\":\"gm4:guidebook\",\"color\":\"white\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"iron_ingot\"}}},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#a36f2f\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.piston\",\"font\":\"gm4:guidebook\",\"color\":\"white\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"piston\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#a3439f\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.purpur_block\",\"font\":\"gm4:guidebook\",\"color\":\"white\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"purpur_block\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#a36f2f\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.piston\",\"font\":\"gm4:guidebook\",\"color\":\"white\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"piston\"}}},\" \u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2588\",\"color\":\"#ac68e8\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.gm4.block_compressor\",\"font\":\"gm4:guidebook\",\"color\":\"white\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"dropper\",\"tag\":\"{display:{Name:'{\\\"translate\\\":\\\"%1$s%3427655$s\\\",\\\"with\\\":[\\\"Compressor\\\",{\\\"translate\\\":\\\"block.gm4.block_compressor\\\"}],\\\"italic\\\":false}'}}\"}}},\"\\n\",\"      \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#96958c\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot\",\"font\":\"gm4:guidebook\",\"color\":\"white\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"iron_ingot\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#471e61\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.obsidian\",\"font\":\"gm4:guidebook\",\"color\":\"white\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"obsidian\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#96958c\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot\",\"font\":\"gm4:guidebook\",\"color\":\"white\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"iron_ingot\"}}}]}]"
+        [
+          {
+            "translate": "text.gm4.guidebook.block_compressors.2",
+            "fallback": "To create a Block Compressor, the following recipe must be arranged in a Custom Crafter:"
+          },
+          [
+            "\n\n  ",
+            {
+              "translate": "container.gm4.custom_crafter",
+              "fallback": "Custom Crafter"
+            },
+            "\n      ",
+            {
+              "item": {
+                "id": "iron_ingot"
+              },
+              "color": "#96958c",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidian"
+              },
+              "color": "#471e61",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.obsidian",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "iron_ingot"
+              },
+              "color": "#96958c",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n",
+            "      ",
+            {
+              "item": {
+                "id": "piston"
+              },
+              "color": "#a36f2f",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.piston",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "purpur_block"
+              },
+              "color": "#a3439f",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.purpur_block",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "piston"
+              },
+              "color": "#a36f2f",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.piston",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " \u2192 ",
+            {
+              "item": {
+                "id": "dropper",
+                "tag": "{display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Compressor\",{\"translate\":\"block.gm4.block_compressor\"}],\"italic\":false}'}}"
+              },
+              "color": "#ac68e8",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.gm4.block_compressor",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\n",
+            "      ",
+            {
+              "item": {
+                "id": "iron_ingot"
+              },
+              "color": "#96958c",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "obsidian"
+              },
+              "color": "#471e61",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.obsidian",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "iron_ingot"
+              },
+              "color": "#96958c",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            }
+          ]
+        ]
       ],
       "grants": [
         "page_0"
@@ -149,7 +303,12 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"To select the amount of compression, put that amount of items inside the block compressor, then drop the items to be compressed on top. Putting 1 item in the compressor will decompress any items on top.\"},{\"translate\":\"text.gm4.guidebook.block_compressors.3\"}]}]"
+        [
+          {
+            "translate": "text.gm4.guidebook.block_compressors.3",
+            "fallback": "To select the amount of compression, put that amount of items inside the block compressor, then drop the items to be compressed on top. Putting 1 item in the compressor will decompress any items on top."
+          }
+        ]
       ],
       "grants": [
         "page_1"

@@ -1,7 +1,7 @@
 {
   "id": "forterra_shamir",
   "name": "Forterra Shamir",
-  "trigger_id": 47,
+  "trigger_id": 26,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {
@@ -26,7 +26,15 @@
       "enable": [],
       "requirements": [],
       "pages": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Metallurgy/Forterra_Shamir\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Metallurgy/Forterra_Shamir\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Forterra Shamir\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Forterra causes extra raw metals, redstone, and amethyst to be found when mining stone.\"},{\"translate\":\"text.gm4.guidebook.forterra_shamir.1\"}]}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "translate": "text.gm4.guidebook.forterra_shamir.1",
+            "fallback": "Forterra causes extra raw metals, redstone, and amethyst to be found when mining stone."
+          }
+        ]
       ]
     },
     {
@@ -38,7 +46,12 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"The Forterra Shamir is found on Bismuth Bands. It can be placed onto pickaxes.\\n\\nWhen mining stone, raw copper, iron gold, as well as redstone and amethyst shards will drop. Drop rates are height dependent.\"},{\"translate\":\"text.gm4.guidebook.forterra_shamir.2\"}]}]"
+        [
+          {
+            "translate": "text.gm4.guidebook.forterra_shamir.2",
+            "fallback": "The Forterra Shamir is found on Bismuth Bands. It can be placed onto pickaxes.\n\nWhen mining stone, raw copper, iron gold, as well as redstone and amethyst shards will drop. Drop rates are height dependent."
+          }
+        ]
       ]
     }
   ]

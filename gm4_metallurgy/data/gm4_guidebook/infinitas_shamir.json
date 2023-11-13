@@ -1,12 +1,12 @@
 {
-  "id": "ender_bolt_shamir",
-  "name": "Ender Bolt Shamir",
-  "trigger_id": 27,
+  "id": "infinitas_shamir",
+  "name": "Infinitas Shamir",
+  "trigger_id": 19,
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {
     "item": "minecraft:anvil",
-    "nbt": "{CustomModelData:3420105}"
+    "nbt": "{CustomModelData:3420100}"
   },
   "criteria": {
     "page_1/requirement": {
@@ -14,7 +14,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'ender_bolt'}}"
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'infinitas'}}"
           }
         ]
       }
@@ -31,8 +31,8 @@
             "insert": "header"
           },
           {
-            "translate": "text.gm4.guidebook.ender_bolt_shamir.1",
-            "fallback": "Ender Bolt creates a damaging wither chain when attacking a mob."
+            "translate": "text.gm4.guidebook.infinitas_shamir.1",
+            "fallback": "Infinitas pulls mobs and items towards the user."
           }
         ]
       ]
@@ -48,8 +48,8 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.ender_bolt_shamir.2",
-            "fallback": "The Ender Bolt Shamir is found on Thorium Bands. It can be placed onto swords and tridents.\n\nA mob hit will Ender Bolt will wither away, passing the effect to other nearby mobs."
+            "translate": "text.gm4.guidebook.infinitas_shamir.2",
+            "fallback": "The Infinitas Shamir is found on Curie's Bismium Bands. It can be placed onto buckets.\n\nHolding the bucket will attract mobs and items in an 11x11 area. Mobs affected by infinitas will be on cooldown until the player moves away or deselects the bucket."
           }
         ]
       ]

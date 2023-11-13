@@ -99,7 +99,7 @@ ID_TO_NAME = {
     "mending_tanks": "Mending Tanks",
     "vibro_shamir": "Vibro Shamir",
     "tinker_shamir": "Tinker Shamir",
-    "spiraculum_shamir": "Spiraculum Shamir",
+    "infinitas_shamir": "Infinitas Shamir",
     "sensus_shamir": "Sensus Shamir",
     "musical_shamir": "Musical Shamir",
     "moneo_shamir": "Moneo Shamir",
@@ -612,6 +612,7 @@ for folder in os.listdir():
         section["pages_locked"] = temp_pages
 
     # print(guidebook["name"])
-    # with open(f"{folder}/data/gm4_guidebook/{key}.json", "w") as f:
-    with open(f"temp/out/{key}.json", "w") as f:
+    with open(f"{folder}/data/gm4_guidebook/{key}.json", "w") as f:
+    # with open(f"temp/out/{key}.json", "w") as f:
       json.dump(guidebook, f, indent=2)
+      f.write("\n")

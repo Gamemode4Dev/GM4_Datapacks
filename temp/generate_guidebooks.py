@@ -1,6 +1,6 @@
 from beet import Function, Advancement, LootTable, Context, FunctionTag
 import nbtlib
-from typing import TypedDict
+from typing import TypedDict, Any
 import json
 import os
 
@@ -29,14 +29,14 @@ class Book(TypedDict):
   module_type: str
   base_module: str
   icon: dict[str, str]
-  criteria: dict[str, dict]
+  criteria: dict[str, dict[Any, Any]]
   sections: list[Section]
   trigger_id: int
 
 
-def get_pos_hash(module_id):
+def get_pos_hash(module_id: str):
   id = module_id.replace("_", "")
-  n = []
+  n:list[int] = []
   for l in id:
     n.append(ord(l) - 96)
   while len(n) < 11:
@@ -45,7 +45,7 @@ def get_pos_hash(module_id):
   return id
 
 
-def generate_book_header(book_dict: Book) -> list:
+def generate_book_header(book_dict: Book) -> list[Any]:
   return [
     {
       "text": "⌂",
@@ -126,8 +126,8 @@ def char_advance(str: str) -> int:
 
 
 def split_into_lines(str: str) -> list[int]:
-  lines = []
-  words = []
+  lines:list[Any] = []
+  words:list[Any] = []
   for word in str.split(" "):
     wlen = 0
     for char in word:
@@ -169,16 +169,16 @@ def get_toc_line(book_dict: Book) -> str:
 def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]]:
   book_id = book_dict["id"]
   sections = book_dict["sections"]
-  page_storage = []
-  fallback_storage = []
+  page_storage:list[Any] = []
+  fallback_storage:list[Any] = []
 
-  functions = [{
+  functions:list[Any] = [{
     "function": "minecraft:set_nbt",
     "tag": "{CustomModelData:3420001,gm4_guidebook:1b,title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
   }]
 
   for section in sections:
-    enable_conditions = []
+    enable_conditions:list[Any] = []
 
     for module_check in section["enable"]:
       condition = {
@@ -210,8 +210,8 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
       }
     }
 
-    enabled_ops = []
-    fallback_ops = []
+    enabled_ops:list[Any] = []
+    fallback_ops:list[Any] = []
     for page in section["pages"]:
       enabled_ops.append({
         "op": "append",
@@ -236,7 +236,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
       }
       fallback_ops = [fallback_default] * len(enabled_ops)
 
-    function = {
+    function: dict[Any, Any] = {
       "function": "minecraft:copy_nbt",
       "source": {
         "type": "minecraft:storage",
@@ -245,7 +245,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
       "ops": enabled_ops,
       "conditions": [*enable_conditions]
     }
-    fallback_function = {
+    fallback_function: dict[Any, Any] = {
       "function": "minecraft:copy_nbt",
       "source": {
         "type": "minecraft:storage",
@@ -525,7 +525,7 @@ def beet_default(ctx: Context):
   if not os.path.exists(f"{ctx.directory}/data/gm4_guidebook"):
     return
 
-  book_ids = []
+  book_ids: list[Any] = []
   for file in os.listdir(f"{ctx.directory}/data/gm4_guidebook/"):
     if not file.endswith(".json"):
       continue

@@ -1,7 +1,7 @@
 {
   "id": "liquid_tanks",
   "name": "Liquid Tanks",
-  "trigger_id": 34,
+  "trigger_id": 64,
   "module_type": "base",
   "icon": {
     "item": "minecraft:glass",
@@ -59,14 +59,19 @@
     "page_1/open_empty_tank": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:hopper"
-            ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Empty Tank\",{\"translate\":\"container.gm4.liquid_tank.empty\"}]}'}"
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:hopper"
+                ],
+                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Empty Tank\",{\"translate\":\"container.gm4.liquid_tank.empty\"}]}'}"
+              }
+            }
           }
-        }
+        ]
       }
     }
   },
@@ -76,7 +81,15 @@
       "enable": [],
       "requirements": [],
       "pages": [
-        "[\"\",{\"text\":\"\u25c0 \",\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Back\"},{\"translate\":\"text.gm4.guidebook.back\"}],\"color\":\"#4AA0C7\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Return to Table of Contents\"},{\"translate\":\"text.gm4.guidebook.return_to_table\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\"},{\"text\":\"\u2636 \",\"color\":\"#864BC7\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Liquid_Tanks\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Wiki\"},{\"translate\":\"text.gm4.guidebook.wiki\"}],\"color\":\"#864BC7\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://wiki.gm4.co/wiki/Liquid_Tanks\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Open External Wiki\"},{\"translate\":\"text.gm4.guidebook.open_wiki\"}],\"italic\":true,\"color\":\"gold\"}]}},{\"text\":\"\\n\\n\"},{\"text\":\"Liquid Tanks\",\"underlined\":true},{\"text\":\"\\n\"},{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Liquid Tanks allow players to store various liquids in bulk.\\n\\nThe first slot of the liquid tank acts as both the input and output of the liquid tank.\"},{\"translate\":\"text.gm4.guidebook.liquid_tanks.1\"}]}]"
+        [
+          {
+            "insert": "header"
+          },
+          {
+            "translate": "text.gm4.guidebook.liquid_tanks.1",
+            "fallback": "Liquid Tanks allow players to store various liquids in bulk.\n\nThe first slot of the liquid tank acts as both the input and output of the liquid tank."
+          }
+        ]
       ]
     },
     {
@@ -100,7 +113,99 @@
         ]
       ],
       "pages": [
-        "[\"\",{\"translate\":\"%1$s%3427655$s\",\"with\":[{\"text\":\"Liquid tanks can also interact with surrounding blocks and entities.\\n\\nTo create an Liquid Tank, arrange the following (shapeless) recipe in a hopper then drop a glass block on top of it:\"},{\"translate\":\"text.gm4.guidebook.liquid_tanks.2\"}]},\"\\n\\n  \",{\"translate\":\"container.hopper\"},\"\\n    \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#3c4037\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.dispenser\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"dispenser\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#1c1c17\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.hopper\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"hopper\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#919089\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.bucket\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"bucket\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#777a6d\"},{\"translate\":\"text.gm4.guidebook.crafting.display.block.minecraft.iron_trapdoor\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"iron_trapdoor\"}}},{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2612\",\"color\":\"#732728\"},{\"translate\":\"text.gm4.guidebook.crafting.display.item.minecraft.comparator\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"comparator\"}}},\" \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u25fc\",\"color\":\"#7ecfb6\"},{\"translate\":\"text.gm4.guidebook.crafting.catalyst.block.minecraft.glass\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"glass\"}}},\"\u2192 \",{\"translate\":\"%1$s%3427656$s\",\"with\":[{\"text\":\"\u2588\",\"color\":\"#4d8e99\"},{\"translate\":\"text.gm4.guidebook.crafting.display.container.gm4.liquid_tank.empty\",\"font\":\"gm4:guidebook\",\"color\":\"white\"}],\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"hopper\",\"tag\":\"{display:{Name:'{\\\"translate\\\":\\\"%1$s%3427655$s\\\",\\\"with\\\":[\\\"Empty Tank\\\",{\\\"translate\\\":\\\"container.gm4.liquid_tank.empty\\\"}],\\\"italic\\\":false}'}}\"}}}]"
+        [
+          {
+            "translate": "text.gm4.guidebook.liquid_tanks.2",
+            "fallback": "Liquid tanks can also interact with surrounding blocks and entities.\n\nTo create an Liquid Tank, arrange the following (shapeless) recipe in a hopper then drop a glass block on top of it:"
+          },
+          [
+            "\n\n  ",
+            {
+              "translate": "container.hopper"
+            },
+            "\n    ",
+            {
+              "item": {
+                "id": "dispenser"
+              },
+              "color": "#3c4037",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.dispenser",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "hopper"
+              },
+              "color": "#1c1c17",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.hopper",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "bucket"
+              },
+              "color": "#919089",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.bucket",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "iron_trapdoor"
+              },
+              "color": "#777a6d",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.iron_trapdoor",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            {
+              "item": {
+                "id": "comparator"
+              },
+              "color": "#732728",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.comparator",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            " ",
+            {
+              "item": {
+                "id": "glass"
+              },
+              "color": "#7ecfb6",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.catalyst.block.minecraft.glass",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            },
+            "\u2192 ",
+            {
+              "item": {
+                "id": "hopper",
+                "tag": "{display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Empty Tank\",{\"translate\":\"container.gm4.liquid_tank.empty\"}],\"italic\":false}'}}"
+              },
+              "color": "#4d8e99",
+              "rp": {
+                "translate": "text.gm4.guidebook.crafting.display.container.gm4.liquid_tank.empty",
+                "font": "gm4:guidebook",
+                "color": "white"
+              }
+            }
+          ]
+        ]
       ]
     }
   ]
