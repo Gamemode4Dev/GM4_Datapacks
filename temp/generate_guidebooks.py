@@ -412,7 +412,7 @@ def generate_reward_function(section: Section, book_id: str, book_name: str) -> 
     f"{start} tellraw @s {nbtlib.serialize_tag(tellraw)}",
     f"{start} advancement grant @s only gm4_guidebook:{book_id}/display/{section['name']}"
   ])
-  if "grant" in section:
+  if "grants" in section:
     reward.append([f"{start} advancement grant @s only gm4_guidebook:{book_id}/{grant}" for grant in section["grants"]])
   return reward
 

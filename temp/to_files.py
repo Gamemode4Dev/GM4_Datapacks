@@ -168,13 +168,51 @@ ID_TO_NAME = {
 
 
 def parse_item(item):
+  # return item
   if item["with"][0] == "\u2610":
     return {"item": {"id": "air"}}
+  elif item["with"][0] == "\u25fc":
+    return {
+      "item": item["hoverEvent"]["contents"],
+      "type": "catalyst",
+      "color": item["with"][0]["color"],
+      "rp": item["with"][1],
+    }
+  elif item["with"][0] == "\u2588":
+    return {
+      "item": item["hoverEvent"]["contents"],
+      "type": "block",
+      "color": item["with"][0]["color"],
+      "rp": item["with"][1],
+    }
   else:
     return {
       "item": item["hoverEvent"]["contents"],
+      "color": item["with"][0]["color"],
       "rp": item["with"][1],
     }
+
+
+def untranslate(component):
+  if type(component) == list:
+    return [untranslate(c) for c in component]
+  if type(component) != dict:
+    return component
+  if ("translate" in component) and component["translate"] == "%1$s%3427655$s":
+    if type(component["with"][1]) != dict:
+      # print(component["with"][1])
+      return component
+    if (type(component["with"][0]) == dict) and (list(component["with"][0].keys()) == ["text"]):
+      return {
+          "translate": component["with"][1]["translate"],
+          "fallback": component["with"][0]["text"]
+      }
+
+    return {
+      "translate": component["with"][1]["translate"],
+      "fallback": component["with"][0]
+    }
+  return component
 
 
 def simplify_page(page, name):
@@ -192,7 +230,7 @@ def simplify_page(page, name):
       new_page.append("header_end")
     elif "text" in page[i] and page[i]["text"] == "???":
       new_page.append("hidden")
-    elif "with" in page[i] and (page[i]["with"][0] == "\u2610" or (type(page[i]["with"][0]) == dict and page[i]["with"][0]["text"] == "\u2612")):
+    elif "with" in page[i] and (page[i]["with"][0] == "\u2610" or (type(page[i]["with"][0]) == dict and (page[i]["with"][0]["text"] in ("\u2612", "\u2588", "\u25fc")))):
       new_page.append(parse_item(page[i]))
     else:
       new_page.append(page[i])
@@ -205,14 +243,51 @@ def simplify_page(page, name):
       del new_page[1]
 
   for i in range(len(new_page)):
-    if type(new_page[i]) == dict and "translate" in new_page[i] and new_page[i]["translate"] == "%1$s%3427655$s":
-      if len(dict.keys(new_page[i])) != 2:
-        continue
-      if type(new_page[i]["with"][1]) == dict and len(dict.keys(new_page[i]["with"][1])) == 1:
-        if re.match(r"text\.gm4\.guidebook\..+\d+.*", new_page[i]["with"][1]["translate"]):
-          new_page[i] = new_page[i]["with"][0]
-          if type(new_page[i]) == dict and list(new_page[i].keys()) == ["text"]:
-            new_page[i] = new_page[i]["text"]
+    if new_page[i] == "hidden":
+      new_page[i] = {"insert": "locked_text"}
+
+  # for i in range(len(new_page)):
+  #   if type(new_page[i]) == dict and "translate" in new_page[i] and new_page[i]["translate"] == "%1$s%3427655$s":
+  #     if len(dict.keys(new_page[i])) != 2:
+  #       print("WHAT?")
+  #       print(name)
+  #       print(page)
+  #       print("\n")
+  #       print(new_page[i])
+  #     if type(new_page[i]["with"][1]) == dict and len(dict.keys(new_page[i]["with"][1])) == 1:
+  #       if re.match(r"text\.gm4\.guidebook\..+\d+.*", new_page[i]["with"][1]["translate"]):
+  #         new_page[i] = new_page[i]["with"][0]
+  #         if type(new_page[i]) == dict and list(new_page[i].keys()) == ["text"]:
+  #           new_page[i] = new_page[i]["text"]
+  new_page = untranslate(new_page)
+  new_page = group_recipes(new_page)
+  return new_page
+
+
+def group_recipes(page):
+  new_page = []
+  recipe = []
+  for phrase in page:
+    if type(phrase) == dict and "item" in phrase:
+      recipe.append(phrase)
+      continue
+    if type(phrase) == dict and "translate" in phrase and re.match(r"container\.", phrase["translate"]):
+      recipe.append(phrase)
+      continue
+    if type(phrase) == str and re.fullmatch(r"[ \n\u2192]*", phrase):
+      recipe.append(phrase)
+      continue
+    if recipe != []:
+      if len(recipe) == 1:
+        recipe = recipe[0]
+      new_page.append(recipe)
+      recipe = []
+    new_page.append(phrase)
+
+  if recipe != []:
+    if len(recipe) == 1:
+      recipe = recipe[0]
+    new_page.append(recipe)
   return new_page
 
 
