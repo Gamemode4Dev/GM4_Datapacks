@@ -20,5 +20,4 @@ for node in generate_tree(range(500),name="" , key=int, root=("gm4_guidebook:upd
                 "clickEvent":{"action":"change_page","value":f"{node.value}"},
                 "hoverEvent":{"action":"show_text","contents":[{"translate":"text.gm4.guidebook.jump_to_section","fallback":"Jump to Section","color":"gold"}]}
               }
-            execute if score $click gm4_guide_pages matches node.value run data modify block 29999998 1 7133 Text1 set value json.dumps(page,separators=(',',':'))
-            
+            execute if score $click gm4_guide_pages matches node.value run data modify block 29999998 1 7133 front_text.messages[0] set value json.dumps(page,separators=(',',':'))

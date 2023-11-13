@@ -6,7 +6,7 @@
 
 # find proper click event
 function gm4_guidebook:update_storage/lectern/click_event
-data modify storage gm4_guidebook:temp page append from block 29999998 1 7133 Text1
+data modify storage gm4_guidebook:temp page append from block 29999998 1 7133 front_text.messages[0]
 
 # add blank page for each module
 data modify storage gm4_guidebook:register toc_back append value '[""]'

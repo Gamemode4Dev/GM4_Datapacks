@@ -17,17 +17,22 @@
             "range": 2
           }
         ],
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:lectern"
-            ],
-            "nbt": "{Book:{tag:{gm4_guidebook:{lectern:0b}}}}",
-            "state": {
-              "has_book": true
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:lectern"
+                ],
+                "nbt": "{Book:{tag:{gm4_guidebook:{lectern:0b}}}}",
+                "state": {
+                  "has_book": true
+                }
+              }
             }
           }
-        }
+        ]
       }
     }
   },
