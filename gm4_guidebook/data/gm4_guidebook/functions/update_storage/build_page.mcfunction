@@ -1,9 +1,9 @@
+import json
 # builds each page of the table of contents
 # @s = none
 # located at world spawn
 # run from gm4_guidebook:update_storage/build_toc
 # run from self
-import json
 
 # build lines
 scoreboard players set $line_count gm4_guide 2

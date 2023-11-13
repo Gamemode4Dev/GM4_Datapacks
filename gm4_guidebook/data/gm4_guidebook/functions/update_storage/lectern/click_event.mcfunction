@@ -1,3 +1,4 @@
+import json
 # search tree to build the line with the proper click event
 # @s = none
 # located at world spawn
@@ -6,7 +7,6 @@
 ### NOTE: This can be optimized by using a search tree only at the beginning, 
 ### since each subsequent search is linear and just one higher than the last
 
-import json
 
 for node in generate_tree(range(500),name="" , key=int, root=("gm4_guidebook:update_storage/lectern/click_event")):
     append function node.parent:
