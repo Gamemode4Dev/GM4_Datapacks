@@ -5,6 +5,9 @@ version: 1.9.X
 data_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
   - gm4_zauber_cauldrons.generate
   - gm4.plugins.extend.module

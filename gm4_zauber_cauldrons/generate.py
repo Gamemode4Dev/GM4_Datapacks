@@ -30,6 +30,7 @@ def beet_default(ctx: Context):
     generate_armor_recipes(ctx)
     generate_crystal_recipes(ctx)
     generate_potion_recipes(ctx)
+    generate_magicol_recipes(ctx)
 
 
 def generate_armor_recipes(ctx: Context):
@@ -154,3 +155,32 @@ def generate_potion_recipes(ctx: Context):
                 }
             }
             ctx.require(subproject(subproject_config))
+
+
+def generate_magicol_recipes(ctx: Context):
+    """
+    Generates the function tree for crafting th magicol liquid.
+    """
+    magicol_colors: Any = read_csv(
+        Path('gm4_zauber_cauldrons', 'raw', 'magicol_colors.csv'))
+    
+    ctx.meta['magicol_colors'] = magicol_colors
+
+    for color_data in magicol_colors:
+
+        subproject_config = {
+            "data_pack": {
+                "load": [
+                    {
+                        f"data/gm4_zauber_cauldrons/functions/recipes/magicol/{color_data['color']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/craft_magicol.mcfunction",
+                    }
+                ],
+                "render": {
+                    "functions": "*"
+                }
+            },
+            "meta": {
+                "color": color_data['color']
+            }
+        }
+        ctx.require(subproject(subproject_config))

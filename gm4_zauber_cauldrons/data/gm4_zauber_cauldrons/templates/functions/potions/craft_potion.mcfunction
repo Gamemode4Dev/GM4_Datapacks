@@ -1,5 +1,5 @@
 # @s = heated water zauber cauldron with potion recipe inside
-# at center of block
+# at @s (center of block)
 # run from recipes/potions/{{bottle}}/select_effect
 
 # templates/functions/potions/craft_potion.mcfunction

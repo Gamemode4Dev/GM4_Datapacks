@@ -1,5 +1,5 @@
 # @s = boiling zauber cauldron with recipe inside
-# at @s
+# at @s (center of block)
 # run from recipes/crystals/zauber_crystals
 
 # calculate amount of vexes to spawn

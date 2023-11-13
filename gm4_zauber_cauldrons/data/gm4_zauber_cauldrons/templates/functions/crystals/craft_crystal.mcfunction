@@ -1,5 +1,5 @@
 # @s = heated water zauber cauldron with crystal recipe inside
-# at center of block
+# at @s (center of block)
 # run from recipes/crystals/select_effect
 
 # templates/functions/crystals/craft_crystal.mcfunction

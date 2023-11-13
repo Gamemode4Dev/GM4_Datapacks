@@ -1,5 +1,5 @@
 # @s = heated water zauber cauldron with enchanted prismarine shard and golden {{piece}} inside
-# at center of block
+# at @s (center of block)
 # run from recipe/armor/{{piece}}/select_flavor
 
 # templates/functions/armor/craft_piece.mcfunction

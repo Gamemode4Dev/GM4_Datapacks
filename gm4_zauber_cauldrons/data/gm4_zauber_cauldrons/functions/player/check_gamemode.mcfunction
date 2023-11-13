@@ -1,7 +1,7 @@
 # checks whether the player who called this function was in creative or survival/adventure and returns 1 or 0 accordingly.
 # @s = a player
 # at unspecified
-# run from cauldron/liquid/level/<level>/reconstruct_interaction
+# run from cauldron/liquid/update/<level>/reconstruct_interaction
 
 # sorted by gamemode player is most likely to be in
 execute if entity @s[gamemode=survival] run return 0

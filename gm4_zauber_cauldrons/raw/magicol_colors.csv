@@ -1,0 +1,17 @@
+color,item_id,particle_color
+white,minecraft:white_dye,14475494
+light_gray,minecraft:light_gray_dye,8419701
+gray,minecraft:gray_dye,4146765
+black,minecraft:black_dye,2038574
+brown,minecraft:brown_dye,9199935
+red,minecraft:red_dye,10891826
+orange,minecraft:orange_dye,14254913
+yellow,minecraft:yellow_dye,16105801
+lime,minecraft:lime_dye,6927140
+green,minecraft:green_dye,7045184
+cyan,minecraft:cyan_dye,3580595
+light_blue,minecraft:light_blue_dye,3579353
+blue,minecraft:blue_dye,4672435
+purple,minecraft:purple_dye,7744947
+magenta,minecraft:magenta_dye,12207538
+pink,minecraft:pink_dye,15108779
