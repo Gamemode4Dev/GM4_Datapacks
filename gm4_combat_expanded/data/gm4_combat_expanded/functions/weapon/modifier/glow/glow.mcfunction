@@ -1,6 +1,6 @@
 # apply glowing and first_strike damage to entities hit
 # @s = entity being hit with glow
-# at world spawn
+# at unspecified
 # run from weapon/modifier/glow/activate
 
 # if not hit with glow yet activate first strike

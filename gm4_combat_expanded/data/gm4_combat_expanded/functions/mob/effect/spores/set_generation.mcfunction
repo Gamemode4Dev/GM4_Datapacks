@@ -5,4 +5,5 @@
 
 scoreboard players operation @s gm4_ce_generation = $generation gm4_ce_data
 tag @s remove gm4_ce_spore_mob
+tag @s add gm4_ce_spore_zombie
 function gm4_combat_expanded:mob/initiate

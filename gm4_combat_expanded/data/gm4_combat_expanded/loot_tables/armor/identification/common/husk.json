@@ -30,7 +30,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:52}}"
+              "tag": "{gm4_combat_expanded:{modifier:75}}"
             },
             {
               "function": "minecraft:copy_nbt",
@@ -53,26 +53,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When High on Health:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.high_hp"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.equip",
+              "fallback": "When Equipped:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -82,17 +73,10 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "Dart",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.husk"
-                  }
-                ]
+                "translate": "item.gm4.combat_expanded.lore.husk",
+                "fallback": "Dart",
+                "color": "blue",
+                "italic": false
               }
             ]
           ]
@@ -102,30 +86,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.husk",
+              "fallback": "Dashing %s",
               "with": [
-                [
-                  {
-                    "text": "Dashing ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.husk",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

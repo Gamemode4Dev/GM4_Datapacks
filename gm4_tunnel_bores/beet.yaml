@@ -14,8 +14,8 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_custom_crafters: 3.0.0
-        - lib_machines: 1.1.0
+        lib_custom_crafters: 3.0.0
+        lib_machines: 1.1.0
       schedule_loops: [pulse_check]
     website:
       description: Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3⨉3 tunnels, and even lay rails behind themselves.

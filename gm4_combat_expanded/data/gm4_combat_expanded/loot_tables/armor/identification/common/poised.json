@@ -12,17 +12,29 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_speed",
+                  "attribute": "minecraft:generic.armor",
                   "name": "gm4_combat_expanded",
                   "amount": 0,
-                  "operation": "multiply_base",
+                  "operation": "addition",
+                  "slot": "chest"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "gm4_combat_expanded_2",
+                  "amount": 0,
+                  "operation": "addition",
                   "slot": "chest"
                 }
               ]
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:50,active:0}}"
+              "tag": "{gm4_combat_expanded:{modifier:49,active:0}}"
             },
             {
               "function": "minecraft:copy_nbt",
@@ -32,8 +44,13 @@
               },
               "ops": [
                 {
-                  "source": "atkspeed",
+                  "source": "armor",
                   "target": "gm4_combat_expanded.level",
+                  "op": "replace"
+                },
+                {
+                  "source": "damage",
+                  "target": "gm4_combat_expanded.level2",
                   "op": "replace"
                 }
               ]
@@ -49,6 +66,11 @@
                   "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
                   "target": "AttributeModifiers[{Name:\"gm4_combat_expanded\"}].Slot",
                   "op": "replace"
+                },
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_2\"}].Slot",
+                  "op": "replace"
                 }
               ]
             }
@@ -59,26 +81,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When High on Health:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.high_hp"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.high_hp",
+              "fallback": "When High on Health:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -88,16 +101,149 @@
           "lore": [
             [
               {
-                "translate": "attribute.modifier.plus.1",
+                "translate": "attribute.modifier.take.0",
                 "with": [
                   {
                     "score": {
-                      "name": "$atkspeed",
+                      "name": "$armor",
                       "objective": "gm4_ce_data"
                     }
                   },
                   {
-                    "translate": "attribute.name.generic.attack_speed"
+                    "translate": "attribute.name.generic.armor"
+                  }
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.plus.0",
+                "with": [
+                  [
+                    {
+                      "score": {
+                        "name": "$damage_10",
+                        "objective": "gm4_ce_data"
+                      },
+                      "color": "blue",
+                      "italic": false
+                    },
+                    ".",
+                    {
+                      "score": {
+                        "name": "$damage_01",
+                        "objective": "gm4_ce_data"
+                      }
+                    }
+                  ],
+                  {
+                    "translate": "attribute.name.generic.attack_damage"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$damage_01"
+                  },
+                  "score": "gm4_ce_data"
+                },
+                "range": 0
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.plus.0",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$damage_10",
+                      "objective": "gm4_ce_data"
+                    },
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.name.generic.attack_damage"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage_01"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 0
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.low_hp",
+              "fallback": "When Low on Health:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.plus.0",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$armor",
+                      "objective": "gm4_ce_data"
+                    }
+                  },
+                  {
+                    "translate": "attribute.name.generic.armor"
                   }
                 ],
                 "color": "blue",
@@ -107,34 +253,108 @@
           ]
         },
         {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.take.0",
+                "with": [
+                  [
+                    {
+                      "score": {
+                        "name": "$damage_10",
+                        "objective": "gm4_ce_data"
+                      }
+                    },
+                    ".",
+                    {
+                      "score": {
+                        "name": "$damage_01",
+                        "objective": "gm4_ce_data"
+                      }
+                    }
+                  ],
+                  {
+                    "translate": "attribute.name.generic.attack_damage"
+                  }
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$damage_01"
+                  },
+                  "score": "gm4_ce_data"
+                },
+                "range": 0
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.take.0",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$damage_10",
+                      "objective": "gm4_ce_data"
+                    }
+                  },
+                  {
+                    "translate": "attribute.name.generic.attack_damage"
+                  }
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage_01"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 0
+            }
+          ]
+        },
+        {
           "function": "minecraft:set_name",
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.poised",
+              "fallback": "Fluxed %s",
               "with": [
-                [
-                  {
-                    "text": "Poised ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.poised",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

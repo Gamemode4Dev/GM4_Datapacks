@@ -1,9 +1,10 @@
 # match wolf to armor slot and player id
 # @s = new wolf
-# at world spawn
+# at unspecified
 # run from armor/type/canine/wolf_spawn
 
-tag @s remove gm4_ce_new_wolf
+data merge entity @s {CollarColor:15b,Tags:["gm4_ce_wolf"],ActiveEffects:[{Id:11,Amplifier:9b,Duration:-1,ShowParticles:0b}],Attributes:[{Name:"generic.attack_damage",Base:4}]}
+
 scoreboard players operation @s gm4_ce_id = $curr_id gm4_ce_id
 scoreboard players operation @s gm4_ce_data = $slot gm4_ce_data
 data modify entity @s Owner set from storage gm4_combat_expanded:temp uuid

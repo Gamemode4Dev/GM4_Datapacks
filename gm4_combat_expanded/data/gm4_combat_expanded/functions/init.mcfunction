@@ -21,6 +21,7 @@ scoreboard objectives add gm4_ce_t_soothe dummy
 scoreboard objectives add gm4_ce_t_witch dummy
 scoreboard objectives add gm4_ce_t_wolf dummy
 scoreboard objectives add gm4_ce_t_sprinting dummy
+scoreboard objectives add gm4_ce_sprinting_timeout dummy
 scoreboard objectives add gm4_ce_t_reactive dummy
 scoreboard objectives add gm4_ce_guarded minecraft.custom:minecraft.damage_resisted
 scoreboard objectives add gm4_ce_guard dummy
@@ -33,6 +34,10 @@ scoreboard objectives add gm4_ce_shielded_hit minecraft.used:minecraft.shield
 scoreboard objectives add gm4_ce_sprinting minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add gm4_ce_generation dummy
 scoreboard objectives add gm4_ce_atkd dummy
+scoreboard objectives add gm4_ce_swimming minecraft.custom:minecraft.swim_one_cm
+scoreboard objectives add gm4_ce_used_bow minecraft.used:minecraft.bow
+scoreboard objectives add gm4_ce_used_crossbow minecraft.used:minecraft.crossbow
+scoreboard objectives add gm4_ce_chime_damage dummy
 
 # constants
 scoreboard players set #0 gm4_ce_data 0

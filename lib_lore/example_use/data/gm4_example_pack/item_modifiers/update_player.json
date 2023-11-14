@@ -1,0 +1,14 @@
+{
+    "function": "minecraft:copy_nbt",
+    "source": {
+        "type": "minecraft:storage",
+        "source": "gm4_lore:temp"
+    },
+    "ops": [
+        {
+            "source": "Source",
+            "target": "display.Lore",
+            "op": "replace"
+        }
+    ]
+}

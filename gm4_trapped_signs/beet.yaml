@@ -14,9 +14,9 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_custom_crafters: 3.0.0
-        - lib_machines: 1.1.0
-      sehcdule_loops: [main]
+        lib_custom_crafters: 3.0.0
+        lib_machines: 1.1.0
+      schedule_loops: [main]
     website:
       description: Craft trapped signs in a Custom Crafter which, when right-clicked, give off a redstone signal.
       recommended: []

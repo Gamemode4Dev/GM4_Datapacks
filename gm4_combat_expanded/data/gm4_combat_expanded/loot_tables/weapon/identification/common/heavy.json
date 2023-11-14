@@ -47,27 +47,12 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "$atkspeed_stored"
+                      "name": "$atkspeed_down"
                     },
                     "score": "gm4_ce_data",
                     "scale": 0.1
                   },
                   "operation": "addition",
-                  "slot": "mainhand"
-                },
-                {
-                  "attribute": "minecraft:generic.movement_speed",
-                  "name": "generic.movement_speed",
-                  "amount": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$speed-"
-                    },
-                    "score": "gm4_ce_data",
-                    "scale": 0.01
-                  },
-                  "operation": "multiply_base",
                   "slot": "mainhand"
                 }
               ]
@@ -83,9 +68,7 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
@@ -104,9 +87,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -119,9 +100,7 @@
                       "color": "green",
                       "italic": false
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
                         "name": "$damage_up_01",
@@ -161,9 +140,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -204,27 +181,23 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
                   [
                     {
                       "score": {
-                        "name": "$atkspeed_stored_10",
+                        "name": "$atkspeed_down_10",
                         "objective": "gm4_ce_data"
                       },
-                      "color": "dark_green",
+                      "color": "red",
                       "italic": false
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
-                        "name": "$atkspeed_stored_01",
+                        "name": "$atkspeed_down_01",
                         "objective": "gm4_ce_data"
                       }
                     }
@@ -247,7 +220,7 @@
                   "type": "minecraft:score",
                   "target": {
                     "type": "minecraft:fixed",
-                    "name": "$atkspeed_stored_01"
+                    "name": "$atkspeed_down_01"
                   },
                   "score": "gm4_ce_data"
                 },
@@ -261,18 +234,16 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
                   {
                     "score": {
-                      "name": "$atkspeed_stored_10",
+                      "name": "$atkspeed_down_10",
                       "objective": "gm4_ce_data"
                     },
-                    "color": "dark_green",
+                    "color": "red",
                     "italic": false
                   },
                   {
@@ -291,7 +262,7 @@
                 "type": "minecraft:score",
                 "target": {
                   "type": "minecraft:fixed",
-                  "name": "$atkspeed_stored_01"
+                  "name": "$atkspeed_down_01"
                 },
                 "score": "gm4_ce_data"
               },
@@ -300,61 +271,20 @@
           ]
         },
         {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "text": " "
-              },
-              {
-                "translate": "attribute.modifier.equals.1",
-                "with": [
-                  {
-                    "score": {
-                      "name": "$speed-",
-                      "objective": "gm4_ce_data"
-                    }
-                  },
-                  {
-                    "translate": "attribute.name.generic.movement_speed"
-                  }
-                ],
-                "color": "red",
-                "italic": false
-              }
-            ]
-          ]
-        },
-        {
           "function": "minecraft:set_name",
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.heavy",
+              "fallback": "Heavy %s",
               "with": [
-                [
-                  {
-                    "text": "Heavy ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.heavy",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         },
@@ -373,10 +303,14 @@
           ]
         },
         {
-          "function": "minecraft:enchant_randomly",
-          "enchantments": [
-            "minecraft:knockback"
-          ]
+          "function": "minecraft:set_enchantments",
+          "enchantments": {
+            "minecraft:knockback": {
+              "min": 2,
+              "max": 3
+            }
+          },
+          "add": false
         }
       ]
     }

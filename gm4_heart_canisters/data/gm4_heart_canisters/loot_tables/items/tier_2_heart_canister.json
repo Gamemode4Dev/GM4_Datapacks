@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420008,gm4_heart_canister:1b,gm4_heart_canister_tier:2b,SkullOwner:{Id:[I;-320501529,-244889622,-2022276390,-292592904],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYxNjM4NTgyOTM1NSwKICAicHJvZmlsZUlkIiA6ICI0ZTMwZjUwZTdiYWU0M2YzYWZkMmE3NDUyY2ViZTI5YyIsCiAgInByb2ZpbGVOYW1lIiA6ICJfdG9tYXRvel8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzgxZmU0ZjA2YTM1ZWU3YzQyMzA5ZDM5M2MyNWJjMTFjZDFiNWIxNTBhMTllZGYzODllOGVjY2E0ZmNlMWRkZiIKICAgIH0KICB9Cn0=\"}]}}}"
+                            "tag": "{CustomModelData:3420008,gm4_heart_canister:1b,gm4_heart_canister_tier:2b,SkullOwner:'$heart_canister_tier_2'}"
                         },
                         {
                             "function": "minecraft:set_name",

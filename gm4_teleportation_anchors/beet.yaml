@@ -1,6 +1,6 @@
 id: gm4_teleportation_anchors
 name: Teleportation Anchors
-version: 1.2.X
+version: 1.3.X
 
 data_pack:
   load: .
@@ -14,8 +14,8 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_custom_crafters: 3.0.0
-        - lib_machines: 1.1.0
+        lib_custom_crafters: 3.0.0
+        lib_machines: 1.1.0
       schedule_loops:
         - main
         - tick
@@ -31,3 +31,5 @@ meta:
     credits:
       Creator:
         - BluePsychoRanger
+      Icon Design:
+        - Hozz

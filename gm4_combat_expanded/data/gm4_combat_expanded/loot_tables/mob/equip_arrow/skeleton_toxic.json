@@ -55,9 +55,7 @@
                   "color": "red",
                   "italic": false
                 },
-                {
-                  "text": " "
-                },
+                "",
                 {
                   "translate": "potion.whenDrank",
                   "color": "purple",
@@ -66,9 +64,7 @@
                 {
                   "translate": "attribute.modifier.take.0",
                   "with": [
-                    {
-                      "text": "4"
-                    },
+                    "4",
                     {
                       "translate": "attribute.name.generic.attack_damage"
                     }

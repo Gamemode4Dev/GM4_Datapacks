@@ -1,6 +1,6 @@
 # randomise stats for identification
 # @s = player wielding the weapon
-# at world spawn
+# at unspecified
 # run from weapon/identify/pick_mod
 
 # use loot tables to fill shulker box with items
@@ -58,10 +58,13 @@ scoreboard players operation $damage_demonic gm4_ce_data /= #2 gm4_ce_data
 
 # calculate new attack speed in order to replace the attribute
 execute store result score $atkspeed_stored gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.atkspeed
-# base atack speed up, never higher than 4.0
+# base atack speed up
 scoreboard players operation $atkspeed_up gm4_ce_data = $atkspeed_stored gm4_ce_data
 scoreboard players operation $atkspeed_up gm4_ce_data += $atkspeed gm4_ce_data
-# base atack speed down, never lower than 0.5
+# quick weapon attack speed up
+scoreboard players operation $atkspeed_quick gm4_ce_data = $atkspeed_up gm4_ce_data
+scoreboard players add $atkspeed_quick gm4_ce_data 4
+# base atack speed down
 scoreboard players operation $atkspeed_down gm4_ce_data = $atkspeed_stored gm4_ce_data
 scoreboard players operation $atkspeed_down gm4_ce_data += $atkspeed- gm4_ce_data
 # get digits seperate
@@ -77,6 +80,10 @@ scoreboard players operation $atkspeed_down_10 gm4_ce_data = $atkspeed_down gm4_
 scoreboard players operation $atkspeed_down_10 gm4_ce_data /= #10 gm4_ce_data
 scoreboard players operation $atkspeed_down_01 gm4_ce_data = $atkspeed_down gm4_ce_data
 scoreboard players operation $atkspeed_down_01 gm4_ce_data %= #10 gm4_ce_data
+scoreboard players operation $atkspeed_quick_10 gm4_ce_data = $atkspeed_quick gm4_ce_data
+scoreboard players operation $atkspeed_quick_10 gm4_ce_data /= #10 gm4_ce_data
+scoreboard players operation $atkspeed_quick_01 gm4_ce_data = $atkspeed_quick gm4_ce_data
+scoreboard players operation $atkspeed_quick_01 gm4_ce_data %= #10 gm4_ce_data
 
 # store results in storage for changing attributes
 execute store result storage gm4_combat_expanded:temp random_value int 1 run scoreboard players get $random_value gm4_ce_data

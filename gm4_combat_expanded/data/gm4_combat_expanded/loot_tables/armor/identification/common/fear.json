@@ -67,26 +67,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Killing:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.killing"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.killing",
+              "fallback": "When Killing:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -99,15 +90,8 @@
                 "translate": "potion.withDuration",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Flash Freeze"
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.fear"
-                      }
-                    ]
+                    "translate": "item.gm4.combat_expanded.lore.fear",
+                    "fallback": "Flash Freeze"
                   },
                   "0:01"
                 ],
@@ -140,15 +124,8 @@
                 "translate": "potion.withDuration",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Flash Freeze"
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.fear"
-                      }
-                    ]
+                    "translate": "item.gm4.combat_expanded.lore.fear",
+                    "fallback": "Flash Freeze"
                   },
                   "0:02"
                 ],
@@ -184,15 +161,8 @@
                     "translate": "potion.withAmplifier",
                     "with": [
                       {
-                        "translate": "%1$s%3427655$s",
-                        "with": [
-                          {
-                            "text": "Flash Freeze"
-                          },
-                          {
-                            "translate": "item.gm4.combat_expanded.lore.fear"
-                          }
-                        ]
+                        "translate": "item.gm4.combat_expanded.lore.fear",
+                        "fallback": "Flash Freeze"
                       },
                       {
                         "translate": "potion.potency.1"
@@ -233,15 +203,8 @@
                     "translate": "potion.withAmplifier",
                     "with": [
                       {
-                        "translate": "%1$s%3427655$s",
-                        "with": [
-                          {
-                            "text": "Flash Freeze"
-                          },
-                          {
-                            "translate": "item.gm4.combat_expanded.lore.fear"
-                          }
-                        ]
+                        "translate": "item.gm4.combat_expanded.lore.fear",
+                        "fallback": "Flash Freeze"
                       },
                       {
                         "translate": "potion.potency.1"
@@ -275,30 +238,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.fear",
+              "fallback": "Chilling %s",
               "with": [
-                [
-                  {
-                    "text": "Chilling ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.fear",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

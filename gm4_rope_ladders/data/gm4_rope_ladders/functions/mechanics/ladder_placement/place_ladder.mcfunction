@@ -12,6 +12,10 @@ execute if entity @s[gamemode=!creative] run item modify entity @s weapon.mainha
 # grant advancement
 advancement grant @s only gm4:rope_ladders
 
+# break block
+execute unless block ~ ~ ~ #gm4:water run setblock ~ ~ ~ air destroy
+execute if block ~ ~ ~ #gm4:water run setblock ~ ~ ~ water destroy
+
 # place ladder
-execute unless block ~ ~ ~ water run clone ~ ~1 ~ ~ ~1 ~ ~ ~ ~
-execute if block ~ ~ ~ water run function gm4_rope_ladders:mechanics/ladder_placement/place_water_ladder
+execute unless block ~ ~ ~ #gm4:water run clone ~ ~1 ~ ~ ~1 ~ ~ ~ ~
+execute if block ~ ~ ~ #gm4:water run function gm4_rope_ladders:mechanics/ladder_placement/place_water_ladder

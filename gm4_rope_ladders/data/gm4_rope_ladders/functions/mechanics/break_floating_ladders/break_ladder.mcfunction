@@ -10,5 +10,6 @@ scoreboard players add $ladder_broken gm4_rol_data 1
 playsound minecraft:block.scaffolding.fall ambient @a[distance=..15] ~ ~ ~ 1 .5
 
 # break ladder and drop item
-setblock ~ ~ ~ air
+fill ~ ~ ~ ~ ~ ~ air replace ladder[waterlogged=false]
+fill ~ ~ ~ ~ ~ ~ water replace ladder[waterlogged=true]
 loot spawn ~ ~ ~ loot minecraft:blocks/ladder

@@ -5,6 +5,10 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/identification/rare/canine"
+        },
+        {
+          "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:armor/identification/rare/consume"
         },
         {
@@ -26,10 +30,6 @@
         {
           "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:armor/identification/rare/soothe"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/rare/trade"
         }
       ]
     }

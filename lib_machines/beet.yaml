@@ -1,6 +1,6 @@
 id: gm4_machines
 name: Gamemode 4 Machines
-version: 1.1.0
+version: 1.1.X
 
 data_pack:
   load:
@@ -13,7 +13,7 @@ pipeline:
 meta:
   gm4:
     versioning:
-      required: [lib_forceload: 1.1.0]
+      required: {lib_forceload: 1.1.0}
       schedule_loops: [main]
       extra_version_injections:
         functions:
@@ -24,3 +24,5 @@ meta:
     credits:
       Machines Library Creator:
         - BluePsychoRanger
+  smithed:
+    pack_id: gm4_lib_machines

@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        - lib_custom_crafters: 3.0.0
+        lib_custom_crafters: 3.0.0
       schedule_loops: [main]
     website:
       description: A pair of boots every gardener would love to have! Boots of Ostara allow you to easily spread Grass and Moss, and they even stop the Desire Lines module from creating that pesky dirt.

@@ -77,26 +77,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Killing:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.killing"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.killing",
+              "fallback": "When Killing:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -109,9 +100,7 @@
                 "translate": "attribute.modifier.plus.0",
                 "with": [
                   [
-                    {
-                      "text": "0.0"
-                    },
+                    "0.0",
                     {
                       "score": {
                         "name": "$constep",
@@ -134,33 +123,32 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.consume",
+              "fallback": "Devouring %s",
               "with": [
-                [
-                  {
-                    "text": "Devouring ",
-                    "italic": false,
-                    "color": "yellow"
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true,
-                    "color": "yellow"
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.consume",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true,
-                      "color": "yellow"
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true,
+                  "color": "yellow"
                 }
-              ]
+              ],
+              "italic": false,
+              "color": "yellow"
+            }
+          ]
+        },
+        {
+          "function": "minecraft:copy_nbt",
+          "source": {
+            "type": "minecraft:storage",
+            "source": "gm4_combat_expanded:temp"
+          },
+          "ops": [
+            {
+              "source": "tag.Enchantments",
+              "target": "Enchantments",
+              "op": "replace"
             }
           ]
         },
@@ -169,7 +157,7 @@
           "enchantments": {
             "minecraft:vanishing_curse": 1
           },
-          "add": true
+          "add": false
         }
       ]
     }
