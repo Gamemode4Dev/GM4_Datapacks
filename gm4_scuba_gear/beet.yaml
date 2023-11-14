@@ -40,7 +40,7 @@ meta:
         template: generated_overlay
       - item: golden_chestplate
         reference: item/scuba_tank
-        tempalte: generated
+        template: generated
       - item: player_head
         reference: item/scuba_helmet
         template: generated
