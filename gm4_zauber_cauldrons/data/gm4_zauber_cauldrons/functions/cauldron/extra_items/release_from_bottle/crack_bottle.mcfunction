@@ -1,17 +1,13 @@
 # @s = bottled vex item
-# run from cauldron/extra_items/process_bottled_vex_items
+# run from cauldron/extra_items/release_from_bottle/check_timer
 # at @s
 
-# initialize newly thrown bottles
-execute unless score @s gm4_zc_bottled_vex_escape_timer matches 0.. run scoreboard players set @s gm4_zc_bottled_vex_escape_timer 3
-
 # decrease timer
-execute if score @s gm4_zc_bottled_vex_escape_timer matches 0.. run scoreboard players remove @s gm4_zc_bottled_vex_escape_timer 1
-execute if score @s gm4_zc_bottled_vex_escape_timer matches 0.. run particle minecraft:block glass ~ ~ ~ 0.1 0.1 0.1 0 1
+scoreboard players remove @s gm4_zc_bottled_vex_escape_timer 1
 
-# play sound
-execute if score @s gm4_zc_bottled_vex_escape_timer matches 0.. run playsound minecraft:block.glass.break block @a[distance=..8] ~ ~ ~ 0.1 1.9
+# play sound and particles
+playsound minecraft:block.glass.break block @a[distance=..8] ~ ~ ~ 0.1 1.9
+particle minecraft:block glass ~ ~ ~ 0.1 0.1 0.1 0 1
 
-# break free
-execute if score @s gm4_zc_bottled_vex_escape_timer matches 1 run function gm4_zauber_cauldrons:cauldron/extra_items/release_from_bottle/prepare_release
-execute if score @s gm4_zc_bottled_vex_escape_timer matches ..0 run function gm4_zauber_cauldrons:cauldron/extra_items/release_from_bottle/release
+# players wearing zauber armor can tell if its the right moon phase
+execute if score @s gm4_zc_moon_phase = $current gm4_zc_moon_phase run particle enchant ~ ~ ~ 0.1 0.1 0.1 0.4 2 normal @a[distance=..8,advancements={gm4_zauber_cauldrons:equipment/has_full_armor=true}]
