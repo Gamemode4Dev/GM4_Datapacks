@@ -34,6 +34,8 @@ execute unless score $recipe_success gm4_zc_data matches 1.. if score $has_water
 # magicol
 execute unless score $recipe_success gm4_zc_data matches 1.. if score $has_water gm4_zc_data matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}] if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"enchanted_prismarine_shard"}}}] run function gm4_zauber_cauldrons:recipes/magicol/select_color
 
+# 
+
 # reset fake players and storage
 scoreboard players reset $recipe_success gm4_zc_data
 scoreboard players reset $has_bottle gm4_zc_fullness

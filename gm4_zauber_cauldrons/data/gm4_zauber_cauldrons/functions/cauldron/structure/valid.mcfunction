@@ -17,6 +17,7 @@ data modify storage gm4_zauber_cauldrons:temp/cauldron/ingredients liquid set fr
 execute if score $has_water gm4_zc_data matches 1 run particle minecraft:poof ~.5 ~.5 ~.5 .005 .2 .005 .0005 4
 execute if score $has_powder_snow gm4_zc_data matches 1 run particle minecraft:dripping_water ~.5 ~0.88 ~.5 0.14 0 0.14 1 1
 execute if score @s gm4_zc_liquid_level matches 1..3 run function #gm4_zauber_cauldrons:cauldron/liquid/cauldron_particles
+scoreboard players reset $displayed_liquid_particle gm4_zc_data
 
 # check for recipes if at least one item is found inside
 execute if score @s gm4_zc_fullness matches 1.. positioned ~.5 ~.5 ~.5 run function gm4_zauber_cauldrons:cauldron/recipe_checks

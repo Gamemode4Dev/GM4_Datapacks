@@ -17,6 +17,7 @@ execute if block ~ ~ ~ minecraft:water_cauldron[level=2] run scoreboard players 
 execute if block ~ ~ ~ minecraft:water_cauldron[level=3] run scoreboard players set @s gm4_zc_liquid_level 3
 # set liquid type
 data modify entity @s data.gm4_zauber_cauldrons.liquid set value {id:"magicol",magicol:{color:"{{color}}"}}
+data modify entity @s data.gm4_zauber_cauldrons.liquid.magicol.moon_phase set from storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}].tag.gm4_zauber_cauldrons.preferred_moon_phase
 
 # visuals
 summon minecraft:item_display ~ ~.0781 ~ {item:{id:"minecraft:{{color}}_concrete_powder",Count:1b,tag:{CustomModelData:{{custom_model_data}}}},item_display:"fixed",transformation:[1.984f,0f,0f,0f,0f,0f,0f,0f,0f,0f,1.984f,0f,0f,0f,0f,1f],Tags:["gm4_zc_liquid","gm4_zc_magicol","gm4_zc_{{color}}_magicol"]}

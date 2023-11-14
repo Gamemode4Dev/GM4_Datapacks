@@ -29,7 +29,7 @@ meta:
 
       schedule_loops:
         - main
-        - cauldron/extra_items/crack_bottle
+        - cauldron/extra_items/process_bottled_vex_items
     website:
       description: Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game.
       recommended:
