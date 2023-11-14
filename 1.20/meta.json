@@ -1,5 +1,5 @@
 {
-  "last_commit": "ee28dc3acc0429c3e635561349127c5269412541",
+  "last_commit": "18ee74ed2ff792edd6ed406e083173905dc8b18b",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -322,6 +322,28 @@
       "pmc_link": null
     },
     {
+      "id": "gm4_bookshelf_inspector",
+      "name": "Bookshelf Inspector",
+      "version": "1.0.0",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Bookshelf_Inspector",
+      "credits": {
+        "Creator": [
+          "Thanathor"
+        ]
+      },
+      "requires": [],
+      "description": "See what's in your Chiseled Bookshelves without having to take all the books out!",
+      "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-11-14",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    {
       "id": "gm4_boots_of_ostara",
       "name": "Boots of Ostara",
       "version": "1.5.5",
@@ -514,7 +536,7 @@
       "description": "Allows Campfires to grant you up to 4 extra hearts that last for more than half of a Minecraft day. Perfect for those scary first nights in a Minecraft world.",
       "recommends": [],
       "hidden": false,
-      "important_note": null,
+      "important_note": "Requires version 1.20.2+",
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": null,
