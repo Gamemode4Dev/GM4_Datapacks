@@ -1,4 +1,4 @@
-color,item_id,particle_color,custom_model_data
+color,ingredient_item_id,particle_color,custom_model_data
 white,minecraft:white_dye,14475494,3420000
 light_gray,minecraft:light_gray_dye,8419701,3420000
 gray,minecraft:gray_dye,4146765,3420000

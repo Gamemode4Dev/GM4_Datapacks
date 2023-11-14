@@ -1,8 +1,8 @@
-effect,effect_translate_name,custom_potion_color,custom_potion_effects,soulution_custom_model_data,soulution_translate_fallback
-instant_damage,harming,11101546,"[{id:'minecraft:instant_damage',amplifier:3,duration:1}]",3420000,Soulution of Harming
-instant_health,healing,16262179,"[{id:'minecraft:instant_health',amplifier:3,duration:1},{id:'minecraft:nausea',amplifier:0,duration:160}]",3420000,Soulution of Healing
-jump_boost,leaping,16646020,"[{id:'minecraft:leaping',amplifier:3,duration:1800}]",3420000,Soulution of Leaping
-poison,poison,8889187,"[{id:'minecraft:poison',amplifier:3,duration:640}]",3420000,Soulution of Poison
-regeneration,regeneration,13458603,"[{id:'minecraft:regeneration',amplifier:3,duration:440},{id:'minecraft:speed',amplifier:1,duration:320}]",3420000,Soulution of Regeneration
-speed,swiftness,3402751,"[{id:'minecraft:speed',amplifier:3,duration:4000},{id:'minecraft:weakness',amplifier:2,duration:4000}]",3420000,Soulution of Swiftness
-strength,strength,16762624,"[{id:'minecraft:strength',amplifier:3,duration:1800},{id:'fire_resistance',amplifier:0,duration:320}]",3420000,Soulution of Strength
+effect,base_potion_id,effect_translate_name,custom_potion_color,custom_potion_effects,soulution_custom_model_data,soulution_translate_fallback
+instant_damage,minecraft:strong_harming,harming,11101546,"[{id:'minecraft:instant_damage',amplifier:3,duration:1}]",3420000,Soulution of Harming
+instant_health,minecraft:strong_healing,healing,16262179,"[{id:'minecraft:instant_health',amplifier:3,duration:1},{id:'minecraft:nausea',amplifier:0,duration:160}]",3420000,Soulution of Healing
+jump_boost,minecraft:strong_leaping,leaping,16646020,"[{id:'minecraft:leaping',amplifier:3,duration:1800}]",3420000,Soulution of Leaping
+poison,minecraft:strong_poison,poison,8889187,"[{id:'minecraft:poison',amplifier:3,duration:640}]",3420000,Soulution of Poison
+regeneration,minecraft:strong_regeneration,regeneration,13458603,"[{id:'minecraft:regeneration',amplifier:3,duration:440},{id:'minecraft:speed',amplifier:1,duration:320}]",3420000,Soulution of Regeneration
+speed,minecraft:strong_swiftness,swiftness,3402751,"[{id:'minecraft:speed',amplifier:3,duration:4000},{id:'minecraft:weakness',amplifier:2,duration:4000}]",3420000,Soulution of Swiftness
+strength,minecraft:strong_strength,strength,16762624,"[{id:'minecraft:strength',amplifier:3,duration:1800},{id:'fire_resistance',amplifier:0,duration:320}]",3420000,Soulution of Strength

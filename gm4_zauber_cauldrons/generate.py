@@ -41,6 +41,10 @@ def generate_armor_recipes(ctx: Context):
         Path('gm4_zauber_cauldrons', 'raw', 'armor_flavors.csv'))
     armor_pieces: List[Dict[str, str]] = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'armor_pieces.csv'))
+    
+    # make csv data available to bolt later
+    ctx.meta['armor_flavors'] = armor_flavors
+    ctx.meta['armor_pieces'] = armor_pieces
 
     # create a loot tables and functions for each zauber armor piece + flavor combination
     for flavor_data in armor_flavors:
@@ -84,6 +88,9 @@ def generate_crystal_recipes(ctx: Context):
         Path('gm4_zauber_cauldrons', 'raw', 'crystal_effects.csv'))
     crystal_lores: Any = read_json(
         Path('gm4_zauber_cauldrons', 'raw', 'crystal_lores.json'))
+    
+    # make csv data available to bolt later
+    ctx.meta['crystal_effects'] = crystal_effects
 
     for effect_data in crystal_effects:
 
@@ -121,6 +128,10 @@ def generate_potion_recipes(ctx: Context):
         Path('gm4_zauber_cauldrons', 'raw', 'potion_bottles.csv'))
     potion_lores: Any = read_json(
         Path('gm4_zauber_cauldrons', 'raw', 'potion_lores.json'))
+    
+    # make csv data available to bolt later
+    ctx.meta['potion_effects'] = potion_effects
+    ctx.meta['potion_bottles'] = potion_bottles
 
     for bottle_data in potion_bottles:
         for effect_data in potion_effects:
@@ -161,6 +172,8 @@ def generate_magicol_recipes(ctx: Context):
     """
     Generates the function tree for crafting th magicol liquid.
     """
+
+    # make csv data available to bolt later
     magicol_colors: Any = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'magicol_colors.csv'))
     
