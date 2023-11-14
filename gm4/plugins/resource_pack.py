@@ -1,5 +1,6 @@
 import logging
 import os
+import re
 import sys
 from copy import deepcopy
 from dataclasses import replace
@@ -16,25 +17,27 @@ from beet import (
     Model,
     NamespaceProxy,
     PluginOptions,
+    WrappedException,
 )
+from beet.contrib.optifine import OptifineProperties
 from beet.contrib.vanilla import Vanilla
 from beet.core.utils import format_validation_error
 from mecha import (
-    AstCommand,
     AstChildren,
+    AstCommand,
     AstNbtCompoundEntry,
-    AstNbtValue,
     AstNbtPath,
     AstNbtPathKey,
+    AstNbtValue,
     Diagnostic,
     Mecha,
     MutatingReducer,
     rule,
 )
-from nbtlib import String # type: ignore ; nbtlib missing stubfile
-from tokenstream import set_location
+from nbtlib import String  # type: ignore ; nbtlib missing stubfile
 from pydantic import BaseModel, Extra, Field, ValidationError, validator
 from pydantic.error_wrappers import ErrorWrapper
+from tokenstream import set_location
 
 from gm4.utils import MapOption, add_namespace, mecha_transform_jsonfiles
 
@@ -254,6 +257,7 @@ def build(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
     rp.resolve_config()
     rp.update_modeldata_registry()
+    rp.process_optifine()
     rp.generate_model_files()
     rp.lint_model_textures()
     rp.generate_model_overrides()
@@ -429,6 +433,21 @@ class GM4ResourcePack(MutatingReducer):
                     yield set_location(d, ast_nbt)
                 node = replace(node, arguments=AstChildren([ast_target, ast_target_path, AstNbtValue.from_value(index+CUSTOM_MODEL_PREFIX)]))
         return node
+    
+    #== Non-mecha CMD filling ==#
+    def process_optifine(self):
+        """Handles string references in the .properties files of Optifine"""
+        pattern = re.compile(r"^nbt.CustomModelData=(?:regex:\()?(.+?)\)?$", re.MULTILINE)
+        for name, propfile in self.ctx.assets[OptifineProperties].items():
+            match = pattern.search(propfile.text)
+            if not match:
+                continue
+
+            for ref in [r for r in match.group(1).split("|") if r.startswith("$")]:
+                index, exc = self.retrieve_index(add_namespace(ref.lstrip("$"), self.ctx.project_id))
+                if exc:
+                    raise WrappedException(f"Optifine CIT file {name}.properties") from exc
+                propfile.text = propfile.text.replace(ref, str(index+CUSTOM_MODEL_PREFIX))
 
     #== Model file generation ==#
     def generate_model_files(self):
