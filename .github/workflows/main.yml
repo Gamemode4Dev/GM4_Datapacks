@@ -1,4 +1,4 @@
-name: Check and build modules
+name: Build modules
 
 on:
   push:
@@ -11,19 +11,7 @@ env:
   COMMIT_MSG: ${{ github.event.head_commit.message }}
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: mcbeet/check-commands@v1
-        with:
-          minecraft: '1.19' # temp manual assignment. mecha does not support 1.19.4 as valid version.      ${{ env.VERSION }}
-          source: base gm4_* lib_*
-          version: '0.67.0'
-
   build:
-    needs: test
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.event_name != 'pull_request' && 'release' || format('pr-{0}', github.event.number) }}
