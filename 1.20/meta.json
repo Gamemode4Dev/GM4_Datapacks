@@ -1,5 +1,5 @@
 {
-  "last_commit": "18ee74ed2ff792edd6ed406e083173905dc8b18b",
+  "last_commit": "bea8fe6dff7ac5f901045f2a543b2941de5ca9ad",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -336,7 +336,7 @@
       "description": "See what's in your Chiseled Bookshelves without having to take all the books out!",
       "recommends": [],
       "hidden": false,
-      "important_note": null,
+      "important_note": "Requires version 1.20.2+",
       "search_keywords": [],
       "publish_date": "2023-11-14",
       "modrinth_id": null,
@@ -536,7 +536,7 @@
       "description": "Allows Campfires to grant you up to 4 extra hearts that last for more than half of a Minecraft day. Perfect for those scary first nights in a Minecraft world.",
       "recommends": [],
       "hidden": false,
-      "important_note": "Requires version 1.20.2+",
+      "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": null,
