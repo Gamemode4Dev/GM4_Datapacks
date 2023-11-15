@@ -206,7 +206,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
            "type": "minecraft:score",
            "target": {
                "type": "minecraft:fixed",
-               "name": module_check["id"]
+               "name": f"gm4_{module_check['id']}"
            },
            "score": "load.status"
             },
@@ -354,7 +354,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
         "type": "minecraft:score",
         "target": {
             "type": "minecraft:fixed",
-            "name": module_id
+            "name": f"gm4_{module_id}"
         },
         "score": "load.status"
       },
@@ -414,7 +414,7 @@ def generate_reward_function(section: Section, book_id: str, book_name: str) -> 
         start += f" unless "
       else:
         start += f" if "
-      start += f"score {module_check['id']} load.status matches 1.."
+      start += f"score gm4_{module_check['id']} load.status matches 1.."
     start += " run"
   else:
     start = ""
@@ -461,9 +461,9 @@ def generate_setup_storage_tag(book_ids: list[str]) -> FunctionTag:
 
 def generate_setup_storage_function(pages: list[str], pages_locked: list[str], book_dict: Book) -> Function:
   locked_text = "{'text':'???','hoverEvent':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':true,'color':'red'}]}}"
-  unlocked = f"data modify storage gm4_guidebook:pages {book_dict['id']}.pages set value {pages}"
+  unlocked = f"execute if score gm4_{book_dict['id']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.pages set value {pages}"
   unlocked = unlocked.replace("{'insert': 'header'}",generate_book_header(book_dict))
-  locked = f"data modify storage gm4_guidebook:pages {book_dict['id']}.pages_locked set value {pages_locked}"
+  locked = f"execute if score gm4_{book_dict['id']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.pages_locked set value {pages_locked}"
   locked = locked.replace("{'insert': 'header'}",generate_book_header(book_dict))
   locked = locked.replace("{'insert': 'locked_text'}",locked_text)
 
@@ -499,7 +499,7 @@ def generate_add_toc_line_function(book: Book) -> Function:
     }
   }
   return Function([
-    f"execute if score $trigger gm4_guide matches {book['trigger_id']} run data modify storage gm4_guidebook:temp page append value ' {json.dumps(text_component, ensure_ascii=False)}'"
+    f"execute if score $trigger gm4_guide matches {book['trigger_id']} if score gm4_{book['id']} load.status matches 1.. run data modify storage gm4_guidebook:temp page append value ' {json.dumps(text_component, ensure_ascii=False)}'"
   ])
 
 
@@ -524,7 +524,7 @@ def generate_summon_marker_function(book: Book) -> Function:
   marker_nbt["data"]["module_name"] = nbtlib.String(book["name"])
   marker_nbt["data"]["toc_lines"] = nbtlib.Int(len(split_into_lines(get_toc_line(book))))
   return Function([
-    f"summon marker ~ {get_pos_hash(book['id'])} ~ {nbtlib.serialize_tag(marker_nbt)}"
+    f"execute if score gm4_{book['id']} load.status matches 1.. run summon marker ~ {get_pos_hash(book['id'])} ~ {nbtlib.serialize_tag(marker_nbt)}"
   ])
 
 
