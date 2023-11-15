@@ -45,8 +45,9 @@ def get_pos_hash(module_id: str):
   return id
 
 
-def generate_book_header(book_dict: Book) -> list[dict[Any, Any] | str]:
-  return [
+def generate_book_header(book_dict: Book) -> str:
+  header = [
+    "",
     {
       "text": "⌂",
       "color": "#3D83A3",
@@ -79,6 +80,22 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any] | str]:
     },
     " " * 6,
     {
+      "text": "⟳",
+      "bold": True,
+      "color": "gold",
+      "clickEvent": {
+        "action": "run_command",
+        "value": f"/trigger gm4_guide set {book_dict['trigger_id']}"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": {
+          "text": "Refresh section"
+        }
+      }
+    },
+    " " * 3,
+    {
       "text": "◀",
       "clickEvent": {
         "action": "run_command",
@@ -105,13 +122,15 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any] | str]:
         }
       }
     },
-    "\n",
+    "\\n",
     {
       "text": book_dict["name"],
       "underlined": True,
       "color": "#4AA0C7"
-    }
+    },
+    "\\n"
   ]
+  return f"{header}"
 
 
 advances = json.load(open("temp/advances.json"))
@@ -174,7 +193,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
 
   functions:list[dict[Any, Any]] = [{
     "function": "minecraft:set_nbt",
-    "tag": "{CustomModelData:3420001,gm4_guidebook:1b,title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+    "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:0b, trigger:" + str(book_dict['trigger_id']) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
   }]
 
   for section in sections:
@@ -204,7 +223,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
         "type_specific": {
           "type": "player",
           "advancements": {
-            f"gm4_guidebook:{book_id}/{section['name']}": True
+            f"gm4_guidebook:{book_id}/unlock/{section['name']}": True
           }
         }
       }
@@ -255,6 +274,18 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
       "conditions": [*enable_conditions]
     }
 
+    set_count: dict[Any, Any] = {
+      "function": "minecraft:set_count",
+      "count": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$count"
+        },
+        "score": "gm4_guide"
+      }
+    }
+    
     if "requirements" in section and len(section["requirements"]) > 0:
       function["conditions"].append(unlock_condition)
       fallback_function["conditions"].append({"condition": "minecraft:inverted", "term": unlock_condition})
@@ -262,6 +293,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
       functions.append(fallback_function)
     else:
       functions.append(function)
+    functions.append(set_count)
 
   return LootTable({
     "pools": [
@@ -427,10 +459,15 @@ def generate_setup_storage_tag(book_ids: list[str]) -> FunctionTag:
   })
 
 
-def generate_setup_storage_function(pages: list[str], pages_locked: list[str], module_id: str) -> Function:
+def generate_setup_storage_function(pages: list[str], pages_locked: list[str], book_dict: Book) -> Function:
+  unlocked = f"data modify storage gm4_guidebook:pages {book_dict['id']}.pages set value {pages}"
+  unlocked = unlocked.replace("{'insert': 'header'}",generate_book_header(book_dict))
+  locked = f"data modify storage gm4_guidebook:pages {book_dict['id']}.pages_locked set value {pages_locked}"
+  locked = locked.replace("{'insert': 'header'}",generate_book_header(book_dict))
+
   return Function([
-    f"data modify storage gm4_guidebook:pages {module_id}.pages set value {pages}",
-    f"data modify storage gm4_guidebook:pages {module_id}.pages_locked set value {pages_locked}"
+    unlocked,
+    locked
   ])
 
 
@@ -504,7 +541,7 @@ def generate_update_hand_function(book: Book, load: str) -> Function:
   start = f"execute if score @s gm4_guide matches {book['trigger_id']} if score {load} load.status matches 1.. run"
   return Function([
     f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:{book['id']}",
-    f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:{book['id']}"
+    f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_offhand] weapon.offhand loot gm4_guidebook:{book['id']}"
   ])
 
 
@@ -551,7 +588,7 @@ def beet_default(ctx: Context):
 
     ctx.data[f"gm4_guidebook:{book['id']}/add_toc_line"] = generate_add_toc_line_function(book)
     ctx.data[f"gm4_guidebook:{book['id']}/setup_storage"] = generate_setup_storage_function(
-      pages, pages_locked, book["id"])
+      pages, pages_locked, book)
     ctx.data[f"gm4_guidebook:{book['id']}/summon_marker"] = generate_summon_marker_function(book)
     ctx.data[f"gm4_guidebook:{book['id']}/update_hand"] = generate_update_hand_function(book, ctx.project_id)
     ctx.data[f"gm4_guidebook:{book['id']}/update_lectern"] = generate_update_lectern_function(book, ctx.project_id)
