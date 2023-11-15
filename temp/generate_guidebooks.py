@@ -132,6 +132,94 @@ def generate_book_header(book_dict: Book) -> str:
   ]
   return f"{header}"
 
+def generate_lectern_header(book_dict: Book) -> str:
+  wiki_id = book_dict["name"].replace(" ", "_")
+  header = [
+    "",
+    {
+      "text": "⌂",
+      "color": "#3D83A3",
+      "bold": True,
+      "clickEvent": {
+        "action": "change_page",
+        "value": f"2"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": {
+          "text": "Return to the table of contents"
+        }
+      }
+    },
+    " " * 6,
+    {
+      "text": "Ⓦ",
+      "color": "#864bc7",
+      "clickEvent": {
+        "action": "open_url",
+        "value": f"https://wiki.gm4.co/wiki/{wiki_id}"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": {
+          "text": "Open the wiki page for this module"
+        }
+      }
+    },
+    " " * 6,
+    {
+      "text": "⟳",
+      "bold": True,
+      "color": "gold",
+      "clickEvent": {
+        "action": "change_page",
+        "value": f"3"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": {
+          "text": "Refresh section"
+        }
+      }
+    },
+    " " * 3,
+    {
+      "text": "◀",
+      "clickEvent": {
+        "action": "change_page",
+        "value": f"4"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": {
+          "text": "Go to the previous module"
+        }
+      }
+    },
+    " ",
+    {
+      "text": "▶",
+      "clickEvent": {
+        "action": "change_page",
+        "value": f"1"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": {
+          "text": "Go to the next module"
+        }
+      }
+    },
+    "\\n",
+    {
+      "text": book_dict["name"],
+      "underlined": True,
+      "color": "#4AA0C7"
+    },
+    "\\n"
+  ]
+  return f"{header}"
+
 
 advances = json.load(open("temp/advances.json"))
 
@@ -185,16 +273,61 @@ def get_toc_line(book_dict: Book) -> str:
   return f"{indent}{book_dict['name']}"
 
 
-def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]]:
+def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[str], list[str]]:
   book_id = book_dict["id"]
   sections = book_dict["sections"]
   page_storage:list[str] = []
   fallback_storage:list[str] = []
 
-  functions:list[dict[Any, Any]] = [{
+  functions:list[dict[Any, Any]] = [
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:0b, trigger:" + str(book_dict['trigger_id']) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+    },
+    {
+      "function": "minecraft:set_count",
+      "count": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$count"
+        },
+        "score": "gm4_guide"
+      }
+    }
+  ]
+
+  functions_lectern:list[dict[Any, Any]] = [
+    {
     "function": "minecraft:set_nbt",
-    "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:0b, trigger:" + str(book_dict['trigger_id']) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
-  }]
+    "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:1b, trigger:" + str(book_dict['trigger_id']) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+    },
+    {
+      "function": "minecraft:set_count",
+      "count": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$count"
+        },
+        "score": "gm4_guide"
+      }
+    },
+    {
+      "function": "minecraft:copy_nbt",
+      "source": {
+        "type": "minecraft:storage",
+        "source": "gm4_guidebook:pages"
+      },
+      "ops": [
+        {
+          "source": "lectern_front_matter[]",
+          "target": "pages",
+          "op": "append"
+        }
+      ]
+    }
+  ]
 
   for section in sections:
     enable_conditions:list[dict[Any, Any]] = []
@@ -239,6 +372,13 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
       })
       page_storage.append(f'{page}')
 
+    enabled_ops_lectern = enabled_ops.copy()
+    enabled_ops_lectern[0] = {
+      "op": "append",
+      "source": f"{book_id}.lectern[0]",
+      "target": "pages"
+    }
+
     if "pages_locked" in section:
       for page in section["pages_locked"]:
         fallback_ops.append({
@@ -247,6 +387,13 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
           "target": "pages"
         })
         fallback_storage.append(f'{page}')
+       
+      fallback_ops_lectern = fallback_ops.copy()
+      fallback_ops_lectern[0] = {
+        "op": "append",
+        "source": f"{book_id}.lectern[1]",
+        "target": "pages"
+      }
     else:
       fallback_default = {
         "op": "append",
@@ -254,6 +401,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
         "target": "pages"
       }
       fallback_ops = [fallback_default] * len(enabled_ops)
+      fallback_ops_lectern = fallback_ops.copy()
 
     function: dict[Any, Any] = {
       "function": "minecraft:copy_nbt",
@@ -274,16 +422,23 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
       "conditions": [*enable_conditions]
     }
 
-    set_count: dict[Any, Any] = {
-      "function": "minecraft:set_count",
-      "count": {
-        "type": "minecraft:score",
-        "target": {
-          "type": "minecraft:fixed",
-          "name": "$count"
-        },
-        "score": "gm4_guide"
-      }
+    function_lectern: dict[Any, Any] = {
+      "function": "minecraft:copy_nbt",
+      "source": {
+        "type": "minecraft:storage",
+        "source": f"gm4_guidebook:pages"
+      },
+      "ops": enabled_ops_lectern,
+      "conditions": [*enable_conditions]
+    }
+    fallback_function_lectern: dict[Any, Any] = {
+      "function": "minecraft:copy_nbt",
+      "source": {
+        "type": "minecraft:storage",
+        "source": f"gm4_guidebook:pages"
+      },
+      "ops": fallback_ops_lectern,
+      "conditions": [*enable_conditions]
     }
     
     if "requirements" in section and len(section["requirements"]) > 0:
@@ -291,11 +446,30 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
       fallback_function["conditions"].append({"condition": "minecraft:inverted", "term": unlock_condition})
       functions.append(function)
       functions.append(fallback_function)
+
+      function_lectern["conditions"].append(unlock_condition)
+      fallback_function_lectern["conditions"].append({"condition": "minecraft:inverted", "term": unlock_condition})
+      functions_lectern.append(function_lectern)
+      functions_lectern.append(fallback_function_lectern)
     else:
       functions.append(function)
-    functions.append(set_count)
+      functions_lectern.append(function_lectern)
+  functions_lectern.append({
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "gm4_guidebook:pages"
+    },
+    "ops": [
+      {
+        "source": "blank",
+        "target": "pages",
+        "op": "append"
+      }
+    ]
+  })
 
-  return LootTable({
+  hand_loot = LootTable({
     "pools": [
       {
         "rolls": 1,
@@ -308,7 +482,24 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
         ]
       }
     ]
-  }), page_storage, fallback_storage
+  })
+
+  lectern_loot = LootTable({
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:written_book",
+            "functions": functions_lectern
+          }
+        ]
+      }
+    ]
+  })
+
+  return hand_loot, lectern_loot, page_storage, fallback_storage
 
 
 def generate_advancement(book: Book, section_index: int) -> Advancement | None:
@@ -460,16 +651,26 @@ def generate_setup_storage_tag(book_ids: list[str]) -> FunctionTag:
 
 
 def generate_setup_storage_function(pages: list[str], pages_locked: list[str], book_dict: Book) -> Function:
-  locked_text = "{'text':'???','hoverEvent':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':true,'color':'red'}]}}"
   unlocked = f"execute if score gm4_{book_dict['id']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.pages set value {pages}"
   unlocked = unlocked.replace("{'insert': 'header'}",generate_book_header(book_dict))
+
+  locked_text = "{'text':'???','hoverEvent':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':true,'color':'red'}]}}"
   locked = f"execute if score gm4_{book_dict['id']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.pages_locked set value {pages_locked}"
   locked = locked.replace("{'insert': 'header'}",generate_book_header(book_dict))
   locked = locked.replace("{'insert': 'locked_text'}",locked_text)
 
+  if (len(pages_locked) > 0):
+    lectern_pages:list[str] = [pages[0],pages_locked[0]]
+  else:
+    lectern_pages:list[str] = [pages[0],""]
+  lectern = f"execute if score gm4_{book_dict['id']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.lectern set value {lectern_pages}"
+  lectern = lectern.replace("{'insert': 'header'}",generate_lectern_header(book_dict))
+  lectern = lectern.replace("{'insert': 'locked_text'}",locked_text)
+  
   return Function([
     unlocked,
-    locked
+    locked,
+    lectern
   ])
 
 
@@ -553,9 +754,9 @@ def generate_update_lectern_tag(book_ids: list[str]) -> FunctionTag:
 
 
 def generate_update_lectern_function(book: Book, load: str) -> Function:
-  start = f"execute if score @s gm4_guide matches {book['trigger_id']} if score {load} load.status matches 1.. run"
+  start = f"execute if score $trigger gm4_guide matches {book['trigger_id']} if score {load} load.status matches 1.. run"
   return Function([
-    f"{start} loot spawn ~ ~-3000 ~ loot gm4_guidebook:{book['id']}"
+    f"{start} loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/{book['id']}"
   ])
 
 
@@ -582,8 +783,9 @@ def beet_default(ctx: Context):
 
     book_ids.append(book["id"] if "id" in book else file[:-5])
 
-    loottable, pages, pages_locked = generate_loottable(book)
+    loottable, lectern_loot, pages, pages_locked = generate_loottable(book)
     ctx.data[f"gm4_guidebook:{book['id']}"] = loottable
+    ctx.data[f"gm4_guidebook:lectern/{book['id']}"] = lectern_loot
 
     ctx.data[f"gm4_guidebook:{book['id']}/add_toc_line"] = generate_add_toc_line_function(book)
     ctx.data[f"gm4_guidebook:{book['id']}/setup_storage"] = generate_setup_storage_function(
