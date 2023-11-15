@@ -460,10 +460,12 @@ def generate_setup_storage_tag(book_ids: list[str]) -> FunctionTag:
 
 
 def generate_setup_storage_function(pages: list[str], pages_locked: list[str], book_dict: Book) -> Function:
+  locked_text = "{'text':'???','hoverEvent':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':true,'color':'red'}]}}"
   unlocked = f"data modify storage gm4_guidebook:pages {book_dict['id']}.pages set value {pages}"
   unlocked = unlocked.replace("{'insert': 'header'}",generate_book_header(book_dict))
   locked = f"data modify storage gm4_guidebook:pages {book_dict['id']}.pages_locked set value {pages_locked}"
   locked = locked.replace("{'insert': 'header'}",generate_book_header(book_dict))
+  locked = locked.replace("{'insert': 'locked_text'}",locked_text)
 
   return Function([
     unlocked,
@@ -490,11 +492,8 @@ def generate_add_toc_line_function(book: Book) -> Function:
     "hoverEvent": {
       "action": "show_text",
       "contents": [{
-        "translate": "%1$s%3427655$s",
-        "with": [
-          "Jump to Section",
-          {"translate": "text.gm4.guidebook.jump_to_section"}
-        ],
+        "translate": "text.gm4.guidebook.jump_to_section",
+        "fallback": "Jump to Section",
         "color": "gold"
       }]
     }
