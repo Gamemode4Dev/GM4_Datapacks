@@ -31,6 +31,7 @@ class Book(TypedDict):
   criteria: dict[str, dict[Any, Any]]
   sections: list[Section]
   trigger_id: int
+  description: str
 
 
 def get_pos_hash(module_id: str):
@@ -339,11 +340,11 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[str]
            "type": "minecraft:score",
            "target": {
                "type": "minecraft:fixed",
-               "name": f"gm4_{module_check['id']}"
+               "name": module_check['id']
            },
            "score": "load.status"
             },
-        "range": module_check["load"] if module_check["load"] > 0 else {"min": 0, "max": 2147483647}
+        "range": module_check["load"]
       }
       if module_check["load"] <= 0:
         condition = {"condition": "minecraft:inverted", "term": condition}
@@ -357,6 +358,19 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[str]
           "type": "player",
           "advancements": {
             f"gm4_guidebook:{book_id}/unlock/{section['name']}": True
+          }
+        }
+      }
+    }
+
+    lock_condition = {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type_specific": {
+          "type": "player",
+          "advancements": {
+            f"gm4_guidebook:{book_id}/unlock/{section['name']}": False
           }
         }
       }
@@ -443,12 +457,12 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[str]
     
     if "requirements" in section and len(section["requirements"]) > 0:
       function["conditions"].append(unlock_condition)
-      fallback_function["conditions"].append({"condition": "minecraft:inverted", "term": unlock_condition})
+      fallback_function["conditions"].append(lock_condition)
       functions.append(function)
       functions.append(fallback_function)
 
       function_lectern["conditions"].append(unlock_condition)
-      fallback_function_lectern["conditions"].append({"condition": "minecraft:inverted", "term": unlock_condition})
+      fallback_function_lectern["conditions"].append(lock_condition)
       functions_lectern.append(function_lectern)
       functions_lectern.append(fallback_function_lectern)
     else:
@@ -565,7 +579,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
     "criteria": criteria,
     "requirements": section["requirements"],
     "rewards": {
-      "function": f"gm4_guidebook:rewards/{module_id}/{section['name']}",
+      "function": f"gm4_guidebook:{module_id}/rewards/{section['name']}",
     }
   })
 
@@ -597,7 +611,7 @@ def generate_display_advancement(book: Book) -> Advancement:
   })
 
 
-def generate_reward_function(section: Section, book_id: str, book_name: str) -> Function:
+def generate_reward_function(section: Section, book_id: str, book_name: str, desc: str) -> Function:
   if "enable" in section and len(section["enable"]) > 0:
     start = "execute"
     for module_check in section["enable"]:
@@ -605,40 +619,51 @@ def generate_reward_function(section: Section, book_id: str, book_name: str) -> 
         start += f" unless "
       else:
         start += f" if "
-      start += f"score gm4_{module_check['id']} load.status matches 1.."
-    start += " run"
+      start += f"score {module_check['id']} load.status matches 1.."
+    start += " run "
   else:
     start = ""
-  tellraw = nbtlib.List([
-      nbtlib.String(""),
-      {"selector": "@s"},
-      {"text": " "},
-      {"translate": "%1$s%3427655$s", "with": [{"text": "has discovered a guidebook page from"}, {
-        "translate": "%1$s%3427655$s", "with": [{"translate": "text.gm4.guidebook.discovered"}]}]},
-      {"text": " "},
-      {
-          "text": f"[{book_name}]",
-          "color": "#4AA0C7",
-          "hoverEvent": {
-              "action": "show_text",
-              "contents": [
-                {"text": book_name, "color": "#4AA0C7"},
-                {"text": "\n"},
-                {
-                  "text": "Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!",
-                  "italic": True,
-                  "color": "gray"
-                }
-              ]
+  tellraw: list[dict[Any, Any] | str] = [
+    "", 
+    {
+      "translate": "text.gm4.guidebook.discovered", 
+      "fallback":"%1$s has discovered a guidebook page from %2$s", 
+      "with": [
+        {
+          "selector":"@s"
+        },
+        {
+          "text": f"[{book_name}]", 
+          "color": "#4AA0C7", 
+          "hoverEvent": 
+          {
+            "action": "show_text", 
+            "contents": [
+              {
+                "text": book_name, 
+                "color": "#4AA0C7"
+              }, 
+              {
+                "text": "\n"
+              }, 
+              {
+                "text": desc, 
+                "italic": True, 
+                "color": "gray"
+              }
+            ]
           }
-      }
-  ])
+        }
+      ]
+    }
+  ]
+
   reward = Function([
-    f"{start} tellraw @s {nbtlib.serialize_tag(tellraw)}",
-    f"{start} advancement grant @s only gm4_guidebook:{book_id}/display/{section['name']}"
+    f'{start}tellraw @s {json.dumps(tellraw)}',
+    f"{start}advancement grant @s only gm4_guidebook:{book_id}/display/{section['name']}"
   ])
   if "grants" in section:
-    reward.append([f"{start} advancement grant @s only gm4_guidebook:{book_id}/{grant}" for grant in section["grants"]])
+    reward.append([f"{start}advancement grant @s only gm4_guidebook:{book_id}/{grant}" for grant in section["grants"]])
   return reward
 
 
@@ -781,6 +806,10 @@ def beet_default(ctx: Context):
         t.write("\n")
     book['trigger_id'] = triggers[book['id']]
 
+    # get description
+    if "description" not in book:
+      book["description"] = ctx.meta["gm4"]["website"]["description"]
+
     book_ids.append(book["id"] if "id" in book else file[:-5])
 
     loottable, lectern_loot, pages, pages_locked = generate_loottable(book)
@@ -799,7 +828,7 @@ def beet_default(ctx: Context):
         ctx.data[f"gm4_guidebook:{book['id']}/unlock/{section['name']}"] = advancement
         ctx.data[f"gm4_guidebook:{book['id']}/display/{section['name']}"] = generate_display_advancement(book)
         ctx.data[f"gm4_guidebook:{book['id']}/rewards/{section['name']}"] = generate_reward_function(
-          section, book["id"], book["name"])
+          section, book["id"], book["name"], book["description"])
 
   ctx.data["gm4_guidebook:add_toc_line"] = generate_add_toc_line_tag(book_ids)
   ctx.data["gm4_guidebook:summon_marker"] = generate_summon_marker_tag(book_ids)

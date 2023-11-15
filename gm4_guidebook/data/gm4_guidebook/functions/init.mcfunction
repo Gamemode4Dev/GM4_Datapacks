@@ -20,7 +20,7 @@ scoreboard players reset $module_count gm4_guide
 schedule function gm4_guidebook:update_storage/build_toc 2t
 
 schedule function #gm4_guidebook:setup_storage 3t
-data modify storage gm4_guidebook:pages locked_default set value '["",{"text":"???","hoverEvent":{"action":"show_text","contents":[{"translate":"%1$s%3427655$s","with":[{"text":"Undiscovered"},{"translate":"text.gm4.guidebook.undiscovered"}],"italic":true,"color":"red"}]}}]'
+data modify storage gm4_guidebook:pages locked_default set value '["",{"text":"???","hoverEvent":{"action":"show_text","contents":[{"translate":"text.gm4.guidebook.undiscovered","fallback":"Undiscovered","italic":true,"color":"red"}]}}]'
 data modify storage gm4_guidebook:pages lectern_front_matter set value ['[""]','[""]','[""]','[""]']
 data modify storage gm4_guidebook:pages blank set value '[""]'
 
