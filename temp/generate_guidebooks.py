@@ -169,8 +169,8 @@ def get_toc_line(book_dict: Book) -> str:
 def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]]:
   book_id = book_dict["id"]
   sections = book_dict["sections"]
-  page_storage:list[Any] = []
-  fallback_storage:list[Any] = []
+  page_storage:list[str] = []
+  fallback_storage:list[str] = []
 
   functions:list[dict[Any, Any]] = [{
     "function": "minecraft:set_nbt",
@@ -218,7 +218,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
         "source": f"{book_id}.pages[{len(page_storage)}]",
         "target": "pages"
       })
-      page_storage.append(page)
+      page_storage.append(f'{page}')
 
     if "pages_locked" in section:
       for page in section["pages_locked"]:
@@ -227,7 +227,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, list[str], list[str]
           "source": f"{book_id}.pages_locked[{len(fallback_storage)}]",
           "target": "pages"
         })
-        fallback_storage.append(page)
+        fallback_storage.append(f'{page}')
     else:
       fallback_default = {
         "op": "append",
