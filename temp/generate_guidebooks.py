@@ -11,7 +11,6 @@ import os
 # display advancement description
 # reward tellraw hover text (same as above)
 # merge some functions to reduce fuction call overhead
-# set up actual wiki link
 
 
 class Section(TypedDict):
@@ -46,6 +45,7 @@ def get_pos_hash(module_id: str):
 
 
 def generate_book_header(book_dict: Book) -> str:
+  wiki_id = book_dict["name"].replace(" ", "_")
   header = [
     "",
     {
@@ -69,7 +69,7 @@ def generate_book_header(book_dict: Book) -> str:
       "color": "#864bc7",
       "clickEvent": {
         "action": "open_url",
-        "value": f"https://wiki.gm4.co"
+        "value": f"https://wiki.gm4.co/wiki/{wiki_id}"
       },
       "hoverEvent": {
         "action": "show_text",
