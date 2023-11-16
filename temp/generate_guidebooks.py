@@ -50,9 +50,8 @@ def generate_book_header(book_dict: Book) -> str:
   header = [
     "",
     {
-      "text": "⌂",
+      "text": "↖⌂",
       "color": "#3D83A3",
-      "bold": True,
       "clickEvent": {
         "action": "run_command",
         "value": f"/trigger gm4_guide set 1"
@@ -60,11 +59,12 @@ def generate_book_header(book_dict: Book) -> str:
       "hoverEvent": {
         "action": "show_text",
         "value": {
-          "text": "Return to the table of contents"
+          "translate": "text.gm4.guidebook.return_to_toc",
+          "fallback": "Return to the table of contents"
         }
       }
     },
-    " " * 6,
+    " ",
     {
       "text": "Ⓦ",
       "color": "#864bc7",
@@ -75,15 +75,16 @@ def generate_book_header(book_dict: Book) -> str:
       "hoverEvent": {
         "action": "show_text",
         "value": {
-          "text": "Open the wiki page for this module"
+          "translate": "text.gm4.guidebook.open_wiki",
+          "fallback": "Open the wiki page for this module"
         }
       }
     },
-    " " * 6,
+    " " * 14,
     {
       "text": "⟳",
       "bold": True,
-      "color": "gold",
+      "color": "dark_green",
       "clickEvent": {
         "action": "run_command",
         "value": f"/trigger gm4_guide set {book_dict['trigger_id']}"
@@ -91,11 +92,12 @@ def generate_book_header(book_dict: Book) -> str:
       "hoverEvent": {
         "action": "show_text",
         "value": {
-          "text": "Refresh section"
+          "translate": "text.gm4.guidebook.refresh",
+          "fallback": "Refresh section"
         }
       }
     },
-    " " * 3,
+    " ",
     {
       "text": "◀",
       "clickEvent": {
@@ -105,7 +107,8 @@ def generate_book_header(book_dict: Book) -> str:
       "hoverEvent": {
         "action": "show_text",
         "value": {
-          "text": "Go to the previous module"
+          "translate": "text.gm4.guidebook.prev",
+          "fallback": "Go to the previous module"
         }
       }
     },
@@ -119,7 +122,8 @@ def generate_book_header(book_dict: Book) -> str:
       "hoverEvent": {
         "action": "show_text",
         "value": {
-          "text": "Go to the next module"
+          "translate": "text.gm4.guidebook.next",
+          "fallback": "Go to the next module"
         }
       }
     },
@@ -138,7 +142,7 @@ def generate_lectern_header(book_dict: Book) -> str:
   header = [
     "",
     {
-      "text": "⌂",
+      "text": "↖⌂",
       "color": "#3D83A3",
       "bold": True,
       "clickEvent": {
@@ -148,11 +152,12 @@ def generate_lectern_header(book_dict: Book) -> str:
       "hoverEvent": {
         "action": "show_text",
         "value": {
-          "text": "Return to the table of contents"
+          "translate": "text.gm4.guidebook.return_to_toc",
+          "fallback": "Return to the table of contents"
         }
       }
     },
-    " " * 6,
+    " ",
     {
       "text": "Ⓦ",
       "color": "#864bc7",
@@ -163,11 +168,12 @@ def generate_lectern_header(book_dict: Book) -> str:
       "hoverEvent": {
         "action": "show_text",
         "value": {
-          "text": "Open the wiki page for this module"
+          "translate": "text.gm4.guidebook.open_wiki",
+          "fallback": "Open the wiki page for this module"
         }
       }
     },
-    " " * 6,
+    " " * 14,
     {
       "text": "⟳",
       "bold": True,
@@ -179,11 +185,12 @@ def generate_lectern_header(book_dict: Book) -> str:
       "hoverEvent": {
         "action": "show_text",
         "value": {
-          "text": "Refresh section"
+          "translate": "text.gm4.guidebook.refresh",
+          "fallback": "Refresh section"
         }
       }
     },
-    " " * 3,
+    " ",
     {
       "text": "◀",
       "clickEvent": {
@@ -193,7 +200,8 @@ def generate_lectern_header(book_dict: Book) -> str:
       "hoverEvent": {
         "action": "show_text",
         "value": {
-          "text": "Go to the previous module"
+          "translate": "text.gm4.guidebook.prev",
+          "fallback": "Go to the previous module"
         }
       }
     },
@@ -207,7 +215,8 @@ def generate_lectern_header(book_dict: Book) -> str:
       "hoverEvent": {
         "action": "show_text",
         "value": {
-          "text": "Go to the next module"
+          "translate": "text.gm4.guidebook.next",
+          "fallback": "Go to the next module"
         }
       }
     },
@@ -592,7 +601,8 @@ def generate_display_advancement(book: Book) -> Advancement:
   display = {
     "icon": icon,
     "title": {
-      "text": "Check your guidebook!",
+      "translate": "text.gm4.guidebook.discovered_page",
+      "fallback": "Check your guidebook!",
       "color": "#4AA0C7",
       "italic": True
     },
