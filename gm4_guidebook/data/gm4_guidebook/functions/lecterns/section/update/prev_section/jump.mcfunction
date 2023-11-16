@@ -24,4 +24,6 @@ execute positioned ~ ~-3000 ~ run kill @e[type=item,distance=..1,nbt={Item:{tag:
 
 # update page number
 execute if score $trigger gm4_guide matches 1 run data modify block ~ ~ ~ Page set value 1
-execute unless score $trigger gm4_guide matches 1 run data modify block ~ ~ ~ Page set value 4
+execute unless score $trigger gm4_guide matches 1 unless score $page gm4_guide_pages matches 4 run data modify block ~ ~ ~ Page set value 5
+execute unless score $trigger gm4_guide matches 1 if score $page gm4_guide_pages matches 4 store result score $pages gm4_guide run data get block ~ ~ ~ Book.tag.pages
+execute unless score $trigger gm4_guide matches 1 if score $page gm4_guide_pages matches 4 store result block ~ ~ ~ Page int 1 run scoreboard players remove $pages gm4_guide 2

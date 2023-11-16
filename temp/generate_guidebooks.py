@@ -144,7 +144,6 @@ def generate_lectern_header(book_dict: Book) -> str:
     {
       "text": "↖⌂",
       "color": "#3D83A3",
-      "bold": True,
       "clickEvent": {
         "action": "change_page",
         "value": f"2"
@@ -177,7 +176,7 @@ def generate_lectern_header(book_dict: Book) -> str:
     {
       "text": "⟳",
       "bold": True,
-      "color": "gold",
+      "color": "dark_green",
       "clickEvent": {
         "action": "change_page",
         "value": f"3"

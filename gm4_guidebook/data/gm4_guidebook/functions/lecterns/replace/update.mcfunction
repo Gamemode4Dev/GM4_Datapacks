@@ -25,7 +25,7 @@ execute if score $trigger gm4_guide matches 1 run tag @e[type=marker,tag=gm4_gui
 
 # update page number
 execute if score $trigger gm4_guide matches 1 run data modify block ~ ~ ~ Page set value 1
-execute unless score $trigger gm4_guide matches 1 run data modify block ~ ~ ~ Page set value 4
+execute unless score $trigger gm4_guide matches 1 run data modify block ~ ~ ~ Page set value 5
 
 # clean up
 scoreboard players reset $trigger gm4_guide

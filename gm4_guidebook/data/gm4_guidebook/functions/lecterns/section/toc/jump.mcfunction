@@ -31,4 +31,4 @@ scoreboard players remove @e[type=marker,tag=gm4_guide_lectern,distance=..0.5,li
 
 # update page number
 execute if score $trigger gm4_guide matches 1 run data modify block ~ ~ ~ Page set value 1
-execute unless score $trigger gm4_guide matches 1 run data modify block ~ ~ ~ Page set value 4
+execute unless score $trigger gm4_guide matches 1 run data modify block ~ ~ ~ Page set value 5
