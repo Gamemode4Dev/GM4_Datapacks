@@ -2,6 +2,7 @@
   "id": "resurrecting_zombies",
   "name": "Resurrecting Zombies",
   "module_type": "expansion",
+  "load_check": "mysterious_midnights",
   "base_module": "mysterious_midnights",
   "icon": {
     "item": "minecraft:rotten_flesh",

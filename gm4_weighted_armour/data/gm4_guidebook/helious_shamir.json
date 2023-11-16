@@ -2,6 +2,7 @@
   "id": "helious_shamir",
   "name": "Helious Shamir",
   "module_type": "expansion",
+  "load_check": "weighted_armour",
   "base_module": "metallurgy",
   "icon": {
     "item": "minecraft:anvil",

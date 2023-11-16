@@ -2,6 +2,7 @@
   "id": "illusioner_nights",
   "name": "Illusioner Nights",
   "module_type": "expansion",
+  "load_check": "midnight_menaces",
   "base_module": "mysterious_midnights",
   "icon": {
     "item": "minecraft:lingering_potion",

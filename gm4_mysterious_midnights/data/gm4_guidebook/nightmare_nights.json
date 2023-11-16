@@ -2,6 +2,7 @@
   "id": "nightmare_nights",
   "name": "Nightmare Nights",
   "module_type": "expansion",
+  "load_check": "mysterious_midnights",
   "base_module": "mysterious_midnights",
   "icon": {
     "item": "minecraft:blaze_powder",

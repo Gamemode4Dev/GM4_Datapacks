@@ -24,6 +24,7 @@ class Book(TypedDict):
   id: str
   name: str
   module_type: str
+  load_check: str
   base_module: str
   icon: dict[str, str]
   criteria: dict[str, dict[Any, Any]]
@@ -567,7 +568,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
         "type": "minecraft:score",
         "target": {
             "type": "minecraft:fixed",
-            "name": f"gm4_{module_id}"
+            "name": book["load_check"]
         },
         "score": "load.status"
       },
@@ -685,11 +686,11 @@ def generate_setup_storage_tag(book_ids: list[str]) -> FunctionTag:
 
 
 def generate_setup_storage_function(pages: list[str], pages_locked: list[str], book_dict: Book) -> Function:
-  unlocked = f"execute if score gm4_{book_dict['id']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.pages set value {pages}"
+  unlocked = f"execute if score {book_dict['load_check']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.pages set value {pages}"
   unlocked = unlocked.replace("{'insert': 'header'}",generate_book_header(book_dict))
 
   locked_text = "{'text':'???','hoverEvent':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':true,'color':'red'}]}}"
-  locked = f"execute if score gm4_{book_dict['id']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.pages_locked set value {pages_locked}"
+  locked = f"execute if score {book_dict['load_check']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.pages_locked set value {pages_locked}"
   locked = locked.replace("{'insert': 'header'}",generate_book_header(book_dict))
   locked = locked.replace("{'insert': 'locked_text'}",locked_text)
 
@@ -697,7 +698,7 @@ def generate_setup_storage_function(pages: list[str], pages_locked: list[str], b
     lectern_pages:list[str] = [pages[0],pages_locked[0]]
   else:
     lectern_pages:list[str] = [pages[0],""]
-  lectern = f"execute if score gm4_{book_dict['id']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.lectern set value {lectern_pages}"
+  lectern = f"execute if score {book_dict['load_check']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.lectern set value {lectern_pages}"
   lectern = lectern.replace("{'insert': 'header'}",generate_lectern_header(book_dict))
   lectern = lectern.replace("{'insert': 'locked_text'}",locked_text)
   
@@ -734,7 +735,7 @@ def generate_add_toc_line_function(book: Book) -> Function:
     }
   }
   return Function([
-    f"execute if score $trigger gm4_guide matches {book['trigger_id']} if score gm4_{book['id']} load.status matches 1.. run data modify storage gm4_guidebook:temp page append value ' {json.dumps(text_component, ensure_ascii=False)}'"
+    f"execute if score $trigger gm4_guide matches {book['trigger_id']} if score {book['load_check']} load.status matches 1.. run data modify storage gm4_guidebook:temp page append value ' {json.dumps(text_component, ensure_ascii=False)}'"
   ])
 
 
@@ -760,7 +761,7 @@ def generate_summon_marker_function(book: Book) -> Function:
   marker_nbt["data"]["toc_line"] = nbtlib.String(get_toc_line(book))
   marker_nbt["data"]["line_count"] = nbtlib.Int(len(split_into_lines(get_toc_line(book))))
   return Function([
-    f"execute if score gm4_{book['id']} load.status matches 1.. run summon marker ~ {get_pos_hash(book['id'])} ~ {nbtlib.serialize_tag(marker_nbt)}"
+    f"execute if score {book['load_check']} load.status matches 1.. run summon marker ~ {get_pos_hash(book['id'])} ~ {nbtlib.serialize_tag(marker_nbt)}"
   ])
 
 
@@ -772,8 +773,8 @@ def generate_update_hand_tag(book_ids: list[str]) -> FunctionTag:
   })
 
 
-def generate_update_hand_function(book: Book, load: str) -> Function:
-  start = f"execute if score @s gm4_guide matches {book['trigger_id']} if score {load} load.status matches 1.. run"
+def generate_update_hand_function(book: Book) -> Function:
+  start = f"execute if score @s gm4_guide matches {book['trigger_id']} if score {book['load_check']} load.status matches 1.. run"
   return Function([
     f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:{book['id']}",
     f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_offhand] weapon.offhand loot gm4_guidebook:{book['id']}"
@@ -788,8 +789,8 @@ def generate_update_lectern_tag(book_ids: list[str]) -> FunctionTag:
   })
 
 
-def generate_update_lectern_function(book: Book, load: str) -> Function:
-  start = f"execute if score $trigger gm4_guide matches {book['trigger_id']} if score {load} load.status matches 1.. run"
+def generate_update_lectern_function(book: Book) -> Function:
+  start = f"execute if score $trigger gm4_guide matches {book['trigger_id']} if score {book['load_check']} load.status matches 1.. run"
   return Function([
     f"{start} loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/{book['id']}"
   ])
@@ -820,6 +821,12 @@ def beet_default(ctx: Context):
     if "description" not in book:
       book["description"] = ctx.meta["gm4"]["website"]["description"]
 
+    # get load check
+    if "load_check" not in book:
+      book['load_check'] = book['id']
+    if "gm4_" not in book['load_check']:
+      book['load_check'] = f"gm4_{book['load_check']}"
+
     book_ids.append(book["id"] if "id" in book else file[:-5])
 
     loottable, lectern_loot, pages, pages_locked = generate_loottable(book)
@@ -830,8 +837,8 @@ def beet_default(ctx: Context):
     ctx.data[f"gm4_guidebook:{book['id']}/setup_storage"] = generate_setup_storage_function(
       pages, pages_locked, book)
     ctx.data[f"gm4_guidebook:{book['id']}/summon_marker"] = generate_summon_marker_function(book)
-    ctx.data[f"gm4_guidebook:{book['id']}/update_hand"] = generate_update_hand_function(book, ctx.project_id)
-    ctx.data[f"gm4_guidebook:{book['id']}/update_lectern"] = generate_update_lectern_function(book, ctx.project_id)
+    ctx.data[f"gm4_guidebook:{book['id']}/update_hand"] = generate_update_hand_function(book)
+    ctx.data[f"gm4_guidebook:{book['id']}/update_lectern"] = generate_update_lectern_function(book)
 
     for index, section in enumerate(book["sections"]):
       if (advancement := generate_advancement(book, index)) is not None:

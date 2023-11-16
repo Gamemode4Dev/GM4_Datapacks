@@ -2,6 +2,7 @@
   "id": "enlarging_phantoms",
   "name": "Enlarging Phantoms",
   "module_type": "expansion",
+  "load_check": "midnight_menaces",
   "base_module": "mysterious_midnights",
   "icon": {
     "item": "minecraft:phantom_membrane",

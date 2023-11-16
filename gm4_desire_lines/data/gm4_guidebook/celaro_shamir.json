@@ -2,6 +2,7 @@
   "id": "celaro_shamir",
   "name": "Celaro Shamir",
   "module_type": "expansion",
+  "load_check": "desire_lines",
   "base_module": "metallurgy",
   "icon": {
     "item": "minecraft:anvil",

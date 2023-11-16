@@ -2,6 +2,7 @@
   "id": "ender_bolt_shamir",
   "name": "Ender Bolt Shamir",
   "module_type": "expansion",
+  "load_check": "metallurgy",
   "base_module": "metallurgy",
   "icon": {
     "item": "minecraft:anvil",

@@ -2,6 +2,7 @@
   "id": "moneo_shamir",
   "name": "Moneo Shamir",
   "module_type": "expansion",
+  "load_check": "metallurgy",
   "base_module": "metallurgy",
   "icon": {
     "item": "minecraft:anvil",

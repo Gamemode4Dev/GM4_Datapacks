@@ -2,6 +2,7 @@
   "id": "standard_liquids",
   "name": "Standard Liquids",
   "module_type": "expansion",
+  "load_check": "liquid_tanks",
   "base_module": "liquid_tanks",
   "icon": {
     "item": "minecraft:lava_bucket",
