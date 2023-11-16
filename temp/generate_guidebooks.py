@@ -330,7 +330,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[str]
     }
   ]
 
-  for section in sections:
+  for i, section in enumerate(sections):
     enable_conditions:list[dict[Any, Any]] = []
 
     for module_check in section["enable"]:
@@ -387,11 +387,12 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[str]
       page_storage.append(f'{page}')
 
     enabled_ops_lectern = enabled_ops.copy()
-    enabled_ops_lectern[0] = {
-      "op": "append",
-      "source": f"{book_id}.lectern[0]",
-      "target": "pages"
-    }
+    if (i == 0):
+      enabled_ops_lectern[0] = {
+        "op": "append",
+        "source": f"{book_id}.lectern[0]",
+        "target": "pages"
+      }
 
     if "pages_locked" in section:
       for page in section["pages_locked"]:
@@ -403,11 +404,12 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[str]
         fallback_storage.append(f'{page}')
        
       fallback_ops_lectern = fallback_ops.copy()
-      fallback_ops_lectern[0] = {
-        "op": "append",
-        "source": f"{book_id}.lectern[1]",
-        "target": "pages"
-      }
+      if (i == 0):
+        fallback_ops_lectern[0] = {
+          "op": "append",
+          "source": f"{book_id}.lectern[1]",
+          "target": "pages"
+        }
     else:
       fallback_default = {
         "op": "append",
