@@ -5,11 +5,9 @@ import json
 import os
 
 # TODO:
-# parse & update page contents
+# update page contents
 # delete old files
-# setup system for lecterns
-# display advancement description
-# reward tellraw hover text (same as above)
+# recipe support
 # merge some functions to reduce fuction call overhead
 
 
@@ -230,7 +228,7 @@ def generate_lectern_header(book_dict: Book) -> str:
   return f"{header}"
 
 
-advances = json.load(open("temp/advances.json"))
+advances = json.load(open("gm4_guidebook/advances.json"))
 
 
 def char_advance(str: str) -> int:

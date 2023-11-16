@@ -7,4 +7,4 @@ pipeline:
   - mecha
   - directory: '../base'
     extend: 'beet.yaml'
-  - temp.generate_guidebooks
+  - gm4_guidebook.generate_guidebooks
