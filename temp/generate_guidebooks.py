@@ -750,7 +750,8 @@ def generate_summon_marker_function(book: Book) -> Function:
   marker_nbt["data"]["id"] = nbtlib.String(book["id"])
   marker_nbt["data"]["trigger"] = nbtlib.Int(book["trigger_id"])
   marker_nbt["data"]["module_name"] = nbtlib.String(book["name"])
-  marker_nbt["data"]["toc_lines"] = nbtlib.Int(len(split_into_lines(get_toc_line(book))))
+  marker_nbt["data"]["toc_line"] = nbtlib.String(get_toc_line(book))
+  marker_nbt["data"]["line_count"] = nbtlib.Int(len(split_into_lines(get_toc_line(book))))
   return Function([
     f"execute if score gm4_{book['id']} load.status matches 1.. run summon marker ~ {get_pos_hash(book['id'])} ~ {nbtlib.serialize_tag(marker_nbt)}"
   ])
