@@ -1,5 +1,6 @@
 from beet import Function, Advancement, LootTable, Context, FunctionTag
-import nbtlib
+import nbtlib, colorsys
+from PIL import Image
 from typing import TypedDict, Any
 import json
 import os
@@ -794,6 +795,38 @@ def generate_update_lectern_function(book: Book) -> Function:
   return Function([
     f"{start} loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/{book['id']}"
   ])
+
+def get_item_color(file: str):
+  # open image
+  img = Image.open(file)
+
+  # Reduce colors (uses k-means internally)
+  paletted = img.convert('P', palette=Image.ADAPTIVE, colors=4)
+
+  # Find the colors that occur most often
+  palette = paletted.getpalette()
+  if palette is None:
+    return [0,0,0]
+  
+  # get average RGB values
+  r, g, b = 0, 0, 0
+  for i in range(0, 12, 3):
+    r += palette[i]
+    g += palette[i+1]
+    b += palette[i+2]
+  r /= 4
+  g /= 4
+  b /= 4
+
+  # bump saturation and value
+  h, s, v = colorsys.rgb_to_hsv(r, g, b)
+  s *= 1.5
+  v *= 1.15
+  r, g, b = colorsys.hsv_to_rgb(h, s, v)
+
+  # return hex value
+  return '#{:02x}{:02x}{:02x}'.format(int(r), int(g), int(b)).replace('-','0')
+
 
 
 def beet_default(ctx: Context):
