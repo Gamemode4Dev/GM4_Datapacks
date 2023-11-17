@@ -10,6 +10,7 @@ resource_pack:
 
 pipeline:
   - register_model_data
+  - generate_optifine
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_player_heads
 
