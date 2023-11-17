@@ -1,0 +1,79 @@
+[
+  {
+    "name": "gm4_mountaineering:crampons",
+    "input": {
+      "type": "shaped",
+      "recipe": [
+        " B ",
+        "III"
+      ],
+      "key": {
+        "B": {
+          "item": "minecraft:chainmail_boots"
+        },
+        "I": {
+          "item": "minecraft:iron_nugget"
+        }
+      }
+    },
+    "output": {
+      "result": {
+        "type": "loot_table",
+        "name": "gm4_mountaineering:items/crampons",
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "gm4_mountaineering:skis",
+    "input": {
+      "type": "shaped",
+      "recipe": [
+        "I I",
+        "IBI",
+        "I I"
+      ],
+      "key": {
+        "B": {
+          "item": "minecraft:iron_boots"
+        },
+        "I": {
+          "item": "minecraft:iron_ingot"
+        }
+      }
+    },
+    "output": {
+      "result": {
+        "type": "loot_table",
+        "name": "gm4_mountaineering:items/skis",
+        "count": 1
+      }
+    }
+  },
+  {
+    "name": "gm4_mountaineering:poles",
+    "input": {
+      "type": "shaped",
+      "recipe": [
+        "T",
+        "I",
+        "I"
+      ],
+      "key": {
+        "T": {
+          "item": "minecraft:tripwire_hook"
+        },
+        "I": {
+          "item": "minecraft:iron_ingot"
+        }
+      }
+    },
+    "output": {
+      "result": {
+        "type": "loot_table",
+        "name": "gm4_mountaineering:items/poles",
+        "count": 1
+      }
+    }
+  }
+]
