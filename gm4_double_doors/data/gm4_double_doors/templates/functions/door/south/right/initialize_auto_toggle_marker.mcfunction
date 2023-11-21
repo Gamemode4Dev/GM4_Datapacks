@@ -17,4 +17,4 @@ scoreboard players set @s gm4_double_doors_auto_toggle_liftime 300
 scoreboard players set @s gm4_double_doors_auto_toggle_state 0
 
 # schedule auto toggle marker handling
-schedule function gm4_double_doors:auto_toggle_markers/find 1t
+schedule function gm4_double_doors:auto_toggle_marker/find 1t

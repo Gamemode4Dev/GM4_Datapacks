@@ -5,6 +5,9 @@ version: 1.0.X
 data_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
   - gm4_double_doors.generate
   - gm4.plugins.extend.module

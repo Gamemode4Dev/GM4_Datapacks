@@ -1,7 +1,7 @@
 # manages the lifetime and functionality of auto toggle markers
 # @s = marker entity with the gm4_double_doors_auto_toggle_marker tag
 # at @s align xyz
-# run from gm4_double_doors:auto_toggle_markers/find
+# run from gm4_double_doors:auto_toggle_marker/find
 
 # decay marker
 scoreboard players remove @s gm4_double_doors_auto_toggle_liftime 1
@@ -13,8 +13,8 @@ scoreboard players remove @s gm4_double_doors_auto_toggle_liftime 1
 # - 'player_departed' markers do not check for players
 # all states decay at 1 score per tick
 execute if score @s gm4_double_doors_auto_toggle_state matches ..0 if entity @a[dx=0,limit=1,gamemode=!spectator] run scoreboard players set @s gm4_double_doors_auto_toggle_state 1
-execute if score @s gm4_double_doors_auto_toggle_state matches 1 unless entity @a[dx=0,limit=1,gamemode=!spectator] run function gm4_double_doors:auto_toggle_markers/player_departed
-execute if score @s gm4_double_doors_auto_toggle_state matches 2.. if score @s gm4_double_doors_auto_toggle_liftime matches 0 run function gm4_double_doors:auto_toggle_markers/toggle_door
+execute if score @s gm4_double_doors_auto_toggle_state matches 1 unless entity @a[dx=0,limit=1,gamemode=!spectator] run function gm4_double_doors:auto_toggle_marker/player_departed
+execute if score @s gm4_double_doors_auto_toggle_state matches 2.. if score @s gm4_double_doors_auto_toggle_liftime matches 0 run function gm4_double_doors:auto_toggle_marker/select_material
 
 # kill old auto toggle markers
 execute if score @s gm4_double_doors_auto_toggle_liftime matches ..0 run kill @s

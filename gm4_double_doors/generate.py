@@ -20,10 +20,11 @@ def register_snbt_files(ctx: Context):
 
 def beet_default(ctx: Context):
     vanilla = ctx.inject(Vanilla)
-    wooden_doors = vanilla.data.block_tags["minecraft:wooden_doors"]
+    wood_types = [s.removeprefix("minecraft:").removesuffix("_door") for s in vanilla.data.block_tags["minecraft:wooden_doors"].data["values"]]
+    ctx.meta['wood_types'] = wood_types
     
     # for each wood type in the vanilla doors tag, render a copy of the "templates" directory with the appropiate wood-type
-    for wood_type in [s.removeprefix("minecraft:").removesuffix("_door") for s in wooden_doors.data["values"]]:
+    for wood in wood_types:
         subproject_config = {
             "require": [
                 "gm4_double_doors.generate.register_snbt_files"
@@ -31,9 +32,9 @@ def beet_default(ctx: Context):
             "data_pack":{
                 "load": [
                     {
-                        f"data/gm4_double_doors/advancements/{wood_type}": "data/gm4_double_doors/templates/advancements",
-                        f"data/gm4_double_doors/functions/{wood_type}": "data/gm4_double_doors/templates/functions",
-                        f"data/gm4_double_doors/structures/{wood_type}": "data/gm4_double_doors/templates/structures",
+                        f"data/gm4_double_doors/advancements/{wood}": "data/gm4_double_doors/templates/advancements",
+                        f"data/gm4_double_doors/functions/{wood}": "data/gm4_double_doors/templates/functions",
+                        f"data/gm4_double_doors/structures/{wood}": "data/gm4_double_doors/templates/structures",
                     }
                 ],
                 "render":{
@@ -43,7 +44,7 @@ def beet_default(ctx: Context):
                 }
             },
             "meta":{
-                "material_name": wood_type
+                "material_name": wood
             }
         }
 
