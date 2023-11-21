@@ -15,3 +15,6 @@ execute store result score $target_trapdoor_state gm4_double_doors_data if score
 # check for potential trapdoors which should also be opened
 scoreboard players operation $trap_door_recursion_level gm4_double_doors_data = $trap_door_limit gm4_double_doors_data
 execute positioned ~ ~2 ~ if block ~ ~ ~ minecraft:{{ material_name }}_trapdoor[open=true,half=bottom] unless block ~ ~ ~ minecraft:{{ material_name }}_trapdoor[facing=east] unless block ~ ~ ~ minecraft:{{ material_name }}_trapdoor[facing=north] run function gm4_double_doors:{{ material_name }}/trapdoor/south_west/check_neighbours
+
+# prepare automatic un-toggling after player walked through
+execute align xyz unless entity @e[type=marker,tag=gm4_double_doors_auto_toggle_marker,dx=0,limit=1] positioned ~.5 ~.5 ~.5 summon marker run function gm4_double_doors:{{ material_name }}/door/west/right/initialize_auto_toggle_marker
