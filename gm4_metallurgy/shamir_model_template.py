@@ -1,11 +1,13 @@
 from beet import Context, Model, NamespaceProxy, ListOption, ResourcePack
 from beet.contrib.vanilla import Vanilla, ClientJar
+from beet.contrib.optifine import OptifineProperties
 from typing import Any, ClassVar, Literal
-from itertools import product, chain
+from itertools import product, chain, count
+import re
 import logging
 
 from gm4.plugins.resource_pack import ModelData, TemplateOptions
-from gm4.utils import add_namespace, MapOption
+from gm4.utils import add_namespace, MapOption, NoneAttribute
 
 parent_logger = logging.getLogger("gm4."+__name__)
 
@@ -142,6 +144,27 @@ class ShamirTemplate(TemplateOptions):
                 })
             models.update({item: variants})
 
+            # optifine .properties handling
+            if item in GROUP_LOOKUP["armor"]:
+                material = item.split("_")[0]
+
+                if material == "golden":
+                    material = "gold" # vanilla armor textures are called "gold_layer_1" for some reason
+                layer = item.endswith("leggings")+1 # leggings use layer 2
+                
+                print(f"existing filedata for gm4_metallurgy:cit/{self.metal}/{item}")
+                print(self.bound_ctx.assets[OptifineProperties].get(f"gm4_metallurgy:cit/{self.metal}/{item}", NoneAttribute()).text)
+
+                self.bound_ctx.generate(f"gm4_metallurgy:cit/{self.metal}/{item}", merge=OptifineProperties(
+                    "\n".join([e for e in [
+                        "type=armor",
+                        f"matchItems={item}",
+                        f"texture.{material}_layer_{layer}={material}_layer_{layer}",
+                        f"texture.leather_layer_{layer}_overlay=leather_layer_{layer}_overlay" if material == "leather" else None,
+                        f"nbt.CustomModelData=regex:(${config.reference})"
+                    ] if e is not None])
+                ))
+
         config.model = MapOption(__root__=models)
         return ret_list
     
@@ -154,8 +177,35 @@ class ShamirTemplate(TemplateOptions):
         else: # isinstance(.., dict):
             config.textures = MapOption(__root__={"band": f"gm4_metallurgy:item/band/{self.metal}_band"}|config.textures.__root__)
 
+
+def optifine_armor_properties_merging(pack: ResourcePack, path: str, current: OptifineProperties, conflict: OptifineProperties) -> bool:
+    if not path.startswith("gm4_metallurgy:cit"): # only apply this rule to metallurgy files
+        return False
+
+    merged = current.text.splitlines()
+    pattern = re.compile(r"^nbt.CustomModelData=regex:\((.+)\)$", flags=re.MULTILINE)
+    for i, current_line, conflict_line in zip(count(), current.text.splitlines(), conflict.text.splitlines()):
+        current_match = pattern.match(current_line)
+        conflict_match = pattern.match(conflict_line)
+
+        if not current_match or not conflict_match: # this line is not the nbt.CustomModelData config
+            if current_line != conflict_line:
+                return False # the files are not the same, abort the merge
+            continue # process the next line pair
+
+        current_cmd = set(current_match.group(1).split("|"))
+        conflict_cmd = set(conflict_match.group(1).split("|"))
+
+        merged[i] = f"nbt.CustomModelData=regex:({'|'.join(current_cmd|conflict_cmd)})"
+
+
+    current.text = "\n".join(merged)
+    return True
+
 def beet_default(ctx: Context):
     # bind context object to a ClassVar so it can be accessed later during template processing
     ShamirTemplate.bound_ctx = ctx
     vanilla = ctx.inject(Vanilla)
     ShamirTemplate.vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
+    ctx.assets.merge_policy.extend_namespace(OptifineProperties, optifine_armor_properties_merging)
+
