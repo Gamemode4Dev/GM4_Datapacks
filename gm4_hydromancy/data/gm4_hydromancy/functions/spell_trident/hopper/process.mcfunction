@@ -22,5 +22,6 @@ execute facing ~ ~1 ~ run particle sculk_charge_pop ~ ~ ~ ^ ^-250000000 ^7500000
 execute facing ~ ~1 ~ run particle sculk_charge_pop ~ ~ ~ ^250000000 ^ ^750000000 0.0000000002 0
 execute facing ~ ~1 ~ run particle sculk_charge_pop ~ ~ ~ ^-250000000 ^ ^750000000 0.0000000002 0
 scoreboard players add @s gm4_hy_timer 1
-execute if score @s[tag=gm4_hy_spell_trident.landed] gm4_hy_timer matches 1..3 run particle minecraft:shriek 0 ~ ~-0.05 ~ 0.025 0.025 0.025 0 1
+##TODO: re-enable this, building was broken
+#execute if score @s[tag=gm4_hy_spell_trident.landed] gm4_hy_timer matches 1..3 run particle minecraft:shriek 0 ~ ~-0.05 ~ 0.025 0.025 0.025 0 1
 scoreboard players set @s[scores={gm4_hy_timer=7..}] gm4_hy_timer 0

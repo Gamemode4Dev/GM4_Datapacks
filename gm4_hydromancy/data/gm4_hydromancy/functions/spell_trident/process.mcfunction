@@ -12,3 +12,4 @@ execute if entity @s[tag=gm4_hy_spell_trident.ride] run function gm4_hydromancy:
 execute if entity @s[tag=gm4_hy_spell_trident.builder] run function gm4_hydromancy:spell_trident/builder/process
 execute if entity @s[tag=gm4_hy_spell_trident.heal,tag=gm4_hy_spell_trident.landed] run function gm4_hydromancy:spell_trident/heal/process
 execute if entity @s[tag=gm4_hy_spell_trident.thunder] run function gm4_hydromancy:spell_trident/thunder/process
+execute if entity @s[tag=gm4_hy_spell_trident.frost,tag=gm4_hy_spell_trident.landed] positioned ~ ~1 ~ run function gm4_hydromancy:spell_trident/frost/cast

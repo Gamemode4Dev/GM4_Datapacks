@@ -1,0 +1,22 @@
+
+execute positioned ^ ^ ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^1 ^ ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^2 ^ ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^ ^1 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^ ^2 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^-1 ^ ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^-2 ^ ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^ ^-1 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^ ^-2 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^1 ^1 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^1 ^-1 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^-1 ^1 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^-1 ^-1 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^1 ^2 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^-1 ^2 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^1 ^-2 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^-1 ^-2 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^2 ^1 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^-2 ^1 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^2 ^-1 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
+execute positioned ^-2 ^-1 ^ if block ~ ~ ~ #gm4:replaceable align xyz positioned ~.5 ~.5 ~.5 summon marker run function gm4_hydromancy:spell_trident/frost/frost_block/spawn
