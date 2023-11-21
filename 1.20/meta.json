@@ -1,5 +1,5 @@
 {
-  "last_commit": "bea8fe6dff7ac5f901045f2a543b2941de5ca9ad",
+  "last_commit": "d30102d7497fcd574b309759d85f6934fd0fa259",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -339,8 +339,8 @@
       "important_note": "Requires version 1.20.2+",
       "search_keywords": [],
       "publish_date": "2023-11-14",
-      "modrinth_id": null,
-      "smithed_link": null,
+      "modrinth_id": "hI6pAf86",
+      "smithed_link": "gm4_bookshelf_inspector",
       "pmc_link": null
     },
     {
