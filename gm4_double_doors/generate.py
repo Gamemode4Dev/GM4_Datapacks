@@ -44,7 +44,7 @@ def beet_default(ctx: Context):
     # store door opening/closing sounds to dict
     sound_ids = read_sound_id_from_csv()
     for wood in wood_types:
-        if not wood in sound_ids:
+        if not wood in sound_ids: # if sound is not specified in csv, default to normal wooden door sound
             sound_ids[wood] = DoorSound(open='minecraft:block.wooden_door.open', close='minecraft:block.wooden_door.close')
     ctx.meta['sound_ids'] = sound_ids  # make sound dict accessible to bolt
 

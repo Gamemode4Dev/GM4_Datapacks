@@ -1,7 +1,7 @@
-# TODO
+# Initiates opening (in the door opening sense) of this trapdoor and looks for additional trapdoors above this trapdoor, unless the maximum trapdoor level was exceeded
 # @s = player that interacted with a door
 # at location of the lower half of the door the player has interacted with
-# run from TODO
+# run from gm4_double_doors:{{ material_name }}/door/east/right/toggle and gm4_double_doors:{{ material_name }}/door/north/left/toggle
 
 # open this trapdoor
 function gm4_double_doors:{{ material_name }}/trapdoor/north_east/toggle
