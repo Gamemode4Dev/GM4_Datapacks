@@ -16,7 +16,7 @@ execute store result score $target_trapdoor_state gm4_double_doors_data if score
 scoreboard players operation $trap_door_recursion_level gm4_double_doors_data = $trap_door_limit gm4_double_doors_data
 execute positioned ~ ~2 ~ if block ~ ~ ~ minecraft:{{ material_name }}_trapdoor[open=true,half=bottom] unless block ~ ~ ~ minecraft:{{ material_name }}_trapdoor[facing=west] unless block ~ ~ ~ minecraft:{{ material_name }}_trapdoor[facing=north] run function gm4_double_doors:{{ material_name }}/trapdoor/south_east/check_neighbours
 
-# prepare automatic un-toggling after player walked through, unless this call was triggered via automatic opening, in which case any present auto toggle markers must be deleted
-execute unless score $triggered_by_auto_toggle gm4_double_doors_data matches 1.. align xyz unless entity @e[type=marker,tag=gm4_double_doors_auto_toggle_marker,dx=0,limit=1] positioned ~.5 ~.5 ~.5 summon marker run function gm4_double_doors:{{ material_name }}/door/east/left/initialize_auto_toggle_marker
-execute if score $triggered_by_auto_toggle gm4_double_doors_data matches 1.. align xyz run kill @e[type=marker,tag=gm4_double_doors_auto_toggle_marker,dx=0]
+# prepare automatic un-toggling after player walked through, delete preexisting auto toggle markers
+execute align xyz run kill @e[type=marker,tag=gm4_double_doors_auto_toggle_marker,dx=0]
+execute unless score $triggered_by_auto_toggle gm4_double_doors_data matches 1.. summon marker run function gm4_double_doors:{{ material_name }}/door/east/left/initialize_auto_toggle_marker
 execute if score $triggered_by_auto_toggle gm4_double_doors_data matches 1.. run scoreboard players set $play_sound gm4_double_doors_data 1
