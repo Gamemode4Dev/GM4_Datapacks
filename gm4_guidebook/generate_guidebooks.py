@@ -230,16 +230,16 @@ def generate_lectern_header(book_dict: Book) -> str:
   return f"{header}"
 
 
-advances = json.load(open("gm4_guidebook/advances.json"))
 
 
 
 def char_advance(str: str) -> int:
-  with json.load(open("gm4_guidebook/advances.json")) as advances:
-    if str in advances:
-      if type(advances[str]) == dict:
-        return advances[str]["unicode"]
-      return advances[str]
+  with open("gm4_guidebook/advances.json") as advances_file:
+    advances = json.load(advances_file)
+  if str in advances:
+    if type(advances[str]) == dict:
+      return advances[str]["unicode"]
+    return advances[str]
   return 6
 
 
@@ -839,46 +839,49 @@ def beet_default(ctx: Context):
     if not file.endswith(".json"):
       continue
 
-    with json.load(open(f"{ctx.directory}/data/gm4_guidebook/{file}")) as book:
-      # get trigger id, generate one if not already existing
-      with json.load(open("gm4_guidebook/triggers.json")) as triggers:
-        if book['id'] not in triggers:
-          with open("gm4_guidebook/triggers.json", "w") as t:
-            triggers[book['id']] = triggers['__next__']
-            triggers['__next__'] += 1
-            t.write(json.dumps(triggers, indent=2, sort_keys=True))
-            t.write("\n")
-        book['trigger_id'] = triggers[book['id']]
+    with open(f"{ctx.directory}/data/gm4_guidebook/{file}") as book_file:
+      book = json.load(book_file)
+    
+    # get trigger id, generate one if not already existing
+    with open("gm4_guidebook/triggers.json") as triggers_file:
+      triggers = json.load(triggers_file)
+    if book['id'] not in triggers:
+      with open("gm4_guidebook/triggers.json", "w") as t:
+        triggers[book['id']] = triggers['__next__']
+        triggers['__next__'] += 1
+        t.write(json.dumps(triggers, indent=2, sort_keys=True))
+        t.write("\n")
+    book['trigger_id'] = triggers[book['id']]
 
-      # get description
-      if "description" not in book:
-        book["description"] = ctx.meta["gm4"]["website"]["description"]
+    # get description
+    if "description" not in book:
+      book["description"] = ctx.meta["gm4"]["website"]["description"]
 
-      # get load check
-      if "load_check" not in book:
-        book['load_check'] = book['id']
-      if "gm4_" not in book['load_check']:
-        book['load_check'] = f"gm4_{book['load_check']}"
+    # get load check
+    if "load_check" not in book:
+      book['load_check'] = book['id']
+    if "gm4_" not in book['load_check']:
+      book['load_check'] = f"gm4_{book['load_check']}"
 
-      book_ids.append(book["id"] if "id" in book else file[:-5])
+    book_ids.append(book["id"] if "id" in book else file[:-5])
 
-      loottable, lectern_loot, pages, pages_locked = generate_loottable(book)
-      ctx.data[f"gm4_guidebook:{book['id']}"] = loottable
-      ctx.data[f"gm4_guidebook:lectern/{book['id']}"] = lectern_loot
+    loottable, lectern_loot, pages, pages_locked = generate_loottable(book)
+    ctx.data[f"gm4_guidebook:{book['id']}"] = loottable
+    ctx.data[f"gm4_guidebook:lectern/{book['id']}"] = lectern_loot
 
-      ctx.data[f"gm4_guidebook:{book['id']}/add_toc_line"] = generate_add_toc_line_function(book)
-      ctx.data[f"gm4_guidebook:{book['id']}/setup_storage"] = generate_setup_storage_function(
-        pages, pages_locked, book)
-      ctx.data[f"gm4_guidebook:{book['id']}/summon_marker"] = generate_summon_marker_function(book)
-      ctx.data[f"gm4_guidebook:{book['id']}/update_hand"] = generate_update_hand_function(book)
-      ctx.data[f"gm4_guidebook:{book['id']}/update_lectern"] = generate_update_lectern_function(book)
+    ctx.data[f"gm4_guidebook:{book['id']}/add_toc_line"] = generate_add_toc_line_function(book)
+    ctx.data[f"gm4_guidebook:{book['id']}/setup_storage"] = generate_setup_storage_function(
+      pages, pages_locked, book)
+    ctx.data[f"gm4_guidebook:{book['id']}/summon_marker"] = generate_summon_marker_function(book)
+    ctx.data[f"gm4_guidebook:{book['id']}/update_hand"] = generate_update_hand_function(book)
+    ctx.data[f"gm4_guidebook:{book['id']}/update_lectern"] = generate_update_lectern_function(book)
 
-      for index, section in enumerate(book["sections"]):
-        if (advancement := generate_advancement(book, index)) is not None:
-          ctx.data[f"gm4_guidebook:{book['id']}/unlock/{section['name']}"] = advancement
-          ctx.data[f"gm4_guidebook:{book['id']}/display/{section['name']}"] = generate_display_advancement(book)
-          ctx.data[f"gm4_guidebook:{book['id']}/rewards/{section['name']}"] = generate_reward_function(
-            section, book["id"], book["name"], book["description"])
+    for index, section in enumerate(book["sections"]):
+      if (advancement := generate_advancement(book, index)) is not None:
+        ctx.data[f"gm4_guidebook:{book['id']}/unlock/{section['name']}"] = advancement
+        ctx.data[f"gm4_guidebook:{book['id']}/display/{section['name']}"] = generate_display_advancement(book)
+        ctx.data[f"gm4_guidebook:{book['id']}/rewards/{section['name']}"] = generate_reward_function(
+          section, book["id"], book["name"], book["description"])
 
   ctx.data["gm4_guidebook:add_toc_line"] = generate_add_toc_line_tag(book_ids)
   ctx.data["gm4_guidebook:summon_marker"] = generate_summon_marker_tag(book_ids)
