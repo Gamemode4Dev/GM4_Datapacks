@@ -1,0 +1,2 @@
+wood_type, open_sound_id, close_sound_id
+oak,minecraft:block.wooden_door.open,minecraft:block.wooden_door.close
