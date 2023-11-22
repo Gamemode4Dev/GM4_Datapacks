@@ -5,7 +5,7 @@
 
 # store player position and rotation using a marker to avoid reading player NBT
 tag @s add gm4_bookshelf_inspector_target
-execute summon marker run function gm4_bookshelf_inspector:evaluate/get_pos
+execute at @s summon marker run function gm4_bookshelf_inspector:evaluate/get_pos
 tag @s remove gm4_bookshelf_inspector_target
 
 # calculate how far player has moved since last check
