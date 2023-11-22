@@ -3,20 +3,6 @@
     "requirement": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "gm4_guidebook"
-              },
-              "score": "load.status"
-            },
-            "range": 2
-          }
-        ],
         "location": [
           {
             "condition": "minecraft:location_check",

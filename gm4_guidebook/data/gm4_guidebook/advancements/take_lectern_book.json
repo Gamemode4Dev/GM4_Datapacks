@@ -3,20 +3,6 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "gm4_guidebook"
-              },
-              "score": "load.status"
-            },
-            "range": 2
-          }
-        ],
         "items": [
           {
             "items": [
