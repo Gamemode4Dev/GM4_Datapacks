@@ -1,10 +1,8 @@
 from beet import Function, Advancement, LootTable, Context, FunctionTag
 from beet.contrib.vanilla import Vanilla
-import nbtlib, colorsys
+import nbtlib, colorsys, json, os
 from PIL import Image
 from typing import TypedDict, Any
-import json, yaml
-import os
 
 # TODO:
 # update page contents
@@ -273,7 +271,7 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> dict[Any, Any]:
         for line in function["lore"]:
           lore.append(f'{json.dumps(line)}')
       elif "set_nbt" in function["function"]:
-        tag: dict[Any, Any] = nbtlib.parse_nbt(function["tag"])
+        tag: dict[Any, Any] = nbtlib.parse_nbt(function["tag"]) # type: ignore
   # color
   if "player_head" in item_id and "$" in tag["SkullOwner"]:
     skull_owner = tag["SkullOwner"].replace("$","")
@@ -322,6 +320,67 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> dict[Any, Any]:
   return slot
 
 
+def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
+  if "id" in ingredient and ingredient["id"] == "empty":
+    # show empty slot ()
+    slot = {
+      "translate": "text.gm4.guidebook.crafting.display.empty_slot",
+      "fallback": "☐"
+    }
+  else:
+    # show filled slot (colored with a hover event)
+    if "display" in ingredient and "loot_table" in ingredient["display"]["type"]:
+      slot = loottable_to_display(ingredient["display"]["name"], vanilla)
+    else:
+      if "display" in ingredient and "item" in ingredient["display"]["type"]:
+        item = ingredient["display"]["name"]
+      else:
+        item = ingredient["id"]
+      color = get_item_color(item, vanilla)
+      slot: dict[Any, Any] = {
+        "translate": "gm4.second",
+        "fallback": "%1$s",
+        "with": [
+          {
+            "text": "☒",
+            "color": color
+          },
+          {
+            "translate": f"text.gm4.guidebook.crafting.display.{item.replace(':','.')}",
+            "color": "white",
+            "font": "gm4:guidebook"
+          }
+        ],
+        "hoverEvent": {
+          "action": "show_item",
+          "contents": {
+            "id": item
+          }
+        }
+      }
+      if "tag" in ingredient:
+        slot["hoverEvent"]["contents"]["tag"] = ingredient['tag']
+  return slot
+
+
+
+def get_item_from_tag(item_tag: str, vanilla: Vanilla) -> str:
+  # prepare item tag for searching
+  if "minecraft" in item_tag:
+    item_tag = item_tag[10:]
+  elif item_tag.split(":")[0] != "minecraft":
+    raise ValueError("Only vanilla item tags are supported")
+
+  # open item tag
+  item_tags = vanilla.mount("data/minecraft/tags").data["minecraft"].item_tags
+  items = item_tags[item_tag].data["values"]
+
+  # if first value is another tag, recursively search until an item is found
+  if "#" not in items[0]:
+    return items[0]
+  return get_item_from_tag(items[0], vanilla)
+
+
 def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any]|str]:
   module = recipe.split(":")[0]
   for file in os.listdir(f"{module}/data/gm4_custom_crafters/"):
@@ -358,19 +417,19 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
             item["id"] = "empty"
           else:
             if isinstance(r["input"]["key"][ingredient], list):
-              if "guidebook" in r["input"]["key"][ingredient][0]:
-                item["display"] = r["input"]["key"][ingredient][0]["guidebook"]
-              else:
-                item["id"] = r["input"]["key"][ingredient][0]["item"]
-                if "nbt" in r["input"]["key"][ingredient][0]:
-                  item["tag"] = r["input"]["key"][ingredient][0]["nbt"].replace("'",'\"')
+              ingr = r["input"]["key"][ingredient][0]
             else:
-              if "guidebook" in r["input"]["key"][ingredient]:
-                item["display"] = r["input"]["key"][ingredient]["guidebook"]
+              ingr = r["input"]["key"][ingredient]
+            
+            if "guidebook" in ingr:
+              item["display"] = ingr["guidebook"]
+            else:
+              if "tag" in ingr:
+                item["id"] = get_item_from_tag(ingr["tag"], vanilla)
               else:
-                item["id"] = r["input"]["key"][ingredient]["item"]
-                if "nbt" in r["input"]["key"][ingredient]:
-                  item["tag"] = r["input"]["key"][ingredient]["nbt"].replace("'",'\"')
+                item["id"] = ingr["item"]
+              if "nbt" in ingr:
+                item["tag"] = ingr["nbt"].replace("'",'\"')
           ingredients.append(item)
     # shapeless
     elif r["input"]["type"] == "shapeless":
@@ -400,45 +459,7 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
     # get JSON for each ingredient
     d_ingredients: list[dict[Any, Any]|str] = []
     for ingredient in ingredients:
-      if "id" in ingredient and ingredient["id"] == "empty":
-        # show empty slot ()
-        slot = {
-          "translate": "text.gm4.guidebook.crafting.display.empty_slot",
-          "fallback": "☐"
-        }
-      else:
-        # show filled slot (colored with a hover event)
-        if "display" in ingredient and "loot_table" in ingredient["display"]["type"]:
-          slot = loottable_to_display(ingredient["display"]["name"], vanilla)
-        else:
-          if "display" in ingredient and "item" in ingredient["display"]["type"]:
-            item = ingredient["display"]["name"]
-          else:
-            item = ingredient["id"]
-          color = get_item_color(item, vanilla)
-          slot: dict[Any, Any] = {
-            "translate": "gm4.second",
-            "fallback": "%1$s",
-            "with": [
-              {
-                "text": "☒",
-                "color": color
-              },
-              {
-                "translate": f"text.gm4.guidebook.crafting.display.{item.replace(':','.')}",
-                "color": "white",
-                "font": "gm4:guidebook"
-              }
-            ],
-            "hoverEvent": {
-              "action": "show_item",
-              "contents": {
-                "id": item
-              }
-            }
-          }
-          if "tag" in ingredient:
-            slot["hoverEvent"]["contents"]["tag"] = ingredient['tag']
+      slot = item_to_display(ingredient, vanilla)
       d_ingredients.append(slot)
     
     # get recipe results
@@ -489,40 +510,25 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
         results[8]
       ]
     else:
-      res_count: int = 1
-      if "count" in res.keys():
-        res_count = res["count"]
+      # get display
       if "item" in res["type"]:
-        item = res["name"]
-        result = color = get_item_color(item, vanilla)
-        slot: dict[Any, Any] = {
-          "translate": "gm4.second",
-          "fallback": "%1$s",
-          "with": [
-            {
-              "text": "☒",
-              "color": color
-            },
-            {
-              "translate": f"text.gm4.guidebook.crafting.display.{item.replace(':','.')}",
-              "color": "white",
-              "font": "gm4:guidebook"
-            }
-          ],
-          "hoverEvent": {
-            "action": "show_item",
-            "contents": {
-              "id": item
-            }
-          }
-        }
-        if "tag" in res:
-          slot["hoverEvent"]["contents"]["tag"] = res['tag']
-        result = slot
+        res["id"] = res["name"]
+        result = item_to_display(res, vanilla)
       else:
         result = loottable_to_display(res["name"], vanilla)
+      
+      # show count
+      res_count = ""
+      if "count" in res and res["count"] > 1:
+        res_count = {
+          "translate": f"text.gm4.guidebook.crafting.display.count.{res['count']}",
+          "fallback": ""
+        }
+        numbers = ["☐","☒","②","③","④","⑤","⑥","⑦","⑧","⑨"]
+        result["with"][0]["text"] = numbers[res["count"]]
+
       margin = " " * 6
-      display = [
+      display: list[dict[Any, Any]|str] = [
         margin,
         d_ingredients[0],
         d_ingredients[1],
@@ -534,6 +540,7 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
         d_ingredients[5],
         " → ",
         result,
+        res_count,
         "\n",
         margin,
         d_ingredients[6],
