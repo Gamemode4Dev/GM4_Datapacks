@@ -75,209 +75,30 @@
             "translate": "text.gm4.guidebook.trapped_signs.2",
             "fallback": "The recipes for trapped signs can use any sign type:"
           },
-          [
-            "\n\n  ",
-            {
-              "translate": "container.gm4.custom_crafter",
-              "fallback": "Custom Crafter"
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "tripwire_hook"
-              },
-              "color": "#8c6c26",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.tripwire_hook",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "oak_sign"
-              },
-              "color": "#633f21",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.oak_sign",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "tripwire_hook"
-              },
-              "color": "#8c6c26",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.tripwire_hook",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "oak_sign",
-                "tag": "{CustomModelData:3420001,gm4_trapped_sign:1b,HideFlags:1,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Trapped Oak Sign\",{\"translate\":\"item.gm4.trapped_sign\",\"with\":[{\"translate\":\"item.minecraft.oak_sign\"}]}],\"italic\":false}'}}"
-              },
-              "color": "#73300d",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.gm4.trapped_oak_sign",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "redstone"
-              },
-              "color": "#8f1103",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.redstone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "redstone"
-              },
-              "color": "#8f1103",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.redstone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "redstone"
-              },
-              "color": "#8f1103",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.redstone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n\n  ",
-            {
-              "translate": "container.gm4.custom_crafter",
-              "fallback": "Custom Crafter"
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "oak_sign",
-                "tag": "{CustomModelData:3420001,gm4_trapped_sign:1b,HideFlags:1,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Trapped Oak Sign\",{\"translate\":\"item.gm4.trapped_sign\",\"with\":[{\"translate\":\"item.minecraft.oak_sign\"}]}],\"italic\":false}'}}"
-              },
-              "color": "#73300d",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.gm4.trapped_oak_sign",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "ink_sac"
-              },
-              "color": "#271047",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.ink_sac",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "oak_sign",
-                "tag": "{CustomModelData:3420002,gm4_secret_trapped_sign:1b,HideFlags:1,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Secret Trapped Oak Sign\",{\"translate\":\"item.gm4.trapped_sign.secret\",\"with\":[{\"translate\":\"item.minecraft.oak_sign\"}]}],\"italic\":false}'}}"
-              },
-              "color": "#522710",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.gm4.secret_trapped_oak_sign",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      "
-          ],
+          "\n\n  ",
+          {
+            "translate": "container.gm4.custom_crafter",
+            "fallback": "Custom Crafter"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_trapped_signs:trapped_oak_sign"
+          },
+          "\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_trapped_signs:secret_trapped_oak_sign"
+          },
+          "\n      ",
           {
             "text": "**",
             "hoverEvent": {
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Recipe is shapeless"
-                    },
-                    {
-                      "translate": "text.gm4.guidebookshapeless"
-                    }
-                  ]
+                  "translate": "text.gm4.guidebook.shapeless",
+                  "fallback": "Recipe is shapeless"
                 }
               ]
             }

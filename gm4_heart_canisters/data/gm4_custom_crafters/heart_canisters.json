@@ -49,7 +49,11 @@
         },
         "H": {
           "item": "minecraft:player_head",
-          "nbt": "{gm4_heart_canister:1b,gm4_heart_canister_tier:1b}"
+          "nbt": "{gm4_heart_canister:1b,gm4_heart_canister_tier:1b}",
+          "guidebook": {
+            "type": "loot_table",
+            "name": "gm4_heart_canisters:items/tier_1_heart_canister"
+          }
         },
         "N": {
           "item": "minecraft:nether_star"

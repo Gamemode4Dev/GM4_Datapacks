@@ -28,7 +28,12 @@
     },
     "output": {
       "type": "special",
-      "function": "gm4_boots_of_ostara:create_boots"
+      "function": "gm4_boots_of_ostara:create_boots",
+      "guidebook": {
+        "type": "loot_table",
+        "name": "gm4_boots_of_ostara:items/boots_of_ostara",
+        "count": 1
+      }
     }
   }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "name": "gm4_trapped_signs:acacia_trapped_sign",
+    "name": "gm4_trapped_signs:trapped_acacia_sign",
     "input": {
       "type": "shaped",
       "recipe": [
@@ -22,13 +22,13 @@
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/acacia_trapped_sign",
+        "name": "gm4_trapped_signs:items/trapped_acacia_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:bamboo_trapped_sign",
+    "name": "gm4_trapped_signs:trapped_bamboo_sign",
     "input": {
       "type": "shaped",
       "recipe": [
@@ -50,13 +50,13 @@
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/bamboo_trapped_sign",
+        "name": "gm4_trapped_signs:items/trapped_bamboo_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:birch_trapped_sign",
+    "name": "gm4_trapped_signs:trapped_birch_sign",
     "input": {
       "type": "shaped",
       "recipe": [
@@ -78,13 +78,13 @@
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/birch_trapped_sign",
+        "name": "gm4_trapped_signs:items/trapped_birch_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:cherry_trapped_sign",
+    "name": "gm4_trapped_signs:trapped_cherry_sign",
     "input": {
       "type": "shaped",
       "recipe": [
@@ -106,13 +106,13 @@
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/cherry_trapped_sign",
+        "name": "gm4_trapped_signs:items/trapped_cherry_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:crimson_trapped_sign",
+    "name": "gm4_trapped_signs:trapped_crimson_sign",
     "input": {
       "type": "shaped",
       "recipe": [
@@ -134,13 +134,13 @@
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/crimson_trapped_sign",
+        "name": "gm4_trapped_signs:items/trapped_crimson_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:dark_oak_trapped_sign",
+    "name": "gm4_trapped_signs:trapped_dark_oak_sign",
     "input": {
       "type": "shaped",
       "recipe": [
@@ -162,13 +162,13 @@
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/dark_oak_trapped_sign",
+        "name": "gm4_trapped_signs:items/trapped_dark_oak_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:jungle_trapped_sign",
+    "name": "gm4_trapped_signs:trapped_jungle_sign",
     "input": {
       "type": "shaped",
       "recipe": [
@@ -190,13 +190,13 @@
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/jungle_trapped_sign",
+        "name": "gm4_trapped_signs:items/trapped_jungle_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:mangrove_trapped_sign",
+    "name": "gm4_trapped_signs:trapped_mangrove_sign",
     "input": {
       "type": "shaped",
       "recipe": [
@@ -218,13 +218,13 @@
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/mangrove_trapped_sign",
+        "name": "gm4_trapped_signs:items/trapped_mangrove_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:oak_trapped_sign",
+    "name": "gm4_trapped_signs:trapped_oak_sign",
     "input": {
       "type": "shaped",
       "recipe": [
@@ -246,13 +246,13 @@
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/oak_trapped_sign",
+        "name": "gm4_trapped_signs:items/trapped_oak_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:spruce_trapped_sign",
+    "name": "gm4_trapped_signs:trapped_spruce_sign",
     "input": {
       "type": "shaped",
       "recipe": [
@@ -274,13 +274,13 @@
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/spruce_trapped_sign",
+        "name": "gm4_trapped_signs:items/trapped_spruce_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:warped_trapped_sign",
+    "name": "gm4_trapped_signs:trapped_warped_sign",
     "input": {
       "type": "shaped",
       "recipe": [
@@ -302,13 +302,13 @@
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/warped_trapped_sign",
+        "name": "gm4_trapped_signs:items/trapped_warped_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:acacia_trapped_sign",
+    "name": "gm4_trapped_signs:secret_trapped_acacia_sign",
     "input": {
       "type": "shapeless",
       "ingredients": [
@@ -317,20 +317,24 @@
         },
         {
           "item": "minecraft:acacia_sign",
-          "nbt": "{gm4_trapped_sign:1b}"
+          "nbt": "{gm4_trapped_sign:1b}",
+          "guidebook": {
+            "type": "loot_table",
+            "name": "gm4_trapped_signs:items/trapped_acacia_sign"
+          }
         }
       ]
     },
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/secret_acacia_trapped_sign",
+        "name": "gm4_trapped_signs:items/secret_trapped_acacia_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:bamboo_trapped_sign",
+    "name": "gm4_trapped_signs:secret_trapped_bamboo_sign",
     "input": {
       "type": "shapeless",
       "ingredients": [
@@ -339,20 +343,24 @@
         },
         {
           "item": "minecraft:bamboo_sign",
-          "nbt": "{gm4_trapped_sign:1b}"
+          "nbt": "{gm4_trapped_sign:1b}",
+          "guidebook": {
+            "type": "loot_table",
+            "name": "gm4_trapped_signs:items/trapped_bamboo_sign"
+          }
         }
       ]
     },
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/secret_bamboo_trapped_sign",
+        "name": "gm4_trapped_signs:items/secret_trapped_bamboo_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:birch_trapped_sign",
+    "name": "gm4_trapped_signs:secret_trapped_birch_sign",
     "input": {
       "type": "shapeless",
       "ingredients": [
@@ -361,20 +369,24 @@
         },
         {
           "item": "minecraft:birch_sign",
-          "nbt": "{gm4_trapped_sign:1b}"
+          "nbt": "{gm4_trapped_sign:1b}",
+          "guidebook": {
+            "type": "loot_table",
+            "name": "gm4_trapped_signs:items/trapped_birch_sign"
+          }
         }
       ]
     },
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/secret_birch_trapped_sign",
+        "name": "gm4_trapped_signs:items/secret_trapped_birch_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:cherry_trapped_sign",
+    "name": "gm4_trapped_signs:secret_trapped_cherry_sign",
     "input": {
       "type": "shapeless",
       "ingredients": [
@@ -383,20 +395,24 @@
         },
         {
           "item": "minecraft:cherry_sign",
-          "nbt": "{gm4_trapped_sign:1b}"
+          "nbt": "{gm4_trapped_sign:1b}",
+          "guidebook": {
+            "type": "loot_table",
+            "name": "gm4_trapped_signs:items/trapped_cherry_sign"
+          }
         }
       ]
     },
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/secret_cherry_trapped_sign",
+        "name": "gm4_trapped_signs:items/secret_trapped_cherry_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:crimson_trapped_sign",
+    "name": "gm4_trapped_signs:secret_trapped_crimson_sign",
     "input": {
       "type": "shapeless",
       "ingredients": [
@@ -405,20 +421,24 @@
         },
         {
           "item": "minecraft:crimson_sign",
-          "nbt": "{gm4_trapped_sign:1b}"
+          "nbt": "{gm4_trapped_sign:1b}",
+          "guidebook": {
+            "type": "loot_table",
+            "name": "gm4_trapped_signs:items/trapped_crimson_sign"
+          }
         }
       ]
     },
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/secret_crimson_trapped_sign",
+        "name": "gm4_trapped_signs:items/secret_trapped_crimson_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:dark_oak_trapped_sign",
+    "name": "gm4_trapped_signs:secret_trapped_dark_oak_sign",
     "input": {
       "type": "shapeless",
       "ingredients": [
@@ -427,20 +447,24 @@
         },
         {
           "item": "minecraft:dark_oak_sign",
-          "nbt": "{gm4_trapped_sign:1b}"
+          "nbt": "{gm4_trapped_sign:1b}",
+          "guidebook": {
+            "type": "loot_table",
+            "name": "gm4_trapped_signs:items/trapped_dark_oak_sign"
+          }
         }
       ]
     },
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/secret_dark_oak_trapped_sign",
+        "name": "gm4_trapped_signs:items/secret_trapped_dark_oak_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:jungle_trapped_sign",
+    "name": "gm4_trapped_signs:secret_trapped_jungle_sign",
     "input": {
       "type": "shapeless",
       "ingredients": [
@@ -449,20 +473,24 @@
         },
         {
           "item": "minecraft:jungle_sign",
-          "nbt": "{gm4_trapped_sign:1b}"
+          "nbt": "{gm4_trapped_sign:1b}",
+          "guidebook": {
+            "type": "loot_table",
+            "name": "gm4_trapped_signs:items/trapped_jungle_sign"
+          }
         }
       ]
     },
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/secret_jungle_trapped_sign",
+        "name": "gm4_trapped_signs:items/secret_trapped_jungle_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:mangrove_trapped_sign",
+    "name": "gm4_trapped_signs:secret_trapped_mangrove_sign",
     "input": {
       "type": "shapeless",
       "ingredients": [
@@ -471,20 +499,24 @@
         },
         {
           "item": "minecraft:mangrove_sign",
-          "nbt": "{gm4_trapped_sign:1b}"
+          "nbt": "{gm4_trapped_sign:1b}",
+          "guidebook": {
+            "type": "loot_table",
+            "name": "gm4_trapped_signs:items/trapped_mangrove_sign"
+          }
         }
       ]
     },
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/secret_mangrove_trapped_sign",
+        "name": "gm4_trapped_signs:items/secret_trapped_mangrove_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:oak_trapped_sign",
+    "name": "gm4_trapped_signs:secret_trapped_oak_sign",
     "input": {
       "type": "shapeless",
       "ingredients": [
@@ -493,20 +525,24 @@
         },
         {
           "item": "minecraft:oak_sign",
-          "nbt": "{gm4_trapped_sign:1b}"
+          "nbt": "{gm4_trapped_sign:1b}",
+          "guidebook": {
+            "type": "loot_table",
+            "name": "gm4_trapped_signs:items/trapped_oak_sign"
+          }
         }
       ]
     },
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/secret_oak_trapped_sign",
+        "name": "gm4_trapped_signs:items/secret_trapped_oak_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:spruce_trapped_sign",
+    "name": "gm4_trapped_signs:secret_trapped_spruce_sign",
     "input": {
       "type": "shapeless",
       "ingredients": [
@@ -515,20 +551,24 @@
         },
         {
           "item": "minecraft:spruce_sign",
-          "nbt": "{gm4_trapped_sign:1b}"
+          "nbt": "{gm4_trapped_sign:1b}",
+          "guidebook": {
+            "type": "loot_table",
+            "name": "gm4_trapped_signs:items/trapped_spruce_sign"
+          }
         }
       ]
     },
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/secret_spruce_trapped_sign",
+        "name": "gm4_trapped_signs:items/secret_trapped_spruce_sign",
         "count": 1
       }
     }
   },
   {
-    "name": "gm4_trapped_signs:warped_trapped_sign",
+    "name": "gm4_trapped_signs:secret_trapped_warped_sign",
     "input": {
       "type": "shapeless",
       "ingredients": [
@@ -537,14 +577,18 @@
         },
         {
           "item": "minecraft:warped_sign",
-          "nbt": "{gm4_trapped_sign:1b}"
+          "nbt": "{gm4_trapped_sign:1b}",
+          "guidebook": {
+            "type": "loot_table",
+            "name": "gm4_trapped_signs:items/trapped_warped_sign"
+          }
         }
       ]
     },
     "output": {
       "result": {
         "type": "loot_table",
-        "name": "gm4_trapped_signs:items/secret_warped_trapped_sign",
+        "name": "gm4_trapped_signs:items/secret_trapped_warped_sign",
         "count": 1
       }
     }

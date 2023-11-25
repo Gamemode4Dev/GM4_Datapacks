@@ -271,7 +271,11 @@
       ],
       "key": {
         "W": {
-          "tag": "minecraft:wool"
+          "tag": "minecraft:wool",
+          "guidebook": {
+            "type": "item",
+            "name": "minecraft:white_wool"
+          }
         }
       }
     },

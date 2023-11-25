@@ -27,7 +27,7 @@
     }
   },
   {
-    "name": "gm4_tunnel_bores:tunnel_bore",
+    "name": "gm4_tunnel_bores:tunnel_bore_from_furnace_minecart",
     "input": {
       "type": "shapeless",
       "ingredients": [

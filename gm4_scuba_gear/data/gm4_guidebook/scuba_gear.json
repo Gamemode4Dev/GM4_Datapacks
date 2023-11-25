@@ -88,125 +88,17 @@
             "translate": "text.gm4.guidebook.scuba_gear.2_0",
             "fallback": "Flippers can be crafted with the following recipe:"
           },
-          [
-            "\n\n  ",
-            {
-              "translate": "container.gm4.custom_crafter",
-              "fallback": "Custom Crafter"
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "scute"
-              },
-              "color": "#00a627",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.scute",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "scute"
-              },
-              "color": "#00a627",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.scute",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "rabbit_hide"
-              },
-              "color": "#e8c964",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.rabbit_hide",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "rabbit_hide"
-              },
-              "color": "#e8c964",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.rabbit_hide",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "leather_boots",
-                "tag": "{CustomModelData:3420002,gm4_scuba_gear:{item:\"flippers\"},display:{color:11009871},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:1,Operation:0,UUID:[I;0,881952,0,167143],Slot:\"feet\"},{AttributeName:\"generic.movement_speed\",Name:\"generic.movement_speed\",Amount:-.4,Operation:1,UUID:[I;0,579389,0,942428],Slot:\"feet\"}],display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Flippers\",{\"translate\":\"item.gm4.flippers\"}],\"italic\":false}'}}"
-              },
-              "color": "#a7ff4f",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.item.gm4.flippers",
-                  "font": "gm4:guidebook",
-                  "color": "#A7FF4F"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.overlay.gm4.flippers_overlay",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "rabbit_hide"
-              },
-              "color": "#e8c964",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.rabbit_hide",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "rabbit_hide"
-              },
-              "color": "#e8c964",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.rabbit_hide",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n\n"
-          ],
+          "\n\n  ",
           {
-            "translate": "text.gm4.guidebook.scuba_gear.2_1",
-            "fallback": "Wearing the flippers will slow players down on land, but gives Dolphin's Grace whilst swimming."
+            "translate": "container.gm4.custom_crafter",
+            "fallback": "Custom Crafter"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_scuba_gear:flippers"
           }
-        ]
+        ] 
       ]
     },
     {
@@ -226,139 +118,16 @@
             "translate": "text.gm4.guidebook.scuba_gear.3_0",
             "fallback": "The SCUBA Tank can be crafted with the following recipe:"
           },
-          [
-            "\n\n  ",
-            {
-              "translate": "container.gm4.custom_crafter",
-              "fallback": "Custom Crafter"
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "potion",
-                "tag": "{Potion:\"minecraft:water_breathing\"}"
-              },
-              "color": "#2e5299",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.item.minecraft.potion",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.overlay.minecraft.potion_overlay",
-                  "font": "gm4:guidebook",
-                  "color": "#2e5299"
-                }
-              ]
-            },
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "scute"
-              },
-              "color": "#00a627",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.scute",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "scute"
-              },
-              "color": "#00a627",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.scute",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "golden_chestplate",
-                "tag": "{CustomModelData:3420001,gm4_scuba_gear:{item:\"tank\"},AttributeModifiers:[{AttributeName:\"generic.movement_speed\",Name:\"generic.movement_speed\",Amount:-.1,Operation:1,UUID:[I;0,911382,0,189444],Slot:\"chest\"},{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:4,Operation:0,UUID:[I;0,847530,0,778609],Slot:\"chest\"}],display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"SCUBA Tank\",{\"translate\":\"item.gm4.scuba_tank\"}],\"italic\":false}'}}"
-              },
-              "color": "#d1bc36",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.gm4.scuba_tank",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      "
-          ],
+          "\n\n  ",
+          {
+            "translate": "container.gm4.custom_crafter",
+            "fallback": "Custom Crafter"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_scuba_gear:scuba_tank"
+          },
           {
             "text": "**",
             "hoverEvent": {
@@ -400,112 +169,16 @@
             "translate": "text.gm4.guidebook.scuba_gear.4_0",
             "fallback": "The SCUBA Helmet can be crafted with the following recipe:"
           },
-          [
-            "\n\n  ",
-            {
-              "translate": "container.gm4.custom_crafter",
-              "fallback": "Custom Crafter"
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "turtle_helmet"
-              },
-              "color": "#008f21",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.turtle_helmet",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "glass_pane"
-              },
-              "color": "#526e6b",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.glass_pane",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "player_head",
-                "tag": "{CustomModelData:3420009,gm4_scuba_gear:{item:\"helmet\"},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:2,Operation:0,UUID:[I;0,190244,0,554768],Slot:\"head\"},{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-.5,Operation:0,UUID:[I;0,193195,0,454101],Slot:\"head\"}],SkullOwner:{Name:\"[Drop to Fix Item] gm4_scuba_gear:scuba_helmet\",Id:[I;-68336571,19415274,-1818733955,-1859858872],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyODUzNDg1MTY2MCwKICAicHJvZmlsZUlkIiA6ICJmMGIzYmRkMjEwNDg0Y2VlYjZhNTQyYmZiOGEyNTdiMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJBbm9uaW1ZVFQiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDExZTAyOTJlZTgzZDUwZTQzM2MxNTkxNzE5OGZhNDRjYjZkMTMyODhiNmFhNjZmYmUzY2QxZTZkZjY1OGRhNCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9\"}]}},display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"SCUBA Helmet\",{\"translate\":\"item.gm4.scuba_helmet\"}],\"italic\":false,\"color\":\"white\"}'}}"
-              },
-              "color": "#d1bc36",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.gm4.scuba_helmet",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            }
-          ]
+          "\n\n  ",
+          {
+            "translate": "container.gm4.custom_crafter",
+            "fallback": "Custom Crafter"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_scuba_gear:scuba_helmet"
+          }
         ]
       ]
     }
