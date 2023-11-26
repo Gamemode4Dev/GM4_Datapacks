@@ -7,7 +7,7 @@
     "nbt": "{display:{color:3705899},CustomModelData:3420003}"
   },
   "criteria": {
-    "page_1/requirement_1": {
+    "obtain_leather_boots": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -19,7 +19,7 @@
         ]
       }
     },
-    "page_1/requirement_2": {
+    "obtain_grass_block": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -31,7 +31,7 @@
         ]
       }
     },
-    "page_2/requirement": {
+    "obtain_boots_of_ostara": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -47,7 +47,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "page_1",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -63,36 +63,6 @@
       ]
     },
     {
-      "name": "page_1",
-      "enable": [],
-      "requirements": [
-        [
-          "page_1/requirement_1"
-        ],
-        [
-          "page_1/requirement_2"
-        ]
-      ],
-      "pages": [
-        [
-          {
-            "translate": "text.gm4.guidebook.boots_of_ostara.2",
-            "fallback": "The recipe for the Boots of Ostara is as follows:"
-          },
-          "\n\n  ",
-          {
-            "translate": "container.gm4.custom_crafter",
-            "fallback": "Custom Crafter"
-          },
-          "\n",
-          {
-            "insert": "recipe",
-            "recipe": "gm4_boots_of_ostara:boots_of_ostara"
-          }
-        ]
-      ]
-    },
-    {
       "name": "page_2-gm4_desire_lines.-1",
       "enable": [
         {
@@ -102,19 +72,24 @@
       ],
       "requirements": [
         [
-          "page_2/requirement"
+          "obtain_leather_boots"
+        ],
+        [
+          "obtain_grass_block"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.boots_of_ostara.3",
-            "fallback": "Wearing the boots and holding a grass block in the offhand will spread grass onto dirt beneath the player. Armor stands wearing the boots and holding a grass block will have the same effect."
+            "translate": "text.gm4.guidebook.boots_of_ostara.2-gm4_desire_lines.-1",
+            "fallback": "The recipe for the Boots of Ostara is as follows:"
+          },
+          "\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_boots_of_ostara:boots_of_ostara"
           }
         ]
-      ],
-      "grants": [
-        "page_1"
       ]
     },
     {
@@ -127,19 +102,45 @@
       ],
       "requirements": [
         [
-          "page_2/requirement"
+          "obtain_leather_boots"
+        ],
+        [
+          "obtain_grass_block"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.boots_of_ostara.3.desire_lines",
-            "fallback": "Wearing the boots and holding a grass block in the offhand will spread grass onto dirt beneath the player. Armor stands wearing the boots and holding a grass block will have the same effect.\n\nBoots of Ostara also prevent desire lines."
+            "translate": "text.gm4.guidebook.boots_of_ostara.2-gm4_desire_lines.1",
+            "fallback": "Boots of Ostara also prevent desire lines from forming.\n\nThe recipe for the Boots of Ostara is as follows:"
+          },
+          "\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_boots_of_ostara:boots_of_ostara"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "page_3",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_boots_of_ostara"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.boots_of_ostara.3",
+            "fallback": "Wearing the boots and holding a grass block in the offhand will spread grass onto dirt beneath the player.\nSimilarly, moss will spread onto stone when held in the offhand.\n\nArmor stands can also spread vegetation!"
           }
         ]
       ],
       "grants": [
-        "page_1"
+        "page_2-gm4_desire_lines.-1",
+        "page_2-gm4_desire_lines.1"
       ]
     }
   ]

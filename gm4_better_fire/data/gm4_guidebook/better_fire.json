@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420003}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_flint_and_steel": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -22,11 +22,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "page_1",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_flint_and_steel"
         ]
       ],
       "pages": [
@@ -36,7 +36,7 @@
           },
           {
             "translate": "text.gm4.guidebook.better_fire.1",
-            "fallback": "Flame arrows set the block they land on with fire, dropping the arrowhead sometimes. Fire can also cause a creeper to explode as if lit by flint and steel."
+            "fallback": "Flame arrows set the block they land on with fire, sometimes dropping the arrowhead.\n\nFire can also cause a creeper to explode as if lit by flint and steel."
           }
         ]
       ],

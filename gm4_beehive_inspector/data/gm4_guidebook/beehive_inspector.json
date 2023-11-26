@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_beehive": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -23,11 +23,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "page_1",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_beehive"
         ]
       ],
       "pages": [
@@ -37,7 +37,7 @@
           },
           {
             "translate": "text.gm4.guidebook.beehive_inspector.1",
-            "fallback": "Breaking beehives and bee nests causes the block to display the honey level and bee count. Other forms of breaking, such as explosions do not yield the same results."
+            "fallback": "Mining beehives and bee nests causes the block to display the honey level and bee count.\n\nOther forms of destruction, such as explosions, do not yield the same results."
           }
         ]
       ],

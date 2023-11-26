@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420002}"
   },
   "criteria": {
-    "page_1/requirement": {
+    "obtain_enchanted_page": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -23,7 +23,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "page_1",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -33,30 +33,30 @@
           },
           {
             "translate": "text.gm4.guidebook.book_binders.1",
-            "fallback": "Lecterns have a small area at the center where enchanted books can be placed. This will cause the enchanted book to be ripped up into separate pages\u2014one for each enchantment."
+            "fallback": "Lecterns have a small area at the center where enchanted books can be placed.\n\nThis will cause the enchanted book to be ripped up into separate pages—one for each enchantment."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "page_2",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "obtain_enchanted_page"
         ]
       ],
       "pages": [
         [
           {
             "translate": "text.gm4.guidebook.book_binders.2",
-            "fallback": "Placing enchanted pages onto a lectern will add it to its internal inventory. Placing a leather onto the lectern will then bind the pages in its inventory, creating an enchanted book."
+            "fallback": "Placing enchanted pages onto a lectern will add it to its internal inventory.\n\nPlacing a leather onto the lectern will then bind the pages in its inventory, creating an enchanted book."
           }
         ],
         [
           {
             "translate": "text.gm4.guidebook.book_binders.3",
-            "fallback": "A hopper feeding into the back of the lectern will push items into it and a hopper below the lectern will catch any items dropped by the lectern."
+            "fallback": "A hopper pointing into the back of the lectern will push items into it.\n\nA hopper below the lectern will catch any items dropped by the lectern."
           }
         ]
       ]

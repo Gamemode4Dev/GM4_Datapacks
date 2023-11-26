@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420002}"
   },
   "criteria": {
-    "page_1/requirement": {
+    "obtain_apple_sapling": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -15,26 +15,21 @@
             "items": [
               "minecraft:oak_sapling"
             ],
-            "nbt": "{gm4_fruiting_trees:{item:{type:\"apple\"}}}"
+            "nbt": "{gm4_trees:{item:{type:\"apple\"}}}"
           }
         ]
       }
     },
-    "page_2/requirement": {
-      "trigger": "minecraft:tick",
+    "pick_apple": {
+      "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "player": [
+        "entity": [
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type_specific": {
-                "type": "player",
-                "looking_at": {
-                  "type": "minecraft:armor_stand",
-                  "nbt": "{Tags:[\"gm4_apple_leaf\"]}"
-                }
-              }
+              "type": "minecraft:armor_stand",
+              "nbt": "{Tags:[\"gm4_apple\"]}"
             }
           }
         ]
@@ -43,7 +38,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "page_1",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -59,68 +54,40 @@
       ]
     },
     {
-      "name": "page_1-gm4_orbis.-1",
-      "enable": [
-        {
-          "id": "gm4_orbis",
-          "load": -1
-        }
-      ],
+      "name": "page_2",
+      "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "obtain_apple_sapling"
         ]
       ],
       "pages": [
         [
           {
             "translate": "text.gm4.guidebook.apple_trees.2",
-            "fallback": "Wandering traders will sell apple tree saplings. This is the only source of apple tree saplings, apart from replanting. When planted, the saplings produce apple trees with up to five apple bearing leaves"
+            "fallback": "Apple trees are found naturally occurring in forest biomes.\n\nWandering traders will also sell apple tree saplings.\n\nWhen planted, these saplings produce apple trees with several apple bearing leaves."
           }
         ]
       ]
     },
     {
-      "name": "page_1-gm4_orbis.1",
-      "enable": [
-        {
-          "id": "gm4_orbis",
-          "load": 1
-        }
-      ],
-      "requirements": [
-        [
-          "page_1/requirement"
-        ]
-      ],
-      "pages": [
-        [
-          {
-            "translate": "text.gm4.guidebook.apple_trees.2.orbis",
-            "fallback": "Apple trees are found naturally occurring in forest biomes.\n\nWandering traders will also sell apple tree saplings.\n\nWhen planted, these saplings produce apple trees with up to five apple bearing leaves."
-          }
-        ]
-      ]
-    },
-    {
-      "name": "page_2",
+      "name": "page_3",
       "enable": [],
       "requirements": [
         [
-          "page_2/requirement"
+          "pick_apple"
         ]
       ],
       "pages": [
         [
           {
             "translate": "text.gm4.guidebook.apple_trees.3",
-            "fallback": "New apples will grow every 3 day cycles. Once ripe, they can be picked by right clicking with an empty hand. If apples are not picked in time they will fall from the tree.\n\nBreaking an apple bearing leaf has a 75% chance to drop an apple tree sapling."
+            "fallback": "New apples will grow every 3 day cycles. Once ripe, they can be picked or will fall from the tree after a while.\n\nBreaking an apple bearing leaf has a 75% chance to drop an apple tree sapling."
           }
         ]
       ],
       "grants": [
-        "page_1-gm4_orbis.-1",
-        "page_1-gm4_orbis.1"
+        "page_2"
       ]
     }
   ]
