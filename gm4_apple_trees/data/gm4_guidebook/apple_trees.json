@@ -38,7 +38,7 @@
   },
   "sections": [
     {
-      "name": "page_1",
+      "name": "leaf_changes",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "name": "page_2",
+      "name": "obtaining_apples",
       "enable": [],
       "requirements": [
         [
@@ -71,7 +71,7 @@
       ]
     },
     {
-      "name": "page_3",
+      "name": "new_apples",
       "enable": [],
       "requirements": [
         [

@@ -66,7 +66,7 @@
   },
   "sections": [
     {
-      "name": "page_1",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "name": "page_2",
+      "name": "crafting",
       "enable": [],
       "requirements": [
         [
@@ -107,7 +107,7 @@
       ]
     },
     {
-      "name": "page_3",
+      "name": "multi-block",
       "enable": [],
       "requirements": [
         [
@@ -129,11 +129,11 @@
         ]
       ],
       "grants": [
-        "page_2"
+        "crafting"
       ]
     },
     {
-      "name": "page_5",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
@@ -155,7 +155,7 @@
         ]
       ],
       "grants": [
-        "page_3"
+        "multi-block"
       ]
     }
   ]

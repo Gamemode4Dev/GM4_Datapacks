@@ -102,7 +102,7 @@
   },
   "sections": [
     {
-      "name": "page_1",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
@@ -133,7 +133,7 @@
       ]
     },
     {
-      "name": "page_2",
+      "name": "crafting",
       "enable": [],
       "requirements": [
         [
@@ -155,11 +155,11 @@
         ]
       ],
       "prerequisites": [
-        "page_1"
+        "description"
       ]
     },
     {
-      "name": "page_3",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
@@ -176,7 +176,7 @@
         ]
       ],
       "grants": [
-        "page_2"
+        "crafting"
       ]
     }
   ]

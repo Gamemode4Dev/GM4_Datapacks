@@ -23,7 +23,7 @@
   },
   "sections": [
     {
-      "name": "page_1",
+      "name": "tearing",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "name": "page_2",
+      "name": "rebinding",
       "enable": [],
       "requirements": [
         [
