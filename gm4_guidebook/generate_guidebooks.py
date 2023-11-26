@@ -260,6 +260,8 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> dict[Any, Any]:
   path_pieces = loottable.split(":")
   loot_dir = f"data/{path_pieces[0]}/loot_tables"
   item = path_pieces[1].split("/")[-1]
+  if "gm4" in loottable:
+    item = f"gm4:{item}"
   target_file = f"{loot_dir}/{path_pieces[1]}.json"
   target_path = ""
   for root, subdirs, files in os.walk('./'):
