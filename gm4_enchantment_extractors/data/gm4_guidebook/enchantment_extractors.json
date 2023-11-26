@@ -7,7 +7,25 @@
     "nbt": "{CustomModelData:3420003}"
   },
   "criteria": {
-    "page_1/requirement": {
+    "open_custom_crafter": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:dropper"
+                ],
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"}],\"text\":\" \"}]}'}"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "obtain_enchanting_table": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -19,26 +37,20 @@
         ]
       }
     },
-    "page_2/requirement": {
-      "trigger": "minecraft:tick",
+    "obtain_enchantment_extractor": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": [
+        "items": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "gm4:enchantment_extractors": true
-                }
-              }
-            }
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_machines:{id:\"enchantment_extractor\"}}"
           }
         ]
       }
     },
-    "page_2/open_enchantment_extractor": {
+    "open_enchantment_extractor": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "location": [
@@ -49,7 +61,7 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Enchantment Extractor\",{\"translate\":\"container.gm4.enchantment_extractor\"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.enchantment_extractor\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\"}],\"text\":\" \"}]}'}"
               }
             }
           }
@@ -59,7 +71,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -75,173 +87,45 @@
       ]
     },
     {
-      "name": "page_1",
+      "name": "crafting",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "obtain_enchanting_table",
+          "obtain_enchantment_extractor"
+        ],
+        [
+          "open_custom_crafter"
         ]
       ],
       "pages": [
         [
           {
             "translate": "text.gm4.guidebook.enchantment_extractors.2",
-            "fallback": "To create an Enchantment Extractor, arrange the following recipe in a dropper then drop an enchanting table on top of it:"
+            "fallback": "To create a Enchantment Extractor, the following recipe must be arranged in a Custom Crafter:"
           },
-          "\n\n  ",
+          "\n\n",
           {
-            "translate": "block.minecraft.dropper"
-          },
-          [
-            "\n      ",
-            {
-              "item": {
-                "id": "book"
-              },
-              "color": "#7d4f00",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.book",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "hopper"
-              },
-              "color": "#1c1c17",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.hopper",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "book"
-              },
-              "color": "#7d4f00",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.book",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "book"
-              },
-              "color": "#7d4f00",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.book",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "writable_book"
-              },
-              "color": "#4f3505",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.writable_book",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "book"
-              },
-              "color": "#7d4f00",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.book",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " ",
-            {
-              "item": {
-                "id": "enchanting_table"
-              },
-              "color": "#c2194f",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.catalyst.block.minecraft.enchanting_table",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\u2192 ",
-            {
-              "item": {
-                "id": "dropper",
-                "tag": "{display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Enchantment Extractor\",{\"translate\":\"block.gm4.enchantment_extractor\"}],\"italic\":false}'}}"
-              },
-              "color": "#7d0b2a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.gm4.enchantment_extractor",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "book"
-              },
-              "color": "#7d4f00",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.book",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "book"
-              },
-              "color": "#7d4f00",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.book",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "book"
-              },
-              "color": "#7d4f00",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.book",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            }
-          ]
+            "insert": "recipe",
+            "recipe": "gm4_enchantment_extractors:enchantment_extractor"
+          }
         ]
       ]
     },
     {
-      "name": "page_2",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_2/requirement"
-        ],
-        [
-          "page_2/open_enchantment_extractor"
+          "obtain_enchantment_extractor",
+          "open_enchantment_extractor"
         ]
       ],
       "pages": [
         [
           {
             "translate": "text.gm4.guidebook.enchantment extractors.3",
-            "fallback": "Dropping enchanted items on top of the enchantment extractor will unenchant it and has a chance to put enchanted books containing those enchantments into the extractor."
+            "fallback": "Placing enchanted items inside the enchantment extractor will unenchant it and has a chance to generate enchanted books containing those enchantments."
           }
         ],
         [
@@ -250,9 +134,6 @@
             "fallback": "The chance of extraction is lower for more powerful enchantments.\n\nSome high level enchants may become cursed with vanishing.\n\nIf an extraction fails, a puff of smoke or a congealed enchantment (Vex) will appear."
           }
         ]
-      ],
-      "grants": [
-        "page_1"
       ]
     }
   ]

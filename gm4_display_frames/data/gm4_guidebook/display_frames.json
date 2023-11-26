@@ -7,7 +7,7 @@
     "nbt": "{Potion:'minecraft:invisibility',CustomModelData:3420002}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_invisibility_potion": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -25,11 +25,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_invisibility_potion"
         ]
       ],
       "pages": [
@@ -39,7 +39,7 @@
           },
           {
             "translate": "text.gm4.guidebook.display_frames.1",
-            "fallback": "Splashing item frames with invisibility causes them to become display frames, disappearing when filled with an item.\n\nThis also works with glow item frames."
+            "fallback": "Splashing item frames and glow item frames with invisibility causes them to become display frames.\n\nDisplay frames become invisible when holding with an item."
           }
         ]
       ],

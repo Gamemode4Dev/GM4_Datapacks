@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420003}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "create_custom_crafter": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -26,7 +26,7 @@
         ]
       }
     },
-    "page_0/open_custom_crafter": {
+    "open_custom_crafter": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "location": [
@@ -37,14 +37,14 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"}],\"text\":\" \"}]}'}"
               }
             }
           }
         ]
       }
     },
-    "page_1/requirement": {
+    "obtain_tnt": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -56,7 +56,7 @@
         ]
       }
     },
-    "page_1/open_disassembler": {
+    "open_disassembler": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "location": [
@@ -67,7 +67,7 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Disassembler\",{\"translate\":\"container.gm4.disassembler\"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.disassembler\",\"fallback\":\"Disassembler\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.disassembler\",\"fallback\":\"Disassembler\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.disassembler\",\"fallback\":\"Disassembler\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.disassembler\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.disassembler\",\"fallback\":\"Disassembler\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.disassembler\",\"fallback\":\"Disassembler\"}],\"text\":\" \"}]}'}"
               }
             }
           }
@@ -77,14 +77,14 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "create_custom_crafter"
         ],
         [
-          "page_0/open_custom_crafter"
+          "open_custom_crafter"
         ]
       ],
       "pages": [
@@ -94,7 +94,7 @@
           },
           {
             "translate": "text.gm4.guidebook.disassmeblers.1",
-            "fallback": "Custom Crafters can be converted into Disassmeblers to take apart metal armour, tools, and weapons.\n\nThe disassembler will return ingots based on the item's durability."
+            "fallback": "Disassmeblers can be crafted in Custom Crafters.\n\nDisassemblers can take apart metal armour, tools, and weapons and return ingots based on the item's durability."
           }
         ]
       ],
@@ -110,158 +110,48 @@
       ]
     },
     {
-      "name": "page_1",
+      "name": "crafting",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
-        ],
-        [
-          "page_1/open_disassembler"
+          "obtain_tnt"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.disassemblers.2_0",
+            "translate": "text.gm4.guidebook.disassemblers.2",
             "fallback": "To create a Disassembler, the following recipe must be arranged in a Custom Crafter:"
           },
-          [
-            "\n\n  ",
-            {
-              "translate": "container.gm4.custom_crafter",
-              "fallback": "Custom Crafter"
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "cobblestone"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "cobblestone"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "cobblestone"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "cobblestone"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "tnt"
-              },
-              "color": "#c90202",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.tnt",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "cobblestone"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "dropper",
-                "tag": "{display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Disassembler\",{\"translate\":\"block.gm4.disassembler\"}],\"italic\":false}'}}"
-              },
-              "color": "#96381b",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.gm4.disassembler",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "cobblestone"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "redstone"
-              },
-              "color": "#8f1103",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.redstone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "cobblestone"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n\n"
-          ],
+          "\n\n",
           {
-            "translate": "text.gm4.guidebook.disassemblers.2_1",
-            "fallback": "To disassemble items, drop them on the disassembler."
+            "insert": "recipe",
+            "recipe": "gm4_disassemblers:disassembler"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "description"
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "open_disassembler"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.disassemblers.3",
+            "fallback": "Items placed inside a disassembler will be broken into its base ingots.\n\nThe return is based on the percent durability left on the item. A more damaged tool will return less materials than a nearly undamaged tool."
           }
         ]
       ],
       "grants": [
-        "page_0"
-      ],
-      "prerequisites": [
-        "page_0"
+        "description"
       ]
     }
   ]

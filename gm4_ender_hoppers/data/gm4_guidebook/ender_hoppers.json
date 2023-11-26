@@ -7,7 +7,25 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_1/requirement_1": {
+    "open_custom_crafter": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:dropper"
+                ],
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"}],\"text\":\" \"}]}'}"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "obtain_ender_eye": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -19,7 +37,7 @@
         ]
       }
     },
-    "page_1/requirement_2": {
+    "obtain_hopper": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -31,17 +49,35 @@
         ]
       }
     },
-    "page_1/open_ender_hopper": {
+    "obtain_ender_hopper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_machines:{id:\"ender_hopper\"}}"
+          }
+        ]
+      }
+    },
+    "open_ender_hopper": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:hopper"
-            ],
-            "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Ender Hopper\",{\"translate\":\"container.gm4.ender_hopper\"}]}'}"
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:hopper"
+                ],
+                "nbt": "{CustomName: '{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.ender_hopper\",\"fallback\":\"Ender Hopper\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"extra\":[{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.ender_hopper\",\"fallback\":\"Ender Hopper\"}],\"translate\":\"gui.gm4.ender_hopper\",\"fallback\":\"\"}]}'}"
+              }
+            }
           }
-        }
+        ]
       }
     }
   },
@@ -57,160 +93,53 @@
           },
           {
             "translate": "text.gm4.guidebook.ender_hoppers.1",
-            "fallback": "Ender Hoppers teleport items to itself, even through walls."
-          }
-        ],
-        [
-          {
-            "translate": "text.gm4.guidebook.ender_hoppers.2",
-            "fallback": "Ender Hoppers can pick up items in a range of 9x9 blocks, centered at itself and extending 3 blocks above itself."
+            "fallback": "Ender Hoppers teleport items to itself, even through walls.\n\nThey can also be combined with a minecart to create an Ender Hopper Minecart"
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "crafting",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement_1"
+          "open_custom_crafter"
         ],
         [
-          "page_1/requirement_2"
+          "obtain_ender_eye"
         ],
         [
-          "page_1/open_ender_hopper"
+          "obtain_hopper"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.ender_hoppers.3_0",
-            "fallback": "To create an Ender Hopper, arrange the following recipe in a hopper then drop an eye of ender on top of it:"
+            "translate": "text.gm4.guidebook.ender_hoppers.2",
+            "fallback": "To create an Ender Hopper, arrange the following recipe in a Custom Crafter:"
           },
-          [
-            "\n\n  ",
-            {
-              "translate": "container.hopper"
-            },
-            "\n    ",
-            {
-              "item": {
-                "id": "ender_pearl",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"item.minecraft.ender_pearl\",\"italic\":false},{\"text\":\" (x2)\",\"italic\":true}],{\"translate\":\"item.minecraft.ender_pearl\",\"italic\":false}]}]'}}"
-              },
-              "color": "#024f35",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.item.minecraft.ender_pearl",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.2",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            {
-              "item": {
-                "id": "iron_block",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.iron_block\",\"italic\":false},{\"text\":\" (x2)\",\"italic\":true}],{\"translate\":\"block.minecraft.iron_block\",\"italic\":false}]}]'}}"
-              },
-              "color": "#85847b",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.iron_block",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.2",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            {
-              "item": {
-                "id": "diamond_block"
-              },
-              "color": "#00c7b3",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.diamond_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "iron_block",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.iron_block\",\"italic\":false},{\"text\":\" (x2)\",\"italic\":true}],{\"translate\":\"block.minecraft.iron_block\",\"italic\":false}]}]'}}"
-              },
-              "color": "#85847b",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.iron_block",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.2",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            {
-              "item": {
-                "id": "ender_pearl",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"item.minecraft.ender_pearl\",\"italic\":false},{\"text\":\" (x2)\",\"italic\":true}],{\"translate\":\"item.minecraft.ender_pearl\",\"italic\":false}]}]'}}"
-              },
-              "color": "#024f35",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.item.minecraft.ender_pearl",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.2",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            " ",
-            {
-              "item": {
-                "id": "ender_eye"
-              },
-              "color": "#50ba73",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.catalyst.item.minecraft.ender_eye",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\u2192 ",
-            {
-              "item": {
-                "id": "hopper",
-                "tag": "{display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Ender Hopper\",{\"translate\":\"block.gm4.ender_hopper\"}],\"italic\":false}'}}"
-              },
-              "color": "#0a7058",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.gm4.ender_hopper",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n\n"
-          ],
+          "\n\n",
           {
-            "translate": "text.gm4.guidebook.ender_hoppers.3_1",
-            "fallback": "Ender Hopper Minecarts can be made with the same recipe in a Hopper Minecart."
+            "insert": "recipe",
+            "recipe": "gm4_ender_hoppers:ender_hopper"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "open_ender_hopper",
+          "obtain_ender_hopper"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.ender_hoppers.3",
+            "fallback": "Ender Hoppers can pick up items in a range of 9x9 blocks, centered at itself and extending 3 blocks above itself.\n\nCombining a minecart with an ender hopper in a custom crafter yields an ender hopper minecart."
           }
         ]
       ]

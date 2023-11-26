@@ -9,7 +9,17 @@
     "nbt": "{CustomModelData:3420118}"
   },
   "criteria": {
-    "page_1/requirement": {
+    "obtain_celaro_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'celaro'}}"
+          }
+        ]
+      }
+    },
+    "obtain_celaro_boots": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -22,7 +32,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -38,11 +48,12 @@
       ]
     },
     {
-      "name": "page_1",
+      "name": "shamir_use",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "obtain_celaro_shamir",
+          "obtain_celaro_boots"
         ]
       ],
       "pages": [

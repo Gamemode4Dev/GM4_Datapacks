@@ -3,11 +3,11 @@
   "name": "Cooler Caves",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:dark_prismarine",
+    "item": "minecraft:sandstone",
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "in_cave_air": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -30,11 +30,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "cave_changes",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "in_cave_air"
         ]
       ],
       "pages": [
@@ -50,13 +50,13 @@
         [
           {
             "translate": "text.gm4.guidebook.cooler_caves.2",
-            "fallback": "In the desert, sandstone and gravel generate instead of stone and gravel. Desert mineshafts are made up of dark oak planks and birch fences.\n\nOcean mineshafts are made up of dark prismarine and prismarine bricks."
+            "fallback": "In the desert, sandstone and gravel generate instead of stone and gravel.\n\nIn snowy biomes, snow, ice, and white concrete powder can be found in caves."
           }
         ],
         [
           {
             "translate": "text.gm4.guidebook.cooler_caves.3",
-            "fallback": "Terracotta layers extend throughout the entire underground in Mesas. Gravel cannot be found, but red sand patches takes their place.\n\nIn snowy biomes, snow, ice, and white concrete powder can be found in caves. There is no lava, obsidian or flowers."
+            "fallback": "Terracotta layers extend throughout the entire underground in badland biomes. Gravel cannot be found, but red sand patches takes their place."
           }
         ]
       ],

@@ -1,20 +1,18 @@
 {
-  "id": "chairs",
-  "name": "Chairs",
+  "id": "double_doors",
+  "name": "Double Doors",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:saddle",
-    "nbt": "{CustomModelData:3420002}"
+    "item": "minecraft:acacia_door",
+    "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "obtain_saddle": {
+    "obtain_door": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:saddle"
-            ]
+            "tag": "minecraft:doors"
           }
         ]
       }
@@ -22,11 +20,11 @@
   },
   "sections": [
     {
-      "name": "creation",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "obtain_saddle"
+          "obtain_door"
         ]
       ],
       "pages": [
@@ -35,8 +33,8 @@
             "insert": "header"
           },
           {
-            "translate": "text.gm4.guidebook.chairs.1",
-            "fallback": "Chairs can be created by throwing a saddle onto a stair block.\n\nBreaking the stair or hitting the saddle relieves the stair of the saddle."
+            "translate": "text.gm4.guidebook.double_doors.1",
+            "fallback": "Placing two doors adjacent to each other will link them together, so they open together.\n\nTrapdoors placed above doors will also act as part of the door, opening when the doors open."
           }
         ]
       ],

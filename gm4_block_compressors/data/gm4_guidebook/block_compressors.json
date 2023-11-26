@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420005}"
   },
   "criteria": {
-    "obtain_custom_crafter": {
+    "create_custom_crafter": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -106,7 +106,7 @@
       "enable": [],
       "requirements": [
         [
-          "obtain_custom_crafter",
+          "create_custom_crafter",
           "open_custom_crafter"
         ]
       ],
@@ -117,7 +117,7 @@
           },
           {
             "translate": "text.gm4.guidebook.block_compressors.1",
-            "fallback": "Custom Crafters can be upgraded into Block Compressors to cut down on bulk storage. Item stacks can be compressed into a single item, and vice versa."
+            "fallback": "Block Compressors can be used to cut down on bulk storage. Item stacks can be compressed into a single item, and vice versa."
           }
         ]
       ],

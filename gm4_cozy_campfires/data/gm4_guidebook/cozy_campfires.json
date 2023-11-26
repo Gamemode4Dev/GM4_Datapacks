@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "place_campfire": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "location": [
@@ -25,11 +25,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "absorption",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "place_campfire"
         ]
       ],
       "pages": [

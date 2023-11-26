@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "enter_end_gateway": {
       "trigger": "minecraft:enter_block",
       "conditions": {
         "player": [
@@ -21,7 +21,7 @@
         "block": "minecraft:end_gateway"
       }
     },
-    "page_1/requirement": {
+    "fish_phantom": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -43,11 +43,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "void_fishing",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "enter_end_gateway"
         ]
       ],
       "pages": [
@@ -73,17 +73,17 @@
       ]
     },
     {
-      "name": "page_1",
+      "name": "end_phantoms",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "fish_phantom"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.everstone.2",
+            "translate": "text.gm4.guidebook.end_fishing.2",
             "fallback": "End Phantoms can be fished up from the end void.\n\nThey are larger and stronger than normal phantoms, but have a chance to drop a broken elytra upon death."
           }
         ]

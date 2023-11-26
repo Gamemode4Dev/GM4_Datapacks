@@ -1,19 +1,19 @@
 {
-  "id": "chairs",
-  "name": "Chairs",
+  "id": "dripleaf_launchers",
+  "name": "Dripleaf Launchers",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:saddle",
+    "item": "minecraft:big_dripleaf",
     "nbt": "{CustomModelData:3420002}"
   },
   "criteria": {
-    "obtain_saddle": {
+    "obtain_dripleaf": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:saddle"
+              "minecraft:big_dripleaf"
             ]
           }
         ]
@@ -22,11 +22,11 @@
   },
   "sections": [
     {
-      "name": "creation",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "obtain_saddle"
+          "obtain_dripleaf"
         ]
       ],
       "pages": [
@@ -35,8 +35,8 @@
             "insert": "header"
           },
           {
-            "translate": "text.gm4.guidebook.chairs.1",
-            "fallback": "Chairs can be created by throwing a saddle onto a stair block.\n\nBreaking the stair or hitting the saddle relieves the stair of the saddle."
+            "translate": "text.gm4.guidebook.dripleaf_launchers.1",
+            "fallback": "Sending a redstone signal to a big dripleaf with partial tilt will launch any player on it into the air."
           }
         ]
       ],
@@ -46,7 +46,7 @@
             "insert": "header"
           },
           {
-            "insert": "locked_text"
+            "insert": "locked_text"  
           }
         ]
       ]

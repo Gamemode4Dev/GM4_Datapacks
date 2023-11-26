@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420059,SkullOwner:\"MHF_Enderman\"}"
   },
   "criteria": {
-    "page_1/requirement": {
+    "encounter_enderman": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -29,7 +29,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -45,18 +45,18 @@
       ]
     },
     {
-      "name": "page_1",
+      "name": "buffs",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "encounter_enderman"
         ]
       ],
       "pages": [
         [
           {
             "translate": "text.gm4.guidebook.enderman_support_class.2",
-            "fallback": "Creepers\n- Gets Regeneration II\nCave Spiders\n- Gets Jump Boost II\nSilverfish\n- Gets Resistance II\nSpider\n- Gets Jump Boost I\nZombie\n- Gets Speed II\nSkeleton\n- Gives Weakness II\nShulker\n- Gives Blindness"
+            "fallback": "- Creepers get Regeneration II\n- Cave Spiders get Jump Boost II\n- Silverfish get Resistance II\n- Spiders get Jump Boost I\n-Zombies get Speed II\n-Skeletons give Weakness II\n- Shulkers give Blindness"
           }
         ]
       ]

@@ -7,18 +7,18 @@
     "nbt": "{CustomModelData:3420005}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "shot_crossbow": {
       "trigger": "minecraft:shot_crossbow",
       "conditions": {}
     }
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "available_ammo",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "shot_crossbow"
         ]
       ],
       "pages": [
@@ -108,15 +108,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Torch is placed on the block the arrow hits.\nIf the torch cannot be placed here, it is dropped."
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.crossbow_cartridges.torch"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.crossbow_cartridges.torch",
+                  "fallback": "Torch is placed on the block the arrow hits.\nIf the torch cannot be placed here, it is dropped.",
                   "color": "gray"
                 }
               ]
@@ -138,15 +131,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Stand in a tripwire hook and look in one of the\ncardinal directions to create a tripwire line.\n\nA tripwire hook can be placed automatically at the end."
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.crossbow_cartridges.string"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.crossbow_cartridges.string",
+                  "fallback": "Stand in a tripwire hook and look in one of the\ncardinal directions to create a tripwire line.\n\nA tripwire hook can be placed automatically at the end.",
                   "color": "gray"
                 }
               ]
@@ -175,15 +161,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "The water bucket will be kept"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.crossbow_cartridges.bucket.2"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.crossbow_cartridges.bucket.2",
+                  "fallback": "The water bucket will be kept",
                   "color": "gray"
                 }
               ]
