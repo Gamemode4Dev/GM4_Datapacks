@@ -1189,7 +1189,7 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
   ])
   # grants other sections when this section is obtained
   if "grants" in section:
-    reward.append([f"{start}advancement grant @s only gm4_guidebook:{book_id}/{grant}" for grant in section["grants"]])
+    reward.append([f"{start}advancement grant @s only gm4_guidebook:{book_id}/unlock/{grant}" for grant in section["grants"]])
   return reward
 
 
