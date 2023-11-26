@@ -712,17 +712,6 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
     "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:1b, trigger:" + str(book_dict['trigger_id']) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
     },
     {
-      "function": "minecraft:set_count",
-      "count": {
-        "type": "minecraft:score",
-        "target": {
-          "type": "minecraft:fixed",
-          "name": "$count"
-        },
-        "score": "gm4_guide"
-      }
-    },
-    {
       "function": "minecraft:copy_nbt",
       "source": {
         "type": "minecraft:storage",
