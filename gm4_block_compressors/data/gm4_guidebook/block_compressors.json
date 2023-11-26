@@ -112,9 +112,7 @@
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
-        ],
-        [
+          "page_0/requirement",
           "page_0/open_custom_crafter"
         ]
       ],
@@ -145,9 +143,7 @@
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement_1"
-        ],
-        [
+          "page_1/requirement_1",
           "page_1/requirement_2"
         ]
       ],
@@ -157,134 +153,17 @@
             "translate": "text.gm4.guidebook.block_compressors.2",
             "fallback": "To create a Block Compressor, the following recipe must be arranged in a Custom Crafter:"
           },
-          [
-            "\n\n  ",
-            {
-              "translate": "container.gm4.custom_crafter",
-              "fallback": "Custom Crafter"
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "iron_ingot"
-              },
-              "color": "#96958c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "obsidian"
-              },
-              "color": "#471e61",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.obsidian",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "iron_ingot"
-              },
-              "color": "#96958c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "piston"
-              },
-              "color": "#a36f2f",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.piston",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "purpur_block"
-              },
-              "color": "#a3439f",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.purpur_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "piston"
-              },
-              "color": "#a36f2f",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.piston",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "dropper",
-                "tag": "{display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Compressor\",{\"translate\":\"block.gm4.block_compressor\"}],\"italic\":false}'}}"
-              },
-              "color": "#ac68e8",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.gm4.block_compressor",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "iron_ingot"
-              },
-              "color": "#96958c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "obsidian"
-              },
-              "color": "#471e61",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.obsidian",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "iron_ingot"
-              },
-              "color": "#96958c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            }
-          ]
+          "\n\n  ",
+          {
+            "translate": "container.gm4.custom_crafter",
+            "fallback": "Custom Crafter"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_block_compressors:block_compressor"
+          }
         ]
-      ],
-      "grants": [
-        "page_0"
       ],
       "prerequisites": [
         "page_0"
@@ -295,9 +174,7 @@
       "enable": [],
       "requirements": [
         [
-          "page_2/requirement"
-        ],
-        [
+          "page_2/requirement",
           "page_2/open_block_compressor"
         ]
       ],

@@ -89,19 +89,6 @@
           {
             "insert": "recipe",
             "recipe": "gm4_trapped_signs:secret_trapped_oak_sign"
-          },
-          "\n      ",
-          {
-            "text": "**",
-            "hoverEvent": {
-              "action": "show_text",
-              "contents": [
-                {
-                  "translate": "text.gm4.guidebook.shapeless",
-                  "fallback": "Recipe is shapeless"
-                }
-              ]
-            }
           }
         ]
       ]

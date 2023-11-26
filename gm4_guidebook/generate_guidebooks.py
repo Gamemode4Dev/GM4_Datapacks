@@ -17,6 +17,7 @@ class Section(TypedDict):
   pages_locked: list[dict[Any, Any] | list[dict[Any, Any]]]
   enable: list[dict[str, int]]
   requirements: list[list[str]]
+  prerequisites: list[str]
   grants: list[str]
 
 
@@ -399,6 +400,7 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
     
     # get recipe ingredients
     ingredients:list[dict[Any, Any]] = []
+    shapeless = "  "
     # shaped
     if r["input"]["type"] == "shaped":
       input:list[str] = ["", "", ""]
@@ -433,6 +435,18 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
           ingredients.append(item)
     # shapeless
     elif r["input"]["type"] == "shapeless":
+      shapeless = {
+        "translate": "text.gm4.guidebook.shapeless_icon",
+        "fallback": "🔀",
+        "color": "dark_gray",
+        "hoverEvent": {
+          "action": "show_text",
+          "contents": {
+            "translate": "text.gm4.guidebook.shapeless",
+            "fallback": "Recipe is shapeless"
+          }
+        }
+      }
       for ingredient in r["input"]["ingredients"]:
         item = {}
         if ingredient == " ":
@@ -486,7 +500,8 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
         d_ingredients[0],
         d_ingredients[1],
         d_ingredients[2],
-        margin,
+        shapeless,
+        "  ",
         results[0],
         results[1],
         results[2],
@@ -533,6 +548,7 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
         d_ingredients[0],
         d_ingredients[1],
         d_ingredients[2],
+        shapeless,
         "\n",
         margin,
         d_ingredients[3],
@@ -873,14 +889,46 @@ def stringify_page(page: dict[Any, Any] | list[dict[Any,Any]|str] | str, book: B
         page[i] = populate_insert(element, book, vanilla, lectern) #type: ignore
   return f'{json.dumps(page)}'
 
+def generate_prereq(prereq: str, module: str):
+  if ":" in prereq:
+    module = prereq.split(":")[0]
+    prereq = prereq.split(":")[1]
+  criterion = {
+    "trigger": "minecraft:tick",
+    "conditions": {
+      "player": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type_specific": {
+              "type": "player",
+              "advancements": {
+                f"gm4_guidebook:{module}/unlock/{prereq}": True
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+  return criterion
+
+
 def generate_advancement(book: Book, section_index: int) -> Advancement | None:
   section: Section = book["sections"][section_index]
   module_id = book["id"]
   all_criteria = book["criteria"]
   criteria_keys: set[str] = set()
+  reqs = section["requirements"]
   for requirement in section["requirements"]:
     for criterion in requirement:
       criteria_keys.add(criterion)
+  if "prerequisites" in section:
+    for prereq in section["prerequisites"]:
+      all_criteria[f"prereq/{prereq}"] = generate_prereq(prereq, module_id)
+      criteria_keys.add(f"prereq/{prereq}")
+      reqs.append([f"prereq/{prereq}"])
   if len(criteria_keys) == 0:
     return None
 
@@ -934,7 +982,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
   return Advancement({
     "parent": "gm4_guidebook:root",
     "criteria": criteria,
-    "requirements": section["requirements"],
+    "requirements": reqs,
     "rewards": {
       "function": f"gm4_guidebook:{module_id}/rewards/{section['name']}",
     }
