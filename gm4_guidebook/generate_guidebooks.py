@@ -324,6 +324,7 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> dict[Any, Any]:
       },
       {
         "translate": f"text.gm4.guidebook.crafting.display.{item.replace(':','.')}",
+        "fallback": "☒",
         "color": "white",
         "font": "gm4:guidebook"
       }
@@ -357,8 +358,19 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
   if "id" in ingredient and ingredient["id"] == "empty":
     # show empty slot ()
     slot = {
-      "translate": "text.gm4.guidebook.crafting.display.empty_slot",
-      "fallback": "☐"
+      "translate": "gm4.second",
+      "fallback": "%1$s",
+      "with": [
+        {
+          "text": "☐"
+        },
+        {
+          "translate": "text.gm4.guidebook.crafting.display.empty_slot",
+          "fallback": "☐",
+          "color": "white",
+          "font": "gm4:guidebook"
+        }
+      ]
     }
   else:
     # show filled slot (colored with a hover event)
@@ -380,6 +392,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
           },
           {
             "translate": f"text.gm4.guidebook.crafting.display.{item.replace(':','.')}",
+            "fallback": "☒",
             "color": "white",
             "font": "gm4:guidebook"
           }
