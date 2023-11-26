@@ -7,7 +7,6 @@ from typing import TypedDict, Any
 # TODO:
 # update page contents
 # delete old files
-# recipe support
 # merge some functions to reduce fuction call overhead
 
 
@@ -34,19 +33,33 @@ class Book(TypedDict):
   description: str
 
 
+
+
+"""
+Alphabetical hash to convert the name of the module into a float
+"""
 def get_pos_hash(module_id: str):
+  # ignore the underscores
   id = module_id.replace("_", "")
   n:list[int] = []
+  # get number for each character (ascii -> int)
   for l in id:
-    n.append(ord(l) - 96)
+    n.append(ord(l) - 96) # ascii A = 96, int A = 0
   while len(n) < 11:
     n.append(0)
+  # alphabetical hash
   id = sum(n[i] * (27 ** (10 - i)) for i in range(11)) / 1000000000000
   return id
 
 
+
+"""
+Generates the book's header for the player's hand
+"""
 def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
+  # get wiki link
   wiki_id = book_dict["name"].replace(" ", "_")
+  # header JSON
   header: list[dict[Any, Any]|str] = [
     "",
     {
@@ -137,8 +150,16 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
   ]
   return header
 
+
+
+"""
+Generates the book's header for the lectern 
+difference is change_page vs run_command click events
+"""
 def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
+  # get wiki link
   wiki_id = book_dict["name"].replace(" ", "_")
+  # header JSON
   header: list[dict[Any, Any]|str] = [
     "",
     {
@@ -231,6 +252,9 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
 
 
 
+"""
+Reads a loot table and creates a JSON text component to display the item in the guidebook
+"""
 def loottable_to_display(loottable: str, vanilla: Vanilla) -> dict[Any, Any]:
   # find loot table file
   path_pieces = loottable.split(":")
@@ -309,6 +333,8 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> dict[Any, Any]:
       }
     }
   }
+
+  # custom display name and lore
   display_name = ""
   display_lore = ""
   if name != "":
@@ -321,6 +347,10 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> dict[Any, Any]:
   return slot
 
 
+
+"""
+Reads a vanilla item and creates a JSON text component to display the item in the guidebook
+"""
 def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
   if "id" in ingredient and ingredient["id"] == "empty":
     # show empty slot ()
@@ -365,6 +395,9 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
 
 
 
+"""
+Recursively reads vanilla item tags to find a single item to use
+"""
 def get_item_from_tag(item_tag: str, vanilla: Vanilla) -> str:
   # prepare item tag for searching
   if "minecraft" in item_tag:
@@ -382,6 +415,10 @@ def get_item_from_tag(item_tag: str, vanilla: Vanilla) -> str:
   return get_item_from_tag(items[0], vanilla)
 
 
+
+"""
+Generates a crafting grid to be displayed in the guidebook
+"""
 def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any]|str]:
   module = recipe.split(":")[0]
   for file in os.listdir(f"{module}/data/gm4_custom_crafters/"):
@@ -569,20 +606,31 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
 
 
 
-def char_advance(str: str) -> int:
+"""
+Calculate how many advances each character takes up when written in the default minecraft font
+"""
+def char_advance(char: str) -> int:
+  # open database
   with open("gm4_guidebook/advances.json") as advances_file:
     advances = json.load(advances_file)
-  if str in advances:
-    if type(advances[str]) == dict:
-      return advances[str]["unicode"]
-    return advances[str]
+  # find char in database
+  if char in advances:
+    if type(advances[char]) == dict:
+      return advances[char]["unicode"]
+    return advances[char]
   return 6
 
 
+
+"""
+Splits a string into how a minecraft book would display it in multiple lines
+"""
 def split_into_lines(str: str) -> list[int]:
   lines:list[Any] = []
   words:list[Any] = []
+  # split string into words
   for word in str.split(" "):
+    # count how many advances are in each word
     wlen = 0
     for char in word:
       wlen += char_advance(char)
@@ -590,12 +638,14 @@ def split_into_lines(str: str) -> list[int]:
 
   current_line = ""
   current_len = 0
+  # generate each line based on advances of each word
   for word, wlen in words:
-    if current_len + wlen > 114:
+    if current_len + wlen > 114: # 114 is max number of advances in each line
       if not current_line == "":
         lines.append(current_line)
       current_line = ""
       current_len = 0
+      # if a single word is greater than the max, it gets split every 114 advances
       if wlen > 114:
         for char in word:
           if current_len + char_advance(char) > 114:
@@ -608,6 +658,7 @@ def split_into_lines(str: str) -> list[int]:
     current_line += word + " "
     current_len += wlen + 4
 
+  # add each line to a list, without trailing spaces
   lines.append(current_line)
   for i in range(len(lines)):
     lines[i] = lines[i].removesuffix(" ")
@@ -615,17 +666,27 @@ def split_into_lines(str: str) -> list[int]:
   return lines
 
 
+
+"""
+Return a bulletted string of the module name, indented if it's an expansion
+"""
 def get_toc_line(book_dict: Book) -> str:
   indent = "  ● " if book_dict["module_type"] == "expansion" else "● "
   return f"{indent}{book_dict['name']}"
 
 
+
+"""
+Reads the book dictionary to generate the loot tables (one for hand, one for lectern)
+and the page contents that need to be stored
+"""
 def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any], list[Any]]:
   book_id = book_dict["id"]
   sections = book_dict["sections"]
   page_storage:list[Any] = []
   fallback_storage:list[Any] = []
 
+  # standard functions for every hand loot table
   functions:list[dict[Any, Any]] = [
     {
       "function": "minecraft:set_nbt",
@@ -644,6 +705,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
     }
   ]
 
+  # standard functions for every lectern loot table
   functions_lectern:list[dict[Any, Any]] = [
     {
     "function": "minecraft:set_nbt",
@@ -676,9 +738,11 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
     }
   ]
 
+  # create conditions list for each section
   for i, section in enumerate(sections):
     enable_conditions:list[dict[Any, Any]] = []
 
+    # condition to check load status of other modules
     for module_check in section["enable"]:
       condition = {
         "condition": "minecraft:value_check",
@@ -696,6 +760,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
         condition = {"condition": "minecraft:inverted", "term": condition}
       enable_conditions.append(condition)
 
+    # condition to check if another page is unlocked
     unlock_condition = {
       "condition": "minecraft:entity_properties",
       "entity": "this",
@@ -709,6 +774,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
       }
     }
 
+    # condition to check if another page is locked
     lock_condition = {
       "condition": "minecraft:entity_properties",
       "entity": "this",
@@ -722,17 +788,21 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
       }
     }
 
+    # create operations for page appending
     enabled_ops:list[dict[Any, Any]] = []
     fallback_ops:list[dict[Any, Any]] = []
     for page in section["pages"]:
+      # append from the indexed storage
       enabled_ops.append({
         "op": "append",
         "source": f"{book_id}.pages[{len(page_storage)}]",
         "target": "pages"
       })
+      # generate the page storage
       page_storage.append(page)
 
     enabled_ops_lectern = enabled_ops.copy()
+    # only first lectern page is stored since it's the only one that's different (due to header)
     if (i == 0):
       enabled_ops_lectern[0] = {
         "op": "append",
@@ -740,6 +810,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
         "target": "pages"
       }
 
+    # locked pages to be appended
     if "pages_locked" in section:
       for page in section["pages_locked"]:
         fallback_ops.append({
@@ -747,6 +818,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
           "source": f"{book_id}.pages_locked[{len(fallback_storage)}]",
           "target": "pages"
         })
+        # generate the locked page storage
         fallback_storage.append(page)
        
       fallback_ops_lectern = fallback_ops.copy()
@@ -765,6 +837,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
       fallback_ops = [fallback_default] * len(enabled_ops)
       fallback_ops_lectern = fallback_ops.copy()
 
+    # functions for each section
     function: dict[Any, Any] = {
       "function": "minecraft:copy_nbt",
       "source": {
@@ -784,6 +857,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
       "conditions": [*enable_conditions]
     }
 
+    # lectern functions for each section
     function_lectern: dict[Any, Any] = {
       "function": "minecraft:copy_nbt",
       "source": {
@@ -803,6 +877,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
       "conditions": [*enable_conditions]
     }
     
+    # add functions to the section
     if "requirements" in section and len(section["requirements"]) > 0:
       function["conditions"].append(unlock_condition)
       fallback_function["conditions"].append(lock_condition)
@@ -816,6 +891,8 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
     else:
       functions.append(function)
       functions_lectern.append(function_lectern)
+
+  # extra blank page for lecterns
   functions_lectern.append({
     "function": "minecraft:copy_nbt",
     "source": {
@@ -863,15 +940,23 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
 
   return hand_loot, lectern_loot, page_storage, fallback_storage
 
+
+
+"""
+Replaces {"insert": "X"} with custom data (header, locked text, or recipe)
+"""
 def populate_insert(element: dict[Any, Any], book: Book, vanilla: Vanilla, lectern: bool = False) -> dict[Any, Any] | list[dict[Any,Any]|str]:
   if "insert" in element.keys():
+    # header
     if element["insert"] == "header":
       if lectern:
         return generate_lectern_header(book)
       return generate_book_header(book)
+    # (default) locked text
     elif element["insert"] == "locked_text":
       locked_text = {'text':'???','hoverEvent':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}
       return locked_text
+    # recipes
     elif element["insert"] == "recipe":
       return generate_recipe_display(element["recipe"], vanilla)
     else:
@@ -879,16 +964,28 @@ def populate_insert(element: dict[Any, Any], book: Book, vanilla: Vanilla, lecte
   return element
 
 
+
+"""
+Converts the JSON text component into a string to be placed inside the page NBT
+"""
 def stringify_page(page: dict[Any, Any] | list[dict[Any,Any]|str] | str, book: Book, vanilla: Vanilla, lectern: bool = False) -> str:
+  # populate insertions for a single value
   if isinstance(page, dict):
     if "insert" in page.keys():
       page = populate_insert(page, book, vanilla, lectern)
+  # populate insertions for a list
   elif isinstance(page, list):
     for i, element in enumerate(page):
       if isinstance(element, dict) and "insert" in element.keys():
         page[i] = populate_insert(element, book, vanilla, lectern) #type: ignore
+  # stringify the page
   return f'{json.dumps(page)}'
 
+
+
+"""
+Creates a criterion for a prerequisite
+"""
 def generate_prereq(prereq: str, module: str):
   if ":" in prereq:
     module = prereq.split(":")[0]
@@ -915,12 +1012,19 @@ def generate_prereq(prereq: str, module: str):
   return criterion
 
 
+
+"""
+Create the advancement to unlock a section
+"""
 def generate_advancement(book: Book, section_index: int) -> Advancement | None:
+  # get the target section (based on index)
   section: Section = book["sections"][section_index]
   module_id = book["id"]
   all_criteria = book["criteria"]
   criteria_keys: set[str] = set()
   reqs = section["requirements"]
+
+  # add requirements to advancement
   for requirement in section["requirements"]:
     for criterion in requirement:
       criteria_keys.add(criterion)
@@ -932,6 +1036,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
   if len(criteria_keys) == 0:
     return None
 
+  # standard checks for load checking and spectator prevention
   extra_player_checks = [
     {
       "condition": "minecraft:inverted",
@@ -972,6 +1077,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
     }
   ]
 
+  # add requirements to criteria
   criteria = {k: v for k, v in all_criteria.items() if k in criteria_keys}
   for criterion in criteria.values():
     if "player" not in criterion["conditions"]:
@@ -979,6 +1085,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
     else:
       criterion["conditions"]["player"] = [*criterion["conditions"]["player"], *extra_player_checks]
 
+  # create advancement that rewards the function
   return Advancement({
     "parent": "gm4_guidebook:root",
     "criteria": criteria,
@@ -989,18 +1096,22 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
   })
 
 
+
+"""
+Creates the advancement to show the toast
+"""
 def generate_display_advancement(book: Book) -> Advancement:
   module_name = book["name"]
   icon = book["icon"]
   display = {
-    "icon": icon,
+    "icon": icon, # taken from book dictionary
     "title": {
       "translate": "text.gm4.guidebook.discovered_page",
       "fallback": "Check your guidebook!",
       "color": "#4AA0C7",
       "italic": True
     },
-    "description": module_name,
+    "description": module_name, # this isn't actually ever visible
     "frame": "goal",
     "show_toast": True,
     "announce_to_chat": False,
@@ -1017,7 +1128,12 @@ def generate_display_advancement(book: Book) -> Advancement:
   })
 
 
+
+"""
+Creates the function that is granted when a section is unlocked
+"""
 def generate_reward_function(section: Section, book_id: str, book_name: str, desc: str) -> Function:
+  # check if any module needs to be loaded
   if "enable" in section and len(section["enable"]) > 0:
     start = "execute"
     for module_check in section["enable"]:
@@ -1029,6 +1145,7 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
     start += " run "
   else:
     start = ""
+  # standard tellraw message
   tellraw: list[dict[Any, Any] | str] = [
     "", 
     {
@@ -1036,24 +1153,25 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
       "fallback":"%1$s has discovered a guidebook page from %2$s", 
       "with": [
         {
-          "selector":"@s"
+          "selector":"@s" # player
         },
         {
-          "text": f"[{book_name}]", 
+          "text": f"[{book_name}]", # module name (never translated)
           "color": "#4AA0C7", 
           "hoverEvent": 
           {
             "action": "show_text", 
             "contents": [
               {
-                "text": book_name, 
+                "text": book_name, # module name
                 "color": "#4AA0C7"
               }, 
               {
                 "text": "\n"
               }, 
               {
-                "text": desc, 
+                "translate": f"text.gm4.guidebook.module_desc.{book_name}", # module description
+                "fallback": desc,
                 "italic": True, 
                 "color": "gray"
               }
@@ -1064,15 +1182,21 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
     }
   ]
 
+  # show tellraw and toast
   reward = Function([
     f'{start}tellraw @s {json.dumps(tellraw)}',
     f"{start}advancement grant @s only gm4_guidebook:{book_id}/display/{section['name']}"
   ])
+  # grants other sections when this section is obtained
   if "grants" in section:
     reward.append([f"{start}advancement grant @s only gm4_guidebook:{book_id}/{grant}" for grant in section["grants"]])
   return reward
 
 
+
+"""
+Create the function tag to setup page storages
+"""
 def generate_setup_storage_tag(book_ids: list[str]) -> FunctionTag:
   return FunctionTag({
     "values": [
@@ -1081,21 +1205,29 @@ def generate_setup_storage_tag(book_ids: list[str]) -> FunctionTag:
   })
 
 
+
+"""
+Creates the function that populates the page storage
+"""
 def generate_setup_storage_function(pages: list[Any], pages_locked: list[Any], book_dict: Book, vanilla: Vanilla) -> Function:
   populated_pages: list[str] = []
   populated_pages_locked: list[str] = []
+  
+  # save the first page with the lectern header
   if (len(pages_locked) > 0):
     lectern_pages:list[str] = [stringify_page(pages[0].copy(), book_dict, vanilla, True),stringify_page(pages_locked[0].copy(), book_dict, vanilla, True)]
   else:
     lectern_pages:list[str] = [stringify_page(pages[0].copy(), book_dict, vanilla, True),""]
+
+  # populate the inserts and stringify the pages
   for page in pages:
     populated_pages.append(stringify_page(page, book_dict, vanilla))
   for page in pages_locked:
     populated_pages_locked.append(stringify_page(page, book_dict, vanilla))
 
+  # write each command to be placed in the function
   unlocked = f"execute if score {book_dict['load_check']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.pages set value {populated_pages}"
   locked = f"execute if score {book_dict['load_check']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.pages_locked set value {populated_pages_locked}"
-
   lectern = f"execute if score {book_dict['load_check']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.lectern set value {lectern_pages}"
   
   return Function([
@@ -1105,6 +1237,10 @@ def generate_setup_storage_function(pages: list[Any], pages_locked: list[Any], b
   ])
 
 
+
+"""
+Creates the function tag to add a line to the table of contents
+"""
 def generate_add_toc_line_tag(book_ids: list[str]) -> FunctionTag:
   return FunctionTag({
     "values": [
@@ -1113,6 +1249,10 @@ def generate_add_toc_line_tag(book_ids: list[str]) -> FunctionTag:
   })
 
 
+
+"""
+Creates the function that adds a line to the table of contents
+"""
 def generate_add_toc_line_function(book: Book) -> Function:
   text_component = {
     "text": get_toc_line(book),
@@ -1135,6 +1275,10 @@ def generate_add_toc_line_function(book: Book) -> Function:
   ])
 
 
+
+"""
+Creates the function tag to summon a guidebook marker
+"""
 def generate_summon_marker_tag(book_ids: list[str]) -> FunctionTag:
   return FunctionTag({
     "values": [
@@ -1143,6 +1287,10 @@ def generate_summon_marker_tag(book_ids: list[str]) -> FunctionTag:
   })
 
 
+
+"""
+Creates the function to summon a guidebook marker with proper NBT
+"""
 def generate_summon_marker_function(book: Book) -> Function:
   marker_nbt = nbtlib.Compound()
   marker_nbt["CustomName"] = nbtlib.String(f'"gm4_{book["id"]}"')
@@ -1161,6 +1309,10 @@ def generate_summon_marker_function(book: Book) -> Function:
   ])
 
 
+
+"""
+Creates the function tag to update the guidebook in hand
+"""
 def generate_update_hand_tag(book_ids: list[str]) -> FunctionTag:
   return FunctionTag({
     "values": [
@@ -1169,6 +1321,9 @@ def generate_update_hand_tag(book_ids: list[str]) -> FunctionTag:
   })
 
 
+"""
+Creates the function to update the guidebook in hand
+"""
 def generate_update_hand_function(book: Book) -> Function:
   start = f"execute if score @s gm4_guide matches {book['trigger_id']} if score {book['load_check']} load.status matches 1.. run"
   return Function([
@@ -1177,6 +1332,10 @@ def generate_update_hand_function(book: Book) -> Function:
   ])
 
 
+
+"""
+Creates the function tag to update the guidebook in lecterns
+"""
 def generate_update_lectern_tag(book_ids: list[str]) -> FunctionTag:
   return FunctionTag({
     "values": [
@@ -1185,15 +1344,28 @@ def generate_update_lectern_tag(book_ids: list[str]) -> FunctionTag:
   })
 
 
+
+"""
+Creates the function tag to update the guidebook in lecterns
+"""
 def generate_update_lectern_function(book: Book) -> Function:
   start = f"execute if score $trigger gm4_guide matches {book['trigger_id']} if score {book['load_check']} load.status matches 1.. run"
   return Function([
     f"{start} loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/{book['id']}"
   ])
 
-def clamp(x: int|float): 
-  return max(0, min(x, 255))
 
+"""
+Clamps a value between to valid RGB decimal numbers
+"""
+def clamp(x: int|float): 
+  return int(max(0, min(x, 255)))
+
+
+
+"""
+Reads an item (or skin) and finds the average dominant color
+"""
 def get_item_color(item: str, vanilla: Vanilla, skin: bool = False) -> str:
   paletted = None
   if skin:
@@ -1233,7 +1405,7 @@ def get_item_color(item: str, vanilla: Vanilla, skin: bool = False) -> str:
   r, g, b = colorsys.hsv_to_rgb(h, s, v)
 
   # return hex value
-  return "#{0:02x}{1:02x}{2:02x}".format(clamp(int(r)), clamp(int(g)), clamp(int(b)))
+  return "#{0:02x}{1:02x}{2:02x}".format(clamp(r), clamp(g), clamp(b))
 
 
 
@@ -1242,6 +1414,7 @@ def beet_default(ctx: Context):
     return
 
   book_ids: list[Any] = []
+  # find guidebook JSON file
   for file in os.listdir(f"{ctx.directory}/data/gm4_guidebook/"):
     if not file.endswith(".json"):
       continue
@@ -1272,10 +1445,13 @@ def beet_default(ctx: Context):
 
     book_ids.append(book["id"] if "id" in book else file[:-5])
 
+    # read the dict and get the page storages
     loottable, lectern_loot, pages, pages_locked = generate_loottable(book)
+    # add loot tables to datapack
     ctx.data[f"gm4_guidebook:{book['id']}"] = loottable
     ctx.data[f"gm4_guidebook:lectern/{book['id']}"] = lectern_loot
 
+    # add functions to datapack
     ctx.data[f"gm4_guidebook:{book['id']}/add_toc_line"] = generate_add_toc_line_function(book)
     ctx.data[f"gm4_guidebook:{book['id']}/setup_storage"] = generate_setup_storage_function(
       pages, pages_locked, book, ctx.inject(Vanilla))
@@ -1283,6 +1459,7 @@ def beet_default(ctx: Context):
     ctx.data[f"gm4_guidebook:{book['id']}/update_hand"] = generate_update_hand_function(book)
     ctx.data[f"gm4_guidebook:{book['id']}/update_lectern"] = generate_update_lectern_function(book)
 
+    # add advancements to datapack
     for index, section in enumerate(book["sections"]):
       if (advancement := generate_advancement(book, index)) is not None:
         ctx.data[f"gm4_guidebook:{book['id']}/unlock/{section['name']}"] = advancement
@@ -1290,6 +1467,7 @@ def beet_default(ctx: Context):
         ctx.data[f"gm4_guidebook:{book['id']}/rewards/{section['name']}"] = generate_reward_function(
           section, book["id"], book["name"], book["description"])
 
+  # add function tags to datapack
   ctx.data["gm4_guidebook:add_toc_line"] = generate_add_toc_line_tag(book_ids)
   ctx.data["gm4_guidebook:summon_marker"] = generate_summon_marker_tag(book_ids)
   ctx.data["gm4_guidebook:update_hand"] = generate_update_hand_tag(book_ids)
