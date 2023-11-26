@@ -754,7 +754,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
            },
            "score": "load.status"
             },
-        "range": module_check["load"]
+        "range": {"min": 1}
       }
       if module_check["load"] <= 0:
         condition = {"condition": "minecraft:inverted", "term": condition}
