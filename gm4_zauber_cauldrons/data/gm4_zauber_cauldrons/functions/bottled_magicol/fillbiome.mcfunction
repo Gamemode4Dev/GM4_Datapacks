@@ -8,3 +8,6 @@ $fillbiome ~-$(radius) ~-$(radius) ~-$(radius) ~$(radius) ~$(radius) ~$(radius) 
 
 # sound effect
 playsound minecraft:block.chorus_flower.grow block @a[distance=..16] ~ ~ ~ 1 0.77
+
+# grant advancement
+advancement grant @a[distance=..12,gamemode=!spectator] only gm4:zauber_cauldrons_paint_biome
