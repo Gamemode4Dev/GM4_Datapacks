@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"{{color}}\",weather_modifier:\"{{weather_modifier}}\",bottle:{multi_use:0}},HideFlags:32,CustomPotionColor:{{particle_color}},CustomModelData:{{bottle_custom_model_data}}}"
+                            "tag": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"{{color}}\",weather_modifier:\"{{weather_modifier}}\",bottle:{multi_use:0}},HideFlags:32,CustomPotionColor:{{potion_color}},CustomModelData:{{bottle_custom_model_data}}}"
                         },
                         {
                             "function": "minecraft:set_name",

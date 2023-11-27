@@ -11,7 +11,7 @@ execute if score $preferred gm4_zc_moon_phase = $current gm4_zc_moon_phase run p
 # if liquid id is magicol, display particles
 # generated with the help of bolt
 for color_data in ctx.meta['magicol_colors']:
-    execute unless score $displayed_magicol_particle gm4_zc_data matches 1.. store success score $displayed_magicol_particle gm4_zc_data if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients liquid{id:"magicol",magicol:{color:color_data['color']}} run summon area_effect_cloud ~.5 ~.75 ~.5 {Particle:"entity_effect",Radius:0.1f,Duration:10,Color:int(color_data['particle_color'])}
+    execute unless score $displayed_magicol_particle gm4_zc_data matches 1.. store success score $displayed_magicol_particle gm4_zc_data if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients liquid{id:"magicol",magicol:{color:color_data['color']}} run summon area_effect_cloud ~.5 ~.75 ~.5 {Particle:"entity_effect",Radius:0.1f,Duration:10,Color:int(color_data['potion_color'])}
 
 # set flag
 scoreboard players set $displayed_liquid_particle gm4_zc_data 1
