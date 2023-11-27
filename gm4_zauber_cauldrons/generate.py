@@ -6,7 +6,31 @@ import json
 from beet import Context, subproject
 
 
-def read_csv(path: Path) -> List[Dict[str, str]]:
+class CSVRow():
+    """
+    Read-only dict wrapper which represents a row of data from a .csv file.
+    Access data within this CSVRow via the get(key, default) method or using ['<key>'].
+    """
+
+    def __init__(self, data: Dict[str,str]) -> None:
+        self._data = data
+
+    def __getitem__(self, key: str):
+        return self._data[key]
+    
+    def get(self, key: str, default: str | Any) -> str:
+        """
+        Returns the value corrosponding to the key if it exists and is not the empty string.
+        Else returns the provided default. The provided default is cast to a string internally.
+        """
+        value = self._data.get(key, str(default))
+        if value:
+            return value
+        else:
+            return str(default)
+
+
+def read_csv(path: Path) -> List[CSVRow]:
     """
     Reads in a csv file and returns a list of rows. Each row consists of a dictionary which contains labeled values.
     """
@@ -14,7 +38,7 @@ def read_csv(path: Path) -> List[Dict[str, str]]:
         csv_file = csv.reader(file)
         header = next(csv_file)
 
-        return [{header[column_index]: value for column_index, value in enumerate(row)} for row in csv_file]
+        return [CSVRow({header[column_index]: value for column_index, value in enumerate(row)}) for row in csv_file]
 
 
 def read_json(path: Path) -> Any:
@@ -31,15 +55,16 @@ def beet_default(ctx: Context):
     generate_crystal_recipes(ctx)
     generate_potion_recipes(ctx)
     generate_magicol_recipes(ctx)
+    generate_zauber_biomes(ctx)
 
 
 def generate_armor_recipes(ctx: Context):
     """
     Generates the function tree and loot tables for all combinations of zauber armor.
     """
-    armor_flavors: List[Dict[str, str]] = read_csv(
+    armor_flavors: List[CSVRow] = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'armor_flavors.csv'))
-    armor_pieces: List[Dict[str, str]] = read_csv(
+    armor_pieces: List[CSVRow] = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'armor_pieces.csv'))
     
     # make csv data available to bolt later
@@ -84,7 +109,7 @@ def generate_crystal_recipes(ctx: Context):
     """
     Generates the function tree and loot tables for zauber crystals.
     """
-    crystal_effects: List[Dict[str, str]] = read_csv(
+    crystal_effects: List[CSVRow] = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'crystal_effects.csv'))
     crystal_lores: Any = read_json(
         Path('gm4_zauber_cauldrons', 'raw', 'crystal_lores.json'))
@@ -122,9 +147,9 @@ def generate_potion_recipes(ctx: Context):
     """
     Generates the function tree and loot tables for zauber potions and soulutions.
     """
-    potion_effects: List[Dict[str, str]] = read_csv(
+    potion_effects: List[CSVRow] = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'potion_effects.csv'))
-    potion_bottles: List[Dict[str, str]] = read_csv(
+    potion_bottles: List[CSVRow] = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'potion_bottles.csv'))
     potion_lores: Any = read_json(
         Path('gm4_zauber_cauldrons', 'raw', 'potion_lores.json'))
@@ -173,11 +198,11 @@ def generate_magicol_recipes(ctx: Context):
     Generates the function tree for crafting th magicol liquid.
     """
 
-    weather_modifiers: List[Dict[str, str]] = read_csv(
+    weather_modifiers: List[CSVRow] = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'weather_modifiers.csv'))
-    magicol_colors: Any = read_csv(
+    magicol_colors: List[CSVRow] = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'magicol_colors.csv'))
-    potion_bottles: List[Dict[str, str]] = read_csv(
+    potion_bottles: List[CSVRow] = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'potion_bottles.csv'))
     
     # make csv data available to bolt later
@@ -206,7 +231,7 @@ def generate_magicol_recipes(ctx: Context):
                     },
                     "meta": {
                         "color": color_data['color'],
-                        "particle_color": color_data['particle_color'],
+                        "potion_color": color_data['potion_color'],
                         "liquid_custom_model_data": color_data['liquid_custom_model_data'],
                         "bottle_custom_model_data": modifier_data['bottle_custom_model_data'],
                         "soulution_bottle_custom_model_data": modifier_data['soulution_bottle_custom_model_data'],
@@ -223,3 +248,43 @@ def generate_magicol_recipes(ctx: Context):
                     }
                 }
                 ctx.require(subproject(subproject_config))
+
+
+def generate_zauber_biomes(ctx: Context):
+        
+    weather_modifiers: List[CSVRow] = read_csv(
+        Path('gm4_zauber_cauldrons', 'raw', 'weather_modifiers.csv'))
+    magicol_colors: List[CSVRow] = read_csv(
+        Path('gm4_zauber_cauldrons', 'raw', 'magicol_colors.csv'))
+
+    # make csv data available to bolt later
+    ctx.meta['weather_modifiers'] = weather_modifiers
+    ctx.meta['magicol_colors'] = magicol_colors
+
+
+    for color_data in magicol_colors:
+        for modifier_data in weather_modifiers:
+            subproject_config = {
+                "data_pack": {
+                    "load": [
+                        {
+                            f"data/gm4_zauber_cauldrons/worldgen/biome/{modifier_data['modifier']}_{color_data['color']}_verzauberte_plains.json": "data/gm4_zauber_cauldrons/templates/worldgen/biome/verzauberte_plains.json"
+                        }
+                    ],
+                    "render": {
+                        "worldgen_biomes": "*"
+                    }
+                },
+                "meta": {
+                    "color": color_data['color'],
+                    "temperature": 0.0 if modifier_data['modifier'] == 'polar' else 0.7,
+                    "sky_color": color_data.get(f"sky_color_{modifier_data['modifier']}", 7972607),
+                    "has_precipitation": 'false' if modifier_data['modifier'] == 'arid' else 'true',
+                    "fog_color": color_data.get(f"fog_color_{modifier_data['modifier']}", 12638463),
+                    "water_color": color_data.get(f"water_color_{modifier_data['modifier']}", 4159204),
+                    "water_fog_color": color_data.get(f"water_fog_color_{modifier_data['modifier']}", 329011),
+                    "grass_color": color_data.get(f"grass_color_{modifier_data['modifier']}", 7979098),
+                    "foliage_color": color_data.get(f"foliage_color_{modifier_data['modifier']}", 5877296)
+                }
+            }
+            ctx.require(subproject(subproject_config))
