@@ -7,7 +7,7 @@ import re
 import logging
 
 from gm4.plugins.resource_pack import ModelData, TemplateOptions
-from gm4.utils import add_namespace, MapOption, NoneAttribute
+from gm4.utils import add_namespace, MapOption
 
 parent_logger = logging.getLogger("gm4."+__name__)
 
@@ -152,9 +152,6 @@ class ShamirTemplate(TemplateOptions):
                     material = "gold" # vanilla armor textures are called "gold_layer_1" for some reason
                 layer = item.endswith("leggings")+1 # leggings use layer 2
                 
-                print(f"existing filedata for gm4_metallurgy:cit/{self.metal}/{item}")
-                print(self.bound_ctx.assets[OptifineProperties].get(f"gm4_metallurgy:cit/{self.metal}/{item}", NoneAttribute()).text)
-
                 self.bound_ctx.generate(f"gm4_metallurgy:cit/{self.metal}/{item}", merge=OptifineProperties(
                     "\n".join([e for e in [
                         "type=armor",
@@ -208,4 +205,3 @@ def beet_default(ctx: Context):
     vanilla = ctx.inject(Vanilla)
     ShamirTemplate.vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
     ctx.assets.merge_policy.extend_namespace(OptifineProperties, optifine_armor_properties_merging)
-
