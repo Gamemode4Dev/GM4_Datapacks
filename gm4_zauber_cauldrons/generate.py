@@ -51,26 +51,49 @@ def read_json(path: Path) -> Any:
 
 
 def beet_default(ctx: Context):
-    generate_armor_recipes(ctx)
-    generate_crystal_recipes(ctx)
-    generate_potion_recipes(ctx)
-    generate_magicol_recipes(ctx)
-    generate_zauber_biomes(ctx)
-
-
-def generate_armor_recipes(ctx: Context):
-    """
-    Generates the function tree and loot tables for all combinations of zauber armor.
-    """
     armor_flavors: List[CSVRow] = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'armor_flavors.csv'))
     armor_pieces: List[CSVRow] = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'armor_pieces.csv'))
-    
-    # make csv data available to bolt later
+    crystal_effects: List[CSVRow] = read_csv(
+        Path('gm4_zauber_cauldrons', 'raw', 'crystal_effects.csv'))
+    crystal_lores: Any = read_json(
+        Path('gm4_zauber_cauldrons', 'raw', 'crystal_lores.json'))
+    magicol_colors: List[CSVRow] = read_csv(
+        Path('gm4_zauber_cauldrons', 'raw', 'magicol_colors.csv'))
+    potion_bottles: List[CSVRow] = read_csv(
+        Path('gm4_zauber_cauldrons', 'raw', 'potion_bottles.csv'))
+    potion_effects: List[CSVRow] = read_csv(
+        Path('gm4_zauber_cauldrons', 'raw', 'potion_effects.csv'))
+    potion_bottles: List[CSVRow] = read_csv(
+        Path('gm4_zauber_cauldrons', 'raw', 'potion_bottles.csv'))
+    potion_lores: Any = read_json(
+        Path('gm4_zauber_cauldrons', 'raw', 'potion_lores.json'))
+    weather_modifiers: List[CSVRow] = read_csv(
+        Path('gm4_zauber_cauldrons', 'raw', 'weather_modifiers.csv'))
+
+
+    # generate files
+    generate_armor_recipes(ctx, armor_flavors, armor_pieces)
+    generate_crystal_recipes(ctx, crystal_effects, crystal_lores)
+    generate_potion_recipes(ctx, potion_effects, potion_bottles, potion_lores)
+    generate_magicol_recipes(ctx, weather_modifiers, magicol_colors, potion_bottles)
+    generate_zauber_biomes(ctx, weather_modifiers, magicol_colors)
+
+    # make some csv data available to bolt later
     ctx.meta['armor_flavors'] = armor_flavors
     ctx.meta['armor_pieces'] = armor_pieces
+    ctx.meta['crystal_effects'] = crystal_effects
+    ctx.meta['magicol_colors'] = magicol_colors
+    ctx.meta['potion_bottles'] = potion_bottles
+    ctx.meta['potion_effects'] = potion_effects
+    ctx.meta['potion_bottles'] = potion_bottles
+    ctx.meta['weather_modifiers'] = weather_modifiers
 
+def generate_armor_recipes(ctx: Context, armor_flavors: List[CSVRow], armor_pieces: List[CSVRow]):
+    """
+    Generates the function tree and loot tables for all combinations of zauber armor.
+    """
     # create a loot tables and functions for each zauber armor piece + flavor combination
     for flavor_data in armor_flavors:
         for piece_data in armor_pieces:
@@ -105,18 +128,10 @@ def generate_armor_recipes(ctx: Context):
             ctx.require(subproject(subproject_config))
 
 
-def generate_crystal_recipes(ctx: Context):
+def generate_crystal_recipes(ctx: Context, crystal_effects: List[CSVRow], crystal_lores: Dict[str,Any]):
     """
     Generates the function tree and loot tables for zauber crystals.
     """
-    crystal_effects: List[CSVRow] = read_csv(
-        Path('gm4_zauber_cauldrons', 'raw', 'crystal_effects.csv'))
-    crystal_lores: Any = read_json(
-        Path('gm4_zauber_cauldrons', 'raw', 'crystal_lores.json'))
-    
-    # make csv data available to bolt later
-    ctx.meta['crystal_effects'] = crystal_effects
-
     for effect_data in crystal_effects:
 
         subproject_config = {
@@ -143,21 +158,10 @@ def generate_crystal_recipes(ctx: Context):
         ctx.require(subproject(subproject_config))
 
 
-def generate_potion_recipes(ctx: Context):
+def generate_potion_recipes(ctx: Context, potion_effects: List[CSVRow], potion_bottles: List[CSVRow], potion_lores: Dict[str, Any]):
     """
     Generates the function tree and loot tables for zauber potions and soulutions.
     """
-    potion_effects: List[CSVRow] = read_csv(
-        Path('gm4_zauber_cauldrons', 'raw', 'potion_effects.csv'))
-    potion_bottles: List[CSVRow] = read_csv(
-        Path('gm4_zauber_cauldrons', 'raw', 'potion_bottles.csv'))
-    potion_lores: Any = read_json(
-        Path('gm4_zauber_cauldrons', 'raw', 'potion_lores.json'))
-    
-    # make csv data available to bolt later
-    ctx.meta['potion_effects'] = potion_effects
-    ctx.meta['potion_bottles'] = potion_bottles
-
     for bottle_data in potion_bottles:
         for effect_data in potion_effects:
 
@@ -193,23 +197,10 @@ def generate_potion_recipes(ctx: Context):
             ctx.require(subproject(subproject_config))
 
 
-def generate_magicol_recipes(ctx: Context):
+def generate_magicol_recipes(ctx: Context, weather_modifiers: List[CSVRow], magicol_colors: List[CSVRow], potion_bottles: List[CSVRow]):
     """
     Generates the function tree for crafting th magicol liquid.
     """
-
-    weather_modifiers: List[CSVRow] = read_csv(
-        Path('gm4_zauber_cauldrons', 'raw', 'weather_modifiers.csv'))
-    magicol_colors: List[CSVRow] = read_csv(
-        Path('gm4_zauber_cauldrons', 'raw', 'magicol_colors.csv'))
-    potion_bottles: List[CSVRow] = read_csv(
-        Path('gm4_zauber_cauldrons', 'raw', 'potion_bottles.csv'))
-    
-    # make csv data available to bolt later
-    ctx.meta['weather_modifiers'] = weather_modifiers
-    ctx.meta['magicol_colors'] = magicol_colors
-    ctx.meta['potion_bottles'] = potion_bottles
-
     for bottle_data in potion_bottles:
         for color_data in magicol_colors:
             for modifier_data in weather_modifiers:
@@ -250,18 +241,10 @@ def generate_magicol_recipes(ctx: Context):
                 ctx.require(subproject(subproject_config))
 
 
-def generate_zauber_biomes(ctx: Context):
-        
-    weather_modifiers: List[CSVRow] = read_csv(
-        Path('gm4_zauber_cauldrons', 'raw', 'weather_modifiers.csv'))
-    magicol_colors: List[CSVRow] = read_csv(
-        Path('gm4_zauber_cauldrons', 'raw', 'magicol_colors.csv'))
-
-    # make csv data available to bolt later
-    ctx.meta['weather_modifiers'] = weather_modifiers
-    ctx.meta['magicol_colors'] = magicol_colors
-
-
+def generate_zauber_biomes(ctx: Context, weather_modifiers: List[CSVRow], magicol_colors: List[CSVRow]):
+    """
+    Generates worldgen/biome files.
+    """
     for color_data in magicol_colors:
         for modifier_data in weather_modifiers:
             subproject_config = {
