@@ -11,7 +11,7 @@ scoreboard players set $use_alternative_sips gm4_zc_data 1
 
 # check remaining sips
 execute store result score $remaining_sips gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.tag.gm4_zauber_cauldrons.bottle.sips
-execute if score $remaining_sips gm4_zc_data matches 2.. run function gm4_zauber_cauldrons:soulution/thrown_potion_tracking/spawn_copy
+execute if score $remaining_sips gm4_zc_data matches 2.. run function gm4_zauber_cauldrons:soulution/spawn_copy
 
 # reset fake players and storage
 scoreboard players reset $remaining_sips gm4_zc_data
