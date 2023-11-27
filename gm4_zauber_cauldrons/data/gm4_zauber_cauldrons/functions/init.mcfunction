@@ -10,6 +10,7 @@ scoreboard objectives add gm4_zc_id dummy
 scoreboard objectives add gm4_zc_liquid_level dummy
 scoreboard objectives add gm4_zc_moon_phase dummy
 scoreboard objectives add gm4_zc_no_explode dummy
+scoreboard objectives add gm4_zc_magicol_painter_timer dummy
 scoreboard objectives add gm4_zc_rabtarget dummy
 execute unless score $seed gm4_zc_flowers matches -2147483648..2147483647 run function gm4_zauber_cauldrons:recipes/flowers/initiate_flower_types
 execute unless score seed gm4_zc_chorus matches -2147483648..2147483647 run function gm4_zauber_cauldrons:recipes/chorus/initiate_chorus_amounts

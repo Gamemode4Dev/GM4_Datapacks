@@ -9,6 +9,7 @@
         "water_fog_color": {{water_fog_color}},
         "grass_color": {{grass_color}},
         "foliage_color": {{foliage_color}},
+        {{biome_particle}}
         "mood_sound": {
             "sound": "minecraft:ambient.cave",
             "tick_delay": 6000,

@@ -12,12 +12,12 @@ class CSVRow():
     Access data within this CSVRow via the get(key, default) method or using ['<key>'].
     """
 
-    def __init__(self, data: Dict[str,str]) -> None:
+    def __init__(self, data: Dict[str, str]) -> None:
         self._data = data
 
     def __getitem__(self, key: str):
         return self._data[key]
-    
+
     def get(self, key: str, default: str | Any) -> str:
         """
         Returns the value corrosponding to the key if it exists and is not the empty string.
@@ -28,7 +28,7 @@ class CSVRow():
             return value
         else:
             return str(default)
-
+        
 
 def read_csv(path: Path) -> List[CSVRow]:
     """
@@ -72,13 +72,13 @@ def beet_default(ctx: Context):
     weather_modifiers: List[CSVRow] = read_csv(
         Path('gm4_zauber_cauldrons', 'raw', 'weather_modifiers.csv'))
 
-
     # generate files
     generate_armor_recipes(ctx, armor_flavors, armor_pieces)
     generate_crystal_recipes(ctx, crystal_effects, crystal_lores)
     generate_potion_recipes(ctx, potion_effects, potion_bottles, potion_lores)
-    generate_magicol_recipes(ctx, weather_modifiers, magicol_colors, potion_bottles)
-    generate_zauber_biomes(ctx, weather_modifiers, magicol_colors)
+    generate_magicol_recipes(ctx, weather_modifiers,
+                             magicol_colors, potion_bottles)
+    generate_zauber_biomes(ctx, weather_modifiers, magicol_colors, potion_bottles)
 
     # make some csv data available to bolt later
     ctx.meta['armor_flavors'] = armor_flavors
@@ -89,6 +89,7 @@ def beet_default(ctx: Context):
     ctx.meta['potion_effects'] = potion_effects
     ctx.meta['potion_bottles'] = potion_bottles
     ctx.meta['weather_modifiers'] = weather_modifiers
+
 
 def generate_armor_recipes(ctx: Context, armor_flavors: List[CSVRow], armor_pieces: List[CSVRow]):
     """
@@ -128,7 +129,7 @@ def generate_armor_recipes(ctx: Context, armor_flavors: List[CSVRow], armor_piec
             ctx.require(subproject(subproject_config))
 
 
-def generate_crystal_recipes(ctx: Context, crystal_effects: List[CSVRow], crystal_lores: Dict[str,Any]):
+def generate_crystal_recipes(ctx: Context, crystal_effects: List[CSVRow], crystal_lores: Dict[str, Any]):
     """
     Generates the function tree and loot tables for zauber crystals.
     """
@@ -241,33 +242,52 @@ def generate_magicol_recipes(ctx: Context, weather_modifiers: List[CSVRow], magi
                 ctx.require(subproject(subproject_config))
 
 
-def generate_zauber_biomes(ctx: Context, weather_modifiers: List[CSVRow], magicol_colors: List[CSVRow]):
+def generate_zauber_biomes(ctx: Context, weather_modifiers: List[CSVRow], magicol_colors: List[CSVRow], potion_bottles: List[CSVRow]):
     """
     Generates worldgen/biome files.
     """
     for color_data in magicol_colors:
         for modifier_data in weather_modifiers:
-            subproject_config = {
-                "data_pack": {
-                    "load": [
-                        {
-                            f"data/gm4_zauber_cauldrons/worldgen/biome/{modifier_data['modifier']}_{color_data['color']}_verzauberte_plains.json": "data/gm4_zauber_cauldrons/templates/worldgen/biome/verzauberte_plains.json"
+            for bottle_data in potion_bottles:
+                # skip drinkable
+                if bottle_data['bottle'] == 'drinkable':
+                    continue
+
+                # prepare biome particle for splash & lingering
+                adjective = ''
+                biome_particle = ''
+                if bottle_data['bottle'] == 'lingering':
+                    adjective = 'glittering_'
+                    particle_color = int(color_data.get(f"particle_color_{modifier_data['modifier']}", 7979098), 10)
+                    biome_particle = '"particle":{"options":{"type":"minecraft:dust","color":'+ str([(particle_color >> 16) / 255, ((particle_color >> 8) & 0xFF) / 255, (particle_color & 0xFF) / 255]) + ',"scale":2},"probability":0.002},'
+
+                subproject_config = {
+                    "data_pack": {
+                        "load": [
+                            {
+                                f"data/gm4_zauber_cauldrons/functions/bottled_magicol/{color_data['color']}/select_weather_modifier.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/bottled_magicol/select_weather_modifier.mcfunction",
+                                f"data/gm4_zauber_cauldrons/functions/bottled_magicol/{color_data['color']}/{modifier_data['modifier']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/bottled_magicol/color_biome.mcfunction",
+                                f"data/gm4_zauber_cauldrons/worldgen/biome/{adjective}{modifier_data['modifier']}_{color_data['color']}_verzauberte_plains.json": "data/gm4_zauber_cauldrons/templates/worldgen/biome/verzauberte_plains.json"
+                            }
+                        ],
+                        "render": {
+                            "functions": "*",
+                            "worldgen_biomes": "*"
                         }
-                    ],
-                    "render": {
-                        "worldgen_biomes": "*"
+                    },
+                    "meta": {
+                        "color": color_data['color'],
+                        "potion_color": color_data['potion_color'],
+                        "weather_modifier": modifier_data['modifier'],
+                        "temperature": 0.0 if modifier_data['modifier'] == 'polar' else 0.7,
+                        "sky_color": color_data.get(f"sky_color_{modifier_data['modifier']}", 7972607),
+                        "has_precipitation": 'false' if modifier_data['modifier'] == 'arid' else 'true',
+                        "fog_color": color_data.get(f"fog_color_{modifier_data['modifier']}", 12638463),
+                        "water_color": color_data.get(f"water_color_{modifier_data['modifier']}", 4159204),
+                        "water_fog_color": color_data.get(f"water_fog_color_{modifier_data['modifier']}", 329011),
+                        "grass_color": color_data.get(f"grass_color_{modifier_data['modifier']}", 7979098),
+                        "foliage_color": color_data.get(f"foliage_color_{modifier_data['modifier']}", 5877296),
+                        "biome_particle": biome_particle
                     }
-                },
-                "meta": {
-                    "color": color_data['color'],
-                    "temperature": 0.0 if modifier_data['modifier'] == 'polar' else 0.7,
-                    "sky_color": color_data.get(f"sky_color_{modifier_data['modifier']}", 7972607),
-                    "has_precipitation": 'false' if modifier_data['modifier'] == 'arid' else 'true',
-                    "fog_color": color_data.get(f"fog_color_{modifier_data['modifier']}", 12638463),
-                    "water_color": color_data.get(f"water_color_{modifier_data['modifier']}", 4159204),
-                    "water_fog_color": color_data.get(f"water_fog_color_{modifier_data['modifier']}", 329011),
-                    "grass_color": color_data.get(f"grass_color_{modifier_data['modifier']}", 7979098),
-                    "foliage_color": color_data.get(f"foliage_color_{modifier_data['modifier']}", 5877296)
                 }
-            }
-            ctx.require(subproject(subproject_config))
+                ctx.require(subproject(subproject_config))

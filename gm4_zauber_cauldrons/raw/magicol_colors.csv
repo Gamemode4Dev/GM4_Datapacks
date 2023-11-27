@@ -1,17 +1,17 @@
-color,ingredient_item_id,liquid_custom_model_data,color_translate_name,color_translate_fallback,potion_color,sky_color_polar,fog_color_polar,water_color_polar,water_fog_color_polar,grass_color_polar,foliage_color_polar,sky_color_temperate,fog_color_temperate,water_color_temperate,water_fog_color_temperate,grass_color_temperate,foliage_color_temperate,sky_color_arid,fog_color_arid,water_color_arid,water_fog_color_arid,grass_color_arid,foliage_color_arid
-white,minecraft:white_dye,3420000,white,White Tint,14475494,,,,,12436441,,,,,,13820642,,,,,,16777215,
-light_gray,minecraft:light_gray_dye,3420000,light_gray,Light Gray Tint,8419701,,,,,9868158,,,,,,11643287,,,,,,13092021,
-gray,minecraft:gray_dye,3420000,gray,Gray Tint,4146765,,,,,5462108,,,,,,6187375,,,,,,8160648,
-black,minecraft:black_dye,3420000,black,Black Tint,2038574,,,,,1447199,,,,,,2696753,,,,,,3420472,
-brown,minecraft:brown_dye,3420000,brown,Brown Tint,9199935,,,,,7291941,,,,,,9985585,,,,,,11303495,
-red,minecraft:red_dye,3420000,red,Red Tint,10891826,,,,,11543865,,,,,,13317169,,,,,,14569024,
-orange,minecraft:orange_dye,3420000,orange,Orange Tint,14254913,,,,,12996882,,,,,,14838815,,,,,,16028465,
-yellow,minecraft:yellow_dye,3420000,yellow,Yellow Tint,16105801,,,,,12882707,,,,,,16295200,,,,,,15580243,
-lime,minecraft:lime_dye,3420000,lime,Lime Tint,6927140,,,,,6073372,,,,,,9162796,,,,,,11788622,
-green,minecraft:green_dye,3420000,green,Green Tint,7045184,,,,,5014063,,,,,,6199606,,,,,,8433231,
-cyan,minecraft:cyan_dye,3420000,cyan,Cyan Tint,3580595,,,,,2267495,,,,,,3524480,,,,,,7202193,
-light_blue,minecraft:light_blue_dye,3420000,light_blue,Light Blue Tint,3579353,,,,,4442321,,,,,,5500887,,,,,,8716243,
-blue,minecraft:blue_dye,3420000,blue,Blue Tint,4672435,,,,,3691692,,,,,,4292574,,,,,,6136293,
-purple,minecraft:purple_dye,3420000,purple,Purple Tint,7744947,,,,,6636728,,,,,,10575855,,,,,,13598968,
-magenta,minecraft:magenta_dye,3420000,magenta,Magenta Tint,12207538,,,,,12008110,,,,,,15815626,,,,,,16675810,
-pink,minecraft:pink_dye,3420000,pink,Pink Tint,15108779,,,,,14052769,,,,,,16747980,,,,,,16688834,
+color,ingredient_item_id,liquid_custom_model_data,color_translate_name,color_translate_fallback,potion_color,sky_color_polar,fog_color_polar,water_color_polar,water_fog_color_polar,grass_color_polar,foliage_color_polar,particle_color_polar,sky_color_temperate,fog_color_temperate,water_color_temperate,water_fog_color_temperate,grass_color_temperate,foliage_color_temperate,particle_color_temperate,sky_color_arid,fog_color_arid,water_color_arid,water_fog_color_arid,grass_color_arid,foliage_color_arid,particle_color_arid
+white,minecraft:white_dye,3420000,white,White Tint,14475494,,,,,12436441,,12436441,,,,,13820642,,13820642,,,,,16777215,,16777215
+light_gray,minecraft:light_gray_dye,3420000,light_gray,Light Gray Tint,8419701,,,,,9868158,,9868158,,,,,11643287,,11643287,,,,,13092021,,13092021
+gray,minecraft:gray_dye,3420000,gray,Gray Tint,4146765,,,,,5462108,,5462108,,,,,6187375,,6187375,,,,,8160648,,8160648
+black,minecraft:black_dye,3420000,black,Black Tint,2038574,,,,,1447199,,1447199,,,,,2696753,,2696753,,,,,3420472,,3420472
+brown,minecraft:brown_dye,3420000,brown,Brown Tint,9199935,,,,,7291941,,7291941,,,,,9985585,,9985585,,,,,11303495,,11303495
+red,minecraft:red_dye,3420000,red,Red Tint,10891826,,,,,11543865,,11543865,,,,,13317169,,13317169,,,,,14569024,,14569024
+orange,minecraft:orange_dye,3420000,orange,Orange Tint,14254913,,,,,12996882,,12996882,,,,,14838815,,14838815,,,,,16028465,,16028465
+yellow,minecraft:yellow_dye,3420000,yellow,Yellow Tint,16105801,,,,,12882707,,12882707,,,,,16295200,,16295200,,,,,15580243,,15580243
+lime,minecraft:lime_dye,3420000,lime,Lime Tint,6927140,,,,,6073372,,6073372,,,,,9162796,,9162796,,,,,11788622,,11788622
+green,minecraft:green_dye,3420000,green,Green Tint,7045184,,,,,5014063,,5014063,,,,,6199606,,6199606,,,,,8433231,,8433231
+cyan,minecraft:cyan_dye,3420000,cyan,Cyan Tint,3580595,,,,,2267495,,2267495,,,,,3524480,,3524480,,,,,7202193,,7202193
+light_blue,minecraft:light_blue_dye,3420000,light_blue,Light Blue Tint,3579353,,,,,4442321,,4442321,,,,,5500887,,5500887,,,,,8716243,,8716243
+blue,minecraft:blue_dye,3420000,blue,Blue Tint,4672435,,,,,3691692,,3691692,,,,,4292574,,4292574,,,,,6136293,,6136293
+purple,minecraft:purple_dye,3420000,purple,Purple Tint,7744947,,,,,6636728,,6636728,,,,,10575855,,10575855,,,,,13598968,,13598968
+magenta,minecraft:magenta_dye,3420000,magenta,Magenta Tint,12207538,,,,,12008110,,12008110,,,,,15815626,,15815626,,,,,16675810,,16675810
+pink,minecraft:pink_dye,3420000,pink,Pink Tint,15108779,,,,,14052769,,14052769,,,,,16747980,,16747980,,,,,16688834,,16688834
