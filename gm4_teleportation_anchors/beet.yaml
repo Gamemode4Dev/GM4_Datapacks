@@ -50,6 +50,10 @@ meta:
         template:
           name: advancement
           forward: block/teleportation_anchor
+    gui_fonts:
+      - translation: gui.gm4.teleportation_jammer
+        container: dropper
+        texture: gui/container/teleportation_jammer
     website:
       description: Suppress and control chorus-based teleportation!
       recommended:

@@ -1,5 +1,5 @@
 from beet import NamespaceProxy, Model, Context
-from gm4.plugins.resource_pack import TemplateOptions, ModelData, ItemDisplayModel, ensure_single_model_config
+from gm4.plugins.resource_pack import TemplateOptions, ModelData, ItemDisplayModel, ensure_single_model_config, ContainerGuiOptions, CenteredContainerGui
 
 class OreDisplayTemplate(TemplateOptions):
     """setup a model template for the smeltable ores displayed by smeltries"""
@@ -25,6 +25,9 @@ class OreDisplayTemplate(TemplateOptions):
             }
         })
         return [m]
+    
+class FurnaceContainerGui(CenteredContainerGui, ContainerGuiOptions):
+    container = "furnace"
 
 def beet_default(ctx: Context):
     pass

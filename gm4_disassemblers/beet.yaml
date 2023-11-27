@@ -51,6 +51,10 @@ meta:
         template:
           name: advancement
           forward: block/disassembler
+    gui_fonts:
+      - translation: gui.gm4.disassembler
+        container: dropper
+        texture: gui/container/disassembler
     website:
       description: Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!
       recommended:

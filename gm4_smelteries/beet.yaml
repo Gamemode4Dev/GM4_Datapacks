@@ -89,6 +89,10 @@ meta:
         template:
           name: advancement
           forward: block/smeltery_unlit
+    gui_fonts:
+      - translation: gui.gm4.smeltery
+        container: furnace
+        texture: gui/container/smeltery
     website:
       description: Build a Smeltery and double your ore output with this multi-block structure.
       recommended:

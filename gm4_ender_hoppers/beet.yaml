@@ -39,6 +39,10 @@ meta:
       - item: player_head
         reference: item/ender_hopper
         model: item/ender_hopper_full
+    gui_fonts:
+      - translation: gui.gm4.ender_hopper
+        container: hopper
+        texture: gui/container/ender_hopper
     website:
       description: Create special hoppers that teleport nearby items to them.
       recommended:

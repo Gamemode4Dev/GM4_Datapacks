@@ -54,6 +54,10 @@ meta:
       - item: coal_block
         reference: item/charcoal_block
         template: vanilla
+    gui_fonts:
+      - translation: gui.gm4.forming_press
+        container: dropper
+        texture: gui/container/forming_press
     website:
       description: Create a Forming Press to unlock more efficient recipes for all types of brick and Charcoal.
       recommended:

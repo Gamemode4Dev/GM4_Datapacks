@@ -52,6 +52,10 @@ meta:
       - item: experience_bottle
         reference: standard_liquids:gui/advancement/standard_liquids
         template: advancement
+    gui_fonts:
+      - translation: gui.gm4.liquid_tank
+        container: hopper
+        texture: gui/container/liquid_tank
     website:
       description: Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!
       recommended:

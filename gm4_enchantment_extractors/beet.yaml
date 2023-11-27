@@ -30,7 +30,7 @@ meta:
           - name: item_display
             origin: [0.5,1,0.5]
             scale: [0.625, 0.625,0.625]
-            translation: [0,0,0]
+            translation: [0,-0.01,0]
             display: head
         broadcast:
           - reference: block/enchantment_extractor
@@ -59,6 +59,10 @@ meta:
         template:
           name: advancement
           forward: block/enchantment_extractor
+    gui_fonts:
+      - translation: gui.gm4.enchantment_extractor
+        container: dropper
+        texture: gui/container/enchantment_extractor
     website:
       description: Remove enchantments from enchanted tools, armour, and weapons. But be careful, there might be unexpected side-effects.
       recommended:

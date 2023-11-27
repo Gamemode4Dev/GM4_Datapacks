@@ -68,6 +68,10 @@ meta:
         template: 
           name: advancement
           forward: block/custom_crafter
+    gui_fonts:
+      - translation: gui.gm4.custom_crafter
+        container: dropper
+        texture: gui/container/custom_crafter
     credits:
       Custom Crafters Creators:
         - Bloo

@@ -49,6 +49,10 @@ meta:
         template:
           name: advancement
           forward: block/block_compressor_full
+    gui_fonts:
+      - translation: gui.gm4.block_compressor
+        container: dropper
+        texture: gui/container/block_compressor
     website:
       description: Chest space won't be an issue with this module! Use a Block Compressor to compress stacks of items, turning a stack of items into a single item for long-term storage. Make sure to uncompress your items before using them again, though!
       recommended:

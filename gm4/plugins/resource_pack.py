@@ -7,12 +7,15 @@ from dataclasses import replace
 from fnmatch import fnmatch
 from itertools import cycle
 from typing import Any, ClassVar, Literal, Optional
-
 import numpy as np
+
 from beet import (
+    Cache,
     Context,
+    Font,
     InvalidOptions,
     JsonFile,
+    Language,
     ListOption,
     Model,
     NamespaceProxy,
@@ -152,22 +155,49 @@ class NestedModelData(BaseModel):
             else:
                 ret_list.append(m)
         return ret_list
+    
+class GuiFont(BaseModel):
+    """config for a single container gui using custom fonts"""
+    translation: str
+    container: 'str|ContainerGuiOptions'
+    texture: str
 
-class FlatModelDataOptions(BaseModel):
-    """Contains a flat list of complete model config objects"""
+    @validator('container')
+    def resolve_container(cls, container: 'str|ContainerGuiOptions', values: dict[str,Any]) -> 'ContainerGuiOptions':
+        container_type = container.container if isinstance(container, ContainerGuiOptions) else container
+        try:
+            subclass = {m.container: m for m in ContainerGuiOptions.__subclasses__()}[container_type]
+            return subclass.parse_obj(container.dict() if isinstance(container, ContainerGuiOptions) else {"name": container})
+        except KeyError:
+            raise ValidationError([ErrorWrapper(ValueError(f"the specified template '{container_type}' could not be found"), loc=())], model=GuiFont)
+        
+    def add_namespace(self, namespace: str) -> 'GuiFont':
+        """returns a new GuiFont with the texture field namespaced"""
+        return GuiFont(
+            translation=self.translation,
+            container=self.container,
+            texture=add_namespace(self.texture, namespace)
+        )
+
+
+class FlatResourcePackOptions(BaseModel):
+    """Contains a flat list of complete rp config objects"""
     model_data: list[ModelData]
+    gui_fonts: list[GuiFont]
 
     def add_namespace(self, namespace:str):
         self.model_data=[m.add_namespace(namespace) for m in self.model_data]
+        self.gui_fonts=[g.add_namespace(namespace) for g in self.gui_fonts]
     
     def template_mutations(self):
         for m in self.model_data:
             m.template.mutate_config(m) # type: ignore , model validation ensures tempalte is type TemplateOptions()
 
-class ModelDataOptions(PluginOptions, extra=Extra.ignore):
+class ResourcePackOptions(PluginOptions, extra=Extra.ignore):
     model_data: list[NestedModelData] = []
+    gui_fonts: list[GuiFont] = []
 
-    def process_inheritance(self) -> FlatModelDataOptions:
+    def process_inheritance(self) -> FlatResourcePackOptions:
         """Collapses and returns any broadcast fields into processed flat list"""
         ret: list[ModelData] = []
         errors: list[tuple[int, ValidationError]] = []
@@ -190,7 +220,7 @@ class ModelDataOptions(PluginOptions, extra=Extra.ignore):
             complete_explaination = format_validation_error("gm4", ValidationError(model=ModelData, errors=wrapper_errors))
             raise InvalidOptions("gm4", complete_explaination)
         
-        return FlatModelDataOptions(model_data=ret)
+        return FlatResourcePackOptions(model_data=ret, gui_fonts=self.gui_fonts)
 
 #== Configurable Base Classes ==#
 class TemplateOptions(BaseModel, extra=Extra.allow):
@@ -241,8 +271,29 @@ class TransformOptions(BaseModel, extra=Extra.allow):
     def apply_transform(self, model: Model) -> None:
         """Modifies the given model, applying transformation data to the display compound"""
         raise NotImplementedError()
+
+class ContainerGuiOptions(BaseModel, extra=Extra.allow):
+    """a pydantic model to extend for container gui fonts"""
+    container: ClassVar[str]
+    def __init_subclass__(cls) -> None:
+        cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
+
+    def process(self, config: GuiFont, counter_cache: Cache) -> tuple[str, list[dict[str,Any]]]:
+        """requisitions unicode characters and returns the translation and font providers that make it up"""
+        raise NotImplementedError()
+    
+    def next_unicode(self, counter_cache: Cache) -> str:
+        ret = counter_cache.json["__next__"]
+        counter_cache.json["__next__"] += 1
+        return chr(ret)
+
+    def dict(self, **kwargs: Any) -> dict[str,Any]:
+        return super().dict(**kwargs) | {"container": self.container} # ensure name class-var is preserved in dict-casting
+    
+    
 NestedModelData.update_forward_refs()
 ModelData.update_forward_refs()
+GuiFont.update_forward_refs()
 
 #== Beet Plugins ==#
 def beet_default(ctx: Context):
@@ -256,6 +307,7 @@ def beet_default(ctx: Context):
 def build(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
     rp.resolve_config()
+    rp.generate_gui_fonts()
     rp.update_modeldata_registry()
     rp.generate_model_files()
     rp.process_optifine()
@@ -276,6 +328,11 @@ def dump_registry(ctx: Context):
     JsonFile(registry).dump(origin="", path="gm4/modeldata_registry.json")
     ctx.cache["modeldata_registry"].delete()
 
+def init_font_counter(ctx: Context):
+    ctx.cache["gui_font_counter"].json = {
+        "__next__": ord("\u9000")
+    }
+
 class GM4ResourcePack(MutatingReducer):
     """Service Object handling CustomModelData and generated item models"""
 
@@ -283,15 +340,15 @@ class GM4ResourcePack(MutatingReducer):
         self.ctx = ctx
         self.registry = ctx.cache["modeldata_registry"].json
         self.logger = parent_logger.getChild(ctx.project_id)
-        self._opts = FlatModelDataOptions(model_data=[]) # unloaded config
+        self._opts = FlatResourcePackOptions(model_data=[], gui_fonts=[]) # unloaded config
         super().__init__()
 
     @property
-    def opts(self) -> FlatModelDataOptions:
+    def opts(self) -> FlatResourcePackOptions:
         return self._opts
     
     def resolve_config(self):
-        self._opts = self.ctx.validate("gm4", validator=ModelDataOptions).process_inheritance()
+        self._opts = self.ctx.validate("gm4", validator=ResourcePackOptions).process_inheritance()
         self._opts.add_namespace(self.ctx.project_id)
         self._opts.template_mutations()
 
@@ -465,6 +522,20 @@ class GM4ResourcePack(MutatingReducer):
             for tex in model.data.get("textures", {}).values():
                 if not tex.startswith("minecraft:") and tex not in self.ctx.assets.textures:
                     self.logger.warning(f"Missing texture '{tex}' in {name}")
+    
+    #== Font-Gui file generation ==#
+    def generate_gui_fonts(self):
+        for gui in self.opts.gui_fonts:
+            if not isinstance(gui.container, ContainerGuiOptions):
+                continue # model validation ensures this
+
+            translation, providers = gui.container.process(gui, self.ctx.cache["gui_font_counter"])
+            self.ctx.generate("gm4:en_us", merge=Language({
+                gui.translation: translation
+            }))
+            self.ctx.generate("gm4:container_gui", merge=Font({
+                "providers": providers
+            }))
             
     
 #== Default Templates and Transforms ==#
@@ -617,3 +688,57 @@ class LegacyMachineArmorStand(BlockTemplate, TemplateOptions):
         )
     ]
     name = "legacy_machine_block"
+
+
+#== Default Gui-Font Generators ==#
+class CenteredContainerGui(ContainerGuiOptions):
+    container = "_centered"
+
+    def process(self, config: GuiFont, counter_cache: Cache) -> tuple[str, list[dict[str, Any]]]:
+        u1 = self.next_unicode(counter_cache)
+        u2 = self.next_unicode(counter_cache)
+        return u2+u1+u2, [
+            {
+                "type": "bitmap",
+                "file": config.texture+".png",
+                "ascent": 13,
+                "height": 166,
+                "chars": [u1]
+            },
+            {
+                "type": "bitmap",
+                "file": config.texture+".png",
+                "ascent": -32768,
+                "height": -83,
+                "chars": [u2]
+            }
+        ]
+
+class RightAlignContainerGui(ContainerGuiOptions):
+    container = "_right_align"
+
+    def process(self, config: GuiFont, counter_cache: Cache) -> tuple[str, list[dict[str, Any]]]:
+        u1 = self.next_unicode(counter_cache)
+        u2 = self.next_unicode(counter_cache)
+        return "\uf808"+u1+u2+"\uf824", [
+            {
+                "type": "bitmap",
+                "file": config.texture+".png",
+                "ascent": 13,
+                "height": 133,
+                "chars": [u1]
+            },
+            {
+                "type": "bitmap",
+                "file": config.texture+".png",
+                "ascent": -32768,
+                "height": -133,
+                "chars": [u2]
+            },
+        ]
+
+class HopperContainerGui(RightAlignContainerGui, ContainerGuiOptions):
+    container = "hopper"
+
+class DropperContainerGui(CenteredContainerGui, ContainerGuiOptions):
+    container = "dropper"

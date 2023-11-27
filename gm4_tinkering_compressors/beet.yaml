@@ -51,6 +51,10 @@ meta:
         template:
           name: advancement
           forward: block/tinkering_compressor_full
+    gui_fonts:
+      - translation: gui.gm4.tinkering_compressor
+        container: dropper
+        texture: gui/container/tinkering_compressor
     website:
       description: Automatically compress stacks of items into their block form with a tinker shamir as a machine block, and back.
       recommended:
