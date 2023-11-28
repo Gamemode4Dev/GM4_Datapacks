@@ -2,6 +2,8 @@ pipeline:
   - gm4.plugins.list_modules
   - gm4.plugins.manifest.create
   - gm4.plugins.manifest.update_patch
+  - gm4.plugins.resource_pack.mount_registry
+  - gm4.plugins.resource_pack.init_font_counter
   - gm4.plugins.output.clear_release
   - gm4.plugins.manifest.write_meta
   - broadcast: 'gm4_*'
@@ -9,6 +11,9 @@ pipeline:
     require:
       - gm4.plugins.output.release
       - gm4.plugins.player_heads
+      - gm4.plugins.resource_pack
+      - beet.contrib.model_merging
+      - beet.contrib.optifine
     pipeline:
       - gm4.plugins.manifest.write_updates
       - gm4.plugins.manifest.write_credits
@@ -21,6 +26,7 @@ pipeline:
         formatting:
           layout: preserve
           nbt_compact: True
+
   - broadcast: 'lib_*'
     extend: 'beet.yaml'
     require:
@@ -44,6 +50,11 @@ pipeline:
         formatting:
           layout: preserve
           nbt_compact: True
+
+  - extend: beet.yaml
+    directory: gm4_resource_pack
+  - gm4.plugins.output.resource_pack
+
 meta:
   autosave:
     link: false
