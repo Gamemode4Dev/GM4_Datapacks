@@ -24,6 +24,7 @@ from beet import (
 )
 from beet.contrib.optifine import OptifineProperties
 from beet.contrib.vanilla import Vanilla
+from beet.contrib.link import LinkManager
 from beet.core.utils import format_validation_error
 from mecha import (
     AstChildren,
@@ -315,6 +316,9 @@ def build(ctx: Context):
     rp.generate_model_overrides()
     mecha_transform_jsonfiles(ctx, GM4ResourcePack)
 
+    if not ctx.assets.extra.get("pack.png") and ctx.data.extra.get("pack.png"):
+        ctx.assets.icon = ctx.data.icon
+
 def mount_registry(ctx: Context):
     ctx.cache["modeldata_registry"].json = JsonFile(source_path="gm4/modeldata_registry.json").data
 
@@ -332,6 +336,19 @@ def init_font_counter(ctx: Context):
     ctx.cache["gui_font_counter"].json = {
         "__next__": ord("\u9000")
     }
+
+def link_resource_pack(ctx: Context):
+    """manually links the combined resource pack to minecraft's RP folder when using 'beet dev'"""
+    ctx.assets.name = "DEV gm4_resource_pack"
+    lm = ctx.inject(LinkManager)
+
+    # clear DP link, we only want to send a RP to minecraft
+    dp_dir = lm.data_pack
+    lm.data_pack = None
+
+    lm.autosave_handler(ctx) # send RP to minecraft
+
+    lm.data_pack = dp_dir # restore the DP link
 
 class GM4ResourcePack(MutatingReducer):
     """Service Object handling CustomModelData and generated item models"""
