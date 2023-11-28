@@ -161,6 +161,15 @@ class ShamirTemplate(TemplateOptions):
                         f"nbt.CustomModelData=regex:(${config.reference})"
                     ] if e is not None])
                 ))
+            elif item in ["elytra", "trident", "spyglass"]:
+                self.bound_ctx.generate(f"gm4_metallurgy:cit/{self.metal}/{item}", merge=OptifineProperties(
+                    "\n".join([
+                        "type=elytra" if item=="elytra" else f"type=item",
+                        f"matchItems={item}",
+                        f"texture.{item}={item}",
+                        f"nbt.CustomModelData=regex:(${config.reference})"
+                    ])
+                ))
 
         config.model = MapOption(__root__=models)
         return ret_list
