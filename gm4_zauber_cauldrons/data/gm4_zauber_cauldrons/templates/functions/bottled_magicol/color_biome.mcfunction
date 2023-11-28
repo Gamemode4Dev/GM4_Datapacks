@@ -8,8 +8,8 @@ execute if data storage gm4_zauber_cauldrons:temp/item/bottled_magicol Item{id:"
 execute if data storage gm4_zauber_cauldrons:temp/item/bottled_magicol Item{id:"minecraft:lingering_potion"} run summon marker ~ ~ ~ {CustomName:'"gm4_zauber_cauldrons_magicol_painter"',Tags:["gm4_zc_magicol_painter"],data:{gm4_zauber_cauldrons:{biome:"gm4_zauber_cauldrons:glittering_{{weather_modifier}}_{{color}}_verzauberte_plains"}}}
 
 # eyecandy
-summon area_effect_cloud ~ ~ ~ {CustomName:'"gm4_zauber_cauldrons_magicol_painter_particle"',Particle:"entity_effect",Radius:5f,Duration:5,Color:{{potion_color}},Tags:["gm4_zc_magicol_painter_particle"]}
+execute if loaded ~ ~ ~ run summon area_effect_cloud ~ ~ ~ {CustomName:'"gm4_zauber_cauldrons_magicol_painter_particle"',Particle:"entity_effect",Radius:5f,Duration:5,Color:{{potion_color}},Tags:["gm4_zc_magicol_painter_particle"]}
 particle minecraft:end_rod ~ ~ ~ 0.2 0.2 0.2 0.3 128
 
-# schedule fillbiome
+# run fillbiome
 function gm4_zauber_cauldrons:bottled_magicol/maintain_magicol_painters
