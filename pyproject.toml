@@ -21,6 +21,7 @@ isort = "^5.10.1"
 
 [tool.poetry.plugins.beet]
 commands = "gm4.commands"
+autoload = "gm4.plugins.default"
 
 [tool.pyright]
 typeCheckingMode = "strict"

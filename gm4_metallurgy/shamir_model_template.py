@@ -204,4 +204,8 @@ def beet_default(ctx: Context):
     ShamirTemplate.bound_ctx = ctx
     vanilla = ctx.inject(Vanilla)
     ShamirTemplate.vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
+    merge_policy(ctx)
+
+def merge_policy(ctx: Context):
     ctx.assets.merge_policy.extend_namespace(OptifineProperties, optifine_armor_properties_merging)
+    # a separate plugin to register the merge policy - used for the pyproject.toml custom policy workaround when using broadcast pipelines
