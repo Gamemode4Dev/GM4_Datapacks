@@ -27,7 +27,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.vecto_shamir.1",

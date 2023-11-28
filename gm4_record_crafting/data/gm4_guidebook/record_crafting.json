@@ -47,7 +47,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.record_crafting.1",
@@ -179,16 +179,6 @@
           {
             "translate": "text.gm4.guidebook.record_crafting.2",
             "fallback": "Item\u2013\u2013-----Music Disc\n\nYellow Dye\u2013\u2013------13\nGreen Dye\u2014------Cat\nOrange Dye----Blocks\nRed Dye--------Chirp\nLime Dye---------Far\nPurple Dye\u2014\u2013----Mall\nMagenta Dye---Mellohi\nBlack Dye\u2014------Stal\nWhite Dye\u2014-----Strad\nEye of Ender--- Ward\nCoal\u2014------------11\nLight Blue Dye----Wait"
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

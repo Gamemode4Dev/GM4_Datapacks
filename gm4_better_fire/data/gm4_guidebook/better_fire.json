@@ -32,21 +32,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.better_fire.1",
             "fallback": "Flame arrows set the block they land on with fire, sometimes dropping the arrowhead.\n\nFire can also cause a creeper to explode as if lit by flint and steel."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

@@ -32,7 +32,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.vertical_rails.1",
@@ -43,16 +43,6 @@
           {
             "translate": "text.gm4.guidebook.vertical_rails.2",
             "fallback": "Once a minecart reaches the top of a ladder, it will have some upward and forward velocity to continue along normal rails."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

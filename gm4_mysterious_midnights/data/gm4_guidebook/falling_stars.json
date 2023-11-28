@@ -68,21 +68,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.falling_stars.1",
             "fallback": "During a Falling Stars event, gifts will drop from the sky.\n\nDiamonds, iron nuggets, gold nuggets, endermites, end stone, and chorus fruit can be found falling from the sky."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

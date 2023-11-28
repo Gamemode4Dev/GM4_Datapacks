@@ -40,21 +40,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.shroomites.1",
             "fallback": "Mooshrooms have a rare chance to spawn a shroomite mushroom.\n\nA shroomite will spawn spores that spread mycelium to nearby blocks and convert Cows to Mooshrooms."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

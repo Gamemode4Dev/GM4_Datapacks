@@ -92,21 +92,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.tinkering_compressors.1",
             "fallback": "A block compressor can be converted into a tinkering compressor by dropping a Tinker Shamir on top of it and smooshing it using a downward facing piston."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

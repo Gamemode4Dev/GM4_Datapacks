@@ -68,21 +68,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.pig_tractors.1",
             "fallback": "Riding a pig while holding a hoe will till grass, dirt, or coarse dirt below the pig, with a chance to drop some loot."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

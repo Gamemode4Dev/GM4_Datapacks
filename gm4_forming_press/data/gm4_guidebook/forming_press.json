@@ -146,7 +146,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.forming_press.1",
@@ -157,16 +157,6 @@
           {
             "translate": "text.gm4.guidebook.forming_press.2",
             "fallback": "The overall output of the Forming Press is approximately doubled compared to normal crafting operations.\n\nThe Forming Press does not remove functionality of a normal Custom Crafter, it simply adds recipes onto the Custom Crafter."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

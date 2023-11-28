@@ -98,21 +98,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.relocators.1",
             "fallback": "Relocators can be used to move machine blocks. They can be crafted in a Custom Crafter with end game materials."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

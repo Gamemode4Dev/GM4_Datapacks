@@ -30,21 +30,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.sweethearts.1",
             "fallback": "Sneaking while holding a small flower will transfer health to a nearby player in need. All small flowers except wither roses work."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

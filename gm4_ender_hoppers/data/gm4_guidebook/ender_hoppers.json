@@ -89,11 +89,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.ender_hoppers.1",
-            "fallback": "Ender Hoppers teleport items to itself, even through walls.\n\nThey can also be combined with a minecart to create an Ender Hopper Minecart"
+            "fallback": "Ender Hoppers teleport items to itself, even through walls.\n\nThey can also be combined with a minecart to create an Ender Hopper Minecart."
           }
         ]
       ]

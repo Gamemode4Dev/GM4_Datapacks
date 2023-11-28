@@ -32,7 +32,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.better_armour_stands.1",
@@ -761,7 +761,7 @@
       "pages_locked": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.better_armour_stands.1",

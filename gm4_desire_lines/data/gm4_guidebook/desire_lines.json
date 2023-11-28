@@ -34,21 +34,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.desire_lines.1",
             "fallback": "Walking or sprinting will trample blocks beneath the player.\n\nGrass blocks will trample into dirt and dirt into coarse dirt."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

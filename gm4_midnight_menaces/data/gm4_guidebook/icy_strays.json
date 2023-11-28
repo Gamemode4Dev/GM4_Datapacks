@@ -42,21 +42,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.icy_strays.1",
             "fallback": "During an Icy Strays event, half of the skeletons will spawn as strays.\n\nThese strays will drop ice when killed with looting."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

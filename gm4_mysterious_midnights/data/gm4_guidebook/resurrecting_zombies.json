@@ -42,21 +42,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.resurrecting_zombies.1",
             "fallback": "During a Resurrecting Zombies event, rotten flesh on the floor will resurrect into unarmed zombies, with a powerful attack."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

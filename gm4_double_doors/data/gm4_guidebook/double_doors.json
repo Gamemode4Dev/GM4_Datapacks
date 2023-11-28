@@ -30,21 +30,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.double_doors.1",
             "fallback": "Placing two doors adjacent to each other will link them together, so they open together.\n\nTrapdoors placed above doors will also act as part of the door, opening when the doors open."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

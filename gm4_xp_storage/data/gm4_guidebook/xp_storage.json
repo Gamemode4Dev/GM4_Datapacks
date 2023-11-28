@@ -32,7 +32,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.xp_storage.1",
@@ -43,16 +43,6 @@
           {
             "translate": "text.gm4.guidebook.xp_storage.2",
             "fallback": "Experience orbs stored in ender chests cannot be transfered to tools with mending; it is a direct transfer."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

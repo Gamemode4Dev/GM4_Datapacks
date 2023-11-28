@@ -40,7 +40,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.poses_pack.1",
@@ -411,16 +411,6 @@
               "action": "copy_to_clipboard",
               "value": "legs down"
             }
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

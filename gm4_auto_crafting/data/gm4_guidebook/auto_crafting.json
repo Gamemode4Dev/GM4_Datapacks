@@ -72,7 +72,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.auto_crafting.1",
@@ -118,13 +118,13 @@
         [
           {
             "translate": "text.gm4.guidebook.auto_crafting.3",
-            "fallback": "The auto crafter needs a 3x3x3 multi-block structure to function.\n\nPlace the auto crafter, then a piston behind it, leaving a space for the head to extend. Then place two glass blocks on the other two sides to make a cross."
+            "fallback": "The auto crafter needs a 3x3x3 multi-block structure.\n\nPlace the auto crafter, then a piston behind it, leaving a space for the head to extend. Then place two glass blocks on the other two sides to make a cross."
           }
         ],
         [
           {
             "translate": "text.gm4.guidebook.auto_crafting.4",
-            "fallback": "The top and bottom layers must each have a barrel with four wooden stairs or planks.\n\nIf stairs are used, they must be oriented to form a sort of pill shape"
+            "fallback": "The top and bottom layers must each have a barrel with four wooden stairs or planks.\n\nIf stairs are used, they must be oriented to form a sort of pill shape."
           }
         ]
       ],

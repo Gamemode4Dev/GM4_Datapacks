@@ -42,21 +42,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.sunken_treasure.1",
             "fallback": "Mining sand or gravel deep underwater with a Fortune shovel has a chance of dropping treasure. Mining in different biomes can result in different drops."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

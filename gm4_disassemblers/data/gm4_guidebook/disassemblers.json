@@ -90,21 +90,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.disassmeblers.1",
             "fallback": "Disassmeblers can be crafted in Custom Crafters.\n\nDisassemblers can take apart metal armour, tools, and weapons and return ingots based on the item's durability."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]
@@ -146,7 +136,7 @@
         [
           {
             "translate": "text.gm4.guidebook.disassemblers.3",
-            "fallback": "Items placed inside a disassembler will be broken into its base ingots.\n\nThe return is based on the percent durability left on the item. A more damaged tool will return less materials than a nearly undamaged tool."
+            "fallback": "Items placed inside a disassembler will be broken into its base ingots.\n\nThe return is based on the percent durability left on the item."
           }
         ]
       ],

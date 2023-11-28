@@ -269,21 +269,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.tower_structures.1",
             "fallback": "Towers can be found on the surface. These towers contain rare loot and special spawners."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]
@@ -340,21 +330,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.tower_structures.1.spawner_minecarts",
             "fallback": "Towers can be found on the surface. These towers contain rare loot and special spawners.\n\nThe spawners can be moved with Spawner Minecarts."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

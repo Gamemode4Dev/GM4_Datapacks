@@ -38,7 +38,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.ink_spitting_squid.1",
@@ -49,16 +49,6 @@
           {
             "translate": "text.gm4.guidebook.ink_spitting_squid.2",
             "fallback": "When glow squids ink, they have the opposite effect from squids. Players inked with glow ink are affected by night vision and glowing."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

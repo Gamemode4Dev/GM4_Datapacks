@@ -107,7 +107,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.everstone.1",
@@ -145,7 +145,7 @@
         [
           {
             "translate": "text.gm4.guidebook.everstone.3",
-            "fallback": "Dropping an everstone on a mob will prevent it from aging.\n\nSome mobs will age into others. Zombies, Skeletons, Slimes, Strays, Piglins, Guardians, and Vindicators can convert into different mobs under specific conditions."
+            "fallback": "Dropping an everstone on a mob will prevent it from aging.\n\nZombies, Skeletons, Slimes, Strays, Piglins, Guardians, and Vindicators can evolve under specific conditions."
           }
         ]
       ]

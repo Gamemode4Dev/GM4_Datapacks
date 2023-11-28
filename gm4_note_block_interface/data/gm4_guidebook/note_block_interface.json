@@ -48,21 +48,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.note_block_interface.1",
             "fallback": "Tuning or playing a note block will show its note above it.\n\nSneaking while tuning will cause the pitch to go down instead of up."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

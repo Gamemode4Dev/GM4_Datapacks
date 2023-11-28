@@ -45,21 +45,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.zauber_liquids.1",
             "fallback": "Zauber Potions can be stored in liquid tanks. Soulutions can be taken out by placing soul fire under the liquid tank.\nMobs under a zauber potion tank will gain the specific potion effect."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

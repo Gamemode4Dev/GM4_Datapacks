@@ -53,21 +53,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.end_fishing.1",
             "fallback": "Casting a fishing rod into the end void will allow players to fish up loot from the void. Loot is biome dependent."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

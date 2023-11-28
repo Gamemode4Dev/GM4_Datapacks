@@ -67,21 +67,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.spawner_minecarts.1",
             "fallback": "Spawners can be picked up with Minecarts.\nTo capture a spawner, place a minecart under it, with a downwards piston above the spawner, and a redstone block above the piston."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

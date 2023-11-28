@@ -44,7 +44,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.apple_trees.1",
@@ -65,7 +65,7 @@
         [
           {
             "translate": "text.gm4.guidebook.apple_trees.2",
-            "fallback": "Apple trees are found naturally occurring in forest biomes.\n\nWandering traders will also sell apple tree saplings.\n\nWhen planted, these saplings produce apple trees with several apple bearing leaves."
+            "fallback": "Apple trees are found naturally occurring in forest biomes.\n\nWandering traders will also sell apple tree saplings.\n\nWhen planted, these saplings grow into apple trees."
           }
         ]
       ]

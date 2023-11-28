@@ -42,21 +42,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.illusioner_nights.1",
             "fallback": "During an Illusioner Nights event, illusioners will spawn.\n\nThese illusioners will drop golden carrots, and some potions when killed."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

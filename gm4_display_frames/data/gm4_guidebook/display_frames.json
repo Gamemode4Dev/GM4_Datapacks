@@ -35,21 +35,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.display_frames.1",
             "fallback": "Splashing item frames and glow item frames with invisibility causes them to become display frames.\n\nDisplay frames become invisible when holding with an item."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

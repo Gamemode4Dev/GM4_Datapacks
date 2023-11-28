@@ -32,21 +32,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.chairs.1",
             "fallback": "Chairs can be created by throwing a saddle onto a stair block.\n\nBreaking the stair or hitting the saddle relieves the stair of the saddle."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

@@ -80,21 +80,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.harvest_moons.1",
             "fallback": "During a Harvest Moons event, random tick events, such as crop growth, will be 20 times quicker than normal."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

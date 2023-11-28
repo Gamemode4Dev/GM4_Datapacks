@@ -47,21 +47,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.liquid_minecarts.1",
             "fallback": "The liquid tank recipe can be put in a hopper minecart to create a transporting liquid minecart. Driving a liquid minecart over an activator rail will discard any liquid."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

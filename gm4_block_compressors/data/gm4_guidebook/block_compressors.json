@@ -113,21 +113,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.block_compressors.1",
             "fallback": "Block Compressors can be used to cut down on bulk storage. Item stacks can be compressed into a single item, and vice versa."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

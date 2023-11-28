@@ -54,21 +54,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.phantom_scarecrows.1",
             "fallback": "Placing a skull or zombie head on an armour stand and equipping it with a cursed chestplate will transform it into a phantom scarecrow."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

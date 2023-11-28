@@ -42,21 +42,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.enlarging_phantoms.1",
             "fallback": "During an Enlarging Phantoms event, larger phantoms will spawn in the sky, regardless of insomniacs.\nLarger phantoms have more health and greater attack strength."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

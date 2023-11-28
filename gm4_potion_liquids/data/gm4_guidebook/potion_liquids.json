@@ -47,7 +47,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.potion_liquids.1",
@@ -58,16 +58,6 @@
           {
             "translate": "text.gm4.guidebook.potion_liquids.2",
             "fallback": "Mobs under a potion tank will gain the specific potion effect.\n\nShulkers on an tank will fill it with Levitation potion liquid.\n\nWitches on an empty tank will fill it with Regeneration, Fire Resistance, Speed, or Instant Damage potion liquid."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

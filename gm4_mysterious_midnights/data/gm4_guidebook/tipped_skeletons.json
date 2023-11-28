@@ -42,21 +42,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.tipped_skeletons.1",
             "fallback": "During a Tipped Skeletons event, skeletons will be equipped with tipped arrows.\nExtended slowness, extended weakness, extended poison, and strong harming tipped arrows are used."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

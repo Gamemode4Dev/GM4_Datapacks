@@ -35,7 +35,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.enderman_support_class.1",
@@ -56,7 +56,13 @@
         [
           {
             "translate": "text.gm4.guidebook.enderman_support_class.2",
-            "fallback": "- Creepers get Regeneration II\n- Cave Spiders get Jump Boost II\n- Silverfish get Resistance II\n- Spiders get Jump Boost I\n-Zombies get Speed II\n-Skeletons give Weakness II\n- Shulkers give Blindness"
+            "fallback": "- Creepers get Regeneration II\n- Cave Spiders get Jump Boost II\n- Silverfish get Resistance II"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.enderman_support_class.3",
+            "fallback": "- Spiders get Jump Boost I\n-Zombies get Speed II\n-Skeletons give Weakness II\n- Shulkers give Blindness"
           }
         ]
       ]

@@ -41,7 +41,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.standard_liquids.1",
@@ -70,16 +70,6 @@
           {
             "translate": "text.gm4.guidebook.standard_liquids.5",
             "fallback": "Experience Tanks\n- Drains bottles o' enchanting, enchanted books\n- Fills bottles\n- Absorbs experience orbs, player experience points\n- Fills player experience points"
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

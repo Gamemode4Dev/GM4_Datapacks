@@ -24,21 +24,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.live_catch.1",
             "fallback": "When fishing, if the player reels in a fish, instead of an item, an actual fish will be launched towards the player.\nThe fish that spawn have 1 health (half a heart), so they will easily die."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

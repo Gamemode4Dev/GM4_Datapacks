@@ -31,21 +31,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.washing_tanks.1",
             "fallback": "Water tanks can wash dyed items.\n\nTerracotta, beds, wool, carpet, glass, glass panes, leather armour, and shulker boxes can be undyed."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

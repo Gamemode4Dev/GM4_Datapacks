@@ -121,21 +121,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.smelteries.1",
             "fallback": "Custom Crafters can be upgraded into Smelteries to refine some furnace recipes.\n\nMetal ores, sand, and chorus fruit can be doubled with Smelteries."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

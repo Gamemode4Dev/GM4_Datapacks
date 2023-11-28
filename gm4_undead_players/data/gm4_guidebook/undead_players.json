@@ -39,21 +39,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.undead_players.1",
             "fallback": "Dying will cause an undead version of the player to spawn at the death site. This zombie will pick up armor and weapons.\n\nUndead Players have a visible name and never despawn."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

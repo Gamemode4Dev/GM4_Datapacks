@@ -47,21 +47,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.ziprails.1",
             "fallback": "Tripwires act as ziprails for minecarts. A rail must be directly under an active tripwire hook to connect."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

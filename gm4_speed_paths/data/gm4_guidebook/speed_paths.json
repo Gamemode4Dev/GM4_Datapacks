@@ -40,21 +40,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.speed_paths.1",
             "fallback": "Dirt paths increase movement speed by 20%. This will stack with other speed effects such as from a beacon."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

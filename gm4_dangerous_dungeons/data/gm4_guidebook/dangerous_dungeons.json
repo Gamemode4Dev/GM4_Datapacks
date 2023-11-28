@@ -212,21 +212,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.dangerous_dungeons.1",
             "fallback": "Extra dungeons can be found in cave systems. These dungeons contain rare loot and special spawners."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]
@@ -274,21 +264,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.dangerous_dungeons.1.spawner_minecarts",
             "fallback": "Extra dungeons can be found in cave systems. These dungeons contain rare loot and special spawners.\n\nThe spawners can be moved with Spawner Minecarts."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

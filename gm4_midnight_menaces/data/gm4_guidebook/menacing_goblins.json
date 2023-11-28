@@ -42,7 +42,7 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.menacing_goblins.1",
@@ -53,16 +53,6 @@
           {
             "translate": "text.gm4.guidebook.menacing_goblins.2",
             "fallback": "Goblins wear a pumpkin with Thorns III.\n\nGoblins will steal diamonds, iron ingots, and gold ingots from nearby players.\n\nWhen killed, they will drop most of the items they stole, along with some rotten flesh, iron nuggets, and golden nuggets."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]

@@ -51,21 +51,11 @@
       "pages": [
         [
           {
-            "insert": "header"
+            "insert": "title"
           },
           {
             "translate": "text.gm4.guidebook.holographic_tags.1",
             "fallback": "Putting a renamed name tag in an item frame will create floating textbox. To remove the hologram, place an item frame in the original position."
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "header"
-          },
-          {
-            "insert": "locked_text"
           }
         ]
       ]
