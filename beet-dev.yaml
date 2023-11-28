@@ -13,6 +13,10 @@ pipeline:
       - beet.contrib.optifine
     pipeline:
       - gm4.plugins.write_mcmeta
+    meta:
+      gm4_dev: True
+  - extend: beet.yaml
+    directory: gm4_resource_pack
   - gm4.plugins.output.resource_pack
   - gm4.plugins.resource_pack.dump_registry
   - gm4.plugins.finished
