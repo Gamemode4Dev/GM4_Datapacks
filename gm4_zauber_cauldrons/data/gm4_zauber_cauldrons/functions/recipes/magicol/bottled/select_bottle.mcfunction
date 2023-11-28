@@ -15,7 +15,7 @@ for bottle_data in ctx.meta['potion_bottles']:
     execute unless score $recipe_success gm4_zc_data matches 1.. if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:bottle_data['item_id']}}}] run function f"gm4_zauber_cauldrons:recipes/magicol/bottled/{bottle_data['bottle']}/select_color"
 
 # use water or powder snow and play sound once a recipe ran
-execute if score $recipe_success gm4_zc_data matches 1 run function gm4_zauber_cauldrons:recipes/magicol/bottled/use_cauldron
+execute if score $current gm4_zc_moon_phase = $preferred gm4_zc_moon_phase if score $recipe_success gm4_zc_data matches 1 run function gm4_zauber_cauldrons:recipes/magicol/bottled/use_cauldron
 
 # reset fake players
 scoreboard players reset $expected_item_amount gm4_zc_fullness

@@ -1,6 +1,6 @@
 # @s = zauber cauldron with overflow items and bottle(s) inside
+# at align xyz
 # run from prepare_bottle
-# at allign xyz
 
 # animation
 particle minecraft:block glass ~ ~.3 ~ 0.12 0.12 0.12 0 23
