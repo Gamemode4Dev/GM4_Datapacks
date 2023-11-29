@@ -20,7 +20,7 @@ pass_project = click.make_pass_decorator(Project) # type: ignore
 @click.option("-l", "--link", metavar="WORLD", help="Link the project before watching.")
 @click.option("-c", "--clean", is_flag=True, help="Clean the output folder.")
 @click.option("--log", default="INFO", type=str, help="Set the logger level")
-def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, reload: bool, link: str | None, clean: bool, log: int | str):
+def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: bool, reload: bool, link: str | None, clean: bool, log: int | str):
 	"""Build or watch modules for development."""
 
 	modules = tuple(m if m.startswith("gm4_") else f"gm4_{m}" for m in modules)
@@ -65,7 +65,7 @@ def clean():
 @click.argument("modules", nargs=-1)
 @click.option("-w", "--watch", is_flag=True, help="Watch the project directory and build on file changes.")
 @click.option("-c", "--clean", is_flag=True, help="Clean the output folder.")
-def readme_gen(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, clean: bool):
+def readme_gen(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: bool, clean: bool):
 	"""Generates all README files for manual uplaoad"""
 	
 	modules = tuple(m if m.startswith("gm4_") else f"gm4_{m}" for m in modules)
@@ -79,25 +79,52 @@ def readme_gen(ctx: click.Context, project: Project, modules: tuple[str], watch:
 	
 	click.echo(f"[GM4] Generating READMEs for: {', '.join(modules)}")
 
-	project.config_path = "beet-dev.yaml"
-	config = {
-		"broadcast": modules,
-		"extend": "beet.yaml",
-		"meta": {"readme-gen": True},
-		"require":[
-			"gm4.plugins.player_heads",
-		],
-		"pipeline": [
+	# we want to only read in the metadata from each project fo make a readme, not run the whole build pipeline
+		# so we have to manually expand the broadcast instead of relying on beet's broadcast option.
+	subprojects: list[dict[str,Any]] = []
+	for module in modules:
+		module_config = yaml.safe_load(Path(f"{module}/beet.yaml").read_text())
+		for key in ["data_pack", "resource_pack", "pipeline", "require"]: # remove pack resources
+			module_config.pop(key, None)
+		module_config["pipeline"] = [
 			"gm4.plugins.manifest.write_credits",
 			"gm4.plugins.readme_generator",
 			"gm4.plugins.output.readmes"
 		]
+		subprojects.append(module_config)
+
+	config = {
+		"pipeline": [
+			*subprojects,
+			"gm4.plugins.finished"
+		],
+		"meta": {
+			"autosave": {
+				"link": False
+			}
+		}
 	}
 
-	project.config_overrides = [
-		f"pipeline[] = gm4.plugins.manifest.create",
-		f"pipeline[] = {json.dumps(config)}",
-		f"pipeline[] = gm4.plugins.finished",
-	]
+	project.resolved_config = ProjectConfig(**config).resolve(Path("beet-readme.yaml").parent.absolute()) # type: ignore ; config is properly formatted
+
+	# config = {
+	# 	"broadcast": modules,
+	# 	"extend": "beet.yaml",
+	# 	"meta": {"readme-gen": True},
+	# 	"require":[
+	# 		"gm4.plugins.player_heads",
+	# 	],
+	# 	"pipeline": [
+	# 		"gm4.plugins.manifest.write_credits",
+	# 		"gm4.plugins.readme_generator",
+	# 		"gm4.plugins.output.readmes"
+	# 	]
+	# }
+
+	# project.config_overrides = [
+	# 	f"pipeline[] = gm4.plugins.manifest.create",
+	# 	f"pipeline[] = {json.dumps(config)}",
+	# 	f"pipeline[] = gm4.plugins.finished",
+	# ]
 
 	ctx.invoke(commands.watch if watch else commands.build)
