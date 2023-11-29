@@ -1,6 +1,6 @@
 # spawn marker to get player position and rotation
 # @s = marker
-# at unspecified
+# at @s
 # run from evaluate/position
 
 tp @s @p[tag=gm4_bookshelf_inspector_target]
