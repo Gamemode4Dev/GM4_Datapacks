@@ -84,7 +84,7 @@
             "translate": "text.gm4.guidebook.boots_of_ostara.2",
             "fallback": "The recipe for the Boots of Ostara is as follows:"
           },
-          "\n\n",
+          "\n",
           {
             "insert": "recipe",
             "recipe": "gm4_boots_of_ostara:boots_of_ostara"
@@ -114,7 +114,7 @@
             "insert": "recipe",
             "recipe": "gm4_boots_of_ostara:boots_of_ostara"
           },
-          "\n\n",
+          "\n",
           {
             "translate": "text.gm4.guidebook.boots_of_ostara.2-desire_lines",
             "fallback": "Boots of Ostara also prevent desire lines from forming."

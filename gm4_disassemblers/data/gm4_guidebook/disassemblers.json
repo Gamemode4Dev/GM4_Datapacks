@@ -111,9 +111,9 @@
         [
           {
             "translate": "text.gm4.guidebook.disassemblers.2",
-            "fallback": "To create a Disassembler, the following recipe must be arranged in a Custom Crafter:"
+            "fallback": "A Disassembler can be crafted in a Custom Crafter:"
           },
-          "\n\n",
+          "\n",
           {
             "insert": "recipe",
             "recipe": "gm4_disassemblers:disassembler"

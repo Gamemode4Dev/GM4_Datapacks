@@ -64,12 +64,12 @@
             "translate": "text.gm4.guidebook.heart_canisters.2",
             "fallback": "The recipes for heart canister are as follows:"
           },
-          "\n\n",
+          "\n",
           {
             "insert": "recipe",
             "recipe": "gm4_heart_canisters:tier_1_heart_canister"
           },
-          "\n\n",
+          "\n",
           {
             "insert": "recipe",
             "recipe": "gm4_heart_canisters:tier_2_heart_canister"

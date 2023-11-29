@@ -73,19 +73,15 @@
         [
           {
             "translate": "text.gm4.guidebook.trapped_signs.2",
-            "fallback": "The recipes for trapped signs can use any sign type:"
-          },
-          "\n\n  ",
-          {
-            "translate": "container.gm4.custom_crafter",
-            "fallback": "Custom Crafter"
+            "fallback": "The recipe for trapped signs can use any sign type:"
           },
           "\n",
           {
             "insert": "recipe",
             "recipe": "gm4_trapped_signs:trapped_oak_sign"
-          },
-          "\n\n",
+          }
+        ],
+        [
           {
             "insert": "recipe",
             "recipe": "gm4_trapped_signs:secret_trapped_oak_sign"

@@ -135,9 +135,9 @@
         [
           {
             "translate": "text.gm4.guidebook.block_compressors.2",
-            "fallback": "To create a Block Compressor, the following recipe must be arranged in a Custom Crafter:"
+            "fallback": "A Block Compressor can be crafted in a Custom Crafter:"
           },
-          "\n\n",
+          "\n",
           {
             "insert": "recipe",
             "recipe": "gm4_block_compressors:block_compressor"

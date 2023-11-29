@@ -116,9 +116,9 @@
         [
           {
             "translate": "text.gm4.guidebook.ender_hoppers.2",
-            "fallback": "To create an Ender Hopper, arrange the following recipe in a Custom Crafter:"
+            "fallback": "Ender Hoppers can be crafted in a Custom Crafter:"
           },
-          "\n\n",
+          "\n",
           {
             "insert": "recipe",
             "recipe": "gm4_ender_hoppers:ender_hopper"

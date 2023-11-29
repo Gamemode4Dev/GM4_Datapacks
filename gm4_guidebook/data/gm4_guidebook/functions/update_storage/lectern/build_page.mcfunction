@@ -6,7 +6,7 @@ import json
 # run from self
 
 # build module lines
-data merge storage gm4_guidebook:temp {page:[]}
+data merge storage gm4_guidebook:temp {page:['["",{"translate":"gui.gm4.guidebook.page.toc","fallback":"","color":"white","font":"gm4:guidebook"}]']}
 function gm4_guidebook:update_storage/lectern/build_line
 
 # add table of contents page

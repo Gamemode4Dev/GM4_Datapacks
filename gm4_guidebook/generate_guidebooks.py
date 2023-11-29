@@ -334,7 +334,13 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
         }
       }
     },
-    "\n"
+    "\n",
+    {
+      "translate": "gui.gm4.guidebook.page",
+      "fallback": "",
+      "color": "white",
+      "font": "gm4:guidebook"
+    }
   ]
   return header
 
@@ -623,7 +629,13 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
         }
       }
     },
-    "\n"
+    "\n",
+    {
+      "translate": "gui.gm4.guidebook.page",
+      "fallback": "",
+      "color": "white",
+      "font": "gm4:guidebook"
+    }
   ]
   return header
 
@@ -692,7 +704,7 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> tuple[dict[Any, An
 
   # create slot
   slot: dict[Any, Any] = {
-    "translate": "gm4.guidebook_gui",
+    "translate": "gm4.second",
     "fallback": "%1$s",
     "with": [
       {
@@ -714,7 +726,7 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> tuple[dict[Any, An
     }
   }
   slot_under: dict[Any, Any] = {
-    "translate": "gm4.guidebook_gui",
+    "translate": "gm4.second",
     "fallback": "%1$s",
     "with": [
       {
@@ -758,7 +770,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
   if "id" in ingredient and ingredient["id"] == "empty":
     # show empty slot ()
     slot = {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -773,7 +785,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
       ]
     }
     slot_under = {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -799,7 +811,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
         item = ingredient["id"]
       color = get_item_color(item, vanilla)
       slot: dict[Any, Any] = {
-        "translate": "gm4.guidebook_gui",
+        "translate": "gm4.second",
         "fallback": "%1$s",
         "with": [
           {
@@ -821,7 +833,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
         }
       }
       slot_under: dict[Any, Any] = {
-        "translate": "gm4.guidebook_gui",
+        "translate": "gm4.second",
         "fallback": "%1$s",
         "with": [
           {
@@ -927,16 +939,16 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
     # shapeless
     elif r["input"]["type"] == "shapeless":
       shapeless = {
-        "translate": "gm4.guidebook_gui",
+        "translate": "gm4.second",
         "fallback": "%1$s",
         "with": [
           {
-            "text": "🔀",
+            "text": " 🔀 ",
             "color": "dark_gray"
           },
           {
             "translate": "gui.gm4.guidebook.crafting.display.shapeless",
-            "fallback": "🔀",
+            "fallback": " 🔀 ",
             "color": "white",
             "font": "gm4:guidebook"
           }
@@ -1040,14 +1052,14 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
       res_count = ""
       if "count" in res and res["count"] > 1:
         res_count = {
-          "translate": f"text.gm4.guidebook.crafting.display.count.{res['count']}",
+          "translate": f"gui.gm4.guidebook.crafting.display.count.{res['count']}",
           "fallback": ""
         }
         numbers = ["☐","☒","②","③","④","⑤","⑥","⑦","⑧","⑨"]
         result["with"][0]["text"] = numbers[res["count"]]
 
       arrow = {
-        "translate": "gm4.guidebook_gui",
+        "translate": "gm4.second",
         "fallback": "%1$s",
         "with": [
           {
@@ -1062,7 +1074,7 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
         ]
       }
       arrow_under = {
-        "translate": "gm4.guidebook_gui",
+        "translate": "gm4.second",
         "fallback": "%1$s",
         "with": [
           {
@@ -1077,8 +1089,19 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
           }
         ]
       }
-      margin = " " * 2
+
+      crafting = {
+        "translate": "gui.gm4.guidebook.crafting.display.grid",
+        "fallback": "",
+        "color": "white",
+        "font": "gm4:guidebook"
+      }
+
+      margin = " " * 3
       display: list[dict[Any, Any]|str] = [
+        "",
+        crafting,
+        "\n",
         margin,
         d_ingredients[0],
         d_ingredients[1],

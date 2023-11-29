@@ -98,7 +98,7 @@
             "translate": "text.gm4.guidebook.auto_crafting.2",
             "fallback": "Auto crafters can be crafted in a custom crafter with the following recipe:"
           },
-          "\n\n",
+          "\n",
           {
             "insert": "recipe",
             "recipe": "gm4_auto_crafting:auto_crafter"

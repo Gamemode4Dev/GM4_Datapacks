@@ -7,7 +7,7 @@ import json
 
 # build lines
 scoreboard players set $line_count gm4_guide 2
-data merge storage gm4_guidebook:temp {page:[],lectern_page:[]}
+data merge storage gm4_guidebook:temp {page:['["",{"translate":"gui.gm4.guidebook.page.toc","fallback":"","color":"white","font":"gm4:guidebook"}]'],lectern_page:[]}
 function gm4_guidebook:update_storage/build_line
 
 # add table of contents page

@@ -102,9 +102,9 @@
         [
           {
             "translate": "text.gm4.guidebook.enchantment_extractors.2",
-            "fallback": "To create a Enchantment Extractor, the following recipe must be arranged in a Custom Crafter:"
+            "fallback": "An Enchantment Extractor can be crafted in a Custom Crafter:"
           },
-          "\n\n",
+          "\n",
           {
             "insert": "recipe",
             "recipe": "gm4_enchantment_extractors:enchantment_extractor"
