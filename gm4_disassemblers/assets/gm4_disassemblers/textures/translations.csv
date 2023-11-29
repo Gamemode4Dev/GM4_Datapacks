@@ -1,0 +1,5 @@
+key,en_us
+block.gm4.disassembler,Disassembler
+container.gm4.disassembler,"Disassembler",
+advancement.gm4.disassemblers.title,"Clever Decrafting",
+advancement.gm4.disassemblers.description,"Craft a Disassembler",

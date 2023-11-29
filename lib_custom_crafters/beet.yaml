@@ -13,6 +13,8 @@ resource_pack:
 require:
   - gm4.plugins.resource_pack
   - gm4.plugins.player_heads
+  - beet.contrib.model_merging
+  - beet.contrib.babelbox
 
 pipeline:
   - lib_custom_crafters.generate_item_tags
@@ -84,5 +86,8 @@ meta:
     layout: preserve
     nbt_compact: True
     cmd_compact: True
+  babelbox:
+      load: assets/translations.csv
+      namespace: gm4_translations
   smithed:
     pack_id: gm4_lib_custom_crafters

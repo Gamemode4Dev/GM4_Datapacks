@@ -1,0 +1,7 @@
+key,en_us
+item.gm4.tnt_landmine,"Landmine"
+item.gm4.tnt_landmine.upgrade,"Soft Defuser"
+item.gm4.tnt_landmine.disguised,"Disguised as "
+item.gm4.tnt_landmine.use,"Drop to use"
+advancement.gm4.tnt_landmines.title,"Bomb Defused",
+advancement.gm4.tnt_landmines.description,"Disarm a landmine",

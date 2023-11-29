@@ -1,0 +1,9 @@
+key,en_us
+item.gm4.heart_canister,"Heart Canister"
+item.gm4.heart_canister.lore.tier,"Tier %s"
+advancement.gm4.heart_canisters.max.title,"All My Loving",
+advancement.gm4.heart_canisters.max.description,"Max out your Heart Canister health",
+advancement.gm4.heart_canisters.tier_1.title,"Can't Buy Me Love",
+advancement.gm4.heart_canisters.tier_1.description,"Craft a tier 1 Heart Canister",
+advancement.gm4.heart_canisters.tier_2.title,"Love Is All You Need",
+advancement.gm4.heart_canisters.tier_2.description,"Craft a tier 2 Heart Canister",

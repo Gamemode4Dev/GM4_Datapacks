@@ -1,0 +1,5 @@
+key,en_us
+block.gm4.custom_crafter,Custom Crafter
+container.gm4.custom_crafter,"Custom Crafter",
+advancement.gm4.custom_crafters.title,"Clever Crafting",
+advancement.gm4.custom_crafters.description,"Construct a Custom Crafter from a Dropper",

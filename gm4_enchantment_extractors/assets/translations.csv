@@ -1,0 +1,9 @@
+key,en_us
+block.gm4.enchantment_extractor,"Enchantment Extractor"
+container.gm4.enchantment_extractor,"Enchantment Extractor",
+entity.gm4.congealed_enchantment,"Congealed Enchantment\u00A7",
+entity.gm4.living_enchantment,"Living Enchantment\u00A7",
+advancement.gm4.enchantment_extractors.title,"Clever Enchanting",
+advancement.gm4.enchantment_extractors.description,"Construct an Enchantment Extractor",
+advancement.gm4.enchantment_extractors.mending.title,"Magical Thief",
+advancement.gm4.enchantment_extractors.mending.description,"Successfully extract the mending enchantment from a tool with an Enchantment Extractor",

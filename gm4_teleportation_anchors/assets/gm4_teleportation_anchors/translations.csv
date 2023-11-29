@@ -1,0 +1,8 @@
+key,en_us
+block.gm4.teleportation_jammer,"Teleportation Jammer",
+container.gm4.teleportation_jammer,"Teleportation Jammer",
+container.gm4.tinkering_compressor,"Tinker Amount",
+advancement.gm4.teleportation_anchors_anchor.title,Pinpoint Location",
+advancement.gm4.teleportation_anchors_anchor.description,Make a teleportation anchor to remove the randomness of chorus",
+advancement.gm4.teleportation_anchors_jammer.title,Make Some Noise",
+advancement.gm4.teleportation_anchors_jammer.description,Create a device to stop chorus in its tracks",

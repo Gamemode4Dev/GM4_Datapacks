@@ -1,0 +1,6 @@
+key,en_us
+text.gm4.block_compressors.compressed,Compressed *%s
+block.gm4.block_compressor,"Compressor",
+container.gm4.block_compressor,"Compression Amount",
+advancement.gm4.block_compressors.title,"Clever Crushing",
+advancement.gm4.block_compressors.description,"Make yourself a Block Compressor",

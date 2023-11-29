@@ -13,6 +13,7 @@ resource_pack:
     assets/minecraft/atlases: assets/minecraft/atlases
 
 pipeline:
+  - beet.contrib.babelbox
   - gm4.plugins.versioning.base
 
 meta:
@@ -21,3 +22,6 @@ meta:
       extra_version_injections:
         advancements:
           - 'gm4:intro_song/play_song'
+  babelbox:
+    load: assets/translations.csv
+    namespace: gm4_translations
