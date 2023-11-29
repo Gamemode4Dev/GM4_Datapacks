@@ -11,10 +11,19 @@ pipeline:
       - gm4.plugins.resource_pack
       - beet.contrib.model_merging
       - beet.contrib.optifine
+      - beet.contrib.babelbox
     pipeline:
       - gm4.plugins.write_mcmeta
     meta:
       gm4_dev: True
+      mecha:
+        formatting:
+          layout: preserve
+          nbt_compact: True
+          cmd_compact: True
+      babelbox:
+        load: assets/translations.csv
+        namespace: gm4_translations
   - extend: beet.yaml
     directory: gm4_resource_pack
   - gm4.plugins.resource_pack.link_resource_pack
@@ -25,8 +34,3 @@ pipeline:
 meta:
   autosave:
     link: false
-  mecha:
-    formatting:
-      layout: preserve
-      nbt_compact: True
-      cmd_compact: True

@@ -319,6 +319,8 @@ def build(ctx: Context):
     if not ctx.assets.extra.get("pack.png") and ctx.data.extra.get("pack.png"):
         ctx.assets.icon = ctx.data.icon
 
+    logging.getLogger("beet.contrib.babelbox").addFilter(BlockIncompleteTranslation())
+
 def mount_registry(ctx: Context):
     ctx.cache["modeldata_registry"].json = JsonFile(source_path="gm4/modeldata_registry.json").data
 
@@ -535,7 +537,7 @@ class GM4ResourcePack(MutatingReducer):
 
     def lint_model_textures(self):
         """Checks model files to ensure referenced textures exist"""
-        for name, model in self.ctx.assets.models.items():
+        for name, model in list(self.ctx.assets.models.items()):
             for tex in model.data.get("textures", {}).values():
                 if not tex.startswith("minecraft:") and tex not in self.ctx.assets.textures:
                     self.logger.warning(f"Missing texture '{tex}' in {name}")
@@ -554,6 +556,11 @@ class GM4ResourcePack(MutatingReducer):
                 "providers": providers
             }))
             
+class BlockIncompleteTranslation(logging.Filter):
+    """logger filter to hide missing translations for anything but default english"""
+    def filter(self, record: logging.LogRecord):
+        locale: str = record.args[0] # type: ignore ; babelbox only issues one logger event, this will be a string
+        return locale == 'en_us'
     
 #== Default Templates and Transforms ==#
 def ensure_single_model_config(template_name: str, config: ModelData) -> str:
