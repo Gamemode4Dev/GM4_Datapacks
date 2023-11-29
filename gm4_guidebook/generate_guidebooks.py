@@ -704,7 +704,7 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> tuple[dict[Any, An
 
   # create slot
   slot: dict[Any, Any] = {
-    "translate": "gm4.second",
+    "translate": "gm4.guidebook_gui",
     "fallback": "%1$s",
     "with": [
       {
@@ -726,7 +726,7 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> tuple[dict[Any, An
     }
   }
   slot_under: dict[Any, Any] = {
-    "translate": "gm4.second",
+    "translate": "gm4.guidebook_gui",
     "fallback": "%1$s",
     "with": [
       {
@@ -770,7 +770,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
   if "id" in ingredient and ingredient["id"] == "empty":
     # show empty slot ()
     slot = {
-      "translate": "gm4.second",
+      "translate": "gm4.guidebook_gui",
       "fallback": "%1$s",
       "with": [
         {
@@ -785,7 +785,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
       ]
     }
     slot_under = {
-      "translate": "gm4.second",
+      "translate": "gm4.guidebook_gui",
       "fallback": "%1$s",
       "with": [
         {
@@ -811,7 +811,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
         item = ingredient["id"]
       color = get_item_color(item, vanilla)
       slot: dict[Any, Any] = {
-        "translate": "gm4.second",
+        "translate": "gm4.guidebook_gui",
         "fallback": "%1$s",
         "with": [
           {
@@ -833,7 +833,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
         }
       }
       slot_under: dict[Any, Any] = {
-        "translate": "gm4.second",
+        "translate": "gm4.guidebook_gui",
         "fallback": "%1$s",
         "with": [
           {
@@ -939,7 +939,7 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
     # shapeless
     elif r["input"]["type"] == "shapeless":
       shapeless = {
-        "translate": "gm4.second",
+        "translate": "gm4.guidebook_gui",
         "fallback": "%1$s",
         "with": [
           {
@@ -1059,7 +1059,7 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
         result["with"][0]["text"] = numbers[res["count"]]
 
       arrow = {
-        "translate": "gm4.second",
+        "translate": "gm4.guidebook_gui",
         "fallback": "%1$s",
         "with": [
           {
@@ -1074,7 +1074,7 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
         ]
       }
       arrow_under = {
-        "translate": "gm4.second",
+        "translate": "gm4.guidebook_gui",
         "fallback": "%1$s",
         "with": [
           {
