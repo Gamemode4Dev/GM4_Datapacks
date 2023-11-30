@@ -1481,7 +1481,7 @@ def populate_insert(element: dict[Any, Any], book: Book, vanilla: Vanilla, lecte
         }
     # (default) locked text
     elif element["insert"] == "locked_text":
-      locked_text = {'text':'???','hoverEvent':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}
+      locked_text = ["\n",{'translate':'gm4.second','fallback':'%1$s',"with":[{'text':'\n\n\n\n           ???           '},{'translate': 'gui.gm4.guidebook.locked_page', 'fallback': '\n\n\n\n           ???           ','color': 'white','font':'gm4:guidebook'}],'hoverEvent':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}]
       return locked_text
     # recipes
     elif element["insert"] == "recipe":
