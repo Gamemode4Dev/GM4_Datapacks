@@ -1483,6 +1483,10 @@ def populate_insert(element: dict[Any, Any], book: Book, vanilla: Vanilla, lecte
     elif element["insert"] == "locked_text":
       locked_text = ["\n",{'translate':'gm4.second','fallback':'%1$s',"with":[{'text':'\n\n\n\n           ???           '},{'translate': 'gui.gm4.guidebook.locked_page', 'fallback': '\n\n\n\n           ???           ','color': 'white','font':'gm4:guidebook'}],'hoverEvent':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}]
       return locked_text
+    # title page locked text
+    elif element["insert"] == "locked_text_title":
+      locked_text = ["",{'translate':'gm4.second','fallback':'%1$s',"with":[{'text':'\n\n\n\n           ???           '},{'translate': 'gui.gm4.guidebook.locked_page', 'fallback': '\n\n\n\n           ???           ','color': 'white','font':'gm4:guidebook'}],'hoverEvent':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}]
+      return locked_text
     # recipes
     elif element["insert"] == "recipe":
       return generate_recipe_display(element["recipe"], vanilla)
@@ -1747,7 +1751,7 @@ def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], 
   locked_pages: list[str] = []
 
   # setup locked storage  
-  locked_title: list[dict[Any, Any]|str] = [{'insert':'title'},{'insert':'locked_text'}]
+  locked_title: list[dict[Any, Any]|str] = [{'insert':'title'},{'insert':'locked_text_title'}]
   locked_text: list[dict[Any, Any]|str] = [{'insert':'locked_text'}]
   locked_pages.append(stringify_page(locked_text, book_dict, vanilla, False))
   locked_pages.append(stringify_page(locked_text, book_dict, vanilla, True))
