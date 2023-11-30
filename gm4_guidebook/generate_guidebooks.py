@@ -62,7 +62,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
   header: list[dict[Any, Any]|str] = [
     "",
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -78,7 +78,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide set 1"
+        "value": "/trigger gm4_guide set 1"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -89,7 +89,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       }
     },
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -117,7 +117,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
     },
     " " * 8,
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -145,7 +145,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       }
     },
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -171,7 +171,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       }
     },
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -198,7 +198,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
     },
     "\n",
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -214,7 +214,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide set 1"
+        "value": "/trigger gm4_guide set 1"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -225,7 +225,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       }
     },
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -253,7 +253,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
     },
     " " * 8,
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -281,7 +281,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       }
     },
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -308,7 +308,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       }
     },
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -357,7 +357,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
   header: list[dict[Any, Any]|str] = [
     "",
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -373,7 +373,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "change_page",
-        "value": f"2"
+        "value": "2"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -384,7 +384,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       }
     },
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -412,7 +412,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
     },
     " " * 8,
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -429,7 +429,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "change_page",
-        "value": f"3"
+        "value": "3"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -440,7 +440,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       }
     },
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -455,7 +455,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "change_page",
-        "value": f"4"
+        "value": "4"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -466,7 +466,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       }
     },
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -481,7 +481,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "change_page",
-        "value": f"1"
+        "value": "1"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -493,7 +493,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
     },
     "\n",
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -509,7 +509,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "change_page",
-        "value": f"2"
+        "value": "2"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -520,7 +520,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       }
     },
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -548,7 +548,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
     },
     " " * 8,
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -565,7 +565,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "change_page",
-        "value": f"3"
+        "value": "3"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -576,7 +576,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       }
     },
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -592,7 +592,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "change_page",
-        "value": f"4"
+        "value": "4"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -603,7 +603,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       }
     },
     {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -619,7 +619,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "change_page",
-        "value": f"1"
+        "value": "1"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -704,7 +704,7 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> tuple[dict[Any, An
 
   # create slot
   slot: dict[Any, Any] = {
-    "translate": "gm4.guidebook_gui",
+    "translate": "gm4.second",
     "fallback": "%1$s",
     "with": [
       {
@@ -726,7 +726,7 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> tuple[dict[Any, An
     }
   }
   slot_under: dict[Any, Any] = {
-    "translate": "gm4.guidebook_gui",
+    "translate": "gm4.second",
     "fallback": "%1$s",
     "with": [
       {
@@ -770,7 +770,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
   if "id" in ingredient and ingredient["id"] == "empty":
     # show empty slot ()
     slot = {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -785,7 +785,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
       ]
     }
     slot_under = {
-      "translate": "gm4.guidebook_gui",
+      "translate": "gm4.second",
       "fallback": "%1$s",
       "with": [
         {
@@ -811,7 +811,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
         item = ingredient["id"]
       color = get_item_color(item, vanilla)
       slot: dict[Any, Any] = {
-        "translate": "gm4.guidebook_gui",
+        "translate": "gm4.second",
         "fallback": "%1$s",
         "with": [
           {
@@ -833,7 +833,7 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
         }
       }
       slot_under: dict[Any, Any] = {
-        "translate": "gm4.guidebook_gui",
+        "translate": "gm4.second",
         "fallback": "%1$s",
         "with": [
           {
@@ -939,7 +939,7 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
     # shapeless
     elif r["input"]["type"] == "shapeless":
       shapeless = {
-        "translate": "gm4.guidebook_gui",
+        "translate": "gm4.second",
         "fallback": "%1$s",
         "with": [
           {
@@ -1059,7 +1059,7 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
         result["with"][0]["text"] = numbers[res["count"]]
 
       arrow = {
-        "translate": "gm4.guidebook_gui",
+        "translate": "gm4.second",
         "fallback": "%1$s",
         "with": [
           {
@@ -1074,7 +1074,7 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
         ]
       }
       arrow_under = {
-        "translate": "gm4.guidebook_gui",
+        "translate": "gm4.second",
         "fallback": "%1$s",
         "with": [
           {
@@ -1367,7 +1367,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
       "function": "minecraft:copy_nbt",
       "source": {
         "type": "minecraft:storage",
-        "source": f"gm4_guidebook:pages"
+        "source": "gm4_guidebook:pages"
       },
       "ops": enabled_ops,
       "conditions": [*enable_conditions]
@@ -1376,7 +1376,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
       "function": "minecraft:copy_nbt",
       "source": {
         "type": "minecraft:storage",
-        "source": f"gm4_guidebook:pages"
+        "source": "gm4_guidebook:pages"
       },
       "ops": fallback_ops,
       "conditions": [*enable_conditions]
@@ -1387,7 +1387,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
       "function": "minecraft:copy_nbt",
       "source": {
         "type": "minecraft:storage",
-        "source": f"gm4_guidebook:pages"
+        "source": "gm4_guidebook:pages"
       },
       "ops": enabled_ops_lectern,
       "conditions": [*enable_conditions]
@@ -1396,7 +1396,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
       "function": "minecraft:copy_nbt",
       "source": {
         "type": "minecraft:storage",
-        "source": f"gm4_guidebook:pages"
+        "source": "gm4_guidebook:pages"
       },
       "ops": fallback_ops_lectern,
       "conditions": [*enable_conditions]
@@ -1670,9 +1670,9 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
     start = "execute"
     for module_check in section["enable"]:
       if module_check["load"] == -1:
-        start += f" unless "
+        start += " unless "
       else:
-        start += f" if "
+        start += " if "
       start += f"score {module_check['id']} load.status matches 1.."
     start += " run "
   else:

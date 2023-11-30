@@ -20,8 +20,8 @@ scoreboard players reset $module_count gm4_guide
 schedule function gm4_guidebook:update_storage/build_toc 2t
 
 schedule function #gm4_guidebook:setup_storage 3t
-data modify storage gm4_guidebook:pages lectern_front_matter set value ['[""]','[""]','[""]','[""]','[""]']
-data modify storage gm4_guidebook:pages blank set value '[""]'
+data modify storage gm4_guidebook:pages lectern_front_matter set value ['["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]','["",{"translate":"gui.gm4.guidebook.page.toc","fallback":"","color":"white","font":"gm4:guidebook"}]','["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]','["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]','["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]']
+data modify storage gm4_guidebook:pages blank set value '["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]'
 
 # start up module
 execute unless score guidebook gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Guidebook"}
