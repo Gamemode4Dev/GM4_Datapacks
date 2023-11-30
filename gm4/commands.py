@@ -1,5 +1,4 @@
 import click
-import json
 import yaml
 import shutil
 import logging
@@ -106,25 +105,5 @@ def readme_gen(ctx: click.Context, project: Project, modules: tuple[str, ...], w
 	}
 
 	project.resolved_config = ProjectConfig(**config).resolve(Path("beet-readme.yaml").parent.absolute()) # type: ignore ; config is properly formatted
-
-	# config = {
-	# 	"broadcast": modules,
-	# 	"extend": "beet.yaml",
-	# 	"meta": {"readme-gen": True},
-	# 	"require":[
-	# 		"gm4.plugins.player_heads",
-	# 	],
-	# 	"pipeline": [
-	# 		"gm4.plugins.manifest.write_credits",
-	# 		"gm4.plugins.readme_generator",
-	# 		"gm4.plugins.output.readmes"
-	# 	]
-	# }
-
-	# project.config_overrides = [
-	# 	f"pipeline[] = gm4.plugins.manifest.create",
-	# 	f"pipeline[] = {json.dumps(config)}",
-	# 	f"pipeline[] = gm4.plugins.finished",
-	# ]
 
 	ctx.invoke(commands.watch if watch else commands.build)

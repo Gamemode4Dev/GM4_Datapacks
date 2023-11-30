@@ -45,7 +45,7 @@ from tokenstream import set_location
 
 from gm4.utils import MapOption, add_namespace, mecha_transform_jsonfiles
 
-CUSTOM_MODEL_PREFIX = 3420000 # TODO this is configurable for public server stuff?
+CUSTOM_MODEL_PREFIX = 3420000
 
 parent_logger = logging.getLogger("gm4.resource_pack")
 
@@ -302,6 +302,8 @@ def beet_default(ctx: Context):
     # mecha register
     ctx.inject(Mecha).transform.extend(rp)
 
+    logging.getLogger("beet.contrib.babelbox").addFilter(BlockIncompleteTranslation())
+
     # yield
     # rp.output_registry()
 
@@ -319,7 +321,6 @@ def build(ctx: Context):
     if not ctx.assets.extra.get("pack.png") and ctx.data.extra.get("pack.png"):
         ctx.assets.icon = ctx.data.icon
 
-    logging.getLogger("beet.contrib.babelbox").addFilter(BlockIncompleteTranslation())
 
 def mount_registry(ctx: Context):
     ctx.cache["modeldata_registry"].json = JsonFile(source_path="gm4/modeldata_registry.json").data
@@ -357,6 +358,7 @@ class GM4ResourcePack(MutatingReducer):
 
     def __init__(self, ctx: Context):
         self.ctx = ctx
+        self.cmd_prefix = CUSTOM_MODEL_PREFIX # enables value to be changed by other projects, like the public server
         self.registry = ctx.cache["modeldata_registry"].json
         self.logger = parent_logger.getChild(ctx.project_id)
         self._opts = FlatResourcePackOptions(model_data=[], gui_fonts=[]) # unloaded config
@@ -438,7 +440,7 @@ class GM4ResourcePack(MutatingReducer):
                         continue # TODO this is an exception?
                     vanilla_overrides.append({
                         "predicate": {
-                            "custom_model_data": CUSTOM_MODEL_PREFIX+self.retrieve_index(model.reference)[0],
+                            "custom_model_data": self.cmd_prefix+self.retrieve_index(model.reference)[0],
                         } | pred.get("predicate", {}),
                         "model": pred["model"] if pred.get("user_defined") else m # type:ignore , user-defined model predicates use their own model reference. m is a string in all other cases
                     })
@@ -449,7 +451,7 @@ class GM4ResourcePack(MutatingReducer):
         for reg in self.registry["items"].values():
             if reference in reg:
                 return reg[reference], None
-        return -CUSTOM_MODEL_PREFIX, KeyError(f"{reference} has no asscioated index")
+        return -self.cmd_prefix, KeyError(f"{reference} has no asscioated index")
     
     def find_new_index(self, item_ids: list[str], reference: str):
         """finds the next available CMD value for the given items and applies it to the registry"""
@@ -491,7 +493,7 @@ class GM4ResourcePack(MutatingReducer):
                     index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
                     if exc:
                         yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
-                    node = replace(node, value=AstNbtValue.from_value(index+CUSTOM_MODEL_PREFIX))
+                    node = replace(node, value=AstNbtValue.from_value(index+self.cmd_prefix))
                 case _:
                     pass
         return node
@@ -507,7 +509,7 @@ class GM4ResourcePack(MutatingReducer):
                 if exc:
                     d = Diagnostic("error", str(exc))
                     yield set_location(d, ast_nbt)
-                node = replace(node, arguments=AstChildren([ast_target, ast_target_path, AstNbtValue.from_value(index+CUSTOM_MODEL_PREFIX)]))
+                node = replace(node, arguments=AstChildren([ast_target, ast_target_path, AstNbtValue.from_value(index+self.cmd_prefix)]))
         return node
     
     #== Non-mecha CMD filling ==#
@@ -523,7 +525,7 @@ class GM4ResourcePack(MutatingReducer):
                 index, exc = self.retrieve_index(add_namespace(ref.lstrip("$"), self.ctx.project_id))
                 if exc:
                     raise WrappedException(f"Optifine CIT file {name}.properties") from exc
-                propfile.text = propfile.text.replace(ref, str(index+CUSTOM_MODEL_PREFIX))
+                propfile.text = propfile.text.replace(ref, str(index+self.cmd_prefix))
 
     #== Model file generation ==#
     def generate_model_files(self):
