@@ -31,7 +31,6 @@ from gm4.plugins.player_heads import Skin
 class Section(BaseModel):
   name: str
   pages: list[TextComponent]
-  enable: list[dict[str, int]]
   enable: list[dict[str, int|str]]
   requirements: list[list[str]]
   prerequisites: list[str] = []
@@ -1296,6 +1295,14 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
       "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:0b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
     },
     {
+      "function": "minecraft:set_name",
+      "name": {
+        "translate": "text.gm4.guidebook.title",
+        "fallback": "Gamemode 4 Guidebook",
+        "italic": False
+      }
+    },
+    {
       "function": "minecraft:set_count",
       "count": {
         "type": "minecraft:score",
@@ -1313,6 +1320,14 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
     {
     "function": "minecraft:set_nbt",
     "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:1b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+    },
+    {
+      "function": "minecraft:set_name",
+      "name": {
+        "translate": "text.gm4.guidebook.title",
+        "fallback": "Gamemode 4 Guidebook",
+        "italic": False
+      }
     },
     {
       "function": "minecraft:copy_nbt",
@@ -1706,12 +1721,21 @@ def generate_display_advancement(book: Book) -> Advancement:
   icon = book.icon
   display = {
     "icon": icon, # taken from book dictionary
-    "title": {
-      "translate": "text.gm4.guidebook.discovered_page",
-      "fallback": "Check your guidebook!",
-      "color": "#4AA0C7",
-      "italic": True
-    },
+    "title": [
+      "",
+      {
+        "translate": "gui.gm4.guidebook.toast",
+        "fallback": "",
+        "color": "white",
+        "font": "gm4:guidebook"
+      },
+      {
+        "translate": "text.gm4.guidebook.discovered_page",
+        "fallback": "Check your guidebook!",
+        "color": "#4AA0C7",
+        "italic": True
+      }
+    ],
     "description": module_name, # this isn't actually ever visible
     "frame": "goal",
     "show_toast": True,
