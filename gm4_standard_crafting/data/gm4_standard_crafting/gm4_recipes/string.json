@@ -1,21 +1,20 @@
 {
-    "name": "gm4_standard_crafting:string",
-    "input": {
-        "type": "shaped",
-        "recipe": [
-            "W"
-        ],
-        "key": {
-            "W": {
-                "tag": "minecraft:wool"
-            }
-        }
-    },
-    "output": {
-        "result": {
-            "type": "item",
-            "name": "minecraft:string",
-            "count": 3
-        }
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "W"
+    ],
+    "key": {
+      "W": {
+        "tag": "minecraft:wool"
+      }
     }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:string",
+      "count": 3
+    }
+  }
 }

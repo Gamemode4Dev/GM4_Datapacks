@@ -1,0 +1,28 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "SCS",
+      "CNC",
+      "SCS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:netherite_scrap"
+      },
+      "C": {
+        "item": "minecraft:clay_ball"
+      },
+      "N": {
+        "item": "minecraft:nether_star"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_orb_of_ankou:items/orb_of_ankou",
+      "count": 1
+    }
+  }
+}

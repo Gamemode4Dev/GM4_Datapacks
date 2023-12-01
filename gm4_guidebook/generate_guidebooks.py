@@ -32,6 +32,7 @@ class Section(BaseModel):
   name: str
   pages: list[TextComponent]
   enable: list[dict[str, int]]
+  enable: list[dict[str, int|str]]
   requirements: list[list[str]]
   prerequisites: list[str] = []
   grants: list[str] = []

@@ -1,5 +1,4 @@
 {
-  "name": "gm4_block_compressors:block_compressor",
   "input": {
     "type": "shaped",
     "recipe": [

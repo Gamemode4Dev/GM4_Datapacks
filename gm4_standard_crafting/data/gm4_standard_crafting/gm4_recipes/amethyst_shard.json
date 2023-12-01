@@ -1,21 +1,20 @@
 {
-    "name": "gm4_standard_crafting:amethyst_shard",
-    "input": {
-        "type": "shaped",
-        "recipe": [
-            "A"
-        ],
-        "key": {
-            "A": {
-                "item": "minecraft:amethyst_block"
-            }
-        }
-    },
-    "output": {
-        "result": {
-            "type": "item",
-            "name": "minecraft:amethyst_shard",
-            "count": 4
-        }
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "A"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:amethyst_block"
+      }
     }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:amethyst_shard",
+      "count": 4
+    }
+  }
 }

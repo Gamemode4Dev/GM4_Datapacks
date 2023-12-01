@@ -1,39 +1,36 @@
-[
-  {
-    "name": "gm4_boots_of_ostara:boots_of_ostara",
-    "input": {
-      "type": "shaped",
-      "recipe": [
-        " S ",
-        "MBG",
-        " W "
-      ],
-      "key": {
-        "S": {
-          "item": "minecraft:wheat_seeds"
-        },
-        "M": {
-          "item": "minecraft:moss_block"
-        },
-        "B": {
-          "item": "minecraft:leather_boots"
-        },
-        "G": {
-          "item": "minecraft:grass_block"
-        },
-        "W": {
-          "item": "minecraft:water_bucket"
-        }
-      }
-    },
-    "output": {
-      "type": "special",
-      "function": "gm4_boots_of_ostara:create_boots",
-      "guidebook": {
-        "type": "loot_table",
-        "name": "gm4_boots_of_ostara:items/boots_of_ostara",
-        "count": 1
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      " S ",
+      "MBG",
+      " W "
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:wheat_seeds"
+      },
+      "M": {
+        "item": "minecraft:moss_block"
+      },
+      "B": {
+        "item": "minecraft:leather_boots"
+      },
+      "G": {
+        "item": "minecraft:grass_block"
+      },
+      "W": {
+        "item": "minecraft:water_bucket"
       }
     }
+  },
+  "output": {
+    "type": "special",
+    "function": "gm4_boots_of_ostara:create_boots",
+    "guidebook": {
+      "type": "loot_table",
+      "name": "gm4_boots_of_ostara:items/boots_of_ostara",
+      "count": 1
+    }
   }
-]
+}

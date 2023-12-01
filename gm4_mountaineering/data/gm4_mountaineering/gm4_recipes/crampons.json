@@ -2,23 +2,22 @@
   "input": {
     "type": "shaped",
     "recipe": [
-      "S S",
-      "R R",
-      "R R"
+      " B ",
+      "III"
     ],
     "key": {
-      "S": {
-        "item": "minecraft:scute"
+      "B": {
+        "item": "minecraft:chainmail_boots"
       },
-      "R": {
-        "item": "minecraft:rabbit_hide"
+      "I": {
+        "item": "minecraft:iron_nugget"
       }
     }
   },
   "output": {
     "result": {
       "type": "loot_table",
-      "name": "gm4_scuba_gear:items/flippers",
+      "name": "gm4_mountaineering:items/crampons",
       "count": 1
     }
   }

@@ -1,0 +1,25 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "I I",
+      "IBI",
+      "I I"
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:iron_boots"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_mountaineering:items/skis",
+      "count": 1
+    }
+  }
+}
