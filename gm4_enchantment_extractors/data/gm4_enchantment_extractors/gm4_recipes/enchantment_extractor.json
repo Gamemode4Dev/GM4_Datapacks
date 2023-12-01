@@ -1,0 +1,32 @@
+{
+  "name": "gm4_enchantment_extractors:enchantment_extractor",
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      " E ",
+      "GSG",
+      "CCC"
+    ],
+    "key": {
+      "E": {
+        "item": "minecraft:enchanting_table"
+      },
+      "G": {
+        "item": "minecraft:gold_ingot"
+      },
+      "S": {
+        "item": "minecraft:grindstone"
+      },
+      "C": {
+        "item": "minecraft:cobblestone"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_enchantment_extractors:items/enchantment_extractor",
+      "count": 1
+    }
+  }
+}

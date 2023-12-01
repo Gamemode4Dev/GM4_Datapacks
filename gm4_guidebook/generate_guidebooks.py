@@ -1,8 +1,26 @@
-from beet import Function, Advancement, LootTable, Context, FunctionTag
+import colorsys
+import json
+from typing import Any, ClassVar, Literal, Optional
+
+import nbtlib  # type: ignore ; missing stub file
+from beet import (
+    Advancement,
+    Context,
+    FileDeserialize,
+    Function,
+    JsonFile,
+    JsonFileBase,
+    LootTable,
+    PngFile,
+    NamespaceContainer,
+    Texture
+)
 from beet.contrib.vanilla import Vanilla
-import nbtlib, colorsys, json, os
+from beet.core.utils import TextComponent
 from PIL import Image
-from typing import TypedDict, Any
+from pydantic import BaseModel
+
+from gm4.plugins.player_heads import Skin
 
 # TODO:
 # update page contents
@@ -10,28 +28,107 @@ from typing import TypedDict, Any
 # merge some functions to reduce fuction call overhead
 
 
-class Section(TypedDict):
+class Section(BaseModel):
   name: str
-  pages: list[dict[Any, Any] | list[dict[Any, Any]]]
+  pages: list[TextComponent]
   enable: list[dict[str, int]]
   requirements: list[list[str]]
-  prerequisites: list[str]
-  grants: list[str]
+  prerequisites: list[str] = []
+  grants: list[str] = []
 
 
-class Book(TypedDict):
+class Book(BaseModel):
   id: str
   name: str
-  module_type: str
-  load_check: str
-  base_module: str
+  module_type: Literal["expansion", "base", "module"]
+  load_check: Optional[str]
+  base_module: Optional[str]
   icon: dict[str, str]
   criteria: dict[str, dict[Any, Any]]
   sections: list[Section]
-  trigger_id: int
-  description: str
+  trigger_id: int = -1 # value set by triggers.json
+  description: Optional[str]
+  wiki_link: Optional[str]
 
 
+class GuidebookPages(JsonFileBase[Book]):
+  """defines a custom beet filetype for guidebook pages"""
+  scope: ClassVar[tuple[str, ...]] = ("guidebook",)
+  extension: ClassVar[str] = ".json"
+  data: ClassVar[FileDeserialize[Book]] = FileDeserialize()
+  model = Book # tell beet to parse this file using the Book data model
+
+class CustomCrafterRecipe(JsonFile):
+  """defines a custom beet filetype for CC recipes"""
+  scope: ClassVar[tuple[str, ...]] = ("gm4_recipes",)
+  extension: ClassVar[str] = ".json"
+
+  # NOTE in the future, this can be moved to wherever we auto-generate CC recipes from
+
+
+def load_page_data(ctx: Context):
+  """registers guidebook files with the beet file loader"""
+  ctx.data.extend_namespace.append(GuidebookPages)
+  yield
+  ctx.data[GuidebookPages].clear()
+
+def load_custom_recipes(ctx: Context):
+  ctx.data.extend_namespace.append(CustomCrafterRecipe)
+  yield
+  ctx.data[CustomCrafterRecipe].clear()
+
+
+def beet_default(ctx: Context):
+  if not ctx.data[GuidebookPages]:
+    return # there are no pages configured
+
+  for book in [b.data for b in ctx.data[GuidebookPages].values()]:
+    
+    # get trigger id, generate one if not already existing
+    triggers_file = JsonFile(source_path="gm4_guidebook/triggers.json")
+    triggers = triggers_file.data
+
+    if book.id not in triggers:
+        triggers[book.id] = triggers['__next__']
+        triggers['__next__'] += 1
+        triggers_file.data = dict(sorted(triggers.items()))
+        triggers_file.dump(origin="", path="gm4_guidebook/triggers.json")
+    book.trigger_id = triggers[book.id]
+
+    # get description
+    if not book.description:
+      book.description = ctx.meta["gm4"]["website"]["description"]
+
+    # get load check
+    if not book.load_check:
+      book.load_check = book.id if "gm4_" in book.id else f"gm4_{book.id}"
+
+    # get wiki link
+    if not book.wiki_link:
+      book.wiki_link = ctx.meta['gm4']['wiki']
+
+    # read the dict and get the page storages
+    loottable, lectern_loot, pages, lectern_pages = generate_loottable(book)
+
+    # add loot tables to datapack
+    ctx.data[f"gm4_guidebook:{book.id}"] = loottable
+    ctx.data[f"gm4_guidebook:lectern/{book.id}"] = lectern_loot
+
+    # add functions to datapack
+    ctx.data[f"gm4_guidebook:{book.id}/add_toc_line"] = generate_add_toc_line_function(book)
+    ctx.data[f"gm4_guidebook:{book.id}/setup_storage"] = generate_setup_storage_function(
+      pages, lectern_pages, book, ctx)
+    ctx.data[f"gm4_guidebook:{book.id}/summon_marker"] = generate_summon_marker_function(book)
+    ctx.data[f"gm4_guidebook:{book.id}/update_hand"] = generate_update_hand_function(book)
+    ctx.data[f"gm4_guidebook:{book.id}/update_lectern"] = generate_update_lectern_function(book)
+
+    # add advancements to datapack
+    for index, section in enumerate(book.sections):
+      if (advancement := generate_advancement(book, index)) is not None:
+        ctx.data[f"gm4_guidebook:{book.id}/unlock/{section.name}"] = advancement
+        ctx.data[f"gm4_guidebook:{book.id}/display/{section.name}"] = generate_display_advancement(book)
+        ctx.data[f"gm4_guidebook:{book.id}/rewards/{section.name}"] = generate_reward_function(
+          section, book.id, book.name, book.description)
 
 
 """
@@ -55,9 +152,7 @@ def get_pos_hash(module_id: str):
 """
 Generates the book's header for the player's hand
 """
-def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
-  # get wiki link
-  wiki_id = book_dict["name"].replace(" ", "_")
+def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
   # header JSON
   header: list[dict[Any, Any]|str] = [
     "",
@@ -105,7 +200,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "open_url",
-        "value": f"https://wiki.gm4.co/wiki/{wiki_id}"
+        "value": book.wiki_link
       },
       "hoverEvent": {
         "action": "show_text",
@@ -134,7 +229,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide set {book_dict['trigger_id']}"
+        "value": f"/trigger gm4_guide set {book.trigger_id}"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -160,7 +255,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide_prev set {book_dict['trigger_id']}"
+        "value": f"/trigger gm4_guide_prev set {book.trigger_id}"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -186,7 +281,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide_next set {book_dict['trigger_id']}"
+        "value": f"/trigger gm4_guide_next set {book.trigger_id}"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -241,7 +336,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "open_url",
-        "value": f"https://wiki.gm4.co/wiki/{wiki_id}"
+        "value": book.wiki_link
       },
       "hoverEvent": {
         "action": "show_text",
@@ -270,7 +365,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide set {book_dict['trigger_id']}"
+        "value": f"/trigger gm4_guide set {book.trigger_id}"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -297,7 +392,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide_prev set {book_dict['trigger_id']}"
+        "value": f"/trigger gm4_guide_prev set {book.trigger_id}"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -324,7 +419,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide_next set {book_dict['trigger_id']}"
+        "value": f"/trigger gm4_guide_next set {book.trigger_id}"
       },
       "hoverEvent": {
         "action": "show_text",
@@ -350,9 +445,7 @@ def generate_book_header(book_dict: Book) -> list[dict[Any, Any]|str]:
 Generates the book's header for the lectern 
 difference is change_page vs run_command click events
 """
-def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
-  # get wiki link
-  wiki_id = book_dict["name"].replace(" ", "_")
+def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
   # header JSON
   header: list[dict[Any, Any]|str] = [
     "",
@@ -400,7 +493,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "open_url",
-        "value": f"https://wiki.gm4.co/wiki/{wiki_id}"
+        "value": book.wiki_link
       },
       "hoverEvent": {
         "action": "show_text",
@@ -536,7 +629,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "open_url",
-        "value": f"https://wiki.gm4.co/wiki/{wiki_id}"
+        "value": book.wiki_link
       },
       "hoverEvent": {
         "action": "show_text",
@@ -642,30 +735,11 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
 
 
 """
-Reads a loot table and creates a JSON text component to display the item in the guidebook
+Reads a loot table (custom item) and creates a JSON text component to display the item in the guidebook
 """
-def loottable_to_display(loottable: str, vanilla: Vanilla) -> tuple[dict[Any, Any],dict[Any, Any]]:
-  # find loot table file
-  path_pieces = loottable.split(":")
-  loot_dir = f"data/{path_pieces[0]}/loot_tables"
-  item = path_pieces[1].split("/")[-1]
-  if "gm4" in loottable:
-    item = f"gm4:{item}"
-  target_file = f"{loot_dir}/{path_pieces[1]}.json"
-  target_path = ""
-  for root, subdirs, files in os.walk('./'):
-    if loot_dir not in root or len(subdirs) != 0 or ("./gm4_" not in root and "./lib_" not in root):
-      continue
-    for file in files:
-      path = f"{root}/{file}"
-      if target_file in path:
-        target_path = path
-  if target_path == "":
-    raise ValueError(f"File not found: {loottable}")
+def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, TextComponent]:
+  loot = ctx.data.loot_tables[loottable].data
 
-  # open loot table file
-  with open(target_path) as f:
-    loot: dict[Any, Any] = json.load(f)
   if len(loot["pools"]) > 1:
     raise ValueError("Loot table has multiple pools")
   if len(loot["pools"][0]["entries"]) > 1:
@@ -677,7 +751,7 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> tuple[dict[Any, An
   entry: dict[Any, Any] = loot["pools"][0]["entries"][0]
   item_id: str = entry["name"]
   tag: dict[Any, Any] = {}
-  name: str = ""
+  name: TextComponent = ""
   lore: list[str] = []
   if "functions" in entry:
     for function in entry["functions"]:
@@ -688,19 +762,18 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> tuple[dict[Any, An
           lore.append(f'{json.dumps(line)}')
       elif "set_nbt" in function["function"]:
         tag: dict[Any, Any] = nbtlib.parse_nbt(function["tag"]) # type: ignore
+
   # color
   if "player_head" in item_id and "$" in tag["SkullOwner"]:
     skull_owner = tag["SkullOwner"].replace("$","")
-    path_pieces = target_path.split('/')
-    skin_path = ""
-    for piece in path_pieces:
-      if piece == "loot_tables":
-        break
-      skin_path += f"{piece}/"
-    skin_path += f"skins/{skull_owner}.png"
-    color = get_item_color(skin_path, vanilla, True)
+    if ":" not in skull_owner:
+      skull_owner = f"{ctx.project_id}:{skull_owner}" # NOTE gm4.utils will have an add_namespace helper function after the RP PR
+    skin = ctx.data[Skin][skull_owner]
+
+    color = get_texture_color(skin)
+
   else:
-    color = get_item_color(item_id, vanilla)
+    color = get_texture_color(intuit_item_texture(item_id, ctx.inject(Vanilla)))
 
   # create slot
   slot: dict[Any, Any] = {
@@ -712,7 +785,7 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> tuple[dict[Any, An
         "color": color
       },
       {
-        "translate": f"gui.gm4.guidebook.crafting.display.{item.replace(':','.')}",
+        "translate": f"gui.gm4.guidebook.crafting.display.{item_id.replace(':','.')}",
         "fallback": " ☒ ",
         "color": "white",
         "font": "gm4:guidebook"
@@ -766,8 +839,9 @@ def loottable_to_display(loottable: str, vanilla: Vanilla) -> tuple[dict[Any, An
 """
 Reads a vanilla item and creates a JSON text component to display the item in the guidebook
 """
-def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
-  if "id" in ingredient and ingredient["id"] == "empty":
+def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextComponent, TextComponent]:
+  vanilla = ctx.inject(Vanilla)
+  if ingredient.get("id") == "empty":
     # show empty slot ()
     slot = {
       "translate": "gm4.second",
@@ -803,13 +877,13 @@ def item_to_display(ingredient: dict[Any, Any], vanilla: Vanilla):
   else:
     # show filled slot (colored with a hover event)
     if "display" in ingredient and "loot_table" in ingredient["display"]["type"]:
-      slot, slot_under = loottable_to_display(ingredient["display"]["name"], vanilla)
+      return loottable_to_display(ingredient["display"]["name"], ctx)
     else:
       if "display" in ingredient and "item" in ingredient["display"]["type"]:
         item = ingredient["display"]["name"]
       else:
         item = ingredient["id"]
-      color = get_item_color(item, vanilla)
+      color = get_texture_color(intuit_item_texture(item, vanilla))
       slot: dict[Any, Any] = {
         "translate": "gm4.second",
         "fallback": "%1$s",
@@ -885,260 +959,254 @@ def get_item_from_tag(item_tag: str, vanilla: Vanilla) -> str:
 """
 Generates a crafting grid to be displayed in the guidebook
 """
-def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any]|str]:
-  module = recipe.split(":")[0]
-  for file in os.listdir(f"{module}/data/gm4_custom_crafters/"):
-    if not file.endswith(".json"):
-      continue
+def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
+  r = ctx.data[CustomCrafterRecipe][recipe].data
 
-    # get recipe JSON
-    with open(f"{module}/data/gm4_custom_crafters/{file}") as recipes_file:
-      recipes: list[dict[Any, Any]] = json.load(recipes_file)
-    r = None
-    for next_recipe in recipes:
-      if next_recipe["name"] == recipe:
-        r = next_recipe
-    if r is None:
-      raise KeyError(f'Unknown recipe: {recipe}')
-    
-    # get recipe ingredients
-    ingredients:list[dict[Any, Any]] = []
-    shapeless = "  "
-    # shaped
-    if r["input"]["type"] == "shaped":
-      input:list[str] = ["", "", ""]
-      input = r["input"]["recipe"]
-      while len(input) < 3:
-        input.append("   ")
-      for i in range(3):
-        while len(input[i]) < 3:
-          input[i] += " "
-      # convert input into list of ingredients
-      for i in range(3):
-        for j in range(3):
-          ingredient = input[i][j]
-          item = {}
-          if ingredient == " ":
-            item["id"] = "empty"
-          else:
-            if isinstance(r["input"]["key"][ingredient], list):
-              ingr = r["input"]["key"][ingredient][0]
-            else:
-              ingr = r["input"]["key"][ingredient]
-            
-            if "guidebook" in ingr:
-              item["display"] = ingr["guidebook"]
-            else:
-              if "tag" in ingr:
-                item["id"] = get_item_from_tag(ingr["tag"], vanilla)
-              else:
-                item["id"] = ingr["item"]
-              if "nbt" in ingr:
-                item["tag"] = ingr["nbt"].replace("'",'\"')
-          ingredients.append(item)
-    # shapeless
-    elif r["input"]["type"] == "shapeless":
-      shapeless = {
-        "translate": "gm4.second",
-        "fallback": "%1$s",
-        "with": [
-          {
-            "text": " 🔀 ",
-            "color": "dark_gray"
-          },
-          {
-            "translate": "gui.gm4.guidebook.crafting.display.shapeless",
-            "fallback": " 🔀 ",
-            "color": "white",
-            "font": "gm4:guidebook"
-          }
-        ],
-        "hoverEvent": {
-          "action": "show_text",
-          "contents": {
-            "translate": "text.gm4.guidebook.shapeless",
-            "fallback": "Recipe is shapeless"
-          }
-        }
-      }
-      for ingredient in r["input"]["ingredients"]:
-        item = {}
+  # get recipe ingredients
+  ingredients:list[dict[str, str]] = []
+  shapeless = "  "
+
+  # shaped
+  if r["input"]["type"] == "shaped":
+    input: list[str] = r["input"]["recipe"]
+
+    # fix configured shape to be a full 3x3 grid
+    while len(input) < 3:
+      input.append("   ")
+    for i in range(3):
+      while len(input[i]) < 3:
+        input[i] += " "
+
+    # convert input into list of ingredients
+    for i in range(3):
+      for j in range(3):
+        ingredient = input[i][j]
+        item: dict[str,str] = {}
         if ingredient == " ":
           item["id"] = "empty"
         else:
-          if isinstance(ingredient, list):
-            item["id"] = ingredient[0]["item"] # type: ignore
-            if "guidebook" in ingredient[0]:
-              item["display"] = ingredient[0]["guidebook"] # type: ignore
+          if isinstance(r["input"]["key"][ingredient], list):
+            ingr = r["input"]["key"][ingredient][0]
           else:
-            if "guidebook" in ingredient:
-              item["display"] = ingredient["guidebook"]
+            ingr = r["input"]["key"][ingredient]
+          
+          if "guidebook" in ingr:
+            item["display"] = ingr["guidebook"]
+          else:
+            if "tag" in ingr:
+              item["id"] = get_item_from_tag(ingr["tag"], ctx.inject(Vanilla))
             else:
-              item["id"] = ingredient["item"]
-              if "nbt" in ingredient:
-                item["tag"] = ingredient["nbt"].replace("'",'\"')
+              item["id"] = ingr["item"]
+            if "nbt" in ingr:
+              item["tag"] = ingr["nbt"].replace("'",'\"')
         ingredients.append(item)
-      while len(ingredients) < 9:
-        ingredients.append({"id": "empty"})
-    # unknown
-    else:
-      raise ValueError(f'Unknown recipe type: {r["input"]["type"]}')
-    
-    # get JSON for each ingredient
-    d_ingredients: list[dict[Any, Any]|str] = []
-    d_under: list[dict[Any, Any]|str] = []
-    for ingredient in ingredients:
-      slot, slot_under = item_to_display(ingredient, vanilla)
-      d_ingredients.append(slot)
-      d_under.append(slot_under)
-    
-    # get recipe results
-    if "type" in r["output"]:
-      output_type = r["output"]["type"]
-    else:
-      output_type = "normal"
-    
-    res: dict[Any, Any] = {}
-    if output_type == "normal":
-      res = r["output"]["result"]
-    elif output_type == "special":
-      res = r["output"]["guidebook"]
-    elif output_type == "replace":
-      print('output type "replace" is not yet implemented') # TODO: support replace output type
-    else:
-      raise ValueError(f"Unknown output type: '{output_type}'")
-    
-    if output_type == "replace":
-      results:list[dict[Any, Any]] = []
-      margin = " " * 4
-      display = [
-        margin,
-        d_ingredients[0],
-        d_ingredients[1],
-        d_ingredients[2],
-        shapeless,
-        "  ",
-        results[0],
-        results[1],
-        results[2],
-        "\n",
-        margin,
-        d_ingredients[3],
-        d_ingredients[4],
-        d_ingredients[5],
-        " → ",
-        results[3],
-        results[4],
-        results[5],
-        "\n",
-        margin,
-        d_ingredients[6],
-        d_ingredients[7],
-        d_ingredients[8],
-        margin,
-        results[6],
-        results[7],
-        results[8]
-      ]
-    else:
-      # get display
-      if "item" in res["type"]:
-        res["id"] = res["name"]
-        result, result_under = item_to_display(res, vanilla)
-      else:
-        result, result_under = loottable_to_display(res["name"], vanilla)
-      
-      # show count
-      res_count = ""
-      if "count" in res and res["count"] > 1:
-        res_count = {
-          "translate": f"gui.gm4.guidebook.crafting.display.count.{res['count']}",
-          "fallback": ""
+
+  # shapeless
+  elif r["input"]["type"] == "shapeless":
+    shapeless = {
+      "translate": "gm4.second",
+      "fallback": "%1$s",
+      "with": [
+        {
+          "text": " 🔀 ",
+          "color": "dark_gray"
+        },
+        {
+          "translate": "gui.gm4.guidebook.crafting.display.shapeless",
+          "fallback": " 🔀 ",
+          "color": "white",
+          "font": "gm4:guidebook"
         }
-        numbers = ["☐","☒","②","③","④","⑤","⑥","⑦","⑧","⑨"]
-        result["with"][0]["text"] = numbers[res["count"]]
-
-      arrow = {
-        "translate": "gm4.second",
-        "fallback": "%1$s",
-        "with": [
-          {
-            "text": " → "
-          },
-          {
-            "translate": "gui.gm4.guidebook.crafting.display.arrow",
-            "fallback": " → ",
-            "color": "white",
-            "font": "gm4:guidebook"
-          }
-        ]
+      ],
+      "hoverEvent": {
+        "action": "show_text",
+        "contents": {
+          "translate": "text.gm4.guidebook.shapeless",
+          "fallback": "Recipe is shapeless"
+        }
       }
-      arrow_under = {
-        "translate": "gm4.second",
-        "fallback": "%1$s",
-        "with": [
-          {
-            "text": "  →",
-            "color": "#fcfcf0"
-          },
-          {
-            "translate": "gui.gm4.guidebook.crafting.display.arrow.under",
-            "fallback": "  →",
-            "color": "white",
-            "font": "gm4:guidebook"
-          }
-        ]
-      }
+    }
+    for ingredient in r["input"]["ingredients"]:
+      item = {}
+      if ingredient == " ":
+        item["id"] = "empty"
+      else:
+        if isinstance(ingredient, list):
+          item["id"] = ingredient[0]["item"] # type: ignore
+          if "guidebook" in ingredient[0]:
+            item["display"] = ingredient[0]["guidebook"] # type: ignore
+        else:
+          if "guidebook" in ingredient:
+            item["display"] = ingredient["guidebook"]
+          else:
+            item["id"] = ingredient["item"]
+            if "nbt" in ingredient:
+              item["tag"] = ingredient["nbt"].replace("'",'\"')
+      ingredients.append(item)
+    while len(ingredients) < 9:
+      ingredients.append({"id": "empty"})
 
-      crafting = {
-        "translate": "gui.gm4.guidebook.crafting.display.grid",
-        "fallback": "",
-        "color": "white",
-        "font": "gm4:guidebook"
-      }
+  # unknown
+  else:
+    raise ValueError(f'Unknown recipe type: {r["input"]["type"]}')
+  
+  # get JSON for each ingredient
+  d_ingredients: list[TextComponent] = []
+  d_under: list[TextComponent] = []
+  for ingredient in ingredients:
+    slot, slot_under = item_to_display(ingredient, ctx)
+    d_ingredients.append(slot)
+    d_under.append(slot_under)
 
-      margin = " " * 3
-      display: list[dict[Any, Any]|str] = [
-        "",
-        crafting,
-        "\n",
-        margin,
-        d_ingredients[0],
-        d_ingredients[1],
-        d_ingredients[2],
-        shapeless,
-        "\n",
-        margin,
-        d_under[0],
-        d_under[1],
-        d_under[2],
-        "\n",
-        margin,
-        d_ingredients[3],
-        d_ingredients[4],
-        d_ingredients[5],
-        arrow,
-        result,
-        res_count,
-        "\n",
-        margin,
-        d_under[3],
-        d_under[4],
-        d_under[5],
-        arrow_under,
-        result_under,
-        "\n",
-        margin,
-        d_ingredients[6],
-        d_ingredients[7],
-        d_ingredients[8],
-        "\n",
-        margin,
-        d_under[6],
-        d_under[7],
-        d_under[8]
+  # get recipe results
+  if "type" in r["output"]:
+    output_type = r["output"]["type"]
+  else:
+    output_type = "normal"
+  
+  res: dict[str, Any] = {}
+  if output_type == "normal":
+    res = r["output"]["result"]
+  elif output_type == "special":
+    res = r["output"]["guidebook"]
+  elif output_type == "replace":
+    raise NotImplementedError('output type "replace" is not yet implemented')  # TODO: support replace output type
+  else:
+    raise ValueError(f"Unknown output type: '{output_type}'")
+  
+  if output_type == "replace":
+    pass
+    # FIXME the precious tree warns that replace is not implemented. Is this leftover test code?
+    results: list[TextComponent] = []
+    margin = " " * 4
+    display = [
+      margin,
+      d_ingredients[0],
+      d_ingredients[1],
+      d_ingredients[2],
+      shapeless,
+      "  ",
+      results[0],
+      results[1],
+      results[2],
+      "\n",
+      margin,
+      d_ingredients[3],
+      d_ingredients[4],
+      d_ingredients[5],
+      " → ",
+      results[3],
+      results[4],
+      results[5],
+      "\n",
+      margin,
+      d_ingredients[6],
+      d_ingredients[7],
+      d_ingredients[8],
+      margin,
+      results[6],
+      results[7],
+      results[8]
+    ]
+  else:
+    # get display
+    if "item" in res["type"]:
+      res["id"] = res["name"]
+      result, result_under = item_to_display(res, ctx)
+    else:
+      result, result_under = loottable_to_display(res["name"], ctx)
+    
+    # show count
+    res_count = ""
+    if "count" in res and res["count"] > 1:
+      res_count = {
+        "translate": f"gui.gm4.guidebook.crafting.display.count.{res['count']}",
+        "fallback": ""
+      }
+      NUMBERS = ["☐","☒","②","③","④","⑤","⑥","⑦","⑧","⑨"]
+      result["with"][0]["text"] = NUMBERS[res["count"]]
+
+    ARROW = {
+      "translate": "gm4.second",
+      "fallback": "%1$s",
+      "with": [
+        {
+          "text": " → "
+        },
+        {
+          "translate": "gui.gm4.guidebook.crafting.display.arrow",
+          "fallback": " → ",
+          "color": "white",
+          "font": "gm4:guidebook"
+        }
       ]
-    return display
+    }
+    ARROW_UNDER = {
+      "translate": "gm4.second",
+      "fallback": "%1$s",
+      "with": [
+        {
+          "text": "  →",
+          "color": "#fcfcf0"
+        },
+        {
+          "translate": "gui.gm4.guidebook.crafting.display.arrow.under",
+          "fallback": "  →",
+          "color": "white",
+          "font": "gm4:guidebook"
+        }
+      ]
+    }
+
+    CRAFTING = {
+      "translate": "gui.gm4.guidebook.crafting.display.grid",
+      "fallback": "",
+      "color": "white",
+      "font": "gm4:guidebook"
+    }
+
+    margin = " " * 3
+    display: list[TextComponent] = [
+      "",
+      CRAFTING,
+      "\n",
+      margin,
+      d_ingredients[0],
+      d_ingredients[1],
+      d_ingredients[2],
+      shapeless,
+      "\n",
+      margin,
+      d_under[0],
+      d_under[1],
+      d_under[2],
+      "\n",
+      margin,
+      d_ingredients[3],
+      d_ingredients[4],
+      d_ingredients[5],
+      ARROW,
+      result,
+      res_count,
+      "\n",
+      margin,
+      d_under[3],
+      d_under[4],
+      d_under[5],
+      ARROW_UNDER,
+      result_under,
+      "\n",
+      margin,
+      d_ingredients[6],
+      d_ingredients[7],
+      d_ingredients[8],
+      "\n",
+      margin,
+      d_under[6],
+      d_under[7],
+      d_under[8]
+    ]
+  return display
 
   return [""]
 
@@ -1148,9 +1216,7 @@ def generate_recipe_display(recipe: str, vanilla: Vanilla) -> list[dict[Any, Any
 Calculate how many advances each character takes up when written in the default minecraft font
 """
 def char_advance(char: str) -> int:
-  # open database
-  with open("gm4_guidebook/advances.json") as advances_file:
-    advances = json.load(advances_file)
+  advances = JsonFile(source_path="gm4_guidebook/advances.json").data
   # find char in database
   if char in advances:
     if type(advances[char]) == dict:
@@ -1209,18 +1275,16 @@ def split_into_lines(str: str) -> list[int]:
 Return a bulletted string of the module name, indented if it's an expansion
 """
 def get_toc_line(book_dict: Book) -> str:
-  indent = "  ● " if book_dict["module_type"] == "expansion" else "● "
-  return f"{indent}{book_dict['name']}"
+  indent = "  ● " if book_dict.module_type == "expansion" else "● "
+  return f"{indent}{book_dict.name}"
 
 
 
 """
-Reads the book dictionary to generate the loot tables (one for hand, one for lectern)
+Reads the book object to generate the loot tables (one for hand, one for lectern)
 and the page contents that need to be stored
 """
-def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any], list[Any]]:
-  book_id = book_dict["id"]
-  sections = book_dict["sections"]
+def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], list[Any]]:
   page_storage:list[Any] = []
   lectern_storage:list[Any] = []
 
@@ -1228,7 +1292,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
   functions:list[dict[Any, Any]] = [
     {
       "function": "minecraft:set_nbt",
-      "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:0b, trigger:" + str(book_dict['trigger_id']) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+      "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:0b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
     },
     {
       "function": "minecraft:set_count",
@@ -1247,7 +1311,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
   functions_lectern:list[dict[Any, Any]] = [
     {
     "function": "minecraft:set_nbt",
-    "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:1b, trigger:" + str(book_dict['trigger_id']) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+    "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:1b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
     },
     {
       "function": "minecraft:copy_nbt",
@@ -1266,11 +1330,11 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
   ]
 
   # create conditions list for each section
-  for i, section in enumerate(sections):
+  for i, section in enumerate(book.sections):
     enable_conditions:list[dict[Any, Any]] = []
 
     # condition to check load status of other modules
-    for module_check in section["enable"]:
+    for module_check in section.enable:
       condition = {
         "condition": "minecraft:value_check",
         "value": {
@@ -1295,7 +1359,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
         "type_specific": {
           "type": "player",
           "advancements": {
-            f"gm4_guidebook:{book_id}/unlock/{section['name']}": True
+            f"gm4_guidebook:{book.id}/unlock/{section.name}": True
           }
         }
       }
@@ -1309,7 +1373,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
         "type_specific": {
           "type": "player",
           "advancements": {
-            f"gm4_guidebook:{book_id}/unlock/{section['name']}": False
+            f"gm4_guidebook:{book.id}/unlock/{section.name}": False
           }
         }
       }
@@ -1320,11 +1384,11 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
     fallback_ops:list[dict[Any, Any]] = []
     enabled_ops_lectern:list[dict[Any, Any]] = []
     fallback_ops_lectern:list[dict[Any, Any]] = []
-    for page in section["pages"]:
+    for page in section.pages:
       # append from the indexed storage
       enabled_ops.append({
         "op": "append",
-        "source": f"{book_id}.pages[{len(page_storage)}]",
+        "source": f"{book.id}.pages[{len(page_storage)}]",
         "target": "pages"
       })
       # generate the page storage
@@ -1332,7 +1396,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
 
       enabled_ops_lectern.append({
         "op": "append",
-        "source": f"{book_id}.lectern[{len(lectern_storage)}]",
+        "source": f"{book.id}.lectern[{len(lectern_storage)}]",
         "target": "pages"
       })
       lectern_storage.append(page)
@@ -1340,12 +1404,12 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
     # locked pages to be appended
     fallback_default = {
       "op": "append",
-      "source": f"{book_id}.locked[0]",
+      "source": f"{book.id}.locked[0]",
       "target": "pages"
     }
     fallback_default_lectern = {
       "op": "append",
-      "source": f"{book_id}.locked[1]",
+      "source": f"{book.id}.locked[1]",
       "target": "pages"
     }
     fallback_ops = [fallback_default] * len(enabled_ops)
@@ -1353,12 +1417,12 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
     if (i == 0):
       fallback_ops[0] = {
         "op": "append",
-        "source": f"{book_id}.locked[2]",
+        "source": f"{book.id}.locked[2]",
         "target": "pages"
       }
       fallback_ops_lectern[0] = {
         "op": "append",
-        "source": f"{book_id}.locked[3]",
+        "source": f"{book.id}.locked[3]",
         "target": "pages"
       }
 
@@ -1403,7 +1467,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
     }
     
     # add functions to the section
-    if "requirements" in section and len(section["requirements"]) > 0:
+    if section.requirements and len(section.requirements) > 0:
       function["conditions"].append(unlock_condition)
       fallback_function["conditions"].append(lock_condition)
       functions.append(function)
@@ -1470,12 +1534,12 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
 """
 Replaces {"insert": "X"} with custom data (header, locked text, or recipe)
 """
-def populate_insert(element: dict[Any, Any], book: Book, vanilla: Vanilla, lectern: bool = False) -> dict[Any, Any] | list[dict[Any,Any]|str]:
+def populate_insert(element: dict[Any, Any], book: Book, ctx: Context, lectern: bool = False) -> TextComponent:
   if "insert" in element.keys():
     # header
     if element["insert"] == "title":
       return {
-          "text": f"{book['name']}\n",
+          "text": f"{book.name}\n",
           "underlined": True,
           "color": "#4AA0C7"
         }
@@ -1489,7 +1553,7 @@ def populate_insert(element: dict[Any, Any], book: Book, vanilla: Vanilla, lecte
       return locked_text
     # recipes
     elif element["insert"] == "recipe":
-      return generate_recipe_display(element["recipe"], vanilla)
+      return generate_recipe_display(element["recipe"], ctx)
     else:
       raise ValueError(f'Unknown insert type: {element["insert"]}')
   return element
@@ -1499,17 +1563,17 @@ def populate_insert(element: dict[Any, Any], book: Book, vanilla: Vanilla, lecte
 """
 Converts the JSON text component into a string to be placed inside the page NBT
 """
-def stringify_page(page: dict[Any, Any] | list[dict[Any,Any]|str] | str, book: Book, vanilla: Vanilla, lectern: bool = False) -> str:
+def stringify_page(page: TextComponent, book: Book, ctx: Context, lectern: bool = False) -> str:
   page_with_header: list[dict[Any,Any]|str] = generate_lectern_header(book) if lectern else generate_book_header(book)
   # populate insertions for a single value
   if isinstance(page, dict):
     if "insert" in page.keys():
-      page = populate_insert(page, book, vanilla, lectern)
+      page = populate_insert(page, book, ctx, lectern)
   # populate insertions for a list
   elif isinstance(page, list):
     for i, element in enumerate(page):
       if isinstance(element, dict) and "insert" in element.keys():
-        page[i] = populate_insert(element, book, vanilla, lectern) #type: ignore
+        page[i] = populate_insert(element, book, ctx, lectern) #type: ignore
   # stringify the page
   if isinstance(page, list):
     page_with_header.extend(page)
@@ -1554,18 +1618,18 @@ Create the advancement to unlock a section
 """
 def generate_advancement(book: Book, section_index: int) -> Advancement | None:
   # get the target section (based on index)
-  section: Section = book["sections"][section_index]
-  module_id = book["id"]
-  all_criteria = book["criteria"]
+  section: Section = book.sections[section_index]
+  module_id = book.id
+  all_criteria = book.criteria
   criteria_keys: set[str] = set()
-  reqs = section["requirements"]
+  reqs = section.requirements
 
   # add requirements to advancement
-  for requirement in section["requirements"]:
+  for requirement in section.requirements:
     for criterion in requirement:
       criteria_keys.add(criterion)
-  if "prerequisites" in section:
-    for prereq in section["prerequisites"]:
+  if section.prerequisites:
+    for prereq in section.prerequisites:
       all_criteria[f"prereq/{prereq}"] = generate_prereq(prereq, module_id)
       criteria_keys.add(f"prereq/{prereq}")
       reqs.append([f"prereq/{prereq}"])
@@ -1605,7 +1669,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
         "type": "minecraft:score",
         "target": {
             "type": "minecraft:fixed",
-            "name": book["load_check"]
+            "name": book.load_check
         },
         "score": "load.status"
       },
@@ -1627,7 +1691,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
     "criteria": criteria,
     "requirements": reqs,
     "rewards": {
-      "function": f"gm4_guidebook:{module_id}/rewards/{section['name']}",
+      "function": f"gm4_guidebook:{module_id}/rewards/{section.name}",
     }
   })
 
@@ -1637,8 +1701,8 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
 Creates the advancement to show the toast
 """
 def generate_display_advancement(book: Book) -> Advancement:
-  module_name = book["name"]
-  icon = book["icon"]
+  module_name = book.name
+  icon = book.icon
   display = {
     "icon": icon, # taken from book dictionary
     "title": {
@@ -1670,9 +1734,9 @@ Creates the function that is granted when a section is unlocked
 """
 def generate_reward_function(section: Section, book_id: str, book_name: str, desc: str) -> Function:
   # check if any module needs to be loaded
-  if "enable" in section and len(section["enable"]) > 0:
+  if section.enable and len(section.enable) > 0:
     start = "execute"
-    for module_check in section["enable"]:
+    for module_check in section.enable:
       if module_check["load"] == -1:
         start += " unless "
       else:
@@ -1682,7 +1746,7 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
   else:
     start = ""
   # standard tellraw message
-  tellraw: list[dict[Any, Any] | str] = [
+  tellraw: list[TextComponent] = [
     "", 
     {
       "translate": "text.gm4.guidebook.discovered", 
@@ -1721,31 +1785,19 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
   # show tellraw and toast
   reward = Function([
     f'{start}tellraw @s {json.dumps(tellraw)}',
-    f"{start}advancement grant @s only gm4_guidebook:{book_id}/display/{section['name']}"
+    f"{start}advancement grant @s only gm4_guidebook:{book_id}/display/{section.name}"
   ])
   # grants other sections when this section is obtained
-  if "grants" in section:
-    reward.append([f"{start}advancement grant @s only gm4_guidebook:{book_id}/unlock/{grant}" for grant in section["grants"]])
+  if section.grants:
+    reward.append([f"{start}advancement grant @s only gm4_guidebook:{book_id}/unlock/{grant}" for grant in section.grants])
   return reward
-
-
-
-"""
-Create the function tag to setup page storages
-"""
-def generate_setup_storage_tag(book_ids: list[str]) -> FunctionTag:
-  return FunctionTag({
-    "values": [
-      f"gm4_guidebook:{book_id}/setup_storage" for book_id in book_ids
-    ]
-  })
 
 
 
 """
 Creates the function that populates the page storage
 """
-def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], book_dict: Book, vanilla: Vanilla) -> Function:
+def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], book: Book, ctx: Context) -> Function:
   populated_pages: list[str] = []
   populated_lectern: list[str] = []
   locked_pages: list[str] = []
@@ -1753,40 +1805,27 @@ def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], 
   # setup locked storage  
   locked_title: list[dict[Any, Any]|str] = [{'insert':'title'},{'insert':'locked_text_title'}]
   locked_text: list[dict[Any, Any]|str] = [{'insert':'locked_text'}]
-  locked_pages.append(stringify_page(locked_text, book_dict, vanilla, False))
-  locked_pages.append(stringify_page(locked_text, book_dict, vanilla, True))
-  locked_pages.append(stringify_page(locked_title, book_dict, vanilla, False))
-  locked_pages.append(stringify_page(locked_title, book_dict, vanilla, True))
+  locked_pages.append(stringify_page(locked_text, book, ctx, False))
+  locked_pages.append(stringify_page(locked_text, book, ctx, True))
+  locked_pages.append(stringify_page(locked_title, book, ctx, False))
+  locked_pages.append(stringify_page(locked_title, book, ctx, True))
 
   # populate the inserts and stringify the pages
   for page in pages:
-    populated_pages.append(stringify_page(page, book_dict, vanilla, False))
+    populated_pages.append(stringify_page(page, book, ctx, False))
   for page in lectern_pages:
-    populated_lectern.append(stringify_page(page, book_dict, vanilla, True))
+    populated_lectern.append(stringify_page(page, book, ctx, True))
 
   # write each command to be placed in the function
-  unlocked = f"execute if score {book_dict['load_check']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.pages set value {populated_pages}"
-  locked = f"execute if score {book_dict['load_check']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.locked set value {locked_pages}"
-  lectern = f"execute if score {book_dict['load_check']} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict['id']}.lectern set value {populated_lectern}"
+  unlocked = f"execute if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:pages {book.id}.pages set value {populated_pages}"
+  locked = f"execute if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:pages {book.id}.locked set value {locked_pages}"
+  lectern = f"execute if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:pages {book.id}.lectern set value {populated_lectern}"
   
   return Function([
     unlocked,
     locked,
     lectern
-  ])
-
-
-
-"""
-Creates the function tag to add a line to the table of contents
-"""
-def generate_add_toc_line_tag(book_ids: list[str]) -> FunctionTag:
-  return FunctionTag({
-    "values": [
-      f"gm4_guidebook:{book_id}/add_toc_line"for book_id in book_ids
-    ]
-  })
-
+  ], tags=["gm4_guidebook:setup_storage"])
 
 
 """
@@ -1798,7 +1837,7 @@ def generate_add_toc_line_function(book: Book) -> Function:
     "color": "#4AA0C7",
     "clickEvent": {
       "action": "run_command",
-      "value": f"/trigger gm4_guide set {book['trigger_id']}"
+      "value": f"/trigger gm4_guide set {book.trigger_id}"
     },
     "hoverEvent": {
       "action": "show_text",
@@ -1810,21 +1849,8 @@ def generate_add_toc_line_function(book: Book) -> Function:
     }
   }
   return Function([
-    f"execute if score $trigger gm4_guide matches {book['trigger_id']} if score {book['load_check']} load.status matches 1.. run data modify storage gm4_guidebook:temp page append value ' {json.dumps(text_component, ensure_ascii=False)}'"
-  ])
-
-
-
-"""
-Creates the function tag to summon a guidebook marker
-"""
-def generate_summon_marker_tag(book_ids: list[str]) -> FunctionTag:
-  return FunctionTag({
-    "values": [
-      f"gm4_guidebook:{book_id}/summon_marker"for book_id in book_ids
-    ]
-  })
-
+    f"execute if score $trigger gm4_guide matches {book.trigger_id} if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:temp page append value ' {json.dumps(text_component, ensure_ascii=False)}'"
+  ], tags=["gm4_guidebook:add_toc_line"])
 
 
 """
@@ -1832,66 +1858,41 @@ Creates the function to summon a guidebook marker with proper NBT
 """
 def generate_summon_marker_function(book: Book) -> Function:
   marker_nbt = nbtlib.Compound()
-  marker_nbt["CustomName"] = nbtlib.String(f'"gm4_{book["id"]}"')
+  marker_nbt["CustomName"] = nbtlib.String(f'"gm4_{book.id}"')
   marker_nbt["Tags"] = nbtlib.List([nbtlib.String("gm4_guide")])
   marker_nbt["data"] = nbtlib.Compound()
-  marker_nbt["data"]["type"] = nbtlib.String(book["module_type"])
-  if book["module_type"] == "expansion":
-    marker_nbt["data"]["base"] = nbtlib.String(book["base_module"])
-  marker_nbt["data"]["id"] = nbtlib.String(book["id"])
-  marker_nbt["data"]["trigger"] = nbtlib.Int(book["trigger_id"])
-  marker_nbt["data"]["module_name"] = nbtlib.String(book["name"])
+  marker_nbt["data"]["type"] = nbtlib.String(book.module_type)
+  if book.module_type == "expansion":
+    marker_nbt["data"]["base"] = nbtlib.String(book.base_module)
+  marker_nbt["data"]["id"] = nbtlib.String(book.id)
+  marker_nbt["data"]["trigger"] = nbtlib.Int(book.trigger_id)
+  marker_nbt["data"]["module_name"] = nbtlib.String(book.name)
   marker_nbt["data"]["toc_line"] = nbtlib.String(get_toc_line(book))
   marker_nbt["data"]["line_count"] = nbtlib.Int(len(split_into_lines(get_toc_line(book))))
   return Function([
-    f"execute if score {book['load_check']} load.status matches 1.. run summon marker ~ {get_pos_hash(book['id'])} ~ {nbtlib.serialize_tag(marker_nbt)}"# type: ignore
-  ])
-
-
-
-"""
-Creates the function tag to update the guidebook in hand
-"""
-def generate_update_hand_tag(book_ids: list[str]) -> FunctionTag:
-  return FunctionTag({
-    "values": [
-      f"gm4_guidebook:{book_id}/update_hand"for book_id in book_ids
-    ]
-  })
+    f"execute if score {book.load_check} load.status matches 1.. run summon marker ~ {get_pos_hash(book.id)} ~ {nbtlib.serialize_tag(marker_nbt)}"# type: ignore
+  ], tags=["gm4_guidebook:summon_marker"])
 
 
 """
 Creates the function to update the guidebook in hand
 """
 def generate_update_hand_function(book: Book) -> Function:
-  start = f"execute if score @s gm4_guide matches {book['trigger_id']} if score {book['load_check']} load.status matches 1.. run"
+  start = f"execute if score @s gm4_guide matches {book.trigger_id} if score {book.load_check} load.status matches 1.. run"
   return Function([
-    f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:{book['id']}",
-    f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_offhand] weapon.offhand loot gm4_guidebook:{book['id']}"
-  ])
-
-
-
-"""
-Creates the function tag to update the guidebook in lecterns
-"""
-def generate_update_lectern_tag(book_ids: list[str]) -> FunctionTag:
-  return FunctionTag({
-    "values": [
-      f"gm4_guidebook:{book_id}/update_lectern"for book_id in book_ids
-    ]
-  })
-
+    f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:{book.id}",
+    f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_offhand] weapon.offhand loot gm4_guidebook:{book.id}"
+  ], tags=["gm4_guidebook:update_hand"])
 
 
 """
 Creates the function tag to update the guidebook in lecterns
 """
 def generate_update_lectern_function(book: Book) -> Function:
-  start = f"execute if score $trigger gm4_guide matches {book['trigger_id']} if score {book['load_check']} load.status matches 1.. run"
+  start = f"execute if score $trigger gm4_guide matches {book.trigger_id} if score {book.load_check} load.status matches 1.. run"
   return Function([
-    f"{start} loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/{book['id']}"
-  ])
+    f"{start} loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/{book.id}"
+  ], tags=["gm4_guidebook:update_lectern"])
 
 
 """
@@ -1903,41 +1904,28 @@ def clamp(x: int|float):
 
 
 """
-Reads an item (or skin) and finds the average dominant color
+Reads an texture and finds the average dominant color
 """
-def get_item_color(item: str, vanilla: Vanilla, skin: bool = False) -> str:
-  paletted = None
-  if skin:
-    with Image.open(item) as img:
-      paletted = img.convert('P', palette=Image.ADAPTIVE, colors=4) # type: ignore
-  else:
-    if "minecraft:" in item:
-      item = item[10:]
-    textures = vanilla.mount("assets/minecraft/textures").assets["minecraft"].textures
-    for id, texture in textures.items():
-      if f"block/{item}" not in id and f"item/{item}" not in id:
-        continue
-      img = (texture.image) # type: ignore
-      paletted = img.convert('P', palette=Image.ADAPTIVE, colors=4) # type: ignore
+def get_texture_color(texture: PngFile|None) -> str:
+  if texture is None:
+    return "#000000"
 
   # Find the colors that occur most often
-  if paletted == None:
+  palette: list[int] = texture.image.convert('P', palette=Image.ADAPTIVE, colors=4).getpalette() # type: ignore ; PIL typing is weird
+  if not palette:
     return "#000000"
-  palette = paletted.getpalette() # type: ignore
-  if palette is None:
-    return "#000000"
-  
+
   # get average RGB values
   r, g, b = 0, 0, 0
   for i in range(0, 12, 3):
-    r += palette[i] # type: ignore
+    r += palette[i] # type: ignore ; PIL has 'Unknown' type on palette return
     g += palette[i+1] # type: ignore
     b += palette[i+2] # type: ignore
   r /= 4 # type: ignore
   g /= 4 # type: ignore
   b /= 4 # type: ignore
 
-  # bump saturation and value
+  # bump saturation and value to taste
   h, s, v = colorsys.rgb_to_hsv(r, g, b)# type: ignore
   s *= 1.5
   v *= 0.85
@@ -1948,67 +1936,24 @@ def get_item_color(item: str, vanilla: Vanilla, skin: bool = False) -> str:
 
 
 
-def beet_default(ctx: Context):
-  if not os.path.exists(f"{ctx.directory}/data/gm4_guidebook"):
-    return
+"""
+Looks for a single texture to represent a vanilla item, even in cases where the item has a model with multiple textures
+"""
+def intuit_item_texture(item_id: str, vanilla: Vanilla) -> PngFile|None:
+    item_textures = vanilla.mount("assets/minecraft/textures/item").assets["minecraft"].textures
+    block_textures = vanilla.mount("assets/minecraft/textures/block").assets["minecraft"].textures
+    item_id = item_id.removeprefix("minecraft:")
 
-  book_ids: list[Any] = []
-  # find guidebook JSON file
-  for file in os.listdir(f"{ctx.directory}/data/gm4_guidebook/"):
-    if not file.endswith(".json"):
-      continue
-
-    with open(f"{ctx.directory}/data/gm4_guidebook/{file}") as book_file:
-      book: Book = json.load(book_file)
-    
-    # get trigger id, generate one if not already existing
-    with open("gm4_guidebook/triggers.json") as triggers_file:
-      triggers: dict[Any, Any] = json.load(triggers_file)
-    if book['id'] not in triggers:
-      with open("gm4_guidebook/triggers.json", "w") as t:
-        triggers[book['id']] = triggers['__next__']
-        triggers['__next__'] += 1
-        t.write(json.dumps(triggers, indent=2, sort_keys=True))
-        t.write("\n")
-    book['trigger_id'] = triggers[book['id']]
-
-    # get description
-    if "description" not in book:
-      book["description"] = ctx.meta["gm4"]["website"]["description"]
-
-    # get load check
-    if "load_check" not in book:
-      book['load_check'] = book['id']
-    if "gm4_" not in book['load_check']:
-      book['load_check'] = f"gm4_{book['load_check']}"
-
-    book_ids.append(book["id"] if "id" in book else file[:-5])
-
-    # read the dict and get the page storages
-    loottable, lectern_loot, pages, lectern_pages = generate_loottable(book)
-    # add loot tables to datapack
-    ctx.data[f"gm4_guidebook:{book['id']}"] = loottable
-    ctx.data[f"gm4_guidebook:lectern/{book['id']}"] = lectern_loot
-
-    # add functions to datapack
-    ctx.data[f"gm4_guidebook:{book['id']}/add_toc_line"] = generate_add_toc_line_function(book)
-    ctx.data[f"gm4_guidebook:{book['id']}/setup_storage"] = generate_setup_storage_function(
-      pages, lectern_pages, book, ctx.inject(Vanilla))
-    ctx.data[f"gm4_guidebook:{book['id']}/summon_marker"] = generate_summon_marker_function(book)
-    ctx.data[f"gm4_guidebook:{book['id']}/update_hand"] = generate_update_hand_function(book)
-    ctx.data[f"gm4_guidebook:{book['id']}/update_lectern"] = generate_update_lectern_function(book)
-
-    # add advancements to datapack
-    for index, section in enumerate(book["sections"]):
-      if (advancement := generate_advancement(book, index)) is not None:
-        ctx.data[f"gm4_guidebook:{book['id']}/unlock/{section['name']}"] = advancement
-        ctx.data[f"gm4_guidebook:{book['id']}/display/{section['name']}"] = generate_display_advancement(book)
-        ctx.data[f"gm4_guidebook:{book['id']}/rewards/{section['name']}"] = generate_reward_function(
-          section, book["id"], book["name"], book["description"])
-
-  # add function tags to datapack
-  ctx.data["gm4_guidebook:add_toc_line"] = generate_add_toc_line_tag(book_ids)
-  ctx.data["gm4_guidebook:summon_marker"] = generate_summon_marker_tag(book_ids)
-  ctx.data["gm4_guidebook:update_hand"] = generate_update_hand_tag(book_ids)
-  ctx.data["gm4_guidebook:update_lectern"] = generate_update_lectern_tag(book_ids)
-  ctx.data["gm4_guidebook:setup_storage"] = generate_setup_storage_tag(book_ids)
+    # try invective mapping
+    if (r:=item_textures.get(f"item/{item_id}")):
+      return r
+    elif (r:=block_textures.get(f"block/{item_id}")):
+      return r
+    else: # exhaustively look for a fuzzy-esque name match
+      combined_textures = NamespaceContainer[Texture]()
+      combined_textures.merge(item_textures)
+      combined_textures.merge(block_textures)
+      for id, texture in combined_textures.items():
+        if f"block/{item_id}" not in id and f"item/{item_id}" not in id:
+          continue
+        return texture

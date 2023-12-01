@@ -1,0 +1,26 @@
+{
+    "name": "gm4_ender_hoppers:ender_hopper_minecart",
+    "input": {
+        "type": "shaped",
+        "recipe": [
+            "E",
+            "M"
+        ],
+        "key": {
+            "E": {
+                "item": "minecraft:player_head",
+                "nbt": "{gm4_machines:{id:\"ender_hopper\"}}"
+            },
+            "M": {
+                "item": "minecraft:minecart"
+            }
+        }
+    },
+    "output": {
+        "result": {
+            "type": "loot_table",
+            "name": "gm4_ender_hoppers:items/ender_hopper_minecart",
+            "count": 1
+        }
+    }
+}

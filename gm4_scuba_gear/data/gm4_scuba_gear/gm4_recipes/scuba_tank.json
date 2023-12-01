@@ -1,0 +1,37 @@
+{
+    "name": "gm4_scuba_gear:scuba_tank",
+    "input": {
+        "type": "shaped",
+        "recipe": [
+            "GPG",
+            "SGS",
+            "GGG"
+        ],
+        "key": {
+            "G": {
+                "item": "minecraft:gold_ingot"
+            },
+            "P": [
+                {
+                    "item": "minecraft:potion",
+                    "nbt": "{Potion:'minecraft:water_breathing'}"
+                },
+                {
+                    "item": "minecraft:potion",
+                    "nbt": "{Potion:'minecraft:long_water_breathing'}"
+                }
+            ],
+            "S": {
+                "item": "minecraft:scute"
+            }
+        }
+    },
+    "output": {
+        "type": "normal",
+        "result": {
+            "type": "loot_table",
+            "name": "gm4_scuba_gear:items/scuba_tank",
+            "count": 1
+        }
+    }
+}

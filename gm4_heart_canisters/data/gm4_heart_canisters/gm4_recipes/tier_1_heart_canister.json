@@ -1,0 +1,32 @@
+{
+    "name": "gm4_heart_canisters:tier_1_heart_canister",
+    "input": {
+        "type": "shaped",
+        "recipe": [
+            "OIO",
+            "GNG",
+            "OGO"
+        ],
+        "key": {
+            "O": {
+                "item": "minecraft:obsidian"
+            },
+            "I": {
+                "item": "minecraft:iron_block"
+            },
+            "G": {
+                "item": "minecraft:golden_apple"
+            },
+            "N": {
+                "item": "minecraft:nether_star"
+            }
+        }
+    },
+    "output": {
+        "result": {
+            "type": "loot_table",
+            "name": "gm4_heart_canisters:items/tier_1_heart_canister",
+            "count": 1
+        }
+    }
+}

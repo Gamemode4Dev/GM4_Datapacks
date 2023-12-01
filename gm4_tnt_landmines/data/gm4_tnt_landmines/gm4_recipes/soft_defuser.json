@@ -1,0 +1,33 @@
+{
+    "name": "gm4_tnt_landmines:soft_defuser",
+    "input": {
+        "type": "shaped",
+        "recipe": [
+            "HPH",
+            "OTO"
+        ],
+        "key": {
+            "H": {
+                "item": "minecraft:potion",
+                "nbt": "{Potion:'minecraft:stong_harming'}"
+            },
+            "P": {
+                "item": "minecraft:stone_pressure_plate"
+            },
+            "O": {
+                "item": "minecraft:obsidian"
+            },
+            "T": {
+                "item": "minecraft:player_head",
+                "nbt": "{gm4_tnt_landmines:{item:\"landmine\"}}"
+            }
+        }
+    },
+    "output": {
+        "result": {
+            "type": "loot_table",
+            "name": "gm4_tnt_landmines:items/soft_defuser",
+            "count": 1
+        }
+    }
+}

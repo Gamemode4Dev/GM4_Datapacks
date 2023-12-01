@@ -1,0 +1,35 @@
+{
+    "name": "gm4_teleportation_anchors:teleportation_anchor",
+    "input": {
+        "type": "shaped",
+        "recipe": [
+            "BEB",
+            "OLO",
+            "SSS"
+        ],
+        "key": {
+            "B": {
+                "item": "minecraft:end_stone_bricks"
+            },
+            "E": {
+                "item": "minecraft:ender_pearl"
+            },
+            "O": {
+                "item": "minecraft:crying_obsidian"
+            },
+            "L": {
+                "item": "minecraft:lodestone"
+            },
+            "S": {
+                "item": "minecraft:chiseled_stone_bricks"
+            }
+        }
+    },
+    "output": {
+        "result": {
+            "type": "loot_table",
+            "name": "gm4_teleportation_anchors:items/teleportation_anchor",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "gm4_relocators:relocator",
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "OSO",
+      "ABA",
+      "OSO"
+    ],
+    "key": {
+      "O": {
+        "item": "minecraft:obsidian"
+      },
+      "S": {
+        "item": "minecraft:shulker_shell"
+      },
+      "A": {
+        "item": "minecraft:amethyst_shard"
+      },
+      "B": [
+        {
+          "item": "minecraft:enchanted_book",
+          "nbt": "{StoredEnchantments:[{id:'minecraft:silk_touch'}]}"
+        },
+        {
+          "item": "minecraft:paper",
+          "nbt": "{Enchantments:[{id:'minecraft:silk_touch'}]}"
+        }
+      ]
+    }
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_relocators:items/relocator",
+      "count": 1
+    }
+  }
+}

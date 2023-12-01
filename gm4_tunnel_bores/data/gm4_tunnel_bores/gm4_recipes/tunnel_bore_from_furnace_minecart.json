@@ -1,0 +1,24 @@
+{
+    "name": "gm4_tunnel_bores:tunnel_bore_from_furnace_minecart",
+    "input": {
+        "type": "shapeless",
+        "ingredients": [
+            {
+                "item": "minecraft:furnace_minecart"
+            },
+            {
+                "item": "minecraft:tripwire_hook"
+            },
+            {
+                "item": "minecraft:piston"
+            }
+        ]
+    },
+    "output": {
+        "result": {
+            "type": "loot_table",
+            "name": "gm4_tunnel_bores:items/pison_minecart",
+            "count": 1
+        }
+    }
+}

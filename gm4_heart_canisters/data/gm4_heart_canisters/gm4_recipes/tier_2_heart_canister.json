@@ -1,0 +1,37 @@
+{
+    "name": "gm4_heart_canisters:tier_2_heart_canister",
+    "input": {
+        "type": "shaped",
+        "recipe": [
+            "EIE",
+            "HNH",
+            "EHE"
+        ],
+        "key": {
+            "E": {
+                "item": "minecraft:end_stone"
+            },
+            "I": {
+                "item": "minecraft:iron_block"
+            },
+            "H": {
+                "item": "minecraft:player_head",
+                "nbt": "{gm4_heart_canister:1b,gm4_heart_canister_tier:1b}",
+                "guidebook": {
+                    "type": "loot_table",
+                    "name": "gm4_heart_canisters:items/tier_1_heart_canister"
+                }
+            },
+            "N": {
+                "item": "minecraft:nether_star"
+            }
+        }
+    },
+    "output": {
+        "result": {
+            "type": "loot_table",
+            "name": "gm4_heart_canisters:items/tier_2_heart_canister",
+            "count": 1
+        }
+    }
+}

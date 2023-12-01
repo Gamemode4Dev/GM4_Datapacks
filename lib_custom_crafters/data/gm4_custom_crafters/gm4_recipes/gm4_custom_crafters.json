@@ -1,0 +1,35 @@
+{
+  "name": "gm4_custom_crafters:custom_crafter",
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "IBI",
+      "CTC",
+      "CFC"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "B": {
+        "item": "minecraft:light_blue_dye"
+      },
+      "C": {
+        "item": "minecraft:cobblestone"
+      },
+      "T": {
+        "item": "minecraft:crafting_table"
+      },
+      "F": {
+        "item": "minecraft:furnace"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_custom_crafters:items/custom_crafter",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "name": "gm4_scuba_gear:scuba_helmet",
+    "input": {
+        "type": "shaped",
+        "recipe": [
+            "GTG",
+            "GPG"
+        ],
+        "key": {
+            "G": {
+                "item": "minecraft:gold_ingot"
+            },
+            "T": {
+                "item": "minecraft:turtle_helmet"
+            },
+            "P": {
+                "item": "minecraft:glass_pane"
+            }
+        }
+    },
+    "output": {
+        "result": {
+            "type": "loot_table",
+            "name": "gm4_scuba_gear:items/scuba_helmet",
+            "count": 1
+        }
+    }
+}

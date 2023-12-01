@@ -1,0 +1,26 @@
+{
+    "name": "gm4_record_crafting:music_disc_11",
+    "input": {
+        "type": "shaped",
+        "recipe": [
+            "FFF",
+            "FDF",
+            "FFF"
+        ],
+        "key": {
+            "F": {
+                "item": "minecraft:flint"
+            },
+            "D": {
+                "item": "minecraft:coal"
+            }
+        }
+    },
+    "output": {
+        "result": {
+            "type": "item",
+            "name": "minecraft:music_disc_11",
+            "count": 1
+        }
+    }
+}

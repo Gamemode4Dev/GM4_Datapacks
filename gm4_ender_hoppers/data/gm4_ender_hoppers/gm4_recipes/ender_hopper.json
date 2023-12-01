@@ -1,0 +1,29 @@
+{
+    "name": "gm4_ender_hoppers:ender_hopper",
+    "input": {
+        "type": "shaped",
+        "recipe": [
+            "E",
+            "R",
+            "H"
+        ],
+        "key": {
+            "E": {
+                "item": "minecraft:ender_eye"
+            },
+            "R": {
+                "item": "minecraft:respawn_anchor"
+            },
+            "H": {
+                "item": "minecraft:hopper"
+            }
+        }
+    },
+    "output": {
+        "result": {
+            "type": "loot_table",
+            "name": "gm4_ender_hoppers:items/ender_hopper",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "gm4_auto_crafting:auto_crafter",
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      " C ",
+      "DTD",
+      " R "
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:copper_ingot"
+      },
+      "D": {
+        "item": "minecraft:redstone"
+      },
+      "T": {
+        "item": "minecraft:player_head",
+        "nbt": "{gm4_machines:{id:\"auto_crafter\"}}",
+        "guidebook": {
+          "type": "loot_table",
+          "name": "gm4_custom_crafters:items/custom_crafter"
+        }
+      },
+      "R": {
+        "item": "minecraft:repeater"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_auto_crafting:items/auto_crafter",
+      "count": 1
+    }
+  }
+}
