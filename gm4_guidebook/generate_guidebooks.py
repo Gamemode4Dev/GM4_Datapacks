@@ -741,7 +741,7 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
   item = loottable.split(":")[1].split("/")[-1]
   if "gm4" in loottable:	
     item = f"gm4:{item}"
-    
+
   loot = ctx.data.loot_tables[loottable].data
 
   if len(loot["pools"]) > 1:
@@ -1093,7 +1093,9 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
   if "count" in res and res["count"] > 1:
     res_count = {
       "translate": f"gui.gm4.guidebook.crafting.display.count.{res['count']}",
-      "fallback": ""
+      "fallback": "",
+      "color": "white",
+      "font": "gm4:guidebook"
     }
     NUMBERS = ["☐","☒","②","③","④","⑤","⑥","⑦","⑧","⑨","⑩","⑪","⑫","⑬","⑭","⑮","⑯","⑰","⑱","⑲","⑳"]
     result["with"][0]["text"] = NUMBERS[res["count"]] # type: ignore
