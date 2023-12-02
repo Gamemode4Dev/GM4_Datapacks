@@ -738,6 +738,10 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
 Reads a loot table (custom item) and creates a JSON text component to display the item in the guidebook
 """
 def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, TextComponent]:
+  item = loottable.split(":")[1].split("/")[-1]
+  if "gm4" in loottable:	
+    item = f"gm4:{item}"
+    
   loot = ctx.data.loot_tables[loottable].data
 
   if len(loot["pools"]) > 1:
@@ -785,7 +789,7 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
         "color": color
       },
       {
-        "translate": f"gui.gm4.guidebook.crafting.display.{item_id.replace(':','.')}",
+        "translate": f"gui.gm4.guidebook.crafting.display.{item.replace(':','.')}",
         "fallback": " ☒ ",
         "color": "white",
         "font": "gm4:guidebook"
@@ -941,7 +945,10 @@ Recursively reads vanilla item tags to find a single item to use
 def get_item_from_tag(item_tag: str, vanilla: Vanilla) -> str:
   # prepare item tag for searching
   if "minecraft" in item_tag:
-    item_tag = item_tag[10:]
+    if "#" in item_tag:
+      item_tag = item_tag[11:]
+    else:
+      item_tag = item_tag[10:]
   elif item_tag.split(":")[0] != "minecraft":
     raise ValueError("Only vanilla item tags are supported")
 
@@ -1074,141 +1081,105 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
   else:
     raise ValueError(f"Unknown output type: '{output_type}'")
   
-  if output_type == "replace":
-    pass
-    # FIXME the precious tree warns that replace is not implemented. Is this leftover test code?
-    results: list[TextComponent] = []
-    margin = " " * 4
-    display = [
-      margin,
-      d_ingredients[0],
-      d_ingredients[1],
-      d_ingredients[2],
-      shapeless,
-      "  ",
-      results[0],
-      results[1],
-      results[2],
-      "\n",
-      margin,
-      d_ingredients[3],
-      d_ingredients[4],
-      d_ingredients[5],
-      " → ",
-      results[3],
-      results[4],
-      results[5],
-      "\n",
-      margin,
-      d_ingredients[6],
-      d_ingredients[7],
-      d_ingredients[8],
-      margin,
-      results[6],
-      results[7],
-      results[8]
-    ]
+  # get display
+  if "item" in res["type"]:
+    res["id"] = res["name"]
+    result, result_under = item_to_display(res, ctx)
   else:
-    # get display
-    if "item" in res["type"]:
-      res["id"] = res["name"]
-      result, result_under = item_to_display(res, ctx)
-    else:
-      result, result_under = loottable_to_display(res["name"], ctx)
-    
-    # show count
-    res_count = ""
-    if "count" in res and res["count"] > 1:
-      res_count = {
-        "translate": f"gui.gm4.guidebook.crafting.display.count.{res['count']}",
-        "fallback": ""
+    result, result_under = loottable_to_display(res["name"], ctx)
+  
+  # show count
+  res_count = ""
+  if "count" in res and res["count"] > 1:
+    res_count = {
+      "translate": f"gui.gm4.guidebook.crafting.display.count.{res['count']}",
+      "fallback": ""
+    }
+    NUMBERS = ["☐","☒","②","③","④","⑤","⑥","⑦","⑧","⑨","⑩","⑪","⑫","⑬","⑭","⑮","⑯","⑰","⑱","⑲","⑳"]
+    result["with"][0]["text"] = NUMBERS[res["count"]] # type: ignore
+
+  ARROW = {
+    "translate": "gm4.second",
+    "fallback": "%1$s",
+    "with": [
+      {
+        "text": " → "
+      },
+      {
+        "translate": "gui.gm4.guidebook.crafting.display.arrow",
+        "fallback": " → ",
+        "color": "white",
+        "font": "gm4:guidebook"
       }
-      NUMBERS = ["☐","☒","②","③","④","⑤","⑥","⑦","⑧","⑨"]
-      result["with"][0]["text"] = NUMBERS[res["count"]]
-
-    ARROW = {
-      "translate": "gm4.second",
-      "fallback": "%1$s",
-      "with": [
-        {
-          "text": " → "
-        },
-        {
-          "translate": "gui.gm4.guidebook.crafting.display.arrow",
-          "fallback": " → ",
-          "color": "white",
-          "font": "gm4:guidebook"
-        }
-      ]
-    }
-    ARROW_UNDER = {
-      "translate": "gm4.second",
-      "fallback": "%1$s",
-      "with": [
-        {
-          "text": "  →",
-          "color": "#fcfcf0"
-        },
-        {
-          "translate": "gui.gm4.guidebook.crafting.display.arrow.under",
-          "fallback": "  →",
-          "color": "white",
-          "font": "gm4:guidebook"
-        }
-      ]
-    }
-
-    CRAFTING = {
-      "translate": "gui.gm4.guidebook.crafting.display.grid",
-      "fallback": "",
-      "color": "white",
-      "font": "gm4:guidebook"
-    }
-
-    margin = " " * 3
-    display: list[TextComponent] = [
-      "",
-      CRAFTING,
-      "\n",
-      margin,
-      d_ingredients[0],
-      d_ingredients[1],
-      d_ingredients[2],
-      shapeless,
-      "\n",
-      margin,
-      d_under[0],
-      d_under[1],
-      d_under[2],
-      "\n",
-      margin,
-      d_ingredients[3],
-      d_ingredients[4],
-      d_ingredients[5],
-      ARROW,
-      result,
-      res_count,
-      "\n",
-      margin,
-      d_under[3],
-      d_under[4],
-      d_under[5],
-      ARROW_UNDER,
-      result_under,
-      "\n",
-      margin,
-      d_ingredients[6],
-      d_ingredients[7],
-      d_ingredients[8],
-      "\n",
-      margin,
-      d_under[6],
-      d_under[7],
-      d_under[8]
     ]
+  }
+  ARROW_UNDER = {
+    "translate": "gm4.second",
+    "fallback": "%1$s",
+    "with": [
+      {
+        "text": "  →",
+        "color": "#fcfcf0"
+      },
+      {
+        "translate": "gui.gm4.guidebook.crafting.display.arrow.under",
+        "fallback": "  →",
+        "color": "white",
+        "font": "gm4:guidebook"
+      }
+    ]
+  }
+
+  CRAFTING = {
+    "translate": "gui.gm4.guidebook.crafting.display.grid",
+    "fallback": "",
+    "color": "white",
+    "font": "gm4:guidebook"
+  }
+
+  margin = " " * 3
+  display: list[TextComponent] = [
+    "",
+    CRAFTING,
+    "\n",
+    margin,
+    d_ingredients[0],
+    d_ingredients[1],
+    d_ingredients[2],
+    shapeless,
+    "\n",
+    margin,
+    d_under[0],
+    d_under[1],
+    d_under[2],
+    "\n",
+    margin,
+    d_ingredients[3],
+    d_ingredients[4],
+    d_ingredients[5],
+    ARROW,
+    result,
+    res_count,
+    "\n",
+    margin,
+    d_under[3],
+    d_under[4],
+    d_under[5],
+    ARROW_UNDER,
+    result_under,
+    "\n",
+    margin,
+    d_ingredients[6],
+    d_ingredients[7],
+    d_ingredients[8],
+    "\n",
+    margin,
+    d_under[6],
+    d_under[7],
+    d_under[8]
+  ]
   return display
 
-  return [""]
 
 
 
@@ -1363,7 +1334,7 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
             },
         "range": {"min": 1}
       }
-      if module_check["load"] <= 0:
+      if module_check["load"] <= 0: # type: ignore
         condition = {"condition": "minecraft:inverted", "term": condition}
       enable_conditions.append(condition)
 
