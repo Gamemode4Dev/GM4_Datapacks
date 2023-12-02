@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420002}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_name_tag": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -19,7 +19,7 @@
         ]
       }
     },
-    "page_1/requirement": {
+    "create_holographic_tag": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -41,11 +41,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "creation",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_name_tag"
         ]
       ],
       "pages": [
@@ -55,29 +55,29 @@
           },
           {
             "translate": "text.gm4.guidebook.holographic_tags.1",
-            "fallback": "Putting a renamed name tag in an item frame will create floating textbox. To remove the hologram, place an item frame in the original position."
+            "fallback": "Putting a renamed name tag in an item frame will create floating textbox.\n\nTo remove the hologram, place an item frame in the original position."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "colors",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "create_holographic_tag"
         ]
       ],
       "pages": [
         [
           {
             "translate": "text.gm4.guidebook.holographic_tags.2",
-            "fallback": "Placing the item frame on a wool block will copy the wool colour when creating the hologram."
+            "fallback": "Placing the item frame on a wool block will color the hologram."
           }
         ]
       ],
       "grants": [
-        "page_0"
+        "creation"
       ]
     }
   ]

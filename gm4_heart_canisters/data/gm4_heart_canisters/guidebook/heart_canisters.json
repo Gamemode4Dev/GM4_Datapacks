@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420060,SkullOwner:'$heart_canister_tier_1'}"
   },
   "criteria": {
-    "page_1/requirement": {
+    "obtain_nether_star": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -19,7 +19,7 @@
         ]
       }
     },
-    "page_2/requirement": {
+    "obtain_heart_canister": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -35,7 +35,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -45,56 +45,62 @@
           },
           {
             "translate": "text.gm4.guidebook.heart_canisters.1",
-            "fallback": "Heart Canisters can be used to increase the health of the player. Up to 20 additional hearts can be obtained. They can be crafted in a Custom Crafter using golden apples and a powerful core."
+            "fallback": "Heart Canisters can be used to increase the health of the player. Up to 20 additional hearts can be obtained.\n\nThey can be crafted in a Custom Crafter using golden apples and a powerful core."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "crafting_tier_1",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "obtain_nether_star"
         ]
       ],
       "pages": [
         [
           {
             "translate": "text.gm4.guidebook.heart_canisters.2",
-            "fallback": "The recipes for heart canister are as follows:"
+            "fallback": "The recipes for a heart canister is as follows:"
           },
           "\n",
           {
             "insert": "recipe",
             "recipe": "gm4_heart_canisters:tier_1_heart_canister"
-          },
-          "\n",
-          {
-            "insert": "recipe",
-            "recipe": "gm4_heart_canisters:tier_2_heart_canister"
           }
         ]
       ]
     },
     {
-      "name": "page_2",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_2/requirement"
+          "obtain_heart_canister"
         ]
       ],
       "pages": [
         [
           {
             "translate": "text.gm4.guidebook.heart_canisters.3",
-            "fallback": "Tier 2 heart canisters require five tier 1 canisters also in the inventory to function. Heart canisters of the same type must be in the same inventory slot to provide the proper amount of health.\nOnly up to five of each heart canister tier will give the player extra health."
+            "fallback": "Tier 2 heart canisters require five tier 1 canisters also in the inventory to function."
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_heart_canisters:tier_2_heart_canister"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.heart_canisters.4",
+            "fallback": "Heart canisters of the same type must be in the same inventory slot to provide the proper amount of health.\n\nOnly up to five of each heart canister tier will give the player extra health."
           }
         ]
       ],
       "grants": [
-        "page_1"
+        "crafting_tier_1"
       ]
     }
   ]
