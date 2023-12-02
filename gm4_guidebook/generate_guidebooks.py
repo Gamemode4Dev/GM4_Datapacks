@@ -740,7 +740,9 @@ Reads a loot table (custom item) and creates a JSON text component to display th
 def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, TextComponent]:
   item = loottable.split(":")[1].split("/")[-1]
   if "gm4" in loottable:	
-    item = f"gm4:{item}"
+    item = f"gm4.{item}"
+  else:
+    item = f"minecraft.{item}"
 
   loot = ctx.data.loot_tables[loottable].data
 
@@ -789,7 +791,7 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
         "color": color
       },
       {
-        "translate": f"gui.gm4.guidebook.crafting.display.{item.replace(':','.')}",
+        "translate": f"gui.gm4.guidebook.crafting.display.{item}",
         "fallback": " ☒ ",
         "color": "white",
         "font": "gm4:guidebook"
