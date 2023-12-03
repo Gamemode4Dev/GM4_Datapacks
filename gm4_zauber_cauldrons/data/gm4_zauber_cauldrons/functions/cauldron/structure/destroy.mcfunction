@@ -1,7 +1,7 @@
 # Dismantles a Zauber Cauldron, thereby removing the marker and any related entities.
 # @s = a Zauber Cauldron marker which is no longer within a minecraft:cauldron block
 # at @s alignxyz
-# run from cauldron/structure/validate/cauldron
+# run from cauldron/structure/validate/liquid
 
 # remove marker
 kill @s

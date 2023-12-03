@@ -18,7 +18,7 @@
     },
     "parent": "gm4:zauber_cauldrons_make_magicol",
     "criteria": {
-        "teleport_rabbit": {
+        "paint_biome": {
             "trigger": "minecraft:impossible"
         }
     }
