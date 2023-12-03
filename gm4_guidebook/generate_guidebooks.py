@@ -101,7 +101,9 @@ def beet_default(ctx: Context):
 
     # get load check
     if not book.load_check:
-      book.load_check = book.id if "gm4_" in book.id else f"gm4_{book.id}"
+      book.load_check = book.id
+    if "gm4_" not in book.load_check:
+      book.load_check = f"gm4_{book.load_check}"
 
     # get wiki link
     if not book.wiki_link:
