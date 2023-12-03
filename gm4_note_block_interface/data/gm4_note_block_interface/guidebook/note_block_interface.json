@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "tune_note_block": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "player": [
@@ -38,11 +38,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "tune_note_block"
         ]
       ],
       "pages": [
@@ -51,7 +51,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.note_block_interface.1",
+            "translate": "text.gm4.guidebook.note_block_interface.description",
             "fallback": "Tuning or playing a note block will show its note above it.\n\nSneaking while tuning will cause the pitch to go down instead of up."
           }
         ]

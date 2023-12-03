@@ -15,7 +15,9 @@
     }
   },
   "output": {
-    "result": {
+    "type": "special",
+    "function": "gm4_mountaineering:new_crampons",
+    "guidebook": {
       "type": "loot_table",
       "name": "gm4_mountaineering:items/crampons",
       "count": 1

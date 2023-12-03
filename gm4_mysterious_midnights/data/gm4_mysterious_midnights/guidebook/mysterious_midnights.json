@@ -6,7 +6,7 @@
   "criteria": {},
   "sections": [
     {
-      "name": "initial",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -15,8 +15,14 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.mysterious_midnights.1",
-            "fallback": "Every full moon, there is a high chance that a Mysterious Midnight event will occur.\n\nWhen a Mysterious Midnight event occurs, a howling sound will be heard.\n\nMysterious Midnight events can be skipped by sleeping the night away."
+            "translate": "text.gm4.guidebook.mysterious_midnights.description",
+            "fallback": "Every full moon, there is a high chance that a Mysterious Midnight event will occur.\n\nWhen a Mysterious Midnight event occurs, a howling sound will be heard."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.mysterious_midnights.description_1",
+            "fallback": "Mysterious Midnight events can usually be skipped by sleeping the night away."
           }
         ]
       ]

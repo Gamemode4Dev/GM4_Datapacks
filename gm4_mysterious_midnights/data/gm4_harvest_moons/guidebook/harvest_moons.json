@@ -1,0 +1,93 @@
+{
+  "id": "harvest_moons",
+  "name": "Harvest Moons",
+  "module_type": "expansion",
+  "load_check": "mysterious_midnights",
+  "base_module": "mysterious_midnights",
+  "icon": {
+    "item": "minecraft:wheat",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "farming_during_harvest_moon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "started_harvest_moon"
+              },
+              "score": "gm4_mm_data"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "night_active"
+              },
+              "score": "gm4_mm_data"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "difficulty"
+              },
+              "score": "gm4_mm_data"
+            },
+            "range": {
+              "min": 6
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:farmland"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "farming_during_harvest_moon"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.harvest_moons.description",
+            "fallback": "During a Harvest Moons event, random tick events, such as crop growth, will be 20 times quicker than normal."
+          }
+        ]
+      ]
+    }
+  ]
+}

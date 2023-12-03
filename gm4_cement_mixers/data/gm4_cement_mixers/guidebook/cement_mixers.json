@@ -8,7 +8,20 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_liquid_tank": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_machines:{id:\"liquid_tank\"}}"
+          }
+        ]
+      }
+    },
+    "obtain_concrete_powder": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -38,11 +51,14 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_concrete_powder"
+        ],
+        [
+          "obtain_liquid_tank"
         ]
       ],
       "pages": [
@@ -51,8 +67,8 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.cement_mixers.1",
-            "fallback": "Concrete powder put in a Water Tank will convert into concrete."
+            "translate": "text.gm4.guidebook.cement_mixers.usage",
+            "fallback": "A Water Tank can convert concrete powder into concrete and dirt into mud when placed inside the tank.\n\nThis uses 1/3 of a bucket of water."
           }
         ]
       ]

@@ -1,0 +1,50 @@
+{
+  "id": "enlarging_phantoms",
+  "name": "Enlarging Phantoms",
+  "module_type": "expansion",
+  "load_check": "midnight_menaces",
+  "base_module": "mysterious_midnights",
+  "icon": {
+    "item": "minecraft:phantom_membrane",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "fight_enlarged_phantom": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:phantom",
+              "nbt": "{Tags:['gm4_enlarged_phantom']}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "fight_enlarged_phantom"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.enlarging_phantoms.description",
+            "fallback": "During an Enlarging Phantoms event, larger phantoms will spawn in the sky, regardless of insomniacs.\n\nLarger phantoms have more health and greater attack strength."
+          }
+        ]
+      ]
+    }
+  ]
+}

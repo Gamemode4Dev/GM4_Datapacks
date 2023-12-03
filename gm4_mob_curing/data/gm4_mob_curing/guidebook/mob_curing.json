@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420002}"
   },
   "criteria": {
-    "page_1/requirement": {
+    "obtain_splash_potion": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -19,21 +19,20 @@
         ]
       }
     },
-    "page_3/requirement": {
-      "trigger": "minecraft:tick",
+    "find_potion_cleric": {
+      "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "player": [
+        "entity": [
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
+              "type": "minecraft:villager",
               "type_specific": {
-                "type": "player",
-                "looking_at": {
-                  "type": "minecraft:villager",
-                  "nbt": "{Tags:[\"gm4_mob_curing_potion_cleric\"]}"
-                }
-              }
+                "type": "villager",
+                "variant": "minecraft:plains"
+              },
+              "nbt": "{CustomName:'{\"translate\":\"entity.gm4.potion_cleric\",\"fallback\":\"Potion Cleric§\"}'}"
             }
           }
         ]
@@ -42,7 +41,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -51,53 +50,53 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.mob_curing.1",
+            "translate": "text.gm4.guidebook.mob_curing.description",
             "fallback": "Similar to Zombie curing, some mobs can be reverted to previous forms.\n\nThe curing process requires the player to splash the mob with a potion and drop an item at its feet."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "conversions",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "obtain_splash_potion"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.mob_curing.2",
-            "fallback": "Pig from Zomb. Piglin\n - Swiftness\n - Golden Carrot\n\nPiglin from Zomb. Piglin\n  OR Hoglin from Zoglin\n - Weakness\n - Golden Carrot\n\nMooshroom from Cow\n - Slowness\n - Red Mushroom\n - Brown Mushroom\n\n"
+            "translate": "text.gm4.guidebook.mob_curing.conversions",
+            "fallback": "Zomb. Piglin -> Pig\n - Swiftness\n - Golden Carrot\n\nZomb. Piglin -> Piglin\n  OR Zoglin -> Hoglin\n - Weakness\n - Golden Carrot\n\nWitch -> Potion Cleric\n - Weakness\n - Golden Apple"
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.mob_curing.3",
-            "fallback": "Pillager from Evoker\n - Slowness IV\n - Crossbow\n\nEvoker from Illusioner\n - Swiftness\n - Totem of Undying\n\nPotion Cleric from Witch\n - Weakness\n - Golden Apple"
+            "translate": "text.gm4.guidebook.mob_curing.conversions_1",
+            "fallback": "Evoker -> Pillager\n - Slowness IV\n - Crossbow\n\nIllusioner -> Evoker\n - Swiftness\n - Totem of Undying\n\nCow -> Mooshroom\n - Slowness\n - Red Mushroom\n - Brown Mushroom"
           }
         ]
       ]
     },
     {
-      "name": "page_3",
+      "name": "potion_cleric",
       "enable": [],
       "requirements": [
         [
-          "page_3/requirement"
+          "find_potion_cleric"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.mob_curing.4",
-            "fallback": "The Potion Cleric will trade all types of potions for emeralds. Each potion trade is randomized starting from 3 emeralds, up to 13 emeralds.\n\nThe curer will be rewarded temporarily with some discounted potion prices."
+            "translate": "text.gm4.guidebook.mob_curing.potion_cleric",
+            "fallback": "The Potion Cleric will sell various potions for emeralds. Each potion trade is randomized starting from 3 emeralds, up to 13 emeralds.\n\nThe curer will be rewarded temporarily with some discounted potion prices."
           }
         ]
       ],
       "grants": [
-        "page_1"
+        "conversions"
       ]
     }
   ]

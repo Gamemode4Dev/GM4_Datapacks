@@ -7,18 +7,18 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "use_fishing_rod": {
       "trigger": "minecraft:fishing_rod_hooked",
       "conditions": {}
     }
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "use_fishing_rod"
         ]
       ],
       "pages": [
@@ -27,8 +27,8 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.live_catch.1",
-            "fallback": "When fishing, if the player reels in a fish, instead of an item, an actual fish will be launched towards the player.\nThe fish that spawn have 1 health (half a heart), so they will easily die."
+            "translate": "text.gm4.guidebook.live_catch.description",
+            "fallback": "When fishing, if the player reels in a fish, instead of an item, an actual fish will be launched towards the player.\n\nThe fish that spawn have half a heart of health, so they will easily die."
           }
         ]
       ]

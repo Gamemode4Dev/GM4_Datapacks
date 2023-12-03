@@ -8,12 +8,27 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_liquid_tank": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "minecraft:wool"
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_machines:{id:\"liquid_tank\"}}"
+          }
+        ]
+      }
+    },
+    "obtain_water_bucket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:water_bucket"
+            ]
           }
         ]
       }
@@ -21,11 +36,14 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_liquid_tank"
+        ],
+        [
+          "obtain_water_bucket"
         ]
       ],
       "pages": [
@@ -34,8 +52,8 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.washing_tanks.1",
-            "fallback": "Water tanks can wash dyed items.\n\nTerracotta, beds, wool, carpet, glass, glass panes, leather armour, and shulker boxes can be undyed."
+            "translate": "text.gm4.guidebook.washing_tanks.usage",
+            "fallback": "Water tanks can wash dyed items placed inside the tank.\n\nTerracotta, beds, wool, carpet, glass, glass panes, leather armour, and shulker boxes can be undyed."
           }
         ]
       ]
