@@ -1,10 +1,11 @@
 {
+  "type": "display",
   "input": {
     "type": "shaped",
     "recipe": [
       "IBI",
-      "CTC",
-      "CFC"
+      "C C",
+      "C C"
     ],
     "key": {
       "I": {
@@ -15,12 +16,6 @@
       },
       "C": {
         "item": "minecraft:cobblestone"
-      },
-      "T": {
-        "item": "minecraft:crafting_table"
-      },
-      "F": {
-        "item": "minecraft:furnace"
       }
     }
   },

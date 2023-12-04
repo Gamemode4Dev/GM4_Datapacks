@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "ride_pig": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -36,7 +36,7 @@
         ]
       }
     },
-    "page_1/requirement": {
+    "till_soil": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -58,11 +58,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "ride_pig"
         ]
       ],
       "pages": [
@@ -71,30 +71,36 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.pig_tractors.1",
+            "translate": "text.gm4.guidebook.pig_tractors.description",
             "fallback": "Riding a pig while holding a hoe will till grass, dirt, or coarse dirt below the pig, with a chance to drop some loot."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "till_soil"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.pig_tractors.2",
-            "fallback": "Driving over crops with a Pig Tractor will harvest them. If the player has seeds or crops in their inventory, the crops will be automatically replanted.\n\nDriving over empty farmland will plant any crops in the players inventory, prioritizing crops in hand."
+            "translate": "text.gm4.guidebook.pig_tractors.usage",
+            "fallback": "Driving over crops with a Pig Tractor will harvest them.\n\nIf the player has seeds or crops in their inventory, the crops will be automatically replanted."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.pig_tractors.usage",
+            "fallback": "Driving over empty farmland will plant any crops in the players inventory, prioritizing crops in hand."
           }
         ]
       ],
       "grants": [
-        "page_0"
+        "description"
       ]
     }
   ]

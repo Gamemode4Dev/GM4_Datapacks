@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420002}"
   },
   "criteria": {
-    "page_1/requirement_1": {
+    "obtain_potion": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -19,7 +19,7 @@
         ]
       }
     },
-    "page_1/requirement_2": {
+    "obtain_golden_sword": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -34,7 +34,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -43,33 +43,33 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.potion_swords.1",
-            "fallback": "Attacking with a golden sword whilst a potion is in the inventory will cause an effect based on the potion. The potions are never consumed, but only certain potions work."
+            "translate": "text.gm4.guidebook.potion_swords.description",
+            "fallback": "Attacking with a golden sword whilst a potion is in the inventory will cause an effect based on the potion.\n\nThe potions are never consumed, but only certain potions work."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement_1"
+          "obtain_potion"
         ],
         [
-          "page_1/requirement_2"
+          "obtain_golden_sword"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.potion_swords.2",
-            "fallback": "The following potions can be used with Potion Swords:\n\nExtended Invisibility applies invisibility for 8 seconds to nearby players.\n\nInstant Health II applies Absorption I for 8 seconds to nearby players."
+            "translate": "text.gm4.guidebook.potion_swords.defensive_potions",
+            "fallback": "The following potions can be used with Potion Swords:\n\nExtended Invisibility applies invisibility for 8 seconds to allies.\n\nInstant Health II applies Absorption I for 8 seconds to allies."
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.potion_swords.3",
+            "translate": "text.gm4.guidebook.potion_swords.offensive_potions",
             "fallback": "Poison II withers nearby mobs for 4 seconds and transforms skeletons into wither skeletons without loot.\n\nExtended Slowness causes nearby mobs to be unable to move for 4 seconds."
           }
         ]

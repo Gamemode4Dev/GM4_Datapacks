@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420005}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_sapling": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -20,11 +20,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_sapling"
         ]
       ],
       "pages": [
@@ -33,7 +33,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.podzol_rooting_soil.1",
+            "translate": "text.gm4.guidebook.podzol_rooting_soil.description",
             "fallback": "Saplings dropped on podzol will replant themselves over time."
           }
         ]

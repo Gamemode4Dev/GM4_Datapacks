@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_skull": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -21,7 +21,7 @@
         ]
       }
     },
-    "page_1/requirement": {
+    "find_phantom_scarecrow": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -44,11 +44,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "creation",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_skull"
         ]
       ],
       "pages": [
@@ -57,30 +57,30 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.phantom_scarecrows.1",
+            "translate": "text.gm4.guidebook.phantom_scarecrows.creation",
             "fallback": "Placing a skull or zombie head on an armour stand and equipping it with a cursed chestplate will transform it into a phantom scarecrow."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "find_phantom_scarecrow"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.phantom_scarecrows.2",
-            "fallback": "Phantom scarecrows will shoot fireworks at phantoms above them.\n\nPhantoms shot by these projectiles will instantly die, but if the firework projectile hits a block, it will explode preemptively."
+            "translate": "text.gm4.guidebook.phantom_scarecrows.usage",
+            "fallback": "Phantom scarecrows will shoot fireworks at phantoms above them.\n\nPhantoms shot by these projectiles will instantly die, but if the firework projectile hits a block, it will explode."
           }
         ]
       ],
       "grants": [
-        "page_0"
+        "creation"
       ]
     }
   ]

@@ -7,26 +7,7 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "gm4:custom_crafters": true
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
-    "page_0/open_custom_crafter": {
+    "open_custom_crafter": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "location": [
@@ -37,26 +18,26 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"}],\"text\":\" \"}]}'}"
               }
             }
           }
         ]
       }
     },
-    "page_1/requirement_1": {
+    "obtain_shulker_shell": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:popped_chorus_fruit"
+              "minecraft:shulker_shell"
             ]
           }
         ]
       }
     },
-    "page_1/requirement_2": {
+    "obtain_silk_touch_book": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -69,7 +50,7 @@
         ]
       }
     },
-    "page_2/requirement_1": {
+    "obtain_empty_relocator": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -77,7 +58,20 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_relocator:1b}"
+            "nbt": "{gm4_machines:{id:\"relocator_empty\"}}"
+          }
+        ]
+      }
+    },
+    "obtain_filled_relocator": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_machines:{id:\"relocator_full\"}}"
           }
         ]
       }
@@ -85,14 +79,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
-        ],
-        [
-          "page_0/open_custom_crafter"
+          "open_custom_crafter"
         ]
       ],
       "pages": [
@@ -101,14 +92,14 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.relocators.1",
+            "translate": "text.gm4.guidebook.relocators.description",
             "fallback": "Relocators can be used to move machine blocks. They can be crafted in a Custom Crafter with end game materials."
           }
         ]
       ]
     },
     {
-      "name": "page_1-gm4_book_binders.-1",
+      "name": "crafting",
       "enable": [
         {
           "id": "gm4_book_binders",
@@ -117,155 +108,31 @@
       ],
       "requirements": [
         [
-          "page_1/requirement_1"
+          "obtain_shulker_shell"
         ],
         [
-          "page_1/requirement_2"
+          "obtain_silk_touch_book"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.relocators.2_0",
+            "translate": "text.gm4.guidebook.relocators.crafting",
             "fallback": "Relocators can be crafted with the following recipe:"
           },
-          [
-            "\n\n  ",
-            {
-              "translate": "container.gm4.custom_crafter",
-              "fallback": "Custom Crafter"
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "popped_chorus_fruit"
-              },
-              "color": "#873dba",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.popped_chorus_fruit",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "popped_chorus_fruit"
-              },
-              "color": "#873dba",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.popped_chorus_fruit",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "enchanted_book",
-                "tag": "{StoredEnchantments:[{id:\"minecraft:silk_touch\",lvl:1s}]}"
-              },
-              "color": "#591b3f",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.enchanted_book",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "popped_chorus_fruit"
-              },
-              "color": "#873dba",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.popped_chorus_fruit",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "player_head",
-                "tag": "{CustomModelData:3420027,gm4_relocator:1b,SkullOwner:{Id:[I;739224026,-1192800770,-2115274619,-970102126],Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NjM4MTY4ODE5NTcsInByb2ZpbGVJZCI6IjdkYTJhYjNhOTNjYTQ4ZWU4MzA0OGFmYzNiODBlNjhlIiwicHJvZmlsZU5hbWUiOiJHb2xkYXBmZWwiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzMwM2Q3YTkyNTIxZDZmZTU1M2ZiNGYyNzIxOTI2Yzk4YTVlMDdlMDhmZjdiNzg4OTg1OTc3MGM0Yjg0NmJlZDYifX19\"}]}},display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Relocator\",{\"translate\":\"item.gm4.relocator\"}],\"italic\":false,\"color\":\"yellow\"}'}}"
-              },
-              "color": "#9a00c9",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.gm4.relocator",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "popped_chorus_fruit"
-              },
-              "color": "#873dba",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.popped_chorus_fruit",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      "
-          ]
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_relocators:relocator"
+          }
         ]
       ],
-      "grants": [
-        "page_0"
-      ],
       "prerequisites": [
-        "page_0"
+        "description"
       ]
     },
     {
-      "name": "page_1-gm4_book_binders.1",
+      "name": "crafting_book_binders",
       "enable": [
         {
           "id": "gm4_book_binders",
@@ -274,191 +141,67 @@
       ],
       "requirements": [
         [
-          "page_1/requirement_1"
+          "obtain_shulker_shell"
         ],
         [
-          "page_1/requirement_2"
+          "obtain_silk_touch_book"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.relocators.2_0",
-            "fallback": "Relocators can be crafted with the following recipe:"
+            "translate": "text.gm4.guidebook.relocators.crafting",
+            "fallback": "A silk touch page can be used instead of a book. "
           },
-          [
-            "\n\n  ",
-            {
-              "translate": "container.gm4.custom_crafter",
-              "fallback": "Custom Crafter"
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "popped_chorus_fruit"
-              },
-              "color": "#873dba",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.popped_chorus_fruit",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "popped_chorus_fruit"
-              },
-              "color": "#873dba",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.popped_chorus_fruit",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "enchanted_book",
-                "tag": "{StoredEnchantments:[{id:\"minecraft:silk_touch\",lvl:1s}]}"
-              },
-              "color": "#591b3f",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.enchanted_book",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "popped_chorus_fruit"
-              },
-              "color": "#873dba",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.popped_chorus_fruit",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "player_head",
-                "tag": "{CustomModelData:3420027,gm4_relocator:1b,SkullOwner:{Id:[I;739224026,-1192800770,-2115274619,-970102126],Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NjM4MTY4ODE5NTcsInByb2ZpbGVJZCI6IjdkYTJhYjNhOTNjYTQ4ZWU4MzA0OGFmYzNiODBlNjhlIiwicHJvZmlsZU5hbWUiOiJHb2xkYXBmZWwiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzMwM2Q3YTkyNTIxZDZmZTU1M2ZiNGYyNzIxOTI2Yzk4YTVlMDdlMDhmZjdiNzg4OTg1OTc3MGM0Yjg0NmJlZDYifX19\"}]}},display:{Name:'{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Relocator\",{\"translate\":\"item.gm4.relocator\"}],\"italic\":false,\"color\":\"yellow\"}'}}"
-              },
-              "color": "#9a00c9",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.gm4.relocator",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n",
-            "      ",
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "popped_chorus_fruit"
-              },
-              "color": "#873dba",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.popped_chorus_fruit",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      "
-          ],
+          "\n",
           {
-            "text": "**",
-            "hoverEvent": {
-              "action": "show_text",
-              "contents": [
-                {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Silk Touch Enchanted Pages can be used\ninstead of the Silk Touch Book"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.relocators.2_1.book_binders"
-                    }
-                  ]
-                }
-              ]
-            }
+            "insert": "recipe",
+            "recipe": "gm4_relocators:relocator"
           }
         ]
       ],
-      "grants": [
-        "page_0"
-      ],
       "prerequisites": [
-        "page_0"
+        "description"
       ]
     },
     {
-      "name": "page_2",
+      "name": "usage_pick_up",
       "enable": [],
       "requirements": [
         [
-          "page_2/requirement_1"
+          "obtain_empty_relocator"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.relocators.3",
-            "fallback": "Placing an empty relocator on a machine block will pick up that machine and put it in the relocator.\n\nPlacing a full relocator on the ground will empty the relocator and place the machine there."
+            "translate": "text.gm4.guidebook.relocators.usage_pick_up",
+            "fallback": "Placing an empty relocator on a container will pick up it up, along with all of its contents.\n\nMachines such as custom crafters can also be picked up with no loss of items."
           }
         ]
       ],
       "grants": [
-        "page_1-gm4_book_binders.-1",
-        "page_1-gm4_book_binders.1"
+        "description"
+      ]
+    },
+    {
+      "name": "usage_place_down",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_filled_relocator"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.relocators.usage_place_down",
+            "fallback": "Placing a filled relocator on the ground will empty the relocator and place the block there.\n\nThe empty relocator will be returned."
+          }
+        ]
+      ],
+      "grants": [
+        "usage_pick_up"
       ]
     }
   ]

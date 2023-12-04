@@ -8,23 +8,27 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
-      "trigger": "minecraft:inventory_changed",
+    "open_custom_crafter": {
+      "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "player": [
+        "location": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
+            "condition": "minecraft:location_check",
             "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "gm4:custom_crafters": true
-                }
+              "block": {
+                "blocks": [
+                  "minecraft:dropper"
+                ],
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"}],\"text\":\" \"}]}'}"
               }
             }
           }
-        ],
+        ]
+      }
+    },
+    "obtain_flint": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
         "items": [
           {
             "items": [
@@ -37,148 +41,54 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
-      "requirements": [
-        [
-          "page_0/requirement"
-        ]
-      ],
+      "requirements": [],
       "pages": [
         [
           {
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.record_crafting.1",
-            "fallback": "Music Discs can be crafted with eight flint and a center item. Below is an example."
+            "translate": "text.gm4.guidebook.record_crafting.description",
+            "fallback": "Music Discs can be crafted with eight flint and a center item."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "crafting",
+      "enable": [],
+      "requirements": [
+        [
+          "open_custom_crafter"
+        ],
+        [
+          "obtain_flint"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.record_crafting.crafting",
+            "fallback": "Records are crafted with a different center item:"
           },
-          [
-            "\n\n  ",
-            {
-              "translate": "container.gm4.custom_crafter",
-              "fallback": "Custom Crafter"
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "flint"
-              },
-              "color": "#2b2b33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.flint",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "flint"
-              },
-              "color": "#2b2b33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.flint",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "flint"
-              },
-              "color": "#2b2b33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.flint",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "flint"
-              },
-              "color": "#2b2b33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.flint",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "yellow_dye"
-              },
-              "color": "#c9bf02",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.yellow_dye",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "flint"
-              },
-              "color": "#2b2b33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.flint",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "music_disc_13"
-              },
-              "color": "#54522d",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.music_disc_13",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "flint"
-              },
-              "color": "#2b2b33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.flint",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "flint"
-              },
-              "color": "#2b2b33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.flint",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "flint"
-              },
-              "color": "#2b2b33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.flint",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            }
-          ]
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_record_crafting:music_disc_cat"
+          }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.record_crafting.2",
-            "fallback": "Item\u2013\u2013-----Music Disc\n\nYellow Dye\u2013\u2013------13\nGreen Dye\u2014------Cat\nOrange Dye----Blocks\nRed Dye--------Chirp\nLime Dye---------Far\nPurple Dye\u2014\u2013----Mall\nMagenta Dye---Mellohi\nBlack Dye\u2014------Stal\nWhite Dye\u2014-----Strad\nEye of Ender--- Ward\nCoal\u2014------------11\nLight Blue Dye----Wait"
+            "translate": "text.gm4.guidebook.record_crafting.items",
+            "fallback": "Below is a list of items and their resulting disc:\n\nYellow Dye––------13\nGreen Dye—------Cat\nOrange Dye----Blocks\nRed Dye--------Chirp\nLime Dye---------Far"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.record_crafting.items",
+            "fallback": "Purple Dye—–----Mall\nMagenta Dye---Mellohi\nBlack Dye—------Stal\nWhite Dye—-----Strad\nEye of Ender--- Ward\nCoal—------------11\nLight Blue Dye----Wait"
           }
         ]
       ]

@@ -7,11 +7,14 @@ data_pack:
     data: data
 
 require:
+  - gm4_guidebook.generate_guidebooks.load_page_data
+  - gm4_guidebook.generate_guidebooks.load_custom_recipes
   - gm4.plugins.player_heads
 
 pipeline:
   - lib_custom_crafters.generate_item_tags
   - gm4.plugins.module.gm4_root_advancement
+  - gm4_guidebook.generate_guidebooks
   - gm4.plugins.player_heads.process_json_files
   - mecha
   - gm4.plugins.extend.library

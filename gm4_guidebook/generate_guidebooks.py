@@ -97,7 +97,7 @@ def beet_default(ctx: Context):
 
     # get description
     if not book.description:
-      book.description = ctx.meta["gm4"]["website"]["description"]
+      book.description = ctx.meta["gm4"]["website"]["description"] if "website" in ctx.meta["gm4"] else ""
 
     # get load check
     if not book.load_check:
@@ -107,7 +107,7 @@ def beet_default(ctx: Context):
 
     # get wiki link
     if not book.wiki_link:
-      book.wiki_link = ctx.meta['gm4']['wiki']
+      book.wiki_link = ctx.meta['gm4']['wiki'] if "wiki" in ctx.meta["gm4"] else ""
 
     # read the dict and get the page storages
     loottable, lectern_loot, pages, lectern_pages = generate_loottable(book)
