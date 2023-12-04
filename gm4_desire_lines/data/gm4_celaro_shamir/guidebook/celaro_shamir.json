@@ -60,7 +60,13 @@
         [
           {
             "translate": "text.gm4.guidebook.celaro_shamir.2",
-            "fallback": "The Celaro Shamir is found on Aluminium Bands. It can be placed onto boots.\n\nDesire Lines will not activate while wearing these boots. Sneaking in double-tall shrubbery (e.g. Tall Grass, Large Fern, Peony) will grant invisibility."
+            "fallback": "The Celaro Shamir is found on Aluminium Bands. It can be placed onto boots.\n\nDesire Lines will not activate while wearing these boots."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.celaro_shamir.2",
+            "fallback": "Sneaking in double-tall shrubbery (e.g. Tall Grass, Large Fern, Peony) with celaro will grant invisibility."
           }
         ]
       ]

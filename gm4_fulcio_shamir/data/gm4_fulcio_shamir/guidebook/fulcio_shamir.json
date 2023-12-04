@@ -8,7 +8,17 @@
     "nbt": "{CustomModelData:3420115}"
   },
   "criteria": {
-    "page_1/requirement": {
+    "obtain_fulcio_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'fulcio'}}"
+          }
+        ]
+      }
+    },
+    "obtain_fulcio_item": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -21,7 +31,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -30,24 +40,25 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.fulcio_shamir.1",
+            "translate": "text.gm4.guidebook.fulcio_shamir.description",
             "fallback": "Fulcio changes block placement. While sneaking, blocks can be placed in mid-air."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "obtain_fulcio_shamir",
+          "obtain_fulcio_item"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.fulcio_shamir.2",
+            "translate": "text.gm4.guidebook.fulcio_shamir.usage",
             "fallback": "The Fulcio Shamir is found on Barimium Bands. It can be placed onto compasses.\n\nHolding the tool and sneaking will create a temporary space where blocks can be placed."
           }
         ]

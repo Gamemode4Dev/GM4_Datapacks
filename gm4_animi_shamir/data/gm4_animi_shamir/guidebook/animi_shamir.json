@@ -8,7 +8,17 @@
     "nbt": "{CustomModelData:3420124}"
   },
   "criteria": {
-    "page_1/requirement": {
+    "obtain_animi_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'animi'}}"
+          }
+        ]
+      }
+    },
+    "obtain_animi_item": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -21,7 +31,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -30,25 +40,26 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.animi_shamir.1",
-            "fallback": "Animi allows items to return to the player upon death."
+            "translate": "text.gm4.guidebook.animi_shamir.description",
+            "fallback": "Animi allows items to return to their owner upon death."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "obtain_animi_shamir",
+          "obtain_animi_item"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.animi_shamir.2",
-            "fallback": "The Animi Shamir is found on Curie's Bismium Bands. It can be placed onto all tools, armour, weapons, and elytra.\n\nAnimi items do not drop when the player dies, instead appearing in the player's inventory upon respawning."
+            "translate": "text.gm4.guidebook.animi_shamir.usage",
+            "fallback": "The Animi Shamir is found on Curie's Bismium Bands. It can be placed onto tools, armour, weapons, and elytra.\n\nAnimi items do not drop when the owner dies, instead appearing in their inventory upon respawning."
           }
         ]
       ]

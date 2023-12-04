@@ -8,7 +8,17 @@
     "nbt": "{CustomModelData:3420119}"
   },
   "criteria": {
-    "page_1/requirement": {
+    "obtain_vigere_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'vigere'}}"
+          }
+        ]
+      }
+    },
+    "obtain_vigere_item": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -21,7 +31,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -30,25 +40,26 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.vigere_shamir.1",
-            "fallback": "Vigere alters shields to heal the player upon blocking an attack."
+            "translate": "text.gm4.guidebook.vigere_shamir.description",
+            "fallback": "Vigere alters shields to heal the user upon blocking an attack."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "obtain_vigere_shamir",
+          "obtain_vigere_item"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.vigere_shamir.2",
-            "fallback": "The Vigere Shamir is found on Barimium Bands. It can be placed onto shields.\n\nBlocking an attack will heal the player for 1.5 hearts and apply Mining Fatigue VI for 3 seconds. The shield will experience higher durability usage upon blocking, similar to thorns."
+            "translate": "text.gm4.guidebook.vigere_shamir.usage",
+            "fallback": "The Vigere Shamir is found on Barimium Bands. It can be placed onto shields.\n\nBlocking an attack will heal the user 1.5 hearts and apply Mining Fatigue VI for 3 seconds.\nHealing damages the shield more."
           }
         ]
       ]
