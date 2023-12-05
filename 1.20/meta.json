@@ -1,5 +1,5 @@
 {
-  "last_commit": "cb4fa13f0c0bdbc56cb4931cb154d26f35d72c0f",
+  "last_commit": "73e2bf76b4b013bc0217a14eb2d9306efbd2aa3e",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -695,7 +695,7 @@
         ]
       },
       "requires": [],
-      "description": "Splash item frames with invisibilty to make invisbible item frames! Great for interior decor!",
+      "description": "Splash item frames with invisibilty to make invisible item frames! Great for interior decor!",
       "recommends": [
         "gm4_chairs",
         "gm4_better_armour_stands",
