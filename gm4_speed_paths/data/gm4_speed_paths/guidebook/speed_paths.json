@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "stand_in_path": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -30,11 +30,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "stand_in_path"
         ]
       ],
       "pages": [
@@ -43,8 +43,8 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.speed_paths.1",
-            "fallback": "Dirt paths increase movement speed by 20%. This will stack with other speed effects such as from a beacon."
+            "translate": "text.gm4.guidebook.speed_paths.description",
+            "fallback": "Dirt paths increase movement speed by 20%.\n\nThis will stack with other speed effects such as that from beacons and potions."
           }
         ]
       ]

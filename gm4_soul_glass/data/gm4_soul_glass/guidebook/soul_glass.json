@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420002,Enchantments:[{id:\"minecraft:protection\",lvl:0s}]}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_soul_sand": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -19,7 +19,7 @@
         ]
       }
     },
-    "page_1/requirement": {
+    "obtain_soul_glass": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -35,11 +35,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_soul_sand"
         ]
       ],
       "pages": [
@@ -48,24 +48,30 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.soul_glass.1",
-            "fallback": "Soul Sand can be smelted in a blast furnace to get Soul Glass. When placed directly over a beacon, soul glass will corrupt the effects. To retrieve the soul glass, break the beacon."
+            "translate": "text.gm4.guidebook.soul_glass.description",
+            "fallback": "Soul Sand can be smelted in a blast furnace to get Soul Glass.\n\nWhen placed directly over a beacon, soul glass will corrupt the effects."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "obtain_soul_glass"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.soul_glass.2",
+            "translate": "text.gm4.guidebook.soul_glass.usage",
+            "fallback": "If soul glass is moved from its original location it will lose its properties.\n\nThe exception is moving it with a sticky piston up to one block away."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.soul_glass.corrupted_effects",
             "fallback": "Corrupted Effects:"
           },
           "\n\n",
@@ -99,7 +105,9 @@
           "\n - ",
           {
             "translate": "effect.minecraft.slow_falling"
-          },
+          }
+        ],
+        [
           "\n",
           {
             "translate": "effect.minecraft.strength"
@@ -119,7 +127,7 @@
         ]
       ],
       "grants": [
-        "page_0"
+        "description"
       ]
     }
   ]

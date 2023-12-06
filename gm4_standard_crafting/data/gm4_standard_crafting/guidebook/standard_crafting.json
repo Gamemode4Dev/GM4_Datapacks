@@ -8,26 +8,7 @@
     "nbt": "{CustomModelData:3420005}"
   },
   "criteria": {
-    "page_0/requirement": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "gm4:custom_crafters": true
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
-    "page_0/open_custom_crafter": {
+    "open_custom_crafter": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "location": [
@@ -38,28 +19,113 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Custom Crafter\",{\"translate\":\"container.gm4.custom_crafter\"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"}],\"text\":\" \"}]}'}"
               }
             }
           }
         ]
       }
     },
-    "page_2/requirement": {
+    "obtain_gravel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:gravel"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_sand": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sand"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_red_sand": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:red_sand",
+              "minecraft:red_dye"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_amethyst": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
               "minecraft:amethyst_block",
-              "minecraft:dripstone_block",
-              "minecraft:quartz_block"
+              "minecraft:amethyst_shard"
             ]
           }
         ]
       }
     },
-    "page_3/requirement": {
+    "obtain_dripstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dripstone_block",
+              "minecraft:pointed_dripstone"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_quartz": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:quartz_block",
+              "minecraft:quartz"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_cobweb": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cobweb",
+              "minecraft:string"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:wool"
+          }
+        ]
+      }
+    },
+    "ride_horse": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -88,33 +154,14 @@
         ]
       }
     },
-    "page_4/requirement": {
+    "obtain_gold_block": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:sandstone",
-              "minecraft:chiseled_sandstone",
-              "minecraft:cut_sandstone",
-              "minecraft:smooth_sandstone",
-              "minecraft:enchanted_golden_apple"
-            ]
-          }
-        ]
-      }
-    },
-    "page_5/requirement": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:red_sandstone",
-              "minecraft:chiseled_red_sandstone",
-              "minecraft:cut_red_sandstone",
-              "minecraft:smooth_red_sandstone",
-              "minecraft:red_dye"
+              "minecraft:enchanted_golden_apple",
+              "minecraft:gold_block"
             ]
           }
         ]
@@ -123,14 +170,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "default_recipes",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
-        ],
-        [
-          "page_0/open_custom_crafter"
+          "open_custom_crafter"
         ]
       ],
       "pages": [
@@ -139,1708 +183,265 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.standard_crafting.1",
-            "fallback": "The following recipes can be used in a Custom Crafter:"
-          },
-          [
-            "\n      ",
-            {
-              "item": {
-                "id": "flint"
-              },
-              "color": "#2b2b33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.flint",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "flint"
-              },
-              "color": "#2b2b33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.flint",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "flint"
-              },
-              "color": "#2b2b33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.flint",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "flint"
-              },
-              "color": "#2b2b33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.flint",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "gravel"
-              },
-              "color": "#403a30",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.gravel",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n\n      ",
-            {
-              "item": {
-                "id": "string"
-              },
-              "color": "#706a60",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.string",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "string"
-              },
-              "color": "#706a60",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.string",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "string"
-              },
-              "color": "#706a60",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.string",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "string"
-              },
-              "color": "#706a60",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.string",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "slime_ball"
-              },
-              "color": "#51ba23",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.slime_ball",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "string"
-              },
-              "color": "#706a60",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.string",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "cobweb"
-              },
-              "color": "#788587",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.cobweb",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "string"
-              },
-              "color": "#706a60",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.string",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "string"
-              },
-              "color": "#706a60",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.string",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "string"
-              },
-              "color": "#706a60",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.string",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            }
-          ]
+            "translate": "text.gm4.guidebook.standard_crafting.recipes",
+            "fallback": "The custom crafter can be used to perform some simple crafting operations.\n\nThe following recipes have been added."
+          }
         ],
         [
-          [
-            "      ",
-            {
-              "item": {
-                "id": "cobblestone_stairs"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone_stairs",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "cobblestone_stairs"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone_stairs",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "cobblestone_stairs"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone_stairs",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "cobblestone_stairs"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone_stairs",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "cobblestone",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.cobblestone\",\"italic\":false},{\"text\":\" (x4)\",\"italic\":true}],{\"translate\":\"block.minecraft.cobblestone\",\"italic\":false}]}]'}}"
-              },
-              "color": "#353b40",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.4",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      "
-          ],
           {
-            "text": "**",
-            "hoverEvent": {
-              "action": "show_text",
-              "contents": [
-                {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Any stairs work,\nas long as they are all the same"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.standard_crafting.2_0"
-                    }
-                  ]
-                }
-              ]
-            }
+            "translate": "text.gm4.guidebook.standard_crafting.stair_decraft",
+            "fallback": "Stairs can be reverted to their base block"
           },
-          [
-            "\n\n      ",
-            {
-              "item": {
-                "id": "cobblestone_slab"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone_slab",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "cobblestone_slab"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone_slab",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "cobblestone"
-              },
-              "color": "#353b40",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.cobblestone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      "
-          ],
+          "\n",
           {
-            "text": "**",
-            "hoverEvent": {
-              "action": "show_text",
-              "contents": [
-                {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Any slabs work,\nas long as they are both the same"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.standard_crafting.2_1"
-                    }
-                  ]
-                }
-              ]
-            }
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:stairs_decraft/oak_stairs"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.standard_crafting.slab_decraft",
+            "fallback": "Slabs can be reverted to their base block"
           },
-          [
-            "\n\n      ",
-            {
-              "item": {
-                "id": "light_blue_wool"
-              },
-              "color": "#34a2b3",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.light_blue_wool",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "string",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"item.minecraft.string\",\"italic\":false},{\"text\":\" (x3)\",\"italic\":true}],{\"translate\":\"item.minecraft.string\",\"italic\":false}]}]'}}"
-              },
-              "color": "#706a60",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.item.minecraft.string",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.3",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      "
-          ],
+          "\n",
           {
-            "text": "**",
-            "hoverEvent": {
-              "action": "show_text",
-              "contents": [
-                {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Any wool works"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.standard_crafting.2_2"
-                    }
-                  ]
-                }
-              ]
-            }
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:slab_decraft/stone_slab"
           }
         ]
       ]
     },
     {
-      "name": "page_2",
+      "name": "gravel_recipe",
       "enable": [],
       "requirements": [
         [
-          "page_2/requirement"
+          "obtain_gravel"
         ]
       ],
       "pages": [
         [
-          [
-            "      ",
-            {
-              "item": {
-                "id": "amethyst_block"
-              },
-              "color": "#7628b5",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.amethyst_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "amethyst_shard",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"item.minecraft.amethyst_shard\",\"italic\":false},{\"text\":\" (x4)\",\"italic\":true}],{\"translate\":\"item.minecraft.amethyst_shard\",\"italic\":false}]}]'}}"
-              },
-              "color": "#803eb5",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.item.minecraft.amethyst_shard",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.4",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n\n\n      ",
-            {
-              "item": {
-                "id": "dripstone_block"
-              },
-              "color": "#694f17",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.dripstone_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "pointed_dripstone",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.pointed_dripstone\",\"italic\":false},{\"text\":\" (x4)\",\"italic\":true}],{\"translate\":\"block.minecraft.pointed_dripstone\",\"italic\":false}]}]'}}"
-              },
-              "color": "#634d1d",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.item.minecraft.pointed_dripstone",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.4",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n\n\n      ",
-            {
-              "item": {
-                "id": "quartz_block"
-              },
-              "color": "#7e8c8a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.quartz_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "quartz",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"item.minecraft.quartz\",\"italic\":false},{\"text\":\" (x4)\",\"italic\":true}],{\"translate\":\"item.minecraft.quartz\",\"italic\":false}]}]'}}"
-              },
-              "color": "#8f9695",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.item.minecraft.quartz",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.4",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            }
-          ]
-        ]
-      ],
-      "prerequisites": [
-        "page_0"
-      ]
-    },
-    {
-      "name": "page_3",
-      "enable": [],
-      "requirements": [
-        [
-          "page_3/requirement"
-        ]
-      ],
-      "pages": [
-        [
-          [
-            "      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "iron_ingot"
-              },
-              "color": "#96958c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "iron_ingot"
-              },
-              "color": "#96958c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "leather"
-              },
-              "color": "#6b4200",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.leather",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "iron_ingot"
-              },
-              "color": "#96958c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "iron_horse_armor"
-              },
-              "color": "#7a796c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_horse_armor",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "iron_ingot"
-              },
-              "color": "#96958c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "iron_ingot"
-              },
-              "color": "#96958c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.iron_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n\n\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "leather"
-              },
-              "color": "#6b4200",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.leather",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "golden_horse_armor"
-              },
-              "color": "#d1bc36",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.golden_horse_armor",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_ingot"
-              },
-              "color": "#bfa313",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.gold_ingot",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n\n\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "leather"
-              },
-              "color": "#6b4200",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.leather",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "diamond_horse_armor"
-              },
-              "color": "#3e9e8b",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond_horse_armor",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            }
-          ]
-        ]
-      ],
-      "prerequisites": [
-        "page_0"
-      ]
-    },
-    {
-      "name": "page_4",
-      "enable": [],
-      "requirements": [
-        [
-          "page_4/requirement"
-        ]
-      ],
-      "pages": [
-        [
-          [
-            "      ",
-            {
-              "item": {
-                "id": "gold_block"
-              },
-              "color": "#b0950c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.gold_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_block"
-              },
-              "color": "#b0950c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.gold_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_block"
-              },
-              "color": "#b0950c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.gold_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "gold_block"
-              },
-              "color": "#b0950c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.gold_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "apple"
-              },
-              "color": "#ba0404",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.apple",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_block"
-              },
-              "color": "#b0950c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.gold_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "enchanted_golden_apple"
-              },
-              "color": "#d49c0f",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.enchanted_golden_apple",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "gold_block"
-              },
-              "color": "#b0950c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.gold_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_block"
-              },
-              "color": "#b0950c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.gold_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "gold_block"
-              },
-              "color": "#b0950c",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.gold_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n\n\n      ",
-            {
-              "item": {
-                "id": "sandstone"
-              },
-              "color": "#c9c11e",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.sandstone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "sand",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.sand\",\"italic\":false},{\"text\":\" (x4)\",\"italic\":true}],{\"translate\":\"block.minecraft.sand\",\"italic\":false}]}]'}}"
-              },
-              "color": "#bdb633",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.sand",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.4",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      "
-          ],
+          "\n\n\n",
           {
-            "text": "**",
-            "hoverEvent": {
-              "action": "show_text",
-              "contents": [
-                {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Any sandstone works"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.standard_crafting.5_0"
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          [
-            "\n\n      ",
-            {
-              "item": {
-                "id": "sandstone_slab"
-              },
-              "color": "#c9c11e",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.sandstone_slab",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "sand",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.sand\",\"italic\":false},{\"text\":\" (x2)\",\"italic\":true}],{\"translate\":\"block.minecraft.sand\",\"italic\":false}]}]'}}"
-              },
-              "color": "#bdb633",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.sand",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.2",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      "
-          ],
-          {
-            "text": "**",
-            "hoverEvent": {
-              "action": "show_text",
-              "contents": [
-                {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Any sandstone slabs work"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.standard_crafting.5_1"
-                    }
-                  ]
-                }
-              ]
-            }
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:gravel"
           }
         ]
       ],
       "prerequisites": [
-        "page_0"
+        "default_recipes"
       ]
     },
     {
-      "name": "page_5",
+      "name": "sand_recipe",
       "enable": [],
       "requirements": [
         [
-          "page_5/requirement"
+          "obtain_sand"
         ]
       ],
       "pages": [
         [
-          [
-            "      ",
-            {
-              "item": {
-                "id": "red_sandstone"
-              },
-              "color": "#b8602e",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.red_sandstone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "red_sand",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.red_sand\",\"italic\":false},{\"text\":\" (x4)\",\"italic\":true}],{\"translate\":\"block.minecraft.red_sand\",\"italic\":false}]}]'}}"
-              },
-              "color": "#ad643b",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.red_sand",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.4",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      "
-          ],
           {
-            "text": "**",
-            "hoverEvent": {
-              "action": "show_text",
-              "contents": [
-                {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Any red sandstone works"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.standard_crafting.6_0"
-                    }
-                  ]
-                }
-              ]
-            }
+            "translate": "text.gm4.guidebook.standard_crafting.sandstone_decraft",
+            "fallback": "Any sandstone can be converted into sand"
           },
-          [
-            "\n\n      ",
-            {
-              "item": {
-                "id": "red_sandstone_slab"
-              },
-              "color": "#ad643b",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.red_sandstone_slab",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "red_sand",
-                "tag": "{display:{Name:'[{\"translate\":\"%1$s%3427656$s\",\"with\":[[{\"translate\":\"block.minecraft.red_sand\",\"italic\":false},{\"text\":\" (x2)\",\"italic\":true}],{\"translate\":\"block.minecraft.red_sand\",\"italic\":false}]}]'}}"
-              },
-              "color": "#ad643b",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.block.minecraft.red_sand",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.count.2",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                }
-              ]
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      "
-          ],
+          "\n\n",
           {
-            "text": "**",
-            "hoverEvent": {
-              "action": "show_text",
-              "contents": [
-                {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Any red sandstone slabs work"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.standard_crafting.6_1"
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          [
-            "\n\n      ",
-            {
-              "item": {
-                "id": "sand"
-              },
-              "color": "#bdb633",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.sand",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "sand"
-              },
-              "color": "#bdb633",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.sand",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "sand"
-              },
-              "color": "#bdb633",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.sand",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "sand"
-              },
-              "color": "#bdb633",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.sand",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "red_dye"
-              },
-              "color": "#9c0e0e",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.red_dye",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "sand"
-              },
-              "color": "#bdb633",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.sand",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "red_sand"
-              },
-              "color": "#ad643b",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.red_sand",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "sand"
-              },
-              "color": "#bdb633",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.sand",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "sand"
-              },
-              "color": "#bdb633",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.sand",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "sand"
-              },
-              "color": "#bdb633",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.sand",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            }
-          ]
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:sand"
+          }
         ]
       ],
       "prerequisites": [
-        "page_0"
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "red_sand_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_red_sand"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.standard_crafting.red_sandstone_decraft",
+            "fallback": "Any red sandstone can be converted into red sand"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:red_sand"
+          }
+        ],
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:red_sand_dye"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "amethyst_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_amethyst"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:amethyst_shard"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "dripstone_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_dripstone"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:pointed_dripstone"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "quartz_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_quartz"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:quartz"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "string_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_wool"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.standard_crafting.string_craft",
+            "fallback": "Any wool can be ripped into string"
+          },
+          "\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:string"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "cobweb_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_cobweb"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:cobweb"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "horse_armor_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "ride_horse"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.standard_crafting.horse_armor",
+            "fallback": "Diamond, iron, and golden armor can be crafted"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:diamond_horse_armor"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "enchanted_golden_apple_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_gold_block"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:enchanted_golden_apple"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
       ]
     }
   ]

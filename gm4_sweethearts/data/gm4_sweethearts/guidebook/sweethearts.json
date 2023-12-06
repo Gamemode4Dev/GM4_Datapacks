@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420002}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_flower": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -20,11 +20,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_flower"
         ]
       ],
       "pages": [
@@ -33,8 +33,8 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.sweethearts.1",
-            "fallback": "Sneaking while holding a small flower will transfer health to a nearby player in need. All small flowers except wither roses work."
+            "translate": "text.gm4.guidebook.sweethearts.description",
+            "fallback": "Sneaking while holding a small flower will transfer health to a nearby ally in need.\n\nAll small flowers except wither roses work."
           }
         ]
       ]

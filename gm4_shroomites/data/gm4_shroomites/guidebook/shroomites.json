@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "step_on_mycelium": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -26,15 +26,30 @@
           }
         ]
       }
+    },
+    "stand_in_blocker": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "tag": "gm4_shroomites:spore_opaque"
+              }
+            }
+          }
+        ]
+      }
     }
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "step_on_mycelium"
         ]
       ],
       "pages": [
@@ -43,10 +58,30 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.shroomites.1",
-            "fallback": "Mooshrooms have a rare chance to spawn a shroomite mushroom.\n\nA shroomite will spawn spores that spread mycelium to nearby blocks and convert Cows to Mooshrooms."
+            "translate": "text.gm4.guidebook.shroomites.description",
+            "fallback": "Mooshrooms have a rare chance to spawn a shroomite mushroom.\n\nA shroomite will spawn spores that spread mycelium to nearby dirt, and convert cows to mooshrooms."
           }
         ]
+      ]
+    },
+    {
+      "name": "spreading",
+      "enable": [],
+      "requirements": [
+        [
+          "stand_in_blocker"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.shroomites.spreading",
+            "fallback": "Spores will float in the air and can produce new shroomites.\n\nBlocks with collision, water, lava, cobwebs, powdered snow, and sunflowers can block shroomite spores from spreading."
+          }
+        ]
+      ],
+      "prerequisites": [
+        "description"
       ]
     }
   ]

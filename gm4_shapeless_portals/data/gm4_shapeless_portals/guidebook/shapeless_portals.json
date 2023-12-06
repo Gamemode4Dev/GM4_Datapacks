@@ -1,0 +1,57 @@
+{
+  "id": "shapeless_portals",
+  "name": "Shapeless Portals",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:crying_obsidian",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "light_portal": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:flint_and_steel",
+                "minecraft:fire_charge"
+              ]
+            }
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "tag": "gm4_shapeless_portals:portal_block"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "light_portal"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.shapeless_portals.description",
+            "fallback": "Portals can be of all shapes and sizes as long as it is an enclosed loop of obsidian.\n\nCrying obsidian also works to create a portal."
+          }
+        ]
+      ]
+    }
+  ]
+}
