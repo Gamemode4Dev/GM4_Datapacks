@@ -38,7 +38,7 @@
           },
           {
             "translate": "text.gm4.guidebook.desire_lines.description",
-            "fallback": "Walking or sprinting will trample blocks beneath the player.\n\nGrass blocks will trample into dirt and dirt into coarse dirt."
+            "fallback": "Walking or sprinting over grass and dirt will trample blocks.\n\nGrass blocks will trample into dirt and dirt into coarse dirt."
           }
         ]
       ]

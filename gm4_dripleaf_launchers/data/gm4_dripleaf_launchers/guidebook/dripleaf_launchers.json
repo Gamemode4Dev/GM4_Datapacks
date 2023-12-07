@@ -36,7 +36,7 @@
           },
           {
             "translate": "text.gm4.guidebook.dripleaf_launchers.description",
-            "fallback": "Sending a redstone signal to a big dripleaf with partial tilt will launch any player on it into the air."
+            "fallback": "Sending a redstone signal to a big dripleaf with partial tilt will launch anyone on it into the air."
           }
         ]
       ]

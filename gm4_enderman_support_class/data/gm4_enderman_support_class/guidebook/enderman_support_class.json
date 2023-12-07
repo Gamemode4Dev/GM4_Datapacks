@@ -39,7 +39,7 @@
           },
           {
             "translate": "text.gm4.guidebook.enderman_support_class.description",
-            "fallback": "Endermen will buff nearby hostile mobs, giving them extra abilities.\n\nSome mobs get potion effects, while others give effects to nearby players."
+            "fallback": "Endermen will buff nearby hostile mobs, giving them extra abilities.\n\nSome mobs get potion effects, while other mobs give effects when nearby."
           }
         ]
       ]

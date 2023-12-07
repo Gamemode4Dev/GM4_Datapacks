@@ -51,7 +51,7 @@
           },
           {
             "translate": "text.gm4.guidebook.mob_curing.description",
-            "fallback": "Similar to Zombie curing, some mobs can be reverted to previous forms.\n\nThe curing process requires the player to splash the mob with a potion and drop an item at its feet."
+            "fallback": "Similar to Zombie curing, some mobs can be reverted to previous forms.\n\nThe curing process requires one to splash the mob with a potion and drop an item at its feet."
           }
         ]
       ]

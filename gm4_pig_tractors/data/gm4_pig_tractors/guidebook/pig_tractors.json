@@ -89,13 +89,13 @@
         [
           {
             "translate": "text.gm4.guidebook.pig_tractors.harvesting",
-            "fallback": "Driving over crops with a Pig Tractor will harvest them.\n\nIf the player has seeds or crops in their inventory, the crops will be automatically replanted."
+            "fallback": "Driving over crops with a Pig Tractor will harvest them.\n\nIf the farmer has seeds or crops in their inventory, the crops will be automatically replanted."
           }
         ],
         [
           {
             "translate": "text.gm4.guidebook.pig_tractors.planting_on_empty",
-            "fallback": "Driving over empty farmland will plant any crops in the players inventory, prioritizing crops in hand."
+            "fallback": "Driving over empty farmland will plant any crops in the farmer's inventory, prioritizing crops in hand."
           }
         ]
       ],

@@ -71,7 +71,7 @@
           },
           {
             "translate": "text.gm4.guidebook.nightmare_nights.description",
-            "fallback": "During a Nightmare Nights event, players cannot sleep the night away. Attempting to sleep will deal instant damage to the player.\n\nAdditionally, multiple Mysterious Midnights events will occur."
+            "fallback": "Nightmare Nights cannot be slept away. Attempting to sleep will deal instant damage.\n\nAdditionally, multiple Mysterious Midnights events will occur."
           }
         ]
       ]

@@ -62,7 +62,7 @@
           },
           {
             "translate": "text.gm4.guidebook.ink_spitting_squid.normal_squid",
-            "fallback": "Swimming underwater near a squid will cause it to ink the player.\n\nWhen affected by squid ink, blindness and nausea effects occur."
+            "fallback": "Swimming underwater near a squid will cause it to ink the diver.\n\nWhen affected by squid ink, blindness and nausea effects occur."
           }
         ]
       ]
@@ -79,7 +79,7 @@
         [
           {
             "translate": "text.gm4.guidebook.ink_spitting_squid.glow_squid",
-            "fallback": "When glow squids ink, they have the opposite effect from squids.\n\nPlayers inked with glow ink are affected by night vision and glowing."
+            "fallback": "When glow squids ink, they have the opposite effect from squids.\n\nThose inked with glow ink are affected by night vision and glowing."
           }
         ]
       ],

@@ -45,7 +45,7 @@
           },
           {
             "translate": "text.gm4.guidebook.heart_canisters.description",
-            "fallback": "Heart Canisters can be used to increase the health of the player. Up to 20 additional hearts can be obtained.\n\nThey can be crafted in a Custom Crafter using golden apples and a powerful core."
+            "fallback": "Heart Canisters can be used to increase health. Up to 20 additional hearts can be obtained.\n\nThey can be crafted in a Custom Crafter using golden apples and a powerful core."
           }
         ]
       ]
@@ -95,7 +95,7 @@
         [
           {
             "translate": "text.gm4.guidebook.heart_canisters.stacking",
-            "fallback": "Heart canisters of the same type must be in the same inventory slot to provide the proper amount of health.\n\nOnly up to five of each heart canister tier will give the player extra health."
+            "fallback": "Heart canisters of the same type must be in the same inventory slot to provide the proper amount of health.\n\nOnly up to five of each heart canister tier will give extra health."
           }
         ]
       ],

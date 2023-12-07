@@ -62,7 +62,7 @@
           },
           {
             "translate": "text.gm4.guidebook.liquid_tanks.description",
-            "fallback": "Liquid Tanks allow players to store various liquids in bulk.\n\nThe first slot of the liquid tank acts as both the input and output of the liquid tank."
+            "fallback": "Liquid Tanks can store various liquids in bulk.\n\nThe first slot of the liquid tank acts as both the input and output of the liquid tank."
           }
         ]
       ]

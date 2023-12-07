@@ -51,25 +51,25 @@
         [
           {
             "translate": "text.gm4.guidebook.standard_liquids.rabbit_stew_and_beetroot_soup",
-            "fallback": "Rabbit Stew Tank\n- Drains rabbit stew\n- Fills bowls\n- Feeds players\n\nBeetroot Soup Tank\n- Drains beetroot soup, beetroot\n- Fills bowls\n- Feeds players"
+            "fallback": "Rabbit Stew Tank\n- Drains rabbit stew\n- Fills bowls\n- Feeds drinkers\n\nBeetroot Soup Tank\n- Drains beetroot soup, beetroot\n- Fills bowls\n- Feeds drinkers"
           }
         ],
         [
           {
             "translate": "text.gm4.guidebook.standard_liquids.mushroom_stew_and_milk",
-            "fallback": "Mushroom Stew Tank\n- Drains mushroom stew\n- Fills bowls\n- Milks mooshrooms\n- Feeds players\n\nMilk Tank\n- Drains milk buckets\n- Fills buckets\n- Milks cows\n- Clear mob effects"
+            "fallback": "Mushroom Stew Tank\n- Drains mushroom stew\n- Fills bowls\n- Milks mooshrooms\n- Feeds drinkers\n\nMilk Tank\n- Drains milk buckets\n- Fills buckets\n- Milks cows\n- Clear mob effects"
           }
         ],
         [
           {
             "translate": "text.gm4.guidebook.standard_liquids.honey",
-            "fallback": "Honey Tanks\n- Drains honey bottles, honey blocks\n- Fills bottles\n- Casts honey blocks into cauldrons\n- Clears mob poison\n- Feeds players"
+            "fallback": "Honey Tanks\n- Drains honey bottles, honey blocks\n- Fills bottles\n- Casts honey blocks into cauldrons\n- Clears mob poison\n- Feeds drinkers"
           }
         ],
         [
           {
             "translate": "text.gm4.guidebook.standard_liquids.experience",
-            "fallback": "Experience Tanks\n- Drains bottles o' enchanting, enchanted books\n- Fills bottles\n- Absorbs experience orbs, player experience points\n- Fills player experience points"
+            "fallback": "Experience Tanks\n- Drains bottles o' enchanting, enchanted books\n- Fills bottles\n- Absorbs experience orbs, experience points\n- Fills experience points"
           }
         ]
       ]

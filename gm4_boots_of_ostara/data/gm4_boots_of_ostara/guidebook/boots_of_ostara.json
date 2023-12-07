@@ -134,7 +134,7 @@
         [
           {
             "translate": "text.gm4.guidebook.boots_of_ostara.grass",
-            "fallback": "Wearing the boots and holding a grass block in the offhand will spread grass onto dirt beneath the player.\n"
+            "fallback": "Wearing the boots and holding a grass block in the offhand will spread grass onto dirt beneath the wearer.\n"
           }
         ],
         [
