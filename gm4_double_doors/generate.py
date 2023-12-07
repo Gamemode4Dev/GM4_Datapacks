@@ -2,11 +2,13 @@ from typing import ClassVar
 from pathlib import Path
 import csv
 from dataclasses import dataclass
+import logging
 
 from beet import Context, Structure, TextFile, subproject
 from beet.contrib.vanilla import Vanilla
 from nbtlib import parse_nbt
 
+logger = logging.getLogger(__name__)
 
 class StringStructure(TextFile):
     """Create class that loads .snbt files into the beet project"""
@@ -45,6 +47,7 @@ def beet_default(ctx: Context):
     sound_ids = read_sound_id_from_csv()
     for wood in wood_types:
         if not wood in sound_ids: # if sound is not specified in csv, default to normal wooden door sound
+            logger.info(f"{wood} door has no sound configured sound effect. Using the default instead")
             sound_ids[wood] = DoorSound(open='minecraft:block.wooden_door.open', close='minecraft:block.wooden_door.close')
     ctx.meta['sound_ids'] = sound_ids  # make sound dict accessible to bolt
 
