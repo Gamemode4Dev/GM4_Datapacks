@@ -8,7 +8,7 @@
     "key": {
       "H": {
         "item": "minecraft:potion",
-        "nbt": "{Potion:'minecraft:stong_harming'}"
+        "nbt": "{Potion:'minecraft:strong_harming'}"
       },
       "P": {
         "item": "minecraft:stone_pressure_plate"
@@ -18,7 +18,11 @@
       },
       "T": {
         "item": "minecraft:player_head",
-        "nbt": "{gm4_tnt_landmines:{item:\"landmine\"}}"
+        "nbt": "{gm4_tnt_landmines:{item:\"landmine\"}}",
+        "guidebook": {
+          "type": "loot_table",
+          "name": "gm4_tnt_landmines:items/tnt_landmine"
+        }
       }
     }
   },

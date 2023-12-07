@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "summon_undead_player": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -29,11 +29,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "summon_undead_player"
         ]
       ],
       "pages": [
@@ -42,8 +42,8 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.undead_players.1",
-            "fallback": "Dying will cause an undead version of the player to spawn at the death site. This zombie will pick up armor and weapons.\n\nUndead Players have a visible name and never despawn."
+            "translate": "text.gm4.guidebook.undead_players.description",
+            "fallback": "When one dies, an undead version of them will spawn at the death site.\n\nThis zombie have a visible name, will never despawn, and will pick up armor and weapons."
           }
         ]
       ]

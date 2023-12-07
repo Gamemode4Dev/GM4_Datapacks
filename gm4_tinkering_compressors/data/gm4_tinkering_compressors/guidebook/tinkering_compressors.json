@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement_1": {
+    "obtain_tinker_shamir": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -20,45 +20,7 @@
         ]
       }
     },
-    "page_0/requirement_2": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "gm4:block_compressors": true
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
-    "page_1/requirement": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "gm4:tinkering_compressors": true
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
-    "page_1/open_tinkering_compressor": {
+    "open_block_compressor": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "location": [
@@ -69,7 +31,25 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName: '{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Tinkering Compressor\",{\"translate\":\"block.gm4.tinkering_compressor\"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.block_compressor\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\"}],\"text\":\" \"}]}'}"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "open_tinkering_compressor": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:dropper"
+                ],
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.tinkering_compressor\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\"}],\"text\":\" \"}]}'}"
               }
             }
           }
@@ -79,14 +59,14 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "creation",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement_1"
+          "obtain_tinker_shamir"
         ],
         [
-          "page_0/requirement_2"
+          "open_block_compressor"
         ]
       ],
       "pages": [
@@ -95,33 +75,30 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.tinkering_compressors.1",
-            "fallback": "A block compressor can be converted into a tinkering compressor by dropping a Tinker Shamir on top of it and smooshing it using a downward facing piston."
+            "translate": "text.gm4.guidebook.tinkering_compressors.creation",
+            "fallback": "A Block Compressor can be upgraded to a Tinkering Compressor.\n\nThis is done by dropping a Tinker Shamir on top of a Compressor and smooshing it with a downwards piston."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
-        ],
-        [
-          "page_1/open_tinkering_compressor"
+          "open_tinkering_compressor"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.tinkering_compressors.2",
-            "fallback": "A Tinkering Compressor with 64 items inside will tinker compress items on top of it, transforming them into their block form. It supports the same conversions as the Tinker Shamir.\n\nPlacing 1 item inside will instead detinker any items on top of it."
+            "translate": "text.gm4.guidebook.tinkering_compressors.usage",
+            "fallback": "A Tinkering Compressor with 64 items inside will tinker compress items on top of it, transforming them into their block form. It supports the all tinkering.\n\nPlacing 1 item inside will instead detinker any items on top of it."
           }
         ]
       ],
       "grants": [
-        "page_0"
+        "creation"
       ]
     }
   ]

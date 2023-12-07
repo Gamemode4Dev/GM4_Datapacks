@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420002}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_ladder": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -22,11 +22,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_ladder"
         ]
       ],
       "pages": [
@@ -35,13 +35,13 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.vertical_rails.1",
-            "fallback": "Ladder will provide a vertical track for minecarts. Minecarts that enter a ladder block will travel upwards."
+            "translate": "text.gm4.guidebook.vertical_rails.description",
+            "fallback": "Ladder will provide a vertical track for minecarts.\n\nMinecarts that enter a ladder block will travel upwards."
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.vertical_rails.2",
+            "translate": "text.gm4.guidebook.vertical_rails.behavior",
             "fallback": "Once a minecart reaches the top of a ladder, it will have some upward and forward velocity to continue along normal rails."
           }
         ]

@@ -94,6 +94,9 @@
       "enable": [],
       "requirements": [
         [
+          "open_custom_crafter"
+        ],
+        [
           "obtain_furnace"
         ],
         [

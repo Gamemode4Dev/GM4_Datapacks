@@ -19,7 +19,7 @@
   "output": {
     "result": {
       "type": "loot_table",
-      "name": "gm4_tunnel_bores:items/pison_minecart",
+      "name": "gm4_tunnel_bores:items/piston_minecart",
       "count": 1
     }
   }

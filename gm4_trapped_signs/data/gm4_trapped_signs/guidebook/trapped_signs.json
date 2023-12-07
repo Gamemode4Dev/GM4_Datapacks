@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420003}"
   },
   "criteria": {
-    "page_1/requirement_1": {
+    "obtain_sign": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -17,7 +17,7 @@
         ]
       }
     },
-    "page_1/requirement_2": {
+    "obtain_redstone": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -29,7 +29,7 @@
         ]
       }
     },
-    "page_2/requirement": {
+    "obtain_trapped_sign": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -43,7 +43,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -52,27 +52,27 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.trapped_signs.1",
-            "fallback": "Trapped Signs can be used to activate redstone, similar to Trapped Chests. Trapped signs can be crafted with signs and some redstone components."
+            "translate": "text.gm4.guidebook.trapped_signs.description",
+            "fallback": "Trapped Signs can be used to activate redstone, similar to Trapped Chests.\n\nTrapped signs can be crafted in a Custom Crafter with some redstone components."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "crafting",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement_1"
+          "obtain_sign"
         ],
         [
-          "page_1/requirement_2"
+          "obtain_redstone"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.trapped_signs.2",
+            "translate": "text.gm4.guidebook.trapped_signs.crafting",
             "fallback": "The recipe for trapped signs can use any sign type:"
           },
           "\n",
@@ -90,23 +90,29 @@
       ]
     },
     {
-      "name": "page_2",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_2/requirement"
+          "obtain_trapped_sign"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.trapped_signs.3",
-            "fallback": "Placing a trapped sign and writing some text on it will activate it. The last line of the sign will become \u2018-x-\u2019 for a normal trapped sign and empty for a secret trapped sign. Right clicking a trapped sign will activate adjacent redstone dust with a signal strength of 1 for 1 tick."
+            "translate": "text.gm4.guidebook.trapped_signs.setup",
+            "fallback": "Placing a trapped sign and writing some text on it will activate it.\n\nThe last line of the sign will become \"-x-\" for a normal trapped sign and empty for a secret trapped sign."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.trapped_signs.usage",
+            "fallback": "Pressing on a trapped sign will activate adjacent redstone dust with a signal strength of 1 for 1 tick.\n\nIf the sign is on a wall, it will instead activate redstone duct adjacent to the block it's on."
           }
         ]
       ],
       "grants": [
-        "page_1"
+        "crafting"
       ]
     }
   ]

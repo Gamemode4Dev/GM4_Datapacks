@@ -8,7 +8,7 @@
     "nbt": "{CustomModelData:3420006,CustomPotionColor:8587123}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_zauber_potion_after_liquid_tank": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -35,11 +35,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_zauber_potion_after_liquid_tank"
         ]
       ],
       "pages": [
@@ -48,8 +48,14 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.zauber_liquids.1",
-            "fallback": "Zauber Potions can be stored in liquid tanks. Soulutions can be taken out by placing soul fire under the liquid tank.\nMobs under a zauber potion tank will gain the specific potion effect."
+            "translate": "text.gm4.guidebook.zauber_liquids.description",
+            "fallback": "Zauber Potions can be stored in liquid tanks. Soulutions can be taken out by placing soul fire under the liquid tank.\n\nMobs under a zauber potion tank will gain the specific potion effect."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_liquids.wormhole_tanks",
+            "fallback": "If any mobs walks under a wormhole tank it will teleport to that location.\n\nWhen a tank receives a wormhole, it will update its location to the midpoint of its current location and the new location, keeping the dimension of the original location."
           }
         ]
       ]

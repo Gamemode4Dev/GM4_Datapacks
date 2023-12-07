@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420002}"
   },
   "criteria": {
-    "page_0/requirement_1": {
+    "obtain_minecart": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -19,7 +19,7 @@
         ]
       }
     },
-    "page_0/requirement_2": {
+    "obtain_string": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -34,14 +34,14 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement_1"
+          "obtain_minecart"
         ],
         [
-          "page_0/requirement_2"
+          "obtain_string"
         ]
       ],
       "pages": [
@@ -50,8 +50,8 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.ziprails.1",
-            "fallback": "Tripwires act as ziprails for minecarts. A rail must be directly under an active tripwire hook to connect."
+            "translate": "text.gm4.guidebook.ziprails.description",
+            "fallback": "Tripwires act as ziprails for minecarts.\n\nA rail must be directly under an connected tripwire hook to transfer a minecart to a zipline."
           }
         ]
       ]

@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420002}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "wear_armor": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -24,20 +24,33 @@
           }
         ]
       }
+    },
+    "wear_heavy_armor": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "gm4_armor"
+            },
+            "range": {
+              "min": 16
+            }
+          }
+        ]
+      }
     }
   },
   "sections": [
     {
-      "name": "page_0-gm4_metallurgy.-1",
-      "enable": [
-        {
-          "id": "gm4_metallurgy",
-          "load": -1
-        }
-      ],
+      "name": "description",
+      "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "wear_armor"
         ]
       ],
       "pages": [
@@ -46,14 +59,14 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.weighted_armour.1",
-            "fallback": "Players will be slowed down based on how much armour they have on."
+            "translate": "text.gm4.guidebook.weighted_armour.description",
+            "fallback": "Users will be slowed down based on how much armour they have on."
           }
         ]
       ]
     },
     {
-      "name": "page_0-gm4_metallurgy.1",
+      "name": "helious",
       "enable": [
         {
           "id": "gm4_metallurgy",
@@ -62,17 +75,14 @@
       ],
       "requirements": [
         [
-          "page_0/requirement"
+          "wear_heavy_armor"
         ]
       ],
       "pages": [
         [
           {
-            "insert": "title"
-          },
-          {
-            "translate": "text.gm4.guidebook.weighted_armour.1.metallurgy",
-            "fallback": "Players will be slowed down based on how much armour they have on.\n\nThe Helious Shamir can help prevent armour slowness."
+            "translate": "text.gm4.guidebook.weighted_armour.description_and_helious",
+            "fallback": "The Helious Shamir can help prevent armour slowness."
           }
         ]
       ]

@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420004}"
   },
   "criteria": {
-    "page_1/requirement_1": {
+    "obtain_tnt": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -19,7 +19,7 @@
         ]
       }
     },
-    "page_1/requirement_2": {
+    "obtain_grass_block": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -31,7 +31,7 @@
         ]
       }
     },
-    "page_3/requirement": {
+    "obtain_landmine": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -47,7 +47,7 @@
   },
   "sections": [
     {
-      "name": "initial",
+      "name": "description",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -56,515 +56,84 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.tnt_landmines.1",
-            "fallback": "Landmines can be crafted in a custom crafter with tnt and some redstone.\n\nWhen stepping on a landmine or breaking the block it's in, it will explode."
+            "translate": "text.gm4.guidebook.tnt_landmines.description",
+            "fallback": "Landmines can be crafted in a Custom Crafter with tnt and some redstone.\n\nWhen stepping on a landmine or breaking the block it's planted in, it will explode."
           }
         ]
       ]
     },
     {
-      "name": "page_1",
+      "name": "crafting",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement_1"
+          "obtain_tnt"
         ],
         [
-          "page_1/requirement_2"
+          "obtain_grass_block"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.tnt_landmines.2",
+            "translate": "text.gm4.guidebook.tnt_landmines.crafting",
             "fallback": "The recipe for a Landmine is as follows:"
           },
-          [
-            "\n\n ",
-            {
-              "translate": "container.gm4.custom_crafter",
-              "fallback": "Custom Crafter"
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "grass_block"
-              },
-              "color": "#029c1b",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.grass_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "stone_pressure_plate"
-              },
-              "color": "#574744",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.stone_pressure_plate",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "grass_block"
-              },
-              "color": "#029c1b",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.grass_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "dirt"
-              },
-              "color": "#4a2505",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.dirt",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "tnt"
-              },
-              "color": "#c90202",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.tnt",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "dirt"
-              },
-              "color": "#4a2505",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.dirt",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "player_head",
-                "tag": "{CustomModelData:3420040,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:tnt\"},SkullOwner:{Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NTQ0NzQxMDExMjEsInByb2ZpbGVJZCI6IjU3MGIwNWJhMjZmMzRhOGViZmRiODBlY2JjZDdlNjIwIiwicHJvZmlsZU5hbWUiOiJMb3JkU29ubnkiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2RkZWM2M2RlNWY4MmYyM2ExNTdmNTVkYTcyMmFiOTI3NDgzZTdkODk4YmU5MDg3MzQwOTE5ODZlNjY1MWQ4YTgifX19\"}]},Id:[I;-1172284621,-1030471482,-1585707380,-40076772]},display:{Lore:['{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Drop to use\",{\"translate\":\"item.gm4.tnt_landmine.use\"}],\"color\":\"dark_gray\",\"italic\":true}'],Name:'{\"italic\":false,\"translate\":\"%1$s%3427655$s\",\"with\":[\"Landmine\",{\"translate\":\"item.gm4.tnt_landmine\"}]}'}}"
-              },
-              "color": "#cf0000",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.gm4.landmine",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "redstone"
-              },
-              "color": "#8f1103",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.redstone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            }
-          ]
-        ],
-        [
+          "\n",
           {
-            "translate": "text.gm4.guidebook.tnt_landmines.3_0",
-            "fallback": "Disguised Landmines can be crafted in a Custom Crafter:"
-          },
-          [
-            "\n\n      ",
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "stone_pressure_plate"
-              },
-              "color": "#574744",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.stone_pressure_plate",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "diamond"
-              },
-              "color": "#27a38a",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.diamond",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "grass_block"
-              },
-              "color": "#029c1b",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.grass_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "tnt"
-              },
-              "color": "#c90202",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.tnt",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "grass_block"
-              },
-              "color": "#029c1b",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.grass_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "player_head",
-                "tag": "{CustomModelData:3420047,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:air\"},SkullOwner:{Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NTQ0NzQzODQ0NTUsInByb2ZpbGVJZCI6IjU3MGIwNWJhMjZmMzRhOGViZmRiODBlY2JjZDdlNjIwIiwicHJvZmlsZU5hbWUiOiJMb3JkU29ubnkiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVlY2NhZmZlN2UwMWJjNjFiNjdmMDZkNGRmNjU2ZjQxZjdjMGJkODE3NzllNjFkMmEzYjk2YjE0MDVlYWQ1ODYifX19\"}]},Id:[I;1874250570,-1321581040,-1389990572,-1166592501]},display:{Lore:['{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Invisible\",{\"translate\":\"item.gm4.tnt_landmine.invisible\"}],\"color\":\"gray\",\"italic\":false}','{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Drop to use\",{\"translate\":\"item.gm4.tnt_landmine.use\"}],\"color\":\"dark_gray\",\"italic\":true}'],Name:'{\"italic\":false,\"translate\":\"%1$s%3427655$s\",\"with\":[\"Landmine\",{\"translate\":\"item.gm4.tnt_landmine\"}]}'}}"
-              },
-              "color": "#5c2727",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.gm4.landmine.invisible",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "redstone"
-              },
-              "color": "#8f1103",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.redstone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n\n      ",
-            {
-              "item": {
-                "id": "crafting_table"
-              },
-              "color": "#ab7d33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.crafting_table",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "stone_pressure_plate"
-              },
-              "color": "#574744",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.stone_pressure_plate",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "crafting_table"
-              },
-              "color": "#ab7d33",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.crafting_table",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "grass_block"
-              },
-              "color": "#029c1b",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.grass_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "tnt"
-              },
-              "color": "#c90202",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.tnt",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "grass_block"
-              },
-              "color": "#029c1b",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.grass_block",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "player_head",
-                "tag": "{CustomModelData:3420045,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:crafting_table\"},SkullOwner:{Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NTQ0NzQyODI1NTUsInByb2ZpbGVJZCI6Ijc1MTQ0NDgxOTFlNjQ1NDY4Yzk3MzlhNmUzOTU3YmViIiwicHJvZmlsZU5hbWUiOiJUaGFua3NNb2phbmciLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzY2ODBmZmEyMTE5MzAwZGU2NWQzNjE4ODVkNjE0YjNlYTM3Y2QwODhiODc5OTAzMjc0MzNkNGMxMWU1ZjNjNSJ9fX0=\"}]},Id:[I;-893485270,-1979301661,-1601571774,-1580648190]},display:{Lore:['[{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Disguised as \",{\"translate\":\"item.gm4.tnt_landmine.disguised\"}],\"color\":\"gray\",\"italic\":false},{\"translate\":\"block.minecraft.crafting_table\",\"color\":\"gray\",\"italic\":false}]','{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Drop to use\",{\"translate\":\"item.gm4.tnt_landmine.use\"}],\"color\":\"dark_gray\",\"italic\":true}'],Name:'{\"italic\":false,\"translate\":\"%1$s%3427655$s\",\"with\":[\"Landmine\",{\"translate\":\"item.gm4.tnt_landmine\"}]}'}}"
-              },
-              "color": "#a34802",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.gm4.landmine.crafting_table",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "redstone"
-              },
-              "color": "#8f1103",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.minecraft.redstone",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            "\n      "
-          ],
-          {
-            "text": "**",
-            "hoverEvent": {
-              "action": "show_text",
-              "contents": [
-                {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Crafting Tables can be replaced with the following blocks:\n -Grass Block\n -Dirt\n -Stone\n -Stone Bricks\n -Crafting Table\n -Netherrack"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.tnt_landmines.3_1"
-                    }
-                  ]
-                }
-              ]
-            }
+            "insert": "recipe",
+            "recipe": "gm4_tnt_landmines:tnt_landmine"
           }
         ]
       ]
     },
     {
-      "name": "page_3",
+      "name": "usage",
       "enable": [],
       "requirements": [
         [
-          "page_3/requirement"
+          "obtain_landmine"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.tnt_landmines.4",
-            "fallback": "Landmines can be disabled by dropping shears or a Soft Defuser, which will cause the landmine to spray instant damage instead of exploding."
+            "translate": "text.gm4.guidebook.tnt_landmines.usage",
+            "fallback": "Landmines can be armed by dropping them on the ground.\n\nThey can be disabled by dropping shears or a Soft Defuser, which will cause the landmine to spray instant damage instead of exploding."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.tnt_landmines.defusing",
+            "fallback": "A soft defuser can be crafted like so:"
           },
-          [
-            "\n\n ",
-            {
-              "translate": "container.gm4.custom_crafter",
-              "fallback": "Custom Crafter"
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "potion",
-                "tag": "{Potion:\"minecraft:strong_harming\"}"
-              },
-              "color": "#430a09",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.item.minecraft.potion",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.overlay.minecraft.potion_overlay",
-                  "font": "gm4:guidebook",
-                  "color": "#430a09"
-                }
-              ]
-            },
-            {
-              "item": {
-                "id": "stone_pressure_plate"
-              },
-              "color": "#574744",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.stone_pressure_plate",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "potion",
-                "tag": "{Potion:\"minecraft:strong_harming\"}"
-              },
-              "color": "#430a09",
-              "rp": [
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.item.minecraft.potion",
-                  "font": "gm4:guidebook",
-                  "color": "white"
-                },
-                {
-                  "translate": "text.gm4.guidebook.crafting.display.overlay.minecraft.potion_overlay",
-                  "font": "gm4:guidebook",
-                  "color": "#430a09"
-                }
-              ]
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "obsidian"
-              },
-              "color": "#471e61",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.obsidian",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "player_head",
-                "tag": "{CustomModelData:3420040,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:tnt\"},SkullOwner:{Properties:{textures:[{Value:\"eyJ0aW1lc3RhbXAiOjE1NTQ0NzQxMDExMjEsInByb2ZpbGVJZCI6IjU3MGIwNWJhMjZmMzRhOGViZmRiODBlY2JjZDdlNjIwIiwicHJvZmlsZU5hbWUiOiJMb3JkU29ubnkiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2RkZWM2M2RlNWY4MmYyM2ExNTdmNTVkYTcyMmFiOTI3NDgzZTdkODk4YmU5MDg3MzQwOTE5ODZlNjY1MWQ4YTgifX19\"}]},Id:[I;-1172284621,-1030471482,-1585707380,-40076772]},display:{Lore:['{\"translate\":\"%1$s%3427655$s\",\"with\":[\"Drop to use\",{\"translate\":\"item.gm4.tnt_landmine.use\"}],\"color\":\"dark_gray\",\"italic\":true}'],Name:'{\"italic\":false,\"translate\":\"%1$s%3427655$s\",\"with\":[\"Landmine\",{\"translate\":\"item.gm4.tnt_landmine\"}]}'}}"
-              },
-              "color": "#cf0000",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.gm4.landmine",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            {
-              "item": {
-                "id": "obsidian"
-              },
-              "color": "#471e61",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.block.minecraft.obsidian",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            " \u2192 ",
-            {
-              "item": {
-                "id": "gunpowder",
-                "tag": "{CustomModelData:3420002,gm4_tnt_landmines:{item:\"upgrade\"},display:{Name:'{\"italic\":false,\"translate\":\"%1$s%3427655$s\",\"with\":[\"Soft Defuser\",{\"translate\":\"item.gm4.tnt_landmine.upgrade\"}]}',Lore:['{\"color\":\"dark_gray\",\"translate\":\"%1$s%3427655$s\",\"with\":[\"Drop to use\",{\"translate\":\"item.gm4.tnt_landmine.use\"}]}']}}"
-              },
-              "color": "#4a403b",
-              "rp": {
-                "translate": "text.gm4.guidebook.crafting.display.item.gm4.soft_defuser",
-                "font": "gm4:guidebook",
-                "color": "white"
-              }
-            },
-            "\n      ",
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            },
-            {
-              "item": {
-                "id": "air"
-              }
-            }
-          ]
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_tnt_landmines:soft_defuser"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.tnt_landmines.disguised_landmine_crafting",
+            "fallback": "Landmines can also be crafted with disguised materials."
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_tnt_landmines:crafting_table_landmine"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.tnt_landmines.disguised_landmine_types",
+            "fallback": "Landmines can be disguised as crafting tables, dirt, grass blocks, netherrack, stone bricks, and stone.\n\nIf diamonds are used as the disguiser, it will be invisible and only display particles."
+          }
         ]
       ],
       "grants": [
-        "page_1"
+        "description",
+        "crafting"
       ]
     }
   ]

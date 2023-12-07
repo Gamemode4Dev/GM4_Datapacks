@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "obtain_ender_chest": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -22,11 +22,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "obtain_ender_chest"
         ]
       ],
       "pages": [
@@ -35,13 +35,13 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.xp_storage.1",
-            "fallback": "In addition to items, ender chests can hold experience levels. Standing on an ender chest deposits XP, while standing below withdraws it."
+            "translate": "text.gm4.guidebook.xp_storage.description",
+            "fallback": "In addition to items, ender chests can hold experience levels.\n\nStanding on an ender chest deposits XP, while standing below withdraws it."
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.xp_storage.2",
+            "translate": "text.gm4.guidebook.xp_storage.no_mending",
             "fallback": "Experience orbs stored in ender chests cannot be transfered to tools with mending; it is a direct transfer."
           }
         ]
