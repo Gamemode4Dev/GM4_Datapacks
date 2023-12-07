@@ -37,7 +37,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.desire_lines.1",
+            "translate": "text.gm4.guidebook.desire_lines.description",
             "fallback": "Walking or sprinting will trample blocks beneath the player.\n\nGrass blocks will trample into dirt and dirt into coarse dirt."
           }
         ]
@@ -63,7 +63,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.desire_lines.2",
+            "translate": "text.gm4.guidebook.desire_lines.effects",
             "fallback": "Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines."
           }
         ]
@@ -89,7 +89,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.desire_lines.2.boots_of_ostara",
+            "translate": "text.gm4.guidebook.desire_lines.effects_and_boots_of_ostara",
             "fallback": "Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\n\nThe Boots of Ostara can prevent desire lines."
           }
         ]
@@ -115,7 +115,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.desire_lines.2.metallurgy",
+            "translate": "text.gm4.guidebook.desire_lines.effects_and_celaro",
             "fallback": "Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\n\nBoots with the Celaro Shamir can prevent desire lines"
           }
         ]
@@ -141,7 +141,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.desire_lines.2.boots_of_ostara.metallurgy",
+            "translate": "text.gm4.guidebook.desire_lines.effects_and_boots_of_ostara_and_celaro",
             "fallback": "Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\n\nBoots with the Celaro Shamir, or normal Boots of Ostara can prevent desire lines."
           }
         ]

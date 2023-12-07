@@ -92,7 +92,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.ender_hoppers.1",
+            "translate": "text.gm4.guidebook.ender_hoppers.description",
             "fallback": "Ender Hoppers teleport items to itself, even through walls.\n\nThey can also be combined with a minecart to create an Ender Hopper Minecart."
           }
         ]
@@ -115,7 +115,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.ender_hoppers.2",
+            "translate": "text.gm4.guidebook.ender_hoppers.crafting",
             "fallback": "Ender Hoppers can be crafted in a Custom Crafter:"
           },
           "\n",
@@ -138,7 +138,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.ender_hoppers.3",
+            "translate": "text.gm4.guidebook.ender_hoppers.usage",
             "fallback": "Ender Hoppers can pick up items in a range of 9x9 blocks, centered at itself and extending 3 blocks above itself.\n\nCombining a minecart with an ender hopper in a custom crafter yields an ender hopper minecart."
           }
         ]

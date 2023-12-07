@@ -203,7 +203,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.teleportation_anchors.pupur_wires",
+            "translate": "text.gm4.guidebook.teleportation_anchors.pupur_wires_1",
             "fallback": "If a purpur pillar points into a T-Junction, it will prioritize moving in the North, West, or Down direction.\n\nThese wires can be at most 64 blocks long."
           }
         ],

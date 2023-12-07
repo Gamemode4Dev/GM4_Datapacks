@@ -150,7 +150,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.relocators.crafting",
+            "translate": "text.gm4.guidebook.relocators.crafting_with_silk_page",
             "fallback": "A silk touch page can be used instead of a book. "
           },
           "\n",

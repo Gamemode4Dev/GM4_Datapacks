@@ -174,7 +174,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.metallurgy.metal_properties",
+            "translate": "text.gm4.guidebook.metallurgy.metal_properties_1",
             "fallback": "Alluminium is supression, Barium is amplification, and Barimium is modification."
           }
         ],

@@ -128,7 +128,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.smelteries.multi-block",
+            "translate": "text.gm4.guidebook.smelteries.multi_block",
             "fallback": "The smeltery requires a multi-block structure to work.\n\nBehind the smeltery must be a cauldron. The rest of the 3x3 grid must be filled with iron blocks, then another layer of iron blocks above the first."
           }
         ],

@@ -47,7 +47,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.apple_trees.1",
+            "translate": "text.gm4.guidebook.apple_trees.leaf_changes",
             "fallback": "Apples do not drop from oak or dark oak trees. Another source of apples must be discovered."
           }
         ]
@@ -64,7 +64,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.apple_trees.2",
+            "translate": "text.gm4.guidebook.apple_trees.obtaining_apples",
             "fallback": "Apple trees are found naturally occurring in forest biomes.\n\nWandering traders will also sell apple tree saplings.\n\nWhen planted, these saplings grow into apple trees."
           }
         ]
@@ -81,13 +81,13 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.apple_trees.3",
+            "translate": "text.gm4.guidebook.apple_trees.new_apples",
             "fallback": "New apples will grow every 3 day cycles. Once ripe, they can be picked or will fall from the tree after a while.\n\nBreaking an apple bearing leaf has a 75% chance to drop an apple tree sapling."
           }
         ]
       ],
       "grants": [
-        "page_2"
+        "obtaining_apples"
       ]
     }
   ]

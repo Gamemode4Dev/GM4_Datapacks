@@ -119,7 +119,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.orb_of_ankou.2",
+            "translate": "text.gm4.guidebook.orb_of_ankou.soul_forge",
             "fallback": "To gain powers of the Soul Essences, a Condensing Ritual must be performed in a Soul Forge.\n\nA Soul Forge can be made in the Nether by forming a 3x3 ring of obsidian then igniting soul fire inside the ring."
           }
         ]

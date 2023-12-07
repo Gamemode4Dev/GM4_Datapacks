@@ -80,7 +80,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.enchantment_extractors.1",
+            "translate": "text.gm4.guidebook.enchantment_extractors.description",
             "fallback": "Enchantment Extractors are used to remove enchantments from tools, weapons, and armour."
           }
         ]
@@ -101,7 +101,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.enchantment_extractors.2",
+            "translate": "text.gm4.guidebook.enchantment_extractors.crafting",
             "fallback": "An Enchantment Extractor can be crafted in a Custom Crafter:"
           },
           "\n",
@@ -124,19 +124,19 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.enchantment extractors.3",
+            "translate": "text.gm4.guidebook.enchantment extractors.unenchanting",
             "fallback": "Placing enchanted items inside the enchantment extractor will unenchant it.\n\nWhen extracted, there is a chance to generate enchanted books containing those enchantments."
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.enchantment extractors.4",
+            "translate": "text.gm4.guidebook.enchantment extractors.extraction",
             "fallback": "The chance of extraction is lower for more powerful enchantments.\n\nSome high level enchants may become cursed with vanishing."
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.enchantment extractors.5",
+            "translate": "text.gm4.guidebook.enchantment extractors.failed_extraction",
             "fallback": "If an extraction fails, a puff of smoke or a congealed enchantment (Vex) will appear."
           }
         ]

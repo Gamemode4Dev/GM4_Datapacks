@@ -110,7 +110,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.everstone.1",
+            "translate": "text.gm4.guidebook.everstone.description",
             "fallback": "Everstones can prevent mobs from aging.\n\nSome mobs that don't normally age now have the ability to evolve into other mobs."
           }
         ]
@@ -127,7 +127,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.everstone.2",
+            "translate": "text.gm4.guidebook.everstone.obtaining",
             "fallback": "Everstones can be obtained by mining stone during a full moon.\n\nStone mined with Silk Touch will never drop an everstone."
           }
         ]
@@ -144,7 +144,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.everstone.3",
+            "translate": "text.gm4.guidebook.everstone.usage",
             "fallback": "Dropping an everstone on a mob will prevent it from aging.\n\nZombies, Skeletons, Slimes, Strays, Piglins, Guardians, and Vindicators can evolve under specific conditions."
           }
         ]
@@ -161,7 +161,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.everstone.4",
+            "translate": "text.gm4.guidebook.everstone.zombie_conversion",
             "fallback": "Zombies will convert to husks after being in direct sunlight in a desert or badlands biome for a long time."
           }
         ]
@@ -178,7 +178,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.everstone.5",
+            "translate": "text.gm4.guidebook.everstone.skeleton_conversion",
             "fallback": "Skeletons will convert into strays after being in a cold, snowy biome for a long time."
           }
         ]
@@ -195,7 +195,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.everstone.6",
+            "translate": "text.gm4.guidebook.everstone.slime_conversion",
             "fallback": "Slimes will convert into magma cubes after being in the nether for a long time."
           }
         ]
@@ -212,7 +212,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.everstone.7",
+            "translate": "text.gm4.guidebook.everstone.stray_conversion",
             "fallback": "Strays will convert into skeletons if taken out of a cold, snowy biome for a long time."
           }
         ]
@@ -229,7 +229,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.everstone.7",
+            "translate": "text.gm4.guidebook.everstone.piglin_conversion",
             "fallback": "Piglins inside bastion remnants will convert into piglin brutes if there are less than two brutes nearby."
           }
         ]
@@ -246,7 +246,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.everstone.8",
+            "translate": "text.gm4.guidebook.everstone.guardian_conversion",
             "fallback": "Guardians will convert into elder guardians after being near several other guardians for a long time.\n\nSpecifically, guardians with five other friends will start to age."
           }
         ]
@@ -263,7 +263,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.everstone.9",
+            "translate": "text.gm4.guidebook.everstone.vindicator_conversion",
             "fallback": "Vindicators will convert into evokers when near at least seven magical blocks for a long time.\n\nThese blocks include enchanting tables, bookshelves, lecterns, brewing stands, and cauldrons."
           }
         ]

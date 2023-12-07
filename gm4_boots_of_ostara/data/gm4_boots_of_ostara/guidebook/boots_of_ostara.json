@@ -56,7 +56,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.boot_of_ostara.1",
+            "translate": "text.gm4.guidebook.boot_of_ostara.description",
             "fallback": "Boots of Ostara can be crafted to aid in the spreading of grass and moss.\n\nThe boots can be crafted in a Custom Crafter."
           }
         ]
@@ -81,7 +81,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.boots_of_ostara.2",
+            "translate": "text.gm4.guidebook.boots_of_ostara.crafting",
             "fallback": "The recipe for the Boots of Ostara is as follows:"
           },
           "\n",
@@ -116,7 +116,7 @@
           },
           "\n",
           {
-            "translate": "text.gm4.guidebook.boots_of_ostara.2-desire_lines",
+            "translate": "text.gm4.guidebook.boots_of_ostara.crafting_and_desire_lines",
             "fallback": "Boots of Ostara also prevent desire lines from forming."
           }
         ]
@@ -133,13 +133,13 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.boots_of_ostara.3",
+            "translate": "text.gm4.guidebook.boots_of_ostara.grass",
             "fallback": "Wearing the boots and holding a grass block in the offhand will spread grass onto dirt beneath the player.\n"
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.boots_of_ostara.4",
+            "translate": "text.gm4.guidebook.boots_of_ostara.moss_and_armor_stands",
             "fallback": "Similarly, moss will spread onto stone when held in the offhand.\n\nArmor stands can also spread vegetation!"
           }
         ]

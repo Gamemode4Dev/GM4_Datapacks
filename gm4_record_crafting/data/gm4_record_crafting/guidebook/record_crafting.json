@@ -87,7 +87,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.record_crafting.items",
+            "translate": "text.gm4.guidebook.record_crafting.items_1",
             "fallback": "Purple Dye—–----Mall\nMagenta Dye---Mellohi\nBlack Dye—------Stal\nWhite Dye—-----Strad\nEye of Ender--- Ward\nCoal—------------11\nLight Blue Dye----Wait"
           }
         ]

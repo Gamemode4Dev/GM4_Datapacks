@@ -164,7 +164,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.metallurgy.section.creation",
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.creation",
             "fallback": "Creation",
             "bold": true
           },
@@ -207,7 +207,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.metallurgy.section.potions",
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.potions",
             "fallback": "Zauber Potions",
             "bold": true
           },
@@ -245,7 +245,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.metallurgy.section.enchanted_prismarine_shard",
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.enchanted_prismarine_shard",
             "fallback": "Advanced Reactants",
             "bold": true
           },
@@ -277,7 +277,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.metallurgy.section.armor",
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.armor",
             "fallback": "Zauber Armour",
             "bold": true
           },
@@ -289,7 +289,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.zauber_cauldrons.armor",
+            "translate": "text.gm4.guidebook.zauber_cauldrons.armor_modifiers",
             "fallback": "The following items can be used as a modifier.\n\nGlistering Melon\n  +6 health\nBlaze Powder\n  +35% Attack Damage\nSugar\n  +12% Speed\nTurtle Helmet\n  +1 Armour\n\nWearing a full set buffs the most prevalent modifier(s)."
           }
         ],
@@ -318,7 +318,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.metallurgy.section.crystals",
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.crystals",
             "fallback": "Zauber Crystals",
             "bold": true
           },
@@ -341,7 +341,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.metallurgy.section.crystals",
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.luck",
             "fallback": "Luck",
             "bold": true
           },
@@ -359,7 +359,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.zauber_cauldrons.luck_output",
+            "translate": "text.gm4.guidebook.zauber_cauldrons.luck_output_poison",
             "fallback": "However, if a poisonous flower is added to the recipe, the cauldron will emit a poisonous cloud."
           }
         ],
@@ -385,7 +385,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.metallurgy.section.extra_ingredients",
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.extra_ingredients",
             "fallback": "Magic in a Bottle",
             "bold": true
           },
@@ -423,7 +423,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.metallurgy.section.wormholes",
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.wormholes",
             "fallback": "Wormholes",
             "bold": true
           },

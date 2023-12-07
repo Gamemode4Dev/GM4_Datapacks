@@ -54,7 +54,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.holographic_tags.1",
+            "translate": "text.gm4.guidebook.holographic_tags.description",
             "fallback": "Putting a renamed name tag in an item frame will create floating textbox.\n\nTo remove the hologram, place an item frame in the original position."
           }
         ]
@@ -71,7 +71,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.holographic_tags.2",
+            "translate": "text.gm4.guidebook.holographic_tags.colors",
             "fallback": "Placing the item frame on a wool block will color the hologram."
           }
         ]

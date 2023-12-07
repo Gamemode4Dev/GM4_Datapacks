@@ -59,7 +59,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.corripio_shamir.2",
+            "translate": "text.gm4.guidebook.corripio_shamir.usage",
             "fallback": "The Corripio Shamir is found on Bismuth Bands. It can be placed onto swords.\n\nKilling mobs will cause Soul Essences to drop very rarely. The drop rates are increased with the Looting enchantment."
           }
         ]

@@ -106,7 +106,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.spawner_minecarts.recharging",
+            "translate": "text.gm4.guidebook.spawner_minecarts.recharging_1",
             "fallback": "Some flowers charge the spawner minecart twice as fast as others; this differs in each world.\n\nWhen a spawner minecart fully recharges, it will activate any detector rails it is on."
           }
         ]

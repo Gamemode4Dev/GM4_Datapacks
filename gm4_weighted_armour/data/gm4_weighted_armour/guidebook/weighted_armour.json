@@ -66,7 +66,29 @@
       ]
     },
     {
-      "name": "helious",
+      "name": "weight",
+      "enable": [
+        {
+          "id": "gm4_metallurgy",
+          "load": -1
+        }
+      ],
+      "requirements": [
+        [
+          "wear_heavy_armor"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.weighted_armour.weight",
+            "fallback": "The weight is purely based on how much armor one has on. Slowness III is applied for full armor points."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "weight_and_helious",
       "enable": [
         {
           "id": "gm4_metallurgy",
@@ -81,8 +103,8 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.weighted_armour.description_and_helious",
-            "fallback": "The Helious Shamir can help prevent armour slowness."
+            "translate": "text.gm4.guidebook.weighted_armour.weight_and_helious",
+            "fallback": "The weight is purely based on how much armor one has on. Slowness III is applied for full armor points.\n\nThe Helious Shamir can help prevent armour slowness."
           }
         ]
       ]

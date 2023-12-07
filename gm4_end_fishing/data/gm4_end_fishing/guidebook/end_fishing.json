@@ -56,7 +56,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.end_fishing.1",
+            "translate": "text.gm4.guidebook.end_fishing.description",
             "fallback": "Casting a fishing rod into the end void will allow players to fish up loot from the void. Loot is biome dependent."
           }
         ]
@@ -73,7 +73,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.end_fishing.2",
+            "translate": "text.gm4.guidebook.end_fishing.end_phantom",
             "fallback": "End Phantoms can be fished up from the end void.\n\nThey are larger and stronger than normal phantoms, but have a chance to drop a broken elytra upon death."
           }
         ]

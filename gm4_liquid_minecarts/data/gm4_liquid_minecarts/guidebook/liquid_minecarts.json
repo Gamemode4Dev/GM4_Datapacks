@@ -73,7 +73,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.liquid_minecarts.usage_2",
+            "translate": "text.gm4.guidebook.liquid_minecarts.usage_1",
             "fallback": "Similar to a tank, if a liquid minecart already has liquid in it, it will only accept the contents of tanks with the same liquid.\n\nDriving a liquid minecart over an activator rail will discard any liquid inside."
           }
         ]

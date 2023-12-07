@@ -75,7 +75,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.auto_crafting.1",
+            "translate": "text.gm4.guidebook.auto_crafting.description",
             "fallback": "An auto crafter can be used to automatically craft items normally crafted in custom crafters."
           }
         ]
@@ -95,7 +95,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.auto_crafting.2",
+            "translate": "text.gm4.guidebook.auto_crafting.crafting",
             "fallback": "Auto crafters can be crafted in a custom crafter with the following recipe:"
           },
           "\n",
@@ -117,13 +117,13 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.auto_crafting.3",
+            "translate": "text.gm4.guidebook.auto_crafting.multi_block",
             "fallback": "The auto crafter needs a 3x3x3 multi-block structure.\n\nPlace the auto crafter, then a piston behind it, leaving a space for the head to extend. Then place two glass blocks on the other two sides to make a cross."
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.auto_crafting.4",
+            "translate": "text.gm4.guidebook.auto_crafting.multi_block_1",
             "fallback": "The top and bottom layers must each have a barrel with four wooden stairs or planks.\n\nIf stairs are used, they must be oriented to form a sort of pill shape."
           }
         ]
@@ -143,13 +143,13 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.auto_crafting.5",
+            "translate": "text.gm4.guidebook.auto_crafting.set_shape",
             "fallback": "The auto crafter GUI is used to set the shape of the recipe. Any item can be used to set the shape.\n\nItems will be taken out of the top barrel and fed into the crafter, filling each slot with one item."
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.auto_crafting.6",
+            "translate": "text.gm4.guidebook.auto_crafting.output",
             "fallback": "Once full, powering the piston will craft the item and place it in the bottom barrel.\n\nIf the piston is powered with an invalid recipe, the ingredients will be placed in the bottom barrel instead."
           }
         ]

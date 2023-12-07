@@ -116,7 +116,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.block_compressors.1",
+            "translate": "text.gm4.guidebook.block_compressors.description",
             "fallback": "Block Compressors can be used to cut down on bulk storage. Item stacks can be compressed into a single item, and vice versa."
           }
         ]
@@ -134,7 +134,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.block_compressors.2",
+            "translate": "text.gm4.guidebook.block_compressors.crafting",
             "fallback": "A Block Compressor can be crafted in a Custom Crafter:"
           },
           "\n",
@@ -160,7 +160,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.block_compressors.3",
+            "translate": "text.gm4.guidebook.block_compressors.usage",
             "fallback": "To select the amount of compression, put that amount of items inside the block compressor, then drop the items on top of the compressor.\n\nPutting 1 item in the compressor will decompress any items on top."
           }
         ]

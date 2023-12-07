@@ -21,7 +21,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.mysterious_midnights.description_1",
+            "translate": "text.gm4.guidebook.mysterious_midnights.sleeping",
             "fallback": "Mysterious Midnight events can usually be skipped by sleeping the night away."
           }
         ]

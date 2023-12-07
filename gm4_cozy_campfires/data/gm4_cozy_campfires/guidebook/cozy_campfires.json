@@ -38,7 +38,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.cozy_campfires.1",
+            "translate": "text.gm4.guidebook.cozy_campfires.description",
             "fallback": "Standing near a campfire temporarily gives four hearts of absorption.\n\nThese extra hearts last 12 minutes once the player leaves the campfire area."
           }
         ]

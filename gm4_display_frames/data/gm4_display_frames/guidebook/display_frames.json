@@ -25,7 +25,7 @@
   },
   "sections": [
     {
-      "name": "usage",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
@@ -38,7 +38,7 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.display_frames.1",
+            "translate": "text.gm4.guidebook.display_frames.description",
             "fallback": "Splashing item frames and glow item frames with invisibility causes them to become display frames.\n\nDisplay frames become invisible when holding with an item."
           }
         ]

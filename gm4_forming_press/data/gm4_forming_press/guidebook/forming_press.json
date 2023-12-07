@@ -161,13 +161,13 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.forming_press.1",
+            "translate": "text.gm4.guidebook.forming_press.description",
             "fallback": "Forming Presses can process smelting and crafting operations, such as brick crafting, charcoal creation, and lava generation.\n\nThey can be crafted in a Custom Crafter."
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.forming_press.2",
+            "translate": "text.gm4.guidebook.forming_press.doubling",
             "fallback": "The overall output of the Forming Press is approximately doubled compared to normal crafting operations."
           }
         ]
@@ -187,7 +187,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.forming_press.3",
+            "translate": "text.gm4.guidebook.forming_press.crafting",
             "fallback": "A Forming Press can be crafted in a Custom Crafter:"
           },
           "\n",
@@ -212,7 +212,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.forming_press.4",
+            "translate": "text.gm4.guidebook.forming_press.recipes",
             "fallback": "The following recipes can be used in a Forming Press:"
           },
           "\n\n",

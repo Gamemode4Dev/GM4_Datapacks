@@ -27,13 +27,13 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.crossbow_cartridges.1",
+            "translate": "text.gm4.guidebook.crossbow_cartridges.description",
             "fallback": "Shooting a crossbow with certain items in the offhand will launch that item instead of the arrow."
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.crossbow_cartridges.2",
+            "translate": "text.gm4.guidebook.crossbow_cartridges.ammo",
             "fallback": "When held in the offhand, these items can be shot from crossbows:"
           },
           {
