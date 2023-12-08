@@ -7,7 +7,7 @@
     "nbt": "{CustomModelData:3420003}"
   },
   "criteria": {
-    "page_0/badlands": {
+    "enter_badlands_tower": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -23,7 +23,7 @@
         ]
       }
     },
-    "page_0/default": {
+    "enter_default_tower": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -39,7 +39,7 @@
         ]
       }
     },
-    "page_0/desert": {
+    "enter_desert_tower": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -55,7 +55,7 @@
         ]
       }
     },
-    "page_0/snowy": {
+    "enter_snowy_tower": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -71,7 +71,7 @@
         ]
       }
     },
-    "page_0/large_ship": {
+    "enter_large_ship": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -87,7 +87,7 @@
         ]
       }
     },
-    "page_0/medium_ship": {
+    "enter_medium_ship": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -103,7 +103,7 @@
         ]
       }
     },
-    "page_0/raft": {
+    "enter_raft": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -119,7 +119,7 @@
         ]
       }
     },
-    "page_0/small_ship": {
+    "enter_small_ship": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -135,7 +135,7 @@
         ]
       }
     },
-    "page_0/segmented_cold_frozen": {
+    "enter_segmented_cold_frozen_tower": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -151,7 +151,7 @@
         ]
       }
     },
-    "page_0/segmented_frozen": {
+    "enter_segmented_frozen_tower": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -167,7 +167,7 @@
         ]
       }
     },
-    "page_0/segmented_hot": {
+    "enter_segmented_hot_tower": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -183,7 +183,7 @@
         ]
       }
     },
-    "page_0/segmented_hot_warm": {
+    "enter_segmented_hot_warm_tower": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -199,7 +199,7 @@
         ]
       }
     },
-    "page_0/segmented_warm_cold": {
+    "enter_segmented_warm_cold_tower": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
@@ -218,52 +218,23 @@
   },
   "sections": [
     {
-      "name": "page_0-gm4_spawner_minecarts.-1",
-      "enable": [
-        {
-          "id": "gm4_spawner_minecarts",
-          "load": -1
-        }
-      ],
+      "name": "description",
+      "enable": [],
       "requirements": [
         [
-          "page_0/badlands"
-        ],
-        [
-          "page_0/default"
-        ],
-        [
-          "page_0/desert"
-        ],
-        [
-          "page_0/snowy"
-        ],
-        [
-          "page_0/large_ship"
-        ],
-        [
-          "page_0/medium_ship"
-        ],
-        [
-          "page_0/raft"
-        ],
-        [
-          "page_0/small_ship"
-        ],
-        [
-          "page_0/segmented_cold_frozen"
-        ],
-        [
-          "page_0/segmented_frozen"
-        ],
-        [
-          "page_0/segmented_hot"
-        ],
-        [
-          "page_0/segmented_hot_warm"
-        ],
-        [
-          "page_0/segmented_warm_cold"
+          "enter_badlands_tower",
+          "enter_default_tower",
+          "enter_desert_tower",
+          "enter_snowy_tower",
+          "enter_large_ship",
+          "enter_medium_ship",
+          "enter_raft",
+          "enter_small_ship",
+          "enter_segmented_cold_frozen_tower",
+          "enter_segmented_frozen_tower",
+          "enter_segmented_hot_tower",
+          "enter_segmented_hot_warm_tower",
+          "enter_segmented_warm_cold_tower"
         ]
       ],
       "pages": [
@@ -272,69 +243,14 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.tower_structures.1",
-            "fallback": "Towers can be found on the surface. These towers contain rare loot and special spawners."
+            "translate": "text.gm4.guidebook.tower_structures.description",
+            "fallback": "Towers can be found on the surface.\n\nThese towers contain rare loot and special spawners."
           }
-        ]
-      ]
-    },
-    {
-      "name": "page_0-gm4_spawner_minecarts.2",
-      "enable": [
-        {
-          "id": "gm4_spawner_minecarts",
-          "load": 2
-        }
-      ],
-      "requirements": [
-        [
-          "page_0/badlands"
         ],
-        [
-          "page_0/default"
-        ],
-        [
-          "page_0/desert"
-        ],
-        [
-          "page_0/snowy"
-        ],
-        [
-          "page_0/large_ship"
-        ],
-        [
-          "page_0/medium_ship"
-        ],
-        [
-          "page_0/raft"
-        ],
-        [
-          "page_0/small_ship"
-        ],
-        [
-          "page_0/segmented_cold_frozen"
-        ],
-        [
-          "page_0/segmented_frozen"
-        ],
-        [
-          "page_0/segmented_hot"
-        ],
-        [
-          "page_0/segmented_hot_warm"
-        ],
-        [
-          "page_0/segmented_warm_cold"
-        ]
-      ],
-      "pages": [
         [
           {
-            "insert": "title"
-          },
-          {
-            "translate": "text.gm4.guidebook.tower_structures.1.spawner_minecarts",
-            "fallback": "Towers can be found on the surface. These towers contain rare loot and special spawners.\n\nThe spawners can be moved with Spawner Minecarts."
+            "translate": "text.gm4.guidebook.tower_structures.description",
+            "fallback": "Stone towers can be found in most biomes.\n\nThe Badlands, Desert, and Snowy biomes have special towers that match the terrain.\n\nOcean dungeons and ships can be found at sea."
           }
         ]
       ]

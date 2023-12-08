@@ -7,7 +7,22 @@
     "nbt": "{CustomModelData:3420001}"
   },
   "criteria": {
-    "page_1/requirement": {
+    "place_armor_stand": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:armor_stand"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "obtain_book_and_quill": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -22,11 +37,11 @@
   },
   "sections": [
     {
-      "name": "page_1",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_1/requirement"
+          "place_armor_stand"
         ]
       ],
       "pages": [
@@ -35,19 +50,30 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.better_armour_stands.1",
+            "translate": "text.gm4.guidebook.better_armour_stands.description",
             "fallback": "Armour stands will have arms by default, and can be altered with a book and quill.\n\nThis allows one to create custom statues and interesting displays."
           }
-        ],
+        ]
+      ]
+    },
+    {
+      "name": "codes",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_book_and_quill"
+        ]
+      ],
+      "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.better_armour_stands.2",
-            "fallback": "To modify an armour stand, write one of the codes in a book and quill, then right click the armour stand.\n\nMultiple codes can be written on separate pages to apply multiple modifiers at once."
+            "translate": "text.gm4.guidebook.better_armour_stands.applying",
+            "fallback": "To modify an armour stand, write one of the codes in a book and quill, then use it on the armour stand.\n\nMultiple codes can be written on separate pages to apply multiple modifiers at once."
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.better_armour_stands.3",
+            "translate": "text.gm4.guidebook.better_armour_stands.toggle_codes",
             "fallback": "The following codes will toggle the specific feature:"
           },
           {
@@ -59,27 +85,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Toggle the arms of the armour stand"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.arms"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.arms",
+                  "fallback": "Toggle the arms of the armour stand",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -99,27 +112,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Toggle the base plate of the armour stand"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.base"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.base",
+                  "fallback": "Toggle the base plate of the armour stand",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -139,27 +139,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Toggle the size of the armour stand"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.size"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.size",
+                  "fallback": "Toggle the size of the armour stand",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -179,27 +166,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Toggle the gravity of the armour stand"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.gravity"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.gravity",
+                  "fallback": "Toggle the gravity of the armour stand",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -219,27 +193,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Toggle the visibility of the armour stand.\nHolding a book with this code will reveal\nnearby invisible armour stands."
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.visible"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.visible",
+                  "fallback": "Toggle the visibility of the armour stand.\nHolding a book with this code will reveal\nnearby invisible armour stands.",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -259,27 +220,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Toggle rotating of the armour stand"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.turn"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.turn",
+                  "fallback": "Toggle rotating of the armour stand",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -299,27 +247,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Disable interactions with the armour stand"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.lock"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.lock",
+                  "fallback": "Disable interactions with the armour stand",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -339,27 +274,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Enable interactions with the armour stand.\nHolding a book with this code will reveal\nnearby locked armour stands."
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.unlock"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.unlock",
+                  "fallback": "Enable interactions with the armour stand.\nHolding a book with this code will reveal\nnearby locked armour stands.",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -373,7 +295,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.better_armour_stands.4",
+            "translate": "text.gm4.guidebook.better_armour_stands.part_editing",
             "fallback": "The following codes activate editing of armour stand parts:"
           },
           {
@@ -385,27 +307,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Edit a part of the armour stand by looking at its \"joint\".\n- Hold sneak to enable \"snapping\"\n- Left click to invert this pose\n- Right click to stop editing"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.pose"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.pose",
+                  "fallback": "Edit a part of the armour stand by looking at its \"joint\".\n- Hold sneak to enable \"snapping\"\n- Left click to invert this pose\n- Right click to stop editing",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -425,27 +334,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Edit a part of the armour stand by looking at its \"joint\".\nIf an arm/leg is selected, the other arm/leg pose is mirrored.\n- Hold sneak to enable \"snapping\"\n- Left click to invert this pose\n- Right click to stop editing"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.pose_mirror"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.pose_mirror",
+                  "fallback": "Edit a part of the armour stand by looking at its \"joint\".\nIf an arm/leg is selected, the other arm/leg pose is mirrored.\n- Hold sneak to enable \"snapping\"\n- Left click to invert this pose\n- Right click to stop editing",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -465,27 +361,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Move the armour stand around you.\n- Hold sneak to enable \"snapping\"\n- Right click to stop editing"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.move"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.move",
+                  "fallback": "Move the armour stand around you.\n- Hold sneak to enable \"snapping\"\n- Right click to stop editing",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -505,27 +388,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Rotate the armour stand.\n- Hold sneak to enable \"snapping\"\n- Right click to stop editing"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.move"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.rotate",
+                  "fallback": "Rotate the armour stand.\n- Hold sneak to enable \"snapping\"\n- Right click to stop editing",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -545,27 +415,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Flip the full pose of the armour stand"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.flip"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.flip",
+                  "fallback": "Flip the full pose of the armour stand",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -577,14 +434,7 @@
             }
           },
           {
-            "text": "\n\n"
-          },
-          {
-            "translate": "text.gm4.guidebook.better_armour_stands.5",
-            "fallback": "The armour stand, or a part, can be reset:"
-          },
-          {
-            "text": "\n- "
+            "text": "\n\n- "
           },
           {
             "text": "default",
@@ -592,27 +442,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "- Look at a part of the armour stand to reset this pose.\n- Sneak to fully reset the armour stand."
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.default"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.default",
+                  "fallback": "- Look at a part of the armour stand to reset this pose.\n- Sneak to fully reset the armour stand.",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -626,7 +463,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.better_armour_stands.6",
+            "translate": "text.gm4.guidebook.better_armour_stands.equipping",
             "fallback": "Items can be placed in the head or arm slots:"
           },
           {
@@ -638,27 +475,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Look at the head or shoulders of the armour stand to place an item from the offhand in this slot."
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.equip"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.equip",
+                  "fallback": "Look at the head or shoulders of the armour stand to place an item from the offhand into this slot.",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -673,7 +497,7 @@
             "text": "\n\n"
           },
           {
-            "translate": "text.gm4.guidebook.better_armour_stands.7",
+            "translate": "text.gm4.guidebook.better_armour_stands.copy_and_paste",
             "fallback": "Armour stand data can be copied and pasted:"
           },
           {
@@ -685,27 +509,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Copy modified features onto the armour stand items in your offhand."
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.equip"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy",
+                  "fallback": "Copy modified features onto the armour stand items in your offhand.",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -725,27 +536,14 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Copy features from the copied armour stand items in your offhand to the armour stand."
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.paste"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.paste",
+                  "fallback": "Copy features from the copied armour stand items in your offhand to the armour stand.",
                   "color": "gray"
                 },
+                "\n",
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "\nClick to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -755,17 +553,6 @@
               "action": "copy_to_clipboard",
               "value": "paste"
             }
-          }
-        ]
-      ],
-      "pages_locked": [
-        [
-          {
-            "insert": "title"
-          },
-          {
-            "translate": "text.gm4.guidebook.better_armour_stands.1",
-            "fallback": "Armour stands will have arms by default, and can be altered with a book and quill.\n\nThis allows one to create custom statues and interesting displays."
           }
         ]
       ]

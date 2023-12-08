@@ -8,7 +8,7 @@
     "nbt": "{CustomModelData:3420003}"
   },
   "criteria": {
-    "page_0/requirement": {
+    "modify_armor_stand": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": [
@@ -30,11 +30,11 @@
   },
   "sections": [
     {
-      "name": "page_0",
+      "name": "description",
       "enable": [],
       "requirements": [
         [
-          "page_0/requirement"
+          "modify_armor_stand"
         ]
       ],
       "pages": [
@@ -43,11 +43,24 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.poses_pack.1",
+            "translate": "text.gm4.guidebook.poses_pack.description",
             "fallback": "The following codes can be used to put a preset pose onto an armour stand:"
           },
           {
-            "text": "\n\nHead:\n- "
+            "text": "\n\n"
+          },
+          {
+            "translate": "text.gm4.guidebook.poses_pack.body_part",
+            "fallback": "%1$s:",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.poses_pack.head",
+                "fallback": "Head"
+              }
+            ]
+          },
+          {
+            "text": "\n- "
           },
           {
             "text": "head up",
@@ -55,15 +68,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -83,15 +89,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -111,15 +110,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -139,15 +131,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -161,7 +146,17 @@
         ],
         [
           {
-            "text": "Arms:\n- "
+            "translate": "text.gm4.guidebook.poses_pack.body_part",
+            "fallback": "%1$s:",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.poses_pack.arms",
+                "fallback": "Arms"
+              }
+            ]
+          },
+          {
+            "text": "\n- "
           },
           {
             "text": "arms reaching",
@@ -169,15 +164,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -197,15 +185,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -225,15 +206,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -253,15 +227,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -281,15 +248,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -301,7 +261,20 @@
             }
           },
           {
-            "text": "\n\nLegs:\n- "
+            "text": "\n\n"
+          },
+          {
+            "translate": "text.gm4.guidebook.poses_pack.body_part",
+            "fallback": "%1$s:",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.poses_pack.legs",
+                "fallback": "Legs"
+              }
+            ]
+          },
+          {
+            "text": "\n- "
           },
           {
             "text": "legs sitting",
@@ -309,15 +282,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -337,15 +303,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -365,15 +324,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -393,15 +345,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    {
-                      "text": "Click to copy"
-                    },
-                    {
-                      "translate": "text.gm4.guidebook.better_armour_stands.copy_code"
-                    }
-                  ],
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
                   "color": "dark_gray",
                   "italic": true
                 }
