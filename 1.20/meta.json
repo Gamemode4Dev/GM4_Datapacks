@@ -1,5 +1,5 @@
 {
-  "last_commit": "904bf97d5d96a96afbfc05a8fed021c168c06b0d",
+  "last_commit": "5ae9941bb57fd713cc67b9ee45c2a4f2545f2b6b",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -712,12 +712,15 @@
     {
       "id": "gm4_double_doors",
       "name": "Double Doors",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Double_Doors",
       "credits": {
         "Creator": [
           "Bloo"
+        ],
+        "Icon Design": [
+          "venomousbirds"
         ]
       },
       "requires": [],
@@ -3082,6 +3085,12 @@
       "name": "Wumpacraft",
       "links": [
         "https://twitter.com/wumpacraft"
+      ]
+    },
+    "Venomousbirds": {
+      "name": "Venomousbirds",
+      "links": [
+        "https://venomousbirds.artstation.com/"
       ]
     }
   }
