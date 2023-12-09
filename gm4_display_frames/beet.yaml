@@ -16,7 +16,7 @@ meta:
         lib_potion_tracking: 1.0.0
       schedule_loops: [main]
     website:
-      description: Splash item frames with invisibilty to make invisbible item frames! Great for interior decor!
+      description: Splash item frames with invisibilty to make invisible item frames! Great for interior decor!
       recommended:
         - gm4_chairs
         - gm4_better_armour_stands

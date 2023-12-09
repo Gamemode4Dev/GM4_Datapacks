@@ -15,7 +15,7 @@ MODRINTH_API = "https://api.modrinth.com/v2"
 MODRINTH_AUTH_KEY = "BEET_MODRINTH_TOKEN"
 SMITHED_API = "https://api.smithed.dev/v2"
 SMITHED_AUTH_KEY = "BEET_SMITHED_TOKEN"
-SUPPORTED_GAME_VERSIONS = ["1.20", "1.20.1", "1.20.2"]
+SUPPORTED_GAME_VERSIONS = ["1.20", "1.20.1", "1.20.2", "1.20.3", "1.20.4"]
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/release-pipeline (gamemode4official@gmail.com)"
 
 class ModrinthConfig(PluginOptions):
