@@ -1861,7 +1861,7 @@ Creates the function to summon a guidebook marker with proper NBT
 def generate_summon_marker_function(book: Book) -> Function:
   marker_nbt = nbtlib.Compound()
   marker_nbt["CustomName"] = nbtlib.String(f'"gm4_{book.id}"')
-  marker_nbt["Tags"] = nbtlib.List([nbtlib.String("gm4_guide")])
+  marker_nbt["Tags"] = nbtlib.List([nbtlib.String("gm4_guide"),nbtlib.String(f"gm4_guide_{book.id}")])
   marker_nbt["data"] = nbtlib.Compound()
   marker_nbt["data"]["type"] = nbtlib.String(book.module_type)
   if book.module_type == "expansion":
