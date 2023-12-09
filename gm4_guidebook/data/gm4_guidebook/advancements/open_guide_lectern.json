@@ -13,7 +13,7 @@
                 ],
                 "nbt": "{Book:{tag:{gm4_guidebook:{lectern:1b}}}}",
                 "state": {
-                  "has_book": true
+                  "has_book": "true"
                 }
               }
             }
