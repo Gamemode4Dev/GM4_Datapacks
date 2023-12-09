@@ -6,6 +6,7 @@ import nbtlib  # type: ignore ; missing stub file
 from beet import (
     Advancement,
     Context,
+    DataPack,
     FileDeserialize,
     Function,
     JsonFile,
@@ -23,8 +24,6 @@ from pydantic import BaseModel
 from gm4.plugins.player_heads import Skin
 
 # TODO:
-# update page contents
-# delete old files
 # merge some functions to reduce fuction call overhead
 
 
@@ -82,8 +81,22 @@ def beet_default(ctx: Context):
   if not ctx.data[GuidebookPages]:
     return # there are no pages configured
 
-  for book in [b.data for b in ctx.data[GuidebookPages].values()]:
-    
+  generate_files(ctx, ctx.data)
+
+  if ctx.data.overlays:
+    for d in ctx.data.overlays.values():
+      if not d[GuidebookPages]:
+        continue
+      generate_files(ctx, d)
+
+
+
+"""
+parse guidebook file and generate all files
+"""
+def generate_files(ctx:Context, d: DataPack):
+  for book in [b.data for b in d[GuidebookPages].values()]:
+  
     # get trigger id, generate one if not already existing
     triggers_file = JsonFile(source_path="gm4_guidebook/triggers.json")
     triggers = triggers_file.data
@@ -113,24 +126,26 @@ def beet_default(ctx: Context):
     loottable, lectern_loot, pages, lectern_pages = generate_loottable(book)
 
     # add loot tables to datapack
-    ctx.data[f"gm4_guidebook:{book.id}"] = loottable
-    ctx.data[f"gm4_guidebook:lectern/{book.id}"] = lectern_loot
+    d[f"gm4_guidebook:{book.id}"] = loottable
+    d[f"gm4_guidebook:lectern/{book.id}"] = lectern_loot
 
     # add functions to datapack
-    ctx.data[f"gm4_guidebook:{book.id}/add_toc_line"] = generate_add_toc_line_function(book)
-    ctx.data[f"gm4_guidebook:{book.id}/setup_storage"] = generate_setup_storage_function(
+    d[f"gm4_guidebook:{book.id}/add_toc_line"] = generate_add_toc_line_function(book)
+    d[f"gm4_guidebook:{book.id}/setup_storage"] = generate_setup_storage_function(
       pages, lectern_pages, book, ctx)
-    ctx.data[f"gm4_guidebook:{book.id}/summon_marker"] = generate_summon_marker_function(book)
-    ctx.data[f"gm4_guidebook:{book.id}/update_hand"] = generate_update_hand_function(book)
-    ctx.data[f"gm4_guidebook:{book.id}/update_lectern"] = generate_update_lectern_function(book)
+    d[f"gm4_guidebook:{book.id}/summon_marker"] = generate_summon_marker_function(book)
+    d[f"gm4_guidebook:{book.id}/update_hand"] = generate_update_hand_function(book)
+    d[f"gm4_guidebook:{book.id}/update_lectern"] = generate_update_lectern_function(book)
 
     # add advancements to datapack
     for index, section in enumerate(book.sections):
       if (advancement := generate_advancement(book, index)) is not None:
-        ctx.data[f"gm4_guidebook:{book.id}/unlock/{section.name}"] = advancement
-        ctx.data[f"gm4_guidebook:{book.id}/display/{section.name}"] = generate_display_advancement(book)
-        ctx.data[f"gm4_guidebook:{book.id}/rewards/{section.name}"] = generate_reward_function(
+        d[f"gm4_guidebook:{book.id}/unlock/{section.name}"] = advancement
+        d[f"gm4_guidebook:{book.id}/display/{section.name}"] = generate_display_advancement(book)
+        d[f"gm4_guidebook:{book.id}/rewards/{section.name}"] = generate_reward_function(
           section, book.id, book.name, book.description)
+
+  d[GuidebookPages].clear()
 
 
 """
