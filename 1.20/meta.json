@@ -1,5 +1,5 @@
 {
-  "last_commit": "ea8d16fb1fc97c8cf2124b9ce2c1f8322cebdaa3",
+  "last_commit": "0c43add247eac237751310ef26ee3c57feaed6c2",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1383,7 +1383,7 @@
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.4.9",
+      "version": "1.4.10",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
