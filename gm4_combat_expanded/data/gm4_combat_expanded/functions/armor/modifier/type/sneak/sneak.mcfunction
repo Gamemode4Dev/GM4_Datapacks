@@ -1,6 +1,6 @@
 # invisibility and jump boost when undamaged
 # @s = player wearing armor
-# at world spawn
+# at unspecified
 # run from armor/check_modifier/safe
 
 execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level

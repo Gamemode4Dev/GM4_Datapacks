@@ -11,6 +11,7 @@ tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/blinding] add gm4_pneuma_blind
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/bounding] add gm4_pneuma_bounding
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/bubbly] add gm4_pneuma_bubbly
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/conjuring] add gm4_pneuma_conjuring
+tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/dashing] add gm4_pneuma_dashing
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/draining] add gm4_pneuma_draining
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/expeditious] add gm4_pneuma_expeditious
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/feathery] add gm4_pneuma_feathery
@@ -26,6 +27,7 @@ tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/retreating] add gm4_pneuma_ret
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/rushing] add gm4_pneuma_rushing
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/scaling] add gm4_pneuma_scaling
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/shrieking] add gm4_pneuma_shrieking
+tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/sniffing] add gm4_pneuma_sniffing
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/soaring] add gm4_pneuma_soaring
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/striding] add gm4_pneuma_striding
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/synergetic] add gm4_pneuma_synergetic
@@ -39,6 +41,7 @@ tag @s[tag=gm4_pneuma_conjuring] add gm4_sneak_pneuma
 tag @s[tag=gm4_pneuma_expeditious] add gm4_sneak_pneuma
 tag @s[tag=gm4_pneuma_draining] add gm4_sneak_pneuma
 tag @s[tag=gm4_pneuma_shrieking] add gm4_sneak_pneuma
+tag @s[tag=gm4_pneuma_dashing] add gm4_sneak_pneuma
 
 # run tick functions
 execute if entity @a[gamemode=!spectator,tag=gm4_pneuma_agile,limit=1] run schedule function gm4_orb_of_ankou:pneumas/temp_tick/agile 1t

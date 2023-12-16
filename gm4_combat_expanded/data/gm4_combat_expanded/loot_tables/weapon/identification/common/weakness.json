@@ -82,26 +82,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "Debilitating Strikes:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.weakness_strike"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.weakness_strike",
+              "fallback": "Debilitating Strikes:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -250,9 +241,7 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
@@ -271,9 +260,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -286,9 +273,7 @@
                       "color": "dark_green",
                       "italic": false
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
                         "name": "$damage_stored_01",
@@ -328,9 +313,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -371,9 +354,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -386,9 +367,7 @@
                       "color": "red",
                       "italic": false
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
                         "name": "$atkspeed_down_01",
@@ -428,9 +407,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -471,30 +448,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.weakness",
+              "fallback": "Crippling %s",
               "with": [
-                [
-                  {
-                    "text": "Crippling ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.weakness",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

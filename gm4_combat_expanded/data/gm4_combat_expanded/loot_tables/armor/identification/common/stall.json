@@ -67,59 +67,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Under Attack:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.unsafe"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "potion.withDuration",
-                "with": [
-                  {
-                    "translate": "effect.minecraft.resistance"
-                  },
-                  "0:02"
-                ],
-                "color": "blue",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$armor"
-                },
-                "score": "gm4_ce_data"
-              },
-              "range": 1
+              "translate": "item.gm4.combat_expanded.lore.unsafe",
+              "fallback": "When Under Attack:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -160,7 +118,7 @@
                 },
                 "score": "gm4_ce_data"
               },
-              "range": 2
+              "range": 1
             }
           ]
         },
@@ -201,6 +159,47 @@
                 },
                 "score": "gm4_ce_data"
               },
+              "range": 2
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "potion.withDuration",
+                "with": [
+                  {
+                    "translate": "potion.withAmplifier",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.resistance"
+                      },
+                      {
+                        "translate": "potion.potency.3"
+                      }
+                    ]
+                  },
+                  "0:02"
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor"
+                },
+                "score": "gm4_ce_data"
+              },
               "range": 3
             }
           ]
@@ -215,23 +214,11 @@
                 "with": [
                   [
                     {
-                      "translate": "%1$s%3427655$s",
+                      "translate": "attribute.gm4.combat_expanded.aoe",
+                      "fallback": "%s AoE",
                       "with": [
-                        [
-                          [
-                            {
-                              "translate": "effect.minecraft.resistance"
-                            }
-                          ],
-                          " AoE"
-                        ],
                         {
-                          "translate": "attribute.gm4.combat_expanded.lore.aoe",
-                          "with": [
-                            {
-                              "translate": "effect.minecraft.resistance"
-                            }
-                          ]
+                          "translate": "effect.minecraft.resistance"
                         }
                       ]
                     }
@@ -268,37 +255,17 @@
                 "with": [
                   [
                     {
-                      "translate": "%1$s%3427655$s",
+                      "translate": "attribute.gm4.combat_expanded.aoe",
+                      "fallback": "%s AoE",
                       "with": [
-                        [
-                          [
-                            {
-                              "translate": "potion.withAmplifier",
-                              "with": [
-                                {
-                                  "translate": "effect.minecraft.resistance"
-                                },
-                                {
-                                  "translate": "potion.potency.1"
-                                }
-                              ]
-                            }
-                          ],
-                          " AoE"
-                        ],
                         {
-                          "translate": "attribute.gm4.combat_expanded.lore.aoe",
+                          "translate": "potion.withAmplifier",
                           "with": [
                             {
-                              "translate": "potion.withAmplifier",
-                              "with": [
-                                {
-                                  "translate": "effect.minecraft.resistance"
-                                },
-                                {
-                                  "translate": "potion.potency.1"
-                                }
-                              ]
+                              "translate": "effect.minecraft.resistance"
+                            },
+                            {
+                              "translate": "potion.potency.1"
                             }
                           ]
                         }
@@ -337,37 +304,17 @@
                 "with": [
                   [
                     {
-                      "translate": "%1$s%3427655$s",
+                      "translate": "attribute.gm4.combat_expanded.aoe",
+                      "fallback": "%s AoE",
                       "with": [
-                        [
-                          [
-                            {
-                              "translate": "potion.withAmplifier",
-                              "with": [
-                                {
-                                  "translate": "effect.minecraft.resistance"
-                                },
-                                {
-                                  "translate": "potion.potency.2"
-                                }
-                              ]
-                            }
-                          ],
-                          " AoE"
-                        ],
                         {
-                          "translate": "attribute.gm4.combat_expanded.lore.aoe",
+                          "translate": "potion.withAmplifier",
                           "with": [
                             {
-                              "translate": "potion.withAmplifier",
-                              "with": [
-                                {
-                                  "translate": "effect.minecraft.resistance"
-                                },
-                                {
-                                  "translate": "potion.potency.2"
-                                }
-                              ]
+                              "translate": "effect.minecraft.resistance"
+                            },
+                            {
+                              "translate": "potion.potency.2"
                             }
                           ]
                         }
@@ -401,30 +348,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.stall",
+              "fallback": "Stalling %s",
               "with": [
-                [
-                  {
-                    "text": "Stalling ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.stall",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

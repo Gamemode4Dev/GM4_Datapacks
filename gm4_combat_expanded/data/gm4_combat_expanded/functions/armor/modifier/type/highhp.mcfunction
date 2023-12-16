@@ -1,6 +1,6 @@
 # check if armor should activate
 # @s = player being checked
-# at world spawn
+# at unspecified
 # run from armor/check_modifier/highhp
 
 function gm4_combat_expanded:player/calculate_hp

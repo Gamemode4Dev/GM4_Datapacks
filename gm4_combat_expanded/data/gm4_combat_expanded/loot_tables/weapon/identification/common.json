@@ -9,6 +9,10 @@
         },
         {
           "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:weapon/identification/common/giant"
+        },
+        {
+          "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:weapon/identification/common/glow"
         },
         {
@@ -17,19 +21,11 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:weapon/identification/common/light"
-        },
-        {
-          "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:weapon/identification/common/poison"
         },
         {
           "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:weapon/identification/common/quick"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:weapon/identification/common/slow"
         },
         {
           "type": "minecraft:loot_table",

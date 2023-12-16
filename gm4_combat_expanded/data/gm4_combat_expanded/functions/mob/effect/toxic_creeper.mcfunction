@@ -1,6 +1,6 @@
 # refresh effects on creeper
 # @s = toxic creeper
-# at world spawn
+# at unspecified
 # run from slow_clock
 
 effect give @s weakness 33 1

@@ -19,26 +19,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "When Equipped:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.equip"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.equip",
+              "fallback": "When Equipped:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -48,17 +39,10 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "Defiance",
-                    "color": "red",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.challenge"
-                  }
-                ]
+                "translate": "item.gm4.combat_expanded.lore.challenge",
+                "fallback": "Defiance",
+                "color": "red",
+                "italic": false
               }
             ]
           ]
@@ -68,33 +52,32 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.challenge",
+              "fallback": "Challengers %s",
               "with": [
-                [
-                  {
-                    "text": "Challengers ",
-                    "italic": false,
-                    "color": "light_purple"
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true,
-                    "color": "light_purple"
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.challenge",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true,
-                      "color": "light_purple"
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true,
+                  "color": "light_purple"
                 }
-              ]
+              ],
+              "color": "light_purple",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:copy_nbt",
+          "source": {
+            "type": "minecraft:storage",
+            "source": "gm4_combat_expanded:temp"
+          },
+          "ops": [
+            {
+              "source": "tag.Enchantments",
+              "target": "Enchantments",
+              "op": "replace"
             }
           ]
         },
@@ -103,7 +86,7 @@
           "enchantments": {
             "minecraft:vanishing_curse": 1
           },
-          "add": true
+          "add": false
         }
       ]
     }

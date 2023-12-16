@@ -4,7 +4,7 @@
 # run from function: gm4_rope_ladders:mechanics/ladder_placement/scan_column/init
 
 # detect if ladder placement is valid
-execute if block ~ ~ ~ #gm4_rope_ladders:valid_replace run function gm4_rope_ladders:mechanics/ladder_placement/scan_column/found
+execute if block ~ ~ ~ #gm4:replaceable run function gm4_rope_ladders:mechanics/ladder_placement/scan_column/found
 
 # loop
 scoreboard players add $loop gm4_rol_data 1

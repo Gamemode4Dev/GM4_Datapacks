@@ -68,26 +68,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "Discordant Strikes:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.chaos_strike"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.chaos_strike",
+              "fallback": "Discordant Strikes:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -97,17 +88,10 @@
           "lore": [
             [
               {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "Wild Magic",
-                    "color": "blue",
-                    "italic": false
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.chaos"
-                  }
-                ]
+                "translate": "item.gm4.combat_expanded.lore.chaos",
+                "fallback": "Wild Magic",
+                "color": "blue",
+                "italic": false
               }
             ]
           ]
@@ -115,9 +99,7 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
@@ -136,9 +118,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -151,9 +131,7 @@
                       "color": "dark_green",
                       "italic": false
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
                         "name": "$damage_stored_01",
@@ -193,9 +171,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -236,9 +212,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -251,9 +225,7 @@
                       "color": "red",
                       "italic": false
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
                         "name": "$atkspeed_down_01",
@@ -293,9 +265,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -336,45 +306,23 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.chaos",
+              "fallback": "Chaotic %s",
               "with": [
-                [
-                  {
-                    "text": "Chaotic ",
-                    "italic": false,
-                    "color": "yellow"
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.chaos",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false,
+              "color": "yellow"
             }
           ]
         },
         {
           "function": "minecraft:enchant_with_levels",
-          "levels": {
-            "type": "minecraft:score",
-            "target": {
-              "type": "minecraft:fixed",
-              "name": "$random_value"
-            },
-            "score": "gm4_ce_data",
-            "scale": 10
-          }
+          "levels": 50
         }
       ]
     }

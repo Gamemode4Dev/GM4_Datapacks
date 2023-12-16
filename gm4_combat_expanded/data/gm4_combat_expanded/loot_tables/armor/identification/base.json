@@ -29,6 +29,11 @@
                   "source": "tag.AttributeModifiers",
                   "target": "AttributeModifiers",
                   "op": "replace"
+                },
+                {
+                  "source": "tag.Enchantments",
+                  "target": "Enchantments",
+                  "op": "replace"
                 }
               ]
             }

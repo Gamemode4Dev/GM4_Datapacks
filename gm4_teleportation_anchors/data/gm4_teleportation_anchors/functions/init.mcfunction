@@ -10,6 +10,7 @@ scoreboard objectives add gm4_ta_pos_y dummy
 scoreboard objectives add gm4_ta_pos_z dummy
 
 execute unless score gm4_teleportation_anchors gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Teleportation Anchors"}
+execute unless score gm4_teleportation_anchors gm4_earliest_version < gm4_teleportation_anchors gm4_modules run scoreboard players operation gm4_teleportation_anchors gm4_earliest_version = gm4_teleportation_anchors gm4_modules
 scoreboard players set gm4_teleportation_anchors gm4_modules 1
 
 schedule function gm4_teleportation_anchors:main 1t

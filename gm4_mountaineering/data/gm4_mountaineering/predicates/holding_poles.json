@@ -1,0 +1,30 @@
+[
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "offhand": {
+          "items": [
+            "minecraft:stick"
+          ],
+          "nbt": "{gm4_mountaineering:{item:\"poles\"}}"
+        }
+      }
+    }
+  },
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "mainhand": {
+          "items": [
+            "minecraft:stick"
+          ],
+          "nbt": "{gm4_mountaineering:{item:\"poles\"}}"
+        }
+      }
+    }
+  }
+]

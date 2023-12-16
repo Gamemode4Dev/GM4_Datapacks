@@ -30,15 +30,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  {
-                    "text": "Arrow of Wither"
-                  },
-                  {
-                    "translate": "item.gm4.combat_expanded.lore.wither_arrow"
-                  }
-                ],
+                "translate": "item.gm4.combat_expanded.lore.wither_arrow",
+                "fallback": "Arrow of Wither",
                 "italic": false
               }
             }

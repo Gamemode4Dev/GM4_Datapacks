@@ -82,26 +82,17 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "%1$s%3427655$s",
-              "with": [
-                {
-                  "text": "Phantom Strikes:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.gm4.combat_expanded.lore.glow_strike"
-                }
-              ]
+              "translate": "item.gm4.combat_expanded.lore.glow_strike",
+              "fallback": "Phantom Strikes:",
+              "color": "gray",
+              "italic": false
             }
           ]
         },
@@ -135,15 +126,8 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Haunt"
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.glow"
-                      }
-                    ]
+                    "translate": "item.gm4.combat_expanded.lore.glow",
+                    "fallback": "Haunt"
                   },
                   {
                     "translate": "potion.potency.0"
@@ -178,15 +162,8 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Haunt"
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.glow"
-                      }
-                    ]
+                    "translate": "item.gm4.combat_expanded.lore.glow",
+                    "fallback": "Haunt"
                   },
                   {
                     "translate": "potion.potency.1"
@@ -221,15 +198,8 @@
                 "translate": "potion.withAmplifier",
                 "with": [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Haunt"
-                      },
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.glow"
-                      }
-                    ]
+                    "translate": "item.gm4.combat_expanded.lore.glow",
+                    "fallback": "Haunt"
                   },
                   {
                     "translate": "potion.potency.2"
@@ -258,9 +228,7 @@
         {
           "function": "minecraft:set_lore",
           "lore": [
-            {
-              "text": ""
-            }
+            ""
           ]
         },
         {
@@ -279,9 +247,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -294,9 +260,7 @@
                       "color": "red",
                       "italic": false
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
                         "name": "$damage_down_01",
@@ -336,9 +300,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -379,9 +341,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -394,9 +354,7 @@
                       "color": "dark_green",
                       "italic": false
                     },
-                    {
-                      "text": "."
-                    },
+                    ".",
                     {
                       "score": {
                         "name": "$atkspeed_stored_01",
@@ -436,9 +394,7 @@
           "entity": "this",
           "lore": [
             [
-              {
-                "text": " "
-              },
+              "",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -479,30 +435,16 @@
           "entity": "this",
           "name": [
             {
-              "translate": "%1$s%3427655$s",
+              "translate": "item.gm4.combat_expanded.name.glow",
+              "fallback": "Spectral %s",
               "with": [
-                [
-                  {
-                    "text": "Spectral ",
-                    "italic": false
-                  },
-                  {
-                    "nbt": "tag.gm4_combat_expanded.name",
-                    "storage": "gm4_combat_expanded:temp",
-                    "interpret": true
-                  }
-                ],
                 {
-                  "translate": "item.gm4.combat_expanded.name.glow",
-                  "with": [
-                    {
-                      "nbt": "tag.gm4_combat_expanded.name",
-                      "storage": "gm4_combat_expanded:temp",
-                      "interpret": true
-                    }
-                  ]
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "italic": false
             }
           ]
         }

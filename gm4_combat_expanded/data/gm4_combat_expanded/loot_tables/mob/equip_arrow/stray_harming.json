@@ -30,9 +30,7 @@
                   "color": "red",
                   "italic": false
                 },
-                {
-                  "text": ""
-                },
+                "",
                 {
                   "translate": "potion.whenDrank",
                   "color": "purple",
@@ -41,9 +39,7 @@
                 {
                   "translate": "attribute.modifier.take.1",
                   "with": [
-                    {
-                      "text": "15"
-                    },
+                    "15",
                     {
                       "translate": "attribute.name.generic.movement_speed"
                     }

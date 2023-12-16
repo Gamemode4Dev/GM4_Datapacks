@@ -9,6 +9,7 @@ tag @s remove gm4_pneuma_blinding
 tag @s remove gm4_pneuma_bounding
 tag @s remove gm4_pneuma_bubbly
 tag @s remove gm4_pneuma_conjuring
+tag @s remove gm4_pneuma_dashing
 tag @s remove gm4_pneuma_draining
 tag @s remove gm4_pneuma_expeditious
 tag @s remove gm4_pneuma_feathery
@@ -24,6 +25,7 @@ tag @s remove gm4_pneuma_retreating
 tag @s remove gm4_pneuma_rushing
 tag @s remove gm4_pneuma_scaling
 tag @s remove gm4_pneuma_shrieking
+tag @s remove gm4_pneuma_sniffing
 tag @s remove gm4_pneuma_soaring
 tag @s remove gm4_pneuma_striding
 tag @s remove gm4_pneuma_synergetic

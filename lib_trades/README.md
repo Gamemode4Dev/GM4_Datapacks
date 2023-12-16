@@ -3,7 +3,7 @@
 *lib_trades* is a mcfunction library that allows other datapacks to easily add trades to Wandering Traders or to any Villager-like entity of their choice. The main focus of this library was to make it easy to use but still powerful enough to provide a satisfying interface.
 
 # Terminology and Functioning
-To discuss the versitile nature of this library, a few terms should be known to the user:
+To discuss the versatile nature of this library, a few terms should be known to the user:
 - *trader*: A Villager-like mob (as of Minecraft 1.19 `wandering_trader` and `villager`) is called a *trader*.
 - *trade option*: A single trade inside a trader's trade GUI is called a *trade option* (e.g. 5 Emeralds for one Bookshelf).
 - *trade pool*: A virtual collection of trade options is called a *trade pool*. A trade pool occupies a single slot within a trader's trade GUI.
@@ -14,7 +14,7 @@ The following paragraphs outline the functioning of these in an in-game environm
 Traders can be any entity that holds Villager-Style trades, including a trade GUI. As of Minecraft 1.19, these are `wandering_trader` and `villager` type entities.
 *lib_trades* enables the user to add trades to these mobs in a standardized and simplified manner. This allows multiple datapacks to use traders without having to worry about adding too many trades (which makes the trade GUI very long and hard to use) or causing conflicts by overwriting each other's trades.<br>
 
-Furthermore, this library allows trades to be generated from loot tables, enabling the versitile features of loot tables, such as random item counts or random item selection, within villager trades. Hardcoding trades, i.e. adding a trade without having to create a loot table for the trade, is also possible.<br>
+Furthermore, this library allows trades to be generated from loot tables, enabling the versatile features of loot tables, such as random item counts or random item selection, within villager trades. Hardcoding trades, i.e. adding a trade without having to create a loot table for the trade, is also possible.<br>
 
 All meta-nbt for trades (such as experience rewards or max uses) is also exposed by the library and can be configured by the user.
 
@@ -58,7 +58,7 @@ To load trades, a function that spawns trade options must be provided (splitting
 For each trade option a `trader_llama` entity must be spawned, the following NBT is recommended as a base:<br>
 ```summon trader_llama ~ 0 ~ {Silent:1b,NoGravity:1b,Invulnerable:1b,ChestedHorse:1b,Variant:0,Strength:1,DespawnDelay:1,Tags:["gm4_trade_option"],Items:[{},{},{}]}```<br>
 
-The tag `gm4_trade_option` is mandetory and is used by the library to identify available trade options. If the llama has to be targeted again after being spawned in (e.g. for populating its inventory using `/loot` or `/item replace`), the addition of a temporary tag is recommended.
+The tag `gm4_trade_option` is mandatory and is used by the library to identify available trade options. If the llama has to be targeted again after being spawned in (e.g. for populating its inventory using `/loot` or `/item replace`), the addition of a temporary tag is recommended.
 
 The `trader_llama` holds all information about the trade within its own NBT, following a special format:
 - `Items[{Slot:2b}]` || `horse.0`: Contents of the `sell` tag of the trade option.
@@ -77,3 +77,6 @@ Not summoning a `trader_llama` for a trade option will result in the trade optio
 ## Registering Trades
 Registering trades is only necessary when naturally spawned Wandering Traders are supposed to receive them, it is **not** necessary for adding trades to external traders.<br>
 To register trades, the function that loads the trades must be added to the `#gm4_trades:register_trades` function tag.
+
+## License
+This library, and the contents of the `lib_forceload` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.
