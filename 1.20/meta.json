@@ -1,5 +1,5 @@
 {
-  "last_commit": "0c43add247eac237751310ef26ee3c57feaed6c2",
+  "last_commit": "c672701c7575b08a062fb10000d78c873187df01",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2048,7 +2048,7 @@
     {
       "id": "gm4_soul_glass",
       "name": "Soul Glass",
-      "version": "1.2.6",
+      "version": "1.2.7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Soul_Glass",
       "credits": {
