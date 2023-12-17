@@ -8,6 +8,7 @@ advancement revoke @s only gm4_hotswap_hotbars:hotswapper_offhand
 # get item data
 data modify storage gm4_hotswap_hotbars:temp Item set from entity @s Inventory[{Slot:-106b}]
 data modify storage gm4_hotswap_hotbars:temp Item.tag.gm4_hotswap_hotbars.item set value "hotswapper_item"
+data remove storage gm4_hotswap_hotbars:temp Item.tag.HideFlags
 
 # set color
 scoreboard players set $color gm4_hh_data -1

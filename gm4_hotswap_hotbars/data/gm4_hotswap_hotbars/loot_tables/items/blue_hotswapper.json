@@ -15,7 +15,7 @@
               "function": "minecraft:set_name",
               "name": {
                 "translate": "item.gm4.hotswapper",
-                "fallback": "Hotswapper",
+                "fallback": "Mechanical Shulker Box",
                 "italic": false
               }
             },

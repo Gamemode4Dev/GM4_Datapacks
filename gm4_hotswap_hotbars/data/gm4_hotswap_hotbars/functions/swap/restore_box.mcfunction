@@ -15,6 +15,7 @@ execute if score $item gm4_hh_data matches 1.. store result score $slot gm4_hh_d
 data remove storage gm4_hotswap_hotbars:temp Item.tag.Explosion
 data remove storage gm4_hotswap_hotbars:temp Item.tag.gm4_hotswap_hotbars.color
 data modify storage gm4_hotswap_hotbars:temp Item.tag.gm4_hotswap_hotbars.item set value "hotswapper"
+data remove storage gm4_hotswap_hotbars:temp Item.tag.HideFlags
 
 # replace item
 execute if score $slot gm4_hh_data matches 0..8 run function gm4_hotswap_hotbars:swap/restore_box/hotbar
