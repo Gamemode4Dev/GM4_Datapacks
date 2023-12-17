@@ -31,13 +31,45 @@ data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage g
 data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:lime_shulker_box"}]
 data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:green_shulker_box"}]
 data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:cyan_shulker_box"}]
-data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:light_blueshulker_box"}]
+data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:light_blue_shulker_box"}]
 data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:blue_shulker_box"}]
 data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:purple_shulker_box"}]
 data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:magenta_shulker_box"}]
 data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:pink_shulker_box"}]
 data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{tag:{gm4_hotswap_hotbars:{item:"hotswapper_item"}}}]
+
 data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:-106b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:100b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:101b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:102b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:103b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:9b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:10b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:11b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:12b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:13b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:14b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:15b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:16b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:17b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:18b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:19b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:20b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:21b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:22b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:23b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:24b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:25b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:26b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:27b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:28b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:29b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:30b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:31b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:32b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:33b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:34b}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:35b}]
 
 data remove storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:shulker_box"}]
 data remove storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:white_shulker_box"}]
@@ -60,7 +92,7 @@ data remove storage gm4_hotswap_hotbars:temp Inventory[{tag:{gm4_hotswap_hotbars
 
 # drop invalid items
 scoreboard players set $invalid_items gm4_hh_data 0
-execute store result score $invalid_items gm4_hh_data if data storage gm4_hotswap_hotbars:temp invalid_items[-1]
+execute store result score $invalid_items gm4_hh_data run data get storage gm4_hotswap_hotbars:temp invalid_items
 execute if score $invalid_items gm4_hh_data matches 1.. run function gm4_hotswap_hotbars:swap/drop_invalid_item
 
 # change hotbar to last shulker box row
