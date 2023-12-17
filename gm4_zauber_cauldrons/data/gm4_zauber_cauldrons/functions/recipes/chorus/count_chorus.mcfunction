@@ -21,7 +21,7 @@ execute if score $popped_chorus_fullness gm4_zc_chorus matches 0 run scoreboard 
 
 # check count against seed based count
 execute unless score $cancel_recipe gm4_zc_data matches 2 run scoreboard players operation $raw_chorus_fullness gm4_zc_chorus -= $required_chorus_fruit gm4_zc_chorus
-execute unless score $cancel_recipe gm4_zc_data matches 2 run scoreboard players operation $popped_chorus_fullness gm4_zc_chorus -= required_popped_chorus_fruit gm4_zc_chorus
+execute unless score $cancel_recipe gm4_zc_data matches 2 run scoreboard players operation $popped_chorus_fullness gm4_zc_chorus -= $required_popped_chorus_fruit gm4_zc_chorus
 
 # start incomplete recipe
 execute unless score $cancel_recipe gm4_zc_data matches 2 if score $raw_chorus_fullness gm4_zc_chorus matches ..-1 run scoreboard players set $cancel_recipe gm4_zc_data 1

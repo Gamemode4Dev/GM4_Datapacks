@@ -12,8 +12,12 @@ scoreboard objectives add gm4_zc_moon_phase dummy
 scoreboard objectives add gm4_zc_no_explode dummy
 scoreboard objectives add gm4_zc_magicol_painter_timer dummy
 scoreboard objectives add gm4_zc_rabtarget dummy
-execute unless score $seed gm4_zc_flowers matches -2147483648..2147483647 run function gm4_zauber_cauldrons:recipes/flowers/initiate_flower_types
-execute unless score seed gm4_zc_chorus matches -2147483648..2147483647 run function gm4_zauber_cauldrons:recipes/chorus/initiate_chorus_amounts
+# assign lucky/poisonous flowers, unless this was done before
+execute unless score $required_flowers gm4_zc_flowers matches -2147483648..2147483647 run function gm4_zauber_cauldrons:recipes/flowers/initiate_flower_types
+# assign chorus amounts, unless this was done before. The latter score check without the $ and the scoreboard operation are required on old worlds.
+execute if score required_popped_chorus_fruit gm4_zc_chorus matches -2147483648..2147483647 run scoreboard players operation $required_popped_chorus_fruit gm4_zc_chorus = required_popped_chorus_fruit gm4_zc_chorus
+execute unless score $required_total gm4_zc_chorus matches -2147483648..2147483647 unless score required_total gm4_zc_chorus matches -2147483648..2147483647 run function gm4_zauber_cauldrons:recipes/chorus/initiate_chorus_amounts
+# assign moon phase offset
 execute unless score $magicol_offset gm4_zc_moon_phase matches -2147483648..2147483647 run function gm4_zauber_cauldrons:recipes/magicol/initiate_moon_phase_offset
 scoreboard players set #modulo gm4_zc_fullness 3
 scoreboard players set #8 gm4_zc_moon_phase 8
