@@ -37,6 +37,8 @@ data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage g
 data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:magenta_shulker_box"}]
 data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:pink_shulker_box"}]
 data modify storage gm4_hotswap_hotbars:temp invalid_items append from storage gm4_hotswap_hotbars:temp Inventory[{tag:{gm4_hotswap_hotbars:{item:"hotswapper_item"}}}]
+data remove storage gm4_hotswap_hotbars:temp invalid_items[{Slot:-106b}]
+
 data remove storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:shulker_box"}]
 data remove storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:white_shulker_box"}]
 data remove storage gm4_hotswap_hotbars:temp Inventory[{id:"minecraft:light_gray_shulker_box"}]
