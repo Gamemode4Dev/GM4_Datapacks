@@ -16,7 +16,7 @@
         "frame": "task",
         "hidden": false
     },
-    "parent": "gm4:zauber_cauldrons_create",
+    "parent": "gm4:zauber_cauldrons_full_armor",
     "criteria": {
         "make_magicol": {
             "trigger": "minecraft:impossible"
