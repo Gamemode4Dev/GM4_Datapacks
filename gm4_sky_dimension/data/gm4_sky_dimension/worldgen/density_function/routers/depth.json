@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:mul",
+  "argument1": 0.0001,
+  "argument2": "minecraft:y"
+}

@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:add",
+  "argument1": "minecraft:end/base_3d_noise",
+  "argument2": "minecraft:end/sloped_cheese"
+}
