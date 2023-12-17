@@ -26,5 +26,9 @@
     "spawners": {},
     "spawn_costs": {},
     "carvers": {},
-    "features": []
+    "features": [
+        [
+            "gm4_zauber_cauldrons:{{flower}}_patch"
+        ]
+    ]
 }
