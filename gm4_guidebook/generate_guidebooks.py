@@ -1,5 +1,8 @@
+import sys
+import os
 import colorsys
 import json
+import logging
 from typing import Any, ClassVar, Literal, Optional
 
 import nbtlib  # type: ignore ; missing stub file
@@ -22,6 +25,8 @@ from PIL import Image
 from pydantic import BaseModel
 
 from gm4.plugins.player_heads import Skin
+
+logger = logging.getLogger(__name__)
 
 # TODO:
 # merge some functions to reduce fuction call overhead
@@ -48,7 +53,6 @@ class Book(BaseModel):
   trigger_id: int = -1 # value set by triggers.json
   description: Optional[str]
   wiki_link: Optional[str]
-
 
 class GuidebookPages(JsonFileBase[Book]):
   """defines a custom beet filetype for guidebook pages"""
@@ -102,6 +106,10 @@ def generate_files(ctx:Context, d: DataPack):
     triggers = triggers_file.data
 
     if book.id not in triggers:
+        if os.getenv("GITHUB_ACTIONS"):
+          logger.error("Github Actions cannot add guidebook triggers. Run the build locally and commit changes to gm4_guidebook/triggers.json")
+          sys.exit(1) # quit the build and mark the github action as failed
+
         triggers[book.id] = triggers['__next__']
         triggers['__next__'] += 1
         triggers_file.data = dict(sorted(triggers.items()))
