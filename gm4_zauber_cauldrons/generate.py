@@ -6,14 +6,15 @@ import json
 
 from beet import Context, subproject
 
+
 class CSVCell(str):
     """
     String wrapper which supports color encoding translation.
     """
 
-    DEC = 'dec' # for numbers formatted 16777215
-    HEX = 'hex' # for numbers formatted #AB0EFF
-    FLOAT = 'float'# for numbers formatted [0.5, 0.2, 0.9]
+    DEC = 'dec'  # for numbers formatted 16777215
+    HEX = 'hex'  # for numbers formatted #AB0EFF
+    FLOAT = 'float'  # for numbers formatted [0.5, 0.2, 0.9]
 
     def as_integer(self) -> int:
         """
@@ -22,14 +23,14 @@ class CSVCell(str):
         """
         if self.startswith('#') and len(self) == 7:  # alternative way of marking base 16 (hex colors)
             return CSVCell('0x' + self.lstrip('#')).as_integer()
-        if self.startswith('0x'): # check if the string is in base 2
+        if self.startswith('0x'):  # check if the string is in base 2
             return int(self, 16)
         if self.startswith('0o'):  # check if the string is in base 8
             return int(self, 8)
         if self.startswith('0b'):  # check if the string is in base 16
             return int(self, 2)
-        return int(self) # string must be base 10
-    
+        return int(self)  # string must be base 10
+
     def to_color_code(self, encoding: str) -> 'CSVCell':
         """
         Outputs the string contained in this CSVCell formatted as a color code, e.g. #4AA0C7 if 'HEX' is given.
@@ -44,6 +45,7 @@ class CSVCell(str):
         raise ValueError(
             f"Invalid encoding '{encoding}'. Must be '{CSVCell.DEC}', '{CSVCell.HEX}', or '{CSVCell.FLOAT}'.")
 
+
 class CSVRow():
     """
     Read-only dict wrapper which represents a row of data from a .csv file.
@@ -53,7 +55,7 @@ class CSVRow():
         """
         Initialize a new CSVRow object using the supplied column names and data. CSVRow objects are read-only by design.
         If no data and no column names are supplied the resulting CSVRow object will evaluate to false in boolean expressions.
-        
+
         Access data within this CSVRow via the `get(key, default)` method or using `[<key: str>]`.
         """
         if not column_names:
@@ -65,8 +67,7 @@ class CSVRow():
             raise ValueError(
                 f"Could not build CSVRow from supplied column names and data; Number of supplied column names ({len(column_names)}) does not match number of supplied data entries ({len(data)}).")
 
-        self._data = {column_names[column_index]
-            : value for column_index, value in enumerate(data)}
+        self._data = {column_names[column_index]: value for column_index, value in enumerate(data)}
 
     def __bool__(self):
         """
@@ -78,8 +79,9 @@ class CSVRow():
         try:
             return self._data[key]
         except KeyError as ke:
-            raise ValueError(f"Failed to select column named '{ke.args[0]}' from CSVRow with columns {[key for key in self._data]}.")
-    
+            raise ValueError(
+                f"Failed to select column named '{ke.args[0]}' from CSVRow with columns {[key for key in self._data]}.")
+
     def __repr__(self) -> str:
         return str(self._data)
 
@@ -127,7 +129,7 @@ class CSV():
 
     def __getitem__(self, row_index: int):
         return CSVRow(self._column_names, self._rows[row_index])
-    
+
     def __repr__(self):
         return str([CSVRow(self._column_names, data) for data in self._rows])
 
@@ -325,7 +327,7 @@ def generate_magicol_recipes(ctx: Context, weather_modifiers: CSV, magicol_color
     Generates the function tree for crafting th magicol liquid.
     """
     for bottle_data, color_data, modifier_data in product(potion_bottles, magicol_colors, weather_modifiers):
-        
+
         subproject_config = {
             "data_pack": {
                 "load": [
@@ -368,7 +370,7 @@ def generate_zauber_biomes(ctx: Context, weather_modifiers: CSV, magicol_colors:
     Generates biome files for verzauberte plains biomes.
     """
     for bottle_data, color_data, modifier_data in product(potion_bottles, magicol_colors, weather_modifiers):
-        
+
         # skip drinkable
         if bottle_data['bottle'] == 'drinkable':
             continue
@@ -379,8 +381,9 @@ def generate_zauber_biomes(ctx: Context, weather_modifiers: CSV, magicol_colors:
         if bottle_data['bottle'] == 'lingering':
             adjective = 'glittering_'
             # convert base-10 colors to rgb float colors
-            biome_particle = '"particle":{"options":{"type":"minecraft:dust","color":' + color_data.get(f"particle_color_{modifier_data['modifier']}", 7979098).to_color_code(CSVCell.FLOAT) + ',"scale":2},"probability":0.002},'
-        
+            biome_particle = '"particle":{"options":{"type":"minecraft:dust","color":' + color_data.get(
+                f"particle_color_{modifier_data['modifier']}", 7979098).to_color_code(CSVCell.FLOAT) + ',"scale":2},"probability":0.002},'
+
         subproject_config = {
             "data_pack": {
                 "load": [
@@ -408,10 +411,12 @@ def generate_zauber_biomes(ctx: Context, weather_modifiers: CSV, magicol_colors:
                 "grass_color": color_data.get(f"grass_color_{modifier_data['modifier']}", 7979098).to_color_code(CSVCell.DEC),
                 "foliage_color": color_data.get(f"foliage_color_{modifier_data['modifier']}", 5877296).to_color_code(CSVCell.DEC),
                 "biome_particle": biome_particle,
-                "flower": flower_types.find_row(color_data['flower'], 'flower').get('flower', 'grass') # only add flowers which are registered as zauber flowers
+                # only add flowers which are registered as zauber flowers
+                "flower": flower_types.find_row(color_data['flower'], 'flower').get('flower', 'grass')
             }
         }
         ctx.require(subproject(subproject_config))
+
 
 def generate_flower_features(ctx: Context, flower_types: CSV):
     """
