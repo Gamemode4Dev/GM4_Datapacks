@@ -6,12 +6,50 @@ import json
 
 from beet import Context, subproject
 
+class CSVCell(str):
+    """
+    String wrapper which supports color encoding translation.
+    """
+
+    DEC = 'dec' # for numbers formatted 16777215
+    HEX = 'hex' # for numbers formatted #AB0EFF
+    FLOAT = 'float'# for numbers formatted [0.5, 0.2, 0.9]
+
+    def as_integer(self) -> int:
+        """
+        Interprets the string contained in this CSVCell as an integer.
+        Tries to detect the base automatically.
+        """
+        if self.startswith('#') and len(self) == 7:  # alternative way of marking base 16 (hex colors)
+            return CSVCell('0x' + self.lstrip('#')).as_integer()
+        if self.startswith('0x'): # check if the string is in base 2
+            return int(self, 16)
+        if self.startswith('0o'):  # check if the string is in base 8
+            return int(self, 8)
+        if self.startswith('0b'):  # check if the string is in base 16
+            return int(self, 2)
+        return int(self) # string must be base 10
+    
+    def to_color_code(self, encoding: str) -> 'CSVCell':
+        """
+        Outputs the string contained in this CSVCell formatted as a color code, e.g. #4AA0C7 if 'HEX' is given.
+        """
+        if encoding == CSVCell.HEX:
+            return CSVCell('#' + hex(self.as_integer()).lstrip('0x'))
+        if encoding == CSVCell.DEC:
+            return CSVCell(self.as_integer())
+        if encoding == CSVCell.FLOAT:
+            dec = self.as_integer()
+            return CSVCell([(dec >> 16) / 255, ((dec >> 8) & 0xFF) / 255, (dec & 0xFF) / 255])
+        raise ValueError(
+            f"Invalid encoding '{encoding}'. Must be '{CSVCell.DEC}', '{CSVCell.HEX}', or '{CSVCell.FLOAT}'.")
+
 class CSVRow():
     """
     Read-only dict wrapper which represents a row of data from a .csv file.
     """
 
-    def __init__(self, column_names: List[str] | None = None, data: List[str] | None = None) -> None:
+    def __init__(self, column_names: List[str] | None = None, data: List[CSVCell] | None = None) -> None:
         """
         Initialize a new CSVRow object using the supplied column names and data. CSVRow objects are read-only by design.
         If no data and no column names are supplied the resulting CSVRow object will evaluate to false in boolean expressions.
@@ -45,16 +83,16 @@ class CSVRow():
     def __repr__(self) -> str:
         return str(self._data)
 
-    def get(self, key: str, default: str | Any) -> str:
+    def get(self, key: str, default: str | Any) -> CSVCell:
         """
         Returns the value corrosponding to the key if it exists and is not the empty string.
         Else returns the provided default. The provided default is cast to a string internally.
         """
-        value = self._data.get(key, str(default))
+        value = self._data.get(key, CSVCell(default))
         if value:
             return value
         else:
-            return str(default)
+            return CSVCell(default)
 
 
 class CSV():
@@ -67,7 +105,7 @@ class CSV():
     All access methods return CSVRow objects which are dynamically created upon calling an access method.
     """
 
-    def __init__(self, column_names: List[str], rows: List[List[str]]) -> None:
+    def __init__(self, column_names: List[str], rows: List[List[CSVCell]]) -> None:
         """
         Initialize a new CSV from a list of column names (headers) and a list of rows.
         The latter contain actual data, whilst the former only holds names of columns.
@@ -117,7 +155,7 @@ def read_csv(path: Path) -> CSV:
         csv_file = csv.reader(file)
         header = next(csv_file)
 
-        return CSV(column_names=header, rows=[row for row in csv_file])
+        return CSV(column_names=header, rows=[[CSVCell(cell) for cell in row] for row in csv_file])
 
 
 def read_json(path: Path) -> Any:
@@ -268,7 +306,7 @@ def generate_potion_recipes(ctx: Context, potion_effects: CSV, potion_bottles: C
             "meta": {
                 "effect": effect_data['effect'],
                 "effect_translate_name": effect_data['effect_translate_name'],
-                "custom_potion_color": effect_data['custom_potion_color'],
+                "custom_potion_color": effect_data['custom_potion_color'].to_color_code(CSVCell.DEC),
                 "custom_potion_effects": effect_data['custom_potion_effects'],
                 "bottle_item_id": bottle_data['item_id'],
                 "bottle": bottle_data['bottle'],
@@ -306,7 +344,7 @@ def generate_magicol_recipes(ctx: Context, weather_modifiers: CSV, magicol_color
             },
             "meta": {
                 "color": color_data['color'],
-                "potion_color": color_data['potion_color'],
+                "potion_color": color_data['potion_color'].to_color_code(CSVCell.DEC),
                 "liquid_custom_model_data": color_data['liquid_custom_model_data'],
                 "bottle_custom_model_data": modifier_data['bottle_custom_model_data'],
                 "soulution_bottle_custom_model_data": modifier_data['soulution_bottle_custom_model_data'],
@@ -341,10 +379,7 @@ def generate_zauber_biomes(ctx: Context, weather_modifiers: CSV, magicol_colors:
         if bottle_data['bottle'] == 'lingering':
             adjective = 'glittering_'
             # convert base-10 colors to rgb float colors
-            particle_color = int(color_data.get(
-                f"particle_color_{modifier_data['modifier']}", 7979098), 10)
-            biome_particle = '"particle":{"options":{"type":"minecraft:dust","color":' + str([(particle_color >> 16) / 255, ((
-                particle_color >> 8) & 0xFF) / 255, (particle_color & 0xFF) / 255]) + ',"scale":2},"probability":0.002},'
+            biome_particle = '"particle":{"options":{"type":"minecraft:dust","color":' + color_data.get(f"particle_color_{modifier_data['modifier']}", 7979098).to_color_code(CSVCell.FLOAT) + ',"scale":2},"probability":0.002},'
         
         subproject_config = {
             "data_pack": {
@@ -362,16 +397,16 @@ def generate_zauber_biomes(ctx: Context, weather_modifiers: CSV, magicol_colors:
             },
             "meta": {
                 "color": color_data['color'],
-                "potion_color": color_data['potion_color'],
+                "potion_color": color_data['potion_color'].to_color_code(CSVCell.DEC),
                 "weather_modifier": modifier_data['modifier'],
                 "temperature": 0.0 if modifier_data['modifier'] == 'polar' else 0.7,
-                "sky_color": color_data.get(f"sky_color_{modifier_data['modifier']}", 7972607),
+                "sky_color": color_data.get(f"sky_color_{modifier_data['modifier']}", 7972607).to_color_code(CSVCell.DEC),
                 "has_precipitation": 'false' if modifier_data['modifier'] == 'arid' else 'true',
-                "fog_color": color_data.get(f"fog_color_{modifier_data['modifier']}", 12638463),
-                "water_color": color_data.get(f"water_color_{modifier_data['modifier']}", 4159204),
-                "water_fog_color": color_data.get(f"water_fog_color_{modifier_data['modifier']}", 329011),
-                "grass_color": color_data.get(f"grass_color_{modifier_data['modifier']}", 7979098),
-                "foliage_color": color_data.get(f"foliage_color_{modifier_data['modifier']}", 5877296),
+                "fog_color": color_data.get(f"fog_color_{modifier_data['modifier']}", 12638463).to_color_code(CSVCell.DEC),
+                "water_color": color_data.get(f"water_color_{modifier_data['modifier']}", 4159204).to_color_code(CSVCell.DEC),
+                "water_fog_color": color_data.get(f"water_fog_color_{modifier_data['modifier']}", 329011).to_color_code(CSVCell.DEC),
+                "grass_color": color_data.get(f"grass_color_{modifier_data['modifier']}", 7979098).to_color_code(CSVCell.DEC),
+                "foliage_color": color_data.get(f"foliage_color_{modifier_data['modifier']}", 5877296).to_color_code(CSVCell.DEC),
                 "biome_particle": biome_particle,
                 "flower": flower_types.find_row(color_data['flower'], 'flower').get('flower', 'grass') # only add flowers which are registered as zauber flowers
             }
