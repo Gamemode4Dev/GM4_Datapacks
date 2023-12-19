@@ -20,6 +20,7 @@ scoreboard players set $diagonal_placement_allowed gm4_furniture_data {{ allow_d
 # check for diagonal placement
 execute if score $diagonal_placement_allowed gm4_furniture_data matches 1 if block ~ ~ ~ player_head run function gm4_furniture:place/check_diagonal_placement
 # store rotation in storage if a non-standard rotation was used
+execute if score $rotation gm4_furniture_data matches 1 run data modify storage gm4_furniture:data Rotation set value [0.0f,0.0f]
 execute if score $rotation gm4_furniture_data matches 2 run data modify storage gm4_furniture:data Rotation set value [90F,0F]
 execute if score $rotation gm4_furniture_data matches 3 run data modify storage gm4_furniture:data Rotation set value [180F,0F]
 execute if score $rotation gm4_furniture_data matches 4 run data modify storage gm4_furniture:data Rotation set value [-90F,0F]
