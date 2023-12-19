@@ -10,8 +10,9 @@ data modify storage gm4_furniture:temp new_trade.buy.Count set from storage gm4_
 data modify storage gm4_furniture:temp new_trade.buyB.id set from storage gm4_furniture:temp trade_data[0].cost[1].id
 data modify storage gm4_furniture:temp new_trade.buyB.Count set from storage gm4_furniture:temp trade_data[0].cost[1].Count
 
-function gm4_furniture:technical/furniture_station/build_trades/resolve_trade with storage gm4_furniture:temp trade_data[0]
+function gm4_furniture:technical/furniture_station/build_trades/resolve_trade with storage gm4_furniture:temp trade_data[0].result
 data modify storage gm4_furniture:temp new_trade.sell set from block 29999998 1 7134 Items[{Slot:0b}]
+data modify storage gm4_furniture:temp new_trade.sell.Count set from storage gm4_furniture:temp trade_data[0].result.Count
 
 data modify storage gm4_furniture:temp trades append from storage gm4_furniture:temp new_trade
 data remove storage gm4_furniture:temp new_trade

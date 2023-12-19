@@ -21,7 +21,7 @@ def beet_default(ctx: Context):
         # read trade data from this sheet, this creates the villager trades used
         # inside the furniture station
         tool_cmd = pd.read_excel(xls, category).iloc[0,0]
-        trade_data = pd.read_excel(xls, category, skiprows=2, usecols="A:E")
+        trade_data = pd.read_excel(xls, category, skiprows=2, usecols="A:F")
         # call generate_trade_data to build the commands
         new_trades_init,new_trades_list,new_trades_append = generate_trade_data(trade_data, tool_cmd, category)
         # append the trade data to the total list
@@ -31,7 +31,7 @@ def beet_default(ctx: Context):
 
         # read furniture data from this sheet, and then create the placement function
         # and loot table for each furniture
-        furniture_data = pd.read_excel(xls, category, skiprows=2, usecols="E:R")
+        furniture_data = pd.read_excel(xls, category, skiprows=2, usecols="F:T")
         generate_furniture_data(ctx, furniture_data, category)
 
 
@@ -70,7 +70,7 @@ def generate_trade_data(trade_data, tool_cmd, category):
     # iterate over the rows in the spreadsheet and add the trade data for each furniture to the storage
     new_trades_list = []
     for row in trade_data.index:
-        new_trades_list.append("data modify storage gm4_furniture:temp new_trades." + category + ".trades append value {cost:[{id:" + str(trade_data['craft_item_1_id'][row]) + ",Count:" + str(trade_data['craft_item_1_count'][row]) + "b},{id:" + str(trade_data['craft_item_2_id'][row]) + ",Count:" + str(trade_data['craft_item_1_count'][row]) + "b}],furniture_id:\"" + category + "/" + str(trade_data['technical_id'][row]) + "\"}")
+        new_trades_list.append("data modify storage gm4_furniture:temp new_trades." + category + ".trades append value {cost:[{id:" + str(trade_data['craft_item_1_id'][row]) + ",Count:" + str(trade_data['craft_item_1_count'][row]) + "b},{id:" + str(trade_data['craft_item_2_id'][row]) + ",Count:" + str(trade_data['craft_item_1_count'][row]) + "b}],result:{furniture_id:\"" + category + "/" + str(trade_data['technical_id'][row]) + "\",Count:" + str(trade_data['craft_result_count'][row]) + "}}")
     new_trades_list = '\n'.join(new_trades_list)
 
     # add command to append the main furniture_station storage with the newly created new_trades
@@ -114,6 +114,7 @@ def generate_furniture_data(ctx, furniture_data, category):
                 "height": str(furniture_data['height'][row]),
                 "table": str(int(furniture_data['table'][row])),
                 "scale": str(furniture_data['scale'][row]),
+                "allow_diagonal_placement": str(int(furniture_data['diag'][row])),
                 "custom_interaction": str(int(furniture_data['custom'][row]))
             }
         }

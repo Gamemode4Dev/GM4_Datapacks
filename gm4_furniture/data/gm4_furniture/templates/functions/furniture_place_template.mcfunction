@@ -7,8 +7,19 @@
 # first perform checks to see if furniture fits where it was placed
 scoreboard players set $valid_placement gm4_furniture_data 1
 
-# store rotation in storage
-execute if score $rotation gm4_furniture_data matches 1 run data modify storage gm4_furniture:data Rotation set value [0F,0F]
+# set variables
+scoreboard players set $sittable gm4_furniture_data {{ sittable }}
+scoreboard players set $dyable gm4_furniture_data {{ dyable }}
+scoreboard players set $table gm4_furniture_data {{ table }}
+scoreboard players set $custom_interaction gm4_furniture_data {{ custom_interaction }}
+scoreboard players set $length gm4_furniture_data {{ length }}
+scoreboard players set $depth gm4_furniture_data {{ depth }}
+scoreboard players set $height gm4_furniture_data {{ height }}
+scoreboard players set $diagonal_placement_allowed gm4_furniture_data {{ allow_diagonal_placement }}
+
+# check for diagonal placement
+execute if score $diagonal_placement_allowed gm4_furniture_data matches 1 if block ~ ~ ~ player_head run function gm4_furniture:place/check_diagonal_placement
+# store rotation in storage if a non-standard rotation was used
 execute if score $rotation gm4_furniture_data matches 2 run data modify storage gm4_furniture:data Rotation set value [90F,0F]
 execute if score $rotation gm4_furniture_data matches 3 run data modify storage gm4_furniture:data Rotation set value [180F,0F]
 execute if score $rotation gm4_furniture_data matches 4 run data modify storage gm4_furniture:data Rotation set value [-90F,0F]
@@ -22,9 +33,6 @@ scoreboard players set $ceiling_only gm4_furniture_data {{ ceiling_only }}
 execute if score $ceiling_only gm4_furniture_data matches 1 if block ~ ~1 ~ #gm4:replaceable run scoreboard players set $valid_placement gm4_furniture_data 0
 
 # wall placed furniture is not allowed to have depth, if any size is bigger than 1 check if there is space
-scoreboard players set $length gm4_furniture_data {{ length }}
-scoreboard players set $depth gm4_furniture_data {{ depth }}
-scoreboard players set $height gm4_furniture_data {{ height }}
 scoreboard players set $placement_blocked gm4_furniture_data 0
 execute if score $valid_placement gm4_furniture_data matches 1 if score $length gm4_furniture_data matches 2.. run function gm4_furniture:place/check_size/length_prep
 summon marker ~ ~ ~ {Tags:["gm4_furniture","gm4_furniture.marked_block","gm4_furniture.middle"]}
@@ -38,12 +46,6 @@ execute if score $placement_blocked gm4_furniture_data matches 1 run kill @e[typ
 # if placement is not valid cancel placement
 execute if score $valid_placement gm4_furniture_data matches 0 run loot spawn ~ ~ ~ loot gm4_furniture:furniture/{{ category }}/{{ technical_id }}
 execute if score $valid_placement gm4_furniture_data matches 0 run return 0
-
-# set variables
-scoreboard players set $sittable gm4_furniture_data {{ sittable }}
-scoreboard players set $dyable gm4_furniture_data {{ dyable }}
-scoreboard players set $table gm4_furniture_data {{ table }}
-scoreboard players set $custom_interaction gm4_furniture_data {{ custom_interaction }}
 
 # spawn the furniture
 execute positioned ~ ~-0.4999 ~ run summon item_display ~ ~0.{{ sittable }} ~ {Tags:["gm4_furniture","gm4_furniture.display","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture_display.{{ category }}.{{ technical_id }}"',item:{id:"leather_horse_armor",Count:1,tag:{data:{furniture_id:"{{ category }}/{{ technical_id }}"},CustomModelData:{{ cmd }}}},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[{{ scale }}f,{{ scale }}f,{{ scale }}f]}}

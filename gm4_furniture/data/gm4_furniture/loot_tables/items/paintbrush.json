@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420200,gm4_furniture:paintbrush}"
+              "tag": "{CustomModelData:3420151,gm4_furniture:paintbrush}"
             },
             {
               "function": "minecraft:set_name",
