@@ -7,12 +7,147 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "minecraft:plains",
+          "biome": "minecraft:small_end_islands",
           "parameters": {
             "temperature": 0,
-            "humidity": 0,
-            "continentalness": 0,
-            "erosion": 0,
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -1,
+              1
+            ],
+            "erosion": [
+              0.7,
+              1
+            ],
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:end_highlands",
+          "parameters": {
+            "temperature": 0,
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -1,
+              -0.465
+            ],
+            "erosion": [
+              -1,
+              0.7
+            ],
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:cherry_grove",
+          "parameters": {
+            "temperature": 0,
+            "humidity": [
+              -1,
+              -0.5
+            ],
+            "continentalness": [
+              -0.465,
+              1
+            ],
+            "erosion": [
+              -1,
+              0.7
+            ],
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:desert",
+          "parameters": {
+            "temperature": 0,
+            "humidity": [
+              0.4,
+              1
+            ],
+            "continentalness": [
+              -0.465,
+              1
+            ],
+            "erosion": [
+              -1,
+              0.7
+            ],
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:taiga",
+          "parameters": {
+            "temperature": 0,
+            "humidity": [
+              0.3,
+              0.4
+            ],
+            "continentalness": [
+              -0.465,
+              1
+            ],
+            "erosion": [
+              -1,
+              0.7
+            ],
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:swamp",
+          "parameters": {
+            "temperature": 0,
+            "humidity": [
+              -0.3,
+              0.3
+            ],
+            "continentalness": [
+              -0.465,
+              1
+            ],
+            "erosion": [
+              -1,
+              0.7
+            ],
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:dark_forest",
+          "parameters": {
+            "temperature": 0,
+            "humidity": [
+              -0.5,
+              -0.3
+            ],
+            "continentalness": [
+              -0.465,
+              1
+            ],
+            "erosion": [
+              -1,
+              0.7
+            ],
             "weirdness": 0,
             "depth": 0,
             "offset": 0

@@ -8,7 +8,7 @@
   "has_skylight": true,
   "has_ceiling": false,
   "coordinate_scale": 1,
-  "ambient_light": 0.3,
+  "ambient_light": 0.08,
   "logical_height": 336,
   "effects": "minecraft:overworld",
   "infiniburn": "#minecraft:infiniburn_overworld",
