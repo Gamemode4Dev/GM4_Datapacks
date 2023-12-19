@@ -8,6 +8,7 @@ $fillbiome ~-$(radius) ~-$(radius) ~-$(radius) ~$(radius) ~$(radius) ~$(radius) 
 
 # place lucky (non-poisonous) flowers
 $execute if score $$(flower) gm4_zc_flowers matches 0 run place feature gm4_zauber_cauldrons:$(flower)_patch ~ ~ ~
+$execute if score $$(flower) gm4_zc_flowers matches 0 run effect give @a[gamemode=!spectator,distance=..5] minecraft:luck 90 0 true
 
 # place tall grass
 particle minecraft:composter ~ ~ ~ 2 0.3 2 0 24
