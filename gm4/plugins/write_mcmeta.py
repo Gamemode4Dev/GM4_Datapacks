@@ -9,7 +9,7 @@ def beet_default(ctx: Context):
 	ctx.data.pack_format = 15 # manually set as beet's `latest` is not available for 1.20 at this time.
 	ctx.data.supported_formats = {
 		"min_inclusive": 15,
-		"max_inclusive": 18
+		"max_inclusive": 26
 	}
 	ctx.data.description = [
 		ctx.project_name,
