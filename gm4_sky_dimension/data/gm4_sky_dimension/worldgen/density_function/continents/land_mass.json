@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:add",
+    "argument1": "gm4_sky_dimension:continents/sea_level",
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": 0.35,
+      "argument2": {
+        "type": "minecraft:quarter_negative",
+        "argument": "gm4_sky_dimension:routers/continents"
+      }
+    }
+  },
+  "argument2": {
+    "type": "minecraft:interpolated",
+    "argument": {
+      "type": "minecraft:spline",
+      "spline": {
+        "coordinate": "gm4_sky_dimension:routers/continents",
+        "points": [
+          {
+            "location": -0.8,
+            "derivative": 0,
+            "value": -2
+          },
+          {
+            "location": -0.5,
+            "derivative": 0,
+            "value": -0.7
+          },
+          {
+            "location": -0.43,
+            "derivative": 0,
+            "value": 0
+          }
+        ]
+      }
+    }
+  }
+}

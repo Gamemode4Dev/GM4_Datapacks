@@ -1,5 +1,5 @@
 {
   "type": "minecraft:add",
-  "argument1": "minecraft:end/base_3d_noise",
-  "argument2": "minecraft:end/sloped_cheese"
+  "argument1": 0,
+  "argument2": "gm4_sky_dimension:continents/land_mass"
 }
