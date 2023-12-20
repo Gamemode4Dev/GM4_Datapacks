@@ -1,5 +1,5 @@
 {
-  "sea_level": 0,
+  "sea_level": -16,
   "disable_mob_generation": false,
   "aquifers_enabled": false,
   "ore_veins_enabled": false,
@@ -14,8 +14,8 @@
     }
   },
   "noise": {
-    "min_y": 384,
-    "height": 336,
+    "min_y": 0,
+    "height": 384,
     "size_horizontal": 1,
     "size_vertical": 2
   },
