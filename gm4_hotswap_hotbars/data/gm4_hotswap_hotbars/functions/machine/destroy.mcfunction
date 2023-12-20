@@ -14,3 +14,4 @@ data remove storage gm4_hotswap_hotbars:temp item_data
 
 # kill marker
 kill @s
+kill @e[type=item_display,tag=gm4_hotswapper_display,distance=..0.41625,limit=1]
