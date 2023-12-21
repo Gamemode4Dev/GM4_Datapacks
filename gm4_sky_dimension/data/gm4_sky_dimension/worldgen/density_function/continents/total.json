@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:min",
+  "argument1": "gm4_sky_dimension:continents/land_mass",
+  "argument2": {
+    "type": "minecraft:interpolated",
+    "argument": "gm4_sky_dimension:continents/island_groups"
+  }
+}

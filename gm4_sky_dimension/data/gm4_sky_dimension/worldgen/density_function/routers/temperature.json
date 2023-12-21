@@ -4,7 +4,7 @@
     "type": "minecraft:shifted_noise",
     "noise": "gm4_sky_dimension:temperature",
     "xz_scale": 0.25,
-    "y_scale": 0.2,
+    "y_scale": 0,
     "shift_x": "minecraft:shift_x",
     "shift_y": 0,
     "shift_z": "minecraft:shift_z"
