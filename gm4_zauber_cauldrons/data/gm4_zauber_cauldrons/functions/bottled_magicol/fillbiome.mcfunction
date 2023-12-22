@@ -12,7 +12,7 @@ $execute if score $$(flower) gm4_zc_flowers matches 0 run effect give @a[gamemod
 
 # place tall grass
 particle minecraft:composter ~ ~ ~ 2 0.3 2 0 24
-place feature gm4_zauber_cauldrons:grass_patch ~ ~ ~
+place feature gm4_zauber_cauldrons:short_grass_patch ~ ~ ~
 
 # sound effect & particles
 playsound minecraft:block.chorus_flower.grow block @a[distance=..16] ~ ~ ~ 1 0.77
