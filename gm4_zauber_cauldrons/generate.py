@@ -411,8 +411,7 @@ def generate_zauber_biomes(ctx: Context, weather_modifiers: CSV, magicol_colors:
                 "grass_color": color_data.get(f"grass_color_{modifier_data['modifier']}", 7979098).to_color_code(CSVCell.DEC),
                 "foliage_color": color_data.get(f"foliage_color_{modifier_data['modifier']}", 5877296).to_color_code(CSVCell.DEC),
                 "biome_particle": biome_particle,
-                # only add flowers which are registered as zauber flowers
-                "flower": flower_types.find_row(color_data['flower'], 'flower').get('flower', 'grass')
+                "flower": flower_types.find_row(color_data['flower'], 'flower').get('flower', 'short_grass') # only add flowers which are registered as zauber flowers
             }
         }
         ctx.require(subproject(subproject_config))
