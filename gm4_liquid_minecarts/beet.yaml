@@ -4,6 +4,11 @@ version: 1.4.X
 
 data_pack:
   load: .
+  overlays:
+    - formats:
+        min_inclusive: 26
+        max_inclusive: 26
+      directory: overlay_26
 
 pipeline:
   - gm4.plugins.extend.module
