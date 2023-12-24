@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:add",
+  "argument1": 0,
+  "argument2": "gm4_sky_dimension:erosion/normal/middle/total"
+}
