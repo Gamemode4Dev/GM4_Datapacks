@@ -20,7 +20,7 @@ from beet import (
     Model,
     NamespaceProxy,
     PluginOptions,
-    WrappedException,
+    WrappedException
 )
 from beet.contrib.optifine import OptifineProperties
 from beet.contrib.vanilla import Vanilla

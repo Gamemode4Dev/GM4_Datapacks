@@ -39,6 +39,7 @@ class ManifestModuleModel(BaseModel):
 	id: str
 	name: str
 	version: str
+	hash: str
 	video_link: str = ""
 	wiki_link: str = ""
 	credits: CreditsModel
@@ -80,7 +81,7 @@ def create(ctx: Context):
 		"video": None, "wiki": None
 	}
 
-	for glob, manifest_section, config_overrides in [("gm4_*", manifest.modules, {}), ("lib_*", manifest.libraries, LIB_OVERRIDES)]:
+	for glob, manifest_section, config_overrides in [("gm4_bo*", manifest.modules, {}), ("lib_*", manifest.libraries, LIB_OVERRIDES)]:
 		for pack_id in [p.name for p in sorted(ctx.directory.glob(glob))]:
 			try:
 				config = load_config(Path(pack_id) / "beet.yaml")
@@ -93,6 +94,7 @@ def create(ctx: Context):
 					id = config.id,
 					name = config.name,
 					version = config.version,
+					hash = "",
 					video_link = gm4_meta.video or "",
 					wiki_link = gm4_meta.wiki or "",
 					credits = gm4_meta.credits,
@@ -128,7 +130,7 @@ def create(ctx: Context):
 	ctx.cache["gm4_manifest"].json = manifest.dict()
 
 
-def update_patch(ctx: Context):
+def update_patch(ctx: Context): # TODO remove this
 	"""Retrieves manifest from previous build, and increments patch number
 	 	 if there are any changes between last commit and HEAD in module or any of its dependancies"""
 	version = os.getenv("VERSION", "1.20")

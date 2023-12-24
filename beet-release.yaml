@@ -1,16 +1,17 @@
 pipeline:
   - gm4.plugins.list_modules
   - gm4.plugins.manifest.create
-  - gm4.plugins.manifest.update_patch
+  # - gm4.plugins.manifest.update_patch
   - gm4.plugins.resource_pack.mount_registry
   - gm4.plugins.resource_pack.init_font_counter
-  - gm4.plugins.output.clear_release
-  - gm4.plugins.manifest.write_meta
-  - broadcast: 'gm4_*'
+  # - gm4.plugins.output.clear_release
+  # - gm4.plugins.manifest.write_meta
+  - broadcast: 'gm4_bo*'
     extend: 'beet.yaml'
     require:
-      # - gm4.plugins.output.release
+      - gm4.plugins.output.release
       - gm4.plugins.build_tools.store_project
+      - gm4.plugins.build_tools.update_patch
       - gm4.plugins.player_heads
       - gm4.plugins.resource_pack
       - beet.contrib.model_merging
@@ -29,10 +30,12 @@ pipeline:
           nbt_compact: True
   
   - pipeline:
+    # - gm4.plugins.output.clear_release
+    - gm4.plugins.manifest.write_meta
     - gm4.plugins.build_tools.retrieve_projects
     meta:
       plugins:
-      - gm4.plugins.output.release
+      # - gm4.plugins.output.release
       - gm4.plugins.manifest.write_updates
       - gm4.plugins.write_mcmeta
 
