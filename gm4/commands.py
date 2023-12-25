@@ -17,7 +17,7 @@ pass_project = click.make_pass_decorator(Project) # type: ignore
 @click.option("-l", "--link", metavar="WORLD", help="Link the project before watching.")
 @click.option("-c", "--clean", is_flag=True, help="Clean the output folder.")
 @click.option("--log", default="INFO", type=str, help="Set the logger level")
-def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, reload: bool, link: str | None, clean: bool, log: int | str):
+def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: bool, reload: bool, link: str | None, clean: bool, log: int | str):
 	"""Build or watch modules for development."""
 
 	modules = tuple(m if m.startswith("gm4_") else f"gm4_{m}" for m in modules)
@@ -42,10 +42,12 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, 
 		"require": [
 			"gm4.plugins.output",
 			"beet.contrib.livereload",
-			"gm4.plugins.player_heads"
+			"gm4.plugins.player_heads",
+			"gm4.plugins.module.tests"
 		] if reload else [
 			"gm4.plugins.output",
-			"gm4.plugins.player_heads"
+			"gm4.plugins.player_heads",
+			"gm4.plugins.module.tests"
 		],
 		"pipeline": [
 			"gm4.plugins.write_mcmeta"
@@ -80,7 +82,7 @@ def clean():
 @click.argument("modules", nargs=-1)
 @click.option("-w", "--watch", is_flag=True, help="Watch the project directory and build on file changes.")
 @click.option("-c", "--clean", is_flag=True, help="Clean the output folder.")
-def readme_gen(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, clean: bool):
+def readme_gen(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: bool, clean: bool):
 	"""Generates all README files for manual uplaoad"""
 	
 	modules = tuple(m if m.startswith("gm4_") else f"gm4_{m}" for m in modules)

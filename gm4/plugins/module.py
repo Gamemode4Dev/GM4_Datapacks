@@ -1,5 +1,6 @@
-from beet import Context, PngFile, Advancement
+from beet import Context, PngFile, Advancement, TextFile
 from pathlib import Path
+from typing import ClassVar, Tuple
 
 def default_pack_icon(ctx: Context):
     """Adds the default pack.png from base to the build, if one does not already exist"""
@@ -35,3 +36,14 @@ def gm4_root_advancement(ctx: Context):
                 }
                 }
         )
+
+
+def tests(ctx: Context):
+    ctx.data.extend_namespace += [TestFile]
+
+
+class TestFile(TextFile):
+    """Class representing an test function."""
+
+    scope: ClassVar[Tuple[str, ...]] = ("tests",)
+    extension: ClassVar[str] = ".mcfunction"
