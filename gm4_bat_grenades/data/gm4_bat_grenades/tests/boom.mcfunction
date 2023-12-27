@@ -3,4 +3,4 @@
 
 summon bat ~3 ~2 ~3 {Tags:[gm4_test_bat]}
 
-succeed when not entity @e[tag=gm4_test_bat,distance=..10]
+await not entity @e[tag=gm4_test_bat,distance=..10]

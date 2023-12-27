@@ -7,4 +7,4 @@ dummy @s mine ~1 ~1 ~1
 
 assert entity @e[type=item,nbt={Item:{id:"minecraft:dropper",Count:1b}}]
 
-succeed when entity @e[type=item,nbt={Item:{id:"minecraft:player_head",tag:{gm4_machines:{id:"block_compressor"}},Count:1b}}]
+await entity @e[type=item,nbt={Item:{id:"minecraft:player_head",tag:{gm4_machines:{id:"block_compressor"}},Count:1b}}]
