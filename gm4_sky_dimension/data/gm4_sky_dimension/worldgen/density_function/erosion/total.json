@@ -2,11 +2,7 @@
   "type": "minecraft:max",
   "argument1": {
     "type": "minecraft:max",
-    "argument1": {
-      "type": "minecraft:max",
-      "argument1": "gm4_sky_dimension:erosion/normal/middle/total",
-      "argument2": "gm4_sky_dimension:erosion/normal/mid_top/total"
-    },
+    "argument1": "gm4_sky_dimension:erosion/normal/middle/total",
     "argument2": "gm4_sky_dimension:erosion/normal/mid_bottom/total"
   },
   "argument2": {

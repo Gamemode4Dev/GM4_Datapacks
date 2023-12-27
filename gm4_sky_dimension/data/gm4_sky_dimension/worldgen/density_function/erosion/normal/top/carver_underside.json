@@ -4,7 +4,7 @@
     "type": "minecraft:mul",
     "argument1": {
       "type": "minecraft:add",
-      "argument1": "gm4_sky_dimension:erosion/normal/middle/gradient_carver",
+      "argument1": "gm4_sky_dimension:erosion/normal/top/gradient_carver",
       "argument2": {
         "type": "minecraft:mul",
         "argument1": -2,
@@ -15,7 +15,7 @@
             "from_y": 384,
             "to_y": 0,
             "from_value": 0,
-            "to_value": -1.5
+            "to_value": -5.7
           },
           "argument2": {
             "type": "minecraft:spline",
@@ -28,9 +28,19 @@
                   "value": 0
                 },
                 {
+                  "location": -0.875,
+                  "derivative": 0,
+                  "value": 0
+                },
+                {
                   "location": -0.75,
                   "derivative": 0,
                   "value": 0.5
+                },
+                {
+                  "location": -0.625,
+                  "derivative": 0,
+                  "value": 0
                 },
                 {
                   "location": -0.5,
@@ -38,7 +48,17 @@
                   "value": 0.5
                 },
                 {
+                  "location": -0.375,
+                  "derivative": 0,
+                  "value": 0
+                },
+                {
                   "location": -0.25,
+                  "derivative": 0,
+                  "value": 0
+                },
+                {
+                  "location": -0.125,
                   "derivative": 0,
                   "value": 0
                 },
@@ -48,9 +68,19 @@
                   "value": 0.5
                 },
                 {
+                  "location": 0.125,
+                  "derivative": 0,
+                  "value": 0
+                },
+                {
                   "location": 0.25,
                   "derivative": 0,
                   "value": 0.5
+                },
+                {
+                  "location": 0.375,
+                  "derivative": 0,
+                  "value": 0
                 },
                 {
                   "location": 0.5,
@@ -58,9 +88,19 @@
                   "value": 0
                 },
                 {
+                  "location": 0.625,
+                  "derivative": 0,
+                  "value": 0
+                },
+                {
                   "location": 0.75,
                   "derivative": 0,
                   "value": 0.5
+                },
+                {
+                  "location": 0.875,
+                  "derivative": 0,
+                  "value": 0
                 },
                 {
                   "location": 1,
@@ -78,5 +118,5 @@
   "min_inclusive": -1000000,
   "max_exclusive": 0,
   "when_in_range": -1,
-  "when_out_of_range": "gm4_sky_dimension:erosion/normal/middle/terrain_underside"
+  "when_out_of_range": "gm4_sky_dimension:erosion/normal/top/terrain_underside"
 }

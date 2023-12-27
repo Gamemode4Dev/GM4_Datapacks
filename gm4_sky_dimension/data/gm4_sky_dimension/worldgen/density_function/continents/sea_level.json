@@ -7,7 +7,7 @@
     "max_exclusive": 170,
     "when_in_range": {
       "type": "minecraft:y_clamped_gradient",
-      "from_y": 16,
+      "from_y": -32,
       "to_y": 170,
       "from_value": -1,
       "to_value": 0
@@ -24,10 +24,10 @@
     "type": "minecraft:range_choice",
     "input": "minecraft:y",
     "min_inclusive": 192,
-    "max_exclusive": 336,
+    "max_exclusive": 366,
     "when_in_range": {
       "type": "minecraft:y_clamped_gradient",
-      "from_y": 336,
+      "from_y": 512,
       "to_y": 192,
       "from_value": -1,
       "to_value": 0
