@@ -4,7 +4,7 @@
 # Create custom crafter
 setblock ~1 ~1 ~ dropper[facing=up]{Items:[{Slot:0b,id:"minecraft:iron_ingot",Count:1b},{Slot:1b,id:"minecraft:light_blue_dye",Count:1b},{Slot:2b,id:"minecraft:iron_ingot",Count:1b},{Slot:3b,id:"minecraft:cobblestone",Count:1b},{Slot:5b,id:"minecraft:cobblestone",Count:1b},{Slot:6b,id:"minecraft:cobblestone",Count:1b},{Slot:8b,id:"minecraft:cobblestone",Count:1b}]}
 give @s crafting_table
-execute at @s run tp @s ~ ~ ~ facing ~1 ~-0.5 ~ 
+execute at @s run tp @s ~ ~ ~ facing ~1 ~-0.5 ~
 dummy @s use block ~1 ~1 ~
 
 assert entity @s[nbt=!{SelectedItem:{id:"minecraft:crafting_table"}}]
