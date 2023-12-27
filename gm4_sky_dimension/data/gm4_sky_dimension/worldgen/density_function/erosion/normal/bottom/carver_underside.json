@@ -1,0 +1,82 @@
+{
+  "type": "minecraft:range_choice",
+  "input": {
+    "type": "minecraft:mul",
+    "argument1": {
+      "type": "minecraft:add",
+      "argument1": "gm4_sky_dimension:erosion/normal/bottom/gradient_carver",
+      "argument2": {
+        "type": "minecraft:mul",
+        "argument1": -2,
+        "argument2": {
+          "type": "minecraft:add",
+          "argument1": {
+            "type": "minecraft:y_clamped_gradient",
+            "from_y": 192,
+            "to_y": 0,
+            "from_value": 0,
+            "to_value": -1.1
+          },
+          "argument2": {
+            "type": "minecraft:spline",
+            "spline": {
+              "coordinate": "gm4_sky_dimension:routers/vegetation",
+              "points": [
+                {
+                  "location": -1,
+                  "derivative": 0,
+                  "value": 0
+                },
+                {
+                  "location": -0.75,
+                  "derivative": 0,
+                  "value": 0.5
+                },
+                {
+                  "location": -0.5,
+                  "derivative": 0,
+                  "value": 0.5
+                },
+                {
+                  "location": -0.25,
+                  "derivative": 0,
+                  "value": 0
+                },
+                {
+                  "location": 0,
+                  "derivative": 0,
+                  "value": 0.5
+                },
+                {
+                  "location": 0.25,
+                  "derivative": 0,
+                  "value": 0.5
+                },
+                {
+                  "location": 0.5,
+                  "derivative": 0,
+                  "value": 0
+                },
+                {
+                  "location": 0.75,
+                  "derivative": 0,
+                  "value": 0.5
+                },
+                {
+                  "location": 1,
+                  "derivative": 0,
+                  "value": 0.5
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "argument2": -1
+  },
+  "min_inclusive": -1000000,
+  "max_exclusive": 0,
+  "when_in_range": -1,
+  "when_out_of_range": "gm4_sky_dimension:erosion/normal/bottom/terrain_underside"
+}

@@ -53,7 +53,7 @@
         "argument1": "gm4_sky_dimension:erosion/normal/middle/gradient_carver",
         "argument2": {
           "type": "minecraft:mul",
-          "argument1": -2.5,
+          "argument1": -1.5,
           "argument2": {
             "type": "minecraft:add",
             "argument1": {
@@ -61,45 +61,27 @@
               "from_y": 384,
               "to_y": 0,
               "from_value": 0,
-              "to_value": -0.4
+              "to_value": -0.1
             },
             "argument2": {
               "type": "minecraft:spline",
               "spline": {
-                "coordinate": {
-                  "type": "minecraft:abs",
-                  "argument": "gm4_sky_dimension:routers/vegetation"
-                },
+                "coordinate": "gm4_sky_dimension:routers/continents",
                 "points": [
                   {
-                    "location": 0,
+                    "location": -0.8,
                     "derivative": 0,
-                    "value": 0.6
+                    "value": -2
                   },
                   {
-                    "location": 0.2,
-                    "derivative": 0.5,
-                    "value": 0.4
-                  },
-                  {
-                    "location": 0.4,
+                    "location": -0.5,
                     "derivative": 0,
-                    "value": 0.6
+                    "value": -0.5
                   },
                   {
-                    "location": 0.6,
+                    "location": -0.43,
                     "derivative": 0,
-                    "value": 0.4
-                  },
-                  {
-                    "location": 0.8,
-                    "derivative": -0.5,
-                    "value": 0.5
-                  },
-                  {
-                    "location": 1,
-                    "derivative": 0,
-                    "value": 0.6
+                    "value": 0
                   }
                 ]
               }

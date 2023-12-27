@@ -30,14 +30,17 @@
         {
           "biome": "minecraft:end_highlands",
           "parameters": {
-            "temperature": 0,
+            "temperature": [
+              -1,
+              1
+            ],
             "humidity": [
               -1,
               1
             ],
             "continentalness": [
               -1,
-              -0.465
+              -0.485
             ],
             "erosion": [
               -1,
@@ -60,7 +63,7 @@
               -0.25
             ],
             "continentalness": [
-              -0.465,
+              -0.485,
               1
             ],
             "erosion": [
@@ -84,7 +87,7 @@
               0.5
             ],
             "continentalness": [
-              -0.465,
+              -0.485,
               1
             ],
             "erosion": [
@@ -108,7 +111,7 @@
               1
             ],
             "continentalness": [
-              -0.465,
+              -0.485,
               1
             ],
             "erosion": [
@@ -132,7 +135,7 @@
               -0.25
             ],
             "continentalness": [
-              -0.465,
+              -0.485,
               1
             ],
             "erosion": [
@@ -156,7 +159,7 @@
               1
             ],
             "continentalness": [
-              -0.465,
+              -0.485,
               1
             ],
             "erosion": [
@@ -180,8 +183,8 @@
               -0.25
             ],
             "continentalness": [
-              -1,
-              0.7
+              -0.485,
+              1
             ],
             "erosion": [
               -1,
@@ -204,8 +207,8 @@
               0.5
             ],
             "continentalness": [
-              -1,
-              0.7
+              -0.485,
+              1
             ],
             "erosion": [
               -1,
@@ -228,8 +231,8 @@
               1
             ],
             "continentalness": [
-              -1,
-              0.7
+              -0.485,
+              1
             ],
             "erosion": [
               -1,
@@ -252,8 +255,8 @@
               -0.25
             ],
             "continentalness": [
-              -1,
-              0.7
+              -0.485,
+              1
             ],
             "erosion": [
               -1,
@@ -276,8 +279,8 @@
               0.5
             ],
             "continentalness": [
-              -1,
-              0.7
+              -0.485,
+              1
             ],
             "erosion": [
               -1,
@@ -300,8 +303,8 @@
               1
             ],
             "continentalness": [
-              -1,
-              0.7
+              -0.485,
+              1
             ],
             "erosion": [
               -1,
@@ -324,8 +327,8 @@
               -0.25
             ],
             "continentalness": [
-              -1,
-              0.7
+              -0.485,
+              1
             ],
             "erosion": [
               -1,
@@ -348,8 +351,8 @@
               0.5
             ],
             "continentalness": [
-              -1,
-              0.7
+              -0.485,
+              1
             ],
             "erosion": [
               -1,
@@ -372,8 +375,8 @@
               1
             ],
             "continentalness": [
-              -1,
-              0.7
+              -0.485,
+              1
             ],
             "erosion": [
               -1,
@@ -396,8 +399,8 @@
               -0.25
             ],
             "continentalness": [
-              -1,
-              0.7
+              -0.485,
+              1
             ],
             "erosion": [
               -1,
@@ -420,8 +423,8 @@
               0.5
             ],
             "continentalness": [
-              -1,
-              0.7
+              -0.485,
+              1
             ],
             "erosion": [
               -1,
@@ -444,8 +447,8 @@
               1
             ],
             "continentalness": [
-              -1,
-              0.7
+              -0.485,
+              1
             ],
             "erosion": [
               -1,
