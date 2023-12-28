@@ -74,14 +74,16 @@ def update_patch(ctx: Context):
     manifest_file = release_dir / "meta.json"
     logger = logging.getLogger(__name__)
 
+    print(f"running on {ctx.project_id}")
+
     # load current manifest from cache
     this_manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
-    pack = this_manifest.modules[ctx.project_id]
+    pack = (this_manifest.modules | {l.id:l for l in this_manifest.libraries.values()})[ctx.project_id]
 
     # attempt to load prior meta.json manifest
     if manifest_file.exists():
         last_manifest = ManifestFileModel.parse_obj(json.loads(manifest_file.read_text()))
-        released_modules: dict[str, ManifestModuleModel] = {m.id:m for m in last_manifest.modules if m.version}
+        released_modules: dict[str, ManifestModuleModel] = {m.id:m for m in last_manifest.modules if m.version}|{l.id:l for l in last_manifest.libraries.values()}
     else:
         logger.debug("No existing meta.json manifest file was located")
         # last_commit = None

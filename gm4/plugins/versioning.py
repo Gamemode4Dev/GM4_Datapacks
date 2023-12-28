@@ -295,6 +295,7 @@ def warn_on_future_version(ctx: Context, dep_id: str, ver: Version):
 
 def isolated_library(ctx: Context):
     """Generates the #load:load function tag when building libraries in isloation"""
+    ctx.cache["currently_building"].json = {"name": ctx.project_name, "id": ctx.project_id, "added_libs": []}
     # load.json tag
     ctx.data.function_tags["load:load"] = FunctionTag({
         "values": [

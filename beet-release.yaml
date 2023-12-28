@@ -1,15 +1,42 @@
 pipeline:
   - gm4.plugins.list_modules
   - gm4.plugins.manifest.create
+  - gm4.plugins.output.clear_release
   # - gm4.plugins.manifest.update_patch
   - gm4.plugins.resource_pack.mount_registry
   - gm4.plugins.resource_pack.init_font_counter
   # - gm4.plugins.output.clear_release
   # - gm4.plugins.manifest.write_meta
-  - broadcast: 'gm4_*'
+
+  - broadcast: 'lib_*'
     extend: 'beet.yaml'
     require:
       - gm4.plugins.output.release
+      - gm4.plugins.build_tools.update_patch
+    pipeline:
+      - beet.contrib.lantern_load.base_data_pack
+      - gm4.plugins.versioning.isolated_library
+      - gm4.plugins.manifest.write_credits
+      - require: [beet.contrib.copy_files]
+        meta:
+          copy_files:
+            data_pack:
+              LICENSE.md: "LICENSE.md"
+              README.md: "README.md"
+              pack.png: "pack.png"
+      - gm4.plugins.module.default_pack_icon
+      - gm4.plugins.readme_generator.libraries
+      - gm4.plugins.write_mcmeta
+    meta:
+      mecha:
+        formatting:
+          layout: preserve
+          nbt_compact: True
+
+  - broadcast: 'gm4_*'
+    extend: 'beet.yaml'
+    require:
+      # - gm4.plugins.output.release
       - gm4.plugins.build_tools.store_project
       - gm4.plugins.build_tools.update_patch
       - gm4.plugins.player_heads
@@ -31,41 +58,19 @@ pipeline:
   
   - pipeline:
     # - gm4.plugins.output.clear_release
-    - gm4.plugins.manifest.write_meta
+    # - gm4.plugins.manifest.write_meta
     - gm4.plugins.build_tools.retrieve_projects
     meta:
       plugins:
-      # - gm4.plugins.output.release
+      - gm4.plugins.output.release
       - gm4.plugins.manifest.write_updates
       - gm4.plugins.write_mcmeta
-
-  # - broadcast: 'lib_*'
-  #   extend: 'beet.yaml'
-  #   require:
-  #     - gm4.plugins.output.release
-  #   pipeline:
-  #     - beet.contrib.lantern_load.base_data_pack
-  #     - gm4.plugins.versioning.isolated_library
-  #     - gm4.plugins.manifest.write_credits
-  #     - require: [beet.contrib.copy_files]
-  #       meta:
-  #         copy_files:
-  #           data_pack:
-  #             LICENSE.md: "LICENSE.md"
-  #             README.md: "README.md"
-  #             pack.png: "pack.png"
-  #     - gm4.plugins.module.default_pack_icon
-  #     - gm4.plugins.readme_generator.libraries
-  #     - gm4.plugins.write_mcmeta
-  #   meta:
-  #     mecha:
-  #       formatting:
-  #         layout: preserve
-  #         nbt_compact: True
 
   - extend: beet.yaml
     directory: gm4_resource_pack
   - gm4.plugins.output.resource_pack
+
+  - gm4.plugins.manifest.write_meta
 
 meta:
   autosave:
