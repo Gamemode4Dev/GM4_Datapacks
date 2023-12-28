@@ -52,8 +52,8 @@
         "type": "minecraft:add",
         "argument1": {
           "type": "minecraft:y_clamped_gradient",
-          "from_y": 32,
-          "to_y": 0,
+          "from_y": 192,
+          "to_y": 48,
           "from_value": 0.8,
           "to_value": -0.4
         },
@@ -61,11 +61,11 @@
           "type": "minecraft:add",
           "argument1": {
             "type": "minecraft:mul",
-            "argument1": -0.4,
+            "argument1": -0.3,
             "argument2": {
               "type": "minecraft:noise",
               "noise": "gm4_sky_dimension:continentalness",
-              "xz_scale": 7,
+              "xz_scale": 5,
               "y_scale": 0
             }
           },
