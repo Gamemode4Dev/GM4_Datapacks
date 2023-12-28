@@ -173,6 +173,9 @@ kill @s
 - Only when your module is about to be approved and merged, you should add `CustomModelData` id's.
 - Contact the collaborators of [GM4 Resources](https://github.com/Gamemode4Dev/GM4_Resources) to make sure the correct id's are allocated. Create an issue or pull request there so the correct translation keys are added.
 
+### Tests
+Automated tests for modules should be added in the `data/gm4_module_id/tests` folder. The tests will automatically run in GitHub Actions when you submit a PR. For local development and for the full documentation, see the [PackTest](https://github.com/misode/packtest) project.
+
 ### Submitting your module
 Make sure to credit all relevant people in `beet.yaml`. Most modules credit the creator (`Creator`), updaters (`Updated by`) and the icon designer (`Icon Design`), however, you may add credits for any work relevant to the module. Each credits section consists of an array of strings, which hold the names of the contributors. To add a link to your social media site of choice add an entry to `contributors.json`.
 
