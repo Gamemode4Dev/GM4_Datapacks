@@ -3,6 +3,7 @@ from typing import ClassVar
 from beet import Context, Structure, TextFile, subproject
 from beet.contrib.vanilla import Vanilla
 from nbtlib import parse_nbt
+from gm4.plugins.build_tools import repro_structure_to_bytes
 
 
 class StringStructure(TextFile):
@@ -11,7 +12,7 @@ class StringStructure(TextFile):
     extension: ClassVar[str] = ".snbt"
 
     def serialize_to_structure(self) -> Structure:
-        return Structure(parse_nbt(self.text))
+        return Structure(parse_nbt(self.text), serializer=repro_structure_to_bytes)
 
 def register_snbt_files(ctx: Context):
     # register the custom file-type with beet so those files are mounted

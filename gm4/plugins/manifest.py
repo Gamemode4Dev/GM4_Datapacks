@@ -81,7 +81,7 @@ def create(ctx: Context):
 		"video": None, "wiki": None
 	}
 
-	for glob, manifest_section, config_overrides in [("gm4_bo*", manifest.modules, {}), ("lib_*", manifest.libraries, LIB_OVERRIDES)]:
+	for glob, manifest_section, config_overrides in [("gm4_*", manifest.modules, {}), ("lib_*", manifest.libraries, LIB_OVERRIDES)]:
 		for pack_id in [p.name for p in sorted(ctx.directory.glob(glob))]:
 			try:
 				config = load_config(Path(pack_id) / "beet.yaml")

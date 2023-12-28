@@ -1,17 +1,25 @@
-from beet import Context, Pipeline, Connection
-import inspect
-import types
-from zipfile import ZipFile
-from io import BytesIO
-import os
-from pathlib import Path
-import logging
-import hashlib
-from gm4.plugins.manifest import ManifestFileModel, ManifestModuleModel, ManifestCacheModel
-import json
-from gm4.utils import Version
 import datetime
-from repro_zipfile import ReproducibleZipFile
+import hashlib
+import inspect
+import json
+import logging
+import os
+import types
+from io import BytesIO
+from pathlib import Path
+from gzip import GzipFile
+
+from beet import Connection, Context, Pipeline
+from nbtlib.contrib.minecraft import StructureFile, StructureFileData # type: ignore ; no stub file
+from beet.library.base import _dump_files
+from repro_zipfile import ReproducibleZipFile # type: ignore ; no stub file
+
+from gm4.plugins.manifest import (
+    ManifestCacheModel,
+    ManifestFileModel,
+    ManifestModuleModel,
+)
+from gm4.utils import Version
 
 RETRIEVE_PROJECTS = 0
 
@@ -36,7 +44,6 @@ def store_project(ctx: Context):
 
 def retrieve_projects(ctx: Context): # TODO name?
     print("retrieving projects!")
-    print(ctx.cache["gm4_manifest"].json["modules"]["gm4_boots_of_ostara"])
     plugins = ctx.meta.get("plugins",[])
     with ctx.worker(bridge) as channel:
         channel.send(RETRIEVE_PROJECTS)
@@ -91,11 +98,13 @@ def update_patch(ctx: Context):
     # watch for output file changes
     fileobj = BytesIO()
     with ReproducibleZipFile(fileobj, mode='w') as zf:
-        # breakpoint()
-        ctx.data.dump(zf) # write datapack to temporary memory
-        print(zf.infolist())
-    with open("output.zip", "wb") as f:
-        f.write(fileobj.getbuffer())
+        _dump_files(zf, sorted(ctx.data.list_files())) # write datapack to temporary memory
+            # beet's default dump depends on file load order, which is nondeterministic
+            # here we recreate the ctx.data.dump(zf) behavior but by sorting the files first
+
+        # with open("log.txt", "wt") as f: # TODO remove debug code
+        #     f.writelines([str(s)+"\n" for s in zf.infolist()])
+
     new_hash = hashlib.sha1(fileobj.getvalue()).hexdigest()
     pack.hash = new_hash
 
@@ -120,3 +129,13 @@ def update_patch(ctx: Context):
              pack.version = released.version
 
     ctx.cache["gm4_manifest"].json = this_manifest.dict()
+
+
+def repro_structure_to_bytes(content: StructureFileData) -> bytes:
+    """a modified Structure.to_bytes from beet, which ensures the GZip does not add
+       the current time.time to the nbt file header. 
+       Used for deterministic pack builds and auto-patch detection"""
+    dst = BytesIO()
+    with GzipFile(fileobj=dst, mode="wb", mtime=0) as fileobj:
+        StructureFile(content).write(fileobj) # type: ignore ; nbtlib has no type annotations
+    return dst.getvalue()

@@ -6,7 +6,7 @@ pipeline:
   - gm4.plugins.resource_pack.init_font_counter
   # - gm4.plugins.output.clear_release
   # - gm4.plugins.manifest.write_meta
-  - broadcast: 'gm4_bo*'
+  - broadcast: 'gm4_*'
     extend: 'beet.yaml'
     require:
       - gm4.plugins.output.release
