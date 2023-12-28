@@ -12,7 +12,7 @@ pipeline:
     extend: 'beet.yaml'
     require:
       - gm4.plugins.output.release
-      - gm4.plugins.build_tools.update_patch
+      - gm4.plugins.update_checker.update_patch
     pipeline:
       - beet.contrib.lantern_load.base_data_pack
       - gm4.plugins.versioning.isolated_library
@@ -37,8 +37,8 @@ pipeline:
     extend: 'beet.yaml'
     require:
       # - gm4.plugins.output.release
-      - gm4.plugins.build_tools.store_project
-      - gm4.plugins.build_tools.update_patch
+      - gm4.plugins.update_checker.store_project
+      - gm4.plugins.update_checker.update_patch
       - gm4.plugins.player_heads
       - gm4.plugins.resource_pack
       - beet.contrib.model_merging
@@ -59,7 +59,7 @@ pipeline:
   - pipeline:
     # - gm4.plugins.output.clear_release
     # - gm4.plugins.manifest.write_meta
-    - gm4.plugins.build_tools.retrieve_projects
+    - gm4.plugins.update_checker.retrieve_projects
     meta:
       plugins:
       - gm4.plugins.output.release
