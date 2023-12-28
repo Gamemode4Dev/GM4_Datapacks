@@ -67,10 +67,9 @@ jobs:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
       - name: Upload artifact
-        if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v2
         with:
-          name: 'Modules for pull request #${{ github.event.number }}'
+          name: 'Gamemode 4 modules'
           path: ${{ github.workspace }}/release/${{ env.VERSION }}/
 
       - name: Commit release
@@ -89,3 +88,18 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           directory: release
           branch: release
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: 'Gamemode 4 modules'
+
+      - name: Run tests
+        uses: CarbonSmasher/packtest_runner@86d606f25d2bd2faa08b017326fe99964ac3aa5c
+        with:
+          minecraft-version: '1.20.4'
+          packtest-url: https://github.com/misode/packtest/releases/download/v1.2/packtest-1.2-mc1.20.4.jar
+          packs: 'animi_shamir,bat_grenades,beehive_inspector,better_fire,block_compressors,book_binders,boots_of_ostara,chairs,metallurgy,calling_bell,cozy_campfires,disassemblers,display_frames'
