@@ -90,6 +90,7 @@ jobs:
           branch: release
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
