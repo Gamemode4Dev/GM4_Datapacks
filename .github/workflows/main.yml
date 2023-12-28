@@ -103,4 +103,4 @@ jobs:
         with:
           minecraft-version: '1.20.4'
           packtest-url: https://github.com/misode/packtest/releases/download/v1.2/packtest-1.2-mc1.20.4.jar
-          packs: 'animi_shamir,bat_grenades,beehive_inspector,better_fire,block_compressors,book_binders,boots_of_ostara,chairs,metallurgy,calling_bell,cozy_campfires,disassemblers,display_frames'
+          packs: 'gm4_animi_shamir_1_20.zip,gm4_bat_grenades_1_20.zip,gm4_beehive_inspector_1_20.zip,gm4_better_fire_1_20.zip,gm4_block_compressors_1_20.zip,gm4_book_binders_1_20.zip,gm4_boots_of_ostara_1_20.zip,gm4_chairs_1_20.zip,gm4_metallurgy_1_20.zip,gm4_calling_bell_1_20.zip,gm4_cozy_campfires_1_20.zip,gm4_disassemblers_1_20.zip,gm4_display_frames_1_20.zip'
