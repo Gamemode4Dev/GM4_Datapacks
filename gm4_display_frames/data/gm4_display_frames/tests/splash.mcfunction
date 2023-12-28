@@ -9,9 +9,9 @@ dummy @s use block ~2 ~1 ~1 west
 give @s splash_potion{Potion:"minecraft:invisibility"}
 dummy @s use item
 
-await for 5t
+await delay 5t
 give @s diamond_pickaxe
-dummy @s use entity @e[type=item_frame,sort=nearest,limit=1]
+dummy @s use entity @e[type=item_frame,distance=..3,limit=1]
 
 await entity @s[advancements={gm4:display_frames=true}]
 await entity @e[type=item_frame,distance=..3,nbt={Invisible:1b}]

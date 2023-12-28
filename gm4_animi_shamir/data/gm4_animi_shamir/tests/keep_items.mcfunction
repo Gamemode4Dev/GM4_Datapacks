@@ -7,7 +7,7 @@ kill @s
 await not entity @e[type=item,distance=..3,nbt={Item:{id:"minecraft:golden_leggings",Count:1b}}]
 assert entity @e[type=item,distance=..3,nbt={Item:{id:"minecraft:wooden_sword",Count:1b}}]
 
-await for 1s
+await delay 1s
 
 dummy @s respawn
 

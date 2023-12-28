@@ -3,7 +3,7 @@
 loot spawn ~1.5 ~2.5 ~1.8 loot gm4_animi_shamir:band
 summon item ~1.5 ~2.5 ~1.8 {Item:{id:"minecraft:diamond_leggings",Count:1b}}
 
-await for 1s
+await delay 1s
 
 setblock ~1 ~4 ~1 redstone_block
 
