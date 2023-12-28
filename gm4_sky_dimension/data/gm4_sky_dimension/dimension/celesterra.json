@@ -9,13 +9,16 @@
         {
           "biome": "minecraft:small_end_islands",
           "parameters": {
-            "temperature": 0,
+            "temperature": [
+              -1,
+              1
+            ],
             "humidity": [
               -1,
               1
             ],
             "continentalness": [
-              -1,
+              -0.485,
               1
             ],
             "erosion": [
@@ -44,7 +47,7 @@
             ],
             "erosion": [
               -1,
-              0.7
+              1
             ],
             "weirdness": 0,
             "depth": 0,

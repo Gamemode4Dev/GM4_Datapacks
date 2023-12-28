@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:max",
+  "argument1": {
+    "type": "minecraft:max",
+    "argument1": "gm4_sky_dimension:erosion/normal/middle/total",
+    "argument2": "gm4_sky_dimension:erosion/normal/mid_bottom/total"
+  },
+  "argument2": {
+    "type": "minecraft:max",
+    "argument1": "gm4_sky_dimension:erosion/normal/top/total",
+    "argument2": "gm4_sky_dimension:erosion/normal/bottom/total"
+  }
+}
