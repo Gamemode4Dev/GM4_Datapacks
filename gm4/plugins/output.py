@@ -52,6 +52,19 @@ def resource_pack(ctx: Context):
 		overwrite=True
 	)
 
+def release_resource_pack(ctx: Context):
+	"""Saves the resourcepack to the ./out folder."""
+	version = os.getenv("VERSION", "1.20")
+	release_dir = Path("release") / version
+
+	yield
+
+	ctx.assets.save(
+		path=release_dir / f"gm4_resource_pack_{version.replace('.', '_')}.zip",
+		overwrite=True,
+		zipped=False
+	)
+
 
 def release(ctx: Context):
 	"""

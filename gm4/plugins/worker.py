@@ -9,7 +9,7 @@ from io import BytesIO
 from pathlib import Path
 from gzip import GzipFile
 
-from beet import Connection, Context, Pipeline
+from beet import Connection, Context, Pipeline, Texture, ResourcePack, Font
 from nbtlib.contrib.minecraft import StructureFile, StructureFileData # type: ignore ; no stub file
 from beet.library.base import _dump_files
 from repro_zipfile import ReproducibleZipFile # type: ignore ; no stub file
@@ -23,27 +23,13 @@ from gm4.utils import Version
 
 RETRIEVE_PROJECTS = 0
 
-def test(ctx: Context):
-    pp = ctx.inject(Pipeline)
-    for p in pp.tasks:
-        print(p)
-        if isinstance(p.plugin, types.FunctionType):
-            print(inspect.getfile(p.plugin))
-
-    # print("plugins set")
-    # for p in pp.plugins:
-    #     print(inspect.getfile(p))
-
-    print(pp.ctx)
-
 def store_project(ctx: Context):
-    print(f"storing project {ctx.project_id}")
-    yield
+    """Stores the current context object in a beet worker"""
     with ctx.worker(bridge) as channel:
         channel.send(ctx)
 
-def retrieve_projects(ctx: Context): # TODO name?
-    print("retrieving projects!")
+def retrieve_and_run(ctx: Context):
+    """Retrieves contexts stored by the worker and runs the specified plugins on each one"""
     plugins = ctx.meta.get("plugins",[])
     with ctx.worker(bridge) as channel:
         channel.send(RETRIEVE_PROJECTS)
@@ -51,6 +37,22 @@ def retrieve_projects(ctx: Context): # TODO name?
         for c in stored_contexts:
             c.require(*plugins)
             c.inject(Pipeline).run() # manually trigger exit phases of plugins, as the stored context c has finished its earlier pipeline
+
+def retrieve_and_merge(ctx: Context):
+    """Retrieves stored contexts and merges their packs into the current/parent context"""
+    with ctx.worker(bridge) as channel:
+        channel.send(RETRIEVE_PROJECTS)
+    for stored_contexts in channel:
+        for c in stored_contexts:
+            
+            #FIXME build hangs when fonts are merged from one ResourcePack to another... why is unknown
+            # this is a manual work around to merge the font files without causing the strange hang
+            for f, font in c.assets.fonts.items():
+                ctx.generate(f, merge=font)
+            c.assets.fonts.clear()
+
+            ctx.data.merge(c.data)
+            ctx.assets.merge(c.assets)
 
 def bridge(connection: Connection[Context|int, list[Context]]): # TODO notation on packet header
     # incoming types `Context|int` and outgoing types `Context`
@@ -69,25 +71,15 @@ def bridge(connection: Connection[Context|int, list[Context]]): # TODO notation 
 def update_patch(ctx: Context):
     """Checks the datapack files for changes from last build, and increments patch number"""
     yield
-    version = os.getenv("VERSION", "1.20")
-    release_dir = Path('release') / version
-    manifest_file = release_dir / "meta.json"
     logger = logging.getLogger(__name__)
-
-    print(f"running on {ctx.project_id}")
 
     # load current manifest from cache
     this_manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
     pack = (this_manifest.modules | {l.id:l for l in this_manifest.libraries.values()})[ctx.project_id]
 
     # attempt to load prior meta.json manifest
-    if manifest_file.exists():
-        last_manifest = ManifestFileModel.parse_obj(json.loads(manifest_file.read_text()))
-        released_modules: dict[str, ManifestModuleModel] = {m.id:m for m in last_manifest.modules if m.version}|{l.id:l for l in last_manifest.libraries.values()}
-    else:
-        logger.debug("No existing meta.json manifest file was located")
-        # last_commit = None
-        released_modules = {}
+    last_manifest = ManifestFileModel.parse_obj(ctx.cache["previous_manifest"].json)
+    released_modules: dict[str, ManifestModuleModel] = {m.id:m for m in last_manifest.modules if m.version}|{l.id:l for l in last_manifest.libraries.values()}
 
     # determine this modules status
     released = released_modules.get(ctx.project_id, None)
@@ -99,13 +91,19 @@ def update_patch(ctx: Context):
 
     # watch for output file changes
     fileobj = BytesIO()
+    scanned_pack = ctx.packs[0 if ctx.meta.get("pack_scan")=="resource_pack" else 1]
+    # if isinstance(scanned_pack, ResourcePack):
+    #     print(list(scanned_pack.list_files()))
     with ReproducibleZipFile(fileobj, mode='w') as zf:
-        _dump_files(zf, sorted(ctx.data.list_files())) # write datapack to temporary memory
+        _dump_files(zf, sorted(scanned_pack.list_files())) # write datapack to temporary memory
             # beet's default dump depends on file load order, which is nondeterministic
             # here we recreate the ctx.data.dump(zf) behavior but by sorting the files first
 
         # with open("log.txt", "wt") as f: # TODO remove debug code
         #     f.writelines([str(s)+"\n" for s in zf.infolist()])
+
+        with open("output.zip", "wb") as f:
+            f.write(fileobj.getbuffer())
 
     new_hash = hashlib.sha1(fileobj.getvalue()).hexdigest()
     pack.hash = new_hash

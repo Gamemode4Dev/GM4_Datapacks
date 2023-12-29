@@ -12,7 +12,7 @@ pipeline:
     extend: 'beet.yaml'
     require:
       - gm4.plugins.output.release
-      - gm4.plugins.update_checker.update_patch
+      - gm4.plugins.worker.update_patch
     pipeline:
       - beet.contrib.lantern_load.base_data_pack
       - gm4.plugins.versioning.isolated_library
@@ -26,7 +26,6 @@ pipeline:
               pack.png: "pack.png"
       - gm4.plugins.module.default_pack_icon
       - gm4.plugins.readme_generator.libraries
-      - gm4.plugins.write_mcmeta
     meta:
       mecha:
         formatting:
@@ -37,8 +36,8 @@ pipeline:
     extend: 'beet.yaml'
     require:
       # - gm4.plugins.output.release
-      - gm4.plugins.update_checker.store_project
-      - gm4.plugins.update_checker.update_patch
+      - gm4.plugins.worker.store_project
+      - gm4.plugins.worker.update_patch
       - gm4.plugins.player_heads
       - gm4.plugins.resource_pack
       - beet.contrib.model_merging
@@ -59,16 +58,24 @@ pipeline:
   - pipeline:
     # - gm4.plugins.output.clear_release
     # - gm4.plugins.manifest.write_meta
-    - gm4.plugins.update_checker.retrieve_projects
+    - gm4.plugins.worker.retrieve_and_run
     meta:
       plugins:
       - gm4.plugins.output.release
       - gm4.plugins.manifest.write_updates
       - gm4.plugins.write_mcmeta
 
+  - gm4.plugins.worker.store_project
+
   - extend: beet.yaml
     directory: gm4_resource_pack
-  - gm4.plugins.output.resource_pack
+    require:
+      - gm4.plugins.worker.retrieve_and_merge
+      - gm4.plugins.output.release_resource_pack
+      - gm4.plugins.write_mcmeta
+      - gm4.plugins.worker.update_patch
+    meta:
+      pack_scan: resource_pack
 
   - gm4.plugins.manifest.write_meta
 
