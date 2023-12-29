@@ -100,7 +100,7 @@ jobs:
 
       - name: List packs
         run: |
-          PACKS=$(find . -name 'gm4_*.zip' -type f -printf "%f," | sed '/gm4_guidebook_.*\.zip/d' | sed 's/,$//')
+          PACKS=$(find . -name 'gm4_*.zip' -type f -printf "%f," | sed 's/gm4_guidebook_[0-9_]*\.zip,*//' | sed 's/,$//')
           echo "PACKS=$PACKS" >> $GITHUB_ENV
 
       - name: Run tests
