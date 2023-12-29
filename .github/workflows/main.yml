@@ -66,12 +66,6 @@ jobs:
         env:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: 'Gamemode 4 modules'
-          path: ${{ github.workspace }}/release/${{ env.VERSION }}/
-
       - name: Commit release
         if: github.event_name != 'pull_request'
         run: |
@@ -88,6 +82,17 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           directory: release
           branch: release
+
+      - name: Remove generated files
+        run: |
+          rm -rf release/${{ env.VERSION }}/generated
+          rm release/${{ env.VERSION }}/meta.json
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: 'Gamemode 4 modules'
+          path: ${{ github.workspace }}/release/${{ env.VERSION }}/
 
   test:
     needs: build
