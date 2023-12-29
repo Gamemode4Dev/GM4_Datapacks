@@ -103,4 +103,4 @@ jobs:
         with:
           minecraft-version: '1.20.4'
           packtest-url: https://github.com/misode/packtest/releases/download/v1.3/packtest-1.3-mc1.20.4.jar
-          packs: 'gm4_animi_shamir_1_20.zip,gm4_bat_grenades_1_20.zip,gm4_beehive_inspector_1_20.zip,gm4_better_fire_1_20.zip,gm4_block_compressors_1_20.zip,gm4_book_binders_1_20.zip,gm4_boots_of_ostara_1_20.zip,gm4_chairs_1_20.zip,gm4_metallurgy_1_20.zip,gm4_calling_bell_1_20.zip,gm4_cozy_campfires_1_20.zip,gm4_disassemblers_1_20.zip,gm4_display_frames_1_20.zip'
+          packs: 'gm4_animi_shamir_1_20.zip,gm4_bat_grenades_1_20.zip,gm4_beehive_inspector_1_20.zip,gm4_better_fire_1_20.zip,gm4_block_compressors_1_20.zip,gm4_book_binders_1_20.zip,gm4_boots_of_ostara_1_20.zip,gm4_chairs_1_20.zip,gm4_metallurgy_1_20.zip,gm4_calling_bell_1_20.zip,gm4_cozy_campfires_1_20.zip,gm4_disassemblers_1_20.zip,gm4_display_frames_1_20.zip,gm4_double_doors_1_20.zip,gm4_dripleaf_filters_1_20.zip,gm4_dripleaf_launchers_1_20.zip,gm4_enchanting_extractors_1_20.zip,gm4_ender_hoppers_1_20.zip,gm4_enderman_support_class_1_20.zip,gm4_everstone_1_20.zip,gm4_forming_press_1_20.zip'
