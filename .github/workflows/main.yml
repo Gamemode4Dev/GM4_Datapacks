@@ -98,8 +98,11 @@ jobs:
         with:
           name: 'Gamemode 4 modules'
 
-      - name: Find packs
-        run: echo "::set-output name=PACKS::$(printf "%s," gm4_*.zip | sed 's/,$//')"
+      - name: List packs
+        run: |
+          PACKS=$(find . -name 'gm4_*.zip' -type f -printf "%f,")
+          PACKS=${PACKS%,}
+          echo "PACKS=$PACKS" >> $GITHUB_ENV
 
       - name: Run tests
         uses: CarbonSmasher/packtest_runner@86d606f25d2bd2faa08b017326fe99964ac3aa5c
