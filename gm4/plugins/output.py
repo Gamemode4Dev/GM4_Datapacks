@@ -62,7 +62,7 @@ def release_resource_pack(ctx: Context):
 	ctx.assets.save(
 		path=release_dir / f"gm4_resource_pack_{version.replace('.', '_')}.zip",
 		overwrite=True,
-		zipped=False
+		zipped=True
 	)
 
 

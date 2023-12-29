@@ -2,17 +2,14 @@ pipeline:
   - gm4.plugins.list_modules
   - gm4.plugins.manifest.create
   - gm4.plugins.output.clear_release
-  # - gm4.plugins.manifest.update_patch
   - gm4.plugins.resource_pack.mount_registry
   - gm4.plugins.resource_pack.init_font_counter
-  # - gm4.plugins.output.clear_release
-  # - gm4.plugins.manifest.write_meta
 
   - broadcast: 'lib_*'
     extend: 'beet.yaml'
     require:
       - gm4.plugins.output.release
-      - gm4.plugins.worker.update_patch
+      - gm4.plugins.manifest.update_patch
     pipeline:
       - beet.contrib.lantern_load.base_data_pack
       - gm4.plugins.versioning.isolated_library
@@ -35,20 +32,17 @@ pipeline:
   - broadcast: 'gm4_*'
     extend: 'beet.yaml'
     require:
-      # - gm4.plugins.output.release
       - gm4.plugins.worker.store_project
-      - gm4.plugins.worker.update_patch
+      - gm4.plugins.manifest.update_patch
       - gm4.plugins.player_heads
       - gm4.plugins.resource_pack
       - beet.contrib.model_merging
       - beet.contrib.optifine
     pipeline:
-      # - gm4.plugins.manifest.write_updates
       - gm4.plugins.manifest.write_credits
       - require: [beet.contrib.copy_files]
         meta: {copy_files: {data_pack: {LICENSE.md: "../LICENSE.md"}}}
       - gm4.plugins.readme_generator
-      # - gm4.plugins.write_mcmeta
     meta:
       mecha:
         formatting:
@@ -56,8 +50,6 @@ pipeline:
           nbt_compact: True
   
   - pipeline:
-    # - gm4.plugins.output.clear_release
-    # - gm4.plugins.manifest.write_meta
     - gm4.plugins.worker.retrieve_and_run
     meta:
       plugins:
@@ -73,7 +65,7 @@ pipeline:
       - gm4.plugins.worker.retrieve_and_merge
       - gm4.plugins.output.release_resource_pack
       - gm4.plugins.write_mcmeta
-      - gm4.plugins.worker.update_patch
+      - gm4.plugins.manifest.update_patch
     meta:
       pack_scan: resource_pack
 

@@ -4,7 +4,7 @@ from beet.contrib.rename_files import rename_files
 from pydantic import Extra
 import nbtlib
 import re
-from gm4.plugins.update_checker import repro_structure_to_bytes
+from gm4.plugins.manifest import repro_structure_to_bytes
 
 
 class PrefabConfig(PluginOptions, extra=Extra.ignore):

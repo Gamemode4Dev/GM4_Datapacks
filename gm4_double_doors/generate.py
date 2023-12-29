@@ -3,7 +3,7 @@ from typing import ClassVar
 from beet import Context, Structure, TextFile, subproject
 from beet.contrib.vanilla import Vanilla
 from nbtlib import parse_nbt
-from gm4.plugins.update_checker import repro_structure_to_bytes
+from gm4.plugins.manifest import repro_structure_to_bytes
 
 
 class StringStructure(TextFile):
