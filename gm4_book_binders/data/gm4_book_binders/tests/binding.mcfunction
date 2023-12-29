@@ -12,6 +12,7 @@ dummy @s use entity @e[tag=gm4_book_binder,distance=..3,limit=1]
 
 await entity @e[tag=gm4_book_binder,distance=..3,nbt=!{HandItems:[{id:"minecraft:paper"}]}]
 
+clear @s
 give @s leather
 dummy @s use entity @e[tag=gm4_book_binder,distance=..3,limit=1]
 

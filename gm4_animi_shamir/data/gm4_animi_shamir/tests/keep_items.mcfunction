@@ -1,4 +1,8 @@
-# @dummy
+# @template gm4:test_tube
+# @dummy ~1 ~1 ~1
+#
+# @optional
+# Currently conflicts with Undead players, as the zombie will pick up items before Animi Shamir has a chance to track and kill them
 
 give @s golden_leggings{gm4_metallurgy:{active_shamir:"animi"}}
 give @s wooden_sword

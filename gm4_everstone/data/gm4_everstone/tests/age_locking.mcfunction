@@ -1,4 +1,4 @@
-# @template gm4_everstone:test_tube
+# @template gm4:test_tube
 
 summon pig ~1.5 ~1 ~1.5 {Age:-40}
 loot spawn ~1.5 ~2 ~1.5 loot gm4_everstone:everstone
