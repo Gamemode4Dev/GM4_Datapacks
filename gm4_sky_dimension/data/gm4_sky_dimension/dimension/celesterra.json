@@ -7,6 +7,30 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
+          "biome": "minecraft:sparse_jungle",
+          "parameters": {
+            "temperature": [
+              -1,
+              1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.05,
+              1
+            ],
+            "erosion": [
+              0.7,
+              1
+            ],
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
           "biome": "minecraft:bamboo_jungle",
           "parameters": {
             "temperature": [
@@ -23,7 +47,7 @@
             ],
             "erosion": [
               -1,
-              -0.5
+              -0.75
             ],
             "weirdness": 0,
             "depth": 0,
@@ -43,7 +67,7 @@
             ],
             "continentalness": [
               -0.485,
-              1
+              0.05
             ],
             "erosion": [
               0.7,
@@ -94,7 +118,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -118,7 +142,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -142,7 +166,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -166,7 +190,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -190,7 +214,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -214,7 +238,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -238,7 +262,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -262,7 +286,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -286,7 +310,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -310,7 +334,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -334,7 +358,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -358,7 +382,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -382,7 +406,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -406,7 +430,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -430,7 +454,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -454,7 +478,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -478,7 +502,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,
@@ -502,7 +526,7 @@
               1
             ],
             "erosion": [
-              -0.5,
+              -0.75,
               0.7
             ],
             "weirdness": 0,

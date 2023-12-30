@@ -13,16 +13,101 @@
             "coordinate": "gm4_sky_dimension:routers/erosion",
             "points": [
               {
-                "location": -0.6,
+                "location": -0.8,
                 "derivative": 0,
                 "value": 0
               },
               {
-                "location": -0.5,
+                "location": -0.75,
                 "derivative": 0,
                 "value": -1
               }
             ]
+          }
+        }
+      }
+    },
+    "argument2": -1
+  },
+  "argument2": {
+    "type": "minecraft:max",
+    "argument1": {
+      "type": "minecraft:max",
+      "argument1": {
+        "type": "minecraft:add",
+        "argument1": "gm4_sky_dimension:erosion/high/total",
+        "argument2": {
+          "type": "minecraft:interpolated",
+          "argument": {
+            "type": "minecraft:spline",
+            "spline": {
+              "coordinate": "gm4_sky_dimension:routers/erosion",
+              "points": [
+                {
+                  "location": 0.7,
+                  "derivative": 0,
+                  "value": -1
+                },
+                {
+                  "location": 0.725,
+                  "derivative": 0,
+                  "value": {
+                    "coordinate": "gm4_sky_dimension:routers/continents",
+                    "points": [
+                      {
+                        "location": 0.04,
+                        "derivative": 0,
+                        "value": 0
+                      },
+                      {
+                        "location": 0.05,
+                        "derivative": 0,
+                        "value": -1
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "argument2": {
+        "type": "minecraft:add",
+        "argument1": "gm4_sky_dimension:erosion/full_blobs/total",
+        "argument2": {
+          "type": "minecraft:interpolated",
+          "argument": {
+            "type": "minecraft:spline",
+            "spline": {
+              "coordinate": "gm4_sky_dimension:routers/erosion",
+              "points": [
+                {
+                  "location": 0.7,
+                  "derivative": 0,
+                  "value": -1
+                },
+                {
+                  "location": 0.725,
+                  "derivative": 0,
+                  "value": {
+                    "coordinate": "gm4_sky_dimension:routers/continents",
+                    "points": [
+                      {
+                        "location": 0.05,
+                        "derivative": 0,
+                        "value": -1
+                      },
+                      {
+                        "location": 0.06,
+                        "derivative": 0,
+                        "value": 0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
           }
         }
       }
@@ -38,52 +123,27 @@
             "coordinate": "gm4_sky_dimension:routers/erosion",
             "points": [
               {
-                "location": -0.4,
+                "location": -0.75,
                 "derivative": 0,
                 "value": -1
               },
               {
-                "location": -0.35,
+                "location": -0.7,
                 "derivative": 0,
                 "value": 0
               },
               {
-                "location": 0.675,
+                "location": 0.65,
                 "derivative": 0,
                 "value": 0
               },
               {
-                "location": 0.685,
+                "location": 0.7,
                 "derivative": 0,
                 "value": -1
               }
             ]
           }
-        }
-      }
-    }
-  },
-  "argument2": {
-    "type": "minecraft:add",
-    "argument1": "gm4_sky_dimension:erosion/high/total",
-    "argument2": {
-      "type": "minecraft:interpolated",
-      "argument": {
-        "type": "minecraft:spline",
-        "spline": {
-          "coordinate": "gm4_sky_dimension:routers/erosion",
-          "points": [
-            {
-              "location": 0.7,
-              "derivative": 0,
-              "value": -1
-            },
-            {
-              "location": 0.725,
-              "derivative": 0,
-              "value": 0
-            }
-          ]
         }
       }
     }
