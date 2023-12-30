@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:add",
+  "argument1": "gm4_sky_dimension:erosion/huge_islands/main/total",
+  "argument2": 0
+}

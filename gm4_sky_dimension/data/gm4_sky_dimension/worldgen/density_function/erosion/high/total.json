@@ -1,22 +1,5 @@
 {
-  "type": "minecraft:mul",
-  "argument1": "gm4_sky_dimension:erosion/high/carver",
-  "argument2": {
-    "type": "minecraft:spline",
-    "spline": {
-      "coordinate": "gm4_sky_dimension:routers/erosion",
-      "points": [
-        {
-          "location": 0.695,
-          "derivative": 0,
-          "value": 0
-        },
-        {
-          "location": 0.7,
-          "derivative": 0,
-          "value": 1
-        }
-      ]
-    }
-  }
+  "type": "minecraft:min",
+  "argument1": "gm4_sky_dimension:erosion/normal/total",
+  "argument2": "gm4_sky_dimension:erosion/high/noise"
 }

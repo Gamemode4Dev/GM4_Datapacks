@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:flat_cache",
+  "type": "minecraft:cache_2d",
   "argument": {
     "type": "minecraft:shifted_noise",
     "noise": "gm4_sky_dimension:erosion",
