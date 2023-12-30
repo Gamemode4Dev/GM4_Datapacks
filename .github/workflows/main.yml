@@ -9,6 +9,9 @@ on:
 env:
   VERSION: '1.20'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
+  TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.20.4/0.15.3/0.11.2/server/jar
+  TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/JMCwDuki/fabric-api-0.92.0%2B1.20.4.jar
+  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/Gq3rUEy6/packtest-1.3-mc1.20.4.jar
 
 jobs:
   build:
@@ -66,6 +69,13 @@ jobs:
         env:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
+      - name: Upload artifact
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v2
+        with:
+          name: 'Modules for pull request #${{ github.event.number }}'
+          path: ${{ github.workspace }}/release/${{ env.VERSION }}/
+
       - name: Commit release
         if: github.event_name != 'pull_request'
         run: |
@@ -83,34 +93,25 @@ jobs:
           directory: release
           branch: release
 
-      - name: Remove generated files
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Download server files
         run: |
-          rm -rf release/${{ env.VERSION }}/generated
-          rm release/${{ env.VERSION }}/meta.json
+          curl -o server.jar $TEST_FABRIC_SERVER
+          mkdir mods
+          curl -o mods/fabric-api.jar $TEST_FABRIC_API
+          curl -o mods/packtest.jar $TEST_PACKTEST
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: 'Gamemode 4 modules'
-          path: ${{ github.workspace }}/release/${{ env.VERSION }}/
-
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: 'Gamemode 4 modules'
-
-      - name: List packs
+      - name: Copy packs to world
         run: |
-          PACKS=$(find . -name 'gm4_*.zip' -type f -printf "%f," | sed 's/gm4_guidebook_[0-9_]*\.zip,*//' | sed 's/,$//')
-          echo "PACKS=$PACKS" >> $GITHUB_ENV
+          mkdir -p world/datapacks
+          cp release/1.20/gm4_*.zip world/datapacks
+          rm world/datapacks/gm4_guidebook_*.zip
 
-      - name: Run tests
-        uses: CarbonSmasher/packtest_runner@8d60d6654da81e0af10e42961404e491e2bdee49
-        with:
-          minecraft-version: '1.20.4'
-          packtest-url: https://github.com/misode/packtest/releases/download/v1.3/packtest-1.3-mc1.20.4.jar
-          packs: ${{ env.PACKS }}
+      - name: Run test server
+        run: |
+          java -Xmx2G -Dpacktest.auto -jar server.jar nogui
