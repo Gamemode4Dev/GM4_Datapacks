@@ -1,6 +1,7 @@
 id: gm4_custom_crafters
 name: Gamemode 4 Custom Crafters
 version: 3.1.X
+description: A dropper-based custom crafter for custom item crafting purposes.
 
 data_pack:
   load: 
