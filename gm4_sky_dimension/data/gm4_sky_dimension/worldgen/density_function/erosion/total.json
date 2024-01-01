@@ -58,9 +58,14 @@
                   "coordinate": "gm4_sky_dimension:routers/continents",
                   "points": [
                     {
-                      "location": 0.2,
+                      "location": 0.25,
                       "derivative": 0,
                       "value": -1.5
+                    },
+                    {
+                      "location": 0.26,
+                      "derivative": 0,
+                      "value": -1
                     },
                     {
                       "location": 0.3,
@@ -76,9 +81,14 @@
                 }
               },
               {
-                "location": -0.75,
+                "location": -0.76,
                 "derivative": 0,
                 "value": -1
+              },
+              {
+                "location": -0.75,
+                "derivative": 0,
+                "value": -1.5
               }
             ]
           }

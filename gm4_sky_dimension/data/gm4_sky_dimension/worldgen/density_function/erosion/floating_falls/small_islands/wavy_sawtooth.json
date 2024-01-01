@@ -15,7 +15,7 @@
     }
   },
   "min_inclusive": -10,
-  "max_exclusive": -0.4,
+  "max_exclusive": -0.3,
   "when_in_range": "gm4_sky_dimension:erosion/floating_falls/small_islands/sawtooth",
   "when_out_of_range": -1
 }
