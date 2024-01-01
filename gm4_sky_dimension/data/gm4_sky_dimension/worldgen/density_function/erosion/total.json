@@ -15,7 +15,21 @@
               {
                 "location": -0.8,
                 "derivative": 0,
-                "value": 0
+                "value": {
+                  "coordinate": "gm4_sky_dimension:routers/continents",
+                  "points": [
+                    {
+                      "location": 0.1,
+                      "derivative": 0,
+                      "value": 0
+                    },
+                    {
+                      "location": 0.2,
+                      "derivative": 0,
+                      "value": -1.5
+                    }
+                  ]
+                }
               },
               {
                 "location": -0.75,
@@ -27,7 +41,50 @@
         }
       }
     },
-    "argument2": -1
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": "gm4_sky_dimension:erosion/floating_falls/total",
+      "argument2": {
+        "type": "minecraft:interpolated",
+        "argument": {
+          "type": "minecraft:spline",
+          "spline": {
+            "coordinate": "gm4_sky_dimension:routers/erosion",
+            "points": [
+              {
+                "location": -0.8,
+                "derivative": 0,
+                "value": {
+                  "coordinate": "gm4_sky_dimension:routers/continents",
+                  "points": [
+                    {
+                      "location": 0.2,
+                      "derivative": 0,
+                      "value": -1.5
+                    },
+                    {
+                      "location": 0.3,
+                      "derivative": 0,
+                      "value": -1
+                    },
+                    {
+                      "location": 0.4,
+                      "derivative": 0,
+                      "value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "location": -0.75,
+                "derivative": 0,
+                "value": -1
+              }
+            ]
+          }
+        }
+      }
+    }
   },
   "argument2": {
     "type": "minecraft:max",

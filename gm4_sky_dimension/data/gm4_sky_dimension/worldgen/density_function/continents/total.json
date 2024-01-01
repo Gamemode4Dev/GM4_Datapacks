@@ -1,8 +1,107 @@
 {
-  "type": "minecraft:min",
-  "argument1": "gm4_sky_dimension:continents/land_mass",
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:add",
+    "argument1": {
+      "type": "minecraft:add",
+      "argument1": "gm4_sky_dimension:continents/sea_level",
+      "argument2": {
+        "type": "minecraft:add",
+        "argument1": 0.35,
+        "argument2": {
+          "type": "minecraft:quarter_negative",
+          "argument": "gm4_sky_dimension:routers/continents"
+        }
+      }
+    },
+    "argument2": {
+      "type": "minecraft:interpolated",
+      "argument": {
+        "type": "minecraft:spline",
+        "spline": {
+          "coordinate": "gm4_sky_dimension:routers/continents",
+          "points": [
+            {
+              "location": -0.8,
+              "derivative": 0,
+              "value": -2
+            },
+            {
+              "location": -0.5,
+              "derivative": 0,
+              "value": -0.7
+            },
+            {
+              "location": -0.43,
+              "derivative": 0,
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  },
   "argument2": {
-    "type": "minecraft:interpolated",
-    "argument": "gm4_sky_dimension:continents/island_groups"
+    "type": "minecraft:range_choice",
+    "input": "minecraft:y",
+    "min_inclusive": 0,
+    "max_exclusive": 192,
+    "when_in_range": {
+      "type": "minecraft:add",
+      "argument1": {
+        "type": "minecraft:add",
+        "argument1": {
+          "type": "minecraft:y_clamped_gradient",
+          "from_y": 192,
+          "to_y": 48,
+          "from_value": 0.8,
+          "to_value": -0.4
+        },
+        "argument2": {
+          "type": "minecraft:add",
+          "argument1": {
+            "type": "minecraft:mul",
+            "argument1": -0.3,
+            "argument2": {
+              "type": "minecraft:noise",
+              "noise": "gm4_sky_dimension:continentalness",
+              "xz_scale": 5,
+              "y_scale": 0
+            }
+          },
+          "argument2": {
+            "type": "minecraft:quarter_negative",
+            "argument": "gm4_sky_dimension:routers/continents"
+          }
+        }
+      },
+      "argument2": {
+        "type": "minecraft:interpolated",
+        "argument": {
+          "type": "minecraft:spline",
+          "spline": {
+            "coordinate": "gm4_sky_dimension:routers/continents",
+            "points": [
+              {
+                "location": -0.8,
+                "derivative": 0,
+                "value": -2
+              },
+              {
+                "location": -0.5,
+                "derivative": 0,
+                "value": -1.5
+              },
+              {
+                "location": -0.43,
+                "derivative": 0,
+                "value": 0
+              }
+            ]
+          }
+        }
+      }
+    },
+    "when_out_of_range": 0
   }
 }

@@ -1,4 +1,8 @@
 {
-  "type": "minecraft:squeeze",
-  "argument": "gm4_sky_dimension:erosion/full_blobs/noise"
+  "type": "minecraft:min",
+  "argument1": "gm4_sky_dimension:erosion/island_groups",
+  "argument2": {
+    "type": "minecraft:squeeze",
+    "argument": "gm4_sky_dimension:erosion/full_blobs/noise"
+  }
 }
