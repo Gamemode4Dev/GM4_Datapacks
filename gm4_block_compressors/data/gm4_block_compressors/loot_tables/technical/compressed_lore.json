@@ -13,12 +13,11 @@
               "entity": "this",
               "name": {
                 "translate": "text.gm4.block_compressors.compressed",
-                "fallback": "Compressed *",
+                "fallback": "Compressed ×%s",
                 "with": [
                   {
                     "nbt": "Item.tag.gm4_block_compressors.compression_level",
-                    "storage": "gm4_block_compressors:temp/item_stack",
-                    "interpret": true
+                    "storage": "gm4_block_compressors:temp/item_stack"
                   }
                 ],
                 "color": "gray",
