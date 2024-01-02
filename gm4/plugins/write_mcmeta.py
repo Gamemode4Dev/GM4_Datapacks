@@ -9,7 +9,7 @@ def beet_default(ctx: Context):
 
 	version = os.getenv("VERSION", "1.20")
 	manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
-	manifest_entry = (manifest.modules|{v.id:v for v in manifest.libraries.values()}).get(ctx.project_id, NoneAttribute())
+	manifest_entry = {v.id:v for v in (manifest.modules|manifest.libraries).values()}.get(ctx.project_id, NoneAttribute())
 	
 	for pack in ctx.packs:
 		pack.pack_format = 15 # manually set as beet's `latest` is not available for 1.20 at this time.

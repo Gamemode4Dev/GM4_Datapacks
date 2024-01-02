@@ -60,7 +60,7 @@ pipeline:
   - gm4.plugins.worker.store_project
 
   - extend: beet.yaml
-    directory: gm4_resource_pack
+    directory: resource_pack
     require:
       - gm4.plugins.worker.retrieve_and_merge
       - gm4.plugins.output.release_resource_pack

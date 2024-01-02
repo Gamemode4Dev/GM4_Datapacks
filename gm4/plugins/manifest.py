@@ -86,7 +86,7 @@ def create(ctx: Context):
 		"video": None, "wiki": None
 	}
 
-	for glob, manifest_section, config_overrides in [("gm4_*", manifest.modules, {}), ("lib_*", manifest.libraries, LIB_OVERRIDES)]:
+	for glob, manifest_section, config_overrides in [("gm4_*", manifest.modules, {}), ("lib_*", manifest.libraries, LIB_OVERRIDES), ("resource_pack", manifest.modules, {})]:
 		for pack_id in [p.name for p in sorted(ctx.directory.glob(glob))]:
 			try:
 				config = load_config(Path(pack_id) / "beet.yaml")
@@ -154,7 +154,7 @@ def update_patch(ctx: Context):
 
     # load current manifest from cache
     this_manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
-    pack = (this_manifest.modules | {l.id:l for l in this_manifest.libraries.values()})[ctx.project_id]
+    pack = ({e.id:e for e in (this_manifest.libraries|this_manifest.modules).values()})[ctx.project_id]
 
     # attempt to load prior meta.json manifest
     last_manifest = ManifestFileModel.parse_obj(ctx.cache["previous_manifest"].json)
