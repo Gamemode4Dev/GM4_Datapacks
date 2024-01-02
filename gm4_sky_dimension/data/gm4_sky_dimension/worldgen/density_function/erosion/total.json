@@ -26,15 +26,20 @@
                     {
                       "location": 0.2,
                       "derivative": 0,
+                      "value": -1
+                    },
+                    {
+                      "location": 0.25,
+                      "derivative": 0,
                       "value": -1.5
                     }
                   ]
                 }
               },
               {
-                "location": -0.75,
+                "location": -0.72,
                 "derivative": 0,
-                "value": -1
+                "value": -1.5
               }
             ]
           }
@@ -58,9 +63,9 @@
                   "coordinate": "gm4_sky_dimension:routers/continents",
                   "points": [
                     {
-                      "location": 0.25,
+                      "location": 0.24,
                       "derivative": 0,
-                      "value": -1.5
+                      "value": -2
                     },
                     {
                       "location": 0.26,
@@ -81,14 +86,9 @@
                 }
               },
               {
-                "location": -0.76,
+                "location": -0.72,
                 "derivative": 0,
-                "value": -1
-              },
-              {
-                "location": -0.75,
-                "derivative": 0,
-                "value": -1.5
+                "value": -2
               }
             ]
           }
@@ -191,6 +191,11 @@
             "points": [
               {
                 "location": -0.75,
+                "derivative": 0,
+                "value": -2
+              },
+              {
+                "location": -0.73,
                 "derivative": 0,
                 "value": -1
               },

@@ -18,7 +18,7 @@
               1
             ],
             "continentalness": [
-              0.25,
+              0.2,
               1
             ],
             "erosion": [
@@ -67,7 +67,7 @@
             ],
             "continentalness": [
               -0.485,
-              0.25
+              0.2
             ],
             "erosion": [
               -1,
