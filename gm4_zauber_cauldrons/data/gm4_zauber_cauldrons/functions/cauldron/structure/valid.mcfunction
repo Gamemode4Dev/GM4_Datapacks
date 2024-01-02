@@ -10,8 +10,11 @@ scoreboard players set @s gm4_zc_fullness 0
 data remove storage gm4_zauber_cauldrons:temp/cauldron/ingredients items
 execute as @e[type=item,dx=0,dy=0,dz=0] run function gm4_zauber_cauldrons:cauldron/structure/register_items
 
-# pull liquid id into storage
-data modify storage gm4_zauber_cauldrons:temp/cauldron/ingredients liquid set from entity @s data.gm4_zauber_cauldrons.liquid
+# pull liquid id and cauldron location into ingredient storage
+data modify storage gm4_zauber_cauldrons:temp/cauldron/ingredients marker_data set from entity @s data.gm4_zauber_cauldrons
+data modify storage gm4_zauber_cauldrons:temp/cauldron/ingredients liquid set from storage gm4_zauber_cauldrons:temp/cauldron/ingredients marker_data.liquid
+data modify storage gm4_zauber_cauldrons:temp/cauldron/ingredients location set from storage gm4_zauber_cauldrons:temp/cauldron/ingredients marker_data.location
+data remove storage gm4_zauber_cauldrons:temp/cauldron/ingredients marker_data
 
 # particles
 execute if score $has_water gm4_zc_data matches 1 run particle minecraft:poof ~.5 ~.5 ~.5 .005 .2 .005 .0005 4

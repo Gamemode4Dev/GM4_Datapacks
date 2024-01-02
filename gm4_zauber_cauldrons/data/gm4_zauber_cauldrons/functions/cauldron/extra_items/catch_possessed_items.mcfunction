@@ -5,18 +5,13 @@
 # read amount of excess items
 execute store result storage gm4_zauber_cauldrons:temp/item/bottled_vex gm4_zauber_cauldrons.vex_count int 1 run scoreboard players get @s gm4_zc_fullness
 
-# read coordinates
-execute store result score $cauldron_x gm4_zc_data run data get entity @s Pos[0]
-execute store result score $cauldron_y gm4_zc_data run data get entity @s Pos[1]
-execute store result score $cauldron_z gm4_zc_data run data get entity @s Pos[2]
-execute store result storage gm4_zauber_cauldrons:temp/item/bottled_vex gm4_zauber_cauldrons.cauldron_pos.x int 1 run scoreboard players get $cauldron_x gm4_zc_data
-execute store result storage gm4_zauber_cauldrons:temp/item/bottled_vex gm4_zauber_cauldrons.cauldron_pos.y int 1 run scoreboard players get $cauldron_y gm4_zc_data
-execute store result storage gm4_zauber_cauldrons:temp/item/bottled_vex gm4_zauber_cauldrons.cauldron_pos.z int 1 run scoreboard players get $cauldron_z gm4_zc_data
-
-# read dimension
-execute store result storage gm4_zauber_cauldrons:temp/item/bottled_vex gm4_zauber_cauldrons.cauldron_pos.dimension int 1 run scoreboard players get @e[type=marker,tag=gm4_dimension,distance=0..,limit=1] gm4_dimension
+# copy coordinates and dimension of cauldron to bottled vex item
+data modify storage gm4_zauber_cauldrons:temp/item/bottled_vex gm4_zauber_cauldrons.cauldron_pos set from storage gm4_zauber_cauldrons:temp/cauldron/ingredients location
 
 # calculate and store preferred moon phase
+execute store result score $cauldron_x gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/item/bottled_vex gm4_zauber_cauldrons.cauldron_pos.x
+execute store result score $cauldron_y gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/item/bottled_vex gm4_zauber_cauldrons.cauldron_pos.y
+execute store result score $cauldron_z gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/item/bottled_vex gm4_zauber_cauldrons.cauldron_pos.z
 scoreboard players operation $cauldron_x gm4_zc_data /= #256 gm4_zc_moon_phase
 scoreboard players operation $cauldron_y gm4_zc_data /= #256 gm4_zc_moon_phase
 scoreboard players operation $cauldron_z gm4_zc_data /= #256 gm4_zc_moon_phase
