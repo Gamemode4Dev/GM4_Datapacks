@@ -13,7 +13,7 @@
               "entity": "this",
               "name": {
                 "translate": "text.gm4.block_compressors.compressed",
-                "fallback": "Compressed * %s",
+                "fallback": "Compressed *%s",
                 "with": [
                   {
                     "nbt": "Item.tag.gm4_block_compressors.compression_level",
