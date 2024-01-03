@@ -279,7 +279,9 @@ def write_updates(ctx: Context):
 	# Append the module update list regardless if the marker existed
 	init.lines.append("# Module update list")
 	init.lines.append("data remove storage gm4:log queue[{type:'outdated'}]")
-	for m in modules.values():
+	for i, m in modules.items():
+		if not i.startswith("gm4_"):
+			continue # not a datapack (ie the rp) and has score to print
 		version = Version(m.version).int_rep()
 		website = f"https://gm4.co/modules/{m.id[4:].replace('_','-')}"
 		init.lines.append(f"execute if score {m.id} load.status matches -1.. if score {m.id.removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m.name}',download:'{website}',render:'{{\"text\":\"{m.name}\",\"clickEvent\":{{\"action\":\"open_url\",\"value\":\"{website}\"}},\"hoverEvent\":{{\"action\":\"show_text\",\"value\":{{\"text\":\"Click to visit {website}\",\"color\":\"#4AA0C7\"}}}}}}'}}")

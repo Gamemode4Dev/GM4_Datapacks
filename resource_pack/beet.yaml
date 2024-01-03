@@ -9,7 +9,6 @@ resource_pack:
 
 pipeline:
   - dev_warning
-  - gm4.plugins.write_mcmeta
 
 meta:
   gm4: 
