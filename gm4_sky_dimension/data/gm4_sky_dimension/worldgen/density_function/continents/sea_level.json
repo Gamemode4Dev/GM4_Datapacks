@@ -7,17 +7,17 @@
     "max_exclusive": 170,
     "when_in_range": {
       "type": "minecraft:y_clamped_gradient",
-      "from_y": -32,
-      "to_y": 170,
-      "from_value": -1,
-      "to_value": 0
+      "from_y": 170,
+      "to_y": 16,
+      "from_value": 0,
+      "to_value": -0.2
     },
     "when_out_of_range": {
       "type": "minecraft:y_clamped_gradient",
-      "from_y": 64,
-      "to_y": 170,
-      "from_value": -2,
-      "to_value": 0
+      "from_y": 16,
+      "to_y": 0,
+      "from_value": -0.2,
+      "to_value": -2
     }
   },
   "argument2": {

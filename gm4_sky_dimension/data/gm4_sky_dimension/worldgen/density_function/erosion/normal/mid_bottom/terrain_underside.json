@@ -7,21 +7,21 @@
       "argument1": "gm4_sky_dimension:erosion/normal/mid_bottom/gradient_underside",
       "argument2": {
         "type": "minecraft:mul",
-        "argument1": 0.4,
+        "argument1": 0.5,
         "argument2": {
           "type": "minecraft:add",
-          "argument1": 0.1,
+          "argument1": {
+            "type": "minecraft:add",
+            "argument1": 0.4,
+            "argument2": {
+              "type": "minecraft:mul",
+              "argument1": 1,
+              "argument2": "gm4_sky_dimension:erosion/normal/mid_bottom/shift"
+            }
+          },
           "argument2": {
             "type": "minecraft:abs",
-            "argument": {
-              "type": "minecraft:shifted_noise",
-              "noise": "gm4_sky_dimension:erosion/mid_bottom",
-              "xz_scale": 3,
-              "y_scale": 0,
-              "shift_x": "minecraft:shift_x",
-              "shift_y": 0,
-              "shift_z": "minecraft:shift_z"
-            }
+            "argument": "gm4_sky_dimension:erosion/normal/mid_bottom/noise"
           }
         }
       }
