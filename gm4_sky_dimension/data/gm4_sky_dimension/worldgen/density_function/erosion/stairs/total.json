@@ -1,0 +1,79 @@
+{
+  "type": "minecraft:min",
+  "argument1": {
+    "type": "minecraft:mul",
+    "argument1": 2,
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_y": 384,
+        "to_y": -64,
+        "from_value": -0.4,
+        "to_value": -0.6
+      },
+      "argument2": {
+        "type": "minecraft:spline",
+        "spline": {
+          "coordinate": {
+            "type": "minecraft:abs",
+            "argument": {
+              "type": "minecraft:interpolated",
+              "argument": "gm4_sky_dimension:routers/temperature"
+            }
+          },
+          "points": [
+            {
+              "location": 0,
+              "derivative": 0,
+              "value": -0.5
+            },
+            {
+              "location": 0.05,
+              "derivative": 0,
+              "value": 0
+            },
+            {
+              "location": 0.22,
+              "derivative": 0,
+              "value": 0
+            },
+            {
+              "location": 0.3,
+              "derivative": 0,
+              "value": 0.6
+            },
+            {
+              "location": 0.33,
+              "derivative": 0,
+              "value": 0
+            },
+            {
+              "location": 0.52,
+              "derivative": 0,
+              "value": 0
+            },
+            {
+              "location": 0.6,
+              "derivative": 0,
+              "value": 0.6
+            },
+            {
+              "location": 0.63,
+              "derivative": 0,
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "argument2": {
+    "type": "minecraft:range_choice",
+    "input": "gm4_sky_dimension:erosion/stairs/terrain_topside",
+    "min_inclusive": 0,
+    "max_exclusive": 0.03,
+    "when_in_range": 1,
+    "when_out_of_range": -1
+  }
+}

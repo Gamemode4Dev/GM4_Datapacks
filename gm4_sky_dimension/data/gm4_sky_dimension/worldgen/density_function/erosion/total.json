@@ -180,41 +180,84 @@
       }
     },
     "argument2": {
-      "type": "minecraft:add",
-      "argument1": "gm4_sky_dimension:erosion/normal/total",
+      "type": "minecraft:max",
+      "argument1": {
+        "type": "minecraft:add",
+        "argument1": "gm4_sky_dimension:erosion/normal/total",
+        "argument2": {
+          "type": "minecraft:interpolated",
+          "argument": {
+            "type": "minecraft:spline",
+            "spline": {
+              "coordinate": "gm4_sky_dimension:routers/erosion",
+              "points": [
+                {
+                  "location": -0.75,
+                  "derivative": 0,
+                  "value": -2
+                },
+                {
+                  "location": -0.73,
+                  "derivative": 0,
+                  "value": -1
+                },
+                {
+                  "location": -0.7,
+                  "derivative": 0,
+                  "value": 0
+                },
+                {
+                  "location": 0.67,
+                  "derivative": 0,
+                  "value": 0
+                },
+                {
+                  "location": 0.71,
+                  "derivative": 0,
+                  "value": -1
+                }
+              ]
+            }
+          }
+        }
+      },
       "argument2": {
-        "type": "minecraft:interpolated",
-        "argument": {
-          "type": "minecraft:spline",
-          "spline": {
-            "coordinate": "gm4_sky_dimension:routers/erosion",
-            "points": [
-              {
-                "location": -0.75,
-                "derivative": 0,
-                "value": -2
-              },
-              {
-                "location": -0.73,
-                "derivative": 0,
-                "value": -1
-              },
-              {
-                "location": -0.7,
-                "derivative": 0,
-                "value": 0
-              },
-              {
-                "location": 0.67,
-                "derivative": 0,
-                "value": 0
-              },
-              {
-                "location": 0.71,
-                "derivative": 0,
-                "value": -1
-              }
-            ]
+        "type": "minecraft:add",
+        "argument1": "gm4_sky_dimension:erosion/stairs/total",
+        "argument2": {
+          "type": "minecraft:interpolated",
+          "argument": {
+            "type": "minecraft:spline",
+            "spline": {
+              "coordinate": "gm4_sky_dimension:routers/erosion",
+              "points": [
+                {
+                  "location": -0.75,
+                  "derivative": 0,
+                  "value": -2
+                },
+                {
+                  "location": -0.73,
+                  "derivative": 0,
+                  "value": -1
+                },
+                {
+                  "location": -0.7,
+                  "derivative": 0,
+                  "value": 0
+                },
+                {
+                  "location": 0.67,
+                  "derivative": 0,
+                  "value": 0
+                },
+                {
+                  "location": 0.71,
+                  "derivative": 0,
+                  "value": -1
+                }
+              ]
+            }
           }
         }
       }
