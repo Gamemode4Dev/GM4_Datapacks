@@ -1,5 +1,22 @@
 {
-  "type": "minecraft:mul",
-  "argument1": 0.0001,
-  "argument2": "minecraft:y"
+  "type": "minecraft:range_choice",
+  "input": "minecraft:y",
+  "min_inclusive": 300,
+  "max_exclusive": 384,
+  "when_in_range": 1,
+  "when_out_of_range": {
+    "type": "minecraft:range_choice",
+    "input": "minecraft:y",
+    "min_inclusive": 100,
+    "max_exclusive": 320,
+    "when_in_range": 0,
+    "when_out_of_range": {
+      "type": "minecraft:range_choice",
+      "input": "minecraft:y",
+      "min_inclusive": 8,
+      "max_exclusive": 100,
+      "when_in_range": -1,
+      "when_out_of_range": -2
+    }
+  }
 }

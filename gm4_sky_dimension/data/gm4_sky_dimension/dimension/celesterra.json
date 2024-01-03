@@ -7,6 +7,18 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
+          "biome": "gm4_sky_dimension:desolate_void",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": -2,
+            "offset": 0
+          }
+        },
+        {
           "biome": "gm4_sky_dimension:floating_falls",
           "parameters": {
             "temperature": [
