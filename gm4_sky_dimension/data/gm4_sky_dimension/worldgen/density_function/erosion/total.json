@@ -13,7 +13,7 @@
             "coordinate": "gm4_sky_dimension:routers/erosion",
             "points": [
               {
-                "location": -0.8,
+                "location": -0.77,
                 "derivative": 0,
                 "value": {
                   "coordinate": "gm4_sky_dimension:routers/continents",
@@ -57,7 +57,7 @@
             "coordinate": "gm4_sky_dimension:routers/erosion",
             "points": [
               {
-                "location": -0.8,
+                "location": -0.79,
                 "derivative": 0,
                 "value": {
                   "coordinate": "gm4_sky_dimension:routers/continents",
@@ -111,12 +111,12 @@
               "coordinate": "gm4_sky_dimension:routers/erosion",
               "points": [
                 {
-                  "location": 0.7,
+                  "location": 0.69,
                   "derivative": 0,
                   "value": -1
                 },
                 {
-                  "location": 0.725,
+                  "location": 0.72,
                   "derivative": 0,
                   "value": {
                     "coordinate": "gm4_sky_dimension:routers/continents",
@@ -155,7 +155,7 @@
                   "value": -1
                 },
                 {
-                  "location": 0.725,
+                  "location": 0.71,
                   "derivative": 0,
                   "value": {
                     "coordinate": "gm4_sky_dimension:routers/continents",
@@ -205,12 +205,12 @@
                 "value": 0
               },
               {
-                "location": 0.65,
+                "location": 0.67,
                 "derivative": 0,
                 "value": 0
               },
               {
-                "location": 0.7,
+                "location": 0.71,
                 "derivative": 0,
                 "value": -1
               }

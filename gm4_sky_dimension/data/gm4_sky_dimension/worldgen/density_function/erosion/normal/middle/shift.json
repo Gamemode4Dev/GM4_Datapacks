@@ -3,7 +3,10 @@
   "argument1": {
     "type": "minecraft:spline",
     "spline": {
-      "coordinate": "gm4_sky_dimension:routers/vegetation",
+      "coordinate": {
+        "type": "minecraft:interpolated",
+        "argument": "gm4_sky_dimension:routers/vegetation"
+      },
       "points": [
         {
           "location": -1,
