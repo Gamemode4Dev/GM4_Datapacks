@@ -1,12 +1,14 @@
-import os
 import subprocess
 import warnings
 from dataclasses import asdict, dataclass
 from functools import total_ordering
-from typing import Any, Callable, Generic, TypeVar
+from typing import Any, Generic, TypeVar, Iterator
+from dataclasses import replace
+from contextlib import contextmanager
 
-from beet import ListOption, Context, LootTable, ItemModifier, Advancement
-from mecha import AstNbtCompound, Mecha, CompilationUnit
+from beet import Context, ListOption, LootTable, ItemModifier, Advancement, Predicate
+from mecha import Mecha, AbstractNode, AstNbtCompound, AstJsonObjectEntry, AstJsonObjectKey, AstJsonValue, DiagnosticCollection, rule
+from tokenstream import set_location, SourceLocation
 from pydantic.v1 import validator
 from pydantic.v1.generics import GenericModel
 
@@ -127,36 +129,45 @@ class MapOption(GenericModel, Generic[T]):
 		if not isinstance(value, (list, tuple, dict)): # single element
 			value = [value]
 		return value # type: ignore
+
+class InvokeOnJsonNbt:
+	"""Extendable mixin to run MutatingReducer's rules on nbt within advancements, loot_tables ect..."""
+	def __init__(self, ctx: Context):
+		self.ctx = ctx
+		raise RuntimeError("InvokeOnJsonNbt should not be directly instantiated. It is a mixin for MutatingReducers and should be interited instead")
+	
+	@contextmanager
+	def use_diagnostics(self, diagnostics: DiagnosticCollection) -> Iterator[None]:
+		"""Class is mixed into MutatingReducer, who does have this method. Passed here for type completion"""
+		raise NotImplementedError()
+
+	def invoke(self, node: AbstractNode, *args: Any, **kwargs: Any) -> Any:
+		"""Class is mixed into MutatingReducer, who does have this method. Passed here for type completion"""
+		raise NotImplementedError()
 	
 
-def mecha_transform_jsonfiles(ctx: Context, transformer: Any):
-	"""Passes nbt contained in advancements, loot_tables ect.. through a custom specified Mecha AST rule"""
-	tf = ctx.inject(transformer)
-	mc = ctx.inject(Mecha)
+	@rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='nbt'))
+	@rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='tag'))
+	def process_nbt_in_json(self, node: AstJsonObjectEntry):
+		mc = self.ctx.inject(Mecha)
+		if isinstance(mc.database.current, (Advancement, LootTable, ItemModifier, Predicate)):
+			if isinstance(node.value, AstJsonValue):
+				print(node)
+				nbt = mc.parse(node.value.value, type=AstNbtCompound)
+				with self.use_diagnostics(captured_diagnostics:=DiagnosticCollection()):
+					processed_nbt = mc.serialize(self.invoke(nbt, type=AstNbtCompound))
 
-	def transform_snbt(snbt: str, db_entry_key: str) -> str:
-		escaped_snbt = snbt.replace("\n", "\\\\n")
-			# NOTE snbt in loot-tables reacts weird to \n characters. Both \n and \\\\n produce the same ingame output (\\n). 
-			# gm4 only has one case of \n in loot tables, so this replacement forces \n->\\\\n for the mecha parser to read it right.
-			# this may need to be altered in the future, but for now this means that \\\\n, while valid in vanilla loot-tables, will not
-			# work after being put through the mecha parser
-		node = mc.parse(escaped_snbt, type=AstNbtCompound) # parse string to AST
-		filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None # get relative filepath for Diagnostics
-		mc.database.update({db_entry_key: CompilationUnit(source=snbt)}) #type:ignore   # register fake CompilationUnit for Diagnostic printing, using unique string as key instead of the File() object, to support multiple entries from the same file
-		return mc.serialize(tf.invoke(node, filename=filename, file=db_entry_key)) # run AST through custom rule, and serialize back to string, passing along data for Diagnostic
+				for exc in captured_diagnostics.exceptions:
+					pos,lineno,colno = node.value.location
+					yield set_location(exc, 
+						SourceLocation(pos=pos+exc.location.pos, lineno=lineno, colno=colno+exc.location.colno),
+						SourceLocation(pos=pos+exc.end_location.pos, lineno=lineno, colno=colno+exc.end_location.colno)
+					) # set error location to nbt key-value that caused the problem and pass diagnostic back to mecha
 
-	for name, jsonfile in [*ctx[LootTable], *ctx[ItemModifier]]:
-		# item modifiers, annoyingly, can have a list as the root, so we wrap in a dict to use nested_get
-		contents = {"listroot": jsonfile.data} if type(jsonfile.data) is list else jsonfile.data
+				new_node = replace(node, value=AstJsonValue(value=processed_nbt))
+				if new_node != node:
+					return new_node
 
-		for func_list in nested_get(contents, "functions"):
-			f: Callable[[Any], bool] = lambda e: e["function"].removeprefix('minecraft:')=="set_nbt"
-			for i, entry in enumerate(filter(f, func_list)):
-				entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{transformer.__name__}:{name}_{i}")
-
-	for name, jsonfile in ctx[Advancement]:
-		for i, entry in enumerate(nested_get(jsonfile.data, "icon")):
-			entry["nbt"] = transform_snbt(entry["nbt"], db_entry_key=f"{transformer.__name__}:{name}_{i}")
-
-	# send any raised diagnostic errors to Mecha for reporting
-	mc.diagnostics.extend(tf.diagnostics)
+				# TODO this process may be better with a snbt ast type - one that wraps a AstNbtCompound and serializes to strings. 
+					# will need Fizzy response on this however
+		return node

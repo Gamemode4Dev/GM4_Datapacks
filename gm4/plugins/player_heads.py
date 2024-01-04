@@ -25,7 +25,7 @@ from nbtlib import IntArray # type: ignore
 from PIL.Image import Image
 from tokenstream import set_location
 
-from gm4.utils import mecha_transform_jsonfiles
+from gm4.utils import InvokeOnJsonNbt
 
 parent_logger = logging.getLogger("gm4.player_heads")
 
@@ -36,6 +36,7 @@ def beet_default(ctx: Context):
     ctx.data.extend_namespace.append(Skin) # register new filetype to datapack
     tf = ctx.inject(SkinNbtTransformer)
     ctx.inject(Mecha).transform.extend(tf) # register new ruleset to mecha
+    ctx.require("mecha.contrib.json_files")
 
     yield
     tf.cache_nonnative_references()
@@ -50,7 +51,7 @@ class Skin(PngFile):
     image: ClassVar[FileDeserialize[Image]] = FileDeserialize() # purely here to solve type-warnings on PIL images
     
 
-class SkinNbtTransformer(MutatingReducer):
+class SkinNbtTransformer(MutatingReducer, InvokeOnJsonNbt):
     """Reducer class defining custom mecha parsing rules for skin texture data, and storing needed data for those operations"""
     def __init__(self, ctx: Context):
         self.ctx: Context = ctx
@@ -215,10 +216,6 @@ class SkinNbtTransformer(MutatingReducer):
 
     def output_skin_cache(self):
         JsonFile(self.skin_cache).dump(origin="", path="gm4/skin_cache.json")
-
-def process_json_files(ctx: Context):
-    """Pass nbt in advancements, loot_tables ect... through the parser to get skin texture replacements"""
-    mecha_transform_jsonfiles(ctx, SkinNbtTransformer)
 
 class MineskinAuthManager():
     """A process for managing mineskin access credentials, prompting the user if needed"""

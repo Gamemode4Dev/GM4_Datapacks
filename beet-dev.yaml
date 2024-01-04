@@ -12,7 +12,6 @@ pipeline:
       - beet.contrib.model_merging
       - beet.contrib.optifine
       - beet.contrib.babelbox
-      - mecha.contrib.json_files
     pipeline:
       - gm4.plugins.write_mcmeta
     meta:
