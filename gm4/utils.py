@@ -153,7 +153,7 @@ class InvokeOnJsonNbt:
 		if isinstance(mc.database.current, (Advancement, LootTable, ItemModifier, Predicate)):
 			if isinstance(node.value, AstJsonValue) and isinstance(node.value.value, str) \
 				and node.value.value.startswith("{") and node.value.value.endswith("}"): # excludes location check block/fluid tags - easier than making rule that checks for 'set_nbt' functions on the same json level
-				nbt = mc.parse(node.value.value, type=AstNbtCompound)
+				nbt = mc.parse(node.value.value.replace("\n", "\\\\n"), type=AstNbtCompound)
 
 				## TEMP - trial on yielding children rather than using invoke				
 				# with self.use_diagnostics(captured_diagnostics:=DiagnosticCollection()):
