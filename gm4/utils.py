@@ -151,9 +151,17 @@ class InvokeOnJsonNbt:
 	def process_nbt_in_json(self, node: AstJsonObjectEntry):
 		mc = self.ctx.inject(Mecha)
 		if isinstance(mc.database.current, (Advancement, LootTable, ItemModifier, Predicate)):
-			if isinstance(node.value, AstJsonValue):
-				print(node)
+			if isinstance(node.value, AstJsonValue) and isinstance(node.value.value, str) \
+				and node.value.value.startswith("{") and node.value.value.endswith("}"): # excludes location check block/fluid tags - easier than making rule that checks for 'set_nbt' functions on the same json level
 				nbt = mc.parse(node.value.value, type=AstNbtCompound)
+
+				## TEMP - trial on yielding children rather than using invoke				
+				# with self.use_diagnostics(captured_diagnostics:=DiagnosticCollection()):
+				# 	nbt = yield nbt # run all rules on child-node
+				# print(captured_diagnostics.exceptions)
+				# print(nbt)
+				# new_node = replace(node, value=AstJsonValue(value=mc.serialize(nbt, type=AstNbtCompound)))
+
 				with self.use_diagnostics(captured_diagnostics:=DiagnosticCollection()):
 					processed_nbt = mc.serialize(self.invoke(nbt, type=AstNbtCompound))
 
@@ -167,7 +175,5 @@ class InvokeOnJsonNbt:
 				new_node = replace(node, value=AstJsonValue(value=processed_nbt))
 				if new_node != node:
 					return new_node
-
-				# TODO this process may be better with a snbt ast type - one that wraps a AstNbtCompound and serializes to strings. 
-					# will need Fizzy response on this however
+				
 		return node
