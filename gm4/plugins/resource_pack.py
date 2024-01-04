@@ -2,7 +2,7 @@ import logging
 import os
 import re
 import sys
-from copy import deepcopy
+from copy import deepcopy, copy
 from dataclasses import replace
 from fnmatch import fnmatch
 from itertools import cycle
@@ -20,7 +20,11 @@ from beet import (
     Model,
     NamespaceProxy,
     PluginOptions,
-    WrappedException
+    WrappedException,
+    LootTable,
+    Advancement,
+    ItemModifier,
+    Predicate
 )
 from beet.contrib.optifine import OptifineProperties
 from beet.contrib.vanilla import Vanilla
@@ -37,11 +41,18 @@ from mecha import (
     Mecha,
     MutatingReducer,
     rule,
+    AstJsonObjectEntry,
+    AstJsonObjectKey,
+    AstJsonValue,
+    AstNbtCompound,
+    DiagnosticCollection,
+    AstString,
 )
+# from mecha.contrib.json_files import AstJsonObjectEntry
 from nbtlib import String  # type: ignore ; nbtlib missing stubfile
-from pydantic import BaseModel, Extra, Field, ValidationError, validator
-from pydantic.error_wrappers import ErrorWrapper
-from tokenstream import set_location
+from pydantic.v1 import BaseModel, Extra, Field, ValidationError, validator
+from pydantic.v1.error_wrappers import ErrorWrapper
+from tokenstream import set_location, SourceLocation, INITIAL_LOCATION
 
 from gm4.utils import MapOption, add_namespace, mecha_transform_jsonfiles
 
@@ -301,6 +312,7 @@ def beet_default(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
     # mecha register
     ctx.inject(Mecha).transform.extend(rp)
+    # print(ctx.inject(Mecha).spec.parsers)
 
     logging.getLogger("beet.contrib.babelbox").addFilter(BlockIncompleteTranslation())
 
@@ -316,7 +328,7 @@ def build(ctx: Context):
     rp.process_optifine()
     rp.lint_model_textures()
     rp.generate_model_overrides()
-    mecha_transform_jsonfiles(ctx, GM4ResourcePack)
+    # mecha_transform_jsonfiles(ctx, GM4ResourcePack)
 
     if not ctx.assets.extra.get("pack.png") and ctx.data.extra.get("pack.png"):
         ctx.assets.icon = ctx.data.icon
@@ -487,7 +499,8 @@ class GM4ResourcePack(MutatingReducer):
     #== Mecha Transformer Rules ==#
     @rule(AstNbtCompoundEntry)
     def cmd_substitutions(self, node: AstNbtCompoundEntry, **kwargs: Any):
-        if node.key.value == "CustomModelData":
+        if node.key.value == "CustomModelData": # TODO move to rule filter?
+            # print(f"running CMD rule! {node}")
             match node.value.evaluate():
                 case String(reference):
                     index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
@@ -510,6 +523,47 @@ class GM4ResourcePack(MutatingReducer):
                     d = Diagnostic("error", str(exc))
                     yield set_location(d, ast_nbt)
                 node = replace(node, arguments=AstChildren([ast_target, ast_target_path, AstNbtValue.from_value(index+self.cmd_prefix)]))
+        return node
+    
+    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='nbt'))
+    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='tag'))
+    def cmd_subs_in_json(self, node: AstJsonObjectEntry):
+        mc = self.ctx.inject(Mecha)
+        c = mc.database.current
+        if isinstance(c, (Advancement, LootTable, ItemModifier, Predicate)):
+            print(node)
+            if isinstance(node.value, AstJsonValue):
+                nbt = mc.parse(node.value.value, type=AstNbtCompound)
+                with self.use_diagnostics(captured_diagnostics:=DiagnosticCollection()):
+                    processed_nbt = mc.serialize(self.invoke(nbt, type=AstNbtCompound))
+
+                for exc in captured_diagnostics.exceptions:
+                    pos,lineno,colno = node.value.location
+                    yield set_location(exc, 
+                        SourceLocation(pos=pos+exc.location.pos, lineno=lineno, colno=colno+exc.location.colno),
+                        SourceLocation(pos=pos+exc.end_location.pos, lineno=lineno, colno=colno+exc.end_location.colno)
+                    ) # set error location to nbt key-value that caused the problem and pass diagnostic back to mecha
+
+                new_node = replace(node, value=AstJsonValue(value=processed_nbt))
+                if new_node != node:
+                    return new_node
+
+
+                ## TEST code
+                # print(self.diagnostics.exceptions)
+                # print(d.exceptions)
+                # print(a)
+                # node = replace(node, value=(a:=mc.parse(node.value.value, type=AstNbtCompound)))
+                # node = replace(node, value=AstJsonValue(value=AstString(value="my_dummy_string")))
+                # node = replace(node, value=a)
+                # print(node.value)
+                # print("replace complete")
+                # yield set_location(Diagnostic("error", "test error!"))
+                # yield set_location(Diagnostic("error", "test error2!"))
+
+                # TODO this process may be better with a snbt ast type - one that wraps a AstNbtCompound and serializes to strings. 
+                    # will need Fizzy response on this however
+                # yield node
         return node
     
     #== Non-mecha CMD filling ==#

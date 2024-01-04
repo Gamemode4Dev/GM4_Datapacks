@@ -1,7 +1,7 @@
 from beet import Context, PluginOptions, configurable
 from beet.contrib.find_replace import find_replace
 from beet.contrib.rename_files import rename_files
-from pydantic import Extra
+from pydantic.v1 import Extra
 import nbtlib
 import re
 from gm4.plugins.manifest import repro_structure_to_bytes

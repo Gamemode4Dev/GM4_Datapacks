@@ -6,12 +6,11 @@ authors = ["Gamemode 4 Contributors"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-beet = "0.96.1"
-mecha = "^0.79.0"
+beet = "0.100.0"
+mecha = "^0.86.0"
 bolt = ">=0.38.2"
 PyYAML = "^6.0"
-pydantic = "^1.10.2"
-smithed-libraries = "^0.6.0"
+pydantic = "^2.5.2"
 requests = "^2.28.1"
 pillow = "^10.0.0"
 repro-zipfile = "^0.1.0"

@@ -12,7 +12,7 @@ import yaml
 from beet import Context, InvalidProjectConfig, PluginOptions, TextFile, load_config
 from beet.library.base import _dump_files  # type: ignore ; private method used to deterministicify pack dumping
 from nbtlib.contrib.minecraft import StructureFileData, StructureFile  # type: ignore ; no stub
-from pydantic import BaseModel, Extra
+from pydantic.v1 import BaseModel, Extra
 from repro_zipfile import ReproducibleZipFile  # type: ignore ; no stub
 
 from gm4.plugins.output import ModrinthConfig, PMCConfig, SmithedConfig

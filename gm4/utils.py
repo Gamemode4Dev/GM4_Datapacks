@@ -7,8 +7,8 @@ from typing import Any, Callable, Generic, TypeVar
 
 from beet import ListOption, Context, LootTable, ItemModifier, Advancement
 from mecha import AstNbtCompound, Mecha, CompilationUnit
-from pydantic import validator
-from pydantic.generics import GenericModel
+from pydantic.v1 import validator
+from pydantic.v1.generics import GenericModel
 
 T = TypeVar('T')
 
