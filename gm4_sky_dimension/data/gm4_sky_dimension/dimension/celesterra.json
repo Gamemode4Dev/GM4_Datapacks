@@ -7,19 +7,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "gm4_sky_dimension:desolate_void",
-          "parameters": {
-            "temperature": 0,
-            "humidity": 0,
-            "continentalness": 0,
-            "erosion": 0,
-            "weirdness": 0,
-            "depth": -2,
-            "offset": 0
-          }
-        },
-        {
-          "biome": "gm4_sky_dimension:floating_falls",
+          "biome": "minecraft:the_void",
           "parameters": {
             "temperature": [
               -1,
@@ -37,7 +25,79 @@
               -1,
               -0.75
             ],
-            "weirdness": 0,
+            "weirdness": [
+              0,
+              1
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:snowy_slopes",
+          "parameters": {
+            "temperature": [
+              -1,
+              1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.2,
+              1
+            ],
+            "erosion": [
+              -1,
+              -0.75
+            ],
+            "weirdness": [
+              -1,
+              0
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "gm4_sky_dimension:desolate_void",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
+            "depth": -2,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "gm4_sky_dimension:floating_falls",
+          "parameters": {
+            "temperature": [
+              -1,
+              1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -0.485,
+              0.2
+            ],
+            "erosion": [
+              -1,
+              -0.75
+            ],
+            "weirdness": [
+              0,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -61,7 +121,10 @@
               0.7,
               1
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -85,7 +148,10 @@
               -1,
               -0.75
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              0
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -109,7 +175,10 @@
               0.7,
               1
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -133,7 +202,10 @@
               -1,
               1
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -157,7 +229,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -181,7 +256,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -205,7 +283,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -229,7 +310,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -253,7 +337,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -277,7 +364,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -301,7 +391,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -325,7 +418,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -349,7 +445,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -373,7 +472,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -397,7 +499,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -421,7 +526,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -445,7 +553,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -469,7 +580,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -493,7 +607,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -517,7 +634,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -541,7 +661,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }
@@ -565,7 +688,10 @@
               -0.75,
               0.7
             ],
-            "weirdness": 0,
+            "weirdness": [
+              -1,
+              1
+            ],
             "depth": 0,
             "offset": 0
           }

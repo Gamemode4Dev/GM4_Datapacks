@@ -3,52 +3,117 @@
   "argument1": {
     "type": "minecraft:max",
     "argument1": {
-      "type": "minecraft:add",
-      "argument1": "gm4_sky_dimension:erosion/huge_islands/total",
-      "argument2": {
-        "type": "minecraft:interpolated",
-        "argument": {
-          "type": "minecraft:spline",
-          "spline": {
-            "coordinate": "gm4_sky_dimension:routers/erosion",
-            "points": [
-              {
-                "location": -0.77,
-                "derivative": 0,
-                "value": {
-                  "coordinate": "gm4_sky_dimension:routers/continents",
-                  "points": [
-                    {
-                      "location": 0.1,
-                      "derivative": 0,
-                      "value": 0
-                    },
-                    {
-                      "location": 0.2,
-                      "derivative": 0,
-                      "value": -1
-                    },
-                    {
-                      "location": 0.25,
-                      "derivative": 0,
-                      "value": -1.5
-                    }
-                  ]
+      "type": "minecraft:max",
+      "argument1": {
+        "type": "minecraft:add",
+        "argument1": "gm4_sky_dimension:erosion/huge_islands/total",
+        "argument2": {
+          "type": "minecraft:interpolated",
+          "argument": {
+            "type": "minecraft:spline",
+            "spline": {
+              "coordinate": "gm4_sky_dimension:routers/erosion",
+              "points": [
+                {
+                  "location": -0.77,
+                  "derivative": 0,
+                  "value": {
+                    "coordinate": "gm4_sky_dimension:routers/continents",
+                    "points": [
+                      {
+                        "location": 0.1,
+                        "derivative": 0,
+                        "value": {
+                          "coordinate": "gm4_sky_dimension:routers/ridges",
+                          "points": [
+                            {
+                              "location": -0.05,
+                              "derivative": 0,
+                              "value": 0
+                            },
+                            {
+                              "location": 0.05,
+                              "derivative": 0,
+                              "value": -1.5
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "location": 0.25,
+                        "derivative": 0,
+                        "value": -1.5
+                      }
+                    ]
+                  }
+                },
+                {
+                  "location": -0.72,
+                  "derivative": 0,
+                  "value": -1.5
                 }
-              },
-              {
-                "location": -0.72,
-                "derivative": 0,
-                "value": -1.5
-              }
-            ]
+              ]
+            }
+          }
+        }
+      },
+      "argument2": {
+        "type": "minecraft:add",
+        "argument1": "gm4_sky_dimension:erosion/floating_falls/total",
+        "argument2": {
+          "type": "minecraft:interpolated",
+          "argument": {
+            "type": "minecraft:spline",
+            "spline": {
+              "coordinate": "gm4_sky_dimension:routers/erosion",
+              "points": [
+                {
+                  "location": -0.79,
+                  "derivative": 0,
+                  "value": {
+                    "coordinate": "gm4_sky_dimension:routers/continents",
+                    "points": [
+                      {
+                        "location": 0.1,
+                        "derivative": 0,
+                        "value": {
+                          "coordinate": "gm4_sky_dimension:routers/ridges",
+                          "points": [
+                            {
+                              "location": 0,
+                              "derivative": 0,
+                              "value": -3
+                            },
+                            {
+                              "location": 0.1,
+                              "derivative": 0,
+                              "value": 0
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "location": 0.25,
+                        "derivative": 0,
+                        "value": -3
+                      }
+                    ]
+                  }
+                },
+                {
+                  "location": -0.72,
+                  "derivative": 0,
+                  "value": -3
+                }
+              ]
+            }
           }
         }
       }
     },
     "argument2": {
       "type": "minecraft:add",
-      "argument1": "gm4_sky_dimension:erosion/floating_falls/total",
+      "argument1": "gm4_sky_dimension:erosion/mountainous/total",
       "argument2": {
         "type": "minecraft:interpolated",
         "argument": {
@@ -57,30 +122,34 @@
             "coordinate": "gm4_sky_dimension:routers/erosion",
             "points": [
               {
-                "location": -0.79,
+                "location": -0.8,
                 "derivative": 0,
                 "value": {
                   "coordinate": "gm4_sky_dimension:routers/continents",
                   "points": [
                     {
-                      "location": 0.24,
+                      "location": 0.15,
                       "derivative": 0,
                       "value": -2
                     },
                     {
-                      "location": 0.26,
+                      "location": 0.25,
                       "derivative": 0,
-                      "value": -1
-                    },
-                    {
-                      "location": 0.3,
-                      "derivative": 0,
-                      "value": -1
-                    },
-                    {
-                      "location": 0.4,
-                      "derivative": 0,
-                      "value": 0
+                      "value": {
+                        "coordinate": "gm4_sky_dimension:routers/ridges",
+                        "points": [
+                          {
+                            "location": -0.1,
+                            "derivative": 0,
+                            "value": 0
+                          },
+                          {
+                            "location": 0,
+                            "derivative": 0,
+                            "value": -2
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
