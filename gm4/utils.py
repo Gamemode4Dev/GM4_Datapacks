@@ -7,7 +7,7 @@ from dataclasses import replace
 from contextlib import contextmanager
 
 from beet import Context, ListOption, LootTable, ItemModifier, Advancement, Predicate
-from mecha import Mecha, AbstractNode, AstNbtCompound, AstJsonObjectEntry, AstJsonObjectKey, AstJsonValue, DiagnosticCollection, rule
+from mecha import Mecha, AbstractNode, AstNbtCompound, AstJsonObjectEntry, AstJsonObjectKey, AstJsonValue, DiagnosticCollection, DiagnosticError, rule
 from tokenstream import set_location, SourceLocation
 from pydantic.v1 import validator
 from pydantic.v1.generics import GenericModel
@@ -153,7 +153,13 @@ class InvokeOnJsonNbt:
 		if isinstance(mc.database.current, (Advancement, LootTable, ItemModifier, Predicate)):
 			if isinstance(node.value, AstJsonValue) and isinstance(node.value.value, str) \
 				and node.value.value.startswith("{") and node.value.value.endswith("}"): # excludes location check block/fluid tags - easier than making rule that checks for 'set_nbt' functions on the same json level
-				nbt = mc.parse(node.value.value.replace("\n", "\\\\n"), type=AstNbtCompound)
+				try:
+					nbt = mc.parse(node.value.value.replace("\n", "\\\\n"), type=AstNbtCompound)
+				except DiagnosticError as exc:
+					# if parsing failed, give pretty traceback
+					for d in exc.diagnostics.exceptions:
+						yield set_location(replace(d, file=mc.database.current), node.value)
+					return replace(node, value="{}")
 
 				## TEMP - trial on yielding children rather than using invoke				
 				# with self.use_diagnostics(captured_diagnostics:=DiagnosticCollection()):

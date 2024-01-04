@@ -34,3 +34,4 @@ pipeline:
 meta:
   autosave:
     link: false
+  gm4_dev: True

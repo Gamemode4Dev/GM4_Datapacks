@@ -142,7 +142,8 @@ def create(ctx: Context):
 	if manifest_file.exists():
 		ctx.cache["previous_manifest"].json = json.loads(manifest_file.read_text())
 	else:
-		logger.warn("No existing meta.json manifest file was located")
+		if not ctx.meta.get("gm4_dev"):
+			logger.warn("No existing meta.json manifest file was located")
 		ctx.cache["previous_manifest"].json = ManifestFileModel(last_commit="",modules=[],libraries={},contributors=[]).dict()
 
 	
