@@ -128,12 +128,12 @@
                   "coordinate": "gm4_sky_dimension:routers/continents",
                   "points": [
                     {
-                      "location": 0.15,
+                      "location": 0.2,
                       "derivative": 0,
                       "value": -2
                     },
                     {
-                      "location": 0.25,
+                      "location": 0.3,
                       "derivative": 0,
                       "value": {
                         "coordinate": "gm4_sky_dimension:routers/ridges",

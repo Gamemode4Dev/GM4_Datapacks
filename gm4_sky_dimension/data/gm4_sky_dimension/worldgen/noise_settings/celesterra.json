@@ -54,6 +54,40 @@
             {
               "type": "minecraft:condition",
               "if_true": {
+                "type": "minecraft:y_above",
+                "anchor": {
+                  "absolute": 300
+                },
+                "surface_depth_multiplier": 5,
+                "add_stone_depth": true
+              },
+              "then_run": {
+                "type": "minecraft:block",
+                "result_state": {
+                  "Name": "minecraft:snow_block"
+                }
+              }
+            },
+            {
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:y_above",
+                "anchor": {
+                  "absolute": 250
+                },
+                "surface_depth_multiplier": 7,
+                "add_stone_depth": true
+              },
+              "then_run": {
+                "type": "minecraft:block",
+                "result_state": {
+                  "Name": "minecraft:stone"
+                }
+              }
+            },
+            {
+              "type": "minecraft:condition",
+              "if_true": {
                 "type": "minecraft:stone_depth",
                 "offset": 0,
                 "surface_type": "floor",

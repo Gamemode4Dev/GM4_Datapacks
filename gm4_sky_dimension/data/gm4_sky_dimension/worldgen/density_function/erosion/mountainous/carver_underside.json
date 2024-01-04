@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:add",
+    "argument1": {
+      "type": "minecraft:interpolated",
+      "argument": {
+        "type": "minecraft:add",
+        "argument1": {
+          "type": "minecraft:mul",
+          "argument1": 1.2,
+          "argument2": "gm4_sky_dimension:erosion/mountainous/gradient_carver"
+        },
+        "argument2": {
+          "type": "minecraft:mul",
+          "argument1": 2,
+          "argument2": {
+            "type": "minecraft:add",
+            "argument1": 1.4,
+            "argument2": {
+              "type": "minecraft:abs",
+              "argument": {
+                "type": "minecraft:shifted_noise",
+                "noise": "gm4_sky_dimension:erosion/middle",
+                "xz_scale": 0.8,
+                "y_scale": 0,
+                "shift_x": "minecraft:shift_x",
+                "shift_y": 0,
+                "shift_z": "minecraft:shift_z"
+              }
+            }
+          }
+        }
+      }
+    },
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": 1.8,
+      "argument2": "gm4_sky_dimension:erosion/mountainous/noise_underside"
+    }
+  },
+  "argument2": 0
+}
