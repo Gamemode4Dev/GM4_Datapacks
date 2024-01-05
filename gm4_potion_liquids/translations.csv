@@ -17,10 +17,11 @@ container.gm4.liquid_tank.strength,"Strength Potion Tank",
 container.gm4.liquid_tank.strong_harming,"Strong Harming Potion Tank",
 container.gm4.liquid_tank.strong_healing,"Strong Healing Potion Tank",
 container.gm4.liquid_tank.strong_leaping,"Strong Leaping Potion Tank",
-container.gm4.liquid_tank.strong_master,"Strong Turtle Master Potion Tank",
+container.gm4.liquid_tank.strong_turtle_master,"Strong Turtle Master Potion Tank",
 container.gm4.liquid_tank.strong_poison,"Strong Poison Potion Tank",
 container.gm4.liquid_tank.strong_regeneration,"Strong Regeneration Potion Tank",
 container.gm4.liquid_tank.strong_slowness,"Strong Slowness Potion Tank",
+container.gm4.liquid_tank.strong_strength,"Strong Strength Potion Tank"
 container.gm4.liquid_tank.strong_swiftness,"Strong Swiftness Potion Tank",
 container.gm4.liquid_tank.swiftness,"Swiftness Potion Tank",
 container.gm4.liquid_tank.turtle_master,"Turtle Master Potion Tank",
@@ -28,5 +29,4 @@ container.gm4.liquid_tank.water_breathing,"Water Breathing Potion Tank",
 container.gm4.liquid_tank.weakness,"Weakness Potion Tank",
 item.gm4.floating_potion,Potion of Floating
 item.gm4.lingering_floating_potion,"Lingering Potion of Floating"
-item.gm4.potion.effect.levitation,Potion of Floating
 item.gm4.splash_floating_potion,"Splash Potion of Floating"
