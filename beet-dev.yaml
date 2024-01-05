@@ -1,8 +1,7 @@
 pipeline:
   - gm4.plugins.list_modules
   - gm4.plugins.manifest.create
-  - gm4.plugins.resource_pack.mount_registry
-  - gm4.plugins.resource_pack.init_font_counter
+  - gm4.plugins.resource_pack.setup
   - broadcast: null
     extend: beet.yaml
     require: 

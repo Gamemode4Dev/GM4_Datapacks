@@ -1,3 +1,5 @@
+import csv
+import glob
 import logging
 import os
 import re
@@ -29,13 +31,19 @@ from beet.core.utils import format_validation_error
 from mecha import (
     AstChildren,
     AstCommand,
+    AstJson,
+    AstJsonObjectEntry,
+    AstJsonObjectKey,
     AstNbtCompoundEntry,
     AstNbtPath,
     AstNbtPathKey,
     AstNbtValue,
     Diagnostic,
+    DiagnosticCollection,
+    DiagnosticError,
     Mecha,
     MutatingReducer,
+    Reducer,
     rule,
 )
 from nbtlib import String  # type: ignore ; nbtlib missing stubfile
@@ -43,7 +51,12 @@ from pydantic.v1 import BaseModel, Extra, Field, ValidationError, validator
 from pydantic.v1.error_wrappers import ErrorWrapper
 from tokenstream import set_location
 
-from gm4.utils import InvokeOnJsonNbt, MapOption, add_namespace
+from gm4.utils import (
+    InvokeOnJsonNbt,
+    MapOption,
+    add_namespace,
+    propagate_location,
+)
 
 CUSTOM_MODEL_PREFIX = 3420000
 
@@ -299,9 +312,11 @@ GuiFont.update_forward_refs()
 #== Beet Plugins ==#
 def beet_default(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
+    tl = ctx.inject(TranslationLinter)
     ctx.require("mecha.contrib.json_files")
     # mecha register
     ctx.inject(Mecha).transform.extend(rp)
+    ctx.inject(Mecha).lint.extend(tl)
 
     logging.getLogger("beet.contrib.babelbox").addFilter(BlockIncompleteTranslation())
 
@@ -321,6 +336,26 @@ def build(ctx: Context):
     if not ctx.assets.extra.get("pack.png") and ctx.data.extra.get("pack.png"):
         ctx.assets.icon = ctx.data.icon
 
+def setup(ctx: Context):
+    mount_registry(ctx)
+
+    # init font counter
+    ctx.cache["gui_font_counter"].json = {
+        "__next__": ord("\u9000")
+    }
+
+    # clear and compile cross-module translation key list
+    ctx.cache["translation_keys"].clear()
+    keys: list[str] = []
+    for path in glob.glob("*/assets/translations.csv"):
+        with open(path) as f:
+            reader = csv.DictReader(f)
+            if reader.fieldnames and reader.fieldnames[0] != "key":
+                raise KeyError(f"{path} must contain a column named 'key'")
+            keys.extend([row['key'] for row in reader]) # type: ignore ; csv only contains strings
+    ctx.cache["translation_keys"].json = {"keys": list(set(keys))}
+
+
 
 def mount_registry(ctx: Context):
     ctx.cache["modeldata_registry"].json = JsonFile(source_path="gm4/modeldata_registry.json").data
@@ -334,11 +369,6 @@ def dump_registry(ctx: Context):
 
     JsonFile(registry).dump(origin="", path="gm4/modeldata_registry.json")
     ctx.cache["modeldata_registry"].delete()
-
-def init_font_counter(ctx: Context):
-    ctx.cache["gui_font_counter"].json = {
-        "__next__": ord("\u9000")
-    }
 
 def link_resource_pack(ctx: Context):
     """manually links the combined resource pack to minecraft's RP folder when using 'beet dev'"""
@@ -559,7 +589,57 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             self.ctx.generate("gm4:container_gui", merge=Font({
                 "providers": providers
             }))
-            
+
+class TranslationLinter(Reducer):
+    """Mecha linter ensuring all translation keys are registered in translations.csv"""
+    def __init__(self, ctx: Context):
+        self.ctx = ctx
+        self.mecha_database = ctx.inject(Mecha).database
+        vanilla_lang = ctx.inject(Vanilla).mount("assets/minecraft/lang/en_us.json")
+        self.vanilla_keys = vanilla_lang.assets.languages["minecraft:en_us"].data.keys()
+        self.total_keys = None
+        super().__init__()
+
+    @rule(AstNbtValue)
+    def check_nbt_json(self, node: AstNbtValue):
+        mc = self.ctx.inject(Mecha)
+        if isinstance(node.value, (String, str)):
+            try:
+                json_ast = mc.parse(node.value, type=AstJson)
+                with self.use_diagnostics(collec:=DiagnosticCollection()):
+                    self.invoke(json_ast) # process new node with reducer rules
+                for exc in collec.exceptions:
+                    yield propagate_location(exc, node)
+            except DiagnosticError:
+                pass # string is not json
+
+    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value="translate"))
+    def missing_en_us_translations(self, node: AstNbtValue):
+        # setup lookup list if first invocation
+        if not self.total_keys:
+            self.total_keys = (
+                set(self.vanilla_keys) |
+                set(self.ctx.assets.languages.get("gm4_translations:en_us", Language()).data.keys()) |
+                set(self.ctx.assets.languages.get("gm4:en_us", Language()).data.keys()) |
+                set(Language(source_path="base/assets/gm4/lang/en_us.json").data.keys()) |
+                set(self.ctx.cache["translation_keys"].json["keys"]) | 
+                {"%1$s%3427655$s", "%1$s%3427656$s"} # manual old keys
+            )
+
+
+        # NOTE: this is a stopgap while guidebook is being rewritten. Skips linting on all guidebook files
+        resource_location = self.mecha_database[self.mecha_database.current].resource_location or "null:null"
+        if resource_location.split(":")[1].startswith("guidebook"):
+            return
+        
+        if node.value.value not in self.total_keys:
+            return set_location(Diagnostic("warn", f"Translation key not defined in en_us: {node.value.value}"), node)
+        
+    # @rule(AstJsonRoot)
+    # def test(self, node: AstJsonRoot):
+    #     if isinstance(self.ctx.inject(Mecha).database.current, Advancement):
+    #         print(node)
+
 class BlockIncompleteTranslation(logging.Filter):
     """logger filter to hide missing translations for anything but default english"""
     def filter(self, record: logging.LogRecord):

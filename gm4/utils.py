@@ -170,16 +170,18 @@ class InvokeOnJsonNbt:
 
 				with self.use_diagnostics(captured_diagnostics:=DiagnosticCollection()):
 					processed_nbt = mc.serialize(self.invoke(nbt, type=AstNbtCompound))
-
 				for exc in captured_diagnostics.exceptions:
-					pos,lineno,colno = node.value.location
-					yield set_location(exc, 
-						SourceLocation(pos=pos+exc.location.pos, lineno=lineno, colno=colno+exc.location.colno),
-						SourceLocation(pos=pos+exc.end_location.pos, lineno=lineno, colno=colno+exc.end_location.colno)
-					) # set error location to nbt key-value that caused the problem and pass diagnostic back to mecha
+					yield propagate_location(exc, node.value)  # set error location to nbt key-value that caused the problem and pass diagnostic back to mecha
 
 				new_node = replace(node, value=AstJsonValue(value=processed_nbt))
 				if new_node != node:
 					return new_node
 				
 		return node
+
+def propagate_location(obj: T, parent_location_obj: Any) -> T:
+	"""a set_location like function propagating diagnostic information for manually invoked rules"""
+	return set_location(obj, 
+		SourceLocation(pos=parent_location_obj.location.pos+obj.location.pos, lineno=parent_location_obj.location.lineno, colno=parent_location_obj.location.colno+obj.location.colno), # type: ignore
+		SourceLocation(pos=parent_location_obj.location.pos+obj.end_location.pos, lineno=parent_location_obj.location.lineno, colno=parent_location_obj.location.colno+obj.end_location.colno) # type: ignore
+	)
