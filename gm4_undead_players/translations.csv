@@ -1,0 +1,7 @@
+key,en_us
+advancement.gm4.undead_players.description,"Die and raise up an undead zombie in your body's place",
+advancement.gm4.undead_players.title,"Risen",
+entity.gm4.drowned_player_name,"Drowned %s"
+entity.gm4.drowned_player,"Drowned Player"
+entity.gm4.undead_player_name,"Undead %s"
+entity.gm4.undead_player,"Undead Player",

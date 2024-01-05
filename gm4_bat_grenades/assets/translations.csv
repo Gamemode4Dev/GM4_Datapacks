@@ -1,6 +1,6 @@
 key,en_us,de_de
 item.gm4.bat_leather,Bat Leather,Fledermausleder,
-item.gm4.bat_leather.1,"Would make for a very strange,","Würde eine ziemlich merkwürde,",
-item.gm4.bat_leather.2,very tiny jacket,"ziemlich kleine Jacke ergeben"
+text.gm4.bat_leather.1,"Would make for a very strange,","Würde eine ziemlich merkwürde,",
+text.gm4.bat_leather.2,very tiny jacket,"ziemlich kleine Jacke ergeben"
 advancement.gm4.bat_grenades.title,"Batboozled",
 advancement.gm4.bat_grenades.description,"Get blown up by a Bat Grenade",

@@ -21,7 +21,9 @@ pipeline:
           nbt_compact: True
           cmd_compact: True
       babelbox:
-        load: assets/translations.csv
+        load: 
+          - assets/translations.csv
+          - translations.csv
         namespace: gm4_translations
   - extend: beet.yaml
     directory: resource_pack

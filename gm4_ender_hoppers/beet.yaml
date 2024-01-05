@@ -43,6 +43,9 @@ meta:
       - translation: gui.gm4.ender_hopper
         container: hopper
         texture: gui/container/ender_hopper
+      - translation: gui.gm4.ender_hopper_minecart
+        container: hopper
+        texture: gui/container/ender_hopper
     website:
       description: Create special hoppers that teleport nearby items to them.
       recommended:

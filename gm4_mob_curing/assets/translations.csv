@@ -1,0 +1,5 @@
+key,en_us
+advancement.gm4.mob_curing.title,"Witch Doctor"
+advancement.gm4.mob_curing.description.1,"Cure a Witch into a Potion Cleric"
+advancement.gm4.mob_curing.description.2,"\u266b Ooh ee ooh ah ah ting tang walla walla bing bang \u266b"
+entity.gm4.potion_cleric,"Potion Cleric§"

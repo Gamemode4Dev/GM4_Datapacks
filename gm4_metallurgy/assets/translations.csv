@@ -1,15 +1,21 @@
 key,en_us
-item.gm4.metallurgy.baryte_lump,"Baryte Lump"
-item.gm4.metallurgy.thorianite_lump,"Thorianite Lump"
-item.gm4.metallurgy.bauxite_lump,"Bauxite Lump"
-item.gm4.metallurgy.obsidian_cast,"Obsidian Cast"
-item.gm4.metallurgy.band,"%s Band"
-item.gm4.metallurgy.barium,"Barium"
-item.gm4.metallurgy.thorium,"Thorium"
+advancement.gm4.metallurgy.blast_ore.description,"Blast open some rock and find the metal within.",
+advancement.gm4.metallurgy.blast_ore.title,"How Ad-ore-able",
+advancement.gm4.metallurgy.cast.description,"Create a mold and add some metal.",
+advancement.gm4.metallurgy.cast.title,"Firebender",
+advancement.gm4.metallurgy.overheat_cast.description,"Destroy a mold containing molten metal.",
+advancement.gm4.metallurgy.overheat_cast.title,"Blame Me for the Mess",
 item.gm4.metallurgy.aluminium,"Aluminium"
+item.gm4.metallurgy.band,"%s Band"
 item.gm4.metallurgy.barimium,"Barimium"
+item.gm4.metallurgy.barium,"Barium"
+item.gm4.metallurgy.baryte_lump,"Baryte Lump"
+item.gm4.metallurgy.bauxite_lump,"Bauxite Lump"
 item.gm4.metallurgy.mundane_band,"Mundane Band"
+item.gm4.metallurgy.obsidian_cast,"Obsidian Cast"
 item.gm4.metallurgy.shamir,"Shamir"
+item.gm4.metallurgy.thorianite_lump,"Thorianite Lump"
+item.gm4.metallurgy.thorium,"Thorium"
 item.gm4.shamir.arborenda,"Arborenda"
 item.gm4.shamir.defuse,"Defuse"
 item.gm4.shamir.ender_bolt,"Ender Bolt"
@@ -27,9 +33,18 @@ text.gm4.metallurgy.aluminium,"Aluminium",
 text.gm4.metallurgy.barium,"Barium",
 text.gm4.metallurgy.contains,"Contains ",
 text.gm4.metallurgy.thorium,"Thorium",
-advancement.gm4.metallurgy.blast_ore.title,"How Ad-ore-able",
-advancement.gm4.metallurgy.blast_ore.description,"Blast open some rock and find the metal within.",
-advancement.gm4.metallurgy.cast.title,"Firebender",
-advancement.gm4.metallurgy.cast.description,"Create a mold and add some metal.",
-advancement.gm4.metallurgy.overheat_cast.title,"Blame Me for the Mess",
-advancement.gm4.metallurgy.overheat_cast.description,"Destroy a mold containing molten metal.",
+item.gm4.shamir.vibro,"Vibro"
+text.gm4.metallurgy.copper,"Copper"
+item.gm4.metallurgy.malachite_lump,"Malachite Lump"
+item.gm4.shamir.infinitas,"Infinitas"
+item.gm4.metallurgy.curies_bismium,"Curie's Bismium"
+item.gm4.metallurgy.bismuth.magenta,"",
+item.gm4.metallurgy.bismuth.yellow,"ut"
+item.gm4.metallurgy.bismuth.red,"Bi"
+item.gm4.metallurgy.bismuth.orange,"sm"
+item.gm4.metallurgy.bismuth.green,"h "
+item.gm4.metallurgy.bismuth.blue,"Ba"
+item.gm4.metallurgy.bismuth.purple,"nd"
+item.gm4.metallurgy.thorium_brass,"Thorium Brass"
+item.gm4.metallurgy.bismutite_lump,"Bismutite Lump"
+item.gm4.metallurgy.copper,"Copper"

@@ -1,3 +1,5 @@
 key,en_us
 advancement.gm4.better_fire.title,"Flint 'n Stick",
 advancement.gm4.better_fire.description,"Fire a Flame Bow",
+item.gm4.better_fire.flint,"Flint",
+item.gm4.better_fire.flint.lore,"Charred arrowhead",
