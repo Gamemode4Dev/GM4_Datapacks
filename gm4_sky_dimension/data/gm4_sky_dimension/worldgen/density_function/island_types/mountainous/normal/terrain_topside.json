@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:interpolated",
+  "argument": {
+    "type": "minecraft:add",
+    "argument1": "gm4_sky_dimension:island_types/mountainous/normal/gradient_topside",
+    "argument2": {
+      "type": "minecraft:mul",
+      "argument1": 3,
+      "argument2": {
+        "type": "minecraft:abs",
+        "argument": {
+          "type": "minecraft:shifted_noise",
+          "noise": "gm4_sky_dimension:island_types/middle",
+          "xz_scale": 0.8,
+          "y_scale": 0,
+          "shift_x": "minecraft:shift_x",
+          "shift_y": 0,
+          "shift_z": "minecraft:shift_z"
+        }
+      }
+    }
+  }
+}

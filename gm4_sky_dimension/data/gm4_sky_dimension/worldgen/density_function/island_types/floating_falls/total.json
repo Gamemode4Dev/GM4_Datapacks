@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:max",
+  "argument1": "gm4_sky_dimension:island_types/floating_falls/lake/total",
+  "argument2": "gm4_sky_dimension:island_types/floating_falls/small_islands/total"
+}

@@ -1,5 +1,5 @@
 {
   "type": "minecraft:min",
-  "argument1": "gm4_sky_dimension:erosion/total",
+  "argument1": "gm4_sky_dimension:island_types/total",
   "argument2": "gm4_sky_dimension:continents/total"
 }

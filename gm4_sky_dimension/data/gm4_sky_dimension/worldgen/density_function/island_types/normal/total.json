@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:min",
+  "argument1": "gm4_sky_dimension:island_types/island_groups",
+  "argument2": {
+    "type": "minecraft:max",
+    "argument1": {
+      "type": "minecraft:max",
+      "argument1": "gm4_sky_dimension:island_types/normal/middle/total",
+      "argument2": "gm4_sky_dimension:island_types/normal/mid_bottom/total"
+    },
+    "argument2": {
+      "type": "minecraft:max",
+      "argument1": "gm4_sky_dimension:island_types/normal/top/total",
+      "argument2": "gm4_sky_dimension:island_types/normal/bottom/total"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:range_choice",
+  "input": {
+    "type": "minecraft:mul",
+    "argument1": {
+      "type": "minecraft:add",
+      "argument1": "gm4_sky_dimension:island_types/normal/mid_bottom/gradient_underside",
+      "argument2": {
+        "type": "minecraft:mul",
+        "argument1": 0.5,
+        "argument2": {
+          "type": "minecraft:add",
+          "argument1": {
+            "type": "minecraft:add",
+            "argument1": 0.4,
+            "argument2": {
+              "type": "minecraft:mul",
+              "argument1": 1,
+              "argument2": "gm4_sky_dimension:island_types/normal/mid_bottom/shift"
+            }
+          },
+          "argument2": {
+            "type": "minecraft:abs",
+            "argument": "gm4_sky_dimension:island_types/normal/mid_bottom/noise"
+          }
+        }
+      }
+    },
+    "argument2": -1
+  },
+  "min_inclusive": -1000000,
+  "max_exclusive": 0,
+  "when_in_range": {
+    "type": "minecraft:add",
+    "argument1": 1,
+    "argument2": "gm4_sky_dimension:island_types/normal/mid_bottom/gradient_underside"
+  },
+  "when_out_of_range": -1
+}

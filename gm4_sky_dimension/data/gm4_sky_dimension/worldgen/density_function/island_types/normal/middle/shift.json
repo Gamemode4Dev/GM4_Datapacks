@@ -1,0 +1,62 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:spline",
+    "spline": {
+      "coordinate": {
+        "type": "minecraft:interpolated",
+        "argument": "gm4_sky_dimension:routers/vegetation"
+      },
+      "points": [
+        {
+          "location": -1,
+          "derivative": 0,
+          "value": 0
+        },
+        {
+          "location": -0.251,
+          "derivative": 0,
+          "value": 0
+        },
+        {
+          "location": -0.249,
+          "derivative": 0,
+          "value": 0.1
+        },
+        {
+          "location": 0.499,
+          "derivative": 0,
+          "value": 0.1
+        },
+        {
+          "location": 0.501,
+          "derivative": 0,
+          "value": 0.05
+        },
+        {
+          "location": 1,
+          "derivative": 0,
+          "value": 0.05
+        }
+      ]
+    }
+  },
+  "argument2": {
+    "type": "minecraft:spline",
+    "spline": {
+      "coordinate": "gm4_sky_dimension:island_types/normal/middle/noise",
+      "points": [
+        {
+          "location": -0.001,
+          "derivative": 0,
+          "value": 0.03
+        },
+        {
+          "location": 0,
+          "derivative": 0,
+          "value": 0
+        }
+      ]
+    }
+  }
+}
