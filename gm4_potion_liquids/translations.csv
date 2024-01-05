@@ -1,5 +1,32 @@
 key,en_us
-advancement.gm4.potion_liquids.title,"Fizzy Lifting Drink",
 advancement.gm4.potion_liquids.description,"Come on in, the air's fine",
+advancement.gm4.potion_liquids.title,"Fizzy Lifting Drink",
+container.gm4.liquid_tank.fire_resistance,"Fire Resistance Potion Tank",
+container.gm4.liquid_tank.floating,"Floating Potion Tank",
+container.gm4.liquid_tank.harming,"Harming Potion Tank",
+container.gm4.liquid_tank.healing,"Healing Potion Tank",
+container.gm4.liquid_tank.invisibility,"Invisibility Potion Tank",
+container.gm4.liquid_tank.leaping,"Leaping Potion Tank",
+container.gm4.liquid_tank.luck,"Luck Potion Tank",
+container.gm4.liquid_tank.night_vision,"Night Vision Potion Tank",
+container.gm4.liquid_tank.poison,"Poison Potion Tank",
+container.gm4.liquid_tank.regeneration,"Regeneration Potion Tank",
+container.gm4.liquid_tank.slow_falling,"Slow Falling Potion Tank",
+container.gm4.liquid_tank.slowness,"Slowness Potion Tank",
+container.gm4.liquid_tank.strength,"Strength Potion Tank",
+container.gm4.liquid_tank.strong_harming,"Strong Harming Potion Tank",
+container.gm4.liquid_tank.strong_healing,"Strong Healing Potion Tank",
+container.gm4.liquid_tank.strong_leaping,"Strong Leaping Potion Tank",
+container.gm4.liquid_tank.strong_master,"Strong Turtle Master Potion Tank",
+container.gm4.liquid_tank.strong_poison,"Strong Poison Potion Tank",
+container.gm4.liquid_tank.strong_regeneration,"Strong Regeneration Potion Tank",
+container.gm4.liquid_tank.strong_slowness,"Strong Slowness Potion Tank",
+container.gm4.liquid_tank.strong_swiftness,"Strong Swiftness Potion Tank",
+container.gm4.liquid_tank.swiftness,"Swiftness Potion Tank",
+container.gm4.liquid_tank.turtle_master,"Turtle Master Potion Tank",
+container.gm4.liquid_tank.water_breathing,"Water Breathing Potion Tank",
+container.gm4.liquid_tank.weakness,"Weakness Potion Tank",
+item.gm4.floating_potion,Potion of Floating
 item.gm4.lingering_floating_potion,"Lingering Potion of Floating"
+item.gm4.potion.effect.levitation,Potion of Floating
 item.gm4.splash_floating_potion,"Splash Potion of Floating"

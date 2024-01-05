@@ -193,7 +193,6 @@ class GuiFont(BaseModel):
             texture=add_namespace(self.texture, namespace)
         )
 
-
 class FlatResourcePackOptions(BaseModel):
     """Contains a flat list of complete rp config objects"""
     model_data: list[ModelData]
@@ -320,8 +319,8 @@ def beet_default(ctx: Context):
 
     logging.getLogger("beet.contrib.babelbox").addFilter(BlockIncompleteTranslation())
 
-    # yield
-    # rp.output_registry()
+    yield
+    tl.warn_unused_translations()
 
 def build(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
@@ -596,8 +595,11 @@ class TranslationLinter(Reducer):
         self.ctx = ctx
         self.mecha_database = ctx.inject(Mecha).database
         vanilla_lang = ctx.inject(Vanilla).mount("assets/minecraft/lang/en_us.json")
-        self.vanilla_keys = vanilla_lang.assets.languages["minecraft:en_us"].data.keys()
-        self.total_keys = None
+        self.vanilla_keys = set(vanilla_lang.assets.languages["minecraft:en_us"].data.keys())
+        self.total_keys: set[str] = set()
+        self.local_keys: set[str] = set()
+        self.used_keys: set[str] = set()
+        self.logger = parent_logger.getChild(ctx.project_id)
         super().__init__()
 
     @rule(AstNbtValue)
@@ -617,12 +619,15 @@ class TranslationLinter(Reducer):
     def missing_en_us_translations(self, node: AstNbtValue):
         # setup lookup list if first invocation
         if not self.total_keys:
-            self.total_keys = (
-                set(self.vanilla_keys) |
+            self.local_keys = (
                 set(self.ctx.assets.languages.get("gm4_translations:en_us", Language()).data.keys()) |
-                set(self.ctx.assets.languages.get("gm4:en_us", Language()).data.keys()) |
+                set(self.ctx.assets.languages.get("gm4:en_us", Language()).data.keys())
+            )
+            self.total_keys = (
+                self.vanilla_keys |
+                self.local_keys | 
                 set(Language(source_path="base/assets/gm4/lang/en_us.json").data.keys()) |
-                set(self.ctx.cache["translation_keys"].json["keys"]) | 
+                set(self.ctx.cache["translation_keys"].json["keys"]) |
                 {"%1$s%3427655$s", "%1$s%3427656$s"} # manual old keys
             )
 
@@ -632,13 +637,21 @@ class TranslationLinter(Reducer):
         if resource_location.split(":")[1].startswith("guidebook"):
             return
         
+        if node.value.value.startswith("gui.gm4"):
+            # gui-texture translations from other modules are defined in their gui_fonts segment of beet.yaml, so they won't be
+            # known to the linter easily. For now, we just ignore their warnings
+            return
+        
+        self.used_keys.add(node.value.value)
+        
         if node.value.value not in self.total_keys:
             return set_location(Diagnostic("warn", f"Translation key not defined in en_us: {node.value.value}"), node)
-        
-    # @rule(AstJsonRoot)
-    # def test(self, node: AstJsonRoot):
-    #     if isinstance(self.ctx.inject(Mecha).database.current, Advancement):
-    #         print(node)
+    
+    def warn_unused_translations(self):
+        for key in self.ctx.assets.languages.get("gm4_translations:en_us", Language()).data:
+            if key not in self.used_keys and key in self.local_keys:
+                self.logger.warn(f"Translation '{key}' is defined but not used")
+
 
 class BlockIncompleteTranslation(logging.Filter):
     """logger filter to hide missing translations for anything but default english"""
