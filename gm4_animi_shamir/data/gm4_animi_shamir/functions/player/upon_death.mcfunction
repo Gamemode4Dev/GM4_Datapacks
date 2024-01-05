@@ -1,6 +1,6 @@
 # @s = player who has died
 # at @s
-# run from gm4_animi_shamir:death advancement
+# run from #gm4_player_death:soul_bound
 
 # compile item list
 data remove storage gm4_animi_shamir:cache prepared_entry

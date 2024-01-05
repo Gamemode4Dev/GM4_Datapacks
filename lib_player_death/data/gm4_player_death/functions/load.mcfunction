@@ -1,0 +1,1 @@
+scoreboard objectives add gm4_player_death_count deathCount

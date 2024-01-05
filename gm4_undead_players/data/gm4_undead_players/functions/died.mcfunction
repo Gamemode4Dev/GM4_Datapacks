@@ -1,4 +1,4 @@
-#run from gm4_undead_players:death advancement
+#run from #gm4_player_death:grave
 #@s = player who took fatal damage
 
 # Reset death tracking scoreboard and advancement to allow for the player to die again.
