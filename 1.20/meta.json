@@ -1,5 +1,5 @@
 {
-  "last_commit": "8068bd4d2a3782cb9006530235a581e2d87a7a7b",
+  "last_commit": "03785756f10eaa12e419bb4a653e4045c4642ffa",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2816,6 +2816,28 @@
       "publish_date": "2023-10-04",
       "modrinth_id": null,
       "smithed_link": "gm4_lib_machines",
+      "pmc_link": null
+    },
+    "lib_player_death": {
+      "id": "gm4_player_death",
+      "name": "Gamemode 4 Player Death",
+      "version": "1.0.0",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "Misode"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2024-01-06",
+      "modrinth_id": null,
+      "smithed_link": null,
       "pmc_link": null
     },
     "lib_player_heads": {
