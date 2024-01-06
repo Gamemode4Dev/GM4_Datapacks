@@ -10,31 +10,47 @@ item replace block 29999998 1 7134 container.2 from entity @s armor.legs
 item replace block 29999998 1 7134 container.3 from entity @s armor.feet
 data modify storage gm4_combat_expanded:temp Items set from block 29999998 1 7134 Items
 
+scoreboard players set $level.poison gm4_ce_data 0
+scoreboard players set $level.weakness gm4_ce_data 0
+scoreboard players set $level.instant_health gm4_ce_data 0
+
 # add levels among pieces
+scoreboard players set $level gm4_ce_data 0
 execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded.toxic store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded.level
+execute if score $level gm4_ce_data matches 1 run scoreboard players add $level.poison gm4_ce_data 1
+execute if score $level gm4_ce_data matches 2 run scoreboard players add $level.weakness gm4_ce_data 1
+execute if score $level gm4_ce_data matches 3 run scoreboard players add $level.instant_health gm4_ce_data 1
 
-execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded.toxic store result score $level_add gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded.level
-scoreboard players operation $level gm4_ce_data += $level_add gm4_ce_data
+scoreboard players set $level gm4_ce_data 0
+execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded.toxic store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded.level
+execute if score $level gm4_ce_data matches 1 run scoreboard players add $level.poison gm4_ce_data 1
+execute if score $level gm4_ce_data matches 2 run scoreboard players add $level.weakness gm4_ce_data 1
+execute if score $level gm4_ce_data matches 3 run scoreboard players add $level.instant_health gm4_ce_data 1
 
-execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded.toxic store result score $level_add gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded.level
-scoreboard players operation $level gm4_ce_data += $level_add gm4_ce_data
+scoreboard players set $level gm4_ce_data 0
+execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded.toxic store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded.level
+execute if score $level gm4_ce_data matches 1 run scoreboard players add $level.poison gm4_ce_data 1
+execute if score $level gm4_ce_data matches 2 run scoreboard players add $level.weakness gm4_ce_data 1
+execute if score $level gm4_ce_data matches 3 run scoreboard players add $level.instant_health gm4_ce_data 1
 
-execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded.toxic store result score $level_add gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded.level
-scoreboard players operation $level gm4_ce_data += $level_add gm4_ce_data
+scoreboard players set $level gm4_ce_data 0
+execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded.toxic store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded.level
+execute if score $level gm4_ce_data matches 1 run scoreboard players add $level.poison gm4_ce_data 1
+execute if score $level gm4_ce_data matches 2 run scoreboard players add $level.weakness gm4_ce_data 1
+execute if score $level gm4_ce_data matches 3 run scoreboard players add $level.instant_health gm4_ce_data 1
 
 # grant effect
-execute if score $level gm4_ce_data matches 1 on attacker run effect give @s[tag=!smithed.strict] poison 5 0
-execute if score $level gm4_ce_data matches 2 on attacker run effect give @s[tag=!smithed.strict] poison 10 0
-execute if score $level gm4_ce_data matches 3 on attacker run effect give @s[tag=!smithed.strict] poison 15 0
-execute if score $level gm4_ce_data matches 4 on attacker run effect give @s[tag=!smithed.strict] poison 20 0
-execute if score $level gm4_ce_data matches 5 on attacker run effect give @s[tag=!smithed.strict] poison 25 0
-execute if score $level gm4_ce_data matches 6 on attacker run effect give @s[tag=!smithed.strict] poison 30 0
-execute if score $level gm4_ce_data matches 7 on attacker run effect give @s[tag=!smithed.strict] poison 35 0
-execute if score $level gm4_ce_data matches 8 on attacker run effect give @s[tag=!smithed.strict] poison 40 0
-execute if score $level gm4_ce_data matches 9 on attacker run effect give @s[tag=!smithed.strict] poison 45 0
-execute if score $level gm4_ce_data matches 10 on attacker run effect give @s[tag=!smithed.strict] poison 50 0
-execute if score $level gm4_ce_data matches 11 on attacker run effect give @s[tag=!smithed.strict] poison 55 0
-execute if score $level gm4_ce_data matches 12 on attacker run effect give @s[tag=!smithed.strict] poison 60 0
+execute if score $level.poison gm4_ce_data matches 1 on attacker run effect give @s[tag=!smithed.strict] poison 5 0
+execute if score $level.poison gm4_ce_data matches 2 on attacker run effect give @s[tag=!smithed.strict] poison 5 1
+execute if score $level.poison gm4_ce_data matches 3 on attacker run effect give @s[tag=!smithed.strict] poison 5 2
+execute if score $level.poison gm4_ce_data matches 4 on attacker run effect give @s[tag=!smithed.strict] poison 5 3
 
-# toxic particles
-execute positioned ~ ~.6 ~ summon marker run function gm4_combat_expanded:armor/modifier/type/toxic/particles
+execute if score $level.weakness gm4_ce_data matches 1 on attacker run effect give @s[tag=!smithed.strict] weakness 5 0
+execute if score $level.weakness gm4_ce_data matches 2 on attacker run effect give @s[tag=!smithed.strict] weakness 5 1
+execute if score $level.weakness gm4_ce_data matches 3 on attacker run effect give @s[tag=!smithed.strict] weakness 5 2
+execute if score $level.weakness gm4_ce_data matches 4 on attacker run effect give @s[tag=!smithed.strict] weakness 5 3
+
+execute if score $level.instant_health gm4_ce_data matches 1 on attacker run effect give @s[tag=!smithed.strict] instant_health 5 1
+execute if score $level.instant_health gm4_ce_data matches 2 on attacker run effect give @s[tag=!smithed.strict] instant_health 5 2
+execute if score $level.instant_health gm4_ce_data matches 3 on attacker run effect give @s[tag=!smithed.strict] instant_health 5 3
+execute if score $level.instant_health gm4_ce_data matches 4 on attacker run effect give @s[tag=!smithed.strict] instant_health 5 4

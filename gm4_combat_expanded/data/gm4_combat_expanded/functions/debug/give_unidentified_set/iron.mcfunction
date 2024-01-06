@@ -1,8 +1,8 @@
-loot spawn ~ ~ ~ loot gm4_combat_expanded:weapon/sword/iron
-loot spawn ~ ~ ~ loot gm4_combat_expanded:weapon/pickaxe/iron
-loot spawn ~ ~ ~ loot gm4_combat_expanded:weapon/axe/iron
-loot spawn ~ ~ ~ loot gm4_combat_expanded:weapon/shovel/iron
-loot spawn ~ ~ ~ loot gm4_combat_expanded:armor/material/iron/feet
-loot spawn ~ ~ ~ loot gm4_combat_expanded:armor/material/iron/legs
-loot spawn ~ ~ ~ loot gm4_combat_expanded:armor/material/iron/chest
-loot spawn ~ ~ ~ loot gm4_combat_expanded:armor/material/iron/head
+loot give @s loot gm4_combat_expanded:weapon/sword/iron
+loot give @s loot gm4_combat_expanded:weapon/pickaxe/iron
+loot give @s loot gm4_combat_expanded:weapon/axe/iron
+loot give @s loot gm4_combat_expanded:weapon/shovel/iron
+loot give @s loot gm4_combat_expanded:armor/material/iron/feet
+loot give @s loot gm4_combat_expanded:armor/material/iron/legs
+loot give @s loot gm4_combat_expanded:armor/material/iron/chest
+loot give @s loot gm4_combat_expanded:armor/material/iron/head

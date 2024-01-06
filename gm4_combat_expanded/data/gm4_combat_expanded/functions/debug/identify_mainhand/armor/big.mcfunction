@@ -1,28 +1,12 @@
-# gives newly equipped a random unid (stored modifier), this does not identify that armor
-# @s = unidentified item
-# at unspecified
-# run from any identification/prep
+execute unless entity @e[type=item,distance=..7,nbt={Item:{tag:{gm4_combat_expanded:{identified:0}}}}] run loot spawn ~ ~ ~ loot gm4_combat_expanded:armor/material/iron/chest
 
-# randomize stats
+data modify storage gm4_combat_expanded:temp tag set from entity @e[type=item,distance=..7,nbt={Item:{tag:{gm4_combat_expanded:{identified:0}}}},limit=1,sort=nearest] Item.tag
 function gm4_combat_expanded:identification/armor/randomize_stats
-
-# get a random modifier and apply it to the storage
-execute store result score $identification_rarity gm4_ce_data run random value -89..10
-loot replace block 29999998 1 7134 container.4 loot gm4_combat_expanded:armor/identification/random
-
-# check if name was changed
-# when player renames item it loses the translate tag and becomes shorter
+loot replace block 29999998 1 7134 container.4 loot gm4_combat_expanded:armor/identification/rare/big
 data modify storage gm4_combat_expanded:temp stored_name set from storage gm4_combat_expanded:temp tag.display.Name
 execute store result score $namelen gm4_ce_data run data get storage gm4_combat_expanded:temp stored_name
-
-# apply modifier to storage
 data modify storage gm4_combat_expanded:temp tag merge from block 29999998 1 7134 Items[{Slot:4b}].tag
-
-# mark as identified
 data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.identified set value 1
-
-# half durability damage taken
 execute store result storage gm4_combat_expanded:temp tag.Damage int 0.5 run data get storage gm4_combat_expanded:temp tag.Damage
-
-# keep old name if it was changed
 execute if score $namelen gm4_ce_data matches ..75 run data modify storage gm4_combat_expanded:temp tag.display.Name set from storage gm4_combat_expanded:temp stored_name
+data modify entity @e[type=item,distance=..7,nbt={Item:{tag:{gm4_combat_expanded:{identified:0}}}},limit=1,sort=nearest] Item.tag set from storage gm4_combat_expanded:temp tag

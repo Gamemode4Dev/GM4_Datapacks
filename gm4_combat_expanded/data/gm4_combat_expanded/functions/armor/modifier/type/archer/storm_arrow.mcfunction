@@ -6,7 +6,6 @@
 # slightly adjust arrow motion
 data modify storage gm4_combat_expanded:temp archer_arrow.Motion_adj set value [0.0d,0.0d,0.0d] 
 
-
 execute store result score $mot_adjust gm4_ce_data run random value -32..32
 execute store result score $mot gm4_ce_data run data get storage gm4_combat_expanded:temp archer_arrow.Motion[0] 100
 execute store result storage gm4_combat_expanded:temp archer_arrow.Motion_adj[0] double 0.01 run scoreboard players operation $mot gm4_ce_data += $mot_adjust gm4_ce_data

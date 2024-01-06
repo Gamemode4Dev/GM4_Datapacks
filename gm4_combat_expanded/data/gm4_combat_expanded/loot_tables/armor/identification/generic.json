@@ -1,0 +1,159 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/archer",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/beacon",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/half",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/horse",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/husk",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/lunar",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/poised",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/scout",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/second_wind",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/shielded",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/solid",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/totem",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/toxic",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/vamp",
+                    "weight": 1
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:inverted",
+                    "term": {
+                        "condition": "minecraft:value_check",
+                        "value": {
+                            "type": "minecraft:score",
+                            "target": {
+                                "type": "minecraft:fixed",
+                                "name": "$identification_rarity"
+                            },
+                            "score": "gm4_ce_data"
+                        },
+                        "range": {
+                            "min": 1
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/rare/big",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/rare/canine",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/rare/consume",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/rare/immune",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/rare/reactive",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/rare/sneak",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/rare/soothe",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/rare/vorpal",
+                    "weight": 1
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "$identification_rarity"
+                        },
+                        "score": "gm4_ce_data"
+                    },
+                    "range": {
+                        "min": 1
+                    }
+                }
+            ]
+        }
+    ]
+}

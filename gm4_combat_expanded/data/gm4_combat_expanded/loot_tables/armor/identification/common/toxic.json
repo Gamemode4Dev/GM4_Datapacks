@@ -92,8 +92,11 @@
                   [
                     {
                       "translate": "attribute.gm4.combat_expanded.toxic",
-                      "fallback": "Toxic %s",
+                      "fallback": "%s %s",
                       "with": [
+                        {
+                          "translate": "effect.minecraft.poison"
+                        },
                         {
                           "translate": "enchantment.minecraft.thorns"
                         }
@@ -133,15 +136,18 @@
                   [
                     {
                       "translate": "attribute.gm4.combat_expanded.toxic",
-                      "fallback": "Toxic %s",
+                      "fallback": "%s %s",
                       "with": [
+                        {
+                          "translate": "effect.minecraft.weakness"
+                        },
                         {
                           "translate": "enchantment.minecraft.thorns"
                         }
                       ]
                     }
                   ],
-                  "0:10"
+                  "0:05"
                 ],
                 "color": "blue",
                 "italic": false
@@ -169,20 +175,23 @@
           "lore": [
             [
               {
-                "translate": "potion.withDuration",
+                "translate": "attribute.gm4.combat_expanded.toxic",
+                "fallback": "%s %s",
                 "with": [
-                  [
-                    {
-                      "translate": "attribute.gm4.combat_expanded.toxic",
-                      "fallback": "Toxic %s",
-                      "with": [
-                        {
-                          "translate": "enchantment.minecraft.thorns"
-                        }
-                      ]
-                    }
-                  ],
-                  "0:15"
+                  {
+                    "translate": "potion.withAmplifier",
+                    "with": [
+                      {
+                        "translate": "effect.minecraft.instant_health"
+                      },
+                      {
+                        "translate": "potion.potency.1"
+                      }
+                    ]
+                  },
+                  {
+                    "translate": "enchantment.minecraft.thorns"
+                  }
                 ],
                 "color": "blue",
                 "italic": false
@@ -210,7 +219,7 @@
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.toxic",
-              "fallback": "Poisonous %s",
+              "fallback": "Toxic %s",
               "with": [
                 {
                   "nbt": "tag.gm4_combat_expanded.name",

@@ -4,5 +4,3 @@
 advancement revoke @s only gm4_combat_expanded:damaged/stop_regen
 
 scoreboard players set @s gm4_ce_natural_regen_damage 10
-#TODO: remove
-say damaged
