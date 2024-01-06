@@ -3,7 +3,6 @@ scoreboard objectives add gm4_zc_bottled_vex_escape_timer dummy
 scoreboard objectives add gm4_zc_chorus dummy
 scoreboard objectives add gm4_zc_crystal dummy
 scoreboard objectives add gm4_zc_data dummy
-scoreboard objectives add gm4_zc_deaths deathCount
 scoreboard objectives add gm4_zc_flowers dummy
 scoreboard objectives add gm4_zc_fullness dummy
 scoreboard objectives add gm4_zc_id dummy
