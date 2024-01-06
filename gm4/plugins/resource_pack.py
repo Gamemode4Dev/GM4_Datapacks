@@ -354,8 +354,6 @@ def setup(ctx: Context):
             keys.extend([row['key'] for row in reader]) # type: ignore ; csv only contains strings
     ctx.cache["translation_keys"].json = {"keys": list(set(keys))}
 
-
-
 def mount_registry(ctx: Context):
     ctx.cache["modeldata_registry"].json = JsonFile(source_path="gm4/modeldata_registry.json").data
 
@@ -368,6 +366,24 @@ def dump_registry(ctx: Context):
 
     JsonFile(registry).dump(origin="", path="gm4/modeldata_registry.json")
     ctx.cache["modeldata_registry"].delete()
+
+def pad_model_overrides(ctx: Context):
+    """Adds overrides for the vanilla model, filling in gaps between CMD values"""
+    vanilla = ctx.inject(Vanilla)
+    vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
+
+    for name, model in ctx.assets["minecraft"].models.items():
+        vanilla_overrides = [{"predicate":{},"model": f"minecraft:{name}"}] + vanilla_models_jar.assets["minecraft"].models[name].data.get("overrides", [])
+        overrides: list[Any] = model.data["overrides"]
+        prior_cmd = 1e8
+        for i, override in reversed(list(enumerate(overrides))):
+            if "custom_model_data" in (pred:=override.get("predicate")):
+                if prior_cmd-(prior_cmd:=pred["custom_model_data"]) > 1: # theres a gap to fill with the vanilla model
+                    for entry in vanilla_overrides:
+                        entry["predicate"]["custom_model_data"] = prior_cmd+1
+                    for vanilla_override in reversed(vanilla_overrides):
+                        overrides.insert(i+1, deepcopy(vanilla_override))
+
 
 def link_resource_pack(ctx: Context):
     """manually links the combined resource pack to minecraft's RP folder when using 'beet dev'"""

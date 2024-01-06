@@ -37,6 +37,7 @@ pipeline:
       - gm4.plugins.resource_pack
       - beet.contrib.model_merging
       - beet.contrib.optifine
+      - beet.contrib.babelbox
     pipeline:
       - gm4.plugins.manifest.write_credits
       - require: [beet.contrib.copy_files]
@@ -47,6 +48,11 @@ pipeline:
         formatting:
           layout: preserve
           nbt_compact: True
+      babelbox:
+        load: 
+          - assets/translations.csv
+          - translations.csv
+        namespace: gm4_translations
   
   - pipeline:
     - gm4.plugins.worker.retrieve_and_run
@@ -65,6 +71,7 @@ pipeline:
       - gm4.plugins.output.release_resource_pack
       - gm4.plugins.write_mcmeta
       - gm4.plugins.manifest.update_patch
+      - gm4.plugins.resource_pack.pad_model_overrides
     meta:
       pack_scan: resource_pack
 
