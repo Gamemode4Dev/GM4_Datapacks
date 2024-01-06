@@ -5,19 +5,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/epic/guardian"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/epic/overload"
-        },
-        {
-          "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:armor/identification/epic/vorpal"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/epic/witch"
         }
       ]
     }

@@ -33,13 +33,10 @@ scoreboard objectives add gm4_ce_t_delay dummy
 scoreboard objectives add gm4_ce_t_guard dummy
 scoreboard objectives add gm4_ce_t_kill dummy
 scoreboard objectives add gm4_ce_t_soothe dummy
-scoreboard objectives add gm4_ce_t_witch dummy
 scoreboard objectives add gm4_ce_t_wolf dummy
 scoreboard objectives add gm4_ce_t_sprinting dummy
 scoreboard objectives add gm4_ce_sprinting_timeout dummy
 scoreboard objectives add gm4_ce_t_reactive dummy
-scoreboard objectives add gm4_ce_guarded minecraft.custom:minecraft.damage_resisted
-scoreboard objectives add gm4_ce_guard dummy
 scoreboard objectives add gm4_ce_absorp dummy
 scoreboard objectives add gm4_ce_healstore dummy
 scoreboard objectives add gm4_ce_damaged minecraft.custom:minecraft.damage_taken
@@ -48,11 +45,9 @@ scoreboard objectives add gm4_ce_hunger food
 scoreboard objectives add gm4_ce_shielded_hit minecraft.used:minecraft.shield
 scoreboard objectives add gm4_ce_sprinting minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add gm4_ce_generation dummy
-scoreboard objectives add gm4_ce_atkd dummy
 scoreboard objectives add gm4_ce_swimming minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add gm4_ce_used_bow minecraft.used:minecraft.bow
 scoreboard objectives add gm4_ce_used_crossbow minecraft.used:minecraft.crossbow
-scoreboard objectives add gm4_ce_chime_damage dummy
 scoreboard objectives add gm4_ce_natural_regen_damage dummy
 scoreboard objectives add gm4_ce_natural_regen_delay dummy
 scoreboard objectives add gm4_ce_death_mult dummy

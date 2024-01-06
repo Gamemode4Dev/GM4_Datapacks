@@ -21,10 +21,6 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/rare/shadow"
-        },
-        {
-          "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:armor/identification/rare/sneak"
         },
         {

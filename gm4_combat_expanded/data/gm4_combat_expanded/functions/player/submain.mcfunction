@@ -3,10 +3,6 @@
 # at unspecified
 # scheduled from main (8t)
 
-# transfer damage from players that were guarded
-# this executes before general player processing so this runs for all players before any players are processed further
-execute as @a[tag=gm4_ce_guarded] at @s run function gm4_combat_expanded:armor/modifier/type/guardian/guard_end
-
 # process players
 execute as @a[gamemode=!spectator] run function gm4_combat_expanded:player/process
 
@@ -17,7 +13,6 @@ scoreboard players remove @a[scores={gm4_ce_t_guard=1..}] gm4_ce_t_guard 1
 scoreboard players remove @a[scores={gm4_ce_t_wolf=1..}] gm4_ce_t_wolf 1
 scoreboard players remove @a[scores={gm4_ce_t_kill=1..}] gm4_ce_t_kill 1
 scoreboard players remove @a[scores={gm4_ce_t_soothe=1..}] gm4_ce_t_soothe 1
-scoreboard players remove @a[scores={gm4_ce_t_witch=1..}] gm4_ce_t_witch 1
 scoreboard players remove @a[scores={gm4_ce_t_reactive=1..}] gm4_ce_t_reactive 1
 scoreboard players remove @a[scores={gm4_ce_natural_regen_damage=1..}] gm4_ce_natural_regen_damage 1
 

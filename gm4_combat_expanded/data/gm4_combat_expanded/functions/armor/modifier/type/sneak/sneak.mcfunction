@@ -1,7 +1,7 @@
 # invisibility and jump boost when undamaged
 # @s = player wearing armor
 # at unspecified
-# run from armor/check_modifier/safe
+# run from armor/check_modifier/safety
 
 execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level
 effect give @s invisibility 2 0 true

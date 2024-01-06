@@ -3,6 +3,8 @@
 # at unspecified
 # run from armor/modifier/check_modifier
 
+# safe
 execute if score $modifier gm4_ce_data matches 10 run function gm4_combat_expanded:armor/modifier/type/scout/check
 execute if score $modifier gm4_ce_data matches 11 unless score @s gm4_ce_t_hurt matches 1.. unless score @s gm4_ce_t_shield matches 1.. run function gm4_combat_expanded:armor/modifier/type/shielded/add_level
 execute if score $modifier gm4_ce_data matches 12 unless score @s gm4_ce_t_hurt matches 1.. run function gm4_combat_expanded:armor/modifier/type/sneak/sneak
+# unsafe (most are triggered from advancements)

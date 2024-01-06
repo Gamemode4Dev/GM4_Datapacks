@@ -1,7 +1,7 @@
 # check moon phase and time of day
 # @s = player wearing armour
 # at unspecified
-# run from armor/check_modifier/night
+# run from armor/check_modifier/equip
 
 # deactivate during the day
 execute if score $active gm4_ce_data matches 1 unless predicate gm4_combat_expanded:technical/night_time run function gm4_combat_expanded:armor/modifier/type/lunar/deactivate

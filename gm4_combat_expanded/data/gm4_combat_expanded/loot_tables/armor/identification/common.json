@@ -13,14 +13,6 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/common/fear"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/common/gloom"
-        },
-        {
-          "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:armor/identification/common/half"
         },
         {
@@ -33,15 +25,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/common/link"
-        },
-        {
-          "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:armor/identification/common/lunar"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/common/nocturnal"
         },
         {
           "type": "minecraft:loot_table",
@@ -70,10 +54,6 @@
         {
           "type": "minecraft:loot_table",
           "name": "gm4_combat_expanded:armor/identification/common/stall"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/common/thorns"
         },
         {
           "type": "minecraft:loot_table",

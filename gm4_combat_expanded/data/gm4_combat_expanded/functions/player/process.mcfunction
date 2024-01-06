@@ -6,9 +6,6 @@
 # process player deaths
 execute if score @s[scores={gm4_ce_deaths=1..}] gm4_ce_alivetime matches ..16 run function gm4_combat_expanded:player/process_death
 
-# calculate damage taken from guarding
-execute if entity @s[tag=gm4_ce_guardian,scores={gm4_ce_guard=10..}] run function gm4_combat_expanded:armor/modifier/type/guardian/damage_calc
-
 # translate being hit / killing mobs to timers
 # translate hurt2 score to count absorbed damage as well
 scoreboard players operation @s gm4_ce_hurt += @s gm4_ce_hurt2
