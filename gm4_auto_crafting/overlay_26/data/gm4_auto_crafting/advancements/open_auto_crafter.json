@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "blocks": [
+                                    "minecraft:dropper"
+                                ],
+                                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.auto_crafter\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}'}"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_auto_crafting:auto_crafter/caching/open_auto_crafter"
+    }
+}
