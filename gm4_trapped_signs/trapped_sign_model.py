@@ -4,15 +4,15 @@ from gm4.plugins.resource_pack import ModelData, TemplateOptions, ensure_single_
 class TrappedSignTemplate(TemplateOptions):
     """Generates the models for trapped signs, putting a shared overlay atop the vanilla sign texture"""
     name = "trapped_signs:sign_overlay"
+    hanging: bool
 
-    @classmethod
-    def process(cls, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
-        model_name = ensure_single_model_config(cls.name, config)
+    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+        model_name = ensure_single_model_config(self.name, config)
         m = models_container[model_name] = Model({
             "parent": f"minecraft:item/{config.item.entries()[0]}",
             "textures": {
                 # "layer0": inherited from the vanilla model
-                "layer1": "gm4_trapped_signs:item/trapped_sign_overlay"
+                "layer1": "gm4_trapped_signs:item/trapped_hanging_sign_overlay" if self.hanging else "gm4_trapped_signs:item/trapped_sign_overlay"
             }
         })
         return [m]

@@ -1,5 +1,9 @@
 {
   "items": {
+    "acacia_hanging_sign": {
+      "gm4_trapped_signs:item/secret_trapped_acacia_hanging_sign": 1,
+      "gm4_trapped_signs:item/trapped_acacia_hanging_sign": 2
+    },
     "acacia_sign": {
       "gm4_trapped_signs:item/trapped_acacia_sign": 1,
       "gm4_trapped_signs:item/secret_trapped_acacia_sign": 2
@@ -14,9 +18,17 @@
     "axolotl_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
     },
+    "bamboo_hanging_sign": {
+      "gm4_trapped_signs:item/secret_trapped_bamboo_hanging_sign": 1,
+      "gm4_trapped_signs:item/trapped_bamboo_hanging_sign": 2
+    },
     "bamboo_sign": {
       "gm4_trapped_signs:item/trapped_bamboo_sign": 1,
       "gm4_trapped_signs:item/secret_trapped_bamboo_sign": 2
+    },
+    "birch_hanging_sign": {
+      "gm4_trapped_signs:item/secret_trapped_birch_hanging_sign": 1,
+      "gm4_trapped_signs:item/trapped_birch_hanging_sign": 2
     },
     "birch_sign": {
       "gm4_trapped_signs:item/trapped_birch_sign": 1,
@@ -109,6 +121,10 @@
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_animi_shamir:shamir/animi": 124
     },
+    "cherry_hanging_sign": {
+      "gm4_trapped_signs:item/secret_trapped_cherry_hanging_sign": 1,
+      "gm4_trapped_signs:item/trapped_cherry_hanging_sign": 2
+    },
     "cherry_sign": {
       "gm4_trapped_signs:item/trapped_cherry_sign": 1,
       "gm4_trapped_signs:item/secret_trapped_cherry_sign": 2
@@ -154,12 +170,20 @@
       "gm4_auto_crafting:block/auto_crafter": 8,
       "gm4_tnt_landmines:entity/tnt_landmine_crafting_table": 45
     },
+    "crimson_hanging_sign": {
+      "gm4_trapped_signs:item/secret_trapped_crimson_hanging_sign": 1,
+      "gm4_trapped_signs:item/trapped_crimson_hanging_sign": 2
+    },
     "crimson_sign": {
       "gm4_trapped_signs:item/trapped_crimson_sign": 1,
       "gm4_trapped_signs:item/secret_trapped_crimson_sign": 2
     },
     "crossbow": {
       "gm4_animi_shamir:shamir/animi": 124
+    },
+    "dark_oak_hanging_sign": {
+      "gm4_trapped_signs:item/secret_trapped_dark_oak_hanging_sign": 1,
+      "gm4_trapped_signs:item/trapped_dark_oak_hanging_sign": 2
     },
     "dark_oak_sign": {
       "gm4_trapped_signs:item/trapped_dark_oak_sign": 1,
@@ -759,6 +783,10 @@
       "gm4_percurro_shamir:shamir/percurro": 117,
       "gm4_animi_shamir:shamir/animi": 124
     },
+    "jungle_hanging_sign": {
+      "gm4_trapped_signs:item/secret_trapped_jungle_hanging_sign": 1,
+      "gm4_trapped_signs:item/trapped_jungle_hanging_sign": 2
+    },
     "jungle_sign": {
       "gm4_trapped_signs:item/trapped_jungle_sign": 1,
       "gm4_trapped_signs:item/secret_trapped_jungle_sign": 2
@@ -809,6 +837,10 @@
     },
     "lodestone": {
       "gm4_teleportation_anchors:gui/advancement/teleportation_anchor": 1
+    },
+    "mangrove_hanging_sign": {
+      "gm4_trapped_signs:item/secret_trapped_mangrove_hanging_sign": 1,
+      "gm4_trapped_signs:item/trapped_mangrove_hanging_sign": 2
     },
     "mangrove_sign": {
       "gm4_trapped_signs:item/trapped_mangrove_sign": 1,
@@ -980,6 +1012,10 @@
     },
     "netherrack": {
       "gm4_tnt_landmines:entity/tnt_landmine_netherrack": 46
+    },
+    "oak_hanging_sign": {
+      "gm4_trapped_signs:item/secret_trapped_oak_hanging_sign": 1,
+      "gm4_trapped_signs:item/trapped_oak_hanging_sign": 2
     },
     "oak_planks": {
       "gm4_desire_lines:gui/advancement/desire_lines_8000": 1
@@ -1181,6 +1217,10 @@
       "gm4_display_frames:gui/advancement/display_frames": 1,
       "gm4_lightning_in_a_bottle:item/splash_lightning_in_a_bottle": 4
     },
+    "spruce_hanging_sign": {
+      "gm4_trapped_signs:item/secret_trapped_spruce_hanging_sign": 1,
+      "gm4_trapped_signs:item/trapped_spruce_hanging_sign": 2
+    },
     "spruce_sign": {
       "gm4_trapped_signs:item/trapped_spruce_sign": 1,
       "gm4_trapped_signs:item/secret_trapped_spruce_sign": 2
@@ -1274,6 +1314,10 @@
     },
     "warped_fungus_on_a_stick": {
       "gm4_animi_shamir:shamir/animi": 124
+    },
+    "warped_hanging_sign": {
+      "gm4_trapped_signs:item/secret_trapped_warped_hanging_sign": 1,
+      "gm4_trapped_signs:item/trapped_warped_hanging_sign": 2
     },
     "warped_sign": {
       "gm4_trapped_signs:item/trapped_warped_sign": 1,
