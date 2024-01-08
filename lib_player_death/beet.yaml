@@ -1,0 +1,20 @@
+id: gm4_player_death
+name: Gamemode 4 Player Death
+version: 1.0.X
+
+data_pack:
+  load: 
+    data: data
+
+pipeline:
+  - gm4.plugins.extend.library
+
+meta:
+  gm4:
+    versioning:
+      extra_version_injections:
+        advancements:
+          - death
+    credits:
+      Creator:
+        - Misode

@@ -6,6 +6,11 @@ data_pack:
   load: 
     - .
     - data/gm4_custom_crafters/loot_tables/items/custom_crafter.json: ../lib_custom_crafters/data/gm4_custom_crafters/loot_tables/items/custom_crafter.json
+  overlays:
+    - formats:
+        min_inclusive: 26
+        max_inclusive: 26
+      directory: overlay_26
 
 pipeline:
   - gm4_auto_crafting.generate

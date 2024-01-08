@@ -1,7 +1,3 @@
-# Add death tracking scoreboard and reset in case player died while module was disabled.
-scoreboard objectives add gm4_undead minecraft.custom:minecraft.deaths
-scoreboard players reset * gm4_undead
-
 # Add scoreboard used to implement custom logic for undead player drowned conversion.
 scoreboard objectives add gm4_undead_drown dummy
 

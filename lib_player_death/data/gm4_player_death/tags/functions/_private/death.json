@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "#gm4_player_death:soul_bound",
+      "required": false
+    },
+    {
+      "id": "#gm4_player_death:relocate",
+      "required": false
+    },
+    {
+      "id": "#gm4_player_death:grave",
+      "required": false
+    },
+    {
+      "id": "#gm4_player_death:death",
+      "required": false
+    }
+  ]
+}
