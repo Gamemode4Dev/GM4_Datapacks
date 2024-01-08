@@ -10,6 +10,7 @@ resource_pack:
 
 pipeline:
   - gm4_trapped_signs.trapped_sign_model
+  - gm4_trapped_signs.generate_types
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_custom_crafters
   - gm4.plugins.include.lib_machines

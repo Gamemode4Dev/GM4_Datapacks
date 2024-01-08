@@ -7,10 +7,13 @@ data_pack:
 
 pipeline:
   - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_player_death
 
 meta:
   gm4:
     versioning:
+      required:
+        lib_player_death: 1.0.0
       schedule_loops: [main]
     model_data:
       - item: zombie_head

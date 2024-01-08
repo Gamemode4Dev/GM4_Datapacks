@@ -12,12 +12,14 @@ resource_pack:
 pipeline:
   - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_player_death
 
 meta:
   gm4:
     versioning:
       required:
         gm4_metallurgy: 1.2.0
+        lib_player_death: 1.0.0
       schedule_loops: [main]
     model_data:
       - reference: shamir/animi
