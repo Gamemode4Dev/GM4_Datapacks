@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:{{custom_model_data}},gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/{{effect}}/{{texture_version}}\",Properties:{textures:[{Value:\"$crystal/{{effect}}\"}]}}}"
+                            "tag": "{CustomModelData:{{custom_model_data}},HideFlags:2,gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/{{effect}}/{{texture_version}}\",Properties:{textures:[{Value:\"$crystal/{{effect}}\"}]}}}"
                         },
                         {
                             "function": "minecraft:set_name",
@@ -18,6 +18,18 @@
                                 "fallback": "{{translate_fallback}}",
                                 "italic": false
                             }
+                        },
+                        {
+                            "function": "minecraft:set_attributes",
+                            "modifiers": [
+                                {
+                                    "attribute": "minecraft:horse.jump_strength",
+                                    "name": "gm4_unstackable",
+                                    "amount": 1,
+                                    "operation": "addition",
+                                    "slot": "legs"
+                                }
+                            ]
                         },
                         {
                             "function": "minecraft:set_lore",

@@ -8,6 +8,7 @@ advancement revoke @s only gm4_zauber_cauldrons:equipment/crystal/moved_into_off
 
 # get item data
 data modify storage gm4_zauber_cauldrons:temp/item/crystal Item set from entity @s Inventory[{Slot:-106b}]
+data remove storage gm4_zauber_cauldrons:temp/item/crystal Item.tag.HideFlags
 
 # set color
 for effect_data in ctx.meta['crystal_effects']:
