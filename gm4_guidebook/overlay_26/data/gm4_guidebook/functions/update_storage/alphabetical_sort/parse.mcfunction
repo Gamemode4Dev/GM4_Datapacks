@@ -3,6 +3,14 @@
 # located at world spawn
 # run from gm4_guidebook:update_storage/alphabetical_sort/setup
 
+# fallback to beet position if no entity was found
+scoreboard players set $found_sorter gm4_guide 0
+execute store result score $found_sorter gm4_guide run data get block 29999998 5 7133 SuccessCount
+execute if score $found_sorter gm4_guide matches 0 run return 0
+scoreboard players set $found_sorter gm4_guide 0
+execute store result score $found_sorter gm4_guide run data get block 29999998 5 7133 LastOutput
+execute if score $found_sorter gm4_guide matches 0 run return 0
+
 # get all tags as a string
 data modify storage gm4_guidebook:temp sort.curr set from block 29999998 5 7133 LastOutput
 
@@ -32,5 +40,4 @@ function gm4_guidebook:update_storage/alphabetical_sort/get_next_tag
 execute positioned ~ 0.01 ~ run function gm4_guidebook:update_storage/alphabetical_sort/move_next_marker
 
 # clean up
-kill @e[type=marker,tag=gm4_guide_sorter]
 data remove storage gm4_guidebook:temp sort
