@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:{{custom_model_data}},gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/{{effect}}/{{texture_version}}\",Properties:{textures:[{Value:\"$crystal/{{effect}}\"}]}},HideFlags:1}"
+                            "tag": "{CustomModelData:{{custom_model_data}},gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/{{effect}}/{{texture_version}}\",Properties:{textures:[{Value:\"$crystal/{{effect}}\"}]}}}"
                         },
                         {
                             "function": "minecraft:set_name",

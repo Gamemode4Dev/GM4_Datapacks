@@ -197,7 +197,7 @@ def beet_default(ctx: Context):
 
     # generate files
     generate_armor_recipes(ctx, armor_flavors, armor_pieces)
-    generate_crystal_recipes(ctx, crystal_effects, crystal_lores)
+    generate_crystal_recipes(ctx, crystal_effects, crystal_lores, potion_effects)
     generate_potion_recipes(ctx, potion_effects, potion_bottles, potion_lores)
     generate_magicol_recipes(ctx, weather_modifiers,
                              magicol_colors, potion_bottles)
@@ -255,7 +255,7 @@ def generate_armor_recipes(ctx: Context, armor_flavors: CSV, armor_pieces: CSV):
             ctx.require(subproject(subproject_config))
 
 
-def generate_crystal_recipes(ctx: Context, crystal_effects: CSV, crystal_lores: Dict[str, Any]):
+def generate_crystal_recipes(ctx: Context, crystal_effects: CSV, crystal_lores: Dict[str, Any], potion_effects: CSV):
     """
     Generates the function tree and loot tables for zauber crystals.
     """
@@ -266,7 +266,8 @@ def generate_crystal_recipes(ctx: Context, crystal_effects: CSV, crystal_lores: 
                 "load": [
                     {
                         f"data/gm4_zauber_cauldrons/functions/recipes/crystals/effects/{effect_data['effect']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/crystals/craft_crystal.mcfunction",
-                        f"data/gm4_zauber_cauldrons/loot_tables/items/crystals/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_crystal.json"
+                        f"data/gm4_zauber_cauldrons/loot_tables/items/crystals/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_crystal.json",
+                        f"data/gm4_zauber_cauldrons/loot_tables/technical/replace_offhand_crystal/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/replace_offhand_crystal.json"
                     }
                 ],
                 "render": {
@@ -277,6 +278,7 @@ def generate_crystal_recipes(ctx: Context, crystal_effects: CSV, crystal_lores: 
             "meta": {
                 "effect": effect_data['effect'],
                 "custom_model_data": effect_data['custom_model_data'],
+                "custom_potion_color": potion_effects.find_row(value=effect_data['effect'], by_column='effect')['custom_potion_color'].to_color_code(CSVCell.DEC),
                 "texture_version": effect_data['texture_version'],
                 "translate_fallback": effect_data['translate_fallback'],
                 "lore": json.dumps(crystal_lores[effect_data['effect']])
