@@ -6,11 +6,8 @@ data_pack:
     data: data
 
 resource_pack: 
-  load: 
-    assets/gm4/models: assets/gm4/models
-    assets/gm4/font: assets/gm4/font
-    assets/gm4/lang: assets/gm4/lang
-    assets/minecraft/atlases: assets/minecraft/atlases
+  load:
+    assets: assets
 
 pipeline:
   - beet.contrib.babelbox
