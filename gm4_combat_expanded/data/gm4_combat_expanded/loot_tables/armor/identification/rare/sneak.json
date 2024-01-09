@@ -12,13 +12,6 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "attribute": "generic.scale",
-                  "name": "gm4_combat_expanded",
-                  "amount": 0,
-                  "operation": "multiply_total",
-                  "slot": "chest"
-                },
-                {
                   "attribute": "minecraft:generic.armor",
                   "name": "gm4_ce_perm",
                   "amount": {
@@ -121,33 +114,18 @@
           ],
           "conditions": [
             {
-              "condition": "minecraft:any_of",
-              "terms": [
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$damage"
-                    },
-                    "score": "gm4_ce_data"
-                  },
-                  "range": 5
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
                 },
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$damage"
-                    },
-                    "score": "gm4_ce_data"
-                  },
-                  "range": 15
-                }
-              ]
+                "score": "gm4_ce_data"
+              },
+              "range": {
+                "max": 10
+              }
             }
           ]
         },
@@ -173,58 +151,6 @@
           ],
           "conditions": [
             {
-              "condition": "minecraft:any_of",
-              "terms": [
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$damage"
-                    },
-                    "score": "gm4_ce_data"
-                  },
-                  "range": 10
-                },
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$damage"
-                    },
-                    "score": "gm4_ce_data"
-                  },
-                  "range": 20
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "attribute.modifier.take.1",
-                "with": [
-                  {
-                    "text": "20"
-                  },
-                  {
-                    "translate": "attribute.name.generic.scale"
-                  }
-                ],
-                "color": "red",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
               "condition": "minecraft:value_check",
               "value": {
                 "type": "minecraft:score",
@@ -235,8 +161,7 @@
                 "score": "gm4_ce_data"
               },
               "range": {
-                "min": 15,
-                "max": 20
+                "min": 15
               }
             }
           ]

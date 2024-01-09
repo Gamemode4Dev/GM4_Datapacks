@@ -231,7 +231,7 @@
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -284,7 +284,7 @@
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -325,7 +325,7 @@
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -378,7 +378,7 @@
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [

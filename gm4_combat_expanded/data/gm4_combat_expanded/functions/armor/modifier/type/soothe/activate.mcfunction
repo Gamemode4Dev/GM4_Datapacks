@@ -21,16 +21,16 @@ execute if score $level gm4_ce_data matches 3 run effect give @a[distance=..6.25
 
 # healing pulse particles and sound
 playsound minecraft:block.conduit.activate player @a ~ ~ ~ 1 2
-execute positioned ~ ~.6 ~ summon marker run function gm4_combat_expanded:armor/modifier/type/soothe/particles
+execute positioned ~ ~.6 ~ summon marker at @s run function gm4_combat_expanded:armor/modifier/type/soothe/particles
 
 # use lib_lore to darken the 'Heal Pulse' text
 data modify storage gm4_lore:temp Source set from storage gm4_combat_expanded:temp tag.display.Lore
-execute if score $level gm4_ce_data matches 1 run data modify storage gm4_lore:temp Target set value '{"italic":false,"color":"blue","translate":"potion.withAmplifier","with":[{"translate":"item.gm4.combat_expanded.lore.soothe","fallback":"Heal Pulse"},{"translate":"potion.potency.0"}]}'
-execute if score $level gm4_ce_data matches 2 run data modify storage gm4_lore:temp Target set value '{"italic":false,"color":"blue","translate":"potion.withAmplifier","with":[{"translate":"item.gm4.combat_expanded.lore.soothe","fallback":"Heal Pulse"},{"translate":"potion.potency.1"}]}'
-execute if score $level gm4_ce_data matches 3 run data modify storage gm4_lore:temp Target set value '{"italic":false,"color":"blue","translate":"potion.withAmplifier","with":[{"translate":"item.gm4.combat_expanded.lore.soothe","fallback":"Heal Pulse"},{"translate":"potion.potency.2"}]}'
-execute if score $level gm4_ce_data matches 1 run data modify storage gm4_lore:temp Input set value ['{"italic":false,"color":"dark_gray","translate":"potion.withAmplifier","with":[{"translate":"item.gm4.combat_expanded.lore.soothe","fallback":"Heal Pulse"},{"translate":"potion.potency.0"}]}']
-execute if score $level gm4_ce_data matches 2 run data modify storage gm4_lore:temp Input set value ['{"italic":false,"color":"dark_gray","translate":"potion.withAmplifier","with":[{"translate":"item.gm4.combat_expanded.lore.soothe","fallback":"Heal Pulse"},{"translate":"potion.potency.1"}]}']
-execute if score $level gm4_ce_data matches 3 run data modify storage gm4_lore:temp Input set value ['{"italic":false,"color":"dark_gray","translate":"potion.withAmplifier","with":[{"translate":"item.gm4.combat_expanded.lore.soothe","fallback":"Heal Pulse"},{"translate":"potion.potency.2"}]}']
+execute if score $level gm4_ce_data matches 1 run data modify storage gm4_lore:temp Target set value '{"translate":"potion.withAmplifier","with":[{"translate":"item.gm4.combat_expanded.lore.soothe","fallback":"Heal Pulse"},{"translate":"potion.potency.0"}],"italic":false,"color":"blue"}'
+execute if score $level gm4_ce_data matches 2 run data modify storage gm4_lore:temp Target set value '{"translate":"potion.withAmplifier","with":[{"translate":"item.gm4.combat_expanded.lore.soothe","fallback":"Heal Pulse"},{"translate":"potion.potency.1"}],"italic":false,"color":"blue"}'
+execute if score $level gm4_ce_data matches 3 run data modify storage gm4_lore:temp Target set value '{"translate":"potion.withAmplifier","with":[{"translate":"item.gm4.combat_expanded.lore.soothe","fallback":"Heal Pulse"},{"translate":"potion.potency.2"}],"italic":false,"color":"blue"}'
+execute if score $level gm4_ce_data matches 1 run data modify storage gm4_lore:temp Input set value ['{"translate":"potion.withAmplifier","with":[{"translate":"item.gm4.combat_expanded.lore.soothe","fallback":"Heal Pulse"},{"translate":"potion.potency.0"}],"italic":false,"color":"dark_gray"}']
+execute if score $level gm4_ce_data matches 2 run data modify storage gm4_lore:temp Input set value ['{"translate":"potion.withAmplifier","with":[{"translate":"item.gm4.combat_expanded.lore.soothe","fallback":"Heal Pulse"},{"translate":"potion.potency.1"}],"italic":false,"color":"dark_gray"}']
+execute if score $level gm4_ce_data matches 3 run data modify storage gm4_lore:temp Input set value ['{"translate":"potion.withAmplifier","with":[{"translate":"item.gm4.combat_expanded.lore.soothe","fallback":"Heal Pulse"},{"translate":"potion.potency.2"}],"italic":false,"color":"dark_gray"}']
 function #gm4_lore:replace
 data modify storage gm4_combat_expanded:temp tag.display.Lore set from storage gm4_lore:temp Source
 

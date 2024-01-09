@@ -25,12 +25,17 @@
                 },
                 {
                     "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/common/convert",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/husk",
                     "weight": 1
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/lunar",
+                    "name": "gm4_combat_expanded:armor/identification/common/berserk",
                     "weight": 1
                 },
                 {
@@ -45,22 +50,12 @@
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/second_wind",
-                    "weight": 1
-                },
-                {
-                    "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/shielded",
                     "weight": 1
                 },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/solid",
-                    "weight": 1
-                },
-                {
-                    "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/totem",
                     "weight": 1
                 },
                 {
@@ -104,6 +99,11 @@
                 },
                 {
                     "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/rare/tiny",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/rare/canine",
                     "weight": 1
                 },
@@ -115,6 +115,11 @@
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/rare/immune",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/rare/totem",
                     "weight": 1
                 },
                 {

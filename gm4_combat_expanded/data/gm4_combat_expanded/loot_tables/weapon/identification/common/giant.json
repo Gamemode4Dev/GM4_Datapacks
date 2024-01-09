@@ -46,6 +46,13 @@
                   "amount": 0.5,
                   "operation": "addition",
                   "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.entity_interaction_range",
+                  "name": "gm4_ce_entity_interaction_range",
+                  "amount": 1,
+                  "operation": "addition",
+                  "slot": "mainhand"
                 }
               ]
             },
@@ -110,7 +117,7 @@
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -163,7 +170,7 @@
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -204,7 +211,7 @@
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -215,6 +222,27 @@
                   }
                 ],
                 "color": "red",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              " ",
+              {
+                "translate": "attribute.modifier.plus.0",
+                "with": [
+                  "1",
+                  {
+                    "translate": "attribute.name.generic.entity_interaction_range",
+                    "color": "dark_green"
+                  }
+                ],
+                "color": "dark_green",
                 "italic": false
               }
             ]

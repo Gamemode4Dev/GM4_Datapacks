@@ -1,0 +1,26 @@
+
+execute if score $wild_magic_roll gm4_ce_data matches 1 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/absorption
+execute if score $wild_magic_roll gm4_ce_data matches 2 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 3 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 4 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 5 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 6 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 7 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 8 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 9 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 10 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 11 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 12 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 13 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 14 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 15 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 16 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 17 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 18 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 19 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 20 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 21 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 22 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 23 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 24 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/
+execute if score $wild_magic_roll gm4_ce_data matches 25 run function gm4_combat_expanded:armor/modifier/type/wild_magic/potion_effect/

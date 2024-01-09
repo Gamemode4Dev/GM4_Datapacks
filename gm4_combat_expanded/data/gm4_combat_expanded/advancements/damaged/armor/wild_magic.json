@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "damage": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:modified_armor/wearing_wild_magic"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_combat_expanded:armor/modifier/type/wild_magic/activate"
+  }
+}

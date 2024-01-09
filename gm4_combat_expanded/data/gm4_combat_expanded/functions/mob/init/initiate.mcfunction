@@ -9,7 +9,8 @@ scoreboard players operation $difficulty gm4_ce_data = @p[gamemode=!spectator] g
 # get moon cycle (0 = new moon, 4 = full moon)
 execute store result score $moon gm4_ce_data run time query day
 scoreboard players operation $moon gm4_ce_data %= #8 gm4_ce_data
-execute if score $moon gm4_ce_data matches ..3 store result score $moon gm4_ce_data run scoreboard players operation #8 gm4_ce_data -= $moon gm4_ce_data
+scoreboard players set $8 gm4_ce_data 8
+execute if score $moon gm4_ce_data matches ..3 store result score $moon gm4_ce_data run scoreboard players operation $8 gm4_ce_data -= $moon gm4_ce_data
 scoreboard players remove $moon gm4_ce_data 4
 
 # modify difficulty score based on some factors, starting with a randomized value
@@ -53,6 +54,8 @@ execute if entity @s[type=enderman] run function gm4_combat_expanded:mob/init/mo
 execute if entity @s[type=phantom] run function gm4_combat_expanded:mob/init/mob_type/phantom
 execute if entity @s[type=wither_skeleton] run function gm4_combat_expanded:mob/init/mob_type/wither_skeleton
 execute if entity @s[type=piglin] run function gm4_combat_expanded:mob/init/mob_type/piglin
+execute if entity @s[type=pillager] run function gm4_combat_expanded:mob/init/mob_type/pillager
+execute if entity @s[type=vindicator] run function gm4_combat_expanded:mob/init/mob_type/vindicator
 execute if entity @s[type=zombified_piglin] run function gm4_combat_expanded:mob/init/mob_type/zombified_piglin
 execute if entity @s[type=hoglin] run function gm4_combat_expanded:mob/init/mob_type/hoglin
 execute if entity @s[type=#gm4_combat_expanded:basic_modifiers_only] run function gm4_combat_expanded:mob/init/mob_type/other
