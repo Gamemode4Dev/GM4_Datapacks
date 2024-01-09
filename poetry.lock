@@ -76,19 +76,19 @@ uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
 name = "bolt"
-version = "0.39.0"
+version = "0.44.0"
 description = "Supercharge Minecraft commands with Python"
 category = "main"
 optional = false
 python-versions = ">=3.10,<4.0"
 files = [
-    {file = "bolt-0.39.0-py3-none-any.whl", hash = "sha256:04438cb88f111d191a6d3b99505abf3d62af43d0a90182be1c11df32dbc37932"},
-    {file = "bolt-0.39.0.tar.gz", hash = "sha256:e8c8ae9f3dd2f2ef290df587793104b596c345cc177a94a840e52c7c6130fdf7"},
+    {file = "bolt-0.44.0-py3-none-any.whl", hash = "sha256:7f8405bef1943a113c545386d61fbbe02272d221ed261cc28ca3dfdc03cecb7c"},
+    {file = "bolt-0.44.0.tar.gz", hash = "sha256:17fda5d2d90ff8f8308559295373ec681ea17527579c46fcf0e7ba9fc9c05cb4"},
 ]
 
 [package.dependencies]
-beet = ">=0.96.1"
-mecha = ">=0.79.0"
+beet = ">=0.100.0"
+mecha = ">=0.85.1"
 
 [[package]]
 name = "certifi"
@@ -840,4 +840,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "d27c251819c66a2ad4ab33ec792e0fdf8a736f59b78b8a38841faf89b2384831"
+content-hash = "130b78785b88f76e418eb6a1d41f756aa94aab61ffc946c53f2161a2085d51cc"
