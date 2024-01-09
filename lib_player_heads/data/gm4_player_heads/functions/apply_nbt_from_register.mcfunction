@@ -4,8 +4,8 @@
 # run from repair_with_name and repair_with_texture
 
 # prepare register data
-data modify storage gm4_player_heads:register unstackable set value 0b
-execute store success score $enforce_unstackable gm4_player_heads run data modify storage gm4_player_heads:register unstackable set from storage gm4_player_heads:register temp[-1].unstackable
+scoreboard players set $enforce_unstackable gm4_player_heads 0
+execute store result score $enforce_unstackable gm4_player_heads run data get storage gm4_player_heads:register temp[-1].unstackable
 
 # enforce unstackable if flag was set in register
 execute if score $enforce_unstackable gm4_player_heads matches 1.. run data modify storage gm4_player_heads:register temp[-1].item.gm4_player_heads.uuid set from entity @s UUID[3]
