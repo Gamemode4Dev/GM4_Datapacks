@@ -9,7 +9,7 @@
           "equipment": {
             "feet": {
               "tag": "gm4_combat_expanded:armor",
-              "nbt": "{gm4_combat_expanded:{modifier:\"toxic\"}}"
+              "nbt": "{gm4_combat_expanded:{modifier_name:toxic}}"
             }
           }
         }
@@ -21,7 +21,7 @@
           "equipment": {
             "legs": {
               "tag": "gm4_combat_expanded:armor",
-              "nbt": "{gm4_combat_expanded:{modifier:\"toxic\"}}"
+              "nbt": "{gm4_combat_expanded:{modifier_name:toxic}}"
             }
           }
         }
@@ -33,7 +33,7 @@
           "equipment": {
             "chest": {
               "tag": "gm4_combat_expanded:armor",
-              "nbt": "{gm4_combat_expanded:{modifier:\"toxic\"}}"
+              "nbt": "{gm4_combat_expanded:{modifier_name:toxic}}"
             }
           }
         }
@@ -45,7 +45,7 @@
           "equipment": {
             "head": {
               "tag": "gm4_combat_expanded:armor",
-              "nbt": "{gm4_combat_expanded:{modifier:\"toxic\"}}"
+              "nbt": "{gm4_combat_expanded:{modifier_name:toxic}}"
             }
           }
         }

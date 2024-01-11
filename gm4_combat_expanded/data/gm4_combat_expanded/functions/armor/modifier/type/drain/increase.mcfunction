@@ -1,7 +1,7 @@
 # increase the health bonus on the drain armor
 # @s = player wearing armor
 # at unspecified
-# run from armor/check_modifier/killing
+# run from armor/modifier/type/drain/check
 
 # put changes on armor piece
 scoreboard players set $change gm4_ce_data 1

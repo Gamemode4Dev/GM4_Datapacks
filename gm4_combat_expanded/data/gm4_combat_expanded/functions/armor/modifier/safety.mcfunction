@@ -10,4 +10,3 @@ execute if score $modifier gm4_ce_data matches 12 unless score @s gm4_ce_t_hurt 
 execute if score $modifier gm4_ce_data matches 13 run function gm4_combat_expanded:armor/modifier/type/focus/check
 # unsafe (most triggered from advancements)
 execute if score $modifier gm4_ce_data matches 21 run function gm4_combat_expanded:armor/modifier/type/second_wind/check
-execute if score $modifier gm4_ce_data matches 35 if score @s gm4_ce_t_hurt matches 1.. run function gm4_combat_expanded:armor/modifier/type/drain/reduce

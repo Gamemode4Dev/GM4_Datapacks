@@ -2,7 +2,7 @@ execute unless entity @e[type=item,distance=..7,nbt={Item:{tag:{gm4_combat_expan
 
 data modify storage gm4_combat_expanded:temp tag set from entity @e[type=item,distance=..7,nbt={Item:{tag:{gm4_combat_expanded:{identified:0}}}},limit=1,sort=nearest] Item.tag
 function gm4_combat_expanded:identification/armor/randomize_stats
-loot replace block 29999998 1 7134 container.4 loot gm4_combat_expanded:armor/identification/epic/wild_magic
+loot replace block 29999998 1 7134 container.4 loot gm4_combat_expanded:armor/identification/common/drain
 data modify storage gm4_combat_expanded:temp stored_name set from storage gm4_combat_expanded:temp tag.display.Name
 execute store result score $namelen gm4_ce_data run data get storage gm4_combat_expanded:temp stored_name
 data modify storage gm4_combat_expanded:temp tag merge from block 29999998 1 7134 Items[{Slot:4b}].tag

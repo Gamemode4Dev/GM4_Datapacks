@@ -58,7 +58,7 @@
                 "",
                 {
                   "translate": "potion.whenDrank",
-                  "color": "purple",
+                  "color": "dark_purple",
                   "italic": false
                 },
                 {

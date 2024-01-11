@@ -16,25 +16,25 @@ scoreboard players set $level.instant_health gm4_ce_data 0
 
 # add levels among pieces
 scoreboard players set $level gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded.toxic store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded.level
+execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded{modifier_name:toxic} store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded.level
 execute if score $level gm4_ce_data matches 1 run scoreboard players add $level.poison gm4_ce_data 1
 execute if score $level gm4_ce_data matches 2 run scoreboard players add $level.weakness gm4_ce_data 1
 execute if score $level gm4_ce_data matches 3 run scoreboard players add $level.instant_health gm4_ce_data 1
 
 scoreboard players set $level gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded.toxic store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded.level
+execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded{modifier_name:toxic} store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded.level
 execute if score $level gm4_ce_data matches 1 run scoreboard players add $level.poison gm4_ce_data 1
 execute if score $level gm4_ce_data matches 2 run scoreboard players add $level.weakness gm4_ce_data 1
 execute if score $level gm4_ce_data matches 3 run scoreboard players add $level.instant_health gm4_ce_data 1
 
 scoreboard players set $level gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded.toxic store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded.level
+execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded{modifier_name:toxic} store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded.level
 execute if score $level gm4_ce_data matches 1 run scoreboard players add $level.poison gm4_ce_data 1
 execute if score $level gm4_ce_data matches 2 run scoreboard players add $level.weakness gm4_ce_data 1
 execute if score $level gm4_ce_data matches 3 run scoreboard players add $level.instant_health gm4_ce_data 1
 
 scoreboard players set $level gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded.toxic store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded.level
+execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded{modifier_name:toxic} store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded.level
 execute if score $level gm4_ce_data matches 1 run scoreboard players add $level.poison gm4_ce_data 1
 execute if score $level gm4_ce_data matches 2 run scoreboard players add $level.weakness gm4_ce_data 1
 execute if score $level gm4_ce_data matches 3 run scoreboard players add $level.instant_health gm4_ce_data 1

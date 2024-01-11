@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:\"wild_magic\"}}"
+              "tag": "{gm4_combat_expanded:{modifier_name:wild_magic}}"
             }
           ]
         }
@@ -40,7 +40,7 @@
             [
               {
                 "translate": "item.gm4.combat_expanded.lore.wild_magic",
-                "fallback": "Do Something",
+                "fallback": "It must do Something",
                 "color": "blue",
                 "italic": false
               }
