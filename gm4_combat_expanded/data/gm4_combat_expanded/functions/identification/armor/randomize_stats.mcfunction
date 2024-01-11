@@ -20,8 +20,6 @@ data modify storage gm4_combat_expanded:temp Items set from block 29999998 1 713
 execute store result score $armor gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:5b}].Count
 scoreboard players operation $armor- gm4_ce_data = $armor gm4_ce_data
 scoreboard players operation $armor- gm4_ce_data -= #4 gm4_ce_data
-scoreboard players operation $solid_armor gm4_ce_data = $armor gm4_ce_data
-scoreboard players add $solid_armor gm4_ce_data 3
 # clamp $armor- to armor of piece
 execute store result score $armor_clamp gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.armor_clamp
 scoreboard players operation $armor- gm4_ce_data > $armor_clamp gm4_ce_data
@@ -38,10 +36,6 @@ scoreboard players operation $damage-_10 gm4_ce_data = $damage- gm4_ce_data
 scoreboard players operation $damage-_10 gm4_ce_data /= #10 gm4_ce_data
 scoreboard players operation $damage-_01 gm4_ce_data = $damage- gm4_ce_data
 scoreboard players operation $damage-_01 gm4_ce_data %= #10 gm4_ce_data
-# double damage value
-scoreboard players operation $damage_double gm4_ce_data = $damage gm4_ce_data
-scoreboard players operation $damage_double gm4_ce_data += $damage gm4_ce_data
-scoreboard players operation $damage_double gm4_ce_data /= #10 gm4_ce_data
 # movement speed 5 - 20
 execute store result score $speed gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:7b}].Count
 scoreboard players operation $speed- gm4_ce_data = $speed gm4_ce_data
@@ -53,10 +47,12 @@ scoreboard players operation $atkspeed- gm4_ce_data -= #35 gm4_ce_data
 # special stats for consuming armor (stepsize and cap)
 execute store result score $constep gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:9b}].Count
 execute store result score $consume gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:10b}].Count 50
+# special stats for focus armor
+scoreboard players operation $focus_damage_10 gm4_ce_data = $damage_10 gm4_ce_data
+scoreboard players operation $focus_damage_10 gm4_ce_data += $armor gm4_ce_data
 
 # store results in storage for changing attributes
 execute store result storage gm4_combat_expanded:temp armor int 1 run scoreboard players get $armor gm4_ce_data
-execute store result storage gm4_combat_expanded:temp solid_armor int 1 run scoreboard players get $solid_armor gm4_ce_data
 execute store result storage gm4_combat_expanded:temp damage float 0.1 run scoreboard players get $damage gm4_ce_data
 execute store result storage gm4_combat_expanded:temp level float 0.2 run scoreboard players get $damage gm4_ce_data
 execute store result storage gm4_combat_expanded:temp speed int 1 run scoreboard players get $speed gm4_ce_data

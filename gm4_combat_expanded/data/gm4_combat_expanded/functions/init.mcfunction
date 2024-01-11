@@ -30,8 +30,6 @@ scoreboard objectives add gm4_ce_t_hurt dummy
 scoreboard objectives add gm4_ce_kill minecraft.custom:minecraft.mob_kills
 scoreboard objectives add gm4_ce_t_shield dummy
 scoreboard objectives add gm4_ce_t_delay dummy
-scoreboard objectives add gm4_ce_t_guard dummy
-scoreboard objectives add gm4_ce_t_kill dummy
 scoreboard objectives add gm4_ce_t_soothe dummy
 scoreboard objectives add gm4_ce_t_wolf dummy
 scoreboard objectives add gm4_ce_t_sprinting dummy
@@ -51,6 +49,7 @@ scoreboard objectives add gm4_ce_used_crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add gm4_ce_natural_regen_damage dummy
 scoreboard objectives add gm4_ce_natural_regen_delay dummy
 scoreboard objectives add gm4_ce_death_mult dummy
+scoreboard objectives add gm4_ce_second_wind dummy
 
 scoreboard objectives add gm4_ce_sleep custom:sleep_in_bed
 scoreboard objectives add gm4_ce_last_sleep dummy

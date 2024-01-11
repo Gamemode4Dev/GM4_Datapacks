@@ -22,7 +22,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{vorpal:1}}"
+              "tag": "{gm4_combat_expanded:{modifier:\"vorpal\"}}"
             },
             {
               "function": "minecraft:copy_nbt",
@@ -85,11 +85,11 @@
                   "nbt": "tag.gm4_combat_expanded.name",
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true,
-                  "color": "yellow"
+                  "color": "light_purple"
                 }
               ],
               "italic": false,
-              "color": "yellow"
+              "color": "light_purple"
             }
           ]
         }

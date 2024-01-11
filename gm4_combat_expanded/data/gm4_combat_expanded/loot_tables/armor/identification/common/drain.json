@@ -12,19 +12,29 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.armor",
-                  "name": "gm4_ce_perm",
-                  "amount": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$armor-"
-                    },
-                    "score": "gm4_ce_data",
-                    "scale": 1
-                  },
+                  "attribute": "minecraft:generic.max_health",
+                  "name": "gm4_combat_expanded",
+                  "amount": 0,
                   "operation": "addition",
                   "slot": "chest"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_expanded:{modifier:35}}"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_combat_expanded:temp"
+              },
+              "ops": [
+                {
+                  "source": "armor",
+                  "target": "gm4_combat_expanded.level",
+                  "op": "replace"
                 }
               ]
             },
@@ -37,25 +47,7 @@
               "ops": [
                 {
                   "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
-                  "op": "replace"
-                }
-              ]
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:\"toxic\"}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "armor",
-                  "target": "gm4_combat_expanded.level",
+                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded\"}].Slot",
                   "op": "replace"
                 }
               ]
@@ -74,8 +66,8 @@
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "item.gm4.combat_expanded.lore.unsafe",
-              "fallback": "When Under Attack:",
+              "translate": "item.gm4.combat_expanded.lore.killing",
+              "fallback": "When Killing:",
               "color": "gray",
               "italic": false
             }
@@ -87,23 +79,25 @@
           "lore": [
             [
               {
-                "translate": "potion.withDuration",
+                "translate": "item.gm4.combat_expanded.lore.drain",
+                "fallback": "%s (Max %s)",
                 "with": [
                   [
                     {
-                      "translate": "attribute.gm4.combat_expanded.toxic",
-                      "fallback": "%s %s",
+                      "translate": "attribute.modifier.plus.0",
                       "with": [
                         {
-                          "translate": "effect.minecraft.poison"
+                          "text": "1"
                         },
                         {
-                          "translate": "enchantment.minecraft.thorns"
+                          "translate": "attribute.name.generic.max_health"
                         }
                       ]
                     }
                   ],
-                  "0:05"
+                  {
+                    "text": "6"
+                  }
                 ],
                 "color": "blue",
                 "italic": false
@@ -131,23 +125,25 @@
           "lore": [
             [
               {
-                "translate": "potion.withDuration",
+                "translate": "item.gm4.combat_expanded.lore.drain",
+                "fallback": "%s (Max %s)",
                 "with": [
                   [
                     {
-                      "translate": "attribute.gm4.combat_expanded.toxic",
-                      "fallback": "%s %s",
+                      "translate": "attribute.modifier.plus.0",
                       "with": [
                         {
-                          "translate": "effect.minecraft.weakness"
+                          "text": "1"
                         },
                         {
-                          "translate": "enchantment.minecraft.thorns"
+                          "translate": "attribute.name.generic.max_health"
                         }
                       ]
                     }
                   ],
-                  "0:05"
+                  {
+                    "text": "8"
+                  }
                 ],
                 "color": "blue",
                 "italic": false
@@ -175,22 +171,24 @@
           "lore": [
             [
               {
-                "translate": "attribute.gm4.combat_expanded.toxic",
-                "fallback": "%s %s",
+                "translate": "item.gm4.combat_expanded.lore.drain",
+                "fallback": "%s (Max %s)",
                 "with": [
+                  [
+                    {
+                      "translate": "attribute.modifier.plus.0",
+                      "with": [
+                        {
+                          "text": "1"
+                        },
+                        {
+                          "translate": "attribute.name.generic.max_health"
+                        }
+                      ]
+                    }
+                  ],
                   {
-                    "translate": "potion.withAmplifier",
-                    "with": [
-                      {
-                        "translate": "effect.minecraft.instant_health"
-                      },
-                      {
-                        "translate": "potion.potency.1"
-                      }
-                    ]
-                  },
-                  {
-                    "translate": "enchantment.minecraft.thorns"
+                    "text": "10"
                   }
                 ],
                 "color": "blue",
@@ -214,12 +212,50 @@
           ]
         },
         {
+          "function": "minecraft:set_lore",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.unsafe",
+              "fallback": "When Under Attack:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.take.0",
+                "with": [
+                  {
+                    "text": "1"
+                  },
+                  {
+                    "translate": "attribute.name.generic.max_health"
+                  }
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
           "function": "minecraft:set_name",
           "entity": "this",
           "name": [
             {
-              "translate": "item.gm4.combat_expanded.name.toxic",
-              "fallback": "Coated %s",
+              "translate": "item.gm4.combat_expanded.name.drain",
+              "fallback": "Draining %s",
               "with": [
                 {
                   "nbt": "tag.gm4_combat_expanded.name",

@@ -29,7 +29,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{reactive:1}}"
+              "tag": "{gm4_combat_expanded:{modifier:\"reactive\"}}"
             },
             {
               "function": "minecraft:copy_nbt",

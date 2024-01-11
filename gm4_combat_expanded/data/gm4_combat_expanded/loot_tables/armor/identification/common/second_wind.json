@@ -18,10 +18,10 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "$armor-"
+                      "name": "$damage"
                     },
                     "score": "gm4_ce_data",
-                    "scale": 1
+                    "scale": -0.2
                   },
                   "operation": "addition",
                   "slot": "chest"
@@ -44,7 +44,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:\"toxic\"}}"
+              "tag": "{gm4_combat_expanded:{modifier:21}}"
             },
             {
               "function": "minecraft:copy_nbt",
@@ -87,23 +87,12 @@
           "lore": [
             [
               {
-                "translate": "potion.withDuration",
+                "translate": "item.gm4.combat_expanded.lore.second_wind",
+                "fallback": "Store %s% of Damage",
                 "with": [
-                  [
                     {
-                      "translate": "attribute.gm4.combat_expanded.toxic",
-                      "fallback": "%s %s",
-                      "with": [
-                        {
-                          "translate": "effect.minecraft.poison"
-                        },
-                        {
-                          "translate": "enchantment.minecraft.thorns"
-                        }
-                      ]
+                        "text": "10"
                     }
-                  ],
-                  "0:05"
                 ],
                 "color": "blue",
                 "italic": false
@@ -131,23 +120,12 @@
           "lore": [
             [
               {
-                "translate": "potion.withDuration",
+                "translate": "item.gm4.combat_expanded.lore.second_wind",
+                "fallback": "Store %s% of Damage",
                 "with": [
-                  [
                     {
-                      "translate": "attribute.gm4.combat_expanded.toxic",
-                      "fallback": "%s %s",
-                      "with": [
-                        {
-                          "translate": "effect.minecraft.weakness"
-                        },
-                        {
-                          "translate": "enchantment.minecraft.thorns"
-                        }
-                      ]
+                        "text": "20"
                     }
-                  ],
-                  "0:05"
                 ],
                 "color": "blue",
                 "italic": false
@@ -175,23 +153,12 @@
           "lore": [
             [
               {
-                "translate": "attribute.gm4.combat_expanded.toxic",
-                "fallback": "%s %s",
+                "translate": "item.gm4.combat_expanded.lore.second_wind",
+                "fallback": "Store %s% of Damage",
                 "with": [
-                  {
-                    "translate": "potion.withAmplifier",
-                    "with": [
-                      {
-                        "translate": "effect.minecraft.instant_health"
-                      },
-                      {
-                        "translate": "potion.potency.1"
-                      }
-                    ]
-                  },
-                  {
-                    "translate": "enchantment.minecraft.thorns"
-                  }
+                    {
+                        "text": "30"
+                    }
                 ],
                 "color": "blue",
                 "italic": false
@@ -214,12 +181,43 @@
           ]
         },
         {
+          "function": "minecraft:set_lore",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.safe",
+              "fallback": "When Not Under Attack:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.second_wind_2",
+                "fallback": "Restore Stored Health",
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
           "function": "minecraft:set_name",
           "entity": "this",
           "name": [
             {
-              "translate": "item.gm4.combat_expanded.name.toxic",
-              "fallback": "Coated %s",
+              "translate": "item.gm4.combat_expanded.name.second_wind",
+              "fallback": "Rejuvenating %s",
               "with": [
                 {
                   "nbt": "tag.gm4_combat_expanded.name",

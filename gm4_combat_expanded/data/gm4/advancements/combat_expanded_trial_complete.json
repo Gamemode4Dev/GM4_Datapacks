@@ -10,12 +10,12 @@
     },
     "description": {
       "translate": "advancement.gm4.combat_expanded.trial_complete.description",
-      "fallback": "Complete a Combat Trial and claim your reward!"
+      "fallback": "Complete a Combat Trial and claim your reward!",
+      "color": "gray"
     },
-    "frame": "challenge",
-    "hidden": true
+    "frame": "task"
   },
-  "parent": "gm4:combat_expanded_trial_found",
+  "parent": "gm4:combat_expanded_identify",
   "criteria": {
     "challenger": {
       "trigger": "minecraft:impossible"

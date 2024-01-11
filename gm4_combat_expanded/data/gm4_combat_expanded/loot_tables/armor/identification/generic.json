@@ -6,92 +6,63 @@
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/archer",
-                    "weight": 1
+                    "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/beacon",
-                    "weight": 1
+                    "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/half",
-                    "weight": 1
+                    "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/horse",
-                    "weight": 1
+                    "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/convert",
-                    "weight": 1
+                    "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/husk",
-                    "weight": 1
+                    "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/berserk",
-                    "weight": 1
+                    "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/poised",
-                    "weight": 1
+                    "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/scout",
-                    "weight": 1
+                    "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/shielded",
-                    "weight": 1
-                },
-                {
-                    "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/solid",
-                    "weight": 1
+                    "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/toxic",
-                    "weight": 1
+                    "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/common/vamp",
-                    "weight": 1
-                }
-            ],
-            "conditions": [
-                {
-                    "condition": "minecraft:inverted",
-                    "term": {
-                        "condition": "minecraft:value_check",
-                        "value": {
-                            "type": "minecraft:score",
-                            "target": {
-                                "type": "minecraft:fixed",
-                                "name": "$identification_rarity"
-                            },
-                            "score": "gm4_ce_data"
-                        },
-                        "range": {
-                            "min": 1
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
+                    "weight": 10
+                },
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/rare/big",
@@ -139,24 +110,13 @@
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/rare/vorpal",
-                    "weight": 1
-                }
-            ],
-            "conditions": [
+                    "name": "gm4_combat_expanded:armor/identification/epic/vorpal",
+                    "weight": 0
+                },
                 {
-                    "condition": "minecraft:value_check",
-                    "value": {
-                        "type": "minecraft:score",
-                        "target": {
-                            "type": "minecraft:fixed",
-                            "name": "$identification_rarity"
-                        },
-                        "score": "gm4_ce_data"
-                    },
-                    "range": {
-                        "min": 1
-                    }
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/epic/wild_magic",
+                    "weight": 0
                 }
             ]
         }

@@ -6,11 +6,10 @@
 # process player deaths
 execute if score @s[scores={gm4_ce_deaths=1..}] gm4_ce_alivetime matches ..16 run function gm4_combat_expanded:player/process_death
 
-# translate being hit / killing mobs to timers
-# translate hurt2 score to count absorbed damage as well
-scoreboard players operation @s gm4_ce_hurt += @s gm4_ce_hurt2
-scoreboard players set @s[scores={gm4_ce_hurt=1..}] gm4_ce_t_hurt 5
-scoreboard players set @s[scores={gm4_ce_kill=1..}] gm4_ce_t_kill 5
+# translate being hit to timer
+# hurt2 also counts damage absorbed
+scoreboard players operation @s gm4_ce_hurt2 += @s gm4_ce_hurt
+scoreboard players set @s[scores={gm4_ce_hurt2=1..}] gm4_ce_t_hurt 5
 
 # natural regen
 execute unless score $natural_regen gm4_ce_data matches -1 store result score $natural_regen gm4_ce_data run gamerule naturalRegeneration
@@ -41,6 +40,13 @@ execute if score @s gm4_ce_sleep matches 1.. at @s run function gm4_combat_expan
 
 # reset mount tag from horse armor
 execute on vehicle run tag @s remove gm4_ce_speed_given
+
+# remove second wind tag if armor is taken off
+tag @s[tag=gm4_ce_second_wind.active,predicate=!gm4_combat_expanded:modified_armor/wearing_second_wind] remove gm4_ce_second_wind.active
+
+# check if player has no health left
+execute store result score $player_health gm4_ce_data run attribute @s generic.max_health get
+execute if score $player_health gm4_ce_data matches 0 run function gm4_combat_expanded:player/no_health_death
 
 ##TODO: remove this
 # DEV: trigger for players with `gm4_ce_dev` tag
