@@ -10,14 +10,14 @@
       "argument1": 2,
       "argument2": {
         "type": "minecraft:add",
-        "argument1": -0.3,
+        "argument1": -0.4,
         "argument2": {
           "type": "minecraft:abs",
           "argument": {
             "type": "minecraft:shifted_noise",
             "noise": "gm4_sky_dimension:vegetation",
             "xz_scale": 5,
-            "y_scale": 5,
+            "y_scale": 2,
             "shift_x": "minecraft:shift_x",
             "shift_y": 0,
             "shift_z": "minecraft:shift_z"

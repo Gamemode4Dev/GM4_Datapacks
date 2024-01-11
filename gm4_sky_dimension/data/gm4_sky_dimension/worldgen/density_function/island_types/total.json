@@ -15,7 +15,7 @@
               "coordinate": "gm4_sky_dimension:routers/erosion",
               "points": [
                 {
-                  "location": -0.77,
+                  "location": -0.52,
                   "derivative": 0,
                   "value": {
                     "coordinate": "gm4_sky_dimension:routers/continents",
@@ -48,7 +48,7 @@
                   }
                 },
                 {
-                  "location": -0.72,
+                  "location": -0.47,
                   "derivative": 0,
                   "value": -1.5
                 }
@@ -68,7 +68,7 @@
               "coordinate": "gm4_sky_dimension:routers/erosion",
               "points": [
                 {
-                  "location": -0.79,
+                  "location": -0.54,
                   "derivative": 0,
                   "value": {
                     "coordinate": "gm4_sky_dimension:routers/continents",
@@ -101,7 +101,7 @@
                   }
                 },
                 {
-                  "location": -0.72,
+                  "location": -0.47,
                   "derivative": 0,
                   "value": -3
                 }
@@ -122,7 +122,7 @@
             "coordinate": "gm4_sky_dimension:routers/erosion",
             "points": [
               {
-                "location": -0.8,
+                "location": -0.55,
                 "derivative": 0,
                 "value": {
                   "coordinate": "gm4_sky_dimension:routers/continents",
@@ -155,7 +155,7 @@
                 }
               },
               {
-                "location": -0.72,
+                "location": -0.47,
                 "derivative": 0,
                 "value": -2
               }
@@ -261,17 +261,17 @@
               "coordinate": "gm4_sky_dimension:routers/erosion",
               "points": [
                 {
-                  "location": -0.75,
+                  "location": -0.5,
                   "derivative": 0,
                   "value": -2
                 },
                 {
-                  "location": -0.73,
+                  "location": -0.48,
                   "derivative": 0,
                   "value": -1
                 },
                 {
-                  "location": -0.7,
+                  "location": -0.45,
                   "derivative": 0,
                   "value": 0
                 },
@@ -301,17 +301,17 @@
               "coordinate": "gm4_sky_dimension:routers/erosion",
               "points": [
                 {
-                  "location": -0.75,
+                  "location": -0.55,
                   "derivative": 0,
                   "value": -2
                 },
                 {
-                  "location": -0.73,
+                  "location": -0.48,
                   "derivative": 0,
                   "value": -1
                 },
                 {
-                  "location": -0.7,
+                  "location": -0.45,
                   "derivative": 0,
                   "value": 0
                 },
