@@ -1,31 +1,73 @@
 {
-  "type": "minecraft:add",
-  "argument1": {
-    "type": "minecraft:interpolated",
-    "argument": {
+  "type": "minecraft:squeeze",
+  "argument": {
+    "type": "minecraft:add",
+    "argument1": {
       "type": "minecraft:add",
-      "argument1": "gm4_sky_dimension:island_types/normal/middle/gradient_topside",
+      "argument1": {
+        "type": "minecraft:interpolated",
+        "argument": {
+          "type": "minecraft:add",
+          "argument1": "gm4_sky_dimension:island_types/normal/middle/gradient_topside",
+          "argument2": {
+            "type": "minecraft:add",
+            "argument1": 0.5,
+            "argument2": {
+              "type": "minecraft:abs",
+              "argument": {
+                "type": "minecraft:shifted_noise",
+                "noise": "gm4_sky_dimension:island_types/middle",
+                "xz_scale": 0,
+                "y_scale": 0,
+                "shift_x": "minecraft:shift_x",
+                "shift_y": 0,
+                "shift_z": "minecraft:shift_z"
+              }
+            }
+          }
+        }
+      },
       "argument2": {
-        "type": "minecraft:add",
-        "argument1": 0.5,
-        "argument2": {
-          "type": "minecraft:abs",
+        "type": "minecraft:mul",
+        "argument1": -1,
+        "argument2": "gm4_sky_dimension:island_types/normal/middle/shift"
+      }
+    },
+    "argument2": {
+      "type": "minecraft:mul",
+      "argument1": {
+        "type": "minecraft:abs",
+        "argument": {
+          "type": "minecraft:quarter_negative",
           "argument": {
             "type": "minecraft:shifted_noise",
             "noise": "gm4_sky_dimension:island_types/middle",
-            "xz_scale": 0,
+            "xz_scale": 1.3,
             "y_scale": 0,
             "shift_x": "minecraft:shift_x",
             "shift_y": 0,
             "shift_z": "minecraft:shift_z"
           }
         }
+      },
+      "argument2": {
+        "type": "minecraft:spline",
+        "spline": {
+          "coordinate": "gm4_sky_dimension:routers/ridges",
+          "points": [
+            {
+              "location": 0,
+              "derivative": 0,
+              "value": 0
+            },
+            {
+              "location": 0.7,
+              "derivative": 0,
+              "value": 0.7
+            }
+          ]
+        }
       }
     }
-  },
-  "argument2": {
-    "type": "minecraft:mul",
-    "argument1": -1,
-    "argument2": "gm4_sky_dimension:island_types/normal/middle/shift"
   }
 }
