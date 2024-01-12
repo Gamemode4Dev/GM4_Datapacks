@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:modified_armor/link"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_combat_expanded:armor/modifier/type/link/activate"
+  }
+}

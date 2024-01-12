@@ -17,7 +17,7 @@ execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm
 
 # check for archer armor
 tag @s remove gm4_ce_wearing_archer
-tag @s[predicate=gm4_combat_expanded:modified_armor/wearing_archer] add gm4_ce_wearing_archer
+tag @s[predicate=gm4_combat_expanded:modified_armor/archer] add gm4_ce_wearing_archer
 
 # remove husk sprint score if player didn't sprint for too long
 execute unless score @s gm4_ce_sprinting matches 1.. run scoreboard players add @s[scores={gm4_ce_t_sprinting=1..}] gm4_ce_sprinting_timeout 1
@@ -25,6 +25,7 @@ scoreboard players reset @s[scores={gm4_ce_sprinting_timeout=3..,gm4_ce_t_sprint
 
 # remove tags
 tag @s remove gm4_ce_beacon_active
+tag @s remove gm4_ce_linked
 execute if entity @s[tag=gm4_ce_immune_active] run function gm4_combat_expanded:armor/modifier/type/immune/clear_immunities
 
 # process armor
@@ -42,7 +43,7 @@ execute if score @s gm4_ce_sleep matches 1.. at @s run function gm4_combat_expan
 execute on vehicle run tag @s remove gm4_ce_speed_given
 
 # remove second wind tag if armor is taken off
-tag @s[tag=gm4_ce_second_wind.active,predicate=!gm4_combat_expanded:modified_armor/wearing_second_wind] remove gm4_ce_second_wind.active
+tag @s[tag=gm4_ce_second_wind.active,predicate=!gm4_combat_expanded:modified_armor/second_wind] remove gm4_ce_second_wind.active
 
 # check if player has no health left
 execute store result score $player_health gm4_ce_data run attribute @s generic.max_health get

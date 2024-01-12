@@ -2,6 +2,7 @@
 # @s = player to heal
 # at unspecified
 # run from player/process
+# run from armor/modifier/type/link/process/set_health
 
 function gm4_combat_expanded:player/calculate_hp
 

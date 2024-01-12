@@ -3,15 +3,11 @@
 # @s = player to calculate health from
 # at unspecified
 # run from armor/modifier/type/hp_check
-# run from armor/modifier/type/highhp
-# run from armor/modifier/type/lowhp
-# run from armor/modifier/type/guardian/check
-# run from armor/modifier/type/guardian/damage_calc
-# run from armor/modifier/type/overload/activate
+# run from armor/modifier/type/link/process/damage_taken
+# run from armor/modifier/type/link/general
 # run from player/heal/heal_calc
 # run from player/regen/check
 # run from weapon/modifier/delay/explode_player
-# run from weapon/modifier/wither/activate
 
 # get max health
 execute store result score $max_health gm4_ce_data run attribute @s minecraft:generic.max_health get

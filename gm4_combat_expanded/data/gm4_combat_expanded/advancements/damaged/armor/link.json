@@ -6,13 +6,13 @@
         "player": [
           {
             "condition": "minecraft:reference",
-            "name": "gm4_combat_expanded:modified_armor/vorpal"
+            "name": "gm4_combat_expanded:modified_armor/link"
           }
         ]
       }
     }
   },
   "rewards": {
-    "function": "gm4_combat_expanded:armor/modifier/type/vorpal/schedule"
+    "function": "gm4_combat_expanded:armor/modifier/type/link/process/damage_taken"
   }
 }

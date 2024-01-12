@@ -14,7 +14,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/diamond"
+              "name": "gm4_combat_expanded:mob/material_check/diamond"
             }
           ]
         },
@@ -24,7 +24,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+              "name": "gm4_combat_expanded:mob/material_check/iron"
             }
           ]
         },
@@ -34,7 +34,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/golden"
+              "name": "gm4_combat_expanded:mob/material_check/golden"
             }
           ]
         },
@@ -44,7 +44,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+              "name": "gm4_combat_expanded:mob/material_check/chainmail"
             }
           ]
         },
@@ -54,7 +54,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/leather"
+              "name": "gm4_combat_expanded:mob/material_check/leather"
             }
           ]
         }
@@ -73,7 +73,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/diamond"
+              "name": "gm4_combat_expanded:mob/material_check/diamond"
             }
           ]
         },
@@ -83,7 +83,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+              "name": "gm4_combat_expanded:mob/material_check/iron"
             }
           ]
         },
@@ -93,7 +93,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/golden"
+              "name": "gm4_combat_expanded:mob/material_check/golden"
             }
           ]
         },
@@ -103,7 +103,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+              "name": "gm4_combat_expanded:mob/material_check/chainmail"
             }
           ]
         },
@@ -113,7 +113,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/leather"
+              "name": "gm4_combat_expanded:mob/material_check/leather"
             }
           ]
         }
@@ -132,7 +132,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/diamond"
+              "name": "gm4_combat_expanded:mob/material_check/diamond"
             }
           ]
         },
@@ -142,7 +142,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+              "name": "gm4_combat_expanded:mob/material_check/iron"
             }
           ]
         },
@@ -152,7 +152,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/golden"
+              "name": "gm4_combat_expanded:mob/material_check/golden"
             }
           ]
         },
@@ -162,7 +162,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+              "name": "gm4_combat_expanded:mob/material_check/chainmail"
             }
           ]
         },
@@ -172,7 +172,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/leather"
+              "name": "gm4_combat_expanded:mob/material_check/leather"
             }
           ]
         }
@@ -191,7 +191,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/diamond"
+              "name": "gm4_combat_expanded:mob/material_check/diamond"
             }
           ]
         },
@@ -201,7 +201,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+              "name": "gm4_combat_expanded:mob/material_check/iron"
             }
           ]
         },
@@ -211,7 +211,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/golden"
+              "name": "gm4_combat_expanded:mob/material_check/golden"
             }
           ]
         },
@@ -221,7 +221,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+              "name": "gm4_combat_expanded:mob/material_check/chainmail"
             }
           ]
         },
@@ -231,7 +231,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/leather"
+              "name": "gm4_combat_expanded:mob/material_check/leather"
             }
           ]
         },
@@ -241,7 +241,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/turtle_helmet"
+              "name": "gm4_combat_expanded:mob/material_check/turtle_helmet"
             },
             {
               "condition": "minecraft:random_chance",

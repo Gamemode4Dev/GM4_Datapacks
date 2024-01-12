@@ -117,6 +117,11 @@
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/epic/wild_magic",
                     "weight": 0
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/epic/link",
+                    "weight": 0
                 }
             ]
         }

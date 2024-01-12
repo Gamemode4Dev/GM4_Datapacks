@@ -6,7 +6,7 @@
         "player": [
           {
             "condition": "minecraft:reference",
-            "name": "gm4_combat_expanded:modified_armor/wearing_reactive"
+            "name": "gm4_combat_expanded:modified_armor/reactive"
           },
           {
             "condition": "minecraft:value_check",

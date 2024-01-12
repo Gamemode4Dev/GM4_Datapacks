@@ -28,4 +28,4 @@ particle minecraft:cloud ~ ~0.5 ~ 0.4 0.2 0.4 0.2 8
 playsound minecraft:block.bell.use player @a ~ ~ ~ 0.7 1.6
 
 # cleanup
-data remove storage gm4_combat_expanded:temp damage_player.damage
+data remove storage gm4_combat_expanded:temp damage_player

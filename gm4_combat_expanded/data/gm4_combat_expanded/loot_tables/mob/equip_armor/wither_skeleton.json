@@ -14,7 +14,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+              "name": "gm4_combat_expanded:mob/material_check/iron"
             }
           ]
         },
@@ -24,7 +24,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+              "name": "gm4_combat_expanded:mob/material_check/chainmail"
             }
           ]
         }
@@ -43,7 +43,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+              "name": "gm4_combat_expanded:mob/material_check/iron"
             }
           ]
         },
@@ -53,7 +53,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+              "name": "gm4_combat_expanded:mob/material_check/chainmail"
             }
           ]
         }
@@ -72,7 +72,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+              "name": "gm4_combat_expanded:mob/material_check/iron"
             }
           ]
         },
@@ -82,7 +82,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+              "name": "gm4_combat_expanded:mob/material_check/chainmail"
             }
           ]
         }
@@ -101,7 +101,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/iron"
+              "name": "gm4_combat_expanded:mob/material_check/iron"
             }
           ]
         },
@@ -111,7 +111,7 @@
           "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_combat_expanded:modified_armor/material_check/chainmail"
+              "name": "gm4_combat_expanded:mob/material_check/chainmail"
             }
           ]
         }
