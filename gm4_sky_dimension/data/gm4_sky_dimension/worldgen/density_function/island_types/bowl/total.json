@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:max",
+  "argument1": {
+    "type": "minecraft:add",
+    "argument1": "gm4_sky_dimension:island_types/bowl/edge/total",
+    "argument2": {
+      "type": "minecraft:interpolated",
+      "argument": {
+        "type": "minecraft:spline",
+        "spline": {
+          "coordinate": "gm4_sky_dimension:routers/erosion",
+          "points": [
+            {
+              "location": 0.7,
+              "derivative": 0,
+              "value": 0
+            },
+            {
+              "location": 0.83,
+              "derivative": 0,
+              "value": -1.5
+            }
+          ]
+        }
+      }
+    }
+  },
+  "argument2": {
+    "type": "minecraft:add",
+    "argument1": "gm4_sky_dimension:island_types/bowl/center/total",
+    "argument2": {
+      "type": "minecraft:interpolated",
+      "argument": {
+        "type": "minecraft:spline",
+        "spline": {
+          "coordinate": "gm4_sky_dimension:routers/erosion",
+          "points": [
+            {
+              "location": 0.72,
+              "derivative": 0,
+              "value": -1.5
+            },
+            {
+              "location": 0.82,
+              "derivative": 0,
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}

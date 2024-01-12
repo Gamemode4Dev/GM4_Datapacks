@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:y_clamped_gradient",
+    "from_y": 800,
+    "to_y": 280,
+    "from_value": -2,
+    "to_value": 0
+  },
+  "argument2": {
+    "type": "minecraft:spline",
+    "spline": {
+      "coordinate": "gm4_sky_dimension:routers/erosion",
+      "points": [
+        {
+          "location": 0,
+          "derivative": 0,
+          "value": 0.5
+        },
+        {
+          "location": 2,
+          "derivative": 0,
+          "value": -3
+        }
+      ]
+    }
+  }
+}

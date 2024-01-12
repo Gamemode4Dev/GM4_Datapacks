@@ -1,0 +1,65 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:range_choice",
+    "input": "gm4_sky_dimension:island_types/bowl/center/terrain_topside",
+    "min_inclusive": 0,
+    "max_exclusive": 1000000,
+    "when_in_range": "gm4_sky_dimension:island_types/bowl/center/terrain_underside",
+    "when_out_of_range": -1
+  },
+  "argument2": {
+    "type": "minecraft:spline",
+    "spline": {
+      "coordinate": {
+        "type": "minecraft:abs",
+        "argument": {
+          "type": "minecraft:interpolated",
+          "argument": "gm4_sky_dimension:routers/temperature"
+        }
+      },
+      "points": [
+        {
+          "location": 0,
+          "derivative": 0,
+          "value": -1.5
+        },
+        {
+          "location": 0.07,
+          "derivative": 0,
+          "value": 0
+        },
+        {
+          "location": 0.2,
+          "derivative": 0,
+          "value": 0
+        },
+        {
+          "location": 0.3,
+          "derivative": 0,
+          "value": -1.5
+        },
+        {
+          "location": 0.35,
+          "derivative": 0,
+          "value": 0
+        },
+        {
+          "location": 0.5,
+          "derivative": 0,
+          "value": 0
+        },
+        {
+          "location": 0.575,
+          "derivative": 0,
+          "value": -1.5
+        },
+        {
+          "location": 0.65,
+          "derivative": 0,
+          "value": 0
+        }
+      ]
+    }
+  }
+}
