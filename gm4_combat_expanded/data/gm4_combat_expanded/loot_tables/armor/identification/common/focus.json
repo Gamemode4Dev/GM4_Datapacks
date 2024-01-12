@@ -15,7 +15,7 @@
                   "attribute": "minecraft:generic.attack_damage",
                   "name": "gm4_combat_expanded",
                   "amount": 0,
-                  "operation": "multiply_base",
+                  "operation": "addition",
                   "slot": "chest"
                 }
               ]

@@ -88,10 +88,10 @@
             [
               {
                 "translate": "item.gm4.combat_expanded.lore.second_wind",
-                "fallback": "Store %s% of Damage",
+                "fallback": "Store %s of Damage",
                 "with": [
                     {
-                        "text": "10"
+                        "text": "10%"
                     }
                 ],
                 "color": "blue",
@@ -121,10 +121,10 @@
             [
               {
                 "translate": "item.gm4.combat_expanded.lore.second_wind",
-                "fallback": "Store %s% of Damage",
+                "fallback": "Store %s of Damage",
                 "with": [
                     {
-                        "text": "20"
+                        "text": "20%"
                     }
                 ],
                 "color": "blue",
@@ -154,10 +154,10 @@
             [
               {
                 "translate": "item.gm4.combat_expanded.lore.second_wind",
-                "fallback": "Store %s% of Damage",
+                "fallback": "Store %s of Damage",
                 "with": [
                     {
-                        "text": "30"
+                        "text": "30%"
                     }
                 ],
                 "color": "blue",
