@@ -168,7 +168,7 @@
       },
       "argument2": {
         "type": "minecraft:add",
-        "argument1": "gm4_sky_dimension:island_types/caves/total",
+        "argument1": "gm4_sky_dimension:island_types/caves/initial",
         "argument2": {
           "type": "minecraft:interpolated",
           "argument": {
