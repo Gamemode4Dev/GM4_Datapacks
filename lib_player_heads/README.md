@@ -60,7 +60,7 @@ When using `loot_table` instead of `item` (see below) you may version your loot 
 #### Dynamic Restores
 Instead of specifying `item` you may specify `loot_table`, which contains a loot table resource location as a string (e.g. `'gm4_zauber_cauldrons:item/crystal/instant_health_v0'`). This should either be the loot table which is used to obtain the item in the first place. If both `item` and `loot_table` are specified, `loot_table` will take priority in versions of this library that support it. For backwards compatibility with older versions of this library you may therefore define both `item` and `loot_table`.
 
-However, the dynamic restore functionality should only be used as a last resort, as it comes with some downsides. Notably, all information except for the texture and the name of the player head is lost upon placing it down, so it is still **impossible** to store any useful information on the player head only. Additionally, player heads which use this dynamic data restore will not restore correctly if the corrosponding data pack is uninstalled.
+However, the dynamic restore functionality should only be used as a last resort, as it comes with some downsides. Notably, all information except for the texture and the name of the player head is lost upon placing it down, so it is still **impossible** to store any useful information on the player head only. Additionally, player heads which use this dynamic data restore will not restore correctly if the corresponding data pack is uninstalled.
 The _dynamic_ restore system was specifically implemented to allow for unstackable player heads via attributes and should be limited to this or related use cases.
 
 ### More on Updating Player Heads
@@ -73,7 +73,7 @@ You're changing the name (`SkullOwner.Name`) or texture (`tag.SkullOwner.Propert
 You're changing item data (e.g. your player head should now have `{foo:'bar'}` instead of `{food:1b}`). In general it should be noted that the head register is meant as permanent storage, and editing existing entries is **discouraged**. `lib_player_heads` is primarily a library which restores player head items to a set state, not necessarily an upgrade path.
 
 Nevertheless, if you are not versioning your head register entries you can use this library as a -- somewhat manual -- upgrade path:
-If you're not making name or texture changes (compare to Case A) you can simply edit the `item` raw NBT or the loot table your entry was pointing at in-place. If you are also making name or texture changes **you must** create a new head register entry corrosponding to the new name or texture, see Case A.
+If you're not making name or texture changes (compare to Case A) you can simply edit the `item` raw NBT or the loot table your entry was pointing at in-place. If you are also making name or texture changes **you must** create a new head register entry corresponding to the new name or texture, see Case A.
 
 #### Case C: Preserve Old Items
 This is the default case if you are using the legacy `item` restore source; old versions of player heads will always be restored to their fixed raw NBT in the head register. Editing this NBT in existing entries is **discouraged**.
