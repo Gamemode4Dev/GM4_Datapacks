@@ -28,7 +28,7 @@ pipeline:
         unicode_escape: True
   - extend: beet.yaml
     directory: resource_pack
-  - gm4.plugins.resource_pack.pad_model_overrides
+  # - gm4.plugins.resource_pack.pad_model_overrides
   - gm4.plugins.resource_pack.link_resource_pack
   - gm4.plugins.output.resource_pack
   - gm4.plugins.resource_pack.dump_registry
