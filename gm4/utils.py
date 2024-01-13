@@ -14,6 +14,11 @@ from pydantic.v1.generics import GenericModel
 
 T = TypeVar('T')
 
+def debug1(ctx: Context):
+	print(f"starting module build for {ctx.project_id}")
+def debug2(ctx: Context):
+	print(f"finializing worker collection {ctx.project_id}")
+
 def run(cmd: list[str]|str) -> str:
 	"""Run a shell command and return the stdout."""
 	return subprocess.run(cmd, capture_output=True, encoding="utf8", shell=isinstance(cmd, str)).stdout.strip()
