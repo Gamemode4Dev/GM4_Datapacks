@@ -53,6 +53,7 @@ pipeline:
           - assets/translations.csv
           - translations.csv
         namespace: gm4_translations
+        unicode_escape: True
   
   - pipeline:
     - gm4.plugins.worker.retrieve_and_run

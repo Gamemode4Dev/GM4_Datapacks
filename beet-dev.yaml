@@ -25,6 +25,7 @@ pipeline:
           - assets/translations.csv
           - translations.csv
         namespace: gm4_translations
+        unicode_escape: True
   - extend: beet.yaml
     directory: resource_pack
   - gm4.plugins.resource_pack.pad_model_overrides
