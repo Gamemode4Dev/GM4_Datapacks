@@ -9,4 +9,4 @@ execute store success score $use_loot_table gm4_player_heads run data modify sto
 
 # apply data to item
 execute unless score $use_loot_table gm4_player_heads matches 1 run data modify entity @s Item.tag merge from storage gm4_player_heads:register temp[-1].item
-execute if score $use_loot_table gm4_player_heads matches 1 at @s run function gm4_player_heads:call_loot_table with gm4_player_heads:register macro
+execute if score $use_loot_table gm4_player_heads matches 1 at @s run function gm4_player_heads:call_loot_table with storage gm4_player_heads:register macro
