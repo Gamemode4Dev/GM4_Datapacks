@@ -7,7 +7,6 @@
 function gm4_combat_expanded:identification/armor/randomize_stats
 
 # get a random modifier and apply it to the storage
-execute store result score $identification_rarity gm4_ce_data run random value -89..10
 loot replace block 29999998 1 7134 container.4 loot gm4_combat_expanded:armor/identification/random
 data modify storage gm4_combat_expanded:temp tag merge from block 29999998 1 7134 Items[{Slot:4b}].tag
 

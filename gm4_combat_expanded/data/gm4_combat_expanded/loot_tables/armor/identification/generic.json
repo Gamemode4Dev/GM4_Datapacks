@@ -5,122 +5,122 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/archer",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/archer",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/beacon",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/beacon",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/half",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/half",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/horse",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/horse",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/convert",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/convert",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/husk",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/husk",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/berserk",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/berserk",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/poised",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/poised",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/scout",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/scout",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/shielded",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/shielded",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/toxic",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/toxic",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/common/vamp",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/vamp",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/rare/big",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/big",
                     "weight": 1
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/rare/tiny",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/tiny",
                     "weight": 1
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/rare/canine",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/canine",
                     "weight": 1
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/rare/consume",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/consume",
                     "weight": 1
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/rare/immune",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/immune",
                     "weight": 1
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/rare/totem",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/totem",
                     "weight": 1
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/rare/reactive",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/reactive",
                     "weight": 1
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/rare/sneak",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/sneak",
                     "weight": 1
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/rare/soothe",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/soothe",
                     "weight": 1
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/epic/vorpal",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/vorpal",
                     "weight": 0
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/epic/wild_magic",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/wild_magic",
                     "weight": 0
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/epic/link",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/link",
                     "weight": 0
                 }
             ]
