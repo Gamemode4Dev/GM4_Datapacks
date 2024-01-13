@@ -926,13 +926,13 @@
     },
     "gm4_zauber_cauldrons:crystal/strength": {
       "uuid": [
-        -359094445,
-        -1905767091,
-        -2066494788,
-        -967744697
+        944420826,
+        983911599,
+        -1709524351,
+        1416885906
       ],
-      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzgyODgwMWVlNWJiZDczNzI2N2U1YjJhOGMzMzdlYjk3ZTU3ODI3ODg5NzU0ODhhNWY1ZjhkNzI3NTJmOGMwMSd9fX0=",
-      "hash": "f50e87ad530b00ca2ebde8c98a345a7d76d5f365",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTY5M2YwYjc1NGUyNzcwMGNiYWM2MGFjOTMwMGI2YzY2M2NmZDVlMjc1YjkwZjkyYmZmNjczNjY3YzViOWY1Nid9fX0=",
+      "hash": "f0eb5b0c9c1ed40a7c48dd9af588e196b3661429",
       "parent_module": "gm4_zauber_cauldrons"
     },
     "gm4_zauber_liquids:liquids/wormhole": {
