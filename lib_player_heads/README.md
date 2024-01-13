@@ -76,7 +76,7 @@ Nevertheless, if you are not versioning your head register entries you can use t
 If you're not making name or texture changes (compare to Case A) you can simply edit the `item` raw NBT or the loot table your entry was pointing at in-place. If you are also making name or texture changes **you must** create a new head register entry corresponding to the new name or texture, see Case A.
 
 #### Case C: Preserve Old Items
-This is the default case if you are using the legacy `item` restore source; old versions of player heads will always be restored to their fixed raw NBT in the head register. Editing this NBT in existing entries is **discouraged**.
+This is the default case if you are using the `item` restore source; old versions of player heads will always be restored to their fixed raw NBT in the head register. Editing this NBT in existing entries is **discouraged**.
 If you are using the `loot_table` restore source some care must be taken to achieve this behavior: When adding the entry for the new version of your player head to the register you must point it at a new loot table and keep the old loot table around to prevent item loss when restoring old player heads.
 
 ## Example Pack
