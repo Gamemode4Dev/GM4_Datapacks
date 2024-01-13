@@ -453,21 +453,19 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
 
     def generate_model_overrides(self):
         """Generates item model overrides in the 'minecraft' namespace, adding predicates for CustomModelData"""
-        
         vanilla = self.ctx.inject(Vanilla)
         vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
-       
         # group models by item id
         for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
             models = filter(lambda m: item_id in m.item.entries(), self.opts.model_data) # with this item_id
             models = sorted(models, key=lambda m: self.retrieve_index(m.reference)[0])
 
-            vanilla_model = (v:=vanilla_models_jar.assets.models[f"minecraft:item/{item_id}"].data) | ({} if v.get("overrides") else {"overrides": []})
+            vanilla_model = deepcopy( (v:=vanilla_models_jar.assets.models[f"minecraft:item/{item_id}"].data) | ({} if v.get("overrides") else {"overrides": []}) )
             vanilla_overrides: list[Any] = vanilla_model["overrides"]
             for override in vanilla_overrides:
                 override["model"] = add_namespace(override["model"], "minecraft") # ensure vanilla models have namespaced files
                 # FIXME how to differentiate vanilla overrides from specified overrides?
-            unchanged_vanilla_overrides = deepcopy(vanilla_overrides)
+            unchanged_vanilla_overrides = vanilla_overrides.copy()
 
             
             for model in models:
