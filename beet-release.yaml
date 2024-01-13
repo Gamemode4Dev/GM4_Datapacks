@@ -54,6 +54,8 @@ pipeline:
           - translations.csv
         namespace: gm4_translations
         unicode_escape: True
+      model_merging:
+        predicate_order: [custom_model_data]
   
   - pipeline:
     - gm4.plugins.worker.retrieve_and_run
