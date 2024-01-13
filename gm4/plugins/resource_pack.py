@@ -321,6 +321,7 @@ def beet_default(ctx: Context):
 
     yield
     tl.warn_unused_translations()
+    rp.lint_model_textures()
 
 def build(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
@@ -329,7 +330,6 @@ def build(ctx: Context):
     rp.update_modeldata_registry()
     rp.generate_model_files()
     rp.process_optifine()
-    rp.lint_model_textures()
     rp.generate_model_overrides()
 
     if not ctx.assets.extra.get("pack.png") and ctx.data.extra.get("pack.png"):
@@ -585,6 +585,8 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     def lint_model_textures(self):
         """Checks model files to ensure referenced textures exist"""
         for name, model in list(self.ctx.assets.models.items()):
+            if name.startswith("minecraft:"):
+                continue # vanilla model - will have vanilla textures so do not check
             for tex in model.data.get("textures", {}).values():
                 if not tex.startswith("minecraft:") and tex not in self.ctx.assets.textures:
                     self.logger.warning(f"Missing texture '{tex}' in {name}")

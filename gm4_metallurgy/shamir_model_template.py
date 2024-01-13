@@ -102,7 +102,7 @@ class ShamirTemplate(TemplateOptions):
             else:
                 if item not in TEXTURELESS:
                     logger.warning(f"No shamir texture for '{item}' could be found!")
-                texture = ""
+                texture = "gm4:item/empty"
 
             # generate the models, using the vanilla models as a base
             total_layers = 0 # number of texture layers in vanilla
