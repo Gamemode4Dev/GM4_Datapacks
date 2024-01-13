@@ -4,4 +4,3 @@ advancement.gm4.undead_players.title,"Risen",
 entity.gm4.drowned_player_name,"Drowned %s"
 entity.gm4.drowned_player,"Drowned Player"
 entity.gm4.undead_player_name,"Undead %s"
-entity.gm4.undead_player,"Undead Player",

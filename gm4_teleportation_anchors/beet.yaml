@@ -33,7 +33,7 @@ meta:
           top: block/teleportation_anchor_top
           side: block/teleportation_anchor_side
           front: block/teleportation_anchor_side
-          bottom: gm4_forming_press:block/forming_press_bottom
+          bottom: block/teleportation_anchor_bottom
       - item: player_head
         reference: item/teleportation_jammer
         model: block/teleportation_jammer

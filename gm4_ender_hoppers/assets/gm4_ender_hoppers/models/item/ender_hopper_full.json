@@ -2,10 +2,10 @@
   "parent": "minecraft:block/block",
   "ambientocclusion": false,
   "textures": {
-    "particle": "block/hopper_outside",
-    "top": "block/hopper_top",
-    "side": "block/hopper_outside",
-    "inside": "block/hopper_inside",
+    "particle": "minecraft:block/hopper_outside",
+    "top": "minecraft:block/hopper_top",
+    "side": "minecraft:block/hopper_outside",
+    "inside": "minecraft:block/hopper_inside",
     "5": "gm4_ender_hoppers:block/ender_hopper_eye_side",
     "6": "gm4_ender_hoppers:block/ender_hopper_eye_top"
   },

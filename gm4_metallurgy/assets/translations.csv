@@ -37,7 +37,7 @@ text.gm4.metallurgy.copper,"Copper"
 item.gm4.metallurgy.malachite_lump,"Malachite Lump"
 item.gm4.shamir.infinitas,"Infinitas"
 item.gm4.metallurgy.curies_bismium,"Curie's Bismium"
-item.gm4.metallurgy.bismuth.magenta,"",
+item.gm4.metallurgy.bismuth.magenta,"\u200c",
 item.gm4.metallurgy.bismuth.yellow,"ut"
 item.gm4.metallurgy.bismuth.red,"Bi"
 item.gm4.metallurgy.bismuth.orange,"sm"

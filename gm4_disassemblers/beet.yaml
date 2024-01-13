@@ -30,13 +30,13 @@ meta:
         broadcast:
           - reference: block/disassembler
             textures:
-              bottom: gm4_smeltries:block/smeltery_bottom
+              bottom: block/disassembler_bottom
               top: block/disassembler_top_out
               front: block/disassembler_side
               side: block/disassembler_side
           - reference: block/disassembler_side
             textures:
-              bottom: gm4_smeltries:block/smeltery_bottom
+              bottom: block/disassembler_bottom
               top: block/disassembler_top
               front: block/disassembler_side_front
               side: block/disassembler_side

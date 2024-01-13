@@ -4,7 +4,7 @@
 		"particle": "gm4_tinkering_compressors:block/tinkering_compressor_side",
 		"side": "gm4_tinkering_compressors:block/tinkering_compressor_side",
 		"bottom": "minecraft:block/furnace_top",
-		"top": "gm4_block_compressors:block/block_compressor_top",
+		"top": "gm4_tinkering_compressors:block/tinkering_compressor_top",
 		"front": "gm4_tinkering_compressors:block/tinkering_compressor_side",
 		"plate": "gm4_tinkering_compressors:block/tinkering_compressor_plate"
 	}
