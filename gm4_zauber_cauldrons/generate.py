@@ -279,7 +279,6 @@ def generate_crystal_recipes(ctx: Context, crystal_effects: CSV, crystal_lores: 
                 "effect": effect_data['effect'],
                 "custom_model_data": effect_data['custom_model_data'],
                 "custom_potion_color": potion_effects.find_row(value=effect_data['effect'], by_column='effect')['custom_potion_color'].to_color_code(CSVCell.DEC),
-                "texture_version": effect_data['texture_version'],
                 "translate_fallback": effect_data['translate_fallback'],
                 "lore": json.dumps(crystal_lores[effect_data['effect']])
             }

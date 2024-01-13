@@ -22,7 +22,7 @@ meta:
     versioning:
       required:
         lib_forceload: 1.1.0
-        lib_player_heads: 1.1.0
+        lib_player_heads: 1.2.0
         lib_brewing: 1.0.0
         lib_trades: 1.3.0
         lib_potion_tracking: 1.0.0
