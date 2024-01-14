@@ -1,32 +1,160 @@
 id: gm4_zauber_cauldrons
 name: Zauber Cauldrons
-version: 1.9.X
+version: 1.10.X
 
 data_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
+  - gm4_zauber_cauldrons.generate
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_forceload
   - gm4.plugins.include.lib_player_heads
   - gm4.plugins.include.lib_brewing
   - gm4.plugins.include.lib_trades
+  - gm4.plugins.include.lib_potion_tracking
 
 meta:
   gm4:
     versioning:
       required:
         lib_forceload: 1.1.0
-        lib_player_heads: 1.1.0
+        lib_player_heads: 1.2.0
         lib_brewing: 1.0.0
         lib_trades: 1.3.0
+        lib_potion_tracking: 1.0.0
+
       schedule_loops:
         - main
-        - cauldron/extra_items/crack_bottle
+        - cauldron/extra_items/process_bottled_vex_items
+    model_data:
+      - item: prismarine_shard
+        reference: item/enchanted_prismarine_shard
+        template: generated
+      - item: glass_bottle
+        reference: item/magic_in_a_bottle
+        template: generated
+      - item: potion
+        reference: item/wormhole_in_a_bottle
+        template: generated_overlay
+      - item: [player_head, firework_star]
+        template: generated
+        broadcast:
+          - reference: item/crystal/harming
+          - reference: item/crystal/health
+          - reference: item/crystal/leaping
+          - reference: item/crystal/poison
+          - reference: item/crystal/regeneration
+          - reference: item/crystal/speed
+          - reference: item/crystal/strength
+      - item: golden_helmet 
+        template: generated
+        broadcast:
+          - reference: item/zauber_armor/armor/helmet
+          - reference: item/zauber_armor/attack/helmet
+          - reference: item/zauber_armor/health/helmet
+          - reference: item/zauber_armor/speed/helmet
+      - item: golden_chestplate
+        template: generated
+        broadcast:
+          - reference: item/zauber_armor/armor/chestplate
+          - reference: item/zauber_armor/attack/chestplate
+          - reference: item/zauber_armor/health/chestplate
+          - reference: item/zauber_armor/speed/chestplate
+      - item: golden_leggings
+        template: generated
+        broadcast:
+          - reference: item/zauber_armor/armor/leggings
+          - reference: item/zauber_armor/attack/leggings
+          - reference: item/zauber_armor/health/leggings
+          - reference: item/zauber_armor/speed/leggings
+      - item: golden_boots
+        template: generated
+        broadcast:
+          - reference: item/zauber_armor/armor/boots
+          - reference: item/zauber_armor/attack/boots
+          - reference: item/zauber_armor/health/boots
+          - reference: item/zauber_armor/speed/boots
+      - template: vanilla
+        broadcast:
+          - reference: block/liquid_magicol/white
+            item: white_concrete_powder
+          - reference: block/liquid_magicol/light_gray
+            item: light_gray_concrete_powder
+          - reference: block/liquid_magicol/gray
+            item: gray_concrete_powder
+          - reference: block/liquid_magicol/black
+            item: black_concrete_powder
+          - reference: block/liquid_magicol/brown
+            item: brown_concrete_powder
+          - reference: block/liquid_magicol/red
+            item: red_concrete_powder
+          - reference: block/liquid_magicol/orange
+            item: orange_concrete_powder
+          - reference: block/liquid_magicol/yellow
+            item: yellow_concrete_powder
+          - reference: block/liquid_magicol/lime
+            item: lime_concrete_powder
+          - reference: block/liquid_magicol/green
+            item: green_concrete_powder
+          - reference: block/liquid_magicol/cyan
+            item: cyan_concrete_powder
+          - reference: block/liquid_magicol/light_blue
+            item: light_blue_concrete_powder
+          - reference: block/liquid_magicol/blue
+            item: blue_concrete_powder
+          - reference: block/liquid_magicol/purple
+            item: purple_concrete_powder
+          - reference: block/liquid_magicol/magenta
+            item: magenta_concrete_powder
+          - reference: block/liquid_magicol/pink
+            item: pink_concrete_powder
+      - item: [potion, splash_potion, lingering_potion]
+        broadcast:
+          - reference: item/bottled_magicol/polar
+          - reference: item/bottled_magicol/temperate
+          - reference: item/bottled_magicol/arid
+      - item: [potion, splash_potion, lingering_potion]
+        broadcast:
+          - reference: item/bottled_magicol_soulution/polar
+          - reference: item/bottled_magicol_soulution/temperate
+          - reference: item/bottled_magicol_soulution/arid
+      - item: [potion, splash_potion, lingering_potion]
+        broadcast: 
+          - reference: item/soulution_potion/instand_damage
+          - reference: item/soulution_potion/instant_health
+          - reference: item/soulution_potion/jump_boost
+          - reference: item/soulution_potion/poison
+          - reference: item/soulution_potion/regeneration
+          - reference: item/soulution_potion/speed
+          - reference: item/soulution_potion/strength
+      - item: cauldron
+        reference: gui/advancement/zauber_cauldrons_create
+        template: advancement
+      - item: chorus_fruit
+        reference: gui/advancement/zauber_cauldrons_wormhole
+        template:
+          name: advancement
+          forward: item/wormhole_in_a_bottle
+      - item: glass_bottle
+        reference: gui/advancement/zauber_cauldron_drink_multi_use_bottle
+        template: advancement
+      - item: golden_chestplate
+        reference: gui/advancement/zauber_cauldrons_full_armor
+        template:
+          name: advancement
+          forward: item/zauber_armor/attack/chestplate
+      - item: rabbit_foot
+        reference: gui/advancement/zauber_cauldrons_rabbit
+        template: advancement
     website:
       description: Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game.
       recommended:
         - gm4_resource_pack
+        - gm4_zauber_liquids
       notes: []
     video: https://www.youtube.com/watch?v=Io1JTFUzyrc
     wiki: https://wiki.gm4.co/wiki/Zauber_Cauldrons

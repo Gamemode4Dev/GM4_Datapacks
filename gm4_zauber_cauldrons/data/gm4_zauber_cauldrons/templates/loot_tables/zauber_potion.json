@@ -1,0 +1,151 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "{{bottle_item_id}}",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"{{effect}}\",bottle:{multi_use:0}},HideFlags:32,CustomPotionColor:{{custom_potion_color}},custom_potion_effects:{{custom_potion_effects}}}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.minecraft.potion.effect.{{effect_translate_name}}",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": {
+                                "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.potion.{{effect_translate_name}}",
+                                "fallback": "{{soulution_translate_fallback}}",
+                                "italic": false
+                            },
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$has_soul_fire_heatsource"
+                                        },
+                                        "score": "gm4_zc_data"
+                                    },
+                                    "range": 1
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:copy_nbt",
+                            "source": {
+                                "type": "minecraft:storage",
+                                "source": "gm4_zauber_cauldrons:blueprint/item/multi_sip"
+                            },
+                            "ops": [
+                                {
+                                    "source": "gm4_zauber_cauldrons.bottle",
+                                    "target": "gm4_zauber_cauldrons.bottle",
+                                    "op": "replace"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$has_soul_fire_heatsource"
+                                        },
+                                        "score": "gm4_zc_data"
+                                    },
+                                    "range": 1
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:{{soulution_custom_model_data}}}",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$has_soul_fire_heatsource"
+                                        },
+                                        "score": "gm4_zc_data"
+                                    },
+                                    "range": 1
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                [
+                                    {
+                                        "nbt": "gm4_zauber_cauldrons.bottle.sips",
+                                        "storage": "gm4_zauber_cauldrons:blueprint/item/multi_sip",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": "/",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "nbt": "gm4_zauber_cauldrons.bottle.size",
+                                        "storage": "gm4_zauber_cauldrons:blueprint/item/multi_sip",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": " ",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lore.{{sips_translate_name}}",
+                                        "fallback": "{{sips_translate_fallback}}",
+                                        "color": "gray",
+                                        "italic": false
+                                    }
+                                ]
+                            ],
+                            "replace": false,
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$has_soul_fire_heatsource"
+                                        },
+                                        "score": "gm4_zc_data"
+                                    },
+                                    "range": 1
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": {{lore}},
+                            "replace": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
