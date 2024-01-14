@@ -1,5 +1,5 @@
 {
-  "last_commit": "8d5c8e0554a50d8662bf2f0d5374866e3abb749e",
+  "last_commit": "c0e8321dcbebdcd0c70d63f5599f9138271ab3b6",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2604,7 +2604,7 @@
     {
       "id": "gm4_zauber_cauldrons",
       "name": "Zauber Cauldrons",
-      "version": "1.9.3",
+      "version": "1.10.0",
       "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
       "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
       "credits": {
@@ -2626,7 +2626,8 @@
       "requires": [],
       "description": "Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game.",
       "recommends": [
-        "gm4_resource_pack"
+        "gm4_resource_pack",
+        "gm4_zauber_liquids"
       ],
       "hidden": false,
       "important_note": null,
