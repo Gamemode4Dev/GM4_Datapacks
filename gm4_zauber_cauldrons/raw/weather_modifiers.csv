@@ -1,0 +1,4 @@
+modifier,item_id,bottle_custom_model_data,soulution_bottle_custom_model_data,translate_name,translate_fallback,soulution_translate_fallback
+polar,minecraft:snowball,3420300,3420303,polar,Bottle of Polar Magicol,Soulution of Polar Magicol
+temperate,minecraft:slime_ball,3420301,3420304,temperate,Bottle of Temperate Magicol,Soulution of Temperate Magicol
+arid,minecraft:magma_cream,3420302,3420305,arid,Bottle of Arid Magicol,Soulution of Arid Magicol

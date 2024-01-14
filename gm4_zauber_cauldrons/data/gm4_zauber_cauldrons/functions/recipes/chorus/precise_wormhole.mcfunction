@@ -3,13 +3,13 @@
 # run from count_chorus
 
 # get bottled_vex nbt into blueprint
-data modify storage gm4_zauber_cauldrons:blueprint/item/wormhole gm4_zauber_cauldrons.cauldron_pos set from storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}].tag.gm4_zauber_cauldrons.cauldron_pos
+data modify storage gm4_zauber_cauldrons:blueprint/item/wormhole gm4_zauber_cauldrons.cauldron_pos set from storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}].tag.gm4_zauber_cauldrons.cauldron_pos
 
 # kill remaining items
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 
 # summon wormhole
-loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:recipes/chorus/wormhole
+loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:items/wormhole
 
 # make items in cauldron pickup-able instantly
 execute align xyz as @e[type=item,dx=0,dy=0,dz=0] run data modify entity @s PickupDelay set value 0s

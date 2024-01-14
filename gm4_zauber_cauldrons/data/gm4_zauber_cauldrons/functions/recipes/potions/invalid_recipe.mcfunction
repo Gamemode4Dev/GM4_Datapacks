@@ -1,6 +1,6 @@
 # @s = boiling zauber cauldron with recipe inside
 # at @s
-# run from zauber_potions
+# run from potions/lingering/check_liquid and potions/splash/check_liquid
 
 # remove ingredients
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
