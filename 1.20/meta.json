@@ -1,5 +1,5 @@
 {
-  "last_commit": "2a42d4b241821d3df40adfb7ccb890260dbd3d72",
+  "last_commit": "8d5c8e0554a50d8662bf2f0d5374866e3abb749e",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2843,12 +2843,16 @@
     "lib_player_heads": {
       "id": "gm4_player_heads",
       "name": "Gamemode 4 Player Heads",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "video_link": "",
       "wiki_link": "",
       "credits": {
         "Creator": [
           "Misode"
+        ],
+        "Updated by": [
+          "Lue",
+          "Bloo"
         ]
       },
       "requires": [],
