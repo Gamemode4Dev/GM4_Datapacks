@@ -48,7 +48,7 @@ meta:
         template: generated
       - item: golden_apple
         reference: block/golden_apple_unripe
-        template: vanilla
+        model: gm4_golden_apple_trees:block/golden_apple_unripe
   modrinth:
     project_id: Afacz65w
   smithed:
