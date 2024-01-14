@@ -30,6 +30,8 @@ pipeline:
         predicate_order: [custom_model_data]
   - extend: beet.yaml
     directory: resource_pack
+    pipeline:
+      - resource_pack.dev_description
   - gm4.plugins.resource_pack.pad_model_overrides
   - gm4.plugins.resource_pack.link_resource_pack
   - gm4.plugins.output.resource_pack
