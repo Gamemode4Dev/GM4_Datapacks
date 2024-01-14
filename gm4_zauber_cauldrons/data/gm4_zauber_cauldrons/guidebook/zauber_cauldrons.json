@@ -488,13 +488,13 @@
           "\n",
           {
             "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_description",
-            "fallback": "During the preferred moon phase of a Magic in a Bottle, Magicol can be created.\n\nMagicol is useful for converting areas into colored, spawn-proof biomes."
+            "fallback": "Water inside a Cauldron can be converted into a liquid called Magicol.\n\nMagicol is useful for converting areas into colored, spawn-proof biomes."
           }
         ],
         [
           {
             "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_creation",
-            "fallback": "During the preferred moon phase of a magic in a bottle, dropping the bottle with an enchanted prismarine shard and a dye into a water-filled zauber cauldron will dye the liquid into magicol."
+            "fallback": "Dropping a bottle, an enchanted prismarine shard and a dye into a water-filled zauber cauldron will dye the liquid into magicol.\n\nThe level of the liquid is conserved through this process."
           }
         ]
       ]
@@ -512,7 +512,7 @@
         [
           {
             "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_bottling",
-            "fallback": "Magicol can be bottled by dropping a splash or lingering water bottle and one piece of prismarine crystals, along with either a slime ball, magma cream, or snowball."
+            "fallback": "During the preferred moon phase of the magic in a bottle used to create the Magicol, it can be bottled. This is done by dropping a splash or lingering water bottle and one piece of prismarine crystals, along with either a slime ball, magma cream, or snowball."
           }
         ],
         [
