@@ -134,6 +134,51 @@
           }
         ]
       }
+    },
+    "make_magicol": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:zauber_cauldrons_make_magicol": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "obtain_bottled_magicol": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:potion"
+            ],
+            "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\"}}"
+          }
+        ]
+      }
+    },
+    "obtain_chorus_fruit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:chorus_fruit",
+              "minecraft:popped_chorus_fruit"
+            ]
+          }
+        ]
+      }
     }
   },
   "sections": [
@@ -193,7 +238,8 @@
         ]
       ],
       "grants": [
-        "description"
+        "description",
+        "creation"
       ]
     },
     {
@@ -219,14 +265,20 @@
         ],
         [
           {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.splash_and_lingering_potions",
+            "fallback": "Splash and Lingering potions create an excess of heat and will explode if used in a tier IV potion recipe.\n\nUsing a snow powder cauldron will absorb the heat and successfully create a splash or lingering tier IV potion."
+          }
+        ],
+        [
+          {
             "translate": "text.gm4.guidebook.zauber_cauldrons.soulutions",
             "fallback": "Using soul fire underneath the cauldron will cause all brewed potions to be brewed as a Soulution.\n\nSoulutions can be drank 9 times before emptying."
           }
         ],
         [
           {
-            "translate": "text.gm4.guidebook.zauber_cauldrons.splash_and_lingering_potions",
-            "fallback": "Splash and Lingering potions create an excess of heat and will explode if used in a tier IV potion recipe.\n\nUsing a snow powder cauldron will absorb the heat and successfully create a splash or lingering tier IV potion."
+            "translate": "text.gm4.guidebook.zauber_cauldrons.splash_and_lingering_soulutions",
+            "fallback": "Splash and Lingering soulutions can be created in the same way.\n\nWhen it lands, a splash or lingering soulution will summon a new soulution bottle at the location."
           }
         ]
       ],
@@ -249,10 +301,10 @@
             "fallback": "Advanced Reactants",
             "bold": true
           },
-          "\n\n",
+          "\n",
           {
             "translate": "text.gm4.guidebook.zauber_cauldrons.enchanted_prismarine_shard",
-            "fallback": "An enchanted prismarine shard is used to upgrade armour and as a way to get Luck."
+            "fallback": "An enchanted prismarine shard is used to upgrade armour and as a way to get Luck.\n\nThey can be created in a Zauber Cauldron or bought from a wandering trader."
           }
         ],
         [
@@ -400,16 +452,93 @@
             "translate": "text.gm4.guidebook.zauber_cauldrons.bottling_vexes",
             "fallback": "If a glass bottle is added to a recipe with extra ingredients, it will capture Possessed Items in groups of three, forming a Magic in a Bottle."
           }
-        ],
+        ]
+      ],
+      "grants": [
+        "recipes"
+      ]
+    },
+    {
+      "name": "magicol_creation",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_bottled_vex"
+        ]
+      ],
+      "pages": [
         [
           {
             "translate": "text.gm4.guidebook.zauber_cauldrons.magic_in_a_bottle",
             "fallback": "If a Magic in a Bottle is left on the ground, the bottle will break and release the vexes.\n\nA Magic in a Bottle stores the location it was created which is useful in creating wormholes."
           }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.bottled_vex_moon_phase",
+            "fallback": "Each Magic in a Bottle has a preferred moon phase.\n\nDuring this moon phase, the bottle doesn't break as quickly and will sparkle to players wearing full zauber armor."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.magicol",
+            "fallback": "Magicol",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_description",
+            "fallback": "During the preferred moon phase of a Magic in a Bottle, Magicol can be created.\n\nMagicol is useful for converting areas into colored, spawn-proof biomes."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_creation",
+            "fallback": "During the preferred moon phase of a magic in a bottle, dropping the bottle with an enchanted prismarine shard and a dye into a water-filled zauber cauldron will dye the liquid into magicol."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "magicol_usage",
+      "enable": [],
+      "requirements": [
+        [
+          "make_magicol",
+          "obtain_bottled_magicol"
         ]
       ],
-      "grants": [
-        "recipes"
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_bottling",
+            "fallback": "Magicol can be bottled by dropping a splash or lingering water bottle and one piece of prismarine crystals, along with either a slime ball, magma cream, or snowball."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.downfall",
+            "fallback": "Magicol bottled with slime balls will be temperate with rain.\n\nWith magma cream they will be arid with no rain, and with snowballs they will be polar with snow."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_potion_types",
+            "fallback": "Soulutions can be created as normal.\n\nLingering bottles of magicol will create permanent particles inside the biome.\n\nDrinkable bottles of magicol can be created, but have no effect."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.bottled_magicol_usage",
+            "fallback": "Throwing a magicol bottle will cause the splashed area to turn into a new biome.\n\nThese biomes are colored according to the magicol liquid and do not spawn any mobs."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_biome_colors",
+            "fallback": "When a new magicol biome is created, short grass and flowers will grow.\n\nLucky flowers are the only ones that grow when first splashing an area."
+          }
+        ]
       ]
     },
     {
@@ -418,6 +547,9 @@
       "requirements": [
         [
           "obtain_bottled_vex"
+        ],
+        [
+          "obtain_chorus_fruit"
         ]
       ],
       "pages": [
