@@ -26,7 +26,5 @@ scoreboard players reset @a gm4_ce_used_bow
 scoreboard players reset @a gm4_ce_used_crossbow
 
 # link armor
-execute if score $link.active gm4_ce_data matches 1.. run scoreboard players remove $link.active gm4_ce_data 1
-tag @a[tag=gm4_ce_linked,gamemode=!survival,gamemode=!adventure] remove gm4_ce_linked
-execute store result score $linked_players gm4_ce_data if entity @a[tag=gm4_ce_linked]
-execute if score $linked_players gm4_ce_data matches 2.. run function gm4_combat_expanded:armor/modifier/type/link/process/general
+tag @a[tag=gm4_ce_linked,gamemode=!spectator,gamemode=!creative] add gm4_ce_linked.check
+execute as @p[tag=gm4_ce_linked.check] run function gm4_combat_expanded:armor/modifier/type/link/process/loop_links

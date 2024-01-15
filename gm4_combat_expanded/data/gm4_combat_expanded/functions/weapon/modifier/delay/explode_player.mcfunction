@@ -10,10 +10,10 @@ execute if entity @s[tag=gm4_cd_delay_lvl_2] store result storage gm4_combat_exp
 execute if entity @s[tag=gm4_cd_delay_lvl_3] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 12
 
 # damage player if they are alive
-execute if score $delay_damage gm4_ce_data < @s gm4_ce_health run function gm4_combat_expanded:player/damage with storage gm4_combat_expanded:temp damage_player
+execute if score $delay_damage gm4_ce_data < @s gm4_ce_health.current run function gm4_combat_expanded:player/damage with storage gm4_combat_expanded:temp damage_player
 
 # kill player if health reached 0
-execute if score $delay_damage gm4_ce_data >= s gm4_ce_health run function gm4_combat_expanded:weapon/modifier/delay/player_death
+execute if score $delay_damage gm4_ce_data >= s gm4_ce_health.current run function gm4_combat_expanded:weapon/modifier/delay/player_death
 
 # reset entity
 scoreboard players reset @s gm4_ce_t_delay

@@ -19,7 +19,17 @@
               "min": 1
             }
           }
-        ]
+        ],
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:bypasses_invulnerability",
+                "expected": false
+              }
+            ]
+          }
+        }
       }
     }
   },

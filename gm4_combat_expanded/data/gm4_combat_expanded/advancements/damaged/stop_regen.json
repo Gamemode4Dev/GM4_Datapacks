@@ -1,41 +1,44 @@
 {
-    "criteria": {
-      "damage": {
-        "trigger": "minecraft:entity_hurt_player",
-        "conditions": {
-          "player": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$natural_regen"
-                },
-                "score": "gm4_ce_data"
+  "criteria": {
+    "damage": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "$natural_regen"
               },
-              "range": 0
-            }
-          ],
-          "damage": {
-            "taken": {
-              "min": 1
+              "score": "gm4_ce_data"
             },
-            "blocked": false,
-            "type": {
-              "tags": [
-                {
-                  "id": "minecraft:is_fall",
-                  "expected": false
-                }
-              ]
-            }
+            "range": 0
+          }
+        ],
+        "damage": {
+          "taken": {
+            "min": 1
+          },
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_fall",
+                "expected": false
+              },
+              {
+                "id": "minecraft:bypasses_invulnerability",
+                "expected": false
+              }
+            ]
           }
         }
       }
-    },
-    "rewards": {
-      "function": "gm4_combat_expanded:player/regen/pause"
     }
+  },
+  "rewards": {
+    "function": "gm4_combat_expanded:player/regen/pause"
   }
-  
+}

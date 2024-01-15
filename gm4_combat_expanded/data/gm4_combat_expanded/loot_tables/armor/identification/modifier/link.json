@@ -15,7 +15,7 @@
                   "attribute": "minecraft:generic.max_health",
                   "name": "gm4_combat_expanded",
                   "amount": 0,
-                  "operation": "multiply_base",
+                  "operation": "addition",
                   "slot": "chest"
                 }
               ]
@@ -36,12 +36,23 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:76}}"
+              "tag": "{gm4_combat_expanded:{modifier:76,active:0,link_id:0}}"
             }
           ]
         }
       ],
       "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.link_2",
+              "fallback": "Rename to Link",
+              "color": "blue",
+              "italic": false
+            }
+          ]
+        },
         {
           "function": "minecraft:set_lore",
           "lore": [
@@ -64,28 +75,9 @@
           "entity": "this",
           "lore": [
             {
-              "translate": "item.gm4.combat_expanded.lore.link_2",
+              "translate": "item.gm4.combat_expanded.lore.link_3",
               "fallback": "Lifelink",
-              "color": "blue",
-              "italic": false
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            {
-              "translate": "attribute.modifier.equals.0",
-              "with": [
-                {
-                  "text": "40"
-                },
-                {
-                  "translate": "attribute.name.generic.max_health"
-                }
-              ],
-              "color": "blue",
+              "color": "dark_gray",
               "italic": false
             }
           ]
@@ -96,13 +88,12 @@
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.link",
-              "fallback": "Linked %s",
+              "fallback": "Unlinked %s",
               "with": [
                 {
                   "nbt": "tag.gm4_combat_expanded.name",
                   "storage": "gm4_combat_expanded:temp",
-                  "interpret": true,
-                  "color": "light_purple"
+                  "interpret": true
                 }
               ],
               "italic": false,

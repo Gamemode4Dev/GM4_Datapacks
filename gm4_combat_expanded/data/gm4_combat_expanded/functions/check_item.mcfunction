@@ -3,11 +3,15 @@
 # at unspecified
 # run from tick
 
-# check for spores
-execute if data entity @s Item.tag.gm4_ce_spore run function gm4_combat_expanded:mob/process/spore/initialise
+# tag item as checked and try to process
+tag @s add gm4_ce_item_checked
+scoreboard players set $item_processed gm4_ce_data 0
 
 # check for unidentified items
 execute if data entity @s Item.tag.gm4_combat_expanded{identified:0} run function gm4_combat_expanded:identification/prep
 
-# tag item as checked
-tag @s add gm4_ce_item_checked
+# check for spores
+execute if score $item_processed gm4_ce_data matches 0 if data entity @s Item.tag.gm4_ce_spore run function gm4_combat_expanded:mob/process/spore/initialise
+
+# tag link armor
+execute if score $item_processed gm4_ce_data matches 0 if data entity @s Item.tag.gm4_combat_expanded.link_id run tag @s add gm4_ce_link.forming

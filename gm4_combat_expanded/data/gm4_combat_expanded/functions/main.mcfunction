@@ -21,5 +21,8 @@ execute as @e[type=item,tag=gm4_ce_spore] at @s run function gm4_combat_expanded
 # phantoms drown under water
 execute as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water run effect give @s wither 1 1 true
 
+# link armor on the ground
+execute as @e[type=item,tag=gm4_ce_link.forming] at @s run function gm4_combat_expanded:armor/modifier/type/link/form/process
+
 # spore zombies on fire
 item replace entity @e[type=#gm4_combat_expanded:zombie_types,tag=gm4_ce_spore_zombie,predicate=gm4_combat_expanded:mob/on_fire] armor.head with air

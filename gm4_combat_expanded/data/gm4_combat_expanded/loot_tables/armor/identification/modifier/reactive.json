@@ -197,8 +197,7 @@
                 {
                   "nbt": "tag.gm4_combat_expanded.name",
                   "storage": "gm4_combat_expanded:temp",
-                  "interpret": true,
-                  "color": "yellow"
+                  "interpret": true
                 }
               ],
               "italic": false,

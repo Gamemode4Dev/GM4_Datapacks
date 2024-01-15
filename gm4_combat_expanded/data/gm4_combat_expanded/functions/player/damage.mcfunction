@@ -5,4 +5,4 @@
 # run from armor/modifier/type/half/damage
 # run from weapon/modifier/delay/explode_player
 
-$damage @s $(damage) out_of_world
+$damage @s $(damage) generic_kill

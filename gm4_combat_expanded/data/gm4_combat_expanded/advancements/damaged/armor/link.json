@@ -5,10 +5,45 @@
       "conditions": {
         "player": [
           {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "gm4_ce_link_id"
+            },
+            "range": {
+              "min": 1
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "$link.active"
+              },
+              "score": "gm4_ce_data"
+            },
+            "range": {
+              "min": 1
+            }
+          },
+          {
             "condition": "minecraft:reference",
             "name": "gm4_combat_expanded:modified_armor/link"
           }
-        ]
+        ],
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:bypasses_invulnerability",
+                "expected": false
+              }
+            ]
+          }
+        }
       }
     }
   },

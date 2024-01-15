@@ -23,7 +23,9 @@ scoreboard objectives add gm4_ce_since_last_death dummy
 scoreboard objectives add gm4_ce_alivetime minecraft.custom:minecraft.time_since_death
 scoreboard objectives add gm4_ce_deaths minecraft.custom:minecraft.deaths
 scoreboard objectives add gm4_ce_data dummy
-scoreboard objectives add gm4_ce_health dummy
+scoreboard objectives add gm4_ce_health.current dummy
+scoreboard objectives add gm4_ce_health.max dummy
+scoreboard objectives add gm4_ce_health.max_half dummy
 scoreboard objectives add gm4_ce_hurt minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_ce_hurt2 minecraft.custom:minecraft.damage_absorbed
 scoreboard objectives add gm4_ce_t_hurt dummy
@@ -50,6 +52,7 @@ scoreboard objectives add gm4_ce_natural_regen_damage dummy
 scoreboard objectives add gm4_ce_natural_regen_delay dummy
 scoreboard objectives add gm4_ce_death_mult dummy
 scoreboard objectives add gm4_ce_second_wind dummy
+scoreboard objectives add gm4_ce_link_id dummy
 
 scoreboard objectives add gm4_ce_sleep custom:sleep_in_bed
 scoreboard objectives add gm4_ce_last_sleep dummy
