@@ -487,7 +487,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                         } | pred.get("predicate", {}),
                         "model": pred["model"] if pred.get("user_defined") else m # type:ignore , user-defined model predicates use their own model reference. m is a string in all other cases
                     })
-            self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(vanilla_model) # TODO skipped-values spacing, on RP output after merge :)
+            self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(vanilla_model)
 
     def retrieve_index(self, reference: str) -> tuple[int, KeyError|None]:
         """retrieves the CMD value for the given reference"""
@@ -530,8 +530,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     #== Mecha Transformer Rules ==#
     @rule(AstNbtCompoundEntry)
     def cmd_substitutions(self, node: AstNbtCompoundEntry, **kwargs: Any):
-        if node.key.value == "CustomModelData": # TODO move to rule filter?
-            # print(f"running CMD rule! {node}")
+        if node.key.value == "CustomModelData":
             match node.value.evaluate():
                 case String(reference):
                     index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
@@ -745,7 +744,7 @@ class HandheldTemplate(TemplateOptions):
         m = models_container[model_name] = Model({
             "parent": "minecraft:item/handheld",
             "textures": {
-                "layer0": f"{config.textures.entries()[0]}" # TODO this path correction
+                "layer0": f"{config.textures.entries()[0]}"
             }
         })
         return [m]

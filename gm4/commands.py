@@ -4,6 +4,9 @@ import shutil
 import logging
 from pathlib import Path
 from typing import Any
+import json
+from tempfile import NamedTemporaryFile
+import os
 from beet import Project, ProjectConfig
 from beet.toolchain.cli import beet
 import beet.toolchain.commands as commands
@@ -38,6 +41,8 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: b
 	# logger.addHandler(LogHandler()) # TODO configure the log handler to GM4's preferred formatting
 
 	config = yaml.safe_load(Path("beet-dev.yaml").read_text())
+	# myConf = ProjectConfig(**config)
+	# print(myConf)
 
 	# command-determined config options
 	broadcast_config: dict[str, Any] = next((p for p in config["pipeline"] if isinstance(p, dict))) # type: ignore
@@ -45,9 +50,18 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: b
 	if reload:
 		broadcast_config["require"].prepend("beet.contrib.livereload")
 
-	project.resolved_config = ProjectConfig(**config).resolve(Path("beet-dev.yaml").parent.absolute())
+	config["directory"] = str(project.directory) # set working directory to where CLI was invoked
+
+	# create a tempfile on disk for the project config - allows beet watch to function
+	with NamedTemporaryFile(mode="wt", delete=False, suffix=".json") as f:
+		project.config_path = f.name
+		json.dump(config, f, indent=1)
+
+	project.reset() # delete previously resolved config
 
 	ctx.invoke(commands.watch if watch else commands.build, link=link)
+
+	os.remove(f.name) # delete tempfile
 
 
 @beet.command()
