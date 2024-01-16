@@ -42,3 +42,7 @@ meta:
   autosave:
     link: false
   gm4_dev: True
+
+ignore: 
+ - gm4/skin_cache.json
+ - gm4/modeldata_registry.json

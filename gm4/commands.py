@@ -1,15 +1,21 @@
+import json
+import logging
+import os
+import shutil
+from pathlib import Path
+from tempfile import NamedTemporaryFile
+from typing import Any
+
+import beet.toolchain.commands as commands
 import click
 import yaml
-import shutil
-import logging
-from pathlib import Path
-from typing import Any
-import json
-from tempfile import NamedTemporaryFile
-import os
 from beet import Project, ProjectConfig
 from beet.toolchain.cli import beet
-import beet.toolchain.commands as commands
+
+# NOTE pydantic.v1 does not allow reloading models with custom validators, which beet watch will do normally. 
+# Importing them here prevents their reload on each watch cycle. This may change in pydantic.v2 - revisit then
+from gm4.utils import MapOption  # type: ignore
+from gm4.plugins.resource_pack import ModelData  # type: ignore
 
 pass_project = click.make_pass_decorator(Project) # type: ignore
 
