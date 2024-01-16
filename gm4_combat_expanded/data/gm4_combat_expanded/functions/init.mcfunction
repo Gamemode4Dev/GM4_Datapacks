@@ -53,6 +53,8 @@ scoreboard objectives add gm4_ce_natural_regen_delay dummy
 scoreboard objectives add gm4_ce_death_mult dummy
 scoreboard objectives add gm4_ce_second_wind dummy
 scoreboard objectives add gm4_ce_link_id dummy
+scoreboard objectives add gm4_ce_sword_ring dummy
+scoreboard objectives add gm4_ce_sword_ring.deg dummy
 
 scoreboard objectives add gm4_ce_sleep custom:sleep_in_bed
 scoreboard objectives add gm4_ce_last_sleep dummy

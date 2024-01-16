@@ -8,6 +8,9 @@ tag @a remove gm4_ce_linked
 data modify storage gm4_combat_expanded:temp active_links set value [{id:-1,name:{"translate":"item.gm4.combat_expanded.name.link","fallback":"Unlinked %s","with":[{"translate":"item.minecraft.iron_chestplate","italic":false}],"italic":false,"color":"light_purple"}}]
 scoreboard players reset * gm4_ce_link_id
 
+# prep sword_ring armor
+scoreboard players reset @a gm4_ce_sword_ring
+
 # process players
 execute as @a[gamemode=!spectator] run function gm4_combat_expanded:player/process
 

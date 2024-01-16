@@ -3,7 +3,13 @@
 # at unspecified
 # run from armor/check_modifier/safety
 
-effect give @s invisibility 2 0 true
-execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level
-execute if score $level gm4_ce_data matches 1..2 run effect give @s jump_boost 2 0 true
-execute if score $level gm4_ce_data matches 3..4 run effect give @s jump_boost 2 1 true
+# if armor is giving attack speed check if it should be removed
+execute if score $active gm4_ce_data matches 2 run function gm4_combat_expanded:armor/modifier/type/sneak/check_time
+
+# if armor was active and is now no longer grant the attack speed for 4 seconds if player is not hurt
+execute if score $active gm4_ce_data matches 1 if score @s gm4_ce_t_hurt matches 1 run function gm4_combat_expanded:armor/modifier/type/sneak/deactivate
+execute if score $active gm4_ce_data matches 1 unless predicate gm4_combat_expanded:technical/crouching run function gm4_combat_expanded:armor/modifier/type/sneak/attack_speed
+
+# check if player is sneaking while undamaged to grant invis
+execute if score $active gm4_ce_data matches 0 unless score @s[predicate=gm4_combat_expanded:technical/crouching] gm4_ce_t_hurt matches 1.. run function gm4_combat_expanded:armor/modifier/type/sneak/active
+execute if score $active gm4_ce_data matches 1 run effect give @s invisibility 2 0 true
