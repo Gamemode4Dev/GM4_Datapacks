@@ -1,5 +1,5 @@
 {
-  "last_commit": "c0e8321dcbebdcd0c70d63f5599f9138271ab3b6",
+  "last_commit": "c77c3a9ddaf6179cc8f28f71b338b40b9d8b50bc",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1039,12 +1039,13 @@
     {
       "id": "gm4_guidebook",
       "name": "Guidebook",
-      "version": "1.2.4",
+      "version": "2.0.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",
       "credits": {
-        "Creator": [
-          "BluePsychoRanger"
+        "Creators": [
+          "BluePsychoRanger",
+          "JP12"
         ]
       },
       "requires": [],
@@ -1052,7 +1053,7 @@
       "recommends": [
         "gm4_resource_pack"
       ],
-      "hidden": true,
+      "hidden": false,
       "important_note": "Experimental Module! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.",
       "search_keywords": [],
       "publish_date": "2023-07-10",
