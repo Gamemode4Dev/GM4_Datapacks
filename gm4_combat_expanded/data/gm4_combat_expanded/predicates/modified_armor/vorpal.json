@@ -9,7 +9,7 @@
           "equipment": {
             "feet": {
               "tag": "gm4_combat_expanded:armor",
-              "nbt": "{gm4_combat_expanded:{modifier_name:vorpal}}"
+              "nbt": "{gm4_combat_expanded:{modifier:vorpal}}"
             }
           }
         }
@@ -21,7 +21,7 @@
           "equipment": {
             "legs": {
               "tag": "gm4_combat_expanded:armor",
-              "nbt": "{gm4_combat_expanded:{modifier_name:vorpal}}"
+              "nbt": "{gm4_combat_expanded:{modifier:vorpal}}"
             }
           }
         }
@@ -33,7 +33,7 @@
           "equipment": {
             "chest": {
               "tag": "gm4_combat_expanded:armor",
-              "nbt": "{gm4_combat_expanded:{modifier_name:vorpal}}"
+              "nbt": "{gm4_combat_expanded:{modifier:vorpal}}"
             }
           }
         }
@@ -45,7 +45,7 @@
           "equipment": {
             "head": {
               "tag": "gm4_combat_expanded:armor",
-              "nbt": "{gm4_combat_expanded:{modifier_name:vorpal}}"
+              "nbt": "{gm4_combat_expanded:{modifier:vorpal}}"
             }
           }
         }

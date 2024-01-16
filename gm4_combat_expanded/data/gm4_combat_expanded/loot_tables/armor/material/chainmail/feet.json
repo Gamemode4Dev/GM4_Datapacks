@@ -41,7 +41,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-1,slot:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.chainmail_boots\"}'}}"
+              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-1,slot:3,material:2,name:'{\"italic\":false,\"translate\":\"item.minecraft.chainmail_boots\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

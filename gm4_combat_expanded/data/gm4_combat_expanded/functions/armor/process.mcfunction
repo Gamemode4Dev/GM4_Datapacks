@@ -11,7 +11,7 @@ item replace block 29999998 1 7134 container.3 from entity @s armor.feet
 data modify storage gm4_combat_expanded:temp Items set from block 29999998 1 7134 Items
 
 # process identified armor
-execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded.modifier run function gm4_combat_expanded:armor/slot/head
-execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded.modifier run function gm4_combat_expanded:armor/slot/chest
-execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded.modifier run function gm4_combat_expanded:armor/slot/legs
-execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded.modifier run function gm4_combat_expanded:armor/slot/feet
+execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded run function gm4_combat_expanded:armor/slot/head
+execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded run function gm4_combat_expanded:armor/slot/chest
+execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded run function gm4_combat_expanded:armor/slot/legs
+execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded run function gm4_combat_expanded:armor/slot/feet

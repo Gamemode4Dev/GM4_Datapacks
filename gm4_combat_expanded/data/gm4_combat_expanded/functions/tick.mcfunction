@@ -31,5 +31,5 @@ execute as @p[tag=gm4_ce_linked.check] run function gm4_combat_expanded:armor/mo
 
 # sword_ring armor
 tag @e[type=item_display,tag=gm4_ce_sword_ring.keep_sword] remove gm4_ce_sword_ring.keep_sword
-execute as @a[scores={gm4_ce_sword_ring=1..}] at @s run function gm4_combat_expanded:armor/modifier/type/sword_ring/process/prep
+execute as @a[predicate=gm4_combat_expanded:modified_armor/sword_ring] at @s run function gm4_combat_expanded:armor/modifier/type/sword_ring/prep
 kill @e[type=item_display,tag=gm4_ce_sword_ring.sword,tag=!gm4_ce_sword_ring.keep_sword]

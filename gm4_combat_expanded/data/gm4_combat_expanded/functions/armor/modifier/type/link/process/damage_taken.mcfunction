@@ -9,6 +9,7 @@ execute as @a[tag=gm4_ce_linked,gamemode=!spectator,gamemode=!creative] if score
 
 # calcualte the hp for all players that need to take damage
 execute as @a[tag=gm4_ce_linked.damaged] run function gm4_combat_expanded:player/calculate_hp
+tag @a[tag=gm4_ce_linked.damaged,scores={gm4_ce_health.current=0}] remove gm4_ce_linked.damaged
 # set link health to the damaged players new health
 scoreboard players operation $link_health gm4_ce_data = @s gm4_ce_health.current
 

@@ -41,7 +41,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-5,slot:1,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_chestplate\"}'}}"
+              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-5,slot:1,material:4,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_chestplate\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

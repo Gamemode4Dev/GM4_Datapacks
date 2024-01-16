@@ -3,9 +3,9 @@
 # at unspecified
 # run from functions in armor/slot/<SLOT>
 
-# store information
+# store active information
 execute store result score $active gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.active
-execute store result score $modifier gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.modifier
+scoreboard players operation $modifier gm4_ce_data /= #100 gm4_ce_data
 
 # check activation requirements
 # when damaged in the last 2.4 seconds / undamaged for 4 seconds

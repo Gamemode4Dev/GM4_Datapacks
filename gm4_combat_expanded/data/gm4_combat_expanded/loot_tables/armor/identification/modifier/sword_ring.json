@@ -30,7 +30,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:77}}"
+              "tag": "{gm4_combat_expanded:{modifier:sword_ring}}"
             },
             {
               "function": "minecraft:copy_nbt",

@@ -5,6 +5,7 @@
 
 # set armor to be converted
 data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.netherite set value 1
+data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.material set value 6
 
 # add stats from netherite
 execute store result score $armor gm4_ce_data run data get storage gm4_combat_expanded:temp tag.AttributeModifiers[{Name:"generic.armor_toughness"}].Amount 10

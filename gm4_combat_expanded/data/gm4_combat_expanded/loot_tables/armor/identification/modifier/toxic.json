@@ -44,7 +44,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier_name:toxic}}"
+              "tag": "{gm4_combat_expanded:{modifier:toxic}}"
             },
             {
               "function": "minecraft:copy_nbt",
