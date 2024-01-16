@@ -494,7 +494,7 @@
         [
           {
             "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_creation",
-            "fallback": "Dropping a bottle, an enchanted prismarine shard and a dye into a water-filled zauber cauldron will dye the liquid into magicol.\n\nThe level of the liquid is conserved through this process."
+            "fallback": "Dropping Magic in a Bottle, an enchanted prismarine shard and a dye into a water-filled zauber cauldron will dye the liquid into magicol.\n\nThe level of the liquid is conserved through this process."
           }
         ]
       ]
