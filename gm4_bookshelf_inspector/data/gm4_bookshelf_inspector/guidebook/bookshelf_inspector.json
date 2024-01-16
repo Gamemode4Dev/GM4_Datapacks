@@ -1,0 +1,50 @@
+{
+  "id": "bookshelf_inspector",
+  "name": "Bookshelf Inspector",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:chiseled_bookshelf",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "use_chiseled_bookshelf": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:chiseled_bookshelf"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "display",
+      "enable": [],
+      "requirements": [
+        [
+          "use_chiseled_bookshelf"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.chiseled_bookshelf.description",
+            "fallback": "Looking at a book inside a chiseled bookshelf will display the book name along with some extra contents."
+          }
+        ]
+      ]
+    }
+  ]
+}

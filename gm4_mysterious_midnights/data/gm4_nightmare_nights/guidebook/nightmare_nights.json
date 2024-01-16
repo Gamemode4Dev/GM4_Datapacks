@@ -1,0 +1,124 @@
+{
+  "id": "nightmare_nights",
+  "name": "Nightmare Nights",
+  "module_type": "expansion",
+  "load_check": "mysterious_midnights",
+  "base_module": "mysterious_midnights",
+  "icon": {
+    "item": "minecraft:blaze_powder",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "nightmare_sleep": {
+      "trigger": "minecraft:slept_in_bed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "started_nightmare_night"
+              },
+              "score": "gm4_mm_data"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "night_active"
+              },
+              "score": "gm4_mm_data"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "difficulty"
+              },
+              "score": "gm4_mm_data"
+            },
+            "range": {
+              "min": 6
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "nightmare_sleep"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.nightmare_nights.description",
+            "fallback": "Nightmare Nights cannot be slept away. Attempting to sleep will deal instant damage.\n\nAdditionally, multiple Mysterious Midnights events will occur."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "events",
+      "enable": [
+        {
+          "id": "gm4_midnight_menaces",
+          "load": -1
+        }
+      ],
+      "requirements": [
+        [
+          "nightmare_sleep"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.nightmare_nights.events",
+            "fallback": "While a Nightmare Night is active, the following events will occur:\n\n - Resurrecting Skeletons\n - Resurrecting Zombies\n - Tipped Skeletons"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "events_with_menaces",
+      "enable": [
+        {
+          "id": "gm4_midnight_menaces",
+          "load": 1
+        }
+      ],
+      "requirements": [
+        [
+          "nightmare_sleep"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.nightmare_nights.events_with_menaces",
+            "fallback": "While a Nightmare Night is active, the following events will occur:\n\n - Resurrecting Skeletons\n - Resurrecting Zombies\n - Tipped Skeletons\n - Enlarging Phantoms\n - Illusioner Nights\n - Menacing Goblins"
+          }
+        ]
+      ]
+    }
+  ]
+}

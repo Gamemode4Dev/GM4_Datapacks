@@ -1,0 +1,25 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "T",
+      "I",
+      "I"
+    ],
+    "key": {
+      "T": {
+        "item": "minecraft:tripwire_hook"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_mountaineering:items/poles",
+      "count": 1
+    }
+  }
+}

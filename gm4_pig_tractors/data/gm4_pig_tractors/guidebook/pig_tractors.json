@@ -1,0 +1,107 @@
+{
+  "id": "pig_tractors",
+  "name": "Pig Tractors",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:iron_hoe",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "ride_pig": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "vehicle": {
+                "type": "minecraft:pig"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "vehicle": {
+                  "type": "minecraft:pig",
+                  "nbt": "{NoAI:1b}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "till_soil": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:pig_tractors": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "ride_pig"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.pig_tractors.tilling",
+            "fallback": "Riding a pig while holding a hoe will till grass, dirt, or coarse dirt below the pig, with a chance to drop some loot."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "till_soil"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.pig_tractors.harvesting",
+            "fallback": "Driving over crops with a Pig Tractor will harvest them.\n\nIf the farmer has seeds or crops in their inventory, the crops will be automatically replanted."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.pig_tractors.planting_on_empty",
+            "fallback": "Driving over empty farmland will plant any crops in the farmer's inventory, prioritizing crops in hand."
+          }
+        ]
+      ],
+      "grants": [
+        "description"
+      ]
+    }
+  ]
+}

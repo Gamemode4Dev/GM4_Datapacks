@@ -1,0 +1,20 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "Q"
+    ],
+    "key": {
+      "Q": {
+        "item": "minecraft:quartz_block"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:quartz",
+      "count": 4
+    }
+  }
+}

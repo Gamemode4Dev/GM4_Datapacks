@@ -1,0 +1,75 @@
+{
+  "id": "vibro_shamir",
+  "name": "Vibro Shamir",
+  "module_type": "expansion",
+  "load_check": "metallurgy",
+  "base_module": "metallurgy",
+  "icon": {
+    "item": "minecraft:anvil",
+    "nbt": "{CustomModelData:3420123}"
+  },
+  "criteria": {
+    "obtain_vibro_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'vibro'}}"
+          }
+        ]
+      }
+    },
+    "obtain_vibro_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'vibro'}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.vibro_shamir.description",
+            "fallback": "Vibro grants high jumps and creates deadly shockwaves."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_vibro_shamir",
+          "obtain_vibro_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.vibro_shamir.usage",
+            "fallback": "The Vibro Shamir is found on Thorium Bands. It can be placed onto boots.\n\nWhen sneaking, users who take fall damage will hurt mobs within a 6 block radius. Damage is based on distance from the user and the blocks between."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.vibro_shamir.jump_boost",
+            "fallback": "Sneaking on the ground will allow the user to gain temporary jump boost. The level of jump boost is dependent on the sneak time.\n\nWhen using the Vibro Jump, the user will take damage when landing."
+          }
+        ]
+      ]
+    }
+  ]
+}

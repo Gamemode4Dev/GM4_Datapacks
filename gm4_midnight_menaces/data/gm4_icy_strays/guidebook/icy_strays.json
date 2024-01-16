@@ -1,0 +1,50 @@
+{
+  "id": "icy_strays",
+  "name": "Icy Strays",
+  "module_type": "expansion",
+  "load_check": "midnight_menaces",
+  "base_module": "mysterious_midnights",
+  "icon": {
+    "item": "minecraft:ice",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "fight_icy_stray": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:stray",
+              "nbt": "{DeathLootTable:\"gm4_icy_strays:entities/icy_stray\"}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "fight_icy_stray"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.icy_strays.description",
+            "fallback": "During an Icy Strays event, half of the skeletons will spawn as strays.\n\nThese strays will drop ice when killed with looting."
+          }
+        ]
+      ]
+    }
+  ]
+}
