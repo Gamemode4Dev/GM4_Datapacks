@@ -13,15 +13,14 @@ execute if score $namelen gm4_ce_data matches 75.. run function gm4_combat_expan
 # remove module tag to stop clock running for this armor
 data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.modifier set value -1
 
-# remove curses from armor
+# remove curse from armor
 data remove storage gm4_combat_expanded:temp tag.Enchantments[{id:"minecraft:vanishing_curse"}]
-data remove storage gm4_combat_expanded:temp tag.Enchantments[{id:"minecraft:binding_curse"}]
 
 # use lib_lore to remove lore lines
 data modify storage gm4_lore:temp Source set from storage gm4_combat_expanded:temp tag.display.Lore
 data modify storage gm4_lore:temp Target set value '{"italic":false,"color":"gray","translate":"item.gm4.combat_expanded.lore.killing","fallback":"When Killing:"}'
-scoreboard players set $start gm4_lore -1
-scoreboard players set $extra gm4_lore 2
+scoreboard players set $start gm4_lore -3
+scoreboard players set $extra gm4_lore 5
 function #gm4_lore:remove
 data modify storage gm4_combat_expanded:temp tag.display.Lore set from storage gm4_lore:temp Source
 

@@ -30,6 +30,7 @@ scoreboard objectives add gm4_ce_hurt minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_ce_hurt2 minecraft.custom:minecraft.damage_absorbed
 scoreboard objectives add gm4_ce_t_hurt dummy
 scoreboard objectives add gm4_ce_kill minecraft.custom:minecraft.mob_kills
+scoreboard objectives add gm4_ce_kill2 minecraft.custom:minecraft.player_kills
 scoreboard objectives add gm4_ce_t_shield dummy
 scoreboard objectives add gm4_ce_t_delay dummy
 scoreboard objectives add gm4_ce_t_soothe dummy
@@ -83,6 +84,7 @@ scoreboard players set #50 gm4_ce_data 50
 scoreboard players set #64 gm4_ce_data 64
 scoreboard players set #75 gm4_ce_data 75
 scoreboard players set #100 gm4_ce_data 100
+scoreboard players set #1000 gm4_ce_data 1000
 scoreboard players set #6000 gm4_ce_data 6000
 
 # start clocks

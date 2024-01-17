@@ -10,6 +10,8 @@ execute if score @s[scores={gm4_ce_deaths=1..}] gm4_ce_alivetime matches ..16 ru
 # hurt2 also counts damage absorbed
 scoreboard players operation @s gm4_ce_hurt2 += @s gm4_ce_hurt
 scoreboard players set @s[scores={gm4_ce_hurt2=1..}] gm4_ce_t_hurt 5
+# also count player kills as kills
+scoreboard players operation @s gm4_ce_kill += @s gm4_ce_kill2
 
 # natural regen
 execute unless score $natural_regen gm4_ce_data matches -1 store result score $natural_regen gm4_ce_data run gamerule naturalRegeneration

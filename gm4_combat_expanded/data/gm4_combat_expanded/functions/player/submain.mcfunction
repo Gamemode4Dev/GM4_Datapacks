@@ -26,5 +26,6 @@ scoreboard players remove @a[scores={gm4_ce_natural_regen_damage=1..}] gm4_ce_na
 scoreboard players reset @a gm4_ce_hurt
 scoreboard players reset @a gm4_ce_hurt2
 scoreboard players reset @a gm4_ce_kill
+scoreboard players reset @a gm4_ce_kill2
 scoreboard players reset @a gm4_ce_sprinting
 scoreboard players reset @a gm4_ce_swimming
