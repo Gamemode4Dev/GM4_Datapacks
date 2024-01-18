@@ -52,9 +52,6 @@ scoreboard players operation $damage_down_10 gm4_ce_data = $damage_down gm4_ce_d
 scoreboard players operation $damage_down_10 gm4_ce_data /= #10 gm4_ce_data
 scoreboard players operation $damage_down_01 gm4_ce_data = $damage_down gm4_ce_data
 scoreboard players operation $damage_down_01 gm4_ce_data %= #10 gm4_ce_data
-scoreboard players operation $damage_demonic gm4_ce_data = $damage_stored_10 gm4_ce_data
-scoreboard players operation $damage_demonic gm4_ce_data *= #3 gm4_ce_data
-scoreboard players operation $damage_demonic gm4_ce_data /= #2 gm4_ce_data
 
 # calculate new attack speed in order to replace the attribute
 execute store result score $atkspeed_stored gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.atkspeed
@@ -87,3 +84,4 @@ scoreboard players operation $atkspeed_quick_01 gm4_ce_data %= #10 gm4_ce_data
 
 # store results in storage for changing attributes
 execute store result storage gm4_combat_expanded:temp random_value int 1 run scoreboard players get $random_value gm4_ce_data
+execute store result storage gm4_combat_expanded:temp random_value_2 int 0.2 run scoreboard players get $damage gm4_ce_data

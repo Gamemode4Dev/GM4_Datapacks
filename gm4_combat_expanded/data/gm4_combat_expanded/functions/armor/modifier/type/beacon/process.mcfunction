@@ -1,3 +1,7 @@
+# process the beacon linked to this player
+# @s = beacon block_display
+# at linked player
+# run from armor/modifier/type/beacon/prep
 
 # calculate offset every 3 seconds
 scoreboard players add @s gm4_ce_data 1

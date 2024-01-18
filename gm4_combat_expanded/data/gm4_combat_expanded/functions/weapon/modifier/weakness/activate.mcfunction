@@ -3,13 +3,18 @@
 # at @s
 # run from weapon/check_modifier
 
-# get item level
+# get item levels
 execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level
+execute store result score $level2 gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level2
 
-# weaken entities hit
-execute anchored eyes positioned ^ ^ ^2.5 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict] weakness 4 0
 
 # slow entities hit
-execute if score $level gm4_ce_data matches 1 anchored eyes positioned ^ ^ ^2.5 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict,tag=!gm4_ce_immune_weakness] slowness 4 0
-execute if score $level gm4_ce_data matches 2 anchored eyes positioned ^ ^ ^2.5 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict,tag=!gm4_ce_immune_weakness] slowness 4 1
-execute if score $level gm4_ce_data matches 3 anchored eyes positioned ^ ^ ^2.5 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict,tag=!gm4_ce_immune_weakness] slowness 4 2
+execute if score $level gm4_ce_data matches 1 anchored eyes positioned ^ ^ ^3 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict,tag=!gm4_ce_immune_weakness] slowness 4 0
+execute if score $level gm4_ce_data matches 2 anchored eyes positioned ^ ^ ^3 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict,tag=!gm4_ce_immune_weakness] slowness 4 1
+execute if score $level gm4_ce_data matches 3 anchored eyes positioned ^ ^ ^3 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict,tag=!gm4_ce_immune_weakness] slowness 4 2
+
+# additional effect
+execute if score $level2 gm4_ce_data matches 1 anchored eyes positioned ^ ^ ^3 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict] weakness 4 0
+execute if score $level2 gm4_ce_data matches 2 anchored eyes positioned ^ ^ ^3 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict] blindness 4 0
+execute if score $level2 gm4_ce_data matches 3 anchored eyes positioned ^ ^ ^3 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict] hunger 4 2
+execute if score $level2 gm4_ce_data matches 4 anchored eyes positioned ^ ^ ^3 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict] wither 4 1

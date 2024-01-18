@@ -1,3 +1,7 @@
+# process players wearing beacon armor
+# @s = player
+# at @s
+# run from tick
 
 # find this players beacon
 scoreboard players operation $player_id gm4_ce_id = @s gm4_ce_id
