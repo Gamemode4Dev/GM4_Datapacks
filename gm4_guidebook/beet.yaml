@@ -1,11 +1,15 @@
 id: gm4_guidebook
 name: Guidebook
-version: 1.2.X
+version: 2.0.X
 
 data_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
+  - mecha
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_forceload
 
@@ -14,8 +18,10 @@ meta:
     versioning:
       required:
         lib_forceload: 1.1.0
+      schedule_loops: 
+        - main
+        - tick
     website:
-      hidden: true
       description: Adds a dynamic guidebook to discover the mechanics of Gamemode 4! This provides a wiki-like experience in-game!
       recommended:
         - gm4_resource_pack
@@ -24,5 +30,6 @@ meta:
     video: null
     wiki: https://wiki.gm4.co/wiki/Guidebook
     credits:
-      Creator:
+      Creators:
         - BluePsychoRanger
+        - JP12

@@ -1,0 +1,364 @@
+{
+  "id": "poses_pack",
+  "name": "Poses Pack",
+  "module_type": "expansion",
+  "base_module": "better_armour_stands",
+  "icon": {
+    "item": "minecraft:armor_stand",
+    "nbt": "{CustomModelData:3420003}"
+  },
+  "criteria": {
+    "modify_armor_stand": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:better_armour_stands": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "modify_armor_stand"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.poses_pack.description",
+            "fallback": "The following codes can be used to put a preset pose onto an armour stand:"
+          },
+          {
+            "text": "\n\n"
+          },
+          {
+            "translate": "text.gm4.guidebook.poses_pack.body_part",
+            "fallback": "%1$s:",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.poses_pack.head",
+                "fallback": "Head"
+              }
+            ]
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "head up",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "head up"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "head down",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "head down"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "head left",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "head left"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "head right",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "head right"
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.poses_pack.body_part",
+            "fallback": "%1$s:",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.poses_pack.arms",
+                "fallback": "Arms"
+              }
+            ]
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "arms reaching",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "arms reaching"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "arms swinging",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "arms swinging"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "arms resting",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "arms resting"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "arms raised",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "arms raised"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "arms down",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "arms down"
+            }
+          },
+          {
+            "text": "\n\n"
+          },
+          {
+            "translate": "text.gm4.guidebook.poses_pack.body_part",
+            "fallback": "%1$s:",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.poses_pack.legs",
+                "fallback": "Legs"
+              }
+            ]
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "legs sitting",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "legs sitting"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "legs walking",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "legs walking"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "legs flying",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "legs flying"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "legs down",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "legs down"
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}

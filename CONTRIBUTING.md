@@ -173,6 +173,9 @@ kill @s
 - Only when your module is about to be approved and merged, you should add `CustomModelData` id's.
 - Contact the collaborators of [GM4 Resources](https://github.com/Gamemode4Dev/GM4_Resources) to make sure the correct id's are allocated. Create an issue or pull request there so the correct translation keys are added.
 
+### Guidebook Pages
+Each Gamemode 4 module must include guidebook pages to aid in the explaination and progression of the module. Details on how to add a section to the guidebook can be found in [`gm4_guidebook/CONTRIBUTING.md`](https://github.com/Gamemode4Dev/GM4_Datapacks/blob/master/gm4_guidebook/CONTRIBUTING.md).
+
 ### Tests
 Automated tests for modules should be added in the `data/gm4_module_id/tests` folder. The tests will automatically run in GitHub Actions when you submit a PR. For local development and for the full documentation, see the [PackTest](https://github.com/misode/packtest) project.
 

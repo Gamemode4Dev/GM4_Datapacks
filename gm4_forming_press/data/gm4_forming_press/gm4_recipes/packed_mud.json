@@ -1,0 +1,29 @@
+{
+  "type": "forming_press",
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "X#X",
+      "#C#",
+      "X#X"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:clay_ball"
+      },
+      "#": {
+        "item": "minecraft:mud"
+      },
+      "X": {
+        "item": "minecraft:wheat"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:packed_mud",
+      "count": 8
+    }
+  }
+}

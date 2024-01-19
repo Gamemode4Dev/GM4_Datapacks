@@ -1,0 +1,65 @@
+{
+  "id": "cooler_caves",
+  "name": "Cooler Caves",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:sandstone",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "in_cave_air": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:cave_air"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "cave_changes",
+      "enable": [],
+      "requirements": [
+        [
+          "in_cave_air"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.cooler_caves.description",
+            "fallback": "The world has modified block compositions.\n\nSome biomes have different blocks compared to normal worlds."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.cooler_caves.desert_and_snow",
+            "fallback": "In the desert, sandstone and gravel generate instead of stone and gravel.\n\nIn snowy biomes, snow, ice, and white concrete powder can be found in caves."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.cooler_caves.badlands",
+            "fallback": "Terracotta layers extend throughout the entire underground in badland biomes. Gravel cannot be found, but red sand patches takes their place."
+          }
+        ]
+      ]
+    }
+  ]
+}

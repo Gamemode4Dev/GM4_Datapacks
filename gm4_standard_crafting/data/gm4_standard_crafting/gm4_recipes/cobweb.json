@@ -1,0 +1,25 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "SSS",
+      "SBS",
+      "SSS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:string"
+      },
+      "B": {
+        "item": "minecraft:slime_ball"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:cobweb",
+      "count": 1
+    }
+  }
+}

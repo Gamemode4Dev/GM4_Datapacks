@@ -1,0 +1,60 @@
+{
+  "id": "ziprails",
+  "name": "Ziprails",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:minecart",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_minecart": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:minecart"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_string": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:string"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_minecart"
+        ],
+        [
+          "obtain_string"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.ziprails.description",
+            "fallback": "Tripwires act as ziprails for minecarts.\n\nA rail must be directly under an connected tripwire hook to transfer a minecart to a zipline."
+          }
+        ]
+      ]
+    }
+  ]
+}

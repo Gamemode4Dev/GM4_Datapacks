@@ -1,0 +1,589 @@
+{
+  "id": "zauber_cauldrons",
+  "name": "Zauber Cauldrons",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:cauldron",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_enchanted_book": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:enchanted_book"
+            ]
+          }
+        ]
+      }
+    },
+    "create_zauber_cauldron": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:zauber_cauldrons_create": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "obtain_potion": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:potion"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_prismarine_shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:prismarine_shard"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_gold_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:golden_boots",
+              "minecraft:golden_chestplate",
+              "minecraft:golden_helmet",
+              "minecraft:golden_leggings"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_zauber_potion": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_zauber_cauldrons:{bottle:{}}}"
+          }
+        ]
+      }
+    },
+    "obtain_nether_star": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:nether_star"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_zauber_crystal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_zauber_cauldrons:{item:'crystal'}}"
+          }
+        ]
+      }
+    },
+    "obtain_any_zauber_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_zauber_cauldrons:{}}"
+          }
+        ]
+      }
+    },
+    "obtain_bottled_vex": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:glass_bottle"
+            ],
+            "nbt": "{gm4_zauber_cauldrons:{item:'bottled_vex'}}"
+          }
+        ]
+      }
+    },
+    "make_magicol": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:zauber_cauldrons_make_magicol": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "obtain_bottled_magicol": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:potion"
+            ],
+            "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\"}}"
+          }
+        ]
+      }
+    },
+    "obtain_chorus_fruit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:chorus_fruit",
+              "minecraft:popped_chorus_fruit"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.description",
+            "fallback": "Zauber Cauldrons expand the magic system, allowing the creation of stronger potions, magical armour, effect granting crystals, and bottled wormholes."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "creation",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_enchanted_book"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.creation",
+            "fallback": "Creation",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.creation",
+            "fallback": "A Zauber Cauldron is created by holding an enchanted book while looking into a water-filled cauldron over fire.\n\nSoul fire and campfires work as well."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "recipes",
+      "enable": [],
+      "requirements": [
+        [
+          "create_zauber_cauldron"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.recipes",
+            "fallback": "Zauber recipes are performed by dropping items into the cauldron, consuming some water for each recipe.\n\nWhen looking at a Zauber Cauldron, items inside the cauldron won't be picked up."
+          }
+        ]
+      ],
+      "grants": [
+        "description",
+        "creation"
+      ]
+    },
+    {
+      "name": "potions",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_potion"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.potions",
+            "fallback": "Zauber Potions",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.tier_4_potions",
+            "fallback": "Powerful tier IV potions can be created by dropping a tier II potion, prismarine crystals, and golden apple into the cauldron.\n\nThere are some side effects when creating the tier IV potions."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.splash_and_lingering_potions",
+            "fallback": "Splash and Lingering potions create an excess of heat and will explode if used in a tier IV potion recipe.\n\nUsing a snow powder cauldron will absorb the heat and successfully create a splash or lingering tier IV potion."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.soulutions",
+            "fallback": "Using soul fire underneath the cauldron will cause all brewed potions to be brewed as a Soulution.\n\nSoulutions can be drank 9 times before emptying."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.splash_and_lingering_soulutions",
+            "fallback": "Splash and Lingering soulutions can be created in the same way.\n\nWhen it lands, a splash or lingering soulution will summon a new soulution bottle at the location."
+          }
+        ]
+      ],
+      "prerequisites": [
+        "recipes"
+      ]
+    },
+    {
+      "name": "enchanted_shard",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_prismarine_shard"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.enchanted_prismarine_shard",
+            "fallback": "Advanced Reactants",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.enchanted_prismarine_shard",
+            "fallback": "An enchanted prismarine shard is used to upgrade armour and as a way to get Luck.\n\nThey can be created in a Zauber Cauldron or bought from a wandering trader."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.enchanted_prismarine_shard_creation",
+            "fallback": "They can be created by dropping a prismarine shard in the cauldron while standing nearby with at least 30 experience levels.\n\nThis will consume 30 levels from the nearest applicable observer."
+          }
+        ]
+      ],
+      "prerequisites": [
+        "recipes"
+      ]
+    },
+    {
+      "name": "armor",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_gold_armor"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.armor",
+            "fallback": "Zauber Armour",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.armor",
+            "fallback": "Zauber armour can be made with a piece of gold armour, an enchanted prismarine shard and a modifier item."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.armor_modifiers",
+            "fallback": "The following items can be used as a modifier.\n\nGlistering Melon\n  +6 health\nBlaze Powder\n  +35% Attack Damage\nSugar\n  +12% Speed\nTurtle Helmet\n  +1 Armour\n\nWearing a full set buffs the most prevalent modifier(s)."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.armor_effects",
+            "fallback": "Zauber armour has about a 55% increase in defense compared to normal gold armour.\n\nEach piece of Zauber Armour also has an Armour Toughness of 3, making it comparable to diamond armour."
+          }
+        ]
+      ],
+      "prerequisites": [
+        "enchanted_shard"
+      ]
+    },
+    {
+      "name": "crystals",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_nether_star"
+        ],
+        [
+          "obtain_zauber_potion"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.crystals",
+            "fallback": "Zauber Crystals",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.crystals",
+            "fallback": "Zauber Crystals can be created with a sea lantern, nether star and tier IV potion.\n\nCrystals only function in the offhand of someone with the luck effect."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "luck",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_zauber_crystal"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.luck",
+            "fallback": "Luck",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.lucky_flowers",
+            "fallback": "Each world has a different set of 'lucky' and 'poisonous' flowers.\n\nEach of the twelve small flowers fall under one of those categories."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.luck_output",
+            "fallback": "These flowers are used for the Luck recipe, which grants the nearest one with Luck until death.\n\nIf some of the lucky flowers are missing from the Luck recipe, then nothing will happen."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.luck_output_poison",
+            "fallback": "However, if a poisonous flower is added to the recipe, the cauldron will emit a poisonous cloud."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.luck",
+            "fallback": "Luck can be granted to the nearest user by throwing lucky flowers, an enchanted prismarine shard, and short grass into a zauber cauldron."
+          }
+        ]
+      ],
+      "grants": [
+        "crystals"
+      ]
+    },
+    {
+      "name": "extra_ingredients",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_any_zauber_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.extra_ingredients",
+            "fallback": "Magic in a Bottle",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.extra_ingredients",
+            "fallback": "Any extra ingredients added to a Zauber recipe will leave the cauldron as Possessed Items, weaponless vexes."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.bottling_vexes",
+            "fallback": "If a glass bottle is added to a recipe with extra ingredients, it will capture Possessed Items in groups of three, forming a Magic in a Bottle."
+          }
+        ]
+      ],
+      "grants": [
+        "recipes"
+      ]
+    },
+    {
+      "name": "magicol_creation",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_bottled_vex"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magic_in_a_bottle",
+            "fallback": "If a Magic in a Bottle is left on the ground, the bottle will break and release the vexes.\n\nA Magic in a Bottle stores the location it was created which is useful in creating wormholes."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.bottled_vex_moon_phase",
+            "fallback": "Each Magic in a Bottle has a preferred moon phase.\n\nDuring this moon phase, the bottle doesn't break as quickly and will sparkle to players wearing full zauber armor."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.magicol",
+            "fallback": "Magicol",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_description",
+            "fallback": "Water inside a Cauldron can be converted into a liquid called Magicol.\n\nMagicol is useful for converting areas into colored, spawn-proof biomes."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_creation",
+            "fallback": "Dropping Magic in a Bottle, an enchanted prismarine shard and a dye into a water-filled zauber cauldron will dye the liquid into magicol.\n\nThe level of the liquid is conserved through this process."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "magicol_usage",
+      "enable": [],
+      "requirements": [
+        [
+          "make_magicol",
+          "obtain_bottled_magicol"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_bottling",
+            "fallback": "During the preferred moon phase of the magic in a bottle used to create the Magicol, it can be bottled. This is done by dropping a splash or lingering water bottle and one piece of prismarine crystals, along with either a slime ball, magma cream, or snowball."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.downfall",
+            "fallback": "Magicol bottled with slime balls will be temperate with rain.\n\nWith magma cream they will be arid with no rain, and with snowballs they will be polar with snow."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_potion_types",
+            "fallback": "Soulutions can be created as normal.\n\nLingering bottles of magicol will create permanent particles inside the biome.\n\nDrinkable bottles of magicol can be created, but have no effect."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.bottled_magicol_usage",
+            "fallback": "Throwing a magicol bottle will cause the splashed area to turn into a new biome.\n\nThese biomes are colored according to the magicol liquid and do not spawn any mobs."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_biome_colors",
+            "fallback": "When a new magicol biome is created, short grass and flowers will grow.\n\nLucky flowers are the only ones that grow when first splashing an area."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "wormholes",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_bottled_vex"
+        ],
+        [
+          "obtain_chorus_fruit"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.section.wormholes",
+            "fallback": "Wormholes",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.wormhole_creation",
+            "fallback": "Throwing an Enchanted Shard, Magic in a Bottle, and some quantity of both Chorus Fruit and Popped Chorus Fruit will create a Wormhole in a Bottle with the location of the Magic in a Bottle."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.wormhole_chorus_amounts",
+            "fallback": "The precise amount of fruit is different for each world, and requires experiments with blurry wormholes and possessed items.\n\nToo few chorus will result in blurry wormholes, locating to a random nearby location."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.wormhole_chorus_amounts_1",
+            "fallback": "If too many chorus or popped chorus are used, the excess fruit will transform into possessed items, but a precise wormhole will be created."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.wormhole_teleportation",
+            "fallback": "Wormholes explode when the drinker reaches their destination, damaging surrounding blocks without harming the drinker.\n\nIf they end up in a cauldron, there no is explosion."
+          }
+        ]
+      ]
+    }
+  ]
+}

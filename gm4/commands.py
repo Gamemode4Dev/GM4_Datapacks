@@ -43,10 +43,14 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: b
 			"gm4.plugins.output",
 			"beet.contrib.livereload",
 			"gm4.plugins.player_heads",
+			"gm4_guidebook.generate_guidebooks.load_page_data",
+			"gm4_guidebook.generate_guidebooks.load_custom_recipes",
 			"gm4.plugins.module.tests"
 		] if reload else [
 			"gm4.plugins.output",
 			"gm4.plugins.player_heads",
+			"gm4_guidebook.generate_guidebooks.load_page_data",
+			"gm4_guidebook.generate_guidebooks.load_custom_recipes",
 			"gm4.plugins.module.tests"
 		],
 		"pipeline": [

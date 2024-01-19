@@ -1,0 +1,75 @@
+{
+  "id": "infinitas_shamir",
+  "name": "Infinitas Shamir",
+  "module_type": "expansion",
+  "load_check": "metallurgy",
+  "base_module": "metallurgy",
+  "icon": {
+    "item": "minecraft:anvil",
+    "nbt": "{CustomModelData:3420100}"
+  },
+  "criteria": {
+    "obtain_infinitas_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'infinitas'}}"
+          }
+        ]
+      }
+    },
+    "obtain_infinitas_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'infinitas'}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.infinitas_shamir.description",
+            "fallback": "Infinitas items are infinite liquid sources. It also pulls mobs and items towards the user."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_infinitas_shamir",
+          "obtain_infinitas_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.infinitas_shamir.usage",
+            "fallback": "The Infinitas Shamir is found on Curie's Bismium Bands. It can be placed onto empty or filled buckets.\n\nInfinitas buckets can be used infinitely and will never get filled (if empty) or drained (if full)."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.infinitas_shamir.vacuum",
+            "fallback": "Holding an empty infinitas bucket will attract mobs and items in an 11x11 area.\n\nMobs affected by infinitas will be on cooldown until the user moves away or deselects the bucket."
+          }
+        ]
+      ]
+    }
+  ]
+}

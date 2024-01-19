@@ -1,0 +1,134 @@
+{
+  "id": "soul_glass",
+  "name": "Soul Glass",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:brown_stained_glass",
+    "nbt": "{CustomModelData:3420002,Enchantments:[{id:\"minecraft:protection\",lvl:0s}]}"
+  },
+  "criteria": {
+    "obtain_soul_sand": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:soul_sand"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_soul_glass": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:brown_stained_glass"
+            ],
+            "nbt": "{gm4_soul_glass:1b}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_soul_sand"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.soul_glass.description",
+            "fallback": "Soul Sand can be smelted in a blast furnace to get Soul Glass.\n\nWhen placed directly over a beacon, soul glass will corrupt the effects."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_soul_glass"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.soul_glass.usage",
+            "fallback": "If soul glass is moved from its original location it will lose its properties.\n\nThe exception is moving it with a sticky piston up to one block away."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.soul_glass.corrupted_effects",
+            "fallback": "Corrupted Effects:"
+          },
+          "\n\n",
+          {
+            "translate": "effect.minecraft.speed"
+          },
+          "\n - ",
+          {
+            "translate": "effect.minecraft.slowness"
+          },
+          "\n",
+          {
+            "translate": "effect.minecraft.haste"
+          },
+          "\n - ",
+          {
+            "translate": "effect.minecraft.mining_fatigue"
+          },
+          "\n",
+          {
+            "translate": "effect.minecraft.resistance"
+          },
+          "\n - ",
+          {
+            "translate": "effect.minecraft.glowing"
+          },
+          "\n",
+          {
+            "translate": "effect.minecraft.jump_boost"
+          },
+          "\n - ",
+          {
+            "translate": "effect.minecraft.slow_falling"
+          }
+        ],
+        [
+          "\n",
+          {
+            "translate": "effect.minecraft.strength"
+          },
+          "\n - ",
+          {
+            "translate": "effect.minecraft.weakness"
+          },
+          "\n",
+          {
+            "translate": "effect.minecraft.regeneration"
+          },
+          "\n - ",
+          {
+            "translate": "effect.minecraft.poison"
+          }
+        ]
+      ],
+      "grants": [
+        "description"
+      ]
+    }
+  ]
+}

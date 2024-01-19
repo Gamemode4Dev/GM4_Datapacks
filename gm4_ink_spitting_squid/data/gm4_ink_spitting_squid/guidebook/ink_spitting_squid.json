@@ -1,0 +1,91 @@
+{
+  "id": "ink_spitting_squid",
+  "name": "Ink Spitting Squid",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:ink_sac",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "inked": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:ink_spitting_squid": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "glow_inked": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:glow_ink_spitting_squid": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "normal_squid",
+      "enable": [],
+      "requirements": [
+        [
+          "inked"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.ink_spitting_squid.normal_squid",
+            "fallback": "Swimming underwater near a squid will cause it to ink the diver.\n\nWhen affected by squid ink, blindness and nausea effects occur."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "glow_squid",
+      "enable": [],
+      "requirements": [
+        [
+          "glow_inked"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.ink_spitting_squid.glow_squid",
+            "fallback": "When glow squids ink, they have the opposite effect from squids.\n\nThose inked with glow ink are affected by night vision and glowing."
+          }
+        ]
+      ],
+      "grants": [
+        "normal_squid"
+      ]
+    }
+  ]
+}

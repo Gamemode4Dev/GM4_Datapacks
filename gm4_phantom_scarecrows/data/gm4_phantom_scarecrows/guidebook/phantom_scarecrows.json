@@ -1,0 +1,87 @@
+{
+  "id": "phantom_scarecrows",
+  "name": "Phantom Scarecrows",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:skeleton_skull",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "obtain_skull": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:skeleton_skull",
+              "minecraft:zombie_head",
+              "minecraft:wither_skeleton_skull"
+            ]
+          }
+        ]
+      }
+    },
+    "find_phantom_scarecrow": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "looking_at": {
+                  "type": "minecraft:armor_stand",
+                  "nbt": "{Tags:[\"gm4_phantom_scarecrow\"]}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "creation",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_skull"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.phantom_scarecrows.creation",
+            "fallback": "Placing a skull or zombie head on an armour stand and equipping it with a cursed chestplate will transform it into a phantom scarecrow."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "find_phantom_scarecrow"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.phantom_scarecrows.usage",
+            "fallback": "Phantom scarecrows will shoot fireworks at phantoms above them.\n\nPhantoms shot by these projectiles will instantly die, but if the firework projectile hits a block, it will explode."
+          }
+        ]
+      ],
+      "grants": [
+        "creation"
+      ]
+    }
+  ]
+}

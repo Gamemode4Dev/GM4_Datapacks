@@ -1,0 +1,60 @@
+{
+  "id": "calling_bell",
+  "name": "Calling Bell",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:emerald",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "obtain_emerald": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:emerald"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_bell": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bell"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "calling",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_emerald"
+        ],
+        [
+          "obtain_bell"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.calling_bell.description",
+            "fallback": "Ringing a bell while holding an emerald will cause a wandering trader to appear.\n\nThis can be done once per day."
+          }
+        ]
+      ]
+    }
+  ]
+}

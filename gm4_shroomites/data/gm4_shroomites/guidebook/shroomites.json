@@ -1,0 +1,88 @@
+{
+  "id": "shroomites",
+  "name": "Shroomites",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:mycelium",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "step_on_mycelium": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "stepping_on": {
+                "block": {
+                  "blocks": [
+                    "minecraft:mycelium"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "stand_in_blocker": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "tag": "gm4_shroomites:spore_opaque"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "step_on_mycelium"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.shroomites.description",
+            "fallback": "Mooshrooms have a rare chance to spawn a shroomite mushroom.\n\nA shroomite will spawn spores that spread mycelium to nearby dirt, and convert cows to mooshrooms."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "spreading",
+      "enable": [],
+      "requirements": [
+        [
+          "stand_in_blocker"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.shroomites.spreading",
+            "fallback": "Spores will float in the air and can produce new shroomites.\n\nBlocks with collision, water, lava, cobwebs, powdered snow, and sunflowers can block shroomite spores from spreading."
+          }
+        ]
+      ],
+      "prerequisites": [
+        "description"
+      ]
+    }
+  ]
+}

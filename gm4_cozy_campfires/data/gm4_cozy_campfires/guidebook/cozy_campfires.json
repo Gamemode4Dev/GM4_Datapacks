@@ -1,0 +1,48 @@
+{
+  "id": "cozy_campfires",
+  "name": "Cozy Campfires",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:campfire",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "place_campfire": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "tag": "minecraft:campfires"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "absorption",
+      "enable": [],
+      "requirements": [
+        [
+          "place_campfire"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.cozy_campfires.description",
+            "fallback": "Standing near a campfire temporarily gives four hearts of absorption.\n\nThese extra hearts last 12 minutes once one leaves the campfire area."
+          }
+        ]
+      ]
+    }
+  ]
+}

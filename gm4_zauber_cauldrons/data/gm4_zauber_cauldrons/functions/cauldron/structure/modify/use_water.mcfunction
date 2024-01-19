@@ -8,3 +8,6 @@ execute if block ~ ~ ~ minecraft:water_cauldron[level=3] run setblock ~ ~ ~ mine
 
 # particle
 particle minecraft:splash ~ ~ ~ .15 0.1 .15 0 6
+
+# sound
+playsound minecraft:item.bucket.fill block @a[distance=..8] ~ ~ ~ 0.5 0.75

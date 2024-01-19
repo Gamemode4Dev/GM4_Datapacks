@@ -1,0 +1,79 @@
+{
+  "id": "potion_swords",
+  "name": "Potion Swords",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:golden_sword",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_potion": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:potion"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_golden_sword": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:golden_sword"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.potion_swords.description",
+            "fallback": "Attacking with a golden sword whilst a potion is in the inventory will cause an effect based on the potion.\n\nThe potions are never consumed, but only certain potions work."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_potion"
+        ],
+        [
+          "obtain_golden_sword"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.potion_swords.defensive_potions",
+            "fallback": "The following potions can be used with Potion Swords:\n\nExtended Invisibility applies invisibility for 8 seconds to allies.\n\nInstant Health II applies Absorption I for 8 seconds to allies."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.potion_swords.offensive_potions",
+            "fallback": "Poison II withers nearby mobs for 4 seconds and transforms skeletons into wither skeletons without loot.\n\nExtended Slowness causes nearby mobs to be unable to move for 4 seconds."
+          }
+        ]
+      ]
+    }
+  ]
+}

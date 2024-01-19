@@ -1,0 +1,68 @@
+{
+  "id": "iacio_shamir",
+  "name": "Iacio Shamir",
+  "module_type": "expansion",
+  "base_module": "metallurgy",
+  "icon": {
+    "item": "minecraft:anvil",
+    "nbt": "{CustomModelData:3420122}"
+  },
+  "criteria": {
+    "obtain_iacio_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'iacio'}}"
+          }
+        ]
+      }
+    },
+    "obtain_iacio_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'iacio'}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.iacio_shamir.description",
+            "fallback": "Iacio strengthens the throw of projectiles and items."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_iacio_shamir",
+          "obtain_iacio_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.iacio_shamir.usage",
+            "fallback": "The Iacio Shamir is found on Barium Bands. It can be placed onto chestplates.\n\nItems, Tridents, Ender Pearls, Splash and Lingering Potions, Snowballs, and Eggs will fly farther when thrown."
+          }
+        ]
+      ]
+    }
+  ]
+}

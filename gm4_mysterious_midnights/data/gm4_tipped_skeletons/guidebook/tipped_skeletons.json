@@ -1,0 +1,46 @@
+{
+  "id": "tipped_skeletons",
+  "name": "Tipped Skeletons",
+  "module_type": "expansion",
+  "load_check": "mysterious_midnights",
+  "base_module": "mysterious_midnights",
+  "icon": {
+    "item": "minecraft:tipped_arrow",
+    "nbt": "{CustomModelData:3420001,Potion:'minecraft:long_poison'}"
+  },
+  "criteria": {
+    "shot_by_tipped_skeleton": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:skeleton",
+            "nbt": "{Tags:['gm4_tipped_skeleton']}"
+          }
+        }
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "shot_by_tipped_skeleton"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.tipped_skeletons.description",
+            "fallback": "During a Tipped Skeletons event, skeletons will be equipped with tipped arrows.\n\nExtended slowness, extended weakness, extended poison, and strong harming tipped arrows are used."
+          }
+        ]
+      ]
+    }
+  ]
+}
