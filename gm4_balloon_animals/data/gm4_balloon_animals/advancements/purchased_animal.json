@@ -1,0 +1,31 @@
+{
+    "criteria": {
+      "animal1": {
+        "trigger": "minecraft:villager_trade",
+        "conditions": {
+          "item": {
+            "nbt": "{gm4_balloon_animals:{animal:1b,trade:1b}}"
+          }
+        }
+      },
+      "animal2": {
+        "trigger": "minecraft:villager_trade",
+        "conditions": {
+          "item": {
+            "nbt": "{gm4_balloon_animals:{animal:2b,trade:2b}}"
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "animal1",
+        "animal2"
+      ]
+    ],
+    "sends_telemetry_event": true,
+    "rewards": {
+      "function": "gm4_balloon_animals:purchase/animal_purchased"
+    }
+  }
+  

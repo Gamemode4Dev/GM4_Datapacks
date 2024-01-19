@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lead",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_balloon_animals:{animal:1b,trade:1b}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "Animal 1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

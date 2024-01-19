@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bee_nest",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{BlockEntityTag:{Bees:[{EntityData:{id:\"minecraft:bee\"}}]}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

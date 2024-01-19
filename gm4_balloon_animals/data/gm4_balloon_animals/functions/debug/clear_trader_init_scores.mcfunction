@@ -1,0 +1,9 @@
+
+
+scoreboard players reset $trader_llama_check gm4_balloon_animals_data
+scoreboard players reset $trader_llama_count gm4_balloon_animals_data
+scoreboard players reset $llamas_replaced gm4_balloon_animals_data
+scoreboard players reset $a1_choice gm4_balloon_animals_data
+scoreboard players reset $a2_choice gm4_balloon_animals_data
+scoreboard players reset $a1_rare_calc gm4_balloon_animals_data
+scoreboard players reset $a2_rare_calc gm4_balloon_animals_data
