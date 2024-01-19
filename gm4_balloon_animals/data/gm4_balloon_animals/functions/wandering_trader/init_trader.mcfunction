@@ -1,17 +1,7 @@
 # Adds animal trades to the trader's trade pool.
 # @s = a wandering trader without the gm4_calling_bell_trader tag (aka naturally spawned trader) with exactly 2 trader llamas
 # at @s
-# run from #gm4_trades:register_trades
-
-## guards
-# if calling bell trader, no llamas, so break immediately.
-execute if entity @s[tag=gm4_calling_bell_trader] run return 0
-
-# check tags
-execute store result score $trader_llama_count gm4_balloon_animals_data if entity @e[type=trader_llama,distance=..5] 
-
-# check llama count
-execute unless score $trader_llama_count gm4_balloon_animals_data matches 2 run return 0
+# run from gm4_balloon_animals:wandering_trader/check_eligibility
 
 tag @s add gm4_balloon_animal_trader
 tag @s add gm4_balloon_animal_trader_new

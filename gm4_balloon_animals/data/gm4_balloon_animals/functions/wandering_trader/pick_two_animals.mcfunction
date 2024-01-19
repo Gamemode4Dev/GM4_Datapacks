@@ -1,7 +1,7 @@
 # Adds animal trades to the trader's trade pool.
 # @s = a wandering trader without the gm4_calling_bell_trader tag (aka naturally spawned trader) with exactly 2 trader llamas
 # at @s
-# from gm4_balloon_animals:wandering_trader/register_trade
+# from gm4_balloon_animals:wandering_trader/init_trader
 
 # calculate numbers based on summoned marker's UUID[0] and [3]
 execute summon marker run function gm4_balloon_animals:wandering_trader/animal_one/random_calc

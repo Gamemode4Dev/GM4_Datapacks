@@ -1,5 +1,5 @@
 {
     "values": [
-        "gm4_balloon_animals:wandering_trader/register_trade"
+        "gm4_balloon_animals:wandering_trader/check_eligibility"
     ]
 }

@@ -10,4 +10,4 @@ scoreboard players add $llamas_replaced gm4_balloon_animals_data 1
 tp @s ~ ~-1000 ~
 kill @s
 
-schedule function gm4_balloon_animals:delay/item_cleanup 1t
+schedule function gm4_balloon_animals:delay/lead_cleanup 1t
