@@ -4,10 +4,15 @@ schedule function gm4_combat_expanded:tick 1t
 scoreboard players reset @a gm4_ce_damaged
 scoreboard players reset @a gm4_ce_absorped
 scoreboard players reset @a gm4_ce_shielded_hit
+scoreboard players reset @a gm4_ce_sword_hit_triggered
 
 # | Process Weapons
 # delay
 execute as @e[tag=gm4_cd_delay_active] at @s run function gm4_combat_expanded:weapon/modifier/delay/tick
+# lightning
+execute as @e[scores={gm4_ce_lightning_charge=1..}] at @s run function gm4_combat_expanded:weapon/modifier/lightning/tick
+# pierce
+execute as @e[scores={gm4_ce_pierce_timer=1..}] at @s run function gm4_combat_expanded:weapon/modifier/pierce/tick
 
 # | Process Armor
 # immune

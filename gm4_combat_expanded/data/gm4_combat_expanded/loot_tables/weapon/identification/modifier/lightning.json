@@ -83,10 +83,18 @@
                 "translate": "potion.withDuration",
                 "with": [
                   {
-                    "translate": "item.gm4.combat_expanded.lore.lightning",
-                    "fallback": "Apply Stack of Charge"
+                    "translate": "potion.withAmplifier",
+                    "with": [
+                      {
+                        "translate": "item.gm4.combat_expanded.lore.lightning",
+                        "fallback": "Charge"
+                      },
+                      {
+                        "translate": "potion.potency.1"
+                      }
+                    ]
                   },
-                  "0:04"
+                  "0:08"
                 ],
                 "color": "red",
                 "italic": false

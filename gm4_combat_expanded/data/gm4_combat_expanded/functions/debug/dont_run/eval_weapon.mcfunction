@@ -2,7 +2,7 @@ execute unless data entity @s SelectedItem.tag.gm4_combat_expanded{identified:0}
 data modify storage gm4_combat_expanded:temp tag set from entity @s SelectedItem.tag
 
 function gm4_combat_expanded:identification/weapon/randomize_stats
-$loot replace block 29999998 1 7134 container.1 loot gm4_combat_expanded:weapon/identification/$(id)
+$loot replace block 29999998 1 7134 container.1 loot gm4_combat_expanded:weapon/identification/modifier/$(id)
 data modify storage gm4_combat_expanded:temp tag merge from block 29999998 1 7134 Items[{Slot:1b}].tag
 execute store result score $current_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp tag.Enchantments[{id:"minecraft:sharpness"}].lvl
 execute if score $current_sharpness gm4_ce_data matches 1.. run function gm4_combat_expanded:weapon/update_sharpness

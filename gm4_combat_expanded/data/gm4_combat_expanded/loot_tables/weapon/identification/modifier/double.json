@@ -28,7 +28,7 @@
                 {
                   "attribute": "minecraft:generic.attack_damage",
                   "name": "gm4_ce_base_attack_damage",
-                  "amount": 0,
+                  "amount": 1,
                   "operation": "addition",
                   "slot": "mainhand"
                 },
@@ -91,7 +91,7 @@
                 "translate": "attribute.modifier.equals.0",
                 "with": [
                   {
-                    "text": "0",
+                    "text": "1",
                     "color": "red",
                     "italic": false
                   },
@@ -120,7 +120,7 @@
                         "name": "$atkspeed_stored_10",
                         "objective": "gm4_ce_data"
                       },
-                      "color": "green",
+                      "color": "dark_green",
                       "italic": false
                     },
                     ".",
@@ -172,7 +172,7 @@
                       "name": "$atkspeed_stored_10",
                       "objective": "gm4_ce_data"
                     },
-                    "color": "green",
+                    "color": "dark_green",
                     "italic": false
                   },
                   {
@@ -209,9 +209,7 @@
                 "translate": "attribute.modifier.plus.1",
                 "with": [
                   {
-                    "text": "100",
-                    "color": "green",
-                    "italic": false
+                    "text": "100"
                   },
                   {
                     "translate": "attribute.name.generic.attack_damage"

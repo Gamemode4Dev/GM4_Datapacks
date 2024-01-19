@@ -56,11 +56,17 @@ scoreboard objectives add gm4_ce_second_wind dummy
 scoreboard objectives add gm4_ce_link_id dummy
 scoreboard objectives add gm4_ce_sword_ring dummy
 scoreboard objectives add gm4_ce_sword_ring.deg dummy
-
+scoreboard objectives add gm4_ce_lightning_charge dummy
+scoreboard objectives add gm4_ce_lightning_charge.timer dummy
+scoreboard objectives add gm4_ce_lightning_charge.deg dummy
+scoreboard objectives add gm4_ce_lightning_charge.striking dummy
+scoreboard objectives add gm4_ce_sword_hit_triggered dummy
+scoreboard objectives add gm4_ce_pierce_timer dummy
 scoreboard objectives add gm4_ce_sleep custom:sleep_in_bed
 scoreboard objectives add gm4_ce_last_sleep dummy
 
 # constants
+scoreboard players set #-1 gm4_ce_data -1
 scoreboard players set #0 gm4_ce_data 0
 scoreboard players set #1 gm4_ce_data 1
 scoreboard players set #2 gm4_ce_data 2

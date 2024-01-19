@@ -1,0 +1,64 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/delay",
+                    "weight": 4
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/double",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/fire",
+                    "weight": 40
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/giant",
+                    "weight": 40
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/heavy",
+                    "weight": 160
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/lightning",
+                    "weight": 16
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/pierce",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/poison",
+                    "weight": 40
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/quick",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/swift",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/weakness",
+                    "weight": 40
+                }
+            ]
+        }
+    ]
+}

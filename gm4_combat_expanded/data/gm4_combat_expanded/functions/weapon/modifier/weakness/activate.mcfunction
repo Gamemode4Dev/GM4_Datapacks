@@ -7,7 +7,6 @@
 execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level
 execute store result score $level2 gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level2
 
-
 # slow entities hit
 execute if score $level gm4_ce_data matches 1 anchored eyes positioned ^ ^ ^3 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict,tag=!gm4_ce_immune_weakness] slowness 4 0
 execute if score $level gm4_ce_data matches 2 anchored eyes positioned ^ ^ ^3 run effect give @e[distance=..5,predicate=gm4_combat_expanded:technical/unblocked_hit,team=!gm4_ce_team_check,tag=!smithed.strict,tag=!gm4_ce_immune_weakness] slowness 4 1

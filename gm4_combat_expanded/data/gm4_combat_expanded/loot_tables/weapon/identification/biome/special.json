@@ -5,6 +5,16 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/delay",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/double",
+                    "weight": 40
+                },
+                {
+                    "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:weapon/identification/modifier/fire",
                     "weight": 10
                 },
@@ -15,12 +25,17 @@
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:weapon/identification/modifier/glow",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/heavy",
                     "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:weapon/identification/modifier/heavy",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/lightning",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/pierce",
                     "weight": 10
                 },
                 {
@@ -35,13 +50,13 @@
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:weapon/identification/modifier/weakness",
-                    "weight": 10
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/swift",
+                    "weight": 1
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:weapon/identification/modifier/delay",
-                    "weight": 1
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/weakness",
+                    "weight": 10
                 }
             ]
         }

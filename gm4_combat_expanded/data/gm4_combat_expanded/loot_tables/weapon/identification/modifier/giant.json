@@ -43,12 +43,20 @@
                 {
                   "attribute": "minecraft:generic.attack_speed",
                   "name": "gm4_ce_base_attack_speed",
-                  "amount": 0.5,
+                  "amount": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$atkspeed_extra"
+                    },
+                    "score": "gm4_ce_data",
+                    "scale": 0.1
+                  },
                   "operation": "addition",
                   "slot": "mainhand"
                 },
                 {
-                  "attribute": "minecraft:generic.entity_interaction_range",
+                  "attribute": "minecraft:player.entity_interaction_range",
                   "name": "gm4_ce_entity_interaction_range",
                   "amount": 1,
                   "operation": "addition",
@@ -215,16 +223,89 @@
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
-                  "0.5",
+                  [
+                    {
+                      "score": {
+                        "name": "$atkspeed_extra_10",
+                        "objective": "gm4_ce_data"
+                      },
+                      "color": "red",
+                      "italic": false
+                    },
+                    ".",
+                    {
+                      "score": {
+                        "name": "$atkspeed_extra_01",
+                        "objective": "gm4_ce_data"
+                      }
+                    }
+                  ],
                   {
-                    "translate": "attribute.name.generic.attack_speed",
-                    "color": "dark_green"
+                    "translate": "attribute.name.generic.attack_speed"
                   }
                 ],
-                "color": "red",
+                "color": "dark_green",
                 "italic": false
               }
             ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$atkspeed_extra_01"
+                  },
+                  "score": "gm4_ce_data"
+                },
+                "range": 0
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              " ",
+              {
+                "translate": "attribute.modifier.equals.0",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$atkspeed_extra_10",
+                      "objective": "gm4_ce_data"
+                    },
+                    "color": "red",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.name.generic.attack_speed"
+                  }
+                ],
+                "color": "dark_green",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$atkspeed_extra_01"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 0
+            }
           ]
         },
         {
@@ -238,7 +319,7 @@
                 "with": [
                   "1",
                   {
-                    "translate": "attribute.name.generic.entity_interaction_range",
+                    "translate": "attribute.name.player.entity_interaction_range",
                     "color": "dark_green"
                   }
                 ],

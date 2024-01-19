@@ -4,6 +4,9 @@
 advancement revoke @s only gm4_combat_expanded:used_strike_weapon
 # run from advancement used_giant_weapon
 
+# don't trigger this scoreboard multiple times
+scoreboard players set @s gm4_ce_sword_hit_triggered 1
+
 # store weapon item to shulker box and put in storage
 item replace block 29999998 1 7134 container.0 from entity @s weapon.mainhand
 data modify storage gm4_combat_expanded:temp tag set from block 29999998 1 7134 Items[{Slot:0b}].tag

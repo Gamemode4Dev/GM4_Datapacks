@@ -42,7 +42,7 @@
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.block_interaction_range",
+                  "attribute": "minecraft:player.block_interaction_range",
                   "name": "gm4_ce_perm_3",
                   "amount": {
                     "type": "minecraft:score",
@@ -57,7 +57,7 @@
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.entity_interaction_range",
+                  "attribute": "minecraft:player.entity_interaction_range",
                   "name": "gm4_ce_perm_4",
                   "amount": {
                     "type": "minecraft:score",

@@ -5,6 +5,20 @@
             "conditions": {
                 "player": [
                     {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                          "condition": "minecraft:value_check",
+                          "value": {
+                            "type": "minecraft:score",
+                            "target": "this",
+                            "score": "gm4_ce_sword_hit_triggered"
+                          },
+                          "range": {
+                            "min": 1
+                          }
+                        }
+                      },
+                    {
                         "condition": "minecraft:entity_properties",
                         "entity": "this",
                         "predicate": {
