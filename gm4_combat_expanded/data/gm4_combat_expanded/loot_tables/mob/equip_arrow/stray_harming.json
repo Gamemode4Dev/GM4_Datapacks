@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{custom_potion_effects:[{id:\"minecraft:slowness\",amplifier:0b,duration:600}],Potion:\"minecraft:harming\",HideFlags:32,CustomPotionColor:4393481}"
+              "tag": "{custom_potion_effects:[{id:\"minecraft:slowness\",amplifier:0b,duration:600}],Potion:\"minecraft:harming\",HideFlags:32,CustomPotionColor:11101546}"
             },
             {
               "function": "minecraft:set_lore",
@@ -54,6 +54,13 @@
               "name": {
                 "translate": "item.minecraft.tipped_arrow.effect.harming",
                 "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3,
+                "max": 8
               }
             }
           ]

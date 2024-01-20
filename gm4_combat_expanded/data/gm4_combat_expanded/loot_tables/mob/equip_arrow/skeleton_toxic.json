@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{custom_potion_effects:[{id:\"minecraft:weakness\",amplifier:0b,duration:100},{id:\"minecraft:hunger\",amplifier:1b,duration:100},{id:\"minecraft:poison\",amplifier:0b,duration:100}],CustomPotionColor:5149489,HideFlags:32}"
+              "tag": "{custom_potion_effects:[{id:\"minecraft:weakness\",amplifier:0b,duration:100},{id:\"minecraft:hunger\",amplifier:1b,duration:100},{id:\"minecraft:poison\",amplifier:0b,duration:100}],CustomPotionColor:8889187,HideFlags:32}"
             },
             {
               "function": "minecraft:set_lore",
@@ -79,6 +79,13 @@
               "name": {
                 "translate": "item.minecraft.tipped_arrow.effect.poison",
                 "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2,
+                "max": 4
               }
             }
           ]
