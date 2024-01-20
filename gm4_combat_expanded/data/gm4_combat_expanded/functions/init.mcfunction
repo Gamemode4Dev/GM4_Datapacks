@@ -20,6 +20,7 @@ scoreboard players set $phantoms_disabled gm4_ce_data 1
 # scoreboards
 scoreboard objectives add gm4_ce_id dummy
 scoreboard objectives add gm4_ce_difficult dummy {"text":"GM4 Combat Expanded: Difficulty"}
+scoreboard objectives add gm4_ce_difficult.mob dummy
 scoreboard objectives add gm4_ce_play_time dummy
 scoreboard objectives add gm4_ce_death_mult dummy
 scoreboard objectives add gm4_ce_since_last_death dummy

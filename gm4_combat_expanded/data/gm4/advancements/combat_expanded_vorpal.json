@@ -15,7 +15,7 @@
     "frame": "challenge",
     "hidden": true
   },
-  "parent": "gm4:combat_expanded_trial_complete",
+  "parent": "gm4:combat_expanded_identify",
   "criteria": {
     "guardian": {
       "trigger": "minecraft:impossible"

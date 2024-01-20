@@ -29,8 +29,6 @@ execute if predicate gm4_combat_expanded:mob/modifier/mountainous run scoreboard
 scoreboard players set $nearby_home_bed gm4_ce_data 0
 execute as @e[type=marker,tag=gm4_ce_bed,distance=..128] run function gm4_combat_expanded:player/home/check_bed
 execute if score $nearby_home_bed gm4_ce_data matches 1 run scoreboard players remove $difficulty_mult gm4_ce_data 40
-# trial spawner +60% TODO
-##scoreboard players add $difficulty_mult gm4_ce_data 60
 # apply difficulty_mult
 scoreboard players operation $difficulty_add gm4_ce_data = $difficulty gm4_ce_data
 scoreboard players operation $difficulty_add gm4_ce_data *= $difficulty_mult gm4_ce_data
@@ -72,7 +70,7 @@ execute if score $mob_extras gm4_ce_data matches 1.. unless entity @s[tag=gm4_ce
 tag @s remove gm4_ce_extra_mob
 
 # store difficulty
-scoreboard players operation @s gm4_ce_difficult = $difficulty gm4_ce_data
+scoreboard players operation @s gm4_ce_difficult.mob = $difficulty gm4_ce_data
 
 # mark mob as initiated
 tag @s add gm4_ce_processed

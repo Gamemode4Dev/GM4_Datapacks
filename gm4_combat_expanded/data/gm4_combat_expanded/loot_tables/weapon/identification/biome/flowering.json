@@ -35,6 +35,11 @@
                 },
                 {
                     "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:weapon/identification/modifier/long",
+                    "weight": 40
+                },
+                {
+                    "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:weapon/identification/modifier/pierce",
                     "weight": 160
                 },

@@ -20,6 +20,11 @@
                 },
                 {
                     "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/big",
+                    "weight": 4
+                },
+                {
+                    "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/modifier/canine",
                     "weight": 4
                 },
@@ -106,6 +111,11 @@
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/modifier/sword_ring",
+                    "weight": 4
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/tiny",
                     "weight": 4
                 },
                 {
