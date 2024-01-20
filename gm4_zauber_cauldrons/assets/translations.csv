@@ -1,18 +1,45 @@
 key,en_us
 advancement.gm4.zauber_cauldrons.creation.description,"Create a Zauber Cauldron",
 advancement.gm4.zauber_cauldrons.creation.title,"Potion Chef",
+advancement.gm4.zauber_cauldrons.drink_all_magicol.description,"Drink all colors of Magicol"
+advancement.gm4.zauber_cauldrons.drink_all_magicol.title,"Taste the Rainbow"
 advancement.gm4.zauber_cauldrons.drink_multi_use_bottle.description,"Take the ninth sip out of a single bottle",
 advancement.gm4.zauber_cauldrons.drink_multi_use_bottle.title,"Clean Plate Club",
 advancement.gm4.zauber_cauldrons.full_armour.description,"Suit up with a full suit of Zauber Armor",
 advancement.gm4.zauber_cauldrons.full_armour.title,"Underated Materials",
+advancement.gm4.zauber_cauldrons.make_magicol.description,"Wait for the right Moon phase to make some Magicol"
+advancement.gm4.zauber_cauldrons.make_magicol.title,"Seeing Things in a New Light"
+advancement.gm4.zauber_cauldrons.paint_biome.description,"Use Bottled Magicol to give a biome a new look"
+advancement.gm4.zauber_cauldrons.paint_biome.title,"Spreading the Magic"
 advancement.gm4.zauber_cauldrons.rabbit.description,"Where did my lunch go?",
 advancement.gm4.zauber_cauldrons.rabbit.title,"Soup Kitchen Magician",
 advancement.gm4.zauber_cauldrons.wormhole.description,"Just like the rabbits!",
 advancement.gm4.zauber_cauldrons.wormhole.title,"Questionable Ingredients",
 entity.gm4.possessed_item,"Possessed Item\u00A7",
+entity.gm4.zauber_cauldrons.smog.instant_health,"their own incompetence"
+entity.gm4.zauber_cauldrons.smog.regeneration,"the mess they made"
 item.gm4.enchanted_prismarine_shard,Enchanted Prismarine Shard
 item.gm4.magic_in_a_bottle,Magic in a Bottle
 item.gm4.wormhole_in_a_bottle,"Wormhole in a Bottle"
+item.gm4.zauber_cauldrons.bottled_magicol.arid,"Bottle of Arid Magicol"
+item.gm4.zauber_cauldrons.bottled_magicol.polar,"Bottle of Polar Magicol"
+item.gm4.zauber_cauldrons.bottled_magicol.temperate,"Bottle of Temperate Magicol"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.black,"Black Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.blue,"Blue Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.brown,"Brown Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.cyan,"Cyan Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.gray,"Gray Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.green,"Green Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.light_blue,"Light Blue Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.light_gray,"Light Gray Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.lime,"Lime Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.magenta,"Magenta Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.orange,"Orange Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.pink,"Pink Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.purple,"Purple Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.red,"Red Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.white,"White Tint"
+item.gm4.zauber_cauldrons.bottled_magicol.tint.yellow,"Yellow Tint"
 item.gm4.zauber_cauldrons.crystal.instant_damage,"Crystal of Harming"
 item.gm4.zauber_cauldrons.crystal.instant_health,"Crystal of Healing"
 item.gm4.zauber_cauldrons.crystal.jump_boost,"Crystal of Leaping"
@@ -20,6 +47,9 @@ item.gm4.zauber_cauldrons.crystal.poison,"Crystal of Poison"
 item.gm4.zauber_cauldrons.crystal.regeneration,"Crystal of Regeneration"
 item.gm4.zauber_cauldrons.crystal.speed,"Crystal of Swiftness"
 item.gm4.zauber_cauldrons.crystal.strength,"Crystal of Strength"
+item.gm4.zauber_cauldrons.multi_use_bottle.bottled_magicol.arid,"Soulution of Arid Magicol"
+item.gm4.zauber_cauldrons.multi_use_bottle.bottled_magicol.polar,"Soulution of Polar Magicol"
+item.gm4.zauber_cauldrons.multi_use_bottle.bottled_magicol.temperate,"Soulution of Temperate Magicol"
 item.gm4.zauber_cauldrons.multi_use_bottle.lingering_potion.harming,"Lingering Soulution of Harming"
 item.gm4.zauber_cauldrons.multi_use_bottle.lingering_potion.healing,"Lingering Soulution of Healing"
 item.gm4.zauber_cauldrons.multi_use_bottle.lingering_potion.leaping,"Lingering Soulution of Leaping"
@@ -28,6 +58,7 @@ item.gm4.zauber_cauldrons.multi_use_bottle.lingering_potion.regeneration,"Linger
 item.gm4.zauber_cauldrons.multi_use_bottle.lingering_potion.strength,"Lingering Soulution of Strength"
 item.gm4.zauber_cauldrons.multi_use_bottle.lingering_potion.swiftness,"Lingering Soulution of Swiftness"
 item.gm4.zauber_cauldrons.multi_use_bottle.lore.sips,"Sips"
+item.gm4.zauber_cauldrons.multi_use_bottle.lore.throws,"Throws"
 item.gm4.zauber_cauldrons.multi_use_bottle.potion.harming,"Soulution of Harming"
 item.gm4.zauber_cauldrons.multi_use_bottle.potion.healing,"Soulution of Healing"
 item.gm4.zauber_cauldrons.multi_use_bottle.potion.leaping,"Soulution of Leaping"
