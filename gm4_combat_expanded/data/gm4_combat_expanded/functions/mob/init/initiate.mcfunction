@@ -26,8 +26,9 @@ execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard player
 # mountainous +20%
 execute if predicate gm4_combat_expanded:mob/modifier/mountainous run scoreboard players add $difficulty_mult gm4_ce_data 20
 # home bed nearby-ish -40% and set a score to disable some mechanics
-##TODO
-#execute align xz positioned ~-96 ~ ~-96 as @e[type=marker,tag=gm4_ce_home,dx=192,dz=192]
+scoreboard players set $nearby_home_bed gm4_ce_data 0
+execute as @e[type=marker,tag=gm4_ce_bed,distance=..128] run function gm4_combat_expanded:player/home/check_bed
+execute if score $nearby_home_bed gm4_ce_data matches 1 run scoreboard players remove $difficulty_mult gm4_ce_data 40
 # trial spawner +60% TODO
 ##scoreboard players add $difficulty_mult gm4_ce_data 60
 # apply difficulty_mult

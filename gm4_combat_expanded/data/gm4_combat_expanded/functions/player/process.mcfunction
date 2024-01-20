@@ -38,7 +38,7 @@ execute if score @s gm4_ce_absorp matches 1.. run function gm4_combat_expanded:p
 execute if score @s gm4_ce_healstore matches 1.. run function gm4_combat_expanded:player/heal/heal_calc
 
 # process player sleeping
-execute if score @s gm4_ce_sleep matches 1.. at @s run function gm4_combat_expanded:home/detect_sleep
+execute if score @s gm4_ce_sleep matches 1.. at @s run function gm4_combat_expanded:player/home/detect_sleep
 
 # reset mount tag from horse armor
 execute on vehicle run tag @s remove gm4_ce_speed_given

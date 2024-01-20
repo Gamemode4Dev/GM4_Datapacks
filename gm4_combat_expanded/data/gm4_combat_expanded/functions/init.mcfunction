@@ -66,7 +66,7 @@ scoreboard objectives add gm4_ce_lightning_charge.striking dummy
 scoreboard objectives add gm4_ce_sword_hit_triggered dummy
 scoreboard objectives add gm4_ce_pierce_timer dummy
 scoreboard objectives add gm4_ce_sleep custom:sleep_in_bed
-scoreboard objectives add gm4_ce_last_sleep dummy
+scoreboard objectives add gm4_ce_sleep.version dummy
 
 # constants
 scoreboard players set #-1 gm4_ce_data -1
