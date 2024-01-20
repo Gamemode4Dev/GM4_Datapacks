@@ -11,6 +11,9 @@ scoreboard players reset * gm4_ce_link_id
 # prep sword_ring armor
 scoreboard players reset @a gm4_ce_sword_ring
 
+# check natural regeneation
+execute unless score $natural_regen gm4_ce_data matches -1 store result score $natural_regen gm4_ce_data run gamerule naturalRegeneration
+
 # process players
 execute as @a[gamemode=!spectator] run function gm4_combat_expanded:player/process
 

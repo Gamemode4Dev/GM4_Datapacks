@@ -36,7 +36,7 @@ execute if predicate gm4_combat_expanded:technical/chance/zombie_solid run attri
 # snowy
 tag @s[predicate=gm4_combat_expanded:mob/modifier/snowy] add gm4_ce_slowing_attacks
 # mountainous
-execute if predicate gm4_combat_expanded:technical/chance/spawn_mountain_phantom if block ~ ~35 ~ #gm4:air store success score $mob_extras gm4_ce_data run summon phantom ~ ~35 ~ {Tags:["gm4_ce_extra_mob"]}
+execute if score $phantoms gm4_ce_data matches 0 if predicate gm4_combat_expanded:technical/chance/spawn_mountain_phantom if block ~ ~35 ~ #gm4:air store success score $mob_extras gm4_ce_data run summon phantom ~ ~35 ~ {Tags:["gm4_ce_extra_mob"]}
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.attack_knockback modifier add 049693ea-5ae7-4a23-b075-407c65e0b103 "gm4_ce_modifier_mountainous" 2 add
 execute if predicate gm4_combat_expanded:mob/modifier/mountainous run scoreboard players add $mob_health gm4_ce_data 6
 # burned

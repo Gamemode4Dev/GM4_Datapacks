@@ -14,7 +14,6 @@ scoreboard players set @s[scores={gm4_ce_hurt2=1..}] gm4_ce_t_hurt 5
 scoreboard players operation @s gm4_ce_kill += @s gm4_ce_kill2
 
 # natural regen
-execute unless score $natural_regen gm4_ce_data matches -1 store result score $natural_regen gm4_ce_data run gamerule naturalRegeneration
 execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm4_ce_hunger=18..}] gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:player/regen/check
 
 # check for archer armor
