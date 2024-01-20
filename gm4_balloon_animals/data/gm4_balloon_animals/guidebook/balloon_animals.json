@@ -1,0 +1,45 @@
+{
+  "id": "balloon_animals",
+  "name": "Balloon Animals",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:lead",
+    "nbt": "{CustomModelData:3420000}"
+  },
+  "criteria": {
+    "purchase_animal1": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "item": {
+          "nbt": "{gm4_balloon_animals:{animal:1b,trade:1b}}"
+        }
+      }
+    },
+    "purchase_animal2": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "item": {
+          "nbt": "{gm4_balloon_animals:{animal:2b,trade:2b}}"
+        }
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.balloon_animals.description",
+            "fallback": "Balloon Animals will introduce some wandering traders that sell animals."
+          }
+        ]
+      ]
+    }
+  ]
+}

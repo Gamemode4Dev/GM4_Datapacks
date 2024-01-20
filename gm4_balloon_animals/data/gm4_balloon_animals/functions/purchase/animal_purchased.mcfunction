@@ -8,6 +8,8 @@ data modify storage gm4_balloon_animals:temp player.uuid set from entity @s UUID
 # locate trader
 execute as @e[type=wandering_trader,tag=gm4_balloon_animal_trader,limit=1,sort=nearest] run function gm4_balloon_animals:purchase/trader/search
 
+advancement grant @s only gm4:balloon_animals
+
 # clean up
 tag @e[type=wandering_trader,tag=gm4_balloon_animal_trader_processed] remove gm4_balloon_animal_trader_processed
 tag @e[tag=gm4_balloon_animal_processed] remove gm4_balloon_animal_processed
