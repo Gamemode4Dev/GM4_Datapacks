@@ -47,14 +47,12 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: b
 	# logger.addHandler(LogHandler()) # TODO configure the log handler to GM4's preferred formatting
 
 	config = yaml.safe_load(Path("beet-dev.yaml").read_text())
-	# myConf = ProjectConfig(**config)
-	# print(myConf)
 
 	# command-determined config options
 	broadcast_config: dict[str, Any] = next((p for p in config["pipeline"] if isinstance(p, dict))) # type: ignore
 	broadcast_config["broadcast"] = modules
 	if reload:
-		broadcast_config["require"].prepend("beet.contrib.livereload")
+		broadcast_config["require"].insert(0, "beet.contrib.livereload")
 
 	config["directory"] = str(project.directory) # set working directory to where CLI was invoked
 
@@ -121,9 +119,15 @@ def readme_gen(ctx: click.Context, project: Project, modules: tuple[str, ...], w
 			"autosave": {
 				"link": False
 			}
-		}
+		},
+		"directory": str(project.directory)
 	}
 
-	project.resolved_config = ProjectConfig(**config).resolve(Path("beet-readme.yaml").parent.absolute()) # type: ignore ; config is properly formatted
+	# create a tempfile on disk for the project config - allows beet watch to function
+	with NamedTemporaryFile(mode="wt", delete=False, suffix=".json") as f:
+		project.config_path = f.name
+		json.dump(config, f, indent=1)
 
+	project.reset() # delete previously resolved config
 	ctx.invoke(commands.watch if watch else commands.build)
+	os.remove(f.name) # delete tempfile
