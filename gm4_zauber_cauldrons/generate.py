@@ -306,37 +306,43 @@ def generate_potion_recipes(ctx: Context, potion_effects: CSV, potion_bottles: C
     """
     Generates the function tree and loot tables for zauber potions and soulutions.
     """
-    for bottle_data, effect_data in product(potion_bottles, potion_effects):
+    for effect_data in potion_effects:
+        for bottle_data in potion_bottles:
 
-        subproject_config = {
-            "data_pack": {
-                "load": [
-                    {
-                        f"data/gm4_zauber_cauldrons/functions/recipes/potions/{bottle_data['bottle']}/select_effect.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/potions/select_effect.mcfunction",
-                        f"data/gm4_zauber_cauldrons/functions/recipes/potions/{bottle_data['bottle']}/{effect_data['effect']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/potions/craft_potion.mcfunction",
-                        f"data/gm4_zauber_cauldrons/loot_tables/items/potions/{bottle_data['bottle']}/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_potion.json"
+            subproject_config = {
+                "data_pack": {
+                    "load": [
+                        {
+                            f"data/gm4_zauber_cauldrons/functions/recipes/potions/{bottle_data['bottle']}/select_effect.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/potions/select_effect.mcfunction",
+                            f"data/gm4_zauber_cauldrons/functions/recipes/potions/{bottle_data['bottle']}/{effect_data['effect']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/potions/craft_potion.mcfunction",
+                            f"data/gm4_zauber_cauldrons/loot_tables/items/potions/{bottle_data['bottle']}/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_potion.json"
+                        }
+                    ],
+                    "render": {
+                        "functions": "*",
+                        "loot_tables": "*"
                     }
-                ],
-                "render": {
-                    "functions": "*",
-                    "loot_tables": "*"
+                },
+                "meta": {
+                    "effect": effect_data['effect'],
+                    "effect_translate_name": effect_data['effect_translate_name'],
+                    "custom_potion_color": effect_data['custom_potion_color'].to_color_code(CSVCell.DEC),
+                    "custom_potion_effects": effect_data['custom_potion_effects'],
+                    "bottle_item_id": bottle_data['item_id'],
+                    "bottle": bottle_data['bottle'],
+                    "soulution_translate_fallback": effect_data['soulution_translate_fallback'],
+                    "sips_translate_name": bottle_data['sips_translate_name'],
+                    "sips_translate_fallback": bottle_data['sips_translate_fallback'],
+                    "lore": json.dumps(potion_lores[effect_data['effect']])
                 }
-            },
-            "meta": {
-                "effect": effect_data['effect'],
-                "effect_translate_name": effect_data['effect_translate_name'],
-                "custom_potion_color": effect_data['custom_potion_color'].to_color_code(CSVCell.DEC),
-                "custom_potion_effects": effect_data['custom_potion_effects'],
-                "bottle_item_id": bottle_data['item_id'],
-                "bottle": bottle_data['bottle'],
-                "soulution_custom_model_data": effect_data['soulution_custom_model_data'],
-                "soulution_translate_fallback": effect_data['soulution_translate_fallback'],
-                "sips_translate_name": bottle_data['sips_translate_name'],
-                "sips_translate_fallback": bottle_data['sips_translate_fallback'],
-                "lore": json.dumps(potion_lores[effect_data['effect']])
             }
-        }
-        ctx.require(subproject(subproject_config))
+            ctx.require(subproject(subproject_config))
+
+        ctx.meta["gm4"]["model_data"].append({
+            "item": ["potion", "splash_potion", "lingering_potion"],
+            "reference": f"item/soulution_potion/{effect_data['effect']}",
+            "template": "vanilla"
+        })
 
 
 def generate_magicol_recipes(ctx: Context, weather_modifiers: CSV, magicol_colors: CSV, potion_bottles: CSV):

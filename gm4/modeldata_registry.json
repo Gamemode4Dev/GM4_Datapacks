@@ -840,7 +840,14 @@
       "gm4_book_binders:gui/advancement/book_binders": 0
     },
     "lingering_potion": {
-      "gm4_lightning_in_a_bottle:item/lingering_lightning_in_a_bottle": 4
+      "gm4_lightning_in_a_bottle:item/lingering_lightning_in_a_bottle": 4,
+      "gm4_zauber_cauldrons:item/soulution_potion/instant_damage": 306,
+      "gm4_zauber_cauldrons:item/soulution_potion/instant_health": 307,
+      "gm4_zauber_cauldrons:item/soulution_potion/jump_boost": 308,
+      "gm4_zauber_cauldrons:item/soulution_potion/poison": 309,
+      "gm4_zauber_cauldrons:item/soulution_potion/regeneration": 310,
+      "gm4_zauber_cauldrons:item/soulution_potion/speed": 311,
+      "gm4_zauber_cauldrons:item/soulution_potion/strength": 312
     },
     "lodestone": {
       "gm4_teleportation_anchors:gui/advancement/teleportation_anchor": 1
@@ -1143,7 +1150,14 @@
       "gm4_lightning_in_a_bottle:item/lightning_in_a_bottle": 4,
       "gm4_mob_curing:gui/advancement/mob_curing": 5,
       "gm4_standard_liquids:item/ink_bottle": 7,
-      "gm4_standard_liquids:item/glow_ink_bottle": 8
+      "gm4_standard_liquids:item/glow_ink_bottle": 8,
+      "gm4_zauber_cauldrons:item/soulution_potion/instant_damage": 306,
+      "gm4_zauber_cauldrons:item/soulution_potion/instant_health": 307,
+      "gm4_zauber_cauldrons:item/soulution_potion/jump_boost": 308,
+      "gm4_zauber_cauldrons:item/soulution_potion/poison": 309,
+      "gm4_zauber_cauldrons:item/soulution_potion/regeneration": 310,
+      "gm4_zauber_cauldrons:item/soulution_potion/speed": 311,
+      "gm4_zauber_cauldrons:item/soulution_potion/strength": 312
     },
     "powder_snow_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
@@ -1222,7 +1236,14 @@
     },
     "splash_potion": {
       "gm4_display_frames:gui/advancement/display_frames": 1,
-      "gm4_lightning_in_a_bottle:item/splash_lightning_in_a_bottle": 4
+      "gm4_lightning_in_a_bottle:item/splash_lightning_in_a_bottle": 4,
+      "gm4_zauber_cauldrons:item/soulution_potion/instant_damage": 306,
+      "gm4_zauber_cauldrons:item/soulution_potion/instant_health": 307,
+      "gm4_zauber_cauldrons:item/soulution_potion/jump_boost": 308,
+      "gm4_zauber_cauldrons:item/soulution_potion/poison": 309,
+      "gm4_zauber_cauldrons:item/soulution_potion/regeneration": 310,
+      "gm4_zauber_cauldrons:item/soulution_potion/speed": 311,
+      "gm4_zauber_cauldrons:item/soulution_potion/strength": 312
     },
     "spruce_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_spruce_hanging_sign": 1,
@@ -1394,6 +1415,10 @@
     "*_shamir": [
       100,
       199
+    ],
+    "gm4_zauber_cauldrons": [
+      300,
+      349
     ]
   }
 }

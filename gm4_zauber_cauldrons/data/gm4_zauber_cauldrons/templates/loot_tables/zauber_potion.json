@@ -71,7 +71,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:{{soulution_custom_model_data}}}",
+                            "tag": "{CustomModelData:\"item/soulution_potion/{{effect}}\"}",
                             "conditions": [
                                 {
                                     "condition": "minecraft:value_check",

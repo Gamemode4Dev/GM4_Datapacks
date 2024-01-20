@@ -756,7 +756,7 @@ class VanillaTemplate(TemplateOptions):
         model_names = config.model.entries()
         if any([isinstance(m, list) for m in model_names]):
             raise InvalidOptions("gm4.model_data", f"{config.reference}; Template 'vanilla' does not support predicate override 'model' fields.")
-        if len(model_names) == 1 and len(config.item.entries()) > 1:
+        if len(set(model_names)) == 1 and len(config.item.entries()) > 1:
             model_names = [f"{model_names[0]}_{item}" for item in config.item.entries()] # if only one model name given, make one model per item id
 
         ret_list: list[Model] = []
@@ -765,6 +765,7 @@ class VanillaTemplate(TemplateOptions):
                 "parent": f"minecraft:item/{item}"
             })
             ret_list.append(m)
+        config.model = MapOption(__root__=dict(zip(config.item.entries(), model_names)))
         return ret_list
 
 class BlockTemplate(TemplateOptions):

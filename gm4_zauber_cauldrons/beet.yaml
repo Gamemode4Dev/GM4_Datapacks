@@ -53,7 +53,7 @@ meta:
           - reference: item/crystal/regeneration
           - reference: item/crystal/speed
           - reference: item/crystal/strength
-      # armor created by generate.py
+      # armor registered by generate.py
       - template: vanilla
         broadcast:
           - reference: block/liquid_magicol/white
@@ -98,15 +98,7 @@ meta:
           - reference: item/bottled_magicol_soulution/polar
           - reference: item/bottled_magicol_soulution/temperate
           - reference: item/bottled_magicol_soulution/arid
-      - item: [potion, splash_potion, lingering_potion]
-        broadcast: 
-          - reference: item/soulution_potion/instand_damage
-          - reference: item/soulution_potion/instant_health
-          - reference: item/soulution_potion/jump_boost
-          - reference: item/soulution_potion/poison
-          - reference: item/soulution_potion/regeneration
-          - reference: item/soulution_potion/speed
-          - reference: item/soulution_potion/strength
+      # solutions registered by generate.py
       - item: cauldron
         reference: gui/advancement/zauber_cauldrons_create
         template: advancement
