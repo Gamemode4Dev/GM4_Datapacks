@@ -7,8 +7,9 @@
 function gm4_combat_expanded:identification/armor/randomize_stats
 
 # get a random modifier and apply it to the storage, run as @p to make predicates work
+# tag merge is also run from that location to match the dimension
 execute as @p at @s run loot replace block 29999998 1 7134 container.4 loot gm4_combat_expanded:armor/identification/random
-data modify storage gm4_combat_expanded:temp tag merge from block 29999998 1 7134 Items[{Slot:4b}].tag
+execute as @p at @s run data modify storage gm4_combat_expanded:temp tag merge from block 29999998 1 7134 Items[{Slot:4b}].tag
 
 # mark as identified
 data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.identified set value 1
