@@ -1,5 +1,5 @@
 # @s = zauber cauldron
-# at @s
+# at @s align xyz
 # run from cauldron/structure/validate/heatsource
 # fake players must be reset after the result of this function was evaluated
 

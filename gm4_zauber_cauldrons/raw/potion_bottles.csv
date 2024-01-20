@@ -1,0 +1,4 @@
+bottle,item_id,sips_translate_name,sips_translate_fallback
+drinkable,minecraft:potion,sips,Sips
+splash,minecraft:splash_potion,throws,Throws
+lingering,minecraft:lingering_potion,throws,Throws

@@ -1,5 +1,5 @@
 # @s = non-spectator, non-adventure players, looking at a non-zauber cauldron, holding an enchanted book
-# at center of cauldron being looked at
+# at cauldron being looked at, align xyz
 # run from player/submain
 
 # analyze structure
@@ -16,4 +16,3 @@ scoreboard players reset $has_powder_snow gm4_zc_data
 scoreboard players reset $has_lava gm4_zc_data
 scoreboard players reset $has_heatsource gm4_zc_data
 scoreboard players reset $has_soul_fire_heatsource gm4_zc_data
-

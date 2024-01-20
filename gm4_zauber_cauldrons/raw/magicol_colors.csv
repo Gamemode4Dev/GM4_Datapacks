@@ -1,0 +1,17 @@
+color,ingredient_item_id,liquid_custom_model_data,color_translate_name,color_translate_fallback,flower,potion_color,sky_color_polar,fog_color_polar,water_color_polar,water_fog_color_polar,grass_color_polar,foliage_color_polar,particle_color_polar,sky_color_temperate,fog_color_temperate,water_color_temperate,water_fog_color_temperate,grass_color_temperate,foliage_color_temperate,particle_color_temperate,sky_color_arid,fog_color_arid,water_color_arid,water_fog_color_arid,grass_color_arid,foliage_color_arid,particle_color_arid
+white,minecraft:white_dye,3420300,white,White Tint,short_grass,#DCE0E6,,,,,#BDC3D9,,#BDC3D9,,,,,#D2E2E2,,#D2E2E2,,,,,#FFFFFF,,#FFFFFF
+light_gray,minecraft:light_gray_dye,3420300,light_gray,Light Gray Tint,short_grass,#807975,,,,,#96937E,,#96937E,,,,,#B1A997,,#B1A997,,,,,#C7C4B5,,#C7C4B5
+gray,minecraft:gray_dye,3420300,gray,Gray Tint,short_grass,#3F464D,,,,,#53585C,,#53585C,,,,,#5E696F,,#5E696F,,,,,#7C8588,,#7C8588
+black,minecraft:black_dye,3420300,black,Black Tint,short_grass,#1F1B2E,,,,,#16151F,,#16151F,,,,,#292631,,#292631,,,,,#343138,,#343138
+brown,minecraft:brown_dye,3420300,brown,Brown Tint,orange_tulip,#8C613F,,,,,#6F4425,,#6F4425,,,,,#985E31,,#985E31,,,,,#AC7A47,,#AC7A47
+red,minecraft:red_dye,3420300,red,Red Tint,poppy,#A63232,,,,,#B02539,,#B02539,,,,,#CB3431,,#CB3431,,,,,#DE4E40,,#DE4E40
+orange,minecraft:orange_dye,3420300,orange,Orange Tint,red_tulip,#D98341,,,,,#C65112,,#C65112,,,,,#E26C1F,,#E26C1F,,,,,#F49331,,#F49331
+yellow,minecraft:yellow_dye,3420300,yellow,Yellow Tint,dandelion,#F5C149,,,,,#C49313,,#C49313,,,,,#F8A520,,#F8A520,,,,,#EDBC53,,#EDBC53
+lime,minecraft:lime_dye,3420300,lime,Lime Tint,oxeye_daisy,#69B324,,,,,#5CAC1C,,#5CAC1C,,,,,#8BD02C,,#8BD02C,,,,,#B3E14E,,#B3E14E
+green,minecraft:green_dye,3420300,green,Green Tint,azure_bluet,#6B8040,,,,,#4C822F,,#4C822F,,,,,#5E9936,,#5E9936,,,,,#80AE4F,,#80AE4F
+cyan,minecraft:cyan_dye,3420300,cyan,Cyan Tint,blue_orchid,#36A2B3,,,,,#229967,,#229967,,,,,#35C780,,#35C780,,,,,#6DE591,,#6DE591
+light_blue,minecraft:light_blue_dye,3420300,light_blue,Light Blue Tint,white_tulip,#369DD9,,,,,#43C8D1,,#43C8D1,,,,,#53EFD7,,#53EFD7,,,,,#84FFD3,,#84FFD3
+blue,minecraft:blue_dye,3420300,blue,Blue Tint,cornflower,#474BB3,,,,,#3854AC,,#3854AC,,,,,#417FDE,,#417FDE,,,,,#5DA1E5,,#5DA1E5
+purple,minecraft:purple_dye,3420300,purple,Purple Tint,allium,#762DB3,,,,,#6544B8,,#6544B8,,,,,#A15FEF,,#A15FEF,,,,,#CF80F8,,#CF80F8
+magenta,minecraft:magenta_dye,3420300,magenta,Magenta Tint,pink_tulip,#BA45B2,,,,,#B73AAE,,#B73AAE,,,,,#F153CA,,#F153CA,,,,,#FE73E2,,#FE73E2
+pink,minecraft:pink_dye,3420300,pink,Pink Tint,lily_of_the_valley,#E68AAB,,,,,#D66DA1,,#D66DA1,,,,,#FF8DCC,,#FF8DCC,,,,,#FEA6C2,,#FEA6C2
