@@ -46,9 +46,9 @@ meta:
       - item: [player_head, firework_star]
         template: generated
         broadcast:
-          - reference: item/crystal/harming
-          - reference: item/crystal/health
-          - reference: item/crystal/leaping
+          - reference: item/crystal/instant_damage
+          - reference: item/crystal/instant_health
+          - reference: item/crystal/jump_boost
           - reference: item/crystal/poison
           - reference: item/crystal/regeneration
           - reference: item/crystal/speed
