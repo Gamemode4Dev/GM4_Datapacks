@@ -1,3 +1,6 @@
+# find link this armor belongs to or make a new one
+# @s = player wearing link armor
+# at @s
 # run from armor/modifier/type/link/check
 
 # grab id from storage if it already exists

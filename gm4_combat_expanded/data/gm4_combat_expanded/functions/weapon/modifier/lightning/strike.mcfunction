@@ -1,3 +1,7 @@
+# strike players with full lightning charges
+# @s = entity with a lightning charge
+# at @s
+# run from weapon/modifier/lightning/tick
 
 summon lightning_bolt
 

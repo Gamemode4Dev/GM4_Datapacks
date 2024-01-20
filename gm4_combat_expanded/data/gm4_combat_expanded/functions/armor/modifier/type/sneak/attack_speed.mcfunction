@@ -1,3 +1,7 @@
+# apply sneak attack speed
+# @s = player wearing armor
+# at unspecified
+# run from armor/modifier/type/sneak/check
 
 # remove invisibility
 effect clear @s invisibility

@@ -1,3 +1,7 @@
+# check if a home bed should reduce difficulty
+# @s = home bed marker
+# at unspecified
+# run from mob/init/initiate
 
 # find the linked player and get their sleep.version
 scoreboard players operation $check_id gm4_ce_data = @s gm4_ce_id

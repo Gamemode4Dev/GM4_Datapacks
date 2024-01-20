@@ -1,7 +1,7 @@
 # set linked players health
 # @s = linked player
 # at unspecified
-# run from armor/modifier/type/link/process/general
+# run from armor/modifier/type/link/process/run_link
 
 scoreboard players operation $health_change gm4_ce_data = $link_health gm4_ce_data
 scoreboard players operation $health_change gm4_ce_data -= @s gm4_ce_health.current

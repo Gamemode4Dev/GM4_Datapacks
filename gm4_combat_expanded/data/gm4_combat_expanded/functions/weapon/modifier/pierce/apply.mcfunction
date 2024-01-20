@@ -1,3 +1,7 @@
+# apply the piercing effect
+# @s = entity that pierced is applied to
+# at @s
+# run from weapon/modifier/pierce/activate
 
 scoreboard players set @s gm4_ce_pierce_timer 200
 

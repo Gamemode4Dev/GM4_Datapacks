@@ -1,3 +1,8 @@
+# find this players sword and move it
+# @s = player wearing armor
+# at @s rotated ~x ~
+# run from armor/modifier/type/sword_ring/eval_deg
+# run from here
 
 # find sword that should be moved
 execute store result score $sword_id gm4_ce_data run data get storage gm4_combat_expanded:temp sword_ring.data[0].tag.gm4_combat_expanded.slot

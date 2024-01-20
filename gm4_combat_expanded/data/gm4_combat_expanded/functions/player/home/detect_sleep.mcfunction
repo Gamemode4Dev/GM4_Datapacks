@@ -1,7 +1,7 @@
 # process a player sleeping in a bed
 # @s = sleeping player
 # at @s
-# run from player/home/detect_sleep
+# run from player/process
 
 # reset score to check for sleep again
 scoreboard players reset @s gm4_ce_sleep

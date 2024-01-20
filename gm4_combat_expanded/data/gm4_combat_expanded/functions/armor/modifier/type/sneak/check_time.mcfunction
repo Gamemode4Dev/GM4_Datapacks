@@ -1,3 +1,7 @@
+# check if time of attack speed has ran out
+# @s = player wearing armor
+# at unspecified
+# run from armor/modifier/type/sneak/check
 
 execute store result score $current_time gm4_ce_data run time query gametime
 execute store result score $stop_time gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.stop_time

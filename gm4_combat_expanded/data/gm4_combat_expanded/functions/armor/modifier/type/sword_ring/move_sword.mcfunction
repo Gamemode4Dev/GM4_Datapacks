@@ -1,3 +1,7 @@
+# move sword to correct location
+# @s = sword item_display
+# at player rotated ~x ~
+# run from armor/modifier/type/sword_ring/find_sword
 
 # move sword to correct position
 tp @s ~ ~ ~ facing ^-1 ^ ^

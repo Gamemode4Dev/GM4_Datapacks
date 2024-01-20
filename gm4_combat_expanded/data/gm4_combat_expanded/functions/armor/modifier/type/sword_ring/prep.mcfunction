@@ -1,3 +1,7 @@
+# prepare everything needed to process sword_ring armor
+# @s = player wearing armor
+# at @s
+# run from tick
 
 tag @s add gm4_ce_target
 

@@ -1,3 +1,6 @@
+# format the link name to be purple and non-italic
+# @s = player wearing link armor
+# at @s
 # run from armor/modifier/type/link/check
 
 # replace the name with a formatted version

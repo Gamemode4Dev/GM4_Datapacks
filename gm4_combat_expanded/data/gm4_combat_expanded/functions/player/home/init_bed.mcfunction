@@ -1,3 +1,7 @@
+# init a new bed marker
+# @s = bed home marker
+# at @s
+# run from player/home/detect_sleep
 
 data merge entity @s {Tags:["gm4_ce_bed"],data:{gm4_combat_expanded:{bed_users:[{uses:1,id:-1}]}}}
 scoreboard players operation @s gm4_ce_id = $id gm4_ce_data

@@ -1,4 +1,4 @@
-# apply poison to entities hit
+# activate the piercing effect
 # @s = player wielding the weapon
 # at @s
 # run from weapon/check_modifier

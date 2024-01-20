@@ -1,3 +1,7 @@
+# mark armor as active
+# @s = player wearing armor
+# at unspecified
+# run from armor/modifier/type/sneak/check
 
 # mark as active
 scoreboard players set $change gm4_ce_data 1

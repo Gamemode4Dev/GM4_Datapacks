@@ -1,3 +1,6 @@
+# process a found link
+# @s = linked player
+# at @s
 # run from armor/modifier/type/link/process/loop_links
 
 # get highest health between all players, but cannot exceed any players max health

@@ -1,3 +1,8 @@
+# play particles around the affected entity
+# @s = entity with a lightning charge
+# at @s rotaed ~x ~
+# run from weapon/modifier/lightning/particles/eval_rotation
+# run from here
 
 $particle electric_spark ^ ^$(height) ^$(scale) 0.015 0.015 0.015 0.05 1
 

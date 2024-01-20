@@ -1,3 +1,7 @@
+# swap sword material if player armor has changed
+# @s = player wearing armor
+# at unspecified
+# run from armor/modifier/type/sword_ring/find_sword
 
 execute unless score $sword_material gm4_ce_data matches 2.. run data modify entity @s item.id set value "wooden_sword"
 execute if score $sword_material gm4_ce_data matches 2 run data modify entity @s item.id set value "stone_sword"
