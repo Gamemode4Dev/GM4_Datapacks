@@ -4,4 +4,4 @@
 # run from armor/check_modifier/killing
 
 # store healing
-scoreboard players add @s gm4_ce_healstore 1
+scoreboard players operation @s gm4_ce_healstore += @s gm4_ce_kill
