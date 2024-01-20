@@ -706,7 +706,7 @@ class GeneratedTemplate(TemplateOptions):
     def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         if len(config.textures.entries()) > 1:
             raise InvalidOptions("gm4.model_data", f"{config.reference}; Template 'generated' currently only supports a single texture.")
-            # NOTE in the future, `generated` could accept a map for textures to provide a different texture for each model.        
+            # NOTE in the future, `generated` could accept a map for textures to provide a different texture for each model. But packs may be better served by simply creating those models themselves    
         
         ret_list: list[Model] = []
         for model_name in config.model.entries():

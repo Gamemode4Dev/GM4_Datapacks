@@ -4,7 +4,7 @@ from itertools import product
 import csv
 import json
 
-from beet import Context, subproject
+from beet import Context, Model, subproject
 
 
 class CSVCell(str):
@@ -223,7 +223,11 @@ def generate_armor_recipes(ctx: Context, armor_flavors: CSV, armor_pieces: CSV):
     """
     # create a loot tables and functions for each zauber armor piece + flavor combination
     for flavor_data in armor_flavors:
+        armor_items: list[str] = []
+        armor_models: dict[str, str] = {}
         for piece_data in armor_pieces:
+            armor_items.append(item:=f"golden_{piece_data['piece']}")
+            armor_models.update({item: (tex_model:=f"item/zauber_armor/{flavor_data['flavor']}/{piece_data['piece']}")})
 
             subproject_config = {
                 "data_pack": {
@@ -241,7 +245,6 @@ def generate_armor_recipes(ctx: Context, armor_flavors: CSV, armor_pieces: CSV):
                 },
                 "meta": {
                     "armor_value": piece_data['armor'],
-                    "custom_model_data": flavor_data['custom_model_data'],
                     "flavor": flavor_data['flavor'],
                     "flavor_amount": flavor_data['amount'],
                     "flavor_attribute": flavor_data['attribute'],
@@ -253,6 +256,20 @@ def generate_armor_recipes(ctx: Context, armor_flavors: CSV, armor_pieces: CSV):
             }
 
             ctx.require(subproject(subproject_config))
+
+            ctx.generate(tex_model, Model({
+                "parent": "minecraft:item/generated",
+                "textures": {
+                    "layer0": f"gm4_zauber_cauldrons:{tex_model}"
+                }
+            }))
+
+        ctx.meta["gm4"]["model_data"].append({
+            "item": armor_items,
+            "reference": f"item/zauber_armor/{flavor_data['flavor']}",
+            "model": armor_models,
+            "template": "custom",
+        })
 
 
 def generate_crystal_recipes(ctx: Context, crystal_effects: CSV, crystal_lores: Dict[str, Any], potion_effects: CSV):
