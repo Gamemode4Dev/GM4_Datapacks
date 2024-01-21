@@ -152,7 +152,8 @@
     "clock": {
       "gm4_combat_expanded:gui/advancement/combat_expanded_survive": 1,
       "gm4_combat_expanded:gui/advancement/combat_expanded_challenger": 2,
-      "gm4_animi_shamir:shamir/animi": 124
+      "gm4_animi_shamir:shamir/animi": 124,
+      "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_make_magicol": 300
     },
     "coal_block": {
       "gm4_forming_press:item/charcoal_block": 1
@@ -611,7 +612,8 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "grass_block": {
-      "gm4_tnt_landmines:entity/tnt_landmine_grass": 41
+      "gm4_tnt_landmines:entity/tnt_landmine_grass": 41,
+      "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_paint_biome": 300
     },
     "gray_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/gray": 300
@@ -1205,7 +1207,8 @@
       "gm4_zauber_cauldrons:item/soulution_potion/poison": 309,
       "gm4_zauber_cauldrons:item/soulution_potion/regeneration": 310,
       "gm4_zauber_cauldrons:item/soulution_potion/speed": 311,
-      "gm4_zauber_cauldrons:item/soulution_potion/strength": 312
+      "gm4_zauber_cauldrons:item/soulution_potion/strength": 312,
+      "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_drink_all_magicol": 313
     },
     "powder_snow_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100

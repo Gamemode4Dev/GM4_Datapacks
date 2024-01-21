@@ -83,9 +83,20 @@ meta:
         reference: gui/advancement/zauber_cauldrons_full_armor
         template:
           name: advancement
-          forward: item/zauber_armor/attack/chestplate
+          forward: item/zauber_armor/attack_boost/chestplate
       - item: rabbit_foot
         reference: gui/advancement/zauber_cauldrons_rabbit
+        template: advancement
+      - item: potion
+        reference: gui/advancement/zauber_cauldrons_drink_all_magicol
+        template:
+          name: advancement
+          forward: item/bottled_magicol/temperate_potion
+      - item: clock
+        reference: gui/advancement/zauber_cauldrons_make_magicol
+        template: advancement
+      - item: grass_block
+        reference: gui/advancement/zauber_cauldrons_paint_biome
         template: advancement
     website:
       description: Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game.
