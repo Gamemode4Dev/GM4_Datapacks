@@ -42,10 +42,14 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str], watch: bool, 
 		"require": [
 			"gm4.plugins.output",
 			"beet.contrib.livereload",
-			"gm4.plugins.player_heads"
+			"gm4.plugins.player_heads",
+			"gm4_guidebook.generate_guidebooks.load_page_data",
+			"gm4_guidebook.generate_guidebooks.load_custom_recipes",
 		] if reload else [
 			"gm4.plugins.output",
-			"gm4.plugins.player_heads"
+			"gm4.plugins.player_heads",
+			"gm4_guidebook.generate_guidebooks.load_page_data",
+			"gm4_guidebook.generate_guidebooks.load_custom_recipes",
 		],
 		"pipeline": [
 			"gm4.plugins.write_mcmeta"

@@ -1,0 +1,29 @@
+{
+  "type": "forming_press",
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "#X#",
+      "XCX",
+      "#X#"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:clay_ball"
+      },
+      "X": {
+        "item": "minecraft:netherrack"
+      },
+      "#": {
+        "item": "minecraft:nether_wart"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:red_nether_bricks",
+      "count": 4
+    }
+  }
+}

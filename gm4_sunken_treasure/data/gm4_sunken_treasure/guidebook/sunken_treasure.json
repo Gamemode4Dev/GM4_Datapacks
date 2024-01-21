@@ -1,0 +1,68 @@
+{
+  "id": "sunken_treasure",
+  "name": "Sunken Treasure",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:golden_shovel",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "obtain_fortune_shovel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diamond_shovel",
+              "minecraft:golden_shovel",
+              "minecraft:iron_shovel",
+              "minecraft:netherite_shovel",
+              "minecraft:stone_shovel",
+              "minecraft:wooden_shovel"
+            ],
+            "enchantments": [
+              {
+                "enchantment": "minecraft:fortune"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.sunken_treasure.description",
+            "fallback": "Mining sand or gravel deep underwater with a Fortune shovel has a chance of dropping treasure.\n\nMining in different biomes can result in different drops."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "details",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_fortune_shovel"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.sunken_treasure.details",
+            "fallback": "Treasure can only be found if submerged in water at least 4 blocks deep.\n\nGravel and sand contain different loot, but both contain rare treasure chests."
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "id": "crossbow_cartridges",
+  "name": "Crossbow Cartridges",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:crossbow",
+    "nbt": "{CustomModelData:3420005}"
+  },
+  "criteria": {
+    "shot_crossbow": {
+      "trigger": "minecraft:shot_crossbow",
+      "conditions": {}
+    }
+  },
+  "sections": [
+    {
+      "name": "available_ammo",
+      "enable": [],
+      "requirements": [
+        [
+          "shot_crossbow"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.crossbow_cartridges.description",
+            "fallback": "Shooting a crossbow with certain items in the offhand will launch that item instead of the arrow."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.crossbow_cartridges.ammo",
+            "fallback": "When held in the offhand, these items can be shot from crossbows:"
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "translate": "block.minecraft.tnt",
+            "hoverEvent": {
+              "action": "show_item",
+              "value": "{id:\"minecraft:tnt\",Count:1b}"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "translate": "item.minecraft.fire_charge",
+            "hoverEvent": {
+              "action": "show_item",
+              "value": "{id:\"minecraft:fire_charge\",Count:1b}"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "translate": "item.minecraft.potion",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "item.minecraft.splash_potion"
+                },
+                {
+                  "text": "\n"
+                },
+                {
+                  "translate": "item.minecraft.lingering_potion"
+                }
+              ]
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "translate": "block.minecraft.torch",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "block.minecraft.torch"
+                },
+                {
+                  "text": "\n"
+                },
+                {
+                  "translate": "block.minecraft.soul_torch"
+                },
+                {
+                  "text": "\n"
+                },
+                {
+                  "translate": "block.minecraft.redstone_torch"
+                }
+              ]
+            }
+          },
+          {
+            "text": "* ",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.crossbow_cartridges.torch",
+                  "fallback": "Torch is placed on the block the arrow hits.\nIf the torch cannot be placed here, it is dropped.",
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "translate": "item.minecraft.string",
+            "hoverEvent": {
+              "action": "show_item",
+              "value": "{id:\"minecraft:string\",Count:1b}"
+            }
+          },
+          {
+            "text": "* ",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.crossbow_cartridges.string",
+                  "fallback": "Stand in a tripwire hook and look in one of the\ncardinal directions to create a tripwire line.\n\nA tripwire hook can be placed automatically at the end.",
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          {
+            "text": "("
+          },
+          {
+            "translate": "text.gm4.guidebook.crossbow_cartridges.tripwire",
+            "fallback": "Tripwire"
+          },
+          {
+            "text": ")"
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "translate": "text.gm4.guidebook.crossbow_cartridges.bucket.1",
+            "fallback": "Mob in a Bucket"
+          },
+          {
+            "text": "* ",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.crossbow_cartridges.bucket.2",
+                  "fallback": "The water bucket will be kept",
+                  "color": "gray"
+                }
+              ]
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}

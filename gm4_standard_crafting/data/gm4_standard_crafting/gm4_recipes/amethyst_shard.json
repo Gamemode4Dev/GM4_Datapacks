@@ -1,0 +1,20 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "A"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:amethyst_block"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:amethyst_shard",
+      "count": 4
+    }
+  }
+}

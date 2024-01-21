@@ -21,7 +21,6 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_tnt_landmin
 execute unless data storage gm4_player_heads:register heads[{id:"gm4_tnt_landmines:tnt_landmine/invisible/v0"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_tnt_landmines:tnt_landmine/invisible/v0",value:'eyJ0aW1lc3RhbXAiOjE1NTQ0NzQzODQ0NTUsInByb2ZpbGVJZCI6IjU3MGIwNWJhMjZmMzRhOGViZmRiODBlY2JjZDdlNjIwIiwicHJvZmlsZU5hbWUiOiJMb3JkU29ubnkiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVlY2NhZmZlN2UwMWJjNjFiNjdmMDZkNGRmNjU2ZjQxZjdjMGJkODE3NzllNjFkMmEzYjk2YjE0MDVlYWQ1ODYifX19',item:{CustomModelData:3420047,gm4_tnt_landmines:{item:"landmine",block:"minecraft:air"},display:{Lore:['{"translate":"item.gm4.tnt_landmine.invisible","fallback":"Invisible","color":"gray","italic":false}','{"translate":"item.gm4.tnt_landmine.use","fallback":"Drop to use","color":"dark_gray","italic":true}'],Name:'{"italic":false,"translate":"item.gm4.tnt_landmine","fallback":"Landmine"}'}}}
 
 
-# guidebook
-execute if score gm4_guidebook load.status matches 1 run summon marker ~ 4230.355712344628 ~ {CustomName:'"gm4_tnt_landmines_guide"',Tags:["gm4_guide"],data:{type:"module",id:"tnt_landmines",page_count:4,line_count:1,module_name:"TNT Landmines"}}
+
 
 #$moduleUpdateList

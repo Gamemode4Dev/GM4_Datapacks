@@ -1,0 +1,50 @@
+{
+  "id": "sandy_husks",
+  "name": "Sandy Husks",
+  "module_type": "expansion",
+  "load_check": "midnight_menaces",
+  "base_module": "mysterious_midnights",
+  "icon": {
+    "item": "minecraft:sand",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "fight_sandy_husk": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:husk",
+              "nbt": "{DeathLootTable:\"gm4_sandy_husks:entities/sandy_husk\"}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "fight_sandy_husk"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.sandy_husks.description",
+            "fallback": "During a Sandy Husks event, half of zombies will spawn as husks.\n\nThese husks will drop sand when killed with looting."
+          }
+        ]
+      ]
+    }
+  ]
+}

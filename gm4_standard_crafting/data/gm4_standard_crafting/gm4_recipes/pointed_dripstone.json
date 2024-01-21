@@ -1,0 +1,20 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "D"
+    ],
+    "key": {
+      "D": {
+        "item": "minecraft:dripstone_block"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:pointed_dripstone",
+      "count": 4
+    }
+  }
+}

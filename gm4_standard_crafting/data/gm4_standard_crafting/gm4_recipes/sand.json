@@ -1,0 +1,31 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "S"
+    ],
+    "key": {
+      "S": [
+        {
+          "item": "minecraft:sandstone"
+        },
+        {
+          "item": "minecraft:chiseled_sandstone"
+        },
+        {
+          "item": "minecraft:cut_sandstone"
+        },
+        {
+          "item": "minecraft:smooth_sandstone"
+        }
+      ]
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:sand",
+      "count": 4
+    }
+  }
+}

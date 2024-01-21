@@ -1,0 +1,199 @@
+{
+  "id": "metallurgy",
+  "name": "Metallurgy",
+  "module_type": "base",
+  "icon": {
+    "item": "minecraft:anvil",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "obtain_tnt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:tnt"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_obsidian": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:obsidian"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_lump": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_metallurgy:{item:\"ore\"}}"
+          }
+        ]
+      }
+    },
+    "obtain_obsidian_cast": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,item:\"obsidian_cast\"}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.metallurgy.description",
+            "fallback": "Custom abilities, called shamirs, can be added to tools and armour, like enchantments.\n\nShamirs are exclusive, meaning only one can be applied to an item at a time."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "lump_obtaining",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_tnt"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.metallurgy.section.lump_obtaining",
+            "fallback": "Obtaining Ore",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.metallurgy.lump_obtaining",
+            "fallback": "Blowing up stone-type blocks with tnt will drop metal ore lumps.\n\nEach of the four stone types (stone, granite, andesite, and diorite) drop a different metal lump."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "casting",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_obsidian"
+        ],
+        [
+          "obtain_lump"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.metallurgy.section.casting",
+            "fallback": "Casting",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.metallurgy.mould",
+            "fallback": "A mould can be created by dropping 1 obsidian and 1 clay ball on a sand block.\n\nMoulds must be heated by placing lava on top of them. Overheating a mould causes it to smoke and break."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.metallurgy.mould_1",
+            "fallback": "Without lava, the mould will cool over time and must be reheated to added metal.\n\nIf no metal is added to the cast before it completely cools down, the obsidian will drop, losing the clay ball."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.metallurgy.adding_metal",
+            "fallback": "Ore lumps can be dropped in one by one into a heated mould. 23 ore lumps must be added for a proper cast.\n\nAlloys can be made using a 17-6 ratio: Aluminium + Barium or Thorium + Bismuth."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.metallurgy.recycling",
+            "fallback": "If a cast is dropped into the mould, it will return the obsidian and about half of its metal will recycled.\n\nPure metal bands supply 12 ore of their metal, while alloy metal bands supply 9 primary ore and 3 secondary ore."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.metallurgy.cooling",
+            "fallback": "Once a mould completely cools down, a Shamir Band will form.\n\nIf the casting process was done incorrectly, a useless Mundane Band will be on the cast."
+          }
+        ]
+      ],
+      "grants": [
+        "lump_obtaining"
+      ]
+    },
+    {
+      "name": "shamirs",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_obsidian_cast"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.metallurgy.section.shamirs",
+            "fallback": "Shamirs",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.metallurgy.metal_properties",
+            "fallback": "Each band type has a specific attribute.\n\nBismuth is creation, Thorium is destruction, and Curie's Bismium is equivalence."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.metallurgy.metal_properties_1",
+            "fallback": "Alluminium is supression, Barium is amplification, and Barimium is modification."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.metallurgy.smooshing",
+            "fallback": "To attach a shamir to an item, drop the cast and item on an anvil.\n\n'Smoosh' them together by powering a downwards facing piston placed two blocks above the anvil."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.metallurgy.smooshing_1",
+            "fallback": "To detach a shamir, do the same 'smooshing' process after dropping the shamir-bearing item and one obsidian."
+          }
+        ]
+      ],
+      "grants": [
+        "casting"
+      ]
+    }
+  ]
+}

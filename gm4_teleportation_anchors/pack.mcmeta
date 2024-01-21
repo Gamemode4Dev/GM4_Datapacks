@@ -4,6 +4,10 @@
       {
         "formats": [18, 26],
         "directory": "overlay_18"
+      },
+      {
+        "formats": 26,
+        "directory": "overlay_26"
       }
     ]
   }

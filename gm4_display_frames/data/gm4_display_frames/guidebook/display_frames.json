@@ -1,0 +1,48 @@
+{
+  "id": "display_frames",
+  "name": "Display Frames",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:splash_potion",
+    "nbt": "{Potion:'minecraft:invisibility',CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_invisibility_potion": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:lingering_potion",
+              "minecraft:potion",
+              "minecraft:splash_potion"
+            ],
+            "nbt": "{Potion:'minecraft:invisibility'}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_invisibility_potion"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.display_frames.description",
+            "fallback": "Splashing item frames and glow item frames with invisibility causes them to become display frames.\n\nDisplay frames become invisible when holding with an item."
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      " B ",
+      "III"
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:chainmail_boots"
+      },
+      "I": {
+        "item": "minecraft:iron_nugget"
+      }
+    }
+  },
+  "output": {
+    "type": "special",
+    "function": "gm4_mountaineering:new_crampons",
+    "guidebook": {
+      "type": "loot_table",
+      "name": "gm4_mountaineering:items/crampons",
+      "count": 1
+    }
+  }
+}

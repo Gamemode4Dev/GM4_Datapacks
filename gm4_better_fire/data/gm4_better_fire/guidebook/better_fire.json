@@ -1,0 +1,45 @@
+{
+  "id": "better_fire",
+  "name": "Better Fire",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:flint_and_steel",
+    "nbt": "{CustomModelData:3420003}"
+  },
+  "criteria": {
+    "obtain_flint_and_steel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:flint_and_steel"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "fire_changes",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_flint_and_steel"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.better_fire.description",
+            "fallback": "Flame arrows set the block they land on with fire, sometimes dropping the arrowhead.\n\nFire can also cause a creeper to explode as if lit by flint and steel."
+          }
+        ]
+      ]
+    }
+  ]
+}

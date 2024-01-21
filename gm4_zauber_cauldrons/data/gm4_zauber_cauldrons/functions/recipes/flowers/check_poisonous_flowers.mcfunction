@@ -10,18 +10,8 @@ scoreboard players operation $expected_item_amount gm4_zc_fullness = $required_f
 scoreboard players add $expected_item_amount gm4_zc_fullness 2
 
 # poisonous flowers set flag to abort recipe checks
-execute if score $red_tulip gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:red_tulip"}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
-execute if score $orange_tulip gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:orange_tulip"}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
-execute if score $white_tulip gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:white_tulip"}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
-execute if score $pink_tulip gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:pink_tulip"}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
-execute if score $oxeye_daisy gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:oxeye_daisy"}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
-execute if score $dandelion gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:dandelion"}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
-execute if score $blue_orchid gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:blue_orchid"}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
-execute if score $allium gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:allium"}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
-execute if score $azure_bluet gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:azure_bluet"}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
-execute if score $poppy gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:poppy"}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
-execute if score $cornflower gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:cornflower"}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
-execute if score $lily_of_the_valley gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:"minecraft:lily_of_the_valley"}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
+for flower_data in ctx.meta['flower_types']:
+    execute if score f"${flower_data['flower']}" gm4_zc_flowers matches 1 if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:flower_data['item_id']}}}] run scoreboard players set $cancel_recipe gm4_zc_data 1
 
 # recipe
 execute if score $cancel_recipe gm4_zc_data matches 0 run function gm4_zauber_cauldrons:recipes/flowers/check_normal_flowers

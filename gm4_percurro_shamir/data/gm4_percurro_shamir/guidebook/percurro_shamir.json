@@ -1,0 +1,68 @@
+{
+  "id": "percurro_shamir",
+  "name": "Percurro Shamir",
+  "module_type": "expansion",
+  "base_module": "metallurgy",
+  "icon": {
+    "item": "minecraft:anvil",
+    "nbt": "{CustomModelData:3420117}"
+  },
+  "criteria": {
+    "obtain_percurro_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'percurro'}}"
+          }
+        ]
+      }
+    },
+    "obtain_percurro_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'percurro'}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.percurro_shamir.description",
+            "fallback": "Percurro teleports the user behind their target when attacking."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_percurro_shamir",
+          "obtain_percurro_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.percurro_shamir.usage",
+            "fallback": "The Percurro Shamir is found on Curie's Bismium Bands. It can be placed onto swords, axes, and tridents.\n\nAttacking a mob teleports the user up to 6 blocks behind the target, turning to face the target."
+          }
+        ]
+      ]
+    }
+  ]
+}

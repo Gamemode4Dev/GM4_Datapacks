@@ -1,0 +1,69 @@
+{
+  "id": "forterra_shamir",
+  "name": "Forterra Shamir",
+  "module_type": "expansion",
+  "load_check": "metallurgy",
+  "base_module": "metallurgy",
+  "icon": {
+    "item": "minecraft:anvil",
+    "nbt": "{CustomModelData:3420107}"
+  },
+  "criteria": {
+    "obtain_forterra_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'forterra'}}"
+          }
+        ]
+      }
+    },
+    "obtain_forterra_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'forterra'}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.forterra_shamir.description",
+            "fallback": "Forterra causes extra raw metals, redstone, and amethyst to be found when mining stone."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_forterra_shamir",
+          "obtain_forterra_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.forterra_shamir.usage",
+            "fallback": "The Forterra Shamir is found on Bismuth Bands. It can be placed onto pickaxes.\n\nWhen mining stone, raw copper, raw iron, raw gold, redstone, and amethyst shards will drop. Drop rates are height dependent."
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "dripleaf_filters",
+  "name": "Dripleaf Filters",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:big_dripleaf",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "obtain_dripleaf_and_hopper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:big_dripleaf"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:hopper"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.dripleaf_filters.description",
+            "fallback": "Big dripleaves can sort items by searching hoppers in front of them."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_dripleaf_and_hopper"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.dripleaf_filters.structure",
+            "fallback": "When an item falls onto a big dripleaf, the leaf will inspect a hopper placed on the ground in front of it."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.dripleaf_filters.filtering",
+            "fallback": "If any of the items in the hopper match the item on the leaf, it will slide the item into the hopper.\n\nOtherwise it will collapse and drop the item below itself like normal."
+          }
+        ]
+      ]
+    }
+  ]
+}

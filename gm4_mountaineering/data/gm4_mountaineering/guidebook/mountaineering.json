@@ -1,0 +1,163 @@
+{
+  "id": "mountaineering",
+  "name": "Mountaineering",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:chainmail_boots",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "obtain_iron_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_crampons": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:chainmail_boots"
+            ],
+            "nbt": "{gm4_mountaineering:{item:\"crampons\"}}"
+          }
+        ]
+      }
+    },
+    "obtain_skis": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_boots"
+            ],
+            "nbt": "{gm4_mountaineering:{item:\"skis\"}}"
+          }
+        ]
+      }
+    },
+    "obtain_ski_pole": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stick"
+            ],
+            "nbt": "{gm4_mountaineering:{item:\"poles\"}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.mountaineering.description",
+            "fallback": "Several items can be crafted in a Custom Crafter to ease snowy mountain traversal."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "crafting",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_iron_ingot"
+        ]
+      ],
+      "pages": [
+        [
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_mountaineering:crampons"
+          }
+        ],
+        [
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_mountaineering:skis"
+          }
+        ],
+        [
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_mountaineering:poles"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage_crampons",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_crampons"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.mountaineering.crampons",
+            "fallback": "Wearing crampons allows users to scale rocky cliffs. Having empty hands helps with scaling.\n\nUsers can continuously climb rocky cliffs, but staying still will result in falling."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage_skis",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_skis"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.mountaineering.skis",
+            "fallback": "Wearing skis allows users to move quickly over snowy surfaces.\n\nContinuously traveling downwards on snowy terrain increases speed, but traveling on non-snowy areas reduces the speed."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage_poles",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_ski_pole"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.mountaineering.poles",
+            "fallback": "Holding a Ski Pole in each hand can help when jumping. This is best paired with Skis.\n\nWhen using poles while skiing, a jump enhancement is given if going up a short ramp. Poles also make it easier to gain speed while skiing."
+          }
+        ]
+      ]
+    }
+  ]
+}

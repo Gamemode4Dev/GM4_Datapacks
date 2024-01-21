@@ -1,0 +1,82 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:golden_{{piece}}",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.gm4.zauber_cauldrons.zauber_armor.{{piece}}",
+                                "fallback": "{{translate_fallback}}",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:{{custom_model_data}},gm4_zauber_cauldrons:{item:\"zauber_armor\",type:\"{{piece}}\"}}"
+                        },
+                        {
+                            "function": "minecraft:copy_nbt",
+                            "source": {
+                                "type": "minecraft:storage",
+                                "source": "gm4_zauber_cauldrons:temp/cauldron/ingredients"
+                            },
+                            "ops": [
+                                {
+                                    "source": "Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:\"minecraft:golden_{{piece}}\"}}}].tag",
+                                    "target": "{}",
+                                    "op": "merge"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_attributes",
+                            "modifiers": [
+                                {
+                                    "attribute": "minecraft:generic.armor_toughness",
+                                    "name": "generic.armor_toughness",
+                                    "amount": 3,
+                                    "operation": "addition",
+                                    "slot": "{{slot}}"
+                                },
+                                {
+                                    "attribute": "minecraft:generic.armor",
+                                    "name": "generic.armor",
+                                    "amount": {{armor_value}},
+                                    "operation": "addition",
+                                    "slot": "{{slot}}"
+                                },
+                                {
+                                    "attribute": "{{flavor_attribute}}",
+                                    "name": "gm4_zauber_cauldrons.armor.{{flavor}}",
+                                    "amount": {{flavor_amount}},
+                                    "operation": "{{flavor_operation}}",
+                                    "slot": "{{slot}}"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                {
+                                    "translate": "item.gm4.zauber_cauldrons.zauber_armor.magic",
+                                    "fallback": "+%s%% Magic",
+                                    "with": [
+                                        "25"
+                                    ],
+                                    "color": "blue",
+                                    "italic": false
+                                }
+                            ],
+                            "replace": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

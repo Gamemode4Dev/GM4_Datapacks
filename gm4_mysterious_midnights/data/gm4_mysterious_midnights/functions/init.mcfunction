@@ -13,8 +13,7 @@ scoreboard players set mysterious_midnights gm4_modules 1
 
 schedule function gm4_mysterious_midnights:main 1t
 
-# guidebook
-execute if score gm4_guidebook load.status matches 1 run summon marker ~ 4191.141262308746 ~ {CustomName:'"gm4_tipped_skeletons_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"mysterious_midnights",id:"tipped_skeletons",page_count:1,line_count:1,module_name:"Tipped Skeletons"}}
+
 execute if score gm4_guidebook load.status matches 1 run summon marker ~ 3749.761428319238 ~ {CustomName:'"gm4_resurrecting_zombies_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"mysterious_midnights",id:"resurrecting_zombies",page_count:1,line_count:2,module_name:"Resurrecting Zombies"}}
 execute if score gm4_guidebook load.status matches 1 run summon marker ~ 3749.761428319238 ~ {CustomName:'"gm4_resurrecting_skeletons_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"mysterious_midnights",id:"resurrecting_skeletons",page_count:1,line_count:2,module_name:"Resurrecting Skeletons"}}
 execute if score gm4_guidebook load.status matches 1 run summon marker ~ 2953.174852106298 ~ {CustomName:'"gm4_nightmare_nights_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"mysterious_midnights",id:"nightmare_nights",page_count:2,line_count:1,module_name:"Nightmare Nights"}}
