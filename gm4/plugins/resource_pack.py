@@ -652,6 +652,10 @@ class TranslationLinter(Reducer):
         if resource_location.split(":")[1].startswith("guidebook"):
             return
         
+        # DEBUG for updating guidebook to RP support
+        if "guidebook" in node.value.value:
+            return
+        
         if node.value.value.startswith("gui.gm4"):
             # gui-texture translations from other modules are defined in their gui_fonts segment of beet.yaml, so they won't be
             # known to the linter easily. For now, we just ignore their warnings
