@@ -1,0 +1,273 @@
+{
+  "id": "everstone",
+  "name": "Everstone",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:firework_star",
+    "nbt": "{CustomModelData:3420004}"
+  },
+  "criteria": {
+    "obtain_cobblestone_during_full_moon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cobblestone"
+            ]
+          }
+        ],
+        "player": [
+          {
+            "condition": "minecraft:time_check",
+            "value": {
+              "min": 13000,
+              "max": 24000
+            },
+            "period": 192000
+          }
+        ]
+      }
+    },
+    "obtain_everstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:firework_star"
+            ],
+            "nbt": "{gm4_everstone:1b}"
+          }
+        ]
+      }
+    },
+    "kill_zombie": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:zombie"
+        }
+      }
+    },
+    "kill_skeleton": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:skeleton"
+        }
+      }
+    },
+    "kill_slime": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:slime"
+        }
+      }
+    },
+    "kill_stray": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:stray"
+        }
+      }
+    },
+    "kill_piglin": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:piglin"
+        }
+      }
+    },
+    "kill_guardian": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:guardian"
+        }
+      }
+    },
+    "kill_vindicator": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:vindicator"
+        }
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.everstone.description",
+            "fallback": "Everstones can prevent mobs from aging.\n\nSome mobs that don't normally age now have the ability to evolve into other mobs."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "obtaining",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_cobblestone_during_full_moon"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.everstone.obtaining",
+            "fallback": "Everstones can be obtained by mining stone during a full moon.\n\nStone mined with Silk Touch will never drop an everstone."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_everstone"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.everstone.usage",
+            "fallback": "Dropping an everstone on a mob will prevent it from aging.\n\nZombies, Skeletons, Slimes, Strays, Piglins, Guardians, and Vindicators can evolve under specific conditions."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "zombie_conversion",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_zombie"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.everstone.zombie_conversion",
+            "fallback": "Zombies will convert to husks after being in direct sunlight in a desert or badlands biome for a long time."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "skeleton_conversion",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_skeleton"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.everstone.skeleton_conversion",
+            "fallback": "Skeletons will convert into strays after being in a cold, snowy biome for a long time."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "slime_conversion",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_slime"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.everstone.slime_conversion",
+            "fallback": "Slimes will convert into magma cubes after being in the nether for a long time."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "stray_conversion",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_stray"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.everstone.stray_conversion",
+            "fallback": "Strays will convert into skeletons if taken out of a cold, snowy biome for a long time."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "piglin_conversion",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_piglin"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.everstone.piglin_conversion",
+            "fallback": "Piglins inside bastion remnants will convert into piglin brutes if there are less than two brutes nearby."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "guardian_conversion",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_guardian"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.everstone.guardian_conversion",
+            "fallback": "Guardians will convert into elder guardians after being near several other guardians for a long time.\n\nSpecifically, guardians with five other friends will start to age."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "vindicator_conversion",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_vindicator"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.everstone.vindicator_conversion",
+            "fallback": "Vindicators will convert into evokers when near at least seven magical blocks for a long time.\n\nThese blocks include enchanting tables, bookshelves, lecterns, brewing stands, and cauldrons."
+          }
+        ]
+      ]
+    }
+  ]
+}

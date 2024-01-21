@@ -1,0 +1,65 @@
+{
+  "id": "book_binders",
+  "name": "Book Binders",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:enchanted_book",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_enchanted_page": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:paper"
+            ],
+            "nbt": "{gm4_book_binders:{item:\"enchanted_page\"}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "tearing",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.book_binders.tearing",
+            "fallback": "Lecterns have a small area at the center where enchanted books can be placed.\n\nThis will cause the enchanted book to be ripped up into separate pages—one for each enchantment."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "rebinding",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_enchanted_page"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.book_binders.rebinding",
+            "fallback": "Placing enchanted pages onto a lectern will add it to its internal inventory.\n\nPlacing a leather onto the lectern will then bind the pages in its inventory, creating an enchanted book."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.book_binders.hoppers",
+            "fallback": "A hopper pointing into the back of the lectern will push items into it.\n\nA hopper below the lectern will catch any items dropped by the lectern."
+          }
+        ]
+      ]
+    }
+  ]
+}

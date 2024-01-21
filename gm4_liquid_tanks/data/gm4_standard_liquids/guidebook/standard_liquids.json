@@ -1,0 +1,78 @@
+{
+  "id": "standard_liquids",
+  "name": "Standard Liquids",
+  "module_type": "expansion",
+  "load_check": "liquid_tanks",
+  "base_module": "liquid_tanks",
+  "icon": {
+    "item": "minecraft:lava_bucket",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_liquid_tank": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_machines:{id:\"liquid_tank\"}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "interactions",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_liquid_tank"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.standard_liquids.water",
+            "fallback": "Standard liquids can be stored by liquid tanks.\n\nWater Tank\n- Drains water buckets, water bottles\n- Fills buckets, bottles\n- Fills adjacent cauldrons"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.standard_liquids.lava",
+            "fallback": "Lava Tank\n- Drains lava buckets\n- Fills buckets\n- Fuels adjacent furnaces\n- Drains lava cauldrons\n- Fills adjacent cauldrons"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.standard_liquids.rabbit_stew_and_beetroot_soup",
+            "fallback": "Rabbit Stew Tank\n- Drains rabbit stew\n- Fills bowls\n- Feeds drinkers\n\nBeetroot Soup Tank\n- Drains beetroot soup, beetroot\n- Fills bowls\n- Feeds drinkers"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.standard_liquids.mushroom_stew_and_milk",
+            "fallback": "Mushroom Stew Tank\n- Drains mushroom stew\n- Fills bowls\n- Milks mooshrooms\n- Feeds drinkers\n\nMilk Tank\n- Drains milk buckets\n- Fills buckets\n- Milks cows\n- Clear mob effects"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.standard_liquids.honey",
+            "fallback": "Honey Tanks\n- Drains honey bottles, honey blocks\n- Fills bottles\n- Casts honey blocks into cauldrons\n- Clears mob poison\n- Feeds drinkers"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.standard_liquids.experience",
+            "fallback": "Experience Tanks\n- Drains bottles o' enchanting, enchanted books\n- Fills bottles\n- Absorbs experience orbs, experience points\n- Fills experience points"
+          }
+        ]
+      ]
+    }
+  ]
+}

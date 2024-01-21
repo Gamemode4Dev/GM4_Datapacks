@@ -1,0 +1,25 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "  X",
+      "XLX",
+      "X X"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:diamond"
+      },
+      "L": {
+        "item": "minecraft:leather"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:diamond_horse_armor",
+      "count": 1
+    }
+  }
+}

@@ -27,7 +27,6 @@ scoreboard players set #gapple_stage_0_start gm4_apple_data 240
 schedule function gm4_apple_trees:main 10t
 schedule function gm4_apple_trees:slow_clock 12t
 
-# guidebook
-execute if score gm4_guidebook load.status matches 1 run summon marker ~ 332.547322425669 ~ {CustomName:'"gm4_apple_trees_guide"',Tags:["gm4_guide"],data:{type:"module",id:"apple_trees",page_count:3,line_count:1,module_name:"Apple Trees"}}
+
 
 #$moduleUpdateList

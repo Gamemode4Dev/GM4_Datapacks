@@ -1,0 +1,25 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "SSS",
+      "SRS",
+      "SSS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:sand"
+      },
+      "R": {
+        "item": "minecraft:red_dye"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:red_sand",
+      "count": 8
+    }
+  }
+}

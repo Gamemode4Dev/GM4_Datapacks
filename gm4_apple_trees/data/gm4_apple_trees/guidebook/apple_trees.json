@@ -1,0 +1,100 @@
+{
+  "id": "apple_trees",
+  "name": "Apple Trees",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:apple",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_apple_sapling": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:oak_sapling"
+            ],
+            "nbt": "{gm4_trees:{item:{type:\"apple\"}}}"
+          }
+        ]
+      }
+    },
+    "pick_apple": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:armor_stand",
+              "nbt": "{Tags:[\"gm4_apple\"]}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "leaf_changes",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.apple_trees.leaf_changes",
+            "fallback": "Apples do not drop from oak or dark oak trees. Another source of apples must be discovered."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "obtaining_apples",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_apple_sapling"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.apple_trees.obtaining_apples",
+            "fallback": "Apple trees are found naturally occurring in forest biomes.\n\nWandering traders will also sell apple tree saplings.\n\nWhen planted, these saplings grow into apple trees."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.apple_trees.golden_apple_trees",
+            "fallback": "Golden apple trees can also be found in forests.\n\nThese trees don't drop saplings, and cannot be replanted.\n\nThey also have a golden root which grows through stone and dirt."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "new_apples",
+      "enable": [],
+      "requirements": [
+        [
+          "pick_apple"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.apple_trees.new_apples",
+            "fallback": "New apples will grow every 3 day cycles. Once ripe, they can be picked or will fall from the tree after a while.\n\nBreaking an apple bearing leaf has a 75% chance to drop an apple tree sapling."
+          }
+        ]
+      ],
+      "grants": [
+        "obtaining_apples"
+      ]
+    }
+  ]
+}

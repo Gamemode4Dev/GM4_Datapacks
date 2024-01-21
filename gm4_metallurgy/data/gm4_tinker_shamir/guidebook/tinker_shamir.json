@@ -1,0 +1,81 @@
+{
+  "id": "tinker_shamir",
+  "name": "Tinker Shamir",
+  "module_type": "expansion",
+  "load_check": "metallurgy",
+  "base_module": "metallurgy",
+  "icon": {
+    "item": "minecraft:anvil",
+    "nbt": "{CustomModelData:3420111}"
+  },
+  "criteria": {
+    "obtain_tinker_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'tinker'}}"
+          }
+        ]
+      }
+    },
+    "obtain_tinker_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'tinker'}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.tinker_shamir.description",
+            "fallback": "Tinker causes items to be converted to their equivalent storage block form."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_tinker_shamir",
+          "obtain_tinker_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.tinker_shamir.usage",
+            "fallback": "The Tinker Shamir is found on Curie's Bismium Bands. It can be placed onto pickaxes, shovels, hoes, and swords.\n\nHolding the tool will convert items into their block form, such as iron ingots to iron blocks."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.tinker_shamir.usage_pickaxes",
+            "fallback": "Each tool tinkers a set of items, matching the tool.\n\nPickaxes will tinker emeralds, diamonds, redstone, coal, lapis, gold ingots, iron ingots, gold nuggets, and iron nuggets."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.tinker_shamir.usage_other_tools",
+            "fallback": "Shovels will tinker snow balls and clay balls.\n\nHoes will tinker melon slices and wheat.\n\nSwords will tinker slime balls."
+          }
+        ]
+      ]
+    }
+  ]
+}

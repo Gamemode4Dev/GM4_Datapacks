@@ -13,6 +13,8 @@ resource_pack:
 
 require:
   - gm4.plugins.resource_pack
+  - gm4_guidebook.generate_guidebooks.load_page_data
+  - gm4_guidebook.generate_guidebooks.load_custom_recipes
   - gm4.plugins.player_heads
   - beet.contrib.model_merging
   - beet.contrib.babelbox
@@ -20,6 +22,7 @@ require:
 pipeline:
   - lib_custom_crafters.generate_item_tags
   - gm4.plugins.module.gm4_root_advancement
+  - gm4_guidebook.generate_guidebooks
   - gm4.plugins.resource_pack.build
   - mecha
   - gm4.plugins.extend.library

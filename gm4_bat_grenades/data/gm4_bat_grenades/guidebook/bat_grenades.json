@@ -1,0 +1,44 @@
+{
+  "id": "bat_grenades",
+  "name": "Bat Grenades",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:gunpowder",
+    "nbt": "{CustomModelData:3420003}"
+  },
+  "criteria": {
+    "hurt_by_exploding_bat": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:creeper",
+            "nbt": "{Tags:[\"gm4_bat_grenade\"]}"
+          }
+        }
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "bat_explosions",
+      "enable": [],
+      "requirements": [
+        [
+          "hurt_by_exploding_bat"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.bat_grenades.description",
+            "fallback": "Bats create a weak explosion when nearby.\n\nWhen killed, bats will drop gunpowder and bat leather—a material equivalent to rabbit hide."
+          }
+        ]
+      ]
+    }
+  ]
+}

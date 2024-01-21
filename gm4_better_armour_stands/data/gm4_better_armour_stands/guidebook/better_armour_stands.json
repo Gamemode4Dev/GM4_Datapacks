@@ -1,0 +1,561 @@
+{
+  "id": "better_armour_stands",
+  "name": "Better Armour Stands",
+  "module_type": "base",
+  "icon": {
+    "item": "minecraft:writable_book",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "place_armor_stand": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:armor_stand"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "obtain_book_and_quill": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:writable_book"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "place_armor_stand"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.better_armour_stands.description",
+            "fallback": "Armour stands will have arms by default, and can be altered with a book and quill.\n\nThis allows one to create custom statues and interesting displays."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "codes",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_book_and_quill"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.better_armour_stands.applying",
+            "fallback": "To modify an armour stand, write one of the codes in a book and quill, then use it on the armour stand.\n\nMultiple codes can be written on separate pages to apply multiple modifiers at once."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.better_armour_stands.toggle_codes",
+            "fallback": "The following codes will toggle the specific feature:"
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "arms",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.arms",
+                  "fallback": "Toggle the arms of the armour stand",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "arms"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "base",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.base",
+                  "fallback": "Toggle the base plate of the armour stand",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "base"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "size",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.size",
+                  "fallback": "Toggle the size of the armour stand",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "size"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "gravity",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.gravity",
+                  "fallback": "Toggle the gravity of the armour stand",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "gravity"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "visible",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.visible",
+                  "fallback": "Toggle the visibility of the armour stand.\nHolding a book with this code will reveal\nnearby invisible armour stands.",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "visible"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "turn",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.turn",
+                  "fallback": "Toggle rotating of the armour stand",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "turn"
+            }
+          },
+          {
+            "text": "\n\n- "
+          },
+          {
+            "text": "lock",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.lock",
+                  "fallback": "Disable interactions with the armour stand",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "lock"
+            }
+          },
+          {
+            "text": " / "
+          },
+          {
+            "text": "unlock",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.unlock",
+                  "fallback": "Enable interactions with the armour stand.\nHolding a book with this code will reveal\nnearby locked armour stands.",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "unlock"
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.better_armour_stands.part_editing",
+            "fallback": "The following codes activate editing of armour stand parts:"
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "pose",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.pose",
+                  "fallback": "Edit a part of the armour stand by looking at its \"joint\".\n- Hold sneak to enable \"snapping\"\n- Left click to invert this pose\n- Right click to stop editing",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "pose"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "pose mirror",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.pose_mirror",
+                  "fallback": "Edit a part of the armour stand by looking at its \"joint\".\nIf an arm/leg is selected, the other arm/leg pose is mirrored.\n- Hold sneak to enable \"snapping\"\n- Left click to invert this pose\n- Right click to stop editing",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "pose mirror"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "move",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.move",
+                  "fallback": "Move the armour stand around you.\n- Hold sneak to enable \"snapping\"\n- Right click to stop editing",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "move"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "rotate",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.rotate",
+                  "fallback": "Rotate the armour stand.\n- Hold sneak to enable \"snapping\"\n- Right click to stop editing",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "rotate"
+            }
+          },
+          {
+            "text": "\n\n- "
+          },
+          {
+            "text": "flip",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.flip",
+                  "fallback": "Flip the full pose of the armour stand",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "flip"
+            }
+          },
+          {
+            "text": "\n\n- "
+          },
+          {
+            "text": "default",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.default",
+                  "fallback": "- Look at a part of the armour stand to reset this pose.\n- Sneak to fully reset the armour stand.",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "default"
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.better_armour_stands.equipping",
+            "fallback": "Items can be placed in the head or arm slots:"
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "equip",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.equip",
+                  "fallback": "Look at the head or shoulders of the armour stand to place an item from the offhand into this slot.",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "equip"
+            }
+          },
+          {
+            "text": "\n\n"
+          },
+          {
+            "translate": "text.gm4.guidebook.better_armour_stands.copy_and_paste",
+            "fallback": "Armour stand data can be copied and pasted:"
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "copy",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy",
+                  "fallback": "Copy modified features onto the armour stand items in your offhand.",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "copy"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "paste",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.paste",
+                  "fallback": "Copy features from the copied armour stand items in your offhand to the armour stand.",
+                  "color": "gray"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "paste"
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}

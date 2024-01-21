@@ -1,0 +1,45 @@
+{
+  "id": "chairs",
+  "name": "Chairs",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:saddle",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_saddle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:saddle"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "creation",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_saddle"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.chairs.creation",
+            "fallback": "Chairs can be created by throwing a saddle onto a stair block.\n\nBreaking the stair or hitting the saddle relieves the stair of the saddle."
+          }
+        ]
+      ]
+    }
+  ]
+}

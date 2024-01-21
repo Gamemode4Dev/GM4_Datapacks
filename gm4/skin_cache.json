@@ -1000,6 +1000,9 @@
     ],
     "gm4_audere_shamir": [
       "gm4_metallurgy:band/barium"
+    ],
+    "gm4_auto_crafting": [
+      "gm4_custom_crafters:custom_crafter"
     ]
   }
 }
