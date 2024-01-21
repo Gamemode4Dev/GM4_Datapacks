@@ -50,7 +50,7 @@ execute if score $valid_placement gm4_furniture_data matches 0 run return 0
 
 # spawn the furniture
 execute positioned ~ ~-0.4999 ~ run summon item_display ~ ~0.{{ sittable }} ~ {Tags:["gm4_furniture","gm4_furniture.display","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture_display.{{ category }}.{{ technical_id }}"',item:{id:"leather_horse_armor",Count:1,tag:{data:{furniture_id:"{{ category }}/{{ technical_id }}"},CustomModelData:{{ cmd }}}},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[{{ scale }}f,{{ scale }}f,{{ scale }}f]}}
-summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.main","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture.{{ category }}.{{ technical_id }}"',height:1.0002f,width:1.0002f,response:1b}
+summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.main","smithed.entity","smithed.strict","gm4_new_furniture"],height:1.0002f,width:1.0002f,response:1b}
 setblock ~ ~ ~ {{ block_id }}
 
 # add placement tags
@@ -58,7 +58,7 @@ execute if score $wall_only gm4_furniture_data matches 1 run tag @e[type=interac
 execute if score $ceiling_only gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture] add gm4_furniture.on_ceiling
 
 # spawn extensions if they exist
-execute at @e[type=marker,tag=gm4_furniture.marked_block] run summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.additional","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture.{{ category }}.{{ technical_id }}"',height:1.0002f,width:1.0002f,response:1b}
+execute at @e[type=marker,tag=gm4_furniture.marked_block] run summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.additional","smithed.entity","smithed.strict","gm4_new_furniture"],height:1.0002f,width:1.0002f,response:1b}
 execute at @e[type=marker,tag=gm4_furniture.marked_block] run setblock ~ ~ ~ {{ block_id }}
 
 # add custom interaction tags
