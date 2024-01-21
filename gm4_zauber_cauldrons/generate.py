@@ -330,7 +330,7 @@ def generate_potion_recipes(ctx: Context, potion_effects: CSV, potion_bottles: C
                     "custom_potion_effects": effect_data['custom_potion_effects'],
                     "bottle_item_id": bottle_data['item_id'],
                     "bottle": bottle_data['bottle'],
-                    "soulution_translate_fallback": effect_data['soulution_translate_fallback'],
+                    "soulution_translate_fallback": bottle_data["soulution_translate_fallback_prefix"] + effect_data['soulution_translate_fallback'],
                     "sips_translate_name": bottle_data['sips_translate_name'],
                     "sips_translate_fallback": bottle_data['sips_translate_fallback'],
                     "lore": json.dumps(potion_lores[effect_data['effect']])
