@@ -1373,6 +1373,9 @@
       "gm4_percurro_shamir:shamir/percurro": 117,
       "gm4_animi_shamir:shamir/animi": 124
     },
+    "structure_void": {
+      "gm4_zauber_cauldrons:block/zauber_cauldron": 0
+    },
     "tadpole_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
     },
