@@ -37,6 +37,9 @@
     "birch_stairs": {
       "gm4_chairs:gui/advancement/chairs_creation": 1
     },
+    "black_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/black": 300
+    },
     "black_dye": {
       "gm4_orb_of_ankou:gui/advancement/orb_of_ankou_soul_essence": 1,
       "gm4_orb_of_ankou:pneuma/aggressive": 200,
@@ -78,10 +81,16 @@
       "gm4_orb_of_ankou:pneuma/dashing": 236,
       "gm4_orb_of_ankou:pneuma/sniffing": 237
     },
+    "blue_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/blue": 300
+    },
     "bow": {
       "gm4_better_fire:gui/advancement/better_fire": 1,
       "gm4_tower_structures:item/pirate_bow": 4,
       "gm4_animi_shamir:shamir/animi": 124
+    },
+    "brown_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/brown": 300
     },
     "brown_stained_glass": {
       "gm4_soul_glass:gui/advancement/soul_glass": 1,
@@ -180,6 +189,9 @@
     },
     "crossbow": {
       "gm4_animi_shamir:shamir/animi": 124
+    },
+    "cyan_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/cyan": 300
     },
     "dark_oak_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_dark_oak_hanging_sign": 1,
@@ -601,6 +613,12 @@
     "grass_block": {
       "gm4_tnt_landmines:entity/tnt_landmine_grass": 41
     },
+    "gray_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/gray": 300
+    },
+    "green_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/green": 300
+    },
     "gunpowder": {
       "gm4_bat_grenades:gui/advancement/bat_grenades": 1,
       "gm4_tnt_landmines:item/soft_defuser": 2
@@ -839,8 +857,23 @@
     "lectern": {
       "gm4_book_binders:gui/advancement/book_binders": 0
     },
+    "light_blue_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/light_blue": 300
+    },
+    "light_gray_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/light_gray": 300
+    },
+    "lime_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/lime": 300
+    },
     "lingering_potion": {
       "gm4_lightning_in_a_bottle:item/lingering_lightning_in_a_bottle": 4,
+      "gm4_zauber_cauldrons:item/bottled_magicol/polar": 300,
+      "gm4_zauber_cauldrons:item/bottled_magicol/temperate": 301,
+      "gm4_zauber_cauldrons:item/bottled_magicol/arid": 302,
+      "gm4_zauber_cauldrons:item/bottled_magicol_soulution/polar": 303,
+      "gm4_zauber_cauldrons:item/bottled_magicol_soulution/temperate": 304,
+      "gm4_zauber_cauldrons:item/bottled_magicol_soulution/arid": 305,
       "gm4_zauber_cauldrons:item/soulution_potion/instant_damage": 306,
       "gm4_zauber_cauldrons:item/soulution_potion/instant_health": 307,
       "gm4_zauber_cauldrons:item/soulution_potion/jump_boost": 308,
@@ -851,6 +884,9 @@
     },
     "lodestone": {
       "gm4_teleportation_anchors:gui/advancement/teleportation_anchor": 1
+    },
+    "magenta_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/magenta": 300
     },
     "mangrove_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_mangrove_hanging_sign": 1,
@@ -1044,12 +1080,18 @@
     "obsidian": {
       "gm4_metallurgy:item/slightly_damaged_obsidian": 1
     },
+    "orange_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/orange": 300
+    },
     "oxidized_cut_copper": {
       "gm4_tinkering_compressors:block/tinkering_compressor_plate": 1
     },
     "paper": {
       "gm4_book_binders:item/enchanted_page": 1,
       "gm4_book_binders:gui/advancement/book_binders_debind": 2
+    },
+    "pink_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/pink": 300
     },
     "piston": {
       "gm4_forming_press:block/forming_press": 1,
@@ -1151,6 +1193,12 @@
       "gm4_mob_curing:gui/advancement/mob_curing": 5,
       "gm4_standard_liquids:item/ink_bottle": 7,
       "gm4_standard_liquids:item/glow_ink_bottle": 8,
+      "gm4_zauber_cauldrons:item/bottled_magicol/polar": 300,
+      "gm4_zauber_cauldrons:item/bottled_magicol/temperate": 301,
+      "gm4_zauber_cauldrons:item/bottled_magicol/arid": 302,
+      "gm4_zauber_cauldrons:item/bottled_magicol_soulution/polar": 303,
+      "gm4_zauber_cauldrons:item/bottled_magicol_soulution/temperate": 304,
+      "gm4_zauber_cauldrons:item/bottled_magicol_soulution/arid": 305,
       "gm4_zauber_cauldrons:item/soulution_potion/instant_damage": 306,
       "gm4_zauber_cauldrons:item/soulution_potion/instant_health": 307,
       "gm4_zauber_cauldrons:item/soulution_potion/jump_boost": 308,
@@ -1170,6 +1218,9 @@
     },
     "pufferfish_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
+    },
+    "purple_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/purple": 300
     },
     "purpur_block": {
       "gm4_lightning_in_a_bottle:gui/advancement/lightning_in_a_bottle_shulker": 1,
@@ -1205,6 +1256,9 @@
     "recovery_compass": {
       "gm4_animi_shamir:shamir/animi": 124
     },
+    "red_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/red": 300
+    },
     "red_mushroom": {
       "gm4_shroomites:gui/advancement/shroomites": 1
     },
@@ -1237,6 +1291,12 @@
     "splash_potion": {
       "gm4_display_frames:gui/advancement/display_frames": 1,
       "gm4_lightning_in_a_bottle:item/splash_lightning_in_a_bottle": 4,
+      "gm4_zauber_cauldrons:item/bottled_magicol/polar": 300,
+      "gm4_zauber_cauldrons:item/bottled_magicol/temperate": 301,
+      "gm4_zauber_cauldrons:item/bottled_magicol/arid": 302,
+      "gm4_zauber_cauldrons:item/bottled_magicol_soulution/polar": 303,
+      "gm4_zauber_cauldrons:item/bottled_magicol_soulution/temperate": 304,
+      "gm4_zauber_cauldrons:item/bottled_magicol_soulution/arid": 305,
       "gm4_zauber_cauldrons:item/soulution_potion/instant_damage": 306,
       "gm4_zauber_cauldrons:item/soulution_potion/instant_health": 307,
       "gm4_zauber_cauldrons:item/soulution_potion/jump_boost": 308,
@@ -1354,6 +1414,9 @@
     "water_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
     },
+    "white_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/white": 300
+    },
     "wooden_axe": {
       "gm4_metallurgy:shamir/hypexperia": 110,
       "gm4_metallurgy:shamir/arborenda": 112,
@@ -1398,6 +1461,9 @@
     },
     "written_book": {
       "gm4_guidebook:item/guidebook": 1
+    },
+    "yellow_concrete_powder": {
+      "gm4_zauber_cauldrons:block/liquid_magicol/yellow": 300
     },
     "zombie_head": {
       "gm4_undead_players:gui/advancement/undead_players": 1

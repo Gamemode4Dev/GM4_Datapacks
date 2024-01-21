@@ -370,9 +370,6 @@ def generate_magicol_recipes(ctx: Context, weather_modifiers: CSV, magicol_color
             "meta": {
                 "color": color_data['color'],
                 "potion_color": color_data['potion_color'].to_color_code(CSVCell.DEC),
-                "liquid_custom_model_data": color_data['liquid_custom_model_data'],
-                "bottle_custom_model_data": modifier_data['bottle_custom_model_data'],
-                "soulution_bottle_custom_model_data": modifier_data['soulution_bottle_custom_model_data'],
                 "bottle": bottle_data['bottle'],
                 "bottle_item_id": bottle_data['item_id'],
                 "weather_modifier": modifier_data['modifier'],
@@ -386,6 +383,13 @@ def generate_magicol_recipes(ctx: Context, weather_modifiers: CSV, magicol_color
             }
         }
         ctx.require(subproject(subproject_config))
+
+    for color_data in magicol_colors:
+        ctx.meta["gm4"]["model_data"].append({
+            "item": f"{color_data['color']}_concrete_powder",
+            "reference": f"block/liquid_magicol/{color_data['color']}",
+            "template": "vanilla"
+        })
 
 
 def generate_zauber_biomes(ctx: Context, weather_modifiers: CSV, magicol_colors: CSV, potion_bottles: CSV, flower_types: CSV):

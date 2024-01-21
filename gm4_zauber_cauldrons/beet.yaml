@@ -53,52 +53,21 @@ meta:
           - reference: item/crystal/regeneration
           - reference: item/crystal/speed
           - reference: item/crystal/strength
+      # potion solutions registered by generate.py
       # armor registered by generate.py
-      - template: vanilla
-        broadcast:
-          - reference: block/liquid_magicol/white
-            item: white_concrete_powder
-          - reference: block/liquid_magicol/light_gray
-            item: light_gray_concrete_powder
-          - reference: block/liquid_magicol/gray
-            item: gray_concrete_powder
-          - reference: block/liquid_magicol/black
-            item: black_concrete_powder
-          - reference: block/liquid_magicol/brown
-            item: brown_concrete_powder
-          - reference: block/liquid_magicol/red
-            item: red_concrete_powder
-          - reference: block/liquid_magicol/orange
-            item: orange_concrete_powder
-          - reference: block/liquid_magicol/yellow
-            item: yellow_concrete_powder
-          - reference: block/liquid_magicol/lime
-            item: lime_concrete_powder
-          - reference: block/liquid_magicol/green
-            item: green_concrete_powder
-          - reference: block/liquid_magicol/cyan
-            item: cyan_concrete_powder
-          - reference: block/liquid_magicol/light_blue
-            item: light_blue_concrete_powder
-          - reference: block/liquid_magicol/blue
-            item: blue_concrete_powder
-          - reference: block/liquid_magicol/purple
-            item: purple_concrete_powder
-          - reference: block/liquid_magicol/magenta
-            item: magenta_concrete_powder
-          - reference: block/liquid_magicol/pink
-            item: pink_concrete_powder
+      # magicol liquid registered by generate.py
       - item: [potion, splash_potion, lingering_potion]
+        template: vanilla
         broadcast:
           - reference: item/bottled_magicol/polar
           - reference: item/bottled_magicol/temperate
           - reference: item/bottled_magicol/arid
       - item: [potion, splash_potion, lingering_potion]
+        template: vanilla
         broadcast:
           - reference: item/bottled_magicol_soulution/polar
           - reference: item/bottled_magicol_soulution/temperate
           - reference: item/bottled_magicol_soulution/arid
-      # solutions registered by generate.py
       - item: cauldron
         reference: gui/advancement/zauber_cauldrons_create
         template: advancement
