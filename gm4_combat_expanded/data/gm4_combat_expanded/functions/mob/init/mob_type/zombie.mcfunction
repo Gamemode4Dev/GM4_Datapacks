@@ -26,12 +26,6 @@ loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/gener
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/generic
 
-# | Difficulty Modifiers
-# sprinter
-execute if predicate gm4_combat_expanded:technical/chance/zombie_sprinter run attribute @s generic.movement_speed modifier add b04df78c-8b19-434f-bcd0-515133d5e573 "gm4_ce_sprinter_zombie" 0.15 multiply
-# solid (KB resist)
-execute if predicate gm4_combat_expanded:technical/chance/zombie_solid run attribute @s generic.knockback_resistance modifier add 35504df6-ec60-4229-8063-a2440d56f68c "gm4_ce_solid_zombie" 0.45 add
-
 # | Biome Modifiers
 # snowy
 tag @s[predicate=gm4_combat_expanded:mob/modifier/snowy] add gm4_ce_slowing_attacks
@@ -51,7 +45,7 @@ attribute @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/deep] gener
 # reef
 execute if entity @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/reef] run function gm4_combat_expanded:mob/init/modifier/special/reef_drowned
 # growth
-execute if entity @s[type=!zombie_villager,predicate=gm4_combat_expanded:mob/modifier/growth] run function gm4_combat_expanded:mob/init/modifier/special/growth_zombie
+execute if entity @s[type=!zombie_villager,tag=!gm4_ce_spore_zombie,predicate=gm4_combat_expanded:mob/modifier/growth] run function gm4_combat_expanded:mob/init/modifier/special/growth_zombie
 # dark
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] zombie.spawn_reinforcements modifier add 88708a3a-b8f0-46f8-8dd9-1f8fb0f315d6 "gm4_ce_modifier_dark" 0.25 multiply
 execute if entity @s[type=zombie,tag=!gm4_ce_extra_mob,predicate=gm4_combat_expanded:mob/modifier/dark,predicate=gm4_combat_expanded:technical/chance/extra_zombie_spawn] store success score $mob_extras gm4_ce_data run summon zombie ~0.1 ~0.15 ~0.02 {Tags:["gm4_ce_extra_mob"]}
@@ -68,6 +62,13 @@ execute if data entity @s[type=zombie] Attributes[{Name:"minecraft:generic.max_h
 execute if data entity @s[type=zombie_villager] Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}] run data remove entity @s Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}]
 execute if entity @s[tag=gm4_ce_miniboss] run function gm4_combat_expanded:mob/init/modifier/special/zombie_miniboss
 
+# | Other Modifiers
+# sprinter
+execute if predicate gm4_combat_expanded:technical/chance/zombie_sprinter run attribute @s generic.movement_speed modifier add b04df78c-8b19-434f-bcd0-515133d5e573 "gm4_ce_sprinter_zombie" 0.15 multiply
+# solid (KB resist)
+execute if predicate gm4_combat_expanded:technical/chance/zombie_solid run attribute @s generic.knockback_resistance modifier add 35504df6-ec60-4229-8063-a2440d56f68c "gm4_ce_solid_zombie" 0.45 add
+# baby zombie
+execute if data entity @s {IsBaby:1b} run attribute @s generic.max_health modifier add 13d37911-bc7f-4f94-9187-1668ac21bfb1 "gm4_ce_baby_zombie" -0.6 multiply
 # check if zombie is spawned from reinforcements
 execute if data entity @s Attributes[{Modifiers:[{Name:"Zombie reinforcement callee charge"}]}] run function gm4_combat_expanded:mob/init/modifier/special/zombie_reinforcement
 

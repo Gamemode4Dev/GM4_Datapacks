@@ -39,8 +39,8 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.combat_expanded.lore.warp",
-                "fallback": "Warp",
+                "translate": "item.gm4.combat_expanded.lore.wild_magic",
+                "fallback": "It must do Something",
                 "color": "blue",
                 "italic": false
               }

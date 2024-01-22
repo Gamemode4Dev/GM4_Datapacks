@@ -14,10 +14,6 @@
             "range": {
               "min": 1
             }
-          },
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_combat_expanded:modified_armor/link"
           }
         ],
         "damage": {

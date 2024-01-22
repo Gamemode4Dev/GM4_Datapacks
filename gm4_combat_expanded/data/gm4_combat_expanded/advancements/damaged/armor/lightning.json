@@ -10,18 +10,11 @@
           }
         ],
         "damage": {
-          "taken": {
-            "min": 1
-          },
           "blocked": false,
           "type": {
             "tags": [
               {
                 "id": "minecraft:bypasses_invulnerability",
-                "expected": false
-              },
-              {
-                "id": "minecraft:bypasses_effects",
                 "expected": false
               }
             ],

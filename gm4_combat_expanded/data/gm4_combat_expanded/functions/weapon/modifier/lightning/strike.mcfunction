@@ -3,6 +3,8 @@
 # at @s
 # run from weapon/modifier/lightning/tick
 
+execute unless entity @s[type=player] run damage @s 30 lightning_bolt at ~ ~ ~
+execute if entity @s[type=player] run damage @s 10 lightning_bolt at ~ ~ ~
 summon lightning_bolt
 
 scoreboard players set @s gm4_ce_lightning_charge.timer 0

@@ -104,7 +104,7 @@
               "name": "gm4_ce_modifier_flowering",
               "amount": -0.25,
               "operation": "multiply_total",
-              "slot": "mainhand"
+              "slot": "head"
             }
           ]
         },

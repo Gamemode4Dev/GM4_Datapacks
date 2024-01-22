@@ -8,7 +8,7 @@
 scoreboard players operation $curr_id gm4_ce_link_id = @s gm4_ce_link_id
 execute as @a[tag=gm4_ce_linked.check] if score @s gm4_ce_link_id = $curr_id gm4_ce_link_id run tag @s add gm4_ce_linked.process
 
-# run link if there are at least 2 players in it
+# run link if there are at least 2 players in it and this player is 
 execute store result score $link_count gm4_ce_data if entity @a[tag=gm4_ce_linked.process]
 execute if score $link_count gm4_ce_data matches 2.. run function gm4_combat_expanded:armor/modifier/type/link/process/run_link
 

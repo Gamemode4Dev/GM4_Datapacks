@@ -23,7 +23,7 @@ execute as @a[tag=gm4_ce_wearing_archer,scores={gm4_ce_used_bow=1..}] at @s run 
 scoreboard players reset @a gm4_ce_used_bow
 scoreboard players reset @a gm4_ce_used_crossbow
 # link
-tag @a[tag=gm4_ce_linked,gamemode=!spectator,gamemode=!creative] add gm4_ce_linked.check
+tag @a[tag=gm4_ce_linked,gamemode=!spectator,gamemode=!creative,predicate=gm4_combat_expanded:modified_armor/link] add gm4_ce_linked.check
 execute as @p[tag=gm4_ce_linked.check] run function gm4_combat_expanded:armor/modifier/type/link/process/loop_links
 # sword_ring
 tag @e[type=item_display,tag=gm4_ce_sword_ring.keep_sword] remove gm4_ce_sword_ring.keep_sword

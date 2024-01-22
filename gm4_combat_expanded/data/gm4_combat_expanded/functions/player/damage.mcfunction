@@ -5,4 +5,4 @@
 # run from weapon/modifier/link/process/calc_damage
 # run from weapon/modifier/delay/explode_player
 
-$damage @s $(damage) generic_kill
+$damage @s $(damage) generic_kill by @s

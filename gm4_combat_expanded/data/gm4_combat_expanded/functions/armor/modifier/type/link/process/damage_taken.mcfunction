@@ -7,7 +7,7 @@ advancement revoke @s only gm4_combat_expanded:damaged/armor/link
 scoreboard players operation $curr_id gm4_ce_link_id = @s gm4_ce_link_id
 execute as @a[tag=gm4_ce_linked,gamemode=!spectator,gamemode=!creative] if score @s gm4_ce_link_id = $curr_id gm4_ce_link_id run tag @s add gm4_ce_linked.damaged
 
-# calcualte the hp for all players that need to take damage
+# calculate the hp for all players that need to take damage
 execute as @a[tag=gm4_ce_linked.damaged] run function gm4_combat_expanded:player/calculate_hp
 tag @a[tag=gm4_ce_linked.damaged,scores={gm4_ce_health.current=0}] remove gm4_ce_linked.damaged
 # set link health to the damaged players new health
