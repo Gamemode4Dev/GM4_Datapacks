@@ -1,0 +1,113 @@
+{
+  "id": "weighted_armour",
+  "name": "Weighted Armour",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:iron_chestplate",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "wear_armor": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "gm4_armor"
+            },
+            "range": {
+              "min": 8
+            }
+          }
+        ]
+      }
+    },
+    "wear_heavy_armor": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "gm4_armor"
+            },
+            "range": {
+              "min": 16
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "wear_armor"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.weighted_armour.description",
+            "fallback": "Users will be slowed down based on how much armour they have on."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "weight",
+      "enable": [
+        {
+          "id": "gm4_metallurgy",
+          "load": -1
+        }
+      ],
+      "requirements": [
+        [
+          "wear_heavy_armor"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.weighted_armour.weight",
+            "fallback": "The weight is purely based on how much armor one has on. Slowness III is applied for full armor points."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "weight_and_helious",
+      "enable": [
+        {
+          "id": "gm4_metallurgy",
+          "load": 1
+        }
+      ],
+      "requirements": [
+        [
+          "wear_heavy_armor"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.weighted_armour.weight_and_helious",
+            "fallback": "The weight is purely based on how much armor one has on. Slowness III is applied for full armor points.\n\nThe Helious Shamir can help prevent armour slowness."
+          }
+        ]
+      ]
+    }
+  ]
+}

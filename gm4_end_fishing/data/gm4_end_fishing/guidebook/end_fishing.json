@@ -1,0 +1,83 @@
+{
+  "id": "end_fishing",
+  "name": "End Fishing",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:fishing_rod",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "enter_end_gateway": {
+      "trigger": "minecraft:enter_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "minecraft:the_end"
+            }
+          }
+        ],
+        "block": "minecraft:end_gateway"
+      }
+    },
+    "fish_phantom": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:end_fishing_phantom": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "void_fishing",
+      "enable": [],
+      "requirements": [
+        [
+          "enter_end_gateway"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.end_fishing.description",
+            "fallback": "Casting a fishing rod into the end void will allow one to fish up loot from the void.\n\nLoot is biome dependent."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "end_phantoms",
+      "enable": [],
+      "requirements": [
+        [
+          "fish_phantom"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.end_fishing.end_phantom",
+            "fallback": "End Phantoms can be fished up from the end void.\n\nThey are larger and stronger than normal phantoms, but have a chance to drop a broken elytra upon death."
+          }
+        ]
+      ]
+    }
+  ]
+}

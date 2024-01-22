@@ -1,0 +1,43 @@
+{
+  "id": "double_doors",
+  "name": "Double Doors",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:acacia_door",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "obtain_door": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:doors"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_door"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.double_doors.description",
+            "fallback": "Placing two doors adjacent to each other will link them together, so they open together.\n\nTrapdoors placed above doors will also act as part of the door, opening when the doors open."
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -8,10 +8,15 @@ function #gm4_zauber_cauldrons:player/wormhole_targeting/prepare_teleport
 # revoke advancement for next teleport
 advancement revoke @s only gm4_zauber_cauldrons:use/wormhole
 
-# detect main or offhand warp and prepare target coordinates in fake players
-execute unless score $read_coordinates gm4_zc_data matches 1 if predicate gm4_zauber_cauldrons:player/equipment/wormhole/in_mainhand run function gm4_zauber_cauldrons:player/wormhole_targeting/read_coordinates/mainhand
-execute unless score $read_coordinates gm4_zc_data matches 1 if predicate gm4_zauber_cauldrons:player/equipment/wormhole/in_offhand run function gm4_zauber_cauldrons:player/wormhole_targeting/read_coordinates/offhand
+# detect main or offhand warp and prepare target coordinates in storage
+data remove storage gm4_zauber_cauldrons:temp/wormhole_targeting/destination cauldron_pos
+execute unless score $read_coordinates gm4_zc_data matches 1 if predicate gm4_zauber_cauldrons:player/equipment/wormhole/in_mainhand store success score $read_coordinates gm4_zc_data run data modify storage gm4_zauber_cauldrons:temp/wormhole_targeting/destination cauldron_pos set from entity @s SelectedItem.tag.gm4_zauber_cauldrons.cauldron_pos
+execute unless score $read_coordinates gm4_zc_data matches 1 if predicate gm4_zauber_cauldrons:player/equipment/wormhole/in_offhand run data modify storage gm4_zauber_cauldrons:temp/wormhole_targeting/destination cauldron_pos set from entity @s Inventory[{Slot:-106b}].tag.gm4_zauber_cauldrons.cauldron_pos
 scoreboard players reset $read_coordinates gm4_zc_data
+
+# backwards compatibility with old wormholes from below v1.10
+# earlist version is tracked by our upgrade paths framework
+execute if score zauber_cauldrons gm4_earliest_version matches ..110000 run function gm4_zauber_cauldrons:player/wormhole_targeting/translate_numeric_dimension_id with storage gm4_zauber_cauldrons:temp/wormhole_targeting/destination cauldron_pos
 
 # affect player with resistance
 effect give @s resistance 1 12 true
@@ -20,12 +25,8 @@ effect give @s resistance 1 12 true
 particle minecraft:portal ~ ~.6 ~ .25 .25 .25 0 100
 playsound minecraft:entity.enderman.teleport player @a[distance=0.001..8] ~ ~ ~ 1 .3
 
-# summon marker for teleportation
-summon area_effect_cloud ~ ~ ~ {Tags:["gm4_zc_wormhole_target","gm4_zc_new_wormhole_target"],Duration:1}
-
-# teleport the player to the wormhole's destination using the marker
-tag @s add gm4_zc_wormhole_consumer
-execute as @e[type=area_effect_cloud,tag=gm4_zc_new_wormhole_target,limit=1] run function gm4_zauber_cauldrons:player/wormhole_targeting/apply_coordinates/position
+# teleport user to destination
+function gm4_zauber_cauldrons:player/wormhole_targeting/acquire_destination_context with storage gm4_zauber_cauldrons:temp/wormhole_targeting/destination cauldron_pos
 
 # gm4_zc_wormhole_consumer tag used to be removed here, however, this wasn't reliable for tag removal for non-player entities.
 # The tag removal is now done in the function teleport_user, making this redundant. This is just a failsafe to

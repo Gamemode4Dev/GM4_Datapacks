@@ -1,0 +1,5 @@
+flavor,custom_model_data,ingredient_item_id,attribute,amount,operation
+armor_boost,3420005,minecraft:turtle_helmet,minecraft:generic.armor,1,addition
+attack_boost,3420003,minecraft:blaze_powder,minecraft:generic.attack_damage,1,addition
+health_boost,3420002,minecraft:glistering_melon_slice,minecraft:generic.max_health,4,addition
+speed_boost,3420004,minecraft:sugar,minecraft:generic.movement_speed,0.12,multiply_base

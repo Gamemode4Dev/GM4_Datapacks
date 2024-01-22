@@ -14,12 +14,15 @@
             }
           }
         ],
-        "item": {
-          "items": [
-            "minecraft:crafting_table"
-          ]
-        },
         "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:crafting_table"
+              ]
+            }
+          },
           {
             "condition": "minecraft:location_check",
             "predicate": {

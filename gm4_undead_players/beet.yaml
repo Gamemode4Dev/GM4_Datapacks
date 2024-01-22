@@ -7,10 +7,13 @@ data_pack:
 
 pipeline:
   - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_player_death
 
 meta:
   gm4:
     versioning:
+      required:
+        lib_player_death: 1.0.0
       schedule_loops: [main]
     website:
       description: You'll find your death point faster, but you'll have to fight your corpse for your stuff back!

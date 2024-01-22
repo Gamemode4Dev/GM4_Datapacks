@@ -1,0 +1,26 @@
+{
+  "type": "forming_press",
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "###",
+      "#C#",
+      "###"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:clay_ball"
+      },
+      "#": {
+        "item": "minecraft:prismarine_shard"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:prismarine_bricks",
+      "count": 2
+    }
+  }
+}

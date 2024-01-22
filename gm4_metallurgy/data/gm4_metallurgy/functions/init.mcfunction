@@ -116,8 +116,7 @@ scoreboard players set metallurgy gm4_modules 1
 schedule function gm4_metallurgy:main 1t
 schedule function gm4_metallurgy:tick 1t
 
-# guidebook
-execute if score gm4_guidebook load.status matches 1 run summon marker ~ 4598.994517095294 ~ {CustomName:'"gm4_vibro_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"vibro_shamir",page_count:3,line_count:1,module_name:"Vibro Shamir"}}
+
 execute if score gm4_guidebook load.status matches 1 run summon marker ~ 4190.524302292533 ~ {CustomName:'"gm4_tinker_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"tinker_shamir",page_count:2,line_count:1,module_name:"Tinker Shamir"}}
 # execute if score gm4_guidebook load.status matches 1 run summon marker ~ 4036.671663623452 ~ {CustomName:'"gm4_spiraculum_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"spiraculum_shamir",page_count:2,line_count:1,module_name:"Spiraculum Shamir"}}
 execute if score gm4_guidebook load.status matches 1 run summon marker ~ 3954.220676160291 ~ {CustomName:'"gm4_sensus_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"sensus_shamir",page_count:2,line_count:1,module_name:"Sensus Shamir"}}

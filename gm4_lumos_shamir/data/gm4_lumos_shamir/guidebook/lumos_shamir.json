@@ -1,0 +1,68 @@
+{
+  "id": "lumos_shamir",
+  "name": "Lumos Shamir",
+  "module_type": "expansion",
+  "base_module": "metallurgy",
+  "icon": {
+    "item": "minecraft:anvil",
+    "nbt": "{CustomModelData:3420114}"
+  },
+  "criteria": {
+    "obtain_lumos_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'lumos'}}"
+          }
+        ]
+      }
+    },
+    "obtain_lumos_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'lumos'}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.lumos_shamir.description",
+            "fallback": "Lumos takes torches from the inventory and places them if the light level is too low."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_lumos_shamir",
+          "obtain_lumos_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.lumos_shamir.usage",
+            "fallback": "The Lumos Shamir is found on Curie's Bismium Bands. It can be placed onto pickaxes and shovels.\n\nHolding the tool will cause torches to be placed when standing in low light levels."
+          }
+        ]
+      ]
+    }
+  ]
+}

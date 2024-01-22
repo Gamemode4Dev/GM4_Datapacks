@@ -1,0 +1,37 @@
+{
+  "id": "live_catch",
+  "name": "Live Catch",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:cod",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "use_fishing_rod": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {}
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "use_fishing_rod"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.live_catch.description",
+            "fallback": "When fishing, if a fisher reels in a fish, instead of an item, an actual fish will be launched towards the fisher.\n\nThe fish that spawn have half a heart of health, so they will easily die."
+          }
+        ]
+      ]
+    }
+  ]
+}

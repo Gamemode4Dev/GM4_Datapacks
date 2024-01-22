@@ -1,0 +1,8 @@
+effect,base_potion_id,effect_translate_name,custom_potion_color,custom_potion_effects,soulution_custom_model_data,soulution_translate_fallback
+instant_damage,minecraft:strong_harming,harming,#A9656A,"[{id:'minecraft:instant_damage',amplifier:3,duration:1}]",3420306,Soulution of Harming
+instant_health,minecraft:strong_healing,healing,#F82423,"[{id:'minecraft:instant_health',amplifier:3,duration:1},{id:'minecraft:nausea',amplifier:0,duration:160}]",3420307,Soulution of Healing
+jump_boost,minecraft:strong_leaping,leaping,#FDFF84,"[{id:'minecraft:jump_boost',amplifier:3,duration:1800}]",3420308,Soulution of Leaping
+poison,minecraft:strong_poison,poison,#87A363,"[{id:'minecraft:poison',amplifier:3,duration:640}]",3420309,Soulution of Poison
+regeneration,minecraft:strong_regeneration,regeneration,#CD5CAB,"[{id:'minecraft:regeneration',amplifier:3,duration:440},{id:'minecraft:speed',amplifier:1,duration:320}]",3420310,Soulution of Regeneration
+speed,minecraft:strong_swiftness,swiftness,#33EBFF,"[{id:'minecraft:speed',amplifier:3,duration:4000},{id:'minecraft:weakness',amplifier:2,duration:4000}]",3420311,Soulution of Swiftness
+strength,minecraft:strong_strength,strength,#FFC700,"[{id:'minecraft:strength',amplifier:3,duration:1800},{id:'fire_resistance',amplifier:0,duration:320}]",3420312,Soulution of Strength

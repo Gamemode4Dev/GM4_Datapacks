@@ -1,0 +1,83 @@
+{
+  "id": "liquid_minecarts",
+  "name": "Liquid Minecarts",
+  "module_type": "expansion",
+  "base_module": "liquid_tanks",
+  "icon": {
+    "item": "minecraft:hopper_minecart",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "obtain_liquid_tank": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_machines:{id:\"liquid_tank\"}}"
+          }
+        ]
+      }
+    },
+    "obtain_liquid_minecart": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:hopper_minecart"
+            ],
+            "nbt": "{gm4_machines:{id:\"liquid_minecart\"}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "crafting",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_liquid_tank"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.liquid_minecarts.crafting",
+            "fallback": "Combining a liquid tank and a minecart in a Custom Crafter will craft a liquid minecart.\n\nLiquid minecarts can be used to move liquids from one tank to another."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_liquid_minecart"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.liquid_minecarts.usage",
+            "fallback": "Unlike liquid tanks, liquid minecarts cannot interact with any entities or blocks in the world.\n\nLiquid minecarts can be filled by a tank pointing into the minecart and can be drained by driving one over a tank."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.liquid_minecarts.usage_1",
+            "fallback": "Similar to a tank, if a liquid minecart already has liquid in it, it will only accept the contents of tanks with the same liquid.\n\nDriving a liquid minecart over an activator rail will discard any liquid inside."
+          }
+        ]
+      ]
+    }
+  ]
+}

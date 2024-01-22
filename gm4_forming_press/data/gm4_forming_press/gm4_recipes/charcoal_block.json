@@ -1,0 +1,26 @@
+{
+  "type": "forming_press",
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "###",
+      "#C#",
+      "###"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:clay_ball"
+      },
+      "#": {
+        "tag": "minecraft:logs"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_forming_press:items/charcoal_block",
+      "count": 2
+    }
+  }
+}

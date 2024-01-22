@@ -1,0 +1,31 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      " P ",
+      "CRC",
+      "CFC"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:piston"
+      },
+      "C": {
+        "item": "minecraft:cobblestone"
+      },
+      "R": {
+        "item": "minecraft:repeater"
+      },
+      "F": {
+        "item": "minecraft:furnace"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_forming_press:items/forming_press",
+      "count": 1
+    }
+  }
+}

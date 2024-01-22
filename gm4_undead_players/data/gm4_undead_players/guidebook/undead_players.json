@@ -1,0 +1,52 @@
+{
+  "id": "undead_players",
+  "name": "Undead Players",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:rotten_flesh",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "summon_undead_player": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:undead_players": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "summon_undead_player"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.undead_players.description",
+            "fallback": "When one dies, an undead version of them will spawn at the death site.\n\nThis zombie have a visible name, will never despawn, and will pick up armor and weapons."
+          }
+        ]
+      ]
+    }
+  ]
+}

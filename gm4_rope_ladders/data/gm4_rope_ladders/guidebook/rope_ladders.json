@@ -1,0 +1,69 @@
+{
+  "id": "rope_ladders",
+  "name": "Rope Ladders",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:ladder",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "place_ladder": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:ladder"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.rope_ladders.description",
+            "fallback": "Ladders can be placed on other ladders to extend the ladder downward."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "place_ladder"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.rope_ladders.extend_downwards",
+            "fallback": "Looking at a ladder while holding ladders will cause particles to appear. Placing ladders on this particle will extend the ladder downwards.\n\nRope ladders will break if there are no other ladders above them."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.potion_swords.breaking",
+            "fallback": "Breaking a ladder at the top of a rope ladder will break all other rope ladders below, causing the items to appear at the top of the ladder that was broken."
+          }
+        ]
+      ]
+    }
+  ]
+}

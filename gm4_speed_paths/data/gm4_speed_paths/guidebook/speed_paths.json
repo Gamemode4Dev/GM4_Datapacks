@@ -1,0 +1,53 @@
+{
+  "id": "speed_paths",
+  "name": "Speed Paths",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:dirt_path",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "stand_in_path": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:dirt_path"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "stand_in_path"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.speed_paths.description",
+            "fallback": "Dirt paths increase movement speed by 20%.\n\nThis will stack with other speed effects such as that from beacons and potions."
+          }
+        ]
+      ]
+    }
+  ]
+}

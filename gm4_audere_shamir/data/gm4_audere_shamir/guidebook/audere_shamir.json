@@ -1,0 +1,68 @@
+{
+  "id": "audere_shamir",
+  "name": "Audere Shamir",
+  "module_type": "expansion",
+  "base_module": "metallurgy",
+  "icon": {
+    "item": "minecraft:anvil",
+    "nbt": "{CustomModelData:3420120}"
+  },
+  "criteria": {
+    "obtain_audere_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'audere'}}"
+          }
+        ]
+      }
+    },
+    "obtain_audere_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'audere'}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.audere_shamir.description",
+            "fallback": "Audere buffs mining speed, as durability decreases."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_audere_shamir",
+          "obtain_audere_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.audere_shamir.usage",
+            "fallback": "The Audere Shamir is found on Barium Bands. It can be placed onto tools.\n\nHigher levels of Haste are awarded for lower durability (percentage-based).\n\nThe maximum level of Haste is IV."
+          }
+        ]
+      ]
+    }
+  ]
+}
