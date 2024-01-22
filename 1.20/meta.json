@@ -1,5 +1,5 @@
 {
-  "last_commit": "4a5a7d730e601b76f94f8d54d6e1af1c3c8f9bab",
+  "last_commit": "942c42bd35823ec2321de1b6fea8ca9feaa5b211",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2641,7 +2641,7 @@
     {
       "id": "gm4_zauber_liquids",
       "name": "Zauber Liquids",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids",
       "credits": {
