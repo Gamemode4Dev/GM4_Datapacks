@@ -85,13 +85,7 @@ class NoneAttribute():
 		return None
 
 
-# ====================================================
-#
-#                 CSV READING UTILS
-#
-# ====================================================
-
-
+# CSV READING UTILS
 class CSVCell(str):
     """
     String wrapper for contents of a CSVCell, supports interpreting the content as different formats.
@@ -203,6 +197,17 @@ class CSV():
     All access methods return CSVRow objects which are dynamically created upon calling an access method.
     """
 
+    @staticmethod
+    def from_file(path: Path) -> 'CSV':
+        """
+        Reads in a csv file and returns a list of rows. Each row consists of a dictionary which contains labeled values.
+        """
+        with open(path, mode='r') as file:
+            csv_file = csv.reader(file)
+            header = next(csv_file)
+
+            return CSV(column_names=header, rows=[[CSVCell(cell) for cell in row] for row in csv_file])
+
     def __init__(self, column_names: List[str], rows: List[List[CSVCell]]) -> None:
         """
         Initialize a new CSV from a list of column names (headers) and a list of rows.
@@ -243,14 +248,3 @@ class CSV():
             if row[by_column] == value:
                 return CSVRow(self._column_names, row)
         return CSVRow()
-
-
-def read_csv(path: Path) -> CSV:
-    """
-    Reads in a csv file and returns a list of rows. Each row consists of a dictionary which contains labeled values.
-    """
-    with open(path, mode='r') as file:
-        csv_file = csv.reader(file)
-        header = next(csv_file)
-
-        return CSV(column_names=header, rows=[[CSVCell(cell) for cell in row] for row in csv_file])

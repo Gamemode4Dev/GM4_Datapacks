@@ -1,7 +1,7 @@
 from typing import Dict, Any
 from pathlib import Path
 from itertools import product
-from gm4.utils import CSV, CSVCell, read_csv
+from gm4.utils import CSV, CSVCell
 import json
 
 from beet import Context, subproject
@@ -17,27 +17,27 @@ def read_json(path: Path) -> Any:
 def beet_default(ctx: Context):
 
     # read raw data
-    armor_flavors: CSV = read_csv(
+    armor_flavors: CSV = CSV.from_file(
         Path('gm4_zauber_cauldrons', 'raw', 'armor_flavors.csv'))
-    armor_pieces: CSV = read_csv(
+    armor_pieces: CSV = CSV.from_file(
         Path('gm4_zauber_cauldrons', 'raw', 'armor_pieces.csv'))
-    crystal_effects: CSV = read_csv(
+    crystal_effects: CSV = CSV.from_file(
         Path('gm4_zauber_cauldrons', 'raw', 'crystal_effects.csv'))
     crystal_lores: Any = read_json(
         Path('gm4_zauber_cauldrons', 'raw', 'crystal_lores.json'))
-    flower_types: CSV = read_csv(
+    flower_types: CSV = CSV.from_file(
         Path('gm4_zauber_cauldrons', 'raw', 'flower_types.csv'))
-    magicol_colors: CSV = read_csv(
+    magicol_colors: CSV = CSV.from_file(
         Path('gm4_zauber_cauldrons', 'raw', 'magicol_colors.csv'))
-    potion_bottles: CSV = read_csv(
+    potion_bottles: CSV = CSV.from_file(
         Path('gm4_zauber_cauldrons', 'raw', 'potion_bottles.csv'))
-    potion_effects: CSV = read_csv(
+    potion_effects: CSV = CSV.from_file(
         Path('gm4_zauber_cauldrons', 'raw', 'potion_effects.csv'))
-    potion_bottles: CSV = read_csv(
+    potion_bottles: CSV = CSV.from_file(
         Path('gm4_zauber_cauldrons', 'raw', 'potion_bottles.csv'))
     potion_lores: Any = read_json(
         Path('gm4_zauber_cauldrons', 'raw', 'potion_lores.json'))
-    weather_modifiers: CSV = read_csv(
+    weather_modifiers: CSV = CSV.from_file(
         Path('gm4_zauber_cauldrons', 'raw', 'weather_modifiers.csv'))
 
     # generate files
