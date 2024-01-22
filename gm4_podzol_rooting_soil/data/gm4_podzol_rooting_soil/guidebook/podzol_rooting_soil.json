@@ -1,0 +1,43 @@
+{
+  "id": "podzol_rooting_soil",
+  "name": "Podzol Rooting Soil",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:spruce_sapling",
+    "nbt": "{CustomModelData:3420005}"
+  },
+  "criteria": {
+    "obtain_sapling": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:saplings"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_sapling"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.podzol_rooting_soil.description",
+            "fallback": "Saplings dropped on podzol will replant themselves over time."
+          }
+        ]
+      ]
+    }
+  ]
+}

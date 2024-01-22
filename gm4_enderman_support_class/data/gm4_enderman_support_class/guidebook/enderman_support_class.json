@@ -1,0 +1,71 @@
+{
+  "id": "enderman_support_class",
+  "name": "Enderman Support Class",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:player_head",
+    "nbt": "{CustomModelData:3420059,SkullOwner:\"MHF_Enderman\"}"
+  },
+  "criteria": {
+    "encounter_enderman": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:enderman_support_class": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.enderman_support_class.description",
+            "fallback": "Endermen will buff nearby hostile mobs, giving them extra abilities.\n\nSome mobs get potion effects, while other mobs give effects when nearby."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "buffs",
+      "enable": [],
+      "requirements": [
+        [
+          "encounter_enderman"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.enderman_support_class.buffs",
+            "fallback": "- Creepers get Regeneration II\n- Cave Spiders get Jump Boost II\n- Silverfish get Resistance II"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.enderman_support_class.buffs_1",
+            "fallback": "- Spiders get Jump Boost I\n-Zombies get Speed II\n-Skeletons give Weakness II\n- Shulkers give Blindness"
+          }
+        ]
+      ]
+    }
+  ]
+}

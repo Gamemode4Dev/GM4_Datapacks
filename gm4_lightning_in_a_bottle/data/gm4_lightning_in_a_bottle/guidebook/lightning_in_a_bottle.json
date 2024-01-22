@@ -1,0 +1,136 @@
+{
+  "id": "lightning_in_a_bottle",
+  "name": "Lightning in a Bottle",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:lightning_rod",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "lightning_strike": {
+      "trigger": "minecraft:lightning_strike",
+      "conditions": {
+        "lightning": {
+          "distance": {
+            "absolute": {
+              "min": 0,
+              "max": 64
+            }
+          }
+        }
+      }
+    },
+    "obtain_lightning_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:lightning_rod"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_thick_potion": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:potion"
+            ],
+            "potion": "minecraft:thick"
+          }
+        ]
+      }
+    },
+    "obtain_lightning_bottle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:potion",
+              "minecraft:splash_potion",
+              "minecraft:lingering_potion"
+            ],
+            "nbt": "{gm4_lightning_in_a_bottle:1b}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "lightning_strike"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.lightning_in_a_bottle.description",
+            "fallback": "Lightning can be absorbed into a thick potion when struck by lightning.\n\nPillagers, evokers, purpur, and prismarine can amplify or animate into new mobs when struck by lightning."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.lightning_in_a_bottle.conversions",
+            "fallback": "Pillagers can be amplified into Evokers.\nEvokers can be amplified into Illusioners.\n\nPurpur Blocks can be animated into Shulkers.\nPrismarine Bricks can be animated into Guardians."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "obtaining",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_lightning_rod"
+        ],
+        [
+          "obtain_thick_potion"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.lightning_in_a_bottle.obtaining",
+            "fallback": "To harness lightning, place a lightning rod attached to the top or bottom of a brewing stand.\n\nWhen the rod is struck, any thick potions inside the brewing stand will be converted into bottles of lightning."
+          }
+        ]
+      ],
+      "prerequisites": [
+        "description"
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_lightning_bottle"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.lightning_in_a_bottle.usage",
+            "fallback": "Splash and Lingering variants can be brewed as normal.\n\nWhen a bottle of lightning is drank or thrown, it will release a bolt of lightning!"
+          }
+        ]
+      ],
+      "grants": [
+        "description",
+        "obtaining"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "id": "dangerous_dungeons",
+  "name": "Dangerous Dungeons",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:spawner",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "enter_badlands_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "location": {
+                    "structure": "gm4_dangerous_dungeons:badlands/upper"
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "location": {
+                    "structure": "gm4_dangerous_dungeons:badlands/lower"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "enter_deep_slate_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:deep_slate"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_desert_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_lush_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:lush"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_ocean_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "location": {
+                    "structure": "gm4_dangerous_dungeons:ocean/default"
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "location": {
+                    "structure": "gm4_dangerous_dungeons:ocean/surface"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "enter_snowy_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "gm4_dangerous_dungeons:snowy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_stone_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "location": {
+                    "structure": "gm4_dangerous_dungeons:stone/default"
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "location": {
+                    "structure": "gm4_dangerous_dungeons:stone/ocean"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "enter_badlands_dungeon",
+          "enter_deep_slate_dungeon",
+          "enter_desert_dungeon",
+          "enter_lush_dungeon",
+          "enter_ocean_dungeon",
+          "enter_snowy_dungeon",
+          "enter_stone_dungeon"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.dangerous_dungeons.description",
+            "fallback": "Extra dungeons can be found in cave systems.\n\nThese dungeons contain rare loot and special spawners."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.dangerous_dungeons.locations",
+            "fallback": "Stone and deepslate dungeons can be found in most biomes.\n\nThe Badlands, Desert, Lush, Ocean, and Snowy biomes have special dungeons that match the terrain."
+          }
+        ]
+      ]
+    }
+  ]
+}

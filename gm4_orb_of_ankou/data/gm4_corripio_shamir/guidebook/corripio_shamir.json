@@ -1,0 +1,69 @@
+{
+  "id": "corripio_shamir",
+  "name": "Corripio Shamir",
+  "module_type": "expansion",
+  "load_check": "orb_of_ankou",
+  "base_module": "metallurgy",
+  "icon": {
+    "item": "minecraft:anvil",
+    "nbt": "{CustomModelData:3420116}"
+  },
+  "criteria": {
+    "obtain_corripio_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'corripio'}}"
+          }
+        ]
+      }
+    },
+    "obtain_corripio_weapon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'corripio'}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.corripio_shamir.description",
+            "fallback": "Corripio extracts soul essence drops from mobs."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_corripio_shamir",
+          "obtain_corripio_weapon"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.corripio_shamir.usage",
+            "fallback": "The Corripio Shamir is found on Bismuth Bands. It can be placed onto swords.\n\nKilling mobs will cause Soul Essences to drop very rarely. The drop rates are increased with the Looting enchantment."
+          }
+        ]
+      ]
+    }
+  ]
+}

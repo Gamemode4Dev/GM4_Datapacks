@@ -1,0 +1,435 @@
+{
+  "id": "particles_pack",
+  "name": "Particles Pack",
+  "module_type": "expansion",
+  "base_module": "better_armour_stands",
+  "icon": {
+    "item": "minecraft:armor_stand",
+    "nbt": "{CustomModelData:3420004}"
+  },
+  "criteria": {
+    "modify_armor_stand": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:better_armour_stands": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "modify_armor_stand"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.particles_pack.description",
+            "fallback": "The following codes will turn the armour stand into an invisible particle emitter:"
+          },
+          {
+            "text": "\n\n- "
+          },
+          {
+            "text": "autumn",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "autumn"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "blossom",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "blossom"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "spring",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "spring"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "winter",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "winter"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "barrier",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "barrier"
+            }
+          }
+        ],
+        [
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "bubbles",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "bubbles"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "cloud",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "cloud"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "drip",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "drip"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "enchant",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "enchant"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "ender",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "ender"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "fiesta",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "fiesta"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "fireflies",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "fireflies"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "flame",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "flame"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "growing",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "growing"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "heart",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "heart"
+            }
+          }
+        ],
+        [
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "lava",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "lava"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "note",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "note"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
+            "text": "ash",
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
+                  "fallback": "Click to copy",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            "clickEvent": {
+              "action": "copy_to_clipboard",
+              "value": "ash"
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}

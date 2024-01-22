@@ -1,0 +1,151 @@
+{
+  "id": "desire_lines",
+  "name": "Desire Lines",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:coarse_dirt",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "eroded_land": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "gm4_dl_affcoarse"
+            },
+            "range": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.desire_lines.description",
+            "fallback": "Walking or sprinting over grass and dirt will trample blocks.\n\nGrass blocks will trample into dirt and dirt into coarse dirt."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "trampling_foliage",
+      "enable": [
+        {
+          "id": "gm4_boots_of_ostara",
+          "load": -1
+        },
+        {
+          "id": "gm4_metallurgy",
+          "load": -1
+        }
+      ],
+      "requirements": [
+        [
+          "eroded_land"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.desire_lines.effects",
+            "fallback": "Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "trampling_foliage-boots_of_ostara",
+      "enable": [
+        {
+          "id": "gm4_boots_of_ostara",
+          "load": 1
+        },
+        {
+          "id": "gm4_metallurgy",
+          "load": -1
+        }
+      ],
+      "requirements": [
+        [
+          "eroded_land"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.desire_lines.effects_and_boots_of_ostara",
+            "fallback": "Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\n\nThe Boots of Ostara can prevent desire lines."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "trampling_foliage-metallurgy",
+      "enable": [
+        {
+          "id": "gm4_boots_of_ostara",
+          "load": -1
+        },
+        {
+          "id": "gm4_metallurgy",
+          "load": 1
+        }
+      ],
+      "requirements": [
+        [
+          "eroded_land"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.desire_lines.effects_and_celaro",
+            "fallback": "Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\n\nBoots with the Celaro Shamir can prevent desire lines"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "trampling_foliage-boots_of_ostara-metallurgy",
+      "enable": [
+        {
+          "id": "gm4_boots_of_ostara",
+          "load": 1
+        },
+        {
+          "id": "gm4_metallurgy",
+          "load": 1
+        }
+      ],
+      "requirements": [
+        [
+          "eroded_land"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.desire_lines.effects_and_boots_of_ostara_and_celaro",
+            "fallback": "Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\n\nBoots with the Celaro Shamir, or normal Boots of Ostara can prevent desire lines."
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -5,7 +5,6 @@ scoreboard players set tower_structures gm4_modules 1
 team add gm4_hide_name
 team modify gm4_hide_name nametagVisibility never
 
-# guidebook
 
 
 #$moduleUpdateList

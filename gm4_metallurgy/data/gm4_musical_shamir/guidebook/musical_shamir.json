@@ -1,0 +1,75 @@
+{
+  "id": "musical_shamir",
+  "name": "Musical Shamir",
+  "module_type": "expansion",
+  "load_check": "metallurgy",
+  "base_module": "metallurgy",
+  "icon": {
+    "item": "minecraft:anvil",
+    "nbt": "{CustomModelData:3420108}"
+  },
+  "criteria": {
+    "obtain_musical_shamir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'musical'}}"
+          }
+        ]
+      }
+    },
+    "obtain_musical_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'musical'}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.musical_shamir.description",
+            "fallback": "Musical modifies strength and speed based on consecutive mob kills."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_musical_shamir",
+          "obtain_musical_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.musical_shamir.usage",
+            "fallback": "The Musical Shamir is found on Barimium Bands. It can be placed onto swords.\n\nWhen killing mobs, music is played and Slowness and Strength I are granted."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.musical_shamir.usage_1",
+            "fallback": "After many kills, the music will become darker, and Speed and Strength III are granted instead."
+          }
+        ]
+      ]
+    }
+  ]
+}

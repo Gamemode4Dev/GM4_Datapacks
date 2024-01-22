@@ -1,0 +1,33 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:firework_star",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:{{custom_model_data}},HideFlags:34,Explosion:{Colors:[I;{{custom_potion_color}}]}}"
+                        },
+                        {
+                            "function": "minecraft:copy_nbt",
+                            "source": {
+                                "type": "minecraft:storage",
+                                "source": "gm4_zauber_cauldrons:temp/item/crystal"
+                            },
+                            "ops": [
+                                {
+                                    "source": "Item.tag",
+                                    "target": "{}",
+                                    "op": "merge"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

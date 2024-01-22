@@ -1,0 +1,45 @@
+{
+  "id": "dripleaf_launchers",
+  "name": "Dripleaf Launchers",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:big_dripleaf",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_dripleaf": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:big_dripleaf"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_dripleaf"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.dripleaf_launchers.description",
+            "fallback": "Sending a redstone signal to a big dripleaf with partial tilt will launch anyone on it into the air."
+          }
+        ]
+      ]
+    }
+  ]
+}

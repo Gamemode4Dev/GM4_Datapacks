@@ -1,0 +1,215 @@
+{
+  "id": "scuba_gear",
+  "name": "SCUBA Gear",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:horn_coral",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_scute": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:scute"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_water_breathing": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:potion"
+            ],
+            "potion": "minecraft:water_breathing"
+          }
+        ]
+      }
+    },
+    "obtain_turtle_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:turtle_helmet"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_scuba_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "nbt": "{gm4_scuba_gear:{item:\"helmet\"}}"
+          }
+        ]
+      }
+    },
+    "obtain_scuba_tank": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:golden_chestplate"
+            ],
+            "nbt": "{gm4_scuba_gear:{item:\"tank\"}}"
+          }
+        ]
+      }
+    },
+    "obtain_flippers": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:leather_boots"
+            ],
+            "nbt": "{gm4_scuba_gear:{item:\"flippers\"}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.scuba_gear.description",
+            "fallback": "SCUBA Gear can be crafted in a Custom Crafter to aid in ocean travel.\n\nScutes and gold are main components for each piece."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "crafting_flippers",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_scute"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.scuba_gear.crafting_flippers",
+            "fallback": "Flippers can be crafted with the following recipe:"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_scuba_gear:flippers"
+          }
+        ] 
+      ]
+    },
+    {
+      "name": "crafting_scuba_helmet",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_turtle_helmet"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.scuba_gear.crafting_scuba_helmet",
+            "fallback": "The SCUBA Helmet can be crafted with the following recipe:"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_scuba_gear:scuba_helmet"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "crafting_scuba_tank",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_scute"
+        ],
+        [
+          "obtain_water_breathing"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.scuba_gear.crafting_scuba_tank",
+            "fallback": "The SCUBA Tank can be crafted with the following recipe:"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_scuba_gear:scuba_tank"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.scuba_gear.scuba_tank_extended",
+            "fallback": "An extended water breathing potion can be used to craft the tank, but it won't provide any extra benefits.\n\nA SCUBA tank and helmet must be used in conjunction."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage_flippers",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_flippers"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.scuba_gear.usage_flippers",
+            "fallback": "Flippers allow the user to swim much faster, but land traversal is greatly slowed."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage_scuba_tank",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_scuba_helmet",
+          "obtain_scuba_tank"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.scuba_gear.usage_scuba_tank",
+            "fallback": "Wearing both the scuba tank and helmet will grant 4 minutes of Conduit Power when underwater."
+          }
+        ]
+      ]
+    }
+  ]
+}

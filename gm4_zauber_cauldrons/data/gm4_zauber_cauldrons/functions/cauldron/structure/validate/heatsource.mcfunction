@@ -1,12 +1,12 @@
 # @s = zauber cauldron
-# at @s
+# at @s align xyz
 # run from cauldron/structure/validate/liquid
 
 # analyze
 function gm4_zauber_cauldrons:cauldron/structure/analyze/heatsource
 
 # enable cauldron for crafting
-execute if score $has_heatsource gm4_zc_data matches 1 unless score $has_lava gm4_zc_data matches 1 align xyz run function gm4_zauber_cauldrons:cauldron/structure/valid
+execute if score $has_heatsource gm4_zc_data matches 1 unless score $has_lava gm4_zc_data matches 1 run function gm4_zauber_cauldrons:cauldron/structure/valid
 
 # reset fake players
 scoreboard players reset $has_heatsource gm4_zc_data

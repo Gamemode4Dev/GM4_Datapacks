@@ -6,6 +6,7 @@ data_pack:
   load: .
 
 pipeline:
+  - generate_recipes
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_custom_crafters
 

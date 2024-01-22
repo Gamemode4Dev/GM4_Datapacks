@@ -1,0 +1,103 @@
+{
+  "id": "mob_curing",
+  "name": "Mob Curing",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:golden_apple",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_splash_potion": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:splash_potion"
+            ]
+          }
+        ]
+      }
+    },
+    "find_potion_cleric": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:villager",
+              "type_specific": {
+                "type": "villager",
+                "variant": "minecraft:plains"
+              },
+              "nbt": "{CustomName:'{\"translate\":\"entity.gm4.potion_cleric\",\"fallback\":\"Potion Cleric§\"}'}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.mob_curing.description",
+            "fallback": "Similar to Zombie curing, some mobs can be reverted to previous forms.\n\nThe curing process requires one to splash the mob with a potion and drop an item at its feet."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "conversions",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_splash_potion"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.mob_curing.conversions",
+            "fallback": "Zomb. Piglin -> Pig\n - Swiftness\n - Golden Carrot\n\nZomb. Piglin -> Piglin\n  OR Zoglin -> Hoglin\n - Weakness\n - Golden Carrot\n\nWitch -> Potion Cleric\n - Weakness\n - Golden Apple"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.mob_curing.conversions_1",
+            "fallback": "Evoker -> Pillager\n - Slowness IV\n - Crossbow\n\nIllusioner -> Evoker\n - Swiftness\n - Totem of Undying\n\nCow -> Mooshroom\n - Slowness\n - Red Mushroom\n - Brown Mushroom"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "potion_cleric",
+      "enable": [],
+      "requirements": [
+        [
+          "find_potion_cleric"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.mob_curing.potion_cleric",
+            "fallback": "The Potion Cleric will sell various potions for emeralds. Each potion trade is randomized starting from 3 emeralds, up to 13 emeralds.\n\nThe curer will be rewarded temporarily with some discounted potion prices."
+          }
+        ]
+      ],
+      "grants": [
+        "conversions"
+      ]
+    }
+  ]
+}

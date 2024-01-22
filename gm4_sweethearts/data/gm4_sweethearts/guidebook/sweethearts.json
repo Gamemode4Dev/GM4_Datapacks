@@ -1,0 +1,43 @@
+{
+  "id": "sweethearts",
+  "name": "Sweethearts",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:poppy",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:small_flowers"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_flower"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.sweethearts.description",
+            "fallback": "Sneaking while holding a small flower will transfer health to a nearby ally in need.\n\nAll small flowers except wither roses work."
+          }
+        ]
+      ]
+    }
+  ]
+}

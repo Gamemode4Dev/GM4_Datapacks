@@ -8,7 +8,9 @@
                         "condition": "minecraft:entity_scores",
                         "entity": "this",
                         "scores": {
-                            "gm4_animi_leave": 1
+                            "gm4_animi_leave": {
+                                "min": 1
+                            }
                         }
                     }
                 ]

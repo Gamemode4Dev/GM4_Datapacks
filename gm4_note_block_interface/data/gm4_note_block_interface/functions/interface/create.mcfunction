@@ -34,6 +34,3 @@ execute if block ~ ~ ~ note_block[note=21] run summon area_effect_cloud ~ ~ ~ {D
 execute if block ~ ~ ~ note_block[note=22] run summon area_effect_cloud ~ ~ ~ {Duration:20,Tags:["gm4_nbi_display"],CustomNameVisible:1,CustomName:'{"text":"E"}'}
 execute if block ~ ~ ~ note_block[note=23] run summon area_effect_cloud ~ ~ ~ {Duration:20,Tags:["gm4_nbi_display"],CustomNameVisible:1,CustomName:'{"text":"F"}'}
 execute if block ~ ~ ~ note_block[note=24] run summon area_effect_cloud ~ ~ ~ {Duration:20,Tags:["gm4_nbi_display"],CustomNameVisible:1,CustomName:'{"text":"F♯"}'}
-
-# guidebook unlock page 0
-execute if score gm4_guidebook load.status matches 1 run advancement grant @s only gm4_guidebook:note_block_interface/page_0

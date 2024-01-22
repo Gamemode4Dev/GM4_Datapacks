@@ -1,0 +1,213 @@
+{
+    "instant_damage": [
+        {
+            "translate": "potion.withAmplifier",
+            "with": [
+                {
+                    "translate": "effect.minecraft.instant_damage"
+                },
+                {
+                    "translate": "potion.potency.1"
+                }
+            ],
+            "color": "red",
+            "italic": false
+        }
+    ],
+    "instant_health": [
+        [
+            {
+                "translate": "potion.withAmplifier",
+                "with": [
+                    {
+                        "translate": "effect.minecraft.instant_health"
+                    },
+                    {
+                        "translate": "potion.potency.1"
+                    }
+                ],
+                "color": "blue",
+                "italic": false
+            }
+        ],
+        [
+            {
+                "translate": "potion.withAmplifier",
+                "with": [
+                    {
+                        "translate": "effect.minecraft.nausea"
+                    },
+                    {
+                        "translate": "potion.potency.0"
+                    }
+                ],
+                "color": "red",
+                "italic": false
+            }
+        ]
+    ],
+    "jump_boost": [
+        [
+            {
+                "translate": "potion.withAmplifier",
+                "with": [
+                    {
+                        "translate": "effect.minecraft.jump_boost"
+                    },
+                    {
+                        "translate": "potion.potency.1"
+                    }
+                ],
+                "color": "blue",
+                "italic": false
+            }
+        ]
+    ],
+    "poison": [
+        [
+            {
+                "translate": "potion.withAmplifier",
+                "with": [
+                    {
+                        "translate": "effect.minecraft.poison"
+                    },
+                    {
+                        "translate": "potion.potency.1"
+                    }
+                ],
+                "color": "red",
+                "italic": false
+            }
+        ]
+    ],
+    "regeneration": [
+        [
+            {
+                "translate": "potion.withAmplifier",
+                "with": [
+                    {
+                        "translate": "effect.minecraft.regeneration"
+                    },
+                    {
+                        "translate": "potion.potency.1"
+                    }
+                ],
+                "color": "blue",
+                "italic": false
+            }
+        ]
+    ],
+    "speed": [
+        [
+            {
+                "translate": "potion.withAmplifier",
+                "with": [
+                    {
+                        "translate": "effect.minecraft.speed"
+                    },
+                    {
+                        "translate": "potion.potency.1"
+                    }
+                ],
+                "color": "blue",
+                "italic": false
+            }
+        ],
+        [
+            {
+                "translate": "potion.withAmplifier",
+                "with": [
+                    {
+                        "translate": "effect.minecraft.weakness"
+                    },
+                    {
+                        "translate": "potion.potency.0"
+                    }
+                ],
+                "color": "red",
+                "italic": false
+            }
+        ],
+        {
+            "text": ""
+        },
+        {
+            "translate": "potion.whenDrank",
+            "color": "dark_purple",
+            "italic": false
+        },
+        {
+            "translate": "attribute.modifier.plus.1",
+            "with": [
+                "40",
+                {
+                    "translate": "attribute.name.generic.movement_speed"
+                }
+            ],
+            "color": "blue",
+            "italic": false
+        },
+        {
+            "translate": "attribute.modifier.take.0",
+            "with": [
+                "4",
+                {
+                    "translate": "attribute.name.generic.attack_damage"
+                }
+            ],
+            "color": "red",
+            "italic": false
+        }
+    ],
+    "strength": [
+        [
+            {
+                "translate": "potion.withAmplifier",
+                "with": [
+                    {
+                        "translate": "effect.minecraft.strength"
+                    },
+                    {
+                        "translate": "potion.potency.1"
+                    }
+                ],
+                "color": "blue",
+                "italic": false
+            }
+        ],
+        [
+            {
+                "translate": "potion.withAmplifier",
+                "with": [
+                    {
+                        "translate": "effect.minecraft.fire_resistance"
+                    },
+                    {
+                        "translate": "potion.potency.0"
+                    }
+                ],
+                "color": "blue",
+                "italic": false
+            }
+        ],
+        {
+            "text": ""
+        },
+        {
+            "translate": "potion.whenDrank",
+            "color": "dark_purple",
+            "italic": false
+        },
+        {
+            "translate": "attribute.modifier.plus.0",
+            "with": [
+                "6",
+                {
+                    "translate": "attribute.name.generic.attack_damage"
+                }
+            ],
+            "color": "blue",
+            "italic": false
+        }
+    ]
+}

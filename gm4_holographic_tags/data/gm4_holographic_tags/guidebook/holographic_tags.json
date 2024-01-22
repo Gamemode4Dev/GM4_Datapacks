@@ -1,0 +1,84 @@
+{
+  "id": "holographic_tags",
+  "name": "Holographic Tags",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:name_tag",
+    "nbt": "{CustomModelData:3420002}"
+  },
+  "criteria": {
+    "obtain_name_tag": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:name_tag"
+            ]
+          }
+        ]
+      }
+    },
+    "create_holographic_tag": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "gm4:holographic_tags": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "creation",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_name_tag"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.holographic_tags.description",
+            "fallback": "Putting a renamed name tag in an item frame will create floating textbox.\n\nTo remove the hologram, place an item frame in the original position."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "colors",
+      "enable": [],
+      "requirements": [
+        [
+          "create_holographic_tag"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.holographic_tags.colors",
+            "fallback": "Placing the item frame on a wool block will color the hologram."
+          }
+        ]
+      ],
+      "grants": [
+        "creation"
+      ]
+    }
+  ]
+}

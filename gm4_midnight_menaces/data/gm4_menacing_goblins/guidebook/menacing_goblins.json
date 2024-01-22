@@ -1,0 +1,56 @@
+{
+  "id": "menacing_goblins",
+  "name": "Menacing Goblins",
+  "module_type": "expansion",
+  "load_check": "midnight_menaces",
+  "base_module": "mysterious_midnights",
+  "icon": {
+    "item": "minecraft:carved_pumpkin",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "fight_goblin": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:zombie",
+              "nbt": "{Tags:['gm4_goblin']}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "fight_goblin"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.menacing_goblins.description",
+            "fallback": "During a Menacing Goblins event, golden sword wielding goblins will spawn.\n\nThese goblins have more health than normal zombies and can track enemies from a far distance."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.menacing_goblins.behavior",
+            "fallback": "Goblins wear a pumpkin with Thorns III.\n\nGoblins will steal diamonds, iron ingots, and gold ingots when nearby.\n\nWhen killed, they will drop most of the items they stole, along with some rotten flesh, iron nuggets, and golden nuggets."
+          }
+        ]
+      ]
+    }
+  ]
+}

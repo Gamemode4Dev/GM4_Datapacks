@@ -1,0 +1,1727 @@
+{
+  "id": "combat_expanded",
+  "name": "Combat Expanded",
+  "module_type": "module",
+  "icon": {
+    "item": "minecraft:netherite_sword",
+    "nbt": "{CustomModelData:3420001}"
+  },
+  "criteria": {
+    "kill_hostile": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "minecraft:adventure/kill_a_mob": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_burned": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:mob/modifier/burned"
+          }
+        ]
+      }
+    },
+    "enter_dark": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:mob/modifier/dark"
+          }
+        ]
+      }
+    },
+    "enter_deep": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:mob/modifier/deep"
+          }
+        ]
+      }
+    },
+    "enter_flowering": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:mob/modifier/flowering"
+          }
+        ]
+      }
+    },
+    "enter_growth": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:mob/modifier/growth"
+          }
+        ]
+      }
+    },
+    "enter_lush_caves": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:mob/modifier/lush_caves"
+          }
+        ]
+      }
+    },
+    "enter_mountainous": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:mob/modifier/mountainous"
+          }
+        ]
+      }
+    },
+    "enter_reef": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:mob/modifier/reef"
+          }
+        ]
+      }
+    },
+    "enter_snowy": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:mob/modifier/snowy"
+          }
+        ]
+      }
+    },
+    "enter_the_end": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:mob/modifier/the_end"
+          }
+        ]
+      }
+    },
+    "enter_toxic": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded:mob/modifier/toxic"
+          }
+        ]
+      }
+    },
+    "obtain_unidentified_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{gm4_combat_expanded:{identified:0}}"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_hostile"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.description",
+            "fallback": "Mobs get stronger over time, based on each adventurer.\n\nMobs will spawn with higher health, damage, movement speed and with better armour and weapons."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.section.biome_modifiers",
+            "fallback": "Area Modifiers",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.biome_modifiers",
+            "fallback": "Mobs spawned in different areas have special modifiers.\n\nSome areas and biomes spawn different mobs than usual."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "dark_modifier",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_hostile"
+        ],
+        [
+          "enter_dark"
+        ]
+      ],
+      "pages": [
+        [
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.dark_modifier",
+            "fallback": "Mobs spawned in %1$s areas are slightly stronger.\n\nCreepers have a higher blast radius and mobs don't drop their weapons and armour as often.",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.combat_expanded.dark",
+                "fallback": "dark",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    {
+                      "translate": "text.gm4.guidebook.combat_expanded.dark_areas",
+                      "fallback": "Light Level 0, except in %1$s",
+                      "with": [
+                        {
+                          "translate": "biome.minecraft.lush_caves"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "burned_modifier",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_hostile"
+        ],
+        [
+          "enter_burned"
+        ]
+      ],
+      "pages": [
+        [
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.burned_modifier",
+            "fallback": "Mobs spawned in %1$s areas are weaker, but faster.\n\nHusks swarms can be found.\n\nMore mobs carry fire aspect and flame weapons.",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.combat_expanded.burned",
+                "fallback": "burned",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.desert"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.savanna_plateau"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.wooded_badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.windswept_savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.eroded_badlands"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "deep_modifier",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_hostile"
+        ],
+        [
+          "enter_deep"
+        ]
+      ],
+      "pages": [
+        [
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.burned_modifier",
+            "fallback": "Mobs spawned in %1$s are more tougher to kill.\n\nDrowneds are more powerful as well.",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.combat_expanded.deep",
+                "fallback": "deep oceans",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.deep_lukewarm_ocean"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.deep_ocean"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.deep_cold_ocean"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.deep_frozen_ocean"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "flowering_modifier",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_hostile"
+        ],
+        [
+          "enter_flowering"
+        ]
+      ],
+      "pages": [
+        [
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.flowering_modifier",
+            "fallback": "Zombies spawned in %1$s areas have less health, but can respawn when killed.\n\nSlimes are larger and spawn more often.",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.combat_expanded.flowering",
+                "fallback": "flowering",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.sunflower_plains"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.flower_forest"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.lush_caves"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.cherry_grove"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "growth_modifier",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_hostile"
+        ],
+        [
+          "enter_growth"
+        ]
+      ],
+      "pages": [
+        [
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.growth_modifier",
+            "fallback": "Mobs spawned in %1$s areas are weaker, but spawn in groups.\n\nSkeletons carry melee weapons.\n\nMobs can be found wearing projectile protection gear.",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.combat_expanded.growth",
+                "fallback": "growth",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.taiga"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.old_growth_pine_taiga"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.old_growth_spruce_taiga"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.dark_forest"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.snowy_taiga"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.grove"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.mangrove_swamp"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "mountainous_modifier",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_hostile"
+        ],
+        [
+          "enter_mountainous"
+        ]
+      ],
+      "pages": [
+        [
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.mountainous_modifier",
+            "fallback": "Mobs spawned in %1$s areas are stronger, but more sparse.\n\nMore mobs carry knockback and punch weapons.",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.combat_expanded.mountainous",
+                "fallback": "mountainous",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.windswept_savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.eroded_badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.cherry_grove"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.windswept_hills"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.windswept_gravelly_hills"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.windswept_forest"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.stony_shore"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.meadow"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.stony_peaks"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.snowy_slopes"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.jagged_peaks"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.frozen_peaks"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "reef_modifier",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_hostile"
+        ],
+        [
+          "enter_reef"
+        ]
+      ],
+      "pages": [
+        [
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.burned_modifier",
+            "fallback": "Drowneds spawned in %1$s are much more powerful and more frequently carry tridents.",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.combat_expanded.reef",
+                "fallback": "warm oceans",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.warm_ocean"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "snowy_modifier",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_hostile"
+        ],
+        [
+          "enter_snowy"
+        ]
+      ],
+      "pages": [
+        [
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.snowy_modifier",
+            "fallback": "Mobs spawned in %1$s areas are slower, but have more health.\n\nMany attacks will apply slowness.",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.combat_expanded.snowy",
+                "fallback": "snowy",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.snowy_plains"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.ice_spikes"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.snowy_taiga"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.snowy_beach"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.grove"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.snowy_slopes"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.jagged_peaks"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.frozen_peaks"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.frozen_river"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.frozen_ocean"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.deep_frozen_ocean"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "toxic_modifier",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_hostile"
+        ],
+        [
+          "enter_toxic"
+        ]
+      ],
+      "pages": [
+        [
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.toxic_modifier",
+            "fallback": "Mobs spawned in %1$s areas are weaker, but apply weakness, hunger, and poison.\n\nSpider clusters can be found.",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.combat_expanded.toxic",
+                "fallback": "toxic",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.swamp"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.mangrove_swamp"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.jungle"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.bamboo_jungle"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "weapons_and_armor",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_unidentified_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.section.weapons_and_armor",
+            "fallback": "Special Gear",
+            "bold": true
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.drops",
+            "fallback": "Mobs can spawn with special gear.\n\nWeapons have a 20% drop chance and armour has a 8.5% drop chance.\n\nWhen dropped, the gear will need to be identified."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.common_weapons",
+            "fallback": "The following modifiers can be commonly found on weapons:"
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.fire",
+            "fallback": "Flaming %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.fire_modifier",
+                  "fallback": "- Less attack damage, but has Fire Aspect III-V"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.giant",
+            "fallback": "Giant %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.giant_modifier",
+                  "fallback": "- Deals damage to everything within 4 blocks"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.glow",
+            "fallback": "Spectral %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.glow_modifier",
+                  "fallback": "- Makes attacked target glow and wither for 15 seconds"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.heavy",
+            "fallback": "Heavy %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.heavy_modifier",
+                  "fallback": "- Stronger attack damage, but has slower attack speed\n- Knockback II-III"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.poison",
+            "fallback": "Venomous %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.poison_modifier",
+                  "fallback": "- Poisons attacked target"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.quick",
+            "fallback": "Light %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.quick_modifier",
+                  "fallback": "- Less attack damage, but quicker attack speed"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.weakness",
+            "fallback": "Crippling %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.weakness_modifier",
+                  "fallback": "- Temporarily slows and weakens attacked target"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.rare_weapons",
+            "fallback": "The following modifiers can be rarely found on weapons:"
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.chaos",
+            "fallback": "Chaotic %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.chaos_modifier",
+                  "fallback": "- Randomly enchanted every hit"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.chime",
+            "fallback": "Chiming %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.chime_modifier",
+                  "fallback": "- Attacking the same mob deals double damage each hit"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.delay",
+            "fallback": "Resonating %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.delay_modifier",
+                  "fallback": "- Shortly after hitting a target, they will be dealt heavy damage, attacking through armor and effects"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.eat",
+            "fallback": "Yearning %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.eat_modifier",
+                  "fallback": "- Applies hunger to the self when a mob is hit"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.epic_weapons",
+            "fallback": "The following modifiers can be very rarely found on weapons:"
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.heal",
+            "fallback": "Divine %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.heal_modifier",
+                  "fallback": "- Applies healing effect to attacked target"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.wither",
+            "fallback": "Demonic %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.wither_modifier",
+                  "fallback": "- Stronger attack damage, but applies wither to self when a mob is hit"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.equipped_armor",
+            "fallback": "The following armor modifiers are activated while equipped:"
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.husk",
+            "fallback": "Dashing %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.husk_modifier",
+                  "fallback": "- Applies increasing speed and hunger while sprinting\n- Lower movement speed while not sprinting"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.link",
+            "fallback": "Bolstering %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.link_modifier",
+                  "fallback": "- Lower attack damage\n- Applies strength to nearby allies and wolves"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.beacon",
+            "fallback": "Radiant %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.beacon_modifier",
+                  "fallback": "- Constant light around the wearer\n- Crouching will apply glowing and a light pulse"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.canine",
+            "fallback": "Canine %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.canine_modifier",
+                  "fallback": "- Lower attack damage\n- Spawns an invulnerable dog that deals 4 damage\n- Commanding to sit will cause it to lose agro\n- Feeding it will grant strength"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_rare",
+                  "fallback": "Rare",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.horse",
+            "fallback": "Equestrian %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.horse_modifier",
+                  "fallback": "- Mounts receive resistance and speed"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_rare",
+                  "fallback": "Rare",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.challenge",
+            "fallback": "Challengers %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.challenge_modifier",
+                  "fallback": "- Causes the area to be much more difficult in combat\n- Increases difficulty for mob spawns"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_epic",
+                  "fallback": "Epic",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.damage_taken_armor",
+            "fallback": "The following armor modifiers are activated when damage is taken:"
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.retaliate",
+            "fallback": "Retaliatory %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.retaliate_modifier",
+                  "fallback": "- Temporarily gain stronger attack damage and quicker attack speed"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.toxic",
+            "fallback": "Poisonous %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.toxic_modifier",
+                  "fallback": "- Applies poison to the attacker"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.stall",
+            "fallback": "Stalling %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.stall_modifier",
+                  "fallback": "- Applies resistance to all nearby entities when attacked by a mob"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.reactive",
+            "fallback": "Reactive %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.reactive_modifier",
+                  "fallback": "- Gain absorption"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_rare",
+                  "fallback": "Rare",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.vorpal",
+            "fallback": "Vorpal %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.vorpal_modifier",
+                  "fallback": "- Teleport to a random location within 16 blocks\n- Full knockback resistance when equipped"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_epic",
+                  "fallback": "Epic",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.witch",
+            "fallback": "Expelling %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.witch_modifier",
+                  "fallback": "- Clear all effects and stores them in a lingering potion dropped at the wearer's feet"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_epic",
+                  "fallback": "Epic",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.killing_armor",
+            "fallback": "The following armor modifiers are activated when upon killing:"
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.vamp",
+            "fallback": "Vampiric %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.vamp_modifier",
+                  "fallback": "- Regenerate half a heart of health"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.totem",
+            "fallback": "Totemic %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.totem_modifier",
+                  "fallback": "- Summons a totem that gives allies regeneration, resistance, speed, or strength\n- Totems can stack if mobs are kill within its range of 12 blocks"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.fear",
+            "fallback": "Chilling %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.fear_modifier",
+                  "fallback": "- Freezes nearby mobs and can deal freezing damage\n- Lower attack speed when equipped"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.consume",
+            "fallback": "Devouring %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.consume_modifier",
+                  "fallback": "- Permanately increases attack damage\n- Converts to Satiated after fully charged"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_rare",
+                  "fallback": "Rare",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.safe_armor",
+            "fallback": "The following armor modifiers are activated while not in combat:"
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.scout",
+            "fallback": "Scouting %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.scout_modifier",
+                  "fallback": "- Quicker movement speed\n- Lower attack damage when equipped"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.archer",
+            "fallback": "Archery %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.archer_modifier",
+                  "fallback": "- Multiple arrows will be shot from a single arrow shot\n- Lower attack damage when equipped"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.shielded",
+            "fallback": "Shielded %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.shielded_modifier",
+                  "fallback": "- Gain absorption"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.sneak",
+            "fallback": "Sly %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.sneak_modifier",
+                  "fallback": "- Gains invisibility and jump boost"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_rare",
+                  "fallback": "Rare",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.overload",
+            "fallback": "Overwhelming %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.overload_modifier",
+                  "fallback": "- Gain wither\n- Higher attack damage, attack speed, and movement speed while equipped"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_epic",
+                  "fallback": "Epic",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.low_health_armor",
+            "fallback": "The following armor modifiers are activated while below half health:"
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.thorns",
+            "fallback": "Thorny %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.thorns_modifier",
+                  "fallback": "- Thorns enchantment is greatly increased\n- Only works if the armor is already enchanted with thorns"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.second_wind",
+            "fallback": "Rejuvenating %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.second_wind_modifier",
+                  "fallback": "- Grants slow regeneration"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.poised",
+            "fallback": "Fluxed %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.poised_modifier",
+                  "fallback": "- Lower attack damage, but higher armor\n- Has an opposite effect when health is above 50%"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.soothe",
+            "fallback": "Soothing %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.soothe_modifier",
+                  "fallback": "- AOE of healing effect and regeneration\n- Can only happen once per day"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_rare",
+                  "fallback": "Rare",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.high_health_armor",
+            "fallback": "The following armor modifiers are activated while above half health:"
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.poised",
+            "fallback": "Fluxed %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.poised_modifier",
+                  "fallback": "- Higher attack damage, but lower armor\n- Has an opposite effect when health is below 50%"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.half",
+            "fallback": "Fractal %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.half_modifier",
+                  "fallback": "- Damage is dealt until wearer is at half health\n- Resistance III when equipped"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.solid",
+            "fallback": "Solid %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.solid_modifier",
+                  "fallback": "- Higher armor and full knockback resistance\n- Slower movement speed when equipped"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.immune",
+            "fallback": "Vigorous %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.immune_modifier",
+                  "fallback": "- Immune to mining fatigue, poison, weakness, hunger, blindness, nausea, and wither"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_rare",
+                  "fallback": "Rare",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.guardian",
+            "fallback": "Custodians %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.guardian_modifier",
+                  "fallback": "- When nearby allies take damage, 60% will be dealt into the wearer instead of the ally"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_epic",
+                  "fallback": "Epic",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.night_armor",
+            "fallback": "The following armor modifiers are activated during night:"
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.lunar",
+            "fallback": "Lunar %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.lunar_modifier",
+                  "fallback": "- Higher attack damage, attack speed, movement speed, and armor\n- Based on moon phase, with full moon granting highest buffs"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.gloom",
+            "fallback": "Gloomy %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.gloom_modifier",
+                  "fallback": "- AOE of slowness, but wearer is unaffected"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.nocturnal",
+            "fallback": "Nocturnal %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.nocturnal_modifier",
+                  "fallback": "- Higher attack damage, attack speed, and movement speed"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.shadow",
+            "fallback": "Umbral %1$s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.shadow_modifier",
+                  "fallback": "- Resistance while wearer is not hungry\n- Taking damage applies high hunger"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_rare",
+                  "fallback": "Rare",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}
