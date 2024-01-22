@@ -20,6 +20,8 @@ summon trader_llama ~ 0 ~ {Silent:1b,NoGravity:1b,Invulnerable:1b,ChestedHorse:1
 loot replace entity @e[type=trader_llama,limit=1,tag=gm4_new_trade_option] horse.0 loot gm4_balloon_animals:trade_2/lead
 item modify entity @e[type=trader_llama,limit=1,tag=gm4_new_trade_option] horse.0 gm4_balloon_animals:set_lead_data
 
-data modify entity @s CustomName set from entity @e[type=trader_llama,limit=1,tag=gm4_new_trade_option] Items[0].tag.display.Name
+data modify storage gm4_balloon_animals:temp name_json set from entity @e[type=trader_llama,limit=1,tag=gm4_new_trade_option] Items[0].tag.display.Lore[0]
+data modify storage gm4_balloon_animals:temp name_spliced set string storage gm4_balloon_animals:temp name_json 9 -17
+data modify entity @s CustomName set from storage gm4_balloon_animals:temp name_spliced
 
 tag @e[type=trader_llama] remove gm4_new_trade_option

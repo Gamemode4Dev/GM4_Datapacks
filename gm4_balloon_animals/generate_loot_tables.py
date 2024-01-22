@@ -27,15 +27,18 @@ def generate_tables(ctx: Context):
                 },{
                     "function": "minecraft:set_name",
                     "entity": "this",
-                    "name": name
+                    "name":
+                        {
+                            "text": entity,
+                            "italic": False
+                        }
                 },{
                     "function": "minecraft:set_lore",
                     "entity": "this",
                     "lore": [
                         {
-                            "text": entity,
-                            "color": "gray",
-                            "italic": False
+                            "text": name,
+                            "color": "gray"
                         }
                     ]
                 }]
