@@ -91,6 +91,38 @@ jobs:
           directory: release
           branch: release
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1.2.1
+        with:
+          virtualenvs-in-project: true
+
+      - name: Setup cache
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: poetry install
+
+      - name: Build all modules
+        if: github.event_name != 'pull_request'
+        run: poetry run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
+        env:
+          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
