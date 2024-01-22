@@ -118,7 +118,6 @@ jobs:
         run: poetry install
 
       - name: Build all modules
-        if: github.event_name != 'pull_request'
         run: poetry run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
         env:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
