@@ -10,5 +10,8 @@ execute as @e[type=block_display,tag=gm4_ce_beacon] if score @s gm4_ce_id = $pla
 # if the player does not have a beacon create one
 execute unless entity @e[type=block_display,tag=gm4_ce_beacon.process] run function gm4_combat_expanded:armor/modifier/type/beacon/spawn
 
+# check if player is sneaking
+execute store result score $player_sneaking gm4_ce_data if predicate gm4_combat_expanded:technical/crouching
+
 # process the players beacon
 execute as @e[type=block_display,tag=gm4_ce_beacon.process] run function gm4_combat_expanded:armor/modifier/type/beacon/process

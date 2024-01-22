@@ -3,6 +3,9 @@
 # at linked player
 # run from armor/modifier/type/beacon/process
 
+# if glowing emit a flash as well
+execute if entity @s[tag=gm4_ce_beacon.glowing] at @s run particle flash ~ ~ ~ 0 0 0 1 1
+
 execute store result score $offset_x gm4_ce_data run random value -50..0
 execute store result score $offset_y gm4_ce_data run random value -50..-25
 execute store result score $offset_z gm4_ce_data run random value -50..0
