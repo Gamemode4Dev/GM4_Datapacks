@@ -127,7 +127,8 @@ class CSVCell(str):
 
     def to_color_code(self, encoding: str) -> 'CSVCell':
         """
-        Outputs the string contained in this CSVCell formatted as a color code, e.g. #4AA0C7 if 'HEX' is given.
+        Interprets the string contained in this CSVCell as a color code using the given encoding and returns a new CSVCell with that interpretation as its content.
+        E.g. if the CSVCell this function was called on contains '#4AA0C7' and 'CSVCell.DEC' is given as an encoding, a new CSVCell with content '4890823' is returned.
         """
         if encoding == CSVCell.HEX:
             return CSVCell('#' + hex(self.as_integer()).lstrip('0x'))
