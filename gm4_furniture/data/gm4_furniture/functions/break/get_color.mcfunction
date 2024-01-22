@@ -1,3 +1,7 @@
+# get the color of the broken furnitur
+# @s = furniture main interaction entity
+# at @s
+# run from break/process_hit
 
 # find this furniture's item_display and get its color
 scoreboard players operation $check_id gm4_furniture_id = @s gm4_furniture_id

@@ -1,3 +1,7 @@
+# transform color value from decimal to hex
+# @s = furniture main interaction entity
+# at @s
+# run from break/destroy
 
 data modify storage gm4_furniture:temp color_hex set value {}
 
