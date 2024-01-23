@@ -22,6 +22,7 @@ execute if score $placed_block gm4_machine_data matches 0 if data storage gm4_ma
 
 The function `MODULE_NAMESPACE:machine/create` should have the following commands: 
 ```mcfunction
+scoreboard players set $placed_block gm4_machine_data 1
 summon marker ~ ~ ~ {Tags:["gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","IDENTIFIER","ADD ANY EXTRA TAGS"],CustomName:'"PLEASE NAME YOUR MACHINE MARKERS"',<...>}
 ```
 

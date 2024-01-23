@@ -3,6 +3,8 @@
 # located at @s
 # run from gm4_ender_hoppers:machine/verify_place_cart
 
+scoreboard players set $placed_block gm4_machine_data 1
+
 # summon new hopper minecart
 summon hopper_minecart ~ ~ ~ {Tags:["gm4_ender_hopper_minecart_new","gm4_new_machine"],Passengers:[{id:"minecraft:armor_stand",CustomName:'"gm4_ender_hopper_stand"',Tags:["gm4_no_edit","gm4_ender_hopper_stand","gm4_machine_cart","smithed.entity","smithed.strict","gm4_new_machine"],Invisible:1b,Small:1b,Pose:{Head:[180f,0f,0f],RightArm:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1,tag:{CustomModelData:3420002,SkullOwner:"$ender_hopper_display"}}],DisabledSlots:2039583,HandItems:[{id:"minecraft:stone_button",Count:1b,tag:{CustomModelData:3420009}},{}]}]}
 particle large_smoke ~ ~0.5 ~ 0.2 0.2 0.2 0 10
