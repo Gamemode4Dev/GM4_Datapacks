@@ -45,13 +45,13 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: b
 			"gm4.plugins.player_heads",
 			"gm4_guidebook.generate_guidebooks.load_page_data",
 			"gm4_guidebook.generate_guidebooks.load_custom_recipes",
-			"gm4.plugins.module.tests"
+			"gm4.plugins.test.load_tests"
 		] if reload else [
 			"gm4.plugins.output",
 			"gm4.plugins.player_heads",
 			"gm4_guidebook.generate_guidebooks.load_page_data",
 			"gm4_guidebook.generate_guidebooks.load_custom_recipes",
-			"gm4.plugins.module.tests"
+			"gm4.plugins.test.load_tests"
 		],
 		"pipeline": [
 			"gm4.plugins.write_mcmeta"

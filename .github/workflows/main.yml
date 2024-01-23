@@ -118,7 +118,7 @@ jobs:
         run: poetry install
 
       - name: Build all modules
-        run: poetry run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
+        run: poetry run beet -p beet-test.yaml -l ${{ env.LOG_LEVEL }} build
         env:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
@@ -138,7 +138,7 @@ jobs:
       - name: Copy packs to world
         run: |
           mkdir -p world/datapacks
-          cp release/1.20/gm4_*.zip world/datapacks
+          cp out/gm4_*.zip world/datapacks
           rm world/datapacks/gm4_guidebook_*.zip
 
       - name: Run test server
