@@ -13,7 +13,7 @@ A great way to add some variety to your UHC tournaments, or just some spice for 
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Weighted_Armour)
 
 ### Credits
-- Creator: [Sparks](https://twitter.com/SparksTheGamer)
+- Creator: [Sparks](https://twitter.com/SelcouthSparks)
 - Icon Design: Hozz
 
 ---

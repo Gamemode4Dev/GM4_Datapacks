@@ -14,8 +14,8 @@ Tired of the uselessness of bats? Need something to spice up your caving adventu
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Bat_Grenades)
 
 ### Credits
-- Creator: [Sparks](https://twitter.com/SparksTheGamer)
-- Icon Design: [Sparks](https://twitter.com/SparksTheGamer)
+- Creator: [Sparks](https://twitter.com/SelcouthSparks)
+- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

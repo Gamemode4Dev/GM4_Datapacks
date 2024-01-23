@@ -14,7 +14,7 @@ Ever wonder what happens to your player's body after you die? Well wonder no lon
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Undead_Players)
 
 ### Credits
-- Creator: [Sparks](https://twitter.com/SparksTheGamer)
+- Creator: [Sparks](https://twitter.com/SelcouthSparks)
 - Updated by: SunderB
 - Icon Design: Hozz
 

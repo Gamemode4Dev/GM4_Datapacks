@@ -15,7 +15,7 @@ For too long have Squid been defenceless, now it's time for them to fight back! 
 ### Credits
 - Creator: [Energyxxer](https://youtube.com/user/Energyxxer)
 - Updated by: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
-- Icon Design: [Sparks](https://twitter.com/SparksTheGamer)
+- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>
