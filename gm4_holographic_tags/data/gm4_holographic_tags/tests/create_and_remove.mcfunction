@@ -11,6 +11,7 @@ give @s name_tag{display:{Name:'"HelloGamemode4"'}}
 dummy @s use entity @e[type=item_frame,distance=..4,limit=1]
 
 await not entity @e[type=item_frame,distance=..4]
+clear @s written_book
 assert entity @e[type=area_effect_cloud,distance=..4,name=HelloGamemode4]
 
 execute at @s run tp @e[type=item,distance=..4] ~ ~ ~

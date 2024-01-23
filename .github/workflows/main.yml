@@ -139,7 +139,6 @@ jobs:
         run: |
           mkdir -p world/datapacks
           cp out/gm4_*.zip world/datapacks
-          rm world/datapacks/gm4_guidebook.zip
 
       - name: Run test server
         run: |

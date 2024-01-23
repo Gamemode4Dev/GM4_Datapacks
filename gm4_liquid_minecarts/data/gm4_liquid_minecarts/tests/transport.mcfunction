@@ -11,6 +11,7 @@ await block ~2 ~1 ~2 hopper{Items:[{Slot:0b,id:"minecraft:bucket",Count:1b}]}
 await entity @e[tag=gm4_liquid_tank,tag=test_source,tag=gm4_lt_lava,scores={gm4_lt_value=3}]
 
 # place liquid minecart
+clear @s written_book
 loot give @s loot gm4_liquid_minecarts:items/liquid_minecart
 execute at @s run tp @s ~ ~ ~ facing ~1 ~-1.5 ~1
 dummy @s use block ~2 ~1 ~1
