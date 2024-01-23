@@ -117,7 +117,7 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install
 
-      - name: Build all modules
+      - name: Build all modules for tests
         run: poetry run beet -p beet-test.yaml -l ${{ env.LOG_LEVEL }} build
         env:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
@@ -139,7 +139,7 @@ jobs:
         run: |
           mkdir -p world/datapacks
           cp out/gm4_*.zip world/datapacks
-          rm world/datapacks/gm4_guidebook_*.zip
+          rm world/datapacks/gm4_guidebook.zip
 
       - name: Run test server
         run: |
