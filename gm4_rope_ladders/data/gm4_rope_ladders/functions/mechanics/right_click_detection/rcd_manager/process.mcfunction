@@ -1,6 +1,8 @@
 # processes the "right click detection" interaction so that it is despawned when unneeded
 # run from function: gm4_rope_ladders:mechanics/right_click_detection/rcd_manager/loop
 
+scoreboard players set $rcd_found gm4_rol_data 1
+
 # kill rcd if uneeded
 scoreboard players set $killed_rcd gm4_rol_data 0
 execute if score $killed_rcd gm4_rol_data matches 0 store success score $killed_rcd gm4_rol_data unless entity @a[tag=gm4_rol_holding_ladder,distance=..5] run kill @s
