@@ -2,8 +2,6 @@
 # at @p[tag=gm4_bas_track] positioned ~ ~1.6 ~
 # run from tick
 
-scoreboard players set $success gm4_bas_data 1
-
 # keep interaction in front of player
 execute as @e[type=interaction,tag=gm4_bas_detect] if score @s gm4_bas_id = $current gm4_bas_id positioned ~ ~-1 ~ run tp @s ^ ^ ^.5
 

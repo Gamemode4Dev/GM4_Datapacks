@@ -1,8 +1,6 @@
 #@s = band is trying to apply to
 #run from check_item_validity
 
-scoreboard players set new_helious_band gm4_ml_data 1
-
 execute unless score valid_item gm4_ml_data matches 1 store success score valid_item gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:turtle_helmet"}}]
 execute unless score valid_item gm4_ml_data matches 1 store success score valid_item gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:netherite_helmet"}}]
 execute unless score valid_item gm4_ml_data matches 1 store success score valid_item gm4_ml_data if entity @s[nbt={Item:{id:"minecraft:diamond_helmet"}}]

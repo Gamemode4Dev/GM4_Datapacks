@@ -4,8 +4,7 @@
 # run from gm4_zauber_cauldrons:cauldron/liquid/update/level_2/find_cauldron
 
 # check block
-scoreboard players set $found gm4_zc_data 0
-execute align xyz positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ #minecraft:cauldrons align xyz as @e[type=marker,tag=gm4_zauber_cauldron,dx=0,limit=1] run function gm4_zauber_cauldrons:cauldron/liquid/update/level_2/reconstruct_interaction
+execute store success score $found gm4_zc_data align xyz positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ #minecraft:cauldrons align xyz as @e[type=marker,tag=gm4_zauber_cauldron,dx=0,limit=1] run function gm4_zauber_cauldrons:cauldron/liquid/update/level_2/reconstruct_interaction
 
 # runs the loop again
 scoreboard players remove $ray gm4_zc_data 1

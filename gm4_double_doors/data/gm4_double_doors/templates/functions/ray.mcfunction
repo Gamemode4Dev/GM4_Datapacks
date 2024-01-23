@@ -4,8 +4,7 @@
 # run from gm4_double_doors:{{ material_name }}/use_door
 
 # check block
-scoreboard players set $found gm4_double_doors_data 0
-execute align xyz positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ minecraft:{{ material_name }}_door run function gm4_double_doors:{{ material_name }}/door/get_lower_half
+execute store success score $found gm4_double_doors_data align xyz positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ minecraft:{{ material_name }}_door run function gm4_double_doors:{{ material_name }}/door/get_lower_half
 
 # runs the loop again
 scoreboard players remove $ray gm4_double_doors_data 1

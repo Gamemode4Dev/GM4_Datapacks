@@ -3,8 +3,6 @@
 # located at @s
 # run from gm4_smelteries:upgrade_machine_stand
 
-scoreboard players set $smeltery_placed gm4_machine_data 1
-
 data modify storage gm4_smelteries:temp Items set from block ~ ~ ~ Items
 execute align xyz run summon marker ~1.5 ~0.5 ~0.5 {Tags:["gm4_smeltery","gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:'"gm4_smeltery"',Rotation:[-90.0f,0.0f]}
 execute align xyz run summon armor_stand ~1.5 ~0.2 ~0.5 {Small:1,NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,Silent:1,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_smeltery_stand","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],HasVisualFire:1,CustomName:'"gm4_smeltery_stand"',ArmorItems:[{},{},{},{id:"minecraft:iron_block",Count:1b,tag:{CustomModelData:3420002}}],Rotation:[-90.0f,0.0f]}

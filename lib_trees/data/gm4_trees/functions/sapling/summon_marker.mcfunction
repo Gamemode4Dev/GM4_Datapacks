@@ -4,8 +4,6 @@
 # run from gm4_trees:sapling/ray
 # and from gm4_trees:sapling/ray_fuzzy
 
-scoreboard players set $found gm4_tree_data 1
-
 # set up storage to be read from
 data modify storage gm4_trees:temp sapling.type set from entity @s SelectedItem.tag.gm4_trees.item.type
 ## backwards compatibility with old items
