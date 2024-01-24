@@ -20,7 +20,7 @@ execute if predicate gm4_combat_expanded:technical/raining run scoreboard player
 # night & not in dark biome +0-40% based on moon phase
 scoreboard players operation $moon_diff_add gm4_ce_data = $moon gm4_ce_data
 scoreboard players operation $moon_diff_add gm4_ce_data *= #10 gm4_ce_data
-execute unless predicate gm4_combat_expanded:mob/modifier/dark if predicate gm4_combat_expanded:technical/night_time run scoreboard players operation $difficulty_mult gm4_ce_data += $moon gm4_ce_data
+execute unless predicate gm4_combat_expanded:mob/modifier/dark if predicate gm4_combat_expanded:technical/night_time run scoreboard players operation $difficulty_mult gm4_ce_data += $moon_diff_add gm4_ce_data
 # dark biome +30%
 execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard players add $difficulty_mult gm4_ce_data 30
 # mountainous +20%

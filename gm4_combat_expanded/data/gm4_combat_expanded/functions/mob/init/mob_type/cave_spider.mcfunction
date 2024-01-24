@@ -23,7 +23,7 @@ scoreboard players set $mob_toughness.cap gm4_ce_data 0
 
 # | Biome Modifiers
 # mountainous
-effect give @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] jump_boost infinite 1
+effect give @s[predicate=gm4_combat_expanded:mob/modifier/mountainous,predicate=gm4_combat_expanded:technical/chance/spider_speed] speed infinite 0
 # burned
 effect give @s[predicate=gm4_combat_expanded:mob/modifier/burned,predicate=gm4_combat_expanded:technical/chance/spider_fire_resist] fire_resistance infinite 0
 # flowering 

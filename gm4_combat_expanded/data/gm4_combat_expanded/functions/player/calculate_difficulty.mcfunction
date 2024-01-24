@@ -16,7 +16,7 @@ scoreboard players operation $playtime gm4_ce_data *= $death_mult gm4_ce_data
 scoreboard players operation $playtime gm4_ce_data /= #100 gm4_ce_data
 
 # reduce death multiplier
-# every 5 minutes since the last death removes x^2 from death_mult
+# every 5 minutes since the last death is removed from death_mult
 scoreboard players operation @s[scores={gm4_ce_death_mult=1..}] gm4_ce_death_mult -= @s gm4_ce_since_last_death
 scoreboard players reset @s[scores={gm4_ce_death_mult=..0}] gm4_ce_death_mult
 scoreboard players add @s gm4_ce_since_last_death 1

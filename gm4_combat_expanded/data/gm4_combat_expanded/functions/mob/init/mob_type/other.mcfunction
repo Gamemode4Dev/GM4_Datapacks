@@ -4,16 +4,14 @@
 # run from mob/init/initiate
 
 #    List:
+# Blaze
 # Elder Guardian
 # Endermite
 # Evoker
 # Guardian
-# Hoglin
-# Pillager
 # Ravager
 # Shulker
 # Silverfish
-# Vindicator
 # Witch
 # Zoglin
 
