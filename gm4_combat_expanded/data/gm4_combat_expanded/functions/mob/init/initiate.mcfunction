@@ -34,10 +34,11 @@ scoreboard players operation $difficulty_add gm4_ce_data = $difficulty gm4_ce_da
 scoreboard players operation $difficulty_add gm4_ce_data *= $difficulty_mult gm4_ce_data
 scoreboard players operation $difficulty_add gm4_ce_data /= #100 gm4_ce_data
 scoreboard players operation $difficulty gm4_ce_data += $difficulty_add gm4_ce_data
-# apply a flat diff increase and make sure difficulty is at least 0
+# apply a flat diff increase and make sure difficulty is between 0 - 100
 execute store result score $difficulty_flat gm4_ce_data run random value -5..5
 scoreboard players operation $difficulty gm4_ce_data += $difficulty_flat gm4_ce_data
 scoreboard players operation $difficulty gm4_ce_data > #0 gm4_ce_data
+scoreboard players operation $difficulty gm4_ce_data < #100 gm4_ce_data
 
 # reset scoreboard
 scoreboard players reset $mob_extras gm4_ce_data

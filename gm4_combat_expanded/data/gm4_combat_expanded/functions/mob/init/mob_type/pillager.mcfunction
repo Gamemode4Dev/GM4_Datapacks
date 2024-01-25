@@ -42,6 +42,9 @@ execute if score $wave gm4_ce_data matches 4.. run scoreboard players set $mob_a
 execute if score $wave gm4_ce_data matches 5.. store result score $piercing_chance gm4_ce_data run random value 4..8
 execute if score $wave gm4_ce_data matches 5.. if score $piercing_chance gm4_ce_data < $wave gm4_ce_data run enchant @s piercing
 
+# cap difficulty
+scoreboard players operation $difficulty gm4_ce_data < #100 gm4_ce_data
+
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep
 scoreboard players reset $replaced_mob gm4_ce_data

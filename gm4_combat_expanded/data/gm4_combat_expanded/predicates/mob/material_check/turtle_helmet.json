@@ -1,8 +1,21 @@
 [
   {
-    "condition": "minecraft:random_chance",
-    "chance": 0.75
-  },
+    "condition": "minecraft:value_check",
+    "value": {
+      "type": "minecraft:binomial",
+      "n": 1,
+      "p": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$difficulty"
+        },
+        "score": "gm4_ce_data",
+        "scale": 0.0065
+      }
+    },
+    "range": 1
+  },  
   {
     "condition": "minecraft:location_check",
     "predicate": {

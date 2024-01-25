@@ -103,7 +103,7 @@
                       ]
                     }
                   ],
-                  "0:05"
+                  "0:06"
                 ],
                 "color": "blue",
                 "italic": false
@@ -147,7 +147,7 @@
                       ]
                     }
                   ],
-                  "0:05"
+                  "0:10"
                 ],
                 "color": "blue",
                 "italic": false
@@ -179,15 +179,7 @@
                 "fallback": "%s %s",
                 "with": [
                   {
-                    "translate": "potion.withAmplifier",
-                    "with": [
-                      {
-                        "translate": "effect.minecraft.instant_health"
-                      },
-                      {
-                        "translate": "potion.potency.1"
-                      }
-                    ]
+                    "translate": "effect.minecraft.instant_health"
                   },
                   {
                     "translate": "enchantment.minecraft.thorns"

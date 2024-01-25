@@ -20,11 +20,6 @@ scoreboard players set $mob_speed.cap gm4_ce_data 10
 scoreboard players set $mob_armor.cap gm4_ce_data 3
 scoreboard players set $mob_toughness.cap gm4_ce_data 2
 
-# set armor
-loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic
-# set weapon
-loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/skeleton
-
 # | Difficulty Modifiers
 # harming arrow
 execute if entity @s[type=skeleton] store success score $arrow gm4_ce_data run loot replace entity @s[predicate=gm4_combat_expanded:technical/chance/skeleton_harming_arrow,predicate=!gm4_combat_expanded:mob/modifier/growth] weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/skeleton_harming
@@ -34,7 +29,7 @@ execute if entity @s[type=stray] store success score $arrow gm4_ce_data run loot
 # snowy
 execute if entity @s[type=stray,predicate=gm4_combat_expanded:mob/modifier/snowy,predicate=!gm4_combat_expanded:mob/modifier/growth] store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/stray_snowy
 # mountainous
-execute if score $phantoms gm4_ce_data matches 0 if score $nearby_home_bed gm4_ce_data matches 0 if predicate gm4_combat_expanded:technical/chance/spawn_mountain_phantom if block ~ ~35 ~ #gm4:air store success score $mob_extras gm4_ce_data run summon phantom ~ ~35 ~ {Tags:["gm4_ce_extra_mob"]}
+execute if score $phantoms gm4_ce_data matches 0 if score $nearby_home_bed gm4_ce_data matches 0 if predicate gm4_combat_expanded:technical/chance/spawn_mountain_phantom store success score $mob_extras gm4_ce_data run summon phantom ~ ~35 ~ {Tags:["gm4_ce_extra_mob"]}
 # flowering
 execute if predicate gm4_combat_expanded:technical/chance/replace_flowering_skeleton run function gm4_combat_expanded:mob/init/modifier/special/flowering_skeleton
 # toxic
@@ -49,6 +44,11 @@ execute if predicate gm4_combat_expanded:mob/modifier/dark run scoreboard player
 execute if predicate gm4_combat_expanded:mob/modifier/nether/soul_sand_valley run effect give @s fire_resistance infinite 0 true
 # warped forest
 execute if predicate gm4_combat_expanded:mob/modifier/nether/warped_forest run function gm4_combat_expanded:mob/init/modifier/special/warped_forest_skeleton
+
+# set armor
+loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic
+# set weapon
+loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/skeleton
 
 # drop rate for custom arrows
 execute if score $arrow gm4_ce_data matches 1 run data modify entity @s HandDropChances[1] set value 0.25F

@@ -2,7 +2,7 @@
   "condition": "minecraft:value_check",
   "value": {
     "type": "minecraft:binomial",
-    "n": 4,
+    "n": 1,
     "p": {
       "type": "minecraft:score",
       "target": {
@@ -10,7 +10,7 @@
         "name": "$difficulty"
       },
       "score": "gm4_ce_data",
-      "scale": 0.0005
+      "scale": 0.005
     }
   },
   "range": 1

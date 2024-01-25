@@ -31,6 +31,9 @@ scoreboard players operation $difficulty gm4_ce_data += $difficulty_add gm4_ce_d
 execute if score $wave gm4_ce_data matches 4.. run scoreboard players set $mob_health gm4_ce_data 60
 execute if score $wave gm4_ce_data matches 4.. run scoreboard players set $mob_toughness.cap gm4_ce_data 12
 
+# cap difficulty
+scoreboard players operation $difficulty gm4_ce_data < #100 gm4_ce_data
+
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:weapon/axe/iron
 

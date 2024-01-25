@@ -9,8 +9,21 @@
           "name": "gm4_combat_expanded:armor/material/golden/feet",
           "conditions": [
             {
-              "condition": "minecraft:random_chance",
-              "chance": 0.33
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:binomial",
+                "n": 1,
+                "p": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 0.0033
+                }
+              },
+              "range": 1
             }
           ]
         }
@@ -24,8 +37,21 @@
           "name": "gm4_combat_expanded:armor/material/golden/legs",
           "conditions": [
             {
-              "condition": "minecraft:random_chance",
-              "chance": 0.33
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:binomial",
+                "n": 1,
+                "p": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 0.0033
+                }
+              },
+              "range": 1
             }
           ]
         }
@@ -39,8 +65,21 @@
           "name": "gm4_combat_expanded:armor/material/golden/chest",
           "conditions": [
             {
-              "condition": "minecraft:random_chance",
-              "chance": 0.33
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:binomial",
+                "n": 1,
+                "p": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 0.0033
+                }
+              },
+              "range": 1
             }
           ]
         }
@@ -54,8 +93,21 @@
           "name": "gm4_combat_expanded:armor/material/golden/head",
           "conditions": [
             {
-              "condition": "minecraft:random_chance",
-              "chance": 0.33
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:binomial",
+                "n": 1,
+                "p": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 0.0033
+                }
+              },
+              "range": 1
             }
           ]
         }

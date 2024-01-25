@@ -9,5 +9,5 @@ execute store result score $worlddiff gm4_ce_data run difficulty
 execute if score $worlddiff gm4_ce_data matches 2 run effect give @s[tag=!gm4_ce_immune_weakness] weakness 7 0
 execute if score $worlddiff gm4_ce_data matches 3 run effect give @s[tag=!gm4_ce_immune_weakness] weakness 15 0
 
-execute if score $worlddiff gm4_ce_data matches 2 run effect give @s hunger 7 1
-execute if score $worlddiff gm4_ce_data matches 3 run effect give @s hunger 15 1
+execute if score $worlddiff gm4_ce_data matches 2 run effect give @s[tag=!gm4_ce_immune_hunger] hunger 7 1
+execute if score $worlddiff gm4_ce_data matches 3 run effect give @s[tag=!gm4_ce_immune_hunger] hunger 15 1
