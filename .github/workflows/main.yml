@@ -11,7 +11,7 @@ env:
   COMMIT_MSG: ${{ github.event.head_commit.message }}
   TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.20.4/0.15.3/0.11.2/server/jar
   TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/JMCwDuki/fabric-api-0.92.0%2B1.20.4.jar
-  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/2XWs8vDt/packtest-1.6.-beta1-mc1.20.4.jar
+  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/d7EzkPVT/packtest-1.6.-beta2-mc1.20.4.jar
 
 jobs:
   build:
