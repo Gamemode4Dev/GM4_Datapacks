@@ -1,7 +1,7 @@
 {
   "criteria": {
     "place_sign": {
-      "trigger": "minecraft:placed_block",
+      "trigger": "minecraft:block_placed",
       "conditions": {
         "location": [
           {
