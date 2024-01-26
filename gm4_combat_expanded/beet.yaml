@@ -20,7 +20,6 @@ meta:
         - tick
         - main
         - slow_clock
-        - player/submain
     website:
       description: Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
       recommended:
