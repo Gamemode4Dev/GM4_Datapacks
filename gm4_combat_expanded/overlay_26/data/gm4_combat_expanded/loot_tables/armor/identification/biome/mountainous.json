@@ -65,7 +65,7 @@
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/modifier/lightning",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/spark",
                     "weight": 160
                 },
                 {
