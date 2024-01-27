@@ -6,7 +6,7 @@
         "player": [
           {
             "condition": "minecraft:reference",
-            "name": "gm4_combat_expanded:modified_armor/lightning"
+            "name": "gm4_combat_expanded:modified_armor/spark"
           }
         ],
         "damage": {
@@ -25,6 +25,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_combat_expanded:armor/modifier/type/lightning/activate"
+    "function": "gm4_combat_expanded:armor/modifier/type/spark/activate"
   }
 }

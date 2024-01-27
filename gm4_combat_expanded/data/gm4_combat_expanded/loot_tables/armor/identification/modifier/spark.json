@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:lightning}}"
+              "tag": "{gm4_combat_expanded:{modifier:spark}}"
             }
           ]
         }
@@ -58,7 +58,7 @@
           "entity": "this",
           "name": [
             {
-              "translate": "item.gm4.combat_expanded.name.lightning",
+              "translate": "item.gm4.combat_expanded.name.spark",
               "fallback": "Sparking %s",
               "with": [
                 {
