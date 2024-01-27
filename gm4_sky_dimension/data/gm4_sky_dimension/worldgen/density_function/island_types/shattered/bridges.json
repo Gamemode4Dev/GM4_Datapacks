@@ -1,0 +1,79 @@
+{
+  "type": "minecraft:range_choice",
+  "input": "minecraft:y",
+  "min_inclusive": 199,
+  "max_exclusive": 200,
+  "when_in_range": {
+    "type": "minecraft:mul",
+    "argument1": -4,
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": -0.1,
+      "argument2": {
+        "type": "minecraft:abs",
+        "argument": {
+          "type": "minecraft:shifted_noise",
+          "noise": "gm4_sky_dimension:island_types/high",
+          "xz_scale": 7,
+          "y_scale": 7,
+          "shift_x": "minecraft:shift_x",
+          "shift_y": 0,
+          "shift_z": "minecraft:shift_z"
+        }
+      }
+    }
+  },
+  "when_out_of_range": {
+    "type": "minecraft:range_choice",
+    "input": "minecraft:y",
+    "min_inclusive": 191,
+    "max_exclusive": 192,
+    "when_in_range": {
+      "type": "minecraft:mul",
+      "argument1": -4,
+      "argument2": {
+        "type": "minecraft:add",
+        "argument1": -0.08,
+        "argument2": {
+          "type": "minecraft:abs",
+          "argument": {
+            "type": "minecraft:shifted_noise",
+            "noise": "gm4_sky_dimension:island_types/high",
+            "xz_scale": 6,
+            "y_scale": 6,
+            "shift_x": "minecraft:shift_x",
+            "shift_y": 0,
+            "shift_z": "minecraft:shift_z"
+          }
+        }
+      }
+    },
+    "when_out_of_range": {
+      "type": "minecraft:range_choice",
+      "input": "minecraft:y",
+      "min_inclusive": 145,
+      "max_exclusive": 146,
+      "when_in_range": {
+        "type": "minecraft:mul",
+        "argument1": -5,
+        "argument2": {
+          "type": "minecraft:add",
+          "argument1": -0.09,
+          "argument2": {
+            "type": "minecraft:abs",
+            "argument": {
+              "type": "minecraft:shifted_noise",
+              "noise": "gm4_sky_dimension:island_types/high",
+              "xz_scale": 7,
+              "y_scale": 7,
+              "shift_x": "minecraft:shift_x",
+              "shift_y": 0,
+              "shift_z": "minecraft:shift_z"
+            }
+          }
+        }
+      },
+      "when_out_of_range": -1
+    }
+  }
+}

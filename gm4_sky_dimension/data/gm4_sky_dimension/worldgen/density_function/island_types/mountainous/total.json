@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:max",
+  "argument1": {
+    "type": "minecraft:add",
+    "argument1": "gm4_sky_dimension:island_types/mountainous/normal/total",
+    "argument2": {
+      "type": "minecraft:spline",
+      "spline": {
+        "coordinate": {
+          "type": "minecraft:interpolated",
+          "argument": "gm4_sky_dimension:routers/temperature"
+        },
+        "points": [
+          {
+            "location": 0.125,
+            "derivative": 0,
+            "value": 0
+          },
+          {
+            "location": 0.3,
+            "derivative": 0,
+            "value": -1.5
+          }
+        ]
+      }
+    }
+  },
+  "argument2": {
+    "type": "minecraft:add",
+    "argument1": "gm4_sky_dimension:island_types/mountainous/canyons/total",
+    "argument2": {
+      "type": "minecraft:spline",
+      "spline": {
+        "coordinate": {
+          "type": "minecraft:interpolated",
+          "argument": "gm4_sky_dimension:routers/temperature"
+        },
+        "points": [
+          {
+            "location": 0.23,
+            "derivative": 0,
+            "value": -1.5
+          },
+          {
+            "location": 0.3,
+            "derivative": 0,
+            "value": 0
+          }
+        ]
+      }
+    }
+  }
+}

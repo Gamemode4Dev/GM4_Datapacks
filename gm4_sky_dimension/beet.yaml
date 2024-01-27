@@ -1,0 +1,23 @@
+id: gm4_sky_dimension
+name: Sky Dimension
+version: 1.0.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: []
+    website:
+      description: Soar high to reach and explore the Sky Dimension, Celesterra! 
+      recommended: []
+      notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Sky_Dimension
+    credits:
+      Creator:
+        - BluePsychoRanger

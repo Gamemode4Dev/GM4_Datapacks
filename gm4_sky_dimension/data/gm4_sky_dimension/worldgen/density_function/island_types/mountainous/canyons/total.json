@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:mul",
+  "argument1": 0.015,
+  "argument2": {
+    "type": "minecraft:add",
+    "argument1": {
+      "type": "minecraft:mul",
+      "argument1": 60,
+      "argument2": {
+        "type": "minecraft:add",
+        "argument1": "gm4_sky_dimension:island_types/mountainous/canyons/land_mass",
+        "argument2": {
+          "type": "minecraft:quarter_negative",
+          "argument": {
+            "type": "minecraft:mul",
+            "argument1": 0.03,
+            "argument2": {
+              "type": "minecraft:noise",
+              "noise": "minecraft:jagged",
+              "xz_scale": 1500,
+              "y_scale": 0
+            }
+          }
+        }
+      }
+    },
+    "argument2": "minecraft:overworld/base_3d_noise"
+  }
+}

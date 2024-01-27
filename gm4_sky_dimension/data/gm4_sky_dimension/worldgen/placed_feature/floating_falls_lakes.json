@@ -1,0 +1,40 @@
+{
+  "feature": "gm4_sky_dimension:floating_falls_lake_water",
+  "placement": [
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 256
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 220
+        },
+        "max_inclusive": {
+          "absolute": 384
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:packed_ice",
+          "minecraft:blue_ice"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "WORLD_SURFACE_WG",
+      "min_inclusive": -2,
+      "max_inclusive": 1
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:max",
+  "argument1": {
+    "type": "minecraft:min",
+    "argument1": {
+      "type": "minecraft:max",
+      "argument1": "gm4_sky_dimension:island_types/shattered/bridges",
+      "argument2": "gm4_sky_dimension:island_types/shattered/noise"
+    },
+    "argument2": "gm4_sky_dimension:island_types/normal/total"
+  },
+  "argument2": "gm4_sky_dimension:island_types/shattered/full_bridges"
+}

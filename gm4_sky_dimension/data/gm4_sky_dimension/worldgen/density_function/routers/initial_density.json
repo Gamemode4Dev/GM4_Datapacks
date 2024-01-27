@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:min",
+  "argument1": "gm4_sky_dimension:island_types/initial",
+  "argument2": "gm4_sky_dimension:continents/total"
+}
