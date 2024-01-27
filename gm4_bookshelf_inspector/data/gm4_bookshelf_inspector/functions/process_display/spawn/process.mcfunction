@@ -9,3 +9,5 @@ execute if score @s gm4_bookshelf_inspector_display_state matches 2 run data mer
 
 execute if score @s gm4_bookshelf_inspector_display_state matches 4 run tag @s add gm4_bookshelf_inspector_display.active
 execute if score @s gm4_bookshelf_inspector_display_state matches 4 run tag @s remove gm4_bookshelf_inspector_display.extending
+
+execute unless score @s gm4_bookshelf_inspector_display_state matches 4 run scoreboard players set $keep_loop_active gm4_bookshelf_inspector_data 1
