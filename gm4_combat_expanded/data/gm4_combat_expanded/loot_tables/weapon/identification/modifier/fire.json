@@ -21,7 +21,7 @@
                 {
                   "attribute": "minecraft:generic.attack_speed",
                   "name": "gm4_ce_remove_hand_atk_speed",
-                  "amount": -1,
+                  "amount": -4,
                   "operation": "addition",
                   "slot": "mainhand"
                 },
