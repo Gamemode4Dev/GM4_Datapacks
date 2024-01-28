@@ -6,7 +6,7 @@
                 {
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/modifier/archer",
-                    "weight": 40000
+                    "weight": 40
                 },
                 {
                     "type": "minecraft:loot_table",
