@@ -285,7 +285,7 @@
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.focus",
-              "fallback": "Focussed %s",
+              "fallback": "Focused %s",
               "with": [
                 {
                   "nbt": "tag.gm4_combat_expanded.name",
