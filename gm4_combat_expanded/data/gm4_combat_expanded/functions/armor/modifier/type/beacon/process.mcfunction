@@ -30,3 +30,4 @@ execute at @s run fill ~ ~-1 ~ ~ ~-1 ~ light[level=14] replace #gm4:air
 # tags
 tag @s remove gm4_ce_beacon.process
 tag @s add gm4_ce_beacon.keep
+execute on passengers run tag @s add gm4_ce_beacon.keep

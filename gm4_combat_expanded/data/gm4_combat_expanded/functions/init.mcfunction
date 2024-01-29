@@ -68,6 +68,7 @@ scoreboard objectives add gm4_ce_sword_hit_triggered dummy
 scoreboard objectives add gm4_ce_pierce_timer dummy
 scoreboard objectives add gm4_ce_sleep custom:sleep_in_bed
 scoreboard objectives add gm4_ce_sleep.version dummy
+scoreboard objectives add gm4_ce_pvp_timer dummy
 
 # constants
 scoreboard players set #-1 gm4_ce_data -1

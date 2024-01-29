@@ -26,6 +26,7 @@ scoreboard players remove @a[scores={gm4_ce_t_wolf=1..}] gm4_ce_t_wolf 1
 scoreboard players remove @a[scores={gm4_ce_t_soothe=1..}] gm4_ce_t_soothe 1
 scoreboard players remove @a[scores={gm4_ce_t_reactive=1..}] gm4_ce_t_reactive 1
 scoreboard players remove @a[scores={gm4_ce_natural_regen_damage=1..}] gm4_ce_natural_regen_damage 1
+scoreboard players remove @a[scores={gm4_ce_pvp_timer=1..}] gm4_ce_pvp_timer 1
 
 # reset scoreboards
 scoreboard players reset @a gm4_ce_hurt

@@ -7,9 +7,6 @@
 # remove one to match absorption level and store
 execute store result storage gm4_combat_expanded player_shield.shield int 1 run scoreboard players remove @s gm4_ce_absorp 1
 
-# clear absorption to stop bug (MC-182497)
-effect clear @s absorption
-
 # apply absorption
 function gm4_combat_expanded:player/shield/eval with storage gm4_combat_expanded player_shield
 

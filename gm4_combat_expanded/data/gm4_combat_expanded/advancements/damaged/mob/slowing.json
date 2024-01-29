@@ -4,6 +4,7 @@
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "damage": {
+          "blocked": false,
           "source_entity": {
             "nbt": "{Tags:[\"gm4_ce_slowing_attacks\"]}"
           }
