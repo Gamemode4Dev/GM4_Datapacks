@@ -135,25 +135,6 @@
         ]
       }
     },
-    "make_magicol": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "gm4:zauber_cauldrons_make_magicol": true
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
     "obtain_bottled_magicol": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -450,7 +431,7 @@
         [
           {
             "translate": "text.gm4.guidebook.zauber_cauldrons.bottling_vexes",
-            "fallback": "If a glass bottle is added to a recipe with extra ingredients, it will capture Possessed Items in groups of three, forming a Magic in a Bottle."
+            "fallback": "If a glass bottle is added to a recipe with extra ingredients, it can instead capture multiples of 3 Possessed Items.\n\nSo if 4 possessed items would normally spawn, 3 would be contained and 1 would be free."
           }
         ]
       ],
@@ -459,7 +440,7 @@
       ]
     },
     {
-      "name": "magicol_creation",
+      "name": "magic_in_a_bottle",
       "enable": [],
       "requirements": [
         [
@@ -496,6 +477,18 @@
             "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_creation",
             "fallback": "Dropping Magic in a Bottle, an enchanted prismarine shard and a dye into a water-filled zauber cauldron will dye the liquid into magicol.\n\nThe level of the liquid is conserved through this process."
           }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_bottling",
+            "fallback": "Magicol can be bottled only during the preferred moon phase of the magic in a bottle used to create it."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_bottling_1",
+            "fallback": "Magicol can be bottled by dropping a splash or lingering water bottle and one piece of prismarine crystals, along with either a slime ball, magma cream, or snowball."
+          }
         ]
       ]
     },
@@ -504,17 +497,10 @@
       "enable": [],
       "requirements": [
         [
-          "make_magicol",
           "obtain_bottled_magicol"
         ]
       ],
       "pages": [
-        [
-          {
-            "translate": "text.gm4.guidebook.zauber_cauldrons.magicol_bottling",
-            "fallback": "During the preferred moon phase of the magic in a bottle used to create the Magicol, it can be bottled. This is done by dropping a splash or lingering water bottle and one piece of prismarine crystals, along with either a slime ball, magma cream, or snowball."
-          }
-        ],
         [
           {
             "translate": "text.gm4.guidebook.zauber_cauldrons.downfall",
