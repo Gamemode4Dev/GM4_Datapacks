@@ -6,10 +6,8 @@
 # stop the raycast
 scoreboard players set $raycast gm4_bookshelf_inspector_data 0
 
-# set evaluate to 1 in case rotation changed but this still ran
-scoreboard players set $evaluate gm4_bookshelf_inspector_data 1
-
 # get the slot being looked at
+scoreboard players set $evaluate gm4_bookshelf_inspector_data 1
 execute summon marker run function gm4_bookshelf_inspector:find_book/get_book_slot
 
 # if evaluation failed stop the function
