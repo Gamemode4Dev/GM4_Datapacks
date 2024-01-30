@@ -18,3 +18,5 @@ loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_weapon/
 data modify entity @s ArmorDropChances set value [0.50F,0.50F,0.50F,0.50F]
 
 data modify entity @s HandDropChances set value [0.50F,0.75F]
+
+scoreboard players set $modifier_picked gm4_ce_data 1

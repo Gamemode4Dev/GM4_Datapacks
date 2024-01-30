@@ -13,3 +13,6 @@ effect give @e[type=creeper,tag=gm4_ce_cloaked_creeper] invisibility 33 0
 
 # cleanup totem displays (this is just in case a totem dies in an unexpected way)
 execute as @e[type=block_display,tag=gm4_ce_totem_display] at @s unless entity @e[type=armor_stand,tag=gm4_ce_totem,distance=..5] run kill @s
+
+# cleanup beacon light markers
+execute as @e[type=marker,tag=gm4_ce_beacon.store_light] at @s unless entity @e[type=block_display,tag=gm4_ce_beacon,distance=..5] run kill @s

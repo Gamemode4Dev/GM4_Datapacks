@@ -41,7 +41,7 @@ execute if entity @s[tag=gm4_ce_spore_zombie] run function gm4_combat_expanded:m
 # toxic
 tag @s[predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_weakness_attacks
 # deep
-attribute @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/deep] generic.attack_damage modifier add 34e4955b-8f75-4292-89e9-7a1639499717 "gm4_ce_modifier_deep" 0.2 multiply
+attribute @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/deep] generic.movement_speed modifier add 34e4955b-8f75-4292-89e9-7a1639499717 "gm4_ce_modifier_deep" 0.2 multiply
 # reef
 execute if entity @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/reef] run function gm4_combat_expanded:mob/init/modifier/special/reef_drowned
 # growth
@@ -53,24 +53,25 @@ execute if entity @s[type=zombie,tag=!gm4_ce_extra_mob,predicate=gm4_combat_expa
 # half droprate of armor in "Dark"
 data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
 
-# remove bonus damage if weapon is held, then set droprate to 20% (unless in "Dark")
-execute if data entity @s HandItems[{Count:1b}] run scoreboard players set $mob_damage gm4_ce_data 0
-execute if score $mob_damage gm4_ce_data matches 0 run data modify entity @s[predicate=!gm4_combat_expanded:mob/modifier/dark] HandDropChances set value [0.20F,0.20F]
-
+# | Other Modifiers
+# check if zombie is spawned from reinforcements
+execute if data entity @s Attributes[{Modifiers:[{Name:"Zombie reinforcement callee charge"}]}] run function gm4_combat_expanded:mob/init/modifier/special/zombie_reinforcement
+# only allow one of the following modifiers
+scoreboard players set $modifier_picked gm4_ce_data 0
 # replace "Zombie leaders" with minibosses
 execute if data entity @s[type=zombie] Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}] run function gm4_combat_expanded:mob/init/modifier/special/zombie_leader
 execute if data entity @s[type=zombie_villager] Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}] run data remove entity @s Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}]
 execute if entity @s[tag=gm4_ce_miniboss] run function gm4_combat_expanded:mob/init/modifier/special/zombie_miniboss
-
-# | Other Modifiers
+# baby zombie (zombie leader is never a baby)
+execute if score $modifier_picked gm4_ce_data matches 0 if data entity @s {IsBaby:1b} run attribute @s generic.max_health modifier add 13d37911-bc7f-4f94-9187-1668ac21bfb1 "gm4_ce_baby_zombie" -0.6 multiply
 # sprinter
-execute if predicate gm4_combat_expanded:technical/chance/zombie_sprinter run attribute @s generic.movement_speed modifier add b04df78c-8b19-434f-bcd0-515133d5e573 "gm4_ce_sprinter_zombie" 0.15 multiply
+execute if score $modifier_picked gm4_ce_data matches 0 if predicate gm4_combat_expanded:technical/chance/zombie_sprinter store success score $modifier_picked gm4_ce_data run effect give @s speed infinite 0
+# shielded
+execute if score $modifier_picked gm4_ce_data matches 0 if predicate gm4_combat_expanded:technical/chance/zombie_shielded run function gm4_combat_expanded:mob/init/modifier/special/zombie_shielded
+# dual wield
+execute if score $modifier_picked gm4_ce_data matches 0 if predicate gm4_combat_expanded:technical/chance/zombie_dual_wield run function gm4_combat_expanded:mob/init/modifier/special/zombie_dual_wield
 # solid (KB resist)
-execute if predicate gm4_combat_expanded:technical/chance/zombie_solid run attribute @s generic.knockback_resistance modifier add 35504df6-ec60-4229-8063-a2440d56f68c "gm4_ce_solid_zombie" 0.45 add
-# baby zombie
-execute if data entity @s {IsBaby:1b} run attribute @s generic.max_health modifier add 13d37911-bc7f-4f94-9187-1668ac21bfb1 "gm4_ce_baby_zombie" -0.6 multiply
-# check if zombie is spawned from reinforcements
-execute if data entity @s Attributes[{Modifiers:[{Name:"Zombie reinforcement callee charge"}]}] run function gm4_combat_expanded:mob/init/modifier/special/zombie_reinforcement
+execute if score $modifier_picked gm4_ce_data matches 0 if predicate gm4_combat_expanded:technical/chance/zombie_solid store success score $modifier_picked gm4_ce_data run attribute @s generic.knockback_resistance modifier add 35504df6-ec60-4229-8063-a2440d56f68c "gm4_ce_solid_zombie" 0.45 add
 
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep

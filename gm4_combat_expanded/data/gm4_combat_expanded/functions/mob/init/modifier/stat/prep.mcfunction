@@ -8,7 +8,7 @@
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] generic.movement_speed modifier add 8b68cb8f-b3ac-489b-bb24-ed6cca2fcacf "gm4_ce_modifier_snowy" -0.15 multiply
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] generic.max_health modifier add 9e950abf-f1d2-407d-a886-749059c29325 "gm4_ce_modifier_snowy" 0.15 multiply
 # mountainous
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.attack_damage modifier add ba452899-be21-45b2-860c-c28947ba8c23 "gm4_ce_modifier_mountainous" 0.1 multiply
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.armor modifier add ba452899-be21-45b2-860c-c28947ba8c23 "gm4_ce_modifier_mountainous" 0.25 multiply
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.armor_toughness modifier add 899a6423-93ed-4293-bde3-d993a3c50d33 "gm4_ce_modifier_mountainous" 0.5 multiply
 # burned
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/burned] generic.movement_speed modifier add 00a0987e-646e-4c9e-911e-8b07ad12df20 "gm4_ce_modifier_burned" 0.1 multiply
@@ -23,6 +23,9 @@ execute if predicate gm4_combat_expanded:mob/modifier/dark run function gm4_comb
 execute if entity @s[type=witch,predicate=gm4_combat_expanded:technical/in_witch_hut] run scoreboard players set $mob_health gm4_ce_data 0
 # remove bonus health if enderman spawned in end
 execute if entity @s[type=enderman] if dimension the_end run scoreboard players set $mob_health gm4_ce_data 0
+# remove bonus damage if weapon is held, then set droprate to 20% (unless in "Dark")
+execute if predicate gm4_combat_expanded:mob/has_weapon run scoreboard players set $mob_damage gm4_ce_data 0
+execute if score $mob_damage gm4_ce_data matches 0 run data modify entity @s[predicate=!gm4_combat_expanded:mob/modifier/dark] HandDropChances set value [0.20F,0.20F]
 
 # randomise stats - set values between 0 and current value based on normal distribution
 loot replace block 29999998 1 7134 container.0 loot gm4_combat_expanded:mob/randomize_stats
