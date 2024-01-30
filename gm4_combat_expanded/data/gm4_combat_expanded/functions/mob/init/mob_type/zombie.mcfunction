@@ -59,7 +59,7 @@ execute if data entity @s Attributes[{Modifiers:[{Name:"Zombie reinforcement cal
 # only allow one of the following modifiers
 scoreboard players set $modifier_picked gm4_ce_data 0
 # replace "Zombie leaders" with minibosses
-execute if data entity @s[type=zombie] Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}] run function gm4_combat_expanded:mob/init/modifier/special/zombie_leader
+execute if data entity @s[type=!zombie_villager] Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}] run function gm4_combat_expanded:mob/init/modifier/special/zombie_leader
 execute if data entity @s[type=zombie_villager] Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}] run data remove entity @s Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}]
 execute if entity @s[tag=gm4_ce_miniboss] run function gm4_combat_expanded:mob/init/modifier/special/zombie_miniboss
 # baby zombie (zombie leader is never a baby)
