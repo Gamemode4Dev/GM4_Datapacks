@@ -10,7 +10,7 @@ execute if score $furniture_color gm4_furniture_data matches 16383998 run scoreb
 execute if score $furniture_color gm4_furniture_data matches 1.. run function gm4_furniture:break/decimal_to_hex
 
 # unless breaking player was in creative drop the item
-execute unless score $creative gm4_furniture_data matches 1 positioned ~-0.4999 ~0.0001 ~-0.4999 as @e[type=item_display,tag=gm4_furniture,dx=0,dy=0,dz=0,limit=1] run function gm4_furniture:break/drop_item with entity @s item.tag.data
+execute unless score $creative gm4_furniture_data matches 1 positioned ~-0.4999 ~0.0001 ~-0.4999 as @e[type=item_display,tag=gm4_furniture.display,dx=0,dy=0,dz=0,limit=1] run function gm4_furniture:break/drop_item with entity @s item.tag.data
 
 # remove any furniture blocks that match the id
 execute as @e[type=interaction,tag=gm4_furniture,distance=..8] if score @s gm4_furniture_id = $check_id gm4_furniture_id at @s run function gm4_furniture:break/remove_block

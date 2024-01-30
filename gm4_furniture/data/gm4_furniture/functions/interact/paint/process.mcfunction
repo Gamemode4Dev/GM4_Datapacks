@@ -5,6 +5,7 @@
 
 # find this furniture's item_display and try to paint it
 scoreboard players operation $check_id gm4_furniture_id = @s gm4_furniture_id
+scoreboard players set $paint_changed gm4_furniture_data 0
 execute as @e[type=item_display,tag=gm4_furniture.display,distance=..8] if score @s gm4_furniture_id = $check_id gm4_furniture_id store success score $paint_changed gm4_furniture_data run data modify entity @s item.tag.display.color set from storage gm4_furniture:temp color
 
 # if furniture was painted mark interaction as resolved and play paint sound
