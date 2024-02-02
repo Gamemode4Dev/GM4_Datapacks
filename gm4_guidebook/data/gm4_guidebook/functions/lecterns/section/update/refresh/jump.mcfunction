@@ -14,4 +14,4 @@ execute positioned ~ ~-3000 ~ run data modify block ~ ~3000 ~ Book.tag set from 
 execute positioned ~ ~-3000 ~ run kill @e[type=item,distance=..1,nbt={Item:{tag:{gm4_guidebook:{lectern:1b}}}},limit=1]
 
 # update page number
-data modify block ~ ~ ~ Page set value 5
+execute store result block ~ ~ ~ Page int 1 run scoreboard players get $original_page gm4_guide_pages
