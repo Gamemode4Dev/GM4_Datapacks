@@ -146,6 +146,7 @@ def generate_files(ctx:Context, d: DataPack, overlay: bool = False):
     d[f"gm4_guidebook:{book.id}/update_lectern"] = generate_update_lectern_function(book, overlay)
 
     # add advancements to datapack
+    d["gm4_guidebook:root"] = root_advancement()
     for index, section in enumerate(book.sections):
       if (advancement := generate_advancement(book, index)) is not None:
         d[f"gm4_guidebook:{book.id}/unlock/{section.name}"] = advancement
@@ -1710,6 +1711,38 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
       "function": f"gm4_guidebook:{module_id}/rewards/{section.name}",
     }
   })
+
+
+
+"""
+Creates the advancement to hide the display advancements
+"""
+def root_advancement() -> Advancement:
+  return Advancement({
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  }
+})
 
 
 
