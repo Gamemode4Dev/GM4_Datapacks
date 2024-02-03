@@ -5,21 +5,17 @@
 
 # base stat nerf
 attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -3 add
-attribute @s generic.attack_damage modifier add 3182427e-beb4-4f9a-9f39-674baf1d5ee4 "gm4_ce_base_damage_nerf" -1 add
+attribute @s generic.attack_damage modifier add 3182427e-beb4-4f9a-9f39-674baf1d5ee4 "gm4_ce_base_damage_nerf" -2.5 add
 attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd7173297b "gm4_ce_base_speed_nerf" -0.02 multiply_base
 
 # max stat buffs
-scoreboard players set $mob_health gm4_ce_data 65
-scoreboard players set $mob_damage gm4_ce_data 17
-scoreboard players set $mob_speed gm4_ce_data 20
+scoreboard players set $mob_health gm4_ce_data 30
+scoreboard players set $mob_damage gm4_ce_data 30
+scoreboard players set $mob_speed gm4_ce_data 25
 scoreboard players set $mob_armor gm4_ce_data 0
 scoreboard players set $mob_toughness gm4_ce_data 0
-
-scoreboard players set $mob_health.cap gm4_ce_data 24
-scoreboard players set $mob_damage.cap gm4_ce_data 7
-scoreboard players set $mob_speed.cap gm4_ce_data 10
-scoreboard players set $mob_armor.cap gm4_ce_data 0
-scoreboard players set $mob_toughness.cap gm4_ce_data 0
+# max damage mob is allowed to deal in one hit
+scoreboard players set @s gm4_ce_damage_cap 60
 
 # set armor
 loot replace entity @s[predicate=gm4_combat_expanded:mob/modifier/nether/crimson_forest] armor.feet loot gm4_combat_expanded:mob/equip_armor/piglin

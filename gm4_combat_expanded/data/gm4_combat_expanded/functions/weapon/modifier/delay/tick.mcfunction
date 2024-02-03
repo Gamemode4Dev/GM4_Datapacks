@@ -1,7 +1,9 @@
 # advance the delayed damage timer, activate after 2 seconds
 # @s = entity with a delayed strike
 # at @s
-# run from tick
+# run from weapon/modifier/delay/clock
+
+scoreboard players set $keep_tick.delay gm4_ce_data 1
 
 # progress
 scoreboard players add @s gm4_ce_t_delay 1

@@ -54,7 +54,6 @@ scoreboard objectives add gm4_ce_swimming minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add gm4_ce_used_bow minecraft.used:minecraft.bow
 scoreboard objectives add gm4_ce_used_crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add gm4_ce_natural_regen_damage dummy
-scoreboard objectives add gm4_ce_natural_regen_delay dummy
 scoreboard objectives add gm4_ce_death_mult dummy
 scoreboard objectives add gm4_ce_second_wind dummy
 scoreboard objectives add gm4_ce_link_id dummy
@@ -69,6 +68,7 @@ scoreboard objectives add gm4_ce_pierce_timer dummy
 scoreboard objectives add gm4_ce_sleep custom:sleep_in_bed
 scoreboard objectives add gm4_ce_sleep.version dummy
 scoreboard objectives add gm4_ce_pvp_timer dummy
+scoreboard objectives add gm4_ce_damage_cap dummy
 
 # constants
 scoreboard players set #-1 gm4_ce_data -1

@@ -3,6 +3,8 @@
 # at @s
 # run from tick
 
+scoreboard players set $keep_tick.lightning gm4_ce_data 1
+
 # track striking timer
 scoreboard players add @s[scores={gm4_ce_lightning_charge.striking=1..}] gm4_ce_lightning_charge.striking 1
 execute unless score @s gm4_ce_lightning_charge.striking matches 1.. run scoreboard players set @s[scores={gm4_ce_lightning_charge=9..}] gm4_ce_lightning_charge.striking 1

@@ -1,7 +1,9 @@
 # prepare everything needed to process sword_ring armor
 # @s = player wearing armor
 # at @s
-# run from tick
+# run from armor/modifier/type/sword_ring/clock
+
+scoreboard players set $keep_tick.sword_ring gm4_ce_data 1
 
 tag @s add gm4_ce_target
 
@@ -12,6 +14,8 @@ item replace block 29999998 1 7134 container.1 from entity @s armor.chest
 item replace block 29999998 1 7134 container.2 from entity @s armor.legs
 item replace block 29999998 1 7134 container.3 from entity @s armor.feet
 data modify storage gm4_combat_expanded:temp Items set from block 29999998 1 7134 Items
+data remove block 29999998 1 7134 Items
+
 function gm4_combat_expanded:armor/modifier/type/sword_ring/get_relevant_data
 execute store result score $sword_ring.count gm4_ce_data run data get storage gm4_combat_expanded:temp sword_ring.data
 

@@ -8,17 +8,13 @@ attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663f
 attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd7173297b "gm4_ce_base_speed_nerf" -0.20 multiply_base
 
 # max stat buffs
-scoreboard players set $mob_health gm4_ce_data 30
-scoreboard players set $mob_damage gm4_ce_data 24
-scoreboard players set $mob_speed gm4_ce_data 12
-scoreboard players set $mob_armor gm4_ce_data 7
-scoreboard players set $mob_toughness gm4_ce_data 5
-
-scoreboard players set $mob_health.cap gm4_ce_data 12
-scoreboard players set $mob_damage.cap gm4_ce_data 9
-scoreboard players set $mob_speed.cap gm4_ce_data 10
-scoreboard players set $mob_armor.cap gm4_ce_data 3
-scoreboard players set $mob_toughness.cap gm4_ce_data 2
+scoreboard players set $mob_health gm4_ce_data 12
+scoreboard players set $mob_damage gm4_ce_data 30
+scoreboard players set $mob_speed gm4_ce_data 20
+scoreboard players set $mob_armor gm4_ce_data 6
+scoreboard players set $mob_toughness gm4_ce_data 4
+# max damage mob is allowed to deal in one hit
+scoreboard players set @s gm4_ce_damage_cap 50
 
 # | Difficulty Modifiers
 # harming arrow

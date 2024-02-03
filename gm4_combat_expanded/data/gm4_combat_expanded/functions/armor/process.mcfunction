@@ -15,3 +15,6 @@ execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat
 execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded run function gm4_combat_expanded:armor/slot/chest
 execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded run function gm4_combat_expanded:armor/slot/legs
 execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded run function gm4_combat_expanded:armor/slot/feet
+
+# cleanup
+data remove block 29999998 1 7134 Items

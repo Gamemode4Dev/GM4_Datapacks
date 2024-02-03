@@ -12,3 +12,6 @@ execute if data storage gm4_combat_expanded:temp tag.gm4_combat_expanded.strike 
 
 # update item
 data modify entity @s Item.tag set from storage gm4_combat_expanded:temp tag
+
+# cleanup
+data remove block 29999998 1 7134 Items

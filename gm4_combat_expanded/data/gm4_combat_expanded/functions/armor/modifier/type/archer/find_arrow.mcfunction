@@ -9,6 +9,7 @@ item replace block 29999998 1 7134 container.1 from entity @s armor.chest
 item replace block 29999998 1 7134 container.2 from entity @s armor.legs
 item replace block 29999998 1 7134 container.3 from entity @s armor.feet
 data modify storage gm4_combat_expanded:temp Items set from block 29999998 1 7134 Items
+data remove block 29999998 1 7134 Items
 
 # check amount of archer pieces
 # each level of archer armor means 2 arrows (so archery 1 will shoot 2 arrows, archery 12 will shoot 24)

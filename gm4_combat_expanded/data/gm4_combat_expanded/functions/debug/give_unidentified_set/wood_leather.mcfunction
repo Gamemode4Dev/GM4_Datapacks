@@ -6,5 +6,3 @@ loot give @s loot gm4_combat_expanded:armor/material/leather/feet
 loot give @s loot gm4_combat_expanded:armor/material/leather/legs
 loot give @s loot gm4_combat_expanded:armor/material/leather/chest
 loot give @s loot gm4_combat_expanded:armor/material/leather/head
-
-tellraw Thanathor {"text":"this is a debug test, wood/leather set given"}

@@ -6,13 +6,6 @@
 # get difficulty score from the nearest player
 scoreboard players operation $difficulty gm4_ce_data = @p[gamemode=!spectator] gm4_ce_difficult
 
-# get moon cycle (0 = new moon, 4 = full moon)
-execute store result score $moon gm4_ce_data run time query day
-scoreboard players operation $moon gm4_ce_data %= #8 gm4_ce_data
-scoreboard players set $8 gm4_ce_data 8
-execute if score $moon gm4_ce_data matches ..3 store result score $moon gm4_ce_data run scoreboard players operation $8 gm4_ce_data -= $moon gm4_ce_data
-scoreboard players remove $moon gm4_ce_data 4
-
 # modify difficulty score based on some factors, starting with a randomized value
 execute store result score $difficulty_mult gm4_ce_data run random value -10..10
 # raining +20%
@@ -42,7 +35,6 @@ scoreboard players operation $difficulty gm4_ce_data < #100 gm4_ce_data
 
 # reset scoreboard
 scoreboard players reset $mob_extras gm4_ce_data
-
 # initialize different mobs
 execute if entity @s[type=#gm4_combat_expanded:zombie_types] run function gm4_combat_expanded:mob/init/mob_type/zombie
 execute if entity @s[type=skeleton] run function gm4_combat_expanded:mob/init/mob_type/skeleton

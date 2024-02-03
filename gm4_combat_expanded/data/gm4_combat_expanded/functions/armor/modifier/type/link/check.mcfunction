@@ -15,3 +15,6 @@ function gm4_combat_expanded:armor/modifier/type/link/search_links with storage 
 
 # tag player as wearing this armor
 tag @s[gamemode=!creative] add gm4_ce_linked
+
+# start clock
+schedule function gm4_combat_expanded:armor/modifier/type/link/clock 1t

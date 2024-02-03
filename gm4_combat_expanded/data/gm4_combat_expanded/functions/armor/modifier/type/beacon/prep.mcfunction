@@ -1,7 +1,9 @@
 # process players wearing beacon armor
 # @s = player
 # at @s
-# run from tick
+# run from armor/modifier/type/beacon/clock
+
+scoreboard players set $keep_tick.beacon gm4_ce_data 1
 
 # find this players beacon
 scoreboard players operation $player_id gm4_ce_id = @s gm4_ce_id

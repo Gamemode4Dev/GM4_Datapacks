@@ -10,17 +10,13 @@ execute store result score $size gm4_ce_data run data get entity @s Size
 execute unless score $size gm4_ce_data matches 0 run attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -3 add
 
 # max stat buffs
-scoreboard players set $mob_health gm4_ce_data 30
-scoreboard players set $mob_damage gm4_ce_data 8
+scoreboard players set $mob_health gm4_ce_data 45
+scoreboard players set $mob_damage gm4_ce_data 0
 scoreboard players set $mob_speed gm4_ce_data 0
 scoreboard players set $mob_armor gm4_ce_data 0
 scoreboard players set $mob_toughness gm4_ce_data 0
-
-scoreboard players set $mob_health.cap gm4_ce_data 10
-scoreboard players set $mob_damage.cap gm4_ce_data 3
-scoreboard players set $mob_speed.cap gm4_ce_data 0
-scoreboard players set $mob_armor.cap gm4_ce_data 0
-scoreboard players set $mob_toughness.cap gm4_ce_data 0
+# max damage mob is allowed to deal in one hit
+scoreboard players set @s gm4_ce_damage_cap 80
 
 # | Biome Modifiers
 # snowy
@@ -40,6 +36,10 @@ execute if score $size gm4_ce_data matches 1..3 if predicate gm4_combat_expanded
 execute if score $size gm4_ce_data matches 1..3 if predicate gm4_combat_expanded:technical/chance/slime_grow_rare run scoreboard players add $size gm4_ce_data 1
 
 # set size
+execute if score $size gm4_ce_data matches 0 run scoreboard players set $mob_health gm4_ce_data 0
+execute if score $size gm4_ce_data matches 2 run attribute @s generic.attack_damage base set 3
+execute if score $size gm4_ce_data matches 3 run attribute @s generic.attack_damage base set 4
+execute if score $size gm4_ce_data matches 4 run attribute @s generic.attack_damage base set 5
 execute store result entity @s Size int 1 run scoreboard players get $size gm4_ce_data
 
 # set modifiers

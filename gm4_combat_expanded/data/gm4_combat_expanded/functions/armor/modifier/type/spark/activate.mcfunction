@@ -8,6 +8,7 @@ item replace block 29999998 1 7134 container.1 from entity @s armor.chest
 item replace block 29999998 1 7134 container.2 from entity @s armor.legs
 item replace block 29999998 1 7134 container.3 from entity @s armor.feet
 data modify storage gm4_combat_expanded:temp Items set from block 29999998 1 7134 Items
+data remove block 29999998 1 7134 Items
 
 scoreboard players set $spark_pieces gm4_ce_data 0
 execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded{modifier:spark} run scoreboard players add $spark_pieces gm4_ce_data 1
@@ -19,3 +20,4 @@ execute on attacker run scoreboard players operation @s gm4_ce_lightning_charge 
 execute on attacker run scoreboard players set @s gm4_ce_lightning_charge.timer 160
 
 # spark processing is run through the weapon modifier
+schedule function gm4_combat_expanded:weapon/modifier/lightning/clock 1t

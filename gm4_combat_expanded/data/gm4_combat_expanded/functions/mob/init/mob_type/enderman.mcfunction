@@ -9,24 +9,20 @@ attribute @s generic.attack_damage modifier add 3182427e-beb4-4f9a-9f39-674baf1d
 attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd7173297b "gm4_ce_base_speed_nerf" -0.1 multiply_base
 
 # max stat buffs
-scoreboard players set $mob_health gm4_ce_data 45
-scoreboard players set $mob_damage gm4_ce_data 32
-scoreboard players set $mob_speed gm4_ce_data 8
-scoreboard players set $mob_armor gm4_ce_data 26
+scoreboard players set $mob_health gm4_ce_data 16
+scoreboard players set $mob_damage gm4_ce_data 45
+scoreboard players set $mob_speed gm4_ce_data 20
+scoreboard players set $mob_armor gm4_ce_data 9
 scoreboard players set $mob_toughness gm4_ce_data 0
-
-scoreboard players set $mob_health.cap gm4_ce_data 16
-scoreboard players set $mob_damage.cap gm4_ce_data 12
-scoreboard players set $mob_speed.cap gm4_ce_data 8
-scoreboard players set $mob_armor.cap gm4_ce_data 9
-scoreboard players set $mob_toughness.cap gm4_ce_data 0
+# max damage mob is allowed to deal in one hit
+scoreboard players set @s gm4_ce_damage_cap 110
 
 # | Biome Modifiers
 # flowering 
 execute if predicate gm4_combat_expanded:mob/modifier/flowering if predicate gm4_combat_expanded:technical/chance/replace_enderman_slime run function gm4_combat_expanded:mob/init/modifier/special/flowering_enderman
 # the end
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/the_end] generic.attack_damage modifier add 0872b8ed-f482-4a29-94dc-22df9a28dddb "gm4_ce_modifier_end" 0.2 multiply
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/the_end] generic.movement_speed modifier add 17004032-9186-4202-b662-14841061fbb2 "gm4_ce_modifier_end" 0.15 multiply
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/the_end] generic.attack_damage modifier add 0872b8ed-f482-4a29-94dc-22df9a28dddb "gm4_ce_modifier_end" 0.2 multiply_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/the_end] generic.movement_speed modifier add 17004032-9186-4202-b662-14841061fbb2 "gm4_ce_modifier_end" 0.15 multiply_base
 # warped forest
 execute if predicate gm4_combat_expanded:mob/modifier/nether/warped_forest if predicate gm4_combat_expanded:technical/chance/replace_enderman_skeleton run function gm4_combat_expanded:mob/init/modifier/special/warped_forest_enderman
 # nether wastes

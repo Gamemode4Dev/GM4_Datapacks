@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "damage": {
+    "long_regeneration_pause": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "player": [
@@ -21,16 +21,43 @@
           "taken": {
             "min": 1
           },
-          "blocked": false,
           "type": {
             "tags": [
               {
-                "id": "minecraft:is_fall",
-                "expected": false
+                "id": "gm4_combat_expanded:long_regeneration_pause",
+                "expected": true
+              }
+            ]
+          }
+        }
+      }
+    },
+    "short_regeneration_pause": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "$natural_regen"
               },
+              "score": "gm4_ce_data"
+            },
+            "range": 0
+          }
+        ],
+        "damage": {
+          "taken": {
+            "min": 1
+          },
+          "type": {
+            "tags": [
               {
-                "id": "minecraft:bypasses_invulnerability",
-                "expected": false
+                "id": "gm4_combat_expanded:short_regeneration_pause",
+                "expected": true
               }
             ]
           }
@@ -38,6 +65,12 @@
       }
     }
   },
+  "requirements": [
+    [
+      "long_regeneration_pause",
+      "short_regeneration_pause"
+    ]
+  ],
   "rewards": {
     "function": "gm4_combat_expanded:player/regen/pause"
   }

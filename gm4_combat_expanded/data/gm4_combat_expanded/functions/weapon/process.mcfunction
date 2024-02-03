@@ -26,3 +26,5 @@ execute if predicate gm4_combat_expanded:technical/convert_netherite/weapon run 
 
 # advancement
 advancement grant @s only gm4:combat_expanded_identify
+
+data remove block 29999998 1 7134 Items

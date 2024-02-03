@@ -3,6 +3,8 @@
 # at @s
 # run from weapon/modifier/delay/activate
 
+schedule function gm4_combat_expanded:weapon/modifier/delay/clock 1t
+
 # prime bomb timer
 tag @s add gm4_cd_delay_active
 

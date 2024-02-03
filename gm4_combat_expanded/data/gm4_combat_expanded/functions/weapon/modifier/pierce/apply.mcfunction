@@ -3,7 +3,7 @@
 # at @s
 # run from weapon/modifier/pierce/activate
 
-scoreboard players set @s gm4_ce_pierce_timer 200
+scoreboard players set @s gm4_ce_pierce_timer 13
 
 execute store result score $pierced_armor gm4_ce_data run attribute @s generic.armor modifier value get df679fe3-2d2a-429f-9dea-55a030b50964 -1
 execute if score $pierced_armor gm4_ce_data matches 1.. run attribute @s generic.armor modifier remove df679fe3-2d2a-429f-9dea-55a030b50964

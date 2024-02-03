@@ -8,3 +8,4 @@ data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.identified 
 data modify storage gm4_combat_expanded:temp tag.Damage set value 0
 
 item modify entity @s weapon.mainhand gm4_combat_expanded:identify_mainhand
+data remove block 29999998 1 7134 Items

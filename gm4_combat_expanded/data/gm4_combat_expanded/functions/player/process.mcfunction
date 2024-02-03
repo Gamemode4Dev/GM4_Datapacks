@@ -14,11 +14,11 @@ scoreboard players set @s[scores={gm4_ce_hurt2=1..}] gm4_ce_t_hurt 5
 scoreboard players operation @s gm4_ce_kill += @s gm4_ce_kill2
 
 # natural regen
-execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm4_ce_hunger=18..}] gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:player/regen/check
+execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm4_ce_hunger=18..},predicate=!gm4_combat_expanded:technical/poisoned] gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:player/regen/check
 
 # check for archer armor
-tag @s remove gm4_ce_wearing_archer
-tag @s[predicate=gm4_combat_expanded:modified_armor/archer] add gm4_ce_wearing_archer
+tag @s[tag=gm4_ce_wearing_archer,predicate=!gm4_combat_expanded:modified_armor/archer] remove gm4_ce_wearing_archer
+execute if entity @s[tag=!gm4_ce_wearing_archer,predicate=gm4_combat_expanded:modified_armor/archer] run function gm4_combat_expanded:armor/modifier/type/archer/activate
 
 # remove husk sprint score if player didn't sprint for too long
 execute unless score @s gm4_ce_sprinting matches 1.. run scoreboard players add @s[scores={gm4_ce_t_sprinting=1..}] gm4_ce_sprinting_timeout 1
@@ -45,10 +45,6 @@ execute on vehicle run tag @s remove gm4_ce_speed_given
 
 # remove second wind tag if armor is taken off
 tag @s[tag=gm4_ce_second_wind.active,predicate=!gm4_combat_expanded:modified_armor/second_wind] remove gm4_ce_second_wind.active
-
-# check if player has no health left
-execute store result score $player_health gm4_ce_data run attribute @s generic.max_health get
-execute if score $player_health gm4_ce_data matches 0 run function gm4_combat_expanded:player/no_health_death
 
 # DEV: trigger for players with `gm4_ce_dev` tag
 execute if entity @s[tag=gm4_ce_dev] at @s as @e[type=#gm4_combat_expanded:modify,limit=1,sort=nearest] run function gm4_combat_expanded:debug/dont_run/dev 

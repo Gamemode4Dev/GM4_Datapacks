@@ -1,8 +1,10 @@
 # find everyone linked with this player
 # @s = player with link armor
 # at unspecified
-# run from tick
+# run from armor/modifier/type/link/clock
 # run from here
+
+scoreboard players set $keep_tick.link gm4_ce_data 1
 
 # tag self and all players with the same id
 scoreboard players operation $curr_id gm4_ce_link_id = @s gm4_ce_link_id
