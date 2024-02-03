@@ -18,10 +18,9 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "$damage"
+                      "name": "$armor-"
                     },
-                    "score": "gm4_ce_data",
-                    "scale": -0.2
+                    "score": "gm4_ce_data"
                   },
                   "operation": "addition",
                   "slot": "chest"
@@ -54,8 +53,8 @@
               },
               "ops": [
                 {
-                  "source": "armor",
-                  "target": "gm4_combat_expanded.level",
+                  "source": "damage",
+                  "target": "gm4_combat_expanded.level2",
                   "op": "replace"
                 }
               ]
@@ -106,11 +105,11 @@
                 "type": "minecraft:score",
                 "target": {
                   "type": "minecraft:fixed",
-                  "name": "$armor"
+                  "name": "$damage"
                 },
                 "score": "gm4_ce_data"
               },
-              "range": 1
+              "range": 5
             }
           ]
         },
@@ -139,11 +138,11 @@
                 "type": "minecraft:score",
                 "target": {
                   "type": "minecraft:fixed",
-                  "name": "$armor"
+                  "name": "$damage"
                 },
                 "score": "gm4_ce_data"
               },
-              "range": 2
+              "range": 10
             }
           ]
         },
@@ -172,11 +171,44 @@
                 "type": "minecraft:score",
                 "target": {
                   "type": "minecraft:fixed",
-                  "name": "$armor"
+                  "name": "$damage"
                 },
                 "score": "gm4_ce_data"
               },
-              "range": 3
+              "range": 15
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.second_wind",
+                "fallback": "Store %s of Damage",
+                "with": [
+                    {
+                        "text": "40%"
+                    }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 20
             }
           ]
         },
