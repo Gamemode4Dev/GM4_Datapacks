@@ -34,6 +34,7 @@ from mecha import (
     AstJson,
     AstJsonObjectEntry,
     AstJsonObjectKey,
+    AstJsonObject,
     AstNbtCompoundEntry,
     AstNbtPath,
     AstNbtPathKey,
@@ -321,6 +322,7 @@ def beet_default(ctx: Context):
 
     yield
     tl.warn_unused_translations()
+    tl.apply_babelbox_backfill()
     rp.lint_model_textures()
 
 def build(ctx: Context):
@@ -343,8 +345,12 @@ def setup(ctx: Context):
         "__next__": ord("\u9000")
     }
 
+    # check for CLI meta-variable for backfilling the translations.csv
+    ## beet -s meta.gm4.babelbox_backfill=True dev bat_grenades
+    babelbox_backfill: bool = ctx.meta.get("gm4",{}).get("babelbox_backfill", False)
+
     # clear and compile cross-module translation key list
-    ctx.cache["translation_keys"].clear()
+    ctx.cache["translations"].clear()
     keys: list[str] = []
     for path in glob.glob("*/assets/translations.csv"):
         with open(path) as f:
@@ -352,7 +358,7 @@ def setup(ctx: Context):
             if reader.fieldnames and reader.fieldnames[0] != "key":
                 raise KeyError(f"{path} must contain a column named 'key'")
             keys.extend([row['key'] for row in reader]) # type: ignore ; csv only contains strings
-    ctx.cache["translation_keys"].json = {"keys": list(set(keys))}
+    ctx.cache["translations"].json = {"keys": list(set(keys)), "backfill": babelbox_backfill}
 
 def mount_registry(ctx: Context):
     ctx.cache["modeldata_registry"].json = JsonFile(source_path="gm4/modeldata_registry.json").data
@@ -615,6 +621,8 @@ class TranslationLinter(Reducer):
         self.local_keys: set[str] = set()
         self.used_keys: set[str] = set()
         self.logger = parent_logger.getChild(ctx.project_id)
+        self.backfill_enable: bool = ctx.cache["translations"].json["backfill"]
+        self.backfill_values: dict[str, str] = {}
         super().__init__()
 
     @rule(AstNbtValue)
@@ -630,46 +638,97 @@ class TranslationLinter(Reducer):
             except DiagnosticError:
                 pass # string is not json
 
-    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value="translate"))
-    def missing_en_us_translations(self, node: AstNbtValue):
+    @rule(AstJsonObject)
+    def missing_en_us_translations(self, node: AstJsonObject):
+        self.setup_translation_lookups()
+        
+        # NOTE: this is a stopgap while guidebook is being rewritten. Skips linting on all guidebook files
+        resource_location = self.mecha_database[self.mecha_database.current].resource_location or "null:null"
+        if resource_location.split(":")[0] == "gm4_guidebook":
+            return
+        
+        # manually skip gm4 root advancement, which contains globally defined translations
+        if resource_location == "gm4:root":
+            return
+            
+        # check node fallback contents against babelbox translations
+        match node.evaluate(): # type: ignore , node has evaluate() method
+            case {"translate": str(transl_key), "fallback": str(fallback)}:
+                if transl_key.startswith("gui.gm4") or transl_key=="gm4.second":
+                    # gui-texture translations from other modules are defined in their gui_fonts segment of beet.yaml, so they won't be
+                    # known to the linter easily. For now, we just ignore their warnings
+                    return
+                if self.babelbox_lang.get(transl_key) != fallback:
+                    if transl_key in self.babelbox_lang and not self.backfill_enable:
+                        yield set_location(Diagnostic("info", f"Fallback for {transl_key} does not match that provided in 'translations.csv'"), node)
+                    elif self.backfill_enable:
+                        self.logger.info(f"Backfilling the fallback for {transl_key} into 'translations.csv'")
+                        self.backfill_values[transl_key] = fallback
+                yield self.check_key(transl_key, node)
+            
+            case {"translate": str(transl_key), **other_keys}:
+                if "fallback" not in other_keys and self.babelbox_lang.get(transl_key): # if non-technical translation
+                    yield set_location(Diagnostic("warn", f"No translation fallback specified"), node)
+                yield self.check_key(transl_key, node)
+        return
+
+    def check_key(self, transl_key: str, node: Any):
+        self.used_keys.add(transl_key)
+        if transl_key not in self.total_keys:
+            return set_location(Diagnostic("warn", f"Translation key not defined in en_us: {transl_key}"), node)
+        return
+
+    def setup_translation_lookups(self):
         # setup lookup list if first invocation
         if not self.total_keys:
+            self.babelbox_lang = self.ctx.assets.languages.get("gm4_translations:en_us", Language()).data
             self.local_keys = (
-                set(self.ctx.assets.languages.get("gm4_translations:en_us", Language()).data.keys()) |
+                set(self.babelbox_lang.keys()) |
                 set(self.ctx.assets.languages.get("gm4:en_us", Language()).data.keys())
             )
             self.total_keys = (
                 self.vanilla_keys |
                 self.local_keys | 
                 set(Language(source_path="base/assets/gm4/lang/en_us.json").data.keys()) |
-                set(self.ctx.cache["translation_keys"].json["keys"]) |
+                set(self.ctx.cache["translations"].json["keys"]) |
                 {"%1$s%3427655$s", "%1$s%3427656$s"} # manual old keys
             )
 
-
-        # NOTE: this is a stopgap while guidebook is being rewritten. Skips linting on all guidebook files
-        resource_location = self.mecha_database[self.mecha_database.current].resource_location or "null:null"
-        if resource_location.split(":")[1].startswith("guidebook"):
-            return
-        
-        # DEBUG for updating guidebook to RP support
-        if "guidebook" in node.value.value:
-            return
-        
-        if node.value.value.startswith("gui.gm4"):
-            # gui-texture translations from other modules are defined in their gui_fonts segment of beet.yaml, so they won't be
-            # known to the linter easily. For now, we just ignore their warnings
-            return
-        
-        self.used_keys.add(node.value.value)
-        
-        if node.value.value not in self.total_keys:
-            return set_location(Diagnostic("warn", f"Translation key not defined in en_us: {node.value.value}"), node)
-    
     def warn_unused_translations(self):
         for key in self.ctx.assets.languages.get("gm4_translations:en_us", Language()).data:
             if key not in self.used_keys and key in self.local_keys:
                 self.logger.warn(f"Translation '{key}' is defined but not used")
+
+    def apply_babelbox_backfill(self):
+        """Takes found out-of-date fallbacks and saves them to the translations.csv table"""
+        if not self.backfill_enable:
+            return
+        
+        if (c:=self.ctx.directory / "assets" / "translations.csv").exists():
+            babelbox_path = c
+        elif (c:=self.ctx.directory / "translations.csv").exists():
+            babelbox_path = c
+        else:
+            if self.backfill_values:
+                self.logger.warn("Babelbox backwill was enabled but no 'translations.csv' file was found")
+            return # no file to update
+        
+        with open(babelbox_path, 'r', encoding='utf-8', newline='') as csvfile:
+            reader = csv.DictReader(csvfile)
+            fieldnames = reader.fieldnames
+            if not fieldnames:
+                self.logger.warn("Babelbox backfill failed - fieldnames could not be automatically detected")
+                return
+            translations = list([row for row in reader])
+
+        with open(babelbox_path, 'w', encoding='utf-8', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames, extrasaction='ignore')
+            writer.writeheader()
+            for row in translations:
+                new_fallback = {"en_us": fbk} if (fbk:=self.backfill_values.get(row["key"])) else {}
+                writer.writerow(row | new_fallback)
+        
+
 
 
 class BlockIncompleteTranslation(logging.Filter):
