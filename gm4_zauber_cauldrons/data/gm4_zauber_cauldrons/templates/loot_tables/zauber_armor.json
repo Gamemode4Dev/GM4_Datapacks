@@ -17,7 +17,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:{{custom_model_data}},gm4_zauber_cauldrons:{item:\"zauber_armor\",type:\"{{piece}}\"}}"
+                            "tag": "{CustomModelData:{{custom_model_data}}}"
                         },
                         {
                             "function": "minecraft:copy_nbt",
@@ -32,6 +32,10 @@
                                     "op": "merge"
                                 }
                             ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{gm4_zauber_cauldrons:{item:\"zauber_armor\",type:\"{{piece}}\"}}"
                         },
                         {
                             "function": "minecraft:set_attributes",
