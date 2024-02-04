@@ -35,4 +35,4 @@ function #gm4_lore:replace
 data modify storage gm4_combat_expanded:temp tag.display.Lore set from storage gm4_lore:temp Source
 
 # set cooldown
-scoreboard players set @s gm4_ce_t_soothe 1
+scoreboard players set @s gm4_ce_t_soothe 2

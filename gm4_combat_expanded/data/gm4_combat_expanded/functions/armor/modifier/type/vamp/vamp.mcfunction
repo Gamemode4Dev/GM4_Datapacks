@@ -3,5 +3,6 @@
 # at unspecified
 # run from armor/check_modifier/killing
 
-# store healing
+# store healing, 2x to make it 1 heart per kill
+scoreboard players operation @s gm4_ce_healstore += @s gm4_ce_kill
 scoreboard players operation @s gm4_ce_healstore += @s gm4_ce_kill
