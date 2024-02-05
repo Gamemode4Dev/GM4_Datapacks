@@ -48,7 +48,7 @@ meta:
         reference: gui/advancement/end_fishing_swords
         template:
           name: advancement
-          forward: item/swords/diamond_sword_22
+          forward: item/swords/diamond_sword_12
       - item: elytra
         reference: gui/advancement/end_fishing_phantom
         template:

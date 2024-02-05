@@ -166,9 +166,9 @@ meta:
         reference: gui/advancement/metallurgy_blast_ore
         template:
           name: advancement
-          forward: item/lump/bauxite_lump
+          forward: item/lump/bauxite
       - item: player_head
         reference: gui/advancement/metallurgy_cast
         template:
           name: advancement
-          forward: item/band/defuse_band
+          forward: item/band/defuse

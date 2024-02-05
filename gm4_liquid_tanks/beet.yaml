@@ -40,7 +40,7 @@ meta:
         reference: block/cast_honey_block
         template: vanilla
       - item: potion
-        tempalte: vanilla
+        template: vanilla
         broadcast:
           - reference: gm4_standard_liquids:item/ink_bottle
           - reference: gm4_standard_liquids:item/glow_ink_bottle
