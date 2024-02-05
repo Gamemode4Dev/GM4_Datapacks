@@ -302,6 +302,20 @@
           ]
         },
         {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.horse_description",
+                "fallback": "Effects stack like Enchantments",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
           "function": "minecraft:set_name",
           "entity": "this",
           "name": [

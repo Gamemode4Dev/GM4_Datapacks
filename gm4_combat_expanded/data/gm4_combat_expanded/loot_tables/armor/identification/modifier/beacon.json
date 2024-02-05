@@ -48,6 +48,20 @@
           ]
         },
         {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.beacon_description",
+                "fallback": "Lights the way, sneak to glow",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
           "function": "minecraft:set_name",
           "entity": "this",
           "name": [

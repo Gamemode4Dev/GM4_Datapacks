@@ -1,7 +1,7 @@
 # check the amount of arrows to spawn
 # @s = player wearing archer armor shooting a (cross)bow
 # at unspecified
-# run from tick
+# run from armor/modifier/type/archer/clock
 
 # store armor for checking
 item replace block 29999998 1 7134 container.0 from entity @s armor.head
@@ -34,7 +34,7 @@ execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat
 scoreboard players operation $storm_arrow_target gm4_ce_data += $add_storm_arrows gm4_ce_data
 
 # spawn arrows
-execute anchored eyes positioned ^ ^ ^2 as @e[type=#gm4_combat_expanded:arrow,tag=!gm4_ce_archer_arrow,distance=..2.5,limit=1,sort=nearest] at @s run function gm4_combat_expanded:armor/modifier/type/archer/apply
-# multishot support (spawns half as many arrows, so 1 per level)
-scoreboard players operation $storm_arrow_target gm4_ce_data /= #2 gm4_ce_data
-execute if score $storm_arrow_target gm4_ce_data matches 1.. anchored eyes positioned ^ ^ ^2 as @e[type=#gm4_combat_expanded:arrow,tag=!gm4_ce_archer_arrow,distance=..2.5,limit=2,sort=nearest] at @s run function gm4_combat_expanded:armor/modifier/type/archer/apply
+tag @s add gm4_ce_target
+scoreboard players set $storm_arrow_fired gm4_ce_data 0
+execute anchored eyes positioned ^ ^ ^2 as @e[type=#gm4_combat_expanded:arrow,tag=!gm4_ce_archer_arrow,distance=..2.5,sort=nearest] at @s run function gm4_combat_expanded:armor/modifier/type/archer/apply
+tag @s remove gm4_ce_target

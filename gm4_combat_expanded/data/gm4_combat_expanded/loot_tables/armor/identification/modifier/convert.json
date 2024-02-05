@@ -94,7 +94,7 @@
             [
               {
                 "translate": "item.gm4.combat_expanded.lore.convert",
-                "fallback": "Convert Armor",
+                "fallback": "Convert Armor to Health",
                 "color": "blue",
                 "italic": false
               }

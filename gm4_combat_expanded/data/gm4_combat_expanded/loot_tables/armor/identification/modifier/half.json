@@ -39,7 +39,7 @@
           "lore": [
             {
               "translate": "item.gm4.combat_expanded.lore.half",
-              "fallback": "Reduce Health to half",
+              "fallback": "Reduce Health to Half",
               "color": "red",
               "italic": false
             }

@@ -43,7 +43,7 @@
                 "with": [
                   {
                     "translate": "item.gm4.combat_expanded.lore.lightning",
-                    "fallback": "Charge"
+                    "fallback": "Apply Charge"
                   },
                   "0:08"
                 ],

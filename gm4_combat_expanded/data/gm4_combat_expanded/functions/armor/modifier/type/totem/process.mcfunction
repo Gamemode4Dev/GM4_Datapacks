@@ -8,10 +8,10 @@ tp @s ~ ~ ~ ~90 ~
 playsound minecraft:block.beacon.ambient block @a ~ ~ ~ 0.4 2
 playsound minecraft:block.beacon.ambient block @a ~ ~ ~ 0.8 0.6
 
-execute if entity @s[tag=gm4_ce_totem.regeneration] run effect give @a[distance=..18,gamemode=!spectator] regeneration 6 0 true
-execute if entity @s[tag=gm4_ce_totem.resistance] run effect give @a[distance=..18,gamemode=!spectator] resistance 6 0 true
-execute if entity @s[tag=gm4_ce_totem.speed] run effect give @a[distance=..18,gamemode=!spectator] speed 6 0 true
-execute if entity @s[tag=gm4_ce_totem.strength] run effect give @a[distance=..18,gamemode=!spectator] strength 6 0 true
+execute if entity @s[tag=gm4_ce_totem.regeneration] run effect give @a[distance=..18,gamemode=!spectator] regeneration 7 0 true
+execute if entity @s[tag=gm4_ce_totem.resistance] run effect give @a[distance=..18,gamemode=!spectator] resistance 7 0 true
+execute if entity @s[tag=gm4_ce_totem.speed] run effect give @a[distance=..18,gamemode=!spectator] speed 7 0 true
+execute if entity @s[tag=gm4_ce_totem.strength] run effect give @a[distance=..18,gamemode=!spectator] strength 7 0 true
 
 execute if entity @s[tag=gm4_ce_totem.regeneration] run particle dust 0.804 0.361 0.671 2 ^0.3 ^1.45 ^0.3 0 0 0 0 0 normal
 execute if entity @s[tag=gm4_ce_totem.resistance] run particle dust 0.600 0.271 0.227 2 ^-0.3 ^1.45 ^0.3 0 0 0 0 0 normal
