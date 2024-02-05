@@ -13,6 +13,7 @@ pipeline:
       - beet.contrib.lantern_load.base_data_pack
       - gm4.plugins.versioning.isolated_library
       - gm4.plugins.manifest.write_credits
+      - gm4.plugins.test.strip_tests
       - require: [beet.contrib.copy_files]
         meta:
           copy_files:
@@ -42,6 +43,7 @@ pipeline:
       - gm4_guidebook.generate_guidebooks.load_custom_recipes
     pipeline:
       - gm4.plugins.manifest.write_credits
+      - gm4.plugins.test.strip_tests
       - require: [beet.contrib.copy_files]
         meta: {copy_files: {data_pack: {LICENSE.md: "../LICENSE.md"}}}
       - gm4.plugins.readme_generator

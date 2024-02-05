@@ -1,3 +1,6 @@
+ignore:
+  - gm4/skin_cache.json
+
 pipeline:
   - gm4.plugins.list_modules
   - gm4.plugins.manifest.create
