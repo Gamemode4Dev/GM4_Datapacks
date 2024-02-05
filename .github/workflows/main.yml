@@ -9,6 +9,9 @@ on:
 env:
   VERSION: '1.20'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
+  TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.20.4/0.15.3/0.11.2/server/jar
+  TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/JMCwDuki/fabric-api-0.92.0%2B1.20.4.jar
+  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/18smpIeE/packtest-1.6-mc1.20.4.jar
 
 jobs:
   build:
@@ -29,8 +32,8 @@ jobs:
         if: github.event_name == 'pull_request'
         run: git fetch origin ${{ github.base_ref }}
 
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v2
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -41,7 +44,7 @@ jobs:
 
       - name: Setup cache
         id: cached-poetry-dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
@@ -66,7 +69,7 @@ jobs:
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: 'Modules for pull request #${{ github.event.number }}'
           path: ${{ github.workspace }}/release/${{ env.VERSION }}/
@@ -87,3 +90,56 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           directory: release
           branch: release
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1.2.1
+        with:
+          virtualenvs-in-project: true
+
+      - name: Setup cache
+        id: cached-poetry-dependencies
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: poetry install
+
+      - name: Build all modules for tests
+        run: poetry run beet -p beet-test.yaml -l ${{ env.LOG_LEVEL }} build
+        env:
+          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Download server files
+        run: |
+          curl -o server.jar $TEST_FABRIC_SERVER
+          mkdir mods
+          curl -o mods/fabric-api.jar $TEST_FABRIC_API
+          curl -o mods/packtest.jar $TEST_PACKTEST
+
+      - name: Copy packs to world
+        run: |
+          mkdir -p world/datapacks
+          cp out/gm4_*.zip world/datapacks
+
+      - name: Run test server
+        run: |
+          java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
