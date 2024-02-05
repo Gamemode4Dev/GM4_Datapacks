@@ -43,8 +43,7 @@ execute if entity @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/ree
 # growth
 execute if entity @s[type=!zombie_villager,tag=!gm4_ce_spore_zombie,predicate=gm4_combat_expanded:mob/modifier/growth] run function gm4_combat_expanded:mob/init/modifier/special/growth_zombie
 # dark
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] zombie.spawn_reinforcements modifier add 88708a3a-b8f0-46f8-8dd9-1f8fb0f315d6 "gm4_ce_modifier_dark" 0.25 multiply_base
-execute if entity @s[type=zombie,tag=!gm4_ce_extra_mob,predicate=gm4_combat_expanded:mob/modifier/dark,predicate=gm4_combat_expanded:technical/chance/extra_zombie_spawn] store success score $mob_extras gm4_ce_data run summon zombie ~0.1 ~0.15 ~0.02 {Tags:["gm4_ce_extra_mob"]}
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] zombie.spawn_reinforcements modifier add 88708a3a-b8f0-46f8-8dd9-1f8fb0f315d6 "gm4_ce_modifier_dark" 0.5 multiply_base
 
 # half droprate of armor in "Dark"
 data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
