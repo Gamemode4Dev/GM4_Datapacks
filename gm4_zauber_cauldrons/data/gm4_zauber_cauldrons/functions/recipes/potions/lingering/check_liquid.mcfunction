@@ -6,5 +6,5 @@
 # the select_effect function is generated via beet from templates
 execute if score $has_powder_snow gm4_zc_data matches 1.. run function gm4_zauber_cauldrons:recipes/potions/lingering/select_effect
 
-# no powder snow
-execute unless score $has_powder_snow gm4_zc_data matches 1.. run function gm4_zauber_cauldrons:recipes/potions/invalid_recipe
+# water used instead of powder snow
+execute if score $has_water gm4_zc_data matches 1.. run function gm4_zauber_cauldrons:recipes/potions/invalid_recipe

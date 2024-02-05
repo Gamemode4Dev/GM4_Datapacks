@@ -56,7 +56,7 @@ meta:
         container: dropper
         texture: gui/container/disassembler
     website:
-      description: Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!
+      description: Break apart gold and iron tools and weapons for materials. Attach this to a mob farm to finally make use of those extra armour sets!
       recommended:
         - gm4_resource_pack
         - gm4_relocators

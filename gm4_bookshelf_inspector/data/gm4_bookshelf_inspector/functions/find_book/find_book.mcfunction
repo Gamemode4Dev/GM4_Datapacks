@@ -6,17 +6,16 @@
 # stop the raycast
 scoreboard players set $raycast gm4_bookshelf_inspector_data 0
 
-# set evaluate to 1 in case rotation changed but this still ran
-scoreboard players set $evaluate gm4_bookshelf_inspector_data 1
-
 # get the slot being looked at
+scoreboard players set $evaluate gm4_bookshelf_inspector_data 1
+tag @s add gm4_bookshelf_inspector_target
 execute summon marker run function gm4_bookshelf_inspector:find_book/get_book_slot
+tag @s remove gm4_bookshelf_inspector_target
 
 # if evaluation failed stop the function
 execute if score $evaluate gm4_bookshelf_inspector_data matches 0 run return 0
 
 # store book data in storage
-# NOTE: should this use macro's? It doesn't seem worth it here but not sure how efficient they are
 execute if score $rotation gm4_bookshelf_inspector_data matches 1 run data modify storage gm4_bookshelf_inspector:temp book_data set from block ~ ~ ~-1 Items
 execute if score $rotation gm4_bookshelf_inspector_data matches 2 run data modify storage gm4_bookshelf_inspector:temp book_data set from block ~ ~ ~1 Items
 execute if score $rotation gm4_bookshelf_inspector_data matches 3 run data modify storage gm4_bookshelf_inspector:temp book_data set from block ~-1 ~ ~ Items

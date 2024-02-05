@@ -17,7 +17,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:\"item/zauber_armor/{{flavor}}\",gm4_zauber_cauldrons:{item:\"zauber_armor\",type:\"{{piece}}\"}}"
+                            "tag": "{CustomModelData:\"item/zauber_armor/{{flavor}}\"}"
                         },
                         {
                             "function": "minecraft:copy_nbt",
@@ -27,11 +27,15 @@
                             },
                             "ops": [
                                 {
-                                    "source": "Items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:\"minecraft:golden_{{piece}}\"}}}].tag",
+                                    "source": "items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:\"minecraft:golden_{{piece}}\"}}}].tag",
                                     "target": "{}",
                                     "op": "merge"
                                 }
                             ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{gm4_zauber_cauldrons:{item:\"zauber_armor\",type:\"{{piece}}\"}}"
                         },
                         {
                             "function": "minecraft:set_attributes",
