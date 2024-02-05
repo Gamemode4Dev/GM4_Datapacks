@@ -1,5 +1,6 @@
 # @template gm4:test_platform
 # @dummy ~ ~1 ~
+# @optional
 
 setblock ~1 ~1 ~1 rail
 loot give @s loot gm4_ender_hoppers:items/ender_hopper_minecart
