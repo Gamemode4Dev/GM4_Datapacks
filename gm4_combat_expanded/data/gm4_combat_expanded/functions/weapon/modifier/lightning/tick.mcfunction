@@ -7,10 +7,10 @@ scoreboard players set $keep_tick.lightning gm4_ce_data 1
 
 # track striking timer
 scoreboard players add @s[scores={gm4_ce_lightning_charge.striking=1..}] gm4_ce_lightning_charge.striking 1
-execute unless score @s gm4_ce_lightning_charge.striking matches 1.. run scoreboard players set @s[scores={gm4_ce_lightning_charge=9..}] gm4_ce_lightning_charge.striking 1
+execute unless score @s gm4_ce_lightning_charge.striking matches 1.. run scoreboard players set @s[scores={gm4_ce_lightning_charge=7..}] gm4_ce_lightning_charge.striking 1
 
-# limit lightning charges to 8
-execute if score @s gm4_ce_lightning_charge matches 8.. run scoreboard players set @s gm4_ce_lightning_charge 8
+# limit lightning charges to 7
+scoreboard players set @s[scores={gm4_ce_lightning_charge=8..}] gm4_ce_lightning_charge 7
 
 # display particles based on the amount of lightning charges a player has
 scoreboard players operation @s gm4_ce_lightning_charge.deg += @s gm4_ce_lightning_charge
@@ -34,7 +34,7 @@ execute if score @s gm4_ce_lightning_charge.striking matches 45.. run function g
 
 # reduce lightning charges if timer runs out
 scoreboard players remove @s gm4_ce_lightning_charge.timer 1
-scoreboard players remove @s[scores={gm4_ce_lightning_charge.timer=..0,gm4_ce_lightning_charge=..7}] gm4_ce_lightning_charge 1
+scoreboard players remove @s[scores={gm4_ce_lightning_charge.timer=..0,gm4_ce_lightning_charge=..6}] gm4_ce_lightning_charge 1
 scoreboard players set @s[scores={gm4_ce_lightning_charge.timer=..0}] gm4_ce_lightning_charge.timer 5
 
 # cleanup

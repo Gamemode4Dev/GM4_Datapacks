@@ -1,5 +1,5 @@
 # grant immunity tags to player depending on the armor worn
-# @s = player wearing immune armour above 50% health
+# @s = player wearing immune armour below 50% health
 # at unspecified
 # run from armor/modifier/check_modifier/hp_check
 

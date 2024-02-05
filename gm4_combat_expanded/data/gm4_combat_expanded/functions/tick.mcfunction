@@ -1,7 +1,6 @@
 schedule function gm4_combat_expanded:tick 1t
 
 # | Reset Scoreboards
-scoreboard players reset @a gm4_ce_damaged
 scoreboard players reset @a gm4_ce_absorped
 scoreboard players reset @a gm4_ce_shielded_hit
 scoreboard players reset @a gm4_ce_sword_hit_triggered

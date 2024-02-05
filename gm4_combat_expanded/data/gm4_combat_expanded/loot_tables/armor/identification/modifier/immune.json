@@ -45,8 +45,8 @@
           "function": "minecraft:set_lore",
           "lore": [
             {
-              "translate": "item.gm4.combat_expanded.lore.high_hp",
-              "fallback": "When High on Health:",
+              "translate": "item.gm4.combat_expanded.lore.low_hp",
+              "fallback": "When Low on Health:",
               "color": "gray",
               "italic": false
             }

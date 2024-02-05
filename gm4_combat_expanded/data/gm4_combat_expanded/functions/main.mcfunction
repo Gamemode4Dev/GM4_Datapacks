@@ -27,3 +27,5 @@ execute as @e[scores={gm4_ce_pierce_timer=1..}] at @s run function gm4_combat_ex
 # | Players
 # player submain
 schedule function gm4_combat_expanded:player/submain 8t
+# sustain armor double speed regen
+execute if score $natural_regen gm4_ce_data matches 0 as @a[tag=gm4_ce_sustain_active] unless score @s[scores={gm4_ce_hunger=18..},predicate=!gm4_combat_expanded:technical/poisoned] gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:armor/modifier/type/sustain/extra_regen

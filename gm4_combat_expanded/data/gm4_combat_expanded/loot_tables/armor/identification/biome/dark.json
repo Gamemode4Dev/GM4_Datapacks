@@ -75,6 +75,11 @@
                 },
                 {
                     "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/sustain",
+                    "weight": 40
+                },
+                {
+                    "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/modifier/poised",
                     "weight": 40
                 },

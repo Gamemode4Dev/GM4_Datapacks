@@ -15,7 +15,7 @@ scoreboard players set $mob_speed gm4_ce_data 8
 scoreboard players set $mob_armor gm4_ce_data 4
 scoreboard players set $mob_toughness gm4_ce_data 8
 # max damage mob is allowed to deal in one hit
-scoreboard players set @s gm4_ce_damage_cap 70
+scoreboard players set @s gm4_ce_damage_cap 110
 
 # | Modifiers
 # crimson forest

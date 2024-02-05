@@ -14,7 +14,7 @@ scoreboard players set $mob_speed gm4_ce_data 14
 scoreboard players set $mob_armor gm4_ce_data 8
 scoreboard players set $mob_toughness gm4_ce_data 12
 # max damage mob is allowed to deal in one hit
-scoreboard players set @s gm4_ce_damage_cap 80
+scoreboard players set @s gm4_ce_damage_cap 140
 
 # knockback resistance
 attribute @s generic.knockback_resistance modifier add 4e46c16d-ba22-495c-bbca-613c97176918 "gm4_ce_base_kb_resist" 0.666 add

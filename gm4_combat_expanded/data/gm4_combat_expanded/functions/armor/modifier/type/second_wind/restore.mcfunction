@@ -9,6 +9,5 @@ scoreboard players operation @s gm4_ce_healstore += @s gm4_ce_second_wind
 tag @s remove gm4_ce_second_wind.active
 scoreboard players reset @s gm4_ce_second_wind
 
-execute unless score @s gm4_ce_healstore matches 1.. run return 0
 playsound minecraft:item.bottle.fill player @s ~ ~ ~ 0.6 2
 particle heart ~ ~1 ~ 0.3 0.3 0.3 1 3

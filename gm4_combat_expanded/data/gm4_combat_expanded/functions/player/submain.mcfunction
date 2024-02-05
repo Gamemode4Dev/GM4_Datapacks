@@ -20,7 +20,6 @@ execute unless score $natural_regen gm4_ce_data matches -1 store result score $n
 execute as @a[gamemode=!spectator] run function gm4_combat_expanded:player/process
 
 # timers
-scoreboard players remove @a[scores={gm4_ce_t_hurt=1..}] gm4_ce_t_hurt 1
 scoreboard players remove @a[scores={gm4_ce_t_shield=1..}] gm4_ce_t_shield 1
 scoreboard players remove @a[scores={gm4_ce_t_wolf=1..}] gm4_ce_t_wolf 1
 scoreboard players remove @a[scores={gm4_ce_t_soothe=1..}] gm4_ce_t_soothe 1
@@ -30,7 +29,6 @@ scoreboard players remove @a[scores={gm4_ce_pvp_timer=1..}] gm4_ce_pvp_timer 1
 
 # reset scoreboards
 scoreboard players reset @a gm4_ce_hurt
-scoreboard players reset @a gm4_ce_hurt2
 scoreboard players reset @a gm4_ce_kill
 scoreboard players reset @a gm4_ce_kill2
 scoreboard players reset @a gm4_ce_sprinting

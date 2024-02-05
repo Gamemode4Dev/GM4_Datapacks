@@ -7,7 +7,7 @@
 execute if score $active gm4_ce_data matches 2 run function gm4_combat_expanded:armor/modifier/type/sneak/check_time
 
 # if armor was active and is now no longer grant the attack speed for 4 seconds if player is not hurt
-execute if score $active gm4_ce_data matches 1 if score @s gm4_ce_t_hurt matches 1 run function gm4_combat_expanded:armor/modifier/type/sneak/deactivate
+execute if score $active gm4_ce_data matches 1 if score @s gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:armor/modifier/type/sneak/deactivate
 execute if score $active gm4_ce_data matches 1 unless predicate gm4_combat_expanded:technical/crouching run function gm4_combat_expanded:armor/modifier/type/sneak/attack_speed
 
 # check if player is sneaking while undamaged to grant invis

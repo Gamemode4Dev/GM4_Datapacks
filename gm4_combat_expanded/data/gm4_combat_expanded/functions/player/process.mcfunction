@@ -6,14 +6,11 @@
 # process player deaths
 execute if score @s[scores={gm4_ce_deaths=1..}] gm4_ce_alivetime matches ..16 run function gm4_combat_expanded:player/process_death
 
-# translate being hit to timer
-# hurt2 also counts damage absorbed
-scoreboard players operation @s gm4_ce_hurt2 += @s gm4_ce_hurt
-scoreboard players set @s[scores={gm4_ce_hurt2=1..}] gm4_ce_t_hurt 5
 # also count player kills as kills
 scoreboard players operation @s gm4_ce_kill += @s gm4_ce_kill2
 
 # natural regen
+tag @s remove gm4_ce_sustain_active
 scoreboard players set @s[scores={gm4_ce_natural_regen_damage=2..,gm4_ce_kill=1..}] gm4_ce_natural_regen_damage 1
 execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm4_ce_hunger=18..},predicate=!gm4_combat_expanded:technical/poisoned] gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:player/regen/check
 

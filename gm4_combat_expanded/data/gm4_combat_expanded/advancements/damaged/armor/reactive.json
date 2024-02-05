@@ -9,17 +9,6 @@
             "name": "gm4_combat_expanded:modified_armor/reactive"
           },
           {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": "this",
-              "score": "gm4_ce_damaged"
-            },
-            "range": {
-              "min": 1
-            }
-          },
-          {
             "condition": "minecraft:inverted",
             "term": {
               "condition": "minecraft:value_check",

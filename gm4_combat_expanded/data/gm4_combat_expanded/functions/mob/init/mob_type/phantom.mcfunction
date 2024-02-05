@@ -9,12 +9,12 @@ attribute @s generic.attack_damage modifier add 3182427e-beb4-4f9a-9f39-674baf1d
 
 # max stat buffs
 scoreboard players set $mob_health gm4_ce_data 10
-scoreboard players set $mob_damage gm4_ce_data 30
+scoreboard players set $mob_damage gm4_ce_data 45
 scoreboard players set $mob_speed gm4_ce_data 0
 scoreboard players set $mob_armor gm4_ce_data 5
 scoreboard players set $mob_toughness gm4_ce_data 0
 # max damage mob is allowed to deal in one hit
-scoreboard players set @s gm4_ce_damage_cap 45
+scoreboard players set @s gm4_ce_damage_cap 60
 
 # | Biome Modifiers
 # snowy

@@ -1,5 +1,5 @@
-# calculate modifiers for newly spawned creeper
-# @s = creeper
+# calculate modifiers for newly spawned vindicator
+# @s = vindicator
 # at @s
 # run from mob/init/initiate
 
@@ -10,12 +10,12 @@ attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd717
 
 # max stat buffs
 scoreboard players set $mob_health gm4_ce_data 24
-scoreboard players set $mob_damage gm4_ce_data 35
+scoreboard players set $mob_damage gm4_ce_data 45
 scoreboard players set $mob_speed gm4_ce_data 30
 scoreboard players set $mob_armor gm4_ce_data 14
 scoreboard players set $mob_toughness gm4_ce_data 0
 # max damage mob is allowed to deal in one hit
-scoreboard players set @s gm4_ce_damage_cap 80
+scoreboard players set @s gm4_ce_damage_cap 100
 
 execute store result score $wave gm4_ce_data run data get entity @s Wave
 

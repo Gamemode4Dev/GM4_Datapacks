@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:43,active:0,day:0}}"
+              "tag": "{gm4_combat_expanded:{modifier:43,active:0}}"
             },
             {
               "function": "minecraft:copy_nbt",
@@ -22,6 +22,11 @@
                 {
                   "source": "armor",
                   "target": "gm4_combat_expanded.level",
+                  "op": "replace"
+                },
+                {
+                  "source": "speed",
+                  "target": "gm4_combat_expanded.level2",
                   "op": "replace"
                 }
               ]

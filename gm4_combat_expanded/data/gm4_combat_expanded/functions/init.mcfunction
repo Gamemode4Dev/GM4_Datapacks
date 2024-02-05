@@ -31,8 +31,6 @@ scoreboard objectives add gm4_ce_health.current dummy
 scoreboard objectives add gm4_ce_health.max dummy
 scoreboard objectives add gm4_ce_health.max_half dummy
 scoreboard objectives add gm4_ce_hurt minecraft.custom:minecraft.damage_taken
-scoreboard objectives add gm4_ce_hurt2 minecraft.custom:minecraft.damage_absorbed
-scoreboard objectives add gm4_ce_t_hurt dummy
 scoreboard objectives add gm4_ce_kill minecraft.custom:minecraft.mob_kills
 scoreboard objectives add gm4_ce_kill2 minecraft.custom:minecraft.player_kills
 scoreboard objectives add gm4_ce_t_shield dummy
@@ -44,7 +42,6 @@ scoreboard objectives add gm4_ce_sprinting_timeout dummy
 scoreboard objectives add gm4_ce_t_reactive dummy
 scoreboard objectives add gm4_ce_absorp dummy
 scoreboard objectives add gm4_ce_healstore dummy
-scoreboard objectives add gm4_ce_damaged minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_ce_absorped minecraft.custom:minecraft.damage_absorbed
 scoreboard objectives add gm4_ce_hunger food
 scoreboard objectives add gm4_ce_shielded_hit minecraft.used:minecraft.shield
@@ -69,6 +66,7 @@ scoreboard objectives add gm4_ce_sleep custom:sleep_in_bed
 scoreboard objectives add gm4_ce_sleep.version dummy
 scoreboard objectives add gm4_ce_pvp_timer dummy
 scoreboard objectives add gm4_ce_damage_cap dummy
+scoreboard objectives add gm4_ce_relog minecraft.custom:minecraft.leave_game
 
 # constants
 scoreboard players set #-1 gm4_ce_data -1

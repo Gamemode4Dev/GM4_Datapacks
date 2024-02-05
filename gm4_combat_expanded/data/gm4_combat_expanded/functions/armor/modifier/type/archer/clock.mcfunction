@@ -1,6 +1,7 @@
 # use this tick clock only when needed
 # @s = unspecified
 # at unspecified
+# schedule from main
 # schedule from armor/modifier/type/archer/activate
 # schedule from here
 
@@ -10,4 +11,5 @@ execute as @a[tag=gm4_ce_wearing_archer,scores={gm4_ce_used_bow=1..}] at @s run 
 scoreboard players reset @a gm4_ce_used_bow
 scoreboard players reset @a gm4_ce_used_crossbow
 
-execute if entity @a[tag=gm4_ce_wearing_archer] run schedule function gm4_combat_expanded:armor/modifier/type/archer/clock 1t
+execute store result score $keep_tick.archer gm4_ce_data if entity @a[tag=gm4_ce_wearing_archer]
+execute if score $keep_tick.archer gm4_ce_data matches 1 run schedule function gm4_combat_expanded:armor/modifier/type/archer/clock 1t
