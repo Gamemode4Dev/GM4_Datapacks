@@ -43,6 +43,20 @@ def beet_default(ctx: Context):
 	)
 
 
+def test(ctx: Context):
+	"""Saves the zipped datapack to the ./out folder in it's exit phase.
+	 	Should be first in pipeline to properly wrap all other plugins cleanup phases"""
+	out_dir = Path("out")
+
+	yield # wait for exit phase, after other plugins cleanup
+
+	ctx.data.save(
+		path=out_dir / ctx.project_id,
+		overwrite=True,
+		zipped=True,
+	)
+
+
 def release(ctx: Context):
 	"""
 	Saves the zipped datapack and metadata to the ./release/{version} folder.
