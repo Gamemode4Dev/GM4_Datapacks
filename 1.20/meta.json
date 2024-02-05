@@ -1,5 +1,5 @@
 {
-  "last_commit": "986742bb56a5b38360e3693771f0def7348ef399",
+  "last_commit": "a7241fbd157a76b8aa56fca5f4a531bd2f1c05af",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -324,7 +324,7 @@
     {
       "id": "gm4_bookshelf_inspector",
       "name": "Bookshelf Inspector",
-      "version": "1.0.2",
+      "version": "1.1.0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Bookshelf_Inspector",
       "credits": {
