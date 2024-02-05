@@ -17,8 +17,7 @@ scoreboard players set @s gm4_ce_damage_cap 80
 
 # | Biome Modifiers
 # snowy
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] generic.max_health modifier add 18020ad6-a3a9-46df-9b13-82bbdef4cc7b "gm4_ce_modifier_mountainous" 0.3 multiply_base
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] generic.movement_speed modifier add 33ebfb5d-a203-4492-8d40-400212d03085 "gm4_ce_modifier_mountainous" -0.1 multiply_base
+execute if predicate gm4_combat_expanded:mob/modifier/snowy run function gm4_combat_expanded:mob/init/modifier/special/snowy_creeper
 # mountainous
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.knockback_resistance modifier add d1a07954-66f4-4da8-86a4-42fc863b760b "gm4_ce_modifier_mountainous" 0.4 add
 # burned
