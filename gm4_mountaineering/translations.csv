@@ -1,8 +1,13 @@
 key,en_us
-advancement.gm4.mountaineering.title,"Piste de R\u00e9sistance"
-advancement.gm4.mountaineering.description,"Get yourself a pair of skis"
-advancement.gm4.mountaineering.title,"Ski ya Later!"
-advancement.gm4.mountaineering.description,"Reach the highest speed boost while skiing"
-item.gm4.crampons,"Crampons"
-item.gm4.poles,"Ski Pole"
-item.gm4.skis,"Skis"
+advancement.gm4.mountaineering.title,Piste de R\u00e9sistance
+advancement.gm4.mountaineering.description,Get yourself a pair of skis
+advancement.gm4.mountaineering.title,Ski ya Later!
+advancement.gm4.mountaineering.description,Reach the highest speed boost while skiing
+item.gm4.crampons,Crampons
+item.gm4.poles,Ski Pole
+item.gm4.skis,Skis
+text.gm4.guidebook.module_desc.Mountaineering,A mezze of mountaineering means! Glide down slopes and scale cliffs.
+text.gm4.guidebook.mountaineering.description,Several items can be crafted in a Custom Crafter to ease snowy mountain traversal.
+text.gm4.guidebook.mountaineering.crampons,"Wearing crampons allows users to scale rocky cliffs. Having empty hands helps with scaling.\n\nUsers can continuously climb rocky cliffs, but staying still will result in falling."
+text.gm4.guidebook.mountaineering.skis,"Wearing skis allows users to move quickly over snowy surfaces.\n\nContinuously traveling downwards on snowy terrain increases speed, but traveling on non-snowy areas reduces the speed."
+text.gm4.guidebook.mountaineering.poles,"Holding a Ski Pole in each hand can help when jumping. This is best paired with Skis.\n\nWhen using poles while skiing, a jump enhancement is given if going up a short ramp. Poles also make it easier to gain speed while skiing."

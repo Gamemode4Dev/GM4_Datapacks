@@ -32,6 +32,7 @@ pipeline:
           - translations.csv
         namespace: gm4_translations
         unicode_escape: True
+        dialect: excel
       model_merging:
         predicate_order: [custom_model_data]
   - extend: beet.yaml

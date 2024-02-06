@@ -1,3 +1,6 @@
 key,en_us
-advancement.gm4.holographic_tags.title,"Holo-riffic!",
-advancement.gm4.holographic_tags.description,"Create a Hologram",
+advancement.gm4.holographic_tags.title,Holo-riffic!
+advancement.gm4.holographic_tags.description,Create a Hologram
+text.gm4.guidebook.module_desc.Holographic Tags,Set up floating messages with a simple name tag!
+text.gm4.guidebook.holographic_tags.description,"Putting a renamed name tag in an item frame will create floating textbox.\n\nTo remove the hologram, place an item frame in the original position."
+text.gm4.guidebook.holographic_tags.colors,Placing the item frame on a wool block will color the hologram.

@@ -1,9 +1,12 @@
 key,en_us
-container.gm4.zauber_tank.harming,"Zauber Harming Potion Tank",
-container.gm4.zauber_tank.healing,"Zauber Healing Potion Tank",
-container.gm4.zauber_tank.leaping,"Zauber Leaping Potion Tank",
-container.gm4.zauber_tank.poison,"Zauber Poison Potion Tank",
-container.gm4.zauber_tank.regeneration,"Zauber Regeneration Potion Tank",
-container.gm4.zauber_tank.strength,"Zauber Strength Potion Tank",
-container.gm4.zauber_tank.swiftness,"Zauber Swiftness Potion Tank",
-container.gm4.zauber_tank.wormhole,"Wormhole Tank",
+container.gm4.zauber_tank.harming,Zauber Harming Potion Tank
+container.gm4.zauber_tank.healing,Zauber Healing Potion Tank
+container.gm4.zauber_tank.leaping,Zauber Leaping Potion Tank
+container.gm4.zauber_tank.poison,Zauber Poison Potion Tank
+container.gm4.zauber_tank.regeneration,Zauber Regeneration Potion Tank
+container.gm4.zauber_tank.strength,Zauber Strength Potion Tank
+container.gm4.zauber_tank.swiftness,Zauber Swiftness Potion Tank
+container.gm4.zauber_tank.wormhole,Wormhole Tank
+text.gm4.guidebook.module_desc.Zauber Liquids,From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!
+text.gm4.guidebook.zauber_liquids.description,Zauber Potions can be stored in liquid tanks. Soulutions can be taken out by placing soul fire under the liquid tank.\n\nMobs under a zauber potion tank will gain the specific potion effect.
+text.gm4.guidebook.zauber_liquids.wormhole_tanks,"If any mobs walks under a wormhole tank it will teleport to that location.\n\nWhen a tank receives a wormhole, it will update its location to the midpoint of its current location and the new location, keeping the dimension of the original location."

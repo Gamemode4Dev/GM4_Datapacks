@@ -1,8 +1,12 @@
 key,en_us
-advancement.gm4.block_compressors.compressed_diet.description,"Eat too much of everything. This can't be good for you...",
-advancement.gm4.block_compressors.compressed_diet.title,"A Compressed Diet",
-advancement.gm4.block_compressors.description,"Make yourself a Block Compressor",
-advancement.gm4.block_compressors.title,"Clever Crushing",
-block.gm4.block_compressor,"Compressor",
-container.gm4.block_compressor,"Compression Amount",
-text.gm4.block_compressors.compressed,Compressed *%s,
+advancement.gm4.block_compressors.compressed_diet.description,Eat too much of everything. This can't be good for you...
+advancement.gm4.block_compressors.compressed_diet.title,A Compressed Diet
+advancement.gm4.block_compressors.description,Make yourself a Block Compressor
+advancement.gm4.block_compressors.title,Clever Crushing
+block.gm4.block_compressor,Compressor
+container.gm4.block_compressor,Compression Amount
+text.gm4.block_compressors.compressed,Compressed *%s
+text.gm4.guidebook.module_desc.Block Compressors,"Chest space won't be an issue with this module! Use a Block Compressor to compress stacks of items, turning a stack of items into a single item for long-term storage. Make sure to uncompress your items before using them again, though!"
+text.gm4.guidebook.block_compressors.description,"Block Compressors can be used to cut down on bulk storage. Item stacks can be compressed into a single item, and vice versa."
+text.gm4.guidebook.block_compressors.crafting,A Block Compressor can be crafted in a Custom Crafter:
+text.gm4.guidebook.block_compressors.usage,"To select the amount of compression, put that amount of items inside the block compressor, then drop the items on top of the compressor.\n\nPutting 1 item in the compressor will decompress any items on top."

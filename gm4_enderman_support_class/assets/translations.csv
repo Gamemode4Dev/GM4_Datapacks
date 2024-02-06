@@ -1,3 +1,7 @@
 key,en_us
-advancement.gm4.enderman_support_class.title,"Ender Aid",
-advancement.gm4.enderman_support_class.description,"Come into contact with a support Enderman",
+advancement.gm4.enderman_support_class.title,Ender Aid
+advancement.gm4.enderman_support_class.description,Come into contact with a support Enderman
+text.gm4.guidebook.module_desc.Enderman Support Class,This module allows Endermen to aid nearby hostiles in their fight against the player!
+text.gm4.guidebook.enderman_support_class.description,"Endermen will buff nearby hostile mobs, giving them extra abilities.\n\nSome mobs get potion effects, while other mobs give effects when nearby."
+text.gm4.guidebook.enderman_support_class.buffs,- Creepers get Regeneration II\n- Cave Spiders get Jump Boost II\n- Silverfish get Resistance II
+text.gm4.guidebook.enderman_support_class.buffs_1,- Spiders get Jump Boost I\n-Zombies get Speed II\n-Skeletons give Weakness II\n- Shulkers give Blindness

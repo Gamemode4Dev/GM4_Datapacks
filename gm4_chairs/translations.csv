@@ -1,5 +1,7 @@
 key,en_us
-advancement.gm4.chairs.creation.title,"A Throne, Fit for a King!",
-advancement.gm4.chairs.creation.description,"Throw a saddle on stairs to make a chair",
-advancement.gm4.chairs.sit.title,"Couch Potato",
-advancement.gm4.chairs.sit.description,"Sit for over an hour!",
+advancement.gm4.chairs.creation.title,"A Throne, Fit for a King!"
+advancement.gm4.chairs.creation.description,Throw a saddle on stairs to make a chair
+advancement.gm4.chairs.sit.title,Couch Potato
+advancement.gm4.chairs.sit.description,Sit for over an hour!
+text.gm4.guidebook.module_desc.Chairs,Place a saddle on a stair to have a chair to sit on!
+text.gm4.guidebook.chairs.creation,Chairs can be created by throwing a saddle onto a stair block.\n\nBreaking the stair or hitting the saddle relieves the stair of the saddle.

@@ -1,3 +1,5 @@
 key,en_us
-advancement.gm4.display_frames.title,"Where Did It Go?",
-advancement.gm4.display_frames.description,"Make an item frame invisible with a splash potion of invisibility",
+advancement.gm4.display_frames.title,Where Did It Go?
+advancement.gm4.display_frames.description,Make an item frame invisible with a splash potion of invisibility
+text.gm4.guidebook.module_desc.Display Frames,Splash item frames with invisibilty to make invisible item frames! Great for interior decor!
+text.gm4.guidebook.display_frames.description,Splashing item frames and glow item frames with invisibility causes them to become display frames.\n\nDisplay frames become invisible when holding with an item.

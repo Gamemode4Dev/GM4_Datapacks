@@ -1,3 +1,5 @@
 key,en_us
-advancement.gm4.live_catch.title,"Watch Out!"
-advancement.gm4.live_catch.description,"Catch a pufferfish to the face."
+advancement.gm4.live_catch.title,Watch Out!
+advancement.gm4.live_catch.description,Catch a pufferfish to the face.
+text.gm4.guidebook.module_desc.Live Catch,"Catch live fish when fishing! But watch out for Pufferfish, those might make for a nasty surprise!"
+text.gm4.guidebook.live_catch.description,"When fishing, if a fisher reels in a fish, instead of an item, an actual fish will be launched towards the fisher.\n\nThe fish that spawn have half a heart of health, so they will easily die."

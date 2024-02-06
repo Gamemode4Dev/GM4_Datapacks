@@ -1,6 +1,16 @@
 key,en_us
-item.gm4.shamir.celaro,"Celaro"
-advancement.gm4.desire_lines.walk_8000.title,"And I Would Walk 500 Chunks...",
-advancement.gm4.desire_lines.walk_8000.description,"Ruin 8000 blocks to coarse dirt; you'll find those oak planks",
-advancement.gm4.desire_lines.walk_10000.title,"That's a Lot of Damage",
-advancement.gm4.desire_lines.walk_10000.description,"Ruin 10000 blocks to coarse dirt; how about a little more?",
+item.gm4.shamir.celaro,Celaro
+advancement.gm4.desire_lines.walk_8000.title,And I Would Walk 500 Chunks...
+advancement.gm4.desire_lines.walk_8000.description,Ruin 8000 blocks to coarse dirt; you'll find those oak planks
+advancement.gm4.desire_lines.walk_10000.title,That's a Lot of Damage
+advancement.gm4.desire_lines.walk_10000.description,Ruin 10000 blocks to coarse dirt; how about a little more?
+text.gm4.guidebook.module_desc.Celaro Shamir,"Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!"
+text.gm4.guidebook.celaro_shamir.description,Celaro negates desire lines and causes invisibility when sneaking in shrubbery.
+text.gm4.guidebook.celaro_shamir.usage,The Celaro Shamir is found on Aluminium Bands. It can be placed onto boots.\n\nDesire Lines will not activate while wearing these boots.
+text.gm4.guidebook.celaro_shamir.invisibility,"Sneaking in double-tall shrubbery (e.g. Tall Grass, Large Fern, Peony) with celaro will grant invisibility."
+text.gm4.guidebook.module_desc.Desire Lines,"Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!"
+text.gm4.guidebook.desire_lines.description,Walking or sprinting over grass and dirt will trample blocks.\n\nGrass blocks will trample into dirt and dirt into coarse dirt.
+text.gm4.guidebook.desire_lines.effects,"Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines."
+text.gm4.guidebook.desire_lines.effects_and_boots_of_ostara,"Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\n\nThe Boots of Ostara can prevent desire lines."
+text.gm4.guidebook.desire_lines.effects_and_celaro,"Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\n\nBoots with the Celaro Shamir can prevent desire lines"
+text.gm4.guidebook.desire_lines.effects_and_boots_of_ostara_and_celaro,"Foliage such as flowers, mushrooms, grass, and snow layers can also be destroyed via desire lines.\n\nBoots with the Celaro Shamir, or normal Boots of Ostara can prevent desire lines."

@@ -1,10 +1,15 @@
 key,en_us
-advancement.gm4.lightning_in_a_bottle.lightning_drink.description,"Drink a Bottle of Lightning"
-advancement.gm4.lightning_in_a_bottle.lightning_drink.title,"Shocking!"
-advancement.gm4.lightning_in_a_bottle.lightning_shulker.description,"Strike a Purpur Block with lightning to create a Shulker"
-advancement.gm4.lightning_in_a_bottle.lightning_shulker.title,"It's Alive!"
-container.gm4.liquid_tank.lightning,"Lightning Tank"
-effect.gm4.lightning_in_a_bottle.lightning,"Lightning"
-item.gm4.bottle.effect.lightning,"Bottle of Lightning"
-item.gm4.lingering_bottle.effect.lightning,"Lingering Bottle of Lightning"
-item.gm4.splash_bottle.effect.lightning,"Splash Bottle of Lightning"
+advancement.gm4.lightning_in_a_bottle.lightning_drink.description,Drink a Bottle of Lightning
+advancement.gm4.lightning_in_a_bottle.lightning_drink.title,Shocking!
+advancement.gm4.lightning_in_a_bottle.lightning_shulker.description,Strike a Purpur Block with lightning to create a Shulker
+advancement.gm4.lightning_in_a_bottle.lightning_shulker.title,It's Alive!
+container.gm4.liquid_tank.lightning,Lightning Tank
+effect.gm4.lightning_in_a_bottle.lightning,Lightning
+item.gm4.bottle.effect.lightning,Bottle of Lightning
+item.gm4.lingering_bottle.effect.lightning,Lingering Bottle of Lightning
+item.gm4.splash_bottle.effect.lightning,Splash Bottle of Lightning
+text.gm4.guidebook.module_desc.Lightning in a Bottle,"Bottle and harness the power of lightning using Brewing Stands! Lightning in a Bottle comes in splash and lingering variants, too."
+text.gm4.guidebook.lightning_in_a_bottle.description,"Lightning can be absorbed into a thick potion when struck by lightning.\n\nPillagers, evokers, purpur, and prismarine can amplify or animate into new mobs when struck by lightning."
+text.gm4.guidebook.lightning_in_a_bottle.conversions,Pillagers can be amplified into Evokers.\nEvokers can be amplified into Illusioners.\n\nPurpur Blocks can be animated into Shulkers.\nPrismarine Bricks can be animated into Guardians.
+text.gm4.guidebook.lightning_in_a_bottle.obtaining,"To harness lightning, place a lightning rod attached to the top or bottom of a brewing stand.\n\nWhen the rod is struck, any thick potions inside the brewing stand will be converted into bottles of lightning."
+text.gm4.guidebook.lightning_in_a_bottle.usage,"Splash and Lingering variants can be brewed as normal.\n\nWhen a bottle of lightning is drank or thrown, it will release a bolt of lightning!"

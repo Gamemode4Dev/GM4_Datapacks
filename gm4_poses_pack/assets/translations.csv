@@ -1,3 +1,10 @@
 key,en_us
-advancement.gm4.poses_pack.title,"Plenty O' Posing",
-advancement.gm4.poses_pack.description,"Make your armor stand strike a pose",
+advancement.gm4.poses_pack.title,Plenty O' Posing
+advancement.gm4.poses_pack.description,Make your armor stand strike a pose
+text.gm4.guidebook.module_desc.Poses Pack,Adds a bunch of preset poses to the Better Armour Stands Module. This can be really hand for applying common poses like 'walking' or raised arms!
+text.gm4.guidebook.poses_pack.description,The following codes can be used to put a preset pose onto an armour stand:
+text.gm4.guidebook.poses_pack.head,Head
+text.gm4.guidebook.poses_pack.body_part,%1$s:
+text.gm4.guidebook.better_armour_stands.copy_code,Click to copy
+text.gm4.guidebook.poses_pack.arms,Arms
+text.gm4.guidebook.poses_pack.legs,Legs

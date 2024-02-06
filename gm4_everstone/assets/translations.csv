@@ -1,4 +1,15 @@
 key,en_us
 item.gm4.everstone,Everstone
-advancement.gm4.everstone.title,"Everstone",
-advancement.gm4.everstone.description,"Use an everstone to prevent a mob from aging",
+advancement.gm4.everstone.title,Everstone
+advancement.gm4.everstone.description,Use an everstone to prevent a mob from aging
+text.gm4.guidebook.module_desc.Everstone,"Collect Everstones during full moons and use them on baby mobs to stop them from aging! But watch out, some other mobs might start aging, too!"
+text.gm4.guidebook.everstone.description,Everstones can prevent mobs from aging.\n\nSome mobs that don't normally age now have the ability to evolve into other mobs.
+text.gm4.guidebook.everstone.obtaining,Everstones can be obtained by mining stone during a full moon.\n\nStone mined with Silk Touch will never drop an everstone.
+text.gm4.guidebook.everstone.usage,"Dropping an everstone on a mob will prevent it from aging.\n\nZombies, Skeletons, Slimes, Strays, Piglins, Guardians, and Vindicators can evolve under specific conditions."
+text.gm4.guidebook.everstone.zombie_conversion,Zombies will convert to husks after being in direct sunlight in a desert or badlands biome for a long time.
+text.gm4.guidebook.everstone.skeleton_conversion,"Skeletons will convert into strays after being in a cold, snowy biome for a long time."
+text.gm4.guidebook.everstone.slime_conversion,Slimes will convert into magma cubes after being in the nether for a long time.
+text.gm4.guidebook.everstone.stray_conversion,"Strays will convert into skeletons if taken out of a cold, snowy biome for a long time."
+text.gm4.guidebook.everstone.piglin_conversion,Piglins inside bastion remnants will convert into piglin brutes if there are less than two brutes nearby.
+text.gm4.guidebook.everstone.guardian_conversion,"Guardians will convert into elder guardians after being near several other guardians for a long time.\n\nSpecifically, guardians with five other friends will start to age."
+text.gm4.guidebook.everstone.vindicator_conversion,"Vindicators will convert into evokers when near at least seven magical blocks for a long time.\n\nThese blocks include enchanting tables, bookshelves, lecterns, brewing stands, and cauldrons."

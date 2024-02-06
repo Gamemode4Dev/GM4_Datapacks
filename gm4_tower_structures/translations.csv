@@ -1,5 +1,7 @@
 key,en_us
-item.gm4.tower_structures.pirate_sword,"Pirate Sword"
-item.gm4.tower_structures.pirate_turtle_helmet,"Pirate Turtle Helmet"
-item.gm4.tower_structures.pirate_hat,"Pirate Hat"
-item.gm4.tower_structures.pirate_bow,"Pirate Bow"
+item.gm4.tower_structures.pirate_sword,Pirate Sword
+item.gm4.tower_structures.pirate_turtle_helmet,Pirate Turtle Helmet
+item.gm4.tower_structures.pirate_hat,Pirate Hat
+item.gm4.tower_structures.pirate_bow,Pirate Bow
+text.gm4.guidebook.module_desc.Tower Structures,A custom terrain expansion pack that adds four new tower structures to the world.
+text.gm4.guidebook.tower_structures.description,Towers can be found on the surface.\n\nThese towers contain rare loot and special spawners.

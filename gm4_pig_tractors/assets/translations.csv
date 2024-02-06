@@ -1,3 +1,7 @@
 key,en_us
-advancement.gm4.pig_tractors.title,"Oink Tractors",
-advancement.gm4.pig_tractors.description,"Ride a pig with an hoe to make it a functional tractor!",
+advancement.gm4.pig_tractors.title,Oink Tractors
+advancement.gm4.pig_tractors.description,Ride a pig with an hoe to make it a functional tractor!
+text.gm4.guidebook.module_desc.Pig Tractors,"Ride pigs through fields to quickly harvest and plant crops! Who knows, maybe you will even dig up some useful things in the process."
+text.gm4.guidebook.pig_tractors.tilling,"Riding a pig while holding a hoe will till grass, dirt, or coarse dirt below the pig, with a chance to drop some loot."
+text.gm4.guidebook.pig_tractors.harvesting,"Driving over crops with a Pig Tractor will harvest them.\n\nIf the farmer has seeds or crops in their inventory, the crops will be automatically replanted."
+text.gm4.guidebook.pig_tractors.planting_on_empty,"Driving over empty farmland will plant any crops in the farmer's inventory, prioritizing crops in hand."

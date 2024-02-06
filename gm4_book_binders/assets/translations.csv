@@ -1,8 +1,12 @@
 key,en_us
 item.gm4.enchanted_page,Enchanted Page
-advancement.gm4.book_binders.title,"Ain't Got Rhythm",
-advancement.gm4.book_binders.description,"Set up a Book Binder",
-advancement.gm4.book_binders_bind.title,"Curse of Binding",
-advancement.gm4.book_binders_bind.description,"Publish your first Enchanted Book",
-advancement.gm4.book_binders_debind.title,"Tearing Up!",
-advancement.gm4.book_binders_debind.description,"Get your first enchanted page",
+advancement.gm4.book_binders.title,Ain't Got Rhythm
+advancement.gm4.book_binders.description,Set up a Book Binder
+advancement.gm4.book_binders_bind.title,Curse of Binding
+advancement.gm4.book_binders_bind.description,Publish your first Enchanted Book
+advancement.gm4.book_binders_debind.title,Tearing Up!
+advancement.gm4.book_binders_debind.description,Get your first enchanted page
+text.gm4.guidebook.module_desc.Book Binders,Start printing your own Enchanted Books with Book Binders. Use lecterns to exract singular pages from Enchanted Books and recombine pages with Leather to create your own Enchanted Books -- free of charge!
+text.gm4.guidebook.book_binders.tearing,Lecterns have a small area at the center where enchanted books can be placed.\n\nThis will cause the enchanted book to be ripped up into separate pages—one for each enchantment.
+text.gm4.guidebook.book_binders.rebinding,"Placing enchanted pages onto a lectern will add it to its internal inventory.\n\nPlacing a leather onto the lectern will then bind the pages in its inventory, creating an enchanted book."
+text.gm4.guidebook.book_binders.hoppers,A hopper pointing into the back of the lectern will push items into it.\n\nA hopper below the lectern will catch any items dropped by the lectern.

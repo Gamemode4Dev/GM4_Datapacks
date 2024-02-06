@@ -1,5 +1,9 @@
 key,en_us
 block.gm4.disassembler,Disassembler
-container.gm4.disassembler,"Disassembler",
-advancement.gm4.disassemblers.title,"Clever Decrafting",
-advancement.gm4.disassemblers.description,"Craft a Disassembler",
+container.gm4.disassembler,Disassembler
+advancement.gm4.disassemblers.title,Clever Decrafting
+advancement.gm4.disassemblers.description,Craft a Disassembler
+text.gm4.guidebook.module_desc.Disassemblers,Break apart gold and iron tools and weapons for materials. Attach this to a mob farm to finally make use of those extra armour sets!
+text.gm4.guidebook.disassmeblers.description,"Disassmeblers can be crafted in Custom Crafters.\n\nDisassemblers can take apart metal armour, tools, and weapons and return ingots based on the item's durability."
+text.gm4.guidebook.disassemblers.crafting,A Disassembler can be crafted in a Custom Crafter:
+text.gm4.guidebook.disassemblers.usage,Items placed inside a disassembler will be broken into its base ingots.\n\nThe return is based on the percent durability left on the item.

@@ -1,3 +1,6 @@
 key,en_us
-advancement.gm4.vertical_rails.title,"Up, Up and Away!",
-advancement.gm4.vertical_rails.description,"Ride a minecart going up a vertical rail",
+advancement.gm4.vertical_rails.title,"Up, Up and Away!"
+advancement.gm4.vertical_rails.description,Ride a minecart going up a vertical rail
+text.gm4.guidebook.module_desc.Vertical Rails,Use ladders as vertical Minecart tracks.
+text.gm4.guidebook.vertical_rails.description,Ladder will provide a vertical track for minecarts.\n\nMinecarts that enter a ladder block will travel upwards.
+text.gm4.guidebook.vertical_rails.behavior,"Once a minecart reaches the top of a ladder, it will have some upward and forward velocity to continue along normal rails."

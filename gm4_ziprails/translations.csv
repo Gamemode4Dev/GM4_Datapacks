@@ -1,3 +1,5 @@
 key,en_us
-advancement.gm4.ziprails.title,"Wheeeeeeeee",
-advancement.gm4.ziprails.description,"Fly through the sky on a ziprail",
+advancement.gm4.ziprails.title,Wheeeeeeeee
+advancement.gm4.ziprails.description,Fly through the sky on a ziprail
+text.gm4.guidebook.module_desc.Ziprails,Automatically latch on to a tripwire to sail through the sky on a suspended line!
+text.gm4.guidebook.ziprails.description,Tripwires act as ziprails for minecarts.\n\nA rail must be directly under an connected tripwire hook to transfer a minecart to a zipline.
