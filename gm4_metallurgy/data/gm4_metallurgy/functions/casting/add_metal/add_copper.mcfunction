@@ -11,9 +11,3 @@ particle block weathered_copper ~.45 ~0.1 ~.65 .1 .1 .1 0 2
 playsound item.bucket.empty_lava block @a[distance=..8] ~ ~ ~ .25 1.5
 advancement grant @a[distance=..5,gamemode=!spectator] only gm4:metallurgy_cast
 kill @e[type=item,tag=gm4_ml_in_animation,dx=0,dz=0,limit=1,nbt={Item:{Count:1b,tag:{gm4_metallurgy:{metal:{type:"copper"}}}},OnGround:1b}]
-
-
-#==================================================
-#  As of 1.17, this is now deprecated, and used
-#    for legacy casting.  Please use Bismuth
-#==================================================
