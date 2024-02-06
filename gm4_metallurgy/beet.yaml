@@ -171,4 +171,4 @@ meta:
         reference: gui/advancement/metallurgy_cast
         template:
           name: advancement
-          forward: item/band/defuse
+          forward: shamir/defuse/band
