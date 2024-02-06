@@ -6,6 +6,7 @@ import re
 import sys
 from copy import deepcopy
 from dataclasses import replace
+from functools import cache
 from fnmatch import fnmatch
 from itertools import cycle
 from typing import Any, ClassVar, Literal, Optional
@@ -642,13 +643,9 @@ class TranslationLinter(Reducer):
     @rule(AstJsonObject)
     def missing_en_us_translations(self, node: AstJsonObject):
         self.setup_translation_lookups()
-        
-        # NOTE: this is a stopgap while guidebook is being rewritten. Skips linting on all guidebook files
-        resource_location = self.mecha_database[self.mecha_database.current].resource_location or "null:null"
-        if resource_location.split(":")[0] == "gm4_guidebook":
-            return
-        
+                
         # manually skip gm4 root advancement, which contains globally defined translations
+        resource_location = self.mecha_database[self.mecha_database.current].resource_location or "null:null"
         if resource_location == "gm4:root":
             return
             
@@ -662,7 +659,7 @@ class TranslationLinter(Reducer):
                 if self.babelbox_lang.get(transl_key) != fallback:
                     if transl_key in self.babelbox_lang and not self.backfill_enable:
                         yield set_location(Diagnostic("info", f"Fallback for {transl_key} does not match that provided in 'translations.csv'"), node)
-                    elif self.backfill_enable:
+                    elif self.backfill_enable and transl_key not in self.backfill_values and transl_key not in self.total_keys:
                         self.logger.info(f"Backfilling the fallback for {transl_key} into 'translations.csv'")
                         self.backfill_values[transl_key] = fallback
                 yield self.check_key(transl_key, node)
@@ -675,7 +672,7 @@ class TranslationLinter(Reducer):
 
     def check_key(self, transl_key: str, node: Any):
         self.used_keys.add(transl_key)
-        if transl_key not in self.total_keys:
+        if transl_key not in self.total_keys and not self.backfill_enable:
             return set_location(Diagnostic("warn", f"Translation key not defined in en_us: {transl_key}"), node)
         return
 
@@ -691,9 +688,17 @@ class TranslationLinter(Reducer):
                 self.vanilla_keys |
                 self.local_keys | 
                 set(Language(source_path="base/assets/gm4/lang/en_us.json").data.keys()) |
+                self.get_guidebook_translations() |
                 set(self.ctx.cache["translations"].json["keys"]) |
                 {"%1$s%3427655$s", "%1$s%3427656$s"} # manual old keys
             )
+
+    @cache
+    def get_guidebook_translations(self) -> set[str]:
+        # internally loads keys in guidebook translations.csv, cached for each subproject build
+        with open("gm4_guidebook/assets/translations.csv", 'r') as csvfile:
+            reader = csv.DictReader(csvfile)
+            return {row["key"] for row in reader}
 
     def warn_unused_translations(self):
         for key in self.ctx.assets.languages.get("gm4_translations:en_us", Language()).data:
@@ -726,8 +731,10 @@ class TranslationLinter(Reducer):
             writer = csv.DictWriter(csvfile, fieldnames, extrasaction='ignore')
             writer.writeheader()
             for row in translations:
-                new_fallback = {"en_us": fbk} if (fbk:=self.backfill_values.get(row["key"])) else {}
+                new_fallback = {"en_us": fbk.replace("\n", "\\n")} if (fbk:=self.backfill_values.pop(row["key"], None)) else {}
                 writer.writerow(row | new_fallback)
+            for key, fbk in self.backfill_values.items(): # any remaining new entries not already in file
+                writer.writerow({"key": key, "en_us": fbk.replace("\n", "\\n")})
 
 
 #== Logging Filters ==#
