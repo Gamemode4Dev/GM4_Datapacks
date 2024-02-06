@@ -318,7 +318,8 @@ def beet_default(ctx: Context):
     ctx.inject(Mecha).transform.extend(rp)
     ctx.inject(Mecha).lint.extend(tl)
 
-    logging.getLogger("beet.contrib.babelbox").addFilter(BlockIncompleteTranslation())
+    logging.getLogger("beet.contrib.babelbox").addFilter(block_incomplete_translation)
+    logging.getLogger("mecha").addFilter(limit_mecha_diagnostics)
 
     yield
     tl.warn_unused_translations()
@@ -727,15 +728,22 @@ class TranslationLinter(Reducer):
             for row in translations:
                 new_fallback = {"en_us": fbk} if (fbk:=self.backfill_values.get(row["key"])) else {}
                 writer.writerow(row | new_fallback)
-        
 
 
-
-class BlockIncompleteTranslation(logging.Filter):
+#== Logging Filters ==#
+def block_incomplete_translation(record: logging.LogRecord):
     """logger filter to hide missing translations for anything but default english"""
-    def filter(self, record: logging.LogRecord):
-        locale: str = record.args[0] # type: ignore ; babelbox only issues one logger event, this will be a string
-        return locale == 'en_us'
+    locale: str = record.args[0] # type: ignore ; babelbox only issues one logger event, this will be a string
+    return locale == 'en_us'
+
+def limit_mecha_diagnostics(record: logging.LogRecord):
+    """hard limits the printed length of a mecha diagnostic line"""
+    TRUNCATION_LENGTH = 1_000
+    truncated: list[str] = []
+    for line in record.args[0].splitlines(): # type: ignore ; arg 0 is a paragraph of diagnostic text
+        truncated.append(line if len(line) < TRUNCATION_LENGTH else line[:TRUNCATION_LENGTH-3] + "...") # type: ignore ; line is a str
+    record.args = ("\n".join(truncated),)
+    return True
     
 #== Default Templates and Transforms ==#
 def ensure_single_model_config(template_name: str, config: ModelData) -> str:
