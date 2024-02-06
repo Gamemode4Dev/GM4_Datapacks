@@ -1,6 +1,6 @@
 key,en_us
 block.gm4.tinkering_compressor,Tinkering Compressor
-container.gm4.tinkering_compressor,Tinkering Compressor
+container.gm4.tinkering_compressor,Tinker Amount
 advancement.gm4.tinkering_compressors.title,Automatic Tinkering
 advancement.gm4.tinkering_compressors.description,Make yourself a Tinkering Compressor
 text.gm4.guidebook.module_desc.Tinkering Compressors,"Automatically compress stacks of items into their block form with a tinker shamir as a machine block, and back."

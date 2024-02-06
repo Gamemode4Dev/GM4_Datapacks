@@ -659,6 +659,7 @@ class TranslationLinter(Reducer):
                 if self.babelbox_lang.get(transl_key) != fallback:
                     if transl_key in self.babelbox_lang and not self.backfill_enable:
                         yield set_location(Diagnostic("info", f"Fallback for {transl_key} does not match that provided in 'translations.csv'"), node)
+                        
                     elif self.backfill_enable and transl_key not in self.backfill_values and transl_key not in self.total_keys:
                         self.logger.info(f"Backfilling the fallback for {transl_key} into 'translations.csv'")
                         self.backfill_values[transl_key] = fallback
@@ -666,7 +667,7 @@ class TranslationLinter(Reducer):
             
             case {"translate": str(transl_key), **other_keys}:
                 if "fallback" not in other_keys and self.babelbox_lang.get(transl_key): # if non-technical translation
-                    yield set_location(Diagnostic("warn", f"No translation fallback specified"), node)
+                    yield set_location(Diagnostic("warn", f"No translation fallback specified for {transl_key}"), node)
                 yield self.check_key(transl_key, node)
         return
 

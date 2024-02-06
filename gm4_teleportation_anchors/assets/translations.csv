@@ -2,10 +2,10 @@ key,en_us
 block.gm4.teleportation_jammer,Teleportation Jammer
 block.gm4.teleportation_anchor,Teleportation Anchor
 container.gm4.teleportation_jammer,Teleportation Jammer
-advancement.gm4.teleportation_anchors_anchor.title,"Pinpoint Location"""
-advancement.gm4.teleportation_anchors_anchor.description,"Make a teleportation anchor to remove the randomness of chorus"""
-advancement.gm4.teleportation_anchors_jammer.title,"Make Some Noise"""
-advancement.gm4.teleportation_anchors_jammer.description,"Create a device to stop chorus in its tracks"""
+advancement.gm4.teleportation_anchors_anchor.title,"Pinpoint Location"
+advancement.gm4.teleportation_anchors_anchor.description,"Make a teleportation anchor to remove the randomness of chorus"
+advancement.gm4.teleportation_anchors_jammer.title,"Make Some Noise"
+advancement.gm4.teleportation_anchors_jammer.description,"Create a device to stop chorus in its tracks"
 text.gm4.guidebook.module_desc.Teleportation Anchors,Suppress and control chorus-based teleportation!
 text.gm4.guidebook.teleportation_jammer.description,Teleportation Jammers and Anchors can be used to supress and control chorus-based teleportation.\n\nThey can be crafted in a Custom Crafter.
 text.gm4.guidebook.teleportation_anchors.crafting_jammer,A Teleportation Jammer can be crafted in a Custom Crafter:

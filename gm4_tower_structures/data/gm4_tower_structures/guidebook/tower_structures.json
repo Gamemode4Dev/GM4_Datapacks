@@ -249,7 +249,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.tower_structures.description",
+            "translate": "text.gm4.guidebook.tower_structures.description.types",
             "fallback": "Stone towers can be found in most biomes.\n\nThe Badlands, Desert, and Snowy biomes have special towers that match the terrain.\n\nOcean dungeons and ships can be found at sea."
           }
         ]
