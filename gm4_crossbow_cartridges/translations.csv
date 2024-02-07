@@ -1,8 +1,8 @@
 key,en_us
-advancement.gm4.crossbow_cartridges_fish.title,Fish Launcher!
-advancement.gm4.crossbow_cartridges_fish.description,Launch a fish using a crossbow
+advancement.gm4.crossbow_cartridges_fish.title,Sealife Slingshot
+advancement.gm4.crossbow_cartridges_fish.description,Launch an aquatic animal using a crossbow
 advancement.gm4.crossbow_cartridges_string.title,Almost a Grappling Hook
-advancement.gm4.crossbow_cartridges_string.description,Create a 40-block long string line using a crossbow
+advancement.gm4.crossbow_cartridges_string.description,Create a 40-block long tripwire circuit using a crossbow
 text.gm4.guidebook.module_desc.Crossbow Cartridges,"Shoot more than just arrows! Crossbow Cartridges allows your crossbow to fire a variety of projectiles; Shoot Pufferfish, Tripwires, Torches, and many more. Synergizes nicely with the Ziprails Module for easy Ziprail construction."
 text.gm4.guidebook.crossbow_cartridges.description,Shooting a crossbow with certain items in the offhand will launch that item instead of the arrow.
 text.gm4.guidebook.crossbow_cartridges.ammo,"When held in the offhand, these items can be shot from crossbows:"

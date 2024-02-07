@@ -12,18 +12,18 @@ advancement.gm4.orb_of_ankou.obtain_soul_shard.title,Was it Worth the Sacrifice?
 advancement.gm4.orb_of_ankou.soaring.description,Fly with the soaring pneuma
 advancement.gm4.orb_of_ankou.soaring.title,I Believe I Can Fly!
 entity.gm4.congealed_shard,Congealed Soul Shard\u00A7
-entity.gm4.fire_sprite,Fire Sprite
+entity.gm4.fire_sprite,Fire Sprite\u00A7
 entity.gm4.living_orb,Living Orb\u00A7
 entity.gm4.possessed_shard,Possessed Soul Shard\u00A7
 entity.gm4.severed_soul,Severed Soul\u00A7
-entity.gm4.wandering_tear,Wandering Tear
+entity.gm4.wandering_tear,Wandering Tear\u00A7
 entity.gm4.withering_magic,Withering Magic
 item.gm4.orb_of_ankou,Orb of Ankou
 item.gm4.shamir.corripio,Corripio
 item.gm4.soul_essence,Soul Essence
 item.gm4.soul_shard,Soul Shard
 text.gm4.orb_of_ankou.empty,Empty
-text.gm4.orb_of_ankou.pneumas,Pneumas
+text.gm4.orb_of_ankou.pneumas,Pneumas:
 text.gm4.pneuma_aggressive,Aggressive
 text.gm4.pneuma_agile,Agile
 text.gm4.pneuma_anchoring,Anchoring

@@ -1,9 +1,9 @@
 key,en_us
 advancement.gm4.metallurgy.blast_ore.description,Blast open some rock and find the metal within.
 advancement.gm4.metallurgy.blast_ore.title,How Ad-ore-able
-advancement.gm4.metallurgy.cast.description,Create a mold and add some metal.
+advancement.gm4.metallurgy.cast.description,Create a mould and add some metal.
 advancement.gm4.metallurgy.cast.title,Firebender
-advancement.gm4.metallurgy.overheat_cast.description,Destroy a mold containing molten metal.
+advancement.gm4.metallurgy.overheat_cast.description,Destroy a mould containing molten metal.
 advancement.gm4.metallurgy.overheat_cast.title,Blame Me for the Mess
 item.gm4.metallurgy.aluminium,Aluminium
 item.gm4.metallurgy.band,%s Band
@@ -37,13 +37,20 @@ text.gm4.metallurgy.copper,Copper
 item.gm4.metallurgy.malachite_lump,Malachite Lump
 item.gm4.shamir.infinitas,Infinitas
 item.gm4.metallurgy.curies_bismium,Curie's Bismium
-item.gm4.metallurgy.bismuth.magenta,\u200c
-item.gm4.metallurgy.bismuth.yellow,ut
-item.gm4.metallurgy.bismuth.red,Bi
-item.gm4.metallurgy.bismuth.orange,sm
-item.gm4.metallurgy.bismuth.green,h 
-item.gm4.metallurgy.bismuth.blue,Ba
-item.gm4.metallurgy.bismuth.purple,nd
+item.gm4.metallurgy.bismuth.red,B
+item.gm4.metallurgy.bismuth.orange,i
+item.gm4.metallurgy.bismuth.yellow,s
+item.gm4.metallurgy.bismuth.green,m
+item.gm4.metallurgy.bismuth.blue,u
+item.gm4.metallurgy.bismuth.purple,t
+item.gm4.metallurgy.bismuth.magenta,h
+item.gm4.metallurgy.bismuth_band.red,Bi
+item.gm4.metallurgy.bismuth_band.orange,sm
+item.gm4.metallurgy.bismuth_band.yellow,ut
+item.gm4.metallurgy.bismuth_band.green,"h "
+item.gm4.metallurgy.bismuth_band.blue,Ba
+item.gm4.metallurgy.bismuth_band.purple,nd
+item.gm4.metallurgy.bismuth_band.magenta,\u200c
 item.gm4.metallurgy.thorium_brass,Thorium Brass
 item.gm4.metallurgy.bismutite_lump,Bismutite Lump
 item.gm4.metallurgy.copper,Copper

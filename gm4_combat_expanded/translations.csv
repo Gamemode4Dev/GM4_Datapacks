@@ -24,7 +24,7 @@ enchantment.level.17,XVII
 item.gm4.combat_expanded.lore.archer,Arrow Storm
 item.gm4.combat_expanded.lore.beacon,Beacon
 item.gm4.combat_expanded.lore.canine,Good Boi
-item.gm4.combat_expanded.lore.challenge,Challengers %s
+item.gm4.combat_expanded.lore.challenge,Defiance
 item.gm4.combat_expanded.lore.chaos_strike,Discordant Strikes:
 item.gm4.combat_expanded.lore.chaos,Wild Magic
 item.gm4.combat_expanded.lore.chime_strike,Tolling Strikes:
@@ -113,23 +113,23 @@ text.gm4.guidebook.module_desc.Combat Expanded,Use special armor and weapon modi
 text.gm4.guidebook.combat_expanded.description,"Mobs get stronger over time, based on each adventurer.\n\nMobs will spawn with higher health, damage, movement speed and with better armour and weapons."
 text.gm4.guidebook.combat_expanded.section.biome_modifiers,Area Modifiers
 text.gm4.guidebook.combat_expanded.biome_modifiers,Mobs spawned in different areas have special modifiers.\n\nSome areas and biomes spawn different mobs than usual.
-text.gm4.guidebook.combat_expanded.dark_areas,"Light Level 0, except in %1$s"
+text.gm4.guidebook.combat_expanded.dark_areas,"Light Level 0, except in %s"
 text.gm4.guidebook.combat_expanded.dark,dark
-text.gm4.guidebook.combat_expanded.dark_modifier,Mobs spawned in %1$s areas are slightly stronger.\n\nCreepers have a higher blast radius and mobs don't drop their weapons and armour as often.
+text.gm4.guidebook.combat_expanded.dark_modifier,Mobs spawned in %s areas are slightly stronger.\n\nCreepers have a higher blast radius and mobs don't drop their weapons and armour as often.
 text.gm4.guidebook.combat_expanded.burned,burned
-text.gm4.guidebook.combat_expanded.burned_modifier,"Mobs spawned in %1$s areas are weaker, but faster.\n\nHusks swarms can be found.\n\nMore mobs carry fire aspect and flame weapons."
+text.gm4.guidebook.combat_expanded.burned_modifier,"Mobs spawned in %s areas are weaker, but faster.\n\nHusks swarms can be found.\n\nMore mobs carry fire aspect and flame weapons."
 text.gm4.guidebook.combat_expanded.deep,deep oceans
 text.gm4.guidebook.combat_expanded.flowering,flowering
-text.gm4.guidebook.combat_expanded.flowering_modifier,"Zombies spawned in %1$s areas have less health, but can respawn when killed.\n\nSlimes are larger and spawn more often."
+text.gm4.guidebook.combat_expanded.flowering_modifier,"Zombies spawned in %s areas have less health, but can respawn when killed.\n\nSlimes are larger and spawn more often."
 text.gm4.guidebook.combat_expanded.growth,growth
-text.gm4.guidebook.combat_expanded.growth_modifier,"Mobs spawned in %1$s areas are weaker, but spawn in groups.\n\nSkeletons carry melee weapons.\n\nMobs can be found wearing projectile protection gear."
+text.gm4.guidebook.combat_expanded.growth_modifier,"Mobs spawned in %s areas are weaker, but spawn in groups.\n\nSkeletons carry melee weapons.\n\nMobs can be found wearing projectile protection gear."
 text.gm4.guidebook.combat_expanded.mountainous,mountainous
-text.gm4.guidebook.combat_expanded.mountainous_modifier,"Mobs spawned in %1$s areas are stronger, but more sparse.\n\nMore mobs carry knockback and punch weapons."
+text.gm4.guidebook.combat_expanded.mountainous_modifier,"Mobs spawned in %s areas are stronger, but more sparse.\n\nMore mobs carry knockback and punch weapons."
 text.gm4.guidebook.combat_expanded.reef,warm oceans
 text.gm4.guidebook.combat_expanded.snowy,snowy
-text.gm4.guidebook.combat_expanded.snowy_modifier,"Mobs spawned in %1$s areas are slower, but have more health.\n\nMany attacks will apply slowness."
+text.gm4.guidebook.combat_expanded.snowy_modifier,"Mobs spawned in %s areas are slower, but have more health.\n\nMany attacks will apply slowness."
 text.gm4.guidebook.combat_expanded.toxic,toxic
-text.gm4.guidebook.combat_expanded.toxic_modifier,"Mobs spawned in %1$s areas are weaker, but apply weakness, hunger, and poison.\n\nSpider clusters can be found."
+text.gm4.guidebook.combat_expanded.toxic_modifier,"Mobs spawned in %s areas are weaker, but apply weakness, hunger, and poison.\n\nSpider clusters can be found."
 text.gm4.guidebook.combat_expanded.section.weapons_and_armor,Special Gear
 text.gm4.guidebook.combat_expanded.drops,"Mobs can spawn with special gear.\n\nWeapons have a 20% drop chance and armour has a 8.5% drop chance.\n\nWhen dropped, the gear will need to be identified."
 text.gm4.guidebook.combat_expanded.common_weapons,The following modifiers can be commonly found on weapons:
