@@ -314,8 +314,53 @@
             "predicate": {
               "block": {
                 "blocks": [
+                  "minecraft:flower_pot",
                   "minecraft:water"
                 ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "place_waterloggable": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "offhand": {
+                  "items": [
+                    "minecraft:water_bucket"
+                  ],
+                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                }
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "tag": "gm4:waterloggable"
               }
             }
           }
@@ -365,6 +410,7 @@
       "place_tadpole",
       "place_tropical_fish",
       "place_water",
+      "place_waterloggable",
       "use_on_cauldron"
     ]
   ],
