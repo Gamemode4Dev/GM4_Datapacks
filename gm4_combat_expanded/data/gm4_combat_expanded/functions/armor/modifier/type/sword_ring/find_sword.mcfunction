@@ -12,7 +12,9 @@ execute as @e[type=item_display,tag=gm4_ce_sword_ring.check_sword] if score @s g
 execute unless entity @e[type=item_display,tag=gm4_ce_sword_ring.current_sword] summon item_display run function gm4_combat_expanded:armor/modifier/type/sword_ring/init_sword
 
 # move the sword to the correct position
+tag @s add gm4_ce_self
 $execute as @e[type=item_display,tag=gm4_ce_sword_ring.current_sword,limit=1] positioned ^ ^ ^$(offset) run function gm4_combat_expanded:armor/modifier/type/sword_ring/move_sword
+tag @s remove gm4_ce_self
 
 # if more swords should exist run this again for those rotated around the player
 data remove storage gm4_combat_expanded:temp sword_ring.data[0]
