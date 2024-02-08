@@ -17,7 +17,7 @@ execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat
 execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded{modifier:36} run scoreboard players add $burn_pieces gm4_ce_data 1
 
 scoreboard players operation @s gm4_ce_burning.level += $burn_pieces gm4_ce_data
-scoreboard players set @s[scores={gm4_ce_burning.level=19..}] gm4_ce_burning.level 18
+scoreboard players set @s[scores={gm4_ce_burning.level=9..}] gm4_ce_burning.level 8
 scoreboard players set @s gm4_ce_burning.duration 20
 
 execute unless score $keep_tick.burn gm4_ce_data matches 1 run schedule function gm4_combat_expanded:armor/modifier/type/burn/clock 1t

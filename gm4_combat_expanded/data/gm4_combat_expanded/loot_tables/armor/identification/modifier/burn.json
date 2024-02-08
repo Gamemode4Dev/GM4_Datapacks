@@ -93,7 +93,7 @@
             [
               {
                 "translate": "item.gm4.combat_expanded.lore.burn_description",
-                "fallback": "Stacks 18 times, 0.5 damage per stack",
+                "fallback": "Stacks 8 times, 0.25 damage per stack",
                 "color": "dark_gray",
                 "italic": false
               }

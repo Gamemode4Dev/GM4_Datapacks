@@ -42,7 +42,10 @@ execute if predicate gm4_combat_expanded:mob/modifier/nether/soul_sand_valley ru
 execute if predicate gm4_combat_expanded:mob/modifier/nether/warped_forest run function gm4_combat_expanded:mob/init/modifier/special/warped_forest_skeleton
 
 # set armor
-loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic
+loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic/feet
+loot replace entity @s armor.legs loot gm4_combat_expanded:mob/equip_armor/generic/legs
+loot replace entity @s armor.chest loot gm4_combat_expanded:mob/equip_armor/generic/chest
+loot replace entity @s armor.head loot gm4_combat_expanded:mob/equip_armor/generic/head
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/skeleton
 

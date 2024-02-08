@@ -10,4 +10,4 @@ execute unless score $active gm4_ce_data matches 1 unless score @s gm4_ce_natura
 execute unless score $active gm4_ce_data matches -1 if score @s gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:armor/modifier/type/focus/unsafe
 
 # grant glowing to nearby mobs if active
-execute if score $active gm4_ce_data matches 1 run effect give @e[tag=!smithed.strict,distance=..16] glowing 2 0 true
+execute if score $active gm4_ce_data matches 1 at @s run effect give @e[distance=..16,type=!#gm4_combat_expanded:effect_immune,team=!gm4_ce_team_check,tag=!smithed.strict] glowing 2 0 true

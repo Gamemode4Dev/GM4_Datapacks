@@ -18,7 +18,10 @@ scoreboard players set $mob_toughness gm4_ce_data 8
 scoreboard players set @s gm4_ce_damage_cap 90
 
 # set armor
-loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic
+loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic/feet
+loot replace entity @s armor.legs loot gm4_combat_expanded:mob/equip_armor/generic/legs
+loot replace entity @s armor.chest loot gm4_combat_expanded:mob/equip_armor/generic/chest
+loot replace entity @s armor.head loot gm4_combat_expanded:mob/equip_armor/generic/head
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/generic
 
