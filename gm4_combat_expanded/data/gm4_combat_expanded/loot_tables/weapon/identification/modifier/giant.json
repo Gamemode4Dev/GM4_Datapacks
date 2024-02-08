@@ -47,7 +47,7 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "$atkspeed_extra"
+                      "name": "$atkspeed_low"
                     },
                     "score": "gm4_ce_data",
                     "scale": 0.1
@@ -96,7 +96,7 @@
             [
               {
                 "translate": "item.gm4.combat_expanded.lore.giant",
-                "fallback": "AoE Damage",
+                "fallback": "Area Damage",
                 "color": "blue",
                 "italic": false
               }
@@ -226,7 +226,7 @@
                   [
                     {
                       "score": {
-                        "name": "$atkspeed_extra_10",
+                        "name": "$atkspeed_low_10",
                         "objective": "gm4_ce_data"
                       },
                       "color": "red",
@@ -235,7 +235,7 @@
                     ".",
                     {
                       "score": {
-                        "name": "$atkspeed_extra_01",
+                        "name": "$atkspeed_low_01",
                         "objective": "gm4_ce_data"
                       }
                     }
@@ -258,7 +258,7 @@
                   "type": "minecraft:score",
                   "target": {
                     "type": "minecraft:fixed",
-                    "name": "$atkspeed_extra_01"
+                    "name": "$atkspeed_low_01"
                   },
                   "score": "gm4_ce_data"
                 },
@@ -278,7 +278,7 @@
                 "with": [
                   {
                     "score": {
-                      "name": "$atkspeed_extra_10",
+                      "name": "$atkspeed_low_10",
                       "objective": "gm4_ce_data"
                     },
                     "color": "red",
@@ -300,7 +300,7 @@
                 "type": "minecraft:score",
                 "target": {
                   "type": "minecraft:fixed",
-                  "name": "$atkspeed_extra_01"
+                  "name": "$atkspeed_low_01"
                 },
                 "score": "gm4_ce_data"
               },

@@ -41,6 +41,25 @@
               "type": "minecraft:loot_table",
               "name": "minecraft:empty"
             }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:binomial",
+                "n": 1,
+                "p": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 0.01
+                }
+              },
+              "range": 1
+            }
           ]
         }
       ]

@@ -189,20 +189,6 @@
           ]
         },
         {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.combat_expanded.lore.shielded_description",
-                "fallback": "Taking damage removes effect",
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ]
-        },
-        {
           "function": "minecraft:set_name",
           "entity": "this",
           "name": [

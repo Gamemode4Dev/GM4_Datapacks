@@ -1,53 +1,5 @@
 {
     "criteria": {
-        "trigger_advancement": {
-            "trigger": "minecraft:player_hurt_entity",
-            "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:value_check",
-                            "value": {
-                                "type": "minecraft:score",
-                                "target": "this",
-                                "score": "gm4_ce_sword_hit_triggered"
-                            },
-                            "range": {
-                                "min": 1
-                            }
-                        }
-                    },
-                    {
-                        "condition": "minecraft:all_of",
-                        "terms": [
-                            {
-                                "condition": "minecraft:inverted",
-                                "term": {
-                                    "condition": "minecraft:entity_properties",
-                                    "entity": "this",
-                                    "predicate": {
-                                        "nbt": "{Tags:[\"gm4_ce_target\"]}"
-                                    }
-                                }
-                            },
-                            {
-                                "condition": "minecraft:entity_properties",
-                                "entity": "this",
-                                "predicate": {
-                                    "equipment": {
-                                        "mainhand": {
-                                            "tag": "gm4_combat_expanded:weapon",
-                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
-                                        }
-                                    }
-                                }
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
         "1_heart": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
@@ -580,9 +532,6 @@
         }
     },
     "requirements": [
-        [
-            "trigger_advancement"
-        ],
         [
             "1_heart",
             "2_heart",

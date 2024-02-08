@@ -16,8 +16,10 @@ execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat
 execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded{modifier:spark} run scoreboard players add $spark_pieces gm4_ce_data 1
 execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded{modifier:spark} run scoreboard players add $spark_pieces gm4_ce_data 1
 
-execute on attacker run scoreboard players operation @s gm4_ce_lightning_charge += $spark_pieces gm4_ce_data
-execute on attacker run scoreboard players set @s gm4_ce_lightning_charge.timer 160
+tag @s add gm4_ce_self
+execute on attacker run scoreboard players operation @s[tag=!gm4_ce_self] gm4_ce_lightning_charge += $spark_pieces gm4_ce_data
+execute on attacker run scoreboard players set @s[tag=!gm4_ce_self] gm4_ce_lightning_charge.timer 160
+tag @s remove gm4_ce_self
 
 # spark processing is run through the weapon modifier
 schedule function gm4_combat_expanded:weapon/modifier/lightning/clock 1t

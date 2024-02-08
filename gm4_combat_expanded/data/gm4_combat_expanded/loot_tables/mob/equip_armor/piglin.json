@@ -20,10 +20,14 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 0.0033
+                  "scale": 0.05
                 }
               },
               "range": 1
+            },
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.33
             }
           ]
         }
@@ -48,10 +52,14 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 0.0033
+                  "scale": 0.05
                 }
               },
               "range": 1
+            },
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.33
             }
           ]
         }
@@ -76,10 +84,14 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 0.0033
+                  "scale": 0.05
                 }
               },
               "range": 1
+            },
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.33
             }
           ]
         }
@@ -104,10 +116,14 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 0.0033
+                  "scale": 0.05
                 }
               },
               "range": 1
+            },
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.33
             }
           ]
         }

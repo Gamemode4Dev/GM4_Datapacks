@@ -20,8 +20,8 @@
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/modifier/big",
-                    "weight": 4
+                    "name": "gm4_combat_expanded:armor/identification/modifier/burn",
+                    "weight": 10
                 },
                 {
                     "type": "minecraft:loot_table",
@@ -70,16 +70,6 @@
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/modifier/spark",
-                    "weight": 40
-                },
-                {
-                    "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/modifier/sustain",
-                    "weight": 160
-                },
-                {
-                    "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/modifier/poised",
                     "weight": 40
                 },
@@ -115,12 +105,17 @@
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/modifier/sword_ring",
-                    "weight": 4
+                    "name": "gm4_combat_expanded:armor/identification/modifier/spark",
+                    "weight": 40
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/modifier/tiny",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/sustain",
+                    "weight": 160
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/sword_ring",
                     "weight": 4
                 },
                 {
@@ -132,6 +127,11 @@
                     "type": "minecraft:loot_table",
                     "name": "gm4_combat_expanded:armor/identification/modifier/toxic",
                     "weight": 10
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/unburden",
+                    "weight": 40
                 },
                 {
                     "type": "minecraft:loot_table",

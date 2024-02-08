@@ -10,12 +10,47 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:spark}}"
+              "tag": "{gm4_combat_expanded:{modifier:36}}"
             }
           ]
         }
       ],
       "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.killing",
+              "fallback": "When Killing:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "potion.withDuration",
+              "with": [
+                {
+                  "translate": "item.gm4.combat_expanded.lore.burn",
+                  "fallback": "Burning Aura"
+                },
+                "0:10"
+              ],
+              "color": "blue",
+              "italic": false
+            }
+          ]
+        },
         {
           "function": "minecraft:set_lore",
           "lore": [
@@ -37,29 +72,18 @@
           "function": "minecraft:set_lore",
           "entity": "this",
           "lore": [
-            [
-              {
-                "translate": "attribute.gm4.combat_expanded.toxic",
-                "fallback": "%s %s",
-                "with": [
-                  {
-                    "translate": "potion.withDuration",
-                    "with": [
-                      {
-                        "translate": "item.gm4.combat_expanded.lore.lightning",
-                        "fallback": "Charge"
-                      },
-                      "0:08"
-                    ]
-                  },
-                  {
-                    "translate": "enchantment.minecraft.thorns"
-                  }
-                ],
-                "color": "blue",
-                "italic": false
-              }
-            ]
+            {
+              "translate": "potion.withDuration",
+              "with": [
+                {
+                  "translate": "item.gm4.combat_expanded.lore.burn",
+                  "fallback": "Burning Aura"
+                },
+                "0:10"
+              ],
+              "color": "blue",
+              "italic": false
+            }
           ]
         },
         {
@@ -68,8 +92,8 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.combat_expanded.lore.lightning_description",
-                "fallback": "Apply 7 stacks to strike with Lightning",
+                "translate": "item.gm4.combat_expanded.lore.burn_description",
+                "fallback": "Stacks 18 times, 0.5 damage per stack",
                 "color": "dark_gray",
                 "italic": false
               }
@@ -81,8 +105,8 @@
           "entity": "this",
           "name": [
             {
-              "translate": "item.gm4.combat_expanded.name.spark",
-              "fallback": "Sparking %s",
+              "translate": "item.gm4.combat_expanded.name.burn",
+              "fallback": "Burning %s",
               "with": [
                 {
                   "nbt": "tag.gm4_combat_expanded.name",

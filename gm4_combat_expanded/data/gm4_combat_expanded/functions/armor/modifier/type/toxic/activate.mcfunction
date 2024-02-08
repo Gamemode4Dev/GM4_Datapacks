@@ -41,17 +41,19 @@ execute if score $level gm4_ce_data matches 2 run scoreboard players add $level.
 execute if score $level gm4_ce_data matches 3 run scoreboard players add $level.instant_health gm4_ce_data 1
 
 # grant effect
-execute if score $level.poison gm4_ce_data matches 1 on attacker run effect give @s[tag=!smithed.strict] poison 6 0
-execute if score $level.poison gm4_ce_data matches 2 on attacker run effect give @s[tag=!smithed.strict] poison 6 1
-execute if score $level.poison gm4_ce_data matches 3 on attacker run effect give @s[tag=!smithed.strict] poison 6 2
-execute if score $level.poison gm4_ce_data matches 4 on attacker run effect give @s[tag=!smithed.strict] poison 6 3
+tag @s add gm4_ce_self
+execute if score $level.poison gm4_ce_data matches 1 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_ce_self,tag=!gm4_ce_immune_poison] poison 6 0
+execute if score $level.poison gm4_ce_data matches 2 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_ce_self,tag=!gm4_ce_immune_poison] poison 6 1
+execute if score $level.poison gm4_ce_data matches 3 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_ce_self,tag=!gm4_ce_immune_poison] poison 6 2
+execute if score $level.poison gm4_ce_data matches 4 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_ce_self,tag=!gm4_ce_immune_poison] poison 6 3
 
-execute if score $level.weakness gm4_ce_data matches 1 on attacker run effect give @s[tag=!smithed.strict] weakness 10 0
-execute if score $level.weakness gm4_ce_data matches 2 on attacker run effect give @s[tag=!smithed.strict] weakness 10 1
-execute if score $level.weakness gm4_ce_data matches 3 on attacker run effect give @s[tag=!smithed.strict] weakness 10 2
-execute if score $level.weakness gm4_ce_data matches 4 on attacker run effect give @s[tag=!smithed.strict] weakness 10 3
+execute if score $level.weakness gm4_ce_data matches 1 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_ce_self,tag=!gm4_ce_immune_weakness] weakness 10 0
+execute if score $level.weakness gm4_ce_data matches 2 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_ce_self,tag=!gm4_ce_immune_weakness] weakness 10 1
+execute if score $level.weakness gm4_ce_data matches 3 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_ce_self,tag=!gm4_ce_immune_weakness] weakness 10 2
+execute if score $level.weakness gm4_ce_data matches 4 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_ce_self,tag=!gm4_ce_immune_weakness] weakness 10 3
 
-execute if score $level.instant_health gm4_ce_data matches 1 on attacker run effect give @s[tag=!smithed.strict] instant_health 1 0
-execute if score $level.instant_health gm4_ce_data matches 2 on attacker run effect give @s[tag=!smithed.strict] instant_health 1 1
-execute if score $level.instant_health gm4_ce_data matches 3 on attacker run effect give @s[tag=!smithed.strict] instant_health 1 2
-execute if score $level.instant_health gm4_ce_data matches 4 on attacker run effect give @s[tag=!smithed.strict] instant_health 1 3
+execute if score $level.instant_health gm4_ce_data matches 1 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_ce_self] instant_health 1 0
+execute if score $level.instant_health gm4_ce_data matches 2 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_ce_self] instant_health 1 1
+execute if score $level.instant_health gm4_ce_data matches 3 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_ce_self] instant_health 1 2
+execute if score $level.instant_health gm4_ce_data matches 4 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_ce_self] instant_health 1 3
+tag @s remove gm4_ce_self

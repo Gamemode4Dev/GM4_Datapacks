@@ -39,6 +39,10 @@ scoreboard players operation $damage_up gm4_ce_data += $damage gm4_ce_data
 scoreboard players operation $damage_down gm4_ce_data = $damage_stored gm4_ce_data
 scoreboard players operation $damage_down gm4_ce_data += $damage- gm4_ce_data
 scoreboard players operation $damage_down gm4_ce_data > #5 gm4_ce_data
+# extra damage down, never lower than 0.5
+scoreboard players operation $damage_low gm4_ce_data = $damage_down gm4_ce_data
+scoreboard players remove $damage_low gm4_ce_data 55
+scoreboard players operation $damage_low gm4_ce_data > #5 gm4_ce_data
 # get digits seperate
 scoreboard players operation $damage_stored_10 gm4_ce_data = $damage_stored gm4_ce_data
 scoreboard players operation $damage_stored_10 gm4_ce_data /= #10 gm4_ce_data
@@ -52,6 +56,10 @@ scoreboard players operation $damage_down_10 gm4_ce_data = $damage_down gm4_ce_d
 scoreboard players operation $damage_down_10 gm4_ce_data /= #10 gm4_ce_data
 scoreboard players operation $damage_down_01 gm4_ce_data = $damage_down gm4_ce_data
 scoreboard players operation $damage_down_01 gm4_ce_data %= #10 gm4_ce_data
+scoreboard players operation $damage_low_10 gm4_ce_data = $damage_low gm4_ce_data
+scoreboard players operation $damage_low_10 gm4_ce_data /= #10 gm4_ce_data
+scoreboard players operation $damage_low_01 gm4_ce_data = $damage_low gm4_ce_data
+scoreboard players operation $damage_low_01 gm4_ce_data %= #10 gm4_ce_data
 
 # calculate new attack speed in order to replace the attribute
 execute store result score $atkspeed_stored gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.atkspeed
@@ -65,8 +73,8 @@ scoreboard players add $atkspeed_quick gm4_ce_data 4
 scoreboard players operation $atkspeed_down gm4_ce_data = $atkspeed_stored gm4_ce_data
 scoreboard players operation $atkspeed_down gm4_ce_data += $atkspeed- gm4_ce_data
 # extra weapon attack speed down
-scoreboard players operation $atkspeed_extra gm4_ce_data = $atkspeed_down gm4_ce_data
-scoreboard players remove $atkspeed_extra gm4_ce_data 4
+scoreboard players operation $atkspeed_low gm4_ce_data = $atkspeed_down gm4_ce_data
+scoreboard players remove $atkspeed_low gm4_ce_data 4
 # get digits seperate
 scoreboard players operation $atkspeed_stored_10 gm4_ce_data = $atkspeed_stored gm4_ce_data
 scoreboard players operation $atkspeed_stored_10 gm4_ce_data /= #10 gm4_ce_data
@@ -84,10 +92,10 @@ scoreboard players operation $atkspeed_quick_10 gm4_ce_data = $atkspeed_quick gm
 scoreboard players operation $atkspeed_quick_10 gm4_ce_data /= #10 gm4_ce_data
 scoreboard players operation $atkspeed_quick_01 gm4_ce_data = $atkspeed_quick gm4_ce_data
 scoreboard players operation $atkspeed_quick_01 gm4_ce_data %= #10 gm4_ce_data
-scoreboard players operation $atkspeed_extra_10 gm4_ce_data = $atkspeed_extra gm4_ce_data
-scoreboard players operation $atkspeed_extra_10 gm4_ce_data /= #10 gm4_ce_data
-scoreboard players operation $atkspeed_extra_01 gm4_ce_data = $atkspeed_extra gm4_ce_data
-scoreboard players operation $atkspeed_extra_01 gm4_ce_data %= #10 gm4_ce_data
+scoreboard players operation $atkspeed_low_10 gm4_ce_data = $atkspeed_low gm4_ce_data
+scoreboard players operation $atkspeed_low_10 gm4_ce_data /= #10 gm4_ce_data
+scoreboard players operation $atkspeed_low_01 gm4_ce_data = $atkspeed_low gm4_ce_data
+scoreboard players operation $atkspeed_low_01 gm4_ce_data %= #10 gm4_ce_data
 
 # store results in storage for changing attributes
 execute store result storage gm4_combat_expanded:temp random_value int 1 run scoreboard players get $random_value gm4_ce_data
