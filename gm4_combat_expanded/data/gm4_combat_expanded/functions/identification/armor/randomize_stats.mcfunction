@@ -1,6 +1,6 @@
 # stores random values in scoreboards and storage which can be used for identification
 # @s = unidentified item
-# at unspecified
+# at @s
 # run from identification/armor/pick_mod
 
 # use loot tables to fill shulker box with items

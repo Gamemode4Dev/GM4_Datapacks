@@ -1,6 +1,6 @@
 # randomise stats for identification
 # @s = unidentified item
-# at unspecified
+# at @s
 # run from identification/weapon/pick_mod
 
 # use loot tables to fill shulker box with items

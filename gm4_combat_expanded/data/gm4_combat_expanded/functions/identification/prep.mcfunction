@@ -1,6 +1,6 @@
 # prepare identifying item
 # @s = unidentified item
-# at unspecified
+# at @s
 # run from check_item
 
 # put data in storage
