@@ -28,12 +28,8 @@ loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon
 execute if data entity @s HandItems[{id:"minecraft:bow"}] store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/withering
 execute if score $arrow gm4_ce_data matches 1 run data modify entity @s HandDropChances[1] set value 0.25F
 
-# half droprate of armor in "Dark"
-data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
-
-# if weapon is held set hand droprate to 20% (unless in "Dark")
-# weapon damage is always 5 (stone sword), and is removed in base damage nerf instead
-execute if data entity @s HandItems[{id:"minecraft:stone_sword"}] run data modify entity @s[predicate=!gm4_combat_expanded:mob/modifier/dark] HandDropChances set value [0.20F,0.20F]
+# if weapon is held set hand droprate to 20%
+execute if data entity @s HandItems[{id:"minecraft:stone_sword"}] run data modify entity @s HandDropChances set value [0.20F,0.20F]
 
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep

@@ -22,11 +22,8 @@ loot replace entity @s[predicate=gm4_combat_expanded:mob/modifier/nether/crimson
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:weapon/sword/gold
 
-# half droprate of armor in "Dark"
-data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
-
-# set droprate to 20% (unless in "Dark")
-data modify entity @s[predicate=!gm4_combat_expanded:mob/modifier/dark] HandDropChances set value [0.20F,0.20F]
+# set droprate to 20%
+data modify entity @s HandDropChances set value [0.20F,0.20F]
 
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep

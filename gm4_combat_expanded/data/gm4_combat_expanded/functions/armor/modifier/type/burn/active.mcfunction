@@ -22,6 +22,9 @@ execute positioned ~ ~.9 ~ summon marker at @s run function gm4_combat_expanded:
 playsound minecraft:block.fire.ambient player @s ~ ~ ~ 0.5 1
 execute if score $full_burn gm4_ce_data matches 1 run playsound minecraft:block.fire.ambient player @s ~ ~ ~ 1 0.5
 
+# fire resistance
+execute if score $full_burn gm4_ce_data matches 1 run effect give @s fire_resistance 2 0 true
+
 # fire damage to nearby entities
 execute store result storage gm4_combat_expanded:temp burn.damage float 0.25 run scoreboard players get @s gm4_ce_burning.level
 tag @s add gm4_ce_self

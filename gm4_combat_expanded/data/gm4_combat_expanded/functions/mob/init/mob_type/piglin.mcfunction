@@ -26,11 +26,8 @@ loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/pigli
 # set weapon
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/piglin
 
-# half droprate of armor in "Dark"
-data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
-
 # if weapon is held set droprate to 20% (unless in "Dark")
-execute if data entity @s HandItems[{id:"minecraft:golden_sword"}] run data modify entity @s[predicate=!gm4_combat_expanded:mob/modifier/dark] HandDropChances set value [0.20F,0.20F]
+execute if data entity @s HandItems[{id:"minecraft:golden_sword"}] run data modify entity @s HandDropChances set value [0.20F,0.20F]
 
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep
