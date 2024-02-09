@@ -1,7 +1,7 @@
 # calculate modifiers for newly spawned slime / magma cube
 # @s = slime / magma cube
 # at @s
-# run from mob/init/initiate
+# run from mob/init/mob_type
 
 # store size for changing
 execute store result score $size gm4_ce_data run data get entity @s Size
@@ -10,7 +10,7 @@ execute store result score $size gm4_ce_data run data get entity @s Size
 execute unless score $size gm4_ce_data matches 0 run attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -3 add
 
 # max stat buffs
-scoreboard players set $mob_health gm4_ce_data 45
+scoreboard players set $mob_health gm4_ce_data 13
 scoreboard players set $mob_damage gm4_ce_data 0
 scoreboard players set $mob_speed gm4_ce_data 0
 scoreboard players set $mob_armor gm4_ce_data 0

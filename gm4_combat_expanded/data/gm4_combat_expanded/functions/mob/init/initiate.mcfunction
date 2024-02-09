@@ -36,23 +36,7 @@ scoreboard players operation $difficulty gm4_ce_data < #100 gm4_ce_data
 # reset scoreboard
 scoreboard players reset $mob_extras gm4_ce_data
 # initialize different mobs
-execute if entity @s[type=#gm4_combat_expanded:zombie_types] run function gm4_combat_expanded:mob/init/mob_type/zombie
-execute if entity @s[type=skeleton] run function gm4_combat_expanded:mob/init/mob_type/skeleton
-execute if entity @s[type=stray] run function gm4_combat_expanded:mob/init/mob_type/skeleton
-execute if entity @s[type=spider] run function gm4_combat_expanded:mob/init/mob_type/spider
-execute if entity @s[type=cave_spider] run function gm4_combat_expanded:mob/init/mob_type/cave_spider
-execute if entity @s[type=creeper] run function gm4_combat_expanded:mob/init/mob_type/creeper
-execute if entity @s[type=slime] run function gm4_combat_expanded:mob/init/mob_type/slime
-execute if entity @s[type=magma_cube] run function gm4_combat_expanded:mob/init/mob_type/slime
-execute if entity @s[type=enderman] run function gm4_combat_expanded:mob/init/mob_type/enderman
-execute if entity @s[type=phantom] run function gm4_combat_expanded:mob/init/mob_type/phantom
-execute if entity @s[type=wither_skeleton] run function gm4_combat_expanded:mob/init/mob_type/wither_skeleton
-execute if entity @s[type=piglin] run function gm4_combat_expanded:mob/init/mob_type/piglin
-execute if entity @s[type=pillager] run function gm4_combat_expanded:mob/init/mob_type/pillager
-execute if entity @s[type=vindicator] run function gm4_combat_expanded:mob/init/mob_type/vindicator
-execute if entity @s[type=zombified_piglin] run function gm4_combat_expanded:mob/init/mob_type/zombified_piglin
-execute if entity @s[type=hoglin] run function gm4_combat_expanded:mob/init/mob_type/hoglin
-execute if entity @s[type=#gm4_combat_expanded:basic_modifiers_only] run function gm4_combat_expanded:mob/init/mob_type/other
+function gm4_combat_expanded:mob/init/mob_type
 
 # heal to max health
 effect give @s[type=#gm4_combat_expanded:undead] instant_damage 1 20 true

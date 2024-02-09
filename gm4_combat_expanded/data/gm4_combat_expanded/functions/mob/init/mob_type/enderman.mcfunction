@@ -1,7 +1,7 @@
 # calculate modifiers for newly spawned enderman
 # @s = enderman
 # at @s
-# run from mob/init/initiate
+# run from mob/init/mob_type
 
 # base stat nerf
 attribute @s[predicate=!gm4_combat_expanded:mob/modifier/the_end] generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -2 add

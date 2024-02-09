@@ -3,6 +3,10 @@
 # at unspecified
 # run from player/process (if player has just (re)spawned)
 
+# disable modifiers 
+scoreboard players set @s gm4_ce_burning.duration 0
+scoreboard players reset @s gm4_ce_burning.level
+
 # update death_mult
 # multiply death_mult score by 0.75, then add 20
 scoreboard players operation @s gm4_ce_death_mult *= #75 gm4_ce_data

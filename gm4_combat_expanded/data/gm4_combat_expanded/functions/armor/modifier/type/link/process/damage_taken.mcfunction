@@ -21,5 +21,8 @@ tag @s add gm4_ce_target
 execute unless score $link_health gm4_ce_data matches 1.. as @a[tag=gm4_ce_linked.damaged,distance=0.01..] run function gm4_combat_expanded:armor/modifier/type/link/process/death
 tag @s remove gm4_ce_target
 
+# stop nat regen for at least a tick
+scoreboard players set @a[tag=gm4_ce_linked.damaged] gm4_ce_natural_regen_damage 1
+
 # remove tag from damaged players
 tag @a remove gm4_ce_linked.damaged

@@ -1,7 +1,7 @@
 # calculate modifiers for newly spawned creeper
 # @s = creeper
 # at @s
-# run from mob/init/initiate
+# run from mob/init/mob_type
 
 # base stat nerf
 attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -4 add
@@ -27,7 +27,7 @@ execute if score $patrol_leader gm4_ce_data matches 1 run enchant @s piercing
 # patrolling
 execute if score $patrolling gm4_ce_data matches 1 run scoreboard players set $mob_speed gm4_ce_data 32
 # raider
-scoreboard players set $difficulty_add gm4_ce_data 3
+scoreboard players set $difficulty_add gm4_ce_data 4
 scoreboard players operation $difficulty_add gm4_ce_data *= $wave gm4_ce_data
 scoreboard players operation $difficulty gm4_ce_data += $difficulty_add gm4_ce_data
 

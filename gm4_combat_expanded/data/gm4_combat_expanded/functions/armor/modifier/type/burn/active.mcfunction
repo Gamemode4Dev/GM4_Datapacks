@@ -3,6 +3,12 @@
 # at @s
 # run from armor/modifier/type/burn/clock
 
+# stop effect if player is no longer wearing the armor
+scoreboard players set @s[predicate=!gm4_combat_expanded:modified_armor/burn] gm4_ce_burning.duration 0
+scoreboard players reset @s[scores={gm4_ce_burning.duration=0}] gm4_ce_burning.level
+execute if score @s gm4_ce_burning.duration matches 0 run return 0
+
+# keep clock going
 scoreboard players set $keep_tick.burn gm4_ce_data 1
 
 # reduce duration

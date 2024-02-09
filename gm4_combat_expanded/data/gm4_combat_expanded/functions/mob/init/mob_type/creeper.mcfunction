@@ -1,7 +1,7 @@
 # calculate modifiers for newly spawned creeper
 # @s = creeper
 # at @s
-# run from mob/init/initiate
+# run from mob/init/mob_type
 
 # base stat nerf
 attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -5 add

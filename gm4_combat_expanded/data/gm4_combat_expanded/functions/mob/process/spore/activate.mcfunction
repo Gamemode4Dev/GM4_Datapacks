@@ -13,10 +13,10 @@ execute store result score $spore_count gm4_ce_data run data get entity @s Item.
 execute store result score $generation gm4_ce_data run data get entity @s Item.tag.gm4_ce_spore.generation
 
 # spawn up to 4 spore zombies
-summon zombie ~ ~ ~ {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}
-execute if score $spore_count gm4_ce_data matches 2.. run summon zombie ~.01 ~ ~-.03 {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}
-execute if score $spore_count gm4_ce_data matches 3.. run summon zombie ~.04 ~ ~.02 {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}
-execute if score $spore_count gm4_ce_data matches 4.. run summon zombie ~-0.3 ~ ~.04 {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}
+execute align xz run summon zombie ~ ~ ~ {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}
+execute if score $spore_count gm4_ce_data matches 2.. align xz run summon zombie ~.01 ~ ~-.03 {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}
+execute if score $spore_count gm4_ce_data matches 3.. align xz run summon zombie ~.04 ~ ~.02 {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}
+execute if score $spore_count gm4_ce_data matches 4.. align xz run summon zombie ~-0.3 ~ ~.04 {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}
 execute if entity @s[nbt={Item:{id:"minecraft:cherry_leaves"}}] run tag @e[type=zombie,tag=gm4_ce_spore_mob,distance=..1] add gm4_ce_spore_zombie.cherry
 
 # vfx
