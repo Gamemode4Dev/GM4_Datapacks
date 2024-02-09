@@ -117,7 +117,7 @@
                     "translate": "attribute.modifier.plus.1",
                     "with": [
                       {
-                        "text": "3.5"
+                        "text": "0.75"
                       },
                       {
                         "translate": "attribute.name.generic.attack_speed"
@@ -161,7 +161,7 @@
                     "translate": "attribute.modifier.plus.1",
                     "with": [
                       {
-                        "text": "3.5"
+                        "text": "0.75"
                       },
                       {
                         "translate": "attribute.name.generic.movement_speed"
@@ -205,7 +205,7 @@
                     "translate": "attribute.modifier.plus.1",
                     "with": [
                       {
-                        "text": "4"
+                        "text": "1"
                       },
                       {
                         "translate": "attribute.name.generic.attack_speed"
@@ -249,7 +249,7 @@
                     "translate": "attribute.modifier.plus.1",
                     "with": [
                       {
-                        "text": "4"
+                        "text": "1"
                       },
                       {
                         "translate": "attribute.name.generic.movement_speed"
@@ -293,7 +293,7 @@
                     "translate": "attribute.modifier.plus.1",
                     "with": [
                       {
-                        "text": "4.5"
+                        "text": "1.25"
                       },
                       {
                         "translate": "attribute.name.generic.attack_speed"
@@ -337,7 +337,7 @@
                     "translate": "attribute.modifier.plus.1",
                     "with": [
                       {
-                        "text": "4.5"
+                        "text": "1.25"
                       },
                       {
                         "translate": "attribute.name.generic.movement_speed"
@@ -381,7 +381,7 @@
                     "translate": "attribute.modifier.plus.1",
                     "with": [
                       {
-                        "text": "5"
+                        "text": "1.5"
                       },
                       {
                         "translate": "attribute.name.generic.attack_speed"
@@ -425,7 +425,7 @@
                     "translate": "attribute.modifier.plus.1",
                     "with": [
                       {
-                        "text": "5"
+                        "text": "1.5"
                       },
                       {
                         "translate": "attribute.name.generic.movement_speed"
