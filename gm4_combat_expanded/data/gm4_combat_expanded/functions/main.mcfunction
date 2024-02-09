@@ -16,11 +16,11 @@ execute as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water 
 # process canine set wolves
 execute as @e[type=wolf,tag=gm4_ce_wolf] run function gm4_combat_expanded:armor/modifier/type/canine/wolf_process
 # sword_ring
-execute unless score $keep_tick.sword_ring gm4_ce_data matches 1 if entity @a[predicate=gm4_combat_expanded:modified_armor/sword_ring,gamemode=!spectator] run schedule function gm4_combat_expanded:armor/modifier/type/sword_ring/clock 1t
+execute unless score $keep_tick.sword_ring gm4_ce_keep_tick matches 1 if entity @a[predicate=gm4_combat_expanded:modified_armor/sword_ring,gamemode=!spectator] run schedule function gm4_combat_expanded:armor/modifier/type/sword_ring/clock 1t
 # beacon
-execute unless score $keep_tick.beacon gm4_ce_data matches 1 if entity @a[predicate=gm4_combat_expanded:modified_armor/beacon,gamemode=!spectator] run schedule function gm4_combat_expanded:armor/modifier/type/beacon/clock 1t
+execute unless score $keep_tick.beacon gm4_ce_keep_tick matches 1 if entity @a[predicate=gm4_combat_expanded:modified_armor/beacon,gamemode=!spectator] run schedule function gm4_combat_expanded:armor/modifier/type/beacon/clock 1t
 # burn
-execute unless score $keep_tick.burn gm4_ce_data matches 1 if entity @a[scores={gm4_ce_burning.duration=1..}] run schedule function gm4_combat_expanded:armor/modifier/type/burn/clock 1t
+execute unless score $keep_tick.burn gm4_ce_keep_tick matches 1 if entity @a[scores={gm4_ce_burning.duration=1..}] run schedule function gm4_combat_expanded:armor/modifier/type/burn/clock 1t
 
 # | Weapons
 # pierce

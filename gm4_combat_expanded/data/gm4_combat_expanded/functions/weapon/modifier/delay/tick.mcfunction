@@ -3,7 +3,7 @@
 # at @s
 # run from weapon/modifier/delay/clock
 
-scoreboard players set $keep_tick.delay gm4_ce_data 1
+scoreboard players set $keep_tick.delay gm4_ce_keep_tick 1
 
 # progress
 scoreboard players add @s gm4_ce_t_delay 1

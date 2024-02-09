@@ -9,7 +9,7 @@ scoreboard players reset @s[scores={gm4_ce_burning.duration=0}] gm4_ce_burning.l
 execute if score @s gm4_ce_burning.duration matches 0 run return 0
 
 # keep clock going
-scoreboard players set $keep_tick.burn gm4_ce_data 1
+scoreboard players set $keep_tick.burn gm4_ce_keep_tick 1
 
 # reduce duration
 scoreboard players remove @s gm4_ce_burning.duration 1

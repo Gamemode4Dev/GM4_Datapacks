@@ -5,6 +5,6 @@
 # schedule from weapon/modifier/lightning/add_score
 # schedule from here
 
-scoreboard players set $keep_tick.lightning gm4_ce_data 0
+scoreboard players set $keep_tick.lightning gm4_ce_keep_tick 0
 execute as @e[scores={gm4_ce_lightning_charge=1..}] at @s run function gm4_combat_expanded:weapon/modifier/lightning/tick
-execute if score $keep_tick.lightning gm4_ce_data matches 1 run schedule function gm4_combat_expanded:weapon/modifier/lightning/clock 1t
+execute if score $keep_tick.lightning gm4_ce_keep_tick matches 1 run schedule function gm4_combat_expanded:weapon/modifier/lightning/clock 1t

@@ -11,5 +11,5 @@ execute as @a[tag=gm4_ce_wearing_archer,scores={gm4_ce_used_bow=1..}] at @s run 
 scoreboard players reset @a gm4_ce_used_bow
 scoreboard players reset @a gm4_ce_used_crossbow
 
-execute store success score $keep_tick.archer gm4_ce_data if entity @a[tag=gm4_ce_wearing_archer]
-execute if score $keep_tick.archer gm4_ce_data matches 1 run schedule function gm4_combat_expanded:armor/modifier/type/archer/clock 1t
+execute store success score $keep_tick.archer gm4_ce_keep_tick if entity @a[tag=gm4_ce_wearing_archer]
+execute if score $keep_tick.archer gm4_ce_keep_tick matches 1 run schedule function gm4_combat_expanded:armor/modifier/type/archer/clock 1t

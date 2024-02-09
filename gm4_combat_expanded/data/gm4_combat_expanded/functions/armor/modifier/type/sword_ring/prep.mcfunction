@@ -3,7 +3,7 @@
 # at @s
 # run from armor/modifier/type/sword_ring/clock
 
-scoreboard players set $keep_tick.sword_ring gm4_ce_data 1
+scoreboard players set $keep_tick.sword_ring gm4_ce_keep_tick 1
 
 tag @s add gm4_ce_target
 
