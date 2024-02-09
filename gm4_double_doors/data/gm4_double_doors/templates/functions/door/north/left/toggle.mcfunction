@@ -18,5 +18,5 @@ execute positioned ~ ~2 ~ if block ~ ~ ~ minecraft:{{ material_name }}_trapdoor[
 
 # prepare automatic un-toggling after player walked through, delete preexisting auto toggle markers
 execute align xyz run kill @e[type=marker,tag=gm4_double_doors_auto_toggle_marker,dx=0]
-execute unless score $triggered_by_auto_toggle gm4_double_doors_data matches 1.. summon marker run function gm4_double_doors:{{ material_name }}/door/north/left/initialize_auto_toggle_marker
-execute if score $triggered_by_auto_toggle gm4_double_doors_data matches 1.. run scoreboard players set $play_sound gm4_double_doors_data 1
+execute unless entity @s[tag=gm4_block_auto_toggle] unless score $triggered_by_auto_toggle gm4_double_doors_data matches 1.. summon marker run function gm4_double_doors:{{ material_name }}/door/north/left/initialize_auto_toggle_marker
+execute unless entity @s[tag=gm4_block_auto_toggle] if score $triggered_by_auto_toggle gm4_double_doors_data matches 1.. run scoreboard players set $play_sound gm4_double_doors_data 1
