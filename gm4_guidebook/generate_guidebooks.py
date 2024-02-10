@@ -22,7 +22,7 @@ from beet import (
 from beet.contrib.vanilla import Vanilla
 from beet.core.utils import TextComponent
 from PIL import Image
-from pydantic import BaseModel
+from pydantic.v1 import BaseModel
 
 from gm4.plugins.player_heads import Skin
 

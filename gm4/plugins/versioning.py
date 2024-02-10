@@ -1,7 +1,7 @@
 from beet import Context, Function, FunctionTag, PluginOptions, configurable
 from beet.contrib.rename_files import rename_files
 from beet.contrib.find_replace import find_replace
-from pydantic import Field, Extra
+from pydantic.v1 import Field, Extra
 import warnings
 from gm4.utils import Version, NoneAttribute
 import gm4.plugins.manifest # for ManifestCacheModel; a runtime circular dependency
