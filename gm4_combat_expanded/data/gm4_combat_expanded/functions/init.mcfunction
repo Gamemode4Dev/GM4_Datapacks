@@ -71,6 +71,8 @@ scoreboard objectives add gm4_ce_burning.level dummy
 scoreboard objectives add gm4_ce_burning.duration dummy
 scoreboard objectives add gm4_ce_armor armor
 
+scoreboard objectives add gm4_ce_boss dummy
+
 scoreboard objectives add gm4_ce_keep_tick dummy
 scoreboard players reset * gm4_ce_keep_tick
 
