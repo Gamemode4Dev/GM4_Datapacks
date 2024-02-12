@@ -1,5 +1,6 @@
 # @template gm4:test_platform
 # @dummy ~ ~1 ~
+# @optional
 
 setblock ~1 ~1 ~1 rail
 loot give @s loot gm4_liquid_minecarts:items/liquid_minecart
