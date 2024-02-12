@@ -13,6 +13,7 @@ pipeline:
       - gm4_guidebook.generate_guidebooks.load_page_data
       - gm4_guidebook.generate_guidebooks.load_custom_recipes
       - gm4.plugins.test.load_tests
+      - gm4.plugins.test.skip_mecha_lint
     pipeline:
       - gm4.plugins.write_mcmeta
     meta:
