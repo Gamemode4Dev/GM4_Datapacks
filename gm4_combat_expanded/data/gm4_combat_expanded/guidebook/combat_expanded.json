@@ -309,7 +309,7 @@
         [
           "\n",
           {
-            "translate": "text.gm4.guidebook.combat_expanded.burned_modifier",
+            "translate": "text.gm4.guidebook.combat_expanded.deep_modifier",
             "fallback": "Mobs spawned in %s are more tougher to kill.\n\nDrowneds are more powerful as well.",
             "with": [
               {
@@ -549,7 +549,7 @@
         [
           "\n",
           {
-            "translate": "text.gm4.guidebook.combat_expanded.burned_modifier",
+            "translate": "text.gm4.guidebook.combat_expanded.reef_modifier",
             "fallback": "Drowneds spawned in %s are much more powerful and more frequently carry tridents.",
             "with": [
               {
@@ -1476,7 +1476,7 @@
               "contents": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.poised_modifier",
-                  "fallback": "- Lower attack damage, but higher armor\n- Has an opposite effect when health is above 50%"
+                  "fallback": "- Higher attack damage, but lower armor\n- Has an opposite effect when health is below 50%"
                 },
                 "\n",
                 {
