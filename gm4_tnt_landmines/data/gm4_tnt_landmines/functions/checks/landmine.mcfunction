@@ -1,10 +1,6 @@
 # @s = tnt landmine
 # run from main
 
-# keep lit
-# 1.18 NOTE; This 16->17 backward compatibility may be removed.
-data merge entity @s {HasVisualFire:1}
-
 #arming
 execute as @s[tag=!gm4_tnt_armed] unless entity @e[type=area_effect_cloud,tag=gm4_mine_disarmed,distance=..0.2] run tag @s add gm4_tnt_armed
 
