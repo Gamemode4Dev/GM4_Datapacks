@@ -1,8 +1,8 @@
 from beet import Context, PluginOptions, configurable
 from beet.contrib.find_replace import find_replace
 from beet.contrib.rename_files import rename_files
-from pydantic import Extra
-import nbtlib
+from pydantic.v1 import Extra
+import nbtlib # type: ignore
 import re
 
 
@@ -39,6 +39,6 @@ def structure_deep_rename(ctx: Context, find_namespace: str, repl_namespace: str
 
     # rename structure-file references
     for s in ctx.data.structures:
-        blocks = ctx.data.structures[s].data["blocks"].snbt()
-        updated_blocks_data = re.sub(f"{find_namespace}:([a-z0-9_/]+)", f"{repl_namespace}:\\1", blocks)
-        ctx.data.structures[s].data["blocks"] = nbtlib.parse_nbt(updated_blocks_data)
+        blocks = ctx.data.structures[s].data["blocks"].snbt() # type: ignore
+        updated_blocks_data = re.sub(f"{find_namespace}:([a-z0-9_/]+)", f"{repl_namespace}:\\1", blocks) # type: ignore
+        ctx.data.structures[s].data["blocks"] = nbtlib.parse_nbt(updated_blocks_data) # type: ignore
