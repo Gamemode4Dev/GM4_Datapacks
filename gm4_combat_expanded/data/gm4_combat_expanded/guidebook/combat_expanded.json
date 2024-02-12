@@ -663,7 +663,7 @@
         [
           "\n",
           {
-            "translate": "text.gm4.guidebook.combat_expanded.toxic_modifier",
+            "translate": "text.gm4.guidebook.combat_expanded.toxic_modifier_2",
             "fallback": "Mobs spawned in %s areas are weaker, but apply weakness, hunger, and poison.\n\nSpider clusters can be found.",
             "with": [
               {

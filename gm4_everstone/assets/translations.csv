@@ -1,8 +1,8 @@
 key,en_us
 item.gm4.everstone,Everstone
-advancement.gm4.everstone.title,Everstone
+advancement.gm4.everstone.title,Evolution Halt
 advancement.gm4.everstone.description,Use an everstone to prevent a mob from aging
-text.gm4.guidebook.module_desc.everstone,"Collect_Everstones during full moons and use them on baby mobs to stop them from aging! But watch out, some other mobs might start aging, too!"
+text.gm4.guidebook.module_desc.everstone,"Collect Everstones during full moons and use them on baby mobs to stop them from aging! But watch out, some other mobs might start aging, too!"
 text.gm4.guidebook.everstone.description,Everstones can prevent mobs from aging.\n\nSome mobs that don't normally age now have the ability to evolve into other mobs.
 text.gm4.guidebook.everstone.obtaining,Everstones can be obtained by mining stone during a full moon.\n\nStone mined with Silk Touch will never drop an everstone.
 text.gm4.guidebook.everstone.usage,"Dropping an everstone on a mob will prevent it from aging.\n\nZombies, Skeletons, Slimes, Strays, Piglins, Guardians, and Vindicators can evolve under specific conditions."

@@ -60,7 +60,7 @@ text.gm4.guidebook.arborenda_shamir.usage,"The Arborenda Shamir is found on Bari
 text.gm4.guidebook.module_desc.defuse_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.defuse_shamir.description,Defuse prevents nearby Creepers from exploding.
 text.gm4.guidebook.defuse_shamir.usage,"The Defuse Shamir is found on Aluminium Bands. It can be placed onto armour.\n\nNearby creepers will become defused, and will never be able to explode."
-text.gm4.guidebook.module_desc.ender_bolt shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.ender_bolt_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.ender_bolt_shamir.description,Ender Bolt creates a damaging wither chain when attacking a mob.
 text.gm4.guidebook.ender_bolt_shamir.usage,"The Ender Bolt Shamir is found on Thorium Bands. It can be placed onto swords and tridents.\n\nA mob hit will Ender Bolt will wither away, passing the effect to other nearby mobs."
 text.gm4.guidebook.module_desc.forterra_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
@@ -76,7 +76,7 @@ text.gm4.guidebook.module_desc.infinitas_shamir,"Introduces 4 custom ores, 6 cus
 text.gm4.guidebook.infinitas_shamir.description,Infinitas items are infinite liquid sources. It also pulls mobs and items towards the user.
 text.gm4.guidebook.infinitas_shamir.usage,The Infinitas Shamir is found on Curie's Bismium Bands. It can be placed onto empty or filled buckets.\n\nInfinitas buckets can be used infinitely and will never get filled (if empty) or drained (if full).
 text.gm4.guidebook.infinitas_shamir.vacuum,Holding an empty infinitas bucket will attract mobs and items in an 11x11 area.\n\nMobs affected by infinitas will be on cooldown until the user moves away or deselects the bucket.
-text.gm4.guidebook.module_desc.metallurgy,"Introduces_4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.metallurgy,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.metallurgy.description,"Custom abilities, called shamirs, can be added to tools and armour, like enchantments.\n\nShamirs are exclusive, meaning only one can be applied to an item at a time."
 text.gm4.guidebook.metallurgy.section.lump_obtaining,Obtaining Ore
 text.gm4.guidebook.metallurgy.lump_obtaining,"Blowing up stone-type blocks with tnt will drop metal ore lumps.\n\nEach of the four stone types (stone, granite, andesite, and diorite) drop a different metal lump."

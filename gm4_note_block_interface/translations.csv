@@ -1,3 +1,3 @@
 key,en_us
-text.gm4.guidebook.module_desc.note_block interface,Adds a neat interface to improve your musical skills!
+text.gm4.guidebook.module_desc.note_block_interface,Adds a neat interface to improve your musical skills!
 text.gm4.guidebook.note_block_interface.description,Tuning or playing a note block will show its note above it.\n\nSneaking while tuning will cause the pitch to go down instead of up.

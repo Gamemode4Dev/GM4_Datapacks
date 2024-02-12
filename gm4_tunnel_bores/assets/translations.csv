@@ -2,7 +2,7 @@ key,en_us
 item.gm4.minecart.bore,Minecart with Piston
 advancement.gm4.tunnel_bores.title,"Isn't It ""Groundbreaking""?"
 advancement.gm4.tunnel_bores.description,Obtain a Minecart with Piston
-text.gm4.guidebook.module_desc.tunnel_bores,"Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3â¨‰3 tunnels, and even lay rails behind themselves."
+text.gm4.guidebook.module_desc.tunnel_bores,"Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3\u2a093 tunnels, and even lay rails behind themselves."
 text.gm4.guidebook.tunnel_bores.description,"Tunnel Bores can be crafted to aid in excavation. Piston Minecarts will break blocks and place rails, moving forward.\n\nThey can be crafted in a Custom Crafter."
 text.gm4.guidebook.tunnel_bores.crafting,Tunnel bores can be crafted as follows:
 text.gm4.guidebook.shapeless,Recipe is shapeless

@@ -1,3 +1,3 @@
 key,en_us
-text.gm4.guidebook.module_desc.cement_mixers,"Allows Liquid Tanks to convert Concrete Powder items into Concrete, at the cost of â…“ of a Bucket of Water per Concrete Powder."
+text.gm4.guidebook.module_desc.cement_mixers,"Allows Liquid Tanks to convert Concrete Powder items into Concrete, at the cost of ⅓ of a Bucket of Water per Concrete Powder."
 text.gm4.guidebook.cement_mixers.usage,A Water Tank can convert concrete powder into concrete and dirt into mud when placed inside the tank.\n\nThis uses 1/3 of a bucket of water.

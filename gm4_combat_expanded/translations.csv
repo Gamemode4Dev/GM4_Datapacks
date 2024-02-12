@@ -129,7 +129,7 @@ text.gm4.guidebook.combat_expanded.reef,warm oceans
 text.gm4.guidebook.combat_expanded.snowy,snowy
 text.gm4.guidebook.combat_expanded.snowy_modifier,"Mobs spawned in %s areas are slower, but have more health.\n\nMany attacks will apply slowness."
 text.gm4.guidebook.combat_expanded.toxic,toxic
-text.gm4.guidebook.combat_expanded.toxic_modifier,"Mobs spawned in %s areas are weaker, but apply weakness, hunger, and poison.\n\nSpider clusters can be found."
+text.gm4.guidebook.combat_expanded.toxic_modifier,"- Applies poison to the attacker"
 text.gm4.guidebook.combat_expanded.section.weapons_and_armor,Special Gear
 text.gm4.guidebook.combat_expanded.drops,"Mobs can spawn with special gear.\n\nWeapons have a 20% drop chance and armour has a 8.5% drop chance.\n\nWhen dropped, the gear will need to be identified."
 text.gm4.guidebook.combat_expanded.common_weapons,The following modifiers can be commonly found on weapons:
@@ -178,7 +178,7 @@ text.gm4.guidebook.combat_expanded.overload_modifier,"- Gain wither\n- Higher at
 text.gm4.guidebook.combat_expanded.low_health_armor,The following armor modifiers are activated while below half health:
 text.gm4.guidebook.combat_expanded.thorns_modifier,- Thorns enchantment is greatly increased\n- Only works if the armor is already enchanted with thorns
 text.gm4.guidebook.combat_expanded.second_wind_modifier,- Grants slow regeneration
-text.gm4.guidebook.combat_expanded.poised_modifier,"- Lower attack damage, but higher armor\n- Has an opposite effect when health is above 50%"
+text.gm4.guidebook.combat_expanded.poised_modifier,"- Higher attack damage, but lower armor\n- Has an opposite effect when health is below 50%"
 text.gm4.guidebook.combat_expanded.soothe_modifier,- AOE of healing effect and regeneration\n- Can only happen once per day
 text.gm4.guidebook.combat_expanded.high_health_armor,The following armor modifiers are activated while above half health:
 text.gm4.guidebook.combat_expanded.half_modifier,- Damage is dealt until wearer is at half health\n- Resistance III when equipped
@@ -190,3 +190,6 @@ text.gm4.guidebook.combat_expanded.lunar_modifier,"- Higher attack damage, attac
 text.gm4.guidebook.combat_expanded.gloom_modifier,"- AOE of slowness, but wearer is unaffected"
 text.gm4.guidebook.combat_expanded.nocturnal_modifier,"- Higher attack damage, attack speed, and movement speed"
 text.gm4.guidebook.combat_expanded.shadow_modifier,- Resistance while wearer is not hungry\n- Taking damage applies high hunger
+text.gm4.guidebook.combat_expanded.deep_modifier,Mobs spawned in %s are more tougher to kill.\n\nDrowneds are more powerful as well.
+text.gm4.guidebook.combat_expanded.reef_modifier,Drowneds spawned in %s are much more powerful and more frequently carry tridents.
+text.gm4.guidebook.combat_expanded.toxic_modifier_2,"Mobs spawned in %s areas are weaker, but apply weakness, hunger, and poison.\n\nSpider clusters can be found."

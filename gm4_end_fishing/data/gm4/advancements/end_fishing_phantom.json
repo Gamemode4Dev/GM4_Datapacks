@@ -10,7 +10,7 @@
     },
     "description": {
       "translate": "advancement.gm4.end_fishing_phantom.description",
-      "fallback": "Perhaps it's a manta ray",
+      "fallback": "Fish up a phantom from the end void",
       "color": "gray"
     }
   },
