@@ -1,6 +1,6 @@
 key,en_us
 advancement.gm4.phantom_scarecrows.title,Not so smart defenses
 advancement.gm4.phantom_scarecrows.description,Get hit by a Phantom Scarecrow
-text.gm4.guidebook.module_desc.Phantom Scarecrows,Set up Scarecrows that shoot homing rockets at Phantoms!
+text.gm4.guidebook.module_desc.phantom_scarecrows,Set up Scarecrows that shoot homing rockets at Phantoms!
 text.gm4.guidebook.phantom_scarecrows.creation,Placing a skull or zombie head on an armour stand and equipping it with a cursed chestplate will transform it into a phantom scarecrow.
 text.gm4.guidebook.phantom_scarecrows.usage,"Phantom scarecrows will shoot fireworks at phantoms above them.\n\nPhantoms shot by these projectiles will instantly die, but if the firework projectile hits a block, it will explode."

@@ -1,7 +1,7 @@
 key,en_us
 container.gm4.auto_crafter,Set Recipe Shape
 block.gm4.auto_crafter,Auto Crafter
-text.gm4.guidebook.module_desc.Auto Crafting,"Create an auto crafter to fully automate crafting! With this module installed, all vanilla crafting recipes are added to the GM4 Custom Crafter."
+text.gm4.guidebook.module_desc.auto_crafting,"Create an auto crafter to fully automate crafting! With this module installed, all vanilla crafting recipes are added to the GM4 Custom Crafter."
 text.gm4.guidebook.auto_crafting.description,An auto crafter can be used to automatically craft items normally crafted in custom crafters.
 text.gm4.guidebook.auto_crafting.crafting,Auto crafters can be crafted in a custom crafter with the following recipe:
 text.gm4.guidebook.auto_crafting.multi_block,"The auto crafter needs a 3x3x3 multi-block structure.\n\nPlace the auto crafter, then a piston behind it, leaving a space for the head to extend. Then place two glass blocks on the other two sides to make a cross."

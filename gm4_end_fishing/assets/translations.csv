@@ -76,6 +76,6 @@ advancement.gm4.end_fishing_phantom.title,That's Not a Fish!
 advancement.gm4.end_fishing_phantom.description,Fish up a phantom from the end void
 advancement.gm4.end_fishing_swords.title,Master of the Swords
 advancement.gm4.end_fishing_swords.description,Retrieve all of the lost swords from the void
-text.gm4.guidebook.module_desc.End Fishing,"Catch rare loot by fishing in the end void! The void holds many riches, from End City loot and Elytra to weapons that once belonged to explorers time forgot, collect them all!"
+text.gm4.guidebook.module_desc.end_fishing,"Catch rare loot by fishing in the end void! The void holds many riches, from End City loot and Elytra to weapons that once belonged to explorers time forgot, collect them all!"
 text.gm4.guidebook.end_fishing.description,Casting a fishing rod into the end void will allow one to fish up loot from the void.\n\nLoot is biome dependent.
 text.gm4.guidebook.end_fishing.end_phantom,"End Phantoms can be fished up from the end void.\n\nThey are larger and stronger than normal phantoms, but have a chance to drop a broken elytra upon death."

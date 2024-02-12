@@ -9,7 +9,7 @@ item.gm4.better_armour_stands.copied_armor_stand.property.no_gravity,No gravity
 item.gm4.better_armour_stands.copied_armor_stand.property.small,Small
 tooltip.gm4.better_armour_stands.invalid_code,Invalid code
 tooltip.gm4.better_armour_stands.invalid_right_click_location,Right click the joint of a part to start editing
-text.gm4.guidebook.module_desc.Better Armour Stands,Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands.
+text.gm4.guidebook.module_desc.better_armour stands,Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands.
 text.gm4.guidebook.better_armour_stands.description,"Armour stands will have arms by default, and can be altered with a book and quill.\n\nThis allows one to create custom statues and interesting displays."
 text.gm4.guidebook.better_armour_stands.applying,"To modify an armour stand, write one of the codes in a book and quill, then use it on the armour stand.\n\nMultiple codes can be written on separate pages to apply multiple modifiers at once."
 text.gm4.guidebook.better_armour_stands.toggle_codes,The following codes will toggle the specific feature:

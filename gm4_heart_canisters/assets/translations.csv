@@ -7,7 +7,7 @@ advancement.gm4.heart_canisters.tier_1.title,Can't Buy Me Love
 advancement.gm4.heart_canisters.tier_1.description,Craft a tier 1 Heart Canister
 advancement.gm4.heart_canisters.tier_2.title,Love Is All You Need
 advancement.gm4.heart_canisters.tier_2.description,Craft a tier 2 Heart Canister
-text.gm4.guidebook.module_desc.Heart Canisters,Introduces two tiers of pricey canisters that increase your health when carried.
+text.gm4.guidebook.module_desc.heart_canisters,Introduces two tiers of pricey canisters that increase your health when carried.
 text.gm4.guidebook.heart_canisters.description,Heart Canisters can be used to increase health. Up to 20 additional hearts can be obtained.\n\nThey can be crafted in a Custom Crafter using golden apples and a powerful core.
 text.gm4.guidebook.heart_canisters.crafting_tier_1,The recipes for a heart canister is as follows:
 text.gm4.guidebook.heart_canisters.usage_tier_1,Tier 2 heart canisters require five tier 1 canisters also in the inventory to function.

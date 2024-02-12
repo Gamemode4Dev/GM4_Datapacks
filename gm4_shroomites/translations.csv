@@ -1,4 +1,4 @@
 key,en_us
-text.gm4.guidebook.module_desc.Shroomites,Ever wondered why all the Mooshrooms are locked up on islands? This Module makes Mooshrooms spread mycelium and mushrooms wherever they go.
+text.gm4.guidebook.module_desc.shroomites,Ever wondered why all the Mooshrooms are locked up on islands? This Module makes Mooshrooms spread mycelium and mushrooms wherever they go.
 text.gm4.guidebook.shroomites.description,"Mooshrooms have a rare chance to spawn a shroomite mushroom.\n\nA shroomite will spawn spores that spread mycelium to nearby dirt, and convert cows to mooshrooms."
 text.gm4.guidebook.shroomites.spreading,"Spores will float in the air and can produce new shroomites.\n\nBlocks with collision, water, lava, cobwebs, powdered snow, and sunflowers can block shroomite spores from spreading."

@@ -1,6 +1,6 @@
 key,en_us,de_de,en_ws
 item.gm4.apple_tree_sapling,Apple Tree Sapling,,Ye Small Apple Tree
-text.gm4.guidebook.module_desc.Apple Trees,Introduces fruit-bearing apple trees! Trade for apple saplings with wandering traders or find them growing in forests!,,
+text.gm4.guidebook.module_desc.apple_trees,Introduces fruit-bearing apple trees! Trade for apple saplings with wandering traders or find them growing in forests!,,
 text.gm4.guidebook.apple_trees.leaf_changes,Apples do not drop from oak or dark oak trees. Another source of apples must be discovered.,,
 text.gm4.guidebook.apple_trees.obtaining_apples,"Apple trees are found naturally occurring in forest biomes.\n\nWandering traders will also sell apple tree saplings.\n\nWhen planted, these saplings grow into apple trees.",,
 text.gm4.guidebook.apple_trees.golden_apple_trees,"Golden apple trees can also be found in forests.\n\nThese trees don't drop saplings, and cannot be replanted.\n\nThey also have a golden root which grows through stone and dirt.",,

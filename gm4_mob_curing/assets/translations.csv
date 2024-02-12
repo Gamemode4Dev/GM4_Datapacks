@@ -3,7 +3,7 @@ advancement.gm4.mob_curing.title,Witch Doctor
 advancement.gm4.mob_curing.description.1,Cure a Witch into a Potion Cleric
 advancement.gm4.mob_curing.description.2,\u266b Ooh ee ooh ah ah ting tang walla walla bing bang \u266b
 entity.gm4.potion_cleric,Potion Cleric§
-text.gm4.guidebook.module_desc.Mob Curing,"Revert mooshrooms, pigmen and witches back to their previous forms."
+text.gm4.guidebook.module_desc.mob_curing,"Revert mooshrooms, pigmen and witches back to their previous forms."
 text.gm4.guidebook.mob_curing.description,"Similar to Zombie curing, some mobs can be reverted to previous forms.\n\nThe curing process requires one to splash the mob with a potion and drop an item at its feet."
 text.gm4.guidebook.mob_curing.conversions,Zomb. Piglin -> Pig\n - Swiftness\n - Golden Carrot\n\nZomb. Piglin -> Piglin\n  OR Zoglin -> Hoglin\n - Weakness\n - Golden Carrot\n\nWitch -> Potion Cleric\n - Weakness\n - Golden Apple
 text.gm4.guidebook.mob_curing.conversions_1,Evoker -> Pillager\n - Slowness IV\n - Crossbow\n\nIllusioner -> Evoker\n - Swiftness\n - Totem of Undying\n\nCow -> Mooshroom\n - Slowness\n - Red Mushroom\n - Brown Mushroom

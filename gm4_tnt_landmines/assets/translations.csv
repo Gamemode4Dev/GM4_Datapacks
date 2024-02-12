@@ -7,7 +7,7 @@ item.gm4.tnt_landmine.disguised,Disguised as
 item.gm4.tnt_landmine.invisible,Invisible
 item.gm4.tnt_landmine.upgrade,Soft Defuser
 item.gm4.tnt_landmine.use,Drop to use
-text.gm4.guidebook.module_desc.TNT Landmines,"Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!"
+text.gm4.guidebook.module_desc.tnt_landmines,"Craft 'em up, throw 'em down, blow 'em up! But be careful not to blow yourself up!"
 text.gm4.guidebook.tnt_landmines.description,"Landmines can be crafted in a Custom Crafter with tnt and some redstone.\n\nWhen stepping on a landmine or breaking the block it's planted in, it will explode."
 text.gm4.guidebook.tnt_landmines.crafting,The recipe for a Landmine is as follows:
 text.gm4.guidebook.tnt_landmines.usage,"Landmines can be armed by dropping them on the ground.\n\nThey can be disabled by dropping shears or a Soft Defuser, which will cause the landmine to spray instant damage instead of exploding."

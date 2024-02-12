@@ -3,7 +3,7 @@ item.gm4.liquid_minecart,Minecart with Liquid Tank
 text.gm4.liquid_minecarts.level_report,% Full
 advancement.gm4.liquid_minecarts.title,Liquid Locomotive
 advancement.gm4.liquid_minecarts.description,Put a liquid tank on wheels
-text.gm4.guidebook.module_desc.Liquid Minecarts,Adds Liquid Tank Minecarts that allow you to move your liquids from one Liquid Tank to another.
+text.gm4.guidebook.module_desc.liquid_minecarts,Adds Liquid Tank Minecarts that allow you to move your liquids from one Liquid Tank to another.
 text.gm4.guidebook.liquid_minecarts.crafting,Combining a liquid tank and a minecart in a Custom Crafter will craft a liquid minecart.\n\nLiquid minecarts can be used to move liquids from one tank to another.
 text.gm4.guidebook.liquid_minecarts.usage,"Unlike liquid tanks, liquid minecarts cannot interact with any entities or blocks in the world.\n\nLiquid minecarts can be filled by a tank pointing into the minecart and can be drained by driving one over a tank."
 text.gm4.guidebook.liquid_minecarts.usage_1,"Similar to a tank, if a liquid minecart already has liquid in it, it will only accept the contents of tanks with the same liquid.\n\nDriving a liquid minecart over an activator rail will discard any liquid inside."

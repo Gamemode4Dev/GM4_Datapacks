@@ -1795,7 +1795,7 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
                 "text": "\n"
               }, 
               {
-                "translate": f"text.gm4.guidebook.module_desc.{book_name}", # module description
+                "translate": f"text.gm4.guidebook.module_desc.{book_id}", # module description
                 "fallback": desc,
                 "italic": True, 
                 "color": "gray"

@@ -3,5 +3,5 @@ advancement.gm4.better_fire.title,Flint 'n Stick
 advancement.gm4.better_fire.description,Fire a Flame Bow
 item.gm4.better_fire.flint,Flint
 item.gm4.better_fire.flint.lore,Charred arrowhead
-text.gm4.guidebook.module_desc.Better Fire,Spice up Minecraft's fire mechanics with this module! Flame arrows set fire when they land and burning creepers explode when low on health!
+text.gm4.guidebook.module_desc.better_fire,Spice up Minecraft's fire mechanics with this module! Flame arrows set fire when they land and burning creepers explode when low on health!
 text.gm4.guidebook.better_fire.description,"Flame arrows set the block they land on with fire, sometimes dropping the arrowhead.\n\nFire can also cause a creeper to explode as if lit by flint and steel."

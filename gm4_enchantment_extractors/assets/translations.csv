@@ -7,7 +7,7 @@ advancement.gm4.enchantment_extractors.title,Clever Enchanting
 advancement.gm4.enchantment_extractors.description,Construct an Enchantment Extractor
 advancement.gm4.enchantment_extractors.mending.title,Magical Thief
 advancement.gm4.enchantment_extractors.mending.description,Successfully extract the mending enchantment from a tool with an Enchantment Extractor
-text.gm4.guidebook.module_desc.Enchantment Extractors,"Remove enchantments from enchanted tools, armour, and weapons. But be careful, there might be unexpected side-effects."
+text.gm4.guidebook.module_desc.enchantment_extractors,"Remove enchantments from enchanted tools, armour, and weapons. But be careful, there might be unexpected side-effects."
 text.gm4.guidebook.enchantment_extractors.description,"Enchantment Extractors are used to remove enchantments from tools, weapons, and armour."
 text.gm4.guidebook.enchantment_extractors.crafting,An Enchantment Extractor can be crafted in a Custom Crafter:
 text.gm4.guidebook.enchantment extractors.unenchanting,"Placing enchanted items inside the enchantment extractor will unenchant it.\n\nWhen extracted, there is a chance to generate enchanted books containing those enchantments."

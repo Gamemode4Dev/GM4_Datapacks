@@ -54,29 +54,29 @@ item.gm4.metallurgy.bismuth_band.magenta,\u200c
 item.gm4.metallurgy.thorium_brass,Thorium Brass
 item.gm4.metallurgy.bismutite_lump,Bismutite Lump
 item.gm4.metallurgy.copper,Copper
-text.gm4.guidebook.module_desc.Arborenda Shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.arborenda_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.arborenda_shamir.description,Arborenda boosts a single swing to be able to knock down an entire tree.
 text.gm4.guidebook.arborenda_shamir.usage,"The Arborenda Shamir is found on Barium Bands. It can be placed onto axes.\n\nWhen mining a log, the entire tree will also break, taking up durability of the axe for each log broken."
-text.gm4.guidebook.module_desc.Defuse Shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.defuse_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.defuse_shamir.description,Defuse prevents nearby Creepers from exploding.
 text.gm4.guidebook.defuse_shamir.usage,"The Defuse Shamir is found on Aluminium Bands. It can be placed onto armour.\n\nNearby creepers will become defused, and will never be able to explode."
-text.gm4.guidebook.module_desc.Ender Bolt Shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.ender_bolt shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.ender_bolt_shamir.description,Ender Bolt creates a damaging wither chain when attacking a mob.
 text.gm4.guidebook.ender_bolt_shamir.usage,"The Ender Bolt Shamir is found on Thorium Bands. It can be placed onto swords and tridents.\n\nA mob hit will Ender Bolt will wither away, passing the effect to other nearby mobs."
-text.gm4.guidebook.module_desc.Forterra Shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.forterra_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.forterra_shamir.description,"Forterra causes extra raw metals, redstone, and amethyst to be found when mining stone."
 text.gm4.guidebook.forterra_shamir.usage,"The Forterra Shamir is found on Bismuth Bands. It can be placed onto pickaxes.\n\nWhen mining stone, raw copper, raw iron, raw gold, redstone, and amethyst shards will drop. Drop rates are height dependent."
-text.gm4.guidebook.module_desc.Gemini Shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.gemini_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.gemini_shamir.description,Gemini modifies breeding to always produce twins.
 text.gm4.guidebook.gemini_shamir.usage,The Gemini Shamir is found on Barimium Bands. It can be placed onto hoes.\n\nHolding the hoe in the offhand will cause any bred animals to produce identical twins.
-text.gm4.guidebook.module_desc.Hypexperia Shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.hypexperia_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.hypexperia_shamir.description,Hypexperia causes extra experience to drop from all sources of experience orbs.
 text.gm4.guidebook.hypexperia_shamir.usage,"The Hypexperia Shamir is found on Bismuth Bands. It can be placed onto tools, swords, and fishing rods.\n\nNearby experience orbs will double in value when the item is held."
-text.gm4.guidebook.module_desc.Infinitas Shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.infinitas_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.infinitas_shamir.description,Infinitas items are infinite liquid sources. It also pulls mobs and items towards the user.
 text.gm4.guidebook.infinitas_shamir.usage,The Infinitas Shamir is found on Curie's Bismium Bands. It can be placed onto empty or filled buckets.\n\nInfinitas buckets can be used infinitely and will never get filled (if empty) or drained (if full).
 text.gm4.guidebook.infinitas_shamir.vacuum,Holding an empty infinitas bucket will attract mobs and items in an 11x11 area.\n\nMobs affected by infinitas will be on cooldown until the user moves away or deselects the bucket.
-text.gm4.guidebook.module_desc.Metallurgy,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.metallurgy,"Introduces_4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.metallurgy.description,"Custom abilities, called shamirs, can be added to tools and armour, like enchantments.\n\nShamirs are exclusive, meaning only one can be applied to an item at a time."
 text.gm4.guidebook.metallurgy.section.lump_obtaining,Obtaining Ore
 text.gm4.guidebook.metallurgy.lump_obtaining,"Blowing up stone-type blocks with tnt will drop metal ore lumps.\n\nEach of the four stone types (stone, granite, andesite, and diorite) drop a different metal lump."
@@ -91,22 +91,22 @@ text.gm4.guidebook.metallurgy.metal_properties,"Each band type has a specific at
 text.gm4.guidebook.metallurgy.metal_properties_1,"Alluminium is supression, Barium is amplification, and Barimium is modification."
 text.gm4.guidebook.metallurgy.smooshing,"To attach a shamir to an item, drop the cast and item on an anvil.\n\n'Smoosh' them together by powering a downwards facing piston placed two blocks above the anvil."
 text.gm4.guidebook.metallurgy.smooshing_1,"To detach a shamir, do the same 'smooshing' process after dropping the shamir-bearing item and one obsidian."
-text.gm4.guidebook.module_desc.Moneo Shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.moneo_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.moneo_shamir.description,Moneo slows mining and flying when durability is low.
 text.gm4.guidebook.moneo_shamir.usage,"The Moneo Shamir is found on Aluminium Bands. It can be placed onto tools, shears, and elytra.\n\nLow durability tools will cause mining fatigue, and low durability elytra will cause slowness and blindness."
-text.gm4.guidebook.module_desc.Musical Shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.musical_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.musical_shamir.description,Musical modifies strength and speed based on consecutive mob kills.
 text.gm4.guidebook.musical_shamir.usage,"The Musical Shamir is found on Barimium Bands. It can be placed onto swords.\n\nWhen killing mobs, music is played and Slowness and Strength I are granted."
 text.gm4.guidebook.musical_shamir.usage_1,"After many kills, the music will become darker, and Speed and Strength III are granted instead."
-text.gm4.guidebook.module_desc.Sensus Shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.sensus_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.sensus_shamir.description,"Sensus enhances mining, by playing sounds from neaby ores."
 text.gm4.guidebook.sensus_shamir.usage,The Sensus Shamir is found on Barium Bands. It can be placed onto compasses.\n\nHolding the compass will play sounds from nearby ores in a 7x7x5 area centered at the user.
-text.gm4.guidebook.module_desc.Tinker Shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.tinker_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.tinker_shamir.description,Tinker causes items to be converted to their equivalent storage block form.
 text.gm4.guidebook.tinker_shamir.usage,"The Tinker Shamir is found on Curie's Bismium Bands. It can be placed onto pickaxes, shovels, hoes, and swords.\n\nHolding the tool will convert items into their block form, such as iron ingots to iron blocks."
 text.gm4.guidebook.tinker_shamir.usage_pickaxes,"Each tool tinkers a set of items, matching the tool.\n\nPickaxes will tinker emeralds, diamonds, redstone, coal, lapis, gold ingots, iron ingots, gold nuggets, and iron nuggets."
 text.gm4.guidebook.tinker_shamir.usage_other_tools,Shovels will tinker snow balls and clay balls.\n\nHoes will tinker melon slices and wheat.\n\nSwords will tinker slime balls.
-text.gm4.guidebook.module_desc.Vibro Shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
+text.gm4.guidebook.module_desc.vibro_shamir,"Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!"
 text.gm4.guidebook.vibro_shamir.description,Vibro grants high jumps and creates deadly shockwaves.
 text.gm4.guidebook.vibro_shamir.usage,"The Vibro Shamir is found on Thorium Bands. It can be placed onto boots.\n\nWhen sneaking, users who take fall damage will hurt mobs within a 6 block radius. Damage is based on distance from the user and the blocks between."
 text.gm4.guidebook.vibro_shamir.jump_boost,"Sneaking on the ground will allow the user to gain temporary jump boost. The level of jump boost is dependent on the sneak time.\n\nWhen using the Vibro Jump, the user will take damage when landing."

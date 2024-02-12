@@ -109,7 +109,7 @@ item.gm4.combat_expanded.name.vorpal,Vorpal %s
 item.gm4.combat_expanded.name.weakness,Crippling %s
 item.gm4.combat_expanded.name.witch,Expelling %s
 item.gm4.combat_expanded.name.wither,Demonic %s
-text.gm4.guidebook.module_desc.Combat Expanded,Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
+text.gm4.guidebook.module_desc.combat_expanded,Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
 text.gm4.guidebook.combat_expanded.description,"Mobs get stronger over time, based on each adventurer.\n\nMobs will spawn with higher health, damage, movement speed and with better armour and weapons."
 text.gm4.guidebook.combat_expanded.section.biome_modifiers,Area Modifiers
 text.gm4.guidebook.combat_expanded.biome_modifiers,Mobs spawned in different areas have special modifiers.\n\nSome areas and biomes spawn different mobs than usual.

@@ -78,7 +78,7 @@ item.gm4.zauber_cauldrons.zauber_armor.chestplate,Zauber Chestplate
 item.gm4.zauber_cauldrons.zauber_armor.helmet,Zauber Helmet
 item.gm4.zauber_cauldrons.zauber_armor.leggings,Zauber Leggings
 item.gm4.zauber_cauldrons.zauber_armor.magic,+%s%% Magic
-text.gm4.guidebook.module_desc.Zauber Cauldrons,"Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game."
+text.gm4.guidebook.module_desc.zauber_cauldrons,"Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game."
 text.gm4.guidebook.zauber_cauldrons.description,"Zauber Cauldrons expand the magic system, allowing the creation of stronger potions, magical armour, effect granting crystals, and bottled wormholes."
 text.gm4.guidebook.zauber_cauldrons.section.creation,Creation
 text.gm4.guidebook.zauber_cauldrons.creation,A Zauber Cauldron is created by holding an enchanted book while looking into a water-filled cauldron over fire.\n\nSoul fire and campfires work as well.

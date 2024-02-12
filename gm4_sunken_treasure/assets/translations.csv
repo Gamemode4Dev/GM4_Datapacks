@@ -83,6 +83,6 @@ text.gm4.dearest_audrey.9.1,I have no
 text.gm4.dearest_audrey.9.2,internet so I am sending you
 text.gm4.dearest_audrey.9.3,a bottle.
 text.gm4.dearest_audrey.prefix,"Dearest Audrey, "
-text.gm4.guidebook.module_desc.Sunken Treasure,"Digging sand underwater with a fortune tool can uncover buried treasures, or a nasty surprise! Who knows, maybe you'll even find some old love letters."
+text.gm4.guidebook.module_desc.sunken_treasure,"Digging sand underwater with a fortune tool can uncover buried treasures, or a nasty surprise! Who knows, maybe you'll even find some old love letters."
 text.gm4.guidebook.sunken_treasure.description,Mining sand or gravel deep underwater with a Fortune shovel has a chance of dropping treasure.\n\nMining in different biomes can result in different drops.
 text.gm4.guidebook.sunken_treasure.details,"Treasure can only be found if submerged in water at least 4 blocks deep.\n\nGravel and sand contain different loot, but both contain rare treasure chests."

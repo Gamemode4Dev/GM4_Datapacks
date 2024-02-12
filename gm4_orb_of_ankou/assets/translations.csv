@@ -62,10 +62,10 @@ text.gm4.pneuma_vanishing,Vanishing
 text.gm4.pneuma_venomous,Venomous
 text.gm4.pneuma_volatile,Volatile
 text.gm4.pneuma_withering,Withering
-text.gm4.guidebook.module_desc.Corripio Shamir,"Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man."
+text.gm4.guidebook.module_desc.corripio_shamir,"Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man."
 text.gm4.guidebook.corripio_shamir.description,Corripio extracts soul essence drops from mobs.
 text.gm4.guidebook.corripio_shamir.usage,The Corripio Shamir is found on Bismuth Bands. It can be placed onto swords.\n\nKilling mobs will cause Soul Essences to drop very rarely. The drop rates are increased with the Looting enchantment.
-text.gm4.guidebook.module_desc.Orb of Ankou,"Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man."
+text.gm4.guidebook.module_desc.orb_of ankou,"Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man."
 text.gm4.guidebook.orb_of_ankou.description,"Mob powers can be obtained by collecting rare soul essences using the Corripio Shamir.\n\nThirteen essences are required to gain the powers of a mob, called a pneuma."
 text.gm4.guidebook.orb_of_ankou.soul_forge,"To gain powers of the Soul Essences, a Condensing Ritual must be performed in a Soul Forge.\n\nA Soul Forge can be made in the Nether by forming a 3x3 ring of obsidian then igniting soul fire inside the ring."
 text.gm4.guidebook.orb_of_ankou.condensing_ritual,"To create a Soul Shard, 13 of the same Soul Essence must be dropped into the forge along with some blaze powder and glowstone dust.\n\nExtinguishing the flame will create a Possesed Soul Shard, which should be killed."

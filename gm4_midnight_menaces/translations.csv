@@ -1,16 +1,16 @@
 key,en_us
 entity.gm4.goblin,Goblin§
-text.gm4.guidebook.module_desc.Enlarging Phantoms,Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
+text.gm4.guidebook.module_desc.enlarging_phantoms,Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
 text.gm4.guidebook.enlarging_phantoms.description,"During an Enlarging Phantoms event, larger phantoms will spawn in the sky, regardless of insomniacs.\n\nLarger phantoms have more health and greater attack strength."
-text.gm4.guidebook.module_desc.Icy Strays,Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
+text.gm4.guidebook.module_desc.icy_strays,Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
 text.gm4.guidebook.icy_strays.description,"During an Icy Strays event, half of the skeletons will spawn as strays.\n\nThese strays will drop ice when killed with looting."
-text.gm4.guidebook.module_desc.Illusioner Nights,Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
+text.gm4.guidebook.module_desc.illusioner_nights,Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
 text.gm4.guidebook.illusioner_nights.description,"During an Illusioner Nights event, illusioners will spawn.\n\nThese illusioners will drop golden carrots, and some potions when killed."
-text.gm4.guidebook.module_desc.Menacing Goblins,Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
+text.gm4.guidebook.module_desc.menacing_goblins,Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
 text.gm4.guidebook.menacing_goblins.description,"During a Menacing Goblins event, golden sword wielding goblins will spawn.\n\nThese goblins have more health than normal zombies and can track enemies from a far distance."
 text.gm4.guidebook.menacing_goblins.behavior,"Goblins wear a pumpkin with Thorns III.\n\nGoblins will steal diamonds, iron ingots, and gold ingots when nearby.\n\nWhen killed, they will drop most of the items they stole, along with some rotten flesh, iron nuggets, and golden nuggets."
-text.gm4.guidebook.module_desc.Sandy Husks,Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
+text.gm4.guidebook.module_desc.sandy_husks,Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
 text.gm4.guidebook.sandy_husks.description,"During a Sandy Husks event, half of zombies will spawn as husks.\n\nThese husks will drop sand when killed with looting."
-text.gm4.guidebook.module_desc.Slime Fests,Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
+text.gm4.guidebook.module_desc.slime_fests,Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!
 text.gm4.guidebook.slime_fests.description,"During a Slime Fests event, Slimes will merge, naturally spawn, and reanimate from slimeballs.\n\nSmall slimes will spawn in dark spaces and slimeballs on the floor will turn into slimes."
 text.gm4.guidebook.slime_fests.merging,"Two slimes of the same size will merge together to form a larger slime.\n\nHuge slimes can be created this way, which will drop a special loot table when killed."
