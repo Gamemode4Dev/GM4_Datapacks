@@ -91,7 +91,7 @@ scoreboard players add $powder_snow_infinitas gm4_ml_data 0
 
 # register infinitas storage
 data remove storage gm4_infinitas_shamir:bucket shamir
-execute unless data storage gm4_infinitas_shamir:bucket shamir run data modify storage gm4_infinitas_shamir:bucket shamir set value {display:{Lore:['{"italic":false,"color":"#467A1B","translate":"item.gm4.metallurgy.band","fallback":"%s Band","with":[{"translate":"item.gm4.metallurgy.curies_bismium","fallback":"Curie\'s Bismium"}]}','{"italic":false,"color":"aqua","translate":"item.gm4.metallurgy.shamir","fallback":"Shamir"}','{"italic":false,"color":"gray","translate":"item.gm4.shamir.infinitas","fallback":"Infinitas"}']},CustomModelData:3420100,gm4_metallurgy:{metal:{type:"curies_bismium"},custom_model_data:3420100,has_shamir:1b,active_shamir:"infinitas",skull_owner:"[Drop to Fix Item] gm4_infinitas_shamir:band"}}
+execute unless data storage gm4_infinitas_shamir:bucket shamir run data modify storage gm4_infinitas_shamir:bucket shamir set value {gm4_metallurgy: {has_shamir: 1b, custom_model_data: 3420100, skull_owner: "[Drop to Fix Item] gm4_infinitas_shamir:band", metal: {type: "curies_bismium"}, active_shamir: "infinitas", uuid: [I; 1629560028, 901925746, -1943917803, 1056949700]}, CustomModelData: 3420100, display: {Lore: ['{"translate":"item.gm4.metallurgy.band","fallback":"%s Band","with":[{"translate":"item.gm4.metallurgy.curies_bismium","fallback":"Curie\'s Bismium"}],"italic":false,"color":"#467A1B"}', '{"translate":"item.gm4.metallurgy.shamir","fallback":"Shamir","italic":false,"color":"aqua"}', '{"translate":"item.gm4.shamir.infinitas","fallback":"Infinitas","italic":false,"color":"gray"}']}}
 
 #musical
 scoreboard objectives add gm4_note_collect totalKillCount
