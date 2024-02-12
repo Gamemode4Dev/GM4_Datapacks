@@ -13,12 +13,9 @@ execute unless data entity @s Item.tag.CustomModelData run data modify entity @s
 function #gm4_metallurgy:apply_band
 
 # copy SkullOwner.Name to the new item (which is copied back to the obsidian cast when unsmooshed)
-# legacy shamirs do not have this tag: invoke #update_skull_owner to migrate legacy shamirs to the new format
 data remove storage gm4_metallurgy:temp/shamir skull_owner
 data modify storage gm4_metallurgy:temp/shamir skull_owner set from entity @e[type=item,tag=gm4_ml_source,dx=0,limit=1] Item.tag.SkullOwner.Name
 execute unless data storage gm4_metallurgy:temp/shamir skull_owner run data modify storage gm4_metallurgy:temp/shamir name set from entity @s Item.tag.gm4_metallurgy.active_shamir
-execute unless data storage gm4_metallurgy:temp/shamir skull_owner run function #gm4_metallurgy:update_skull_owner
-data modify entity @s Item.tag.gm4_metallurgy.skull_owner set from storage gm4_metallurgy:temp/shamir skull_owner
 
 # use anvil durability
 function gm4_metallurgy:smooshing/anvil/use

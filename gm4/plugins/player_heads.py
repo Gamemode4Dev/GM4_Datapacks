@@ -10,7 +10,7 @@ from io import BytesIO
 from typing import Any, Callable, ClassVar, Generator
 
 import requests
-from beet import Context, FileDeserialize, JsonFile, PngFile
+from beet import Context, FileDeserialize, JsonFile, PngFile, TextFile
 from mecha import CompilationUnit, Diagnostic, Mecha, MutatingReducer, rule
 from mecha.ast import (
     AstChildren,
@@ -221,7 +221,7 @@ def process_json_files(ctx: Context):
     tf = ctx.inject(SkinNbtTransformer)
     mc = ctx.inject(Mecha)
 
-    def transform_snbt(snbt: str, db_entry_key: str) -> str:
+    def transform_snbt(snbt: str, db_entry_key: TextFile) -> str:
         escaped_snbt = snbt.replace("\n", "\\\\n")
             # NOTE snbt in loot-tables reacts weird to \n characters. Both \n and \\\\n produce the same ingame output (\\n). 
             # gm4 only has one case of \n in loot tables, so this replacement forces \n->\\\\n for the mecha parser to read it right.
@@ -239,11 +239,13 @@ def process_json_files(ctx: Context):
         for func_list in nested_get(contents, "functions"):
             f: Callable[[Any], bool] = lambda e: e["function"].removeprefix('minecraft:')=="set_nbt"
             for i, entry in enumerate(filter(f, func_list)):
-                entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{name}_{i}")
+                key = TextFile(_content=f"{name}_{i}", source_path=jsonfile.source_path)
+                entry["tag"] = transform_snbt(entry["tag"], db_entry_key=key)
 
     for name, jsonfile in ctx.data.advancements.items():
         for i, entry in enumerate(nested_get(jsonfile.data, "icon")):
-            entry["nbt"] = transform_snbt(entry["nbt"], db_entry_key=f"{name}_{i}")
+            key = TextFile(_content=f"{name}_{i}", source_path=jsonfile.source_path)
+            entry["nbt"] = transform_snbt(entry["nbt"], db_entry_key=key)
 
     # send any raised diagnostic errors to Mecha for reporting
     mc.diagnostics.extend(tf.diagnostics)

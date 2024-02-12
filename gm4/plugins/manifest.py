@@ -5,7 +5,7 @@ import os
 from functools import cache
 from pathlib import Path
 from typing import Any, Optional
-from pydantic import Extra, BaseModel
+from pydantic.v1 import Extra, BaseModel
 
 import yaml
 from beet import Context, JsonFile, PluginOptions, TextFile, load_config, InvalidProjectConfig
@@ -194,7 +194,7 @@ def update_patch(ctx: Context):
 					logger.info(f"Feature update for {id}, setting version to {version}")
 				else:
 					version.patch = last_ver.patch + 1 # type: ignore
-					logger.info(f"Updating {id} patch to {version.patch}")
+					logger.info(f"Updating {id} patch to {version.patch}") # type: ignore
 
 				pack.version = str(version)
 
