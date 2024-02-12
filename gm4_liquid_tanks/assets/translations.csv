@@ -4,7 +4,6 @@ advancement.gm4.liquid_tanks.title,"Oh, That Kind of Tank"
 advancement.gm4.standard_liquids.description,Bottle your own experience from a liquid tank
 advancement.gm4.standard_liquids.title,Experience Quicksave
 block.gm4.liquid_tank,Liquid Tank
-block.gm4.liquid_tank.empty,Empty Tank
 container.gm4.liquid_tank.beetroot_soup,Beetroot Soup Tank
 container.gm4.liquid_tank.empty,Empty Tank
 container.gm4.liquid_tank.experience,Experience Tank
