@@ -19,7 +19,6 @@ execute if score $item gm4_zc_data matches 1.. store result score $slot gm4_zc_d
 
 # remove firework star specific data
 data remove storage gm4_zauber_cauldrons:temp/item/crystal Item.tag.Explosion
-data remove storage gm4_zauber_cauldrons:temp/item/crystal Item.tag.HideFlags
 
 # replace item
 execute if score $slot gm4_zc_data matches 0..8 run function gm4_zauber_cauldrons:player/crystal/swap/restore_player_head/hotbar
