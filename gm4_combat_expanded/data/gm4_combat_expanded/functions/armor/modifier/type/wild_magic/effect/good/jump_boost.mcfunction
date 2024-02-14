@@ -1,5 +1,5 @@
 
-data modify storage gm4_combat_expanded:temp wild_magic.id set value "slowness"
+data modify storage gm4_combat_expanded:temp wild_magic.id set value "jump_boost"
 
 # Duration
 execute store result storage gm4_combat_expanded:temp wild_magic.duration int 1 run random value 15..90
