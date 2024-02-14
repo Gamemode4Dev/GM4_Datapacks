@@ -4,143 +4,149 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:alternatives",
-          "children": [
+          "type": "minecraft:loot_table",
+          "weight": 100000,
+          "name": "gm4_combat_expanded:armor/identification/biome/snowy",
+          "conditions": [
             {
-              "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:armor/identification/biome/snowy",
-              "conditions": [
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:mob/modifier/snowy"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 100000,
+          "name": "gm4_combat_expanded:armor/identification/biome/mountainous",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:mob/modifier/mountainous"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 100000,
+          "name": "gm4_combat_expanded:armor/identification/biome/burned",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:mob/modifier/burned"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 100000,
+          "name": "gm4_combat_expanded:armor/identification/biome/flowering",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:mob/modifier/flowering"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 100000,
+          "name": "gm4_combat_expanded:armor/identification/biome/toxic",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:mob/modifier/toxic"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 100000,
+          "name": "gm4_combat_expanded:armor/identification/biome/deep_reef",
+          "conditions": [
+            {
+              "condition": "minecraft:any_of",
+              "terms": [
                 {
                   "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/snowy"
-                }
-              ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:armor/identification/biome/mountainous",
-              "conditions": [
+                  "name": "gm4_combat_expanded:mob/modifier/deep"
+                },
                 {
                   "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/mountainous"
+                  "name": "gm4_combat_expanded:mob/modifier/reef"
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 100000,
+          "name": "gm4_combat_expanded:armor/identification/biome/growth",
+          "conditions": [
             {
-              "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:armor/identification/biome/burned",
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/burned"
-                }
-              ]
-            },
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:mob/modifier/growth"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 100000,
+          "name": "gm4_combat_expanded:armor/identification/biome/nether",
+          "conditions": [
             {
-              "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:armor/identification/biome/flowering",
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/flowering"
-                }
-              ]
-            },
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "dimension": "minecraft:the_nether"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 100000,
+          "name": "gm4_combat_expanded:armor/identification/biome/special",
+          "conditions": [
             {
-              "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:armor/identification/biome/toxic",
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/toxic"
-                }
-              ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:armor/identification/biome/deep_reef",
-              "conditions": [
-                {
-                  "condition": "minecraft:any_of",
-                  "terms": [
-                    {
-                      "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/deep"
-                    },
-                    {
-                      "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/reef"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:armor/identification/biome/growth",
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/growth"
-                }
-              ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:armor/identification/biome/nether",
-              "conditions": [
+              "condition": "minecraft:any_of",
+              "terms": [
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "dimension": "minecraft:the_nether"
+                    "dimension": "minecraft:the_end"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:mushroom_fields"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:deep_dark"
                   }
                 }
               ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:armor/identification/biome/special",
-              "conditions": [
-                {
-                  "condition": "minecraft:any_of",
-                  "terms": [
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
-                        "dimension": "minecraft:the_end"
-                      }
-                    },
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
-                        "biome": "minecraft:mushroom_fields"
-                      }
-                    },
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
-                        "biome": "minecraft:deep_dark"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:armor/identification/biome/dark",
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/dark"
-                }
-              ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:armor/identification/biome/generic"
             }
           ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 100000,
+          "name": "gm4_combat_expanded:armor/identification/biome/dark",
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "gm4_combat_expanded:mob/modifier/dark"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "gm4_combat_expanded:armor/identification/biome/generic"
         }
       ]
     }

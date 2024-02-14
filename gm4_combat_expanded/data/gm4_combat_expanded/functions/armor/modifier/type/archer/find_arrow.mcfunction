@@ -1,7 +1,7 @@
 # check the amount of arrows to spawn
 # @s = player wearing archer armor shooting a (cross)bow
 # at unspecified
-# run from armor/modifier/type/archer/clock
+# run from clocks/temp/archer
 
 # store armor for checking
 item replace block 29999998 1 7134 container.0 from entity @s armor.head

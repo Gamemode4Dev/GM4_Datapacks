@@ -1,7 +1,7 @@
 # find everyone linked with this player
 # @s = player with link armor
 # at unspecified
-# run from armor/modifier/type/link/clock
+# run from clocks/temp/link
 # run from here
 
 scoreboard players set $keep_tick.link gm4_ce_keep_tick 1

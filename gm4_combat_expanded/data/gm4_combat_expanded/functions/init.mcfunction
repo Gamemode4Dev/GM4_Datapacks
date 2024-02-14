@@ -77,6 +77,7 @@ scoreboard players reset * gm4_ce_keep_tick
 # mob caps
 execute unless score $mob_limit.husk_army gm4_ce_data matches -2147483648..2147483647 run scoreboard players set $mob_limit.husk_army gm4_ce_data 128
 execute unless score $mob_limit.spore_zombie gm4_ce_data matches -2147483648..2147483647 run scoreboard players set $mob_limit.spore_zombie gm4_ce_data 128
+execute unless score $mob_limit.phantom gm4_ce_data matches -2147483648..2147483647 run scoreboard players set $mob_limit.phantom gm4_ce_data 48
 
 # constants
 scoreboard players set #-1 gm4_ce_data -1

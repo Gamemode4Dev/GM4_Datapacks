@@ -1,7 +1,7 @@
 # process players wearing beacon armor
 # @s = player
 # at @s
-# run from armor/modifier/type/beacon/clock
+# run from clocks/temp/beacon
 
 scoreboard players set $keep_tick.beacon gm4_ce_keep_tick 1
 

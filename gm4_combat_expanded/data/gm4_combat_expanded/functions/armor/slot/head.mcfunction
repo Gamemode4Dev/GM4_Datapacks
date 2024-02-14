@@ -15,4 +15,4 @@ execute if score $modifier gm4_ce_data matches 100.. run function gm4_combat_exp
 
 # make changes
 execute if score $change gm4_ce_data matches 1 run item modify entity @s armor.head gm4_combat_expanded:update
-scoreboard players reset $change gm4_ce_data
+execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:armor/slot/silence_equip_sound

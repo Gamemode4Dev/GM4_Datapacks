@@ -12,4 +12,4 @@ scoreboard players reset @a gm4_ce_used_bow
 scoreboard players reset @a gm4_ce_used_crossbow
 
 execute store success score $keep_tick.archer gm4_ce_keep_tick if entity @a[tag=gm4_ce_wearing_archer]
-execute if score $keep_tick.archer gm4_ce_keep_tick matches 1 run schedule function gm4_combat_expanded:armor/modifier/type/archer/clock 1t
+execute if score $keep_tick.archer gm4_ce_keep_tick matches 1 run schedule function gm4_combat_expanded:clocks/temp/archer 1t

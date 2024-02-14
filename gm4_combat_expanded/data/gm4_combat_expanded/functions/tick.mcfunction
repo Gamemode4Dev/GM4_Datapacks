@@ -5,10 +5,6 @@ scoreboard players reset @a gm4_ce_absorped
 scoreboard players reset @a gm4_ce_shielded_hit
 scoreboard players reset @a gm4_ce_sword_hit_triggered
 
-# | Armor
-# immune
-execute as @a[gamemode=!spectator,tag=gm4_ce_immune_active] run function gm4_combat_expanded:armor/modifier/type/immune/apply
-
 # | Other
 # poison slime landings
 execute as @e[type=slime,tag=gm4_ce_poison_landing] at @s run function gm4_combat_expanded:mob/process/poison_slime/process

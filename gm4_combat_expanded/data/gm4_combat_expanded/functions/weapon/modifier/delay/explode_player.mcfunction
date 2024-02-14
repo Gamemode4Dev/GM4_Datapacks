@@ -5,9 +5,9 @@
 
 function gm4_combat_expanded:player/calculate_hp
 
-execute if entity @s[tag=gm4_cd_delay_lvl_1] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 6
-execute if entity @s[tag=gm4_cd_delay_lvl_2] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 9
-execute if entity @s[tag=gm4_cd_delay_lvl_3] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 12
+execute if entity @s[tag=gm4_ce_delay_lvl_1] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 6
+execute if entity @s[tag=gm4_ce_delay_lvl_2] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 9
+execute if entity @s[tag=gm4_ce_delay_lvl_3] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 12
 
 # damage player if they are alive
 execute if score $delay_damage gm4_ce_data < @s gm4_ce_health.current run function gm4_combat_expanded:player/damage with storage gm4_combat_expanded:temp damage_player
@@ -17,10 +17,10 @@ execute if score $delay_damage gm4_ce_data >= s gm4_ce_health.current run functi
 
 # reset entity
 scoreboard players reset @s gm4_ce_t_delay
-tag @s remove gm4_cd_delay_active
-tag @s remove gm4_cd_delay_lvl_1
-tag @s remove gm4_cd_delay_lvl_2
-tag @s remove gm4_cd_delay_lvl_3
+tag @s remove gm4_ce_delay_active
+tag @s remove gm4_ce_delay_lvl_1
+tag @s remove gm4_ce_delay_lvl_2
+tag @s remove gm4_ce_delay_lvl_3
 
 # particles and sound
 execute anchored eyes run particle minecraft:sweep_attack ^ ^ ^ 0.3 0.3 0.3 0.1 3

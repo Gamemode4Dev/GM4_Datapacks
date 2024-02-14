@@ -15,11 +15,23 @@
         {
             "condition": "minecraft:inverted",
             "term": {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                    "type": "minecraft:player"
-                }
+                "condition": "minecraft:all_of",
+                "terms": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "#gm4_combat_expanded:effect_immune"
+                        }
+                    },
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "minecraft:player"
+                        }
+                    }
+                ]
             }
         }
     ]

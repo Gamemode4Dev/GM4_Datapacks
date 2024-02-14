@@ -22,4 +22,4 @@ execute on attacker run scoreboard players set @s[tag=!gm4_ce_self] gm4_ce_light
 tag @s remove gm4_ce_self
 
 # spark processing is run through the weapon modifier
-schedule function gm4_combat_expanded:weapon/modifier/lightning/clock 1t
+schedule function gm4_combat_expanded:clocks/temp/lightning 1t
