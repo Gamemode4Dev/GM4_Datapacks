@@ -7,5 +7,5 @@
 function gm4_double_doors:{{ material_name }}/door/left_hinge/north/toggle
 
 # check for potential neighbouring doors which should also be opened, this neighbor has to be of the opposite hinge
-execute positioned ~1 ~ ~ if block ~ ~ ~ minecraft:{{ material_name }}_door[hinge=right] run function gm4_double_doors:{{ material_name }}/door/right_hinge/north/toggle
-execute positioned ~ ~ ~-1 if block ~ ~ ~ minecraft:{{ material_name }}_door[hinge=right] run function gm4_double_doors:{{ material_name }}/door/right_hinge/south/toggle
+execute positioned ~1 ~ ~ if block ~ ~ ~ minecraft:{{ material_name }}_door[hinge=right,facing=north] run function gm4_double_doors:{{ material_name }}/door/right_hinge/north/toggle
+execute positioned ~ ~ ~-1 if block ~ ~ ~ minecraft:{{ material_name }}_door[hinge=right,facing=south] run function gm4_double_doors:{{ material_name }}/door/right_hinge/south/toggle
