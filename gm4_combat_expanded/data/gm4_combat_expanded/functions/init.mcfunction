@@ -77,7 +77,7 @@ scoreboard objectives add gm4_ce_boss.tick_delay dummy
 scoreboard objectives add gm4_ce_boss.attack_id dummy
 scoreboard objectives add gm4_ce_boss.attack_progress dummy
 scoreboard objectives add gm4_ce_boss.health dummy
-scoreboard objectives add gm4_ce_boss.stage dummy
+scoreboard objectives add gm4_ce_boss.phase dummy
 scoreboard objectives add gm4_ce_boss.last_attack dummy
 scoreboard objectives add gm4_ce_boss.guardian_id dummy
 

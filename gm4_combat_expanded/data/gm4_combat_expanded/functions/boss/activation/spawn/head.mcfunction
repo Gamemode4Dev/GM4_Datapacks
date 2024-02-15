@@ -8,7 +8,7 @@ summon item_display ~ ~ ~ {Tags:["gm4_ce_boss","gm4_ce_boss.head","gm4_ce_boss.f
     {id:"minecraft:item_display",Tags:["gm4_ce_boss","gm4_ce_boss.head","gm4_ce_boss.vertical","gm4_ce_boss.new"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.0025f,0f],scale:[0.95f,1.0075f,0.95f]},item:{id:"minecraft:copper_block",Count:1b,tag:{return:{scale:[0.95f,1.0075f,0.95f],translation:[0f,-0.0025f,0f]}}}}\
     ]}
 
-summon shulker ~ ~-1 ~ {Silent:1b,DeathLootTable:"empty",PersistenceRequired:1b,NoAI:1b,Health:960f,Peek:1b,AttachFace:1b,Tags:["gm4_ce_boss","gm4_ce_boss.main","gm4_ce_boss.new","smithed.entity"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:-1,show_particles:0b},{id:"minecraft:resistance",amplifier:2b,duration:-1,show_particles:0b}],Attributes:[{Name:"generic.max_health",Base:1024},{Name:"generic.max_absorption",Base:0},{Name:"generic.armor",Base:20}]}
+summon shulker ~ ~-1 ~ {Silent:1b,DeathLootTable:"empty",PersistenceRequired:1b,NoAI:1b,Health:960f,Peek:1b,AttachFace:1b,Tags:["gm4_ce_boss","gm4_ce_boss.main","gm4_ce_boss.new","smithed.entity"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:-1,show_particles:0b},{id:"minecraft:resistance",amplifier:1b,duration:-1,show_particles:0b}],Attributes:[{Name:"generic.max_health",Base:1024},{Name:"generic.max_absorption",Base:0},{Name:"generic.armor",Base:20}]}
 
 execute store result storage gm4_combat_expanded:temp boss.running_id int 1 run scoreboard players add $next_id gm4_ce_boss.id 1
 function gm4_combat_expanded:boss/activation/spawn/bossbar with storage gm4_combat_expanded:temp boss
