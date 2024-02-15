@@ -1,7 +1,7 @@
 # prepare everything needed to process sword_ring armor
 # @s = player wearing armor
 # at @s
-# run from armor/modifier/type/sword_ring/clock
+# run from clocks/temp/sword_ring
 
 scoreboard players set $keep_tick.sword_ring gm4_ce_keep_tick 1
 

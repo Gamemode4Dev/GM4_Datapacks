@@ -1,7 +1,7 @@
 # process player
 # @s = online player
 # at unspecified
-# run from player/submain
+# run from clocks/player_submain
 
 # process player deaths
 execute if score @s[scores={gm4_ce_deaths=1..}] gm4_ce_alivetime matches ..16 run function gm4_combat_expanded:player/process_death

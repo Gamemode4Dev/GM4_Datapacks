@@ -1,7 +1,7 @@
 # process totems
 # @s = totem armor stand
 # at @s
-# run from armor/modifier/type/totem/clock
+# run from clocks/temp/totem
 
 particle ambient_entity_effect ~ ~1.2 ~ 0.1 0.1 0.1 0.05 12
 tp @s ~ ~ ~ ~90 ~

@@ -10,4 +10,4 @@ tag @e[type=item_display,tag=gm4_ce_sword_ring.keep_sword] remove gm4_ce_sword_r
 execute as @a[predicate=gm4_combat_expanded:modified_armor/sword_ring,gamemode=!spectator] at @s run function gm4_combat_expanded:armor/modifier/type/sword_ring/prep
 kill @e[type=item_display,tag=gm4_ce_sword_ring.sword,tag=!gm4_ce_sword_ring.keep_sword]
 
-execute if score $keep_tick.sword_ring gm4_ce_keep_tick matches 1 run schedule function gm4_combat_expanded:armor/modifier/type/sword_ring/clock 1t
+execute if score $keep_tick.sword_ring gm4_ce_keep_tick matches 1 run schedule function gm4_combat_expanded:clocks/temp/sword_ring 1t

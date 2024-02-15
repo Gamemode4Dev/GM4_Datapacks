@@ -16,11 +16,11 @@ execute as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water 
 # process canine set wolves
 execute as @e[type=wolf,tag=gm4_ce_wolf] run function gm4_combat_expanded:armor/modifier/type/canine/wolf_process
 # sword_ring
-execute unless score $keep_tick.sword_ring gm4_ce_keep_tick matches 1 if entity @a[predicate=gm4_combat_expanded:modified_armor/sword_ring,gamemode=!spectator] run schedule function gm4_combat_expanded:armor/modifier/type/sword_ring/clock 1t
+execute unless score $keep_tick.sword_ring gm4_ce_keep_tick matches 1 if entity @a[predicate=gm4_combat_expanded:modified_armor/sword_ring,gamemode=!spectator] run schedule function gm4_combat_expanded:clocks/temp/sword_ring 1t
 # beacon
-execute unless score $keep_tick.beacon gm4_ce_keep_tick matches 1 if entity @a[predicate=gm4_combat_expanded:modified_armor/beacon,gamemode=!spectator] run schedule function gm4_combat_expanded:armor/modifier/type/beacon/clock 1t
+execute unless score $keep_tick.beacon gm4_ce_keep_tick matches 1 if entity @a[predicate=gm4_combat_expanded:modified_armor/beacon,gamemode=!spectator] run schedule function gm4_combat_expanded:clocks/temp/beacon 1t
 # burn
-execute unless score $keep_tick.burn gm4_ce_keep_tick matches 1 if entity @a[scores={gm4_ce_burning.duration=1..}] run schedule function gm4_combat_expanded:armor/modifier/type/burn/clock 1t
+execute unless score $keep_tick.burn gm4_ce_keep_tick matches 1 if entity @a[scores={gm4_ce_burning.duration=1..}] run schedule function gm4_combat_expanded:clocks/temp/burn 1t
 
 # | Weapons
 # pierce
@@ -31,6 +31,6 @@ execute unless score $keep_tick.boss gm4_ce_keep_tick matches 1 if entity @e[typ
 
 # | Players
 # player submain
-schedule function gm4_combat_expanded:player/submain 8t
+schedule function gm4_combat_expanded:clocks/player_submain 8t
 # sustain armor double speed regen
 execute if score $natural_regen gm4_ce_data matches 0 as @a[tag=gm4_ce_sustain_active] unless score @s[scores={gm4_ce_hunger=18..},predicate=!gm4_combat_expanded:technical/poisoned] gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:armor/modifier/type/sustain/extra_regen

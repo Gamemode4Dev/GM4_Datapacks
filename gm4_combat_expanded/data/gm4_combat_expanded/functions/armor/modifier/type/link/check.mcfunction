@@ -17,4 +17,4 @@ function gm4_combat_expanded:armor/modifier/type/link/search_links with storage 
 tag @s[gamemode=!creative] add gm4_ce_linked
 
 # start clock
-execute unless score $keep_tick.link gm4_ce_keep_tick matches 1 run schedule function gm4_combat_expanded:armor/modifier/type/link/clock 1t
+execute unless score $keep_tick.link gm4_ce_keep_tick matches 1 run schedule function gm4_combat_expanded:clocks/temp/link 1t

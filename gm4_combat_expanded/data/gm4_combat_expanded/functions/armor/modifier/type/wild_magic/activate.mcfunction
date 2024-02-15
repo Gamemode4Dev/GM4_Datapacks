@@ -5,65 +5,43 @@ advancement revoke @s only gm4_combat_expanded:damaged/armor/wild_magic
 
 # Pick Effect
 execute store result score $wild_magic.id gm4_ce_data run random value 1..100
-execute if score $wild_magic.id gm4_ce_data matches 1 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "poison"
-execute if score $wild_magic.id gm4_ce_data matches 2 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "wither"
-execute if score $wild_magic.id gm4_ce_data matches 3 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "instant_health"
-execute if score $wild_magic.id gm4_ce_data matches 4 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "instant_damage"
-execute if score $wild_magic.id gm4_ce_data matches 5 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "levitation"
-execute if score $wild_magic.id gm4_ce_data matches 6 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "slowness"
-execute if score $wild_magic.id gm4_ce_data matches 7 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "haste"
-execute if score $wild_magic.id gm4_ce_data matches 8 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "mining_fatigue"
-execute if score $wild_magic.id gm4_ce_data matches 9 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "strength"
-execute if score $wild_magic.id gm4_ce_data matches 10 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "jump_boost"
-execute if score $wild_magic.id gm4_ce_data matches 11 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "nausea"
-execute if score $wild_magic.id gm4_ce_data matches 12 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "regeneration"
-execute if score $wild_magic.id gm4_ce_data matches 13 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "resistance"
-execute if score $wild_magic.id gm4_ce_data matches 14 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "blindness"
-execute if score $wild_magic.id gm4_ce_data matches 15 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "hunger"
-execute if score $wild_magic.id gm4_ce_data matches 16 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "weakness"
-execute if score $wild_magic.id gm4_ce_data matches 17 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "health_boost"
-execute if score $wild_magic.id gm4_ce_data matches 18 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "absorption"
-execute if score $wild_magic.id gm4_ce_data matches 19 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "saturation"
-execute if score $wild_magic.id gm4_ce_data matches 20 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "darkness"
-
-execute if score $wild_magic.id gm4_ce_data matches 21..25 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "speed"
-execute if score $wild_magic.id gm4_ce_data matches 26..30 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "fire_resistance"
-
-execute if score $wild_magic.id gm4_ce_data matches 31..40 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "water_breathing"
-execute if score $wild_magic.id gm4_ce_data matches 41..50 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "night_vision"
-execute if score $wild_magic.id gm4_ce_data matches 51..60 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "invisibility"
-execute if score $wild_magic.id gm4_ce_data matches 61..70 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "glowing"
-execute if score $wild_magic.id gm4_ce_data matches 71..80 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "slow_falling"
-execute if score $wild_magic.id gm4_ce_data matches 81..90 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "conduit_power"
-execute if score $wild_magic.id gm4_ce_data matches 91..100 run data modify storage gm4_combat_expanded:temp wild_magic.id set value "dolphins_grace"
-
-
-# luck
-# unluck
-# bad_omen
-# hero_of_the_village
-
-# Pick effect duration
-execute store result score $wild_magic.duration gm4_ce_data run random value 30..90
-# poison / wither
-execute if score $wild_magic.id gm4_ce_data matches 1..2 store result score $wild_magic.duration gm4_ce_data run random value 2..8
-# instant_health / instant_damage
-execute if score $wild_magic.id gm4_ce_data matches 3..4 run scoreboard players set $wild_magic.duration gm4_ce_data 1
-# levitation
-execute if score $wild_magic.id gm4_ce_data matches 5 store result score $wild_magic.duration gm4_ce_data run random value 1..5
-
-# Pick effect levels
-execute store result score $wild_magic.level gm4_ce_data run random value 0..9
-# poison / wither
-execute if score $wild_magic.id gm4_ce_data matches 1..2 store result score $wild_magic.level gm4_ce_data run random value 0..2
-# instant_damage
-execute if score $wild_magic.id gm4_ce_data matches 4 run scoreboard players set $wild_magic.level gm4_ce_data 0
-# resistance
-execute if score $wild_magic.id gm4_ce_data matches 13 store result score $wild_magic.level gm4_ce_data run random value 0..4
+# rare good
+execute if score $wild_magic.id gm4_ce_data matches 100 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/instant_health
+execute if score $wild_magic.id gm4_ce_data matches 99 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/haste
+execute if score $wild_magic.id gm4_ce_data matches 98 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/absorption
+execute if score $wild_magic.id gm4_ce_data matches 97 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/strength
+# uncommon good
+execute if score $wild_magic.id gm4_ce_data matches 95..96 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/health_boost
+execute if score $wild_magic.id gm4_ce_data matches 93..94 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/regeneration
+execute if score $wild_magic.id gm4_ce_data matches 91..92 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/resistance
+execute if score $wild_magic.id gm4_ce_data matches 89..90 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/saturation
+execute if score $wild_magic.id gm4_ce_data matches 87..88 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/speed
+# common good
+execute if score $wild_magic.id gm4_ce_data matches 83..86 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/conduit_power
+execute if score $wild_magic.id gm4_ce_data matches 79..82 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/jump_boost
+execute if score $wild_magic.id gm4_ce_data matches 75..78 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/invisibility
+execute if score $wild_magic.id gm4_ce_data matches 71..74 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/dolphins_grace
+execute if score $wild_magic.id gm4_ce_data matches 66..70 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/glowing
+execute if score $wild_magic.id gm4_ce_data matches 61..65 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/fire_resistance
+execute if score $wild_magic.id gm4_ce_data matches 56..60 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/night_vision
+execute if score $wild_magic.id gm4_ce_data matches 51..55 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/water_breathing
+# common bad
+execute if score $wild_magic.id gm4_ce_data matches 43..50 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/darkness
+execute if score $wild_magic.id gm4_ce_data matches 36..42 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/hunger
+execute if score $wild_magic.id gm4_ce_data matches 30..35 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/mining_fatigue
+execute if score $wild_magic.id gm4_ce_data matches 24..29 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/nausea
+execute if score $wild_magic.id gm4_ce_data matches 18..23 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/slowness
+# uncommon bad
+execute if score $wild_magic.id gm4_ce_data matches 15..17 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/blindness
+execute if score $wild_magic.id gm4_ce_data matches 12..14 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/levitation
+execute if score $wild_magic.id gm4_ce_data matches 9..11 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/slow_falling
+execute if score $wild_magic.id gm4_ce_data matches 6..8 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/weakness
+# rare bad
+execute if score $wild_magic.id gm4_ce_data matches 4..5 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/wither
+execute if score $wild_magic.id gm4_ce_data matches 2..3 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/poison
+execute if score $wild_magic.id gm4_ce_data matches 1 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/instant_damage
 
 # Store in storage and apply
-execute store result storage gm4_combat_expanded:temp wild_magic.duration int 1 run scoreboard players get $wild_magic.duration gm4_ce_data
-execute store result storage gm4_combat_expanded:temp wild_magic.level int 1 run scoreboard players get $wild_magic.level gm4_ce_data
 function gm4_combat_expanded:armor/modifier/type/wild_magic/eval with storage gm4_combat_expanded:temp wild_magic
 
 # SFX

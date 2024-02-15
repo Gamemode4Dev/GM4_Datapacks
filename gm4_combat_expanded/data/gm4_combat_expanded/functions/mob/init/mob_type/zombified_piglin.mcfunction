@@ -25,6 +25,9 @@ loot replace entity @s weapon.mainhand loot gm4_combat_expanded:weapon/sword/gol
 # set droprate to 20%
 data modify entity @s HandDropChances set value [0.20F,0.20F]
 
+# remove zombie leader bonus
+execute if data entity @s Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}] run data remove entity @s Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}]
+
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep
 scoreboard players reset $replaced_mob gm4_ce_data
