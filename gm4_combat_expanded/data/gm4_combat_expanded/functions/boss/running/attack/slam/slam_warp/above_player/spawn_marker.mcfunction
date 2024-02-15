@@ -4,11 +4,11 @@
 # run from armor/type/vorpal/attempt
 
 tag @s add gm4_ce_boss.warp_locator
-execute at @r[gamemode=!spectator,gamemode=!creative,distance=..48] run tp @s ~-4 ~ ~-4
+execute at @r[gamemode=!spectator,gamemode=!creative,distance=..48] run tp @s ~-1 ~ ~-1
 execute store result score $y_pos gm4_ce_boss run data get entity @s Pos[1]
 scoreboard players set $warp_attempt gm4_ce_boss 0
 
-function gm4_combat_expanded:boss/running/attack/warp/pick_location_high/randomize
+function gm4_combat_expanded:boss/running/attack/slam/slam_warp/above_player/randomize
 
 execute at @s align xyz run tp @e[type=shulker,tag=gm4_ce_target] ~ ~ ~
 kill @s

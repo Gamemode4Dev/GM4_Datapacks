@@ -8,7 +8,7 @@ summon item_display ~ ~ ~ {Tags:["gm4_ce_boss","gm4_ce_boss.head","gm4_ce_boss.f
     {id:"minecraft:item_display",Tags:["gm4_ce_boss","gm4_ce_boss.head","gm4_ce_boss.vertical","gm4_ce_boss.new"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.0025f,0f],scale:[0.95f,1.0075f,0.95f]},item:{id:"minecraft:copper_block",Count:1b,tag:{return:{scale:[0.95f,1.0075f,0.95f],translation:[0f,-0.0025f,0f]}}}}\
     ]}
 
-summon shulker ~ ~-1 ~ {Silent:1b,DeathLootTable:"empty",PersistenceRequired:1b,NoAI:1b,Health:960f,Peek:1b,AttachFace:1b,Tags:["gm4_ce_boss","gm4_ce_boss.main","gm4_ce_boss.new","smithed.entity"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:-1,show_particles:0b},{id:"minecraft:resistance",amplifier:1b,duration:-1,show_particles:0b}],Attributes:[{Name:"generic.max_health",Base:1024},{Name:"generic.max_absorption",Base:0},{Name:"generic.armor",Base:20}]}
+summon shulker ~ ~-1 ~ {Silent:1b,CustomName:'{"text":"Amethyst Guardian"}',DeathLootTable:"empty",PersistenceRequired:1b,NoAI:1b,Health:960f,Peek:1b,AttachFace:1b,Tags:["gm4_ce_boss","gm4_ce_boss.main","gm4_ce_boss.new","smithed.entity"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:-1,show_particles:0b},{id:"minecraft:resistance",amplifier:1b,duration:-1,show_particles:0b}],Attributes:[{Name:"generic.max_health",Base:1024},{Name:"generic.max_absorption",Base:0},{Name:"generic.armor",Base:20}],ArmorItems:[{},{},{},{id:"minecraft:leather_helmet",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:blast_protection",lvl:10s},{id:"minecraft:projectile_protection",lvl:6s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,Operation:0,UUID:[I;1119897995,270158067,-1453831260,2008913814],Slot:"head"}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F]}
 
 execute store result storage gm4_combat_expanded:temp boss.running_id int 1 run scoreboard players add $next_id gm4_ce_boss.id 1
 function gm4_combat_expanded:boss/activation/spawn/bossbar with storage gm4_combat_expanded:temp boss
@@ -16,4 +16,4 @@ data remove storage gm4_combat_expanded:temp boss
 
 execute as @e[tag=gm4_ce_boss.new] run function gm4_combat_expanded:boss/activation/spawn/head_init
 
-schedule function gm4_combat_expanded:boss/clock 1t
+schedule function gm4_combat_expanded:clocks/temp/boss 1t

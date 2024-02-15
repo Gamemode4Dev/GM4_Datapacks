@@ -4,7 +4,7 @@
 # run from armor/type/vorpal/spawn_marker
 # run from armor/type/vorpal/tp_marker
 
-execute store result score $randomZ gm4_ce_boss run random value 0..6
-execute store result score $randomZ gm4_ce_boss run random value 0..6
+execute store result score $randomZ gm4_ce_boss run random value 0..8
+execute store result score $randomZ gm4_ce_boss run random value 0..8
 
 execute at @s run function gm4_combat_expanded:boss/running/attack/warp/pick_location_high/tp_marker

@@ -1,6 +1,6 @@
 
-# reset peek to 1, sometimes it can get lost
-data modify entity @s Peek set value 1b
+# reset peek to 1 and Attachface to 1 if it got lost
+data merge entity @s[nbt=!{Peek:1b,AttachFace:1b}] {Peek:1b,AttachFace:1b}
 
 # tag all entities affiliated with this boss entity
 execute as @e[tag=gm4_ce_boss.head] if score @s gm4_ce_boss.id = $running_id gm4_ce_boss.id run tag @s add gm4_ce_boss.running

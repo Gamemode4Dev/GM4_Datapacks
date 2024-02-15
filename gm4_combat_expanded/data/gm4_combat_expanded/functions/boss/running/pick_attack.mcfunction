@@ -10,9 +10,9 @@ execute if score @s[scores={gm4_ce_boss.phase=3},tag=!gm4_ce_boss.sentinel] gm4_
 
 ## SLAM
 # Phase 1: Guardian charges an attack over a medium duration, then explodes the ground below with a lingering damage cloud (dragon fireball)
-# Phase 2: warp above a nearby player just before the slam (33%)
+# Phase 2: attack charges much faster
 # Phase 3: less delay after attack
-# Phase 2: warp above a nearby player just before the slam (66%), slam attack charges faster
+# Phase 2: warp above a nearby player just before the slam (33%), slam attack charges faster
 # Trigger: players below the guardian (75%)
 execute unless score @s[scores={gm4_ce_boss.attack_id=0}] gm4_ce_boss.last_attack matches 4 positioned ~-3 ~-20 ~-3 align xyz if entity @a[gamemode=!spectator,gamemode=!creative,dx=6,dy=17.5,dz=6] if predicate gm4_combat_expanded:technical/chance/boss/slam_attack run scoreboard players set @s gm4_ce_boss.attack_id 4
 
@@ -42,10 +42,10 @@ execute unless score @s[scores={gm4_ce_boss.attack_id=0}] gm4_ce_boss.last_attac
 ## FIREBALL
 # Phase 1: Guardian tracks the closest player, firing 3 volleys of small fireballs
 # Phase 2: follows the small fireballs with a large one that explodes, follows tracking of the last small fireballs
-# Phase 3: spawn a second fireball that has better tracking just after the first (75%)
-# Phase 4: spawn a third fireball that has better tracking just after the second (75%)
+# Phase 3: spawn a second fireball that has better tracking just after the first
+# Phase 4: immediatly activate warp to dodge any return fireballs
 # Trigger: players are a middle distance from the guardian (40%)
-execute unless score @s[scores={gm4_ce_boss.attack_id=0}] gm4_ce_boss.last_attack matches 2 if entity @p[gamemode=!spectator,gamemode=!creative,distance=4..18] if predicate gm4_combat_expanded:technical/chance/boss/fireball_attack run scoreboard players set @s gm4_ce_boss.attack_id 2
+execute unless score @s[scores={gm4_ce_boss.attack_id=0}] gm4_ce_boss.last_attack matches 2 if entity @p[gamemode=!spectator,gamemode=!creative,distance=10..24] if predicate gm4_combat_expanded:technical/chance/boss/fireball_attack run scoreboard players set @s gm4_ce_boss.attack_id 2
 
 ## AURA
 # Phase 1: -
