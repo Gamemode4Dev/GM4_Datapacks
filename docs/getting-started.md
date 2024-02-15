@@ -2,11 +2,11 @@
 This guide will show how to setup a local development environment to build, test, and contribute to our modules.
 
 ## Table of contents
-* [Setup](#setup)
+* [Installation](#installation)
 * [Building modules](#building-modules)
 * [Submitting changes](#submitting-changes)
 
-## Setup
+## Installation
 To contribute to our project you need to install [Git](https://git-scm.com/downloads) and a text editor. We recommend [VSCode](https://code.visualstudio.com/).
 
 Our modules are built using [beet](https://github.com/mcbeet/beet), which allows us to automatically validate and generate part of our data packs and resource packs. However this requires some extra setup:
