@@ -34,7 +34,6 @@ execute unless data storage gm4_player_heads:register heads[{id:"gm4_zauber_caul
 execute unless data storage gm4_player_heads:register heads[{id:"gm4_zauber_cauldrons:crystal/strength"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_zauber_cauldrons:crystal/strength",name:'[Drop to Fix Item] gm4_zauber_cauldrons:crystal/strength',loot_table:'gm4_zauber_cauldrons:items/crystals/strength'}
 
 # module data version
-execute if score zauber_cauldrons gm4_modules matches ..16030 unless score $data_version gm4_zc_data matches 1.. run function gm4_zauber_cauldrons:cauldron/structure/update/search_for_outdated_markers
 scoreboard players set $data_version gm4_zc_data 1
 
 # website maintained module version

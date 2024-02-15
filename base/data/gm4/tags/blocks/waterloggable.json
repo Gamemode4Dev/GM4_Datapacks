@@ -1,5 +1,6 @@
 {
   "values": [
+    "#minecraft:rails",
     "#minecraft:campfires",
     "#minecraft:candles",
     "#minecraft:fences",
@@ -50,6 +51,7 @@
     "minecraft:light_gray_stained_glass_pane",
     "minecraft:lime_stained_glass_pane",
     "minecraft:magenta_stained_glass_pane",
+    "minecraft:mangrove_propagule",
     "minecraft:mangrove_roots",
     "minecraft:medium_amethyst_bud",
     "minecraft:orange_stained_glass_pane",
