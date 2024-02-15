@@ -148,8 +148,8 @@ At any point when you feel the module is ready to recieve feedback or testing, y
 ### Credits
 Make sure to credit all relevant people in `beet.yaml`. Most modules credit the creator (`Creator`), updaters (`Updated by`) and the icon designer (`Icon Design`), however, you may add credits for any work relevant to the module. Each credits section consists of an array of strings, which hold the names of the contributors.
 
-If you also want a link to a social profile, add an entry to `contributors.json`:
-```json
+If you also want a link to a social profile, add an entry to `gm4/contributors.json`:
+```jsonc
 [
     // ...
     {
@@ -171,7 +171,7 @@ Add promotional assets to an `images` folder. These can be gifs or pictures whic
 <!-- TODO: Describe image formats and creation process -->
 
 ### Readme
-Create a `README.md` file in the root of the module directory. The contents of this file will be used
+Create a `README.md` file in the root of the module directory. The contents of this file will be used on distribution platforms like Modrinth and Smithed.
 
 ### Wiki page
 After a module has been accepted, a wiki page may be created on [wiki.gm4.co](https://wiki.gm4.co/Main_Page).
