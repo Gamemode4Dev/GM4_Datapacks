@@ -3,7 +3,11 @@
 ## Table of contents
 * [Naming](#naming)
 * [Comments](#comments)
+  * [Function headers](#function-headers)
+  * [Inline comments](#inline-comments)
 * [Smithed conventions](#smithed-conventions)
+  * [CMD prefixing](#cmd-prefixing)
+  * [Tag specification](#tag-specification)
 
 ## Naming
 - Names should be as clear and relevant as possible to avoid confusion or two modules sharing the same name by mistake.
@@ -44,4 +48,18 @@ kill @s
 ```
 
 ## Smithed conventions
-🚧 TODO 🚧
+We follow the Smithed conventions in our data pack. For the full documentation, see the [Smithed Wiki](https://wiki.smithed.dev/conventions/).
+
+### CMD prefixing
+All the custom model data values in GM4 are prefixed with `3420000`. As a module developer you don't need to worry about this, it is handled by our resource pack plugin. <!-- TODO: link to resource pack docs -->
+
+### Tag specification
+Smithed defines a set of standard entity `/tag`s to ensure compatibility between different packs:
+* Custom entities need to get the `smithed.entity` tag
+* If the entity is a technical marker, also give it the `smithed.strict` tag
+* If the entity is a custom block marker, give it the `smithed.block` tag
+
+These tags can then be used in checks:
+* When you want to target all vanilla skeletons, use `@e[type=skeleton,tag=!smithed.entity]`
+* When you want to teleport nearby mobs, use `@e[tag=!smithed.strict]`
+* When you want to detect a vanilla block, use `align xyz if block ~ ~ ~ obsidian unless entity @e[tag=smithed.block,dx=0]`
