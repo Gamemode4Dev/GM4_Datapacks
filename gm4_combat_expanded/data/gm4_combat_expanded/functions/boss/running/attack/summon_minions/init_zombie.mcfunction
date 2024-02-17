@@ -3,8 +3,10 @@ data merge entity @s {DeathLootTable:"empty",CustomName:'{"text":"Amethyst Zombi
 scoreboard players operation @s gm4_ce_boss.id = $mob_id gm4_ce_boss.id
 
 # set CE gear
-scoreboard players set $difficulty gm4_ce_data 75
+scoreboard players set $difficulty gm4_ce_data 85
 loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/generic/feet
 loot replace entity @s armor.legs loot gm4_combat_expanded:mob/equip_armor/generic/legs
 loot replace entity @s armor.chest loot gm4_combat_expanded:mob/equip_armor/generic/chest
 item replace entity @s weapon.mainhand with air
+
+tag @s add gm4_ce_pierce_attacks

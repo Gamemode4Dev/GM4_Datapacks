@@ -1,5 +1,5 @@
 
-particle dragon_breath ~ ~ ~ 0.02 0.02 0.02 0.01 1
+particle witch ~ ~ ~ 0.02 0.02 0.02 0.01 1
 scoreboard players remove $raycast gm4_ce_boss 1
 execute if entity @p[tag=gm4_ce_boss.current_target,distance=..0.5] run scoreboard players set $raycast gm4_ce_boss 0
 

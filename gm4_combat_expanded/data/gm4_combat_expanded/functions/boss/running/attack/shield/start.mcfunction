@@ -1,3 +1,2 @@
 
-tag @s add gm4_ce_boss.shielded
-execute positioned ~ ~0.5 ~ summon item_display run function gm4_combat_expanded:boss/running/attack/shield/init_shield
+function gm4_combat_expanded:boss/running/health/immune_add with storage gm4_combat_expanded:temp boss

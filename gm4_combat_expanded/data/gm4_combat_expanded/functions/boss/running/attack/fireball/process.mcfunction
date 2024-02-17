@@ -13,9 +13,9 @@ execute if score @s gm4_ce_boss.attack_progress matches 1 run scoreboard players
 execute if score @s gm4_ce_boss.attack_progress matches 2..3 run scoreboard players set @s gm4_ce_boss.tick_delay 5
 execute if score @s gm4_ce_boss.attack_progress matches 4.. run scoreboard players set @s gm4_ce_boss.tick_delay 10
 
-execute if score @s gm4_ce_boss.attack_progress matches 2..4 at @e[type=block_display,tag=gm4_ce_boss.crystal,tag=gm4_ce_boss.running] positioned ^0.1 ^-0.1 ^1.5 summon small_fireball run function gm4_combat_expanded:boss/running/attack/fireball/spawn_small_fireball
-execute if score @s gm4_ce_boss.attack_progress matches 2..4 at @e[type=block_display,tag=gm4_ce_boss.crystal,tag=gm4_ce_boss.running] positioned ^-0.05 ^0.05 ^1.49 summon small_fireball run function gm4_combat_expanded:boss/running/attack/fireball/spawn_small_fireball
-execute if score @s gm4_ce_boss.attack_progress matches 2..4 at @e[type=block_display,tag=gm4_ce_boss.crystal,tag=gm4_ce_boss.running] positioned ^0.05 ^0.1 ^1.52 summon small_fireball run function gm4_combat_expanded:boss/running/attack/fireball/spawn_small_fireball
+execute if score @s gm4_ce_boss.attack_progress matches 2..4 at @e[type=block_display,tag=gm4_ce_boss.crystal,tag=gm4_ce_boss.running] positioned ^ ^ ^1.5 summon small_fireball run function gm4_combat_expanded:boss/running/attack/fireball/spawn_small_fireball
+execute if score @s gm4_ce_boss.attack_progress matches 2..4 at @e[type=block_display,tag=gm4_ce_boss.crystal,tag=gm4_ce_boss.running] positioned ^ ^ ^1.5 summon small_fireball run function gm4_combat_expanded:boss/running/attack/fireball/spawn_small_fireball
+execute if score @s gm4_ce_boss.attack_progress matches 2..4 at @e[type=block_display,tag=gm4_ce_boss.crystal,tag=gm4_ce_boss.running] positioned ^ ^ ^1.5 summon small_fireball run function gm4_combat_expanded:boss/running/attack/fireball/spawn_small_fireball
 execute if score @s gm4_ce_boss.attack_progress matches 2..4 run scoreboard players set $raycast gm4_ce_boss 64
 execute if score @s gm4_ce_boss.attack_progress matches 2..4 at @e[type=block_display,tag=gm4_ce_boss.crystal,tag=gm4_ce_boss.running] positioned ^ ^ ^1.5 run function gm4_combat_expanded:boss/running/attack/fireball/raycast
 execute if score @s[scores={gm4_ce_boss.phase=1}] gm4_ce_boss.attack_progress matches 4 run function gm4_combat_expanded:boss/running/attack/fireball/end

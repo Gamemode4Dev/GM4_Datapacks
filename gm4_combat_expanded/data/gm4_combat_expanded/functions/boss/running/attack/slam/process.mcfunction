@@ -18,7 +18,7 @@ execute if score @s gm4_ce_boss.attack_progress matches 16 as @e[type=item_displ
 execute if score @s gm4_ce_boss.attack_progress matches 17 as @e[type=item_display,tag=gm4_ce_boss.slam_block] if score @s gm4_ce_boss.id = $running_id gm4_ce_boss.id run function gm4_combat_expanded:boss/running/attack/slam/slam_down
 execute if score @s gm4_ce_boss.attack_progress matches 18 run function gm4_combat_expanded:boss/running/attack/slam/end
 
-scoreboard players set @s[scores={gm4_ce_boss.phase=1,gm4_ce_boss.attack_progress=..14}] gm4_ce_boss.tick_delay 2
-scoreboard players set @s[scores={gm4_ce_boss.phase=3..,gm4_ce_boss.attack_progress=..14}] gm4_ce_boss.tick_delay 1
+scoreboard players set @s[scores={gm4_ce_boss.phase=1..2,gm4_ce_boss.attack_progress=..14}] gm4_ce_boss.tick_delay 3
+scoreboard players set @s[scores={gm4_ce_boss.phase=3..,gm4_ce_boss.attack_progress=..14}] gm4_ce_boss.tick_delay 2
 scoreboard players set @s[scores={gm4_ce_boss.attack_progress=15}] gm4_ce_boss.tick_delay 3
 scoreboard players set @s[scores={gm4_ce_boss.attack_progress=16..}] gm4_ce_boss.tick_delay 6
