@@ -33,8 +33,6 @@ from mecha import (
     AstChildren,
     AstCommand,
     AstJson,
-    AstJsonObjectEntry,
-    AstJsonObjectKey,
     AstJsonObject,
     AstNbtCompoundEntry,
     AstNbtPath,
@@ -236,6 +234,10 @@ class ResourcePackOptions(PluginOptions, extra=Extra.ignore):
             raise InvalidOptions("gm4", complete_explaination)
         
         return FlatResourcePackOptions(model_data=ret, gui_fonts=self.gui_fonts)
+
+
+class TranslationLinterOptions(PluginOptions, extra=Extra.ignore):
+    translation_linter_ignores: list[str]
 
 #== Configurable Base Classes ==#
 class TemplateOptions(BaseModel, extra=Extra.allow):
@@ -625,6 +627,7 @@ class TranslationLinter(Reducer):
         self.logger = parent_logger.getChild(ctx.project_id)
         self.backfill_enable: bool = ctx.cache["translations"].json["backfill"]
         self.backfill_values: dict[str, str] = {}
+        self.ignored_keys: set[str] = set(ctx.validate("gm4", TranslationLinterOptions).translation_linter_ignores)
         super().__init__()
 
     @rule(AstNbtValue)
@@ -648,7 +651,7 @@ class TranslationLinter(Reducer):
         resource_location = self.mecha_database[self.mecha_database.current].resource_location or "null:null"
         if resource_location == "gm4:root":
             return
-            
+        
         # check node fallback contents against babelbox translations
         match node.evaluate(): # type: ignore , node has evaluate() method
             case {"translate": str(transl_key), "fallback": str(fallback)}:
@@ -688,6 +691,7 @@ class TranslationLinter(Reducer):
             self.total_keys = (
                 self.vanilla_keys |
                 self.local_keys | 
+                self.ignored_keys | 
                 set(Language(source_path="base/assets/gm4/lang/en_us.json").data.keys()) |
                 self.get_guidebook_translations() |
                 set(self.ctx.cache["translations"].json["keys"]) |
@@ -703,7 +707,7 @@ class TranslationLinter(Reducer):
 
     def warn_unused_translations(self):
         for key in self.ctx.assets.languages.get("gm4_translations:en_us", Language()).data:
-            if key not in self.used_keys and key in self.local_keys:
+            if key not in self.used_keys and key not in self.ignored_keys and key in self.local_keys:
                 self.logger.warn(f"Translation '{key}' is defined but not used")
 
     def apply_babelbox_backfill(self):

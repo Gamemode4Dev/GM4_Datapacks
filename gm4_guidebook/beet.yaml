@@ -28,6 +28,16 @@ meta:
       - item: written_book
         reference: item/guidebook
         template: generated
+    translation_linter_ignores:
+      - text.gm4.guidebook.discovered_page
+      - text.gm4.guidebook.discovered
+      - text.gm4.guidebook.next
+      - text.gm4.guidebook.open_wiki
+      - text.gm4.guidebook.prev
+      - text.gm4.guidebook.refresh
+      - text.gm4.guidebook.return_to_toc
+      - text.gm4.guidebook.table_of_contents
+      - text.gm4.guidebook.undiscovered
     website:
       description: Adds a dynamic guidebook to discover the mechanics of Gamemode 4! This provides a wiki-like experience in-game!
       recommended:
