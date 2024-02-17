@@ -32,10 +32,8 @@ def freeze_last_stored(ctx: Context):
         channel.send(RETRIEVE_LAST_PROJECT)
     for last_project in channel:
         rp, dp, params = last_project[0] # only one project is passed in list
-        frozen_rp  = ResourcePack()
-        frozen_rp._wrapped = rp._wrapped.copy() # type: ignore ; no clear method is exposed so we access the private variable instead
-        frozen_dp  = DataPack()
-        frozen_dp._wrapped = dp._wrapped.copy() # type: ignore ; no clear method is exposed so we access the private variable instead
+        frozen_rp  = rp.copy(shallow=True)
+        frozen_dp  = dp.copy(shallow=True)
 
         # send back the frozen packs
         with ctx.worker(bridge) as channel:
