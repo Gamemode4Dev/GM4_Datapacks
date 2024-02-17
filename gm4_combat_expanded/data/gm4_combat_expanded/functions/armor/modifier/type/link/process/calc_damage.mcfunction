@@ -6,4 +6,4 @@
 scoreboard players operation $health_change gm4_ce_data = @s gm4_ce_health.current
 scoreboard players operation $health_change gm4_ce_data -= $link_health gm4_ce_data
 
-function gm4_combat_expanded:armor/modifier/type/link/damage/activate
+function gm4_combat_expanded:player/damage/activate
