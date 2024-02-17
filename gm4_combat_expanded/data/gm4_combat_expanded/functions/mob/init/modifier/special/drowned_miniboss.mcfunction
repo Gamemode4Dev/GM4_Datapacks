@@ -3,10 +3,9 @@
 # at @s
 # run from mob/init/mob_type/zombie
 
-summon zombie ~-0.05 ~0.05 ~0.005 {Tags:["gm4_ce_extra_mob"]}
-summon zombie ~-0.15 ~0.1 ~-0.01 {Tags:["gm4_ce_extra_mob"]}
-summon skeleton ~0.15 ~0.05 ~-0.01 {Tags:["gm4_ce_extra_mob"]}
-summon skeleton ~0.1 ~0.1 ~0.015 {Tags:["gm4_ce_extra_mob"]}
+summon drowned ~0.1 ~0.15 ~0.02 {Tags:["gm4_ce_extra_mob"]}
+summon drowned ~-0.05 ~0.05 ~0.005 {Tags:["gm4_ce_extra_mob"]}
+summon drowned ~-0.15 ~0.1 ~-0.01 {Tags:["gm4_ce_extra_mob"]}
 scoreboard players set $mob_extras gm4_ce_data 1
 
 attribute @s zombie.spawn_reinforcements modifier add 0bec9c4f-5376-4171-823d-1aa08cbd3142 "gm4_ce_miniboss" 2 multiply_base
@@ -19,11 +18,12 @@ attribute @s generic.knockback_resistance modifier add d8b8f22e-bba8-47ca-b502-4
 scoreboard players set @s gm4_ce_damage_cap 75
 
 loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/miniboss
-loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/miniboss
+item replace entity @s weapon.mainhand with trident
 loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_weapon/shield
 
 data modify entity @s ArmorDropChances set value [0.50F,0.50F,0.50F,0.50F]
 
-data modify entity @s HandDropChances set value [0.50F,0.75F]
+# slightly lower hand drop chance to keep tridents rare-ish
+data modify entity @s HandDropChances set value [0.20F,0.75F]
 
 scoreboard players set $modifier_picked gm4_ce_data 1

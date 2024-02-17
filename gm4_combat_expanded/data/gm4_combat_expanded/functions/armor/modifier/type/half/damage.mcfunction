@@ -3,7 +3,6 @@
 # at unspecified
 # run from armor/modifier/type/half/apply
 
-scoreboard players operation $remove_health gm4_ce_data = @s gm4_ce_health.current
-execute store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players operation $remove_health gm4_ce_data -= @s gm4_ce_health.max_half
-function gm4_combat_expanded:player/damage with storage gm4_combat_expanded:temp damage_player
-data remove storage gm4_combat_expanded:temp damage_player
+scoreboard players operation $health_change gm4_ce_data = @s gm4_ce_health.current
+scoreboard players operation $health_change gm4_ce_data -= @s gm4_ce_health.max_half
+execute if score $health_change gm4_ce_data matches 1.. run function gm4_combat_expanded:player/damage/activate

@@ -5,12 +5,12 @@
 
 function gm4_combat_expanded:player/calculate_hp
 
-execute if entity @s[tag=gm4_ce_delay_lvl_1] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 6
-execute if entity @s[tag=gm4_ce_delay_lvl_2] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 9
-execute if entity @s[tag=gm4_ce_delay_lvl_3] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 12
+execute if entity @s[tag=gm4_ce_delay_lvl_1] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 8
+execute if entity @s[tag=gm4_ce_delay_lvl_2] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 12
+execute if entity @s[tag=gm4_ce_delay_lvl_3] store result storage gm4_combat_expanded:temp damage_player.damage int 1 run scoreboard players set $delay_damage gm4_ce_data 16
 
 # damage player if they are alive
-execute if score $delay_damage gm4_ce_data < @s gm4_ce_health.current run function gm4_combat_expanded:player/damage with storage gm4_combat_expanded:temp damage_player
+execute if score $delay_damage gm4_ce_data < @s gm4_ce_health.current run function gm4_combat_expanded:weapon/modifier/delay/explode_player_eval with storage gm4_combat_expanded:temp damage_player
 
 # kill player if health reached 0
 execute if score $delay_damage gm4_ce_data >= s gm4_ce_health.current run function gm4_combat_expanded:weapon/modifier/delay/player_death

@@ -3,6 +3,9 @@
 # at unspecified
 # run from any armor/active/heal/heal_calc
 
+# if wearing half armor keep player below half
+execute if predicate gm4_combat_expanded:modified_armor/half run function gm4_combat_expanded:armor/modifier/type/half/limit_heal
+
 # calculate max health to get player to new health
 scoreboard players operation $remove_health gm4_ce_data = @s gm4_ce_health.max
 scoreboard players operation $remove_health gm4_ce_data -= @s gm4_ce_health.current
