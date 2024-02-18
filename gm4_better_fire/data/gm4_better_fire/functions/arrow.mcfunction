@@ -5,6 +5,6 @@
 # runs from on_fire
 
 setblock ~ ~ ~ fire keep
-execute if entity @s[nbt={pickup:1b}] run loot spawn ~ ~ ~ loot gm4_better_fire:flint
+execute if entity @s[nbt={pickup:1b}] run loot spawn ~ ~ ~ loot gm4_better_fire:entities/flame_arrow/flint
 
 kill @s
