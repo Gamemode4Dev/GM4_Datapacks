@@ -2,8 +2,7 @@
 scoreboard players reset @s gm4_ce_boss.attack_progress
 scoreboard players set @s[scores={gm4_ce_boss.phase=..3}] gm4_ce_boss.attack_id 0
 scoreboard players set @s[scores={gm4_ce_boss.phase=1}] gm4_ce_boss.tick_delay 30
-scoreboard players set @s[scores={gm4_ce_boss.phase=2}] gm4_ce_boss.tick_delay 20
-scoreboard players set @s[scores={gm4_ce_boss.phase=3}] gm4_ce_boss.tick_delay 10
+scoreboard players set @s[scores={gm4_ce_boss.phase=2..3}] gm4_ce_boss.tick_delay 15
 # in phase 4 immediatly warp away
 scoreboard players set @s[scores={gm4_ce_boss.phase=4}] gm4_ce_boss.attack_id 3
 scoreboard players set @s[scores={gm4_ce_boss.phase=4}] gm4_ce_boss.tick_delay 1

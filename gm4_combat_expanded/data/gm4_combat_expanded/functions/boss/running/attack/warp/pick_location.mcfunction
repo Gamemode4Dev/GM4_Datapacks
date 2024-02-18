@@ -7,6 +7,7 @@ execute if score $pick_location gm4_ce_boss matches 3..4 summon marker run funct
 execute if score $pick_location gm4_ce_boss matches 5 summon marker run function gm4_combat_expanded:boss/running/attack/warp/pick_location_far/spawn_marker
 tag @s remove gm4_ce_target
 
+kill @e[type=item_display,tag=gm4_ce_boss.hurtbox,tag=gm4_ce_boss.running]
 execute at @s as @e[tag=gm4_ce_boss.running,distance=0.1..] run tp @s ~ ~.5 ~
 execute at @s run particle minecraft:portal ~ ~1.75 ~ 0 0 0 0.75 32
 tp @e[type=item_display,tag=gm4_ce_boss.teleport_display,limit=1,sort=nearest] @s

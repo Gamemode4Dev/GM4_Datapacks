@@ -19,4 +19,4 @@ scoreboard players set $set_y gm4_ce_boss 0
 execute at @s run function gm4_combat_expanded:boss/running/attack/slam/slam_warp/above_player/set_ypos
 
 scoreboard players add $warp_attempt gm4_ce_boss 1
-execute unless score $warp_attempt gm4_ce_boss matches 33.. run function gm4_combat_expanded:boss/running/attack/slam/slam_warp/above_player/randomize
+execute unless score $warp_attempt gm4_ce_boss matches 11.. run function gm4_combat_expanded:boss/running/attack/slam/slam_warp/above_player/randomize

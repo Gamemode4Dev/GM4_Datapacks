@@ -2,6 +2,9 @@
 scoreboard players set $health_change gm4_ce_boss 960
 scoreboard players operation $health_change gm4_ce_boss -= $health gm4_ce_boss
 
+# cap damage at one time to 20
+execute if score $health_change gm4_ce_boss matches 21.. run scoreboard players set $health_change gm4_ce_boss 20
+
 execute if entity @s[tag=gm4_ce_boss.immune] if score $health_change gm4_ce_boss matches 1.. run playsound minecraft:item.shield.block hostile @a[distance=..64] ~ ~ ~ 0.75 0.8 1
 execute if entity @s[tag=gm4_ce_boss.immune] if score $health_change gm4_ce_boss matches 1.. run scoreboard players set $health_change gm4_ce_boss 0
 

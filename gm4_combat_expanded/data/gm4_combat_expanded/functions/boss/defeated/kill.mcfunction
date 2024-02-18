@@ -13,6 +13,15 @@ execute unless entity @s[tag=gm4_ce_boss.sentinel] as @e[type=shulker,tag=gm4_ce
 # spawn loot
 execute unless entity @s[tag=gm4_ce_boss.sentinel] run function gm4_combat_expanded:boss/defeated/loot
 
+# sounds and particles
+playsound minecraft:entity.vex.death hostile @a[distance=..32] ~ ~ ~ 2 0 1
+playsound minecraft:block.beacon.deactivate hostile @a[distance=..32] ~ ~ ~ 0.75 0 1
+playsound minecraft:item.trident.thunder hostile @a[distance=..32] ~ ~ ~ 0.5 0.9 1
+particle minecraft:reverse_portal ~ ~0.5 ~ 0.15 0.15 0.15 2 128
+particle minecraft:witch ~ ~0.5 ~ 0.15 0.15 0.15 2 18
+particle block polished_deepslate ~ ~0.5 ~ 0.15 0.15 0.15 0 12
+particle block amethyst_block ~ ~0.5 ~ 0.15 0.15 0.15 0 4
+
 # remove shulker
 tp @s ~ ~-1000 ~
 kill @s
