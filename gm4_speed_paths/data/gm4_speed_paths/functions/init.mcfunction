@@ -4,8 +4,4 @@ scoreboard players set speed_paths gm4_modules 1
 
 scoreboard objectives add gm4_speed_paths dummy
 
-schedule function gm4_speed_paths:main 1t
-
-
-
 #$moduleUpdateList
