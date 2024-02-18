@@ -46,35 +46,6 @@
             {
               "function": "minecraft:enchant_randomly",
               "enchantments": [
-                "minecraft:depth_strider"
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/reef"
-                },
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:binomial",
-                    "n": 1,
-                    "p": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$difficulty"
-                      },
-                      "score": "gm4_ce_data",
-                      "scale": 0.005
-                    }
-                  },
-                  "range": 1
-                }
-              ]
-            },
-            {
-              "function": "minecraft:enchant_randomly",
-              "enchantments": [
                 "minecraft:projectile_protection"
               ],
               "conditions": [
