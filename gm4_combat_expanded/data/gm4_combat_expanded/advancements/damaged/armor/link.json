@@ -17,6 +17,7 @@
           }
         ],
         "damage": {
+          "blocked": false,
           "type": {
             "tags": [
               {
