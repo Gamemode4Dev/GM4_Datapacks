@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{custom_potion_effects:[{id:\"minecraft:weakness\",amplifier:0b,duration:100},{id:\"minecraft:poison\",amplifier:1b,duration:100},{id:\"minecraft:slowness\",amplifier:0b,duration:600}],CustomPotionColor:8889187,HideFlags:32}"
+              "tag": "{custom_potion_effects:[{id:\"minecraft:weakness\",amplifier:0b,duration:100,show_particles:1b,show_icon:1b,ambient:0b},{id:\"minecraft:poison\",amplifier:1b,duration:100,show_particles:1b,show_icon:1b,ambient:0b},{id:\"minecraft:slowness\",amplifier:0b,duration:600,show_particles:1b,show_icon:1b,ambient:0b}],CustomPotionColor:8889187,HideFlags:32}"
             },
             {
               "function": "minecraft:set_lore",
