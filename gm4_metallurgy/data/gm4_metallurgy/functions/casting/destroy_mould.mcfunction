@@ -1,4 +1,6 @@
-# @s = moulds that need destroying.
+# decides in which way the mould should be destroyed depending on temperature and metal content
+# @s = moulds that need destroying
+# at @s positioned ~ ~1.23 ~ (at the x-z location of the mould, just above the surface of the sand)
 # run from sustain_mould
 
 # check for metal values in mold, drop corresponding items
