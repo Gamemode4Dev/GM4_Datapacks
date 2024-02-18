@@ -12,7 +12,7 @@ execute as @a if score @s gm4_ce_id = $check_id gm4_ce_data run scoreboard playe
 execute if score $check_version gm4_ce_data matches -1 run return 0
 
 # if bed is the current bed return success
-execute if score @s gm4_ce_sleep.version = $check_version gm4_ce_data run scoreboard players set $nearby_home_bed gm4_ce_data 1
+execute if score @s gm4_ce_sleep.version = $check_version gm4_ce_data at @s if block ~ ~ ~ #minecraft:beds run scoreboard players set $nearby_home_bed gm4_ce_data 1
 execute if score $nearby_home_bed gm4_ce_data matches 1 run return 1
 
 # if bed is not the current bed but is linked to this player remove it
