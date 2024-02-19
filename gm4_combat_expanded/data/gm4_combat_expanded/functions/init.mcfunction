@@ -79,7 +79,7 @@ scoreboard objectives add gm4_ce_boss.attack_progress dummy
 scoreboard objectives add gm4_ce_boss.health dummy
 scoreboard objectives add gm4_ce_boss.phase dummy
 scoreboard objectives add gm4_ce_boss.last_attack dummy
-scoreboard objectives add gm4_ce_boss.guardian_id dummy
+scoreboard objectives add gm4_ce_boss.secondary_id dummy
 
 scoreboard objectives add gm4_ce_keep_tick dummy
 scoreboard players reset * gm4_ce_keep_tick

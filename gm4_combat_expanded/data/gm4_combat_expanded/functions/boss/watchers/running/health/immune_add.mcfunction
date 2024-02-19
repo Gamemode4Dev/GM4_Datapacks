@@ -1,0 +1,4 @@
+
+tag @s add gm4_ce_boss.immune
+
+execute unless score @s gm4_ce_boss.attack_id matches 6 positioned ~ ~0.5 ~ summon item_display run function gm4_combat_expanded:boss/watchers/running/health/immune_shield
