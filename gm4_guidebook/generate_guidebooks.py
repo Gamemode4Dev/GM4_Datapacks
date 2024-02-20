@@ -1302,7 +1302,7 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
   functions:list[dict[Any, Any]] = [
     {
       "function": "minecraft:set_nbt",
-      "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:0b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+      "tag": "{CustomModelData:'gm4_guidebook:item/guidebook',gm4_guidebook:{lectern:0b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
     },
     {
       "function": "minecraft:set_name",
@@ -1329,7 +1329,7 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
   functions_lectern:list[dict[Any, Any]] = [
     {
     "function": "minecraft:set_nbt",
-    "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:1b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+    "tag": "{CustomModelData:'gm4_guidebook:item/guidebook',gm4_guidebook:{lectern:1b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
     },
     {
       "function": "minecraft:set_name",
@@ -1953,7 +1953,7 @@ def generate_toast_model(book: Book, ctx: Context) -> Model:
   img = cast(Image.Image, icon.image) # FIXME why needs cast? # type: ignore
   mask = Image.new(mode='L', size=img.size)
   mask_draw = ImageDraw.Draw(mask)
-  mask_draw.rounded_rectangle(((0,0),img.size), radius=img.size[0]//4, fill=255)
+  mask_draw.rounded_rectangle(((0,0),img.size), radius=img.size[0]//6, fill=255)
   img.putalpha(mask)
   ctx.assets[f"{ctx.project_id}:gui/guidebook/{book.id}"] = Texture(img)
 
