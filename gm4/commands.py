@@ -9,7 +9,7 @@ from typing import Any
 import beet.toolchain.commands as commands
 import click
 import yaml
-from beet import Project, ProjectConfig
+from beet import Project
 from beet.toolchain.cli import beet
 
 # NOTE pydantic.v1 does not allow reloading models with custom validators, which beet watch will do normally. 
