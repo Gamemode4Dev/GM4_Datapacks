@@ -14,14 +14,14 @@ files = [
 
 [[package]]
 name = "beet"
-version = "0.104.0"
+version = "0.104.1"
 description = "The Minecraft pack development kit"
 category = "main"
 optional = false
 python-versions = ">=3.10,<4.0"
 files = [
-    {file = "beet-0.104.0-py3-none-any.whl", hash = "sha256:32c84891e37038155efb9cce7e14c139f568ea773ebc4ee637cce443b7afc899"},
-    {file = "beet-0.104.0.tar.gz", hash = "sha256:d1334a3ae09659aa61156d68f04c10ff5fe735fa08f42817d0c76d4bb7874a9c"},
+    {file = "beet-0.104.1-py3-none-any.whl", hash = "sha256:2738f2e7a7706e1e553f380aca7958601ab996684384eb3d8b19d918bcf30ff2"},
+    {file = "beet-0.104.1.tar.gz", hash = "sha256:60b5cfd5f2ae440e0cc549723ac1696b2032c29c144a3359c880119360a135bd"},
 ]
 
 [package.dependencies]
@@ -825,14 +825,14 @@ files = [
 
 [[package]]
 name = "urllib3"
-version = "2.2.0"
+version = "2.2.1"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "urllib3-2.2.0-py3-none-any.whl", hash = "sha256:ce3711610ddce217e6d113a2732fafad960a03fd0318c91faa79481e35c11224"},
-    {file = "urllib3-2.2.0.tar.gz", hash = "sha256:051d961ad0c62a94e50ecf1af379c3aba230c66c710493493560c0c223c49f20"},
+    {file = "urllib3-2.2.1-py3-none-any.whl", hash = "sha256:450b20ec296a467077128bff42b73080516e71b56ff59a60a02bef2232c4fa9d"},
+    {file = "urllib3-2.2.1.tar.gz", hash = "sha256:d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"},
 ]
 
 [package.extras]
@@ -844,4 +844,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "732ff1797441a067225234b1fd02b65aafe9371724f5b6656e632e7ab49b0e93"
+content-hash = "bea52cc4f04ec4e2c7337eb694fa32fcb105850f5e6939e0f68d03e10fbc2137"
