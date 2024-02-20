@@ -24,6 +24,7 @@ data modify entity @s Rotation set from storage gm4_combat_expanded:temp archer_
 data modify entity @s damage set from storage gm4_combat_expanded:temp archer_arrow.damage
 data modify entity @s crit set from storage gm4_combat_expanded:temp archer_arrow.crit
 data modify entity @s Fire set from storage gm4_combat_expanded:temp archer_arrow.Fire
+data modify entity @s Owner set from storage gm4_combat_expanded:temp archer_arrow.Owner
 execute if data storage gm4_combat_expanded:temp archer_arrow.Potion run data modify entity @s Potion set from storage gm4_combat_expanded:temp archer_arrow.Potion
 execute if data storage gm4_combat_expanded:temp archer_arrow.custom_potion_effects run data modify entity @s custom_potion_effects set from storage gm4_combat_expanded:temp archer_arrow.custom_potion_effects
 execute if data storage gm4_combat_expanded:temp archer_arrow.Color run data modify entity @s Color set from storage gm4_combat_expanded:temp archer_arrow.Color
