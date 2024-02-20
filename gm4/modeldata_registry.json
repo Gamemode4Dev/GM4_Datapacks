@@ -226,6 +226,9 @@
     "cod_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
     },
+    "command_block": {
+      "gm4:gui/advancement/root": 1
+    },
     "compass": {
       "gm4_metallurgy:shamir/sensus": 101,
       "gm4_fulcio_shamir:shamir/fulcio": 115,

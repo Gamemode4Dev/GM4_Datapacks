@@ -456,7 +456,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
         all_refs = {r.reference for r in self.opts.model_data if r.reference.startswith(self.ctx.project_id)}
         for item_id, reg in item_registry.items():
             for ref in list(reg.keys()):
-                if ref.startswith(self.ctx.project_id) and ref not in all_refs:
+                if ref.startswith(self.ctx.project_id) and ref not in all_refs and self.ctx.project_id != 'gm4':
                     self.logger.info(f"Removing undefined CustomModelData from {item_id} registry: '{ref}'")
                     del reg[ref]
             #FIXME clear references from items no longer configured too
