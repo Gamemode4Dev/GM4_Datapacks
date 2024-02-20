@@ -32,8 +32,8 @@ def freeze_last_stored(ctx: Context):
         channel.send(RETRIEVE_LAST_PROJECT)
     for last_project in channel:
         rp, dp, params = last_project[0] # only one project is passed in list
-        frozen_rp  = rp.copy(shallow=True)
-        frozen_dp  = dp.copy(shallow=True)
+        frozen_rp = rp.copy(shallow=True)
+        frozen_dp = dp.copy(shallow=True)
 
         # send back the frozen packs
         with ctx.worker(bridge) as channel:
@@ -64,7 +64,7 @@ def retrieve_and_merge(ctx: Context):
     for stored_project in channel:
         for rp, dp, _ in stored_project:
             
-            #FIXME build hangs when fonts are merged from one ResourcePack to another... why is unknown
+            #NOTE build hangs when fonts are merged from one ResourcePack to another... why is unknown
             # this is a manual work around to merge the font files without causing the strange hang
             for f, font in rp.fonts.items():
                 ctx.generate(f, merge=font)
@@ -74,7 +74,7 @@ def retrieve_and_merge(ctx: Context):
             ctx.assets.merge(rp)
 
 def bridge(connection: Connection[ProjectPacket|int, list[ProjectPacket]]):
-    # incoming types `Context|int` and outgoing types `Context`
+    # incoming types `ProjectPacket|int` and outgoing types `list[ProjectPacket]`
     project_storage: list[tuple[ResourcePack, DataPack, dict[str, Any]]] = []
 
     for client in connection: # iterable is kept open throughout the life of the build

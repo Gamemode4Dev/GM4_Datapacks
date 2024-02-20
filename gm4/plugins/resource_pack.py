@@ -62,8 +62,6 @@ CUSTOM_MODEL_PREFIX = 3420000
 
 parent_logger = logging.getLogger("gm4.resource_pack")
 
-# TODO debug loggers ... everywhere
-
 #== Pydantic Plugin Config Models ==#
 class ModelData(BaseModel):
     """A complete config for a single model"""
@@ -92,9 +90,9 @@ class ModelData(BaseModel):
     
     @validator('template')
     def enforce_custom_with_override_predicates(cls, template: 'str|TemplateOptions', values: dict[str,Any]) -> 'TemplateOptions':
-        if isinstance(values.get('model'), list) and template != "custom":
-            raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
-            # FIXME is this true anymore? I think this check is also wrong now
+        # if isinstance(values.get('model'), list) and template != "custom":
+        #     raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
+        #     # NOTE I don't believe this is a valid check anymore, but I'll leave it here commented in case it needs to be repaired in the future
         # find and apply proper submodel
         name = template.name if isinstance(template, TemplateOptions) else template
         try:
@@ -459,7 +457,6 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                 if ref.startswith(self.ctx.project_id) and ref not in all_refs and self.ctx.project_id != 'gm4':
                     self.logger.info(f"Removing undefined CustomModelData from {item_id} registry: '{ref}'")
                     del reg[ref]
-            #FIXME clear references from items no longer configured too
 
     def generate_model_overrides(self):
         """Generates item model overrides in the 'minecraft' namespace, adding predicates for CustomModelData"""
@@ -474,9 +471,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             vanilla_overrides: list[Any] = vanilla_model["overrides"]
             for override in vanilla_overrides:
                 override["model"] = add_namespace(override["model"], "minecraft") # ensure vanilla models have namespaced files
-                # FIXME how to differentiate vanilla overrides from specified overrides?
             unchanged_vanilla_overrides = vanilla_overrides.copy()
-
             
             for model in models:
                 m = model.model[item_id] # model string, or predicate settings, for this particular item id
@@ -490,7 +485,6 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                 for pred in merge_overrides:
                     if not pred.get("model") and not isinstance(m, str):
                         self.logger.warn(f"Manually specified model predicate has no 'model' field, and is malformed:\n\t{pred}")
-                        continue # TODO this is an exception?
                     vanilla_overrides.append({
                         "predicate": {
                             "custom_model_data": self.cmd_prefix+self.retrieve_index(model.reference)[0],
@@ -512,7 +506,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             allocation_id = next(filter(lambda k: fnmatch(self.ctx.project_id, k), self.registry["allocations"].keys())) #type: ignore ; type checker thinks 'k' is _T@next, not str
         except StopIteration:
             allocation_id = None
-        l, u = self.registry["allocations"].get(allocation_id, (1,99)) # FIXME what happens when the default allocation fills up
+        l, u = self.registry["allocations"].get(allocation_id, (1,99))
         available_indices = set(range(l, u+1))
 
         for item_id in item_ids:
@@ -520,8 +514,8 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             available_indices -= used_values
 
         if not available_indices:
-            self.logger.warning("No Valid CMD is open for assignment!") # FIXME this warn
-            raise RuntimeError("ran out of CMD to assign") # FIXME
+            self.logger.warning("No Valid CMD is open for assignment! Your module may require a specially assigned value allocation if registering many CMD values.")
+            raise RuntimeError("Ran out of CMD values to assign!")
         
         i = min(available_indices)
         self.logger.info(f"Issuing new CustomModelData for '{reference}': {i}")
