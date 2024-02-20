@@ -4,8 +4,7 @@
   "module_type": "expansion",
   "base_module": "better_armour_stands",
   "icon": {
-    "item": "minecraft:armor_stand",
-    "nbt": "{CustomModelData:3420004}"
+    "item": "minecraft:armor_stand"
   },
   "criteria": {
     "modify_armor_stand": {

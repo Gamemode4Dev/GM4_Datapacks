@@ -55,7 +55,7 @@ def retrieve_and_run(ctx: Context):
             c = Context(**ctx_params, assets=rp, data=dp)
             c.activate()
             c.require(*plugins)
-            c.inject(Pipeline).run() # manually trigger exit phases of plugins, as the stored context c has finished its earlier pipeline
+            c.inject(Pipeline).run() # manually run plugin's exit phases as this context is "headless"
 
 def retrieve_and_merge(ctx: Context):
     """Retrieves stored contexts and merges their packs into the current/parent context"""

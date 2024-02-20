@@ -4,7 +4,7 @@
   "module_type": "module",
   "icon": {
     "item": "minecraft:splash_potion",
-    "nbt": "{Potion:'minecraft:invisibility',CustomModelData:3420002}"
+    "nbt": "{Potion:'minecraft:invisibility'}"
   },
   "criteria": {
     "obtain_invisibility_potion": {

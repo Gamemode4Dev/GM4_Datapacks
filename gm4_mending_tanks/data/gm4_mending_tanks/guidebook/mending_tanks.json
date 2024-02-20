@@ -5,7 +5,7 @@
   "base_module": "liquid_tanks",
   "icon": {
     "item": "minecraft:diamond_axe",
-    "nbt": "{Enchantments:[{id:\"minecraft:mending\",lvl:1s}],CustomModelData:3420002}"
+    "nbt": "{Enchantments:[{id:\"minecraft:mending\",lvl:1s}]}"
   },
   "criteria": {
     "obtain_liquid_tank": {

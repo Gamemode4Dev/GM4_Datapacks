@@ -3,8 +3,7 @@
   "name": "Tower Structures",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:ladder",
-    "nbt": "{CustomModelData:3420003}"
+    "item": "minecraft:ladder"
   },
   "criteria": {
     "enter_badlands_tower": {

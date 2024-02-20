@@ -1,9 +1,10 @@
-import sys
-import os
 import colorsys
 import json
 import logging
-from typing import Any, ClassVar, Literal, Optional
+import os
+import sys
+from typing import Any, ClassVar, Literal, Optional, cast
+from pathlib import Path
 
 import nbtlib  # type: ignore ; missing stub file
 from beet import (
@@ -15,13 +16,14 @@ from beet import (
     JsonFile,
     JsonFileBase,
     LootTable,
-    PngFile,
+    Model,
     NamespaceContainer,
-    Texture
+    PngFile,
+    Texture,
 )
 from beet.contrib.vanilla import Vanilla
 from beet.core.utils import TextComponent
-from PIL import Image
+from PIL import Image, ImageDraw
 from pydantic.v1 import BaseModel
 
 from gm4.plugins.player_heads import Skin
@@ -94,7 +96,6 @@ def beet_default(ctx: Context):
       generate_files(ctx, d)
 
 
-
 """
 parse guidebook file and generate all files
 """
@@ -149,9 +150,18 @@ def generate_files(ctx:Context, d: DataPack):
     for index, section in enumerate(book.sections):
       if (advancement := generate_advancement(book, index)) is not None:
         d[f"gm4_guidebook:{book.id}/unlock/{section.name}"] = advancement
-        d[f"gm4_guidebook:{book.id}/display/{section.name}"] = generate_display_advancement(book)
+        d[f"gm4_guidebook:{book.id}/display/{section.name}"] = generate_display_advancement(book, ctx.project_id)
         d[f"gm4_guidebook:{book.id}/rewards/{section.name}"] = generate_reward_function(
           section, book.id, book.name, book.description)
+        
+    # register and create advancement icons to resource pack
+    if d is ctx.data: # don't run for overlays - its not needed
+      ctx.meta['gm4'].setdefault('model_data',[]).append({
+        "template": "custom",
+        "reference": f"{ctx.project_id}:guidebook_icon/{book.id}",
+        "item": book.icon.get('item','').removeprefix("minecraft:"),
+      })
+      ctx.assets[f"{ctx.project_id}:guidebook_icon/{book.id}"] = generate_toast_model(book, ctx)
 
   d[GuidebookPages].clear()
 
@@ -1716,9 +1726,12 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
 """
 Creates the advancement to show the toast
 """
-def generate_display_advancement(book: Book) -> Advancement:
+def generate_display_advancement(book: Book, project_id: str) -> Advancement:
   module_name = book.name
   icon = book.icon
+  icon_nbt: nbtlib.Compound = nbtlib.parse_nbt(icon.get('nbt',"{}")) # type: ignore ; nbtlib missing stub file
+  icon_nbt.merge({"CustomModelData": nbtlib.String(f"{project_id}:guidebook_icon/{book.id}")}) # type: ignore
+  icon["nbt"] = nbtlib.serialize_tag(icon_nbt) # type: ignore
   display = {
     "icon": icon, # taken from book dictionary
     "title": [
@@ -1918,6 +1931,45 @@ def generate_update_lectern_function(book: Book) -> Function:
   return Function([
     f"{start} loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/{book.id}"
   ], tags=["gm4_guidebook:update_lectern"])
+
+
+"""
+Creates page unlock toast texture from module icons
+"""
+def generate_toast_model(book: Book, ctx: Context) -> Model:
+  # look for module icon
+    # first looks for gm4_apple_trees:gui/guidebook/apple_trees
+    # then for the pack.png
+  icon = ctx.assets.textures.get(f"{ctx.project_id}:gui/guidebook/{book.id}", None)
+  if not icon and ctx.data.icon and ctx.data.icon != PngFile(source_path=Path("base/pack.png")): # use pack.png of root pack if no guidebook texture given
+    icon = ctx.data.icon.copy() # copy image to new file
+
+  if not icon: # still no icon, use the guidebook book texture
+    return Model({
+      "parent":"gm4_guidebook:item/guidebook"
+    })
+  
+  # round corners
+  img = cast(Image.Image, icon.image) # FIXME why needs cast? # type: ignore
+  mask = Image.new(mode='L', size=img.size)
+  mask_draw = ImageDraw.Draw(mask)
+  mask_draw.rounded_rectangle(((0,0),img.size), radius=img.size[0]//4, fill=255)
+  img.putalpha(mask)
+  ctx.assets[f"{ctx.project_id}:gui/guidebook/{book.id}"] = Texture(img)
+
+  # create model for new texture
+  return Model({
+    "parent": "builtin/generated",
+    "textures":{
+      "layer0": f"{ctx.project_id}:gui/guidebook/{book.id}"
+    },
+    "display":{
+      "gui":{
+        "scale": [1.4, 1.4, 1]
+      }
+    }
+  })
+
 
 
 """

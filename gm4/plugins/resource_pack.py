@@ -237,7 +237,7 @@ class ResourcePackOptions(PluginOptions, extra=Extra.ignore):
 
 
 class TranslationLinterOptions(PluginOptions, extra=Extra.ignore):
-    translation_linter_ignores: list[str]
+    translation_linter_ignores: list[str] = []
 
 #== Configurable Base Classes ==#
 class TemplateOptions(BaseModel, extra=Extra.allow):

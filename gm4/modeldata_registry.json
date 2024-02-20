@@ -1,5 +1,8 @@
 {
   "items": {
+    "acacia_door": {
+      "gm4_double_doors:guidebook_icon/double_doors": 1
+    },
     "acacia_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_acacia_hanging_sign": 1,
       "gm4_trapped_signs:item/trapped_acacia_hanging_sign": 2
@@ -8,12 +11,41 @@
       "gm4_trapped_signs:item/trapped_acacia_sign": 1,
       "gm4_trapped_signs:item/secret_trapped_acacia_sign": 2
     },
+    "anvil": {
+      "gm4_desire_lines:guidebook_icon/celaro_shamir": 1,
+      "gm4_weighted_armour:guidebook_icon/helious_shamir": 2,
+      "gm4_metallurgy:guidebook_icon/arborenda_shamir": 100,
+      "gm4_metallurgy:guidebook_icon/defuse_shamir": 101,
+      "gm4_metallurgy:guidebook_icon/ender_bolt_shamir": 102,
+      "gm4_metallurgy:guidebook_icon/forterra_shamir": 103,
+      "gm4_metallurgy:guidebook_icon/gemini_shamir": 104,
+      "gm4_metallurgy:guidebook_icon/hypexperia_shamir": 105,
+      "gm4_metallurgy:guidebook_icon/infinitas_shamir": 106,
+      "gm4_metallurgy:guidebook_icon/metallurgy": 107,
+      "gm4_metallurgy:guidebook_icon/moneo_shamir": 108,
+      "gm4_metallurgy:guidebook_icon/musical_shamir": 109,
+      "gm4_metallurgy:guidebook_icon/sensus_shamir": 110,
+      "gm4_metallurgy:guidebook_icon/tinker_shamir": 111,
+      "gm4_metallurgy:guidebook_icon/vibro_shamir": 112,
+      "gm4_animi_shamir:guidebook_icon/animi_shamir": 113,
+      "gm4_audere_shamir:guidebook_icon/audere_shamir": 114,
+      "gm4_fulcio_shamir:guidebook_icon/fulcio_shamir": 115,
+      "gm4_iacio_shamir:guidebook_icon/iacio_shamir": 116,
+      "gm4_lumos_shamir:guidebook_icon/lumos_shamir": 117,
+      "gm4_percurro_shamir:guidebook_icon/percurro_shamir": 118,
+      "gm4_vecto_shamir:guidebook_icon/vecto_shamir": 119,
+      "gm4_vigere_shamir:guidebook_icon/vigere_shamir": 120,
+      "gm4_orb_of_ankou:guidebook_icon/corripio_shamir": 200
+    },
     "apple": {
-      "gm4_apple_trees:block/apple_unripe": 1
+      "gm4_apple_trees:block/apple_unripe": 1,
+      "gm4_apple_trees:guidebook_icon/apple_trees": 3
     },
     "armor_stand": {
       "gm4_better_armour_stands:gui/advancement/better_armour_stands": 1,
-      "gm4_poses_pack:gui/advancement/poses_pack": 2
+      "gm4_poses_pack:gui/advancement/poses_pack": 2,
+      "gm4_particles_pack:guidebook_icon/particles_pack": 3,
+      "gm4_poses_pack:guidebook_icon/poses_pack": 4
     },
     "axolotl_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
@@ -25,6 +57,13 @@
     "bamboo_sign": {
       "gm4_trapped_signs:item/trapped_bamboo_sign": 1,
       "gm4_trapped_signs:item/secret_trapped_bamboo_sign": 2
+    },
+    "beehive": {
+      "gm4_beehive_inspector:guidebook_icon/beehive_inspector": 1
+    },
+    "big_dripleaf": {
+      "gm4_dripleaf_filters:guidebook_icon/dripleaf_filters": 1,
+      "gm4_dripleaf_launchers:guidebook_icon/dripleaf_launchers": 2
     },
     "birch_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_birch_hanging_sign": 1,
@@ -81,8 +120,14 @@
       "gm4_orb_of_ankou:pneuma/dashing": 236,
       "gm4_orb_of_ankou:pneuma/sniffing": 237
     },
+    "blaze_powder": {
+      "gm4_mysterious_midnights:guidebook_icon/nightmare_nights": 1
+    },
     "blue_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/blue": 300
+    },
+    "bone": {
+      "gm4_mysterious_midnights:guidebook_icon/resurrecting_skeletons": 1
     },
     "bow": {
       "gm4_better_fire:gui/advancement/better_fire": 1,
@@ -94,19 +139,28 @@
     },
     "brown_stained_glass": {
       "gm4_soul_glass:gui/advancement/soul_glass": 1,
-      "gm4_soul_glass:item/soul_glass": 2
+      "gm4_soul_glass:item/soul_glass": 2,
+      "gm4_soul_glass:guidebook_icon/soul_glass": 3
     },
     "bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
     },
+    "campfire": {
+      "gm4_cozy_campfires:guidebook_icon/cozy_campfires": 1
+    },
     "carrot_on_a_stick": {
       "gm4_animi_shamir:shamir/animi": 124
     },
+    "carved_pumpkin": {
+      "gm4_midnight_menaces:guidebook_icon/menacing_goblins": 1
+    },
     "cauldron": {
-      "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_create": 1
+      "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_create": 1,
+      "gm4_zauber_cauldrons:guidebook_icon/zauber_cauldrons": 300
     },
     "chainmail_boots": {
       "gm4_mountaineering:item/crampons": 1,
+      "gm4_mountaineering:guidebook_icon/mountaineering": 2,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_desire_lines:shamir/celaro": 118,
@@ -143,6 +197,9 @@
       "gm4_sunken_treasure:item/shipwreck_treasure": 3,
       "gm4_sunken_treasure:item/shipwreck_supply": 4
     },
+    "chiseled_bookshelf": {
+      "gm4_bookshelf_inspector:guidebook_icon/bookshelf_inspector": 1
+    },
     "chorus_flower": {
       "gm4_smelteries:block/ore_display/chorus_fruit": 1
     },
@@ -152,6 +209,7 @@
     "clock": {
       "gm4_combat_expanded:gui/advancement/combat_expanded_survive": 1,
       "gm4_combat_expanded:gui/advancement/combat_expanded_challenger": 2,
+      "gm4_mysterious_midnights:guidebook_icon/mysterious_midnights": 3,
       "gm4_animi_shamir:shamir/animi": 124,
       "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_make_magicol": 300
     },
@@ -159,7 +217,11 @@
       "gm4_forming_press:item/charcoal_block": 1
     },
     "coarse_dirt": {
-      "gm4_desire_lines:gui/advancement/desire_lines_10000": 1
+      "gm4_desire_lines:gui/advancement/desire_lines_10000": 1,
+      "gm4_desire_lines:guidebook_icon/desire_lines": 2
+    },
+    "cod": {
+      "gm4_live_catch:guidebook_icon/live_catch": 1
     },
     "cod_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
@@ -169,12 +231,17 @@
       "gm4_fulcio_shamir:shamir/fulcio": 115,
       "gm4_animi_shamir:shamir/animi": 124
     },
+    "copper_block": {
+      "gm4_auto_crafting:guidebook_icon/auto_crafting": 1
+    },
     "copper_ore": {
       "gm4_smelteries:block/ore_display/copper_ore": 2
     },
     "crafting_table": {
       "gm4_custom_crafters:block/custom_crafter": 1,
+      "gm4_standard_crafting:guidebook_icon/standard_crafting": 2,
       "gm4_custom_crafters:gui/advancement/custom_crafters": 3,
+      "gm4_custom_crafters:guidebook_icon/custom_crafters": 4,
       "gm4_custom_crafters:block/custom_crafter_side": 6,
       "gm4_custom_crafters:block/custom_crafter_down": 7,
       "gm4_auto_crafting:block/auto_crafter": 8,
@@ -189,7 +256,11 @@
       "gm4_trapped_signs:item/secret_trapped_crimson_sign": 2
     },
     "crossbow": {
+      "gm4_crossbow_cartridges:guidebook_icon/crossbow_cartridges": 1,
       "gm4_animi_shamir:shamir/animi": 124
+    },
+    "crying_obsidian": {
+      "gm4_shapeless_portals:guidebook_icon/shapeless_portals": 1
     },
     "cyan_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/cyan": 300
@@ -220,6 +291,7 @@
       "gm4_end_fishing:item/end_city_ore_6": 15
     },
     "diamond_axe": {
+      "gm4_mending_tanks:guidebook_icon/mending_tanks": 1,
       "gm4_metallurgy:shamir/hypexperia": 110,
       "gm4_metallurgy:shamir/arborenda": 112,
       "gm4_metallurgy:shamir/moneo": 113,
@@ -377,6 +449,9 @@
     "dirt": {
       "gm4_tnt_landmines:entity/tnt_landmine_dirt": 42
     },
+    "dirt_path": {
+      "gm4_speed_paths:guidebook_icon/speed_paths": 1
+    },
     "elytra": {
       "gm4_end_fishing:gui/advancement/end_fishing_phantom": 1,
       "gm4_end_fishing:item/captains_wings": 10,
@@ -388,6 +463,7 @@
     "emerald": {
       "gm4_apple_trees:block/apple_unripe": 0,
       "gm4_calling_bell:gui/advancement/calling_bell": 1,
+      "gm4_calling_bell:guidebook_icon/calling_bell": 2,
       "gm4_end_fishing:item/end_city_ore_1": 10,
       "gm4_end_fishing:item/end_city_ore_2": 11,
       "gm4_end_fishing:item/end_city_ore_3": 12,
@@ -397,11 +473,13 @@
     },
     "enchanted_book": {
       "gm4_enchantment_extractors:gui/advancement/enchantment_extractors_mending": 1,
-      "gm4_book_binders:gui/advancement/book_binders_bind": 2
+      "gm4_book_binders:gui/advancement/book_binders_bind": 2,
+      "gm4_book_binders:guidebook_icon/book_binders": 3
     },
     "enchanting_table": {
       "gm4_enchantment_extractors:block/enchantment_extractor": 1,
       "gm4_enchantment_extractors:gui/advancement/enchantment_extractors": 2,
+      "gm4_enchantment_extractors:guidebook_icon/enchantment_extractors": 3,
       "gm4_enchantment_extractors:block/enchantment_extractor_side": 4,
       "gm4_enchantment_extractors:block/enchantment_extractor_down": 5
     },
@@ -412,7 +490,14 @@
       "gm4_teleportation_anchors:gui/advancement/teleportation_jammer": 1
     },
     "end_stone": {
-      "gm4_mysterious_midnights:item/endermite_egg": 1
+      "gm4_mysterious_midnights:item/endermite_egg": 1,
+      "gm4_mysterious_midnights:guidebook_icon/falling_stars": 2
+    },
+    "ender_chest": {
+      "gm4_xp_storage:guidebook_icon/xp_storage": 1
+    },
+    "ender_eye": {
+      "gm4_ender_hoppers:guidebook_icon/ender_hoppers": 1
     },
     "experience_bottle": {
       "standard_liquids:gui/advancement/standard_liquids": 1
@@ -424,6 +509,7 @@
       "gm4_orb_of_ankou:item/orb_of_ankou": 1,
       "gm4_everstone:item/everstone": 2,
       "gm4_everstone:gui/advancement/everstones": 3,
+      "gm4_everstone:guidebook_icon/everstone": 4,
       "gm4_zauber_cauldrons:item/crystal/speed": 12,
       "gm4_zauber_cauldrons:item/crystal/regeneration": 13,
       "gm4_zauber_cauldrons:item/crystal/instant_damage": 54,
@@ -435,6 +521,7 @@
     },
     "fishing_rod": {
       "gm4_end_fishing:gui/advancement/end_fishing": 1,
+      "gm4_end_fishing:guidebook_icon/end_fishing": 2,
       "gm4_metallurgy:shamir/hypexperia": 110,
       "gm4_animi_shamir:shamir/animi": 124
     },
@@ -482,16 +569,22 @@
     },
     "flint_and_steel": {
       "gm4_orb_of_ankou:gui/advancement/orb_of_ankou_soul_forge": 1,
-      "gm4_animi_shamir:shamir/animi": 124
+      "gm4_better_fire:guidebook_icon/better_fire": 2,
+      "gm4_animi_shamir:shamir/animi": 124,
+      "gm4_orb_of_ankou:guidebook_icon/orb_of_ankou": 200
     },
     "furnace": {
-      "gm4_smelteries:gui/advancement/smelteries": 1
+      "gm4_smelteries:gui/advancement/smelteries": 1,
+      "gm4_forming_press:guidebook_icon/forming_press": 2,
+      "gm4_smelteries:guidebook_icon/smelteries": 3,
+      "gm4_teleportation_anchors:guidebook_icon/teleportation_anchors": 4
     },
     "furnace_minecart": {
       "gm4_tunnel_bores:item/piston_minecart": 1
     },
     "glass": {
       "gm4_liquid_tanks:block/liquid_tank": 1,
+      "gm4_liquid_tanks:guidebook_icon/liquid_tanks": 2,
       "gm4_liquid_tanks:block/liquid_tank_side": 3
     },
     "glass_bottle": {
@@ -515,7 +608,8 @@
       "gm4_smelteries:block/ore_display/gold_ore": 1
     },
     "golden_apple": {
-      "gm4_apple_trees:block/golden_apple_unripe": 1
+      "gm4_apple_trees:block/golden_apple_unripe": 1,
+      "gm4_mob_curing:guidebook_icon/mob_curing": 2
     },
     "golden_axe": {
       "gm4_metallurgy:shamir/hypexperia": 110,
@@ -593,6 +687,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "golden_shovel": {
+      "gm4_sunken_treasure:guidebook_icon/sunken_treasure": 1,
       "gm4_metallurgy:shamir/hypexperia": 110,
       "gm4_metallurgy:shamir/tinker": 111,
       "gm4_metallurgy:shamir/moneo": 113,
@@ -602,6 +697,7 @@
     },
     "golden_sword": {
       "gm4_potion_swords:gui/advancement/potion_swords": 1,
+      "gm4_potion_swords:guidebook_icon/potion_swords": 2,
       "gm4_metallurgy:shamir/ender_bolt": 105,
       "gm4_metallurgy:shamir/gemini": 106,
       "gm4_metallurgy:shamir/musical": 108,
@@ -623,7 +719,8 @@
     },
     "gunpowder": {
       "gm4_bat_grenades:gui/advancement/bat_grenades": 1,
-      "gm4_tnt_landmines:item/soft_defuser": 2
+      "gm4_tnt_landmines:item/soft_defuser": 2,
+      "gm4_bat_grenades:guidebook_icon/bat_grenades": 3
     },
     "honey_block": {
       "gm4_liquid_tanks:block/cast_honey_block": 1
@@ -634,10 +731,18 @@
     "hopper_minecart": {
       "gm4_liquid_minecarts:gui/advancement/liquid_minecarts_create": 1,
       "gm4_ender_hoppers:item/ender_hopper_minecart": 2,
-      "gm4_liquid_minecarts:item/liquid_minecart": 3
+      "gm4_liquid_minecarts:item/liquid_minecart": 3,
+      "gm4_liquid_minecarts:guidebook_icon/liquid_minecarts": 4
+    },
+    "horn_coral": {
+      "gm4_scuba_gear:guidebook_icon/scuba_gear": 1
+    },
+    "ice": {
+      "gm4_midnight_menaces:guidebook_icon/icy_strays": 1
     },
     "ink_sac": {
-      "gm4_ink_spitting_squid:gui/advancement/ink_spitting_squid": 1
+      "gm4_ink_spitting_squid:gui/advancement/ink_spitting_squid": 1,
+      "gm4_ink_spitting_squid:guidebook_icon/ink_spitting_squid": 2
     },
     "iron_axe": {
       "gm4_metallurgy:shamir/hypexperia": 110,
@@ -648,6 +753,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "iron_block": {
+      "gm4_tinkering_compressors:guidebook_icon/tinkering_compressors": 1,
       "gm4_smelteries:block/smeltery_unlit": 2,
       "gm4_smelteries:block/smeltery_lit": 3
     },
@@ -672,6 +778,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "iron_chestplate": {
+      "gm4_weighted_armour:guidebook_icon/weighted_armour": 1,
       "gm4_combat_expanded:gui/advancement/combat_expanded_full_set": 3,
       "gm4_end_fishing:item/end_city_armor_1": 10,
       "gm4_end_fishing:item/end_city_armor_2": 11,
@@ -704,6 +811,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "iron_hoe": {
+      "gm4_pig_tractors:guidebook_icon/pig_tractors": 1,
       "gm4_metallurgy:shamir/gemini": 109,
       "gm4_metallurgy:shamir/tinker": 111,
       "gm4_metallurgy:shamir/moneo": 113,
@@ -820,10 +928,14 @@
     },
     "ladder": {
       "gm4_vertical_rails:gui/advancement/vertical_rails": 1,
-      "gm4_rope_ladders:gui/advancement/rope_ladders": 2
+      "gm4_rope_ladders:gui/advancement/rope_ladders": 2,
+      "gm4_rope_ladders:guidebook_icon/rope_ladders": 3,
+      "gm4_tower_structures:guidebook_icon/tower_structures": 4,
+      "gm4_vertical_rails:guidebook_icon/vertical_rails": 5
     },
     "lava_bucket": {
       "gm4_metallurgy:gui/advancement/metallurgy_overheat_cast": 1,
+      "gm4_liquid_tanks:guidebook_icon/standard_liquids": 2,
       "gm4_metallurgy:shamir/infinitas": 100
     },
     "leather_boots": {
@@ -831,6 +943,7 @@
       "gm4_scuba_gear:item/flippers": 2,
       "gm4_boots_of_ostara:gui/advancement/boots_of_ostara": 3,
       "gm4_boots_of_ostara:item/flippers_of_ostara": 4,
+      "gm4_boots_of_ostara:guidebook_icon/boots_of_ostara": 5,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_desire_lines:shamir/celaro": 118,
@@ -852,6 +965,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "leather_leggings": {
+      "gm4_washing_tanks:guidebook_icon/washing_tanks": 1,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_animi_shamir:shamir/animi": 124
@@ -860,15 +974,20 @@
       "gm4_book_binders:gui/advancement/book_binders": 0
     },
     "light_blue_concrete_powder": {
+      "gm4_cement_mixers:guidebook_icon/cement_mixers": 1,
       "gm4_zauber_cauldrons:block/liquid_magicol/light_blue": 300
     },
     "light_gray_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/light_gray": 300
     },
+    "lightning_rod": {
+      "gm4_lightning_in_a_bottle:guidebook_icon/lightning_in_a_bottle": 1
+    },
     "lime_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/lime": 300
     },
     "lingering_potion": {
+      "gm4_midnight_menaces:guidebook_icon/illusioner_nights": 1,
       "gm4_lightning_in_a_bottle:item/lingering_lightning_in_a_bottle": 4,
       "gm4_zauber_cauldrons:item/bottled_magicol/polar": 300,
       "gm4_zauber_cauldrons:item/bottled_magicol/temperate": 301,
@@ -902,13 +1021,21 @@
       "gm4_metallurgy:shamir/infinitas": 100
     },
     "minecart": {
-      "gm4_ziprails:gui/advancement/ziprails": 1
+      "gm4_ziprails:gui/advancement/ziprails": 1,
+      "gm4_ziprails:guidebook_icon/ziprails": 2
+    },
+    "music_disc_11": {
+      "gm4_record_crafting:guidebook_icon/record_crafting": 1
     },
     "music_disc_13": {
       "gm4_record_crafting:gui/advancement/record_crafting": 1
     },
+    "mycelium": {
+      "gm4_shroomites:guidebook_icon/shroomites": 1
+    },
     "name_tag": {
-      "gm4_holographic_tags:gui/advancement/holographic_tags": 1
+      "gm4_holographic_tags:gui/advancement/holographic_tags": 1,
+      "gm4_holographic_tags:guidebook_icon/holographic_tags": 2
     },
     "nether_gold_ore": {
       "gm4_smelteries:block/ore_display/nether_gold_ore": 1
@@ -1033,6 +1160,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "netherite_sword": {
+      "gm4_combat_expanded:guidebook_icon/combat_expanded": 1,
       "gm4_end_fishing:item/end_city_swords_1": 10,
       "gm4_end_fishing:item/end_city_swords_2": 11,
       "gm4_end_fishing:item/end_city_swords_3": 12,
@@ -1065,6 +1193,9 @@
     "netherrack": {
       "gm4_tnt_landmines:entity/tnt_landmine_netherrack": 46
     },
+    "note_block": {
+      "gm4_note_block_interface:guidebook_icon/note_block_interface": 1
+    },
     "oak_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_oak_hanging_sign": 1,
       "gm4_trapped_signs:item/trapped_oak_hanging_sign": 2
@@ -1077,7 +1208,8 @@
     },
     "oak_sign": {
       "gm4_trapped_signs:item/trapped_oak_sign": 1,
-      "gm4_trapped_signs:item/secret_trapped_oak_sign": 2
+      "gm4_trapped_signs:item/secret_trapped_oak_sign": 2,
+      "gm4_trapped_signs:guidebook_icon/trapped_signs": 3
     },
     "obsidian": {
       "gm4_metallurgy:item/slightly_damaged_obsidian": 1
@@ -1092,6 +1224,9 @@
       "gm4_book_binders:item/enchanted_page": 1,
       "gm4_book_binders:gui/advancement/book_binders_debind": 2
     },
+    "phantom_membrane": {
+      "gm4_midnight_menaces:guidebook_icon/enlarging_phantoms": 1
+    },
     "pink_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/pink": 300
     },
@@ -1099,11 +1234,14 @@
       "gm4_forming_press:block/forming_press": 1,
       "gm4_tunnel_bores:gui/advancement/tunnel_bores": 2,
       "gm4_block_compressors:gui/advancement/block_compressors": 3,
+      "gm4_block_compressors:guidebook_icon/block_compressors": 4,
+      "gm4_tunnel_bores:guidebook_icon/tunnel_bores": 5,
       "gm4_forming_press:block/forming_press_side": 6,
       "gm4_forming_press:block/forming_press_down": 7
     },
     "player_head": {
       "gm4_ender_hoppers:block/ender_hopper": 1,
+      "gm4_enderman_support_class:guidebook_icon/enderman_support_class": 2,
       "gm4_enderman_support_class:gui/advancement/enderman_support_class": 3,
       "gm4_heart_canisters:gui/advancement/heart_canisters_tier_1": 4,
       "gm4_heart_canisters:gui/advancement/heart_canisters_tier_2": 5,
@@ -1111,6 +1249,7 @@
       "gm4_heart_canisters:item/heart_canister_tier_1": 7,
       "gm4_heart_canisters:item/heart_canister_tier_2": 8,
       "gm4_scuba_gear:item/scuba_helmet": 9,
+      "gm4_heart_canisters:guidebook_icon/heart_canisters": 10,
       "gm4_zauber_cauldrons:item/crystal/speed": 12,
       "gm4_zauber_cauldrons:item/crystal/regeneration": 13,
       "gm4_end_fishing:item/enderpuff": 14,
@@ -1185,7 +1324,8 @@
       "gm4_chairs:gui/advancement/chairs_sit": 1
     },
     "poppy": {
-      "gm4_sweethearts:gui/advancement/sweethearts": 1
+      "gm4_sweethearts:gui/advancement/sweethearts": 1,
+      "gm4_sweethearts:guidebook_icon/sweethearts": 2
     },
     "potion": {
       "gm4_zauber_cauldrons:item/wormhole_in_a_bottle": 1,
@@ -1193,8 +1333,10 @@
       "gm4_lightning_in_a_bottle:gui/advancement/lightning_in_a_bottle_drink": 3,
       "gm4_lightning_in_a_bottle:item/lightning_in_a_bottle": 4,
       "gm4_mob_curing:gui/advancement/mob_curing": 5,
+      "gm4_potion_liquids:guidebook_icon/potion_liquids": 6,
       "gm4_standard_liquids:item/ink_bottle": 7,
       "gm4_standard_liquids:item/glow_ink_bottle": 8,
+      "gm4_zauber_liquids:guidebook_icon/zauber_liquids": 9,
       "gm4_zauber_cauldrons:item/bottled_magicol/polar": 300,
       "gm4_zauber_cauldrons:item/bottled_magicol/temperate": 301,
       "gm4_zauber_cauldrons:item/bottled_magicol/arid": 302,
@@ -1268,14 +1410,23 @@
     "red_sand": {
       "gm4_smelteries:block/ore_display/red_sand": 1
     },
+    "rotten_flesh": {
+      "gm4_mysterious_midnights:guidebook_icon/resurrecting_zombies": 1,
+      "gm4_undead_players:guidebook_icon/undead_players": 2
+    },
     "saddle": {
-      "gm4_pig_tractors:gui/advancement/pig_tractors": 1
+      "gm4_pig_tractors:gui/advancement/pig_tractors": 1,
+      "gm4_chairs:guidebook_icon/chairs": 2
     },
     "salmon_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
     },
     "sand": {
-      "gm4_smelteries:block/ore_display/sand": 1
+      "gm4_smelteries:block/ore_display/sand": 1,
+      "gm4_midnight_menaces:guidebook_icon/sandy_husks": 2
+    },
+    "sandstone": {
+      "gm4_cooler_caves:guidebook_icon/cooler_caves": 1
     },
     "shears": {
       "gm4_tnt_landmines:gui/advancement/tnt_landmines": 1,
@@ -1287,12 +1438,24 @@
       "gm4_vigere_shamir:shamir/vigere": 119,
       "gm4_animi_shamir:shamir/animi": 124
     },
+    "shulker_box": {
+      "gm4_relocators:guidebook_icon/relocators": 1
+    },
+    "skeleton_skull": {
+      "gm4_phantom_scarecrows:guidebook_icon/phantom_scarecrows": 1
+    },
+    "slime_ball": {
+      "gm4_midnight_menaces:guidebook_icon/slime_fests": 1
+    },
     "snowball": {},
     "spawner": {
-      "gm4_spawner_minecarts:gui/advancement/spawner_minecarts": 1
+      "gm4_spawner_minecarts:gui/advancement/spawner_minecarts": 1,
+      "gm4_dangerous_dungeons:guidebook_icon/dangerous_dungeons": 2,
+      "gm4_spawner_minecarts:guidebook_icon/spawner_minecarts": 3
     },
     "splash_potion": {
       "gm4_display_frames:gui/advancement/display_frames": 1,
+      "gm4_display_frames:guidebook_icon/display_frames": 2,
       "gm4_lightning_in_a_bottle:item/splash_lightning_in_a_bottle": 4,
       "gm4_zauber_cauldrons:item/bottled_magicol/polar": 300,
       "gm4_zauber_cauldrons:item/bottled_magicol/temperate": 301,
@@ -1311,6 +1474,9 @@
     "spruce_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_spruce_hanging_sign": 1,
       "gm4_trapped_signs:item/trapped_spruce_hanging_sign": 2
+    },
+    "spruce_sapling": {
+      "gm4_podzol_rooting_soil:guidebook_icon/podzol_rooting_soil": 1
     },
     "spruce_sign": {
       "gm4_trapped_signs:item/trapped_spruce_sign": 1,
@@ -1379,9 +1545,14 @@
     "tadpole_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
     },
+    "tipped_arrow": {
+      "gm4_mysterious_midnights:guidebook_icon/tipped_skeletons": 1
+    },
     "tnt": {
       "gm4_disassemblers:block/disassembler": 1,
       "gm4_disassemblers:gui/advancement/disassemblers": 2,
+      "gm4_disassemblers:guidebook_icon/disassemblers": 3,
+      "gm4_tnt_landmines:guidebook_icon/tnt_landmines": 4,
       "gm4_disassemblers:block/disassembler_side": 5,
       "gm4_disassemblers:block/disassembler_down": 6,
       "gm4_tnt_landmines:entity/tnt_landmine": 40
@@ -1419,6 +1590,9 @@
     },
     "water_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
+    },
+    "wheat": {
+      "gm4_mysterious_midnights:guidebook_icon/harvest_moons": 1
     },
     "white_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/white": 300
@@ -1464,6 +1638,9 @@
       "gm4_orb_of_ankou:shamir/corripio": 116,
       "gm4_percurro_shamir:shamir/percurro": 117,
       "gm4_animi_shamir:shamir/animi": 124
+    },
+    "writable_book": {
+      "gm4_better_armour_stands:guidebook_icon/better_armour_stands": 1
     },
     "written_book": {
       "gm4_guidebook:item/guidebook": 1
