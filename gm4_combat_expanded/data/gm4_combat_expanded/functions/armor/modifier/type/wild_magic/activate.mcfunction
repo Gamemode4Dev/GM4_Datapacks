@@ -23,22 +23,22 @@ execute if score $wild_magic.id gm4_ce_data matches 79..82 run function gm4_comb
 execute if score $wild_magic.id gm4_ce_data matches 75..78 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/invisibility
 execute if score $wild_magic.id gm4_ce_data matches 71..74 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/dolphins_grace
 execute if score $wild_magic.id gm4_ce_data matches 66..70 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/glowing
-execute if score $wild_magic.id gm4_ce_data matches 61..65 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/fire_resistance
-execute if score $wild_magic.id gm4_ce_data matches 56..60 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/night_vision
-execute if score $wild_magic.id gm4_ce_data matches 51..55 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/water_breathing
+execute if score $wild_magic.id gm4_ce_data matches 58..65 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/fire_resistance
+execute if score $wild_magic.id gm4_ce_data matches 48..57 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/night_vision
+execute if score $wild_magic.id gm4_ce_data matches 38..47 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/good/water_breathing
 # common bad
-execute if score $wild_magic.id gm4_ce_data matches 43..50 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/darkness
-execute if score $wild_magic.id gm4_ce_data matches 36..42 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/hunger
-execute if score $wild_magic.id gm4_ce_data matches 30..35 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/mining_fatigue
-execute if score $wild_magic.id gm4_ce_data matches 24..29 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/nausea
-execute if score $wild_magic.id gm4_ce_data matches 18..23 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/slowness
+execute if score $wild_magic.id gm4_ce_data matches 33..37 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/hunger
+execute if score $wild_magic.id gm4_ce_data matches 28..32 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/mining_fatigue
+execute if score $wild_magic.id gm4_ce_data matches 23..27 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/nausea
+execute if score $wild_magic.id gm4_ce_data matches 17..22 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/slowness
 # uncommon bad
-execute if score $wild_magic.id gm4_ce_data matches 14..17 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/levitation
-execute if score $wild_magic.id gm4_ce_data matches 10..13 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/slow_falling
-execute if score $wild_magic.id gm4_ce_data matches 7..9 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/weakness
+execute if score $wild_magic.id gm4_ce_data matches 11..12 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/levitation
+execute if score $wild_magic.id gm4_ce_data matches 9..10 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/slow_falling
+execute if score $wild_magic.id gm4_ce_data matches 7..8 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/weakness
+execute if score $wild_magic.id gm4_ce_data matches 5..6 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/darkness
 # rare bad
-execute if score $wild_magic.id gm4_ce_data matches 5..6 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/wither
-execute if score $wild_magic.id gm4_ce_data matches 3..4 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/poison
+execute if score $wild_magic.id gm4_ce_data matches 4 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/wither
+execute if score $wild_magic.id gm4_ce_data matches 3 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/poison
 execute if score $wild_magic.id gm4_ce_data matches 2 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/blindness
 execute if score $wild_magic.id gm4_ce_data matches 1 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/instant_damage
 
