@@ -14,7 +14,7 @@ def beet_default(ctx: Context):
 LEVEL_CONVERSION = {
     logging.DEBUG: "debug",
     logging.INFO: "notice",
-    logging.WARNING: "warn",
+    logging.WARNING: "warning",
     logging.ERROR: "error",
     logging.CRITICAL: "error"
 }
