@@ -1,3 +1,7 @@
+# tick watcher boss
+# @s = boss shulker (main)
+# at @s
+# run from clocks/boss/watchers
 
 # keep boss clock active
 scoreboard players set $keep_tick.boss gm4_ce_keep_tick 1
@@ -17,7 +21,6 @@ execute store result score $health gm4_ce_boss run data get entity @s Health
 execute unless score $health gm4_ce_boss matches 960 if score @s gm4_ce_boss.phase matches 1.. run function gm4_combat_expanded:boss/watchers/running/health/update
 execute if score $health gm4_ce_boss matches 960 if score $twin_health_change gm4_ce_boss matches 1.. run function gm4_combat_expanded:boss/watchers/running/health/update
 scoreboard players reset $twin_health_change gm4_ce_boss
-
 
 # update health bar
 function gm4_combat_expanded:boss/watchers/running/health/bossbar with storage gm4_combat_expanded:temp boss

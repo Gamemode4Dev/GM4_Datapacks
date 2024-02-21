@@ -1,3 +1,7 @@
+# tick watcher boss
+# @s = boss shulker (secondary)
+# at @s
+# run from boss/watchers/tick
 
 # update phase
 scoreboard players operation @s gm4_ce_boss.phase = $phase gm4_ce_boss

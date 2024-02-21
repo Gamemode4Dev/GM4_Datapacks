@@ -10,7 +10,7 @@ execute as @e[type=creeper,tag=gm4_ce_cloaked_creeper] at @s if entity @a[gamemo
 execute as @e[type=item,tag=gm4_ce_spore] at @s run function gm4_combat_expanded:mob/process/spore/advance
 item replace entity @e[type=#gm4_combat_expanded:zombie_types,tag=gm4_ce_spore_zombie,predicate=gm4_combat_expanded:technical/on_fire] armor.head with air
 # phantoms drown under water
-execute as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water run effect give @s wither 1 1 true
+execute as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water run damage @s 2 drown
 
 # | Armor
 # process canine set wolves
@@ -27,7 +27,7 @@ execute unless score $keep_tick.burn gm4_ce_keep_tick matches 1 if entity @a[sco
 execute as @e[scores={gm4_ce_pierce_timer=1..}] at @s run function gm4_combat_expanded:weapon/modifier/pierce/tick_down
 
 # | Boss
-execute unless score $keep_tick.boss gm4_ce_keep_tick matches 1 if entity @e[type=shulker,tag=gm4_ce_boss] run schedule function gm4_combat_expanded:clocks/boss/watchers 1t
+execute unless score $keep_tick.boss gm4_ce_keep_tick matches 1 if entity @e[type=shulker,tag=gm4_ce_boss.watcher] run schedule function gm4_combat_expanded:clocks/boss/watchers 1t
 
 # | Players
 # player submain

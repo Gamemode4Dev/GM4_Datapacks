@@ -7,4 +7,4 @@ scoreboard players set @s[scores={gm4_ce_boss.phase=2..3}] gm4_ce_boss.tick_dela
 scoreboard players set @s[scores={gm4_ce_boss.phase=4}] gm4_ce_boss.attack_id 3
 scoreboard players set @s[scores={gm4_ce_boss.phase=4}] gm4_ce_boss.tick_delay 1
 
-execute as @a[tag=gm4_ce_boss.target] if score @s gm4_ce_boss.id = $running_id gm4_ce_boss.id run tag @s remove gm4_ce_boss.target
+execute as @a[tag=gm4_ce_boss.watcher.target] if score @s gm4_ce_boss.id = $running_id gm4_ce_boss.id run tag @s remove gm4_ce_boss.watcher.target

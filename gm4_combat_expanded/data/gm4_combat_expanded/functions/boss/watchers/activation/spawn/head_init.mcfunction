@@ -1,3 +1,7 @@
+# init boss scores
+# @s = boss shulker (main)
+# at @s
+# run from boss/watchers/activation/spawn/head
 
 scoreboard players operation @s gm4_ce_boss.id = $next_id gm4_ce_boss.id
 scoreboard players set @s[tag=gm4_ce_boss.watcher.main] gm4_ce_boss.health 600

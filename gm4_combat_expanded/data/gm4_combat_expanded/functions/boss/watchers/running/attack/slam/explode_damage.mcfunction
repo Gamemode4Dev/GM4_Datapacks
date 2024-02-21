@@ -9,9 +9,9 @@ data remove storage gm4_combat_expanded:temp pierce
 
 # processing from pierce weapon
 
-damage @s 16 magic at ~1.5 ~1 ~1.5
+damage @s 14 magic at ~1.5 ~1 ~1.5
 
-effect give @s slowness 6 0
-effect give @s[tag=!gm4_ce_immune_weakness] weakness 6 1 true
-effect give @s darkness 6 0 true
-effect give @s[tag=!gm4_ce_immune_fatigue] mining_fatigue 6 4 true
+effect give @s slowness 10 0
+effect give @s[tag=!gm4_ce_immune_weakness] weakness 10 1 true
+effect give @s darkness 10 0 true
+effect give @s[tag=!gm4_ce_immune_fatigue] mining_fatigue 10 4 true

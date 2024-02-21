@@ -1,3 +1,7 @@
+# init boss scores
+# @s = boss shulker (secondary)
+# at @s
+# run from boss/watchers/activation/spawn_sentinel/head
 
 scoreboard players operation @s gm4_ce_boss.id = $next_id gm4_ce_boss.id
 scoreboard players operation @s gm4_ce_boss.secondary_id = $running_id gm4_ce_boss.id
