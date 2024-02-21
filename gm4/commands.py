@@ -17,6 +17,9 @@ from beet.toolchain.cli import beet
 from gm4.utils import MapOption  # type: ignore
 from gm4.plugins.resource_pack import ModelData  # type: ignore
 
+# import worker plugin to prevent 'worker reload' warnings
+import gm4.plugins.worker # type: ignore
+
 pass_project = click.make_pass_decorator(Project) # type: ignore
 
 @beet.command()
