@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{custom_potion_effects:[{id:\"minecraft:slowness\",amplifier:2b,duration:600}],CustomPotionColor:9154528,HideFlags:32}"
+              "tag": "{custom_potion_effects:[{id:\"minecraft:slowness\",amplifier:2b,duration:600,show_particles:1b,show_icon:1b,ambient:0b}],CustomPotionColor:9154528,HideFlags:32}"
             },
             {
               "function": "minecraft:set_lore",

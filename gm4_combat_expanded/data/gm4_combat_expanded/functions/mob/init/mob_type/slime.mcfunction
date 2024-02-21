@@ -24,7 +24,7 @@ execute if score $size gm4_ce_data matches 1..2 if predicate gm4_combat_expanded
 # flowering 
 execute if predicate gm4_combat_expanded:mob/modifier/flowering run function gm4_combat_expanded:mob/init/modifier/special/flowering_slime
 # toxic
-tag @s[type=slime,predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_poison_landing
+tag @s[type=slime,predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_poison_attack
 # growth
 execute if score $size gm4_ce_data matches 1.. if entity @s[type=slime,tag=!gm4_ce_extra_mob,predicate=gm4_combat_expanded:mob/modifier/growth] run function gm4_combat_expanded:mob/init/modifier/special/growth_slime
 # basalt deltas
