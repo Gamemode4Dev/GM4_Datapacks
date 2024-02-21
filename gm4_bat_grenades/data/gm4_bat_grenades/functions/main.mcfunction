@@ -3,4 +3,4 @@ execute as @e[type=bat,tag=!gm4_defused_bat,tag=!smithed.entity] at @s if entity
 
 schedule function gm4_bat_grenades:main 16t
 
-echo invalid command!
+# echo invalid command!
