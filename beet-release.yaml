@@ -8,6 +8,7 @@ pipeline:
   - broadcast: 'gm4_*'
     extend: 'beet.yaml'
     require:
+      - gm4.plugins.annotations.add_module_dir_to_diagnostics
       - gm4.plugins.output.release
       - gm4.plugins.player_heads
       - gm4_guidebook.generate_guidebooks.load_page_data
