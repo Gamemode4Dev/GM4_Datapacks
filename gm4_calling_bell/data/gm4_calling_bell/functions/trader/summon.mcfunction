@@ -4,7 +4,7 @@
 # run from gm4_calling_bell:bell/ray/loop
 
 # summon trader
-summon wandering_trader ~ ~ ~ {Tags:["gm4_calling_bell_trader","smithed.entity"],DespawnDelay:24000}
+summon wandering_trader ~ ~ ~ {Tags:["gm4_calling_bell_trader"],DespawnDelay:24000}
 particle happy_villager ~ ~0.5 ~ 0.3 0.3 0.3 1 5
 playsound entity.wandering_trader.reappeared neutral @a[distance=..16] ~ ~ ~ 1 1 0.6
 particle minecraft:large_smoke ~ ~1 ~ 0.25 0.5 0.25 0 10
