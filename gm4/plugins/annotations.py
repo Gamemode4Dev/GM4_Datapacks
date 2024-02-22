@@ -19,6 +19,9 @@ def add_module_dir_to_diagnostics(ctx: Context):
     mc_logger = logging.getLogger("mecha")
     mc_logger.addFilter(local_filter)
 
+    yield
+    mc_logger.removeFilter(local_filter) # clear the filter once done (after mecha)
+
 
 LEVEL_CONVERSION = {
     logging.DEBUG: "debug",
