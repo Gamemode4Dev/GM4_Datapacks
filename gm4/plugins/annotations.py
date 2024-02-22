@@ -48,5 +48,5 @@ class AnnotationFormatter(logging.Formatter):
     
 def add_mecha_subproject_dir(record: logging.LogRecord, subproject_dir: str|Path = ""):
     if d:=getattr(record, "annotate"):
-        record.annotate = f"{subproject_dir}\\{d}" # modify record in place
+        record.annotate = f"{subproject_dir}/{d}" # modify record in place
     return True
