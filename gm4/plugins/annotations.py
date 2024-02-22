@@ -44,7 +44,7 @@ class AnnotationFormatter(logging.Formatter):
             filename, line, col = match.groups()
 
         level = LEVEL_CONVERSION.get(record.levelno, logging.INFO)
-        return f"::{level} file={filename},line={line},col={col}::{expl}"
+        return f"::{level} file={filename},line={line},col={col},endColumn={int(col)+10}::{expl}"
     
 def add_mecha_subproject_dir(record: logging.LogRecord, subproject_dir: str|Path = ""):
     if d:=getattr(record, "annotate"):
