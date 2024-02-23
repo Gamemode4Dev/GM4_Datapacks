@@ -16,8 +16,8 @@
                     "name": "minecraft:stone",
                     "functions": [
                         {
-                            "function": "minecraft:set_count",
-                            "count": 0
+                          "function": "minecraft:set_nbt",
+                          "tag": "{Age:5999}"
                         }
                     ]
                 }
@@ -40,7 +40,13 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:stone"
+                    "name": "minecraft:stone",
+                    "functions": [
+                        {
+                          "function": "minecraft:set_nbt",
+                          "tag": "{Age:5999}"
+                        }
+                    ]
                 }
             ]
         }

@@ -3,32 +3,23 @@
 # at @s
 # run from identification/weapon/pick_mod
 
-# use loot tables to fill shulker box with items
-# slots 0 is reserved for the weapon, slot 1 is reserved for the modifier
-loot replace block 29999998 1 7134 container.2 loot gm4_combat_expanded:randomizer/damage
-loot replace block 29999998 1 7134 container.3 loot gm4_combat_expanded:randomizer/speed
-loot replace block 29999998 1 7134 container.4 loot gm4_combat_expanded:randomizer/atkspeed
-loot replace block 29999998 1 7134 container.5 loot gm4_combat_expanded:randomizer/armor
-
-# store in storage
-data modify storage gm4_combat_expanded:temp Items set from block 29999998 1 7134 Items
-
 # store results in scoreboards for permanent attributes
 # attack damage 0.5 - 2
-execute store result score $damage gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:2b}].Count 5
+execute store result score $damage gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:randomizer/damage
+scoreboard players operation $damage gm4_ce_data *= #5 gm4_ce_data
 scoreboard players operation $damage- gm4_ce_data = $damage gm4_ce_data
 scoreboard players operation $damage- gm4_ce_data -= #25 gm4_ce_data
 # movement speed 5 - 20
-execute store result score $speed gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:3b}].Count
+execute store result score $speed gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:randomizer/speed
 scoreboard players operation $speed- gm4_ce_data = $speed gm4_ce_data
 scoreboard players operation $speed- gm4_ce_data -= #21 gm4_ce_data
 # attack speed 2 - 5
-execute store result score $atkspeed gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:4b}].Count
+execute store result score $atkspeed gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:randomizer/atkspeed
 scoreboard players operation $atkspeed gm4_ce_data /= #5 gm4_ce_data
 scoreboard players operation $atkspeed- gm4_ce_data = $atkspeed gm4_ce_data
 scoreboard players operation $atkspeed- gm4_ce_data -= #7 gm4_ce_data
 # random value 1 - 3
-execute store result score $random_value gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:5b}].Count
+execute store result score $random_value gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:randomizer/armor
 
 # calculate new damage in order to replace the attribute
 execute store result score $damage_stored gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.damage

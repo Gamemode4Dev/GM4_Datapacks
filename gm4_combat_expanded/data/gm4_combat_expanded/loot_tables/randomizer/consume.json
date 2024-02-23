@@ -9,17 +9,27 @@
           "name": "minecraft:stone",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 5
-            },
+              "function": "minecraft:set_nbt",
+              "tag": "{Age:5999}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 5,
+        "p": 0.35
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:binomial",
-                "n": 5,
-                "p": 0.35
-              },
-              "add": true
+              "function": "minecraft:set_nbt",
+              "tag": "{Age:5999}"
             }
           ]
         }
