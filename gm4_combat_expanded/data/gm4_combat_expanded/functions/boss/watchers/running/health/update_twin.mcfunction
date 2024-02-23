@@ -8,9 +8,6 @@ scoreboard players set $twin_health_change gm4_ce_boss 960
 scoreboard players operation $twin_health_change gm4_ce_boss -= $health gm4_ce_boss
 data modify entity @s Health set value 960f
 
-# cap damage at one time to 35
-execute if score $twin_health_change gm4_ce_boss matches 36.. run scoreboard players set $twin_health_change gm4_ce_boss 35
-
 # if immune do not apply damage and play shield sound
 execute if entity @s[tag=gm4_ce_boss.watcher.immune] if score $twin_health_change gm4_ce_boss matches 1.. run playsound minecraft:item.shield.block hostile @a[distance=..64] ~ ~ ~ 0.75 0.8 1
 execute if entity @s[tag=gm4_ce_boss.watcher.immune] if score $twin_health_change gm4_ce_boss matches 1.. run scoreboard players set $twin_health_change gm4_ce_boss 0
