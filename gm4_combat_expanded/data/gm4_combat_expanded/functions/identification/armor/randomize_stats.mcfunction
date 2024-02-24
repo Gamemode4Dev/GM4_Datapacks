@@ -33,10 +33,6 @@ scoreboard players operation $speed- gm4_ce_data -= #21 gm4_ce_data
 execute store result score $atkspeed gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:randomizer/atkspeed
 scoreboard players operation $atkspeed- gm4_ce_data = $atkspeed gm4_ce_data
 scoreboard players operation $atkspeed- gm4_ce_data -= #35 gm4_ce_data
-# special stats for consuming armor (stepsize and cap)
-execute store result score $constep gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:randomizer/constep
-execute store result score $consume gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:randomizer/consume
-scoreboard players operation $consume gm4_ce_data *= #50 gm4_ce_data
 # special stats for focus armor
 scoreboard players operation $focus_damage_10 gm4_ce_data = $damage_10 gm4_ce_data
 scoreboard players operation $focus_damage_10 gm4_ce_data += $armor gm4_ce_data
@@ -47,5 +43,3 @@ execute store result storage gm4_combat_expanded:temp damage float 0.1 run score
 execute store result storage gm4_combat_expanded:temp level float 0.2 run scoreboard players get $damage gm4_ce_data
 execute store result storage gm4_combat_expanded:temp speed int 1 run scoreboard players get $speed gm4_ce_data
 execute store result storage gm4_combat_expanded:temp atkspeed int 1 run scoreboard players get $atkspeed gm4_ce_data
-execute store result storage gm4_combat_expanded:temp consume int 1 run scoreboard players get $consume gm4_ce_data
-execute store result storage gm4_combat_expanded:temp constep int 1 run scoreboard players get $constep gm4_ce_data

@@ -14,15 +14,14 @@
                 {
                   "attribute": "minecraft:generic.attack_damage",
                   "name": "gm4_combat_expanded",
-                  "amount": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$constep"
-                    },
-                    "score": "gm4_ce_data",
-                    "scale": 0.01
-                  },
+                  "amount": 0,
+                  "operation": "addition",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "gm4_combat_expanded_2",
+                  "amount": 0,
                   "operation": "addition",
                   "slot": "chest"
                 }
@@ -30,31 +29,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:31}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "consume",
-                  "target": "gm4_combat_expanded.cap",
-                  "op": "replace"
-                },
-                {
-                  "source": "constep",
-                  "target": "gm4_combat_expanded.level",
-                  "op": "replace"
-                },
-                {
-                  "source": "constep",
-                  "target": "gm4_combat_expanded.step",
-                  "op": "replace"
-                }
-              ]
+              "tag": "{gm4_combat_expanded:{modifier:37,active:0,deactivates_at:0}}"
             },
             {
               "function": "minecraft:copy_nbt",
@@ -66,6 +41,11 @@
                 {
                   "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
                   "target": "AttributeModifiers[{Name:\"gm4_combat_expanded\"}].Slot",
+                  "op": "replace"
+                },
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_2\"}].Slot",
                   "op": "replace"
                 }
               ]
@@ -93,26 +73,70 @@
         },
         {
           "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "potion.withDuration",
+              "with": [
+                {
+                  "translate": "attribute.modifier.plus.0",
+                  "with": [
+                    [
+                      {
+                        "text": "0.5"
+                      }
+                    ],
+                    {
+                      "translate": "attribute.name.generic.attack_damage"
+                    }
+                  ]
+                },
+                "0:15"
+              ],
+              "color": "blue",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "potion.withDuration",
+              "with": [
+                {
+                  "translate": "attribute.modifier.take.0",
+                  "with": [
+                    [
+                      {
+                        "text": "1"
+                      }
+                    ],
+                    {
+                      "translate": "attribute.name.generic.armor"
+                    }
+                  ]
+                },
+                "0:15"
+              ],
+              "color": "red",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
           "entity": "this",
           "lore": [
             [
               {
-                "translate": "attribute.modifier.plus.0",
+                "translate": "item.gm4.combat_expanded.lore.reckless_description",
+                "fallback": "Cannot go below 0 %s",
                 "with": [
-                  [
-                    "0.0",
-                    {
-                      "score": {
-                        "name": "$constep",
-                        "objective": "gm4_ce_data"
-                      }
-                    }
-                  ],
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.generic.armor"
                   }
                 ],
-                "color": "blue",
+                "color": "dark_gray",
                 "italic": false
               }
             ]
@@ -123,8 +147,8 @@
           "entity": "this",
           "name": [
             {
-              "translate": "item.gm4.combat_expanded.name.consume",
-              "fallback": "Devouring %s",
+              "translate": "item.gm4.combat_expanded.name.reckless",
+              "fallback": "Reckless %s",
               "with": [
                 {
                   "nbt": "tag.gm4_combat_expanded.name",
@@ -136,13 +160,6 @@
               "color": "yellow"
             }
           ]
-        },
-        {
-          "function": "minecraft:set_enchantments",
-          "enchantments": {
-            "minecraft:vanishing_curse": 1
-          },
-          "add": false
         }
       ]
     }

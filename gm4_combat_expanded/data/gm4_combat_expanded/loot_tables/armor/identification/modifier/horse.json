@@ -165,6 +165,31 @@
           "function": "minecraft:set_lore",
           "entity": "this",
           "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.horse_description",
+                "fallback": "%s stacks like Enchantments (2x %s = %s)",
+                "with": [
+                  {
+                    "translate": "effect.minecraft.speed"
+                  },
+                  {
+                    "translate": "potion.potency.1"
+                  },
+                  {
+                    "translate": "potion.potency.2"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
             {
               "translate": "item.gm4.combat_expanded.lore.mount",
               "fallback": "%s (Mount)",
@@ -299,20 +324,6 @@
               },
               "range": 20
             }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.combat_expanded.lore.horse_description",
-                "fallback": "Effects stack like Enchantments",
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
           ]
         },
         {

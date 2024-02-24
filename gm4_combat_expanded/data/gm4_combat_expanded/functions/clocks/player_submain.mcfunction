@@ -19,6 +19,9 @@ execute unless score $natural_regen gm4_ce_data matches -1 store result score $n
 # process players
 execute as @a[gamemode=!spectator] run function gm4_combat_expanded:player/process
 
+# apply horse speed effect
+execute as @e[scores={gm4_ce_horse.speed_level=1..}] run function gm4_combat_expanded:armor/modifier/type/horse/apply_effect
+
 # timers
 scoreboard players remove @a[scores={gm4_ce_t_shield=1..}] gm4_ce_t_shield 1
 scoreboard players remove @a[scores={gm4_ce_t_wolf=1..}] gm4_ce_t_wolf 1

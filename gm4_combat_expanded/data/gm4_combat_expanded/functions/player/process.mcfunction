@@ -38,9 +38,6 @@ execute if score @s gm4_ce_healstore matches 1.. run function gm4_combat_expande
 # process player sleeping
 execute if score @s gm4_ce_sleep matches 1.. at @s run function gm4_combat_expanded:player/home/detect_sleep
 
-# reset mount tag from horse armor
-execute on vehicle run tag @s remove gm4_ce_speed_given
-
 # remove second wind tag if armor is taken off
 tag @s[tag=gm4_ce_second_wind.active,predicate=!gm4_combat_expanded:modified_armor/second_wind] remove gm4_ce_second_wind.active
 

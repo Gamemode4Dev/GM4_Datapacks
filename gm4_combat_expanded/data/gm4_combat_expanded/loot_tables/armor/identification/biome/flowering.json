@@ -30,7 +30,7 @@
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_combat_expanded:armor/identification/modifier/consume",
+                    "name": "gm4_combat_expanded:armor/identification/modifier/reckless",
                     "weight": 8
                 },
                 {
