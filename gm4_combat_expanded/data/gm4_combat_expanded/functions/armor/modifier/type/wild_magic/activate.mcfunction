@@ -42,6 +42,9 @@ execute if score $wild_magic.id gm4_ce_data matches 3 run function gm4_combat_ex
 execute if score $wild_magic.id gm4_ce_data matches 2 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/blindness
 execute if score $wild_magic.id gm4_ce_data matches 1 run function gm4_combat_expanded:armor/modifier/type/wild_magic/effect/bad/instant_damage
 
+# TODO: remove (spigot bug)
+execute positioned 29999998 1 7133 run kill @e[type=item,distance=..2]
+
 # Store in storage and apply
 function gm4_combat_expanded:armor/modifier/type/wild_magic/eval with storage gm4_combat_expanded:temp wild_magic
 

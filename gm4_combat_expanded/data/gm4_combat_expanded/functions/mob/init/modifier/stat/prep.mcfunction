@@ -50,3 +50,6 @@ function gm4_combat_expanded:mob/init/modifier/stat/eval with storage gm4_combat
 
 # tag to check for damage cap (1 tick later to make sure the weapon is counted as well)
 tag @s add gm4_ce_check_damage_cap
+
+# TODO: remove (spigot bug)
+execute positioned 29999998 1 7133 run kill @e[type=item,distance=..2]

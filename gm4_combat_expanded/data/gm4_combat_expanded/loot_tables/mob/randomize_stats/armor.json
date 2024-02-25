@@ -13,13 +13,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:stone",
-                    "functions": [
-                        {
-                          "function": "minecraft:set_nbt",
-                          "tag": "{Age:5999}"
-                        }
-                    ]
+                     "name": "minecraft:stone"
                 }
             ]
         },
@@ -39,13 +33,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:stone",
-                    "functions": [
-                        {
-                          "function": "minecraft:set_nbt",
-                          "tag": "{Age:5999}"
-                        }
-                    ]
+                     "name": "minecraft:stone"
                 }
             ]
         },
@@ -66,13 +54,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:stone",
-                    "functions": [
-                        {
-                          "function": "minecraft:set_nbt",
-                          "tag": "{Age:5999}"
-                        }
-                    ]
+                     "name": "minecraft:stone"
                 }
             ]
         }

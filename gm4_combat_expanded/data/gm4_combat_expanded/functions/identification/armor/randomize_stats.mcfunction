@@ -43,3 +43,6 @@ execute store result storage gm4_combat_expanded:temp damage float 0.1 run score
 execute store result storage gm4_combat_expanded:temp level float 0.2 run scoreboard players get $damage gm4_ce_data
 execute store result storage gm4_combat_expanded:temp speed int 1 run scoreboard players get $speed gm4_ce_data
 execute store result storage gm4_combat_expanded:temp atkspeed int 1 run scoreboard players get $atkspeed gm4_ce_data
+
+# TODO: remove (spigot bug)
+execute positioned 29999998 1 7133 run kill @e[type=item,distance=..2]

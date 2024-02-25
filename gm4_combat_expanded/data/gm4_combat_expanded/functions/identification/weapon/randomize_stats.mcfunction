@@ -91,3 +91,6 @@ scoreboard players operation $atkspeed_low_01 gm4_ce_data %= #10 gm4_ce_data
 # store results in storage for changing attributes
 execute store result storage gm4_combat_expanded:temp random_value int 1 run scoreboard players get $random_value gm4_ce_data
 execute store result storage gm4_combat_expanded:temp random_value_2 int 0.2 run scoreboard players get $damage gm4_ce_data
+
+# TODO: remove (spigot bug)
+execute positioned 29999998 1 7133 run kill @e[type=item,distance=..2]
