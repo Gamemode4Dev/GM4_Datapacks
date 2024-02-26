@@ -11,17 +11,8 @@ def beet_default(ctx: Context):
     handler = logging.StreamHandler()
     handler.setFormatter(AnnotationFormatter())
 
+    root_logger.handlers.clear() # clear the handler set by beet CLI toolchain
     root_logger.addHandler(handler)
-
-def add_module_dir_to_diagnostics(ctx: Context):
-    """Sets up a logging record factory that prepends the proper module folder to mecha diagnostics"""
-    local_filter = partial(add_mecha_subproject_dir, subproject_dir=ctx.directory.stem)
-    mc_logger = logging.getLogger("mecha")
-    mc_logger.addFilter(local_filter)
-
-    yield
-    mc_logger.removeFilter(local_filter) # clear the filter once done (after mecha)
-
 
 LEVEL_CONVERSION = {
     logging.DEBUG: "debug",
@@ -34,7 +25,9 @@ LEVEL_CONVERSION = {
 class AnnotationFormatter(logging.Formatter):
     
     def format(self, record: logging.LogRecord) -> str:
-        expl = record.message.split("\n")[0]
+        # expl = getattr(record, "message", "")
+        # print(expl)
+        expl = record.getMessage()#.split("\n")[0]
 
         filename = None
         line = None
@@ -44,8 +37,19 @@ class AnnotationFormatter(logging.Formatter):
             filename, line, col = match.groups()
 
         level = LEVEL_CONVERSION.get(record.levelno, logging.INFO)
-        return f"::{level} file={filename},line={line},col={col}::{expl}"
+        return f"::{level} file={filename},line={line},col={col},title={'THIS IS MY TITLE'}::{record.name} | {expl}"
     
+
+def add_module_dir_to_diagnostics(ctx: Context):
+    """Sets up a logging record filter that prepends the proper module folder to mecha diagnostics"""
+    local_filter = partial(add_mecha_subproject_dir, subproject_dir=ctx.directory.stem)
+    mc_logger = logging.getLogger("mecha")
+    mc_logger.addFilter(local_filter)
+
+    yield
+    mc_logger.removeFilter(local_filter) # clear the filter once done (after mecha)
+    
+
 def add_mecha_subproject_dir(record: logging.LogRecord, subproject_dir: str|Path = ""):
     if d:=getattr(record, "annotate"):
         record.annotate = f"{subproject_dir}/{d}" # modify record in place
