@@ -11,6 +11,16 @@ def beet_default(ctx: Context):
     handler = logging.StreamHandler()
     handler.setFormatter(AnnotationFormatter())
 
+    def filter(record: logging.LogRecord):
+        if record.name == "time":
+            return False # disable annotations for time - is spammy in debug mode
+        if record.name == "gm4":
+            return False # disable just the root gm4 logger, permit all children to log.
+                            # prevents the "found X modules" and "Finished" messages
+        return True
+
+    handler.addFilter(filter)
+
     root_logger.handlers.clear() # clear the handler set by beet CLI toolchain
     root_logger.addHandler(handler)
 
