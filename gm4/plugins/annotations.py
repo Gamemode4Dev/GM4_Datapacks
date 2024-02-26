@@ -25,9 +25,10 @@ LEVEL_CONVERSION = {
 class AnnotationFormatter(logging.Formatter):
     
     def format(self, record: logging.LogRecord) -> str:
-        # expl = getattr(record, "message", "")
-        # print(expl)
-        expl = record.getMessage()#.split("\n")[0]
+        expl = record.getMessage().replace("\n", "%0A")
+            # use urlencoded newline
+        
+        level = LEVEL_CONVERSION.get(record.levelno, logging.INFO)
 
         filename = None
         line = None
@@ -35,9 +36,10 @@ class AnnotationFormatter(logging.Formatter):
         match = re.match(r"(.+):(\d+):(\d+)", getattr(record, "annotate", ""))
         if match:
             filename, line, col = match.groups()
+            return f"::{level} file={filename},line={line},col={col},title={record.name}::{expl}"
 
-        level = LEVEL_CONVERSION.get(record.levelno, logging.INFO)
-        return f"::{level} file={filename},line={line},col={col},title={'THIS IS MY TITLE'}::{record.name} | {expl}"
+        return f"::{level} title={record.name}::{expl}"
+        
     
 
 def add_module_dir_to_diagnostics(ctx: Context):
