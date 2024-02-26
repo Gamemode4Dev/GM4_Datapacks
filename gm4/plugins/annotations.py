@@ -14,9 +14,6 @@ def beet_default(ctx: Context):
     def filter(record: logging.LogRecord):
         if record.name == "time":
             return False # disable annotations for time - is spammy in debug mode
-        if record.name == "gm4":
-            return False # disable just the root gm4 logger, permit all children to log.
-                            # prevents the "found X modules" and "Finished" messages
         return True
 
     handler.addFilter(filter)
