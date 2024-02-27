@@ -3,6 +3,8 @@
 # at @s
 # run from interact/furniture_station/swap_tool
 # run from place/furniture/furniture_station
+# run from technical/furniture_station/activation/turn_active
+# run from technical/furniture_station/lightning/revive_villager
 
 # clamp index to min/max
 execute if score @s gm4_furniture_index matches ..-1 run scoreboard players operation @s gm4_furniture_index = $max_index gm4_furniture_index
