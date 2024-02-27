@@ -24,6 +24,7 @@ from beet import (
     NamespaceProxy,
     PluginOptions,
     WrappedException,
+    YamlFile
 )
 from beet.contrib.link import LinkManager
 from beet.contrib.optifine import OptifineProperties
@@ -422,6 +423,9 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
         return self._opts
     
     def resolve_config(self):
+        if (p:=self.ctx.directory/"assets/model_data.yaml").exists():
+            addtl_config = YamlFile(source_path=p).data.get("model_data")
+            self.ctx.meta["gm4"]["model_data"].extend(addtl_config)
         self._opts = self.ctx.validate("gm4", validator=ResourcePackOptions).process_inheritance()
         self._opts.add_namespace(self.ctx.project_id)
         self._opts.template_mutations()
