@@ -109,7 +109,7 @@ def generate_armor_recipes(ctx: Context, armor_flavors: CSV, armor_pieces: CSV):
                 }
             }))
 
-        ctx.meta["gm4"]["model_data"].append({
+        ctx.meta["gm4"].setdefault("model_data", []).append({
             "item": armor_items,
             "reference": f"item/zauber_armor/{flavor_data['flavor']}",
             "model": armor_models,
