@@ -16,6 +16,7 @@
                             "name": {
                                 "translate": "item.gm4.zauber_cauldrons.crystal.{{effect}}",
                                 "fallback": "{{translate_fallback}}",
+                                "color": "yellow",
                                 "italic": false
                             }
                         },

@@ -1,5 +1,5 @@
 pipeline:
-  - gm4.plugins.list_modules
+  - gm4.plugins.annotations
   - gm4.plugins.manifest.create
   - gm4.plugins.output.clear_release
   - gm4.plugins.resource_pack.setup
@@ -7,6 +7,7 @@ pipeline:
   - broadcast: 'lib_*'
     extend: 'beet.yaml'
     require:
+      - gm4.plugins.annotations.add_module_dir_to_diagnostics
       - gm4.plugins.output.release
       - gm4.plugins.manifest.update_patch
     pipeline:

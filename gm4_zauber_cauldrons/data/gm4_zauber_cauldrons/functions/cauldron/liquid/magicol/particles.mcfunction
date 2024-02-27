@@ -6,7 +6,7 @@
 # display enchant particles for players with full zauber armor during the correct moon phase
 scoreboard players reset $preferred gm4_zc_moon_phase
 execute store result score $preferred gm4_zc_moon_phase run data get storage gm4_zauber_cauldrons:temp/cauldron/ingredients liquid.magicol.moon_phase
-execute if score $preferred gm4_zc_moon_phase = $current gm4_zc_moon_phase run particle minecraft:electric_spark ~.5 ~.78 ~.5 0.25 0.25 0.25 0.01 6 normal @a[distance=..8,advancements={gm4_zauber_cauldrons:equipment/has_full_armor=true}]
+execute if function gm4_zauber_cauldrons:cauldron/liquid/magicol/check_moon_phase run particle minecraft:electric_spark ~.5 ~.78 ~.5 0.25 0.25 0.25 0.01 6 normal @a[distance=..8,advancements={gm4_zauber_cauldrons:equipment/has_full_armor=true}]
 
 # make sure the cauldron is in loaded chunks to avoid entity buildup
 execute unless loaded ~ ~ ~ run return -1

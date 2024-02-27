@@ -10,9 +10,8 @@ execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 # set flag
 scoreboard players set $recipe_success gm4_zc_data 1
 
-# if the moon phase is wrong, spawn vexes instead
-execute unless score $current gm4_zc_moon_phase = $preferred gm4_zc_moon_phase run function gm4_zauber_cauldrons:recipes/magicol/bottled/wrong_moon_phase
-execute unless score $current gm4_zc_moon_phase = $preferred gm4_zc_moon_phase run return -1
+# cancel execution via return and spawn vexes, unless it is a clear night and the correct moon phase
+execute unless function gm4_zauber_cauldrons:cauldron/liquid/magicol/check_moon_phase run return run function gm4_zauber_cauldrons:recipes/magicol/bottled/wrong_moon_phase
 
 # summon item
 loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:items/bottled_magicol/{{bottle}}/{{color}}/{{weather_modifier}}
