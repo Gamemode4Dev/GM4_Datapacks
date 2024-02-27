@@ -1,5 +1,5 @@
 # put furniture item in forceloaded shulker box to read its data
-# @s = furniture station wandering trader
+# @s = furniture station villager
 # at @s
 # run from technical/furniture_station/build_trades/build_trade with storage gm4_furniture:temp trade_data[0]
 # $(furniture_id) = furniture's id

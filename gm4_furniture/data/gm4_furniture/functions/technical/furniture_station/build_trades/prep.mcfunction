@@ -1,5 +1,5 @@
 # change the trades of this furniture station
-# @s = furniture station wandering trader
+# @s = furniture station villager
 # at @s
 # run from interact/furniture_station/swap_tool
 # run from place/furniture/furniture_station

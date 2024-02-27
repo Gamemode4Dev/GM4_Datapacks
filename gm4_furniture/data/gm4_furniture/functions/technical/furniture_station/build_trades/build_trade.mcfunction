@@ -1,5 +1,5 @@
 # build a trade from trade_data
-# @s = furniture station wandering trader
+# @s = furniture station villager
 # at @s
 # run from technical/furniture_station/build_trades/prep
 # run from here

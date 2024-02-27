@@ -1,5 +1,5 @@
 # loop through trade data to get the proper index in the frot
-# @s = furniture station wandering trader
+# @s = furniture station villager
 # at @s
 # run from technical/furniture_station/build_trades/prep
 # run from here
