@@ -7,6 +7,7 @@ scoreboard objectives add gm4_furniture_last_hit dummy
 scoreboard objectives add gm4_furniture_id dummy
 scoreboard objectives add gm4_furniture_index dummy
 scoreboard objectives add gm4_furniture_craft_sound_time dummy
+scoreboard objectives add gm4_furniture_sit_height dummy
 
 scoreboard players set #2 gm4_furniture_data 2
 scoreboard players set #16 gm4_furniture_data 16
@@ -23,5 +24,6 @@ execute store result score $max_index gm4_furniture_index run data get storage g
 scoreboard players remove $max_index gm4_furniture_index 1
 
 schedule function gm4_furniture:main 1t
+schedule function gm4_furniture:slow_clock 1t
 
 #$moduleUpdateList

@@ -32,3 +32,6 @@ playsound ui.stonecutter.take_result block @a[distance=..16] ~ ~ ~ 1 0.45
 # cleanup
 data remove storage gm4_furniture:temp trades
 data remove storage gm4_furniture:temp trade_data
+
+# store index for interaction entity
+scoreboard players operation $store_index gm4_furniture_data = @s gm4_furniture_index

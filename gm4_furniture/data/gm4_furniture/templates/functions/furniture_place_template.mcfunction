@@ -8,7 +8,6 @@
 scoreboard players set $valid_placement gm4_furniture_data 1
 
 # set variables
-scoreboard players set $sittable gm4_furniture_data {{ sittable }}
 scoreboard players set $dyable gm4_furniture_data {{ dyable }}
 scoreboard players set $table gm4_furniture_data {{ table }}
 scoreboard players set $custom_interaction gm4_furniture_data {{ custom_interaction }}
@@ -49,7 +48,7 @@ execute if score $valid_placement gm4_furniture_data matches 0 run loot spawn ~ 
 execute if score $valid_placement gm4_furniture_data matches 0 run return 0
 
 # spawn the furniture
-execute positioned ~ ~-0.4999 ~ run summon item_display ~ ~0.{{ sittable }} ~ {Tags:["gm4_furniture","gm4_furniture.display","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture_display.{{ category }}.{{ technical_id }}"',item:{id:"leather_horse_armor",Count:1,tag:{data:{furniture_id:"{{ category }}/{{ technical_id }}"},CustomModelData:{{ cmd }}}},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[{{ scale }}f,{{ scale }}f,{{ scale }}f]}}
+summon item_display ~ ~-0.4999 ~ {Tags:["gm4_furniture","gm4_furniture.display","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture_display.{{ category }}.{{ technical_id }}"',item:{id:"leather_horse_armor",Count:1,tag:{data:{furniture_id:"{{ category }}/{{ technical_id }}"},CustomModelData:{{ cmd }}}},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[{{ scale }}f,{{ scale }}f,{{ scale }}f]}}
 summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.main","smithed.entity","smithed.strict","gm4_new_furniture"],height:1.0002f,width:1.0002f,response:1b}
 setblock ~ ~ ~ {{ block_id }}
 
@@ -72,10 +71,7 @@ execute if score $dyable gm4_furniture_data matches 1 run data modify entity @e[
 execute if score $dyable gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture,distance=..8] add gm4_furniture.dyable
 
 # if furniture is sittable spawn sitting item_displays at appropiate locations and add tag
-execute if score $sittable gm4_furniture_data matches 1.. run tag @e[type=interaction,tag=gm4_new_furniture,distance=..8] add gm4_furniture.sittable
-scoreboard players set $sit_height gm4_furniture_data 50
-execute if score $sittable gm4_furniture_data matches 1.. store result entity @e[type=item_display,tag=gm4_new_furniture,distance=..2,limit=1,sort=nearest] transformation.translation[1] float 0.01 run scoreboard players operation $sit_height gm4_furniture_data -= $sittable gm4_furniture_data
-execute if score $sittable gm4_furniture_data matches 1.. at @e[type=marker,tag=gm4_furniture.marked_block] positioned ~ ~-0.4999 ~ run summon item_display ~ ~0.{{ sittable }} ~ {Tags:["gm4_furniture","gm4_furniture.seat","gm4_furniture.sittable","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:'"gm4_furniture_display.{{ category }}.{{ technical_id }}_seat"',item:{id:"air",Count:1},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]}}
+scoreboard players set @e[type=interaction,tag=gm4_new_furniture] gm4_furniture_sit_height {{ sittable }}
 
 # rotate furniture depending on rotation set by player (if rotation is 1 default rotation can be kept)
 execute if score $rotation gm4_furniture_data matches 2.. as @e[tag=gm4_new_furniture,distance=..8] run data modify entity @s Rotation set from storage gm4_furniture:data Rotation

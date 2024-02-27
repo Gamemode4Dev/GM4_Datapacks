@@ -17,7 +17,9 @@ meta:
       required:
         lib_forceload: 1.1.0
         lib_custom_crafters: 3.0.0
-      schedule_loops: [main]
+      schedule_loops:
+        - main
+        - slow_clock
     website:
       description: Furniture!
       recommended: []
