@@ -14,7 +14,7 @@ await entity @e[type=item,distance=..6,nbt={Item:{id:"minecraft:obsidian"}}]
 
 # equip smooshed infinitas bucket
 tp @e[type=item,distance=..6,sort=nearest,limit=1,nbt={Item:{id:"minecraft:bucket",Count:1b,tag:{gm4_metallurgy:{active_shamir:"infinitas"}}}}] @s
-await predicate gm4_infinitas_shamir:mainhand/holding/empty
+await entity @s[nbt={SelectedItem:{tag:{gm4_metallurgy:{active_shamir:"infinitas"}}}}]
 
 
 setblock ~0 ~4 ~1 glass
@@ -27,4 +27,4 @@ dummy @s use item
 
 await delay 2t
 
-assert predicate gm4_infinitas_shamir:mainhand/holding/empty
+assert entity @s[nbt={SelectedItem:{tag:{gm4_metallurgy:{active_shamir:"infinitas"}}}}]
