@@ -119,7 +119,7 @@ Gamemode 4 modules use `/schedule` to run functions every few ticks. There are 2
 - `main.mcfunction` runs every 16 ticks.
 
 ## Writing the module
-When writing the data pack, make sure to follow our [Code Conventions](./code-conventions.md) and [Design Ethos](./design-ethos.md).
+When writing the data pack, make sure to follow our [Code Conventions](./code-conventions.md).
 
 ### Compatibility with the resource pack
 All text visible to survival players (names, lore, actionbar, advancements) should use translation fallbacks like this:
