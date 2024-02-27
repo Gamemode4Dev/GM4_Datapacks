@@ -367,6 +367,48 @@
         ]
       }
     },
+    "place_nether": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": "creative"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:water_bucket"
+                  ],
+                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                }
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "minecraft:the_nether"
+            }
+          }
+        ]
+      }
+    },
     "use_on_cauldron": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
@@ -411,6 +453,7 @@
       "place_tropical_fish",
       "place_water",
       "place_waterloggable",
+      "place_nether",
       "use_on_cauldron"
     ]
   ],
