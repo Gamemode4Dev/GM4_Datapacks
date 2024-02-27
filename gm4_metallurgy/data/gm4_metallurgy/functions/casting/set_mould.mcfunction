@@ -1,4 +1,6 @@
+# summons a shamir for a destroyed mould which contained a proper recipe
 # @s = moulds that needs a band
+# at @s positioned ~ ~1.23 ~ (at the x-z location of the mould, just above the surface of the sand)
 # run from destroy_mould
 
 # initialise fake players
