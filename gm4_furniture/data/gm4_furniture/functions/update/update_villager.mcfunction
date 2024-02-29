@@ -1,3 +1,5 @@
+# temp
+# run from slow_clock
 
 # grab id
 scoreboard players operation $furniture_id gm4_furniture_id = @s gm4_furniture_id

@@ -53,15 +53,15 @@ summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furnit
 setblock ~ ~ ~ {{ block_id }}
 
 # add placement tags
-execute if score $wall_only gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture] add gm4_furniture.on_wall
-execute if score $ceiling_only gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture] add gm4_furniture.on_ceiling
+execute if score $wall_only gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture,distance=..8] add gm4_furniture.on_wall
+execute if score $ceiling_only gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture,distance=..8] add gm4_furniture.on_ceiling
 
 # spawn extensions if they exist
 execute at @e[type=marker,tag=gm4_furniture.marked_block] run summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.additional","smithed.entity","smithed.strict","gm4_new_furniture"],height:1.0002f,width:1.0002f,response:1b}
 execute at @e[type=marker,tag=gm4_furniture.marked_block] run setblock ~ ~ ~ {{ block_id }}
 
 # add custom interaction tags
-execute if score $custom_interaction gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture] add gm4_furniture.custom_interaction
+execute if score $custom_interaction gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture,distance=..8] add gm4_furniture.custom_interaction
 
 # if furniture is a table reduce interaction height
 execute if score $table gm4_furniture_data matches 1 as @e[type=interaction,tag=gm4_new_furniture,distance=..8] run data modify entity @s height set value 1f
@@ -71,15 +71,15 @@ execute if score $dyable gm4_furniture_data matches 1 run data modify entity @e[
 execute if score $dyable gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture,distance=..8] add gm4_furniture.dyable
 
 # if furniture is sittable spawn sitting item_displays at appropiate locations and add tag
-scoreboard players set @e[type=interaction,tag=gm4_new_furniture] gm4_furniture_sit_height {{ sittable }}
+scoreboard players set @e[type=interaction,tag=gm4_new_furniture,distance=..8] gm4_furniture_sit_height {{ sittable }}
 
 # rotate furniture depending on rotation set by player (if rotation is 1 default rotation can be kept)
 execute if score $rotation gm4_furniture_data matches 2.. as @e[tag=gm4_new_furniture,distance=..8] run data modify entity @s Rotation set from storage gm4_furniture:data Rotation
 
 # mark block as placed and set id
 playsound minecraft:block.barrel.close block @a[distance=..6] ~ ~ ~ 1 1.6
-execute store result score @e[tag=gm4_new_furniture] gm4_furniture_id run scoreboard players add $next_id gm4_furniture_id 1
-tag @e[tag=gm4_new_furniture] remove gm4_new_furniture
+execute store result score @e[tag=gm4_new_furniture,distance=..8] gm4_furniture_id run scoreboard players add $next_id gm4_furniture_id 1
+tag @e[tag=gm4_new_furniture,distance=..8] remove gm4_new_furniture
 
 # cleanup
 kill @e[type=marker,tag=gm4_furniture.marked_block]

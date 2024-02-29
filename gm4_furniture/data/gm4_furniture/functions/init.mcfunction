@@ -8,6 +8,7 @@ scoreboard objectives add gm4_furniture_id dummy
 scoreboard objectives add gm4_furniture_index dummy
 scoreboard objectives add gm4_furniture_craft_sound_time dummy
 scoreboard objectives add gm4_furniture_sit_height dummy
+scoreboard objectives add gm4_furniture_relog custom:leave_game
 
 scoreboard players set #2 gm4_furniture_data 2
 scoreboard players set #16 gm4_furniture_data 16
