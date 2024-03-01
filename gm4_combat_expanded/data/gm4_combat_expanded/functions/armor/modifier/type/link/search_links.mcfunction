@@ -1,18 +1,16 @@
-# find link this armor belongs to or make a new one
+# search links for the one this player belongs to
 # @s = player wearing link armor
 # at @s
 # run from armor/modifier/type/link/check
+# run from here
 
-# grab id from storage if it already exists
-$execute store result score @s gm4_ce_link_id run data get storage gm4_combat_expanded:temp active_links[{name:$(Name)}].id
+# check first link in list to see if name matches
+data modify storage gm4_combat_expanded:temp search_links.check_name set from storage gm4_combat_expanded:temp search_links.list[0].name
+execute store success score $wrong_link gm4_ce_data run data modify storage gm4_combat_expanded:temp search_links.check_name set from storage gm4_combat_expanded:temp search_links.find_name
 
-# if an id was found no need to put a new entry in storage
-execute unless score @s gm4_ce_link_id matches 0 run return 1
+# if link was found return
+execute if score $wrong_link gm4_ce_data matches 0 run return 1
 
-# put the new name into storage
-$data modify storage gm4_combat_expanded:temp new_link set value {id:0,name:$(Name)}
-execute store result storage gm4_combat_expanded:temp new_link.id int 1 run scoreboard players add $latest_id gm4_ce_link_id 1
-data modify storage gm4_combat_expanded:temp active_links append from storage gm4_combat_expanded:temp new_link
-data remove storage gm4_combat_expanded:temp new_link
-
-scoreboard players operation @s gm4_ce_link_id = $latest_id gm4_ce_link_id
+# if link was not found check next link in list
+data remove storage gm4_combat_expanded:temp search_links.list[0]
+execute if data storage gm4_combat_expanded:temp search_links.list[0] run function gm4_combat_expanded:armor/modifier/type/link/search_links

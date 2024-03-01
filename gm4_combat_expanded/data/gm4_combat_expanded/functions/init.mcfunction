@@ -17,6 +17,9 @@ execute unless score $phantoms_disabled gm4_ce_data matches 1 run data modify st
 execute if score $phantoms_disabled gm4_ce_data matches 1 if score $phantoms gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'[{"text":"[WARN]","color":"red"},{"text":" Combat Expanded requires doInsomnia to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule doInsomnia false"}}]'}
 scoreboard players set $phantoms_disabled gm4_ce_data 1
 
+# reset all links
+data modify storage gm4_combat_expanded:data active_links set value [{id:-1,name:{"translate":"item.gm4.combat_expanded.name.link","fallback":"Unlinked %s","with":[{"translate":"item.minecraft.iron_chestplate","italic":false}],"italic":false,"color":"light_purple"}}]
+
 # scoreboards
 scoreboard objectives add gm4_ce_id dummy
 scoreboard objectives add gm4_ce_difficult dummy {"text":"GM4 Combat Expanded: Difficulty"}

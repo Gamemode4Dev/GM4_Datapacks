@@ -12,8 +12,7 @@ execute at @s[scores={gm4_ce_data=1}] positioned ~-.15 ~-.15 ~-.15 as @e[tag=!gm
 execute at @s[scores={gm4_ce_data=2}] positioned ~-.15 ~-.15 ~-.15 as @e[tag=!gm4_ce_self,dx=0,dy=0,dz=0,predicate=gm4_combat_expanded:technical/pvp_able,team=!gm4_ce_team_check,tag=!smithed.strict] positioned ~-.7 ~-.7 ~-.7 if entity @s[dx=0,dy=0,dz=0] store success score $damage_dealt gm4_ce_data run damage @s 3 player_attack by @p[tag=gm4_ce_self]
 execute at @s[scores={gm4_ce_data=3..4}] positioned ~-.15 ~-.15 ~-.15 as @e[tag=!gm4_ce_self,dx=0,dy=0,dz=0,predicate=gm4_combat_expanded:technical/pvp_able,team=!gm4_ce_team_check,tag=!smithed.strict] positioned ~-.7 ~-.7 ~-.7 if entity @s[dx=0,dy=0,dz=0] store success score $damage_dealt gm4_ce_data run damage @s 4 player_attack by @p[tag=gm4_ce_self]
 execute at @s[scores={gm4_ce_data=5..6}] positioned ~-.15 ~-.15 ~-.15 as @e[tag=!gm4_ce_self,dx=0,dy=0,dz=0,predicate=gm4_combat_expanded:technical/pvp_able,team=!gm4_ce_team_check,tag=!smithed.strict] positioned ~-.7 ~-.7 ~-.7 if entity @s[dx=0,dy=0,dz=0] store success score $damage_dealt gm4_ce_data run damage @s 5 player_attack by @p[tag=gm4_ce_self]
-execute if score $damage_dealt gm4_ce_data matches 1 at @s run playsound minecraft:entity.player.attack.sweep player @a ~ ~ ~ 0.75 1.4
-execute if score $damage_dealt gm4_ce_data matches 1 at @s run particle sweep_attack ~ ~ ~ 0.05 0.15 0.05 0.01 1
+execute if score $damage_dealt gm4_ce_data matches 1 at @s run function gm4_combat_expanded:armor/modifier/type/sword_ring/damage_dealt/run
 
 # reset the scales 
 execute store result entity @s transformation.scale[0] float 0.003 run data get storage gm4_combat_expanded:temp sword_ring.scale 100

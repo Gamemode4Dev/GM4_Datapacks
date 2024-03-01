@@ -117,7 +117,7 @@
                     "translate": "attribute.modifier.plus.1",
                     "with": [
                       {
-                        "text": "0.75"
+                        "text": "1.5"
                       },
                       {
                         "translate": "attribute.name.generic.attack_speed"
@@ -145,226 +145,6 @@
                 "score": "gm4_ce_data"
               },
               "range": 5
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.combat_expanded.lore.unburden",
-                "fallback": "%s per missing %s",
-                "with": [
-                  {
-                    "translate": "attribute.modifier.plus.1",
-                    "with": [
-                      {
-                        "text": "0.75"
-                      },
-                      {
-                        "translate": "attribute.name.generic.movement_speed"
-                      }
-                    ]
-                  },
-                  {
-                    "translate": "attribute.name.generic.armor"
-                  }
-                ],
-                "color": "blue",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$damage"
-                },
-                "score": "gm4_ce_data"
-              },
-              "range": 5
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.combat_expanded.lore.unburden",
-                "fallback": "%s per missing %s",
-                "with": [
-                  {
-                    "translate": "attribute.modifier.plus.1",
-                    "with": [
-                      {
-                        "text": "1"
-                      },
-                      {
-                        "translate": "attribute.name.generic.attack_speed"
-                      }
-                    ]
-                  },
-                  {
-                    "translate": "attribute.name.generic.armor"
-                  }
-                ],
-                "color": "blue",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$damage"
-                },
-                "score": "gm4_ce_data"
-              },
-              "range": 10
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.combat_expanded.lore.unburden",
-                "fallback": "%s per missing %s",
-                "with": [
-                  {
-                    "translate": "attribute.modifier.plus.1",
-                    "with": [
-                      {
-                        "text": "1"
-                      },
-                      {
-                        "translate": "attribute.name.generic.movement_speed"
-                      }
-                    ]
-                  },
-                  {
-                    "translate": "attribute.name.generic.armor"
-                  }
-                ],
-                "color": "blue",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$damage"
-                },
-                "score": "gm4_ce_data"
-              },
-              "range": 10
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.combat_expanded.lore.unburden",
-                "fallback": "%s per missing %s",
-                "with": [
-                  {
-                    "translate": "attribute.modifier.plus.1",
-                    "with": [
-                      {
-                        "text": "1.25"
-                      },
-                      {
-                        "translate": "attribute.name.generic.attack_speed"
-                      }
-                    ]
-                  },
-                  {
-                    "translate": "attribute.name.generic.armor"
-                  }
-                ],
-                "color": "blue",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$damage"
-                },
-                "score": "gm4_ce_data"
-              },
-              "range": 15
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.combat_expanded.lore.unburden",
-                "fallback": "%s per missing %s",
-                "with": [
-                  {
-                    "translate": "attribute.modifier.plus.1",
-                    "with": [
-                      {
-                        "text": "1.25"
-                      },
-                      {
-                        "translate": "attribute.name.generic.movement_speed"
-                      }
-                    ]
-                  },
-                  {
-                    "translate": "attribute.name.generic.armor"
-                  }
-                ],
-                "color": "blue",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$damage"
-                },
-                "score": "gm4_ce_data"
-              },
-              "range": 15
             }
           ]
         },
@@ -382,6 +162,226 @@
                     "with": [
                       {
                         "text": "1.5"
+                      },
+                      {
+                        "translate": "attribute.name.generic.movement_speed"
+                      }
+                    ]
+                  },
+                  {
+                    "translate": "attribute.name.generic.armor"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 5
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.unburden",
+                "fallback": "%s per missing %s",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.plus.1",
+                    "with": [
+                      {
+                        "text": "1.75"
+                      },
+                      {
+                        "translate": "attribute.name.generic.attack_speed"
+                      }
+                    ]
+                  },
+                  {
+                    "translate": "attribute.name.generic.armor"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 10
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.unburden",
+                "fallback": "%s per missing %s",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.plus.1",
+                    "with": [
+                      {
+                        "text": "1.75"
+                      },
+                      {
+                        "translate": "attribute.name.generic.movement_speed"
+                      }
+                    ]
+                  },
+                  {
+                    "translate": "attribute.name.generic.armor"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 10
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.unburden",
+                "fallback": "%s per missing %s",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.plus.1",
+                    "with": [
+                      {
+                        "text": "2"
+                      },
+                      {
+                        "translate": "attribute.name.generic.attack_speed"
+                      }
+                    ]
+                  },
+                  {
+                    "translate": "attribute.name.generic.armor"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 15
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.unburden",
+                "fallback": "%s per missing %s",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.plus.1",
+                    "with": [
+                      {
+                        "text": "2"
+                      },
+                      {
+                        "translate": "attribute.name.generic.movement_speed"
+                      }
+                    ]
+                  },
+                  {
+                    "translate": "attribute.name.generic.armor"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 15
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.unburden",
+                "fallback": "%s per missing %s",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.plus.1",
+                    "with": [
+                      {
+                        "text": "2.25"
                       },
                       {
                         "translate": "attribute.name.generic.attack_speed"
@@ -425,7 +425,7 @@
                     "translate": "attribute.modifier.plus.1",
                     "with": [
                       {
-                        "text": "1.5"
+                        "text": "2.25"
                       },
                       {
                         "translate": "attribute.name.generic.movement_speed"

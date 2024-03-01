@@ -1,11 +1,16 @@
-# custom death message from players that die from link armor
-# @s = player that died
-# at @s
-# run from armor/modifier/type/link/process/damage_taken
+# process a link that has run out of health
+# @s = unspecified
+# at unspecified
+# run from armor/modifier/type/link/process/process_link
 
-# display custom death message if death messages are on
-execute store result score $death_messages gm4_ce_data run gamerule showDeathMessages
-gamerule showDeathMessages false
-execute if score $death_messages gm4_ce_data matches 1 at @s run tellraw @a {"translate":"death.gm4.combat_expanded.link","fallback":"%s followed %s to their death","with":[{"selector":"@s"},{"selector":"@p[tag=gm4_ce_target]"}]}
-kill @s
-execute if score $death_messages gm4_ce_data matches 1 run gamerule showDeathMessages true
+# check which players were killed and which followed them to their death
+execute store result score $killed_player_count gm4_ce_data run tag @a[tag=gm4_ce_link.process,scores={gm4_ce_health.current=..0}] add gm4_ce_link.killed
+execute if score $killed_player_count gm4_ce_data matches 2.. run tag @r[tag=gm4_ce_link.killed] add gm4_ce_link.killed_2
+
+execute as @a[tag=gm4_ce_link.process,tag=!gm4_ce_link.killed] run function gm4_combat_expanded:armor/modifier/type/link/process/death_message
+
+# remove tags as processing is done
+tag @a[tag=gm4_ce_link.process] remove gm4_ce_linked
+tag @a remove gm4_ce_link.process
+tag @a remove gm4_ce_link.killed
+tag @a remove gm4_ce_link.killed_2

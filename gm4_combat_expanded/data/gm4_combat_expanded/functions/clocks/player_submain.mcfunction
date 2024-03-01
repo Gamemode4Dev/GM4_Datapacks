@@ -4,10 +4,7 @@
 # scheduled from main (8t)
 
 # prep link armor
-tag @a remove gm4_ce_was_linked
-tag @a[tag=gm4_ce_linked] add gm4_ce_was_linked
 tag @a remove gm4_ce_linked
-data modify storage gm4_combat_expanded:temp active_links set value [{id:-1,name:{"translate":"item.gm4.combat_expanded.name.link","fallback":"Unlinked %s","with":[{"translate":"item.minecraft.iron_chestplate","italic":false}],"italic":false,"color":"light_purple"}}]
 scoreboard players reset * gm4_ce_link_id
 
 # prep sword_ring armor
@@ -21,6 +18,9 @@ execute as @a[gamemode=!spectator] run function gm4_combat_expanded:player/proce
 
 # apply horse speed effect
 execute as @e[scores={gm4_ce_horse.speed_level=1..}] run function gm4_combat_expanded:armor/modifier/type/horse/apply_effect
+
+# linked armor
+tag @a[tag=!gm4_ce_linked] remove gm4_ce_was_linked
 
 # timers
 scoreboard players remove @a[scores={gm4_ce_t_shield=1..}] gm4_ce_t_shield 1

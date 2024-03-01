@@ -17,5 +17,15 @@ execute if score $level2 gm4_ce_data matches 2 run tag @s add gm4_ce_immune_blin
 execute if score $level2 gm4_ce_data matches 3 run tag @s add gm4_ce_immune_nausea
 execute if score $level2 gm4_ce_data matches 4 run tag @s add gm4_ce_immune_wither
 
+# remove effects if they were present
+execute if score $level gm4_ce_data matches 1 run effect clear @s mining_fatigue
+execute if score $level gm4_ce_data matches 2 run effect clear @s poison
+execute if score $level gm4_ce_data matches 3 run effect clear @s weakness
+
+execute if score $level2 gm4_ce_data matches 1 run effect clear @s hunger
+execute if score $level2 gm4_ce_data matches 2 run effect clear @s blindness
+execute if score $level2 gm4_ce_data matches 3 run effect clear @s nausea
+execute if score $level2 gm4_ce_data matches 4 run effect clear @s wither
+
 # tag for effect removal
 tag @s add gm4_ce_immune_active
