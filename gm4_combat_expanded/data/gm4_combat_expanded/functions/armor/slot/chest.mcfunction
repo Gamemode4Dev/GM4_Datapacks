@@ -10,7 +10,7 @@ execute store result score $modifier gm4_ce_data run data get storage gm4_combat
 # check netherite
 execute if predicate gm4_combat_expanded:technical/convert_netherite/chest run function gm4_combat_expanded:armor/convert_netherite
 
-# TEMP: update convert
+# TODO:TEMP: update convert
 execute if data storage gm4_combat_expanded:temp tag.gm4_combat_expanded.convert run function gm4_combat_expanded:update/convert
 
 # check modifier

@@ -6,6 +6,7 @@
 scoreboard players set $keep_tick.sword_ring gm4_ce_keep_tick 1
 
 tag @s add gm4_ce_target
+execute store result score $player_creative gm4_ce_data if entity @s[gamemode=creative]
 
 # grab armor data
 data modify block 29999998 1 7134 Items set value []

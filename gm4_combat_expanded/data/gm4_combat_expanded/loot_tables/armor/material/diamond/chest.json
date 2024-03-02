@@ -58,7 +58,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-8,slot:1,material:5,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_chestplate\"}'}}"
+              "tag": "{gm4_combat_expanded:{durability:528,identified:0,armor_clamp:-8,slot:1,material:5,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_chestplate\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",
