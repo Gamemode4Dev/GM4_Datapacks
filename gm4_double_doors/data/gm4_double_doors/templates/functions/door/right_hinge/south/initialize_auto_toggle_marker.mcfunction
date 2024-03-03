@@ -17,7 +17,7 @@ tag @s add gm4_double_doors_right
 tag @s add gm4_double_doors_{{ material_name }}
 
 # set default lifetime in ticks
-scoreboard players set @s gm4_double_doors_auto_toggle_liftime 100
+scoreboard players set @s gm4_double_doors_auto_toggle_liftime 60
 
 # set starting state to 'waiting_for_player'
 scoreboard players set @s gm4_double_doors_auto_toggle_state 0
