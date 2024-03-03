@@ -19,5 +19,8 @@ execute if score @s gm4_double_doors_auto_toggle_state matches 2.. if score @s g
 # kill old auto toggle markers
 execute if score @s gm4_double_doors_auto_toggle_liftime matches ..0 run kill @s
 
+# kill auto toggle markers which are not in a door anymore
+execute unless block ~ ~ ~ #minecraft:doors run kill @s
+
 # set flag that an auto toggle marker was found
 scoreboard players set $found_auto_toggle_marker gm4_double_doors_data 1
