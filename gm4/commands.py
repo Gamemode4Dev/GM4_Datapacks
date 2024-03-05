@@ -57,18 +57,7 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: b
 	if reload:
 		broadcast_config["require"].insert(0, "beet.contrib.livereload")
 
-	config["directory"] = str(project.directory) # set working directory to where CLI was invoked
-
-	# create a tempfile on disk for the project config - allows beet watch to function
-	with NamedTemporaryFile(mode="wt", delete=False, suffix=".json") as f:
-		project.config_path = f.name
-		json.dump(config, f, indent=1)
-
-	project.reset() # delete previously resolved config
-
-	ctx.invoke(commands.watch if watch else commands.build, link=link)
-
-	os.remove(f.name) # delete tempfile
+	build_dynamic_config(config, ctx, project, watch, link) # start the project build
 
 
 @beet.command()
@@ -122,15 +111,21 @@ def readme_gen(ctx: click.Context, project: Project, modules: tuple[str, ...], w
 			"autosave": {
 				"link": False
 			}
-		},
-		"directory": str(project.directory)
+		}
 	}
 
-	# create a tempfile on disk for the project config - allows beet watch to function
+	build_dynamic_config(config, ctx, project, watch, link=None)
+
+
+def build_dynamic_config(config: dict[str,Any], ctx: click.Context, project: Project, watch: bool, link: str|None):
+	"""Creates a tempfile on disk to pass to beet. Enables runtime dynamic setup of the build process that is compatiable with `beet watch`"""
+
+	config["directory"] = str(project.directory) # set working directory to where CLI was invoked
+
 	with NamedTemporaryFile(mode="wt", delete=False, suffix=".json") as f:
 		project.config_path = f.name
 		json.dump(config, f, indent=1)
 
 	project.reset() # delete previously resolved config
-	ctx.invoke(commands.watch if watch else commands.build)
+	ctx.invoke(commands.watch if watch else commands.build, link=link)
 	os.remove(f.name) # delete tempfile
