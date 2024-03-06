@@ -16,7 +16,6 @@ execute if score @s gm4_double_doors_auto_toggle_target_state matches 1 run tag 
 
 # set tags
 tag @s add gm4_double_doors_auto_toggle_marker
-tag @s add gm4_double_doors_north
 tag @s add gm4_double_doors_left
 tag @s add gm4_double_doors_{{ material_name }}
 
