@@ -23,7 +23,7 @@ assert block ~2 ~4 ~2 oak_trapdoor[open=true,facing=west,half=bottom]
 assert block ~2 ~5 ~2 oak_trapdoor[open=true,facing=north,half=bottom]
 
 # move dummy into door and chech that it is still open
-execute at @s run tp @s ^ ^ ^1
+execute at @s run tp @s ^ ^ ^0.75
 await delay 10t
 
 # left column

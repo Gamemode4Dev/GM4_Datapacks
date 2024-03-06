@@ -10,6 +10,10 @@ data modify entity @s CustomName set value '"gm4_double_doors_auto_toggle_marker
 execute if score $target_door_state gm4_double_doors_data matches 1 run scoreboard players set @s gm4_double_doors_auto_toggle_target_state 0
 execute unless score $target_door_state gm4_double_doors_data matches 1 run scoreboard players set @s gm4_double_doors_auto_toggle_target_state 1
 
+# store hitbox orientation
+execute if score @s gm4_double_doors_auto_toggle_target_state matches 0 run tag @s add gm4_double_doors_collision_box_south
+execute if score @s gm4_double_doors_auto_toggle_target_state matches 1 run tag @s add gm4_double_doors_collision_box_west
+
 # set tags
 tag @s add gm4_double_doors_auto_toggle_marker
 tag @s add gm4_double_doors_north
