@@ -2,7 +2,7 @@
 # at @s align xzy
 # run from main
 
-# reset rabbit target score (set to 1 in cauldron/structure/analyze/cauldron if an empty cauldron is present)
+# reset rabbit target score
 scoreboard players set @s gm4_zc_rabtarget 0
 
 # analyze
