@@ -8,6 +8,9 @@ data_pack:
 resource_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
