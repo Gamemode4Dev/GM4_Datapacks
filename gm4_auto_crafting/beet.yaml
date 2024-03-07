@@ -77,6 +77,8 @@ meta:
         - BluePsychoRanger
       Icon Design:
         - Hozz
+      Textures:
+        - Kyrius
   modrinth:
     project_id: WkDoUESw
   smithed:

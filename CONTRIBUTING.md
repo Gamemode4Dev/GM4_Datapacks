@@ -98,7 +98,7 @@ meta:
       Creator:
         - Sparks
       Textures by:
-        - kyrkis
+        - Kyrius
 
   modrinth: # This section is only necessary when publishing to Modrinth
     project_id: itk6Zfe2
