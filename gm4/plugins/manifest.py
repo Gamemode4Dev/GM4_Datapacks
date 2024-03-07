@@ -118,7 +118,7 @@ def create(ctx: Context):
 				logger.debug(exc.explanation)
 
 	# Read the contributors metadata
-	contributors_file = Path("contributors.json")
+	contributors_file = Path("gm4/contributors.json")
 	if contributors_file.exists():
 		contributors_list = json.loads(contributors_file.read_text())
 		manifest.contributors = {c["name"]: c for c in contributors_list}
