@@ -210,7 +210,7 @@ class SkinNbtTransformer(MutatingReducer, InvokeOnJsonNbt):
     def cache_nonnative_references(self):
         """Adds any skin references from another module into skin_cache.json, so changes can trigger patch increments"""
         if (nonnative_refs := set(self.used_textures) - set(self.ctx.data[Skin])):
-            self.skin_cache["nonnative_references"][self.ctx.project_id] = list(nonnative_refs).sort()
+            self.skin_cache["nonnative_references"][self.ctx.project_id] = sorted(nonnative_refs)
         else:
             self.skin_cache["nonnative_references"].pop(self.ctx.project_id, None)
 
