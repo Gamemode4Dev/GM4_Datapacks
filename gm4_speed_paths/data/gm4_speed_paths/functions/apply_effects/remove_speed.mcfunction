@@ -5,4 +5,3 @@
 
 attribute @s minecraft:generic.movement_speed modifier remove dc33007e-5da4-4fad-a850-9c5a058c22ba
 tag @s remove gm4_on_path
-advancement revoke @s only gm4_speed_paths:on_path
