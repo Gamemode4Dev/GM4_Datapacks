@@ -48,7 +48,7 @@ from mecha import (
     rule,
 )
 from nbtlib import String  # type: ignore ; nbtlib missing stubfile
-from pydantic.v1 import BaseModel, Extra, Field, ValidationError, validator
+from pydantic.v1 import BaseModel, Extra, Field, ValidationError, validator # type: ignore ; v1 validator behaves strangely with type checking
 from pydantic.v1.error_wrappers import ErrorWrapper
 from tokenstream import set_location
 
@@ -73,7 +73,7 @@ class ModelData(BaseModel):
     transforms: Optional[list['TransformOptions']]
     textures: MapOption[str] = [] # defaults to same value as reference         #type:ignore ; the validator handles the default value
 
-    @validator('model', pre=True, always=True)
+    @validator('model', pre=True, always=True) # type: ignore ; v1 validator behaves strangely with type checking
     def default_model(cls, model: Any, values: dict[str,Any]) -> dict[str, str|list[dict[str,Any]]]:
         if isinstance(model, str):
             model = [model] # so we can check len for number of items
@@ -89,7 +89,7 @@ class ModelData(BaseModel):
             raise ValidationError([ErrorWrapper(ValueError("dict keys do not match values in 'item'"), loc=())], model=ModelData)
         return model # model is already a mapped dict, of the same length as item      # type: ignore
     
-    @validator('template')
+    @validator('template') # type: ignore ; v1 validator behaves strangely with type checking
     def enforce_custom_with_override_predicates(cls, template: 'str|TemplateOptions', values: dict[str,Any]) -> 'TemplateOptions':
         # if isinstance(values.get('model'), list) and template != "custom":
         #     raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
@@ -102,7 +102,7 @@ class ModelData(BaseModel):
         except KeyError:
             raise ValidationError([ErrorWrapper(ValueError(f"the specified template '{name}' could not be found"), loc=())], model=ModelData)
     
-    @validator('transforms', each_item=True)
+    @validator('transforms', each_item=True) # type: ignore ; v1 validator behaves strangely with type checking
     def apply_transform_submodel(cls, transform: 'TransformOptions', values: dict[str,Any]) -> 'None|TransformOptions':
         # find and apply proper submodel
         try:
@@ -111,7 +111,7 @@ class ModelData(BaseModel):
         except KeyError:
             raise ValidationError([ErrorWrapper(ValueError(f"the specified template '{transform.name}' could not be found"), loc=())], model=ModelData)
     
-    @validator('textures', pre=True, always=True)
+    @validator('textures', pre=True, always=True) # type: ignore ; v1 validator behaves strangely with type checking
     def default_texture(cls, textures: MapOption[str], values: dict[str,Any]) -> MapOption[str]:
         empty_list = False
         if textures is None: # type: ignore
@@ -175,7 +175,7 @@ class GuiFont(BaseModel):
     container: 'str|ContainerGuiOptions'
     texture: str
 
-    @validator('container')
+    @validator('container') # type: ignore ; v1 validator behaves strangely with type checking
     def resolve_container(cls, container: 'str|ContainerGuiOptions', values: dict[str,Any]) -> 'ContainerGuiOptions':
         container_type = container.container if isinstance(container, ContainerGuiOptions) else container
         try:

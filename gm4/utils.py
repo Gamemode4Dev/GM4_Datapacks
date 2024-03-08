@@ -17,7 +17,7 @@ from mecha import (
     Mecha,
     rule,
 )
-from pydantic.v1 import validator
+from pydantic.v1 import validator  # type: ignore ; v1 validator behaves strangely with type checking
 from pydantic.v1.generics import GenericModel
 from tokenstream import SourceLocation, set_location
 
@@ -132,7 +132,7 @@ class MapOption(GenericModel, Generic[T]):
 			return self.__root__.items()
 		raise KeyError("MapOption has no mapping data keys. Can not retrieve items()")
 	
-	@validator("__root__", pre=True)
+	@validator("__root__", pre=True)  # type: ignore ; v1 validator behaves strangely with type checking
 	def validate_root(cls, value: list[T]|dict[str,T]|T) -> list[T]|dict[str,T]:
 		if value is None:
 			value = []
