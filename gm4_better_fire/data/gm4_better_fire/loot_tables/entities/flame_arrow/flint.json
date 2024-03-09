@@ -17,7 +17,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420002}"
+              "tag": "{CustomModelData:'item/charred_arrowhead'}"
             },
             {
               "function": "minecraft:set_lore",

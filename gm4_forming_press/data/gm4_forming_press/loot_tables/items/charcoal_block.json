@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420001}"
+              "tag": "{CustomModelData:'item/charcoal_block'}"
             },
             {
               "function": "set_name",

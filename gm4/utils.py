@@ -1,10 +1,30 @@
 import subprocess
 import warnings
-from dataclasses import dataclass, asdict
-from typing import Any, List
+from contextlib import contextmanager
+from dataclasses import asdict, dataclass, replace
 from functools import total_ordering
+from typing import Any, Generic, Iterator, List, TypeVar
+
+from beet import Advancement, Context, ItemModifier, ListOption, LootTable, Predicate
+from mecha import (
+    AbstractNode,
+    AstJsonObjectEntry,
+    AstJsonObjectKey,
+    AstJsonValue,
+    AstNbtCompound,
+    DiagnosticCollection,
+    DiagnosticError,
+    Mecha,
+    rule,
+)
+from pydantic.v1 import validator  # type: ignore ; v1 validator behaves strangely with type checking
+from pydantic.v1.generics import GenericModel
+from tokenstream import SourceLocation, set_location
+
+T = TypeVar('T')
 import csv
 from pathlib import Path
+
 
 def run(cmd: list[str]|str) -> str:
 	"""Run a shell command and return the stdout."""
@@ -13,6 +33,12 @@ def run(cmd: list[str]|str) -> str:
 def X_int(val: str) -> int | None:
 	"""Int casting that accepts character 'X' and returns None"""
 	return None if val.lower() == 'x' else int(val)
+
+def add_namespace(val: str, namespace: str) -> str:
+	"""Adds a namsepace prefix to a string, if one does not already exist"""
+	if ":" not in val:
+		return f"{namespace}:{val}"
+	return val
 
 @dataclass
 @total_ordering
@@ -84,6 +110,93 @@ class NoneAttribute():
 	def __getattribute__(self, __name: str) -> None:
 		return None
 
+class MapOption(GenericModel, Generic[T]):
+	"""A union-like type of dict and list, supporting common methods for both
+		- Written for use in resource_pack plugin's texture lists"""
+	__root__: list[T]|dict[str,T] = []
+
+	def entries(self) -> list[T]:
+		if isinstance(self.__root__, list):
+			return self.__root__
+		return list(self.__root__.values())
+	
+	def __getitem__(self, key: str|int) -> T:
+		if isinstance(key, int):
+			return self.entries()[key]
+		if isinstance(self.__root__, list):
+			raise KeyError(f"MapOption has no mapping data keys. Could not retrieve {key}")
+		return self.__root__[key]
+	
+	def items(self):
+		if isinstance(self.__root__, dict):
+			return self.__root__.items()
+		raise KeyError("MapOption has no mapping data keys. Can not retrieve items()")
+	
+	@validator("__root__", pre=True)  # type: ignore ; v1 validator behaves strangely with type checking
+	def validate_root(cls, value: list[T]|dict[str,T]|T) -> list[T]|dict[str,T]:
+		if value is None:
+			value = []
+		elif isinstance(value, ListOption):
+			value = value.entries()
+		if not isinstance(value, (list, tuple, dict)): # single element
+			value = [value]
+		return value # type: ignore
+
+class InvokeOnJsonNbt:
+	"""Extendable mixin to run MutatingReducer's rules on nbt within advancements, loot_tables ect..."""
+	def __init__(self, ctx: Context):
+		self.ctx = ctx
+		raise RuntimeError("InvokeOnJsonNbt should not be directly instantiated. It is a mixin for MutatingReducers and should be interited instead")
+	
+	@contextmanager
+	def use_diagnostics(self, diagnostics: DiagnosticCollection) -> Iterator[None]:
+		"""Class is mixed into MutatingReducer, who does have this method. Passed here for type completion"""
+		raise NotImplementedError()
+
+	def invoke(self, node: AbstractNode, *args: Any, **kwargs: Any) -> Any:
+		"""Class is mixed into MutatingReducer, who does have this method. Passed here for type completion"""
+		raise NotImplementedError()
+	
+
+	@rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='nbt'))
+	@rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='tag'))
+	def process_nbt_in_json(self, node: AstJsonObjectEntry):
+		mc = self.ctx.inject(Mecha)
+		if isinstance(mc.database.current, (Advancement, LootTable, ItemModifier, Predicate)):
+			if isinstance(node.value, AstJsonValue) and isinstance(node.value.value, str) \
+				and node.value.value.startswith("{") and node.value.value.endswith("}"): # excludes location check block/fluid tags - easier than making rule that checks for 'set_nbt' functions on the same json level
+				try:
+					nbt = mc.parse(node.value.value.replace("\n", "\\\\n"), type=AstNbtCompound)
+				except DiagnosticError as exc:
+					# if parsing failed, give pretty traceback
+					for d in exc.diagnostics.exceptions:
+						yield set_location(replace(d, file=mc.database.current), node.value)
+					return replace(node, value="{}")
+
+				## TEMP - trial on yielding children rather than using invoke				
+				# with self.use_diagnostics(captured_diagnostics:=DiagnosticCollection()):
+				# 	nbt = yield nbt # run all rules on child-node
+				# print(captured_diagnostics.exceptions)
+				# print(nbt)
+				# new_node = replace(node, value=AstJsonValue(value=mc.serialize(nbt, type=AstNbtCompound)))
+
+				with self.use_diagnostics(captured_diagnostics:=DiagnosticCollection()):
+					processed_nbt = mc.serialize(self.invoke(nbt, type=AstNbtCompound))
+				for exc in captured_diagnostics.exceptions:
+					yield propagate_location(exc, node.value)  # set error location to nbt key-value that caused the problem and pass diagnostic back to mecha
+
+				new_node = replace(node, value=AstJsonValue(value=processed_nbt))
+				if new_node != node:
+					return new_node
+				
+		return node
+
+def propagate_location(obj: T, parent_location_obj: Any) -> T:
+	"""a set_location like function propagating diagnostic information for manually invoked rules"""
+	return set_location(obj, 
+		SourceLocation(pos=parent_location_obj.location.pos+obj.location.pos, lineno=parent_location_obj.location.lineno, colno=parent_location_obj.location.colno+obj.location.colno), # type: ignore
+		SourceLocation(pos=parent_location_obj.location.pos+obj.end_location.pos, lineno=parent_location_obj.location.lineno, colno=parent_location_obj.location.colno+obj.end_location.colno) # type: ignore
+	)
 
 # CSV READING UTILS
 class CSVCell(str):

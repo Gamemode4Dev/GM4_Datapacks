@@ -3,8 +3,7 @@
   "name": "Relocators",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:shulker_box",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:shulker_box"
   },
   "criteria": {
     "open_custom_crafter": {

@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "glass_bottle",
-      "nbt": "{CustomModelData:3420004}"
+      "nbt": "{CustomModelData:'gui/advancement/zauber_cauldron_drink_multi_use_bottle'}"
     },
     "title": {
       "translate": "advancement.gm4.zauber_cauldrons.drink_multi_use_bottle.title",

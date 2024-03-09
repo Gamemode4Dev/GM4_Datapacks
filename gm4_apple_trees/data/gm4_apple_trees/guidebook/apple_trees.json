@@ -3,8 +3,7 @@
   "name": "Apple Trees",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:apple",
-    "nbt": "{CustomModelData:3420002}"
+    "item": "minecraft:apple"
   },
   "criteria": {
     "obtain_apple_sapling": {

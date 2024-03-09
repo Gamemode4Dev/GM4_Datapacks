@@ -5,7 +5,11 @@ version: 1.2.X
 data_pack:
   load: .
 
+resource_pack:
+  load: ../gm4_metallurgy
+
 pipeline:
+  - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
 
 meta:
@@ -14,6 +18,13 @@ meta:
       required:
         gm4_metallurgy: 1.2.0
       schedule_loops: [main]
+    model_data:
+      - item: [pickaxes, shovels]
+        reference: shamir/lumos
+        template:
+          name: shamir
+          metal: curies_bismium
+          textures_path: gm4_metallurgy:item/shamir/curies_bismium
     website:
       description: Adds the shamir 'Lumos' to Metallurgy. It places torches when it is dark.
       recommended: []

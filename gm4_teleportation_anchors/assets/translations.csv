@@ -1,0 +1,20 @@
+key,en_us
+block.gm4.teleportation_jammer,Teleportation Jammer
+block.gm4.teleportation_anchor,Teleportation Anchor
+container.gm4.teleportation_jammer,Teleportation Jammer
+advancement.gm4.teleportation_anchors_anchor.title,"Pinpoint Location"
+advancement.gm4.teleportation_anchors_anchor.description,"Make a teleportation anchor to remove the randomness of chorus"
+advancement.gm4.teleportation_anchors_jammer.title,"Make Some Noise"
+advancement.gm4.teleportation_anchors_jammer.description,"Create a device to stop chorus in its tracks"
+text.gm4.guidebook.module_desc.teleportation_anchors,Suppress and control chorus-based teleportation!
+text.gm4.guidebook.teleportation_jammer.description,Teleportation Jammers and Anchors can be used to supress and control chorus-based teleportation.\n\nThey can be crafted in a Custom Crafter.
+text.gm4.guidebook.teleportation_anchors.crafting_jammer,A Teleportation Jammer can be crafted in a Custom Crafter:
+text.gm4.guidebook.teleportation_anchors.jamming,"A Teleportation Jammer is used to suppress chorus based teleportation.\n\nThis includes endermen, shulkers, chorus fruit, end gateways, and other random teleportation that doesn't require line-of-sight."
+text.gm4.guidebook.teleportation_anchors.jammer_effects,"When entities are jammed, any act of teleportation will cause them to jump back to their original location.\n\nWhen endermen are jammed, they are also prevented from picking up blocks."
+text.gm4.guidebook.teleportation_anchors.jammer_power,"In order for a TP Jammer to work, it needs to broadcast a signal through an end rod placed on top of it.\n\nChorus fruit must be placed inside the jammer as fuel. Five fruit is enough for two days."
+text.gm4.guidebook.teleportation_anchors.jammer_range,"Similar to a beacon, a pyramid of purpur blocks can be build to extend the range of a jammer.\n\nThe range can be either 4, 16, 32, or 64 blocks in radius, acheived by 0-3 layers of a pyramid."
+text.gm4.guidebook.teleportation_anchors.crafting_anchor,A Teleportation Jammer can be used to craft an Anchor:
+text.gm4.guidebook.teleportation_anchors.anchor_usage,"A Teleportation Anchor is used to control chorus based teleportation.\n\nIf a Jammer is connected to an anchor, teleporters will be teleported to the anchor instead of being jammed to their original location."
+text.gm4.guidebook.teleportation_anchors.pupur_wires,A Jammer can be connected to an Anchor using purpur pillars.\n\nThe pillars need to go from the bottom of a TP Jammer and eventually lead into a TP Anchor.
+text.gm4.guidebook.teleportation_anchors.pupur_wires_1,"If a purpur pillar points into a T-Junction, it will prioritize moving in the North, West, or Down direction.\n\nThese wires can be at most 64 blocks long."
+text.gm4.guidebook.teleportation_anchors.chorus_fruit_cooldown,"If a user eats chorus fruit, they can also be teleported to an anchor, but must wait some time before doing so again.\n\nIf they try to teleport during this cooldown, they will just be jammed."

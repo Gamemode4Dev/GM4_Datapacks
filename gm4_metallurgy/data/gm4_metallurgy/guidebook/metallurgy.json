@@ -3,8 +3,7 @@
   "name": "Metallurgy",
   "module_type": "base",
   "icon": {
-    "item": "minecraft:anvil",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:anvil"
   },
   "criteria": {
     "obtain_tnt": {

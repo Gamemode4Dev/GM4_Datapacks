@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "gm4_end_fishing:item/elytra/ravaged_wings"
+    }
+}

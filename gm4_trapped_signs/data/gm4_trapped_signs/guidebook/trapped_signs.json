@@ -3,8 +3,7 @@
   "name": "Trapped Signs",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:oak_sign",
-    "nbt": "{CustomModelData:3420003}"
+    "item": "minecraft:oak_sign"
   },
   "criteria": {
     "obtain_sign": {

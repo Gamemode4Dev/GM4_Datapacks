@@ -2,14 +2,14 @@
     "display": {
       "icon": {
         "item": "diamond_boots",
-        "nbt": "{CustomModelData:3420001}"
+        "nbt": "{CustomModelData:'gui/advancement/ski_fast'}"
       },
       "title": {
-        "translate": "advancement.gm4.mountaineering.title",
+        "translate": "advancement.gm4.mountaineering.ski_fast.title",
         "fallback": "Ski ya Later!"
       },
       "description": {
-        "translate": "advancement.gm4.mountaineering.description",
+        "translate": "advancement.gm4.mountaineering.ski_fast.description",
         "fallback": "Reach the highest speed boost while skiing",
         "color": "gray"
       }

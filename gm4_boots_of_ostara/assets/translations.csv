@@ -1,0 +1,12 @@
+key,en_us
+advancement.gm4.boots_of_ostara.description,Wear the Boots of Ostara
+advancement.gm4.boots_of_ostara.title,Green Feet
+item.gm4.boots_of_ostara,Boots of Ostara
+item.gm4.boots_of_ostara.lore,Brings abundance beneath you!
+item.gm4.flippers_of_ostara,Flippers of Ostara
+text.gm4.guidebook.module_desc.boots_of_ostara,"A pair of boots every gardener would love to have! Boots of Ostara allow you to easily spread Grass and Moss, and they even stop the Desire Lines module from creating that pesky dirt."
+text.gm4.guidebook.boot_of_ostara.description,Boots of Ostara can be crafted to aid in the spreading of grass and moss.\n\nThe boots can be crafted in a Custom Crafter.
+text.gm4.guidebook.boots_of_ostara.crafting,The recipe for the Boots of Ostara is as follows:
+text.gm4.guidebook.boots_of_ostara.crafting_and_desire_lines,Boots of Ostara also prevent desire lines from forming.
+text.gm4.guidebook.boots_of_ostara.grass,Wearing the boots and holding a grass block in the offhand will spread grass onto dirt beneath the wearer.\n
+text.gm4.guidebook.boots_of_ostara.moss_and_armor_stands,"Similarly, moss will spread onto stone when held in the offhand.\n\nArmor stands can also spread vegetation!"

@@ -178,7 +178,7 @@ def libraries(ctx: Context, opts: VersioningConfig):
     handle = ctx.data.functions[f"{ctx.project_id}:load"]
     handle.append([
         "\n",
-        f"data modify storage gm4:log versions append value {{id:\"{ctx.project_id}\",module:\"{ctx.project_id.replace('gm4', 'lib')}\",version:\"{ctx.project_version}\",from:\"{ctx.cache['currently_building'].json['name']}\"}}"
+        f"data modify storage gm4:log versions append value {{id:\"{ctx.project_id}\",module:\"{ctx.project_id.replace('gm4', 'lib')}\",version:\"{ctx.project_version}\",from:\"{ctx.cache['currently_building'].json.get('name', 'standalone')}\"}}"
     ])
 
     # strict version checks on advancements
@@ -295,6 +295,7 @@ def warn_on_future_version(ctx: Context, dep_id: str, ver: Version):
 
 def isolated_library(ctx: Context):
     """Generates the #load:load function tag when building libraries in isloation"""
+    ctx.cache["currently_building"].json = {"name": ctx.project_name, "id": ctx.project_id, "added_libs": []}
     # load.json tag
     ctx.data.function_tags["load:load"] = FunctionTag({
         "values": [

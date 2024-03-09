@@ -22,7 +22,7 @@
                             "function": "minecraft:set_name",
                             "entity": "this",
                             "name": {
-                                "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.potion.{{effect_translate_name}}",
+                                "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.{{bottle}}.{{effect_translate_name}}",
                                 "fallback": "{{soulution_translate_fallback}}",
                                 "italic": false
                             },
@@ -71,7 +71,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:{{soulution_custom_model_data}}}",
+                            "tag": "{CustomModelData:\"item/soulution_potion/{{effect}}\"}",
                             "conditions": [
                                 {
                                     "condition": "minecraft:value_check",

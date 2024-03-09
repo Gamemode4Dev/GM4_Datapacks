@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "player_head",
-      "nbt": "{CustomModelData:3420004,SkullOwner:'$heart_canister_tier_1'}"
+      "nbt": "{CustomModelData:'gui/advancement/heart_canisters_tier_1',SkullOwner:'$heart_canister_tier_1'}"
     },
     "title": {
       "translate": "advancement.gm4.heart_canisters.tier_1.title",

@@ -3,8 +3,7 @@
   "name": "Enchantment Extractors",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:enchanting_table",
-    "nbt": "{CustomModelData:3420003}"
+    "item": "minecraft:enchanting_table"
   },
   "criteria": {
     "open_custom_crafter": {

@@ -23,6 +23,10 @@ meta:
       schedule_loops:
         - tick
         - day_clock
+    model_data:
+      - item: emerald
+        reference: gui/advancement/calling_bell
+        template: advancement
     video: null
     wiki: https://wiki.gm4.co/wiki/Calling_Bell
     credits:

@@ -23,6 +23,17 @@ def beet_default(ctx: Context):
         item = f"{type}_{'hanging_' if hanging else ''}sign"
         name = f"{'secret_' if secret else ''}trapped_{item}"
 
+        ctx.meta["gm4"].setdefault("model_data", []).append(
+          {
+            "item": item,
+            "reference": f"item/{name}",
+            "template": {
+              "name": "trapped_signs:sign_overlay",
+              "hanging": hanging
+            }
+          }
+        )
+
         ctx.data[f"{ctx.project_id}:items/{name}"] = LootTable({
           "pools": [{
             "rolls": 1,
@@ -32,7 +43,7 @@ def beet_default(ctx: Context):
               "functions": [
                 {
                   "function": "minecraft:set_nbt",
-                  "tag": f"{'{'}CustomModelData:3420002,gm4_{'secret_' if secret else ''}trapped_sign:1b,HideFlags:1,Enchantments:[{'{'}id:'minecraft:protection',lvl:0s{'}'}]{'}'}"
+                  "tag": f"{'{'}CustomModelData:'item/{name}',gm4_{'secret_' if secret else ''}trapped_sign:1b,HideFlags:1,Enchantments:[{'{'}id:'minecraft:protection',lvl:0s{'}'}]{'}'}"
                 },
                 {
                   "function": "minecraft:set_name",

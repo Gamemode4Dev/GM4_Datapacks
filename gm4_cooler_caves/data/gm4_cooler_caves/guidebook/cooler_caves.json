@@ -3,8 +3,7 @@
   "name": "Cooler Caves",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:sandstone",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:sandstone"
   },
   "criteria": {
     "in_cave_air": {
