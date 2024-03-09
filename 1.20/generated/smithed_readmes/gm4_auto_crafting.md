@@ -30,6 +30,7 @@ Build the Multiblock Structure
 ### Credits
 - Creator: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
 - Icon Design: Hozz
+- Textures: [Kyrius](http://discordapp.com/users/287287322360414218)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>
