@@ -1,7 +1,8 @@
 {
-	"datapack.env.cmdVersion": "1.20",
-	"datapack.env.jsonVersion": "1.20",
-	"datapack.env.dataVersion": "1.20",
+	"datapack.env.cmdVersion": "1.20.3",
+	"datapack.env.dataVersion": "1.20.3",
 	"datapack.lint.stringQuote": ["hint", true],
-	"datapack.lint.nbtStringQuoteType": ["hint", "prefer double"]
+	"datapack.lint.nbtStringQuoteType": ["hint", "prefer double"],
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true
 }
