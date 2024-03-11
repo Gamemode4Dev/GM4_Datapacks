@@ -31,7 +31,7 @@ tag @s remove gm4_infinitas_delay_replace_water
 
 tag @s add gm4_has_empty_infinitas
 execute if score $lava_infinitas gm4_ml_data matches 1 run tag @s add gm4_has_lava_infinitas
-tag @s add gm4_has_powder_snow_infinitas
+execute if score $powder_snow_infinitas gm4_ml_data matches 1 run tag @s add gm4_has_powder_snow_infinitas
 tag @s add gm4_has_water_infinitas
 
 
