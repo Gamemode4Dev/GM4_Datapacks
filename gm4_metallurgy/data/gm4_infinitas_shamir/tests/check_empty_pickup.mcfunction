@@ -13,7 +13,11 @@ setblock ~1 ~4 ~1 redstone_block
 await entity @e[type=item,distance=..6,nbt={Item:{id:"minecraft:obsidian"}}]
 
 # equip smooshed infinitas bucket
-tp @e[type=item,distance=..6,sort=nearest,limit=1,nbt={Item:{id:"minecraft:bucket",Count:1b,tag:{gm4_metallurgy:{active_shamir:"infinitas"}}}}] @s
+summon armor_stand ~2.5 ~4 ~1.5 {Tags:["item_swapper"]}
+await delay 1t
+data modify entity @e[type=armor_stand,tag=item_swapper,limit=1] ArmorItems[3] set from entity @e[type=item,distance=..6,limit=1,nbt={Item:{id:"minecraft:bucket",Count:1b,tag:{gm4_metallurgy:{active_shamir:"infinitas"}}}}]
+item replace entity @s weapon.mainhand from entity @e[type=armor_stand,tag=item_swapper,limit=1] armor.head
+
 await entity @s[nbt={SelectedItem:{tag:{gm4_metallurgy:{active_shamir:"infinitas"}}}}]
 
 setblock ~1 ~4 ~1 water
