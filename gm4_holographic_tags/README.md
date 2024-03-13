@@ -9,4 +9,4 @@ Decorate your builds with floating text boxes, anywhere you want! This data pack
 - Place an Item Frame in the same spot to remove it again
 - Use a dyed Wool block to customize the color of the floating text
 
-<img src="images/all_colors.png" alt="Colors of the floating text based on wool type" width="350"/>
+<img src="images/all_colors.png" alt="Colors of the floating text based on wool type" width="350"/> <!--$localAssetToURL--> <!--$pmc:delete-->
