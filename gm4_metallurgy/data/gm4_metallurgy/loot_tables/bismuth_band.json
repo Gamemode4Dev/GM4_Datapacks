@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_metallurgy:{has_shamir:1b,metal:{type:\"bismuth\",amount:[12s],castable:1b},item:\"obsidian_cast\"},CustomModelData:3420053,SkullOwner:{Properties:{textures:[{Value:\"$band/bismuth\"}]}}}"
+                            "tag": "{gm4_metallurgy:{has_shamir:1b,metal:{type:\"bismuth\",amount:[12s],castable:1b},item:\"obsidian_cast\"},SkullOwner:{Properties:{textures:[{Value:\"$band/bismuth\"}]}}}"
                         },
                         {
                             "function": "minecraft:set_name",
@@ -24,44 +24,44 @@
                             "lore": [
                                 [
                                     {
-                                        "translate": "item.gm4.metallurgy.bismuth.red",
+                                        "translate": "item.gm4.metallurgy.bismuth_band.red",
                                         "fallback": "Bi",
                                         "italic": false,
                                         "color": "#F47989"
                                     },
                                     {
-                                        "translate": "item.gm4.metallurgy.bismuth.orange",
+                                        "translate": "item.gm4.metallurgy.bismuth_band.orange",
                                         "fallback": "sm",
                                         "italic": false,
                                         "color": "#F5B478"
                                     },
                                     {
-                                        "translate": "item.gm4.metallurgy.bismuth.yellow",
+                                        "translate": "item.gm4.metallurgy.bismuth_band.yellow",
                                         "fallback": "ut",
                                         "italic": false,
                                         "color": "#F5DD79"
                                     },
                                     {
-                                        "translate": "item.gm4.metallurgy.bismuth.green",
+                                        "translate": "item.gm4.metallurgy.bismuth_band.green",
                                         "fallback": "h ",
                                         "italic": false,
                                         "color": "#78F4AE"
                                     },
                                     {
-                                        "translate": "item.gm4.metallurgy.bismuth.blue",
+                                        "translate": "item.gm4.metallurgy.bismuth_band.blue",
                                         "fallback": "Ba",
                                         "italic": false,
                                         "color": "#79D6F5"
                                     },
                                     {
-                                        "translate": "item.gm4.metallurgy.bismuth.purple",
+                                        "translate": "item.gm4.metallurgy.bismuth_band.purple",
                                         "fallback": "nd",
                                         "italic": false,
                                         "color": "#8378F5"
                                     },
                                     {
-                                        "translate": "item.gm4.metallurgy.bismuth.magenta",
-                                        "fallback": "",
+                                        "translate": "item.gm4.metallurgy.bismuth_band.magenta",
+                                        "fallback": "\u200c",
                                         "italic": false,
                                         "color": "#D579F5"
                                     }

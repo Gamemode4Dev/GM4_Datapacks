@@ -1,6 +1,7 @@
 id: gm4_trades
 name: Gamemode 4 Trades
 version: 1.3.X
+description: Allows other datapacks to easily add trades to Wandering Traders or to any Villager-like entity.
 
 data_pack:
   load: 

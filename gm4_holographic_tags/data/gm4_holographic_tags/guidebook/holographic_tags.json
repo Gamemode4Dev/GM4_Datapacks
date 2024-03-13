@@ -3,8 +3,7 @@
   "name": "Holographic Tags",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:name_tag",
-    "nbt": "{CustomModelData:3420002}"
+    "item": "minecraft:name_tag"
   },
   "criteria": {
     "obtain_name_tag": {

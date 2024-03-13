@@ -39,7 +39,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_metallurgy:{metal:{type:\"barium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420019,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/barium/v0\",Properties:{textures:[{Value:\"$ore/barium\"}]}}}"
+              "tag": "{gm4_metallurgy:{metal:{type:\"barium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:'item/lump/baryte',SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/barium/v0\",Properties:{textures:[{Value:\"$ore/barium\"}]}}}"
             }
           ]
         }

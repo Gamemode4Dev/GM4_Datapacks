@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "ladder",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/rope_ladders'}"
     },
     "title": {
       "translate": "advancement.gm4.rope_ladders.title",

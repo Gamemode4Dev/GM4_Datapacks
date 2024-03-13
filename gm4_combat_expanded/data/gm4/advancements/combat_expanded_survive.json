@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:clock",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/combat_expanded_survive'}"
     },
     "title": {
       "translate": "advancement.gm4.combat_expanded.survive.title",

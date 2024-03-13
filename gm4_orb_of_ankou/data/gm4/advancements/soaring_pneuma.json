@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "elytra",
-      "nbt": "{CustomModelData:3420002,Enchantments:[{}]}"
+      "nbt": "{CustomModelData:'gui/advancement/orb_of_ankou_soaring_pneuma',Enchantments:[{}]}"
     },
     "title": {
       "translate": "advancement.gm4.orb_of_ankou.soaring.title",

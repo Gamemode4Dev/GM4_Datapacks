@@ -14,6 +14,10 @@ meta:
       schedule_loops:
         - main
         - tick
+    model_data:
+      - item: firework_rocket
+        reference: gui/advancement/phantom_scarecrows
+        template: advancement
     website:
       description: Set up Scarecrows that shoot homing rockets at Phantoms!
       recommended: []

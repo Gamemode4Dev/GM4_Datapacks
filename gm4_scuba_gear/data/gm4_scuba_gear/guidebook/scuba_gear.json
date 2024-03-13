@@ -3,8 +3,7 @@
   "name": "SCUBA Gear",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:horn_coral",
-    "nbt": "{CustomModelData:3420002}"
+    "item": "minecraft:horn_coral"
   },
   "criteria": {
     "obtain_scute": {

@@ -5,6 +5,9 @@ version: 1.5.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_brewing
@@ -19,6 +22,23 @@ meta:
       schedule_loops:
         - main
         - brewing_stand/texture_connector/process
+    model_data:
+      - template: generated_overlay
+        broadcast:
+          - item: potion
+            reference: item/lightning_in_a_bottle
+          - item: lingering_potion
+            reference: item/lingering_lightning_in_a_bottle
+          - item: splash_potion
+            reference: item/splash_lightning_in_a_bottle
+      - item: potion
+        reference: gui/advancement/lightning_in_a_bottle_drink
+        template:
+          name: advancement
+          forward: item/lightning_in_a_bottle
+      - item: purpur_block
+        reference: gui/advancement/lightning_in_a_bottle_shulker
+        template: advancement
     website:
       description: Bottle and harness the power of lightning using Brewing Stands! Lightning in a Bottle comes in splash and lingering variants, too.
       recommended:

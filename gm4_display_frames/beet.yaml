@@ -30,3 +30,7 @@ meta:
         - TheEpyonProject
       Icon Design:
         - BluePsychoRanger
+    model_data:
+      - item: splash_potion
+        reference: gui/advancement/display_frames
+        template: advancement

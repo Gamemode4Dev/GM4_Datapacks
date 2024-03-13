@@ -1,0 +1,9 @@
+key,en_us
+container.gm4.forming_press,Forming Press
+block.gm4.forming_press,Forming Press
+block.gm4.charcoal_block,Block of Charcoal
+text.gm4.guidebook.module_desc.forming_press,Create a Forming Press to unlock more efficient recipes for all types of brick and Charcoal.
+text.gm4.guidebook.forming_press.description,"Forming Presses can process smelting and crafting operations, such as brick crafting, charcoal creation, and lava generation.\n\nThey can be crafted in a Custom Crafter."
+text.gm4.guidebook.forming_press.doubling,The overall output of the Forming Press is approximately doubled compared to normal crafting operations.
+text.gm4.guidebook.forming_press.crafting,A Forming Press can be crafted in a Custom Crafter:
+text.gm4.guidebook.forming_press.recipes,The following recipes can be used in a Forming Press:

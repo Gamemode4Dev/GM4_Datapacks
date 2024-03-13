@@ -3,8 +3,7 @@
   "name": "Mountaineering",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:chainmail_boots",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:chainmail_boots"
   },
   "criteria": {
     "obtain_iron_ingot": {

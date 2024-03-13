@@ -5,8 +5,15 @@ version: 1.5.X
 data_pack:
   load: .
 
+resource_pack:
+  load:
+    - .
+    - ../gm4_metallurgy
+
 pipeline:
   - gm4_orb_of_ankou.generate_pneumas
+  - gm4_orb_of_ankou.pneuma_model_template
+  - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_custom_crafters
 
@@ -30,3 +37,4 @@ meta:
         - BluePsychoRanger
       Icon Design:
         - BluePsychoRanger
+    

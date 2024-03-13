@@ -12,6 +12,13 @@ meta:
   gm4:
     versioning:
       schedule_loops: [main]
+    model_data:
+      - item: ink_sac
+        reference: gui/advancement/ink_spitting_squid
+        template: advancement
+      - item: glow_ink_sac
+        reference: gui/advancement/glow_ink_spitting_squid
+        template: advancement
     website:
       description: Improves the vanilla ink effect by adding Blindness. Glow Squid will give Night Vision when disturbed, which might come in handy if you're out of torches!
       recommended: []

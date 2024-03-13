@@ -3,8 +3,7 @@
   "name": "Tinkering Compressors",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:iron_block",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:iron_block"
   },
   "criteria": {
     "obtain_tinker_shamir": {

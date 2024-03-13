@@ -3,8 +3,7 @@
   "name": "Crossbow Cartridges",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:crossbow",
-    "nbt": "{CustomModelData:3420005}"
+    "item": "minecraft:crossbow"
   },
   "criteria": {
     "shot_crossbow": {
