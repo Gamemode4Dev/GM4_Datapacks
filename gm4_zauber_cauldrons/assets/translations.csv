@@ -1,0 +1,122 @@
+key,en_us
+advancement.gm4.zauber_cauldrons.creation.description,Create a Zauber Cauldron
+advancement.gm4.zauber_cauldrons.creation.title,Potion Chef
+advancement.gm4.zauber_cauldrons.drink_all_magicol.description,Drink all colors of Magicol
+advancement.gm4.zauber_cauldrons.drink_all_magicol.title,Taste the Rainbow
+advancement.gm4.zauber_cauldrons.drink_multi_use_bottle.description,Take the ninth sip out of a single bottle
+advancement.gm4.zauber_cauldrons.drink_multi_use_bottle.title,Clean Plate Club
+advancement.gm4.zauber_cauldrons.full_armour.description,Suit up with a full suit of Zauber Armor
+advancement.gm4.zauber_cauldrons.full_armour.title,Underrated Materials
+advancement.gm4.zauber_cauldrons.make_magicol.description,Wait for the right Moon phase to make some Magicol
+advancement.gm4.zauber_cauldrons.make_magicol.title,Seeing Things in a New Light
+advancement.gm4.zauber_cauldrons.paint_biome.description,Use Bottled Magicol to give a biome a new look
+advancement.gm4.zauber_cauldrons.paint_biome.title,Spreading the Magic
+advancement.gm4.zauber_cauldrons.rabbit.description,Where did my lunch go?
+advancement.gm4.zauber_cauldrons.rabbit.title,Soup Kitchen Magician
+advancement.gm4.zauber_cauldrons.wormhole.description,Just like the rabbits!
+advancement.gm4.zauber_cauldrons.wormhole.title,Questionable Ingredients
+entity.gm4.possessed_item,Possessed Item\u00A7
+entity.gm4.zauber_cauldrons.smog.instant_health,their own incompetence
+entity.gm4.zauber_cauldrons.smog.regeneration,the mess they made
+item.gm4.enchanted_prismarine_shard,Enchanted Prismarine Shard
+item.gm4.magic_in_a_bottle,Magic in a Bottle
+item.gm4.wormhole_in_a_bottle,Wormhole in a Bottle
+item.gm4.zauber_cauldrons.bottled_magicol.arid,Bottle of Arid Magicol
+item.gm4.zauber_cauldrons.bottled_magicol.polar,Bottle of Polar Magicol
+item.gm4.zauber_cauldrons.bottled_magicol.temperate,Bottle of Temperate Magicol
+item.gm4.zauber_cauldrons.bottled_magicol.tint.black,Black Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.blue,Blue Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.brown,Brown Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.cyan,Cyan Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.gray,Gray Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.green,Green Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.light_blue,Light Blue Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.light_gray,Light Gray Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.lime,Lime Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.magenta,Magenta Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.orange,Orange Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.pink,Pink Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.purple,Purple Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.red,Red Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.white,White Tint
+item.gm4.zauber_cauldrons.bottled_magicol.tint.yellow,Yellow Tint
+item.gm4.zauber_cauldrons.crystal.instant_damage,Crystal of Harming
+item.gm4.zauber_cauldrons.crystal.instant_health,Crystal of Healing
+item.gm4.zauber_cauldrons.crystal.jump_boost,Crystal of Leaping
+item.gm4.zauber_cauldrons.crystal.poison,Crystal of Poison
+item.gm4.zauber_cauldrons.crystal.regeneration,Crystal of Regeneration
+item.gm4.zauber_cauldrons.crystal.speed,Crystal of Swiftness
+item.gm4.zauber_cauldrons.crystal.strength,Crystal of Strength
+item.gm4.zauber_cauldrons.multi_use_bottle.bottled_magicol.arid,Soulution of Arid Magicol
+item.gm4.zauber_cauldrons.multi_use_bottle.bottled_magicol.polar,Soulution of Polar Magicol
+item.gm4.zauber_cauldrons.multi_use_bottle.bottled_magicol.temperate,Soulution of Temperate Magicol
+item.gm4.zauber_cauldrons.multi_use_bottle.lingering.harming,Lingering Soulution of Harming
+item.gm4.zauber_cauldrons.multi_use_bottle.lingering.healing,Lingering Soulution of Healing
+item.gm4.zauber_cauldrons.multi_use_bottle.lingering.leaping,Lingering Soulution of Leaping
+item.gm4.zauber_cauldrons.multi_use_bottle.lingering.poison,Lingering Soulution of Poison
+item.gm4.zauber_cauldrons.multi_use_bottle.lingering.regeneration,Lingering Soulution of Regeneration
+item.gm4.zauber_cauldrons.multi_use_bottle.lingering.strength,Lingering Soulution of Strength
+item.gm4.zauber_cauldrons.multi_use_bottle.lingering.swiftness,Lingering Soulution of Swiftness
+item.gm4.zauber_cauldrons.multi_use_bottle.lore.sips,Sips
+item.gm4.zauber_cauldrons.multi_use_bottle.lore.throws,Throws
+item.gm4.zauber_cauldrons.multi_use_bottle.drinkable.harming,Soulution of Harming
+item.gm4.zauber_cauldrons.multi_use_bottle.drinkable.healing,Soulution of Healing
+item.gm4.zauber_cauldrons.multi_use_bottle.drinkable.leaping,Soulution of Leaping
+item.gm4.zauber_cauldrons.multi_use_bottle.drinkable.poison,Soulution of Poison
+item.gm4.zauber_cauldrons.multi_use_bottle.drinkable.regeneration,Soulution of Regeneration
+item.gm4.zauber_cauldrons.multi_use_bottle.drinkable.strength,Soulution of Strength
+item.gm4.zauber_cauldrons.multi_use_bottle.drinkable.swiftness,Soulution of Swiftness
+item.gm4.zauber_cauldrons.multi_use_bottle.splash.harming,Splash Soulution of Harming
+item.gm4.zauber_cauldrons.multi_use_bottle.splash.healing,Splash Soulution of Healing
+item.gm4.zauber_cauldrons.multi_use_bottle.splash.leaping,Splash Soulution of Leaping
+item.gm4.zauber_cauldrons.multi_use_bottle.splash.poison,Splash Soulution of Poison
+item.gm4.zauber_cauldrons.multi_use_bottle.splash.regeneration,Splash Soulution of Regeneration
+item.gm4.zauber_cauldrons.multi_use_bottle.splash.strength,Splash Soulution of Strength
+item.gm4.zauber_cauldrons.multi_use_bottle.splash.swiftness,Splash Soulution of Swiftness
+item.gm4.zauber_cauldrons.zauber_armor.boots,Zauber Boots
+item.gm4.zauber_cauldrons.zauber_armor.chestplate,Zauber Chestplate
+item.gm4.zauber_cauldrons.zauber_armor.helmet,Zauber Helmet
+item.gm4.zauber_cauldrons.zauber_armor.leggings,Zauber Leggings
+item.gm4.zauber_cauldrons.zauber_armor.magic,+%s%% Magic
+text.gm4.guidebook.module_desc.zauber_cauldrons,"Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game."
+text.gm4.guidebook.zauber_cauldrons.description,"Zauber Cauldrons expand the magic system, allowing the creation of stronger potions, magical armour, effect granting crystals, and bottled wormholes."
+text.gm4.guidebook.zauber_cauldrons.section.creation,Creation
+text.gm4.guidebook.zauber_cauldrons.creation,A Zauber Cauldron is created by holding an enchanted book while looking into a water-filled cauldron over fire.\n\nSoul fire and campfires work as well.
+text.gm4.guidebook.zauber_cauldrons.recipes,"Zauber recipes are performed by dropping items into the cauldron, consuming some water for each recipe.\n\nWhen looking at a Zauber Cauldron, items inside the cauldron won't be picked up."
+text.gm4.guidebook.zauber_cauldrons.section.potions,Zauber Potions
+text.gm4.guidebook.zauber_cauldrons.tier_4_potions,"Powerful tier IV potions can be created by dropping a tier II potion, prismarine crystals, and golden apple into the cauldron.\n\nThere are some side effects when creating the tier IV potions."
+text.gm4.guidebook.zauber_cauldrons.splash_and_lingering_potions,Splash and Lingering potions create an excess of heat and will explode if used in a tier IV potion recipe.\n\nUsing a snow powder cauldron will absorb the heat and successfully create a splash or lingering tier IV potion.
+text.gm4.guidebook.zauber_cauldrons.soulutions,Using soul fire underneath the cauldron will cause all brewed potions to be brewed as a Soulution.\n\nSoulutions can be drank 9 times before emptying.
+text.gm4.guidebook.zauber_cauldrons.splash_and_lingering_soulutions,"Splash and Lingering soulutions can be created in the same way.\n\nWhen it lands, a splash or lingering soulution will summon a new soulution bottle at the location."
+text.gm4.guidebook.zauber_cauldrons.section.enchanted_prismarine_shard,Advanced Reactants
+text.gm4.guidebook.zauber_cauldrons.enchanted_prismarine_shard,An enchanted prismarine shard is used to upgrade armour and as a way to get Luck.\n\nThey can be created in a Zauber Cauldron or bought from a wandering trader.
+text.gm4.guidebook.zauber_cauldrons.enchanted_prismarine_shard_creation,They can be created by dropping a prismarine shard in the cauldron while standing nearby with at least 30 experience levels.\n\nThis will consume 30 levels from the nearest applicable observer.
+text.gm4.guidebook.zauber_cauldrons.section.armor,Zauber Armour
+text.gm4.guidebook.zauber_cauldrons.armor,"Zauber armour can be made with a piece of gold armour, an enchanted prismarine shard and a modifier item."
+text.gm4.guidebook.zauber_cauldrons.armor_modifiers,The following items can be used as a modifier.\n\nGlistering Melon\n  +6 health\nBlaze Powder\n  +35% Attack Damage\nSugar\n  +12% Speed\nTurtle Helmet\n  +1 Armour\n\nWearing a full set buffs the most prevalent modifier(s).
+text.gm4.guidebook.zauber_cauldrons.armor_effects,"Zauber armour has about a 55% increase in defense compared to normal gold armour.\n\nEach piece of Zauber Armour also has an Armour Toughness of 3, making it comparable to diamond armour."
+text.gm4.guidebook.zauber_cauldrons.section.crystals,Zauber Crystals
+text.gm4.guidebook.zauber_cauldrons.crystals,"Zauber Crystals can be created with a sea lantern, nether star and tier IV potion.\n\nCrystals only function in the offhand of someone with the luck effect."
+text.gm4.guidebook.zauber_cauldrons.section.luck,Luck
+text.gm4.guidebook.zauber_cauldrons.lucky_flowers,Each world has a different set of 'lucky' and 'poisonous' flowers.\n\nEach of the twelve small flowers fall under one of those categories.
+text.gm4.guidebook.zauber_cauldrons.luck_output,"These flowers are used for the Luck recipe, which grants the nearest one with Luck until death.\n\nIf some of the lucky flowers are missing from the Luck recipe, then nothing will happen."
+text.gm4.guidebook.zauber_cauldrons.luck_output_poison,"However, if a poisonous flower is added to the recipe, the cauldron will emit a poisonous cloud."
+text.gm4.guidebook.zauber_cauldrons.luck,"Luck can be granted to the nearest user by throwing lucky flowers, an enchanted prismarine shard, and short grass into a zauber cauldron."
+text.gm4.guidebook.zauber_cauldrons.section.extra_ingredients,Magic in a Bottle
+text.gm4.guidebook.zauber_cauldrons.extra_ingredients,"Any extra ingredients added to a Zauber recipe will leave the cauldron as Possessed Items, weaponless vexes."
+text.gm4.guidebook.zauber_cauldrons.bottling_vexes,"If a glass bottle is added to a recipe with extra ingredients, it will capture Possessed Items in groups of three, forming a Magic in a Bottle."
+text.gm4.guidebook.zauber_cauldrons.magic_in_a_bottle,"If a Magic in a Bottle is left on the ground, the bottle will break and release the vexes.\n\nA Magic in a Bottle stores the location it was created which is useful in creating wormholes."
+text.gm4.guidebook.zauber_cauldrons.bottled_vex_moon_phase,"Each Magic in a Bottle has a preferred moon phase.\n\nDuring this moon phase, the bottle doesn't break as quickly and will sparkle to players wearing full zauber armor."
+text.gm4.guidebook.zauber_cauldrons.section.magicol,Magicol
+text.gm4.guidebook.zauber_cauldrons.magicol_description,"Water inside a Cauldron can be converted into a liquid called Magicol.\n\nMagicol is useful for converting areas into colored, spawn-proof biomes."
+text.gm4.guidebook.zauber_cauldrons.magicol_creation,"Dropping Magic in a Bottle, an enchanted prismarine shard and a dye into a water-filled zauber cauldron will dye the liquid into magicol.\n\nThe level of the liquid is conserved through this process."
+text.gm4.guidebook.zauber_cauldrons.magicol_bottling,"During the preferred moon phase of the magic in a bottle used to create the Magicol, it can be bottled. This is done by dropping a splash or lingering water bottle and one piece of prismarine crystals, along with either a slime ball, magma cream, or snowball."
+text.gm4.guidebook.zauber_cauldrons.downfall,"Magicol bottled with slime balls will be temperate with rain.\n\nWith magma cream they will be arid with no rain, and with snowballs they will be polar with snow."
+text.gm4.guidebook.zauber_cauldrons.magicol_potion_types,"Soulutions can be created as normal.\n\nLingering bottles of magicol will create permanent particles inside the biome.\n\nDrinkable bottles of magicol can be created, but have no effect."
+text.gm4.guidebook.zauber_cauldrons.bottled_magicol_usage,Throwing a magicol bottle will cause the splashed area to turn into a new biome.\n\nThese biomes are colored according to the magicol liquid and do not spawn any mobs.
+text.gm4.guidebook.zauber_cauldrons.magicol_biome_colors,"When a new magicol biome is created, short grass and flowers will grow.\n\nLucky flowers are the only ones that grow when first splashing an area."
+text.gm4.guidebook.zauber_cauldrons.section.wormholes,Wormholes
+text.gm4.guidebook.zauber_cauldrons.wormhole_creation,"Throwing an Enchanted Shard, Magic in a Bottle, and some quantity of both Chorus Fruit and Popped Chorus Fruit will create a Wormhole in a Bottle with the location of the Magic in a Bottle."
+text.gm4.guidebook.zauber_cauldrons.wormhole_chorus_amounts,"The precise amount of fruit is different for each world, and requires experiments with blurry wormholes and possessed items.\n\nToo few chorus will result in blurry wormholes, locating to a random nearby location."
+text.gm4.guidebook.zauber_cauldrons.wormhole_chorus_amounts_1,"If too many chorus or popped chorus are used, the excess fruit will transform into possessed items, but a precise wormhole will be created."
+text.gm4.guidebook.zauber_cauldrons.wormhole_teleportation,"Wormholes explode when the drinker reaches their destination, damaging surrounding blocks without harming the drinker.\n\nIf they end up in a cauldron, there no is explosion."

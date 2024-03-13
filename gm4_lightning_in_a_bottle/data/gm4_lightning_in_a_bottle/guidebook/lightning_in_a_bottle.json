@@ -3,8 +3,7 @@
   "name": "Lightning in a Bottle",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:lightning_rod",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:lightning_rod"
   },
   "criteria": {
     "lightning_strike": {

@@ -5,13 +5,30 @@ version: 1.3.X
 data_pack:
   load: .
 
+resource_pack:
+  load: ../gm4_metallurgy
+
 pipeline:
+  - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
 
 meta:
   gm4:
     versioning:
       schedule_loops: [tick]
+    model_data:
+      - item: boots
+        reference: shamir/celaro
+        template:
+          name: shamir
+          metal: aluminium
+          textures_path: gm4_metallurgy:item/shamir/aluminium
+      - item: coarse_dirt
+        reference: gui/advancement/desire_lines_10000
+        template: advancement
+      - item: oak_planks
+        reference: gui/advancement/desire_lines_8000
+        template: advancement
     website:
       description: Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!
       recommended:

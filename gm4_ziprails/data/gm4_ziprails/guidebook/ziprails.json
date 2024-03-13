@@ -3,8 +3,7 @@
   "name": "Ziprails",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:minecart",
-    "nbt": "{CustomModelData:3420002}"
+    "item": "minecraft:minecart"
   },
   "criteria": {
     "obtain_minecart": {

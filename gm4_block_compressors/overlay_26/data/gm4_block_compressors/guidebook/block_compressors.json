@@ -3,8 +3,7 @@
   "name": "Block Compressors",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:piston",
-    "nbt": "{CustomModelData:3420005}"
+    "item": "minecraft:piston"
   },
   "criteria": {
     "create_custom_crafter": {

@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "diamond_sword",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/end_fishing_swords'}"
     },
     "title": {
       "translate": "advancement.gm4.end_fishing_swords.title",

@@ -4,8 +4,7 @@
   "module_type": "expansion",
   "base_module": "custom_crafters",
   "icon": {
-    "item": "minecraft:music_disc_11",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:music_disc_11"
   },
   "criteria": {
     "open_custom_crafter": {

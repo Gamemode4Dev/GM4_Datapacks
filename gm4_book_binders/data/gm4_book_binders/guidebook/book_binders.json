@@ -3,8 +3,7 @@
   "name": "Book Binders",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:enchanted_book",
-    "nbt": "{CustomModelData:3420002}"
+    "item": "minecraft:enchanted_book"
   },
   "criteria": {
     "obtain_enchanted_page": {

@@ -3,8 +3,7 @@
   "name": "Spawner Minecarts",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:spawner",
-    "nbt": "{CustomModelData:3420003}"
+    "item": "minecraft:spawner"
   },
   "criteria": {
     "obtain_piston": {

@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "tnt",
-      "nbt": "{CustomModelData:3420002}"
+      "nbt": "{CustomModelData:'gui/advancement/disassemblers'}"
     },
     "title": {
       "translate": "advancement.gm4.disassemblers.title",

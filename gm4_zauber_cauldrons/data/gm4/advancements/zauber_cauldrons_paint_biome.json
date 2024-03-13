@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "grass_block",
-            "nbt": "{CustomModelData:3420000}"
+            "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_paint_biome'}"
         },
         "title": {
             "translate": "advancement.gm4.zauber_cauldrons.paint_biome.title",

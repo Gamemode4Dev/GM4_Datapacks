@@ -4,8 +4,7 @@
   "module_type": "expansion",
   "base_module": "custom_crafters",
   "icon": {
-    "item": "minecraft:crafting_table",
-    "nbt": "{CustomModelData:3420005}"
+    "item": "minecraft:crafting_table"
   },
   "criteria": {
     "open_custom_crafter": {

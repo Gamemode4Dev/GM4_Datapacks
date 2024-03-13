@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420129,gm4_machines:{id:\"forming_press\"},SkullOwner:{Name:\"gm4_forming_press\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$forming_press\"}]}}}"
+              "tag": "{CustomModelData:'item/forming_press',gm4_machines:{id:\"forming_press\"},SkullOwner:{Name:\"gm4_forming_press\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$forming_press\"}]}}}"
             },
             {
               "function": "set_name",

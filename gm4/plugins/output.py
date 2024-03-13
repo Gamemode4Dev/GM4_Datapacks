@@ -42,6 +42,29 @@ def beet_default(ctx: Context):
 		overwrite=True,
 	)
 
+def resource_pack(ctx: Context):
+	"""Saves the resourcepack to the ./out folder."""
+	version = os.getenv("VERSION", "1.20")
+	out_dir = Path("out")
+
+	ctx.assets.save(
+		path=out_dir / f"gm4_resource_pack_{version.replace('.', '_')}",
+		overwrite=True
+	)
+
+def release_resource_pack(ctx: Context):
+	"""Saves the resourcepack to the ./out folder."""
+	version = os.getenv("VERSION", "1.20")
+	release_dir = Path("release") / version
+
+	yield
+
+	ctx.assets.save(
+		path=release_dir / f"gm4_resource_pack_{version.replace('.', '_')}.zip",
+		overwrite=True,
+		zipped=True
+	)
+
 
 def test(ctx: Context):
 	"""Saves the zipped datapack to the ./out folder in it's exit phase.

@@ -9,13 +9,14 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:{{custom_model_data}},HideFlags:2,gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/{{effect}}\",Properties:{textures:[{Value:\"$crystal/{{effect}}\"}]}}}"
+                            "tag": "{CustomModelData:\"item/crystal/{{effect}}\",HideFlags:2,gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/{{effect}}\",Properties:{textures:[{Value:\"$crystal/{{effect}}\"}]}}}"
                         },
                         {
                             "function": "minecraft:set_name",
                             "name": {
                                 "translate": "item.gm4.zauber_cauldrons.crystal.{{effect}}",
                                 "fallback": "{{translate_fallback}}",
+                                "color": "yellow",
                                 "italic": false
                             }
                         },

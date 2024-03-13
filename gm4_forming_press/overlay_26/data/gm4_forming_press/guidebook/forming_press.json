@@ -3,8 +3,7 @@
   "name": "Forming Press",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:furnace",
-    "nbt": "{CustomModelData:3420002}"
+    "item": "minecraft:furnace"
   },
   "criteria": {
     "create_custom_crafter": {

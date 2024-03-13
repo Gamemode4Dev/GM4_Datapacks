@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420131,gm4_machines:{id:\"ender_hopper\"},SkullOwner:{Name:\"gm4_ender_hopper\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$ender_hopper\"}]}}}"
+              "tag": "{CustomModelData:'item/ender_hopper',gm4_machines:{id:\"ender_hopper\"},SkullOwner:{Name:\"gm4_ender_hopper\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$ender_hopper\"}]}}}"
             },
             {
               "function": "set_name",

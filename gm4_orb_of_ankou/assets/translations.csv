@@ -1,0 +1,123 @@
+key,en_us
+advancement.gm4.orb_of_ankou.all_pneumas.description,Few have wielded this much power
+advancement.gm4.orb_of_ankou.all_pneumas.title,Heavy Artillery
+advancement.gm4.orb_of_ankou.create_soul_forge.description,Light a Soul Forge
+advancement.gm4.orb_of_ankou.create_soul_forge.title,A Dangerous Magic
+advancement.gm4.orb_of_ankou.max_orb_of_ankou.description,Max out an Orb of Ankou
+advancement.gm4.orb_of_ankou.max_orb_of_ankou.title,We're Full Here...
+advancement.gm4.orb_of_ankou.obtain_soul_essence.description,Obtain a piece of a mob's soul
+advancement.gm4.orb_of_ankou.obtain_soul_essence.title,A Small Price to Pay...
+advancement.gm4.orb_of_ankou.obtain_soul_shard.description,Forge a Soul Shard
+advancement.gm4.orb_of_ankou.obtain_soul_shard.title,Was it Worth the Sacrifice?
+advancement.gm4.orb_of_ankou.soaring.description,Fly with the soaring pneuma
+advancement.gm4.orb_of_ankou.soaring.title,I Believe I Can Fly!
+entity.gm4.congealed_shard,Congealed Soul Shard\u00A7
+entity.gm4.fire_sprite,Fire Sprite\u00A7
+entity.gm4.living_orb,Living Orb\u00A7
+entity.gm4.possessed_shard,Possessed Soul Shard\u00A7
+entity.gm4.severed_soul,Severed Soul\u00A7
+entity.gm4.wandering_tear,Wandering Tear\u00A7
+entity.gm4.withering_magic,Withering Magic
+item.gm4.orb_of_ankou,Orb of Ankou
+item.gm4.shamir.corripio,Corripio
+item.gm4.soul_essence,Soul Essence
+item.gm4.soul_shard,Soul Shard
+text.gm4.orb_of_ankou.empty,Empty
+text.gm4.orb_of_ankou.pneumas,Pneumas:
+text.gm4.pneuma_aggressive,Aggressive
+text.gm4.pneuma_agile,Agile
+text.gm4.pneuma_anchoring,Anchoring
+text.gm4.pneuma_bargaining,Bargaining
+text.gm4.pneuma_bashing,Bashing
+text.gm4.pneuma_blasting,Blasting
+text.gm4.pneuma_blinding,Blinding
+text.gm4.pneuma_bounding,Bounding
+text.gm4.pneuma_bubbly,Bubbly
+text.gm4.pneuma_conjuring,Conjuring
+text.gm4.pneuma_dashing,Dashing
+text.gm4.pneuma_depriving,Depriving
+text.gm4.pneuma_draining,Draining
+text.gm4.pneuma_enduring,Enduring
+text.gm4.pneuma_expeditious,Expeditious
+text.gm4.pneuma_feathery,Feathery
+text.gm4.pneuma_feigning,Feigning
+text.gm4.pneuma_freezing,Freezing
+text.gm4.pneuma_gazing,Gazing
+text.gm4.pneuma_gliding,Gliding
+text.gm4.pneuma_hawkeye,Hawkeye
+text.gm4.pneuma_incombustible,Incombustible
+text.gm4.pneuma_lifeless,Lifeless
+text.gm4.pneuma_neutralizing,Neutralizing
+text.gm4.pneuma_phasing,Phasing
+text.gm4.pneuma_pricking,Pricking
+text.gm4.pneuma_retreating,Retreating
+text.gm4.pneuma_rushing,Rushing
+text.gm4.pneuma_scaling,Scaling
+text.gm4.pneuma_shrieking,Shrieking
+text.gm4.pneuma_sniffing,Sniffing
+text.gm4.pneuma_soaring,Soaring
+text.gm4.pneuma_striding,Striding
+text.gm4.pneuma_synergetic,Synergetic
+text.gm4.pneuma_vanishing,Vanishing
+text.gm4.pneuma_venomous,Venomous
+text.gm4.pneuma_volatile,Volatile
+text.gm4.pneuma_withering,Withering
+text.gm4.guidebook.module_desc.corripio_shamir,"Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man."
+text.gm4.guidebook.corripio_shamir.description,Corripio extracts soul essence drops from mobs.
+text.gm4.guidebook.corripio_shamir.usage,The Corripio Shamir is found on Bismuth Bands. It can be placed onto swords.\n\nKilling mobs will cause Soul Essences to drop very rarely. The drop rates are increased with the Looting enchantment.
+text.gm4.guidebook.module_desc.orb_of_ankou,"Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man."
+text.gm4.guidebook.orb_of_ankou.description,"Mob powers can be obtained by collecting rare soul essences using the Corripio Shamir.\n\nThirteen essences are required to gain the powers of a mob, called a pneuma."
+text.gm4.guidebook.orb_of_ankou.soul_forge,"To gain powers of the Soul Essences, a Condensing Ritual must be performed in a Soul Forge.\n\nA Soul Forge can be made in the Nether by forming a 3x3 ring of obsidian then igniting soul fire inside the ring."
+text.gm4.guidebook.orb_of_ankou.condensing_ritual,"To create a Soul Shard, 13 of the same Soul Essence must be dropped into the forge along with some blaze powder and glowstone dust.\n\nExtinguishing the flame will create a Possesed Soul Shard, which should be killed."
+text.gm4.guidebook.orb_of_ankou.condensing_ingredients,"The required amount of glowstone dust and blaze powder is between 1 and 64, but differs in each world.\n\nExtra dust or powder will create the Shard, but spawn Fiery Sprites. Too little will cause the recipe to fail."
+text.gm4.guidebook.orb_of_ankou.shard_usage,"Holding the Shard in the offhand will grant the user with that pneuma's power, while lowering their attack damage 20% as a side-effect.\n\nAn Orb of Ankou can be crafted to negate the attack debuff and hold more pneumas."
+text.gm4.guidebook.orb_of_ankou.orb_crafting,The Orb of Ankou can be crafted with the following recipe:
+text.gm4.guidebook.orb_of_ankou.fusing_ritual,"To fuse a Shard into an Orb, light a soul forge and drop the two items in, along with some ghast tears.\n\nWither particles will appear to indicate where wither roses should be placed to be absorbed."
+text.gm4.guidebook.orb_of_ankou.fusing_ingredients,"The required amount of ghast tears and wither roses is between 3 and 16, but differs in each world.\n\nExtra tears or roses will fuse the Shard, but wandering tears and a withering cloud will appear."
+text.gm4.guidebook.orb_of_ankou.orb_usage,"Similar to a Soul Shard, the Orb of Ankou functions when it is equipped in the offhand.\n\nAn orb of ankou can hold 4 pneumas, which will work concurrently when in the same orb."
+text.gm4.guidebook.orb_of_ankou.defensive_pneumas,The following pneumas activate upon taking damage:
+text.gm4.guidebook.orb_of_ankou.note.aggressive,Grants Strength when damaged
+text.gm4.guidebook.orb_of_ankou.pneuma_list, - %1$s*
+text.gm4.guidebook.orb_of_ankou.note.feigning,"Grants Slowness, Resistance, Invisibility, and Regeneration when damaged below half health"
+text.gm4.guidebook.orb_of_ankou.note.incombustible,Grants Fire Resistance when damaged by fire
+text.gm4.guidebook.orb_of_ankou.note.lifeless,Negates Poison effect and heals when damaged by Instant Damage effect
+text.gm4.guidebook.orb_of_ankou.note.neutralizing,Negates Poison effect; Instant Damage effect deals less damage
+text.gm4.pneuma_picking,Pricking
+text.gm4.guidebook.orb_of_ankou.note.pricking,75% chance to deal 1-4 damage to the attacker (Thorns V)
+text.gm4.guidebook.orb_of_ankou.note.retreating,Grants Speed and Weakness when damaged
+text.gm4.guidebook.orb_of_ankou.note.volatile,Creates explosion if damaged below 1.5 hearts
+text.gm4.guidebook.orb_of_ankou.offensive_pneumas,The following pneumas activate upon dealing damage:
+text.gm4.guidebook.orb_of_ankou.note.blasting,Shoots fireballs when shooting a crossbow with blaze powder in the inventory
+text.gm4.guidebook.orb_of_ankou.note.depriving,Applies Hunger to attacked targets; Applies Weakness to attacked mobs
+text.gm4.guidebook.orb_of_ankou.note.freezing,Applies Slowness to attacked targets
+text.gm4.guidebook.orb_of_ankou.note.hawkeye,Doubles the damage of arrows shot from bows; Arrows shot from bows will have Piercing I
+text.gm4.guidebook.orb_of_ankou.note.venomous,Applies Poison to attacked target
+text.gm4.guidebook.orb_of_ankou.note.withering,Applies Wither to attacked target
+text.gm4.guidebook.orb_of_ankou.passive_pneumas,"The following pneumas are passive, activating automatically:"
+text.gm4.guidebook.orb_of_ankou.note.agile,Prevents fall damage
+text.gm4.guidebook.orb_of_ankou.note.anchoring,Grants 90% Knockback Resistance
+text.gm4.guidebook.orb_of_ankou.note.bargaining,Grants Regeneration upon trading with villagers
+text.gm4.guidebook.orb_of_ankou.note.bashing,"Grants +70% Attack Damage, but -40% Attack Speed"
+text.gm4.guidebook.orb_of_ankou.note.bubbly,Grants 2 minutes of Water Breathing when submerged
+text.gm4.guidebook.orb_of_ankou.note.enduring,"Grants +8 Max Health, but -20% Speed"
+text.gm4.guidebook.orb_of_ankou.note.gliding,Grants Dolphin's Grace when swimming
+text.gm4.guidebook.orb_of_ankou.note.striding,Temporarily converts lava sources into magma blocks upon stepping on them
+text.gm4.guidebook.orb_of_ankou.note.synergetic,Grants Strength to tamed wolves and other Synergetic users
+text.gm4.guidebook.orb_of_ankou.sneak_charge_pneumas,The following pneumas charge while sneaking then activate upon unsneaking:
+text.gm4.guidebook.orb_of_ankou.note.bounding,Increasingly stronger Jump Boost
+text.gm4.guidebook.orb_of_ankou.note.conjuring,Increasingly farther Evoker fang attack
+text.gm4.guidebook.orb_of_ankou.note.dashing,Increasingly farther horizontal dash
+text.gm4.guidebook.orb_of_ankou.note.draining,Increasingly farther Mining Fatigue AOE
+text.gm4.guidebook.orb_of_ankou.note.expeditious,Increasingly farther random teleport
+text.gm4.guidebook.orb_of_ankou.note.rushing,Increasingly faster and longer Speed burst
+text.gm4.guidebook.orb_of_ankou.note.shrieking,"Sonic boom 15 blocks far, dealing 6 hearts of damage"
+text.gm4.guidebook.orb_of_ankou.sneak_tap_pneumas,The following pneumas activate while sneaking:
+text.gm4.guidebook.orb_of_ankou.note.blinding,Blindness AOE for 7 seconds
+text.gm4.guidebook.orb_of_ankou.note.feathery,Grants Slow Falling for 7 seconds
+text.gm4.guidebook.orb_of_ankou.note.gazing,Grants Night Vision for 30 seconds
+text.gm4.guidebook.orb_of_ankou.note.soaring,Sneaking toggles the ability: Look up to ascend and down to descend
+text.gm4.guidebook.orb_of_ankou.note.vanishing,Grants Invisibility for 90 seconds
+text.gm4.guidebook.orb_of_ankou.sneak_hold_pneumas,The following pneumas activate while continuously sneaking:
+text.gm4.guidebook.orb_of_ankou.note.phasing,Allows walking through 1-wide walls
+text.gm4.guidebook.orb_of_ankou.note.scaling,Allows climbing up walls
+text.gm4.guidebook.orb_of_ankou.note.sniffing,Sniffs up torchflowers and pitcher pods

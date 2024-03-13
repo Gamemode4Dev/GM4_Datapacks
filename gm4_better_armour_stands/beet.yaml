@@ -31,6 +31,12 @@ meta:
         - Denniss
       Icon Design:
         - Sparks
+    model_data:
+      - item: armor_stand
+        reference: gui/advancement/better_armour_stands
+        template:
+          name: advancement
+          forward: minecraft:item/armor_stand
   modrinth:
     project_id: ib7YfS5V
   smithed:

@@ -3,8 +3,7 @@
   "name": "Ender Hoppers",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:ender_eye",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:ender_eye"
   },
   "criteria": {
     "open_custom_crafter": {

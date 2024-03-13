@@ -21,7 +21,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420010}"
+              "tag": "{CustomModelData:'item/end_city_horse_armor_1'}"
             }
           ]
         },
@@ -49,7 +49,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420011}"
+              "tag": "{CustomModelData:'item/end_city_horse_armor_2'}"
             }
           ]
         },
@@ -77,7 +77,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420012}"
+              "tag": "{CustomModelData:'item/end_city_horse_armor_3'}"
             }
           ]
         },
@@ -99,7 +99,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420013}"
+              "tag": "{CustomModelData:'item/end_city_horse_armor_4'}"
             }
           ]
         },
@@ -121,7 +121,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420014}"
+              "tag": "{CustomModelData:'item/end_city_horse_armor_5'}"
             }
           ]
         }

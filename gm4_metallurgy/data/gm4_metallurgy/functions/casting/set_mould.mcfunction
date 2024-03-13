@@ -1,4 +1,6 @@
+# summons a shamir for a destroyed mould which contained a proper recipe
 # @s = moulds that needs a band
+# at @s positioned ~ ~1.23 ~ (at the x-z location of the mould, just above the surface of the sand)
 # run from destroy_mould
 
 # initialise fake players
@@ -15,7 +17,7 @@ execute if entity @s[scores={gm4_ml_ore_bi=6,gm4_ml_ore_al=0,gm4_ml_ore_ba=0,gm4
 
 
 # apply broken band if all other bands fail
-execute if score $band_applied gm4_ml_data matches 0 run summon item ~ ~ ~ {Item:{id:"minecraft:player_head",Count:1b,tag:{CustomModelData:3420022,SkullOwner:{Name:"[Drop to Fix Item] gm4_metallurgy:band/mundane/v0",Properties:{textures:[{Value:"$band/mundane"}]}},display:{Name:'{"italic":false,"translate":"item.gm4.metallurgy.obsidian_cast","fallback":"Obsidian Cast"}',Lore:['{"italic":false,"color":"gray","translate":"item.gm4.metallurgy.mundane_band","fallback":"Mundane Band"}']}}}}
+execute if score $band_applied gm4_ml_data matches 0 run summon item ~ ~ ~ {Item:{id:"minecraft:player_head",Count:1b,tag:{CustomModelData:"item/mundane_band",SkullOwner:{Name:"[Drop to Fix Item] gm4_metallurgy:band/mundane/v0",Properties:{textures:[{Value:"$band/mundane"}]}},display:{Name:'{"italic":false,"translate":"item.gm4.metallurgy.obsidian_cast","fallback":"Obsidian Cast"}',Lore:['{"italic":false,"color":"gray","translate":"item.gm4.metallurgy.mundane_band","fallback":"Mundane Band"}']}}}}
 
 # spawn xp if band was applied
 execute if score $band_applied gm4_ml_data matches 1 if entity @p[distance=..4,gamemode=!spectator] run summon experience_orb ~ ~ ~ {Value:37s}

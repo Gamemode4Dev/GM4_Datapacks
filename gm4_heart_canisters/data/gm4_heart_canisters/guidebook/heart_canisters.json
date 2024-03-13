@@ -4,7 +4,7 @@
   "module_type": "module",
   "icon": {
     "item": "minecraft:player_head",
-    "nbt": "{CustomModelData:3420060,SkullOwner:'$heart_canister_tier_1'}"
+    "nbt": "{SkullOwner:'$heart_canister_tier_1'}"
   },
   "criteria": {
     "obtain_nether_star": {

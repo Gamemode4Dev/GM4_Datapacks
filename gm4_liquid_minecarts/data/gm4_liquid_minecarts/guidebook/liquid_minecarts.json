@@ -4,8 +4,7 @@
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {
-    "item": "minecraft:hopper_minecart",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:hopper_minecart"
   },
   "criteria": {
     "obtain_liquid_tank": {

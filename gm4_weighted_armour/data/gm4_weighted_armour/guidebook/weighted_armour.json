@@ -3,8 +3,7 @@
   "name": "Weighted Armour",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:iron_chestplate",
-    "nbt": "{CustomModelData:3420002}"
+    "item": "minecraft:iron_chestplate"
   },
   "criteria": {
     "wear_armor": {

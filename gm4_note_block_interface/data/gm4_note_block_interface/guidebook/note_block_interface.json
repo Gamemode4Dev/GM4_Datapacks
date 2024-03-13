@@ -3,8 +3,7 @@
   "name": "Note Block Interface",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:note_block",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:note_block"
   },
   "criteria": {
     "tune_note_block": {

@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "firework_star",
-      "nbt": "{CustomModelData:3420003}"
+      "nbt": "{CustomModelData:'gui/advancement/everstones'}"
     },
     "title": {
       "translate": "advancement.gm4.everstone.title",

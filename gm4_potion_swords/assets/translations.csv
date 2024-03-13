@@ -1,0 +1,7 @@
+key,en_us
+advancement.gm4.potion_swords.title,Instant Regret
+advancement.gm4.potion_swords.description,Wither-ize a skeleton with potion swords
+text.gm4.guidebook.module_desc.potion_swords,"As if getting stabbed isn't enough... support your friends, terrify your enemies, make gold great again using Golden Swords and potions!"
+text.gm4.guidebook.potion_swords.description,"Attacking with a golden sword whilst a potion is in the inventory will cause an effect based on the potion.\n\nThe potions are never consumed, but only certain potions work."
+text.gm4.guidebook.potion_swords.defensive_potions,The following potions can be used with Potion Swords:\n\nExtended Invisibility applies invisibility for 8 seconds to allies.\n\nInstant Health II applies Absorption I for 8 seconds to allies.
+text.gm4.guidebook.potion_swords.offensive_potions,Poison II withers nearby mobs for 4 seconds and transforms skeletons into wither skeletons without loot.\n\nExtended Slowness causes nearby mobs to be unable to move for 4 seconds.

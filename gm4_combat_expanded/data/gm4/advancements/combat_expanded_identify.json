@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:leather_chestplate",
-      "nbt": "{}"
+      "nbt": "{CustomModelData:'gui/advancement/combat_expanded_identify'}"
     },
     "title": {
       "translate": "advancement.gm4.combat_expanded.identify.title",

@@ -28,7 +28,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420001,gm4_endermite_egg:1b}"
+                            "tag": "{CustomModelData:'item/endermite_egg',gm4_endermite_egg:1b}"
                         }
                     ]
                 }

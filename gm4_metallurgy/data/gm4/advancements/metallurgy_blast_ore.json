@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:player_head",
-      "nbt": "{CustomModelData:3420049,SkullOwner:\"$gm4_metallurgy:ore/aluminium\"}"
+      "nbt": "{CustomModelData:'gui/advancement/metallurgy_blast_ore',SkullOwner:\"$gm4_metallurgy:ore/aluminium\"}"
     },
     "title": {
       "translate": "advancement.gm4.metallurgy.blast_ore.title",
