@@ -5,7 +5,7 @@
 
 # prep link armor
 tag @a remove gm4_ce_linked
-scoreboard players reset * gm4_ce_link_id
+scoreboard players reset @a gm4_ce_link_id
 
 # prep sword_ring armor
 scoreboard players reset @a gm4_ce_sword_ring
@@ -17,7 +17,7 @@ execute unless score $natural_regen gm4_ce_data matches -1 store result score $n
 execute as @a[gamemode=!spectator] run function gm4_combat_expanded:player/process
 
 # apply horse speed effect
-execute as @e[scores={gm4_ce_horse.speed_level=1..}] run function gm4_combat_expanded:armor/modifier/type/horse/apply_effect
+execute as @a on vehicle if score @s gm4_ce_horse.speed_level matches 1.. run function gm4_combat_expanded:armor/modifier/type/horse/apply_effect
 
 # linked armor
 tag @a[tag=!gm4_ce_linked] remove gm4_ce_was_linked

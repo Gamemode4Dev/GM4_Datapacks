@@ -17,7 +17,7 @@ execute align xz run summon zombie ~.5 ~ ~.5 {Tags:["gm4_ce_extra_mob","gm4_ce_s
 execute if score $spore_count gm4_ce_data matches 2.. align xz run summon zombie ~.51 ~ ~.47 {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}
 execute if score $spore_count gm4_ce_data matches 3.. align xz run summon zombie ~.54 ~ ~.52 {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}
 execute if score $spore_count gm4_ce_data matches 4.. align xz run summon zombie ~0.47 ~ ~.54 {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}
-execute if entity @s[nbt={Item:{id:"minecraft:cherry_leaves"}}] run tag @e[type=zombie,tag=gm4_ce_spore_mob,distance=..1] add gm4_ce_spore_zombie.cherry
+execute if entity @s[tag=gm4_ce_spore.cherry] run tag @e[type=zombie,tag=gm4_ce_spore_mob,distance=..1] add gm4_ce_spore_zombie.cherry
 
 # vfx
 particle block flowering_azalea_leaves ~ ~1 ~ 0.35 1 0.35 0.1 32

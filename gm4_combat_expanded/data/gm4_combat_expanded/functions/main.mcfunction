@@ -24,7 +24,7 @@ execute unless score $keep_tick.burn gm4_ce_keep_tick matches 1 if entity @a[sco
 
 # | Weapons
 # pierce
-execute as @e[scores={gm4_ce_pierce_timer=1..}] at @s run function gm4_combat_expanded:weapon/modifier/pierce/tick_down
+execute as @e[type=!#gm4_combat_expanded:effect_immune,scores={gm4_ce_pierce_timer=1..}] at @s run function gm4_combat_expanded:weapon/modifier/pierce/tick_down
 
 # | Players
 # player submain

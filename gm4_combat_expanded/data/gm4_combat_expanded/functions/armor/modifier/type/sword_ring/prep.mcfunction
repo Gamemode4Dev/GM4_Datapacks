@@ -32,7 +32,7 @@ execute store result storage gm4_combat_expanded:temp sword_ring.deg int 1 run s
 
 # get all swords that match this players id
 scoreboard players operation $player_id gm4_ce_id = @s gm4_ce_id
-execute as @e[type=item_display,tag=gm4_ce_sword_ring.sword] if score @s gm4_ce_id = $player_id gm4_ce_id run tag @s add gm4_ce_sword_ring.check_sword
+execute as @e[type=item_display,tag=gm4_ce_sword_ring.sword,distance=..12] if score @s gm4_ce_id = $player_id gm4_ce_id run tag @s add gm4_ce_sword_ring.check_sword
 
 # find location for the first sword
 function gm4_combat_expanded:armor/modifier/type/sword_ring/eval_deg with storage gm4_combat_expanded:temp sword_ring
