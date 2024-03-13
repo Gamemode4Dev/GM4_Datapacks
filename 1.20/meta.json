@@ -1,5 +1,5 @@
 {
-  "last_commit": "436006aed50a6090def8ecc5e94e07c6260c86a0",
+  "last_commit": "abe461a47ddc97c8776e16c529770fc84a934917",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1151,8 +1151,8 @@
     {
       "id": "gm4_holographic_tags",
       "name": "Holographic Tags",
-      "version": "1.2.7",
-      "hash": "fe78810f48526947b441436450afe96ee3827b07",
+      "version": "1.2.8",
+      "hash": "2bbd8ae26c711d4c51f402fe93df3143c6515ccb",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Holographic_Tags",
       "credits": {
@@ -2798,8 +2798,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.1.2",
-      "hash": "40cc05ec212088ff0f327219e83791f75efe020e",
+      "version": "1.1.3",
+      "hash": "aeb057430295ca787409a088d9bec333a7b1d8f2",
       "video_link": "",
       "wiki_link": "",
       "credits": {

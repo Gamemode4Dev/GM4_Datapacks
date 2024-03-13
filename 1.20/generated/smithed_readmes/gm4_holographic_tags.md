@@ -9,7 +9,7 @@ Decorate your builds with floating text boxes, anywhere you want! This data pack
 - Place an Item Frame in the same spot to remove it again
 - Use a dyed Wool block to customize the color of the floating text
 
-<img src="images/all_colors.png" alt="Colors of the floating text based on wool type" width="350"/>
+<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_holographic_tags/images/all_colors.png" alt="Colors of the floating text based on wool type" width="350"/>  <!--$pmc:delete-->
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Holographic_Tags)
