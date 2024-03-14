@@ -38,6 +38,5 @@
   },
   "rewards": {
     "function": "gm4_speed_paths:clock/check"
-  },
-  "sends_telemetry_event": true
+  }
 }
