@@ -1,4 +1,3 @@
-# @batch north
 # @template gm4_double_doors:tests/valid_door_north_normal
 # @dummy
 

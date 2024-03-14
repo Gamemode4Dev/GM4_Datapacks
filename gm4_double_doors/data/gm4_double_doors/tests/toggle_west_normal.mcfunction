@@ -1,4 +1,3 @@
-# @batch west
 # @template gm4_double_doors:tests/valid_door_west_normal
 # @dummy
 

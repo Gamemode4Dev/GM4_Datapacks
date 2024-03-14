@@ -1,4 +1,3 @@
-# @batch east
 # @template gm4_double_doors:tests/valid_door_east_normal
 # @dummy
 
