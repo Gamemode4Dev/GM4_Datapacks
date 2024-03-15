@@ -4,7 +4,7 @@
 # run from gm4_ender_hoppers:machine/verify_destroy
 
 # kill entities related to machine block
-execute positioned ~ ~-0.5 ~ run kill @e[type=armor_stand,tag=gm4_ender_hopper_stand,limit=1,distance=..0.01]
+execute positioned ~ ~ ~ run kill @e[type=item_display,tag=gm4_ender_hopper_display,limit=1,distance=..0.01]
 execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..1,nbt={Age:0s,Item:{id:"minecraft:hopper",Count:1b,tag:{display:{}}}},limit=1,sort=nearest]
 kill @s
 

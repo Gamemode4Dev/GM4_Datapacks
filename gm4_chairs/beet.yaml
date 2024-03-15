@@ -26,6 +26,13 @@ meta:
         - Denniss
       Icon Design:
         - DuckJr
+    model_data:
+      - item: birch_stairs
+        reference: gui/advancement/chairs_creation
+        template: advancement
+      - item: poisonous_potato
+        reference: gui/advancement/chairs_sit
+        template: advancement
   modrinth:
     project_id: KLywOs5L
   smithed:

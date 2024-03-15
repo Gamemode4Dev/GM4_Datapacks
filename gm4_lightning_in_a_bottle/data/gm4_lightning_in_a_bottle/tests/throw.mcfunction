@@ -1,0 +1,8 @@
+# @template gm4:test_platform
+# @dummy ~1 ~1 ~
+
+loot give @s loot gm4_lightning_in_a_bottle:items/splash_bottle_of_lightning
+execute at @s run tp @s ~ ~ ~ facing ~ ~-1.5 ~1
+dummy @s use item
+
+await entity @e[type=lightning_bolt,distance=..4]

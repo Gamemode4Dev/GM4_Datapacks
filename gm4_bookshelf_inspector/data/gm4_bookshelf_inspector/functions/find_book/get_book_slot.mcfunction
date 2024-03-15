@@ -7,13 +7,9 @@
 execute store result score $y gm4_bookshelf_inspector_data run data get entity @s Pos[1] 100
 scoreboard players operation $y gm4_bookshelf_inspector_data %= #100 gm4_bookshelf_inspector_data
 
-# check rotation from stored player yaw and transform it into a score
+# get rotation from player yaw and transform it into a score
 # 1=north / 2=south / 3=west / 4=east
-scoreboard players operation $rotation gm4_bookshelf_inspector_data = $yaw gm4_bookshelf_inspector_data
-execute if score $rotation gm4_bookshelf_inspector_data matches -45..44 run scoreboard players set $rotation gm4_bookshelf_inspector_data 2
-execute if score $rotation gm4_bookshelf_inspector_data matches -135..-45 run scoreboard players set $rotation gm4_bookshelf_inspector_data 4
-execute if score $rotation gm4_bookshelf_inspector_data matches 45..135 run scoreboard players set $rotation gm4_bookshelf_inspector_data 3
-execute unless score $rotation gm4_bookshelf_inspector_data matches 2..4 run scoreboard players set $rotation gm4_bookshelf_inspector_data 1
+execute summon marker run function gm4_bookshelf_inspector:find_book/get_rotation
 
 # check if bookshelf is rotated correctly
 execute if score $rotation gm4_bookshelf_inspector_data matches 1 unless block ~ ~ ~-1 chiseled_bookshelf[facing=south] run scoreboard players set $evaluate gm4_bookshelf_inspector_data 0

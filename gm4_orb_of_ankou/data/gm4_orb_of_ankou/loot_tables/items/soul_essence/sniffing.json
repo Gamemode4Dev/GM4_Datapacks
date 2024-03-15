@@ -30,7 +30,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420237,gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"sniffing\"},stored_color:[5482509]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+              "tag": "{CustomModelData:'pneuma/sniffing',gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"sniffing\"},stored_color:[5482509]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
             }
           ]
         }

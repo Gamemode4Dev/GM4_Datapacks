@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420138,gm4_machines:{id:\"teleportation_jammer\"},SkullOwner:{Name:\"gm4_teleportation_jammer\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$teleportation_jammer\"}]}}}"
+              "tag": "{CustomModelData:'item/teleportation_jammer',gm4_machines:{id:\"teleportation_jammer\"},SkullOwner:{Name:\"gm4_teleportation_jammer\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$teleportation_jammer\"}]}}}"
             },
             {
               "function": "set_name",

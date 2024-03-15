@@ -1,0 +1,72 @@
+model_data:
+  - item: prismarine_shard
+    reference: item/enchanted_prismarine_shard
+    template: generated
+  - item: glass_bottle
+    reference: item/magic_in_a_bottle
+    template: generated
+  - item: potion
+    reference: item/wormhole_in_a_bottle
+    template: generated_overlay
+  - item: [player_head, firework_star]
+    template: generated
+    broadcast:
+      - reference: item/crystal/instant_damage
+      - reference: item/crystal/instant_health
+      - reference: item/crystal/jump_boost
+      - reference: item/crystal/poison
+      - reference: item/crystal/regeneration
+      - reference: item/crystal/speed
+      - reference: item/crystal/strength
+  # potion solutions registered by generate.py
+  # armor registered by generate.py
+  # magicol liquid registered by generate.py
+  - item: [potion, splash_potion, lingering_potion]
+    template: vanilla
+    broadcast:
+      - reference: item/bottled_magicol/polar
+      - reference: item/bottled_magicol/temperate
+      - reference: item/bottled_magicol/arid
+  - item: [potion, splash_potion, lingering_potion]
+    template: vanilla
+    broadcast:
+      - reference: item/bottled_magicol_soulution/polar
+      - reference: item/bottled_magicol_soulution/temperate
+      - reference: item/bottled_magicol_soulution/arid
+  - item: structure_void
+    reference: block/zauber_cauldron
+    transforms:
+      - name: item_display
+        origin: [0.5,0.5,0.125]
+        scale: [1,1,1]
+        display: thirdperson_righthand
+  - item: cauldron
+    reference: gui/advancement/zauber_cauldrons_create
+    template: advancement
+  - item: chorus_fruit
+    reference: gui/advancement/zauber_cauldrons_wormhole
+    template:
+      name: advancement
+      forward: item/wormhole_in_a_bottle
+  - item: glass_bottle
+    reference: gui/advancement/zauber_cauldron_drink_multi_use_bottle
+    template: advancement
+  - item: golden_chestplate
+    reference: gui/advancement/zauber_cauldrons_full_armor
+    template:
+      name: advancement
+      forward: item/zauber_armor/attack_boost/chestplate
+  - item: rabbit_foot
+    reference: gui/advancement/zauber_cauldrons_rabbit
+    template: advancement
+  - item: potion
+    reference: gui/advancement/zauber_cauldrons_drink_all_magicol
+    template:
+      name: advancement
+      forward: item/bottled_magicol/temperate_potion
+  - item: clock
+    reference: gui/advancement/zauber_cauldrons_make_magicol
+    template: advancement
+  - item: grass_block
+    reference: gui/advancement/zauber_cauldrons_paint_biome
+    template: advancement

@@ -3,8 +3,7 @@
   "name": "Sweethearts",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:poppy",
-    "nbt": "{CustomModelData:3420002}"
+    "item": "minecraft:poppy"
   },
   "criteria": {
     "obtain_flower": {

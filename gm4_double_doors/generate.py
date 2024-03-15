@@ -7,6 +7,7 @@ import logging
 from beet import Context, Structure, TextFile, subproject
 from beet.contrib.vanilla import Vanilla
 from nbtlib import parse_nbt
+from gm4.plugins.manifest import repro_structure_to_bytes
 
 logger = logging.getLogger(__name__)
 
@@ -16,7 +17,7 @@ class StringStructure(TextFile):
     extension: ClassVar[str] = ".snbt"
 
     def serialize_to_structure(self) -> Structure:
-        return Structure(parse_nbt(self.text))
+        return Structure(parse_nbt(self.text), serializer=repro_structure_to_bytes)
 
 
 def register_snbt_files(ctx: Context):

@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "glass_bottle",
-      "nbt": "{CustomModelData:3420002}"
+      "nbt": "{CustomModelData:'gui/advancement/sunken_treasure'}"
     },
     "title": {
       "translate": "advancement.gm4.sunken_treasure.title",

@@ -39,7 +39,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_metallurgy:{metal:{type:\"aluminium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420021,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/aluminium/v0\",Properties:{textures:[{Value:\"$ore/aluminium\"}]}}}"
+              "tag": "{gm4_metallurgy:{metal:{type:\"aluminium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:'item/lump/bauxite',SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/aluminium/v0\",Properties:{textures:[{Value:\"$ore/aluminium\"}]}}}"
             }
           ]
         }

@@ -3,8 +3,7 @@
   "name": "Disassemblers",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:tnt",
-    "nbt": "{CustomModelData:3420003}"
+    "item": "minecraft:tnt"
   },
   "criteria": {
     "create_custom_crafter": {

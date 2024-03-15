@@ -12,6 +12,9 @@ data_pack:
         max_inclusive: 26
       directory: overlay_26
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4_auto_crafting.generate
   - gm4.plugins.extend.module
@@ -27,6 +30,28 @@ meta:
       schedule_loops:
         - main
         - tick
+    model_data:
+      - item: player_head
+        reference: item/auto_crafter
+        model: block/auto_crafter
+      - item: crafting_table
+        reference: block/auto_crafter
+        template: block
+        textures:
+          top: block/auto_crafter_top
+          side: block/auto_crafter_side
+          front: block/auto_crafter_side
+          bottom: block/auto_crafter_bottom
+        transforms:
+          - name: item_display
+            origin: [0.5,0.5,0.5]
+            scale: [0.625, 0.625,0.625]
+            translation: [0, 0.25, 0]
+            display: head
+    gui_fonts:
+      - translation: gui.gm4.auto_crafter
+        container: dropper
+        texture: gm4:gui/container/empty_dropper
     website:
       description: Create an auto crafter to fully automate crafting! With this module installed, all vanilla crafting recipes are added to the GM4 Custom Crafter.
       recommended:
@@ -52,6 +77,8 @@ meta:
         - BluePsychoRanger
       Icon Design:
         - Hozz
+      Textures:
+        - Kyrius
   modrinth:
     project_id: WkDoUESw
   smithed:

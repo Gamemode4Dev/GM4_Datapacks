@@ -1,0 +1,36 @@
+key,en_us
+advancement.gm4.better_armour_stands.description,Customize an armour stand
+advancement.gm4.better_armour_stands.title,Gettin' Handsy
+item.gm4.better_armour_stands.copied_armor_stand.author,Copied by: 
+item.gm4.better_armour_stands.copied_armor_stand.property.custom_pose,Custom pose
+item.gm4.better_armour_stands.copied_armor_stand.property.invisible,Invisible
+item.gm4.better_armour_stands.copied_armor_stand.property.no_base,No base plate
+item.gm4.better_armour_stands.copied_armor_stand.property.no_gravity,No gravity
+item.gm4.better_armour_stands.copied_armor_stand.property.small,Small
+tooltip.gm4.better_armour_stands.invalid_code,Invalid code
+tooltip.gm4.better_armour_stands.invalid_right_click_location,Right click the joint of a part to start editing
+text.gm4.guidebook.module_desc.better_armour_stands,Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands.
+text.gm4.guidebook.better_armour_stands.description,"Armour stands will have arms by default, and can be altered with a book and quill.\n\nThis allows one to create custom statues and interesting displays."
+text.gm4.guidebook.better_armour_stands.applying,"To modify an armour stand, write one of the codes in a book and quill, then use it on the armour stand.\n\nMultiple codes can be written on separate pages to apply multiple modifiers at once."
+text.gm4.guidebook.better_armour_stands.toggle_codes,The following codes will toggle the specific feature:
+text.gm4.guidebook.better_armour_stands.arms,Toggle the arms of the armour stand
+text.gm4.guidebook.better_armour_stands.copy_code,Click to copy
+text.gm4.guidebook.better_armour_stands.base,Toggle the base plate of the armour stand
+text.gm4.guidebook.better_armour_stands.size,Toggle the size of the armour stand
+text.gm4.guidebook.better_armour_stands.gravity,Toggle the gravity of the armour stand
+text.gm4.guidebook.better_armour_stands.visible,Toggle the visibility of the armour stand.\nHolding a book with this code will reveal\nnearby invisible armour stands.
+text.gm4.guidebook.better_armour_stands.turn,Toggle rotating of the armour stand
+text.gm4.guidebook.better_armour_stands.lock,Disable interactions with the armour stand
+text.gm4.guidebook.better_armour_stands.unlock,Enable interactions with the armour stand.\nHolding a book with this code will reveal\nnearby locked armour stands.
+text.gm4.guidebook.better_armour_stands.part_editing,The following codes activate editing of armour stand parts:
+text.gm4.guidebook.better_armour_stands.pose,"Edit a part of the armour stand by looking at its ""joint"".\n- Hold sneak to enable ""snapping""\n- Left click to invert this pose\n- Right click to stop editing"
+text.gm4.guidebook.better_armour_stands.pose_mirror,"Edit a part of the armour stand by looking at its ""joint"".\nIf an arm/leg is selected, the other arm/leg pose is mirrored.\n- Hold sneak to enable ""snapping""\n- Left click to invert this pose\n- Right click to stop editing"
+text.gm4.guidebook.better_armour_stands.move,"Move the armour stand around you.\n- Hold sneak to enable ""snapping""\n- Right click to stop editing"
+text.gm4.guidebook.better_armour_stands.rotate,"Rotate the armour stand.\n- Hold sneak to enable ""snapping""\n- Right click to stop editing"
+text.gm4.guidebook.better_armour_stands.flip,Flip the full pose of the armour stand
+text.gm4.guidebook.better_armour_stands.default,- Look at a part of the armour stand to reset this pose.\n- Sneak to fully reset the armour stand.
+text.gm4.guidebook.better_armour_stands.equipping,Items can be placed in the head or arm slots:
+text.gm4.guidebook.better_armour_stands.equip,Look at the head or shoulders of the armour stand to place an item from the offhand into this slot.
+text.gm4.guidebook.better_armour_stands.copy_and_paste,Armour stand data can be copied and pasted:
+text.gm4.guidebook.better_armour_stands.copy,Copy modified features onto the armour stand items in your offhand.
+text.gm4.guidebook.better_armour_stands.paste,Copy features from the copied armour stand items in your offhand to the armour stand.

@@ -13,3 +13,6 @@ playsound minecraft:block.glass.break block @a[distance=..8] ~ ~ ~ 1 1.3
 # consume liquid
 scoreboard players remove @s gm4_zc_liquid_level 1
 execute align xyz run function gm4_zauber_cauldrons:cauldron/liquid/update/from_score
+
+# return
+return fail

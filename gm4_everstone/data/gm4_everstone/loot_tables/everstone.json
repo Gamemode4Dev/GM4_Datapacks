@@ -13,7 +13,7 @@
             },
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420002,gm4_everstone:1b,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+              "tag": "{CustomModelData:'item/everstone',gm4_everstone:1b,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
             },
             {
               "function": "set_name",

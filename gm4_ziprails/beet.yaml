@@ -12,6 +12,10 @@ meta:
   gm4:
     versioning:
       schedule_loops: [tick]
+    model_data:
+      - item: minecart
+        reference: gui/advancement/ziprails
+        template: advancement
     website:
       description: Automatically latch on to a tripwire to sail through the sky on a suspended line!
       recommended:

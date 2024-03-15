@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "nether_star",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/orb_of_ankou_all_pneumas'}"
     },
     "title": {
       "translate": "advancement.gm4.orb_of_ankou.all_pneumas.title",

@@ -5,9 +5,9 @@
 
 scoreboard players set $placed_block gm4_rl_data 1
 
-summon armor_stand ~ ~-0.965 ~ {NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,Silent:1,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_tinkering_compressor_stand","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],HasVisualFire:1,CustomName:'"gm4_tinkering_compressor_stand"',ArmorItems:[{},{},{},{id:"minecraft:oxidized_cut_copper",Count:1b,tag:{CustomModelData:3420001}}],Pose:{Head:[180f,0f,0f]},Rotation:[0.0f,0.0f]}
-summon armor_stand ~ ~-0.4 ~ {Small:1,NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,Silent:1,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_tinkering_compressor_display","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],HasVisualFire:1,CustomName:'"gm4_tinkering_compressor_display"',HandItems:[{id:"minecraft:stone_button",Count:1b,tag:{CustomModelData:3420002}},{}],Pose:{RightArm:[0.0f,0.0f,0.0f]},Rotation:[0.0f,0.0f]}
+summon item_display ~ ~ ~ {Tags:["gm4_tinkering_compressor_plate","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:'"gm4_tinkering_compressor_plate"',item:{id:"minecraft:oxidized_cut_copper",Count:1b,tag:{CustomModelData:"block/tinkering_compressor_plate"}},transformation:{right_rotation:[0f,0f,0f,1f],left_rotation:[1f,0f,0f,0f],translation:[0.0,0.225,0.0],scale:[0.625,0.625,0.625]},brightness:{block:15,sky:15},item_display:"head"}
+summon item_display ~ ~ ~ {Tags:["gm4_tinkering_compressor_display","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:'"gm4_tinkering_compressor_display"',item:{id:"minecraft:stone",Count:1b,tag:{CustomModelData:"block/tinkering_compressor"}},transformation:{right_rotation:[0f,0f,0f,1f],left_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.5,0.5,0.5]},brightness:{block:15,sky:15},item_display:"head"}
 summon marker ~ ~ ~ {Tags:["gm4_tinkering_compressor","gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:'"gm4_tinkering_compressor"',Rotation:[0.0f,0.0f]}
 
-scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 1
+scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 2
 tag @e[distance=..2] remove gm4_new_machine

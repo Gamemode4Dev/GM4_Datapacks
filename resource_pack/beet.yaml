@@ -1,0 +1,31 @@
+id: gm4_resource_pack
+name: Resource Pack
+version: 1.1.X
+
+resource_pack:
+  load:
+    pack.png: pack.png
+    # other files are inherited by the full-project build
+
+pipeline:
+  - dev_warning
+
+meta:
+  gm4: 
+    website:
+      description: Use our resource pack for the definitive Gamemode 4 experience! This resource pack does not touch vanilla textures, but adds textures and models to most Gamemode 4 blocks, items and mobs.
+      recommended: []
+      notes: []
+    video: null
+    wiki: null
+    credits:
+      Textures:
+        - Memo
+        - Hozz
+      Translations:
+        - ToffeeMax
+        - SarguCopperpot
+        - TheRedCommander
+        - KompetenterKeks
+      Font Magic:
+        - BluePsychoRanger

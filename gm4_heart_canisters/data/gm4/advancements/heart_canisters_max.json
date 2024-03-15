@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "player_head",
-      "nbt": "{CustomModelData:3420006,SkullOwner:'$heart_canister_tier_2'}"
+      "nbt": "{CustomModelData:'gui/advancement/heart_canisters_max',SkullOwner:'$heart_canister_tier_2'}"
     },
     "frame": "goal",
     "title": {

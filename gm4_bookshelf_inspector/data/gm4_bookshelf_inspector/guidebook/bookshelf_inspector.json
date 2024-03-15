@@ -3,8 +3,7 @@
   "name": "Bookshelf Inspector",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:chiseled_bookshelf",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:chiseled_bookshelf"
   },
   "criteria": {
     "use_chiseled_bookshelf": {

@@ -18,7 +18,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420014,gm4_end_fishing:{enderpuff:1b},SkullOwner:\"$enderpuff\"}"
+              "tag": "{CustomModelData:'item/enderpuff',gm4_end_fishing:{enderpuff:1b},SkullOwner:\"$enderpuff\"}"
             }
           ]
         }
