@@ -1,20 +1,19 @@
 [
-    {
-      "condition": "minecraft:location_check",
-      "predicate": {
-        "block": {
-          "tag": "gm4:no_collision"
-        }
-      }
-    },
-    {
-      "condition": "minecraft:location_check",
-      "offsetY": 1,
-      "predicate": {
-        "block": {
-          "tag": "gm4:no_collision"
-        }
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "block": {
+        "tag": "gm4:no_collision"
       }
     }
-  ]
-  
+  },
+  {
+    "condition": "minecraft:location_check",
+    "offsetY": 1,
+    "predicate": {
+      "block": {
+        "tag": "gm4:no_collision"
+      }
+    }
+  }
+]
