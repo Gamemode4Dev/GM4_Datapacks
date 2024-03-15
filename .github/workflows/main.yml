@@ -141,5 +141,13 @@ jobs:
           cp out/gm4_*.zip world/datapacks
 
       - name: Run test server
+        id: run-tests
         run: |
           java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
+
+      - name: Upload test world
+        if: ${{ failure() && steps.run-tests.conclusion == 'failure' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: 'Test world for ${{ github.sha }}'
+          path: ${{ github.workspace }}/world/
