@@ -1,5 +1,5 @@
 {
-  "last_commit": "d0b0f9cb65af3fb2bca4f92a45cc2e4ed6509b13",
+  "last_commit": "3919f3abcd4368c73caf6a549247e3dc01288e67",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2693,8 +2693,8 @@
     {
       "id": "gm4_zauber_cauldrons",
       "name": "Zauber Cauldrons",
-      "version": "1.10.2",
-      "hash": "eaeb97f3b66ec653726b0657224bec942c030e60",
+      "version": "1.10.3",
+      "hash": "faabcb7847b9769af9909b3b42179cf2a7dca714",
       "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
       "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
       "credits": {
@@ -2798,8 +2798,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.1.6",
-      "hash": "ca1bbd4601bfee00148907dc1dec552e62934eda",
+      "version": "1.1.7",
+      "hash": "4965311ef0b6cd4fb8d5cf2aea4342b8f1d2703e",
       "video_link": "",
       "wiki_link": "",
       "credits": {
