@@ -1,5 +1,5 @@
 {
-  "last_commit": "d937ab3e338a7e8857a58f55988aceb4f55ff7d9",
+  "last_commit": "d0b0f9cb65af3fb2bca4f92a45cc2e4ed6509b13",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -394,8 +394,8 @@
     {
       "id": "gm4_calling_bell",
       "name": "Calling Bell",
-      "version": "1.2.7",
-      "hash": "a8833f2b1e0d76958ba380fd5b994ffaf07c751e",
+      "version": "1.2.8",
+      "hash": "1bff33a5d275984c657106cfb7b58c779241eef7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Calling_Bell",
       "credits": {
@@ -2798,8 +2798,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.1.5",
-      "hash": "8ee24975b270b7b6175e42ec0f6205ad2ffc575c",
+      "version": "1.1.6",
+      "hash": "ca1bbd4601bfee00148907dc1dec552e62934eda",
       "video_link": "",
       "wiki_link": "",
       "credits": {
