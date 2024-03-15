@@ -14,5 +14,5 @@ class TestFile(TextFile):
 
 
 def strip_tests(ctx: Context):
-    for structure in ctx.data.structures.match("*:test_*"):
+    for structure in ctx.data.structures.match("*:test_*", "*:tests/*"):
         del ctx.data.structures[structure]
