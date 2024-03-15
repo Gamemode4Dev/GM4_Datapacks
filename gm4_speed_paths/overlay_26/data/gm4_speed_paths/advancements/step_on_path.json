@@ -23,10 +23,13 @@
               {
                 "condition": "minecraft:inverted",
                 "term": {
-                  "condition": "minecraft:entity_properties",
+                  "condition": "minecraft:entity_scores",
                   "entity": "this",
-                  "predicate": {
-                    "nbt": "{Tags:[\"gm4_on_path\"]}"
+                  "scores": {
+                    "gm4_speed_paths": {
+                      "min": -2147483648,
+                      "max": 2147483647
+                    }
                   }
                 }
               }
