@@ -1,5 +1,5 @@
 {
-  "last_commit": "3919f3abcd4368c73caf6a549247e3dc01288e67",
+  "last_commit": "8e30548ca989539c676400908f699091a1293899",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -360,8 +360,8 @@
     {
       "id": "gm4_boots_of_ostara",
       "name": "Boots of Ostara",
-      "version": "1.5.9",
-      "hash": "7475accbdf5310f16ac2e26c178991d43381bc73",
+      "version": "1.5.10",
+      "hash": "4af8c4cf9fe45e98eec9f85ff89bf3b637886672",
       "video_link": "https://www.youtube.com/watch?v=H4UGM6_wGCE",
       "wiki_link": "https://wiki.gm4.co/wiki/Boots_of_Ostara",
       "credits": {
@@ -2798,8 +2798,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.1.7",
-      "hash": "4965311ef0b6cd4fb8d5cf2aea4342b8f1d2703e",
+      "version": "1.1.8",
+      "hash": "2e447a87406c5848edc94c1d39f5b5aba78a8cc6",
       "video_link": "",
       "wiki_link": "",
       "credits": {
