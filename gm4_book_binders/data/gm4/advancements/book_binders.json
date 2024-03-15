@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "lectern",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/book_binders'}"
     },
     "title": {
       "translate": "advancement.gm4.book_binders.title",

@@ -5,7 +5,11 @@ version: 1.4.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
+  - shamir_model_template
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_lore
   - gm4.plugins.include.lib_player_heads
@@ -63,3 +67,4 @@ meta:
         - Memo
       Icon Design:
         - DuckJr
+    

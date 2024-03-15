@@ -4,8 +4,7 @@
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {
-    "item": "minecraft:leather_leggings",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:leather_leggings"
   },
   "criteria": {
     "obtain_liquid_tank": {

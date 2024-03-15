@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:clock",
-      "nbt": "{CustomModelData:3420002,Enchantments:[{}]}"
+      "nbt": "{CustomModelData:'gui/advancement/combat_expanded_challenger',Enchantments:[{}]}"
     },
     "title": {
       "translate": "advancement.gm4.combat_expanded.challenger.title",

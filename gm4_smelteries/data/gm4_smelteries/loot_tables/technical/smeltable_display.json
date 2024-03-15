@@ -13,7 +13,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420001}"
+                                    "tag": "{CustomModelData:'block/ore_display/gold_ore'}"
                                 }
                             ],
                             "conditions": [
@@ -33,7 +33,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420001}"
+                                    "tag": "{CustomModelData:'block/ore_display/nether_gold_ore'}"
                                 }
                             ],
                             "conditions": [
@@ -53,7 +53,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420001}"
+                                    "tag": "{CustomModelData:'block/ore_display/deepslate_gold_ore'}"
                                 }
                             ],
                             "conditions": [
@@ -73,7 +73,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420001}"
+                                    "tag": "{CustomModelData:'block/ore_display/raw_gold'}"
                                 }
                             ],
                             "conditions": [
@@ -93,7 +93,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420002}"
+                                    "tag": "{CustomModelData:'block/ore_display/iron_ore'}"
                                 }
                             ],
                             "conditions": [
@@ -113,7 +113,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420001}"
+                                    "tag": "{CustomModelData:'block/ore_display/deepslate_iron_ore'}"
                                 }
                             ],
                             "conditions": [
@@ -133,7 +133,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420001}"
+                                    "tag": "{CustomModelData:'block/ore_display/raw_iron'}"
                                 }
                             ],
                             "conditions": [
@@ -153,7 +153,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420002}"
+                                    "tag": "{CustomModelData:'block/ore_display/copper_ore'}"
                                 }
                             ],
                             "conditions": [
@@ -173,7 +173,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420001}"
+                                    "tag": "{CustomModelData:'block/ore_display/deepslate_copper_ore'}"
                                 }
                             ],
                             "conditions": [
@@ -193,7 +193,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420001}"
+                                    "tag": "{CustomModelData:'block/ore_display/raw_copper'}"
                                 }
                             ],
                             "conditions": [
@@ -213,7 +213,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420001}"
+                                    "tag": "{CustomModelData:'block/ore_display/sand'}"
                                 }
                             ],
                             "conditions": [
@@ -233,7 +233,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420001}"
+                                    "tag": "{CustomModelData:'block/ore_display/red_sand'}"
                                 }
                             ],
                             "conditions": [
@@ -253,7 +253,7 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{CustomModelData:3420001}"
+                                    "tag": "{CustomModelData:'block/ore_display/chorus_fruit'}"
                                 }
                             ],
                             "conditions": [

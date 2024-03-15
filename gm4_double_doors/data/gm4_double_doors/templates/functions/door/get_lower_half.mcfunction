@@ -3,6 +3,8 @@
 # at location of the door the player has interacted with
 # run from gm4_double_doors:player/ray
 
+scoreboard players set $found gm4_double_doors_data 1
+
 # store whether the player opened a door (=1) or closed a door (=0)
 scoreboard players set $target_door_state gm4_double_doors_data 0
 execute if block ~ ~ ~ minecraft:{{ material_name }}_door[open=true] run scoreboard players set $target_door_state gm4_double_doors_data 1

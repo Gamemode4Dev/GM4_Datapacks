@@ -1,0 +1,80 @@
+model_data:
+  - item: firework_star
+    reference: item/orb_of_ankou
+    template: generated_overlay
+  - item: [flint, black_dye]
+    template: pneuma
+    broadcast:
+      - reference: pneuma/aggressive
+      - reference: pneuma/agile
+      - reference: pneuma/anchoring
+      - reference: pneuma/bargaining
+      - reference: pneuma/bashing
+      - reference: pneuma/blasting
+      - reference: pneuma/blinding
+      - reference: pneuma/bounding
+      - reference: pneuma/bubbly
+      - reference: pneuma/conjuring
+      - reference: pneuma/dashing
+      - reference: pneuma/depriving
+      - reference: pneuma/draining
+      - reference: pneuma/enduring
+      - reference: pneuma/expeditious
+      - reference: pneuma/feathery
+      - reference: pneuma/gazing
+      - reference: pneuma/gliding
+      - reference: pneuma/hawkeye
+      - reference: pneuma/incombustible
+      - reference: pneuma/lifeless
+      - reference: pneuma/neutralizing
+      - reference: pneuma/phasing
+      - reference: pneuma/pricking
+      - reference: pneuma/retreating
+      - reference: pneuma/rushing
+      - reference: pneuma/scaling
+      - reference: pneuma/sniffing
+      - reference: pneuma/soaring
+      - reference: pneuma/synergetic
+      - reference: pneuma/vanishing
+      - reference: pneuma/venomous
+      - reference: pneuma/volatile
+      - reference: pneuma/withering
+      - reference: pneuma/striding
+      - reference: pneuma/freezing
+      - reference: pneuma/feigning
+      - reference: pneuma/shrieking
+  - item: swords
+    reference: shamir/corripio
+    template:
+      name: shamir
+      metal: bismuth
+      textures_path: gm4_metallurgy:item/shamir/bismuth
+  - item: golden_helmet
+    reference: entity/fire_sprite
+    template: vanilla
+  - item: black_dye
+    reference: gui/advancement/orb_of_ankou_soul_essence
+    template:
+      name: advancement
+      forward: item/essences/lifeless
+  - item: elytra
+    reference: gui/advancement/orb_of_ankou_soaring_pneuma
+    template:
+      name: advancement
+      forward: item/essences/soaring
+  - item: flint
+    reference: gui/advancement/orb_of_ankou_soul_shard
+    template:
+      name: advancement
+      forward: item/shards/lifeless
+  - item: flint_and_steel
+    reference: gui/advancement/orb_of_ankou_soul_forge
+    template: advancement
+  - item: nether_star
+    reference: gui/advancement/orb_of_ankou_all_pneumas
+    template: advancement
+  - item: firework_star
+    reference: gui/advancement/orb_of_ankou_max_orb
+    template:
+      name: advancement
+      forward: item/orb_of_ankou

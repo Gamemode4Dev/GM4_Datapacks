@@ -4,8 +4,7 @@
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {
-    "item": "minecraft:anvil",
-    "nbt": "{CustomModelData:3420120}"
+    "item": "minecraft:anvil"
   },
   "criteria": {
     "obtain_audere_shamir": {

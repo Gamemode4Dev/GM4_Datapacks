@@ -4,7 +4,7 @@
   "module_type": "module",
   "icon": {
     "item": "minecraft:brown_stained_glass",
-    "nbt": "{CustomModelData:3420002,Enchantments:[{id:\"minecraft:protection\",lvl:0s}]}"
+    "nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:0s}]}"
   },
   "criteria": {
     "obtain_soul_sand": {

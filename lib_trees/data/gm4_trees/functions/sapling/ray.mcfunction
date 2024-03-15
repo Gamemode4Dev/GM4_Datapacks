@@ -4,7 +4,8 @@
 # run from gm4_trees:sapling/place_sapling
 
 # check block
-execute store success score $found gm4_tree_data align xyz positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ #minecraft:saplings unless entity @e[tag=smithed.block,distance=..0.5,limit=1] run function gm4_trees:sapling/summon_marker
+scoreboard players set $found gm4_tree_data 0
+execute align xyz positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ #minecraft:saplings unless entity @e[tag=smithed.block,distance=..0.5,limit=1] run function gm4_trees:sapling/summon_marker
 
 # runs the loop again
 scoreboard players remove $ray gm4_tree_data 1

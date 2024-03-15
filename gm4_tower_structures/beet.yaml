@@ -14,6 +14,19 @@ meta:
   gm4:
     prefabs:
       - gm4_orbis
+    model_data:
+      - item: bow
+        reference: item/pirate_bow
+        template: vanilla
+      - item: leather_helmet
+        reference: item/pirate_hat
+        template: vanilla
+      - item: stone_sword
+        reference: item/pirate_sword
+        template: vanilla
+      - item: turtle_helmet
+        reference: item/pirate_turtle_helmet
+        template: vanilla
     website:
       description: A custom terrain expansion pack that adds four new tower structures to the world.
       recommended:

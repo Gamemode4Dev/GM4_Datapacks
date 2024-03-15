@@ -1,0 +1,21 @@
+{
+	"textures": {
+		"side": "gm4_ender_hoppers:block/ender_hopper_eye_side",
+		"top": "gm4_ender_hoppers:block/ender_hopper_eye_top",
+		"bottom": "gm4_ender_hoppers:block/ender_hopper_eye_bottom"	
+	},
+		"elements": [
+		{
+			"from": [4, 11, 4],
+			"to": [12, 19, 12],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 14], "texture": "#side", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 14], "texture": "#side", "cullface": "east"},
+				"south": {"uv": [0, 0, 16, 14], "texture": "#side", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 14], "texture": "#side", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#top", "cullface": "up"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#bottom", "cullface": "down"}
+			}
+		}
+	]
+}

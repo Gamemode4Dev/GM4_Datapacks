@@ -1,0 +1,27 @@
+pipeline:
+  - gm4.plugins.list_modules
+  - gm4.plugins.manifest.create
+  - gm4.plugins.output.clear_release
+  - gm4.plugins.resource_pack.setup
+  - gm4.plugins.manifest.write_meta
+  - broadcast: 'gm4_*'
+    extend: 'beet.yaml'
+    require:
+      - gm4.plugins.output.test
+      - gm4.plugins.player_heads
+      - gm4.plugins.resource_pack
+      - gm4_guidebook.generate_guidebooks.load_page_data
+      - gm4_guidebook.generate_guidebooks.load_custom_recipes
+      - gm4.plugins.test.load_tests
+      - gm4.plugins.test.skip_mecha_lint
+    pipeline:
+      - gm4.plugins.write_mcmeta
+    meta:
+      mecha:
+        formatting:
+          layout: preserve
+          nbt_compact: True
+
+meta:
+  autosave:
+    link: false

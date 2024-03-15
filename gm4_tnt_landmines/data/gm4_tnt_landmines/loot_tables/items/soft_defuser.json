@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420002,gm4_tnt_landmines:{item:\"upgrade\"}}"
+                            "tag": "{CustomModelData:'item/soft_defuser',gm4_tnt_landmines:{item:\"upgrade\"}}"
                         },
                         {
                             "function": "minecraft:set_name",

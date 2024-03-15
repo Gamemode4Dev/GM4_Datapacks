@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "zombie_head",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/undead_players'}"
     },
     "title": {
       "translate": "advancement.gm4.undead_players.title",

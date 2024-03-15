@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:golden_chestplate",
-      "nbt": "{CustomModelData:3420006}"
+      "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_full_armor'}"
     },
     "title": {
       "translate": "advancement.gm4.zauber_cauldrons.full_armour.title",

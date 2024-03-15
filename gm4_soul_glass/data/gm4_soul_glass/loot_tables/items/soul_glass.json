@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420002,gm4_soul_glass:1b,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+              "tag": "{CustomModelData:'item/soul_glass',gm4_soul_glass:1b,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
             },
             {
               "function": "minecraft:set_name",

@@ -1,17 +1,22 @@
 import datetime
+import hashlib
 import json
 import logging
 import os
-from functools import cache
+from gzip import GzipFile
+from io import BytesIO
 from pathlib import Path
 from typing import Any, Optional
-from pydantic import Extra, BaseModel
 
 import yaml
-from beet import Context, JsonFile, PluginOptions, TextFile, load_config, InvalidProjectConfig
+from beet import Context, InvalidProjectConfig, PluginOptions, TextFile, load_config
+from beet.library.base import _dump_files  # type: ignore ; private method used to deterministicify pack dumping
+from nbtlib.contrib.minecraft import StructureFileData, StructureFile  # type: ignore ; no stub
+from pydantic.v1 import BaseModel, Extra
+from repro_zipfile import ReproducibleZipFile  # type: ignore ; no stub
 
+from gm4.plugins.output import ModrinthConfig, PMCConfig, SmithedConfig
 from gm4.plugins.versioning import VersioningConfig
-from gm4.plugins.output import ModrinthConfig, SmithedConfig, PMCConfig
 from gm4.utils import Version, run
 
 parent_logger = logging.getLogger("gm4.manifest")
@@ -39,6 +44,7 @@ class ManifestModuleModel(BaseModel):
 	id: str
 	name: str
 	version: str
+	hash: str
 	video_link: str = ""
 	wiki_link: str = ""
 	credits: CreditsModel
@@ -80,7 +86,7 @@ def create(ctx: Context):
 		"video": None, "wiki": None
 	}
 
-	for glob, manifest_section, config_overrides in [("gm4_*", manifest.modules, {}), ("lib_*", manifest.libraries, LIB_OVERRIDES)]:
+	for glob, manifest_section, config_overrides in [("gm4_*", manifest.modules, {}), ("lib_*", manifest.libraries, LIB_OVERRIDES), ("resource_pack", manifest.modules, {})]:
 		for pack_id in [p.name for p in sorted(ctx.directory.glob(glob))]:
 			try:
 				config = load_config(Path(pack_id) / "beet.yaml")
@@ -93,6 +99,7 @@ def create(ctx: Context):
 					id = config.id,
 					name = config.name,
 					version = config.version,
+					hash = "",
 					video_link = gm4_meta.video or "",
 					wiki_link = gm4_meta.wiki or "",
 					credits = gm4_meta.credits,
@@ -111,7 +118,7 @@ def create(ctx: Context):
 				logger.debug(exc.explanation)
 
 	# Read the contributors metadata
-	contributors_file = Path("contributors.json")
+	contributors_file = Path("gm4/contributors.json")
 	if contributors_file.exists():
 		contributors_list = json.loads(contributors_file.read_text())
 		manifest.contributors = {c["name"]: c for c in contributors_list}
@@ -127,91 +134,73 @@ def create(ctx: Context):
 	# Cache the new manifest, so sub-pipelines can access it
 	ctx.cache["gm4_manifest"].json = manifest.dict()
 
-
-def update_patch(ctx: Context):
-	"""Retrieves manifest from previous build, and increments patch number
-	 	 if there are any changes between last commit and HEAD in module or any of its dependancies"""
+	# Read in the previous manifest, if found
 	version = os.getenv("VERSION", "1.20")
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
-	logger = parent_logger.getChild("update_patch")
-	skin_cache = JsonFile(source_path="gm4/skin_cache.json").data
-
-	manifest_cache = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
 
 	if manifest_file.exists():
-		manifest = ManifestFileModel.parse_obj(json.loads(manifest_file.read_text()))
-		last_commit = manifest.last_commit
-		released_modules: dict[str, ManifestModuleModel] = {m.id:m for m in manifest.modules if m.version}
-		released_modules |= manifest.libraries
+		ctx.cache["previous_manifest"].json = json.loads(manifest_file.read_text())
 	else:
-		logger.debug("No existing meta.json manifest file was located")
-		last_commit = None
-		released_modules = {}
+		if not ctx.meta.get("gm4_dev"):
+			logger.warn("No existing meta.json manifest file was located")
+		ctx.cache["previous_manifest"].json = ManifestFileModel(last_commit="",modules=[],libraries={},contributors=[]).dict()
 
-	for packs in (manifest_cache.modules, manifest_cache.libraries):
-		for id in packs:
-			pack = packs[id]
-			released = released_modules.get(id, None)
-			last_ver = Version(released.version) if released else Version("0.0.0")
-			version = Version(pack.version)
+	
 
-			publish_date = released.publish_date if released else None
-			pack.publish_date = publish_date or datetime.datetime.now().date().isoformat()
+def update_patch(ctx: Context):
+    """Checks the datapack files for changes from last build, and increments patch number"""
+    yield
+    logger = logging.getLogger(__name__)
 
-			if version != last_ver.replace(patch=None): # check for forced content-less version increment
-				diff = True
+    # load current manifest from cache
+    this_manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+    pack = ({e.id:e for e in (this_manifest.libraries|this_manifest.modules).values()})[ctx.project_id]
 
-			else: # otherwise check for file differences
-				deps = _traverse_includes(id)
-				if packs is manifest_cache.modules:
-					deps |= {"base"} # scan the base directory if this is a module
-				deps_dirs = [element for sublist in [[f"{d}/data", f"{d}/overlay_*/data", f"{d}/*py"] for d in deps] for element in sublist]
+    # attempt to load prior meta.json manifest
+    last_manifest = ManifestFileModel.parse_obj(ctx.cache["previous_manifest"].json)
+    released_modules: dict[str, ManifestModuleModel] = {m.id:m for m in last_manifest.modules if m.version}|{l.id:l for l in last_manifest.libraries.values()}
 
-				# add watches to skins this module uses from other modules. NOTE this could be done in a more extendable way in the future, rather than "hardcoded"
-				skin_dep_dirs: list[str] = []
-				for skin_ref in skin_cache["nonnative_references"].get(id, []):
-					d = skin_cache["skins"][skin_ref]["parent_module"]
-					ns, path = skin_ref.split(":")	
-					skin_dep_dirs.append(f"{d}/data/{ns}/skins/{path}.png")
-				
-				watch_dirs = deps_dirs+skin_dep_dirs
+    # determine this modules status
+    released = released_modules.get(ctx.project_id, None)
+    last_ver = Version(released.version) if released else Version("0.0.0")
+    this_ver = Version(ctx.project_version)
+    publish_date = released.publish_date if released else None
+    pack.publish_date = publish_date or datetime.datetime.now().date().isoformat()
+    old_hash = released.hash if released else ""
 
-				diff = run(["git", "diff", last_commit, "--shortstat", "--", f"{id}/data", f"{id}/overlay_*", f"{id}/*.py"] + watch_dirs) if last_commit else True
-					# NOTE it may be needed later to only search overlay_*/data, but that currently caused some issues with GH action
+    # watch for output file changes
+    fileobj = BytesIO()
+    scanned_pack = ctx.packs[0 if ctx.meta.get("pack_scan")=="resource_pack" else 1]
+    with ReproducibleZipFile(fileobj, mode='w') as zf:
+        _dump_files(zf, sorted(scanned_pack.list_files())) # write datapack to temporary memory
+            # beet's default dump depends on file load order, which is nondeterministic
+            # here we recreate the ctx.data.dump(zf) behavior but by sorting the files first
 
-			if not diff and released:
-				# No changes were made, keep the same patch version
-				pack.version = released.version
-			elif not released:
-				# First release
-				pack.version = pack.version.replace("X", "0")
-				logger.debug(f"First release of {id}")
-			else:
-				# Changes were made, bump the patch			
-				if version.minor > last_ver.minor or version.major > last_ver.major: # type: ignore
-					version.patch = 0
-					logger.info(f"Feature update for {id}, setting version to {version}")
-				else:
-					version.patch = last_ver.patch + 1 # type: ignore
-					logger.info(f"Updating {id} patch to {version.patch}")
+    new_hash = hashlib.sha1(fileobj.getvalue()).hexdigest()
+    pack.hash = new_hash
 
-				pack.version = str(version)
+    # first release of a module
+    if not released:
+        pack.version = pack.version.replace("X", "0")
+        logger.debug(f"First release of {ctx.project_id}")
 
-	ctx.cache["gm4_manifest"].json = manifest_cache.dict()
+    # otherwise check for changes
+    else:
+        if (this_ver != last_ver.replace(patch=None)) or (new_hash != old_hash): # changes were made, bump the patch
+            if this_ver.minor > last_ver.minor or this_ver.major > last_ver.major: # type: ignore
+                this_ver.patch = 0
+                logger.info(f"Feature update for {ctx.project_id}, setting version to {this_ver}")
+            else:
+                this_ver.patch = last_ver.patch + 1 # type: ignore
+                logger.info(f"Updating {ctx.project_id} patch to {this_ver.patch}") # type: ignore
 
-@cache
-def _traverse_includes(project_id: str) -> set[str]:
-	"""Recursively assembles list of included dependencies and sub-dependencies for a given module"""
-	project_file = Path(project_id) / "beet.yaml"
-	project_config = yaml.safe_load(project_file.read_text())
-	all_deps: set[str] = set()
-	for p in project_config.get('pipeline', []):
-		if "gm4.plugins.include" in p:
-			dep = p.split(".")[-1]
-			sub_deps = _traverse_includes(dep)
-			all_deps.update({dep, *sub_deps})
-	return all_deps
+            pack.version = str(this_ver)
+
+        else: # no changes, keep the patch
+             pack.version = released.version
+
+    ctx.cache["gm4_manifest"].json = this_manifest.dict()
 
 
 def write_meta(ctx: Context):
@@ -291,8 +280,18 @@ def write_updates(ctx: Context):
 	# Append the module update list regardless if the marker existed
 	init.lines.append("# Module update list")
 	init.lines.append("data remove storage gm4:log queue[{type:'outdated'}]")
-	for m in modules.values():
+	for i, m in modules.items():
+		if not i.startswith("gm4_"):
+			continue # not a datapack (ie the rp) and has score to print
 		version = Version(m.version).int_rep()
 		website = f"https://gm4.co/modules/{m.id[4:].replace('_','-')}"
 		init.lines.append(f"execute if score {m.id} load.status matches -1.. if score {m.id.removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m.name}',download:'{website}',render:'{{\"text\":\"{m.name}\",\"clickEvent\":{{\"action\":\"open_url\",\"value\":\"{website}\"}},\"hoverEvent\":{{\"action\":\"show_text\",\"value\":{{\"text\":\"Click to visit {website}\",\"color\":\"#4AA0C7\"}}}}}}'}}")
 	
+def repro_structure_to_bytes(content: StructureFileData) -> bytes:
+    """a modified Structure.to_bytes from beet, which ensures the GZip does not add
+       the current time.time to the nbt file header. 
+       Used for deterministic pack builds and auto-patch detection"""
+    dst = BytesIO()
+    with GzipFile(fileobj=dst, mode="wb", mtime=0) as fileobj:
+        StructureFile(content).write(fileobj) # type: ignore ; nbtlib has no type annotations
+    return dst.getvalue()

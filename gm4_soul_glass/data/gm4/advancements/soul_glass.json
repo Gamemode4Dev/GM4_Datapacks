@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "brown_stained_glass",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/soul_glass'}"
     },
     "title": {
       "translate": "advancement.gm4.soul_glass.title",

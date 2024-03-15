@@ -1,4 +1,4 @@
-# @s = gm4_cozy_campfire area_effect_cloud
+# @s = gm4_cozy_campfire marker
 # run from gm4_cozy_campfires:main
 
 # kill markers without campfire, and branch to players near lit cozy campfires

@@ -75,7 +75,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_metallurgy:{metal:{type:\"bismuth\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420017,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/bismuth\",Properties:{textures:[{Value:\"$ore/bismuth\"}]}}}"
+              "tag": "{gm4_metallurgy:{metal:{type:\"bismuth\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:'item/lump/bismutite',SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/bismuth\",Properties:{textures:[{Value:\"$ore/bismuth\"}]}}}"
             }
           ]
         }
