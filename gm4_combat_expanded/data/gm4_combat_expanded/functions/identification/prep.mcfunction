@@ -10,6 +10,12 @@ data modify storage gm4_combat_expanded:temp tag set from entity @s Item.tag
 execute if data storage gm4_combat_expanded:temp tag.gm4_combat_expanded.slot run function gm4_combat_expanded:identification/armor/pick_mod
 execute if data storage gm4_combat_expanded:temp tag.gm4_combat_expanded.strike run function gm4_combat_expanded:identification/weapon/pick_mod
 
+# mark as identified
+data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.identified set value 1
+
+# remove durability damage taken
+data modify storage gm4_combat_expanded:temp tag.Damage set value 0
+
 # update item
 data modify entity @s Item.tag set from storage gm4_combat_expanded:temp tag
 

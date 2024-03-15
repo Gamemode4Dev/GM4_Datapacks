@@ -59,7 +59,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{strike:1,modifier:100,damage_buffed:-1}}"
+              "tag": "{gm4_combat_expanded:{strike:1,modifier:1,damage_buffed:-1}}"
             }
           ]
         }
