@@ -2,7 +2,7 @@
     "display": {
       "icon": {
         "item": "lead",
-        "nbt": "{CustomModelData:3420000}"
+        "nbt": "{CustomModelData:'gui/advancement/balloon_animals'}"
       },
       "title": {
         "translate": "advancement.gm4.balloon_animals.title",

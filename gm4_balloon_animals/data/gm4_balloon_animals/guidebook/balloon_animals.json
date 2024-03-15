@@ -3,8 +3,7 @@
   "name": "Balloon Animals",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:lead",
-    "nbt": "{CustomModelData:3420000}"
+    "item": "minecraft:lead"
   },
   "criteria": {
     "purchase_animal1": {

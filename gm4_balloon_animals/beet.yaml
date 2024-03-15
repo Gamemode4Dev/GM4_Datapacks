@@ -23,3 +23,9 @@ meta:
     credits:
       Creator:
         - TheEpyonProject
+    model_data:
+      - item: lead
+        reference: gui/advancement/balloon_animals
+        template:
+          name: advancement
+          forward: minecraft:item/lead
