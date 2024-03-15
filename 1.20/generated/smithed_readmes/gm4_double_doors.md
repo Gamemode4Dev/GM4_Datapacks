@@ -13,7 +13,7 @@ This data pack **automatically opens adjacent doors**, making double doors fully
 - Open bottom-half trapdoors placed above a door will open/close alongside the door!
 - Only doors and trapdoors which are of the same type and adjacent show this behavior.
 - Doors are automatically closed behind the player!
-- Hold shift to enforce normal 'vanilla' door behavior!
+- Hold shift or power a door with Redstone to enforce normal 'vanilla' door behavior!
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Double_Doors)

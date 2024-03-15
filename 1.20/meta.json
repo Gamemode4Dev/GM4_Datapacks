@@ -1,5 +1,5 @@
 {
-  "last_commit": "5b2b71df1a87dd4597e6a7636e1e04498693b7f6",
+  "last_commit": "6a509c4968abce3e46b2d1e8b7a61c671c2d7c21",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -738,8 +738,8 @@
     {
       "id": "gm4_double_doors",
       "name": "Double Doors",
-      "version": "1.0.5",
-      "hash": "92c4d2430441fdd0717b1c29886caa03dbcdc555",
+      "version": "1.0.6",
+      "hash": "d2b660166e8e6a97b23006ff2e167c4a66080aa7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Double_Doors",
       "credits": {
@@ -2798,8 +2798,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.1.9",
-      "hash": "37011898b832717d9b15405b7d7452c69499f296",
+      "version": "1.1.10",
+      "hash": "2f93f681d187919ebfae46829e75d6f532d16204",
       "video_link": "",
       "wiki_link": "",
       "credits": {
