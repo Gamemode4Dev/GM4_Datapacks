@@ -149,5 +149,5 @@ jobs:
         if: ${{ failure() && steps.run-tests.conclusion == 'failure' }}
         uses: actions/upload-artifact@v4
         with:
-          name: 'Test world for ${GITHUB_SHA::7}'
+          name: 'Test world for ${{ github.sha }}'
           path: ${{ github.workspace }}/world/
