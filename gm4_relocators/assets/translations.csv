@@ -1,0 +1,10 @@
+key,en_us
+item.gm4.relocator,Relocator
+advancement.gm4.relocators.title,It's Moving Day!
+advancement.gm4.relocators.description,Pick up a container with the relocator
+text.gm4.guidebook.module_desc.relocators,Craft Relocators to pick up and move containers such as chests and Custom Crafters.
+text.gm4.guidebook.relocators.description,Relocators can be used to move machine blocks. They can be crafted in a Custom Crafter with end game materials.
+text.gm4.guidebook.relocators.crafting,Relocators can be crafted with the following recipe:
+text.gm4.guidebook.relocators.crafting_with_silk_page,A silk touch page can be used instead of a book. 
+text.gm4.guidebook.relocators.usage_pick_up,"Placing an empty relocator on a container will pick up it up, along with all of its contents.\n\nMachines such as custom crafters can also be picked up with no loss of items."
+text.gm4.guidebook.relocators.usage_place_down,Placing a filled relocator on the ground will empty the relocator and place the block there.\n\nThe empty relocator will be returned.

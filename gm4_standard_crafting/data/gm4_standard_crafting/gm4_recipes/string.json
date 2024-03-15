@@ -1,0 +1,20 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "W"
+    ],
+    "key": {
+      "W": {
+        "tag": "minecraft:wool"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:string",
+      "count": 3
+    }
+  }
+}

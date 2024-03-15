@@ -1,0 +1,26 @@
+{
+  "type": "forming_press",
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "###",
+      "#C#",
+      "###"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:clay_ball"
+      },
+      "#": {
+        "item": "minecraft:chorus_fruit"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:purpur_block",
+      "count": 16
+    }
+  }
+}

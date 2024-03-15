@@ -15,6 +15,10 @@ meta:
       required:
         lib_forceload: 1.1.0
       schedule_loops: [main]
+    model_data:
+      - item: end_stone
+        reference: item/endermite_egg
+        template: vanilla
     website:
       description: Full moons gain a element of surprise with Myserious Midnights! This module adds random events during full moons. You might encounter falling stars, or Skeletons wielding poisonous arrows! So you better listen for that howl...
       recommended:

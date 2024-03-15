@@ -14,6 +14,10 @@ meta:
       schedule_loops:
         - main
         - tick
+    model_data:
+      - item: ladder
+        reference: gui/advancement/vertical_rails
+        template: advancement
     website:
       description: Use ladders as vertical Minecart tracks.
       recommended: []

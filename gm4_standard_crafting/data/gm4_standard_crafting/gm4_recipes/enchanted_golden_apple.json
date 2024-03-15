@@ -1,0 +1,25 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "GGG",
+      "GAG",
+      "GGG"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:gold_ingot"
+      },
+      "A": {
+        "item": "minecraft:apple"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:enchanted_golden_apple",
+      "count": 1
+    }
+  }
+}

@@ -15,7 +15,7 @@ MODRINTH_API = "https://api.modrinth.com/v2"
 MODRINTH_AUTH_KEY = "BEET_MODRINTH_TOKEN"
 SMITHED_API = "https://api.smithed.dev/v2"
 SMITHED_AUTH_KEY = "BEET_SMITHED_TOKEN"
-SUPPORTED_GAME_VERSIONS = ["1.20", "1.20.1", "1.20.2"]
+SUPPORTED_GAME_VERSIONS = ["1.20", "1.20.1", "1.20.2", "1.20.3", "1.20.4"]
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/release-pipeline (gamemode4official@gmail.com)"
 
 class ModrinthConfig(PluginOptions):
@@ -40,6 +40,43 @@ def beet_default(ctx: Context):
 	ctx.data.save(
 		path=out_dir / f"{ctx.project_id}_{version.replace('.', '_')}",
 		overwrite=True,
+	)
+
+def resource_pack(ctx: Context):
+	"""Saves the resourcepack to the ./out folder."""
+	version = os.getenv("VERSION", "1.20")
+	out_dir = Path("out")
+
+	ctx.assets.save(
+		path=out_dir / f"gm4_resource_pack_{version.replace('.', '_')}",
+		overwrite=True
+	)
+
+def release_resource_pack(ctx: Context):
+	"""Saves the resourcepack to the ./out folder."""
+	version = os.getenv("VERSION", "1.20")
+	release_dir = Path("release") / version
+
+	yield
+
+	ctx.assets.save(
+		path=release_dir / f"gm4_resource_pack_{version.replace('.', '_')}.zip",
+		overwrite=True,
+		zipped=True
+	)
+
+
+def test(ctx: Context):
+	"""Saves the zipped datapack to the ./out folder in it's exit phase.
+	 	Should be first in pipeline to properly wrap all other plugins cleanup phases"""
+	out_dir = Path("out")
+
+	yield # wait for exit phase, after other plugins cleanup
+
+	ctx.data.save(
+		path=out_dir / ctx.project_id,
+		overwrite=True,
+		zipped=True,
 	)
 
 

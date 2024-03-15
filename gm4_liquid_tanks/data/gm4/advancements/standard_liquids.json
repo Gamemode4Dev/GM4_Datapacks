@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "experience_bottle",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'standard_liquids:gui/advancement/standard_liquids'}"
     },
     "title": {
       "translate": "advancement.gm4.standard_liquids.title",

@@ -7,9 +7,6 @@
     },
     "equipment": {
       "offhand": {
-        "items": [
-          "minecraft:player_head"
-        ],
         "nbt": "{gm4_zauber_cauldrons:{item:\"crystal\"}}"
       }
     }

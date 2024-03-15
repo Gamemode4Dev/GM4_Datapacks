@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "potion",
-      "nbt": "{CustomModelData:3420002,CustomPotionColor:13631487}"
+      "nbt": "{CustomModelData:'gui/advancement/potion_liquids',CustomPotionColor:13631487}"
     },
     "title": {
       "translate": "advancement.gm4.potion_liquids.title",

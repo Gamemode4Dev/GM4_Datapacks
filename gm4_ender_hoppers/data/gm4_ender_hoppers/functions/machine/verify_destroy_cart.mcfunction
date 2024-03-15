@@ -3,4 +3,4 @@
 # located at @s
 # run from #gm4_machines:destroy
 
-execute if entity @s[tag=gm4_ender_hopper_stand] run function gm4_ender_hoppers:machine/destroy_cart
+execute if entity @s[tag=gm4_ender_hopper_display] run function gm4_ender_hoppers:machine/destroy_cart

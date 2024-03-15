@@ -1,0 +1,6 @@
+key,en_us
+text.gm4.xp_storage.stored_experience,Stored Experience: 
+text.gm4.xp_storage.stored_experience.points,%s Points
+text.gm4.guidebook.module_desc.xp_storage,"Stand on top of an Ender Chest to store Experience, stand below to retrieve it!"
+text.gm4.guidebook.xp_storage.description,"In addition to items, ender chests can hold experience levels.\n\nStanding on an ender chest deposits XP, while standing below withdraws it."
+text.gm4.guidebook.xp_storage.no_mending,Experience orbs stored in ender chests cannot be transfered to tools with mending; it is a direct transfer.

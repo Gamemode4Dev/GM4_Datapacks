@@ -12,6 +12,10 @@ meta:
   gm4:
     versioning:
       schedule_loops: [main]
+    model_data:
+      - item: poppy
+        reference: gui/advancement/sweethearts
+        template: advancement
     website:
       description: Transfer your health to another player using flowers.
       recommended: []

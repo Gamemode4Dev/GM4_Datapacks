@@ -1,5 +1,5 @@
 from beet import Context, Function, configurable, PluginOptions
-from pydantic import Extra
+from pydantic.v1 import Extra
 from gm4.plugins.manifest import ManifestCacheModel
 from gm4.utils import Version, NoneAttribute
 

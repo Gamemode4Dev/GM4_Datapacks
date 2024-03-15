@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420061,gm4_machines:{id:\"relocator_full\"},SkullOwner:{Name:\"gm4_relocator_full\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$relocator_full\"}]}}}"
+              "tag": "{CustomModelData:'item/relocator_full',gm4_machines:{id:\"relocator_full\"},SkullOwner:{Name:\"gm4_relocator_full\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$relocator_full\"}]}}}"
             },
             {
               "function": "minecraft:set_name",

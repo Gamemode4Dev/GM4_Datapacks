@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "birch_stairs",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/chairs_creation'}"
     },
     "title": {
       "translate": "advancement.gm4.chairs.creation.title",

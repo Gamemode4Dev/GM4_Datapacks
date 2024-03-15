@@ -5,14 +5,20 @@
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "nbt": "{Tags:[\"gm4_infinitas_mainhand_empty\"]}"
+        "nbt": "{Tags:[\"gm4_infinitas_mainhand_empty\"]}",
+        "flags": {
+          "is_sneaking": true
+        }
       }
     },
     {
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "nbt": "{Tags:[\"gm4_infinitas_offhand_empty\"]}"
+        "nbt": "{Tags:[\"gm4_infinitas_offhand_empty\"]}",
+        "flags": {
+          "is_sneaking": true
+        }
       }
     }
   ]

@@ -5,7 +5,11 @@ version: 1.3.X
 data_pack:
   load: .
 
+resource_pack:
+  load: ../gm4_metallurgy
+
 pipeline:
+  - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
 
 meta:
@@ -14,6 +18,13 @@ meta:
       required:
         gm4_metallurgy: 1.2.0
       schedule_loops: [main]
+    model_data:
+      - item: boots
+        reference: shamir/vecto
+        template:
+          name: shamir
+          metal: bismuth
+          textures_path: gm4_metallurgy:item/shamir/bismuth
     website:
       description: Adds the 'Vecto' Shamir to Metallury. Summon a Boat or Minecart out of thin air when in need, no more wasting an inventory slot!
       recommended: []

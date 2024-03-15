@@ -13,7 +13,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420002,display:{color:4013373},HideFlags:64}"
+                            "tag": "{CustomModelData:'item/pirate_hat',display:{color:4013373},HideFlags:64}"
                         },
                         {
                             "function": "minecraft:set_name",

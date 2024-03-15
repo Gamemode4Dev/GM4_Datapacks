@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "coarse_dirt",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/desire_lines_10000'}"
     },
     "title": {
       "translate": "advancement.gm4.desire_lines.walk_10000.title",

@@ -9,7 +9,7 @@ scoreboard players set $expected_item_amount gm4_zc_fullness 1
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]
 
 # recipe
-loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:recipes/precursors/enchanted_prismarine_shard
+loot spawn ~ ~.2 ~ loot gm4_zauber_cauldrons:items/enchanted_prismarine_shard
 
 # make items in cauldron pickup-able instantly
 execute align xyz as @e[type=item,dx=0,dy=0,dz=0] run data modify entity @s PickupDelay set value 0s

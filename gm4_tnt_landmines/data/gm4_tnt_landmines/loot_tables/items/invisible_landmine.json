@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420047,gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:air\"},SkullOwner:\"$disguised/invisible\"}"
+                            "tag": "{CustomModelData:'item/tnt_landmine_invisible',gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:air\"},SkullOwner:\"$disguised/invisible\"}"
                         },
                         {
                             "function": "minecraft:set_name",

@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "shears",
-      "nbt": "{CustomModelData:3420001}"
+      "nbt": "{CustomModelData:'gui/advancement/tnt_landmines'}"
     },
     "title": {
       "translate": "advancement.gm4.tnt_landmines.title",
