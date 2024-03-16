@@ -9,7 +9,7 @@ from gm4.utils import CSV
 def beet_default(ctx: Context):
 
     # read csv file
-    animals =  CSV.from_file(Path('animals.csv'))
+    animals =  CSV.from_file(Path('gm4_balloon_animals','animals.csv'))
     
     # figure out numeric ids for animals (easier for mcfunction to work with)
     enumeration: List[str] = []

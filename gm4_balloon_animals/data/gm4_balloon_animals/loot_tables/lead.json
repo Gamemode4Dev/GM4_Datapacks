@@ -1,0 +1,67 @@
+from itertools import product
+entries = []
+for animal in ctx.meta['animals']:
+  for animal_type, animal_name in product((animal['type'],), map(str.strip, animal['names'].split(','))):
+    entries.append(
+      {
+        "type": "minecraft:item",
+        "name": "minecraft:lead",
+        "functions": [
+          {
+            "function": "minecraft:copy_nbt",
+            "source": {
+              "type": "minecraft:storage",
+              "source": "gm4_balloon_animals:temp"
+            },
+            "ops": [
+              {
+                "source": "trade_metadata",
+                "target": "trade_metadata",
+                "op": "replace"
+              }
+            ]
+          },
+          {
+            "function": "minecraft:set_name",
+            "entity": "this",
+            "name": {
+              "text": animal_type,
+              "italic": false
+            },
+            "conditions": [
+              {
+                "condition": "minecraft:value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$animal_id"
+                  },
+                  "score": "gm4_balloon_animals_data"
+                },
+                "range": ctx.meta['enumeration'].index(animal_type)
+              }
+            ]
+          },
+          {
+            "function": "minecraft:set_lore",
+            "entity": "this",
+            "lore": [
+              {
+                "text": animal_name,
+                "color": "gray"
+              }
+            ]
+          }
+        ]
+      }
+    )
+
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": entries
+    }
+  ]
+}

@@ -6,9 +6,12 @@ data_pack:
   load: .
 
 pipeline:
-  - gm4_balloon_animals.generate_loot_tables
+  - gm4_balloon_animals.generate
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_trades
+
+require:
+  - bolt
 
 meta:
   gm4:
