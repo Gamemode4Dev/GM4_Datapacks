@@ -719,7 +719,7 @@ class TranslationLinter(Reducer):
             babelbox_path = c
         else:
             if self.backfill_values:
-                self.logger.warn("Babelbox backwill was enabled but no 'translations.csv' file was found")
+                self.logger.warn("Babelbox backfill was enabled but no 'translations.csv' file was found")
             return # no file to update
         
         with open(babelbox_path, 'r', encoding='utf-8', newline='') as csvfile:

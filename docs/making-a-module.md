@@ -147,7 +147,7 @@ meta:
 give @s rabbit_hide 1 {CustomModelData:'gm4_bat_grenades:item/bat_leather'}
 ```
 
-This plugin also has infrastructure to auto-generate most parts of the resource pack. For more advanced usage, refer to [TODO](todo)
+This plugin also has infrastructure to auto-generate most parts of the resource pack. For more advanced usage, refer to [Resource Pack Management](./resource-pack-management.md)
 
 ### Guidebook pages
 Each Gamemode 4 module must include guidebook pages to aid in the explaination and progression of the module. Details on how to add a section to the guidebook can be found in [`gm4_guidebook/CONTRIBUTING.md`](https://github.com/Gamemode4Dev/GM4_Datapacks/blob/master/gm4_guidebook/CONTRIBUTING.md).
