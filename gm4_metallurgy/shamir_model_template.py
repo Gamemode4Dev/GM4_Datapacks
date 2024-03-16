@@ -202,7 +202,7 @@ def optifine_armor_properties_merging(pack: ResourcePack, path: str, current: Op
         current_cmd = set(current_match.group(1).split("|"))
         conflict_cmd = set(conflict_match.group(1).split("|"))
 
-        merged[i] = f"nbt.CustomModelData=regex:({'|'.join(current_cmd|conflict_cmd)})"
+        merged[i] = f"nbt.CustomModelData=regex:({'|'.join(sorted(current_cmd|conflict_cmd))})"
 
 
     current.text = "\n".join(merged)
