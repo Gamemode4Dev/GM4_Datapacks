@@ -1,5 +1,5 @@
 {
-  "last_commit": "1e2c05ce64489e83e6d8de8cf44c49fbcbdaf476",
+  "last_commit": "d8560015b4c13c3719ff2cbf3d8f17e97a5e6129",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2798,8 +2798,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.1.13",
-      "hash": "cc5db3d2778592791a6fcb4d67f623f06c8c1ffe",
+      "version": "1.1.14",
+      "hash": "82b2eeccaeb6c483ca76a2ed8b8cefcf7d6b37d0",
       "video_link": "",
       "wiki_link": "",
       "credits": {
