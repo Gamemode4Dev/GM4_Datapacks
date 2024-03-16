@@ -70,6 +70,10 @@ def retrieve_and_merge(ctx: Context):
                 ctx.generate(f, merge=font)
             rp.fonts.clear()
 
+            # clear mcmeta entries to the current context can properly make its own
+            del dp.mcmeta
+            del rp.mcmeta
+
             ctx.data.merge(dp)
             ctx.assets.merge(rp)
 
