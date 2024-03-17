@@ -93,13 +93,13 @@ def beet_default(ctx: Context):
     for d in ctx.data.overlays.values():
       if not d[GuidebookPages]:
         continue
-      generate_files(ctx, d)
+      generate_files(ctx, d, True)
 
 
 """
 parse guidebook file and generate all files
 """
-def generate_files(ctx:Context, d: DataPack):
+def generate_files(ctx:Context, d: DataPack, overlay: bool = False):
   for book in [b.data for b in d[GuidebookPages].values()]:
   
     # get trigger id, generate one if not already existing
@@ -139,14 +139,15 @@ def generate_files(ctx:Context, d: DataPack):
     d[f"gm4_guidebook:lectern/{book.id}"] = lectern_loot
 
     # add functions to datapack
-    d[f"gm4_guidebook:{book.id}/add_toc_line"] = generate_add_toc_line_function(book)
+    d[f"gm4_guidebook:{book.id}/add_toc_line"] = generate_add_toc_line_function(book, overlay)
     d[f"gm4_guidebook:{book.id}/setup_storage"] = generate_setup_storage_function(
-      pages, lectern_pages, book, ctx)
-    d[f"gm4_guidebook:{book.id}/summon_marker"] = generate_summon_marker_function(book)
-    d[f"gm4_guidebook:{book.id}/update_hand"] = generate_update_hand_function(book)
-    d[f"gm4_guidebook:{book.id}/update_lectern"] = generate_update_lectern_function(book)
+      pages, lectern_pages, book, ctx, overlay)
+    d[f"gm4_guidebook:{book.id}/summon_marker"] = generate_summon_marker_function(book, overlay)
+    d[f"gm4_guidebook:{book.id}/update_hand"] = generate_update_hand_function(book, overlay)
+    d[f"gm4_guidebook:{book.id}/update_lectern"] = generate_update_lectern_function(book, overlay)
 
     # add advancements to datapack
+    d["gm4_guidebook:root"] = root_advancement()
     for index, section in enumerate(book.sections):
       if (advancement := generate_advancement(book, index)) is not None:
         d[f"gm4_guidebook:{book.id}/unlock/{section.name}"] = advancement
@@ -1724,6 +1725,38 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
 
 
 """
+Creates the advancement to hide the display advancements
+"""
+def root_advancement() -> Advancement:
+  return Advancement({
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_guidebook"
+              },
+              "score": "load.status"
+            },
+            "range": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  }
+})
+
+
+
+"""
 Creates the advancement to show the toast
 """
 def generate_display_advancement(book: Book, project_id: str) -> Advancement:
@@ -1835,7 +1868,7 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
 """
 Creates the function that populates the page storage
 """
-def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], book: Book, ctx: Context) -> Function:
+def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], book: Book, ctx: Context, overlay: bool = False) -> Function:
   populated_pages: list[str] = []
   populated_lectern: list[str] = []
   locked_pages: list[str] = []
@@ -1863,13 +1896,13 @@ def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], 
     unlocked,
     locked,
     lectern
-  ], tags=["gm4_guidebook:setup_storage"])
+  ], tags=[] if overlay else ["gm4_guidebook:setup_storage"])
 
 
 """
 Creates the function that adds a line to the table of contents
 """
-def generate_add_toc_line_function(book: Book) -> Function:
+def generate_add_toc_line_function(book: Book, overlay: bool = False) -> Function:
   text_component = {
     "text": get_toc_line(book),
     "color": "#4AA0C7",
@@ -1888,13 +1921,13 @@ def generate_add_toc_line_function(book: Book) -> Function:
   }
   return Function([
     f"execute if score $trigger gm4_guide matches {book.trigger_id} if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:temp page append value ' {json.dumps(text_component, ensure_ascii=False)}'"
-  ], tags=["gm4_guidebook:add_toc_line"])
+  ], tags=[] if overlay else ["gm4_guidebook:add_toc_line"])
 
 
 """
 Creates the function to summon a guidebook marker with proper NBT
 """
-def generate_summon_marker_function(book: Book) -> Function:
+def generate_summon_marker_function(book: Book, overlay: bool = False) -> Function:
   marker_nbt = nbtlib.Compound()
   marker_nbt["CustomName"] = nbtlib.String(f'"gm4_{book.id}"')
   marker_nbt["Tags"] = nbtlib.List([nbtlib.String("gm4_guide"),nbtlib.String(f"gm4_guide_{book.id}")])
@@ -1909,28 +1942,28 @@ def generate_summon_marker_function(book: Book) -> Function:
   marker_nbt["data"]["line_count"] = nbtlib.Int(len(split_into_lines(get_toc_line(book))))
   return Function([
     f"execute if score {book.load_check} load.status matches 1.. run summon marker ~ {get_pos_hash(book.id)} ~ {nbtlib.serialize_tag(marker_nbt)}"# type: ignore
-  ], tags=["gm4_guidebook:summon_marker"])
+  ], tags=[] if overlay else ["gm4_guidebook:summon_marker"])
 
 
 """
 Creates the function to update the guidebook in hand
 """
-def generate_update_hand_function(book: Book) -> Function:
+def generate_update_hand_function(book: Book, overlay: bool = False) -> Function:
   start = f"execute if score @s gm4_guide matches {book.trigger_id} if score {book.load_check} load.status matches 1.. run"
   return Function([
     f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:{book.id}",
     f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_offhand] weapon.offhand loot gm4_guidebook:{book.id}"
-  ], tags=["gm4_guidebook:update_hand"])
+  ], tags=[] if overlay else ["gm4_guidebook:update_hand"])
 
 
 """
 Creates the function tag to update the guidebook in lecterns
 """
-def generate_update_lectern_function(book: Book) -> Function:
+def generate_update_lectern_function(book: Book, overlay: bool = False) -> Function:
   start = f"execute if score $trigger gm4_guide matches {book.trigger_id} if score {book.load_check} load.status matches 1.. run"
   return Function([
     f"{start} loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/{book.id}"
-  ], tags=["gm4_guidebook:update_lectern"])
+  ], tags=[] if overlay else ["gm4_guidebook:update_lectern"])
 
 
 """

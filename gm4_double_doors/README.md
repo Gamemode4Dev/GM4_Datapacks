@@ -13,4 +13,4 @@ This data pack **automatically opens adjacent doors**, making double doors fully
 - Open bottom-half trapdoors placed above a door will open/close alongside the door!
 - Only doors and trapdoors which are of the same type and adjacent show this behavior.
 - Doors are automatically closed behind the player!
-- Hold shift to enforce normal 'vanilla' door behavior!
+- Hold shift or power a door with Redstone to enforce normal 'vanilla' door behavior!

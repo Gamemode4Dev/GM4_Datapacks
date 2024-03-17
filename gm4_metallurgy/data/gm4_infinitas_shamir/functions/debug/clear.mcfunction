@@ -8,16 +8,17 @@ advancement revoke @s only gm4_infinitas_shamir:rejoin_bucket_check
 advancement revoke @s only gm4_infinitas_shamir:empty/pickup_mainhand
 advancement revoke @s only gm4_infinitas_shamir:empty/pickup_offhand
 
+advancement revoke @s only gm4_infinitas_shamir:lava/place_mainhand
+advancement revoke @s only gm4_infinitas_shamir:lava/place_offhand
+
 advancement revoke @s only gm4_infinitas_shamir:milk/drink_mainhand
 advancement revoke @s only gm4_infinitas_shamir:milk/drink_offhand
 
 advancement revoke @s only gm4_infinitas_shamir:powder_snow/place_mainhand
 advancement revoke @s only gm4_infinitas_shamir:powder_snow/place_offhand
 
-advancement revoke @s only gm4_infinitas_shamir:water/pickup_mainhand
-advancement revoke @s only gm4_infinitas_shamir:water/pickup_offhand
-advancement revoke @s only gm4_infinitas_shamir:water/place_mainhand
-advancement revoke @s only gm4_infinitas_shamir:water/place_offhand
+advancement revoke @s only gm4_infinitas_shamir:water/pickup_fish
+advancement revoke @s only gm4_infinitas_shamir:water/place
 
 
 scoreboard players reset @s gm4_infinitas_leave
@@ -31,7 +32,7 @@ tag @s remove gm4_infinitas_delay_replace_water
 
 tag @s add gm4_has_empty_infinitas
 execute if score $lava_infinitas gm4_ml_data matches 1 run tag @s add gm4_has_lava_infinitas
-tag @s add gm4_has_powder_snow_infinitas
+execute if score $powder_snow_infinitas gm4_ml_data matches 1 run tag @s add gm4_has_powder_snow_infinitas
 tag @s add gm4_has_water_infinitas
 
 
