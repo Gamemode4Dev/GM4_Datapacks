@@ -23,4 +23,7 @@ execute if data storage gm4_combat_expanded:temp run_links[0] run function gm4_c
 data modify storage gm4_combat_expanded:data active_links set from storage gm4_combat_expanded:temp rebuild_links
 data remove storage gm4_combat_expanded:temp rebuild_links
 
+# only calc max health stuff once per 16t
+scoreboard players set $link.calc_max_health gm4_ce_data 0
+
 execute if score $keep_tick.link gm4_ce_keep_tick matches 1 run schedule function gm4_combat_expanded:clocks/temp/link 1t

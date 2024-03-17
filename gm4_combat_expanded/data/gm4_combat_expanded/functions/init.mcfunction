@@ -57,6 +57,8 @@ scoreboard objectives add gm4_ce_natural_regen_damage dummy
 scoreboard objectives add gm4_ce_death_mult dummy
 scoreboard objectives add gm4_ce_second_wind dummy
 scoreboard objectives add gm4_ce_link_id dummy
+scoreboard objectives add gm4_ce_link_slot dummy
+scoreboard objectives add gm4_ce_link_max_health dummy
 scoreboard objectives add gm4_ce_sword_ring dummy
 scoreboard objectives add gm4_ce_sword_ring.deg dummy
 scoreboard objectives add gm4_ce_lightning_charge dummy

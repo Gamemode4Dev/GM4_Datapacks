@@ -8,12 +8,16 @@ scoreboard players set $keep_tick.link gm4_ce_keep_tick 1
 # grab link health from last tick
 execute store result score $link_health gm4_ce_data run data get storage gm4_combat_expanded:temp run_links[0].health
 
+# get average max health of all players in this link once per 16t
+execute if score $link.calc_max_health gm4_ce_data matches 1 run function gm4_combat_expanded:armor/modifier/type/link/process/calc_max_health
+execute if score $link.calc_max_health gm4_ce_data matches 0 store result score $link_max_health gm4_ce_data run data get storage gm4_combat_expanded:temp run_links[0].max_health
+
 # all player already in this link modify link health by their health change since last tick
 scoreboard players operation $link_health_start gm4_ce_data = $link_health gm4_ce_data
 execute as @a[tag=gm4_ce_link.process,tag=gm4_ce_was_linked] run function gm4_combat_expanded:armor/modifier/type/link/process/calc_health_change
 
-# make sure link health does not exceed any linked players max health
-execute as @a[tag=gm4_ce_link.process] run scoreboard players operation $link_health gm4_ce_data < @s gm4_ce_health.max
+# make sure link health does not exceed any link max health
+scoreboard players operation $link_health gm4_ce_data < $link_max_health gm4_ce_data
 
 # any new player will keep the link health below theirs so link never heals a player
 execute as @a[tag=gm4_ce_link.process,tag=!gm4_ce_was_linked] run scoreboard players operation $link_health gm4_ce_data < @s gm4_ce_health.current
