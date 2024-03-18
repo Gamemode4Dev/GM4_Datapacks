@@ -1,5 +1,6 @@
 # @template gm4:test_platform_large
 # @dummy ~1.5 ~1 ~1.5
+# @optional
 
 execute positioned ~3.5 ~1 ~2.5 run dummy PercurroVictim spawn
 execute at @s run tp @s ~ ~ ~ facing entity PercurroVictim
