@@ -15,4 +15,4 @@ function gm4_balloon_animals:purchase/trader/parse_trades
 tag @s add gm4_balloon_animal_trader_processed
 
 # if not the trader we are looking for, loop unprocessed traders
-execute if score $trade_found gm4_balloon_animals_data matches 0 as @e[type=wandering_trader,tag=gm4_balloon_animal_trader,tag=!gm4_balloon_animal_trader_processed,limit=1] run function gm4_balloons_animals:purchase/trader/search
+execute if score $trade_found gm4_balloon_animals_data matches 0 as @e[type=wandering_trader,tag=!smithed.entity,tag=gm4_balloon_animal_trader,tag=!gm4_balloon_animal_trader_processed,limit=1] run function gm4_balloon_animals:purchase/trader/search

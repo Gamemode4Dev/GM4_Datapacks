@@ -9,7 +9,7 @@ tag @s add gm4_balloon_animal_trader_new
 scoreboard players set $llamas_replaced gm4_balloon_animals_data 0
 
 # find leashed llamas
-execute as @e[type=trader_llama,distance=..6] run function gm4_balloon_animals:wandering_trader/llama/check_leasher
+execute as @e[type=trader_llama,tag=!smithed.entity,distance=..6] run function gm4_balloon_animals:wandering_trader/llama/check_leasher
 
 # pick two animals and set up trades
 function gm4_balloon_animals:wandering_trader/pick_two_animals

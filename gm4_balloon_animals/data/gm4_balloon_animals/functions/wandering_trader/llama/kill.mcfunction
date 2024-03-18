@@ -7,7 +7,7 @@ execute on leasher at @s unless entity @e[type=marker,tag=gm4_balloon_animal_ite
 
 scoreboard players add $llamas_replaced gm4_balloon_animals_data 1
 
-tp @s ~ ~-1000 ~
+tp @s ~ ~-4096 ~
 kill @s
 
 schedule function gm4_balloon_animals:delay/lead_cleanup 1t

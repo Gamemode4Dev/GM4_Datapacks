@@ -14,7 +14,7 @@ tag @s add gm4_balloon_animal_trader_eligible_check
 
 # must have 2 llamas leashed
 scoreboard players set $trader_llama_count gm4_balloon_animals_data 0
-execute as @e[type=trader_llama,distance=..6] on leasher if entity @s[tag=gm4_balloon_animal_trader_eligible_check] run scoreboard players add $trader_llama_count gm4_balloon_animals_data 1
+execute as @e[type=trader_llama,tag=!smithed.entity,distance=..6] on leasher if entity @s[tag=gm4_balloon_animal_trader_eligible_check] run scoreboard players add $trader_llama_count gm4_balloon_animals_data 1
 execute unless score $trader_llama_count gm4_balloon_animals_data matches 2 run scoreboard players set $valid_trader gm4_balloon_animals_data 0
 
 tag @s add gm4_balloon_animal_eligible_ignore

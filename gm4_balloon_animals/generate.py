@@ -15,10 +15,10 @@ def beet_default(ctx: Context):
     enumeration: List[str] = []
     rare_start = 0
     for animal in animals:
-        if bool(animal['rare']) is True:
-            enumeration.append(str(animal['type']))
+        if animal['rare'] == "TRUE":
+            enumeration.append(str(animal['id']))
             continue
-        enumeration.insert(0, str(animal['type']))
+        enumeration.insert(rare_start, str(animal['id']))
         rare_start += 1
 
     # store to meta

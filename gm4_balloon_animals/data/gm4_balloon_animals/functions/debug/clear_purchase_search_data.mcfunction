@@ -1,9 +1,0 @@
-
-
-scoreboard players reset $trade_index gm4_balloon_animals_data
-scoreboard players reset $trade_applicable gm4_balloon_animals_data
-scoreboard players reset $trade_found gm4_balloon_animals_data
-scoreboard players reset $trade_count gm4_balloon_animals_data
-scoreboard players reset $uses gm4_balloon_animals_data
-scoreboard players reset $maxUses gm4_balloon_animals_data
-scoreboard players reset $incorrect_animal gm4_balloon_animals_data

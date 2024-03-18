@@ -1,7 +1,9 @@
-from itertools import product
 entries = []
 for animal in ctx.meta['animals']:
-  for animal_type, animal_name in product((animal['type'],), map(str.strip, animal['names'].split(','))):
+  if animal['function'] != "init_animal":
+    continue
+  
+  for name in map(str.strip, animal['names'].split(',')):
     entries.append(
       {
         "type": "minecraft:item",
@@ -15,8 +17,8 @@ for animal in ctx.meta['animals']:
             },
             "ops": [
               {
-                "source": "trade_metadata",
-                "target": "trade_metadata",
+                "source": "{}",
+                "target": "{}",
                 "op": "replace"
               }
             ]
@@ -25,33 +27,33 @@ for animal in ctx.meta['animals']:
             "function": "minecraft:set_name",
             "entity": "this",
             "name": {
-              "text": animal_type,
-              "italic": false
-            },
-            "conditions": [
-              {
-                "condition": "minecraft:value_check",
-                "value": {
-                  "type": "minecraft:score",
-                  "target": {
-                    "type": "minecraft:fixed",
-                    "name": "$animal_id"
-                  },
-                  "score": "gm4_balloon_animals_data"
-                },
-                "range": ctx.meta['enumeration'].index(animal_type)
-              }
-            ]
+              "text": animal['type'],
+              "italic": False
+            }
           },
           {
             "function": "minecraft:set_lore",
             "entity": "this",
             "lore": [
               {
-                "text": animal_name,
+                "text": name,
                 "color": "gray"
               }
             ]
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "$animal_id"
+              },
+              "score": "gm4_balloon_animals_data"
+            },
+            "range": ctx.meta['enumeration'].index(animal['id'])
           }
         ]
       }

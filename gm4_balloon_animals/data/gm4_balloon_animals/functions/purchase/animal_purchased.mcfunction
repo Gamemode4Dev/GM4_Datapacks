@@ -12,7 +12,7 @@ advancement grant @s only gm4:balloon_animals
 
 # clean up
 tag @e[type=wandering_trader,tag=gm4_balloon_animal_trader_processed] remove gm4_balloon_animal_trader_processed
-tag @e[tag=gm4_balloon_animal_processed] remove gm4_balloon_animal_processed
+tag @e[type=#gm4_balloon_animals:balloon_animal,tag=gm4_balloon_animal_processed] remove gm4_balloon_animal_processed
 clear @s lead{gm4_balloon_animals:{animal:1b,trade:1b}}
 clear @s lead{gm4_balloon_animals:{animal:2b,trade:2b}}
 advancement revoke @s only gm4_balloon_animals:purchased_animal
