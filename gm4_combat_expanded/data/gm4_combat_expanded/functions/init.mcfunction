@@ -77,12 +77,23 @@ scoreboard objectives add gm4_ce_burning.duration dummy
 scoreboard objectives add gm4_ce_armor armor
 scoreboard objectives add gm4_ce_horse.speed_level dummy
 
+scoreboard objectives add gm4_ce_boss dummy
+scoreboard objectives add gm4_ce_boss.id dummy
+scoreboard objectives add gm4_ce_boss.tick_delay dummy
+scoreboard objectives add gm4_ce_boss.attack_id dummy
+scoreboard objectives add gm4_ce_boss.attack_progress dummy
+scoreboard objectives add gm4_ce_boss.health dummy
+scoreboard objectives add gm4_ce_boss.phase dummy
+scoreboard objectives add gm4_ce_boss.last_attack dummy
+scoreboard objectives add gm4_ce_boss.secondary_id dummy
+
 scoreboard objectives add gm4_ce_keep_tick dummy
 scoreboard players reset * gm4_ce_keep_tick
 
 # mob caps
 execute unless score $mob_limit.husk_army gm4_ce_data matches -2147483648..2147483647 run scoreboard players set $mob_limit.husk_army gm4_ce_data 128
 execute unless score $mob_limit.spore_zombie gm4_ce_data matches -2147483648..2147483647 run scoreboard players set $mob_limit.spore_zombie gm4_ce_data 128
+execute unless score $mob_limit.boss_minions_per_player gm4_ce_data matches -2147483648..2147483647 run scoreboard players set $mob_limit.boss_minions_per_player gm4_ce_data 3
 execute unless score $mob_limit.phantom gm4_ce_data matches -2147483648..2147483647 run scoreboard players set $mob_limit.phantom gm4_ce_data 48
 
 # constants

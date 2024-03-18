@@ -13,4 +13,3 @@ execute summon marker run function gm4_combat_expanded:armor/modifier/type/vorpa
 
 execute if score $warp_safe gm4_ce_data matches 1 run function gm4_combat_expanded:armor/modifier/type/vorpal/tp_player
 execute if score $warp_safe gm4_ce_data matches 0 run function gm4_combat_expanded:armor/modifier/type/vorpal/failsafe
-

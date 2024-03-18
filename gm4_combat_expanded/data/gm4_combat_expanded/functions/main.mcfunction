@@ -26,6 +26,9 @@ execute unless score $keep_tick.burn gm4_ce_keep_tick matches 1 if entity @a[sco
 # pierce
 execute as @e[type=!#gm4_combat_expanded:effect_immune,scores={gm4_ce_pierce_timer=1..}] at @s run function gm4_combat_expanded:weapon/modifier/pierce/tick_down
 
+# | Boss
+execute unless score $keep_tick.boss gm4_ce_keep_tick matches 1 if entity @e[type=shulker,tag=gm4_ce_boss.watcher] run schedule function gm4_combat_expanded:clocks/boss/watchers 1t
+
 # | Players
 # player submain
 schedule function gm4_combat_expanded:clocks/player_submain 8t
