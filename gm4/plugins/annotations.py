@@ -43,9 +43,9 @@ class AnnotationFormatter(logging.Formatter):
         match = re.match(r"(.+):(\d+):(\d+)", getattr(record, "annotate", ""))
         if match:
             filename, line, col = match.groups()
-            return f"::{level} file={filename},line={line},col={col},title={record.name}::{expl}"
+            return f"::{level} file={filename},line={line},col={col},title={record.name}::{record.name} {expl}"
 
-        return f"::{level} title={record.name}::{expl}"
+        return f"::{level} title={record.name}::{record.name} {expl}"
         
     
 
