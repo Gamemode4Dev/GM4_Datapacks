@@ -14,6 +14,9 @@ data modify storage gm4_combat_expanded:temp tag set from block 29999998 1 7134 
 execute store result score $modifier gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.modifier
 execute store result score $current_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp tag.Enchantments[{id:"minecraft:sharpness"}].lvl
 
+# TODO:TEMP update weapons with old modifier 100
+execute if score $modifier gm4_ce_data matches 100 run function gm4_combat_expanded:update/weapon_modifier
+
 # process items with an active modifier
 execute if score $modifier gm4_ce_data matches 101.. run function gm4_combat_expanded:weapon/check_modifier
 

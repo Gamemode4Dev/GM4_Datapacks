@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420008,gm4_heart_canister:1b,gm4_heart_canister_tier:2b,SkullOwner:'$heart_canister_tier_2'}"
+                            "tag": "{CustomModelData:'item/heart_canister_tier_2',gm4_heart_canister:1b,gm4_heart_canister_tier:2b,SkullOwner:'$heart_canister_tier_2'}"
                         },
                         {
                             "function": "minecraft:set_name",

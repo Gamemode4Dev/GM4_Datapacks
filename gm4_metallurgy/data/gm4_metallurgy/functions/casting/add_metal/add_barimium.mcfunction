@@ -3,7 +3,7 @@
 
 # add score to sand ring
 tag @s add gm4_contains_metal
-data modify entity @s ArmorItems[3].tag set value {CustomModelData:3420026,SkullOwner:"$mould/hot_metal"}
+data modify entity @s ArmorItems[3].tag set value {CustomModelData:"block/mould/hot_metal",SkullOwner:"$mould/hot_metal"}
 
 # add primary metal
 scoreboard players operation @s gm4_ml_ore_al += $metal_amount gm4_ml_data
@@ -11,7 +11,7 @@ scoreboard players operation @s gm4_ml_ore_al += $metal_amount gm4_ml_data
 # add secondary metal
 execute store result score $metal_amount gm4_ml_data run data get storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal.amount[1]
 scoreboard players operation @s gm4_ml_ore_ba += $metal_amount gm4_ml_data
-execute if score $is_obsidian_cast gm4_ml_data matches 1.. run summon item ~.45 ~0.1 ~.65 {Item:{id:"minecraft:obsidian",Count:1b,tag:{CustomModelData:3420001,display:{Lore:['{"translate":"item.gm4.slightly_damaged_obsidian","fallback":"Slightly Damaged Obsidian","color":"dark_gray"}']}}}}
+execute if score $is_obsidian_cast gm4_ml_data matches 1.. run summon item ~.45 ~0.1 ~.65 {Item:{id:"minecraft:obsidian",Count:1b,tag:{CustomModelData:"item/slightly_damaged_obsidian",display:{Lore:['{"translate":"item.gm4.slightly_damaged_obsidian","fallback":"Slightly Damaged Obsidian","color":"dark_gray"}']}}}}
 
 # visuals
 particle block dead_fire_coral_block ~.45 ~0.1 ~.65 .1 .1 .1 0 2

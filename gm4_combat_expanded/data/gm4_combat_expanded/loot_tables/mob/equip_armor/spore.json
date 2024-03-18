@@ -101,6 +101,10 @@
       ],
       "functions": [
         {
+          "function": "minecraft:set_nbt",
+          "tag": "{CustomModelData:3420001}"
+        },
+        {
           "function": "minecraft:set_attributes",
           "modifiers": [
             {

@@ -28,7 +28,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420001}"
+              "tag": "{CustomModelData:'item/bat_leather'}"
             },
             {
               "function": "set_name",

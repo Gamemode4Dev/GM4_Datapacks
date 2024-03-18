@@ -5,13 +5,24 @@ version: 1.5.X
 data_pack:
   load: .
 
+resource_pack:
+  load: ../gm4_metallurgy
+
 pipeline:
+  - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
 
 meta:
   gm4:
     versioning:
       schedule_loops: [main]
+    model_data:
+      - item: armor
+        reference: shamir/helious
+        template:
+          name: shamir
+          metal: aluminium
+          textures_path: gm4_metallurgy:item/shamir/aluminium
     website:
       description: Perfect for UHCs, this module forces you to balance protection with speed.
       recommended: []

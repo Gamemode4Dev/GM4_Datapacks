@@ -95,7 +95,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001}"
+              "tag": "{CustomModelData:'item/waders'}"
             }
           ]
         },
@@ -211,7 +211,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420004,BlockEntityTag:{LootTable:\"minecraft:chests/shipwreck_supply\"}}"
+              "tag": "{CustomModelData:'item/shipwreck_supply',BlockEntityTag:{LootTable:\"minecraft:chests/shipwreck_supply\"}}"
             },
             {
               "function": "minecraft:set_name",
@@ -230,7 +230,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420003,BlockEntityTag:{LootTable:\"minecraft:chests/shipwreck_treasure\"}}"
+              "tag": "{CustomModelData:'item/shipwreck_treasure',BlockEntityTag:{LootTable:\"minecraft:chests/shipwreck_treasure\"}}"
             },
             {
               "function": "minecraft:set_name",
@@ -249,7 +249,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3420001,BlockEntityTag:{LootTable:\"gm4_sunken_treasure:chests/treasure_chest\"}}"
+              "tag": "{CustomModelData:'item/treasure_chest',BlockEntityTag:{LootTable:\"gm4_sunken_treasure:chests/treasure_chest\"}}"
             },
             {
               "function": "minecraft:set_name",

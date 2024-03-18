@@ -6,14 +6,20 @@
 
 # find sword that should be moved
 execute store result score $sword_id gm4_ce_data run data get storage gm4_combat_expanded:temp sword_ring.data[0].tag.gm4_combat_expanded.slot
-execute as @e[type=item_display,tag=gm4_ce_sword_ring.check_sword] if score @s gm4_ce_sword_ring = $sword_id gm4_ce_data run tag @s add gm4_ce_sword_ring.current_sword
+execute as @e[type=item_display,tag=gm4_ce_sword_ring.check_sword,distance=..12] if score @s gm4_ce_sword_ring = $sword_id gm4_ce_data run tag @s add gm4_ce_sword_ring.current_sword
+
+# check durability left on this armor
+execute store result score $sword_damage gm4_ce_data run data get storage gm4_combat_expanded:temp sword_ring.data[0].tag.Damage
+execute store result score $sword_durability gm4_ce_data run data get storage gm4_combat_expanded:temp sword_ring.data[0].tag.gm4_combat_expanded.durability
+# TODO:TEMP update durability
+execute if score $sword_durability gm4_ce_data matches 0 run function gm4_combat_expanded:update/add_durability_data
 
 # if no sword exists yet spawn a new one
-execute unless entity @e[type=item_display,tag=gm4_ce_sword_ring.current_sword] summon item_display run function gm4_combat_expanded:armor/modifier/type/sword_ring/init_sword
+execute if score $sword_damage gm4_ce_data < $sword_durability gm4_ce_data unless entity @e[type=item_display,tag=gm4_ce_sword_ring.current_sword,distance=..12] summon item_display run function gm4_combat_expanded:armor/modifier/type/sword_ring/init_sword
 
 # move the sword to the correct position
 tag @s add gm4_ce_self
-$execute as @e[type=item_display,tag=gm4_ce_sword_ring.current_sword,limit=1] positioned ^ ^ ^$(offset) run function gm4_combat_expanded:armor/modifier/type/sword_ring/move_sword
+$execute if score $sword_damage gm4_ce_data < $sword_durability gm4_ce_data as @e[type=item_display,tag=gm4_ce_sword_ring.current_sword,distance=..12,limit=1] positioned ^ ^ ^$(offset) run function gm4_combat_expanded:armor/modifier/type/sword_ring/move_sword
 tag @s remove gm4_ce_self
 
 # if more swords should exist run this again for those rotated around the player

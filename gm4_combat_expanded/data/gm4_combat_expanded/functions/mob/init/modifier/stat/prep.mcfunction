@@ -13,7 +13,7 @@ attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.arm
 # burned
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/burned] generic.movement_speed modifier add 00a0987e-646e-4c9e-911e-8b07ad12df20 "gm4_ce_modifier_burned" 0.1 multiply_base
 # toxic
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/tocix] generic.attack_damage modifier add 0bb9ee29-b563-4cf7-b665-716391af0085 "gm4_ce_modifier_toxic" -0.25 multiply_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/toxic] generic.attack_damage modifier add 0bb9ee29-b563-4cf7-b665-716391af0085 "gm4_ce_modifier_toxic" -0.25 multiply_base
 # deep
 attribute @s[predicate=gm4_combat_expanded:mob/modifier/deep] generic.armor_toughness modifier add 5f5931f9-24d8-41ae-bab1-1468b5c8f35c "gm4_ce_modifier_deep" 0.6 multiply_base
 # dark
@@ -28,15 +28,15 @@ execute if predicate gm4_combat_expanded:mob/has_weapon run scoreboard players s
 execute if score $mob_damage gm4_ce_data matches 0 run data modify entity @s[predicate=!gm4_combat_expanded:mob/modifier/dark] HandDropChances set value [0.20F,0.20F]
 # randomise stats - set values between 0 and current value based on:
 # HEALTH = 0.5*score + BINOMDIST(n=0.5*score,p=0.5)
-execute if score $mob_health gm4_ce_data matches 1.. store result score $mob_health gm4_ce_data run loot spawn ~ ~-4096 ~ loot gm4_combat_expanded:mob/randomize_stats/health
+execute if score $mob_health gm4_ce_data matches 1.. store result score $mob_health gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:mob/randomize_stats/health
 # DAMAGE = 0.15*score + RANDOM(0 - 0.35*score) + BINOMDIST(n=0.5*score,p=0.5)
-execute if score $mob_damage gm4_ce_data matches 1.. store result score $mob_damage gm4_ce_data run loot spawn ~ ~-4096 ~ loot gm4_combat_expanded:mob/randomize_stats/damage
+execute if score $mob_damage gm4_ce_data matches 1.. store result score $mob_damage gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:mob/randomize_stats/damage
 # SPEED = RANDOM(0 - 0.5*score) + BINOMDIST(n=0.5*score,p=0.5)
-execute if score $mob_speed gm4_ce_data matches 1.. store result score $mob_speed gm4_ce_data run loot spawn ~ ~-4096 ~ loot gm4_combat_expanded:mob/randomize_stats/speed
+execute if score $mob_speed gm4_ce_data matches 1.. store result score $mob_speed gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:mob/randomize_stats/speed
 # ARMOR = 0.25*score + RANDOM(0 - 0.25*score) + BINOMDIST(n=0.5*score,p=0.5)
-execute if score $mob_armor gm4_ce_data matches 1.. store result score $mob_armor gm4_ce_data run loot spawn ~ ~-4096 ~ loot gm4_combat_expanded:mob/randomize_stats/armor
+execute if score $mob_armor gm4_ce_data matches 1.. store result score $mob_armor gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:mob/randomize_stats/armor
 # TOUGHNESS = 0.25*score + RANDOM(0 - 0.75*score)
-execute if score $mob_toughness gm4_ce_data matches 1.. store result score $mob_toughness gm4_ce_data run loot spawn ~ ~-4096 ~ loot gm4_combat_expanded:mob/randomize_stats/toughness
+execute if score $mob_toughness gm4_ce_data matches 1.. store result score $mob_toughness gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:mob/randomize_stats/toughness
 
 # store modifiers modified by difficulty
 execute store result storage gm4_combat_expanded:temp picked_stat.health float 0.01 run scoreboard players operation $mob_health gm4_ce_data *= $difficulty gm4_ce_data
@@ -50,3 +50,6 @@ function gm4_combat_expanded:mob/init/modifier/stat/eval with storage gm4_combat
 
 # tag to check for damage cap (1 tick later to make sure the weapon is counted as well)
 tag @s add gm4_ce_check_damage_cap
+
+# TODO: remove (spigot bug)
+execute positioned 29999998 1 7133 run kill @e[type=item,distance=..2]

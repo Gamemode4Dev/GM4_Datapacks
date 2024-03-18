@@ -89,7 +89,7 @@
                   [
                     {
                       "score": {
-                        "name": "$focus_damage_10",
+                        "name": "$damage_10",
                         "objective": "gm4_ce_data"
                       },
                       "color": "blue",
@@ -140,7 +140,7 @@
                 "with": [
                   {
                     "score": {
-                      "name": "$focus_damage_10",
+                      "name": "$damage_10",
                       "objective": "gm4_ce_data"
                     },
                     "color": "blue",
@@ -178,7 +178,7 @@
               {
                 "translate": "item.gm4.combat_expanded.lore.focus",
                 "fallback": "%s Aura",
-                "with":[
+                "with": [
                   {
                     "translate": "effect.minecraft.glowing"
                   }
@@ -216,64 +216,9 @@
                 "with": [
                   [
                     {
-                      "score": {
-                        "name": "$damage_10",
-                        "objective": "gm4_ce_data"
-                      },
-                      "color": "red",
-                      "italic": false
-                    },
-                    ".",
-                    {
-                      "score": {
-                        "name": "$damage_01",
-                        "objective": "gm4_ce_data"
-                      }
+                      "text": "0.5"
                     }
                   ],
-                  {
-                    "translate": "attribute.name.generic.attack_damage"
-                  }
-                ],
-                "color": "red",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:value_check",
-                "value": {
-                  "type": "minecraft:score",
-                  "target": {
-                    "type": "minecraft:fixed",
-                    "name": "$damage_01"
-                  },
-                  "score": "gm4_ce_data"
-                },
-                "range": 0
-              }
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "attribute.modifier.take.0",
-                "with": [
-                  {
-                    "score": {
-                      "name": "$damage_10",
-                      "objective": "gm4_ce_data"
-                    },
-                    "color": "red",
-                    "italic": false
-                  },
                   {
                     "translate": "attribute.name.generic.attack_damage"
                   }
@@ -290,11 +235,85 @@
                 "type": "minecraft:score",
                 "target": {
                   "type": "minecraft:fixed",
-                  "name": "$damage_01"
+                  "name": "$armor"
                 },
                 "score": "gm4_ce_data"
               },
-              "range": 0
+              "range": 1
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.take.0",
+                "with": [
+                  [
+                    {
+                      "text": "1"
+                    }
+                  ],
+                  {
+                    "translate": "attribute.name.generic.attack_damage"
+                  }
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 2
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.take.0",
+                "with": [
+                  [
+                    {
+                      "text": "1.5"
+                    }
+                  ],
+                  {
+                    "translate": "attribute.name.generic.attack_damage"
+                  }
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 3
             }
           ]
         },

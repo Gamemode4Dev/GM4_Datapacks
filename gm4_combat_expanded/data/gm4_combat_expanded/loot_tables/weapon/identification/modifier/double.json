@@ -48,6 +48,13 @@
                   "slot": "mainhand"
                 },
                 {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "gm4_ce_double_sharpness",
+                  "amount": 0,
+                  "operation": "addition",
+                  "slot": "mainhand"
+                },
+                {
                   "attribute": "minecraft:generic.attack_speed",
                   "name": "gm4_ce_base_attack_speed",
                   "amount": {
@@ -66,7 +73,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{strike:1,modifier:100,damage_buffed:-1}}"
+              "tag": "{gm4_combat_expanded:{strike:1,modifier:5,damage_buffed:-1}}"
             }
           ]
         }

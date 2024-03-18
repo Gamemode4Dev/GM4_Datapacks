@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420139,gm4_machines:{id:\"teleportation_anchor\"},SkullOwner:{Name:\"gm4_teleportation_anchor\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$teleportation_anchor\"}]}}}"
+              "tag": "{CustomModelData:'item/teleportation_anchor',gm4_machines:{id:\"teleportation_anchor\"},SkullOwner:{Name:\"gm4_teleportation_anchor\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$teleportation_anchor\"}]}}}"
             },
             {
               "function": "set_name",

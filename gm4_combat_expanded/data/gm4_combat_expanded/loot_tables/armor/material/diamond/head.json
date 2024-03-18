@@ -14,6 +14,7 @@
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
+                  "id": "2AD3F246-FEE1-4E67-B886-69FD380BB150",
                   "amount": 3,
                   "operation": "addition",
                   "slot": "head"
@@ -21,6 +22,7 @@
                 {
                   "attribute": "generic.armor_toughness",
                   "name": "generic.armor_toughness",
+                  "id": "2AD3F246-FEE1-4E67-B886-69FD380BB150",
                   "amount": 2,
                   "operation": "addition",
                   "slot": "head"
@@ -28,6 +30,7 @@
                 {
                   "attribute": "generic.knockback_resistance",
                   "name": "generic.knockback_resistance",
+                  "id": "0-1-438d-0-28d34",
                   "amount": 0,
                   "operation": "addition",
                   "slot": "head"
@@ -55,7 +58,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-3,slot:0,material:5,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_helmet\"}'}}"
+              "tag": "{gm4_combat_expanded:{durability:363,identified:0,armor_clamp:-3,slot:0,material:5,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_helmet\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

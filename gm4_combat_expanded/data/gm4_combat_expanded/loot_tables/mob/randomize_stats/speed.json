@@ -16,13 +16,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:stone",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": 0
-                        }
-                    ]
+                     "name": "minecraft:stone"
                 }
             ]
         },
@@ -43,7 +37,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:stone"
+                     "name": "minecraft:stone"
                 }
             ]
         }

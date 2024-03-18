@@ -14,6 +14,7 @@
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
+                  "id": "2AD3F246-FEE1-4E67-B886-69FD380BB150",
                   "amount": 1,
                   "operation": "addition",
                   "slot": "head"
@@ -41,7 +42,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-1,slot:0,material:1,name:'{\"italic\":false,\"translate\":\"item.minecraft.leather_helmet\"}'}}"
+              "tag": "{gm4_combat_expanded:{durability:55,identified:0,armor_clamp:-1,slot:0,material:1,name:'{\"italic\":false,\"translate\":\"item.minecraft.leather_helmet\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

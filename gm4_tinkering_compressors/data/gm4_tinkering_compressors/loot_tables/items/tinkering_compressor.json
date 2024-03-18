@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420136,gm4_machines:{id:\"tinkering_compressor\"},gm4_metallurgy:{has_shamir:1b},SkullOwner:{Name:\"gm4_tinkering_compressor\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$tinkering_compressor\"}]}}}"
+              "tag": "{CustomModelData:'item/tinkering_compressor',gm4_machines:{id:\"tinkering_compressor\"},gm4_metallurgy:{has_shamir:1b},SkullOwner:{Name:\"gm4_tinkering_compressor\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$tinkering_compressor\"}]}}}"
             },
             {
               "function": "set_name",

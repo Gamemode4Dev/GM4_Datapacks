@@ -3,8 +3,7 @@
   "name": "Cozy Campfires",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:campfire",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:campfire"
   },
   "criteria": {
     "place_campfire": {

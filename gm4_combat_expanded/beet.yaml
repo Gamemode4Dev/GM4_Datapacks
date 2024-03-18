@@ -31,6 +31,19 @@ meta:
         - Thanathor
       Icon Design:
         - Hozz
+    model_data:
+      - template: advancement
+        broadcast:
+        - item: clock
+          reference: gui/advancement/combat_expanded_challenger
+        - item: iron_chestplate
+          reference: gui/advancement/combat_expanded_full_set
+        - item: shield
+          reference: gui/advancement/combat_expanded_guardian
+        - item: leather_chestplate
+          reference: gui/advancement/combat_expanded_identify
+        - item: clock
+          reference: gui/advancement/combat_expanded_survive
   modrinth:
     project_id: zgxd3poi
   smithed:

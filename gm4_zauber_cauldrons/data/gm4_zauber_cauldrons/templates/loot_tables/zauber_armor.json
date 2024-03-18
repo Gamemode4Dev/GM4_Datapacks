@@ -17,7 +17,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:{{custom_model_data}}}"
+                            "tag": "{CustomModelData:\"item/zauber_armor/{{flavor}}\"}"
                         },
                         {
                             "function": "minecraft:copy_nbt",

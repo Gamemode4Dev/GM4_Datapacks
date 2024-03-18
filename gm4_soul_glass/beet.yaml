@@ -17,6 +17,13 @@ meta:
       schedule_loops: 
         - main
         - beacon_clock
+    model_data:
+      - item: brown_stained_glass
+        reference: item/soul_glass
+        template: vanilla
+      - item: brown_stained_glass
+        reference: gui/advancement/soul_glass
+        template: advancement
     website:
       description: Reverse the effects of beacons with corrupting glass! But be careful, a poison Beacon may sound great at first, but is incredibly painful in pratice.
       recommended: []

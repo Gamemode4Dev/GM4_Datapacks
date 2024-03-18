@@ -12,5 +12,12 @@ execute store result score $armor gm4_ce_data run data get storage gm4_combat_ex
 execute store result storage gm4_combat_expanded:temp tag.AttributeModifiers[{Name:"generic.armor_toughness"}].Amount double 0.1 run scoreboard players add $armor gm4_ce_data 10
 data modify storage gm4_combat_expanded:temp tag.AttributeModifiers[{Name:"generic.knockback_resistance"}].Amount set value 0.1d
 
+# set durability from netherite
+execute store result score $slot gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.slot
+execute if score $slot gm4_ce_data matches 3 run data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.durability set value 481
+execute if score $slot gm4_ce_data matches 2 run data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.durability set value 555
+execute if score $slot gm4_ce_data matches 1 run data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.durability set value 592
+execute if score $slot gm4_ce_data matches 0 run data modify storage gm4_combat_expanded:temp tag.gm4_combat_expanded.durability set value 407
+
 # update item
 scoreboard players set $change gm4_ce_data 1

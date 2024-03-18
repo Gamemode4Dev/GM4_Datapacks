@@ -12,7 +12,8 @@ scoreboard players operation @s gm4_ce_kill += @s gm4_ce_kill2
 # natural regen
 tag @s remove gm4_ce_sustain_active
 scoreboard players set @s[scores={gm4_ce_natural_regen_damage=2..,gm4_ce_kill=1..}] gm4_ce_natural_regen_damage 1
-execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm4_ce_hunger=18..},predicate=!gm4_combat_expanded:technical/poisoned] gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:player/regen/check
+execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm4_ce_hunger=18..},tag=!gm4_ce_pause_nat_regen,predicate=!gm4_combat_expanded:technical/poisoned] gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:player/regen/check
+tag @s remove gm4_ce_pause_nat_regen
 
 # check for archer armor
 tag @s[tag=gm4_ce_wearing_archer,predicate=!gm4_combat_expanded:modified_armor/archer] remove gm4_ce_wearing_archer
@@ -37,9 +38,6 @@ execute if score @s gm4_ce_healstore matches 1.. run function gm4_combat_expande
 
 # process player sleeping
 execute if score @s gm4_ce_sleep matches 1.. at @s run function gm4_combat_expanded:player/home/detect_sleep
-
-# reset mount tag from horse armor
-execute on vehicle run tag @s remove gm4_ce_speed_given
 
 # remove second wind tag if armor is taken off
 tag @s[tag=gm4_ce_second_wind.active,predicate=!gm4_combat_expanded:modified_armor/second_wind] remove gm4_ce_second_wind.active

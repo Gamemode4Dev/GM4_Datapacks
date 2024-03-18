@@ -12,6 +12,10 @@ meta:
   gm4:
     versioning:
       schedule_loops: [main]
+    model_data:
+      - item: name_tag
+        reference: gui/advancement/holographic_tags
+        template: advancement
     website:
       description: Set up floating messages with a simple name tag!
       recommended: []
@@ -25,3 +29,7 @@ meta:
         - SethBling
       Icon Design:
         - Hozz
+  modrinth:
+    project_id: AzpWemXn
+  smithed:
+    pack_id: gm4_holographic_tags

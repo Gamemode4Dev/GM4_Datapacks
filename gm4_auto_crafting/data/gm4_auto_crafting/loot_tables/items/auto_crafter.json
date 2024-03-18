@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:3420140,gm4_machines:{id:\"auto_crafter\"},SkullOwner:{Name:\"gm4_auto_crafter\",Signature:\"gm4_machine\",Value:\"$auto_crafter\"}}"
+              "tag": "{CustomModelData:'item/auto_crafter',gm4_machines:{id:\"auto_crafter\"},SkullOwner:{Name:\"gm4_auto_crafter\",Signature:\"gm4_machine\",Value:\"$auto_crafter\"}}"
             },
             {
               "function": "set_name",

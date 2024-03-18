@@ -74,9 +74,17 @@
             [
               {
                 "translate": "item.gm4.combat_expanded.lore.husk",
-                "fallback": "Dart",
+                "fallback": "Ramping %s & %s",
                 "color": "blue",
-                "italic": false
+                "italic": false,
+                "with": [
+                  {
+                    "translate": "effect.minecraft.speed"
+                  },
+                  {
+                    "translate": "effect.minecraft.hunger"
+                  }
+                ]
               }
             ]
           ]
@@ -88,15 +96,12 @@
             [
               {
                 "translate": "item.gm4.combat_expanded.lore.husk_description",
-                "fallback": "Ramping %s & %s",
+                "fallback": "Stacks up to level %s",
                 "color": "dark_gray",
                 "italic": false,
                 "with": [
                   {
-                    "translate": "effect.minecraft.speed"
-                  },
-                  {
-                    "translate": "effect.minecraft.hunger"
+                    "translate": "potion.potency.4"
                   }
                 ]
               }

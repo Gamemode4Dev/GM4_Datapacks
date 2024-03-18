@@ -74,7 +74,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{strike:1,modifier:100}}"
+              "tag": "{gm4_combat_expanded:{strike:1,modifier:4}}"
             }
           ]
         }

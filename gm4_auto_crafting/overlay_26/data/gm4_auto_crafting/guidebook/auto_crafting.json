@@ -3,8 +3,7 @@
   "name": "Auto Crafting",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:copper_block",
-    "nbt": "{CustomModelData:3420001}"
+    "item": "minecraft:copper_block"
   },
   "criteria": {
     "obtain_copper_ingot": {

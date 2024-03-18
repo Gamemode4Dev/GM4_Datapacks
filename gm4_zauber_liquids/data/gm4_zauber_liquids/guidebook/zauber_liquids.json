@@ -5,7 +5,7 @@
   "base_module": "liquid_tanks",
   "icon": {
     "item": "minecraft:potion",
-    "nbt": "{CustomModelData:3420006,CustomPotionColor:8587123}"
+    "nbt": "{CustomPotionColor:8587123}"
   },
   "criteria": {
     "obtain_zauber_potion_after_liquid_tank": {

@@ -1,3 +1,7 @@
+# cap damage mobs can do
+# @s = mob with gm4_ce_check_damage_cap tag
+# at unspecified
+# run from mob/init/modifier/stat/check_damage_cap_schedule
 
 # check if damage did not exceed the cap, otherwise reduce to get back to it
 execute store result score $mob_total_damage gm4_ce_data run attribute @s generic.attack_damage get 10

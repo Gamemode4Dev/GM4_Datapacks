@@ -14,6 +14,7 @@
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
+                  "id": "9F3D476D-C118-4544-8365-64846904B48E",
                   "amount": 5,
                   "operation": "addition",
                   "slot": "chest"
@@ -41,7 +42,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-5,slot:1,material:2,name:'{\"italic\":false,\"translate\":\"item.minecraft.chainmail_chestplate\"}'}}"
+              "tag": "{gm4_combat_expanded:{durability:240,identified:0,armor_clamp:-5,slot:1,material:2,name:'{\"italic\":false,\"translate\":\"item.minecraft.chainmail_chestplate\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

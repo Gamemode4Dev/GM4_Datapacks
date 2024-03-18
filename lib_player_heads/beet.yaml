@@ -1,6 +1,7 @@
 id: gm4_player_heads
 name: Gamemode 4 Player Heads
 version: 1.2.X
+description: Register player heads to a central system, which enables `minecraft:player_head` items to keep their item NBT even after being placed down and mined.
 
 data_pack:
   load: 

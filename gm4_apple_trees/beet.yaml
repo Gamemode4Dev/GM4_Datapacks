@@ -5,6 +5,9 @@ version: 2.2.X
 data_pack:
   load: .
 
+resource_pack: 
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_trades
@@ -36,6 +39,16 @@ meta:
         - SpecialBuilder32
       Icon Design:
         - BluePsychoRanger
+    model_data:
+      - item: apple
+        reference: block/apple_unripe
+        model: block/apple_unripe
+      - item: oak_sapling
+        reference: item/apple_tree_sapling
+        template: generated
+      - item: golden_apple
+        reference: block/golden_apple_unripe
+        model: gm4_golden_apple_trees:block/golden_apple_unripe
   modrinth:
     project_id: Afacz65w
   smithed:

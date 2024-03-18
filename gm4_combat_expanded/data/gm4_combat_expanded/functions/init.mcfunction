@@ -17,6 +17,9 @@ execute unless score $phantoms_disabled gm4_ce_data matches 1 run data modify st
 execute if score $phantoms_disabled gm4_ce_data matches 1 if score $phantoms gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'[{"text":"[WARN]","color":"red"},{"text":" Combat Expanded requires doInsomnia to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule doInsomnia false"}}]'}
 scoreboard players set $phantoms_disabled gm4_ce_data 1
 
+# reset all links
+data modify storage gm4_combat_expanded:data active_links set value [{id:-1,name:{"translate":"item.gm4.combat_expanded.name.link","fallback":"Unlinked %s","with":[{"translate":"item.minecraft.iron_chestplate","italic":false}],"italic":false,"color":"light_purple"}}]
+
 # scoreboards
 scoreboard objectives add gm4_ce_id dummy
 scoreboard objectives add gm4_ce_difficult dummy {"text":"GM4 Combat Expanded: Difficulty"}
@@ -54,6 +57,8 @@ scoreboard objectives add gm4_ce_natural_regen_damage dummy
 scoreboard objectives add gm4_ce_death_mult dummy
 scoreboard objectives add gm4_ce_second_wind dummy
 scoreboard objectives add gm4_ce_link_id dummy
+scoreboard objectives add gm4_ce_link_slot dummy
+scoreboard objectives add gm4_ce_link_max_health dummy
 scoreboard objectives add gm4_ce_sword_ring dummy
 scoreboard objectives add gm4_ce_sword_ring.deg dummy
 scoreboard objectives add gm4_ce_lightning_charge dummy
@@ -70,6 +75,7 @@ scoreboard objectives add gm4_ce_relog minecraft.custom:minecraft.leave_game
 scoreboard objectives add gm4_ce_burning.level dummy
 scoreboard objectives add gm4_ce_burning.duration dummy
 scoreboard objectives add gm4_ce_armor armor
+scoreboard objectives add gm4_ce_horse.speed_level dummy
 
 scoreboard objectives add gm4_ce_boss dummy
 scoreboard objectives add gm4_ce_boss.id dummy

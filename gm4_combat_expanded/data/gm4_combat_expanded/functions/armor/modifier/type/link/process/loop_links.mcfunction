@@ -1,22 +1,17 @@
-# find everyone linked with this player
-# @s = player with link armor
+# loop through links
+# @s = unspecified
 # at unspecified
 # run from clocks/temp/link
-# run from here
 
-scoreboard players set $keep_tick.link gm4_ce_keep_tick 1
+# grab id of this link
+execute store result score $link_id gm4_ce_link_id run data get storage gm4_combat_expanded:temp run_links[0].id
 
-# tag self and all players with the same id
-scoreboard players operation $curr_id gm4_ce_link_id = @s gm4_ce_link_id
-execute as @a[tag=gm4_ce_linked.check] if score @s gm4_ce_link_id = $curr_id gm4_ce_link_id run tag @s add gm4_ce_linked.process
+# look for players in this link
+execute as @a[tag=gm4_ce_linked,gamemode=!spectator,gamemode=!creative] if score @s gm4_ce_link_id = $link_id gm4_ce_link_id run tag @s add gm4_ce_link.process
+execute store result score $link_players gm4_ce_data if entity @a[tag=gm4_ce_link.process]
+execute if score $link_players gm4_ce_data matches 1 as @p[tag=gm4_ce_link.process] run function gm4_combat_expanded:armor/modifier/type/link/process/one_player_link
+execute if score $link_players gm4_ce_data matches 2.. run function gm4_combat_expanded:armor/modifier/type/link/process/process_link
 
-# run link if there are at least 2 players in it and this player is 
-execute store result score $link_count gm4_ce_data if entity @a[tag=gm4_ce_linked.process]
-execute if score $link_count gm4_ce_data matches 2.. run function gm4_combat_expanded:armor/modifier/type/link/process/run_link
-
-# remove all processed players from the pool
-tag @a[tag=gm4_ce_linked.process] remove gm4_ce_linked.check
-tag @a[tag=gm4_ce_linked.process] remove gm4_ce_linked.process
-
-# repeat this for players in other links
-execute as @p[tag=gm4_ce_linked.check] run function gm4_combat_expanded:armor/modifier/type/link/process/loop_links
+# check for more links
+data remove storage gm4_combat_expanded:temp run_links[0]
+execute if data storage gm4_combat_expanded:temp run_links[0] run function gm4_combat_expanded:armor/modifier/type/link/process/loop_links

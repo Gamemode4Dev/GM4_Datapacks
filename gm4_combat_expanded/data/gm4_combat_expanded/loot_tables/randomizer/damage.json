@@ -6,22 +6,20 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:stone",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 1
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:binomial",
-                "n": 3,
-                "p": 0.4
-              },
-              "add": true
-            }
-          ]
+          "name": "minecraft:stone"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 3,
+        "p": 0.4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone"
         }
       ]
     }

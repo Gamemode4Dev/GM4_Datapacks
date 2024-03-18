@@ -5,8 +5,7 @@
   "load_check": "mysterious_midnights",
   "base_module": "mysterious_midnights",
   "icon": {
-    "item": "minecraft:rotten_flesh",
-    "nbt": "{CustomModelData:3420002}"
+    "item": "minecraft:rotten_flesh"
   },
   "criteria": {
     "fight_resurrected_zombie": {

@@ -14,6 +14,7 @@
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
+                  "id": "D8499B04-0E66-4726-AB29-64469D734E0D",
                   "amount": 5,
                   "operation": "addition",
                   "slot": "legs"
@@ -41,7 +42,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-5,slot:2,material:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_leggings\"}'}}"
+              "tag": "{gm4_combat_expanded:{durability:225,identified:0,armor_clamp:-5,slot:2,material:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_leggings\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

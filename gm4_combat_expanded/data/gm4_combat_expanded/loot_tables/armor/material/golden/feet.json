@@ -14,6 +14,7 @@
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
+                  "id": "845DB27C-C624-495F-8C9F-6020A9A58B6B",
                   "amount": 1,
                   "operation": "addition",
                   "slot": "feet"
@@ -41,7 +42,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-1,slot:3,material:4,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_boots\"}'}}"
+              "tag": "{gm4_combat_expanded:{durability:91,identified:0,armor_clamp:-1,slot:3,material:4,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_boots\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

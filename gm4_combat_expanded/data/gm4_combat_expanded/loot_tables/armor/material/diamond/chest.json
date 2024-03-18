@@ -14,6 +14,7 @@
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
+                  "id": "9F3D476D-C118-4544-8365-64846904B48E",
                   "amount": 8,
                   "operation": "addition",
                   "slot": "chest"
@@ -21,6 +22,7 @@
                 {
                   "attribute": "generic.armor_toughness",
                   "name": "generic.armor_toughness",
+                  "id": "9F3D476D-C118-4544-8365-64846904B48E",
                   "amount": 2,
                   "operation": "addition",
                   "slot": "chest"
@@ -28,6 +30,7 @@
                 {
                   "attribute": "generic.knockback_resistance",
                   "name": "generic.knockback_resistance",
+                  "id": "0-1-438d-0-28d34",
                   "amount": 0,
                   "operation": "addition",
                   "slot": "chest"
@@ -55,7 +58,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-8,slot:1,material:5,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_chestplate\"}'}}"
+              "tag": "{gm4_combat_expanded:{durability:528,identified:0,armor_clamp:-8,slot:1,material:5,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_chestplate\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

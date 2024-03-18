@@ -47,6 +47,25 @@
         },
         {
           "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.gm4.combat_expanded.lore.immunity",
+                "fallback": "%s Immunity",
+                "with": [
+                  {
+                    "translate": "effect.minecraft.regeneration"
+                  }
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
           "lore": [
             ""
           ]

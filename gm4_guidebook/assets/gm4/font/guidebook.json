@@ -1,0 +1,160 @@
+{
+   "providers": [
+      {
+         "type": "space",
+         "advances": {
+            " ": 4,
+            "\u200c": 0,
+            "\ue001": -1,
+            "\ue002": -2,
+            "\ue005": -5,
+            "\ue007": -7,
+            "\ue008": -8,
+            "\ue010": -10,
+            "\ue012": -12,
+            "\ue014": -14,
+            "\ue016": -16,
+            "\ue030": -30,
+            "\ue148": -161,
+            "\uf001": 1,
+            "\uf003": 3,
+            "\uf004": 4,
+            "\uf008": 8,
+            "\uf015": 15,
+            "\uf016": 16,
+            "\uf018": 18,
+            "\uf032": 32,
+            "\uf037": 37,
+            "\uf048": 48,
+            "\uf110": 110,
+            "☒": 10
+         }
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/shapeless.png",
+         "ascent": 8,
+         "height": 10,
+         "chars": [
+            "🔀"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/locked_page.png",
+         "ascent": 24,
+         "height": 40,
+         "chars": [
+            "?"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/toast.png",
+         "ascent": 25,
+         "height": 32,
+         "chars": [
+            "\u9000"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/toast_icon.png",
+         "ascent": 25,
+         "height": 32,
+         "chars": [
+            "\u9001"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/crafting_grid.png",
+         "ascent": 7,
+         "height": 68,
+         "chars": [
+            "\u9002"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/crafting_grid.png",
+         "ascent": -32768,
+         "height": -68,
+         "chars": [
+            "\u9003"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/page.png",
+         "ascent": 55,
+         "height": 256,
+         "chars": [
+            "\u9004"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/page.png",
+         "ascent": -32768,
+         "height": -256,
+         "chars": [
+            "\u9005"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/page_edge.png",
+         "ascent": -32768,
+         "height": -256,
+         "chars": [
+            "\u9006"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/page_edge.png",
+         "ascent": 55,
+         "height": 256,
+         "chars": [
+            "\u9007"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/page_intro.png",
+         "ascent": 37,
+         "height": 256,
+         "chars": [
+            "\u9008"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/page_intro.png",
+         "ascent": -32768,
+         "height": -256,
+         "chars": [
+            "\u9009"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/page_edge_intro.png",
+         "ascent": -32768,
+         "height": -256,
+         "chars": [
+            "\u900a"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:gui/page_edge_intro.png",
+         "ascent": 37,
+         "height": 256,
+         "chars": [
+            "\u900b"
+         ]
+      }
+   ]
+}

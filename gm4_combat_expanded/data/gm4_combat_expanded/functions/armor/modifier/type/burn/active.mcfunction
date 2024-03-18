@@ -19,8 +19,8 @@ execute store success score $full_burn gm4_ce_data if score @s gm4_ce_burning.le
 
 # particles
 execute positioned ~ ~.9 ~ summon marker at @s run function gm4_combat_expanded:armor/modifier/type/burn/particles
-playsound minecraft:block.fire.ambient player @s ~ ~ ~ 0.5 1
-execute if score $full_burn gm4_ce_data matches 1 run playsound minecraft:block.fire.ambient player @s ~ ~ ~ 1 0.5
+execute unless score $full_burn gm4_ce_data matches 1 run playsound minecraft:block.fire.ambient player @s ~ ~ ~ 0.5 1
+execute if score $full_burn gm4_ce_data matches 1 run playsound minecraft:block.fire.ambient player @s ~ ~ ~ 1 1
 
 # fire resistance
 execute if score $full_burn gm4_ce_data matches 1 run effect give @s fire_resistance 2 0 true

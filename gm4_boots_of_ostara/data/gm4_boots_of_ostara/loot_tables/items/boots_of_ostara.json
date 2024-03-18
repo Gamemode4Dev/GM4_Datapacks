@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:3420001,gm4_boots_of_ostara:1b,HideFlags:64,display:{color:3705899}}"
+                            "tag": "{CustomModelData:'item/boots_of_ostara',gm4_boots_of_ostara:1b,HideFlags:64,display:{color:3705899}}"
                         },
                         {
                             "function": "minecraft:set_name",

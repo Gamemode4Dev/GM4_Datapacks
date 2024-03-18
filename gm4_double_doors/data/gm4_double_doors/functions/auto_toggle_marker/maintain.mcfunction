@@ -12,12 +12,15 @@ scoreboard players remove @s gm4_double_doors_auto_toggle_liftime 1
 # - 'player_present' markers look for the disappearance if the present player every tick, if so the state is set to 'player_departed' and the lifetime is reduced to 60 ticks
 # - 'player_departed' markers do not check for players
 # all states decay at 1 score per tick
-execute if score @s gm4_double_doors_auto_toggle_state matches ..0 if entity @a[dx=0,limit=1,gamemode=!spectator] run scoreboard players set @s gm4_double_doors_auto_toggle_state 1
-execute if score @s gm4_double_doors_auto_toggle_state matches 1 unless entity @a[dx=0,limit=1,gamemode=!spectator] run function gm4_double_doors:auto_toggle_marker/player_departed
+execute if score @s gm4_double_doors_auto_toggle_state matches ..0 if function gm4_double_doors:auto_toggle_marker/player_present run scoreboard players set @s gm4_double_doors_auto_toggle_state 1
+execute if score @s gm4_double_doors_auto_toggle_state matches 1 unless function gm4_double_doors:auto_toggle_marker/player_present run function gm4_double_doors:auto_toggle_marker/player_departed
 execute if score @s gm4_double_doors_auto_toggle_state matches 2.. if score @s gm4_double_doors_auto_toggle_liftime matches 0 run function gm4_double_doors:auto_toggle_marker/select_material
 
 # kill old auto toggle markers
 execute if score @s gm4_double_doors_auto_toggle_liftime matches ..0 run kill @s
+
+# kill auto toggle markers which are not in a door anymore
+execute unless block ~ ~ ~ #minecraft:doors run kill @s
 
 # set flag that an auto toggle marker was found
 scoreboard players set $found_auto_toggle_marker gm4_double_doors_data 1
