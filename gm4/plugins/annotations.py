@@ -73,6 +73,7 @@ class SummaryHandler(logging.handlers.BufferingHandler):
     def __init__(self, capacity: int, beet_cache: ProjectCache):
         super().__init__(capacity)
         self.beet_cache = beet_cache
+        self.summary_created = False
 
     def flush(self):
         summary_entries: dict[str, Any] = {}
@@ -115,7 +116,10 @@ class SummaryHandler(logging.handlers.BufferingHandler):
         
         summary = "# :rocket: Build Deployment Summary :rocket:\n"+table
 
-        os.environ["GITHUB_STEP_SUMMARY"] = summary # send to action summary
+        if not self.summary_created:
+            with open(os.getenv("GITHUB_ENV", "a")) as f:
+                f.write(f"GITHUB_STEP_SUMMARY={summary}") # python normally has no access to env variables, so we go direct to the action env file.
+            self.summary_created = True
         self.buffer.clear()
 
     
