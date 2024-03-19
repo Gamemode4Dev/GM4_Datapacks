@@ -190,10 +190,10 @@ def update_patch(ctx: Context):
         if (this_ver != last_ver.replace(patch=None)) or (new_hash != old_hash): # changes were made, bump the patch
             if this_ver.minor > last_ver.minor or this_ver.major > last_ver.major: # type: ignore
                 this_ver.patch = 0
-                logger.info(f"Feature update for {ctx.project_id}, setting version to {this_ver}")
+                logger.info(f"Feature update for {ctx.project_id}, setting version to {this_ver}", extra={"gh_annotate_skip": True})
             else:
                 this_ver.patch = last_ver.patch + 1 # type: ignore
-                logger.info(f"Updating {ctx.project_id} patch to {this_ver.patch}") # type: ignore
+                logger.info(f"Patch update for {ctx.project_id}, incrementing to {this_ver}", extra={"gh_annotate_skip": True})
 
             pack.version = str(this_ver)
 
