@@ -15,6 +15,7 @@ meta:
     versioning:
       schedule_loops:
         - tick
+        - main
       extra_version_injections:
         advancements:
           - place_sapling
