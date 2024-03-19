@@ -46,5 +46,11 @@ meta:
           reference: gui/advancement/combat_expanded_survive
   modrinth:
     project_id: zgxd3poi
+    minecraft:
+      - 1.20.3
+      - 1.20.4
   smithed:
     pack_id: gm4_combat_expanded
+    minecraft:
+      - 1.20.3
+      - 1.20.4
