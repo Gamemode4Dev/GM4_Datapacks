@@ -151,7 +151,7 @@ def create(ctx: Context):
 def update_patch(ctx: Context):
     """Checks the datapack files for changes from last build, and increments patch number"""
     yield
-    logger = logging.getLogger(__name__)
+    logger = parent_logger.getChild("update_patch")
 
     # load current manifest from cache
     this_manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)

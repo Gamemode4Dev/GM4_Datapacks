@@ -1,25 +1,36 @@
 from beet import Context
 import logging
+import logging.handlers
 import re
 from functools import partial
 from pathlib import Path
 
 def beet_default(ctx: Context):
-    """Sets up a logging handler to repeat build log entries with the github action annotation format"""
+    """Sets up a logging handlers to emit build log entries with the github action annotation format, 
+        and create a summary with useful build information."""
     root_logger = logging.getLogger(None) # get root logger
 
-    handler = logging.StreamHandler()
-    handler.setFormatter(AnnotationFormatter())
+    # annotation handler emits throughout build to stderr
+    ann_handler = logging.StreamHandler()
+    ann_handler.setFormatter(AnnotationFormatter())
 
     def filter(record: logging.LogRecord):
         if record.name == "time":
             return False # disable annotations for time - is spammy in debug mode
         return True
-
-    handler.addFilter(filter)
+    ann_handler.addFilter(filter)
 
     root_logger.handlers.clear() # clear the handler set by beet CLI toolchain
-    root_logger.addHandler(handler)
+    root_logger.addHandler(ann_handler)
+    
+    # summary handler holds onto certain records until the exit phase when it emits to a markdown summary
+    sum_handler = SummaryHandler(1000)
+    logging.getLogger("gm4.output").addHandler(sum_handler)
+    logging.getLogger("gm4.manifest.update_patch").addHandler(sum_handler)
+
+    # after the whole build, flush the stored records and form the markdown summary
+    yield
+    sum_handler.flush()
 
 LEVEL_CONVERSION = {
     logging.DEBUG: "debug",
@@ -52,6 +63,14 @@ class AnnotationFormatter(logging.Formatter):
 
         return f"::{level} title={record.name}::{record.name} {expl}"
         
+class SummaryHandler(logging.handlers.BufferingHandler):
+
+    def flush(self):
+        print("flush called")
+        for record in self.buffer:
+            print(record)
+        self.buffer.clear()
+
     
 
 def add_module_dir_to_diagnostics(ctx: Context):
