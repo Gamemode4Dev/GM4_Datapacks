@@ -75,7 +75,6 @@ class SummaryHandler(logging.handlers.BufferingHandler):
         self.beet_cache = beet_cache
 
     def flush(self):
-        print("flush called")
         summary_entries: dict[str, Any] = {}
 
         this_manifest = ManifestCacheModel.parse_obj(self.beet_cache["gm4_manifest"].json)
