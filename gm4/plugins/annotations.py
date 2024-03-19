@@ -98,7 +98,7 @@ class SummaryHandler(logging.handlers.BufferingHandler):
                 summary_entries[module_id] = {
                     "name": module_id,
                     "ver_update": f"{last_versions.get(module_id, '?.?.?')} → {this_versions[module_id]}",
-                    "logs": [] # lsit of tuples ("smithed", log_message)
+                    "logs": [] # list of tuples ("smithed", log_message)
                 }
             
             # append to logs
