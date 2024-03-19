@@ -22,8 +22,8 @@ execute store result storage gm4_combat_expanded:temp lightning.deg_pp int 1 run
 
 scoreboard players operation $particles_to_display gm4_ce_data = @s gm4_ce_lightning_charge
 
-execute store result storage gm4_combat_expanded:temp lightning.scale float 0.0066 run attribute @s generic.scale get 100
-execute store result storage gm4_combat_expanded:temp lightning.height float 0.0133 run attribute @s generic.scale get 100
+data modify storage gm4_combat_expanded:temp lightning.scale set value 0.66
+data modify storage gm4_combat_expanded:temp lightning.height set value 1.33
 
 execute rotated 0 0 run function gm4_combat_expanded:weapon/modifier/lightning/particles/eval_rotation with storage gm4_combat_expanded:temp lightning
 

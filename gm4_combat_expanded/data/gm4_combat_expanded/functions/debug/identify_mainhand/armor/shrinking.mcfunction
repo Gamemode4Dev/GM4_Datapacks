@@ -1,1 +1,1 @@
-function gm4_combat_expanded:debug/dont_run/eval_armor {id:"tiny"}
+tellraw @s {"text":"Not available before version 1.20.5","color":"red"}

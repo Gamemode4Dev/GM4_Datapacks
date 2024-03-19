@@ -54,13 +54,6 @@
                   },
                   "operation": "addition",
                   "slot": "mainhand"
-                },
-                {
-                  "attribute": "minecraft:player.entity_interaction_range",
-                  "name": "gm4_ce_entity_interaction_range",
-                  "amount": 1,
-                  "operation": "addition",
-                  "slot": "mainhand"
                 }
               ]
             },
@@ -306,27 +299,6 @@
               },
               "range": 0
             }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            [
-              " ",
-              {
-                "translate": "attribute.modifier.plus.0",
-                "with": [
-                  "1",
-                  {
-                    "translate": "attribute.name.player.entity_interaction_range",
-                    "color": "dark_green"
-                  }
-                ],
-                "color": "dark_green",
-                "italic": false
-              }
-            ]
           ]
         },
         {

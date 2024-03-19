@@ -1,1 +1,1 @@
-function gm4_combat_expanded:debug/dont_run/eval_weapon {id:"long"}
+tellraw @s {"text":"Not available before version 1.20.5","color":"red"}
