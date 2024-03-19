@@ -9,7 +9,6 @@ resource_pack:
   load: .
 
 pipeline:
-  - antest
   - gm4.plugins.extend.module
 
 meta:
