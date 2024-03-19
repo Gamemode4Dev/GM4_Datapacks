@@ -105,7 +105,7 @@ class SummaryHandler(logging.handlers.BufferingHandler):
             summary_entries[module_id]["logs"].append((service, record.getMessage()))
 
         # form table entries from entries
-        table = "Module | Version Update | Logs \n - | :-: | - "
+        table = "Module | Version Update | Logs \n |-|:-:|-|"
         for entry in dict(sorted(summary_entries.items())).values():
             nested_table = "<details><table>"
             for service, message in entry['logs']:
