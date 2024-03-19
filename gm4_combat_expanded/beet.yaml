@@ -44,6 +44,11 @@ meta:
           reference: gui/advancement/combat_expanded_identify
         - item: clock
           reference: gui/advancement/combat_expanded_survive
+    translation_linter_ignores:
+      - enchantment.level.14
+      - enchantment.level.15
+      - enchantment.level.16
+      - enchantment.level.17
   modrinth:
     project_id: zgxd3poi
     minecraft:
