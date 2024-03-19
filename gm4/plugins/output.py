@@ -145,7 +145,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 			res = requests.patch(f"{MODRINTH_API}/project/{opts.project_id}", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, json={"body": d})
 			if not (200 <= res.status_code < 300):
 				logger.warning(f"Failed to update description: {res.status_code} {res.text}")
-			logger.info(f"Successfully updated description of {ctx.project_name}")
+			logger.info(f"Successfully updated description of {ctx.project_name}", extra={"gh_annotate_skip": True})
 
 		# upload datapack zip
 		if ctx.project_version:
@@ -198,7 +198,7 @@ def publish_modrinth(ctx: Context, release_dir: Path, file_name: str):
 			if not (200 <= res.status_code < 300):
 				logger.warning(f"Failed to publish new version version: {res.status_code} {res.text}")
 				return
-			logger.info(f"Successfully published {res.json()['name']}")
+			logger.info(f"Successfully published {res.json()['name']}", extra={"gh_annotate_skip": True})
 
 def publish_smithed(ctx: Context, file_name: str):
 	"""Attempts to publish pack to smithed"""
@@ -243,7 +243,7 @@ def publish_smithed(ctx: Context, file_name: str):
 					}})
 				if not (200 <= res.status_code < 300):
 					logger.warning(f"Failed to update descripion: {res.status_code} {res.text}")
-				logger.info(f"{ctx.project_name} {res.text}")
+				logger.info(f"{ctx.project_name} {res.text}", extra={"gh_annotate_skip": True})
 
 		matching_version = next((v for v in project_versions if v["name"] == str(version)), None)
 		game_versions = opts.minecraft
@@ -277,7 +277,7 @@ def publish_smithed(ctx: Context, file_name: str):
 			if not (200 <= res.status_code < 300):
 				logger.warning(f"Failed to permalink {project_id} version {prior_version_in_mc_version}: {res.status_code} {res.text}")
 			else:
-				logger.info(f"Permalinked {project_id} {prior_version_in_mc_version} to git history: {res.text}")
+				logger.info(f"Permalinked {project_id} {prior_version_in_mc_version} to git history: {res.text}", extra={"gh_annotate_skip": True})
 		
 		# post new version
 		res = requests.post(f"{SMITHED_API}/packs/{opts.pack_id}/versions",
@@ -295,7 +295,7 @@ def publish_smithed(ctx: Context, file_name: str):
 		if not (200 <= res.status_code < 300):
 			logger.warning(f"Failed to publish new version of {ctx.project_name}: {res.status_code} {res.text}")
 			return
-		logger.info(f"{ctx.project_name} {res.text}")
+		logger.info(f"{ctx.project_name} {res.text}", extra={"gh_annotate_skip": True})
 
 
 
