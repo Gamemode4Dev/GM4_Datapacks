@@ -96,7 +96,7 @@ class SummaryHandler(logging.handlers.BufferingHandler):
             if module_id not in summary_entries:
                 summary_entries[module_id] = {
                     "name": module_id,
-                    "ver_update": f"{last_versions[module_id]} → {this_versions[module_id]}",
+                    "ver_update": f"{last_versions.get(module_id, '?.?.?')} → {this_versions[module_id]}",
                     "logs": [] # lsit of tuples ("smithed", log_message)
                 }
             
