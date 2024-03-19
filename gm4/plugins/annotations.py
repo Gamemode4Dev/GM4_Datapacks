@@ -1,9 +1,15 @@
-from beet import Context
 import logging
 import logging.handlers
+import os
 import re
 from functools import partial
 from pathlib import Path
+from typing import Any
+
+from beet import Context, ProjectCache
+
+from gm4.plugins.manifest import ManifestCacheModel, ManifestFileModel
+
 
 def beet_default(ctx: Context):
     """Sets up a logging handlers to emit build log entries with the github action annotation format, 
@@ -24,7 +30,7 @@ def beet_default(ctx: Context):
     root_logger.addHandler(ann_handler)
     
     # summary handler holds onto certain records until the exit phase when it emits to a markdown summary
-    sum_handler = SummaryHandler(1000)
+    sum_handler = SummaryHandler(1000, ctx.cache)
     logging.getLogger("gm4.output").addHandler(sum_handler)
     logging.getLogger("gm4.manifest.update_patch").addHandler(sum_handler)
 
@@ -64,11 +70,53 @@ class AnnotationFormatter(logging.Formatter):
         return f"::{level} title={record.name}::{record.name} {expl}"
         
 class SummaryHandler(logging.handlers.BufferingHandler):
+    def __init__(self, capacity: int, beet_cache: ProjectCache):
+        super().__init__(capacity)
+        self.beet_cache = beet_cache
 
     def flush(self):
         print("flush called")
+        summary_entries: dict[str, Any] = {}
+
+        this_manifest = ManifestCacheModel.parse_obj(self.beet_cache["gm4_manifest"].json)
+        last_manifest = ManifestFileModel.parse_obj(self.beet_cache["previous_manifest"].json)
+
+        this_versions = {id: entry.version for id, entry in (this_manifest.modules | this_manifest.libraries).items()}
+        last_versions = {id: entry.version for id, entry in ({e.id: e for e in last_manifest.modules} | last_manifest.libraries).items()}
+
         for record in self.buffer:
-            print(record)
+            if record.name.startswith("gm4.output"):
+                _, _, service, module_id = record.name.split('.')
+            elif record.name.startswith("gm4.manifest.update_patch"):
+                module_id = getattr(record, "project_id")
+                service = "gamemode4"
+            else:
+                continue
+
+            # init row
+            if module_id not in summary_entries:
+                summary_entries[module_id] = {
+                    "name": module_id,
+                    "ver_update": f"{last_versions[module_id]} → {this_versions[module_id]}",
+                    "logs": [] # lsit of tuples ("smithed", log_message)
+                }
+            
+            # append to logs
+            summary_entries[module_id]["logs"].append((service, record.getMessage()))
+
+        # form table entries from entries
+        table = "Module | Version Update | Logs \n - | :-: | - "
+        for entry in dict(sorted(summary_entries.items())).values():
+            nested_table = "<details><table>"
+            for service, message in entry['logs']:
+                nested_table += f"<tr><td>{service}<td>{message}</tr>"
+            nested_table += "</table></details>"
+
+            table += f"\n {entry['name']} | {entry['ver_update']} | {nested_table}"
+        
+        summary = "# :rocket: Build Deployment Summary :rocket:\n"+table
+
+        os.environ["GITHUB_STEP_SUMMARY"] = summary # send to action summary
         self.buffer.clear()
 
     
