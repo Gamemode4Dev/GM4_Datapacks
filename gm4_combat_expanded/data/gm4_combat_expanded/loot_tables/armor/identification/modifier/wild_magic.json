@@ -53,7 +53,7 @@
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.wild_magic",
-              "fallback": "Chaotic %s",
+              "fallback": "Wild Magic %s",
               "with": [
                 {
                   "nbt": "tag.gm4_combat_expanded.name",

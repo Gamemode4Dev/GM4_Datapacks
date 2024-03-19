@@ -725,7 +725,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.quick",
-            "fallback": "Light %1$s",
+            "fallback": "Light %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -755,7 +755,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.fire",
-            "fallback": "Flaming %1$s",
+            "fallback": "Flaming %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -770,7 +770,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.double",
-            "fallback": "Twofold %1$s",
+            "fallback": "Twofold %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -785,7 +785,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.giant",
-            "fallback": "Giant %1$s",
+            "fallback": "Giant %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -830,7 +830,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.pierce",
-            "fallback": "Piercing %1$s",
+            "fallback": "Piercing %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -862,14 +862,14 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.swift",
-            "fallback": "Swift %1$s",
+            "fallback": "Swift %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
               "contents": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.eat_modifier",
-                  "fallback": "- Attacks grant more attack speed for a short time"
+                  "fallback": "- Attacks apply lightning charges.\n- 9+ charges cause a lightning strike"
                 }
               ]
             }
@@ -877,7 +877,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.lightning",
-            "fallback": "Charged %1$s",
+            "fallback": "Charged %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -898,7 +898,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.archer",
-            "fallback": "Archery %1$s",
+            "fallback": "Archery %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -920,7 +920,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.canine",
-            "fallback": "Canine %1$s",
+            "fallback": "Canine %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -942,7 +942,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.beacon",
-            "fallback": "Radiant %1$s",
+            "fallback": "Radiant %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -964,7 +964,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.horse",
-            "fallback": "Equestrian %1$s",
+            "fallback": "Equestrian %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -1008,7 +1008,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.convert",
-            "fallback": "Hearty %1$s",
+            "fallback": "Hearty %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -1030,7 +1030,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.sword_ring",
-            "fallback": "Psychic %1$s",
+            "fallback": "Psychic %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -1080,7 +1080,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.toxic",
-            "fallback": "Coated %1$s",
+            "fallback": "Coated %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -1102,7 +1102,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.second_wind",
-            "fallback": "Rejuvenating %1$s",
+            "fallback": "Rejuvenating %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -1124,7 +1124,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.spark",
-            "fallback": "Sparking %1$s",
+            "fallback": "Sparking %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -1152,7 +1152,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.consume",
-            "fallback": "Devouring %1$s",
+            "fallback": "Devouring %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -1218,7 +1218,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.drain",
-            "fallback": "Draining %1$s",
+            "fallback": "Draining %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -1312,7 +1312,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.focus",
-            "fallback": "Focused %1$s",
+            "fallback": "Focused %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -1384,7 +1384,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.berserk",
-            "fallback": "Berserkers %1$s",
+            "fallback": "Berserkers %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -1484,7 +1484,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.vorpal",
-            "fallback": "Vorpal %1$s",
+            "fallback": "Vorpal %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -1506,7 +1506,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.wild_magic",
-            "fallback": "Wild Magic %1$s",
+            "fallback": "Wild Magic %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
@@ -1528,7 +1528,7 @@
           "\n- ",
           {
             "translate": "item.gm4.combat_expanded.name.link",
-            "fallback": "Unlinked %1$s",
+            "fallback": "Unlinked %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
