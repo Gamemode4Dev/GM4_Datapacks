@@ -117,10 +117,10 @@ class SummaryHandler(logging.handlers.BufferingHandler):
         summary = "# :rocket: Build Deployment Summary :rocket:\n"+table
 
         if not self.summary_created:
-            env_file = os.getenv("GITHUB_ENV")
+            env_file = os.getenv("GITHUB_STEP_SUMMARY")
             if env_file:
                 with open(env_file, "a") as f:
-                    f.write(f"GITHUB_STEP_SUMMARY={summary}") # python normally has no access to env variables, so we go direct to the action env file.
+                    f.write(summary) # python normally has no access to env variables, so we go direct to the action env file.
                 self.summary_created = True
         self.buffer.clear()
 
