@@ -1,5 +1,6 @@
 # @template gm4:test_platform
 # @dummy ~1.5 ~1 ~0.5
+# @optional
 
 execute positioned ~1.5 ~1 ~2.5 run dummy potionswords1 spawn
 await delay 3s
