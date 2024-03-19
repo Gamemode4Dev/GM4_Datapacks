@@ -1,5 +1,5 @@
 {
-  "last_commit": "c5d9b0721516720c11f6582223b0efad80a17587",
+  "last_commit": "ba77e44aaf59d6a3351ed3f4eab9a3bab6f78e4d",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -32,8 +32,8 @@
     {
       "id": "gm4_apple_trees",
       "name": "Apple Trees",
-      "version": "2.2.7",
-      "hash": "0eeeb0fdbff58848058cee020de0e21b7b49f393",
+      "version": "2.2.8",
+      "hash": "21ba793c1a53bb4f8e606a7601889feece6f5822",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Apple_Trees",
       "credits": {
@@ -3049,8 +3049,8 @@
     "lib_trees": {
       "id": "gm4_trees",
       "name": "Gamemode 4 Trees",
-      "version": "1.0.2",
-      "hash": "8d54431201c759a29fb541c284e1b351bbb33e13",
+      "version": "1.0.3",
+      "hash": "3d681a6829de258992edddcbe599ae4424062a52",
       "video_link": "",
       "wiki_link": "",
       "credits": {
