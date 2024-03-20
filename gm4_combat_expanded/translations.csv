@@ -34,7 +34,6 @@ item.gm4.combat_expanded.lore.wither_arrow,Arrow of Wither
 item.gm4.combat_expanded.name.archer,Archery %s
 item.gm4.combat_expanded.name.beacon,Radiant %s
 item.gm4.combat_expanded.name.canine,Canine %s
-item.gm4.combat_expanded.name.consume,Devouring %s
 item.gm4.combat_expanded.name.delay,Resonating %s
 item.gm4.combat_expanded.name.fire,Flaming %s
 item.gm4.combat_expanded.name.giant,Giant %s
@@ -70,16 +69,16 @@ text.gm4.guidebook.combat_expanded.burned,burned
 text.gm4.guidebook.combat_expanded.burned_modifier,"Mobs spawned in %s areas are weaker, but faster.\n\nHusks swarms can be found.\n\nMore mobs carry fire aspect and flame weapons."
 text.gm4.guidebook.combat_expanded.deep,deep oceans
 text.gm4.guidebook.combat_expanded.flowering,flowering
-text.gm4.guidebook.combat_expanded.flowering_modifier,"Zombies spawned in %1$s areas have less health, but can respawn when killed.\n\nCreepers will use Invisibility to sneak up to adventurers.\n\nSlimes are larger and spawn more often."
+text.gm4.guidebook.combat_expanded.flowering_modifier,"Zombies spawned in %s areas have less health, but can respawn when killed.\n\nCreepers will use Invisibility to sneak up to adventurers.\n\nSlimes are larger and spawn more often."
 text.gm4.guidebook.combat_expanded.growth,growth
 text.gm4.guidebook.combat_expanded.growth_modifier,"Mobs spawned in %s areas are weaker, but spawn in groups.\n\nSkeletons carry melee weapons.\n\nMobs can be found wearing projectile protection gear."
 text.gm4.guidebook.combat_expanded.mountainous,mountainous
-text.gm4.guidebook.combat_expanded.mountainous_modifier,"Mobs spawned in %1$s areas are stronger, but more sparse.\n\nMore mobs carry knockback and punch weapons.\n\nPhantoms can also be found here."
+text.gm4.guidebook.combat_expanded.mountainous_modifier,"Mobs spawned in %s areas are stronger.\n\nMore mobs carry knockback and punch weapons.\n\nPhantoms can be found here at night."
 text.gm4.guidebook.combat_expanded.reef,warm oceans
 text.gm4.guidebook.combat_expanded.snowy,snowy
-text.gm4.guidebook.combat_expanded.snowy_modifier,"Mobs spawned in %s areas are slower, but have more health.\n\nMany attacks will apply slowness."
+text.gm4.guidebook.combat_expanded.snowy_modifier,"Mobs spawned in %s areas are slower, but have more health.\n\nMany attacks will apply slowness.\n\nCreepers are not found here."
 text.gm4.guidebook.combat_expanded.toxic,toxic
-text.gm4.guidebook.combat_expanded.toxic_modifier,"- Applies poison, weakness or instant health to the attacker"
+text.gm4.guidebook.combat_expanded.toxic_modifier,"- Applies poison, weakness or instant health to the attacker\n- Reduced armor"
 text.gm4.guidebook.combat_expanded.section.weapons_and_armor,Special Gear
 text.gm4.guidebook.combat_expanded.drops,"Mobs can spawn with special gear.\n\nWeapons have a 20% drop chance and armour has a 8.5% drop chance.\n\nWhen dropped, the gear will have a powerful modifier."
 text.gm4.guidebook.combat_expanded.common_weapons,The following modifiers can be found on weapons:
@@ -90,36 +89,36 @@ text.gm4.guidebook.combat_expanded.poison_modifier,- Poisons attacked target
 text.gm4.guidebook.combat_expanded.quick_modifier,"- Less attack damage, but quicker attack speed"
 text.gm4.guidebook.combat_expanded.weakness_modifier,- Temporarily slows and weakens attacked target
 text.gm4.guidebook.combat_expanded.delay_modifier,"- Shortly after hitting a target, they will be dealt heavy damage, attacking through armor and effects"
-text.gm4.guidebook.combat_expanded.eat_modifier,- Attacks apply lightning charges.\n- 9+ charges cause a lightning strike
+text.gm4.guidebook.combat_expanded.lightning_modifier,- Attacks apply lightning charges.\n- 7+ charges cause a lightning strike
+text.gm4.guidebook.combat_expanded.swift_modifier,"- Reduced attack speed, but attacks grant bonus attack speed for 6 seconds"
 text.gm4.guidebook.combat_expanded.equipped_armor,The following armor modifiers are activated while equipped:
 text.gm4.guidebook.combat_expanded.husk_modifier,- Applies increasing speed and hunger while sprinting\n- Lower movement speed while not sprinting
 text.gm4.guidebook.combat_expanded.rarity_common,Common
 text.gm4.guidebook.combat_expanded.link_modifier,- Link to any adventurer wearing this armor with the same renamed name\n- All adventurers in the link share their health total
 text.gm4.guidebook.combat_expanded.beacon_modifier,- A floating light follows the wearer\n- Crouching will apply glowing and a light pulse
-text.gm4.guidebook.combat_expanded.canine_modifier,- Lower attack speed\n- Spawns an invulnerable dog that deals 4 damage\n- Commanding to sit will cause it to lose agro\n- Feeding it will grant strength
+text.gm4.guidebook.combat_expanded.canine_modifier,- Lower attack speed\n- Spawns an invulnerable dog that deals 4 damage\n- Commanding to sit will cause it to lose aggro\n- Feeding it will grant strength
 text.gm4.guidebook.combat_expanded.rarity_rare,Rare
 text.gm4.guidebook.combat_expanded.horse_modifier,- Mounts receive speed and additional helpful effects
 text.gm4.guidebook.combat_expanded.damage_taken_armor,The following armor modifiers are activated when damage is taken:
-text.gm4.guidebook.combat_expanded.reactive_modifier,- Gain absorption for 30 seconds
+text.gm4.guidebook.combat_expanded.reactive_modifier,- Gain absorption for 30 seconds\n- Reduced armor
 text.gm4.guidebook.combat_expanded.vorpal_modifier,- Teleport to a random location within 16 blocks when damaged\n- Full knockback resistance when equipped
 text.gm4.guidebook.combat_expanded.killing_armor,The following armor modifiers are activated when upon killing:
-text.gm4.guidebook.combat_expanded.vamp_modifier,- Regenerate half a heart of health
-text.gm4.guidebook.combat_expanded.totem_modifier,"- Summons a totem that gives allies regeneration, resistance, speed, or strength\n- Totems can stack if mobs are killed within its range of 12 blocks"
-text.gm4.guidebook.combat_expanded.consume_modifier,- Permanately increases attack damage\n- Converts to Satiated when fully charged
+text.gm4.guidebook.combat_expanded.vamp_modifier,- Regenerate a heart of health\n- Reduced armor
+text.gm4.guidebook.combat_expanded.totem_modifier,"- Summons a totem that gives allies regeneration, resistance, speed, or strength\n- Totems can stack if mobs are killed within its range of 18 blocks"
 text.gm4.guidebook.combat_expanded.safe_armor,The following armor modifiers are activated while not in combat:
 text.gm4.guidebook.combat_expanded.scout_modifier,- Quicker movement speed
 text.gm4.guidebook.combat_expanded.archer_modifier,- Multiple arrows will be shot from a single arrow shot\n- Lower attack speed when equipped
 text.gm4.guidebook.combat_expanded.shielded_modifier,- Gain absorption
 text.gm4.guidebook.combat_expanded.sneak_modifier,"- Gains invisibility when sneaking, when sneaking ends gain attack speed"
 text.gm4.guidebook.combat_expanded.low_health_armor,The following armor modifiers are activated while below half health:
-text.gm4.guidebook.combat_expanded.second_wind_modifier,"- Stores some damage taken, then restores it when the wearer is out of combat"
+text.gm4.guidebook.combat_expanded.second_wind_modifier,"- Stores some damage taken, then restores it when the wearer is out of combat\n- Reduced armor"
 text.gm4.guidebook.combat_expanded.poised_modifier,"- Higher attack damage, but lower armor\n- Has an opposite effect when health is below 50%"
-text.gm4.guidebook.combat_expanded.soothe_modifier,- AOE of healing effect and regeneration\n- Can only happen once per day
+text.gm4.guidebook.combat_expanded.soothe_modifier,- AOE of healing effect and regeneration\n- Can be recharged by killing mobs
 text.gm4.guidebook.combat_expanded.high_health_armor,The following armor modifiers are activated while above half health:
 text.gm4.guidebook.combat_expanded.half_modifier,- Damage is dealt until wearer is at half health\n- Resistance III when equipped
 text.gm4.guidebook.combat_expanded.immune_modifier,"- Immune to mining fatigue, poison or weakness, and to hunger, blindness, nausea or wither"
-text.gm4.guidebook.combat_expanded.deep_modifier,Mobs spawned in %s are more tougher to kill.\n\nDrowneds are more powerful as well.
-text.gm4.guidebook.combat_expanded.reef_modifier,Drowned spawned in %1$s are much more powerful and more frequently carry tridents.\n\nGuardians can be found here even outside of Ocean Monuments.
+text.gm4.guidebook.combat_expanded.deep_modifier,Mobs spawned in %s are tougher to kill.\n\nDrowned are faster as well.
+text.gm4.guidebook.combat_expanded.reef_modifier,Drowned spawned in %s are much more powerful and more frequently carry tridents.\n\nGuardians can be found here even outside of Ocean Monuments.
 text.gm4.guidebook.combat_expanded.toxic_modifier_2,"Mobs spawned in %s areas are weaker, but apply weakness, hunger, and poison.\n\nSpider clusters can be found."
 advancement.gm4.combat_expanded.vorpal.title,Vwoops!
 advancement.gm4.combat_expanded.vorpal.description,Who thought this was a good idea?
@@ -185,13 +184,17 @@ item.gm4.combat_expanded.name.swift,Swift %s
 text.gm4.guidebook.combat_expanded.double_modifier,- Has low base attack damage but will double total attack damage
 text.gm4.guidebook.combat_expanded.pierce_modifier,- Reduces armor of attacked target for 10 seconds
 text.gm4.guidebook.combat_expanded.convert_modifier,- Converts armor from this piece to max health
-text.gm4.guidebook.combat_expanded.sword_ring_modifier,- Spawns a floating sword to circle around the wearer
-text.gm4.guidebook.combat_expanded.spark_modifier,- Apply a lightning charge to attacker.\n- 9+ charges cause a lightning strike
+text.gm4.guidebook.combat_expanded.sword_ring_modifier,- Spawns a floating sword to circle around the wearer\n- Lower attack speed when equipped
+text.gm4.guidebook.combat_expanded.spark_modifier,- Apply a lightning charge to attacker.\n- 7+ charges cause a lightning strike
 text.gm4.guidebook.combat_expanded.drain_modifier,"- Grants 1 bonus max health, up to a cap\n- Taking damage reduces max health"
-text.gm4.guidebook.combat_expanded.focus_modifier,"- Gain attack damage, lose attack damage when damaged"
+text.gm4.guidebook.combat_expanded.sustain_modifier,"- Regenerate health faster"
+text.gm4.guidebook.combat_expanded.focus_modifier,"- Gain attack damage, lose attack damage when damaged\n- Nearby mobs have glowing"
+text.gm4.guidebook.combat_expanded.reckless_modifier,"- Decrease armor and increase attack damage for 15 seconds\n- Effect can stack until piece runs out of armor"
 text.gm4.guidebook.combat_expanded.berserk_modifier,"- Gain attack damage, attack speed, movement speed and knockback resistance"
+text.gm4.guidebook.combat_expanded.burn_modifier,"- Deal fire damage to nearby entities for 10 seconds, damage stacks with more kills\n- Taking damage also adds a stack\n- At 10 stacks also set entities on fire and gain fire resistance"
 text.gm4.guidebook.combat_expanded.epic_armor,The following armor modifiers are only found in specific places:
 text.gm4.guidebook.combat_expanded.vorpal_location,Found in The End
 text.gm4.guidebook.combat_expanded.wild_magic_modifier,- Apply a random potion effect with random level and duration to wearer when damaged
 text.gm4.guidebook.combat_expanded.wild_magic_location,Found in Mushroom Fields
 text.gm4.guidebook.combat_expanded.link_location,Found in Deep Dark
+

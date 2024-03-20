@@ -309,7 +309,7 @@
           "\n",
           {
             "translate": "text.gm4.guidebook.combat_expanded.deep_modifier",
-            "fallback": "Mobs spawned in %s are more tougher to kill.\n\nDrowneds are more powerful as well.",
+            "fallback": "Mobs spawned in %s are tougher to kill.\n\nDrowned are faster as well.",
             "with": [
               {
                 "translate": "text.gm4.guidebook.combat_expanded.deep",
@@ -358,7 +358,7 @@
           "\n",
           {
             "translate": "text.gm4.guidebook.combat_expanded.flowering_modifier",
-            "fallback": "Zombies spawned in %1$s areas have less health, but can respawn when killed.\n\nCreepers will use Invisibility to sneak up to adventurers.\n\nSlimes are larger and spawn more often.",
+            "fallback": "Zombies spawned in %s areas have less health, but can respawn when killed.\n\nCreepers will use Invisibility to sneak up to adventurers.\n\nSlimes are larger and spawn more often.",
             "with": [
               {
                 "translate": "text.gm4.guidebook.combat_expanded.flowering",
@@ -468,7 +468,7 @@
           "\n",
           {
             "translate": "text.gm4.guidebook.combat_expanded.mountainous_modifier",
-            "fallback": "Mobs spawned in %1$s areas are stronger, but more sparse.\n\nMore mobs carry knockback and punch weapons.\n\nPhantoms can also be found here.",
+            "fallback": "Mobs spawned in %s areas are stronger.\n\nMore mobs carry knockback and punch weapons.\n\nPhantoms can be found here at night.",
             "with": [
               {
                 "translate": "text.gm4.guidebook.combat_expanded.mountainous",
@@ -549,7 +549,7 @@
           "\n",
           {
             "translate": "text.gm4.guidebook.combat_expanded.reef_modifier",
-            "fallback": "Drowned spawned in %1$s are much more powerful and more frequently carry tridents.\n\nGuardians can be found here even outside of Ocean Monuments.",
+            "fallback": "Drowned spawned in %s are much more powerful and more frequently carry tridents.\n\nGuardians can be found here even outside of Ocean Monuments.",
             "with": [
               {
                 "translate": "text.gm4.guidebook.combat_expanded.reef",
@@ -586,7 +586,7 @@
           "\n",
           {
             "translate": "text.gm4.guidebook.combat_expanded.snowy_modifier",
-            "fallback": "Mobs spawned in %s areas are slower, but have more health.\n\nMany attacks will apply slowness.",
+            "fallback": "Mobs spawned in %s areas are slower, but have more health.\n\nMany attacks will apply slowness.\n\nCreepers are not found here.",
             "with": [
               {
                 "translate": "text.gm4.guidebook.combat_expanded.snowy",
@@ -868,8 +868,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "text.gm4.guidebook.combat_expanded.eat_modifier",
-                  "fallback": "- Attacks apply lightning charges.\n- 9+ charges cause a lightning strike"
+                  "translate": "text.gm4.guidebook.combat_expanded.swift_modifier",
+                  "fallback": "- Reduced attack speed, but attacks grant bonus attack speed for 6 seconds"
                 }
               ]
             }
@@ -883,8 +883,8 @@
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "text.gm4.guidebook.combat_expanded.eat_modifier",
-                  "fallback": "- Attacks apply lightning charges.\n- 9+ charges cause a lightning strike"
+                  "translate": "text.gm4.guidebook.combat_expanded.lightning_modifier",
+                  "fallback": "- Attacks apply lightning charges.\n- 7+ charges cause a lightning strike"
                 }
               ]
             }
@@ -927,7 +927,7 @@
               "contents": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.canine_modifier",
-                  "fallback": "- Lower attack speed\n- Spawns an invulnerable dog that deals 4 damage\n- Commanding to sit will cause it to lose agro\n- Feeding it will grant strength"
+                  "fallback": "- Lower attack speed\n- Spawns an invulnerable dog that deals 4 damage\n- Commanding to sit will cause it to lose aggro\n- Feeding it will grant strength"
                 },
                 "\n",
                 {
@@ -1037,7 +1037,7 @@
               "contents": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.sword_ring_modifier",
-                  "fallback": "- Spawns a floating sword to circle around the wearer"
+                  "fallback": "- Spawns a floating sword to circle around the wearer\n- Lower attack speed when equipped"
                 },
                 "\n",
                 {
@@ -1065,7 +1065,7 @@
               "contents": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.reactive_modifier",
-                  "fallback": "- Gain absorption for 30 seconds"
+                  "fallback": "- Gain absorption for 30 seconds\n- Reduced armor"
                 },
                 "\n",
                 {
@@ -1087,7 +1087,7 @@
               "contents": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.toxic_modifier",
-                  "fallback": "- Applies poison, weakness or instant health to the attacker"
+                  "fallback": "- Applies poison, weakness or instant health to the attacker\n- Reduced armor"
                 },
                 "\n",
                 {
@@ -1109,7 +1109,7 @@
               "contents": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.second_wind_modifier",
-                  "fallback": "- Stores some damage taken, then restores it when the wearer is out of combat"
+                  "fallback": "- Stores some damage taken, then restores it when the wearer is out of combat\n- Reduced armor"
                 },
                 "\n",
                 {
@@ -1131,7 +1131,7 @@
               "contents": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.spark_modifier",
-                  "fallback": "- Apply a lightning charge to attacker.\n- 9+ charges cause a lightning strike"
+                  "fallback": "- Apply a lightning charge to attacker.\n- 7+ charges cause a lightning strike"
                 },
                 "\n",
                 {
@@ -1151,15 +1151,37 @@
           },
           "\n- ",
           {
-            "translate": "item.gm4.combat_expanded.name.consume",
-            "fallback": "Devouring %s",
+            "translate": "item.gm4.combat_expanded.name.burn",
+            "fallback": "Burning %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "text.gm4.guidebook.combat_expanded.consume_modifier",
-                  "fallback": "- Permanately increases attack damage\n- Converts to Satiated when fully charged"
+                  "translate": "text.gm4.guidebook.combat_expanded.burn_modifier",
+                  "fallback": "- Deal fire damage to nearby entities for 10 seconds, damage stacks with more kills\n- Taking damage also adds a stack\n- At 10 stacks also set entities on fire and gain fire resistance"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.reckless",
+            "fallback": "Reckless %s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.reckless_modifier",
+                  "fallback": "- Decrease armor and increase attack damage for 15 seconds\n- Effect can stack until piece runs out of armor"
                 },
                 "\n",
                 {
@@ -1181,7 +1203,7 @@
               "contents": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.vamp_modifier",
-                  "fallback": "- Regenerate half a heart of health"
+                  "fallback": "- Regenerate a heart of health\n- Reduced armor"
                 },
                 "\n",
                 {
@@ -1203,7 +1225,7 @@
               "contents": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.totem_modifier",
-                  "fallback": "- Summons a totem that gives allies regeneration, resistance, speed, or strength\n- Totems can stack if mobs are killed within its range of 12 blocks"
+                  "fallback": "- Summons a totem that gives allies regeneration, resistance, speed, or strength\n- Totems can stack if mobs are killed within its range of 18 blocks"
                 },
                 "\n",
                 {
@@ -1319,7 +1341,7 @@
               "contents": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.focus_modifier",
-                  "fallback": "- Gain attack damage, lose attack damage when damaged"
+                  "fallback": "- Gain attack damage, lose attack damage when damaged\n- Nearby mobs have glowing"
                 },
                 "\n",
                 {
@@ -1369,7 +1391,7 @@
               "contents": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.soothe_modifier",
-                  "fallback": "- AOE of healing effect and regeneration\n- Can only happen once per day"
+                  "fallback": "- AOE of healing effect and regeneration\n- Can be recharged by killing mobs"
                 },
                 "\n",
                 {
@@ -1402,46 +1424,18 @@
                 }
               ]
             }
-          }
-        ],
-        [
-          {
-            "translate": "text.gm4.guidebook.combat_expanded.high_health_armor",
-            "fallback": "The following armor modifiers are activated while above half health:"
           },
           "\n- ",
           {
-            "translate": "item.gm4.combat_expanded.name.poised",
-            "fallback": "Fluxed %s",
+            "translate": "item.gm4.combat_expanded.name.sustain",
+            "fallback": "Sustaining %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "text.gm4.guidebook.combat_expanded.poised_modifier",
-                  "fallback": "- Higher attack damage, but lower armor\n- Has an opposite effect when health is below 50%"
-                },
-                "\n",
-                {
-                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
-                  "fallback": "Common",
-                  "italic": true,
-                  "color": "gray"
-                }
-              ]
-            }
-          },
-          "\n- ",
-          {
-            "translate": "item.gm4.combat_expanded.name.half",
-            "fallback": "Fractal %s",
-            "with": [""],
-            "hoverEvent": {
-              "action": "show_text",
-              "contents": [
-                {
-                  "translate": "text.gm4.guidebook.combat_expanded.half_modifier",
-                  "fallback": "- Damage is dealt until wearer is at half health\n- Resistance III when equipped"
+                  "translate": "text.gm4.guidebook.combat_expanded.sustain_modifier",
+                  "fallback": "- Regenerate health faster"
                 },
                 "\n",
                 {
@@ -1469,6 +1463,34 @@
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.rarity_rare",
                   "fallback": "Rare",
+                  "italic": true,
+                  "color": "gray"
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.combat_expanded.high_health_armor",
+            "fallback": "The following armor modifiers are activated while above half health:"
+          },
+          "\n- ",
+          {
+            "translate": "item.gm4.combat_expanded.name.half",
+            "fallback": "Fractal %s",
+            "with": [""],
+            "hoverEvent": {
+              "action": "show_text",
+              "contents": [
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.half_modifier",
+                  "fallback": "- Damage is dealt until wearer is at half health\n- Resistance III when equipped"
+                },
+                "\n",
+                {
+                  "translate": "text.gm4.guidebook.combat_expanded.rarity_common",
+                  "fallback": "Common",
                   "italic": true,
                   "color": "gray"
                 }
