@@ -121,7 +121,7 @@ Gamemode 4 modules use `/schedule` to run functions every few ticks. There are 2
 ## Writing the module
 When writing the data pack, make sure to follow our [Code Conventions](./code-conventions.md).
 
-### Compatibility with the resource pack
+### Translatable text
 All text visible to survival players (names, lore, actionbar, advancements) should use translation fallbacks like this:
 ```json
 {
@@ -129,8 +129,25 @@ All text visible to survival players (names, lore, actionbar, advancements) shou
   "fallback": "Clever Crushing"
 }
 ```
+Additionally, every translation key defined by your data pack should be listed in the `translations.csv` babelbox file, along with its fallback as the `en_us` translation.
 
-<!-- TODO: Explain custom model data process when the resource pack PR is merged -->
+### CustomModelData
+Gamemode 4 uses a custom beet plugin that enables the use of string references instead of hard-to-remember integers when dealing with CustomModelData. After configuring the CustomModelData values your data pack will use in the `beet.yaml` or `model_data`.yaml files, the plugin will auto-assign the unique integer values and substitute them into the data pack output by the beet build process. 
+
+As a simple example:
+```yaml
+# beet.yaml
+meta:
+  gm4:
+    model_data:
+      - item: rabbit_hide
+        reference: gm4_bat_grenades:item/bat_leather
+```
+```mcfunction
+give @s rabbit_hide 1 {CustomModelData:'gm4_bat_grenades:item/bat_leather'}
+```
+
+This plugin also has infrastructure to auto-generate most parts of the resource pack. For more advanced usage, refer to [Resource Pack Management](./resource-pack-management.md)
 
 ### Guidebook pages
 Each Gamemode 4 module must include guidebook pages to aid in the explaination and progression of the module. Details on how to add a section to the guidebook can be found in [`gm4_guidebook/CONTRIBUTING.md`](https://github.com/Gamemode4Dev/GM4_Datapacks/blob/master/gm4_guidebook/CONTRIBUTING.md).
