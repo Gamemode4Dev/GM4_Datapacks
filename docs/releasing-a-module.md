@@ -30,11 +30,10 @@ Before a module is able to be released on Modrinth and Smithed, some promo mater
 2. Set **Project id** to the module ID, for example `gm4_holographic_tags`
 3. Set **Project name** to the module name, combined with "Gamemode 4", for example `Holographic Tags | Gamemode 4`
 4. Set **Short project description** to the website description, for example `Set up floating messages with a simple name tag!`
-5. Set **Project icon** to the URL of the generated pack icon on the release branch, for example `https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/1.20/generated/pack_icons/gm4_holographic_tags.png`
-6. Set **Project website** to the module on gm4.co, for example `https://gm4.co/modules/holographic-tags`
-7. On the **Versions** tab, add a dummy version using tag `0.0.1`, this will need to be removed later
-8. Set the **Datapack URL** to the zip on the release branch, for example `https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/1.20/gm4_holographic_tags_1_20.zip`
-9. Set **Supported Versions** to the latest release
+5. Set **Project website** to the module on gm4.co, for example `https://gm4.co/modules/holographic-tags`
+6. On the **Versions** tab, add a dummy version using tag `0.0.1`, this will need to be removed later
+7. Set the **Datapack URL** to the zip on the release branch, for example `https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/1.20/gm4_holographic_tags_1_20.zip`
+8. Set **Supported Versions** to the latest release
 
 ## Configuring the repo
 Add the Modrinth and Smithed project IDs to the module's `beet.yaml` file. Commit or PR this change to the default branch and let the workflow run.
