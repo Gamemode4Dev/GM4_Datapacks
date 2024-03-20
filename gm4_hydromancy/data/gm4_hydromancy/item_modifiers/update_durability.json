@@ -1,0 +1,12 @@
+{
+  "function": "minecraft:set_damage",
+  "damage": {
+    "type": "minecraft:score",
+    "target": {
+      "type": "minecraft:fixed",
+      "name": "$durability"
+    },
+    "score": "gm4_hy_data",
+    "scale": 0.01
+  }
+}

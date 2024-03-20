@@ -1,0 +1,33 @@
+{
+    "criteria": {
+      "throw_trident": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "gm4_hydromancy"
+                },
+                "score": "load.status"
+              },
+              "range": 1
+            }
+          ],
+          "item": {
+            "items": [
+              "minecraft:trident"
+            ],
+            "nbt": "{gm4_hy_spell_trident:{}}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "gm4_hydromancy:spell_trident/using"
+    }
+  }
+  

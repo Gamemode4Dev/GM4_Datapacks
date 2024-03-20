@@ -1,0 +1,28 @@
+id: gm4_hydromancy
+name: Hydromancy
+version: 1.0.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: 
+        - main
+        - tick
+        - clock_coral_core
+        - clock_coral_vine
+        - clock_tracked_fish
+    website:
+      description: Dive into a new magic system through rituals and your own aquarium!
+      recommended: []
+      notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Hydromancy
+    credits:
+      Creator:
+        - Thanathor

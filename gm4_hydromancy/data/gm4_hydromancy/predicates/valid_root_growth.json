@@ -1,0 +1,73 @@
+[
+    {
+        "condition": "minecraft:location_check",
+        "offsetY": -1,
+        "predicate": {
+            "block": {
+                "tag": "gm4:full_collision"
+            }
+        }
+    },
+    {
+        "condition": "minecraft:location_check",
+        "predicate": {
+            "block": {
+                "blocks": [
+                    "minecraft:water"
+                ]
+            }
+        }
+    },
+    {
+        "condition": "minecraft:inverted",
+        "term": {
+            "condition": "minecraft:any_of",
+            "terms": [
+                {
+                    "condition": "minecraft:location_check",
+                    "offsetX": 1,
+                    "predicate": {
+                        "block": {
+                            "blocks": [
+                                "minecraft:flowering_azalea_leaves"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "condition": "minecraft:location_check",
+                    "offsetZ": 1,
+                    "predicate": {
+                        "block": {
+                            "blocks": [
+                                "minecraft:flowering_azalea_leaves"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "condition": "minecraft:location_check",
+                    "offsetX": -1,
+                    "predicate": {
+                        "block": {
+                            "blocks": [
+                                "minecraft:flowering_azalea_leaves"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "condition": "minecraft:location_check",
+                    "offsetZ": -1,
+                    "predicate": {
+                        "block": {
+                            "blocks": [
+                                "minecraft:flowering_azalea_leaves"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,185 @@
+[
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "block": {
+        "blocks": [
+          "minecraft:water"
+        ]
+      }
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "minecraft:location_check",
+          "offsetX": 1,
+          "offsetY": 1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetX": -1,
+          "offsetY": 1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetY": 1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetY": 1,
+          "offsetZ": 1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetY": 1,
+          "offsetZ": -1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetX": 1,
+          "offsetY": -1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetX": -1,
+          "offsetY": -1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetY": -1,
+          "offsetZ": 1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetY": -1,
+          "offsetZ": -1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetX": 1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetX": -1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetZ": 1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetZ": -1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetX": 1,
+          "offsetZ": 1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetX": -1,
+          "offsetZ": -1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetX": 1,
+          "offsetZ": -1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetX": -1,
+          "offsetZ": 1,
+          "predicate": {
+            "block": {
+              "tag": "gm4_hydromancy:coral_vine"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

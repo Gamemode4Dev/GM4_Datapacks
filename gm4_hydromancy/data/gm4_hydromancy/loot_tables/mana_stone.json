@@ -1,0 +1,94 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:heart_of_the_sea",
+                    "functions": [
+                        {
+                            "function": "minecraft:copy_nbt",
+                            "source": {
+                                "type": "minecraft:storage",
+                                "source": "gm4_hydromancy:temp"
+                            },
+                            "ops": [
+                                {
+                                    "source": "stored_mana",
+                                    "target": "gm4_hydromancy.stored_mana",
+                                    "op": "replace"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{HideFlags:1}",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": "this",
+                                        "score": "gm4_hy_charge"
+                                    },
+                                    "range": 100
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_enchantments",
+                            "enchantments": {
+                                "mending": 1
+                            },
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": "this",
+                                        "score": "gm4_hy_charge"
+                                    },
+                                    "range": 100
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                [
+                                    {
+                                        "score": {
+                                            "name": "@s",
+                                            "objective": "gm4_hy_charge"
+                                        },
+                                        "color": "dark_gray",
+                                        "italic": true
+                                    },
+                                    {
+                                        "translate": "item.gm4_hydromancy.mana_stone.lore",
+                                        "fallback": "% Charge"
+                                    }
+                                ]
+                            ],
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": "this",
+                                        "score": "gm4_hy_charge"
+                                    },
+                                    "range": {
+                                        "min": 1
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

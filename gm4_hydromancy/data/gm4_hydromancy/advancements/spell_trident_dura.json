@@ -1,0 +1,58 @@
+{
+    "criteria": {
+        "dura_changed": {
+            "trigger": "minecraft:item_durability_changed",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:value_check",
+                        "value": {
+                            "type": "minecraft:score",
+                            "target": {
+                                "type": "minecraft:fixed",
+                                "name": "gm4_hydromancy"
+                            },
+                            "score": "load.status"
+                        },
+                        "range": 1
+                    },
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "gm4_hy_using_spell_trident": {
+                                    "min": 8
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "equipment": {
+                                "mainhand": {
+                                    "items": [
+                                        "minecraft:trident"
+                                    ],
+                                    "nbt": "{gm4_hy_spell_trident:{}}"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "item": {
+                    "items": [
+                        "minecraft:trident"
+                    ],
+                    "nbt": "{gm4_hy_spell_trident:{}}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_hydromancy:spell_trident/update_durability"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "gm4_hydromancy:spell_trident/base"
+                }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_nbt",
+                    "tag": "{gm4_hy_spell_trident:{spell_id:5,dura:99,mana:{left:750,max:750}}}"
+                },
+                {
+                    "function": "minecraft:set_lore",
+                    "entity": "this",
+                    "lore": [
+                        {
+                            "translate": "item.gm4_hydromancy.spell.builder",
+                            "fallback": "Aquatecture",
+                            "color": "gray",
+                            "italic": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "offhand": {
+          "items": [
+            "minecraft:trident"
+          ],
+          "nbt": "{gm4_hy_spell_trident:{}}"
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,5 @@
+{
+    "function": "minecraft:set_nbt",
+    "tag": "{Enchantments:[{}]}"
+  }
+  

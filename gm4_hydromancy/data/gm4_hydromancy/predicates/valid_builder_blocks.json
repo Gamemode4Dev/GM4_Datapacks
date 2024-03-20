@@ -1,0 +1,12 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "offhand": {
+          "tag": "gm4_hydromancy:builder_block_whitelist"
+        }
+      }
+    }
+  }
+  

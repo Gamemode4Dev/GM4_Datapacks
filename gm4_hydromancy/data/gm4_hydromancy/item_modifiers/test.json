@@ -1,0 +1,13 @@
+[
+    {
+      "function": "minecraft:set_name",
+      "entity": "this",
+      "name": {
+        "nbt": "command[]",
+        "storage": "gm4_hydromancy:temp",
+        "interpret": true,
+        "separator": ""
+      }
+    }
+  ]
+  

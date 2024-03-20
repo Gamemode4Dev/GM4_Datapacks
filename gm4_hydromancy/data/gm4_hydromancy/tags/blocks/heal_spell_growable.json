@@ -1,0 +1,10 @@
+{
+    "values": [
+        "#gm4_hydromancy:dead_coral_block",
+        "#gm4_hydromancy:dead_coral_floor",
+        "#gm4_hydromancy:dead_coral_wall",
+        "#minecraft:crops",
+        "minecraft:farmland",
+        "minecraft:sweet_berry_bush"
+    ]
+}
