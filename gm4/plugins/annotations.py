@@ -84,6 +84,8 @@ class SummaryHandler(logging.handlers.BufferingHandler):
         this_versions = {id: entry.version for id, entry in (this_manifest.modules | this_manifest.libraries).items()}
         last_versions = {id: entry.version for id, entry in ({e.id: e for e in last_manifest.modules} | last_manifest.libraries).items()}
 
+        library_ids = [e.id for e in this_manifest.libraries.values()]
+
         for record in self.buffer:
             if record.name.startswith("gm4.output"):
                 _, _, service, module_id = record.name.split('.')
@@ -92,6 +94,9 @@ class SummaryHandler(logging.handlers.BufferingHandler):
                 service = "gamemode4"
             else:
                 continue
+
+            if module_id in library_ids: # manifests store with "lib_" prefix
+                module_id = module_id.replace("gm4_", "lib_")
 
             # init row
             if module_id not in summary_entries:
