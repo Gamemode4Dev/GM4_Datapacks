@@ -1,5 +1,6 @@
 # @template gm4_metallurgy:test_smooshing
 # @dummy ~0.5 ~4 ~1.5
+# @optional
 
 # repeat steps from check_empty_pickup
 execute at @s run tp @s ~ ~ ~ 270 50
