@@ -4,6 +4,7 @@
 # run from purchase/animal/search
 
 tag @s add gm4_balloon_animal_purchased
+scoreboard players set $trade_success gm4_balloon_animals_data 1
 
 # switch the leasher from the trader to the player
 data modify entity @s Leash.UUID set from storage gm4_balloon_animals:temp player.uuid
