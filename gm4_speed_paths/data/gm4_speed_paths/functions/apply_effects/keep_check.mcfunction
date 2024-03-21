@@ -1,7 +1,6 @@
-# Checks if player is still on speed path
-# @s = player, with tag gm4_on_path
+# @s = player, with gm4_speed_paths score
 # at @s
-# run from function, apply_effects/path_check
+# run from apply_effects/path_check
 
 execute unless block ~ ~-0.9 ~ minecraft:dirt_path run scoreboard players remove @s gm4_speed_paths 1
 execute if block ~ ~-0.9 ~ minecraft:dirt_path run scoreboard players set @s gm4_speed_paths 4
