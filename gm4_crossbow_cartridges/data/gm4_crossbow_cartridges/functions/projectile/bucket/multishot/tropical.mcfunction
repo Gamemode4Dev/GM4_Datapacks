@@ -4,7 +4,7 @@
 # run from projectile/bucket
 
 # replace arrow with tropical fish and copy data
-summon minecraft:tropical_fish ~ ~ ~ {FromBucket:1b,Tags:["gm4_cb_projectile"],ActiveEffects:[{Id:7,Amplifier:10,Duration:1}],Silent:1b,DeathLootTable:"minecraft:empty"}
+summon minecraft:tropical_fish ~ ~ ~ {FromBucket:1b,Tags:["gm4_cb_projectile"],active_effects:[{id:'minecraft:instant_damage',amplifier:10,duration:1}],Silent:1b,DeathLootTable:"minecraft:empty"}
 
 execute as @e[type=minecraft:tropical_fish,tag=gm4_cb_projectile,limit=1,distance=..1] run function gm4_crossbow_cartridges:projectile/arrow_motion
 

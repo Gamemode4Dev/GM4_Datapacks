@@ -1,12 +1,10 @@
 # builds the stored table of contents
 # @s = none
 # located at world spawn
-# run from gm4_guidebook:init
+# run from gm4_guidebook:update_storage/alphabetical_sort/go
 
 # get all module data
 data merge storage gm4_guidebook:temp {modules:[],expansions:[]}
-kill @e[type=marker,tag=gm4_guide]
-function #gm4_guidebook:summon_marker
 execute positioned ~ 0 ~ as @e[type=marker,tag=gm4_guide,sort=furthest] run data modify storage gm4_guidebook:temp modules append from entity @s data
 execute store result score $module_count gm4_guide run data get storage gm4_guidebook:temp modules
 # separate expansions into their own list

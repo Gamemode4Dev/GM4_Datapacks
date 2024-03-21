@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{gm4_standard_liquids:{potion:\"blindness\"},CustomPotionEffects:[{Id:15,Amplifier:0b,Duration:2400}],CustomPotionColor:68378,CustomModelData:'gm4_standard_liquids:item/ink_bottle'}"
+                            "tag": "{gm4_standard_liquids:{potion:\"blindness\"},custom_potion_effects:[{id:'minecraft:blindness',amplifier:0b,duration:2400}],CustomPotionColor:68378,CustomModelData:'gm4_standard_liquids:item/ink_bottle'}"
                         },
                         {
                             "function": "set_name",

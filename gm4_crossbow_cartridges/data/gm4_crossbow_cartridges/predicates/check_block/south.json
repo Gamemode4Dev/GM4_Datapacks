@@ -76,7 +76,7 @@
 						"minecraft:sticky_piston"
 					],
 					"state": {
-						"extended": false
+						"extended": "false"
 					}
 				}
 			}
@@ -90,7 +90,7 @@
 						"minecraft:sticky_piston"
 					],
 					"state": {
-						"extended": true,
+						"extended": "true",
 						"facing": "south"
 					}
 				}
