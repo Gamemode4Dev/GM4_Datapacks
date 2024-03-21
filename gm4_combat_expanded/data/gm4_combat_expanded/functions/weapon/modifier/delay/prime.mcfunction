@@ -3,13 +3,15 @@
 # at @s
 # run from weapon/modifier/delay/activate
 
+execute unless score $keep_tick.delay gm4_ce_keep_tick matches 1 run schedule function gm4_combat_expanded:clocks/temp/delay 10t
+
 # prime bomb timer
-tag @s add gm4_cd_delay_active
+tag @s add gm4_ce_delay_active
 
 # prime bomb level
-execute if score $level gm4_ce_data matches 1 run tag @s add gm4_cd_delay_lvl_1
-execute if score $level gm4_ce_data matches 2 run tag @s add gm4_cd_delay_lvl_2
-execute if score $level gm4_ce_data matches 3 run tag @s add gm4_cd_delay_lvl_3
+execute if score $level gm4_ce_data matches 1 run tag @s add gm4_ce_delay_lvl_1
+execute if score $level gm4_ce_data matches 2 run tag @s add gm4_ce_delay_lvl_2
+execute if score $level gm4_ce_data matches 3 run tag @s add gm4_ce_delay_lvl_3
 
 # particles and sound
 execute anchored eyes run particle minecraft:cloud ^ ^ ^ 0.1 0.1 0.1 0 3

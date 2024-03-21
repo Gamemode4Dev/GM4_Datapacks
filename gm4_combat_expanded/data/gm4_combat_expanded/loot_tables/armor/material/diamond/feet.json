@@ -14,6 +14,7 @@
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
+                  "id": "845DB27C-C624-495F-8C9F-6020A9A58B6B",
                   "amount": 3,
                   "operation": "addition",
                   "slot": "feet"
@@ -21,6 +22,7 @@
                 {
                   "attribute": "generic.armor_toughness",
                   "name": "generic.armor_toughness",
+                  "id": "845DB27C-C624-495F-8C9F-6020A9A58B6B",
                   "amount": 2,
                   "operation": "addition",
                   "slot": "feet"
@@ -28,6 +30,7 @@
                 {
                   "attribute": "generic.knockback_resistance",
                   "name": "generic.knockback_resistance",
+                  "id": "0-1-438d-0-28d34",
                   "amount": 0,
                   "operation": "addition",
                   "slot": "feet"
@@ -35,25 +38,27 @@
               ]
             },
             {
-              "function": "minecraft:set_name",
+              "function": "minecraft:set_lore",
               "entity": "this",
-              "name": [
+              "lore": [
                 {
-                  "translate": "item.gm4.combat_expanded.name.unidentified",
-                  "fallback": "Unidentified %s",
+                  "translate": "item.gm4.combat_expanded.lore.unidentified",
+                  "fallback": "%s Unidentified Item - Drop to Identify",
                   "with": [
-                        {
-                          "translate": "item.minecraft.diamond_boots"
-                        }
-                      
+                    {
+                      "text": "⚠",
+                      "color": "red",
+                      "italic": false
+                    }
                   ],
+                  "color": "dark_red",
                   "italic": false
                 }
               ]
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{identified:0,armor_clamp:-3,slot:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_boots\"}'}}"
+              "tag": "{gm4_combat_expanded:{durability:429,identified:0,armor_clamp:-3,slot:3,material:5,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_boots\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",
@@ -66,8 +71,21 @@
                   "name": "gm4_combat_expanded:mob/modifier/reef"
                 },
                 {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:binomial",
+                    "n": 1,
+                    "p": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ce_data",
+                      "scale": 0.005
+                    }
+                  },
+                  "range": 1
                 }
               ]
             },
@@ -82,8 +100,21 @@
                   "name": "gm4_combat_expanded:mob/modifier/growth"
                 },
                 {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.8
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:binomial",
+                    "n": 1,
+                    "p": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ce_data",
+                      "scale": 0.008
+                    }
+                  },
+                  "range": 1
                 }
               ]
             },
@@ -97,7 +128,7 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 1.5
+                  "scale": 0.15
                 },
                 "max": {
                   "type": "minecraft:score",
@@ -106,25 +137,11 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 2.5
+                  "scale": 0.25
                 }
               },
               "treasure": false,
               "conditions": [
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$difficulty"
-                    },
-                    "score": "gm4_ce_data"
-                  },
-                  "range": {
-                    "min": 2
-                  }
-                },
                 {
                   "condition": "minecraft:random_chance",
                   "chance": 0.2

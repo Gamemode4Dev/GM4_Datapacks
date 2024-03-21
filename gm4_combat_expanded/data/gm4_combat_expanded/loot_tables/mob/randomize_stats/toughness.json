@@ -1,0 +1,42 @@
+{
+    "pools": [
+        {
+            "rolls": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$mob_toughness"
+                },
+                "score": "gm4_ce_data",
+                "scale": 0.25
+            },
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                     "name": "minecraft:stone"
+                }
+            ]
+        },
+        {
+            "rolls": {
+                "type": "minecraft:binomial",
+                "n": {
+                    "type": "minecraft:score",
+                    "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$mob_toughness"
+                    },
+                    "score": "gm4_ce_data",
+                    "scale": 0.75
+                },
+                "p": 0.5
+            },
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                     "name": "minecraft:stone"
+                }
+            ]
+        }
+    ]
+}

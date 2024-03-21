@@ -12,7 +12,7 @@ execute store result score $cap gm4_ce_data run data get storage gm4_combat_expa
 execute store result score $step gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.step
 
 # multiply step by amount of steps to take (count of mobs killed)
-scoreboard players operation $step gm4_ce_data *= @s gm4_ce_t_kill
+scoreboard players operation $step gm4_ce_data *= @s gm4_ce_kill
 
 # increase level and check to cap
 execute store result storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level int 1 run scoreboard players operation $level gm4_ce_data += $step gm4_ce_data

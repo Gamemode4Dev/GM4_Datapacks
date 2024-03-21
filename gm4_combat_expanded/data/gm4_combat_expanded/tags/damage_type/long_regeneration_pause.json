@@ -1,0 +1,23 @@
+{
+    "values": [
+        "minecraft:arrow",
+        "minecraft:dragon_breath",
+        "minecraft:explosion",
+        "minecraft:fireball",
+        "minecraft:fireworks",
+        "minecraft:indirect_magic",
+        "minecraft:lightning_bolt",
+        "minecraft:mob_attack",
+        "minecraft:mob_projectile",
+        "minecraft:player_attack",
+        "minecraft:player_explosion",
+        "minecraft:sonic_boom",
+        "minecraft:sting",
+        "minecraft:thorns",
+        "minecraft:thrown",
+        "minecraft:trident",
+        "minecraft:unattributed_fireball",
+        "minecraft:wither",
+        "minecraft:wither_skull"
+    ]
+}

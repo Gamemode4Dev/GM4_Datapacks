@@ -6,7 +6,7 @@
         "player": [
           {
             "condition": "minecraft:reference",
-            "name": "gm4_combat_expanded:modified_armor/wearing_toxic"
+            "name": "gm4_combat_expanded:modified_armor/toxic"
           }
         ],
         "damage": {

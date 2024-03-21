@@ -28,8 +28,21 @@
                   "name": "gm4_combat_expanded:weapon/axe/gold",
                   "conditions": [
                     {
-                      "condition": "minecraft:random_chance",
-                      "chance": 0.10
+                      "condition": "minecraft:value_check",
+                      "value": {
+                        "type": "minecraft:binomial",
+                        "n": 1,
+                        "p": {
+                          "type": "minecraft:score",
+                          "target": {
+                            "type": "minecraft:fixed",
+                            "name": "$difficulty"
+                          },
+                          "score": "gm4_ce_data",
+                          "scale": 0.0025
+                        }
+                      },
+                      "range": 1
                     }
                   ]
                 },
@@ -39,7 +52,7 @@
                   "conditions": [
                     {
                       "condition": "minecraft:random_chance",
-                      "chance": 0.60
+                      "chance": 0.33
                     }
                   ]
                 },

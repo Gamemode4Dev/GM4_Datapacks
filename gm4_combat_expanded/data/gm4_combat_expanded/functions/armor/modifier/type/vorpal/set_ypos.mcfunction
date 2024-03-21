@@ -1,5 +1,5 @@
 # code taken from Orb of Ankou - expeditious
-# @s = player wearing vorpal armor being damaged
+# @s = vorpal marker
 # at @s
 # run from armor/type/vorpal/tp_marker
 

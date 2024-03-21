@@ -5,16 +5,35 @@
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "equipment": {
-                "mainhand": {
-                  "tag": "gm4_combat_expanded:weapon",
-                  "nbt": "{gm4_combat_expanded:{strike:1}}"
-                }
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "gm4_ce_sword_hit_triggered"
+              },
+              "range": {
+                "min": 1
               }
             }
+          },
+          {
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "mainhand": {
+                      "tag": "gm4_combat_expanded:weapon",
+                      "nbt": "{gm4_combat_expanded:{strike:1}}"
+                    }
+                  }
+                }
+              }
+            ]
           }
         ]
       }

@@ -1,6 +1,6 @@
 id: gm4_combat_expanded
 name: Combat Expanded
-version: 1.4.X
+version: 2.0.X
 
 data_pack:
   load: .
@@ -20,7 +20,6 @@ meta:
         - tick
         - main
         - slow_clock
-        - player/submain
     website:
       description: Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
       recommended:
@@ -45,7 +44,18 @@ meta:
           reference: gui/advancement/combat_expanded_identify
         - item: clock
           reference: gui/advancement/combat_expanded_survive
+    translation_linter_ignores:
+      - enchantment.level.14
+      - enchantment.level.15
+      - enchantment.level.16
+      - enchantment.level.17
   modrinth:
     project_id: zgxd3poi
+    minecraft:
+      - 1.20.3
+      - 1.20.4
   smithed:
     pack_id: gm4_combat_expanded
+    minecraft:
+      - 1.20.3
+      - 1.20.4

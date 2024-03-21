@@ -6,7 +6,7 @@
         "player": [
           {
             "condition": "minecraft:reference",
-            "name": "gm4_combat_expanded:modified_armor/wearing_shielded"
+            "name": "gm4_combat_expanded:modified_armor/shielded"
           },
           {
             "condition": "minecraft:value_check",
@@ -19,7 +19,18 @@
               "min": 1
             }
           }
-        ]
+        ],
+        "damage": {
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:bypasses_invulnerability",
+                "expected": false
+              }
+            ]
+          }
+        }
       }
     }
   },
