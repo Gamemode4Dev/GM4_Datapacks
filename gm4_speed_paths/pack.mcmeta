@@ -1,0 +1,10 @@
+{
+  "overlays": {
+    "entries": [
+      {
+        "formats": 26,
+        "directory": "overlay_26"
+      }
+    ]
+  }
+}
