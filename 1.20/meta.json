@@ -1,5 +1,5 @@
 {
-  "last_commit": "68373e5adddd9ac26f2ce28d94ce2e7a91bbe6a7",
+  "last_commit": "733b302afa739868309f68b58a1bed48a5fc2598",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -481,8 +481,8 @@
     {
       "id": "gm4_combat_expanded",
       "name": "Combat Expanded",
-      "version": "1.4.5",
-      "hash": "f5591b803c300c04deda079e8258817048bc5927",
+      "version": "2.0.0",
+      "hash": "7662794a8668d529fd6bdddb4283abc7b54c660d",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Combat_Expanded",
       "credits": {
@@ -2798,8 +2798,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.1.16",
-      "hash": "bf2cdaab23209e3f1cecd7210dd84da9dfd332cf",
+      "version": "1.1.17",
+      "hash": "f9754e2f6adfcbaedd1a5708537e1d12ab9c23ac",
       "video_link": "",
       "wiki_link": "",
       "credits": {
