@@ -35,7 +35,7 @@
           },
           {
             "translate": "text.gm4.guidebook.balloon_animals.description",
-            "fallback": "Balloon Animals will introduce some wandering traders that sell animals."
+            "fallback": "Balloon Animals introduces animal trades to some wandering traders."
           }
         ]
       ]

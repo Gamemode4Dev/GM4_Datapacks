@@ -1,6 +1,5 @@
-# Animation for balloon animal flying away
 # @s = orphaned animal, tag=gm4_balloon_animal,tag=gm4_balloon_animal_purchased
-# run from gm4_balloon_animal:balloon/loop
+# run from balloon/fly_away/loop
 
 scoreboard players add @s gm4_balloon_animals_data 1
 

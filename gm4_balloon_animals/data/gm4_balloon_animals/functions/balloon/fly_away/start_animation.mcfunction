@@ -1,6 +1,5 @@
-# Start animation loop for balloon animal flying away
 # @s = orphaned animal, tag=gm4_balloon_animal,tag=gm4_balloon_animal_purchased
-# run from gm4_balloon_animal:balloon/check
+# run from balloon/check_leashed
 
 scoreboard players set @s gm4_balloon_animals_data 0
 

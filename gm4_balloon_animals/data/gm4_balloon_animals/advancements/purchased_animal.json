@@ -23,9 +23,8 @@
         "animal2"
       ]
     ],
-    "sends_telemetry_event": true,
     "rewards": {
-      "function": "gm4_balloon_animals:purchase/animal_purchased"
+      "function": "gm4_balloon_animals:purchased_animal"
     }
   }
   

@@ -19,6 +19,5 @@
       "balloon_animals": {
         "trigger": "minecraft:impossible"
       }
-    },
-    "sends_telemetry_event": true
+    }
   }

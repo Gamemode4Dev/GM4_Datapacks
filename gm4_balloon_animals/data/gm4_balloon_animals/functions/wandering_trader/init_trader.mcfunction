@@ -1,7 +1,6 @@
-# Adds animal trades to the trader's trade pool.
-# @s = a wandering trader without the gm4_calling_bell_trader tag (aka naturally spawned trader) with exactly 2 trader llamas
+# @s = a wandering trader with exactly 2 trader llamas
 # at @s
-# run from gm4_balloon_animals:wandering_trader/check_eligibility
+# run from wandering_trader/check_eligibility via #gm4_trades:register_trades
 
 tag @s add gm4_balloon_animal_trader
 tag @s add gm4_balloon_animal_trader_new
@@ -16,4 +15,6 @@ function gm4_balloon_animals:wandering_trader/pick_two_animals
 
 
 # clean up
+scoreboard players reset $trader_llama_check gm4_balloon_animals_data
+
 tag @s remove gm4_balloon_animal_trader_new

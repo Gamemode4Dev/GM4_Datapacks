@@ -1,6 +1,5 @@
-# Loop for balloon animal flying away
 # @s = orphaned animal, tag=gm4_balloon_animal,tag=gm4_balloon_animal_purchased
-# run from gm4_balloon_animal:balloon/start
+# run from balloon/fly_away/start_animation
 
 execute as @e[type=#gm4_balloon_animals:balloon_animal,tag=gm4_balloon_animal_fly_away] run function gm4_balloon_animals:balloon/fly_away/animate
 

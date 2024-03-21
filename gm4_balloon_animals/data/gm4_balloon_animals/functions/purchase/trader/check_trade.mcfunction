@@ -1,13 +1,13 @@
 # Checks the uses count for a specific gm4_balloon_animal trade
 # @s = wandering trader, tag=gm4_balloon_animal_trader
 # at player
-# run from gm4_balloon_animals:purchase/trades/find_applicable
+# run from purchase/trades/parse_trades
 
-execute store result score $uses gm4_balloon_animals_data run data get storage gm4_balloon_animals:temp tempSource[-1].uses
+execute store result score $uses gm4_balloon_animals_data run data get storage gm4_balloon_animals:temp temp_source[-1].uses
 
 # if uses and maxUses matches, this is the trade we are looking for.
-# continue with searching for purchased animal
-execute if score $uses gm4_balloon_animals_data matches 1 as @e[tag=gm4_balloon_animal,tag=!gm4_balloon_animal_purchased,tag=!gm4_balloon_animal_processed,limit=1] run function gm4_balloon_animals:purchase/animal/search
+# continue with searching for purchased animal, reposition to trader for playsound
+execute if score $uses gm4_balloon_animals_data matches 1 at @s as @e[type=#gm4_balloon_animals:balloon_animal,tag=gm4_balloon_animal,tag=!gm4_balloon_animal_purchased,limit=1] run function gm4_balloon_animals:purchase/animal/search
 # update the trade as processed
 execute if score $uses gm4_balloon_animals_data matches 1 run function gm4_balloon_animals:purchase/trader/update_trade
 

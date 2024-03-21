@@ -1,4 +1,3 @@
-# Checks the eligibility of the wandering trader to become an animal trader
 # @s = a wandering trader
 # at @s
 # run from #gm4_trades:register_trades
@@ -20,3 +19,6 @@ execute unless score $trader_llama_count gm4_balloon_animals_data matches 2 run 
 tag @s add gm4_balloon_animal_eligible_ignore
 tag @s remove gm4_balloon_animal_trader_eligible_check
 execute if score $valid_trader gm4_balloon_animals_data matches 1 if predicate gm4_balloon_animals:balloon_trader_chance run function gm4_balloon_animals:wandering_trader/init_trader
+
+# clean up
+scoreboard players reset $trader_llama_count gm4_balloon_animals_data
