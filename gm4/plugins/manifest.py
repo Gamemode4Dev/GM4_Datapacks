@@ -135,7 +135,7 @@ def create(ctx: Context):
 	ctx.cache["gm4_manifest"].json = manifest.dict()
 
 	# Read in the previous manifest, if found
-	version = os.getenv("VERSION", "1.20")
+	version = os.getenv("VERSION", "1.20.5")
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
 
@@ -205,7 +205,7 @@ def update_patch(ctx: Context):
 
 def write_meta(ctx: Context):
 	"""Write the updated meta.json file."""
-	version = os.getenv("VERSION", "1.20")
+	version = os.getenv("VERSION", "1.20.5")
 	release_dir = Path('release') / version
 	os.makedirs(release_dir, exist_ok=True)
 

@@ -15,8 +15,7 @@ meta:
     website:
       description: See what's in your Chiseled Bookshelves without having to take all the books out!
       recommended: []
-      notes: 
-      - Requires version 1.20.2+
+      notes: []
     video: null
     wiki: https://wiki.gm4.co/wiki/Bookshelf_Inspector
     credits:

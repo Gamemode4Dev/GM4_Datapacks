@@ -4,11 +4,6 @@ version: 1.3.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 26
-        max_inclusive: 26
-      directory: overlay_26
 
 resource_pack:
   load: .
