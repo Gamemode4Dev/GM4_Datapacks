@@ -26,7 +26,7 @@ from beet.core.utils import TextComponent
 from PIL import Image, ImageDraw
 from pydantic.v1 import BaseModel
 
-from gm4.plugins.player_heads import Skin
+# from gm4.plugins.player_heads import Skin
 
 logger = logging.getLogger(__name__)
 
@@ -792,7 +792,7 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
   # get item id, name, lore, and color
   entry: dict[Any, Any] = loot["pools"][0]["entries"][0]
   item_id: str = entry["name"]
-  tag: dict[Any, Any] = {}
+  # tag: dict[Any, Any] = {}
   name: TextComponent = ""
   lore: list[str] = []
   if "functions" in entry:
@@ -802,20 +802,20 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
       elif "set_lore" in function["function"]:
         for line in function["lore"]:
           lore.append(f'{json.dumps(line)}')
-      elif "set_nbt" in function["function"]:
-        tag: dict[Any, Any] = nbtlib.parse_nbt(function["tag"]) # type: ignore
+      # elif "set_nbt" in function["function"]:
+      #   tag: dict[Any, Any] = nbtlib.parse_nbt(function["tag"]) # type: ignore
 
   # color
-  if "player_head" in item_id and "$" in tag["SkullOwner"]:
-    skull_owner = tag["SkullOwner"].replace("$","")
-    if ":" not in skull_owner:
-      skull_owner = f"{ctx.project_id}:{skull_owner}" # NOTE gm4.utils will have an add_namespace helper function after the RP PR
-    skin = ctx.data[Skin][skull_owner]
+  # if "player_head" in item_id and "$" in tag["SkullOwner"]:
+  #   skull_owner = tag["SkullOwner"].replace("$","")
+  #   if ":" not in skull_owner:
+  #     skull_owner = f"{ctx.project_id}:{skull_owner}" # NOTE gm4.utils will have an add_namespace helper function after the RP PR
+  #   skin = ctx.data[Skin][skull_owner]
 
-    color = get_texture_color(skin)
+  #   color = get_texture_color(skin)
 
-  else:
-    color = get_texture_color(intuit_item_texture(item_id, ctx.inject(Vanilla)))
+  # else:
+  color = get_texture_color(intuit_item_texture(item_id, ctx.inject(Vanilla)))
 
   # create slot
   slot: dict[Any, Any] = {
