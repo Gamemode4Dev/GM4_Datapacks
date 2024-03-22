@@ -40,6 +40,7 @@
             },
             {
               "function": "set_lore",
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.bat_leather.1",

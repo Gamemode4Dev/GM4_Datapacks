@@ -34,8 +34,8 @@
                         },
                         {
                             "function": "minecraft:set_lore",
-                            "lore": {{lore}},
-                            "replace": false
+                            "mode": "append",
+                            "lore": {{lore}}
                         }
                     ]
                 }

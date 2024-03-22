@@ -65,6 +65,7 @@
                         },
                         {
                             "function": "minecraft:set_lore",
+                            "mode": "append",
                             "lore": [
                                 {
                                     "translate": "item.gm4.zauber_cauldrons.zauber_armor.magic",
@@ -75,8 +76,7 @@
                                     "color": "blue",
                                     "italic": false
                                 }
-                            ],
-                            "replace": false
+                            ]
                         }
                     ]
                 }

@@ -10,6 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.pneuma_retreating",

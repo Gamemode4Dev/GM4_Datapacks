@@ -89,6 +89,7 @@
                         },
                         {
                             "function": "minecraft:set_lore",
+                            "mode": "append",
                             "entity": "this",
                             "lore": [
                                 [
@@ -122,7 +123,6 @@
                                     }
                                 ]
                             ],
-                            "replace": false,
                             "conditions": [
                                 {
                                     "condition": "minecraft:value_check",
@@ -140,8 +140,8 @@
                         },
                         {
                             "function": "minecraft:set_lore",
-                            "lore": {{lore}},
-                            "replace": false
+                            "mode": "append",
+                            "lore": {{lore}}
                         }
                     ]
                 }

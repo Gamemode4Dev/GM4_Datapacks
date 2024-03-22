@@ -1,6 +1,7 @@
 [
     {
         "function": "minecraft:set_lore",
+        "mode": "replace_all",
         "entity": "this",
         "lore": [
             [
@@ -34,7 +35,6 @@
                 }
             ]
         ],
-        "replace": true,
         "conditions": [
             {
                 "condition": "minecraft:value_check",
@@ -52,6 +52,7 @@
     },
     {
         "function": "minecraft:set_lore",
+        "mode": "replace_all",
         "entity": "this",
         "lore": [
             [
@@ -85,7 +86,6 @@
                 }
             ]
         ],
-        "replace": true,
         "conditions": [
             {
                 "condition": "minecraft:value_check",

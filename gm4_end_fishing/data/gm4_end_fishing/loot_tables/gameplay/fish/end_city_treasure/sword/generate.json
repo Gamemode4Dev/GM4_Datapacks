@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.1",
@@ -31,7 +31,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.2.1",
@@ -59,7 +59,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.3",
@@ -81,7 +81,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.4",
@@ -103,7 +103,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.5",
@@ -125,7 +125,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.6",
@@ -147,7 +147,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.7.1",
@@ -175,7 +175,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.8",
@@ -197,7 +197,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.9",
@@ -219,7 +219,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.10",
@@ -241,7 +241,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.11",
@@ -263,7 +263,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.12.1",
@@ -291,7 +291,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.13",
@@ -313,7 +313,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.14.1",
@@ -341,7 +341,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.15",
@@ -363,7 +363,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.16",
@@ -385,7 +385,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.17.1",
@@ -413,7 +413,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.18",
@@ -435,7 +435,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.19",
@@ -457,7 +457,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.20",

@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_horse_armor.1",
@@ -31,7 +31,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_horse_armor.2.1",
@@ -59,7 +59,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_horse_armor.3.1",
@@ -87,7 +87,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_horse_armor.4",
@@ -109,7 +109,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_horse_armor.5",

@@ -17,6 +17,7 @@
                         },
                         {
                             "function": "minecraft:set_lore",
+                            "mode": "append",
                             "lore": [
                                 {
                                     "translate": "item.gm4.endermite_egg.lore",

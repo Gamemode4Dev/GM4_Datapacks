@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.1.1",
@@ -37,7 +37,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.2.1",
@@ -65,7 +65,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.3",
@@ -87,7 +87,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.4.1",
@@ -115,7 +115,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.5",
@@ -137,7 +137,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.6.1",
@@ -165,7 +165,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.7",
@@ -187,7 +187,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.8.1",
@@ -215,7 +215,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.9",
@@ -237,7 +237,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.10.1",

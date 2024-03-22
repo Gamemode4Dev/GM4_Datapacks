@@ -132,7 +132,7 @@
             },
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_ship_elytra.10.1",
