@@ -5,14 +5,13 @@ execute positioned ~2 ~1 ~2 run tag @e[tag=gm4_liquid_tank,distance=..1] add tes
 execute positioned ~4 ~1 ~1 run tag @e[tag=gm4_liquid_tank,distance=..1] add test_destination
 
 # create lava tank
-data merge block ~2 ~1 ~2 {Items:[{Slot:0b,id:"minecraft:lava_bucket",Count:1b}]}
+item replace block ~2 ~1 ~2 container.0 with minecraft:lava_bucket
 
-await block ~2 ~1 ~2 hopper{Items:[{Slot:0b,id:"minecraft:bucket",Count:1b}]}
+await items block ~2 ~1 ~2 container.0 minecraft:bucket
 await entity @e[tag=gm4_liquid_tank,tag=test_source,tag=gm4_lt_lava,scores={gm4_lt_value=3}]
 
 # place liquid minecart
-clear @s written_book
-loot give @s loot gm4_liquid_minecarts:items/liquid_minecart
+loot replace entity @s weapon.mainhand loot gm4_liquid_minecarts:items/liquid_minecart
 execute at @s run tp @s ~ ~ ~ facing ~1 ~-1.5 ~1
 dummy @s use block ~2 ~1 ~1
 

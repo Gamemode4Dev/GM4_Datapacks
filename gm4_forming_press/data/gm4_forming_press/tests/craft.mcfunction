@@ -1,5 +1,11 @@
 # @template gm4_custom_crafters:test_platform
 
-data merge block ~1 ~1 ~1 {Items:[{Slot:1b,id:"minecraft:piston",Count:1b},{Slot:3b,id:"minecraft:cobblestone",Count:1b},{Slot:4b,id:"minecraft:comparator",Count:1b},{Slot:5b,id:"minecraft:cobblestone",Count:1b},{Slot:6b,id:"minecraft:cobblestone",Count:1b},{Slot:7b,id:"minecraft:furnace",Count:1b},{Slot:8b,id:"minecraft:cobblestone",Count:1b}]}
+item replace block ~1 ~1 ~1 container.1 with minecraft:piston
+item replace block ~1 ~1 ~1 container.3 with minecraft:cobblestone
+item replace block ~1 ~1 ~1 container.4 with minecraft:comparator
+item replace block ~1 ~1 ~1 container.5 with minecraft:cobblestone
+item replace block ~1 ~1 ~1 container.6 with minecraft:cobblestone
+item replace block ~1 ~1 ~1 container.7 with minecraft:furnace
+item replace block ~1 ~1 ~1 container.8 with minecraft:cobblestone
 
-await block ~1 ~1 ~1 dropper{Items:[{id:"minecraft:player_head",tag:{gm4_machines:{id:"forming_press"}},Count:1b}]}
+await items block ~1 ~1 ~1 container.* minecraft:player_head[count=1,custom_data~{gm4_machines:{id:"forming_press"}}]

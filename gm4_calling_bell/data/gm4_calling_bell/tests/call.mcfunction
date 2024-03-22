@@ -8,4 +8,4 @@ dummy @s use block ~1.4 ~1.25 ~1.5 north
 
 await entity @e[type=wandering_trader,distance=..4]
 
-assert entity @s[nbt=!{SelectedItem:{id:"minecraft:emerald"}}]
+assert items entity @s weapon.mainhand minecraft:emerald

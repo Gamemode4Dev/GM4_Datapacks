@@ -7,4 +7,4 @@ item replace block ~1 ~1 ~1 container.5 with rabbit_hide
 item replace block ~1 ~1 ~1 container.6 with rabbit_hide
 item replace block ~1 ~1 ~1 container.8 with rabbit_hide
 
-await block ~1 ~1 ~1 dropper{Items:[{id:"minecraft:leather_boots",Count:1b,tag:{gm4_scuba_gear:{item:"flippers"}}}]}
+await items block ~1 ~1 ~1 container.* minecraft:leather_boots[custom_data~{gm4_scuba_gear:{item:"flippers"}}]

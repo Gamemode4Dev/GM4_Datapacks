@@ -1,5 +1,10 @@
 # @template gm4_custom_crafters:test_platform
 
-data merge block ~1 ~1 ~1 {Items:[{Slot:1b,id:"minecraft:wheat_seeds",Count:1b},{Slot:3b,id:"minecraft:moss_block",Count:1b},{Slot:4b,id:"minecraft:leather_boots",Count:1b},{Slot:5b,id:"minecraft:grass_block",Count:1b},{Slot:7b,id:"minecraft:water_bucket",Count:1b}]}
+item replace block ~1 ~1 ~1 container.1 with minecraft:wheat_seeds
+item replace block ~1 ~1 ~1 container.3 with minecraft:moss_block
+item replace block ~1 ~1 ~1 container.4 with minecraft:leather_boots
+item replace block ~1 ~1 ~1 container.5 with minecraft:grass_block
+item replace block ~1 ~1 ~1 container.7 with minecraft:water_bucket
 
-await block ~1 ~1 ~1 dropper{Items:[{id:"minecraft:leather_boots",Count:1b,tag:{gm4_boots_of_ostara:1b}},{id:"minecraft:bucket",Count:1b}]}
+await items block ~1 ~1 ~1 container.* minecraft:leather_boots[custom_data~{gm4_boots_of_ostara:1b}]
+await items block ~1 ~1 ~1 container.* minecraft:bucket[count=1]
