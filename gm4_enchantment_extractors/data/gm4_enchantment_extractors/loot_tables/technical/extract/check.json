@@ -428,7 +428,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:sweeping"
+                      "enchantment": "minecraft:sweeping_edge"
                     }
                   ]
                 }

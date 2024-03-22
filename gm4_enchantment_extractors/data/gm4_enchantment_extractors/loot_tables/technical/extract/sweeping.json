@@ -13,7 +13,7 @@
               "functions": [
                 {
                   "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:3s,id:\"minecraft:sweeping\"}]}"
+                  "tag": "{StoredEnchantments:[{lvl:3s,id:\"minecraft:sweeping_edge\"}]}"
                 }
               ],
               "conditions": [
@@ -23,7 +23,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:sweeping",
+                          "enchantment": "minecraft:sweeping_edge",
                           "levels": 3
                         }
                       ]
@@ -42,7 +42,7 @@
               "functions": [
                 {
                   "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:2s,id:\"minecraft:sweeping\"}]}"
+                  "tag": "{StoredEnchantments:[{lvl:2s,id:\"minecraft:sweeping_edge\"}]}"
                 }
               ],
               "conditions": [
@@ -52,7 +52,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:sweeping",
+                          "enchantment": "minecraft:sweeping_edge",
                           "levels": 2
                         }
                       ]
@@ -71,7 +71,7 @@
               "functions": [
                 {
                   "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:1s,id:\"minecraft:sweeping\"}]}"
+                  "tag": "{StoredEnchantments:[{lvl:1s,id:\"minecraft:sweeping_edge\"}]}"
                 }
               ],
               "conditions": [
@@ -81,7 +81,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:sweeping",
+                          "enchantment": "minecraft:sweeping_edge",
                           "levels": 1
                         }
                       ]
