@@ -16,7 +16,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:items/enderpuff",
+          "value": "gm4_end_fishing:items/enderpuff",
           "weight": 1
         },
         {
@@ -39,6 +39,8 @@
         },
         {
           "type": "minecraft:loot_table",
+          "weight": 11,
+          "value": "gm4_end_fishing:items/enderpuff",
           "conditions": [
             {
               "condition": "minecraft:any_of",
@@ -69,9 +71,7 @@
                 }
               ]
             }
-          ],
-          "weight": 11,
-          "name": "gm4_end_fishing:items/enderpuff"
+          ]
         },
         {
           "type": "minecraft:item",

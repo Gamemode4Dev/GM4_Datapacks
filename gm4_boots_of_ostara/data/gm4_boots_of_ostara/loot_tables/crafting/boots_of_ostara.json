@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_boots_of_ostara:items/boots_of_ostara",
+          "value": "gm4_boots_of_ostara:items/boots_of_ostara",
           "functions": [
             {
               "function": "minecraft:set_count",

@@ -6,37 +6,37 @@
         {
           "type": "minecraft:loot_table",
           "weight": 40,
-          "name": "gm4_mob_curing:technical/potion_cleric/base/drinkable"
+          "value": "gm4_mob_curing:technical/potion_cleric/base/drinkable"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 20,
-          "name": "gm4_mob_curing:technical/potion_cleric/base/splash"
+          "value": "gm4_mob_curing:technical/potion_cleric/base/splash"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 5,
-          "name": "gm4_mob_curing:technical/potion_cleric/base/lingering"
+          "value": "gm4_mob_curing:technical/potion_cleric/base/lingering"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 20,
-          "name": "gm4_mob_curing:technical/potion_cleric/upgraded/drinkable"
+          "value": "gm4_mob_curing:technical/potion_cleric/upgraded/drinkable"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 10,
-          "name": "gm4_mob_curing:technical/potion_cleric/upgraded/splash"
+          "value": "gm4_mob_curing:technical/potion_cleric/upgraded/splash"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 5,
-          "name": "gm4_mob_curing:technical/potion_cleric/upgraded/lingering"
+          "value": "gm4_mob_curing:technical/potion_cleric/upgraded/lingering"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 10,
-          "name": "gm4_mob_curing:technical/potion_cleric/zauber/drinkable",
+          "value": "gm4_mob_curing:technical/potion_cleric/zauber/drinkable",
           "conditions": [
             {
               "condition": "minecraft:value_check",
@@ -55,7 +55,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 4,
-          "name": "gm4_mob_curing:technical/potion_cleric/zauber/splash",
+          "value": "gm4_mob_curing:technical/potion_cleric/zauber/splash",
           "conditions": [
             {
               "condition": "minecraft:value_check",
@@ -74,7 +74,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "gm4_mob_curing:technical/potion_cleric/zauber/lingering",
+          "value": "gm4_mob_curing:technical/potion_cleric/zauber/lingering",
           "conditions": [
             {
               "condition": "minecraft:value_check",

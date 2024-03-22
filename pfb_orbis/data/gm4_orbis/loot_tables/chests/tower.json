@@ -6,17 +6,17 @@
         {
           "type": "minecraft:loot_table",
           "weight": 15,
-          "name": "gm4_orbis:chests/tower/rare"
+          "value": "gm4_orbis:chests/tower/rare"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 35,
-          "name": "gm4_orbis:chests/tower/uncommon"
+          "value": "gm4_orbis:chests/tower/uncommon"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 60,
-          "name": "gm4_orbis:chests/tower/common"
+          "value": "gm4_orbis:chests/tower/common"
         }
       ]
     },

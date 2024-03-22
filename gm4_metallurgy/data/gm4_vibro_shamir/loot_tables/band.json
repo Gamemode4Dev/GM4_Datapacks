@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_metallurgy:thorium_band",
+                    "value": "gm4_metallurgy:thorium_band",
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",

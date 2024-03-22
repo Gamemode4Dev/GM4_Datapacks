@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/base",
+          "value": "gm4_combat_expanded:armor/identification/base",
           "functions": [
             {
               "function": "minecraft:set_nbt",

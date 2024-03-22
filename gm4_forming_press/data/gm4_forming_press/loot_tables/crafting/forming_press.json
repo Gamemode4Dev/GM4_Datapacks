@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_forming_press:items/forming_press",
+          "value": "gm4_forming_press:items/forming_press",
           "functions": [
             {
               "function": "minecraft:set_count",

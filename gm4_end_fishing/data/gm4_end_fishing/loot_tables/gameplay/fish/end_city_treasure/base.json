@@ -17,27 +17,27 @@
         {
           "type": "minecraft:loot_table",
           "weight": 40,
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/generate"
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/generate"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 160,
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/generate"
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/generate"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 80,
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/generate"
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/generate"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 65,
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/generate"
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/generate"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 3,
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/generate"
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/generate"
         }
       ]
     }

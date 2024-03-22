@@ -8,7 +8,7 @@
                     "children": [
                         {
                             "type": "minecraft:loot_table",
-                            "name": "gm4_potion_liquids:lingering_floating_potion",
+                            "value": "gm4_potion_liquids:lingering_floating_potion",
                             "conditions": [
                                 {
                                     "condition": "minecraft:entity_properties",

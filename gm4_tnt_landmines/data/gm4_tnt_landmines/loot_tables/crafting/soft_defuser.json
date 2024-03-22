@@ -15,7 +15,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_tnt_landmines:items/soft_defuser",
+                    "value": "gm4_tnt_landmines:items/soft_defuser",
                     "functions": [
                         {
                             "function": "minecraft:set_count",

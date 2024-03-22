@@ -8,7 +8,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_lightning_in_a_bottle:items/lingering_bottle_of_lightning",
+              "value": "gm4_lightning_in_a_bottle:items/lingering_bottle_of_lightning",
               "conditions": [
                 {
                   "condition": "minecraft:entity_properties",

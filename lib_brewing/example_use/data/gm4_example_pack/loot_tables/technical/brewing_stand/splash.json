@@ -8,7 +8,7 @@
                     "children": [
                         {
                             "type": "minecraft:loot_table",
-                            "name": "gm4_example_pack:items/splash_resistance_potion",
+                            "value": "gm4_example_pack:items/splash_resistance_potion",
                             "conditions": [
                                 {
                                     "condition": "minecraft:entity_properties",
@@ -21,7 +21,7 @@
                         },
                         {
                             "type": "minecraft:loot_table",
-                            "name": "gm4_example_pack:items/splash_booze",
+                            "value": "gm4_example_pack:items/splash_booze",
                             "conditions": [
                                 {
                                     "condition": "minecraft:entity_properties",

@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
@@ -27,7 +27,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
@@ -55,7 +55,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
@@ -83,7 +83,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
@@ -105,7 +105,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
           "functions": [
             {
               "function": "minecraft:set_lore",

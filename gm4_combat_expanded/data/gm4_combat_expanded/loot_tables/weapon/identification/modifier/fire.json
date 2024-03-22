@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:weapon/identification/base",
+          "value": "gm4_combat_expanded:weapon/identification/base",
           "functions": [
             {
               "function": "minecraft:set_attributes",

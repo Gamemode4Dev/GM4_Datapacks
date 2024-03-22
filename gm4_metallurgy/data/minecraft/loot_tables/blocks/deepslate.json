@@ -29,7 +29,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_forterra_shamir:deepslate",
+              "value": "gm4_forterra_shamir:deepslate",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",

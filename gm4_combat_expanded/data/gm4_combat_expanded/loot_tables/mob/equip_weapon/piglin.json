@@ -19,7 +19,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:weapon/sword/gold"
+              "value": "gm4_combat_expanded:weapon/sword/gold"
             }
           ]
         }

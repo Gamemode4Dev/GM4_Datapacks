@@ -9,7 +9,7 @@
                     "children": [
                         {
                             "type": "minecraft:loot_table",
-                            "name": "gm4_combat_expanded:armor/material/diamond/legs",
+                            "value": "gm4_combat_expanded:armor/material/diamond/legs",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -19,7 +19,7 @@
                         },
                         {
                             "type": "minecraft:loot_table",
-                            "name": "gm4_combat_expanded:armor/material/golden/legs",
+                            "value": "gm4_combat_expanded:armor/material/golden/legs",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -29,7 +29,7 @@
                         },
                         {
                             "type": "minecraft:loot_table",
-                            "name": "gm4_combat_expanded:armor/material/iron/legs",
+                            "value": "gm4_combat_expanded:armor/material/iron/legs",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -39,7 +39,7 @@
                         },
                         {
                             "type": "minecraft:loot_table",
-                            "name": "gm4_combat_expanded:armor/material/chainmail/legs",
+                            "value": "gm4_combat_expanded:armor/material/chainmail/legs",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -49,7 +49,7 @@
                         },
                         {
                             "type": "minecraft:loot_table",
-                            "name": "gm4_combat_expanded:armor/material/leather/legs"
+                            "value": "gm4_combat_expanded:armor/material/leather/legs"
                         }
                     ],
                     "conditions": [

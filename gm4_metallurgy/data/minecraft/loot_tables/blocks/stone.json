@@ -29,7 +29,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_metallurgy:bismutite_lump",
+              "value": "gm4_metallurgy:bismutite_lump",
               "conditions": [
                 {
                   "condition": "minecraft:entity_properties",
@@ -46,7 +46,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_forterra_shamir:stone",
+              "value": "gm4_forterra_shamir:stone",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",

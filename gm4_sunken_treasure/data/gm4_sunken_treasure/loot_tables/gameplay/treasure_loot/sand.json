@@ -347,7 +347,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 40,
-          "name": "gm4_sunken_treasure:gameplay/treasure_loot/audrey_bottle"
+          "value": "gm4_sunken_treasure:gameplay/treasure_loot/audrey_bottle"
         },
         {
           "type": "minecraft:item",
@@ -517,7 +517,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 4,
-          "name": "gm4_scuba_gear:items/scuba_helmet",
+          "value": "gm4_scuba_gear:items/scuba_helmet",
           "conditions": [
             {
               "condition": "minecraft:value_check",
@@ -538,7 +538,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 3,
-          "name": "gm4_scuba_gear:items/scuba_tank",
+          "value": "gm4_scuba_gear:items/scuba_tank",
           "conditions": [
             {
               "condition": "minecraft:value_check",
