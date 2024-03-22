@@ -20,12 +20,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:power",
-                        "levels": 5
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:power",
+                          "levels": 5
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -47,12 +49,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:power",
-                        "levels": 5
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:power",
+                          "levels": 5
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -74,12 +78,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:power",
-                        "levels": 4
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:power",
+                          "levels": 4
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -101,12 +107,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:power",
-                        "levels": 3
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:power",
+                          "levels": 3
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -128,12 +136,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:power",
-                        "levels": 2
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:power",
+                          "levels": 2
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -155,12 +165,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:power",
-                        "levels": 1
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:power",
+                          "levels": 1
+                        }
+                      ]
+                    }
                   }
                 },
                 {

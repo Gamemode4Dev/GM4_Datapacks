@@ -7,12 +7,14 @@
         "items": [
           "minecraft:armor_stand"
         ],
-        "enchantments": [
-          {
-            "enchantment": "minecraft:protection",
-            "levels": 0
-          }
-        ]
+        "predicates": {
+          "minecraft:enchantments": [
+            {
+              "enchantment": "minecraft:protection",
+              "levels": 0
+            }
+          ]
+        }
       }
     }
   }

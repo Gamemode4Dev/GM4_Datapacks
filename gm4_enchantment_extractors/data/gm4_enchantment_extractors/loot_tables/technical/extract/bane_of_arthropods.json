@@ -20,12 +20,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:bane_of_arthropods",
-                        "levels": 5
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:bane_of_arthropods",
+                          "levels": 5
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -47,12 +49,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:bane_of_arthropods",
-                        "levels": 4
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:bane_of_arthropods",
+                          "levels": 4
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -74,12 +78,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:bane_of_arthropods",
-                        "levels": 3
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:bane_of_arthropods",
+                          "levels": 3
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -101,12 +107,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:bane_of_arthropods",
-                        "levels": 2
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:bane_of_arthropods",
+                          "levels": 2
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -128,12 +136,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:bane_of_arthropods",
-                        "levels": 1
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:bane_of_arthropods",
+                          "levels": 1
+                        }
+                      ]
+                    }
                   }
                 },
                 {

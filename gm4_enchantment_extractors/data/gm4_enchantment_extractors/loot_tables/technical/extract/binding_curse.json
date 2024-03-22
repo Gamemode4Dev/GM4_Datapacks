@@ -20,12 +20,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:binding_curse",
-                        "levels": 1
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:binding_curse",
+                          "levels": 1
+                        }
+                      ]
+                    }
                   }
                 },
                 {

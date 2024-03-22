@@ -21,12 +21,14 @@
       "conditions": {
         "delta": -1,
         "item": {
-          "enchantments": [
-            {
-              "enchantment": "minecraft:flame",
-              "levels": 1
-            }
-          ],
+          "predicates": {
+            "minecraft:enchantments": [
+              {
+                "enchantment": "minecraft:flame",
+                "levels": 1
+              }
+            ]
+          },
           "items": [
             "minecraft:bow"
           ]

@@ -20,12 +20,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:frost_walker",
-                        "levels": 2
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:frost_walker",
+                          "levels": 2
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -47,12 +49,14 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:frost_walker",
-                        "levels": 1
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:frost_walker",
+                          "levels": 1
+                        }
+                      ]
+                    }
                   }
                 },
                 {
