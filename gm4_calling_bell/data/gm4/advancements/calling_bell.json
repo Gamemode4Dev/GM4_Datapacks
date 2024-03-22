@@ -1,7 +1,7 @@
 {
     "display": {
       "icon": {
-        "item": "emerald",
+        "id": "emerald",
         "nbt": "{CustomModelData:'gui/advancement/calling_bell'}"
       },
       "title": {

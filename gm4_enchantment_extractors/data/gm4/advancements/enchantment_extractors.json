@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "enchanting_table",
+      "id": "enchanting_table",
       "nbt": "{CustomModelData:'gui/advancement/enchantment_extractors'}"
     },
     "title": {

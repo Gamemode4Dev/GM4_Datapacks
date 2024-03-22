@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "potion",
+      "id": "potion",
       "nbt": "{CustomModelData:'gui/advancement/potion_liquids',CustomPotionColor:13631487}"
     },
     "title": {

@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "clock",
+            "id": "clock",
             "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_make_magicol'}"
         },
         "title": {

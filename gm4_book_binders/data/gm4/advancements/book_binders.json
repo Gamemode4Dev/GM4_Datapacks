@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "lectern",
+      "id": "lectern",
       "nbt": "{CustomModelData:'gui/advancement/book_binders'}"
     },
     "title": {

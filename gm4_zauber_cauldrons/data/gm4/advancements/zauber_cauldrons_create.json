@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "cauldron",
+      "id": "cauldron",
       "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_create'}"
     },
     "title": {

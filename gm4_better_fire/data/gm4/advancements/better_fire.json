@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "bow",
+      "id": "bow",
       "nbt": "{Enchantments:[{id:\"flame\",lvl:1}],CustomModelData:'gui/advancement/better_fire'}"
     },
     "title": {

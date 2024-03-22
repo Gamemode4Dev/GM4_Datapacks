@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "iron_boots",
+      "id": "iron_boots",
       "nbt": "{CustomModelData:'gui/advancement/ski'}"
     },
     "title": {

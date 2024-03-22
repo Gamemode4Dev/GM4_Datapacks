@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "elytra",
+      "id": "elytra",
       "nbt": "{CustomModelData:'gui/advancement/end_fishing_phantom',Damage:432}"
     },
     "title": {

@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "brown_stained_glass",
+      "id": "brown_stained_glass",
       "nbt": "{CustomModelData:'gui/advancement/soul_glass'}"
     },
     "title": {

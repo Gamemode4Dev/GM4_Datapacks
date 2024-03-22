@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "name_tag",
+      "id": "name_tag",
       "nbt": "{CustomModelData:'gui/advancement/holographic_tags'}"
     },
     "title": {

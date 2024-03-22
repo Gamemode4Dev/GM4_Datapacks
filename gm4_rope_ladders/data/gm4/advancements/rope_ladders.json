@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "ladder",
+      "id": "ladder",
       "nbt": "{CustomModelData:'gui/advancement/rope_ladders'}"
     },
     "title": {

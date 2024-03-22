@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:potion",
+      "id": "minecraft:potion",
       "nbt": "{CustomModelData:'gui/advancement/lightning_in_a_bottle_drink',CustomPotionColor:11985402,Enchantments:[{id:\"protection\",lvl:0}]}"
     },
     "title": {

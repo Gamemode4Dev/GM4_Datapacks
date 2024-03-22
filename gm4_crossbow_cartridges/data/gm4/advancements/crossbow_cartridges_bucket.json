@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "tropical_fish_bucket",
+            "id": "tropical_fish_bucket",
             "nbt": "{CustomModelData:'gui/advancement/crossbow_cartridges_bucket'}"
         },
         "title": {

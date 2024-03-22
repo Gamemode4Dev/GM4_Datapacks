@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "poppy",
+      "id": "poppy",
       "nbt": "{CustomModelData:'gui/advancement/sweethearts'}"
     },
     "title": {

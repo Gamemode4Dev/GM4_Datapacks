@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "coarse_dirt",
+      "id": "coarse_dirt",
       "nbt": "{CustomModelData:'gui/advancement/desire_lines_10000'}"
     },
     "title": {

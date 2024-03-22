@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "gunpowder",
+      "id": "gunpowder",
       "nbt": "{CustomModelData:'gui/advancement/bat_grenades'}"
     },
     "title": {

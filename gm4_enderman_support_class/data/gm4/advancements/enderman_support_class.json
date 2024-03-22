@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "player_head",
+      "id": "player_head",
       "nbt": "{CustomModelData:'gui/advancement/enderman_support_class',SkullOwner:\"MHF_Enderman\"}"
     },
     "title": {

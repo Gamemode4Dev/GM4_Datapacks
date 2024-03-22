@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:purpur_block",
+      "id": "minecraft:purpur_block",
       "nbt": "{CustomModelData:'gui/advancement/lightning_in_a_bottle_shulker'}"
     },
     "title": {

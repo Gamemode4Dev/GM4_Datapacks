@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "firework_star",
+      "id": "firework_star",
       "nbt": "{Enchantments:[{}],Explosion:{Colors:[I;13092807]},CustomModelData:'gui/advancement/orb_of_ankou_max_orb'}"
     },
     "title": {

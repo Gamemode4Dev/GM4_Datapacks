@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "rabbit_foot",
+      "id": "rabbit_foot",
       "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_rabbit'}"
     },
     "title": {

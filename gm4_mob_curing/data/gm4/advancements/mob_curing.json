@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:potion",
+      "id": "minecraft:potion",
       "nbt": "{CustomModelData:'gui/advancement/mob_curing',CustomPotionColor:16262179,Enchantments:[{id:\"protection\",lvl:0}]}"
     },
     "title": {

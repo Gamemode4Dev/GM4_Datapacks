@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "hopper_minecart",
+      "id": "hopper_minecart",
       "nbt": "{CustomModelData:'gui/advancement/liquid_minecarts_create'}"
     },
     "title": {

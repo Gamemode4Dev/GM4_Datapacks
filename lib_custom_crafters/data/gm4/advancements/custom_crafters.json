@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "crafting_table",
+      "id": "crafting_table",
       "nbt": "{CustomModelData:'gui/advancement/custom_crafters'}"
     },
     "title": {

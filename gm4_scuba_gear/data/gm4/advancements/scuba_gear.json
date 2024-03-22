@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:player_head",
+      "id": "minecraft:player_head",
       "nbt": "{CustomModelData:'gui/advancement/scuba_gear',SkullOwner:\"$scuba_helmet\"}"
     },
     "title": {

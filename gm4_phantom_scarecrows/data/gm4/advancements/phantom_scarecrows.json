@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:firework_rocket",
+      "id": "minecraft:firework_rocket",
       "nbt": "{CustomModelData:'gui/advancement/phantom_scarecrows'}"
     },
     "title": {

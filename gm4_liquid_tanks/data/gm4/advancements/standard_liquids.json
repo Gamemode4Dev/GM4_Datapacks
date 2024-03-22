@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "experience_bottle",
+      "id": "experience_bottle",
       "nbt": "{CustomModelData:'standard_liquids:gui/advancement/standard_liquids'}"
     },
     "title": {

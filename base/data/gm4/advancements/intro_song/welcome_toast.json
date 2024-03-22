@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:command_block",
+      "id": "minecraft:command_block",
       "nbt": "{CustomModelData:3420001}"
     },
     "title": {

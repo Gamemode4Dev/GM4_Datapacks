@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "paper",
+      "id": "paper",
       "nbt": "{CustomModelData:'gui/advancement/book_binders_debind',Enchantments:[{id:\"minecraft:mending\",lvl:1}]}"
     },
     "title": {

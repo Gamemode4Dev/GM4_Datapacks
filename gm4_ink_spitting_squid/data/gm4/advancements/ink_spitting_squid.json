@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:ink_sac",
+      "id": "minecraft:ink_sac",
       "nbt": "{CustomModelData:'gui/advancement/ink_spitting_squid'}"
     },
     "title": {

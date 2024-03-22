@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "player_head",
+      "id": "player_head",
       "nbt": "{CustomModelData:'gui/advancement/tinkering_compressors',SkullOwner:\"$gm4_metallurgy:band/curies_bismium\"}"
     },
     "title": {

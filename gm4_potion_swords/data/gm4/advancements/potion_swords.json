@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "golden_sword",
+      "id": "golden_sword",
       "nbt": "{CustomModelData:'gui/advancement/potion_swords'}"
     },
     "title": {

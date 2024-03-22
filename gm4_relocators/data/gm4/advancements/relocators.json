@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:player_head",
+      "id": "minecraft:player_head",
       "nbt": "{CustomModelData:'gui/advancement/relocators',SkullOwner:\"$gm4_relocators:relocator_empty\"}"
     },
     "title": {

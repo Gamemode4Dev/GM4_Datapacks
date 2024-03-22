@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "leather_boots",
+      "id": "leather_boots",
       "nbt": "{display:{color:3705899},CustomModelData:'gui/advancement/boots_of_ostara'}"
     },
     "title": {

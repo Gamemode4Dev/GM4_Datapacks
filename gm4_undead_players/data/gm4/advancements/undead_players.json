@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "zombie_head",
+      "id": "zombie_head",
       "nbt": "{CustomModelData:'gui/advancement/undead_players'}"
     },
     "title": {

@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "birch_stairs",
+      "id": "birch_stairs",
       "nbt": "{CustomModelData:'gui/advancement/chairs_creation'}"
     },
     "title": {

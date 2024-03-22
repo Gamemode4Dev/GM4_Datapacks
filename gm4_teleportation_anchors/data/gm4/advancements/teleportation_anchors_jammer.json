@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:end_rod",
+      "id": "minecraft:end_rod",
       "nbt": "{CustomModelData:'gui/advancement/teleportation_jammer'}"
     },
     "title": {
