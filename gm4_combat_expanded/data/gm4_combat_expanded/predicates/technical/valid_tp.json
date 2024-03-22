@@ -6,7 +6,7 @@
             "offsetY": -1,
             "predicate": {
                 "block": {
-                    "tag": "gm4:no_collision"
+                    "blocks": "#gm4:no_collision"
                 }
             }
         }
@@ -21,7 +21,7 @@
                     "offsetY": 1,
                     "predicate": {
                         "fluid": {
-                            "tag": "minecraft:lava"
+                            "fluids": "#minecraft:lava"
                         }
                     }
                 },
@@ -29,7 +29,7 @@
                     "condition": "minecraft:location_check",
                     "predicate": {
                         "fluid": {
-                            "tag": "minecraft:lava"
+                            "fluids": "#minecraft:lava"
                         }
                     }
                 },
@@ -38,7 +38,7 @@
                     "offsetY": 1,
                     "predicate": {
                         "fluid": {
-                            "tag": "minecraft:water"
+                            "fluids": "#minecraft:water"
                         }
                     }
                 },
@@ -46,7 +46,7 @@
                     "condition": "minecraft:location_check",
                     "predicate": {
                         "fluid": {
-                            "tag": "minecraft:water"
+                            "fluids": "#minecraft:water"
                         }
                     }
                 }
@@ -58,7 +58,7 @@
         "offsetY": 1,
         "predicate": {
             "block": {
-                "tag": "gm4:no_collision"
+                "blocks": "#gm4:no_collision"
             }
         }
     },
@@ -66,7 +66,7 @@
         "condition": "minecraft:location_check",
         "predicate": {
             "block": {
-                "tag": "gm4:no_collision"
+                "blocks": "#gm4:no_collision"
             }
         }
     }

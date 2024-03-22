@@ -13,7 +13,7 @@
         "condition": "minecraft:location_check",
         "predicate": {
           "block": {
-            "tag": "gm4:water"
+            "blocks": "#gm4:water"
           }
         }
       }

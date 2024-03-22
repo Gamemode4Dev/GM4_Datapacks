@@ -27,7 +27,7 @@
                 "predicate": {
                   "equipment": {
                     "mainhand": {
-                      "tag": "gm4_combat_expanded:weapon",
+                      "items": "#gm4_combat_expanded:weapon",
                       "nbt": "{gm4_combat_expanded:{strike:1}}"
                     }
                   }

@@ -34,7 +34,7 @@
             "condition": "minecraft:location_check",
             "predicate": {
               "block": {
-                "tag": "gm4_shroomites:spore_opaque"
+                "blocks": "#gm4_shroomites:spore_opaque"
               }
             }
           }

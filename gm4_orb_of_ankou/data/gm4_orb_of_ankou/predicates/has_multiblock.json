@@ -140,7 +140,7 @@
           "offsetZ": 0,
           "predicate": {
             "block": {
-              "tag": "minecraft:soul_fire_base_blocks"
+              "blocks": "#minecraft:soul_fire_base_blocks"
             }
           }
         }

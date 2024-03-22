@@ -13,7 +13,7 @@
                                 "predicate": {
                                     "equipment": {
                                         "mainhand": {
-                                            "tag": "gm4_pig_tractors:hoes"
+                                            "items": "#gm4_pig_tractors:hoes"
                                         }
                                     }
                                 }
@@ -24,7 +24,7 @@
                                 "predicate": {
                                     "equipment": {
                                         "offhand": {
-                                            "tag": "gm4_pig_tractors:hoes"
+                                            "items": "#gm4_pig_tractors:hoes"
                                         }
                                     }
                                 }
