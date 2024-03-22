@@ -6,63 +6,14 @@
       {
         "condition": "minecraft:inverted",
         "term": {
-          "condition": "minecraft:any_of",
-          "terms": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biome": "minecraft:desert"
-              }
-            },
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biome": "minecraft:desert_hills"
-              }
-            },
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biome": "minecraft:desert_lakes"
-              }
-            },
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biome": "minecraft:badlands"
-              }
-            },
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biome": "minecraft:badlands_plateau"
-              }
-            },
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biome": "minecraft:modified_badlands_plateau"
-              }
-            },
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biome": "minecraft:wooded_badlands_plateau"
-              }
-            },
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biome": "minecraft:modified_wooded_badlands_plateau"
-              }
-            },
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biome": "minecraft:eroded_badlands"
-              }
-            }
-          ]
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "biomes": [
+              "minecraft:desert",
+              "minecraft:badlands",
+              "minecraft:eroded_badlands"
+            ]
+          }
         }
       },
       {
