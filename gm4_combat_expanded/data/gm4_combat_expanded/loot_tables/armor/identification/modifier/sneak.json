@@ -15,14 +15,14 @@
                   "attribute": "minecraft:generic.attack_speed",
                   "name": "gm4_combat_expanded",
                   "amount": 0,
-                  "operation": "multiply_base",
+                  "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.movement_speed",
                   "name": "gm4_combat_expanded_2",
                   "amount": 0,
-                  "operation": "multiply_base",
+                  "operation": "add_multiplied_base",
                   "slot": "chest"
                 }
               ]

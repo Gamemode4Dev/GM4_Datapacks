@@ -15,7 +15,7 @@
                   "attribute": "generic.knockback_resistance",
                   "name": "gm4_ce_perm",
                   "amount": 0.1,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 }
               ]

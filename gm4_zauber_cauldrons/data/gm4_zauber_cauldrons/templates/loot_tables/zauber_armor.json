@@ -44,14 +44,14 @@
                                     "attribute": "minecraft:generic.armor_toughness",
                                     "name": "generic.armor_toughness",
                                     "amount": 3,
-                                    "operation": "addition",
+                                    "operation": "add_value",
                                     "slot": "{{slot}}"
                                 },
                                 {
                                     "attribute": "minecraft:generic.armor",
                                     "name": "generic.armor",
                                     "amount": {{armor_value}},
-                                    "operation": "addition",
+                                    "operation": "add_value",
                                     "slot": "{{slot}}"
                                 },
                                 {

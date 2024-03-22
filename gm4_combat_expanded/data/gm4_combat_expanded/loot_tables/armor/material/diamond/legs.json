@@ -16,7 +16,7 @@
                   "name": "generic.armor",
                   "id": "D8499B04-0E66-4726-AB29-64469D734E0D",
                   "amount": 6,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "legs"
                 },
                 {
@@ -24,7 +24,7 @@
                   "name": "generic.armor_toughness",
                   "id": "D8499B04-0E66-4726-AB29-64469D734E0D",
                   "amount": 2,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "legs"
                 },
                 {
@@ -32,7 +32,7 @@
                   "name": "generic.knockback_resistance",
                   "id": "0-1-438d-0-28d34",
                   "amount": 0,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "legs"
                 }
               ]

@@ -16,7 +16,7 @@
                   "name": "generic.armor",
                   "id": "9F3D476D-C118-4544-8365-64846904B48E",
                   "amount": 8,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 },
                 {
@@ -24,7 +24,7 @@
                   "name": "generic.armor_toughness",
                   "id": "9F3D476D-C118-4544-8365-64846904B48E",
                   "amount": 2,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 },
                 {
@@ -32,7 +32,7 @@
                   "name": "generic.knockback_resistance",
                   "id": "0-1-438d-0-28d34",
                   "amount": 0,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 }
               ]

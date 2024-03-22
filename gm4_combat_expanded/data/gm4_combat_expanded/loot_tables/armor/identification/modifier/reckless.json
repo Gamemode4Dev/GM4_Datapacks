@@ -15,14 +15,14 @@
                   "attribute": "minecraft:generic.attack_damage",
                   "name": "gm4_combat_expanded",
                   "amount": 0,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.armor",
                   "name": "gm4_combat_expanded_2",
                   "amount": 0,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 }
               ]

@@ -16,7 +16,7 @@
                   "name": "generic.armor",
                   "id": "D8499B04-0E66-4726-AB29-64469D734E0D",
                   "amount": 2,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "legs"
                 }
               ]

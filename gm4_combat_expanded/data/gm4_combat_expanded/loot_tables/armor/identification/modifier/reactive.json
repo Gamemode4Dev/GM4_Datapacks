@@ -22,7 +22,7 @@
                     },
                     "score": "gm4_ce_data"
                   },
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 }
               ]

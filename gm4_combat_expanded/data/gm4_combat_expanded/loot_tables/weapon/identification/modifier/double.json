@@ -15,14 +15,14 @@
                   "attribute": "minecraft:generic.attack_damage",
                   "name": "gm4_ce_remove_hand_stats",
                   "amount": -1,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "mainhand"
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
                   "name": "gm4_ce_remove_hand_stats",
                   "amount": -4,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "mainhand"
                 },
                 {
@@ -37,7 +37,7 @@
                     "score": "gm4_ce_data",
                     "scale": 0.1
                   },
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "mainhand"
                 },
                 {
@@ -51,7 +51,7 @@
                   "attribute": "minecraft:generic.attack_damage",
                   "name": "gm4_ce_double_sharpness",
                   "amount": 0,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "mainhand"
                 },
                 {
@@ -66,7 +66,7 @@
                     "score": "gm4_ce_data",
                     "scale": 0.1
                   },
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "mainhand"
                 }
               ]

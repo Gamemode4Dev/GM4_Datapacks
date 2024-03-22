@@ -15,7 +15,7 @@
                   "attribute": "minecraft:generic.max_health",
                   "name": "gm4_combat_expanded",
                   "amount": 0,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 }
               ]

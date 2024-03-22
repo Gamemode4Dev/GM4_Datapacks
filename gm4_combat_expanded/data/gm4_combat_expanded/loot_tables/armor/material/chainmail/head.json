@@ -16,7 +16,7 @@
                   "name": "generic.armor",
                   "id": "2AD3F246-FEE1-4E67-B886-69FD380BB150",
                   "amount": 2,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "head"
                 }
               ]
