@@ -22,11 +22,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "modifier": "vorpal"
-                }
-              }
+              "tag": "{gm4_combat_expanded:{modifier:'vorpal'}}"
             },
             {
               "function": "minecraft:copy_nbt",

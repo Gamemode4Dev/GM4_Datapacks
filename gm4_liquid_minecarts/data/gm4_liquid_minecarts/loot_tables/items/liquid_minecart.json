@@ -16,11 +16,7 @@
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "liquid_minecart"
-                }
-              }
+              "tag": "{gm4_machines:{id:'liquid_minecart'}}"
             },
             {
               "function": "set_name",

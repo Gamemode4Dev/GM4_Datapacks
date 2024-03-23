@@ -16,11 +16,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_metallurgy": {
-                                    "stored_shamir": "infinitas"
-                                }
-                            }
+                            "tag": "{gm4_metallurgy:{stored_shamir:'infinitas'}}"
                         },
                         {
                             "function": "minecraft:set_lore",

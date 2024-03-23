@@ -59,12 +59,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "strike": "giant",
-                  "modifier": 110
-                }
-              }
+              "tag": "{gm4_combat_expanded:{strike:'giant',modifier:110}}"
             }
           ]
         }

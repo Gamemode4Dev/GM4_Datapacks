@@ -43,16 +43,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "durability": 80,
-                  "identified": 0,
-                  "armor_clamp": -3,
-                  "slot": 1,
-                  "material": 1,
-                  "name": "{\"italic\":false,\"translate\":\"item.minecraft.leather_chestplate\"}"
-                }
-              }
+              "tag": "{gm4_combat_expanded:{durability:80,identified:0,armor_clamp:-3,slot:1,material:1,name:'{\"italic\":false,\"translate\":\"item.minecraft.leather_chestplate\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

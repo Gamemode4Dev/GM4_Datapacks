@@ -25,11 +25,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "enderpuff": 1
-                }
-              }
+              "tag": "{gm4_end_fishing:{enderpuff:1}}"
             }
           ]
         }

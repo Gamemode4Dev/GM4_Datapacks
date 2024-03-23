@@ -80,30 +80,18 @@
                 "minecraft:custom_model_data": "item/lump/bismutite",
                 "minecraft:profile": {
                   "name": "[Drop to Fix Item] gm4_metallurgy:ore/bismuth",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Value": "$ore/bismuth"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$ore/bismuth"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_metallurgy": {
-                  "metal": {
-                    "type": "bismuth",
-                    "amount": [
-                      1
-                    ],
-                    "castable": 1
-                  },
-                  "item": "ore"
-                }
-              }
+              "tag": "{gm4_metallurgy:{metal:{type:'bismuth',amount:[1],castable:1},item:'ore'}}"
             }
           ]
         }

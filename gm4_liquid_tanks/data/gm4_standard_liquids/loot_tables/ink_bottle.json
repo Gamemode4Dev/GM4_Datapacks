@@ -26,11 +26,7 @@
                         },
                         {
                             "function": "set_custom_data",
-                            "tag": {
-                                "gm4_standard_liquids": {
-                                    "potion": "blindness"
-                                }
-                            }
+                            "tag": "{gm4_standard_liquids:{potion:'blindness'}}"
                         },
                         {
                             "function": "set_name",

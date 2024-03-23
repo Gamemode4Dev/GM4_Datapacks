@@ -14,24 +14,19 @@
                 "minecraft:custom_model_data": "item/forming_press",
                 "minecraft:profile": {
                   "name": "gm4_forming_press",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Signature": "gm4_machine",
-                        "Value": "$forming_press"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$forming_press",
+                      "signature": "gm4_machine"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "forming_press"
-                }
-              }
+              "tag": "{gm4_machines:{id:'forming_press'}}"
             },
             {
               "function": "set_name",

@@ -16,11 +16,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_metallurgy": {
-                                    "stored_shamir": "helious"
-                                }
-                            }
+                            "tag": "{gm4_metallurgy:{stored_shamir:'helious'}}"
                         },
                         {
                             "function": "minecraft:set_lore",

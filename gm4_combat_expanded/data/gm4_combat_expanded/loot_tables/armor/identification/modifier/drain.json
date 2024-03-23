@@ -22,11 +22,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "modifier": 35
-                }
-              }
+              "tag": "{gm4_combat_expanded:{modifier:35}}"
             },
             {
               "function": "minecraft:copy_nbt",

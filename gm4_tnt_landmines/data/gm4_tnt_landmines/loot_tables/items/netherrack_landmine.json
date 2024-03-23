@@ -16,12 +16,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_tnt_landmines": {
-                                    "item": "landmine",
-                                    "block": "minecraft:netherrack"
-                                }
-                            }
+                            "tag": "{gm4_tnt_landmines:{item:'landmine',block:'minecraft:netherrack'}}"
                         },
                         {
                             "function": "minecraft:set_name",

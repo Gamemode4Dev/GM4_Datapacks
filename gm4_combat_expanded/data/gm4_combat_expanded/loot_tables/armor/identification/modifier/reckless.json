@@ -29,13 +29,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "modifier": 37,
-                  "active": 0,
-                  "deactivates_at": 0
-                }
-              }
+              "tag": "{gm4_combat_expanded:{modifier:37,active:0,deactivates_at:0}}"
             },
             {
               "function": "minecraft:copy_nbt",

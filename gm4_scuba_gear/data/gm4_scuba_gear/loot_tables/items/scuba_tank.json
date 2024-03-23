@@ -43,11 +43,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_scuba_gear": {
-                  "item": "tank"
-                }
-              }
+              "tag": "{gm4_scuba_gear:{item:'tank'}}"
             },
             {
               "function": "minecraft:set_name",

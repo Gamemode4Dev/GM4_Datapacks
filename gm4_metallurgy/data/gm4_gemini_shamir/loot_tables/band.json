@@ -16,11 +16,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_metallurgy": {
-                                    "stored_shamir": "gemini"
-                                }
-                            }
+                            "tag": "{gm4_metallurgy:{stored_shamir:'gemini'}}"
                         },
                         {
                             "function": "minecraft:set_lore",

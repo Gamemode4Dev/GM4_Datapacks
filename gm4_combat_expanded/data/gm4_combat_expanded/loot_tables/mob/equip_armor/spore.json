@@ -126,11 +126,7 @@
         },
         {
           "function": "minecraft:set_custom_data",
-          "tag": {
-            "gm4_ce_spore": {
-              "generation": 0
-            }
-          }
+          "tag": "{gm4_ce_spore:{generation:0}}"
         },
         {
           "function": "minecraft:set_name",

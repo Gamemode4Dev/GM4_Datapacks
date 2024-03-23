@@ -11,32 +11,18 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:profile": {
-                                    "properties": {
-                                        "textures": [
-                                            {
-                                                "Value": "$band/thorium_brass_RETIRED"
-                                            }
-                                        ]
-                                    }
+                                    "properties": [
+                                        {
+                                            "name": "textures",
+                                            "value": "$band/thorium_brass_RETIRED"
+                                        }
+                                    ]
                                 }
                             }
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_metallurgy": {
-                                    "has_shamir": 1,
-                                    "metal": {
-                                        "type": "thorium_brass",
-                                        "amount": [
-                                            9,
-                                            3
-                                        ],
-                                        "castable": 1
-                                    },
-                                    "item": "obsidian_cast"
-                                }
-                            }
+                            "tag": "{gm4_metallurgy:{has_shamir:1,metal:{type:'thorium_brass',amount:[9,3],castable:1},item:'obsidian_cast'}}"
                         },
                         {
                             "function": "minecraft:set_name",

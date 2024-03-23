@@ -43,16 +43,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "durability": 105,
-                  "identified": 0,
-                  "armor_clamp": -3,
-                  "slot": 2,
-                  "material": 4,
-                  "name": "{\"italic\":false,\"translate\":\"item.minecraft.golden_leggings\"}"
-                }
-              }
+              "tag": "{gm4_combat_expanded:{durability:105,identified:0,armor_clamp:-3,slot:2,material:4,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_leggings\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

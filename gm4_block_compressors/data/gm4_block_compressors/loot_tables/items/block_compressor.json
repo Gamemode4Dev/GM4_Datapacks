@@ -14,24 +14,19 @@
                 "minecraft:custom_model_data": "block/block_compressor_full",
                 "minecraft:profile": {
                   "name": "gm4_block_compressor",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Signature": "gm4_machine",
-                        "Value": "$block_compressor"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$block_compressor",
+                      "signature": "gm4_machine"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "block_compressor"
-                }
-              }
+              "tag": "{gm4_machines:{id:'block_compressor'}}"
             },
             {
               "function": "set_name",

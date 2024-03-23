@@ -14,24 +14,19 @@
                 "minecraft:custom_model_data": "item/enchantment_extractor",
                 "minecraft:profile": {
                   "name": "gm4_enchantment_extractor",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Signature": "gm4_machine",
-                        "Value": "$enchantment_extractor"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$enchantment_extractor",
+                      "signature": "gm4_machine"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "enchantment_extractor"
-                }
-              }
+              "tag": "{gm4_machines:{id:'enchantment_extractor'}}"
             },
             {
               "function": "set_name",

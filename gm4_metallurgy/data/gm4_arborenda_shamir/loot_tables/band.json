@@ -16,11 +16,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_metallurgy": {
-                                    "stored_shamir": "arborenda"
-                                }
-                            }
+                            "tag": "{gm4_metallurgy:{stored_shamir:'arborenda'}}"
                         },
                         {
                             "function": "minecraft:set_lore",

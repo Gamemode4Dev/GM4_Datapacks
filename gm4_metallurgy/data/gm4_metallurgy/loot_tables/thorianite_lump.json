@@ -44,30 +44,18 @@
                 "minecraft:custom_model_data": "item/lump/thorianite",
                 "minecraft:profile": {
                   "name": "[Drop to Fix Item] gm4_metallurgy:ore/thorium/v0",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Value": "$ore/thorium"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$ore/thorium"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_metallurgy": {
-                  "metal": {
-                    "type": "thorium",
-                    "amount": [
-                      1
-                    ],
-                    "castable": 1
-                  },
-                  "item": "ore"
-                }
-              }
+              "tag": "{gm4_metallurgy:{metal:{type:'thorium',amount:[1],castable:1},item:'ore'}}"
             }
           ]
         }

@@ -14,24 +14,19 @@
                 "minecraft:custom_model_data": "item/teleportation_anchor",
                 "minecraft:profile": {
                   "name": "gm4_teleportation_anchor",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Signature": "gm4_machine",
-                        "Value": "$teleportation_anchor"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$teleportation_anchor",
+                      "signature": "gm4_machine"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "teleportation_anchor"
-                }
-              }
+              "tag": "{gm4_machines:{id:'teleportation_anchor'}}"
             },
             {
               "function": "set_name",

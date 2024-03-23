@@ -14,24 +14,19 @@
                 "minecraft:custom_model_data": "item/teleportation_jammer",
                 "minecraft:profile": {
                   "name": "gm4_teleportation_jammer",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Signature": "gm4_machine",
-                        "Value": "$teleportation_jammer"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$teleportation_jammer",
+                      "signature": "gm4_machine"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "teleportation_jammer"
-                }
-              }
+              "tag": "{gm4_machines:{id:'teleportation_jammer'}}"
             },
             {
               "function": "set_name",

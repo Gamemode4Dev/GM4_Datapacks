@@ -17,11 +17,7 @@
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "auto_crafter"
-                }
-              }
+              "tag": "{gm4_machines:{id:'auto_crafter'}}"
             },
             {
               "function": "set_name",

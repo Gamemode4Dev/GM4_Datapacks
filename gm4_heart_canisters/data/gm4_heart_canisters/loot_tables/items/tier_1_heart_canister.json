@@ -16,10 +16,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_heart_canister": 1,
-                                "gm4_heart_canister_tier": 1
-                            }
+                            "tag": "{gm4_heart_canister:1,gm4_heart_canister_tier:1}"
                         },
                         {
                             "function": "minecraft:set_name",

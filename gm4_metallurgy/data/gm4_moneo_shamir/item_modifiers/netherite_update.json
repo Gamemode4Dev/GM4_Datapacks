@@ -1,8 +1,4 @@
 {
   "function": "minecraft:set_custom_data",
-  "tag": {
-    "minecraft:custom_data": {
-      "MaxDurability": 2031
-    }
-  }
+  "tag": "{MaxDurability:2031}"
 }

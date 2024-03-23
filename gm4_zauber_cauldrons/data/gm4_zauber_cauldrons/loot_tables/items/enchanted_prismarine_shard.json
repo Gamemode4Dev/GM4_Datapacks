@@ -16,11 +16,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_zauber_cauldrons": {
-                  "item": "enchanted_prismarine_shard"
-                }
-              }
+              "tag": "{gm4_zauber_cauldrons:{item:'enchanted_prismarine_shard'}}"
             },
             {
               "function": "minecraft:set_name",

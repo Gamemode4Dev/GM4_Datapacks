@@ -35,9 +35,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_endermite_egg": 1
-                            }
+                            "tag": "{gm4_endermite_egg:1}"
                         }
                     ]
                 }

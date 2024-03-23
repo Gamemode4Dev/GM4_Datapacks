@@ -10,9 +10,7 @@
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_auto_crafting_temp": 1
-              }
+              "tag": "{gm4_auto_crafting_temp:1}"
             }
           ]
         }

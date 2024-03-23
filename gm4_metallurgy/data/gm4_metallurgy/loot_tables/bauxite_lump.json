@@ -44,30 +44,18 @@
                 "minecraft:custom_model_data": "item/lump/bauxite",
                 "minecraft:profile": {
                   "name": "[Drop to Fix Item] gm4_metallurgy:ore/aluminium/v0",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Value": "$ore/aluminium"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$ore/aluminium"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_metallurgy": {
-                  "metal": {
-                    "type": "aluminium",
-                    "amount": [
-                      1
-                    ],
-                    "castable": 1
-                  },
-                  "item": "ore"
-                }
-              }
+              "tag": "{gm4_metallurgy:{metal:{type:'aluminium',amount:[1],castable:1},item:'ore'}}"
             }
           ]
         }

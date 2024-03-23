@@ -11,31 +11,18 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:profile": {
-                                    "properties": {
-                                        "textures": [
-                                            {
-                                                "Value": "$band/bismuth"
-                                            }
-                                        ]
-                                    }
+                                    "properties": [
+                                        {
+                                            "name": "textures",
+                                            "value": "$band/bismuth"
+                                        }
+                                    ]
                                 }
                             }
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_metallurgy": {
-                                    "has_shamir": 1,
-                                    "metal": {
-                                        "type": "bismuth",
-                                        "amount": [
-                                            12
-                                        ],
-                                        "castable": 1
-                                    },
-                                    "item": "obsidian_cast"
-                                }
-                            }
+                            "tag": "{gm4_metallurgy:{has_shamir:1,metal:{type:'bismuth',amount:[12],castable:1},item:'obsidian_cast'}}"
                         },
                         {
                             "function": "minecraft:set_name",

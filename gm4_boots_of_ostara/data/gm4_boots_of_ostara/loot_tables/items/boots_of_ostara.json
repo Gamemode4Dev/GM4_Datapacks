@@ -20,9 +20,7 @@
                         },
                         {
                             "function": "set_custom_data",
-                            "tag": {
-                                "gm4_boots_of_ostara": 1
-                            }
+                            "tag": "{gm4_boots_of_ostara:1}"
                         },
                         {
                             "function": "minecraft:set_name",

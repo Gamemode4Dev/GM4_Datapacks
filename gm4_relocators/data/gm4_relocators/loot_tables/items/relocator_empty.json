@@ -14,24 +14,18 @@
                 "minecraft:custom_model_data": "item/relocator_empty",
                 "minecraft:profile": {
                   "name": "gm4_relocator_empty",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Signature": "gm4_machine",
-                        "Value": "$relocator_empty"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$relocator_empty"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "relocator_empty"
-                }
-              }
+              "tag": "{gm4_machines:{id:'relocator_empty'}}"
             },
             {
               "function": "set_name",

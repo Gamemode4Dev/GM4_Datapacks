@@ -20,9 +20,7 @@
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_everstone": 1
-              }
+              "tag": "{gm4_everstone:1}"
             },
             {
               "function": "set_name",

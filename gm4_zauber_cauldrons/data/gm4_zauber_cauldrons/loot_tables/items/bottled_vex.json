@@ -16,11 +16,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_zauber_cauldrons": {
-                                    "item": "bottled_vex"
-                                }
-                            }
+                            "tag": "{gm4_zauber_cauldrons:{item:'bottled_vex'}}"
                         },
                         {
                             "function": "minecraft:copy_nbt",

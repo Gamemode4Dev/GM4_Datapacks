@@ -14,27 +14,19 @@
                 "minecraft:custom_model_data": "item/tinkering_compressor",
                 "minecraft:profile": {
                   "name": "gm4_tinkering_compressor",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Signature": "gm4_machine",
-                        "Value": "$tinkering_compressor"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$tinkering_compressor",
+                      "signature": "gm4_machine"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "tinkering_compressor"
-                },
-                "gm4_metallurgy": {
-                  "has_shamir": 1
-                }
-              }
+              "tag": "{gm4_machines:{id:'tinkering_compressor'},gm4_metallurgy:{has_shamir:1}}"
             },
             {
               "function": "set_name",

@@ -30,16 +30,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "identified": 0,
-                  "damage": 70,
-                  "atkspeed": 8,
-                  "strike": 1,
-                  "modifier": 0,
-                  "name": "{\"italic\":false,\"translate\":\"item.minecraft.wooden_axe\"}"
-                }
-              }
+              "tag": "{gm4_combat_expanded:{identified:0,damage:70,atkspeed:8,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.wooden_axe\"}'}}"
             },
             {
               "function": "minecraft:enchant_with_levels",

@@ -20,24 +20,19 @@
                     -1876292803,
                     1704690390
                   ],
-                  "properties": {
-                    "textures": [
-                      {
-                        "Signature": "gm4_machine",
-                        "Value": "$liquid_tank"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$liquid_tank",
+                      "signature": "gm4_machine"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "liquid_tank"
-                }
-              }
+              "tag": "{gm4_machines:{id:'liquid_tank'}}"
             },
             {
               "function": "set_name",

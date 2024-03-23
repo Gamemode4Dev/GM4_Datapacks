@@ -16,12 +16,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_tnt_landmines": {
-                                    "item": "landmine",
-                                    "block": "minecraft:stone_bricks"
-                                }
-                            }
+                            "tag": "{gm4_tnt_landmines:{item:'landmine',block:'minecraft:stone_bricks'}}"
                         },
                         {
                             "function": "minecraft:set_name",

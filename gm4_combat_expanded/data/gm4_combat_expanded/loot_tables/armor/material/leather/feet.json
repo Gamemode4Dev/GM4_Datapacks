@@ -43,16 +43,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "durability": 65,
-                  "identified": 0,
-                  "armor_clamp": -1,
-                  "slot": 3,
-                  "material": 1,
-                  "name": "{\"italic\":false,\"translate\":\"item.minecraft.leather_boots\"}"
-                }
-              }
+              "tag": "{gm4_combat_expanded:{durability:65,identified:0,armor_clamp:-1,slot:3,material:1,name:'{\"italic\":false,\"translate\":\"item.minecraft.leather_boots\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

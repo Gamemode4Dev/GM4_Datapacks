@@ -28,11 +28,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_mountaineering": {
-                                    "item": "poles"
-                                }
-                            }
+                            "tag": "{gm4_mountaineering:{item:'poles'}}"
                         },
                         {
                             "function": "minecraft:set_name",

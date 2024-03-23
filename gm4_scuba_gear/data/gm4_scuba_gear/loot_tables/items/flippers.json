@@ -47,11 +47,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_scuba_gear": {
-                  "item": "flippers"
-                }
-              }
+              "tag": "{gm4_scuba_gear:{item:'flippers'}}"
             },
             {
               "function": "minecraft:set_name",

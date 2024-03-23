@@ -58,13 +58,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "modifier": 12,
-                  "active": 0,
-                  "stop_time": 0
-                }
-              }
+              "tag": "{gm4_combat_expanded:{modifier:12,active:0,stop_time:0}}"
             }
           ]
         }

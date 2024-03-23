@@ -43,16 +43,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "durability": 240,
-                  "identified": 0,
-                  "armor_clamp": -6,
-                  "slot": 1,
-                  "material": 3,
-                  "name": "{\"italic\":false,\"translate\":\"item.minecraft.iron_chestplate\"}"
-                }
-              }
+              "tag": "{gm4_combat_expanded:{durability:240,identified:0,armor_clamp:-6,slot:1,material:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_chestplate\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

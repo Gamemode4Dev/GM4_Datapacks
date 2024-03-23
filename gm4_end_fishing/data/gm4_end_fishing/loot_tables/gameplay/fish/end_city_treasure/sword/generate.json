@@ -27,11 +27,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 1
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:1}}"
             }
           ]
         },
@@ -65,11 +61,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 2
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:2}}"
             }
           ]
         },
@@ -97,11 +89,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 3
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:3}}"
             }
           ]
         },
@@ -129,11 +117,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 4
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:4}}"
             }
           ]
         },
@@ -161,11 +145,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 5
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:5}}"
             }
           ]
         },
@@ -193,11 +173,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 6
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:6}}"
             }
           ]
         },
@@ -231,11 +207,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 7
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:7}}"
             }
           ]
         },
@@ -263,11 +235,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 8
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:8}}"
             }
           ]
         },
@@ -295,11 +263,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 9
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:9}}"
             }
           ]
         },
@@ -327,11 +291,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 1
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:10}}"
             }
           ]
         },
@@ -359,11 +319,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 1
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:11}}"
             }
           ]
         },
@@ -397,11 +353,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 1
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:12}}"
             }
           ]
         },
@@ -429,11 +381,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 1
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:13}}"
             }
           ]
         },
@@ -467,11 +415,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 1
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:14}}"
             }
           ]
         },
@@ -499,11 +443,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 1
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:15}}"
             }
           ]
         },
@@ -531,11 +471,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 1
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:16}}"
             }
           ]
         },
@@ -569,11 +505,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 1
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:17}}"
             }
           ]
         },
@@ -601,11 +533,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 1
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:18}}"
             }
           ]
         },
@@ -633,11 +561,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 1
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:19}}"
             }
           ]
         },
@@ -665,11 +589,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "end_city_sword": 2
-                }
-              }
+              "tag": "{gm4_end_fishing:{end_city_sword:20}}"
             }
           ]
         }

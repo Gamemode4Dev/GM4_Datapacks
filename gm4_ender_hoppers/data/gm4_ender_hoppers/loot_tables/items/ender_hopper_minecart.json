@@ -16,11 +16,7 @@
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "ender_hopper_minecart"
-                }
-              }
+              "tag": "{gm4_machines:{id:'ender_hopper_minecart'}}"
             },
             {
               "function": "set_name",

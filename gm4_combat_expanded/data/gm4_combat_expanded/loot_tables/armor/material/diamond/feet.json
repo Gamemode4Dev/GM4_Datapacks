@@ -59,16 +59,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "durability": 429,
-                  "identified": 0,
-                  "armor_clamp": -3,
-                  "slot": 3,
-                  "material": 5,
-                  "name": "{\"italic\":false,\"translate\":\"item.minecraft.diamond_boots\"}"
-                }
-              }
+              "tag": "{gm4_combat_expanded:{durability:429,identified:0,armor_clamp:-3,slot:3,material:5,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_boots\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

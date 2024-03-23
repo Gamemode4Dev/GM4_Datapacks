@@ -50,9 +50,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_lightning_in_a_bottle": 1
-              }
+              "tag": "{gm4_lightning_in_a_bottle:1}"
             }
           ]
         }

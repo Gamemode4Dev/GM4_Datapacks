@@ -25,17 +25,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_trees": {
-                                    "item": {
-                                        "id": "sapling",
-                                        "type": "apple"
-                                    }
-                                },
-                                "gm4_podzol_rooting_soil": {
-                                    "id": "apple_tree_sapling"
-                                }
-                            }
+                            "tag": "{gm4_trees:{item:{id:'sapling',type:'apple'}},gm4_podzol_rooting_soil:{id:'apple_tree_sapling'}}"
                         }
                     ]
                 }

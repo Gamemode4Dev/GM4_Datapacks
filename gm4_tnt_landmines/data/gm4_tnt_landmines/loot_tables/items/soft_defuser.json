@@ -15,11 +15,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_tnt_landmines": {
-                                    "item": "upgrade"
-                                }
-                            }
+                            "tag": "{gm4_tnt_landmines:{item:'upgrade'}}"
                         },
                         {
                             "function": "minecraft:set_name",

@@ -15,11 +15,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_machines": {
-                                    "id": "tunnel_bore"
-                                }
-                            }
+                            "tag": "{gm4_machines:{id:'tunnel_bore'}}"
                         },
                         {
                             "function": "minecraft:set_name",

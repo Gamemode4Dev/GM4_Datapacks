@@ -114,14 +114,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "set_data": {
-                    "type": "entity",
-                    "id": "endermite"
-                  }
-                }
-              }
+              "tag": "{gm4_end_fishing:{set_data:{type:'entity',id:'endermite'}}}"
             }
           ]
         },
@@ -151,14 +144,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_end_fishing": {
-                  "set_data": {
-                    "type": "entity",
-                    "id": "endermite"
-                  }
-                }
-              }
+              "tag": "{gm4_end_fishing:{set_data:{type:'entity',id:'endermite'}}}"
             }
           ]
         }

@@ -14,24 +14,19 @@
                 "minecraft:custom_model_data": "item/ender_hopper",
                 "minecraft:profile": {
                   "name": "gm4_ender_hopper",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Signature": "gm4_machine",
-                        "Value": "$ender_hopper"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$ender_hopper",
+                      "signature": "gm4_machine"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "ender_hopper"
-                }
-              }
+              "tag": "{gm4_machines:{id:'ender_hopper'}}"
             },
             {
               "function": "set_name",

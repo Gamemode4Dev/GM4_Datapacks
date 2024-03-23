@@ -44,11 +44,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "modifier": 71
-                }
-              }
+              "tag": "{gm4_combat_expanded:{modifier:71}}"
             }
           ]
         }

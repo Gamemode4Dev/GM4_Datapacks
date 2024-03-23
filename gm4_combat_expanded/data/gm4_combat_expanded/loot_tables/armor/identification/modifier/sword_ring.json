@@ -30,11 +30,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "modifier": "sword_ring"
-                }
-              }
+              "tag": "{gm4_combat_expanded:{modifier:'sword_ring'}}"
             },
             {
               "function": "minecraft:copy_nbt",

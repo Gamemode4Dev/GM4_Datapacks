@@ -14,24 +14,19 @@
                 "minecraft:custom_model_data": "item/smeltery",
                 "minecraft:profile": {
                   "name": "gm4_smeltery",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Signature": "gm4_machine",
-                        "Value": "$smeltery"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$smeltery",
+                      "signature": "gm4_machine"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "smeltery"
-                }
-              }
+              "tag": "{gm4_machines:{id:'smeltery'}}"
             },
             {
               "function": "set_name",

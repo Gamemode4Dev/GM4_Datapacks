@@ -31,11 +31,7 @@
                         },
                         {
                             "function": "set_custom_data",
-                            "tag": {
-                                "gm4_standard_liquids": {
-                                    "potion": "glowing"
-                                }
-                            }
+                            "tag": "{gm4_standard_liquids:{potion:'glowing'}}"
                         },
                         {
                             "function": "set_name",

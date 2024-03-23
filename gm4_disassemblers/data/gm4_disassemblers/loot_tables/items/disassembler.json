@@ -14,24 +14,19 @@
                 "minecraft:custom_model_data": "item/disassembler",
                 "minecraft:profile": {
                   "name": "gm4_disassembler",
-                  "properties": {
-                    "textures": [
-                      {
-                        "Signature": "gm4_machine",
-                        "Value": "$disassembler"
-                      }
-                    ]
-                  }
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "$disassembler",
+                      "signature": "gm4_machine"
+                    }
+                  ]
                 }
               }
             },
             {
               "function": "set_custom_data",
-              "tag": {
-                "gm4_machines": {
-                  "id": "disassembler"
-                }
-              }
+              "tag": "{gm4_machines:{id:'disassembler'}}"
             },
             {
               "function": "set_name",

@@ -16,11 +16,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": {
-                                "gm4_metallurgy": {
-                                    "stored_shamir": "hypexperia"
-                                }
-                            }
+                            "tag": "{gm4_metallurgy:{stored_shamir:'hypexperia'}}"
                         },
                         {
                             "function": "minecraft:set_lore",

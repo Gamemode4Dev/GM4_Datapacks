@@ -43,16 +43,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_combat_expanded": {
-                  "durability": 165,
-                  "identified": 0,
-                  "armor_clamp": -2,
-                  "slot": 0,
-                  "material": 3,
-                  "name": "{\"italic\":false,\"translate\":\"item.minecraft.iron_helmet\"}"
-                }
-              }
+              "tag": "{gm4_combat_expanded:{durability:165,identified:0,armor_clamp:-2,slot:0,material:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_helmet\"}'}}"
             },
             {
               "function": "minecraft:enchant_randomly",

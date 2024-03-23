@@ -17,9 +17,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 1
-              }
+              "tag": "{gm4_audrey:1}"
             },
             {
               "function": "minecraft:set_name",
@@ -62,9 +60,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 2
-              }
+              "tag": "{gm4_audrey:2}"
             },
             {
               "function": "minecraft:set_name",
@@ -119,9 +115,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 3
-              }
+              "tag": "{gm4_audrey:3}"
             },
             {
               "function": "minecraft:set_name",
@@ -206,9 +200,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 4
-              }
+              "tag": "{gm4_audrey:4}"
             },
             {
               "function": "minecraft:set_name",
@@ -275,9 +267,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 5
-              }
+              "tag": "{gm4_audrey:5}"
             },
             {
               "function": "minecraft:set_name",
@@ -338,9 +328,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 6
-              }
+              "tag": "{gm4_audrey:6}"
             },
             {
               "function": "minecraft:set_name",
@@ -401,9 +389,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 7
-              }
+              "tag": "{gm4_audrey:7}"
             },
             {
               "function": "minecraft:set_name",
@@ -458,9 +444,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 8
-              }
+              "tag": "{gm4_audrey:8}"
             },
             {
               "function": "minecraft:set_name",
@@ -521,9 +505,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 9
-              }
+              "tag": "{gm4_audrey:9}"
             },
             {
               "function": "minecraft:set_name",
@@ -578,9 +560,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 10
-              }
+              "tag": "{gm4_audrey:10}"
             },
             {
               "function": "minecraft:set_name",
@@ -635,9 +615,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 11
-              }
+              "tag": "{gm4_audrey:11}"
             },
             {
               "function": "minecraft:set_name",
@@ -698,9 +676,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 12
-              }
+              "tag": "{gm4_audrey:12}"
             },
             {
               "function": "minecraft:set_name",
@@ -743,9 +719,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 13
-              }
+              "tag": "{gm4_audrey:13}"
             },
             {
               "function": "minecraft:set_name",
@@ -806,9 +780,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 14
-              }
+              "tag": "{gm4_audrey:14}"
             },
             {
               "function": "minecraft:set_name",
@@ -869,9 +841,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 15
-              }
+              "tag": "{gm4_audrey:15}"
             },
             {
               "function": "minecraft:set_name",
@@ -938,9 +908,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 16
-              }
+              "tag": "{gm4_audrey:16}"
             },
             {
               "function": "minecraft:set_name",
@@ -1013,9 +981,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 17
-              }
+              "tag": "{gm4_audrey:17}"
             },
             {
               "function": "minecraft:set_name",
@@ -1070,9 +1036,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 18
-              }
+              "tag": "{gm4_audrey:18}"
             },
             {
               "function": "minecraft:set_name",
@@ -1133,9 +1097,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 19
-              }
+              "tag": "{gm4_audrey:19}"
             },
             {
               "function": "minecraft:set_name",
@@ -1202,9 +1164,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_audrey": 20
-              }
+              "tag": "{gm4_audrey:20}"
             },
             {
               "function": "minecraft:set_name",

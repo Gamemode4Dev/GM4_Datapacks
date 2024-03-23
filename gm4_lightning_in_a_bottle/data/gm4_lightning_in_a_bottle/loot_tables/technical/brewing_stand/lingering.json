@@ -25,9 +25,7 @@
       "functions": [
         {
           "function": "minecraft:set_custom_data",
-          "tag": {
-            "gm4_custom_potion": 1
-          }
+          "tag": "{gm4_custom_potion:1}"
         }
       ]
     }

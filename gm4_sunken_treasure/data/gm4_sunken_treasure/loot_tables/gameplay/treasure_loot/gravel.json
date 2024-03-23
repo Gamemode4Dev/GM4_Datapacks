@@ -275,13 +275,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_sunken_treasure": {
-                  "spawn": {
-                    "id": "minecraft:guardian"
-                  }
-                }
-              }
+              "tag": "{gm4_sunken_treasure:{spawn:{id:'minecraft:guardian'}}}"
             }
           ]
         },
@@ -292,13 +286,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_sunken_treasure": {
-                  "spawn": {
-                    "id": "minecraft:glow_squid"
-                  }
-                }
-              }
+              "tag": "{gm4_sunken_treasure:{spawn:{id:'minecraft:glow_squid'}}}"
             }
           ],
           "conditions": [
@@ -321,13 +309,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_sunken_treasure": {
-                  "spawn": {
-                    "id": "minecraft:squid"
-                  }
-                }
-              }
+              "tag": "{gm4_sunken_treasure:{spawn:{id:'minecraft:squid'}}}"
             }
           ],
           "conditions": [

@@ -16,9 +16,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_soul_glass": 1
-              }
+              "tag": "{gm4_soul_glass:1}"
             },
             {
               "function": "minecraft:set_name",

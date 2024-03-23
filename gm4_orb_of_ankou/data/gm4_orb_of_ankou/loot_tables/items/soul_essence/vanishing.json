@@ -38,17 +38,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": {
-                "gm4_orb_of_ankou": {
-                  "item": "soul_essence",
-                  "stored_pneuma": {
-                    "id": "vanishing"
-                  },
-                  "stored_color": [
-                    8864176
-                  ]
-                }
-              }
+              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'vanishing'},stored_color:[8864176]}}"
             }
           ]
         }
