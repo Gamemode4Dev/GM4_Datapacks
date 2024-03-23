@@ -12,8 +12,13 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:4s,id:\"minecraft:piercing\"},{lvl:1s,id:\"minecraft:vanishing_curse\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:piercing": 4,
+                      "minecraft:vanishing_curse": 1
+                    }
+                  }
                 }
               ],
               "conditions": [
@@ -41,8 +46,12 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:4s,id:\"minecraft:piercing\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:piercing": 4
+                    }
+                  }
                 }
               ],
               "conditions": [
@@ -70,8 +79,12 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:3s,id:\"minecraft:piercing\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:piercing": 3
+                    }
+                  }
                 }
               ],
               "conditions": [
@@ -99,8 +112,12 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:2s,id:\"minecraft:piercing\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:piercing": 2
+                    }
+                  }
                 }
               ],
               "conditions": [
@@ -128,8 +145,12 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:1s,id:\"minecraft:piercing\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:piercing": 1
+                    }
+                  }
                 }
               ],
               "conditions": [

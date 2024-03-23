@@ -24,8 +24,10 @@
             ],
             "functions": [
                 {
-                    "function": "minecraft:set_nbt",
-                    "tag": "{gm4_custom_potion:1b}"
+                    "function": "minecraft:set_custom_data",
+                    "tag": {
+                        "gm4_custom_potion": 1
+                    }
                 }
             ]
         }

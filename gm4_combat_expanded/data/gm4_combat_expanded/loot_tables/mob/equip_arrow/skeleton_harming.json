@@ -8,8 +8,13 @@
           "name": "minecraft:tipped_arrow",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:harming\",CustomPotionColor:11101546}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:harming",
+                  "custom_color": 11101546
+                }
+              }
             },
             {
               "function": "minecraft:set_count",

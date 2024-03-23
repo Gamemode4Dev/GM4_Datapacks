@@ -12,8 +12,12 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:2s,id:\"minecraft:punch\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:punch": 2
+                    }
+                  }
                 }
               ],
               "conditions": [
@@ -41,8 +45,12 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:1s,id:\"minecraft:punch\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:punch": 1
+                    }
+                  }
                 }
               ],
               "conditions": [

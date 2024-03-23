@@ -9,8 +9,21 @@
                     "name": "lingering_potion",
                     "functions": [
                         {
-                            "function": "set_nbt",
-                            "tag": "{Potion:\"potion_liquids:floating\",HideFlags:32,custom_potion_effects:[{id:'minecraft:levitation',amplifier:2b,duration:225}],CustomPotionColor:13631487}"
+                            "function": "set_components",
+                            "components": {
+                                "minecraft:potion_contents": {
+                                    "potion": "potion_liquids:floating",
+                                    "custom_color": 13631487,
+                                    "custom_effects": [
+                                        {
+                                            "id": "minecraft:levitation",
+                                            "amplifier": 2,
+                                            "duration": 225
+                                        }
+                                    ]
+                                },
+                                "minecraft:hide_additional_tooltip": true
+                            }
                         },
                         {
                             "function": "set_name",

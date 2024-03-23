@@ -29,8 +29,17 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{identified:0,damage:40,atkspeed:16,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_sword\"}'}}"
+              "function": "minecraft:set_custom_data",
+              "tag": {
+                "gm4_combat_expanded": {
+                  "identified": 0,
+                  "damage": 40,
+                  "atkspeed": 16,
+                  "strike": 1,
+                  "modifier": 0,
+                  "name": "{\"italic\":false,\"translate\":\"item.minecraft.golden_sword\"}"
+                }
+              }
             },
             {
               "function": "minecraft:enchant_with_levels",

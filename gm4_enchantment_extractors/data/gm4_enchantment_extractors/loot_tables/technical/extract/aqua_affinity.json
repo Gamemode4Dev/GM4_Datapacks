@@ -12,8 +12,12 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:1s,id:\"minecraft:aqua_affinity\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:aqua_affinity": 1
+                    }
+                  }
                 }
               ],
               "conditions": [

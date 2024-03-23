@@ -28,8 +28,12 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:32}}"
+              "function": "minecraft:set_custom_data",
+              "tag": {
+                "gm4_combat_expanded": {
+                  "modifier": 32
+                }
+              }
             },
             {
               "function": "minecraft:copy_nbt",

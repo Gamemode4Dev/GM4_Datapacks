@@ -12,8 +12,12 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:1s,id:\"minecraft:infinity\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:infinity": 1
+                    }
+                  }
                 }
               ],
               "conditions": [

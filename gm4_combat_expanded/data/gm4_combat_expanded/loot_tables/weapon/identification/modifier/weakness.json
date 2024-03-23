@@ -58,8 +58,13 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{strike:1,modifier:102}}"
+              "function": "minecraft:set_custom_data",
+              "tag": {
+                "gm4_combat_expanded": {
+                  "strike": 1,
+                  "modifier": 102
+                }
+              }
             },
             {
               "function": "minecraft:copy_nbt",

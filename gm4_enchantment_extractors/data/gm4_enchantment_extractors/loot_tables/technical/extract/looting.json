@@ -12,8 +12,13 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:3s,id:\"minecraft:looting\"},{lvl:1s,id:\"minecraft:vanishing_curse\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:looting": 3,
+                      "minecraft:vanishing_curse": 1
+                    }
+                  }
                 }
               ],
               "conditions": [
@@ -41,8 +46,12 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:3s,id:\"minecraft:looting\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:looting": 3
+                    }
+                  }
                 }
               ],
               "conditions": [
@@ -70,8 +79,12 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:2s,id:\"minecraft:looting\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:looting": 2
+                    }
+                  }
                 }
               ],
               "conditions": [
@@ -99,8 +112,12 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:1s,id:\"minecraft:looting\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:looting": 1
+                    }
+                  }
                 }
               ],
               "conditions": [

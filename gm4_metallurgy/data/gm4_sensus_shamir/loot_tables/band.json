@@ -8,8 +8,19 @@
                     "value": "gm4_metallurgy:barium_band",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'shamir/sensus',SkullOwner:{Name:\"[Drop to Fix Item] gm4_sensus_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"sensus\"}}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "shamir/sensus",
+                                "minecraft:profile": "[Drop to Fix Item] gm4_sensus_shamir:band/v0"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": {
+                                "gm4_metallurgy": {
+                                    "stored_shamir": "sensus"
+                                }
+                            }
                         },
                         {
                             "function": "minecraft:set_lore",

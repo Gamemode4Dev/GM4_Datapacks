@@ -9,8 +9,20 @@
                     "name": "splash_potion",
                     "functions": [
                         {
-                            "function": "set_nbt",
-                            "tag": "{Potion:\"potion_liquids:floating\",custom_potion_effects:[{id:'minecraft:levitation',amplifier:2b,duration:900}],CustomPotionColor:13631487}"
+                            "function": "set_components",
+                            "components": {
+                                "minecraft:potion_contents": {
+                                    "potion": "potion_liquids:floating",
+                                    "custom_color": 13631487,
+                                    "custom_effects": [
+                                        {
+                                            "id": "minecraft:levitation",
+                                            "amplifier": 2,
+                                            "duration": 900
+                                        }
+                                    ]
+                                }
+                            }
                         },
                         {
                             "function": "set_name",

@@ -8,8 +8,20 @@
                     "name": "minecraft:player_head",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'item/tnt_landmine_crafting_table',gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:crafting_table\"},SkullOwner:\"$disguised/crafting_table\"}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/tnt_landmine_crafting_table",
+                                "minecraft:profile": "$disguised/crafting_table"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": {
+                                "gm4_tnt_landmines": {
+                                    "item": "landmine",
+                                    "block": "minecraft:crafting_table"
+                                }
+                            }
                         },
                         {
                             "function": "minecraft:set_name",

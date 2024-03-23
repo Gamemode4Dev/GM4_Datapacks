@@ -42,8 +42,17 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{durability:195,identified:0,armor_clamp:-2,slot:3,material:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_boots\"}'}}"
+              "function": "minecraft:set_custom_data",
+              "tag": {
+                "gm4_combat_expanded": {
+                  "durability": 195,
+                  "identified": 0,
+                  "armor_clamp": -2,
+                  "slot": 3,
+                  "material": 3,
+                  "name": "{\"italic\":false,\"translate\":\"item.minecraft.iron_boots\"}"
+                }
+              }
             },
             {
               "function": "minecraft:enchant_randomly",

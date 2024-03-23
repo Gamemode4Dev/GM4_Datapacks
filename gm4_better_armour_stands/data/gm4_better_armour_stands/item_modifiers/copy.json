@@ -1,7 +1,9 @@
 [
   {
-    "function": "minecraft:set_nbt",
-    "tag": "{Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:enchantment_glint_override": true
+    }
   },
   {
     "function": "minecraft:copy_nbt",

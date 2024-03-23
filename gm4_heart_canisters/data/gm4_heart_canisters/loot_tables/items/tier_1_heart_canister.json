@@ -8,8 +8,18 @@
                     "name": "minecraft:player_head",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'item/heart_canister_tier_1',gm4_heart_canister:1b,gm4_heart_canister_tier:1b,SkullOwner:'$heart_canister_tier_1'}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/heart_canister_tier_1",
+                                "minecraft:profile": "$heart_canister_tier_1" 
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": {
+                                "gm4_heart_canister": 1,
+                                "gm4_heart_canister_tier": 1
+                            }
                         },
                         {
                             "function": "minecraft:set_name",

@@ -8,8 +8,19 @@
                     "value": "gm4_metallurgy:thorium_band",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'shamir/vibro',SkullOwner:{Name:\"[Drop to Fix Item] gm4_vibro_shamir:band\"},gm4_metallurgy:{stored_shamir:\"vibro\"}}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "shamir/vibro",
+                                "minecraft:profile": "[Drop to Fix Item] gm4_vibro_shamir:band"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": {
+                                "gm4_metallurgy": {
+                                    "stored_shamir": "vibro"
+                                }
+                            }
                         },
                         {
                             "function": "minecraft:set_lore",

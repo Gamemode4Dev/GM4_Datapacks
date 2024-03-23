@@ -20,8 +20,10 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_ore_1'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_ore_1"
+              }
             }
           ]
         },
@@ -42,8 +44,10 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_ore_2'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_ore_2"
+              }
             }
           ]
         },
@@ -64,8 +68,10 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_ore_3'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_ore_3"
+              }
             }
           ]
         },
@@ -86,8 +92,10 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_ore_4'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_ore_4"
+              }
             }
           ]
         },
@@ -108,8 +116,10 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_ore_5'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_ore_5"
+              }
             }
           ]
         },
@@ -130,8 +140,10 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_ore_6'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_ore_6"
+              }
             }
           ]
         }

@@ -8,8 +8,19 @@
                     "value": "gm4_metallurgy:aluminium_band",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'shamir/celaro',SkullOwner:{Name:\"[Drop to Fix Item] gm4_celaro_shamir:band/v1\"},gm4_metallurgy:{stored_shamir:\"celaro\"}}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "shamir/celaro",
+                                "minecraft:profile": "[Drop to Fix Item] gm4_celaro_shamir:band/v1"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": {
+                                "gm4_metallurgy": {
+                                    "stored_shamir": "celaro"
+                                }
+                            }
                         },
                         {
                             "function": "minecraft:set_lore",

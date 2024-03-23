@@ -39,8 +39,35 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_metallurgy:{metal:{type:\"aluminium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:'item/lump/bauxite',SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/aluminium/v0\",Properties:{textures:[{Value:\"$ore/aluminium\"}]}}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/lump/bauxite",
+                "minecraft:profile": {
+                  "name": "[Drop to Fix Item] gm4_metallurgy:ore/aluminium/v0",
+                  "properties": {
+                    "textures": [
+                      {
+                        "Value": "$ore/aluminium"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": {
+                "gm4_metallurgy": {
+                  "metal": {
+                    "type": "aluminium",
+                    "amount": [
+                      1
+                    ],
+                    "castable": 1
+                  },
+                  "item": "ore"
+                }
+              }
             }
           ]
         }

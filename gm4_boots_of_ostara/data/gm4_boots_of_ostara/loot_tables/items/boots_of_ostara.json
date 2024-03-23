@@ -9,8 +9,20 @@
                     "name": "minecraft:leather_boots",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'item/boots_of_ostara',gm4_boots_of_ostara:1b,HideFlags:64,display:{color:3705899}}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:dyed_color": {
+                                    "rgb": 3705899,
+                                    "show_in_tooltip": false
+                                },
+                                "minecraft:custom_model_data": "item/boots_of_ostara"
+                            }
+                        },
+                        {
+                            "function": "set_custom_data",
+                            "tag": {
+                                "gm4_boots_of_ostara": 1
+                            }
                         },
                         {
                             "function": "minecraft:set_name",

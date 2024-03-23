@@ -1,4 +1,8 @@
 {
-  "function": "minecraft:set_nbt",
-  "tag": "{MaxDurability:2031}"
+  "function": "minecraft:set_custom_data",
+  "tag": {
+    "minecraft:custom_data": {
+      "MaxDurability": 2031
+    }
+  }
 }

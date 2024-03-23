@@ -113,8 +113,15 @@
           "weight": 10,
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_end_fishing:{set_data:{type:\"entity\",id:\"endermite\"}}}"
+              "function": "minecraft:set_custom_data",
+              "tag": {
+                "gm4_end_fishing": {
+                  "set_data": {
+                    "type": "entity",
+                    "id": "endermite"
+                  }
+                }
+              }
             }
           ]
         },
@@ -143,8 +150,15 @@
           "weight": 10,
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_end_fishing:{set_data:{type:\"entity\",id:\"endermite\"}}}"
+              "function": "minecraft:set_custom_data",
+              "tag": {
+                "gm4_end_fishing": {
+                  "set_data": {
+                    "type": "entity",
+                    "id": "endermite"
+                  }
+                }
+              }
             }
           ]
         }

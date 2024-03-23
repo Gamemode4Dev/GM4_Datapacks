@@ -42,8 +42,17 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{durability:91,identified:0,armor_clamp:-1,slot:3,material:4,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_boots\"}'}}"
+              "function": "minecraft:set_custom_data",
+              "tag": {
+                "gm4_combat_expanded": {
+                  "durability": 91,
+                  "identified": 0,
+                  "armor_clamp": -1,
+                  "slot": 3,
+                  "material": 4,
+                  "name": "{\"italic\":false,\"translate\":\"item.minecraft.golden_boots\"}"
+                }
+              }
             },
             {
               "function": "minecraft:enchant_randomly",

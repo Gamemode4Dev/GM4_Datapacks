@@ -42,8 +42,17 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{durability:77,identified:0,armor_clamp:-2,slot:0,material:4,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_helmet\"}'}}"
+              "function": "minecraft:set_custom_data",
+              "tag": {
+                "gm4_combat_expanded": {
+                  "durability": 77,
+                  "identified": 0,
+                  "armor_clamp": -2,
+                  "slot": 0,
+                  "material": 4,
+                  "name": "{\"italic\":false,\"translate\":\"item.minecraft.golden_helmet\"}"
+                }
+              }
             },
             {
               "function": "minecraft:enchant_randomly",

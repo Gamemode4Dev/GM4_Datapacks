@@ -8,8 +8,20 @@
                     "name": "minecraft:player_head",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'item/tnt_landmine_grass',gm4_tnt_landmines:{item:\"landmine\",block:\"minecraft:grass_block\"},SkullOwner:\"$disguised/grass\"}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/tnt_landmine_grass",
+                                "minecraft:profile": "$disguised/grass"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": {
+                                "gm4_tnt_landmines": {
+                                    "item": "landmine",
+                                    "block": "minecraft:grass_block"
+                                }
+                            }
                         },
                         {
                             "function": "minecraft:set_name",

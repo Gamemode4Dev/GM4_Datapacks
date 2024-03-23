@@ -9,8 +9,13 @@
           "value": "gm4_combat_expanded:armor/identification/base",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:43,active:0}}"
+              "function": "minecraft:set_custom_data",
+              "tag": {
+                "gm4_combat_expanded": {
+                  "modifier": 43,
+                  "active": 0
+                }
+              }
             },
             {
               "function": "minecraft:copy_nbt",
